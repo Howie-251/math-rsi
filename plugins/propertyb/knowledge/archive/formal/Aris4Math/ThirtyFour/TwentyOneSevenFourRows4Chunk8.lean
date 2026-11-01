@@ -1,0 +1,8 @@
+import Aris4Math.ThirtyFour.TwentyOneSevenFourCatalogueData
+namespace Aris4Math.ThirtyFour.TwentyOneSevenFourCatalogue
+open TwentyOneSevenFourActualCore (catalogue Valid)
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+def chunk4_8 : List Row := [([0,2,0,0,0,0,0,0,0,0],Sum.inl (0,0),0),([0,2,0,0,0,0,0,0,0,1],Sum.inl (0,0),0),([0,2,0,0,0,0,0,1,0,0],Sum.inl (0,0),0),([0,2,0,0,0,0,0,1,0,1],Sum.inl (12,8),7),([0,2,0,0,0,0,0,2,0,0],Sum.inl (0,0),0),([0,2,0,0,0,0,1,0,0,0],Sum.inl (0,0),0),([0,2,0,0,0,0,1,0,0,1],Sum.inl (0,0),0),([0,2,0,0,0,0,1,1,0,0],Sum.inl (0,0),0),([0,2,0,0,0,0,2,0,0,0],Sum.inl (0,0),0),([0,2,0,0,1,0,0,0,0,0],Sum.inl (0,0),0),([0,2,0,0,1,0,0,0,0,1],Sum.inl (11,10),7),([0,2,0,0,1,0,0,1,0,0],Sum.inl (12,8),10),([0,2,0,0,1,0,0,1,0,1],Sum.inl (12,13),7),([0,2,0,0,1,0,1,0,0,0],Sum.inl (11,0),21),([0,2,0,0,1,0,1,0,0,1],Sum.inl (11,11),7),([0,2,0,0,1,0,1,1,0,0],Sum.inl (12,10),10),([0,2,0,0,1,0,2,0,0,0],Sum.inl (11,4),10),([0,2,0,1,0,0,0,0,0,0],Sum.inl (0,0),0),([0,2,0,1,0,0,0,0,0,1],Sum.inl (0,0),0),([0,2,0,1,0,0,0,1,0,0],Sum.inl (11,13),13),([0,2,0,1,0,0,0,1,0,1],Sum.inl (12,9),7),([0,2,0,1,0,0,0,2,0,0],Sum.inl (12,15),13),([0,2,0,1,0,0,1,0,0,0],Sum.inl (0,0),0),([0,2,0,1,0,0,1,0,0,1],Sum.inl (0,0),0),([0,2,0,1,0,0,1,1,0,0],Sum.inl (11,15),13),([0,2,0,1,0,0,2,0,0,0],Sum.inl (0,0),0),([0,2,0,1,1,0,0,0,0,0],Sum.inl (0,0),0),([0,2,0,1,1,0,0,1,0,0],Sum.inl (12,9),10),([0,2,0,1,1,0,1,0,0,0],Sum.inl (11,2),21),([0,2,0,1,1,0,1,1,0,0],Sum.inl (12,11),10),([0,2,0,1,1,0,2,0,0,0],Sum.inl (11,5),10),([0,2,0,2,0,0,0,0,0,0],Sum.inl (0,0),0)]
+theorem checked_chunk4_8 : chunk4_8.all (fun row => decide (Valid 4 row.1 → Matched 4 row.1 row.2.1 row.2.2))=true := by decide +kernel
+end Aris4Math.ThirtyFour.TwentyOneSevenFourCatalogue

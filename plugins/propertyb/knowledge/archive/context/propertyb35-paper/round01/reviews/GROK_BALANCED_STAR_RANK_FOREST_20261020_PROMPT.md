@@ -1,0 +1,5 @@
+请对新完整实际数学义务进行有界对抗审阅。cwd=/Users/rfy_naiveai/Desktop/aris4math，read-only。不运行大程序，不重审全题。
+主要读 proofs/propertyb35/TWENTYONE_A1_BALANCED_STAR_FOREST.md 的主证明§1–7；附录只是旧路线，不是依赖。另读其证据context/propertyb35-paper/round01/middle/a1_balanced_star_forest_20261020/GENERATE.py、VERIFY.py、RESULT.json中18个C数/轨道与VERIFY.json（可只读必要字段，不机械展开2835个orbit成员）。
+原对象A1=H21/M35/simple/paircover,d=6,7,8^9,9^10，x与四8点double、其余unit。证明要推出非B必n4<=11。核心新一般引理：m>n,n<k²时，互异k集的“交数不为1”图森林rank>=m−n+2，利用AA^T−J=A(I−J/k²)A^T与任三等重0/1行线性独立。Hbar29/20给rank>=11。选4quad森林边+7non1+17一般边，Hunter扣9306；同一20点10/10星好源C最小164896，29坏边总174174，余量28。因而Hbar quad forest rank<=3→其边数<=6。x星cross quad<=5由唯一p-star不可4交和其他4kernel q>=3门。主证不需要五top/diamond/两个exception细分。
+两个进口：TWENTYONE_HIGH_FOUR_CORE_LOW.md(此前你d830已读)与TWENTYONE_HIGH_FOUR_CORE_MULTIPLICITY_THREE.md(新q>=3完整域135严格，主代理实跑、Gemini文件审有效)。只核这两进口实际调用条件，不重跑/重证它们的全部证书。
+请攻击：B的正定/小块rank/forest extension，18星域完整性（4double points↔6块多重图，parallel<=2由low4门），C IE样本/最坏数是否普适，同一原H而非虚构投影/独立事件，crossquad计数，9306>9278的严格性。报告实际读取范围与是否执行程序，无问题就明确说局部定理成立，不称全A1或m5>=36已解。HERO：不增加无收益hash/机械评分/假想防御/无终点复审。输出1000字左右，指出具体问题或核准理由。

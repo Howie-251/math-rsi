@@ -14,8 +14,15 @@ from urllib.parse import unquote, urlsplit
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     files = [root / "README.md", root / "AGENTS.md"]
-    for directory in ("base", "plugins", "docs"):
-        files.extend(sorted((root / directory).rglob("*.md")))
+    for directory in (root / "docs", root / "base/skills/mathrsi-research"):
+        files.extend(sorted(directory.rglob("*.md")))
+    for domain in (root / "plugins").iterdir():
+        files.extend(sorted((domain / "skills").rglob("*.md")))
+        readme = domain / "knowledge/README.md"
+        if readme.exists():
+            files.append(readme)
+    # Original historical documents are immutable snapshots, not maintained routes.
+    # Bundled ARIS resource closure is tested separately by base/tests/smoke_bundle.py.
     errors = []
     checked = 0
     for source in files:
@@ -25,6 +32,8 @@ def main() -> int:
         text = source.read_text(encoding="utf-8")
         text = re.sub(r"^```[^\n]*\n.*?^```[^\n]*$", "", text,
                       flags=re.MULTILINE | re.DOTALL)
+        text = re.sub(r"\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)", "", text)
+        text = re.sub(r"\$[^$\n]*\$", "", text)
         for target in re.findall(r"\]\(([^\n)]+)\)", text):
             target = target.strip().removeprefix("<").removesuffix(">")
             parts = urlsplit(target)
@@ -35,10 +44,15 @@ def main() -> int:
                 continue
             destination = (source.parent / path).resolve()
             if not destination.is_relative_to(root):
+                errors.append(f"Out-of-repository route: {source.relative_to(root)} -> {target}")
                 continue
             checked += 1
             if not destination.exists():
                 errors.append(f"{source.relative_to(root)} -> {target}")
+    for folder in (root / ".agents", root / ".claude"):
+        for alias in folder.rglob("*"):
+            if alias.is_symlink() and (not alias.exists() or not alias.resolve().is_relative_to(root)):
+                errors.append(f"Invalid skill alias: {alias.relative_to(root)}")
     for error in errors:
         print(error, file=sys.stderr)
     print(f"Checked {len(files)} documents and {checked} local link targets; "

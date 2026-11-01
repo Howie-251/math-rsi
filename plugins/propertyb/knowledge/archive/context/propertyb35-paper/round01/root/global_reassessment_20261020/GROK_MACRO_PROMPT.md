@@ -1,0 +1,4 @@
+继续本项目具体数学讨论，保持Grok4.7/xhigh。不要重新审已通过B12/B13。现在跳出源态切片，找能关闭25点整个含至少3个六度点类的解析路线。请读 proofs/propertyb35/TWENTYFIVE_MACRO_STAR_COLORING.md、context/propertyb35-paper/round01/twentyfive/macro_star_coloring_20261020/COMMON_W_EXCESS.md，以及 context/propertyb35-paper/round01/root/global_reassessment_20261020/Q4_GLOBAL.md 的候选一。
+固定实际25点35条简单五边点对覆盖H，L为六度点集，r≥3；所有低-任意点对共度1，总高点对超额50。Wz为六个四块内的共度超额，已得到 Wz≤25直接推出Property B的明确3840样本随机染色门。关键待证是某低z的Wz≤25，较强ΣW≤26r−1也仅候选。不要把抽象松弛或可染样本当反例/证明。
+请具体尝试：1核宏星门的6种概率及共同W恒等式；2直接证明或反驳 min_low W≤25，尤其r3…7。利用同一原边的多低中心四块划分兼容、每高点Σ_y(λxy−1)=4d(x)−24、总度超额：Σ_high(d−7)=r。若证不出，给一条真正不同且能关闭整个25点类的精确中间命题并解释caller，不建议继续扫描u/b或只扩占用矩阵。
+最新有一个固定三低共G、两个8点立方体加4点共同块的实际星骨架攻击，经一次swap后16条低边、baseW=(24,24,20)，19全高边补全MILP数值infeasible（未精确证书），这不证明一般候选。不需要重跑搜索。请优先独立解析，不宣称36已证明。HERO：关注真实数学障碍，不加模板评分、哈希或无终点审阅。给一份有限、清楚的数学结论。

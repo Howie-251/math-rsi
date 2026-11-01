@@ -1,0 +1,4 @@
+请先核新的一般计数加强，再提出最多一条有明确数学义务的进一步简化，不扩布局表。读 context/propertyb35-paper/round01/root/tau_shared_capacities_20261020/PROOF.md 与 HIGH_ROW_PROOF.md 全文。目标是21点35简单五元paircover、min点度7的剩余反例；新完整稿 proofs/propertyb35/TWENTYONE_MINIMUM_SEVEN_GAMMA_FOUR.md 已装配Γmin4并获Gemini整篇静态认可，你此前只审q3唯一性和S2共享列，不把旧scope自动扩全稿。可把此Γmin4作为声明进口，集中新容量。
+定义τ=Σ_pointpair C(λ−1,2)。全λ≤4时：C3按cross4共度及同一个最高度行的成本G_D(τ)上界；C4按差点pair的matching h_uv≤min(du−λ,dv−λ)收费，且a4≤min(floorτ/3,τ−max(0,4Δ−40))。每种成本域必须无重复，两最高度行union另有下界，不能无证再相加。h18的最后段正确斜率2，D≤13不触发第三段。
+结合Γmin4的同一P盒与原双翻修复，全e≤4的99谱中78谱在λ≤4条件下strict，另21谱119必要momentkeys仍留。完整表 FINAL_LAMBDA4_VERIFY.json 很大，只按需读 FINAL_LAMBDA4_REPORT.md 和root HIGH_ROW_FILTER_RESULT.json 剩余13已λ4谱。部分谱还允许唯一λ5，该子情况另外处理，不混同。
+请回答新PROOF/HIGH_ROW_PROOF是否严谨、与真实H连接是否有遗漏，实际读/执行范围；如果正确，聚焦如何利用Γ几乎4正则、n2极小或同一高点pair的共享容量，给一个可能批量排剩key的具体lemma。别重复用已失败的独立每槽max、同一预算各自花多次或重复局部布局。数学有错直接指出反例/位置；正确直接认可。只读本项目，不v2、不Lean、不写文件、不提哈希/通用平台。回复尽量1500中文词以内。

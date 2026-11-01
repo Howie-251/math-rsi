@@ -1,0 +1,8 @@
+import Aris4Math.ThirtyFour.MixedLayoutApplication
+#print Aris4Math.ThirtyFour.MixedLayoutDual.average_le
+#check @Aris4Math.ThirtyFour.MixedLayoutCounts.mixed_deduction
+#check @Aris4Math.ThirtyFour.MixedLayoutApplication.propertyB_of_mixed_layouts
+#print axioms Aris4Math.ThirtyFour.MixedLayoutDual.average_le
+#print axioms Aris4Math.ThirtyFour.MixedLayoutDual.quota_repair
+#print axioms Aris4Math.ThirtyFour.MixedLayoutCounts.mixed_deduction
+#print axioms Aris4Math.ThirtyFour.MixedLayoutApplication.propertyB_of_mixed_layouts

@@ -1,0 +1,1 @@
+Original task: Prove that every natural number n satisfies n ≤ n + 1. The conclusion must hold for all natural numbers without a supplied certificate or additional mathematical hypothesis. Current request: audit whether the supplied artifact completes this task; do not repair it.

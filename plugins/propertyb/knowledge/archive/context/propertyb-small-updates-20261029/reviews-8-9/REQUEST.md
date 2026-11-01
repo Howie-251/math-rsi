@@ -1,0 +1,5 @@
+请新上下文做两项具体数学证明的跨家族对抗式审阅。原命题分别是任意有限简单8元超图≤266边可二染(m8≥267)，以及任意有限简单9元超图≤542边可二染(m9≥543)。无顶点数、点对覆盖、锁点或证书额外前提。
+全文读 context/propertyb-m8-267-20261029/PROOF_M8_GE267.md 与 context/propertyb-m9-543-20261029/PROOF_M9_GE543.md，再读共同概率依赖 propertyB_small_k/propertyB_k8_k9_proof.md §2，按需核原Calculator源码。新参数全部重算；不导入旧265/541预算的数值。
+重点：(1)任意反例→最少顶点pair-cover→小点数balanced→padding恰266/542→完整47…120和57…195；(2)实际successive-min单位点池给n,t,F，第三锁所有degree和两种trace全覆盖；(3)k8 component DP用7元链接、支撑7α/8/15，精确/至多图边数与最小q方向，max_R都在同一实际坏对向量不可相加；(4)k8 120点至少32个17度全局单位点→实际K4六种trace；(5)k9 183…195含新增195点，D28 CW全域；(6)条件排列与实际原Bool染色闭合，δ/ceil/严格界/有序无序系数。
+作者完整表为k8 CERTIFICATE.json 2094型，k9 CANDIDATE.json 3450型。独立不同概率核和完整域重建正在independent/生成，若存在REVIEW.md/CHECK.json请实际读并记录；没生成请准确说明未读。此次数学审阅允许将明确的有限有理表作为计算进口，不需要你运行程序，也不声称执行。root独立核验完成后才交付。数值失败或多模型同意不代替完整覆盖证明。
+返回精炼但实质：实际阅读源范围，原命题对齐与关键不等式/假设检查，尽力给反例攻击，精确问题位置/修法或PASS_WITH_DECLARED_COMPUTATION_IMPORTS。没有问题明确认可。请限制≤1600中文词，勿大量复述原稿。HERO不做hash/评分/泛平台/无限审阅。只读不修改。你是外部Grok/xAI或Gemini/Google，执行者为Codex/OpenAI，按实际返回family记录，不照抄ARIS默认same-family。

@@ -1,0 +1,369 @@
+import Aris4Math.ThirtyFour.TwentyFiveFiveLowData89
+namespace Aris4Math.ThirtyFour.TwentyFiveFiveLow
+open Aris4Math.ThirtyThree.MultiLockRecovery Aris4Math.K6Classification
+open LocalProfiles CachedRows TwentyFiveUnitCounts TwentyFiveColoredActual
+open TwentyFiveColoredColoring
+open scoped BigOperators
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Case2136
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{1,2,4},{3,4,6},{0,5,6,7},{0,1,8},{2,3,8},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2136
+namespace Case2137
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,3},{2,4,6},{3,4,7},{0,5,6,7},{2,3,8},{1,4,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2137
+namespace Case2138
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,3},{1,2,4},{3,4,6},{0,5,6,7},{2,3,8},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2138
+namespace Case2139
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{1,2,3},{1,4,6},{3,4,7},{0,5,6,7},{0,3,8},{2,4,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2139
+namespace Case2140
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{1,2,4},{3,4,6},{0,5,6,7},{1,3,8},{0,4,8},{2,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2140
+namespace Case2141
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,3,4},{1,3,6},{2,4,7},{0,5,6,7},{2,3,8},{1,4,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2141
+namespace Case2142
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{1,2,3},{0,3,4},{1,4,6},{0,5,6,7},{2,4,8},{3,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2142
+namespace Case2143
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,3},{0,2,4},{2,3,6},{1,4,7},{3,4,8},{5,6,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2143
+namespace Case2144
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,2,3,4},{1,5,6,7},{0,1,8},{2,5,8},{3,6,8},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2144
+namespace Case2145
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,2,3},{0,4,5},{1,4,6},{2,4,7},{3,4,8},{5,6,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2145
+namespace Case2146
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4,6},{2,3,5,7},{0,2,8},{1,3,8},{4,5,8},{6,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2146
+namespace Case2147
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,2,3,5},{1,4,6,7},{0,1,8},{4,5,8},{2,6,8},{3,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2147
+namespace Case2148
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4},{2,4,5},{3,4,6},{0,2,3,7},{1,5,6,8},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2148
+namespace Case2149
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,2,5},{3,4,5},{0,4,6},{1,4,7},{2,4,8},{3,6,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2149
+namespace Case2150
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4},{2,3,4},{0,2,5,6},{4,5,7},{4,6,8},{1,3,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2150
+namespace Case2151
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4},{2,4,5},{3,4,6},{0,3,5,7},{1,2,6,8},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2151
+namespace Case2152
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,4,5},{1,4,6},{2,3,5,6},{2,4,7},{3,4,8},{0,1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2152
+namespace Case2153
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,2,3},{4,5,6},{4,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2153
+namespace Case2154
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4},{2,5,6},{3,5,7},{4,6,7},{2,3,8},{4,5,8},{0,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2154
+namespace Case2155
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,5},{2,4,6},{3,4,7},{5,6,7},{2,3,8},{4,5,8},{0,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2155
+namespace Case2156
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,5},{2,4,6},{4,5,7},{3,6,7},{2,3,8},{0,4,8},{5,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2156
+namespace Case2157
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,4},{2,3,5},{2,4,6},{3,4,7},{5,6,7},{4,5,8},{0,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2157
+namespace Case2158
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,3},{2,4,6},{4,5,7},{3,6,7},{3,4,8},{2,5,8},{0,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2158
+namespace Case2159
+theorem completion : pairCompletion big=full.toFinset := by
+  have same : big=([{0,1,3},{2,4,6},{3,4,7},{5,6,7},{0,4,8},{2,5,8},{3,6,8},{1,7,8}] : List (Finset (Fin 9))).toFinset := by decide +kernel
+  rw [same]
+  apply TwentyFiveSparseCompletion.complete
+  decide +kernel
+theorem recovered (T : Finset (Fin 9)) : inventory 34 (standard 5) (pairCompletion big) T=μ T := by
+  rw [completion]
+  apply TwentyFiveInventorySupport.eq_of_support 34 (standard 5) full μ
+  · intro U nonzero
+    have member := support U nonzero
+    have checked : labels.all (fun t => (TwentyFiveInventorySupport.labels full).contains t)=true := by decide +kernel
+    exact List.contains_iff.mp (List.all_eq_true.mp checked U member)
+  · decide +kernel
+end Case2159
+end Aris4Math.ThirtyFour.TwentyFiveFiveLow

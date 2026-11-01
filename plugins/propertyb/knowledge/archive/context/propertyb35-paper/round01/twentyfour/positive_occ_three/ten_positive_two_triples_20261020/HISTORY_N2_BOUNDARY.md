@@ -1,0 +1,5 @@
+# Historical n2 direct-transformation boundary
+
+Before reselecting the kernel, the direct blocker-removal attempt had the following legitimate stopping point: n=2 permits only selected four-set blockers. If the last positive loses both forbidden third points, it has two candidate points. Two selected double-kernel four-sets can block both and exhaust the remaining kernel capacity. Turning the high-three point z blue can then shrink some of its three positive fours to singletons, outside the four-small-positive gate's size premise. No singleton constraint was dropped.
+
+This was a limitation of that direct transformation, **not** a counterexample. It is no longer an open case of [the surviving-three-point subtheorem](FOUR_REMAINING_HIGH_THREE_REPAIR.md): z lies outside both original negative triples, so selecting x,z as the red kernel instead yields n′=0 and retains y as the unhit three-point. The already proved n0 argument applies before any blue points are fixed. The original narrow obstruction is retained here only to document why a direct call to the size≥2 gate would have been invalid.

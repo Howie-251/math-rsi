@@ -1,0 +1,925 @@
+{
+  "source": "/Users/rfy_naiveai/Desktop/MathRSI",
+  "relocated": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy",
+  "copy_policy": "Full tree except .git, __pycache__, .DS_Store and current evidence directory; preserve symlinks. Copying archive is not reading/revalidating its mathematical content.",
+  "link_check": {
+    "argv": [
+      "python3",
+      "-B",
+      "tools/check_links.py"
+    ],
+    "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy",
+    "exit_code": 0,
+    "stdout": "Checked 41 documents and 781 local link targets; 0 missing.\n",
+    "stderr": ""
+  },
+  "discovery_symlinks": [
+    {
+      "alias": ".agents/skills/alphaxiv",
+      "target": "../../base/skills/skills-codex/alphaxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/analyze-results",
+      "target": "../../base/skills/skills-codex/analyze-results",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/arxiv",
+      "target": "../../base/skills/skills-codex/arxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/auto-review-loop",
+      "target": "../../base/skills/skills-codex/auto-review-loop",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/citation-audit",
+      "target": "../../base/skills/skills-codex/citation-audit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/citation-crosscheck",
+      "target": "../../base/skills/skills-codex/citation-crosscheck",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/deepxiv",
+      "target": "../../base/skills/skills-codex/deepxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/exa-search",
+      "target": "../../base/skills/skills-codex/exa-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/firecrawl-search",
+      "target": "../../base/skills/skills-codex/firecrawl-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/formula-derivation",
+      "target": "../../base/skills/skills-codex/formula-derivation",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/gemini-search",
+      "target": "../../base/skills/skills-codex/gemini-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/keenable-search",
+      "target": "../../base/skills/skills-codex/keenable-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/lean-formalize",
+      "target": "../../base/skills/skills-codex/lean-formalize",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/mathrsi-propertyb",
+      "target": "../../plugins/propertyb/skills/mathrsi-propertyb",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/mathrsi-research",
+      "target": "../../base/skills/mathrsi-research",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/novelty-check",
+      "target": "../../base/skills/skills-codex/novelty-check",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/openalex",
+      "target": "../../base/skills/skills-codex/openalex",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/paper-claim-audit",
+      "target": "../../base/skills/skills-codex/paper-claim-audit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/paper-compile",
+      "target": "../../base/skills/skills-codex/paper-compile",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/proof-checker",
+      "target": "../../base/skills/skills-codex/proof-checker",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/proof-orchestrator",
+      "target": "../../base/skills/skills-codex/proof-orchestrator",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/proof-writer",
+      "target": "../../base/skills/skills-codex/proof-writer",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/propertyb-bound-lab",
+      "target": "../../plugins/propertyb/skills/propertyb-bound-lab",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/propertyb-certificate",
+      "target": "../../plugins/propertyb/skills/propertyb-certificate",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/propertyb-literature",
+      "target": "../../plugins/propertyb/skills/propertyb-literature",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/render-html",
+      "target": "../../base/skills/skills-codex/render-html",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/research-lit",
+      "target": "../../base/skills/skills-codex/research-lit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/research-review",
+      "target": "../../base/skills/skills-codex/research-review",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/research-wiki",
+      "target": "../../base/skills/skills-codex/research-wiki",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/result-to-claim",
+      "target": "../../base/skills/skills-codex/result-to-claim",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/semantic-scholar",
+      "target": "../../base/skills/skills-codex/semantic-scholar",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/shared-references",
+      "target": "../../base/skills/skills-codex/shared-references",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/system-profile",
+      "target": "../../base/skills/skills-codex/system-profile",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/training-check",
+      "target": "../../base/skills/skills-codex/training-check",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/web-debug-search",
+      "target": "../../base/skills/skills-codex/web-debug-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".agents/skills/wiki-enrich",
+      "target": "../../base/skills/skills-codex/wiki-enrich",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/agents/aris-fanout-leaf.md",
+      "target": "../../base/agents/aris-fanout-leaf.md",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/alphaxiv",
+      "target": "../../base/skills/alphaxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/analyze-results",
+      "target": "../../base/skills/analyze-results",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/arxiv",
+      "target": "../../base/skills/arxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/auto-review-loop",
+      "target": "../../base/skills/auto-review-loop",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/citation-audit",
+      "target": "../../base/skills/citation-audit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/citation-crosscheck",
+      "target": "../../base/skills/citation-crosscheck",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/deepxiv",
+      "target": "../../base/skills/deepxiv",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/exa-search",
+      "target": "../../base/skills/exa-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/firecrawl-search",
+      "target": "../../base/skills/firecrawl-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/formula-derivation",
+      "target": "../../base/skills/formula-derivation",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/gemini-search",
+      "target": "../../base/skills/gemini-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/keenable-search",
+      "target": "../../base/skills/keenable-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/lean-formalize",
+      "target": "../../base/skills/lean-formalize",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/mathrsi-propertyb",
+      "target": "../../plugins/propertyb/skills/mathrsi-propertyb",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/mathrsi-research",
+      "target": "../../base/skills/mathrsi-research",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/novelty-check",
+      "target": "../../base/skills/novelty-check",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/openalex",
+      "target": "../../base/skills/openalex",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/paper-claim-audit",
+      "target": "../../base/skills/paper-claim-audit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/paper-compile",
+      "target": "../../base/skills/paper-compile",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/proof-checker",
+      "target": "../../base/skills/proof-checker",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/proof-orchestrator",
+      "target": "../../base/skills/proof-orchestrator",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/proof-writer",
+      "target": "../../base/skills/proof-writer",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/propertyb-bound-lab",
+      "target": "../../plugins/propertyb/skills/propertyb-bound-lab",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/propertyb-certificate",
+      "target": "../../plugins/propertyb/skills/propertyb-certificate",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/propertyb-literature",
+      "target": "../../plugins/propertyb/skills/propertyb-literature",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/render-html",
+      "target": "../../base/skills/render-html",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/research-lit",
+      "target": "../../base/skills/research-lit",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/research-review",
+      "target": "../../base/skills/research-review",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/research-wiki",
+      "target": "../../base/skills/research-wiki",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/result-to-claim",
+      "target": "../../base/skills/result-to-claim",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/semantic-scholar",
+      "target": "../../base/skills/semantic-scholar",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/shared-references",
+      "target": "../../base/skills/shared-references",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/system-profile",
+      "target": "../../base/skills/system-profile",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/training-check",
+      "target": "../../base/skills/training-check",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/web-debug-search",
+      "target": "../../base/skills/web-debug-search",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    },
+    {
+      "alias": ".claude/skills/wiki-enrich",
+      "target": "../../base/skills/wiki-enrich",
+      "exists": true,
+      "relative": true,
+      "inside_copy": true
+    }
+  ],
+  "maintained_guide_external_source_path_scan": {
+    "files_scanned": 38,
+    "hits": [
+      {
+        "path": "AGENTS.md",
+        "line": 10,
+        "text": "- 当前源项目为 `/Users/rfy_naiveai/Desktop/aris4math`；ECC 源为 `/Users/rfy_naiveai/Desktop/aris4math_v2`，本次仅授权只读提炼。两个旧研究不恢复、不迁移、不重跑。"
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 27,
+        "text": "- 运行helper显式指向本仓base/tools，不回退作者原aris_main或~/.aris/repo。内部发现别名只能是仓库内相对链接；不调用上游全局installer。"
+      },
+      {
+        "path": "docs/ARIS_REUSE.md",
+        "line": 15,
+        "text": "在**任务工作区**启动命令；在**同一个 shell** 设置绝对 `ARIS_REPO`。路径随克隆位置调整，不能读另一份 ARIS 或作者机器的 `~/.aris/repo` 来补资源："
+      },
+      {
+        "path": "docs/ARIS_REUSE.md",
+        "line": 22,
+        "text": "后文每个命令块都重新设置该变量，因为 agent 的不同 shell 调用未必共享环境。上游源码包含通用 resolver，其顺序通常为任务 `.aris/tools/`、任务 `tools/`、`$ARIS_REPO/tools/`；没有变量时还可能查安装 manifest 与 `~/.aris/repo`。MathRSI 要求显式使用本副本的绝对 helper 路径。若执行上游技能内原 resolver 代码，先确认现有本地 helper 也属于本副本，或将本次实际调用改为绝对路径。旧任务目录里同名 helper 的优先级高于 `ARIS_REPO`，不能仅凭 export 宣称已固定版本。helper 缺失应修复本包或准确报告缺失，不能静默 fallback 外部仓库。"
+      }
+    ]
+  },
+  "documented_executable_resources": [
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/independent/check.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "fractions",
+        "functools",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m7-131-20261029/independent/check.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "fractions",
+        "functools",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m8-267-20261029/independent/check.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "fractions",
+        "functools",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m9-543-20261029/independent/check.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "argparse",
+        "collections",
+        "fractions",
+        "functools",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/independent/check.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "collections",
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/twentyfour/six_high_one_internal_high/two_triple_small_gate/CHECK_COUNTEREXAMPLE.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "itertools",
+        "json",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/middle/a1_rank_component_wedge_budget_20261020/PILOT.cpp",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/middle/a1_rank_component_wedge_budget_20261020/PILOT.json",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/middle/a1_rank_component_wedge_budget_20261020/VERIFY.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "collections",
+        "functools",
+        "itertools",
+        "json",
+        "pathlib",
+        "time"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/lean-toolchain",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/lake-manifest.json",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/ReviewAudit33.lean",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/ReviewAuditGeneralGrowth12.lean",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/Aris4Math/ThirtyThree/Main.lean",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/formal/Aris4Math/General/Growth/Twelve.lean",
+      "exists": true,
+      "inside_copy": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/propertyB_small_k/propertyB_k10_k11_verified.py",
+      "exists": true,
+      "inside_copy": true,
+      "python_syntax": "ok",
+      "imports": [
+        "itertools",
+        "numpy",
+        "propertyB_k10_k11_certified",
+        "sys"
+      ]
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/propertyB_small_k/propertyB_k10_k11_bundle.zip",
+      "exists": true,
+      "inside_copy": true
+    }
+  ],
+  "k10_k11_zip_dependency_members": [
+    "propertyB_k10_k11_verified.py",
+    "propertyB_k10_k11_certified.py"
+  ],
+  "relocated_canonical": "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy",
+  "path_normalization": "Compare canonical paths: macOS /var is /private/var. Initial lexical containment false results were resolved before acceptance.",
+  "checker_source_absolute_path_hits": [],
+  "lean_environment": {
+    "toolchain": "leanprover/lean4:v4.24.0",
+    "lake_manifest_present": true,
+    "lake_config_files": [
+      "plugins/propertyb/knowledge/archive/formal/lakefile.toml"
+    ],
+    "execution": "Not invoked; fixed dependencies require installation/caches, as active guides state."
+  },
+  "k10_k11_static_dependency_closure": {
+    "zip": "plugins/propertyb/knowledge/archive/propertyB_small_k/propertyB_k10_k11_bundle.zip",
+    "members": [
+      {
+        "member": "propertyB_k10_k11_verified.py",
+        "bytes": 5593,
+        "imports": [
+          "itertools",
+          "numpy",
+          "propertyB_k10_k11_certified",
+          "sys"
+        ],
+        "file_io_lines": []
+      },
+      {
+        "member": "propertyB_k10_k11_certified.py",
+        "bytes": 7938,
+        "imports": [
+          "argparse",
+          "fractions",
+          "functools",
+          "itertools",
+          "math",
+          "sys"
+        ],
+        "file_io_lines": []
+      }
+    ],
+    "execution": "Not executed; actual commands require Python >=3.10 and NumPy as documented."
+  },
+  "repair_verification": [
+    {
+      "case": "m8",
+      "copied_input": "plugins/propertyb/knowledge/archive/context/propertyb-m8-267-20261029/CERTIFICATE.json",
+      "input_bytes": 943130,
+      "argv": [
+        "python3",
+        "-B",
+        "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy/plugins/propertyb/knowledge/archive/context/propertyb-m8-267-20261029/independent/check.py"
+      ],
+      "cwd": "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy",
+      "exit_code": 0,
+      "wall_seconds": 9.141706457987311,
+      "stdout": "m8-repair.stdout.log",
+      "stderr": "m8-repair.stderr.log",
+      "result_summary": {
+        "status": "PASS_WITH_DECLARED_IMPORTS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "scope": "Complete47..120 actualdegree/partner/tracedomain plus full2094row independentk8 injection replay",
+        "k": 8,
+        "M": 266,
+        "profiles": 2094,
+        "component_quota_arguments": 299,
+        "maximum": "433608879718/433637886825",
+        "cpu_seconds": 8.862282
+      }
+    },
+    {
+      "case": "m9",
+      "copied_input": "plugins/propertyb/knowledge/archive/context/propertyb-m9-543-20261029/CANDIDATE.json",
+      "input_bytes": 1355115,
+      "argv": [
+        "python3",
+        "-B",
+        "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy/plugins/propertyb/knowledge/archive/context/propertyb-m9-543-20261029/independent/check.py"
+      ],
+      "cwd": "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-final-relocation-c66u2u2v/independent-copy",
+      "exit_code": 0,
+      "wall_seconds": 28.178866040994762,
+      "stdout": "m9-repair.stdout.log",
+      "stderr": "m9-repair.stderr.log",
+      "result_summary": {
+        "status": "PASS_WITH_DECLARED_IMPORTS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "k": 9,
+        "M": 542,
+        "domain_cpu_seconds": 7.779676,
+        "total_cpu_seconds": 27.740036,
+        "rows": 3450,
+        "exact_matches": 3450,
+        "strict_rows": 3450,
+        "original_domain_reconstructed": true,
+        "decision_tree_reconstructed": true
+      }
+    }
+  ],
+  "repair_status": "Both missing inputs copied by Root into source archive and copied here into relocated work tree; both checkers executed once against repaired relocation.",
+  "pre_fix_summary": {
+    "all_relative_discovery_aliases_resolve_inside_copy": true,
+    "discovery_alias_count": 73,
+    "all_documented_resources_exist": true,
+    "all_checker_input_files_exist": false
+  },
+  "pre_fix_checker_input_files": [
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/ROOT_TWO_LOCKS.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/avoided/V37_THREE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/pilot/tightened.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/pilot/FOUR.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m7-131-20261029/CANDIDATE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m8-267-20261029/CERTIFICATE.json",
+      "exists": false
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m9-543-20261029/CANDIDATE.json",
+      "exists": false
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/COMPLETE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/CONDITIONAL.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/TAIL.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/middle/a1_rank_component_wedge_budget_20261020/PILOT.json",
+      "exists": true
+    }
+  ],
+  "post_fix_checker_input_files": [
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/ROOT_TWO_LOCKS.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/avoided/V37_THREE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/pilot/tightened.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m6-66-20261029/pilot/FOUR.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m7-131-20261029/CANDIDATE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m8-267-20261029/CERTIFICATE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-m9-543-20261029/CANDIDATE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/COMPLETE.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/CONDITIONAL.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb-k12-4664-20261029/TAIL.json",
+      "exists": true
+    },
+    {
+      "path": "plugins/propertyb/knowledge/archive/context/propertyb35-paper/round01/middle/a1_rank_component_wedge_budget_20261020/PILOT.json",
+      "exists": true
+    }
+  ],
+  "summary": {
+    "all_relative_discovery_aliases_resolve_inside_copy": true,
+    "discovery_alias_count": 73,
+    "all_documented_resources_exist": true,
+    "all_checker_input_files_exist_after_repair": true,
+    "m8_m9_repair_checks_exit_zero": true
+  }
+}

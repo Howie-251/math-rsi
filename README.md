@@ -1,56 +1,63 @@
 # MathRSI
 
-**以 ARIS 为基础、由 agent 主导的数学研究工作流。** 固定目标，复用知识，选择与修正证明路线，把局部结果连接成可检查的原命题解答。
+**以 ARIS 完整技能和领域知识组织数学研究。** 从文献查漏到严密证明，把发现、推导、计算、审阅、形式化与可复现交接接成实际工作流。
 
-MathRSI 以详细 Markdown skills 为主。它告诉 agent 在什么情形下如何思考、调用现有工具、判断证据及调整路线；没有另造自动评分器、数学搜索引擎或强制状态机。当前为本地首版，尚未验证普遍提速或持续自我改进能力。
+主线：**初步精确问题 → 广泛文献发现与反例/勘误核查 → 固定目标并复用 wiki → 分解义务并行推进 → 独立验算与对抗审阅 → 装配完整证明 → 按需 Lean → 可复现交接。** 新障碍会带来定向补搜与路线调整，不是只沿一条局部搜索不断扩表。
 
-## 从哪里开始
+本仓以详细 Markdown 为主，直接携带30项ARIS技能的Claude/Codex双端完整实现、共享资源、模板与helpers。MathRSI自己新增的代码只做明确的开发核查；数学研究由agent判断与执行，不另造调度平台或通用证明判分器。
 
-- **开始或继续一道数学题：** [mathrsi-research 主技能](base/skills/mathrsi-research/SKILL.md)。它是完整执行入口，按需读取两个参考文档。
-- **Property B：** 同时读取 [领域技能](plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)，获得选锁、实际迹、共同对象及验证的研究入口。
-- **编码理论：** 同时读取 [ECC 领域技能](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，区分构造、局部排除与全域不存在性。
-- **准备文件与恢复研究：** [工作区说明](docs/WORKSPACE.md)。已有项目直接沿用原规格与 wiki。
-- **已有 ARIS 能做什么：** [ARIS 复用说明](docs/ARIS_REUSE.md)。按义务调用现有技能，不自动运行整套论文流水线。
+## 从这里开始
 
-可以直接向 Codex、Claude Code 或其他能读取本地文件的 agent 发出：
+- [数学研究总控](base/skills/mathrsi-research/SKILL.md)：命题、广搜、实际技能调用、义务与路线、并行、瓶颈诊断、审阅及交接。
+- [ARIS实际调用说明](docs/ARIS_REUSE.md)：30技能双端位置、各阶段输入输出、helper命令与外部运行依赖。
+- [Property B领域主技能](plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)：结合完整知识库选择研究路线。
+- [Property B知识库](plugins/propertyb/knowledge/README.md)：完整引理/证明/失败经验、原始wiki与源码，不依赖作者另一份工作目录。
+- [工作区与恢复](docs/WORKSPACE.md)：已有项目沿用原规格和wiki，不初始化覆盖。
+
+### Property B的专用技能
+
+|技能|承担的实际工作|
+|---|---|
+|[propertyb-literature](plugins/propertyb/skills/propertyb-literature/SKILL.md)|异名广搜、前后引用链、历史错误、原文定理条件与基线比较|
+|[propertyb-bound-lab](plugins/propertyb/skills/propertyb-bound-lab/SKILL.md)|新预算完整域、选锁与真实迹、共同坏对、signed修复、一般k推导及失败回流|
+|[propertyb-certificate](plugins/propertyb/skills/propertyb-certificate/SKILL.md)|实际输入连接、分类覆盖、精确算术、独立重放、审阅修正与原染色装配|
+|[mathrsi-propertyb](plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)|统筹这些能力，选择当前瓶颈对应的工具与交付路线|
+
+ECC保留[首版草案](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，等待用户安排另一位领域agent重做；它未按本次Property B标准验收，未加入项目默认技能发现。本次没有读写ECC原项目或启动它的研究。
+
+## 可直接使用
 
 ```text
 读取 /实际路径/MathRSI/base/skills/mathrsi-research/SKILL.md，
-并按需使用 /实际路径/MathRSI/plugins/propertyb/skills/mathrsi-propertyb/SKILL.md。
-在 /我的任务目录 中继续研究，先读 FORMAL_SPEC.md 和 NEXT_SESSION.md，
-复用原 research-wiki。按原题与预算完成任务，记录实际证据和未闭义务。
+再读 /实际路径/MathRSI/plugins/propertyb/skills/mathrsi-propertyb/SKILL.md。
+在 /我的任务目录 中研究 <准确问题>，先恢复现有规格、wiki与状态。
+新研究先做文献查漏，按本仓技能推进；复用已证工具和失败记录。
+所有helper显式来自 /实际路径/MathRSI/base/tools；不回退外部ARIS仓库。
 ```
 
-上述是文件加载方式；本仓库没有自动安装全局 skills，也不要求宿主必须提供某个斜杠命令。没有领域插件的数学任务可以直接使用 base；不要为了启动任务先制造一个插件。
+`.agents/skills/` 和 `.claude/skills/` 提供仓库内**相对**发现别名；实际内容就在base和plugins里，复制整个MathRSI后仍有效。当前会话未刷新发现时直接读SKILL路径即可。没有全局安装、没有改写用户私有reviewer配置。Lean、TeX、模型MCP、网络服务及其凭据按实际任务环境提供；源码自包含不等于这些外部服务自动就绪。
 
-## 三层怎样配合
+## 三层边界
 
-|层次|维护内容|改变的理由|
-|---|---|---|
-|`base/`|命题与验收、知识复用、义务与路线、委派、效率诊断、验证、交接|多个任务暴露出通用流程问题|
-|`plugins/`|领域对象、定理条件、归约与策略、检查器接入及经验入口|得到本领域可复用的新知识或方法|
-|任务工作区|本题规格、证明、wiki、实际输入、计算、审阅与恢复状态|本题产生新结果、反例或路线调整|
+|层次|内容|
+|---|---|
+|base|通用数学研究主流程，完整ARIS能力、验证与交接契约|
+|plugins|领域定理、证明方法、失败反例、计算/Lean经验及可运行案例|
+|任务工作区|当前问题的规格、新证明、wiki、运行证据、预算和恢复状态|
 
-核心与插件之间用[人可读的协作约定](docs/PLUGIN_CONTRACT.md)交流，不要求把数学推理塞进固定 JSON。一个检查器只证明它实际检查的属性；完整解答需要 agent 接通原对象、归约、计算或引理与原结论。
+[插件契约](docs/PLUGIN_CONTRACT.md)用自然语言说明输入、义务、行动、结果与核验，不强制统一JSON。运行插件不改base或验收条件；新领域知识在独立维护步骤纳入。历史源资料是只读快照，不恢复35 Lean、36研究或任何旧Goal。
 
-## 先使用，再改进
+## 验证与开发
 
-一次解题使用明确的 base 与插件版本。新的领域定理进入插件知识，单题断点留在工作区；通用流程改进以独立变更提出，再通过实际使用核对。不要在解题中静默改变目标、验收或核心来制造成功。
-
-目前两个插件提炼自 Property B 与 ECC 研究，尚未覆盖所有数学领域。示例和首版检查见 [验证记录](development/VALIDATION.md)；它们检验使用连接，不替代新的科研任务评估。
-
-## 本地开发
-
-`main` 保存可用组合版本。具体功能用短期分支，多 agent 有文件冲突时使用独立 worktree；领域方法放目录，不放长期分叉分支。原项目与大型证据不搬入代码仓库。详细约定见 [AGENTS.md](AGENTS.md)。
-
-仓库只提供一个可选的本地文档连接检查器：
+[本轮验证记录](development/VALIDATION.md)分别报告技能资源完整性、搬迁副本执行、真实数学案例和模型审阅范围。它们不等于通用解题成功率或RSI增益评测。
 
 ```bash
 python3 tools/check_links.py
+python3 -B base/tests/smoke_bundle.py --help
 ```
 
-它检查维护文档的本地 Markdown 链接目标，帮助插件与 base 移动目录后保持可读；不审阅数学、不更改任务状态、不调用模型。数学运行继续复用任务所需的实际工具。
+链接检查覆盖维护中的主流程/插件文档和内部别名；原始历史档案里的旧HTML/日志链接另有归档说明。base的独立smoke实际验证被复制的上游资源和wiki/router/renderer。本地开发使用短期分支，尚未创建远端或推送。
 
 ## 来源
 
-基于 [ARIS / Auto-Research-In-Sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) 的技能组织、研究记忆、评审与形式化经验，沿用 MIT 许可证。具体复用和调整见 [来源说明](docs/PROVENANCE.md)。
+[ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) 固定来源、许可证与领域提炼说明见 [PROVENANCE](docs/PROVENANCE.md)。ARIS与MathRSI工作流沿用MIT；归档学术论文与第三方原件保留各自权利，不能将仓库MIT标题理解为重新许可这些作品。

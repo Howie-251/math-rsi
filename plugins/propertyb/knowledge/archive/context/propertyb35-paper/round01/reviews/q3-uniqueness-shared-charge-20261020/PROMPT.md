@@ -1,0 +1,9 @@
+请做一次有明确终点的数学对抗审阅，只读本项目，不读v2，不跑Lean。沿用本线程模型，报告实际阅读、是否亲自运行、哪些是声明进口；不为审阅制造无收益流程。此轮两个新义务，不覆盖完整36。
+A. 请先读 context/propertyb35-paper/round01/middle/min_degree_seven_clean_star_20261020/SHARP_CLEAN_POOL.md。它把非B、21点35互异5边/paircover/min≥7且有qΓ=3原边的实际H压到唯一B型以及5全局degree谱，每谱只有3或4名degree10点。B型F={p,a,b,c,d}中p度7，a,b,c度10，d度9。它的恰三条非singleton外迹为{p,a,b}、{p,c,d}、{a,b,c,d}，其余31条边与F单交。所以λab=λcd=3，其他F内pairλ2。现在主张实际H中q3边至多一条：
+任两q3边F,F'各含3个实际十度点，故共有至少2名ten。
+1若同ten三元组，则共有3ten，其相互异常迹只能是3ten+nine（第3种），因此F=p+S,F'=q+S，其中S={a,b,c,d}，同nine/differentseven。λab=3且已计F,F'，故二者各自第1异常边必须同一边G1，含p,q,a,b。同样λcd=3迫第2异常边同一G2，含p,q,c,d。F/F'的其他31边都与两者singleton；若含p就须含q（否则为满足与F'单交需再含S点，却让与F交至少2）。所以p的其他6条边均含q，λpq=6。选中7/7,c6旧双锁严格（200844/230945<1 at(10,21)），与非B矛盾。
+2若ten三元组不同，交ten恰2名a,b，相互异常迹只能是{p,a,b}。故同seven p/differentnine d,e，F={p,a,b,c,d},F'={p,a,b,t,e}，唯一λ3 tenpair均为ab。各自第3异常边G含{a,b,c,d}且避p，G'含{a,b,t,e}且避p，均异于F,F'。λab=3迫G=G'，但其并集有4个不同ten加2个不同nine共6点，违5元。故不能两q3。
+请攻击这个论证：有没有漏掉相互迹、G1/G2不唯一、实际度角色重合、强pair调用条件或循环？若正确写明确范围。小核 receipt在 middle/min_degree_seven_q3_b_moments_20261020/TAU_TWO/UNIQUENESS_CHECK.json，源码同名py，只辅助该纸面论证。
+
+B. 请读 context/propertyb35-paper/round01/middle/c13_four_ten_seven_pool_20261020/shared_views/PROOF.md 及 shared_views_orbit2/VERIFY_DUAL.py 和 SIX_SOURCE_TRANSPORT.json（全都在同父目录）。第二轨正文如尚未出现按保存原数据核：μ=(14,0,1,3,1,4,2,0,0,3,4,0,3,0,0,0)，非零mask(0,2,3,4,5,6,9,10,12)，ψ2=2c0+c2+c3+3c4+3c12。H谱7^9,9^8,10^4；K四ten，全部17外点(9seven,8nine)，每外点原星c_T满足sum r7/9、0≤c≤μ、四inclusive行1..4（各7/10、9/10≥5共度已由局部双锁strict排）。所有ψ≤11 views在旧四五锁布局加pure link quota q=max(0,ceil((4c0−16)/3))后逐行min(A,B,C−2qW)strict；第一轨2054/2908、第二轨1967/2820，独立35索引核receipt，max20507/20592。实际column恒等式sum_z c_T=μ_T(5−|T|)使sumψ=192<17*12=204，必有一个低收费实际z，给同一H染色。最终不依赖浮点LP。S4运输只是K库存局部结论重标号，同时运输counts/positions，非旧marked D8/非H自同构。
+请攻击纯配额的方向因子、active min、同一H各view共享和S4运输完整性。旧未改变概率进口可声明，无需全重审。只认可这两个数学义务，不扩大到一般min7已染或36完成。用简洁结论+实质问题及来源，完成即停。

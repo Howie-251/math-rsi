@@ -1,0 +1,10 @@
+import Aris4Math.LowDegree
+#check Fintype.equivFinOfCardEq
+#check Finset.exists_subset_card_eq
+#check Finset.sum_le_sum_of_subset
+#check Finset.single_le_sum
+#check Finset.sum_le_sum_of_subset_of_nonneg
+#check Fintype.card_coe
+#check Fin.append
+#check Fin.sum_univ_succ
+#check Finset.sum_biUnion

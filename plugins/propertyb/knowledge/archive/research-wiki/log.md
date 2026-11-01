@@ -1,0 +1,437 @@
+# Research Wiki Log
+
+_Append-only timeline._
+- `2026-10-06T05:41:34Z` Wiki initialized
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:grill2024_improved_lower_bounds (arxiv:2403.05674)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:aglave2020_improved_bounds_uniform (arxiv:1602.00218)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:cherkashin2015_note_random_greedy (arxiv:1310.1368)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:pluhár2009_greedy_colorings_uniform (arxiv:)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:radhakrishnan2000_improved_bounds_algorithms (arxiv:)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:deutsch2006_congruences_catalan_motzkin (arxiv:math/0407326)
+- `2026-10-06T06:01:30Z` ingest_paper: ingested paper:goldberg1995_toward_computing (arxiv:)
+- `2026-10-06T06:04:32Z` Enriched paper:grill2024_improved_lower_bounds: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:aglave2020_improved_bounds_uniform: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:cherkashin2015_note_random_greedy: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:pluhár2009_greedy_colorings_uniform: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:radhakrishnan2000_improved_bounds_algorithms: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:deutsch2006_congruences_catalan_motzkin: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Enriched paper:goldberg1995_toward_computing: local source pages, reading depth, evidence scope, and project relevance; frontmatter and Connections preserved.
+- `2026-10-06T06:04:32Z` Defined stable project obligations G1–G4 in gap_map.md; all open, no claim/idea/experiment nodes created.
+- `2026-10-06T06:05:32Z` Added source-grounded extends relation: paper:grill2024_improved_lower_bounds -> paper:cherkashin2015_note_random_greedy.
+- `2026-10-06T06:05:32Z` Added source-grounded extends relation: paper:grill2024_improved_lower_bounds -> paper:pluhár2009_greedy_colorings_uniform.
+- `2026-10-06T06:05:32Z` Added source-grounded extends relation: paper:aglave2020_improved_bounds_uniform -> paper:radhakrishnan2000_improved_bounds_algorithms.
+- `2026-10-06T06:05:32Z` Rebuilt index.md and query_pack.md after enriching seven paper pages and recording three source-grounded extends edges. No claim, idea, or experiment nodes were created.
+- `2026-10-06T06:18:26Z` 核心规格FORMAL_SPEC.md v1.0固定：Grok/Gemini各三轮核对；原顶点集补边给出不依赖B0的有限约化。m(5)>=33仍未证明。详见context/reviews/SPEC_REVIEW.md。
+- `2026-10-06T06:45:12Z` ingest_paper: ingested paper:ferber2019_quantitative_lovász_criterion (arxiv:1903.04968)
+- `2026-10-06T06:45:14Z` ingest_paper: ingested paper:cherkashin2023_small_nonuniform_hypergraphs (arxiv:2303.03803)
+- `2026-10-06T06:45:14Z` ingest_paper: ingested paper:szeider2025_sat_modulo_symmetries (arxiv:)
+- `2026-10-06T06:47:17Z` wiki-enrich: enriched paper:ferber2019_quantitative_lovász_criterion from local-primary-PDF arXiv:1903.04968v1 pp.1–4 (filled 9/9 remaining TODO sections; thesis supplied at ingest); ordered-pair convention and equality scope recorded.
+- `2026-10-06T06:47:17Z` wiki-enrich: enriched paper:cherkashin2023_small_nonuniform_hypergraphs from local-primary-PDF arXiv:2303.03803v1 pp.1–5 (filled 9/9 remaining TODO sections); nonuniform assumptions and unreplicated Figure 1 coloring count recorded.
+- `2026-10-06T06:47:17Z` wiki-enrich: enriched paper:szeider2025_sat_modulo_symmetries from local-primary-PDF CEUR Vol.4116 pp.1–11 (filled 9/9 remaining TODO sections); CCL, incidence graphs and certificate pages recorded; no project run claimed.
+- `2026-10-06T06:47:17Z` Added source-grounded extends relation from Ferber–Shapira 2019 to Pluhár 2009. Updated Grill 2024 source availability: inspected v3 gzip package contains only PropB.tex, without attached C/GMP code; no assertion about other public locations. Frontmatter, Connections and original abstracts preserved; no claim, idea or experiment nodes created.
+- `2026-10-06T06:47:49Z` Updated ref/README.md and context/reference_manifest.json: preserved original seven PDFs, added three PDF-validated originals (20 pages), now ten PDFs and 117 pages. Source package is listed separately. No new mathematical claim was accepted.
+- `2026-10-06T06:56:01Z` 2026-10-06：完整候选证明PROOF_PACKAGE与三份引理已成文；23行精确复算、小排列oracle及独立阶乘算法已完成。G1–G3转为written-and-computed/pending-review；G4全局跨模型审阅中，尚不创建verified claim。
+- `2026-10-06T08:04:37Z` ingest_paper: ingested paper:grill2024_some_upper_bounds (arxiv:)
+- `2026-10-06T08:09:30Z` ingest_paper: ingested paper:linzmayer2018_die_probabilistische_methode (arxiv:)
+- `2026-10-06T08:09:30Z` ingest_paper: ingested paper:gao2026_peeling_hypergraphs_structural (arxiv:)
+- `2026-10-06T08:09:30Z` ingest_paper: ingested paper:akhmejanova2025_fractional_hypergraph_coloring (arxiv:2504.12430)
+- `2026-10-06T08:09:30Z` ingest_paper: ingested paper:doyen1967_sur_nombre_despaces (arxiv:)
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:grill2024_some_upper_bounds; local primary PDF and explicit reading/audit notes; filled or updated 9/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 本地会议册共64页，本轮只读物理p.24的相关摘要。2026综述参考文献中的“Some upper bounds for property B for small values of n by heuristic search”可能相关，但尚未核实为同一篇完整稿件。
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:linzmayer2018_die_probabilistische_methode; local primary PDF and explicit reading/audit notes; filled or updated 10/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 本地PDF共93页；已读题名、摘要、目录，§8 pp.57–59、第10章 pp.71–78、结论p.79及Appendix A p.80。其他章节及附录代码未全文阅读；没有取得32边反例或≥33证明。
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:gao2026_peeling_hypergraphs_structural; local primary PDF and explicit reading/audit notes; filled or updated 10/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 已读本地9页稿件的全部内容以核对主张和适用范围，未完成每个证明的独立审计。由其定义可直接推出：5-uniform、32边的 peeling 超图至少有5+31=36个非孤立顶点，因此该条件不能覆盖本项目19–25点的约化分支。
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:akhmejanova2025_fractional_hypergraph_coloring; local primary PDF and explicit reading/audit notes; filled or updated 10/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 已读v1 HTML引言与结果并浏览证明，随后核查当前v2 PDF pp.1–4的引言、全部结果陈述及参考文献；13页稿件的证明未全部精读或独立审计。SSRN副本与arXiv版本不可不加区分地互换。
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:doyen1967_sur_nombre_despaces; local primary PDF and explicit reading/audit notes; filled or updated 10/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 本地扫描PDF共17页，已视觉阅读物理pp.1–5，pp.6–17未读；pdftotext只有分页符。该文不讨论本项目的锁定概率权重，也不证明 m(5)≥33。
+- `2026-10-06T08:11:33Z` wiki-enrich: paper:goldberg1995_toward_computing; local primary PDF and explicit reading/audit notes; filled or updated 10/10 fillable sections; protected frontmatter/Connections unchanged. Read scope: 本次全部10个物理页均已逐页视觉阅读，正文抽取乱码仍不作可读文本。已定位的错误是把辅助图连通性当成任意端点的染色交叠保证；p.4 Lemma 2还漏写影响计数的非单色条件。作者警告没有指认这些具体机制，本次诊断不能冒充作者勘误，也不能扩大为旧论文所有定理皆假。
+- `2026-10-06T08:12:53Z` Reference manifests refreshed from local PDFs: 15 PDFs / 313 physical pages; selected-page reading preserved; Linzmayer 2018 removed from unavailable list; 2024 heuristic manuscript retained as bibliography-only; Goldberg all-10-page visual reading and independently checked Lemma 5 counterexample now reflected. No claim nodes or theorem-acceptance changes.
+- `2026-10-06T08:43:56Z` Updated G1–G4 to distinguish reviewed paper proof from incomplete full Lean composition; latest user completion requirement requires original Target with all assumptions discharged.
+- `2026-10-06T09:38:59Z` Updated G1–G4 with complete Lean branches 19 and 20, actual K6 classification, type aggregation, and remaining original-Target obligations.
+- `2026-10-06T10:08:03Z` add_claim: added claim:propertyb-m5-ge33 [status=verified] prov=.aris/traces/proof-checker/2026-10-06_run09/
+- `2026-10-06T10:11:40Z` 原目标T已完整Lean证明：Main汇总全部七分支并返回任意有限五元超图；run09构建及独立导入通过，标准三公理。proof-checker主定理claim已verified，G1–G4闭合；命题对照与模型审阅范围分别记录。
+- `2026-10-06T11:55:14Z` add_claim: updated claim:propertyb-m5-ge33 [status=verified] prov=.aris/traces/proof-checker/2026-10-06_run09/
+- `2026-10-06T11:55:14Z` 主定理claim补入最终命题对照证据：Grok r8与全新Gemini r10只读审阅均未发现具体缺口；root核对实际源码，数学源未改动，模型意见与Lean证据分别保存。
+- `2026-10-06T16:53:31Z` 数学 agent 方法调研完成：固定提交深读 Argus 与 Archon-Horizon，吸收固定库搜索后的真实 caller 试编、表示实验、因果诊断、proof/plan/strategy 失败归因和不同机制的并行路线。方法已写入本地 lean-formalize/references/lean-working-loop.md。Horizon 名称/签名搜索与 Lean 小例子已经实测；Argus checker 的组件检查范围保留具体复现。综合入口 context/MATH_AGENT_HARNESS_SYNTHESIS.md；不改变 Property B 定理与既有证明状态。
+- `2026-10-07T14:48:28Z` upsert_idea: added idea:propertyb-five-33-edge-threshold [stage=proposed outcome=pending]
+- `2026-10-07T14:48:28Z` upsert_idea: added idea:propertyb-six-64-edge-threshold [stage=proposed outcome=pending]
+- `2026-10-07T14:48:28Z` upsert_idea: added idea:propertyb-five-exact-value [stage=proposed outcome=pending]
+- `2026-10-07T15:30:02Z` upsert_idea: updated idea:propertyb-five-33-edge-threshold [stage=proposed outcome=pending]
+- `2026-10-07T15:30:02Z` add_experiment: added exp:propertyb33-preparation-diagnostics [verdict=partial confidence=high]
+- `2026-10-07T15:46:07Z` upsert_idea: updated idea:propertyb-five-33-edge-threshold [stage=active outcome=pending]
+- `2026-10-07T16:07:53Z` add_experiment: added exp:propertyb33-round01-formal-progress [verdict=partial confidence=high]
+- `2026-10-07T16:45:07Z` add_experiment: updated exp:propertyb33-round01-formal-progress [verdict=partial confidence=high]
+- `2026-10-07T16:45:07Z` add_experiment: added exp:propertyb33-twentytwo-codegree-pure [verdict=partial confidence=high]
+- `2026-10-07T17:40:49Z` add_experiment: added exp:propertyb33-v24-many-sevens [verdict=partial confidence=high]
+- `2026-10-13T03:26:26Z` add_experiment: updated exp:propertyb33-round01-formal-progress [verdict=partial confidence=high]
+- `2026-10-13T03:57:30Z` add_experiment: added exp:propertyb33-round02-actual-connections [verdict=partial confidence=high]
+- `2026-10-13T04:29:16Z` add_experiment: updated exp:propertyb33-round02-actual-connections [verdict=partial confidence=high]
+- `2026-10-13T04:40:15Z` add_experiment: added exp:propertyb33-round02-twentyfour-complete [verdict=partial confidence=high]
+- `2026-10-13T05:05:46Z` add_experiment: added exp:propertyb33-round02-four-low-actual [verdict=partial confidence=high]
+- `2026-10-13T05:07:17Z` add_experiment: added exp:propertyb33-round02-no-sixes-complete [verdict=partial confidence=high]
+- `2026-10-13T05:27:17Z` add_experiment: added exp:propertyb33-round02-low-bad-high-complete [verdict=partial confidence=high]
+- `2026-10-13T06:55:07Z` add_experiment: added exp:propertyb33-round02-four-low-complete [verdict=partial confidence=high]
+- `2026-10-13T07:03:50Z` add_experiment: added exp:propertyb33-round02-low-unit-actual [verdict=partial confidence=high]
+- `2026-10-13T07:15:37Z` add_experiment: updated exp:propertyb33-round02-low-unit-actual [verdict=partial confidence=high]
+- `2026-10-13T07:25:50Z` add_experiment: added exp:propertyb33-round02-main-direct [verdict=partial confidence=high]
+- `2026-10-13T07:48:37Z` add_claim: added claim:propertyb-m5-ge34 [status=verified] prov=context/propertyb33/round02/final-audit/PROOF_AUDIT.json
+- `2026-10-13T07:48:37Z` add_experiment: added exp:propertyb33-final-main-audit [verdict=yes confidence=high]
+- `2026-10-13T07:48:37Z` upsert_idea: updated idea:propertyb-five-33-edge-threshold [stage=archived outcome=positive]
+- `2026-10-13T07:48:37Z` 2026-10-13：T33全称原命题已完成Lean：m(5)≥34。Main1138jobs与构建后独立Finite/Finset原题审计均exit0，8项标准三公理。proof-checker两处MINOR说明已修复；Grok/Gemini最终C有效、HTML1049公式保真通过。新增verified claim propertyb-m5-ge34，保留原T32与全部失败/审阅历史。
+- `2026-10-13T08:25:22Z` upsert_idea: updated idea:propertyb-five-exact-value [stage=proposed outcome=pending]
+- `2026-10-13T08:25:23Z` upsert_idea: added idea:propertyb-five-34-edge-threshold [stage=proposed outcome=pending]
+- `2026-10-13T08:25:23Z` upsert_idea: added idea:propertyb33-v22-77-ordinary-quota-only [stage=archived outcome=negative]
+- `2026-10-13T08:25:23Z` upsert_idea: added idea:propertyb33-v25-k7-fixed-window [stage=archived outcome=negative]
+- `2026-10-13T08:25:23Z` upsert_idea: added idea:propertyb32-symmetric-cover-lp [stage=archived outcome=negative]
+- `2026-10-13T08:29:00Z` upsert_idea: updated idea:propertyb33-v22-77-ordinary-quota-only [stage=archived outcome=negative]
+- `2026-10-13T08:29:00Z` upsert_idea: updated idea:propertyb33-v25-k7-fixed-window [stage=archived outcome=negative]
+- `2026-10-13T08:29:00Z` upsert_idea: updated idea:propertyb32-symmetric-cover-lp [stage=archived outcome=negative]
+- `2026-10-13T08:34:18Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=proposed outcome=pending]
+- `2026-10-13T08:39:07Z` 2026-10-13：整理PROPERTY_B_RESEARCH_LESSONS、PROPERTY_B_FAILURE_ATLAS（14条）、PROPERTY_B_NEXT_BOUND_PLAYBOOK，复用T32/T33证据及唯一wiki；Grok/Gemini有效只读审阅后补齐21点内部选点差分及20点(7,10)。新增T34准备idea和三条范围明确的历史失败idea；新纸面交叠/边界算术在context/propertyb-lessons-20261013，审阅处置同目录。T32/T33保持verified，T34未启动Goal、未新增形式证明。
+- `2026-10-13T09:07:49Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=piloted outcome=pending]
+- `2026-10-13T09:07:49Z` add_experiment: added exp:propertyb34-feasibility-20261013 [verdict=partial confidence=medium]
+- `2026-10-13T09:07:49Z` 2026-10-13：按用户要求完成T34有界可行性诊断。19点完整纸面候选及精确局部界，24无六度二分和25普适九单位混合锁；20/21残余数值义务明确。Grok/Gemini具体义务审阅及实测纠正见context/propertyb34-feasibility-20261013/REVIEW_RECONCILIATION.md。新idea更新为piloted/pending，实验partial；无新Goal或Lean定理，T32/T33保持verified。
+- `2026-10-13T09:41:07Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T09:41:07Z` add_experiment: added exp:propertyb34-hour1-20261013 [verdict=partial confidence=high]
+- `2026-10-13T09:42:13Z` T34第一小时中途更新：原始约化、≤19点和20低度已有Lean证据；20δ7及24δ≥7候选入库。全题未解，一小时到时收卷，详见context/propertyb34-hour1-20261013/REPORT.md。
+- `2026-10-13T12:32:34Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=piloted outcome=pending]
+- `2026-10-13T12:32:34Z` add_experiment: updated exp:propertyb34-hour1-20261013 [verdict=partial confidence=high]
+- `2026-10-13T12:32:34Z` T34第一小时收卷：≤19及20主要分支Lean通过，20全纸面候选、21δ5、24两类新候选，22δ≥7压到13残型；原目标开放。详见context/propertyb34-hour1-20261013/REPORT.md。
+- `2026-10-13T12:47:25Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=piloted outcome=pending]
+- `2026-10-13T12:47:25Z` T34长期Goal文本GOAL_PROPERTYB_34.md与context/propertyb34/PROGRESS.md已准备，准确接续第一小时证据；用户自己启动。本次仅文档工作，无新数学结果、无新Goal，idea仍piloted/pending。
+- `2026-10-13T13:30:45Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T13:30:45Z` add_experiment: added exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T13:30:45Z` T34 Goal正式active。round01：22δ≥7的13残型以共享真实坏向量布局证书全修复并独立复算，24r6≥7及21唯一六无七候选补齐；20新Lean在途。完整T34未完成。
+- `2026-10-13T13:48:01Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T13:48:01Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T13:48:01Z` T34 round01更新：20恰两七度Lean实际分支通过；21δ6、22δ≥7、24至少六低完整纸面候选；Grok/Gemini针对22及21等号结构有效审阅，范围与笔误纠正在round01/REPORT.md。数学原目标仍开放。
+- `2026-10-13T14:18:04Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T14:18:05Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T14:18:05Z` T34 14:17 UTC：20唯一/恰两七度Lean实接，纸面21δ7、23多六低、24五低、25全支推进；严格区分未形式化和未完成审阅。恢复入口context/propertyb34/PROGRESS.md。
+- `2026-10-13T14:42:35Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T14:42:35Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T15:12:20Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T15:12:20Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T15:35:09Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T15:35:09Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T15:35:09Z` add_claim: added claim:propertyb-m5-ge35 [status=drafted] prov=context/propertyb34/round01/paper-audit/PROOF_AUDIT.json
+- `2026-10-13T16:08:56Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T16:08:56Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T16:08:56Z` add_claim: updated claim:propertyb-m5-ge35 [status=drafted] prov=context/propertyb34/round01/paper-audit/PROOF_AUDIT.json
+- `2026-10-13T16:28:53Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T16:28:53Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T16:35:02Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T16:35:02Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T16:35:02Z` add_claim: updated claim:propertyb-m5-ge35 [status=drafted] prov=context/propertyb34/round01/paper-audit/PROOF_AUDIT.json
+- `2026-10-13T17:08:02Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T17:08:03Z` add_experiment: updated exp:propertyb34-round01-joint-layout [verdict=partial confidence=high]
+- `2026-10-13T17:08:03Z` add_claim: updated claim:propertyb-m5-ge35 [status=drafted] prov=context/propertyb34/round01/paper-audit/PROOF_AUDIT.json
+- `2026-10-13T17:30:38Z` 用户要求持久保存T34 Lean效率经验：失败图谱新增第15项，方法总览/下一轮指南/AGENTS同步入口。保留15分钟以上约8GB的失败范围，采用稀疏查询/数组、容量剪枝和Data/Kernel/actual模块分离；改后同域实测待回填，不预写加速比。详见context/propertyb34/round01/middle-lean/PERFORMANCE_NOTES.md。
+- `2026-10-13T17:53:33Z` T34 final 30-minute window: unique-seven actual 21-point branch and Assembly/OneAudit passed, standard three axioms; complete four-lock lookup kernel passed in 87.75 s. Persisted sparse lookup, split certificate modules, abstract dispatch and actual caller lessons in PROPERTY_B_FAILURE_ATLAS §15 and PERFORMANCE_NOTES. Grok/Gemini promotion-interface reviews returned within their source-only scope; T34 remains open. Deadline 2026-10-13 18:06:37 UTC.
+- `2026-10-13T18:01:36Z` upsert_idea: updated idea:propertyb-five-34-edge-threshold [stage=active outcome=pending]
+- `2026-10-13T18:01:36Z` add_experiment: added exp:propertyb34-final30-20261014 [verdict=partial confidence=high]
+- `2026-10-13T18:01:36Z` add_claim: updated claim:propertyb-m5-ge35 [status=drafted] prov=context/propertyb34/round01/paper-audit/PROOF_AUDIT.json
+- `2026-10-13T18:01:36Z` Final 30-minute T34 handoff: One + Many actual branches and Assembly/audits PASS; 23 FourCoverage/Classified PASS. Remaining21 min7 with exactly 2/3/4 sevens, plus full 22–25 branches. New bound remains drafted. Research pauses under user time limit; preserve compiled dependencies and DEGREE_SEVEN_CONTINUATION. No active Lean build remains.
+- `2026-10-13T18:11:03Z` User-requested HTML readers published: M5_GE34.html reuses accepted proof byte-for-byte; M5_GE35.html states complete natural-language candidate draft and exact remaining Lean obligations. Offline desktop/mobile render checks passed. This is documentation only; T34 Goal remains paused and the >=35 claim remains drafted.
+- `2026-10-14T07:53:46Z` 2026-10-14：完成33/34与35候选的三层积累。新增PROPERTY_B_REUSABLE_LEMMAS.md的12组精确引理、源码范围和纸面推广；更新原研究经验、15项失败地图与当前恢复指南。原始跨家族讨论及逐项纠正在context/propertyb-unified-lessons-20261014/REVIEW_RECONCILIATION.md。33/34已验收、35全Lean未闭合；本次未运行Lean或恢复暂停Goal。
+- `2026-10-14T07:57:13Z` 通用引理补审收束：Grok两轮有效end_turn；Gemini首轮SUCCESS，续接ERROR保留，新会话一次补审SUCCESS。均未运行Lean。12组最终目录、范围纠正和105项本地文档链接/具体六锁边界例检查见context/propertyb-unified-lessons-20261014/。不作为完整T34验收。
+- `2026-10-14T07:57:39Z` 上条文档链接数为录入笔误；DOCUMENT_CHECKS.json的实际检查数为110，缺失链接为0。数学与审阅状态不变。
+- `2026-10-14T08:15:13Z` 已生成PROPERTY_B_TOOLKIT.html单卷阅读：页内完整12引理、6节方法、15失败案例、26个离线公式，规范源继续为现有wiki。fresh展示保真审计PASS、0阻塞/0警告（same-family/provisional），仅验证呈现；未恢复Goal或运行Lean。生成器context/rendering/render_propertyb_toolkit.py。
+- `2026-10-14T09:19:37Z` 完成M5_GE35.html单卷自然语言候选证明：原命题、≤18约化、P1–P8与配额/共享坏对、19–25全部分支和最终反证均内联；1770公式、22表，桌面1440/手机390离线展示保真PASS。源context/propertyb34-reader/CHAPTER_*.md，生成器context/rendering/render_propertyb34.py；旧状态页保留PREVIOUS_STATUS_PAGE.md。23点≥7低收尾用实际三元迹删点双计数4b=14替代旧有限提升检查。展示审计仅same-family/provisional，不新增Lean验收，claim仍drafted、Goal仍暂停。工具手册行内数学已修复为408处内嵌公式，证据.aris/traces/render-html/2026-10-14_toolkit-inline-math/。
+- `2026-10-14T09:34:58Z` 合作者综合查验包已制作：aris4math_collaborator_33_34_35_20261014.zip。START_HERE.html提供33/T32、34/T33已验收与35/T34候选的状态、通用引理、阅读及复现入口；完整数学源码、局部分类/证书/复算、审计及61份PDF保留相对目录。归档回读/解压核心链接与三个Lean入口435项目模块源码闭包通过；未重跑Lean、大表或恢复Goal，不代表合作者独立复现。详细命令context/collaborator-handoff-20261014/REPRODUCTION_SUGGESTIONS.md。
+- `2026-10-15T07:36:13Z` add_experiment: added exp:propertyb34-round02-actual-bridges [verdict=partial confidence=high]
+- `2026-10-15T08:35:16Z` T34 round02 08:36UTC：21四七度522+4证书及选点桥已构建，完整容量覆盖仍待；23/24/25正压缩实际分类核验为显式见证行及稀疏等式，原全表超时不计通过。Gemini按用户指令停用，Grok4.7获授权重试。证据context/propertyb34/round02/PROGRESS.md。
+- `2026-10-15T08:55:40Z` T34 round02：24点无六度完整实际分支正规构建及裸Finset/Bool审计PASS，仅标准三公理。新稀疏覆盖63秒，相比旧17分钟未完成实现取得实测改进。其余24支及T34仍未闭合。入口context/propertyb34/round02/PROGRESS.md。
+- `2026-10-15T09:31:10Z` T34 round02：21恰四七度与24无六度两个完整实际分支正规构建、裸Finset/Bool复述及标准公理审计通过，已接Assembly。23四→五完整覆盖和五低分类通过；五低20布局数值按精确等式分块，600秒未完降为62秒全链通过。完整T34仍待，恢复入口context/propertyb34/round02/PROGRESS.md。
+- `2026-10-15T10:02:43Z` T34：23至少七个六度点整支已正规构建、原Bool命题复述与公理审计通过，接Assembly；21四七度、24无六度此前亦闭合。新的有损风险已由实际规范化避免：21同模式八度pair固定共度2（1722→1048候选），23恰六旧型自同构331→86正在核验。q5已实测24代表组82.7秒，整体仍是小时级工作，撤回此前很快估时。Gemini用户恢复后有效B审阅，范围见round02/reviews。
+- `2026-10-15T10:50:33Z` upsert_idea: added idea:propertyb36-40-structural-diagnosis [stage=piloted outcome=mixed]
+- `2026-10-15T10:50:34Z` add_experiment: added exp:propertyb36-40-diagnosis-20261015 [verdict=partial confidence=medium]
+- `2026-10-15T10:50:34Z` 用户明确暂停m(5)≥35的Lean Goal，工具已paused；保存round02/PAUSE_CHECKPOINT_20261015.md。新授权为36–40纸面诊断，未启动新Goal/Lean。完整诊断见context/propertyb36-40-diagnosis-20261015/DERIVATION_PACKAGE.md。
+
+## 2026-10-15：36–40诊断交付与审阅收卷
+
+可读页 `../context/propertyb36-40-diagnosis-20261015/DIAGNOSIS.html` 已生成，离线公式、全部链接及桌面/手机保真审阅PASS（same-family/provisional，仅展示）。新Grok诊断线程ed5f52c1-c1d9-4c82-b83a-c59c08627214超一小时无完整返回，保存部分原始会话后定向终止，MCP exit143/isError；不计数学审阅通过、不自动重试。Gemini上次额度错误，本次没有新结果。原始证据和范围见同目录REVIEW_RECONCILIATION.md。35 Lean Goal继续paused，36–40完整目标未证明，原已验收下界未改变。
+- `2026-10-15T12:38:44Z` add_experiment: added exp:propertyb36-eighteen-forest-triple-20261015 [verdict=partial confidence=high]
+- `2026-10-15T13:01:28Z` add_experiment: added exp:propertyb36-maximum-unit-refinement-20261015 [verdict=partial confidence=high]
+- `2026-10-15T13:01:28Z` Gemini4的九匹配锁结构论证已有效返回并核对；沿最大独立集扩充提炼9/10锁分流及alpha5五K5刚性。18点交叠森林条件与三九度锁全位置失败边界也已保存。入口context/propertyb36-40-diagnosis-20261015/gemini4-discussion/DISCUSSION_REPORT.md；35Lean仍暂停，完整36未证明。
+- `2026-10-18T18:04:35Z` 2026-10-19准备m(5)≥36自然语言Goal与独立规格；旧35 Lean Goal核对仍paused。新增G7导航，按2026-10-15暂停检查点纠正G6及RESEARCH_BRIEF滞后状态，旧版保存在context/propertyb35-paper/preparation-20261019。沿用现有wiki及诊断，无新数学验收、外部模型审阅或Goal启动。
+- `2026-10-19T08:36:46Z` add_experiment: added exp:propertyb-small-k-transfer-20261019 [verdict=partial confidence=high]
+- `2026-10-19T08:36:59Z` 阅读合作者propertyB_small_k全部材料并重放k6–11六组103190局部参数证书。新增PROPERTY_B_SMALL_K_TRANSFER.md及experiment节点，保存通用选锁、向外舍入与k5迁移失败边界；同步项目AGENTS、36待启动Goal与恢复入口。研究仍聚焦m5，无新全称下界、Lean或跨模型验收。
+- `2026-10-19T13:25:51Z` upsert_idea: added idea:propertyb35-paper-unique-swap [stage=piloted outcome=positive]
+- `2026-10-19T13:25:51Z` add_experiment: added exp:propertyb35-paper-small-swap-20261019 [verdict=yes confidence=high]
+- `2026-10-19T13:25:51Z` 用户启动m5≥36自然语言Goal。新唯一坏事件修复双计数完整闭合≤18点≤36边，两套直接局部计数一致；新增原始量词约化REDUCTION.md。19–25仍研究；旧35 Lean工作保留检查点。更新G7与实时导航，未创建verified claim。
+- `2026-10-19T13:59:55Z` add_experiment: added exp:propertyb35-paper-nineteen-20261019 [verdict=yes confidence=high]
+- `2026-10-19T13:59:55Z` add_experiment: added exp:propertyb35-paper-twenty-delta5-20261019 [verdict=yes confidence=high]
+- `2026-10-19T13:59:55Z` 本轮新增19点全部最小度纸面覆盖与20δ5完整分支，新增通用UNIT_STAR_RECOVERY。Grok4.7-build/xhigh对≤18点交换证明有效end_turn且未发现问题；19审阅续接在途。25混合九单位q≤2全库存严格，q3等失败边界保存。22/24短pilot显示旧估计不足，及时停止扩表，转实际共同结构。新36Goal继续active。
+- `2026-10-19T14:32:17Z` add_experiment: added exp:propertyb35-paper-twenty-delta6-20261019 [verdict=yes confidence=high]
+- `2026-10-19T14:32:17Z` add_experiment: added exp:propertyb35-paper-a5-coloring-boundary-20261019 [verdict=yes confidence=high]
+- `2026-10-19T14:32:17Z` 20δ6完整纸面分支通过独立域与精确算术审计；Grok18及19δ8/δ9有效局部静态审阅未发现问题。a5新文献原始条件与势能边界保存，36全题仍未闭合，旧35 Lean不运行。
+- `2026-10-19T15:07:52Z` add_experiment: added exp:propertyb35-paper-twenty-seven-ge3-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:07:52Z` add_experiment: added exp:propertyb35-paper-twentyone-delta5-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:07:52Z` add_experiment: added exp:propertyb35-paper-affine-transfer-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:07:52Z` 本轮新增20δ7至少三低、21δ5完整纸面分支；仿射传送引理与a5五组全为边闭合，文献import及固定锚量词明确。主代理核读完整链、独立精算已验；36整题仍有开放分支。
+- `2026-10-19T15:10:23Z` ingest_paper: ingested paper:innes1907_finite_planes_less (arxiv:)
+- `2026-10-19T15:10:23Z` ingest_paper: ingested paper:burgess2026_colourings_uniform_group (arxiv:)
+- `2026-10-19T15:10:23Z` ingest_paper: ingested paper:horsley2014_balanced_incomplete_block (arxiv:)
+- `2026-10-19T15:32:00Z` Filled three new paper pages from already retrieved/read primary PDFs/HTML and explicit reading receipts: Mac Innes1907 pp171–174, Burgess arXiv2510.05375v1 selected sections, Horsley–Pike1209.6111v2 selected lemmas. Actual provenance is local-primary, not a newly fetched summary; metadata and Connections preserved.
+- `2026-10-19T15:35:16Z` add_experiment: added exp:propertyb35-paper-two-stars-and-six-degree-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:35:16Z` add_experiment: added exp:propertyb35-paper-balanced-repair-multiplicity-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:45:27Z` add_experiment: added exp:propertyb35-paper-twentyone-two-low-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:45:27Z` New paper checkpoint: all20delta7 with at least two degree7 vertices has complete scoped paper candidates;21two6 with at least two7 likewise. Full36stillopen. Saved Grok entry-resolution and actual Gemini lemma corrections, not consensus acceptance.
+- `2026-10-19T15:46:07Z` add_experiment: added exp:propertyb35-paper-twenty-seven-r2-c2-20261019 [verdict=yes confidence=high]
+- `2026-10-19T15:47:17Z` ingest_paper: ingested paper:sarvate2016_group_divisible_designs (arxiv:)
+- `2026-10-19T16:00:03Z` add_experiment: added exp:propertyb35-paper-twenty-seven-unique-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:00:03Z` add_experiment: added exp:propertyb35-paper-group-external-star-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:00:03Z` add_experiment: added exp:propertyb35-paper-twenty-eight-double-core-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:00:03Z` Added general actual-trace/external-point caller L16; filled Sarvate2016 page from selected primary manuscript sections, with explicit repeated-block boundary and PBIBD terminology.
+- `2026-10-19T16:31:43Z` add_experiment: added exp:propertyb35-paper-twenty-eight-complete-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:31:43Z` add_experiment: added exp:propertyb35-paper-twentyone-high-unit-pools-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:31:44Z` add_experiment: added exp:propertyb35-paper-two-external-stars-20261019 [verdict=yes confidence=high]
+- `2026-10-19T16:31:44Z` 16:34 UTC：20点完整纸面候选已闭合；21无七度两个真实unit池整支、25双外点排五组类均独立复算入库。完整36尚未证明；新Grok/Gemini按具体义务审阅在途。
+- `2026-10-19T17:15:21Z` add_experiment: added exp:propertyb35-paper-single-k5-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:15:21Z` add_experiment: added exp:propertyb35-paper-empty-trace-potential-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:15:21Z` add_experiment: added exp:propertyb35-paper-low-edge-cover-repair-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:15:21Z` add_experiment: added exp:propertyb35-paper-pairing-guarantee-false-20261019 [verdict=no confidence=high]
+- `2026-10-19T17:15:21Z` 整体方法检查点：单K5闭合a5/a6；最小空迹降core19；低边/高点击中集与小重复颜色修复；配对全局保证有实际反例而停止。完整36未证明，一小时窗口持续。
+- `2026-10-19T17:31:01Z` add_experiment: updated exp:propertyb35-paper-empty-trace-potential-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:31:01Z` add_experiment: added exp:propertyb35-paper-two-partition-matching-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:39:21Z` add_experiment: updated exp:propertyb35-paper-two-partition-matching-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:39:21Z` add_experiment: added exp:propertyb35-paper-fixed-core-product-repair-20261019 [verdict=yes confidence=high]
+- `2026-10-19T17:39:21Z` add_experiment: added exp:propertyb35-paper-mixed-r1-single-k5-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:25:37Z` add_experiment: added exp:propertyb35-paper-mixed-r1-r2-assembly-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:25:37Z` add_experiment: added exp:propertyb35-paper-random-transversal-repair-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:25:37Z` add_experiment: added exp:propertyb35-paper-subcubic-image-cut-20261019 [verdict=partial confidence=high]
+- `2026-10-19T18:25:37Z` 18:25 UTC结构优先：新增25 r1/r2候选装配、L23自含占用耦合和L24图像割归约；原36仍有21–24及25 r≥3义务，旧35 Lean暂停。
+- `2026-10-19T18:43:13Z` add_experiment: added exp:propertyb35-paper-global-low-edge-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:43:13Z` add_experiment: added exp:propertyb35-paper-unit-neighbor-real-edges-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:43:13Z` add_experiment: added exp:propertyb35-paper-subcubic-bridge-counterexample-20261019 [verdict=yes confidence=high]
+- `2026-10-19T18:43:13Z` 18:43 UTC：结构优先新共同低边、23真实单位五边及一般图像桥梁反例入库。CriticalLowEdgeRepair保留实际M34/35，负单点/二点约束为未解。完整36未证。
+- `2026-10-19T18:43:32Z` upsert_idea: added idea:propertyb35-paper-unparameterized-subcubic-bridge [stage=archived outcome=negative]
+- `2026-10-19T19:09:57Z` add_experiment: added exp:propertyb35-paper-critical-blocker-budget-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:09:58Z` add_experiment: added exp:propertyb35-paper-low-six-cycle-core-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:09:58Z` add_experiment: added exp:propertyb35-paper-critical-unit-obstruction-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:12:41Z` 2026-10-19 19:12 UTC：先规约后计算继续。新增单外红点平方亏损L27、私有边整数打包L28、23δ6四核心完整目录/保度运输及单位交换反向障碍。三正集门短证明已形成并独立重放；24八正集occ3小核心178>168正在核实际caller与新P图覆盖。完整36未证，旧Lean与v2未动。
+- `2026-10-19T19:33:37Z` add_experiment: added exp:propertyb35-paper-seven-high-four-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:33:37Z` add_experiment: added exp:propertyb35-paper-one-red-dg35-closure-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:33:37Z` 19:33 UTC：新增24点七高四内部边完整纸面分支（4P及n3=0/1/2统一七八正门，P端解析）；新增唯一外红DG35条件闭合。L29/L30及覆盖表已同步，完整36仍未证。Grok纯P2首回只有计划不算完成，续接357；Gemini整合355在途，七门有效SUCCESS。
+- `2026-10-19T19:59:30Z` add_experiment: added exp:propertyb35-paper-six-high-two-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:59:30Z` add_experiment: added exp:propertyb35-paper-seven-four-triples-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:59:30Z` add_experiment: added exp:propertyb35-paper-seven-high-three-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T19:59:30Z` 19:59 UTC：已合并24点六高二内部全迹和七高三内部纯/唯一高迹；重复点负预算替代六标签表。完整36未证，旧Lean暂停；新Grok/Gemini范围分开记录。
+- `2026-10-19T20:10:29Z` 压缩G7导航并将最新覆盖放到前部，避免query_pack截断最新入口；原G7快照保留于round01/root。
+- `2026-10-19T20:14:06Z` add_experiment: updated exp:propertyb35-paper-six-high-two-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:14:06Z` add_experiment: updated exp:propertyb35-paper-seven-four-triples-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:14:06Z` add_experiment: updated exp:propertyb35-paper-seven-high-three-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:14:06Z` add_experiment: added exp:propertyb35-paper-critical-small-transversal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:14:06Z` 2026-10-19 20:14 UTC：无表七正门、五小正/四小正、六高两内部全迹及七高三内部大合并已存；真实剩余和MCP最后在途cell402明确，不升级完整36。
+- `2026-10-19T20:22:00Z` add_experiment: added exp:propertyb35-paper-analytic-catalogue-elimination-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:22:00Z` 2026-10-19 20:21 UTC：主证明真正换到通用短入口，P5旧目录与P6匹配/18点图表不再是规范链依赖。最后新Grok审阅cell412在途；全局36未证。
+- `2026-10-19T20:35:33Z` add_experiment: added exp:propertyb35-paper-large-union-one-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:35:33Z` add_experiment: added exp:propertyb35-paper-missing-star-two-high-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:35:33Z` add_experiment: added exp:propertyb35-paper-three-low-repair-transfer-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:38:52Z` add_experiment: updated exp:propertyb35-paper-analytic-catalogue-elimination-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:38:52Z` add_experiment: updated exp:propertyb35-paper-large-union-one-internal-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:38:53Z` add_experiment: updated exp:propertyb35-paper-missing-star-two-high-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:38:53Z` add_experiment: added exp:propertyb35-paper-eight-four-triples-boundary-20261019 [verdict=partial confidence=high]
+- `2026-10-19T20:59:05Z` add_experiment: added exp:propertyb35-paper-eight-four-target-budget-20261020 [verdict=partial confidence=high]
+- `2026-10-19T20:59:05Z` add_experiment: added exp:propertyb35-paper-small-two-restricted-20261020 [verdict=partial confidence=high]
+- `2026-10-19T20:59:05Z` add_experiment: added exp:propertyb35-paper-six-unit8-common-pool-20261020 [verdict=partial confidence=high]
+- `2026-10-19T21:19:21Z` add_experiment: added exp:propertyb35-paper-mixed-positive-charge-20261020 [verdict=partial confidence=high]
+- `2026-10-19T21:28:16Z` add_experiment: added exp:propertyb35-paper-seven-high-three-internal-complete-20261020 [verdict=partial confidence=high]
+- `2026-10-19T21:54:22Z` add_experiment: added exp:propertyb35-paper-p6-global-residual-nine-gate-20261020 [verdict=partial confidence=high]
+- `2026-10-19T22:06:37Z` add_experiment: added exp:propertyb35-paper-nine-positive-shared-capacity-20261020 [verdict=partial confidence=high]
+- `2026-10-19T22:20:38Z` add_experiment: added exp:propertyb35-paper-p7-two-internal-unified-20261020 [verdict=partial confidence=high]
+- `2026-10-19T22:37:13Z` add_experiment: added exp:propertyb35-paper-nine-budget23-ten-kernel-20261020 [verdict=partial confidence=high]
+- `2026-10-19T22:55:11Z` add_experiment: added exp:propertyb35-paper-general-five-pair-p6-closure-20261020 [verdict=partial confidence=high]
+- `2026-10-19T23:23:46Z` add_experiment: added exp:propertyb35-paper-six-large-union-high-singleton-20261020 [verdict=partial confidence=high]
+- `2026-10-20T00:00:50Z` add_experiment: added exp:propertyb35-paper-shared-private-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T00:26:25Z` add_experiment: added exp:propertyb35-paper-sink-capacity-two-quads-20261020 [verdict=partial confidence=high]
+- `2026-10-20T00:53:31Z` add_experiment: added exp:propertyb35-paper-r9-owner-mixed-inventory-20261020 [verdict=partial confidence=high]
+- `2026-10-20T01:22:05Z` add_experiment: added exp:propertyb35-paper-analytic-merged-i1-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T01:48:23Z` add_experiment: added exp:propertyb35-paper-all-pure-i1-four-five-pair-20261020 [verdict=partial confidence=high]
+- `2026-10-20T02:18:46Z` add_experiment: added exp:propertyb35-paper-strong-balanced-six-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T02:20:37Z` add_experiment: updated exp:propertyb35-paper-strong-balanced-six-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T02:58:14Z` add_experiment: added exp:propertyb35-paper-global-two-flip-low-four-core-20261020 [verdict=partial confidence=high]
+- `2026-10-20T03:14:16Z` add_experiment: added exp:propertyb35-paper-a1-four-eight-core-20261020 [verdict=partial confidence=high]
+- `2026-10-20T03:14:16Z` Navigation checkpoint and reusable L80 synchronized: A1 four-eight core root-replayed complete subclass; high-three root-replayed partial 32/36 with19 labels/9orbits; original35 A1 probe40UNKNOWN/0models; MCP849/870pending, whole36 unproved. Existing graph preserved; only canonical helper added experiment relation and rebuilt views.
+- `2026-10-20T03:42:51Z` add_experiment: added exp:propertyb35-paper-a1-balanced-star-rank-20261020 [verdict=partial confidence=high]
+- `2026-10-20T03:42:52Z` 追加L81–L84：q3四核、五top、一般rank/同一平衡森林及shared-middle必要式；严格区分root实跑与静态review/在途scope，36未证。
+- `2026-10-20T03:54:09Z` add_experiment: added exp:propertyb35-paper-a1-strong-rank19-cap13-20261020 [verdict=partial confidence=high]
+- `2026-10-20T03:54:10Z` 新增L85近饱和和L86实际谱rank19/n4<=8；保存80->25必要松弛独立过滤，准确补Gemini902 scope及iff反向纠正，新强式审阅在途；整A1/36未闭。
+- `2026-10-20T04:05:12Z` add_experiment: added exp:propertyb35-paper-critical-core-component-boundary-20261020 [verdict=partial confidence=high]
+- `2026-10-20T04:05:13Z` L87与失败atlas19收录原图N34/critical34core和component恒等无收益、literalP13002非max边界；提取Grok旧forest与Gemini强rank有效静态审阅准确scope，新root审计pending，无25aggregate新增排除。
+- `2026-10-20T04:20:22Z` add_experiment: added exp:propertyb35-paper-principal-trace-degree-prefix-20261020 [verdict=partial confidence=high]
+- `2026-10-20T04:20:22Z` 追加L88实际principal-trace/Schur/删边scope，agent最终双degree算法19keys25->3 aggregate且root最终DP待核；提取Gemini通用scope回应，更新实际root三项PASS和统一checkpoint，整A1/36未闭。
+- `2026-10-20T04:26:39Z` add_experiment: updated exp:propertyb35-paper-principal-trace-degree-prefix-20261020 [verdict=partial confidence=high]
+- `2026-10-20T04:26:39Z` 稳定LOW19三残及root完整21615->25->3实跑确认；追加L88低块Schur20/19纸面链，提取Grok通用trace有效回应，后续cell940 pending，保持全A1/21/36未闭。
+- `2026-10-20T04:54:42Z` add_claim: added claim:propertyb35-paper-twentyone-unique-six-one-seven [status=drafted] prov=proofs/propertyb35/TWENTYONE_UNIQUE_SIX_ONE_SEVEN.md;context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/SIMPLE_CHAIN.md;SIMPLE_CHAIN_VERIFY.json
+- `2026-10-20T04:54:42Z` add_experiment: added exp:propertyb35-paper-a1-simple-complete-chain-20261020 [verdict=partial confidence=high]
+- `2026-10-20T04:54:42Z` 21唯一六度恰一七度完整paper候选装配21615→25→1→实际quad-tau0，claim drafted非verified；L89及7导航/checkpoint/frontier更新，四有效局部reviewscope归档，不冒充新294行/DP全审；general-transfer22输出元数据修正实际重跑，完整36未证。
+- `2026-10-20T04:59:22Z` add_claim: updated claim:propertyb35-paper-twentyone-unique-six-one-seven [status=drafted] prov=context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/native/PROOF_AUDIT.json;ROOT_SCOPE_CHECK.json;proofs/propertyb35/TWENTYONE_UNIQUE_SIX_ONE_SEVEN.md
+- `2026-10-20T04:59:22Z` add_experiment: added exp:propertyb35-paper-generic21-fulltop-20261020 [verdict=partial confidence=high]
+- `2026-10-20T04:59:23Z` fresh unique6/one7正式PASS_WITH_DECLARED_IMPORTS samefamily/provisional及root精确scope已记，claim仍drafted、wholebranch双审959在途；L90泛fulltop38/39与21delta8/fulltop实际子类沉淀，非全delta8/36。
+- `2026-10-20T05:29:21Z` add_experiment: added exp:propertyb35-paper-generic-six-star-mingamma-transfer-20261020 [verdict=partial confidence=high]
+- `2026-10-20T05:29:21Z` add_claim: updated claim:propertyb35-paper-twentyone-unique-six-one-seven [status=drafted] prov=context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/native/PROOF_AUDIT.json;GEMINI_FULL_A1_RESPONSE.md;ROOT_SCOPE_CHECK.json;proofs/propertyb35/TWENTYONE_UNIQUE_SIX_ONE_SEVEN.md
+- `2026-10-20T05:29:22Z` 2026-10-20 05:28UTC同步：L91无Delta/cover的21/22minGamma3新稿（7/8red审阅pending）；L92 A2/A3全codegree4实际root125/2625PASS；L93完整5886/41星onlyC164896独立域/IEPASS；L94条件高点C3cap14/root重放待确认。A1 fresh正式provisional+Gemini新整篇静态PASS/Grokpending，claimdrafted，main36未证。七导航/checkpoint/frontier已同步，24余12/8、25r3..21原H修复保留。
+- `2026-10-20T05:29:59Z` add_experiment: updated exp:propertyb35-paper-generic-six-star-mingamma-transfer-20261020 [verdict=partial confidence=high]
+- `2026-10-20T05:30:00Z` 05:28档补root实际确认：minGamma3全205行/两红门读核+q2VERIFY.000619PASS；C3高点1303/183VERIFY1.415824PASS；追加L95一般共同wedge收费。cell976/wholeA1Grok959仍pending；global36未证。
+- `2026-10-20T05:39:35Z` add_claim: updated claim:propertyb35-paper-twentyone-unique-six-one-seven [status=sound-modulo-imports] prov=context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/native/PROOF_AUDIT.json
+- `2026-10-20T05:48:08Z` add_experiment: added exp:propertyb35-paper-a2-a3-actual-quad-critical-frontier-20261020 [verdict=partial confidence=high]
+
+- `2026-10-20 05:48:29 UTC` Documentation sync: L91/L93 precise review/execution addendum and new L96–L98 record actual four-core repair, original-H critical import, degree-sensitive prefix; red17 raw responses archived exactly; no claim status change, no programs/Lean executed by documentation agent. New combined cross-family review remains pending.
+- `2026-10-20T06:23:36Z` add_claim: added claim:propertyb35-paper-twentyone-unique-six-two-three-seven [status=drafted] prov=context/propertyb35-paper/round01/audit-unique-six-two-three-seven-20261020/INPUTS.md
+- `2026-10-20T06:23:36Z` add_experiment: added exp:propertyb35-paper-a2-a3-complete-assembly-20261020 [verdict=yes confidence=high]
+
+- `2026-10-20 06:24:10 UTC` Bounded documentation sync: L99–101 and actual A2/A3 drafted claim; raw old combined cross-family responses archived exactly; current21 coverage distinguishes audited A1, candidate A2/A3 and remaining two-low/delta7/8. New full audit pending; no math rerun or frozen-source edits.
+- `2026-10-20T06:46:43Z` add_claim: added claim:propertyb35-paper-twentyone-minimum-eight-small-codegrees [status=drafted] prov=proofs/propertyb35/TWENTYONE_MINIMUM_EIGHT_SMALL_CODEGREES.md
+- `2026-10-20T06:47:18Z` add_claim: updated claim:propertyb35-paper-twentyone-unique-six-two-three-seven [status=drafted] prov=context/propertyb35-paper/round01/audit-unique-six-two-three-seven-20261020/native/PROOF_AUDIT.json
+
+- `2026-10-20 06:47:18 UTC` Minimal status sync: L102–104 and drafted small-codegree delta8 theorem; A2/A3 native formal PASS plus Gemini static whole-chain accepted scope, Grok still pending. New full delta8-small-codegree theorem pending review;11 wholedegree spectra paper closed,4 unique-high-pair5 branches remain. No frozen U01–U16 edits or new math run.
+- `2026-10-20T06:52:34Z` add_claim: added claim:propertyb35-paper-twentyone-minimum-eight [status=drafted] prov=proofs/propertyb35/TWENTYONE_MINIMUM_EIGHT.md
+- `2026-10-20T06:53:34Z` add_claim: updated claim:propertyb35-paper-twentyone-unique-six-two-three-seven [status=sound-modulo-imports] prov=context/propertyb35-paper/round01/audit-unique-six-two-three-seven-20261020/native/PROOF_AUDIT.json
+
+- `2026-10-20 06:54:08 UTC` Current-only sync: complete delta8 paper candidate frozen after raw-W table correction; native plus both valid whole-A2/A3 reviews reconciled and exact A2/A3 claim sound-modulo-imports. Delta8 claim remainsdrafted. Two concise reusable lessons capture unique-exception fee and bounded min7 failure domain; no mathematical re-run or frozen old-source edits.
+- `2026-10-20T07:06:13Z` add_claim: updated claim:propertyb35-paper-twentyone-minimum-eight [status=drafted] prov=context/propertyb35-paper/round01/audit-twentyone-minimum-eight-20261020/native/PROOF_AUDIT.md
+
+- `2026-10-20 07:06:41 UTC` Current-only restore sync: targeted Gemini1037 exact raw archive and limited scope; complete delta8 native正式PASS_WITH_DECLARED_IMPORTS (13units/45obligations/10replays+interface9.678778CPU), existing whole1047/1049 calls retained. New min7sharp five-spectrum q3 reduction onlydrafted, pilots pending; no new math run, no claim upgrade.
+- `2026-10-20T07:33:13Z` add_claim: updated claim:propertyb35-paper-twentyone-minimum-eight [status=sound-modulo-imports] prov=context/propertyb35-paper/round01/audit-twentyone-minimum-eight-20261020/native/PROOF_AUDIT.md
+- `2026-10-20T07:36:50Z` add_experiment: added exp:propertyb35-paper-c13-actual-three-spectra-20261020 [verdict=partial confidence=high]
+
+- `2026-10-20 07:37:19 UTC` 集中记录：完整δ8双有效静态审阅逐字归档，native+精确双scope使claim sound-modulo-imports；Gemini70sixlock最大统计纠正141/143，原回应不改。c13实际三谱experiment partial与共享外点整数收费经验入库；S2第二orbit仍在途，保留所有失败prefix。当前导航替换摘要，不新增数学测试／模型调用。
+- `2026-10-20T08:43:08Z` add_experiment: added exp:propertyb35-paper-min7-gamma-four-assembled-20261020 [verdict=yes confidence=high]
+- `2026-10-20T08:43:08Z` min7 Γ4完整候选和Gemini有效静态／Sol接口证据入库；L110更新S2两轨六源全闭，整体仍drafted。原Grok局部scope从native completed回收，不扩整篇。21δ7仍开放，主要8类不变。
+- `2026-10-20T09:15:05Z` add_experiment: added exp:propertyb35-paper-min7-shared-tau-vertex-flag-20261020 [verdict=partial confidence=high]
+- `2026-10-20T09:15:05Z` add_experiment: added exp:propertyb35-paper-min7-global-seven-pool-20261020 [verdict=partial confidence=high]
+- `2026-10-20T09:16:07Z` add_experiment: updated exp:propertyb35-paper-min7-shared-tau-vertex-flag-20261020 [verdict=partial confidence=high]
+- `2026-10-20T09:16:07Z` 当前范围同步：min7 Γ4 drafted；低e81个非B强迫lambda4完整谱纸面闭，18exception当前10candidate/8开，非全99lambda4。dense新审阅在途；全e必要域与a18粗界失败已保留，主要8类/36未证/旧35Lean paused不变。
+- `2026-10-20T09:48:41Z` add_experiment: added exp:propertyb36-twentytwo-clean8-shared-pool-20261020 [verdict=partial confidence=high]
+- `2026-10-20T10:18:08Z` add_experiment: added exp:propertyb36-twentythree-gamma-three-20261020 [verdict=partial confidence=high]
+- `2026-10-20T10:18:08Z` add_experiment: added exp:propertyb36-six-star-common-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T10:24:01Z` add_experiment: added exp:propertyb36-nine-red-twentytwo-gamma-four-20261020 [verdict=partial confidence=high]
+- `2026-10-20T10:38:29Z` add_experiment: added exp:propertyb36-p7-balanced-low-source-20261020 [verdict=partial confidence=high]
+- `2026-10-20T10:49:59Z` add_experiment: added exp:propertyb36-twentyfive-tight-b13-exclusion-20261020 [verdict=partial confidence=high]
+- `2026-10-20T11:10:28Z` add_experiment: added exp:propertyb36-twentyfive-macro-star-coloring-20261020 [verdict=partial confidence=high]
+- `2026-10-20T11:46:02Z` add_experiment: added exp:propertyb36-global-reassessment-20261020 [verdict=partial confidence=high]
+- `2026-10-20T12:03:49Z` add_experiment: updated exp:propertyb36-global-reassessment-20261020 [verdict=partial confidence=high]
+- `2026-10-20T13:09:46Z` add_experiment: added exp:propertyb36-five-low-edge-20261020 [verdict=yes confidence=high]
+- `2026-10-20T13:18:42Z` add_experiment: added exp:propertyb36-r17-macro-selection-20261020 [verdict=yes confidence=high]
+- `2026-10-20T13:18:42Z` add_experiment: updated exp:propertyb36-five-low-edge-20261020 [verdict=yes confidence=high]
+- `2026-10-20T13:22:41Z` add_experiment: updated exp:propertyb36-r17-macro-selection-20261020 [verdict=yes confidence=high]
+- `2026-10-20T13:54:37Z` upsert_idea: added idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T13:54:37Z` add_experiment: added exp:propertyb36-marked-partition-m17-20261020 [verdict=partial confidence=high]
+- `2026-10-20T13:54:37Z` add_experiment: added exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T13:55:17Z` Updated conditional toolkit group 6: marked common-root q<=17 gate and original-H r>=9 shared-excess caller; exact local PASS kept separate from same-family/provisional semantic review; eight major classes remain, 25 residual r3..8; no claim promotion.
+- `2026-10-20T13:56:12Z` add_experiment: updated exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T13:56:12Z` Added dated G7 scope note for generated query summary: r>=9 paper/provisional with declared M17/W25 imports, residual25 r3..8, eight classes still open; all historical gap entries retained.
+- `2026-10-20T14:04:22Z` add_experiment: updated exp:propertyb36-marked-partition-m17-20261020 [verdict=partial confidence=high]
+- `2026-10-20T14:04:22Z` add_experiment: updated exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:04:22Z` add_experiment: updated exp:propertyb36-r17-macro-selection-20261020 [verdict=yes confidence=high]
+- `2026-10-20T14:04:22Z` add_experiment: added exp:propertyb36-eight-or-more-six-analytic-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:05:15Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T14:05:16Z` Final bounded r8 increment: new partial experiment for C8/C4/C0 analytic closure, current25 residual r3..7; retained r9 metrics and added exact Gemini M17/TEN/NINE static scope, r8 still same-family/provisional; old r17 Grok valid scope recorded without extension; no claim promotion.
+- `2026-10-20T14:06:10Z` add_experiment: updated exp:propertyb36-eight-or-more-six-analytic-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:06:10Z` Linked completed EIGHT_OR_MORE canonical to the existing r8 partial experiment and toolkit; retained original r9 evidence and all historical nodes.
+- `2026-10-20T14:09:07Z` add_experiment: updated exp:propertyb36-marked-partition-m17-20261020 [verdict=partial confidence=high]
+- `2026-10-20T14:09:07Z` add_experiment: updated exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:09:07Z` add_experiment: updated exp:propertyb36-eight-or-more-six-analytic-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:09:08Z` Review status only: Grok1275 valid end_turn grok-4.7-build/xhigh for M17/TEN/NINE; retained original response and root correction of s3 summary to simple-three-vertex degree obstruction; r8 Gemini1279/Grok1280 pending, no opinion or scope promotion; existing experiment metrics and verdicts unchanged.
+- `2026-10-20T14:22:03Z` add_experiment: updated exp:propertyb36-marked-partition-m17-20261020 [verdict=partial confidence=high]
+- `2026-10-20T14:22:04Z` add_experiment: updated exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:22:04Z` add_experiment: updated exp:propertyb36-eight-or-more-six-analytic-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:22:04Z` add_experiment: added exp:propertyb36-seven-and-small-low-traces-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:22:04Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T14:23:04Z` r7 record closure only: new partial paper candidate for SEVEN_OR_MORE plus SMALL_LOW_TRACES; root/Sol checked, new scopes await cross-family review. Current25 residual r3..6 low-trace<=2, eight classes remain. r8 Grok1280 valid and s3 summary corrected; Gemini1279 ERROR gives no mathematical opinion. Old evidence retained; no claim promotion.
+- `2026-10-20T14:44:09Z` add_experiment: updated exp:propertyb36-marked-partition-m17-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:44:09Z` add_experiment: updated exp:propertyb36-nine-or-more-six-common-budget-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:44:09Z` add_experiment: updated exp:propertyb36-eight-or-more-six-analytic-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:44:09Z` add_experiment: updated exp:propertyb36-seven-and-small-low-traces-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:44:10Z` add_experiment: added exp:propertyb36-pure-pair-structure-and-unit8-boundary-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:44:10Z` add_experiment: added exp:propertyb36-paired-four-partition-analytic-gate-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:46:19Z` add_experiment: updated exp:propertyb36-paired-four-partition-analytic-gate-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T14:47:55Z` Bounded closeout: refreshed effective Grok1285/Gemini1286 review scopes in four partial experiments; added two partial experiment records for r6 matching/unit8 failure boundary and paired-four analytic gate/24 four-low caller; integrated reusable tools and failure boundary into existing toolkit and atlas. No new or upgraded claim; new24 scope pending review; eight major classes remain open.
+- `2026-10-20T15:01:13Z` 24四低原边与r>=13审阅收卷：两份有效静态意见已核，更新现有paired-four-partition节点及supports关系；未执行程序，无claim升级。23条件门两方法值一致；12324独立核仍待完成，不预记新24三低结论。
+- `2026-10-20T15:38:09Z` add_experiment: updated exp:propertyb36-paired-four-partition-analytic-gate-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:38:09Z` add_experiment: added exp:propertyb36-twentyfour-strong-three-low-r12-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:38:09Z` add_experiment: added exp:propertyb36-twentyfive-exactly-six-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:38:09Z` add_experiment: added exp:propertyb36-twentythree-four-low-conditional-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:38:09Z` add_experiment: updated exp:propertyb36-seven-and-small-low-traces-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:38:09Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T15:38:09Z` 15:30 recovery sync: 25 r6 complete paper caller and independent140 raw PASS; 24 strong F3 and r12 complete paper chain, paired43 independent IE PASS; new cross-family1311/1312 pending. Partial nodes only, no claim promotion.
+- `2026-10-20T15:40:30Z` add_experiment: updated exp:propertyb36-twentyfive-exactly-six-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:40:30Z` add_experiment: updated exp:propertyb36-seven-and-small-low-traces-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T15:40:30Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T15:40:30Z` During15:30 sync r6 Gemini1311 returned valid SUCCESS: static SOUND_WITH_DECLARED_IMPORTS, no execution; independent140 raw PASS remains separate evidence. New24 strong Grok1312 pending; no claim promotion.
+- `2026-10-20T16:15:16Z` add_experiment: updated exp:propertyb36-twentyfour-strong-three-low-r12-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:15:16Z` add_experiment: updated exp:propertyb36-twentyfive-exactly-six-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:15:16Z` add_experiment: added exp:propertyb36-twentyfour-r11-shared-rows-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:15:16Z` add_experiment: added exp:propertyb36-twentythree-all-four-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:15:16Z` add_experiment: added exp:propertyb36-critical-low-edge-minblue-three-centres-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:15:16Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T16:27:26Z` add_experiment: updated exp:propertyb36-twentythree-all-four-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:27:26Z` add_experiment: updated exp:propertyb36-critical-low-edge-minblue-three-centres-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:27:26Z` add_experiment: updated exp:propertyb36-twentyfour-r11-shared-rows-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:27:26Z` add_experiment: added exp:propertyb36-twentythree-r13-restricted-three-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:27:26Z` add_experiment: added exp:propertyb36-r5-three-k5-complete-exception-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:27:26Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T16:27:26Z` add_experiment: updated exp:propertyb36-twentyfive-exactly-six-low-20261020 [verdict=partial confidence=medium]
+- `2026-10-20T16:56:34Z` add_experiment: added exp:propertyb36-r5-complete-candidate-20261021 [verdict=partial confidence=medium]
+- `2026-10-20T16:56:34Z` add_experiment: added exp:propertyb36-r4-unit-nine-paused-20261021 [verdict=partial confidence=medium]
+- `2026-10-20T16:56:34Z` add_experiment: added exp:propertyb36-r3-nine-lock-selection-paused-20261021 [verdict=partial confidence=medium]
+- `2026-10-20T16:56:34Z` upsert_idea: updated idea:propertyb36-common-marked-root-excess-20261020 [stage=piloted outcome=pending]
+- `2026-10-20T17:10:58Z` ingest_paper: skipped existing paper cherkashin2015_note_random_greedy.md (arxiv:1310.1368)
+- `2026-10-20T17:10:58Z` 2026-10-21 research-lit复读Cherkashin–Kozik arXiv:1310.1368v1六页；既有条目追加式(1.3)在五元35边的解析最小值1.671787及严格>1核算、Remarks 4–5和已有方法来源关系。仅论文阅读，36 Goal保持暂停，无新路线或claim。
+- `2026-10-20T17:38:16Z` upsert_idea: added idea:propertyb-restricted-k-general-bound [stage=proposed outcome=pending]
+- `2026-10-20T17:38:16Z` 2026-10-21：完成一般k讨论的系统库存，覆盖L1–L117、21项失败地图及小k材料。规范入口PROPERTY_B_GENERAL_METHOD_SYNTHESIS.md；context/general-method-discussion-20261021/保存分类、12项经验、原文和五次Grok/Gemini讨论。量词固定为可限制k但覆盖全部该k超图；无新增下界，旧36与35 Lean继续暂停。
+- `2026-10-21T02:13:03Z` 2026-10-21：按用户要求完成GOAL_PROPERTYB_GENERAL_BOUND.md待启动文本，明确限定k范围的全超图统一改进、ARIS/Grok/Gemini4/Sol分工、局部停滞诊断、wiki复用与纸面证明验收。独立文档核查已核现有入口；未启动新Goal，旧36和35Lean仍暂停。
+- `2026-10-21T03:31:11Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=pending]
+- `2026-10-21T03:31:11Z` add_experiment: added exp:propertyb-general-round01-parameter-candidates-20261021 [verdict=partial confidence=medium]
+- `2026-10-21T03:32:34Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=pending]
+- `2026-10-21T03:45:08Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=pending]
+- `2026-10-21T04:07:46Z` add_claim: added claim:propertyb-general-growing-integer-gain [status=verified] prov=context/propertyb-general/round02/formal-audit/
+- `2026-10-21T04:17:37Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=positive]
+- `2026-10-21T04:17:37Z` add_claim: updated claim:propertyb-general-growing-integer-gain [status=verified] prov=context/propertyb-general/round02/formal-audit/
+- `2026-10-21T04:17:37Z` round02导航收卷：G8数学研究和指定核心/比较终审闭合；k>=17主定理、k>=32明确五项L_ref、k>=256指定零锁松弛范围固定。root最终交付验收进行中，Goal状态以工具为准；旧36/35Lean暂停，v2隔离。
+- `2026-10-21T04:18:29Z` G8当前段补入四份规范数学源及合并审计入口，重建query_pack；较早在途状态保留为明确历史，当前查询摘要使用已闭合状态。
+- `2026-10-21T04:21:09Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=positive]
+- `2026-10-21T04:21:09Z` add_claim: updated claim:propertyb-general-growing-integer-gain [status=verified] prov=context/propertyb-general/round02/formal-audit/
+- `2026-10-21T04:21:09Z` 2026-10-21一般Property B下界Goal已实际status=complete；数学、指定终审、532公式离线HTML和HANDOFF全部完成，验收见context/propertyb-general/round02/COMPLETION_AUDIT.md。当前导航已同步，旧启动文本完成归档；idea无completed枚举，保留active/positive而在正文明确已完成，历史保留。
+- `2026-10-21T04:38:29Z` upsert_idea: updated idea:propertyb-restricted-k-general-bound [stage=active outcome=positive]
+- `2026-10-21T04:38:29Z` 2026-10-21一般Lean阶段Goal准备就绪但未启动：拟验证一般RS真实概率核心及任意17元≤2^17 caller，完成阶段后再决定完整formal。入口GOAL_PROPERTYB_GENERAL_LEAN_PILOT.md、START_GOAL_PROPERTYB_GENERAL_LEAN_PILOT.txt、context/propertyb-general-lean-pilot/PREPARATION.md。旧纸面Goal complete，旧35/36暂停，v2隔离；本次只更新准备导航，无工具Goal、Lean运行或新claim。
+- `2026-10-21T05:05:16Z` add_experiment: added exp:propertyb-general-lean-pilot-core-modules-20261021 [verdict=partial confidence=high]
+- `2026-10-21T05:05:16Z` 一般Lean试点导航由prepared更新active；保存局部已核experiment propertyb-general-lean-pilot-core-modules-20261021与A跨家族反译处置。单交精确概率和全链装配未完成；一般纸面claim状态不变，旧35/36暂停、v2隔离。
+- `2026-10-21T05:10:28Z` RESEARCH_BRIEF当前Direction已改为一般RS Lean试点active；新增canonical阶段REPORT草稿与FUTURE_FORMALIZATION，最终构建／总审计／最终C未预记通过。旧一般纸面Goal和claim保持完成。
+- `2026-10-21T05:23:21Z` add_experiment: updated exp:propertyb-general-lean-pilot-core-modules-20261021 [verdict=partial confidence=high]
+- `2026-10-21T05:23:21Z` RS Lean试点最终数学核验沉淀：已有experiment更新为一般P/C/Pilot正式指定入口构建及post-build原题审计通过；共同联合权归一、同E有向gamma与双色系数、有限排列-Beta连接均已接齐。最终C和展示仍pending，阶段未记complete；不新建claim、不改旧纸面claim、旧35/36暂停和v2隔离保持。
+- `2026-10-21T05:36:03Z` add_experiment: updated exp:propertyb-general-lean-pilot-core-modules-20261021 [verdict=yes confidence=high]
+- `2026-10-21T05:36:04Z` 一般RS核心与17元Lean阶段最终验收：已有experiment更新verdict=yes；一般P/C/Pilot正式构建、post-build原题与7项标准公理审计、Grok/Gemini有效最终C、离线桌面／手机和fresh保真全部通过。四项方法经验保留；无新claim／旧claim状态变更，不自动启动完整增长Lean或恢复旧35/36，v2隔离。
+- `2026-10-21T06:05:39Z` 一般 Property B 正式正文修订：四份规范证明按定义、编号定理／引理、证明组织；B_RS定义旁直接引RS Appendix A Claim A.1和Claim 2.4证明的精确积分，明确最大预算为本文定义。版本对照及来源地图：context/propertyb-general/formal-exposition-20261021/REPORT.md；完整阅读：PROPERTY_B_GENERAL_BOUND.html。未改变主结论或Lean验收范围。
+- `2026-10-21T07:01:24Z` add_claim: updated claim:propertyb-general-growing-integer-gain [status=verified] prov=context/propertyb-general-lean-growth/
+- `2026-10-21T07:05:46Z` add_claim: updated claim:propertyb-general-growing-integer-gain [status=verified] prov=context/propertyb-general-lean-growth/
+- `2026-10-21T07:05:46Z` 2026-10-21：一般增长主定理C的全部k≥17端到端Lean已完成，最大预算全域最大性、实际结构与概率链、原Finite/Finset/Bool染色和Δ≥1均内部闭合。指定Main构建及独立原题七项公理审计exit0；Grok/Gemini完整C静态终审均有效无实质问题。证据context/propertyb-general-lean-growth/。比较D/E仍纸面，旧35/36暂停。
+- `2026-10-21T07:20:16Z` 2026-10-21：一般定理HTML新增两层文献下界比较表，原PDF定点核读RS/CK/Pluhár/GL，区分原定理与本文定义的最大预算；复用定理D五项参考包络及已验保守增益。表格和离线展示fresh审计PASS，原四源逐字不变、902原公式保留，现964公式。入口proofs/propertyb-general/LITERATURE_COMPARISON_TABLE.md；证据context/propertyb-general/comparison-table-20261021/。本次没有扩大数学/Lean范围。
+- `2026-10-21T08:32:18Z` 2026-10-21：五项明确参考包络比较由k≥32收紧为全部k≥17。D.2同一解析证明在17满足起点2^17>(16·17)^2；与已有D.3合用得L_ref=B_RS+1，主定理C严格超过五项最大值。Sol独核、Grok与Gemini具体有效审阅及主代理纠正保存在context/propertyb-general/bound-figure-20261021/GR_CUTOFF_DISPOSITION.md。规范/文献表/图/HTML已同步；主定理C Lean不变、比较D仍纸面，E≥256不变。
+- `2026-10-21T09:03:48Z` add_claim: added claim:propertyb-general-growth-k12 [status=verified] prov=context/propertyb-general/bridge-12-16-20261021/
+- `2026-10-21T09:03:48Z` Navigation updated for all k≥12 growth theorem; added separate verified Lean-backed claim; retained earlier k≥17 claims and reviewer history; D k≥12 and E k≥256 remain analytic only.
+- `2026-10-21T09:04:40Z` G8 navigation now leads with all k≥12 and actual Growth.Twelve evidence; old k≥17 and reviewer history retained below.
+- `2026-10-21T09:06:21Z` add_claim: updated claim:propertyb-general-growth-k12 [status=verified] prov=context/propertyb-general/bridge-12-16-20261021/
+- `2026-10-21T09:06:21Z` All-k≥12 navigation records effective final Grok static review; current RESEARCH_BRIEF replaces obsolete pilot direction, historical text preserved; query pack rebuilt from current source.
+- `2026-10-21T09:38:22Z` add_experiment: added exp:propertyb-k12-lock-certificate-20261021 [verdict=partial confidence=high]
+- `2026-10-21T09:38:22Z` add_experiment: added exp:propertyb-matched-baselines-k13-prefix-20261021 [verdict=partial confidence=high]
+- `2026-10-21T09:38:22Z` 2026-10-21同步：k12 M4660完整锁点证书仅登记experiment候选；共同基线k10/11改+27/+30，k13止于v972。详见context/propertyb-general/locks-vs-uniform-20261021/STATUS.md；原k≥12统一增长verified claim不变。
+- `2026-10-21T09:51:23Z` add_experiment: added exp:propertyb-k13-k14-short-conditional-lock-20261021 [verdict=partial confidence=high]
+- `2026-10-21T09:51:23Z` 13/14有界短试收卷：保存条件增锁纸面工具与四锁288型/1134计数向量局部证书；无新全局下界，不继续扩表，Grok讨论不记认可；四导航与STATUS已补充，原k12完整候选和k≥12 verified Lean保持。
+- `2026-10-21T09:52:07Z` add_experiment: updated exp:propertyb-k13-k14-short-conditional-lock-20261021 [verdict=partial confidence=high]
+- `2026-10-21T09:52:07Z` 条件增锁Grok实际终稿已到：grok-4.7-build/xhigh/end_turn，三项数学义务认可；未审随后四锁288型数值或完整13/14。STATUS、四导航及实验已按实际范围更新，短试结束。
+- `2026-10-21T10:02:18Z` Property B主图加入本项目C.2的k12/13精确求值4647(+14)、9564(+25)，紫菱形与红锁点共用左轴及共同参考包络；蓝色统一公式保持。两项旧接受见证独立复算PASS。证据context/propertyb-general/c2-figure-20261021/；没有新数学定理、Lean或13/14搜索。
+- `2026-10-29T07:10:30Z` add_experiment: added exp:propertyb-m6-66-20261029 [verdict=yes confidence=high]
+- `2026-10-29T07:32:21Z` add_experiment: added exp:propertyb-m7-131-20261029 [verdict=yes confidence=high]
+
+- 2026-10-29T15:33:28.435118+08:00：新增m6≥66与m7≥131完整候选导航。六元Grok/Gemini有效静态审阅结束、独立379型精确复算；七元424型独立复算通过，跨模型审阅未做。旧主图/ZIP和暂停项目状态保持。
+- `2026-10-29T08:10:35Z` add_experiment: added exp:propertyb-k12-4664-20261029 [verdict=yes confidence=high]
+- `2026-10-29T08:38:25Z` add_experiment: added exp:propertyb-m6-67-diagnosis-20261029 [verdict=partial confidence=high]
+- `2026-10-29T08:45:15Z` add_experiment: updated exp:propertyb-m6-67-diagnosis-20261029 [verdict=partial confidence=high]
+- `2026-10-29T09:42:44Z` add_experiment: added exp:propertyb-m6-67-complete-local-verification-20261029 [verdict=yes confidence=high]
+- `2026-10-29T09:42:44Z` M66完整数学与独立数值链已接通，最终整卷审阅在途。新通用经验：组件配额、max_R、弱楔、父迹保持、低共度伙伴转共同中心、调和等号刚性。见PROPERTY_B_M6_GE67.md。
+- `2026-10-29T10:00:51Z` add_experiment: added exp:propertyb-m8-267-independent-20261029 [verdict=yes confidence=high]
+- `2026-10-29T10:00:51Z` add_experiment: added exp:propertyb-m9-543-independent-20261029 [verdict=yes confidence=high]
+- `2026-10-29T10:04:36Z` add_claim: added claim:propertyb-m6-ge67 [status=sound-modulo-imports] prov=context/propertyb-m6-67-progress-20261029/PROOF_AUDIT.json
+- `2026-10-29T10:20:14Z` add_claim: added claim:propertyb-m8-ge267 [status=sound-modulo-imports] prov=context/propertyb-small-updates-20261029/reviews-8-9/PROOF_AUDIT.json
+- `2026-10-29T10:20:14Z` add_claim: added claim:propertyb-m9-ge543 [status=sound-modulo-imports] prov=context/propertyb-small-updates-20261029/reviews-8-9/PROOF_AUDIT.json
+- `2026-10-29T10:22:00Z` 2026-10-29：m6≥67与m8≥267/m9≥543完整计算机辅助证明及指定Grok/Gemini全文静态审阅完成，全部新局部域独立精确复算；三claim为sound-modulo-imports。总图与完整读者页已完成offline及fresh保真。参考基线不改，无新增Lean，旧35/36暂停。

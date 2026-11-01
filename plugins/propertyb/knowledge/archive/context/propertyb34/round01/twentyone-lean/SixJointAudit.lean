@@ -1,0 +1,17 @@
+import Aris4Math.ThirtyFour.TwentyOneSixJoint0
+import Aris4Math.ThirtyFour.TwentyOneSixJoint1
+import Aris4Math.ThirtyFour.TwentyOneSixJoint2
+import Aris4Math.ThirtyFour.TwentyOneSixJoint3
+import Aris4Math.ThirtyFour.TwentyOneSixJoint4
+
+#check Aris4Math.ThirtyFour.MixedLayoutApplication.propertyB_of_mixed_layouts
+#check Aris4Math.ThirtyFour.TwentyOneSixJoint0.propertyB_of_counts
+#print axioms Aris4Math.ThirtyFour.TwentyOneSixJoint0.propertyB_of_counts
+#check Aris4Math.ThirtyFour.TwentyOneSixJoint1.propertyB_of_counts
+#print axioms Aris4Math.ThirtyFour.TwentyOneSixJoint1.propertyB_of_counts
+#check Aris4Math.ThirtyFour.TwentyOneSixJoint2.propertyB_of_counts
+#print axioms Aris4Math.ThirtyFour.TwentyOneSixJoint2.propertyB_of_counts
+#check Aris4Math.ThirtyFour.TwentyOneSixJoint3.propertyB_of_counts
+#print axioms Aris4Math.ThirtyFour.TwentyOneSixJoint3.propertyB_of_counts
+#check Aris4Math.ThirtyFour.TwentyOneSixJoint4.propertyB_of_counts
+#print axioms Aris4Math.ThirtyFour.TwentyOneSixJoint4.propertyB_of_counts

@@ -46,8 +46,10 @@
 
 目录分层本身不是操作系统权限机制。实际文件写入范围、命令授权、模型选择和总预算继续服从用户与宿主约束。
 
-## 插件最小内容
+## 插件的实质内容和验收
 
 一个可用插件至少让 agent 找到：本领域的任务表达方法、适用的数学策略与条件、已有知识和程序的位置、几个真正有用的失败诊断、结果怎样回到原题。领域技能是入口，长案例或来源地图按需链接，避免每次启动灌入全部历史。
 
-当前两个实例： [Property B](../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)、[ECC](../plugins/ecc/skills/mathrsi-ecc/SKILL.md)。没有合适插件时，可以直接通过 base 开展研究，在出现真实可复用经验后再提炼插件。
+Property B已重做为完整领域知识库和四个技能；ECC是待其领域agent完善的旧草案，不能把两者说成同等验收。原始资料必须在仓内可找到；入口下需有足以实际调用的定理/公式/证明、失败输入、适用范围与重试条件，不能只有一个source路径表。验收应让未参与编写的agent按技能处理真实任务片段，检查命令、输入域和原题连接；格式通过不是内容验收。
+
+两个入口： [Property B](../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)、[ECC](../plugins/ecc/skills/mathrsi-ecc/SKILL.md)。没有合适插件时，可以直接通过 base 开展研究，在出现真实可复用经验后再提炼插件。

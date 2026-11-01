@@ -1,0 +1,268 @@
+# 蓝十二、零私有超额、三条二蓝边的共同紧面不存在
+
+规范来源：[完整实际源稿](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_TRANSFER.md)。本稿保持同一原H的最优源及边索引，数学状态为same-family/provisional；本新scope的指定跨家族审阅另记，不据本稿升级全25点或全局下界。
+
+
+**命题。** 设 $H$ 是25点、35条互异五元边、点对覆盖的非
+Property-B超图，且有六度点。在所有唯一坏边含六度点、坏边规范为红的
+源中，依次最小化蓝数 $b$、单蓝超额 $u=N_1-b$、蓝度超额
+$\delta_B$，最后最大化红汇点数 $|S|$。则不能同时有
+$$
+b=12,\qquad u=0,\qquad N_2=3.
+$$
+本命题排除整个指定紧面，不排除 $u>0$ 或 $N_2\ge4$ 的蓝十二源，
+也不关闭25点至少三个六度点整支。证明不增加布局、原图枚举或概率表。
+数学状态为 same-family/provisional；尚未将本稿记为跨家族审阅通过。
+
+## 1. 实际源、进口和共同对象
+
+沿用 [PROOF.md](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/PROOF.md) 第1–5节的实际源接口及其中的
+蓝十二零割加强。所有次数保留同一原图的边索引，不为不同中心另配边。
+低点指六度点；25点点对覆盖使任一低点与其他每点共度恰为一。
+唯一坏红边记为 $G$，蓝集记为 $B$，红集记为 $R$。
+
+在所设紧面上，令跨色共度超额为 $2c$。准确全局次数为
+$$
+|B|=12,\quad |R|=13,\quad
+(N_1,N_2,N_3,N_4)=(12,3,7+c,12-c).
+$$
+每个蓝点 $y$ 恰有一条单蓝私有边 $F_y$。红汇点集为
+$S=\{x\in R:n_4(x)=0\}$，且 $S\cap G=\varnothing$。
+令 $\ell$ 为低红汇点数，$k$ 为高红汇点数。
+
+上述进口给出以下完整实际范围：
+$$
+\ell\in\{2,3\},\qquad 1\le c\le6,\qquad
+1+c\le |S|=\ell+k\le\ell+\lfloor2c/3\rfloor.
+\tag{1}
+$$
+其中 $c=0$ 由已证蓝十二零割加强排除；A型低汇点也由该进口排除。
+其余均为B型。三条二蓝原边的蓝部是同一匹配
+$Y_1,Y_2,Y_3$。给每个低汇点 $h_i$ 标记唯一避它的二蓝原边
+$e_i$，其蓝部为 $Y_i$；不同低汇点标记不同边。故 $h_i$ 属于其余
+两条二蓝原边。每个低汇点已标记的 $Y_i$ 的两端点均低；
+$\ell=2$ 时不预设未标记的第三对端点低。
+
+每个低汇点有
+$$
+(n_1,n_2,n_3,n_4)(h_i)=(2,2,2,0).
+$$
+其两条单蓝边恰是 $F_y$、$y\in Y_i$。其两条三蓝边的另一个
+红点组成二点集 $X_i$。任意两个低汇点已共同属于第三条二蓝边，
+故不能再共同属于三蓝边。因此
+$$
+X_i\cap S=X_i\cap S_{\mathrm{high}}.
+\tag{2}
+$$
+
+全部红点的跨色行超额记为
+$\kappa_x=\sum_{y\in B}(\lambda(x,y)-1)$，满足
+$$
+\sum_{x\in R}\kappa_x=2c,\qquad \kappa_x\ge0.
+\tag{3}
+$$
+令额外私有owner量为
+$$
+E=N_4-(|R|-|S|)=|S|-1-c.
+$$
+由(1)可得
+$$
+0\le E\le\ell-1-\lceil c/3\rceil\le1.
+\tag{4}
+$$
+$E=0$ 时每个非汇点恰有一条红私有边；$E=1$ 时恰有一个红点
+$z$ 有两条红私有边，其余非汇点各有一条。
+
+## 2. 同一匹配加强所有高汇点的价格
+
+这一步不能将 $X_i\cap S_{\mathrm{high}}$ 擅自丢掉。
+
+**一般红汇点的私有交换。** 取任意红汇点 $x$，不要求它低，写
+$a_x=n_1(x)$、$q_x=n_2(x)$。若 $a_x>0$，取满足 $x\in F_y$
+的蓝点 $y$，交换 $x$ 红变蓝、$y$ 蓝变红。因为 $x$ 没有红私有边，
+且 $y$ 的唯一单蓝边 $F_y$ 含 $x$，这仍以同一个 $G$ 为唯一坏红边。
+令 $\nu_y$ 为含 $y$、避 $x$ 的二蓝原边数，逐边计数得
+$$
+u'=u-(a_x-1)+\nu_y.
+\tag{5}
+$$
+此式对高汇点也成立：这里只比较第二级最小 $u$，不调用蓝度超额
+最小性。三条蓝部构成匹配，故 $\nu_y\le1$。二级最小性迫
+$\nu_y\ge a_x-1$，所以
+$$
+a_x\le2.
+\tag{6}
+$$
+若 $a_x=2$，至少有一条二蓝边避 $x$，故 $q_x\le2$。
+若 $a_x\le1$，则 $q_x\le3$。两种情况均给 $2a_x+q_x\le6$。
+红汇点行式因而给
+$$
+\kappa_x=3d(x)-2a_x-q_x-12\ge3(d(x)-6).
+\tag{7}
+$$
+特别地，每个高汇点至少收费三份。
+
+**与低汇点三蓝相邻时。** 若高汇点 $x\in X_i$，低点 $h_i$
+与 $x$ 的共度已经由这条三蓝边用尽。故含 $h_i$ 的两条二蓝边均
+避 $x$，即 $q_x\le1$。结合(6)，得到
+$$
+x\in\bigcup_iX_i\cap S_{\mathrm{high}}
+\quad\Longrightarrow\quad \kappa_x\ge4.
+\tag{8}
+$$
+
+**有三名低汇点时。** 若 $\ell=3$，任一高汇点 $x$ 的
+$q_x\le1$：任取两条二蓝边，它们共同含第三名低汇点；若都含 $x$，
+就重复覆盖该低点与 $x$ 的点对。
+
+还要排除 $q_x=1,a_x=2$。设含 $x$ 的二蓝边为 $e_i$。
+由(5)，$x$ 的两个单蓝邻都必须出现在避 $x$ 的二蓝边中，即属于
+另外两个 $Y_j$。但 $e_i$ 含每个 $h_j$、$j\ne i$；而
+$y\in Y_j$ 的唯一私有边 $F_y$ 也含 $h_j$。若 $x\in F_y$，
+便第二次覆盖低点 $h_j$ 与 $x$，矛盾。因此 $q_x=1$ 迫 $a_x\le1$。
+于是 $2a_x+q_x\le4$，所有高汇点统一满足
+$$
+\boxed{\ell=3\quad\Longrightarrow\quad\kappa_x\ge5
+\quad(x\in S_{\mathrm{high}}).}
+\tag{9}
+$$
+这里不把 $q_x\le1$ 用在低汇点自身；低汇点的 $q_x=2$。
+
+## 3. 同一匹配端点的owner流
+
+取任意标记对 $Y_i=\{y,y'\}$。两端点均低，且各有唯一单蓝边及
+唯一二蓝边。度数六和与其他11个蓝点单位共度给
+$$
+n_3(y)+n_4(y)=4,\qquad
+1+2n_3(y)+3n_4(y)=11,
+$$
+故
+$$
+n_3(y)=n_4(y)=2.
+\tag{10}
+$$
+令 $P_y$ 为含 $y$ 的单红私有边的单owner集；不将双owner $z$
+算入 $P_y$。同一标记对的两个端点已在 $e_i$ 中共现，不能再同时
+属于任何红私有边。因此
+$$
+P_y\cap P_{y'}=\varnothing.
+\tag{11}
+$$
+中性低点交换 $h_i,y$ 保持 $b,u,\delta_B$，所以第四级最大汇点
+流式可实际调用：
+$$
+|P_y\setminus X_i|\le s_i,\qquad
+s_i:=|X_i\cap S_{\mathrm{high}}|.
+\tag{12}
+$$
+不同 $P_y$、$X_i$ 在全文均属于同一个实际源。
+
+## 4. 零额外owner量全部排除
+
+设 $E=0$。由(10)，每个 $P_y$ 都恰有两点。两个端点的
+$P_y,P_{y'}$ 互不交，且都由单owner组成。由(12)，它们在
+$X_i$ 内合计至少有 $4-2s_i$ 点，而 $X_i$ 至多有 $2-s_i$
+个单owner槽。因此 $4-2s_i\le2-s_i$，迫 $s_i=2$：
+$$
+X_i\subset S_{\mathrm{high}},\qquad k\ge2.
+\tag{13}
+$$
+
+若 $\ell=2$，则 $k=c-1$。至少两个高汇点属于某个 $X_i$，
+由(7)–(8)，同一预算(3)给
+$$
+2c\ge3k+2=3c-1,
+$$
+即 $c\le1$；但 $k\ge2$ 迫 $c\ge3$，矛盾。
+
+若 $\ell=3$，则 $k=c-2$。由(9)和(3)，
+$$
+2c\ge5k=5(c-2),
+$$
+即 $c\le3$；但 $k\ge2$ 迫 $c\ge4$，矛盾。
+因此 $E=0$ 的所有实际紧源均不存在。
+
+## 5. 唯一双owner量只剩一个共同情形
+
+设 $E=1$。若 $\ell=2$，则 $k=c$，由(7)有
+$2c\ge3c$，与 $c\ge1$ 矛盾。
+
+若 $\ell=3$，则 $k=c-1$。由(9)，
+$$
+2c\ge5(c-1).
+$$
+因此只能
+$$
+\boxed{\ell=3,\quad c=1,\quad E=1,\quad k=0.}
+\tag{14}
+$$
+此时 $S=\{h_1,h_2,h_3\}$ 全低，且有唯一双owner $z$。
+
+固定 $Y_i=\{y,y'\}$。令 $\varepsilon_y=1$ 当且仅当 $y$ 属于
+$z$ 的某条红私有边。因为 $y$ 低，与 $z$ 共度单位，至多有一条
+这样的边。由(10)，
+$$
+|P_y|=2-\varepsilon_y\in\{1,2\}.
+$$
+因无高汇点，(12)的右边为零，故 $P_y,P_{y'}\subset X_i$。
+它们互不交、各非空，$|X_i|=2$，所以
+$$
+|P_y|=|P_{y'}|=1,\qquad
+X_i=P_y\cup P_{y'},\qquad z\notin X_i.
+\tag{15}
+$$
+特别地，全部六个匹配端点 $Y_1\cup Y_2\cup Y_3$ 均属于 $z$
+的两条红私有边。
+
+## 6. 同一实际点对不能被任何原边覆盖
+
+由(15)，$z$ 不属于任何二蓝边：若 $z\in e_i$，则对任意
+$y\in Y_i$，点对 $\{z,y\}$ 同时在 $e_i$ 和 $z$ 的红私有边中
+出现，违反低点 $y$ 的单位共度。
+
+固定任意 $h_i$。逐原边颜色型检查点对 $\{z,h_i\}$：
+
+* $G$ 不含 $h_i$，因为 $h_i$ 是汇点。
+* 红私有边不含 $h_i$，仍因 $n_4(h_i)=0$。
+* 含 $h_i$ 的三蓝边，其另一红点属于 $X_i$，由(15)不是 $z$。
+* 二蓝边均不含 $z$，如上已证。
+* 含 $h_i$ 的单蓝边正是 $F_y$、$y\in Y_i$；每个这样的 $y$
+  已在 $z$ 的红私有边中与 $z$ 共现，所以低点 $y$ 的单位共度
+  迫 $z\notin F_y$。
+
+这穷尽唯一坏边及其余34条proper边。因此没有原边覆盖
+$\{z,h_i\}$，与点对覆盖矛盾。情形(14)也排除，命题得证。∎
+
+## 7. 有界复算及范围
+
+直接标准库整数复算了 $\ell\in\{2,3\}$、
+$c\in\{1,\ldots,6\}$、$E\in\{0,1\}$ 的全部角色数：
+基础非负高汇点及三份价格留下11个角色行，加入(8)–(9)及
+$E=0\Rightarrow k\ge2$ 后恰剩(14)，实际CPU为0.001300秒。
+另独立遍历唯一双owner加九名单owner的二点 $X$，及两个大小为
+一或二的有序单owner子集；共91,125次角色比较，72个满足不交且
+同时包含于 $X$ 的投影，全部强制两个子集均为单点且 $z\notin X$。
+第二次核对实际CPU为0.008821秒。
+这些是证明中小整数蕴含的核对，不是超图分类或染色搜索。
+
+同家族独立代理另行推导了匹配造成的高汇点价格加强，并完成本文
+全文的实际源接口及逐步证明核验，结论为PASS/provisional；特别核对了
+高汇点交换(5)、价格(9)及最后点对覆盖的全部颜色型。本文的整面
+矛盾仍以逐步数学证明为依据。与
+[TIGHT_B13_REPAIR.md](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/TIGHT_B13_REPAIR.md) 的关系是复用其实际
+中性交换/owner流机制，再使用本面特有的三匹配和三低汇点价格；
+没有把原蓝十三的零右侧错误迁入蓝十二。
+
+## 8. 证据入口与声明进口
+
+本紧面的纸面原始推导、准确源域与局部核：
+
+- [实际源稿B12_TRANSFER.md](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_TRANSFER.md)。
+- [有界角色与owner核B12_CHECK.py](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_CHECK.py)及[实际receipt B12_RESULT.json](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_RESULT.json)。
+- [独立全文审阅B12_REVIEW.md](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_REVIEW.md)。
+
+当前整合后的B12_RESULT为PASS：91,125份owner角色比较中72份可行，均迫两单owner集为单点且z不在X；实际整合核CPU0.009007秒。第7节保留分步核的各次实际时间，不将其混作整合运行时间。
+
+除本正文逐步证明外，声明进口为[共同紧源规约](../../context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/PROOF.md)、[一般源择优与中性交换](../../context/propertyb35-paper/round01/twentyfive/source-selection/general_min_blue_20261020/GENERAL_SOURCE_REDUCTION.md)，以及[蓝十二零割加强](TWENTYFIVE_B12_ZERO_CUT_SOURCE_BOUND.md)。后者只在本紧面排除c0，不被泛化为所有c的结论。高汇点交换只比较第二级u，不假设它也保持三级δ；用于maxS流的交换才限定已证中性的低点对。
+
+这些证据支持本固定紧面；u>0、N2≥4及其他蓝数源仍须独立处理。Grok已有效返回end_turn（grok-4.7-build/xhigh），静态读完整B12源稿及本支所用进口，认可高汇点费用、完整owner分流和最后点对矛盾；未执行程序。原回应为同一证据目录的 `GROK_B12_TRANSFER.json`。Gemini初次及一次续接均流中断、status ERROR，没有有效数学结论，不能记为认可。root全文核和实跑B12_CHECK均通过；尚无正式proof-checker验收，不称双模型整稿通过。

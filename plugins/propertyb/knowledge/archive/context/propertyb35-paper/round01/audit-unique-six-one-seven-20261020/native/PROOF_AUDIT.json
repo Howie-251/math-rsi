@@ -1,0 +1,499 @@
+{
+  "verdict": "PASS",
+  "mathematical_verdict": "PASS_WITH_DECLARED_IMPORTS",
+  "supports_new_branch_combination": true,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer": {
+    "backend": "codex",
+    "transport": "native",
+    "model": "gpt-6-astra",
+    "effort": "ultra",
+    "identity_source": "parent-assigned native role and DEFAULT_ROUTE.json; no separate service-side identity attestation"
+  },
+  "source": "proofs/propertyb35/TWENTYONE_UNIQUE_SIX_ONE_SEVEN.md",
+  "initial_source_lines": 294,
+  "statement": "Every simple five-uniform hypergraph on21 vertices with35 edges, covering all distinct vertex pairs, minimum degree6, exactly one degree6 vertex and exactly one degree7 vertex has Property B.",
+  "coverage_receipt": {
+    "shard_id": "a1_complete_fresh_audit",
+    "assigned_unit_ids": [
+      "MAIN-THEOREM",
+      "MAIN-1",
+      "MAIN-2",
+      "MAIN-3",
+      "MAIN-4",
+      "MAIN-5",
+      "MAIN-6",
+      "MAIN-7",
+      "MAIN-8",
+      "MAIN-9",
+      "MAIN-10",
+      "MAIN-11"
+    ],
+    "covered_unit_ids": [
+      "MAIN-THEOREM",
+      "MAIN-1",
+      "MAIN-2",
+      "MAIN-3",
+      "MAIN-4",
+      "MAIN-5",
+      "MAIN-6",
+      "MAIN-7",
+      "MAIN-8",
+      "MAIN-9",
+      "MAIN-10",
+      "MAIN-11"
+    ],
+    "missing_unit_ids": [],
+    "status": "COMPLETE",
+    "meaning": "Source-unit execution coverage only; not an automatic mathematical completeness guarantee."
+  },
+  "open_critical_obligations": [],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "MINOR",
+      "proof_status": "UNCLEAR",
+      "impact": "COSMETIC",
+      "category": "NOTATION",
+      "source_unit": "MAIN-3",
+      "line_at_initial_review": 53,
+      "claim": "四条无环重复边",
+      "explanation": "无环应明确为无自环；真实多重图域允许圈，例如01,02,12,34。计算未删去有圈星。",
+      "fix": "改为四边无自环多重图（允许圈，平行重数至多二）。",
+      "blocks_proof": false,
+      "resolution_status": "RESOLVED",
+      "resolution_verified_by_readback": true,
+      "implemented_by": "parent root"
+    },
+    {
+      "id": "F2",
+      "severity": "MINOR",
+      "proof_status": "UNCLEAR",
+      "impact": "COSMETIC",
+      "category": "REFERENCE_MISMATCH",
+      "source_unit": "MAIN-11",
+      "line_at_initial_review": 270,
+      "claim": "四核三重覆盖负责星计数平行重数≤2",
+      "explanation": "平行重数≤2实际来自含x的低四核修复；8/9高四核三重覆盖只负责每条x边至多一个Hbar四交邻居。正文真实使用正确。",
+      "fix": "进口表将星平行重数约束归入低四核行；高四核三重覆盖行保留跨星四交用途。",
+      "blocks_proof": false,
+      "resolution_status": "RESOLVED",
+      "resolution_verified_by_readback": true,
+      "implemented_by": "this reviewer, parent explicitly authorized only the two import-table rows"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "MAIN-THEOREM.1",
+      "obligation": "H有限、21点、35条不同5集、全点对覆盖、唯一6/唯一7；目标是存在原H双色染色",
+      "assessment": "命题与证明输入一致；无隐藏正则/平衡最终染色前提",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-1.1",
+      "obligation": "除x,p外19点≥8，b个8点其余≥9；175≥184−b",
+      "assessment": "正确，b≥9，不预设Δ≤9",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-1.2",
+      "obligation": "x的20个共度均≥1，和24；非单位外点至多4",
+      "assessment": "正确，且行盈余恰4",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-1.3",
+      "obligation": "六单位八度池只依赖所选x6及六个unit8、21/35/simple5/paircover",
+      "assessment": "进口声明和局部接口匹配；已读其完整论证与旧replay静态源，不重新运行旧完整证书",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-1.4",
+      "obligation": "非B迫b≤9；等号迫其余十点全9；p单位及恰四个8点共度2",
+      "assessment": "每个计数方向正确，得到完整实际A1角色",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-2.1",
+      "obligation": "强点对表覆盖所有超过阈值的7/8、7/9、8/8、8/9、9/9共度",
+      "assessment": "全范围到min(d1,d2)；x行已知，唯一p排除7/7；所以全λ≤4",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-2.2",
+      "obligation": "低四核进口要求完整A1；x核36项、p核4254项及8残59同星扩张",
+      "assessment": "完整声明与实际输入吻合；未把8份非严格四锁记录算成严格",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-2.3",
+      "obligation": "高四核三重覆盖要求4个8/9点、核内共度≤4、至少3边包含",
+      "assessment": "MAIN-1/2完全供给；485标签/135代表作为原有有限进口",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.1",
+      "obligation": "Hbar仍29条不同5集，在余20点上；删除度为6⁵7⁵8¹⁰",
+      "assessment": "正确；没有误要求Hbar点对覆盖",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.2",
+      "obligation": "四个B点各出现两次，其余16点一次；六link图无自环、平行≤2",
+      "assessment": "实际星→2835完整必要域正确；仅术语有MINOR",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.3",
+      "obligation": "共同10/10样本，C至少164896；单坏和174174、权506/22/132/572/2002",
+      "assessment": "已读计数证明与完整18行星表；Hunter扣除与C在同一样本，无独立性假设",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.4",
+      "obligation": "正定A(I−J/25)Aᵀ，distinct等重行前三独立，非单交森林秩≥11",
+      "assessment": "证明正确；将4条四交森林边延拓同一森林/树，扣9306>9278",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.5",
+      "obligation": "Hbar孤立原边只能S=(2,3,0)、T=(3,1,1)，S,T各≤2且不能2+2",
+      "assessment": "实际33度和及两个三集论证正确，总孤点≤3",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.6",
+      "obligation": "s个distinct等重0/1行秩≥1+ceil(log2 s)，分量块直和",
+      "assessment": "坐标投影单射成立；r≤17预算矛盾，r18零空间≤1与≥9矛盾；故r≥19",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.7",
+      "obligation": "中心化Hbar秩≤19，608Q≥66238，a0+a3+3a4≥28",
+      "assessment": "代数、向上取整正确",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.8",
+      "obligation": "四交秩3⇒a4≤6；heavy≥16边⇒秩≥6；嵌套Kruskal得9438",
+      "assessment": "所有秩层可在同一最大树兼容实现，不是独立挑树拼接；得四交秩≤2",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-3.9",
+      "obligation": "x星内四交0；唯一含p星边跨四交0，其余5条各≤1",
+      "assessment": "低核及高核进口条件逐条满足；原n4≤3+5=8",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-4.1",
+      "obligation": "原21点10红11蓝，单翻失败态X=1⇒S≥5",
+      "assessment": "实际翻色返回H染色；p=2/57，q=1716/352716；n1≥397",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-4.2",
+      "obligation": "两翻唯一私有边、失败时产生原J，与middle仅交h",
+      "assessment": "包含两翻点/一翻点/零翻点的边已穷尽；原G和middle均变proper",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-4.3",
+      "obligation": "X=1失败，u≥(10−S)+、每个唯一私有边4个不同h给不同有向三元组",
+      "assessment": "I≤X/2+(S+Z/4)/20正确；Z放宽不要求middle唯一安全",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-4.4",
+      "obligation": "Cj无序外对，Z两方向；r分子36/120/330/792/1716",
+      "assessment": "因子2恰一次；严格判据3432n1+Σrnum*Cj/2<2722720正确",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-5.1",
+      "obligation": "C0≤33n0、C2≤24n2、C4≤4n4；C1共同点度收费",
+      "assessment": "均对同一实际middle；W=648、D*=5493，C1≤26n1+339",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-5.2",
+      "obligation": "C3近饱和四差集点：degree≤9、pair≤4、至多一7",
+      "assessment": "A1准确供给；若含x6，cross行≥6再加外边已逼degree≥7，故自动无此情况；167/34进口接口成立",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-5.3",
+      "obligation": "共享P=ΣFΣg<h tFg*tFh；ΣsF=2n1",
+      "assessment": "一一旗标双计数，无额外方向因子",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-5.4",
+      "obligation": "f(s)平衡五组最大，离散凸增量；极值图压缩至threshold",
+      "assessment": "移边不减目标且排序度字典序增，排除不嵌套；递推覆盖固定点数/边数所有threshold图",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-5.5",
+      "obligation": "从高权到低权填容量、共享总P上界",
+      "assessment": "所有容量非负、权严格增；给安全且精确的该线性松弛上界，不要求达到配置可实现",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-6.1",
+      "obligation": "原矩总数595、一阶648、二阶140+τ，0≤τ≤140",
+      "assessment": "全λ∈[1,4]给binom(λ−1,2)≤λ−1；点对覆盖是必要已供假设",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-6.2",
+      "obligation": "所有原profile落21615域；n1上截546安全",
+      "assessment": "公式正确；由n2≥0实际n1≤524，无额外上界进口需求",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-6.3",
+      "obligation": "第一筛只用T与C容量而无N34线性上界",
+      "assessment": "重新计算T全部150值与完整域，实际21615→25；key逐项相同",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-7.1",
+      "obligation": "Γ节点q≤1直接染色的所有相交类型",
+      "assessment": "q0、q1/交0、q1/交2..4穷尽；三界严格且同一原H；Δ≤9已供",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-8.1",
+      "obligation": "原35×21关联Gram PSD/rank≤21，对每个原边子集均成立",
+      "assessment": "正确；独立集≤21及两份平方权上界给前三项ell",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-8.2",
+      "obligation": "中心化秩≤20，Q−8T/21≥152N(N−21)/441",
+      "assessment": "重新核迹代数及权29/0/13/68/165；1428e+2037a4下界正确",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-8.3",
+      "obligation": "删最高i节点，sum_top q=E+e(Q)−e(S)",
+      "assessment": "准确恒等；用binom(i,2)安全；ell中原t上界方向正确",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-8.4",
+      "obligation": "单删边D≥37；恰23边避x,p，D≥40",
+      "assessment": "分别取整到60、61，得q1≤R、q13≤R−1",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-8.5",
+      "obligation": "双删10次点出现、每点≤2；低度合并最小损耗59",
+      "assessment": "允许两边相等形状是安全放松；整除到e+2a4≥50，得top2≤E−49+2t",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-9.1",
+      "obligation": "按最大度/末度/前缀和递推所有非增整数q≥2、总和2E",
+      "assessment": "所有转移与状态合并保持最优性；两个C++全文静态核对",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-9.2",
+      "obligation": "附加q2≤29及旧低点检查不会缩小实际域",
+      "assessment": "25项E≤80,t≤8⇒top2≤47⇒q2≤23；q≥2使低点检查恒真；旧尾下界剪枝较弱但安全",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-9.3",
+      "obligation": "频率DP逐组逐位置检查前缀，所有19(E,t)最优值一致",
+      "assessment": "已重编并实际逐19键执行；各主实现最优见证全约束和目标独立重算",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-9.4",
+      "obligation": "25个实际主稿表行、greedy分配、严格阈值",
+      "assessment": "全部逐行复算吻合；24项排除，最大2721300；唯一τ1/n4=8为2725500",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-10.1",
+      "obligation": "n4=8⇒Hbar四交恰3且森林秩≤2⇒K3",
+      "assessment": "简单图而非多重图，分量秩分类完整；来自同一Hbar",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-10.2",
+      "obligation": "三个原5集两两交4⇒三重交≥3⇒3个原点对各λ≥3",
+      "assessment": "τ每项非负，故τ≥3；与唯一profile原τ1矛盾，闭合原H",
+      "status": "closed_in_declared_import_scope"
+    },
+    {
+      "id": "MAIN-11.1",
+      "obligation": "进口表、证据、程序域与最终声称范围一致",
+      "assessment": "MINOR归属问题已精准修正并回读；数学scope、全题未完、未跑Lean均准确。",
+      "status": "closed_in_declared_import_scope"
+    }
+  ],
+  "dependencies": [
+    [
+      "branch_hypotheses",
+      "six_unit8_pool"
+    ],
+    [
+      "six_unit8_pool",
+      "actual_A1_roles"
+    ],
+    [
+      "actual_A1_roles",
+      "strong_pair_low_core"
+    ],
+    [
+      "strong_pair_low_core",
+      "global_lambda_le4"
+    ],
+    [
+      "global_lambda_le4",
+      "high_core_multiplicity3"
+    ],
+    [
+      "strong_pair_low_core",
+      "balanced_star_domain"
+    ],
+    [
+      "high_core_multiplicity3",
+      "cross_star_quads_le5"
+    ],
+    [
+      "balanced_star_domain",
+      "Hbar_quad_rank_le2"
+    ],
+    [
+      "Hbar_quad_rank_le2",
+      "original_n4_le8"
+    ],
+    [
+      "original_n4_le8",
+      "actual_principal_prefix"
+    ],
+    [
+      "actual_A1_roles",
+      "actual_principal_prefix"
+    ],
+    [
+      "actual_A1_roles",
+      "Gamma_min_degree2"
+    ],
+    [
+      "global_lambda_le4",
+      "C3_near_saturation"
+    ],
+    [
+      "two_flip",
+      "shared_middle_threshold"
+    ],
+    [
+      "shared_middle_threshold",
+      "complete_21615_moments"
+    ],
+    [
+      "complete_21615_moments",
+      "T_only_25"
+    ],
+    [
+      "actual_principal_prefix",
+      "degree_DP_19_keys"
+    ],
+    [
+      "Gamma_min_degree2",
+      "degree_DP_19_keys"
+    ],
+    [
+      "T_only_25",
+      "degree_DP_19_keys"
+    ],
+    [
+      "degree_DP_19_keys",
+      "unique_profile_tau1_n4_8"
+    ],
+    [
+      "Hbar_quad_rank_le2",
+      "quad_triangle_tau_ge3"
+    ],
+    [
+      "cross_star_quads_le5",
+      "quad_triangle_tau_ge3"
+    ],
+    [
+      "quad_triangle_tau_ge3",
+      "original_H_contradiction"
+    ],
+    [
+      "unique_profile_tau1_n4_8",
+      "original_H_contradiction"
+    ]
+  ],
+  "cycle_found": false,
+  "import_reading_scope": "Full mathematical statements and proofs read for listed primary import documents; old unique6_no7 replay source read; old finite-certificate summaries checked. Large old layout/joint-certificate data were not reconstructed or rerun.",
+  "deterministic_checks": {
+    "status": "PASS",
+    "evidence": "INDEPENDENT_CHECK.json",
+    "threshold_values_recomputed": 150,
+    "moment_domain": 21615,
+    "T_only_survivors": 25,
+    "degree_keys": 19,
+    "remaining_profiles": [
+      {
+        "n": [
+          33,
+          523,
+          0,
+          31,
+          8
+        ],
+        "tau": 1,
+        "dp": 12827,
+        "P_bound": 12827,
+        "C": [
+          0,
+          12392,
+          0,
+          403,
+          32
+        ],
+        "L": "2725500"
+      }
+    ],
+    "largest_excluded_L": "2721300",
+    "strict_margin": 1420,
+    "elapsed_seconds": 2.5943703750381246,
+    "two_existing_cpp_sources_fresh_compiled": true,
+    "main_text_table_rows_checked": 25,
+    "independent_threshold_and_alternative_moment_parameterization": true
+  },
+  "counterexample_attempts": [
+    "Role withdegree>=10 or nonunit xp defeated by pool/degree budgets.",
+    "Cyclic repeated-star graph exposed wording ambiguity but is included in actual complete domain.",
+    "r18 component degeneracy contradicted by exact nullity budget.",
+    "Threshold compression does not preserve Gram; verified proof never assumes it does.",
+    "Two-flip duplicated witness/direction and all flipped-edge color cases checked.",
+    "Six-degree near-saturation exclusive point forced todegree>=7.",
+    "DP extra filters checked redundant or safely weaker.",
+    "Quad-triangle contribution verified to use three distinct original point pairs."
+  ],
+  "counterexample_found": false,
+  "large_old_certificate_replay": false,
+  "whole_H_enumeration": false,
+  "new_layout_search": false,
+  "lean_executed": false,
+  "cross_family_review_used": false,
+  "other_project_accessed": false,
+  "global_m5_ge36_asserted": false,
+  "report": "PROOF_AUDIT.md",
+  "resolved_minor_findings": 2,
+  "open_findings": [],
+  "authorized_source_edits": "Only MAIN-11 low-core/high-core import-table rows; all mathematical source and computational inputs unchanged.",
+  "parent_source_clarification_verified": "MAIN-4 now explicitly separates X=1 all-single-flips-fail => Scol>=5 from X>=2 => X/2>=1; agrees with full private-pair proof already reviewed."
+}

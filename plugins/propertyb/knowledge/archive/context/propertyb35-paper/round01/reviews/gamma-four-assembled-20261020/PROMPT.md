@@ -1,0 +1,4 @@
+请审阅一条已经装配的新完整数学引理，不审阅全部m(5)>=36，也不重读不变的完整δ8证明。主稿是 proofs/propertyb35/TWENTYONE_MINIMUM_SEVEN_GAMMA_FOUR.md。确切结论：H21/35 distinct5edges/paircover/min vertex degree>=7，若非B，则实际非单位边交图Γ min degree>=4。主稿全文读取；它已把所有新连接写清。按需读取里面指定的来源，但不用机械重跑所有过去独立算术。
+关键新义务：q3完整分类→唯一B型→五个全图谱；S4/S5的11/12度点为何实际clean；S1–S3 all lambda<=4的旧双锁实际caller；两条B型q3不兼容（同/异十度三元组）；C3cap12的34quad域及真实9,10^3七度池；10^4的两轨共享17外点收费192<204和全六源S4运输；唯一q3产生381+34普通盒共同P；最后τ2..140/所有非负moment域252278全部strict。这些不是相互独立视图拼接，须主动攻击其同一H连接和量词。
+外部概率进口明确是既有GLOBAL_TWO_FLIP_PATH_REPAIR.md、GLOBAL_TWO_FLIP_SHARED_MIDDLE.md以及项目条件排列染色引理。不因为某局部脚本输出PASS就默认进口成立，核查所需条件是否真实供给。若引用进口而未重证，明确记录；程序未执行则不写已执行。高clean与原310余304的新完整核已有实际回执。
+请输出：明确SOUND_WITH_DECLARED_IMPORTS或具体缺口；逐个实质问题标主稿段落和反例/错误方向；所读文件、所执行命令或未执行范围。正文最多约1500中文词，不无限扩审、不加哈希/平台/假想安全边界；数学若正确直接认可。本次是新增整篇scope，先前暂停导致的q3小prompt没有可恢复Gemini终态，本次不能算其旧调用已通过。保持只读，不编辑任何文件，不访问aris4math_v2，不运行Lean。

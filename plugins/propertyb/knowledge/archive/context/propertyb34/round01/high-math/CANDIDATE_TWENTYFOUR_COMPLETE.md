@@ -1,0 +1,235 @@
+# Complete 24-vertex paper candidate for T34
+
+## Theorem and status
+
+Let H be a simple 5-uniform hypergraph with 24 vertices and exactly 34 edges,
+covering every vertex pair. Then H has Property B.
+
+All degree branches now have complete paper arguments and exact local
+certificates. This document supplies the formerly missing one-through-four-low
+branches and points to the already complete other branches. The theorem still
+requires cross-family review and actual-input Lean formalization; it is not
+the completed original T34 theorem.
+
+## Route through all degree branches
+
+Pair covering gives minimum degree at least six. Let r count degree-six
+vertices. The previously complete arguments are:
+
+- r=0: first-hour `CANDIDATE_NO_SIX.md`, in
+  `context/propertyb34-hour1-20261013/high-math/`.
+- r=5: `CANDIDATE_FIVE_LOW_FULL.md` in this directory.
+- r=6: `CANDIDATE_SIX_LOW.md`.
+- r>=7: `CANDIDATE_SEVEN_LOW.md`.
+
+It remains to prove the theorem when 1<=r<=4. The new route is a short universal
+selection lemma, a seven-lock local table, and the actual eighth low vertex
+where the seven-lock bound is not strict.
+
+## 1. Select eight locks with a matching of nonunit pairs
+
+Let t be the number of degree-seven vertices. Since the other vertices have
+degree at least eight,
+
+\[
+170=\sum_v d(v)\ge6r+7t+8(24-r-t),\qquad t+2r\ge22.
+\]
+
+For every vertex x define the codegree excess
+
+\[
+\epsilon(x)=\sum_{y\ne x}(\lambda(x,y)-1)=4d(x)-23.
+\]
+
+Every degree-six vertex has excess one: it has a unique exceptional partner,
+of codegree two, and is unit with every other vertex. Every degree-seven vertex
+has excess five.
+
+Partition the degree-seven vertices into three classes minimizing the sum of
+the nonunit weights inside the classes. A vertex has internal weighted degree
+at most one. Indeed, if that degree were at least two, moving the vertex to
+either other class cannot improve the minimum, so its weight to each class
+would be at least two. This contradicts total excess at most five. Each class
+therefore induces a matching of codegree-two pairs.
+
+Append a low vertex to every class that contains no exceptional high partner
+of that low vertex. At least two classes are available. In each enlarged class,
+the low/low nonunit pairs form a matching, the high/high nonunit pairs form a
+matching, and every low/high pair is unit. The sum of the three enlarged sizes
+is at least t+2r>=22, so one enlarged class has at least eight vertices.
+
+Choose eight of them. Every chosen degree is six or seven; every selected pair
+is unit except for a codegree-two matching; no matching pair has unequal
+degrees. This proves the actual-input selection used below. The standalone
+selection argument is `EIGHT_MATCHING_SELECTION.md`.
+
+## 2. Choose the seven-lock input and reserve the eighth actual point
+
+If the chosen eight-set has no low vertex, reserve any point as the eighth.
+The full all-seven-degree case is covered by
+`CANDIDATE_EIGHT_SEVEN_MATCHING.md`.
+
+Otherwise reserve one selected low vertex z. The other seven contain q<=3
+low vertices, since globally r<=4. Their nonunit graph is a matching, with no
+edge between different degrees. These are exactly the necessary local
+conditions used by the complete seven-lock domain.
+
+If q=0, the same eight-lock candidate explicitly covers seven degree-seven
+locks plus a degree-six eighth point unit with all of them. Thus assume q>=1
+only when constructing the new mixed extension table below.
+
+## 3. Complete seven-lock classification
+
+Every matching on seven vertices has an isolated vertex. Remove one. The
+remaining six-lock pair budgets are one everywhere, plus one extra unit on
+zero through three matching pairs.
+
+The first-uncovered-pair recursion lists every multiset of traces of sizes two
+through five satisfying these pair budgets. At each state, any target multiset
+must contain a remaining block through the first uncovered pair; selecting
+that block is one of the recursive branches. The remaining pair budget
+strictly decreases, so induction proves termination and coverage.
+
+The four six-lock raw domains have 352, 467, 611, and 787 labelled
+decompositions. Restoring all six degrees to seven gives nonnegative singleton
+and empty counts throughout these raw domains. This restoration is checked
+for the complete domains; it does not delete a possible lower-degree input.
+
+Append the isolated seventh point. Its old nonempty traces partition the six
+old labels. Select such a partition among the available old traces of size at
+most four, promote one occurrence per part, and restore the new degree seven
+and the empty count. **Retain a temporarily negative empty count at this
+stage.** Then assign at most three labels degree six by decreasing
+their singleton counts by one and increasing the empty count accordingly.
+Only after this low-degree adjustment discard negative counts, and require
+that matching endpoints have equal degree. In particular, the mixed domain
+is not generated by taking only the feasible all-seven-degree seven-lock
+catalogue and lowering degrees.
+Every actual seven-lock input is generated: forgetting the new point reverses
+the promotion, and the low-degree adjustment only changes singleton/empty
+counts.
+
+This distinction is numerically material. Of the 4,912 seven-lock promotion
+entries, 56 have a temporarily negative empty count (minimum -3); none has a
+negative singleton count. After restoring up to three actual low degrees and
+the homogeneous-matching condition, 207 distinct rescued orbits enter the
+required mixed domain. Every one is present in the retained catalogue and its
+complete bound table. `SEVEN_TEMPORARY_NEGATIVE_AUDIT.json` records the exact
+per-matching counts and concrete rescued examples. The generator's `extend`
+has no intermediate sign filter; `generate` tests nonnegativity after lowering.
+
+Canonicalization refines vertices by isomorphism invariants and then checks
+**all** bijections inside the remaining equal-invariant cells. This is exact
+orbit reduction. It yields 16,006 colored orbits with q<=3. Every orbit has
+34 total traces, degrees six or seven, traces of size at most five, and exactly
+the required pair-codegree matching; see `SEVEN_MATCHING_PROFILE_BINDING.json`.
+
+The full arithmetic table is `SEVEN_HOMOGENEOUS_MATCHING_BOUNDS.json`:
+
+| Input scope | Orbits | Direct strict | Direct residues |
+|---|---:|---:|---:|
+| q=0,1,2,3 combined | 16,006 | 15,619 | 387 |
+| q=0 part | 1,494 | 1,482 | 12 |
+| q>=1 part | 14,512 | 14,137 | 375 |
+
+Every direct bound is an exact rational witness with independent labelled
+injection replay of A/B/C. Bounds use the standard random-order formula
+
+\[
+U=\sum_k\min\{A_k,B_k,C_k-D_k\}.
+\]
+
+The total link-overlap quota and nested pure-trace quota are the same proven
+general inequalities used by the earlier T32/T33 work. Position DP proposes
+a witness; the final argument uses the explicitly retained positions.
+
+## 4. Attach the actual eighth low point
+
+Start from one of the 375 unresolved mixed seven-lock types. The reserved low
+point z has degree six. It is unit with every old point except possibly one
+other low point. If such a partner is selected, it must be isolated in the old
+nonunit matching.
+
+For each allowed choice of that partner (including no selected partner), the
+new point's pair requirements are seven ones, with one possible extra unit.
+Allocate these incidences among the old positive traces, respecting their
+actual multiplicities and forbidding promotion of an old five-point trace.
+Promote the chosen copies to contain z. If k old positive edges were promoted,
+the other 6-k incident edges have singleton trace {z}; subtract those from the
+old empty count. Reject precisely negative counts and overfilled requirements.
+
+This is complete for every actual extension: each actual z-edge has exactly
+one old trace, and its actual multiplicity is one of the allowed choices.
+No assumption of an extra symmetry or an independent bad-pair choice is made.
+
+The complete extension has 63,686 labelled entries and 22,837 orbits. For each
+orbit, check all seven-point deletion projections having at most three lows.
+If one is an already strict seven-lock profile, apply that certificate to the
+actual seven points. This disposes of 22,615 orbits. The remaining 222 orbits
+are bounded on all eight locks: 220 have direct strict witnesses, and the other
+two have exact shared-vector dual certificates.
+
+The full domain and the actual deletion witnesses are
+`EIGHTH_LOW_COMPLETE_CATALOGUE.json`; the 222 bounds are
+`EIGHTH_LOW_COMPLETE_BOUNDS.json`. The two residual duals are:
+
+| Eight-lock group | Exact bound | Positive layouts |
+|---|---:|---:|
+| 9 | 786493556973 / 800799759760 | 16 |
+| 12520 | 1018686915523 / 1029600000000 | 39 |
+
+Both are strictly below one. `EIGHTH_LOW_COMPLETE_JOINT_INDEPENDENT.json`
+replays every contributing A/B/C row, both ordered pair weights, actual slot
+inventory, all quotas, capacities and the exact repaired-dual inequality.
+
+For low centers the unique real bad pair follows from pair covering and
+degree six, so the selected partner and positive avoided-lock quotas constrain
+that same actual pair. The dual uses **one actual bad-count vector shared by
+all layouts**; it never minimizes a different bad-pair choice per layout.
+Floating-point LP output merely proposed nonnegative rational weights. The
+saved rational inequalities, including all explicit capacity penalties, prove
+the final bounds.
+
+## 5. The q=0 eighth-lock extension
+
+For completeness, the all-seven seven-lock subdomain has three further strict
+duals after the 1,482 direct witnesses, leaving nine profiles. Appending the
+actual eighth point, either degree seven with matching compatibility or degree
+six unit with every old point, produces 3,212 labelled extension entries and
+882 orbits. There are 881 direct strict bounds. The unique last profile has
+the independently checked four-layout bound
+
+\[
+U\le5002501389/5005000000<1.
+\]
+
+The full statement, source mapping and evidence are in
+`CANDIDATE_EIGHT_SEVEN_MATCHING.md`. This covers both possibilities excluded
+from the q>=1 extension in Section 4.
+
+## 6. Return to the original 24-vertex hypergraph
+
+Apply the selection lemma to the actual H. Choose and reserve the actual
+eighth point as in Section 2. Its actual seven-lock multiplicities belong to
+the complete Section 3 domain. A strict seven-lock certificate already gives
+a coloring. Otherwise the actual eighth-point profile belongs to Section 4 or
+Section 5, where an actual strict deletion projection or a strict eight-lock
+certificate gives a coloring. Thus every H with 1<=r<=4 is colorable.
+
+Together with the previous r=0 and r>=5 branches, every pair-covering
+24-vertex simple five-uniform hypergraph with 34 edges is colorable.
+
+## Audit and remaining work
+
+`audit_full24_matching.py` regenerates the complete extension domains, binds
+the original 16,006 profile records to their exact bound records, checks every
+strict deletion witness against the actual smaller profile, binds each direct
+or dual residual to its exact counts, and replays the rational duals through
+the independent injection implementation. Its report is
+`FULL24_MATCHING_COVERAGE_AUDIT.json`. Extension regeneration uses the documented
+generator; it is not advertised as a second independent classification engine.
+
+These are finite local classifications with an explicit actual-input coverage
+proof, not an enumeration of original hypergraphs. Remaining obligations are
+cross-family review, formal classification/transport, actual quota and event
+connections, and assembly into the original T34 Lean theorem.

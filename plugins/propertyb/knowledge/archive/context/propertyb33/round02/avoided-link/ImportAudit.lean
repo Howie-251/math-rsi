@@ -1,0 +1,24 @@
+import Aris4Math.ThirtyThree.RefinedDeletion
+import Aris4Math.ThirtyThree.TwentyFourRefinedExample
+
+#check Aris4Math.ThirtyThree.AvoidedLink.avoided_bad_pair_lower
+#check Aris4Math.ThirtyThree.RefinedDeletion.realized_avoided_count
+#check Aris4Math.ThirtyThree.RefinedDeletion.realized_refined_deduction
+#check Aris4Math.ThirtyThree.RefinedDeletion.propertyB_of_refined_deletion
+
+#print axioms Aris4Math.ThirtyThree.AvoidedLink.avoided_bad_pair_lower
+#print axioms Aris4Math.ThirtyThree.RefinedDeletion.realized_avoided_count
+#print axioms Aris4Math.ThirtyThree.RefinedDeletion.realized_refined_deduction
+#print axioms Aris4Math.ThirtyThree.RefinedDeletion.propertyB_of_refined_deletion
+
+#check Aris4Math.ThirtyThree.TwentyFourRefinedExample.propertyB_of_mixed_quad_trace
+#print Aris4Math.ThirtyThree.TwentyFourRefinedExample.degreeData
+#print Aris4Math.ThirtyThree.TwentyFourRefinedExample.high
+#print axioms Aris4Math.ThirtyThree.TwentyFourRefinedExample.certificates
+#print axioms Aris4Math.ThirtyThree.TwentyFourRefinedExample.propertyB_of_mixed_quad_trace
+
+#check Aris4Math.ThirtyThree.FiveLockClassification.actual_high_in_table
+#check Aris4Math.ThirtyThree.FiveLockClassification.actual_recovered_in_table
+#print axioms Aris4Math.ThirtyThree.FiveLockClassification.actual_high_in_table
+#print axioms Aris4Math.ThirtyThree.FiveLockClassification.actual_recovered_in_table
+#print axioms Aris4Math.ThirtyThree.TwentyFourRefinedExample.high_eq_case_fourteen

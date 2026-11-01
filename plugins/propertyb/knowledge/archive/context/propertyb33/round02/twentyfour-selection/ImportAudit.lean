@@ -1,0 +1,8 @@
+import Aris4Math.ThirtyThree.TwentyFourSelection
+
+#check Aris4Math.ThirtyThree.TwentyFourSelection.selected_of_twenty_four
+#print Aris4Math.ThirtyThree.TwentyFourSelection.MixedLocks
+#print Aris4Math.ThirtyThree.TwentyFourSelection.FiveMatchingLocks
+#print axioms Aris4Math.ThirtyThree.TwentyFourSelection.selected_of_twenty_four
+#print axioms Aris4Math.ThirtyThree.TwentyFourSelection.mixed_locks_of_many_sevens
+#print axioms Aris4Math.ThirtyThree.TwentyFourSelection.four_unit_or_five_matching

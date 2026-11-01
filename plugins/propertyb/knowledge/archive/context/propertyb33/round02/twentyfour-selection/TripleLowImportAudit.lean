@@ -1,0 +1,6 @@
+import Aris4Math.ThirtyThree.TwentyFourTripleLow
+
+#check Aris4Math.ThirtyThree.TwentyFourTripleLow.propertyB_of_four_triple
+#print axioms Aris4Math.ThirtyThree.TwentyFourTripleLow.propertyB_of_four_triple
+#print axioms Aris4Math.ThirtyThree.TwentyFourTripleLowData.order_covers
+#print axioms Aris4Math.ThirtyThree.TwentyFourTripleLow.slots_complete

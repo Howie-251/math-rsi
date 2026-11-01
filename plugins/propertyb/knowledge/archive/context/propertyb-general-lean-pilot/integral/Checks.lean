@@ -1,0 +1,5 @@
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+#check intervalIntegral.mul_integral_comp_mul_left
+#check integral_pow
+#check intervalIntegral.integral_const_mul
+#check intervalIntegral.integral_finset_sum

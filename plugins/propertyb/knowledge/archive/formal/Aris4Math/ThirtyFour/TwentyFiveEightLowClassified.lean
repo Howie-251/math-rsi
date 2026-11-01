@@ -1,0 +1,80 @@
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch0
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch1
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch2
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch3
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch4
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch5
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch6
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch7
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch8
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch9
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch10
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch11
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch12
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch13
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch14
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch15
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch16
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch17
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch18
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch19
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch20
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch21
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch22
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch23
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch24
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch25
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch26
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch27
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch28
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch29
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch30
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch31
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch32
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch33
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch34
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch35
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch36
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch37
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch38
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch39
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch40
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch41
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch42
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch43
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch44
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch45
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch46
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch47
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch48
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch49
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch50
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch51
+import Aris4Math.ThirtyFour.TwentyFiveEightLowClassifiedBatch52
+import Aris4Math.ThirtyFour.TwentyFiveEightLowInventory
+import Aris4Math.ThirtyFour.TwentyFiveUnit9Actual
+namespace Aris4Math.ThirtyFour.TwentyFiveEightLowClassified
+open Aris4Math.ThirtyThree.MultiLockRecovery TwentyFiveUnitExtension
+open TwentyFiveColoredRows TwentyFiveColoredActual TwentyFiveEightLowClassifiedData
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+theorem sources : rows.map source=TwentyFiveOneHighTable.sources TwentyFiveUnit9Data.catalogue := by decide +kernel
+theorem checked : rows.all (fun r => decide (Check 8 TwentyFiveEightLowInventoryData.big r))=true := by
+  simp only [rows,List.all_append,TwentyFiveEightLowClassifiedBatch0.checked,TwentyFiveEightLowClassifiedBatch1.checked,TwentyFiveEightLowClassifiedBatch2.checked,TwentyFiveEightLowClassifiedBatch3.checked,TwentyFiveEightLowClassifiedBatch4.checked,TwentyFiveEightLowClassifiedBatch5.checked,TwentyFiveEightLowClassifiedBatch6.checked,TwentyFiveEightLowClassifiedBatch7.checked,TwentyFiveEightLowClassifiedBatch8.checked,TwentyFiveEightLowClassifiedBatch9.checked,TwentyFiveEightLowClassifiedBatch10.checked,TwentyFiveEightLowClassifiedBatch11.checked,TwentyFiveEightLowClassifiedBatch12.checked,TwentyFiveEightLowClassifiedBatch13.checked,TwentyFiveEightLowClassifiedBatch14.checked,TwentyFiveEightLowClassifiedBatch15.checked,TwentyFiveEightLowClassifiedBatch16.checked,TwentyFiveEightLowClassifiedBatch17.checked,TwentyFiveEightLowClassifiedBatch18.checked,TwentyFiveEightLowClassifiedBatch19.checked,TwentyFiveEightLowClassifiedBatch20.checked,TwentyFiveEightLowClassifiedBatch21.checked,TwentyFiveEightLowClassifiedBatch22.checked,TwentyFiveEightLowClassifiedBatch23.checked,TwentyFiveEightLowClassifiedBatch24.checked,TwentyFiveEightLowClassifiedBatch25.checked,TwentyFiveEightLowClassifiedBatch26.checked,TwentyFiveEightLowClassifiedBatch27.checked,TwentyFiveEightLowClassifiedBatch28.checked,TwentyFiveEightLowClassifiedBatch29.checked,TwentyFiveEightLowClassifiedBatch30.checked,TwentyFiveEightLowClassifiedBatch31.checked,TwentyFiveEightLowClassifiedBatch32.checked,TwentyFiveEightLowClassifiedBatch33.checked,TwentyFiveEightLowClassifiedBatch34.checked,TwentyFiveEightLowClassifiedBatch35.checked,TwentyFiveEightLowClassifiedBatch36.checked,TwentyFiveEightLowClassifiedBatch37.checked,TwentyFiveEightLowClassifiedBatch38.checked,TwentyFiveEightLowClassifiedBatch39.checked,TwentyFiveEightLowClassifiedBatch40.checked,TwentyFiveEightLowClassifiedBatch41.checked,TwentyFiveEightLowClassifiedBatch42.checked,TwentyFiveEightLowClassifiedBatch43.checked,TwentyFiveEightLowClassifiedBatch44.checked,TwentyFiveEightLowClassifiedBatch45.checked,TwentyFiveEightLowClassifiedBatch46.checked,TwentyFiveEightLowClassifiedBatch47.checked,TwentyFiveEightLowClassifiedBatch48.checked,TwentyFiveEightLowClassifiedBatch49.checked,TwentyFiveEightLowClassifiedBatch50.checked,TwentyFiveEightLowClassifiedBatch51.checked,TwentyFiveEightLowClassifiedBatch52.checked,Bool.true_and]
+
+theorem actual (H : Simple5Hypergraph (Fin 25)) (edges : H.edges.card=34)
+    (f : Fin 9↪Fin 25) (unit : Unit H f)
+    (degrees : ∀ i,H.degree (f i)=standard 8 i) :
+    ∃ c : Fin 840, ∃ σ : Equiv.Perm (Fin 9),
+      large H (σ.toEmbedding.trans f)=TwentyFiveEightLowInventory.big c ∧
+      (∀ i,H.degree ((σ.toEmbedding.trans f) i)=standard 8 i) ∧
+      (∀ T,count H (σ.toEmbedding.trans f) T=TwentyFiveEightLow.μ c T) := by
+  obtain ⟨c,σ,family,degree,counts⟩ := TwentyFiveColoredActual.actual H edges f unit 8 degrees
+    (by decide +kernel) TwentyFiveUnit9Data.catalogue TwentyFiveUnit9Actual.actual
+    TwentyFiveEightLowInventoryData.big
+    (TwentyFiveOneHighTable.table _ _ rows sources checked)
+  refine ⟨c,σ,family,degree,?_⟩
+  intro T
+  rw [counts T]
+  exact TwentyFiveEightLowInventory.recovered c T
+end Aris4Math.ThirtyFour.TwentyFiveEightLowClassified

@@ -1,0 +1,13 @@
+# Mixed layouts with one actual bad-pair vector
+
+2026-10-13. Lean-checked reusable interface; ordinary avoided-lock quotas.
+
+`MixedLayoutDual.lean` proves finite rational weak duality, capacity repair and the existence of a strict layout from a strict convex average. `MixedLayoutCounts.lean` binds these formulas to actual directed bad edge pairs of one fixed H. The ordered capacity is μ(T)(μ(U)−[T=U]); the half penalty therefore agrees exactly with unordered capacities, including diagonal slots. `MixedLayoutApplication.lean` obtains an actual coloring via the established conditional-permutation lemma. Different layouts may have different probability spaces: the theorem only needs one layout whose own rigorous upper bound is below one. `MixedLayoutFive.lean` supplies executable five-lock profiles and actual realizations for arbitrary edge counts.
+
+The complete endpoint is `MixedLayoutApplication.propertyB_of_mixed_layouts`. Its premises explicitly include actual trace multiplicities, each layout realization, nonnegative layout masses summing to one, 0≤β≤γ, valid ordinary avoided quotas and the strict finite rational inequality. Nothing assumes a layout-independent failure probability. The mixed-weight deduction is proved from a common actual bad-pair vector, not from independently optimized vectors. Floating-point LP output does not enter Lean.
+
+Five concrete difficult (6,7,8,8,8) profiles now instantiate the endpoint in `TwentyOneSixJoint0` through `TwentyOneSixJoint4`. Each theorem `propertyB_of_counts` starts with an actual H and an injective five-lock selection, with all actual trace counts equal to its explicit μ. The bounds are respectively 169595751971/171600000000, 20891168939/21450002145, 649683503/660000066 (twice), and 17596477/17875000. All are strictly below one.
+
+`generate_six_joint.py` rereads the saved mathematical certificates and independently recomputes exact rational formulas before emitting Lean. The generated `SIX_JOINT_*_REPLAY.json` records those replays; the kernel additionally computes all data validity and inequalities. `build-six-joint0-r2.log` and `build-six-joint1.log` through `build-six-joint4.log` are successful serial builds. `SixJointAudit.lean` independently imports all five; `six-joint-audit.log` checks their types and standard three transitive axioms. Generic audits are in `MixedAudit.lean` and `mixed-audit.log`.
+
+This closes the probability interface and these five conditional local callers. It does not yet select and classify the locks for every degree-six H. The weighted-overlap quota strengthening proposed for later vertex branches is also not yet in this interface; only ordinary avoided-family quotas have been formalized here.

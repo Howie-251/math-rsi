@@ -19,7 +19,9 @@ my-problem/
 
 目录按需要出现。只有文献任务才维护文献材料，只有计算任务才出现执行日志；不要让启动研究变成准备大量空文件。
 
-使用 ARIS `research-wiki` 时先读已安装技能及 helper 的实际说明，由它维护原有图结构和知识条目；这里不重新规定另一套 wiki schema。缺少该技能时可用普通 Markdown 记录来源、结论与失败边界，不能声称已完成 ARIS helper 同步。
+使用 ARIS `research-wiki` 时先读本仓相应宿主的完整技能及 base/tools helper 说明，由它维护原有图结构和知识条目；这里不重新规定另一套 wiki schema。本仓已带该技能与 helper；运行依赖异常时先保存普通 Markdown 事实，修好实际调用后同步，不能声称失败的 helper 已执行。
+
+自动生成的 `query_pack.md` 是导航，不保证收入全部已存事实。本次实际试用中，positive idea 的 Thesis/Key risks 已写入实体页，却没有进入自动摘要。恢复时按当前义务读取相关实体页，在 `NEXT_SESSION.md` 直接指向关键结论、条件与未闭义务；写入后读回相应实体即可，不必为此修改上游 helper 或重复整套研究。具体行为见[独立试用](../development/propertyb-rebuild/forward-use/REPORT.md)。
 
 ## 2. 正式规格要让两个人读出同一个问题
 

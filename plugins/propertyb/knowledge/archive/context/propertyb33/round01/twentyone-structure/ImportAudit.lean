@@ -1,0 +1,11 @@
+import Aris4Math.ThirtyThree.TwentyOnePairAssembly
+#print Aris4Math.ThirtyThree.TwentyOneStructure.exists_locks_of_twenty_one
+#print axioms Aris4Math.ThirtyThree.TwentyOneStructure.exists_locks_of_twenty_one
+#print Aris4Math.ThirtyThree.TwentyOneStructure.PairCase
+#print Aris4Math.ThirtyThree.TwentyOneStructure.TripleCase
+#print Aris4Math.ThirtyThree.TwentyOneStructure.NoTriple
+
+#print Aris4Math.ThirtyThree.TwentyOnePairAssembly.propertyB_of_pairCase
+#print axioms Aris4Math.ThirtyThree.TwentyOnePairAssembly.propertyB_of_pairCase
+#print axioms Aris4Math.ThirtyThree.TwentyOnePairAssembly.tripleCodegree_zero
+#print axioms Aris4Math.ThirtyThree.TwentyOnePairAssembly.tripleCodegree_le_pairs

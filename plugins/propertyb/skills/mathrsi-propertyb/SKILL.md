@@ -9,8 +9,30 @@ description: 为有限一致超图的 Property B 研究提供归约、真实迹�
 使用 [MathRSI base](../../../../base/skills/mathrsi-research/SKILL.md) 组织持续研究；本技能补充 base 不应内置的数学判断。
 若只需解释定义或核对一个短引理，直接完成相应数学工作，无需建立完整研究工程。
 
-首次接入任务时读下文对象与原题连接，再按当前困难选择策略。查旧引理或检查器时读 [来源与适配地图](references/source-map.md)；准备工作包时可参考 [局部分支使用示例](examples/local-branch.md)。
-示例是行动说明，没有替用户启动研究或执行计算。
+首次接入任务时读下文对象与原题连接；新研究先广搜，再从本仓实质知识库选择工具。具体结果和暂停状态见 [知识库入口](../../knowledge/README.md)，原稿与源码已随插件保存，不要求另一份 aris4math。目录中的历史命令不是运行授权。
+
+## 四个实际技能入口与知识路由
+
+本技能负责从原目标到交付的整体选择；三个子技能可以独立处理明确任务，内部调用已纳入base的完整ARIS技能。
+
+|当前工作|读取并执行|收回什么|
+|---|---|---|
+|新题查漏、找基线、检查旧引理|[propertyb-literature](../propertyb-literature/SKILL.md)|原定理条件和来源、当前可比基线、反例/勘误及尚未确认项|
+|推进一个M或一般k下界|[propertyb-bound-lab](../propertyb-bound-lab/SKILL.md)|可调用数学引理、实际输入条件、闭合分支或精确失败见证|
+|验证分类/数值到原图的完整连接|[propertyb-certificate](../propertyb-certificate/SKILL.md)|完整域与输入绑定、严格算术、独核范围、原染色装配及真实剩余|
+|统筹持续研究与最终交付|本技能 + [MathRSI主流程](../../../../base/skills/mathrsi-research/SKILL.md)|原题的完整解答，或可恢复且准确的阶段成果|
+
+数学库按真实问题组织，包含完整条件与证明，不能只读标题即调用：
+
+- 新预算重建与选锁：[最小反例、整数预算、连续/整数选锁门](references/mathematics/01-reduction-and-selection.md)。
+- 真实H到有限域：[迹恢复、投影、重标号、扩锁与覆盖](references/mathematics/02-actual-traces-and-coverage.md)。
+- 概率与扣除：[无放回排列、避锁坏对、容量修复、共享布局](references/mathematics/03-permutations-bad-pairs-and-duality.md)。
+- 重染替代路线：[实际源态与signed修复](references/mathematics/04-signed-repair-and-sources.md)、[修复门完整目录](references/mathematics/04a-repair-gates.md)。
+- 跨分支规约：[共同结构、Gram/秩/容量及条件工具](references/mathematics/05-shared-structure-and-conditional-tools.md)。
+- 一般参数路线：[RS–FKG–积分、结构削减、增长定理与比较的完整正文](references/mathematics/06-general-k-rs-and-growth.md)。
+- 全部旧工具：[L1–L117保真库存](references/mathematics/08-complete-lemma-inventory.md)；具体调用从[数学阅读地图](references/mathematics/00-READING-AND-CALLING.md)开始。
+
+操作经验不是“注意严格”的口号：[失败地图](references/practice/failure-map.md)记录具体错命题、分数和反模型；[计算效率](references/practice/computation-and-efficiency.md)解释何时压缩、何时硬算；[Lean实务](references/practice/lean-practice.md)给真实接口与编译改法；[检查器地图](references/practice/checker-capabilities.md)说明每个现有程序实际验证什么。
 
 ## 原目标与允许的终点
 
@@ -28,6 +50,14 @@ m(k) 是不具有此性质的有限简单 k 元超图的最少边数。
 若合同接受反驳，终点是显式超图及严格不可染性证据；一个局部库存或松弛模型的可行解不是超图反例。
 搜索没有找到反例，不足以结束正向证明。
 一个概率充分界没有严格小于 1，也不表示原超图不可染，更不表示原命题为假。
+
+## 起步广搜，再让已知知识进入当前目标
+
+读正式规格与旧wiki是为了得到准确查询词和避免重复工作。对新参数、新一般定理或要宣称新纪录的任务，随后执行 `propertyb-literature`：覆盖 Property B / hypergraph 2-coloring / non-2-colorable uniform hypergraph 等异名，沿关键论文前后引用链查原始证明、后继改进及勘误。新发现可以修正初步目标和方法；不能等一条局部路线做很久以后才查是否已有反例。
+
+广搜与深读分开。摘要帮助筛选，实际采用的引理必须读原版本的定义、完整条件及证明；RS Claim A.1与Claim2.4证明中的积分、GL公式编号和固定v结果均有本地来源地图。原始已有界、代入公式所得参考值、本项目组合定理各自标明归属。完成初步查漏后进入证明；出现新障碍再定向补搜，不以无限搜索替代推导。
+
+已有已核引理可直接复用，前提是它的条件与当前k/M匹配。五元Lean包装可能硬编码33边；一般计数引理成立不代表其包装已一般化。把原文前提翻译成当前实际H的一个完整caller，是复用的第一步。
 
 ## 接收任务并向 base 返回什么
 
@@ -120,6 +150,14 @@ empty 和 singleton 也属于完整重数，不能只保存大迹后在概率调
 保留共同变量后，可证明联合下界、用真实边组收费，或从选点条件排除不相容配置。
 局部松弛中的坏型是诊断材料；只有实际实现为原超图并证不可染，才是反例。
 
+## 锁点之外的两条实质路线
+
+当更多锁点只是扩大局部表，先检查是否该换表示。第一条是实际初态加局部修复：从同一个超图产生唯一坏边或最小蓝源，再把修复写为同时击中正族且不包含负族的点集问题。用 [signed目录](references/mathematics/04a-repair-gates.md) 匹配正/负集合大小、逐点出现和共同容量，不因“每个正集至多四元”就套一个缺最低大小的门。五个正二集、两个负三集的十点反例表明，换参数可能彻底破坏门；[完整案例](examples/signed-gate-counterexample.md)解释真实共度约束怎样补回可用范围。
+
+选择最小蓝数、最小外红数或私有边owner时，每个规范化带来不同见证。必须固定同一个源态，证明多步选择相容，不能将两次各自最优的配置的好性质拼接。修复门证明正确只是条件工具；先问实际源态能否提供它的前提，再扩一个越来越强却没人能调用的通用门。
+
+第二条是一般参数的结构与概率接口：最小顶点反例产生实际单交图，关联矩阵/团结构削减同一个H的有向单交对数，再放入RS重染失败上界。完整路线已收在 [一般k正文](references/mathematics/06-general-k-rs-and-growth.md)。统一增长定理、精细判据C.2逐点优化和小k锁点方法是不同层次；比较时统一基准并保留各自条件。不要把困难五元局部表的常数直接推广为所有k，也不要把一般k的成功说成所有小k已解决。
+
 ## 停滞时改变什么
 
 先保留一个最紧或失败输入及其活跃项，说明它来自实际超图、必要库存还是更宽的松弛。
@@ -138,6 +176,14 @@ empty 和 singleton 也属于完整重数，不能只保存大迹后在概率调
 一个父分支已严格且已核验时停止细分；只对失败父型追加更强方法。
 不要把一次便宜实例的速度外推到重复数、锁数或迹规模不同的全域。
 
+### 用真实历史转折判断是否值得继续
+
+24点四锁对每个布局分别放一个最坏坏对，丢失了真实坏对必须相同的信息。保留共同槽数据后，平均24锁序给441/442，最后可转为2401槽元组的确定性赢家接口。这说明应优先恢复共同对象，再比较抽象平均证明与有限赢家哪种端到端更便宜；不是固定要求所有任务加锁或全算。
+
+21点连续局部扩表曾长期没有减少开放大类。一个新的component DP经证明与旧cutoff恒等后，应立即停止该方向，保留具体无增益等式；[component案例](examples/component-relaxation-stop.md)有实际程序重放。若新条件真正缩小原对象域，才重开该路线。已证条件引理仍要保存，但汇报必须同时说明它未关闭哪条原义务。
+
+T34形式化曾被稀疏大Nat模式匹配和重数据重复展开拖慢。改为非默认键关联查询、拆开数据/重覆盖/轻caller后，同一数学域明显提速；这类瓶颈应该改表示，不应该再搜一个数学证明。若不知道卡在数学还是编译，先重放一个实际caller并profile，避免整组代理盲等。
+
 ## 验证适配与 ARIS 复用
 
 没有单个“Property B verifier”能自动承担所有义务；每次将现有检查器接到它真正验证的那一项。
@@ -146,7 +192,7 @@ empty 和 singleton 也属于完整重数，不能只保存大迹后在概率调
 反例检查读取实际边集，检查边大小、简单性及全部染色或其他充分不可染性证书。
 审阅则针对量词、归约、选点、覆盖或数学连接；说明实际读了哪些文件、有没有执行命令。
 
-需要 Lean 时使用已安装 `lean-formalize`，先固定原题类型并做一个非平凡实际 caller。
+需要 Lean 时读取仓内 [lean-formalize Codex](../../../../base/skills/skills-codex/lean-formalize/SKILL.md) 或 [Claude](../../../../base/skills/lean-formalize/SKILL.md)，先固定原题类型并做一个非平凡实际 caller。
 查 Mathlib 和现有领域模块，再决定新增模块；五元宿主接口不能因纯计数引理一般化而自动变成一般 k。
 重数据、覆盖证明和小 dispatcher 可按真实依赖分开，复用未改的重核验成果。
 按实测内存安排一个正式重构建执行者；多个 agent 可并行数学推导或不同模块，避免互相重复重构建。
@@ -156,6 +202,18 @@ empty 和 singleton 也属于完整重数，不能只保存大迹后在概率调
 关键连接用 `proof-checker` 或有明确问题的 `research-review`；不以轮数或赞同票决定数学真假。
 成稿需要阅读交付时使用 `render-html`，展示保真与数学验收分别报告。
 不为使用插件自动跑论文、全模型审阅或 Lean；当前合同规定的审阅和核验照常完成。
+
+## 可直接重放的实务案例
+
+案例都指定输入、真实公式/程序、输出和结论范围；从archive复制到独立工作副本运行，保留源证据。
+
+- [六元379型完整链](examples/m6-complete-proof.md)：从27–43点实际域、选锁、避锁配额接回染色，独立注入计数重算。
+- [signed门的明确反例](examples/signed-gate-counterexample.md)：先识别候选门为假，再判断原H的额外前提能否排除该反例。
+- [无增益component路线的停止](examples/component-relaxation-stop.md)：完整计算与恒等式决定不再扩算，不等于全题不存在解。
+- [十二元自适应分流](examples/k12-adaptive-coverage.md)：只扩失败父型，完整域与20点独核范围分别报告。
+- [一般k原命题Lean调用](examples/general-growth-lean.md)：工具链、指定模块、独立原题声明与公理审计。源码已含，工具链与依赖缓存按需准备。
+
+这些案例是技能使用材料，不自动恢复旧Goal。调用新参数研究时，先按新预算重新建立覆盖，不能把案例的PASS复制给新M。
 
 ## 收回结果并交接
 

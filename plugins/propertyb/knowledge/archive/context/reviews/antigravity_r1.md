@@ -1,0 +1,1 @@
+{'content': [{'type': 'text', 'text': 'MCP tool call requires approval, but approval policy is never'}], 'isError': True}

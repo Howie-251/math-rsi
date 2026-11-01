@@ -1,0 +1,4 @@
+import Aris4Math.ThirtyThree.EightClassification
+
+#check Aris4Math.ThirtyThree.EightClassification.classify_eight
+#print axioms Aris4Math.ThirtyThree.EightClassification.classify_eight

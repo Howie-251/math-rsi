@@ -9,12 +9,15 @@ description: 组织并推进数学定理证明、构造搜索与计算验证的�
 
 **保持 Agent 的数学判断与行动自主权：** 本流程提供研究决策框架而非刚性流水线。研究深度与工具介入必须同问题难度相称——短小引理或直接命题可由当前代理一气呵成地推导并验算，无需拆解复杂义务图、无需外呼模型审阅、也无需启动 Lean；当有限域精确计算比抽象对称性归约更短且可完整核验时，直接采用计算证明，不强制纯解析推导。
 
+执行主线是：**初步精确问题 → 广泛文献发现与反例／勘误核查 → 固定正式目标并复用 wiki → 分解义务并行推进 → 独立验算与对抗审阅 → 装配完整证明 → 按需 Lean → 可复现交接。** 文献与 wiki 会随新障碍继续回流，不是起步后永久冻结的一次性环节。
+
 ### 按需参考与组件导航（勿一次性全量载入）
 
+- **文献广搜与原文深读**：[文献闭环](references/literature-discovery.md)。新题先覆盖异名、等价问题、前后引用链及反例／勘误；已有 wiki 不能代替查漏。
 - **工作区起步与状态恢复**：[`../../../docs/WORKSPACE.md`](../../../docs/WORKSPACE.md)（定义单题工作区目录、状态记录与断点恢复约定）。
 - **效率诊断与端到端成本**：[`references/efficiency.md`](references/efficiency.md)（当面临组合爆炸、多局部视图松弛或评估重型枚举时读取）。
 - **证据边界与验证接入**：[`references/proof-evidence.md`](references/proof-evidence.md)（当设计检查器接口、组合多步规范化或审计最终证明链时读取）。
-- **ARIS 宿主技能复用**：[`../../../docs/ARIS_REUSE.md`](../../../docs/ARIS_REUSE.md)（说明如何在当前宿主环境中按实际安装调用文献、证明、审阅、Lean 与 HTML 渲染技能，不假设未核实的自动发现）。
+- **仓内 ARIS 完整技能复用**：[`../../../docs/ARIS_REUSE.md`](../../../docs/ARIS_REUSE.md)（双端完整技能、资源与 helper 都在本仓；按实际宿主读取并绑定本仓 base/tools，不依赖作者全局安装）。
 - **领域插件入口**：仅在题目属于对应领域时按需读取 [`../../../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md`](../../../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md) 或 [`../../../plugins/ecc/skills/mathrsi-ecc/SKILL.md`](../../../plugins/ecc/skills/mathrsi-ecc/SKILL.md)。进入插件后，只按当前活跃义务读取对应的定理、归约或检查器说明，切勿将插件内所有历史资料一次性塞入上下文。
 
 ---
@@ -59,13 +62,36 @@ description: 组织并推进数学定理证明、构造搜索与计算验证的�
 - **自由度冲突检查**：两个单独成立的无损规范化叠加时可能争夺同一变换自由度。可以证明第二步在保持第一步条件的变换下仍可实现，直接证明联合规范型覆盖原域，或撤掉冲突条件并覆盖剩余情形。稳定子群是一种常用工具，不是所有数学对象都必须采用的表示。
 - **跨局部视图的共同对象约束**：当同一超图、同一批坏对或同一母码投影到多个局部视图，合并时保留其相容性。逐项取最坏值可能给出合法但过松的界；若它不能闭合，就检查这些最坏情况能否来自同一个原对象，而非把松弛失败当成实际反例。
 
-### 按具体义务检索 Wiki、插件与文献
+### 起步广搜，再按具体义务检索 Wiki、插件与文献
 
-检索知识必须带着当前卡点的具体数学问题（如“需要排除度数为 $d$ 的构型”或“需要把母码等价类上界锁死在 $N$ 以内”），参阅 [`../../../docs/ARIS_REUSE.md`](../../../docs/ARIS_REUSE.md) 调用检索与知识库工具：
+新研究不能只等卡住后才查文献。先按[文献闭环](references/literature-discovery.md)完成覆盖问题异名、等价表述、已有结论与反例的首轮调查；并行发现可以进行，但关键进口必须回到原文。调查结果可能改变目标的新颖性判断、可用方法或正确参数范围，由 Root 在深入推导前对齐正式规格。已有完整调查则补查新增部分，不从零重复。
+
+进入具体证明后，检索知识带着当前卡点的具体数学问题（如“需要排除度数为 $d$ 的构型”或“需要把母码等价类上界锁死在 $N$ 以内”），参阅 [`../../../docs/ARIS_REUSE.md`](../../../docs/ARIS_REUSE.md) 调用检索与知识库工具：
 - 先查任务工作区 `research-wiki/` 与已加载领域插件中的失败地图与已有引理，确认是否已有现成归约或已知的死胡同（如已完整扫描过的参数域）。
-- 读外部论文时先定位相关定义、定理、证明和引用链，按关键依赖扩读；新领域或路线失效时可以广搜，避免只找支持当前猜想的材料。核查记号、严格界及参数范围，将真正使用的条件写回义务记录，不把摘要当原定理。
+- 读外部论文时先定位相关定义、定理、证明和引用链，按关键依赖扩读；新题的首轮广搜已在前步进行；路线失效或换参数时补查新链，避免只找支持当前猜想的材料。核查记号、严格界及参数范围，将真正使用的条件写回义务记录，不把摘要当原定理。
 
 ---
+
+### 实际调用子技能，收回它应交付的内容
+
+“使用技能”是读本仓相应宿主的完整 `SKILL.md`、按其适用流程执行并消费产物，不是给日志贴一个技能名称。下表链接是 Codex 版；Claude 版在 `base/skills/<同名>/`，完整双端表与命令见 [ARIS_REUSE](../../../docs/ARIS_REUSE.md)。通用技能不需要为每个数学动作全部运行。
+
+|进入情形|实际技能|交给它的输入与收回后用途|
+|---|---|---|
+|新题查漏或新方法补搜|[research-lit](../skills-codex/research-lit/SKILL.md)|初步命题、异名、旧查询；收回来源与阅读范围，再核原定理|
+|已有论文页面只有框架|[wiki-enrich](../skills-codex/wiki-enrich/SKILL.md)|原论文及具体需补的定理；收回真实条件和引用，不填空泛摘要|
+|散乱计数、假设或中间式|[formula-derivation](../skills-codex/formula-derivation/SKILL.md)|固定对象、已证条件、目标界；收回逐步推导及未证连接|
+|一条具体缺失引理|[proof-writer](../skills-codex/proof-writer/SKILL.md)|精确量词及允许进口；收回正式证明，Root核actual caller|
+|跨轮困难证明及专门交接|[proof-orchestrator](../skills-codex/proof-orchestrator/SKILL.md)|已有run/证明源与开放义务；按它的状态契约续接，不另造重复状态|
+|新结构/代码证书接口审阅|[research-review](../skills-codex/research-review/SKILL.md)|原文、代码、输入和明确疑问；收回原始意见、实际读取范围并修真实问题|
+|完整自然语言证明验收|[proof-checker](../skills-codex/proof-checker/SKILL.md)|完整证明及进口；收回完整覆盖的证明义务审计，未读部分不能PASS|
+|形式化值得或已被要求|[lean-formalize](../skills-codex/lean-formalize/SKILL.md)|原题、固定工程、已有证明；收回原命题声明、实际构建和公理审计|
+|慢计算需要定位成本|[system-profile](../skills-codex/system-profile/SKILL.md)|一个代表性真实调用；收回决定表示/资源/算法改变的实测瓶颈|
+|写成果和交给合作者|[render-html](../skills-codex/render-html/SKILL.md)、[citation-audit](../skills-codex/citation-audit/SKILL.md)|已核正文与来源；消费渲染与引用检查，不让它们替代数学验证|
+
+每次实质结果通过 [research-wiki](../skills-codex/research-wiki/SKILL.md) 接回原知识库；记录精确命题、来源、适用条件、失败和重试理由。沿用已有schema和helper，不创建一个孤立的“MathRSI新wiki”。
+
+[auto-review-loop](../skills-codex/auto-review-loop/SKILL.md) 的完整技能也已入库，可用于有明确改进任务的研究迭代。它的评分门和实验收据属于该技能的运行控制，不能变成数学定理的真值门。纯证明的正式验收走 `proof-checker`，证明中途的具体归约/代码问题用下一节的义务审阅；不要声称运行了原版循环，却跳过它的状态与原文留存要求。
 
 ## 3. 主动推导、低成本探针、真实 Caller 检查与 Worker 协同
 

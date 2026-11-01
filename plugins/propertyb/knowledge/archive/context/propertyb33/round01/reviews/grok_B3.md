@@ -1,0 +1,37 @@
+The 20-vertex branch is now a closed Lean proof of Property B, and `RemainingGoal` is exactly the 21–25 vertex cases. The proposed eight-point normalization is true: disjoint triples and a crossing triple must exist, and they leave 16 compatible triples. The 14-type list is still not a proof.
+
+## What was read, and what was not run
+
+Read the new Lean files `CustomDeletion.lean`, `OrdinaryLink.lean`, `TwentyStructure.lean`, `TwentyEight.lean`, `TwentyStandard.lean`, `Twenty.lean`, `Assembly.lean`, and `DoubleLockAt.lean` / `DoubleLockProfiles.lean` where those files call them. Also read `Main.lean`, the six-file `compatibility.patch`, `Numeric.lean` bounds, `LowDegree.lean` budgets, `LinkCounting.lean` and `LinkDeletion.lean` at the lemmas the new proofs use, both twenty-complete logs named in the request, the profile33 report and the success/failure lines of its build logs, `V25_EIGHT_LOCK_ROUTE.md`, all of `EIGHT_LOCKS_INDEPENDENT.json`, and the scope header plus group 6 of `EIGHT_LOCKS.json`. No shell command and no edit. The build logs are prior run records, not a build performed now. The 19-vertex proof was not reopened.
+
+## Twenty vertices: the chain has no leftover premise
+
+`twenty_propertyB` takes only a pair-covering 33-edge hypergraph on `Fin 20` and returns `PropertyB`. `exists_two_locks_of_twenty` produces one codegree-1 pair in the twelve degree windows. The arithmetic in that selection matches the budget lemmas: minimum degree 5 through 8, and the strict excess tests are `172, 176, 170, 166`, each above `165`. Eleven windows call `propertyB_of_standard_pair`; `(8,8)` calls `propertyB_of_eight_eight`.
+
+For every window, `realizes_profile_at` builds the four counts from `H`: `34-d(x)-d(y)`, `d(x)-1`, `d(y)-1`, and `1`, at edge count 33. `two_counts` is that partition. Positions are 11,12 when the partner degree is 9 and 10,11 otherwise. The standard deletion uses `linkQ d = (4d-19+2)/3`, the integer form of the P8 lower bound, and kernel-checked per-pair weights `21/2210` or, at 11,12, `70/7293` and `5/663`. Those are the cheaper class weights already computed for these positions. `Numeric.deduction` is proved at most `linkQ` times that weight, then `realized_center_deduction` moves the inequality onto the actual directed bad pairs.
+
+The `(8,8)` branch does not use that cheapest-class deduction. `OrdinaryLink` proves at least four ordinary-ordinary bad pairs from `4·7 ≤ 3L+18`, and the existing P8 bound supplies at least five bad pairs altogether. Ordinary pairs are a filtered subset of `badLinkPairs`, with both ordered directions equal to `126/12155` and every bad pair at least `21/2210`. The mixed lower bound is `5·(21/2210)+4·(126/12155-21/2210)=1239/24310` at each center. `directed_bad_sum` makes the two directions of one unordered pair disjoint from those of another. `CustomDeletion` subtracts this loss only at positions 10 and 11, recomputes `min(A,B,C-loss)`, and the kernel certificate is `2421/2431<1`. That is the same total checked by hand last round. The resulting call is `propertyB_of_weighted_position_bounds` on this `H`.
+
+`Assembly.lean` sends vertex counts 19 and 20 to those two theorems and defines `RemainingGoal` as `21≤v≤25`. The import audit prints `Target33 ↔ RemainingGoal` and the three-axiom dependency `propext`, `Classical.choice`, `Quot.sound`. The assembly log ends `Build completed successfully (1006 jobs)`. This is not a proof of T33.
+
+## The 32-edge statement is unchanged
+
+`validProfile` and `RealizesProfile` gained an optional `edgeCount` defaulting to 32. The count sum is that parameter. For an empty-position capped profile the old cap `992` is `32·31`, so the default instance is the same predicate. `boundA`, `boundB`, and `boundC` sum the profile’s own type counts; they do not contain a fixed factor 32. Locked profiles still require `emptyPairCap = none`. The current `Main.lean` theorem is still `H.edges.card ≤ 32`, with the same Bool count conclusion and the corollary `33 ≤ H.edges.card`. Its successful regression record is `build-final-r2.log`: `propertyB_of_at_most_thirty_two` depends only on those three axioms. The `sorryAx` lines are in the earlier failed logs `build-final.log`, `build-callers-r1.log`, `build-twenty-standard-r1.log`, and `build-twenty-standard-r2.log`, not in the successful Main record.
+
+## Twenty-five vertices
+
+The reduction before the local classification is correct. At least ten vertices have degree 6. Each has codegree 1 with all 24 other vertices, because `4·6=24`. An arbitrary ten of them decompose their pairs into blocks of size 2 through 5. A block of size at least 4 is sent to a six-vertex section; that branch is not rechecked numerically here. Otherwise every one of those ten vertices lies in at least three triples, so the ten contain at least ten triples. Some eight-vertex subset retains at least five, because the average is `7t/15≥14/3>4`. Every vertex of that eight-set lies in a triple: otherwise its seven pairs would be seven doubletons.
+
+The 14 saved witnesses do not prove that those are all isomorphism types. `EIGHT_LOCKS.json` records 432834 labelled decompositions, 58663 degree-incompatible, 374171 remaining, and 43 groups. `EIGHT_LOCKS_INDEPENDENT.json` records only that 1075 saved rows agreed between two arithmetic implementations. Group 6 is the stated worst witness, triples `178,245,268,347,358`, empty multiplicity 8, value `12149/12155`.
+
+The candidate normalization holds for every such triple family. Any two members meet in at most one point, so each point lies in at most three triples and there are at most eight triples. If no two triples are disjoint, then `|T|` cannot be 5, 6, 7, or 8 while covering all eight points:
+
+- For five triples the only feasible degree pattern is `(3,3,3,2,1,1,1,1)`. The four degree-1 points occupy four distinct triples, leaving one triple inside the other four points. That triple repeats a pair already used by the degree count. The same pair collision occurs when the degree-2 point is the one left out.
+- For six triples the pattern is five degree-3 points and three degree-1 points. Three triples then lie in those five points with pure degrees `(2,2,2,2,1)`. The two triples avoiding the degree-1 point are 3-subsets of a 4-set, so they meet in two points.
+- Seven and eight triples make the corresponding degree equations demand more than eight points of degree 3.
+
+Thus two disjoint triples exist. Label them `123` and `456`. The only triples that avoid meeting either in two points are those two, at most one triple `{7,8,x}`, and triples with one point in each triple plus one outside point. Forbidding the last kind leaves at most three triples, contradicting five or more. So a crossing triple exists; label it `147`.
+
+The other triples compatible with all three are exactly these 16: `257,267,357,367`, `158,168,248,258,268,348,358,368`, `278,378`, and `578,678`. Every admissible family is isomorphic to `{123,456,147}` plus a pairwise compatible subset of this list that covers vertex 8 and keeps each point in at most three triples.
+
+That is the coverage proof still to finish: exhaust those subsets and match them to explicit representatives. The stabilizer swapping `2` with `3` and `5` with `6` shrinks the list, but the proof needs one isomorphism check per surviving subset, not another search over labelled `K_8` decompositions. Until that check is written, the route’s 14 types remain an unverified enumeration.

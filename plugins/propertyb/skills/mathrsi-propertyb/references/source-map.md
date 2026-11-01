@@ -1,75 +1,29 @@
-# Property B 来源与现有能力适配
+# Property B 来源、阅读与执行地图
 
-本地图记录首版插件实际采用的来源及定位方法，不是额外的待执行清单。按当前义务选读，不必把整个历史项目加载给 worker。
+本插件的数学与代码资源都在 MathRSI 内，不再要求配置一个外部 PROPERTYB_SOURCE_ROOT。原始材料见 [knowledge/archive](../../../knowledge/archive)，实际选择范围见 [知识说明](../../../knowledge/README.md) 与 [文件清单](../../../knowledge/SOURCE_INVENTORY.json)。单题工作区另建或沿用原目录，归档只读。
 
-## 绑定来源位置
+## 从问题到正文，不从目录猜结论
 
-使用者在当前任务中明确 `TASK_ROOT` 为单题工作区，`PROPERTYB_SOURCE_ROOT` 为有权读取的 Property B 原始资料根。二者可以相同，也可以不同；目录内容由使用者实际提供。
-这些变量是说明中的路径代号，不会被技能自动设置。历史资料未挂载时先使用已提供的证明和文献，不猜作者机器路径或自行重建巨大资料库。
-
-工作区可用几行 Markdown 保存：
-
-```text
-TASK_ROOT = 本题规格、进度和新产物所在的实际绝对目录
-PROPERTYB_SOURCE_ROOT = 已挂载、只读的领域资料实际绝对目录
-本题原规格 = TASK_ROOT 下的实际文件
-允许读取的历史结果 = 相对 PROPERTYB_SOURCE_ROOT 的路径与范围
-允许运行的核验 = 当前工作区核验说明中的实际命令
-```
-
-下面给的是历史资料内相对路径，不是本仓库打包的文件链接。具体文件缺失时如实说明；若一个证明已由合适的文献或更短的论证支撑，也不要求补齐全部历史资产。
-
-## 首版实际阅读的来源
-
-本插件编写时依据 2026-11-01 的 MathRSI 设计与跨领域比较，并定向阅读以下历史 wiki。源文没有作为插件全文复制，也没有在本次开发中重跑数学计算。
-
-|来源相对路径|本插件采用的内容|阅读边界|
+|问题|正式指南|回看原始来源|
 |---|---|---|
-|`MATH_RSI_DESIGN.md`|base／插件／任务边界，五类信息，活跃项与共同对象，按义务核验|架构说明，非已测通用求解引擎|
-|`MATH_RSI_ECC_COMPARISON.md`|目标量词、覆盖与成员合法的区分，联合成本|跨领域对照，不迁移 ECC 的参数结论|
-|`research-wiki/PROPERTY_B_RESEARCH_LESSONS.md`|真实迹、实际 caller、多布局、Lean 表示和核验依赖的经验|读取方法与形式化段；文中不同日期进度不能直接当本题状态|
-|`research-wiki/PROPERTY_B_REUSABLE_LEMMAS.md`|L1–L8 的适用范围与源码地图，L1–L4 展开段|五元 Lean、一般有限计数和一般 k 纸面范围分别保留|
-|`research-wiki/PROPERTY_B_FAILURE_ATLAS.md`|固定搜索域、非活跃项、联合计数、目录覆盖、表示成本和松弛失败的范围|历史失败与后续修正并存，使用时读取对应更新段|
-|`research-wiki/PROPERTY_B_M6_GE67.md`|总域重算、共同单位邻点池、弱楔、等号刚性、仅扩失败父型|六元历史实例的经验；其固定阈值不作为通用规则|
+|合并不共边点、顶点上端、整数选锁|[归约/选锁](mathematics/01-reduction-and-selection.md)|[原L1–L12及后续库存](../../../knowledge/archive/research-wiki/PROPERTY_B_REUSABLE_LEMMAS.md)、[小k迁移](../../../knowledge/archive/research-wiki/PROPERTY_B_SMALL_K_TRANSFER.md)|
+|真实迹、empty/singleton、重标号、递归域|[真实迹与覆盖](mathematics/02-actual-traces-and-coverage.md)|[ThirtyThree源码](../../../knowledge/archive/formal/Aris4Math/ThirtyThree)、[原研究经验](../../../knowledge/archive/research-wiki/PROPERTY_B_RESEARCH_LESSONS.md)|
+|精确排列与共同坏对|[概率/弱对偶](mathematics/03-permutations-bad-pairs-and-duality.md)|[完整证明目录](../../../knowledge/archive/proofs)、[失败地图](../../../knowledge/archive/research-wiki/PROPERTY_B_FAILURE_ATLAS.md)|
+|signed修复、源态、owner与共同容量|[signed](mathematics/04-signed-repair-and-sources.md)、[完整门目录](mathematics/04a-repair-gates.md)|[36条件工具](../../../knowledge/archive/research-wiki/PROPERTY_B_CONDITIONAL_TOOLKIT_36.md)|
+|Gram/秩/共享列等结构规约|[共同结构](mathematics/05-shared-structure-and-conditional-tools.md)|[一般方法综合](../../../knowledge/archive/research-wiki/PROPERTY_B_GENERAL_METHOD_SYNTHESIS.md)|
+|RS判据、一般增长与文献基线|[一般k正文](mathematics/06-general-k-rs-and-growth.md)|[正式来源地图](../../../knowledge/archive/context/propertyb-general/formal-exposition-20261021/SOURCE_MAP.md)、[规范证明](../../../knowledge/archive/proofs/propertyb-general)|
+|新参数算术/独核/效率|[实务入口](practice/README.md)、[检查器](practice/checker-capabilities.md)|[六元](../../../knowledge/archive/context/propertyb-m6-67-progress-20261029)、[七元](../../../knowledge/archive/context/propertyb-m7-131-20261029)、[十二元](../../../knowledge/archive/context/propertyb-k12-4664-20261029)|
 
-来源项目的主工作流复用 ARIS（[上游仓库](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)）。本插件为新的领域指导，没有复制其完整技能或将源项目的审阅状态迁移到新任务。使用 ARIS 时读取当前宿主实际安装的对应 `SKILL.md`。
+数学整理页保留定理假设、完整公式和证明/实际caller。原wiki的状态快照可能早于其后修复，以知识说明和对应最终报告解释日期；不能据旧“已在途”恢复一个后台任务。
 
-## 按当前疑问找原始数学与源码
+## 查源码与核声明
 
-|当前问题|优先定位|要核实什么|
-|---|---|---|
-|能否假设点对覆盖|通用引理目录 L1；`formal/Aris4Math/Reduction.lean`|边上单射、像边去重、染色拉回与最小反例选择|
-|新预算的顶点域和锁点|目录 L2；`formal/Aris4Math/Structure.lean`|总度、取整、共度超额及新边数下实际选点|
-|贪心失败事件|目录 L3；`formal/Aris4Math/Greedy.lean`|失败被哪种有序单交事件覆盖，非充要断言|
-|无放回概率|目录 L3；`formal/Aris4Math/JointCounting.lean`|自由点互斥、自由槽互斥、样本空间非空及分母|
-|真实迹恢复与增锁|目录 L4；按目录指向 `ActualAllocations`、`LockExtension`、`LockProjection` 等实际模块|实际版本及构建状态，empty／singleton 恢复和换标号|
-|容量枚举是否完整|目录 L5；对应 `BoundedAllocations` 接口|实际有界向量进入目录，不额外声称双射或输出都可实现|
-|避锁 link 与配额|目录 L6／L7|实际池重叠、坏对权重、下界取最大或有依据地组合|
-|同一坏对多布局|目录 L8|共同变量与布局系数，局部最坏能否同时成立|
-|数值扣除为何无收益|目录 L12；失败地图非活跃项实例|最终逐位置最小值实际是否下降|
-|重核验为何慢|失败地图第15项；对应 `PERFORMANCE_NOTES.md`|数据表示、覆盖与小 caller 依赖，勿把失败 pilot 写成 PASS|
+Lean库在 [formal](../../../knowledge/archive/formal) 中保留原模块结构、toolchain及manifest。一般Growth与五元ThirtyThree是不同主模块；完整原题审计文件同目录保留。对新调用先看实际声明，而非仅grep定理名。数学正文里的来源位置能定位实际接口；条件wrapper编译成功不等于已经构造了条件。
 
-表中部分模块名需由当前引理目录定位，不能假定安装 MathRSI 后自动拥有源项目的 Lean 工程。
-调用历史定理时读取完整声明、定义和相关证明；目录是一条检索捷径，不能代替定理前提。
+现行案例所需输入已纳入仓库；执行时复制相应archive子树到任务工作副本，在副本中保存新输出。其余历史脚本保留为研究源码，不保证每份旧日志与JSON都在；先读对应报告和输入引用。不能以缺历史日志为理由重新搜索一个已证明定理，也不能冒称整个历史工程都可一键重放。
 
-## 接入已有检查器
+## 本次提炼的阅读与验证范围
 
-优先读本题已有 README／REPRODUCIBILITY／独核报告，找实际入口、参数格式、精确求值方式与运行范围。
-不要从别的 k、M 结果复制命令后直接宣称新任务已覆盖；输入域变化先重证数学范围。
-需要引用 `formal/` 时先读其 README 和固定 manifest，确认工具链以及实际主模块。
+数学作者系统阅读L1–L117库存及关键原证明，实务作者核读失败/效率/Lean来源并运行指定案例；Root核对归档、公式接口、文献版本图、具体数学计数与端到端调用。精确阅读边界在仓根 development/propertyb-rebuild/ 的 MATH_READING_REPORT.md、PRACTICE_READING_REPORT.md 与最终VALIDATION中。归档保存不等于本轮把每个旧文件重新审计了一遍。
 
-给 base 的核验说明应能回答：
-
-- 本次检查是公式求值、类型覆盖、实际 H 连接、不可染反例核验，还是 Lean 主定理。
-- 输入来自哪个实际分支；是完整必要域、代表域、保存成员，还是抽样。
-- 若取商或重标号，原输入如何运输；若使用另一实现，哪些算法或数据仍共享。
-- 退出码与结果怎样解释；哪些数学蕴含仍需证明。
-
-一个检查器可以支撑多个明确声明，但不要给整个插件一个无范围的 `verified` 标记。
-全表第二实现、拒绝证书重放、Lean 内核检查是可按合同组合的能力，不能互相冒称，也不要求每题一律全部执行。
-
-## 保存新知识的位置
-
-本题新预算、输入目录、剩余分支和运行日志写到 `${TASK_ROOT}`。
-可迁移的条件引理附精确假设、证明入口和实际使用者；失败材料附失败的是命题、充分界还是松弛，以及何时值得重试。
-插件维护建议可以指向这些新证据，等待独立的维护／评估步骤纳入；运行中不改 base 与验收。
+来源原文保留，新的数学结论只按原证据范围引用。所有跨模型回应保留实际模型、读取范围和是否运行命令；开发审阅不是新数学终审，也不能将七元未审状态变为已获跨家族认可。

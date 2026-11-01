@@ -1,0 +1,1245 @@
+# L1–L117 原库存完整保真正文
+
+以下全文来自Property B项目已存库存，数学段落不删减，链接转为本插件archive。标题开头“追加至L44”与后面L117并存是源文件历史；编号与具体状态看对应条目和后继完整报告。本次保留全部后继状态说明，不将117项统一升级为已证普适定理。
+
+# Property B：可复用定理、引理与实际调用地图
+
+**2026-10-20：库存追加至L44，新增门按实际范围使用。** 原12组保留原有范围；新增纸面工具包括小点数交换、Brooks实际选点、最小空迹、随机横截集、真实单位五边及共同二阶矩低边归约。36仍未完整证明，新增项不追溯升级旧审阅或Lean状态。
+
+2026-10-14。这里固定从 **m(5)≥33、m(5)≥34，以及 m(5)≥35 的完整纸面候选**中提取的数学工具。前两档已完成端到端 Lean 验收；第三档的完整 Lean 尚未闭合。第三档中已经独立证明的通用引理仍可单独使用。
+
+最重要的积累是：**用少量真实局部数据保留同一超图的约束，再以可检查的不等式推出原染色。** 具体下界是这一机制在不同参数下的实例。本文不宣称这些基础方法在文献中首创。
+
+本页由 ARIS `formula-derivation`、`lean-formalize` 和 `research-wiki` 的相应流程组织，依据实际源码、既有构建记录及下文短证明整理。本次不重新构建冻结证明，也不恢复暂停的 T34 Goal。原始分工、跨模型讨论与意见处置存于 [本轮证据目录](../../../../knowledge/archive/context/propertyb-unified-lessons-20261014)。实践与效率见 [研究经验](../../../../knowledge/archive/research-wiki/PROPERTY_B_RESEARCH_LESSONS.md)，具体反例和失败边界见 [失败地图](../../../../knowledge/archive/research-wiki/PROPERTY_B_FAILURE_ATLAS.md)。
+
+## 读法：哪些已经是可直接调用的定理
+
+全文用 r 表示每条边大小、v 表示顶点数、M 表示边数、s 表示锁点数。T32/T33/T34 分别处理至多32/33/34边，对应下界33/34/35。
+
+**为什么这里的证明短？** 本页是可复用引理目录。L6、L7、L10、L12等基础命题，确实可用几行双计数或代数完整证明；它们的结论分别是坏对数量下界、加权扣除下界、删点统计障碍和最小值恒等式，并不是整个超图可染。L3、L4、L8把多个已有接口组织在一起，正文说明各步推理，实际算法、事件和染色接口的完整形式细节见所列源码。把这些工具应用到任意原始超图，还须证明选点存在、类型与配额真实、分类完整及最终严格界。该部分工作没有被短引理替代。
+
+“一般 Lean”表示源码已经量化相应有限类型或参数；“五元 Lean”表示实际超图接口仍用 `Simple5Hypergraph`；“纸面推广”表示本页给出一般参数的证明，但没有新建对应 Lean 声明。某个基础文件一般化，不代表整个概率引擎已经支持任意 r。
+
+|编号|可以固定的结果|当前可直接复用的范围|
+|---|---|---|
+|L1|边上单射商与最小反例点对覆盖|五元 Lean；一般 r 的纸面证明|
+|L2|度数、共度超额和受限冲突选点|五元计数已 Lean；部分一般图选点已实现；一般 r 推论见正文|
+|L3|贪心失败覆盖与无放回联合排列计数|失败覆盖支持任意 r≥2；联合计数支持一般有限集合|
+|L4|实际迹的恢复、投影、重标号和增锁|锁数/点数通用，实际超图宿主五元|
+|L5|容量剪枝的完整性与实际数据读回|一般有限容量索引；与 Property B 无关|
+|L6|避锁 link 的相交边对下界|五元 Lean；一般 r≥3 的纸面证明|
+|L7|带容量修复的配额弱对偶|任意有限索引上的有理数 Lean 定理|
+|L8|共享真实坏对的多布局证书|纯代数核心一般；原染色接口五元、任意锁数/点数/边数|
+|L9|单位共度的大迹 packing 与五锁32型|五锁32型已 Lean；一般 packing 推论见正文|
+|L10|共同块族的删点守恒与整除障碍|守恒恒等式一般 Lean；7点实例已 Lean；一般整除推论见正文|
+|L11|最小能量分区控制类内冲突|三类、自然数权重、最大加权度5已 Lean；一般 k 纸面推广|
+|L12|扣除何时真正改善逐位置最小界|精确代数恒等式；本页证明，未新增 Lean 包装|
+|L13|唯一坏事件与修复变换的双计数|一般有限事件纸面引理；应用于≤18点≤36边五元超图，双实现局部计数一致|
+
+优先复用 L4–L8：它们把新结构变成真正可调用的概率证明。L2、L9–L11 决定新参数下是否能得到这些结构。L1、L3 是稳定基础。
+
+Grok、Gemini已就这些工具的适用条件与推广边界完成具体讨论；最终新增的删点和有效扣除两条也有有效补审。主代理独立核算并修正了若干reviewer概括，见[逐项处置与实际范围](../../../../knowledge/archive/context/propertyb-unified-lessons-20261014/REVIEW_RECONCILIATION.md)。本页的数学依据是各项证明与现有源码，模型意见另列。
+
+## L1．边上单射商保留不可染性，最小反例必点对覆盖
+
+**命题。** 设 H 是有限简单 r 元超图，f:V→W 在每条边上单射。以所有 f(e) 为边、合并重复像边得到 H′。则 H′ 仍 r 元，边数不增加；H′ 的任一 Property B 染色沿 f 拉回后，是 H 的 Property B 染色。
+
+证明只用边上单射保留边大小、去重不增加边数、每条像边的两种颜色都可拉回。因而若 H 不可染，H′ 也不可染。
+
+**最小反例推论。** 对 r≥2、任意边数预算 M，若存在不可染对象，选择其中顶点数最小的一个。若不同点 x,y 不共边，合并它们在每条边上仍单射，产生更小不可染对象，矛盾。因此它点对覆盖。
+
+来源：[Reduction.lean](../../../../knowledge/archive/formal/Aris4Math/Reduction.lean) 的 `pushforward_edge_count_le`、`propertyB_pullback`、`propertyB_relabel_iff`、`smaller_counterexample_of_uncovered_pair`。这些是五元接口；32/33/34的顶层归约另有各自参数包装。
+
+可复用的是这个商与拉回机制。固定“19–25点”的窗口还依赖 L2 的上端及专门的小点数染色定理，不能随 M 自动沿用。补边到恰 M 还需要可用边数至少 M；逐档研究若已证明 ≤M−1 均可染，则任何 ≤M 的反例本来就恰有 M 条边。
+
+## L2．整数度数与共度超额是选锁点的统一预算
+
+设 H 有 v 点、M 条 r 元边，r≥2；d(x) 是度数，λ(x,y) 是不同点的共度。双计数给出
+
+\[
+\sum_x d(x)=rM,\qquad
+\sum_{y\ne x}\lambda(x,y)=(r-1)d(x).
+\]
+
+若 H 点对覆盖，则
+
+\[
+\epsilon_x=(r-1)d(x)-(v-1)
+=\sum_{y\ne x}(\lambda(x,y)-1)\ge0.
+\]
+
+因此 \(\lambda(x,y)\ge t+1\) 的伙伴至多有 \(\lfloor\epsilon_x/t\rfloor\) 个（整数 \(t\ge1\)）；尤其非单位共度伙伴数至多 \(\epsilon_x\)。每个这样的伙伴至少消耗 \(t\) 单位超额，这就是证明。
+
+另有两个直接推论：
+
+\[
+v\left\lceil\frac{v-1}{r-1}\right\rceil\le rM,
+\qquad
+|\{x:d(x)=a\}|\ge\max\{0,(a+1)v-rM\}
+\quad\text{若所有 }d(x)\ge a.
+\]
+
+第二式中令 \(S_a=\{x:d(x)=a\}\)，由 \(rM\ge a|S_a|+(a+1)(v-|S_a|)\) 移项即得。保留整数取整很重要。
+
+|五元、最小度≥6|M=32|M=33|M=34|M=35|
+|---|---:|---:|---:|---:|
+|24点六度点数量保证|8|3|0|0|
+|25点六度点数量保证|15|10|5|0|
+
+这里0表示这一预算没有给出正下界，不表示实际数量必为0。它解释了下一档困难常先发生在“锁点还能不能选到”，而非最后一个分数。
+
+**更远的一个确定推论。** 五元、点对覆盖且 M≤36 时仍有 v≤25：若 v≥26，则每点至少7度，总度≥182>180≥5M。但 M=37 时这一预算不再排除26点；同时，小点数端也须重新研究。这不是 m(5) 的新下界。
+
+**选点推论。** 在候选点集 \(S\) 内，连边表示非单位共度。若该简单冲突图最大度至多 \(\Delta\)，则每次选一点并删除它和邻居，可取得至少 \(\lceil|S|/(\Delta+1)\rceil\) 个两两单位共度点。对所需 \(k\ge1\)，只需 \(|S|>(k-1)(\Delta+1)\)。
+
+源码：[Structure.lean](../../../../knowledge/archive/formal/Aris4Math/Structure.lean) 的 `sum_degrees`、`sum_codegrees_erase`、`pairCovering_degree_bound`、`sum_codegree_excess`、`badPartners_card_le_excess` 是五元一般点数接口；`exists_pairwise_avoiding_subset` 是一般对称关系的 Δ=1 选择。另有 [TwentyFiveSelection.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/TwentyFiveSelection.lean) 的 `unit_subset_of_bad_bound`，k、Δ可变，但宿主固定五元25点。一般 r、一般阈值 t 的统一包装是上述纸面推广。
+
+特别地，25点六度中心的 ε=0；24点六度中心的 ε=1，恰有一个共度2伙伴，故恰有一对入射边在中心外相交。23点六度中心 ε=2，不能沿用“唯一坏对”。
+
+**2026-10-19通用选锁补充。** 合作者把总度预算与Caro–Wei组合为一般k的低度单位锁判据；完整证明、有限r加强及k5实际边界见[小k迁移笔记](../../../../knowledge/archive/research-wiki/PROPERTY_B_SMALL_K_TRANSFER.md)。这是本组预算的进一步组合，尚未新增Lean接口。
+
+## L3．贪心失败由临界单交边对覆盖；左右条件要联合计数
+
+**失败覆盖。** 对任意有限 r 元超图（r≥2）及顶点顺序，起初全红，按顺序扫描：当当前点是某条仍全红边的最后一点时，将它翻蓝。最终若失败，则存在不同边 A,B 及 x，使
+
+\[
+A\cap B=\{x\},\qquad x=\max A=\min B.
+\]
+
+证明分两步。最终若有全红边，它的最后一点扫描时该边也全红，算法必把该点翻蓝，矛盾。因此失败只能来自全蓝边。取一条全蓝边 \(B\) 的最早点 \(x\)，再取 \(x\) 当时翻蓝的全红见证边 \(A\)；\(A\) 的其余点在 \(x\) 前，\(B\) 的其余点在 \(x\) 后，得到所示单交关系。因 \(r\ge2\)，两边不能相等。该条件是失败的必要覆盖事件，不是失败的充要条件。
+
+[Greedy.lean](../../../../knowledge/archive/formal/Aris4Math/Greedy.lean) 的 `uniform_failure_covered`、`failureAt_covered`、`failure_event_cover` 已量化任意 r≥2；最终 `Simple5Hypergraph` 包装仍是五元。
+
+**联合计数。** 固定锁点到指定位置后，余下 \(N\) 个自由点与 \(N\) 个自由槽均匀双射。设自由点集 \(A,B\) 互不相交，\(|A|=a\)、\(|B|=b\)；自由槽集 \(L,R\) 互不相交，\(|L|=\ell\)、\(|R|=h\)。则
+
+\[
+\Pr(\sigma A\subseteq L,\ \sigma B\subseteq R)
+=\frac{\binom\ell a\binom h b}
+ {\binom N a\binom{N-a}b}.
+\]
+
+证明：像集是均匀的有序不交集合对，共有 \(\binom Na\binom{N-a}b\) 个；合格对有 \(\binom\ell a\binom h b\) 个。每对像集都对应 \(a!b!(N-a-b)!\) 个双射，故计数比就是所示概率。\(a+b\le N\) 来自真实不交自由点集，锁定双射空间还须非空。左右事件不是独立事件。
+
+[JointCounting.lean](../../../../knowledge/archive/formal/Aris4Math/JointCounting.lean) 的 `locked_joint_subset_ratio`、`card_locked_joint_subset` 支持一般有限类型和锁点类型；[Counting.lean](../../../../knowledge/archive/formal/Aris4Math/Counting.lean) 处理实际排列计数。[ConditionalUnion.lean](../../../../knowledge/archive/formal/Aris4Math/ConditionalUnion.lean) 的 `propertyB_of_position_bounds` 将严格总界接回原染色。
+
+## L4．真实迹的四个恒等式：恢复、投影、重标号、增锁
+
+设 \(f:[s]\hookrightarrow V\) 是实际锁点，对 \(T\subseteq[s]\) 定义
+
+\[
+\mu_f(T)=\bigl|\{e\in E:e\cap f([s])=f(T)\}\bigr|.
+\]
+
+以下等式对一般有限边族成立，既不需要点对覆盖，也不需要特殊边数 \(M\)。
+
+**恢复。** 令 \(u(T)=|\{e\in E:f(T)\subseteq e\}|\)，则
+
+\[
+u(T)=\sum_{U\supseteq T}\mu_f(U),\qquad
+\mu_f(T)=u(T)-\sum_{U\supsetneq T}\mu_f(U).
+\]
+
+每条包含 \(f(T)\) 的边有唯一实际迹 \(U\supseteq T\)，故第一式由互斥分拆得到；把 \(U=T\) 一项移到左边，得到第二式。总边数、点度和共度分别给出 \(u(\varnothing)\)、\(u(\{i\})\)、\(u(\{i,j\})\)；给定所有大小至少3的迹的真实重数后，依大小递减就能恢复全部迹。自然数减法的无截断性来自该集合分拆等式，不能只依赖一个计算结果看似非负。
+
+**投影。** 对单射 \(g:[t]\hookrightarrow[s]\)，
+
+\[
+\mu_{f\circ g}(T)=\sum_{U:\,g^{-1}(U)=T}\mu_f(U).
+\]
+
+旧迹为 \(U\) 的边在小锁集上的迹恰为 \(g^{-1}(U)\)，再按这些互斥旧迹求和，即得投影式。
+
+**重标号。** 对置换 \(\pi:[s]\simeq[s]\)，\(\mu_{f\circ\pi}(T)=\mu_f(\pi(T))\)。这是投影式在双射时的单项情形。要固定置换方向；比较排序后的向量并不能替代此等式。
+
+**增锁。** 取 \(z\notin f([s])\)，令 \(p_T\) 为旧迹等于 \(T\) 且含 \(z\) 的边数，则
+
+\[
+0\le p_T\le\mu_f(T),\quad
+\sum_Tp_T=d(z),\quad
+\sum_{T:\,i\in T}p_T=\lambda(f(i),z).
+\]
+
+旧迹为 \(T\) 的边按是否含 \(z\) 分成两族，故新迹重数分别为 \(\mu_f(T)-p_T\)（不含新锁点）和 \(p_T\)（含新锁点）。按所有旧迹求和，恰数全部含 \(z\) 的边；仅对含 \(i\) 的旧迹求和，恰数同时含 \(f(i),z\) 的边。这也证明了上面的度数与共度等式。特别地，
+
+\[
+p_{\varnothing}=d(z)-\sum_{\substack{T\subseteq[s]\\T\ne\varnothing}}p_T.
+\]
+
+在 \(r\) 元情形，\(|T|\ge r\) 时 \(p_T=0\)：否则该边包含 \(f(T)\) 和不同于这些锁点的 \(z\)，大小至少 \(r+1\)。
+
+所有证明都由同一实际边族按互斥条件分拆得到；投影和增锁不能换成彼此无关的“可行向量”。这是跨多个局部视图使用共同约束的根基。
+
+五元 Lean 接口：[MultiLockRecovery.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyThree/MultiLockRecovery.lean) 的 `count_add_larger`、`actual_recovered`；[LockProjection.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/LockProjection.lean) 的 `count_comp`；[LockRelabel.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/LockRelabel.lean) 的 `count_comp_perm`；[LockExtension.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/LockExtension.lean) 的 `count_split`、`promotion_le_old`、`sum_promotion_degree`、`count_new_singleton`；[PromotionCatalog.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/PromotionCatalog.lean) 的 `sum_promotion_codegree`、`actual_mem_of_old`；[PromotionReconstruction.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/PromotionReconstruction.lean) 的 `extend_actual`。锁数和点数是参数，一般 r 还不是这些实际接口的导出范围。另须区分同文件的末端包装 `realizes_recovered`：它仍固定33边；不能因基础恢复通用，就用该包装直接处理34边。
+
+**2026-10-19单位星实例。** 若多个选点各与同一中心共度1，则过中心边在邻点上的非空迹构成同一集合划分；非中心库存由包含数扣去这一划分后作莫比乌斯反演恢复。完整一般k/d证明见[UNIT_STAR_RECOVERY](../../../../knowledge/archive/proofs/propertyb35/UNIT_STAR_RECOVERY.md)。多个投影必须共享同一个划分与包含数，19点δ8已通过这一条件将残域压到33型。选至少5邻点时仍须块大小≤k−1，不能遗漏边大小约束。
+
+## L5．带容量递归生成可以成为完整分类的证明
+
+给定有限条目列表 \(((a_i,b_i))_{i=1}^n\)、有限容量索引 \(J\)、非负整数成本 \(c_{ij}\) 和容量 \(C_j\)。递归在每个条目选择 \(0\le x_i\le b_i\)，若任何 \(j\) 的本步消耗超过剩余容量就剪去，否则扣去消耗继续。
+
+**完整性命题。** 任何同时满足逐项上界和 \(\sum_{i=1}^n c_{ij}x_i\le C_j\)（每个 \(j\in J\)）的实际分配，都出现在该递归输出中。
+
+证明对列表归纳。空列表的唯一分配被保留。非空列表的实际头项满足 \(0\le x_1\le b_1\)，且由非负性及总预算，\(c_{1j}x_1\le C_j\)。因此该头项不被剪去；尾项满足 \(\sum_{i=2}^n c_{ij}x_i\le C_j-c_{1j}x_1\)，由归纳假设被保留。这个证明利用非负整数成本，不能将同一剪枝无证明地移植到负成本。
+
+[BoundedAllocations.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/BoundedAllocations.lean) 的 `mem_enumerate` 已对任意条目类型、有限容量类型证明这一方向。其输入为 `value : α → ℕ`，重复标签取同一 value；描述任意逐项分配时可改用唯一条目索引实例化。`decode_map`、`decode_actual` 证明函数读回。读回本身允许重复条目，因为它们取同一实际 value；若 caller 把列表求和改写成类型 Finset 求和，则仍须核对重数或去重条件。
+
+这个定理只证明**合法实际分配没有漏掉**，不宣称所有生成行都对应真实超图，也不宣称输出无重复。松弛域全部通过足以应用；其中有未过行时，要判断它可否由真实对象实现。将本引理与 L4 组合，才能从“表已生成”走到“任意实际 H 已被覆盖”。
+
+## L6．避锁子族必有多少相交边对
+
+**集合族定理。** 设 \(F\) 是 \(N\) 点上不同的 \(t\) 元集合构成的有限族，\(t\ge2\)。\(q\) 为不同成员之间有非空交集的无序对数，则
+
+\[
+q\ge\max\left\{0,\left\lceil\frac{t|F|-N}{t-1}\right\rceil\right\}.
+\]
+
+证明：令 \(a_x=|\{A\in F:x\in A\}|\) 为点 \(x\) 在该集合族中的度，则
+
+\[
+t|F|=\sum_x a_x
+\le N+\sum_x\binom{a_x}{2}
+=N+\sum_{\{A,B\}\subseteq F}|A\cap B|
+\le N+(t-1)q.
+\]
+
+首个不等式用每个非负整数 \(a\) 都满足 \(a\le1+\binom a2\)；中间等式从点和无序集合对两个方向数公共点；最后一步用不同 \(t\) 元集合的交至多 \(t-1\)。再用 \(q\) 为非负整数取整。允许重复成员时最后一步可能失效。
+
+**避锁 link 推论。** 在简单 \(r\) 元超图中固定中心 \(x\)，\(r\ge3\)，取 \(R\subseteq V\setminus\{x\}\)，令 \(f\) 为含 \(x\) 且避开 \(R\) 的边数。删去 \(x\) 后得到 \(N=v-1-|R|\) 点上的不同 \((r-1)\) 元集合，所以这些边中在 \(x\) 外仍相交的无序对数 \(b_R\) 满足
+
+\[
+b_R\ge\max\left\{0,\left\lceil
+\frac{(r-1)f-(v-1-|R|)}{r-2}\right\rceil\right\}.
+\]
+
+这里无需点对覆盖。\(r=2\) 不能代入分母 \(r-2\)。
+
+若新结构还提供整个 link 度数序列 \((a_x)_x\)，可以保留证明中的中间量，得到
+
+\[
+q\ge\left\lceil\frac{\sum_x\binom{a_x}{2}}{t-1}\right\rceil.
+\]
+
+它至少不弱于只用 \(t|F|-N\) 的界，有时更强；是否值得取得这些额外数据，应看它能否改善活跃槽。当前通用配额只需要 \(|F|\) 和 \(N\)，并未实现这份更细输入的完整调用。
+
+五元实现：[AvoidedLink.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyThree/AvoidedLink.lean) 的 `avoided_bad_pair_budget`、`avoided_bad_pair_lower`，以及 [RefinedDeletion.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyThree/RefinedDeletion.lean) 的 `avoided_dual_lower`。下一次应挑选能约束低权槽的 R，而不是默认所有避锁配额都值得加入。
+
+## L7．配额可相加，但重叠必须由容量修复
+
+**有限弱对偶定理。** 索引集合 \(S,Q\) 有限。对每个槽 \(s\in S\)，\(z_s\) 是真实数量、\(c_s\) 是容量、\(w_s\) 是目标权重；对每个配额索引 \(q\in Q\)，\(q_q\) 是配额下界，\(a_{qs}\) 是该配额对槽的系数。所有量取实数，并满足
+
+\[
+0\le z_s\le c_s\quad(s\in S),\qquad
+\sum_{s\in S}a_{qs}z_s\ge q_q\quad(q\in Q).
+\]
+
+任取非负乘子 \(\delta_q\ge0\)，有
+
+\[
+\sum_s w_sz_s\ge
+\sum_q\delta_q q_q-
+\sum_s c_s\max\left\{0,\sum_q\delta_q a_{qs}-w_s\right\}.
+\]
+
+**证明。** 把每个配额不等式乘以对应的 \(\delta_q\ge0\)，相加并交换有限求和次序，得到
+
+\[
+\sum_{q\in Q}\delta_q q_q
+\le\sum_{q\in Q}\sum_{s\in S}\delta_q a_{qs}z_s
+=\sum_{s\in S}\left(\sum_{q\in Q}\delta_q a_{qs}\right)z_s.
+\]
+
+对每个槽，把超过目标权重 \(w_s\) 的那部分系数用容量 \(c_s\) 控制：
+
+\[
+\left(\sum_q\delta_q a_{qs}-w_s\right)z_s
+\le\max\left\{0,\sum_q\delta_q a_{qs}-w_s\right\}c_s.
+\]
+
+若括号内系数为负，由 \(z_s\ge0\)，左边不大于0，而右边恰为0；若系数非负，则由 \(z_s\le c_s\) 得到该式。对槽求和，再从前一式中减去这些容量项，恰得到定理。这是该有限代数命题的完整证明。
+
+[MixedLayoutDual.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/MixedLayoutDual.lean) 的 `quota_repair` 已在任意有限索引、\(\mathbb{Q}\) 上证明；系数 \(a_{qs}\) 和权重 \(w_s\) 不要求非负。纸面证明适用于 \(\mathbb{R}\)，当前 Lean 声明采用 \(\mathbb{Q}\)。这里不需要 LP 强对偶、最优解或浮点容差：求解器只负责提出 \(\delta\)，精确不等式负责验收。
+
+对无序坏边对槽，异类型容量是 \(\mu_T\mu_U\)，同类型容量是 \(\binom{\mu_T}{2}\)；对有序槽，同类型为 \(\mu_T(\mu_T-1)\)，相应双向权重及除2必须一致。不能混用两种约定后重复扣除。
+
+**应用时还须证明什么？** 本引理的前提把真实数量、容量和配额都交给调用者。要用于 Property B，须从实际超图构造 \(z_s\)，证明这些配额与容量确实成立，核对 \(w_s\) 正是概率事件的权重，再证明扣除后的总界严格小于1。本引理只完成其中的加权下界步骤。
+
+**2026-10-19算术实现补充。** 合作者在k10/11中以整数向外舍入验证非负计数上界和容量扣除；方向证明、溢出边界及实际重放见[小k迁移笔记](../../../../knowledge/archive/research-wiki/PROPERTY_B_SMALL_K_TRANSFER.md)。本组允许带符号系数，不能直接将全部系数上取整，需另证整体上界方向。
+
+## L8．共享同一真实坏对向量的多布局定理
+
+设某个实际超图 \(H\) 已给出固定锁点及真实坏对向量 \(z\)。有限多个布局 \(\ell\) 都使用这些数据；它们可以对应不同的锁定排列样本空间。假设已证明每个布局的贪心失败概率由下式控制：
+
+\[
+U_\ell(z)=F_\ell+
+\sum_j\min\{a_{\ell j},\ c_{\ell j}-D_{\ell j}(z)\},
+\]
+
+其中 \(D_{\ell j}(z)\) 是对同一批实际坏对的线性加权扣除。取 \(\gamma_\ell\ge0\)、\(\sum_\ell\gamma_\ell=1\)，再取 \(0\le\beta_{\ell j}\le\gamma_\ell\)。因为 \(\min(a,c-D)\) 同时不超过 \(a\) 和 \(c-D\)，分别乘以非负数 \(\gamma_\ell-\beta_{\ell j}\) 和 \(\beta_{\ell j}\) 再相加，逐项得到
+
+\[
+\gamma_\ell\min(a,c-D)
+\le(\gamma_\ell-\beta_{\ell j})a+\beta_{\ell j}c-\beta_{\ell j}D.
+\]
+
+如果通过 L7 或直接计数证明，对每个 \(j\) 都有 \(\sum_\ell\beta_{\ell j}D_{\ell j}(z)\ge L_j\)，将上式对 \(\ell,j\) 求和，就得到
+
+\[
+\sum_\ell\gamma_\ell U_\ell(z)
+\le\sum_\ell\gamma_\ell F_\ell+
+\sum_{\ell,j}[(\gamma_\ell-\beta_{\ell j})a_{\ell j}
++\beta_{\ell j}c_{\ell j}]-\sum_jL_j=:B.
+\]
+
+若 \(B<1\)，至少一个布局满足 \(U_\ell(z)<1\)：否则所有 \(U_\ell(z)\ge1\)，由非负权重和总质量1，其凸平均也至少为1，矛盾。由开头假设，这个布局的实际失败概率小于1，故其有限非空排列空间中至少有一个成功输出，从而 \(H\) 有合法染色。
+
+这是依赖“各布局上界确实控制实际失败事件”的条件论证。该概率前提由 L3 的实际算法、条件计数和相应扣除接口提供，不能由上面的代数自行推出。
+
+**价值。** 分别优化每个布局时，对手可以在不同布局中把同一批坏对放到互相矛盾的最坏槽；共享 z 消除了这份额外自由。因此有时不用增加锁点，就能得到过去单布局没有给出的严格结论。
+
+这个论证平均的是各布局的有效数值界，不要求不同布局的概率空间相同，也不假设独立。量词是“对每个 H，取它的实际数据，再选择布局，再抽余下排列”；不能看过随机排列后再随意选择条件空间。各布局若使用不同锁集，必须先证明都来自同一更大实际数据的投影，不能直接套共享 z。
+
+Lean 核心为 [MixedLayoutDual.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/MixedLayoutDual.lean) 的 `min_split`、`average_le`、`exists_strict_of_average`；[MixedLayoutCounts.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/MixedLayoutCounts.lean) 将扣除接到真实坏对；[MixedLayoutApplication.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/MixedLayoutApplication.lean) 的 `propertyB_of_mixed_layouts` 返回实际 Property B。宿主五元，锁数、点数、边数可变；当前 profile 接口还显式要求 `emptyPairCap=none` 等真实实现条件。不存在成功的当前证书，不等于没有好布局。
+
+## L9．单位共度把大迹压成线性块族
+
+若 s 个锁点两两共度恰为1，则每个大小≥2的迹重数至多1，两个不同非零此类迹的交至多一点。否则同一锁点对会同时落入两条不同实际边，与共度1矛盾。特别地，大小≥3的迹族满足
+
+\[
+\sum_{T:\,|T|\ge3,\ \mu(T)>0}\binom{|T|}{2}\le\binom s2.
+\]
+
+证明是每个锁点对最多被一个大迹使用。
+
+**五锁推论。** s=5 时，大迹族至多两个成员。若存在两个，它们必须是交一点的三元集，并集为全部五点；第三个若与它们分别交至多一点，总大小≤2，矛盾。因此完整带标签域为：空族1种、单大迹16种、两兼容三元迹15种，共32种。
+
+[FiveLockClassification.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyThree/FiveLockClassification.lean) 的 `actual_count_le_one`、`actual_intersection_le_one`、`admissible_card_le_two`、`admissible_in_table`、`actual_recovered_in_table` 已实现五锁分类及实际调用。32型是大迹族的分类，不是完整超图的分类；次数、空迹和单迹还要由 L4 恢复。换成六锁、非单位共度或允许重复大迹，不能沿用“至多两个”或布尔表。
+
+**六锁的具体边界例。** 在1…6上，123、145、246、356四个三元集两两交一点。各用互不相同的新点补成五元边，再把尚未覆盖的点对16、25、34分别用三个独有新点补成五元边。得到七条简单五元边，六个锁点之间每个点对共度恰为1，却有四个大迹。因此“至多两个”在六锁上确实为假；该例反驳的是错误推广，不是 Property B 主命题。
+
+## L10．删点守恒排除“所有局部视图都坏”
+
+**一般双计数。** 对有限 W 和有限块族 B，
+
+\[
+\sum_{x\in W}|\{B\in\mathcal B:x\notin B\}|
+=\sum_{B\in\mathcal B}|W\setminus B|.
+\]
+
+两边都数点—块对 \((x,B)\)，其中 \(x\in W\)、\(B\in\mathcal B\) 且 \(x\notin B\)：左边先固定点，右边先固定块。这就是 [SevenPoint.lean](../../../../knowledge/archive/formal/Aris4Math/SevenPoint.lean) 的一般定理 `absent_incidence_count`。
+
+**整除推论。** 若 \(|W|=N\)，各块都包含于 \(W\) 且大小 \(q<N\)，假设删除任意一点后，完整保留的块数都等于 \(t\)，则左边为 \(Nt\)，右边每块贡献 \(N-q\)，所以
+
+\[
+(N-q)|\mathcal B|=Nt.
+\]
+
+所以当 \((N-q)\nmid Nt\) 时，必有一个删除结果不具有该坏统计。Lean 的 `exists_deletion_not_two` 是 \(N=7\)、\(q=3\)、\(t=2\) 的实例：\(4\nmid14\)。一般整除推论在这里由上式证明，未新增 Lean 包装。
+
+更普遍的研究方法是：先把所有局部残型放回同一实际块族，寻找它们必须共同满足的总和或预算，检查是否可能处处坏。统计必须是“完整保留的块”；如果投影会产生新的较小迹、合并重数，必须先证明相应统计关系。这个一阶恒等式不自动排除所有其他残型。
+
+## L11．最小能量分区把总冲突分散到类内
+
+**一般分区定理。** 设有限图具有对称非负实权 \(w_{xy}=w_{yx}\)，且 \(w_{xx}=0\)。对整数 \(k\ge1\)，允许空类的 \(k\) 类分区中，存在一个分区，使每点在自己类内的加权度不超过其总加权度的 \(1/k\)。
+
+**证明。** 用 \(c:V\to\{1,\ldots,k\}\) 表示分区，定义
+
+\[
+W_j(x)=\sum_{y:\,c(y)=j}w_{xy},\qquad
+E(c)=\sum_{x,y:\,c(x)=c(y)}w_{xy}.
+\]
+
+在有限多个分区中选 \(E\) 最小者。把 \(x\) 移到第 \(j\) 类得到 \(c'\)。除含 \(x\) 的有序对外，其余项不变；对称性与零对角给出
+
+\[
+E(c')-E(c)=2\bigl(W_j(x)-W_{c(x)}(x)\bigr).
+\]
+
+由极小性，\(W_{c(x)}(x)\le W_j(x)\) 对每个 \(j\) 都成立。相加得到
+
+\[
+kW_{c(x)}(x)\le\sum_{j=1}^kW_j(x)=\sum_y w_{xy},
+\]
+
+除以 \(k>0\) 即得。对整数权重、总度至多 \(D\)，类内度进一步至多 \(\lfloor D/k\rfloor\)。
+
+因此整数权重总度至多5时，三分区可使每点类内度至多1。[WeightedThreePartition.lean](../../../../knowledge/archive/formal/Aris4Math/ThirtyFour/WeightedThreePartition.lean) 的 `energy_update_balance`、`exists_three_part_defect_one` 已证明这一实例；源码对任意有限顶点类型通用，但颜色数固定3、权重为 \(\mathbb N\)、上界为5。一般 \(k\)、一般实权版本是本页纸面推广。非对称权重或自环未经处理不能直接使用该移动点证明。
+
+上界5不能直接改成6并保持类内度至多1：单位权完全图 \(K_7\) 总度为6，任意三分区有一类至少3点，其内每点度至少2。这给后续参数迁移一个明确的锐性边界。
+
+它适用于先把共度超额变成冲突权重，再得到几个类内容易处理的候选点集；哪些类足够大、是否满足后续类型前提，仍由实际参数决定。
+
+## L12．只有跨过活跃界的扣除才改善总概率
+
+令 \(A,B,C\) 为实数，\(d\ge0\)，\(L=\min(A,B)\)，则
+
+\[
+\min(L,C)-\min(L,C-d)
+=\max\{0,d-\max(0,C-L)\}.
+\]
+
+若 \(C\le L\)，则 \(C-d\le C\le L\)，左边为 \(C-(C-d)=d\)，右边也为 \(d\)。若 \(C>L\)，令 \(h=C-L>0\)：当 \(d\le h\) 时，两个最小值都是 \(L\)，左右均为0；当 \(d>h\) 时，左边为 \(L-(C-d)=d-h\)，右边也为 \(d-h\)。这穷尽所有情形，本次未新增 Lean 声明。
+
+这把一个常见误判变成可直接记录的量：改进名义坏对扣除 \(d\)，却仍有 \(C-d\ge\min(A,B)\) 时，总上界下降恰为0。下一次诊断应输出每个位置的活跃项及这份有效下降，再决定增加配额、改变布局还是加强结构。
+
+## L13．唯一坏事件可以通过修复变换双计数排除
+
+设有限状态空间大小为 $N$，各状态发生的坏事件数为 $f$，总关联数为 $S=\sum f$。对每个发生事件 $e$ 的状态，预先定义有标签变换集 $T_e$。在唯一坏事件状态中，至少 $d$ 个变换能破坏该事件，且目标仍在同一状态空间。设 $K(e,g)$ 上界源 $e$ 发生、源 $g$ 不发生、变换后 $g$ 发生的三元组数。
+
+如果所有状态均坏，唯一坏状态数 $U\ge2N-S$，而每个唯一坏源的变换都须新触发其他事件，所以
+
+$$
+d(2N-S)\le dU\le\sum_{e\ne g}K(e,g).
+$$
+
+因此左端严格大于右端即保证存在没有坏事件的状态。这是一般有限事件论证；源 $g$ 不发生、变换破坏 $e$、目标仍在同一域三个条件不能删去。
+
+18点9/9染色中，$N=48620$、$S=1430m$、$d=45$。按两五元边交大小0至4，新触发计数依次为 $(50,1548,810,1320,990)$。于是
+
+$$
+45(97240-1430m)>1548m(m-1)
+$$
+
+对 $m\le36$ 成立。全部≤18点输入通过添孤立点覆盖，无点对覆盖或度数前提。完整推导见[小点数交换定理](../../../../knowledge/archive/proofs/propertyb35/SMALL_VERTEX_SWAP.md)，两套局部程序见[本轮证据](../../../../knowledge/archive/context/propertyb35-paper/round01/eighteen/REPORT.md)及[独立计数](../../../../knowledge/archive/context/propertyb35-paper/round01/root/UNIQUE_SWAP_REPLAY.json)。未新增Lean；19点的同一粗界及聚合矩加强不够，具体松弛见证保存于本轮eighteen/nineteen_swap。
+
+## L14．传送一份合法染色，同时控制任意附加边
+
+设有限群 \(\Gamma\) 作用于有限点集，边族 \(\mathcal A\) 在群下不变，且已有使 \(\mathcal A\) 合法的二染色。对每个边轨道 \(O\)，以该轨道中单色成员比例定义 \(p(O)\)。均匀传送基础染色后，一条实际附加边 \(e\) 单色的概率恰为 \(p(\Gamma e)\)。所以附加边族 \(\mathcal F\) 若满足
+
+\[
+\sum_{e\in\mathcal F}p(\Gamma e)<1,
+\]
+
+则 \(\mathcal A\cup\mathcal F\) 可二染色。证明只用轨道—稳定子定理与并合界；附加边无需独立。这是一般有限群论/概率工具，不是新的Lean声明。
+
+本轮的具体实例：标准 \(\operatorname{AG}(2,5)\) 的一份12红、13蓝合法染色，经12000个仿射自同构传送，全部53130个五点集分11轨道，每轨道单色概率至多 \(21/500\)。因此任意至多23条附加五元边仍可同时合法；对35边输入，只要实际建立至少12条边到该平面的直线嵌入就足够。完整一般证明、基础染色和11行精确表见[传送染色定理](../../../../knowledge/archive/proofs/propertyb35/SYMMETRY_COLOR_TRANSFER.md)，完整成员及另一生成元/BFS实现核对见`context/propertyb35-paper/round01/twentyfive/AFFINE_AUGMENTATION*`。
+
+25点五K5组若五组全部为边，删去它们得到真实 \(2\!-(25,5,1)\) 设计，直接满足仿射平行公理；借明确导入的Mac Innes五阶唯一性，进入上述色族。至少一组不是边时没有这条归约。用标准平面的条件结果时必须实际提供坐标/嵌入，不能将所有同参数共度矩阵当作该平面。
+
+## L15．修复必须按重数计；预算可推出确定性下降
+
+设有限可行状态集和每个状态的有限允许变换族。状态有c个坏对象、b个临界对象，满足b+κc=β；每坏对象至少被α个变换销毁，每临界对象至多被γ个变换新造为坏，且其他对象不能新造为坏。按真实“变换—对象”关联求和，有
+
+\[
+\sum_s[c(s\omega)-c(\omega)]\le\gamma b-\alpha c=\gamma\beta-(\alpha+\gamma\kappa)c.
+\]
+
+一个变换若修复两坏对象须贡献2；新造也保留重数，所以无需不相交或独立性。右端为负必有严格下降；局部最小值满足c≤floor(γβ/(α+γκ))。这一般有限计数命题为本轮纸面引理，未新增Lean。
+
+25点五组共度2/1的实际结构，任意指定组红数2/3且总12/13，点对势能恒等式Φ164给b+3c=12。三十个同组红蓝交换中，每坏边销毁至少10次，每1/4临界边新造至多3次，故ΣΔc≤36−19c；从任意初始c≤4出发，至多三次严格下降得到c≤1。完整证明和独立53130五集局部核查见[BALANCED_REPAIR.md](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/BALANCED_REPAIR.md)。
+
+到c≤1不能直接外推c0：一个真实仿射实例确有唯一坏边但全部三十交换均不能立即改善，零变化交换之后才有下降。该例和两步见证保存在正文，不是任意H的平台出口证明。固定配额的下降机制也应与已有组对称期望可得某个c≤1染色区分。
+
+## L16．由真实迹选择外点，比要求全部外点布局严格更强
+
+设有限简单k元超图H及锁集G，且每个跨对x∉G、g∈G都满足λ(x,g)=1。记μ(T)为原边的精确G迹重数。对每个真实外点x，含x边的非空G迹两两不交且覆盖G，因此组成集合划分Π_x；每块大小至多k−1。同一个块T在Π_x恰出现一次，不能把不同边副本当成重复块。
+
+若已知所有可行局部(μ,Π)输入，并有某个非空T满足μ(T)>0、|T|<k，且所有含T的可行Π均给严格染色证书，则H可染。证明：取一条真实G迹为T的边e，再取x∈e\G，其实际Π_x必含T；套用严格证书即可。不要求所有可行Π都严格，也不用先给全部外点指定划分。
+
+更强的共同边际恒等式是
+
+\[
+\sum_{x\notin G}\mathbf 1\{T\in\Pi_x\}=(k-|T|)\mu(T).
+\]
+
+两边都数“原边e的G迹恰为T、x∈e\G”的关联。若所有非严格Π满足某个线性不等式，按真实外点求和并代入上述精确边际可直接排除μ。有限求解器可以寻找该不等式，但证明由逐Π不等式及边际恒等式承担。
+
+本轮25点a5实例：[GROUP5_EXTERNAL_STAR.md](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/GROUP5_EXTERNAL_STAR.md)完整245输入仅65严格，选T调用仍排10组类；第12号残类每份Π的非单块数≤1+1_{6∈Π}，实际求和给25≤20+3=23矛盾，另排一类。独立域/逐行有理重放通过。此引理是一般纸面计数与调用原则，未新增Lean；剩余七无组边类的20分拆正见证不构造完整H。
+
+## L17. Brooks迫出的单位权完整分量
+
+设非负整数加权冲突图每点加权度为$D\ge3$，普通支撑图有$n$点，独立数为$a$，并有$s$个$K_{D+1}$连通分量。删去这些分量后用Brooks定理作$D$染色，再取最大色类及每个删去分量的一点，得
+
+$$a\ge s+\left\lceil\frac{n-s(D+1)}D\right\rceil=\left\lceil\frac{n-s}D\right\rceil,\qquad s\ge n-Da.$$
+
+完整分量的每个内部权重都至少一，每点已有$D$条邻边且总权$D$，故全部权恰一。对25点全七度，$D=4$；最大单位集$a=6$强制至少一个真实五点组，$a=5$强制全部五组。一般证明、Brooks原文实际阅读页及迁移边界见[规范引理](../../../../knowledge/archive/proofs/propertyb35/BROOKS_CLIQUE_COMPONENTS.md)。这是依赖已发表Brooks定理的纸面引理，未新增Lean；单个五组分量不提供其余20点的分组，不能直接搬用a5双外点异组caller。
+
+## L18. 最小空迹的真实换点势能
+
+对任意超图、同样大小的点集$I$与$I'=(I\setminus\{i\})\cup\{x\}$，记$\mu_0(I)$为避开$I$的边数，$\mu_i(I)$为$I$迹恰为$\{i\}$的边数；令$r_x$计旧空迹中含$x$的边，$s_{xi}$计旧单迹$\{i\}$中含$x$的边。按原边分类直接得
+
+$$\mu_0(I')=\mu_0(I)-r_x+\mu_i(I)-s_{xi}.$$
+
+若$I$在一类可容许点集中最小化空迹，且该真实换点保持可容许性，就有$r_x+s_{xi}\le\mu_i(I)$。无需额外概率表，也不要求换点后类型不变。本轮[七单位集的应用](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/A7_MINIMUM_EMPTY_CORE.md)用私邻居换点保持unit性质，先由全池度数推出core0必有下降，然后只需选择core19；内／外伙伴私星由227／231压到95／21。这个结论是存在可选core19，不是H内完全没有core0。先最小化空迹、再最大化其他势能时，后者只能对保持第一势能的交换使用。
+
+25点全七度a7已实际用此势能闭合：在所有七单位集上最小化空迹，core0的总空迹度矛盾为35≤28，core19外／内私星分别压成21／95。其完整101／815双星及固定原始界接回原H，见[完整a7正文](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/A7_MINIMUM_EMPTY_CLOSURE.md)。这条结论不声称H中不存在其他core0集合；只需选到一个最优core19。
+
+## L19. 总度盈余给真实低度边及小击中集
+
+设$k$元超图有$M$边、$n$点且最低度$d$。写$d(v)=d+t_v$、$E=\sum_vt_v=kM-dn$，令$P=\{v:t_v>0\}$、$p=|P|$。有$\sum_{v\in P}d(v)=dp+E$；若此数小于$M$，必有边避开$P$。点对覆盖且$p\ge2$时，等号情形也有一条边避开$P$，因为至少一次边关联重复。
+
+对$p$个正整数盈余，$\sum t_v^2\le(E-p+1)^2+p-1$；结合
+
+$$\sum_{e}\sum_{v\in e}d(v)=nd^2+2dE+\sum_vt_v^2$$
+
+得到实际低总度边。对24点35边最低度七，这把低边模式压为77777或77778。若无全七度边，$P$是5至7点的真实击中集，仅四个盈余谱；不可染时还必须含一条内部五边。五高点的剩余多迹超额只有三，三种整数分拆即覆盖全部输入，[650标签/81轨道原始界全严格](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/high_cover_five/PROOF.md)。这是先压实际全域再做小算术，不需要自由五锁库存。
+
+## L20. 小重复覆盖的随机修复
+
+至多四个四集，重复盈余$D=\sum|F_j|-|\bigcup F_j|\le1$时，至多一个点出现在两集。各集独立均匀选一点，按该重复点是否为目标、是否占用了选点位置，直接控制联合命中概率；占用指示并不独立。下方L23现给这种独立逐集抽样的占用概率乘积上界，但不是乘积等式。五个四集覆盖18点时，固定一个重复点再删已命中集，余至多三集且重复盈余至多一，给固定4／3／2点目标全红概率上界$1/64,1/8,1/2$。
+
+完整一般证明及[六高点三内边的修复](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/low_edge/SMALL_EXCESS_REPAIR.md)给最坏失败界29/32，直接返回原染色。该子支没有新的迹枚举。两个star即使各自重复盈余很小，也不能把Hall匹配诱导选择当作均匀或负相关；共同实际点度数仍需保留。
+
+## L21. 两份四组划分的匹配修复余量
+
+设同一个16点集合分别划分为四个四元组 $F_i$ 与四个四元组 $G_j$。相交矩阵 $A=(|F_i\cap G_j|)$ 为非负整数矩阵，每行、每列和均为4。每个二分多重图完美匹配给出一个四点共同横截集；不同的平行边代表不同实际顶点，不合并其重数。
+
+令 $\Pi=\operatorname{per}(A)$，$M=\max a_{ij}$，$T$ 为所有二阶子矩阵永久式的最大值。完整整数小核心证明
+
+$$\Pi-T\ge22,\qquad\Pi-2M\ge22.$$
+
+一个指定四点集最多堵一份匹配；三个相容指定点最多堵 $M$ 份；两个相容指定点最多堵 $T$ 份。因此，至多21个四点坏目标加一个二点目标，或至多20个四点坏目标加两个三点目标，都不可能堵住全部共同横截集。这是直接的整数计数，不假定选点边际均匀或负相关。
+
+这条一般矩阵不等式已有[短结构证明](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/low_edge/k7_four_trace/ANALYTIC_MATCHING_LEMMA.md)：按M分四类，M2用零行列和展开及循环／常数型，M3归一为八个二次式族，M4降到三阶。主代理已核关键分类与展开；原10147矩阵双公式复核保留为辅助证据。它是整数矩阵定理，不是对实矩阵的断言。完整覆盖及[24点真实调用](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/low_edge/k7_four_trace/PROOF.md)保留输入绑定与原染色见证。
+
+## L22. 固定核乘积修复与实际点度数
+
+[一般命题和完整证明](../../../../knowledge/archive/proofs/propertyb35/FIXED_CORE_PRODUCT_REPAIR.md)给正约束击中／负约束避免的统一修复。所有候选红集固定含x,y，各从不交变量组U,V选一点，记a=|U|、b=|V|。若x已命中k条实际正约束，原度数上界d，唯一三元负约束加其余四元负约束只要满足
+
+$$ab-\max(a,b)>d-k-1,\qquad ab-1>d-k,$$
+
+就不能堵住全部候选。因此a,b在3至4之间、k≥2时，甚至d≤8也足够；原24点调用仅需七度。关键是用同一实际点所剩边数计阻塞，替代独立事件假设或更大局部表。实际caller仍需另证：新共享蓝二迹的子定理用两star的零／一重复结构构造这些变量组，没有宣称全部24点都能进入。
+
+## L23. 独立随机横截集：以占用负相关合并修复分支
+
+正集 $A_i$ 各自独立按支持于该集合的分布 $\pi_i$ 抽一点，令 $R$ 为选点并集，置
+
+$$q_x=1-\prod_i(1-\pi_i(x)).$$
+
+则对任意点集 $F$ 有 $\Pr(F\subseteq R)\le\prod_{x\in F}q_x$。[自含耦合证明](../../../../knowledge/archive/proofs/propertyb35/RANDOM_TRANSVERSAL_REPAIR.md)只用：条件于从未选中 $x$，把原先选成 $x$ 的结果重抽成其他点；其他点的占用只增不减。结合全概率和对目标点个数归纳即可，不需导入一般负相关定理。
+
+因此 $\sum_{B\text{负约束}}\prod_{x\in B}q_x<1$ 就保证同时击中全部正集、避开全部负集。若正集大小至少 $s$、各点正出现至多 $t$，可统一取 $p=1-(1-1/s)^t$，检查 $\sum_B p^{|B|}<1$。
+
+特别地，任意数量的至少四点正集、每点正出现至多二，加至多三个负三集和18个负四集，都由
+
+$$3(7/16)^3+18(7/16)^4=29841/32768<1$$
+
+统一修复。这已直接绕过24点一类真实八正约束系统的完美匹配／无完美匹配分类，不需要枚举图或矩阵。主代理与另一Sol分别核对耦合；这是纸面定理，尚未作Lean验证或最终全题审计。[实际调用及边界](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/low_edge/k7_no_four_trace/GLOBAL_REPAIR_CRITERION.md)保留三重点时均匀充分条件不严格的显式可修复系统，未把充分条件失败当成反例。
+
+实际使用时必须覆盖原边的全部单色可能：避开所有固定点的原边须同时作正、负约束。这种双符号边的约束次数会重复原度数，不能再声称正次数加负次数至多原点度；当前24点固定集击中全部原边，才没有这个问题。
+
+## L24. 共同度数与跨割覆盖压成次三度图像
+
+对每条五元边选择两个不同点、保留原边标签，想让各点图像度数至多 $b_v$，精确流割条件为
+
+$$\sum_e(|e\cap U|-3)_+\le\sum_{v\in U}b_v\qquad(U\subseteq V).$$
+
+当 $n=24,25$、35条边、点对覆盖、最低度六时，共同预算 $\sum_{v\in U}d(v)\le6|U|+175-6n$ 与跨割点对覆盖给出全部割，故最大图像度数可取三。25点还可指定任一点图像度零；24点最低度七时可指定两个点图像度二，其余三度。完整短证明与整数端点见[图像归约](../../../../knowledge/archive/context/propertyb35-paper/round01/literature-degree/SUBCUBIC_IMAGE_REDUCTION.md)。
+
+这是已证明的整体表示，不是新的二染色定理：次三度图仍可含奇圈。一般“五元+次三度图像⇒Property B”现已有[1715点2520边的显式反例](../../../../knowledge/archive/context/propertyb35-paper/round01/literature-degree/GEMINI_SUBCUBIC_COUNTEREXAMPLE_CHECK.md)，其非B由短棱柱计数证明；不能再把这条无参数桥梁当待证目标。它不是35边反例。24点35边的二分次三度终点必为12+12，每侧恰一个二度点；所以指定单个叶点、其余三度的图像反而永不二分。该整除障碍排除了保持这种度谱的修复路线，下一步必须使用每条图边附带的三个原边端点并允许适当改变度谱。没有据图像存在性宣称原分支闭合。
+
+## L25. 不交四块加一个真实五边的修复
+
+[一般选点引理](../../../../knowledge/archive/proofs/propertyb35/DISJOINT_BLOCK_EXTRA_SET.md)：从两两不交的四块各取一点，再从任意五集E取一点，点集F大小r时被全部选中的概率至多 $(5+3r)/(5·4^r)$。F在不同四块中时，按额外选点是否命中F分解；否则额外选点至多补一个缺口，且最多两个目标选择，给自含有限赋值计数。四块至多三个时负四集概率可强至1/160，四块至多四个时E自身全选概率至多1/640。
+
+由完整正负caller得到实际结构：23点35边最低度六的非B输入，对每个六度x，单位邻点集U_x中必有至少两条真实五边。若零条，disjoint四块总界29/64；若恰一条，两非单位缺陷分流界为7/40、1141/1280。root已核计数及共同度预算。22点至少一条的类似结论需既有非单位双锁度上界，单列依赖。此结果没有强迫新边经过指定低度点，所以尚未闭合22/23。
+
+## L26. 非B横截数与共同二阶矩给真实低度边
+
+任意非B的k元超图都有 $\tau(H)\ge k$。写 $t_v=d_H(v)-d$、$E=kM-dn$、$Q=\sum t_v^2$，直接双计数 $\sum_e\sum_{v\in e}t_v=dE+Q$。若最大盈余点为v、a=t_v，点对覆盖进一步给
+
+$$\sum_{e\not\ni v}\sum_{u\in e}t_u\le(d-1)(E-a)+Q-a^2\le(a+d)(E-a)-a(p-1),$$
+
+其中p是正盈余点数。p<k时，非B又迫有全最小度边。另一方面，若每条边盈余至少s，避开最高k−1点的真实边保证这些最高盈余之和至多E−s。两种同一H上的约束联合，得到[完整低边归约](../../../../knowledge/archive/context/propertyb35-paper/round01/literature-degree/GLOBAL_LOW_EDGE_REDUCTION.md)：24δ7与21δ8都有实际边总盈余≤1（各两种度模式），23δ7≤3（七模式），22δ7≤6。22通过最高第四盈余仅1/2/3的三个解析支闭合，不需表。
+
+这是选择真实五边的共同入口，省掉先选任意五低点再自由扩共度的外层；不是后续修复已经完成。23阈值降到2的单纯聚合尝试，有明确有理分数松弛障碍；不把分数模型当整数超图或目标反例。
+
+## L27. 单外红点的平方亏损与小正集修复
+
+设点对覆盖的 $k$ 元 $H$ 有唯一红坏边 $G$，且 $G$ 外仅一个红点。固定 $g\in G$，对避开 $g$ 的每条原边记初始蓝部 $B_f$。同一个实际 $G\setminus\{g\}$ 上的共度超额给
+
+$$\sum_{f\not\ni g}(k-|B_f|-1)^2
+\le(k-1)\bigl(d(G)-d(g)-n+2\bigr).$$
+
+证明只保留该 $k-1$ 点内部的有向重复对，以及它们与唯一外红点的关联；一条负边若有 $t$ 个蓝点，至少贡献 $(k-t-1)^2$。完整证明、索引约定和[真实caller](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/CRITICAL_SMALL_BLOCKERS.md)分别保留，不能把不同中心的负边任意拼接。
+
+五元24点、$d(G)\le36$、$d(g)\ge7$ 时，得到 $9n_1+4n_2+n_3\le28$。若正四集不超过两个，全部被堵需成本至少31，因此必可修。若 $d(G)=35$、五个中心均七度，仅由 $9n_1+4n_2+n_3\le24$，[三正四集的短计数证明](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/three_positive_cost/REPORT.md)也保证修复。此式的实际适用前提是已取得这一初态，尚未保证所有输入都能选到它或选到至多三个正集中心。
+
+## L28. 私有边与跨色点对的整数打包
+
+设 $k\ge3$，一批实际 $k$ 边覆盖全部红蓝跨对，蓝集大小为 $b$。每个蓝点 $y$ 有唯一蓝部为 $\{y\}$ 的私有边 $F_y$。不同 $y$ 的见证边不同。若红点 $p$ 的度为 $D_p$，所选私有边中含它的条数为 $c_p$，则
+
+$$b\le(k-1)D_p-(k-2)c_p,\qquad
+(k-1)b\le\sum_{p\text{红}}
+\left\lfloor\frac{(k-1)D_p-b}{k-2}\right\rfloor.$$
+
+[完整一般证明](../../../../knowledge/archive/proofs/propertyb35/PRIVATE_EDGE_PACKING.md)来自每条私有边只给一个蓝邻点，其余边最多给 $k-1$ 个，再用 $\sum c_p=(k-1)b$。在保持 $G$ 全红的最少蓝点 proper$(H-G)$ 染色中，全部蓝点自动有私有边；跨色点对不会丢在全红 $G$ 中。23点四名六度的四环源边条件支，由此直接给 $8\le b\le12$，每中心至多两个不交正四块。它并未消除负单点阻塞，故不能从该预算独自宣称整个C4分支可染。
+
+## L29. 七／八正四集门与安全缩短负约束
+
+[至多七正门](../../../../knowledge/archive/proofs/propertyb35/SEVEN_POSITIVE_FOUR_SET_REPAIR.md)对任意有限点集成立：至多七个正四集、至多两个负三集、至多19个负四集，逐点带索引总出现次数至多七，必可修复。证明按正出现次数分流，只有直接候选计数；低出现部分用L23。
+
+[恰八正门](../../../../knowledge/archive/proofs/propertyb35/EIGHT_POSITIVE_FOUR_SET_REPAIR.md)要求点集至多17点：八个正四集、三个负三集与18个负四集，同一总出现上限七，必可修复。三重点余五集压成五标签多重图；一个正式局部域有5307标签／86真置换轨道，四点横截数至少178，而任意负族最多堵168。两套完整域生成与独立容斥重放通过。它不要求两侧分组或每侧并集下界，也不枚举原超图。
+
+把负四集 $Q$ 缩成任意三元子集 $T\subset Q$ 是安全加强：$T\nsubseteq R$ 保证 $Q\nsubseteq R$，同时逐点出现数不增。因此两门可统一容纳负三／四集**总数至多21**的输入，负三集数分别至多二／三。这个缩短不能用于正约束，也不能凭空补齐八个正集。
+
+实际收益是[24点七高点、四内部边整支](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_FOUR_INTERNAL.md)：四迹用已有双划分修复；无四迹时全部 $(n_2,n_3)=(5,0),(3,1),(1,2)$ 都解析选到适当蓝对，再接本组两门。原P端四万余图输入不再是正向分类依赖。主代理已核同一原H的全部迹分流及原染色返回；新七正门有有效Gemini静态审阅，完整合并支的指定跨模型审阅另记实际范围。
+
+## L30. 五个正集的高余量修复与合法补齐
+
+[五正集带符号修复](../../../../knowledge/archive/proofs/propertyb35/FIVE_POSITIVE_SIGNED_REPAIR.md)给两条解析引理：五个正四集、至多四个负三集／28负四集，或五个正三／四集、至多两个负三集／28负四集，只要逐点总出现不超过14，均可修复。第一条最紧分流把四个三点候选全部被堵转成四条共享双核的真实负三集，再将一个核点保持蓝、使用另一个核点的剩余度数，严格逃出等号。证明不需要点数上界或正重复限制。
+
+若原正集至多五个、总出现上限十，可以把已有正集复制到恰五个：每点最多新增四次，仍在14内；零正集直接取空红集。这里补齐有明确度数余量，区别于原七度八正门中直接复制可能破坏假设的情形。
+
+对24点真实 $d(G)=35$、唯一外红点初态，平方预算排除至多三个正集，四正集用798族／23393标记的完整精确门及共享度数排除；剩余五正集实际迫G的非正迹形成分组，再用本组两条解析引理闭合。[完整条件证明](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/three_positive_cost/ONE_RED_EXTERIOR_DG35_CLOSURE.md)不假定所有输入都能取得唯一外红点；没有据此宣称一般24点已完成。
+
+## L31. 重复点负预算与无表七正集修复
+
+[L23的二重点预算加强](../../../../knowledge/archive/proofs/propertyb35/RANDOM_TRANSVERSAL_REPAIR.md)保留同一批重复点：m个正四集、最大正出现二、逐点总出现至多d时，二重点数至多2m，每点负出现至多d−2。若一个负s集含j名二重点，取p=7/16、q=1/4，有坏概率至多 $q^s+j(p^s-q^s)/s$。斜率随s递减，所以把共同负关联预算先分给小负集，得到完整解析上界，不把所有负集各取独立最坏值。
+
+[至多七个正四集、四负三集、二十二负四集的修复定理](../../../../knowledge/archive/proofs/propertyb35/SEVEN_POSITIVE_FOUR_TRIPLES_REPAIR.md)在任意有限点集、总出现至多七时成立。低出现的六／七正界分别为13331/16384和117373/131072；高出现用候选计数及等号时固定一点蓝的交换。全部交叠和t=0至4都解析覆盖，无图目录依赖，未运行新Lean。root已全文核查，Grok新专审有效end_turn，静态未发现问题、未执行程序。
+
+原计划六标签463948域的表被这条共同预算替代；旧便宜profile保留作探索，不承担新定理义务。
+
+### 六负三与三十五负四的解析扩展
+
+[至多六正四集、六负三集、35负四集](../../../../knowledge/archive/proofs/propertyb35/SIX_POSITIVE_SIX_TRIPLES_REPAIR.md)在逐点总出现七、任意有限点集上成立。二重点负关联总预算60使低出现坏和128821/131072严格；高出现交换留下至多两个负三集时，逐点剩余负预算为一。唯一三点候选可能被堵的情况额外禁掉一个交点，得到至少四份四点候选对至多一个目标，完整闭合。
+
+七正四集/四负三集门的[35负四集加强](../../../../knowledge/archive/proofs/propertyb35/SEVEN_POSITIVE_FOUR_TRIPLES_REPAIR.md)同样解析成立，低出现坏和124029/131072。它与六正新门使[五高点整支](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_FIVE_HIGH_ANALYTIC.md)、[六高两内部整支](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SIX_HIGH_TWO_INTERNAL.md)都不再依赖类型图目录。root独立推导、全文核查并跑精确算术；新专门Grok有效end_turn，具体读取与重证范围在新审阅处置中，不能沿用旧参数审阅范围。
+
+## L32. 禁点后的五个小正集
+
+[一般五小正集定理](../../../../knowledge/archive/proofs/propertyb35/FIVE_SMALL_POSITIVE_ZERO_TRIPLE.md)：至多五个正集合、各大小至少二，负约束全为四集，逐点带索引总出现至多七，则必可修复，负集数量不限。若正族有重复点，固定它后至多八份四点候选只面对至多五个含该点的负集；正族两两不交时，AM–GM和每点负出现至多六给严格坏概率和15/16。
+
+禁掉至多两个点会使正四集缩为至少二集；负约束中遇禁点者整个删除，其余保持原大小。这个引理配合L30扩到两个负三集的3/4正门、L31的六正暖场，把[24点六高点两内部边](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SIX_HIGH_TWO_INTERNAL.md)全部七种迹预算解析接回原染色。纯二迹随后由新六正六T门改为单蓝点短证明，全部六高两内部不再依赖18点图表；旧细分证明保留为替代证据。
+
+[24点七高点三内部的唯一高迹](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/three_internal/UNIQUE_HIGH_FORBIDDEN_POINT.md)另用五正四集cover17禁一点后的剩余盈余至多三，完成全部两／三边交图的短解析归约；不代表至少两条高迹已处理。
+
+### 同组的三个无表加强
+
+[五小正集加一个负三集](../../../../knowledge/archive/proofs/propertyb35/FIVE_SMALL_POSITIVE_ONE_TRIPLE.md)对至多五个2–4元正集、至多一个负三集及任意数量负四集成立，总出现上限七。五个不交二元正集的极端情况化为Q5的一张二维面与14条边，方向计数迫至少16条，严格排除等号。其余正集大小／交叠有直接候选或67/72界。root独立推导并全文核对；Grok有效静态专审无问题，没有运行程序。
+
+[四小正集加三个负三集](../../../../knowledge/archive/proofs/propertyb35/FOUR_SMALL_POSITIVE_THREE_TRIPLE_REPAIR.md)允许正集大小任意≥2、负四集不限量、总出现七。正族交叠给四份三红；不交且非全二时坏和143/144，全二时十六候选最多被堵15。它与真实q星重复盈余≤1共同覆盖[七高三内部](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_PARTIAL.md)所有高迹命中共同集的分支；该主稿还用跨组选点和旧七八门闭合missing三角形。其他多高迹并未消失。
+
+[五正四集、总负约束至多35](../../../../knowledge/archive/proofs/propertyb35/FIVE_POSITIVE_TEN_TRIPLES_REPAIR.md)在负约束全三／四集、逐点总出现七时成立。原10负三／32负四分项主定理保留，附节逐项核总量35：最难36份候选只面对至多34份坏目标，不另计算表。实际关闭[六高一内部纯二迹](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SIX_HIGH_ONE_INTERNAL_PURE_PAIR_TRACE.md)，也给七高两内部共同点二迹次数正的条件caller；后者共同点二迹次数全零未处理。Grok明确审过原10T主文和六高实际caller，不把该次范围自动扩大为总量附节。
+
+### 向一般临界初态迁移的准确边界
+
+[critical小横截报告](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/critical-small-transversal/REPORT.md)把实际约束出现精确写成d−o；外点度数可以超过七，所以新七度修复门不能无条件套用。蓝点极小的proper(H−G)初态用共同私有边给七度中心正集≤4，但非B假设又迫小负族横截数至少三；该规范不能保证两点禁集。它是新结构约束与一个明确停止边界，不是原命题反例或全24点证明。
+
+## L33. 实际正并下界与混合正集的解析合并
+
+[六正大并修复](../../../../knowledge/archive/proofs/propertyb35/SIX_POSITIVE_LARGE_UNION_REPAIR.md)：任意有限底集，至多六个正四集、正并至少14点、至多八负三及20负四、逐点总索引出现至多七，则可修复。低正重数时双重点最多24−14=10，负双重点关联总预算50，先分24给负三，其余26给负四，坏界125933/131072；高重数通过固定红点与四个被迫负三集的变蓝交换，最紧余支有四个候选只面对三个其他负三集。没有图目录依赖。
+
+实际[六高一内部唯一高迹](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/six_high_one_internal_high/ONE_HIGH_TRACE_PROOF.md)由点对覆盖给正并16/17；两种库存全部闭合。连同[n2≤1四库存](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/six_high_one_internal_high/REPORT.md)及原纯P2，尚余七种高迹库存。后者还用一个便宜推论：≤10正四、无负三、≤27负四、总出现七时可修复；低重数27(7/16)^4=64827/65536，高重数固定红点后直接回L31七正4T/35B门。
+
+[七混合正集加一负三](../../../../knowledge/archive/proofs/propertyb35/SEVEN_MIXED_POSITIVE_ONE_TRIPLE.md)：≤7正3/4集且至多一正三、≤1负三、≤20负四、总出现七，任意底集可修复。低重数坏界63310/65536，高重数只需候选计数与唯一负三集被命中后的禁点回退。它使[七高三内部missing星两三迹](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_PARTIAL.md)进一步只余B/C2；B的负二集不能删除。
+
+root已全文核新增引理及真实caller，并执行[精确有理检查](../../../../knowledge/archive/context/propertyb35-paper/round01/root/NEW_GATES_EXACT_CHECK.py)。Sol属同家族复核；Gemini新具体范围cell425完整SUCCESS、静态未见问题，没有运行程序，范围不扩大到未读整支。通用定理的纸面证明不等于完整36命题已闭合。
+
+## L34. 不同目标扩展数的共同预算与八正四负三修复
+
+对任意有限候选族C，若负事件由至多r个不同目标F产生，则被堵候选的并至多等于目标扩展数的降序前r项和；索引重复只会减小不同事件数。固定红点x的负三集以外部二点集作目标，这个初等共同预算显著强于r倍最大扩展数。
+
+[八正四负三门](../../../../knowledge/archive/proofs/propertyb35/EIGHT_POSITIVE_FOUR_TRIPLES_REPAIR.md)对ground≤17、恰8正四、≤4负三、≤17负四、总出现七成立。旧86五标签型全部严格，最小余量9；M2=7/8补域有1020/1395标签、11/22轨道，C3最小18/21，双完整生成与三种整数计数逐项一致。双三重点和三角80边界另用共同度预算与变蓝回退，未枚举负集布置。
+
+它已统一[七高三内部missing星恰两高迹](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_PARTIAL.md)，B/C2不再是当前残型。两侧star并14/13仍为真实额外事实，但本次加强不需要使用它们。root已运行[独立域与计数](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/eight_four_triples_completion_20261020/REPORT.md)；新Grok审阅在cell452，不冒充完整36审计。
+
+## L35. 禁两点后的正二集容量与正确的小正族门
+
+无条件5正2..4/2负三/D7门为假，[十点反例](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/six_high_one_internal_high/two_triple_small_gate/REPORT.md)有5正pair/2负三/12负四，32横截恰分割、全部1024红集无修复；它不是原H反例。
+
+正确[受限定理](../../../../knowledge/archive/proofs/propertyb35/FIVE_SMALL_POSITIVE_TWO_TRIPLES_REPAIR.md)保留正二集至多三个，其他前提相同、负四数量不限。正族不交时坏界133/144；有重复时按重复点是否属于pair及三pair端点关联给纯组合证明，不靠表。
+
+实际私有边同含q/f/g的数r满足 $2(r-1)≤4d(f)-(n-1)$，24点d(f)=7迫r≤3。因此禁同两七度外点后自动满足正确门，实际闭合[六高一内部](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SIX_HIGH_ONE_INTERNAL_PARTIAL.md)的(2,4,0)/(2,1,2)；该支还余五库存。root已读全证明、重放反例，Gemini新范围在cell452。
+
+## L36. 同一真实全池的有限视图自然连接
+
+若原H的每个选点视图都必须落在有限残域，且视图共享原H的同一包含数I_A，则原H产生全部视图关系的自然连接中的一个元素。完整连接为空便排除‘所有局部视图都不严格’，而不需要枚举原H。完备性必须分别证明残域覆盖与每份共有变量的真实绑定，不能只检查已存代表的拼接。
+
+[21点六度中心+六unit8](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyone-high/unique6_with7/new_structure_20261020/SIX_UNIT8_POOL_PROOF.md)是实际应用：3+3中心块用八份点对关联对七次非中心度排除；共度一完整星的六个五视图共有连接依次153/999/898/207/15/0，两种独立标准库实现一致。旧三份六锁严格证书为明确依赖；已核代码没有唯一六度/无七度或自由点度≥8的隐藏过滤。它把21唯一六/a1压到五unit8/十unit9/一unit7角色，不是完整21结论。
+
+## L37. 按正关联收费，合并混合正集的低出现结构
+
+**一般判据。** 在带索引signed系统中，从正集独立均匀选点。若点类型为 $\tau_s$、正次数 $a=\sum_s\tau_s$、命中率 $p_\tau=1-\prod_s(1-1/s)^{\tau_s}$，并能选非负收费 $\gamma_s$ 使全部实际可能类型满足
+
+$$(D-a)p_\tau^4\le\sum_s\tau_s\gamma_s,$$
+
+则任意负四集族的坏概率总和至多 $\frac14\sum_s sn_s\gamma_s$。另有至多t负三集时，加 $t p_*^3$；严格小于一便有修复。此式按全部正关联求和，保留负四集AMGM的四分之一，不需要负四集数量或底集大小上界。
+
+**已完成的具体门。** D7、至多七正3/4、其中至多二正3、至多一负3和任意负4，总有修复；T0时允许至多四正3。低正出现≤2用同一五类型收费 $\alpha=3125/13122,\beta=12005/131072$，精确最坏界分别 $282826675/286654464$、$283564805/286654464$。高正出现≥3另以至多四个余正集的完整组合分流闭合，不把低出现判据当作完整定理。
+
+**证明与实际效益。** [一般收费判据](../../../../knowledge/archive/proofs/propertyb35/OCCURRENCE_CHARGED_REPAIR.md)、[完整七混合修复](../../../../knowledge/archive/proofs/propertyb35/SEVEN_MIXED_TWO_SMALL_ONE_TRIPLE_REPAIR.md)。它使24点七高三内部、missing三点路加独立边／三匹配、恰两高迹的全部必要域通过：49／34高迹轨道、516812／732883份J；独立完整生成保存全部见证，逐原边P迹重新分类后返回原H。原先两正三集的实际尾项4P4+2P3/1T21B直接被包含。
+
+**范围。** 这是新纸面定理和确定性局部证据，没有新Lean；指定跨模型审阅按实际返回另记。一般收费式需要覆盖全部实际点类型；不严格时只说明该充分界不足。完整36仍未证明。
+
+## L38. 正族的大并集控制重复点，直接保留负二集
+
+**主门。** 五个带索引正四集，正并≥17，至多四负二／一负三／22负四，D7，任意有限ground，必可修复。重复盈余至多三，只有七种重复点型；先逻辑等价合并相同负二集。最紧三重点加二重点分别有四／五负关联，交叉项的四个最大权重为 $1,q,q^2,q^2$，得到 $8181/8192<1$。三个二重点的全部负关联共用十五份，不能分别给每类负集十五份。
+
+**参数族与整支合并。** 同一[稀疏修复规范](../../../../knowledge/archive/proofs/propertyb35/FIVE_SPARSE_POSITIVE_SMALL_NEGATIVE_REPAIR.md)还给四正／正并≥14、四负二／零负三／23负四；以及三个负二集时，五／四／三正四、正并≥17／14／11，负三≤3／2／1、负四≤21／22／23的完整推论。最紧五正界为4041/4096。两正四并≥8时十六份两红候选直接对三个负二集，其他大负集数量和度数无需限制。
+
+**实际H。** 24七高三内部，三／四条高迹全为三迹时，先处理高迹遇共同集C，再任取同一个 $q\in C$；其真实私有星给正并下界，逐s分流直接落入上述门。[三条纯三迹caller](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_ANALYTIC_THREE_TRIPLES.md)和[四条纯三迹caller](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_ANALYTIC_FOUR_TRIPLES.md)对任意missing形状成立，不需对应的局部P表。旧域证据保留为替代。
+
+**统一参数追加。** 对 $0\le R\le4,0\le S\le3,9-2R-S\ge0$，恰 $5-S$ 个正四集、正并至少 $17-3S$、负二至多R、负三至多 $9-2R-S$、负四至多 $18+R+S$、D7均可修复。十八参数对、63标量及4整数比较严格，最紧8181/8192。[全r解析caller](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_THREE_INTERNAL_ANALYTIC_ALL_TRIPLE_TRACES.md)一次覆盖24七高三内部所有非内部高迹≤3的情况，包含r0..4及全部missing形状。该追加由root/Sol核对；旧Gemini只审其加入前的主门及r3/r4，不扩大既有认可范围。
+
+**适用边界。** 正并下界、负二去重的逻辑等价和D7必须由实际来源证明。本引理不含负单集；一个负小集不能擅自放大。七种profile是解析完整分类，Fraction仅重算标量，不是集合系枚举。新Gemini专项审阅按实际返回另记；没有新Lean。
+
+## L39. 固定高出现点，把较大正族提升到旧修复门
+
+[十一正四修复](../../../../knowledge/archive/proofs/propertyb35/ELEVEN_POSITIVE_FOUR_SET_REPAIR.md)：≤11正四、零负三、≤17负四、ground≤18、D7，必修复。最大正出现≤2时，坏和≤40817/65536；否则固定正出现k≥3的x红，余≤8正四，含x负四准确缩成≤4负三，新ground≤17。恰8正用八4T17B门，≤7正用七4T35B门。固定红点使负四缩成负三，与固定蓝点时整份删负约束是不同操作。
+
+它覆盖Pasch型真正不存在合法蓝对的局部入口：三蓝给11P4/零T/16B。不要为不存在的蓝对继续改善概率。一般提升须重新检查剩余正数、删点后的ground及含固定点负次数，不是无条件递归。
+
+## L40. 两个短正集的八正族：只补一个小容量域
+
+[18点混合八正修复](../../../../knowledge/archive/proofs/propertyb35/EIGHT_MIXED_TWO_SMALL_EIGHTEEN_REPAIR.md)：恰8正3/4、≤2正3、零负三、≤20负四、ground≤18、D7。低正出现用L37收费；高出现的唯一新五标签容量为(3,3,4,4,4)。M2=0及M2≥3均解析处理，余837标签／94轨道由两完整生成器得到相同集合，C4双计数最小81、统一堵界≤68。root已读完整推导、准确旧容量进口并执行复算。该门确实覆盖P6旧尾项6P4+2P3/零T/20B；不因该尾项通过就声称整个P6分支完成。
+
+**效率经验。** 增强门之前先核现有[准确接口目录](../../../../knowledge/archive/proofs/propertyb35/REPAIR_GATE_CATALOG.md)，包括exact/≤、短正集、负小集、ground、D与正并。选择器缺一条已证门不是新的数学反例；新增通用门后应看它能合并多少实际剩余域，不机械追逐每个首残。
+
+## L41. 18点八正四与两个负三：改进指定点扩展替代扩表
+
+[新18点八正四门](../../../../knowledge/archive/proofs/propertyb35/EIGHT_POSITIVE_18_TWO_TRIPLES.md)允许恰8正四、≤2负三、≤18负四、D7。固定三重点后，旧三边图七型的粗堵界为144，仅三角型C4=144不能直接完成；该型真实两点／三点扩展最多16／4，堵界降至56。其他六型C4≥148，旧E≥4域C4≥178而堵界≤134，全部严格。没有新对象分类域；重算旧七型双计数与扩展最小余量14。17点旧门不能代替这条18点门。
+
+## L42. 共享负预算与点容量，合并九正集修复
+
+[NINE_POSITIVE_JOINT_NEGATIVE_REPAIR](../../../../knowledge/archive/proofs/propertyb35/NINE_POSITIVE_JOINT_NEGATIVE_REPAIR.md)固定恰9正四集、ground≤18、负三≤3、负四任意有限、D7。总关联自动给负三四总数≤23；基础20预算保留，23提升已由完整981域差分及19新增有理证书证明。低正出现用57281/65536；四重点及双三中心均有解析证明；余六正族最大出现二时，实际点恢复为六标签多重图，完整局部分类将困难压到77型。76型用同一批负边的共享预算和逐点容量给有理证书，最大10/11；唯一型虽分数可行，但整数预算给至少8余候选、至多5堵塞，仍有修复。
+
+**一般工具。** 给候选红集非负权、给原负三条数／含固定点负次数／总负次数及各点容量非负价格。如果每个可能负目标所覆盖的候选权不超过其价格，且总资源价格严格小于候选总权，就有未堵候选。这是直接有限求和的弱对偶，不需要LP强对偶或求解器UNSAT。全部四类原负来源分开：固定红点将原负三缩二、原负四缩三，不固定的原负三/四保留；U外目标自动安全。可先揭示实际阻断边并扣除其共享预算，再针对剩余候选收费。[完整一般引理](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/positive_occ_three/nine_positive_joint_negative_budget_20261020/shared_capacity_dual_20261020/LEMMA.md)。
+
+**核验与效益。** 两生成器完整417328标签/981轨道同域；独立条件容斥核扩展计数。第二无SciPy程序从图重建全部正集和候选，逐完整77键、283968条目标不等式、76严格有理预算通过。实际P6一内部的8020个旧未接受输入各保存自己的蓝选择和35源迹分类，另549未由该门覆盖。LP仅发现权重，完整分类与有理不等式承担证明。没有整H枚举或新Lean；Grok有效静态审基础20门，Gemini分别有效审六图证书/整数核心及新增23完整预算，实际范围与未执行计算的限制另存原审阅。
+
+## L43. 用旧分类提升负预算，先算整支收益
+
+[8正四/1负三/20负四修复](../../../../knowledge/archive/proofs/propertyb35/EIGHT_POSITIVE_ONE_TRIPLE_TWENTY_REPAIR.md)适用ground≤18、D7。低出现界13377/16384；高出现用候选与交换；余五标签E3只需旧七型最小144对109堵，E≥4复用旧86最小178对102堵。共268预算已本机精确重放，没有新增分类域。它在P6九门后549输入中覆盖363，余186；完整原H分支尚未因此闭合。同一八混合门的负四上限21扩展已root全文核对，246旧代表的新预算复算严格，可再覆盖47；随后九门21预算再收60，P6准确余79，四库存尚无清零。九门23进一步去掉B上限，对这79没有新增调用；它们没有clean9自身选择。
+
+**效率经验。** 若各分支分别取最大值不严格，先检查这些极值能否共同使用同一批负边、固定点度和外点容量。联合有理证书发现只需数秒；某个分数可行型则转回整数或共同剩余核证明，不把LP失败升级为反例，也不继续盲目扩布局表。证明有界局部分类须保留实际恢复和完整覆盖，不能把浮点输出或所有模型同意作为验收。
+
+## L44. 共同内部点单蓝，把负预算直接写成原点补度
+
+设P击中所有五元原边、I条内部边都含q、所有非内部P迹大小≤2。固定q蓝、其余P红；若过q二迹数为s，则正四集恰 $d(q)-I-s$，负三／四总数恰 $M-d(q)$。每条尚未双色原边只有一种风险，故signed点次数由其原度支配。外部点原度≤7、正四数≤5、负总≤35时，直接接五正集门。[通用实际引理及P7应用](../../../../knowledge/archive/proofs/propertyb35/PURE_PAIR_COMMON_POINT_REPAIR.md)。
+
+24点P7、I1/2/3纯二迹现在统一：I1五名共同点二迹总度≥18，选s≥4，正数≤3；I2有s>0选共同点，否则missing度容量给6P4/6T14B双蓝；I3任共同点即正数≤5。单蓝分支总负一律27。I2全零分流的度数矛盾和双蓝选择必须另保留；I4共同点可能为空，不能按内部数照推。
+
+新九门还合并P7两内部的(1,0,4)：四高迹允许重数、唯一二迹，全部77840必要P源第二生成同域、逐原35索引和各自blue复算，19736源使用九门。它展示“先扩大真实通用工具，再重跑共同必要域”的整支收益，仍不替代其他库存的证明。
+
+## L45. 已命中的正索引仍占用原点度数
+
+[原正关联预算](../../../../knowledge/archive/proofs/propertyb35/ORIGINAL_POSITIVE_INCIDENCE_BUDGET.md)：正总关联为P、每点全部索引总出现≤D、底集≤N。固定互不相交红X/蓝Y后，所有未满足负索引在自由点的总关联满足
+
+$$\sum_F |F\setminus X|\le D(N-|X|-|Y|)-P+\sum_{v\in X\cup Y}a_v,$$
+
+其中a是**原正次数**，不是剩余未击中正族的次数。先对自由点原负度求和，再用原全部正关联扣除即得。九正四固定三重点红给86；十正四给82。若用作LP新row，其列价格与预算成本必须一并进入独立验算；当前九门23和七标签统一计数都不需要此row，不能把待用资源说成已实现加速。
+
+## L46. 固定双红核后保留五种原负来源
+
+[十正双不交三中心修复](../../../../knowledge/archive/proofs/propertyb35/TEN_POSITIVE_TWO_THREE_STARS_REPAIR.md)处理exact10P4/L18/T2/B18/D7的正最大3、存在两个不交三标签支持的分支。固定两红核，n≤2条共同原负三的第三点蓝；四余正族大小分别4、3/4、2/3/4，总关联≥16−3n。五负来源Tpair/Ttriple/Bpair/Btriple/B4分别消耗(T,B,K)=(1,0,1)/(1,0,0)/(0,1,2)/(0,1,1)/(0,1,0)，共同预算(2−n,18,8−2n)。不能只按残余大小合并不同来源。
+
+当余正出现≤2，18个容量格完整5573标签/1333代表，所有1..4横截候选的674721全typed目标有理不等式和成本独立核通过，max10/11。高三重点先揭示共同实际阻断边，再转蓝并扣核预算；n2用重选核返回n0，避免把删两蓝后的正单集漏掉。重复原负三只在有逻辑等价理由时合并，其他索引保留。该完整条件引理不默认所有三支持都有不交对。
+
+## L47. 七个低重复四集的三扩展比值，装配完整十正门
+
+七正四集的并≤17、每点正出现≤2时，恢复七标签无自环图，Δ≤4、E=28−|U|∈[11,14]。完整10056542标签／3015轨道的五点横截数C与最大指定q目标扩展h_q满足
+
+$$h_2/C\le8/37,\quad h_3/C\le23/292,\quad h_4/C\le13/584.$$
+
+三比值可同时安全放宽，统一处理原负三/四来源，保留重复索引；不需LP、不同目标去重或82额外资源。完整向后星覆盖、全部S7像、第二逆序轨道计算、128项条件容斥和DP逐E相同已本机核。主代理编译运行第二checker通过。
+
+[完整十正修复](../../../../knowledge/archive/proofs/propertyb35/TEN_POSITIVE_TWO_TRIPLES_REPAIR.md)：exact10P4/L18/D7、至多2T、负四任意，无N1/N2。高出现≥4接九门23预算的fixed-point接口；双不交三支持接L46；其余三支持两两相交，固定任一三重点后正好落七族核。40+3t+4b≤126给三个原profile，统一堵比405/584、17955/21608、10703/10804；四标签1333证书的1813新资源成本全strict/max10/11。Grok4.7-build/xhigh有效静态全文新装配审阅无问题，未执行计算，具体范围另记。不能任意padding成“≤10”。
+
+## L48. 先给蓝对的坏事件计数，再调用统一修复
+
+七高点P、外17点全七度，P hitting，内部I条。二/三/四迹计n2/n3/n4。蓝对Q若遇全部内部及高迹、且在二迹J独立，则实际signed只有m=16−c_Q−h_Q−s_Q个P4、t=n2−s_Q个T、b=n1−m个B。每条原边至多一个风险，故D7。
+
+坏蓝对至多I+6n3+3n4+n2；小于21即存在Q。[实际三个库存的完整证明](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_ONE_TWO_INTERNAL_TRACE_SELECTION.md)覆盖I1(2,0,5)、I2(2,1,3)，再用五三角在K4外至多13边的短引理覆盖I1(0,1,5)。按真实m在7/8/9/10门间分流，直接返回原H。它替代653万输入诊断表，不依赖该表作为证明。Gemini4有效静态专审caller无问题，未执行程序。
+
+## L49. 五正最小三元吸收三个负三，顺带处理唯一负二
+
+[五正三负三门](../../../../knowledge/archive/proofs/propertyb35/FIVE_POSITIVE_THREE_TRIPLES_REPAIR.md)：≤5正集各至少三元、≤3T、B任意、D7，ground任意。高正出现≥3留下≤2组，九份三红对三个T。max2时，若重复点遇T，将其染蓝后至多两正二、至多两T，接旧受限fiveSmall2T；否则重复点红，余三组相交即少红安全，不交给27候选对≤8堵。正不交时AMGM坏和7/18。任意≥3可先缩成三元子集；不用新分类。
+
+[八正唯一负二门](../../../../knowledge/archive/proofs/propertyb35/EIGHT_POSITIVE_ONE_NEGATIVE_PAIR_REPAIR.md)：exact8P4/L18、≤1N2、T0、B≤21、D7。负二某端正频率≤2则蓝后接mixed8零T；某端≥4则红该端蓝另一端，余≤4正≥3、新T≤2；最后两端频率都3，余5正≥3、新T≤3，接上门。负二本身已占点度的一份不能返还。另≤7P4/1N2/T0时可容任意B和ground：蓝端正频率≤4接七混合零T，或高端红蓝后只余≤2正。新解析门和最后P6 caller的Grok专项在途，不提前记跨家族通过。
+
+## L50. 候选高点颜色的统一加权选择
+
+[WEIGHTED_TRACE_SELECTION](../../../../knowledge/archive/proofs/propertyb35/WEIGHTED_TRACE_SELECTION.md)：有限候选Q、整数修复代价m/t，取λQ=(K+1−m−t)+。全部候选权严格大于各坏事件权之和，则有合法Q且m+t≤K。可以先排除全蓝高三迹等已知坏候选，事件按逻辑去重，但原频率/度数和代价必须保留索引。
+
+实际K11三蓝选择统一P7两无二迹库存：I1(0,4,3)的101四迹轨道/390116必要高族，I2(0,5,1)的11位置/646486必要高族，严格差分别至少3/4。两套不同生成与红补集候选、所有quad原像及运输、13654060/22627010原索引完整分类均由root编译复算PASS。随后真实m在7/8/9/10/11修复门中分流返回原H；不依赖原H或外部布局枚举。
+
+其它带二迹库存仍须另证自己的差；‘若统一权严格便可选点’不是‘任何实际输入统一权自动严格’。这些完整新结构证明的指定跨家族专项另记，不能用一个位置pilot替代全部位置。
+
+## 后续怎样使用这份库存
+
+新参数先调用 L1–L2 重算实际域和可选锁点；L9–L11 尽量缩小必须分类的结构。随后用 L4–L5 提取并覆盖真实输入，L3、L6–L8 给出严格概率证书，L12 判断加强是否花在活跃瓶颈上。最后仍需从任意原始 H 返回染色，而不把内部证书当顶层假设。
+
+最先值得工程化的不是统一重写三份旧证明，而是：保持这些已有接口稳定；在下一个真实 caller 需要时补参数包装；让数据与昂贵证书独立于轻量接口；保存可复用的精确乘子与构造见证。25点的系数缓存目前只有局部探针，完整等价与整批核验未通过，不在这里列作已完成的效率成果。
+
+进一步推广到其他 r 时，L1–L2、L4、L6 的数学证明可沿用；但实际 `Simple5Hypergraph`、`Numeric.edgeWeight/pairWeight` 中的5，以及小点数染色、选点和类型目录都须移植或重证。三个下界阶段提供了方法依据，不能推出任意更高下界都能由固定锁数或同一批表解决。
+
+
+## L51. 强迫小横截后只在剩余预算中堵大候选
+
+规范：[FORCED_SMALL_TRANSVERSAL_BUDGET](../../../../knowledge/archive/proofs/propertyb35/FORCED_SMALL_TRANSVERSAL_BUDGET.md)。正集大小至多s，负族仅三/四集。每个三点横截若不能成功，必等于一份不同原负三；极小四点横截不包含任何这类已用三集。故若c份三横截已被迫，余极小四候选的堵界可用s(t−c)+b，并逐点扣其实际强迫三集出现。证明是实际索引注入和扩展点必须落在未命中正集，不依赖概率或LP。当前为一般纸面引理，未新增Lean。
+
+## L52. 六正四集的大并与二十七负预算
+
+规范：[SIX_POSITIVE_LARGE_UNION_TOTAL_TWENTY_SEVEN_REPAIR](../../../../knowledge/archive/proofs/propertyb35/SIX_POSITIVE_LARGE_UNION_TOTAL_TWENTY_SEVEN_REPAIR.md)。恰六P4、正并≥15、L≤17、D7、T≤15、T+B≤27，无负一/二即修复。高正频≥3用同一批强迫T的换色后容量；低正频≤2用旧981中698旧图，683直接计数、3解析共享core、12有理证书36720列/max15/17。M3=14/15由私有点替换、生产重数≤4/6解析，不漏旧M3≤13范围之外对象。root全文/独立程序PASS；Grok对新全门与实际caller已有效静态审阅，未执行计算。
+
+## L53. 九正四集容许一个负二
+
+规范：[NINE_POSITIVE_ONE_NEGATIVE_PAIR_REPAIR](../../../../knowledge/archive/proofs/propertyb35/NINE_POSITIVE_ONE_NEGATIVE_PAIR_REPAIR.md)。恰九P4、L≤17、D7、N2≤1、T0、B≤17；按端点频率/共同负B预算分流，两个辅助mixed门使用旧981完整容量标记5783/7266键及E6独立19916标签/741轨道，三core型和唯一C5型解析。root全文与独立std程序PASS；新门跨家族专项尚待。没有因此自动闭合一整P7库存。
+
+## L54. 点对覆盖约束蓝关联：先排不可能的修复接口
+
+设真实24点P7（P全八度、外部全七度、P击中每原边），部分染色蓝高点集Q有a≥1点。点对覆盖给Σ_e (|e∩Q|−1)_+≥a−1；若剩完整signed状态只有mP4、rN2、bB4，则恰35−r−b条原边遇蓝，故8a≥35−r−b+a−1，即r+b≥34−7a。新的九N2门r+b≤18与两蓝a2矛盾，不用扫描；三蓝新接口只可能n1=21..26。详细数学及5880原索引复算在[TRANSFER_DIAGNOSIS](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfour/nine_positive_one_pair_20261020/TRANSFER_DIAGNOSIS.md)。有其他signed类别必须重写完整计数，不能套此特殊式。
+
+
+## L55. 多种部分染色共享同一个稀有点：22候选对20上限
+
+完整实际证明：[TWENTYFOUR_SEVEN_HIGH_TWO_INTERNAL_TWO_TRIPLES_THREE_QUADS](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_TWO_INTERNAL_TWO_TRIPLES_THREE_QUADS.md)。无proper蓝对时补集覆盖迫唯一P结构及每星4单迹。22个proper三蓝各给12P4/16B，但共享同一112单迹关联与外点原度7；若旧8/9/10/11门全部无入口，48正关联迫唯一紧谱15个(正3/总7)、一个(正2/总5)、一个(正1/总2)。同一个总频率2点在每候选中都须正频率1。若两次单迹来自同一P星，则不可能；来自不同星时全部蓝三集只有2*C(5,2)=20份可为1，故22候选不能同时失败。这里只用共同实际H，无generic12新定理，也没有扩外部布局表。一般有限事实是：在r个标签上、总频率2时，a子集取频率1的数至多2*C(r−2,a−1)。更大频率可另用生成函数，不从这个2频结论直接外推。
+
+
+## L56. 四正集的参数修复：共同负容量优于分别限制条数
+
+[FOUR_POSITIVE_AT_LEAST_THREE_REPAIR](../../../../knowledge/archive/proofs/propertyb35/FOUR_POSITIVE_AT_LEAST_THREE_REPAIR.md)完整证明：≤4正集各≥s≥2、所有负集≥3、indexed逐点D≥1，4(D−1)<3s²即修复。交叠分支剩≤2组给s²个三红对≤D−2堵；不交分支所有负三和负四用同一点的D−1预算共同收费，坏概率≤4(D−1)/(3s²)。因此s3,D7为8/9，s4,D12为11/12，没有T或B数量上限。root全文核推导，Gemini已有效静态审阅此完整参数门，未执行程序；尚未新增Lean。实际应用必须真清除全部负一/二，蓝点删正后仍达s。
+
+
+## L57. 三正集与少量负二：没有逐点次数也可修复
+
+[THREE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR](../../../../knowledge/archive/proofs/propertyb35/THREE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR.md)：k≥2，≤3正集各≥k，负二≤k、其余负集≥4，无D/ground限制，存在≤3红修复。重复交点先给k份两红；若全堵则全部负二被迫为同一星，禁中心后每正集仍非空。全不交时k³候选对至多k²堵。k4实际用于[P7唯一内部七三迹一四迹完整分支](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_ONE_INTERNAL_SEVEN_TRIPLES.md)：所有必要P域1728890/60511150原索引双生成逐键核验PASS，最终只需单蓝/完全proper两蓝或三蓝，删掉全部‘一漏’依赖，也不导入新九N2门。root全文核/实际编译执行通过，Gemini对参数门及该完整caller已有效静态审阅，未执行程序。
+
+
+## L58. 四大正集的锐利43负约束界
+
+[FOUR_LARGE_POSITIVE_FORTY_THREE_NEGATIVE_REPAIR](../../../../knowledge/archive/proofs/propertyb35/FOUR_LARGE_POSITIVE_FORTY_THREE_NEGATIVE_REPAIR.md)证明：≤4正各≥4，≤43负各≥3，无D/ground限制，可用≤4红修复。三重点或二匹配先给≤2红；余二重点交图支撑为星或三角，全部10星/5三角通过解析三横截/强迫负三/极小四横截计数。13点、四正四集和44个互异负三的显式不可修复例证明一般界最佳，root已读解析并核全部8192红子集/6405正横截全堵；这不是原Property B反例。正向全为一般结构证明；Gemini对锐利43门和44负反例已有效静态专审，未执行程序。它有数量空间支持原边数36–40的某些接口，但须证明真实H产生≤4大正且没有负1/2，不能据此宣称新下界。
+
+## L59. 共同私有边索引与完整点对覆盖排除局部最优
+
+[六星强源态定理](../../../../knowledge/archive/proofs/propertyb35/TWENTYFIVE_SIX_STAR_SOURCE_NORMAL_FORM.md)§1–8：25点35边点对覆盖，任意预先指定六度z均有proper删星染色，使某方向至多一个单色四块。核心不是新图表：弱正规形留下16个单色块点、8个2/2混色点，private索引E=16+e且e≤3。mixed中有private的点数m，至少8−m点无private；若唯一private保护点的边遇到这些点，异色双翻严格改善。于是能遇这些点的原边≤13+e−m，而须覆盖16(8−m)点对，每五边≤6对，最紧80>78。Grok和Gemini有效静态审阅此新增范围，root与独立Sol核解析并运行18/35小标量及672局部交换模式。非B下得到唯一坏边含指定z，不保证平衡或修复。
+
+## L60. 低迹共同矩把所有多低点合并成一个平衡源入口
+
+同规范§5以及[many-low范围审计](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/many_six_scope_20261020/REPORT.md)：k_e为边内六度点数，Σk=6r、Σk²=r(r+5)，故含低边数L≥ceil(36r/(r+5))；整数强化L≥ceil[r(12j−r+1)/(j(j+1))]。因此所有r≥5有L≥20。均匀12/13染色，非B给X≥1，指定族坏数Y≤2(X−1)+1_U，故Pr(U)≥(9L−170)/230≥1/23。这里U为唯一坏边落指定族；没有抽临界子图或混用源态。Gemini有效静态核完整推导，root运行标量。真实必要r域3…21，明确r19输入存在，不能把大r漏掉或用r≤5的D12替代。
+
+## L61. 最小蓝源的真实行超额和红汇点共同容量
+
+同规范§9–11：全局最小蓝源以唯一坏G红且含低点为优化域；每个蓝点有N1-private。令N1=b+u、δ_B=Σ_blue(d−6)、W_BB为蓝内部共度超额，则N2=K(b)−3δ_B+W_BB−3u，K(b)=(b²−43b+408)/2，W_BB≤2δ_B。结合L60独立源，统一b≤13。
+
+若b12/13，无N4的红汇点集Z在G外且|Z|≥1+u+c，2c为全源跨色超额。对h∈Z遇到唯一private蓝邻y，合法双翻的准确N1变化为N1'=N1−(n1(h)−1)+ν2(y,避h)。所有h共享同一N2索引和总cut，推得b12时N1+N2≥14、b13时≥15，后者等价δ_B+2u+c≤7，并统一排除r≤7的蓝13最小源。Grok有效静态核此整个证明；root运行小转移/容量标量。没有据此染原H；后续L64已把蓝13剩余范围压到r≥10，蓝≤12修复仍在。二级择优的进一步加强必须单列其附加选择，不能冒充每个最小蓝源均满足。
+
+## L62. 单N4低中心在同一个最小蓝域中的二向换源
+
+同规范§12，b12、低g∈G且只有一个N4_g。其余五条低星蓝型为(a1,a2,a3,a4)=(t,4−2t,t,1)，t∈{0,1,2}。翻g后整体换色保留蓝12和唯一低坏边，准确N'=(N4−1+a3, N3−a3+a2, N2−a2+a1, N1−a1+1)。所以u+u'+c=t−1≤1、c'=c、δ'_B=25−δ_B。它只在明确的同H转换后重建private，不能把两个源的私有边同时算入一份预算。root已核解析及36标量转移，指定跨家族专项另记；没有自动修复坏G。
+
+
+## L63. 同一批二蓝边的共享私有容量，以及二级择优
+
+[共享N2容量](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/source-selection/b12_red_sink_20261020/SHARED_N2_PRIVATE_CAPACITY.md)的基础事实不依赖25点或五元参数：固定唯一红坏边G、在适用源集合中最小化蓝数，每蓝有至少一份N1-private。令N1=b+u、N2=t，红h在G外且无N4/red-private，a=n1(h)、v=n2(h)。与h相邻且只有一份private的每个蓝y可合法交换，准确产生u'=u−(a−1)+ν2(y,避h)。这些y共享同一批t−v原N2索引，每索引只有两个蓝点。因此
+
+$$(a-2u)_+(a-1-u)_+\le2(t-v).$$
+
+若h与全部蓝点的共度一（特别五元点对覆盖25点的六度h），可将第一项加强为(a−u)+。u0给a(a−1)≤2(t−v)，再由整数(a−2)(a−3)≥0得2a+v≤t+3。一般参数版本须将“无N4”写成“无红私有边”，边大小可变但至少三；交换后必须仍在指定源集合。一般附录另有完整证明，不把五元记号直接套到任意边大小。
+
+[二级min-u](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/source-selection/b12_red_sink_20261020/SECONDARY_MIN_U.md)在全局minblue12之中再最小化u，排除u+t=2的全部三个分配，给N1+N2≥15，即δ_B+2u+c≤15。若某Glow只有一条N4，L62还迫u0及c≤1。此加强只属于二级择优源。原五元版本及二级证明已获Grok有效静态审阅；一般参数附录是后来追加，未扩充为已跨家族审阅。root已读证明并运行小整数域，未运行Lean。
+
+## L64. 红私有索引的共同owner预算与饱和换源
+
+[源态规范§13](../../../../knowledge/archive/proofs/propertyb35/TWENTYFIVE_SIX_STAR_SOURCE_NORMAL_FORM.md)对同一minblue13源：每个Glow至少两份N4，否则单翻再换色得到蓝11源。若G含ell个低点、红sink集S无N4，十二红点与N4=11−u−c共同给 |S|≥1+u+c+ell。所有sink若低，须有r_R≥1+u+c+2ell，不能为多个中心各自返还完整N4预算。
+
+结合L63，全部r≤9仅七个必要标量。六个共享cut严格矛盾；最后(δ,u,c)=(7,0,0)迫两低sink分别占两份N2。其唯一共边为N3；合法交换一sink与private蓝邻后，新δ/c不等式强制蓝邻也低。新源重新适用同一个饱和owner定理，另一sink不能有N4，而那条真实N3恰变成它的N4，矛盾。故r≤9时全局最小蓝源≤12，r≥10未由此排除。独立Sol同家族核查、root解析/标量重放与Grok有效全文静态审阅分别记录；模型未执行程序。这是有限七项预算和原边解析交换，不是原H枚举，也不是H可染结论。
+
+## L65. 低星分割直接给唯一低坏边源的蓝点下界
+
+同规范§14：25点点对覆盖、低g六度使其六个四块分割其余24点。若G为唯一红坏边且含g，其余五块各至少一蓝；非B又迫其中一块四点全蓝，否则单翻g就修复。故任何这类源都满足b≥8，无需最小性。与L61/L64合用，minblue只剩8…13，r≤9时只剩8…12。这个下界和上界量词不同，不能写成任意源都至多13。
+
+
+## L66. 最大汇点数把多个换源共享的owner预算闭合
+
+[TWENTYFIVE_B12_ZERO_CUT_SOURCE_BOUND](../../../../knowledge/archive/proofs/propertyb35/TWENTYFIVE_B12_ZERO_CUT_SOURCE_BOUND.md)：在全局minblue12中二级最小u；cross0时有u+N2≥4，即δ_B+2u≤14。先排u>0三等号端点和A三角，再对B三匹配在同一端点源中最大化sink数。合法交换保留旧其他sink，并产生新sink；因此丢失唯一N4的原owner必须由同一h的N3补回。sink数1、2、3分别给4>2、8>7、18>14，最后一支用两个doubleowner共享六次蓝关联上下饱和。一般可复用的是“保留最优域→单owner净迁移→最大性→索引共同容量”，不是任意换源都能独立取有利owner。root解析/两小算PASS，独立Sol核查；Gemini已有效全文静态审该数学论证，未执行程序，其端点复述转录错误由root据原证明更正另记。仍不是H染色。
+
+## L67. 四混合小正集与原q星的共同共度容量
+
+[FOUR_MIXED_POSITIVE_FOUR_TRIPLES_REPAIR](../../../../knowledge/archive/proofs/propertyb35/FOUR_MIXED_POSITIVE_FOUR_TRIPLES_REPAIR.md)：≤4正各2..4、P2≤3、≤4负三、其余负≥4、D7，任意ground即可修复。交叠难型迫四负三完整星后禁中心；至多一正单时用8>6。全不交用同一3T+4B≤6Σg_i，最紧候选余量3/2。实际q单迹禁两点若出现四P2，则同一外七度点的两个伙伴已花共度盈余6>5，故P2≤3。该桥梁直接闭合[I1四四迹(5,0,4)](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_ONE_INTERNAL_FOUR_QUADS.md)，没有新增迹域。root全文与独立Sol接口/小算通过，Grok已有效全文静态审该门及完整I1四quad caller，未执行程序。
+
+## L68. 等度点族矩与唯一坏边族的统一概率入口
+
+[UNIQUE_BAD_EDGE_FAMILY_MOMENTS](../../../../knowledge/archive/proofs/propertyb35/UNIQUE_BAD_EDGE_FAMILY_MOMENTS.md)：k元点对覆盖n点图，K中r>0点均d度，σ=(k−1)d−(n−1)。同一低点族的W≤rσ/2给Σt_e=dr、Σt_e²=r(r+d−1)+2W，故所遇原边数L≥ceil[d²r/(r+d−1+σ)]；精确L=dr−C(r,2)−W+ΣC(t_e−1,2)。对任何非B图的同单边坏概率p分布，逐态Y≤2(X−1)+1_U给Pr唯一坏在指定L族≥2−(2M−L)p。两引理条件独立，不要求坏事件独立。
+
+23/24点35边平衡p=6/161；24至少五低、23至少六低保证L≥17、唯一低坏源概率≥4/161。指定24六度中心另有≤2坏块源，但其重复点使旧25分割私有计数失效，不能假装唯一指定低坏源已证明。root全文/阈值小算PASS，跨家族新增一般参数范围未审；这些源没有修复。
+
+## L69. 三个大正集吸收四个负二与三十五个负三
+
+[THREE_LARGE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR](../../../../knowledge/archive/proofs/propertyb35/THREE_LARGE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR.md)：≤3正各≥4、≤4负二、≤35负三、其余负≥4，任意ground、无D，可用≤3红修复。交点z若所有两红被堵，四负二必完整星；禁z后3/3/4给36>35。原三正不交时64候选对最多4·4+35=51堵。两正分支先判交点或16红对，不禁四点后假设正四仍非空。它直接修复[I1恰两高迹](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_ONE_INTERNAL_TWO_HIGH_TRACES.md)中原共同度数预算的两P3尾型，三库存无需新表；又用于四P3的统一末支。root推导及Sol独立核通过；Gemini已有效全文静态审该门及I1纯三迹caller，未执行程序；恰两高迹完整caller的Grok另在途。旧三正／两负二参数门保留为其他参数的充分界，不把旧接口随意改名覆盖。
+
+## L70. 四个大正集允许三个负二：只保留原点容量便能合并
+
+[FOUR_LARGE_POSITIVE_THREE_NEGATIVE_PAIRS_REPAIR](../../../../knowledge/archive/proofs/propertyb35/FOUR_LARGE_POSITIVE_THREE_NEGATIVE_PAIRS_REPAIR.md)：≤4正各≥4、≤3负二、无负单、其他负≥3任意、D7，ground不限。截正四后，全不交共享2q+3t+4b≤96给堵≤168<256；交点x恰命中两正，按过x的负二数0…3完整覆盖。两难尾改x蓝、选共同f红；已经满足的xf负二仍占f原次数，九份三红对至多五/四堵。无padding，没有负条数上限。
+
+实际单蓝q的失败条件可对同一内部五点集同时求和。[I1至多四条纯P3主稿](../../../../knowledge/archive/proofs/propertyb35/TWENTYFOUR_SEVEN_HIGH_ONE_INTERNAL_THREE_TRIPLES.md)用新门统一r≤3；r4再接L69和高迹频率H_C≥4，原J度18却至多17。完整实际染色连接已写，新增整库存为r3/r4，旧r0/1/2另证保留。root完整推导/源码核查和Sol独立50/192标量PASS；Gemini已有效全文静态审该门与完整r≤4 caller，无实质问题、未执行程序。未新增Lean，不代表全部I1完成。
+
+
+## L71. 四大正／四负二：旧已满足约束仍限制新坏边
+
+[FOUR_LARGE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR](../../../../knowledge/archive/proofs/propertyb35/FOUR_LARGE_POSITIVE_FOUR_NEGATIVE_PAIRS_REPAIR.md)：≤4正各≥4、≤4负二、其余负≥3任意、D7、底集任意，有≤4红修复。交点x初试失败使r2的F2全部共享、r3的F3至少共享一点f；改x蓝后，旧负二xf虽已满足，仍占f原次数，给关键4>3。r2按剩两负二的最小F次数完整分流，允许平行索引。root推导/独立Sol全文核及136个小K域实际PASS；Grok有效全文静态审，无程序/Lean。实际收益见全部纯P3规范，不把门成立当成任何H输入已满足。
+
+## L72. 少量负三与多一个负二互换，保持共同索引预算
+
+[三大正／五负二／11负三](../../../../knowledge/archive/proofs/propertyb35/THREE_LARGE_POSITIVE_FIVE_NEGATIVE_PAIRS_REPAIR.md)无D：三正交点若所有两红被堵，至少四负二为同一星；禁中心和剩一负二的一点，留下正≥2,2,3，12>11。它与[四大正／五负二／两负三/D7](../../../../knowledge/archive/proofs/propertyb35/FOUR_LARGE_POSITIVE_FIVE_PAIRS_TWO_TRIPLES_REPAIR.md)共同覆盖新的实际r8入口。后者的非共同点紧支强迫全部2N2+2T后换色，至少6个四红对原红锚至多2负四。独立Sol曾找到v2错误分类K={fg,fg,ab}，已改保留ab并用4>1+2；4495小K域/root重放通过。Gemini首轮复述旧错误，后续有效SUCCESS明确承认漏检、撤回旧子句并实际重读修正，确认4>1+2闭合；两个门现有准确范围内静态审阅，未执行程序/Lean。实际I1恰三高迹及全部纯P3 caller已获Grok有效全文静态审阅，未执行脚本或Lean。
+
+## L73. 二级择优后再择度超额：共同容量取等传播低点
+
+[GENERAL_SOURCE_REDUCTION](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/source-selection/general_min_blue_20261020/GENERAL_SOURCE_REDUCTION.md)在同一唯一低坏源域按(b,u,δB)依次最小化。低红sink h与其唯一private蓝邻y的合法交换若u中性，则δB'=δB−(d(y)−6)，三级最优迫y也低。共享N2两端容量取等时，整批邻点全低；再maxsink只能得一般owner流式 |P_y\X_h|≤|X_h∩S|，不能漏右侧被N3迁移消掉的旧sink。零u低sink统一t≥15−b，紧型A/B同时覆盖b9…12；共同红owner价格给b8/9/10各必要式u+3c≥21、u+2c≥5、u+3c≥2。root全文核及小整数重放PASS；新一般范围未跨家族审阅。无新完整原H分支闭合，尤其不保证sink存在或u/c为零。
+
+## L74. 加权唯一坏边：一份实际源同时带多个指定点
+
+[UNIQUE_BAD_EDGE_FAMILY_MOMENTS加权版本](../../../../knowledge/archive/proofs/propertyb35/UNIQUE_BAD_EDGE_FAMILY_MOMENTS.md)令固定整数边权0≤w_e≤W、Y=Σw_e1mono。非B下X≥1；若唯一坏边权最多s，则逐态Y≤2W(X−1)+s，故pΣw_e−2W(Mp−1)>s强迫唯一坏边权≥s+1。取w_e=|e∩U|把Σ权换成指定点族度数和；22点唯一七度的单位池h≥14因此可选平衡唯一坏边含至少两单位，概率≥37/228。root全文与小算PASS，新一般范围未跨模型审阅；不保证坏边含中心x，也没有消除私有阻塞或完成22点。
+
+
+## L75. 平衡删星与总重叠盈余：先保证真正可用的强源
+
+[BALANCED_DELETED_STAR_SOURCE](../../../../knowledge/archive/proofs/propertyb35/BALANCED_DELETED_STAR_SOURCE.md)：中心link覆盖N点，d个(k−1)集总excess e=(k−1)d−N。两色各t个单色link会占至少2t(k−1)−e个已定色点；余自由≤F=N−2t(k−1)+e。每份有色索引选择的平衡概率≤C(F,⌊F/2⌋)/C(N,a)，共有C(d,t)C(d−t,t)选择。与同一随机染色的(M−d)个删星原边坏概率并界，严格小于一便同时得到proper删星和minmono≤t−1。
+
+21点、35边、任意指定degree6中心：29·21/646+90·70/C(20,10)=90237/92378<1，非B下直接得到蓝10、唯一红坏边含指定中心的实际源。无需其他点度、tau或星划分。22指定degree7仅得至多两条坏星，规范坏色红后蓝可能10/11，不误写唯一或固定平衡全图。root全文/Fraction实跑与独立Sol完整核查通过；Grok有效全文静态审阅，未执行程序，没有Lean或完整原H修复。
+
+
+### L75加强：任意21点六度中心，两色各一单色link
+
+同[源规范末节](../../../../knowledge/archive/proofs/propertyb35/BALANCED_DELETED_STAR_SOURCE.md)以六个四元link覆盖20点，重复成本4分成1+1+1+1、2+1+1、2+2、3+1、4五型。简单性排交数4，逐对同色概率精确计数给两色坏分子至多8294/8734/7590/6050/6380。与同一H−x的29条原边风险174174合并，统一4157/4199<1，至少1848份10/10平衡proper删星染色，两色单色link各≤1。非B下恰各一，唯一红坏G含指定x、N4(x)=1、两个星坏边交恰为x。root全文重推及实际运行5901raw/5886合法重复支持核PASS；新Gemini4有效全文静态审阅，独立手算全解析与原源接口，未运行程序/审下游修复。A1仅第一型，有更紧319/323。此源无需minblue/private假设，不能与另行优化的私有性拼接，也不保证原H修复。
+
+
+## L76. 全局一次翻色：把唯一坏边五点的私有保护同时收费
+
+[GLOBAL_PRIVATE_PAIR_REPAIR](../../../../knowledge/archive/proofs/propertyb35/GLOBAL_PRIVATE_PAIR_REPAIR.md)对任意k≥2均匀H和均匀a红样本成立。X为单色原边数，S为有序(G,F)的反色私有事件，p/q是其精确无放回概率，n1是无序交一点边对。算法仅在X0或唯一坏G有一个无反色private的点时成功，逐态失败≤X/2+S/(2k)；EX=Mp、ES=2n1q。因此Mp+2n1q/k<2直接给原H染色，无临界或删图前提。35边五元的21/22、23/24、25点阈值分别为n1≤396、365、337。A1的W648/T140+τ给反例必要3n3+8n4−2τ≥29，混合项不能拆成错误二分。root全证明与Fraction实跑、Grok有效全文静态审阅分别记录；Grok未执行程序。
+
+## L77. 全局两翻路径：唯一private允许消除第二个坏边
+
+[GLOBAL_TWO_FLIP_PATH_REPAIR](../../../../knowledge/archive/proofs/propertyb35/GLOBAL_TWO_FLIP_PATH_REPAIR.md)把X1时恰一private的g与该private里h同时翻色。新坏边只能是原h-private且避g；失败迫三条同H原边的有序路径(G,F,J)。若Z计这些路径（不要求F唯一以放大期望），失败时Z≥(k−1)(2k−S)+，逐态失败≤X/2+(S+Z/(k−1))/(4k)。路径outer交j有精确r_j，EZ=2ΣC_j r_j，C_j共享middle原索引，单个c≤min(M−2,两差集的degree−1和)。所得充分界直接给原染色，非源假设。21/22 Δ9的A1展开迫9918n3+24138n4−6150τ≥147106；它排除一次翻色矩中一份幸存抽象分布，但新矩仍可行。root全推导/全文与259局部颜色型/Fraction实跑PASS，Gemini有效全文静态审§1–5、未运行程序；没有Lean或整H枚举。
+
+## L78. 四交核含低点时，先用真实中心星闭合少数非严格项
+
+[高四交低核完整报告](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_edge_intersection_repair_20261020/REPORT.md)：21点A1角色，任两边四交核含六度x或唯一七度p则原H可染。x核强制三名重复八度B，完整36库存全严格；p核四种度向量共4254完整必要标签，4246严格，8初残按同H真实x星的h向量恢复59五锁全严格。包含数Möbius与整数星边际两种独立表示逐键相等，带索引35原边重放PASS。它又补齐99/c≥5严格门，结合实际角色及旧78/79/88/89门，A1非B的全部点对λ≤4。root已读完整覆盖/VERIFY源码与证据，root实际8个关键原35caller已PASS；新Grok实际caller范围在途。整A1高三交和纯高四核仍开放。
+
+
+### L77加强：middle边必须避交核，同一顶点度数可共享收费
+
+规范§6以t_w计outer交恰w的边对，所有middle F避w，得C1≤(M−Δ)n1+ΔW−Σd*C(d,2)。A1为26n1+339；outer四交的middle必含两个差集点，结合L78全λ≤4得C4≤4n4。root推导/全文及精确CHECK实跑PASS，反例必要式加强为8838n3+17826n4−5430τ≥259248，至少15个三/四交边对；无四交时三交至少30，无三交时四交至少15。该附节晚于Gemini§1–5审阅，新的Grok范围在途。旧PSD放松仍有精确可行分布，不宣称实际H或整A1闭合。
+
+## L79. 完整六点top先迫唯一库存，再用一个固定概率界
+
+[TWENTYONE_K6_TOP](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_K6_TOP.md)的实际核心可用更一般假设：21点35边点对覆盖、Δ≤9、全λ≤4、有六度x及K6^5 top Q。Q每点覆盖外15点迫至少9度；其内部点对λ4已饱和，故六top外仅24个Q单迹和5空边。x六条边须各遇不同Q，七锁真实迹唯一为6top/6xq/18q单迹/5空。锁Q在9…14、x在1，Σmin(A,B,C)=485/572<1，全link扣除0，给原H贪心染色。A1的λ≤4由L78强pair门导入，所以这一完整结构子类闭合。root全文核并实际原35索引/1190有序对重放PASS约0.0033CPU秒；新Grok实际caller审阅在途。原两近划分永久式18路线遗漏空5边的全蓝风险，已明确不作为最后证明依赖。
+
+
+## L80. A1全八度四核：两份四锁初残必须共享同一低中心星
+
+[TWENTYONE_A1_FOUR_EIGHT_CORE](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_A1_FOUR_EIGHT_CORE.md)：H为21点35条互异五边、覆盖所有点对，A1实际角色为唯一六度x、唯一七度p、九名八度、十名九度；x与p/五名八度/全部九度共度一，与另四名八度共度二。若两条原边的四点交核K全为八度，则原H可染。先由[L78强pair实际进口](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_HIGH_FOUR_CORE_LOW.md#2-a1非b的强共度引理)排掉核内λ≥5，再用q=μK≥2、paircap4、非负库存及行盈余≤12得到2119完整必要有标签四迹／174个S4轨道（q2/3/4为2022/96/1）。172轨道固定界strict，最大24249/24310；两原始非strict型完整保留，不以数量比作原图覆盖率。
+
+两初残是quad2加四single6/empty9，以及quad2加一份matching两pair1、四single5/empty11。真实中心星的hT同时满足0≤h≤μ、Σh6、四个核点x共度各1或2、hK≤1；最后一项是simple5原边约束。不能将八度核自动当单位，也不把全部link当分割。恢复同一35原边五锁ν(2T+1)=hT、ν(2T)=μT−hT；两型完整h域27／82标签，由各自真稳定子压成8／28代表，36项全strict、最大581/585。它们闭合的是所有实际全八度四交核，不外推到8/9混合四核或高三核。
+
+源码／证据：[完整域与报告](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_four_core_generic_20261020/REPORT.md)、[独立VERIFY.py](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_four_core_generic_20261020/VERIFY.py)、[VERIFY.json](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_four_core_generic_20261020/VERIFY.json)。独立inclusive-Möbius四核域与occ分块h域逐键相等，验证真S4／稳定子运输；174四锁（含两诊断初残）+36五锁各按35带索引原边、1190有向异边对和21位置独立重放。root已全文核规范和VERIFY源码，并实际执行该独立验核PASS，210份库存、CPU2.090254；这是本机确定性证据，非第二机器复现。新完整caller范围尚未跨家族审阅，MCP849／870的pending不写成PASS。没有新增Lean，A1／21／36整题仍未闭。
+
+
+## L81. 八／九度四核出现至少三次：度保持运输即可完整修复
+
+[TWENTYONE_HIGH_FOUR_CORE_MULTIPLICITY_THREE](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_HIGH_FOUR_CORE_MULTIPLICITY_THREE.md)：H为21点35条互异五元边、覆盖所有点对；四核K的四个实际点度均属于{8,9}，核内六个共度≤4，且至少三条原边含K，则H可染。不需要六度中心或其余点最大度假设。q=μK仅3/4；q3时至多一个三迹，无三迹给64种，有一三迹给32种；q4仅一种，合97高迹。五度谱各97，共485标签，按各度保持真群得到16/31/41/31/16共135轨道，不能交换八度与九度标签。单迹由度、空迹由35边恢复；嵌套纯单迹／总link扣除保留同一索引，不重复收费，全部固定证书strict、最大12003/12155。
+
+[完整域报告](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_four_core_mixed_q3_20261020/REPORT.md)、[独立VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_four_core_mixed_q3_20261020/VERIFY.py)以inclusive共度／三点数Möbius另生全部485键，逐键相等，再按35原索引、1190有向异边对及21位置复算。root全文核规范／源码并亲自VERIFY PASS，CPU1.282355。Gemini EIGHT_QUAD_AND_Q3_CORE有效SUCCESS完整静态审两四核、生成／VERIFY及P1接口，未运行程序；其范围不覆盖完整A1。A1由L78进口提供全λ≤4，所以任一八／九度四核只能有至多两条原边，是实际反例必要条件。
+
+## L82. 六点top缺一面：真实外点覆盖把任意高迹压成K5团打包
+
+[TWENTYONE_A1_FIVE_TOP](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_A1_FIVE_TOP.md)：A1的实际21点／35边／点对覆盖及六七八九角色下，六点Q若含其六个五子集中的至少五个，则H可染。完整六面另用L79；恰五面写Q={q0}∪Y、缺Y，q0在五面中、各yi在四面中。全λ≤4使q0yi饱和；覆盖外15点及Δ9迫q0度9，其余四条边都是q0单迹。各yi度8或9，非top高迹T⊆Y按点对至多一次，故是K5上2/3/4团的pair-disjoint packing；五迹补第六面已另排。度8点的外覆盖行加权≤1，单迹／空迹唯一恢复。所有高迹打包2624标签，六个8/9度向量筛后3403必要标签、177度保持真轨道。
+
+177项均用同一六锁位置9…14、link扣除全0，最大2036/2145<1，直接返回同一原H染色；没有扩真实x星。[完整报告](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_five_top_repair_20261020/REPORT.md)、[VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_five_top_repair_20261020/VERIFY.py)用25个可能团的独立include/exclude恢复2624打包及3403完整键，核真群及177×21=3717行原35索引概率。root全文核并亲自VERIFY PASS，CPU0.661463；新增五面范围尚未跨家族专审。它不把任意五条四交边对当作top，也非整个A1闭合。
+
+## L83. 非一交图秩与同一平衡源的森林扣除：统一限制四交边对
+
+一般引理见[TWENTYONE_A1_BALANCED_STAR_FOREST §4–6](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_A1_BALANCED_STAR_FOREST.md)：n点上的m个互异k集，k≥1、m>n、n<k²，按交数≠1相邻的图Γ满足森林秩r≥m−n+2。无需度、点对覆盖、染色或连通假设。实关联矩阵A给AAᵀ−J=A(I−J/k²)Aᵀ；中间矩阵正定，任意至多三行互异等重0/1向量独立。按Γ分块，nullity≥m−n，而每个大小≥3块至多贡献s−3，m>n迫至少一个大块，因此nullity≤r−2，得结论。严格n<k²是必要进口，不能省略。
+
+实际A1删x后29条互异五边在20点上，故rΓ≥11。六link的四个二重点编码成六标签四边多图；LOW四核排三重平行，完整2835标签经真S6为18轨道。同一20点10/10空间D=184756，C为某色无单色link，独立IE及三worst直接着色核给|C|≥164896。29原坏边总计174174，原异边按交0/1/2/3/4的同时坏整数权为506/22/132/572/2002。若删星四交图rank≥4，取其四森林边，**在同Γ内**扩至11边，再补到29点树，单一Hunter扣除至少4·2002+7·132+17·22=9306；同一C交proper删星至少28份，给原H染色。所以非B删星四交rank≤3、边数≤6。L78 LOW核及L81三重核两个实际修复进口又给跨x星四交≤5（含p的一条星边不可，余五条各至多一），从而原n4≤11。主证不依赖L80全八核、L79六top、L82五top、diamond或旧异常星分流。
+
+[完整2835域／18轨道数据](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_balanced_star_forest_20261020/RESULT.json)、[独立VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_balanced_star_forest_20261020/VERIFY.py)另生完整mult0/1/2域、相邻换位群像、另一IE及三worst直接184756色核。root全文读主证§1–7并亲自运行PASS，CPU0.494742；一般rank由root提出、Sol独立核，Gemini盲text有效SUCCESS独立证明rank和**给定同一C下**9306接口，没有读取forest规范或18源域；完整旧forest专项Grok898已有效end_turn静态审阅主证§1–7／源代码／证据摘要，未运行程序。n4≤11为已接受纸面必要条件，仍非A1可染。52CPU反向probe仅给一个真实Hbar样本最大树F11176，独立Prim/Kruskal/rank一致，未找到≤9278；它不能证明所有Hbar都有F>9278，也不是原A1反例。后续共享middle已另由root全文／小算验核，见L84；联合threshold诊断仍与解析主结论分开。
+
+
+## L84. 同一middle原边的五附着组共同预算
+
+[GLOBAL_TWO_FLIP_SHARED_MIDDLE](../../../../knowledge/archive/proofs/propertyb35/GLOBAL_TWO_FLIP_SHARED_MIDDLE.md)：简单五元H，对每个原middle F及g∈F令t(F,g)=#{G:G∩F={g}}、s(F)=Σg t(F,g)。实际无序outer路径总数P=Σj Cj=ΣFΣg<h t(F,g)t(F,h)，ΣF s(F)=2n1，不多乘2；有序Z的期望另为2ΣCj rj。五组在同s下平衡最大，给f(s)整数式；35边时P≤(132n1+66N34)/5。A1真实xp单位及x-V单位按原边度和迫N34≤9，故P≤(132n1+594)/5，不能给每个outer分别造满middle。
+
+在Δ9／全λ≤4下，三交outer的通常容量16若取等，四个差集点全9、四跨对各λ4、同侧λ1，唯一原35四锁库存为空17、同侧pair各1、四跨pair各4。其固定证书250309/437580<1，故非B共同C3≤15n3。以最低路径价120先收共享P，再收各交型溢价，原两翻算法给A1反例必要
+
+    522n3+1175n4−313τ ≥21538。
+
+联L83的n4≤11和同一实际边对矩，解析推出τ≤30、n3≥17；均是必要结构，尚未矛盾。更强threshold singleton图凸度和压缩及共同cap联合松弛保留219profiles，数值最小n3=21、总高交32；这是必要诊断而非实际H构造或原题完成。
+
+[证据目录](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_wedge_capacity_20261020)、[CHECK.py](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_wedge_capacity_20261020/CHECK.py)、[ROOT_SATURATION_REPLAY.json](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_wedge_capacity_20261020/ROOT_SATURATION_REPLAY.json)。root全文核规范（含九exception、底价、唯一取等库存、threshold压缩及算法），实际CHECK PASS58797 tuple／scalars，0.043622CPU；原35取等证书独立replay亦root实际PASS。GRAPH_PILOT完整profile为agent实跑，root已读代码但没有重跑全域，不能合并成root全域复现。Gemini902补全forest／shared-middle专审在途，未记PASS；twentyfour的c3≥14近取等修复和twentyfive普适加权树纸面尝试均未完成。没有新增Lean或闭合整A1。
+
+
+## L85. 三交outer近饱和：真实四差集亏损至多四可完整修复
+
+[THREE_INTERSECTION_MIDDLE_NEAR_SATURATION](../../../../knowledge/archive/proofs/propertyb35/THREE_INTERSECTION_MIDDLE_NEAR_SATURATION.md)：H为21点35条互异五元边且paircover；原G,J交恰三，四个差集点度≤9、六共度≤4且至多一个7度。若不同singleton附着的实际middle边数c(G,J)≥14，则H可染。每个middle在四差点上的trace是四个cross pair之一，但并不倒称所有cross边都是middle。四cross精确总t≥c，故14≤t≤16、各≤4；两个原outer给同侧pair各至少一，余非cross关联≤36−4−2t≤4。总cross spare≤2又排quad、至多一个triple，完整必要域167标签（150/16/1），真marked-pair阶8运输为34轨道（30/3/1），实际度随点一起运输。
+
+固定原35索引／无放回概率证书全strict，最大88204/109395；[context完整正文与证据](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_near_saturation_20261020/PROOF.md)、[VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_near_saturation_20261020/VERIFY.py)另从度tuple／cross deficit／无quad至多一triple构造全167键，与发现域逐键相等，34代表按35stub／1190有向异边对重放。root全文核并亲自VERIFY PASS，CPU0.346907；新跨家族scope在途。实际A1由强pair进口满足条件，故非B每三交outer有c≤13、C3≤13n3，联L84同一P预算给新必要式494n3+1175n4−313τ≥21538。旧15cap规范保持原审阅版本，不默改。
+
+[独立过滤脚本](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_near_saturation_20261020/FILTER_N4_8_INDEPENDENT.py)仅对保存80份cap13松弛加已证n4≤8，保存[25完整profile](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_middle_near_saturation_20261020/FILTER_N4_8_INDEPENDENT.json)，核原矩／门槛和精确witness，minn3=29、n3+n4=37。witness n=(34,519,5,29,8)、τ0、P13074、C=(0,12545,120,377,32)、L2730456仍存。不是H生成／分类或原H可实现性，也没有跑新负布局。
+
+## L86. 真实删星度谱加强非一交森林秩：无需分量分类即n4≤8
+
+[TWENTYONE_A1_STRONG_FOREST_RANK](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_A1_STRONG_FOREST_RANK.md)：A1实际21点35边paircover角色及x邻共度如L80，非B必n4(H)≤8。Hbar删x的29互异五边／20点谱恰6^5,7^5,8^10，Wbar460。非一交图Γ孤立边度和33，其类型仅(六七八数)S=(2,3,0)、T=(3,1,1)；每型≤2且两S两T共存不可能，所以孤立≤3。
+
+正定关联分块Gram保持行秩；一个s行等重二进制分量行秩d满足s≤2^(d−1)。设Γ森林秩r、非平凡分量h、L=Σceil(log2s)，有h≥26−r、L≤r−9、L≥h，排r≤17；r18使h≥8、L≤9，仅可能全2行块加至多一个3/4行块，nullity≤1却需≥9，矛盾。因此r≥19，纯纸面不需partition或cube。
+
+同一A的centeredGram AAᵀ−(5/4)J半正定rank≤19，二阶迹与原矩给Q=Σ(j−1)²aj≥109，故a0+a3+3a4≥28。旧L83已排四交rank≥4；若其rank恰3，则a4≤6，heavy(0/3/4)至少16边、rank≥6。嵌套Kruskal单树权F=616+110r0234+374r034+66r34+1430r4≥9438，联同一平衡Cmin得160成功色态，与非B矛盾。于是删星四交rank≤2／边≤3，加旧准确跨星≤5得n4≤8。没有抽临界图、没假定Hbar paircover或将几棵不同树拼接。
+
+root已全文逐步核主证及独立Fraction标量PASS：[STRONG_FOREST_ROOT_CHECK.json](../../../../knowledge/archive/context/propertyb35-paper/round01/root/STRONG_FOREST_ROOT_CHECK.json)。rank≥20／cube只是另外补充，不进入本n4≤8证明；rank≥21尚未成立。新Gemini912已有效SUCCESS完整静态审新规范§1–6及旧接口、未运行程序；认可限rank19／quad8，不覆盖最新critical-core或全A1。剩四交rank0/1/2的普适加权阈值仍开放，原A1／21／36未闭。
+
+
+## L87. 原图孤立上限与极小非B边核：不同图上的两种真实限制
+
+对实际A1的原35边非一交图Γ，孤立点N34意味着该原边与其余34边都交一，故Σ_{v∈e}d(v)=39。八九点边度和至少40，候选仅X=x+3U+V、P=p+4个八度、Z=xp+U+2V；X/Z的八度点必须unit-U，否则与另一x星边交至少二。互异孤立边两两只交一，X≤1、P≤2、Z≤1。若四条同时存在，两P的八度部分互不交并覆盖八个八度点，且都避Z中的U点；X与Z只交x，故X的3U都落这两个P，交数之和3而两P各与X交一仅总2，矛盾。因此原Γ孤立≤3。这是root提出、另一Sol独立核的纸面事实；它不同于L86删星29边的孤立≤3，不能用删星谱替代证明。
+
+更一般的[CRITICAL_CORE_LEMMA](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_critical_core_singleton_degree_20261020/CRITICAL_CORE_LEMMA.md)：若所有≤b条k边均可染，则任M边非B的H含极小非B边子族K、|K|≥b+1。对e∈K及v∈e，proper(K−e)使e单色；翻v若无其他新坏则染好K，矛盾，因此有原f∈K使e∩f={v}。不同v需不同f，故singleton图在K上的诱导子图min-degree≥k。它**不假定原H本身edge-critical**，也不将删边后度谱套A1引理；每个v的proper色可不同，但存在式涉及同一K。
+
+以已验T33、M35、k5得≥34顶点诱导singleton core min5，因而全图至多一个singleton度<5，即原Γ至多一个q>29。root已全文核critical-core规范／REPORT／CHECK源码并实际CHECK PASS0.000361；后续principal separator PROOF全文核及CHECK实际PASS0.000554，component VERIFY亦实际PASS33867小graph和35点literal、CPU0.166349。各验核scope分开，不借其扩成实际H分类。无新跨家族审阅、未闭A1。
+
+
+## L88. 所有原边主子集的centered trace：真实Gram约束可直接变度数前缀cut
+
+对21点上的任意简单五元H，任取N条实际原边S，令a_j(S)为其无序异边交j的数量、e_S=Σ_{j≠1}a_j、Q=Σ(j−1)²a_j、T=Σ(j−1)a_j。只用实际关联矩阵A_S，B=AAᵀ−J=A(I−J/25)Aᵀ PSD且rank≤21，B0=AAᵀ−25J/21=A(I−J/21)Aᵀ PSD且rank≤20。trace与二阶trace的Cauchy分别给
+
+    Q≥8N(N−21)/21,
+    Q−(8/21)T≥152N(N−21)/441。
+
+后一式的21Q−8T按交0/1/2/3/4逐项系数为29/0/13/68/165，且≤68e_S+97a4(S)，因此完整原子集必要式为
+
+    1428e_S+2037a4(S)≥152N(N−21)。
+
+若独立已证整H四交边对n4≤t，则a4(S)≤t；结合独立集≤21与Q的两种上界，得
+
+    lower(N,t)=max{0,N−21,
+      ceil[8N(N−21)/189],
+      ceil[(8N(N−21)−105t)/84],
+      ceil[(152N(N−21)−2037t)/1428]} ≤e_S。
+
+无pointcover／均匀点度／A1要求；S不需保持原谱。对35原边非一交图Γ最高度q1≥…、总边E，删前r个节点R后N=35−r，精确Σ_{i≤r}q_i=E+e(R)−e(S)给prefix≤E+C(r,2)−lower(35−r,t)。这不能移植到任意凸压缩图，除非证明仍实际可实现。准确导入已独立成立A1 n4≤8时N34/33/32的centered lower为36/31/27；n4≤8证明不曾使用这些原35子集cut，所以无循环。
+
+实际A1进一步用原W648及逐删边度损耗，令t=n4、R0=E−60+2t，得q_F+2q4(F)≤R0，23条避x,p边更≤R0−1，因此q1≤R0、q13≤R0−1。删两原边的安全R_v∈{0,1,2}损耗放松给e(S)+2a4(S)≥50，故prefix2≤E−49+2t。它们需要真实A1度谱与unit xp，**不在上述通用Gemini审阅scope内**。Schur另对Γ独立集I及外节点F给Σ_{E∈I}(|E∩F|−1)²≤16，故独立邻居≤16；权3/4交分别耗4/9，不按1收费。
+
+[DERIVATION完整纸面](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_incidence_rank_subset_20261020/DERIVATION.md)、[CHECK](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_incidence_rank_subset_20261020/CHECK.py)。root全文读、centered与删1/2原创推导／另一Sol独立核及实际CHECK PASS0.000392；Gemini PRINCIPAL_TRACE_SUBSET有效SUCCESS独立纸面审通用主式／系数／lower／prefix，没有执行程序或核之后A1删边／DP。Grok同scope927仍running。
+
+L87及两个literal图的实际含义也已确认：principal separator root全文和CHECK PASS0.000554，两图都有3点cover、32I，故绝非21点原H实现；这不改变旧component松域上界／no-gain证明，也不把其中P13002称实际H或最大值。component独立VERIFY root实际PASS33867小graph／35点literal0.166349CPU。新实际Gram／n4／degreecut联合标量DP曾25→4，仍只是aggregate profile缩减，最终prefix2／Schur-pendant结果待稳定交付；本条不写成4个H类或整A1／36闭合。
+
+
+### L88最终共同degree松弛：同一PSD邻居容量，而非逐删最坏序列
+
+若Γ独立集I在F邻域，Schur平方预算≤16迫F至多16名degree-one邻居。令qmax为最大度、l/z为degree-one/zero节点数，其余35−l−z点度≥2，则qmax≤(35−l−z−1)+16，即qmax+l+z≤50。这一约束用真实principal PSD，不是任意图的普适性质。结合已经纸面核的删两边prefix2≤E−49+2t、T33 critical-core的q2≤29（不是全35点q≤29），以及全部profile-specific centered lower、q1≤R／q13≤R−1，给一个无T34附加导入的完整非增degree-sequence必要域。
+
+[最终REPORT §10](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/REPORT.md)、[PENDANT_RESULT](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/PENDANT_RESULT.json)、[PENDANT_VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/PENDANT_VERIFY.json)：主实现固定最大值layer递推，第二实现按degree重数递推，均完整覆盖原25松弛对应的19(E,t)参数；19个最大值及25个Fraction分配逐项相同。主batch0.071962CPU、独立frequency0.420767CPU，代理实跑PASS；root最终DP全文／实际重放确认尚待。没有仅删除某个保存的max序列来代替完整优化。
+
+最终只有三份aggregate仍过L门槛：(33,522,2,30,8;τ0),P12880,L2725920；(34,521,0,33,7;τ1),P12824,L2724000；(33,523,0,31,8;τ1),P12910,L2730480。此前第四份(34,521,1,31,8;τ2)完整新优化得P12850、L2722536<2722720，因而在该必要松弛中被排。三份仍不是实际图或H类型，A1／21／36未闭。旧25→4和前几档数据保留，最终无新T34依赖／graph或H搜索／锁表。前一L88段“等待稳定交付”由本追加取代；Gemini通用trace审阅没有覆盖本DP或后续A1删边。
+
+
+### L88稳定LOW19档：低块Schur秩是实际Gram约束，完整moments→25→3已root实跑
+
+令L为原Γ所有degree0/1节点，l/z为其两数。B[L]是[4]与[[4,b],[b,4]]的直和，|b|≤3所以正定。低叶各只耦合一个core点，低叶两点配对不耦合core；Schur消元只改core对角，保留非对角。若E>l−p（p为低叶配对数），core含原Γ边，Schur非零、rank≥1，故l+z≤20。当前E72…80满足条件。
+
+若l+z=20，则15点core的PSD Schur为rank1，非零坐标支撑是a点clique，其余15−a坐标对角0。后者需叶耦合平方和16，平方仅1/4/9，至多三项不能和16，故各至少四叶。支撑内至多一个对角>3，否则offdiag绝对值>3；其余a−1点各至少一叶。于是l≥4(15−a)+a−1=59−3a，l≤20迫a≥13。E=C(a,2)+l−p≥C(a,2)+ceil(l/2)，a13迫E≥88，a≥14仅clique已≥91，矛盾E≤80，故稳定cut **l+z≤19**。这是root原创／25及24独立核的纸面链，不依赖T34黑箱；更宽E<98补充不用于扩当前域。
+
+[REPORT §9–12](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/REPORT.md)、[LOW19_RESULT](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/LOW19_RESULT.json)、[LOW19_VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/LOW19_VERIFY.json)：两个完整DP分别fixed-maximum layer与descending degree-frequency，精确覆盖19(E,t)／25alloc；root已全文读REPORT及两C++／VERIFY.py，重编当前frequency源码并实际PASS CPU0.451305。前置[CAPACITY_FILTER](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_chordal_triangle_repair_20261020/CAPACITY_FILTER.py)root完整代码读及实际21615完整moment tuple→25 PASS CPU0.430333。τ域0…140来自原全λ≤4与Σ(λ−1)=140，非样本prefix。
+
+稳定残余仍同三份aggregate：(33,522,2,30,8;τ0),P12876,L2725680,余2960；(34,521,0,33,7;τ1),P12812,L2723280,余560；(33,523,0,31,8;τ1),P12905,L2730180,余7460。数值来自LOW19_RESULT实际存证；原PENDANT／LOW_RANK档保持历史，不称最终跨审数。三份仍不是实际H类或原H实现，不闭A1／21／36。Grok通用principal trace已有效静态审§1–3.1，未跑程序、不审这些后续A1删边／低秩；新cell940 Grok§3.2–3.3／Gemini§3.4–3.5专审pending，不能借原通用审阅scope。下一仅纸面rank2 Schur，不继续追加同类DP。
+
+
+## L89. 低非单交度直接修复与四交—tau耦合：把完整矩域接回同一原H
+
+[TWENTYONE_LOW_NONUNIT_DEGREE_REPAIR](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_LOW_NONUNIT_DEGREE_REPAIR.md)：21点35条互异五边、Δ≤9，Γ节点度≤1即可直接染色，不需要paircover／A1／critical。F一点红四点蓝，余16点9红7蓝共11440样本；red/blue附着坏样本792/220，disjoint exceptional的全色风险385。Γq0最小组≤6，q1 disjoint最小组≤6另加385，q1交≥2选共享红点使异常边proper、红组d(v)−2≤7；三全坏并界10912/11077/11264均小于11440。非B遂所有qi≥2，替代旧Schur low-count所有分流。
+
+[TWENTYONE_A1_QUAD_TAU_COUPLING](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_A1_QUAD_TAU_COUPLING.md)：实际A1非B，若n4=8，准确保留删星四交rank≤2／跨星≤5／星内0，便迫Hbar恰3条四交图边且是K3。三条实际五边两两四交有公共至少3点，三个原点对各λ≥3、各向τ贡献至少1，所以τ≥3。它依赖真实Hbar rank，不能只从孤立数值n4≤8推出。
+
+完整实际分支装配为[TWENTYONE_UNIQUE_SIX_ONE_SEVEN](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_UNIQUE_SIX_ONE_SEVEN.md)，假设21点35简单五边、paircover、唯一六度且恰一七度。六unit8池与175总度及x行盈余4先强迫A1完整角色6,7,8⁹,9¹⁰、四B二重／其余unit。之后完整矩域21615→T-only threshold25→真实全q≥2／principal／原删1/2前缀DP1→上述耦合排末τ1，得到该分支**完整自然语言候选闭合**。新主链不使用N34线性P、critical-core／T34黑箱或Schur low20/19/13探索；实现遗留q2≤29由top2≤47已冗余，zero/pendant在qi≥2时自动成立。
+
+[SIMPLE_CHAIN.md](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/SIMPLE_CHAIN.md)、[SIMPLE_CHAIN_RESULT](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/SIMPLE_CHAIN_RESULT.json)、[SIMPLE_CHAIN_VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/SIMPLE_CHAIN_VERIFY.json)、[SCALAR_T_ONLY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/a1_independent_set_degree_prefix_20261020/SCALAR_T_ONLY.json)。保存独立参数／degree-frequency与主layer19最值、25全部Fraction分配、21615/25全key一致PASS，最后唯一n=(33,523,0,31,8),τ1,D12827,L2725500由真实coupling排掉。没有生成H或假定DP最优序列可实现。
+
+Grok新direct/tau有效end_turn还全文审strongforest；Gemini新direct/tau有效SUCCESS只全文两引理，均静态未跑程序、不审新294行装配／角色／DP。Grok实际删1/2有效审DERIVATION§3.2–3.3仍在主链；Gemini旧Schur§3.4–3.5已有效审但该分流不再是主依赖。fresh native全链核在途、已实际独立重算并初步支持，正式报告与新完整Grok/Gemini审阅尚待。本条不写验收／verified，不升级全21或m(5)≥36。旧LOW19三残等历史阶段保留，已由候选简化主链替代停止点。
+
+
+### L89正式fresh核验更新（不升级候选claim）
+
+[正式fresh native报告](../../../../knowledge/archive/context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/native/PROOF_AUDIT.md)／[JSON](../../../../knowledge/archive/context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/native/PROOF_AUDIT.json)已PASS_WITH_DECLARED_IMPORTS，same-family／provisional，完整12units／42义务。实际重算150个threshold T值、另一参数化21615原矩域、重编主／频数双C++19键、独立25表／Fraction分配，确认21615→25→1→实际耦合0；未重新构造全部旧大局部证书，不是第二机器复现。两项MINOR措辞及表格进口归属已修正／回读，主数学和输入无变。
+
+root全文读主稿、两C++及audit/code；[ROOT_SCOPE_CHECK](../../../../knowledge/archive/context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/ROOT_SCOPE_CHECK.json)实际另核direct三类与13transfer标量PASS0.000546CPU，未重复完整DP。新整篇Grok／Gemini cell959在途，route／prompt同audit目录；claim仍drafted，完整分支为经fresh同家族支持的候选，不写已验收／verified，完整21／36未证。
+
+## L90. 完整六top的度数无关修复与21δ8完整top结构子类
+
+[通用PROOF](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_twentyone_top_repair_20261020/PROOF.md)：任21点35条互异五边，六点Q含全部六个五子集，若Q内各pair原λ≤4，则H可染。六top已饱和Q内部pair，余29边均至多含一Q点。六single组总m≤29，选最小两组Q点红、余四蓝，红single数a≤floor(m/3)≤9。外15点均匀8红7蓝，红／蓝single风险2/39、1/39，空五边总mono1/39；union≤(29+a)/39≤38/39<1。**不需要Δ、paircover或A1**。若另有paircover／Δ≤9，强迫每Q点9度／四single，24single＋5empty给37/39；165／330成功样本下界均在同一6435外色样本上。
+
+对21点35边paircover且δ≥8、含fulltop的完整实际子类，175总度盈余7使Q全9或一10＋五9；不是预设Δ9。任两个实际9点λ≥5由通用双锁五输入c5…9直接修复：精确迹(17+c,9−c,9−c,c)、位置10/21、link扣除0，最大4060/4199，未使用A1／其他点度／paircover。否则九点pair已被top饱和，非top若多Q迹只能10点中心＋一个9叶。每9叶四条外边需cover15外点，故这种二迹每叶≤1，形成r0…5简单star。r≤4选中心蓝、两叶红（优先配对）给风险(37+2r−4min(r,2))/39<1；r5改中心与一叶红给53/65<1。所有空／single／二迹与top均逐条覆盖，因此闭整个δ8／fulltop结构子类，仍非全δ8。
+
+[CHECK.json](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_twentyone_top_repair_20261020/CHECK.json)Fraction核所有权与六star规模；[PAIR99_SOURCE_CHECK.json](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_twentyone_top_repair_20261020/PAIR99_SOURCE_CHECK.json)独立恢复五个35stub输入，105位置行／5950有向异边索引对等于旧证书，非发现DP重跑。root已完整读PROOF／[TRANSFER](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_twentyone_top_repair_20261020/TRANSFER.md)及小证据并同意数学；新scope指定跨家族审阅另待。恰五top还可在paircover、Q点度≤9／Q内pair≤4下接原3403／177零扣除库存（Q外度数不限），但没有top的低边输入、或恰五top含Q高点的剩余不被自动覆盖。没有重跑五top原域，没有整H搜索／Lean；未规范的更强低Γ门不写入本条。
+
+### L89新整篇Gemini有效静态审阅
+
+[Gemini完整回应](../../../../knowledge/archive/context/propertyb35-paper/round01/audit-unique-six-one-seven-20261020/GEMINI_FULL_A1_RESPONSE.md)已有效SUCCESS，全文读新主稿295行、SIMPLE_CHAIN两C++／RUN／VERIFY及全部主进口，逐MAIN-THEOREM／MAIN1…11给静态PASS；没有运行Python、C++、Lean或重放全部底层局部大证书。它准确认可21／35／paircover／唯一六度恰一七度这一完整候选链，不覆盖全部21点或36。正式fresh native实际计算范围见前段，root小标量范围也不改变。Grok整篇cell959仍在途；claim保持drafted，不将Gemini意见当全目标验收。
+
+## L91. 21／22点非单交图最小度三：无角色与度数条件的直接染色
+
+对21或22点上的任意35条互异五边，令Γ以原边为节点，两边交数不为1时相邻。[规范完整证明](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_TWENTYTWO_MINIMUM_NONUNIT_DEGREE_THREE.md)给：任节点Γ度≤2则H可染，因此非B必minΓ≥3。**不要求Δ、最小点度、paircover或critical**。固定一原边一点红四点蓝，对其余singleton附着组及至多两异常边作实际有限平衡计数；q2的完整19个S5轨道不遗漏空迹或重复迹。阈值表只剩三个等号型，均有同一红附件组八条互异外四集。21点用16外点重合森林rank≥5，22点用17外点的四交集森林／三阶容斥，分别得严格余20／至少74。22另两七红附件型以七集合独立门处理。
+
+[21q2原始证明／独立阈值核](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/two_nonunit_direct_repair_20261020/PROOF.md)、[22八红17点门](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/eight_red_foursets_seventeen_20261020/PROOF.md)保留实际signed来源。八红门任8个不同四集、至多24个带索引蓝四约束，10红7蓝样本19448；最大坏样本19374，成功≥74，无原H／外布局枚举。root提出、不同Sol独立核各数学接口；root完整新canonical正在验核，新7／8红子门Grok／Gemini cell976在途，不冒称已返或整21／22闭合。
+
+## L92. A2／A3的全强共度统一削减
+
+[完整实际域与caller](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_high_degree_pair_gates_20261020/REPORT.md)：H21／35／paircover、唯一六度，恰两或三名七度的A2／A3分支，非B必全λ≤4。先对7≤d1≤d2≤13、d2≥10及5≤λ≤d1的118完整双锁输入核110严格；八个失败只λ5，其中六个需超出四单位总高点盈余而不可达。仅A3的(10,12)／(11,11)可能，预算取等迫真实六度中心与二者均unit；同一H三锁全三重数0／1的四输入皆strict。另六度中心共度5的重复星本身以平衡计数给proper删星源，与外29坏边并界严格；不留隐藏中心边界。
+
+独立35索引／不同注入概率重放125布局／2625行，root全文读并实际VERIFY PASS，CPU0.051591；严格高点双门max230293/230945，实际四尾max431383/437580。只证明实际A2／A3全λ≤4，可用于τ≤140等；**不导入A1 n4≤8／C3≤13，不宣称A2／A3已可染**。
+
+## L93. 完整六度星计数不需预排三重平行
+
+六个互异四集覆盖20点，则总重复成本四，重复多重数完整五型为2222／322／33／42／5。同多重数实际点无序且支持可重复，逐块容量≤4；只排四个multiplicity2点全同pair支持所致两link完全相同的15份，不能排三重平行。[完整覆盖与容斥证明](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_degree_six_star_count_20261020/PROOF.md)给5901 raw、5886 simple有效标签、真S6的41轨道：各型有效／轨道为3045／20、2400／13、210／4、225／3、6／1。
+
+20点均匀10／10染色中，令C为不会同时存在全红link及全蓝link的样本数，则**C≥164896／总184756**。五型各自最小C为164896、166792、167512、171134、177176；唯一最坏轨道支持01²＋02²。旧2835／18只取2222且平行≤2，新增加的三平行两轨道C165592／166462，均不恶化最小值。[RESULT](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_degree_six_star_count_20261020/RESULT.json)保存全41代表与群像；[独立VERIFY](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_degree_six_star_count_20261020/VERIFY.json)从56种支持按成本递归，逐5886完整键相等，以相邻换位生成全轨道，再用2NoRed−NoMonoEither的不同容斥核41值，实际PASS0.094227CPU。未逐星枚举184756色、未枚举H。可用于任21点paircover／指定六度中心的**星only**事件，不自动搬A1 Hbar度谱、rank或给原H可染；新全域的root重放／指定跨审另记。
+
+## L94. 四单位高点盈余下三交middle容量十四
+
+[条件规范](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_c3_high_degree_saturation_20261020/PROOF.md)：H21／35simple5，两实际外边G,J交三点，其差集四点内全pairλ≤4且Σmax(d−9,0)≤4。若至少15条实际middle分别singleton命中G,J且两点不同，则H可染。该条件自身迫所选四点度≥8；无Δ、paircover、A1或七度点数限制。全H若λ≤4且总高点盈余≤4，非B便C3≤14n3。
+
+饱和15／16个跨pair迹只余≤1pair容量，迫无三／四迹；真实两原边给两侧pair迹各≥1。剩库存完整1303标签／183标记双侧真群轨道；全部zero-deduction四锁严格，最大242713/291720。独立degree-first恢复域逐键一致并逐35索引／21位置行重放，VERIFY已由代理实际PASS1.342588CPU。root已全文读证明／域代码，实际VERIFYsession56999尚待确认；新跨家族scope另待。此为t≥15门，不是旧A1 cap13的自动替代，也不处理t14高点新域。
+
+### L91／L94本机root验核确认
+
+本轮同步后root回报：已全文核205行通用minΓ3 canonical、两个7／8红证明、q2 VERIFY源码，并实际q2独立VERIFY PASS0.000619。高点C3十四门root已实际VERIFY exit0：1303完整keys／183轨道、最大242713/291720、CPU1.415824；上文L94“root实际待确认”至此已被此实跑确认取代。新7／8红子门跨家族cell976仍pending，不能借本机验核写外部认可。通用Cmin新全星稿的root审阅仍另记，不混同旧重复支持source检查。
+
+## L95. 高交边对的共同wedge向原点对三旗收费
+
+[一般引理全文](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/high_intersection_wedges_codegree_excess_20261020/LEMMA.md)：任有限简单r元H（r≥4），以原边为节点、交r−1相邻的图Q，令W=Σ_F C(d_Q(F),2)，τ+=Σ_pointpair C(max(λ−1,0),2)。则
+
+    C(r−2,2) W ≤3 Σ_pointpair C(λ,3) ≤L τ+  （若全λ≤L）。
+
+按三个**同一批原边**计wedge，其图只可能贡献0／1／3；有wedge时共同点数至少r−2，所以三角贡献三不可重复独立收费。恒等3C(λ,3)=λC(max(λ−1,0),2)含λ0／1／2都合法，不需paircover。若Q有t边、M点，2t=aM+b，整数凸性给W≥(M−b)C(a,2)+bC(a+1,2)。五元／λ≤4时3W≤4τ+；M35且τ0只强迫t≤17，不独自完成染色。root原创纸面、Sol独立核；CHECK仅八个三节点图、恒等与36标量PASS0.000209，无H或自由布局搜索，新跨家族scope另待。A2／A3联合必要域诊断由另一模块处理，仍非整支已染。
+
+
+### L91／L93准确审阅与执行补记
+
+7／8红17点两子引理与22点q2原接口已获Grok有效end_turn（grok-4.7-build/xhigh）和Gemini有效SUCCESS（gemini-4-argon-high/high）静态全文＋手算认可，未运行程序。原始回应及精确归档见`context/propertyb35-paper/round01/reviews/{GROK,GEMINI}_SEVEN_EIGHT_RED17_20261020_RESPONSE.md`。只覆盖L91的22点q2尾，不声称两者全文读过205行通用定理。L93全星证明／源码root已全文读并实际VERIFY5886标签／41轨道PASS，CPU0.087894；仍为星only计数，不搬A1删星rank。
+
+## L96. A2／A3实际三重四核的共同六度星修复
+
+[完整133行证明](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_quad_core_multiplicity_three_20261020/PROOF.md)：21点35互异五元、paircover，四核点度7…13、总高点超额≤4、核内共度≤4，若核重数≥3，完整必要域6923标签／3809代表中3805严格，余四尾均为四点全10度且核重数3。无指定六度点的通用门这四尾仍非严格，不称全闭或H反例。若原H另有核外六度x且对四核点全λ(x,v)=1，四尾共同x-star完整23库存均zero-quota严格，最大1429/1430。因此A2／A3实际角色下不含x的三重四核可修复，并结合既有低四核／角色约束得实际n4≤13；不证明整A2／A3染色。
+
+独立inclusive-Mobius域／稳定子运输／35索引重放FULL_VERIFY实际6923／3809 PASS26.614547CPU（保留4 nonstrict）；不同递归partition和共同x-star ACTUAL_VERIFY 23库存／483行PASS，root实际执行CPU0.106626。root全文核证明与实际n4接口。新Grok／Gemini综合scope cell991仍待；没有fresh proof-checker，未新建verified claim。
+
+## L97. 已验T34局部输入使原35边低度图本身edge-critical
+
+[实际进口范围证明](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_quad_core_multiplicity_three_20261020/IMPORT_SCOPE.md)：任21点≤34边simple5且有degree≤6点可染。来源为已验≤20点局部结果、21δ5／δ6实际裸声明与保存成功日志；非cover可merge至≤20，cover先排degree5再补minimum6。没有借完整T34、RemainingGoal或保留merge后指定点度。
+
+故21点35边非B且有degree≤6点时，删每条原边后仍有该低度点，原H自身edge-critical，无需替换原H。对proper(H−F)，每个v∈F单翻必须有不同原边与F恰交{v}，所以每F至少5个singleton邻居，即qΓ(F)≤29。再合L91得到同一原H全3≤q≤29，适用A2／A3但不直接染H。root全文核源／日志导入说明；本轮未运行或恢复旧Lean。综合跨家族cell991待，无新proof-checker claim。
+
+## L98. 同一原H的度数敏感Γ前缀
+
+[规范全文](../../../../knowledge/archive/proofs/propertyb35/DEGREE_SENSITIVE_GAMMA_PREFIX.md)对任21点35simple5给度数敏感前缀，不需cover、低度、A1或critical。令W=ΣC(d,2)、S5为五最小度和，删除k≤13条边的W损耗≥k(S5−5)−4C(k,2)；与W′≤W结合，用同一实际子族的centered Gram／rank≤20给剩余Γ边数下界Bk，故前k大Γ度和≤E+C(k,2)−Bk。完整公式与取整见规范；真实边子族连接保持，不拼接不同H。root原创paper、Sol独立核正，新综合跨家族cell991待。完整度序列DP仍pilot未完成，排个别极端度序列不等于排交谱；无新verified claim。
+
+
+### L96–98旧综合跨家族返回与最终证明依赖更新
+
+Grok有效end_turn（grok-4.7-build/xhigh）及Gemini有效SUCCESS（gemini-4-argon-high/high），静态审阅四核／共同x-star／n4≤13、全星、旧局部critical进口与prefix，未跑程序。准确源范围及未重算项见`reviews/{GROK,GEMINI}_ACTUAL_A2_A3_AND_PREFIX_20261020_RESPONSE.md`。这不覆盖以下新L99–101或完整A2／A3稿；新完整链已不依赖L97旧T34 critical、q≤29或L98 prefix／DP，也不依赖threshold T。
+
+## L99. 实际唯一六度二／三七度的Γ最小度四
+
+[310行规范](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_UNIQUE_SIX_TWO_OR_THREE_SEVEN_MINIMUM_NONUNIT_DEGREE_FOUR.md)把21／35／paircover／minimum6／unique6／a7∈{2,3}的非B实际H压到每条原边qΓ≥4。q3完整91 marked角色／3276原标记经必要条件留下83源，79份五锁与47份共同六星六锁收尾；原实际迹／六度星共享连接见`middle/three_nonunit_direct_repair_20261020/`。q3证明不依赖强共度门，因此不与整篇引用循环。root全文及源码核，实际VERIFY_ASSEMBLY PASS0.324484。新全文native／跨家族审阅尚在途；仅候选数学进口，未新升verified。
+
+## L100. c14通用门给三交middle容量十三
+
+[完整定理](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/generic_c3_fourteen_gate_20261020/PROOF.md)：21／35simple5，两原边交三，其四个差集点内pairλ≤4且高点总超额≤4时，实际middle数量c≥14即H可染。全H满足两条件时非B遂C3≤13n3。无需paircover、六度中心、Δ或至多一七度。exactcross14完整7812标签／1144轨道全zero-quota严格，兼旧c15／16完整域；root全文核及实际VERIFY PASS9.114605。这是较旧L94的cap14进一步加强，新审阅须按本范围，不能用旧综合回应替代。
+
+## L101. 唯一六度中心实际q4修复与整A2／A3装配候选
+
+[局部门](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/four_nonunit_degree_six_center_20261020/REPORT.md)只对过唯一六度x的实际原边F：其余F点≥7、至多三七度、F高点超额≤4、F内pair≤4、六条x边覆盖其他20点，且qΓ(F)=4，则H可染。完整23751 marked／1563轨道，one-red门与局部约束余5源均zero-quota严格，不宣称任意Γ四度节点修复。root实际INDEPENDENT_VERIFY23751／40／5 PASS0.191566及5证书35索引replay PASS0.04375。结合L99，非B时六条x边全q≥5。
+
+[174行完整装配候选](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_UNIQUE_SIX_TWO_OR_THREE_SEVEN.md)覆盖实际A2／A3十六degree谱，用共同35盒s∈0…30的同P预算及L100／n4≤13，不依赖threshold／critical／prefix。两个不同moment生成法完整逐键给202必要键，真实点行τ≥4(Δ−10)留33：A2四谱全strict，A3余档E≤72。L101使六x边q≥5、其余29边q≥4，Σq≥146即E≥73，统一矛盾。202／33不是H分类。root全链code及实际NO_CRITICAL_CHECK PASS16谱1051box／202／33／全部allocations，CPU2.961054；没有重新运行旧Lean。fresh native U01–U16与新Grok／Gemini全文审阅cell1015仍在途，claim仅drafted。
+
+
+## L102. 无高点超额限制的21δ8非单交最小度四
+
+`middle/min_degree_eight_singleton_star_20261020/PROOF.md`从全3276／91 q3域、119 generic tail仅筛minFdegree8得到25键，F高点超额≤4是结果非前提。23旧五锁strict；C/D无空迹，实际外八度池≥15／16而坏迹budget11／10，故存在八条边全部为F单迹的外八度z。70完整正singleton向量六锁全zero-quota strict，最大141/143；独立35索引重放及root实际PASS0.240725。结合通用q≤2门，任21／35／paircover／min8非B均Γmin≥4；不需全λ≤4，也不单独染H。
+
+## L103. 真实δ8十五谱的三交容量十三迁移
+
+`middle/delta8_c3_capacity_transfer_20261020/PROOF.md`：21／35simple／min8且全λ≤4时，三交外边对的合法middle≥14即B，因此非B有C3≤13n3。15真实degree谱选四点共38multisets；33旧门import，5新型完整412labels／62真标记轨道全部旧3固定位置zero-quota strict，最大1427/1716；独立inclusive域与35索引重放PASS，root实际0.550966。无外点局部假设，不导入六度星或全n4≤13。
+
+## L104. 21δ8且全λ≤4的完整原H染色与十一无条件谱
+
+[新完整规范](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_MINIMUM_EIGHT_SMALL_CODEGREES.md)：21／35simple／paircover／min8／全λ≤4⇒B。L102、L103和同P30盒完整15谱1,166,584必要moment域使13谱strict；余两孤高谱由14／15实际高点的全部原边q≥5给E≥77／78，矛盾于必要档E70／≤73。高中心q4门的3角色23751完整域、12固定zero-quota尾全strict，最大11203/12012；root实际q4audit0.346337、scalarcheck1.721531。主链无critical／qmax29／threshold／prefixDP或n4≤13。新claim仅drafted待全稿审阅。
+
+强pair实际100参数中96strict，只余源8/9/11/12的唯一指定高pair共度5；因此其他11完整degree谱不另假设λ≤4也B。四谱若无该特殊pair5也B；余24三锁是必要松弛界未过，非H分类。唯一λ5的新路线单独推进，不放宽本稿前提。
+
+
+## L105. 唯一坏点对的共同容量误差：允许λ5而不硬排
+
+[一般定理](../../../../knowledge/archive/proofs/propertyb35/ONE_EXCEPTIONAL_POINTPAIR_CAPACITIES.md)：点对覆盖k元M边H令R=M C(k,2)−C(n,2)。若唯一例外pair uv共度5、其余≤4，则τ≤R+2。更一般其共度c>L时，C_{k−1}≤L n_{k−1}+(c−L)(min(d_u,d_v)−c)。例外独占外边对唯一注入u-only原边，未双计方向。对21／35／k5给τ≤142，C4≤4n4+5或6。允许唯一坏高pair并统一付费，可绕开24三锁未严格库存，直接用共同P盒闭四整谱；不应继续扩大该局部菜单。
+
+## L106. 完整21δ8原H染色候选
+
+[完整新主稿](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_MINIMUM_EIGHT.md)：21／35simple5／paircover／min8⇒B，不另假设小共度。全λ≤4用L104；否则完整100strongpair门只余四谱唯一指定uvλ5，其余所有pair≤4。L102无e限Γmin4仍适用；三交差集K不含uv时旧eF≤4局部门适用，含uv时14marked族完整425库存全zero-quota strict（max25963/29172），使当前同H C3≤13n3。L105两误差再接四谱315870完整moment双参数化全部strict，最大L依次2713662／2716104／2718702／2720004，最小余量2716。root全文核新主稿及实际425replay PASS2.955668、四谱独立315870 PASS0.600608。新整稿fresh／跨家族pending，claim仅drafted，非全21／36完成。
+
+
+### L101／L106当前审阅状态
+
+A2／A3已获native正式PASS_WITH_DECLARED_IMPORTS（same-family/provisional）和Grok／Gemini两份有效全文静态结论，精确claim现sound-modulo-imports。Grok未执行程序，旧CHECK注释q4..29与实际0…30盒不同仅留对账；Gemini5D清分母转录错误正确10D，原源码正确。L106完整δ8新稿仍drafted待其新完整scope审阅，不能借上述A2/A3回应扩大scope。
+
+
+## L107. min7 q3的锐化dirty并集与五个整图度谱（drafted）
+
+[局部推导源](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/min_degree_seven_clean_star_20261020/SHARP_CLEAN_POOL.md)对21／35／paircover／min7且实际q3边F，把dirty外点直接数为三异常边外部并集，五尾上界6／5／5／4／3，均保证一个clean r7或8。旧固定证书因此直接闭A/C/D/E，B的r8也闭，留下B三种r7向量与十种r9未严格向量。B的F七度点真实外重复预算4，clean7≤4；clean≥11、外部总超额17与无clean8／10压同一原H到5个degree谱。SHARP_COUNTS仅7种整数情形合并5谱及四边星三二元子集6形的有限检查PASS；root正在全文核，局部推导仍drafted，不升级一般min7 Γmin4或原H已染。新三谱moment即使q3count0仍有余已停；C3cap12／11敏感性及10^4单quad c13 pilot在途，不能记通过。
+
+
+### L106完整δ8当前验收
+
+新完整δ8稿已获native正式PASS_WITH_DECLARED_IMPORTS和Grok／Gemini两份有效整篇静态结论，精确claim现sound-modulo-imports。两跨家族均未运行程序；native实际U01–U13／45义务／10重放＋接口9.678778CPU范围保留。Gemini把70六锁最大抄为6569/6860，正确141/143（六C见证），仅对账更正统计转录，不改原回应或数学源。此验收不覆盖随后min7/c13新门。
+
+## L108. c13实际前三谱的四点域覆盖与外七度池
+
+`middle/c13_remaining_actual_quads_20261020/REPORT.md`完整32其余quad7977labels／1073真D8代表全strict；`c13_three_ten_nine_seven_pool_20261020/PROOF.md`修9,10^3唯一余轨道，实际外七度点避唯一singleton原边，470域全部strict。S1／S3实际只有三名10度点，故在全λ≤4条件下所有四点型均覆盖，非B必C3≤12n3。S2还含10^4，不能借此泛化。32quad为旧三四锁zero；470甚至zero亦全strict，新pure2只作有效加强，不冒称它是本型必要突破。
+
+## L109. 共享17外点列守恒的整数收费（最坏source局部）
+
+`c13_four_ten_seven_pool_20261020/shared_views/VERIFY_DUAL.json`独立完整2908views、2054低收费strict重放；同一实际17外点列总量的整数收费为192，而全部失败需≥204，故最坏source闭合。正确性依赖同H实际列守恒，不能只拼各点独立最坏库存。第二orbit在途，不记S2全门或三谱C3cap12完整通过；原zero5／470和pure187／470失败prefix原样保留。
+
+## L110. min7完整Γ四度装配与三谱cap12（drafted）
+
+[完整新稿](../../../../knowledge/archive/proofs/propertyb35/TWENTYONE_MINIMUM_SEVEN_GAMMA_FOUR.md)：21／35simple5／paircover／min7的非B输入满足Γmin4。L107五谱中高点clean门闭S4/S5；实际B型q3边至多一条，共381旗标与31质量、其余34个0..30盒给共同P1。三谱实际34quad全部覆盖：32型7977／1073、9,10³提升470全strict；10⁴旧304strict及六尾两轨共享17外点收费192<204全部闭合。最后252278必要矩键全strict，最小余量796。C3cap12仅在反证中的三谱调用，不作为任意Γmin4输入的性质。
+
+[审阅对账](../../../../knowledge/archive/context/propertyb35-paper/round01/reviews/gamma-four-assembled-20261020/RECONCILIATION.md)：Gemini有效整篇SOUND_WITH_DECLARED_IMPORTS仅静态，Sol接口PASS0.120844CPU为same-family/provisional，正式proof-checker未做，整体仍drafted。Gemini回应CAPACITY_LEMMAS链接错，不能当错误路径已读；真实文件在middle/a2_a3_joint_moment_frontier_20261020。旧Grok新scope有效completed，只认可q3唯一性和S2共享列六源，不是完整Γ4审阅。此条取代L109“第二orbit在途”作为当前状态，保留旧失败prefix及历史快照。全21δ7／36仍未闭。
+
+## L111. 同τ容量、真实顶点flag平方损失与低超额范围
+
+`root/tau_shared_capacities_20261020/{PROOF.md,HIGH_ROW_PROOF.md}`在全paircap4下，把最高度行与四cross点对按不相交pair成本合并，给C3的G_D(τ)、C4的真实差点matching及两高行去共同pair界。完整99个e≤4谱的λ≤4条件域8,042,299 source键独立PASS；旧阶段78谱strict／21谱119余键，并非99谱全闭。Grok有效grok-4.7-build/xhigh静态认可正文／接口，未跑程序；其后续“至多1个c13槽”不采纳，同K可对应多个共同三集T，需计匹配重数。[对账](../../../../knowledge/archive/context/propertyb35-paper/round01/reviews/tau-shared-capacity-20261020/RECONCILIATION.md)。
+
+`root/vertex_flag_capacity_20261020/PROOF.md`给新的通用共同P平方界：实际单交容量p_v扣真实相交quota，顶点均衡平方和下界B_*与35个b30盒平方和上界相减。无e／paircap假设；与旧P取min，不将节省相加。独立min-plus DP和63保存键实跑PASS_WITH_DECLARED_IMPORTS（same-family/provisional，非正式proof-checker），13实际全λ≤4谱中11整谱strict，剩ID90τ10及95τ8／9三键。`min_degree_seven_residual_cap12_pilot_20261020/LOW_TAU_PROOF.md`用同K六pair成本饱和、真实七度点避singleton的15+15视图／30证书630行PASS，再闭95τ8；余90τ10／95τ9两键。`root/dense_four_kernel_capacity_20261020/PROOF.md`用困难核族共同成本与实际multiplicity给C3≤12n3+18，root报告最后两键2L=5437440／5439576严格（余量8000／5864）。因此81个非B已强迫全λ≤4的e≤4完整谱现全部纸面闭合；dense独立对抗与Gemini新全文审阅仍在途，不升正式验证。不能写全99的λ≤4情形已闭，18个例外谱仍须逐子情形合并。
+
+唯一λ5的新P过滤另闭ID76／81，其对应λ≤4子情形均strict，18个例外谱现10个完整paper candidate／8开；具体原范围在unique_codegree_five目录与LAMBDA5_RESULT.json。所有这些只是低超额e≤4范围的进展，不是一般min7完成。Γ4主稿仍drafted；无正式proof-checker不升verified。
+
+## L112. 全e域的七度池预算与粗容量失败边界
+
+`middle/min_degree_seven_global_degree_scope_20261020/REPORT.md`：完整min恰7／21点／总度175的整数度谱3673，e≤4仅99。旧完整98个(7,D≥19)严格双锁键给非B Δ≤18；旧等度777含共度3的16个完整严格键给a7≥3⇒λ77≤2。不额外限制其他度或e。e>4在旧门后仍2668必要谱，不能把整数谱当H分类或进度。
+
+`middle/min_degree_seven_global_seven_pool_20261020/REPORT.md`对一条实际F含r个七度／k个非七度给共享预算D_F−39≤kqΓ(F)+C(r,2)。a7≤18；a18的五种高点型使EΓ≥84，含18度点则≥88，三高真实列再给不借全paircap的τ范围。新粗检仅首谱47μ投影36容量组、真正扫1组；用安全baseline4 C4处理仍允许的七／高λ4，角色流C3=23，共享顶点P与七池计数后仍10994必要余键，max2L6128484>5445440。详见COARSE_REPORT.md；失败后停止，无新布局／余980套moment扩扫。此例说明大e下共同P平方界本身不足，应保留同高迹／七度池的联合结构，不能复刷低超额容量。整体min7／36仍开放，same-family/provisional。
+
+## L113. 二十三点的统一Γ三度门
+
+[实际q2证明](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/twentythree_global_reduction_20261020/Q2_PROOF.md)只要求所选原边F的五点度至少七：23点35条互异五边中，若F有恰两个非单交邻边，则H可染，不要求外点度、paircover、临界性或共度界。核心[六红四集引理](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/twentythree_global_reduction_20261020/SIX_RED_PROOF.md)在18点/11红样本给共同扣除2616；19类异常迹阈值若全失败则附件和至少33，矛盾实际32。独立351标签迹对/150315必要附件库存全strict，最大31808/31824，保留重复迹与原边索引，未枚举H。结合旧23点q≤1门，得到23/min7非B⇒Γmin3。整23点原图染色仍未闭；已有experiment为partial，同家族独立核为provisional，无正式proof-checker或整篇跨家族验收声明。完整范围见[REPORT.md](../../../../knowledge/archive/context/propertyb35-paper/round01/middle/twentythree_global_reduction_20261020/REPORT.md)。
+
+## L114. 跨二十二至二十五点的六星owner与平衡唯一低坏边源
+
+[共同源定理](../../../../knowledge/archive/context/propertyb35-paper/round01/root/six_star_unified_20261020/sol/PROOF.md)令s=25−n，任指定六度中心的六四块重复总量恰s；在proper的29条删星边染色中最小化单色块数m，真实owner收费给E≥4m−s，无需星块不交。完全受私有边保护的一色至多14点，24点最小m因此≤5。对r个六度点，其含边族大小满足L≥ceil(36r/(r+5+s))，并有L≥6r−C(r,2)−floor(rs/2)。平衡随机染色的唯一指定族坏边界由此给22/r≥5、23/r≥6、24/r≥5、25/r≥5的平衡唯一低坏边源；中心在坏边中选择，不是预选中心保证。相应小r与唯一坏边修复仍开，不能称L6已证。
+
+[共同迁移续稿](../../../../knowledge/archive/context/propertyb35-paper/round01/root/six_star_unified_20261020/sol/SOURCE_CONTINUATION.md)保留整数cross超额w的奇偶绑定、中性低点闭包、全汇点共享二蓝预算与准确owner流。不能假设所有迁移中性或忽略旧汇点流失。Gemini有效静态审共同稿§1–3及24点推论，未跑程序；Grok有效初始讨论不覆盖后来续稿。实际范围见[审阅对账](../../../../knowledge/archive/context/propertyb35-paper/round01/root/six_star_unified_20261020/REVIEW_RECONCILIATION.md)。续稿小核244逐边/45逐pair/18659小owner配置PASS；仍为same-family/provisional，不扩大原有partial experiment。
+
+## L115. 十七点九红四集与二十二点min7的Γ四度规约
+
+[九红通用集合引理](../../../../knowledge/archive/proofs/propertyb35/NINE_RED_FOURSETS_SEVENTEEN.md)适用于17点上任九个互异红四集及22个带索引蓝四集：存在10红7蓝，使所有红四集不全红、蓝四集不全蓝。极大heavy-independent核剥离与局部Bonferroni给共同扣除至少2353，红影并集≤13091，加22蓝风险6292后至少65份成功样本。不需要度、paircover或原H存在。小核核全部核大小与局部分流，未枚举四集族；另一套兼容组件根族/novel证明独立给至少16份成功样本。
+
+[22点装配稿](../../../../knowledge/archive/proofs/propertyb35/TWENTYTWO_MINIMUM_SEVEN_GAMMA_FOUR.md)接无条件21/22 Γ三度门、22点重算的277必要profile/1045clean星及原35索引独立重放、实际坐标运输，最后source20..23用旧八红门，source24用九红门。结果准确为22点35简单五边/paircover/min7的**非B输入**满足Γmin4；没有排除整个22点输入，不等于全22或36染色。必要整数域不是实际H分类；最终集合门不需要175clean8表或共同池列见证。
+
+Gemini有效原回应给出统一短证，root/Sol已全文独立核正；[SHORT_RESULT](../../../../knowledge/archive/context/propertyb35-paper/round01/root/nine_red_shadow_20261020/sol/SHORT_RESULT.json)精确标量PASS。[审阅范围](../../../../knowledge/archive/context/propertyb35-paper/round01/root/nine_red_shadow_20261020/sol/SHORT_AUDIT.md)不把Grok在途组件审阅扩成短证或整22稿认可。当前为声明进口的纸面候选/partial实验，未登记正式proof-checker，same-family核保留provisional。
+
+## L116. 二十五点最小蓝13紧源的共同owner排除
+
+[规范引理](../../../../knowledge/archive/proofs/propertyb35/TWENTYFIVE_TIGHT_B13_EXCLUSION.md)：25点35条互异五元边、paircover、非B且有六度点，在全部唯一坏边含低点的源中依次最小化蓝数b、单蓝超额u、蓝度超额δ，最后最大化红汇点数，则不可能b=13、u=0、N2=2。先把同一批二蓝原边压成两边匹配，低汇点至多两个；高汇点共同割费至少3(d−6)，G内低点双owner收费迫c0、两个低红汇点、G恰一低z、owner重数2+1^9。匹配端点y均低且n4(y)=3。对同一匹配两端点，单owner集互不交；准确maxS流既迫z不在汇点的N3中，又迫全部四端点命中z的两N4。于是G、N1、N2、N3、N4无一能覆盖点对(z,h)，违paircover。保留同一原H及原35边索引，无独立拼接私有边。
+
+[完整独立推导与备用四翻](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/TIGHT_B13_REPAIR.md)同时核清四翻唯一潜在蓝坏N3{z,h}已排除，N1精确13→12，可再降蓝数；较短主证只用paircover。独立26256个owner角色投影中72可行、53130个五集的必要角色检查PASS，CPU0.046471秒，不枚举原超图。root/Sol全文核，same-family/provisional；Grok/Gemini本scope审阅在途，未登记正式proof-checker。仅关闭该完整紧边界，不是25点r≥3整支。相邻b12紧面与u>0或非紧N2仍按实际范围另列，详见[本次报告](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/REPORT.md)。
+
+
+## L117. 三匹配的高汇点价格与二十五点蓝十二紧面排除
+
+[完整规范](../../../../knowledge/archive/proofs/propertyb35/TWENTYFIVE_TIGHT_B12_EXCLUSION.md)：25点35简单五边/paircover/非B且有六度点，在唯一坏边含低点的全部实际源中依次min(b,u,δ)、max|S|，不可能b12/u0/N2=3。共同紧规约只剩三匹配、ℓ2/3低红汇点与额外owner量E0/1。对任红汇点x（不需低点），私有交换u′=u−(n1(x)−1)+ν_y，匹配给ν_y≤1，迫n1≤2。若ℓ3，高汇点n2≤1，且n2=1/n1=2会与两个已标记低汇点重复覆盖，故κ_x≥5；与低汇点N3相邻的高汇点在一般ℓ2亦需κ≥4。这是同一跨色预算的逐点价格，不给各中心重复使用全局余量。
+
+中性低点交换的准确流|P_y\X_i|≤|X_i∩S_high|，配合同一匹配两端点的单owner集互不交，排除E0及除ℓ3/c1外的E1。最后唯一双owner z的两N4命中全部六个已标记低端点，而z避全部X_i；G、N1、N2、N3、N4均不能覆盖(z,h)，违paircover。原始推导和有界receipt见[实际源目录](../../../../knowledge/archive/context/propertyb35-paper/round01/twentyfive/whole_class_attack_20261020/B12_TRANSFER.md)及B12_CHECK.py/B12_RESULT.json/B12_REVIEW.md。同家族独立核provisional，指定跨家族新scope审阅另记；仅关闭该完整紧面，u>0和非紧N2仍不在结论内。
+
+## 2026-10-20条件工具导航
+
+[面向36的条件工具集](../../../../knowledge/archive/research-wiki/PROPERTY_B_CONDITIONAL_TOOLKIT_36.md)集中整理五项可单独复用的结果：六星W≤25染色门及全λ≤2／r≥8推论、三划分二重同块界、19-hit＋相容剩余对染色门、整数超额图匹配权≥7、零单蓝超额的共同最紧二蓝面排除。每项列实际输入、结论、证明思想、原始证据及尚缺应用条件；保留最大权匹配策略的真实反障碍。条件结论已经成立与其应用条件尚未普遍保证分别记录，不由此宣称整支或m(5)≥36完成，也不追溯升级旧引理的审计／Lean状态。

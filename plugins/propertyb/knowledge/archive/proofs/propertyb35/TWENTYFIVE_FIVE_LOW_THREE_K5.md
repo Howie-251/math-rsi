@@ -1,0 +1,171 @@
+# 25点恰五六度点：三个七度K₅例外的完整证明
+
+本定理覆盖25点、35条简单五元边、点对覆盖、恰五个六度点，且七度点冲突图恰为三个不交K₅的情形。完整实际输入连接及独立精确证书已由主代理核查；本范围的跨家族审阅仍在进行。它是完整36证明中的一个条件分支。
+
+## 1. 实际输入与精确高点超额图
+
+设H为25点／35简单五边／pair-cover，恰五名六度点L。反设H非B，[小r低迹定理](TWENTYFIVE_SMALL_LOW_TRACES.md)给每条原边低迹至多二。
+
+固定七度冲突图恰为三个不交K5、七度点总数恰十五的例外。记这三组为A、B、C，各五点。其余五高点Y均度八，因为高点t=d−7的总和为五，五名非七度高点各至少贡献一。
+
+低点与所有其他点共度一。七度点超额行和四，其K5内四个邻点已各至少支付一，所以组内每对λ=2，与组外点对λ=1。全部非零高点对超额w=λ−1只在A/B/C内部（权一）与Y内部。
+
+对每个y∈Y，超额行和为4·8−24=8，且全部落在另外四名Y点。因此Y内w为五点非负整数加权图，每行和八，总权二十。
+
+记n_i为低迹大小i的原边数。低点对、低关联和总边数给
+
+\[
+n_2=10,\qquad n_1=10,\qquad n_0=15.\tag{1}
+\]
+
+## 2. 原始普通ABC证书先排λY≥5
+
+任何两Y点度均八，故1≤λxy≤8。c=6、7、8的两锁精确迹为
+
+\[
+\mu_{xy}=c,\quad\mu_x=\mu_y=8-c,\quad\mu_\emptyset=19+c.
+\]
+
+普通ABC位置(x,y)=(1,15)分别给
+
+\[
+1103373/1144066,\quad89515/99484,\quad478440/572033,
+\]
+
+均小于一。原始[两锁全参数证据](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/K5_EXCEPTION_RESULT.json)按25点、35边、真实八度重新核过，不借21点门。
+
+若c=5，取任意实际低点z。λzx=λzy=1使inclusive triple t∈{0,1}；精确三锁迹由这些度／pair／triple包含数唯一恢复。两个完整profile的普通ABC位置(z,x,y)=(13,11,25)分别给
+
+\[
+t=0:\ 297001/298452,
+\qquad t=1:\ 24680/24871,
+\]
+
+均严格。完整实际计数及独立逐行重放见[三锁程序](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/LOW_EIGHT_PAIR_CHECK.py)、[四profile回执](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/LOW_EIGHT_PAIR_RESULT.json)；c4两项保留为非strict，不以它们声称排c4。
+
+[普通ABC概率引理](../PROBABILITY_LEMMAS.md)因此对原H给染色，排除c≥5。反设下必有
+
+\[
+0\le w_{xy}\le3\quad(x,y\in Y).\tag{2}
+\]
+
+最终只依赖各自明确布局的普通界，不使用quota或DP最优性。
+
+## 3. λY=4点对的共同低中心数至多一
+
+固定Y点对x,y且λxy=4。定义
+
+\[
+q_{xy}=\sum_{e\supseteq\{x,y\}}|e\cap L|.
+\]
+
+这是低中心link同块次数，二低原边计两次。一般q≤λ错误，以下只在实际小门排除后推本特例。
+
+若一条xy共同边含两名低点z0,z1，则四锁度为6,6,8,8，除xy共度四外其余锁对均一，且四点同边。其精确四锁profile由这六个pair及全交包含数确定；普通位置(z0,z1,x,y)=(13,14,11,25)的界为394/399<1。完整pair-budget七项域及该严格profile见[四锁回执](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/two_low_gate/RESULT.json)。所以非B时四条xy边各至多含一低，且其低点彼此不同，q_xy≤4。
+
+设T为这些共同边中的低点。若q_xy≥2，选两名T点和一名L\T点；后者存在，因为|L|=5而|T|≤4。两T点在不同xy边中，任何涉及这两点之一的低点对原边都避x/y，否则重复低–高单位对。再由无三低原边，三低＋x/y的五锁迹唯一恢复。
+
+标签0、1为两T点，2为第三低点，3、4为x/y，完整计数为
+
+\[
+\mu_{25}=\mu_{26}=1,\quad\mu_{24}=2,\quad
+\mu_3=\mu_5=\mu_6=\mu_{12}=\mu_{20}=1,
+\]
+
+\[
+\mu_1=\mu_2=3,\quad\mu_4=2,\quad
+\mu_8=\mu_{16}=3,\quad\mu_0=12.
+\]
+
+这里下标是五锁bitmask，所有未列项为零。其真实度为6,6,6,8,8，xy共度四，其余九锁对共度一。
+
+位置(三low,x,y)=(12,13,14,11,25)的普通ABC界为4116/4199<1，见[唯一五锁程序](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/two_low_gate/THIRD_LOW_CHECK.py)、[两profile回执](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/two_low_gate/THIRD_LOW_RESULT.json)。因此
+
+\[
+w_{xy}=3\quad\Longrightarrow\quad q_{xy}\le1.
+\tag{3}
+\]
+
+所有小门的counts、具体位置及原25行均由BareLayout与独立组合数行计数相等核过；不是只存优化器输出。
+
+## 4. 五点整数加权图的完整六型覆盖
+
+按Y标签0,…,4和边顺序
+
+\[
+(01,02,03,04,12,13,14,23,24,34)
+\]
+
+记录十个w。条件仅为每个w∈{0,1,2,3}及五个行和八。完整独立枚举可以先选w01,w02,w03,w04，要求和八；再选w12,w13,w23，依次唯一恢复
+
+\[
+w14=8-w01-w12-w13,\quad
+w24=8-w02-w12-w23,\quad
+w34=8-w03-w13-w23,
+\]
+
+最后核各值0…3及最后一行和八。这覆盖每个实际图恰一次，得到148个带标签图；全部120个Y重标号取商后恰六型。
+
+六型中一型是全w2，已由[均匀Y完整解析定理](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/UNIFORM_Y_THEOREM.md)证明存在实际低点W≤25。该证明使用同一低星的两个私有四块，不依赖LP／MILP不可行性。
+
+另五型见第6节。独立枚举及轨道集合核见[VERIFY_NONUNIFORM.py](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/VERIFY_NONUNIFORM.py)、[PASS回执](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/VERIFY_NONUNIFORM_RESULT.json)，不导入原图枚举器或SciPy。
+
+## 5. 同一原边聚合与有理证书的实际调用
+
+对真实原边e，记类型
+
+\[
+(\ell,a,b,c,J)=(|e\cap L|,|e\cap A|,|e\cap B|,|e\cap C|,e\cap Y),
+\quad\ell+a+b+c+|J|=5.
+\]
+
+所有512种形式类型都保留，以实际边数x_t≥0计重。没有假定这些聚合条件反向足够实现H。真实H必满足以下50条等式：
+
+* 三个低迹边数为(15,10,10)；三个七度组总度各35；每个Y点度八。
+* 每七度组内部pair关联20，任意两七度组间pair关联25；每七度组与每个Y点pair关联五。
+* 每Y对的pair关联为1+w_xy；低–每七度组关联25，低–每Y点关联五。
+
+对每个w3点对，(3)又给真正同一原边的不等式
+
+\[
+\sum_t\ell(t)\mathbf1_{\{x,y\}\subseteq J(t)}x_t\le1.\tag{4}
+\]
+
+固定低中心z的W_z只收其link块内部正超额，交换实际原边与低中心求和，准确得到
+
+\[
+S:=\sum_{z\in L}W_z
+=\sum_t\ell(t)\left[\binom a2+\binom b2+\binom c2+
+\sum_{xy\subseteq J(t)}w_{xy}\right]x_t.\tag{5}
+\]
+
+二低原边在(4)、(5)都支付两次，未使用已撤回的q≤λ。
+
+对每型的有理证书给50等式的自由系数h以及(4)的非负系数k。若逐512类型有h·A_t+k·C_t≥cost_t，则实际求和得S≤h·b+k·1。若逐型有h·A_t+k·C_t≥0而h·b+k·1<0，则因x_t≥0得到直接矛盾。后一种是精确Farkas证书，**不以浮点不可行状态作数学结论**。
+
+## 6. 五个非均匀型的完整精确证书
+
+|w十元组（按第4节边序）|证书结论|
+|---|---|
+|(1,2,2,3,2,3,2,2,2,1)|S≤1477/12<130|
+|(1,1,3,3,3,2,2,2,2,1)|S≤740/7<130|
+|(0,2,3,3,3,2,3,2,1,1)|Farkas右端−1/2，必要域矛盾|
+|(1,1,3,3,3,1,3,3,1,1)|S≤171/2<130|
+|(0,2,3,3,2,3,3,2,2,0)|Farkas右端−1/2，必要域矛盾|
+
+全部等式／不等式系数为明确有理数，完整存于[NONUNIFORM_RESULT.json](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/NONUNIFORM_RESULT.json)的exact_equality_dual及exact_inequality_dual，未省略成“求解器成功”。三个上界另有精确可行primal同值，但证明上界不需要primal最优性。
+
+[无SciPy独立核](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/VERIFY_NONUNIFORM.py)重新按真实计数定义解释每个系数，未读取生产者的矩阵列；对每个证书独立生成全部512形式类型，以Fraction逐型核非负系数、非负不等式乘子及精确右端。五份全部PASS，CPU0.285639；生产者五型与phase-I证书生成0.208626 CPU秒。求解器不属于最终数学依赖，有限有理不等式核与完整输入覆盖才是证据。
+
+## 7. 返回原H
+
+每个实际非B H先由第2、3节原布局证书得到(2)、(3)，故其同一Y权图必在第4节六型之一。均匀型由解析定理给染色；两型直接违反精确必要域；另三型由(5)及证书得S<130。
+
+W_z均为非负整数，若五个都至少26则S≥130。因此S<130迫至少一个真实低点W_z≤25，[宏星门](TWENTYFIVE_MACRO_STAR_COLORING.md)给原H的proper染色，与非B矛盾。三K5例外完整闭合。
+
+整个链只分类五点整数权图和原边占用类型，未枚举原H，未扩九锁主域。旧K5的27迹目录、all7外点证书及quota都不再是这份完整例外证明的必需进口；本轮先前的14／20／22排除仍保留其独立价值，但不承担这条全例外链的覆盖。
+
+
+## 独立核验记录
+
+[完整独立核验报告](../../context/propertyb35-paper/round01/root/whole_class_followup_20261020/r5_nine_unit/common_weight_lp/fresh_audit/REPORT.md)保存实际执行、数学进口和准确范围。核验属于same-family/provisional；不替代全36的最终验收。
