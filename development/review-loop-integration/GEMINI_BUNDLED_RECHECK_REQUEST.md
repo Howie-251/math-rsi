@@ -1,0 +1,8 @@
+继续你上轮9技能清晰度审阅（Memory见 development/review-loop-integration/GEMINI_WORKFLOW_CLARITY_RAW.json 最后一节）。我们已经实际修改，请按以下具体差异复核，不重做全仓审阅：
+1 mathrsi-prove §2前新增先在现草稿写原H→L输入→目标的caller，再提取准确声明/允许进口，消息或已有文件均可，不硬造STATEMENT/CONTEXT两文件。
+2 specify补可用三方向检索及进口A⇒B与原H⇒A分离；survey补发现关键文献立即转深读及依赖导向停止泛搜，不采纳固定1–2轮/2–5篇上限，避免漏关键来源。
+3 verify §2补默认分流：纯算术可直接确定性核；完整候选直入checker不重复RR；没有把生成覆盖都交程序或路径永久互斥，数学覆盖仍须证明、不同义务可需多证据。
+4 handoff §3补完整正文内联阅读输入，TeXcanonical可忠实派生阅读稿，不强迫所有项目改canonical为MD；实际副本打包/复算步骤原§4已详写。
+5 route-loop PhaseD补保存session的复核模板和有效D已给下轮实作清单时不重发A；RR Step3/4数学适配已显式覆盖，保留同轮证据对话。
+6 main补简短产物scope/未闭caller/next的返回例，assemble补实际有限命题-脚本-域-证据映射，短证明可旁注、多分支才表。
+请直接读这些修订处，判断你原具体关切是否解决；若正确认可，不提无收益新流程。给Memory update区分解决/仍开，≤1200中文字。本次请求经MathRSI打包的Antigravity Python桥接续接同一原会话，非全局工具；请不要执行命令或改文件。

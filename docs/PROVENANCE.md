@@ -19,3 +19,7 @@ Property B 来源包括原题规格、实际证明连接、可复用引理、失
 ## 自包含修订
 
 上游30技能双端完整目录、两套shared-references、53 helpers、leaf与许可证已复制进base。逐文件来源在[ARIS_SNAPSHOT.json](../base/ARIS_SNAPSHOT.json)，实际副本核验见[验证记录](../development/VALIDATION.md)。不依赖原aris_main或全局skills。新增Property B四入口与详细数学/实务库是MathRSI适配；原文和已复用源码不伪称本次新作。论文PDF与第三方历史原件的版权仍归原作者，MIT不重新许可这些档案。
+
+同一上游提交的Grok、Antigravity、Codex和Claude-review四份Python桥接现位于[mcp-servers](../mcp-servers/README.md)，实际服务源码保持原字节，测试定位和本仓安装说明的改动列在[SOURCE](../mcp-servers/SOURCE.md)。该附加包独立记录来源，不更改原207文件base快照。模型CLI和登录是运行环境依赖，另一份ARIS checkout不是依赖。
+
+当前route-loop是原auto-review-loop的明确数学适配，执行其改进链并按数学任务替换原ML对象/停止判断；其余MathRSI流程实际调用固定的ARIS能力。原始设计意见、修复和复核见[本轮处置](../development/review-loop-integration/REVIEW_DISPOSITION.md)。跨模型讨论、静态消费审计和实际协议/模型调用分别记范围，不宣称全部数学研究能力已获新题长程验证。

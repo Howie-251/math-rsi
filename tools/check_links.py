@@ -14,7 +14,7 @@ from urllib.parse import unquote, urlsplit
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     files = [root / "README.md", root / "AGENTS.md"]
-    for directory in [root / "docs", *sorted((root / "base/skills").glob("mathrsi-*"))]:
+    for directory in [root / "docs", root / "mcp-servers", *sorted((root / "base/skills").glob("mathrsi-*"))]:
         files.extend(sorted(directory.rglob("*.md")))
     for domain in (root / "plugins").iterdir():
         files.extend(sorted((domain / "skills").rglob("*.md")))

@@ -1,0 +1,80 @@
+test_failed_or_incomplete_turns_never_succeed (test_antigravity_exec_bridge.BridgeTests.test_failed_or_incomplete_turns_never_succeed) ... ok
+test_mcp_surface_and_real_response (test_antigravity_exec_bridge.BridgeTests.test_mcp_surface_and_real_response) ... ok
+test_missing_effort_metadata_is_not_filled_from_request (test_antigravity_exec_bridge.BridgeTests.test_missing_effort_metadata_is_not_filled_from_request) ... ok
+test_ping_progress_and_cancel_while_child_runs (test_antigravity_exec_bridge.BridgeTests.test_ping_progress_and_cancel_while_child_runs) ... ok
+test_resume_keeps_settings_after_server_restart (test_antigravity_exec_bridge.BridgeTests.test_resume_keeps_settings_after_server_restart) ... ok
+test_stdin_prompt_and_permission_flags (test_antigravity_exec_bridge.BridgeTests.test_stdin_prompt_and_permission_flags) ... ok
+test_timeout_and_host_disconnect_stop_child (test_antigravity_exec_bridge.BridgeTests.test_timeout_and_host_disconnect_stop_child) ... ok
+test_unknown_thread_and_changed_reply_settings_rejected (test_antigravity_exec_bridge.BridgeTests.test_unknown_thread_and_changed_reply_settings_rejected) ... ok
+test_async_status_survives_bridge_restart (test_bundle_contracts.ClaudeProcessTests.test_async_status_survives_bridge_restart) ... ok
+test_fail_empty_truncated_timeout_and_timeout_child_cleanup (test_bundle_contracts.ClaudeProcessTests.test_fail_empty_truncated_timeout_and_timeout_child_cleanup) ... ok
+test_stdio_schema_and_explicit_artifact_tools_on_reply (test_bundle_contracts.ClaudeProcessTests.test_stdio_schema_and_explicit_artifact_tools_on_reply) ... ok
+test_resume_after_bridge_restart_uses_persisted_settings (test_bundle_contracts.CodexRestartTests.test_resume_after_bridge_restart_uses_persisted_settings) ... ok
+test_explicit_gemini_four_request_and_restart_reply (test_bundle_contracts.GeminiFourTests.test_explicit_gemini_four_request_and_restart_reply) ... ok
+test_timeout_reaps_actual_cli_child (test_bundle_contracts.GeminiFourTests.test_timeout_reaps_actual_cli_child) ... ok
+test_host_disconnect_reaps_actual_cli_child (test_bundle_contracts.GrokCleanupTests.test_host_disconnect_reaps_actual_cli_child) ... ok
+test_array_only_system_init_returns_error (test_claude_review_parse.ParseClaudeJsonTests.test_array_only_system_init_returns_error)
+Array containing only the system/init event must error, not silently return init dict. ... ok
+test_array_without_result_event_returns_error (test_claude_review_parse.ParseClaudeJsonTests.test_array_without_result_event_returns_error)
+Array of events with no type=='result' entry must NOT silently return another dict. ... ok
+test_cli_2x_single_line_array (test_claude_review_parse.ParseClaudeJsonTests.test_cli_2x_single_line_array)
+CLI 2.x default: compact single-line JSON array with terminal result event. ... ok
+test_empty_stdout (test_claude_review_parse.ParseClaudeJsonTests.test_empty_stdout) ... ok
+test_garbage_stdout (test_claude_review_parse.ParseClaudeJsonTests.test_garbage_stdout)
+Non-JSON stdout falls through to the legacy 'did not return JSON output' error. ... ok
+test_legacy_ndjson_dicts (test_claude_review_parse.ParseClaudeJsonTests.test_legacy_ndjson_dicts)
+CLI 1.x backward compat: NDJSON stream of dicts, last dict wins. ... ok
+test_noisy_stdout_with_array_line_no_result_surfaces_specific_diagnostic (test_claude_review_parse.ParseClaudeJsonTests.test_noisy_stdout_with_array_line_no_result_surfaces_specific_diagnostic)
+Noisy stdout + JSON-array line with no result event: surface the specific 'array without result event' diagnostic (symmetry with the whole-stdout path). ... ok
+test_noisy_stdout_with_compact_array_line_recovers (test_claude_review_parse.ParseClaudeJsonTests.test_noisy_stdout_with_compact_array_line_recovers)
+Wrapper banner + compact JSON-array line on the next line still recovers result. ... ok
+test_pretty_printed_multiline_array (test_claude_review_parse.ParseClaudeJsonTests.test_pretty_printed_multiline_array)
+Defensive: multi-line pretty-printed JSON array (potential future CLI shape). ... ok
+test_async_job_preserves_cwd_through_worker_and_status (test_claude_review_parse.ReviewContractRegressionTests.test_async_job_preserves_cwd_through_worker_and_status) ... ok
+test_explicit_incomplete_stop_reasons_are_not_success (test_claude_review_parse.ReviewContractRegressionTests.test_explicit_incomplete_stop_reasons_are_not_success) ... ok
+test_init_only_and_empty_result_are_not_success (test_claude_review_parse.ReviewContractRegressionTests.test_init_only_and_empty_result_are_not_success) ... ok
+test_invalid_cwd_launches_no_sync_or_async_process (test_claude_review_parse.ReviewContractRegressionTests.test_invalid_cwd_launches_no_sync_or_async_process) ... ok
+test_missing_or_multiple_reported_models_never_echo_request (test_claude_review_parse.ReviewContractRegressionTests.test_missing_or_multiple_reported_models_never_echo_request) ... ok
+test_ndjson_trailing_nonresult_event_does_not_hide_result (test_claude_review_parse.ReviewContractRegressionTests.test_ndjson_trailing_nonresult_event_does_not_hide_result) ... ok
+test_requested_alias_is_separate_from_reported_model (test_claude_review_parse.ReviewContractRegressionTests.test_requested_alias_is_separate_from_reported_model) ... ok
+test_sync_cwd_is_passed_to_subprocess (test_claude_review_parse.ReviewContractRegressionTests.test_sync_cwd_is_passed_to_subprocess) ... ok
+test_array_without_result_event_surfaces_clear_error (test_claude_review_parse.RunClaudeReviewTests.test_array_without_result_event_surfaces_clear_error)
+Maintainer's fail-fast requirement holds end-to-end (no silent empty review). ... ok
+test_claude_binary_missing_returns_clear_error (test_claude_review_parse.RunClaudeReviewTests.test_claude_binary_missing_returns_clear_error)
+If no claude CLI is on PATH, surface the FileNotFoundError message, not a crash. ... ok
+test_cli_2x_array_maps_all_result_fields (test_claude_review_parse.RunClaudeReviewTests.test_cli_2x_array_maps_all_result_fields)
+Happy path: CLI 2.x JSON-array stdout -> all five downstream fields populated. ... ok
+test_error_result_multiple_errors_joined (test_claude_review_parse.RunClaudeReviewTests.test_error_result_multiple_errors_joined)
+Multiple entries in the errors list are joined with '; '. ... ok
+test_error_result_with_errors_list_surfaces_specific_message (test_claude_review_parse.RunClaudeReviewTests.test_error_result_with_errors_list_surfaces_specific_message)
+CLI 2.x error result: payload.get('errors') list -> specific message in returned err. ... ok
+test_legacy_ndjson_stdout_maps_correctly_end_to_end (test_claude_review_parse.RunClaudeReviewTests.test_legacy_ndjson_stdout_maps_correctly_end_to_end)
+CLI 1.x NDJSON path -> downstream consumer still gets correct fields. ... ok
+test_config_flattens_to_dotted_keys (test_codex_exec_bridge.ArgvTests.test_config_flattens_to_dotted_keys) ... ok
+test_new_thread_argv (test_codex_exec_bridge.ArgvTests.test_new_thread_argv) ... ok
+test_resume_argv_reapplies_settings_without_cd (test_codex_exec_bridge.ArgvTests.test_resume_argv_reapplies_settings_without_cd) ... ok
+test_toml_values (test_codex_exec_bridge.ArgvTests.test_toml_values) ... ok
+test_call_result_shape_and_prompt_on_stdin (test_codex_exec_bridge.BridgeTests.test_call_result_shape_and_prompt_on_stdin) ... ok
+test_cancel_terminates_child (test_codex_exec_bridge.BridgeTests.test_cancel_terminates_child) ... ok
+test_crash_without_completion_reports_status_and_stderr (test_codex_exec_bridge.BridgeTests.test_crash_without_completion_reports_status_and_stderr) ... ok
+test_failure_keeps_raw_error_text (test_codex_exec_bridge.BridgeTests.test_failure_keeps_raw_error_text) ... ok
+test_handshake_and_tool_surface (test_codex_exec_bridge.BridgeTests.test_handshake_and_tool_surface) ... ok
+test_intermediate_error_then_completion_is_success (test_codex_exec_bridge.BridgeTests.test_intermediate_error_then_completion_is_success) ... ok
+test_reply_accepts_deprecated_conversation_id (test_codex_exec_bridge.BridgeTests.test_reply_accepts_deprecated_conversation_id) ... ok
+test_reply_reapplies_thread_settings (test_codex_exec_bridge.BridgeTests.test_reply_reapplies_thread_settings) ... ok
+test_request_arriving_mid_call_is_answered_afterwards (test_codex_exec_bridge.BridgeTests.test_request_arriving_mid_call_is_answered_afterwards) ... ok
+test_silent_child_gets_progress_and_answers_ping (test_codex_exec_bridge.BridgeTests.test_silent_child_gets_progress_and_answers_ping) ... ok
+test_stream_ending_without_completion_is_an_error (test_codex_exec_bridge.BridgeTests.test_stream_ending_without_completion_is_an_error) ... ok
+test_terminal_failure_is_not_cleared_by_a_later_completion (test_codex_exec_bridge.BridgeTests.test_terminal_failure_is_not_cleared_by_a_later_completion) ... ok
+test_failed_or_incomplete_turns_never_succeed (test_grok_exec_bridge.BridgeTests.test_failed_or_incomplete_turns_never_succeed) ... ok
+test_long_prompt_file_and_no_unrequested_tool_access (test_grok_exec_bridge.BridgeTests.test_long_prompt_file_and_no_unrequested_tool_access) ... ok
+test_mcp_surface_and_real_response (test_grok_exec_bridge.BridgeTests.test_mcp_surface_and_real_response) ... ok
+test_ping_progress_and_cancel_while_child_runs (test_grok_exec_bridge.BridgeTests.test_ping_progress_and_cancel_while_child_runs) ... ok
+test_resume_keeps_settings_after_server_restart (test_grok_exec_bridge.BridgeTests.test_resume_keeps_settings_after_server_restart) ... ok
+test_timeout_and_host_disconnect_stop_child (test_grok_exec_bridge.BridgeTests.test_timeout_and_host_disconnect_stop_child) ... ok
+test_unknown_thread_and_changed_reply_settings_rejected (test_grok_exec_bridge.BridgeTests.test_unknown_thread_and_changed_reply_settings_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 18.342s
+
+OK

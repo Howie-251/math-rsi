@@ -1,0 +1,40 @@
+{
+  "skills_checked": 9,
+  "skill_validation": "SKILL_VALIDATION.json",
+  "skills_passed": true,
+  "link_check": {
+    "command": [
+      "python3",
+      "tools/check_links.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Checked 60 documents and 963 local link targets; 0 missing.\n",
+    "stderr": ""
+  },
+  "mcp_offline_evidence": "mcp-evidence/CHECKS.json",
+  "mcp_offline_test_count": 61,
+  "consumer_audit": "CONSUMER_AUDIT.md",
+  "original_math_restarted": false,
+  "new_math_or_lean_runs": false,
+  "global_mcp_config_modified": false,
+  "upstream_base_files_modified": false,
+  "live_mcp": {
+    "report": "LIVE_MCP_EXECUTION.md",
+    "antigravity": {
+      "operation": "reply via bundled server",
+      "status": "SUCCESS",
+      "model": "gemini-4-argon-high",
+      "effort": "high",
+      "elapsed_seconds": 65.2
+    },
+    "grok": {
+      "operation": "fresh via bundled server",
+      "status": "timeout",
+      "isError": true,
+      "stopReason": null,
+      "elapsed_seconds": 602.14,
+      "review_received": false,
+      "automatic_retry": false
+    }
+  }
+}

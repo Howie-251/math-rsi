@@ -79,7 +79,7 @@ python3 "$ARIS_REPO/tools/research_wiki.py" ingest_paper research-wiki/ \
 
 输入是原命题、完整候选、所需进口与实际证据。优先确定尚存疑问：是归约保真、全域覆盖、算术值、形式化接口，还是论述不清。然后只把相关材料给相应检查，不以整篇反复送审代替补缺口。
 
-[`research-review`](../base/skills/skills-codex/research-review/SKILL.md)提供方法评审能力；数学route-loop对其取证/调用/留存机制做单slot适配，循环由route-loop持有；[`proof-checker`](../base/skills/skills-codex/proof-checker/SKILL.md) 负责严格证明审计、义务清点、发现和修复缺口，并保留 `PROOF_AUDIT` 等约定输出。两者使用实际 reviewer 路由。先解析路由，之后检查本轮宿主是否提供所需工具，再发起已授权调用：
+[`research-review`](../base/skills/skills-codex/research-review/SKILL.md)在路线循环中负责资料收集、原件初审、同会话证据对话、结论与证据对照、行动交接和完整trace。调用时显式传 `— composed: <累计路线报告的绝对路径>`，由唯一报告作者合入返回内容。数学调用同时覆盖原Step3的ML产物及Step4的论文共识终点：初审澄清到能执行的具体补证就返回，修复后的对话裁定本轮关切后返回；不由reviewer另派修法或下一轮。对话结束回到route-loop实施修法，后续再审沿保存的session继续。完整证明则由 [`proof-checker`](../base/skills/skills-codex/proof-checker/SKILL.md) 审计义务、修复缺口并保留 `PROOF_AUDIT` 等真实输出。两者使用实际 reviewer 路由。先解析路由，之后检查本轮宿主是否提供所需工具，再发起已授权调用：
 
 ```bash
 export ARIS_REPO="/path/to/MathRSI/base"
@@ -89,7 +89,11 @@ python3 "$ARIS_REPO/tools/reviewer_route.py" \
 
 这个命令只输出配置，不调用模型、不检查登录、不证明 MCP 已加载。选择按 inline 参数优先于任务 `.aris/reviewer.json`，再到 host default；路由的模型名与工具名是固定上游描述，具体执行必须匹配当前宿主真实能力，例如 native continuation 不能凭字符串 `send_input` 假定存在。记录请求值、实际返回身份／effort、完成状态、读过的主文件和是否执行命令。默认 Codex reviewer 属于 same-family，语义接受记录为 provisional；跨家族有效审阅、实际确定性复算、Lean 检查各报告其范围。服务失败不能算接受或悄悄换成主代理自审。
 
-[`auto-review-loop`](../base/skills/skills-codex/auto-review-loop/SKILL.md) 已完整复制，包括硬依赖 [`result-to-claim`](../base/skills/skills-codex/result-to-claim/SKILL.md)、[`training-check`](../base/skills/skills-codex/training-check/SKILL.md)、[`render-html`](../base/skills/skills-codex/render-html/SKILL.md)。它原生是 research/ML 迭代流程，有默认四轮、训练健康、结果到 claim、分数及 stop threshold。数学固定命题不能用其 `score >= 6` 或 `ready/almost` 当真值判定，也不应无训练任务时强行造训练指标。仅在实验型任务符合原流程时完整调用；求解方法的迭代由 [mathrsi-route-loop](../base/skills/mathrsi-route-loop/SKILL.md)拥有：复用原件读取、reviewer路由、trace和review→fix→new evidence→targeted re-review，但每个slot只问具体数学路线问题，不嵌套整个原ML循环或research-review的共识循环。证明推进由mathrsi-prove执行；完整证明的审计修复由mathrsi-verify调用真实proof-checker承担。适配与原版完整执行分别记录，不将仅复用机制称为原版auto-review-loop已运行。
+[`auto-review-loop`](../base/skills/skills-codex/auto-review-loop/SKILL.md)的完整原件及其 [`result-to-claim`](../base/skills/skills-codex/result-to-claim/SKILL.md)、[`training-check`](../base/skills/skills-codex/training-check/SKILL.md)、[`render-html`](../base/skills/skills-codex/render-html/SKILL.md)依赖均在本仓。[mathrsi-route-loop](../base/skills/mathrsi-route-loop/SKILL.md)以它为执行底稿，做数学适配：保留初始化/恢复、原件审阅、逐reviewer记忆、争议回应、实际修法、运行结果回收、逐轮累计、带新证据复核及终轮归档。执行前读原技能与数学适配，而非只调用路由解析器后宣称跑过循环。
+
+数学适配将“训练/实验修法”落实为推导、证明、反例、领域计算及实际caller修复，将“投稿分数门”改为当前路线能否交给证明推进。`score >= 6`、`ready/almost`不承担定理真值；不伪造这些字段去调用原`review_gate.py`。已有训练的任务仍可采用原训练检查，纯数学任务核自己的计算范围与证据。外层修法轮次只有route-loop一个owner，research-review的实质对话仍完整执行并返回它。运行记录标明 `math-adapted-auto-review`，实际执行原实验型循环时才标原版执行。证明推进由mathrsi-prove承接，最终证明审计由mathrsi-verify调用真实proof-checker。
+
+跨模型执行代码另见[仓内 MCP 桥接及完整调用](REVIEWER_MCP.md)：`base/tools/reviewer_route.py`只返回参数，agent随后调用宿主暴露的工具，宿主运行`mcp-servers/`中的Python服务。Python服务真正启动对应CLI、保存会话并返回原始结果；技能消费结果、记忆和trace后决定修法。MathRSI不另写一个Python模型调度平台，也不依赖另一份ARIS仓库提供桥接。已在宿主注册的可用服务可继续使用；新机器按本仓说明配置。
 
 [`analyze-results`](../base/skills/skills-codex/analyze-results/SKILL.md) 处理实际 JSON/CSV、比较、统计与观察，适用于启发式搜索效率、计算开销、数值实验等。区分原始观察、解释与下一项检验；多 seed 结果或统计显著不等于全称命题的证明。确定性验证仍须按插件与原题检查完整对象域、实际输入连接和算法可靠性。
 

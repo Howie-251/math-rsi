@@ -11,6 +11,43 @@ description: 对已装配数学证明或明确局部义务执行验证子工作�
 
 **后继调度只由一个owner执行。** 组合调用在指定scope完成后返回原caller：局部验证回原prove义务，全局验证回主dispatcher，由它决定handoff或返回prove。本文的后继技能是结果建议，verify不同时替父流程启动它们；内部assemble、proof-checker及所需Lean仍由verify实际执行。独立调用只做用户授权的验证范围；若用户明确要求持续推进，由本agent接主调度一次后选择下一阶段，不在子验证与主流程两处重复派发。
 
+## 这次验证怎样实际走完
+
+先拿到要核的声明和它的实际用途，随后读取源、补齐可审输入、执行相应检查、修复并消费结果，最后带着准确剩余返回。下面是执行地图；分支按当前疑问选择，短证明不必走每个节点。
+
+```mermaid
+flowchart TD
+    A[读取原规格、候选、当前义务与caller] --> B{本次材料和范围}
+    B -->|分散的完整候选| C[assemble调用proof-writer形成正文]
+    B -->|已有完整正文| D[读取原证明与依赖]
+    B -->|局部义务| E[隔离该命题、实际caller与必要依赖]
+    C -->|连接已齐| D
+    C -->|新数学缺口| R[保留有效部分与准确缺口，返回caller]
+    D --> F[核原输入连接；执行适用的覆盖与独立精确检查]
+    E --> F
+    F -->|具体关键疑问| G[有界research-review咨询，消费意见]
+    F -->|正式证明审计| H[准备原生TeX或无损适配，实际运行proof-checker]
+    G -->|需正式审计| H
+    G -->|局部疑问已解决| I[汇合真实结果与当前剩余]
+    H --> J[按checker修复、同步正文、复审与closure]
+    J --> I
+    F -->|仅确定性局部核验| I
+    I -->|有形式化要求或具体收益| K[执行或复用lean-formalize及实际导出审计]
+    K --> L[写VERIFICATION并返回原caller]
+    I --> L
+    H -->|实质数学缺口| R
+    K -->|新数学缺口| R
+```
+
+| 当前收到的材料 | 立即执行什么 | 读什么结果后才能继续 |
+|---|---|---|
+| 完整现稿及原规格 | 直接读现稿、进口和证据，确认本次原定理；不重复writer | 从任意原输入到结论的论证及此次尚需验证的事实 |
+| 引理、表、证书散落，但声称已足以解题 | 把原题和实际材料交assemble，由它实际调用proof-writer | 完整正文与连接状态；缺新数学就交回缺口，不靠审阅补成已证 |
+| prove交来的一个高风险义务 | 读该命题、上下游caller和相关域，只检查其所需材料 | 精确局部结论、适用条件与剩余；返回原prove继续下游 |
+| 上次审计已有具体问题或服务中断 | 读原audit/state、raw回应和本次差异，从未完成处恢复 | 问题是否已修、哪些下游受影响、哪些服务步骤仍pending |
+
+实际输入可直接是一段短证明及其原题，无需为了进入流程先造上述全部文件。复杂项目通常已有 `FORMAL_SPEC`、现用证明、当前义务表和恢复入口，沿用它们。以下各节说明执行地图中每一步如何取输入、做工作和把结果交给下一步。
+
 ## 进入、范围和恢复
 
 读原规格、候选正文、当前义务和已有验证。先确定本次入口是完整原定理验收，还是“引理 L 的实际 caller”“参数域 D 的精确重算”“归约 R 的覆盖”等局部验证。局部入口是正常用法，不用每次审整个项目；但报告标题和结论保持该范围，不能将其汇总成原题已经通过。
@@ -25,17 +62,29 @@ description: 对已装配数学证明或明确局部义务执行验证子工作�
 
 沿原输入到结论检查关键接口，选择能解决实际疑问的检查。纯解析证明不需要制造算术表；计算机辅助证明不能省去数据含义和覆盖。至少分清下面三种对象，避免一个程序 PASS 被重复解释成三个结论。
 
+先沿着实际证明读一遍：在每个非平凡调用处，找到它使用的精确命题，并确认当前对象给出了全部前提。若只是推导对象和符号未说清，可将这段原式、允许条件和下游用途交 [formula-derivation Codex](../skills-codex/formula-derivation/SKILL.md)／[Claude主线](../formula-derivation/SKILL.md)，读取其稳定定义与逐步推导后再核原调用；它新提出的条件仍需供给。若已有正确证明但正文漏了一步，用 [proof-writer Codex](../skills-codex/proof-writer/SKILL.md)／[Claude主线](../proof-writer/SKILL.md)补写那段，指定更新现用正文，不新造平行完整稿。若其实缺一个新定理，返回prove，不能在验证记录中把“待推导”改成已证。
+
+文献条件不清时，把具体应用、原版本和疑问交 [mathrsi-survey](../mathrsi-survey/SKILL.md)定点补查，或用 [research-lit Codex](../skills-codex/research-lit/SKILL.md)／[Claude主线](../research-lit/SKILL.md)读取那条来源及必要引用链。收回原文位置、完整条件和能否用于当前对象的结论，再回原审计义务；不是重新准备整项研究。已有wiki有对应材料先读它，再补真正缺的原文。新增来源或失败适用条件按 [research-wiki Codex](../skills-codex/research-wiki/SKILL.md)／[Claude主线](../research-wiki/SKILL.md)记回现有知识库，保留出处和此次用途；原题的proof-axis状态仍跟随真实audit。
+
 第一是对象域与归约。检查全称对象进入必要域的论证、分类覆盖、规范化兼容和各分支的并集是否包含原域。程序遍历一份列表不证明列表完整；某筛选条件即使便宜，也要有不会误删所需对象的依据。对只要求一个见证的任务，完整检查该见证即可，不要求搜索过程穷尽。
 
 第二是检查器实际判定的命题。读真实代码、输入和输出，核计数单位、索引、重数、顺序/无序、边界、取整、精度和共同对象约定。由任务或领域插件提供的可信 checker 优先复用；不要让作者改完 checker 后只凭自报通过。若需要独立复算，应使用能独立重建该数学量的方法，读取实际输入，比较准确结果和覆盖，并保存命令、退出码和差异见证。第二次执行同一程序可验证可重现性，但不能称第二概率实现或独立算法核验。
 
 第三是核验输出如何用于主证明。即使算术全部严格，也仍要核实际对象确实给出该公式或证书、该界确实改变目标、计算范围与分流条件相合。样本、启发式浮点和小域实验保持发现证据；用于临界严格结论的数值用整数、准确分数或有证明的定向误差依据。并非所有项都必须换成 Fraction，已有正确的整数或区间方法可以复用。
 
+执行独立计算时，给检查者实际输入、精确谓词、需要排除的错误和输出用途。例如要排除生成器漏删，就要求第二实现重新构造完整声明域，不以作者保存的合法列表决定接受；要核拒绝证书，则读绑定的实际对象逐个重放见证。主执行者收回后读命令、真实完成范围、准确差异和失败输入，再把这个有限命题代入正文所需步骤。一次只修所针对的缺口；不把“完整生成”与“全部拒绝”混成同一项，也不要求已经足够的必要门继续做更强计算。
+
 把结论写进原有报告或 `VERIFICATION.md`：本次检查的精确谓词、输入和完整范围、使用方法、实际结果、仍需数学连接。若只是源代码/索引的小缺陷，修复并重跑受影响范围；若某个归约或覆盖引理根本未证，将那个义务交回 [mathrsi-prove](../mathrsi-prove/SKILL.md)。
 
 ## 2. 区分局部对抗审阅与完整证明审计
 
+先选本次缺口需要的路径。仅核一个算术值或固定证书，执行§1的确定性检查即可；它未覆盖的分类完整性、原对象连接仍需数学论证，不能一并写成程序已验。推进中的局部归约疑问可做下述有界research-review或所需局部Lean，结果回原义务。完整候选或已自足局部定理要正式审计时，直接进§3的proof-checker，通常不先对同稿再跑一次research-review。已有核验复用；只有新增的具体疑问或用户明确要求才另加相应检查，不把两种审阅机械叠加，也不禁止必要时对不同义务采用不同证据。
+
 一个新归约、代码与公式接口、候选反例或局部共同约束，可以复用 [research-review Codex](../skills-codex/research-review/SKILL.md)／[Claude 主线](../research-review/SKILL.md)的取证、reviewer路由和trace机制执行一个数学审阅slot。输入是原始局部证明、定义、实际 caller、代码与具体疑问。先读相应技能和backend/trace合同，实际调用选定reviewer并保存原始回应、读取/执行范围；这个slot由当前verify持有范围和返回点，不启动原版论文评分/共识循环，也不声称已跑完整research-review。修真实问题，必要时仅复核新增证据；本地短义务可用独立agent，相应同家族范围如实provisional，用户指定外部reviewer的要求不被替换。
+
+这一slot要形成可消费的回答，例如“归约R有没有漏掉非满支撑输入，若没有，哪一步已经覆盖它”。收到意见先核原文：真实漏洞交给对应推导/实现修；模型误读则记录引用和理由，保留原回应。修后回查该疑问及受影响调用；其结论只解决这个slot。完整候选仍进入下面的checker流程，不能用一封“总体认可”替代全证审计。
+
+这里实际保留research-review的**原件审阅、必要的同会话证据澄清/反驳、结论与原证据对照、具体未证项及补证建议回交**。例如reviewer认为漏了边界，先给原段落和实际边界推导让它回查；若仍有争议，把原意见、回应与尚未解决的推论一起交回verify，由当前执行者判断下一步。数学适配到此返回，不沿原Step3/4的“直到双方同意”、论文实验计划或叙事改写继续；不由research-review另派证明或计算修法。`— composed:`若使用，只约定累计报告由谁写，不自动改变这些执行边界。真正修推导/代码由当前verify在范围内执行，需新数学则回prove；后续核新增证据时仍保留真实对话和原始负面意见，不只记transport成功。
 
 要验收完整自然语言证明，或对一份自足局部定理运行正式 proof audit，使用 [proof-checker Codex](../skills-codex/proof-checker/SKILL.md)／[Claude 主线](../proof-checker/SKILL.md)。它拥有 proof skeleton、完整义务审计、反例检查、修复和复审循环。不能只取它的 reviewer prompt 然后自造 `PROOF_AUDIT.json`，也不在外面再套一个 route-loop 或定时循环来替代它的内部状态。
 
@@ -44,6 +93,24 @@ description: 对已装配数学证明或明确局部义务执行验证子工作�
 ## 3. 执行 checker 本身的流程并消费它的真实结果
 
 向 checker 指定本次实际 proof 入口、原命题、允许进口、必要源码与证据位置、准确 scope，以及已选 reviewer。helper 通过本仓 `base/tools`实际调用；先完整读当前宿主技能及它在该阶段要求的参考，不改复制的上游源。新选择或项目 reviewer 由它的路由解析，已建立的授权不重复询问；选定服务缺失也不假装已审或悄悄改 provider。
+
+**把上层选择实际传到每个reviewer-bearing子调用。** 按当前宿主的reviewer-backends合同解析本次覆盖项、项目 `.aris/reviewer.json`和宿主默认，并将已经给出的backend/model/effort覆盖项继续传给research-review slot、proof-checker及Lean；恢复中沿用保存route。这里的路由解析只选参数，真正首轮/续接调用、cwd、文件读取工具和终态取证按 [REVIEWER_MCP](../../../docs/REVIEWER_MCP.md)执行。Codex native、Codex MCP、Grok、Antigravity和Claude-review的schema不同，不能只运行解析脚本就记作审阅。checker要求fresh或blind的slot须新会话；需要连续回查时才用相应宿主与backend允许的续接，不借上层已有会话取消独立上下文。
+
+向当前执行者发出的任务可以是下面这段；它是执行所读技能的自然语言调用，不是一个假定存在的统一CLI：
+
+```text
+读取本仓当前宿主的proof-checker/SKILL.md，执行其完整适用流程。
+scope：FORMAL_SPEC.md的原定理；正文入口：PROOF.tex；
+原始代码、进口原文与准确检查结果按正文中的路径读取。
+若现用正文是Markdown，先按mathrsi-verify的输入适配说明准备TeX，
+同时读取原文与源对应；最终实质修复须同步原正文。
+延续本次caller已选的reviewer/backend/model/effort；无覆盖项时按项目和宿主合同解析。
+实际完成source-unit读取与覆盖回执、义务ledger、首次审阅、反例pass、
+修复复审及global closure；保存真实PROOF_AUDIT、state和raw回应。
+报告原题是否被这份证明支持、允许进口、未闭义务和检查实际完成范围。
+```
+
+将占位路径换为实际材料；局部审计把scope换成该自足局部定理及其caller，产物放自己的局部审计目录。接下来verify读取checker实际产物和源改动，不只接收一句“已完成”。
 
 执行其准备、source-unit 抽取与覆盖回执、全局义务 ledger、首次完整审阅、反例 pass、真实修复、复审、整体 closure 和必要 blind review。source-unit coverage 只是执行覆盖，不证明义务发现完整。精确复算、完整域证明与 reviewer 各承担各自职责，不能把其中一个核验字段扩成整个数学 PASS。
 
@@ -71,6 +138,8 @@ Lean 完成需从任意原输入装配出主命题的证明项，实际构建目
 
 完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能只引用该记录；不会为了进入交付自行造一个 verified claim。
 
+checker默认调用 [render-html Codex](../skills-codex/render-html/SKILL.md)／[Claude主线](../render-html/SKILL.md)生成audit阅读页时，消费其HTML和实际保真检查，保持原 `PROOF_AUDIT.{md,json}`为审计入口。渲染失败按原技能是非阻塞展示问题，保存失败即可；用户若要完整证明阅读页或转交包，由主dispatcher选择handoff后制作。这样audit的阅读视图、数学审计和最终交付各有实际产物，不在verify里重复生成整套包。
+
 组合调用最后返回原caller：局部scope交回原prove；全局scope交回主dispatcher。完成原目标所需数学与已约定核验均成立时，建议后继 [mathrsi-handoff](../mathrsi-handoff/SKILL.md)；关键数学缺失时建议返回prove，并附最小义务、actual caller、已有证据和可复用成果；只有prove判断需要重选方法才回route-loop。verify本次不另启动这些后继。已闭局部结果也可以作为局部交付，主目标仍open。文档或服务不可用则返回准确pending，交主调度继续无依赖工作。独立调用的持续授权按入口的单一调度规则处理。
 
 ## 实际调用与返回例
@@ -88,3 +157,13 @@ Lean 完成需从任意原输入装配出主命题的证明项，实际构建目
 ```
 
 局部调用可以是“只验证 L 在 caller C 的假设供给及参数域 D；不要重审其余章节”。此时返回准确局部结论，列明是否进入 research-review 或自足局部 proof-checker、实际结果与剩余全局义务。恢复时先读 VERIFICATION 的 next obligation和对应源，不从全证审计第一轮重新开始。
+
+## 已解项目中，验证产物怎样改变下一步
+
+以下是已有流程的提炼，不要求重新执行历史计算。准确过程和原始依据见 [REAL_PROJECT_TRANSITIONS](../../../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。
+
+ECC旧43/10证明曾只独立核保存集合的成员，不能支持生成无遗漏。局部verify针对这个疑问补第二套完整 `2^32` 域生成，在共同坐标下比较集合，再**返回原prove的pair caller**。全部必要pair都有低权拒绝见证、兼容图无边后，便宜必要条件已足够排除三行延拓；随后消费原题归约结束该证明，不继续更贵的三行枚举。这里完整域生成、pair见证重放和原题归约分别承担不同义务。
+
+Property B T33的24点混合分支先把局部数值接成实际 `H → PropertyB H` caller，完成整24点后只剩23点。局部verify返回这个准确remaining，原prove继续23点，不进入最终handoff。真正六分支闭合后，全局verify才核新 `ThirtyThree.Main`、裸原输入的独立复述和传递公理；旧默认T32 build不承担新目标。最终正文审计发现3292/3315及1796/844的两处说明问题，按实际覆盖修正文，再核受影响说明；正确Lean未变，不重开路线或全部构建。
+
+一般k证明则先完成纸面原定理审计，随后在另一个形式化阶段完成主定理C的Lean；比较D/E继续保持纸面范围。verify把这些有效结果按各自声明交给caller，让handoff准确呈现，而不为了统一成同一验证级别重做已解研究。上述T33已证 `m(5)≥34`与旧ECC43/10不存在性各自收束，五元35的完整Lean、36研究及ECC45/11不由本技能或历史案例自动恢复。

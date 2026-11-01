@@ -1,5 +1,13 @@
 # MathRSI 验证记录
 
+## 2026-11-01：完整审阅回路、真实MCP与九技能执行清晰度
+
+本轮补齐ARIS autoreview的实质复用：原件审阅、同会话证据讨论、逐reviewer记忆、实际修法、再审与精确恢复；明确research-review Step3/4数学适配及唯一外层调度者。九项技能全部补入具体输入、调用、消费、修复和返回路径，改动依据真实Property B/ECC转折及模型指出的执行问题。
+
+四份上游Python MCP服务随仓交付，保持原源码；61项协议测试通过，九技能格式检查通过。fresh Sol按四种历史情景作静态消费者回放，未发现阻断；这是接手流程审查，不是新数学题端到端运行。Root另直接启动打包服务，Antigravity成功续接Gemini原会话；Grok首轮600秒超时，未自动重试，未计认可。
+
+Gemini设计、九技能清晰度及修改复核均有有效回应，最后确认六组具体问题已解决；Grok有效设计审阅发现composed并不替换原论文共识终点，Root已修实际调用。完整[处置](review-loop-integration/REVIEW_DISPOSITION.md)、[验证结果](review-loop-integration/VALIDATION.json)、[消费者回放](review-loop-integration/CONSUMER_AUDIT.md)及[实际MCP执行](review-loop-integration/LIVE_MCP_EXECUTION.md)保存准确范围。未更改全局配置、原ARIS源码或恢复旧数学/Lean研究。
+
 ## 2026-11-01：实际子工作流编排与经验回流
 
 本轮把旧规则型主入口改成实际编排：prepare → route-loop → prove → verify → handoff，内部调用specify/survey/assemble及完整ARIS能力。所有子流程明确输入、动作、产物消费、回流和恢复；原规格及wiki沿用任务工作区。见[人读执行地图](../docs/WORKFLOWS.md)及[主入口](../base/skills/mathrsi-research/SKILL.md)。

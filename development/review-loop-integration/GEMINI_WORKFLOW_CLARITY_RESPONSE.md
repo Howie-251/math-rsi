@@ -1,0 +1,101 @@
+### 一、全流程实际执行闭环图（单调度者 + 实物接棒）
+
+```mermaid
+flowchart TD
+    Root["mathrsi-research (唯一主调度)"] -->|新题/恢复| Prep["mathrsi-prepare"]
+    Prep --> Spec1["specify(preliminary): 拆量词+3类检索轴"]
+    Spec1 --> Surv["survey: research-lit广搜收敛→精读原文条件/propertyb插件"]
+    Surv --> Spec2["specify(final): 分离已核进口与候选→定稿FORMAL_SPEC+首轮义务"]
+    Spec2 -->|返回产物与next| Root
+    Root -->|需定方法| Route["mathrsi-route-loop: Phase A(RR初审)→B(Memory)→C(推导/探针)→D(同thread复核)→E(落盘)"]
+    Route -->|ROUTE_REPORT首批可执行任务| Root
+    Root -->|推进求解| Prove["mathrsi-prove: 写PROOF_DRAFT caller桩→派formula-derivation/proof-writer/worker→立即回收代入"]
+    Prove <-->|高风险子引理局部核验/定点查原文| SubV["局部verify / 增量survey (回同一prove义务)"]
+    Prove -->|核心表示被反例击穿| Root
+    Prove -->|全链闭合候选| Root
+    Root -->|全局验收| Ver["mathrsi-verify: 按需assemble→独立精确复算→proof-checker闭环→按需Lean"]
+    Ver -->|实质数学缺口| Root
+    Ver -->|原题与约定核验成立| Root
+    Root -->|交付/暂停| Hand["mathrsi-handoff: 正文内联HTML+独立目录复算自检+更新wiki与NEXT_SESSION"]
+```
+
+---
+
+### 二、9 个 `mathrsi-*` 技能及两份核心文档逐项审阅
+
+本轮快照已把**单一阶段调度者规则**、**`mathrsi-route-loop` 的 `Phase A–E` 完整回路**及 **Property B / ECC 六条实证转折**落到位。以下直接认可已清晰处，并仅列出最影响照着执行的 1–2 处缺口与最小修法：
+
+1. **[`mathrsi-research/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md) ＆ [`docs/WORKFLOWS.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKFLOWS.md) ＆ [`REAL_PROJECT_TRANSITIONS.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)**
+   - **评估**：**整体认可**。入口分派表（[`mathrsi-research/SKILL.md` L15–21](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L15-L21)）、单调度者边界（[L63–65](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L63-L65)）与六条历史转折（[`REAL_PROJECT_TRANSITIONS.md` L19–186](file:///Users/rfy_naiveai/Desktop/MathRSI/development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md#L19-L186)）已对齐。
+   - **最小修法**：在 [`mathrsi-research/SKILL.md` §阶段转换 L57–61](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L57-L61) 补一段子阶段返回给主调度的**四行交接回执格式**（`本次产出与精确scope / 刚闭合的量词义务 / 最小未闭义务与actual caller位置 / 建议下一stage`），免去主调度跨阶段重读全部中间草稿。
+
+2. **[`mathrsi-prepare/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md)**
+   - **评估**：**直接认可**。`specify(preliminary) → survey → specify(final)` 的单主线串接及 `propertyb-literature` 接入示例（[L36–56](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md#L36-L56)）可直接照做。
+
+3. **[`mathrsi-specify/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-specify/SKILL.md)（决定广搜范围与固定量词）**
+   - **缺口**：[§2 `preliminary` L64–75](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-specify/SKILL.md#L64-L75) 的调查委托未写明如何从原题拆出检索面；[§3 `final` L77–90](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-specify/SKILL.md#L77-L90) 缺消费 `LITERATURE.md` 改写量词与进口表的具体动作。
+   - **最小修法**：① 在 [§2 L68](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-specify/SKILL.md#L68) 明确初步委托必须列出**三条检索轴**：对象异名/等价超图或码表述、相邻小参数已解界或反例、候选工具的原证明条件；② 在 [§3 L83](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-specify/SKILL.md#L83) 增加定稿三步：读 `LITERATURE.md` → 将结果分为 `[已核进口：版本+定理号+精确前提]` 与 `[待证连接：原输入H如何满足该前提]` → 锁定 `FORMAL_SPEC.md` 原量词并把首个待证连接写入 `NEXT_SESSION.md`。
+
+4. **[`mathrsi-survey/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md)（从广搜收敛到原文精读）**
+   - **缺口**：[§1 L27–50](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L27-L50) 与 [§3 L113–143](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L113-L143) 讲清了查什么，但缺**何时停止广搜、转入精读原文**的收敛判据。
+   - **最小修法**：在 [§1 L46](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L46) 补明两阶漏斗：① 先用 `research-lit` 跑 1–2 轮异名与前后引用广搜（只读摘要与前 3 页定理陈述）；② 筛出直接决定本题基线、提供关键进口或疑似反例的 2–5 篇核心文献，立即停止泛搜，精读其定理完整证明与隐藏假设（如 RS 原文 Claim A.1 的积分条件），在 `LITERATURE.md` 写出 `原文前提 → 本题对象H的映射缺口`。
+
+5. **[`mathrsi-route-loop/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md)**
+   - **缺口**：[Phase A L43–59](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L43-L59) 有清晰初审调用块，但 [Phase D L85–93](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L85-L93) 对修法后的同会话复核只有散文描述，执行者易混淆“Phase D 复核”与“下一轮 Phase A 重审”。
+   - **最小修法**：在 [Phase D L88](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L88) 补一个 5 行续接调用块：
+     ```text
+     沿 Phase A 保存的 reviewer thread（或带该 reviewer Memory 的同配置入口）继续对话：
+     附上本轮针对关切 C1/C2 的 ROUTE_REPORT 实际 diff、新推导及探针原始输出 work/probe/REPORT.md。
+     请核：1) 新共同条件是否已关闭 C1 的坏型反例；2) 首条引理 L1 的量词与 caller 是否已足够交 prove。
+     ```
+
+6. **[`mathrsi-prove/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md)（从 `ROUTE_REPORT` 落到 `proof-writer` 真实 caller）**
+   - **缺口**：[§1 L24–36](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L24-L36) 到 [§2 L56–66](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L56-L66) 之间缺了**先写主干 caller 桩、再拆子任务文件**的实操动作（§2 调用例直接假定 `/task/work/selection/STATEMENT.md` 与 `PROOF_DRAFT.md` 对应节已存在）。
+   - **最小修法**：见下方**第三节改写示范**。
+
+7. **[`mathrsi-verify/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md)（区分局部/全局与解析/计算/Lean，防重复派发）**
+   - **缺口**：[§2 L81–88](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md#L81-L88) 允许局部定理既跑 `research-review` slot 又跑 `proof-checker`，读者易对同一局部引理连发两次模型审阅。
+   - **最小修法**：在 [§2 L80](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md#L80) 开头立下互斥分流：① **纯计算/生成覆盖疑问** → 只跑 §1 独立精确复算，不调模型；② **prove 中途的高风险局部接口/归约疑问** → 只跑 1 次有界 `research-review` slot（或局部 Lean caller 构建），拿结论直接回 `prove`；③ **完整候选或已自足闭合的大分支（如 T33 整 24 点）** → 直接进 §3 `proof-checker`（及按需 Lean），跳过前置 `research-review` slot。
+
+8. **[`mathrsi-assemble/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-assemble/SKILL.md)**
+   - **评估**：**基本认可**，`PROOF.tex`/`PROOF.md` 唯一载体与 `proof-writer` 调用块（[L57–67](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-assemble/SKILL.md#L57-L67)）很清楚。
+   - **最小修法**：在 [§1 L45](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-assemble/SKILL.md#L45) 补一句：计算机辅助证明装配时，正文须内联一张**有限命题—脚本—输入域—证书路径对照表**，供 `verify` §1 直接按表核验。
+
+9. **[`mathrsi-handoff/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md)（内联可读证明到 HTML 与复现打包）**
+   - **缺口**：① [§3 L40–50](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md#L40-L50) 若只对摘要式 `HANDOFF.md` 跑 `render_html.py`，生成的网页只有外链而无证明正文；② [§4 L60–66](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md#L60-L66) 缺可照抄的干净副本复算与打包步骤。
+   - **最小修法**：① 在 [§3 L42](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md#L42) 明确：**HTML 渲染输入必须是内联了完整定义—引理—证明正文的单文件 `PROOF.md`**（若原稿为分散文件或 `PROOF.tex`，先在 §1 合入含完整论证、核验摘要与复现命令的阅读源稿再调 `render_html.py`，不渲染只含 `.md` 链接的空壳目录页）；② 在 [§4 L60](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md#L60) 给出四步实操：整理最小目录（`PROOF.*`、`VERIFICATION.md`、源码/证书、固定 manifest 与单入口复算脚本）→ 解压或复制到独立临时目录 → 仅用包内相对路径实跑证书重放或 `lake build <主模块>` → 将真实命令、耗时与退出码写回 `HANDOFF.md`。
+
+---
+
+### 三、最含混段落的具体改写示范（[`mathrsi-prove/SKILL.md` §1 L24–36](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L24-L36)）
+
+> **原段问题**：只原则性说“先看整条主干、不能只交条件引理”，没写协调者拿到 `ROUTE_REPORT.md` 后怎样落地成 `PROOF_DRAFT.md` 的 caller 桩与 `proof-writer` 的实际输入文件。
+
+**建议直接替换为：**
+```markdown
+## 1. 先在 PROOF_DRAFT.md 写好原输入 caller 桩，再派发子引理
+
+拿到 `ROUTE_REPORT.md` 的首批任务后，协调者不要直接把孤立命题甩给 writer 或 worker，按以下三步落地：
+
+1. **先写主干 caller 桩**：在 `PROOF_DRAFT.md`（或现有正文）写出从任意原输入 $H$ 到目标结论的调用骨架：
+   - 明确原输入 $H$ 已具备哪些性质（如 $|V|=24,|E|=33$、最小反例点对覆盖）；
+   - 写明待证引理 $L$ 需要的精确输入接口（如“同一 $H$ 给出两个固定六度坏槽及 48 配置中的位置”），以及拿到 $L$ 的输出后哪一步消去当前分支并把全局剩余缩为 `RemainingGoal`（如仅余 23 点）。
+2. **切出独立子任务包**：从该 caller 桩提取子目录 `/task/work/<lemma_slug>/` 下的两份短输入：
+   - `STATEMENT.md`：原封不动复制 caller 桩要求 $L$ 证明的精确量词、前提与结论；
+   - `CONTEXT.md`：只放允许使用的已核文献进口（含定理号与条件）、上游已证引理与禁用松弛。
+3. **派发并立即回填 caller**：按 §2 调用 `formula-derivation` 或 `proof-writer`（或交独占 worker）。产物一返回，协调者立即将其证明的真实声明代回 `PROOF_DRAFT.md` 的 caller 桩核对前提是否严丝合缝；若 writer 加了额外假设 $A$，当场在主干补证 $H \Rightarrow A$，补不出则作为阻塞项留在未闭义务中。
+```
+
+---
+
+### 四、Memory Update（本轮已解决 vs 仍关切）
+
+- **已解决（可结案）**：
+  1. **父子双重调度风险**：9 个技能与 [`docs/WORKFLOWS.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKFLOWS.md#L7) 已统一“同级阶段只由唯一父调度者启动，子技能只返回产物与 next 建议”。
+  2. **autoreview 过薄问题**：[`mathrsi-route-loop/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L24-L111) 已完整恢复 `Phase A–E`、`research-review — composed`、逐 reviewer memory 与断点恢复，并去掉了 ML 分数真值门。
+  3. **相对路径与领域插件接入**：[`mathrsi-research/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L159-L161) 链接层级已修；[`mathrsi-survey/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L52-L74) 已落出 `propertyb-literature` 具体调用块。
+- **本轮仍关切（补齐即彻底就绪）**：
+  1. `prove` §1→§2 缺“先在 `PROOF_DRAFT.md` 写 caller 桩、再生成 `STATEMENT.md`/`CONTEXT.md` 调 `proof-writer`”的衔接动作；
+  2. `specify`/`survey` 需写明“3 条检索轴 + 2–5 篇核心原文收敛精读 + 已核进口/待证连接二分”；
+  3. `verify` §2 需明确局部 `research-review` slot 与 §3 `proof-checker` 的互斥边界；`handoff` §3 需明确把完整证明正文内联后再渲染 `PROOF.html`。
+

@@ -56,3 +56,12 @@ Root 负责核心契约、关键判断与最终验收。Sol 可负责完整且�
 执行入口为`base/skills/mathrsi-research/SKILL.md`。五项子工作流分别是mathrsi-prepare、mathrsi-route-loop、mathrsi-prove、mathrsi-verify、mathrsi-handoff；prepare内部调用specify/survey，verify内部按需调用assemble。人读地图在`docs/WORKFLOWS.md`。维护时同时检查实际产物消费和回流，不仅检查链接：局部验证回原prove，文献进口接实际条件，足够弱的必要门已解题就停止更强计算，审计转换稿的修复须同步最终正文。
 
 阶段启动由直接父调用者负责一次。被委派的子workflow完成scope后返产物/剩余/建议next，不与父同时启动下一同级阶段；内部survey、探针、局部verify等照常执行并返回原义务。新稿若计划正式proof-checker，可直接TeX作为唯一正文；已有Markdown需要保留时才做相应无损适配，不机械双份写作。以上来自本轮Grok/Gemini具体成稿审阅，原回复和处置留在development/workflow-redesign。
+
+
+## 审阅循环与跨模型执行必须实际接入（2026-11-01补充）
+
+用户指出“仅借鉴机制/单slot”的表述和实现弱化了ARIS。`mathrsi-route-loop`须作为ARIS auto-review-loop的数学适配实例，实际保留准备恢复、原件对抗审阅、证据对话、逐reviewer记忆、实际修法、结果回收、再审、逐轮累计与终轮交接。research-review通过其显式composed接口承接各审阅阶段，外层只有route-loop调度修法，不能为了避免循环嵌套而删掉实质对话和恢复能力。原版ML评分终点按数学任务改成路线交接判断，原定理是否已证独立报告。
+
+`reviewer_route.py`是配置解析器，不执行模型。跨模型Python桥接应随本仓`mcp-servers/`交付，复用ARIS原实现、测试和许可证；agent读取技能后经宿主实际MCP工具调用，桥接启动CLI并返回原文/session，技能再消费为修法和复核。说明见`docs/REVIEWER_MCP.md`。不得把这台机器全局MCP已经可用冒充新克隆已自带实现，也不为此另造Python调度平台。不改用户现有全局配置或登录；新机器按需安装CLI和注册本仓桥接。实际验证分别记录本包协议测试、真实调用与后续续接，不混称所有服务已在新环境验证。
+
+用户要求把多年实际使用的formula-derivation、proof-writer、research-lit、research-wiki、research-review、proof-checker、lean-formalize、render-html接成清晰流程。每个调用写出触发、输入、实作、返回结果和消费/修复路径；编号与能力名称本身不足。复杂技能先给可读执行地图和真实例子，再展开必要细节，保留agent判断，不缩成几条SOP或强制所有数学题走同一检查栈。
