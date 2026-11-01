@@ -15,6 +15,7 @@
 - [Property B领域主技能](plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)：结合完整知识库选择研究路线。
 - [Property B知识库](plugins/propertyb/knowledge/README.md)：完整引理/证明/失败经验、原始wiki与源码，不依赖作者另一份工作目录。
 - [工作区与恢复](docs/WORKSPACE.md)：已有项目沿用原规格和wiki，不初始化覆盖。
+- [经验反馈与版本演进](docs/EVOLUTION_WORKFLOW.md)：独立维护时，把真实使用经验变成补丁，经具体审阅与实际试用后决定是否纳入下一版。
 
 ### 五组数学子流程
 

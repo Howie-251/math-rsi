@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,xcolor}
+\newcommand{\auditlabel}[2]{\noindent\fcolorbox{#1}{white}{\textcolor{#1}{#2}}}
+\begin{document}
+\section*{Proof audit: four-uniform, at most seven edges}
+\begin{tabular}{llll}
+Issue & Status / impact & Severity & Fix\\
+1 & INVALID / GLOBAL & FATAL & ADD\_DERIVATION
+\end{tabular}
+
+\auditlabel{red}{BEFORE:} Vertex independence was used to assert independence of overlapping-edge bad events and a product formula.
+
+\auditlabel{orange}{WHY WRONG:} For $e=\{1,2,3,4\}$ and $f=\{1,2,3,5\}$, both edges are monochromatic exactly when all five vertices have the same color. Thus $\Pr(B_e\cap B_f)=1/16\ne1/64=\Pr(B_e)\Pr(B_f)$.
+
+\auditlabel{blue}{KEY INSIGHT:} Only the sum of the bad-event probabilities is needed. Pointwise $1_{\cup B_e}\le\sum_e1_{B_e}$, so averaging gives the union bound.
+
+\auditlabel{green!50!black}{AFTER:} For every permitted input,
+\[
+\Pr(\text{all edges bichromatic})\ge 1-\sum_e\Pr(B_e)
+=1-m/8\ge1/8>0.
+\]
+The theorem and assumptions are unchanged. The finite probability space is nonempty, including when $V$ is empty; if $\mathcal E$ is empty the good event is the full space.
+
+\section*{Obligation difference}
+The unsupported event-independence and product steps are removed. Added obligations are the finite indicator inequality, its finite average, and the inequality $m\le7\Rightarrow1-m/8\ge1/8$. Each is discharged explicitly in the repaired proof. There are no limit interchanges, WLOG reductions, induction, research imports or asymptotic assertions.
+
+\auditlabel{orange}{WARNING:} Actual reviewer results and completion scope are recorded in PROOF\_AUDIT.md. This report source does not imply successful PDF compilation; unavailable compilation is retained as pending.
+\end{document}

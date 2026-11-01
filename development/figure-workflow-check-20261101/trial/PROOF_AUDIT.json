@@ -1,0 +1,55 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Repaired proof establishes the unchanged theorem; fresh re-review and blind review positive. Same-family/provisional. Required TeX compilation is pending: workflow not fully completed.",
+  "audited_input_hashes": {
+    "ORIGINAL_PROOF.tex": "sha256:04891c5c56c0d2a1588be0ae216349afd6ffa331e8afebda3c6f0144d01826ae",
+    "PROOF.tex": "sha256:9da04b093f23418d9d919472898388192910dad770bdcc0356f8446a4f31bce3"
+  },
+  "trace_path": ".aris/traces/proof-checker/2026-11-01_run01/",
+  "thread_id": "/root/workflow_live_trial/trial_fixed_review",
+  "executor_model": null,
+  "executor_family": "openai",
+  "reviewer_model": null,
+  "reviewer_requested_model": "gpt-6-astra",
+  "reviewer_identity_source": "native model requested; runtime backend model not independently reported",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_reasoning": null,
+  "generated_at": "2026-11-01T15:18:25.650622+00:00",
+  "details": {
+    "theorems_audited": 1,
+    "issues": [
+      {
+        "id": "I1",
+        "severity": "FATAL",
+        "status": "INVALID",
+        "impact": "GLOBAL",
+        "category": "INSUFFICIENT_ASSUMPTION",
+        "location": "ORIGINAL_PROOF.tex:L14-L18",
+        "note": "Overlapping edge events need not be independent; replaced by proved finite union bound.",
+        "resolution": "fixed",
+        "fix_strategy": "ADD_DERIVATION"
+      }
+    ],
+    "open_mathematical_issues": [],
+    "workflow_complete": false,
+    "pending_operations": [
+      "Compile PROOF.tex",
+      "Compile proof_audit_report.tex twice and inspect PDFs"
+    ],
+    "compile_attempt_exit_code": 127,
+    "compile_dependency": "pdflatex unavailable",
+    "review_agent_ids": [
+      "/root/workflow_live_trial/trial_initial_review",
+      "/root/workflow_live_trial/trial_fixed_review",
+      "/root/workflow_live_trial/trial_blind_review"
+    ],
+    "source_coverage": "COVERAGE_RECEIPT.json",
+    "render_html": false
+  },
+  "executor_identity_source": "Codex host, exact executor model not exposed"
+}

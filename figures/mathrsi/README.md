@@ -8,6 +8,8 @@ Two coordinated English diagrams, generated and edited with the built-in GPT Ima
 
 The shared base supports problem-specific research through domain plugins. Task evidence produces reusable domain knowledge and general workflow lessons. Reviewed general lessons inform the next base iteration; the v2 node represents this evolution design. ECC is shown as a draft plugin example.
 
+The feedback path is executed through the separate [evolution workflow](../../docs/EVOLUTION_WORKFLOW.md); it does not alter the base during an ordinary problem-solving run.
+
 ## Five adaptive subworkflows
 
 ![Five MathRSI subworkflows and plugin integration](02-workflows.png)

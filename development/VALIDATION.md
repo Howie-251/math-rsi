@@ -1,5 +1,11 @@
 # MathRSI 验证记录
 
+## 2026-11-01：图与执行对齐、完整候选修复试用
+
+用户要求核图与真实流程。独立逐节点检查发现图1经验反馈到下一版base只有原则，现已补[独立维护工作流](../docs/EVOLUTION_WORKFLOW.md)及真实调用入口，Gemini具体静态复核无新问题；图2五子流程和插件接线一致。[本轮报告](figure-workflow-check-20261101/REPORT.md)列准确已测/未测范围。
+
+新fresh agent实际执行完整候选核查：发现相交坏事件独立性错误，核32染色反例，在原定理不变下以并集上界修复，完成fresh复审、blind review与可读交接。数学audit PASS、same-family/provisional；本机无pdflatex，实际exit127，`workflow_complete=false`，PDF编译仍pending。[实际调用链](figure-workflow-check-20261101/trial/CALLS.md)与原始回应保留。本次没有新联网全链、完整路线A–E或Lean运行，没有恢复旧研究。
+
 ## 2026-11-01：完整审阅回路、真实MCP与九技能执行清晰度
 
 本轮补齐ARIS autoreview的实质复用：原件审阅、同会话证据讨论、逐reviewer记忆、实际修法、再审与精确恢复；明确research-review Step3/4数学适配及唯一外层调度者。九项技能全部补入具体输入、调用、消费、修复和返回路径，改动依据真实Property B/ECC转折及模型指出的执行问题。

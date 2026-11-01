@@ -65,3 +65,5 @@ Root 负责核心契约、关键判断与最终验收。Sol 可负责完整且�
 `reviewer_route.py`是配置解析器，不执行模型。跨模型Python桥接应随本仓`mcp-servers/`交付，复用ARIS原实现、测试和许可证；agent读取技能后经宿主实际MCP工具调用，桥接启动CLI并返回原文/session，技能再消费为修法和复核。说明见`docs/REVIEWER_MCP.md`。不得把这台机器全局MCP已经可用冒充新克隆已自带实现，也不为此另造Python调度平台。不改用户现有全局配置或登录；新机器按需安装CLI和注册本仓桥接。实际验证分别记录本包协议测试、真实调用与后续续接，不混称所有服务已在新环境验证。
 
 用户要求把多年实际使用的formula-derivation、proof-writer、research-lit、research-wiki、research-review、proof-checker、lean-formalize、render-html接成清晰流程。每个调用写出触发、输入、实作、返回结果和消费/修复路径；编号与能力名称本身不足。复杂技能先给可读执行地图和真实例子，再展开必要细节，保留agent判断，不缩成几条SOP或强制所有数学题走同一检查栈。
+
+两张图的执行对齐核查见`development/figure-workflow-check-20261101/REPORT.md`。经验反馈到下一版base的明确维护入口是`docs/EVOLUTION_WORKFLOW.md`，只在维护授权下运行，和五个解题子流程分离。完整短候选修复试跑已实际完成数学核/修/复审/交接；本机无TeX，PDF编译pending，不能称整套研究工作流全部运行通过。保持已有各项实测的准确范围，后续按真实新缺口补验。
