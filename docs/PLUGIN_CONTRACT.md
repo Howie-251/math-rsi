@@ -2,6 +2,24 @@
 
 插件把数学知识带进研究，不接管原目标或核心维护。Base 组织人和工具，不凭字段齐全判定证明。第一版用 agent 可读的 Markdown 约定合作，以下概念可以写进已有文档，不要求五份表或一个统一 JSON 文件。
 
+## 在子工作流的具体位置接入
+
+[主工作流](../base/skills/mathrsi-research/SKILL.md)调用五项子工作流，领域能力在当前阶段接入。传给插件的是原规格、当前义务、实际输入、已证与待证条件、要返回的产物及写入归属。插件处理相关范围后回当前调用处，不再从头运行整条研究流程。
+
+后继阶段只由持有当前义务的调用方启动一次。插件给下一动作及证据，不能先替父流程调用prove/verify，父流程又再启动一遍。内部所需文献/程序/独核继续执行，完成后逐层返回。
+
+| 调用方 | Property B实际入口 | 输入与返回用途 |
+|---|---|---|
+| prepare/survey | [propertyb-literature](../plugins/propertyb/skills/propertyb-literature/SKILL.md) | 当前k/预算/待核公式、旧查询→准确基线/原文条件/反例；合入同一文献报告 |
+| route-loop | [propertyb-bound-lab](../plugins/propertyb/skills/propertyb-bound-lab/SKILL.md) 的方法诊断 | 活跃失败型、旧预算、共同对象→结构入口或有信息的探针；用于选择路线 |
+| prove | 同一bound-lab的具体义务执行 | 已选路线、准确参数与进口→选锁/真实迹/共同坏对证明或实际证书；回接原caller |
+| verify | [propertyb-certificate](../plugins/propertyb/skills/propertyb-certificate/SKILL.md) | 当前正文、真实输入、域与证书→覆盖/算术/输入连接证据；交verify装配原结论 |
+| handoff | 已有领域正文与核验记录 | 只提供领域复现命令、条件与关键源码；展示/交接由handoff组织 |
+
+通用survey和领域literature共享同一次检索任务，按术语、来源或深读对象分工，不能分别重复全轮。通用verify持有完整证明验收；certificate在其中执行领域核验时，只回交该scope证据，不递归启动另一个最终verify/proof-checker循环。独立调用领域技能仍可按它自己的完整合同工作，但嵌入调用必须把当前阶段和返回点明确传入。
+
+路线/证明中的新文献疑问交survey增量处理，survey可再调用领域literature，随后结果回原义务。文献发现一般条件只在prove证明实际输入满足后才能使用。局部certificate或Lean已核则回当前证明，不自动跳到最终handoff。共同写入由父调用者指定一个owner，其他worker交新增正文和证据位置；没有统一强制JSON或额外Python接口。
+
 ## 任务与义务
 
 任务来自用户与正式规格。插件先解释本领域对象，列出已有定理与合法操作，再帮助 Root 判断有哪些证明路线。领域惯用的正则、线性、满支撑、自同构等附加条件，必须有无损归约才可用于原题全域；否则只是搜索子族。

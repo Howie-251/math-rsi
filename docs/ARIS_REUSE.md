@@ -1,6 +1,6 @@
 # 在 MathRSI 内执行 ARIS 工作流
 
-MathRSI 携带可以直接读取和执行的 ARIS 实现。`base/skills/mathrsi-research/` 负责数学任务的方向、衔接与范围；本页说明其调用的真实子技能、资源与命令。任务的原题、wiki、证明、源码与计算证据仍放在任务工作区。修订领域策略时修改插件，修订通用数学研究流程时修改 MathRSI；已复制的 ARIS 源文件保留原字节，需要升级时作为明确的上游更新处理。
+MathRSI 携带可以直接读取和执行的 ARIS 实现。`base/skills/mathrsi-research/` 串联五项数学子工作流；本页说明它们使用的真实ARIS能力、资源与命令。执行入口与阶段消费见 [WORKFLOWS](WORKFLOWS.md)。任务的原题、wiki、证明、源码与计算证据仍放在任务工作区。修订领域策略时修改插件，修订通用数学研究流程时修改 MathRSI；已复制的 ARIS 源文件保留原字节，需要升级时作为明确的上游更新处理。
 
 ## 实现位置、版本与宿主
 
@@ -61,14 +61,11 @@ python3 "$ARIS_REPO/tools/research_wiki.py" init research-wiki/
 python3 "$ARIS_REPO/tools/research_wiki.py" ingest_paper research-wiki/ \
   --title "实际论文标题" --authors "实际作者" --year 2026 \
   --venue "实际版本或刊物" --thesis "本次核读支持的一句结论"
-python3 "$ARIS_REPO/tools/research_wiki.py" add_claim research-wiki/ \
-  --slug candidate-main --name "当前候选命题" --status unproven \
-  --statement "原量词和准确命题" --evidence "待完成的实际义务及现有材料路径"
 ```
 
-示例标题与作者是占位符，不能原样写进真实研究。论文已知 arXiv ID 时使用 `ingest_paper --arxiv-id <id>`；这会访问网络。手工元数据形式适用于离线或无 arXiv 的来源。本 helper 会生成页面、更新索引和 query pack；不要另起第二个 wiki 管理器。状态 `verified` 只能在对应数学或计算义务的真实验收之后使用，helper 接受该字符串本身不构成验收。
+示例标题与作者是占位符，不能原样写进真实研究。论文已知 arXiv ID 时使用 `ingest_paper --arxiv-id <id>`；这会访问网络。手工元数据形式适用于离线或无 arXiv 的来源。本 helper 会生成页面、更新索引和 query pack；不要另起第二个 wiki 管理器。proof-axis claim的创建与升级由proof-checker真实audit及其wiki hook负责，需带相应provenance；helper接受状态字符串不等于审计已完成。候选先保存在原义务、路线或idea记录，survey与handoff不自行制造canonical proof claim。
 
-[`wiki-enrich`](../base/skills/skills-codex/wiki-enrich/SKILL.md) 用于补足 paper 页的 TODO。输入是未充分展开的页面和可读论文，输出是实际读过的核心贡献、公式、条件与关系；缺资料的部分保持待读，不用模型常识填成事实。对候选结论用 `add_claim`，已有实体间的关系用 `add_edge --from ... --to ... --type ... --evidence ...`，每条边都写出依据。原题失败、限制条件和重启条件也留在任务记录，以便后续研究直接复用。
+[`wiki-enrich`](../base/skills/skills-codex/wiki-enrich/SKILL.md) 用于补足 paper 页的 TODO。输入是未充分展开的页面和可读论文，输出是实际读过的核心贡献、公式、条件与关系；缺资料的部分保持待读，不用模型常识填成事实。候选结论保留在当前义务/idea中；proof-axis claim按checker的真实audit hook建立。已有实体间的关系用 `add_edge --from ... --to ... --type ... --evidence ...`，每条边都写出依据。原题失败、限制条件和重启条件也留在任务记录，以便后续研究直接复用。
 
 ## 阶段三：从推导线到完整证明
 
@@ -82,7 +79,7 @@ python3 "$ARIS_REPO/tools/research_wiki.py" add_claim research-wiki/ \
 
 输入是原命题、完整候选、所需进口与实际证据。优先确定尚存疑问：是归约保真、全域覆盖、算术值、形式化接口，还是论述不清。然后只把相关材料给相应检查，不以整篇反复送审代替补缺口。
 
-[`research-review`](../base/skills/skills-codex/research-review/SKILL.md) 适合路线、方法与证据是否支撑研究目标的具体判断；[`proof-checker`](../base/skills/skills-codex/proof-checker/SKILL.md) 负责严格证明审计、义务清点、发现和修复缺口，并保留 `PROOF_AUDIT` 等约定输出。两者使用实际 reviewer 路由。先解析路由，之后检查本轮宿主是否提供所需工具，再发起已授权调用：
+[`research-review`](../base/skills/skills-codex/research-review/SKILL.md)提供方法评审能力；数学route-loop对其取证/调用/留存机制做单slot适配，循环由route-loop持有；[`proof-checker`](../base/skills/skills-codex/proof-checker/SKILL.md) 负责严格证明审计、义务清点、发现和修复缺口，并保留 `PROOF_AUDIT` 等约定输出。两者使用实际 reviewer 路由。先解析路由，之后检查本轮宿主是否提供所需工具，再发起已授权调用：
 
 ```bash
 export ARIS_REPO="/path/to/MathRSI/base"
@@ -92,7 +89,7 @@ python3 "$ARIS_REPO/tools/reviewer_route.py" \
 
 这个命令只输出配置，不调用模型、不检查登录、不证明 MCP 已加载。选择按 inline 参数优先于任务 `.aris/reviewer.json`，再到 host default；路由的模型名与工具名是固定上游描述，具体执行必须匹配当前宿主真实能力，例如 native continuation 不能凭字符串 `send_input` 假定存在。记录请求值、实际返回身份／effort、完成状态、读过的主文件和是否执行命令。默认 Codex reviewer 属于 same-family，语义接受记录为 provisional；跨家族有效审阅、实际确定性复算、Lean 检查各报告其范围。服务失败不能算接受或悄悄换成主代理自审。
 
-[`auto-review-loop`](../base/skills/skills-codex/auto-review-loop/SKILL.md) 已完整复制，包括硬依赖 [`result-to-claim`](../base/skills/skills-codex/result-to-claim/SKILL.md)、[`training-check`](../base/skills/skills-codex/training-check/SKILL.md)、[`render-html`](../base/skills/skills-codex/render-html/SKILL.md)。它原生是 research/ML 迭代流程，有默认四轮、训练健康、结果到 claim、分数及 stop threshold。数学固定命题不能用其 `score >= 6` 或 `ready/almost` 当真值判定，也不应无训练任务时强行造训练指标。仅在实验型任务符合原流程时完整调用；纯证明的迭代由数学总控围绕实际未闭义务调用 proof-writer／proof-checker。需要研究评审循环时，保留原有退出和失败语义，另以任务冻结的数学验收判定定理是否成立。
+[`auto-review-loop`](../base/skills/skills-codex/auto-review-loop/SKILL.md) 已完整复制，包括硬依赖 [`result-to-claim`](../base/skills/skills-codex/result-to-claim/SKILL.md)、[`training-check`](../base/skills/skills-codex/training-check/SKILL.md)、[`render-html`](../base/skills/skills-codex/render-html/SKILL.md)。它原生是 research/ML 迭代流程，有默认四轮、训练健康、结果到 claim、分数及 stop threshold。数学固定命题不能用其 `score >= 6` 或 `ready/almost` 当真值判定，也不应无训练任务时强行造训练指标。仅在实验型任务符合原流程时完整调用；求解方法的迭代由 [mathrsi-route-loop](../base/skills/mathrsi-route-loop/SKILL.md)拥有：复用原件读取、reviewer路由、trace和review→fix→new evidence→targeted re-review，但每个slot只问具体数学路线问题，不嵌套整个原ML循环或research-review的共识循环。证明推进由mathrsi-prove执行；完整证明的审计修复由mathrsi-verify调用真实proof-checker承担。适配与原版完整执行分别记录，不将仅复用机制称为原版auto-review-loop已运行。
 
 [`analyze-results`](../base/skills/skills-codex/analyze-results/SKILL.md) 处理实际 JSON/CSV、比较、统计与观察，适用于启发式搜索效率、计算开销、数值实验等。区分原始观察、解释与下一项检验；多 seed 结果或统计显著不等于全称命题的证明。确定性验证仍须按插件与原题检查完整对象域、实际输入连接和算法可靠性。
 

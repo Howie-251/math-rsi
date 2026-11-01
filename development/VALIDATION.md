@@ -1,3 +1,22 @@
+# MathRSI 验证记录
+
+## 2026-11-01：实际子工作流编排与经验回流
+
+本轮把旧规则型主入口改成实际编排：prepare → route-loop → prove → verify → handoff，内部调用specify/survey/assemble及完整ARIS能力。所有子流程明确输入、动作、产物消费、回流和恢复；原规格及wiki沿用任务工作区。见[人读执行地图](../docs/WORKFLOWS.md)及[主入口](../base/skills/mathrsi-research/SKILL.md)。
+
+设计依据是[ARIS真实工作流阅读](workflow-redesign/ARIS_READING_SYNTHESIS.md)与[两个数学项目的六条实证转折](workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。已完成Property B的T32/T33/一般k主定理及ECC旧43/10作为成功经验；其后未完成参数保持未完成。只是提炼历史，没有重新解题或重跑旧工程。
+
+实际检查：
+
+- [元数据与发现记录](workflow-redesign/VALIDATION.json)：九项MathRSI入口正式quick_validate通过；维护文档51份、901个本地目标无缺失；89个仓内相对发现别名在搬迁位置解析。搬迁检查覆盖别名与入口文件，不冒称重跑整个新workflow。
+- [行为试用](workflow-redesign/behavioral-trial/REPORT.md)：实际读取主入口、prove、领域L7和proof-writer；写完整有限实数证明、执行精确caller计算、调用局部verify及fresh同家族意见、读回后返回原prove完成下游。共享量实际1、错误累加2、容量修复后1。不是仅做目录检查。
+- 静态接线审查找到并修复了主入口四条相对路径，以及Markdown转TeX审计后缺少逆向修复同步的问题。现在最终正文必须与实际审计论证一致。
+- 当前技能明确引用的设计与ECC交接原件已单独纳入版本管理，避免本机存在却随克隆缺失。历史绝对路径保留为来源记录，现行执行不依赖它们。
+
+本次行为试用是已知答案、作者参与的开发测试，不是盲测或通用解题效果评测。没有执行一项全新的长研究，没有新Lean/TeX构建，没有将局部审阅冒称正式proof-checker。[跨模型审阅处置](workflow-redesign/REVIEW_DISPOSITION.md)保存Gemini设计/成稿阅读、Grok具体发现及修后定向复核：父子重复调度、survey返回位置和Property B真实调用均已修正；两者均未执行数学程序。下方ARIS副本及Property B工具运行结果是同日较早开发的真实证据，本轮不重复运行未变重检查。
+
+---
+
 # MathRSI：自包含技能与 Property B 重建验收
 
 2026-11-01。本轮验收的是可以实际接手研究的技能、知识与工具连接。首版只有总控与薄插件，未满足用户要求；其测试保留在[历史记录](VALIDATION_FIRST_VERSION.md)，不再作为当前能力层完整性的依据。
