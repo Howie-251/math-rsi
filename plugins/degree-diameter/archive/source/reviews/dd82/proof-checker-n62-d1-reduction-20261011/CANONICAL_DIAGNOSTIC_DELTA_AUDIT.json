@@ -1,0 +1,88 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "bounded_incremental_delta",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 14 canonical coverage and constraint obligations are discharged. c in C5 excludes b=W5; b=28 and b=41 suffice. Every JSON constraint is semantically necessary under the accepted hard-D1 hypotheses.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_MATCH_CANONICAL_DIAGNOSTIC_COVERAGE.md",
+      "line_count": 130,
+      "size_bytes": 8111,
+      "mtime_utc": "2026-10-11T10:45:43.278082+00:00",
+      "scope": "Entire document"
+    },
+    {
+      "path": "proofs/dd82/n62/d1_match_canonical_diagnostic_constraints_20261011.json",
+      "line_count": 695,
+      "size_bytes": 10417,
+      "mtime_utc": "2026-10-11T10:44:59.400844+00:00",
+      "scope": "Entire document"
+    }
+  ],
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "unattested",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:51:54.720992+00:00",
+  "details": {
+    "micro_claims_audited": 14,
+    "micro_claims_discharged": 14,
+    "issues": [],
+    "source_fixes": 0,
+    "surviving_representatives": [
+      28,
+      41
+    ],
+    "excluded_representative": 34,
+    "semantic_necessity": "PASS",
+    "relabeling_coverage": "PASS",
+    "archive_class_parent_alignment": "PASS",
+    "json_transcription": "PASS",
+    "archival_sources_inspected": [
+      "theory/n62/n62_root_templates.json: D1_MATCH",
+      "theory/n62/n62_root_templates.py: class_layout and parent_map",
+      "code/n62/n62_ab_cnf.py: ABEncoder class/parent loading and fixed_A"
+    ],
+    "checks_run": [
+      "Mathematical coverage and common-neighbor proof review",
+      "Exact JSON comparison against archive and accepted row formulas",
+      "Complete-row symmetry, row-sum and available actual common-neighbor identity checks"
+    ],
+    "optional_constraint": "For b=28 the paper additionally proves t outside C4. JSON retains the broader safe domain, which does not invalidate necessity or coverage.",
+    "scope_exclusions": [
+      "Solver or encoder execution",
+      "DIMACS literal translation",
+      "Complete CNF bridge certification",
+      "D1 exclusion",
+      "Combination with historical symmetry breakers",
+      "Order63–65 work"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "prepared_driver_addendum": {
+      "semantic_necessity": "PASS",
+      "checked_facts": [
+        "B support from H only into C2,C3,C4",
+        "B[C2]=0",
+        "B(C3,C4)=0",
+        "A[Ci]=0 for i=1,2,3,4",
+        "Triangle-free distinguished set exactly 0,1,2,3,4,w,a,r,p,q,b,c",
+        "Complete row zeros and exactly-one unit groups"
+      ],
+      "all_class_triangle_free_assumption": false,
+      "unrelated_symmetry_breakers_added": false,
+      "numeric_emitted_clauses_independently_replayed": false
+    }
+  },
+  "additional_sources_inspected": [
+    {
+      "path": "computations/dd82/n62/d1_hard_diagnostic.py",
+      "scope": "Appended structural facts and visible A/B/group translation helpers; no execution",
+      "line_count": 201,
+      "size_bytes": 8745,
+      "mtime_utc": "2026-10-11T10:50:27.943672+00:00"
+    }
+  ]
+}

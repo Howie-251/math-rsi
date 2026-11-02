@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "48",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/double_packing18_full61_run/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/double_packing18_full61_run/certification/proof.lrat"
+  ],
+  "exit_code": 20,
+  "wall_timeout": false,
+  "termination_signal": null,
+  "cpu_seconds": 5.026064000000001,
+  "wall_seconds": 5.543664339929819,
+  "cpu_budget_seconds": 50,
+  "wall_budget_seconds": 70,
+  "cpu_affinity": [
+    0
+  ],
+  "threads": 1,
+  "memory_limit_bytes": 4294967296,
+  "per_file_limit_bytes": 268435456,
+  "status": "CHECKED_UNSAT_CNF",
+  "source_input": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/double_packing18_full61_run/input.cnf",
+  "scope": "Complete epsilon=0 adjacent-double full61 construction in double-packing coordinates; all colors, all kernel shapes, full S/T and all 1830 actual original pairs. Epsilon=1 remains outside this input and open.",
+  "proof_checked": true,
+  "certification_solver_calls": 1,
+  "original_discovery_solver_calls": 1,
+  "proof_bytes": 9227674,
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/double_packing18_full61_run/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/double_packing18_full61_run/certification/proof.lrat"
+    ],
+    "exit_code": 20,
+    "wall_timeout": false,
+    "termination_signal": null,
+    "cpu_seconds": 0.1364459999999995,
+    "wall_seconds": 0.1862829625606537,
+    "cpu_budget_seconds": 30,
+    "wall_budget_seconds": 45,
+    "cpu_affinity": [
+      0
+    ],
+    "threads": 1,
+    "memory_limit_bytes": 4294967296,
+    "per_file_limit_bytes": 268435456,
+    "verified": true,
+    "scope": "Exact unchanged double_packing18_full61 input.cnf"
+  },
+  "mathematical_conclusion": "Exact saved CNF certified UNSAT; epsilon=0 graph-to-CNF bridge separately documented and reviewed. Epsilon=1 remains outside scope."
+}

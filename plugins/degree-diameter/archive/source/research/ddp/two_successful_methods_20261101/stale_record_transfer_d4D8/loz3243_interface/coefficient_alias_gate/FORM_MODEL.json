@@ -1,0 +1,60 @@
+{
+  "field_modulus": 139,
+  "multiplier": 6,
+  "multiplier_power23": 1,
+  "multiplier_not_one": true,
+  "cyclic_phase_action_model_defined": true,
+  "parameter_order": [
+    "c0",
+    "c1",
+    "c2",
+    "c12"
+  ],
+  "positive_darts": {
+    "0": {
+      "parameter": 0,
+      "phase": 3
+    },
+    "2": {
+      "parameter": 1,
+      "phase": 11
+    },
+    "4": {
+      "parameter": 2,
+      "phase": 6
+    },
+    "10": {
+      "parameter": 3,
+      "phase": 4
+    }
+  },
+  "inverse_darts": {
+    "1": {
+      "parameter": 0,
+      "positive_phase": 3
+    },
+    "3": {
+      "parameter": 1,
+      "positive_phase": 11
+    },
+    "5": {
+      "parameter": 2,
+      "positive_phase": 6
+    },
+    "11": {
+      "parameter": 3,
+      "positive_phase": 4
+    }
+  },
+  "zero_translation_darts": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "equation": "final_y=initial_y+coefficient_vector dot(c0,c1,c2,c12)",
+  "positive_step": "6^current_phase times c_j",
+  "inverse_step": "-6^(current_phase-positive_phase) times c_j",
+  "prior_centered_control_used": false,
+  "old_field_laws_reverified": false
+}

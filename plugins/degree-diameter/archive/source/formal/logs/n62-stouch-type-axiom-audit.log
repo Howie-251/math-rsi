@@ -1,0 +1,40 @@
+structure DegreeDiameter.STouchTemplate.{u_1} {V : Type u_1} (G : SimpleGraph V) (r a b c w : V) : Prop
+number of parameters: 7
+fields:
+  DegreeDiameter.STouchTemplate.root_a : G.Adj r a
+  DegreeDiameter.STouchTemplate.root_b : G.Adj r b
+  DegreeDiameter.STouchTemplate.root_c : G.Adj r c
+  DegreeDiameter.STouchTemplate.edge_ab : G.Adj a b
+  DegreeDiameter.STouchTemplate.a_ne_c : a ≠ c
+  DegreeDiameter.STouchTemplate.b_ne_c : b ≠ c
+  DegreeDiameter.STouchTemplate.w_ne_root : w ≠ r
+  DegreeDiameter.STouchTemplate.root_w_nonadj : ¬G.Adj r w
+  DegreeDiameter.STouchTemplate.within_root : ∀ (x y : V),
+      G.Adj r x → G.Adj r y → (G.Adj x y ↔ x = a ∧ y = b ∨ x = b ∧ y = a)
+  DegreeDiameter.STouchTemplate.exceptional_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = a ∨ x = c)
+  DegreeDiameter.STouchTemplate.ordinary_parent_unique : ∀ (y : V),
+      y ≠ r → ¬G.Adj r y → y ≠ w → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x'
+constructor:
+  DegreeDiameter.STouchTemplate.mk.{u_1} {V : Type u_1} {G : SimpleGraph V} {r a b c w : V} (root_a : G.Adj r a)
+    (root_b : G.Adj r b) (root_c : G.Adj r c) (edge_ab : G.Adj a b) (a_ne_c : a ≠ c) (b_ne_c : b ≠ c)
+    (w_ne_root : w ≠ r) (root_w_nonadj : ¬G.Adj r w)
+    (within_root : ∀ (x y : V), G.Adj r x → G.Adj r y → (G.Adj x y ↔ x = a ∧ y = b ∨ x = b ∧ y = a))
+    (exceptional_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = a ∨ x = c))
+    (ordinary_parent_unique :
+      ∀ (y : V), y ≠ r → ¬G.Adj r y → y ≠ w → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x') :
+    DegreeDiameter.STouchTemplate G r a b c w
+def DegreeDiameter.threeUnitRow.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → V → V → Prop :=
+fun {V} [Fintype V] G v a b c =>
+  ∀ (x : V),
+    DegreeDiameter.defectMatrix G v x = ((if x = a then 1 else 0) + if x = b then 1 else 0) + if x = c then 1 else 0
+@DegreeDiameter.three_unit_triangle_row_third_nonadj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {r a b t : V}, G.Adj r a → G.Adj r b → G.Adj a b → t ≠ r → t ≠ a → DegreeDiameter.threeUnitRow G b r a t → ¬G.Adj b t
+@DegreeDiameter.stouch_b_c_defect_zero : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r a b c w : V},
+  DegreeDiameter.STouchTemplate G r a b c w → DegreeDiameter.defectMatrix G b c = 0
+@DegreeDiameter.no_n62_stouch_template : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {r a b c w : V}, DegreeDiameter.STouchTemplate G r a b c w → False
+'DegreeDiameter.three_unit_triangle_row_third_nonadj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.stouch_b_c_defect_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_n62_stouch_template' depends on axioms: [propext, Classical.choice, Quot.sound]

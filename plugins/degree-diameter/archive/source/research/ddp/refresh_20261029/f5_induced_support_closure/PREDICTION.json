@@ -1,0 +1,16 @@
+{
+  "status": "FROZEN_BEFORE_SMALL_SUPPORT_CHECK",
+  "input": "research/ddp/refresh_20261029/f5_induced_retention_closure/CONTROLLER_UNIQUE_WORDS.json",
+  "rules": "All258 saved ordered distance3 unique controller words u-a-b-v give support Horn implications (u and v) => (a and b). No source graph or retained-coordinate graph is read.",
+  "prediction_H": "Every proper Horn-closed support has size<=15; therefore any n>=1921 induced candidate would need all30 controller fibers nonempty. This is a prediction, not an imposed assumption.",
+  "method": "Deterministic NextClosure on the30-bit definite-Horn closure operator, reading the258 words (reverse-equivalent rules may be deduplicated). Track largest proper closed support. Stop on completion or the one shared5CPU budget. If incomplete, any literal >=16 proper closed support is still an exact counterexample, but no maximum is claimed.",
+  "direct_check": "Independently check every one of the258 original words on any returned literal support, including properness and size. A completed closure enumeration has a paper completeness argument; no raw large-solver UNSAT is promoted.",
+  "old_scope": "Targeted exact-source support-closure search found no previous completion. Existing3750 retention CNF and itsUNKNOWN are different; do not restart them.",
+  "CPU_budget_seconds_including_compile": 5,
+  "workers": 1,
+  "source_graph_reads": 0,
+  "graph_BFS": 0,
+  "SAT_calls": 0,
+  "new_graphs": 0,
+  "stop": "One bounded support calculation only. No further controller order, template or large retention model."
+}

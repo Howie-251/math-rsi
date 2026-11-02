@@ -1,0 +1,13 @@
+# Upper P33 copy family: only degrees73 through79
+
+This is a new bounded production of the same fixed P33 full-neighborhood-copy rule, not a resumed controller search, field ladder or old sample timer. Root's actual scalar gate must clear degrees73,...,79 before the writer runs. The initially considered degree80 is explicitly excluded: the classical q8 Payne GQ(7,9) source gives327680points at cap80 and blocks that extension. No degree80 graph, concrete target or Audit instance will be written. The earlier eight low endpoints and expert draft remain untouched.
+
+The only source is the accepted160050-vertex/5121600-edge original filled GQ graph. Use the same ordered1650 P33×50 centers and the same immutable sourceN64, including its original fill vertices. Clone j=1650*copy+base receives new label160050+j; no new-new edges are added. Do not chain from the new72-degree graph or use any current clone neighborhood.
+
+The sole seven cases are k=9,...,15 with degrees73,...,79 and orders174900,176550,178200,179850,181500,183150,184800. Each has m=5121600+105600k, old pin loadk on105600 vertices, and degree64 on54450+1650k other source/clone vertices. Every file has its n m header and a strict u<v lexicographic edge body. The maximum graph has24750clones; the seven independent ordered recipe files total138600rows.
+
+Producer work uses one source literal parse, binding the1650center full source neighborhoods and retaining every source edge, then writes seven complete files. Save ordered recipes and every prefix load through24750. No BFS, field/geometry reconstruction, currentR2 check, solver, Lean compilation or external review is part of production. One worker, cumulative30CPU seconds including preparation, compilation and new artifact binding.
+
+After actual production, a separate local budget<=300CPU permits only two new Lean modules, GQ77Published33CloneFamilyUpperExact and its separate UpperAudit. Import the closed parent GQ77Published33CloneFamilyExact, without editing or rebuilding any of its24modules, old source or generic proof. Give seven explicit original endpoints d73_174900,...,d79_184800 and their separate FinalClaim/final_claim aliases, actual parent graph/type/label instances, WalkD3/nonD2, standard three axioms only and no user certificate. Fin k is a copy index, not a field. Externally bind all138600 fresh ordered rows to the existing compiled symbolic label theorems; do not claim a Lean ASCII parser or Audit#eval of those rows.
+
+Root owns external reviews and ledger changes. The final shared fresh-C scope is planned as the lower eight plus these upper seven original targets, fifteen total. This task does not alter the old expert8 draft or freeze any delivery.

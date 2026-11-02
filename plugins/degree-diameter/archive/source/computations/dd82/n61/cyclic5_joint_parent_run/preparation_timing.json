@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "production_executed": false,
+  "steps": [
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "enumerate.cpp",
+        "-o",
+        "enumerate"
+      ],
+      "exit_code": 0,
+      "child_cpu_seconds": 1.2197909999999998,
+      "wall_seconds": 1.2245770655572414
+    },
+    {
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/cyclic5_joint_parent_run/enumerate",
+        "--sanity"
+      ],
+      "exit_code": 0,
+      "child_cpu_seconds": 0.003682000000000102,
+      "wall_seconds": 0.005125895142555237
+    },
+    {
+      "command": [
+        "/opt/conda/bin/python3",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/cyclic5_joint_parent_run/check.py",
+        "sanity"
+      ],
+      "exit_code": 0,
+      "child_cpu_seconds": 0.0645110000000001,
+      "wall_seconds": 0.06577643007040024
+    }
+  ]
+}

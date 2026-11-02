@@ -1,0 +1,179 @@
+{
+  "status": "SOURCE_AND_SCOPE_READY_NO_MATCHING_SEARCH",
+  "created_UTC": "2026-10-28T03:16:14.497643+00:00",
+  "target": {
+    "Delta": 4,
+    "D": 4,
+    "public_lower_bound_inherited": 104,
+    "hypothetical_n": 126,
+    "baseline_role": "parent supplied; not independently refreshed in this source-only task"
+  },
+  "primary_sources": [
+    {
+      "url": "https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/generators/smallgraphs.html#sage.graphs.generators.smallgraphs.Tutte12Cage",
+      "kind": "official Sage reference",
+      "read_scope": "Tutte12Cage entry only",
+      "facts": {
+        "order": 126,
+        "edges": 189,
+        "girth": 12,
+        "diameter": 6
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sagemath/sage/develop/src/sage/graphs/generators/smallgraphs.py",
+      "kind": "official Sage implementation",
+      "read_scope": "Tutte12Cage implementation lines4914..4940",
+      "LCF_offsets": [
+        17,
+        27,
+        -13,
+        -59,
+        -35,
+        35,
+        -11,
+        13,
+        -53,
+        53,
+        -27,
+        21,
+        57,
+        11,
+        -21,
+        -57,
+        59,
+        -17
+      ],
+      "LCF_repeat": 7
+    },
+    {
+      "url": "https://aeb.win.tue.nl/graphs/cages/cages.html",
+      "kind": "Brouwer author data page",
+      "read_scope": "GH family statement and (3,12,126) table row",
+      "facts": {
+        "degree": 3,
+        "girth": 12,
+        "order": 126,
+        "automorphism_group_order": 12096,
+        "vertex_orbit_sizes": [
+          63,
+          63
+        ],
+        "bipartite": true,
+        "distance_sphere_sizes": [
+          1,
+          3,
+          6,
+          12,
+          24,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "url": "https://aeb.win.tue.nl/graphs/cages/cage-k3.g12.dr",
+      "kind": "Brouwer linked actual small adjacency",
+      "read_scope": "browser text, no local graph import or BFS",
+      "format": "n126 then126 semicolon-terminated adjacency lists, vertex0..62 neighbors63..125; final row ends period"
+    },
+    {
+      "url": "https://www.maplesoft.com/support/help/errors/view.aspx?path=GraphTheory/SpecialGraphs/LCFGraph",
+      "kind": "official Maple help LCF table",
+      "read_scope": "generalized hexagon graph row only",
+      "facts": {
+        "order": 126,
+        "edges": 189,
+        "LCF_offsets": [
+          17,
+          27,
+          -13,
+          -59,
+          -35,
+          35,
+          -11,
+          13,
+          -53,
+          53,
+          -27,
+          21,
+          57,
+          11,
+          -21,
+          -57,
+          59,
+          -17
+        ],
+        "LCF_repeat": 7
+      }
+    }
+  ],
+  "local_source": {
+    "coordinates": "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/COORDINATES.json",
+    "construction": "point IDs0..62, line63+i for triads[i], incidence p--(63+i)",
+    "triads": 63,
+    "source_D6_geometry_evidence": "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/THEOREM.md",
+    "binding_status": "Separate producer made one bounded GraphMatcher attempt localtriads<->LCF; hard8CPU timeout UNKNOWN, no map, not an isomorphism rejection or source failure. No retry. Official LCF recipe is independently bound by Maple/Sage and may be used directly."
+  },
+  "ledger_check": {
+    "path": "research-wiki/DDP_METHOD_LEDGER.json",
+    "rows_at_read": 356,
+    "Tutte_or_12cage_name_matches": [],
+    "exact_GH2_complement_matching_prior_result_found": false,
+    "meaning": "No matching exact prior result found in sole ledger; this is not a theorem of existence or a complete literature exclusion.",
+    "related_rows": [
+      {
+        "id": "ddp-m1-q63-exact-20261026",
+        "scope": "F7 semidirect C9, two63-point orbits, degree6 internal inverse pairs plus four cross ports; complete specified126-point D3 family, not cubic GH2 plus matching.",
+        "evidence": "research/ddp/m1_q63_quotient/DERIVATION.md"
+      },
+      {
+        "id": "ddp-pgl2-7-orbits126-20261027",
+        "scope": "PGL2(7) H8/K4 cosets42+84,120 six-regular orbital combinations. Different source, degree and action.",
+        "evidence": "research/ddp/breadth_20261027/pgl2_7_orbits126/REPORT.md"
+      },
+      {
+        "id": "ddp-q8-lift112-d4-20261027",
+        "scope": "Base is C14 squared (i±1,i±2), NOT the Heawood graph. Q8 ordinary cover,12 starts/36 segments only; savedD5, not a whole-family exclusion.",
+        "evidence": "research/ddp/breadth_20261027/q8_lift112_d4/REPORT.md"
+      },
+      {
+        "id": "ddp-flag-heawood105-controlled-20261027",
+        "scope": "Fano Heawood14 incidence under fixed A/B/C flag operator gives105-point max4 graph; does not add a matching on126 incidence vertices.",
+        "evidence": "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/thin_heawood105/RESULT.json"
+      },
+      {
+        "id": "ddp-published-quartic-cayley-census69orders-4d3-d4-20261028",
+        "scope": "All quartic Cayley candidates improving104 atD4 excluded by published census+filter; applicable only if the augmented graph is proved Cayley, not from source symmetry or a C7 subgroup alone.",
+        "evidence": "research/ddp/more_graphs_20261027/small_d4_D4_C3_times_quarterturn108_20261028/census_index_access/selected_orders_20261028/radius_filter/REPORT.md"
+      }
+    ]
+  },
+  "paper_diagnostics": {
+    "source_R4_size": 46,
+    "distance5_targets_per_root": 48,
+    "distance6_targets_per_root": 32,
+    "new_degree4_root_with_degree3_Moore_R4_upper": 121,
+    "perfect_matching_necessary": "126>121, so every old vertex must receive exactly one new edge.",
+    "bipartition_parity": "Each old part has63 vertices. If c is the number of cross-part matching edges, both same-part matching counts=(63-c)/2, hence c odd.",
+    "all_cross_excluded": "All-cross M preserves bipartiteness; opposite part reachable in radius4 has at most4+4*3^2=40<63. Mixed M is necessary.",
+    "general_word_capacity": {
+      "zero_matching": 46,
+      "one_matching": 88,
+      "two_matching": 27,
+      "total": 161,
+      "role": "formal nonbacktracking route upper count only;161>=126 gives no uniform capacity exclusion"
+    },
+    "matching_repair_question": "All80 old distance5/6 targets must gain a length<=4 route. Paths may use two matching edges (M-G-M, etc.); a one-matching shortcut test alone is incomplete.",
+    "automorphism_caution": "Source fullAut has two63-point vertex orbits, so no source vertex-transitivity. Added arbitrary matching may destroy nearly all symmetry. A proven invariant C7 matching gives18 orbits, not one."
+  },
+  "execution_scope": {
+    "source_distance_BFS": 0,
+    "graph_generation": 0,
+    "matching_trials": 0,
+    "solver_calls": 0,
+    "large_graph_downloads": 0,
+    "new_lower_bounds": 0
+  },
+  "production_source_choice": "Use official Maple/Sage LCF recipe directly; source D6/girth12 inherited from official Sage entry."
+}

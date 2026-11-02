@@ -1,0 +1,13 @@
+# Rajiv252 free-neighborhood clone253: strict critical-edge exclusion
+
+**All630 source edges are critical for four-step coverage.** There are zero noncritical edges and zero prototypes passing even the necessary noncritical-neighborhood gate. The frozen existence prediction is refuted for the specified fixed-source clone-and-cut family. No253-point graph was generated and no modified graph diameter or ordinary bad-pair total was measured.
+
+The original252/630/5regular/D4 source is inherited from existing evidence. This batch's new computation enumerated every nonbacktracking walk of length0 through4, including the empty walk, from each of252 roots:426 prefixes per root and107352 in total. An undirected edge has one bit ID shared by both darts. For each root and endpoint, the intersection of all route edge masks identifies exactly the edges that every short route needs. Every630 edge has a saved first-pair witness. The40110 nonzero ordered endpoint intersections are route-certificate records, not ordinary graph bad pairs.
+
+The complete witnesses, per-root depth counts, edge IDs, original adjacency, and necessary neighborhood-cover result are saved in CRITICAL_WITNESSES.json, ROOT_COUNTS.json, INPUT.json, NONZERO_ROUTE_INTERSECTIONS.jsonl and NEIGHBORHOOD_NONCRITICAL_GATE.json. The source is research/ddp/second_mechanism/rajiv252.edges; the old254 candidate was not substituted or revalidated.
+
+The worker process used0.289197 CPU seconds and its driver0.000510077 seconds, with zero compilation. It exited0 in the initial call and no live handle remains. There were zero BFS traversals, zero source all-root distance re-audits, zero new graphs, and zero cut-set searches. The route enumeration is the new criticality analysis, rather than another all-source D4 validation.
+
+[MODEL_SCOPE.md](MODEL_SCOPE.md) gives the exact proof. A full clone projects back to its unchanged prototype, so old-pair distances in the clone graph equal those in G-F. Degree legality forces F nonempty; every nonempty F contains a critical edge, whose witness cannot be repaired by more deletions or by that clone. Thus the whole specified source/prototype/deletion-set family is closed without enumerating deletion sets. This does not rule out general253-point graphs or different surgery rules.
+
+The sole ledger was checked first. Its existing252 coordinate recovery, fixed254 four-matching/two-hub batch, and no-spare monotone extension ranges are different rules. This experiment stops after its strict obstruction: no larger deletion search, helper variant, local bad-pair optimization or additional source was started.

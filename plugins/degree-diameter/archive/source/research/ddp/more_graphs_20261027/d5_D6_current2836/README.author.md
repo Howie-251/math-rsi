@@ -1,0 +1,31 @@
+# Degree 5, Diameter 6
+
+A graph with 2,836 vertices, maximum degree 5 and diameter 6; the Moore bound is 6,826.
+
+## Construction
+
+The incidence graph of the generalized hexagon $`H(4)`$ (1365 points and 1365 lines; 5-regular, bipartite, girth 12, diameter 6) with 106 flags subdivided and a cubic graph $`F`$ on the 106 new vertices.
+
+![A subdivided flag of H(4)](flag-gadget.svg)<br><sub>The flag $`(p, L)`$ of $`H(4)`$ (point: disc, line: square, grey: their other incidences) becomes the path $`p - w - L`$, and the new vertex $`w`$ also meets its neighbours in $`F`$ (blue). So $`w`$ has degree $`2 + 3 = 5`$, and $`p`$ and $`L`$ keep degree 5.</sub>
+
+Vertices 0 to 1364 are the points of $`H(4)`$, 1365 to 2729 its lines and 2730 to 2835 the 106 new vertices.
+
+## Structure
+
+$`F`$ has diameter 6, with 881 of its vertex pairs at distance 6. The automorphism group of the graph is trivial, and so are the stabiliser of the flag set in $`\mathrm{Aut}(H(4))`$ and the automorphism group of $`F`$ alone.
+
+## How it was found
+
+Incidence graph of the generalized hexagon $`H(4)`$ (2730 vertices) with 106 flags subdivided and a cubic graph $`F`$ on the new vertices: $`F`$ is built by simulated annealing on half-edge switches minimising its exact number of pairs at distance 6 or more, then the flag set by min-conflicts relocation of flags with $`F`$ fixed. The search code is in [search/hexagon_insertion](../../../search/hexagon_insertion).
+
+## Files
+
+- `deg5-dia6-n2836.edges.txt`: the 7,090 edges as `u v` lines, under a `#` heading per edge type.
+- `construction.json`: the construction in the form `tools/ddgraph.py` reads.
+- `verification.txt`: the verifier output.
+
+## Verification
+
+A breadth-first search from every vertex (`tools/verify/verify_bfs.c`) confirms the order, the degrees, that there are no repeated edges, and the diameter.
+
+    python3 tools/ddgraph.py check graphs/deg5/dia6

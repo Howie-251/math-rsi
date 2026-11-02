@@ -1,0 +1,165 @@
+
+--- PAGE 1 ---
+Maximum Degree in Graphs of Diameter 2
+Paul Erdös
+Mathematical Institute of Hungarian, Academy of Sciences, Budapest, Hungary
+Siemion Fajtlowicz
+Department of Mathematics, University of Houston, Houston, Texas 77004
+Alan J. Hoffman
+I.B.M. Thomas J. Watson Research Center, Yorktown Heights, New York 10598
+It is well known that there are at most four Moore graphs of diameter 2, i.e.,graphs of
+diameter 2, maximum degreed,andd2 + 1 vertices. The purpose of this paper is to
+prove that with the exception ofC4,there are no graphs of diameter 2, of maximum
+degreed,and withd2vertices.
+INTRODUCTION
+The purpose of this paper is to prove that, with the exception of C4,there are no
+graphs of diameter 2 and maximum degreed withd2vertices.
+On one hand our paper is an extension of [4] where it was proved that there are at
+most four Moore graphs of diameter 2(i.e.graphs of diameter 2, maximum degreed,
+andd2+ 1 vertices). We also use the eigenvalue method developed in that paper.
+On the other hand, our problem originated in[2].The domination number of a
+graph G is the smallest integerk such that G has a k-element subset,S,for which
+every vertex of G either belongs to S or is adjacent to a vertex of S.
+Authors of [2] constructed a number of graphs of diameter 2 which contained no
+three of four-cycles and for which the domination number was arbitrarily large. As
+a rule, the only lower bounds for the domination numbers were obtained from upper
+bounds on the maximum degree.
+This suggested the following question: How small may the maximum degree be
+compared to the number of vertices in graphs of diameter 2?
+Since a graph of a diameter 2 and maximum degreed may have at mostd2 + 1
+vertices, the question can be formulated as follows: given non-negative numbersd
+and S, is there a graph of diameter 2 and maximum degreed withd2+ 1 -5 vertices?
+It was proved in [4] that if 5 = 0 then there are graphs corresponding tod = l,3, and
+7 and that, moreover, only one more case, namely ofd = 57,is possible. The case
+6 = 1 is solved in the next section, and the last section contains some comments con-
+cerning the case 5 > l.
+Networks, Vol. 10 (1980) 87-90
+© 1980 by John Wiley & Sons, Inc.
+	
+0028-3045/80/0010-0087$01.00
+
+--- PAGE 2 ---
+88	ERDÖS, FAJTLOWICZ, AND HOFFMAN
+THE RESULT
+Theorem. If G is a graph of diameter 2 with n = d2 (d>,2)vertices and maximum
+degree d, then G is isomorphic to a four-element cycle.
+Proof:: First of all, let us notice that if G had a vertex of degreek <d,then G
+would have at most1 +k + k.(d- l) = 1 + k•d < d2vertices. Thus G must be
+regular of degreedand in particulardmust be even.
+Since G has diameter two, the neighbors of any vertex dominate G. Thus, if G had
+a triangle it would have at most1 + (d-2)(d- l) + 2(d- 2) < d2vertices. Conse-
+quently, G is triangle-free and a similar argument shows that every vertex of G is
+contained in at most one C4.
+On the other hand if G had a vertex contained in no C4,then G would have 1 + d +
+d(d- l) >d2vertices.
+Thus, for each vertex r of G there is exactly one vertex r' of G at a distance 2 from
+r,such that there are exactly two paths of length 2 joining r andr'.LetK be the direct
+sum of 2 X 2 matrices of the form
+i.e.,K is the adjacency matrix of a l-factor.
+Then if A is the adjacency matrix of G, we have
+A2+A -(d -1)I = J + K
+	
+(l)
+where J is a matrix all of whose entries are l.
+Since J is regular,A commutes with J, therefore withK,hence all matrices in (l) can
+be simultaneously diagonalized. Since K has eigenvalues 1 and -l each of multiplicity
+d'/2, and the eigenvalue +l ofK is paired with eigenvaluesdofA andd2ofJ, wesee
+from the fact that all other eigenvalues ofJare 0, that the eigenvalues ofA other than
+d are roots a satisfying:
+a2+ a-(d- l) = +l,
+	
+occurringd2/2-1 times
+	
+(2)
+or
+a2+ a-(d-
+	
+occurringd2/2times.
+	
+(3)
+Thus the remaining eigenvalues of A are
+/3, =-l/2+s/4d-7/2and02=-l/2-N/4d-7/2
+with multiplicities m, and m2satisfying
+ml+m 2=d 2/2
+
+--- PAGE 3 ---
+MAXIMUM DEGREE IN GRAPHS OF DIAMETER 2
+	
+89
+and
+-y, _ -l/2 +-/1 + 4d/2and y2= -l/2-Vl +4d/2
+with multiplicitiesn,, n2satisfying
+n, +n2=d 2/2- l.
+Let p =s/4d- 7andq = J4d + l.
+From (2) x2+x - dis a factor of the characteristic polynomial ofA.Therefore if G
+is not an integer,n, = n2,which would imply thatd2/2- 1 iseven. This contradic-
+tion shows thatq is an integer.
+If p is also an integer, then sinceq2- p2= 8,we must have that p = I andq =3.
+Thus,d = 2and in this case G is a cycle of length4.
+Ifp is not an integer, thenm, = m2.
+Sincem, = m 2,m, + m 2= d2/2, n, + n2= d2/2- 1,and the trace of A = 0 = sum
+of eigenvalues of A, we have
+0=d+m, -l+P +m2
+-12 p+n, -l+q+n2-12q
+=d -I(MI +m2)- 2 (n, +n2)+(n,-n2)2
+d2
+	
+1
+	
+q=d-2+2+(n,-n2)2 .
+Sinced =(q2-1)/4, we can conclude that
+q4-10g2- 16q(n,- n2)-7 = 0.
+Since q is an integer root of this equation, thenq = 1orq =7,i.e., d= 0 ord = 12.
+Ifd = 12then G has eigenvalues
+12
+	
+with multiplicity 1
+-l + 41
+2
+3
+	
+with multiplicity 44
+-4
+	
+with multiplicity27
+Since G is triangle-free, the trace of A3is 0. But
+with multiplicity36
+with multiplicity36
+3trA =
+	
+~3
+
+--- PAGE 4 ---
+90
+	
+ERDÖS, FAJTLOWICZ, AND HOFFMAN
+where X are eigenvalues of A. The sum of cubes of the above eigenvalues, however, is
+72 and thus there is no graph with d = 12.
+Thus the theorem is proved.
+Let F be a finite field and P a projective plane over F,i.e.,elements of P are propor-
+tional triples of nonzero elements of F3.Brown[ 1 ]defines two elements of P to be
+adjacent iff their scalar product is zero.It is easy to see that if F has p elements then
+the resulting graph has maximum degree p + 1, diameter 2, and p2 + p +1 vertices
+(these graphs were introduced in a different form in [3] ).
+For our purposes, Brown's construction can be slightly improved.A vertex(x,y,z)
+of Brown's graph has degree p iff the norm x2+ y2+ z2 =0. Thus ifF has character-
+istic 2 anda * 0then the vector(a,b,c)is adjacent to the vector(b+ c, a + c, a +b),
+which has norm 0. IfF has characteristic 2 then the functionf(x) =x2is one-to-one
+and hence onto. Thus, up to proportionality, Brown's graph has p + I vertices of
+degree p. Adding a new vertex and joining it to all vertices of degree pwe obtain a
+(p + l) regular graph withp2+ p + 2 vertices.
+We know only three examples of graphs in which 6 = 2, namely triangle,the 3-
+regular R(3,3)-critical Ramsey graph, and the graph corresponding to p= 2 in the
+above construction.
+The second author wishes to acknowledge interesting conversations with Professor
+Richard D. Sinkhorn.
+References
+[11 W. G. Brown, "On graphs that do not contain a Thompsen graph,"Can. Math.
+Bull.,v.g. 281-285 (1966).
+[2] P. Erdös and S. Fajtlowicz, "Domination in graphs of diameter 2," in preparation.
+[3] P. Erdös and A. Renyi, "On a problem in a theory of graphs,"Publ. Math. Inst.
+Hung. Acad. Sci., 7/A,623-641 (1962), (in Hungarian with English and Russian
+Summaries).
+[4] A. J. Hoffman and R. R. Singleton, "On Moore graphs with diameters 2 and 3,"
+IBM J. Res. Dev. 4,497-504 (1960).
+Received January 1979

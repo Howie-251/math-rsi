@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>固定F5构造机制的整体障碍与下一规则</title><style>body{max-width:1080px;margin:32px auto;padding:0 22px;font:17px/1.8 system-ui;color:#182839}h1{font-size:29px}h2{font-size:23px}.result{background:#e9f5ed;border-left:4px solid #23834c;padding:18px}.note{background:#edf3fa;padding:16px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #ccd6df}a{color:#145f9c}code{overflow-wrap:anywhere}</style></head><body>
+<h1>本轮结构批次已完成：固定F5降度规则受到整体阻断</h1>
+<p>更新2026-10-29 18:51:26 UTC。同一Goal ACTIVE；本轮新完整图0，无后台数值或外审作业，下一数值机制未派。既有104例/4参数、confirmed主表103例/3参数、具体Lean实例1保持。旧D2继续暂停。</p>
+<div class="result"><strong>不再给旧10度系数规则增加样本。</strong><p>固定30控制器、四矩阵和方向，即使各条控制边独立选择三元或二元系数集，只要不随纤维坐标改变，全部10^60组字面赋值仍不能直径≤4。证明来自五个纤维的全源闭路线条件与同一五环的两形状交替矛盾；不是枚举10^60张图。</p></div>
+<h2>本次预测、检验及实际决策</h2>
+<table><tr><th>具体问题</th><th>实际证据</th><th>因此改变什么</th></tr>
+<tr><td>20度图能否纯删边降到19/18而保D3</td><td>258个控制距离3唯一路线的首弧覆盖全部120弧；满秩将其提升为每条具体边的唯一三步路径见证</td><td>全部37500边D3-critical，关闭纯删边，0删边图/BFS</td></tr>
+<tr><td>纤维对称商及更大普通覆盖是否可用</td><td>原无translation预测被推翻；唯一h=(0,3,1)给750/20度D3公式商。保存的0→3控制词投影恰5条三步路线/目标</td><td>该固定750商的普通cover层数≤5；不续高层cover或商枚举，无新下界</td></tr>
+<tr><td>每条边各自选噪声能否解决旧200样本失败</td><td>根0的H−I实际秩1；其他所选根秩2。正确保留回退与三角互补后，五根分别16/16/4/4/6局部形状通过放松，但都强迫相邻外边形状不同</td><td>外部五环不能交替两形状，整体关闭固定系数族，0完整图/solver</td></tr></table>
+<h2>为什么这次理解改变了生成规则</h2>
+<p>三角字的终点集随源坐标x按(H−I)x移动。对rank≥2的根，两个受限三角噪声集合最多服务2·3^r个源像值，小于5^r，因此不能对所有源同时补同一位移。这是全源覆盖障碍，不是遗漏点数评分。根0仍有8个回退本身全覆形状和8个靠三角互补的形状；不能把“回退必须独自覆盖”作为必要条件。</p>
+<p>本轮据此真正把矩阵改为I，选圆锥六方向的一个确定proper边着色，消除源漂移；只检查保存五根的完整短闭字。实际覆盖111/111/107/111/105，均不足125。正反三角因对称系数重复同一27点盒，只补2–4点。该单一控制已停止，不续颜色、offset或噪声；一般改变holonomy的规则没有被排除。</p>
+<p><a href="ddp/refresh_20261029/f5_d10_closed_route_diagnosis/PROOF_PACKAGE.md">完整五环证明</a> · <a href="ddp/refresh_20261029/f5_d10_closed_route_diagnosis/CYCLE_RESULT.json">五根精确有限证据</a> · <a href="../reviews/ddp/f5_d10_oddcycle_20261029.DISPOSITION.md">实际Gemini审阅处置</a> · <a href="ddp/refresh_20261029/f5_flat_conic_local/REPORT.md">改变矩阵后的受控反例</a></p>
+<h2>保留的完整图与公开比较</h2>
+<p>3750点、37500边、20正则、恰D3的完整图仍已独立全3750根验收；固定公式图order/degree≤20/恰D3的Lean见证完整。原11D5的37631、12D5的42402、13D5的51457及103个中间阶数保留。3750超过已核对2026年9月公开2783多967，但最新全球纪录尚未确认。新一轮限量三次定向查新未取得维护表正文，不能据HTTP404声称无更大图，也不继续反复请求。</p>
+<p><a href="../expert_review_current/F5_D20_D3_3750_20261029/README.html">完整3750图与源码</a> · <a href="ddp/refresh_20261029/f5_d20_edge_criticality_20261029/EDGE_CRITICALITY.md">每边必要性</a> · <a href="ddp/refresh_20261029/f5_fiber_quotient_transfer/REPORT.md">平移商与覆盖容量</a> · <a href="ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/REPORT.md">新一次限量查新回执</a></p>
+<h2>严格范围与恢复</h2>
+<p>本轮排除不涉及纤维坐标依赖系数、其他矩阵/控制器或一般10度图；单一圆锥规则失败也不是全平移族失败。旧11D6固定K6容量失败、33附件反例、旧noise两100图等停止范围继续继承。全部结果已保存原项目，由唯一Research Wiki helper增量合并；不新建Goal、Wiki或并行计划。</p>
+<p>资源实读128 affinity、55核cgroup quota、300GiB上限，各局部数值用单worker；不是独占承诺。新五根核心证据CPU4.404秒，单控制0.0193秒。Gemini实际SUCCESS/gemini-3.8-flash-high high，结论SOUND AS STATED；静态审阅不是另一次数值或Lean认证。下一构造按有效计划选择有新共享覆盖依据的机制，不以减少少量遗漏续算。</p>
+<p><a href="ddp/refresh_20261029/F5_STRUCTURAL_TURN_RESULT.json">本轮真实汇总</a> · <a href="../context/DD_PORTFOLIO_START_20261026/RESEARCH_GOAL.md">唯一计划</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">唯一恢复入口</a> · <a href="../research-wiki/query_pack.md">Wiki恢复摘要</a> · <a href="progress_before_structural_20261029.html">此前完整图阶段页面</a> · <a href="progress.html.txt">本页HTML源码</a></p>
+</body></html>

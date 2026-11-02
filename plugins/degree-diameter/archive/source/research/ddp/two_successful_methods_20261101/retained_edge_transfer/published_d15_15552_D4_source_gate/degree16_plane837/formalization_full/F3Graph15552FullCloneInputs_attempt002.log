@@ -1,0 +1,20 @@
+DegreeDiameter/Portfolio/F3Graph15552FullCloneInputs.lean:617:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -?r • ?x
+in the target expression
+  x - x (pivot (inverseType p)) • direction (inverseType p) - -x (pivot (inverseType p)) • direction (inverseType p) = x
+
+p : Fin 5
+t : F
+x : Vec
+hx : x 1 = 0
+hz : t • 0 = 0
+hs : (x - x (pivot (inverseType p)) • direction (inverseType p)) 1 * inverseSecond p = -x (pivot (inverseType p))
+⊢ x - x (pivot (inverseType p)) • direction (inverseType p) - -x (pivot (inverseType p)) • direction (inverseType p) = x
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.pinOwner_forward' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.load_le_one' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

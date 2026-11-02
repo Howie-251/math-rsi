@@ -1,0 +1,157 @@
+{
+  "checked_UTC": "2026-11-01 10:28:51 UTC",
+  "status": "ONLY_GENERAL_LEMMA_AND_SPREAD_FOUND_EXACT_FILL_PRIORITY_UNKNOWN",
+  "target": {
+    "rule": "oppositeGQ source +st+1 spread fill vertices at unchanged degreeDelta=(s+1)(t+1), preserveD3",
+    "order": "Delta*(st+1)^2+(st+1)",
+    "focus": {
+      "s": 7,
+      "t": 7,
+      "degree": 64,
+      "n": 160050
+    }
+  },
+  "classification": {
+    "explicit_unfilled_source": {
+      "found": true,
+      "source": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+      "order": "Delta*(st+1)^2"
+    },
+    "published_exact_fill_recipe": {
+      "found": false,
+      "status": "not located in actually read texts, not a nonexistence claim"
+    },
+    "published_exact_fill_direct_corollary": {
+      "established_this_check": false,
+      "reason": "general duplication plus spread statement does not itself supply target opposite-graph fill pins/load/coverage"
+    },
+    "only_general_lemma": {
+      "found": true,
+      "source": "Delorme EJC1985 section7"
+    },
+    "exact_fill_priority": {
+      "status": "STILL_UNKNOWN",
+      "main_specific_gap": "Delorme JGT9(3)(1985)325-334 full body, DOI10.1002/jgt.3190090304"
+    }
+  },
+  "actually_read": [
+    {
+      "source": "Delorme Grands Graphes EJC6(1985)291-302",
+      "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "local_text": "delorme1985_primary_text.txt",
+      "sections": [
+        "7 p296-298",
+        "8a p298-299",
+        "8b-8e p299-300",
+        "9 p300-302"
+      ],
+      "section8a_result": "incidence GQ D4, degree+1 and vertices+q^2+q+4, not target opposite same-degree fill",
+      "section8c_result": "polarity quotient absolute duplication q8 585/9 ->650/10, nottarget",
+      "section8e_result": "projectiveplane quotient D2 same-degree singlepoint duplication, differentrecipe",
+      "section9_result": "hexagon edge subdivisions, diameter7, differentrecipe"
+    },
+    {
+      "source": "Isham-Lakhotia-Monroe-Petrini arxiv2608.27253v2",
+      "url": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+      "local_text": "arxiv_2608_27253v2.txt",
+      "local_HTML": "arxiv_2608_27253v2.html",
+      "sections": [
+        "2.3 self-loop convention",
+        "3.4.2 opposite Kronecker construction"
+      ],
+      "result": "fixed original quotient vertexset, loops dropped, no spreadfill recipe in these readsections"
+    }
+  ],
+  "original_opposite_source_body": {
+    "citation": "C.Delorme,Large bipartite graphs with given degree and diameter,J.GraphTheory9(3)(1985),325-334",
+    "DOI": "10.1002/jgt.3190090304",
+    "official_abs": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.3190090304",
+    "official_pdf_requested": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/jgt.3190090304",
+    "actual_pdf_request_result": "redirected to abstract and bibliography HTML, no fulltext",
+    "official_epdf_result": "not accessible",
+    "full_body_actually_obtained": false,
+    "Comellas_source_link": "same DOI, not alternative fulltext"
+  },
+  "narrow_query_receipt": {
+    "batches": 1,
+    "queries": 3,
+    "query_texts": [
+      "\"160050\" \"graph\" diameter",
+      "\"327744\" OR \"342290\" \"graph\"",
+      "Delorme \"Large bipartite graphs with given degree and diameter\" spread vertices"
+    ],
+    "domains": [
+      "arxiv.org",
+      "web.mat.upc.edu",
+      "onlinelibrary.wiley.com",
+      "sciencedirect.com",
+      "link.springer.com"
+    ],
+    "numeric_exact_source_or_recipe_hit": false,
+    "subsequent_actions": "normal primary-source/citation opens only, nosecondquerybatch",
+    "nonhit_used_as_novelty_proof": false
+  },
+  "numeric_sentinels": [
+    {
+      "s": 7,
+      "t": 7,
+      "degree": 64,
+      "unfilled": 160000,
+      "hypothetical_filled": 160050
+    },
+    {
+      "s": 7,
+      "t": 9,
+      "degree": 80,
+      "unfilled": 327680,
+      "hypothetical_filled": 327744
+    },
+    {
+      "s": 8,
+      "t": 8,
+      "degree": 81,
+      "unfilled": 342225,
+      "hypothetical_filled": 342290
+    }
+  ],
+  "current_public_baselines_changed": false,
+  "conditional_if_exact_public_filled_source_and_compatibility_confirmed": {
+    "k": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "current_guarantee": "160000+1650k",
+    "revised_guarantee": "160050+1650k",
+    "equals_local_candidate": true,
+    "current_candidate_gain": 50,
+    "conditional_revised_gain": 0,
+    "accepted_graph_legality_changes": false
+  },
+  "local_read_search_and_scalar_CPU_seconds": 0.0011910960000000026,
+  "local_CPU_budget_seconds": 5,
+  "graphs_generated_or_revalidated": 0,
+  "finite_field_checks": 0,
+  "BFS_runs": 0,
+  "Lean_runs": 0,
+  "solver_runs": 0,
+  "external_reviews": 0,
+  "wiki_helper_runs": 0,
+  "hashes_computed": 0,
+  "root_counts_modified": false,
+  "frozen_expert_packets_modified": false,
+  "global_record_or_priority_certified": false,
+  "expert_action": "Obtain JGT1985 pp325-334 and identify same fillpins plus degree/D3 coverage or a precise later source; not enough to cite only generalEJCsection7."
+}

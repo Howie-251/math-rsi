@@ -1,0 +1,162 @@
+graph : SimpleGraph (Fin 1920)
+Clone2016.label : Clone2016.Vertex ≃ Fin 2016
+def DegreeDiameter.Portfolio.F4Graph1920.SourceFinalClaim : Prop :=
+Fintype.card (Fin 1920) = 1920 ∧
+  (∀ (v : Fin 1920), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+def DegreeDiameter.Portfolio.F4Graph1920.Clone2016.FinalClaim : Prop :=
+Fintype.card Clone2016.Vertex = 2016 ∧
+  (∀ (v : Fin 1920 ⊕ Fin 96), Clone2016.graph.degree v ≤ 17) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost Clone2016.graph 3 ∧
+      ¬DegreeDiameter.Portfolio.DiameterAtMost Clone2016.graph 2
+DegreeDiameter.Portfolio.F4Graph1920.Row0.row0_full_walk_bound (x : Fin 64) (v : Fin 1920) : ∃ w, w.length ≤ 3
+theorem DegreeDiameter.Portfolio.F4Graph1920.Row0.row0_full_walk_bound : ∀ (x : Fin 64) (v : Fin 1920),
+  ∃ w, w.length ≤ 3 :=
+fun x v =>
+  if h : ∃ p, controller 0 p = controllerOf v then
+    Exists.casesOn h fun p hp =>
+      let d := encodeVec (decodeVec (fiberOf v) - stepVec 0 p 0 (decodeVec x));
+      bounded_walk_of_route (liftAt 0 x) v (Row0.adjP0 p d) (Row0.adjP1 p d) (Row0.adjP2 p d) (Row0.adjNoise p d)
+        (Eq.mpr
+          (id
+            (congrArg (fun x => routeController x (Row0.adjP0 p d) (Row0.adjP1 p d) (Row0.adjP2 p d) = controllerOf v)
+              (controllerOf_liftAt 0 x)))
+          (Eq.trans (Row0.adjacent_controller p d) hp))
+        (Eq.mpr
+          (id
+            (congrArg (fun x => x = decodeVec (fiberOf v))
+              (congr
+                (congrArg (fun x => routeVec x (Row0.adjP0 p d) (Row0.adjP1 p d) (Row0.adjP2 p d) (Row0.adjNoise p d))
+                  (controllerOf_liftAt 0 x))
+                (congrArg decodeVec (fiberOf_liftAt 0 x)))))
+          (Eq.mpr
+            (id
+              (congrArg (fun _a => _a = decodeVec (fiberOf v))
+                (route_affine 0 (Row0.adjP0 p d) (Row0.adjP1 p d) (Row0.adjP2 p d) (Row0.adjNoise p d) (decodeVec x))))
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    routeVec 0 (Row0.adjP0 p d) (Row0.adjP1 p d) (Row0.adjP2 p d) 0 (decodeVec x) + _a =
+                      decodeVec (fiberOf v))
+                  (Row0.adjacent_row p d)))
+              (Eq.mpr
+                (id
+                  (congrArg (fun _a => _a + decodeVec d = decodeVec (fiberOf v))
+                    (Row0.adjacent_center p d (decodeVec x))))
+                (Eq.mpr
+                  (id
+                    (congrArg (fun x_1 => stepVec 0 p 0 (decodeVec x) + x_1 = decodeVec (fiberOf v))
+                      (decodeVec_encodeVec (decodeVec (fiberOf v) - stepVec 0 p 0 (decodeVec x)))))
+                  (Eq.trans
+                    (Mathlib.Tactic.Abel.subst_into_addg (stepVec 0 p 0 (decodeVec x))
+                      (decodeVec (fiberOf v) - stepVec 0 p 0 (decodeVec x))
+                      (Mathlib.Tactic.Abel.termg 1 (stepVec 0 p 0 (decodeVec x)) 0)
+                      (Mathlib.Tactic.Abel.termg (-1) (stepVec 0 p 0 (decodeVec x))
+                        (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                      (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                      (Mathlib.Tactic.Abel.term_atomg (stepVec 0 p 0 (decodeVec x)))
+                      (Mathlib.Tactic.Abel.unfold_sub (decodeVec (fiberOf v)) (stepVec 0 p 0 (decodeVec x))
+                        (Mathlib.Tactic.Abel.termg (-1) (stepVec 0 p 0 (decodeVec x))
+                          (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                        (Mathlib.Tactic.Abel.subst_into_addg (decodeVec (fiberOf v)) (-stepVec 0 p 0 (decodeVec x))
+                          (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                          (Mathlib.Tactic.Abel.termg (-1) (stepVec 0 p 0 (decodeVec x)) 0)
+                          (Mathlib.Tactic.Abel.termg (-1) (stepVec 0 p 0 (decodeVec x))
+                            (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                          (Mathlib.Tactic.Abel.term_atomg (decodeVec (fiberOf v)))
+                          (Mathlib.Tactic.Abel.subst_into_negg (stepVec 0 p 0 (decodeVec x))
+                            (Mathlib.Tactic.Abel.termg 1 (stepVec 0 p 0 (decodeVec x)) 0)
+                            (Mathlib.Tactic.Abel.termg (-1) (stepVec 0 p 0 (decodeVec x)) 0)
+                            (Mathlib.Tactic.Abel.term_atomg (stepVec 0 p 0 (decodeVec x)))
+                            (Mathlib.Tactic.Abel.term_neg 1 (stepVec 0 p 0 (decodeVec x)) 0 (-1) 0 (Eq.refl (-1))
+                              neg_zero))
+                          (Mathlib.Tactic.Abel.const_add_termg (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                            (-1) (stepVec 0 p 0 (decodeVec x)) 0 (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                            (add_zero (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)))))
+                      (Eq.trans
+                        (Mathlib.Tactic.Abel.term_add_termg 1 (stepVec 0 p 0 (decodeVec x)) 0 (-1)
+                          (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0) 0
+                          (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                          (Mathlib.Meta.NormNum.IsNat.to_eq
+                            (Mathlib.Meta.NormNum.IsInt.to_isNat
+                              (Mathlib.Meta.NormNum.isInt_add (Eq.refl HAdd.hAdd)
+                                (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.isNat_ofNat ℤ (Eq.refl 1)))
+                                (Mathlib.Meta.NormNum.isInt_neg (Eq.refl Neg.neg)
+                                  (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.isNat_ofNat ℤ (Eq.refl 1)))
+                                  (Eq.refl (Int.negOfNat 1)))
+                                (Eq.refl (Int.ofNat 0))))
+                            (Eq.refl 0))
+                          (zero_add (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)))
+                        (Mathlib.Tactic.Abel.zero_termg (stepVec 0 p 0 (decodeVec x))
+                          (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))))
+                    (Eq.symm (Mathlib.Tactic.Abel.term_atomg (decodeVec (fiberOf v))))))))))
+  else
+    let b := controllerOf v;
+    let w := Row0.controllerWord b;
+    let center := routeVec 0 (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) 0 (decodeVec x);
+    let d := decodeVec (fiberOf v) - center;
+    bounded_walk_of_route (liftAt 0 x) v (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) (Row0.nbNoise b d)
+      (Eq.mpr
+        (id
+          (congrArg (fun x => routeController x (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) = controllerOf v)
+            (controllerOf_liftAt 0 x)))
+        (Row0.controller_row b h))
+      (Eq.mpr
+        (id
+          (congrArg (fun x => x = decodeVec (fiberOf v))
+            (congr
+              (congrArg (fun x => routeVec x (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) (Row0.nbNoise b d))
+                (controllerOf_liftAt 0 x))
+              (congrArg decodeVec (fiberOf_liftAt 0 x)))))
+        (Eq.mpr
+          (id
+            (congrArg (fun _a => _a = decodeVec (fiberOf v))
+              (route_affine 0 (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) (Row0.nbNoise b d) (decodeVec x))))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  routeVec 0 (Row0.wordP0 w) (Row0.wordP1 w) (Row0.wordP2 w) 0 (decodeVec x) + _a =
+                    decodeVec (fiberOf v))
+                (Row0.noise_decode b h d)))
+            (id
+              (Eq.trans
+                (Mathlib.Tactic.Abel.subst_into_addg center (decodeVec (fiberOf v) - center)
+                  (Mathlib.Tactic.Abel.termg 1 center 0)
+                  (Mathlib.Tactic.Abel.termg (-1) center (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                  (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0) (Mathlib.Tactic.Abel.term_atomg center)
+                  (Mathlib.Tactic.Abel.unfold_sub (decodeVec (fiberOf v)) center
+                    (Mathlib.Tactic.Abel.termg (-1) center (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                    (Mathlib.Tactic.Abel.subst_into_addg (decodeVec (fiberOf v)) (-center)
+                      (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0) (Mathlib.Tactic.Abel.termg (-1) center 0)
+                      (Mathlib.Tactic.Abel.termg (-1) center (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))
+                      (Mathlib.Tactic.Abel.term_atomg (decodeVec (fiberOf v)))
+                      (Mathlib.Tactic.Abel.subst_into_negg center (Mathlib.Tactic.Abel.termg 1 center 0)
+                        (Mathlib.Tactic.Abel.termg (-1) center 0) (Mathlib.Tactic.Abel.term_atomg center)
+                        (Mathlib.Tactic.Abel.term_neg 1 center 0 (-1) 0 (Eq.refl (-1)) neg_zero))
+                      (Mathlib.Tactic.Abel.const_add_termg (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0) (-1)
+                        center 0 (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                        (add_zero (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)))))
+                  (Eq.trans
+                    (Mathlib.Tactic.Abel.term_add_termg 1 center 0 (-1)
+                      (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0) 0
+                      (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)
+                      (Mathlib.Meta.NormNum.IsNat.to_eq
+                        (Mathlib.Meta.NormNum.IsInt.to_isNat
+                          (Mathlib.Meta.NormNum.isInt_add (Eq.refl HAdd.hAdd)
+                            (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.isNat_ofNat ℤ (Eq.refl 1)))
+                            (Mathlib.Meta.NormNum.isInt_neg (Eq.refl Neg.neg)
+                              (Mathlib.Meta.NormNum.IsNat.to_isInt (Mathlib.Meta.NormNum.isNat_ofNat ℤ (Eq.refl 1)))
+                              (Eq.refl (Int.negOfNat 1)))
+                            (Eq.refl (Int.ofNat 0))))
+                        (Eq.refl 0))
+                      (zero_add (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0)))
+                    (Mathlib.Tactic.Abel.zero_termg center (Mathlib.Tactic.Abel.termg 1 (decodeVec (fiberOf v)) 0))))
+                (Eq.symm (Mathlib.Tactic.Abel.term_atomg (decodeVec (fiberOf v)))))))))
+'DegreeDiameter.Portfolio.F4Graph1920.Row0.row0_full_walk_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.degree_le_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.bounded_walk_of_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.inverse_basis' depends on axioms: [propext, Classical.choice, Quot.sound]

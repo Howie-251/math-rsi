@@ -1,0 +1,35 @@
+#include <algorithm>
+#include <array>
+#include <cstdint>
+#include <cstdio>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+using namespace std;
+constexpr int Q=36,P=19,CHOICES=24624,TOTALV=73800,TOTALC=172800;constexpr uint32_t FULL=(1u<<19)-1;
+clock_t beginCPU;double limitCPU;string phase="INIT";int cursor=-1;
+double cpu(){return double(clock()-beginCPU)/CLOCKS_PER_SEC;}
+void budget(){if(cpu()>limitCPU)throw runtime_error("BUILD_CPU_LIMIT");}
+uint32_t rot(uint32_t a,int t){return ((a<<t)|(a>>(19-t)))&FULL;}
+uint32_t sumset(uint32_t a,uint32_t b){if(!a||!b)return 0;if(__builtin_popcount(a)>__builtin_popcount(b))swap(a,b);uint32_t z=0;while(a){int t=__builtin_ctz(a);a&=a-1;z|=rot(b,t);}return z;}
+size_t ai(int a,int i,int j){return (a*36+i)*36+j;}
+size_t bi(int i,int j,int r,int s){return ((i*36+j)*36+r)*36+s;}
+int variable(int r,int s,int t){return (r*36+s)*19+t+1;}
+struct Out{FILE*f;vector<char>b;size_t used=0;uint64_t bytes=0,literals=0,clauses=0;Out(const char*p):f(fopen(p,"wb")),b(1<<20){if(!f)throw runtime_error("CNF_OPEN");}~Out(){flush();if(f)fclose(f);}void flush(){if(used){fwrite(b.data(),1,used,f);bytes+=used;used=0;}}void ch(char c){if(used==b.size())flush();b[used++]=c;}void text(const string&s){for(char c:s)ch(c);}void num(int n){if(n<0){ch('-');n=-n;}char t[12];int k=0;do{t[k++]=char('0'+n%10);n/=10;}while(n);while(k)ch(t[--k]);}void lit(int n){num(n);ch(' ');literals++;}void end(){ch('0');ch('\n');clauses++;}void binary(int a,int c){lit(a);lit(c);end();}};
+int verify(const char*path){ifstream f(path);int n,m;if(!(f>>n>>m)||n!=1368||m!=5472)throw runtime_error("CANDIDATE_HEADER");vector<vector<int>>g(n);set<pair<int,int>>es;for(int k=0;k<m;k++){int u,v;if(!(f>>u>>v)||u<0||v<0||u>=n||v>=n||u==v)throw runtime_error("CANDIDATE_EDGE");if(u>v)swap(u,v);if(!es.insert({u,v}).second)throw runtime_error("CANDIDATE_DUPLICATE");g[u].push_back(v);g[v].push_back(u);}for(auto&r:g){if(r.size()!=8)throw runtime_error("CANDIDATE_DEGREE");sort(r.begin(),r.end());}ofstream stats("CANDIDATE_ALL_ROOT_STATS.tsv");stats<<"root\teccentricity\n";vector<int>d(n),parent(n),q(n);map<int,int>hist;bool witness=false;for(int root=0;root<n;root++){cursor=root;budget();fill(d.begin(),d.end(),-1);fill(parent.begin(),parent.end(),-1);d[root]=0;int lo=0,hi=1;q[0]=root;while(lo<hi){int u=q[lo++];for(int v:g[u])if(d[v]<0){d[v]=d[u]+1;parent[v]=u;q[hi++]=v;}}int ecc=*max_element(d.begin(),d.end());if(hi<n)ecc=n;stats<<root<<'\t'<<ecc<<'\n';hist[ecc]++;if(!witness)for(int t=0;t<n;t++)if(d[t]==4){vector<int>p;for(int v=t;v>=0;v=parent[v]){p.push_back(v);if(v==root)break;}reverse(p.begin(),p.end());ofstream w("FIRST_ACTUAL_D4_WITNESS.json");w<<"{\"root\":"<<root<<",\"target\":"<<t<<",\"distance\":4,\"path\":[";for(size_t i=0;i<p.size();i++){if(i)w<<',';w<<p[i];}w<<"]}\n";witness=true;break;}if(ecc>4)throw runtime_error("CANDIDATE_DIAMETER_FAILURE");}ofstream r("CANDIDATE_BFS_RESULT.json");r<<"{\"status\":\"ALL1368_ROOTS_PASS_PENDING_FRESH\",\"roots\":1368,\"orderedpairs\":1871424,\"n\":1368,\"m\":5472,\"maxdegree\":8,\"ecc_hist\":{";bool first=true;for(auto h:hist){if(!first)r<<',';first=false;r<<'"'<<h.first<<"\":"<<h.second;}r<<"},\"actual_CPU\":"<<cpu()<<"}\n";return 0;}
+int main(int argc,char**argv){beginCPU=clock();limitCPU=argc>1?stod(argv[1]):15.;try{if(argc>2&&string(argv[2])=="--verify"){phase="POSITIVE_CANDIDATE_BFS";return verify(argv[3]);}phase="READ_CONVERTED_A";vector<uint32_t>A(4*36*36);ifstream af("A_EXACT_LENGTH0_3.u32",ios::binary);if(!af.read(reinterpret_cast<char*>(A.data()),A.size()*4))throw runtime_error("A_BINARY_LENGTH");vector<uint32_t>B(36*36*36*36);uint64_t sumPop=0,nonzero=0;vector<int>perij(36*36);phase="BUILD_BASE_MASKS";
+for(int i=0;i<36;i++){cursor=i;budget();for(int j=0;j<36;j++)for(int r=0;r<36;r++)for(int s=0;s<36;s++){uint32_t z=0;for(int a=0;a<=3;a++)for(int b=0;b<=3-a;b++)z|=sumset(A[ai(a,i,r)],A[ai(b,s,j)]);B[bi(i,j,r,s)]=z;int p=__builtin_popcount(z);sumPop+=p;perij[i*36+j]+=p;nonzero+=(z!=0);}}
+{ofstream b("BASE_COVER_MASKS.u32",ios::binary);b.write(reinterpret_cast<const char*>(B.data()),B.size()*4);}
+phase="WRITE_POINT_COVER_CLAUSES";Out out("K19_EXACT_POINT.cnf");out.text("p cnf 73800 172800\n");int minlen=*min_element(perij.begin(),perij.end()),maxlen=*max_element(perij.begin(),perij.end());long long empty=0,coverclauses=0;
+for(int i=0;i<36;i++){cursor=i;budget();for(int j=0;j<36;j++)for(int k=0;k<19;k++){if(perij[i*36+j]==0)empty++;for(int r=0;r<36;r++)for(int s=0;s<36;s++){uint32_t z=B[bi(i,j,r,s)];while(z){int q=__builtin_ctz(z);z&=z-1;int t=k-q;if(t<0)t+=19;out.lit(variable(r,s,t));}}out.end();coverclauses++;}}
+uint64_t coverlits=out.literals;phase="WRITE_72_EXACT_ONE_GROUPS";long long amo=0,alo=0;for(int group=0;group<72;group++){budget();array<int,684>v;int at=0;if(group<36){int r=group;for(int s=0;s<36;s++)for(int t=0;t<19;t++)v[at++]=variable(r,s,t);}else{int s=group-36;for(int r=0;r<36;r++)for(int t=0;t<19;t++)v[at++]=variable(r,s,t);}for(int x:v)out.lit(x);out.end();alo++;int base=CHOICES+1+group*683;for(int i=0;i<683;i++){out.binary(-v[i],base+i);amo++;}for(int i=1;i<683;i++){out.binary(-(base+i-1),base+i);out.binary(-v[i],-(base+i-1));amo+=2;}out.binary(-v[683],-(base+682));amo++;}
+phase="WRITE_TARGET_K_GAUGE";int gauge=0;for(int s=0;s<36;s++)for(int t=1;t<19;t++){out.lit(-variable(0,s,t));out.end();gauge++;}out.flush();if(out.clauses!=TOTALC||coverclauses!=24624||alo!=72||amo!=147456||gauge!=648||coverlits!=19*sumPop)throw runtime_error("MODEL_SIZE_BINDING");
+{ofstream schema("MODEL_SCHEMA.json");schema<<"{\"A_layout\":\"((a*36)+i)*36+j,uint32le,low19bits\",\"B_layout\":\"(((i*36+j)*36+r)*36+s),uint32le,low19bits\",\"variable\":\"1+((r*36+s)*19+t)\",\"origvars\":24624,\"auxvars\":49176,\"totalvars\":73800,\"obligation\":\"(i*36+j)*19+k\",\"exact_cover\":\"selected(r,s,t) hits k iff k in rot19(B(i,j;r,s),t)\",\"gauge\":\"t0=0 by globaltargetKshift; sigma0unfixed\"}\n";}
+phase="COMPLETE";ofstream r("BUILD_RESULT.json");r<<"{\"status\":\"COMPLETE_ACTUAL_POINT_CNF\",\"original_variables\":24624,\"aux_variables\":49176,\"total_variables\":73800,\"clauses\":"<<out.clauses<<",\"point_cover_clauses\":"<<coverclauses<<",\"ALO_clauses\":"<<alo<<",\"Sinz_AMO_clauses\":"<<amo<<",\"gauge_units\":"<<gauge<<",\"cover_literals\":"<<coverlits<<",\"all_literals\":"<<out.literals<<",\"CNF_bytes\":"<<out.bytes<<",\"empty_point_clauses\":"<<empty<<",\"point_clause_length_min\":"<<minlen<<",\"point_clause_length_max\":"<<maxlen<<",\"base_masks\":"<<B.size()<<",\"nonzero_base_masks\":"<<nonzero<<",\"all24624_normalized_targets\":true,\"old_DP_source_BFS_runs\":0,\"actual_build_CPU\":"<<cpu()<<"}\n";cout<<"COMPLETE clauses="<<out.clauses<<" coverlits="<<coverlits<<" bytes="<<out.bytes<<" CPU="<<cpu()<<endl;return 0;
+}catch(const exception&e){ofstream f("BUILD_ERROR.json");f<<"{\"status\":\"UNKNOWN_EXECUTION_OR_BUILD_FAILURE\",\"phase\":\""<<phase<<"\",\"cursor\":"<<cursor<<",\"error\":\""<<e.what()<<"\",\"CPU\":"<<cpu()<<"}\n";cerr<<e.what()<<endl;return 2;}}

@@ -1,0 +1,62 @@
+{
+  "status": "TERMINAL_FIXED_SOURCE_PUBLIC_IMPROVEMENT_EXCLUDED",
+  "source": "Classical q9 Brown91 orthogonal-polarity graph",
+  "source_order": 91,
+  "source_degree_histogram": {"9": 10, "10": 81},
+  "source_point_types": {"A": 10, "I": 36, "E": 45},
+  "degree_cap": 11,
+  "diameter_cap": 2,
+  "scope": "Keep the old91 induced graph exactly fixed; add arbitrary helpers with arbitrary old-helper and helper-helper edges. H need not be a clique or regular.",
+  "historical_exact_case_found": false,
+  "preliminary_bound": {"h_upper": 16, "order_upper": 107, "B_max": 101, "h16_B_min": 96},
+  "final_bound": {"h_upper": 15, "order_upper": 106, "order106_existence_claimed": false},
+  "decisive_analytic_certificate": {
+    "all_old_points_assigned": "An unassigned target could be covered by at most12 of16 helpers via old-neighbor pinloads",
+    "nonabsolute_owners": "Every I/E vertex has one helper owner; I-owner s<=6, E-owner s<=8",
+    "helper_size_bound": "s<=8; s>=9 would be an all-absolute set whose tangent-line union plus helper pins cannot cover91",
+    "definitions": "d=11-s, e=max(0,s-6), c=actual closed old coverage, delta=max(0,91-c-6d), a=absolute pins",
+    "necessary_cohort_cut": "sum(delta)<=sum(e*deg_H)<=sum(e*d)",
+    "per_helper_integer_bound": "e*d-delta<=4*s-a-24",
+    "summed_bound": "sum(e*d-delta)<=3*(B-101)<=0",
+    "equality_consequence": "Necessity forces B101 and all helper degrees deg_H=d",
+    "contradiction": "sum deg_H=176-101=75 is odd"
+  },
+  "numeric_discovery": {
+    "root_collinear_geometry_profile_pairs": 93002,
+    "root_unique_profiles": 175,
+    "relaxed_type_options": 87,
+    "B_values": [96,97,98,99,100,101],
+    "max_total_route_capacities": [1427,1436,1442,1450,1455,1464],
+    "max_cohort_supply_minus_demand": [-15,-12,-9,-6,-3,0],
+    "DP_is_final_proof_only_basis": false,
+    "helper_graphs_enumerated": 0,
+    "numerical_pass_called_construction": false
+  },
+  "public_comparison": {
+    "inherited_official_11_2_order": 106,
+    "first_improving_order": 107,
+    "first_improving_order_excluded_in_this_scope": true,
+    "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+    "new_primary_search": 0,
+    "global_N11_2_upper_bound_claimed": false
+  },
+  "CPU_accounting": {
+    "root_geometry_profile_CPU_seconds": 0.23839998,
+    "compile_CPU_seconds": 0.950244,
+    "DP_full_child_process_CPU_seconds": 0.823021,
+    "measured_driver_analysis_CPU_seconds": 0.004914001,
+    "accounted_scope_CPU_seconds": 2.016578981,
+    "boundary": "Compilation/DP children are full process CPU; Python driver analysis segments and inherited root geometry timing are as reported, not a claim that every interpreter startup/final write is included",
+    "budget_CPU_seconds": 20,
+    "workers": 1
+  },
+  "source_or_target_edgelists_generated": 0,
+  "BFS": 0, "SAT": 0, "MIP": 0, "Lean": 0,
+  "installs": 0, "hashes": 0,
+  "new_graphs": 0, "new_lower_bounds": 0, "accepted_count_increment": 0,
+  "all_owned_jobs_terminal": true,
+  "independent_paper_check": "A separate child agent checked the geometry, mixed-absolute noncollinear dual cases and equality/parity chain; no gap found, no numeric or external-service run",
+  "continuation_scheduled": false,
+  "decision": "Stop this Brown91/cap11/fixed-old-induced-graph interface: at most106 matches inherited public106 and cannot improve it. Do not strengthen h15 or start q/seed ladders.",
+  "evidence": ["PRED.json","PROOF.md","INTEGER_RESULT.json","REFINEMENT_PRED.json","COHORT_RESULT.json","DP_OPTIONS.json","pin_profiles/RESULT.json","TERMINAL.json"]
+}

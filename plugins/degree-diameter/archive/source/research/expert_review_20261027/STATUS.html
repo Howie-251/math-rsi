@@ -1,0 +1,196 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree Diameter 构造研究现状与待请教问题</title><style>body{font:16px/1.8 system-ui,"Noto Sans CJK SC",sans-serif;color:#17212c;max-width:980px;margin:36px auto;padding:0 22px}h1{font-size:29px;line-height:1.35}h2{font-size:22px;margin-top:34px;line-height:1.4}h3{font-size:18px}a{color:#155bb2}p,li{overflow-wrap:anywhere}.table-wrap{overflow-x:auto}table{border-collapse:collapse;min-width:560px;width:100%;font-size:15px}th,td{border:1px solid #cbd5df;padding:7px 10px;text-align:left}th{background:#eef3f7}.math-display{padding:12px 16px;background:#f2f5f8;font:16px/1.8 Georgia,"Noto Sans CJK SC",serif;white-space:pre-wrap;overflow-wrap:anywhere}.math-inline{font-family:Georgia,serif}pre{background:#f2f5f8;padding:14px;white-space:pre-wrap}code{font-size:14px}.snapshot{background:#eef5fa;padding:12px 16px} @media print{@page{size:A4;margin:18mm}body{margin:0;padding:0;max-width:none;font-size:11pt}h2{break-after:avoid}tr{break-inside:avoid}.table-wrap{overflow:visible}a{color:inherit}pre{font-size:9pt}h1{font-size:20pt}}</style></head><body><h1>Degree/Diameter 构造研究现状与待请教问题</h1>
+<p>状态截点：2026-10-27 03:15:51 UTC。供专家讨论的阶段说明；专家反馈期间研究继续进行。</p>
+<h2>一、目前实际达到什么</h2>
+<p><strong>目前没有得到新的公开下界，也没有得到满足目标参数的新完整图。</strong> 已有的是若干固定构造范围的排除、短路容量障碍，以及未达目标的完整候选图。新增结果尚未完成 Lean 形式化；不能把程序结束、局部坏点对减少或模型赞同当成目标成功。</p>
+<p>此前选题有结构依据，但正向构造直觉偏弱：能严格计算阶数、度数和必要路由容量，也能说明某些非交换群为何减少短词碰撞；然而不少入口的正面理由仍只有“点数超过门槛、没有被计数排除、实现方便”。尚无证据认为它们比其他候选更可能成功。当前已转向优先比较不同覆盖结构，避免在同一失败源上不断加种子、扩大邻域。</p>
+<p>本次重新核对并复用的 Mizuno 通用路由表提供了一个更强的正向入口：纤维部分已有对所有允许词成立的满秩保证，剩余问题明确落在一个有限控制图上。该控制图目前仍未构造成功，不能提前登记新下界。</p>
+<p>所有试验均限定对象和停止范围，完成后依据覆盖结构决定是否换线。保留失败记录是为了避免重复，不把搜索次数或局部引理数量当成研究目标。对于没有明确正向路由依据的候选，目前只分配便宜初筛，不能把“尚未排除”写成成功信号。</p>
+<h2>二、问题与比较门槛</h2>
+<p>寻找有限简单无向连通图 <span class="math-inline">G</span>，使</p>
+<div class="math-display">4≤Δ≤12,    D∈{3,4,5},   
+|V(G)|&gt;L(Δ,D),  Δ(G)≤Δ,  diam(G)≤ D.</div>
+<p>不预设正则、Cayley、顶点传递或等长轨道。找到更大图即可形成新下界，不额外要求证明其最优。</p>
+<p>下表是 <strong>2026-10-26 保存并核查来源的已知构造下界快照</strong>，不是上界，也不是本项目证明的精确值。真正声明新纪录前还须刷新主表及条目来源。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th style="text-align:right">最大度 <span class="math-inline">Δ</span></th>
+<th style="text-align:right">D=3</th>
+<th style="text-align:right">D=4</th>
+<th style="text-align:right">D=5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">41</td>
+<td style="text-align:right">104</td>
+<td style="text-align:right">364</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">72</td>
+<td style="text-align:right">252</td>
+<td style="text-align:right">650</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">120</td>
+<td style="text-align:right">441</td>
+<td style="text-align:right">1518</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right">170</td>
+<td style="text-align:right">684</td>
+<td style="text-align:right">2810</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">253</td>
+<td style="text-align:right">1100</td>
+<td style="text-align:right">5334</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right">585</td>
+<td style="text-align:right">1768</td>
+<td style="text-align:right">9020</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">650</td>
+<td style="text-align:right">2485</td>
+<td style="text-align:right">33397</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td style="text-align:right">715</td>
+<td style="text-align:right">3444</td>
+<td style="text-align:right">37628</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td style="text-align:right">810</td>
+<td style="text-align:right">5832</td>
+<td style="text-align:right">42342</td>
+</tr>
+</tbody>
+</table></div>
+<p>来源：<a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas 主表</a>及其 <a href="https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html">D3</a>、<a href="https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html">D4</a>、<a href="https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html">D5</a>条目页。</p>
+<h2>三、过去怎样选择点数与构造</h2>
+<p>采用“构造机制产生参数，再比较门槛”，未对整数点数空间做全局优化。例如四个 <span class="math-inline">q</span> 点轨道的电压图有 <span class="math-inline">n=4q</span>：172=4×43 对应七度 D3 门槛170，256=4×64 对应八度 D3 门槛253。Cayley 图的顶点数是群阶，例如 <span class="math-inline">|PSL(2,13)|=1092</span>，拟以十二度 D3 超过810。不等长陪集轨道则用稳定子指数求和，如1518+2024=3542，拟以七度 D5 超过2810。</p>
+<p>这种表示压缩了边的自由度，并可证明部分对称性和度数，但也预加了限制。仅换群或参数不应算一条完全独立的新方法；阶数合适更不说明存在目标生成元。不同轨道、基图及全部短路的共同实现，才是主要难点。</p>
+<p>已尝试的入口包括已知图增阶与局部重配、一般图度保持搜索、小商电压覆盖、仿射 Cayley、非等长陪集轨道、Möbius 置换作用、仿射线关系提升和标准图积。累计范围不止两种；“最多两条”是同时主力计算线路的默认上限。</p>
+<h2>四、较有分量的已闭范围</h2>
+<ol>
+<li>
+<p><strong>两个固定群的 Cayley 排除。</strong> 在 <span class="math-inline">F<sub>17</sub>⋊<sub>3</sub> C<sub>48</sub></span>（阶816）上，全部度数≤12、D≤3 的简单无向 Cayley 范围已计算排除；在 <span class="math-inline">F<sub>31</sub>⋊<sub>3</sub> C<sub>30</sub></span>（阶930）上，相应度数≤11范围已排除。覆盖归一化、相位分类和有限算术检查有记录；它们不是一般816／930点图的上界，也不排除其他群，尚非 Lean 认证。</p>
+</li>
+<li>
+<p><strong>标准积方法的整池初筛。</strong> 对至少两个非平凡连通因子的原样 Cartesian、strong 产品，以及均匀 lexicographic 产品 G[H]（G连通，G和H均至少两点），用参数公式和 Moore 上界给出乐观点数后，在全部27格仍不足以超过保存下界。故原样使用这些积不能突破；结论不覆盖非均匀 blowup、扭曲、删添或重连改造。</p>
+</li>
+<li>
+<p><strong>固定控制图的路由与度预算障碍。</strong> 104点四正则控制图中，0→32 的全部≤4步走法只有0–24–4–32。若每控制邻接最多二选、纤维16点且无内部边，则最多覆盖 <span class="math-inline">2<sup>3</sup>=8&lt;16</span>，排除该1664点模板，任意 GL 或非线性二邻点关系也不能补救。对81点纤维、每控制邻接双向每点至多三选、总度≤12的8424点模板，唯一四步路要求满 <span class="math-inline">3<sup>4</sup>=81</span> 分支；实际这些路径强迫全部208条基边满三分支，耗尽所有内部度预算。上述唯一三路继而只有 <span class="math-inline">3<sup>3</sup>=27&lt;81</span>，故这个更宽的指定预算模板也失败。</p>
+</li>
+</ol>
+<h2>五、代表性完整失败图</h2>
+<p>以下最好图均已从显式边表独立重建，并作全源 BFS。坏点对指距离超过该行目标 D 的无序点对；不同目标、规模之间不据这个数字排名成功概率。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>入口</th>
+<th>点数／度／目标D</th>
+<th style="text-align:right">实际D</th>
+<th style="text-align:right">坏点对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>104点源增阶</td>
+<td>105／4／4</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>252点源增阶</td>
+<td>254／5／4</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">133</td>
+</tr>
+<tr>
+<td>四个循环轨道</td>
+<td>172／7／3</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">258</td>
+</tr>
+<tr>
+<td>四个Q64轨道</td>
+<td>256／8／3</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">832</td>
+</tr>
+<tr>
+<td>PSL(2,13) Cayley</td>
+<td>1092／12／3</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">76440</td>
+</tr>
+<tr>
+<td>PSL(2,23)两陪集轨道</td>
+<td>3542／7／5</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">233772</td>
+</tr>
+</tbody>
+</table></div>
+<p>105点图的8个坏对全以12或13为端点。指定增阶操作的全部20904个合法候选已查完；保存最好图的40740个合法普通两边交换均不能改善。再固定其余边，对临界两分支实际涉及的九点枚举度序列 <span class="math-inline">(4,4,2,1,1,1,1,1,1)</span> 的全部230种完成，也没有改善。这些是准确局部范围的失败，<strong>没有证明一般105点图不存在</strong>。254点项仅是固定8起点的有限试验；“只剩8／133对”不等于已经接近可修复。</p>
+<h2>六、必要容量为什么仍不足</h2>
+<p>电压短路的不同符号形式，实际代入后可能重合；各纤维分别有足够形式，也未必能由同一参数赋值同时覆盖。仿射线提升中，原始路径分支数只是端点数上界，矩阵方向相关性仍可能损失覆盖。</p>
+<p>此前32／33点三角端口控制图直接优化必要上界</p>
+<div class="math-display">U=I+3A+9A<sup>2</sup>+27A<sup>3</sup>≥27  逐项成立.</div>
+<p>两种固定骨架的有限试验均未通过，因而未展开864／891点图。这比只要求控制直径三更准确，但即便 <span class="math-inline">U</span> 通过也不是提升成功的充分条件。当前缺口正是从“未被计数排除”走向“同一连边规则完成全部路由”。</p>
+<h2>七、正在推进的更强正向入口</h2>
+<p>Ryosuke Mizuno，<em>New lower bounds for the degree/diameter problem via interaction with a browser-accessible LLM</em>，<a href="https://arxiv.org/abs/2606.15860v1">arXiv:2606.15860v1</a> §2.3、附录A.4及A.6给出以下可复用充分框架。取一个简单四正则控制图 <span class="math-inline">C</span>，用四字母 <span class="math-inline">t∈{a,a<sup>-1</sup>,b,b<sup>-1</sup>}</span> 给有向边作逆相容标号，每个顶点四个出标号各出现一次。每点换 <span class="math-inline">F<sub>3</sub><sup>5</sup></span> 纤维，沿标号 <span class="math-inline">t</span> 的控制边连</p>
+<div class="math-display">(u,x)∼(v,A<sub>t</sub> x+λ b<sub>t</sub>),   λ∈F<sub>3</sub>.</div>
+<p>原文给出固定矩阵和向量，使每个五字母约化词的5×5控制矩阵均满秩；本地已核对逆相容关系及全部 <span class="math-inline">4·3<sup>4</sup>=324</span> 个词的秩。若任意有序控制点对（包括同一点）之间都有<strong>恰五步非回退走法</strong>，沿该走法的五个 <span class="math-inline">λ</span> 就能解线性方程到达任意目标纤维点。因此得到</p>
+<div class="math-display">n=243|C|,   Δ=12,   diam≤5.</div>
+<p>这里纤维覆盖已有统一充分保证，不必重新猜每条边的矩阵；剩余未知是控制图。普通直径≤5并不等于 exact-NB5。四正则简单图可用非回退计数多项式</p>
+<div class="math-display">N<sub>5</sub>(A)=A<sup>5</sup>-13A<sup>3</sup>+33A</div>
+<p>逐项正性表达此控制条件。</p>
+<p>保存门槛为42342，故需 <span class="math-inline">|C|≥175</span>；175点将给42525点。四正则图每点只有 <span class="math-inline">4·3<sup>4</sup>=324</span> 条恰五步非回退走法，因此控制阶数也必有 <span class="math-inline">|C|≤324</span>。原文144点控制图给出的34992点是已知旧结果，不是本轮发现。</p>
+<p>本轮已检查 <span class="math-inline">A<sub>5</sub>× C<sub>3</sub></span> 的3321个“两非对合逆元对”集合及8610个“一非对合逆元对加两个对合”集合，均不满足 exact-NB5；另1365个“四对合”集合只生成 <span class="math-inline">A<sub>5</sub>×{0}</span> 内的图，不能连通180点。三种组成覆盖该固定群全部四元非单位逆闭生成集，故这个<strong>固定群的四正则 Cayley exact-NB5 控制范围</strong>已计算排除。这不排除其他群或非Cayley控制图，也不是普通直径五的不存在性结论。<span class="math-inline">F<sub>31</sub>⋊ C<sub>6</sub></span> 的2926个“两非对合逆元对”集合也未通过，其他组成未检查。</p>
+<p>随后已对非Cayley的175点控制图作有限试验：35个固定五圈，加每点两条外部边。两组2因子定向给出逆相容标号；固定五圈自动保证每点回到自身的非回退五步路线。固定4个新起点、40000个交换提案完成后，最好图普通直径为6、距离大于五的无序点对315个；更强的 exact-NB5 条件仍缺2696个<strong>有序</strong>点对。后者由独立整数递推再次确认，不能除以二当作普通坏点对。该固定试验已收束，<strong>目前没有成功的175点控制图，也没有42525点完整图</strong>；一般175至324点控制图仍开放。</p>
+<h2>八、希望专家重点判断</h2>
+<ol>
+<li>是否已有四正则 exact-NB5 控制图的有效阶数上界、分类或具体大阶实例？<span class="math-inline">N<sub>5</sub>(A)&gt;0</span> 在175点附近有无已知谱、迹或组合障碍？能否据已有界或实例尽早判断该通用路由表路线能否超过当前42342？</li>
+<li>对“35个五圈＋外部2因子”的175点设计，哪些端口／商图结构能系统保证非对角的五步非回退覆盖？是否存在更合适的、可明确生成的控制图架构，而不只是继续换群或随机起点？</li>
+<li>对已提供的105点图，全部缺口共端两个分支且上述局部族已失败，是否有适用的全局 trade／switch，或可判断保留该核心缺乏价值的结构定理？希望获得数学上的取舍理由，而非继续无界扩大局部邻域。</li>
+<li>更一般地，哪些可核查的路由充分条件能同时控制多纤维／多轨道覆盖？在本参数池中，专家是否能指出一个带明确 <span class="math-inline">n,Δ,D</span> 关系、确有可能越过门槛的原始构造入口？</li>
+</ol>
+<h2>九、证据与审阅状态</h2>
+<p>Gemini通路可用，桥接回执报告 <code>gemini-3.8-flash-high/high</code>。其审阅是有限范围的数学与方向讨论，并未覆盖全部新代码或所有排除证明。已有意见曾漏路、混淆图积术语，并有把有限失败夸成全局刚性的未接受结论，均不能充当数学证明。本轮没有新的 Grok 最终审阅，也没有新成果 Lean 验收。</p>
+<p>主要本地证据（供进一步审阅，正文不依赖读完全部日志）：</p>
+<ul>
+<li><a href="evidence/wave1_results.json">第一轮结果及全部边表入口</a>、<a href="evidence/wave2_results.json">第二轮结果</a>。</li>
+<li><a href="evidence/graph105/original_check.json">105点图、八个坏对和独立检查</a>、<a href="evidence/graph105/best.edges">完整边表</a>。</li>
+<li><a href="evidence/degree_budget8424.md">8424点预算障碍</a>。</li>
+<li><a href="evidence/fixed_group816_scope.json">816固定群完整范围</a>、<a href="evidence/fixed_group930_scope.json">930固定群范围</a>。</li>
+<li><a href="evidence/route_chart_F3_5.json">通用路由表数据</a>、<a href="evidence/chart_check.json">324词算术检查</a>、<a href="evidence/controller180_two_pairs.json">180点控制范围</a>、<a href="evidence/controller186_two_pairs.json">186点控制范围</a>。</li>
+</ul>
+<p>研究继续进行。专家最有价值的帮助，是判断哪些构造限制有可证明的正向路由收益，哪些只是把未知问题搬进较小表示，及上述175点控制瓶颈是否已有成熟答案。</p>
+<h2>附件与复算</h2>
+<p>本包附两例失败完整图、175点控制候选、对应的独立检查结果、通用路由表数据及几个排除范围。它不是全部研究日志或全部大规模计算的复算包。所有关键结论及限制已在正文写出；JSON中的原项目路径仅用于进一步索取资料。</p>
+<ul>
+<li><a href="evidence/graph254/best.edges">254点图</a>与<a href="evidence/graph254/original_check.json">独立检查</a>。</li>
+<li><a href="evidence/controller175/best.edges">175点控制图</a>、<a href="evidence/controller175/best.labels.json">逆相容标号</a>与<a href="evidence/controller175/original_check.json">普通距离及非回退检查</a>。</li>
+<li><a href="evidence/controller180_mixed.json">180点混合组成结果</a>。</li>
+</ul>
+<p>在解压后的目录中，可按需用Python标准库重新计算小实例；无额外依赖：</p>
+<pre><code class="language-bash">python evidence/verify_saved_graph.py evidence/graph105 --vertices 105 --degree 4 --target-diameter 4 --expected-bad-pairs 8 --save-bad-pairs
+python evidence/verify_saved_graph.py evidence/graph254 --vertices 254 --degree 5 --target-diameter 4 --expected-bad-pairs 133
+python evidence/controller175/root_independent_check.py
+python evidence/verify_universal_chart.py
+</code></pre>
+<p>前两条复现的是失败图的实际距离，不是目标直径已经通过；第三条分别计算普通距离与exact-NB5缺口。检查器会生成新的检查JSON；已存在对应新输出时应直接复用。最后一条核验已有路由表，不代表控制图已满足条件。</p>
+</body></html>

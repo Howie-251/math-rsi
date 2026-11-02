@@ -1,0 +1,69 @@
+{
+  "prediction_id": "D4_ADJACENT_SINGLE_VERTEX_SPLIT",
+  "status": "FROZEN_BEFORE_ENUMERATION",
+  "operation": "The same adjacent disjoint-neighborhood single-vertex split as the closed D3 batch; every other old edge retained.",
+  "fixed_cases": [
+    {
+      "Delta": 4,
+      "source_n": 104,
+      "target_n": 105,
+      "source_m": 208,
+      "degree_histogram": {
+        "4": 104
+      },
+      "original_local_source": "research/ddp/breadth_20261027_wave2/sources/bhakar104_source.txt",
+      "normalized_source": "source104.edges"
+    },
+    {
+      "Delta": 6,
+      "source_n": 441,
+      "target_n": 442,
+      "source_m": 1323,
+      "degree_histogram": {
+        "6": 441
+      },
+      "original_local_source": "research/ddp/second_mechanism/rajiv441.edges",
+      "normalized_source": "source441.edges"
+    },
+    {
+      "Delta": 7,
+      "source_n": 684,
+      "target_n": 685,
+      "source_m": 2394,
+      "degree_histogram": {
+        "7": 684
+      },
+      "original_local_source": "research/ddp/m1_sources/graph_7_4_n684.txt",
+      "normalized_source": "source684.edges"
+    }
+  ],
+  "baseline_read_date": "2026-10-27",
+  "capacity_formula": "2+a*sum((Delta-1)^j,j=0..3)+b*sum((Delta-1)^j,j=0..2), a<=b, a+b=d(v)",
+  "capacity_survivors": {
+    "4": {
+      "2+2": 108
+    },
+    "6": {
+      "3+3": 563
+    },
+    "7": {
+      "2+5": 735,
+      "3+4": 951
+    }
+  },
+  "degree5_operation_closed_without_source_run": {
+    "best_capacity": 235,
+    "target_n": 253
+  },
+  "newroot_exact_condition": "For each oldy, min d_H(S,y)<=3 or min d_H(T,y)<=2; swapS/T for the other split root.",
+  "oldold_exact_condition": "For d_H(x,y)>4, min(dSx+dSy+2,dTx+dTy+2,dSx+dTy+3,dTx+dSy+3)<=4.",
+  "newroot_condition_is_only_necessary_for_whole_graph": true,
+  "execution": "All source vertices and all nonempty unordered neighbor partitions; capacity exclusions counted separately. If no necessary-root passers exist, do not compute oldold. For root-passers reuse per-v H distances to reject oldold; any full predicate passer gets producer all-source BFS.",
+  "calibration": "One first-capacity-survivor per case: compare both split-root radius4 miss sets with direct two-root walks/BFS. No extra full-source calibration required.",
+  "candidate_handling": "Save full first successful graph per case immediately; root performs independent final acceptance.",
+  "workers": 1,
+  "CPU_total_budget_seconds": 120,
+  "random_starts": 0,
+  "optimization_moves": 0,
+  "no_additional_D4_cases": true
+}

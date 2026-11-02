@@ -1,0 +1,242 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Both D0 closed-component lemmas, odd double-edge parity, and existence of a D1_MATCH root pass fresh paper-level review. Triple-repeat finite enumeration is explicitly retained and was rerun successfully. Same-family acceptance is provisional; actual requested backend is unattested.",
+  "audited_input": "proofs/dd82/n62/D0_DOUBLE_COMPONENTS_AND_D1_OUTLET.md",
+  "trace_path": "reviews/dd82/proof-checker-n62-d0-outlet-20261011",
+  "thread_id": "/root/proof_review_n62_d0_outlet",
+  "review_agent_ids": [
+    "/root/proof_review_n62_d0_outlet"
+  ],
+  "executor_model": null,
+  "executor_family": "openai",
+  "reviewer_model": null,
+  "reviewer_family": "openai",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_reasoning_observed": null,
+  "backend_attestation": "unavailable",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:24:31+00:00",
+  "details": {
+    "headline_theorems_audited": 3,
+    "claims_including_intermediate_parity": 4,
+    "micro_claims_audited": 32,
+    "micro_claims_closed": 32,
+    "open_obligations": [],
+    "issues": [],
+    "issue_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "claims": [
+      {
+        "id": "D0-MATCH-CLOSURE",
+        "source_lines": "35-78",
+        "verdict": "PASS",
+        "statement": "For every actual D0_MATCH root, four distinct vertices form one closed alternating-weight 2,1,2,1 component of the repeat matrix and induce no original G edge.",
+        "global_triple_repeat_exclusion_needed": false,
+        "obligations": [
+          "MC-01",
+          "MC-02",
+          "MC-03",
+          "MC-04",
+          "MC-05",
+          "MC-06",
+          "MC-07",
+          "MC-08",
+          "MC-09",
+          "MC-10",
+          "MC-11",
+          "MC-12",
+          "MC-13",
+          "MC-14",
+          "MC-15",
+          "MC-16",
+          "MC-17"
+        ]
+      },
+      {
+        "id": "D0-BOUT-CLOSURE",
+        "source_lines": "80-99",
+        "verdict": "PASS",
+        "statement": "For every actual D0_EDGE_BOUT root, the four distinct vertices form the same closed weighted component and induce exactly original edges 0b and wa.",
+        "global_triple_repeat_exclusion_needed": false,
+        "obligations": [
+          "MC-01",
+          "MC-02",
+          "MC-03",
+          "MC-04",
+          "MC-05",
+          "MC-06",
+          "MC-18",
+          "MC-19",
+          "MC-20",
+          "MC-21",
+          "MC-22",
+          "MC-23"
+        ]
+      },
+      {
+        "id": "ODD-DOUBLE-PARITY",
+        "source_lines": "103-113",
+        "verdict": "PASS",
+        "statement": "After the recovered triple-repeat exclusion, the actual repeat matrix has an odd positive number of unordered weight-two edges.",
+        "dependencies": [
+          "actual graph identities",
+          "triple-repeat exclusion including exact finite enumeration",
+          "triangle pairing"
+        ],
+        "obligations": [
+          "MC-24",
+          "MC-25",
+          "MC-26",
+          "MC-27",
+          "MC-28"
+        ]
+      },
+      {
+        "id": "D1-ROOT-EXISTS",
+        "source_lines": "115-133",
+        "verdict": "PASS",
+        "statement": "Every actual order-62 candidate admits a D1_MATCH root, using the explicitly stated recovered exclusions and exact finite dependency.",
+        "dependencies": [
+          "ODD-DOUBLE-PARITY",
+          "arbitrary chosen double-edge root coverage",
+          "D2 exclusion",
+          "BIN exclusion",
+          "D0-MATCH-CLOSURE",
+          "D0-BOUT-CLOSURE"
+        ],
+        "obligations": [
+          "MC-29",
+          "MC-30",
+          "MC-31",
+          "MC-32"
+        ]
+      }
+    ],
+    "dependency_cycle_found": false,
+    "prior_audit_verdicts_used_as_premises": false,
+    "source_edits": [],
+    "counterexample_attempts": 12,
+    "verified_counterexamples": 0,
+    "surviving_counterexample_candidates": 0,
+    "finite_check": {
+      "source": "context/dd82/archive/N8_AI_FOR_MATH_LLM_SAT_REVIEW_20260929/theory/n62/n62_triple_edge_elimination.py",
+      "source_inspected": true,
+      "fresh_execution": true,
+      "execution_count": 1,
+      "exit_code": 0,
+      "wall_time_seconds": 3.407788304,
+      "sat_used": false,
+      "enumeration_counts": [
+        {
+          "lift_bits": [
+            0,
+            0,
+            0
+          ],
+          "commuting_q": 13,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            0,
+            0,
+            1
+          ],
+          "commuting_q": 5,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            0,
+            1,
+            0
+          ],
+          "commuting_q": 5,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            0,
+            1,
+            1
+          ],
+          "commuting_q": 1,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            1,
+            0,
+            0
+          ],
+          "commuting_q": 5,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            1,
+            0,
+            1
+          ],
+          "commuting_q": 1,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            1,
+            1,
+            0
+          ],
+          "commuting_q": 1,
+          "gram_survivors": 0
+        },
+        {
+          "lift_bits": [
+            1,
+            1,
+            1
+          ],
+          "commuting_q": 1,
+          "gram_survivors": 1
+        }
+      ],
+      "candidate_d_row_supports": 24,
+      "support_incidences_per_vertex": 4,
+      "six_block_resolutions": 0,
+      "gf2_certificate": "verified: 0=1",
+      "paper_multiplicity_premise_checked": true,
+      "scope": "Exact finite table check retained as an explicit computational dependency of the paper triple-repeat exclusion; no Lean certification asserted."
+    },
+    "not_claimed": [
+      "D1_MATCH exclusion",
+      "nonexistence of arbitrary order-62 graphs",
+      "Lean verification of the target",
+      "attestation of actual model or reasoning backend"
+    ],
+    "required_user_overrides": [
+      "Markdown and JSON artifacts only",
+      "No digests or artifact inventories",
+      "No source or shared wiki edits",
+      "No TeX, PDF or HTML",
+      "No new axiom, sorry or native_decide",
+      "No SAT or Lean required",
+      "No dedicated order-63-65 work"
+    ],
+    "source_dependencies_read": [
+      "proofs/dd82/n62/RECOVERED_REDUCTION.md",
+      "proofs/dd82/n62/S_TOUCH_SATURATED_ROW_EXCLUSION.md",
+      "proofs/dd82/n62/TRIANGLE_PAIRING_SIMPLE_REPEAT_EXCLUSION.md",
+      "proofs/dd82/n62/D2_MATCH_SATURATED_ROW_EXCLUSION.md",
+      "proofs/dd82/n62/D0_EDGE_BIN_SATURATED_ROW_EXCLUSION.md",
+      "context/dd82/archive/N8_AI_FOR_MATH_LLM_SAT_REVIEW_20260929/theory/n62/n62_triple_edge_elimination.py"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+# Natural364 →365 by port matching and two core cuts
+
+Prediction before execution: at least one of the fixed at-most10000 sampled configurations covers allold364 vertices from the newroot within5. Passing that gate permits exact old-old tests but does not predict a complete365 graph.
+
+Use the inherited natural polarity source364/714, with28 degree3 ports and336 degree4 core vertices. This is not the separate published364/728 regular graph. The old fullN/pureappend obstructions retain allhostedges and prohibit newold-oldedges; MULTI_VERTEX_PORT_BARRIER explicitly leaves deletedhostedges and addedold-oldedges outside scope. No same-rule strict negative was located. The actual sourceD5 and oldport spacing/balls are inherited without any recomputation.
+
+One new rule only: a perfectmatching on all28 ports adds14 originalnonedges. Delete two vertex-disjoint OLD core-core edges. A newvertex364 connects to their four endpoints. The28 ports each gain1; four core endpoints lose1 and gain1; allother core vertices stay degree4; the newvertex has degree4. Thus final365/730 is4regular, with712 of714 originaledges retained. The newport shortcuts may repair oldroute damage while the newroot enters throughcore rather than the isolated port-only interface.
+
+One fixed seed202611010405, at most10000 distinct configurations. Shuffle the28 ports to form a matching, canonicalize its14 pairs; choose two distinct disjoint oldcore edges. A canonical fullmatching+cutpair key removes duplicates. No local hillclimb, changedseed, morecuts, H14 extension or oldmask reuse/search is started. First ordinary BFS from newroot364; only a fullR5 pass receives final-candidate BFS from all364 oldlabels, stopping at the first failure. A complete hit saves the365/730 literal, exactdistance witness and parameters and immediately stops the batch. Sample orCPU exhaustion without a hit stays UNKNOWN for the whole rule.
+
+Newcase20CPU includes allpreparation/compile/failures/run, one worker, no reset. Source raw is parsed once solely as fixed construction input. No sourceD5 validation/BFS, oldportballs, field, solver, Lean, ARIS, remote, install or artifacthash. Root alone accepts graphs and updates global counts.

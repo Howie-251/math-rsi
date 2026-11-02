@@ -1,0 +1,22 @@
+# Adjacent10pin-line blocks with one anchor each: first32 frozen pairs have no complete cover
+
+The finite coupled-anchor batch produced no42399-vertex graph. All32 frozen line pairs were tested completely against every degree-legal old anchor role, including repeated anchors when their actual old degree budget permits two incidences. All32 have no two-role anchor cover. This closes only those32 pairs on the fixed42397 source;59290 other degree-compatible pairs were not tested and no broader impossibility is claimed. Native computation used0.817310 CPU seconds, plus one compilation inside the20second task allocation. No solver, new graph or full-source BFS was used.
+
+The source is the previously accepted42397-vertex,245877-edge degree12 graph from h9_d12_ninepin_saturated_deletion, certified by complete per-step actualdegree and R4 induction. The last independent allsource graph remains42377. No source switch to a concurrent branch occurred.
+
+The proposed block retains every old edge, adds distinct z,w and zw, and uses old neighborhoods A union{a}, B union{b}, where A,B each have ten mandatory pins. Each old anchor lies outside its own mandatory set, giving eleven old neighbors and the new buddy as the twelfth neighbor. Anchors may overlap the other mandatory set or equal one another only when the actual total old incidence load stays within degree12. The two new points are adjacent.
+
+The exact old-target requirements are
+
+    R4(A) union R4(a) union R3(B) union R3(b) = V,
+    R4(B) union R4(b) union R3(A) union R3(a) = V.
+
+A simple new-to-old path avoiding the other new point uses one attachment and at most4 source edges. If it uses the other new point, replace its prefix by the direct buddy edge; after its old attachment at most3 source edges remain. These arguments work even if old neighborhoods overlap or anchors coincide. Conversely the stated source routes realize every covered target. Thus, given the retained source diameter-at-most5, complete coverage of both roots and actual degree legality exactly characterize this fixed block rule.
+
+All596 original ten-pin Qline sets were screened on the actual42397 source. There are346 degree-legal sets and250 with a saturated mandatory pin. Among the59685 unordered pairs of the346 legal sets,363 violate old pin multiplicity loads, leaving59322 compatible pairs. For each legal line the native program calculates its actual current-source R3 and R4 unions. For each compatible pair, let Z be V minus(R4(A) union R3(B)), and W be V minus(R4(B) union R3(A)). Pairs are sorted by |Z|+|W|, with deterministic pool-index tie breaks, and exactly the first32 are frozen before anchor support calculations. The residual count is only a candidate ordering, never a success measure. profile.json records every legal line, R4 missing list, full degree counts and all32 frozen target lists.
+
+For the32 pairs there are446 distinct residual old targets. A bounded R4 computation from each target provides the exact R3/R4 coverer sets among all13895 old vertices of degree below12. The target support cache is complete and bound to this fixed source. For a fixed pair, candidate a must preserve old degree loads and be outside A; candidate b similarly lies outside B. A covers a Z-target through R4 and a W-target through R3, while B-role anchor b uses R3 for Z and R4 for W. For every legal a, start from all legal b and intersect the corresponding target-coverer sets for every target not already covered by a. If a=b would exceed its old degree budget, remove that candidate explicitly. This exact intersection is necessary and sufficient for a valid b. The program exhausted444077 a-role choices across the32 pairs with no surviving b.
+
+line_R3_R4.u64.bin stores each legal line's current R3 thenR4 bitset,663native64bit words per ball, in profile.json line order. target_support.u64.bin stores each residual target's R3 thenR4 old-anchor coverer bitset,218words per row. RESULT.json records anchor and target orders, all pair terminal states and the precise finite scope. These caches were computed once; no old cache from a smaller base was used as a rejection certificate.
+
+The frozen prediction was refuted for these32 pairs. All coupled cases reached exact terminal states before the CPU window, so no uncomputed pair is labeled failed. There was no third new point, extra anchor per role, additional pair window, seed or continuation. Shared family data, Wiki, HTML and delivery files were untouched.

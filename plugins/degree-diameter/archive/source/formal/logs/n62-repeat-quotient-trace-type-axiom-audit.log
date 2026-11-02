@@ -1,0 +1,52 @@
+def DegreeDiameter.centeredRepeatQuotient.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      Matrix (DegreeDiameter.repeatSupport G).ConnectedComponent (DegreeDiameter.repeatSupport G).ConnectedComponent
+        ℤ :=
+fun {V} [Fintype V] G => 62 • (2 • DegreeDiameter.repeatQuotientMatrix G + 1) - 17 • DegreeDiameter.repeatSizeMatrix G
+@DegreeDiameter.cubic_157604_trace_mod_1063 : ∀ {V : Type u_1} [inst : Fintype V] (P : Matrix V V ℤ),
+  P ^ 3 = 157604 • P → 1063 ∣ P.trace
+@DegreeDiameter.n62_repeat_size_matrix_square : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  Fintype.card V = 62 →
+    DegreeDiameter.repeatSizeMatrix G * DegreeDiameter.repeatSizeMatrix G = 62 • DegreeDiameter.repeatSizeMatrix G
+@DegreeDiameter.n62_repeat_quotient_size_actions : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        DegreeDiameter.repeatQuotientMatrix G * DegreeDiameter.repeatSizeMatrix G =
+            8 • DegreeDiameter.repeatSizeMatrix G ∧
+          DegreeDiameter.repeatSizeMatrix G * DegreeDiameter.repeatQuotientMatrix G =
+            8 • DegreeDiameter.repeatSizeMatrix G
+@DegreeDiameter.n62_centered_repeat_quotient_cubic : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        DegreeDiameter.centeredRepeatQuotient G ^ 3 = 157604 • DegreeDiameter.centeredRepeatQuotient G
+@DegreeDiameter.n62_repeat_quotient_trace_bounds : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        0 ≤ (DegreeDiameter.repeatQuotientMatrix G).trace ∧
+          (DegreeDiameter.repeatQuotientMatrix G).trace ≤
+            8 * ↑(Fintype.card (DegreeDiameter.repeatSupport G).ConnectedComponent)
+@DegreeDiameter.n62_repeat_component_count_le : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  Fintype.card V = 62 → Fintype.card (DegreeDiameter.repeatSupport G).ConnectedComponent ≤ 62
+@DegreeDiameter.n62_repeat_quotient_trace_identity : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ↑(Fintype.card (DegreeDiameter.repeatSupport G).ConnectedComponent) +
+            2 * (DegreeDiameter.repeatQuotientMatrix G).trace =
+          17
+@DegreeDiameter.n62_repeat_component_count_odd : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → Odd (Fintype.card (DegreeDiameter.repeatSupport G).ConnectedComponent)
+'DegreeDiameter.cubic_157604_trace_mod_1063' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_size_matrix_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_size_actions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_centered_repeat_quotient_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_trace_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_count_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_trace_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_count_odd' depends on axioms: [propext, Classical.choice, Quot.sound]

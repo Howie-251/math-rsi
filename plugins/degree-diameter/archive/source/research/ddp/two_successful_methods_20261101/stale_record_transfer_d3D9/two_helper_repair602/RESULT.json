@@ -1,0 +1,164 @@
+{
+  "status": "UNKNOWN_10000_SAMPLE_NO_HIT",
+  "seed": 202611010309,
+  "sample_cap": 10000,
+  "distinct_configurations_started": 10000,
+  "distinct_configurations_finished": 10000,
+  "matching_draws": 10173,
+  "duplicate_draws": 1,
+  "rejected_helper600": 9999,
+  "rejected_helper601": 1,
+  "both_helpers_passed": 0,
+  "rejected_old_old": 0,
+  "helper_root_BFS_count": 10001,
+  "modified_graph_old_label_BFS_count": 0,
+  "all_source600_validity_BFS_count": 0,
+  "first_helper600_failure": {
+    "configuration": {
+      "cut_edge_indices": [
+        255,
+        455,
+        637
+      ],
+      "cut_edges": [
+        [
+          85,
+          122
+        ],
+        [
+          167,
+          551
+        ],
+        [
+          232,
+          400
+        ]
+      ],
+      "repair": [
+        122,
+        400
+      ],
+      "pins600": [
+        85,
+        551
+      ],
+      "pins601": [
+        167,
+        232
+      ]
+    },
+    "BFS": {
+      "root": 600,
+      "target": 49,
+      "distance": 10,
+      "reached": 602,
+      "eccentricity": 10,
+      "actual_path": [
+        600,
+        85,
+        282,
+        376,
+        210,
+        431,
+        58,
+        334,
+        206,
+        456,
+        49
+      ]
+    }
+  },
+  "first_helper601_failure": {
+    "configuration": {
+      "cut_edge_indices": [
+        15,
+        238,
+        578
+      ],
+      "cut_edges": [
+        [
+          5,
+          325
+        ],
+        [
+          79,
+          253
+        ],
+        [
+          212,
+          462
+        ]
+      ],
+      "repair": [
+        5,
+        79
+      ],
+      "pins600": [
+        212,
+        462
+      ],
+      "pins601": [
+        253,
+        325
+      ]
+    },
+    "BFS": {
+      "root": 601,
+      "target": 2,
+      "distance": 10,
+      "reached": 602,
+      "eccentricity": 10,
+      "actual_path": [
+        601,
+        253,
+        371,
+        569,
+        512,
+        36,
+        328,
+        142,
+        109,
+        531,
+        2
+      ]
+    }
+  },
+  "first_old_old_failure": null,
+  "first_both_helper_pass_configuration": null,
+  "hit": false,
+  "winning_configuration": null,
+  "winning_diameter": 0,
+  "winning_distance_witness": null,
+  "run_process_CPU_seconds": 0.115695,
+  "run_CPU_limit_seconds": 18.2032,
+  "time_cap_reached": false,
+  "target": {
+    "degree": 3,
+    "diameter": 9,
+    "order": 602
+  },
+  "source": "research/ddp/more_graphs_20261027/d3_D9_current600_source/source600.edges",
+  "source_order": 600,
+  "source_edges": 900,
+  "source_degree_diameter_scope": "Cubic literal and published D9 inherited; source non-bipartite; no new source validity/BFS.",
+  "prediction": "At least one sampled configuration passes both helper R9 coverage; old-old preservation remains a separate exact check.",
+  "prediction_both_helpers_supported": false,
+  "exact_rule": "Three disjoint old edge cuts; one original-nonedge repair on two cut endpoints; other four pins split2+2; helpers adjacent.",
+  "complete_configuration_family_exclusion": false,
+  "scope": "One fixed-seed sample of at most10000 distinct configurations, not all three-matchings or all degree3/D9 graphs.",
+  "preparation_charge_seconds": 0.2,
+  "actual_compile_CPU_seconds": 1.0569549999999999,
+  "actual_run_child_CPU_seconds": 0.11640899999999998,
+  "driver_process_CPU_seconds": 0.041144422,
+  "total_charged_CPU_seconds": 1.4145105829999998,
+  "CPU_budget_seconds": 20.0,
+  "worker_count": 1,
+  "source_validity_or_source_BFS": 0,
+  "solver_Lean_remote_install_or_hash": 0,
+  "graph_parameter_Lean_increment_before_root_acceptance": [
+    0,
+    0,
+    0
+  ],
+  "next": "STOP_REPORT_TO_ROOT_NO_OTHER_SEED_CUT_PATTERN_OR_TIMER"
+}

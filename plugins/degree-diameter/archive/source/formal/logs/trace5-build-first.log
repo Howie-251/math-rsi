@@ -1,0 +1,20 @@
+✖ [1790/1790] Building DegreeDiameter.TraceFive (73s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/TraceFive.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/TraceFive.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/TraceFive.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/TraceFive.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/TraceFive.setup.json --json
+error: DegreeDiameter/TraceFive.lean:20:4: Invalid field notation: Function `AddMonoidHom.map_trace` does not have a usable parameter of type `AddMonoidHom ...` for which to substitute `f.toAddMonoidHom`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+error: DegreeDiameter/TraceFive.lean:65:4: `simp` made no progress
+warning: DegreeDiameter/TraceFive.lean:64:49: This simp argument is unused:
+  hreg
+
+Hint: Omit it from the simp argument list.
+  simp only [trace, diag_apply, pow_two, adjacencyMatrix,
+        SimpleGraph.adjMatrix_mul_self_apply_self,̵ ̵h̵r̵e̵g̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.TraceFive
+error: build failed
+
+exit_status=1

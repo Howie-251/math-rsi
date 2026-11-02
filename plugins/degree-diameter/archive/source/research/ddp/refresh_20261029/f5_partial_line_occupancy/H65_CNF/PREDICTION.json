@@ -1,0 +1,13 @@
+{
+  "task": "Prepare only H65 increment; never solve or change the same-fiber model",
+  "old_variable_max": 315221,
+  "keep_variables": "old vertex v retains DIMACS v+1 for v=0..3749",
+  "new_high_flags": "30 explicit h_a variables with exact binary sum of125 keep variables, h_a iff n_a>=65",
+  "edge_rules": "For each undirected external edge, condition both source/target edge-direction line equality and T_p keep transport on h_u AND h_v",
+  "separate_global_files": ["exists_high.added.cnf requires total retained count>=1921", "not_all_high.added.cnf requires the saved all-high impossibility proof"],
+  "calibration": "All126 counts0..125 plus two alternative boundary assignments; local exact gate truth tables; no SAT",
+  "workers": 1,
+  "CPU_budget_seconds": 10,
+  "solver_calls": 0,
+  "source_graph_BFS": 0
+}

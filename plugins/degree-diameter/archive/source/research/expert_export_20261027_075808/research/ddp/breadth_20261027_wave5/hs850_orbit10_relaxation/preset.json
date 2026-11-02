@@ -1,0 +1,19 @@
+{
+  "starts": 4,
+  "proposals_per_start": 25000,
+  "worker_count": 1,
+  "search_CPU_cutoff_seconds": 85,
+  "all_task_CPU_limit_seconds": 90,
+  "seeds": [
+    202610270700,
+    202610270701,
+    202610270702,
+    202610270703
+  ],
+  "start0": "all 26 parameters zero",
+  "other_starts": "uniform fixed-seed xorshift64 values mod17",
+  "moves": "choose one of 26 parameters uniformly, replace by one of the other 16 residues",
+  "energy": "sum of exact missing z residues over all 420 nonadjacent slots of ten proved orbit representatives",
+  "temperature": "12*(0.05/12)^(proposal/24999)",
+  "new_variants_after_this_batch": false
+}

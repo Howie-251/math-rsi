@@ -1,0 +1,7 @@
+# Actual7531 semantic review and notation correction
+
+Fresh A returned actual SUCCESS/PASS, thread `ea89b6b8-4583-45f6-a2f7-7562134aca4f`, CLI-selected `Gemini 3.8 Flash (High)`. It read actual Definitions/Capacity/FullNeighborhoodClones/source definitions and project Walk diameter, then compared the original parameters, ordered centers and immutable pins. The source adjacency, old/new/product labels, absence of new-new edges and two-case hO/hS capacity argument match the intended graph. At A it correctly treats FinalClaim alone as a proposition, leaving actual downstream completion separate.
+
+Executor correction: the returned mathematical translation writes `mathbb F_7225` and `mathbb F_17` where the actual source uses finite INDEX SETS `Fin7225`, `Fin17`. No field structure of these sizes is used; in particular a field of order7225 does not exist. The only geometric field here is the original GF4. All actual Lean definitions have the correct Fin carrier, so no source or proof correction is needed. This reviewer prose error is retained and explicitly sent back in the connection review, rather than silently endorsed.
+
+The narrow actual-source encoding and capacity verdict is supported subject to that notation correction. Final-source C and concrete input/caller review are separate steps, not inherited from earlier clone instances. No new build/BFS or global-record/priority certification is asserted. Full raw interaction is in OVOID7531_A_GEMINI_RAW.json.

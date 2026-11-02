@@ -1,0 +1,55 @@
+{
+  "budget_total_CPU_seconds": 20,
+  "workers": 1,
+  "started_UTC": "2026-11-01T08:52:09.175386+00:00",
+  "normalization_prep_CPU_seconds": 0.00030862200000000145,
+  "scope": "onlym34/fixedsixport3base/alpha0=1,2/other4in1..33,sumalpha1alpha2!=0",
+  "compile_command": [
+    "g++",
+    "-O3",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "search.cpp",
+    "-o",
+    "search"
+  ],
+  "compile_returncode": 0,
+  "prep_compile_CPU_seconds": 0.7397781889999999,
+  "search_command": [
+    "./search",
+    "19.110210788"
+  ],
+  "search_returncode": 0,
+  "result": {
+    "status": "EXHAUSTED_FIXED_FAMILY",
+    "tested_simple_candidates": 2299968,
+    "raw_prefix_candidates": 2371842,
+    "skipped_nonsimple_prefix": 71874,
+    "branch_tested": [
+      1149984,
+      1149984
+    ],
+    "root_mask_checks": 0,
+    "last_lex_candidate": [
+      2,
+      33,
+      33,
+      33,
+      33
+    ],
+    "search_export_cpu_seconds": 0.150192,
+    "actual_controller_checks": null,
+    "solution_parameters": null,
+    "necessary_1_to_2_gate_checks": 2299968,
+    "necessary_1_to_2_gate_passed": 0,
+    "fiber_graphs_generated": 0,
+    "BFS_solver_Lean_runs": 0
+  },
+  "total_measured_CPU_seconds": 0.8938144629999999,
+  "wall_seconds": 0.9574277512729168,
+  "all_local_processes_terminal": true,
+  "fullfiber_graphs": 0,
+  "BFS_solver_Lean_calls": 0,
+  "measurement_boundary": "driver normalization/preparation, wholecompilerchild, search/exportchild and Python literal witness export/aggregation; interactive source authoring/read-only inspection outside"
+}

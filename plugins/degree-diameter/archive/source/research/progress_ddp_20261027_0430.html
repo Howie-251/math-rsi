@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}code{overflow-wrap:anywhere}.table-wrap{overflow-x:auto}nav{margin:18px 0}nav a{margin-right:16px}th{font-weight:600}section{margin-top:30px}.muted{color:#526477}li{margin:6px 0}</style></head><body><h1>当前任务：三步路由的31点控制问题</h1><p>更新：2026-10-27 04:30:44 UTC。Goal ACTIVE；范围4≤Δ≤12、D∈{3,4,5}。已验证新下界0。</p>
+<div class="note">最新入口有可复用的局部线性规则：31点四正则控制图若满足明确的全局bad-turn证书，可给出837点、最大度十二、直径至多三的图，超过保存门槛810。31点控制图与全局证书尚未找到；局部矩阵存在不等于完整构造成立。</div>
+<nav><a href="expert_review_20261027/STATUS.html">专家说明 HTML</a><a href="DD_EXPERT_REVIEW_20261027.zip">专家材料 ZIP</a><a href="expert_review_20261027/STATUS.md">可编辑文本</a></nav>
+<h2>点数与覆盖依据</h2><p>新读的作者实例使用30点控制器、F₄³纤维、逐边矩阵和相邻纤维的plane pencils，没有内部translation。直接换F₃也只有30×27=810，不能越线。局部18种F₃ bad-turn模式及实现矩阵已经完整核对；全局证书仍未知。</p>
+<p>在此三步证书框架中，good走法总数和对角反向成对给出控制阶数≤31。因此越过810只剩31×27=837，且31点时good计数矩阵必须是J−A+I。原30图是互不交三角形与五圈设计，维持三角因子会要求阶数被三整除，不能直接越线。该结论只限制所用证书框架。</p>
+<p>31点三角重叠有限枚举已结束：345对源点×8插入位置共2760个不同标号的简单四正则图，全部缺少所需raw NB3覆盖，passers为0，因此未启动18模式CSP。最好图root独立核查普通D4/15个>3无序对，以及34个必需NB3有序缺项。2280图有11三角，480图实际有12三角，均纳入原范围。该family停止，不追加插入位置或源点邻域；一般31点控制器及其全局证书仍开放。本轮计算均已终态，研究Goal继续。</p>
+<h2>刚完成的试验与停止原因</h2><table><tr><th>入口</th><th>实际结果</th></tr>
+<tr><td>H9全局三态生成</td><td>3×50CPU秒未越线。最好合法部分状态38383点；大S末态仍违规，不作图。</td></tr>
+<tr><td>H9全局650-cell模型</td><td>一次限时MILP无incumbent，UNK2026-10-27 04:28:30 UTCN，不是不存在证明。</td></tr>
+<tr><td>当前纪录单点扩张</td><td>37628源的8方案最好漏115点；42342源最好漏648点；独立BFS一致。完整十一度覆盖MILP也为UNK2026-10-27 04:28:30 UTCN，未生成新图。</td></tr>
+<tr><td>364点几何图的明确对合商</td><td>得到192点、最大度4、普通D5图；恰五步非回退仍缺6288有序对。一个短见证排除该固定图全部保旧边补度，故取消补边搜索。</td></tr></table>
+<p>Gemini现有通道已实际核对最后这个短障碍，接受其固定范围；没有审全部代码或给Lean验收。两份作者当前原图已取得，但pencil生成规则仍未恢复。各已终态范围不自动增加种子、锚点或预算。</p>
+<p><a href="ddp/breadth_20261027_wave4/REPORT.md">第四轮完整汇总</a> · <a href="ddp/breadth_20261027_wave4/RESULTS.json">机器可读结果</a> · <a href="ddp/breadth_20261027_wave4/mizuno_d3_source/REPORT.md">新三步规则、原文与局部矩阵</a> · <a href="progress_ddp_20261027_0349.html">上一阶段H9与历史结果</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p><p>专家包保留03:15:51 UTC截点；本页记录后续研究。没有新下界、没有新成果Lean验收。</p></body></html>

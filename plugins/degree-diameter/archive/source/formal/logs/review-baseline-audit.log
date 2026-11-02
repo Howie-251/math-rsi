@@ -1,0 +1,49 @@
+def DegreeDiameter.degreeAtMostEight.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Prop :=
+fun {V} [Fintype V] G => ∀ (v : V), G.degree v ≤ 8
+def DegreeDiameter.diameterAtMostTwo.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => ∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v
+def DegreeDiameter.Exists82 : ℕ → Prop :=
+fun n => ∃ V x G, Fintype.card V = n ∧ DegreeDiameter.degreeAtMostEight G ∧ DegreeDiameter.diameterAtMostTwo G
+def DegreeDiameter.IsExact82 : ℕ → Prop :=
+fun n => DegreeDiameter.Exists82 n ∧ ∀ (m : ℕ), DegreeDiameter.Exists82 m → m ≤ n
+@DegreeDiameter.card_le_one_add_eight_mul_degree : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → ∀ (r : V), Fintype.card V ≤ 1 + 8 * G.degree r
+@DegreeDiameter.moore_bound : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V ≤ 65
+@DegreeDiameter.regular_of_card_gt_57 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → 57 < Fintype.card V → G.IsRegularOfDegree 8
+@DegreeDiameter.exists82_le_65 : ∀ {n : ℕ}, DegreeDiameter.Exists82 n → n ≤ 65
+'DegreeDiameter.card_le_one_add_eight_mul_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.moore_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.regular_of_card_gt_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_le_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_graph_bound.{u_1} : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (v : V), G.degree v ≤ 8) → (∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v) → Fintype.card V ≤ 65 :=
+fun {V} [Fintype V] G hdeg hpaths => DegreeDiameter.moore_bound G hdeg hpaths
+'original_graph_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+def DegreeDiameter.brownCoords : Fin 57 → ℕ × ℕ × ℕ :=
+fun v => if ↑v < 49 then (1, ↑v / 7, ↑v % 7) else if ↑v < 56 then (0, 1, ↑v - 49) else (0, 0, 1)
+def DegreeDiameter.brownDot : Fin 57 → Fin 57 → ℕ :=
+fun u v =>
+  ((DegreeDiameter.brownCoords u).1 * (DegreeDiameter.brownCoords v).1 +
+        (DegreeDiameter.brownCoords u).2.1 * (DegreeDiameter.brownCoords v).2.1 +
+      (DegreeDiameter.brownCoords u).2.2 * (DegreeDiameter.brownCoords v).2.2) %
+    7
+def DegreeDiameter.brownAdj : Fin 57 → Fin 57 → Prop :=
+fun u v => u ≠ v ∧ DegreeDiameter.brownDot u v = 0
+def DegreeDiameter.brown57 : SimpleGraph (Fin 57) :=
+{ Adj := DegreeDiameter.brownAdj, symm := DegreeDiameter.brown57._proof_1, loopless := DegreeDiameter.brown57._proof_2 }
+DegreeDiameter.brown57_computable_degree : ∀ (v : Fin 57), DegreeDiameter.brown57.degree v ≤ 8
+DegreeDiameter.brown57_diameter : DegreeDiameter.diameterAtMostTwo DegreeDiameter.brown57
+DegreeDiameter.brown57_degree : DegreeDiameter.degreeAtMostEight DegreeDiameter.brown57
+DegreeDiameter.exists82_57 : DegreeDiameter.Exists82 57
+'DegreeDiameter.brown57_computable_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.brown57_diameter' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.brown57_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_baseline : DegreeDiameter.Exists82 57 ∧ ∀ (n : ℕ), DegreeDiameter.Exists82 n → n ≤ 65 :=
+⟨DegreeDiameter.exists82_57, fun x h => DegreeDiameter.exists82_le_65 h⟩
+'original_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+exit_status=0

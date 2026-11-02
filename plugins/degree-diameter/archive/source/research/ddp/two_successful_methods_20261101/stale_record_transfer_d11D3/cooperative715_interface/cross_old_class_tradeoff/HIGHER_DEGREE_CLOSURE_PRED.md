@@ -1,0 +1,7 @@
+# Higher-helper-degree core prediction
+
+New prediction, recorded before the additional deduction: in the accepted literal715 host, retain all old edges and allow arbitrary new old–old, new–old and new–new edges, subject to maximum degree11 and diameter≤3. The previous same-node paper proves minimum helper degree3 and forces each minimum-degree-three helper to have neighbor-helper-degree sum12 or13.
+
+For any helper of degree d in its induced helper graph, not necessarily a minimum-degree helper, q≤11-d own classes. If 4≤d≤7 then q≤7 and every outside owner class has a missed core target under old-only two-step suffixes. Each neighboring helper has at most8 old spokes because the already proved global minimum helper degree is3. Thus core necessity would imply54+d≤65-q≤b+c≤8d+(11-d)=7d+11, which would force d≥8. If valid, helper degrees lie in{3,8,9,10,11}; any degree-three helper then has neighbor-degree sum9 or at least14, contradicting12/13.
+
+Attack scope: check nonminimum-helper use of the inherited owner design, arbitrary shared pins, all routes through old–old edges, and possible new edges within a P3 class. All old core vertices are degree11 and remain saturated. No source/design verification, helper search, solver, graph, BFS, Lean or external review is authorized. At most2CPU seconds of paper/small integer diagnostics. This is the same mechanism node; a supported result would exclude only this fixed host with all old edges retained, not general(11,3).

@@ -1,0 +1,671 @@
+PAGE 1
+arXiv:2103.11898v2  [math.CO]  10 Dec 2021
+Maximising line subgraphs of diameter at most t∗
+Stijn Cambie † Wouter Cames van Batenburg ‡ R´ emi de Joannis de Verclos†
+Ross J. Kang †
+December 13, 2021
+Abstract
+We wish to bring attention to a natural but slightly hidden problem, po sed by Erd˝ os
+and Neˇ setˇ ril in the late 1980s, an edge version of the degree–diameter problem. Our main
+result is that, for any graph of maximum degree ∆ with more than 1 .5∆ t edges, its line
+graph must have diameter larger than t. In the case where the graph contains no cycle
+of length 2 t + 1, we can improve the bound on the number of edges to one that is e xact
+for t ∈ {1, 2, 3, 4, 6}. In the case ∆ = 3 and t = 3, we obtain an exact bound. Our results
+also have implications for the related problem of bounding the distanc e-t chromatic index,
+t > 2; in particular, for this we obtain an upper bound of 1 .941∆ t for graphs of large
+enough maximum degree ∆, markedly improving upon earlier bounds fo r this parameter.
+Keywords: degree–diameter problem, strong cliques, distance edge-colour ing
+1 Introduction
+Erd˝ os in [9] wrote about a problem he proposed with Neˇ setˇ ril:
+“One could perhaps try to determine the smallest integer ht(∆) so that every G
+of ht(∆) edges each vertex of which has degree ≤ ∆ contains two edges so that
+the shortest path joining these edges has length ≥ t . . . This problem seems to be
+interesting only if there is a nice expression for ht(∆).”
+Equivalently, ht(∆) − 1 is the largest number of edges inducing a graph of maximum de gree
+∆ whose line graph has diameter at most t. Alternatively, one could consider this an edge
+version of the (old, well-studied, and exceptionally diﬃcu lt) degree–diameter problem, cf. [3].
+It is easy to see that ht(∆) is at most 2∆ t always, but one might imagine it to be smaller.
+For instance, the t = 1 case is easy and h1(∆) = ∆ + 1. For t = 2, it was independently
+proposed by Erd˝ os and Neˇ setˇ ril [9] and Bermond, Bond, Paoli and Peyrat [2] that h2(∆) ≤
+5∆ 2/4 + 1, there being equality for even ∆. This was conﬁrmed by Chu ng, Gy´ arf´ as, Tuza
+and Trotter [7]. For the case t = 3, we suggest the following as a “nice expression”.
+∗ A preliminary version of this paper appeared as an extended a bstract in Proceedings of the 11th Euro-
+pean Conference on Combinatorics, Graph Theory and Applica tions (EuroComb 2021, Barcelona) , Trends in
+Mathematics 14: 331-338, 2021. https://doi.org/10.1007/978-3-030-83823-2_52
+† Department of Mathematics, . Email: stijn.cambie@hotmail.com, r.deverclos@math.ru.nl,
+ross.kang@gmail.com. Supported by a Vidi grant (639.032.614) of the Netherlands Organisation for Scientiﬁc
+Research (NWO).
+‡ Laboratoire G-SCOP (CNRS, Univ. Grenoble Alpes), Grenoble , France. Email:
+wouter.cames-van-batenburg@grenoble-inp.fr . Partially supported by ANR Project GATO ( ANR-
+16-CE40-0009-01)
+1
+
+PAGE 2
+Conjecture 1. h3(∆) ≤ ∆ 3 − ∆ 2 + ∆ + 2, with equality if ∆ is one more than a prime power.
+As to the hypothetical sharpness of this conjecture, ﬁrst co nsider the point–line incidence
+graphs of ﬁnite projective planes of prime power order q. Writing ∆ = q + 1, such graphs
+are bipartite, ∆-regular, and of girth 6; their line graphs h ave diameter 3; and they have
+∆ 3 − ∆ 2 + ∆ edges. At the expense of bipartiteness and ∆-regularity, one can improve on
+the number of edges in this construction by one by subdividing one edge, which yields the
+expression in Conjecture 1. We remark that for multigraphs i nstead of simple graphs, one
+can further increase the number of edges by
+⌊ ∆
+2
+⌋
+− 1, by deleting some arbitrary vertex v and
+replacing it with a multiedge of multiplicity
+⌊ ∆
+2
+⌋
+, whose endvertices are connected with
+⌊ ∆
+2
+⌋
+and
+⌈ ∆
+2
+⌉
+of the original ∆ neighbours of v. This last remark contrasts to what we know for
+multigraphs in the case t = 2, cf. [4, 8].
+Through a brief case analysis, we have conﬁrmed Conjecture 1 in the case ∆ = 3.
+Theorem 2. The line graph of any (multi)graph of maximum degree 3 with at least 23 edges
+has diameter greater than 3. That is, h3(3) = 23 .
+For larger ﬁxed t, although we are slightly less conﬁdent as to what a “nice exp ression”
+for ht(∆) might be, we believe that ht(∆) = (1 + o(1))∆ t holds for inﬁnitely many ∆.
+We contend that this naturally divides into two distinct cha llenges, the former of which
+appears to be more diﬃcult than the latter.
+Conjecture 3. For any ε > 0, ht(∆) ≥ (1 − ε)∆ t for inﬁnitely many ∆ .
+Conjecture 4. For t ̸= 2 and any ε > 0, ht(∆) ≤ (1 + ε)∆ t for all large enough ∆ .
+With respect to Conjecture 3, we mentioned earlier how it is k nown to hold for t ∈ {1, 2, 3}.
+For t ∈ { 4, 6}, it holds due to the point–line incidence graphs of, respect ively, a symplectic
+quadrangle with parameters (∆ − 1, ∆ − 1) and a split Cayley hexagon with parameters
+(∆ − 1, ∆ − 1) when ∆ − 1 = q is a prime power. For all other values of t the conjecture
+remains open. Conjecture 3 may be viewed as the direct edge an alogue of an old conjecture
+of Bollob´ as [3]. That conjecture asserts, for any positive integer t and any ε > 0, that there
+is a graph of maximum degree ∆ with at least (1 − ε)∆ t vertices of diameter at most t for
+inﬁnitely many ∆. The current status of Conjecture 3 is essen tially the same as for Bollob´ as’s
+conjecture: it is unknown if there is an absolute constant c > 0 such that ht(∆) ≥ c∆ t for all
+t and inﬁnitely many ∆. For large t the best constructions we are aware of are (ones derived
+from) the best constructions for Bollob´ as’s conjecture.
+Proposition 5. There is t0 such that ht(∆) ≥ 0.629t∆ t for t ≥ t0 and inﬁnitely many ∆ .
+Proof. Canale and G´ omez [6] proved the existence of graphs of maxim um degree ∆, of di-
+ameter t′, and with more than (0 .6291∆) t′
+vertices, for t′ large enough and inﬁnitely many
+∆. Consider this construction for t′ = t − 1 and each valid ∆. Now in an iterative process
+arbitrarily add edges between vertices of degree less than ∆ . Note that as long as there are
+at least ∆ + 1 such vertices, then for every one there is at leas t one other to which it is not
+adjacent. Thus by the end of this process, at most ∆ vertices h ave degree smaller than ∆,
+and so the resulting graph has at least 1
+2 ((0.6291∆) t′
+∆ − ∆ 2) edges, which is greater than
+(0.629∆) t for t suﬃciently large. Furthermore since the graph has diameter at most t − 1, its
+line graph has diameter at most t.
+2
+
+PAGE 3
+By the above argument (which was noted in [17]), the truth of B ollob´ as’s conjecture would
+imply a slightly weaker form of Conjecture 3, that is, with a l eading asymptotic factor of
+1/2. As far as we are aware, a reverse implication, i.e. from Con jecture 3 to some form of
+Bollob´ as’s conjecture is not known.
+Our main result is partial progress towards Conjecture 4 (an d thus Conjecture 1).
+Theorem 6. ht(∆) ≤ 3
+2 ∆ t + 1.
+Theorem 6 is a result/proof valid for all t ≥ 1, but as we already mentioned there are better,
+sharp determinations for t ∈ {1, 2}. We have also settled Conjecture 4 in the special case of
+graphs containing no cycle C2t+1 of length 2 t + 1 as a subgraph.
+Theorem 7. The line graph of any C2t+1-free graph of maximum degree ∆ with at least ∆ t
+edges has diameter greater than t.
+For t ∈ { 1, 2, 3, 4, 6}, this last statement is asymptotically sharp (and in its mor e precise
+formulation the result is in fact exactly sharp) due to the po int–line incidence graphs of
+generalised polygons. The cases t ∈ {3, 4, 6} are perhaps most enticing in Conjecture 4, and
+that is why we highlighted the case t = 3 ﬁrst in Conjecture 1.
+In order to discuss one consequence of our work, we can refram e the problem of estimating
+ht(∆) in stronger terms. Let us write L(G) for the line graph of G and H t for the t-th
+power of H (where we join pairs of distinct vertices at distance at most t in H). Then the
+problem of Erd˝ os and Neˇ setˇ ril framed at the beginning of the paper is equivalent to seeking
+optimal bounds on |L(G)| subject to G having maximum degree ∆ and L(G)t inducing a
+clique. Letting ω(H) denote the clique number of H, our main results are proven in terms of
+bounds on the distance-t edge-clique number ω(L(G)t) for graphs G of maximum degree ∆.
+In particular, we prove Theorem 6 by showing the following st ronger form.
+Theorem 8. For any graph G of maximum degree ∆ , it holds that ω(L(G)t) ≤ 3
+2 ∆ t.
+We should remark that D¸ ebski and´Sleszy´ nska-Nowak [17] announced a bound of roughly7
+4 ∆ t.
+Note that the bound in Theorem 8 can be improved in the cases t ∈ {1, 2}: ω(L(G)) ≤ ∆ + 1
+is trivially true, while ω(L(G)2) ≤ 4
+3 ∆ 2 is a recent result of Faron and Postle [10]. We also
+have a bound on ω(L(G)t) analogous to Theorem 7, a result stated and shown in Section 2.
+A special motivation for us is a further strengthened form of the problem. In particular,
+there has been considerable interest in χ(L(G)t) (where χ(H) denotes the chromatic number
+of H), especially for G of bounded maximum degree. For t = 1, this is the usual chromatic
+index of G; for t = 2, it is known as the strong chromatic index of G, and is associated with
+a more famous problem of Erd˝ os and Neˇ setˇ ril [9]; fort > 2, the parameter is referred to as
+the distance-t chromatic index , with the study of bounded degree graphs initiated in [13].
+We note that the output of Theorem 8 may be directly used as inp ut to a recent result [11]
+related to Reed’s conjecture [15] to bound χ(L(G)t). This yields the following.
+Corollary 9. There is some ∆ 0 such that, for any graph G of maximum degree ∆ ≥ ∆ 0, it
+holds that χ(L(G)t) < 1.941∆ t.
+Proof. By Theorem 8 and [11, Thm. 1.6], χ(L(G)t) ≤
+⌈
+0.881(∆( L(G)t) + 1) + 0.119ω(L(G)t⌉
+≤⌈
+0.881(2∆ t + 1) + 0.119 · 1.5∆ t⌉
+< 1.941∆ t provided ∆ is taken large enough.
+3
+
+PAGE 4
+For t = 1, Vizing’s theorem states that χ(L(G)) ≤ ∆+1. For t = 2, the current best bound on
+the strong chromatic index [11] is χ(L(G)2) ≤ 1.772∆ 2 for all suﬃciently large ∆. For t > 2,
+note for comparison with Corollary 9 that the local edge dens ity estimates for L(G)t proved
+in [12] combined with the most up-to-date colouring bounds f or graphs of bounded local edge
+density [11] yields only a bound of 1 .999∆ t for all large enough ∆. We must say though
+that, for the best upper bounds on χ(L(G)t), t > 2, rather than bounding ω(L(G)t) it looks
+more promising to pursue optimal bounds for the local edge de nsity of L(G)t, particularly for
+t ∈ {3, 4, 6}. We have left this to future study.
+1.1 Terminology and notation
+For a graph G = ( V, E), we denote the ith neighbourhood of a vertex v by Ni(v), that is,
+Ni(v) = {u ∈ V | d(u, v) = i}, where d(u, v) denotes the distance between u and v in G.
+Similarly, we deﬁne Ni(e) as the set of vertices at distance i from an endpoint of e.
+Let Tk,∆ denote a tree rooted at v of height k (i.e. the leafs are exactly Nk(v)) such that
+all non-leaf vertices have degree ∆. Let T 1
+k,∆ be one of the ∆ subtrees starting at v, i.e. a
+subtree rooted at v of height k such that v has degree 1, such that Nk(v) only contains leaves
+and all non-leaf vertices have degree ∆.
+2 A bound on ω (L(G)t) for C2t+1-free G
+In this section, we prove the following theorem.
+Theorem 10. Let t ≥ 2 be an integer. Let G be a C2t+1-free graph with maximum degree ∆ .
+Then ω(L(G)t) ≤ |E(Tt,∆ )|. When t ∈ {2, 3, 4, 6} equality can occur for inﬁnitely many ∆ .
+Since |E(Tt,∆ )| ≤ ∆ t, the expression is at most the bound desired for Conjecture 4 , and thus
+this implies Theorem 7. In fact, the expression matches the o rder of the point–line incidence
+graphs of generalised polygons when t ∈ {2, 3, 4, 6}, which are the examples for which equality
+holds. On the other hand, by subdividing one edge of any these constructions, one can see
+in the cases t ∈ { 2, 3, 4, 6} that the result fails if we omit the condition of C2t+1-freeness.
+We note that Theorem 10 is a generalisation of a result in [5] w hich was speciﬁc to the case
+t = 2. It is also a stronger form of a result announced in [17] for bipartite graphs. One
+might wonder about excluding other cycle lengths, particul arly even ones. Implicitly this
+was already studied in [14], in that the local sparsity estim ations there imply the following
+statement: for any t ≥ 2 and even ℓ ≥ 2t, ω(L(G)t) = o(∆ t) for any Cℓ-free graph of maximum
+degree ∆. Similarly, it would be natural to pursue a similar b ound as in Theorem 10 but for
+an excluded odd cycle length (greater than 2 t + 1), which was done for t = 2 in [5].
+The bound in Theorem 10 is a corollary of the following propos ition.
+Proposition 11. For ﬁxed ∆ and t, let G be a C2t+1-free graph with maximum degree ∆
+and H ⊆ G be a subgraph of G with maximum degree ∆ H. Let v be a vertex with degree
+dH (v) = ∆ H = j and let u1, u2, . . . , uj be its neighbours. Suppose that in L(G)t, every edge
+of H is adjacent to vui for every 1 ≤ i ≤ j. Then |E(H)| ≤ | E(Tt,∆ )|.
+Proof. For ﬁxed ∆, let H and G be graphs satisfying all conditions, such that |E(H)| is
+maximised. This can be done since |E(H)| is upper bounded by say j∆ t. With respect to the
+graph G, we write Ni = Ni(v) for 0 ≤ i ≤ t + 1. We start proving a claim that makes work
+easier afterwards.
+4
+
+PAGE 5
+Claim 12. For any 1 ≤ i ≤ t, H does not contain any edge between two vertices of Ni.
+Proof. Suppose it is not true for some i ≤ t − 1. Take an edge yz ∈ E(H) with y, z ∈ Ni.
+Construct the graph H ′ with V (H ′) = V (H) ∪ {y′, z′} and E(H ′) = E(H) \ yz ∪ {yy ′, zz′},
+where y′ and z′ are new vertices, and let G′ be the corresponding modiﬁcation of G. Then
+H ′ ⊆ G′ also satisﬁes all conditions in Proposition 11 and |E(H ′)| = |E(H)|+1, contradictory
+with the choice of H.
+Next, suppose there is an edge yz ∈ E(H) with y, z ∈ Nt. Take a shortest path from
+u1 to yz, which is wlog a path Py from u1 to y. Note that a shortest path Pz from v to z
+will intersect Py since G is C2t+1-free. Let w be the vertex in V (Py) ∩ V (Pz) that minimises
+dG(w, z) and assume w ∈ Nm, i.e. m = dG(v, w) is the distance from v to w. The condition
+w ∈ V (Py) ∩ V (Pz) ensures that dG(w, z) = dG(w, y). Furthermore note that y and z are
+interchangeable at this point, as both are at the same distan ce from u1.
+If dG(w, ui) = m − 1 for every 1 ≤ i ≤ j, we can remove yz again and add two edges yy ′
+and zz ′ to get a graph H ′ satisfying all conditions, leading to a contradiction agai n. This is
+the blue scenario illustrated in Figure 1.
+In the other case there is some 1 < s ≤ j such that dG(w, us) > m − 1. Since dG(us, yz) =
+t − 1, wlog dG(us, z) = t − 1, there is a shortest path from us to z which is disjoint from
+the previously selected shortest path Py between u1 and y. Hence together with the edges
+u1v, vus and yz, this forms a C2t+1 in G, which again is a contradiction. This is sketched as
+the red scenario in Figure 1. ♦
+y
+z
+w
+v
+u1
+u2
+us
+uj
+Figure 1: Sketch of two scenarios (red and blue) referred to i n the proof of Claim 12.
+For every 1 ≤ m ≤ t + 1, let Am be the set of all vertices x in Nm such that dG(v, x) =
+dG(ui, x) + 1 = m for at least one index 1 ≤ i ≤ j and let Rm = Nm\Am. Also let A0 = {v}.
+Let A = ∪t+1
+i=0Ai and R = ∪t+1
+i=0Ri. We observe that a vertex in Rt+1 cannot be an endvertex
+of an edge of H. Indeed, assuming the contrary, the other endvertex of such an edge would
+be at distance t − 1 from every ui, 1 ≤ i ≤ j and in particular would belong to At, leading
+to a contradiction. Also we observe that there are no edges in H between Rt and A. By
+deﬁnition of Rt, any vertex r ∈ Rt has no neighbour in Ai where i < t , nor does it have a
+neighbour in At by Claim 12. To end with, an edge with endvertices in Rt and At+1 is not
+connected to any edge vus, 1 ≤ s ≤ j, in L(G)t. As a consequence, the number of edges of H
+which contain at least one vertex of R can be upper bounded by |R1| ·
+(
+|E(T 1
+t,∆ )| − 1
+)
+, which
+equals
+(deg(v) − ∆ H)
+( 1
+∆ |E(Tt,∆ )| − 1
+)
+. (1)
+5
+
+PAGE 6
+All other edges of H are in the induced subgraph H[A]. We will now compute a bound
+on the number of those remaining edges.
+We start with deﬁning a weight function w on the vertices x in A which will turn out to
+be useful. For every x ∈ Am where 1 ≤ m ≤ t, we deﬁne w(x) to be equal to the number
+of paths (in G) of length m − 1 between x and A1. Note that by deﬁnition w(x) is at least
+equal to the number of vertices ui ∈ A1 with dG(x, ui) = m − 1 and by deﬁnition of Am this
+implies w(x) ≥ 1. An equivalent recursive deﬁnition of w is the following: we let w(ui) = 1
+for any ui ∈ A1 and for every vertex x ∈ Am where m ≥ 2, we let
+w(x) =
+∑
+y∈Am−1 : yx∈E(G)
+w(y).
+We observe by induction that
+∑
+x∈Am
+w(x) ≤ j(∆ − 1)m−1 (2)
+for every 1 ≤ m ≤ t. For m = 1 this is by deﬁnition of A1 and j. For m ≥ 2, we have by
+induction that
+∑
+x∈Am
+w(x) =
+∑
+x∈Am
+∑
+y∈Am−1 : yx∈E(G)
+w(y)
+=
+∑
+y∈Am−1
+∑
+x∈Am : yx∈E(G)
+w(y)
+≤
+∑
+y∈Am−1
+(∆ − 1)w(y)
+≤ j(∆ − 1)m−1.
+Let A
+′
+t = {a ∈ At | w(a) < j } and A∗
+t = {a ∈ At | w(a) ≥ j}. We ﬁrst count the edges
+that are incident to some ﬁxed a ∈ A
+′
+t. Note that H contains no edges between a and At+1
+since for such an edge we would need that a is connected by a path of length t − 1 to every
+ui, 1 ≤ i ≤ j and thus in particular we would have w(a) ≥ j. By Claim 12 we also know that
+a cannot be incident with an other vertex in At. So we only need to count the edges in H
+between a and At−1, and by deﬁnition of the weight function, this is bounded by w(a).
+On the other hand, for every a ∈ A∗
+t there are at most ∆ H = j ≤ w(a) edges in E(H)
+incident to a. Having proven that for every a ∈ At there are at most w(a) edges in H[A]
+incident with a, we conclude (remembering (2)) that there are at most ∑
+x∈At w(x) ≤ j(∆ −
+1)t−1 edges in E(H[A]) having a vertex in At. Also we have for every 1 ≤ m ≤ t − 1 that the
+number of edges between Am−1 and Am is bounded by j(∆ − 1)m−1. Hence
+|E(H[A])| ≤
+t∑
+m=1
+j(∆ − 1)m−1 = ∆ H
+∆ |E(Tt,∆ )|.
+Together with (1) on the number of edges that intersect R, this gives the result as deg( v) ≤ ∆
+by deﬁnition.
+An inspection of the proof yields that the extremal graphs H for Proposition 11 satisfy
+Claim 12, R = ∅ and for every x ∈ Am where 0 ≤ m ≤ t − 1, there are exactly ∆ − 1 edges
+6
+
+PAGE 7
+towards Am+1. Hence such an extremal graph H is exactly Tt,∆ where possibly some of its
+leaves are identiﬁed as one (as long as the maximum degree is s till ∆). Let us call such a
+graph a quasi-Tt,∆ .
+Next, we discuss some properties that should be satisﬁed by a ny graph that attains the
+bound of Theorem 10 (provided such a graph exists for the give n values of t and ∆!). Let
+H ⊆ G be a graph such that E(H) is a clique in L(G)t and v be a vertex of maximum degree
+in H, which maximises |E(H)| among all choices for G and H. Let NH (v) = {u1, . . . , uj}.
+Then in particular, in L(G)t every edge of H is adjacent to every edge vui, for all 1 ≤ i ≤ j.
+So by Proposition 11, for every vertex v of degree ∆ we observe locally a quasi- Tt,∆ again,
+and in particular every neighbour of such a v has degree ∆ (for t ≥ 2). So H is ∆-regular and
+in particular a connected component of G. So it is not a tree and hence has some girth. The
+girth is at least 2 t (as for every vertex we locally have a quasi- Tt,∆ ), but it cannot be 2 t + 1
+since G is C2t+1-free and it cannot be 2 t + 2 or more since E(H) is a clique in L(G)t. Also we
+observe that for every a ∈ A∗
+t the condition that w(a) ≥ j implies that it has ∆ neighbours
+in At−1 as these all have a weight function equal to 1 and so it has no ne ighbours in At+1.
+Hence H is a ∆-regular graph with girth 2 t and diameter t. In particular they need to be
+Moore graphs and consequently by [16, 1] the extremal graphs are polygons when t ≥ 3.
+3 A general bound on ω (L(G)t)
+When H ⊆ G is a graph whose edges form a clique in L(G)t, it implies in particular that all
+edges adjacent to a speciﬁc vertex v are at distance at most t − 1 from all other edges. As
+|E(Tt,∆ )| ≤ ∆ t, the following proposition implies Theorem 8.
+Proposition 13. For ﬁxed ∆ and t, let G be a graph with maximum degree ∆ and H ⊆ G
+be a subgraph of G with maximum degree ∆ H. Let v be a vertex with degree dH (v) = ∆ H = j
+and let u1, u2, . . . , uj be its neighbours. Suppose that in L(G)t, every edge of H is adjacent to
+vui for every 1 ≤ i ≤ j. Then |E(H)| ≤ 3
+2 |E(Tt,∆ )|.
+Proof. We do this analogously to the proof of Proposition 11. For ﬁxe d ∆, let H and G be
+graphs satisfying all conditions, such that |E(H)| is maximized (which is again possible since
+j∆ t is an upper bound for |E(H)|).
+It suﬃces to show that |E(H)| ≤ 3
+2 |E(Tt,∆ )|.
+By the proof of Claim 12 we know that for any 1 ≤ i ≤ t − 1, the set Ni does not induce
+any edges of H (but this is not necessarily true anymore for Nt).
+Deﬁne Am, Rm, the weight function w, A
+′
+t and A∗
+t as has been done in the proof of
+Proposition 11.
+As before, the number of edges that (are not induced by Nt and) use at least one vertex
+of R is bounded by (1). Also, we again have for every 1 ≤ m ≤ t − 1 that the number of
+edges between Am−1 and Am is bounded by j(∆ − 1)m−1. Furthermore, Rt does not induce
+any edge of H, because such an edge would be at distance larger than t from vu1. Thus the
+number of edges of H that are either disjoint from At, or join At and R\Rt, is at most
+(∆ − j)
+( 1
+∆ |E(Tt,∆ )| − 1
+)
++
+t−1∑
+m=1
+j(∆ − 1)m−1. (3)
+7
+
+PAGE 8
+We will derive that the remaining edges of H (which all intersect At) can be bounded by
+a linear combination of the weight functions w(a) of the vertices a ∈ At.
+For every a ∈ A∗
+t there are at most j ≤ w(a) edges in E(H) having a as one of its
+endvertices. So let us now focus on the edges that intersect A
+′
+t.
+We observe that there are no edges in H between any a ∈ A
+′
+t and r ∈ Rt, because there
+is some ui such that d(a, ui) ≥ t, which implies that vui and ar would be at distance larger
+than t. For the same reason H has no edges between A
+′
+t and At+1.
+Finally, we want to count the edges between At−1 and A
+′
+t, as well as those that are induced
+by A
+′
+t. We will prove that their number is bounded by 3
+2
+∑
+a∈A′
+t
+w(a).
+For that, we need the following technical claim.
+Claim 14. Let j be ﬁxed and assume j > x ≥ m > 0 and j > y ≥ n > 0 with x + y ≥ j.
+Then 3
+2 x − m
+j − m +
+3
+2 y − n
+j − n ≥ 1.
+Equality occurs if and only m = n = x = y = j
+2 .
+Proof. Multiplying both sides with the positive factor 2( j − m)(j − n), we need to prove that
+3(x + y)j − 3xn − 3ym + 2mn ≥ 2j2. For ﬁxed j, x and y the left hand side is minimal when
+m = x and n = y. This reduces to proving that 3( x + y)j − 4xy ≥ 2j2. But this is true since
+3(x + y)j − 4xy − 2j2 = 0.25j2 − (x + y − 1.5j)2 + (x − y)2
+= (2j − (x + y)) · (x + y − j) + (x − y)2
+≥ 0,
+as j ≤ x + y < 2j, i.e. |x + y − 1.5j| ≤ 0.5j. ♦
+For every a ∈ A
+′
+t, let m(a) denote the number of neighbours (in H) of a in At−1 and let q(a)
+denote the number of neighbours (in H) of a in A
+′
+t. Furthermore, we deﬁne f (a) =
+3
+2 w(a)−m(a)
+j−m(a) .
+Suppose H contains an edge e between two vertices a1, a2 ∈ A
+′
+t. Then w(a1) + w(a2) ≥ j,
+since a1a2 must be within distance t − 1 of each of vu1, vu2, . . . , vuj. Hence by Claim 14
+(applied with m = m(a1), n = m(a2), x = w(a1) and y = w(a2)), we obtain that f (a1) +
+f (a2) ≥ 1 for every edge a1a2 of H[A
+′
+t].
+From this it follows that |E(H[A
+′
+t])| ≤ ∑
+a1a2∈E(H[A′
+t]) f (a1) + f (a2). The right hand side
+can further be rewritten as ∑
+a∈A′
+t
+q(a) · f (a). Since every vertex a ∈ A
+′
+t has q(a) ≤ j − m(a)
+neighbours in A
+′
+t and has m(a) neighbours in At−1, we conclude that the number of edges of
+H that are either induced by A
+′
+t or join A
+′
+t and At−1 is at most
+∑
+a∈A′
+t
+((j − m(a)) · f (a) + m(a)) =
+∑
+a∈A′
+t
+3
+2 w(a).
+Thus the number of edges in E(H) using at least one vertex in At is bounded by
+∑
+a∈A′
+t
+3
+2 w(a) +
+∑
+a∈A∗
+t
+w(a) ≤
+∑
+x∈At
+3
+2 w(x),
+8
+
+PAGE 9
+which (see the derivation of (2)) is at most 3
+2 j(∆ − 1)t−1. Summing this and (3), we conclude
+that H has fewer than (∆ − j)
+( 1
+∆ |E(Tt,∆ )| − 1
+)
++ 3
+2
+j
+∆ |E(Tt,∆ )| ≤ 3
+2 |E(Tt,∆ )| edges.
+Note that the exact maximum in Proposition 13 is ∑ t−1
+m=1 ∆(∆ − 1)m−1 + 3
+2 ∆(∆ − 1)t−1
+and this can be attained when ∆ is even. For example when t = 2, the following example
+in Figure 2 shows that the blow-up of a C5 is not extremal anymore when only taking into
+account the weaker conditions from Proposition 13.
+Figure 2: An extremal graph for Proposition 13 for ∆ = 4 and t = 2.
+4 Determination of h3(3)
+Proof of Theorem 2. Let G = ( V, E) be a graph of maximum degree 3 such that the line
+graph L(G) of G has diameter at most 3, i.e. L(G)3 is a clique. If we can show that G must
+have at most 22 edges, then the result is proven. Suppose to th e contrary that |E| ≥ 23. The
+proof proceeds through a series of claims that establish str uctural properties of G.
+In each claim, we will estimate |E| by performing a breadth-ﬁrst search rooted at some
+speciﬁed edge e up to distance 3. To avoid repetition, let us set out the notat ion we use each
+time. We write e = uv. Let u0 and u1 be the two neighbours of u other than v (if u has
+degree 3). For i ∈ { 0, 1}, let ui0 and ui1 be the two neighbours of ui other than u (if ui has
+degree 3). For i, j ∈ {0, 1}, let uij0 and uij1 be the two neighbours of uij other than ui (if uij
+has degree 3). Similarly, deﬁne vi, vij, vijk for i, j, k ∈ {0, 1}.
+Claim 15. G contains no triangle, loop or multi-edge.
+Proof. These 3 cases are straightforwardly bounded by the breadth- ﬁrst search. If the edge
+e is in a triangle, |E| = |NL(G)3 [e]| ≤ | E(K3)| + 2 · |E(T 1
+3,3)| + |E(T 1
+2,3)| = 3 + 2 · 7 + 3 = 20.
+Analogously, if the edge e is a loop, one obtains |E| = |NL(G)3 [e]| ≤ 1 + 7 = 8. If the edge e
+has a parallel edge then |E| = |NL(G)3[e]| ≤ 2 + 2 · 7 = 16. ♦
+Claim 16. G is 3-regular, and so |E| is divisible by 3.
+Proof. If not, say, v has degree at most 2, then, say, v1, v1j, v1jk are undeﬁned, and so
+|E| = |NL(G)3 [e]| ≤ 1 + 3 · 7 = 22, a contradiction. ♦
+Claim 17. G contains no 4-cycle.
+Proof. If the edge e is in a 4-cycle, then without loss of generality suppose u1 = v00, v0 = u11,
+and so on. Already |E| = |NL(G)3 [e]| ≤ 4 + 2 · 7 + 2 · 3 = 24 and by Claim 16 we have a
+contradiction if we can show that |E| is 1 lower. So we may assume that u0, u1, v0, v1, u00,
+u01, u10, v01, v10, v11 are all distinct vertices and that the vertices u00k, u01k, u10k, v01k, v10k,
+v11k (possibly not all distinct) are all at distance exactly 3 fro m e.
+9
+
+PAGE 10
+Consider the edges u00u000, u00u001, u01u010 and u01u011. They are within distance 3
+(in L(G)) from vv0, so u000, u001, u010 and u011 all need to be adjacent to v01, leading to a
+contradiction as deg v01 ≤ 3. ♦
+Claim 18. G contains no 5-cycle.
+Proof. If the edge e is in a 5-cycle, then without loss of generality suppose u11 = v00, u111 =
+v000 and so on. Already |E| = |NL(G)3 [e]| ≤ 5 + 2 · 7 + 2 · 3 + 1 = 26. Since 26 ≥ |E| ≥ 23 and
+G is 3-regular by Claim 16, it follows that |E| = 24 and |V | = 2|E|
+3 = 16.
+Note ﬁrst that N2(e) = {u00, u01, u10, u11, v01, v10, v11} are all distinct vertices or else |E|
+is already at most 23. Thus |N3(e)| = 16 − 13 = 3 and so (again using 3-regularity, and also
+the fact that N3(e) must be an independent set) there are exactly 2 edges in the s ubgraph
+induced by N2(e).
+We divide our considerations into two cases. First, we assum e u11 has a neighbour in
+N2(e). By Claim 15, without loss of generality we can assume that thi s neighbour is u00
+and thus u111 = v000 = u00, u11 = u001 and so on. Since N2(e) induces two edges, we can
+assume that v100, v110 ∈ N3(e). Note that the edge u00u11 is within distance 3 (in L(G)) of
+both v10v100 and v11v110. It cannot be that u000 is equal to v10 or v11 or else one of the edges
+v10v100 and v11v110 remains too far from u00u11 (taking Claim 17 into account). At this point,
+we note that v10 and v11 both need to be adjacent to u000, creating a C4 and hence leading
+to a contradiction.
+Second, since we are not in the ﬁrst case, u111 = v000 must be at distance exactly 3 from
+e. The vertex u111 must have all of its 3 neighbours in N2(e), one of which is u11. Keeping
+in mind that there is no four-cycle, we can therefore assume w ithout loss of generality that
+u111 = u000 = v111.
+Let us consider as a subcase the possibility that u01 and v11 are adjacent (the case v10
+and u00 being adjacent, is done in exactly the same way), say, u010 = v11. Note that the
+edge u01v11 is within distance 3 (in L(G)) of both u1u10 and v0v01. Since v11 has all its
+neighbours already ﬁxed (and keeping in mind that N2(e) induces only one edge other than
+u01v11), it can only be that u01, u10 and v01 have a common neighbour in N3(e). So without
+loss of generality, u011 = u100 = v010. But now, with only the free placement of u001, the only
+possibility to have u00u000 within distance 3 (in L(G)) of both edges u10u100 and v01v010, is
+if u001 is equal to u10 or v01. But then we have already determined the two edges induced by
+N2(e), none of which is incident to v10, so that both v100 and v101 must be in N3(e), leading
+to the contradiction that |N3(e)| = | {u100, u111, v100, v101} | ≥ 4.
+We have thus shown that u01v11 and v10u00 are not present as an edge.
+Let i ∈ { 0, 1}. The vertex u01 is not adjacent to any vertex in {u00, u1, v0, v11} and so
+u01i has to be adjacent to one of them to ensure that u11u111 is within distance 3 (in L(G))
+of u01u01i
+This implies u01i has to be equal to v110, u10, v01 or v10 (taking Claims 15 and 17 into
+account). Incidentally, u01i can also not be equal to v10, because in order for u01v10 to be
+within distance 3 of u01u01i, we would need an edge between {u01, v10} and {u00, v11}, which
+would either create a triangle or an edge that we already show ed to be not present.
+So u01i has to be equal to v110, u10 or v01, and symmetrically v10i equals u001, u10 or v01,
+for all i ∈ { 0, 1}. As there are only two edges in the graph induced by N2(e), and both u01
+and v10 are an endvertex of one of them, we may conclude without loss o f generality that
+u010 = v110 and v101 = u001. Note that the edge v11v110 is within distance 3 (in L(G)) of uu1,
+10
+
+PAGE 11
+and so u10v110 must be an edge. But then the distance between u01v110 or u10v110 and vv0 is
+at least 4, a contradiction. ♦
+By the above claims, it only remains to consider G being 3-regular and of girth at least
+6. Let e ∈ E be arbitrary. Then we have |E| = |NL(G)3 [e]| ≤ 29 and by Claim 16 we have a
+contradiction if we can show that |E| is 6 lower. Since |E| ≥ 23 and G is 3-regular, we know
+|V | =
+⌈
+2|E|
+3
+⌉
+≥ 16, hence there are at least 16 − (2 + 4 + 8) = 2 vertices at distance 3 from e.
+Let x and y be vertices at distance 3 from e. We may assume without loss of generality that
+x is adjacent to u00, u10, and v00. Since the edge vv1 is within distance 3 (in L(G)) of both
+edges u00x and u10x, it follows (without loss of generality) that u00v10 and u10v11 are edges.
+Since y must satisfy similar constraints as x, and it cannot be adjacent to u00 nor to u10,
+there will be at least three edges between vertices in N2(e) and so similarly as before, we know
+that |V | =
+⌊
+2|E|
+3
+⌋
+≤
+⌊
+2·(29−3)
+3
+⌋
+= 17. Because every 3-regular graph has an even number of
+vertices, it follows that |V | = 16, so that in fact x and y are the only vertices in N3(e). From
+this and 3-regularity, we conclude that the subgraph induce d by N2(e) must have exactly 5
+edges. Since every edge between 2 vertices in N2(e) will be between some uij and a vkℓ and
+G is 3-regular, we know that y is adjacent to exactly one of u01 and u11, wlog u11. Similarly
+the two neighbours of y of the form vij are not a neighbour of x and so N (y) and N (x) are
+disjoint. In particular y cannot be adjacent to v00 and so it has to be adjacent to v01. The
+last neighbour of y is either v10 or v11. If it is v11, then to ensure that uu0 is within distance
+3 of both yv01 and yv11, we would need u01 to be a neighbour of both v10 and v11, creating a
+four-cycle; contradiction. Thus the neighbours of y must be u11, v01 and v10.
+So to ensure this, u01v01 is an edge as well.
+We have now determined the whole graph, apart from two edges b etween {u01, u11} and
+{v00, v11}. However, the edge v00u11 would create the ﬁve-cycle xu10u1u11v00, while the edge
+v00u01 would yield the four-cycle u01v00v0v01. So in both cases, we get a contradiction, from
+which we conclude.
+A brief inspection of the proof in Claim 16 yields that the ext remal graph has exactly one
+vertex of degree 2 and 14 vertices of degree 3. Let the vertex o f degree 2 be w. Let its two
+neighbours be u and v and then ui, vi, uij, vij for i, j ∈ { 0, 1} are deﬁned as before. Noting
+that every uij has two neighbours of the form v0k and v1ℓ where k, ℓ ∈ {0, 1}, one can check
+that there is a unique extremal example with respect to Theor em 2, namely, the point–line
+incidence graph of the Fano plane, in which exactly one edge i s subdivided.
+Acknowledgement
+We are grateful to the anonymous referees for their helpful c omments and suggestions.
+References
+[1] E. Bannai and T. Ito. On ﬁnite Moore graphs. J. Fac. Sci. Univ. Tokyo Sect. IA Math. ,
+20:191–208, 1973.
+[2] J.-C. Bermond, J. Bond, M. Paoli, and C. Peyrat. Graphs an d interconnection networks:
+diameter and vulnerability. In Surveys in combinatorics (Southampton, 1983) , volume 82
+11
+
+PAGE 12
+of London Math. Soc. Lecture Note Ser. , pages 1–30. Cambridge Univ. Press, Cambridge,
+1983.
+[3] B. Bollob´ as. Extremal graph theory , volume 11 of London Mathematical Society Mono-
+graphs. Academic Press, Inc. [Harcourt Brace Jovanovich, Publish ers], London-New
+York, 1978.
+[4] W. Cames van Batenburg and R. J. Kang. Squared chromatic n umber without claws or
+large cliques. Canad. Math. Bull. , 62(1):23–35, 2019.
+[5] W. Cames van Batenburg, R. J. Kang, and F. Pirot. Strong cl iques and forbidden cycles.
+Indag. Math. (N.S.) , 31(1):64–82, 2020.
+[6] E. A. Canale and J. G´ omez. Asymptotically large (∆ , D)-graphs. Discrete Appl. Math. ,
+152(1-3):89–108, 2005.
+[7] F. R. K. Chung, A. Gy´ arf´ as, Z. Tuza, and W. T. Trotter. Th e maximum number of
+edges in 2 K2-free graphs of bounded degree. Discrete Math., 81(2):129–135, 1990.
+[8] R. de Joannis de Verclos, R. J. Kang, and L. Pastor. Colour ing squares of claw-free
+graphs. Canad. J. Math. , 71(1):113–129, 2019.
+[9] P. Erd˝ os. Problems and results in combinatorial analys is and graph theory. In Proceed-
+ings of the First Japan Conference on Graph Theory and Applicat ions (Hakone, 1986) ,
+volume 72, pages 81–92, 1988.
+[10] M. Faron and L. Postle. On the clique number of the square of a line graph and its
+relation to maximum degree of the line graph. J. Graph Theory , 92(3):261–274, 2019.
+[11] E. Hurley, R. de Joannis de Verclos, and R. J. Kang. An imp roved procedure for colouring
+graphs of bounded local density. In Proceedings of the 2021 ACM-SIAM Symposium on
+Discrete Algorithms (SODA) , pages 135–148, 2021. https://arxiv.org/abs/2007.07874 .
+[12] T. Kaiser and R. J. Kang. The distance- t chromatic index of graphs. Combin. Probab.
+Comput., 23(1):90–101, 2014.
+[13] R. J. Kang and P. Manggala. Distance edge-colourings an d matchings. Discrete Appl.
+Math., 160(16-17):2435–2439, 2012.
+[14] R. J. Kang and F. Pirot. Distance colouring without one c ycle length. Combin. Probab.
+Comput., 27(5):794–807, 2018.
+[15] B. Reed. ω, ∆, and χ. J. Graph Theory , 27(4):177–212, 1998.
+[16] R. Singleton. On minimal graphs of maximum even girth. J. Combinatorial Theory ,
+1:306–332, 1966.
+[17] M. ´Sleszy´ nska Nowak and M. D¸ ebski.t-strong cliques and the degree-diameter problem.
+Acta Math. Univ. Comenian. (N.S.) , 88(3):1057–1061, 2019.
+12

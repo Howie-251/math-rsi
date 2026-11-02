@@ -1,0 +1,8 @@
+import DegreeDiameter.N62TriangleParity
+#print DegreeDiameter.triangleMateSet
+#check @DegreeDiameter.n62_triangle_mate_set_properties
+#check @DegreeDiameter.n62_triangle_mate_set_ne
+#check @DegreeDiameter.n62_triangle_count_even
+#print axioms DegreeDiameter.n62_triangle_mate_set_properties
+#print axioms DegreeDiameter.n62_triangle_mate_set_ne
+#print axioms DegreeDiameter.n62_triangle_count_even

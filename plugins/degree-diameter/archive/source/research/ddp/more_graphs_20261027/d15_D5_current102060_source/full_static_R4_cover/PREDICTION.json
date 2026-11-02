@@ -1,0 +1,27 @@
+{
+  "timestamp_UTC": "2026-10-28 04:00:23 UTC",
+  "status": "FROZEN_BEFORE_FIRST_COMPLETE_STATIC_MODEL",
+  "target_Delta": 15,
+  "target_D": 5,
+  "publicL": 102060,
+  "hypothetical_new_order": 102061,
+  "source": "Actualcurrent102060/765045source,810freeverticesallcurrentdegree14; parentcachemonotone_R4_cover/",
+  "question": "Can<=15freepinscoverall102060oldtargets usingthecompleteactualR4matrix?",
+  "intuition": "Use thesame retained-edge extensionlemma as the103successes in anewparameter. Everytargethas70..309supportandall810unioncoversall; entireoldcurrentgraphcoverageisessential,notjustfewselectedtargets.",
+  "prior_scope": "Oldshared10CPUconstraint-generation batchstoppedat751rows,intermediate15pinsetmissed3510,thenUNKNOWN. No previouscomplete102060rowstaticmodel exists. This changesactualglobalconstraintset ratherthan extendinganoldsubmodeltimer.",
+  "source_data": "Reuseall810R4balls,target_rows.u64le.bin,eligiblelabels andsourceCSR. Targetsupportrows102060 andballrows810 arealreadyknownall distinct,so do notrepeatdedup oroldsourceBFS.",
+  "falsifiable_prediction": "One exactcomplete810-variable,102060-coverrows model withcardinality<=15 mayyielda fullcover,newrecord inafourthparameter. FeasibleLP orpartialcover isnotaconstruction.",
+  "encoding": "Binaryfreepinselection; eachactualtargetrow sumsupport>=1, total<=15. Buildtheentirematrix sparsely fromexistingbits; no row sampling/CGloop.",
+  "budget": {
+    "aggregate_CPU_seconds": 130,
+    "workers": 1,
+    "preparation_CPU_seconds": 25,
+    "full_LP_calls_max": 1,
+    "full_MIP_calls_max": 1,
+    "combined_solver_seconds": 95,
+    "memory_use_reasonable": "Use packed/sparsearrays,avoidPythonobjectpernonzero;onewholematrixmayusefewhundredMB.",
+    "seeds_or_reencoding_loops": 0
+  },
+  "verification": "Anyreturnedincumbent needsdistinctintegerpins,actualfree degree andexactORofsavedcompleteR4ballrows over all102060. Onlythen generate102061 fullgraph. Newparameterfirsthit receivesoneindependentedge-backednewrootcheck andfocusedGeminireview; oldD5paths inherited.",
+  "stop": "ReturncompletecandidateorfactualUNKNOWN/rawsolverinfeasiblewithoutmathematicalexclusion. Preserveallconstraints/cache; no infinitebudgetrenewal."
+}

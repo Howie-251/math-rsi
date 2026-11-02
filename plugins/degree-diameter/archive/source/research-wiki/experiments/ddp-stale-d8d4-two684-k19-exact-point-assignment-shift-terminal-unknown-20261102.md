@@ -1,0 +1,298 @@
+---
+type: experiment
+node_id: exp:ddp-stale-d8d4-two684-k19-exact-point-assignment-shift-terminal-unknown-20261102
+title: "8D4两684的K19实际点模型：60/20/5三SAT窗口均UNKNOWN，assignment与紧行诊断未成图"
+idea_id: "idea:ddp-open-parameter-construction-20261026"
+verdict: partial
+confidence: high
+date: "2026-11-02"
+hardware: ""
+duration: ""
+provenance: "research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ROOT_DISPOSITION.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_EXACTNESS_PAPER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_SCOPE_ATTACK.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ASSIGNMENT_SHIFT_DECOMPOSITION_PAPER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/LOCAL_TIGHT_ROW_PAPER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/TIGHT_ROW_PROPAGATION_PAPER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/PREPARATION_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/verify_candidate.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/README.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/CACHE_CONVERSION.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/ORBIT_MAPPING.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/A_EXACT_LENGTH0_3.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BASE_COVER_MASKS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/MODEL_SCHEMA.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BUILD_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/DRIVER_HANDLE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NATIVE_EXECUTION.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/SAT_STDOUT.log; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_assignment_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MATRIX.npz; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/M_POPCOUNTS.u8; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MODEL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_WARM.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RAW.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_INTEGER_CHECK.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/build_shift_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SHIFT_MODEL_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FIXED_SIGMA_SHIFT.cnf; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/positive_candidate.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NATIVE_EXECUTION.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SAT_STDOUT.log; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/DERIVED_BINARY_MODEL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/STRENGTHENED_SHIFT.cnf; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/HANDLE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/SAT_STDOUT.log; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/TERMINAL.json"
+added: 2026-11-02T00:41:40Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 8D4两684的K19实际点模型：60/20/5三SAT窗口均UNKNOWN，assignment与紧行诊断未成图
+
+**verdict:** `partial`  ·  **confidence:** `high`  ·  tests `idea:ddp-open-parameter-construction-20261026`
+
+## Metrics
+**对象层级：** known_source_or_recovery
+
+**目标与阶数：** (8,4)；L=1100；条件性n=1368（未据此计纪录）
+
+**距目标的证据：** No1368candidategraph,sourceparse,newgraphBFS,freshsuiteorformalgraphwitness. FullK19model60sUNKNOWN;onesigmafixed20sUNKNOWN;entailedbinarysamessigma5sUNKNOWN. NeitherK19norselectedsigmaexcluded; noSATorUNSATreturned.；完整actualpoint CNF24624choices/24624跨点义务，73800vars/172800clauses/29499552coverlits/166236739B，空point0；唯一60sCaDiCaL cUNKNOWN。随后按真实全模型长OR/assignment-shift耦合反馈分解：5sHiGHS TimeLimit返回唯一整数sigma，1296容量全核min19仅必要门，非最优/graph；冻结后1332vars/26586clauses，唯一20s仍cUNKNOWN。再预测tight28→28自身不能铺满，被DFS5的实际tile反驳，不能据该行称global不相容。因该行sum19，补2603条entailed non-overlapbinary得29189clauses，同sigma/解域唯一5s仍cUNKNOWN。三SAT60/20/5与一次assignmentMIP5全部记录，总96.356641619/100CPU不reset；0新图/参数/Lean，K19及固定sigma均仍UNKNOWN。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "new_graphs": 0,
+  "new_parameter_pairs": 0,
+  "new_Lean_instances": 0,
+  "new_independent_method_claims": 0,
+  "single_record_all_stages": true,
+  "old_H342_node": "ddp-stale-d8d4-two684-all-hleft-equivariant-matchings1368-no-20261101",
+  "old_H_domain_parameters": 233928,
+  "old_H_domain_verdict": "STRICT_NO_INHERITED_NOT_RERUN",
+  "K19_strictly_larger_than_H": true,
+  "K19_not_arbitrary684pointmatching": true,
+  "orbit_domain": {
+    "orbits": 36,
+    "orbit_size": 19,
+    "sigma": "S36",
+    "shifts": "Z19^36",
+    "selectedchoices": 36,
+    "physicalmatching_edges_ifpositive": 684,
+    "t0gauge": true,
+    "sigma0fixed": false,
+    "sigma_involution_required": false
+  },
+  "full_model": {
+    "status": "COMPLETE_ACTUAL_POINT_CNF",
+    "original_variables": 24624,
+    "aux_variables": 49176,
+    "total_variables": 73800,
+    "clauses": 172800,
+    "point_cover_clauses": 24624,
+    "ALO_clauses": 72,
+    "Sinz_AMO_clauses": 147456,
+    "gauge_units": 648,
+    "cover_literals": 29499552,
+    "all_literals": 29844360,
+    "CNF_bytes": 166236739,
+    "empty_point_clauses": 0,
+    "point_clause_length_min": 1190,
+    "point_clause_length_max": 1202,
+    "base_masks": 1679616,
+    "nonzero_base_masks": 500256,
+    "all24624_normalized_targets": true,
+    "old_DP_source_BFS_runs": 0,
+    "actual_build_CPU": 0.456378
+  },
+  "full60_window": {
+    "raw": "c UNKNOWN",
+    "exit": 0,
+    "s_status_lines": [],
+    "stats": {
+      "conflicts": 132263,
+      "decisions": 338929,
+      "propagations": 81741996,
+      "restarts": 492
+    },
+    "native_actual_CPU": 60.041635,
+    "cumulative_stage_CPU": 63.697950855
+  },
+  "assignment_projection": {
+    "binary": 1296,
+    "integer_z": 1,
+    "equalities": 72,
+    "capacity_rows": 1296,
+    "matrix_nnz": 504144,
+    "configured_HiGHS_seconds": 5,
+    "actual_HiGHS_CPU": 5.149360753,
+    "raw_status": "TimeLimit",
+    "nodes": 0,
+    "identity_warm_min": 18,
+    "returned_sigma_min": 19,
+    "sigma": [
+      27,
+      10,
+      13,
+      19,
+      2,
+      1,
+      15,
+      35,
+      34,
+      0,
+      14,
+      12,
+      7,
+      16,
+      9,
+      4,
+      17,
+      5,
+      22,
+      24,
+      18,
+      25,
+      29,
+      30,
+      3,
+      21,
+      20,
+      31,
+      28,
+      23,
+      32,
+      11,
+      6,
+      8,
+      33,
+      26
+    ],
+    "all1296_integer_caps_checked": true,
+    "rawdual": -668,
+    "not_optimality_or_graph": true,
+    "unique_sigma_frozen": true
+  },
+  "fixed20_model": {
+    "status": "COMPLETE_FIXED_SIGMA_EXACT_SHIFT_POINT_CNF",
+    "original_shift_variables": 684,
+    "aux_variables": 648,
+    "total_variables": 1332,
+    "clauses": 26586,
+    "point_clauses": 24624,
+    "ALO": 36,
+    "AMO": 1908,
+    "gauge_units": 18,
+    "point_literals": 819432,
+    "all_literals": 823950,
+    "point_length_min": 19,
+    "point_length_max": 50,
+    "empty_point_clauses": 0,
+    "CNF_bytes": 3223120,
+    "actual_build_CPU": 0.401819087,
+    "sigma": [
+      27,
+      10,
+      13,
+      19,
+      2,
+      1,
+      15,
+      35,
+      34,
+      0,
+      14,
+      12,
+      7,
+      16,
+      9,
+      4,
+      17,
+      5,
+      22,
+      24,
+      18,
+      25,
+      29,
+      30,
+      3,
+      21,
+      20,
+      31,
+      28,
+      23,
+      32,
+      11,
+      6,
+      8,
+      33,
+      26
+    ],
+    "all_targets_preserved": true,
+    "old_DP_source_BFS_runs": 0
+  },
+  "fixed20_window": {
+    "raw": "c UNKNOWN",
+    "exit": 0,
+    "s_status_lines": [],
+    "stats": {
+      "conflicts": 733139,
+      "decisions": 1107747,
+      "propagations": 28991118,
+      "restarts": 15090
+    },
+    "native_actual_CPU": 19.961063,
+    "cumulative_stage_CPU": 90.922314663
+  },
+  "local_tight_row": {
+    "root_orbit": 28,
+    "target_orbit": 28,
+    "sum_packet_sizes": 19,
+    "one_row_only": true,
+    "nonempty_packets": 9,
+    "DFS_nodes": 5,
+    "actual_verdict": "INDIVIDUALLY_TILEABLE",
+    "prediction_intrinsic_row_NO": "REFUTED",
+    "does_not_establish_global_compatibility_or_incompatibility": true,
+    "cumulative_stage_CPU": 91.137800205
+  },
+  "entailed_propagation": {
+    "same_sigma": true,
+    "same_variables": 1332,
+    "original_clauses": 26586,
+    "added_entailed_binary": 2603,
+    "total_clauses": 29189,
+    "solution_domain_unchanged": true,
+    "configured_SAT_seconds": 5,
+    "raw": "c UNKNOWN",
+    "exit": 0,
+    "stats": {
+      "conflicts": 170692,
+      "decisions": 211763,
+      "propagations": 9632143,
+      "restarts": 1739
+    },
+    "native_actual_CPU": 5.002062
+  },
+  "SAT_calls_total": 3,
+  "SAT_configured_seconds": [
+    60,
+    20,
+    5
+  ],
+  "MIP_calls_total": 1,
+  "MIP_configured_seconds": [
+    5
+  ],
+  "wholecase_CPU": 96.356641619,
+  "case_CPU_cap": 100,
+  "no_timer_reset": true,
+  "all_processes_terminal": true,
+  "full_K19_verdict": "UNKNOWN_NOT_NO",
+  "frozen_sigma_verdict": "UNKNOWN_NOT_UNSAT",
+  "no_second_sigma_or_seed": true,
+  "source_parse_count": 0,
+  "old_endpoint_DP_repeated": 0,
+  "sourceD4validation_BFS": 0,
+  "old_H233928_repeated": 0,
+  "candidate_graphs": 0,
+  "candidate_BFS": 0,
+  "fresh_suite_runs": 0,
+  "fresh_verifier_status": "DRAFT_AST_ONLY_NOT_EXECUTED",
+  "field_Lean_ARIS_runs": 0,
+  "negative_Lean_required": false,
+  "proof_logged_or_checked": false,
+  "same_Goal": "ACTIVE",
+  "old_N8_n61": "PAUSED"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ROOT_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/READ_GATE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_EXACTNESS_PAPER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_EXACTNESS_PAPER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_SCOPE_ATTACK.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/MODEL_SCOPE_ATTACK.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ASSIGNMENT_SHIFT_DECOMPOSITION_PAPER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/ASSIGNMENT_SHIFT_DECOMPOSITION_PAPER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/LOCAL_TIGHT_ROW_PAPER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/LOCAL_TIGHT_ROW_PAPER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/TIGHT_ROW_PROPAGATION_PAPER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/TIGHT_ROW_PROPAGATION_PAPER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/PREPARATION_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/PREPARATION_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/verify_candidate.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/verify_candidate.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/README.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/independent_acceptance/README.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/CACHE_CONVERSION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/CACHE_CONVERSION.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/ORBIT_MAPPING.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/ORBIT_MAPPING.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/A_EXACT_LENGTH0_3.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/A_EXACT_LENGTH0_3.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BASE_COVER_MASKS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BASE_COVER_MASKS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/MODEL_SCHEMA.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/MODEL_SCHEMA.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BUILD_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/BUILD_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/DRIVER_HANDLE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/DRIVER_HANDLE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NATIVE_EXECUTION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NATIVE_EXECUTION.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/SAT_STDOUT.log](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/SAT_STDOUT.log)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_assignment_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_assignment_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MATRIX.npz](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MATRIX.npz)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/M_POPCOUNTS.u8](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/M_POPCOUNTS.u8)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MODEL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_MODEL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_WARM.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_WARM.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RAW.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RAW.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_INTEGER_CHECK.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_INTEGER_CHECK.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/ASSIGNMENT_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FROZEN_SIGMA.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/build_shift_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/build_shift_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SHIFT_MODEL_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SHIFT_MODEL_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FIXED_SIGMA_SHIFT.cnf](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/FIXED_SIGMA_SHIFT.cnf)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/positive_candidate.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/positive_candidate.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NATIVE_EXECUTION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NATIVE_EXECUTION.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SAT_STDOUT.log](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/SAT_STDOUT.log)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/TIGHT_ROW_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/DERIVED_BINARY_MODEL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/DERIVED_BINARY_MODEL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/STRENGTHENED_SHIFT.cnf](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/STRENGTHENED_SHIFT.cnf)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/HANDLE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/HANDLE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/SAT_STDOUT.log](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/SAT_STDOUT.log)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/assignment_then_shift/tight_row_propagation/TERMINAL.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** ActualfixedMichel684simple7regularD4two-orbitH342source,twofulloldedgecopies,oneK19-equivariantmatching. K19orbitsr=18tau+2b+epsilon,nu(r,k)=342tau+9(epsilon+2k)+b; matching(r,k)->(sigma(r),k+t_r),sigmaarbitraryS36/t_rindependentZ19;reverseinverse,nosigmainvolution. GlobaltargetKshiftgiveslegalt0=0gaugewithoutfixingsigma0. OldH342233928domainstrictNOisinheritedstrictsubset,notK19NO. OnefullpointCNF;onemaxmincapacityassignment;onefrozensusigmaexactshiftCNF;onetightrowdiagnostic/entailedbinaryfollowup;oneproblemrecord,same100CPUbudget,noσ2.
+
+**正向保证：** Oldexact-length0..3Hendpointcacheistranslatedbylefth_r*uandactuallabeldecompositionto36K19orbits;10656storedendpointtranslations/5184masks,nooldDP/sourceD4recheck.；B(i,j;r,s)=union_(a+b<=3)(A_a(i,r)+A_b(s,j));selectedchoicecoversrot19(B,t). All24624pointORs,72rowcolEXOandglobaltargetKshiftgaugeareexactunderinheritedsourceD4;no sigma0orinvolutionassumption.；Onlyoneactualsigmafrozenafterintegerrowcolandall1296capacitychecks;fixedmodelretainsall24624targets. Min19iscapacitynecessary,notpointcoverageoroptimalityevidence.；Oneuniquetightrow28to28sum19canindividuallytile(DFS5). Its2603pairwiseoverlapbinariesareentailedbyfull19pointcoverage,sum19andonechoiceperrow;nochangeinsigma/solutiondomain.；NativeSATcallsarefullydisclosedas60/20/5fordifferentmodelstages,samebudget;allreturnedcUNKNOWN/exit0/nosstatus,notSATorUNSAT. No successful graphornegativeLeantheoremclaimed.
+
+**仍未完成：** FullK19matchingdomainremainsUNKNOWN,asdoestheuniquechosensigma. OldH342strictNOcannotbeextended. Row28to28tiledoesnotsettleother1295rowsorjointshiftcompatibility. ExactCNFhasnopointmodelwitnessorcheckedUNSATproof. General8D4/othermatching/hostrulesremainunexcluded. Independentfreshverifieronlydraft/ASTsyntaxprepared,neverdata-run. GoalACTIVE/oldN8n61PAUSED.
+
+**启发与重启依据：** STOPthisK19case:noσ2/seed/newtranslation/MIPorSATcontinuation. Fullactualpointmodelwasnotreplacedbywalkcapacity;projectionusedonlytoselectonefeasibleorbitassignment,thenreturnedtoall24624pointclauses. Intrinsic-rowNOpredictionwasrefutedbyatilingandchangedthenextmodeltoexplicitentailedpropagation,withoutclaimingglobalfeasibilityorconflict. Maxmin18to19isnotagraphresult;threeUNKNOWNsearchwindowsarealgorithmfeedback,notfamilyNO.
+
+**单独的重启条件：** Onlyanewauthorizedboundedquestionwithchangedstructure/hostormeaningfulnewalgorithmicreason;allcurrentfull/fixed/propagationtimersstopped. Noautomaticunused-budgetcontinuationorsigma2. Rootnewsource672isaseparateproblem,notthisnodeornewK19result.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

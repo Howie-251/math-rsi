@@ -1,0 +1,123 @@
+{
+  "status": "PRIMARY_CLAIMS_AND_CONFIRMED_CITATION_LINKS_READ",
+  "checked_UTC": "2026-11-01T17:30:29.874860+00:00",
+  "papers": [
+    {
+      "id": "delorme_ejc1985",
+      "title": "Grands Graphes de Degré et Diamètre Donnés",
+      "year": 1985,
+      "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "read_scope": "Full cached primary; intro/sections7,8/Table2 freshly read here",
+      "largest_claim": "Historical known-best tables, not per-cap24/25/26 record claims",
+      "claim_locator": "Introduction p291; Table2 p301",
+      "short_original_quote": "meilleures valeurs numeriques connues (fin 1983)",
+      "target_relevance": "General replication supports the7514 inference; Table2 covers degrees3..15, not24..26. The paper does not print our comparison numbers6144/7225/7514 as these three record rows."
+    },
+    {
+      "id": "delorme_jgt1985",
+      "title": "Large bipartite graphs with given degree and diameter",
+      "year": 1985,
+      "url": "https://doi.org/10.1002/jgt.3190090304",
+      "read_scope": "Publisher metadata and explicit later primary restatements; original fulltext remains unavailable",
+      "largest_claim": "UNKNOWN_ORIGINAL_FULLTEXT_NOT_READ",
+      "target_relevance": "Original opposite-GQ construction credited by later authors; exact augmentation and record wording cannot be inferred from the title or later formula alone."
+    },
+    {
+      "id": "loz_pineda2010",
+      "title": "New benchmarks for large-scale networks with given maximum degree and diameter",
+      "year": 2010,
+      "url": "https://guillermo.com.au/pdfs/NewLargeGraphs(C).pdf",
+      "read_scope": "Primary abstract/introduction/section3.2/Table2 and bibliography read",
+      "largest_claim": "Yes, authors explicitly report largest known at publication for17<=Delta<=20 and2<=D<=10",
+      "claim_locator": "Abstract; section3; Table2 PDF page19",
+      "short_original_quote": "new largest known networks",
+      "explicit_D3_rows": {
+        "17": 1610,
+        "18": 1620,
+        "19": 1638,
+        "20": 1958
+      },
+      "target_relevance": "A dated17..20 table; does not claim current20=1958 or include24..26."
+    },
+    {
+      "id": "isham_2026v2",
+      "title": "Kronecker Products, Polarity Quotients and Large Graph Constructions",
+      "version_date": "2026-10-22",
+      "url": "https://arxiv.org/html/2608.27253v2",
+      "read_scope": "Primary sections3.4.2,7.7,7.8.1,7.8.2/Table3 and bibliography",
+      "largest_claim": "Explicit largest-known claim is degree18/D3/order2340 as ofOctober2026;19/20 described as nearly as large as the largestknown",
+      "claim_locator": "section7.8.1 for18; section7.7 for19/20; Table3 is polarity-designspace up to20",
+      "explicit_D3_rows": {
+        "18": 2340,
+        "19": 2470,
+        "20": 2600
+      },
+      "target_relevance": "Fresh explicit opposite-GQ formula in3.4.2 yields our6144/7225 parameter substitutions, but Table3 ends20; it does not explicitly declare6144/7225/7514 to be global record rows."
+    }
+  ],
+  "confirmed_citation_links": [
+    {
+      "citing": "loz_pineda2010",
+      "cited": "delorme_ejc1985",
+      "reference": "[16]",
+      "locator": "Bibliography PDF page25; polarity/duplication sections",
+      "meaning": "Uses earlier geometry/polarity constructions; not a new24..26 numeric result"
+    },
+    {
+      "citing": "loz_pineda2010",
+      "cited": "delorme_jgt1985",
+      "reference": "[17]",
+      "locator": "Bibliography PDF page25; opposite-product section2.4",
+      "meaning": "Credits opposite-product ingredients. No current24..26 filled-order value established."
+    },
+    {
+      "citing": "isham_2026v2",
+      "cited": "delorme_ejc1985",
+      "reference": "[19]",
+      "locator": "Bibliography and section7.7",
+      "meaning": "Explicit reuse of replication and polarity ingredients; confirms lineage, not the novelty of our specificfill."
+    },
+    {
+      "citing": "isham_2026v2",
+      "cited": "delorme_jgt1985",
+      "reference": "[20]",
+      "locator": "Bibliography and section3.4.2",
+      "meaning": "Explicit opposite-GQ order/degree formula;24/25 numerical bounds here are parameter substitutions."
+    },
+    {
+      "citing": "isham_2026v2",
+      "cited": "loz_pineda2010",
+      "reference": "[35]",
+      "locator": "Bibliography, sections4.2/7.3",
+      "meaning": "Credits source diameter theorem2.7 and extends its setting; no24..26 competing order stated."
+    }
+  ],
+  "citation_counts_reported": false,
+  "forward_search": {
+    "queries": [
+      "\"Kronecker Products, Polarity Quotients and Large Graph Constructions\" -site:researchgate.net",
+      "\"Large bipartite graphs with given degree and diameter\" \"diameter 3\""
+    ],
+    "result": "Results located source papers, mirrors and surveys; no later citing research paper beyond the explicitly read examples was confirmed. Not a claim of zero citations."
+  },
+  "target24_26_comparison": {
+    "local": [
+      6160,
+      7242,
+      7532
+    ],
+    "best_verified_public_method_guarantees": [
+      6144,
+      7225,
+      7514
+    ],
+    "paper_explicitly_claims_each_numeric_bound_is_record": false,
+    "later_citing_paper_reaching_local_orders_located": false
+  },
+  "gaps": [
+    "Original DelormeJGT1985 fulltext/augmentation wording unread",
+    "No exhaustive citing-paper census or claim of zero unlocated citations",
+    "Citations and author record claims are not independent verification or optimality proofs"
+  ],
+  "new_graph_BFS_Lean_solver_or_paid_calls": 0
+}

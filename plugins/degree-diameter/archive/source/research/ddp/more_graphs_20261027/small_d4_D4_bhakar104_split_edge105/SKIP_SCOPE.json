@@ -1,0 +1,108 @@
+{
+  "status": "VALID_READ_ONLY_SKIP_SCOPE",
+  "reviewed_UTC": "2026-10-28T03:42:33.901946+00:00",
+  "assumptions": [
+    "C is a simple four-regular graph on the same labeled vertices 0..104 as Q.",
+    "Q is exactly extension105_d4/best.edges.",
+    "D is the edge-set symmetric difference C△Q; no unlabeled isomorphism claim."
+  ],
+  "Q": "research/ddp/breadth_20261027_wave2/extension105_d4/best.edges",
+  "rules": [
+    {
+      "condition": "|D|=0",
+      "action": "skip: identicalsavedQ isknownD5."
+    },
+    {
+      "condition": "|D|=4",
+      "action": "skip: in complete40740legaltwoedge-switch neighborhood.",
+      "proof": "Equal vertex degrees force two deleted Q edges and two new edges. If the deleted edges shared a vertex, preserving their degree pattern (2,1,1) in a simple graph would allow only the same two edges. Thus the deleted edges are disjoint and the new edges are an alternate pairing."
+    },
+    {
+      "condition": "EveryedgeinD hasbothendpointsinU",
+      "action": "skip: in complete230internalUdegreecompletions.",
+      "proof": "All outside and boundary edges coincide with Q. The fixed 202 edges remain present and have no internal U edge. Four-regularity fixes the old residual degrees, so the internal graph is one of the 230 enumerated completions."
+    }
+  ],
+  "U": [
+    12,
+    13,
+    41,
+    44,
+    48,
+    49,
+    52,
+    53,
+    104
+  ],
+  "fixed_input_receipt": {
+    "Q_n_m": [
+      105,
+      210
+    ],
+    "fixed_n_m": [
+      105,
+      202
+    ],
+    "fixed_subset_Q": true,
+    "fixed_edges_internal_U": 0,
+    "Q_internal_U_equals_Q_minus_fixed": true,
+    "Q_minus_fixed": [
+      [
+        12,
+        44
+      ],
+      [
+        12,
+        48
+      ],
+      [
+        12,
+        52
+      ],
+      [
+        12,
+        104
+      ],
+      [
+        13,
+        41
+      ],
+      [
+        13,
+        49
+      ],
+      [
+        13,
+        53
+      ],
+      [
+        13,
+        104
+      ]
+    ],
+    "residual_degrees": {
+      "12": 4,
+      "13": 4,
+      "41": 1,
+      "44": 1,
+      "48": 1,
+      "49": 1,
+      "52": 1,
+      "53": 1,
+      "104": 2
+    },
+    "both_old_neighborhood_source_edge_sets_equal_Q": true
+  },
+  "read_inputs": [
+    "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/inputs.json",
+    "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/inputs.json",
+    "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/fixed.edges"
+  ],
+  "execution": {
+    "candidate_generation": 0,
+    "old_neighborhood_enumeration": 0,
+    "BFS": 0,
+    "solver_calls": 0
+  },
+  "code_review_status": "Producer code was not yet present; this records paper and actual fixed-input review only."
+}

@@ -1,0 +1,99 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.2
+c clang++-Clang 19.1.2 (https://github.com/llvm/llvm-project 7ba7d8e2f7b6445b60679da826210cdde29eaf8b)
+c Jan  1 1980 00:00:00
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 180 seconds real time (due to '-t 180')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_joint_p_domain_repair_completion_run/proof.lrat'
+c writing binary proof trace to '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_joint_p_domain_repair_completion_run/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_joint_p_domain_repair_completion_run/input.cnf'
+c opening file to read '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_joint_p_domain_repair_completion_run/input.cnf'
+c found 'p cnf 270 14982' header
+c parsed 14982 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue      remaining
+c 
+c *  0.00  4  0 0   0    0    0  0% 0 14982 270 100%
+c {  0.00  4  0 0   0    0    0  0% 0 14982 270 100%
+c i  0.01  5  1 0   0    6    3 22% 1 14982 266 99%
+c i  0.01  5  1 0   0    7    3 21% 1 14982 265 98%
+c }  0.01  5  1 0   0   10    4 23% 1 14982 216 80%
+c 0  0.01  5  1 0   0   10    4 23% 1 14982 216 80%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_joint_p_domain_repair_completion_run/proof.lrat' closed
+c LRAT 61 added clauses 96.83%
+c LRAT 2 deleted clauses 3.17%
+c LRAT 1263 bytes (0.00 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.00  574.09% parse
+c         0.00   85.16% search
+c         0.00   55.87% unstable
+c         0.00   24.83% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.00   13.34% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:                 1        10.00 %  of conflicts
+c conflicts:                    10     13495.28    per second
+c decisions:                     9     12145.75    per second
+c fixed:                        54        20.00 %  of all variables
+c learned:                       7        70.00 %  per conflict
+c learned_lits:                 19       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                      8        42.11 %  learned literals
+c minishrunken:                  0         0.00 %  learned literals
+c otfs:                          2        20.00 %  of conflict
+c propagations:                250         0.34 M  per second
+c strengthened:                  2         0.01 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.01    seconds
+c total real time since initialization:            0.01    seconds
+c maximum resident set size of process:            9.79    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

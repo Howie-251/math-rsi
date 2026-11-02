@@ -1,0 +1,298 @@
+[
+  {
+    "id": "ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101",
+    "title": "固定F5源的平面块保边克隆：21度3900与22度4125两终图已独立接受，全球比较待定",
+    "family": "Prototype-neighborhood extension",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": null,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 (21/22 latest-global values unbound)",
+    "target_is_multivalued": true,
+    "record_type": "multi_parameter_complete_graph_instances",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": 3,
+    "actual_D_scope": "Both literal terminal graphs: inherited old3750 full-root D3 + exact old-edge retention + independent all150/all375 new-root BFS, no old-root rerun",
+    "ordinary_bad_unordered_pairs": 0,
+    "ordinary_bad_target_D": 3,
+    "outcome_class": "COMPLETE_TERMINAL_GRAPHS_INDEPENDENTLY_ACCEPTED_PUBLIC_NOVELTY_PENDING",
+    "wiki_verdict": "yes",
+    "distance_text": "实际两终图3900/40500/max21与4125/45000/max22均simple、connected、exactD3；独验保留全部37500旧边并逐根覆盖150/375新增顶点，旧3750根D3直接继承。Producer525次当前完整R2 pin-union全覆盖；只登记2张终图，不登记525前缀。",
+    "scope": "Fixed accepted3750-point20regular source, preserve all old vertices/edges, new vertices clone complete original20-neighbourhoods. Choose multiplicities through fixed25-point transverse plane P:x0+x1+x2=0 in each C30 fibre, old load constraints sum neighboring r<=k for k1 or2. This raises cap to21/22, distinct from old fixed-cap induced/deletion/clone exclusions.",
+    "positive_guarantees": [
+      "联合clone引理证明新旧与新新点对均D≤3；全部旧边保留。",
+      "每一步在当前完整图核20pins的实际余度与完整R2，包括此前新增点。",
+      "独立checker只读字面边表与旧验收字段；所有新增根完整BFS覆盖终图，旧源BFS不重跑。",
+      "k1固定25点块规则opt6，仅该块最优；k2达到旧源任意完整邻域clone的20t≤7500总容量界，375clone最优，不是一般N(22,3)上界。"
+    ],
+    "unclosed_gap": "21/22度最新公开比较未绑定，不计confirmed主表改善。新两图尚未Lean；联合Gemini静态review真实在途，当前PENDING。未单独生成或计入全部前缀。",
+    "lesson_and_restart_condition": "仿射源的横截平面把完整邻域重叠化成30变量的可实现容量，保边扩张与坐标结构在同一规则中实际组合。下一问须核新参数公开基线或实质改容量/连接规则；不自动扩cap、填剩余slots或生成线性参数梯子。",
+    "other_metrics": {
+      "validated_graph_instances": [
+        {
+          "Delta": 21,
+          "D": 3,
+          "n": 3900,
+          "m": 40500,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 150,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 22,
+          "D": 3,
+          "n": 4125,
+          "m": 45000,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 375,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        }
+      ],
+      "new_named_complete_graphs": 2,
+      "new_lower_bound_mathematically_verified": false,
+      "confirmed_record_graphs": 0,
+      "source_graph": {
+        "Delta": 20,
+        "D": 3,
+        "n": 3750,
+        "m": 37500
+      },
+      "source_old_root_BFS_runs": 0,
+      "new_roots_independently_checked_total": 525,
+      "actual_terminal_graphs": 2,
+      "construction_prefixes_independently_accepted": 0,
+      "construction_prefixes_registered_as_new_results": 0,
+      "producer_current_R2_checks": 525,
+      "producer_CPU_seconds": 0.399614746,
+      "independent_acceptance_CPU_seconds": 0.342881714,
+      "proof_scope": "Fixed old20-neighbourhood clone rule, not general degree-diameter optimality",
+      "block_rule_optima": {
+        "k1_sum_r": 6,
+        "k1_clones": 150,
+        "k1_global_arbitrary_centres_optimum_claimed": false,
+        "k2_sum_r": 15,
+        "k2_clones": 375,
+        "k2_fixed_source_full_neighbourhood_global_optimal": true
+      },
+      "proved_even_cap_formula_family": {
+        "s": "nonnegative integer",
+        "n": "3750+375s",
+        "m": "37500+7500s",
+        "maxdegree": "20+2s",
+        "diameter_at_most": 3,
+        "actually_generated_new_s": [
+          1
+        ],
+        "other_s_graphs_not_generated": true
+      },
+      "independent_acceptance_status": "PASS_TWO_TERMINAL_GRAPHS_COMPLETE_DISTANCE_PROOF",
+      "new_Lean_instances": 0,
+      "static_review_status": "PENDING_ACTUAL_REPLY",
+      "static_review_is_graph_validation": false,
+      "source_credit": "Ryosuke Mizuno controller/framework; existing local fixedF5 matrices and3750 instance; no originality claim for general cloning.",
+      "independent_construction_framework_claimed": false
+    },
+    "variants": [
+      {
+        "label": "degree21_terminal",
+        "target": [
+          21,
+          3
+        ],
+        "target_Delta": 21,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 3900,
+          "hypothetical": null
+        },
+        "actual_n": 3900,
+        "actual_m": 40500,
+        "actual_degree": 21,
+        "actual_D": 3,
+        "new_roots_checked": 150,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      },
+      {
+        "label": "degree22_terminal",
+        "target": [
+          22,
+          3
+        ],
+        "target_Delta": 22,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 4125,
+          "hypothetical": null
+        },
+        "actual_n": 4125,
+        "actual_m": 45000,
+        "actual_degree": 22,
+        "actual_D": 3,
+        "new_roots_checked": 375,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PREDICTION.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/CONTROLLER_CAPACITY_MODEL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k1.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k2.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d21.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d22.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/run_once.py",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/SCOPE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/ACCEPTANCE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/check_literal_terminal_graphs.py"
+    ]
+  },
+  {
+    "id": "ddp-four-port-general-q-pencil-obstruction-and-f25-counterexample-20261101",
+    "title": "四端口三维一般q路线：精确pencil障碍与F25单点反例，未生成新图",
+    "family": "four-label affine route-chart lifts",
+    "idea_family": "idea:ddp-q3-three-step-plane-pencil31",
+    "date": "2026-11-01",
+    "target_Delta": 100,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01, symbolic family no current-record comparison",
+    "record_type": "symbolic_route_obstruction_and_single_point_counterexample",
+    "n": {
+      "actual": null,
+      "hypothetical": 468750
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "No actual lifted graph or graph diameter measured; complete symbolic route obstruction bound to C30, one F25 target checked",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": null,
+    "outcome_class": "positive-local_SYMBOLIC_GENERAL_Q_OBSTRUCTION_SUPPORTED_REVIEW_PENDING",
+    "wiki_verdict": "partial",
+    "distance_text": "四方向frame下每有向边坏turn恰k=|A∩B|，不同pencil平面6−k，并集q+(6−k)(q²−q)；全turn满秩且pencil全覆仅q5。原C30有30条无triangle/C4外边，沿此边pencil穷尽全部≤3路线，因此q>5实际不可能D3，允许逐边逆相容矩阵/常量位移。F25只验(0,0)→(20,(0,1,alpha))六法向量均非零，目标不可达；缺12000/15625是已证公式值，不是大图BFS坏对数。",
+    "scope": "Complete Fq^3 fibres, simple4regular controller with shared four-direction projective frame; invertible edge-dependent matrices, true inverse reverse edges, direction-line compatibility, full one-dimensional noise. Actual q>5 exclusion requires at least one controller edge in neither a triangle nor a4cycle (fixedC30 has30). Certificate-only uniqueness q5 is distinct from actual q>5 exclusion. F25 literal embedding is one concrete counterexample, not a generated468750-point graph.",
+    "positive_guarantees": [
+      "一般q恒等式为纸面推导，绑定到全部900控制点对/2550个0..3端口词及四port交数0。",
+      "F5字面数据36turn满秩与pencil覆盖继承；单点F25域嵌入保持逆与非零行列式，仍出现实际短路遗漏。",
+      "q<5的partial-rank/多路线联合与其它控制器/端口数/维数/非直线或非uniform fibre不被排除。"
+    ],
+    "unclosed_gap": "一般q结论未Lean；联合Gemini静态review正在真实等待，当前仅PENDING。后续r5/F7/C60规则门在准备，未执行、未有新图。",
+    "lesson_and_restart_condition": "保行列式不保短路线互补；原C30仅换q>5或逐边矩阵已无用，需增加相邻层短控制路线或实质改变端口/层关系。下一生成方向必须离开承重假设，不自动扩字段或重跑已闭q3模板。",
+    "other_metrics": {
+      "new_graphs": 0,
+      "new_Lean_instances": 0,
+      "lifted_graphs_generated": 0,
+      "source_graph_BFS_runs": 0,
+      "controller_ordered_pairs": 900,
+      "raw_controller_words_0_to3": 2550,
+      "route_class_counts": {
+        "same_layer": 30,
+        "nonadjacent": 750,
+        "triangle_adjacent": 60,
+        "external_adjacent": 60
+      },
+      "external_undirected_edges": 30,
+      "symbolic_identities": {
+        "bad_turns_per_directed_edge": "k=|A intersect B|",
+        "different_backtrack_planes": "6-k",
+        "pencil_union": "q+(6-k)*(q*q-q)",
+        "full_pencil_iff": "k=5-q",
+        "all_good_turns_and_full_pencil_iff_field_size": 5
+      },
+      "q_gt5_minimum_missing_per_target_fibre": "q(q-1)(q-5)",
+      "q_lt5_excluded": false,
+      "global_q_family_claimed_successful": false,
+      "hypothetical_F25_order": 468750,
+      "hypothetical_F25_degree": 100,
+      "F25_counterexample": {
+        "source_controller": 0,
+        "source_coordinate": [
+          0,
+          0,
+          0
+        ],
+        "target_controller": 20,
+        "target_coordinate": "(0,1,alpha)",
+        "field": "F5[alpha]/(alpha^2-2)",
+        "target_fibre_size": 15625,
+        "reachable_by_proved_formula": 3625,
+        "missing_by_proved_formula": 12000,
+        "actual_graph_generated": false,
+        "BFS": false
+      },
+      "numeric_CPU_seconds": 0.03933034,
+      "field_values_enumerated": [
+        5
+      ],
+      "single_F25_target_check": true,
+      "matrix_search": false,
+      "full_field_scan": false,
+      "static_review_status": "PENDING_ACTUAL_REPLY",
+      "formalized_in_Lean": false,
+      "later_r5_F7_C60_gate": "PREPARING_NOT_EXECUTED_NO_GRAPH",
+      "independent_construction_framework_claimed": false
+    },
+    "variants": [
+      {
+        "label": "general_symbolic_q_gt5_fixedC30_obstruction",
+        "actual_n": null,
+        "hypothetical_n": null,
+        "actual_D": null,
+        "scope": "General finite field order q>5 under exact four-port full-line hypotheses"
+      },
+      {
+        "label": "F25_single_target_counterexample",
+        "target": [
+          100,
+          3
+        ],
+        "actual_n": null,
+        "hypothetical_n": 468750,
+        "actual_D": null,
+        "actual_graph_generated": false,
+        "BFS": false
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/READ_SCOPE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/DERIVATION_PACKAGE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/ALL_CONTROLLER_ROUTE_CLASSES.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/EXTERNAL_EDGE_0_20.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/FOUR_PORT_PROJECTIVE_TRIPLES.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/F25_COUNTEREXAMPLE_PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/F25_COUNTEREXAMPLE.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/check_once.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/check_F25_counterexample.py"
+    ]
+  }
+]

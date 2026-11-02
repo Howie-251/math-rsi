@@ -1,0 +1,83 @@
+{
+  "audit_skill": "proof-checker",
+  "audit_type": "bounded_integration_delta",
+  "verdict": "PASS",
+  "reason_code": "integration_obligations_complete",
+  "summary": "The actual-quotient coverage bridge, local dependency replacements, individual exclusion interfaces, and conditional component-count consequence are sound. Finite execution counts remain covered by the separate widened-checker review.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_family": "openai",
+  "reviewer_agent_id": "/root/proof_review_n62_12_20_30",
+  "generated_at": "2026-10-11T11:47:46Z",
+  "trace_path": "reviews/dd82/proof-checker-n62-12-20-30-20261011/",
+  "audited_inputs": [
+    "proofs/dd82/n62/THREE_COMPONENT_EXCLUSION.md"
+  ],
+  "scope": {
+    "checked": [
+      "Actual graph to necessary finite quotient-domain coverage",
+      "Local elimination of repeat entries three inside the classified cases",
+      "D0/D1 local coverage and correct incidence directions",
+      "Exact interfaces to the three specific quotient exclusions",
+      "Replacement of the twelve-case heavy minimum-size dependency by local incidence bounds",
+      "Conditional remaining support-component count c in {1,5,7,9}"
+    ],
+    "finite_classification": "Imported from the separate independent widened-domain checker; its saved JSON was read, execution was not repeated",
+    "not_checked": [
+      "Fresh re-audit of stable individual proofs or transitive dependencies",
+      "Independent execution or certification of finite classification counts",
+      "Lean kernel certification",
+      "Cross-family semantic acceptance",
+      "Whole-order62 exclusion",
+      "Any order63-65 proof"
+    ]
+  },
+  "external_finite_check": {
+    "source": "computations/dd82/n62/check_three_component_quotients.py",
+    "saved_output": "computations/dd82/n62/three_component_quotients_check.json",
+    "output_present_and_read": true,
+    "minimum_component_size": 2,
+    "reported_candidate_rows": 45,
+    "reported_row_triples": 91125,
+    "reported_trace_filtered_matrices": 9108,
+    "reported_labelled_survivors": 18,
+    "reported_canonical_quotients": 3,
+    "reported_size_two_survivors": 0,
+    "listed_quotients_match_all_three_source_interfaces": true,
+    "rerun_by_this_reviewer": false,
+    "independent_receipt_status_at_writing": "Pending separate reviewer receipt; saved execution output already exists",
+    "count_certification_in_this_receipt": false
+  },
+  "details": {
+    "proof_obligations": 10,
+    "proof_obligations_closed": 10,
+    "issues": [],
+    "fixes": [],
+    "source_modified": false,
+    "counterexamples_found": 0,
+    "kernel_or_solver_execution": false,
+    "twelve_case_initial_properties": {
+      "triangle_free": "No size-six support component and triangle pairing",
+      "no_D0": "No size-four support component",
+      "no_D1_heavy_in_C": ["same component: 3<4", "generated component D: forward 0<4", "generated component E: reverse 2<3"],
+      "no_triples": "A weight-three entry creates a closed support component of size two, absent from each survivor",
+      "B_C_simple_cubic_connected": true,
+      "heavy_minimum_size_import_required": false
+    },
+    "conditional_count": {
+      "additional_imports": ["General D1 existence", "General B at most two", "Both D1-associated components have size at least fourteen"],
+      "same_component_bound": "internal degree at least four implies trace at least four; c+2trace=17 gives c<=9",
+      "distinct_component_bound": "28+4(c-2)<=62 gives integer c<=10; oddness gives c<=9",
+      "positive_odd_values_after_three_component_exclusion": [1, 5, 7, 9],
+      "realizability_asserted": false
+    },
+    "sources_read_for_interfaces": [
+      "proofs/dd82/n62/THREE_COMPONENT_6_24_32_EXCLUSION.md",
+      "proofs/dd82/n62/THREE_COMPONENT_8_24_30_EXCLUSION.md",
+      "proofs/dd82/n62/THREE_COMPONENT_12_20_30_EXCLUSION.md",
+      "formal/DegreeDiameter/N62DoubleRoot.lean:n62_double_root_d1_or_closed_component",
+      "proofs/dd82/n62/D0_DOUBLE_COMPONENTS_AND_D1_OUTLET.md:Section 3"
+    ],
+    "prior_dependency_review_reused": "reviews/dd82/proof-checker-n62-12-20-30-20261011/PROOF_AUDIT.md"
+  }
+}

@@ -1,0 +1,13 @@
+# Frozen full31 chain-motif controller model: preparation only
+
+Fixed internal triangles are `{0,1,2}`, `{2,3,4}`, `{4,5,6}` and eight disjoint triangles `{7+3b,8+3b,9+3b}`, b=0,…,7. This is33 fixed edges. Vertices2 and4 have internal degree4 and no variable edge. The other29 vertices each have internal degree2 and require exactly2 variable neighbors. All pairs of these29 vertices except the26 already-internal edges are eligible: C(29,2)−26=380 variables. Noninternal pairs within the seven-vertex chain motif are allowed.
+
+Require adjacency or an exact3-walk for every pair of distinct vertices. For a nonadjacent pair any3-walk is automatically nonbacktracking. Every vertex is already in a fixed triangle, so its self-fiber has a3-step nonbacktracking route. A valid controller can use the existing globalF5 full36-turn/six-plane certificate to give a3875-vertex degree20 diameter3 construction, but no such graph or controller is asserted before an actual hit.
+
+This scope fixes only the33 motif edges. The former88-position model additionally fixed46 edges and prescribed interface-column degrees, so its raw UNSAT is not transferred here. Do not add C33's eleven-disjoint-triangle capacity cuts, its0—3/0—6 constraints, another order, or a prescribed extra-cycle topology.
+
+The optional canonicalization used here only permutes the eight disjoint new K3 blocks and their labels. The initial motif0,…,6 is already labeled. Scan labeled vertices in increasing order; when an edge first reaches an unlabeled K3, assign the next block start7+3b to that touched vertex and assign its two mates the next labels. Connectedness ensures all blocks are reached. Each block has an earlier neighbor, its least earlier neighbor hits its start vertex, and these parent labels are nondecreasing. No value of the first parent is fixed. The code and `LABEL_SCOPE.md` state this distinct normalization explicitly.
+
+`--prepare-only` writes the full CNF and metadata, then exits without a solver. `--solve` requires that exact saved CNF and may be invoked once only after root review. The future budget is one90-second CaDiCaL call and≤110CPU total, one worker; preparation≤5CPU. Raw UNSAT remains uncertified; UNKNOWN does not exclude the family.
+
+On SAT, reconstruct the actual31-point graph, check simplicity/four-regularity and all961 ordered adjacent-or-NB3 conditions, save complete edges/witnesses, and stop. Its triangles overlap, so the old triangle/external port-factor decoder must not be reused. Leave arbitrary4-regular2-factorization and largeF5 graph generation to root unless separately authorized.

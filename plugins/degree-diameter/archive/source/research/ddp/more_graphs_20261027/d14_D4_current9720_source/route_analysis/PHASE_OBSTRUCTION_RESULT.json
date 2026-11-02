@@ -1,0 +1,145 @@
+{
+  "status": "FIXED_C9_ONE_EXTRA_PLAIN_PAIR_COMPLETE_CONTROLLER_OBSTRUCTION",
+  "wide_words_examined": 341,
+  "length4_wide_words_examined": 256,
+  "levels": [
+    {
+      "wide_length": 0,
+      "word_count": 1,
+      "minusI_endpoint_words": 0,
+      "minusI_integer_phase_histogram": {},
+      "minusI_mod9_phases": [],
+      "words": []
+    },
+    {
+      "wide_length": 1,
+      "word_count": 4,
+      "minusI_endpoint_words": 0,
+      "minusI_integer_phase_histogram": {},
+      "minusI_mod9_phases": [],
+      "words": []
+    },
+    {
+      "wide_length": 2,
+      "word_count": 16,
+      "minusI_endpoint_words": 0,
+      "minusI_integer_phase_histogram": {},
+      "minusI_mod9_phases": [],
+      "words": []
+    },
+    {
+      "wide_length": 3,
+      "word_count": 64,
+      "minusI_endpoint_words": 2,
+      "minusI_integer_phase_histogram": {
+        "-6": 1,
+        "6": 1
+      },
+      "minusI_mod9_phases": [
+        3,
+        6
+      ],
+      "words": [
+        "bbb",
+        "BBB"
+      ]
+    },
+    {
+      "wide_length": 4,
+      "word_count": 256,
+      "minusI_endpoint_words": 4,
+      "minusI_integer_phase_histogram": {
+        "-6": 2,
+        "6": 2
+      },
+      "minusI_mod9_phases": [
+        3,
+        6
+      ],
+      "words": [
+        "abab",
+        "ABAB",
+        "baba",
+        "BABA"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "extra_inverse_pair": 2,
+      "plain_steps": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "minusI_reachable_phases_in_at_most4": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minusI_missing_phases": [
+        0
+      ],
+      "D4_controller_obstruction": true
+    },
+    {
+      "extra_inverse_pair": 3,
+      "plain_steps": [
+        -3,
+        -1,
+        1,
+        3
+      ],
+      "minusI_reachable_phases_in_at_most4": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minusI_missing_phases": [
+        1,
+        8
+      ],
+      "D4_controller_obstruction": true
+    },
+    {
+      "extra_inverse_pair": 4,
+      "plain_steps": [
+        -4,
+        -1,
+        1,
+        4
+      ],
+      "minusI_reachable_phases_in_at_most4": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minusI_missing_phases": [
+        0
+      ],
+      "D4_controller_obstruction": true
+    }
+  ],
+  "derivation": "Since -I requires at least3 wide letters, a total<=4 word has either3 wideletters plus at mostone central plainstep, or4 wideletters and no plainstep. Central steps commute with wide controller labels. This lists every controller route, including inverse-letter cancellations.",
+  "new_graphs": 0,
+  "BFS": 0,
+  "ordinary_bad_unordered_pairs": null,
+  "CPU_seconds": 0.0037373350000000014,
+  "prediction": "SUPPORTED",
+  "scope": "G=SL2(3)xC9; fixeda=(Xa,1),b=(Xb,2), retainedp+/-1 and exactlyone additionalinversepairp+/-k. k2/3/4 exhaustdistinctnonzero pairs otherthan1. Not arbitraryC9 controllers or degree16D4 graphs."
+}

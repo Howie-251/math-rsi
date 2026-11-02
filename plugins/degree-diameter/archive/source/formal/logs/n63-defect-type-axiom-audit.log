@@ -1,0 +1,50 @@
+def DegreeDiameter.n63Chebyshev : ℕ → Polynomial ℤ :=
+fun x =>
+  Nat.brecOn x fun x f =>
+    (match (motive := (x : ℕ) → Nat.below x → Polynomial ℤ) x with
+      | 0 => fun x => 2
+      | 1 => fun x => Polynomial.X
+      | n.succ.succ => fun x => Polynomial.X * x.1 - x.2.1)
+      f
+def DegreeDiameter.n63Annihilator : Polynomial ℤ :=
+∏ k ∈ Finset.range 63, (DegreeDiameter.n63Chebyshev (k + 1) - 2)
+DegreeDiameter.n63_row_two_classification.{u_1} {V : Type u_1} [Fintype V] (f : V → ℤ) (hnonneg : ∀ (v : V), 0 ≤ f v)
+  (hsum : ∑ v, f v = 2) :
+  (∃ v, f v = 2 ∧ ∀ (w : V), w ≠ v → f w = 0) ∨ ∃ v w, v ≠ w ∧ f v = 1 ∧ f w = 1 ∧ ∀ (x : V), x ≠ v → x ≠ w → f x = 0
+DegreeDiameter.n63_doubled_edge_isolated.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 63)
+  {u v : V} (huv : DegreeDiameter.defectMatrix G u v = 2) :
+  u ≠ v ∧
+    DegreeDiameter.defectMatrix G v u = 2 ∧
+      (∀ (w : V), w ≠ v → DegreeDiameter.defectMatrix G u w = 0) ∧
+        ∀ (w : V), w ≠ u → DegreeDiameter.defectMatrix G v w = 0
+DegreeDiameter.n63_unit_defect_isCycles.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 63)
+  (hreg : G.IsRegularOfDegree 8) : (DegreeDiameter.n63UnitDefectGraph G hreg).IsCycles
+DegreeDiameter.n63_unit_defect_component_cycle.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 63)
+  (hreg : G.IsRegularOfDegree 8) {u v : V} (huv : DegreeDiameter.defectMatrix G u v = 1) :
+  ∃ p,
+    p.IsCycle ∧
+      3 ≤ p.length ∧
+        p.length ≤ 63 ∧ p.toSubgraph.verts = ((DegreeDiameter.n63UnitDefectGraph G hreg).connectedComponentMk u).supp
+DegreeDiameter.n63_chebyshev_cycle_mulVec.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 63)
+  (hreg : G.IsRegularOfDegree 8) {u : V} (p : (DegreeDiameter.n63UnitDefectGraph G hreg).Walk u u) (hp : p.IsCycle)
+  (n : ℕ) :
+  n ≤ p.length →
+    ((Polynomial.aeval (DegreeDiameter.defectMatrix G)) (DegreeDiameter.n63Chebyshev n)).mulVec (Pi.single u 1) =
+      Pi.single (p.getVert n) 1 + Pi.single (p.reverse.getVert n) 1
+DegreeDiameter.n63_original_defect_local_factor.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 63)
+  (u : V) :
+  ∃ r,
+    2 ≤ r ∧
+      r ≤ 63 ∧
+        ((Polynomial.aeval (DegreeDiameter.defectMatrix G)) (DegreeDiameter.n63Chebyshev r - 2)).mulVec
+            (Pi.single u 1) =
+          0
+DegreeDiameter.n63_original_defect_annihilator.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G)
+  (hcard : Fintype.card V = 63) : (Polynomial.aeval (DegreeDiameter.defectMatrix G)) DegreeDiameter.n63Annihilator = 0
+'DegreeDiameter.n63_original_defect_annihilator' depends on axioms: [propext, Classical.choice, Quot.sound]

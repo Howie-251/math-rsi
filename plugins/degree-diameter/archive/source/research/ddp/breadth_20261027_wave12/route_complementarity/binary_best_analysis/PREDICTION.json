@@ -1,0 +1,12 @@
+{
+  "id": "P1_FIXED_BEST_DIRECTIONS_HAVE_TRANSLATION_ROBUST_LOCAL_GAP",
+  "frozen_before_route_image_calculation": true,
+  "input": "wave11/binary72_tight_words/best_parameters.json, passer_id68 only",
+  "prediction": "There exists a controller pair for which the images of every walk of length0..4, even with each route translated independently by an arbitrary F2^4 vector, have union size strictly below16.",
+  "consequence_if_true": "No consistent global or edge-local affine offsets can make the fixed cached global linear parts and branch vectors produce D4 on the fixed72controller.",
+  "falsifier": "Every cached-best bad controller slot admits full16 coverage under independent per-route affine translations. This refutes P1 but does not establish that consistent edge offsets work.",
+  "scope": "Only cached bestID68. No other1023 passers, no offset optimization, no BFS.",
+  "first_certificate_attempt": "Find a slot with only two nonparallel rank3 route spaces (upper union12), or independent-normal hyperplanes plus explicit lower-rank contributions.",
+  "budget": "one CPU second, one worker; route-subspace algebra only",
+  "no_new_graph_or_matching_search": true
+}

@@ -1,0 +1,81 @@
+{
+  "source_group": "D7_Meta_13_27_3",
+  "source_parameters": "computations/ddp/m1/d7_profile/D7_Meta_13_27_3.json",
+  "source_reconstruction_matches_entire_edge_list": true,
+  "group_parameters": {
+    "m": 13,
+    "k": 27,
+    "r": 3
+  },
+  "multiplication": "(a,b)*(c,d)=(a+r^b*c mod m,b+d mod k)",
+  "vertex_label": "type*m*k + a*k+b",
+  "A": [
+    97,
+    335
+  ],
+  "B": [
+    152,
+    307
+  ],
+  "S": [
+    0,
+    265,
+    180
+  ],
+  "order": 702,
+  "degree": 5,
+  "target_diameter": 5,
+  "subset_of_saved_parent_edges": true,
+  "representative_BFS": [
+    {
+      "root": 0,
+      "eccentricity": 6,
+      "missing_gt5": 27,
+      "distance_histogram": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 80,
+        "4": 274,
+        "5": 295,
+        "6": 27
+      }
+    },
+    {
+      "root": 351,
+      "eccentricity": 6,
+      "missing_gt5": 27,
+      "distance_histogram": {
+        "0": 1,
+        "1": 5,
+        "2": 20,
+        "3": 80,
+        "4": 264,
+        "5": 305,
+        "6": 27
+      }
+    }
+  ],
+  "independent_all_source_BFS": {
+    "n": 702,
+    "m": 1755,
+    "min_degree": 5,
+    "max_degree": 5,
+    "diameter": 6,
+    "unreachable_unordered_pairs": 0,
+    "bad_unordered_pairs": 9477,
+    "roots_checked": 702,
+    "valid": false,
+    "seconds": 0.00844021,
+    "ordered_distance_histogram": {
+      "0": 702,
+      "1": 3510,
+      "2": 14040,
+      "3": 56160,
+      "4": 188838,
+      "5": 210600,
+      "6": 18954
+    }
+  },
+  "independent_checker_exit_code": 1
+}

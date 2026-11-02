@@ -1,0 +1,72 @@
+{"stage": "IMPORT_SINGLETHREAD", "pid": 1528365, "hard_CPU": 45, "time_limit": 30.0}
+{"stage": "MODEL_READY", "pid": 1528365, "capacity_groups": 216, "warm_count": 31, "source0_N_size": 14}
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+{"stage": "RUN_ACTIVE", "pid": 1528365, "warm_set_status": "HighsStatus.kOk", "warm_count": 31}
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 1e+00]
+  RHS    [1e+00, 3e+01]
+Assessing feasibility of MIP using primal feasibility and integrality tolerance of       1e-06
+Solution has               num          max          sum
+Col     infeasibilities      0            0            0
+Integer infeasibilities      0            0            0
+Row     infeasibilities      0            0            0
+Row     residuals            0            0            0
+Presolving model
+213 rows, 175 cols, 1140 nonzeros  0s
+210 rows, 175 cols, 1128 nonzeros  0s
+
+MIP start solution is feasible, objective value is -31
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   210 rows
+   175 cols (175 binary, 0 integer, 0 implied int., 0 continuous)
+   1128 nonzeros
+MIP-Timing:      0.0023 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -59             -31               90.32%        0      0      0         0     0.0s
+         0       0         0   0.00%   -32             -31                3.23%        0      0      0       163     0.0s
+
+Symmetry detection completed in 0.0s
+Found 1 full orbitope(s) acting on 156 columns
+
+       373       6       181  71.70%   -32             -31                3.23%     9672     19   4584     79862     5.0s
+       958      14       464  82.08%   -32             -31                3.23%     9469     29   9982    183203    10.0s
+      2827      41      1382  85.15%   -32             -31                3.23%     8919     20   9978    272632    15.0s
+ L    3949      39      1932  85.59%   -32             -31                3.23%     9896     13   9766    321897    18.3s
+      5573      37      2744  85.72%   -32             -31                3.23%     9089     32   9991    434680    23.3s
+      7203      34      3562  91.93%   -32             -31                3.23%     9691     23   9952    541731    28.4s
+      7811      29      3869  92.13%   -32             -31                3.23%     9192     20   9753    577486    30.0s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      -31
+  Dual bound        -32
+  Gap               3.23% (tolerance: 0.01%)
+  P-D integral      0.971046763078
+  Solution status   feasible
+                    -31 (objective)
+                    0 (bound viol.)
+                    2.49444909173e-12 (int. viol.)
+                    0 (row viol.)
+  Timing            30.00 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 2
+  Nodes             7811
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     577486 (total)
+                    93737 (strong br.)
+                    6470 (separation)
+                    33980 (heuristics)
+{"stage": "CHILD_TERMINAL", "pid": 1528365, "status": "UNKNOWN_NO32_IN_SINGLE_WINDOW"}

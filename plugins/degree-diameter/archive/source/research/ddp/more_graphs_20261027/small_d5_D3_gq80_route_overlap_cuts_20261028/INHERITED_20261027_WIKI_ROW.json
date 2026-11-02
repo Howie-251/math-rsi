@@ -1,0 +1,96 @@
+{
+  "id": "ddp-wave11-gq80-paired-matchings",
+  "title": "W(3,3)双侧perfectmatching：完整MILP一次时限UNKNOWN",
+  "family": "generalized-quadrangle incidence with internal 2-factors",
+  "wave": 11,
+  "record_type": "solver-UNKNOWN",
+  "target_Delta": 5,
+  "target_D": 3,
+  "savedL": 72,
+  "n": {
+    "actual": null,
+    "hypothetical": 80
+  },
+  "actual_D": null,
+  "actual_D_scope": "no_target_graph_generated",
+  "actual_graph_Delta": null,
+  "ordinary_bad_unordered_pairs": null,
+  "ordinary_bad_target_D": null,
+  "scope": "固定W(3,3)全部160incidence边；两侧40点各任意perfectmatching。完整无对称限制的1560binary/1160约束可行性MILP，一次15秒solver时限、20CPU硬限；未续时或重启。",
+  "failure_or_result": "UNKNOWN，无incumbent。solver配置15秒，实测wall15.056630秒、CPU15.055620秒；全process15.4813CPU秒。无80点增强候选、无matching导出、无BFS或infeasibility结论。",
+  "positive_guarantees": [
+    "所有跨侧对原≤3、同侧近端原≤2，尚余两侧各540个far无序对。",
+    "每far对的覆盖子句恰41变量：本侧25、对侧16；80个度等式+1080个cover子句在matching约束下为D3充要。"
+  ],
+  "unclosed_gap": "此窗口没有回答任意matching对是否存在；UNKNOWN不等于UNSAT或该模板无图。q3 commuting matching子类后续已阻断，一般双侧非commutingmatching仍开放。",
+  "lesson_and_restart_condition": "保留完整1560变量和41元覆盖模型；不能把时间耗尽写成数学排除。窗口已关闭，不因UNKNOWN追加时间/seed；重开需新的结构削减或另有完整有限任务。",
+  "other_metrics": {
+    "object_level": "solver_model_no_candidate",
+    "hypothetical_edges": 200,
+    "source_geometry_generated": true,
+    "source_points": 40,
+    "source_lines": 40,
+    "source_incidence_edges": 160,
+    "augmented_graph_generated": false,
+    "binary_variables": 1560,
+    "degree_equalities": 80,
+    "cover_clauses": 1080,
+    "clause_variables": 41,
+    "own_side_variables_per_clause": 25,
+    "opposite_side_variables_per_clause": 16,
+    "total_rows": 1160,
+    "total_nonzeros": 47400,
+    "solver_status": 1,
+    "solver_time_limit_seconds": 15,
+    "solver_wall_seconds": 15.05663038417697,
+    "solver_CPU_seconds": 15.055619938,
+    "measured_process_CPU_seconds": 15.481300000000001,
+    "process_hard_CPU_seconds": 20,
+    "solver_threads": 1,
+    "production_calls": 1,
+    "incumbents": 0,
+    "graph_BFS_count": 0,
+    "scoped_external_review": {
+      "raw_path": "reviews/ddp/wave11_scoped_review_20261027.json",
+      "scope": "Mathematical matching/cover formula andUNKNOWN boundary;not a feasible graph certificate or exhaustive code proof.",
+      "model_reported": "gemini-3.8-flash-high"
+    }
+  },
+  "relations": [
+    "parameter_survivor_of:ddp-wave11-gq-internal-capacity",
+    "commuting_subclass_blocked_by:ddp-wave11-gq-commuting-obstruction"
+  ],
+  "variants": [],
+  "primary_source_directory": "research/ddp/breadth_20261027_wave11/gq80_paired_matchings",
+  "source_statuses": {
+    "terminal.json": "UNKNOWN_NO_INCUMBENT_WINDOW_CLOSED",
+    "result.json": "UNKNOWN_NO_INCUMBENT_WINDOW_CLOSED"
+  },
+  "report_paths": [
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/REPORT.md"
+  ],
+  "evidence_paths": [
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/REPORT.md",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/terminal.json",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/result.json",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/geometry.json",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/incidence.edges",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/model.json",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/constraint_schema.json",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/run.py",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/driver.py",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/production.log",
+    "reviews/ddp/wave11_scoped_review_20261027.json"
+  ],
+  "new_lower_bound": false,
+  "wiki": {
+    "round_aggregate": null,
+    "independent_experiment_nodes_found": [],
+    "related_nonexperiment_nodes": [],
+    "missing_independent_experiment_node": true,
+    "coverage_status": "wave11-complete-ready-for-root-helper"
+  },
+  "outcome_class": "solver-UNKNOWN-not-infeasible",
+  "wiki_verdict": "partial",
+  "distance_text": "UNKNOWN，无incumbent。solver配置15秒，实测wall15.056630秒、CPU15.055620秒；全process15.4813CPU秒。无80点增强候选、无matching导出、无BFS或infeasibility结论。"
+}

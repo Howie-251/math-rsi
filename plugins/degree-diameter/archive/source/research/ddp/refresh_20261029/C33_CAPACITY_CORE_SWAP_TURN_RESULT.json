@@ -1,0 +1,170 @@
+{
+  "status": "ROUTE_CAPACITY_CORE_SWAP_BATCH_COMPLETE_NO_NEW_RECORD",
+  "updated_at": "2026-10-29T22:33:16.107506+00:00",
+  "previous_goal_turn_classification": "progress: requested expert delivery completed and persisted; not a new graph",
+  "current_goal_turn_classification": "progress: new exact route obstruction, tested model changes and new full-coverage neighborhoods with a strict capacity barrier",
+  "goal_status": "ACTIVE",
+  "new_complete_target_graphs": 0,
+  "new_concrete_Lean_instances": 0,
+  "accepted_totals": {
+    "legal_instances": 104,
+    "parameter_pairs": 4,
+    "confirmed_main_table_instances": 103,
+    "confirmed_main_table_pairs": 3,
+    "concrete_formula_Lean_instances": 1,
+    "d20_D3_latest_global_novelty": "pending"
+  },
+  "C11": {
+    "status": "ALL_1800_C11_SETTINGS_REJECTED",
+    "settings_tested": 1800,
+    "representative_root_tests": 5400,
+    "CPU_seconds": 0.103882965,
+    "exclusion_scope": "exact NB3 C11-invariant 11K3 controller; not ordinary D3 or general controller",
+    "proof": "controller33_C11_exact/DERIVATION_PACKAGE.md"
+  },
+  "C33_capacity_cuts": {
+    "status": "UNKNOWN",
+    "solver_exit_code": 0,
+    "solver_calls": 1,
+    "observation_expired": false,
+    "valid_controllers": 0,
+    "complete4125_graphs": 0,
+    "child_CPU_seconds": 60.007625000000004,
+    "driver_CPU_seconds": 0.015874902999999996,
+    "preparation_CPU_seconds": 0.28812074600000004,
+    "solve_CPU_seconds": 60.023498004000004,
+    "aggregate_CPU_seconds": 60.31161875,
+    "total_CPU_budget": 90,
+    "wall_seconds": 60.04287485033274,
+    "running": false
+  },
+  "C31_full_chain_380": {
+    "status": "UNKNOWN",
+    "solver_exit_code": 0,
+    "solver_calls": 1,
+    "observation_expired": false,
+    "valid_controllers": 0,
+    "complete3875_graphs": 0,
+    "child_CPU_seconds": 90.00666799999999,
+    "driver_CPU_seconds": 0.019435323999999997,
+    "preparation_CPU_seconds": 0.12200508300000001,
+    "solve_CPU_seconds": 90.026096689,
+    "aggregate_CPU_seconds": 90.148101772,
+    "total_CPU_budget": 110,
+    "wall_seconds": 90.02797000482678,
+    "running": false
+  },
+  "D13_core_swap": {
+    "status": "SPECIFIED_CORE_SWAP_HAS_NO_FULL_AUTOMORPHISM_EXTENSION",
+    "witness_peripheral_vertex": 50629,
+    "source_signature_multiplicity": 1,
+    "image_signature_multiplicity": 0,
+    "CPU_seconds": 0.304361371,
+    "new_guard_fixed_candidates": 4,
+    "non_dominated_new_candidates": 3
+  },
+  "D13_static_pool": {
+    "status": "EXACT_POOL_MAXIMUM40",
+    "scope": "original40 sets plus exactly core-swap fixed-peripheral candidates0,8,17, each once",
+    "source_n": 51417,
+    "source_m": 324451,
+    "source_reads": 1,
+    "multisource_R4_runs": 3,
+    "source_D5_allroot_BFS": 0,
+    "solver_calls": 0,
+    "fully_covering_new_indices": [
+      0,
+      8,
+      17
+    ],
+    "tested_improving_combinations": 947,
+    "combinations_by_total": {
+      "43": 1,
+      "42": 43,
+      "41": 903
+    },
+    "rejection_counts": {
+      "port_capacity": 947
+    },
+    "pool_maximum_added_vertices": 40,
+    "new_graphs": 0,
+    "pending": [],
+    "CPU_seconds": 0.37272649599999996,
+    "multiplicity_followup": {
+      "status": "FULL_MULTIPLICITY_MAXIMUM_EXACTLY40",
+      "all43_individual_upper_bounds_one": true,
+      "new_capacity1_witnesses": {
+        "0": 7030,
+        "8": 12230,
+        "17": 14782
+      },
+      "evidence": "MULTIPLICITY_LIFT_CHECK.json",
+      "additional_BFS": 0,
+      "additional_solver_calls": 0,
+      "additional_packing_runs": 0
+    }
+  },
+  "D13_static_pool_full_multiplicity": {
+    "status": "FULL_MULTIPLICITY_MAXIMUM_EXACTLY40",
+    "all43_upper_bounds_one": true,
+    "capacity1_witnesses": [
+      7030,
+      12230,
+      14782
+    ]
+  },
+  "D13_single_port_release": {
+    "status": "STRICT_EXCLUSION_BY_UNCHANGED_POOL_AND_EDGE_DELETION_MONOTONICITY",
+    "running": false,
+    "source_n": 51457,
+    "source_m": 324863,
+    "modified_source_n": 51457,
+    "modified_source_m": 324862,
+    "deleted_edge": [
+      51454,
+      50578
+    ],
+    "same_order_modification_is_new_record": false,
+    "modified_source_D5_scope": "Inherited static40 certificate with S37 replaced by independently covered compatible strict subset candidate0. No source BFS.",
+    "original_assumption_newly_free50578": false,
+    "old_port_degree": 11,
+    "new_port_degree": 10,
+    "old_port_capacity": 2,
+    "new_port_capacity": 3,
+    "pool_memberships_changed": 0,
+    "provider_chain_reused": "../d13_D5_cooperative_clique40/PROVIDER_ELIMINATION.json",
+    "provider_elimination_rounds_inherited": [
+      39,
+      1
+    ],
+    "final_active": [],
+    "nonempty_fixed_P40_clique_family_excluded": true,
+    "source_edge_reads": 0,
+    "new_port_radius4_BFS": 0,
+    "new_radius3_BFS": 0,
+    "old40_ball_recomputations": 0,
+    "source_D5_BFS": 0,
+    "solver_calls": 0,
+    "complete_graphs_exported": 0,
+    "CPU_budget_seconds": 5,
+    "workers": 1,
+    "main_Wiki_changed": false,
+    "pending": []
+  },
+  "external_static_review": {
+    "status": "SUCCESS",
+    "verdicts": [
+      "PASS",
+      "PASS"
+    ],
+    "actual_model": "gemini-3.8-flash-high",
+    "actual_effort": "high",
+    "threadId": "18be21ce-985d-4053-9f3c-8764ade49697",
+    "disposition": "reviews/ddp/controller33_capacity_phase_20261029.DISPOSITION.md",
+    "scope": "paper proofs only; no code, solver, Lean or novelty certification"
+  },
+  "all_numerical_work_terminal": true,
+  "pending": [],
+  "decision": "Stop C11 and these C31/C33 solver batches. A further construction must introduce genuinely new compatible routes or neighborhoods that change the capacity1 port conflicts. Three new D13 covers are real, but repeating this fixed pool cannot exceed40. Do not restart closed symmetry domains or grow timer/order/seed ladders.",
+  "expert_delivery": "expert_review_current/EXPERT_HANDOFF_20261029.md remains the explicit21:55 snapshot; subsequent research is in current progress/Wiki."
+}

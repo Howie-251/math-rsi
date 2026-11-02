@@ -1,0 +1,33 @@
+def DegreeDiameter.tripleFourPattern : Matrix (Fin 4) (Fin 4) ℤ → ℤ → ℤ → ℤ → Prop :=
+fun N a b c => N 0 1 = a ∧ N 0 2 = b ∧ N 0 3 = c ∧ N 1 2 = c ∧ N 1 3 = b ∧ N 2 3 = a
+DegreeDiameter.n62_four_block_opposite_entries : ∀ (N : Matrix (Fin 4) (Fin 4) ℤ),
+  (∀ (i j : Fin 4), N i j = N j i) →
+    (∀ (i : Fin 4), N i i = 0) →
+      (∀ (i : Fin 4), ∑ j, N i j = 3) → N 0 1 = N 2 3 ∧ N 0 2 = N 1 3 ∧ N 0 3 = N 1 2 ∧ N 0 1 + N 0 2 + N 0 3 = 3
+DegreeDiameter.n62_four_block_weight_cases : ∀ (N : Matrix (Fin 4) (Fin 4) ℤ),
+  (∀ (i j : Fin 4), N i j = N j i) →
+    (∀ (i : Fin 4), N i i = 0) →
+      (∀ (i j : Fin 4), 0 ≤ N i j) →
+        (∀ (i : Fin 4), ∑ j, N i j = 3) →
+          N 0 1 = 3 ∧ N 0 2 = 0 ∧ N 0 3 = 0 ∨
+            N 0 1 = 0 ∧ N 0 2 = 3 ∧ N 0 3 = 0 ∨
+              N 0 1 = 0 ∧ N 0 2 = 0 ∧ N 0 3 = 3 ∨
+                N 0 1 = 2 ∧ N 0 2 = 1 ∧ N 0 3 = 0 ∨
+                  N 0 1 = 2 ∧ N 0 2 = 0 ∧ N 0 3 = 1 ∨
+                    N 0 1 = 1 ∧ N 0 2 = 2 ∧ N 0 3 = 0 ∨
+                      N 0 1 = 0 ∧ N 0 2 = 2 ∧ N 0 3 = 1 ∨
+                        N 0 1 = 1 ∧ N 0 2 = 0 ∧ N 0 3 = 2 ∨
+                          N 0 1 = 0 ∧ N 0 2 = 1 ∧ N 0 3 = 2 ∨ N 0 1 = 1 ∧ N 0 2 = 1 ∧ N 0 3 = 1
+DegreeDiameter.n62_four_block_classification : ∀ (N : Matrix (Fin 4) (Fin 4) ℤ),
+  (∀ (i j : Fin 4), N i j = N j i) →
+    (∀ (i : Fin 4), N i i = 0) →
+      (∀ (i j : Fin 4), 0 ≤ N i j) →
+        (∀ (i : Fin 4), ∑ j, N i j = 3) →
+          ∃ σ,
+            σ 0 = 0 ∧
+              (DegreeDiameter.tripleFourPattern (fun i j => N (σ i) (σ j)) 3 0 0 ∨
+                DegreeDiameter.tripleFourPattern (fun i j => N (σ i) (σ j)) 2 1 0 ∨
+                  DegreeDiameter.tripleFourPattern (fun i j => N (σ i) (σ j)) 1 1 1)
+'DegreeDiameter.n62_four_block_opposite_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_four_block_weight_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_four_block_classification' depends on axioms: [propext, Classical.choice, Quot.sound]

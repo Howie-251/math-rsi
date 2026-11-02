@@ -1,0 +1,23 @@
+import DegreeDiameter.Portfolio.GQ77Cubic22Clone65Exact
+open DegreeDiameter.Portfolio
+set_option pp.explicit true in
+#print DiameterAtMost
+#print OvoidSpreadCloneCapacity.center
+#print GQ77Cubic22Clone65.center
+#print GQ77Cubic22Clone65.graph
+#print FullNeighborhoodClones.graph
+#print GQ77Cubic22Clone65.label
+#check GQ77Cubic22Clone65.center_source_label
+#check GQ77Cubic22Clone65.clone_label
+#check GQ77Cubic22Clone65.label_old
+#check GQ77Cubic22Clone65.label_new
+#check GQ77Cubic22Clone65.load_le_one
+#check GQ77Cubic22Clone65.ovoid_unique
+#check GQ77Cubic22Clone65.source_no_isolated
+#check GQ77Cubic22Clone65.old_walk_bound_iff
+#check GQ77Cubic22Clone65.concrete_order_degree_and_exact_D3
+#print GQ77Cubic22Clone65.concrete_order_degree_and_exact_D3
+#print GQ77Cubic22Clone65.FinalClaim
+#print axioms GQ77Cubic22Clone65.load_le_one
+#print axioms GQ77Cubic22Clone65.concrete_order_degree_and_exact_D3
+#print axioms GQ77Cubic22Clone65.final_claim

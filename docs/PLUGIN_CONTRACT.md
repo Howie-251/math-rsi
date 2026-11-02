@@ -16,6 +16,16 @@
 | verify | [propertyb-certificate](../plugins/propertyb/skills/propertyb-certificate/SKILL.md) | 当前正文、真实输入、域与证书→覆盖/算术/输入连接证据；交verify装配原结论 |
 | handoff | 已有领域正文与核验记录 | 只提供领域复现命令、条件与关键源码；展示/交接由handoff组织 |
 
+DD使用相同合同，四个实际技能及返回点如下：
+
+| 调用方 | Degree–diameter实际入口 | 输入与返回用途 |
+|---|---|---|
+| prepare/survey | [mathrsi-degree-diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)＋[dd-transfer-diagnosis](../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md) | 原图目标、公开来源、已查baseline→准确对象/进口/比较，竞争任务据此更新队列；共享一次调查 |
+| route-loop | transfer＋[dd-construction](../plugins/degree-diameter/skills/dd-construction/SKILL.md) | 失败输入、实际共同对象→新规则、保留条件与首项探针 |
+| prove | construction或[dd-obstruction-certificate](../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md) | 真实source/参数/允许操作→图定义、degree与全点对caller，或准确条件性排除 |
+| verify | [dd-obstruction-certificate](../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md) | 实际图、正文/model、有限域与证书→精确有限命题及原图连接；§4–5也核正构造的字面属性、覆盖、证据继承和固定Lean导出，不递归完整verify |
+| handoff | 已核证明与程序状态 | 领域复现命令/源码/缺件范围回交base；历史wiki只读，新题结果写工作区 |
+
 通用survey和领域literature共享同一次检索任务，按术语、来源或深读对象分工，不能分别重复全轮。通用verify持有完整证明验收；certificate在其中执行领域核验时，只回交该scope证据，不递归启动另一个最终verify/proof-checker循环。独立调用领域技能仍可按它自己的完整合同工作，但嵌入调用必须把当前阶段和返回点明确传入。
 
 路线/证明中的新文献疑问交survey增量处理，survey可再调用领域literature，随后结果回原义务。文献发现一般条件只在prove证明实际输入满足后才能使用。局部certificate或Lean已核则回当前证明，不自动跳到最终handoff。共同写入由父调用者指定一个owner，其他worker交新增正文和证据位置；没有统一强制JSON或额外Python接口。
@@ -58,7 +68,7 @@
 
 ## 范围与可组合性
 
-领域插件可以调用现有工具、更新本题知识、提出新的引理与策略；它不在解题中直接修改 base 或验收定义。插件提出通用流程改进时，应附实际问题与建议的可观察行为，交[独立维护工作流](EVOLUTION_WORKFLOW.md)消费。维护owner负责实际补丁、针对性审阅、独立试用及修订／拒绝／接纳决定；领域数学内容仍先保存完整条件与原证据。
+领域插件可以调用现有工具、更新本题知识、提出新的引理与策略；它不在解题中直接修改 base 或验收定义。插件提出通用流程改进时，应附实际问题与建议的可观察行为，交 [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md) 消费。维护owner负责实际补丁、针对性讨论、实际使用及修订／拒绝／接纳决定；默认可由协调者自己使用，子代理协助具体工作，不强制另换无历史执行者。领域数学内容仍先保存完整条件与原证据。
 
 多个插件可在同一任务中组合，但共同符号、对象与归约方向需要对齐。例如把编码构造转为组合对象，必须保留原参数和性质的数学连接，不能因为两个检查器各自通过就宣布转换正确。
 
@@ -68,6 +78,6 @@
 
 一个可用插件至少让 agent 找到：本领域的任务表达方法、适用的数学策略与条件、已有知识和程序的位置、几个真正有用的失败诊断、结果怎样回到原题。领域技能是入口，长案例或来源地图按需链接，避免每次启动灌入全部历史。
 
-Property B已重做为完整领域知识库和四个技能；ECC是待其领域agent完善的旧草案，不能把两者说成同等验收。原始资料必须在仓内可找到；入口下需有足以实际调用的定理/公式/证明、失败输入、适用范围与重试条件，不能只有一个source路径表。验收应让未参与编写的agent按技能处理真实任务片段，检查命令、输入域和原题连接；格式通过不是内容验收。
+Property B已有完整领域知识库和四个技能；DD新增四项技能、整理层与原wiki/支撑原件，具体本轮使用范围见[v2变化](V2_CHANGES.md)；ECC是待其领域agent完善的旧草案，不能把它说成已完成相同范围的验收。原始资料必须在仓内可找到；入口下需有足以实际调用的定理/公式/证明、失败输入、适用范围与重试条件，不能只有一个source路径表。验收围绕真实任务片段检查命令、输入域和原题连接，协调者可以直接按技能执行；有具体疑问或原题合同要求时再安排相应独立核对。格式通过不是内容验收，也不要求为插件更新重跑整道旧题。
 
-两个入口： [Property B](../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)、[ECC](../plugins/ecc/skills/mathrsi-ecc/SKILL.md)。没有合适插件时，可以直接通过 base 开展研究，在出现真实可复用经验后再提炼插件。
+领域入口： [Degree–diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)、[Property B](../plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)、[ECC](../plugins/ecc/skills/mathrsi-ecc/SKILL.md)。没有合适插件时，可以直接通过 base 开展研究，在出现真实可复用经验后再提炼插件。

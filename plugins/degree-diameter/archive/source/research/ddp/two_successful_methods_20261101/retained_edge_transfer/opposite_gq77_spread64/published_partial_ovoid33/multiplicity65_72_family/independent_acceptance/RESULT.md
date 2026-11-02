@@ -1,0 +1,7 @@
+# P33eightendpoint independentacceptance:PASS
+
+Degrees65..72:orders161700,163350,165000,166650,168300,169950,171600,173250. Alleightcompleteheaders/oldedgebody/newN64/loads/degrees independentlybound; allpairs/currentprefixD3andnonD2provedwithimmutable160050-sourceinteriors,notfrommaxBFS.
+
+Oneaccepted-sourceparse;1650sourceR2-onlypredictions,R3185:33/R3248:1617. All59400newN64listschecked,butonlymaxk8has13200literalnewrootBFS:264×(1,64,3193,169992),12936×(1,64,3256,169929),allpredictionsmatch.0oldR3/field/geometry/Leanrevalidation.
+
+Totalexecutablebatch21.419453053CPUincludingcompile/sourceprediction/eightbindings/maxBFS/aggregation,below180;allprocessesterminal. Eachendpoint+50againstcurrentcheckedpublished-methodguarantee,notglobalcertification. RootownsacceptancecountsandnewLean; nonechangedhere. SeeSUMMARY/PROOFandpercaseevidence.

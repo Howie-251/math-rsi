@@ -1,0 +1,24 @@
+DegreeDiameter/N62DoubleParity.lean:25:8: warning: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62DoubleParity.0.DegreeDiameter.third_of_triangle`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DegreeDiameter/N62DoubleParity.lean:74:8: warning: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62DoubleParity.0.DegreeDiameter.pair_eq_of_offDiag`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DegreeDiameter/N62DoubleParity.lean:273:18: error: Type mismatch
+  (opposite_flags_swap G hdeg hdiam hcard hP).left
+has type
+  (P.2, P.1) ∈ fourCycleFlags G
+but is expected to have type
+  P.swap.swap = P
+DegreeDiameter/N62DoubleParity.lean:274:18: error: Type mismatch
+  Prod.swap_swap P
+has type
+  P.swap.swap = P
+but is expected to have type
+  P.swap ∈ fourCycleFlags G

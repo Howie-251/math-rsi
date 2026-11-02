@@ -1,0 +1,54 @@
+{
+  "kind": "targeted_primary_source_public_gate_not_a_graph",
+  "retrieval_date_UTC": "2026-11-01",
+  "parameter": {"maximum_degree": 64, "diameter_at_most": 3},
+  "target_order": 160050,
+  "target_status": "UNCONSTRUCTED_CONDITIONAL_PREDICTION",
+  "public_gate": "NOT_BLOCKED_BY_LOCATED_SOURCES_INCOMPLETE",
+  "best_located_public_source_guarantee": {
+    "order": 160000,
+    "maximum_degree": 64,
+    "diameter": 3,
+    "evidence_kind": "published_general_formula_substitution_not_separately_located_explicit_graph",
+    "parameters": {"s": 7, "t": 7},
+    "formula": "N=(s+1)(t+1)(1+st)^2; Delta=(s+1)(t+1)",
+    "primary_read": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+    "original_attribution": "C. Delorme, JGT 9 (1985), 325-334"
+  },
+  "located_primary_guarantee_at_least_target": false,
+  "global_record_confirmed": false,
+  "priority_confirmed": false,
+  "search_complete": false,
+  "narrow_web_query_batches": 2,
+  "new_graphs": 0,
+  "new_graph_validation": 0,
+  "new_Lean_instances": 0,
+  "source_generation_or_solver_or_BFS": false,
+  "checks": [
+    {"family": "Delorme EJC1985 single polarity quotient plus absolute replication", "applicable_q": 32, "source_degree": 33, "cap64_guarantee": 65600, "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf", "positions": "sections 2,7,8(c)"},
+    {"family": "Delorme EJC1985 duality D3 construction", "q": 16, "degree": 51, "order": 52428, "position": "section 6"},
+    {"family": "2026 GQ x GQ polarity products", "largest_direct_order_under_cap": 8775, "parameters": [2,8], "degree": 27, "absolute_replication_to_cap64": 20800, "url": "https://arxiv.org/html/2608.27253v2#S7.SS4"},
+    {"family": "2026 GQ x triangle polarity products", "largest_direct_order_under_cap": 18135, "parameters": [8,5], "degree": 54, "absolute_replication_to_cap64": 22035, "url": "https://arxiv.org/html/2608.27253v2#S7.SS4"},
+    {"family": "PolarStar IQ", "degree": 64, "order": 79506, "q": 43, "d_prime": 20, "evidence_kind": "explicit_published_figure7_number_and_formula", "url": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf"},
+    {"family": "PolarStar Paley", "degree": 64, "order": 77613, "evidence_kind": "explicit_published_figure7_number", "url": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf"},
+    {"family": "Bachraty-Siagiova-Siran Suzuki Cayley", "possibly_relevant_q_orders": {"8": 448, "32": 31744}, "next_q": 128, "next_order": 2080768, "Moore64D3": 258113, "url": "https://arxiv.org/html/1709.09760v1", "position": "Theorem 1"},
+    {"family": "Cames van Batenburg-Korsky direct H3q", "smallest_order": 2893695, "exclusion": "order exceeds Moore64D3, not an inference from a degree upper bound", "url": "https://arxiv.org/html/2608.03965v1#S3", "position": "Proposition 3.1"},
+    {"family": "Cames van Batenburg-Korsky section4 line graph variant", "smallest_H2q_order": 1085, "Moore32D2": 1025, "inferred_minimum_line_graph_degree": 66, "url": "https://arxiv.org/html/2608.03965v1#S4"}
+  ],
+  "degree65_not_used_as_degree64_counterexample": true,
+  "spread_priority": {
+    "classical_W3q_spread_source": "Delorme EJC1985 section8(a), pp298-299",
+    "classical_spread_url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+    "exact_same_degree_augmentation_proposition_located": false,
+    "candidate_formula_to_check_for_prior_art": "Delta=(q+1)^2, D=3, N=(q+1)^2(q^2+1)^2+(q^2+1)",
+    "q7_counts_prediction_only": {"points": 400, "lines": 400, "spread_lines": 50, "incident_flags_degree63": 3200, "other_vertices_degree64": 156800, "hub_pins_each": 64},
+    "inherited_full_text_gap": "Delorme JGT9(1985),325-334 not obtained in previous audit; not retried blindly",
+    "original_gap_url": "https://doi.org/10.1002/jgt.3190090304"
+  },
+  "limitations": ["No complete current public table covering degree64 was obtained", "Two narrow query batches are not exhaustive", "Arbitrary induced-subgraph replication optimization is not exhausted", "No inference of priority from absent search hits"],
+  "recommendation": "Retain only q7/degree64 as a public-gate opportunity. If root continues, first test the bounded 400-point geometry/50-spread-line/current-pin-cover interface; stop on any primary cap64,D3 guarantee of order>=160050. This subtask ends at the gate; no graph generation or q8/q9 ladder.",
+  "queries": [
+    ["\"degree\" \"64\" \"160000\" graph diameter", "graph diameter 3 \"160050\"", "Delorme generalized quadrangle spread diameter three degree construction flags", "\"diameter 3\" \"64\" graph largest generalized quadrangles"],
+    ["\"graph\" \"160,050\" diameter", "\"diameter\" \"160000\" Delorme", "\"diameter 3\" \"spread\" Delorme", "\"generalized quadrangle\" \"diameter\" \"flags\" \"spread\""]
+  ]
+}

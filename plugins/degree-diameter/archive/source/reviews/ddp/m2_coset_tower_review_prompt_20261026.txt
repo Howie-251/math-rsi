@@ -1,0 +1,32 @@
+This is a bounded mathematical/direction review for an ongoing Degree/Diameter research goal, not a paper or security audit. We have zero new records. Please examine both correctness and whether the newly recovered mechanism has real prospects; do not praise computational volume or propose hashes, audit frameworks, Lean before discovery, arbitrary scores, or generic endless search.
+
+Original goal: find explicit simple undirected max-degree Delta, diameter D graphs beating public bounds for 4<=Delta<=12, D=3/4/5. Current public D5 bounds include (4,5)=364,(5,5)=650,(6,5)=1518. Old N(8,2) work is paused. At most two mechanisms, <=8 CPU workers. M1 two-orbit voltage families have failed several fully specified finite ranges. M2 is now recovered below, and is more than a proposed naming scheme.
+
+EXACT KNOWN-SOURCE RECOVERY (already independently generated edge-for-edge, 0.014 CPU seconds):
+Published Rithwik650 graph has 500 leaves,125 blockheads,25 heads. Let G=Z25 semidirect_2 C20, operation (x,i)(y,j)=(x+2^i*y mod25,i+j mod20). Leaves are elements of G. H=<(0,5)> has order4, K=<(0,1)> has order20. Add a vertex for each LEFT coset gH and gK. Connect each leaf g to gH, each gH to gK. Leaf edges are the right Cayley edges for S={(21,9),(17,11),(1,10),(10,10)}. First two are inverse; latter two involutions. This reproduces all1625 source edges, not merely isomorphism guessed from degree. Left action of G is transitive on each of3 vertex layers. This is known-source recovery, not claimed new mathematics or a record.
+
+GENERAL TOWER:
+Let d>=3, K=C_(d(d-1)), H=< (0,d) > of order d-1, G=A semidirect_r K where A is additive a finite field or cyclic ring and r is an automorphism with r^|K|=1. Same leaves/cosets/tree edges, plus inverse-closed nonidentity S of size d-1 on leaves. n=|A|(d^2+1), every vertex degree d. The Cayley-leaf graph may be disconnected but the full graph must be checked. Left G-action gives3 genuine orbits, so root misses weighted by |G|,|G:H|,|G:K|, divided by2 yield exact bad unordered pairs. Independent all-root BFS from saved edge list still validates best candidates.
+
+EXACT ROUTING:
+Replace within-block tree paths by leaf weighted edges2, within-group/different-block paths by edges4, leaf edges by1. Weighted distance between leaves equals full-graph distance. A head to another head at distance<=5 iff some leaf edge joins their groups. Here heads labeled x in A, so HH iff union over s=(a,j) in S of <r>*a covers all nonzero additive differences. This is necessary, not sufficient. Fixed H/K permit scaling x->lambda*x (field/ring units); the usual inner-conjugation translation x->x+(1-r^i)t does NOT usually preserve the fixed tree subgroups, and is not used as a normalization.
+
+TWO SMALL NOVEL-PARAMETER EXHAUSTIONS NOW RUNNING, NO RESULT YET:
+(1) d5,A=F41,r=2 order20 gives1066 vertices. K-action on nonzero A has two20-element multiplicative orbits. Nonidentity involutions of G are exactly41 elements(x,10); there are389 other inverse pairs.
+- Hybrid one inverse pair + two involutions: at least one involution x!=0; scale it to(1,10), other(v,10),v!=1, then every389 inverse pair.40*389=15560 normalized assignments (duplicates permitted, no uniqueness claim).
+- Two inverse pairs: if all x0 full graph disconnected by head group; otherwise scale one actual generator to(1,i),i!=10 (19 choices), choose a different inverse pair among389, giving19*388=7372.
+- Four involutions: all quotient10, leaf edges preserve block index i mod5, as do within-block jumps. Different-index cross-group leaf distance<=5 can only be group tree jump4 plus one leaf edge. Each group pair has at most4 leaf edges since for any nonzero a,2^k*a=delta has at most1 solution modulo41. For a leaf x, choose a different group h it does not touch (at least36 choices); h has16 leaves in other block indices and at most4 touch x's group. Thus a bad pair exists for every four-involution S. This branch is excluded by this argument, not run.
+Full enumeration uses HH filter and exact three-root BFS, saves best complete graphs, independent full BFS.
+
+(2) d4,A=F25=F5[u]/(u^2-2), r of order12, yields425 vertices, exceeding364 but below Moore485. Inverse-closed S size3 is one pair+one involution or three involutions.
+- Hybrid: HH forces involution nonzero and inverse-pair coordinate in opposite nonzero <r> orbit. Scale involution to(1,6); the pair generator has12 possible nonzero coordinates and quotient i!=6 (11), canonical inversion gives66 inverse pairs.
+- Three involutions all quotient6; leaf edges preserve quotient parity, and H has steps4. Cross-parity cross-group distance<=5 again only tree4+edge1. Each group pair has<=3 leaf edges, each leaf touches<=3 other groups. Pick a group not touched by x (at least21); six opposite-parity leaves there, at most3 touch x's group, so bad pair exists. Finite66 input running. All r of order12 related by quotient unit k->u*k preserving H,K.
+
+PREVIOUS M2 FAILURE THAT MOTIVATED ALGEBRA:
+Direct650+26 insertion gives a valid5regular676 graph,D6/2172badpairs. An ad hoc3/4 K26 factorization with diagonal blocks had provably >=92300badpairs and actualD8/103041; one cyclic-pair modification gives connected leafgraph,D7/27142. Its588 head-block failures all have4-16 potential block2-walks but zero aligned two-leaf-edge paths: port alignment is simultaneous and crucial. Source650 has2or4 true two-leaf-edge paths for every head-block pair lacking a direct edge.
+
+Please provide a compact review:
+1. Any real error or missed normalization branch in the exact construction, HH criterion, orbit verification, d4/d5 exhaustions or excluded all-involution branches? Give concrete correction if so.
+2. Does the recovered source justify testing these two finite families? Identify the most consequential short-route capacity obstruction (if you can derive one) that could bound useful q or d without tautologically solving the whole graph.
+3. If these two fail, propose at most ONE mathematically concrete next modification/parameter with explicit generator/degree/order meaning; it must address route coverage or use the proven tower structure, not a generic random seed.
+No need to certify new records; none is claimed. No code execution/installation or new search needed for this review. Return actual mathematical scope and uncertainties honestly.

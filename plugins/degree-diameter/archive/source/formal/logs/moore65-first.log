@@ -1,0 +1,112 @@
+DegreeDiameter/Moore65.lean:42:29: error: `noncomm_ring` simp lemmas don't apply; try `abel` instead
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 65
+hreg : G.IsRegularOfDegree 8
+hzero : defectMatrix G = 0
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix
+M₀ : Matrix V V ℤ := 2 • adjacencyMatrix G + 1
+⊢ 4 • (7 • 1 + onesMatrix) + 1 = 29 • 1 + 4 • onesMatrix
+DegreeDiameter/Moore65.lean:51:58: error: unsolved goals
+case a
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 65
+hreg : G.IsRegularOfDegree 8
+hzero : defectMatrix G = 0
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix
+M₀ : Matrix V V ℤ := 2 • adjacencyMatrix G + 1
+hsq : M₀ ^ 2 = 29 • 1 + 4 • onesMatrix
+hMJ₀ : M₀ * onesMatrix = 17 • onesMatrix
+this : Fact (Nat.Prime 29) := { out := of_decide_eq_true (id (Eq.refl true)) }
+f : ℤ →+* ZMod 29 := Int.castRingHom (ZMod 29)
+M : Matrix V V (ZMod 29) := f.mapMatrix M₀
+J : Matrix V V (ZMod 29) := f.mapMatrix onesMatrix
+u v : V
+⊢ 29 = 0 ∨ 1 u v = 0
+DegreeDiameter/Moore65.lean:69:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (onesMatrix.map ⇑f).trace
+in the target expression
+  J.trace = 65
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 65
+hreg : G.IsRegularOfDegree 8
+hzero : defectMatrix G = 0
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix
+M₀ : Matrix V V ℤ := 2 • adjacencyMatrix G + 1
+hsq : M₀ ^ 2 = 29 • 1 + 4 • onesMatrix
+hMJ₀ : M₀ * onesMatrix = 17 • onesMatrix
+this : Fact (Nat.Prime 29) := { out := of_decide_eq_true (id (Eq.refl true)) }
+f : ℤ →+* ZMod 29 := Int.castRingHom (ZMod 29)
+M : Matrix V V (ZMod 29) := f.mapMatrix M₀
+J : Matrix V V (ZMod 29) := f.mapMatrix onesMatrix
+h29 : 29 • 1 = 0
+hM2 : M ^ 2 = 4 • J
+hMJ : M * J = 17 • J
+hp : ∀ (k : ℕ), M ^ (k + 2) = (4 * 17 ^ k) • J
+⊢ J.trace = 65
+DegreeDiameter/Moore65.lean:72:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (M₀.map ⇑f).trace
+in the target expression
+  M.trace = 65
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 65
+hreg : G.IsRegularOfDegree 8
+hzero : defectMatrix G = 0
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix
+M₀ : Matrix V V ℤ := 2 • adjacencyMatrix G + 1
+hsq : M₀ ^ 2 = 29 • 1 + 4 • onesMatrix
+hMJ₀ : M₀ * onesMatrix = 17 • onesMatrix
+this : Fact (Nat.Prime 29) := { out := of_decide_eq_true (id (Eq.refl true)) }
+f : ℤ →+* ZMod 29 := Int.castRingHom (ZMod 29)
+M : Matrix V V (ZMod 29) := f.mapMatrix M₀
+J : Matrix V V (ZMod 29) := f.mapMatrix onesMatrix
+h29 : 29 • 1 = 0
+hM2 : M ^ 2 = 4 • J
+hMJ : M * J = 17 • J
+hp : ∀ (k : ℕ), M ^ (k + 2) = (4 * 17 ^ k) • J
+htJ : J.trace = 65
+⊢ M.trace = 65
+DegreeDiameter/Moore65.lean:29:42: error: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 65
+hreg : G.IsRegularOfDegree 8
+hzero : defectMatrix G = 0
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix
+M₀ : Matrix V V ℤ := 2 • adjacencyMatrix G + 1
+hsq : M₀ ^ 2 = 29 • 1 + 4 • onesMatrix
+hMJ₀ : M₀ * onesMatrix = 17 • onesMatrix
+this : Fact (Nat.Prime 29) := { out := of_decide_eq_true (id (Eq.refl true)) }
+f : ℤ →+* ZMod 29 := Int.castRingHom (ZMod 29)
+M : Matrix V V (ZMod 29) := f.mapMatrix M₀
+J : Matrix V V (ZMod 29) := f.mapMatrix onesMatrix
+h29 : 29 • 1 = 0
+hM2 : M ^ 2 = 4 • J
+hMJ : M * J = 17 • J
+hp : ∀ (k : ℕ), M ^ (k + 2) = (4 * 17 ^ k) • J
+htJ : J.trace = 65
+htM : M.trace = 65
+hf : 433604943763858954753519289128022980 = 37539401358852377310116580942975915968418121337890625
+⊢ False
+DegreeDiameter/Moore65.lean:83:2: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.

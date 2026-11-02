@@ -1,0 +1,13 @@
+# Producer result: unique 7531-point candidate
+
+The fixed ovoid-by-spread full-neighborhood clone construction succeeded. The unique graph_d26_D3_n7531.edges has 7531 vertices and 97750 edges, is simple and reciprocal, and has degree histogram 25:306, 26:7225. All 90525 edges of the accepted 7242 source are retained. Each of 289 new vertices has exactly 25 original-source neighbors; there are zero new-new edges.
+
+IMMUTABLE_SOURCE_PINS.json freezes the 289 original 7242-source full 25-neighborhoods before construction. Every production step used only that snapshot, never the evolving current neighborhood of its center. The centers induce 136 disjoint edges and 17 isolates, as confirmed by a single source-induced check; their adjacency is allowed and explains why the immutable-pin distinction matters. The complete fixed pin packing has load at most 1 and covers 7225 source vertices.
+
+All 289 actual insertions passed complete-current-radius-2 coverage checks, including every earlier clone, for current graph orders 7242 through 7530. Every pin had degree 25 before insertion and all uncovered counts were zero. The producer checked final degrees, simplicity, reciprocity, edge retention and zero new-new edges, and ran one ordinary final root-0 connectivity BFS reaching all 7531 vertices. It ran no source or candidate all-roots BFS and no solver. Actual production cost was 0.787637899 CPU seconds, one worker. No alternative Q/ovoid/spread, completion matching or same-order variant was generated, and no construction remains running.
+
+PROOF.md preserves the initial explicit-Q geometry/packing argument and adds full literal binding and old-old/old-new/new-new routes proving exact D3. The earlier precheck remains separately recorded in PRECHECK_RESULT.json: 17 ovoid points, every line met once, 289 disjoint full 25-neighborhoods, 17 chosen-flag exceptions, 0.161736872 CPU, no graph generated at that initial stage.
+
+The [limited 2026-11-01 public comparison](../../../public_baseline_audit/DEGREE26_EXTENSION_20261101.md) guarantees 7514 by applying a published general Delorme theorem to the classical 7225 source and ovoid/spread product; it is not a located 7514 edge table. The 7531 candidate is 17 vertices larger than that guarantee. Fresh independent literal acceptance and concrete Lean are separate root-owned tasks. Global-record status and priority remain uncertified.
+
+Primary evidence: PARAMETERS.json, IMMUTABLE_SOURCE_PINS.json, EXTENSION_STEPS.json, CENTERS_INDUCED_CHECK.json, RESULT.json, TERMINAL.json, graph_d26_D3_n7531.edges, generate_once.py, PROOF.md; the original Q/precheck data remain unchanged.

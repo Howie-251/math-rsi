@@ -1,0 +1,22 @@
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:68:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  ∃ (w : (graph e Inc spread).Walk (atOld e (e u).1 (e u).2) (atOld e (e v).1 (e v).2)), w.length ≤ 3
+but is expected to have type
+  ∃ (p : (graph e Inc spread).Walk (Sum.inl u) (Sum.inl v)), p.length ≤ 3
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:72:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  ∃ (z : (graph e Inc spread).Walk (atOld e (e u).1 (e u).2) (Sum.inr j)), z.length ≤ 3
+but is expected to have type
+  ∃ (p : (graph e Inc spread).Walk (Sum.inl u) (Sum.inr j)), p.length ≤ 3
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:75:15: error: Type mismatch: After simplification, term
+  oldnew i (e v).1 (e v).2
+ has type
+  ∃ (w : (graph e Inc spread).Walk (Sum.inr i) (atOld e (e v).1 (e v).2)), w.length ≤ 3
+but is expected to have type
+  ∃ (p : (graph e Inc spread).Walk (Sum.inr i) (Sum.inl v)), p.length ≤ 3
+'DegreeDiameter.Portfolio.OppositeGQSpread.diameter_three' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

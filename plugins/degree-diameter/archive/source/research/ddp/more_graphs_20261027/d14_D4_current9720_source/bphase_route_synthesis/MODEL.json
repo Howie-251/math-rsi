@@ -1,0 +1,19 @@
+{
+  "source_construction": "../construction.json",
+  "reused_linear_input": "../m9_degree16_transfer/input.txt",
+  "group": "SL2(3) x C9, right multiplication in the controller",
+  "SL2_numbering": "Identity first, remaining determinant1 2x2 matrices overF3 in lexicographic order",
+  "controller_encoding": "9*SL2_index+central",
+  "vertex_encoding": "81*controller+x0+3*x1+9*x2+27*x3",
+  "a_phase": 1,
+  "b_phases": [0,1,2,3,4,5,6,7,8],
+  "plain_projected_pair_classes": [1,2,3,4],
+  "plain_class_lifts": "For class k, use true global P^k inverse pair or true P^(9-k) inverse pair. P shifts central coordinate by1 and applies gamma. These have equal projected inverse pairs and opposite fiber parity.",
+  "distinct_pair_patterns": [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]],
+  "candidate_order": "b_phase ascending, pair classes lexicographic, parity bits00,01,10,11",
+  "coarse_gate": "Complete radius4 controller reach from identity; left regular controller action makes this necessary for any fiber lift to have D4. All eight named controller darts are included.",
+  "actual_gate": "All graph steps including backtracking are permitted. Test actual fiber root0 by complete depth4 traversal; on a pass test the other80 identity-controller fiber representatives. Controller-left translations preserve every global fiber relation.",
+  "inverse_rule": "Line inverse ports remain paired0<->1,2<->3 and central phases are1,-1,B,-B. Plain negative powers are true inverses, with gamma^2=I.",
+  "omitted_projected_repetitions": "Two global power pairs in one projected class, and one projected pair plus gamma^9 matching, require a separate coarse counting argument; they are not actual models in this54-frame family.",
+  "a_normalization_claim": "None beyond explicit a-phase1. In particular nonunit a phases are not excluded."
+}

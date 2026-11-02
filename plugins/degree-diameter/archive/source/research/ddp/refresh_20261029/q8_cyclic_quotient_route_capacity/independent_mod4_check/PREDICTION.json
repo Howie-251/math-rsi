@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_BEFORE_INDEPENDENT_CHECK",
+  "sole_mathematical_input": "../CANONICAL_QUOTIENTS.json",
+  "input_scope": "Exactly the110 already saved canonical labelled quotients; no enumeration or recanonicalization of the213798 original quotient domain.",
+  "method": "Build the8-label directed multiarcs with the three zero-phase cube arcs at each label. Enumerate every walk of length0,1,2,3 as a tuple of signed integer coefficients of ordinary edge voltages plus a constant0 or4. Distinct tuples are formal Z8 phases; path length<=3 ensures signed coefficients cannot alias modulo8. Evaluate tuples directly at low residue voltage values, without C++ packed tokens or its Expr.dot lookup tables.",
+  "parity_domain": "Every nonzero parity assignment to ordinary voltage variables. For every unordered label pair, each parity must contain at least4 distinct formal expressions.",
+  "mod4_domain": "For each parity-positive assignment, enumerate every second-bit assignment with the least-index odd variable's second bit zero (first odd voltage normalized to1 mod4), and exclude ordinary self-loops of low residue0. For every label pair, each mod4 residue must contain at least2 distinct formal expressions.",
+  "prediction": "Independently reproduce20050 parity inputs,28 passing parity assignments across17 quotients,3104 normalized legal mod4 inputs and zero mod4 passes. Report any mismatch immediately; do not try a stronger voltage domain.",
+  "output_certificates": "Save all formal short-walk tuples, all28 parity-positive literal inputs, first label-pair/count witness for each parity rejection and each mod4 rejection, and per-quotient counts. Original C++ per-case receipts may be read only after the independent run to compare counts.",
+  "workers": 1,
+  "CPU_budget_seconds": 15,
+  "soft_stop_CPU_seconds": 12,
+  "full_graph_BFS": 0,
+  "SAT_calls": 0,
+  "mod8_enumerations": 0,
+  "new_graphs": 0,
+  "stop": "Complete the110 once or return a literal partial scope if the bound is reached. No old quotient enumeration, graph construction/BFS, solver, new seed, voltage strengthening or main-Wiki edit."
+}

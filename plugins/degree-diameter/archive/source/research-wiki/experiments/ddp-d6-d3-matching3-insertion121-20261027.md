@@ -1,0 +1,125 @@
+---
+type: experiment
+node_id: exp:ddp-d6-d3-matching3-insertion121-20261027
+title: "(6,3)120源至多三删边+单hub：由全部matching端点失败统一排除"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: no
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/REPORT.md; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/PREDICTION.json; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/RESULT.json; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/terminal.json; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/FIRST_MATCHING_COVERAGE_EXAMPLE.json; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/probe.cpp; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/run.py; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.md; research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.json"
+added: 2026-10-28T01:17:55Z
+tags: ["ddp", "method-ledger"]
+---
+
+# (6,3)120源至多三删边+单hub：由全部matching端点失败统一排除
+
+**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** finite-construction-experiment
+
+**目标与阶数：** (6,3)；L=120；条件性n=121（未据此计纪录）
+
+**距目标的证据：** 纸面扩展VALID：m>=|S|-k，未匹配点各有足够outside-S邻点可贪心配对，再pad到kmatching。R2(S)包含于失败的R2(T)。删边全在S内部不改变到S距离，故newhub到旧点距离恰1+d_G(S,t)。没有重跑旧枚举或构建图。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "source_n": 120,
+  "source_m": 360,
+  "source_minimum_degree": 6,
+  "source_maximum_degree": 6,
+  "original_matching3_experiment": {
+    "source_n": 120,
+    "source_m": 360,
+    "raw_scope": 7711320,
+    "raw_visited": 7711320,
+    "nonmatching_raw_combinations": 630600,
+    "matching_triples": 7080720,
+    "newroot_coverage_fail": 7080720,
+    "newroot_pass": 0,
+    "oldpair_phase_entered": 0,
+    "modified_graph_root_BFS": 0,
+    "source_closed_R2_cached_roots": 120,
+    "source_R2_cache_bytes": 1920,
+    "source_full_D3_BFS": 0,
+    "source_validation_inherited": "context/DD_PORTFOLIO_START_20261026/validation/d6_D3_bfs.json",
+    "hypothetical_m": 363,
+    "hypothetical_degrees": {
+      "6": 121
+    },
+    "complete_graphs_generated": 0,
+    "unattempted": 0,
+    "UNKNOWN": 0,
+    "last_cursor": [
+      357,
+      358,
+      359
+    ],
+    "native_CPU_seconds": 0.055889,
+    "compile_CPU_seconds": 0.9198763320000001,
+    "total_batch_CPU_seconds": 0.9777165750000001,
+    "example_selection": "First lexmatching, read R2cache only; not bestfailed graph.",
+    "example_R2_union": 101,
+    "example_missing": 19,
+    "example_first_missing_target": 15,
+    "baseline_date": "2026-10-27"
+  },
+  "deductive_extension_k": 3,
+  "maximum_cuts": 3,
+  "cut_edges_may_share_endpoints": true,
+  "hub_spokes_to_subset_included": true,
+  "matching_extension_lemma_valid": true,
+  "fixed_source_at_most3_cut_singlehub_family_excluded": true,
+  "new_numeric_trials": 0,
+  "new_enumerations": 0,
+  "new_BFS": 0,
+  "new_graphs": 0,
+  "new_solver_calls": 0,
+  "count_scope": "All original matching counters are inherited once; the expanded nonmatching/cut<=2 family was excluded deductively, not newly enumerated.",
+  "all_legal_spoke_sets_covered_by_degree_bound": true
+}
+```
+
+
+
+**从属变体：**
+```json
+[
+  {
+    "name": "endpoint-matching-extension",
+    "kind": "deductive-extension-of-existing-exhaustive-result",
+    "status": "VALID_FIXED_SOURCE_FAMILY_EXCLUDED",
+    "scope": "At most3cut edges, shared endpoints allowed, one hub to all/subset cut endpoints, no other edits.",
+    "source_R2_matching_obstruction_inherited": true,
+    "delta_at_least_2k": true,
+    "new_numeric_trials": 0,
+    "actual_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.md",
+      "research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.json"
+    ]
+  }
+]
+```
+
+**原始证据：** [research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/REPORT.md](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/REPORT.md)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/PREDICTION.json](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/PREDICTION.json)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/RESULT.json](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/RESULT.json)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/terminal.json](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/terminal.json)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/FIRST_MATCHING_COVERAGE_EXAMPLE.json](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/FIRST_MATCHING_COVERAGE_EXAMPLE.json)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/probe.cpp](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/probe.cpp)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/run.py](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/run.py)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.md](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.md)；[research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.json](../../research/ddp/more_graphs_20261027/d6_D3_matching3_insertion121/ANALYSIS_ENDPOINT_MATCHING_EXTENSION.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 唯一已验120/360全六正则源；至多3条旧边可共享端点，删除后加一个hub，邻集为cut端点全集或其任意子集，无其它边修改。delta>=2k的matching端点扩张引理把所有此类S包含于某三matching端点T；继承全部7080720个T的sourceR2不全结论，因此新根D3覆盖统一不可能。 源全六正则使所有合法hub邻点自动必须为cut端点。
+
+**仍未完成：** 不排除一般121点最大度6/D3图、其它source、>=4cuts、多个helpers或释放额外旧点余量的其它连接修改。
+
+**启发与重启依据：** 630600旧nonmatching组合无需新测试：更一般的端点包含引理已将它们和<=2cuts归约到既存三matching失败证据。停止同固定源<=3cuts/singlehub操作；改变cut预算、helper数、任意额外pin或source需另立具体机制，不自动续修。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

@@ -1,0 +1,202 @@
+{
+  "status": "COMPLETE_BOUNDED_SEARCH_NO_SOLUTION",
+  "planned_starts": 64,
+  "completed_starts": 64,
+  "completed_segments": 576,
+  "legal_states_evaluated": 1895852,
+  "complete_root_BFS_runs": 7583408,
+  "complete_single_coordinate_neighborhoods": 2381,
+  "strict_coordinate_moves": 1805,
+  "two_coordinate_kicks": 512,
+  "coordinate_trial_slots": 1950039,
+  "illegal_duplicate_parallel_group_values": 54763,
+  "CPU_seconds": 28.295258,
+  "complete_four_root_BFS_CPU_seconds": 27.16803,
+  "preparation_CPU_seconds": 1.3050869999999999,
+  "source_preparation_CPU_seconds": 0.10458043599999997,
+  "total_CPU_seconds": 29.708125436,
+  "wall_seconds": 29.636172618716955,
+  "worker_count": 1,
+  "restarts": 0,
+  "family_exhausted": false,
+  "pending": [],
+  "group": "Q64",
+  "target_diameter": 3,
+  "best": {
+    "selection": "minimum_sum_of_four_root_deficits_among_evaluated_states",
+    "n": 256,
+    "m": 1024,
+    "degree": 8,
+    "group_order": 64,
+    "vertex_encoding": "64*orbit+g; g=x+32*s",
+    "edge_u": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "edge_v": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "group_name": "Q64",
+    "group_twist": 16,
+    "tree_edge_indices": [
+      0,
+      3,
+      6
+    ],
+    "free_edge_indices": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "voltages": [
+      0,
+      2,
+      26,
+      0,
+      59,
+      12,
+      0,
+      32,
+      35,
+      48,
+      50,
+      1,
+      54,
+      33,
+      6,
+      47
+    ],
+    "score": {
+      "root_misses": [
+        9,
+        6,
+        3,
+        8
+      ],
+      "score_sum": 26,
+      "bad_unordered_pairs": 832,
+      "diameter": 4,
+      "eccentricities": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "roots_reached": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "evaluation_index": 541533,
+    "position": {
+      "start": 18,
+      "segment": 5,
+      "descent_step": 2,
+      "coordinate_edge": 2,
+      "trial_value": 26,
+      "phase": "full_single_coordinate_neighborhood"
+    },
+    "root_distance_histograms": [
+      {
+        "0": 1,
+        "1": 8,
+        "2": 56,
+        "3": 182,
+        "4": 9
+      },
+      {
+        "0": 1,
+        "1": 8,
+        "2": 56,
+        "3": 185,
+        "4": 6
+      },
+      {
+        "0": 1,
+        "1": 8,
+        "2": 56,
+        "3": 188,
+        "4": 3
+      },
+      {
+        "0": 1,
+        "1": 8,
+        "2": 56,
+        "3": 183,
+        "4": 8
+      }
+    ]
+  },
+  "independent_final": {
+    "status": "COMPLETE",
+    "n": 256,
+    "edges": 1024,
+    "simple": true,
+    "minimum_degree": 8,
+    "maximum_degree": 8,
+    "connected": true,
+    "roots_checked": 256,
+    "diameter": 4,
+    "bad_unordered_pairs": 832,
+    "ordered_distance_histogram": {
+      "0": 256,
+      "1": 2048,
+      "2": 14336,
+      "3": 47232,
+      "4": 1664
+    },
+    "four_root_misses": [
+      9,
+      6,
+      3,
+      8
+    ],
+    "independent_parameter_expansion_matches_saved_edges": true,
+    "method": "rebuild adjacency from saved explicit edge list; ordinary Python deque BFS from every vertex; compare independently expanded tuple group formula",
+    "CPU_seconds": 0.042661567000000004,
+    "running": false,
+    "pending": []
+  },
+  "run_and_final_check_CPU_seconds": 29.750787003
+}

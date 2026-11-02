@@ -1,0 +1,13 @@
+# Proposed next question: preserve the large arithmetic factor and shrink a small one
+
+Status: NOT EXECUTED. No source recipe has yet been recovered, no candidate generated, and no budget assigned. The factorization below is arithmetic, not a statement about which factor lies in the normal subgroup. Recover actual primary data and search the sole ledger by sourceorder/variants first.
+
+Saved public values in the current main table: N(7,10)>=6645690; N(6,10)>=1394189; N(7,9)>=1332774. The integer6645690=90*41*1801. If the actual metacyclic source places41 in its normal component, a different direction from repeatedlargefieldmigration is to keep the large1801 arithmetic and every other source factor, replace only41 by11, and delete the sourceinvolution to reduce degree7 to6. Candidateorder is(6645690/41)*11=1782990, above1394189. The unchangedvolumeper41factor is162090, so prime11 is the smallest prime replacement above the targetthreshold8.601... . Sourceactor order onF41 must be confirmed; if it divides10, F11 supports exactly that order. Do not invent C90/F1801 structure merely from factors.
+
+The motivation is to preserve the oldlargefactor word endpoints instead of hoping they survive a characteristicchange, while reducing the requirednumber of smallfactor values. Sourcecentering/scaling should change only the41component and leave the largefactor exactly unchanged. If the sourcefieldorder or normalfactorization differs, revise the proposal around the actual source rather than forcing it.
+
+Two concrete conditional tests, not yet predictions or launchedjobs: (A) the three sourcepairs without the involution might yield degree6/D10 onthe1782990 target; (B) keeping all threepairs and theinvolution at thatsame smallerorder might yield degree7/D9, also above its ownrecord. These are separate diameterquestions and must not be merged into one score.
+
+Before any largecandidatebatch, project away the changing smallfactor and test only the unchangedcore with the relevantconnectionrule and radius. A missing coretarget, or fewer than11 reducedroutes to somecoretarget, is a uniform obstruction to that elevenfold cover. If these fail, stop thatrule without another largegraph. If they pass, targetactions onF11 form a small explicit finiteclass, but the fullcover/diameter still require verification. Deleting theinvolution can destroy phasegeneration or oldroutes, so oldD10 never proves newD10/D9.
+
+This proposal is only an informed futureselection entry. It is not another researchplan, not an experiment result, and does not reopen any previouslyclosedfixedfield/vector scope. The currentgoal and all acceptance criteria remain unchanged.

@@ -1,0 +1,9 @@
+# 同层完整路线与H65：已完成内容及待回执边界
+
+shared/full30增强模型315221变量/1290903子句已实际单call59.879698solverCPU、60.46906406wholeCPU后UNKNOWN，0候选/精确cuts，已停止。support_shared实际GeminiSUCCESS/SOUND AS STATED限原支持枚举逻辑、density/full30及shared-middle证明，不认证输出重跑、CNF或新H65。
+
+固定fiber0全部7750对直接路线门支持预测，总0.769884981CPU；每对2三步walk，对应2个不同且内部不交的AND项，1000对另有5二步中点。全30层随后完整枚举232500对，累计150000二步路、465000三步路；复用3000exactOR5，四条分配子句/对，共930000新clauses、零变量，315221/2220903模型准备完成（1.385191193CPU），仍非全部D3条件、未求解。
+
+H65精确网格单行2048状态及25点商全部2^25枚举完成，后者最大无三方向非共线三角形集12；总1.162269237CPU。双端≥65的external局部必要规则迫整线及T_p运输；64/65局部反例说明不能直接降阈值。所有30层均≥65与max16逐点度及0→20平面运输冲突，所以纪录候选须有高低混合；不证明每C5有低层。H65分量95792clauses/18330variables与同层规则实际合并为333551vars/2316695clauses，唯一call已终态RAW_UNSAT_UNCERTIFIED/code20，54.406117solver/57.894923521wholeCPU，0候选/cuts。原same_fiber_only与旧shared终态保留；这是新规则生成模型而非续旧timer。未认证求解证书，不能据此登记一般非均匀域严格排除。
+
+H65+新routeclasses外审仍是真实在途原call，不重试、不声明通过。复用原induced一行，ledger374、104/4、confirmed103/3、Lean1不变；专家23:55快照冻结不重包，root文件未改。等最终主批真实终态后再最后query。

@@ -1,0 +1,181 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_local_proofs_complete_modulo_named_imports",
+  "summary": "All three specified component-pair exclusions are correct under the stated actual-graph dependencies; no mathematical issue found. Same-family provisional review; no full order-62 conclusion.",
+  "generated_at": "2026-10-11T11:19:50.857260+00:00",
+  "thread_id": "/root/proof_review_n62_two_partners_blind",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_family": "openai",
+  "reviewer_model": "Inherited Codex reviewer; primary runtime model not independently attested",
+  "trace_path": "reviews/dd82/proof-checker-n62-two-partners-blind-20261011/PROOF_AUDIT.md",
+  "audited_inputs": [
+    "proofs/dd82/n62/D1_TWELVE_TWO_LARGE_PARTNER_EXCLUSIONS.md",
+    "proofs/dd82/n62/D1_TWELVE_TWENTY_ZERO_TWO_EXCLUSION.md"
+  ],
+  "details": {
+    "theorems_audited": 3,
+    "issues": [],
+    "claims": [
+      {
+        "parameters": [
+          12,
+          20,
+          5,
+          3,
+          1,
+          2
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "parameters": [
+          12,
+          24,
+          6,
+          3,
+          0,
+          2
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "parameters": [
+          12,
+          20,
+          5,
+          3,
+          0,
+          2
+        ],
+        "verdict": "PASS"
+      }
+    ],
+    "verified_obligations": [
+      "actual regularity and repeat identities",
+      "component equitability and correctly directed quotient identity",
+      "general exterior moment formulas",
+      "all three moment substitutions",
+      "minimum nonempty type size under imported B<=2",
+      "both forced type arguments including Cauchy equality",
+      "both final neighbor-balance modular contradictions",
+      "exterior quotient divisibility and off-diagonal contradiction",
+      "optional exterior interpretation and type divisibilities",
+      "conditional residual-list subtraction"
+    ],
+    "imports_not_independently_closed": [
+      "established triple-repeat exclusion B<=2; its paper read but finite enumeration not rerun",
+      "finite-inequality and twelve-by-twelve source reductions for combined residual-list consequence"
+    ],
+    "no_prior_target_audits_read": true,
+    "author_papers_modified": false,
+    "counterexample_pass": {
+      "verified_counterexamples": 0,
+      "boundary_candidate": "Without minimum nonempty type size, case 2 admits residual count vector (2,4,0,0,8); excluded under actual hypotheses."
+    },
+    "checks": [
+      {
+        "command": "inline python3 standard-library integer check",
+        "exit_code": 0,
+        "scope": "three moment substitutions, stated type distributions, domain constraints, final modular contradictions"
+      }
+    ],
+    "arithmetic_shard": {
+      "agent_id": "/root/proof_review_n62_two_partners_blind/arithmetic_obligations",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning": "ultra",
+      "scope": "two finite arithmetic systems only",
+      "review_independence": "same-family",
+      "result": "Both finite implications confirmed; alternative case-1 Cauchy proof dispenses with the minimum type-size rule. Case-2 rejected alternative has exactly two (0,0) vertices.",
+      "commands": [
+        {
+          "command": "python heredoc: importlib.util.find_spec for scipy,z3,sympy",
+          "exit_code": 0,
+          "result": [
+            true,
+            false,
+            true
+          ],
+          "used_in_proof": false
+        },
+        {
+          "command": "python heredoc: finite integer domain and x-group half-count enumeration",
+          "exit_code": 0,
+          "result": [
+            [
+              7,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              5,
+              6,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "command": "python heredoc: itertools.product residual half-count and case-1 positive-support enumeration",
+          "exit_code": 0,
+          "result": {
+            "case2_even_residuals": [
+              [
+                1,
+                2,
+                0,
+                0,
+                4
+              ],
+              [
+                2,
+                0,
+                0,
+                2,
+                3
+              ]
+            ],
+            "case2_min4_residuals": [
+              [
+                2,
+                0,
+                0,
+                2,
+                3
+              ]
+            ],
+            "case1_unique": {
+              "x_halfcounts": [
+                0,
+                3,
+                2,
+                0
+              ],
+              "y_halfcounts": [
+                0,
+                0,
+                10,
+                0,
+                0,
+                0
+              ],
+              "zero_halfcount": 0
+            }
+          }
+        }
+      ],
+      "project_files_read_or_written": false
+    },
+    "not_performed": [
+      "triple-repeat enumeration rerun",
+      "separator enumeration rerun",
+      "Lean compilation",
+      "cross-family review"
+    ],
+    "scope_limit": "Does not exclude seven residual size-sixteen cases, heavy-component sizes >=14, all order-62 graphs, or determine N(8,2)."
+  }
+}

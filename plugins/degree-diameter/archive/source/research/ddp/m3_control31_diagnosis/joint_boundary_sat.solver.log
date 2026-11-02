@@ -1,0 +1,101 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.2
+c clang++-Clang 19.1.2 (https://github.com/llvm/llvm-project 7ba7d8e2f7b6445b60679da826210cdde29eaf8b)
+c Jan  1 1980 00:00:00
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 60 seconds real time (due to '-t 60')
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m3_control31_diagnosis/joint_boundary_sat.cnf'
+c opening file to read '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m3_control31_diagnosis/joint_boundary_sat.cnf'
+c found 'p cnf 7326 23052' header
+c parsed 23052 clauses in 0.01 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c all options are set to their default value
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c *  0.01  6  0 0   0    0    0  0% 0 23052 7326 100%
+c {  0.01  7  0 0   0    0    0  0% 0 23052 7326 100%
+c i  0.01  7  0 0   0    1    0  7% 0 23052 7325 100%
+c i  0.01  7  2 0   0    7    5 14% 2 23052 7095 97%
+c i  0.01  7  2 0   0   11    7 13% 2 23052 6879 94%
+c i  0.01  7  2 0   0   13    8 19% 1 23052 5714 78%
+c i  0.01  7  8 0   5   75   37 65% 3 23052 5713 78%
+c i  0.01  7  7 0   5   82   36 67% 3 23052 5518 75%
+c i  0.01  7  7 0  12  128   62 73% 3 23052 5312 73%
+c i  0.01  7  7 0  12  129   62 73% 3 23052 5130 70%
+c i  0.01  7  7 0  14  143   75 74% 4 23052 5127 70%
+c i  0.01  7  7 0  17  154   83 74% 3 23052 5126 70%
+c i  0.01  7  7 0  17  157   82 74% 3 23052 5125 70%
+c i  0.02  7  6 0  18  203  104 77% 3 23052 4939 67%
+c i  0.02  7  6 0  18  220  111 76% 3 23052 4056 55%
+c i  0.02  7  6 0  18  222  112 76% 3 23052 3919 53%
+c }  0.02  7  6 0  20  265  134 78% 3 23052 3419 47%
+c 0  0.02  7  6 0  20  265  134 78% 3 23052 3419 47%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+c writing result to '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m3_control31_diagnosis/joint_boundary_sat.model.sol'
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.01   99.15% search
+c         0.01   93.33% unstable
+c         0.01   48.12% parse
+c         0.00    5.61% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.01   65.94% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:                72        27.17 %  of conflicts
+c conflicts:                   265     20031.75    per second
+c decisions:                   472     35679.19    per second
+c fixed:                      3907        53.33 %  of all variables
+c learned:                     245        92.45 %  per conflict
+c learned_lits:               5690       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   4092        71.92 %  learned literals
+c minishrunken:                 95         1.67 %  learned literals
+c otfs:                         29        10.94 %  of conflict
+c propagations:             200156        15.13 M  per second
+c restarts:                     20        13.25    interval
+c subsumed:                     98         0.42 %  of all clauses
+c strengthened:                 26         0.11 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.02    seconds
+c total real time since initialization:            0.02    seconds
+c maximum resident set size of process:           24.53    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

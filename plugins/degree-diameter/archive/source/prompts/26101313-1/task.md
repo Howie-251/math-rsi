@@ -1,0 +1,3 @@
+# Actual order61 adjacent-double obligation
+
+Decide whether an arbitrary actual61 degree8 diameter2 graph can have A_uv=1 and B_uv=2. Retain every original graph; no simpleB, triangle-free or type-equitability assumption. Local object and full seven-type next computation: proofs/dd82/n61/ADJACENT_DOUBLE_DIRECTION.md. Inherit the completed connected-defect and B<=2 theorems without rerunning their evidence. Return a full graph, a complete branch exclusion, or the exact unresolved scope; the parent58–61 goal is unchanged. V3 ARIS mathematical adaptation, existing Gemini only, at most4 actual same-mechanism reviews. The auxiliary double-cycle lemma must be reviewed but cannot substitute for deciding adjacent doubles.

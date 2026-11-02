@@ -1,0 +1,44 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "new_proof_obligations_discharged_with_explicit_imports",
+  "summary": "The full 307-line heavy-original-subgraph proof is sound relative to its established connected/D1 inputs; no correction is needed. Base review remains same-family provisional.",
+  "reviewer_agent": "/root/proof_review_n62_heavy_original",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T12:47:57Z",
+  "target": "proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_ORIGINAL_SUBGRAPH.md",
+  "reviewed_extent": "Full 307-line version, Sections 1–6 and Remaining scope; no near-maximum-degree paragraph was present.",
+  "source_dependencies_read": [
+    "proofs/dd82/n62/CONNECTED_REPEAT_REDUCTION.md",
+    "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md",
+    "proofs/dd82/n62/D1_MATCH_HARD_BRANCH_REDUCTION.md",
+    "proofs/dd82/n62/D1_MATCH_C4_TRANSPORT_REFINEMENT.md",
+    "proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md"
+  ],
+  "scope": {
+    "new_obligations": 12,
+    "proof_source_edits": false,
+    "prior_audit_verdicts_used_as_evidence": false,
+    "earlier_classifications_rerun": false,
+    "graph_enumeration_or_solver": false,
+    "formalization": false,
+    "cross_family_review": "Handled separately by parent workflow",
+    "import_boundary": "Established connected-case and D1 source reductions are imported; the earlier recursive quotient-classification chain is not recertified here."
+  },
+  "details": {
+    "issues": [],
+    "open_obligations_in_reviewed_scope": [],
+    "checked_edge_bounds": {"1": 0, "3": 6, "5": 12, "7": 22, "9": 34},
+    "conditional_conclusions": [
+      "diameter(F) <= 2 implies |E_G(D,W)| = 10d - 4m",
+      "d = 9 and diameter(F) <= 2 imply e_B(W) <= 7"
+    ],
+    "unproved_and_not_claimed": [
+      "An unconditional diameter bound for F",
+      "Exclusion of any remaining value of d",
+      "Existence or nonexistence of an order-62 graph"
+    ]
+  }
+}

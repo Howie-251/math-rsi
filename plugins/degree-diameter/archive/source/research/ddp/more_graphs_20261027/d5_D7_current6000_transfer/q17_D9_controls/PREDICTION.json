@@ -1,0 +1,62 @@
+{
+  "status": "FROZEN_BEFORE_PARAMETER_EVALUATION",
+  "prediction": "At least one of the four specified F17 embeddings gives a connected simple 5-regular 69360-vertex graph of global diameter at most9.",
+  "target_Delta": 5,
+  "target_D": 9,
+  "savedL": 60686,
+  "hypothetical_n": 69360,
+  "q": 17,
+  "lambdas": [
+    2,
+    8,
+    9,
+    15
+  ],
+  "model": "alpha=lambda*K,K=[[1,-1],[0,-1]],beta=[[0,-1],[1,-1]];H24=C3 semidirect C8 with inversion;z5 action chi(y)=2.",
+  "frozen_normal_voltages": {
+    "VA": [
+      0,
+      1
+    ],
+    "VB": [
+      1,
+      16
+    ],
+    "VD": [
+      0,
+      2
+    ]
+  },
+  "source_phases_unchanged": {
+    "Y": [
+      0,
+      0,
+      1
+    ],
+    "D": [
+      4,
+      1,
+      4
+    ],
+    "crossE": [
+      0,
+      0,
+      0
+    ],
+    "crossA": [
+      1,
+      1,
+      4
+    ],
+    "crossB": [
+      4,
+      1,
+      7
+    ]
+  },
+  "intuition": "17 is2 mod3, so beta has no invariant F17 line, unlike characteristic3 GF9. Two extra diameter steps versus source D7 permit q17 while preserving alpha order8 and the source vector relations. This is a falsifiable control prediction, not a coverage theorem.",
+  "vertex_count_rule": "two bases * |F17^2| * |C5| * |H24| = 240*289 =69360",
+  "validation": "Check alpha order8, beta order3, inversion and true inverse voltages. Build actual adjacency once per case, verify simple undirected 5regular, then full BFS from both deck-orbit identity roots0 and34680. Those two eccentricities determine the whole connected graph diameter.",
+  "budget_CPU_seconds": 10,
+  "stop": "Exactly four lambdas in listed order; first full hit may stop and exports literal edges. No free vectors, phases, fields, score continuation or old6000 BFS."
+}

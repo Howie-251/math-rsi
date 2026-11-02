@@ -1,0 +1,71 @@
+{
+  "status": "PASS_CHEAP_MODEL_SANITY_NO_NEW_SOLVER",
+  "original810_negative_control": {
+    "status": "PASS_ONLY_NEW_CARDINALITY_ROW_VIOLATED",
+    "total_centers": 810,
+    "variable_centers": 486,
+    "fixed_centers": 324,
+    "distinct_pins": 43740,
+    "max_pin_load": 1,
+    "three_direction_layer_weights": {
+      "17": 0,
+      "35": 0,
+      "74": 81
+    },
+    "auxiliary_binary_switches": [
+      0,
+      0,
+      1
+    ],
+    "logic_row_left_sides": [
+      0,
+      0,
+      20
+    ],
+    "logic_upper": 20,
+    "sum_switches": 1,
+    "sum_switches_upper": 2,
+    "violated_constraints": [
+      "minimum_variable_centers_487"
+    ],
+    "sourcegraph_or_oldBFS_revalidated": false
+  },
+  "inherited837_fractional_substitution": {
+    "status": "EXACT_SCALED_BY3_FEASIBLE_LINEAR_RELAXATION_WITNESS",
+    "total_centers": 837,
+    "variable_centers": 513,
+    "point_selection_denominator": 3,
+    "fractional_point_variables": 1053,
+    "max_pin_load_scaled_by3": 3,
+    "pin_upper_scaled_by3": 3,
+    "auxiliary_switches": [
+      "1/3",
+      "1/3",
+      "1/3"
+    ],
+    "logic_left_sides_scaled_by3": [
+      20,
+      20,
+      20
+    ],
+    "logic_upper_scaled_by3": 60,
+    "target48_all729_pin_loads": "1",
+    "layer_weights_at_target48": {
+      "17": 27,
+      "35": 27,
+      "74": 27
+    },
+    "integer_packing_claimed": false,
+    "LP_solver_calls": 0,
+    "meaning": "837 survives the continuous point-pin rows; integrality/whole-line complementarity is the obstacle, not just total fiber capacity"
+  },
+  "existing_solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "existing_solver_node_count": null,
+  "existing_solver_dual_bound": null,
+  "existing_solver_gap": null,
+  "root_LP_or_search_trace_available": false,
+  "no_extra_solver_calls": true,
+  "no_old_source_or_BFS_or_field_checks": true,
+  "CPU_seconds": 0.056869364,
+  "all_processes_terminal": true
+}

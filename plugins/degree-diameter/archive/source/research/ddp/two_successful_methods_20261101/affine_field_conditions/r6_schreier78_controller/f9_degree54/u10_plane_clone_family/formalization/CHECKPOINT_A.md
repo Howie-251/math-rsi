@@ -1,0 +1,7 @@
+# Fixed U10family typed encoding
+
+`F9U10PlaneCloneFamilyDefinitions` actually exits0,2.470094CPU, first attempt. Carrier is literally `Fin56862 ⊕ (Fin k × Fin810)`, with explicit `label k : Vertex k ≃ Fin(56862+810*k)`. Closed label lemmas give baseIndex=81*uIndex+9*a+b, cloneIndex=810*copy+baseIndex, original source labels unchanged and newlabel56862+cloneIndex. Uis exactly[31,32,44,45,59,60,61,72,73,74]. The graph body is `FullNeighborhoodClones.graph F9Graph56862.graph (center k)`, and the center always belongs to the original56862source. Neither the55graph nor U6graph is used as source.
+
+Five complete files were already closed and handed to fresh acceptance before formalization. Production parsed the source once, bound all810literal fullN54rows and43740distinct pins, and generated all five qualified endpoints in2.551701953CPU. Fresh independent acceptance is actualPASSfor all five cases; it binds each complete literal edgefile, all12150aggregate new neighborhoods and new-root BFS predictions, using one source parse/R2only batch and no old R3or field/controller rechecks.
+
+`INPUT_BINDING_CHECK.json` now compares the typed U,810base labels,4050maximum producer prefix rows and12150endpoint rows to actual independent recipes by explicit j. It exports `FORMAL_ORDERED_CASE_RECIPE.csv`. Formalization reads0large edgefiles and runs0BFS. No k6file or original target is generated. This encoding checkpoint alone is not counted as five concrete kernel instances; the five explicit Exact targets and joint Audit remain separate local steps.

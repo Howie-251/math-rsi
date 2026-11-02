@@ -1,0 +1,13 @@
+import DegreeDiameter.Portfolio.SingleExtension
+
+/-! Audit of conditional construction lemmas, not an actual42343 graph theorem. -/
+#print DegreeDiameter.Portfolio.DiameterAtMost
+#print DegreeDiameter.Portfolio.PinsCoverRadius
+#check @DegreeDiameter.Portfolio.singleVertexExtension_diameter
+#check @DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive
+#check @DegreeDiameter.Portfolio.parentDepthCertificate_sound
+#check @DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive_of_parentDepth
+#print axioms DegreeDiameter.Portfolio.singleVertexExtension_diameter
+#print axioms DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive
+#print axioms DegreeDiameter.Portfolio.parentDepthCertificate_sound
+#print axioms DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive_of_parentDepth

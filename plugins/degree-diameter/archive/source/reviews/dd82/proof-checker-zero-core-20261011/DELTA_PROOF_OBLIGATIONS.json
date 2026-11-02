@@ -1,0 +1,307 @@
+{
+  "audit_skill": "proof-checker",
+  "generated_at": "2026-10-11T09:26:24Z",
+  "agent_id": "/root/proof_review_zero_core",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "requested_fork_turns": "none on initial reviewer spawn; this delta continues that reviewer",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_metadata_provenance": "requested initial route; no separate backend attestation",
+  "actual_backend_model": null,
+  "actual_backend_reasoning": null,
+  "reviewer_family": "openai",
+  "executor_model": "not separately attested",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "independence_relative_to_prior_audit": "same reviewer and context; not a second independent review",
+  "submitted_inputs": [
+    "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md"
+  ],
+  "obligation_count": 22,
+  "obligations": [
+    {
+      "id": "D01",
+      "dependencies": [],
+      "sequent": "The legal order-59 graph is eight-regular.",
+      "rule_and_side_condition_discharge": "A root of degree at most seven covers at most 57 vertices in two steps.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:5,19",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D02",
+      "dependencies": [
+        "D01"
+      ],
+      "sequent": "Actual B is symmetric, nonnegative, diagonal zero, row sum six, with edge/nonedge entries given by common-neighbor counts.",
+      "rule_and_side_condition_discharge": "Adjacency arithmetic, regularity, and diameter two.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:21-23",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D03",
+      "dependencies": [
+        "D02"
+      ],
+      "sequent": "At each root the nonedge budget is 6-2t(n); sum over nonzero triangle incidences is 3T.",
+      "rule_and_side_condition_discharge": "Each triangle through a root contributes twice to its incident-edge defect sum.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:25-28",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D04",
+      "dependencies": [
+        "D02"
+      ],
+      "sequent": "Each zero row has exactly positive entries 2211 and equal-weight endpoints adjacent; no cross-weight restriction is used.",
+      "rule_and_side_condition_discharge": "Explicit N15 assumption; the stated four entries sum to six, exhausting the actual nonnegative row.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:5,11",
+      "status": "discharged",
+      "assumption_only": true
+    },
+    {
+      "id": "D05",
+      "dependencies": [
+        "D04"
+      ],
+      "sequent": "On every independent subset of zeros, each defect weight class is a matching, so no positive defect triangle exists.",
+      "rule_and_side_condition_discharge": "At most one of each adjacent equal-weight endpoint pair can lie in the independent set.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:42",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D06",
+      "dependencies": [
+        "D05",
+        "D02"
+      ],
+      "sequent": "Every pair of distinct vertices has at most two common zero neighbors.",
+      "rule_and_side_condition_discharge": "Common zero neighbors are independent; any three create a positive defect triangle.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:44-46",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D07",
+      "dependencies": [
+        "D06",
+        "D02"
+      ],
+      "sequent": "A heavy pair incident to a zero is a nonedge with three common neighbors, at least one nonzero.",
+      "rule_and_side_condition_discharge": "True edges at zeros have defect zero; nonedge defect two means three common neighbors.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:30,48",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D08",
+      "dependencies": [
+        "D06"
+      ],
+      "sequent": "For n in N, U_n is independent; q_(n,y)<=2 outside N[n]; any common neighbor of a pair in U_n except n lies outside N[n].",
+      "rule_and_side_condition_discharge": "A root-neighborhood edge at a zero makes a triangle; q counts common zero neighbors of the distinct pair n,y.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:50-60",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D09",
+      "dependencies": [
+        "D08",
+        "D02",
+        "D04"
+      ],
+      "sequent": "ell_n+2h_n = sum_(y outside N[n]) choose(q_(n,y),2).",
+      "rule_and_side_condition_discharge": "Double-count unordered zero pairs and their common neighbors other than n; B equals the remaining common-neighbor count.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:62-64",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D10",
+      "dependencies": [
+        "D02"
+      ],
+      "sequent": "Every endpoint counted by k_n is outside N[n].",
+      "rule_and_side_condition_discharge": "A true edge incident to a zero has B=0; diagonal B is zero.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:30,56,70",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D11",
+      "dependencies": [
+        "D08",
+        "D10",
+        "D02"
+      ],
+      "sequent": "Each rho_(n,y)=B_ny-choose(q_(n,y),2)-indicator(y zero and B_ny=2) is nonnegative.",
+      "rule_and_side_condition_discharge": "For q<=1 the binomial is zero; for q=2 a nonedge has defect at least one, and the indicator-one case has defect exactly two.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:66-70,110-114",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D12",
+      "dependencies": [
+        "D03",
+        "D09",
+        "D10",
+        "D11"
+      ],
+      "sequent": "6-2t(n)=ell_n+2h_n+k_n+R_n, hence 2h_n+k_n<=6-2t(n).",
+      "rule_and_side_condition_discharge": "Sum the nonnegative pointwise residuals and substitute the exact double count.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:72-76,110-114",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D13",
+      "dependencies": [
+        "D04",
+        "D10"
+      ],
+      "sequent": "2|Z|=2H_ZZ+K_ZN and K_ZN=sum_n k_n.",
+      "rule_and_side_condition_discharge": "Each zero has two heavy endpoints; internal zero pairs contribute twice, cross pairs once.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:78-80,86",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D14",
+      "dependencies": [
+        "D07",
+        "D08"
+      ],
+      "sequent": "sum_n h_n=sum_(heavy ZZ pairs e) a_e with a_e>=1, so D=sum_e(a_e-1)>=0.",
+      "rule_and_side_condition_discharge": "Count each heavy zero pair once for each of its nonzero common neighbors.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:82-84,116",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D15",
+      "dependencies": [
+        "D12",
+        "D13",
+        "D14",
+        "D03"
+      ],
+      "sequent": "59<=4m-3T.",
+      "rule_and_side_condition_discharge": "2(59-m)<=2sum h_n+sum k_n<=6m-6T, using sum_n t(n)=3T.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:86-94",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D16",
+      "dependencies": [
+        "D15"
+      ],
+      "sequent": "m>=20 and T>=7.",
+      "rule_and_side_condition_discharge": "Every nonzero lies in a triangle, so m<=3T; hence 59<=3m and 59<=9T, with integer m,T.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:96-104",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D17",
+      "dependencies": [
+        "D12",
+        "D13",
+        "D14",
+        "D03"
+      ],
+      "sequent": "2(4m-3T-59)=sum ell_n+2D+sum R_n.",
+      "rule_and_side_condition_discharge": "Sum the exact local equalities, subtract the exact zero-heavy incidence equality, and collect terms.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:108-121",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D18",
+      "dependencies": [
+        "D17",
+        "D11",
+        "D14"
+      ],
+      "sequent": "If T=7 and m=20, every ell_n, D, R_n, and every pointwise residual rho_(n,y) vanishes.",
+      "rule_and_side_condition_discharge": "The left side is zero and all terms, including each summand of R_n, are nonnegative.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:123,130",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D19",
+      "dependencies": [
+        "D18",
+        "D08"
+      ],
+      "sequent": "In that equality case no light ZZ pair has a nonzero common neighbor.",
+      "rule_and_side_condition_discharge": "Such a neighbor n would make the pair contribute one to ell_n.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:125",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D20",
+      "dependencies": [
+        "D18",
+        "D14",
+        "D07"
+      ],
+      "sequent": "In that equality case every heavy ZZ pair has exactly one nonzero common neighbor and two zero common neighbors.",
+      "rule_and_side_condition_discharge": "D=sum_e(a_e-1)=0 with a_e>=1 forces a_e=1; each heavy zero pair has three total common neighbors.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:126",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D21",
+      "dependencies": [
+        "D18",
+        "D08",
+        "D11"
+      ],
+      "sequent": "In that equality case each zero heavy endpoint y of a nonzero root n has exactly two zero common neighbors with n.",
+      "rule_and_side_condition_discharge": "Its residual is 1-choose(q,2)=0; q<=2 forces q=2.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:127,130",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "D22",
+      "dependencies": [
+        "D18",
+        "D08",
+        "D02",
+        "D11"
+      ],
+      "sequent": "Every other positive nonedge repeat of a nonzero root has B=1 and exactly two common neighbors, both zero; in particular no heavy NN nonedge exists.",
+      "rule_and_side_condition_discharge": "The indicator is zero, so B=choose(q,2)<=1. Positivity gives B=1 and q=2; total common neighbors are B+1=2.",
+      "source_location": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md:128-130",
+      "status": "discharged",
+      "assumption_only": false
+    }
+  ],
+  "typed_additional_symbols": {
+    "U_n": "independent subset N_G(n) intersect Z",
+    "ell_n": "number of unordered U_n pairs with B=1",
+    "h_n": "number of unordered U_n pairs with B=2",
+    "k_n": "number of zero vertices y with B_ny=2",
+    "q_(n,y)": "number of common zero neighbors of n,y, between zero and two",
+    "rho_(n,y)": "nonnegative integer residual in the local nonedge budget",
+    "R_n": "sum of pointwise residuals outside N_G[n]",
+    "H_ZZ": "number of unordered B=2 pairs inside Z",
+    "K_ZN": "number of B=2 pairs with one endpoint in Z and one in N",
+    "a_e": "number of nonzero common neighbors of heavy zero pair e, at least one",
+    "D": "sum_e(a_e-1), a nonnegative integer"
+  },
+  "limit_order_map": [],
+  "issues": []
+}

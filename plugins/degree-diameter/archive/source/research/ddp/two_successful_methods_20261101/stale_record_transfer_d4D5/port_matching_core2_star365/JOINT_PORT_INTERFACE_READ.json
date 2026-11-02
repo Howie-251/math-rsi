@@ -1,0 +1,113 @@
+{
+  "status": "READ_GATE_COMPLETE_FIXED_FIRST_P_JOINT_MATCHING_PREDICTION_UNTESTED_WHOLE_RULE_UNKNOWN",
+  "CPU_cap_seconds": 1.0,
+  "conservative_read_preparation_CPU_charge": 0.3,
+  "new_numeric_runs": 0,
+  "source": {
+    "n": 364,
+    "m": 714,
+    "degree3_ports": 28,
+    "degree4_core": 336,
+    "D5": "inherited naturalH3 polarity; not publicregular364/728",
+    "binding": "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/PORT_BINDING.json"
+  },
+  "actual_previous_sample": {
+    "seed": 202611010405,
+    "rng": "std::mt19937_64",
+    "core_edge_pool": 630,
+    "selection": "draw two rng()%630 indices, sort and reject shared endpoints; independently shuffle28ports into14consecutive pairs, sort eachpair and allpairs",
+    "canonical_key": "two cutpoolindices plus all28matchedportlabels",
+    "draws": 10115,
+    "distinct_complete_configs": 10000,
+    "duplicate_configs": 0,
+    "newroot_fail": 10000,
+    "newroot_pass": 0,
+    "oldroot_BFS": 0,
+    "scope": "one bounded sample; no samewholefamily strictNO",
+    "same_scope_reference": "PRED.md and ROOT_DISPOSITION.json"
+  },
+  "frozen_first_config": {
+    "cut_edges": [
+      [
+        43,
+        58
+      ],
+      [
+        151,
+        314
+      ]
+    ],
+    "P": [
+      43,
+      58,
+      151,
+      314
+    ],
+    "newroot": 364,
+    "first_bad_target": 0,
+    "saved_distance": 6,
+    "saved_shortest_route": [
+      364,
+      43,
+      54,
+      56,
+      360,
+      345,
+      0
+    ],
+    "original_matching_mate_of_2": 256,
+    "no_new_distance_queries": true
+  },
+  "cached_forced_obligation": {
+    "owner_of_target0": 2,
+    "owner_evidence": "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/PORT_CLASSES.json R2_class_members firstrow(port2) includes0",
+    "beta_dG_port2_to0": "NOT_LOOKED_UP; since0!=2 and0inR2(2), beta in{1,2}",
+    "dG_P_to0": 5,
+    "dG_P_to0_basis": "logical consequence of saved newrootdistance6 and saved5-edge oldtail, plus cutendpoint distance-invariance lemma; no newBFS",
+    "mate_condition": "dG(P,mate(2))+beta<=3",
+    "current_mate256": "violates this threshold by the exactrootcriterion and savedcounterexample; individual alpha/beta values not claimed"
+  },
+  "exact_joint_newroot_interface": {
+    "T": "G minus the two cuts; allcutendpoints inP",
+    "distance_invariance": "dT(P,t)=dG(P,t), because a minimumP-to-t source path using a cut could restart at its downstreamP endpoint and strictly shorten",
+    "port_metric": "distinct originalports have distance5; inherited sharedportball certificate",
+    "atmost_one_matching": "a simple z-rootpath never revisitsz; two matching edges require an oldT segment between distinctports oflength>=5, so total>5",
+    "holes": "U(P)={t:dG(P,t)>4}",
+    "unique_owner": "b=o(t) via R2perfect-code partition, beta_b(t)=dG(b,t)<=2",
+    "tail_avoids_cuts": "a beta<=2 sourcepath to a hole cannot meetP, else dG(P,t)<=2, contradiction",
+    "exact_hole_criterion": "mate(b)=a must satisfy dG(P,a)+beta_b(t)<=3; sufficient via1oldstarspoke+oldprefix+1matching+oldtail",
+    "allowed_directed_mates": "L_b=allotherports if nohole inR2classb; otherwise {a!=b:dG(P,a)<=3-max_beta_of_holes_in_classb}",
+    "allowed_undirected_edges": "{a,b} allowed iff a in L_b and b in L_a",
+    "newroot_equivalence": "a perfectmatching on this28vertex allowedgraph iff actualnewroot covers all364oldpoints within5; oldoldD5 remains separate"
+  },
+  "single_next_prediction": {
+    "P": "fixed firstconfig only,43/58/151/314",
+    "prediction": "some perfectmatching on the28ports satisfies all exactallowed-mate conditions and gives newrootR5cover",
+    "not_predicted": "full365graph oldoldD5; not allcorecutpairs; no solver or matching search authorized here"
+  },
+  "minimum_new_data": {
+    "needed": "four closedsourceR4 support masks for the frozen corepins; no sourceallrootD5 verification",
+    "reuse": [
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/PORT_CLASSES.json (28R2classes and uniqueowner)",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/PORT_BALLS.json (28portR3/R4 masks)",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/R3.u64le.bin",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/source_and_single/R4.u64le.bin"
+    ],
+    "threshold_details": "portR1 from acceptedliteral adjacency and R2class data give beta0/1/2 and dPport<=1/2; existingportR3 supplies <=3. These are smalllabellookups, not new28ballBFS. No such queries run here.",
+    "not_present_in_read_interface": "no saved four-coreR4 masks or completeoldgeodesicmatrix in the files read"
+  },
+  "strict_old_scope": "preservealloldedges/pureappend exclusions do not cover deletion2coreedges and addition14old-oldportedges; wholecurrentrule remainsUNKNOWN",
+  "operations": {
+    "source_graph_parses": 0,
+    "BFS": 0,
+    "new_distance_or_ball_queries": 0,
+    "portmatching_search": 0,
+    "solver": 0,
+    "new_samples": 0,
+    "candidategraphs": 0,
+    "field": 0,
+    "Lean": 0,
+    "web": 0
+  },
+  "next": "STOP_READ_GATE; root separately budgets one fixedP support/allowedmatching test if selected; no allcutpairs/seed/sample continuation"
+}

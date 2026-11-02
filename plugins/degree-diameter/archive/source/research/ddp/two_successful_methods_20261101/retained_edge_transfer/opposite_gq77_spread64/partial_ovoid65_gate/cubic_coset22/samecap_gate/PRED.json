@@ -1,0 +1,25 @@
+{
+  "task": "Fixed accepted161150graph, one full-current-neighborhood clone at unchanged cap65",
+  "previously_unknown": "Whether O22 is maximal and whether any of all161150currentvertices has a full current neighborhood consisting only of spare vertices.",
+  "prediction_before_run": {
+    "O22_is_maximal_partial_ovoid": true,
+    "actual_compatible_outside_points": [],
+    "all_old_product_centers_blocked": true,
+    "old_bonus_centers_blocked": true,
+    "new_clone_centers_blocked": true,
+    "compatible_current_centers": 0
+  },
+  "predicted_mechanism": "Every point is collinear with an O22point. Saturated original pins are old(q,m) for which m meets O22, except raw self centers removed at Opoint/spreadflag and replaced by22sourcebonus. For any old(p,l), use an Opoint collinear with p and a joining line m; choose q on l so old(q,m) is a saturated actual neighbor, with explicit handling of self/removal exceptions. Separately check all50bonus and1100clone neighborhoods.",
+  "fixed_O22_rule": "(1,t,t^3+k,-t^2),k=0,2,4,t=0..6; then(0,0,1,0)",
+  "inherited": "400points/400lines/8incidence/50orderedspread; accepted160050source and literal source-neighbor clone binding; accepted161150degreehist64:90750,65:70400",
+  "method": "Small frozen geometry only; exact source neighborhood formula and finite all160000product-center check. No large edge-file read/recheck and no new graph.",
+  "budget_CPU_seconds": 30,
+  "workers": 1,
+  "BFS_allowed": false,
+  "Lean_allowed": false,
+  "solver_allowed": false,
+  "new_graph_allowed": false,
+  "new_seed_or_field_allowed": false,
+  "required_outputs": ["REPORT.md", "RESULT.json", "TERMINAL.json"],
+  "strict_scope": "Only fixed161150graph, retained edges, samecap65, one full-current-neighborhood clone. Arbitrary pins and cooperative modifications remain open."
+}

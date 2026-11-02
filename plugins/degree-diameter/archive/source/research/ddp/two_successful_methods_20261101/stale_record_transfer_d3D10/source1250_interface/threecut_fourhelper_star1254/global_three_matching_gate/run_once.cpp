@@ -1,0 +1,46 @@
+#include <algorithm>
+#include <array>
+#include <cstdint>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+using namespace std;
+constexpr int N=1250,NN=1254,W=20,L0=1250,L1=1251,L2=1252,C=1253;
+using Bits=array<uint64_t,W>;using Adj=array<array<int,3>,NN>;
+Adj src,a;vector<pair<int,int>>edges;array<vector<Bits>,10>R;array<vector<Bits>,3>E;Bits ALL;
+clock_t t0;double softcpu;long long dpops=0,edgeops=0,coverwords=0;
+double cpu(){return double(clock()-t0)/CLOCKS_PER_SEC;}
+int missing3(const Bits&x,const Bits&y,const Bits&z){for(int k=0;k<W;k++){coverwords++;uint64_t m=ALL[k]&~(x[k]|y[k]|z[k]);if(m)return 64*k+__builtin_ctzll(m);}return -1;}
+struct B{array<int,NN>d,par;int ecc;};
+B bfs(int r){B b;b.d.fill(-1);b.par.fill(-1);array<int,NN>q;int l=0,h=0;q[h++]=r;b.d[r]=0;b.ecc=0;while(l<h){int u=q[l++];for(int v:a[u])if(b.d[v]<0){b.d[v]=b.d[u]+1;b.par[v]=u;b.ecc=max(b.ecc,b.d[v]);q[h++]=v;}}if(h<NN)b.ecc=NN;return b;}
+int bad(const B&b){for(int t=0;t<NN;t++)if(b.d[t]<0||b.d[t]>10)return t;return -1;}
+string vec(vector<int>p){ostringstream o;o<<'[';for(size_t i=0;i<p.size();i++){if(i)o<<',';o<<p[i];}o<<']';return o.str();}
+vector<int>path(const B&b,int r,int t){vector<int>p;if(b.d[t]<0)return p;for(int v=t;v>=0;v=b.par[v]){p.push_back(v);if(v==r)break;}reverse(p.begin(),p.end());return p;}
+void rem1(int u,int v){for(int&z:a[u])if(z==v){z=-1;return;}throw runtime_error("missingcut");}
+void rem(int u,int v){rem1(u,v);rem1(v,u);}
+void add1(int u,int v){for(int&z:a[u])if(z<0){z=v;return;}throw runtime_error("noport");}
+void add(int u,int v){add1(u,v);add1(v,u);}
+void build(int e1,int e2){a=src;for(int r=N;r<NN;r++)a[r].fill(-1);array<int,3>es={0,e1,e2};for(int i=0;i<3;i++){auto[u,v]=edges[es[i]];rem(u,v);add(N+i,u);add(N+i,v);add(C,N+i);}for(int u=0;u<NN;u++){set<int>s;for(int v:a[u])if(v<0||v>=NN||v==u||!s.insert(v).second||find(a[v].begin(),a[v].end(),u)==a[v].end())throw runtime_error("candidatecubic/simple/reciprocity");}}
+void witness(string file,int e1,int e2,int r,int t,const B&b){ofstream o(file);o<<"{\"edge_ids\":[0,"<<e1<<','<<e2<<"],\"root\":"<<r<<",\"target\":"<<t<<",\"distance\":"<<b.d[t]<<",\"path\":"<<vec(path(b,r,t))<<"}\n";}
+void savehit(int e1,int e2,const vector<pair<int,int>>&stats){ofstream f("candidate1254.edges");f<<NN<<" 1881\n";for(int u=0;u<NN;u++)for(int v:a[u])if(u<v)f<<u<<' '<<v<<'\n';ofstream p("PARAMETERS.json");p<<"{\"n\":1254,\"m\":1881,\"degree\":3,\"cut_edge_ids\":[0,"<<e1<<','<<e2<<"],\"cuts\":[[0,1],["<<edges[e1].first<<','<<edges[e1].second<<"],["<<edges[e2].first<<','<<edges[e2].second<<"]],\"leaf_labels\":[1250,1251,1252],\"centre_label\":1253,\"recipe\":\"delete3cuts; eachleafretainsbothendpointspokes; centreconnects3leaves\",\"status\":\"ALLROOT_PASS_PENDING_FRESH_ACCEPTANCE\"}\n";ofstream s("ALL_ROOT_STATS.tsv");s<<"root\teccentricity\n";for(auto z:stats)s<<z.first<<'\t'<<z.second<<'\n';}
+int main(int argc,char**argv){t0=clock();softcpu=argc>2?stod(argv[2]):20.;try{ifstream f(argv[1]);int n,m;if(!(f>>n>>m)||n!=N||m!=1875)throw runtime_error("sourceheader");for(auto&r:src)r.fill(-1);for(int i=0;i<m;i++){int u,v;if(!(f>>u>>v)||u<0||v<0||u>=N||v>=N||u==v)throw runtime_error("sourceedge");if(u>v)swap(u,v);edges.push_back({u,v});for(auto z:{make_pair(u,v),make_pair(v,u)}){bool ok=false;for(int&k:src[z.first])if(k<0){k=z.second;ok=true;break;}if(!ok)throw runtime_error("sourcedegree>3");}}sort(edges.begin(),edges.end());if(unique(edges.begin(),edges.end())!=edges.end())throw runtime_error("duplicatesource");for(int u=0;u<N;u++){for(int v:src[u])if(v<0)throw runtime_error("sourcedegree<3");sort(src[u].begin(),src[u].end());}if(edges[0]!=make_pair(0,1)||edges[5]!=make_pair(2,6)||edges[1515]!=make_pair(869,1178))throw runtime_error("literalbinding");ALL.fill(~uint64_t(0));ALL[W-1]=(uint64_t(1)<<(N%64))-1;
+for(int k=0;k<=9;k++)R[k].resize(N);for(int u=0;u<N;u++)R[0][u][u/64]|=uint64_t(1)<<(u%64);for(int k=1;k<=9;k++)for(int u=0;u<N;u++){R[k][u]=R[k-1][u];for(int v:src[u])for(int w=0;w<W;w++){R[k][u][w]|=R[k-1][v][w];dpops++;}}
+{ofstream b("SOURCE_R7_R8_R9.bits",ios::binary);for(int k:{7,8,9})for(int u=0;u<N;u++)b.write(reinterpret_cast<const char*>(R[k][u].data()),W*sizeof(uint64_t));ofstream s("BALL_SCHEMA.json");s<<"{\"format\":\"uint64_little_endian\",\"layout\":\"radius7,8,9 thenroot0..1249 thenword0..19\",\"wordbits\":64,\"words_per_root\":20,\"n\":1250,\"last_word_used_bits\":34,\"source_parse_count\":1,\"closed_ball_method\":\"R0self;Rk(u)=Rk-1(u) OR neighboursRk-1\",\"sourceD10validationBFS\":0}\n";}
+for(int k=0;k<3;k++){E[k].resize(m);for(int e=0;e<m;e++)for(int w=0;w<W;w++){E[k][e][w]=R[7+k][edges[e].first][w]|R[7+k][edges[e].second][w];edgeops++;}}
+int sampletarget=886;bool samplemiss=((E[1][0][sampletarget/64]|E[1][5][sampletarget/64]|E[1][1515][sampletarget/64])&(uint64_t(1)<<(sampletarget%64)))==0;
+{ofstream s("SAVED_FIXED_SAMPLE_DP_COMPARISON.json");s<<"{\"old_saved_edge_ids\":[0,5,1515],\"saved_centre_target\":886,\"source_R8_six_endpoint_union_missing\":"<<(samplemiss?"true":"false")<<",\"old_candidate_BFS_repeated\":false}\n";}
+if(!samplemiss)throw runtime_error("savedfixedsample_exactgate_discrepancy");vector<int>eligible;for(int e=1;e<m;e++)if(edges[e].first!=0&&edges[e].first!=1&&edges[e].second!=0&&edges[e].second!=1)eligible.push_back(e);
+long long domain=0;for(size_t i=0;i<eligible.size();i++)for(size_t j=i+1;j<eligible.size();j++){auto[a,b]=edges[eligible[i]];auto[c,d]=edges[eligible[j]];if(a!=c&&a!=d&&b!=c&&b!=d)domain++;}
+{ofstream d("ACTUAL_DOMAIN.json");d<<"{\"anchor_edge_id\":0,\"anchor\":[0,1],\"eligible_other_edges\":"<<eligible.size()<<",\"matching_edge_pairs\":"<<domain<<",\"source_parse_count\":1,\"sourceD10validationBFS\":0}\n";}
+array<long long,4>calls{},fails{};array<int,4>first_e1,first_e2,first_target;first_e1.fill(-1);first_e2.fill(-1);first_target.fill(-1);long long tested=0,all4=0,actualnewbfs=0,oldbfs=0,oldfails=0;bool hit=false,timed=false,discrepancy=false;int cursor1=-1,cursor2=-1;ofstream per("PER_FIRST_EDGE_STAGE_COUNTS.tsv");per<<"e1\tchecked_matching_pairs\tcentre_fail\tL0_fail\tL1_fail\tL2_fail\tall_four_gate_pass\trow_complete\n";
+for(size_t i=0;i<eligible.size();i++){int e1=eligible[i];array<long long,5>row{};long long rowtested=0;bool rowcomplete=true;for(size_t j=i+1;j<eligible.size();j++){int e2=eligible[j];auto[u,v]=edges[e1];auto[g,h]=edges[e2];if(u==g||u==h||v==g||v==h)continue;if((tested&255)==0&&cpu()>softcpu){timed=true;cursor1=e1;cursor2=e2;rowcomplete=false;break;}int failstage=-1,target=-1;for(int k=0;k<4;k++){calls[k]++;if(k==0)target=missing3(E[1][0],E[1][e1],E[1][e2]);if(k==1)target=missing3(E[2][0],E[0][e1],E[0][e2]);if(k==2)target=missing3(E[2][e1],E[0][0],E[0][e2]);if(k==3)target=missing3(E[2][e2],E[0][0],E[0][e1]);if(target>=0){failstage=k;fails[k]++;row[k]++;if(first_e1[k]<0){first_e1[k]=e1;first_e2[k]=e2;first_target[k]=target;}break;}}
+tested++;rowtested++;if(failstage<0){all4++;row[4]++;build(e1,e2);vector<pair<int,int>>stats;bool pass=true;for(int r:{C,L0,L1,L2}){B b=bfs(r);actualnewbfs++;stats.push_back({r,b.ecc});int t=bad(b);if(t>=0){discrepancy=true;pass=false;witness("EXACT_GATE_ACTUAL_GRAPH_DISCREPANCY.json",e1,e2,r,t,b);break;}}if(pass)for(int r=0;r<N;r++){if(cpu()>softcpu){timed=true;cursor1=e1;cursor2=e2;pass=false;break;}B b=bfs(r);oldbfs++;stats.push_back({r,b.ecc});int t=bad(b);if(t>=0){oldfails++;pass=false;if(oldfails==1)witness("FIRST_OLDOLD_FAILURE.json",e1,e2,r,t,b);break;}}if(pass){hit=true;savehit(e1,e2,stats);}if(hit||timed||discrepancy){rowcomplete=false;break;}}}
+per<<e1<<'\t'<<rowtested;for(int k=0;k<5;k++)per<<'\t'<<row[k];per<<'\t'<<(rowcomplete?1:0)<<'\n';if(hit||timed||discrepancy)break;}
+per.close();ofstream sf("STAGE_FIRST_FAILURES.json");sf<<"[";for(int k=0;k<4;k++){if(k)sf<<',';sf<<"{\"stage_index\":"<<k<<",\"e1\":"<<first_e1[k]<<",\"e2\":"<<first_e2[k]<<",\"first_missing_oldtarget\":"<<first_target[k]<<"}";}sf<<"]\n";
+ofstream o("NUMERIC_RESULT.json");o<<"{\"status\":\""<<(hit?"FOUND_PENDING_FRESH_ACCEPTANCE":discrepancy?"UNKNOWN_EXACT_GATE_BINDING_DISCREPANCY":timed?"UNKNOWN_BUDGET":"COMPLETE_NO_SOURCE_THREE_MATCHING_CUT_FOURHELPER_STAR")<<"\",\"eligible_other_edges\":"<<eligible.size()<<",\"domain_matching_pairs\":"<<domain<<",\"checked_matching_pairs\":"<<tested<<",\"stage_calls_centre_L0_L1_L2\":["<<calls[0]<<','<<calls[1]<<','<<calls[2]<<','<<calls[3]<<"],\"stage_firstfails_centre_L0_L1_L2\":["<<fails[0]<<','<<fails[1]<<','<<fails[2]<<','<<fails[3]<<"],\"all_four_exact_gate_pass\":"<<all4<<",\"actual_newroot_BFS\":"<<actualnewbfs<<",\"modified_oldroot_BFS\":"<<oldbfs<<",\"oldold_failed_candidates\":"<<oldfails<<",\"cursor_e1\":"<<cursor1<<",\"cursor_e2\":"<<cursor2<<",\"source_parse_count\":1,\"sourceD10validationBFS\":0,\"DP_word_OR_operations\":"<<dpops<<",\"edge_union_word_OR_operations\":"<<edgeops<<",\"cover_words_visited\":"<<coverwords<<",\"saved_fixed_sample_supported\":"<<(samplemiss?"true":"false")<<",\"native_CPU\":"<<cpu()<<",\"hit\":"<<(hit?"true":"false")<<"}\n";cout<<"checked="<<tested<<'/'<<domain<<" all4="<<all4<<" nativeCPU="<<cpu()<<'\n';return 0;}catch(const exception&e){ofstream f("NUMERIC_ERROR.txt");f<<e.what()<<'\n';cerr<<e.what()<<'\n';return 2;}}

@@ -1,0 +1,11 @@
+# Single restriction ablation: freeing P3 center colors still leaves the LP infeasible
+
+The prior restricted K6 model remains preserved in the parent directory. This new control removed exactly its six P3-center color-fixing bounds. It kept the same648 variables,5184 full-target coverage rows,108 disjointness rows,54 minimum-domination/color equalities and forbidden-pin bounds. In particular, this LP did not fix pin5 to any color and did not require the six P3 centers to have distinct colors. The source, cachedR1/R2 sets and minimum48-point F-domination model were unchanged.
+
+The frozen prediction was that removing this one extra color restriction would restore LP feasibility. The actual LP returned status2/infeasible, objective null. Process CPU was1.337638892 seconds, below the3-second LP allowance. The prediction was numerically refuted. This shows that the distinct-center restriction was not the sole source of the numerical contradiction in the unchanged minimum-domination K6 model.
+
+The conditional new integer family was not entered: MIP calls0, new graph/candidate0, new-root BFS0, source old-root BFS0 and ball recomputations0. The code's possible later pin5-to-color0 symmetry choice was never applied, because it occurs only after LP feasibility. Such a choice would preserve the integer family by helper renaming, but it is not part of this LP comparison.
+
+The result concerns the complete minimum-F-domination K6 model without center-color restrictions: six clique helpers, exactlyeight disjoint oldpins each, and S constrained to a minimum48-point dominating set of the108 free-path graph. It does not exclude K6 rules dropping this domination assumption, other helper graphs, edge surgery or generalN(13,3). No standalone exact Farkas/integer certificate of this LP contradiction has been exported here, so the report distinguishes numerical infeasibility from a strict mathematical family exclusion.
+
+The control stops here. There is no new MIP, K7, seed, score, budget continuation or overwritten old prediction/result. The previous single-point exact15-pin exclusion remains proved; the old two-helper model remains UNKNOWN. This is one controlled variant of the same K6 mechanism, not another independent construction method.

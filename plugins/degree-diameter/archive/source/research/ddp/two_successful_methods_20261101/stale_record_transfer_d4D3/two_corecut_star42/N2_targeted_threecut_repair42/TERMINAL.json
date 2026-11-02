@@ -1,0 +1,245 @@
+{
+  "status": "COMPLETE_NO_SIX_BASES_TARGETED_THREECUT_REPAIR42",
+  "source_id": "N2",
+  "source_JSON_parse_count": 1,
+  "source_D3_BFS_roots": 0,
+  "old_two_cut_batch_repeated": false,
+  "source_validity": "INHERITED",
+  "candidate_n": 42,
+  "candidate_m": 84,
+  "candidate_degree": 4,
+  "six_base_domain_completed": true,
+  "cross_base_literal_deduplication": false,
+  "scope": "Only saved six N2 newroot-pass/oldold-fail bases; third source cut disjoint from original pins; p-a original nonedge; one specified star-pin replacement",
+  "counts": {
+    "configurations_visited": 3048,
+    "saved_pair_R3_failed": 2622,
+    "saved_pair_R3_passed": 426,
+    "newroot_R3_failed_after_saved_pair_repaired": 426,
+    "newroot_R3_passed_after_saved_pair_repaired": 0,
+    "oldold_failed_after_prior_gates": 0,
+    "complete_hits": 0,
+    "newroot_BFS_roots": 426,
+    "final_oldlabel_BFS_roots": 0,
+    "saved_pair_targeted_BFS": 3048
+  },
+  "per_base_counts": [
+    {
+      "base_configuration": 303,
+      "variants": 508,
+      "saved_pair_passed": 84,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    },
+    {
+      "base_configuration": 1286,
+      "variants": 508,
+      "saved_pair_passed": 84,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    },
+    {
+      "base_configuration": 1446,
+      "variants": 508,
+      "saved_pair_passed": 84,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    },
+    {
+      "base_configuration": 2076,
+      "variants": 508,
+      "saved_pair_passed": 44,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    },
+    {
+      "base_configuration": 2248,
+      "variants": 508,
+      "saved_pair_passed": 86,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    },
+    {
+      "base_configuration": 2844,
+      "variants": 508,
+      "saved_pair_passed": 44,
+      "newroot_passed": 0,
+      "oldold_failures": 0
+    }
+  ],
+  "first_stage_witnesses": {
+    "first_saved_pair_repaired": {
+      "parameters": {
+        "base_configuration": 303,
+        "two_source_cuts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            35
+          ]
+        ],
+        "four_original_pins": [
+          1,
+          2,
+          4,
+          35
+        ],
+        "saved_failed_pair": [
+          0,
+          1
+        ],
+        "saved_distance": 4,
+        "variant": 0,
+        "third_oriented_source_cut": [
+          0,
+          18
+        ],
+        "deleted_star_pin": 1,
+        "added_old_old_repair": [
+          1,
+          0
+        ],
+        "replacement_star_pin": 18,
+        "final_star_pins": [
+          2,
+          4,
+          18,
+          35
+        ],
+        "new_label": 41
+      },
+      "stage": "SAVED_PAIR_REPAIRED",
+      "root": 0,
+      "target": 1,
+      "actual_shortest_distance": 1,
+      "actual_shortest_path": [
+        0,
+        1
+      ]
+    },
+    "first_newroot_failed_after_pair_repair": {
+      "parameters": {
+        "base_configuration": 303,
+        "two_source_cuts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            35
+          ]
+        ],
+        "four_original_pins": [
+          1,
+          2,
+          4,
+          35
+        ],
+        "saved_failed_pair": [
+          0,
+          1
+        ],
+        "saved_distance": 4,
+        "variant": 0,
+        "third_oriented_source_cut": [
+          0,
+          18
+        ],
+        "deleted_star_pin": 1,
+        "added_old_old_repair": [
+          1,
+          0
+        ],
+        "replacement_star_pin": 18,
+        "final_star_pins": [
+          2,
+          4,
+          18,
+          35
+        ],
+        "new_label": 41
+      },
+      "stage": "NEWROOT_R3_FAIL_AFTER_PAIR_REPAIR",
+      "root": 41,
+      "target": 1,
+      "actual_shortest_distance": 4,
+      "actual_shortest_path": [
+        41,
+        2,
+        15,
+        34,
+        1
+      ]
+    },
+    "first_saved_pair_still_failed": {
+      "parameters": {
+        "base_configuration": 303,
+        "two_source_cuts": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            35
+          ]
+        ],
+        "four_original_pins": [
+          1,
+          2,
+          4,
+          35
+        ],
+        "saved_failed_pair": [
+          0,
+          1
+        ],
+        "saved_distance": 4,
+        "variant": 1,
+        "third_oriented_source_cut": [
+          18,
+          0
+        ],
+        "deleted_star_pin": 1,
+        "added_old_old_repair": [
+          1,
+          18
+        ],
+        "replacement_star_pin": 0,
+        "final_star_pins": [
+          0,
+          2,
+          4,
+          35
+        ],
+        "new_label": 41
+      },
+      "stage": "SAVED_PAIR_R3_FAIL",
+      "root": 0,
+      "target": 1,
+      "actual_shortest_distance": 4,
+      "actual_shortest_path": [
+        0,
+        19,
+        27,
+        34,
+        1
+      ]
+    }
+  },
+  "positive_prediction": "At least one variant repairs saved pair and preserves newroot R3",
+  "positive_prediction_supported": false,
+  "complete_graph_hit": false,
+  "actual_process_CPU_seconds": 0.099139578,
+  "preparation_charge_CPU_seconds": 0.15,
+  "wholecase_CPU_seconds": 0.249139578,
+  "wholecase_CPU_cap_seconds": 5,
+  "further_sources_or_repairs_authorized": false,
+  "terminal": true,
+  "active_processes": 0,
+  "next": "STOP; root reviews hit or finite-scope failure; no second repair/N3 batch"
+}

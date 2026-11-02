@@ -1,0 +1,131 @@
+{
+  "created": "2026-10-06T02:13:14.814914+00:00",
+  "modified": "2026-10-06T02:13:15.030470+00:00",
+  "id": 23176213,
+  "conceptrecid": "23113462",
+  "doi": "10.5281/zenodo.23176213",
+  "conceptdoi": "10.5281/zenodo.23113462",
+  "doi_url": "https://doi.org/10.5281/zenodo.23176213",
+  "metadata": {
+    "title": "Large graphs for the degree–diameter problem: n(5,7) ≥ 5894, n(6,3) ≥ 120, n(7,4) ≥ 684, n(7,5) ≥ 2758, n(13,3) ≥ 868, n(14,3) ≥ 1094, n(14,4) ≥ 8303",
+    "doi": "10.5281/zenodo.23176213",
+    "publication_date": "2026-10-06",
+    "description": "<p>Version 4 adds n(5,7) &ge; 5894 (previous lower bound 5824, R. Rajiv, 2026; before that 5516, E. Loz, 2006): a 5-regular<br>graph of diameter 7 on 5894 vertices, the lift of a 2-vertex voltage graph (a dipole in the sense of Loz and &Scaron;ir&aacute;ň) over<br>Z421 ⋊ Z7, product (s,f)(s',f') = (s + 33^f&middot;s' mod 421, f + f' mod 7), a group of odd order 2947. Each vertex type has<br>two neighbours of its own type and three of the other type. A group of odd order has no involutions, so no Cayley<br>graph of odd degree exists on it; the two vertex types make an odd degree possible. Automorphism group (nauty) of<br>order 2947 with two orbits of size 2947, so the graph is not vertex-transitive. Found by simulated annealing on the<br>voltages in a controlled comparison of odd- and even-order groups, and verified by independent programs (plain-Python<br>and C breadth-first search from every vertex, NetworkX, F. Comellas's checker: diameter 7, average distance 5.891057).<br>The search programs were produced with the help of an AI assistant (Claude, Anthropic) under the author's direction;<br>all results were independently verified.</p>\n<p>Version 3 adds two graphs of degree 7:<br>&bull; n(7,5) &ge; 2758 (previous lower bound 2756, M. J. Dinneen and P. R. Hafner, 1994): a 7-regular graph of diameter 5 on<br>&nbsp; 2758 vertices, the lift of a 2-vertex voltage graph (a dipole in the sense of Loz and &Scaron;ir&aacute;ň) over Z197 ⋊ Z7 (order<br>&nbsp; 1379). Each vertex type has six neighbours of its own type and one of the other type.<br>&bull; n(7,4) &ge; 684 (previous lower bound 672, M. Sampels, 1997): a 7-regular graph of diameter 4 on 684 vertices, the lift<br>&nbsp; of a 2-vertex voltage graph over Z38 ⋊ Z9 (order 342). Each vertex type has four neighbours of its own type and three<br>&nbsp; of the other type.<br>Neither uses an involution (for odd degree a Cayley graph must). Each has an automorphism group of the order of the<br>lifted group with two orbits, so neither is vertex-transitive. Found by simulated annealing on the voltages over<br>semidirect products of cyclic groups of order just above half the record, and verified by independent programs<br>(plain-Python and C breadth-first search from every vertex, NetworkX, F. Comellas's checker). The search programs<br>were produced with the help of an AI assistant (Claude, Anthropic) under the author's direction; all results were<br>independently verified.</p>\n<p>Version 2 adds n(6,3) &ge; 120 (previous lower bound 119, R. Rajiv, 2026): a 6-regular graph of diameter 3 on 120<br>vertices, obtained as the lift of a 2-vertex voltage graph over SmallGroup(60,9) &cong; C5 &times; A4. Each vertex type has one<br>semi-edge (an involution, i.e. a perfect matching inside the type) and five edges to the other type. Its automorphism<br>group has order 60 with two orbits of size 60, so it is not vertex-transitive (the Cayley optimum for (6,3) is 108).<br>It was found by a systematic search over the number of base vertices &times; all groups of the given order (GAP SmallGroups)<br>&times; orders above the record, with simulated annealing on the voltages, and verified by independent programs<br>(plain-Python BFS from every vertex, a GAP rebuild from the voltages, nauty). Files: edge lists (0- and 1-based),<br>graph6, construction data, GAP rebuild script, group table, verifier, SHA256SUMS, and a detailed PDF write-up.<br>The search programs and write-up were produced with the help of an AI assistant (Claude, Anthropic) under the<br>author's direction; all results were independently verified.</p>\n<p>Three graphs that improve the lower bounds in the Table of Large Degree/Diameter Graphs (F. Comellas):<br>&nbsp; (&Delta;,D) = (13,3): order 868 &nbsp; (previous best 859, D. Yugeswardeenoo, 2026)<br>&nbsp; (&Delta;,D) = (14,3): order 1094 &nbsp;(previous best 1088, R. Rajiv, 2026)<br>&nbsp; (&Delta;,D) = (14,4): order 8303 &nbsp;(previous best 8288, R. Rajiv, 2026)</p>\n<p>(14,3) order 1094 &mdash; an extension of R. Rajiv's 1088-vertex graph. All 7,360 of its edges are kept. Added: 6 new<br>vertices of degree 14 (80 edges to original vertices, 2 between new vertices) and 215 new edges between original<br>vertices in their unused degree slots (510 of the 512 unused slots now used). Edge positions found by simulated<br>annealing until the diameter was 3. Vertices 0&ndash;1087 keep Rajiv's numbering (the vertex order of the sparse6 string in his file on the table's site).</p>\n<p>(14,4) order 8303 &mdash; an extension of R. Rajiv's 8288-vertex graph. All 57,791 of its edges are kept. Added: 15 new<br>vertices of degree 14 (190 edges to original vertices, 10 between new vertices) and 129 new edges between original<br>vertices in their unused slots, in two steps (8302, then 8303). Vertices 0&ndash;8287 keep Rajiv's numbering (the vertex order of the sparse6 string in his file on the table's site).</p>\n<p>(13,3) order 868 &mdash; an independent construction. Start from the 585-vertex polarity fold of the generalized<br>quadrangle over GF(8) (Q'8 family); for each of its 65 absolute vertices add 4 \"untied twins\" (adjacent to the other<br>8 vertices of the absolute vertex's line, not to the vertex itself), giving 845 vertices; add a layer of 22 vertices<br>whose edges, with extra edges in unused slots, are placed by targeted simulated annealing (order 867); then one more<br>vertex with the annealed edges re-optimised (about 890 of 5,635 edges moved).</p>\n<p>Files: plain edge lists, one edge \"u v\" per line, vertices numbered from 0, first line a comment; SHA256SUMS.txt holds<br>the SHA-256 fingerprints. Each graph was verified with two independent implementations (breadth-first search from<br>every vertex, and networkx): maximum degree &Delta;, diameter D, connected, simple.</p>\n<p>The search programs were written and run by an AI assistant (Anthropic's Claude) under the author's direction.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "de Messieres, Michel",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "degree-diameter problem",
+      "large graphs",
+      "extremal graph theory",
+      "graph construction",
+      "voltage graph",
+      "lift",
+      "C5 × A4",
+      "dipole",
+      "semidirect product"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+        "relation": "references",
+        "resource_type": "dataset",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.48550/arXiv.2406.18994",
+        "relation": "references",
+        "resource_type": "publication",
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 3,
+          "is_last": false,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "23113462"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Large graphs for the degree–diameter problem: n(5,7) ≥ 5894, n(6,3) ≥ 120, n(7,4) ≥ 684, n(7,5) ≥ 2758, n(13,3) ≥ 868, n(14,3) ≥ 1094, n(14,4) ≥ 8303",
+  "links": {
+    "self": "https://zenodo.org/api/records/23176213",
+    "self_html": "https://zenodo.org/records/23176213",
+    "preview_html": "https://zenodo.org/records/23176213?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.23176213",
+    "self_doi": "https://doi.org/10.5281/zenodo.23176213",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23176213",
+    "reserve_doi": "https://zenodo.org/api/records/23176213/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/23113462",
+    "parent_html": "https://zenodo.org/records/23113462",
+    "parent_doi": "https://doi.org/10.5281/zenodo.23113462",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23113462",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:23176213/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:23176213/sequence/default",
+    "files": "https://zenodo.org/api/records/23176213/files",
+    "media_files": "https://zenodo.org/api/records/23176213/media-files",
+    "latest": "https://zenodo.org/api/records/23176213/versions/latest",
+    "latest_html": "https://zenodo.org/records/23176213/latest",
+    "versions": "https://zenodo.org/api/records/23176213/versions",
+    "draft": "https://zenodo.org/api/records/23176213/draft",
+    "access_links": "https://zenodo.org/api/records/23176213/access/links",
+    "access_grants": "https://zenodo.org/api/records/23176213/access/grants",
+    "access_users": "https://zenodo.org/api/records/23176213/access/users",
+    "access_request": "https://zenodo.org/api/records/23176213/access/request",
+    "access": "https://zenodo.org/api/records/23176213/access",
+    "communities": "https://zenodo.org/api/records/23176213/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/23176213/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/23176213/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/23176213/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/23176213/quota-increase",
+    "requests": "https://zenodo.org/api/records/23176213/requests"
+  },
+  "updated": "2026-10-06T02:13:15.030470+00:00",
+  "recid": "23176213",
+  "revision": 3,
+  "files": [
+    {
+      "id": "47863747-969d-4604-8a5d-794c25e48d28",
+      "key": "graph_5_7_n5894.txt",
+      "size": 142025,
+      "links": {
+        "self": "https://zenodo.org/api/records/23176213/files/graph_5_7_n5894.txt/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1917778"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 16,
+    "unique_downloads": 16,
+    "views": 73,
+    "unique_views": 59,
+    "version_downloads": 6,
+    "version_unique_downloads": 6,
+    "version_unique_views": 22,
+    "version_views": 27
+  },
+  "state": "done",
+  "submitted": true
+}

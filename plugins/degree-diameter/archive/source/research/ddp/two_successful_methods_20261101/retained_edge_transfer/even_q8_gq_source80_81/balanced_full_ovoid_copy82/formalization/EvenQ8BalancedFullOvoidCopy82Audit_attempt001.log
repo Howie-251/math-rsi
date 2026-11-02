@@ -1,0 +1,32 @@
+graph : SimpleGraph Vertex
+label : Vertex ≃ Fin 346515
+def DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.FinalClaim : Prop :=
+Fintype.card Vertex = 346515 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.d82_346515 :
+  Fintype.card Vertex = 346515 ∧
+    (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+      DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+theorem DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.d82_346515 : Fintype.card Vertex = 346515 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_three, not_diameterAtMost_two⟩⟩⟩
+'DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.d82_346515' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.final_claim : FinalClaim
+theorem DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.final_claim : FinalClaim :=
+d82_346515
+'DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.final_claim' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.load_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.old_walk_bound_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8BalancedFullOvoidCopy82.label_new_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

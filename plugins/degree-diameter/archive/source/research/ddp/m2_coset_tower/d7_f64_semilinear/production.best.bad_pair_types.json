@@ -1,0 +1,147 @@
+{
+  "input": "production.best.edges",
+  "scope": "Only three orbit representative BFS; prior 3200-root generic check reused without repetition.",
+  "orbit_sizes": {
+    "leaf": 2688,
+    "block": 448,
+    "head": 64
+  },
+  "representative_roots": [
+    {
+      "type": "leaf",
+      "root": 0,
+      "total_missing": 32,
+      "missing_by_layer": {
+        "leaf": 27,
+        "block": 4,
+        "head": 1
+      },
+      "distance_histogram": {
+        "0": 1,
+        "1": 7,
+        "2": 42,
+        "3": 248,
+        "4": 1198,
+        "5": 1672,
+        "6": 32
+      },
+      "distance_histogram_by_layer": {
+        "leaf": {
+          "0": 1,
+          "1": 6,
+          "2": 35,
+          "3": 206,
+          "4": 999,
+          "5": 1414,
+          "6": 27
+        },
+        "block": {
+          "1": 1,
+          "2": 6,
+          "3": 36,
+          "4": 173,
+          "5": 228,
+          "6": 4
+        },
+        "head": {
+          "2": 1,
+          "3": 6,
+          "4": 26,
+          "5": 30,
+          "6": 1
+        }
+      }
+    },
+    {
+      "type": "block",
+      "root": 2688,
+      "total_missing": 27,
+      "missing_by_layer": {
+        "leaf": 24,
+        "block": 0,
+        "head": 3
+      },
+      "distance_histogram": {
+        "0": 1,
+        "1": 7,
+        "2": 42,
+        "3": 240,
+        "4": 1203,
+        "5": 1680,
+        "6": 27
+      },
+      "distance_histogram_by_layer": {
+        "leaf": {
+          "1": 6,
+          "2": 36,
+          "3": 216,
+          "4": 1038,
+          "5": 1368,
+          "6": 24
+        },
+        "block": {
+          "0": 1,
+          "2": 6,
+          "3": 24,
+          "4": 144,
+          "5": 273
+        },
+        "head": {
+          "1": 1,
+          "4": 21,
+          "5": 39,
+          "6": 3
+        }
+      }
+    },
+    {
+      "type": "head",
+      "root": 3136,
+      "total_missing": 63,
+      "missing_by_layer": {
+        "leaf": 42,
+        "block": 21,
+        "head": 0
+      },
+      "distance_histogram": {
+        "0": 1,
+        "1": 7,
+        "2": 42,
+        "3": 252,
+        "4": 1239,
+        "5": 1596,
+        "6": 63
+      },
+      "distance_histogram_by_layer": {
+        "leaf": {
+          "2": 42,
+          "3": 252,
+          "4": 1092,
+          "5": 1260,
+          "6": 42
+        },
+        "block": {
+          "1": 7,
+          "4": 147,
+          "5": 273,
+          "6": 21
+        },
+        "head": {
+          "0": 1,
+          "5": 63
+        }
+      }
+    }
+  ],
+  "bad_unordered_pairs_by_type": {
+    "LL": 36288,
+    "LB": 10752,
+    "LH": 2688,
+    "BB": 0,
+    "BH": 1344,
+    "HH": 0
+  },
+  "bad_unordered_pairs": 51072,
+  "derivation": "Same-type count = orbit size times root missing within type / 2; cross-type = source orbit size times root missing in target type. Reverse counts checked.",
+  "cpu_seconds": 0.011040874
+}

@@ -1,0 +1,60 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All obligations in the original-graph single-triangle exclusion and its necessary trace/normal-form dependency chain are discharged; same-family paper judgment remains provisional.",
+  "theorem_statement": "Every simple undirected graph on 59 vertices with maximum degree at most 8, a path of length one or two between every distinct pair, and actual N15 matching B rows at all zero-triangle vertices cannot have exactly one triangle.",
+  "audited_inputs": [
+    "proofs/dd82/n59/single_triangle_normal_form_exclusion_20261011.md",
+    "proofs/dd82/n59/h5_nonzero_trace_constraints_20261011.md",
+    "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md"
+  ],
+  "excluded_dependency_scope": "H5 line 155 optional short-cycle corollary, N4/N5, any general H5 exclusion, and any derivation of N15 from arbitrary n59 hypotheses.",
+  "trace_path": "reviews/dd82/proof-checker-single-triangle-20261011",
+  "thread_id": "/root/proof_review_single_triangle",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "requested_configuration_accepted": true,
+  "actual_reviewer_model": null,
+  "actual_reviewer_backend": "not independently disclosed",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T08:37:43.756918+00:00",
+  "details": {
+    "theorems_audited": 3,
+    "proof_obligations_total": 32,
+    "proof_obligations_discharged": 32,
+    "issues": [],
+    "counterexample_attempts": [
+      "Omitted 22/211 row cases",
+      "Omitted edges in complete triangle-row support",
+      "Common neighbors outside R",
+      "Overlapping parent pairs",
+      "Active endpoints of internal light pairs",
+      "Inactive endpoints of cross light pairs",
+      "Arbitrary overlaps among R_u,R_v,R_w",
+      "Orientation or double counting in heavy endpoint capacity"
+    ],
+    "counterexamples_found": 0,
+    "exact_checks": {
+      "row_candidate_count": 4,
+      "row_candidates_after_cross_edge_triangle_inequalities": 1,
+      "all_simple_labeled_graphs_on_five_vertices": 1024,
+      "four_walk_identity": "PASS",
+      "five_walk_identity": "PASS",
+      "elapsed_seconds_approx": 0.1,
+      "cpu_threads": 1,
+      "sat_used": false,
+      "role": "Supplementary; analytic original-graph proof is the basis of the verdict."
+    },
+    "source_modified": false,
+    "lean_certification": false,
+    "user_overrides_respected": [
+      "No input hashes or checksums",
+      "No TeX/PDF/HTML",
+      "No proof-source modification",
+      "No research-wiki edits"
+    ]
+  }
+}

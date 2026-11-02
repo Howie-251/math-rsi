@@ -1,0 +1,14 @@
+Actual first dispatcher output (exec session7280, exit1):
+{"completed": 200, "all_CPU": 3096.445658}
+Traceback (most recent call last):
+  File "compile_remaining_rows.py", line 89, in <module>
+    if snapshot() >= 14800 and not stop:
+  File "compile_remaining_rows.py", line 48, in snapshot
+    r = json.loads(h.read_text())
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+This is a status-file read/write race, not a Lean failure.
+After existing children finished,217 row receipts (including2 probes) all exited0.
+No old or completed module was rebuilt. Metadata writes were changed to atomic
+replace before dispatching only the183 not-yet-compiled rows. Aggregate CPU
+includes all first-run children and remains under the same15000 limit.

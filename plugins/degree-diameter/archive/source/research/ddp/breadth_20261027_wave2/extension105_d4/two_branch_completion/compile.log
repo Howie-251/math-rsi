@@ -1,0 +1,41 @@
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp: In function ‘std::vector<std::array<int, 2> > graph(const std::vector<std::array<int, 2> >&)’:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:23:110: error: reference to ‘fixed’ is ambiguous
+   23 |  array<int,N>deg{};auto add=[&](Edge e){int u=e[0],v=e[1];adj[u][deg[u]++]=v;adj[v][deg[v]++]=u;};for(auto e:fixed)add(e);for(auto e:extra)add(e);for(int d:deg)assert(d==D);vector<Edge> e=fixed;e.insert(e.end(),extra.begin(),extra.end());sort(e.begin(),e.end());assert(e.size()==210);assert(adjacent_find(e.begin(),e.end())==e.end());return e;
+      |                                                                                                              ^~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:6:
+/usr/include/c++/11/bits/ios_base.h:1071:3: note: candidates are: ‘std::ios_base& std::fixed(std::ios_base&)’
+ 1071 |   fixed(ios_base& __base)
+      |   ^~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:15:14: note:                 ‘std::vector<std::array<int, 2> > fixed’
+   15 | vector<Edge> fixed;
+      |              ^~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:23:189: error: reference to ‘fixed’ is ambiguous
+   23 |  array<int,N>deg{};auto add=[&](Edge e){int u=e[0],v=e[1];adj[u][deg[u]++]=v;adj[v][deg[v]++]=u;};for(auto e:fixed)add(e);for(auto e:extra)add(e);for(int d:deg)assert(d==D);vector<Edge> e=fixed;e.insert(e.end(),extra.begin(),extra.end());sort(e.begin(),e.end());assert(e.size()==210);assert(adjacent_find(e.begin(),e.end())==e.end());return e;
+      |                                                                                                                                                                                             ^~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:6:
+/usr/include/c++/11/bits/ios_base.h:1071:3: note: candidates are: ‘std::ios_base& std::fixed(std::ios_base&)’
+ 1071 |   fixed(ios_base& __base)
+      |   ^~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:15:14: note:                 ‘std::vector<std::array<int, 2> > fixed’
+   15 | vector<Edge> fixed;
+      |              ^~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp: In function ‘int main(int, char**)’:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:27:112: error: reference to ‘fixed’ is ambiguous
+   27 |  ifstream f(out+"/fixed.edges");int n,m;f>>n>>m;assert(n==N&&m==202);for(int k=0;k<m;k++){Edge e;f>>e[0]>>e[1];fixed.push_back(e);}
+      |                                                                                                                ^~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:6:
+/usr/include/c++/11/bits/ios_base.h:1071:3: note: candidates are: ‘std::ios_base& std::fixed(std::ios_base&)’
+ 1071 |   fixed(ios_base& __base)
+      |   ^~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/search.cpp:15:14: note:                 ‘std::vector<std::array<int, 2> > fixed’
+   15 | vector<Edge> fixed;
+      |              ^~~~~

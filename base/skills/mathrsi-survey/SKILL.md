@@ -92,7 +92,26 @@ flowchart TD
 
 调用返回后，survey报告owner实际读领域提取，将独有正文合入 `LITERATURE.md`；若保留独占提取稿，就把它作为有明确内容的附件链接，canonical报告仍写出关键进口与用途，不再复制一份同内容总报告。wiki由本轮指定owner合并更新。领域子调用中的ARIS提取、原PDF和来源证据继续保留；它并不取得调度后继prove的权限。
 
-未启用领域插件或其它数学题走下面通用research-lit分支。ECC草案未按本轮标准验收，不因题目是码论就自动加载；只有用户明确授权使用时才作为指定领域输入，保持其draft状态，不读取或恢复原研究。
+### 已启用 DD 时，实际接入构造族与公开比较
+
+当前题属于 degree–diameter 且插件已启用时，读取 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)的接手／公开比较段和 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，再按[调用地图](../../../plugins/degree-diameter/references/reading-and-calling.md)定位本次原件。输入包括 `(d,D,n)`、最大度还是正则、固定构造还是竞争目标、已有来源和原caller。以随仓[历史 research-wiki](../../../plugins/degree-diameter/archive/source/research-wiki/)及[公开比较目录](../../../plugins/degree-diameter/archive/source/research/ddp/two_successful_methods_20261101/public_baseline_audit/)为本地种子，读与当前参数／机制相关的实体、来源和后续更正；历史比较不冒作今日最强纪录，归档wiki只读，新事实写当前任务wiki。
+
+本survey协调者持有唯一一次research-lit发现与LITERATURE writer；DD子调用负责本次领域关键词、构造族条件与合法代入，不另开平行广搜。已取得同范围结果时传给DD阅读者，只补未核来源或条件；新题仍执行本次需要的外部查漏，不把归档视为全领域覆盖。可直接发出：
+
+```text
+读取本克隆 plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md，
+并执行 dd-transfer-diagnosis 的§4公开比较范围。
+原题/当前义务、(d,D,n)、最大度/正则、固定/竞争目标及原caller见本次输入。
+读archive/source/research-wiki相关页与public_baseline_audit相关原件，
+给本轮research-lit的领域关键词、构造族/引用链及确切缺源；已有发现结果一并消费，
+不重复完整广搜。调查由当前survey统一调用research-lit并传composed到LITERATURE.md。
+返回已发表实例、已知族合法代入、条件/版本/原文定位及候选影响；
+只写 work/literature/dd/ 独占提取稿或返回正文，不改archive、共享LITERATURE或另建wiki。
+```
+
+收到DD提取后，按本技能§3–5核原对象、参数存在性、最大度／正则条件和一般复制等组合规则；将明确发表值、合法代入推论与未核当前最优分开合入 `LITERATURE.md`。只比某家族已列实例不足以支撑竞争判断。把“旧比较→新保证→受影响候选／可用新源→剩余条件”返回prepare或原route-loop／prove义务，父caller据此调整实际队列；固定目标保持不变。原公式及证明留在DD，不在survey重抄；引用、wiki及后续深读仍按下文共享流程完成。
+
+未启用领域插件、或无对应已启用领域分支的数学题，走下面通用research-lit分支。ECC草案未按本轮标准验收，不因题目是码论就自动加载；只有用户明确授权使用时才作为指定领域输入，保持其draft状态，不读取或恢复原研究。
 
 ### 通用发现分支与共享结果消费
 
@@ -166,6 +185,8 @@ research-lit的20篇／前三页规则用于发现，不是数学进口的阅读
 ## 5. 建立准确基线，并按需做候选查新
 
 基线回答“在同一原对象和参数范围内，已经知道什么”。写出上下界、严格性、归一化、有限起点与依赖。表中分开原文明确报告的纪录、由原文公式本次代入推得的数、以及我们新组合的推论。渐近领先项更好不必在小参数更强；“充分大”未给阈值就不擅自给有限起点。没有完成当前纪录查漏时称“本次已核来源中的基线”，不要称世界最强。
+
+当调查会决定候选是否有竞争价值，除表列实例还要检查已知构造族能否在本参数合法代入：核参数存在性、对象限制及组合规则，再写本次推得的保证。表中“已构造下界”和“理论上界”必须分列；一般族未单列该数值不等于没有这一保证。返回 caller 时给旧比较→新保证→受影响候选／队列→可用新输入或具体缺源，使它能立即改变下一动作。合法性、验证等级与纪录价值分别保留，不要求重跑未变构造。DD 的 F7 实例被 Delorme 合法代入超过、P33 表的33与上界43被误读风险，见[实际比较链](../mathrsi-meta-evolve/references/evidence-and-transfer.md#4-链三基线改变的是研究价值不是图的合法性)；这里只复用消费动作，领域公式仍由插件提供。
 
 如果后继已形成明确方法／贡献，需要单独核“某结果是否已被包含”，这时才调用novelty-check。先读对应宿主入口，交给它原题、候选delta、上述近邻与原文定位，而非只说“评价新颖性”：
 

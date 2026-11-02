@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_BEFORE_EXACT_ENDPOINT_CHECK",
+  "target_Delta": 4,
+  "target_D": 8,
+  "savedL": 3243,
+  "savedL_date": "2026-10-27",
+  "source_n": 1344,
+  "hypothetical_n": 4032,
+  "hypothetical_m": 8064,
+  "prediction": "The unique nontrivial globalG-symmetric C3-sheet assignment reaches every4032 state within8 from both base representatives.",
+  "rule": "Use deck G x C3, keep four involution semiedges sheet0, W5 forward sheet0 and W6 forward sheet1; true reverse sheets0 and-1.",
+  "minimality": "In C3 every self-inverse semi-edge sheet is0. Two base gauges set W5 sheet0; W6 relative sheet0 is disconnected, and relative+1/-1 are isomorphic under sheet negation. Thus there is exactly one nontrivial fixed-voltages G x C3 control under this restricted rule.",
+  "first_gate": "Enumerate all graph-nonbacktracking walks of length0..8 from a base representative and union sheet masks for all(base,g). Any missing state strictly rejects D8 and stops. Pass both representatives then build full4032/8064 graph and perform two full representative BFS.",
+  "budget_CPU_seconds": 5,
+  "stop": "First failing representative stops; no free sheet assignments, field/group/source variants or old sourceD7BFS.",
+  "source_binding": "SOURCE.json and current official literal header",
+  "actual_n": null,
+  "actual_D": null
+}

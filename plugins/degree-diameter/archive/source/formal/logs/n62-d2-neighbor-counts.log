@@ -1,0 +1,163 @@
+DegreeDiameter/N62D2.lean:55:35: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  simp [̵g̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵]̵[̲g̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:210:31: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  simp [Finset.sum_add_distrib,̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:212:8: warning: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62D2.0.DegreeDiameter.adjacency_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DegreeDiameter/N62D2.lean:619:11: error: Application type mismatch: The argument
+  hcJ
+has type
+  {w ∈ insert r (insert w (insert a (d2Class G r w a j))) | G.Adj w x}.card = 1
+but is expected to have type
+  {y ∈ d2Class G r w a j | G.Adj y x}.card = 1
+in the application
+  And.intro hcJ
+DegreeDiameter/N62D2.lean:633:37: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+DegreeDiameter/N62D2.lean:633:37: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+DegreeDiameter/N62D2.lean:636:16: error: Type mismatch: After simplification, term
+  hcI
+ has type
+  {w ∈ insert r (insert w (insert a (d2Class G r w a i))) | G.Adj w q}.card = 1
+but is expected to have type
+  {x ∈ d2Class G r w a i | G.Adj x q}.card = 1
+DegreeDiameter/N62D2.lean:636:41: error: Type mismatch: After simplification, term
+  hcJ
+ has type
+  {w ∈ insert r (insert w (insert a (d2Class G r w a j))) | G.Adj w q}.card = 1
+but is expected to have type
+  {y ∈ d2Class G r w a j | G.Adj y q}.card = 1
+DegreeDiameter/N62D2.lean:617:33: warning: This simp argument is unused:
+  hx'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵j̵,̵h̵x̵'̵.̵2̵.̵1̵,̵h̵w̵x̵,̵h̵a̵x̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲j̲,̲ ̲h̲w̲x̲,̲ ̲h̲a̲x̲]̲ at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:617:41: warning: This simp argument is unused:
+  hwx
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hx'.2.1, ̲hw̵x̵,̵h̵ax] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:617:45: warning: This simp argument is unused:
+  hax
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hx'.2.1, ̲hwx,̵h̵a̵x̵] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:618:33: warning: This simp argument is unused:
+  hx'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵k̵,̵h̵x̵'̵.̵2̵.̵1̵,̵h̵w̵x̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲k̲,̲ ̲h̲w̲x̲]̲ at hcK
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:618:41: warning: This simp argument is unused:
+  hwx
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hk, ̲hx'.2.1,̵h̵w̵x̵] at hcK
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:631:35: warning: This simp argument is unused:
+  hq'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵i̵,̵h̵q̵'̵.̵2̵.̵1̵,̵h̵w̵q̵,̵h̵a̵q̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲i̲,̲ ̲h̲w̲q̲,̲ ̲h̲a̲q̲]̲ at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:631:43: warning: This simp argument is unused:
+  hwq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hi, ̲hq'.2.1, ̲hw̵q̵,̵h̵aq] at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:631:47: warning: This simp argument is unused:
+  haq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hi, ̲hq'.2.1, ̲hwq,̵h̵a̵q̵] at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:632:35: warning: This simp argument is unused:
+  hq'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵j̵,̵h̵q̵'̵.̵2̵.̵1̵,̵h̵w̵q̵,̵h̵a̵q̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲j̲,̲ ̲h̲w̲q̲,̲ ̲h̲a̲q̲]̲ at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:632:43: warning: This simp argument is unused:
+  hwq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hq'.2.1, ̲hw̵q̵,̵h̵aq] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:632:47: warning: This simp argument is unused:
+  haq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hq'.2.1, ̲hwq,̵h̵a̵q̵] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:634:35: warning: This simp argument is unused:
+  hq'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵i̵,̵h̵q̵'̵.̵2̵.̵1̵,̵h̵w̵q̵,̵h̵a̵q̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲i̲,̲ ̲h̲w̲q̲,̲ ̲h̲a̲q̲]̲ at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:634:43: warning: This simp argument is unused:
+  hwq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hi, ̲hq'.2.1, ̲hw̵q̵,̵h̵aq] at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:634:47: warning: This simp argument is unused:
+  haq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hi, ̲hq'.2.1, ̲hwq,̵h̵a̵q̵] at hcI
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:635:35: warning: This simp argument is unused:
+  hq'.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵m̵o̵n̵N̵e̵i̵g̵h̵b̵o̵r̵C̵o̵u̵n̵t̵,̵h̵j̵,̵h̵q̵'̵.̵2̵.̵1̵,̵h̵w̵q̵,̵h̵a̵q̵]̵[̲c̲o̲m̲m̲o̲n̲N̲e̲i̲g̲h̲b̲o̲r̲C̲o̲u̲n̲t̲,̲ ̲h̲j̲,̲ ̲h̲w̲q̲,̲ ̲h̲a̲q̲]̲ at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:635:43: warning: This simp argument is unused:
+  hwq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hq'.2.1, ̲hw̵q̵,̵h̵aq] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:635:47: warning: This simp argument is unused:
+  haq
+
+Hint: Omit it from the simp argument list.
+  simp [commonNeighborCount, ̲hj, ̲hq'.2.1, ̲hwq,̵h̵a̵q̵] at hcJ
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

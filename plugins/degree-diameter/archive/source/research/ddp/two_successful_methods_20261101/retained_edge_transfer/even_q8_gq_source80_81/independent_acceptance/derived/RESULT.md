@@ -1,0 +1,3 @@
+# derived: filled graph independent acceptance PASS
+
+n=327744, m=13109760, all vertices degree80. Entire unfilled oldbody of 13104640edges retained exactly; all old/new edges and complete degrees match the accepted geometry formulas. All 64new helper roots have measured histogram [1, 80, 5544, 322119]. Actual no-distance<=2 witness is [0, 713]. Old all-pairs projection routes, all-helper measurements and old-only-interior prefix proof give exactD3 for the endpoint and each actual helper prefix. No oldrootR3BFS, field laws, smallGQprojections or Lean were rerun. Unfilled source is a reproduction only.

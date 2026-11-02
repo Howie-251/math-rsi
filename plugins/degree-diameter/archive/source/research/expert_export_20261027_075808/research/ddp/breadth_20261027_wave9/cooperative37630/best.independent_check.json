@@ -1,0 +1,86 @@
+{
+  "status": "COMPLETE_NEGATIVE_CANDIDATE_CHECK",
+  "n": 37630,
+  "edges": 205317,
+  "simple": true,
+  "connected": true,
+  "minimum_degree": 6,
+  "maximum_degree": 11,
+  "all205296_source_edges_retained": true,
+  "new_edges_match_two_node_rule": true,
+  "new_degrees": [
+    11,
+    11
+  ],
+  "roots_checked": [
+    37628,
+    37629
+  ],
+  "root_checks": [
+    {
+      "root": 37628,
+      "eccentricity": 6,
+      "missing_old_vertices": [
+        7554,
+        9638,
+        13575,
+        15696,
+        19789,
+        30950,
+        31354,
+        31937,
+        32781,
+        36098
+      ],
+      "missing_old_count": 10,
+      "distance_histogram": {
+        "0": 1,
+        "1": 11,
+        "2": 96,
+        "3": 858,
+        "4": 7181,
+        "5": 29473,
+        "6": 10
+      }
+    },
+    {
+      "root": 37629,
+      "eccentricity": 6,
+      "missing_old_vertices": [
+        3517,
+        7388,
+        7566,
+        10888,
+        11018,
+        22459,
+        31423,
+        31620,
+        31700,
+        33045,
+        33334,
+        34481,
+        34503,
+        35156,
+        35828
+      ],
+      "missing_old_count": 15,
+      "distance_histogram": {
+        "0": 1,
+        "1": 11,
+        "2": 94,
+        "3": 843,
+        "4": 7055,
+        "5": 29611,
+        "6": 15
+      }
+    }
+  ],
+  "new_old_bad_unordered_pairs": 25,
+  "certified_diameter_lower_bound": 6,
+  "source_old_D5_fact_reused": true,
+  "whole_graph_all_pairs_BFS_performed": false,
+  "scope": "Independent source-edge preservation/degree check and full ordinary BFS from the two new vertices. This already disproves D5. No repeated all-old-source BFS; old-old distances cannot increase.",
+  "method": "Rebuild adjacency from explicit best.edges, compare retained edges with original implicit source, use ordinary deque BFS independently of coverage caches.",
+  "CPU_seconds": 0.647212327,
+  "pending": []
+}

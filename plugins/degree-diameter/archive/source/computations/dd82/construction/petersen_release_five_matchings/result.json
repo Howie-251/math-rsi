@@ -1,0 +1,28 @@
+{
+  "status": "CHECKED_UNSAT",
+  "exit_code": 20,
+  "wall_seconds": 0.1370534710586071,
+  "cpu_seconds": 0.02014599999999999,
+  "cpu_budget_seconds": 30,
+  "pinned_cpu": 0,
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "30",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_five_matchings/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_five_matchings/proof.lrat"
+  ],
+  "variables": 1500,
+  "clauses": 8150,
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_five_matchings/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_five_matchings/proof.lrat"
+    ],
+    "exit_code": 20,
+    "verified": true
+  }
+}

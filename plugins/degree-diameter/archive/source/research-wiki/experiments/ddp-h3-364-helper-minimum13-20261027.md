@@ -1,0 +1,285 @@
+---
+type: experiment
+node_id: exp:ddp-h3-364-helper-minimum13-20261027
+title: "自然H3固定host：1..14 helpers已排，至少需15个新点（非一般378图NO）"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: yes
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: "k14followup0.880238423/10CPU; oldk13uniformdata inherited,notrerun"
+provenance: "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md; research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TOPOLOGY_INTERFACE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/run_once.py; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/ALL_TOPOLOGY_RECORDS.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/SURVIVOR_TOPOLOGIES.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/ROOT_DISPOSITION.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TERMINAL_SCOPE_REVIEW.md"
+added: 2026-11-02T02:42:17Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 自然H3固定host：1..14 helpers已排，至少需15个新点（非一般378图NO）
+
+**verdict:** `yes`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** positive-local-theorem
+
+**目标与阶数：** (4,5)；L=364；条件性n=379（未据此计纪录）
+
+**距目标的证据：** Fixedhost lowerbound on helpers only; no378or379candidate graph generated. 379 is firstunexcluded order inthis architecture,notexistenceorrecord. k14tree paper plus completeunicyclic necessarygates,not portassignment/BFS.；旧1..13保边/无oldold helpers严格NO和3276triples/81900(T,parent)缓存原样继承，不重跑。k14 tree由旧good0作纸面排除；剩14edge connectedunicyclic、a_h=4−d_H的必要拓扑域只需cycle3..7及depth3/2/2/1/1。实际1930canonical：G1全部helper到owner<=4排1910，G2仅parentdegree>=3的leaf到owner<=3再排20，0survivor；degree2parent不误套G2。first_min_ordered_size14_decorations只是first-min剪枝后的ordered计数，字段标签已改、数值/1930不重跑。固定自然364/714架构1..14关闭，minimumhelpers15/firstunexcludedorder379仅必要下界，不声称379存在、一般378图NO或任意finiteH不可能。case.880238423/10，0sourceBFS/旧mask/assignment/图/Lean/solver/ARIS。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "minimum_helpers": 15,
+  "first_unexcluded_order": 379,
+  "first_possible_order": 379,
+  "first_unexcluded_not_constructed": true,
+  "new_graphs": 0,
+  "new_parameter_pairs": 0,
+  "new_Lean_instances": 0,
+  "new_independent_method_claims": 0,
+  "k13_tree_class_excluded": true,
+  "k14_tested": true,
+  "k14_tree_paper_from_old_uniform_good0": true,
+  "old3276_81900_recomputed": false,
+  "canonical_unicyclic_topologies": 1930,
+  "G1_rejected": 1910,
+  "G2_rejected": 20,
+  "topology_survivors": 0,
+  "raw_ordered_field_interpretation": "Correctedtofirst_min_ordered_size14_decorations; first-min prunedordered,notfullorderedrawdomain; no numeric rerun",
+  "new_numeric_topology_batches_this_followup": 1,
+  "native_stage_result": {
+    "status": "COMPLETE_NO_FIXED_NATURAL364_PRESERVED_EDGE_HELPERS14",
+    "by_cycle": {
+      "3": {
+        "max_attachment_depth": 3,
+        "attachment_types": 206,
+        "canonical_topologies": 1117,
+        "G1_rejected": 1110,
+        "G2_rejected": 7,
+        "survivors": 0,
+        "first_min_ordered_size14_decorations": 2199
+      },
+      "4": {
+        "max_attachment_depth": 2,
+        "attachment_types": 15,
+        "canonical_topologies": 275,
+        "G1_rejected": 270,
+        "G2_rejected": 5,
+        "survivors": 0,
+        "first_min_ordered_size14_decorations": 567
+      },
+      "5": {
+        "max_attachment_depth": 2,
+        "attachment_types": 15,
+        "canonical_topologies": 494,
+        "G1_rejected": 486,
+        "G2_rejected": 8,
+        "survivors": 0,
+        "first_min_ordered_size14_decorations": 1532
+      },
+      "6": {
+        "max_attachment_depth": 1,
+        "attachment_types": 3,
+        "canonical_topologies": 12,
+        "G1_rejected": 12,
+        "G2_rejected": 0,
+        "survivors": 0,
+        "first_min_ordered_size14_decorations": 25
+      },
+      "7": {
+        "max_attachment_depth": 1,
+        "attachment_types": 3,
+        "canonical_topologies": 32,
+        "G1_rejected": 32,
+        "G2_rejected": 0,
+        "survivors": 0,
+        "first_min_ordered_size14_decorations": 127
+      }
+    },
+    "canonical_topologies_checked": 1930,
+    "G1_rejected": 1910,
+    "G2_rejected": 20,
+    "surviving_topologies": 0,
+    "k14_tree": "paperclosedfromoldtriplecapacity;notenumeratedagain",
+    "new_numeric_CPU": 0.130238423,
+    "prior_read_CPU": 0.5,
+    "prepare_CPU": 0.25,
+    "case_CPU": 0.880238423,
+    "case_cap": 10,
+    "source_BFS_oldball_oldmask_portassignment_graph_Lean_solver_ARIS": 0,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "scope": "fixednatural364/714,max4,D5,preservealloldedges,noaddedoldold,exact14helpers;treepaperNOplusfullunicyclicnecessarygatesifnosurvivors",
+    "terminal": true,
+    "next": "STOP_NO_AUTOMATIC_K15_OR_PORT_ASSIGNMENT_WHEN_NOSURVIVORS;general4D5notexcluded",
+    "counter_label_correction": "first-min prunedordered,separatefromcanonical;no numeric rerun"
+  },
+  "historical_1to13_source_record_before_helpers14_20261102": {
+    "id": "ddp-h3-364-helper-minimum13-20261027",
+    "title": "自然H3固定host：1..13 helpers已排，至少需14个新点",
+    "family": "Natural H3 polarity port extension",
+    "record_type": "positive-local-theorem",
+    "target_Delta": 4,
+    "target_D": 5,
+    "savedL": 364,
+    "n": {
+      "actual": null,
+      "hypothetical": 378
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Only fixed364/714 host, retain old edges, add no old-old edges, and respect degree4. Full1..13 helper class excluded; arbitrary377 graphs/otherhosts outside scope.",
+    "failure_or_result": "先由28个distance5 ports和helper连通性推出k≥13；后对所有k13 tree拓扑作完整归约，3276 triple与81900(T,parent)均无足够外部R2分区覆盖，故1..13全部排除，k≥14。",
+    "lesson_and_restart_condition": "原377未排状态已由helper13_tree_probe整体有限反例覆盖更新。停止此host逐阶helper长尾，不启动k14。",
+    "unclosed_gap": "No arbitrary(4,5) exclusion or complete newgraph; k14 and otherhosts remain untested.",
+    "outcome_class": "positive-local-theorem",
+    "wiki_verdict": "yes",
+    "other_metrics": {
+      "minimum_helpers": 14,
+      "first_possible_order": 378,
+      "new_experiments": 0,
+      "k13_tree_class_excluded": true,
+      "k14_tested": false
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/RESULT.json",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md"
+    ]
+  },
+  "portassignment_sourceBFS_oldball_newgraph_Lean_solver_ARIS": 0,
+  "root_disposition": {
+    "status": "ROOT_ACCEPTED_FIXED_SOURCE_HELPERS1_TO14_PRESERVED_EDGE_NO_STOP",
+    "actual14unicyclic": {
+      "status": "COMPLETE_NO_FIXED_NATURAL364_PRESERVED_EDGE_HELPERS14",
+      "by_cycle": {
+        "3": {
+          "max_attachment_depth": 3,
+          "attachment_types": 206,
+          "canonical_topologies": 1117,
+          "G1_rejected": 1110,
+          "G2_rejected": 7,
+          "survivors": 0,
+          "first_min_ordered_size14_decorations": 2199
+        },
+        "4": {
+          "max_attachment_depth": 2,
+          "attachment_types": 15,
+          "canonical_topologies": 275,
+          "G1_rejected": 270,
+          "G2_rejected": 5,
+          "survivors": 0,
+          "first_min_ordered_size14_decorations": 567
+        },
+        "5": {
+          "max_attachment_depth": 2,
+          "attachment_types": 15,
+          "canonical_topologies": 494,
+          "G1_rejected": 486,
+          "G2_rejected": 8,
+          "survivors": 0,
+          "first_min_ordered_size14_decorations": 1532
+        },
+        "6": {
+          "max_attachment_depth": 1,
+          "attachment_types": 3,
+          "canonical_topologies": 12,
+          "G1_rejected": 12,
+          "G2_rejected": 0,
+          "survivors": 0,
+          "first_min_ordered_size14_decorations": 25
+        },
+        "7": {
+          "max_attachment_depth": 1,
+          "attachment_types": 3,
+          "canonical_topologies": 32,
+          "G1_rejected": 32,
+          "G2_rejected": 0,
+          "survivors": 0,
+          "first_min_ordered_size14_decorations": 127
+        }
+      },
+      "canonical_topologies_checked": 1930,
+      "G1_rejected": 1910,
+      "G2_rejected": 20,
+      "surviving_topologies": 0,
+      "k14_tree": "paperclosedfromoldtriplecapacity;notenumeratedagain",
+      "new_numeric_CPU": 0.130238423,
+      "prior_read_CPU": 0.5,
+      "prepare_CPU": 0.25,
+      "case_CPU": 0.880238423,
+      "case_cap": 10,
+      "source_BFS_oldball_oldmask_portassignment_graph_Lean_solver_ARIS": 0,
+      "new_accepted_graph_parameter_Lean": [
+        0,
+        0,
+        0
+      ],
+      "scope": "fixednatural364/714,max4,D5,preservealloldedges,noaddedoldold,exact14helpers;treepaperNOplusfullunicyclicnecessarygatesifnosurvivors",
+      "terminal": true,
+      "next": "STOP_NO_AUTOMATIC_K15_OR_PORT_ASSIGNMENT_WHEN_NOSURVIVORS;general4D5notexcluded",
+      "counter_label_correction": "first-min prunedordered,separatefromcanonical;no numeric rerun"
+    },
+    "tree14": "paperclosedinREAD_GATE,no old3276or81900rerun",
+    "old1to13": "inheritedoriginalstrictscopeunchanged",
+    "scope": "natural364/714,max4,D5,preservealloldedges,noaddedoldold,1to14newhelpers",
+    "first_unexcluded_helper_count": 15,
+    "not_claimed": "anyfiniteHimpossible,general378graphNO,or379graphexists",
+    "scope_review": "HELPER14_TERMINAL_SCOPE_REVIEW.md",
+    "paper_interface": "HELPER14_TOPOLOGY_INTERFACE.md",
+    "root_read": [
+      "READ_GATE.md",
+      "HELPER14_TOPOLOGY_INTERFACE.md",
+      "unicyclic_topology_gate/run_once.py",
+      "unicyclic_topology_gate/RESULT.json",
+      "HELPER14_TERMINAL_SCOPE_REVIEW.md"
+    ],
+    "final_case_CPU": 0.880238423,
+    "casecap": 10,
+    "all_numeric_terminal": true,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "next": "new Petersen19 helpermechanismwithallownerspositive;notk15ladder",
+    "Goal_complete": false
+  },
+  "samecase_CPU": 0.880238423,
+  "case_cap": 10,
+  "new_numeric_CPU": 0.130238423,
+  "root_accepted": true,
+  "old_specific_k13_node_unchanged": "ddp-h3-helper13-tree-class-exclusion-20261027",
+  "k15_search_authorized_or_run": false,
+  "H19_included": false
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md](../../research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md)；[research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md](../../research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/READ_GATE.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TOPOLOGY_INTERFACE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TOPOLOGY_INTERFACE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/run_once.py](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/run_once.py)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/ALL_TOPOLOGY_RECORDS.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/ALL_TOPOLOGY_RECORDS.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/SURVIVOR_TOPOLOGIES.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/unicyclic_topology_gate/SURVIVOR_TOPOLOGIES.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/ROOT_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TERMINAL_SCOPE_REVIEW.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_cooperative_helpers14_read/HELPER14_TERMINAL_SCOPE_REVIEW.md)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** Only fixednatural364/714,retainalloldedges,noaddedoldold,max4,all28actualdegree3ports. Inherited1..13NO; k14tree closesbyolduniformtripleobstruction without rerun; all1930canonical unicyclictopologies failvalidassignment-independentG1/G2. Thus1..14closed andatleast15helpersnecessary. NotarbitraryfiniteH,general378graphs,public364/728,sourceedgechanges oroldoldrepair.
+
+**正向保证：** Alloriginalsourceedges retained,noaddedoldold,max4,actual28degree3ports; notpublic364/728 all4regularsource.；Old1..13strictscope andold3276/81900uniformgood0data areinherited unchanged. No oldsource/ball/mask orHallrerun.；k14tree closesbyolduniformtripleobstruction,notanewtreeorportassignmentenumeration.；Remainingk14H isconnectedunicyclicwith14edgesandspokecount4−degree; cycle3..7/attachmentdepthbounds,rootedmultisetsanddihedralcanonicalizationcoverallnecessarytopologies.；G1checks allhelpers-to-owners,notonlyownerpairs. G2onlyforleafwithparentdegree>=3,neverdegree2. All1930canonicals areexcludedindependentlyofportassignment.；Counterlabelisfirst_min_ordered_size14_decorations,notallrawordereddecorations; numbersunchanged,no rerun.；Firstunexcludedk15/order379 isonlyanecessaryboundary,notconstructionornewrecord. Noautomatick15orclaimaboutH19/otherk>=15.
+
+**仍未完成：** k>=15,arbitraryfiniteH,general378graphs,otherhosts,oldedgechangesandaddedoldoldremainunexcluded. No graph/newparameter/Lean/method/record.
+
+**启发与重启依据：** Use assignment-independent topology obstructions ratherthan repeatedporttriples. Theoldlocalcapacitycacheclosesk14trees,paperG1/G2thenrejectsallremainingunicyclictopologies. Stopthisfixedhosthelperladder,nok15automaticsearch orsource/methodchange.
+
+**单独的重启条件：** STOP exactfixedhostk<=14; noautomatick15/portassignment/newball/solver. Onlya separatelyauthorized materiallychangedquestion.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

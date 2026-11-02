@@ -1,0 +1,133 @@
+{
+  "status": "PASSED",
+  "solver_calls": 0,
+  "truth_table_assignments": 1952,
+  "port_truth_table": {
+    "assignments": 64,
+    "blocked_own_port_one_accepted": true,
+    "legal_pairs_c_b": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "assignment_cases": [
+    {
+      "label": "prescribed-uncolored-single-packing",
+      "rejected_groups": [
+        "actual_ST_intersection_permutation",
+        "all_1830_original_pairs_covered",
+        "color_sizes_and_M_ge_J",
+        "dual_local_bijections",
+        "exact_S_closed_counts_and_beta",
+        "exact_T_closed_counts_and_gamma",
+        "full_S_T_independence",
+        "full_parent_color_marginals"
+      ],
+      "H_edges": 70,
+      "target_candidate": false,
+      "original_covered": 1196,
+      "degree_split_passed": true,
+      "locally_valid_blocked_own_port_one": 10
+    },
+    {
+      "label": "delete-one-P-L-edge",
+      "rejected_groups": [
+        "actual_ST_intersection_permutation",
+        "all_1830_original_pairs_covered",
+        "color_sizes_and_M_ge_J",
+        "dual_local_bijections",
+        "exact_S_closed_counts_and_beta",
+        "exact_T_closed_counts_and_gamma",
+        "full_S_T_independence",
+        "full_parent_color_marginals",
+        "single_packing_degree_split"
+      ],
+      "H_edges": 69,
+      "target_candidate": false,
+      "original_covered": 1191,
+      "degree_split_passed": false,
+      "locally_valid_blocked_own_port_one": 10
+    },
+    {
+      "label": "actual-assignment-0",
+      "rejected_groups": [
+        "actual_ST_intersection_permutation",
+        "all_1830_original_pairs_covered",
+        "color_sizes_and_M_ge_J",
+        "dual_local_bijections",
+        "exact_S_closed_counts_and_beta",
+        "exact_T_closed_counts_and_gamma",
+        "full_S_T_independence",
+        "full_parent_color_marginals"
+      ],
+      "H_edges": 70,
+      "target_candidate": false,
+      "original_covered": 1432,
+      "degree_split_passed": true,
+      "locally_valid_blocked_own_port_one": 3
+    },
+    {
+      "label": "actual-assignment-1",
+      "rejected_groups": [
+        "actual_ST_intersection_permutation",
+        "all_1830_original_pairs_covered",
+        "color_sizes_and_M_ge_J",
+        "dual_local_bijections",
+        "exact_S_closed_counts_and_beta",
+        "exact_T_closed_counts_and_gamma",
+        "full_S_T_independence",
+        "full_parent_color_marginals",
+        "legal_color_normalization",
+        "single_packing_degree_split"
+      ],
+      "H_edges": 111,
+      "target_candidate": false,
+      "original_covered": 1586,
+      "degree_split_passed": false,
+      "locally_valid_blocked_own_port_one": 8
+    },
+    {
+      "label": "actual-assignment-2",
+      "rejected_groups": [
+        "actual_ST_intersection_permutation",
+        "all_1830_original_pairs_covered",
+        "color_sizes_and_M_ge_J",
+        "dual_local_bijections",
+        "exact_S_closed_counts_and_beta",
+        "exact_T_closed_counts_and_gamma",
+        "full_S_T_independence",
+        "full_parent_color_marginals",
+        "legal_color_normalization",
+        "single_packing_degree_split"
+      ],
+      "H_edges": 130,
+      "target_candidate": false,
+      "original_covered": 1643,
+      "degree_split_passed": false,
+      "locally_valid_blocked_own_port_one": 2
+    }
+  ],
+  "original_pairs_per_case": 1830,
+  "in_memory_variables": 102623,
+  "in_memory_clauses": 433048,
+  "primary_variables": 841,
+  "fixed_H_edges": 24,
+  "free_H_edge_variables": 396,
+  "formal_input_written": false,
+  "complete_positive_example_available": false,
+  "note": "All groups, all61 adjacency/coverage literals and both derived port arrays compared with independent arithmetic. Both blocked=1, own=1, port=1 and unblocked repeat ports are covered by exhaustive local tables. The prescribed fixture verifies only the uncolored single-packing degree split; no target is claimed."
+}

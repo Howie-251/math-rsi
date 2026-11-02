@@ -1,0 +1,73 @@
+{
+  "status": "completed",
+  "rounds": 1,
+  "review_agent_ids": [
+    "/root/proof_review_n62_d1_reduction"
+  ],
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "actual_backend": "unattested",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "acceptance_gate": "PASS",
+  "micro_claims_discharged": 61,
+  "fatal_fixed": 0,
+  "critical_fixed": 0,
+  "major_fixed": 0,
+  "minor_fixed": 0,
+  "open_issues": 0,
+  "counterexamples_found": 0,
+  "counterexample_candidates": 0,
+  "source_modified": false,
+  "reviewed_input": {
+    "path": "proofs/dd82/n62/D1_MATCH_HARD_BRANCH_REDUCTION.md",
+    "scope": "All 209 lines, sections 1–5 and completed additional transport section (16)",
+    "line_count": 209,
+    "size_bytes": 12067,
+    "mtime_utc": "2026-10-11T10:25:37.913760+00:00",
+    "last_line": "No equality between the original and repeat perfect matchings has been established. The single internal repeat edge in C3 has not yet been transported into a contradiction with the empty internal repeat graph in C2."
+  },
+  "remaining_research": [
+    "Exclude D1_MATCH or establish an even-double-edge component theorem",
+    "Connect relevant proof to Lean if required",
+    "Obtain cross-family overlay for this specific reduction"
+  ],
+  "artifacts": [
+    "PROOF_SKELETON.md",
+    "PROOF_AUDIT.md",
+    "PROOF_AUDIT.json",
+    "PROOF_CHECK_STATE.json",
+    "DELTA_C4_AUDIT.md",
+    "DELTA_C4_AUDIT.json"
+  ],
+  "timestamp": "2026-10-11T10:39:59.176557+00:00",
+  "base_micro_claims_discharged": 36,
+  "delta_micro_claims_discharged": 25,
+  "delta_reviews": [
+    {
+      "review_id": "DELTA_C4",
+      "verdict": "PASS",
+      "micro_claims_discharged": 25,
+      "audited_inputs": [
+        {
+          "path": "proofs/dd82/n62/D1_MATCH_C4_TRANSPORT_REFINEMENT.md",
+          "scope": "Entire document, including all completed corollaries",
+          "line_count": 116,
+          "size_bytes": 7228,
+          "mtime_utc": "2026-10-11T10:33:07.327624+00:00",
+          "last_line": "The unique internal C3 repeat edge is therefore balanced at this aggregate level. Any contradiction must retain additional pointwise support information, for example the saturated rows (6), or use further global structure. No exclusion or parity of heavy edges within each B component has been established here."
+        },
+        {
+          "path": "proofs/dd82/n62/D1_MATCH_INTERNAL_EDGE_TRIANGLE_FREE.md",
+          "scope": "Entire document, including all completed corollaries",
+          "line_count": 35,
+          "size_bytes": 3662,
+          "mtime_utc": "2026-10-11T10:36:14.693714+00:00",
+          "last_line": "This corollary requires no claim that all of C4 is triangle-free, only that C4 is an independent original set because its parent 4 is triangle-free. The C4 edge's existence and unit weight were proved in `D1_MATCH_C4_TRANSPORT_REFINEMENT.md`."
+        }
+      ],
+      "audit_path": "reviews/dd82/proof-checker-n62-d1-reduction-20261011/DELTA_C4_AUDIT.json",
+      "timestamp": "2026-10-11T10:39:59.176557+00:00"
+    }
+  ]
+}

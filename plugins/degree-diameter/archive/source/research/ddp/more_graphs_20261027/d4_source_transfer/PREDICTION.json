@@ -1,0 +1,45 @@
+{
+  "frozen_before_capacity_test": true,
+  "one_mechanism": "source-derived C20 fourinversepair D4 transfer",
+  "target_Delta": 8,
+  "target_D": 4,
+  "baseline_order": 1100,
+  "target_p": 61,
+  "target_order": 1220,
+  "fixed_phases": [
+    1,
+    12,
+    11,
+    16
+  ],
+  "source55_rules": {
+    "A": 0,
+    "B": "r^10-1",
+    "C": 1,
+    "D": "1+r+r^4"
+  },
+  "first_test": "Allreducedwords length<=4,20phase layers,coefficientringZ[t]/Phi20 forprimitive20 target; keepB/C/Dfree to derive necessarycapacity.",
+  "stop_rule": "Ifanyphasecapacity<61,stop without graph production. Ifpassed,substitutefrozen sourcepolynomials and check theircapacity; numeric targetroot tests only ifcapacity permits.",
+  "target_numeric_scope_if_supported": "p61,all8primitiveorder20 roots,exactidentityrootcoverage; nooffsetsearch ornextprime.",
+  "success_rule": "Only full1220vertex endpointcoverage generates edges andone independentwholegraphverification.",
+  "workers": 1,
+  "CPU_budget_seconds": 60,
+  "old_source_BFS_or_audit": false,
+  "no_newMIP_review_Lean": true,
+  "old_scope_check": "LozSiran2008 thresholdcomparison only tied1100; oldaffineD3,C5p311andvertexsplit scopesare distinct andnot rerun.",
+  "conditional_CRT_scope_before_capacity_run": {
+    "condition": "primitive61hasnohit",
+    "fixed_r": 2,
+    "fixed_B": 1023,
+    "fixed_C": 1,
+    "fixed_D": 19,
+    "m_values": [
+      75,
+      93,
+      123,
+      155
+    ],
+    "complete_divisor_range": "55<m<=160 andm divides2^20-1",
+    "no_Phi20_shortcut_for_CRT": true
+  }
+}

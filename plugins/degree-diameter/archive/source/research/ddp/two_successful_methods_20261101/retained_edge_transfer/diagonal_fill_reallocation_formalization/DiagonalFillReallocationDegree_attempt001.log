@@ -1,0 +1,99 @@
+DegreeDiameter/Portfolio/DiagonalFillReallocationDegree.lean:97:52: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fintype.card ↑((graph U H center).neighborSet (old (Sum.inl v)))
+in the target expression
+  Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inl (Sum.inl v)))) ≤ delta + 1
+
+case inl.inl.inl
+V : Type u_1
+J : Type u_2
+C : Type u_3
+inst✝⁴ : Fintype V
+inst✝³ : Fintype J
+inst✝² : Fintype C
+U : SimpleGraph V
+H : SimpleGraph (V ⊕ J)
+center : C → V
+inst✝¹ : DecidableRel U.Adj
+inst✝ : DecidableRel H.Adj
+delta : ℕ
+compat : ∀ (u v : V), H.Adj (Sum.inl u) (Sum.inl v) ↔ U.Adj u v
+hH : ∀ (x : V ⊕ J), H.degree x ≤ delta
+hload : ∀ (v : V), FullNeighborhoodClones.load U center v ≤ 1
+hJ : Fintype.card J ≤ delta + 1
+v : V
+⊢ Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inl (Sum.inl v)))) ≤ delta + 1
+DegreeDiameter/Portfolio/DiagonalFillReallocationDegree.lean:100:52: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fintype.card ↑((graph U H center).neighborSet (old (Sum.inr j)))
+in the target expression
+  Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inl (Sum.inr j)))) ≤ delta + 1
+
+case inl.inl.inr
+V : Type u_1
+J : Type u_2
+C : Type u_3
+inst✝⁴ : Fintype V
+inst✝³ : Fintype J
+inst✝² : Fintype C
+U : SimpleGraph V
+H : SimpleGraph (V ⊕ J)
+center : C → V
+inst✝¹ : DecidableRel U.Adj
+inst✝ : DecidableRel H.Adj
+delta : ℕ
+compat : ∀ (u v : V), H.Adj (Sum.inl u) (Sum.inl v) ↔ U.Adj u v
+hH : ∀ (x : V ⊕ J), H.degree x ≤ delta
+hload : ∀ (v : V), FullNeighborhoodClones.load U center v ≤ 1
+hJ : Fintype.card J ≤ delta + 1
+j : J
+⊢ Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inl (Sum.inr j)))) ≤ delta + 1
+DegreeDiameter/Portfolio/DiagonalFillReallocationDegree.lean:103:50: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fintype.card ↑((graph U H center).neighborSet (copied c))
+in the target expression
+  Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inr c))) ≤ delta + 1
+
+case inl.inr
+V : Type u_1
+J : Type u_2
+C : Type u_3
+inst✝⁴ : Fintype V
+inst✝³ : Fintype J
+inst✝² : Fintype C
+U : SimpleGraph V
+H : SimpleGraph (V ⊕ J)
+center : C → V
+inst✝¹ : DecidableRel U.Adj
+inst✝ : DecidableRel H.Adj
+delta : ℕ
+compat : ∀ (u v : V), H.Adj (Sum.inl u) (Sum.inl v) ↔ U.Adj u v
+hH : ∀ (x : V ⊕ J), H.degree x ≤ delta
+hload : ∀ (v : V), FullNeighborhoodClones.load U center v ≤ 1
+hJ : Fintype.card J ≤ delta + 1
+c : C
+⊢ Fintype.card ↑((graph U H center).neighborSet (Sum.inl (Sum.inr c))) ≤ delta + 1
+DegreeDiameter/Portfolio/DiagonalFillReallocationDegree.lean:107:48: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fintype.card ↑((graph U H center).neighborSet hub)
+in the target expression
+  Fintype.card ↑((graph U H center).neighborSet (Sum.inr PUnit.unit)) ≤ delta + 1
+
+case inr.unit
+V : Type u_1
+J : Type u_2
+C : Type u_3
+inst✝⁴ : Fintype V
+inst✝³ : Fintype J
+inst✝² : Fintype C
+U : SimpleGraph V
+H : SimpleGraph (V ⊕ J)
+center : C → V
+inst✝¹ : DecidableRel U.Adj
+inst✝ : DecidableRel H.Adj
+delta : ℕ
+compat : ∀ (u v : V), H.Adj (Sum.inl u) (Sum.inl v) ↔ U.Adj u v
+hH : ∀ (x : V ⊕ J), H.degree x ≤ delta
+hload : ∀ (v : V), FullNeighborhoodClones.load U center v ≤ 1
+hJ : Fintype.card J ≤ delta + 1
+⊢ Fintype.card ↑((graph U H center).neighborSet (Sum.inr PUnit.unit)) ≤ delta + 1
+'DegreeDiameter.Portfolio.DiagonalFillReallocation.degree_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

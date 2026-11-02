@@ -1,0 +1,11 @@
+# 104c source and prior scopes
+
+Use the existing Nishant Bhakar 104c source: `breadth_20261027_wave2/sources/bhakar104.edges`, with 104 vertices and 208 edges. Its `bhakar104_check.json` already records four-regularity, diameter four from all 104 roots, and zero triangles. No source download or BFS was repeated. The copies `extension105_d4/source.edges` and `d4_vertex_split/source104.edges` have the same 208-edge set. No second actual nonisomorphic 104-point source was found in the targeted local files; this does not classify all public 104-point graphs. The public baseline 104 is inherited from the parent’s fresh check.
+
+The saved `bhakar104_distances.json` is the full original-graph 104 by 104 distance matrix. It directly gives closed R3(x), and for each distance-four target t the first-neighbour support H_v(t)={u in N(v):d(u,t)=3}. These need no new BFS. The old split program computed G−v neighbour balls temporarily and did not persist them. The wave-five `NB2_NB4_counts.json` also survives, but its unique three-step route obstruction concerns a different fixed-projection lift.
+
+Prior closed scopes are: plain adjacent splitting (all 104 vertices, 728 partitions, 312 balanced checks); two disjoint source-edge absorption (20,904 cases); and two neighborhoods of one saved 105-point graph Q (40,740 ordinary two-edge switches and 230 internal nine-vertex degree completions). Splitting 2+2 and then cutting an additional edge outside closed N[v] changes another old edge, so these exclusions do not close the new family.
+
+The clean batch has 104·3·192·2=119,808 parameter tuples, without a claim that all outputs are distinct or nonisomorphic. The 192 cut edges follow from the triangle-free four-regular source: exactly 16 edges meet closed N[v]. If a broader batch excludes only v, cases with x in the moved part T restore a deleted star edge and reduce to old two-edge absorption. Cases with y in the retained part S reduce in the same way after swapping the child labels. Avoiding closed N[v] removes these degeneracies and duplicate spokes.
+
+`SOURCE_SCOPE.json` records the original evidence paths. `SKIP_SCOPE.md/json` validates the inherited saved-Q neighborhood skips. This task generated no candidate, called no solver and ran no BFS.

@@ -1,0 +1,97 @@
+⚠ [1792/1799] Replayed DegreeDiameter.N59ZeroCore
+warning: DegreeDiameter/N59ZeroCore.lean:21:29: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [commonZeroNeighbors,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N59ZeroCore.lean:50:14: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵h̵r̵,̵ ̵N̵e̵.̵s̵y̵m̵m̵[̲N̲e̲.̲s̲y̲m̲m̲ hab, Ne.symm hac, Ne.symm had, Ne.symm hbc, Ne.symm hbd, Ne.symm hcd,
+  ̲  ̲ ̲ ̲ ̲ ̲SimpleGraph.adj_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1793/1799] Replayed DegreeDiameter.N59Capacity
+warning: DegreeDiameter/N59Capacity.lean:295:48: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [heavyZeroRepeats, zeroTriangleVertices,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1794/1799] Replayed DegreeDiameter.N62STouch
+warning: DegreeDiameter/N62STouch.lean:156:8: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62STouch.0.DegreeDiameter.adjacency_nonnegative`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [1799/1799] Building DegreeDiameter.N62TripleMatching (93s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62TripleMatching.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleMatching.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleMatching.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleMatching.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleMatching.setup.json --json
+error: DegreeDiameter/N62TripleMatching.lean:65:10: Unknown constant `SimpleGraph.mem_neighborFinset.mpr`
+error: DegreeDiameter/N62TripleMatching.lean:150:96: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v x : V
+hb : defectMatrix G u v = 3
+hx : x ∈ tripleExclusiveNeighbors G u v
+y : V
+hy : {y ∈ G.neighborFinset x | y ∈ tripleExclusiveNeighbors G v u} = {y}
+hym : y ∈ {z ∈ G.neighborFinset x | z ∈ tripleExclusiveNeighbors G v u}
+z : V
+hz : z ∈ tripleExclusiveNeighbors G v u ∧ G.Adj x z
+⊢ G.Adj v z ∧ ¬G.Adj u z
+error: DegreeDiameter/N62TripleMatching.lean:152:4: Type mismatch: After simplification, term
+  hzm
+ has type
+  G.Adj x z ∧ G.Adj v z ∧ ¬G.Adj u z
+but is expected to have type
+  z = y
+warning: DegreeDiameter/N62TripleMatching.lean:151:12: This simp argument is unused:
+  hz.1
+
+Hint: Omit it from the simp argument list.
+  simp [hz.1̵,̵h̵z̵.̵2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/N62TripleMatching.lean:183:13: don't know how to synthesize placeholder for argument `left`
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v : V
+hb : defectMatrix G u v = 3
+hvu : defectMatrix G v u = 3
+x : { x // x ∈ tripleExclusiveNeighbors G u v }
+⊢ ↑(tripleExclusiveMate G hdeg hdiam hcard hvu (tripleExclusiveMate G hdeg hdiam hcard hb x)) ∈
+    tripleExclusiveNeighbors G u v
+error: DegreeDiameter/N62TripleMatching.lean:204:7: don't know how to synthesize placeholder for argument `left`
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v : V
+hb : defectMatrix G u v = 3
+x : { x // x ∈ tripleExclusiveNeighbors G u v }
+y : { y // y ∈ tripleExclusiveNeighbors G v u }
+hxy : G.Adj ↑x ↑y
+⊢ ↑(tripleExclusiveMate G hdeg hdiam hcard hb x) ∈ tripleExclusiveNeighbors G v u
+error: DegreeDiameter/N62TripleMatching.lean:227:21: Unknown constant `SimpleGraph.mem_neighborFinset.mpr`
+error: DegreeDiameter/N62TripleMatching.lean:230:12: Unknown constant `SimpleGraph.mem_neighborFinset.mpr`
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62TripleMatching
+error: build failed

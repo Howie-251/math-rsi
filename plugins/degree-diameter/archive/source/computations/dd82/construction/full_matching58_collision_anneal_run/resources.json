@@ -1,0 +1,91 @@
+{
+  "parent_run_id": "dd82-v3-f9-c7-20261013-0749",
+  "optimization_runs": 1,
+  "process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run/search",
+      "search",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/candidate.best.edges",
+      "59",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 59.006575999999995,
+    "wall_seconds": 60.22933315858245,
+    "pinned_cpu": 1,
+    "threads": 1,
+    "cpu_limit_seconds": 60,
+    "wall_limit_seconds": 150
+  },
+  "search_report_complete": true,
+  "independent_bfs": [
+    {
+      "candidate": "candidate.best_energy",
+      "process": {
+        "command": [
+          "/opt/conda/bin/python",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/verify_hs_candidate.py",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run/candidate.best_energy.json"
+        ],
+        "exit_code": 0,
+        "child_cpu_seconds": 0.03195000000000192,
+        "wall_seconds": 0.06614131852984428,
+        "pinned_cpu": 1,
+        "threads": 1,
+        "cpu_limit_seconds": 5,
+        "wall_limit_seconds": 10
+      },
+      "reused_exact_same_edges": false,
+      "verification_source": "computations/dd82/construction/full_matching58_collision_anneal_run/candidate.best_energy.verification.json",
+      "F": 57,
+      "graph_check": {
+        "n": 58,
+        "edges": 232,
+        "max_degree": 8,
+        "bad_pair_count": 51,
+        "diameter": 3,
+        "valid_target": false
+      }
+    },
+    {
+      "candidate": "candidate.best_bad",
+      "process": null,
+      "reused_exact_same_edges": true,
+      "verification_source": "computations/dd82/construction/full_matching58_anneal_run/candidate.best.verification.json",
+      "F": 84,
+      "graph_check": {
+        "n": 58,
+        "edges": 232,
+        "max_degree": 8,
+        "bad_pair_count": 24,
+        "diameter": 3,
+        "valid_target": false
+      }
+    }
+  ],
+  "search": {
+    "status": "BOUNDED_HEURISTIC_COMPLETED",
+    "stop_reason": "cpu_budget",
+    "initial_F": 84,
+    "initial_bad_pairs": 24,
+    "best_F": 57,
+    "bad_at_best_F": 51,
+    "best_bad_pairs": 24,
+    "F_at_best_bad": 84,
+    "current_F": 127,
+    "current_bad_pairs": 114,
+    "proposals": 10302792,
+    "accepted": 233755,
+    "accepted_uphill_F": 81097,
+    "random_seed": 2026101302,
+    "temperature_period_proposals": 250000,
+    "temperature_high": 2.5,
+    "temperature_low": 0.15,
+    "cpu_seconds": 59.004113,
+    "cpu_budget_seconds": 59,
+    "threads": 1,
+    "chain_restarts": 0,
+    "complete_enumeration": false
+  },
+  "new_independent_bfs_runs": 1
+}

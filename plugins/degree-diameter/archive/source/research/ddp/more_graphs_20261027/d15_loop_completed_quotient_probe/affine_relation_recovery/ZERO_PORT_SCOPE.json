@@ -1,0 +1,19 @@
+{
+  "status": "PAPER_SELECTION_AND_COVERAGE_LOGIC_VALID",
+  "self_arc_zero_port_condition": "from=to and c=0",
+  "why": "Q-normalization has c[pivot]=0 and v[pivot]=1, so 0=c+t*v forces t=0 and c=0. Removing that single virtual selfloop leaves original degree14.",
+  "cross_arc_c_zero_does_not_prove_free": true,
+  "self_arc_c_nonzero_cannot_be_assumed_free_at_zero": true,
+  "zero_vertex_label": "source_controller*bin_size",
+  "expected_counts_not_computed_by_this_review": {"source15552":24,"source102060":10},
+  "exact_newpoint_criterion": "distinct original-free S with |S|<=15 and union of closed R_(D-1)_G(S) equal to the entire current old source",
+  "D4_24port_union_is_only_necessary_gate": true,
+  "D5_10port_full_union_is_direct_candidate": true,
+  "source_degree_binding": "Root verifies actual selected original degree14 labels before any candidate.",
+  "cache_interfaces_read": {
+    "D4": "R3_MASKS.bin header648,15552,243; each row has uint32 original label and243 LEu64 target-bit words",
+    "D5": "radius4.u64le.bin810x1595 LEu64; row labels eligible.txt/PREFLIGHT.eligible_labels; last word44 valid target bits"
+  },
+  "no_OR_BFS_solver_or_new_graph": true,
+  "scope": "Only fixed-zero selection from the two recovered actual affine tables; not an existence claim, not all-free coverage and not another coordinate choice."
+}

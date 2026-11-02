@@ -1,0 +1,51 @@
+DegreeDiameter/N62D2.lean:55:35: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  simp [̵g̵,̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵]̵[̲g̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:210:31: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  simp [Finset.sum_add_distrib,̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62D2.lean:212:8: warning: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62D2.0.DegreeDiameter.adjacency_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DegreeDiameter/N62D2.lean:345:12: error(lean.unknownIdentifier): Unknown constant `SimpleGraph.mem_neighborFinset.mpr`
+DegreeDiameter/N62D2.lean:367:12: error(lean.unknownIdentifier): Unknown constant `SimpleGraph.mem_neighborFinset.mpr`
+DegreeDiameter/N62D2.lean:437:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (adjacencyMatrix G * defectMatrix G) ?v y
+in the target expression
+  (fun M => M i y) (adjacencyMatrix G * defectMatrix G) = (fun M => M i y) (defectMatrix G * adjacencyMatrix G)
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+r i j k w a : V
+h : D2MatchTemplate G r i j k w a
+hreg : G.IsRegularOfDegree 8
+hi : G.neighborFinset i = insert r (insert w (insert a (d2Class G r w a i)))
+hj : G.neighborFinset j = insert r (insert w (insert a (d2Class G r w a j)))
+right✝¹ : G.neighborFinset k = insert r (insert w (d2Class G r w a k))
+left✝ : twoOneRow G r w a
+hI : twoOneRow G i j k
+hJ : twoOneRow G j i k
+right✝ : twoOneRow G w r a
+y : V
+hleft : ∀ (v : V), (adjacencyMatrix G * defectMatrix G) v y = ∑ x ∈ G.neighborFinset v, defectMatrix G x y
+hci : (fun M => M i y) (adjacencyMatrix G * defectMatrix G) = (fun M => M i y) (defectMatrix G * adjacencyMatrix G)
+hcj : (fun M => M j y) (adjacencyMatrix G * defectMatrix G) = (fun M => M j y) (defectMatrix G * adjacencyMatrix G)
+⊢ defectMatrix G r y + defectMatrix G w y + defectMatrix G a y + ∑ x ∈ d2Class G r w a i, defectMatrix G x y =
+      2 * adjacencyMatrix G j y + adjacencyMatrix G k y ∧
+    defectMatrix G r y + defectMatrix G w y + defectMatrix G a y + ∑ x ∈ d2Class G r w a j, defectMatrix G x y =
+      2 * adjacencyMatrix G i y + adjacencyMatrix G k y

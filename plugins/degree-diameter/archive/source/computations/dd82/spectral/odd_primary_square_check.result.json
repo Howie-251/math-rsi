@@ -1,0 +1,226 @@
+{
+  "scope": "All symmetric matrices over F_3 with standard inner product, n=1..max_n; nilpotent inputs only",
+  "not_a_graph_exclusion": true,
+  "reference": "Enumerate every symmetric nilpotent X and collect X^2; compare every symmetric nilpotent C",
+  "criterion": "Primitive quotient forms, descending dimension/discriminant DP with free Q_0",
+  "max_n_requested": 4,
+  "wall_budget_seconds": 60.0,
+  "dimensions": [
+    {
+      "n": 1,
+      "p": 3,
+      "status": "PASS",
+      "stage": "complete",
+      "symmetric_matrices_total": 3,
+      "symmetric_matrices_scanned": 3,
+      "nilpotent_selfadjoint_count": 1,
+      "distinct_selfadjoint_squares": 1,
+      "criterion_inputs_checked": 1,
+      "criterion_accept_count": 1,
+      "ordinary_square_accept_count": 1,
+      "ordinary_square_but_no_selfadjoint_count": 0,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "negative_example": null,
+      "wall_seconds": 0.00011436641216278076,
+      "cpu_seconds": 0.00011467900000000641
+    },
+    {
+      "n": 2,
+      "p": 3,
+      "status": "PASS",
+      "stage": "complete",
+      "symmetric_matrices_total": 27,
+      "symmetric_matrices_scanned": 27,
+      "nilpotent_selfadjoint_count": 1,
+      "distinct_selfadjoint_squares": 1,
+      "criterion_inputs_checked": 1,
+      "criterion_accept_count": 1,
+      "ordinary_square_accept_count": 1,
+      "ordinary_square_but_no_selfadjoint_count": 0,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "negative_example": null,
+      "wall_seconds": 0.00039122626185417175,
+      "cpu_seconds": 0.0003916839999999963
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "status": "PASS",
+      "stage": "complete",
+      "symmetric_matrices_total": 729,
+      "symmetric_matrices_scanned": 729,
+      "nilpotent_selfadjoint_count": 33,
+      "distinct_selfadjoint_squares": 5,
+      "criterion_inputs_checked": 33,
+      "criterion_accept_count": 5,
+      "ordinary_square_accept_count": 9,
+      "ordinary_square_but_no_selfadjoint_count": 4,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "negative_example": {
+        "C": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "ordinary_square_root": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "square_verified_by_direct_multiplication": true,
+        "ordinary_root_is_symmetric": false,
+        "no_selfadjoint_root_by_exhaustive_reference": true,
+        "primitive_forms": [
+          {
+            "length": 1,
+            "dimension": 1,
+            "gram": [
+              [
+                2
+              ]
+            ],
+            "determinant": 2,
+            "square_class": -1
+          },
+          {
+            "length": 2,
+            "dimension": 1,
+            "gram": [
+              [
+                1
+              ]
+            ],
+            "determinant": 1,
+            "square_class": 1
+          }
+        ]
+      },
+      "wall_seconds": 0.012926679104566574,
+      "cpu_seconds": 0.012914703999999999
+    },
+    {
+      "n": 4,
+      "p": 3,
+      "status": "PASS",
+      "stage": "complete",
+      "symmetric_matrices_total": 59049,
+      "symmetric_matrices_scanned": 59049,
+      "nilpotent_selfadjoint_count": 1521,
+      "distinct_selfadjoint_squares": 129,
+      "criterion_inputs_checked": 1521,
+      "criterion_accept_count": 129,
+      "ordinary_square_accept_count": 177,
+      "ordinary_square_but_no_selfadjoint_count": 48,
+      "mismatch_count": 0,
+      "mismatch_examples": [],
+      "negative_example": {
+        "C": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            2
+          ]
+        ],
+        "ordinary_square_root": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            1,
+            0
+          ]
+        ],
+        "square_verified_by_direct_multiplication": true,
+        "ordinary_root_is_symmetric": false,
+        "no_selfadjoint_root_by_exhaustive_reference": true,
+        "primitive_forms": [
+          {
+            "length": 2,
+            "dimension": 2,
+            "gram": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "determinant": 1,
+            "square_class": 1
+          }
+        ]
+      },
+      "wall_seconds": 1.4855437204241753,
+      "cpu_seconds": 1.485417536
+    }
+  ],
+  "status": "PASS",
+  "wall_seconds": 1.5019691847264767,
+  "cpu_seconds": 1.500999777,
+  "mismatch_count": 0
+}

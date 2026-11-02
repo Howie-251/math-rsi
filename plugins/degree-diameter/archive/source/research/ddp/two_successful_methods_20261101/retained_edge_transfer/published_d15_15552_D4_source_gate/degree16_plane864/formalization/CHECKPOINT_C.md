@@ -1,0 +1,3 @@
+# Local final kernel and binding checkpoint
+
+All four new modules and standalone Audit actually exit0. d16_16416, final_claim, original_concrete_goal, degree/D4/nonD3/load/labels expose only propext, Classical.choice, Quot.sound (some labels use fewer). The failed first Definitions attempt and its log remain in the cumulative ledger. All old source/rank/coset/field modules were import-only. No BFS or large graph read occurred in this Lean batch. Root has the separate fresh all16416-root graph acceptance. New external review A/B/C results are not asserted by this local checkpoint. See FINAL.json for actual CPU and files.

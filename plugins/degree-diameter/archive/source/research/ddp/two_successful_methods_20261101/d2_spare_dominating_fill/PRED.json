@@ -1,0 +1,30 @@
+{
+  "written_before_generation": "2026-11-01T06:58:01Z",
+  "scope": "User-requested bounded adaptation of retained-edge filling to diameter D=2; the former N(8,2)/n61 queues remain paused. Same local research Goal and sole Wiki; no new Goal.",
+  "prediction": {
+    "field": "GF(4)=GF(2)[w]/(w^2+w+1), codes 0,1,w,w+1 = 0,1,2,3",
+    "source": "21 canonical PG(2,4) points; distinct x,y adjacent iff x dot y=0",
+    "source_order": 21,
+    "source_edges": 50,
+    "source_degree_histogram": {"4": 5, "5": 16},
+    "pins": "all five absolute points U={x:x0+x1+x2=0}",
+    "pole": [1,1,1],
+    "old_point_types": {
+      "absolute": {"count":5,"degree":4,"pins_in_closed_neighborhood":1},
+      "pole": {"count":1,"degree":5,"pins_in_closed_neighborhood":5},
+      "other_nonabsolute": {"count":15,"degree":5,"pins_in_closed_neighborhood":1}
+    },
+    "closed_pin_coverage": 21,
+    "final": "add vertex 21 adjacent exactly to U, retaining all 50 old edges",
+    "final_order": 22,
+    "final_edges": 55,
+    "final_degree_histogram": {"5":22},
+    "final_diameter": 2,
+    "final_all_roots_BFS_histogram": [1,5,16],
+    "same_cap_continuation": "none: all 22 vertices have degree 5"
+  },
+  "odd_q_control": "Inherit Brown57 proof and obstruction files without regenerating any graph or running any old-source BFS: q=7 has eight spare absolute points, their closed neighborhood misses 21 saturated internal points.",
+  "novelty": "Classical even-q augmentation, explicitly noted in Bachraty-Siran (2015), Polarity graphs revisited, section 2. Comellas public (5,2) table already has 24>22; this is one mechanism calibration, not a new record.",
+  "limits": {"total_CPU_seconds":30,"workers":1,"generated_source_graphs":1,"generated_final_graphs":1,"ordinary_final_all_roots_BFS":22,"old_D2_graph_regeneration":0,"old_D2_BFS":0,"solver":0,"Lean":0,"installs":0,"hashes":0},
+  "stop": "Stop after this q4 reproduction, the inherited odd-q comparison, and the exact feasibility interface. No field, degree, seed, template, or search ladder."
+}

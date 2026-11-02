@@ -1,0 +1,783 @@
+<HTML>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<HEAD>
+   <TITLE> Largest Known (Degree, Diameter)-Graphs (Description)</TITLE>
+</HEAD>
+<BODY>
+<HR SIZE=6></P>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<H2>Largest Known (Degree, Diameter)-Graphs</H2>
+<h3>Diameter 7 </h3>
+Last modification: October 15, 2026.
+ <address> http://www-mat.upc.es/grup_de_grafs/desc_g7.html </address>
+ <DT><B>raw adjacency list </B> format: the first vertex of each row is adjacent to all the other vertices in that row.</DT>
+<DT><B>implicit adjacency list </B> format:  each row corresponds to a vertex (row 1, vertex 0;  row 2, vertex 1; and so on) and contains all vertices adjacent to it.</DT>
+ <DT><B>adjacency list NX</B> NetworkX format.  <a href="https://networkx.org/documentation/stable/reference/readwrite/adjlist.html" target="_blank"> NetworkX format. </a></DT>
+ <DT><B>semidirect product</B> Follows the notation of the original contributions from Dinneen and Hafner <a href="https://arxiv.org/pdf/math/9504214" target="_blank">  (arXiv preprint) </a> Networks, 24 (1994) 359-367:   Z<sub>m</sub> &#x22C9;<sub>a</sub> Z<sub>n</sub>,
+of order m&middot;n.  Group operation  defined as [x,y] &times; [u,v] = [(x+u) mod m, (y&middot;a<sup>u</sup>+v) mod n]].
+</DT>
+
+<HR SIZE=6>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 3    DIAM = 7    %%%%%%%%%%%% -->
+<A NAME=37></A>
+<DT> <b>Bakhar_200</b>
+<DT> Degree = <B>3</B>, Diameter = <B>7</B>; Order =<B>200</B>; Moore bound=382;   
+<DT> Obtained by Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 9, 2026).  Found  with Claude Fable assisting with implementation and the analysis and summarization of the results. 
+<DT> Graph constructed as a regular voltage lift of a five-vertex
+base graph over the semidirect product Z<sub>8</sub> &#x22C9;<sub>4</sub> Z<sub>5</sub>,
+of order 40. The group operation (following the notation of the original contributions to this table -see top of this page-) is defined by [a,b] &times; [u,v] = [(a+u) mod 8, (b&middot;4<sup>u</sup>+v) mod 5].
+In a voltage lift, each base vertex v is replaced by 40 vertices (v,g), one for each group element
+g in G. A directed base edge v &rarr; w with  voltage t produces the edges (v,g)&ndash;(w,gt)
+for all g in G. The base graph has five vertices, labelled 0, 1, 2, 3, and 4, and five directed
+links: 0 &rarr; 1, 0 &rarr; 2, 0 &rarr; 3, and 1 &rarr; 4, all with identity voltage
+(0,0), and 1 &rarr; 2 with voltage (7,0).
+In addition, vertex 2 has a semi-edge with involution voltage (4,0), connecting (2,g)
+to (2,gt), and contributing one neighbor per lifted vertex. Vertex 3 has a loop with
+voltage (6,1), and vertex 4 has a loop with voltage (6,2); each loop contributes the
+two edges corresponding to its voltage and its inverse. The resulting graph has
+5&middot;40 = 200 vertices, 300 edges,is 3-regular, and has diameter 7.
+ The construction was obtained through an exhaustive search of voltage assignments for five-vertex cubic
+base graphs over groups of order 40.</DT>
+<DT> Download the <a href="adjacencies/adjD7/deg3-dia7-n200.edges.txt" target="_blank"> local edge list </a>  of the graph.
+<DT> This <a href="adjacencies/adjD7/200_bakhar_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs  including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=dfhxlr" target="_blank"> online version </a></dt>
+
+<BR>
+<DT>Former result, Order =196 
+<DT>  Communicated by G. Exoo (January 28, 2008).  <A href="https://isu.indstate.edu/~gexoo/DD/index.html" target="_blank"> G.E. data </A>
+<DT> Download the <a href="adjacencies/adjD7/Exoo_196.txt" target="_blank"> implicit adjacency list </a>  of the graph.
+<dt> This <a href="adjacencies/adjD7/196_exoo_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs  including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=znpvpa" target="_blank"> online version </a></dt>
+
+<HR SIZE=3>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 4    DIAM = 7    %%%%%%%%%%%% -->
+<A NAME=47></A>
+<B>Dhar_1344</B>
+<DT> Degree= <B>4</B>, Diameter = <B>7</B>; Order =<B>1344</B>; Moore bound=4373.  
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 19, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT> 
+This graph is constructed as a regular voltage lift of a two-vertex
+base graph over the group G = SL(2,7) : C<sub>2</sub>, of order 672  (SmallGroup(672,1047) in GAP).
+In this voltage lift, each base vertex c is replaced by 672 vertices (c,g), one for each element g of G,
+and a directed edge from c to d with voltage W produces the edges (c,g)&ndash;(d,gW) for all g in G.
+The base graph has two vertices, labelled 0 and 1, each carrying two semi-edges, and the vertices are
+joined by two parallel edges. The semi-edges at vertex 0 have voltages W1 and W2, while those at
+vertex 1 have voltages W3 and W4. These four voltages are involutions, each contributing one
+neighbor to every lifted vertex. The two parallel edges from 0 to 1 have voltages W5 and W6, of
+orders 8 and 6, respectively, and their reverse edges carry the inverse voltages. The six voltages,
+given explicitly as permutations of 32 points,  generate the entire group G. 
+Each voltage below is a permutation of {1..32}, written as its 32 images: 
+<DT>W1 32 11 22 28 13 12 19 29 30 31 2 6 5 16 23 14 21 26 7 24 17 3 15 20 27 18 25 4 8 9 10 1
+<DT>W2 17 30 18 25 14 16 23 10 19 8 15 20 24 5 11 6 1 3 9 12 28 31 7 13 4 29 32 21 26 2 22 27
+<DT>W3 28 20 29 32 17 9 14 22 6 19 18 25 15 7 13 26 5 11 10 2 30 8 27 31 12 16 23 1 3 21 24 4
+<DT>W4 14 31 15 20 28 21 26 9 8 23 29 32 27 1 3 25 24 30 22 4 6 19 10 17 16 7 13 5 11 18 2 12
+<DT>W5 25 26 10 17 3 27 31 18 23 28 4 8 21 24 30 13 29 32 1 16 14 11 2 6 22 15 20 12 19 7 9 5
+<DT>W6 24 1 30 16 9 3 4 23 22 18 14 15 8 28 29 2 25 10 20 32 27 12 6 7 17 31 21 19 5 13 26 11
+<DT>Each lifted vertex has two neighbors within its own copy and two
+neighbors in the other copy, giving a 4-regular graph with 2&middot;672 = 1344 vertices and
+2688 edges.  </DT>
+<DT> Download the <a href="adjacencies/adjD7/deg4_diam7_n1344_adjlist.txt" target="_blank"> local edge list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD7/1344_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=tejgvf" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=1320
+<DT>Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)
+<DT> Download the <a href="adjacencies/adjD7/Loz_1320.txt" target="_blank">raw adjacency list </a> of the graph.
+<dt> This <a href="adjacencies/adjD7/1320_loz_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs  including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=drqfyd" target="_blank"> online version </a></dt>
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )</DT>
+
+<!--  former graphs 
+Exoo 1296 (July 2006)
+Eyal Loz 1260 (july 2006)
+ Exoo 1248 (nov 2005)
+Exoo_1200
+      Obtained joining five copies of group 122 in the GAP Catalog (order 240).
+-->
+
+
+<HR SIZE=3>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 5    DIAM = 7    %%%%%%%%%%%% -->
+<A NAME=57></A>
+<B>Bhakar_6000</B>
+<DT>Degree= <B>5</B>, Diameter = <B>7</B>; Order =<B>6000</B>; Moore bound=27 306.</DT>
+
+
+<DT> Obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who 
+set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results.</DT>
+<DT>  This graph is constructed as a two-copy voltage lift over the non-metacyclic
+group G = ((F<sub>5</sub><sup>2</sup> &#x22CA; C<sub>3</sub>)
+&times; Z<sub>5</sub>) &#x22CA; C<sub>8</sub>,
+of order 3000. The elements of F<sub>5</sub><sup>2</sup>
+are represented by pairs (a,b), and the generator c of order 3
+acts by the matrix B = [[0,4],[1,4]], while the generator y
+of order 8 acts by the matrix A = [[1,1],[2,4]] on
+F<sub>5</sub><sup>2</sup>, and sends c to c<sup>2</sup>
+and z to z<sup>2</sup>, where z has order 5.
+The construction uses two copies of G, with inverse-pair
+generators y and ((0,2),c,z<sup>4</sup>)y<sup>4</sup>
+for the first and second copies, respectively.
+The copies are connected by three generators: the identity 1,
+((0,1),c,z)y<sup>4</sup>, and
+((1,4),c,z<sup>4</sup>)y<sup>7</sup>.
+Each connecting generator also defines its inverse edge
+in the opposite direction. The resulting graph has
+2&middot;3000 = 6000 vertices, is 5-regular, and has
+diameter 7.
+</DT>
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download the edge list and more information detailing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/deg5-dia7-n6000.edges.txt" target="_blank">  local raw adjacency list </a>  of the graph.</DT>
+<DT>This <a href="adjacencies/adjD7/6000_Bhakar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=imspjb" target="_blank"> online version </a>.</DT>
+
+
+<BR>
+<DT> Former result, order=5896
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<!-- <DT>   Voltage lift of a base graph with 2 vertices over the metacyclic group  Z<sub>11</sub> (&#8906;<sub>265</sub>) Z<sub>268</sub> of order 2948: the vertices are the pairs (copy, group element) and (c,x) is adjacent to (c',x g) for each of the 5 units (loop pairs inside a copy, edges between copies)  -->
+<DT>  A graph with maximum degree 5, diameter 7, and 5896 vertices is constructed as a two-copy voltage lift over the semidirect  product Z<sub>11</sub> &#x22C9;<sub>265</sub>Z<sub>268</sub>, of order 2948.
+The group operation is defined by [x,y] &times; [u,v] = [(x+u) mod 11, (y&middot;265<sup>u</sup>+v) mod 268].
+The construction uses two copies of the group, with inverse-pair generators [2,142] and [4,182] for the
+first and second copies, respectively, and three generators [3,164], [0,74], and [8,165] connecting
+the two copies. The resulting graph has 2&middot;2948 = 5896 vertices.</DT>
+<DT> Download the <a href="adjacencies/adjD7/deg5_diam7_n5896_edges.txt" target="_blank"> local edge list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD7/5896_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=hcveqk" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=5894
+<DT> Obtained by Michel de Messieres (michel@demessieres.com, October 6, 2026).
+The search programs were written and run by an AI assistant (Anthropic's Claude) under the author's direction.
+This graph is a lift of a 2-vertex voltage graph over Z<sub>7</sub> (&#8906;<sub>33</sub>) Z<sub>421</sub>. The graph is <b>vertex-transitive</b> and <b>edge-transitive</b> but not Cayley.
+<DT> The graph and a detailed write-up are also on Zenodo  <A  href=" https://doi.org/10.5281/zenodo.23176213" target="_blank">  https://doi.org/10.5281/zenodo.23176213 </A></DT>
+<DT> Download the <a href="adjacencies/adjD7/graph_5_7_n5894.txt" target="_blank"> edge list </a>  of the graph. 
+ <dt> This <a href="adjacencies/adjD7/5894_demessieres_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=qkqnkv" target="_blank"> online version </a>.</dt>
+ 
+<BR>
+<DT>Former result, Order = 5824 
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Orbit graph.  G = Sz(8), of order 29120, with one orbit, of size 5824 (a point stabilizer has order 5).  This graph is <b>vertex-transitive</b> and  <b>edge-transitive</b>
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/graph_d5_k7_n5824.edges" target="_blank"> local edge list </a>  of the graph.</DT>  
+  <dt> This <a href="adjacencies/adjD7/5824_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q= " target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT>Former result, Order = 5516 
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)</DT> 
+<DT> Download the <a href="adjacencies/adjD7/Loz_5516.txt" target="_blank">raw adjacency list </a>  of the graph.</DT>
+<dt> This <a href="adjacencies/adjD7/5516_loz_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs  including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=drkqly" target="_blank"> online version </a></dt>
+
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz ) . </DT>
+
+<!-- former results Sampels 5500
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn </DT>
+
+<DT>5500 20*(28) 275 [3,72](20) [19,120](20) [10,132](2) 
+[17,139](20) [1,215](20)</DT>
+
+<DT>M. Sampels (Sampels@Informatik.Uni-Oldenburg.DE). Large networks with
+small diameter. (In preparation)  -->
+<HR SIZE=3>
+ 
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 6    DIAM = 7    %%%%%%%%%%%% -->
+<A NAME=67></A>
+<B>Rithwik_20400</B> </DT>
+<DT>Degree= <B>6</B>, Diameter = <B>7</B>; Order =<B>20400</B>; Moore bound=  117186</DT>
+<DT> Rithwik Gupta (rithwikca2020@gmail.com );   September 8, 2026). <b>Cayley graph</b> found through AI-assisted exhaustive computational searches (details to come).
+<DT>Download the <a href="adjacencies/adjD7/N6_7_20400.edges" target="_blank"> local edge list </a>.</DT>
+<DT> This <a href="adjacencies/adjD7/20400_d6D7_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT>Former result, Order = 20319</DT>
+ <DT> <b>Cayley graph</b>. Found as a semidirect product,  20319 nodes and 60957 edges (F.Comellas 2026): </DT>
+ <DT>  ** Z_13 x(805) Z_1563, generators  [5,451]<->[8,1232]: [10,746]<->[3,118]: [6,537]<->[7,90]: . Avg. dist.:5.996850 (1, 6, 30, 150, 742, 3440, 10490, 5460)   transm.: 121844  <A href="adjacencies/adjD7/20319_13_1563_805_Z_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT> **  <b> Z_39 x(101) Z_521, generators [22,223]<->[17,306]: [21,277]<->[18,385]: [11,315]<->[28,213]:.</b> Avg. dist.:5.996850 (1, 6, 30, 150, 742, 3440, 10490, 5460)   transm.: 121844 .  <A href="adjacencies/adjD7/20319_39_521_101_Z_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+
+<BR>
+<DT>Former result, Order = 19383 </DT>
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)</DT> 
+<DT> Voltage graph Z_21 x(48) Z_923,  B(0,3),  voltages [(19,865)(7,330)(11,97)],  avg. dist.: 5.979465   </DT>
+<DT> Download the <a href="adjacencies/adjD7/19383_Loz_volt_adjlist.txt" target="_blank"> adjlist NX version</A> of the graph.   <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank"> Link to Eyal Loz's original data</a>. 
+Communicated July 2006.</DT>
+<BR>
+<DT> Found also from other semidirect products (F.Comellas 2024): </DT>
+<DT>  Z_21 x(250) Z_923 with generators [2,620 ]<>[19,324 ]:[11,486 ]<>[10,401 ]:[7,279 ]<>[14,76 ]. Avg.dist.: 5.979465    (1,6,30,150,734,3386,10020,5056)   transm.: 115894 <A href="adjacencies/adjD7/19383_21_923_250_adjlist.txt" target="_blank"> adjlist NX</A></DT>
+<DT>  Z_21 x(529) Z_923 with generators [13,81 ]:[14,353 ]<>[7,73 ]:[19,422 ]<>[2,333 ]. Avg.dist.:  5.979465    (1,6,30,150,734,3386,10020,5056)   transm.: 115894 <A href="adjacencies/adjD7/19383_21_923_529_adjlist.txt" target="_blank"> adjlist NX</A></DT>
+
+
+
+<HR SIZE=3>
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 7    DIAM = 7    %%%%%%%%%%%% -->
+<A NAME=77></A>
+<B>Rajiv_56952</B> </DT>
+<DT>Degree= <B>7</B>, Diameter = <B>7</B>; Order =<B>56952</B>; Moore bound= 3919010 </DT>
+ 
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for semidirect product
+Z<sub>24</sub> (&#8906;<sub>44</sub>) Z<sub>2373</sub>  S= {3082,5577,17883,29904,40986,53484,55264}.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+ <DT> Download the <a href="adjacencies/adjD7/graph_d7_k7_n56952.adj" target="_blank">  local implicit adjacency list  </a>  of the graph.</DT>
+ 
+ 
+ <BR>
+<DT> Former result, order= 53456.
+ <DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems.  
+<DT> Cayley graph of the semidirect group  Z<sub>16</sub> (&#8906;<sub>8</sub>) Z<sub>3341</sub>, with generators  [1,1477 ]<>[15,233 ]:[6,1030 ]<>[10,1927 ]:[10,1927 ]<>[6,1030 ]:[15,233 ]<>[1,1477 ]. 
+ Avg.dist:  6.0247867 .  Dist. distrib. :[1, 7, 42, 252, 1511, 8455, 29421,13767 ]
+.<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, a verifier (standard-library Python), and a paper describing the construction of the graph.</DT>
+
+
+<BR>
+<DT> Former result, order= 53020.
+ <DT> Cayley graph. Found as a semidirect product, 53020 nodes and 185570  edges  (F.Comellas 2024): </DT>
+  <DT> **  Z_20 x(729) Z_2651, generators [6,894 ]<>[14,1583 ]:[17,2271 ]<>[3,140 ]:[18,2411 ]<>[2,928 ]:[10,1210 ]<>[10,1210 ]. Avg. dist.: 6.033799   (1,7,42,252,1500,8326,28815,14077)   transm.: 319906.  <A href="adjacencies/adjD7/53020_20_2651_729_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+ <DT>  **  Z_20 x(970) Z_2651, generators [1,533]<>[19,2522]:[18,2238]<>[2,167]:[3,1599]<>[17,170]:[10,1661]<>[10,1661]. Avg. dist.: 6.025896 (1,7,42,252,1510,8414,29028,13766)   transm.: 319487.  <A href="adjacencies/adjD7/53020_20_2651_970_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+
+<BR>
+<DT>Former result, Order = 52768 </DT>
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)</DT> 
+<DT> Voltage graph  Z_32 x(19) Z_1649, B(1,3),  voltages [31,96 ]:[24,586]:[21,1521]:[16,1088],  avg. dist.: 6.038661  (1,7,42,252,1504,8357,28241,14364)   transm.: 318642</DT>
+<DT> Z_m x(a) Z_n represents a semidirect product of cyclic groups [x,y][u,v]= [x + u mod m, y*a^u + v mod n].
+<DT> <A href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank"> :::  Link to Eyal Loz's original data</A>.
+ </DT>
+
+<BR>
+
+
+
+<HR SIZE=3>
+<HR SIZE=3>
+<HR SIZE=3>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<DT> 
+
+<DT>Current entries  for  diameter 7  and degrees  8, 10 and 12,   found by Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 6-19, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max. 
+All three graphs are <B>Cayley graphs</B> of metacyclic groups arising from semidirect products of cyclic groups.
+Z<sub>m</sub> &#x22C9;<sub>a</sub> Z<sub>n</sub>. 
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graphs. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).
+<BR>
+<DT>Current entries for  diameter 7 and degrees  9,11,13, 15 and 16,   obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who  set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results. All are <B>Cayley graphs</B> constructed over  semidirect products.</DT>
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download  more information detailing the construction of the graphs. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former results 
+<DT>Entries for  diameter 7  and degrees  8 to 15 , except degree 14,  found by Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 6-14, 2026).  See above
+<BR>
+ <DT> Results for diameter 7 and degrees  13 and 15  obtained by  Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026).   In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graphs.</DT>
+ <DT> Results for diameter 7 and degrees   4 to 16  obtained by Eyal Loz and Jozef &Scaron;ir&aacute;&ncaron;. New record graphs in the degree-diameter problem.
+<a href="https://ajc.maths.uq.edu.au/pdf/41/ajc_v41_p063.pdf" target="_blank">   Australas. J. Combin. 41 (2006), 63–80.</a>. </DT>   
+
+<BR>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+ <HR SIZE=3>
+<HR SIZE=3>
+<HR SIZE=3>
+
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 8    DIAM = 7    %%%%%%%%%%%% -->
+<!-- <A NAME=87></A>
+<B>Dhar_137247</B> </DT>
+<DT>Degree= <B>8</B>, Diameter = <B>7</B>; Order =<B>137247</B>; Moore bound = 1098056  </DT>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 14, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Cayley graph of the metacyclic group  Z<sub>33</sub> &#x22C9;<sub>73</sub> Z<sub>4159 </sub>. Generators can be found  in the corresponding .json file.
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graph. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former result, order =  137082.
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. <B>Cayley graph</B>  for the semidirect product 
+Z<sub>66</sub> (&#8906;<sub>87</sub>) Z<sub>2077</sub>   S= {5693, 17202, 22823, 28623, 110682, 118137, 122029, 134133}
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/graph_d8_k7_n137082.adj" target="_blank"> local implicit adjacency list </a>  of the graph.</DT>  
+
+<BR>
+<DT>Former result, Order = 136329
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for a semidirect product.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+ <DT> Download the <a href="adjacencies/adjD7/graph_d8_k7_n136329.adj" target="_blank">  local implicit adjacency list  </a>  of the graph.</DT>
+
+<BR>
+<DT> Former result, order=135621.
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; September 4, 2026). Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max. 
+Cayley graph from the semidirect group  Z<sub>27</sub> (&#8906;<sub>88</sub>) Z<sub>5023</sub>.  Generators:[13, 3021]<> [14, 1419] :  [21, 1456] <> [6, 1760] :  [16, 3771] <> [11, 1610] :  [17, 329] <> [10, 83];   avg. dist.  6.1133305 ; dist. distr. [1, 8, 56, 392, 2744, 18016, 74084, 40320] </DT>
+
+<BR>
+<DT> Former result, order=133887.
+ <DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems.  
+<DT> Cayley graph of the semidirect group  Z<sub>39</sub> (&#8906;<sub>71</sub>) Z<sub>3433</sub>, with generators [1,2494 ]<>[38,2866 ]:[5,1376 ]<>[34,3235 ]:[22,2112 ]<>[17,1712 ]:[37,1255 ]<>[2,564 ]
+ Avg.dist: 6.112064 .  Dist. distrib. :[1, 8, 56, 392, 2736, 17820, 73132, 39742 ]
+.<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, a verifier (standard-library Python), and a paper describing the construction of the graph.</DT>
+ <DT> Download  here  <A href="adjacencies/adjD7/133887_39_3433_71.txt" target="_blank"> the raw adjacency list </A>.</DT>
+
+-->
+
+
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 9     DIAM = 7    %%%%%%%%%%%% -->
+<!--
+<A NAME=97></A>
+<DT> <b>Dhar_300518</b>  
+<DT> Degree= <B>9</B>, Diameter = <B>7</B>; Order =<B>300518</B>;  Moore bound = 2696338 </DT>
+
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 14, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Cayley graph of the metacyclic group  Z<sub>46</sub> &#x22C9;<sub>8</sub> Z<sub>6533 </sub>. Generators can be found  in the corresponding .json file.
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graph. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former result, order =  298840.
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for a semidirect product.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+ <DT> Download the <a href="adjacencies/adjD7/graph_d9_k7_n298840.adj" target="_blank">  local implicit adjacency list  </a>  of the graph.</DT>
+
+<BR>
+<DT> Former result, order=286770.
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; August 20, 2026). Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max. 
+Cayley graph from the semidirect group  Z<sub>30</sub> (&#8906;<sub>766</sub>) Z<sub>9559</sub>.  Generators:
+[2,1000]<>[28,1406]:[4,2374]<>[26,8203]:[20,3753]<>[10,6411]:[27,5314]<>[3,8985]:[15,553]<>[15,553] </DT>
+
+
+
+<HR SIZE=3>   -->
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 10    DIAM = 7    %%%%%%%%%%%% -->
+ <!--  <A NAME=107></A>
+<B>Dhar_605607</B> </DT>
+<DT>Degree= <B>10</B>, Diameter = <B>7</B>; Order =<B>605607</B>; Moore bound = 5978710  </DT>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 10, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Cayley graph of the metacyclic group  Z<sub>87</sub> &#x22C9;<sub>5</sub> Z<sub>6961 </sub>. Generators can be found  in the corresponding .json file.
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graph. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former result, order =  605280.
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. <B>Cayley graph</B>  for the semidirect product 
+Z<sub>96</sub> (&#8906;<sub>17</sub>) Z<sub>6305</sub>  S= {26962, 37995, 58901, 126268, 270637, 342742, 482712, 549547, 572745, 584038}
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/graph_d10_k7_n605280.adj" target="_blank"> local implicit adjacency list </a>  of the graph.</DT>  
+
+<BR>
+<DT>Former result, Order = 602863
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for a semidirect product.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+
+
+<BR>
+<DT> Former result, order=589734.
+ <DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems.  
+<DT> Cayley graph of the semidirect group  Z<sub>27</sub> (&#8906;<sub>1369</sub>) Z<sub>21842</sub>, with generators [7,13766 ]<>[20,3878 ]:[10,12156 ]<>[17,16280 ]:[13,21389 ]<>[14,6711 ]:[16,1327 ]<>[11,3161 ]:[19,18286 ]<>[8,16198 ]:
+ Avg.dist:  6.1849562684.  Dist. distrib:  [ 1, 10 ,90,  810, 7250,  61908, 331336, 188329 ]
+.<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, a verifier (standard-library Python), and a paper describing the construction of the graph.</DT>
+
+<HR SIZE=3> -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 11     DIAM = 7    %%%%%%%%%%%% -->
+ <!-- <A NAME=117></A>
+<DT> <B>Dhar_1153512</B> </DT>
+<DT> Degree= <B>11</B>, Diameter = <B>7</B>; Order =<B>1153512</B>;  Moore bound = 12222222</DT>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 10, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Cayley graph of the metacyclic group  Z<sub>72</sub> &#x22C9;<sub>2</sub> Z<sub>16021</sub>. Generators can be found  in the corresponding .json file.
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graph. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former result, order =  1152900
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. <B>Cayley graph</B>  for the semidirect product 
+Z<sub>60</sub> (&#8906;<sub>383</sub>) Z<sub>19215</sub> S= {110822, 127219, 252625, 359387, 538866, 586215, 626049, 817327, 907390, 1047794, 1070786}
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/graph_d11_k7_n1152900.adj" target="_blank"> local implicit adjacency list </a>  of the graph.</DT>  
+
+<BR>
+<DT>Former result, Order = 1071928
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for a semidirect product.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+
+<BR>
+<DT> Former result, order=1031240.
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; August 20, 2026). Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max. 
+Cayley graph from the semidirect groupZ<sub>14</sub> (&#8906;<sub>111</sub>) Z<sub>73660</sub> Generators:
+[1,599]<>[13,72991]:[6,46276]<>[8,31744]:[9,48194]<>[5,65626]:[12,43845]<>[2,8195]:[11,34235]<>[3,26815]:[7,15080]<>[7,15080].  Avg.dist: 6.19087797.  Dist. distrib:  [ 1, 11, 110, 1100, 10952, 102859, 590802, 325405]
+
+<HR SIZE=3> -->
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 12    DIAM = 7    %%%%%%%%%%%% -->
+ <!--  <A NAME=127></A>
+<B>Dhar_2031500</B> </DT>
+<DT>Degree= <B>12</B>, Diameter = <B>7</B>; Order =<B> 2031500</B>; Moore bound = 23384604  </DT>
+
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 10, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Cayley graph of the metacyclic group  Z<sub>68</sub> &#x22C9;<sub>818</sub> Z<sub>29875</sub>. Generators can be found  in the corresponding .json file.
+<DT> Download  <a href="adjacencies/new_bounds_2026-10-6_14.zip" target="_blank"> this file </a>  with a  .json file and other details to reconstruct the  graph. Note that, in these files,  the AI used the opposite convention for the group operation in the semidirect product compared to the one preferred in this table, which follows the original contributions of M. J. Dinneen and P. Hafner (see the top of this page).</DT>
+
+<BR>
+<DT> Former result, order =  2031120
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. <B>Cayley graph</B>  for the semidirect product 
+Z<sub>60</sub> (&#8906;<sub>331</sub>) Z<sub>133852</sub>. S= {147633, 184817, 338559, 600552, 620731, 875288, 1205200, 1447349, 1455816, 1725477, 1869337, 1921047}
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/graph_d12_k7_n2031120.adj" target="_blank"> local implicit adjacency list </a>  of the graph.</DT>  
+
+<BR>
+<DT>Former result, Order = 2007474
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 24, 2026) with the use of AI agentic coding systems.  The graph is a <B>Cayley graph</B> for a semidirect product.
+<DT> In this link  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  a paper and information  detailing the construction of the graph.</DT>
+
+<BR>
+<DT> Former result, order=2006692.
+ <DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems.  
+<DT> Cayley graph of the semidirect group  Z<sub>31</sub> (&#8906;<sub>1905</sub>) Z<sub>64732</sub>, with generators [3,6544 ]<>[28,36800 ]:[7,61265 ]<>[24,45463 ]:[13,63227 ]<>[18,42325 ]:[16,24277 ]<>[15,48071 ]:[20,2592 ]<>[11,38792 ]:[25,36675 ]<>[6,50469 ].
+ Avg.dist: 6.24260673 .  Dist. distrib:  [ 1, 12, 132, 1452, 15956, 168136, 1129168,  691835].
+ .<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, a verifier (standard-library Python), and a paper describing the construction of the graph.</DT>
+
+<DT>  -->
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 14  DIAM = 7    %%%%%%%%%%%% -->
+
+ <A NAME=147></A>
+<DT> <b>K<sub>1</sub>&Sigma;<sub>8</sub> H<sub>11</sub></b>  
+<DT> Degree = <B>14</B>, Diameter = <B>7</B>; Order =<B>6200460</B>; Moore bound= 73206603 ; 
+<DT> J. G&oacute;mez, M.A. Fiol and O. Serra, On large  (&Delta;, D) graphs,
+   <em>Discrete Mathematics</em>, <b>114</b> (1993), pp. 235.  <A 
+  href="https://doi.org/10.1016/0012-365X(93)90368-4" target="_blank"> link to the paper </A>
+
+
+<HR SIZE=3> 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 16  DIAM = 7    %%%%%%%%%%%% -->
+ <A NAME=167></A>
+<DT> <b>Bhakar _14995367</b>  
+<DT> Degree = <B>16</B>, Diameter = <B>7</B>; Order =<B>14995367</B>; Moore bound= 195267857 ; 
+
+<DT> Obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who 
+set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results.</DT>
+<DT>   <b>Cayley graph </b> with degree 16, diameter 7, and 14995367 vertices constructed over the semidirect product Z<sub>179</sub> &#x22C9;<sub>72211</sub> Z<sub>83773</sub>, of order 14995367
+(with 83773 prime).
+The group operation (following the notation of the original contributions to this table -see top of this page-) is defined by [x,y] &times; [u,v] =[(x+u) mod 179, (y&middot;72211<sup>u</sup>+v) mod 83773].
+The graph has eight inverse-pair generators (164,42288), (163,71803), (121,66096), (146,27388),
+(167,16009), (110,14308), (108,25621), and (172,49013), corresponding to the integers 13781060, 13726802, 10202629, 12258246, 14006100, 9229338, 9073105, and 14457969, respectively.
+The graph  was obtained using a coincidence-free level pattern followed by simulated annealing with targeted moves.
+</DT>
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download the edge list and more information detailing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD7/deg5-dia7-n6000.edges.txt" target="_blank">  local raw adjacency list </a>  of the graph.</DT>
+
+
+<BR>
+<DT>Former result, Order = 14882658
+<DT> K<sub>1</sub>&Sigma;<sub>8</sub> H<sub>13</sub>.  J. G&oacute;mez, M.A. Fiol and O. Serra, On large  (&Delta;, D) graphs,  <em>Discrete Mathematics</em>, <b>114</b> (1993), pp. 235.  <A 
+  href="https://doi.org/10.1016/0012-365X(93)90368-4" target="_blank"> link to the paper </A>
+<HR SIZE=3>
+<HR SIZE=3>
+
+  
+ <!-- FORMER RESULTS  
+<A NAME=67></A>
+<B>Loz_19282</B>
+
+<DT> Degree= <B>6</B>, Diameter = <B>7</B>; Order =<B>19 279</B>;
+ Moore bound=117187  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)</DT> 
+<DT> Download the <a href="adjacencies/Loz_19282.txt"> adjacency list </a>  of the graph.</DT>
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )
+Communicated July 2006.</DT>
+
+
+<!-- 
+former result H_19279
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =      13
+             n  =    1483
+             a  =     191
+            m*n =   19279
+
+[    1,  809 ] ,    [   12, 1471 ]        13
+[   11,  288 ] ,    [    2,  527 ]        13
+[    7, 1116 ] ,    [    6, 1129 ]        13
+</pre>
+<dt> P.R.Hafner</dt>
+
+<A NAME=77></A>
+<B>Loz_52768</B>
+<DT>Degree= <B>7</B>, Diameter = <B>7</B>; Order =<B>52768</B>; Moore bound=391910.
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+</DT>
+
+
+<A NAME=87></A>
+<B>Loz_130017</B>
+<DT> Degree= <B>8</B>, Diameter = <B>7</B>; Order =<B>130017</B>;
+ Moore bound=1098057.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+</DT>
+
+
+<A NAME=97></A>
+<B>Loz_270192</B>
+<DT> Degree= <B>9</B>, Diameter = <B>7</B>; Order =<B>270192</B>;
+ Moore bound=2696338.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+</DT>
+
+<A NAME=107></A>
+<B>Loz_561957</B>
+
+<DT> Degree= <B>10</B>, Diameter = <B>7</B>; Order =<B> 561957</B>;
+ Moore bound=5978711.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+</DT>
+
+<A NAME=117></A>
+<B>Loz_971028</B>
+<DT> Degree= <B>11</B>, Diameter = <B>7</B>; Order =<B>971028</B>;
+ Moore bound= .  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )
+</DT>
+
+<A NAME=127></A>
+<B>Loz_1900464</B>
+
+<DT> Degree= <B>12</B>, Diameter = <B>7</B>; Order =<B> 1900464</B>;
+ Moore bound=23384605.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )
+</DT>
+
+<A NAME=137></A>
+ <B>Loz_2901404</B>
+
+<DT> Degree= <B>13</B>, Diameter = <B>7</B>; Order =<B> 2901404</B>;
+ Moore bound=.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )
+</DT>
+
+<A NAME=157></A>
+ <B>Loz_8079298</B>
+
+<DT> Degree= <B>13</B>, Diameter = <B>7</B>; Order =<B> 8079298</B>;
+ Moore bound=.  
+
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (AUgust 2006)</DT> 
+<DT> <a href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank">
+     Link to Eyal Loz's data</a>. (eloz002 @ math .auckland. ac. nz )
+</DT>
+
+</BODY>
+</HTML>
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<!-- FORMER RESULTS
+<HR SIZE=3>
+<B>H_52404</B>
+<DT>Degree= <B>7</B>, Diameter = <B>7</B>; Order =<B>52 404</B>; Moore bound=391910.
+
+</DT>
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =      44
+             n  =    1191
+             a  =    1076
+            m*n =   52404
+
+[   28,   61 ] ,    [   16,  254 ]        33
+[    8, 1133 ] ,    [   36,  607 ]        33
+[    7,    4 ] ,    [   37, 1159 ]        44
+[   22,    0 ]                             2
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+<B>H_129473</B>
+<DT> Degree= <B>8</B>, Diameter = <B>7</B>; Order =<B>129473</B>;
+ Moore bound=1098057.  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =      43
+             n  =    3011
+             a  =     723
+            m*n =  129473
+
+[    1, 2776 ] ,    [   42, 1991 ]        43
+[   28,  684 ] ,    [   15, 2769 ]        43
+[   19, 1720 ] ,    [   24,  454 ]        43
+[   27, 2027 ] ,    [   16, 1634 ]        43
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+<B>H_270048</B>
+<DT> Degree= <B>9</B>, Diameter = <B>7</B>; Order =<B>270048</B>;
+ Moore bound=2696338.  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =      96
+             n  =    2813
+             a  =     911
+            m*n =  270048
+
+
+[   21,  198 ] ,    [   75, 1767 ]        32
+[   37,  828 ] ,    [   59, 2570 ]        96
+[    8, 2560 ] ,    [   88, 2399 ]       348
+[   71, 2139 ] ,    [   25, 2143 ]        96
+[   48,    0 ]                             2
+
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+B>H_561949</B>
+
+<DT> Degree= <B>10</B>, Diameter = <B>7</B>; Order =<B> 561949</B>;
+ Moore bound=5978711.  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =     113
+             n  =    4973
+             a  =    2364
+            m*n =  561949
+
+[   42, 4692 ] ,    [   71,  543 ]       113
+[   66, 2514 ] ,    [   47,  358 ]       113
+[   93, 3418 ] ,    [   20, 4869 ]       113
+[   36,  472 ] ,    [   77, 1780 ]       113
+[   11,  801 ] ,    [  102,  581 ]       113
+
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+<B>H_970410</B>
+<DT> Degree= <B>11</B>, Diameter = <B>7</B>; Order =<B>970410</B>;
+ Moore bound= .  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =     210
+             n  =    4621
+             a  =      99
+            m*n =  970410
+
+[   23, 1915 ] ,    [  187, 1751 ]       210
+[   90, 4541 ] ,    [  120, 3102 ]         7
+[  202, 3099 ] ,    [    8, 3731 ]       105
+[   83,  448 ] ,    [  127, 1228 ]       210
+[   87,  884 ] ,    [  123, 1213 ]        70
+[  105,  890 ]                             2
+
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+<B>H_1900319</B>
+
+<DT> Degree= <B>12</B>, Diameter = <B>7</B>; Order =<B> 1900319</B>;
+ Moore bound=23384605.  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =     181
+             n  =   10499
+             a  =     756
+            m*n = 1900319
+
+[  113, 2958 ] ,    [   68, 9951 ]       181
+[  144, 1702 ] ,    [   37, 1461 ]       181
+[  120, 1328 ] ,    [   61, 9986 ]       181
+[   28, 9504 ] ,    [  153, 10477 ]       181
+[   76, 1379 ] ,    [  105, 10014 ]       181
+[  167, 9903 ] ,    [   14, 9712 ]       181
+
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+< <B>H_2901294</B>
+
+<DT> Degree= <B>13</B>, Diameter = <B>7</B>; Order =<B> 2901294</B>;
+ Moore bound=.  
+
+<DT>Obtained as a Cayley graph for semidirect product of Zm with Zn. 
+<pre>
+             m  =     198
+             n  =   14653
+             a  =      51
+            m*n = 2901294
+
+[  174, 14484 ] ,    [   24,  489 ]        33
+[   68, 3026 ] ,    [  130, 1616 ]        99
+[  194, 1402 ] ,    [    4, 1833 ]        99
+[   41, 6908 ] ,    [  157, 4132 ]       198
+[  146,  308 ] ,    [   52, 12155 ]        99
+[  193, 3559 ] ,    [    5, 5797 ]       198
+[   99, 2434 ]                             2
+
+</pre>
+<dt> P.R.Hafner
+</dt>
+<HR SIZE=3>
+<B>K_1 \kappa_9 H_{11}</B>
+<DT> Degree= <B>15</B>, Diameter = <B>7</B>; Order =<B> 7 972 020</B>;
+ Moore bound=.  
+
+
+<DT> J. Gomez Marti, M. Miller. Two new families of large compound graphs.  Networks 47 (2006) pp. 140-146.
+
+-->
+
+</BODY>
+</HTML>
+

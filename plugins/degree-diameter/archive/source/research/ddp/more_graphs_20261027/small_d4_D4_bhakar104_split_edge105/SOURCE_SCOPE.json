@@ -1,0 +1,79 @@
+{
+  "status": "READ_ONLY_SOURCE_AND_SCOPE_READY",
+  "created_UTC": "2026-10-28T03:42:33.901946+00:00",
+  "target": {
+    "Delta": 4,
+    "D": 4,
+    "public_baseline_inherited": 104,
+    "hypothetical_n": 105,
+    "hypothetical_m": 210
+  },
+  "recommended_source": {
+    "name": "NishantBhakar104c",
+    "edge_file": "research/ddp/breadth_20261027_wave2/sources/bhakar104.edges",
+    "original_literal": "research/ddp/breadth_20261027_wave2/sources/bhakar104_source.txt",
+    "official_URL": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/104c_d4D4.txt",
+    "old_validation": "research/ddp/breadth_20261027_wave2/sources/bhakar104_check.json",
+    "n": 104,
+    "m": 208,
+    "degree": 4,
+    "D": 4,
+    "triangles": 0,
+    "new_source_BFS": 0
+  },
+  "cache_reuse": {
+    "full_old_distance_matrix": "research/ddp/breadth_20261027_wave2/sources/bhakar104_distances.json",
+    "schema": "104rows each104integerdistances; originalG, notG-v or cutgraph",
+    "R3": "rowD[x,t]<=3 gives closedR3G(x)",
+    "far_first_support": "ForD[v,t]=4,H_v(t)={u in N_G(v):D[u,t]=3}. Derivable directly fromsavedmatrix, no BFS; fullHcache not separately persisted by oldsplit.",
+    "oldsplit_removed_vertex_neighbor_balls": "Computed transiently byoldprogram, not saved as reusableG-v distancecache.",
+    "other_walk_cache": "research/ddp/breadth_20261027_wave5/bhakar104_wide_screen/NB2_NB4_counts.json",
+    "walk_cache_scope": "Contains allNB2/NB4 counts and unique3step witness0-24-4-32. It excludes a differentfixedprojection lift and doesnot exclude changed-edge105graphs."
+  },
+  "copies_read_compared": [
+    "research/ddp/breadth_20261027_wave2/sources/bhakar104.edges",
+    "research/ddp/breadth_20261027_wave2/extension105_d4/source.edges",
+    "research/ddp/more_graphs_20261027/d4_vertex_split/source104.edges"
+  ],
+  "all_three_edge_sets_equal": true,
+  "nonisomorphic_source_inventory": "Only104c andthese identicalcopies located in targetedlocalmetadata/filenames. No actual104a/b/d file found; no claimaboutallpublic104graphs.",
+  "prior_exact_scopes": [
+    {
+      "id": "ddp-more-graphs-20261027-adjacent-single-vertex-split",
+      "scope": "Fixed104c, all104vertices/all728 nonempty unorderedneighbor partitions;312 balanced2+2 rootgates allfail. No deletion/replacement of anotheroldedge.",
+      "evidence": "research/ddp/more_graphs_20261027/d4_vertex_split/d4_RESULT.json"
+    },
+    {
+      "id": "ddp-wave2-extension105-d4",
+      "scope": "All20904 pairs ofdisjointsourceedges replaced by one newhubfourspokes; not the nondegenerate split+extraedge operation.",
+      "evidence": "research/ddp/breadth_20261027_wave2/extension105_d4/REPORT.md"
+    },
+    {
+      "id": "ddp-wave2-extension105-d4/two_edge_switches",
+      "scope": "Fixedsaved105vertexQ only, all40740 legal ordinarytwoedgeswitch neighbors.",
+      "evidence": "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/REPORT.md"
+    },
+    {
+      "id": "ddp-wave2-extension105-d4/two_branch_completion",
+      "scope": "FixedQoutside/boundary U; all230simple internalU degreecompletions.",
+      "evidence": "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/REPORT.md"
+    }
+  ],
+  "new_scope": "Splitv intoadjacentchildren with2+2 originalneighbors, deleteoneoldedgexy outsideclosedN_G[v], attachfirstchild tox andsecond toy. Allotheroldedges fixed. This extraedge-change isnot covered byplain-split exclusion.",
+  "initial_parameter_count": {
+    "source_vertices": 104,
+    "unordered_balanced_partitions": 3,
+    "eligible_cut_edges_per_vertex": 192,
+    "cut_orientations": 2,
+    "total_parameter_tuples": 119808,
+    "derivation": "Source4regulartrianglefree⇒closedN[v] has5verticesand4internalstaredges; edgesincidentclosedN count5*4-4=16, leaving208-16=192. Tuplesarenotassertednonisomorphicgraphs."
+  },
+  "degenerate_broader_scope": "Ifonlycutavoidsv, x in movedneighborpartT restoresonev-T edge, reducingtoliteralold2cut+hubscope. Symmetricallyy inretainedpartS reducesafterchildswap. x inS ory inT normallyduplicatesaspoke. closedN avoidance cleanlyremovesthese cases.",
+  "execution": {
+    "graph_generation": 0,
+    "candidate_evaluations": 0,
+    "solver_calls": 0,
+    "source_BFS": 0,
+    "source_downloads": 0
+  }
+}

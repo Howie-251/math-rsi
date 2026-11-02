@@ -1,0 +1,205 @@
+[
+  {
+    "id": "ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101",
+    "title": "78点Schreier×F9³：56862/54/D3独验、A编码与B结构审阅PASS，具体Lean在途",
+    "family": "Affine controller fiber construction",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 54,
+    "target_D": 3,
+    "savedL": 55350,
+    "baseline_date": "2026-11-01 bounded best-located primary-source comparison; not latest-global certification",
+    "record_type": "complete_literal_graph_global_novelty_pending",
+    "n": {
+      "actual": 56862,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": 54,
+    "actual_D": 3,
+    "actual_D_scope": "Complete literal graph: all1535274 edges and56862 degrees bound to independent GF9 formula; all6084 finite layer pairs plus8chart rank/pencil premises yield trueWalk allpairs D3;806 literal BFS roots are a separate crosscheck, not all56862 roots.",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "yes",
+    "outcome_class": "COMPLETE56862_LITERAL_ACCEPTED_A_ENCODING_B_STRUCTURAL_PASS_CONCRETE_D3_LEAN_PENDING",
+    "distance_text": "56862点／1535274边，全54正则。fresh独验逐条绑定全部边与独立GF9公式、全部56862度数；8真逆charts／200NBturn／8×729pencil及全部6084控制pair(5616NB3+468相邻)均PASS，实际任意x,y的Walk证明覆盖全点对。806字面BFS根全部R3覆盖，逐根独立formula-R2预测与actual一致：52根(1,54,2449,54358)、754根(1,54,2476,54331)。生产0.961254264CPU、fresh独验总1.740401167CPU；不是全56862根BFS。已计合法图；具体Lean仍在途，不计第12例。best-located55350，优势1512，全球／首创未认证。",
+    "scope": "唯一成功Schreier78 controller：3base×Z26，参数(2,6,17,5,10)，inverseports[1,0,3,2,4,5]。GF9=GF3[w]/(w²+1)，codea+3b；label729*u+x0+9*x1+81*x2；edge y=T_e*x+t*ell_reversePort。实际只用42chart中的8张，crossport按p<q选canonical或真逆，selfport按u<v选正／逆。",
+    "positive_guarantees": [
+      "控制器所有点在b三角中，同层和非邻点对的三步见证自动NB3；其路线的三独立噪声向量给全729坐标。",
+      "相邻控制层由真实inverse回退pencils补齐729；逆参数为−t，不能照搬特征2的+t。",
+      "fresh字面边包含于独立54-neighbor公式且两者每点均54度，故边关系恰相等。",
+      "806BFS为controller0全部729坐标加其他77层零坐标；未假设fiber平移automorphism或把0root代表全部坐标。"
+    ],
+    "unclosed_gap": "新scope A编码和B结构桥实际PASS；B thread d0c18fd9-6ebe-4750-8e2e-9a38b5a11558。实际13modelchunks/6pairchunks已PASS，adjacentblocks/callers/Audit仍在途，完整具体D3未闭、不计第12例。B时表前八项和1250–1400外推已由root disposition按实际receipts纠正，未作为测量或新运行依据；B不是kernel最终PASS。最终freshC、全球最高和优先权未认证。",
+    "lesson_and_restart_condition": "原六端口局部charts已PASS但控制器缺路；三base/三角和第六匹配改变生成规则后找到完整A³控制器。有限成功后立即停止控制器搜索，生产并fresh验收唯一56862图；下一只闭合此实例的具体Lean与必要审阅。 本源另已有单fiber81点横截plane给出55度新完整克隆图，另节点只计一次；不据源具体Lean未闭把数学独验成果删掉，也不把编码A当完整形式化。",
+    "other_metrics": {
+      "validated_graph_instances": [
+        {
+          "Delta": 54,
+          "D": 3,
+          "n": 56862,
+          "m": 1535274,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "known_nonrecord": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "best_located_public_lower_bound": 55350
+        }
+      ],
+      "mathematically_validated_complete_graph": true,
+      "new_lower_bound_mathematically_verified": false,
+      "new_named_complete_graphs": 1,
+      "new_Lean_instances": 0,
+      "regular": 54,
+      "controller_order": 78,
+      "field_order": 9,
+      "fiber_order": 729,
+      "used_charts": 8,
+      "independent_all_literal_edges": 1535274,
+      "independent_degrees": 56862,
+      "full_controller_pairs": 6084,
+      "NB3_pairs": 5616,
+      "adjacent_pairs": 468,
+      "literal_BFS_roots": 806,
+      "all56862_roots_BFS": false,
+      "allpair_actualWalk_proof": true,
+      "histogram_predictions_all806_match": true,
+      "producer_CPU": 0.961254264,
+      "independent_CPU": 1.740401167,
+      "concrete_Lean_complete": false,
+      "external_review_A": {
+        "status": "ACTUAL_SUCCESS_ENCODING_PASS_NOT_CONCRETE_D3_VERDICT",
+        "threadId": "234756cc-1bc7-4c6d-bc07-f18f74c40475",
+        "raw": "research/ddp/two_successful_methods_20261101/reviews/F9_56862_A_GEMINI_RAW.json",
+        "disposition": "research/ddp/two_successful_methods_20261101/reviews/F9_56862_A_DISPOSITION.md"
+      },
+      "formal_pilot": "typedField/graph/MatrixCertificate/Routes/Linear/DecoderInterface/ModelBridge and all13model/all6pairchunks actualPASS; adjacentblocks/callers/closedoriginaltarget/separateAudit pending",
+      "external_review_B": {
+        "status": "ACTUAL_SUCCESS_STRUCTURAL_PASS_NOT_FINAL_KERNEL",
+        "threadId": "d0c18fd9-6ebe-4750-8e2e-9a38b5a11558",
+        "raw": "research/ddp/two_successful_methods_20261101/reviews/F9_56862_B_GEMINI_RAW.json",
+        "disposition": "research/ddp/two_successful_methods_20261101/reviews/F9_56862_B_DISPOSITION.md",
+        "timing_table_correction": "rootdisposition corrects reviewer first8timingentries/extrapolation;actualmeasurements onlylocal RESULT/finalaggregatedreceipt"
+      }
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/PARAMETERS.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/graph_d54_D3_n56862.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/independent_acceptance/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/independent_acceptance/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/DEGREE54_ROUTE_TARGET_GATE_20261101.md",
+      "research/ddp/two_successful_methods_20261101/reviews/F9_56862_A_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/F9_56862_A_DISPOSITION.md",
+      "research/ddp/two_successful_methods_20261101/reviews/F9_56862_B_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/F9_56862_B_DISPOSITION.md"
+    ]
+  },
+  {
+    "id": "ddp-r6-schreier-fixed-even-deck-a3-capacity34-gaussian-obstruction-20261101",
+    "title": "固定六port三base拓扑A³覆盖：符号36型与Gaussian字符排m36，evenm≤34",
+    "family": "Affine controller fiber construction",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 54,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 local fixed-topology capacity theorem; no new graph/public-baseline comparison",
+    "record_type": "local_symbolic_controller_capacity_bound",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "Local necessary upper bound for fullA³ coverage of one fixed six-port/3base/even cyclic-deck topology; not an actual graph diameter or general6D3bound.",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "yes",
+    "outcome_class": "LOCAL_PAPER_FIXED_TOPOLOGY_A3_EVEN_M34_BOUND_CLOSED_NO_GRAPH_NO_LEAN",
+    "distance_text": "固定六port逐base规则的K³符号型计数独立核为40/46/46,46/38/36,46/36/38，完整A³覆盖先必要m≤36。事前预测m36的36型须模4每桶9，原1024profiles全失败，mod2仍16/32、mod3仍36/243。随后从实际port矩阵独立分解36型为8+4+12+12，h18≡2；一次和强制τ−σ odd，平方和强制α1/α2不全偶，在i处六行Gaussian case的字符和均非0，短证排m36。因此evenm≤34/controller3m≤102，仅固定topology+A³；不是新完整图、一般degree6D3上界或Lean定理。root小余数CPU.037925631，独立符号代数CPU.001513766，0新图/BFS/solver/Lean。",
+    "scope": "固定三base×Z_m，m偶数、h=m/2；a+为0→0+A,1→2+B,2→1+C，a−真逆；b±为base三cycle零shift；s交换0/1并±S、base2自移h；t交换0/2并±T、base1自移h。A,B,C,S,T任意合法电压，不沿用m26的两单位轨归一作其他m的WLOG。要求所有有序控制点对有长度恰3的walk，即A³entrywisepositive。",
+    "positive_guarantees": [
+      "36型从实际port Laurent矩阵K³独立推得，仅用2h=0，精确匹配保存36行TSV；同型碰撞只会减少覆盖，不会突破m≤36。",
+      "m36均匀模4必要：sum f≡2(T−S)，sum f²≡2(B²+C²+BC+ST)；继而S/T异奇偶、B/C不全偶。",
+      "六行Gaussian整数表及共轭覆盖全部x=i^B,y=i^C至少一非实的情况；偶S/T≡2时q/2−u非0，偶S/T≡0时k(1±i)+(q/2+u)不能相消，k∈{1,−1,−3}。与9(1+i−1−i)=0矛盾，不依赖profile枚举作最终证明。",
+      "当前full9line/nointrafiber F9³lift若缺非邻层3walk，最多6*81=486<729点；所以此A³必要界也适用于该固定lift模型。此处接口必要性直接继承，不登记为新认识。"
+    ],
+    "unclosed_gap": "m34是否可行未判定；没有controller102或74358点目标图。其他port拓扑、intrafiber边和一般degree6/D3图未排；单纯controller D≤3不自动等价A³>0。未做Lean形式化，无全球新下界／新framework。",
+    "lesson_and_restart_condition": "九basepair符号计数是先读原表后的发现，非事前预测；随后PRED预期m36模4必要域为空获支持，再用独立短字符证明解释重复结构障碍。未来在本固定A³拓扑跳过evenm≥36；当前不启动m34等参数搜索，仍先闭54/55具体Lean及最终外审。",
+    "other_metrics": {
+      "new_named_complete_graphs": 0,
+      "new_Lean_instances": 0,
+      "new_frameworks": 0,
+      "local_paper_result": true,
+      "complete_Lean_graph_instance": false,
+      "base_pair_type_counts": [
+        [
+          40,
+          46,
+          46
+        ],
+        [
+          46,
+          38,
+          36
+        ],
+        [
+          46,
+          36,
+          38
+        ]
+      ],
+      "initial_even_m_upper": 36,
+      "final_even_m_upper": 34,
+      "A3_compatible_controller_order_upper": 102,
+      "m34_existence_claimed": false,
+      "general_degree6_D3_upper_claimed": false,
+      "m36_half_mod4": 2,
+      "m36_uniform_mod4_required": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "root_mod4_profiles": 1024,
+      "root_mod4_balanced": 0,
+      "root_mod2_balanced_profiles": [
+        16,
+        32
+      ],
+      "root_mod3_balanced_profiles": [
+        36,
+        243
+      ],
+      "root_profile_CPU": 0.037925631,
+      "independent_symbolic_CPU": 0.001513766,
+      "independent_profile_searches": 0,
+      "independent_support_blocks": [
+        8,
+        4,
+        12,
+        12
+      ],
+      "independent_Gaussian_case_rows": 6,
+      "new_controller_fiber_BFS_solver_Lean_runs": 0,
+      "source_controller_node": "ddp-r6-schreier3base-z26-sixport-controller78-complete-a3-20261101",
+      "future_decision": "skip fixed-topology evenm>=36; no currentm34search",
+      "current_priority": "finish54/55closedconcreteLean/finalreviews"
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/check_residues.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/DISTINCT_1_TO_2_FORMS.tsv",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/INDEPENDENT_PAPER_CHECK.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/INDEPENDENT_PAPER_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/symbolic_capacity/check_symbolic_identity_independent.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/PROOF.md"
+    ]
+  }
+]

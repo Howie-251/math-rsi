@@ -1,0 +1,21 @@
+graph : SimpleGraph Vertex
+label : Vertex ≃ Fin 346516
+def DegreeDiameter.Portfolio.Q8DiagonalFill.FinalClaim : Prop :=
+Fintype.card Vertex = 346516 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+DegreeDiameter.Portfolio.Q8DiagonalFill.d82_346516 :
+  Fintype.card Vertex = 346516 ∧
+    (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+      DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+theorem DegreeDiameter.Portfolio.Q8DiagonalFill.d82_346516 : Fintype.card Vertex = 346516 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 82) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_three, not_diameterAtMost_two⟩⟩⟩
+'DegreeDiameter.Portfolio.Q8DiagonalFill.d82_346516' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.Q8DiagonalFill.final_claim : FinalClaim :=
+d82_346516
+'DegreeDiameter.Portfolio.Q8DiagonalFill.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill.label_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill.label_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill.label_hub' depends on axioms: [propext, Classical.choice, Quot.sound]

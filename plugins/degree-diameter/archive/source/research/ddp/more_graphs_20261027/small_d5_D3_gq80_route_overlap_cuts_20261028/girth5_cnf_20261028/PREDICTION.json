@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-10-28T02:09:07.074598+00:00",
+  "status": "TERMINAL_UNKNOWN_GIRTH5_SINGLE_CALL_CLOSED",
+  "target_Delta": 5,
+  "target_D": 3,
+  "baseline": 72,
+  "hypothetical_n": 80,
+  "hypothetical_m": 200,
+  "prediction": "There exists a diameter-at-most3, girth-at-least5,5regular80-vertex graph retaining all saved GQ incidence edges and adding one perfect matching on each side.",
+  "prediction_status": "UNKNOWN_NOT_REFUTED",
+  "new_rule": "Restrict internal matching edges to noncollinear pairs and forbid every mixed incidence/matching4cycle.",
+  "intuition": "Girth>=5 ensures each root has26 distinct vertices in its first two levels; this is not a D3 guarantee.",
+  "expected_counts": {
+    "binary_variables": 1080,
+    "degree_choices": 27,
+    "degree_ALO": 80,
+    "degree_pairwise_AMO": 28080,
+    "far_cover": 1080,
+    "far_cover_literals": 29,
+    "mixed_rectangle_binary": 6480,
+    "total_clauses": 35720
+  },
+  "scope": "Fixed girth>=5 subfamily of the old complete GQ80 two-matching model; no fixed edge, symmetry condition, seed or variable-order loop.",
+  "budget": {
+    "single_cadical_call": true,
+    "solver_wall_seconds": 30,
+    "worker_CPU_hard_seconds": 35,
+    "parent_wall_seconds": 45,
+    "workers": 1
+  },
+  "inherited_windows": "Original full MIP, overlap-cut MIP and unrestricted direct-CNF all UNKNOWN; original files preserved.",
+  "solver_calls_so_far": 1,
+  "graph_BFS_calls": 0,
+  "candidate_graphs": 0,
+  "stop": "Count mismatch stops before solver; otherwise one call then terminal. Raw UNSAT without proof does not exclude unrestricted GQ80 or all(5,3)graphs.",
+  "completed_at_utc": "2026-10-28T02:10:45.944515+00:00"
+}

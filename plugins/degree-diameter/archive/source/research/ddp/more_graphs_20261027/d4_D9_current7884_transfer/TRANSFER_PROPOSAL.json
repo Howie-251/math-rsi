@@ -1,0 +1,65 @@
+{
+  "status": "EXECUTED_ONLY_R4_FIRST_ORBIT_FAILED",
+  "source_n": 7884,
+  "target_Delta": 4,
+  "target_D": 9,
+  "source_group": {
+    "N": 73,
+    "M": 36,
+    "r": 18,
+    "action_order": 18
+  },
+  "base": {
+    "vertices": 3,
+    "links": [
+      [
+        0,
+        1,
+        "1"
+      ],
+      [
+        0,
+        2,
+        "1"
+      ],
+      [
+        1,
+        2,
+        "x*y^6"
+      ],
+      [
+        0,
+        1,
+        "A(r)*y^10"
+      ],
+      [
+        0,
+        1,
+        "B(r)*y^14"
+      ]
+    ],
+    "loop": [
+      2,
+      "y^3"
+    ]
+  },
+  "source_polynomial_rule": "Enumerate degree<=5 polynomials with coefficients in{-1,0,1}, minimize L1, then degree, then coefficient tuple lex for the actualsource residues49 and40.",
+  "A": "-r^2-r^3",
+  "B": "-1-r^2",
+  "preserved_relation": "A-B=1-r^3=-r^6 for primitive order18roots in fields of characteristic not2,3.",
+  "candidate": {
+    "N": 109,
+    "M": 36,
+    "r": 4,
+    "order": 11772,
+    "A": 29,
+    "B": 92
+  },
+  "selection_reason": "109 is the first prime above73 admitting an exactorder18 action;4 is its least exactorder18root, selected without any candidate coverage score. It preserves voltage element orders18/18/6/12.",
+  "why_not_nearest_modulus81": "Although8 has action order18 mod81, the voltage(x*y^6) has order162 rather than source order6, so action order alone does not preserve the short closedroute mechanism.",
+  "first_gate": "Await the independently assigned exactbasephase shortword capacity diagnosis; if any requiredlayer has capacity below109, do not build the candidate.",
+  "candidate_verification_if_authorized": "Allthree identityfibre roots must cover all11772vertices bydepth9. Leftgroup multiplication is an automorphism, transitive on each of thethree fibres, so threeorbitroots provide a complete diameter proof. One rootalone would be insufficient.",
+  "actual_candidate_generated": true,
+  "actual_candidate_coverage_checked": "Base0identityroot only; stoppedonfailure",
+  "no_other_roots_or_parameters": true
+}

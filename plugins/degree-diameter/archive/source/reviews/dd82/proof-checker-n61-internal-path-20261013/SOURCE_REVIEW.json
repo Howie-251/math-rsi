@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-13",
+  "review_kind": "fresh_source_review",
+  "reviewer_status": "same-family provisional",
+  "workflow": ".agents/skills/experiment-bridge/SKILL.md Phase 2.5, DD82 adaptation",
+  "verdict": "NO_BLOCKING_SOURCE_ISSUE_FOUND",
+  "blocking_issues": [],
+  "nonblocking_issues": [],
+  "reviewed_sources": [
+    "computations/dd82/n61/internal_double_full61_run/encode.py",
+    "computations/dd82/n61/internal_double_full61_run/SCOPE.md",
+    "computations/dd82/n61/internal_double_full61_run/runner.py"
+  ],
+  "reviewed_designs": [
+    "proofs/dd82/n61/INTERNAL_DOUBLE_FULL_GRAPH_DESIGN.md",
+    "proofs/dd82/n61/INTERNAL_DOUBLE_SHARED_TWO_PORTS.md"
+  ],
+  "reused_helpers_inspected": [
+    "joint_boundary_completion_run: evaluate_clause, check_dimacs, decode, write_assignment, load_helpers",
+    "historical n62 generic definitions only: CNFEmitter, unary_thresholds, add_iff_and",
+    "adjacent_double_full61_run/runner.py: bounded and tool paths only"
+  ],
+  "case_source_counts": {
+    "r0_h1_b0": {"free_A_bits": 1086, "endpoint_Z_pairs": 100, "short_B_pairs": 172, "shared_s_Z_exact_pairs": 49, "reference_matching_pair_constants": 0},
+    "r1_h0_b0": {"free_A_bits": 870, "endpoint_Z_pairs": 100, "short_B_pairs": 180, "shared_s_Z_exact_pairs": 0, "reference_matching_pair_constants": 175},
+    "r2_h0_b1": {"free_A_bits": 800, "endpoint_Z_pairs": 100, "short_B_pairs": 180, "shared_s_Z_exact_pairs": 0, "reference_matching_pair_constants": 175, "endpoint_domain_zero_pairs": 78}
+  },
+  "count_status": "Read or derived from source; not measured preparation output",
+  "all_original_pair_count": 1830,
+  "checks": [
+    "lossless P/Q labels and only one reference matching class",
+    "explicit original fixed/free A map and all-vertex exact degrees",
+    "Boolean constant folding, repeated-input cardinality and exact B thresholds",
+    "same-A exceptional T/Z and all-fifty endpoint/Z formulas and budgets",
+    "all original coverage pairs and 49 shared-s exact B zeros",
+    "proved r2 endpoint-domain zeros without selected matching or port subbranches",
+    "honest invalid-assignment semantic comparison and DIMACS bookkeeping",
+    "complete full-graph decode and separate independent BFS",
+    "bounded one-shot runner and exact-input certificate scope"
+  ],
+  "reviewer_executed_source_sanity": false,
+  "reviewer_target_preparations": 0,
+  "reviewer_solver_calls": 0,
+  "reviewer_external_calls": 0,
+  "source_edits": false,
+  "root_sanity_required_before_substantive_run": true,
+  "root_reported_handoff": {
+    "tiny_sanity": "PASSED",
+    "tiny_instances": 96,
+    "tiny_primary_assignments": 3060,
+    "all_three_emitted_semantic_sanity": "PASSED",
+    "measured_CNF_sizes_in_case_order": [[53046, 163721], [33296, 103603], [27886, 86591]],
+    "bounded_profiles": "started",
+    "execution_checks_repeated_by_reviewer": false
+  },
+  "prior_mathematical_review_status_changed": false,
+  "external_acceptance_attested": false,
+  "graph_found_by_review": false,
+  "internal_double_exclusion_proved_by_review": false,
+  "whole_order61_exclusion_proved_by_review": false,
+  "scope": "Static source readiness only. A full verified SAT model is a target graph; exact-input checked UNSAT applies to one case, and all three cases plus the separately reviewed reductions are required for the internal-double structural exclusion.",
+  "deltas": [
+    {
+      "date": "2026-10-13",
+      "review_kind": "REUSED_SOURCE_DELTA",
+      "reviewer_status": "same-family provisional",
+      "baseline_review_reused": true,
+      "baseline_checks_repeated": false,
+      "verdict": "NO_BLOCKING_SOURCE_ISSUE_FOUND",
+      "blocking_issues": [],
+      "nonblocking_issues": [],
+      "reviewed_sources": [
+        "computations/dd82/n61/internal_double_full61_run/refined/encode.py",
+        "computations/dd82/n61/internal_double_full61_run/refined/runner.py",
+        "computations/dd82/n61/internal_double_full61_run/refined/SCOPE.md"
+      ],
+      "reviewed_proof_specification": "proofs/dd82/n61/INTERNAL_DOUBLE_FINAL_PORT_CONSEQUENCES.md",
+      "r1_conditions_before_constant_folding": 66,
+      "r1_threshold_index": 2,
+      "r2_threshold_index": 1,
+      "r2_ordered_port_choices": 121,
+      "r2_allowed_port_pairs": 51,
+      "r2_appended_binary_clauses": 70,
+      "new_variables": 0,
+      "checks": [
+        "r1 outside-parent second-threshold units and Boolean constant semantics",
+        "r2 complete forbidden ordered-port relation on existing exact first thresholds",
+        "saved endpoint/Z variable mapping and unchanged variable IDs",
+        "complete original CNF body copy and bytewise prefix/addition comparison code",
+        "separate refined output directories and parent artifacts preserved",
+        "correct refined CNF/map decode path through HERE overrides",
+        "unchanged bounded runner and honest SAT/UNKNOWN/UNSAT scope"
+      ],
+      "reviewer_sanity_runs": 0,
+      "reviewer_preparation_runs": 0,
+      "reviewer_solver_calls": 0,
+      "reviewer_certificate_checks": 0,
+      "source_edits": false,
+      "mathematical_review_status_changed": false,
+      "scope": "Append-only source delta readiness. Root owns preparation and one bounded solve per changed case. No new graph or exclusion is established by this review."
+    }
+  ]
+}

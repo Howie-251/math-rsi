@@ -1,0 +1,79 @@
+{
+  "status": "FIRST_ROOT_COUNTEREXAMPLE",
+  "n": 8748,
+  "m": 56862,
+  "simple": true,
+  "degree_histogram": {
+    "13": 8748
+  },
+  "max_degree": 13,
+  "controller_connected": true,
+  "graph_connected": true,
+  "root_checks": [
+    {
+      "source": 0,
+      "reached": 8748,
+      "eccentricity": 5,
+      "R4_missing_count": 918
+    }
+  ],
+  "roots_checked": 1,
+  "counterexample": {
+    "source": 0,
+    "source_controller": [
+      0,
+      0
+    ],
+    "source_fiber": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "target": 730,
+    "target_controller": [
+      0,
+      1
+    ],
+    "target_fiber": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "distance": 5,
+    "shortest_path": [
+      0,
+      8257,
+      5296,
+      2406,
+      1833,
+      730
+    ],
+    "root_R4_missing_count": 918
+  },
+  "actual_D": null,
+  "actual_D_lower_bound": 5,
+  "representative_soundness": "Left multiplication L_h(g,x)=(h*g,x) preserves all right-generator transitions and the constant fiber chart. It moves every graph root to one of81 identity-fiber roots; thus81 complete checks suffice for all roots.",
+  "source6804_BFS": 0,
+  "parameter_candidates_tested": 1,
+  "all_source_BFS": false,
+  "edge_file_exported": false,
+  "certificate_summary": {
+    "identity_short_packet_full": false,
+    "certified_reduced2_word_count": 10,
+    "good_reduced4_word_count": 88,
+    "full_central_insertion_packet_count": 32,
+    "controller_vertices_certified": 85,
+    "controller_vertices": 108,
+    "scope": "Sufficient all-fiber-start I/R2/G4/central-insertion certificates. Inverse-consistent matrix representatives were checked against actual line relations."
+  },
+  "CPU_seconds": 0.10472732900000001,
+  "running": false,
+  "pending": [],
+  "prediction_disposition": "REFUTED",
+  "target_delta": 13,
+  "target_D": 4,
+  "saved_public_lower_bound": 6804,
+  "miss_count_scope": "918 targets farther than4 from the single tested root0; not unordered bad pairs and not an all-root count."
+}

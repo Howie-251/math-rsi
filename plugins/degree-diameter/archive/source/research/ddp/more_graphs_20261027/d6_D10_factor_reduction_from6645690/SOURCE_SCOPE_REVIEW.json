@@ -1,0 +1,159 @@
+{
+  "status": "WORTH_ONE_BOUNDED_TARGET_BATCH_SOURCE_SCOPE_CONFIRMED",
+  "reviewed_UTC": "2026-10-28T04:17:11.334722+00:00",
+  "primary_baseline": {
+    "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+    "read_date": "2026-10-28",
+    "raw_HTML_cells_checked": true,
+    "targets": [
+      {
+        "Delta": 6,
+        "D": 10,
+        "publicL": 1394189,
+        "optimal_bold": false,
+        "hypothetical_n": 1415440,
+        "increase": 21251
+      },
+      {
+        "Delta": 7,
+        "D": 9,
+        "publicL": 1332774,
+        "optimal_bold": false,
+        "hypothetical_n": 1415440,
+        "increase": 82666
+      }
+    ]
+  },
+  "actual_seed": {
+    "status": "OLD_AVAILABLE_PRIMARY_NOT_CURRENT_RECORD",
+    "n": 6641680,
+    "not_current_n": 6645690,
+    "source_directory": "../d7_D10_current6645690_source/old6641680_primary",
+    "law": "AUTHOR LEFT (n,I)(m,J)=(n+4400^I*m,I+J), normal modulus83021=61*1361, phase80.",
+    "positive_normal_phase": [
+      [
+        4907,
+        38
+      ],
+      [
+        21040,
+        3
+      ],
+      [
+        63695,
+        58
+      ]
+    ],
+    "involution_normal_phase": [
+      74603,
+      40
+    ],
+    "big_actor": 317,
+    "big_modulus": 1361,
+    "big_positive_normal_phase": [
+      [
+        824,
+        38
+      ],
+      [
+        625,
+        3
+      ],
+      [
+        1089,
+        58
+      ]
+    ],
+    "big_involution_normal_phase": [
+      1109,
+      40
+    ],
+    "current6645690_recipe_binding": "Still unresolved; no current-record recipe or route was substituted."
+  },
+  "frozen_target": {
+    "order": 1415440,
+    "normal_modulus_CRT": 17693,
+    "phase_modulus": 80,
+    "law": "(z,t,j)(w,s,k)=(z+317^j*w,t+a^j*s,j+k), z mod1361,t mod13,j mod80.",
+    "small_actors": [
+      1,
+      12,
+      5,
+      8
+    ],
+    "small_actor_orders": [
+      1,
+      2,
+      4,
+      4
+    ],
+    "source_small_action_order": 20,
+    "important_change": "The old61-component action oforder20 is replaced by an actor oforder dividing4. This is a new rule, not an embedding preserving all small-source routes.",
+    "true_inverse": "(-317^(-j)*z,-a^(-j)*t,-j) in the three respective moduli.",
+    "involution": "When h is retained, keep big h=(1109,40); its small normal must be0 because a^40=1 and characteristic13 is odd."
+  },
+  "normalization": {
+    "actor1": "All nonzero triples modulo common nonzero scalar: (1,s,t), (0,1,t), (0,0,1), giving183.",
+    "actor12": "Conjugate small translation to kill phase3 positive normal (index1), then normalize the remaining two nonzero coordinates projectively:14 representatives.",
+    "actors5and8": "Conjugate small translation to kill phase38 positive normal (index0); normalize the other two coordinates projectively:14 each.",
+    "small_conjugation": "b_i -> b_i+(1-a^j_i)c; it changes no big component and leaves h smallnormal0.",
+    "per_rule": 225,
+    "two_rules_total_objects": 450,
+    "completeness_scope": "All small positive-normal triples for these four actors and this fixed large projection, up to proved small translation/common scaling. No additional core or phase automorphism is assumed.",
+    "connected_simple": "The two cached core rules generate all108880 states. The paper then proves every normalized nonzero small class generates F13. Six inverse phases are distinct; optional hphase40 is different, so intended degree6/7 and simplicity hold."
+  },
+  "inherited_gate_results": {
+    "directory": "core_from_old6641680",
+    "without_h": {
+      "degree": 6,
+      "targetD": 10,
+      "core_order": 108880,
+      "core_exactD": 9,
+      "minimum_raw": 67,
+      "first_thin_core_normal_phase": [
+        395,
+        17
+      ]
+    },
+    "with_h": {
+      "degree": 7,
+      "targetD": 9,
+      "core_order": 108880,
+      "core_exactD": 8,
+      "minimum_raw": 81,
+      "first_thin_core_normal_phase": [
+        684,
+        31
+      ]
+    },
+    "meaning": "Both gates pass13 but do not establish any target fibre or target diameter. All225 settings per rule were unexecuted when originally deferred for small-graph priority."
+  },
+  "implementation_advice": {
+    "preferred_simple_kernel": "CRT combine the normal components into Z17693, preserving the actual LEFT law. Precompute80×degree phase_next andshift=actor^phase*generatornormal mod17693. Per edge use one addition and conditional subtraction, not modular multiplication.",
+    "true_inverses": "Recompute separately for every new actor and small-normal setting, then verify inverse products after every dart and power table is fully initialized.",
+    "memory": "A uint8 radius-distance array plus uint32 queue for1415440 vertices is about7.1MB; no adjacency expansion needed.",
+    "optional_gate": "For the predeclared minimum core slot, complete small-coordinate word images may reject a setting before a target BFS. This is optional, not a newly imposed independent enumeration task. Use original inverse-letter labels and LEFT endpoint recurrence.",
+    "BFS_scope": "One complete identity-root radius check per surviving Cayley setting. A negative R10/R9 check leaves globalD null; full coverage gives globalD at most the target by Cayley transitivity.",
+    "cost_limit": "450 finite objects in total, with cheap shared phase tables and small actor space. Profile the first actual case within one frozen aggregate budget; do not promise timing solely from these estimates."
+  },
+  "why_worth": "There is a real unchanged108880 component with complete radius support and at least67/81 labelled routes per fibre. The new kernel is only13, the family is completely normalized, and both public targets can improve without a solver or new source download. This is evidence for one finite test, not a claim that raw multiplicity guarantees coverage.",
+  "evidence": [
+    "ANALYSIS_GATE_METHOD.md",
+    "ANALYSIS_GATE_METHOD.json",
+    "core_from_old6641680/REPORT.md",
+    "core_from_old6641680/CORE_INPUT.json",
+    "core_from_old6641680/RESULT.json",
+    "core_from_old6641680/RAW_COUNTS_SCHEMA.json",
+    "../d7_D10_current6645690_source/OLD6641680_ARITHMETIC.json",
+    "../d7_D10_current6645690_source/VERSION_GAP.md"
+  ],
+  "execution_this_review": {
+    "new_source_BFS": 0,
+    "core_BFS_repeated": 0,
+    "word_or_image_enumerations": 0,
+    "target_graphs": 0,
+    "target_BFS": 0,
+    "solver_calls": 0,
+    "new_Wiki_rows": 0
+  }
+}

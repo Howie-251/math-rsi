@@ -1,0 +1,22 @@
+# New stable triangle-twist orbit: complete pools and no extension
+
+The new702-set Frobenius-stable orbit is exactly disjoint from the old702 orbit. Its sets still have five fixed points and five conjugate pairs, but the triangle of three6-secants has only one fixed vertex. This is the new placement form frozen for this batch; no all-square control or old-orbit retry was run.
+
+Both current degree pools were completed on all1120 cached F3-defined singular planes. Degree11 uses final37631/205329 and has no legal neighborhood. Degree12 uses final42402/245937, with167 raw degree-legal occurrences,30 pin-budget-legal occurrences and30 distinct neighborhoods: five with10pins/two anchors, five with11pins/one anchor,20 with12pins/no anchors. This uses the final degree caches, not the old42398 defaults.
+
+All30 degree12 items received one actual full-current R4/native prepare check. Every mandatory set covers the entire41356-vertex core; all remaining misses are current extras. The five10pin sets leave40,42,40,47,46 targets and all five complete exact<=2-anchor searches fail. The five11pin sets leave56,47,44,42,35 targets and no single guard covers their private regions. The20 twelve-pin sets all miss extras and have no remaining anchor budget. Native code happens to try one guard before respecting a cap0 caller, but all20 actually returned no guard, and mandatory failure alone already excludes their allowed zero-anchor case. No selected-root verification or graph export was triggered.
+
+The executed input is the saved new orbit file, not a seed-matrix computation in this producer. The producer's frozen PRED includes a different proposed matrix as metadata. It is preserved; ERRATUM.json records the actual scout seed source: R=[[1,0,0],[0,1,1],[0,3,6]] applied to the all-square triangle B+++, as defined in ../PREDICTION.json and ../RESULT.json. This metadata difference did not alter the702 masks actually read. No numerical run was repeated.
+
+All30 allowed-budget tests are complete: zero unknown or unvisited pool items, zero new graphs. Complete sourceD5 was inherited, no old all-source BFS/solver was used. Aggregate recordedCPU1.793683217seconds includes the carried orbit process0.022166238; actual session71634 is terminal. The given30CPU production budget was not extended. Current accepted103 examples and shared delivery were not modified.
+
+This closes exactly the new702 orbit ×1120 stable planes on the two specified current sources, with their actual remaining<=2anchors. It does not exclude other Rédei15 Galois forms, fullPGL3(F9) on stable planes, other blockers or multi-helper rules. Degree13 was not run, inheriting the already proved whole-plane15-point obstruction. Stop this batch with no shape, source, seed or guard continuation.
+
+<!-- PROJECTED_GUARD_DIAGNOSTIC_20261029 -->
+## 2026-10-29 原外围与新增目标分离诊断
+
+复用当前42402的30组保存guard列，原0/1/2预算分别投影。原外围单独0/30可覆；新增单独10/30可覆，余20预算0；五个两guard项原外围皆不可覆。事前存在预测REFUTED，总CPU0.703871411，0新球/BFS/solver/图；不是重新运行旧30组完整覆盖。
+
+1358原外围/110新增为跨case缺项次数；distinct并集581/46。该分类先被读取，未冒充预注册预测。移除新增点不能缩短旧路径，但会改变端口及可用guard域，因此不排所有联合重排。下一不再以“只新增60点造成失败”为由延长同池搜索。
+
+[新PRED](../../../../refresh_20261029/H9_PROJECTED_GUARD_PREDICTION.md)、[RESULT](../../../../refresh_20261029/H9_PROJECTED_GUARD_RESULT.json)、[REPORT](../../../../refresh_20261029/H9_PROJECTED_GUARD_REPORT.md)、[静态review](../../../../refresh_20261029/ANALYSIS_PROJECTED_GUARD_REVIEW.md)。

@@ -1,0 +1,24 @@
+DegreeDiameter/Portfolio/FullNeighborhoodClones.lean:73:2: error: Dependent elimination failed: Failed to solve equation
+  Sum.rec (fun val => id val) (fun val => center val) t = Sum.rec (fun val => id val) (fun val => center val) s
+DegreeDiameter/Portfolio/FullNeighborhoodClones.lean:111:49: error: failed to synthesize
+  Decidable ((graph G center).Adj (Sum.inl val✝¹) (Sum.inl val✝))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+DegreeDiameter/Portfolio/FullNeighborhoodClones.lean:111:49: error: failed to synthesize
+  Decidable ((graph G center).Adj (Sum.inl val✝¹) (Sum.inr val✝))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+DegreeDiameter/Portfolio/FullNeighborhoodClones.lean:111:49: error: failed to synthesize
+  Decidable ((graph G center).Adj (Sum.inr val✝¹) (Sum.inl val✝))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+DegreeDiameter/Portfolio/FullNeighborhoodClones.lean:111:49: error: failed to synthesize
+  Decidable ((graph G center).Adj (Sum.inr val✝¹) (Sum.inr val✝))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'DegreeDiameter.Portfolio.FullNeighborhoodClones.diameterAtMost' depends on axioms: [propext, sorryAx, Quot.sound]
+'DegreeDiameter.Portfolio.FullNeighborhoodClones.old_walk_bound_iff' depends on axioms: [propext]
+'DegreeDiameter.Portfolio.FullNeighborhoodClones.degree_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "status": "ROOT_ACCEPTED_COMPLETE_FIXED_PARAMETER_FAMILY_EXCLUSION",
+  "read": ["parameter_gate_normalization_review.md", "NOTE.md", "RESULT.json", "TERMINAL.json", "run_once.py"],
+  "exact_scope": "Fixed69-state three-base/23-phase controller; scalar multiplier6 overF139; four shared translations(c0,c1,c2,c12); cross01/02 translations0; true inverse darts; D<=8.",
+  "normalization": "Conjugation y->y+6^phase*d eliminates c2; nonzero scaling reduces the remaining3-vector to P2(F139). 19461 projective representatives plus the zero representative cover the entire4-parameter domain. Both operations preserve every ordered-slot image cardinality.",
+  "actual_finite_result": "All19462 representatives miss an endpoint in slot46->52; the maximum image cardinality is117<139. No other slot or graph needs to be generated to reject this family.",
+  "best_representative": [1, 102, 0, 128],
+  "prior_predictions": "Raw word shortage and universal coefficient-alias shortage were both refuted: minimum raw160, distinct159. Their passes do not assert compatible evaluations; the full normalized evaluation establishes failure.",
+  "scope_limits": ["other multipliers", "changed phases/controllers", "independent per-phase translations", "arbitrary permutation voltages", "general N(4,8)"],
+  "cumulative_charged_CPU_seconds": 1.71184445,
+  "new_graphs": 0,
+  "new_parameters": 0,
+  "new_Lean_instances": 0,
+  "Lean_status": "NOT_FORMALIZED_LOCAL_FINITE_FAMILY_EXCLUSION",
+  "decision": "Stop this parameter family, preserving the narrower old single-control failure. Do not continue tuning its translations or substitute capacity passes for a complete graph."
+}

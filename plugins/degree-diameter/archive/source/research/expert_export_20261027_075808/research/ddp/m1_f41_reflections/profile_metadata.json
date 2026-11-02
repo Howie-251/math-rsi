@@ -1,0 +1,697 @@
+{
+  "group": {
+    "p": 41,
+    "m": 8,
+    "r": 3,
+    "coordinate_order": [
+      "translation",
+      "quotient"
+    ],
+    "product": "(x,i)*(y,j)=(x+3^i*y mod41,i+j mod8)",
+    "inverse": "(x,i)^-1=(-3^(-i)*x mod41,-i mod8)"
+  },
+  "vertices": "(layer,g), layer in {0,1}; recommended id=layer*328+translation*8+quotient",
+  "A": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "cross": "S={(0,0),(s_x,sigma),(t_x,tau)}",
+  "edges": "internal right multiplication by A/B; 0 to1 right multiplication by S, reverse by S^-1",
+  "legality": [
+    "mixed beta=0 requires b_x!=0; beta1,2,3 all b_x allowed",
+    "both requires b_x!=d_x",
+    "S has three distinct actual group elements"
+  ],
+  "normalizations_used": [
+    "A={R0,R1} via common affine automorphism after choosing cross anchor",
+    "mixed beta representative0,1,2,3 using B inverse representative",
+    "cross quotient anchor shifts and unordered cross labels in both branches",
+    "side exchange quotient negation only in both"
+  ],
+  "normalizations_not_used": [
+    "no projective scaling after A fixed",
+    "no mixed side exchange",
+    "no extra quotient units",
+    "no residual T lex ordering",
+    "no both B coordinate ordering",
+    "no beta0 b versus -b ordering",
+    "no further parameter orbit filtering"
+  ],
+  "capacity_condition": "for each of two roots and16 target(layer,quotient) cells, at least41 distinct affine endpoint forms at length<=5",
+  "branches": {
+    "mixed": {
+      "variables": [
+        "b_x",
+        "s_x",
+        "t_x"
+      ],
+      "quotient_columns": [
+        "beta",
+        "sigma",
+        "tau"
+      ],
+      "skeleton_file": "mixed_skeletons.txt",
+      "skeleton_header": "one integer: number of following rows",
+      "skeletons": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          6
+        ],
+        [
+          1,
+          0,
+          7
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          1,
+          5
+        ],
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          5
+        ],
+        [
+          2,
+          0,
+          7
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          6
+        ],
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          3,
+          0,
+          6
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          3,
+          1,
+          6
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          5
+        ]
+      ],
+      "raw_assignment_count": 2756840,
+      "legal_assignment_count_without_additional_symmetry": 2713298,
+      "excluded_quotients": [
+        {
+          "quotient": [
+            1,
+            0,
+            0
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  35
+                ],
+                [
+                  1,
+                  4,
+                  33
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  33
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            1,
+            0,
+            3
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  27
+                ],
+                [
+                  1,
+                  4,
+                  37
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  37
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            1,
+            0,
+            4
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  37
+                ],
+                [
+                  0,
+                  4,
+                  38
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": []
+            }
+          ]
+        },
+        {
+          "quotient": [
+            1,
+            0,
+            5
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  27
+                ],
+                [
+                  1,
+                  4,
+                  37
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  37
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            2,
+            1,
+            4
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  38
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": []
+            }
+          ]
+        },
+        {
+          "quotient": [
+            2,
+            1,
+            5
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  38
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": []
+            }
+          ]
+        },
+        {
+          "quotient": [
+            3,
+            0,
+            0
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  35
+                ],
+                [
+                  1,
+                  4,
+                  33
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  33
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            3,
+            0,
+            1
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  27
+                ],
+                [
+                  1,
+                  4,
+                  37
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  37
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            3,
+            0,
+            4
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  37
+                ],
+                [
+                  0,
+                  4,
+                  38
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": []
+            }
+          ]
+        },
+        {
+          "quotient": [
+            3,
+            0,
+            7
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  0,
+                  0,
+                  27
+                ],
+                [
+                  1,
+                  4,
+                  37
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  4,
+                  37
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "both": {
+      "variables": [
+        "b_x",
+        "d_x",
+        "s_x",
+        "t_x"
+      ],
+      "quotient_columns": [
+        "beta",
+        "sigma",
+        "tau"
+      ],
+      "skeleton_file": "both_skeletons.txt",
+      "skeleton_header": "one integer: number of following rows",
+      "skeletons": [
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          5
+        ]
+      ],
+      "raw_assignment_count": 11303044,
+      "legal_assignment_count_without_additional_symmetry": 11027360,
+      "excluded_quotients": [
+        {
+          "quotient": [
+            4,
+            0,
+            1
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  1,
+                  3,
+                  36
+                ],
+                [
+                  1,
+                  6,
+                  24
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  2,
+                  24
+                ],
+                [
+                  0,
+                  5,
+                  36
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "quotient": [
+            4,
+            0,
+            3
+          ],
+          "root_witnesses": [
+            {
+              "root": 0,
+              "deficient_cells": [
+                [
+                  1,
+                  1,
+                  36
+                ],
+                [
+                  1,
+                  2,
+                  24
+                ]
+              ]
+            },
+            {
+              "root": 1,
+              "deficient_cells": [
+                [
+                  0,
+                  6,
+                  24
+                ],
+                [
+                  0,
+                  7,
+                  36
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "raw_assignment_count_total": 14059884,
+  "legal_assignment_count_total": 13740658,
+  "status": "READY_FOR_AUTHORIZED_PROFILE; no translation assignments evaluated by this capacity task"
+}

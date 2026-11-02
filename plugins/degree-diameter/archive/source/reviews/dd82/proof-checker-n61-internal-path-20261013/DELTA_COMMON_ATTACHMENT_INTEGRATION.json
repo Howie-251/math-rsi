@@ -1,0 +1,107 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The previously reviewed complete h1 representation, fresh source receipt and saved exact-input LRAT verification correctly imply h=0 for every internal D triple. The neighborhood inclusion, no101 path windows and unique common neighbor on components with at least four vertices follow. This is a short reused same-family provisional integration review; two h0 cases remain UNKNOWN.",
+  "audited_inputs": ["proofs/dd82/n61/INTERNAL_DOUBLE_COMMON_ATTACHMENT_EXCLUSION.md"],
+  "trace_path": "reviews/dd82/proof-checker-n61-internal-path-20261013/",
+  "agent_id": "/root/internal_path_proof_check",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-13T15:55:58Z",
+  "review_provenance": {
+    "freshness": "Explicitly reused integration delta, not a new full proof/model/source audit",
+    "primary_input": "Complete37-line manuscript read directly",
+    "inherited_mathematical_receipts": ["PROOF_AUDIT.md", "DELTA_ADJACENCY_AUDIT.md", "DELTA_PORT_MODEL_AUDIT.md"],
+    "separately_fresh_source_receipt": "SOURCE_REVIEW.md",
+    "new_external_review": false,
+    "source_reaudit": false,
+    "solver_run": false,
+    "certificate_check_run": false,
+    "manuscript_edits": false,
+    "configuration_provenance": "Parent-confirmed requested gpt-6-astra/ultra, not independent backend attestation"
+  },
+  "evidence_read": [
+    "reviews/dd82/proof-checker-n61-internal-path-20261013/SOURCE_REVIEW.md",
+    "computations/dd82/n61/internal_double_full61_run/r0_h1_b0/encoding.json",
+    "computations/dd82/n61/internal_double_full61_run/r0_h1_b0/result.json",
+    "computations/dd82/n61/internal_double_full61_run/r0_h1_b0/certificate_check.json",
+    "computations/dd82/n61/internal_double_full61_run/r0_h1_b0/certificate_check.log",
+    "computations/dd82/n61/internal_double_full61_run/r1_h0_b0/result.json",
+    "computations/dd82/n61/internal_double_full61_run/r2_h0_b1/result.json"
+  ],
+  "checked_case_evidence": {
+    "case": "r0_h1_b0",
+    "variables": 53046,
+    "clauses": 163721,
+    "primary_edge_variables": 1086,
+    "fixed_edges": 74,
+    "all_original_pairs": 1830,
+    "shared_attachment_exact_pairs": 49,
+    "r2_endpoint_domain_additions": 0,
+    "solver_exit": 20,
+    "solver_cpu_seconds": 4.012334,
+    "proof_bytes": 11623492,
+    "checker": "lrat-trim0.2.0 --no-trim",
+    "checker_exit": 20,
+    "checker_log_result": "s VERIFIED",
+    "checker_cpu_seconds": 0.113276,
+    "checked_proof_clauses": 73206,
+    "binding": "Saved solver and checker commands name the same actual case input.cnf and proof.lrat; checker input header agrees with encoding and result records",
+    "evidence_status": "Prior actual checked contradiction inspected here, not recomputed"
+  },
+  "details": {
+    "obligations": 7,
+    "discharged_obligations": 7,
+    "issues": [],
+    "conclusions": [
+      "h=0 for every consecutive triple in the actual D path forest",
+      "N_A(u) intersection N_A(w) is contained in N_A(v)",
+      "For every original x, adjacency along any D path has no consecutive101 pattern",
+      "Every consecutive triple in a D component with at least four vertices has exactly one common original neighbor, adjacent to all three"
+    ],
+    "remaining_types_r_h_beta": [[1, 0, 0], [2, 0, 1]],
+    "other_case_statuses": [
+      {"case": "r1_h0_b0", "status": "UNKNOWN", "exit_code": 0, "cpu_seconds": 56.298772, "proof_checked": false},
+      {"case": "r2_h0_b1", "status": "UNKNOWN", "exit_code": 0, "cpu_seconds": 57.767905, "proof_checked": false}
+    ],
+    "scope_exclusions": [
+      "No exclusion of every internal D vertex",
+      "No exclusion of either remaining h0 type",
+      "No whole-order61 exclusion or new graph above57",
+      "No current external acceptance or Lean theorem"
+    ]
+  },
+  "state": "completed",
+  "subsequent_pure_port_delta": {
+    "input": "proofs/dd82/n61/INTERNAL_DOUBLE_FINAL_PORT_CONSEQUENCES.md",
+    "reviewed_snapshot": "Complete27-line stable manuscript read directly",
+    "verdict": "PASS",
+    "reason_code": "all_proofs_complete",
+    "freshness": "Explicitly reused mathematical consequence delta appended to the existing integration receipt",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional",
+    "claims": [
+      "B_uz=2 implies the unique T parent of z belongs to U, and symmetrically for w,W",
+      "The r1 case has33 excluded Z positions per endpoint, yielding66 negative existing second-threshold conditions before simplification",
+      "The r2 endpoint residual budget already precludes every double endpoint port",
+      "The two eleven-point r2 unit-port domains have51 allowed ordered pairs and70 forbidden pairs, exactly representable by the stated binary clauses"
+    ],
+    "dependency_boundary": "The new v,u,z triple needs universal h=0 from the checked h1 exclusion, not merely h=0 on the initially selected triple. The r2 pair list is inherited from the separately reviewed shared-two-parent theorem.",
+    "counterexample_boundaries": [
+      "z lies in Z, so v,u,z are distinct and the unique-parent identity applies",
+      "Counts33 refer to Z vertices over disallowed parents, not33 distinct parent vertices",
+      "The three allowed port-pair sets are disjoint; all remain represented",
+      "Fixed-false threshold bits simplify to tautologies; no independent port variable is introduced"
+    ],
+    "issues": [],
+    "external_status_note": "Root reported actual Gemini round3 acceptance of the preceding h0 integration; this appended review performs no external call and claims no new external acceptance",
+    "new_input_or_execution_verified": false,
+    "source_or_certificate_rerun": false,
+    "state": "completed"
+  }
+}

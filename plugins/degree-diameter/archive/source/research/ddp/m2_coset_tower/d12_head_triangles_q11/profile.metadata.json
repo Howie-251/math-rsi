@@ -1,0 +1,67 @@
+{
+  "q": 11,
+  "r": 3,
+  "c": 2,
+  "degree": 12,
+  "n": 43923,
+  "edges": 263538,
+  "layer_sizes": [
+    39930,
+    3630,
+    363
+  ],
+  "roots": [
+    0,
+    39930,
+    43560
+  ],
+  "group_encoding": "u+11*v+121*w+363*(b+11*j)",
+  "group_product": "((u,v,w)+U_bD_j(u1,v1,w1), b+2^(2j)*d, j+l), mod11/mod3/mod10",
+  "K_product": "(b,j)(d,l)=(b+2^(2j)*d mod11,j+l mod10)",
+  "K_action": "(2^(3j)*u+b*2^j*v,2^j*v,w)",
+  "group_inverse": "(-k^-1(x),k^-1), with K inverse=(-2^(-2j)*b,-j)",
+  "leaf_parent": "39930+x+363*j",
+  "block_parent": "43560+x",
+  "head_triangles": 121,
+  "head_triangle_edges": 363,
+  "field_arithmetic": "F11 modular addition and multiplication, never XOR",
+  "seed": 2026102611,
+  "PRNG": "Python random.Random / MT19937",
+  "sampling_order": "design cell_id order; two K anchors; O/A/B extras; then in each O/A/B color internal inverse pairs followed by involutions",
+  "scope": "Exactly one representative for each of 192 approved HH color cells, not a complete family enumeration",
+  "design_source": "../d8_head_triangles/HEAD_TRIANGLE_Q11_PROFILE_DESIGN.md",
+  "actual_samples": 192,
+  "actual_counts_by_t": {
+    "2": 81,
+    "3": 81,
+    "4": 30
+  },
+  "all_actual_S_saved_and_distinct": true,
+  "internal_pair_counts_O_A_B": [
+    54,
+    545,
+    5995
+  ],
+  "internal_involution_counts_O_A_B": [
+    1,
+    10,
+    110
+  ],
+  "cross_counts_O_A_B": [
+    110,
+    1100,
+    12100
+  ],
+  "all_element_inverse_checks": 39930,
+  "all_K_action_composition_checks": 4392300,
+  "all_candidates_actual_HH_check": true,
+  "complete_three_root_BFS_for_every_sample": true,
+  "original_BB_masks": 10,
+  "original_BB_targets_per_mask": 363,
+  "quotient_BB_targets_per_mask": 33,
+  "BB_diagnostic_only_no_filtering": true,
+  "safe_marked_normalization_is_not_uniform_unmarked_sampling": true,
+  "CPU_limit_seconds": 60,
+  "worker_count": 1,
+  "independent_final_check_parent_owned": true
+}

@@ -1,0 +1,72 @@
+#  https://sagecell.sagemath.org/?q=hakkrq
+import networkx as nx
+
+print("\nMastorn Conder's 5 gen. combin: \n")
+
+G = gap.SmallGroup(648,279)
+pcgs = G.Pcgs()
+print("Default pcgs: ",pcgs)
+l = int(gap.Length(pcgs))
+all_pcgens = [pcgs[i] for i in range(1, l+1)]
+print("all_pcgens: ",all_pcgens)
+print("pcgens orders:", [int(gap.Order(g)) for g in all_pcgens])
+
+
+MC_gens = [pcgs[1], pcgs[1]*pcgs[2]*pcgs[7], pcgs[1]*pcgs[5]^2*pcgs[6]*pcgs[7], pcgs[2]*pcgs[3]^2,  pcgs[2]^2*pcgs[3]*pcgs[4]^2*pcgs[5] ]
+
+print("MC choice of pcgs: ",MC_gens)
+print("MC_gens orders:", [int(gap.Order(g)) for g in MC_gens])
+
+invols = [g for g in MC_gens  if int(gap.Order(g)) == 2][:3]
+print("MC_gens involutions a,b,c: ",invols)
+
+# Find x,y order 9 with x*y = 1
+order9 = [g for g in MC_gens  if int(gap.Order(g)) == 9]
+print("order 9 MC_gens x,y: ",order9)
+
+x_y_pair = None
+for i in range(len(order9)):
+    for j in range(i+1, len(order9)):
+        x = order9[i]
+        y = order9[j]
+        if (x * y) == gap.One(G):
+            x_y_pair = (x, y)
+            break
+    if x_y_pair:
+        break
+
+if x_y_pair:
+    x, y = x_y_pair
+    print("Found x,y with x*y=1")
+else:
+    print("No x*y=1 pair in pc gens; using first 2 order9")
+    x, y = order9[0], order9[1]
+
+
+elts = list(G.Elements())
+index = {elts[i]:i for i in range(len(elts))}
+
+C = nx.Graph()
+for i in range(len(elts)):
+    for s in MC_gens:
+        j = index[elts[i] * s]
+        C.add_edge(i, j)
+
+print("\nUndirected Cayley:")
+print("Vertices:", C.order())
+print("Edges:", C.size())
+print("Connected:", nx.is_connected(C))
+print("Diameter:", nx.diameter(C))
+print("Girth:", nx.girth(C))
+print("5-Regular? :", nx.is_k_regular(C,k=5))
+Csage=Graph(C)
+print(f"Aut.group.ord.: {Csage.automorphism_group().order()} /  Cayley ? {Csage.is_cayley()} ---  vtx.trans. ? {Csage.is_vertex_transitive()} -- edge.trans. ? {Csage.is_edge_transitive()}" )
+
+
+
+nx.write_adjlist(C,"C648_nx_adjlist.txt")
+nx.write_sparse6(C,"C648_nx_s6.txt")
+GZ = nx.convert_node_labels_to_integers(C)
+nx.write_adjlist(GZ,"C648Z_adjlist.txt")
+
+

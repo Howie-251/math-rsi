@@ -1,0 +1,68 @@
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.collapse.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → (J → V) → V ⊕ J → V :=
+fun {V} {J} center => Sum.elim id center
+@DegreeDiameter.Portfolio.FullNeighborhoodClones.old_walk_bound_iff : ∀ {V : Type u_1} {J : Type u_2}
+  (G : SimpleGraph V) (center : J → V) (u v : V) (n : ℕ), (∃ p, p.length ≤ n) ↔ ∃ p, p.length ≤ n
+@DegreeDiameter.Portfolio.FullNeighborhoodClones.diameterAtMost : ∀ {V : Type u_1} {J : Type u_2} (G : SimpleGraph V)
+  (center : J → V) (D : ℕ),
+  3 ≤ D →
+    DegreeDiameter.Portfolio.DiameterAtMost G D →
+      (∀ (v : V), ∃ w, G.Adj v w) →
+        DegreeDiameter.Portfolio.DiameterAtMost (DegreeDiameter.Portfolio.FullNeighborhoodClones.graph G center) D
+@DegreeDiameter.Portfolio.FullNeighborhoodClones.degree_old : ∀ {V : Type u_1} {J : Type u_2} [inst : Fintype V]
+  [inst_1 : Fintype J] (G : SimpleGraph V) (center : J → V) [inst_2 : DecidableRel G.Adj] (v : V),
+  (DegreeDiameter.Portfolio.FullNeighborhoodClones.graph G center).degree (Sum.inl v) =
+    G.degree v + DegreeDiameter.Portfolio.FullNeighborhoodClones.load G center v
+@DegreeDiameter.Portfolio.FullNeighborhoodClones.degree_new : ∀ {V : Type u_1} {J : Type u_2} [inst : Fintype V]
+  [inst_1 : Fintype J] (G : SimpleGraph V) (center : J → V) [inst_2 : DecidableRel G.Adj] (j : J),
+  (DegreeDiameter.Portfolio.FullNeighborhoodClones.graph G center).degree (Sum.inr j) = G.degree (center j)
+def DegreeDiameter.Portfolio.F4PlaneBlockClones.form : DegreeDiameter.Portfolio.F4Graph3840.Vec →
+  DegreeDiameter.Portfolio.F4Graph3840.F :=
+fun x => x 0 + x 1 + DegreeDiameter.Portfolio.F4Graph3840.F.w * x 2
+def DegreeDiameter.Portfolio.F4PlaneBlockClones.center : {K : ℕ} → (Fin K → Fin 60) → Fin (K * 16) → Fin 3840 :=
+fun {K} layers j =>
+  DegreeDiameter.Portfolio.F4Graph3840.liftAt (layers (DegreeDiameter.Portfolio.F4PlaneBlockClones.blockIndex j))
+    (DegreeDiameter.Portfolio.F4PlaneBlockClones.planeCode (DegreeDiameter.Portfolio.F4PlaneBlockClones.planeIndex j))
+def DegreeDiameter.Portfolio.F4PlaneBlockClones.graph21 : SimpleGraph DegreeDiameter.Portfolio.F4PlaneBlockClones.V21 :=
+DegreeDiameter.Portfolio.FullNeighborhoodClones.graph DegreeDiameter.Portfolio.F4Graph3840.graph
+  (DegreeDiameter.Portfolio.F4PlaneBlockClones.center DegreeDiameter.Portfolio.F4PlaneBlockClones.layers21)
+def DegreeDiameter.Portfolio.F4PlaneBlockClones.graph22 : SimpleGraph DegreeDiameter.Portfolio.F4PlaneBlockClones.V22 :=
+DegreeDiameter.Portfolio.FullNeighborhoodClones.graph DegreeDiameter.Portfolio.F4Graph3840.graph
+  (DegreeDiameter.Portfolio.F4PlaneBlockClones.center DegreeDiameter.Portfolio.F4PlaneBlockClones.layers22)
+DegreeDiameter.Portfolio.F4PlaneBlockClones.label21 : DegreeDiameter.Portfolio.F4PlaneBlockClones.V21 ≃ Fin 3984
+DegreeDiameter.Portfolio.F4PlaneBlockClones.label22 : DegreeDiameter.Portfolio.F4PlaneBlockClones.V22 ≃ Fin 4192
+DegreeDiameter.Portfolio.F4PlaneBlockClones.label21_new : ∀ (j : Fin (9 * 16)),
+  ↑(DegreeDiameter.Portfolio.F4PlaneBlockClones.label21 (Sum.inr j)) = 3840 + ↑j
+DegreeDiameter.Portfolio.F4PlaneBlockClones.label22_new : ∀ (j : Fin (22 * 16)),
+  ↑(DegreeDiameter.Portfolio.F4PlaneBlockClones.label22 (Sum.inr j)) = 3840 + ↑j
+DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d21_n3984 : Fintype.card
+      DegreeDiameter.Portfolio.F4PlaneBlockClones.V21 =
+    3984 ∧
+  (∀ (v : DegreeDiameter.Portfolio.F4PlaneBlockClones.V21),
+      DegreeDiameter.Portfolio.F4PlaneBlockClones.graph21.degree v ≤ 21) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClones.graph21 3 ∧
+      ¬DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClones.graph21 2
+DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d22_n4192 : Fintype.card
+      DegreeDiameter.Portfolio.F4PlaneBlockClones.V22 =
+    4192 ∧
+  (∀ (v : DegreeDiameter.Portfolio.F4PlaneBlockClones.V22),
+      DegreeDiameter.Portfolio.F4PlaneBlockClones.graph22.degree v ≤ 22) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClones.graph22 3 ∧
+      ¬DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClones.graph22 2
+'DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d21_n3984' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d22_n4192' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

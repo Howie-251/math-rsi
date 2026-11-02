@@ -1,0 +1,46 @@
+✖ [1792/1792] Building DegreeDiameter.N63Norm (22s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N63Norm.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Norm.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Norm.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Norm.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Norm.setup.json --json
+info: DegreeDiameter/N63Norm.lean:25:6: Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: DegreeDiameter/N63Norm.lean:23:4: unsolved goals
+case pos
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra ℚ K
+pb : PowerBasis ℚ K
+i : Fin pb.dim
+⊢ 29 i i + (4 * (Algebra.leftMulMatrix pb.basis) pb.gen) i i = 29 + (Algebra.leftMulMatrix pb.basis) pb.gen i i * 4
+info: DegreeDiameter/N63Norm.lean:27:6: Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: DegreeDiameter/N63Norm.lean:26:4: unsolved goals
+case neg
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra ℚ K
+pb : PowerBasis ℚ K
+i j : Fin pb.dim
+hij : ¬i = j
+⊢ 29 i j + (4 * (Algebra.leftMulMatrix pb.basis) pb.gen) i j = (Algebra.leftMulMatrix pb.basis) pb.gen i j * 4
+error: DegreeDiameter/N63Norm.lean:28:51: Unknown constant `Matrix.charpoly_leftMulMatrix`
+error: DegreeDiameter/N63Norm.lean:15:63: unsolved goals
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra ℚ K
+pb : PowerBasis ℚ K
+hm :
+  (Algebra.leftMulMatrix pb.basis) (29 + 4 * pb.gen) =
+    -4 • ((scalar (Fin pb.dim)) (-29 / 4) - (Algebra.leftMulMatrix pb.basis) pb.gen)
+⊢ (-4) ^ Fintype.card (Fin pb.dim) * eval (-29 / 4) ((Algebra.leftMulMatrix pb.basis) pb.gen).charpoly =
+    (-4) ^ pb.dim * eval (-29 / 4) (minpoly ℚ pb.gen)
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N63Norm
+error: build failed

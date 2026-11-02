@@ -1,0 +1,148 @@
+[
+  {
+    "family": "Polarity585 port-code extension",
+    "target_Delta": 9,
+    "target_D": 3,
+    "savedL": 585,
+    "n": {
+      "actual": 585,
+      "hypothetical": 586
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 9,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "new_graphs": 0,
+    "id": "ddp-polarity585-port-steiner-local-premises-20261027",
+    "title": "实际585源的65ports构perfect1code，520个R2块为Steiner3-(65,9,1)",
+    "record_type": "parameter-scan",
+    "status": "COMPLETE_LOCAL_STRUCTURE_PREDICTION",
+    "scope": "复用已保存actual585/2600源及65degree8/520degree9既有分区；仅65次R2邻域展开与43680triples计数。65closed1balls对585点覆盖重数均1；R2(p)与ports交仅自身；520个S(t)均9点且各异，全43680triples各一次。未重全源D3/BFS或旧replication/helper试验。",
+    "failure_or_result": "三项事前局部结构预测全部支持，提供counting引理所需actual premises；设计导出点重数72/对重数9/三元重数1。局部数据是结构证据，非新图/全图坏对结果。",
+    "lesson_and_restart_condition": "用实际port-R2三设计而非图名几何类比支撑全体helper计数；source全D3继承已知事实，承重排除只需已验local separation/code/design，不再跑source allpairs。",
+    "unclosed_gap": "Local scan alone does not prove arbitrary graph upperbound; complete old-edge-retaining obstruction is the linked theorem in the same mechanism.",
+    "other_metrics": {
+      "source_n": 585,
+      "source_m": 2600,
+      "source_reported_D": 3,
+      "source_D3_inherited": true,
+      "degree_histogram": {
+        "8": 65,
+        "9": 520
+      },
+      "ports": 65,
+      "nonports": 520,
+      "R2_neighborhoods_expanded": 65,
+      "closed1_cover_multiplicity_histogram": {
+        "1": 585
+      },
+      "distinct_S_blocks": 520,
+      "S_block_size": 9,
+      "triples": 43680,
+      "triple_multiplicity_histogram": {
+        "1": 43680
+      },
+      "design_replications": {
+        "point": 72,
+        "pair": 9,
+        "triple": 1
+      },
+      "CPU_seconds": 0.050057111999999994,
+      "source_all_root_BFS": 0,
+      "helpers_searched": false,
+      "new_graphs": 0,
+      "independent_method_count_note": "Two records in one port-code extension mechanism; source data and theorem are not two independent construction methods."
+    },
+    "outcome_class": "parameter-scan",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/REPORT.md",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/SOURCE.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/RESULT.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/BLOCKS.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/PORT_R2.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/check.py"
+    ]
+  },
+  {
+    "family": "Polarity585 port-code extension",
+    "target_Delta": 9,
+    "target_D": 3,
+    "savedL": 585,
+    "n": {
+      "actual": 585,
+      "hypothetical": 586
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 9,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "new_graphs": 0,
+    "id": "ddp-polarity585-all-preserved-edge-extensions-theorem-20261027",
+    "title": "实际585源全体保边增广不可能：任意helpers/old-old追加亦被462<520计数排除",
+    "record_type": "theorem",
+    "status": "ACTUAL_SOURCE_PREMISES_DISCHARGED_THEOREM_COMPLETE",
+    "scope": "只对literal585源、任意有限N>585的simple max9/D3图，要求保留全部585旧点与2600旧边；允许任意helper图和任意old-old新增。n.hypothetical586仅是最小目标，定理覆盖所有N≥586。不排删旧边/换源/任意degree9D3图，也非N(9,3)一般上界或世界首创声明。",
+    "failure_or_result": "实际RESULT/BLOCKS/PORT_R2已discharge原conditional三假设。端口唯一slot与last-newvertex短路论证迫使65ports各有newneighbor，从而排除所有old-old新增；选min helper degree r，A≤9-r、B≤r(9-r)，三阶Bonferroni U(a)=72a-9C(a,2)+C(a,3)，最大U(9-r)+8r(9-r)=462<520，至少58coretargets不可达。0新图/实验/额外验证。",
+    "lesson_and_restart_condition": "此源任何纯保边helper堆叠无效，应只在有效改变旧边/来源的机制重启；不继续细调gadget。另附一般构造约束：max9图degree≤8根的R3≤1+8+64+512=585，故586点D3必须全9reg/m2637（同一记录附约束，不独立计方法）。",
+    "unclosed_gap": "N(9,3) general upperbound, edge-deleting constructions, other sources and Lean formalization remain open.",
+    "other_metrics": {
+      "actual_literal_source_order": 585,
+      "all_finite_extension_orders": ">585",
+      "port_slots": 65,
+      "design_point_replication": 72,
+      "design_pair_replication": 9,
+      "design_triple_replication": 1,
+      "helper_degree_range": [
+        0,
+        9
+      ],
+      "reachable_nonport_upper_bounds": [
+        408,
+        444,
+        462,
+        461,
+        440,
+        398,
+        334,
+        247,
+        136,
+        0
+      ],
+      "maximum_reachable_nonports": 462,
+      "required_nonports": 520,
+      "theoretical_unreachable_targets_lower_bound": 58,
+      "bound_metric_unit": "Hypothetical new-root old-target coverage bound, not an actual graph unorderedbadpair count",
+      "ordinary_bad_unordered_pairs": null,
+      "old_old_added_edges_covered": true,
+      "arbitrary_finite_helpers_covered": true,
+      "condition_source_binding": "RESULT.json + BLOCKS.json + PORT_R2.json",
+      "prior_conditional_prediction_preserved": true,
+      "PROOF_CHECK_complete": true,
+      "new_graphs": 0,
+      "new_tests_or_BFS": 0,
+      "external_review_added": 0,
+      "Lean_instances": 0,
+      "order586_regular_constraint": {
+        "maximum_degree": 9,
+        "diameter": 3,
+        "must_be_9_regular": true,
+        "edge_count": 2637,
+        "degree8_R3_upper_bound": 585
+      },
+      "independent_method_count_note": "Same mechanism as the local port-code premise row; theorem and data are two records, not two independent methods."
+    },
+    "outcome_class": "mathematical-obstruction",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/THEOREM.md",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/CONDITIONAL_COUNTING_LEMMA.md",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/PROOF_CHECK.md",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/RESULT.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/BLOCKS.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/PORT_R2.json",
+      "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/SOURCE.json"
+    ]
+  }
+]

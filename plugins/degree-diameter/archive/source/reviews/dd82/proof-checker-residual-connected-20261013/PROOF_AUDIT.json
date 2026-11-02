@@ -1,0 +1,58 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_modulo_explicit_import",
+  "summary": "One bounded fresh-context review found no gap in residual E connectivity, W spectral bounds, the conditional bipartite 3/4 distribution, or H invertibility; same-family provisional and sound modulo the checked representation import.",
+  "trace_path": "reviews/dd82/proof-checker-residual-connected-20261013/",
+  "thread_id": "/root/residual_connected_review",
+  "executor_model": "inherited Codex session; model identifier not independently attested",
+  "executor_family": "openai",
+  "reviewer_model": "fresh inherited Codex session; model identifier not independently attested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_reasoning": "inherited session; reasoning setting not independently attested",
+  "generated_at": "2026-10-13T08:41:27Z",
+  "proof_status": "sound-modulo-imports",
+  "lean_checked": false,
+  "details": {
+    "rounds": 1,
+    "theorems_audited": 1,
+    "conclusions_audited": [
+      "The residual matching cover E is connected.",
+      "Every eigenvalue of H restricted to W lies strictly between (-1-sqrt(57))/2 and (-1+sqrt(57))/2 and outside (-1,0).",
+      "If E is bipartite, both parts meet each fibre in three vertices and H has three same-part and four opposite-part neighbors at every vertex.",
+      "H is invertible."
+    ],
+    "issues": [],
+    "counterexamples_found": 0,
+    "unresolved_counterexample_candidates": 0,
+    "counterexample_attempts": [
+      "Nonuniform component-fibre intersections: excluded by matching restriction and inverse.",
+      "Non-symmetric weighted quotient: retained throughout all nonuniform profiles.",
+      "Missing partitions or quotient boundaries: all positive partitions for c=1,3,5 and all A endpoints checked.",
+      "Unequal irrational-conjugate multiplicities: excluded by integer characteristic polynomial.",
+      "Spectral endpoints on W: excluded by the simple E eigenvalue 7.",
+      "Bipartite imbalance or Hz=0: excluded by three-fibre balance and odd degree."
+    ],
+    "actual_read_ranges": [
+      {"path": "AGENTS.md", "range": "full"},
+      {"path": ".agents/skills/proof-checker/SKILL.md", "range": "full"},
+      {"path": "proofs/dd82/construction/FALSE_TWINS58_RESIDUAL_CONNECTED.md", "range": "lines 1-209, full"},
+      {"path": "proofs/dd82/construction/FALSE_TWINS58_EIGHT_SIX_FIBERS.md", "range": "lines 1-268, full; dependent mathematical audit limited to sections 1-2, lines 16-113"}
+    ],
+    "imported_dependencies": [
+      {"path": "proofs/dd82/construction/FALSE_TWINS58_EIGHT_SIX_FIBERS.md", "sections": "1-2", "status": "Needed regularity, representation and coverage derivations checked locally; explicit representation import, no Lean certificate."}
+    ],
+    "not_applicable": ["limits", "derivatives", "integrals", "expectations", "probability modes", "asymptotic uniformity"],
+    "open_items": [
+      "Cross-family semantic acceptance belongs to the parent-run external review.",
+      "No Lean verification was performed.",
+      "Existence or nonexistence of the entire false-twin family and of general order-58 targets is not proved."
+    ],
+    "source_files_modified": false,
+    "other_review_reports_read": false,
+    "new_solver_or_graph_enumeration": false,
+    "external_backend_used": false
+  }
+}

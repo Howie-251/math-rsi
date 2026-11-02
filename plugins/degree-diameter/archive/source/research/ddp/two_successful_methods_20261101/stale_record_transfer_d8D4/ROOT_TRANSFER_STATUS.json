@@ -1,0 +1,103 @@
+{
+  "updated_UTC": "2026-11-01 17:54 UTC",
+  "status": "ALL_INITIAL_TRANSFER_BATCHES_TERMINAL_NO_NEW_GRAPH",
+  "summary_zh": "15格候选已列（14格十年以上＋1格八年）。已实际检查(8,4)/(4,5)/(3,5)：单拆点、字面F4降域及三新41源九cover分别受具体路线/域障碍；70→72两规则共9030490个操作配置完整失败。改成helper相邻后168配置解决全new-old覆盖与new-new互距，仍损伤old-old五步路线。全部数值批次终态，0新增达标图，不继续原规则长尾。",
+  "new_graphs": 0,
+  "counts_unchanged": [
+    152,
+    43,
+    46
+  ],
+  "completed": [
+    {
+      "target": [
+        8,
+        4,
+        1101
+      ],
+      "status": "EXACT_NO_SINGLE_SPLIT",
+      "singleton_R4_targets": 95,
+      "result": "stale_record_transfer_d8D4/loz1100_split_gate/RESULT.json",
+      "scope": "One source vertex split into adjacent roles, neighbor partition, no other changes; all source vertices by Cayley translation."
+    },
+    {
+      "target": [
+        8,
+        4,
+        1200
+      ],
+      "status": "STOP_LITERAL_F2_SPECIALIZATION_NOT_DEFINED",
+      "result": "stale_record_transfer_d8D4/c30_f2_fivecover_gate/RESULT.json",
+      "scope": "Only storedGF4/C30 literal maps; binary field/model variants not excluded; no NB counting run."
+    }
+  ],
+  "next": {
+    "target": [
+      4,
+      5,
+      369
+    ],
+    "status": "ALL_THREE_NEW_SOURCES_EXACT_NO_ANY_NINE_SHEET_COVER",
+    "directory": "stale_record_transfer_d4D5/alternative41_ninecover_gate/",
+    "CPU_budget": 10,
+    "max_new_sources": 3,
+    "old_Allwright1a_scope_not_rerun": true,
+    "minimum_diagonal_NBwalks": [
+      1,
+      3,
+      1
+    ],
+    "root_read": "NOTE and TERMINAL read; unique-lift capacity proof accepted"
+  },
+  "second_active_question": {
+    "target": [
+      3,
+      5,
+      72
+    ],
+    "status": "BOTH_FIXED_RULES_EXHAUSTIVE_NO_TERMINAL",
+    "directory": "stale_record_transfer_d3D5/two_helper_threecut/",
+    "CPU_budget": 20,
+    "rule": "Delete3 disjoint oldedges of inherited70/D5 host; add2 nonadjacent degree3vertices partitioning6freed endpoints; nootherchanges.",
+    "prediction": "Old-only R4 triple cover is diagnostic, not a strict gate: A-oldpin-oldpin-B-oldpin-target can have length5. Evaluate actual final72 helper-root and old-old routes, allowing cooperation.",
+    "prediction_correction": "An overly strong necessary-condition proposal was withdrawn before filtering; nonadjacent helpers can cooperate through old vertices.",
+    "first_rule_partitions": 1663900,
+    "first_rule_firsthelper_oldcover_pass": 28,
+    "first_rule_oldpair_checks": 0,
+    "first_rule_cpu_reported": 1.863956,
+    "first_rule_new_graphs": 0,
+    "changed_rule": "Twohelpers adjacent,2oldpins each; leftover2 oldendpoints form one old-old repair edge.",
+    "budget_policy": "Same cumulative20CPU, first rule not rerun; if nohit stop both fixedrules.",
+    "second_rule_configurations": 7366590,
+    "second_rule_bothhelpers_oldcover_pass": 168,
+    "second_rule_oldpair_failures": 168,
+    "second_rule_first_old_failure": [
+      0,
+      17
+    ],
+    "measured_case_CPU_seconds": 4.660693,
+    "unmetered_preparation_reserved_seconds": 1.0,
+    "running": false,
+    "new_graphs": 0,
+    "first_old_failure_actual_distance": 6,
+    "old_route": [
+      0,
+      2,
+      56,
+      41,
+      40,
+      17
+    ],
+    "replacement_route": [
+      0,
+      2,
+      71,
+      56,
+      41,
+      40,
+      17
+    ],
+    "root_read": "Read both RESULT/TERMINAL, adjacent NOTE, TWO_RULES_SUMMARY and saved pair diagnostic; accept only exact fixed-rule exclusions."
+  },
+  "next_decision": "Pause these exact mechanisms. Future work must change source short-return routes or repair old-old routes as well as helper coverage; do not rerun closed scopes or start field/copy ladders. Other shortlisted parameters remain candidates, not claimed solved or impossible."
+}

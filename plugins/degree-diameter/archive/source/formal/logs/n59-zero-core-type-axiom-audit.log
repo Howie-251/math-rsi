@@ -1,0 +1,53 @@
+def DegreeDiameter.zeroTriangleVertex.{u_1} : {V : Type u_1} → SimpleGraph V → V → Prop :=
+fun {V} G z => ∀ (u v : V), G.Adj z u → G.Adj z v → ¬G.Adj u v
+def DegreeDiameter.commonZeroNeighbors.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → Finset V :=
+fun {V} [Fintype V] G u v => {z ∈ G.neighborFinset u | G.Adj z v ∧ DegreeDiameter.zeroTriangleVertex G z}
+@DegreeDiameter.matching_row_positive_value : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {u v : V},
+  DegreeDiameter.matchingRow G u →
+    0 < DegreeDiameter.defectMatrix G u v →
+      DegreeDiameter.defectMatrix G u v = 1 ∨ DegreeDiameter.defectMatrix G u v = 2
+@DegreeDiameter.matching_row_equal_positive_adj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {u v w : V},
+  DegreeDiameter.matchingRow G u →
+    v ≠ w →
+      0 < DegreeDiameter.defectMatrix G u v →
+        DegreeDiameter.defectMatrix G u v = DegreeDiameter.defectMatrix G u w → G.Adj v w
+@DegreeDiameter.independent_matching_rows_no_defect_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {u v w : V},
+  DegreeDiameter.matchingRow G u →
+    DegreeDiameter.matchingRow G v →
+      DegreeDiameter.matchingRow G w →
+        u ≠ v →
+          u ≠ w →
+            v ≠ w →
+              ¬G.Adj u v →
+                ¬G.Adj u w →
+                  ¬G.Adj v w →
+                    ¬(0 < DegreeDiameter.defectMatrix G u v ∧
+                        0 < DegreeDiameter.defectMatrix G u w ∧ 0 < DegreeDiameter.defectMatrix G v w)
+@DegreeDiameter.common_zero_neighbors_card_le_two : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+    ∀ {r s : V}, r ≠ s → (DegreeDiameter.commonZeroNeighbors G r s).card ≤ 2
+'DegreeDiameter.matching_row_positive_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.matching_row_equal_positive_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.independent_matching_rows_no_defect_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.common_zero_neighbors_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DegreeDiameter.zero_vertex_edge_defect_zero : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {u v : V},
+  DegreeDiameter.zeroTriangleVertex G u → G.Adj u v → DegreeDiameter.defectMatrix G u v = 0
+@DegreeDiameter.zero_heavy_has_nonzero_common_neighbor : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+    ∀ {u v : V},
+      DegreeDiameter.zeroTriangleVertex G u →
+        u ≠ v →
+          DegreeDiameter.defectMatrix G u v = 2 → ∃ w, G.Adj u w ∧ G.Adj w v ∧ ¬DegreeDiameter.zeroTriangleVertex G w
+@DegreeDiameter.n59_zero_heavy_has_nonzero_common_neighbor : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+          ∀ {u v : V},
+            DegreeDiameter.zeroTriangleVertex G u →
+              DegreeDiameter.defectMatrix G u v = 2 →
+                ∃ w, G.Adj u w ∧ G.Adj w v ∧ ¬DegreeDiameter.zeroTriangleVertex G w
+'DegreeDiameter.zero_vertex_edge_defect_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.zero_heavy_has_nonzero_common_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n59_zero_heavy_has_nonzero_common_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]

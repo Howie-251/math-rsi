@@ -1,0 +1,125 @@
+[
+  {
+    "family": "H3 incidence flag subdivisions with layer2factor",
+    "target_Delta": 4,
+    "target_D": 6,
+    "savedL": 760,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 6,
+    "id": "ddp-d4-d6-current760-source-20261027",
+    "title": "(4,6)760真实源：728incidence+32flag层，三个cycle8/8/16",
+    "record_type": "source-recovery",
+    "n": {
+      "actual": 760,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": 4,
+    "scope": "实际760/1520全4regular、free0；728个H3 incidence原顶点+32flag-subdivision。当前coreflags1424/cross64/layer32，layer cycles8,8,16。作者D6沿用，无source全BFS；冻结1424×32单flag/单layer吸收候选。",
+    "failure_or_result": "实际760/1520全4regular、free0；728个H3 incidence原顶点+32flag-subdivision。当前coreflags1424/cross64/layer32，layer cycles8,8,16。作者D6沿用，无source全BFS；冻结1424×32单flag/单layer吸收候选。",
+    "lesson_and_restart_condition": "源无空余度，保旧边增点没有接口；可恢复原flag-subdivision+layer2factor机制，再冻结精确吸收操作。未把32layer误作单C32，不重验已知D6。",
+    "unclosed_gap": "Knownsource recovery is not a newlowerbound. General761 constructions andcompleteLean remainopen.",
+    "other_metrics": {
+      "source_n": 760,
+      "source_m": 1520,
+      "degree4": 760,
+      "free_vertices": 0,
+      "original_incidence_vertices": 728,
+      "layer_vertices": 32,
+      "core_flag_edges": 1424,
+      "cross_edges": 64,
+      "layer_edges": 32,
+      "layer_cycle_lengths": [
+        8,
+        8,
+        16
+      ],
+      "source_allBFS": 0,
+      "frozen_candidates": 45568,
+      "prepare_CPU_seconds": 0.098789662,
+      "source_author": "Nishant Bhakar; classicalH3 incidence foundation",
+      "baseline_date": "2026-10-27"
+    },
+    "outcome_class": "source-recovery",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/REPORT.md",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/SOURCE_PROFILE.json",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/RECIPE_BINDING.json",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/PROOF.md"
+    ]
+  },
+  {
+    "family": "H3 incidence flag subdivisions with layer2factor",
+    "target_Delta": 4,
+    "target_D": 6,
+    "savedL": 760,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 6,
+    "id": "ddp-d4-d6-flag-layer-absorption45568-20261027",
+    "title": "(4,6)单flag+单layer吸收45568全闭：新根170通过仍无完整图",
+    "record_type": "finite-construction-experiment",
+    "n": {
+      "actual": null,
+      "hypothetical": 761
+    },
+    "actual_graph_Delta": null,
+    "scope": "固定45568=1424现存coreflag×32现存layeredge，删两disjoint边，新x邻四端点，假设761/1522/4reg。45398 newrootR5失败；170 newroot完整通过但各有旧旧>6反例，0图/未试/UNKNOWN。",
+    "failure_or_result": "固定45568=1424现存coreflag×32现存layeredge，删两disjoint边，新x邻四端点，假设761/1522/4reg。45398 newrootR5失败；170 newroot完整通过但各有旧旧>6反例，0图/未试/UNKNOWN。",
+    "lesson_and_restart_condition": "F端点全入S给sourceR5精确newroot gate；完整旧pair根集为sourceR2(T)+x（≤69），不是D4的R1或对称抽样。只闭当前source固定两edge族，不按新badpair增加flag/layeredge。重启需新连接机制或不同source。",
+    "unclosed_gap": "Only this complete frozenfamily isexcluded; arbitrary761graphs andotherdeletions remainopen.",
+    "other_metrics": {
+      "candidates_total": 45568,
+      "candidates_closed": 45568,
+      "newroot_R5_failures": 45398,
+      "newroot_D6_passers": 170,
+      "oldpair_D6_failures": 170,
+      "modified_root_BFS_runs": 1015,
+      "maximum_executed_roots_per_failed_candidate": 12,
+      "theoretical_complete_root_bound": 69,
+      "source_endpoint_R5_cache_roots": 760,
+      "source_R2_snapshots_same_R5_run": 760,
+      "source_D6_allBFS_revalidation": 0,
+      "graphs_exported": 0,
+      "unattempted": 0,
+      "UNKNOWN": 0,
+      "native_CPU_seconds": 0.066705,
+      "total_CPU_seconds": 2.468014226,
+      "CPU_budget_seconds": 20,
+      "first_witness": {
+        "ordinal": 2,
+        "F": [
+          [
+            0,
+            364
+          ],
+          [
+            729,
+            730
+          ]
+        ],
+        "S": [
+          0,
+          364,
+          729,
+          730
+        ],
+        "old_badpair": [
+          0,
+          733
+        ],
+        "distance_greater_than": 6
+      },
+      "negative_scope": "One existing coreflag plus oneexisting layeredge, forcedfour-endpoint neighbor set onfixed760source; noextracuts."
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/production/REPORT.md",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/production/RESULT.json",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/production/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d4_D6_flag760_extension/production/first_oldpair_witness.json"
+    ]
+  }
+]

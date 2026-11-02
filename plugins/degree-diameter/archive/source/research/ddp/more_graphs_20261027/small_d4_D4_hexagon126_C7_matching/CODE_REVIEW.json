@@ -1,0 +1,55 @@
+{
+  "status": "READ_ONLY_IMPLEMENTATION_REVIEW_NO_BLOCKER",
+  "reviewed_UTC": "2026-10-28T03:23:41.521025+00:00",
+  "files": [
+    "prepare_model.py",
+    "decode_model.py",
+    "run_preparation.py"
+  ],
+  "mathematical_interface": "ANALYSIS_MATCHING_ROUTES.md",
+  "findings": [
+    {
+      "topic": "C7 matching selectors",
+      "conclusion": "Each selector pairs two distinct7-orbits with a shift and contains7 disjoint concrete edges. Orbit E1 chooses one incident selector per each of18 orbits, hence9 selected atoms give a perfectmatching. No sameoddorbit matching is omitted."
+    },
+    {
+      "topic": "Self-conflicting selector",
+      "conclusion": "Checking the first concrete edge against the other6 translates is complete under simultaneousC7translation. A conflict emits a negative unit, not a tautological binary. This handles two concrete matching edges having the same selector."
+    },
+    {
+      "topic": "Cross-selector short cycles",
+      "conclusion": "For each selector pair, first edge of A against all7 B translates is complete by C7. Both endpoint pairings are tested; positive old connector lengths1/2 with sum<=3 are precisely4/5cycles for disjoint selected matching edges. Incident-overlap selectors are already excluded by orbitAMO."
+    },
+    {
+      "topic": "Y2 canonicalization",
+      "conclusion": "Canonical value=min sorted simultaneous+18 translates is consistent for1125 unordered pair orbits. Diagonal is True; olddistance<=2 is True; otherY2 implies an OR of actualmatching selectors. closed1 includes its centre, hence directM is included. Translation-support equality is explicitly asserted."
+    },
+    {
+      "topic": "720 far-pair completeness",
+      "conclusion": "All1125 canonical pair orbits are formed; oldR4complement gives720 far representatives. Each far row considers all126 middle vertices, including both endpoints. No per-root sampling or vertex-transitivity assumption appears."
+    },
+    {
+      "topic": "Repeated selector in a two-M route",
+      "conclusion": "No distinct-selector condition is imposed. AND witness is memoized only by its two Y2 inputs; identical inputs simplify to that input. This preserves routes whose distinct concrete matching edges share one7-edge selector."
+    },
+    {
+      "topic": "Sound existential auxiliaries",
+      "conclusion": "Y2=>actualsupport and z=>bothY2 plus far-rowOR are sufficient: any satisfying witness gives an actual<=4 walk, while any validmatching can extend auxiliaries to its actualreachability. Missing reverse implications do not shrink or enlarge existential matching feasibility."
+    },
+    {
+      "topic": "Future SAT decoding",
+      "conclusion": "All CNF clauses are checked against the full model. Only matchingselector atoms are decoded;9atoms/63newedges/all126distinct endpoints/simple4regular/252totaledges/oldedges retained are checked. Explicit C7 edge invariance precedes18 representativeR4 checks; no one-root claim. Future candidate checks are not asserted to have run."
+    }
+  ],
+  "limitations": [
+    "Static review does not assert SAT/UNSAT or any producedgraph.",
+    "The result applies only to the frozen C7-invariant,girth>=6,old-distance5/6matching domain, not all complementmatchings.",
+    "No sourcegraph or model was rebuilt or executed by this reviewer."
+  ],
+  "execution": {
+    "solver_calls": 0,
+    "BFS_calls": 0,
+    "model_preparation_runs": 0,
+    "graph_generation": 0
+  }
+}

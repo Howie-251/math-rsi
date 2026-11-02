@@ -1,0 +1,11 @@
+# 161150 fixed cubic-coset encoding checkpoint
+
+The new `GQ77Cubic22Clone65Definitions` kernel compilation exited0 under the pinned Lean4.24.0, explicit existing `LEAN_PATH`, one thread. The final narrower import compiles in2.640816CPU. Its actual printed bodies define the graph as `FullNeighborhoodClones.graph OppositeGQ77Spread.graph center`, with each center in the immutable accepted160050source. The full existing415-module source proof is imported only at Exact; its definitions and spread incidence theorem suffice for the earlier finite modules. No old source or cached module is changed or recompiled.
+
+The carrier is literally `(Fin160000 ⊕ Fin50) ⊕ Fin1100`, with `clonePair : Fin1100 ≃ Fin22 × Fin50` and `label : Vertex ≃ Fin161150`. The closed label lemmas preserve every original source label and give clone label160050+k, with k=50*i+j. Product centers have source label400*O22[i]+originalSpread[j], using the original50spread order.
+
+The new O22 literal values are57,119,165,251,265,347,399,71,133,179,216,279,312,364,85,147,193,230,293,326,378,1. Their origin is the saved fixed GF7 cubic-coset rule, externally bound to the already formalized source geometry. The finite proof checks the400×8 line positions against400point owner entries and400line index entries; the unoccupied224lines can use arbitrary default index0 because the certificate is an implication. Twenty20-line chunks keep kernel reduction bounded. No center independence assumption is used.
+
+The actual external binding in `INPUT_BINDING_CHECK.json` passed: all1100ordered owners, all70400immutable original-source neighbors, and all5192000literal final edges were checked. All5121600source edges remain exactly; no new-to-new edges occur. The binding uses no BFS and makes no independent acceptance claim. Numerical acceptance and new-scope external review remain root coordinated.
+
+Target: a closed theorem with no certificate premises asserting card161150, degree≤65, actual `SimpleGraph.Walk` diameter≤3 and not diameter≤2. At this checkpoint the Definitions compilation and external binding are complete; finite Inputs, Exact, and independent Audit are pending. No `native_decide`, new axiom, installation, or checksum is used.

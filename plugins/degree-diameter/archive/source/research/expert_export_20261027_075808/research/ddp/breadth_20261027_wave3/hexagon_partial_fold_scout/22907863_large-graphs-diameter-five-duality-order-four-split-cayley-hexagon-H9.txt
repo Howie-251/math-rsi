@@ -1,0 +1,415 @@
+Large graphs of diameter five from a duality
+of order four of the split Cayley hexagon H(9)*
+Rishabh Rajiv
+Vancouver, BC, Canada
+rishabh.rajiv@alumni.ubc.ca
+September 2026
+Abstract
+Quotients of incidence graphs of generalized polygons by polarities are a classical source
+of large graphs of given maximum degree and diameter. The construction needs less than
+a polarity: if a connected bipartite graph has diameter n, its quotient by any group of
+automorphisms containing an element that interchanges the two parts has diameter at most
+n − 1. The split Cayley hexagon H(9) has no polarity, but it has dualities of order four.
+We show that any two of them generate conjugate subgroups of the automorphism group
+of its incidence graph, and that the quotient by such a duality has 33397 vertices, of which
+33033 have degree 10, 336 have degree 7 and 28 have degree 6, and diameter 5. Adding edges
+and twin vertices we obtain N (10, 5) ≥ 33397, N (11, 5) ≥ 35203 and N (12, 5) ≥ 38167 for
+the degree-diameter problem; the previously published lower bounds were 14047, 20952 and
+34992. For the other symplectic quadrangles W (2h) and split Cayley hexagons H(3h) whose
+incidence graphs have degree at most 20, the quotient by a duality of minimal order does
+not improve the known bounds.
+MSC 2020: 05C35 (primary); 05B25, 05C25, 51E12 (secondary).
+Keywords: degree-diameter problem, generalized hexagon, duality, polarity graph, quotient
+graph.
+1 Introduction
+The degree-diameter problem asks for N (d, k), the largest order of a graph of maximum degree
+at most d and diameter at most k; see the survey of Miller and ˇSir´ aˇ n [21]. The Moore bound
+N (d, k) ≤ M (d, k) = 1 + d
+k−1X
+i=0
+(d − 1)i
+is attained only in a few cases [15, 1, 6], and lower bounds come from explicit constructions.
+Tables of the largest known orders are maintained by Comellas [5] and on the Combinatorics
+Wiki [7].
+* Accompanying dataset: the edge lists of the four graphs, the duality and standalone verification scripts
+(Section 7), deposited at Zenodo, doi:10.5281/zenodo.22907863.
+ Independent researcher. ORCID: 0009-0000-8626-5234.
+1
+
+Many of the constructions that come closest to the Moore bound are geometric. Let S be
+a generalized n-gon of order ( q, q). Its incidence graph Γ is ( q + 1)-regular and bipartite, with
+diameter n and girth 2n. A polarity of S is an automorphism of Γ of order two that interchanges
+points and lines, and the quotient of Γ by a polarity has maximum degreeq +1, diameter at most
+n − 1 and half as many vertices as Γ. For projective planes these are the polarity graphs of Erd˝ os
+and R´ enyi [11] and of Brown [3], of diameter two. Delorme [8, 9] used polarities of generalized
+quadrangles and hexagons; the quotients of W (8) and H(3) are the largest known graphs of
+degree 9 and diameter 3 and of degree 4 and diameter 5. Polarity quotients also underlie the
+PolarFly network topology [18] and recent constructions of Isham, Lakhotia, Monroe and Petrini
+[16].
+A self-dual generalized polygon need not have a polarity [17, 2]. The symplectic quadrangle
+W (q) is self-dual if and only if q is even, and has a polarity if and only if q is an odd power of
+2; the split Cayley hexagon H(q) is self-dual if and only if q is a power of 3, and has a polarity
+if and only if q is an odd power of 3 [27, 28, 29]. The argument for polarity graphs, however,
+does not use that the polarity is an involution. It uses only an automorphism that interchanges
+the two parts of Γ (Lemma 3.1), so every duality gives a quotient of diameter at most n − 1.
+A duality of order 2 m gives a quotient with roughly |V (Γ)|/2m vertices, so for m > 1 the
+quotient can compete only where the known bounds are well below the Moore bound. Among
+the quadrangles and hexagons of Section 6 this happens only for H(9), at diameter 5.
+Theorem 1.1. Let Γ be the incidence graph of the split Cayley hexagon H(9).
+(i) H(9) has dualities of order four and no polarity, and any two dualities of order four generate
+conjugate subgroups of Aut(Γ).
+(ii) If τ is a duality of order four, then F = Γ/⟨τ ⟩ has 33397 vertices and 166425 edges; 33033
+of its vertices have degree 10, 336 have degree 7 and 28 have degree 6; and F has diameter
+5.
+Completing F to a 10-regular graph and then adding twins of suitable vertices (Section 5)
+gives the following bounds.
+Theorem 1.2. N (10, 5) ≥ 33397, N (11, 5) ≥ 35203 and N (12, 5) ≥ 38167.
+(d, k) previous bound new bound gain new /M(d, k)
+(10, 5) 14047 [24] 33397 +19350 0 .452
+(11, 5) 20952 [5] 35203 +14251 0 .288
+(12, 5) 34992 [22] 38167 +3175 0 .197
+Table 1: New lower bounds for N (d, k). The previous bound is the largest published order of a
+graph of maximum degree at most d and diameter k, as of September 2026 (see also [5, 7]); the
+gain is the new bound minus the previous one, and M (d, k) is the Moore bound.
+Section 2 collects definitions and the facts we use about H(q) and W (q). Section 3 proves
+the quotient lemma. Section 4 studies the dualities of minimal order of H(3h) and W (2h) for
+h a power of two and proves Theorem 1.1. Section 5 proves Theorem 1.2, Section 6 treats the
+other self-dual generalized quadrangles and hexagons of small order, and Section 7 describes the
+computations and the data.
+2
+
+2 Preliminaries
+2.1 Quotient graphs
+All graphs are finite and simple. For a graph Γ and a vertex x we write N (x) for the set of
+neighbours of x, and Fix(g) for the set of vertices fixed by an automorphism g. Let G ≤ Aut(Γ).
+The quotient graph Γ/G has the G-orbits on V (Γ) as its vertices, two distinct orbits being
+adjacent if some vertex of one is adjacent to some vertex of the other; edges inside an orbit are
+ignored. We write ¯x for the orbit of x.
+If x′ ∈ ¯x is adjacent to y′, choose g ∈ G with gx′ = x; then gy′ is a neighbour of x in the
+orbit of y′. Hence the neighbours of ¯x in Γ/G are the orbits ¯y ̸= ¯x with y ∈ N (x), and
+deg ¯x =
+{¯y : y ∈ N (x)} \ {¯x}
+ ≤ deg x. (2.1)
+The image of a walk in Γ is a walk in Γ /G once repeated consecutive vertices are removed, so
+dΓ/G(¯x, ¯y) ≤ min
+g∈G
+dΓ(x, gy). (2.2)
+2.2 Generalized polygons
+Let n ≥ 3. A generalized n-gon is a point-line incidence structure whose incidence graph, the
+bipartite graph on points and lines with edges given by incidence, has diameter n and girth 2n.
+It has order (s, t) if every line has s + 1 points and every point lies on t + 1 lines, and it is thick if
+s, t≥ 2. By the theorem of Feit and Higman [12], a thick generalized n-gon has n ∈ {3, 4, 6, 8},
+and a thick generalized octagon does not have s = t. The incidence graph of a generalized n-gon
+of order ( q, q) is ( q + 1)-regular with
+|V (Γ)| = 2 (1 +q + q2 + · · ·+ qn−1) (2.3)
+vertices, which is the largest order of a bipartite graph of maximum degree q + 1 and diameter
+n [25, 21].
+Since the incidence graph is connected and bipartite, an automorphism either preserves the
+set of points or interchanges points and lines; it is a collineation in the first case and a duality in
+the second. The collineations form a subgroup of index at most two. The structure is self-dual
+if it has a duality, and a polarity is a duality of order two. A point x is absolute for a polarity
+π if it is incident with the line πx.
+2.3 The split Cayley hexagon and the symplectic quadrangle
+Let q = ph with p prime. The points of the split Cayley hexagon H(q) are the points of the
+parabolic quadric Q(6, q) of PG(6 , q) with equation X0X4 + X1X5 + X2X6 = X 2
+3 , and its lines
+are the lines of Q(6, q) whose Grassmann coordinates pij satisfy
+p12 = p34, p 54 = p32, p 20 = p35, p 65 = p30, p 01 = p36, p 46 = p31.
+It is a generalized hexagon of order ( q, q) [27, 29], so by (2.3) its incidence graph has 2( q5 + q4 +
+q3 + q2 + q + 1) vertices; for q = 9 this is 132860. The points of the symplectic quadrangle W (q)
+are the points of PG(3, q), and its lines are the lines of PG(3 , q) that are totally isotropic for the
+form x0y1 − x1y0 + x2y3 − x3y2; it is a generalized quadrangle of order ( q, q) [23].
+3
+
+Both structures are defined over Fp, so raising every coordinate to its p-th power induces a
+collineation φ of order h, the Frobenius collineation. For 0 ≤ j < hthe points and lines fixed by
+φj are those defined over the fixed field Fpe of x 7→ xpj
+, where e = gcd(j, h) and gcd(0 , h) = h.
+They form a substructure isomorphic to H(pe), respectively W (pe), whose incidence graph we
+denote by Γ pe.
+We use the following facts about automorphisms; see [27, 28, 26, 4, 29, 23]. Let S be H(q)
+with q = 3h, or W (q) with q = 2h, let Γ be its incidence graph, and let G be the group G2(q),
+respectively Sp4(q), acting faithfully on S by collineations.
+(F1) S is self-dual. There is a duality δ with δ2 = φ, and Aut(Γ) = G ⋊ ⟨δ⟩. Thus δ has order
+2h, the collineations form the subgroup G ⋊ ⟨φ⟩, and the dualities are the elements of the
+cosets Gδi with i odd.
+(F2) Let G be the algebraic group G2, respectively Sp 4, over the algebraic closure of Fp. For
+a power r of p let Fr be the Frobenius endomorphism of G that raises matrix entries to
+the r-th power, so that G is the group G
+Fq
+of fixed points of Fq. The automorphism
+y 7→ δyδ −1 of G is the restriction of an endomorphism σ of G, a special isogeny, with
+σ2 = Fp. In particular σ2h = Fq, and σ has only finitely many fixed points.
+We also use the theorem of Lang and Steinberg [19, 26]: if G is a connected linear algebraic
+group and σ is a surjective endomorphism of G with finitely many fixed points, then the map
+x 7→ x−1σ(x) from G to G is surjective. Since x σ(x)−1 is the image of x−1 under this map, the
+map x 7→ x σ(x)−1 is surjective as well.
+3 Quotients by groups containing a duality
+Lemma 3.1. Let Γ be a connected bipartite graph of diameter n, and let G ≤ Aut(Γ) contain
+an element that interchanges the two parts. Then Γ/G has maximum degree at most that of Γ
+and diameter at most n − 1.
+Proof. The degree bound is (2.1). Let π ∈ G interchange the parts, and let x, ybe vertices.
+Because Γ is bipartite, dΓ(x, y) is even if x and y lie in the same part and odd otherwise, and
+dΓ(x, πy) has the other parity. Both distances are at most n and they are not equal, so one of
+them is at most n − 1. By (2.2), dΓ/G(¯x, ¯y) ≤ n − 1.
+When G is generated by a polarity this is the classical argument for polarity graphs; see [9]
+and [16, Prop. 4.10]. We have not found the case of a larger group in the literature, although
+the proof is the same.
+Lemma 3.2. Let τ be an automorphism of order 2m of a bipartite graph Γ that interchanges
+the two parts. Then
+|V (Γ/⟨τ ⟩)| = 1
+2m
+m−1X
+j=0
+|Fix(τ 2j)|.
+In particular |V (Γ/⟨τ ⟩)| ≤ |V (Γ)|/2, with equality if and only if m = 1.
+Proof. This is Burnside’s lemma for the action of ⟨τ ⟩ on V (Γ), since the odd powers of τ
+interchange the parts and fix no vertex. If m ≥ 2 then τ 2 ̸= 1 fixes fewer than |V (Γ)| vertices,
+which gives the strict inequality.
+4
+
+Remark 3.3. Let Γ be the incidence graph of a generalized n-gon of order ( q, q) and τ a duality
+of order 2m. The quotient has maximum degree at most d = q + 1, diameter at most k = n − 1,
+and at least |V (Γ)|/2m vertices. By (2.3),
+|V (Γ)|
+2M (q + 1, n− 1) = qn − 1
+qn + qn−1 − 2 ,
+which tends to 1 as q grows, so the quotient has about M (d, k)/m vertices. A polarity ( m = 1)
+therefore comes close to the Moore bound, while a duality of order four ( m = 2) can improve a
+known bound only if that bound is below about half of the Moore bound.
+4 The quotient of H(9)
+For an integer h let v2(h) denote the exponent of the largest power of two dividing h.
+Proposition 4.1. Let S be H(q) with q = 3 h, or W (q) with q = 2 h. Every duality of S has
+order divisible by 2v2(h)+1. In particular S has a polarity if and only if h is odd.
+Proof. By (F1), Aut(Γ)/G is cyclic of order 2h, generated by the image of δ, and a duality maps
+to δiG with i odd. This element has order 2 h/ gcd(i, 2h). Since gcd( i, 2h) is odd, the order is
+divisible by 2v2(h)+1, and the order of a duality is divisible by the order of its image. Conversely,
+if h is odd then δh is a duality of order two.
+For q = 9 and q = 4 we have h = 2, so every duality has order divisible by four, and δ has
+order four. The next result shows that when h is a power of two, every duality of the smallest
+possible order generates a conjugate of ⟨δ⟩.
+Theorem 4.2. Let S be H(q) with q = 3 h, or W (q) with q = 2 h, where h is a power of two,
+and let τ be a duality of order 2h. Then there is x ∈ G with x−1⟨τ ⟩x = ⟨δ⟩.
+Proof. Write τ ∈ Gδi with i odd, and choose e with ei ≡ 1 (mod 2 h). Then e is odd, so τ e
+generates ⟨τ ⟩, and τ e ∈ Gδ. Replacing τ by τ e we may assume that τ = gδ with g ∈ G. By (F2)
+we have δy = σ(y)δ for y ∈ G, and by induction
+τ r = g σ(g) σ2(g) · · ·σr−1(g) δr (r ≥ 1).
+Since τ 2h = δ2h = 1, this gives g σ(g) · · ·σ2h−1(g) = 1.
+By the theorem of Lang and Steinberg there is x ∈ G with g = x σ(x)−1. The product then
+telescopes:
+1 = g σ(g) · · ·σ2h−1(g) = x σ2h(x)−1 = x Fq(x)−1.
+So x is fixed by Fq, that is, x ∈ G. Finally, since g σ(x) = x,
+x−1τ x= x−1g (δxδ −1) δ = x−1g σ(x) δ = δ.
+Corollary 4.3. In the situation of Theorem 4.2, write q = ph. Then Γ/⟨τ ⟩ ∼= Γ/⟨δ⟩ and
+|V (Γ/⟨τ ⟩)| = 1
+2h
+h−1X
+j=0
+|V (Γpgcd(j,h))|.
+5
+
+Proof. Conjugate subgroups have isomorphic quotients, so we may take τ = δ. Then τ 2j =
+φj, whose fixed vertices are the vertices of Γ pgcd(j,h) (Section 2.3), and Lemma 3.2 gives the
+formula.
+Proof of Theorem 1.1. Here q = 9 and h = 2. Part (i) follows from Proposition 4.1 and Theo-
+rem 4.2, since δ has order four. For part (ii) we may take τ = δ by Theorem 4.2. Then τ 2 = φ,
+and Fix(τ 2) is the vertex set of Γ 3, the incidence graph of the subhexagon H(3) formed by the
+points and lines defined over F3. It has 2 · 364 = 728 vertices, and by Corollary 4.3 the quotient
+has (132860 + 728)/4 = 33397 vertices.
+Since τ commutes with τ 2, it maps Fix(τ 2) to itself and induces there a duality of order two,
+that is, a polarity π of H(3). The 728 vertices of Γ 3 therefore form 364 orbits of size two, each
+consisting of a point and a line of H(3), and the other 132132 vertices form 33033 orbits of size
+four.
+We compute degrees with (2.1). Let ¯x be an orbit of size four, and suppose that two distinct
+neighbours y, y′ of x lie in the same orbit. They have the same type, so y′ = τ 2y. Applying τ 2
+to the edges xy and xy′ shows that τ 2x is adjacent to y′ and to y. As τ 2x ̸= x, the vertices
+x, y, τ2x, y′ form a cycle of length four, which contradicts the fact that Γ has girth 12. If a
+neighbour of x lay in ¯x, it would be τ xor τ 3x, and applying powers of τ would show that
+x, τ x, τ2x, τ3x form a cycle of length four, again a contradiction. Hence every orbit of size four
+has degree 10.
+Now let x be a point of H(3), so that ¯x = {x, τ x}. Of the ten lines of H(9) through x, four
+are lines of H(3). These are fixed by τ 2 and lie in four different orbits of size two. The other six
+are permuted by the involution τ 2 without fixed points, and they lie in three orbits of size four,
+each containing one pair {L, τ2L}. The only one of these seven orbits that can equal ¯ x is the
+orbit of the line τ x, and this happens exactly when x is incident with τ x= πx, that is, when x
+is an absolute point of π. So ¯x has degree 6 if x is absolute and degree 7 otherwise. A polarity
+of H(3) has 3 3 + 1 = 28 absolute points [29], so 28 orbits have degree 6 and 336 have degree 7.
+Counting edges, (33033 · 10 + 336 · 7 + 28 · 6)/2 = 166425.
+By Lemma 3.1, F has diameter at most 5. It has more than M (10, 4) = 8201 vertices, so its
+diameter is exactly 5.
+5 Degrees 10, 11 and 12
+5.1 A 10-regular graph
+By Theorem 1.1, the 364 vertices of F of degree less than 10 lack 336 · 3 + 28 · 4 = 1120 edge
+ends in total. We found a set of 560 edges, each joining two of these vertices, none of them an
+edge of F , and meeting each such vertex v in exactly 10 − degF v edges. Adding them to F gives
+a 10-regular graph F ∗ with 33397 vertices and 5 · 33397 edges. Adding edges does not increase
+distances, so F ∗ has diameter 5.
+5.2 Twins
+A twin of a vertex v is a new vertex adjacent to exactly the neighbours of v. Twins were used
+for the degree-diameter problem by Delorme [8, 10] and by G´ omez, Fiol and Serra [14]. For
+example, the largest known graphs of degree 10 and 11 and diameter 3 arise from the polarity
+6
+
+graph of W (8) by adding one and two twins of each of its 65 absolute points [13]. We use the
+following form.
+Lemma 5.1. Let H be a connected graph with at least two vertices and diameter at most k,
+where k ≥ 3. For each vertex v choose an integer cv ≥ 0, and let H ′ be obtained from H by
+adding cv twins of each vertex v, no two new vertices being adjacent. Then H ′ has diameter at
+most k. A twin of v has degree degH v, and a vertex u of H has degree degH u + P
+v∈N (u) cv in
+H ′.
+Proof. The degrees are clear. For a vertex z of H ′ let ρ(z) be the vertex of H of which z is a
+twin, and let ρ(z) = z if z ∈ V (H). A new vertex z and a vertex u of H are adjacent if and only
+if ρ(z) and u are adjacent. Let z, z′ be distinct vertices of H ′, and put a = ρ(z) and b = ρ(z′).
+If a = b, then z and z′ are not adjacent and have the neighbours of a in common, so
+d(z, z′) = 2. If dH (a, b) = t ≥ 2, let a, a1, . . . , at−1, bbe a path in H. Its inner vertices lie
+in H, so z, a1, . . . , at−1, z′ is a path in H ′ and d(z, z′) ≤ t ≤ k. If a and b are adjacent and
+one of z, z′ lies in H, then z and z′ are adjacent. If both are new, then z, b, a, z′ is a path, so
+d(z, z′) ≤ 3 ≤ k.
+Proof of Theorem 1.2. The bound N (10, 5) ≥ 33397 follows from F or F ∗. Apply Lemma 5.1 to
+H = F ∗ with k = 5. The resulting graph has maximum degree at most d′ ∈ {11, 12} provided
+that X
+v∈N (u)
+cv ≤ d′ − 10 for every vertex u of F ∗. (5.1)
+For d′ = 11 this says that the chosen vertices have pairwise disjoint neighbourhoods. We found
+assignments satisfying (5.1) with P
+v cv = 1806 for d′ = 11 and P
+v cv = 4770 for d′ = 12. The
+resulting graphs have 33397 + 1806 = 35203 and 33397 + 4770 = 38167 vertices and diameter at
+most 5.
+Summing (5.1) over all u gives 10 P
+v cv ≤ (d′ − 10) · 33397, so this method adds at most 3339
+twins at degree 11 and at most 6679 at degree 12. At degree 13 it gives at most 33397 + 10019 =
+43416 vertices, which is less than the known lower bound for N (13, 5) [5].
+6 Other self-dual generalized polygons
+By Remark 3.3, a quotient by a duality of order at least four can compete only if the incidence
+graph is close to the bound (2.3), so we consider generalized polygons. A duality forces s = t,
+which rules out thick octagons [12].
+Table 2 lists the symplectic quadrangles W (2h) and the split Cayley hexagons H(3h) whose
+quotients have degree at most 20, together with the order of the quotient by a duality of minimal
+order. By Proposition 4.1 this minimal order is two when h is odd, and then the quotient has
+|V (Γ)|/2 vertices; when h is a power of two it is 2 h, and Corollary 4.3 gives the order of the
+quotient. For example, W (4) gives (170 + 30) /4 = 50 vertices and W (16) gives (8738 + 30 +
+170 + 30)/8 = 1121. The quotients of W (8) and H(3) are the polarity graphs of Delorme [8]
+and attain the known bounds. Only H(9) improves a known bound.
+The other known self-dual generalized quadrangles of order ( q, q) are the quadrangles T2(O)
+of Tits, where q is even and O is a translation oval of PG(2 , q) that is not a conic [23]. Up
+to projective equivalence the translation ovals of PG(2 , 2h) are the sets {(1, t, t2i
+) : t ∈ F2h} ∪
+7
+
+geometry ( d, k) 2 m quotient published
+W (2) (3 , 3) 2 15 20
+W (4) (5 , 3) 4 50 72
+W (8) (9 , 3) 2 585 585
+W (16) (17 , 3) 8 1121 1610
+H(3) (4 , 5) 2 364 364
+H(9) (10 , 5) 4 33397 14047
+Table 2: Quotients of W (2h) and H(3h) by a duality of minimal order 2 m, for incidence graphs
+of degree d = q + 1 ≤ 20. The quotient has degree at most d and diameter at most k. The last
+column is the largest published order of a graph of maximum degree at most d and diameter k
+[5, 7].
+{(0, 0, 1)} with 1 ≤ i ≤ h and gcd(i, h) = 1, and such a set is a conic only for i = 1 [23]. So for
+q ≤ 16 a translation oval that is not a conic exists only for q = 8 and q = 16. For q = 8 every
+quotient by a duality has at most |V (Γ)|/2 = 585 vertices by Lemma 3.2, and 585 is the known
+bound at degree 9 and diameter 3. For q = 16 we have not determined the dualities of T2(O)
+theoretically. In a computer search, all 9916 dualities we found by random sampling had order
+8, 16 or 32, and the quotient by one of order eight has 1121 vertices, below the known bound
+1610 at degree 17 and diameter 3. The known self-dual generalized hexagons of order ( q, q) are
+the H(q) with q a power of 3 [29].
+Finally, for a projective plane of order q, Lemma 3.2 bounds the quotient by any duality by
+q2 + q + 1 vertices, the order of a polarity graph. For every prime power q ≤ 19 this does not
+exceed the known lower bound for N (q + 1, 2) [5, 7].
+7 Computations and data
+We constructed Γ from the coordinates of Section 2.3 and checked that it is 10-regular and
+bipartite on 132860 vertices, and that breadth-first search from sampled vertices gives layers
+of sizes 1 , 10, 90, 810, 7290, 65610, 59049, as in a generalized hexagon of order (9 , 9). To find a
+duality we used the quotient Γ /⟨φ⟩, with its vertices coloured by orbit size. Its automorphism
+group, computed with nauty [20], has order 8491392 = 2 |G2(3)| and contains an element of
+order two that interchanges the two types of vertices. This element lifts to a duality τ of Γ
+with τ 2 = φ, and Γ /⟨τ ⟩ has the vertex count and degrees given in Theorem 1.1. As a check
+on Theorem 4.2, we formed dualities gτ with g a random product of collineations; each had
+order divisible by four, and each one of order four gave a quotient with the same vertex count
+and degrees. The completion F ∗ was found by a randomized greedy procedure, and the twin
+assignments by a greedy procedure followed by local exchanges.
+Every graph in Table 1 was checked by breadth-first search from every vertex, which confirms
+the maximum degree and that every eccentricity is exactly 5. These graphs are not vertex-
+transitive, so a search from a single vertex would not suffice.
+Data availability
+The accompanying dataset is deposited at Zenodo, doi:10.5281/zenodo.22907863. It contains
+the edge lists of F , F ∗ and the two graphs with twins, each with its SHA-256 hash; the duality τ
+8
+
+as a permutation of the 132860 vertices of Γ; a standalone verification script in Python that uses
+only the standard library; and an independent all-sources breadth-first search in C. The script
+rebuilds Γ from the coordinates, checks that τ is a duality of order four with |Fix(τ 2)| = 728,
+reconstructs F edge by edge, checks that F ∗ contains F and that the other two graphs consist
+of F ∗ and twins of its vertices, and runs breadth-first search from a sample of vertices, or from
+every vertex on request.
+Acknowledgements
+The search and analysis behind this paper were carried out with substantial assistance from
+Anthropic’s Claude Fable 5.1 and Opus 5 (AI models), which generated hypotheses, wrote
+the search and analysis software as autonomous coding agents, and guided the allocation of
+computing resources. Every graph claimed here is verified by the self-contained scripts in the
+dataset, independently of that software.
+References
+[1] E. Bannai and T. Ito, On finite Moore graphs , J. Fac. Sci. Univ. Tokyo Sect. IA Math. 20
+(1973), 191–208.
+[2] A. E. Brouwer, P. J. Cameron, W. H. Haemers and D. A. Preece, Self-dual, not self-polar ,
+Discrete Math. 306 (2006), 3051–3053.
+[3] W. G. Brown, On graphs that do not contain a Thomsen graph , Canad. Math. Bull. 9
+(1966), 281–285.
+[4] R. W. Carter, Simple Groups of Lie Type , Pure and Applied Mathematics 28, Wiley,
+London, 1972.
+[5] F. Comellas, Table of large graphs with given degree and diameter , arXiv:2406.18994;
+web table at https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_
+diameter.html, accessed 22 September 2026.
+[6] R. M. Damerell, On Moore graphs, Proc. Cambridge Philos. Soc. 74 (1973), 227–236.
+[7] The degree diameter problem for general graphs , Combinatorics Wiki,
+http://combinatoricswiki.org/wiki/
+The_Degree_Diameter_Problem_for_General_Graphs, accessed 22 September 2026.
+[8] C. Delorme, Grands graphes de degr´ e et diam` etre donn´ es, European J. Combin. 6 (1985),
+291–302.
+[9] C. Delorme, Large bipartite graphs with given degree and diameter , J. Graph Theory 9
+(1985), 325–334.
+[10] C. Delorme and G. Farhi, Large graphs with given degree and diameter. Part I, IEEE Trans.
+Comput. C-33 (1984), 857–860.
+[11] P. Erd˝ os and A. R´ enyi,On a problem in the theory of graphs (in Hungarian), Magyar Tud.
+Akad. Mat. Kutat´ o Int. K¨ ozl.7 (1962), 623–641.
+9
+
+[12] W. Feit and G. Higman, The nonexistence of certain generalized polygons , J. Algebra 1
+(1964), 114–131.
+[13] J. G´ omez,Some new large (∆, 3)-graphs, Networks 53 (2009), 1–5.
+[14] J. G´ omez, M. A. Fiol and O. Serra, On large (∆, D)-graphs, Discrete Math. 114 (1993),
+219–235.
+[15] A. J. Hoffman and R. R. Singleton, On Moore graphs with diameters 2 and 3, IBM J. Res.
+Develop. 4 (1960), 497–504.
+[16] K. Isham, K. Lakhotia, L. Monroe and F. Petrini, Kronecker products, polarity quotients
+and large graph constructions , arXiv:2608.27253, 2026.
+[17] W. M. Kantor, Generalized polygons, SCABs and GABs, in: Buildings and the Geometry of
+Diagrams (Como, 1984), Lecture Notes in Math. 1181, Springer, Berlin, 1986, pp. 79–158.
+[18] K. Lakhotia, M. Besta, L. Monroe, K. Isham, P. Iff, T. Hoefler and F. Petrini, PolarFly:
+a cost-effective and flexible low-diameter topology , in: SC22: International Conference for
+High Performance Computing, Networking, Storage and Analysis, IEEE, 2022, pp. 1–15.
+[19] S. Lang, Algebraic groups over finite fields , Amer. J. Math. 78 (1956), 555–563.
+[20] B. D. McKay and A. Piperno, Practical graph isomorphism, II , J. Symbolic Comput. 60
+(2014), 94–112.
+[21] M. Miller and J. ˇSir´ aˇ n,Moore graphs and beyond: a survey of the degree/diameter problem ,
+Electron. J. Combin. 20(2) (2013), Dynamic Survey DS14v2.
+[22] R. Mizuno, New lower bounds for the degree/diameter problem via interaction with a
+browser-accessible LLM, arXiv:2606.15860, 2026.
+[23] S. E. Payne and J. A. Thas, Finite Generalized Quadrangles, 2nd ed., EMS Series of Lectures
+in Mathematics, European Mathematical Society, Z¨ urich, 2009.
+[24] R. Rajiv, Improved lower bounds for the degree-diameter problem from metacyclic groups,
+coset graphs and affine lifts , version 1, Zenodo, 2026, doi:10.5281/zenodo.22073603.
+[25] R. Singleton, On minimal graphs of maximum even girth , J. Combin. Theory 1 (1966),
+306–332.
+[26] R. Steinberg, Endomorphisms of Linear Algebraic Groups , Mem. Amer. Math. Soc. 80,
+American Mathematical Society, Providence, RI, 1968.
+[27] J. Tits, Sur la trialit´ e et certains groupes qui s’en d´ eduisent, Publ. Math. Inst. Hautes
+´Etudes Sci. 2 (1959), 13–60.
+[28] J. Tits, Les groupes simples de Suzuki et de Ree, S´ eminaire Bourbaki13 (1960/61), Exp. 210.
+[29] H. Van Maldeghem, Generalized Polygons, Monographs in Mathematics 93, Birkh¨ auser,
+Basel, 1998.
+10

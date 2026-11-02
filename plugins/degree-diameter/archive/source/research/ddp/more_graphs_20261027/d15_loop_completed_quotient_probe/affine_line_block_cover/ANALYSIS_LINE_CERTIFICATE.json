@@ -1,0 +1,57 @@
+{
+  "status": "VALID_SUFFICIENT_AFFINE_LINE_FULL_BLOCK_CERTIFICATE",
+  "free_space_dimension": 3,
+  "field_order": 3,
+  "directions_per_controller": 13,
+  "affine_lines_per_direction": 9,
+  "affine_lines_per_controller": 117,
+  "raw_line_counts": [
+    2808,
+    3510
+  ],
+  "line_cost_upper_bound": 3,
+  "selected_lines_max": 5,
+  "expanded_distinct_pins_max": 15,
+  "overlapping_pins_get_multiple_spokes": false,
+  "blockmask_membership": "Entiretargetfibercontainedinactualcachedballunionofthreelinepins",
+  "blockmask_cover_all_controllers_implies_full_oldtarget_cover": true,
+  "identical_blockmask_first_witness_dedup_sound": true,
+  "full_R_ball_unions_of_identical_blockmasks_claimed_equal": false,
+  "nonzero_offset_can_break_inversion": true,
+  "single_word_full_rank_can_detect_offset_advantage": false,
+  "multiword_proper_affine_cosets_can_detect_offset_advantage": true,
+  "failure_scope": "Onlyatmost5linecertificateswhereeachcontrollerisfullcoveredbyoneindividualselectedline",
+  "multi_line_joint_completion_of_a_fiber_excluded_by_failure": false,
+  "general_full_free_neighbor_domain_excluded_by_failure": false,
+  "SAT_acceptance": "Expandsavedliteralwitnesses;distinctfreepins<=15;completeoriginalncacheOR",
+  "this_review_masks": 0,
+  "this_review_solver_calls": 0,
+  "this_review_BFS": 0,
+  "this_review_balls": 0,
+  "this_review_graphs": 0,
+  "producer_outcome_claimed_here": false,
+  "inherited_actual_results": [
+    {
+      "source": "source15552",
+      "raw_line_count": 2808,
+      "positive_unique_masks": 312,
+      "CNF_variables": 1872,
+      "CNF_clauses": 3614,
+      "status": "RAW_UNSAT_FOR_LINE_BLOCK_CERTIFICATE",
+      "solver_returncode": 20,
+      "solver_CPU_seconds": 0.5527359999999999
+    },
+    {
+      "source": "source102060",
+      "raw_line_count": 3510,
+      "positive_unique_masks": 390,
+      "CNF_variables": 2340,
+      "CNF_clauses": 4700,
+      "status": "RAW_UNSAT_FOR_LINE_BLOCK_CERTIFICATE",
+      "solver_returncode": 20,
+      "solver_CPU_seconds": 0.22383200000000003
+    }
+  ],
+  "inherited_aggregate_CPU_seconds": 3.8565048600000003,
+  "UNSAT_proof_independently_checked": false
+}

@@ -1,0 +1,532 @@
+{
+  "evidence": "RAW_UNSAT_NEW; LATEST_CONDITIONAL; no proof certificate",
+  "closed_formula": "F_H5_r2 AND |S_9 intersection S_10| >= 1",
+  "retained_formula": "F_H5_r2 AND |S_9 intersection S_10| = 0",
+  "root": 0,
+  "first_layer": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "exceptional_vertices": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "root_B_weights": [
+    2,
+    2,
+    1,
+    1
+  ],
+  "parent_set_sizes": [
+    3,
+    3,
+    2,
+    2
+  ],
+  "fixed_exceptional_edges": [
+    [
+      9,
+      10
+    ],
+    [
+      11,
+      12
+    ]
+  ],
+  "definition": "S_x = N_G(x) intersection N_G(0); parent overlap, not ordinary overlap",
+  "predicate_mapping": {
+    "definition": {
+      "kind": "parent_overlap_ge",
+      "level": 1,
+      "u": 9,
+      "v": 10
+    },
+    "exact": true,
+    "literal": 1330233,
+    "name": "parent_overlap_9_10_ge1",
+    "priority": 3
+  },
+  "unsat_task": {
+    "attempts": [
+      {
+        "base_map": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/templates/manual12r2_m0_2-2-1-1_q5/base.map.json",
+        "build_seconds": 0.444,
+        "clauses": 7150029,
+        "command": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+          "/tmp/n59-v6-91ck5p6n/instance.cnf"
+        ],
+        "constraint_sets": [
+          "M1-TRIANGLE-GUARD",
+          "M1-SUPPORT-INHERITED",
+          "M0-TRANSPORT-A1-A2",
+          "R2-S7-K4-T1-NO-B4",
+          "R2-S7-K4-ZERO-NO-42",
+          "R2-N1-SHAPE",
+          "R2-N5-H5-TLE2",
+          "R2-N14-ROOT-MATCHING",
+          "R2-N15-ALL-ZERO-MATCHING"
+        ],
+        "cube_units": [
+          1330233
+        ],
+        "finished_utc": "2026-09-28T16:45:12Z",
+        "number": 1,
+        "proof_requested": false,
+        "solver": {
+          "cpu_seconds_sampled": 3058.72,
+          "peak_rss_mb": 694.6,
+          "reason": null,
+          "return_code": 20,
+          "seconds": 3067.852
+        },
+        "solver_log": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/tasks/manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_yes/attempt-001.solver.log",
+        "solver_timeout_seconds": 14400,
+        "started_utc": "2026-09-28T15:54:03Z",
+        "state": "RAW_UNSAT_NEW",
+        "variables": 1639304,
+        "wall_seconds": 3068.298
+      }
+    ],
+    "base_case": {
+      "K": 4,
+      "admissible_q2": [
+        5
+      ],
+      "case_id": "manual12r2_m0_2-2-1-1_q5",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case": {
+      "K": 4,
+      "admissible_q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "case_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_yes",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_yes",
+    "children": [],
+    "coverage": [
+      "N59R38:m0_K4_2-2-1-1:Q5"
+    ],
+    "cube_units": [
+      1330233
+    ],
+    "depth": 1,
+    "evidence_mode": "LATEST_CONDITIONAL",
+    "exact_q2": 5,
+    "finished_utc": "2026-09-28T16:45:12Z",
+    "group": "m0",
+    "index": 53,
+    "parent_task_id": "manual12_m0_2-2-1-1_q5",
+    "priority": "P0",
+    "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+    "route": "ROOTED_V5_PLUS_V6_PATCH",
+    "semantic_predicates": [
+      {
+        "definition": {
+          "kind": "parent_overlap_ge",
+          "level": 1,
+          "u": 9,
+          "v": 10
+        },
+        "literal": 1330233,
+        "name": "parent_overlap_9_10_ge1",
+        "value": true
+      }
+    ],
+    "service_group": "m0_2-2-1-1",
+    "source_task_id": "v5_m0_2-2-1-1_q5",
+    "source_task_ids": [
+      "v5_m0_2-2-1-1_q5"
+    ],
+    "source_v6_task_id": "v6_m0_2-2-1-1_q5",
+    "split_rule": null,
+    "state": "RAW_UNSAT_NEW",
+    "task_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_yes",
+    "template_id": "manual12r2_m0_2-2-1-1_q5",
+    "timeout_seconds": 14400
+  },
+  "open_complement": {
+    "attempts": [
+      {
+        "base_map": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/templates/manual12r2_m0_2-2-1-1_q5/base.map.json",
+        "build_seconds": 0.428,
+        "clauses": 7150029,
+        "command": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+          "/tmp/n59-v6-ea0l9904/instance.cnf"
+        ],
+        "constraint_sets": [
+          "M1-TRIANGLE-GUARD",
+          "M1-SUPPORT-INHERITED",
+          "M0-TRANSPORT-A1-A2",
+          "R2-S7-K4-T1-NO-B4",
+          "R2-S7-K4-ZERO-NO-42",
+          "R2-N1-SHAPE",
+          "R2-N5-H5-TLE2",
+          "R2-N14-ROOT-MATCHING",
+          "R2-N15-ALL-ZERO-MATCHING"
+        ],
+        "cube_units": [
+          -1330233
+        ],
+        "finished_utc": "2026-09-28T19:54:04Z",
+        "number": 1,
+        "proof_requested": false,
+        "reason": "task_timeout",
+        "solver": {
+          "cpu_seconds_sampled": 14358.68,
+          "peak_rss_mb": 692.9,
+          "reason": "task_timeout",
+          "return_code": -2,
+          "seconds": 14400.206
+        },
+        "solver_log": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/tasks/manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_no/attempt-001.solver.log",
+        "solver_timeout_seconds": 14400,
+        "started_utc": "2026-09-28T15:54:03Z",
+        "state": "TIMEOUT",
+        "variables": 1639304,
+        "wall_seconds": 14400.636
+      }
+    ],
+    "base_case": {
+      "K": 4,
+      "admissible_q2": [
+        5
+      ],
+      "case_id": "manual12r2_m0_2-2-1-1_q5",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case": {
+      "K": 4,
+      "admissible_q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "case_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_no",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_no",
+    "children": [],
+    "coverage": [
+      "N59R38:m0_K4_2-2-1-1:Q5"
+    ],
+    "cube_units": [
+      -1330233
+    ],
+    "depth": 1,
+    "evidence_mode": "LATEST_CONDITIONAL",
+    "exact_q2": 5,
+    "finished_utc": "2026-09-28T19:54:04Z",
+    "group": "m0",
+    "index": 54,
+    "parent_task_id": "manual12_m0_2-2-1-1_q5",
+    "priority": "P0",
+    "reason": "task_timeout",
+    "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+    "route": "ROOTED_V5_PLUS_V6_PATCH",
+    "semantic_predicates": [
+      {
+        "definition": {
+          "kind": "parent_overlap_ge",
+          "level": 1,
+          "u": 9,
+          "v": 10
+        },
+        "literal": 1330233,
+        "name": "parent_overlap_9_10_ge1",
+        "value": false
+      }
+    ],
+    "service_group": "m0_2-2-1-1",
+    "source_task_id": "v5_m0_2-2-1-1_q5",
+    "source_task_ids": [
+      "v5_m0_2-2-1-1_q5"
+    ],
+    "source_v6_task_id": "v6_m0_2-2-1-1_q5",
+    "split_rule": null,
+    "state": "TIMEOUT",
+    "task_id": "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_no",
+    "template_id": "manual12r2_m0_2-2-1-1_q5",
+    "timeout_seconds": 14400
+  },
+  "parent": {
+    "attempts": [
+      {
+        "base_map": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/templates/manual12r2_m0_2-2-1-1_q5/base.map.json",
+        "build_seconds": 67.075,
+        "clauses": 7150028,
+        "command": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+          "/tmp/n59-v6-c5m12j7e/instance.cnf"
+        ],
+        "constraint_sets": [
+          "M1-TRIANGLE-GUARD",
+          "M1-SUPPORT-INHERITED",
+          "M0-TRANSPORT-A1-A2",
+          "R2-S7-K4-T1-NO-B4",
+          "R2-S7-K4-ZERO-NO-42",
+          "R2-N1-SHAPE",
+          "R2-N5-H5-TLE2",
+          "R2-N14-ROOT-MATCHING",
+          "R2-N15-ALL-ZERO-MATCHING"
+        ],
+        "cube_units": [],
+        "finished_utc": "2026-09-28T15:54:03Z",
+        "number": 1,
+        "proof_requested": false,
+        "reason": "task_timeout",
+        "solver": {
+          "cpu_seconds_sampled": 10799.48,
+          "peak_rss_mb": 695.4,
+          "reason": "task_timeout",
+          "return_code": -2,
+          "seconds": 10800.288
+        },
+        "solver_log": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/tasks/manual12_m0_2-2-1-1_q5/attempt-001.solver.log",
+        "solver_timeout_seconds": 10800,
+        "started_utc": "2026-09-28T12:52:56Z",
+        "state": "TIMEOUT",
+        "variables": 1639304,
+        "wall_seconds": 10867.365
+      }
+    ],
+    "base_case": {
+      "K": 4,
+      "admissible_q2": [
+        5
+      ],
+      "case_id": "manual12r2_m0_2-2-1-1_q5",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case": {
+      "K": 4,
+      "admissible_q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "case_id": "manual12_m0_2-2-1-1_q5",
+      "constraint_sets": [
+        "M1-TRIANGLE-GUARD",
+        "M1-SUPPORT-INHERITED",
+        "M0-TRANSPORT-A1-A2",
+        "R2-S7-K4-T1-NO-B4",
+        "R2-S7-K4-ZERO-NO-42",
+        "R2-N1-SHAPE",
+        "R2-N5-H5-TLE2",
+        "R2-N14-ROOT-MATCHING",
+        "R2-N15-ALL-ZERO-MATCHING"
+      ],
+      "evidence_mode": "LATEST_CONDITIONAL",
+      "exact_q2": 5,
+      "labeling_mode": "rooted_v5",
+      "m": 0,
+      "manual_revision": "r2_20260928",
+      "partition_id": "m0_2-2-1-1",
+      "representative_mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+      "representative_rule_ids": [],
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "row_profiles": false,
+      "selected_root_not_all_roots": true
+    },
+    "case_id": "manual12_m0_2-2-1-1_q5",
+    "children": [
+      "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_yes",
+      "manual12_m0_2-2-1-1_q5__d1_parent_overlap_9_10_ge1_no"
+    ],
+    "coverage": [
+      "N59R38:m0_K4_2-2-1-1:Q5"
+    ],
+    "cube_units": [],
+    "depth": 0,
+    "evidence_mode": "LATEST_CONDITIONAL",
+    "exact_q2": 5,
+    "finished_utc": "2026-09-28T15:54:03Z",
+    "group": "m0",
+    "index": 10,
+    "parent_task_id": null,
+    "priority": "P0",
+    "reason": "task_timeout",
+    "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+    "route": "ROOTED_V5_PLUS_V6_PATCH",
+    "semantic_predicates": [],
+    "service_group": "m0_2-2-1-1",
+    "source_task_id": "v5_m0_2-2-1-1_q5",
+    "source_task_ids": [
+      "v5_m0_2-2-1-1_q5"
+    ],
+    "source_v6_task_id": "v6_m0_2-2-1-1_q5",
+    "split_rule": {
+      "definition": {
+        "kind": "parent_overlap_ge",
+        "level": 1,
+        "u": 9,
+        "v": 10
+      },
+      "family": "parent_overlap_ge",
+      "kind": "literal_complement",
+      "literal": 1330233,
+      "maximum": null,
+      "minimum": null,
+      "predicate": "parent_overlap_9_10_ge1",
+      "semantic_kind": "boolean",
+      "threshold": null
+    },
+    "state": "SPLIT_OPEN",
+    "task_id": "manual12_m0_2-2-1-1_q5",
+    "template_id": "manual12r2_m0_2-2-1-1_q5"
+  },
+  "representative_cover": {
+    "H5_owner": "manual12_m0_2-2-1-1_q5",
+    "low_Q_complements": [
+      "N59R38:m0_K4_3-1-1-1:Q0",
+      "N59R38:m0_K4_3-1-1-1:Q1",
+      "N59R38:m0_K4_3-1-1-1:Q2",
+      "N59R38:m0_K4_3-1-1-1:Q3",
+      "N59R38:m0_K4_3-1-1-1:Q4",
+      "N59R38:m0_K4_2-2-1-1:Q0",
+      "N59R38:m0_K4_2-2-1-1:Q1",
+      "N59R38:m0_K4_2-2-1-1:Q2",
+      "N59R38:m0_K4_2-2-1-1:Q3",
+      "N59R38:m0_K4_2-2-1-1:Q4"
+    ],
+    "mode": "H5_WITH_ALL_TEN_LOW_Q_COMPLEMENTS",
+    "q5_raw_closes": "N15-strengthened representative input, not all old Q5 rooted instances",
+    "same_Q_2211_tiebreak": false,
+    "semantics": "If any legal K4 zero root has Q<=4, a low-Q entry retains the graph; otherwise H5 and N15 hold. H5 is NOT inferred from root Q=5."
+  },
+  "not_claimed": [
+    "the parent representative is closed",
+    "all Q5 roots are excluded",
+    "a checked graph-theoretic theorem",
+    "a new 59-vertex graph",
+    "global N59 UNSAT"
+  ]
+}

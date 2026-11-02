@@ -1,0 +1,108 @@
+{
+  "scope": "Two explicit a5 seeds for adjacent and cross-edge deletion geometries; one exact capacity flow each; no SAT or optimization runs.",
+  "target_parent_cpu_seconds": 5,
+  "parent_cpu_seconds": 0.015496756,
+  "independent_BFS_cpu_seconds": 0.060621,
+  "wall_seconds": 0.18594404309988022,
+  "pinned_cpu": 0,
+  "results": [
+    {
+      "name": "adjacent",
+      "seed": "adjacent.seed.json",
+      "graph_check": {
+        "n": 58,
+        "edges": 232,
+        "max_degree": 8,
+        "bad_pair_count": 94,
+        "diameter": 3,
+        "valid_target": false
+      },
+      "bad_pair_categories": {
+        "old_old": 5,
+        "old_new": 89
+      },
+      "endpoint_cross_edges": [],
+      "unavoidable_old_pairs_with_zero_endpoint": [
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          35
+        ],
+        [
+          1,
+          40
+        ],
+        [
+          4,
+          45
+        ]
+      ],
+      "exact_singleton_flow_cost": 0,
+      "remaining_old_bad_pairs": [
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          35
+        ],
+        [
+          1,
+          40
+        ],
+        [
+          4,
+          45
+        ]
+      ],
+      "parent_cpu_seconds": 0.0068496110000000054,
+      "independent_BFS_cpu_seconds": 0.031252999999999996,
+      "wall_seconds": 0.09030278399586678
+    },
+    {
+      "name": "cross",
+      "seed": "cross.seed.json",
+      "graph_check": {
+        "n": 58,
+        "edges": 232,
+        "max_degree": 8,
+        "bad_pair_count": 72,
+        "diameter": 3,
+        "valid_target": false
+      },
+      "bad_pair_categories": {
+        "old_old": 1,
+        "old_new": 71
+      },
+      "endpoint_cross_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "unavoidable_old_pairs_with_zero_endpoint": [],
+      "exact_singleton_flow_cost": 1,
+      "remaining_old_bad_pairs": [
+        [
+          1,
+          40
+        ]
+      ],
+      "parent_cpu_seconds": 0.004522600999999987,
+      "independent_BFS_cpu_seconds": 0.029368000000000002,
+      "wall_seconds": 0.08211290091276169
+    }
+  ]
+}

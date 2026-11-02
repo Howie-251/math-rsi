@@ -1,0 +1,12 @@
+{
+  "recorded_before_candidate_scan": true,
+  "target": {"Delta": 3, "D": 7, "baseline_n": 200, "hypothetical_n": 201},
+  "source": "source200.edges",
+  "source_provenance": "f4t4nt/degree-diameter-graphs graphs/deg3/dia7",
+  "scope": "All 200 old vertices and their three singleton-neighbor choices: 600 labelled 1+2 adjacent vertex splits, equivalent to subdividing each of the 300 source edges with two labellings.",
+  "prediction": "At least one of the 600 labelled splits retains diameter at most 7.",
+  "intuition": "The source connects five subdivided Wagner blocks through four 20-cycles. A split at a connector can separate its cycle routes from its block route. The degree-two root has radius-seven nonbacktracking capacity 255, above 201; whether these two route families retain complementary coverage is the actual test.",
+  "D6_screen": {"source_n": 132, "new_n": 133, "degree_two_root_capacity": 127, "conclusion": "The same cubic split cannot yield diameter six on 133 vertices, independent of source."},
+  "complete_check": "For each split at v, BFS the new root and every old root in the source closed radius-three ball of v. Any original path of length at most seven between two roots outside that ball avoids v and is retained.",
+  "stop": "First complete hit, or all 600 cases, or 30 CPU seconds. No extra edge changes or bad-pair repair."
+}

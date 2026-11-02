@@ -1,0 +1,87 @@
+{
+  "status": "EXHAUSTIVE_FIXED_RULE_NO72",
+  "complete": true,
+  "hit": false,
+  "matchings": 166390,
+  "configurations": 1663900,
+  "first_failure_counts": {
+    "helper70_old_R5": 1663872,
+    "helper_pair_R5": 28,
+    "helper71_old_R5": 0,
+    "old_old_R5": 0
+  },
+  "both_helpers_all_old_and_each_other_PASS": 0,
+  "original_source_R4_diagnostic": {
+    "both_triples_cover": 23072,
+    "one_triple_covers": 120232,
+    "neither_covers": 1520596,
+    "ball_sizes": {
+      "46": 70
+    }
+  },
+  "first_old_failure": {
+    "pair": [
+      -1,
+      -1
+    ],
+    "cut_edge_ids": [],
+    "pins70": [],
+    "pins71": []
+  },
+  "hit_cut_edge_ids": [],
+  "hit_pins70": [],
+  "hit_pins71": [],
+  "gate_CPU_seconds": 0.442047,
+  "date": "2026-11-01",
+  "source": "research/ddp/more_graphs_20261027/cubic_D6_twofold70/source70.edges",
+  "source_acceptance": "inherited published cubic70/D5; no source-validity or D5 BFS repeated",
+  "rule": "delete3 vertex-disjoint old edges; add2 nonadjacent helpers; split6pins3+3",
+  "partition_symmetry": "minimum endpoint assigned helper70; ten partitions per matching",
+  "new_graphs": 0,
+  "new_Lean_instances": 0,
+  "old_R4_union_is_diagnostic_not_necessary_filter": true,
+  "source_radius4_new_mechanism_only": true,
+  "attempts": [
+    {
+      "name": "compile",
+      "pid": 131986,
+      "exit_code": 0,
+      "CPU_seconds": 1.38091
+    },
+    {
+      "name": "gate",
+      "pid": 134005,
+      "exit_code": 0,
+      "CPU_seconds": 0.442339
+    }
+  ],
+  "CPU_seconds_measured_runner_and_children": 1.8639560000000002,
+  "CPU_seconds_budget": 20,
+  "preparation_note": "Earlier brief PRED/code preparation and read-only reports were not individually metered; one CPU second reserved from the numerical run budget for those operations and final receipts.",
+  "old_scope_not_found": true,
+  "old_scope_readonly_evidence": [
+    "research/ddp/more_graphs_20261027/cubic_D6_twofold70/REPORT.md",
+    "research/ddp/more_graphs_20261027/cubic_D7_threefold70/REPORT.md",
+    "research/ddp/two_successful_methods_20261101/f4_c72_nucleus_C4/controller70_pair_surgery/REPORT.md"
+  ],
+  "exact_check_scope": {
+    "new_helper70_radius5_checks": 1663900,
+    "new_helper71_radius5_checks": 0,
+    "old_old_radius5_checks": 0,
+    "full72root_batches": 0,
+    "source_radius4_diagnostic_roots": 70,
+    "source_validity_or_source_D5_BFS_roots": 0
+  },
+  "interpretation": "Every configuration already fails helper70-to-old or helper70-to-helper71 distance<=5. No conclusion relies on unexecuted old-old checks.",
+  "remaining28_helper_pair_distance": 6,
+  "exclusion_scope": "This one fixed literal AFY70 source, exactly three disjoint old edge deletions, two nonadjacent new helpers, endpoint3+3 stars, no other changes.",
+  "not_excluded": [
+    "different70 sources",
+    "adjacent new helpers",
+    "nonmatching deletions",
+    "additional old-old rewirings",
+    "general cubic72/D5 graphs"
+  ],
+  "route_prediction_correction": "A helper can reach old targets via the other helper in at most5 steps, so old-host radius4 triple coverage is not used as a necessary filter.",
+  "stop": true
+}

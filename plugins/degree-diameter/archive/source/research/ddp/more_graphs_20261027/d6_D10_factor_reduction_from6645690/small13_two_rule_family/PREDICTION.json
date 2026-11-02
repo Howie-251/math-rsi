@@ -1,0 +1,76 @@
+{
+  "timestamp_UTC": "2026-10-28T04:15:35.442872+00:00",
+  "status": "FROZEN_BEFORE_ANY_TARGET_GRAPH_OR_BFS",
+  "source": "Actual old6641680 primary; not current6645690. Existing CORE_INPUT and both complete core gates inherited without repetition.",
+  "target_n": 1415440,
+  "law": "LEFT: (z,t,j)*(w,s,k)=(z+317^j*w mod1361,t+a^j*s mod13,j+k mod80)",
+  "core_positive_normal_phase": [
+    [
+      824,
+      38
+    ],
+    [
+      625,
+      3
+    ],
+    [
+      1089,
+      58
+    ]
+  ],
+  "kept_h_core_normal_phase": [
+    1109,
+    40
+  ],
+  "kept_h_small_normal": 0,
+  "source_core_order": 108880,
+  "source_core_gate_minima": {
+    "degree6_D10_remove_h": 67,
+    "degree7_D9_keep_h": 81
+  },
+  "targets": [
+    {
+      "degree": 6,
+      "D": 10,
+      "saved_public_lower_bound": 1394189,
+      "rule": "omit_h",
+      "target_m": 4246320
+    },
+    {
+      "degree": 7,
+      "D": 9,
+      "saved_public_lower_bound": 1332774,
+      "rule": "keep_h",
+      "target_m": 4954040
+    }
+  ],
+  "prediction": "At least one complete normalized small-coordinate setting on one rule covers all1415440 target states within its assigned radius.",
+  "basis": "Both unchanged core rules cover all108880 endpoints with raw multiplicity well above13. Kernel action is allowed to change to every legalF13 actor, rather than imposing oldF61 actororder20. This necessary signal is not a full target coverage certificate.",
+  "complete_scope": {
+    "actors": [
+      5,
+      8,
+      12,
+      1
+    ],
+    "nontrivial_P1_per_actor": 14,
+    "trivial_P2_classes": 183,
+    "parameters_per_rule": 225,
+    "target_objects_max": 450,
+    "ordering": "actors5,8,12 first; eachP1 lex(0,1),(1,t). Then actor1/P2 lex. For each parameter alternate degree6D10 then degree7D9."
+  },
+  "normalization": "Saved ANALYSIS_GATE_METHOD: small translation kills first nonfixed phase component, F13* scaling fixes first remaining nonzero normal to1. Allzero excluded by disconnected kernel. No phase/core/actor isomorphism quotient beyond this proof.",
+  "trueinverse": "(-317^(-j)*z mod1361,-a^(-j)*t mod13,-j mod80); inverse labels[3,4,5,0,1,2,6].",
+  "connected_simple": "Saved onto-core gate plus nonzero normalized kernel proof gives connectedness. Distinctnonzero phases give simple intendeddegree.",
+  "verification": "One complete implicit identity R_D BFS per actual setting; Cayley transitivity makes fulltargetR_D sufficient for allroots. Radius failure records exact endpoint deficit and firstmissing state; negativeglobalD and ordinarybadpairs null. No oldsource/coreBFS or wordlist.",
+  "hit": "First fulltargetR_D saves complete rootdistancebytes,HIT params,generator and stops all remaining objects.",
+  "budget": {
+    "aggregate_CPU_seconds": 120,
+    "workers": 1,
+    "target_objects_per_rule_max": 225,
+    "source_BFS": 0,
+    "core_BFS": 0,
+    "additionalfields_or_seeds": 0
+  },
+  "stop": "Firsthit,full450 completion or exact budget cutoff with untestedcursor. No automatic otherfield/action/normal/phase continuation."
+}

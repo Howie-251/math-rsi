@@ -1,0 +1,270 @@
+{
+  "status": "EXPLICIT_CROSS_FIBER_DEGREE_CONTRADICTION",
+  "premise": "The complete 30240-copy scan gives exactly one Petersen graph in the actual fiber-3 allowed graph.",
+  "domain_sizes": [
+    4,
+    4,
+    121,
+    1,
+    3,
+    2
+  ],
+  "unique_P3_edges": [
+    [
+      30,
+      35
+    ],
+    [
+      30,
+      37
+    ],
+    [
+      30,
+      39
+    ],
+    [
+      31,
+      34
+    ],
+    [
+      31,
+      37
+    ],
+    [
+      31,
+      38
+    ],
+    [
+      32,
+      35
+    ],
+    [
+      32,
+      36
+    ],
+    [
+      32,
+      38
+    ],
+    [
+      33,
+      34
+    ],
+    [
+      33,
+      36
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      34,
+      35
+    ],
+    [
+      36,
+      37
+    ],
+    [
+      38,
+      39
+    ]
+  ],
+  "clauses": [
+    {
+      "pair": [
+        1,
+        38
+      ],
+      "clause_id": 14332,
+      "required_internal_edge": [
+        0,
+        1
+      ],
+      "alternative_internal_edge_absent_from_unique_P3": [
+        33,
+        38
+      ],
+      "fixed_external_paths": [
+        [
+          1,
+          33
+        ],
+        [
+          1,
+          15,
+          35
+        ],
+        [
+          1,
+          29,
+          31
+        ],
+        [
+          1,
+          44,
+          35
+        ],
+        [
+          1,
+          52,
+          32
+        ]
+      ],
+      "variables": [
+        1,
+        164
+      ]
+    },
+    {
+      "pair": [
+        1,
+        30
+      ],
+      "clause_id": 14328,
+      "required_internal_edge": [
+        1,
+        4
+      ],
+      "alternative_internal_edge_absent_from_unique_P3": [
+        30,
+        33
+      ],
+      "fixed_external_paths": [
+        [
+          1,
+          33
+        ],
+        [
+          1,
+          15,
+          35
+        ],
+        [
+          1,
+          29,
+          31
+        ],
+        [
+          1,
+          44,
+          35
+        ],
+        [
+          1,
+          52,
+          32
+        ]
+      ],
+      "variables": [
+        12,
+        138
+      ]
+    },
+    {
+      "pair": [
+        1,
+        37
+      ],
+      "clause_id": 14331,
+      "required_internal_edge": [
+        1,
+        5
+      ],
+      "alternative_internal_edge_absent_from_unique_P3": [
+        33,
+        37
+      ],
+      "fixed_external_paths": [
+        [
+          1,
+          33
+        ],
+        [
+          1,
+          15,
+          35
+        ],
+        [
+          1,
+          29,
+          31
+        ],
+        [
+          1,
+          44,
+          35
+        ],
+        [
+          1,
+          52,
+          32
+        ]
+      ],
+      "variables": [
+        13,
+        163
+      ]
+    },
+    {
+      "pair": [
+        9,
+        33
+      ],
+      "clause_id": 14369,
+      "required_internal_edge": [
+        1,
+        9
+      ],
+      "alternative_internal_edge_absent_from_unique_P3": [
+        32,
+        33
+      ],
+      "fixed_external_paths": [
+        [
+          9,
+          32
+        ],
+        [
+          9,
+          11,
+          30
+        ],
+        [
+          9,
+          22,
+          39
+        ],
+        [
+          9,
+          40,
+          31
+        ],
+        [
+          9,
+          57,
+          34
+        ]
+      ],
+      "variables": [
+        17,
+        153
+      ]
+    }
+  ],
+  "forced_vertex": 1,
+  "forced_neighbors": [
+    0,
+    4,
+    5,
+    9
+  ],
+  "conclusion": "Each of the four fixed-uncovered cross pairs has its fiber-3 internal alternative absent in the unique P3, forcing four distinct internal neighbors at vertex 1. This contradicts cubic degree in fiber 0.",
+  "scope": "The saved new external matching skeleton with arbitrary compatible Petersen choices. The other four internal fibers cannot alter these five fixed external paths or the two internal alternatives.",
+  "cpu_seconds": 0.0026915240000000007,
+  "wall_seconds": 0.003741469234228134,
+  "solver_calls": 0,
+  "matching_searches": 0,
+  "additional_catalog_scans": 0
+}

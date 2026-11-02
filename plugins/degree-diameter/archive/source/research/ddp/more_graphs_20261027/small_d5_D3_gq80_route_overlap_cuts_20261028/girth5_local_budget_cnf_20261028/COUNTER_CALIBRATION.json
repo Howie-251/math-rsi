@@ -1,0 +1,176 @@
+{
+  "status": "PASS_SMALL_EXHAUSTIVE_AND_54_INPUT_CONTROLS",
+  "small_counter_n_range": [
+    1,
+    8
+  ],
+  "exhaustive_input_patterns": 510,
+  "satisfiable_input_patterns": 254,
+  "overflow_input_patterns": 256,
+  "small_checks": [
+    {
+      "n": 1,
+      "patterns": 2,
+      "all_pass": true
+    },
+    {
+      "n": 2,
+      "patterns": 4,
+      "all_pass": true
+    },
+    {
+      "n": 3,
+      "patterns": 8,
+      "all_pass": true
+    },
+    {
+      "n": 4,
+      "patterns": 16,
+      "all_pass": true
+    },
+    {
+      "n": 5,
+      "patterns": 32,
+      "all_pass": true
+    },
+    {
+      "n": 6,
+      "patterns": 64,
+      "all_pass": true
+    },
+    {
+      "n": 7,
+      "patterns": 128,
+      "all_pass": true
+    },
+    {
+      "n": 8,
+      "patterns": 256,
+      "all_pass": true
+    }
+  ],
+  "actual_length_controls": [
+    {
+      "n": 54,
+      "true_positions0based": [],
+      "atmost3": true,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        0
+      ],
+      "atmost3": true,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        0,
+        17
+      ],
+      "atmost3": true,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        0,
+        17,
+        53
+      ],
+      "atmost3": true,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        0,
+        17,
+        35,
+        53
+      ],
+      "atmost3": false,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "atmost3": false,
+      "check_pass": true
+    },
+    {
+      "n": 54,
+      "true_positions0based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "atmost3": false,
+      "check_pass": true
+    }
+  ],
+  "general_proof_required": "Forward clauses force every attained prefix threshold; fourth true input conflicts with overflow. Canonical prefix-count auxiliaries extend every input of weight<=3.",
+  "external_solver_calls": 0,
+  "graph_model_calls": 0,
+  "graph_BFS": 0,
+  "CPU_seconds": 0.025748383000000003,
+  "general_proof_reference": "ANALYSIS_COUNTER_SCOPE.md; the finite calibration is not the general proof."
+}

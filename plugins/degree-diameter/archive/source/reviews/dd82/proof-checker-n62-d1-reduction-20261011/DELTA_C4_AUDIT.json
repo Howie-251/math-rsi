@@ -1,0 +1,72 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "incremental_delta",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 25 delta obligations are discharged, extending prior PASS36. Exact C4 transport and triangle-free endpoints of the internal C3/C4 repeat edges are supported; no D1 exclusion follows.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_MATCH_C4_TRANSPORT_REFINEMENT.md",
+      "scope": "Entire document, including all completed corollaries",
+      "line_count": 116,
+      "size_bytes": 7228,
+      "mtime_utc": "2026-10-11T10:33:07.327624+00:00",
+      "last_line": "The unique internal C3 repeat edge is therefore balanced at this aggregate level. Any contradiction must retain additional pointwise support information, for example the saturated rows (6), or use further global structure. No exclusion or parity of heavy edges within each B component has been established here."
+    },
+    {
+      "path": "proofs/dd82/n62/D1_MATCH_INTERNAL_EDGE_TRIANGLE_FREE.md",
+      "scope": "Entire document, including all completed corollaries",
+      "line_count": 35,
+      "size_bytes": 3662,
+      "mtime_utc": "2026-10-11T10:36:14.693714+00:00",
+      "last_line": "This corollary requires no claim that all of C4 is triangle-free, only that C4 is an independent original set because its parent 4 is triangle-free. The C4 edge's existence and unit weight were proved in `D1_MATCH_C4_TRANSPORT_REFINEMENT.md`."
+    }
+  ],
+  "reused_dependency": "PROOF_AUDIT.json: PASS36 for D1_MATCH_HARD_BRANCH_REDUCTION.md",
+  "trace_path": "reviews/dd82/proof-checker-n62-d1-reduction-20261011",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "executor_model": "unattested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "reviewer_reasoning_requested": "ultra",
+  "backend_attestation": "Actual backend metadata unavailable; requested model and effort are recorded without attestation.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:39:59.176557+00:00",
+  "details": {
+    "documents_audited": 2,
+    "micro_claims_audited": 25,
+    "micro_claims_discharged": 25,
+    "base_micro_claims_reused": 36,
+    "combined_micro_claims_discharged": 61,
+    "open_obligations_within_claim": 0,
+    "issues": [],
+    "source_fixes": 0,
+    "checks": [
+      "Complete mathematical review of both stable additions",
+      "Exact expansion of the summed C2–C3 commutation block",
+      "Residual-endpoint collision and exceptional p/q case checks",
+      "Actual paired-triangle and matching-capacity arguments"
+    ],
+    "counterexample_pass": "All meaningful residual-weight, mate collision, exceptional endpoint, reroot and aggregate-cancellation cases checked; no counterexample found.",
+    "not_run": [
+      "SAT",
+      "triple-repeat finite checker",
+      "Lean build",
+      "TeX/PDF/HTML rendering"
+    ],
+    "scope_exclusions": [
+      "D1_MATCH exclusion",
+      "whole order-62 upper bound",
+      "parity of heavy edges within each B component",
+      "global triangle-freeness",
+      "order63–65 work"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "wiki_claim_record": "Shared wiki integration remains with parent; suggested proof status sound-modulo-imports."
+  }
+}

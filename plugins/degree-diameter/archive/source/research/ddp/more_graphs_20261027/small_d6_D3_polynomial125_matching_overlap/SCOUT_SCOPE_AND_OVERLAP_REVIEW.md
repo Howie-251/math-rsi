@@ -1,0 +1,11 @@
+# Read-only scope and overlap-bound check
+
+**The parent q5 all-matching bound is valid; no missing route class or loop-formula error was found.** This review only reads the saved script/result and older reports. It does not repeat any125partner endpoint calculation or construct a source graph/matching.
+
+The older polynomial343 row fixes q7 and previously stopped at an algebraic source screen. No earlier F5cube125 source plus matching run was identified in the353-record targeted ledger read. `shortcut650` is different:500Cayley leaves over Z25 semidirect C20,125coset-block vertices and25heads, target(6,4), with only two fixed5000-switch profiles. Its125-vertex layer is not the standalone F5cube polynomial graph.
+
+In [check_overlap.py](check_overlap.py), ball2(x) explicitly includes x, one-step endpoints and two-step endpoints. It is not the unsafe exact-length-two image. Formal selfloops can be erased, so this union is exactly the real closedB2 after loop removal. At the origin a formal selfloop exists, allowing every oldwalk of length<3 to be padded to3; deleting loops gives the reverse inclusion. Thus its formal3walk imageA represents the real closedB3. The forbidden partner set is precisely root plus its four oldneighbors.
+
+For matched root0 with partnerx,0M paths contribute at most55. OneM first adds at most20 outsideA by the parent's finite table. Tail endpoints M(B2(0)) have size at most21, but M(0)=x is already counted, so add at most20. For a middle G-M-G route, each w=M(v) is already a tail endpoint because v is an oldneighbor of0; only its atmost5oldneighbors remain to add, giving4*5=20. TwoM shortestpaths have only shape M-G-M, atmost5endpoints. ConsecutiveM steps cancel, including the nominal threeM case. Therefore55+20+20+20+5=120<125. The script's unmatched bound96 is conservative and below120.
+
+The parent’s55/21/maximum20 finite counts are inherited, not independently recomputed here. Given them, any complement matching leaves at least5vertices outside the origin's radius3. The q5 matching direction is consequently closed; no matching search, solver, source BFS or further field is started. The auxiliary odd-order involutive-automorphism fixedroot lemma was passed to the expert for the same family, without a new method row.

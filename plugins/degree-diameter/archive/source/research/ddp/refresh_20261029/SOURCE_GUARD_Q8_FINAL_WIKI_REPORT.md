@@ -1,0 +1,15 @@
+# Source eligibility, exact guard cover and q8 auxiliary graph: final batch
+
+The current77418 source is actually77418/348381/simple/all9regular. The9-degree retained-edge connected-append entrance is closed by0spare slots; officialD6 is inherited, with0distanceBFS/balls/solver/candidate. Two primary pages/files were read; profilingCPU.641021884. Its H8 subdivision/clique construction is not the186033 tower.
+
+The accepted40 D13 neighbor sets use original51417 labels. Of51 earlier failed mandatory sets,38 remain entirelyfree on51457 and13areblocked, so mandatory-port consumption cannot explain all38 failures. Existing dynamic coverage certificates do not produce an original-base static joint-packing pool. Five disjoint closedB1 support groups prove only that one strong local proxy needs at least5guards; they do not exclude longR4 coverage by4guards.
+
+Actual prototype4580/current51457 has9mandatory pins and remaining4guard capacity. Its complete2755target/13057column SAT ran once60seconds and returnedUNKNOWN; aggregate68.829465935CPU. Its one full fractional LP20second run also returnedUNKNOWN with no exact certificate;22.439896875CPU. Combined91.269362810CPU, no new graph or source-allrootBFS, no renewal. This is distinct from oldprototype51445/750targets/13026columns MIPUNKNOWN.
+
+For q8, Rajiv PDFpp3-4 Theorem1 gives a conditional1088-point degree13/D3 graph if K64 contains the eight designatedQ3s and hasmaximumdegree5/D3. The author already gave1088/14 and explicitly had not found the requireddegree2extra gadget. FixedJ5+I1/two-coset triples3840were completely evaluated: every actual64-vertex5regular auxiliary candidate fails its firstrootR3. That finiteclass is closed, not allK64s.
+
+The completecross-pencil external2factor model is a separate domain, not merely that affine class:1792edge selectors,197152allvariables/684450clauses, trueR2/R3 and soundnormalization. One90secondcall returnedUNKNOWN, code0, aggregate90.975846255CPU, no witness; that domain remainsopen and is not renewed.
+
+One exact publishedK64 source was reconstructed from the small Rajivwitness:64/192/6regular,96cube plus96extra edges, not an1088graph revalidation. Enumerating5934unordered-endpoint simplepaths oflength<=3 verifies allsourcepairs and finds94extraedges D3critical. The actual saved list has60vertices with all3extraedges critical; vertex0 alone forbids keeping allcubeedges and purely deletingextras to maximumdegree5/D3. The gate stopped beforeSAT;CPU.025104680, no auxiliarypositive/main1088. This does not exclude arbitrary2factors, rewiring or generalq8extensions.
+
+All jobs areterminal. Main targetgraphs thisturn0, newLean0. Validated104examples/4parameters,confirmed103/3,completeformulaLean1 and current-global noveltypending1 remainunchanged. Three new source/problemrecords plus one oldfamilyvariant are not three new independentmethods. No newverifiedclaim is created. This persistence script performs no numerical calculation, BFS, solver, compiler, retrieval or hash.

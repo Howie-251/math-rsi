@@ -1,0 +1,12 @@
+def DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.baseCenter : BaseIndex → Fin 56862 :=
+fun i => F9SixFiberDouble56.planeCenter chosenFiber (basePair i)
+def DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.center : (k : ℕ) → Fin k × BaseIndex → Fin 56862 :=
+fun k j => baseCenter j.2
+def DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.graph : (k : ℕ) → SimpleGraph (Vertex k) :=
+fun k => FullNeighborhoodClones.graph F9Graph56862.graph (center k)
+def DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.label : (k : ℕ) → Vertex k ≃ Fin (56862 + 810 * k) :=
+fun k => ((Equiv.refl (Fin 56862)).sumCongr (cloneLabel k)).trans finSumFinEquiv
+def DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.FinalClaim : ℕ → Prop :=
+fun k =>
+  Fintype.card (Vertex k) = 56862 + 810 * k ∧
+    (∀ (v : Vertex k), (graph k).degree v ≤ 54 + k) ∧ DiameterAtMost (graph k) 3 ∧ ¬DiameterAtMost (graph k) 2

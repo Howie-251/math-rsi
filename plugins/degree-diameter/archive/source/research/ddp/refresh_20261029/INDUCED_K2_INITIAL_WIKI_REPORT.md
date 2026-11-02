@@ -1,0 +1,7 @@
+# 顶点保留与相邻双helper：实际新增研究问题
+
+3750源顶点删减与旧保全部顶点的纯删边严格不同。唯一完整3000/24000/16regular控制图已失败：old1→626实际距离4，一根R3覆盖2231/漏769，该根还有2点距离5；全图D/坏对未算。逐fiber四方向transversal整域另有唯一三步路线纸面排除、理论至少2000跨fiber坏对，不是实测全图统计，外审pending。任意3750keep的300221/1170873必要闭包模型已实际一轮15秒UNKNOWN，总17.651953418CPU，0候选/精确cuts，不误记仍运行或整族排除。
+
+94186源K2规则是all3685freepoints的联合两rootcover。新3685个R3球只算一次，旧R4直接复用；R3provider25..119、T0空。唯一13+13greedy两root仍缺3881/3559，未生成候选或singlehelper图。初始338target/676row共同容量CNF7370selectors/103180vars/203308clauses；本次读取实际状态为UNKNOWN_SOLVER_RETURN，只按真实handle/终态记录，不把计划启动当已运行。
+
+为这两个不同的generative问题新增2条aggregateexperiment，复用既有source/idea；实验记录数不是独立方法数。合法图仍104/4、confirmed103/3、Lean1，无新下界。root/progress/专家快照未改，最终query等待本轮真实收束和root状态。

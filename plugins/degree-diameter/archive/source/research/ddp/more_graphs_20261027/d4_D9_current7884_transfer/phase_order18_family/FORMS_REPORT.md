@@ -1,0 +1,11 @@
+# Forms exporter: four new phase orbits, completed
+
+The requested phase reduction is valid. Multiplication of all phases by u in{1,13,25} fixesCphase6 andDphase3. The group isomorphism(i,j)→(i,uj) changes the action to r^(u inverse modulo18), and swapping the two nonidentity parallel links swapsA/B. The fifteen distinct unordered order18 phasepairs therefore split into five size-three orbits. ISOMORPHISM.json records all members; PROOF_SCOPE.md proves validity, exact elementorders, simplicity and connectedness for every scalar assignment.
+
+The old orbit{(2,22),(10,14),(26,34)} was inherited from the previous complete all-action/all-A/B decision. It was not exported or searched again. New representatives are(2,10),(2,14),(2,34),(10,22), each with six primitive18 actions and109² scalar assignments:24 frames and285144 new parameter choices.
+
+The exporter included every named reduced word oflength0 through9 from each of the three base roots, totaling2834280 words. It produced2457436 distinct coefficient triples in7776 slots. The four directories use the unchanged ABF1 format already agreed with the sole search producer. Each metadata file includes exact phaseA/B, byte offsets and a count-sorted slot priority. Minimum form counts for the four phasepairs are277,205,144,215, so none is rejected by distinct-form cardinality alone.
+
+Export cost2.174544635 CPU seconds, below the five-second allowance. This agent performed noA/B search, graph generation orBFS. EXPORT_RESULT.json and FORMS_TERMINAL.json describe only the completed data production. Main PREDICTION/REPORT/RESULT/terminal and the parameter-search results belong to the separate producer; exporter files now use the FORMS_ prefix to avoid shared-name collisions.
+
+That producer subsequently reported all285144 new assignments tested with zero full survivor,290049 slot evaluations and0.479326 native CPU seconds. It owns the authoritative search report and rawWiki entry. Combined with the inherited old orbit, the complete stated order18 phasepair family is closed. No new prime, phaseorder, C/D voltage, or further forms were introduced. These finite source-family results are not a nonexistence proof for arbitrary(4,9) graphs.

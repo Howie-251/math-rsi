@@ -1,0 +1,119 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_paper_proofs_complete",
+  "summary": "No paper gap in the four scoped bridges; same-family/provisional, with Lean implementation and broader graph branches outside this verdict.",
+  "trace_path": "reviews/dd82/proof-checker-next-bridges-20261011/",
+  "thread_id": "/root/proof_review_next_bridges",
+  "review_agent_ids": [
+    "/root/proof_review_next_bridges"
+  ],
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "reviewer_requested_model": "gpt-6-astra",
+  "reviewer_requested_reasoning": "ultra",
+  "reviewer_request_accepted": true,
+  "reviewer_actual_backend": "undisclosed",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T08:49:47.942694+00:00",
+  "audited_inputs": [
+    "proofs/dd82/n59/n15_heavy_endpoints_avoid_two_triangles_20261011.md",
+    "proofs/dd82/construction/BROWN_R9_EIGHT_III_OBSTRUCTION.md",
+    "formal/N63_ALGEBRAIC_ROUTE.md",
+    "proofs/dd82/n59/two_triangles_shared_edge_exclusion_20261011.md"
+  ],
+  "source_modified": false,
+  "previous_review_verdicts_consulted": false,
+  "details": {
+    "top_level_results_audited": 4,
+    "reusable_local_lemmas_audited": 2,
+    "paper_obligations_discharged": 33,
+    "issues": [],
+    "scopes": [
+      {
+        "id": "N15-heavy",
+        "verdict": "PASS",
+        "statement": "Global zero-row N15 excludes B=2 from a zero to t>=2.",
+        "assumed": "Original legal order59 graph and explicit N15 at every zero."
+      },
+      {
+        "id": "Brown-nine-eight-III-EE",
+        "verdict": "PASS",
+        "statement": "The branch with eight distinct III single-edge deletions plus one EE deletion is impossible.",
+        "assumed": "Fixed full Brown57 edge list, specified deletion branch, legal order58 extension."
+      },
+      {
+        "id": "n63-rational",
+        "verdict": "PASS",
+        "statement": "Complete paper contradiction for arbitrary original legal order63 graphs.",
+        "formal_status": "Uncompiled obligations remain; no Lean build performed."
+      },
+      {
+        "id": "T2-shared-edge",
+        "verdict": "PASS",
+        "statement": "Exactly two triangles sharing an edge are impossible under full zero-row N15.",
+        "assumed": "Original legal order59 graph and full induced-matching N15 at every zero."
+      }
+    ],
+    "deterministic_checks": {
+      "status": "PASS",
+      "cpu_limit_seconds": 30,
+      "cpu_count": 1,
+      "elapsed_seconds": 0.024516,
+      "brown": {
+        "vertices": 57,
+        "edges": 224,
+        "class_sizes": [
+          8,
+          21,
+          28
+        ],
+        "triangle_counts": [
+          14,
+          42
+        ],
+        "all_family_subsets": 3003,
+        "full_cover_families": 14,
+        "twenty_cover_families": 42,
+        "EE_alternatives": 84,
+        "stored_records_and_histograms_match": true,
+        "six_family_predicates": "all independently verified"
+      },
+      "n63": {
+        "coefficient_rows": 63,
+        "Laurent_lifts": 61,
+        "exact_norms": 63,
+        "nonsquare_rows": 62,
+        "exception": [
+          3
+        ],
+        "markdown_table_matches": true
+      },
+      "excluded_work": [
+        "six-million Brown profile",
+        "added-edge completions",
+        "Lean build",
+        "hashes"
+      ]
+    },
+    "formal_obligations_file": "obligations.json",
+    "outside_scope": [
+      "N15 derivation for arbitrary order59 graphs",
+      "all T=2 configurations",
+      "H5 exclusion",
+      "all nine-deletion Brown extensions",
+      "arbitrary order58 exclusion",
+      "compiled n63 caller",
+      "exact extremal value"
+    ]
+  },
+  "overrides": {
+    "no_hashes": true,
+    "no_source_edits": true,
+    "no_wiki_edits": true,
+    "no_tex_pdf_html": true,
+    "no_Lean_build": true,
+    "no_large_Brown_profile": true
+  }
+}

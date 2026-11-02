@@ -1,0 +1,8 @@
+def DegreeDiameter.Portfolio.F9PlaneClone55.center : CloneIndex → Fin 56862 :=
+fun i => liftAt 0 (encodeVec (plane (parameters i 0)))
+def DegreeDiameter.Portfolio.F9PlaneClone55.graph : SimpleGraph Vertex :=
+FullNeighborhoodClones.graph F9Graph56862.graph center
+def DegreeDiameter.Portfolio.F9PlaneClone55.label : Vertex ≃ Fin 56943 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.F9PlaneClone55.FinalClaim : Prop :=
+Fintype.card Vertex = 56943 ∧ (∀ (v : Vertex), graph.degree v ≤ 55) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

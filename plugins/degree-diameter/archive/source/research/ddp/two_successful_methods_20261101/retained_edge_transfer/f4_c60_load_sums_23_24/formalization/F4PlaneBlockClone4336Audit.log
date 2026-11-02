@@ -1,0 +1,41 @@
+def DegreeDiameter.Portfolio.F4PlaneBlockClone4336.graph : SimpleGraph
+  DegreeDiameter.Portfolio.F4PlaneBlockClone4336.Vertex :=
+DegreeDiameter.Portfolio.F4PlaneBlockClonesFamily.graph DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.layers23
+def DegreeDiameter.Portfolio.F4PlaneBlockClonesFamily.graph : {K : ℕ} →
+  (Fin K → Fin 60) → SimpleGraph (DegreeDiameter.Portfolio.F4PlaneBlockClonesFamily.Carrier K) :=
+fun {K} layers =>
+  DegreeDiameter.Portfolio.FullNeighborhoodClones.graph DegreeDiameter.Portfolio.F4Graph3840.graph
+    (DegreeDiameter.Portfolio.F4PlaneBlockClones.center layers)
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.layers23 : Fin 31 → Fin 60 :=
+![1, 4, 11, 14, 18, 20, 22, 22, 23, 24, 25, 29, 31, 32, 33, 34, 35, 40, 43, 45, 46, 47, 48, 49, 50, 54, 56, 56, 57, 58,
+  59]
+DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.capacity23 : ∀ (a : Fin 60),
+  Fintype.card
+      (DegreeDiameter.Portfolio.F4PlaneBlockClones.Allowed DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.layers23 a) ≤
+    3
+DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label : DegreeDiameter.Portfolio.F4PlaneBlockClone4336.Vertex ≃ Fin 4336
+DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label_old : ∀ (v : Fin 3840),
+  ↑(DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label (Sum.inl v)) = ↑v
+DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label_new : ∀ (j : Fin (31 * 16)),
+  ↑(DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label (Sum.inr j)) = 3840 + ↑j
+DegreeDiameter.Portfolio.F4PlaneBlockClone4336.concrete_order_degree_and_exact_D3 : Fintype.card
+      DegreeDiameter.Portfolio.F4PlaneBlockClone4336.Vertex =
+    4336 ∧
+  (∀ (v : DegreeDiameter.Portfolio.F4PlaneBlockClone4336.Vertex),
+      DegreeDiameter.Portfolio.F4PlaneBlockClone4336.graph.degree v ≤ 23) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClone4336.graph 3 ∧
+      ¬DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4PlaneBlockClone4336.graph 2
+'DegreeDiameter.Portfolio.F4PlaneBlockClone4336.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

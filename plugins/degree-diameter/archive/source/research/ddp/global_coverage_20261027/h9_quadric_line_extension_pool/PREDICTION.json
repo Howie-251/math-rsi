@@ -1,0 +1,13 @@
+{
+  "prediction_id": "P_Qline_degree_pool",
+  "frozen_before_candidate_enumeration": true,
+  "statement": "Among the81 external singular lines in each distinct flat plane centered at a center recovered from the fixed675 selected source witnesses, at least one line has all mandatory folded pins of current degree below12.",
+  "base": {"n": 42342, "target_new_n": 42343, "maximum_degree": 12, "target_diameter": 5},
+  "center_scope": "Only distinct normalized centers in terminal h9_quadric_center/RESULT.json records. Selected source line witnesses need not be unique, so this is not all possible centers or all possible source-witness substitutions.",
+  "line_scope": "For each distinct center y choose its first saved selected-line basis x,z. Enumerate a,b in F9 and span(x-a*y,z-b*y), the81 dual-coordinate(1,a,b) lines of Pi_y not through y.",
+  "degree_filter": "All distinct folded pins lie in core K, have current full42342-source degree at most11, and number at most12.",
+  "deduplication": ["canonical original10-point label tuple", "mandatory folded-pin tuple"],
+  "budget": {"workers": 1, "hard_CPU_seconds": 30, "soft_CPU_seconds": 27},
+  "excluded_operations": ["BFS", "R4_scoring", "anchors_optimization", "new_graph_generation", "new_center_enumeration", "hashes", "source_witness_changes"],
+  "coverage_limit": "Existing proof covers oldcore only. Degree feasibility is necessary, not a D5 certificate to all986 extras of the current full base. Root owns complete R4 acceptance."
+}

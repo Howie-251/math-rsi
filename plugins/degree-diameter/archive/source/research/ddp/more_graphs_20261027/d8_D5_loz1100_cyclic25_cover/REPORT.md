@@ -1,0 +1,11 @@
+# Loz1100 cyclic25 cover: all25 normalized lifts fail D5
+
+All25 actual5500-vertex/22000-edge,simple connected8regular Cayley graphs failed their identity closed-R5 check. The full-D≤5 prediction is refuted; exact negative global diameters and ordinary unordered bad-pair counts remain null. There are no unknown or untested cases. The worker used0.246955 CPU seconds including imports/preparation, no compilation, source BFS or solver.
+
+The fixed source is the inherited Loz1100/D4 RIGHT-law C20⋊2Z55 recipe with positives(1,0),(12,33),(11,1),(16,19). The target changes only the normal group toZ275, retains action2, and uses positives(1,0),(12,33+55s),(11,1),(16,19+55t), s,t=0..4. True inverses were recomputed and matched the independently proved formulas. ANALYSIS_NORMALIZATION.md/json proves that all625 source-label-preserving generator lifts reduce completely to these25 representatives by kernel conjugation and a source-identity unit scaling. This is a cyclic order25 normal component, distinct from the preceding elementary-abelian F5² model.
+
+The positive route intuition was supported: g2⁵=165,g4⁵=220 and their inverses give110/55, covering every nonzero kernel coordinate in five steps. All25 distance arrays confirmed that ids0,55,110,165,220 have distance≤5. The same arrays confirmed all1100 source vertices occur in the R4 projection. Nevertheless every graph missed a different-fiber target at R5; each first missing witness has nonidentity projection. Same-fiber coverage and quotient D4 do not establish full target D5.
+
+CASES.jsonl preserves every s/t pair, all true generators, root coverage/histogram, kernel distances, first missing target/projection/deck and R5 fiber-coverage histogram. These are single-root measurements, not ordinary unordered bad-pair totals. No negative graph was extended to exact diameter or exported. RESULT.json, RUN_HANDLE.json and terminal.json are terminal at cursor25.
+
+This excludes exactly the source-preserving ordinary5-cover family represented by these25 lifts, not allZ275 connection sets, all5500-vertex graphs or every cyclic25 rule. No parameter, prime, phase or seed is continued. Reproduce this fixed batch with `python research/ddp/more_graphs_20261027/d8_D5_loz1100_cyclic25_cover/run.py` from the project root.

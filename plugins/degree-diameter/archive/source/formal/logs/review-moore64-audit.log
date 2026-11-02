@@ -1,0 +1,213 @@
+def DegreeDiameter.degreeAtMostEight.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Prop :=
+fun {V} [Fintype V] G => ∀ (v : V), G.degree v ≤ 8
+def DegreeDiameter.diameterAtMostTwo.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => ∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v
+def DegreeDiameter.Exists82 : ℕ → Prop :=
+fun n => ∃ V x G, Fintype.card V = n ∧ DegreeDiameter.degreeAtMostEight G ∧ DegreeDiameter.diameterAtMostTwo G
+def DegreeDiameter.IsExact82 : ℕ → Prop :=
+fun n => DegreeDiameter.Exists82 n ∧ ∀ (m : ℕ), DegreeDiameter.Exists82 m → m ≤ n
+@DegreeDiameter.card_le_one_add_eight_mul_degree : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → ∀ (r : V), Fintype.card V ≤ 1 + 8 * G.degree r
+@DegreeDiameter.moore_bound : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V ≤ 65
+@DegreeDiameter.regular_of_card_gt_57 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → 57 < Fintype.card V → G.IsRegularOfDegree 8
+@DegreeDiameter.exists82_le_65 : ∀ {n : ℕ}, DegreeDiameter.Exists82 n → n ≤ 65
+'DegreeDiameter.card_le_one_add_eight_mul_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.moore_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.regular_of_card_gt_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_le_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_graph_bound.{u_1} : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (v : V), G.degree v ≤ 8) → (∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v) → Fintype.card V ≤ 65 :=
+fun {V} [Fintype V] G hdeg hpaths => DegreeDiameter.moore_bound G hdeg hpaths
+'original_graph_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+def DegreeDiameter.brownCoords : Fin 57 → ℕ × ℕ × ℕ :=
+fun v => if ↑v < 49 then (1, ↑v / 7, ↑v % 7) else if ↑v < 56 then (0, 1, ↑v - 49) else (0, 0, 1)
+def DegreeDiameter.brownDot : Fin 57 → Fin 57 → ℕ :=
+fun u v =>
+  ((DegreeDiameter.brownCoords u).1 * (DegreeDiameter.brownCoords v).1 +
+        (DegreeDiameter.brownCoords u).2.1 * (DegreeDiameter.brownCoords v).2.1 +
+      (DegreeDiameter.brownCoords u).2.2 * (DegreeDiameter.brownCoords v).2.2) %
+    7
+def DegreeDiameter.brownAdj : Fin 57 → Fin 57 → Prop :=
+fun u v => u ≠ v ∧ DegreeDiameter.brownDot u v = 0
+def DegreeDiameter.brown57 : SimpleGraph (Fin 57) :=
+{ Adj := DegreeDiameter.brownAdj, symm := DegreeDiameter.brown57._proof_1, loopless := DegreeDiameter.brown57._proof_2 }
+DegreeDiameter.brown57_computable_degree : ∀ (v : Fin 57), DegreeDiameter.brown57.degree v ≤ 8
+DegreeDiameter.brown57_diameter : DegreeDiameter.diameterAtMostTwo DegreeDiameter.brown57
+DegreeDiameter.brown57_degree : DegreeDiameter.degreeAtMostEight DegreeDiameter.brown57
+DegreeDiameter.exists82_57 : DegreeDiameter.Exists82 57
+'DegreeDiameter.brown57_computable_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.brown57_diameter' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.brown57_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_baseline : DegreeDiameter.Exists82 57 ∧ ∀ (n : ℕ), DegreeDiameter.Exists82 n → n ≤ 65 :=
+⟨DegreeDiameter.exists82_57, fun x h => DegreeDiameter.exists82_le_65 h⟩
+'original_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+def DegreeDiameter.adjacencyMatrix.{u_1} : {V : Type u_1} → SimpleGraph V → Matrix V V ℤ :=
+fun {V} G => SimpleGraph.adjMatrix ℤ G
+def DegreeDiameter.onesMatrix.{u_1} : {V : Type u_1} → Matrix V V ℤ :=
+fun {V} x x => 1
+def DegreeDiameter.defectMatrix.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Matrix V V ℤ :=
+fun {V} [Fintype V] G =>
+  DegreeDiameter.adjacencyMatrix G * DegreeDiameter.adjacencyMatrix G + DegreeDiameter.adjacencyMatrix G - 7 • 1 -
+    DegreeDiameter.onesMatrix
+def DegreeDiameter.commonNeighborCount.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → ℕ :=
+fun {V} [Fintype V] G u v => {w ∈ G.neighborFinset u | G.Adj w v}.card
+@DegreeDiameter.adjacency_sq_common_count : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v : V),
+  (DegreeDiameter.adjacencyMatrix G * DegreeDiameter.adjacencyMatrix G) u v =
+    ↑(DegreeDiameter.commonNeighborCount G u v)
+@DegreeDiameter.defect_diagonal : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 → ∀ (v : V), DegreeDiameter.defectMatrix G v v = 0
+@DegreeDiameter.defect_symmetric : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (DegreeDiameter.defectMatrix G).IsSymm
+@DegreeDiameter.defect_off_diagonal : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {u v : V},
+  u ≠ v →
+    DegreeDiameter.defectMatrix G u v =
+      ↑(DegreeDiameter.commonNeighborCount G u v) + DegreeDiameter.adjacencyMatrix G u v - 1
+@DegreeDiameter.defect_nonnegative : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 → DegreeDiameter.diameterAtMostTwo G → ∀ (u v : V), 0 ≤ DegreeDiameter.defectMatrix G u v
+@DegreeDiameter.defect_row_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 → ∀ (u : V), ∑ v, DegreeDiameter.defectMatrix G u v = 65 - ↑(Fintype.card V)
+@DegreeDiameter.adjacency_defect_commute : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G =
+      DegreeDiameter.defectMatrix G * DegreeDiameter.adjacencyMatrix G
+@DegreeDiameter.original_graph_defect_properties : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      57 < Fintype.card V →
+        (∀ (v : V), DegreeDiameter.defectMatrix G v v = 0) ∧
+          (DegreeDiameter.defectMatrix G).IsSymm ∧
+            (∀ (u v : V), 0 ≤ DegreeDiameter.defectMatrix G u v) ∧
+              (∀ (u : V), ∑ v, DegreeDiameter.defectMatrix G u v = 65 - ↑(Fintype.card V)) ∧
+                DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G =
+                  DegreeDiameter.defectMatrix G * DegreeDiameter.adjacencyMatrix G
+'DegreeDiameter.adjacency_sq_common_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_off_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.adjacency_defect_commute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.original_graph_defect_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DegreeDiameter.five_dvd_trace_fifth_of_trace_zero : ∀ {V : Type u_1} [inst : Fintype V] (A : Matrix V V ℤ),
+  A.trace = 0 → 5 ∣ (A ^ 5).trace
+@DegreeDiameter.five_dvd_adjacency_fifth : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  5 ∣ (DegreeDiameter.adjacencyMatrix G ^ 5).trace
+@DegreeDiameter.fifth_matrix_identity_59 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    Fintype.card V = 59 →
+      DegreeDiameter.adjacencyMatrix G ^ 5 =
+        DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G ^ 2 - 2 • DegreeDiameter.defectMatrix G ^ 2 +
+                  17 • DegreeDiameter.adjacencyMatrix G ^ 3 -
+                12 • DegreeDiameter.adjacencyMatrix G ^ 2 -
+              77 • DegreeDiameter.adjacencyMatrix G +
+            98 • 1 +
+          426 • DegreeDiameter.onesMatrix
+@DegreeDiameter.fifth_trace_identity_59 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    Fintype.card V = 59 →
+      (DegreeDiameter.adjacencyMatrix G ^ 5).trace =
+        25252 + (DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G ^ 2).trace -
+            2 * (DegreeDiameter.defectMatrix G ^ 2).trace +
+          17 * (DegreeDiameter.adjacencyMatrix G ^ 3).trace
+@DegreeDiameter.no_n59_with_matching_zero_traces : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        (DegreeDiameter.adjacencyMatrix G ^ 3).trace = 0 →
+          (DegreeDiameter.defectMatrix G ^ 2).trace = 590 →
+            (DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G ^ 2).trace = 590 → False
+'DegreeDiameter.five_dvd_trace_fifth_of_trace_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.five_dvd_adjacency_fifth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.fifth_matrix_identity_59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.fifth_trace_identity_59' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_n59_with_matching_zero_traces' depends on axioms: [propext, Classical.choice, Quot.sound]
+def DegreeDiameter.triangleFree.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => ∀ (u v w : V), G.Adj u v → G.Adj v w → ¬G.Adj w u
+def DegreeDiameter.matchingRow.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → Prop :=
+fun {V} [Fintype V] G v =>
+  ∃ a b c d,
+    a ≠ b ∧
+      a ≠ c ∧
+        a ≠ d ∧
+          b ≠ c ∧
+            b ≠ d ∧
+              c ≠ d ∧
+                (∀ (u : V),
+                    DegreeDiameter.defectMatrix G v u =
+                      (((if u = a then 2 else 0) + if u = b then 2 else 0) + if u = c then 1 else 0) +
+                        if u = d then 1 else 0) ∧
+                  G.Adj a b ∧ G.Adj c d ∧ ¬G.Adj a c ∧ ¬G.Adj a d ∧ ¬G.Adj b c ∧ ¬G.Adj b d
+@DegreeDiameter.matching_row_square : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (v : V),
+  DegreeDiameter.matchingRow G v → (DegreeDiameter.defectMatrix G ^ 2) v v = 10
+@DegreeDiameter.matching_row_quadratic : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (v : V),
+  DegreeDiameter.matchingRow G v →
+    (DegreeDiameter.defectMatrix G * DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G) v v = 10
+@DegreeDiameter.matching_rows_square_trace : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (v : V), DegreeDiameter.matchingRow G v) → (DegreeDiameter.defectMatrix G ^ 2).trace = 10 * ↑(Fintype.card V)
+@DegreeDiameter.matching_rows_mixed_trace : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (v : V), DegreeDiameter.matchingRow G v) →
+    (DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G ^ 2).trace = 10 * ↑(Fintype.card V)
+@DegreeDiameter.triangle_free_cube_trace : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.triangleFree G → (DegreeDiameter.adjacencyMatrix G ^ 3).trace = 0
+@DegreeDiameter.no_n59_triangle_free_matching_rows : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 → DegreeDiameter.triangleFree G → (∀ (v : V), DegreeDiameter.matchingRow G v) → False
+'DegreeDiameter.matching_row_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.matching_row_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.matching_rows_square_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.matching_rows_mixed_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.triangle_free_cube_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_n59_triangle_free_matching_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DegreeDiameter.defect_zero_of_card_65 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 65 → DegreeDiameter.defectMatrix G = 0
+@DegreeDiameter.no_original_graph_card_65 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 65 → False
+@DegreeDiameter.original_graph_card_le_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V ≤ 64
+@DegreeDiameter.exists82_le_64 : ∀ {n : ℕ}, DegreeDiameter.Exists82 n → n ≤ 64
+'DegreeDiameter.defect_zero_of_card_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_original_graph_card_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.original_graph_card_le_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_le_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_baseline64 : DegreeDiameter.Exists82 57 ∧ ∀ (n : ℕ), DegreeDiameter.Exists82 n → n ≤ 64 :=
+⟨DegreeDiameter.exists82_57, fun x h => DegreeDiameter.exists82_le_64 h⟩
+'original_baseline64' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DegreeDiameter.defect_zero_or_one_of_card_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 64 → ∀ (u v : V), DegreeDiameter.defectMatrix G u v = 0 ∨ DegreeDiameter.defectMatrix G u v = 1
+@DegreeDiameter.defect_pair_le_one_of_card_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 64 →
+        ∀ (r : V) {u v : V}, u ≠ v → DegreeDiameter.defectMatrix G r u + DegreeDiameter.defectMatrix G r v ≤ 1
+@DegreeDiameter.defect_square_identity_of_card_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 64 → DegreeDiameter.defectMatrix G * DegreeDiameter.defectMatrix G = 1
+@DegreeDiameter.triangle_free_of_card_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 → DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 64 → DegreeDiameter.triangleFree G
+@DegreeDiameter.adjacency_defect_trace_zero_of_triangle_free : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.triangleFree G → (DegreeDiameter.adjacencyMatrix G * DegreeDiameter.defectMatrix G).trace = 0
+@DegreeDiameter.no_original_graph_card_64 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 64 → False
+@DegreeDiameter.original_graph_card_le_63 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V ≤ 63
+@DegreeDiameter.exists82_le_63 : ∀ {n : ℕ}, DegreeDiameter.Exists82 n → n ≤ 63
+'DegreeDiameter.defect_zero_or_one_of_card_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_pair_le_one_of_card_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_square_identity_of_card_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.triangle_free_of_card_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.adjacency_defect_trace_zero_of_triangle_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_original_graph_card_64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.original_graph_card_le_63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_le_63' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_baseline63 : DegreeDiameter.Exists82 57 ∧ ∀ (n : ℕ), DegreeDiameter.Exists82 n → n ≤ 63 :=
+⟨DegreeDiameter.exists82_57, fun x h => DegreeDiameter.exists82_le_63 h⟩
+'original_baseline63' depends on axioms: [propext, Classical.choice, Quot.sound]

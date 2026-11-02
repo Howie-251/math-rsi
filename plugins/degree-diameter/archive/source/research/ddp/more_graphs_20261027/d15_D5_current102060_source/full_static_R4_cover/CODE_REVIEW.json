@@ -1,0 +1,66 @@
+{
+  "status": "READ_ONLY_FULL_STATIC_IMPLEMENTATION_REVIEW_NO_BLOCKER",
+  "reviewed_UTC": "2026-10-28T04:06:32.699976+00:00",
+  "files": [
+    "worker.py",
+    "run.py",
+    "PREDICTION.json"
+  ],
+  "cache_interface": "../CACHE_INTERFACE_REVIEW.json",
+  "full_model": {
+    "construction": "All810 cached closedR4 columns are unpacked with little bit order and truncated to102060 real vertex bits. Each column appends cardinality row102060.",
+    "shape": [
+      102061,
+      810
+    ],
+    "all_target_rows": 102060,
+    "row_binding": "bincount of every full CSC row is required to equal the existing target-support array, with810 entries in the cardinality row.",
+    "sampling": false,
+    "constraint_generation": false,
+    "dedup_repeated": false,
+    "LP_signs": "Cover rows have coefficient-1 and rhs-1; cardinality coefficients+1 and rhs15. Bounds0..1.",
+    "MIP_signs": "All entries+1; target rows lower1/upperinf; cardinality row lower0/upper15.810binary variables, zero feasibility objective."
+  },
+  "CSR_and_columns": {
+    "eligible_order": "Worker requires equality with actual102060 PREFLIGHT eligible_labels; independent read-only format review also compared SOURCE_PROFILE.free_vertices.",
+    "CSR": "<u4 with [102060,1530090] header, offsets at2..102062, neighbor data starting index102063/byte408252.",
+    "all_eligible_degrees": 14,
+    "historical100132_used": false
+  },
+  "execution_configuration": {
+    "before_numerical_imports": "OMP/OPENBLAS/MKL/NUMEXPR threads set1 in worker and inherited environment.",
+    "HiGHS_threads_option": 1,
+    "workers": 1,
+    "calls_max": {
+      "LP": 1,
+      "MIP": 1
+    },
+    "preparation_CPU_limit": 25,
+    "worker_CPU_soft_hard": [
+      127,
+      128
+    ],
+    "aggregate_declared_CPU": 130,
+    "LP_time_limit_seconds": 20,
+    "MIP_time_limit": "min(75,95-measuredLPsolverCPU,123-currentWorkerCPU)",
+    "driver_wall_limit_seconds": 200,
+    "retry_count": 0,
+    "interpretation": "Configured limits are distinct from final observed CPU. Worker/driver preserve UNKNOWN on interrupted/no-return execution; numerical infeasibility is explicitly uncertified."
+  },
+  "incumbent_gate": [
+    "Returned810-vector must be within1e-6 of binary values, then exact0/1 rounded.",
+    "Selected columns map through eligible labels; distinct literal pin count1..15.",
+    "Actual source CSR degrees checked below15.",
+    "Exact OR of all selected complete cachedR4 rows is checked across every102060 target.",
+    "Only a zero-missing selection exports765045 old CSR edges plus literal new spokes, checking old-edge count.",
+    "The worker does not rerun old or new-root BFS; independent first-parameter acceptance is left to parent."
+  ],
+  "mathematical_result_not_claimed": "This review establishes the frozen implementation interface only. It reports no LP/MIP outcome or candidate.",
+  "reviewer_execution": {
+    "model_builds": 0,
+    "solver_calls": 0,
+    "BFS": 0,
+    "ball_recomputation": 0,
+    "candidate_graphs": 0
+  }
+}

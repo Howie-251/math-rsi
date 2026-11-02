@@ -1,0 +1,97 @@
+{
+  "status": "COMPLETE_SINGLE_THREAD_NO_MODEL_API_INTROSPECTION",
+  "prior_cumulative_charged_CPU_seconds": 4,
+  "hard_CPU_limit_seconds": 3,
+  "cumulative_CPU_cap_seconds": 8,
+  "LP_models_created": 0,
+  "passModel_calls": 0,
+  "solver_runs": 0,
+  "threads_env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "scipy_version": "1.15.3",
+  "core_module_file": "/opt/conda/lib/python3.11/site-packages/scipy/optimize/_highspy/_core.cpython-311-x86_64-linux-gnu.so",
+  "constructors": {
+    "_Highs": {
+      "exists": true,
+      "doc": null
+    },
+    "HighsSolution": {
+      "exists": true,
+      "doc": null
+    },
+    "HighsLp": {
+      "exists": true,
+      "doc": null
+    },
+    "HighsOptions": {
+      "exists": true,
+      "doc": null
+    }
+  },
+  "methods": {
+    "setSolution": {
+      "exists": true,
+      "doc": "setSolution(*args, **kwargs)\nOverloaded function.\n\n1. setSolution(self: scipy.optimize._highspy._core._Highs, arg0: HighsSolution) -> scipy.optimize._highspy._core.HighsStatus\n\n2. setSolution(self: scipy.optimize._highspy._core._Highs, arg0: int, arg1: numpy.ndarray[numpy.int32], arg2: numpy.ndarray[numpy.float64]) -> scipy.optimize._highspy._core.HighsStatus\n"
+    },
+    "passModel": {
+      "exists": true,
+      "doc": "passModel(*args, **kwargs)\nOverloaded function.\n\n1. passModel(self: scipy.optimize._highspy._core._Highs, arg0: scipy.optimize._highspy._core.HighsModel) -> scipy.optimize._highspy._core.HighsStatus\n\n2. passModel(self: scipy.optimize._highspy._core._Highs, arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: float, arg8: numpy.ndarray[numpy.float64], arg9: numpy.ndarray[numpy.float64], arg10: numpy.ndarray[numpy.float64], arg11: numpy.ndarray[numpy.float64], arg12: numpy.ndarray[numpy.float64], arg13: numpy.ndarray[numpy.int32], arg14: numpy.ndarray[numpy.int32], arg15: numpy.ndarray[numpy.float64], arg16: numpy.ndarray[numpy.int32], arg17: numpy.ndarray[numpy.int32], arg18: numpy.ndarray[numpy.float64], arg19: numpy.ndarray[numpy.int32]) -> scipy.optimize._highspy._core.HighsStatus\n\n3. passModel(self: scipy.optimize._highspy._core._Highs, arg0: scipy.optimize._highspy._core.HighsLp) -> scipy.optimize._highspy._core.HighsStatus\n\n4. passModel(self: scipy.optimize._highspy._core._Highs, arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: float, arg6: numpy.ndarray[numpy.float64], arg7: numpy.ndarray[numpy.float64], arg8: numpy.ndarray[numpy.float64], arg9: numpy.ndarray[numpy.float64], arg10: numpy.ndarray[numpy.float64], arg11: numpy.ndarray[numpy.int32], arg12: numpy.ndarray[numpy.int32], arg13: numpy.ndarray[numpy.float64], arg14: numpy.ndarray[numpy.int32]) -> scipy.optimize._highspy._core.HighsStatus\n"
+    },
+    "getOptions": {
+      "exists": true,
+      "doc": "getOptions(self: scipy.optimize._highspy._core._Highs) -> scipy.optimize._highspy._core.HighsOptions\n"
+    },
+    "getOptionValue": {
+      "exists": true,
+      "doc": "getOptionValue(self: scipy.optimize._highspy._core._Highs, arg0: str) -> tuple[scipy.optimize._highspy._core.HighsStatus, object]\n"
+    },
+    "setOptionValue": {
+      "exists": true,
+      "doc": "setOptionValue(*args, **kwargs)\nOverloaded function.\n\n1. setOptionValue(self: scipy.optimize._highspy._core._Highs, arg0: str, arg1: bool) -> scipy.optimize._highspy._core.HighsStatus\n\n2. setOptionValue(self: scipy.optimize._highspy._core._Highs, arg0: str, arg1: int) -> scipy.optimize._highspy._core.HighsStatus\n\n3. setOptionValue(self: scipy.optimize._highspy._core._Highs, arg0: str, arg1: float) -> scipy.optimize._highspy._core.HighsStatus\n\n4. setOptionValue(self: scipy.optimize._highspy._core._Highs, arg0: str, arg1: str) -> scipy.optimize._highspy._core.HighsStatus\n"
+    },
+    "version": {
+      "exists": true,
+      "doc": "version(self: scipy.optimize._highspy._core._Highs) -> str\n"
+    },
+    "versionMajor": {
+      "exists": true,
+      "doc": "versionMajor(self: scipy.optimize._highspy._core._Highs) -> int\n"
+    },
+    "versionMinor": {
+      "exists": true,
+      "doc": "versionMinor(self: scipy.optimize._highspy._core._Highs) -> int\n"
+    },
+    "versionPatch": {
+      "exists": true,
+      "doc": "versionPatch(self: scipy.optimize._highspy._core._Highs) -> int\n"
+    }
+  },
+  "empty_Highs_object_created": true,
+  "Highs_version": "1.8.0",
+  "relevant_default_options": {
+    "mip_max_improving_sols": 2147483647,
+    "mip_max_leaves": 2147483647,
+    "mip_max_nodes": 2147483647,
+    "mip_max_stall_nodes": 2147483647,
+    "objective_bound": Infinity,
+    "objective_target": -Infinity,
+    "solution_file": "",
+    "threads": 0,
+    "time_limit": Infinity,
+    "write_solution_style": 0,
+    "write_solution_to_file": false
+  },
+  "empty_HighsSolution_fields": [
+    "col_dual",
+    "col_value",
+    "dual_valid",
+    "row_dual",
+    "row_value",
+    "value_valid"
+  ],
+  "actual_process_CPU_seconds": 0.22222208899999998
+}

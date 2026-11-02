@@ -1,0 +1,25 @@
+graph : SimpleGraph (Fin 1920 ⊕ Fin 96)
+label : Vertex ≃ Fin 2016
+def DegreeDiameter.Portfolio.F4Graph1920.Clone2016.FinalClaim : Prop :=
+Fintype.card Vertex = 2016 ∧
+  (∀ (v : Fin 1920 ⊕ Fin 96), graph.degree v ≤ 17) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+DegreeDiameter.Portfolio.F4Graph1920.Clone2016.d17_2016 :
+  Fintype.card Vertex = 2016 ∧
+    (∀ (v : Fin 1920 ⊕ Fin 96), graph.degree v ≤ 17) ∧
+      DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+theorem DegreeDiameter.Portfolio.F4Graph1920.Clone2016.d17_2016 : Fintype.card Vertex = 2016 ∧
+  (∀ (v : Fin 1920 ⊕ Fin 96), graph.degree v ≤ 17) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_three, not_diameterAtMost_two⟩⟩⟩
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.d17_2016' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.F4Graph1920.Clone2016.final_claim : FinalClaim :=
+d17_2016
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.load_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.old_walk_bound_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.label_new' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.Clone2016.center_ordered_label' depends on axioms: [propext, Quot.sound]

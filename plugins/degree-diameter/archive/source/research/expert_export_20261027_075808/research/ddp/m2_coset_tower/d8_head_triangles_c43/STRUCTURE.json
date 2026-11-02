@@ -1,0 +1,1404 @@
+{
+  "status": "COMPLETE_TWO_SPECIFIED_PARAMETER_TABLES_NO_GRAPH_NO_BFS_NO_S_SEARCH",
+  "coordinate_rule": "g=(x,w,i), encode=x+p*w+3*p*i",
+  "group_product": "(x,w,i)(y,v,j)=(x+r^i*y modp,w+v mod3,i+j mod(p-1))",
+  "group_inverse": "(-r^(-i)*x modp,-w mod3,-i mod(p-1))",
+  "BB_formula": "For j=0..m-1: H_orbit(W3 horizontal coordinates with i_word modm=j) union H_orbit(S_horizontal) union H_orbit((r^(j-i_s)*x_s,w_s):s in W1) union {(0,1),(0,2)}; H multiplies field by U=<r^m> and fixes w.",
+  "cases": [
+    {
+      "p": 43,
+      "degree": 8,
+      "primitive_root": 3,
+      "primitive_powers": [
+        1,
+        3,
+        9,
+        27,
+        38,
+        28,
+        41,
+        37,
+        25,
+        32,
+        10,
+        30,
+        4,
+        12,
+        36,
+        22,
+        23,
+        26,
+        35,
+        19,
+        14,
+        42,
+        40,
+        34,
+        16,
+        5,
+        15,
+        2,
+        6,
+        18,
+        11,
+        33,
+        13,
+        39,
+        31,
+        7,
+        21,
+        20,
+        17,
+        8,
+        24,
+        29
+      ],
+      "A_order": 129,
+      "K_order": 42,
+      "H_order": 7,
+      "K_over_H_index": 6,
+      "H_scalar_elements": [
+        1,
+        4,
+        11,
+        16,
+        21,
+        35,
+        41
+      ],
+      "H_contains_minus_one": false,
+      "H_nonzero_field_orbits": [
+        [
+          1,
+          4,
+          11,
+          16,
+          21,
+          35,
+          41
+        ],
+        [
+          2,
+          8,
+          22,
+          27,
+          32,
+          39,
+          42
+        ],
+        [
+          3,
+          5,
+          12,
+          19,
+          20,
+          33,
+          37
+        ],
+        [
+          6,
+          10,
+          23,
+          24,
+          31,
+          38,
+          40
+        ],
+        [
+          7,
+          18,
+          26,
+          28,
+          29,
+          30,
+          34
+        ],
+        [
+          9,
+          13,
+          14,
+          15,
+          17,
+          25,
+          36
+        ]
+      ],
+      "BB_compressed_orbits": [
+        {
+          "bit": 0,
+          "w": 0,
+          "field_orbit_index": 0,
+          "A_members": [
+            0
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 1,
+          "w": 0,
+          "field_orbit_index": 1,
+          "A_members": [
+            1,
+            4,
+            11,
+            16,
+            21,
+            35,
+            41
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 2,
+          "w": 0,
+          "field_orbit_index": 2,
+          "A_members": [
+            2,
+            8,
+            22,
+            27,
+            32,
+            39,
+            42
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 3,
+          "w": 0,
+          "field_orbit_index": 3,
+          "A_members": [
+            3,
+            5,
+            12,
+            19,
+            20,
+            33,
+            37
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 4,
+          "w": 0,
+          "field_orbit_index": 4,
+          "A_members": [
+            6,
+            10,
+            23,
+            24,
+            31,
+            38,
+            40
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 5,
+          "w": 0,
+          "field_orbit_index": 5,
+          "A_members": [
+            7,
+            18,
+            26,
+            28,
+            29,
+            30,
+            34
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 6,
+          "w": 0,
+          "field_orbit_index": 6,
+          "A_members": [
+            9,
+            13,
+            14,
+            15,
+            17,
+            25,
+            36
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 7,
+          "w": 1,
+          "field_orbit_index": 0,
+          "A_members": [
+            43
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 8,
+          "w": 1,
+          "field_orbit_index": 1,
+          "A_members": [
+            44,
+            47,
+            54,
+            59,
+            64,
+            78,
+            84
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 9,
+          "w": 1,
+          "field_orbit_index": 2,
+          "A_members": [
+            45,
+            51,
+            65,
+            70,
+            75,
+            82,
+            85
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 10,
+          "w": 1,
+          "field_orbit_index": 3,
+          "A_members": [
+            46,
+            48,
+            55,
+            62,
+            63,
+            76,
+            80
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 11,
+          "w": 1,
+          "field_orbit_index": 4,
+          "A_members": [
+            49,
+            53,
+            66,
+            67,
+            74,
+            81,
+            83
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 12,
+          "w": 1,
+          "field_orbit_index": 5,
+          "A_members": [
+            50,
+            61,
+            69,
+            71,
+            72,
+            73,
+            77
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 13,
+          "w": 1,
+          "field_orbit_index": 6,
+          "A_members": [
+            52,
+            56,
+            57,
+            58,
+            60,
+            68,
+            79
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 14,
+          "w": 2,
+          "field_orbit_index": 0,
+          "A_members": [
+            86
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 15,
+          "w": 2,
+          "field_orbit_index": 1,
+          "A_members": [
+            87,
+            90,
+            97,
+            102,
+            107,
+            121,
+            127
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 16,
+          "w": 2,
+          "field_orbit_index": 2,
+          "A_members": [
+            88,
+            94,
+            108,
+            113,
+            118,
+            125,
+            128
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 17,
+          "w": 2,
+          "field_orbit_index": 3,
+          "A_members": [
+            89,
+            91,
+            98,
+            105,
+            106,
+            119,
+            123
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 18,
+          "w": 2,
+          "field_orbit_index": 4,
+          "A_members": [
+            92,
+            96,
+            109,
+            110,
+            117,
+            124,
+            126
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 19,
+          "w": 2,
+          "field_orbit_index": 5,
+          "A_members": [
+            93,
+            104,
+            112,
+            114,
+            115,
+            116,
+            120
+          ],
+          "weight": 7
+        },
+        {
+          "bit": 20,
+          "w": 2,
+          "field_orbit_index": 6,
+          "A_members": [
+            95,
+            99,
+            100,
+            101,
+            103,
+            111,
+            122
+          ],
+          "weight": 7
+        }
+      ],
+      "BB_compressed_bits_per_quotient_layer": 21,
+      "BB_quotient_layers": 6,
+      "BB_automatically_covered_zero_bits": [
+        0,
+        7,
+        14
+      ],
+      "BB_missing_multiple": 7,
+      "group_order": 5418,
+      "G0_order": 1806,
+      "G0_nonidentity_involutions": 43,
+      "G0_nonselfinverse_pairs": 881,
+      "G0_zero_field_involutions": 1,
+      "G0_zero_field_inverse_pairs": 20,
+      "G0_nonzero_field_involutions": 42,
+      "G0_nonzero_field_inverse_pairs": 861,
+      "G0_involution_exponent": 21,
+      "G0_involution_exponent_mod_block_index": 3,
+      "cross_inverse_pairs": 1806,
+      "cross_nonzero_field_pairs": 1764,
+      "cross_zero_field_pairs": 42,
+      "layer_sizes": [
+        5418,
+        774,
+        129
+      ],
+      "n": 6321,
+      "edges": 25284,
+      "head_triangle_count": 43,
+      "head_triangle_edges": 129,
+      "HH_criterion": "At least one nonzero-field cross-w inverse pair AND at least one nonzero-field internal element.",
+      "legal_internal_compositions_and_counts": [
+        {
+          "cross_inverse_pairs_t": 1,
+          "internal_size": 5,
+          "internal_compositions": [
+            {
+              "internal_involutions": 5,
+              "internal_inverse_pairs": 0,
+              "legal_internal_choices": 962598,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 962598
+            },
+            {
+              "internal_involutions": 3,
+              "internal_inverse_pairs": 1,
+              "legal_internal_choices": 10872421,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 10872421
+            },
+            {
+              "internal_involutions": 1,
+              "internal_inverse_pairs": 2,
+              "legal_internal_choices": 16668520,
+              "all_zero_field_internal_choices": 190,
+              "HH_compatible_internal_choices": 16668330
+            }
+          ],
+          "HH_compatible_unordered_cross_pair_subsets": 1764,
+          "HH_compatible_internal_choices": 28503349,
+          "raw_HH_component_sets": 50279907636,
+          "unique_nonzero_w1_anchor_normalized_x1_cross_choices": 42,
+          "t1_exact_normalized_component_sets": 1197140658
+        },
+        {
+          "cross_inverse_pairs_t": 2,
+          "internal_size": 3,
+          "internal_compositions": [
+            {
+              "internal_involutions": 3,
+              "internal_inverse_pairs": 0,
+              "legal_internal_choices": 12341,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 12341
+            },
+            {
+              "internal_involutions": 1,
+              "internal_inverse_pairs": 1,
+              "legal_internal_choices": 37883,
+              "all_zero_field_internal_choices": 20,
+              "HH_compatible_internal_choices": 37863
+            }
+          ],
+          "HH_compatible_unordered_cross_pair_subsets": 1629054,
+          "HH_compatible_internal_choices": 50204,
+          "raw_HH_component_sets": 81785027016
+        },
+        {
+          "cross_inverse_pairs_t": 3,
+          "internal_size": 1,
+          "internal_compositions": [
+            {
+              "internal_involutions": 1,
+              "internal_inverse_pairs": 0,
+              "legal_internal_choices": 43,
+              "all_zero_field_internal_choices": 1,
+              "HH_compatible_internal_choices": 42
+            }
+          ],
+          "HH_compatible_unordered_cross_pair_subsets": 980110740,
+          "HH_compatible_internal_choices": 42,
+          "raw_HH_component_sets": 41164651080
+        }
+      ],
+      "HH_excluded_t_with_no_internal_elements": [],
+      "t0_excluded_by_HH": true,
+      "t_greater_1_uniform_scalar_division_claimed": false,
+      "t2_scaling_nonfree_witness": {
+        "single_written_component_set_coordinates": [
+          [
+            0,
+            0,
+            21
+          ],
+          [
+            1,
+            0,
+            21
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            42,
+            0,
+            21
+          ],
+          [
+            42,
+            1,
+            0
+          ],
+          [
+            42,
+            2,
+            0
+          ]
+        ],
+        "scalar_stabilizer": [
+          1,
+          42
+        ],
+        "purpose": "t=2 HH-compatible example shows scaling action need not be free; no graph generated."
+      },
+      "profile_strata": [
+        {
+          "t": 1,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 5,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 850668
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 5,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 111930
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 9884280
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 229600
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 741321
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 17220
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 15549660
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 723240
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 2,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 7980
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 370230
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 17220
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 11480
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 11480
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 861
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 3,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 861
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 36162
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 36162
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 840
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 840
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 861
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 861
+        },
+        {
+          "t": 3,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 2,
+          "internal_component_choice_count": 42
+        },
+        {
+          "t": 3,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 42
+        },
+        {
+          "t": 3,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 1,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 2,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 42
+        }
+      ],
+      "profile_strata_count": 24,
+      "profile_strata_counts_by_t": {
+        "1": 11,
+        "2": 10,
+        "3": 3
+      },
+      "profile_strata_are_uniform_or_exhaustive_samples": false,
+      "inverse_and_primitive_scalar_conjugation_checks": 5418
+    },
+    {
+      "p": 31,
+      "degree": 7,
+      "primitive_root": 3,
+      "primitive_powers": [
+        1,
+        3,
+        9,
+        27,
+        19,
+        26,
+        16,
+        17,
+        20,
+        29,
+        25,
+        13,
+        8,
+        24,
+        10,
+        30,
+        28,
+        22,
+        4,
+        12,
+        5,
+        15,
+        14,
+        11,
+        2,
+        6,
+        18,
+        23,
+        7,
+        21
+      ],
+      "A_order": 93,
+      "K_order": 30,
+      "H_order": 6,
+      "K_over_H_index": 5,
+      "H_scalar_elements": [
+        1,
+        5,
+        6,
+        25,
+        26,
+        30
+      ],
+      "H_contains_minus_one": true,
+      "H_nonzero_field_orbits": [
+        [
+          1,
+          5,
+          6,
+          25,
+          26,
+          30
+        ],
+        [
+          2,
+          10,
+          12,
+          19,
+          21,
+          29
+        ],
+        [
+          3,
+          13,
+          15,
+          16,
+          18,
+          28
+        ],
+        [
+          4,
+          7,
+          11,
+          20,
+          24,
+          27
+        ],
+        [
+          8,
+          9,
+          14,
+          17,
+          22,
+          23
+        ]
+      ],
+      "BB_compressed_orbits": [
+        {
+          "bit": 0,
+          "w": 0,
+          "field_orbit_index": 0,
+          "A_members": [
+            0
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 1,
+          "w": 0,
+          "field_orbit_index": 1,
+          "A_members": [
+            1,
+            5,
+            6,
+            25,
+            26,
+            30
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 2,
+          "w": 0,
+          "field_orbit_index": 2,
+          "A_members": [
+            2,
+            10,
+            12,
+            19,
+            21,
+            29
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 3,
+          "w": 0,
+          "field_orbit_index": 3,
+          "A_members": [
+            3,
+            13,
+            15,
+            16,
+            18,
+            28
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 4,
+          "w": 0,
+          "field_orbit_index": 4,
+          "A_members": [
+            4,
+            7,
+            11,
+            20,
+            24,
+            27
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 5,
+          "w": 0,
+          "field_orbit_index": 5,
+          "A_members": [
+            8,
+            9,
+            14,
+            17,
+            22,
+            23
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 6,
+          "w": 1,
+          "field_orbit_index": 0,
+          "A_members": [
+            31
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 7,
+          "w": 1,
+          "field_orbit_index": 1,
+          "A_members": [
+            32,
+            36,
+            37,
+            56,
+            57,
+            61
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 8,
+          "w": 1,
+          "field_orbit_index": 2,
+          "A_members": [
+            33,
+            41,
+            43,
+            50,
+            52,
+            60
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 9,
+          "w": 1,
+          "field_orbit_index": 3,
+          "A_members": [
+            34,
+            44,
+            46,
+            47,
+            49,
+            59
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 10,
+          "w": 1,
+          "field_orbit_index": 4,
+          "A_members": [
+            35,
+            38,
+            42,
+            51,
+            55,
+            58
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 11,
+          "w": 1,
+          "field_orbit_index": 5,
+          "A_members": [
+            39,
+            40,
+            45,
+            48,
+            53,
+            54
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 12,
+          "w": 2,
+          "field_orbit_index": 0,
+          "A_members": [
+            62
+          ],
+          "weight": 1
+        },
+        {
+          "bit": 13,
+          "w": 2,
+          "field_orbit_index": 1,
+          "A_members": [
+            63,
+            67,
+            68,
+            87,
+            88,
+            92
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 14,
+          "w": 2,
+          "field_orbit_index": 2,
+          "A_members": [
+            64,
+            72,
+            74,
+            81,
+            83,
+            91
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 15,
+          "w": 2,
+          "field_orbit_index": 3,
+          "A_members": [
+            65,
+            75,
+            77,
+            78,
+            80,
+            90
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 16,
+          "w": 2,
+          "field_orbit_index": 4,
+          "A_members": [
+            66,
+            69,
+            73,
+            82,
+            86,
+            89
+          ],
+          "weight": 6
+        },
+        {
+          "bit": 17,
+          "w": 2,
+          "field_orbit_index": 5,
+          "A_members": [
+            70,
+            71,
+            76,
+            79,
+            84,
+            85
+          ],
+          "weight": 6
+        }
+      ],
+      "BB_compressed_bits_per_quotient_layer": 18,
+      "BB_quotient_layers": 5,
+      "BB_automatically_covered_zero_bits": [
+        0,
+        6,
+        12
+      ],
+      "BB_missing_multiple": 6,
+      "group_order": 2790,
+      "G0_order": 930,
+      "G0_nonidentity_involutions": 31,
+      "G0_nonselfinverse_pairs": 449,
+      "G0_zero_field_involutions": 1,
+      "G0_zero_field_inverse_pairs": 14,
+      "G0_nonzero_field_involutions": 30,
+      "G0_nonzero_field_inverse_pairs": 435,
+      "G0_involution_exponent": 15,
+      "G0_involution_exponent_mod_block_index": 0,
+      "cross_inverse_pairs": 930,
+      "cross_nonzero_field_pairs": 900,
+      "cross_zero_field_pairs": 30,
+      "layer_sizes": [
+        2790,
+        465,
+        93
+      ],
+      "n": 3348,
+      "edges": 11718,
+      "head_triangle_count": 31,
+      "head_triangle_edges": 93,
+      "HH_criterion": "At least one nonzero-field cross-w inverse pair AND at least one nonzero-field internal element.",
+      "legal_internal_compositions_and_counts": [
+        {
+          "cross_inverse_pairs_t": 1,
+          "internal_size": 4,
+          "internal_compositions": [
+            {
+              "internal_involutions": 4,
+              "internal_inverse_pairs": 0,
+              "legal_internal_choices": 31465,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 31465
+            },
+            {
+              "internal_involutions": 2,
+              "internal_inverse_pairs": 1,
+              "legal_internal_choices": 208785,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 208785
+            },
+            {
+              "internal_involutions": 0,
+              "internal_inverse_pairs": 2,
+              "legal_internal_choices": 100576,
+              "all_zero_field_internal_choices": 91,
+              "HH_compatible_internal_choices": 100485
+            }
+          ],
+          "HH_compatible_unordered_cross_pair_subsets": 900,
+          "HH_compatible_internal_choices": 340735,
+          "raw_HH_component_sets": 306661500,
+          "unique_nonzero_w1_anchor_normalized_x1_cross_choices": 30,
+          "t1_exact_normalized_component_sets": 10222050
+        },
+        {
+          "cross_inverse_pairs_t": 2,
+          "internal_size": 2,
+          "internal_compositions": [
+            {
+              "internal_involutions": 2,
+              "internal_inverse_pairs": 0,
+              "legal_internal_choices": 465,
+              "all_zero_field_internal_choices": 0,
+              "HH_compatible_internal_choices": 465
+            },
+            {
+              "internal_involutions": 0,
+              "internal_inverse_pairs": 1,
+              "legal_internal_choices": 449,
+              "all_zero_field_internal_choices": 14,
+              "HH_compatible_internal_choices": 435
+            }
+          ],
+          "HH_compatible_unordered_cross_pair_subsets": 431550,
+          "HH_compatible_internal_choices": 900,
+          "raw_HH_component_sets": 388395000
+        }
+      ],
+      "HH_excluded_t_with_no_internal_elements": [
+        3
+      ],
+      "t0_excluded_by_HH": true,
+      "t_greater_1_uniform_scalar_division_claimed": false,
+      "t2_scaling_nonfree_witness": null,
+      "profile_strata": [
+        {
+          "t": 1,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 4,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 27405
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 4,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 4060
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 189225
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 6090
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 13050
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 420
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 0,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 94395
+        },
+        {
+          "t": 1,
+          "internal_inverse_pairs": 2,
+          "internal_involutions": 0,
+          "internal_zero_field_pairs": 1,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 6090
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 435
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 435
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 30
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 0,
+          "internal_involutions": 2,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 1,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 30
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 0,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 0,
+          "additional_cross_nonzero_field_pairs": 1,
+          "internal_component_choice_count": 435
+        },
+        {
+          "t": 2,
+          "internal_inverse_pairs": 1,
+          "internal_involutions": 0,
+          "internal_zero_field_pairs": 0,
+          "internal_zero_field_involutions": 0,
+          "additional_cross_zero_field_pairs": 1,
+          "additional_cross_nonzero_field_pairs": 0,
+          "internal_component_choice_count": 435
+        }
+      ],
+      "profile_strata_count": 14,
+      "profile_strata_counts_by_t": {
+        "1": 8,
+        "2": 6
+      },
+      "profile_strata_are_uniform_or_exhaustive_samples": false,
+      "inverse_and_primitive_scalar_conjugation_checks": 2790
+    }
+  ],
+  "cpu_seconds": 0.032481738,
+  "scope": "Only p43,d8 and p31,d7; individual group inverses, scalar-conjugation and component counting. No graph expansion/BFS or candidate enumeration."
+}

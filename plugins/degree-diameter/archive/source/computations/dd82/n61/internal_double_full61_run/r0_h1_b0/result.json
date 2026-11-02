@@ -1,0 +1,57 @@
+{
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "58",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/internal_double_full61_run/r0_h1_b0/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/internal_double_full61_run/r0_h1_b0/proof.lrat"
+  ],
+  "exit_code": 20,
+  "wall_timeout": false,
+  "termination_signal": null,
+  "cpu_seconds": 4.012334,
+  "wall_seconds": 4.243435528129339,
+  "cpu_budget_seconds": 60,
+  "wall_budget_seconds": 90,
+  "cpu_affinity": [
+    1
+  ],
+  "threads": 1,
+  "memory_limit_bytes": 4294967296,
+  "per_file_limit_bytes": 536870912,
+  "status": "CHECKED_UNSAT_CASE",
+  "scope": "Complete original-A degree8 diameter2 order61 model with an internal double-defect vertex, in the selected one of three necessary types; the three types jointly cover that structural target, conditional on the cited local reductions and lossless labeling proof",
+  "case": "r0_h1_b0",
+  "n": 61,
+  "variables": 53046,
+  "clauses": 163721,
+  "solver_calls": 1,
+  "proof_checked": true,
+  "retained_internal_solver_state": false,
+  "proof_bytes": 11623492,
+  "mathematical_conclusion": "Exact saved case CNF has a checked contradiction; not whole-order61 exclusion.",
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/internal_double_full61_run/r0_h1_b0/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/internal_double_full61_run/r0_h1_b0/proof.lrat"
+    ],
+    "exit_code": 20,
+    "wall_timeout": false,
+    "termination_signal": null,
+    "cpu_seconds": 0.11327599999999999,
+    "wall_seconds": 0.16536862030625343,
+    "cpu_budget_seconds": 90,
+    "wall_budget_seconds": 120,
+    "cpu_affinity": [
+      1
+    ],
+    "threads": 1,
+    "memory_limit_bytes": 4294967296,
+    "per_file_limit_bytes": null,
+    "verified": true,
+    "scope": "Exact saved internal-double case input only."
+  }
+}

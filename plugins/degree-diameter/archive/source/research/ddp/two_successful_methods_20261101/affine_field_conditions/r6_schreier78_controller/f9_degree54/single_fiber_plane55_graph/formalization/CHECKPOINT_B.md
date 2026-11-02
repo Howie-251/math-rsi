@@ -1,0 +1,7 @@
+#55 concrete Lean checkpoint B: load path and complete graph binding
+
+ActualcompiledpinInverse_basis andpinInverse_left show eachsourceport's(a,b,t)→T_p(a,b,4a)+t ell_reversep map injective. Actualcompiledcontroller_zero_injective identifiesportfromtargetcontroller. Incommon_pin_index_unique, sourcegraph.Adjw(centeri) is symmetrized and converted by sourceadj_iff_forward; equalityofliteralendpoints givesport equality andpinMap equality; inverse/parametercodeforcesi=j. load_le_one followscard_le_one_iff, withno numericalreceipt/certificatepremise.
+
+The complete1539648literalgraph was independentlybound in../independent_acceptance/SUMMARY.json: allold1535274edgesexact,81immutableN54newvertices,4374newedges,nonewnew,degreehist54:52569/55:4374 andall81newrootBFSpredictionmatch. Formalizationdoesnotrescanlargefiles. check_recipe_binding.py is prepared to compareactualcompiledAudit's81typedcenter/newlabelrows againstproducerPARAMETERS andfreshindependentCENTER_PIN_BINDING.tsv afterfinalAuditcompiles.
+
+Onlyfinalsource54D3/nonD2 theoremremainsneeded tocompileF9PlaneClone55Exact andseparateAudit. NoexternalreviewPASSisassertedhere.

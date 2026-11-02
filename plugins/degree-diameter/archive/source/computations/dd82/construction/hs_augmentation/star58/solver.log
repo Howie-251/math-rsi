@@ -1,0 +1,132 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.2
+c clang++-Clang 19.1.2 (https://github.com/llvm/llvm-project 7ba7d8e2f7b6445b60679da826210cdde29eaf8b)
+c Jan  1 1980 00:00:00
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 60 seconds real time (due to '-t 60')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/star58/proof.lrat'
+c writing binary proof trace to '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/star58/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/star58/input.cnf'
+c opening file to read '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/star58/input.cnf'
+c found 'p cnf 3103 13928' header
+c parsed 13928 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c *  0.01  5  0 0   0    0    0  0% 0 13904 2156 69%
+c {  0.01  5  0 0   0    0    0  0% 0 13904 2156 69%
+c -  0.01  5 13 1   1  302  212 41% 5 9635 2156 69%
+c i  0.02  5 12 1  34  508  389 41% 6 9635 2126 69%
+c i  0.02  5 12 1  73  746  588 40% 6 9635 2099 68%
+c -  0.02  6 12 2  82  903  692 40% 6 9399 2099 68%
+c }  0.03  6 11 2  88 1000  758 40% 6 9399 2099 68%
+c [  0.03  6  0 2  88 1000  758  0% 0 9399 2099 68%
+c O  0.03  6 16 2  88 1003  761 53% 4 9399 2099 68%
+c i  0.04  6  7 2  88 1586 1159 42% 5 9399 2093 67%
+c -  0.04  6  7 3  88 1805  918 41% 5 9368 2093 67%
+c i  0.06  6  7 3  89 2743 1413 41% 6 9368 2048 66%
+c i  0.07  6  7 3  89 2998 1009  9% 6 9109 2021 65%
+c ]  0.07  6  7 3  89 3000 1011  9% 6 9109 2021 65%
+c {  0.07  6 11 3  89 3000 1011 61% 6 9109 2021 65%
+c F  0.07  6 11 3  89 3004 1014 61% 6 9109 2021 65%
+c -  0.07  6 11 4  89 3007  492 61% 6 8907 2021 65%
+c i  0.07  6 11 4  89 3026  500 60% 6 8907 2020 65%
+c i  0.07  6 11 4  89 3045  510 59% 6 8907 2019 65%
+c i  0.07  6 11 4  89 3060  520 58% 6 8907 2018 65%
+c 
+c  seconds  reductions  redundant irredundant
+c         MB    restarts       trail    variables
+c          level   conflicts       glue      remaining
+c 
+c i  0.07  6 11 4  89 3066  524 58% 6 8907 2000 64%
+c i  0.07  6 11 4  89 3077  533 58% 6 8907 1997 64%
+c i  0.07  6 11 4  89 3088  542 57% 6 8907 1996 64%
+c i  0.07  6 11 4  89 3093  546 57% 6 8907 1995 64%
+c i  0.07  6 10 4  89 3106  556 56% 6 8907 1952 63%
+c i  0.07  6 10 4  89 3107  556 56% 6 8907 1925 62%
+c }  0.07  6 10 4  89 3110  557 56% 6 8907 1903 61%
+c 0  0.07  6 10 4  89 3110  557 56% 6 8907 1903 61%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/star58/proof.lrat' closed
+c LRAT 7489 added clauses 41.06%
+c LRAT 10752 deleted clauses 58.94%
+c LRAT 538232 bytes (0.51 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.06   99.62% search
+c         0.04   62.37% stable
+c         0.02   36.41% unstable
+c         0.00    7.26% parse
+c         0.00    0.40% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.06   91.97% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               454        14.60 %  of conflicts
+c conflicts:                  3110     48009.39    per second
+c decisions:                  4304     66441.28    per second
+c fixed:                      1200        38.67 %  of all variables
+c learned:                    3039        97.72 %  per conflict
+c learned_lits:              43167       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                  13421        31.09 %  learned literals
+c minishrunken:               3279         7.60 %  learned literals
+c otfs:                         21         0.68 %  of conflict
+c propagations:             211808         3.27 M  per second
+c reduced:                     359        11.54 %  per conflict
+c rephased:                      2      1555.00    interval
+c restarts:                     89        34.94    interval
+c stabilizing:                   1        64.28 %  of conflicts
+c subsumed:                   1009         5.96 %  of all clauses
+c strengthened:                 20         0.12 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.07    seconds
+c total real time since initialization:            0.07    seconds
+c maximum resident set size of process:           10.39    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

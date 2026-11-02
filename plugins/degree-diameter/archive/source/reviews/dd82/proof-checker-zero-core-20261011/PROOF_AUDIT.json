@@ -1,0 +1,96 @@
+{
+  "audit_skill": "proof-checker",
+  "generated_at": "2026-10-11T09:22:41Z",
+  "agent_id": "/root/proof_review_zero_core",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "requested_fork_turns": "none",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_metadata_provenance": "requested route only; independent backend attestation unavailable",
+  "actual_backend_model": null,
+  "actual_backend_reasoning": null,
+  "reviewer_family": "openai",
+  "executor_model": "not separately attested",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Both submitted paper proofs are complete under actual legal order-59 graph hypotheses and global zero-row N15; strongest reviewed conclusion is m>=17 and T>=6. Same-family provisional paper review only.",
+  "trace_path": "reviews/dd82/proof-checker-zero-core-20261011",
+  "submitted_inputs": [
+    "proofs/dd82/n59/independent_zero_common_neighbors_20261011.md",
+    "proofs/dd82/n59/zero_core_pair_coverage_20261011.md"
+  ],
+  "dependency_review_scope": [
+    {
+      "path": "proofs/dd82/n59/n15_heavy_endpoints_avoid_two_triangles_20261011.md",
+      "read_scope": "complete",
+      "checked_scope": "Complete endpoint derivation and its stated intersecting-two-triangles consequence; only endpoint theorem load-bearing."
+    },
+    {
+      "path": "proofs/dd82/n59/nonzero_support_transport_20261011.md",
+      "read_scope": "complete",
+      "checked_scope": "Local transport, statements 1-3, finite support consequences. Imported fifth-trace formulas at lines 46-52 excluded."
+    },
+    {
+      "path": "proofs/dd82/FOUNDATIONS.md",
+      "read_scope": "complete file opened",
+      "checked_scope": "Sections 1-2, lines 17-43 only; order-64/65 sections not audited or used."
+    },
+    {
+      "path": "proofs/dd82/n59/zero_matching_cycle_contract_20261011.md",
+      "read_scope": "complete",
+      "checked_scope": "Exact N15 premise at line 3 only."
+    },
+    {
+      "path": "proofs/dd82/n59/single_triangle_normal_form_exclusion_20261011.md",
+      "read_scope": "lines 1-42",
+      "checked_scope": "Actual matrices and exact N15 definition at lines 13-25 only; no prior audit judgment or single-triangle theorem used."
+    },
+    {
+      "path": "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md",
+      "read_scope": "lines 1-64",
+      "checked_scope": "Notation Q2 at line 11 only; no trace or cycle result used."
+    }
+  ],
+  "details": {
+    "submitted_papers_audited": 2,
+    "top_level_claim_groups_audited": 8,
+    "obligations_total": 37,
+    "obligations_discharged": 37,
+    "explicit_assumption_obligations": [
+      "F05"
+    ],
+    "issues": [],
+    "counterexample_attempts": 10,
+    "verified_counterexamples": 0,
+    "unresolved_counterexample_candidates": 0,
+    "new_author_fixes": 0,
+    "analytic_interchanges": "not applicable",
+    "probability_modes": "not applicable",
+    "asymptotic_uniformity": "not applicable",
+    "dependency_dag": "acyclic",
+    "proof_mode": "finite paper derivations; no solver or formal certificate",
+    "source_mutation": "none"
+  },
+  "scope_limits": [
+    "Global N15 is assumed and not established for arbitrary order-59 graphs.",
+    "No H5 qualification or H5 exclusion is certified.",
+    "No exclusion of six or more triangles is certified.",
+    "No arbitrary order-59 exclusion or exact N(8,2) determination is certified.",
+    "Subsequent six-triangle or global-budget work is outside this audit.",
+    "No order-63-65 proof development, Lean verification, compilation, or graph enumeration performed."
+  ],
+  "task_overrides": [
+    "Markdown and JSON audit artifacts only.",
+    "No author, formal, or wiki edits.",
+    "No content fingerprints or artifact inventory products."
+  ],
+  "provenance_notes": [
+    "This is the parent-requested fresh reviewer; no recursive reviewer was launched.",
+    "Prior audit verdicts were not used as proof premises.",
+    "The skill workflow was adapted to the explicit no-rendering/no-compilation and review-only scope."
+  ]
+}

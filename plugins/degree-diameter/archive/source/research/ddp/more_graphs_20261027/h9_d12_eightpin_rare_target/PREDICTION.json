@@ -1,0 +1,14 @@
+{
+  "prediction_id":"EIGHTPIN_RARE_TARGET_FIRST_ON_42396",
+  "frozen_before_actual_checks":true,
+  "source_n":42396,
+  "source_m":245865,
+  "pool_indices":[103,577],
+  "prediction":"At least one currentlydegree-legal item yields a complete at-most-four-anchor extension under a first-anchor rule forced to cover its rarest mandatory-missing target.",
+  "first_anchor_rule":"Take the rarest mandatory-missing target by distinct availablecoverage masks. Every four-anchor solution contains a coverer. Restrict firstanchors to that coverer set; rank lexicographically by how many targets they cover in each increasing-rarity-count group, then totalcoverage and label; take at most32.",
+  "second_prefix_rule":"For each firstanchor, the second must cover the rarest remaining target. Rank candidates by the same rarity-group coverage on the residual, then residualcoverage and label; take at most16. The final at-most-two-anchor tail is exact for that fixedprefix.",
+  "finite_rule_limit":"First-coverer truncation and second-prefix selection are finite; no-hit is not full four-anchor impossibility.",
+  "acceptance":"Currentdegree legality and one nativeverify completefull-neighborR4. Keep all oldedges and updatebase for item2 after success.",
+  "budget":{"workers":1,"total_parent_plus_all_children_CPU_seconds":20,"per_item_prefix_search_CPU_seconds":5.0},
+  "no_extra":"No MIP,seeds,extraitems,350tenpin repeats,allsourceBFS,review or Lean. Ifhit append literalsteps preserving old57, one generatoredge-set dryrun; nohit leavesfamily unchanged."
+}

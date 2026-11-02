@@ -1,0 +1,139 @@
+{
+  "updated_UTC": "2026-10-27 15:27:57 UTC",
+  "rows": [
+    {
+      "id": "ddp-exoo72-critical-route-intuition-20261027",
+      "title": "Exoo72紧路线与两类halfturn删边限制：强预测仅部分成立",
+      "family": "source-edge deletion and vertex insertion",
+      "record_type": "known-source-and-controlled-route-analysis",
+      "target_Delta": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "n": {
+        "actual": 72,
+        "hypothetical": null
+      },
+      "actual_D": 3,
+      "actual_graph_Delta": 5,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "ActualExoo72source;allshortsimplepath supports andsixC12vertexorbits/16edgeorbits. No sourceBFS/candidategraphgrid.",
+      "failure_or_result": "无3/4圈，1080个唯一三步距离3点对。所有edge都有6-disjoint-critical-pairs的预测被反驳，仅两个内部halfturn轨道成立，其余matching3..5。",
+      "lesson_and_restart_condition": "新root三步修复旧旧对必须有端点在S，故S要vertexcover所有被删边critical pairs；只将实际有6-matching证书的边排除，不把其它轨道自动关掉。",
+      "unclosed_gap": "一般(5,3)超过72仍未解；此受限范围不是全题，完整Lean实例0。",
+      "outcome_class": "COMPLETE_FINITE_SCOPE_NO_NEW_RECORD",
+      "wiki_verdict": "partial",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/RESULT.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CRITICAL_MATCHING_CERTIFICATES.json"
+      ],
+      "actual_D_scope": "KnownpublicExoo72source;targetedshortpathsupportdiagnosis,no repeated sourceBFS.",
+      "other_metrics": {
+        "unique_distance3_pairs": 1080,
+        "vertex_orbits": 6,
+        "edge_orbits": 16,
+        "uniform_six_critical_pair_prediction": "REFUTED",
+        "source_BFS": 0,
+        "CPU_seconds": 0.146835983
+      }
+    },
+    {
+      "id": "ddp-exoo72-minimal73-rootcover-20261027",
+      "title": "Exoo72最小73点插入：4992120项均无root三步覆盖",
+      "family": "source-edge deletion and vertex insertion",
+      "record_type": "necessary-root-coverage-model-no-final-graph",
+      "target_Delta": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "n": {
+        "actual": null,
+        "hypothetical": 73
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "Fixedactual72source;delete3pairwisedisjointedges;joinnewrootto5of6endpoints.832020matchingtriples×6omittedends,complete.",
+      "failure_or_result": "4992120项全查：连原图R2并覆盖72旧点的必要条件也0通过；故删除后新root条件0。0图、0候选BFS、0旧旧后筛；总编译/计算1.557CPU秒。",
+      "lesson_and_restart_condition": "停止这一操作，不盲加删边数/seed；旧源是否所有增点都无望未由此证明。",
+      "unclosed_gap": "一般(5,3)超过72仍未解；此受限范围不是全题，完整Lean实例0。",
+      "outcome_class": "COMPLETE_FINITE_SCOPE_NO_NEW_RECORD",
+      "wiki_verdict": "no",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/root_cover_preflight/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/root_cover_preflight/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/root_cover_preflight/RESULT.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/root_cover_preflight/enumerate.cpp"
+      ],
+      "other_metrics": {
+        "root_operations": 4992120,
+        "matching_triples": 832020,
+        "necessary_original_R2_cover": 0,
+        "newgraphs_generated": 0,
+        "oldold_checked": false,
+        "candidate_BFS": 0,
+        "native_CPU_seconds": 0.014127,
+        "total_children_CPU_seconds": 1.5569399999999998
+      }
+    },
+    {
+      "id": "ddp-exoo72-balanced-c14-rule-20261027",
+      "title": "Exoo72整体循环规则：84点失败如解析预测，固定放大规则关闭",
+      "family": "ordinary cyclic voltage covers",
+      "record_type": "explicit-failed-candidate-graph",
+      "target_Delta": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "n": {
+        "actual": 84,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_graph_Delta": 5,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "Sixbase topology+two sharedhalfturn matchings;14crossvoltages frozenbalanced integers. OneC14lift generated;symbolicbounds separatelyforfreevoltagesandliteralrule.",
+      "failure_or_result": "完整84点210边simpleconnected5regular图，六轨道代表R3遗漏12/13/11/13/13/12；root0自纤维准确缺2/6/8/12。D至少4、精确D未知，无普通全图坏对数。",
+      "lesson_and_restart_condition": "源h6用偶数偏移补位；C14的h7重复已有奇数偏移。固定balanced偶数lift>72全闭；自由电压m>=16由raw14容量排除，自由C14仍开放且未搜索，不自动进入难点solver。",
+      "unclosed_gap": "一般(5,3)超过72仍未解；此受限范围不是全题，完整Lean实例0。",
+      "outcome_class": "COMPLETE_FINITE_SCOPE_NO_NEW_RECORD",
+      "wiki_verdict": "no",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CYCLIC_REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CYCLIC_PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CYCLIC_RULE.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CYCLIC_CAPACITY.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/CYCLIC_RESULT.json",
+        "research/ddp/more_graphs_20261027/d5_exoo72_extension/source_analysis/C14.edges"
+      ],
+      "actual_D_scope": "Exactcyclicorbitroot endpoints onlythroughradius3;D>=4,exactDnotcomputed.",
+      "other_metrics": {
+        "candidate_graphs_generated": 1,
+        "new_lower_bounds": 0,
+        "diameter_lower_bound": 4,
+        "representative_root_R3_missing": [
+          12,
+          13,
+          11,
+          13,
+          13,
+          12
+        ],
+        "root0_self_missing": [
+          2,
+          6,
+          8,
+          12
+        ],
+        "prediction": "SUPPORTED",
+        "raw_min_route_capacity": 14,
+        "free_min_form_capacity": 14,
+        "literal_min_form_capacity": 12,
+        "source_BFS": 0,
+        "candidate_BFS": 0,
+        "CPU_seconds": 0.0031486240000000026
+      }
+    }
+  ]
+}

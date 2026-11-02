@@ -1,0 +1,367 @@
+---
+type: experiment
+node_id: exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029
+title: "Full-F5 literal3750/37500: independently validated20regular D3; latest-global novelty pending"
+idea_id: "idea:ddp-q3-three-step-plane-pencil31"
+verdict: yes
+confidence: high
+date: "2026-10-29"
+hardware: ""
+duration: ""
+provenance: "research/ddp/refresh_20261029/f5_full_d20_D3/EXECUTION_SCOPE.md; research/ddp/refresh_20261029/f5_full_d20_D3/PARAMETERS.json; research/ddp/refresh_20261029/f5_full_d20_D3/generate.py; research/ddp/refresh_20261029/f5_full_d20_D3/GENERATION_RESULT.json; research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges; research/ddp/refresh_20261029/f5_full_d20_D3/independent_verify.py; research/ddp/refresh_20261029/f5_full_d20_D3/INDEPENDENT_VALIDATION.json; research/ddp/refresh_20261029/f5_full_d20_D3/REPRODUCTION_CHECK.json; research/ddp/refresh_20261029/f5_full_d20_D3/README.md; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_BINDING_PLAN.md; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_HANDLE.json; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_LOG.txt; research/ddp/refresh_20261029/f5_full_d20_D3/COMPILE_RESULT.json; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_BINDING_SNAPSHOT.lean; research/ddp/refresh_20261029/f5_full_d20_D3/RESULT_OVERVIEW.json; research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/RESULT.json; research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/REPORT.md; research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/PRIMARY_SOURCES.json; reviews/ddp/f5_full3750_20261029.DISPOSITION.md; reviews/ddp/f5_full3750_20261029.response.json; reviews/ddp/f5_full3750_20261029.prompt.md; formal/DegreeDiameter/Portfolio/F5Graph3750.lean; research/ddp/refresh_20261029/f5_complementary_triples/PROOF_SCOPE.md; research/ddp/refresh_20261029/f5_complementary_triples/ROOT_NB3_BINDING.json; research/ddp/refresh_20261029/f5_complementary_triples/MATRICES_AND_PENCILS.json; research/ddp/refresh_20261029/f5_full_d20_D3/INVERSE_COMPILE_RESULT.json; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_INVERSE_SNAPSHOT.lean; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INVERSE_COMPILE_LOG.txt; research/ddp/refresh_20261029/f5_full_d20_D3/FINAL_COMPILE_RESULT.json; research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json; research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.md; research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_SKELETON.md; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INPUT_BINDING_CHECK.json; research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_FINAL_SOURCES; formal/DegreeDiameter/Portfolio/F5Graph3750Exact.lean; formal/DegreeDiameter/Portfolio/F5Graph3750Diameter.lean; research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PREDICTION_AND_SCOPE.md; research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/RESULT.json; research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/EDGE_CRITICALITY.md; research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/CONTROLLER_CERTIFICATE.json; research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PENCIL_REDUNDANCY.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/SCOPE.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/RESULT.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/REPORT.md; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/TERMINAL.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_1_SEARCH_RECEIPT.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_2_RECEIPT.json; research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_3_RECEIPT.json; research/ddp/refresh_20261029/F5_STRUCTURAL_TURN_RESULT.json; research/ddp/refresh_20261029/controller41_transfer_gate/PREDICTION.md; research/ddp/refresh_20261029/controller41_transfer_gate/REPORT.md; research/ddp/refresh_20261029/controller41_transfer_gate/RESULT.json; research/ddp/refresh_20261029/controller41_transfer_gate/TERMINAL.json; research/ddp/refresh_20261029/controller41_transfer_gate/check_gate.py; research/ddp/breadth_20261027_wave6/cyclic_cover369/base41.edges"
+added: 2026-10-29T20:06:57Z
+tags: ["ddp", "method-ledger"]
+---
+
+# Full-F5 literal3750/37500: independently validated20regular D3; latest-global novelty pending
+
+**verdict:** `yes`  ·  **confidence:** `high`  ·  tests `idea:ddp-q3-three-step-plane-pencil31`
+
+## Metrics
+**对象层级：** candidate_graph_or_family
+
+**目标与阶数：** (20,3)；L=2783；candidate_graph_or_family n=3750
+
+**距目标的证据：** 实际D=3，目标D=3；普通无序坏对=0；Independent all3750-root BFS from literal edge list only; no source maps/balls; exact global D3.；实际simple/connected/20regular/3750/37500，独立all3750roots PASS、exactD3、普通>3无序对0；生成CPU0.106811736、独验CPU1.824719026。3750超过已核对published2783多967，但bounded三primary没有取得CW最新内容、未穷尽全网，latest-global novelty pending。新跨模回SUCCESS/ACCEPT_WITH_QUALIFICATIONS，静态审阅不是第二次BFS。固定Fin3750参数公式图的完整Lean见证现为1：阶数3750、全顶点degree<=20、真实Walk定义恰D3均kernel通过；两个无额外前提定理仅用三项标准公理。旧103图Lean仍0。 后续固定源纯删边诊断证明37500边全部D3critical：120定向控制弧均有远端唯一3path并且36噪声词可逆；任非空纯删边保全3750点都会失D3。未实际生成删边图或重跑源BFS，不排重接/加入新边。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "mathematically_validated_complete_graph": true,
+  "validated_example_orders": [
+    3750
+  ],
+  "mathematical_graph_validity": "ACCEPTED",
+  "actual_n": 3750,
+  "actual_m": 37500,
+  "max_degree": 20,
+  "min_degree": 20,
+  "diameter_exact": 3,
+  "simple": true,
+  "connected": true,
+  "roots_checked": 3750,
+  "ordinary_bad_unordered_pairs_D3": 0,
+  "ordered_distance_counts_including_self": [
+    3750,
+    75000,
+    1177500,
+    12806250
+  ],
+  "ordinary_unordered_distance_counts": {
+    "1": 37500,
+    "2": 588750,
+    "3": 6403125
+  },
+  "generation_CPU_seconds": 0.10681173599999999,
+  "independent_validation_CPU_seconds": 1.8247190260000001,
+  "reproduction_CPU_seconds": 0.12690153099999998,
+  "CPU_sum_generation_validation_reproduction": 2.058432293,
+  "original103_graphs_reverified": false,
+  "compared_published_lower_bound": 2783,
+  "compared_published_as_of": "September2026",
+  "baseline_checked_date": "2026-10-29",
+  "improvement_versus_compared_published_bound": 967,
+  "latest_global_record_confirmed": false,
+  "public_adoption": false,
+  "novelty_status": "bounded-published-comparison-positive-latest-global-unconfirmed",
+  "primary_families_consulted": 3,
+  "primary_families_with_numeric_contents": 2,
+  "current_CW_value": null,
+  "exhaustive_literature_search": false,
+  "confirmed_publictable_record": false,
+  "legacy_record_counter_flag_note": "No new_lower_bound_mathematically_verified flag is set: that legacy ledger flag counts confirmed public-table improvements. This graph is mathematically validated separately.",
+  "review_status": "SUCCESS",
+  "review_verdict": "ACCEPT_WITH_QUALIFICATIONS",
+  "review_requested_model": "gemini-3.8-flash-high",
+  "review_returned_model": "gemini-3.8-flash-high",
+  "review_effort": "high",
+  "review_thread": "34e8ddba-f897-4406-9cd4-4ff747eb9557",
+  "review_code_execution": false,
+  "formal_compiled_module": "formal/DegreeDiameter/Portfolio/F5Graph3750Exact.lean",
+  "formal_compiled_source_snapshot": "research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_FINAL_SOURCES",
+  "formal_snapshot_scope": "Complete fixed Fin3750 formula graph: order3750, all-vertex degree<=20 and exact diameter3 in the project true-Walk definition.",
+  "formal_completed_finite_checks": [
+    "120 controller reverse ports",
+    "controller no loops and distinct ports",
+    "root20 distinct forward neighbors and adjacency",
+    "2500 fiberStep_reverse inputs",
+    "forward_reverse for arbitrary Fin3750 vertices",
+    "adjacency iff forward generators",
+    "degree_le_twenty for all vertices",
+    "900 controller cells",
+    "4500 NB decoder inputs",
+    "500 adjacent decoder inputs",
+    "arbitrary u,v actual graph Walk of length<=3",
+    "actual vertices0 and6 have no Walk of length<=2",
+    "closed concrete_order_degree_and_D3 and diameter_exact_three_in_project_definition"
+  ],
+  "formal_actual_compile_exit": 0,
+  "complete_Lean_graph_instance": true,
+  "formal_degree_diameter_theorem_completed": true,
+  "formal_inverse_inputs": 2500,
+  "formal_forward_reverse_all_vertices": true,
+  "formal_adjacency_iff_forward_generators": true,
+  "formal_maximum_degree_at_most20_all_vertices": true,
+  "formal_full_regular_degree20_proved": false,
+  "formal_ediam_proved": false,
+  "formal_actual_compile_wall_seconds": 7.524472177028656,
+  "complete_deterministic_formula_Lean_graph_instances": 1,
+  "formal_DiameterAtMost_walk_definition_proved": true,
+  "formal_exact_diameter_three_proved": true,
+  "literal_edge_text_equality_Lean": false,
+  "exact20regular_Lean": false,
+  "formal_mathlib_ediam_theorem_claimed": false,
+  "formal_concrete_construction_theorem": "DegreeDiameter.Portfolio.F5Graph3750.concrete_order_degree_and_D3",
+  "formal_exact_diameter_theorem": "DegreeDiameter.Portfolio.F5Graph3750.diameter_exact_three_in_project_definition",
+  "formal_controller_cells": 900,
+  "formal_NB_decoder_checks": 4500,
+  "formal_adjacent_decoder_checks": 500,
+  "formal_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formal_sorry_used": false,
+  "formal_native_decide_used": false,
+  "formal_new_axioms_used": false,
+  "proof_checker_provenance": "research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json",
+  "verified_claim_id": "claim:ddp-f5-fin3750-order-degree20-exactd3-20261029",
+  "formal_final_decoder_batch": {
+    "status": "COMPLETE",
+    "records": [
+      {
+        "module": "F5Graph3750NBDecoderCertificate",
+        "pid": 2448043,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750NBDecoderCertificate.log"
+      },
+      {
+        "module": "F5Graph3750AdjacentCertificate",
+        "pid": 2460213,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750AdjacentCertificate.log"
+      },
+      {
+        "module": "F5Graph3750Diameter",
+        "pid": 2463954,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750Diameter.log"
+      }
+    ],
+    "wall_seconds": 59.081401117146015,
+    "CPU_seconds": 59.373934999999996,
+    "CPU_budget_seconds": 110,
+    "all_modules_compiled": true
+  },
+  "formal_final_exact_batch": {
+    "status": "COMPLETE",
+    "records": [
+      {
+        "module": "F5Graph3750Exact",
+        "pid": 2482509,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_EXACT_THREE_F5Graph3750Exact.log"
+      }
+    ],
+    "wall_seconds": 2.869178894907236,
+    "CPU_seconds": 2.7793949999999996,
+    "CPU_budget_seconds": 110,
+    "all_modules_compiled": true
+  },
+  "original103_complete_Lean_graph_instances": 0,
+  "all_edges_critical_under_pure_deletion": true,
+  "edge_criticality_Lean_proved": false,
+  "edge_criticality_producer_CPU_seconds": {
+    "controller_and_rank": 0.002462428,
+    "pencil_summary": 0.003276951
+  },
+  "bounded_20D3_novelty_followup": {
+    "new_accesses_or_queries": 3,
+    "new_numeric_primary_contents_obtained": 0,
+    "current_maintained_value": null,
+    "entry_revision_date": null,
+    "latest_global_record_confirmed": false,
+    "old_baseline_receipts_unchanged": true,
+    "additional_requests_queued": false,
+    "absence_is_not_a_novelty_proof": true
+  }
+}
+```
+
+
+
+**从属变体：**
+```json
+[
+  {
+    "label": "all37500_edges_D3critical_under_pure_deletion_20261029",
+    "status": "ALL_37500_EDGES_FORCED_FOR_DIAMETER3_UNDER_PURE_DELETION",
+    "source_n": 3750,
+    "source_m": 37500,
+    "target_degree_controls": [
+      19,
+      18
+    ],
+    "target_D": 3,
+    "prediction": "SUPPORTED",
+    "exact_scope": "Keep all3750 vertices of this fixed20regular graph and delete any nonempty subset of existing edges; no added edge or rewiring.",
+    "oriented_controller_darts": 120,
+    "covered_darts": 120,
+    "unique_distance3_controller_pairs": 258,
+    "invertible_noise_word_classes": 36,
+    "all37500_undirected_edges_critical": true,
+    "proof_mechanism": "Unique length3 control path and bijective noise3tuple endpoint map give a distant unique<=3path through every specified lifted edge.",
+    "explicit_witness": {
+      "removed_edge": [
+        0,
+        2250
+      ],
+      "source": 0,
+      "target": 625,
+      "unique_path": [
+        0,
+        2250,
+        3625,
+        625
+      ],
+      "controller_path": [
+        0,
+        18,
+        29,
+        5
+      ],
+      "ports": [
+        0,
+        2,
+        1
+      ],
+      "noise_parameters": [
+        0,
+        0,
+        0
+      ],
+      "argument": "Control distance is3 and there is a unique length3 control path. Its noise matrix is invertible, so the all-zero lift is the only path of length<=3 between these endpoints."
+    },
+    "source_BFS_runs": 0,
+    "edge_deletion_graphs_generated": 0,
+    "new_solver_calls": 0,
+    "producer_controller_and_rank_CPU_seconds": 0.002462427999999999,
+    "producer_pencil_summary_CPU_seconds": 0.003276951,
+    "formalized_in_Lean": false,
+    "new_Lean_graph_instances": 0,
+    "not_excluded": [
+      "rewiring or adding new edges",
+      "changing controller or relation rule",
+      "removing vertices",
+      "other3750-vertex degree19 graphs"
+    ],
+    "evidence_paths": [
+      "research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PREDICTION_AND_SCOPE.md",
+      "research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/RESULT.json",
+      "research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/EDGE_CRITICALITY.md",
+      "research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/CONTROLLER_CERTIFICATE.json",
+      "research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PENCIL_REDUNDANCY.json"
+    ]
+  },
+  {
+    "label": "bounded_three_access_20D3_followup_pending_20261029",
+    "status": "BOUNDED_FOLLOWUP_STOPPED_MAINTAINED_VALUE_PENDING",
+    "new_accesses_or_queries": 3,
+    "new_numeric_primary_contents": 0,
+    "current_maintained_value": null,
+    "latest_global_record_confirmed": false,
+    "inherited_numerical_comparison": {
+      "order": 2783,
+      "asof": "September2026",
+      "difference": 967
+    },
+    "observation_scope": "No maintained20D3 numeric contents obtained; no inference of absent earlier3750 construction.",
+    "new_graphs": 0,
+    "new_BFS": 0,
+    "new_Lean_instances": 0,
+    "evidence_paths": [
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/SCOPE.json",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/RESULT.json",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/REPORT.md",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/TERMINAL.json",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_1_SEARCH_RECEIPT.json",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_2_RECEIPT.json",
+      "research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_3_RECEIPT.json"
+    ]
+  },
+  {
+    "label": "allwright41_fixed_affine_line_controller_triangle_obstruction_20261029",
+    "status": "REJECTED_AT_FIRST_TRIANGLE_FREE_VERTEX",
+    "object_level": "literal_known_controller_gate",
+    "source": "research/ddp/breadth_20261027_wave6/cyclic_cover369/base41.edges",
+    "source_order": 41,
+    "source_edges": 82,
+    "source_degree": 4,
+    "inherited_source_diameter": 3,
+    "source_credit": "Allwright Graph1(a), Comellas-maintained literal adjacency.",
+    "vertices_checked": 2,
+    "first_triangle_free_vertex": 1,
+    "neighbors": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "edges_inside_neighbor_set": [],
+    "reasoning": "At a triangle-free controller vertex there is no3-step return; the four2-step edge/reverse returns in this affine-line rule cover at most1+4(q-1) fiber points.",
+    "self_fiber_capacity_F5": {
+      "upper_bound": 17,
+      "required": 125
+    },
+    "self_fiber_capacity_F4": {
+      "upper_bound": 13,
+      "required": 64
+    },
+    "proposed_lifts": [
+      {
+        "field": "F5",
+        "order": 5125,
+        "degree_bound": 20,
+        "D_target": 3
+      },
+      {
+        "field": "F4",
+        "order": 2624,
+        "degree_bound": 16,
+        "D_target": 3
+      }
+    ],
+    "nb3_ordered_pairs_checked": 0,
+    "bfs_runs": 0,
+    "lift_graphs_generated": 0,
+    "other_controllers_checked": 0,
+    "CPU_seconds": 0.00032195200000000035,
+    "excluded_scope": "This literal41 controller with the proposed q-point affine-line relation onFq^3 fibers.",
+    "not_excluded": [
+      "Other41-vertex controllers",
+      "Other fiber relations"
+    ],
+    "old_C9_ordinary_cover_scope_is_different": true,
+    "stopped_after_first_obstruction": true
+  }
+]
+```
+
+**原始证据：** [research/ddp/refresh_20261029/f5_full_d20_D3/EXECUTION_SCOPE.md](../../research/ddp/refresh_20261029/f5_full_d20_D3/EXECUTION_SCOPE.md)；[research/ddp/refresh_20261029/f5_full_d20_D3/PARAMETERS.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/PARAMETERS.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/generate.py](../../research/ddp/refresh_20261029/f5_full_d20_D3/generate.py)；[research/ddp/refresh_20261029/f5_full_d20_D3/GENERATION_RESULT.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/GENERATION_RESULT.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges](../../research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges)；[research/ddp/refresh_20261029/f5_full_d20_D3/independent_verify.py](../../research/ddp/refresh_20261029/f5_full_d20_D3/independent_verify.py)；[research/ddp/refresh_20261029/f5_full_d20_D3/INDEPENDENT_VALIDATION.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/INDEPENDENT_VALIDATION.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/REPRODUCTION_CHECK.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/REPRODUCTION_CHECK.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/README.md](../../research/ddp/refresh_20261029/f5_full_d20_D3/README.md)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_BINDING_PLAN.md](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_BINDING_PLAN.md)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_HANDLE.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_HANDLE.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_LOG.txt](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILE_LOG.txt)；[research/ddp/refresh_20261029/f5_full_d20_D3/COMPILE_RESULT.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/COMPILE_RESULT.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_BINDING_SNAPSHOT.lean](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_BINDING_SNAPSHOT.lean)；[research/ddp/refresh_20261029/f5_full_d20_D3/RESULT_OVERVIEW.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/RESULT_OVERVIEW.json)；[research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/RESULT.json](../../research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/RESULT.json)；[research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/REPORT.md](../../research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/REPORT.md)；[research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/PRIMARY_SOURCES.json](../../research/ddp/refresh_20261029/f5_complementary_triples/baseline_check/PRIMARY_SOURCES.json)；[reviews/ddp/f5_full3750_20261029.DISPOSITION.md](../../reviews/ddp/f5_full3750_20261029.DISPOSITION.md)；[reviews/ddp/f5_full3750_20261029.response.json](../../reviews/ddp/f5_full3750_20261029.response.json)；[reviews/ddp/f5_full3750_20261029.prompt.md](../../reviews/ddp/f5_full3750_20261029.prompt.md)；[formal/DegreeDiameter/Portfolio/F5Graph3750.lean](../../formal/DegreeDiameter/Portfolio/F5Graph3750.lean)；[research/ddp/refresh_20261029/f5_complementary_triples/PROOF_SCOPE.md](../../research/ddp/refresh_20261029/f5_complementary_triples/PROOF_SCOPE.md)；[research/ddp/refresh_20261029/f5_complementary_triples/ROOT_NB3_BINDING.json](../../research/ddp/refresh_20261029/f5_complementary_triples/ROOT_NB3_BINDING.json)；[research/ddp/refresh_20261029/f5_complementary_triples/MATRICES_AND_PENCILS.json](../../research/ddp/refresh_20261029/f5_complementary_triples/MATRICES_AND_PENCILS.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/INVERSE_COMPILE_RESULT.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/INVERSE_COMPILE_RESULT.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_INVERSE_SNAPSHOT.lean](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_COMPILED_INVERSE_SNAPSHOT.lean)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INVERSE_COMPILE_LOG.txt](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INVERSE_COMPILE_LOG.txt)；[research/ddp/refresh_20261029/f5_full_d20_D3/FINAL_COMPILE_RESULT.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/FINAL_COMPILE_RESULT.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.md](../../research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.md)；[research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_SKELETON.md](../../research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_SKELETON.md)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INPUT_BINDING_CHECK.json](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_INPUT_BINDING_CHECK.json)；[research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_FINAL_SOURCES](../../research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_FINAL_SOURCES)；[formal/DegreeDiameter/Portfolio/F5Graph3750Exact.lean](../../formal/DegreeDiameter/Portfolio/F5Graph3750Exact.lean)；[formal/DegreeDiameter/Portfolio/F5Graph3750Diameter.lean](../../formal/DegreeDiameter/Portfolio/F5Graph3750Diameter.lean)；[research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PREDICTION_AND_SCOPE.md](../../research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PREDICTION_AND_SCOPE.md)；[research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/RESULT.json](../../research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/RESULT.json)；[research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/EDGE_CRITICALITY.md](../../research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/EDGE_CRITICALITY.md)；[research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/CONTROLLER_CERTIFICATE.json](../../research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/CONTROLLER_CERTIFICATE.json)；[research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PENCIL_REDUNDANCY.json](../../research/ddp/refresh_20261029/f5_d20_edge_criticality_20261029/PENCIL_REDUNDANCY.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/SCOPE.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/SCOPE.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/RESULT.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/RESULT.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/REPORT.md](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/REPORT.md)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/TERMINAL.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/TERMINAL.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_1_SEARCH_RECEIPT.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_1_SEARCH_RECEIPT.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_2_RECEIPT.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_2_RECEIPT.json)；[research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_3_RECEIPT.json](../../research/ddp/refresh_20261029/f5_complementary_triples/20D3_targeted_followup_20261029/ACCESS_3_RECEIPT.json)；[research/ddp/refresh_20261029/F5_STRUCTURAL_TURN_RESULT.json](../../research/ddp/refresh_20261029/F5_STRUCTURAL_TURN_RESULT.json)；[research/ddp/refresh_20261029/controller41_transfer_gate/PREDICTION.md](../../research/ddp/refresh_20261029/controller41_transfer_gate/PREDICTION.md)；[research/ddp/refresh_20261029/controller41_transfer_gate/REPORT.md](../../research/ddp/refresh_20261029/controller41_transfer_gate/REPORT.md)；[research/ddp/refresh_20261029/controller41_transfer_gate/RESULT.json](../../research/ddp/refresh_20261029/controller41_transfer_gate/RESULT.json)；[research/ddp/refresh_20261029/controller41_transfer_gate/TERMINAL.json](../../research/ddp/refresh_20261029/controller41_transfer_gate/TERMINAL.json)；[research/ddp/refresh_20261029/controller41_transfer_gate/check_gate.py](../../research/ddp/refresh_20261029/controller41_transfer_gate/check_gate.py)；[research/ddp/breadth_20261027_wave6/cyclic_cover369/base41.edges](../../research/ddp/breadth_20261027_wave6/cyclic_cover369/base41.edges)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 固定原source30 controller、四F5互补方向矩阵、全部F5五值噪声，实际完整边表3750/37500。生成定义／度数生产检查后独立代理仅读边表重建邻接、全部3750根验D3。不是旧1920复验、10度限噪声样本或仅条件图。公开比较仅本次实际读到的September2026 published2783；最新global未确认。
+
+**正向保证：** 字面3750图全部3750根独立BFS已实际通过，数学合法性不再只是局部／条件证书。；完整参数、标准库generator及独立edge-list verifier已保存，生成器dry-run边集相等PASS，未重复旧103图。；来源Mizuno F4 controller/框架与本项目F5参数变更署名分列；published比较与latest-global新颖性分列。；proof-checker审计PASS且最终kernel回执齐备：具体确定性公式图满足N(20,3)>=3750的数学见证；不以论文或模型意见替代kernel。
+
+**仍未完成：** 最新全球纪录／公开采用仍未确认。固定参数公式图的完整order/degree<=20/恰D3 Lean见证已完成1例。Lean未证明ASCII边表解析等同性、恰20正则或mathlib字面ediam等式；这些不是本次公式图见证的缺失前提。旧103图Lean仍0，整个Goal不据此完成。
+
+**启发与重启依据：** 保存具体固定参数公式图的kernel见证与最新global novelty分账。Goal允许确定性生成器及字面参数，故无需另加Lean文本parser门才接受本见证；不称世界纪录／全局最优，不重编旧源或复验旧103图。；Allwright literal41作为同类仿射线controller的迁移在顶点1无triangle处被self-fiber短路容量17<125(F5)/13<64(F4)阻断；停止这个实际source，不续NB3、改邻接或其它controller。此域不同于旧C9普通覆盖，不混作旧排除。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

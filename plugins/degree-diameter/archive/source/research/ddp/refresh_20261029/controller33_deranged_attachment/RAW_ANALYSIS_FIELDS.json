@@ -1,0 +1,101 @@
+{
+  "status": "COMPLETE_160_RAW_GATE_NO_PASS",
+  "record_type": "source30-derived-controller33-attachment-variant",
+  "scope": "Exactly80 oldtriangle/cut settings times two fixed-point-free3cycles;160 literal33controllers and intended64-fiber/4branch D3 lifts.",
+  "main_result": {
+    "status": "COMPLETE_160_RAW_GATE_NO_PASS",
+    "structural_predictions": "SUPPORTED",
+    "cut_pair_repair_prediction": "SUPPORTED",
+    "joint_existence_prediction": "REFUTED",
+    "controller_candidates_generated": 160,
+    "raw_NB3_candidates_checked": 160,
+    "distinct_literal_controllers": 160,
+    "pass_count": 0,
+    "failed_count": 160,
+    "untested_count": 0,
+    "cut_pair_paths_checked": 480,
+    "cut_pair_path_failures": [],
+    "cut_pair_actual_NB3_count_histogram": {
+      "2": 480
+    },
+    "first_missing_class_histogram": {
+      "old-old": 132,
+      "new-old": 28
+    },
+    "all_missing_class_occurrence_counts": {
+      "old-old": 10272,
+      "new-old": 6792
+    },
+    "missing_ordered_count_histogram": {
+      "90": 12,
+      "92": 12,
+      "96": 14,
+      "98": 24,
+      "102": 12,
+      "104": 18,
+      "108": 12,
+      "114": 6,
+      "120": 12,
+      "122": 24,
+      "124": 12,
+      "126": 2
+    },
+    "hypothetical_target_n": 2112,
+    "target_Delta": 16,
+    "target_D": 3,
+    "actual_fiber_target_graphs": 0,
+    "actual_fiber_target_n": null,
+    "actual_fiber_target_D": null,
+    "controller_or_source_BFS": 0,
+    "new_field_matrix_search": 0,
+    "solver_calls": 0,
+    "record_count": 0,
+    "other_S3_permutation_cases_executed": 0,
+    "cpu_seconds": 0.11984576899999999,
+    "wall_seconds": 0.12161502987146378,
+    "pid": 1298919,
+    "budget_cpu_seconds": 20
+  },
+  "saved_counterexample_diagnostic": {
+    "status": "ALL_FIRST_MISSES_STRICTLY_CAPACITY_BLOCKED",
+    "saved_cases_read": 160,
+    "firstmissing_pairs_only": 160,
+    "length2_path_count_histogram": {
+      "0": 134,
+      "1": 26
+    },
+    "k_at_least4_count": 0,
+    "all_k_less4": true,
+    "bound_per_candidate": "atmost16*k<64 endpoints within3 for any4branch/fiber64 lift; no3route and noadjedge per savedgate",
+    "arbitrary_maps_offsets_allowed": true,
+    "newgraphs": 0,
+    "BFS": 0,
+    "full_NB3_recomputation": 0,
+    "all_missing_pairs_enumerated": 0,
+    "cpu_seconds": 0.007956368999999998,
+    "pid": 1317358
+  },
+  "prediction_disposition": {
+    "cutpair_actual_NB3_repair": "SUPPORTED480/480",
+    "global_raw_NB3_existence": "REFUTED0/160"
+  },
+  "stronger_closed_scope": "All160 controllers have a savednonadjacent pair withno3walk andk\u22641 twowalk; arbitrary4branch-per-arc/64fiber relations cannotcover64 endpoints within3, evenwithoffsets.",
+  "lesson": "Supplying3routesfor all directly cut endpoint pairs fixes that localobstruction butdoesnot ensurecoverageof otherold-old/new-old pairs. Stopthisfixedattachmentfamily withoutscoreoptimization.",
+  "unclosed_gap": "Othercontrolleroperations, matricesonothercontrollers andgeneral16D3 remainopen. No targetgraph or exactglobalD measured.",
+  "other_S3_transposition_cases_actually_executed": 0,
+  "actual_fiber_target_n": null,
+  "actual_fiber_target_D": null,
+  "ordinary_bad_unordered_pairs": null,
+  "report_paths": [
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/PREDICTION.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/INPUT.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/run.py",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/CASES.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/PASSERS.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/RESULT.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/TERMINAL.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/FIRST_MISSING_TWO_STEP_COUNTS.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/FIRST_MISSING_CAPACITY_RESULT.json",
+    "research/ddp/refresh_20261029/controller33_deranged_attachment/REPORT.md"
+  ]
+}

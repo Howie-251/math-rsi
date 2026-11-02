@@ -1,0 +1,18 @@
+{
+  "question": "Which collinear pin groups in Brown91 can actually attain the old-point coverage bounds required by a 16-helper cap11 construction?",
+  "fixed_field": "GF3[w]/(w^2+1), code a+3b for a+bw",
+  "prior_predictions": [
+    "91 projective points and91 polar lines, every line10points; absolute10, internal36, external45.",
+    "Internal points have5internal and5external oldneighbors; external have4internal,4external,2absolute; absolute have9external.",
+    "For s=1..9, the global collinear closed-coverage maximum is10s+1, attained by s noncontact points on an absolute tangent; this uses only45 possible external pins globally.",
+    "Non-tangent collinear pin groups suffer the involution-overlap loss, unlike tangent noncontact groups. Exact type/coverage profiles can inform the analytic resource relaxation."
+  ],
+  "experiment": "Enumerate all91 lines and their nonempty subsets of sizes1..9 exactly once; return counts and one representative per line-type/pin-type/closed-coverage profile, not a target graph search.",
+  "CPU_budget_seconds": 5,
+  "workers": 1,
+  "target_graphs_generated": 0,
+  "source_edgelists_generated": 0,
+  "finite_geometry_generated": true,
+  "BFS_solver_Lean": 0,
+  "next": "Compare predicted coverage by group type, then decide whether a specific 107 helper/pin rule merits construction. Do not count this classic geometry as a new legal graph."
+}

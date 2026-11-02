@@ -1,0 +1,1 @@
+先于独验执行：degree98唯一candidate使用actual G1/346516，绝不使用83或86链源；r16新role blocks、total k17，最后block copy15测65actual diag+first2actual off+hub共68根。预测diag(1,80,5266,408785)、off(1,81,5345,408705)、hub(1,65,5281,408785)。全部67616 newrole邻域和保parent全边均实际绑定，67548根不BFS，靠old-parent内点证明。与86共一套60CPU/单worker预算，parent只流读一次；详细scope在共同suite/PRED.md。未读producer邻域逻辑。

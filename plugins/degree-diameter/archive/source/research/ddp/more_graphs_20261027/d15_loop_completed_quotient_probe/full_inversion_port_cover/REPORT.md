@@ -1,0 +1,13 @@
+# Complete actual free-pin inversion models: two raw UNSAT results
+
+The fixed-space interface recovered all648/810 actual free old vertices as24/30 three-dimensional spaces, each with one zero and13 nonzero plus/minus pairs. The models test every inversion-invariant neighbor set of cardinality at most15 on the two fixed sources, not just the old selfline direction. Atom costs1/2 equal the expanded pin count. The source inversion is certified by the zero-translation affine relations.
+
+All15552/102060 original target constraints are represented. Inversion-invariant columns permit one target constraint per genuine inversion orbit, retaining every controller-zero separately; exact repeated support rows are then removed. The orbit counts7872/51240 reduce to7584/48600 distinct support rows. No target sampling, new source BFS, ball or graph occurs.
+
+The15552/D4 model has336 selectors,648 weighted counter inputs,10704 total variables and28290 clauses. Its single40-second-request call returns CaDiCaL code20/raw UNSAT in35.163843 solver CPU seconds. The102060/D5 model has420 selectors,810 weighted inputs,13380 variables and74490 clauses, returning code20/raw UNSAT in35.523154 solver CPU seconds. Both models were attempted completely as scheduled; no candidate or source remains pending.
+
+The aggregate receipt is73.957748614 CPU seconds within100, including carried fixed-space interface0.063390872. Parent preparation and child solver costs are preserved in RESULT.json. There are no candidate graphs, source BFS or new balls. These negative results have no independently checked proof artifact and are recorded as uncertified computational UNSAT, not a new general graph nonexistence theorem.
+
+The separate fixed-word probe supports the proposed route mechanism at equal cost3: in the two sources, a new direction increases one word's endpoints27->81 and81->243. That local positive result is not full graph coverage; the complete symmetry-restricted joint experiment above still returns negative solver results. It does not exclude non-invariant neighborhoods among these same648/810 free points. The old general cover UNKNOWN and any separately authorized independent-point experiment must remain distinct.
+
+This report and RAW_ANALYSIS_FIELDS.json merely persist the existing production receipts. They execute no numeric check or solver. The fields merge into the two existing source records; there is no new method or Wiki row. Evidence is PREDICTION.json, RESULT.json, TERMINAL.json, CHECKPOINT.json, MODEL_15552.json, MODEL_102060.json, prepare.py, run.py, and ../full_free_directions/{RESULT.json,REPORT.md,ANALYSIS_DIRECTION_COVER.md,ROUTE_COSSET_RESULT.json}.

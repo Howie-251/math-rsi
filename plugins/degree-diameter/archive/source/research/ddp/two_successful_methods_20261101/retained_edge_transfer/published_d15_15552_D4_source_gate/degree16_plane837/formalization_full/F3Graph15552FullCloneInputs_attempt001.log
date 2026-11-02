@@ -1,0 +1,39 @@
+DegreeDiameter/Portfolio/F3Graph15552FullCloneInputs.lean:613:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (x - x (pivot (inverseType p)) • direction (inverseType p)) 1 * inverseSecond p
+in the target expression
+  x - x (pivot (inverseType p)) • direction (inverseType p) + t • 0 -
+      ((x - x (pivot (inverseType p)) • direction (inverseType p) + t • 0) 1 * inverseSecond p) •
+        direction (inverseType p) =
+    x
+
+p : Fin 5
+t : F
+x : Vec
+hx : x 1 = 0
+hs : (x - x (pivot (inverseType p)) • direction (inverseType p)) 1 * inverseSecond p = -x (pivot (inverseType p))
+⊢ x - x (pivot (inverseType p)) • direction (inverseType p) + t • 0 -
+      ((x - x (pivot (inverseType p)) • direction (inverseType p) + t • 0) 1 * inverseSecond p) •
+        direction (inverseType p) =
+    x
+DegreeDiameter/Portfolio/F3Graph15552FullCloneInputs.lean:608:74: warning: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵t̵e̵p̵V̵e̵c̵_̵e̵q̵,̵a̵c̵t̵_̵a̵d̵d̵,̵a̵c̵t̵_̵s̵m̵u̵l̵,̵i̵n̵v̵e̵r̵s̵e̵_̵a̵c̵t̵i̵o̵n̵,̵i̵n̵v̵e̵r̵s̵e̵_̵d̵i̵r̵e̵c̵t̵i̵o̵n̵,̵s̵m̵u̵l̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲s̲t̲e̲p̲V̲e̲c̲_̲e̲q̲,̲ ̲a̲c̲t̲_̲a̲d̲d̲,̲ ̲a̲c̲t̲_̲s̲m̲u̲l̲,̲ ̲i̲n̲v̲e̲r̲s̲e̲_̲a̲c̲t̲i̲o̲n̲,̲ ̲i̲n̲v̲e̲r̲s̲e̲_̲d̲i̲r̲e̲c̲t̲i̲o̲n̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F3Graph15552FullCloneInputs.lean:608:84: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [stepVec_eq, ̲act_add, ̲act_smul, ̲inverse_action, ̲inverse_direction, ̲smul_zero,̵a̵d̵d̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.pinOwner_forward' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.load_le_one' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

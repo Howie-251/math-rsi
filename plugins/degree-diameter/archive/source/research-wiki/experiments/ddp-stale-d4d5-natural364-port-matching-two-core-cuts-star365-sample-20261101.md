@@ -1,0 +1,550 @@
+---
+type: experiment
+node_id: exp:ddp-stale-d4d5-natural364-port-matching-two-core-cuts-star365-sample-20261101
+title: "4D5 natural364→365：196371两corecut域Hall完整NO；原10000样本UNKNOWN保历史"
+idea_id: "idea:ddp-open-parameter-construction-20261026"
+verdict: no
+confidence: high
+date: "2026-11-01"
+hardware: ""
+duration: "samecase3.913081991/20CPU; originalsample1.537876879 retained as history"
+provenance: "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run.cpp; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ATTEMPTS.csv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/MATCHING_AND_CUTS.csv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PAPER_SCOPE_REVIEW.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ROOT_DISPOSITION.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_SCOPE_ATTACK.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_HALL_PAPER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/ALLOWED_MATCHING_MODEL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/FOUR_CORE_R4_SUPPORTS.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/HALL_CERTIFICATE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/SOURCE_SUPPORT_BINDING.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ALL_CUTPAIR_HALL_COUNTS.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/FINAL_PROOF.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ROOT_DISPOSITION.json"
+added: 2026-11-02T01:03:38Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 4D5 natural364→365：196371两corecut域Hall完整NO；原10000样本UNKNOWN保历史
+
+**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:ddp-open-parameter-construction-20261026`
+
+## Metrics
+**对象层级：** known_source_or_recovery
+
+**目标与阶数：** (4,5)；L=364；条件性n=365（未据此计纪录）
+
+**距目标的证据：** No graph produced; full196371cutpair necessary newroot Hall gate completes the exact architecture; no candidate oldroot or fullgraph diameter measurement.；当前严格终态：原630core边的198135无序边对剔除1764共端点对，196371全部完成；每P的β2-hole owners为21..27、nearports为0..2，最小实际h−n=20，0Hall幸存。hard owner的mate必须注入near(P)，容量不够已拒全部matching，无需matching solver/365图/oldold检验。fixed首P先因24>1反驳jointM存在预测（near仅126）；随后完整域预测得到支持。新R4支持4缓存复用+332深4查询，不重sourceD5/旧28球。历史原10000案仍是样本UNKNOWN，全部新根失败、oldold0、费用1.537876879/20；首saved路径364–43–54–56–360–345–0长6保留。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "new_graphs": 0,
+  "new_parameter_pairs": 0,
+  "new_Lean_instances": 0,
+  "new_independent_method_claims": 0,
+  "Moore_bound": 485,
+  "located_baseline": 364,
+  "Moore_space": 121,
+  "Moore_gap_is_not_constructibility": true,
+  "source_n": 364,
+  "source_m": 714,
+  "source_degree_histogram": {
+    "3": 28,
+    "4": 336
+  },
+  "target_n": 365,
+  "target_m": 730,
+  "degree_accounting_regular4": true,
+  "oldsource_edges_retained": 712,
+  "oldsource_edges_deleted": 2,
+  "added_oldport_matching_edges": 14,
+  "newroot_core_edges": 4,
+  "seed": 202611010405,
+  "distinct_configurations_finished": 10000,
+  "newroot_R5_passed": 0,
+  "rejected_newroot_R5": 10000,
+  "rejected_old_old": 0,
+  "final_candidate_old_label_BFS_roots": 0,
+  "prediction_newroot_supported": false,
+  "first_newroot_failure": {
+    "configuration": {
+      "core_cut_pool_indices": [
+        151,
+        423
+      ],
+      "core_cut_edges": [
+        [
+          43,
+          58
+        ],
+        [
+          151,
+          314
+        ]
+      ],
+      "port_matching": [
+        [
+          2,
+          256
+        ],
+        [
+          11,
+          126
+        ],
+        [
+          24,
+          216
+        ],
+        [
+          56,
+          341
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          74,
+          356
+        ],
+        [
+          85,
+          307
+        ],
+        [
+          98,
+          230
+        ],
+        [
+          116,
+          267
+        ],
+        [
+          117,
+          195
+        ],
+        [
+          200,
+          298
+        ],
+        [
+          215,
+          237
+        ],
+        [
+          249,
+          320
+        ],
+        [
+          331,
+          343
+        ]
+      ]
+    },
+    "BFS": {
+      "root": 364,
+      "target": 0,
+      "distance": 6,
+      "reached": 365,
+      "eccentricity": 6,
+      "actual_path": [
+        364,
+        43,
+        54,
+        56,
+        360,
+        345,
+        0
+      ]
+    }
+  },
+  "complete_rule_exclusion": true,
+  "cumulative_charged_CPU_seconds": 3.913081991,
+  "CPU_budget_seconds": 20.0,
+  "no_timer_reset": true,
+  "source_D5_BFS_portballs_field_solver_Lean_remote_runs": 0,
+  "terminal": true,
+  "joint_port_interface_read_20261102": {
+    "status": "READ_GATE_COMPLETE_FIXED_FIRST_P_JOINT_MATCHING_PREDICTION_UNTESTED_WHOLE_RULE_UNKNOWN",
+    "read_CPU_charge": 0.3,
+    "read_CPU_cap": 1,
+    "original_sample_CPU_unchanged": 1.537876879,
+    "original_sample_cap_unchanged": 20,
+    "frozen_cuts": [
+      [
+        43,
+        58
+      ],
+      [
+        151,
+        314
+      ]
+    ],
+    "P": [
+      43,
+      58,
+      151,
+      314
+    ],
+    "newroot": 364,
+    "natural_source": [
+      364,
+      714
+    ],
+    "ports": 28,
+    "core": 336,
+    "not_public_regular364_728": true,
+    "cached_R2_port_classes_partition_all364": true,
+    "cached_distinct_port_distance": 5,
+    "distance_invariance": "dT(P,t)=dG(P,t)",
+    "z_path_max_matching_edges": 1,
+    "exact_hole_condition": "dG(P,mate(owner(t)))+beta_owner(t)(t)<=3",
+    "beta_general_bound": "<=2",
+    "allowed_directed_mates": "L_b=allotherports if noholes in classb; else dG(P,a)<=3-maxholebeta",
+    "allowed_undirected_mates": "a in L_b AND b in L_a",
+    "allowedgraph_perfectmatching_iff_newroot_R5": true,
+    "oldold_D5_not_guaranteed": true,
+    "saved_target0_owner": 2,
+    "target0_beta_values_not_queried": [
+      1,
+      2
+    ],
+    "saved_mate_of_2": 256,
+    "mate256_violation_basis": "INFERRED_FROM_SAVED_BAD_ROUTE_AND_EXACT_LEMMA_NOT_NEW_NUMERIC",
+    "dG_P_to0_5_basis": "OLD_SAVED_ROOT6_AND_5EDGE_OLDTAIL_PLUS_INVARIANCE_NOT_NEW_BFS",
+    "prediction": "fixedfirstP admitsanotherjointportperfectmatchinggivingnewrootR5",
+    "prediction_verdict": "UNTESTED",
+    "minimum_new_data": "fourcoreclosedR4supports",
+    "reuse_other_thresholds": "cachedportR1/R2classes/R3bits; no28ballrecompute",
+    "new_BFS_ball_distance_queries": 0,
+    "matching_solver_new_samples_graph_runs": 0,
+    "allcutpair_seed_continuation": false,
+    "read_terminal": true,
+    "new_graph_parameter_Lean_method": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "historical_sample_record_before_full_Hall_20261102": {
+    "id": "ddp-stale-d4d5-natural364-port-matching-two-core-cuts-star365-sample-20261101",
+    "title": "4D5 natural364→365：28port完美匹配＋两core删边四星，10000样本全漏新根覆盖而族仍UNKNOWN",
+    "family": "source edge surgery and port matching",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "record_type": "bounded_candidate_sample",
+    "target_Delta": 4,
+    "target_D": 5,
+    "savedL": 364,
+    "baseline_date": "2026-11-01; previously accepted source metadata inherited",
+    "n": {
+      "actual": null,
+      "hypothetical": 365
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "No newly accepted mathematical graph; exact experiment scope below",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Only natural polarity364/714 (28 degree3 ports,336 degree4 core), not the separate public364/728 regular graph. Add14 old-port perfectmatching edges, delete2 disjoint old core-core edges, join newroot364 to the4 cut endpoints. One fixedseed202611010405,10000 distinct configurations. This changes old-old edges and host-edge retention, so is outside old pureappend/≤13helper strict scopes; this sample is not familyNO. 2026-11-02 followupisread/paperinterfaceonly:freezefirstcuts(43,58)/(151,314),P={43,58,151,314};jointdesignofall28portmatesbyexactnewrootcoveragecriterion. No new balls/matching/solver/samples orfamilyverdict;original10000sampleUNKNOWNandCPUretained.",
+    "outcome_class": "UNKNOWN_10000_SAMPLE_NO_HIT",
+    "new_lower_bound": false,
+    "distance_text": "预测至少一个样本让新根R5覆盖全部old364；实际10000案均在新根门失败，0案进入old-old阶段，预测在该样本中不支持。首案实际路径364–43–54–56–360–345–0长6；不能声称已观察到old-old路线损坏。目标365/730为4regular、保留712/714旧边的度数记账合法，但无完整合法D5图。 新只读接口：28port的R2类分割364且不同port距5，cut端点同在P给dT(P,t)=dG(P,t)。z≤5路线最多一条matching；sourceR4(P)外hole t的唯一owner b、beta<=2，精确要求dG(P,mate(b))+beta<=3。无向允许边必须同时a∈L_b、b∈L_a，其perfectmatching iff新根R5，仍不保证oldoldD5。固定P存在jointM仅预测未测。缓存给target0 owner=port2，beta仅知{1,2}未查；mate256不合格是旧反例+lemma的推论，非新距离数据。最小新数据四coreR4，余阈值复用port缓存，当前0新数值。",
+    "lesson_and_restart_condition": "STOP this one bounded matching+two-core-cut batch with its fixedseed; no automatic more samples, changedseed/cut pattern or H14. Keep the complete rule UNKNOWN, not a family exclusion. Newroot coverage is the observed bottleneck; old-old preservation remains untested here. Inherit sourceD5/portballs rather than rerunning old validation. Readfollowupchangesproposeddesignfromindependentshuffleofcuts/matchingtofixedfirstP+jointmutualallowed-mateobligations. Do notrepairjusttarget0andrandomizetherest. Perfectmatchingcriterioncoversnewrootonly;oldoldD5stillrequiresfutureactualcandidatevalidation. Thisisreadscope/papernotnumericalprogress.",
+    "restart_condition": "STOP this one bounded matching+two-core-cut batch with its fixedseed; no automatic more samples, changedseed/cut pattern or H14. Keep the complete rule UNKNOWN, not a family exclusion. Newroot coverage is the observed bottleneck; old-old preservation remains untested here. Inherit sourceD5/portballs rather than rerunning old validation. Onlyaseparatelyselectedandbudgetedfixed-firstPfour-coreR4/allowedgraphtestcouldtestthisprediction; currentreadSTOPdoesnotresumeold10000seed,allcutpairsearchoroldsolver.",
+    "unclosed_gap": "Only the stated completed or sampled scope stops. Same Goal remains ACTIVE; no new graph or global record is claimed. FixedfirstP joint-perfectmatchingexistenceisUNTESTED. FourcoreR4supports/holeclassesandbeta-labelthresholdlookupsnotexecutedhere. IndividualdG(P,256)orbeta(2,0)notmeasured;mate256violationisinferredfromsavedroot6counterexampleandexactcriterion. NewrootR5successwouldnotproveoldoldD5/full365.",
+    "other_metrics": {
+      "new_graphs": 0,
+      "new_parameter_pairs": 0,
+      "new_Lean_instances": 0,
+      "new_independent_method_claims": 0,
+      "Moore_bound": 485,
+      "located_baseline": 364,
+      "Moore_space": 121,
+      "Moore_gap_is_not_constructibility": true,
+      "source_n": 364,
+      "source_m": 714,
+      "source_degree_histogram": {
+        "3": 28,
+        "4": 336
+      },
+      "target_n": 365,
+      "target_m": 730,
+      "degree_accounting_regular4": true,
+      "oldsource_edges_retained": 712,
+      "oldsource_edges_deleted": 2,
+      "added_oldport_matching_edges": 14,
+      "newroot_core_edges": 4,
+      "seed": 202611010405,
+      "distinct_configurations_finished": 10000,
+      "newroot_R5_passed": 0,
+      "rejected_newroot_R5": 10000,
+      "rejected_old_old": 0,
+      "final_candidate_old_label_BFS_roots": 0,
+      "prediction_newroot_supported": false,
+      "first_newroot_failure": {
+        "configuration": {
+          "core_cut_pool_indices": [
+            151,
+            423
+          ],
+          "core_cut_edges": [
+            [
+              43,
+              58
+            ],
+            [
+              151,
+              314
+            ]
+          ],
+          "port_matching": [
+            [
+              2,
+              256
+            ],
+            [
+              11,
+              126
+            ],
+            [
+              24,
+              216
+            ],
+            [
+              56,
+              341
+            ],
+            [
+              66,
+              104
+            ],
+            [
+              74,
+              356
+            ],
+            [
+              85,
+              307
+            ],
+            [
+              98,
+              230
+            ],
+            [
+              116,
+              267
+            ],
+            [
+              117,
+              195
+            ],
+            [
+              200,
+              298
+            ],
+            [
+              215,
+              237
+            ],
+            [
+              249,
+              320
+            ],
+            [
+              331,
+              343
+            ]
+          ]
+        },
+        "BFS": {
+          "root": 364,
+          "target": 0,
+          "distance": 6,
+          "reached": 365,
+          "eccentricity": 6,
+          "actual_path": [
+            364,
+            43,
+            54,
+            56,
+            360,
+            345,
+            0
+          ]
+        }
+      },
+      "complete_rule_exclusion": false,
+      "cumulative_charged_CPU_seconds": 1.537876879,
+      "CPU_budget_seconds": 20.0,
+      "no_timer_reset": true,
+      "source_D5_BFS_portballs_field_solver_Lean_remote_runs": 0,
+      "terminal": true,
+      "joint_port_interface_read_20261102": {
+        "status": "READ_GATE_COMPLETE_FIXED_FIRST_P_JOINT_MATCHING_PREDICTION_UNTESTED_WHOLE_RULE_UNKNOWN",
+        "read_CPU_charge": 0.3,
+        "read_CPU_cap": 1,
+        "original_sample_CPU_unchanged": 1.537876879,
+        "original_sample_cap_unchanged": 20,
+        "frozen_cuts": [
+          [
+            43,
+            58
+          ],
+          [
+            151,
+            314
+          ]
+        ],
+        "P": [
+          43,
+          58,
+          151,
+          314
+        ],
+        "newroot": 364,
+        "natural_source": [
+          364,
+          714
+        ],
+        "ports": 28,
+        "core": 336,
+        "not_public_regular364_728": true,
+        "cached_R2_port_classes_partition_all364": true,
+        "cached_distinct_port_distance": 5,
+        "distance_invariance": "dT(P,t)=dG(P,t)",
+        "z_path_max_matching_edges": 1,
+        "exact_hole_condition": "dG(P,mate(owner(t)))+beta_owner(t)(t)<=3",
+        "beta_general_bound": "<=2",
+        "allowed_directed_mates": "L_b=allotherports if noholes in classb; else dG(P,a)<=3-maxholebeta",
+        "allowed_undirected_mates": "a in L_b AND b in L_a",
+        "allowedgraph_perfectmatching_iff_newroot_R5": true,
+        "oldold_D5_not_guaranteed": true,
+        "saved_target0_owner": 2,
+        "target0_beta_values_not_queried": [
+          1,
+          2
+        ],
+        "saved_mate_of_2": 256,
+        "mate256_violation_basis": "INFERRED_FROM_SAVED_BAD_ROUTE_AND_EXACT_LEMMA_NOT_NEW_NUMERIC",
+        "dG_P_to0_5_basis": "OLD_SAVED_ROOT6_AND_5EDGE_OLDTAIL_PLUS_INVARIANCE_NOT_NEW_BFS",
+        "prediction": "fixedfirstP admitsanotherjointportperfectmatchinggivingnewrootR5",
+        "prediction_verdict": "UNTESTED",
+        "minimum_new_data": "fourcoreclosedR4supports",
+        "reuse_other_thresholds": "cachedportR1/R2classes/R3bits; no28ballrecompute",
+        "new_BFS_ball_distance_queries": 0,
+        "matching_solver_new_samples_graph_runs": 0,
+        "allcutpair_seed_continuation": false,
+        "read_terminal": true,
+        "new_graph_parameter_Lean_method": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PRED.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/NOTE.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run_once.py",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run.cpp",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ATTEMPTS.csv",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/MATCHING_AND_CUTS.csv",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PAPER_SCOPE_REVIEW.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ROOT_DISPOSITION.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.json"
+    ],
+    "positive_guarantees": [
+      "CutendpointsallinP implydT(P,t)=dG(P,t) byrestartingatanydownstreamcutendpoint; no new source distance query.",
+      "28cachedportR2classespartition364,portsmutualdistance5; anysimplez-rootpath<=5usesatmostonematchingedge. Aholeownertailbeta<=2avoidscuts,soexactmateinequalityusesoriginalsource distances.",
+      "Allowededge{a,b}requiresbothdirectedobligationsa∈L_b,b∈L_a. AnallowedperfectmatchingiffnewrootR5,notoldoldD5.",
+      "Owner0=port2comesfromcache;beta(2,0)∈{1,2}only,notlookedup. Currentmate256thresholdviolationanddG(P,0)=5arelogicalconsequencesofsavedroute/lemma,notfreshBFSresults."
+    ]
+  },
+  "historical_sample_status": "UNKNOWN_10000_SAMPLE_NO_HIT",
+  "historical_sample_CPU_seconds": 1.537876879,
+  "historical_sample_cap_seconds": 20,
+  "all_two_corecuts_Hall_terminal_20261102": {
+    "status": "COMPLETE_NO_ALL_TWO_CORECUTS_ALL_PORTMATCHINGS_BY_HALL",
+    "root_status": "ROOT_ACCEPTED_COMPLETE_WHOLE_TWO_CORECUT_PORTMATCHING_STAR_RULE_NO",
+    "fixedP_prediction": "anotherjointportmatchingcoversnewrootR5",
+    "fixedP_prediction_verdict": "REFUTED_COMPLETE_FIXED_P",
+    "fixedP_holes": 72,
+    "fixedP_hard_beta2_owners": 24,
+    "fixedP_near_ports": [
+      126
+    ],
+    "fixedP_allowed_neighbor_union": [
+      126
+    ],
+    "fixedP_Hall_deficit": 23,
+    "full_domain_prediction": "everytwo-disjointoriginalcorecut P has hardbeta2owners>nearports",
+    "full_domain_prediction_verdict": "SUPPORTED_COMPLETE_DOMAIN",
+    "original_core_edges": 630,
+    "all_unordered_edgepairs": 198135,
+    "shared_endpoint_pairs_excluded": 1764,
+    "eligible_pairs": 196371,
+    "pairs_checked": 196371,
+    "completed": true,
+    "hard_range": [
+      21,
+      27
+    ],
+    "near_range": [
+      0,
+      2
+    ],
+    "minimum_Hall_deficit": 20,
+    "Hall_survivors": 0,
+    "new_depth4_core_supports": 332,
+    "previous_fixedP_core_supports_reused": 4,
+    "total_current_core_R4_supports": 336,
+    "source_D5_validation": 0,
+    "old28portballs_rerun": 0,
+    "matching_solver": 0,
+    "newcandidate_graph": 0,
+    "candidate_oldroot_BFS": 0,
+    "Lean": 0,
+    "ARIS": 0,
+    "numeric_native_CPU": 1.211394177,
+    "final_wholecase_CPU": 3.913081991,
+    "wholecase_cap": 20,
+    "timer_reset": false,
+    "old_sample_metrics_preserved_as_history": true,
+    "old_sample_was_not_exhaustive": true,
+    "nested_Hall_paper_conditions_count": 3,
+    "nested_Hall_numeric_rows_tested": "only first necessary inequality used; no numerical second/third Hall experiment",
+    "nested_Hall_paper": "JOINT_PORT_HALL_PAPER.md",
+    "nested_Hall_condition1": "|D_tau1|<=|F intersect N1|=|N1|",
+    "nested_Hall_condition2": "|D_tau<=2|<=|F intersect N2|=|N2|",
+    "nested_Hall_condition3": "|D|<=|F intersect N3|; do not replace RHS by allN3 for sufficiency",
+    "new_graph_parameter_Lean_method": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "terminal": true,
+    "no_automatic_restart": true
+  }
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run.cpp](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/run.cpp)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ATTEMPTS.csv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ATTEMPTS.csv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/MATCHING_AND_CUTS.csv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/MATCHING_AND_CUTS.csv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PAPER_SCOPE_REVIEW.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/PAPER_SCOPE_REVIEW.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/ROOT_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_INTERFACE_READ.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_SCOPE_ATTACK.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_SCOPE_ATTACK.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_HALL_PAPER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/JOINT_PORT_HALL_PAPER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/ALLOWED_MATCHING_MODEL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/ALLOWED_MATCHING_MODEL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/FOUR_CORE_R4_SUPPORTS.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/FOUR_CORE_R4_SUPPORTS.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/HALL_CERTIFICATE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/joint_fixed_first_P/HALL_CERTIFICATE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/SOURCE_SUPPORT_BINDING.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/SOURCE_SUPPORT_BINDING.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ALL_CUTPAIR_HALL_COUNTS.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ALL_CUTPAIR_HALL_COUNTS.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/FINAL_PROOF.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/FINAL_PROOF.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/port_matching_core2_star365/all_two_corecut_Hall_gate/ROOT_DISPOSITION.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** Fixed naturalH3 polarity364/714 source only (28degree3ports/336degree4core), not publicregular364/728. Delete any two vertex-disjoint ORIGINAL core-core edges, connect their four endpoints to one new4star, add an arbitrary perfectmatching of all28oldports, and make no other edits. All196371 unordered eligible corecutpairs have hardbeta2owners>nearports; every matching is therefore excluded before candidate production. The original10000sample UNKNOWN remains historical, not retroactively exhaustive.
+
+**正向保证：** All cutendpoints lie inP, so a minimum sourceP-to-target path can restart at the downstreamP endpoint of any usedcut; hence dT(P,t)=dG(P,t).；Originalports have distance5 and their R2classes partition364. A simple z-root<=5path uses at most one newportmatching edge; a hole tail oflength<=2 cannot touchP and thus avoids the cuts.；Holeownerb requires dG(P,mate(b))+beta<=3. Allowed undirected edges need both directed thresholds; for beta2holes the mate is necessarily in near(P).；Each coreedge contributes at most one distinctnearport, otherwise two originalports would have distance<=3. Two cuts give near(P)<=2; the observed hard21..27 lower range comes from the complete finite source data, not a new abstract geometry theorem.；All196371 unordered disjoint originalcoreedge pairs were visited, using4saved plus332newcoreR4supports. Everypair violates the first Hall necessary inequality; no matching solver/graph/oldroot check is needed to reject it.；Historical10000sampleUNKNOWN, firstfailure and original1.537876879CPU remain fully preserved in historical_sample_record_before_full_Hall_20261102.；Three nestedHall local-paper inequalities can characterize the structured newroot matching interface; this complete numerical gate needed only the first. They do not certify oldoldD5 or create any new graph/method/record.
+
+**仍未完成：** This exact fixedsource/two-disjoint-corecuts/28portperfectmatching/one4star architecture is now closed by the complete Hall gate. No claim about general365 graphs, publicregular364/728, thirdcut, extraoldoldrepair, differentstarneighbors or multiplehelpers. No actual candidate or diameter/badpair total is fabricated. The three nestedHall paper conditions are derived local newroot interfaces only, with no new numerical results or independent method/record count.
+
+**启发与重启依据：** The original independent shuffle sample failed but left the architecture UNKNOWN. Exact owner/tail geometry changed generation to coupled portmates, fixedP Hall24>1 refuted the first joint prediction, then a complete finite all-cutpair Hall gate supplied a strict architecture NO. Stop this exact rule without more seeds, matching enumeration, thirdcut or source replacement; a materially different separately authorized question must respect this closed scope. Three nestedHall inequalities are existing paper interfaces, not extra experiments or records.
+
+**单独的重启条件：** STOP exact architecture. No more samples, no all-portmatching solver, no fresh positive suite, no automatic thirdcut or otherhost. Only a separately authorized materially changed rule outside the stated closure can restart.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

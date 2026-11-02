@@ -1,0 +1,88 @@
+[
+  {
+    "family": "C84 ternary route-chart plus central matching",
+    "target_Delta": 13,
+    "target_D": 4,
+    "savedL": 6804,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "unclosed_gap": "No general parameter-family exclusion; complete Lean remains unproved.",
+    "id": "ddp-d13-d4-central-matching-packets-20261027",
+    "title": "6804中心匹配32/36路线包完整铺满；原生成元模8受奇偶核阻断",
+    "record_type": "source-mechanism-analysis",
+    "n": {
+      "actual": null,
+      "hypothetical": 7776
+    },
+    "actual_graph_Delta": null,
+    "scope": "量化实际6804 chart的36个reduced3word插z四位置包；32包三coset齐全、每源81，4包每源54。仅线性-I与M交换；完整仿射gamma未必交换。对保原a=(1,1),b=(0,4),z=(0,6)的C8任意unit action，chi(i,j)=i-j mod2使生成子群至多48/96，故此保坐标迁移不连通。",
+    "failure_or_result": "作者README已明确三coset tiling原则，本项只作实际32/36量化和固定C8坐标的奇偶障碍，不登记新tiling定理。",
+    "lesson_and_restart_condition": "中心plain边的作用是通过c−Mc制造同方向的三偏移类，而非提供spares。模数变更前须保连通；只排保留这些坐标的C8迁移，不扩为全部C8控制器。",
+    "other_metrics": {
+      "full_packets": 32,
+      "partial_packets": 4,
+      "partial_union_size": 54,
+      "phase_capacity_upper_min": 1280,
+      "module8_phase_required": 648,
+      "parity_kernel_max_controller_order": 48,
+      "CPU": 0.034883321,
+      "BFS": 0,
+      "graphs": 0,
+      "tiling_principle": "INHERITED_AUTHOR_README"
+    },
+    "outcome_class": "source-mechanism-analysis",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/central_matching_packets/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/central_matching_packets/RESULT.json"
+    ]
+  },
+  {
+    "family": "C84 ternary route-chart plus central matching",
+    "target_Delta": 13,
+    "target_D": 4,
+    "savedL": 6804,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "unclosed_gap": "No general parameter-family exclusion; complete Lean remains unproved.",
+    "id": "ddp-d13-d4-c9-action4-transfer-20261027",
+    "title": "连通C9作用4单候选8748：首根ecc5、918个四步缺项",
+    "record_type": "finite-construction-experiment",
+    "n": {
+      "actual": 8748,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": 13,
+    "scope": "仅C9 semidirect_4 C12，原a/b/z及全部fiber chart/c不变。实际生成simple connected13regular8748/56862，首根0 BFS即ecc5，停止。0→730距离5；全局直径未测，918仅此根R4未覆盖targets，不是无序坏对。",
+    "failure_or_result": "预测D4被首根反例推翻。全局D未知且至少5；全图边未导出，run.py可重建唯一字面。已有I/R2/G4/中心包充分证书只覆盖85/108controller点。",
+    "lesson_and_restart_condition": "C9改为奇模数确修C8不连通，但连通与三coset包不能保证所有控制终点共同覆盖。此单一移模候选收束，不调整r、生成元或chart续分数。",
+    "other_metrics": {
+      "n": 8748,
+      "m": 56862,
+      "degree13": 8748,
+      "first_root": 0,
+      "first_root_eccentricity": 5,
+      "single_root_R4_missing_targets": 918,
+      "global_D_lower_bound": 5,
+      "roots_checked": 1,
+      "ordinary_unordered_badpairs": null,
+      "good4_words": 88,
+      "full_R2_packets": 10,
+      "full_central_packets": 32,
+      "certified_controller_vertices": 85,
+      "controller_n": 108,
+      "CPU": 0.104727329,
+      "oldsource_BFS": 0,
+      "parameter_candidates": 1
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/c9_action4_transfer/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/c9_action4_transfer/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/c9_action4_transfer/counterexample.json"
+    ]
+  }
+]

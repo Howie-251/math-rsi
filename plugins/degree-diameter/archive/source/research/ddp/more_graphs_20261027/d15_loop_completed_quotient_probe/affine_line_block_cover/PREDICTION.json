@@ -1,0 +1,14 @@
+{
+  "frozen_before_line_masks_or_solver":true,
+  "prediction":"For at least one actual source, at most five affine three-point lines in its actual free fixedspaces individually cover enough entire target fibres that their block-mask union covers every controller. Their at most15 distinct old pins then give a complete single-vertex extension.",
+  "scope":"All117 affine lines (13 directions x9 cosets) in each of the24/30 actual27-point free fixedspaces. No new source, coordinates, field or extra directions.",
+  "expected_raw_line_counts":{"source15552":2808,"source102060":3510},
+  "block_column":"OR exactly the three existing original R_(D-1) balls for the line; mark a target controller only when every point of its entire81/243-point fibre is covered.",
+  "deduplication":"Exact equal block masks retain their deterministic first witness at equal conservative cost3. Identical old pins across selected lines are merged before adding spokes.",
+  "gates":"All block masks must union to all controllers, and the sum of the five largest distinct positive column sizes must reach the number of controllers. Failed gates stop that source without a solver call.",
+  "solver":"At most one complete CaDiCaL block-cover plus at-most5 CNF per source, internal8 wallseconds and OS CPUsoft10/hard11; no restart/seed/extra time.",
+  "positive_check":"Check every CNF clause, <=5 lines, <=15 distinct pins, original actual-free labels, and explicit full-n cached pin-ball OR before returning a candidate neighbor set. No graph export or source BFS here.",
+  "budget":{"aggregate_CPU_seconds":35,"preparation_parent_CPU_seconds":10,"parent_OS_CPU_soft_hard":[10,11],"solver_OS_CPU_soft_hard":[10,11],"solver_calls_per_source":1,"solver_internal_wallseconds":8},
+  "failure_scope":"Only the sufficient certificate requiring each entire target fibre to be covered by one selected affine line; no exclusion of cross-line partial-fibre combinations or general15-pin covers. RawUNSAT is not a checked proof.",
+  "new_balls_BFS_or_source_graph_generation":0
+}

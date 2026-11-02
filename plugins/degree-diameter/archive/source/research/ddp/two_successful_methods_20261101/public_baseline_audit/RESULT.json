@@ -1,0 +1,136 @@
+{
+  "status": "BOUNDED_PRIMARY_COMPARISON_COMPLETE_GLOBAL_NOVELTY_UNCONFIRMED",
+  "checked_UTC": "2026-11-01T04:19:30.805508+00:00",
+  "requested_parameters": [
+    [
+      20,
+      3
+    ],
+    [
+      21,
+      3
+    ],
+    [
+      22,
+      3
+    ]
+  ],
+  "requested_local_graph_orders": {
+    "20,3": 3840,
+    "21,3": 3900,
+    "22,3": 4125
+  },
+  "local_graphs_revalidated_here": false,
+  "results": {
+    "20,3": {
+      "best_explicit_numerical_primary_claim_located": 2783,
+      "numerical_claim_source": "https://doi.org/10.5281/zenodo.23052995",
+      "numerical_claim_scope": "September2026 Table1; same actual degree19 graph admitted under cap20",
+      "verified_public_source_formula_guarantee": 2791,
+      "formula": "2783+ceil(2783/(19^2+1))=2791",
+      "formula_source": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "formula_location": "Section7 p297",
+      "formula_is_inference": true,
+      "explicit2791_edge_list_found": false,
+      "published_current_global_highest_established": false
+    },
+    "21,3": {
+      "best_located_public_source_guarantee": 2928,
+      "source": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "family": "PolarStar IQ",
+      "q": 13,
+      "super_degree": 7,
+      "formula": "(13^2+13+1)*(2*7+2)=2928",
+      "scope": "Specific published family guarantee; not an exhaustive global table",
+      "published_current_global_highest_established": false
+    },
+    "22,3": {
+      "best_located_public_source_guarantee": 3294,
+      "source": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "family": "PolarStar IQ",
+      "q": 13,
+      "super_degree": 8,
+      "formula": "(13^2+13+1)*(2*8+2)=3294",
+      "scope": "Specific published family guarantee; not an exhaustive global table",
+      "published_current_global_highest_established": false
+    }
+  },
+  "general_family_reading": [
+    {
+      "source": "Delorme1985",
+      "locations": "Sections2,6,7,8c",
+      "q16_polarity_D3_inference_rejected": true,
+      "q_condition": "q=2^(2m+1)",
+      "q32_minimum_degree": 33,
+      "cap20_general_replication_from_Rajiv19_guarantee": 2791
+    },
+    {
+      "source": "https://arxiv.org/html/2608.27253v2",
+      "locations": "Sections3.3,3.4,7",
+      "main_table_only_through_degree16": true,
+      "degree18_product_order": 2340,
+      "absolute_set_size": 130,
+      "replication_orders_at21_and22": [
+        2730,
+        2860
+      ],
+      "opposite_GQ_family_distinguished_from_two_polarity_factor_family": true
+    },
+    {
+      "source": "https://arxiv.org/html/2608.03965v1",
+      "location": "Proposition3.1",
+      "H3_minimum_q": 2,
+      "H3_minimum_order_from_published_formula": 2893695,
+      "Moore22D3": 10187,
+      "not_applicable_under_degree22": "Its smallest D3 instance already has order exceeding the cap22 Moore bound; using only its degree upper bound would be insufficient."
+    },
+    {
+      "source": "https://arxiv.org/html/1709.09760v1",
+      "location": "Section5 Theorem1 / journalTheorem5.1",
+      "q_condition": "q=2^(2n+1),n>=1",
+      "q8_order": 448,
+      "next_q_at_least32": true
+    },
+    {
+      "source": "https://github.com/rmizuno42/ddp",
+      "repository_paths_read": 302,
+      "degree20_21_22_D3_result_in_current_index": false
+    }
+  ],
+  "secondary_current_source_discovery": {
+    "parameter": [
+      13,
+      5
+    ],
+    "published_order": 88452,
+    "published_maximum_degree": 13,
+    "published_edges": 574938,
+    "published_diameter": 5,
+    "package": "results/degree13-diameter5/",
+    "package_added_date_in_source": "2026-10-13",
+    "latest_README_commit_date": "2026-10-23T05:13:27Z",
+    "author_saved_independent_all_sources": 88452,
+    "author_saved_independent_completed_UTC": "2026-10-13T02:20:21.475464+00:00",
+    "rerun_here": false,
+    "note": "MIZUNO13_PRIMARY_READOUT.md"
+  },
+  "limitations": [
+    "Not an exhaustive census of all papers, repositories, or unpublished constructions.",
+    "Complete current CombinatoricsWiki content was not obtained.",
+    "The narrowed arXiv metadata query returned no result after rate limiting; primary cited HTML and topical web results were read directly, with no repeated API retry.",
+    "Absence of a larger located graph does not establish global highest or optimality.",
+    "Any stronger local21/22 graph produced after the request needs its own root acceptance and does not change external source completeness."
+  ],
+  "stronger_than_requested_local_graphs_public_counterexample_located": false,
+  "global_record_confirmed": false,
+  "new_graphs_generated": 0,
+  "source_graph_BFS_runs": 0,
+  "solver_calls": 0,
+  "Lean_runs": 0,
+  "installations": 0,
+  "authors_contacted": false,
+  "arithmetic_scope": "Only substitution into primary formulas and order/degree bounds; no graph generator or search.",
+  "existing_expert_package_modified": false,
+  "existing_root_or_Wiki_state_modified": false,
+  "applied_skill": ".agents/skills/research-lit/SKILL.md"
+}

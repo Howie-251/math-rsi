@@ -1,0 +1,88 @@
+{
+  "updated_UTC": "2026-11-01 19:14 UTC",
+  "status": "ROOT_ACCEPTED_COMPLETE_FIXED_CHEN360_SINGLE_EDGE_SUBDIVISION_NO",
+  "read_evidence": [
+    "RESULT.json",
+    "TERMINAL.json",
+    "FIRST_NEWROOT_FAILURE.json",
+    "run.cpp",
+    "../PAPER_SCOPE_REVIEW.md",
+    "../NOTE.md"
+  ],
+  "source": "literalChen2018 360/540 cubic,D8inheritedfromprimary",
+  "target": [
+    3,
+    8,
+    361
+  ],
+  "whole_fixed_source_single_subdivision_family_excluded": true,
+  "oldedges_explicitly_tested": 540,
+  "newroot_R8_failures": 540,
+  "newroot_R8_passes": 0,
+  "old_label_BFS_roots": 0,
+  "no_automorphism_representative_inference": true,
+  "first_newroot_failure": {
+    "stage": "FAIL_NEWROOT_R8",
+    "removed_edge_normalized": [
+      0,
+      140
+    ],
+    "removed_edge_raw": [
+      1,
+      141
+    ],
+    "inserted_normalized_newlabel": 360,
+    "added_edges": [
+      [
+        0,
+        360
+      ],
+      [
+        140,
+        360
+      ]
+    ],
+    "failed_source": 360,
+    "failed_target": 22,
+    "distance": 9,
+    "actual_final_shortest_path_normalized": [
+      360,
+      0,
+      141,
+      2,
+      145,
+      6,
+      153,
+      13,
+      169,
+      22
+    ],
+    "actual_final_shortest_path_raw_old1to360_new361": [
+      361,
+      1,
+      142,
+      3,
+      146,
+      7,
+      154,
+      14,
+      170,
+      23
+    ]
+  },
+  "interpretation": "For eacholdedge,actualmodified361newroot hasatleastoneoldtarget atdistance9. Newrootcoverage fails beforeoldoldchecks. CompletefinitefixedruleNO,nototheredits/sources or general3D8.",
+  "source_D8_revalidation_BFS": 0,
+  "source_raw_parses_cumulative": 2,
+  "source_successful_input_bindings": 1,
+  "HTTP_downloads": 1,
+  "observed_format_issue": "Initialwrongnumericupperneighbor guard corrected;failed0candidate/0BFSattemptandallcostskept,notamathematicalNO.",
+  "cumulative_CPU_seconds": 3.760862073,
+  "CPU_budget": 20,
+  "new_graph_parameter_Lean_counts": [
+    0,
+    0,
+    0
+  ],
+  "goal_completed": false,
+  "decision": "STOP fixedscope;do not rerunall540or automaticallystartmorecuts/source."
+}

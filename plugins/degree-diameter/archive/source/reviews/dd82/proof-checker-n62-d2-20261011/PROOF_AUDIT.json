@@ -1,0 +1,87 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The complete direct original-graph D2_MATCH exclusion has all local proof obligations discharged; no mathematical issue found. Same-family provisional judgment only; no whole-order-62 exclusion.",
+  "reviewer_task": "/root/proof_review_n62_d2",
+  "reviewer_backend": "codex",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "reviewer_model": null,
+  "reviewer_reasoning": null,
+  "backend_model_attested": false,
+  "backend_reasoning_attested": false,
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:05:37.592811+00:00",
+  "trace_path": "reviews/dd82/proof-checker-n62-d2-20261011",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D2_MATCH_SATURATED_ROW_EXCLUSION.md",
+      "scope": "complete proof, lines 1-181"
+    },
+    {
+      "path": "proofs/dd82/n62/RECOVERED_REDUCTION.md",
+      "scope": "actual graph identities and precise D2 premises, especially lines 42-52 and 205-235; global coverage proof not certified"
+    },
+    {
+      "path": "context/dd82/archive/N8_AI_FOR_MATH_LLM_SAT_REVIEW_20260929/theory/n62/n62_root_templates.json",
+      "scope": "complete D2_MATCH entry, lines 1916-2379, plus top-level metadata"
+    }
+  ],
+  "details": {
+    "theorems_audited": 1,
+    "micro_claims_audited": 26,
+    "micro_claims_discharged": 26,
+    "issues": [],
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "counterexample_pass": "direct symbolic attacks on all key deductions; no numerical search or exhaustive enumeration",
+    "counterexample_attempts": 11,
+    "counterexamples_found": 0,
+    "key_conclusions": [
+      "The saturated defect rows follow from exact parent counts and nonnegative row sum three.",
+      "The residual endpoint c is derived to lie in C3 and to be nonadjacent to a.",
+      "Five rows with residual capacity at most one receive exactly five units from six C3 columns with c excluded; every row support is thereby exhausted.",
+      "The C1-C2 perfect matching consists of original A-edges, derived from exact common-neighbor counts.",
+      "Five A-edges into six C3 vertices force the unique a-neighbor d, with d different from c and avoiding both five-point classes.",
+      "For the chosen matching mate y, the correct entry of AB is at least one while the same entry of BA is zero."
+    ],
+    "unused_stronger_archival_constraints": [
+      "global_B_mode 0/1/2",
+      "fixed_triangle_membership",
+      "double_local neighbor allocation at w",
+      "global triple-repeat exclusion"
+    ],
+    "validation": {
+      "type": "read-only JSON premise consistency",
+      "result": "PASS",
+      "checks": [
+        "root and root-neighborhood labels",
+        "empty H_edges",
+        "exceptional parent sets",
+        "fixed w-a nonedge",
+        "singleton partition disjoint and exhaustive",
+        "class sizes 5,5,6,7,7,7,7,7",
+        "all root-neighbor degrees eight"
+      ],
+      "mathematical_exclusion_enumeration": false
+    },
+    "proof_sources_changed": false,
+    "formal_files_changed": false,
+    "wiki_changed": false,
+    "sat_run": false,
+    "graph_enumeration_run": false,
+    "fixes_required": false,
+    "scope_exclusions": [
+      "full order-62 nonexistence",
+      "other templates",
+      "global seven-template coverage certification",
+      "formalization",
+      "cross-family semantic acceptance"
+    ]
+  }
+}

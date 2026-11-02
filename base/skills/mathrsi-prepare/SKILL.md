@@ -57,16 +57,19 @@ description: 数学研究的准备子工作流，实际串联原题初步澄清�
 读取本仓 mathrsi-survey/SKILL.md 并执行。
 调查 <W>/FORMAL_SPEC.md 的初步问题，复用原wiki和ref。
 已启用插件 <实际入口与阶段> 一并交给你；Property B按survey中的
-propertyb-literature调用执行领域种子、查询和误读核对，与通用发现共享一轮调查。
+propertyb-literature调用执行领域种子、查询和误读核对；已启用DD则按survey的
+DD分支读领域入口和transfer的公开比较段。两者各与通用发现共享本次调查，已有结果补差异。
 本轮未知是 <异名/基线/反例/指定进口>；新题首轮广搜，已有调查补差异。
 结果写 LITERATURE.md，保留实际查询和原文位置。
 返回可用结论及条件、基线、候选反例、关键未读来源，
 说明哪些发现影响正式目标的解释。不要替用户换目标。
 ```
 
-领域插件提供当前任务的具体查询与原文定位。例如Property B要对齐参数、同一基线及公式范围。让survey与领域literature分工消费同一报告，避免两个agent重复广搜；并行查不同来源时指定一个报告和wiki writer。
+领域插件提供当前任务的具体查询与原文定位。例如Property B要对齐参数、同一基线及公式范围。已启用DD时，将 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md) 和 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4交给survey，附当前 `(d,D,n)`、最大度／正则要求、固定任务还是竞争目标及原caller；按survey的DD分支取历史wiki与公开比较为种子，返回合法构造族代入及其实际影响。让survey与领域阅读共享同一报告和一次发现，已有DD材料只补新缺口，避免两个agent重复广搜；并行查不同来源时指定一个报告和wiki writer。
 
 收到调查，读回基线与拟用进口的精确结论、版本、编号、前提和原题映射。找到现成证明就核对、复述或按用户要求寻找独立证明；找到反例先验原对象和性质。未搜到解答只表示当前搜索范围，不能作为原创或为真的证据。
+
+若新基线影响正在准备或恢复的竞争目标，直接比较原候选与新保证，回交哪些任务仍值得做、哪些仅服务于已失效的纪录主张、第一项替代动作是什么；有上层 caller 就由它撤换实际队列，不另启一轮准备。用户固定的构造／证明任务继续保留，只有比较结论改变。DD 的公开33点 partial ovoid 既超过旧 O22 目标，也提供了更强源输入；因此返回应包含“停止原竞争队列，读取新源的适用条件”，而非只在 LITERATURE 中追加一行数值。原件和比较边界见[基线转折](../mathrsi-meta-evolve/references/evidence-and-transfer.md#4-链三基线改变的是研究价值不是图的合法性)。
 
 关键原文缺失时返回survey补那一项，未变来源不重查。缺失不阻止另一路线时保留条件状态并继续独立工作，不让单一检索服务阻塞整个研究。
 

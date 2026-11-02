@@ -1,0 +1,246 @@
+# SageMathCell online -> https://sagecell.sagemath.org/?q=idmkwp
+# 
+'''
+ Main properties of the graph
+rajiv1518  | Ord.: 1518 / Size: 4554 / Diam.: 5 / Avg.dist: 4.32762 / 6-reg.? True /  Girth: 6   
+loz1404    | Ord.: 1404 / Size: 4212 / Diam.: 5 / Avg.dist: 4.27655 / 6-reg.? True /  Girth: 6   
+ Symmetry properties of the graph
+rajiv1518  | Aut.group.ord.: 6072 /  Cayley ? False ---  vtx.trans. ? True -- edge.trans. ? False
+loz1404    | Aut.group.ord.: 702 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+Degree histogram rajiv1518 : [0, 0, 0, 0, 0, 0, 1518]
+Degree histogram loz1404   : [0, 0, 0, 0, 0, 0, 1404]
+
+ Automorphism group structure
+ C_n is the cyclic group of order n;  x means direct product; : means semidirect product.
+rajiv1518 : PSL(2,23)  |  center order: 1
+loz1404   : C2 x (C13 : (C9 : C3))  |  center order: 6
+
+rajiv1518  distance distrib from vtx. 0: [1, 6, 30, 149, 608, 724]
+loz1404    distance distrib from vtx. 0: [1, 6, 30, 149, 604, 614]
+'''
+
+import networkx as nx
+
+loz1404 = Graph(r":~?T{_?_?_?_?_?_?_G?F_F_F_F_F_F_N?M_M_M_M_M_M_U?T_T_T_T_T_T_\?[_[_[_[_[_[_c?b_b_b_b_b_b_j?i_i_i_i_i_i_q?p_p_p_p_p_p_x?w_w_w_w_w_w`??~_~_~_~_~_~`F@E`E`E`E`E`E`M@L`L`L`L`L`L`T@S`S`S`S`S`S`[@Z`Z`Z`Z`Z`Z`b@a`a`a`a`a`a`i@h`h`h`h`h`h`p@o`o`o`o`o`o`w@v`v`v`v`v`v`~@}`}`}`}`}`}aEADaDaDaDaDaDaLAKaK_SAKaKaKaKaSARaRaRaRaRaRaZAYaYaYaYaYaYaaA`a`_hA`a`a`a`ahAgagagag_GAg_PAgao?KAnananananan_@_@?}_@_@?N_@?]a{Azazazaz_\Az_eAzbB?`BAbAbAbAbAbA_U_U@R_U_U?c_H?UbNBMbMbMbM_qBM_zBMbU?uBTbTbTbTbTbT_j_j@g_j_j?x_j@GbaB`b`b`b``FB``OB`bh@JBgbgbgbgbgbg`?`?@|`?`?@M_r@?btBsbs_GBsbs`[Bs`dBsb{?_@_Bzbzbzbzbzbz`T`TAQ_H?c@T`T@b`T@qcGCFcF_\CFcF`pCF`yCFcN?J@tCMcMcMcMcMcM`i`iAf_N?]@i`i@w`\@icZCYcY_qCYcYaECYaNCYca@IAIC`c`c`c`c`c``~`~Ay_r@M@~`~AL`~A[cmClcl`FClclaZClacClct?tA^CscscscscscsaSaSBL_x@GASaSAaaFAS_Kd?d?`[D?d?avD?dF@sAsDEdEdEdEdE_PDEahahB_`\@wAh_QAhAuahBC_`dQdQ`pDQdQbIDQdX@^BFDWdWdWdWdW_eDWa{a{Br`b@qA{_fA{BHapA{_udcdcaEDcdcb\DcdjA]BYDididididi_zDibNbNCEaFAaBN_{BNB[bNBi`JduduaZDuduboDud|AHBlD{d{d{d{d{`OD{babaCXaLA[Ba`PBaBnbVBa`_eGeGaoEGeGcBEGeNBEC?EMeMeM_CEM__EM`dEMbtbtCkapBHBt`eBtCAbtCO`teYeYbBEYeYcUEYe`ArCRE_e_e__XE__JE_`yE_cGcGC~auBCCG`zCGCTb|CGaIekekbUEk_DEkchEk_SbkCeEqeqeq_mEq`IEqcZcZDP_WBVBnCZaOCZCgcZCua^e|e|bhE|_YE|c{E|_hbXCxFBfBfB`BFB_tFBcmcmDb_BB[BiCmadCmCzcbCmasfMfMb{FM_nFMdMFM_}cQDJFSfS_AFS_N@WFS`sFS_ZD@d@Dt_A@AB|CTD@awD@DL_QD@DYbFf^f^cNF^`CF^d_F^`Rb~D\Fdfd_VFd_c@lFd`^Fd_EDRdREF_V?lCACODRbJDRD^_fDGDRbYfofocaFo`XFodqFo`gcwDnFufu_kFu_xAAFua]Fu`DDd_IDdEX_k@kCbCzDdb]DdDp_{DdD}blg@g@ctG@`mG@eCG@`|cdE@GFgF`@GF`MAVGFaHGF_oDv_^DvEj`@@VCgCuDvbpDvEB`PDkDvc?gQgQdFGQ_ZABGQeUGQaQd[ERGWgW`UGW`bAkGWbEGW`nEH_sEHE{`UAUDGD^EH_XCCEHET`eEHEacRgbgbdXGb_EAWGbegGbafdIEdGhgh`jGh`wA~GharGh`YEZ`HEZFL`jA@DLDYEZ_CCVEZEf`zEOEZcegs_XGsdjGs`DAlGsexGsaye?EvGygya?GyaLBQGybkGyaXEl_V@]ElF]a?A}DkEBEl`BCiElEwaOElFDcxhD_CHDd|HD_oB?HDfIHDbLdmFGHJhJaTHJaaBdHJbXHJaCE}_A@rE}FnaTAjDpD}E}_mC|E}FHadEsE}dJhU`BHUeNHU`nBRHUfZHUb_ecFXH[h[aiH[auBwH[cQH[b@FN`@AGFNG?aiBcEOEfFN`lDNFNFYawFNFfd\hf_mHfe`Hf`YBeHffkHfbreQFiHlhla|HlbHCJHlb~HlamF__kA\F_GPa|BPETEaF_`WD`F_FjbJFUF__IDnhw`lHwerHwaXBxHwcE_RFFFzH|h|bOH|b[C]H|cwH|bfFp`jAqFpGa_YBOCIEsFHFpaVDrFpF{b]FpGH_^E@iG`WIGfCIGaCCKIGcX_gEuGKILiLbbILbnCpILcdILbSGA`UBDGAGr_DBbBvEwFDGAaAEDGAGLbpFwGA_sERiWaVIWfTIWb@C^IWck_|FhG\I\i\_aBuI\cADCI\d[I\cLGR_]ATBWGRHC`CBuCoFUFjGRa~EVGRG]cCGRGj`HEdigaAIgfeIgamCqIgc~`QFWGmIlil_LCHIlcTDUIldIIlbyGc_HA?BjGcHT_nCHC\FYFfGcakEhGcGncVGYGc`]Ev_WIwa~Iw_AFvIw_KBfIwdP`fGJG~I|_B?LI|`KC[I|cgDgI|e?I|crGt`GA|B}GtHe`mC[DTFwGLGtbdEyGtH?_dCiGtHL`rFG_BJGakJG_VGGJG_`BSJGdb`{FyHOJL_W?aJL_vCnJLczDyJLdmJLc_HE_rAiCPHEHv`XCnDBF{GHHEbQFJHEHP_OC|G{HEaGFX`AJWbdJW_R?kGXJW_c?uCLJWdtaPGlH`J\_l?vJ\`uDAJ\_dDLEKJ\ecJ\dVHV`qBbCcHVIFaWDADxGYGnHVcJF[HVHa`NDNHVHna\Fi_lJgbQJg_g@@GiJg_N@JByJgeFaeG[HqJl`A@KJl``DSJl_OD^E]JleQJldDHg`\BOCvHgIVaBDSDfG]GjHgbwFlHgHr_yD`H]HgaqFz_Y@kJwcJJw_|@UGzJw`M@_CrJweXaxHNIAJ|`V@`J|a_DeJ|`NDpEoJ|fFJ|_YDzHxa[CHDHHxIfb?DeE\G{HPHx_dCpF}HxIB`xDrHxINbDGK_D@VKGbwKG`Q@jHKKG_x@tC_KGejbKG}IQKL`k@uKLaJDwKL_yEBF@KLeuKL_DDhIHaFBuDZIHIvalDwEJH?HLIH_OC]GNIHIR`cEDH~IHbWG\`CAUKWcpKW`fA?H\KW`wAIDVKWe{b^HpIaK\a@AJK\bGEIK\`xETFQK\fhK\`CE^IXbCCnDlIXJFbeEIF?H]HrIX`NDUG_IXIbabEVIXInbjGm_nA@Kgc]Kg`{ATHmKg`bA^DDKgfLbqH_IqKlaUA_KlatE[Kl`cEfFbKlfWKl_nELIhapC[D~IhJVbRE[EnHaHnIh_yDCGpIhIraMEhI^Ihb}G~`mA}Kw_JDUKwaPAiH}KwaaAsDzKwf]cDIPJAK|ajAtK|bmEmK|abEwFsK|gJK|`mFAIxbiDSEPIxJfcKEmFaH~IRIx`xDyHAIxJBcPHO`XAjLF__DCLFaeA|IMLFaLBFDhLFfncWI@JQLKa}BGLKbZE~LKaMFHGDLKfyLK`XEpJHbVDAEbJHJvbxE~FPIBINJH`cDgHRJHJRccH`aWBcLU_tDyLU__AxBOI]LUbHBYE^LU_ZG?cjIpJaLZbPBZLZcSFOLZglLZaWFcJXcODwEtJXKFcqFOGCI^IrJXabE]HcJXJbcvHqaBBPLc`IDgLc_JBKBbImLcauBlELLc_EGPc}I`JqLhbcBmLhc@F`Lhg[LhaBFRJhb|DeFEJhKVc^F`FrIbInJhaMEKHtJhJr_\DHIA`^E]Lq`IB^BuI}LqbnC?FALq`DGadOJPKALubvC@LucyFqLuhNLub?GEJxcuE[FVJxKf_`FqGeI~JRJx_GDZIQ`sEKL}_tBqCHJML}b[CREpL}_oGrdaJ@KQMAcICSMAcfGBMAg}MAalFtKHcbEIFgKHKv_KGBGTJBJNKH`FDlIaaHF@MI`sCDC[J]MIcTCeFcMI`nHCdsJpKaMMc\CfMMd]GSMMhpMMbeGgKX_WDYE~FxKX`JGSHGJ^JrKX_qD~Iqa]EoMU`^CWCnJmMUcACxFRMU`YHTeEJ`KqMYcoCyMYdKGdMYh_MYbRGVKh_BDGEmGIKh_uGdGvJbJnKh`pEPJAarFbMaa]CjDAJ}MaczDJGEMaaXHeeWKPLAMedBDKMeeAGuMeiPMecKHIKx`AD}F`GZKx`tGuHiJ~KRKx`[EbJQbEFQMmaHC}DSKMMmcgD\FtMmaCHveiK@LPMqdTD]MqdoHFMqi@MqbxGxLG_lDkFOGkLG`_HFHXKBKNLGaZEtJabXGDMybEDODeK]Myd^DnGgMyb@IF_XEzKpL^M}_RDfDoM}eeHWM}ipM}cqHkLV`kEaGBG|LVa^HWIJK^KrLVaEFEJqbkFsNEarDaDwKmNEdLE@GVNEamIV_CFKK`LlNI_gDxEANIeSHhNIi`NIc^HZLd`VEOFqHMLdaIHhHzKbKnLdbBFVKA_fB~GfNQbkDsEIK}NQeBERHINQbfIf`BF\LOLyNU_J?|EJESNU_hHyNUjPNU_\AUFDGdH^_\BFHyIjK~LQaoFgKQ_QCQGUN\bXEEE[LLN\dpEdGxN\bSIv_mFmL@MEN`__@QE\EeN`_SIIN`j@N`_GA@EsGSHo_GAsIIIZLBLMbhFxKa`PCdHHNg_dCQEWEmL[Ng_HEfEvHkNgcLJF_E@lF~MQNk_S?t@fEnNk`RIYNk_LJpNk`FA}FfHFI?`FBlIYJJL\LmbUGIKq_{CwGwNr_OB~EiE~LiNr_]ETFGHZNrbyJV_Z@WGOM]Nv_h@I@{F?Nv_}IiNv_aJ`Nv_qAjFUGuIO_qBYIiIzL_LjcNGZLA_R@zDIHjN}`NCwEzFOLvN}_^?rFHFXN}crJf_oAVG`MiOA_}@^APFPOA`|IyOA_vKPOA`pBcGHHhI_`pCRIyJjLwMFb{GkLP_g@eD[HYOH_yCdFKF`MBOH_I@GEwFiOHc_Jv`DAAGqMuOL`R@sAeFaOL`gJIOL`KK@OL`[BPFwHWIo`[C?JIJZLzMCctG|L^_|AdDmIKOS`xD[F\FqMNOS`H@\FjFzOSdVKF`YA~HBNAOW`gAHAxFrOWafJYOW``KpOWaZCIGjIIJ?aZCxJYKJMOM^caHMLl`QAOE?H{O^`cDIFmGBMZO^_s@qFYGKO^dDKV`nAkHSNMOb`|A]BKGCObaQJiOb`uK`ObaEBvGYHyJOaECeJiJzMRM[dXH^Ly`fBJEQIkOiabE?F~GSMfOi`rAFGLG\OidzKfaCBdHdNYOmaQArB^GTOm_gBLJyOmaJLOOmbBCoHLIiJ_bBD\JyKjMgMvdFHoME`{AwEcI[OtaMDmGOGdMrOt`]A[F{GmOtdhKvaXBQHuNdOxafBEBqGeOx_RAyKIOxa_L@OxaoC\G{IYJoaoDJKIKZMjMs_XD|I?MQaPBpEuJKP?a\ApGnG~P?_WE^amCJIENoPBayBXCDGvPB`QBrKYPB_EAtPBbhDTHnJIK?bhE@KYLIN?NN_CDjIOM]aeB]FFI{PIaGBCG]HOPI_BELb@BwIUNzPLbLBkCWHGPL_|B_KiPL_ZBGPLbUDBH]IyKObUDnKiKzNBNK_N@BE`I_MibDBVHPH`PS`AFAbSCpIeOEPUb_B~CjHXPU`{CXKyPU_oBZPUcNDxINJiK__c?mENIoMuaqBiH?HqP[_lEpbfC]IuOPP]brCQC}HiP]`fCELHP]`DBmP]b{DfH~JYKo_x@lFCJ?NAbjB|HrIAPc`kFcbyDUJEO[PecECdDOHzPeaeC~LWPe`YC@PectE\InKIL?`M@WErJONMbWCOHaIQPk`VFRcLDCJUOfPmcXCwDaIJPmaPCkLePm`nCSPmcaEJI^JyLN`bAVFeJ_NYcPCbIRIaPsaUGEc_DyJeOqPuckDIDsIZPubKDbLrPuaCCfPudXF?JNKiL]`wAAFTJoNdb}CuIBIqP{a@FtcrDgJuO|P}c~D[EEIjP}axDPL~P}aXCyP}dFEnI~KYLkaLA~GGK?NocvDGIrJAQC_PA}GgdDE]KEPFQEdPDmEWIzQEbqEFMJQEd|FaJnLHLxaaAkFvKONzccDYIbJQQJ_eAjGVdVEKKUPPQLdbE?EiJJQLb^DtMVQLdjFPJ^KyMDauBdGiK_OEdZDkJRJaQQ_zBcHI_HDhF@KePYQSdtEQEzJZQScWEjMbQSe`GCKNLeMPbHBQGXKoOPdHD}JBJqQX`OBPGx_]DzEoKuPaQZeFEcFKJjQZcDEXMnQZeNFrJ~LWM\b[CJHKL?O[d~EOJrKAQ_`dCIHk_rELFbLEPiQaeXEuF\JzQac}FLMzQafCGeKnL~MhbnBwGzLNOfdlEaJbKQQf`yBvHZ`GE^FQLTPqQhejFFFmKJQhcjE{NFQherGTK^LrMtcACpHmL]OqebEsKRKaQm_^?fANCo`\EpGDLbPyQoe{FWF~KZQofeHGLMMVN@cTC]H\LkO|ePFDKBKqQs_I?QAcC\`qFAFsLpQAQufLFhGOKjQufTGvK~MJNLcgDUIMLxPFfEFUKrLAQy`H@PAvDT_P?YAFFRGfQ{f]FyG`KzQ{gGHiLjMnNXczDCH}MDPPetFfKbLPR?_s?{BIDB_D?eA[FcGURAfnGJGqLIRAfvHXL\MbNcdLDyImMPPYfgFwLQL^RE`r@zB\Dx_z@CApFtHHRGg?G[HBLXRGgiIJMCNFNnd^DgI]M\PafVGHLBLlRK`]@eBoDf_n@OBCGEGwRMgPGlHSLfRMgXHzLwMzNydpE]JMMhPigIGYLmLyRQa\AdCBE\`d@mBVGVHjRSgaG}HdLsRShKIjM[N]ODeBEKI}MtPqfxGjL_MERWaGAOCUEJ`X@yBiGgHYRYgrHNHuM?RYgzIZMONROOeTF@JmN@PygkG{MFMQR]bDBJChF?aNAWB|GxIKR_hCH_IEMKR_hmJJMsNsOZefEoJ]NLQAgZHLLzM]RcaqAwC{EnaBAcCOHIH{RehTHpIUMWReh\IzMgNhOe_PEwFbKMNXhMH]M^MiRibjBpDMFaavB?CbHZIkRkheI@IeMcRk_eFHFQJ}Ncg|HnMRMuRnbWB]D_FPalBICuHkI[RphvIPIuMoRp_zFYGDKmNnhoH~MvNARscPCVDqGC_IB\BeDGJKRuiFI`JEM{Ru`OFjFsK]Nyh^INMjNMRxb}CCECFr_^BRBoDYI{RziVIpJUNGRz`dF{GfLLODiOI^NNNYR}cvC|EUGe_sCBCKDkJkS?ifJ@JeNSS?`yGLGUK}OOi?InNBNdSBccCiEgGT`HBxCUD}J[SDivJPJuN^SD_LANG]HHLiOZ_dDZD`ExHG`]ChCqEOKKSH_aAcGnGwL[Oe_ODHDNFIGv`rC^C{EaJ{SK_vAvH?HjMBOp`ND~EDFZHi_`AGDMEsKkSN`KBIHPHYLvO{_yDlDrFkHX_KA\D_FDK[SQ``B\HaIKMZPE`xEbEhF|IJ`JAqDqFULJST`uBoHrH{MNPO`cEPEVGMHz_uBDECFfK{SWaJCBIBIkMrPXabFEFJG^Ij`tBWEUFwLgSZa_CUIRI[MfP`aMEtEyGoIZ`_BjEgGHLYS]atChIbJKNJPh_VA^B}ExGYM@bGC{IrI{M~Pp_AAICPFIGjLtbZDMJBJkNaPx`@BFCcFZG{MXbmD_JRJ[NVQ@_kAsCvFkHLMLc@DqJbKKNwQH`jBlDHF|H]MpcSECJrJ{NlQO`UBYDZGMHnMdcfEUKBKkOMQVaTCRDlG^H~NHcyEgKRK[OBQ]a?C?D~GoINM|dKExKbLJOcQda|CxEPH@I^N_d]FIKrK{OXQkaiCeEbHQInNT_fDoFZLBLgOybbD\EtHbI~Nu_QEAFkLQLYOnbODJFEHsJNNj`PESF|L_M@PMcHE@FVICJ^OK_{EeGMLmLtPCbuDnFgISJnO@_S@zG^LzMXP^cnEdFxIcJ~Oa_h@eGoMFMLPVc[ERGIIsKNOV_}AdH@MRMpPndSFGGZJCK^Ow`RAOHQM^MdPfdAEvGkJSKnOl`gBJHbMjNHP~dwFiG|JcK~PK`|AwHsMvM|PvdeFXHMJsLMPAaQBpICNBN_QMe[GKH^KCL\P\afB]ISNNNTQFeIFzHoKSLjPTe~GmI?KcLwPlemG\IOKsMCPdf`HOI_LCMOP|fOG~IoLRM[PtgBHqJ?L`MgQKfqH`JOLnMsQDgdIQJ_L{N?QYgSIAJoMGNKQRhFIqK?MSNWQgguIaKOM_NbQ`hhJQK_MkNmQthWJAKoMwNxQniIJqL?NCOCR@hyJaLNNOONQziiKQL]NZOYRLiYKALkNeOdRFjIKqLxNpOoRXiyKaMDN{OzRRjiLPMPOFPDRdjYLAM\OQPNR^kILlMhO\PWRojyL^MtOgP_RjkiMEN@OrPgRykYLyNLO}PoRtlHM]NXPGPwSCkyMQNcPQQ?R~_aLeMuNnPZQG_LLWMiNyPbQN`KL~NMODPjQU_vLrNAOOPrQ\`uMVNdOZPzQc``MJNYOeQBQja_MnNzOpQIQqaJMbNoO{QPQwbGNFOPPEQWQ}atMzOEPOQ^RCbmN]OfPXQeRIbZNRO[P`QlROcSNsO|PhQrRUc@NhOqPpQxR[cyOIPPPxQ~RacfN~PFQ@RDRgd]O_PaQHRJRmdKOTPYQORPRreAOuPqQVRVRwdoOjPiQ]R\R|eePJQAQdRbSAeSP@PyQkRhSF")
+rajiv1518 = Graph(r":~?Vm_k?]_p?S_l`??j`A?a`G?C_L`@`M?s`Q@O_w`]?^_}_~`b?x`B`i?G_@_R```a`c`r@L`x@u_u`Q@c_g`SaDA@aI?l_R`[`\aO?b`S_f`baZ?M_J_B_]_^aMaNaR`Baf?t`p`qak@RapAlam_x@N`xAR`B@y_y_YbAA|`VbD@yaFAUbI@@`AaFaGaHbQ?r_V`U@{`|Ay_w@C@oaPAmaQbZAFb_@FaY_TBH_U_A_E_F_j_kAz`ZBNbCBObPbVbW`bbpBebs?O_cadaeAgbxBGbz@z_wb}B\`yBbcAB|b}_vBEC?`S@s_f@tapBVaqA}BW`T`U_fb`cOAPcQA]aEcTAscW@Wa|a?c[A_arBe`QbDBYc`CFcbAi``CO`a_SbDbEbFbHavcm@m@qbjBr`JBb`K_ZAu_yAvBS_gCN`Q@dAc_m@J@R_vBS`uBTbqc|BDbHaldAC\_U_oCK__?~_`AH_K_D_?_J_KCj_}_~`?CP_\Cj_|CkcZClcvcw`CaPCXaQaEcY`HBLDRa\d[BPCN_X_HbpbqbrBudcCadeCNataCb|CVbWC}aqArDF`QAZdm@wc@dgdKDhdiDk`PC^Dl_dAFAn`{AhAi`|AjD``\CACvbFCBCw`CCCCS`}`~CH_ZCk_x`FC~aYB_e@CkeB@q@tBJbrByb]eFBfbCCO`YeKCFeNDnb|aAEM_z`Waza{BnDDcO`H@hCDa\B^CE`xAGAVc\CyCzc]C{e\Cqc{e_BbBwC~`UAMaNAyaOEC_C_Lc\c]E[c^DYcQC_c`cJ`{Bdem?bAf`I@L`nDF`oAZEe_W_?CH_PCIC_Dm`TCJCq_yBOEB_YECEl`xASBn`yATBoEo`PCq_dCrDKalCsdZaddpE}f@AGbvC\CbEAc]_~aHb|EEfI?K_M`ECLD}_m@]AE_j?nCY_oBGC?Cp_Q_E_I_ADz_G_QBqC]Ej`[`]A{`^DeED`_EEEU_FEj_QEk`YEl`fEUb[Ddeye@Eze{`d_mbSERbABTbC`YeS`kChF`_pAKBkbdCyfm?dE^_e_NdYahDZFBcdD^cDD[D_fvE^a`_i`Xb]DgEN`CFCaRFDcCCDFOFf`xCEFP`xBaaodl_eDLfxfyfUFzaqDEF{G?b~DqF|`vEYG@`wEZGA_tAuBw`rAvBx_gByFraHDoEya~C_DqE{`dDrEI_mDsEJawCXaxayDy_?El_PBN_UFE_oB\b_DBeMg[ElFpbNDQafAkCe`L@NAIE`aQCdDdEHd?aWFGa^EicpDKdLFL`UCZayC[FrghF\FkF}cLDvdwGXglC@aTA}a~CUF^`VDUGRaAE\GG_zcPcQ`UA^ayDM`kAYDtGf_p@EDu`RBdD@apBFB[`[@eAqGrb@EVE~bXEWF?G@e^cfcGErf@bYG[ajFBdFDaFEGfaZB\Db_ZBNbQG_bRCNGQ_G_@eVcoEWFceXG}bpEZeFE[azE\btB{Edd|FoauDIEAaQcs_rBsEkGd_VBt`l@paaFOabCtFPacBaGdHJ_cCIDb_NGS_@Dy_YBTD{E[GB`}B{Er`~D|Es`TClG]apBXDVaqB?DW_n@KArHX`vEOEr_uEtFUFpb|EuGsb}EvGpfkflgEHMcACxFe`~D`EVE_agBGCMEW`]_jamBGD~dgGbcPDhhuEDc]_E_TCL`gE?GV`hAwGW`BAIA{BC`C@YAJEF_}@DESGG`ECaDlEqGn`FAnBQCb_[_\Ft_P_DC`DnGS_MCk_[DZEXFbHP_\AdBDHQaICRF_a?AJ`tAKG`aLByGa_BHQ_[HRaDDpGAHSH|aEHT_`FFGt`DEIGuepHedmEPgbGyHhaSF|aTcrEeGqcWCscZIFc[E~aDgrH`Hngs`GBKDQb@DIGAbXDJfFeI_uCLHB_vCaGX_WEjFoGcfj_tAVFkGK`rC|FldREbbIEGFpeHfOFtHrh\bj`lHm_|FuaBB}d?FxGIGKaWFyGlH@`dC?Ho_mG?GYHpdrDtFFI@IZdVDsDuEIIA`RA[ApapC?DDGq_IFV_XBfiohiI@dLF?INIpbZG\IqanGlG{INI__eAGAo_OCHDaagCJDc_yDdIh_YDeIibGGCHebHDmGD_{E[GFHgaSGHGgaTGIGhbJCKERbACLEbG{cICMFScOEqGR_@HSIa_AHT_KHr_MHs`EB`C}a~DBFIdCEKFJFmcUF{hSIed^E]G[HTcjFBF^bsBzEc`p@sBIHEa@BUEbFw`bBICRCZeJfFb\Ht_qALBlbtEqFUbQDvFoI{_ZEU`ZCNIhIki_jgE?GMawDKeQGZb}Dm_nCS`dCT_{ELIQ`oA?FnJLa@BmDybEEDeEEXboDEEF_Z?qE^HI_y@ka]B_GJJda^B`EGGK`G@gGL`zDIFGJW_wDJFHaNBlCAC_cBC`ClF`cVGvHkaBGQGwHlcxFvGlGxhBcaI{dxG\H]HuasFRHtczFnG~JVJtaVByJf`sC|eGFPFuHs_?Cj_PCkcoDsEMI\J[cpJ@J\Ji_JeTGvgwHJJre\EoGxgyK?gzHXK@gcG}gdG~cPH?`M@OAJEa`|BeHVHwbUFb`b`JA{D\HR`KCjD]EF_a@Ma_AdDka`AeIwbkCgFnI@blHLHtIAa[BmEfEwIR_sCiD{IgIr_BGQ_CGRIb_fCsGTG}Iy_gAPGUG~Iz`OAwH]KEakAxFRKL`f@}F~JY`~B[HPcBCyFfcCCUEpFg_W@DCDK]__?rCEK^aCAnH]K@aoCVFR`NBZH_Ie`OD^F@H`dgHaJrdhESE`gkI`gCHiIaaeF?bLI~egH@doE|IX`TFsFwGwHDbuCaE@GxaID~GqaJJGJR_}`uCKCbKafxJ`fhFtFyKGc`IYJ^h?HXJxg`bDJ___DkE?_`AwIwaWGYJPJbaXGZJQ`cA?BJC[_k@dADGc`\@fDqGs`gE]G@H[Jm`hEPE^GAH\_hGk_FIj_Y_Z_H@\@wHG_IBFC@JM_TDJEl_UBNIDJH_hAbFkGyKT_iDSFlG]GzbJDQEHJcakBKJ]K|`NBLJ^bMDdJ__hDzHc_iJLaoBAGEKVLJbBCADlFLKW_oAXHpJs_TD?IXJt`eDeGgfyHZKhKmcoKnLNeAGBGmIHamBXb?Di_nIFKWbBEtHJdYDbEPEueQEvI]IlbeEUEfFsKtddFTIOKN`ZF~HkbALDbBIqJpKGbTJpKzetFAJPJq`iCfDUF^Hc`jCgF_IWaBDlFSK?d?Jagg`NE?FSKDKM`PE]JSJoK^i^KE_OB[I`JB_c@eDtIaf`HFKfKybkGeHGLxcECcGeIeLma@cRL?i@IjL?bRDUeqIW`mHn`YIl`ZDaKQalB@dWEJIoJ@JBaSDlK{aTAnKsK|`BIUIxK}aXGHGJHALNLo`yFeGLGgKhLO`zBcCACnDC_w@iCBHWHxanCBERFM_PGuIG_DIHmFbiFVFvLgbfCzF[MHc|EkIRJXMIaUE@IuKUbiBqB~JjJ|c?ENF[FjJ}_X@[@vHF_XDyFt_HDzFubuB{C{bvD|FvcbI|Kn`XC?G}KbKq_hG?G~HoKrb?G@IDJf_nFFJ@ceD}GpLZcWE?HFJ|_BKVLwMA_CFkKW_DBO_QG^L?_EI[KTL@_TB]`F@gFC`hAYFDHo_{FIFZKraAFJHweLIsLvj{KVLzjeKWbODRH@JVKBaVEAEjIQIvcTD\HHLFd]DfHIadAiCcKGaeAjCdKHa|CtExHFImKJ`VCuHGInKjdfEfcSKNaXFHc}DALALDc~HvJpLB`IBMDSFu_a@^AaMBMo`MBZH[afF@H\I`coFMGMHVMT_?Gt_\EBL}MB_|ECFtL~f]FlF~gYJEKRgZJFMTcKFUdiGBalEyK[__EJLlaSEKF_I?acAzCkFQc^DWEEG`HTLQaFGaIZJ__?@IHBIK_P?aCaEcMm`TA]MSNObfDBJAJINGbgDCH[MFNH_q@FGeJB`iAWJCMD`jAXJDMJatFSG[HtHubPDSDoE[``AaDpE\eMENJuKveOJiJvK[Kwb?GAJJJwKxajE|JjJxKYKrdcENE}JyNQcgE]MTeiGOJXKaLCe@FGGPKSKbe~FQIVMrNVd\E[F?GtMsa[B]GeIl_@DWEj_AEkHrIZ_AJtaEJuMDcYH_JvKLcpFdJwKLc_HYIXJ]JyjfJzhjIAJaK?a{IVeEKAKBK]_k@r@uD[_s?u@]CcJP_g@HHAKKKZ`SA\EmFII~cuDSKOLALOaPNS`nCRDzFm_p@rJtKP_q?sNJbhBpEOG?dQEgEiFQLNL|bKDRD\FxKSbcDTHLHbLe`L@_BvB}GT`MBMFqFzGU_EC~JJ_FHqJKMO_wEuJNK?MR_xEvJOK@MSbzCMICI\Nm`DAxDjMwb@DqIZL]LtdrELHZI[LIM{_N@fDuO@_iB~HpKaNd`tAUJeKfcpFxKgLufzGqGrHEi{KsLwbrFlFv`pCzLwM\chJIMWOEaKMXgDHjLmMJ`}AhBHI\ImJwd_E^G\JyNzbBBIGXG|_kLaMaMm`[FfGaKW`\LnM~cQIjIpNjbFFeG`KVgjJ]KMj^NLOT_nB~GZOZb\GUIUMjNEb]GcJUMiMkaxB^Ml`ZARAzCeIN`?ASBAJa_]ATBBJbaYAoBRGmHB_LFlM@_fLUMsO^O`_gNqO[_N?eAHBJGW_O?}@PEbMl__FTHS_`BdHTN__zBmI`JzNu_{@nIaJ{Nv_|AeBEFaIYJYa@CeF^NFbzCfM|OZb{CgHoM}`sChM~bxFwHON?cZCiN@Ns_zGSHcKjKl_{CHEwOJc@CWHYI~Of`vCXH@MoNyOgcYDoG@H{Nz`EB^HpK}NTeTEaIpMpNcOMdnEQEoMX`~BgIyJkcMFVIzJl_vCxJKMA`uCyOY`DBeN`NzaDH`KMMCciFjGmHabpBwE`GnNj`HAhGtHLOQa\CfD`GuHiJkf?FwIELBL`_\FDIwKv_|DjKwK}ODcWDAMZM]NhcXHvLLN~h_HmISKJMjeJJONCOLOVe}FPJeNKjfKuLONC`sF]GYIDLXNo`tDIGZHJIhLb`wGoHAHXMp_XANLHM^_HClLvM__sAUGJLw`RE`JcLzMhPKarEaIXJCJeOia|LZLkOc`VfiFuKHLNM@`A@oFdP]aOBmLiMU_bIJKz`IFAOvOydfEAFgLSMFM^bnCSJXMGM[M_`cFaMQNqO\Oib^EQJ?JAKCPN`QHaIYJDJfMg`aAsDGDoFKatBPB_DHDpKa_HBgkwLQPFjgNmajDPIGJULUa_DcIHITMCdPDZDjNMN__dE}GQIj_eGRIkKuakBYD_OHdnE_GkcUGlLTNINXOU`DAXLS__D?M[cGEcGVNkOvedGNGWII_GI`Nz_IAMLG_[FuJZ_JLqLvNuO]_`AWLR_UAWHoIY`XFZFiILMQOP_hDNHgHwJ`L^a}FnHxKKhYLKM`N}aMBkGEH?Ms`eCMF}HQLdbqBxEaNPNk`WEwHdJMKIMEd|HLHpeILBb^FDHvO^`gD@K}O[`hDAFCO\`lBxFaIlOo`mCiDaFbPEbRBsDwI|LHeoH}JEKZPkdDEmEpJFPl_FG]I\P^enIUI|K@NshNJUKZM`NraxDLPkbZD}FHKdd~F@LCPaf{GhIyLQf|IzNIN]_mDfPIbXBbFpGib?DQFNGjMxbnCPEZElIBJ^bNBoCQDGJ~QHbODHEYFgGbJ]_@@lHwIzKDQJ_A@mFYKEPjQK_Y?pE]HHN}P~`}BfPjQYdKFIM\MdOxQQdLFJGOM]MjdMEHFKK`PF_U@IJcL]M^_a?oJCM__xIDJVLALCcmFaGCG}cnFbGDG~NMaCGRKiNYN~aoCUKtMeNZbyHiIdKBNMOP`sHUHgHjNNN\bKHAPlaLJHMuODO_hkIBLiQBQbdGFcHlKOPAbcD?JcMCMK_BFgHP_CBnHQLj_DHRL?LobCDbKRNWeSHKKeNYNmO`bQDTN[NnPmggLPMLN^Pje|FOLzNDNJcRFXHzLiOCa?FcL[OdQi`?@qAgAlJO_]AhAmBrPybSFBJQLDaaEGGSIbabCHEHIc`GAgCgHjJlNVaCDNDXIxL]cVDODYGFLoaLCyEQF^IBPYchDGF_HMIfJmcfF`FmHuIodHFdKPKiPB_^@pD`DiJN_JFEFfMeNx_KB\K{Ln_LIcMbMfPh`SAQMiNdPjQVboCTE@LRQwaBGGILI]L\LpeTGDGHLILqOegIGkH{J[JrLr_V?`GLOzRH_[DkFCOEQoeqIHIoLFMcbQI@I^OIOseRIrJqKHRDkQMqN|PSPsdZD[DcQZQveAEhFHMdRM_t?~AwBoMENZ`rAHAxFgImN[cYCcJSJ~MHRTaDCdEYJTLfPL`?LuNOOIP~_]IOKmLEL`M|aGDVEDHSLPM~eFHsJOLgM@QtazMAMHO]PyQua~M|NoeKHJM}avC}LhP{QOc~D{FaNGQPcMD@HOPv`}DANsP}_\BVBiCPEcIN_|BWCQEdF[O}`^BXCWIRLQNC`_B?CXNDP@`AB_C@JkKD`vAOB`JlKE_RAeFsF|MhP\_SDZM?MLOiP]_yNSPlQXRm_I?VBGCeJR_W?XAIBHD}_oBODIJIOkPn`VDTIJLHN]Q~`WDULvN^OvR?`XAaG^LKLw`YBrC^ITLnMv`Z@pAFFeIUMwa|EcHIIQLd`VEdIRNlOOQLcTEeQGR_`OEgK{P]QHaiEhInQIajEiMEOpQJdcImKSOqQK`XDyHbQgREeSGCGlH|J\R@aED[EZLgPMQA`PE|KFMf`H@eOuQkR@`fA\J|LqNAQG`_I^JkKgbMI_JlKhRKRddXDaHEJmP]Qt_t@kJsKONKbdDeEeFrIPKsfvImLVNtO~czHtInLWMmOF_QC}MPOUOYPLblGfJMKeP{dfF?IgMiRScSGTKkKxPYa[D_HMOSQTQ[cxDFIeJga`AiIULTMDOs_dBPKpOd_e@`HyPr`LBYIaJAPR`zHEM`NFPySMa|IIIWLGRJa?L@MhPD_SAcIWMwS[_l@JDTM@_rGjJWL[Rt_VFWNLOXd@GoLMMYM\NgaOCFD]GCHy`@CGFQGDHz_x@jCmDBGEOD_NDMJhMs_OA]NTNqQTbyDJF\HKIiMqbgBhC{LfP__uHMJJM@_IJLMBORPObzCzFqPzRO`wHCHjJic@ELHDOQPweLJjK\OnQeQo`eB^EsP}`f@gICPudxHHJFJPQvS?asHIJQKGPsS@_hIlMx_iDaMyRARU_MB]FeK|NwSH_zFYKKKqNAO{cSFQLENlS]dEEnK_PsaACIExHbKkPa`|KOK}OoRecJFCKPPESrggKYNtPDPlghHtNQRnShd@HqJqNp_b@_AbFtMpSF`AD\GNGkOd_LBoJYLkgkHWLhNNNdQ|crC|GVHvaUD@GWH^dHFFIsMRP`eIIBItMSamEzK\Qi`BD|JhOUSKSW`CBzN|QTQpaZCyD^JhORQZ`jClG{I[J`M|aMBcFhG|I\M}_BA_EzF]GaKK_CA`FIGBLbM~_D?bCbEdMnSd_f@GEnFJH@RLfUFXFZPpPuT@dvHwL[PqPvQtfVH\HxJHMGP{a@FWFdHyOBQj_K@lDOKpN@NF_M@mILMRPrS}`SLTMrO\O_emHOITI{K?`aAbIVI}QWSZ`vEMHiNiPxbtC`DdKsLpQWdeFoH?KtQXRWaiEOKXKqKuQh`^McQDQYRLRejhKvLPNnSwS|d]E\GuKxNqPOdGEJNFOaP__GDVHsKUPGPxbwC[HNQdS}fHGrKNK~QfQweeGsIbLCMFQg`^AfBuB|MiQ}_j?t?vCdJQaVCqDAMl`iBuEgKuNPQb`jBKBvE|GmPA_iDOFYFhHhL_b@BMGoIQLPSXbLD]EhFpFyL{efFGISIcMG_lAdFrF{Mg_REMGqLySa_SFmJGJiRhSb`{BUGjKwPXSd`b@|NLPzQoSe`KEKG[OlOxacA}G\OmSQTb_T?bJDL\SjTm`qC{FkM]ST`~HNHvPuTo_O@K@]CKHDPa_c?jAcCLNiPbfEGTGdITP]QQ_{MDQEQGaAOtPGQyRfgiKLOUOkQH`{FDOnQBRdSs_FBiCvDPEDHH_QA_CwEEF[HIaKCxDHEPIgLe_^CUERPVQN_SDBDmF]IPJ^_lDCDnLbNOQH`TKRLDSoTFUB`UJpMTNMOf_c?d?~BIGV`EClFRMdRrSg`FAMFSGOLPMU`oAAPQQCS?TfaBBkDEJZPRQVaCBlEBH}PS`WHHIKLcP@QMa}HKR}SHSzc{HuMEMnOGRxcOGrI{JjLJTgeNFLG_GsI|TB`qAGBCFfJUSv`kAUL]R~Tg_pAVLYSBTB_^IPKnLFLaM}_cA^JgMrNUcIDSJdK~SrbLBcE}FqGnPBbjBwDbLhOnR{_uCmCwQSRh_vCnHfRiTWatJEKHNlP|SA`WLYLjObP`Tna{HrJNLfS[T@`@@nFcMVP\TE`JA~MtOwSRUG_aFBIIOzQUfGJnOhPoPpQqfHH~JoK[PqQr``B`DxIBI}Kb_WFXGiJVRsdMDNF@PCS\Soa]BYDOPDS]cTE~GUIfKlTsgMGPKKMkOwSicFIJIKMlNjSk_zMCOuPHRgfNHWOAO`RBSkbaCmLsSlT}UWa}D{HdHlL|S^auA~CtKiOLS_eiIdJeKRMHSWhUJfKSLfMT_^?rBmIjQAUS_V@?@nIkJSUT_lELFnGpRiT?_R@KDUMAMvbYFGJRKcPbUL`uCvHWQRTw`cCJGiKvPWUVb@BaDRMyNLST`GB[J}LrNBOt_EA`BhHfJ_Nl_GBjFZIyONQI_H?rAJD~E_S_a^BZILShSnUubRIAIGI_LESrehHVKQLgLzSV`M@\DWFwGZTDafBFCZIZMqTE`tHVHhKAOQTFaCBwN{OOORTVbxCVJnLcOSOjbsC_EULoOVQzaKBsD^DgHOPXaLBtD_DhNsPz`hB[ErPvUFUg_[BhE{GbIKIMaBCiJoLdOkTvchFoHNIeIpPW`@BpFPIhIsT|`ABqIiItLOUkavCuEKHkL{UeayJqKQNNOgSn_s?}BnE?InQs`XDbRBRVRYSyauFbHqNHSwT{_LDPEyFJF\G``@@wFKONQYS{`L@[C[DVGYT`_RF\HeHxIOJ]`NEmE{NfRXUw`OBVEnNJRZUZ`P@aHzKoTHUq_qC|LZL\TChuKXNIPCPkRoaNAYGPH]LQMVdwFWFYP}QuSEi?K\LCN{RISE_W?]@oJTKFV[aRB{JgN}OTSVcVDDECF`QUQ{`iANFiNaPPR}_JBjDNKoMSN?_N?k@JGXHCUaaOFOFjLXOaT{akBWKZNKNeU[``A[DXL}MJUN`aDFDYL~MKRdcNEOFMISNrTCbbCnLtO_RATYaZBPI]QlReSP")
+
+
+loz1404nx =loz1404.networkx_graph()
+rajiv1518nx =rajiv1518.networkx_graph()
+
+# List of graphs to process
+graphs = [('rajiv1518 ', rajiv1518),('loz1404   ', loz1404)]
+
+
+def count_k_cycles(G, k):
+    count = 0
+    visited = set()
+    def dfs(path, start, depth):
+        nonlocal count
+        current = path[-1]
+        # Early exit if we?re going too deep
+        if depth == k:
+            if start in G.neighbors(current):
+                # Normalize to avoid duplicates
+                cycle = tuple(sorted(path))
+                if cycle not in visited:
+                    visited.add(cycle)
+                    count += 1
+            return
+        for neighbor in G.neighbors(current):
+            if neighbor not in path and neighbor >= start:
+                dfs(path + [neighbor], start, depth + 1)
+    for v in G.vertices():
+        dfs([v], v, 1)
+    return count   # each cycle counted twice (once forward, once reverse)
+
+def algebraic_connectivity(G):
+    """
+    Compute the algebraic connectivity (Fiedler value) of a graph G.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The second-smallest eigenvalue of the Laplacian matrix of G
+    """
+    L = G.laplacian_matrix()
+    eigenvalues = L.eigenvalues()
+    eigenvalues.sort()
+    
+    if len(eigenvalues) < 2:
+        return 0  # Trivial case: empty or isolated vertex graph
+    return eigenvalues[1]
+
+
+def check_all_isomorphisms(graph_list):
+    n = len(graph_list)
+    print("\n Isomorphism check of all pairs (a dot means the pair ARE isomorphic):")
+    for i in range(n):
+        label_i, G_i = graph_list[i]
+        for j in range(i + 1, n):
+            label_j, G_j = graph_list[j]
+            if G_i.is_isomorphic(G_j):
+#               print(".", end="")
+                print(f"{label_i} IS isomorphic to {label_j}")
+            else:
+                print(f"{label_i} NOT isomorphic to {label_j}")
+                
+def non_isomorphic(graph_list):
+    reps = []
+    labels = []
+
+    for label, G in graph_list:
+        if not any(G.is_isomorphic(H) for _, H in reps):
+            reps.append((label, G))
+            labels.append(label.strip())   # remove extra spaces if you want    
+    return labels
+
+def isomorphic(graph_list):
+    labels = []
+
+    for i, (label, G) in enumerate(graph_list):
+        if any(i != j and G.is_isomorphic(H) for j, (_, H) in enumerate(graph_list)):
+            labels.append(label.strip())
+
+    return labels
+
+def compare_graphs_list(graphs):
+    canon = {}
+    count =1
+    for label, G in graphs:
+        s6 = G.canonical_label().sparse6_string()
+
+#        print(f"{label.strip():15} : {s6[:40]}...")
+
+        canon.setdefault(s6, []).append(label.strip())
+    print("\n noniso ->",len(canon))
+    print("\nGroups:")
+    for group in canon.values():
+        if len(group) > 1:
+            print(count,"Isomorphic :", ", ".join(group))
+            count=count+1
+        else:
+            print(count,"Unique      :", group[0])
+            count=count+1
+
+
+
+print("\n START \n")
+
+#noniso = non_isomorphic(graphs)
+#print(len(noniso), " non-isomorphic -> ",noniso)
+
+#iso=isomorphic(graphs)
+#print(len(iso), " isomorphic -> ",iso,"\n")
+
+
+compare_graphs_list(graphs)
+
+
+nonisographs = graphs
+
+
+
+# Print properties for each graph in the list
+print("\n Main properties of the graph\n")
+for label, graph in nonisographs:
+    print(f"{label} | Ord.: {graph.order()} / Size: {graph.size()} / Diam.: {graph.diameter()} / Avg.dist: {graph.average_distance().n(digits=6)} / 6-reg.? {graph.is_regular(k=6)} /  Girth: {graph.girth()}   ")#/  Alg.conn. {algebraic_connectivity(graph).n(digits=6)} ")# /   Domin. number: {graph.dominating_set(value_only=True)} ")
+
+print("\n Symmetry properties of the graph\n")
+for label, graph in nonisographs:
+    print(f"{label} | Aut.group.ord.: {graph.automorphism_group().order()} /  Cayley ? {graph.is_cayley()} ---  vtx.trans. ? {graph.is_vertex_transitive()} -- edge.trans. ? {graph.is_edge_transitive()}" )
+
+print("Degree histogram rajiv1518 :", nx.degree_histogram(rajiv1518nx) )  
+print("Degree histogram loz1404   :", nx.degree_histogram(loz1404nx) )  
+    
+'''    
+print("\n Properties of the graphs as at arXiv\n")
+for label, graph in nonisographs:
+    print(f"{label} & {graph.average_distance().n(digits=6)}  & {graph.girth()}  &  {algebraic_connectivity(graph).n(digits=6)}   &  {graph.automorphism_group().order()} \\\\ ")
+''' 
+    
+# Check isomorphisms
+# print(f"Are isomorphic G5 and G6? {G5.is_isomorphic(G6)}")
+
+#check_all_isomorphisms(nonisographs)
+
+print("\n")
+
+
+# automorphism group structure
+print(" Automorphism group structure")
+print(' C_n is the cyclic group of order n;  x means direct product; : means semidirect product.\n')
+
+Arajiv1518 = rajiv1518.automorphism_group()
+Aloz1404 = loz1404.automorphism_group()
+
+print('rajiv1518 :', Arajiv1518.structure_description(), ' |  center order:',Arajiv1518.center().order())
+print('loz1404   :', Aloz1404.structure_description(), ' |  center order:',Aloz1404.center().order())
+
+print("\n")
+
+
+
+# Compute the distance distribution from a given vertex v in graph G
+# Returns a list where the i-th element is the number of vertices at distance i from v
+def distance_distribution(G, v):
+    from collections import Counter    
+    distances = G.shortest_path_lengths(v)
+    distribution = Counter(distances.values())
+    result = [distribution[d] for d in sorted(distribution)]    
+    return result
+
+print("\n")
+for label, graph in nonisographs:
+    print(f"{label} distance distrib from vtx. 0: {distance_distribution(graph, 0)}")
+
+'''
+# Counting k-cycles for each graph
+print("\nNumber of k-cycles for k=3 up to 5")
+for label, graph in nonisographs:
+    print(f"{label} ","  &  ".join(str(count_k_cycles(graph, k)) for k in range(3, 6)))
+'''
+
+
+
+'''
+# from 0 versio Molodtsov?
+
+for name, G in nonisographs:
+    fname = name.strip() + "_adjlst.txt"
+    s = "; ".join(
+        "{}-{}".format(v, ",".join(map(str, G.neighbors(v))))
+        if G.neighbors(v) else str(v)
+        for v in G.vertices(sort=True)
+    )
+    with open(fname, "w") as f:
+        f.write(s)
+
+'''
+# from 0
+       
+for label, _ in nonisographs:
+    base = label.strip()            
+    G = globals()[base + "nx"]      
+
+    with open(f"{base}_edges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u},{v}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+
+'''
+# from 1
+        
+for label, _ in nonisographs:
+    base = label.strip()   
+    G = globals()[base + "nx"] 
+
+    with open(f"{base}_Zedges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u+1},{v+1}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+'''       
+print("\n DONE \n")        
+##
+##

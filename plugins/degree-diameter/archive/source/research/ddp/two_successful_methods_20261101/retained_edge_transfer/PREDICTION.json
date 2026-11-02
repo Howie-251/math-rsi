@@ -1,0 +1,18 @@
+{
+  "status": "AUTHORIZED_AFTER_ROOT_WIKI_GOAL_SYNC",
+  "date": "2026-11-01",
+  "mechanism": "Fixed accepted3750 F5 graph, promoted caps21/22; complete original-neighborhood clones in25-center transversal-plane blocks",
+  "source_parameters": "research/ddp/refresh_20261029/f5_full_d20_D3/PARAMETERS.json",
+  "source_edges": "research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges",
+  "center_plane": "x0+x1+x2=0 in F5^3, fixed before search",
+  "controller_model": "For k=1,2 choose r_a in{0,..,k} maximizing sum r; all30 constraints sum_{a in N_C(b)}r_a<=k. Each unit r expands to25 clones with complete20pin neighborhoods.",
+  "predictions": {"k1": "sum r>=5 (at least3875 vertices)", "k2": "sum r>=10 (at least4000 vertices); doubling k1 is a legal starting witness"},
+  "budgets_CPU_seconds": {"k1_search":5,"k2_search":10,"whole_including_generation_checks":30},
+  "search_policy": "One deterministic branch-and-bound per k, integer capacity bounds, save feasible best if time-limited and do not claim optimal. Optional exact modular rank can exclude an unattainable capacity upper bound; no old solver resumed.",
+  "construction": "Generate one final literal edge table per cap; per new root before adding, check current old degree slack and full closedR2 union of its20 original pins. Inherit all old-oldD3 and do not BFS old3750 roots. No per-prefix edge exports.",
+  "comparison": "PENDING: root did not establish current global degree21/22 baselines. These graphs must not enter confirmed-record counts.",
+  "workers":1,
+  "source_D3_reverification":false,
+  "old37631_cap12_clone_stop_restarted":false,
+  "old_induced3750_stop_restarted":false
+}

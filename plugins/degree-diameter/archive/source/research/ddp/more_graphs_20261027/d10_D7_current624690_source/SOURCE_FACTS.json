@@ -1,0 +1,54 @@
+{
+  "status": "SOURCE_RECIPE_RECOVERED_ARITHMETIC_ONLY",
+  "checked_UTC": "2026-10-27T23:02:40.021080+00:00",
+  "source_parameter": [
+    10,
+    7
+  ],
+  "author_reported_n": 624690,
+  "author_reported_degree": 10,
+  "author_reported_D": 7,
+  "source_kind": "One-orbit Cayley graph on a composite-normal metacyclic group",
+  "primary_recipe_url": "https://raw.githubusercontent.com/f4t4nt/degree-diameter-graphs/main/graphs/deg10/dia7/construction.json",
+  "primary_readme_url": "https://raw.githubusercontent.com/f4t4nt/degree-diameter-graphs/main/graphs/deg10/dia7/README.md",
+  "group_presentation": "x^6941=y^90=1; y*x*y^-1=x^316",
+  "normal_phase_coordinates": "(i,j) represents x^i y^j; label i+6941*j",
+  "group_law": "(i,j)*(k,l)=(i+316^j*k mod6941,j+l mod90)",
+  "left_multiply_by_generator": "(a,b)*(i,j)=(a+316^b*i mod6941,b+j mod90)",
+  "right_multiply_by_generator": "(i,j)*(a,b)=(i+316^j*a mod6941,j+b mod90)",
+  "inverse": "(i,j)^-1=(-316^-j*i mod6941,-j mod90)",
+  "edge_definition": "g adjacent to g*s and g*s^-1 for the five listed positive generators",
+  "source_files": [
+    "AUTHOR_construction.json",
+    "AUTHOR_README.md"
+  ],
+  "ledger_check": "Exact624690/6941 source/transfer not found in canonical ledger at task start; no old closed scope reused as a new trial",
+  "full_edgefile_downloaded": false,
+  "source_header_or_degree_profile_run": false,
+  "source_BFS_run": false,
+  "candidate_proposal": {
+    "p": 7561,
+    "M": 90,
+    "action_requirement": "multiplicative order90 in F7561*",
+    "hypothetical_n": 680490,
+    "target": [
+      10,
+      7
+    ],
+    "is_generated": false,
+    "embedding_selected": false
+  },
+  "recommendation": "DEFER. The smallest faithful90 prime-field jump is8.93%, larger than the active degree8 transfer2.27%; it also destroys the source's tiny11-involution class. No source-compatible polynomial offset rule has been established.",
+  "source_coverage_status": "Known source D7 inherited from primary author; no per-phase short-word or new-field coverage claim",
+  "new_graphs": 0,
+  "new_BFS": 0,
+  "solver_runs": 0,
+  "parameter_batch_runs": 0,
+  "evidence_paths": [
+    "AUTHOR_construction.json",
+    "AUTHOR_README.md",
+    "ARITHMETIC.json",
+    "source_arithmetic.py",
+    "REPORT.md"
+  ]
+}

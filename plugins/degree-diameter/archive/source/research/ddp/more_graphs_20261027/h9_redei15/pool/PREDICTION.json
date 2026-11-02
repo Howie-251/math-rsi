@@ -1,0 +1,18 @@
+{
+  "prediction_id": "P_REDEI15_F3_PLANE_DEGREE_POOL",
+  "frozen_before_orbit_and_plane_pool": true,
+  "falsifiable_prediction": "At least one set in the fixed PGL3(F3) orbit of the supplied15-point Redei blocking set, embedded in the existing1120 F3-defined singular planes, has at most12 distinct actualN12 pins and every pin has degree<12 in the frozen42398 source.",
+  "shape_source": "../SHAPE.json",
+  "raw_points": 15,
+  "Frobenius_fixed_points": 5,
+  "minimum_fully_unsplit_pins": 10,
+  "group_scope": "Only PGL3(F3), generated projectively by coordinatecycle, transvection x0+=x1, and diag(2,1,1); not full PGL3(F9), all Redei shapes or other Galois forms.",
+  "plane_scope": "Reuse exactly364 flat plus756 nonflat F3-defined singularplanes and their cached91point embeddings; no plane/Baer enumeration rerun.",
+  "bases": [{"delta":12,"source_n":42398,"source_m":245889},{"delta":11,"source_n":37631,"source_m":205329}],
+  "filter": "Every distinct pin has currentdegree<delta, and pin_count<=delta; independently deduplicate actualpinsets within eachbase. No source degree or edge is changed.",
+  "coverage": "No R4, anchor completion, graph generation or sourceBFS in this task.",
+  "profile": "First10 planes once, then complete1120 if projectedtotalCPU<=90; do not replay first10.",
+  "CPU_budget_seconds": 90,
+  "workers": 1,
+  "new_dependencies": false
+}

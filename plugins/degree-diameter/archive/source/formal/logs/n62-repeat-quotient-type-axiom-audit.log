@@ -1,0 +1,75 @@
+def DegreeDiameter.repeatComponentSize.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] → (G : SimpleGraph V) → (DegreeDiameter.repeatSupport G).ConnectedComponent → ℕ :=
+fun {V} [Fintype V] G C => (DegreeDiameter.repeatComponentVertices G C).card
+def DegreeDiameter.repeatMembershipMatrix.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] → (G : SimpleGraph V) → Matrix V (DegreeDiameter.repeatSupport G).ConnectedComponent ℤ :=
+fun {V} [Fintype V] G x C => DegreeDiameter.repeatComponentIndicator G C x
+def DegreeDiameter.repeatSizeMatrix.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      Matrix (DegreeDiameter.repeatSupport G).ConnectedComponent (DegreeDiameter.repeatSupport G).ConnectedComponent
+        ℤ :=
+fun {V} [Fintype V] G x C => ↑(DegreeDiameter.repeatComponentSize G C)
+def DegreeDiameter.repeatQuotientMatrix.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      Matrix (DegreeDiameter.repeatSupport G).ConnectedComponent (DegreeDiameter.repeatSupport G).ConnectedComponent
+        ℤ :=
+fun {V} [Fintype V] G D C => ↑(DegreeDiameter.repeatComponentDegree G D C)
+@DegreeDiameter.repeat_membership_mul : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (M : Matrix (DegreeDiameter.repeatSupport G).ConnectedComponent (DegreeDiameter.repeatSupport G).ConnectedComponent ℤ)
+  (x : V) (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+  (DegreeDiameter.repeatMembershipMatrix G * M) x C = M ((DegreeDiameter.repeatSupport G).connectedComponentMk x) C
+@DegreeDiameter.repeat_component_indicator_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (x : V),
+  ∑ C, DegreeDiameter.repeatComponentIndicator G C x = 1
+@DegreeDiameter.repeat_component_indicator_card : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+  ∑ x, DegreeDiameter.repeatComponentIndicator G C x = ↑(DegreeDiameter.repeatComponentSize G C)
+@DegreeDiameter.n62_adjacency_repeat_membership : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        DegreeDiameter.adjacencyMatrix G * DegreeDiameter.repeatMembershipMatrix G =
+          DegreeDiameter.repeatMembershipMatrix G * DegreeDiameter.repeatQuotientMatrix G
+@DegreeDiameter.n62_defect_repeat_membership : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        DegreeDiameter.defectMatrix G * DegreeDiameter.repeatMembershipMatrix G =
+          3 • DegreeDiameter.repeatMembershipMatrix G
+@DegreeDiameter.n62_repeat_quotient_quadratic : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        DegreeDiameter.repeatQuotientMatrix G * DegreeDiameter.repeatQuotientMatrix G +
+            DegreeDiameter.repeatQuotientMatrix G =
+          10 • 1 + DegreeDiameter.repeatSizeMatrix G
+@DegreeDiameter.n62_repeat_quotient_row_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (D : (DegreeDiameter.repeatSupport G).ConnectedComponent), ∑ C, DegreeDiameter.repeatQuotientMatrix G D C = 8
+@DegreeDiameter.n62_repeat_component_sizes_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  Fintype.card V = 62 → ∑ C, DegreeDiameter.repeatComponentSize G C = 62
+@DegreeDiameter.n62_repeat_quotient_balance : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (D C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          ↑(DegreeDiameter.repeatComponentSize G D) * DegreeDiameter.repeatQuotientMatrix G D C =
+            ↑(DegreeDiameter.repeatComponentSize G C) * DegreeDiameter.repeatQuotientMatrix G C D
+@DegreeDiameter.repeat_quotient_nonnegative : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (D C : (DegreeDiameter.repeatSupport G).ConnectedComponent), 0 ≤ DegreeDiameter.repeatQuotientMatrix G D C
+@DegreeDiameter.repeat_component_size_pos : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (C : (DegreeDiameter.repeatSupport G).ConnectedComponent), 0 < DegreeDiameter.repeatComponentSize G C
+'DegreeDiameter.repeat_membership_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.repeat_component_indicator_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.repeat_component_indicator_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_adjacency_repeat_membership' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_defect_repeat_membership' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_sizes_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.repeat_quotient_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.repeat_component_size_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

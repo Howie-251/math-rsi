@@ -1,0 +1,25 @@
+DegreeDiameter/Portfolio/OppositeGQ77SpreadIncidence.lean:28:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  pointLine (linePoint (finProdFinEquiv ((finProdFinEquiv.symm l).1, (finProdFinEquiv.symm l).2)) i)
+      (lpPosition (finProdFinEquiv ((finProdFinEquiv.symm l).1, (finProdFinEquiv.symm l).2)) i) =
+    finProdFinEquiv ((finProdFinEquiv.symm l).1, (finProdFinEquiv.symm l).2)
+but is expected to have type
+  pointLine (linePoint l i) (lpPosition l i) = l
+DegreeDiameter/Portfolio/OppositeGQ77SpreadIncidence.lean:36:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  linePoint (pointLine (finProdFinEquiv ((finProdFinEquiv.symm p).1, (finProdFinEquiv.symm p).2)) j)
+      (plPosition (finProdFinEquiv ((finProdFinEquiv.symm p).1, (finProdFinEquiv.symm p).2)) j) =
+    finProdFinEquiv ((finProdFinEquiv.symm p).1, (finProdFinEquiv.symm p).2)
+but is expected to have type
+  linePoint (pointLine p j) (plPosition p j) = p
+'DegreeDiameter.Portfolio.OppositeGQ77Spread.pointLine_covers' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.OppositeGQ77Spread.pointLine_sound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.OppositeGQ77Spread.spread_unique' depends on axioms: [propext, Classical.choice, Quot.sound]

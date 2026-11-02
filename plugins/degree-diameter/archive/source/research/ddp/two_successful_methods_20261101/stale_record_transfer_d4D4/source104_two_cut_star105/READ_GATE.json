@@ -1,0 +1,23 @@
+{
+  "status": "INHERITED_EXACT_SAME_SOURCE_TWO_CUT_STAR_COMPLETE_NO_STOP",
+  "source": {"name": "Bhakar104c", "author": "Nishant Bhakar", "record_date": "2026-08-27", "n": 104, "m": 208, "degree_histogram_inherited": {"4": 104}, "D_inherited": 4, "primary_cache": "research/ddp/m1_sources/desc_g4.html#44 lines72-82", "primary_raw_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/104c_d4D4.txt", "recipe_description": "Z8 voltage lift of13-vertex base multigraph followed by symmetry-breaking repair; use actual literal"},
+  "literal_inputs": ["research/ddp/breadth_20261027_wave2/sources/bhakar104_source.txt", "research/ddp/breadth_20261027_wave2/sources/bhakar104.edges", "research/ddp/breadth_20261027_wave2/extension105_d4/source.edges"],
+  "historical_source_check": "research/ddp/breadth_20261027_wave2/sources/bhakar104_check.json",
+  "rule": "Delete two vertex-disjoint oldedges; add one newvertex adjacent to allfour endpoints; nootherchanges",
+  "candidate_metadata": {"n": 105, "m": 210, "degree": 4, "regular": true},
+  "newroot_exact_condition": "Source closedR3 union of the four cut endpoints covers all104; deletion does not change endpoint-min distance",
+  "newroot_pass_does_not_prove_oldold": true,
+  "same_scope_old_case": "research/ddp/breadth_20261027_wave2/extension105_d4",
+  "same_scope_result": {"status": "COMPLETE_DISJOINT_EDGE_PAIRS_NO_D4", "raw_pairs": 21528, "overlapping_rejected": 624, "legal_candidates_scored": 20904, "found_D4": false, "best_bad_unordered_pairs": 8, "best_independent_D": 5, "old_production_CPU_seconds": 0.298779, "old_total_measured_CPU_seconds": 0.766514469, "restarts": 0, "pending": []},
+  "old_entire_extension_family_exhausted_false_meaning": "Other operations remain open; this exact20904-parameter rule is complete",
+  "scope_not_excluded": ["Other Bhakar104 sources", "General105 graphs", "Other edits/repairs/helper rules"],
+  "not_inherited_from_98": true,
+  "new_HTTP_or_download": 0,
+  "new_source_parses_or_degree_validation": 0,
+  "new_R3_BFS_candidates_graphs_solver_Lean_or_reviews": 0,
+  "read_shape_failure": "Initial metadata reader expected a dict for historical bhakar104_distances.json but encountered a list; no distances extracted or calculated, then resumed only original scope reports",
+  "measured_successful_standard_library_read_CPU_seconds": 0.001654802,
+  "conservative_read_and_preparation_CPU_charge_seconds": 0.50,
+  "CPU_cap_seconds": 1.5,
+  "next": "STOP; inherit exactNO, do not rerun104c or switch to another source in this task"
+}

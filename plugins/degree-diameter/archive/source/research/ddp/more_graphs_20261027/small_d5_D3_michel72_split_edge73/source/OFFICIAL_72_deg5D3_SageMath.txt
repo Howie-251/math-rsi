@@ -1,0 +1,177 @@
+# SageMathCell online  https://sagecell.sagemath.org/?q=vijcus
+#  (5,3) = 72; Moore bound=106;
+#   Ord.: 72 / Size: 180   / Diam.: 3 / Avg.dist: 2.57746 
+#   5-reg.? True / Degree histogram: [0, 0, 0, 0, 0, 72]  / Girth: 5
+#   /  Alg.conn. 1.75110 /  Domin. number: 15
+#  Aut.group.ord.: 72 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+#  Communicated by G. Exoo (May 22, 1998). G.E. data
+#  Geoffrey Exoo. A family of graphs and the degree/diameter problem.  
+#   J. Graph Theory 37 (2001), 118-124.
+
+import networkx as nx
+
+
+exoo72 =Graph(r":~?@G_GA?_GAF@gYA@gYEbOqKa?qABGq@chIAB`IGCgOFdw_SDwwVa_uZ`?wZ_pOZc@M^a`O^`?c^d`ab`@?b_ogNGwGYFI]IDa]DA@w_c@giaowaHHW]JHCSHaaYGay@GQmFCRADHBAFHQu@BRMJIBMLIQ}FCrGu`PCu_pKjbP_tMWCJMWcWJRERFB_{bponLH__MryBDQ?vfAOpOGcXHBi_IBPAbpsgKbuDDQCtNwkXHR`@cPshMsN")
+michel72 =Graph(r":~?@GaOA@_gMC`WYFaGeIawqLbg}OcW?Q_PMADGKT`@YDDwWW`peGEg?RDGCQDGGQCwKUDqQCDP[d`PSUHgWXEaOf`p_YHQaGE@ceIWc_Ggg]Gwk^GWo[Gq}LFQClb`kaJg{\Fqwqc@k_JrAPF@wlKWKECgOFCrYDA@OuLw?EDWCFDbeAA@[xMg?BEGCCERqA@Pg{NWsPEwwNFGoOFWkOFcAHCP|@a_{_NwgMGSDBaooaNsQHBQL?On")
+
+
+exoo72nx =exoo72.networkx_graph()
+michel72nx = michel72.networkx_graph()
+
+# List of graphs to process
+graphs = [('exoo72   ', exoo72 ),('michel72 ', michel72)]
+
+
+
+def count_k_cycles(G, k):
+    count = 0
+    visited = set()
+    def dfs(path, start, depth):
+        nonlocal count
+        current = path[-1]
+        # Early exit if we?re going too deep
+        if depth == k:
+            if start in G.neighbors(current):
+                # Normalize to avoid duplicates
+                cycle = tuple(sorted(path))
+                if cycle not in visited:
+                    visited.add(cycle)
+                    count += 1
+            return
+        for neighbor in G.neighbors(current):
+            if neighbor not in path and neighbor >= start:
+                dfs(path + [neighbor], start, depth + 1)
+    for v in G.vertices():
+        dfs([v], v, 1)
+    return count   # each cycle counted twice (once forward, once reverse)
+
+def algebraic_connectivity(G):
+    """
+    Compute the algebraic connectivity (Fiedler value) of a graph G.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The second-smallest eigenvalue of the Laplacian matrix of G
+    """
+    L = G.laplacian_matrix()
+    eigenvalues = L.eigenvalues()
+    eigenvalues.sort()
+    
+    if len(eigenvalues) < 2:
+        return 0  # Trivial case: empty or isolated vertex graph
+    return eigenvalues[1]
+
+
+def domination_number(G):
+    """
+    Compute the domination number of a graph G using MILP.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The domination number (integer)
+    """
+    p = MixedIntegerLinearProgram(maximization=False)
+    x = p.new_variable(binary=True)   
+    # Objective: minimize the number of chosen vertices
+    p.set_objective(sum(x[v] for v in G.vertices()))
+    # Constraint: each vertex is dominated
+    for v in G.vertices():
+        p.add_constraint(x[v] + sum(x[u] for u in G.neighbors(v)) >= 1)
+    return p.solve()
+
+
+# Print properties for each graph in the list
+print("\n Main properties of the graph\n")
+for label, graph in graphs:
+    print(f"{label} | Ord.: {graph.order()} / Size: {graph.size()} / Diam.: {graph.diameter()} / Avg.dist: {graph.average_distance().n(digits=6)} / 5-reg.? {graph.is_regular(k=5)} / Girth: {graph.girth()}  /  Alg.conn. {algebraic_connectivity(graph).n(digits=6)} /  Domin. number: {domination_number(graph)} ")
+
+# print("Degree histogram exoo212 :", nx.degree_histogram(exoo212nx))  
+   
+           
+           
+print("\n Symmetry properties of the graph\n")
+for label, graph in graphs:
+    print(f"{label} | Aut.group.ord.: {graph.automorphism_group().order()} /  Cayley ? {graph.is_cayley()} ---  vtx.trans. ? {graph.is_vertex_transitive()} -- edge.trans. ? {graph.is_edge_transitive()}" )
+print("\n") 
+
+    
+    # automorphism group structure
+print(" Automorphism group structure: x means direct product; : means semidirect product.") 
+
+Aexoo72  = exoo72.automorphism_group()
+print('exoo72 :', Aexoo72.structure_description(), ' |  center order:',Aexoo72.center().order())           
+
+Amichel72  = michel72.automorphism_group()
+print('michel72 :', Amichel72.structure_description(), ' |  center order:',Amichel72.center().order())           
+
+print("\n") 
+    
+'''    
+print("\n Properties of the graphs as at arXiv\n")
+for label, graph in nonisographs:
+    print(f"{label} & {graph.average_distance().n(digits=6)}  & {graph.girth()}  &  {algebraic_connectivity(graph).n(digits=6)}   &  {graph.automorphism_group().order()} \\\\ ")
+''' 
+
+
+# Compute the distance distribution from a given vertex v in graph G
+# Returns a list where the i-th element is the number of vertices at distance i from v
+def distance_distribution(G, v):
+    from collections import Counter    
+    distances = G.shortest_path_lengths(v)
+    distribution = Counter(distances.values())
+    result = [distribution[d] for d in sorted(distribution)]    
+    return result
+
+
+for label, graph in graphs:
+    print(f"{label} distance distrib from vtx. 0: {distance_distribution(graph, 0)}")
+    print(f"{label} distance distrib from vtx. 9: {distance_distribution(graph, 9)}")
+    
+# Counting k-cycles for each graph
+print("\nNumber of k-cycles for k=3 up to 7")
+for label, graph in graphs:
+    print(f"{label} ", " ".join(str(count_k_cycles(graph, k)) for k in range(3, 8)))
+
+print("\n")
+
+'''
+# from 0 versio Molodtsov 
+for name, G in  graphs:
+    fname = name.strip() + "_adjlst.txt"
+    s = "; ".join(
+        "{}-{}".format(v, ",".join(map(str, G.neighbors(v))))
+        if G.neighbors(v) else str(v)
+        for v in G.vertices(sort=True)
+    )
+    with open(fname, "w") as f:
+        f.write(s)
+
+
+# from 0
+       
+for label, _ in  graphs:
+    base = label.strip()            
+    G = globals()[base + "nx"]      
+
+    with open(f"{base}_edges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u},{v}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+
+'''
+# from 1
+        
+for label, _ in graphs:
+    base = label.strip()   
+    G = globals()[base + "nx"] 
+
+    with open(f"{base}_Zedges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u+1},{v+1}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+       
+print("\n DONE \n")  
+
+##

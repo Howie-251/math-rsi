@@ -1,0 +1,7 @@
+# Actual complementary B: exact new17/2016 three-facet PASS
+
+2026-11-01 15:35 UTC. Actualcell772 SUCCESS on authoritative bridge thread5da20cd4-ab3f-4327-9df5-8d0e80d7eee3, independent from A e4b6c102-1c55-4739-82e4-d281acc2e835. Root read the complete10251-character response and exact tuple(17,3,2016,16896): math/formal/binding PASS, priority UNKNOWN, no blocking gap.
+
+B independently confirms the actual C30 four-regular/120edge-local/F4 source, F.ofCode encoding, I6 open-neighborhood and W16 transversal code, all1536 frozen pins, exact physical degrees/labels, full source-body and96newN binding, actual unconditional1920source/2016clone targets and successful type/body/std3 Audits. It expressly treats source-interior Walks, newcopy-to-ownoldcenter2 and actual physical-adjacent center case, everyprefix, source retraction and measured nonD2 witness correctly, and retains0oldBFS/96newBFS/numerical-hist-output boundaries. The source public reproduction adds0; currentaccepted151/42/Lean45.
+
+Root accepts B for this exactnewtuple only, without paid retry, oldsource/graph/BFS/Lean rerun, global claim or inherited90/94 PASS. External-to-typed binding remains outside Lean. Next one distinct fresh finalC; the separate new16/4 candidate16389 and its production/first full-target verification are OUTSIDE this review. Neither global17threshold nor exactpriority is established. Goal remains ACTIVE.

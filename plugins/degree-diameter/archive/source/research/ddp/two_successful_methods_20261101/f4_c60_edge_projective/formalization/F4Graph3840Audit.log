@@ -1,0 +1,41 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → ℕ → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, p.length ≤ D
+def DegreeDiameter.Portfolio.F4Graph3840.graph : SimpleGraph (Fin 3840) :=
+{
+  Adj := fun u v =>
+    u ≠ v ∧
+      ((∃ p t, DegreeDiameter.Portfolio.F4Graph3840.forward u p t = v) ∨
+        ∃ p t, DegreeDiameter.Portfolio.F4Graph3840.forward v p t = u),
+  symm := DegreeDiameter.Portfolio.F4Graph3840.graph._proof_1,
+  loopless := DegreeDiameter.Portfolio.F4Graph3840.graph._proof_2 }
+def DegreeDiameter.Portfolio.F4Graph3840.forward : Fin 3840 →
+  Fin 5 → DegreeDiameter.Portfolio.F4Graph3840.F → Fin 3840 :=
+fun u p t =>
+  DegreeDiameter.Portfolio.F4Graph3840.liftAt
+    (DegreeDiameter.Portfolio.F4Graph3840.controller (DegreeDiameter.Portfolio.F4Graph3840.controllerOf u) p)
+    (DegreeDiameter.Portfolio.F4Graph3840.fiberStep (DegreeDiameter.Portfolio.F4Graph3840.controllerOf u) p t
+      (DegreeDiameter.Portfolio.F4Graph3840.fiberOf u))
+def DegreeDiameter.Portfolio.F4Graph3840.fiberStep : Fin 60 →
+  Fin 5 → DegreeDiameter.Portfolio.F4Graph3840.F → Fin 64 → Fin 64 :=
+fun a p t x =>
+  DegreeDiameter.Portfolio.F4Graph3840.encodeVec
+    (DegreeDiameter.Portfolio.F4Graph3840.stepVec a p t (DegreeDiameter.Portfolio.F4Graph3840.decodeVec x))
+def DegreeDiameter.Portfolio.F4Graph3840.stepVec : Fin 60 →
+  Fin 5 →
+    DegreeDiameter.Portfolio.F4Graph3840.F →
+      DegreeDiameter.Portfolio.F4Graph3840.Vec → DegreeDiameter.Portfolio.F4Graph3840.Vec :=
+fun a p t x =>
+  DegreeDiameter.Portfolio.F4Graph3840.act (DegreeDiameter.Portfolio.F4Graph3840.matrix a p) x +
+    t • DegreeDiameter.Portfolio.F4Graph3840.direction (DegreeDiameter.Portfolio.F4Graph3840.inversePort p)
+DegreeDiameter.Portfolio.F4Graph3840.concrete_order_degree_and_D3 : Fintype.card (Fin 3840) = 3840 ∧
+  (∀ (u : Fin 3840), DegreeDiameter.Portfolio.F4Graph3840.graph.degree u ≤ 20) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4Graph3840.graph 3
+DegreeDiameter.Portfolio.F4Graph3840.diameter_exact_three_in_project_definition : DegreeDiameter.Portfolio.DiameterAtMost
+    DegreeDiameter.Portfolio.F4Graph3840.graph 3 ∧
+  ¬DegreeDiameter.Portfolio.DiameterAtMost DegreeDiameter.Portfolio.F4Graph3840.graph 2
+'DegreeDiameter.Portfolio.F4Graph3840.concrete_order_degree_and_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph3840.diameter_exact_three_in_project_definition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

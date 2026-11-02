@@ -1,0 +1,49 @@
+{
+  "timestamp_UTC": "2026-10-28T03:17:43.989766+00:00",
+  "status": "FROZEN_BEFORE_MATCHING_CNF_AND_SOLVER",
+  "target_Delta": 4,
+  "target_D": 4,
+  "hypothetical_n": 126,
+  "savedL": 104,
+  "question": "Can a mix of within-part and cross-part matching edges provide complementary routes to all old-distance5 and6 targets of the GH2 source?",
+  "source": "Official Sage Tutte12Cage LCFGraph(126,[17,27,-13,-59,-35,35,-11,13,-53,53,-27,21,57,11,-21,-57,59,-17],7). Directprimarysource independent of unfinishedlocaltriad iso.",
+  "binding_history": "One8CPU localtriad-vs-LCF isomorphism attempt returnedUNKNOWN withnomap. It is not a graphfailure. No repeat; use officialLCF directly.",
+  "new_edges": "One C7-equivariant perfectmatching in complement ofoldgraph. C7 generator g(v)=v+18 mod126;18 orbitvertices eachsize7, pairedinto9different-orbit pairs withoneof7relative shifts.",
+  "parity_intuition": "Olddistance5 targets cross bipartition, olddistance6 targets staywithin. Allcross matching preserves bipartiteness and cannot D4 at126. In18 orbitnodes the number ofcrossorbitpairs mustbe odd; retainedrule allowsmixed1/3/5/7 crosspairs, withremaining within-part pairs.",
+  "route_protection_rule": "Restrict eachnewmatchingedge toold distance>=5 (knownsourceD6 gives5or6). Forbidany pair ofmatchingedgeorbits whose selectededges form a4- or5-cycle witholdpaths: two connectorlengths sum<=3 in eitherendpointpairing; samevariable self-conflict excludesit. This exactly selects girth>=6 withinstatedsource+matchingfamily.",
+  "predictions": [
+    {
+      "id": "B2_PROTECTED",
+      "claim": "Everydegree-legal selectedmatching withthegirthrule gives126/252/simple4regular and everyrootB2=17.",
+      "basis": "Retain allsourceedges andaddonepervertex; girth>=6 preventsdepth1/2 collisions."
+    },
+    {
+      "id": "TWO_MATCHING_ROUTES_NEEDED",
+      "claim": "For eachroot, one-M routescannotcoverall80oldfar targets; completeD4must use two-M routes.",
+      "basis": "Corrected independent paper and reusedcache counts: oneM farcoverage<=76or74 dependingrootmatchingtype, requiringatleast4or6far targets tobe reachedwithtwoM. Initial64withincase was erroneous andneverencoded ascut."
+    },
+    {
+      "id": "JOINT_EXISTENCE",
+      "claim": "A mixedC7matching withprotectedlocalballs may provide completefourstepcoverage.",
+      "limit": "This is a falsifiable constructionprediction, notguaranteed by spheres/parity/girth. A completeexactCNF will check jointcoverage."
+    }
+  ],
+  "exact_coverage_encoding": "ForcanonicalC7 unorderedpairs defineY2=True onoldB2. OtherwiseY2⇒OR ofmatching selectors forM(p,x) withx∈B1_G(q) orM(q,x) withx∈B1_G(p). Matchingcannotmakea nonbacktracking2M pathoflength2. D4 iff∀oldfar pairorbits OR_w(Y2(p,w)ANDY2(w,q)), including w=p/q. ExistentialwitnessAND hasimplications toboth operands; no phantomreach. Coversall0/1/2M routepatterns.",
+  "budget": {
+    "preparation_CPU_seconds": 20,
+    "maximum_solver_calls_this_batch": 1,
+    "solver_wall_seconds": 60,
+    "aggregate_CPU_seconds": 90,
+    "workers": 1,
+    "proof_logging": false,
+    "seeds_or_solver_reencoding_loops": 0
+  },
+  "validation": "SourceR<=4 cacheonce only foractualmodeldomains/routefacts, not sourceglobalD6复验. Truehit export252edges, root independentall126BFS andfocusedGemini; rawUNSAT unproved/UNKNOWN staydistinct andlimitedtoscope.",
+  "scope": "Direct officialLCF source +specifiedC7 action +perfectmatching +girth>=6 only. Not all matchings, not allquartic126graphs, notvertextransitive/Cayley exclusion.",
+  "count_correction": {
+    "timestamp_UTC": "2026-10-28T03:20:12.552134+00:00",
+    "original_prediction_preserved": "ORIGINAL_PREDICTION_BEFORE_COUNT_CORRECTION.json",
+    "code_and_model_affected": false,
+    "evidence": "ONE_M_CACHE_DIAGNOSTIC.json"
+  }
+}

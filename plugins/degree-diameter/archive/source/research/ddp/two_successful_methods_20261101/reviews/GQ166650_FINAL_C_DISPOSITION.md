@@ -1,0 +1,7 @@
+# GQ166650 distinct fresh final C disposition
+
+Actual SUCCESS/PASS from fresh final thread `28599986-193a-44d0-8885-61e06e1ee653`, distinct from A/B. Requested gemini-3.8-flash-high/high, recorded CLI label only. Complete output is GQ166650_FINAL_C_GEMINI_RAW.json. It inspected actual Definitions/Inputs/Exact, generic genuine-Walk clone lemmas, separate import/type/body/axiom Audit, current four passing compile receipts, recipe binding, independent full literal acceptance, and bounded public comparison. No new executions were requested.
+
+Confirmed unconditional card166650, maxdegree≤70, actual existential SimpleGraph.Walk diameter≤3 and nonD2; no certificate premises and only propext/Classical.choice/Quot.sound. All source old edges are retained,6600 clones copy original64-neighbor sets with load6, all6600 new-root BFS and both predicted histogram classes match.
+
+Terminology correction: the160000 product vertices are400 projective points ×400 isotropic lines, not 'isotropic line-spread pairs'; the50 bonus vertices correspond to spread lines. The actual Lean carrier, labels and graph are correct. The25.27CPU cited in review is validator-body CPU; full accounted independent batch is26.343279409. Full formal batch9.113210473CPU includes both small recipe bindings. Public guarantee164500 is exceeded by2150 within located sources; global highest order and priority remain unconfirmed. A/B/distinct C have all actually returned PASS; no unchanged-graph retry is warranted.

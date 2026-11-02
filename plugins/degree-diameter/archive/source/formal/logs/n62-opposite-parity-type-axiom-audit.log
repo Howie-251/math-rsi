@@ -1,0 +1,21 @@
+def DegreeDiameter.unitNonedgePairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V) :=
+fun {V} [Fintype V] G => {P | ∃ x y, x ≠ y ∧ ¬G.Adj x y ∧ DegreeDiameter.defectMatrix G x y = 1 ∧ P = {x, y}}
+def DegreeDiameter.oppositePair.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset V → Finset V :=
+fun {V} [Fintype V] G P => {z | ∀ x ∈ P, G.Adj x z}
+@DegreeDiameter.n62_opposite_pair_properties : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 1) →
+          ∀ {P : Finset V},
+            P ∈ DegreeDiameter.unitNonedgePairs G →
+              DegreeDiameter.oppositePair G P ∈ DegreeDiameter.unitNonedgePairs G ∧
+                DegreeDiameter.oppositePair G (DegreeDiameter.oppositePair G P) = P ∧
+                  DegreeDiameter.oppositePair G P ≠ P
+@DegreeDiameter.n62_unit_nonedge_pair_count_even : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 1) → Even (DegreeDiameter.unitNonedgePairs G).card
+'DegreeDiameter.n62_opposite_pair_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_unit_nonedge_pair_count_even' depends on axioms: [propext, Classical.choice, Quot.sound]

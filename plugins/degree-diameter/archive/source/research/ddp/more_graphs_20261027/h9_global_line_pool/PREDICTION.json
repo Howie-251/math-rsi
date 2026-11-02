@@ -1,0 +1,15 @@
+{
+  "prediction_id": "N11_ALL_UNUSED_Q_LINE_CENTERS",
+  "frozen_before_native_enumeration": true,
+  "research_question": "Does an unused Q(6,9) flat-plane center provide a complete singular-line folded pinset with all current degrees below11, opening a complete N(11,5) extension?",
+  "prediction": "At least one degree-feasible folded-line pinset exists outside the118 previously exhausted centers.",
+  "source_graph": {"n": 37628, "m": 205296, "Delta": 11, "D": 5},
+  "core_fold_mapping": "Actual recovered37471-core mapping,4074splitpairs; not the old3075-split witness",
+  "parameter_scope": {"all_centers": 66430, "external_lines_per_center": 81, "all_original_nonH9_lines": 5380830, "previously_exhausted_centers": 118, "previously_exhausted_lines": 9558, "new_centers": 66312},
+  "reuse": "The unchanged37628 source and actual fold mapping have a complete9558-line zero-pool result for118centers. Reuse that evidence, enumerate only the66312 unused centers, and combine both parts for complete-global coverage.",
+  "generation": "For each center y, kernel of6Plucker equations plus polarB has dimension3 and is Pi_y. Choose basis y,x,z, then all spans(x-a*y,z-b*y) for a,b in F9. Generate every line point until any saturated mandatory pin proves rejection; every surviving line must process all10 points.",
+  "filter": "All mandatory foldedpins must have current degree<11. Canonical pinset deduplication retains at least one full10-point line witness and anchor_cap=11-number_of_pins.",
+  "profile": "First1000 newcenters are part of the same run, not a repeated pilot. Continue only if measured projection fits the180CPU-second total budget. Partial or budget stop is UNKNOWN for unprocessed centers.",
+  "budget": {"workers": 1, "total_CPU_seconds": 180, "native_CPU_soft_seconds": 170},
+  "not_done_here": ["BFS", "anchoroptimization", "newgraph", "newdependencies", "fullH9incidence", "N12expansion", "hashes"]
+}

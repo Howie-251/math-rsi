@@ -1,0 +1,87 @@
+{
+  "source_path": "research/ddp/more_graphs_20261027/d3d4_transfer/source72.implicit_adj.txt",
+  "vertex_coordinates": "12*type+position; type0..5,position0..11",
+  "C12_action": "Add1 toposition,fix type",
+  "cross_orientation": "typea<typeb; signed voltage in[-5,6]; reverse uses exact negative integer",
+  "cross_edges": [
+    [
+      0,
+      3,
+      -3
+    ],
+    [
+      0,
+      4,
+      -1
+    ],
+    [
+      0,
+      4,
+      3
+    ],
+    [
+      0,
+      5,
+      -1
+    ],
+    [
+      0,
+      5,
+      2
+    ],
+    [
+      1,
+      2,
+      -4
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      3,
+      6
+    ],
+    [
+      1,
+      5,
+      2
+    ],
+    [
+      2,
+      5,
+      1
+    ],
+    [
+      2,
+      5,
+      3
+    ],
+    [
+      3,
+      4,
+      -1
+    ],
+    [
+      3,
+      4,
+      1
+    ]
+  ],
+  "halfturn_base_vertices": [
+    2,
+    4
+  ],
+  "general_even_rule": "V={(t,i):t0..5,i modm}; crossedge(a,b,d) gives(a,i)--(b,i+d); internalhalfturn gives(t,i)--(t,i+m/2) for t2,4.",
+  "order": "6m",
+  "degree": 5,
+  "edge_count": "15m",
+  "literal_scope": "Keep these14balancedintegers, changeonlym andthetwo forcedhalfturns. No alternate representative or free offset is tested."
+}

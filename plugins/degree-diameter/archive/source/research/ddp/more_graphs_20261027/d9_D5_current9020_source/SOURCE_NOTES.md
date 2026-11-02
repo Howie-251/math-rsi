@@ -1,0 +1,19 @@
+# Actual(9,5)9020 source and one conditional transfer candidate
+
+The fresh primary table still gives9020. The author construction.json and official Bhakar_9020 description bind the actual graph to C451⋊46C20; this was recovered from primary data, not inferred from9020=20·11·41. The source has40590 edges and is9regular/D5 according to the saved author verification, which was not rerun. No source edge list, distance BFS, solver or candidate graph was generated. A targeted ledger search found no prior actual9020 source experiment; unrelated general capacity rows mentioning this baseline are not duplicates.
+
+The author uses LEFT law(b,j)(c,k)=(b+46^j c,j+k), with positives(phase,normal)=(1,1),(6,316),(7,13),(9,426) and involution(10,0). The official RIGHT-law positives(19,402),(14,161),(13,302),(11,412) agree under ψ(b,j)=(-j,b·46^-j). AUTHOR_construction.json, AUTHOR_README.md and AUTHOR_verification.txt preserve the small recipe and source claims; PROVENANCE.json records exact links and reading scope.
+
+Small source arithmetic gives global action order20. Mod11 the action is2/order10; mod41 it is5/order20. The involution's phase10 action is+1 on mod11 and−1 on the field, so the whole451 action must not be called inversion. Its41 conjugate involutions are consistent with this decomposition. The source already has field involution normal0 and first positive field normal1, so the intended field center/scale require no change. The positive mod11 normals are1,8,2,8; centered field integers are1,−12,13,16; phases remain1,6,7,9.
+
+One concrete finite next question is to keep that220-state C20/Z11 controller and replace only F41 by the unique next compatible prime F61. The hypothetical graph has13420 vertices and60390 edges. All8 primitive order20 actions at F61 would be the complete embedding question, with β20=1, β10≠1 and β4≠1. Preserve the four field integers and recompute true inverses. Equivalently, target full normal modulus671 has positive normals1,415,13,382; retaining316/426 unchanged would be a different rule.
+
+The jump is substantial:61/41 raises order by48.78%. Therefore an appropriate first test is the fixed220-controller NB≤5 raw capacity, followed by a predeclared thin-slot **complete** target residue image for all8 embeddings; no full graph should be made merely because its action order is compatible. No word scan or embedding enumeration has started in this source stage. The author's claimed complete search at order9020 is attributed in PROVENANCE, not independently rerun and not extrapolated to the larger field.
+
+The proposed target is algebraically meaningful: h10 inverts the field and commutation with the first generator produces a nonzero pure field translation. The projected first and third generators produce a nonzero C11 translation, while the first phase1 generates C20. Thus compatible targets are connected; that fact does not establish D5. The only recommendation here is this single finite field61 family with a capacity/image gate, not a list of alternative templates or permission to continue fields indefinitely.
+
+Primary sources: [main table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), [D5 description](https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html), [author recipe](https://raw.githubusercontent.com/f4t4nt/degree-diameter-graphs/main/graphs/deg9/dia5/construction.json). Exact constants, law binding and proposed parameters are in ANALYSIS_GAUGE.json. Actual new order/diameter and ordinary bad-pair totals are null.
+
+## Scalar proposal not executed
+
+Before any scalarF61 word/root/graph computation,the parent selected the separate Jordan-F5² degree8 model instead.The scalar61 discussion above is a source-stage proposal only and is not an experiment or a failed family.

@@ -1,0 +1,45 @@
+N63 actual-graph defect annihilator: completed 2026-10-11
+
+Source: DegreeDiameter/N63Defect.lean
+Main declaration: DegreeDiameter.n63_original_defect_annihilator
+Interface:
+  {V : Type*} [Fintype V] (G : SimpleGraph V)
+  (hdeg : degreeAtMostEight G) (hdiam : diameterAtMostTwo G)
+  (hcard : Fintype.card V = 63) :
+  Polynomial.aeval (defectMatrix G) n63Annihilator = 0
+
+Definitions:
+  n63Chebyshev : Nat -> Polynomial Int
+  R0 = 2; R1 = X; R(n+2) = X*R(n+1) - Rn
+  n63Annihilator = product over k in Finset.range 63 of (R(k+1)-2)
+
+Connection from original inputs:
+  Existing regular_of_card_gt_57 and Defect lemmas give nonnegative symmetric
+  integer B with diagonal zero and row sum two. A new row classification separates
+  isolated doubled edges from rows with two distinct entries one. The graph of
+  entries one is IsCycles. Mathlib supplies an actual simple closed walk through
+  every such vertex. Injectivity of cycle vertices proves length <= 63.
+  For a cycle p, the new recurrence theorem proves
+    Rn(B)e_u = e_(p.getVert n) + e_(p.reverse.getVert n), n <= p.length.
+  Thus the factor with that actual length kills e_u; doubled edges use length two.
+  Every e_u is killed by one factor indexed between 2 and 63. Polynomial
+  divisibility then proves that the displayed product annihilates B.
+  No permutation orientation, supplied component certificate, or lcm conductor
+  bound is used or assumed.
+
+Executed checks (from formal/, after sourcing ../.tools/lean-env.sh):
+  LEAN_NUM_THREADS=3 RAYON_NUM_THREADS=3 lake build DegreeDiameter.N63Defect
+  Log: logs/n63-defect-build-verified.log; successful, no warnings.
+  LEAN_NUM_THREADS=3 RAYON_NUM_THREADS=3 lake env lean N63DefectProbe.lean
+  Log: logs/n63-defect-type-axiom-audit.log; successful.
+  Main theorem transitive axioms: propext, Classical.choice, Quot.sound.
+
+Scope:
+  This closes the actual-graph-to-annihilator obligation in N63_ALGEBRAIC_ROUTE.md.
+  It does not prove exclusion of order 63 or the original exact N(8,2) result.
+  Finite Chebyshev factor identities, arithmetic irreducibility/norm results,
+  rational sum-zero restriction, characteristic factor support, and final trace
+  contradiction remain separate downstream obligations.
+  Module entrypoint and ReviewAudit integration are left to the owning agent.
+  Cross-family review is handled by the root; this build/audit is kernel evidence,
+  not a claim that a requested external review has already occurred.

@@ -1,0 +1,37 @@
+{
+  "prediction_id": "P_MICHEL43_PROJECTIVE_THIN_CROSS",
+  "frozen_before_capacity_and_native_profile": true,
+  "falsifiable_prediction": "At least one normalized projective parameter among7,000,402 fully covers the minimum-freeform-capacity cross-side slot selected deterministically for its action. Full36-slot coverage is tested separately.",
+  "target_Delta": 7,
+  "target_D": 4,
+  "savedL": 684,
+  "n": {
+    "actual": null,
+    "hypothetical": 774
+  },
+  "p": 43,
+  "quotient": 9,
+  "actions": [
+    6,
+    36
+  ],
+  "action_orders": [
+    3,
+    3
+  ],
+  "free_variable_order": [
+    "u",
+    "v",
+    "w",
+    "s",
+    "t"
+  ],
+  "cases_per_action": 3500201,
+  "normalized_scope": 7000402,
+  "thin_slot_rule": "Among cross-side slots, minimum distinct5-variable endpoint forms; ties lex(root,target_side,phase). Only full thin-slot cases evaluate the other35 slots, ordered by capacity and then lex.",
+  "profile_gate": "Exactly first1000 supported projective cases once; complete remainder only if projected native plus capacity CPU<=15seconds. Profile range is not replayed. Otherwise mark partial/UNKNOWN without widening.",
+  "acceptance": "Both orbit roots must cover all774 endpoints in<=4; only such full hits get edges and a first independent check.",
+  "no_other_phase_prime_seed_MIP_or_badscore": true,
+  "workers": 1,
+  "CPU_budget_seconds": 15
+}

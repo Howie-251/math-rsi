@@ -1,0 +1,129 @@
+{
+  "status": "SOURCE_RECOVERED_C4_RULE_TRANSFER_READY",
+  "source": {
+    "author": "Rishabh Rajiv",
+    "primary_URL": "https://zenodo.org/records/22073603",
+    "official_SageMath_URL": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD5/1518_rishabhrajiv_SageMath.txt",
+    "paper_read_scope": "PDF pages3and9 coset construction; pages1,2,5 source and verification context; appendix inspected for explicit generators",
+    "group": "PSL(2,23)",
+    "group_order": 6072,
+    "n": 1518,
+    "edges": 4554,
+    "degree": 6,
+    "diameter_reused_source_fact": 5,
+    "girth_reused_source_fact": 6,
+    "stabilizer": "C4",
+    "stabilizer_order": 4,
+    "stabilizer_generator": {
+      "file": "root_stabilizer.json",
+      "selector": "rows[target=435].permutation",
+      "order": 4,
+      "four_neighbor_cycle": [
+        329,
+        435,
+        776,
+        533
+      ]
+    },
+    "author_recipe_suborbits": [
+      329,
+      967,
+      981
+    ],
+    "actual_root_suborbits": [
+      [
+        329,
+        435,
+        533,
+        776
+      ],
+      [
+        967
+      ],
+      [
+        981
+      ]
+    ],
+    "suborbit_lengths": [
+      4,
+      1,
+      1
+    ],
+    "connection_generators": {
+      "file": "root_stabilizer.json",
+      "selector": "connection_transporters",
+      "root_images": [
+        329,
+        967,
+        981
+      ],
+      "orders": [
+        2,
+        2,
+        2
+      ]
+    },
+    "normalizer": "D24",
+    "normalizer_order": 24,
+    "normalizer_root_C6": [
+      0,
+      967,
+      1306,
+      1294,
+      1087,
+      981
+    ],
+    "actual_2x2_generator_binding": "UNRESOLVED: author recipe IDs have no accompanying coset numbering convention; literal1518-permutation generators are recovered"
+  },
+  "transfer": {
+    "group": "PSL(2,25)",
+    "stabilizer": "C4",
+    "group_order": 7800,
+    "hypothetical_n": 1950,
+    "degree": 6,
+    "target_D": 5,
+    "savedL": 1518,
+    "fixed_rule": "H=<R^3>, ord(R)=12, SRS=R^-1; two single orbitals SH,RSH and one four-orbital HTH with involution T outsideN=<R,S>",
+    "involutions_total": 325,
+    "normalizer_involutions": 13,
+    "outside_involutions": 312,
+    "involutions_per_four_orbital": 4,
+    "distinct_four_orbitals": 78,
+    "degree_and_simplicity": "AUTOMATIC_FOR_STATED_RULE",
+    "connectivity_and_D5": "UNTESTED",
+    "exact_acceptance": "For D=H union HSH union HRSH union HTH, D^5=G; equivalent complete rootH radius5 coset coverage",
+    "C6_factor_capacity_spheres_0_to_5": [
+      1,
+      6,
+      30,
+      149,
+      740,
+      3676
+    ],
+    "C6_factor_capacity_ball5": 4602,
+    "capacity_result": "NECESSARY_BOUND_ALLOWS1950; NO_SUCCESS_INFERRED",
+    "actual_n": null,
+    "actual_D": null,
+    "new_parameter_graphs": 0
+  },
+  "prior_scope_difference": "Earlier1000selected PSL2(23) C4/C3 two-orbit graphs had n3542/degree7; neither this pureq25 C4 rule nor root's pureq23 C3 rule was that profile.",
+  "excluded_literal_transfer": "q29C4 is unavailable because torus orders14and15 contain no order4; q29V4 would change the rule and is not investigated",
+  "source_BFS": 0,
+  "evidence": [
+    "PREDICTION.json",
+    "source.pdf",
+    "source.txt",
+    "source_README.md",
+    "archive_listing.json",
+    "coset_d6_k5_n1518.json",
+    "graph_d6_k5_n1518.adj",
+    "graph_d6_k5_n1518.edges",
+    "root_colour_refinement.json",
+    "root_stabilizer.json",
+    "source_relations.json",
+    "convention_check.json",
+    "recover_root_stabilizer.py",
+    "recover_convention.py",
+    "REPORT.md"
+  ]
+}

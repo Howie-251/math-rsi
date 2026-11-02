@@ -1,0 +1,11 @@
+The frozen canonical-reflection compatibility prediction was refuted by one exact2-SAT solve. No global involution or quotient label map exists in this prescribed two-choice class, so no10368-vertex candidate was generated.
+
+Each of192 controllers has two intrinsic coloop choices. For each one, the code constructs ell annihilating the other four kernel lines with ell(u)=1, then R=I−2u*ell. It checks R²=I, rank(R−I)=1, reversal of u and pointwise fixation of the other four representatives.
+
+All960 actual directed relations were classified for their four endpoint-choice pairs. The exact tests were preservation of the output line and Q_v R_b B=B R_a; the certified B is Q_v-valued and every constant is zero. There were3648 forbidden pairs. Same-variable selfarc pairs were reduced correctly:48 impossible distinct-choice conjunctions became tautologies and were removed; remaining repeated literals became unit clauses. Exact deduplication produced1812 clauses on192 variables.
+
+The one deterministic Kosaraju2-SAT solve took0.010793252 CPU seconds. Controller0 and its opposite literals lie in the same implication component. TWOSAT_RESULT.json saves both implication paths between them, the clauses used and every clause's actual forbidden-pair origins. ARC_CHOICE_PAIRS.json saves all pair classifications and literal output-line/matrix-equality evidence; LOCAL_REFLECTION_CHOICES.json saves all384 local reflection matrices. There is no satisfying assignment requiring a960-arc selected-map recheck, so no orbit map was written.
+
+The complete worker used0.445824661 CPU seconds. There was no external solver, source BFS, quotient adjacency, new graph, alternate involution or controller permutation. The closure concerns only controller-fixed rank1 coloop reflections preserving all five local kernel lines, with exactly the two intrinsic choices per controller. It does not exclude arbitrary source automorphisms, other quotient rules or general14D4 graphs.
+
+Evidence: PREDICTION.json, run.py, LOCAL_REFLECTION_CHOICES.json, ARC_CHOICE_PAIRS.json, TWOSAT_RESULT.json and RESULT.json. The producer was notified to stop before graph construction. Independent conditional transfer proof is recorded separately by the expert.

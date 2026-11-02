@@ -1,0 +1,118 @@
+{
+  "literal_factor_labels": {
+    "absolute": "i (0<=i<5)",
+    "outer": "5+i",
+    "inner": "10+i"
+  },
+  "literal_factor_edges": [
+    "absolute self-loops",
+    "a_i-u_i",
+    "a_i-v_i",
+    "u_i-u_(i+1 mod5)",
+    "v_i-v_(i+2 mod5)"
+  ],
+  "factor_rows": [
+    [
+      0,
+      5,
+      10
+    ],
+    [
+      1,
+      6,
+      11
+    ],
+    [
+      2,
+      7,
+      12
+    ],
+    [
+      3,
+      8,
+      13
+    ],
+    [
+      4,
+      9,
+      14
+    ],
+    [
+      0,
+      6,
+      9
+    ],
+    [
+      1,
+      5,
+      7
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      3,
+      7,
+      9
+    ],
+    [
+      4,
+      5,
+      8
+    ],
+    [
+      0,
+      12,
+      13
+    ],
+    [
+      1,
+      13,
+      14
+    ],
+    [
+      2,
+      10,
+      14
+    ],
+    [
+      3,
+      10,
+      11
+    ],
+    [
+      4,
+      11,
+      12
+    ]
+  ],
+  "product_label": "15*x+y",
+  "product_adjacency": "u!=v and A[x][xx] and A[y][yy]",
+  "helper_label": "225+i",
+  "helper_pins": "(a_i,a_j), j=0..4",
+  "helper_internal_graph": "K5",
+  "predicted_final_histograms": {
+    "helper": [
+      1,
+      9,
+      60,
+      160
+    ],
+    "old_abs_abs_or_nonabs_nonabs": [
+      1,
+      9,
+      48,
+      172
+    ],
+    "old_exactly_one_abs": [
+      1,
+      9,
+      46,
+      174
+    ]
+  },
+  "prediction_file": "PREDICTION_AND_SCOPE.md",
+  "geometry_isomorphism_claimed": false
+}

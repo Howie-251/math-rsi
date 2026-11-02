@@ -1,0 +1,922 @@
+[
+  {
+    "id": "ddp-20400-h48-source-semidirect-recipe-20261027",
+    "title": "20400 actual H48补群恢复：17次Ntwist命中，小半直积生成元全61200边匹配",
+    "family": "finite-group Cayley constructions",
+    "record_type": "source-recovery",
+    "target_Delta": 6,
+    "target_D": 7,
+    "savedL": 20400,
+    "n": {
+      "actual": 20400,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 6,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 7,
+    "scope": "只actualN425的最多425fixedtwists β=nB^4，实际第17项n=(1,3,0)即首hit；验证ord3/alpha inversion、48Ncosetsdistinct、actions和3positivegenerator normalforms，再按semidirect rightsteps全source122400arcs匹配。0BFS/大群枚举/新field/候选。",
+    "failure_or_result": "H=<β,α>order48，Hlaw(u,v)(U,V)=(u+(-1)^v U mod3,v+V mod16)。Mα=[[4,2],[1,1]],Mβ=[[0,4],[1,4]]mod5；χα17=5 primitive16/χβ=1。A=(0,0;0;0,1),B=(0,2;1;1,12),C=(0,4;5;2,11)。source小代数配方READY，全部61200edges literalMATCH，已交新field理论与唯一producer。",
+    "lesson_and_restart_condition": "actualregular作用把group equality化为0image比较，固定Ntwist可恢复complement和真正可迁移生成元，而非只凭群名猜参数。新field必须由独立VALID表示与fullcoverage实验判断，不继承sourceD7；本恢复自身已停。",
+    "unclosed_gap": "Newfieldrepresentations and complete newgraphdiameter results are separate authorized tasks; no newlowerbound or Lean claim here.",
+    "other_metrics": {
+      "source_n": 20400,
+      "source_m": 61200,
+      "Ntwist_scope_upper": 425,
+      "Ntwists_tested": 17,
+      "first_hit_index": 16,
+      "beta_Ntwist": [
+        1,
+        3,
+        0
+      ],
+      "H_order": 48,
+      "H_Ncosets_distinct": 48,
+      "alpha_matrix_mod5": [
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "beta_matrix_mod5": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "alpha_scalar17": 5,
+      "alpha_scalar17_order": 16,
+      "beta_scalar17": 1,
+      "positive_generators": [
+        {
+          "index": 0,
+          "name": "A",
+          "normal5": [
+            0,
+            0
+          ],
+          "c17": 0,
+          "u": 0,
+          "v": 1,
+          "actual_root_image": 850
+        },
+        {
+          "index": 1,
+          "name": "B",
+          "normal5": [
+            0,
+            2
+          ],
+          "c17": 1,
+          "u": 1,
+          "v": 12,
+          "actual_root_image": 4183
+        },
+        {
+          "index": 2,
+          "name": "C",
+          "normal5": [
+            0,
+            4
+          ],
+          "c17": 5,
+          "u": 2,
+          "v": 11,
+          "actual_root_image": 13044
+        }
+      ],
+      "all_vertex_group_coordinates": 20400,
+      "source_directed_adjacencies_matched": 122400,
+      "source_undirected_edges_matched": 61200,
+      "CPU_seconds": 0.167126902,
+      "source_BFS": 0,
+      "large_group_enumeration": false,
+      "new_graphs": 0
+    },
+    "outcome_class": "positive-source-interface-recovery",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/SOURCE_SEMIDIRECT_RECIPE.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/CANDIDATE_TESTS.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/run.py"
+    ]
+  },
+  {
+    "id": "ddp-20400-quotient816-normal49-capacity-20261027",
+    "title": "实际816商七步raw容量min111：F7²纤维49未被必要计数排除",
+    "family": "finite-group Cayley constructions",
+    "record_type": "capacity",
+    "target_Delta": 6,
+    "target_D": 7,
+    "savedL": 20400,
+    "n": {
+      "actual": null,
+      "hypothetical": 39984
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 7,
+    "scope": "复用actual48base×F5²×C17配方，忘a/b得到816state商；从(base0,c17=0)一根完整NB≤7 raw词计数117187，保六labeledports含投影loop/parallel，按recordedreverseport禁立即inverse。只容量，0sourceparse/BFS/新表示/候选。",
+    "failure_or_result": "minK=111，在(base16,0)/(base32,0)，各len4/6/7 rawcounts=1/19/91。共同纤维size必须≤111，原25校准过；F7²49≤111，容量预测支持但完全不等于39984图存在或D7充分。",
+    "lesson_and_restart_condition": "从actualquotient先决定新module规模是否有路线预算，再谈关系保留表示；此处rawcount允许49，下一H48complement/表示任务须另授权，未自动开始。不同word可能collision，K不是新图/实际覆盖数。",
+    "unclosed_gap": "Newnormalmodule representation, connectedness, fullD7coverage and candidateexistence remain open; no generalparameter bound beyond this fixedquotientstepfiber capacity.",
+    "other_metrics": {
+      "quotient_states": 816,
+      "normal_source_module_order": 25,
+      "hypothetical_F7_squared_order": 49,
+      "hypothetical_order": 39984,
+      "raw_NB_words": 117187,
+      "word_counts_by_length": [
+        1,
+        6,
+        30,
+        150,
+        750,
+        3750,
+        18750,
+        93750
+      ],
+      "minimum_K": 111,
+      "min_witnesses": [
+        {
+          "state": 272,
+          "target_base": 16,
+          "c17": 0,
+          "raw_routes": 111,
+          "routes_by_depth": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            19,
+            91
+          ]
+        },
+        {
+          "state": 544,
+          "target_base": 32,
+          "c17": 0,
+          "raw_routes": 111,
+          "routes_by_depth": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            19,
+            91
+          ]
+        }
+      ],
+      "original25_check": true,
+      "q7_capacity_allowed": true,
+      "sufficient_for_cover": false,
+      "capacity_metric_unit": "Raw labeled nonbacktracking word multiplicity at quotientendpoint; not actualfibercoverage or ordinarygraphbadpairs",
+      "CPU_seconds": 0.034097815,
+      "source_graph_parses": 0,
+      "graph_BFS": 0,
+      "group_or_module_search": false,
+      "candidate_graphs": 0
+    },
+    "outcome_class": "necessary-capacity-pass",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/quotient816_capacity/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/quotient816_capacity/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/quotient816_capacity/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/quotient816_capacity/COUNTS.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/quotient816_capacity/count.py"
+    ]
+  },
+  {
+    "id": "ddp-20400-four-generators-d10-three-subsets-20261027",
+    "title": "20400群三组四生成元图全部exactD11：固定三subsets无D10新图",
+    "family": "finite-group Cayley constructions",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 4,
+    "target_D": 10,
+    "savedL": 19306,
+    "n": {
+      "actual": 20400,
+      "hypothetical": null
+    },
+    "actual_D": 11,
+    "actual_graph_Delta": 4,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 10,
+    "scope": "仅恢复出的3inversepairs任取2的全部3subsets；actual v—pi_s(v) leftCayley图均simple/connected/4reg/20400/40800。每图完整root0BFS一次，加Gamma abstractrightregular VT证明得exactglobalD11；不是旧source原标签子图或sourceD7重验。",
+    "failure_or_result": "P0P1/P0P2/P1P2的root>10分别31/392/16，全部exactD11。VT推导global无序bad分别316200/3998400/163200，分变体保存不混合。3项完成/未试0/UNKNOWN0，0D10hits/新下界；3actual候选仅内存构造、未导失败edgefile。",
+    "lesson_and_restart_condition": "已知六生成元D7密度不能保证删去一对后D10；这三个固定subsets完整关闭，不按16或31余缺继续调gens。其它生成元、表示或group选择不由此排除，必须另有结构依据授权。",
+    "unclosed_gap": "General(4,10)graphs above19306 and other generators remain open; this result closes only these3actualsubsets.",
+    "variants": [
+      {
+        "label": "pairs01",
+        "target": [
+          4,
+          10
+        ],
+        "n": 20400,
+        "actual_D": 11,
+        "actual_graph_Delta": 4,
+        "ordinary_bad_unordered_pairs": 316200,
+        "ordinary_bad_target_D": 10,
+        "single_root_missing_targets": 31,
+        "count_scope": "Exactglobalunorderedpaircount derivedbyVTfromonefullrootBFS",
+        "first_missing_target": 437,
+        "connected": true,
+        "graph_exported": false
+      },
+      {
+        "label": "pairs02",
+        "target": [
+          4,
+          10
+        ],
+        "n": 20400,
+        "actual_D": 11,
+        "actual_graph_Delta": 4,
+        "ordinary_bad_unordered_pairs": 3998400,
+        "ordinary_bad_target_D": 10,
+        "single_root_missing_targets": 392,
+        "count_scope": "Exactglobalunorderedpaircount derivedbyVTfromonefullrootBFS",
+        "first_missing_target": 851,
+        "connected": true,
+        "graph_exported": false
+      },
+      {
+        "label": "pairs12",
+        "target": [
+          4,
+          10
+        ],
+        "n": 20400,
+        "actual_D": 11,
+        "actual_graph_Delta": 4,
+        "ordinary_bad_unordered_pairs": 163200,
+        "ordinary_bad_target_D": 10,
+        "single_root_missing_targets": 16,
+        "count_scope": "Exactglobalunorderedpaircount derivedbyVTfromonefullrootBFS",
+        "first_missing_target": 3287,
+        "connected": true,
+        "graph_exported": false
+      }
+    ],
+    "other_metrics": {
+      "cases": 3,
+      "completed": 3,
+      "untested": 0,
+      "UNKNOWN": 0,
+      "candidate_graphs_constructed_in_memory": 3,
+      "D10hits": 0,
+      "candidate_edgefiles_exported": 0,
+      "root_BFS_runs": 3,
+      "source_D7_BFS_runs": 0,
+      "source_downloads": 0,
+      "source_group_order": 20400,
+      "VTglobal_diameter_proof": true,
+      "CPU_seconds": 0.111369462,
+      "generator_tuning": false,
+      "prediction": "REFUTED"
+    },
+    "outcome_class": "complete-fixed-family-negative",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/run.py"
+    ]
+  },
+  {
+    "id": "ddp-20400-chi5-complete-quartic-cayley216-20261027",
+    "title": "actualΓ的完整规范216无D10：新213＋严格继承3，quartic Cayley最小直径11",
+    "family": "finite-group Cayley constructions",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 4,
+    "target_D": 10,
+    "savedL": 19306,
+    "n": {
+      "actual": 20400,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 4,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 10,
+    "scope": "固定actualΓ χ17=5/sourceMat，firstα^a a1/3/5/7，secondN(v,c1)*Hβ*α^b b0..8，v∈P1(F5)6reps，216完整规范族。独立coverage理论VALID覆盖此Γ全部连通无向degree4Cayley gensets；3旧controls有群等式映射并跳过，只213新actual图/rootBFS。",
+    "failure_or_result": "213新图全部simple/connected/4reg/20400/40800，全0D≤10；3旧D11继承，未试0/UNKNOWN0。216的exactD分布110×11、104×12、2×13，globalD由Γ右regular VT＋完整root0BFS得到。故actualΓ无connectedquartic Cayley D≤10，minpossiblequartic CayleyD=11。未导失败图/新下界0。",
+    "lesson_and_restart_condition": "完整群归一化替代按16/31旧坏targets小修，精确关闭actualχ5群全部degree4Cayley范围；不是216非同构图，也不是任意20400quartic图或其它χ/group排除。旧literal witness未transport，继承row witness=null，避免label混用。无需在此Γ加Hframes/phase/score续轮。",
+    "unclosed_gap": "Othergroupmodels, arbitraryquarticgraphs, generalN(4,10) and Lean remain open; alternateχ6 belongs separateproducer and is notcoveredbythis χ5closure.",
+    "other_metrics": {
+      "fixed_normalized_cases": 216,
+      "coverage_theory": "VALID",
+      "control_mapping_theory": "VALID",
+      "new_actual_cases": 213,
+      "new_complete_root_BFS": 213,
+      "old_controls_inherited": 3,
+      "old_controls_rerun": 0,
+      "skip_ordinals": [
+        28,
+        31,
+        135
+      ],
+      "untested": 0,
+      "UNKNOWN": 0,
+      "D10hits": 0,
+      "exact_global_D_histogram": {
+        "12": 104,
+        "11": 110,
+        "13": 2
+      },
+      "minimum_quartic_Cayley_D_of_actual_Gamma": 11,
+      "all_graphs_n": 20400,
+      "all_graphs_m": 40800,
+      "all_graphs_simple_connected_4reg": true,
+      "leftCayley_rightregular_VT_proof": true,
+      "native_CPU_seconds": 0.133757,
+      "compiled_CPU_seconds": 1.677065138,
+      "total_parent_children_CPU_seconds": 1.8341368749999998,
+      "source_D7_BFS": 0,
+      "new_source_downloads": 0,
+      "exported_failed_edgefiles": 0,
+      "new_lower_bounds": 0,
+      "ordinary_bad_pair_scope": "Not aggregated across216graphs; rootcounts/histograms preserved separately perrow",
+      "prediction": "REFUTED"
+    },
+    "outcome_class": "complete-fixed-group-Cayley-exclusion",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/THEORY_BINDING.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/normalization_proof/PROOF.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/normalization_proof/CONTROL_IDENTITIES.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/run.py",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/search.cpp"
+    ]
+  },
+  {
+    "id": "ddp-20400-chi6-complete-quartic-cayley216-20261027",
+    "title": "(4,10)另一χ6耦合四生成元规范族：fresh216全连通、均D≥11",
+    "family": "finite-group Cayley constructions",
+    "record_type": "finite-family-exhaustion",
+    "outcome_class": "finite-family-exhaustion",
+    "wiki_verdict": "no",
+    "object_level": "candidate_graph_or_family",
+    "target_Delta": 4,
+    "target_D": 10,
+    "savedL": 19306,
+    "n": {
+      "actual": null,
+      "hypothetical": 20400
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 10,
+    "scope": "唯一χ17alpha6新群(F5²×C17)⋊H48，rho保实际sourceA/B。g=α^a(a1,3,5,7)，h=(v,c1,βα^b)(b0..8,v6projectivelines)，全部216新设置，skip空，χ5控制继承0；216真4gens合法、216connected、216actualidentityfullBFS。0D<=10hit/edgefile/未试/UNKNOWN。",
+    "failure_or_result": "新预测REFUTED。Cayleylefttranslation使每项identityecc=全D；D分布11:122,12:92,13:2。不是216个不同新图，未算普通无序坏对或挑best失败图。",
+    "lesson_and_restart_condition": "保持sourceF5nearfield模作用但换non-equivalentfaithfulC17coupling仍无quarticD10；在独立chi6group重算真逆元，不继承chi5D11控制。固定完整规范族停止，不改χ/field/Hphase/score。",
+    "unclosed_gap": "No generaldegree4D10 upperbound or arbitrary20400graph exclusion.",
+    "other_metrics": {
+      "chi17_alpha": 6,
+      "new_settings": 216,
+      "legal_inverseclosed4_cases": 216,
+      "connected_settings": 216,
+      "new_Cayley_root_BFS": 216,
+      "chi5_controls_inherited": 0,
+      "skip_count": 0,
+      "exact_D_histogram": {
+        "12": 92,
+        "13": 2,
+        "11": 122
+      },
+      "complete_edgefiles_exported": 0,
+      "source_BFS_repeated": 0,
+      "Aut_preparation_repeated": 0,
+      "unattempted": 0,
+      "UNKNOWN": 0,
+      "cursor": {
+        "a": 7,
+        "b": 8,
+        "line_index": 5
+      },
+      "native_CPU_seconds": 0.092164,
+      "compile_CPU_seconds": 0.8076179929999999,
+      "total_batch_CPU_seconds": 0.9019097399999999,
+      "baseline_date": "2026-10-27",
+      "independent_method_count_added": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/terminal.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/cases.tsv",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/probe.cpp",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/alternate_chi6_family/run.py",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/normalization_proof/PROOF.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/four_generator_D10/normalized_group_family/normalization_proof/FAITHFUL_C17_COUPLINGS.md"
+    ]
+  },
+  {
+    "id": "ddp-d6-d7-h48-fieldmodule-four-reps2625-20261027",
+    "title": "(6,7)H48 normalfield四指定表示：2625projective设置完整无命中",
+    "family": "Normal-module lifts over recovered H48",
+    "record_type": "finite-family-exhaustion",
+    "outcome_class": "finite-family-exhaustion",
+    "wiki_verdict": "no",
+    "object_level": "candidate_graph_or_family",
+    "target_Delta": 6,
+    "target_D": 7,
+    "savedL": 20400,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 7,
+    "scope": "仅VALID q7/q8/q9±四rep的Gq=(Fq²×C17)⋊H48，A=αnormal0；B/C的H,c17源部分固定、四normal坐标全部projective firstnonzero1。400+585+820+820=2625完整BFS，全部sixgenerators合法；connected2212、disconnected413，0D7hit/edgefile/未试/UNKNOWN。q11/D8独立不计。",
+    "failure_or_result": "预测REFUTED。q7/q8/q9条件性阶数39984/52224/66096；family多阶数多连通状态，顶层actualD/badpairsnull。q8控制仅visited3264、component ecc7，不能称52224图D7；另controls q7D8、q9±D9均非D7成果。",
+    "lesson_and_restart_condition": "合法semidirect表示和source商路线容量不保证连通或完整覆盖。GF8整数embedding用primechar，trueinverse由新field正gens重算。四rep全部projective族按约停止，不加q/rep/Hparts/c17/gauge或score修边。",
+    "unclosed_gap": "Otherrepresentations/generatorquotientparts andgeneral(6,7)graphs remainopen.",
+    "variants": [
+      {
+        "name": "q7",
+        "q": 7,
+        "n": {
+          "actual": null,
+          "hypothetical": 39984
+        },
+        "settings": 400,
+        "processed": 400,
+        "legal": 400,
+        "connected": 400,
+        "disconnected": 0,
+        "full_D7_hits": 0,
+        "edgefiles_exported": 0,
+        "control": {
+          "tuple": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "connected": true,
+          "actual_D": 8,
+          "scope": "One sourcecenteredcontrol only"
+        }
+      },
+      {
+        "name": "q8",
+        "q": 8,
+        "n": {
+          "actual": null,
+          "hypothetical": 52224
+        },
+        "settings": 585,
+        "processed": 585,
+        "legal": 585,
+        "connected": 192,
+        "disconnected": 393,
+        "full_D7_hits": 0,
+        "edgefiles_exported": 0,
+        "control": {
+          "tuple": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "connected": false,
+          "visited": 3264,
+          "component_eccentricity": 7,
+          "actual_D": null
+        }
+      },
+      {
+        "name": "q9_plusg",
+        "q": 9,
+        "n": {
+          "actual": null,
+          "hypothetical": 66096
+        },
+        "settings": 820,
+        "processed": 820,
+        "legal": 820,
+        "connected": 810,
+        "disconnected": 10,
+        "full_D7_hits": 0,
+        "edgefiles_exported": 0,
+        "control": {
+          "tuple": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "connected": true,
+          "actual_D": 9,
+          "scope": "Onecontrol only"
+        }
+      },
+      {
+        "name": "q9_minusg",
+        "q": 9,
+        "n": {
+          "actual": null,
+          "hypothetical": 66096
+        },
+        "settings": 820,
+        "processed": 820,
+        "legal": 820,
+        "connected": 810,
+        "disconnected": 10,
+        "full_D7_hits": 0,
+        "edgefiles_exported": 0,
+        "control": {
+          "tuple": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "connected": true,
+          "actual_D": 9,
+          "scope": "Onecontrol only"
+        }
+      }
+    ],
+    "other_metrics": {
+      "parameter_settings": 2625,
+      "legal_six_generators": 2625,
+      "connected_settings": 2212,
+      "disconnected_settings": 413,
+      "new_Cayley_root_BFS": 2625,
+      "source_BFS_repeated": 0,
+      "complete_edgefiles_exported": 0,
+      "unattempted": 0,
+      "UNKNOWN": 0,
+      "source_controls_included_once": true,
+      "q11_control_included": false,
+      "normalization": "globalFq* groupautomorphism; allzero disconnected",
+      "native_CPU_seconds": 3.65488,
+      "input_prepare_CPU_seconds": 0.0074225039999999964,
+      "compile_CPU_seconds": 0.896225309,
+      "total_batch_CPU_seconds": 4.561592177,
+      "intended_orders": [
+        39984,
+        52224,
+        66096
+      ],
+      "baseline_date": "2026-10-27",
+      "independent_method_count_added": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/terminal.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/MODEL_BINDINGS.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/cases.tsv",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/search.cpp",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/run.py",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/representation_tables/REPRESENTATIONS.json"
+    ]
+  },
+  {
+    "id": "ddp-d6-d8-q11-h48-single-control98736-20261027",
+    "title": "(6,8)q11源比率单控制：98736六价Cayley实际D9",
+    "family": "Normal-module lifts over recovered H48",
+    "record_type": "finite-construction-experiment",
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "object_level": "candidate_graph_or_family",
+    "target_Delta": 6,
+    "target_D": 8,
+    "savedL": 80050,
+    "n": {
+      "actual": 98736,
+      "hypothetical": 98736
+    },
+    "actual_D": 9,
+    "actual_D_scope": "实际connectedCayley图identity完整BFS；lefttranslations为全图一个轨道，所以ecc9=全D9。",
+    "actual_graph_Delta": 6,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 8,
+    "scope": "唯一F11²×C17⋊H48控制；χ17α5，alpha[[7,5],[1,4]]/beta[[0,10],[1,10]]，sourceH/c17parts固定；A_V0,B_V(0,1),C_V(0,2)=2B。trueinverse由新群重算。actual98736/296208/simple/undirected6reg connected，一根BFS全n访问，R8漏986/ecc9。",
+    "failure_or_result": "唯一控制D8预测REFUTED，无positive edgefile，不扩大q11参数。986为fixedroot-target缺项，非普通无序全图坏对。",
+    "lesson_and_restart_condition": "保持sourceC=2B和H/χ关系仍不足D8；停止单控制。原q7/q8/q9±2625D7族是另一授权范围，不能把本case混入。",
+    "unclosed_gap": "Otherq11normalsettings or general(6,8)graphs notexcluded.",
+    "other_metrics": {
+      "q": 11,
+      "group_order": 98736,
+      "m": 296208,
+      "simple": true,
+      "connected": true,
+      "root_BFS": 1,
+      "root_R8_missing": 986,
+      "distance_histogram": [
+        1,
+        6,
+        30,
+        150,
+        736,
+        3568,
+        15429,
+        44655,
+        33175,
+        986
+      ],
+      "source_BFS_repeated": 0,
+      "new_edgefile_exported": false,
+      "separate_from_D7_2625": true,
+      "native_CPU_seconds": 0.007772,
+      "compile_CPU_seconds": 0.708840925,
+      "total_batch_CPU_seconds": 0.7186196559999999,
+      "baseline_date": "2026-10-27",
+      "baseline_provenance": "Parentprovided80050/currenttable refresh separatelyownedbyroot."
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/RECIPE.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/probe.cpp",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/run.py"
+    ]
+  },
+  {
+    "id": "ddp-d6-d8-q11-projective1463-plus-control-20261027",
+    "title": "(6,8)指定q11表示全部normalprojective族：新1463无解+继承D9控制",
+    "family": "Normal-module lifts over recovered H48",
+    "record_type": "finite-family-exhaustion",
+    "outcome_class": "finite-family-exhaustion",
+    "wiki_verdict": "no",
+    "object_level": "necessary-condition",
+    "target_Delta": 6,
+    "target_D": 8,
+    "savedL": 80050,
+    "n": {
+      "actual": null,
+      "hypothetical": 98736
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 8,
+    "scope": "sameq11rep α[[7,5],[1,4]]/βcompanion、χ17α5、sourceH/c17parts固定、A0；VB/VC∈P3(F11)。1464类中control(0,1,0,2)既验D9直接继承，新1463全部genericmatriximage求值、2511必要槽，0fullsurvivor/实际图/BFS/未试/UNKNOWN；zero tuple仅816component未测。",
+    "failure_or_result": "新预测REFUTED；新1463+继承1严格闭指定全部projective族。matrixforms最小359>121只是容量通过，实际normal image不足。959项首fail于identityquotient槽，属于参数首次失败分布，不是图坏对。",
+    "lesson_and_restart_condition": "解除C=2B共线约束仍不能同时满足全816normal覆盖。停止此q11rep/H/c17/A0族，不加q11rep/gauge/更多q或评分修边。原D7 2625严格另计。",
+    "unclosed_gap": "Otherrepresentations/quotientparts andgeneral98736degree6D8 graphs notexcluded.",
+    "other_metrics": {
+      "all_projective_classes": 1464,
+      "new_settings_evaluated": 1463,
+      "inherited_control_count": 1,
+      "inherited_control_recomputed": false,
+      "capacity_pruned_settings": 0,
+      "numeric_settings": 1463,
+      "slot_evaluations": 2511,
+      "generic_words": 585937,
+      "generic_distinct_matrices": 439258,
+      "generic_min_matrices_per_slot": 359,
+      "normal_target_vectors_per_slot": 121,
+      "full_survivors": 0,
+      "actual_graphs_generated": 0,
+      "new_graph_BFS": 0,
+      "unattempted": 0,
+      "UNKNOWN": 0,
+      "source_BFS": 0,
+      "q11_control_actual_D_inherited": 9,
+      "D7_2625_included": false,
+      "native_CPU_seconds": 0.014773,
+      "compile_CPU_seconds": 1.042403256,
+      "total_batch_CPU_seconds": 1.059653583,
+      "baseline_date": "2026-10-27",
+      "baseline_provenance": "Parent80050currenttable refresh separatelyowned."
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/terminal.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/parameters.txt",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/FIRST_FAIL_SLOT_COUNTS.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/search.cpp",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_projective/run.py",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_generic_forms/q11_matrix_forms.meta.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q11_D8_control/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-q53-two-module-controls-degree6-D10-20261027",
+    "title": "F53² two order8-action controls: both 2,292,144-vertex Cayley graphs have exact D11",
+    "family": "semidirect-product Cayley module transfer",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 6,
+    "target_D": 10,
+    "savedL": 1394189,
+    "n": {
+      "actual": 2292144,
+      "hypothetical": null
+    },
+    "actual_D": 11,
+    "actual_graph_Delta": 6,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 10,
+    "scope": "Exactly the two frozen q53 alpha matrices, beta=[[0,-1],[1,-1]], chi17(alpha)=5, source H48 phases and c coordinates, B_normal=(0,1), C_normal=(0,2). Two complete actual implicit Cayley models and identity BFSs; no source D7 BFS.",
+    "failure_or_result": "Both simple connected 6regular n2292144/m6876432; exact global D11 by Cayley transitivity and complete identity BFS. Root R10 missing targets5596/6886 respectively; both controls complete, no hits/unknown/untested. No failed graph edge export and no new lower bound.",
+    "lesson_and_restart_condition": "Matching source normal-action order8 and retaining C=2B kept the algebraic relations and degree but did not guarantee D10. This closes the two explicit controls only; no automatic field/vector/matrix expansion or bad-target tuning.",
+    "positive_guarantee": "Matrix relations define the group and inverse-paired distinct generators define simple6regular Cayley graphs. Complete identity BFS establishes connectivity and exact global diameter.",
+    "unclosed_gap": "Other generators/matrices/modules and arbitrary N(6,10) constructions are not excluded.",
+    "other_metrics": {
+      "actual_controls": 2,
+      "identity_full_BFS_count": 2,
+      "global_D_per_control": [
+        11,
+        11
+      ],
+      "root_R10_missing_per_control": [
+        5596,
+        6886
+      ],
+      "first_root_witnesses": [
+        335,
+        86
+      ],
+      "native_CPU_seconds": 0.24124,
+      "total_parent_children_CPU_seconds": 1.049405686,
+      "new_lower_bounds": 0,
+      "prediction": "REFUTED",
+      "ordinary_bad_count_units": "Root missing targets are separate from unordered bad pairs"
+    },
+    "outcome_class": "complete-two-fixed-controls-no-hit",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/REPORT.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/RESULT.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/MODEL.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/MATRIX_VALIDITY.md",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/MATRIX_VALIDITY.json",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/probe.cpp",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/run.py",
+      "research/ddp/more_graphs_20261027/d6_D7_current20400_source/field_module_lift/q53_D10_controls/checkpoint.json"
+    ]
+  },
+  {
+    "id": "ddp-d4-d9-p109-order18-phase-family-20261027",
+    "title": "(4,9)p109阶十八phase族：新285144完整无解，继承旧71286闭五轨道",
+    "family": "Metacyclic voltage lifts",
+    "record_type": "finite-family-exhaustion",
+    "outcome_class": "finite-family-exhaustion",
+    "wiki_verdict": "no",
+    "object_level": "necessary-condition",
+    "target_Delta": 4,
+    "target_D": 9,
+    "savedL": 7884,
+    "n": {
+      "actual": null,
+      "hypothetical": 11772
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 9,
+    "scope": "固定p109/M36/C=(1,6)/loop(0,3)，A/B phases为E={2,10,14,22,26,34}中不同无序pair；u1/13/25等价给5orbits。新4reps(2,10),(2,14),(2,34),(10,22)×6actions×109²=285144全数值处理；旧(2,22)orbit含(10,14)继承71286不重跑。0capacity-prune/未试/UNKNOWN/全槽survivor/实际图/BFS。",
+    "failure_or_result": "新预测REFUTED。新285144+继承71286=356430规范设置闭五orbit；按对称证明覆盖15raw phasepairs的1069290参数，但后者不是显式测试或图数。全324slotfieldcover是接受标准，290049槽求值均在必要筛阶段完成。",
+    "lesson_and_restart_condition": "改变quotientphase落点仍不能在固定p109/order18电压阶/C1机制下同时覆盖；该完整phase族停止。不扩prime/M/C0/其他phaseorder或追坏对分数。",
+    "unclosed_gap": "Otherprimes/M/C0/phaseorders andgeneral11772degree4diameter9graphs notexcluded.",
+    "other_metrics": {
+      "E": [
+        2,
+        10,
+        14,
+        22,
+        26,
+        34
+      ],
+      "symmetry_units": [
+        1,
+        13,
+        25
+      ],
+      "raw_unordered_phase_pairs": 15,
+      "phase_pair_orbits": 5,
+      "new_frame_reps": [
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          34
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      "new_normalized_settings_evaluated": 285144,
+      "inherited_orbit_rep": [
+        2,
+        22
+      ],
+      "inherited_old_actual_pair": [
+        10,
+        14
+      ],
+      "inherited_settings_not_recomputed": 71286,
+      "all_normalized_orbit_settings_closed": 356430,
+      "symmetry_covered_raw_parameter_domain": 1069290,
+      "new_numeric_settings": 285144,
+      "capacity_pruned_settings": 0,
+      "slot_evaluations": 290049,
+      "per_frame": [
+        {
+          "phase_pair": [
+            2,
+            10
+          ],
+          "settings": 71286,
+          "slot_evaluations": 75617,
+          "native_CPU_seconds": 0.162086
+        },
+        {
+          "phase_pair": [
+            2,
+            14
+          ],
+          "settings": 71286,
+          "slot_evaluations": 71464,
+          "native_CPU_seconds": 0.11333
+        },
+        {
+          "phase_pair": [
+            2,
+            34
+          ],
+          "settings": 71286,
+          "slot_evaluations": 71286,
+          "native_CPU_seconds": 0.081498
+        },
+        {
+          "phase_pair": [
+            10,
+            22
+          ],
+          "settings": 71286,
+          "slot_evaluations": 71682,
+          "native_CPU_seconds": 0.122412
+        }
+      ],
+      "full_survivors": 0,
+      "unattempted": 0,
+      "UNKNOWN": 0,
+      "actual_graphs_generated": 0,
+      "actual_graph_BFS": 0,
+      "source_BFS": 0,
+      "native_CPU_seconds": 0.47932600000000003,
+      "compile_CPU_seconds": 1.047358471,
+      "total_batch_CPU_seconds": 1.5362021279999998,
+      "forms_generation_CPU_seconds": 2.174545,
+      "input_generic_triples": 2457436,
+      "input_slots": 7776,
+      "baseline_date": "2026-10-27",
+      "independent_method_count_added": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/REPORT.md",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/FORMS_PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/RESULT.json",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/terminal.json",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/ISOMORPHISM.json",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/PROOF_SCOPE.md",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/search.cpp",
+      "research/ddp/more_graphs_20261027/d4_D9_current7884_transfer/phase_order18_family/run.py"
+    ]
+  }
+]

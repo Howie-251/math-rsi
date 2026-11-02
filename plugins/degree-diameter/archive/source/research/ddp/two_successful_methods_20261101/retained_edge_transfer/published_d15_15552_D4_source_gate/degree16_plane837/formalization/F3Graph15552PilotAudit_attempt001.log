@@ -1,0 +1,33 @@
+graph : SimpleGraph (Fin 15552)
+source_label : Fin 15552 ≃ Fin 15552
+Clone16389.graph : SimpleGraph (Fin 15552 ⊕ Fin 837)
+Clone16389.label : Clone16389.Vertex ≃ Fin 16389
+def DegreeDiameter.Portfolio.F3Graph15552.SourceFinalClaim : Prop :=
+Fintype.card (Fin 15552) = 15552 ∧
+  (∀ (v : Fin 15552), graph.degree v ≤ 15) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3
+def DegreeDiameter.Portfolio.F3Graph15552.Clone16389.FinalClaim : Prop :=
+Fintype.card Clone16389.Vertex = 16389 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 837), Clone16389.graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost Clone16389.graph 4 ∧
+      ¬DegreeDiameter.Portfolio.DiameterAtMost Clone16389.graph 3
+theorem DegreeDiameter.Portfolio.F3Graph15552.PilotLargestGroup.all_walk_bound : ∀ (x y : Fin 81), ∃ w, w.length ≤ 4 :=
+fun x y =>
+  coset_walk_bound PilotLargestGroup.a PilotLargestGroup.b PilotLargestGroup.reference PilotLargestGroup.word
+    PilotLargestGroup.column PilotLargestGroup.choice PilotLargestGroup.alpha PilotLargestGroup.column_certificate
+    PilotLargestGroup.cover_certificate PilotLargestGroup.controller_certificate PilotLargestGroup.length_certificate x
+    y
+'DegreeDiameter.Portfolio.F3Graph15552.PilotLargestGroup.all_walk_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DegreeDiameter.Portfolio.F3Graph15552.PilotFullrank.all_walk_bound : ∀ (x y : Fin 81), ∃ w, w.length ≤ 4 :=
+fun x y =>
+  inverse_walk_bound PilotFullrank.a PilotFullrank.b PilotFullrank.word PilotFullrank.inverseBasis
+    PilotFullrank.basis_certificate PilotFullrank.controller_certificate PilotFullrank.length_certificate x y
+'DegreeDiameter.Portfolio.F3Graph15552.PilotFullrank.all_walk_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.affine_coset_solve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.bounded_walk_of_route' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.label_new' depends on axioms: [propext, Quot.sound]

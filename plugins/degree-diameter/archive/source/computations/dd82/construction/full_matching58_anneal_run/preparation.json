@@ -1,0 +1,59 @@
+{
+  "parent_run_id": "dd82-v3-f9-c7-20261013-0749",
+  "status": "PREPARED_NOT_RUN",
+  "optimization_runs": 0,
+  "source": "computations/dd82/construction/full_matching58_anneal.cpp",
+  "seed": "computations/dd82/construction/full_matching58_run/seed.edges",
+  "random_seed": 2026101301,
+  "compile": {
+    "command": [
+      "g++",
+      "-O3",
+      "-std=c++17",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal.cpp",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/search"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 0.9242109999999999,
+    "wall_seconds": 0.9670126400887966,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 20,
+    "wall_limit_seconds": 30
+  },
+  "selfcheck_process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/search",
+      "selfcheck",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/seed.edges",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/selfcheck.json"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 0.0050410000000000454,
+    "wall_seconds": 0.009260531514883041,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 5,
+    "wall_limit_seconds": 10
+  },
+  "selfcheck": {
+    "status": "SELF_CHECK_ONLY",
+    "initial_bad_pairs": 105,
+    "switches_checked": 315,
+    "all_reversible": true,
+    "all_degree_and_gauge_preserving": true,
+    "graph_and_route_scores_agree": true,
+    "optimization_runs": 0,
+    "cpu_seconds": 0.00304
+  },
+  "planned_scope": "All 21 independent S6 interfaces after seven root matchings are gauged to identity",
+  "proposed_search_command": [
+    "/opt/conda/bin/python",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run.py",
+    "run"
+  ],
+  "proposed_cpu_seconds": 120,
+  "search_authorized_at_preparation": false,
+  "target_zero_requires_independent_bfs": true
+}

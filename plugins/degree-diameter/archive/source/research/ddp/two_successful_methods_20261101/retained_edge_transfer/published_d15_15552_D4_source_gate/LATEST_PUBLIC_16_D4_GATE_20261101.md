@@ -1,0 +1,7 @@
+# Actual current public16/D4 comparison
+
+Checked 2026-11-01 15:38 UTC: the maintained [Comellas main table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), including October30 updates, still gives16384 at degree16/diameter4. Its [D4 description](https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html) also gives URSA_16384, communicated2026-09-18. Thus a complete legal16389 graph would exceed this currently read primary table by5. This is a concrete table comparison, not independent global-priority certification.
+
+The current main table gives15552 at15/D4, whereas that description page still explains an older13608 graph. The actual source used is the cached full15552/116316 data from [Zenodo23691325](https://zenodo.org/records/23691325), independently profiled648degree14/14904degree15 and bound to the later recovered loop-completed affine relation. Do not substitute the stale13608 description or claim the published source as a new result. The original download receipt is local. This run's direct record-page access failed; no repeated request or new graph download was made, and source creator/date metadata were not invented.
+
+Production and independent target acceptance, complete kernel, new-scope A/B/freshC, and expert/human feedback remain separately recorded. The candidate is not counted merely from its point formula or controller packing.

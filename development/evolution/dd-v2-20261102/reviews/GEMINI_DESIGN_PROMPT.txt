@@ -1,0 +1,7 @@
+请参与MathRSI v2外层经验演化workflow的设计讨论，中文回答。用户要求详细、真正可执行的ARIS粒度，不能只有规则和名字。此轮只讨论2-3个关键设计问题，不写文件、不启动旧数学研究。
+
+直接读本仓 AGENTS.md、docs/EVOLUTION_WORKFLOW.md、docs/WORKFLOWS.md，再读development/evolution/dd-v2-20261102/intake/dd-guides/02_RESEARCH_TRAJECTORIES.md（尤其§3/6/7/10/11/12/16）与04_TIME_COSTS_AND_REPLAY.md。这第三份DD研究是历史输入，不是由MathRSI v1实际跑出的新结果。v0为ARIS技能解Property B/ECC，v1为已沉淀工作流，v2将吸收DD经验；未来真实复跑另记。
+
+拟构建独立外层主技能mathrsi-evolve，内部三项实质技能：mathrsi-distill（原始轨迹、因果归因、base/plugin/单题状态/拒绝暂存分流）；mathrsi-maintain（实现最小足够改动到真实caller/consumer、保留源码与原例、跨模型有界autoreview）；mathrsi-transfer-check（未参与作者从真实输入走受影响路径，Root据原产物决定采纳或退回）。五个解题subworkflow仍是内层，解题时冻结base。使用现有ARIS research-review明确composed+数学维护适配，meta-optimize/meta-apply的经验分析/落地分离要吸收，但不照搬只有ML事件日志才能分析、机械分数或无限循环。Markdown主、薄Python。
+
+请具体挑战：(1)三项拆分是否有实质边界和产物消费，是否需要调整；(2)DD哪些经验确实能改变base实际行为，而不是只添一句已有原则？重点考虑公开基线更正影响路线、修改对象后的证据继承/负结果缓存、放宽搜索族自加限制；(3)怎样试用而不把已知答案重放冒充新题性能？请给可直接写进skill的操作段落和1个跨域例子。明确你读过的文件和范围。遵循HERO，不提哈希/平台/通用评分，不制造防御性流程，已有正确设计直接认可。此为research-review数学工作流维护适配，composed: development/evolution/dd-v2-20261102/reviews/DISPOSITION.md；原Step3/4改为具体行为/接口判断，结束于本轮问题得到可执行决定，Root独占修改与调度。

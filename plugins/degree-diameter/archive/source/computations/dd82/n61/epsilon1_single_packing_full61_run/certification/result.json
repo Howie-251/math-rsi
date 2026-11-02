@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "48",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/epsilon1_single_packing_full61_run/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/epsilon1_single_packing_full61_run/certification/proof.lrat"
+  ],
+  "exit_code": 20,
+  "wall_timeout": false,
+  "termination_signal": null,
+  "cpu_seconds": 6.009175,
+  "wall_seconds": 6.028096914291382,
+  "cpu_budget_seconds": 50,
+  "wall_budget_seconds": 70,
+  "cpu_affinity": [
+    0
+  ],
+  "threads": 1,
+  "memory_limit_bytes": 4294967296,
+  "per_file_limit_bytes": 268435456,
+  "status": "CHECKED_UNSAT_CNF",
+  "source_input": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/epsilon1_single_packing_full61_run/input.cnf",
+  "scope": "Complete epsilon=1 adjacent-double full61 construction in single-packing coordinates; all second colors, all shared-center counts, full S/T, correct blocked and own ports, and all 1830 actual original pairs. No epsilon=0 input is included.",
+  "proof_checked": true,
+  "certification_solver_calls": 1,
+  "original_discovery_solver_calls": 1,
+  "proof_bytes": 11186044,
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/epsilon1_single_packing_full61_run/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/epsilon1_single_packing_full61_run/certification/proof.lrat"
+    ],
+    "exit_code": 20,
+    "wall_timeout": false,
+    "termination_signal": null,
+    "cpu_seconds": 0.1621619999999999,
+    "wall_seconds": 0.2059410698711872,
+    "cpu_budget_seconds": 30,
+    "wall_budget_seconds": 45,
+    "cpu_affinity": [
+      0
+    ],
+    "threads": 1,
+    "memory_limit_bytes": 4294967296,
+    "per_file_limit_bytes": 268435456,
+    "verified": true,
+    "scope": "Exact unchanged epsilon1_single_packing_full61 input.cnf"
+  },
+  "mathematical_conclusion": "Exact saved CNF certified UNSAT; epsilon=1 graph-to-CNF bridge separately documented and reviewed. Other order61 branches remain outside scope."
+}

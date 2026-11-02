@@ -1,0 +1,14 @@
+{
+  "status": "FROZEN_BEFORE_EXACT_SUPPORT_DUPLICATE_AND_FREE_COMPONENT_COUNT",
+  "prediction": "At least one pair of the15552 actualtargetrows has exactly identicalsupport amongall648free R3columns, permitting a strictlysmaller equivalentcovermodel.",
+  "correctness_rule": "Equal rows canmerge without changing binarysetcover feasibility; supportsubset dominance isnotincluded. Actual compression measured, notassumed.",
+  "inputs": [
+    "../single_vertex_R3_cover/COVER_CSC.bin",
+    "../single_vertex_R3_cover/PREPARATION_RESULT.json",
+    "../source15552.header.edges"
+  ],
+  "scope": "Only cachedmatrix exactrow grouping andactualfree-induced adjacency/componentdegree profile. No labelrepartition/factortrials, sourceR3 recomputation, ordinaryBFS, solver ornewcandidate.",
+  "hard_CPU_seconds": 3,
+  "enforcement": "resource.RLIMIT_CPU=(3,3) forworker (inheritedby nativechild); no internal solverclock substitution.",
+  "stop": "Onecounter run; ifduplicatefew/none reportstructuralbottleneck. Evenifmanyduplicates firstreportcost/model, noautomaticIPrestart."
+}

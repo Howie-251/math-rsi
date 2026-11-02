@@ -1,0 +1,13 @@
+{
+  "frozen_before_source_R2_or_candidate_query": true,
+  "target": {"Delta": 6, "D": 3, "baseline_n": 120, "hypothetical_n": 121},
+  "source": "context/DD_PORTFOLIO_START_20261026/baselines/d6_D3_known.edges",
+  "source_validation_inherited": "context/DD_PORTFOLIO_START_20261026/validation/d6_D3_bfs.json",
+  "prediction": "At least one matchingtriple has endpoints whose sourceR2 covers all120vertices; whether any such triple also preserves every oldpair at distance at most three is a separate complete check.",
+  "intuition": "For even degree6, deleting three disjointedges frees exactly sixslots, so one newdegree6vertex can absorb all lost endpoints without a lowdegree root. Six closedR2 balls have enough nominal capacity for120vertices; the actual matching-restricted coverage and the old tight routes must both be tested.",
+  "fixed_scope": "Every a<b<c among360sourceedges, retaining only pairwise vertexdisjointtriples. Raw scope7711320; actual matchingcount measured. Delete exactlythose threeedges andjoin new120 toallsixendpoints. No other edgechanges.",
+  "newroot_gate": "All deletededge endpoints lie inS; dist_(G-F)(v,S)=dist_G(v,S). Thus sourceR2(S)=all120 is equivalent to actual newrootD3 coverage.",
+  "complete_oldpair_check": "After the gate, BFS the actual modifiedgraph from new120 and allold vertices in closedR1_G(S). Any sourcepath between two vertices outside that rootset which uses a deletededge has length at least five, so sourceD3 paths are retained. At most43roots.",
+  "budget_CPU_seconds": 20,
+  "stop": "First complete hit or complete fixedscope or actualCPU budget. Budget cutoff is UNKNOWN with a saved cursor, never a fullscope exclusion. No SAT, fourthedge, badpairrepair, or repeatedsourceD3 validation."
+}

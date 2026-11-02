@@ -1,0 +1,9 @@
+# One bounded r7/F11local-interface experiment
+
+Saved before computation. Use independent prime-field arithmetic modulo11, PG1point order[inf,0,1,...,10], and all normalized PGL2matrices/permutations. Enumerate all924six-subsets and792seven-subset puncture profiles. Root predicts1320permutations, two six-set orbits264/660, both complement invariant, and every seven-set having two264punctures plus five660punctures; these are falsifiable predictions, not assumed results.
+
+Choose only the first usable seven-set in the stated lexicographic point order. If the predicted2+5profile occurs, order its two264ports first, then its five660ports; otherwise use the actual complement-orbit matching pattern and report it. Required reverse ports are[1,0,3,2,4,5,6]. Same/complement-compatible types may pair; do not infer r7impossibility merely from nonuniform types.
+
+For that one selected set, build only ten charts: cross0→1and its true inverse, cross2→3and its true inverse, and self4/5/6plus and true inverse. For f(t)=(a*t+b)/(c*t+d), use Qf=[[d,c],[b,a]], H_p(x)=(x0,x1-p*x0,x2-p*x1)for finite p and H_inf(x)=(x2,x0,x1), and T=H_q^-1diag(1,Qf)H_p. Reverse is literal3×3T^-1, never a rescaled normalized PGLinverse. Predict exact T*ell_p=ell_q, all36nonbacktracking turn determinants nonzero per chart, and the12adjacent pencil planes covering all1331vectors. Reverse noise is−t modulo11.
+
+One worker, total20CPU seconds including preparation and all finite checks. No controller search, large graph, graph/BFS experiment, Lean, solver, literature batch, other field or q13continuation. Save actual orbits/profiles/allowed pairs/matrices and PROOF/RESULT/TERMINAL. A local PASS is only a local rank/pencil interface, with no controller or full graph claimed. Independent compatibility analysis is a separate complementary paper scope.

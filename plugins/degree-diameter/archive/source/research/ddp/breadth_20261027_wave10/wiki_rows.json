@@ -1,0 +1,997 @@
+{
+  "schema": "ddp-wiki-recent-rows-v1",
+  "date": "2026-10-27",
+  "threshold_snapshot": "context/DD_PORTFOLIO_START_20261026/registry/cases.json",
+  "source_waves": [
+    10
+  ],
+  "wave10": "TWO_SCOUT_FILTERS_AND_TWO_FINITE_PROFILES_TERMINAL_NO_NEW_BOUND",
+  "rows_are_not_independent_method_count": true,
+  "metric_rules": [
+    "Only root independent all-source checks fill ordinary_bad_unordered_pairs and actual_D for the two explicit graphs.",
+    "No candidate actual_D/bad counts assigned to degree-reduction or code-capacity scouts. Source D and symbolic capacities stay separate.",
+    "Multi-target scouts use per-target variants rather than one false target.",
+    "All four rows terminal; producer prior pending-root placeholders are superseded by actual best.independent_check files."
+  ],
+  "row_count": 4,
+  "rows": [
+    {
+      "id": "ddp-wave10-degree-reduction-scout",
+      "title": "170/253高次数源的spanning删边降度：全部边已被唯一三路强迫",
+      "family": "spanning edge-deletion degree reduction",
+      "wave": 10,
+      "record_type": "necessary-capacity-screen",
+      "target_Delta": null,
+      "target_D": 3,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": "no_new_graph_generated",
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "只检查两个固定源的同顶点集任意spanning删边子图；170源降maxdegree6、253源降maxdegree7；不许新增边、删点或重连。",
+      "failure_or_result": "170源全部595边与253源全部1012边均属于某条唯一距离3路径，若保持D3则每条都必须保留；根0等所有顶点的必保度分别7/8，超过目标6/7。两项均在必要条件处停止，未生成降度候选。",
+      "positive_guarantees": [
+        "两源已知D3验证复用；本次不重复source BFS。",
+        "每条强迫边都有局部邻集唯一三路证书；证书所需路径的完整性以外不使用搜索结果。"
+      ],
+      "unclosed_gap": "纯spanning删边无解；不排除允许加边、删点、重连或更换源的其他机制。",
+      "lesson_and_restart_condition": "降degree前先查唯一短路强迫边图的最大度；同源只删边不能靠matching优化修复，不能追加该删边profile。",
+      "other_metrics": {
+        "object_level": "theoretical_fixed_source_filter",
+        "graph_generated": false,
+        "source_count": 2,
+        "CPU_seconds": 0.08116758700000001,
+        "pruning_profiles": 0,
+        "matching_searches": 0,
+        "BFS_runs": 0
+      },
+      "relations": [],
+      "variants": [
+        {
+          "id": "source170_to_degree6",
+          "target_Delta": 6,
+          "target_D": 3,
+          "savedL": 120,
+          "n": {
+            "actual": null,
+            "hypothetical": 170
+          },
+          "actual_D": null,
+          "actual_D_scope": "no_reduced_candidate;source_D3_only",
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "source_n": 170,
+          "source_degree_histogram": {
+            "7": 170
+          },
+          "source_known_D": 3,
+          "order_margin": 50,
+          "minimum_edges_that_must_be_deleted": 85,
+          "unique3_unordered_pairs": 5130,
+          "forced_edge_count": 595,
+          "all_source_edges_forced": true,
+          "forced_degree_histogram": {
+            "7": 170
+          },
+          "status": "ALL_SPANNING_MAXDEGREE_SUBGRAPHS_BLOCKED",
+          "scope": "All spanning subgraphs of this exact source graph, with arbitrary edge deletions; no added edges, vertex deletions, or rewiring.",
+          "source": "research/ddp/breadth_20261027_wave7/signed_double340/source.edges",
+          "source_validation_reused": "research/ddp/breadth_20261027_wave7/signed_double340/source_check.json",
+          "graph_generated": false
+        },
+        {
+          "id": "source253_to_degree7",
+          "target_Delta": 7,
+          "target_D": 3,
+          "savedL": 170,
+          "n": {
+            "actual": null,
+            "hypothetical": 253
+          },
+          "actual_D": null,
+          "actual_D_scope": "no_reduced_candidate;source_D3_only",
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "source_n": 253,
+          "source_degree_histogram": {
+            "8": 253
+          },
+          "source_known_D": 3,
+          "order_margin": 83,
+          "minimum_edges_that_must_be_deleted": 127,
+          "unique3_unordered_pairs": 9108,
+          "forced_edge_count": 1012,
+          "all_source_edges_forced": true,
+          "forced_degree_histogram": {
+            "8": 253
+          },
+          "status": "ALL_SPANNING_MAXDEGREE_SUBGRAPHS_BLOCKED",
+          "scope": "All spanning subgraphs of this exact source graph, with arbitrary edge deletions; no added edges, vertex deletions, or rewiring.",
+          "source": "context/DD_PORTFOLIO_START_20261026/baselines/d8_D3_known.edges",
+          "source_validation_reused": "context/DD_PORTFOLIO_START_20261026/validation/d8_D3.json",
+          "graph_generated": false
+        }
+      ],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave10/degree_reduction_scout",
+      "source_statuses": {
+        "RESULT.json": "TWO_FIXED_HIGHER_DEGREE_SOURCES_SCREENED_NO_PRUNING_PROFILE"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/REPORT.md",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/RESULT.json",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/source170_to_degree6.json",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/source170_to_degree6.forced_edges.json",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/source253_to_degree7.json",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/source253_to_degree7.forced_edges.json",
+        "research/ddp/breadth_20261027_wave10/degree_reduction_scout/screen.py"
+      ],
+      "new_lower_bound": false,
+      "wiki": {
+        "round_aggregate": null,
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "coverage_status": "wave10-complete-ready-for-root-helper"
+      },
+      "outcome_class": "fixed-source-spanning-subgraph-exclusion-not-general-order-bound",
+      "distance_text": "170源全部595边与253源全部1012边均属于某条唯一距离3路径，若保持D3则每条都必须保留；根0等所有顶点的必保度分别7/8，超过目标6/7。两项均在必要条件处停止，未生成降度候选。"
+    },
+    {
+      "id": "ddp-wave10-new-structure-scout",
+      "title": "线性码Hamming商图：全局covering-radius路由，但27格阶数界均不足",
+      "family": "linear-code syndrome/coset quotient",
+      "wave": 10,
+      "record_type": "source-and-theoretical-capacity-screen",
+      "target_Delta": null,
+      "target_D": null,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": "no_new_graph_generated",
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "所有标准Fq线性码coset/syndrome图：V=Fq^r，沿H各非比例列方向的全部非零倍数连边；degree=s(q-1)≤12，D∈{3,4,5}。",
+      "failure_or_result": "独立推导diam等于ker(H) covering radius；可交换短词合并为至多D个方向的非零线性组合，n=q^r≤sum binom(s,j)(q-1)^j。有限495项q/s/目标比较覆盖27格，存活0；没有矩阵赋值、码搜索或图。",
+      "positive_guarantees": [
+        "给定covering radius≤D的码即可严格保证全对D；不靠局部rank或采样。",
+        "实际读primary Borges–Rifa–Zinoviev2014定义/Lemma1/2/Theorem3；其明确二元distance-regular D3族最小degree15已超范围。",
+        "标准syndrome生成公式和一般qary距离公式直接证明；不把二元distance-regularity定理外推。"
+      ],
+      "unclosed_gap": "该标准线性码边规则在27格均不能过现有下界；不涉及非线性分块、删选部分标量或其他非交换图。",
+      "lesson_and_restart_condition": "进一步增加码长度、换H或完美码名称不能绕过统一sphere容量界；新尝试必须改变实际分块/生成边规则并另给路由论证。该入口仍属于广义abelian Cayley相关类，不虚增独立方法数。",
+      "other_metrics": {
+        "object_level": "theoretical_family_order_bound",
+        "graph_generated": false,
+        "matrix_assignments": 0,
+        "codes_generated": 0,
+        "field_direction_comparisons": 495,
+        "cells_checked": 27,
+        "capacity_survivors": 0,
+        "CPU_seconds": 0.0018100669999999985,
+        "BFS_performed": false,
+        "source": {
+          "title": "On nested completely regular codes and distance regular graphs",
+          "authors": [
+            "J.Borges",
+            "J.Rifa",
+            "V.A.Zinoviev"
+          ],
+          "year": 2014,
+          "primary_url": "https://ddd.uab.cat/pub/poncom/2014/142913/intworalg_a2014p85.pdf",
+          "read_scope": "pp85-89: covering-radius definitions, Section2 Lemmas1/2, explicit nested-code construction and Section4 Theorem3; not only abstract.",
+          "binary_source_family": {
+            "m_even_at_least": 4,
+            "i_range": "1..m/2",
+            "vertices": "2^(m+i)",
+            "degree": "2^m-1",
+            "diameter": 3,
+            "smallest_degree": 15,
+            "within_goal_degree_range": false
+          },
+          "source_scope_note": "Source distance-regularity guarantee is for completely regular binary codes. The general q-ary syndrome graph and its distance formula are derived directly here; no q-ary distance-regularity is assumed."
+        },
+        "relation_to_old_work": "New explicit code/covering-radius representation, but within the broad abelian Cayley class; not claimed as a new independent construction class."
+      },
+      "relations": [],
+      "variants": [
+        {
+          "target_Delta": 4,
+          "target_D": 3,
+          "savedL": 41,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 9,
+          "looser_binary_volume_upper_bound": 15,
+          "order_shortfall_from_savedL": 32,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 4,
+          "target_D": 4,
+          "savedL": 104,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 16,
+          "looser_binary_volume_upper_bound": 16,
+          "order_shortfall_from_savedL": 88,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 4,
+          "target_D": 5,
+          "savedL": 364,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 16,
+          "looser_binary_volume_upper_bound": 16,
+          "order_shortfall_from_savedL": 348,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 5,
+          "target_D": 3,
+          "savedL": 72,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 16,
+          "looser_binary_volume_upper_bound": 26,
+          "order_shortfall_from_savedL": 56,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 5,
+          "target_D": 4,
+          "savedL": 252,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 16,
+          "looser_binary_volume_upper_bound": 31,
+          "order_shortfall_from_savedL": 236,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 5,
+          "target_D": 5,
+          "savedL": 650,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 32,
+          "looser_binary_volume_upper_bound": 32,
+          "order_shortfall_from_savedL": 618,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 6,
+          "target_D": 3,
+          "savedL": 120,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 32,
+          "looser_binary_volume_upper_bound": 42,
+          "order_shortfall_from_savedL": 88,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 6,
+          "target_D": 4,
+          "savedL": 441,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 32,
+          "looser_binary_volume_upper_bound": 57,
+          "order_shortfall_from_savedL": 409,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 6,
+          "target_D": 5,
+          "savedL": 1518,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 32,
+          "looser_binary_volume_upper_bound": 63,
+          "order_shortfall_from_savedL": 1486,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 7,
+          "target_D": 3,
+          "savedL": 170,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 64,
+          "looser_binary_volume_upper_bound": 64,
+          "order_shortfall_from_savedL": 106,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 7,
+          "target_D": 4,
+          "savedL": 684,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 64,
+          "looser_binary_volume_upper_bound": 99,
+          "order_shortfall_from_savedL": 620,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 7,
+          "target_D": 5,
+          "savedL": 2810,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 64,
+          "looser_binary_volume_upper_bound": 120,
+          "order_shortfall_from_savedL": 2746,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 8,
+          "target_D": 3,
+          "savedL": 253,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 64,
+          "looser_binary_volume_upper_bound": 93,
+          "order_shortfall_from_savedL": 189,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 8,
+          "target_D": 4,
+          "savedL": 1100,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 128,
+          "looser_binary_volume_upper_bound": 163,
+          "order_shortfall_from_savedL": 972,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 8,
+          "target_D": 5,
+          "savedL": 5334,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 128,
+          "looser_binary_volume_upper_bound": 219,
+          "order_shortfall_from_savedL": 5206,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 9,
+          "target_D": 3,
+          "savedL": 585,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 128,
+          "looser_binary_volume_upper_bound": 130,
+          "order_shortfall_from_savedL": 457,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 9,
+          "target_D": 4,
+          "savedL": 1768,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 256,
+          "looser_binary_volume_upper_bound": 256,
+          "order_shortfall_from_savedL": 1512,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 9,
+          "target_D": 5,
+          "savedL": 9020,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 256,
+          "looser_binary_volume_upper_bound": 382,
+          "order_shortfall_from_savedL": 8764,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 10,
+          "target_D": 3,
+          "savedL": 650,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 128,
+          "looser_binary_volume_upper_bound": 176,
+          "order_shortfall_from_savedL": 522,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 10,
+          "target_D": 4,
+          "savedL": 2485,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 256,
+          "looser_binary_volume_upper_bound": 386,
+          "order_shortfall_from_savedL": 2229,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 10,
+          "target_D": 5,
+          "savedL": 33397,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 512,
+          "looser_binary_volume_upper_bound": 638,
+          "order_shortfall_from_savedL": 32885,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 11,
+          "target_D": 3,
+          "savedL": 715,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 128,
+          "looser_binary_volume_upper_bound": 232,
+          "order_shortfall_from_savedL": 587,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 11,
+          "target_D": 4,
+          "savedL": 3444,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 512,
+          "looser_binary_volume_upper_bound": 562,
+          "order_shortfall_from_savedL": 2932,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 11,
+          "target_D": 5,
+          "savedL": 37628,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 1024,
+          "looser_binary_volume_upper_bound": 1024,
+          "order_shortfall_from_savedL": 36604,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 12,
+          "target_D": 3,
+          "savedL": 810,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 256,
+          "looser_binary_volume_upper_bound": 299,
+          "order_shortfall_from_savedL": 554,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 12,
+          "target_D": 4,
+          "savedL": 5832,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 512,
+          "looser_binary_volume_upper_bound": 794,
+          "order_shortfall_from_savedL": 5320,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        },
+        {
+          "target_Delta": 12,
+          "target_D": 5,
+          "savedL": 42342,
+          "baseline_as_of": "2026-10-26",
+          "n": {
+            "actual": null,
+            "hypothetical": null
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "symbolic_order_upper_bound": 1024,
+          "looser_binary_volume_upper_bound": 1586,
+          "order_shortfall_from_savedL": 41318,
+          "upper_bound_not_attainability": true,
+          "capacity_survivors": 0,
+          "graph_generated": false
+        }
+      ],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave10/new_structure_scout",
+      "source_statuses": {
+        "terminal.json": "TERMINAL_LINEAR_CODE_COSET_NEW_REPRESENTATION_CAPACITY_STOP",
+        "RESULT.json": "ALL_27_CELLS_LINEAR_CODE_COSET_MECHANISM_ORDER_OBSTRUCTED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave10/new_structure_scout/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave10/new_structure_scout/REPORT.md",
+        "research/ddp/breadth_20261027_wave10/new_structure_scout/RESULT.json",
+        "research/ddp/breadth_20261027_wave10/new_structure_scout/terminal.json",
+        "research/ddp/breadth_20261027_wave10/new_structure_scout/screen.py"
+      ],
+      "new_lower_bound": false,
+      "wiki": {
+        "round_aggregate": null,
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "coverage_status": "wave10-complete-ready-for-root-helper"
+      },
+      "outcome_class": "standard-linear-code-coset-family-order-obstruction-not-new-theorem",
+      "distance_text": "独立推导diam等于ker(H) covering radius；可交换短词合并为至多D个方向的非零线性组合，n=q^r≤sum binom(s,j)(q-1)^j。有限495项q/s/目标比较覆盖27格，存活0；没有矩阵赋值、码搜索或图。"
+    },
+    {
+      "id": "ddp-wave10-binary1152-edge-local",
+      "title": "72控制点×F2⁴的逐边独立仿射线：1152点两起点失败",
+      "family": "edge-local binary affine line lift",
+      "wave": 10,
+      "record_type": "finite-profile",
+      "target_Delta": 8,
+      "target_D": 4,
+      "savedL": 1100,
+      "n": {
+        "actual": 1152,
+        "hypothetical": 1152
+      },
+      "actual_D": 5,
+      "actual_D_scope": "root_independent_all1152_source_ordinary_BFS",
+      "actual_graph_Delta": 8,
+      "ordinary_bad_unordered_pairs": 29152,
+      "ordinary_bad_target_D": 4,
+      "scope": "固定72点简单4regular控制图；144条无向边各独立GL4(2)矩阵、非零b和任意affine offset c，GF2反边重新求逆；两预定初态各1000合法单边b/c/transvection proposals，无额外controller/field/move/seed。",
+      "failure_or_result": "完整1152点4608边图simple、connected、8regular；root唯一全1152源BFS确认D5、29152个距离>4无序点对。144条参数反关系逐项合法，参数重建全部4608边与保存best.edges完全匹配。",
+      "positive_guarantees": [
+        "控制点每个四邻cell，每方向binary line给两个不同邻点，因此任意合法边参数均给简单8regular1152图。",
+        "全部72×72端点的≤4walk加权容量均≥16（min16），只过必要筛，不保证存在可行参数。",
+        "首正式proposal以全部5392512条≤4walk逐位核对全部R4关系MATCH，正式提案复用；不充当最终独立BFS。"
+      ],
+      "unclosed_gap": "最好图仍有29152个>4无序点对，实际直径比目标多1；只结束两段profile，不排全部逐边参数族或一般(8,4)图。",
+      "lesson_and_restart_condition": "独立GF2逐边逆矩阵/offset确实放松旧通用four-label chart限制，但容量和近端合法性不保证全对R4。此固定批已停，不追加move/seed/budget，重启须新的覆盖结构依据。",
+      "other_metrics": {
+        "object_level": "finalgraph",
+        "graph_generated": true,
+        "graph_edges": 4608,
+        "source_controller_vertices": 72,
+        "source_controller_degree": 4,
+        "fiber_size": 16,
+        "field": 2,
+        "fiber_dimension": 4,
+        "independent_edge_parameters": 144,
+        "starts": 2,
+        "legal_proposals": 2000,
+        "profiles": [
+          {
+            "seed": 20261027115201,
+            "initial_bad": 30240,
+            "best_bad": 29152,
+            "final_bad": 29152,
+            "legal_proposals": 1000,
+            "accepted": 548,
+            "move_counts_b_c_T": [
+              329,
+              305,
+              366
+            ]
+          },
+          {
+            "seed": 20261027115202,
+            "initial_bad": 68142,
+            "best_bad": 31436,
+            "final_bad": 31436,
+            "legal_proposals": 1000,
+            "accepted": 554,
+            "move_counts_b_c_T": [
+              345,
+              336,
+              319
+            ]
+          }
+        ],
+        "first_formal_proposal_calibrated": true,
+        "all144_inverse_maps_verified": true,
+        "parameters_reconstruct_edges": true,
+        "whole_graph_all_pairs_BFS_performed": true,
+        "roots_checked": 1152,
+        "unordered_distance_histogram": {
+          "1": 4608,
+          "2": 29912,
+          "3": 173952,
+          "4": 425352,
+          "5": 29152
+        },
+        "production_total_CPU_seconds": 2.106693456,
+        "root_check_CPU_seconds": 0.38950397400000003,
+        "producer_BFS_performed": false,
+        "pending_root_check": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave10/binary1152_edge_local",
+      "source_statuses": {
+        "terminal.json": "TWO_FIXED_EDGE_LOCAL_PROFILES_FAILED",
+        "search_result.json": "TWO_FIXED_EDGE_LOCAL_PROFILES_FAILED",
+        "best.independent_check.json": "INDEPENDENT_ALL_ROOT_BFS_MATCH"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/REPORT.md",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/terminal.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/search_result.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/best.edges",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/best_parameters.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/capacity_screen.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/encoding_and_plan.json",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/search.cpp",
+        "research/ddp/breadth_20261027_wave10/binary1152_edge_local/run.py"
+      ],
+      "new_lower_bound": false,
+      "wiki": {
+        "round_aggregate": null,
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "coverage_status": "wave10-complete-ready-for-root-helper"
+      },
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "distance_text": "完整1152点4608边图simple、connected、8regular；root唯一全1152源BFS确认D5、29152个距离>4无序点对。144条参数反关系逐项合法，参数重建全部4608边与保存best.edges完全匹配。"
+    },
+    {
+      "id": "ddp-wave10-gq312-internal-cycles",
+      "title": "W(3,5)关联图加两侧独立2factor：312点八度D3目标失败",
+      "family": "generalized-quadrangle incidence with internal 2-factors",
+      "wave": 10,
+      "record_type": "finite-profile",
+      "target_Delta": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "n": {
+        "actual": 312,
+        "hypothetical": 312
+      },
+      "actual_D": 4,
+      "actual_D_scope": "root_independent_all312_source_ordinary_BFS",
+      "actual_graph_Delta": 8,
+      "ordinary_bad_unordered_pairs": 4090,
+      "ordinary_bad_target_D": 3,
+      "scope": "GF5四维symplectic W(3,5)的156点/156线，保留936关联边；两个156点侧各加入任意简单2factor。只两固定随机Hamilton初态，各1000合法two-edge switch，后续可分裂/合并cycle，不固定Hamilton。",
+      "failure_or_result": "完整312点1248边图simple、connected、8regular；root唯一全312源BFS确认D4，4090个>3无序坏对，与production精确R3评分一致。936旧incidence和两侧各156条factor边完全匹配，所有内部度2。",
+      "positive_guarantees": [
+        "GF5 symplectic空间给156点/156条全等方线，每点/线关联度6；加每侧degree2因子后全度8。",
+        "全部原incidence边保留，原来≤3的cross-side路和同侧collinear两步路不失效；需修复非共线same-side远端。",
+        "几何metadata逐项确认非incident point-line的唯一collinear投影；必要几何关系不代替最终全对D检查。"
+      ],
+      "unclosed_gap": "最好图仍有4090个距离4无序点对，目标D3未达；有限2000合法交换失败，不排除全部两侧2factor或一般312点图。",
+      "lesson_and_restart_condition": "关联几何严格保留大批近端/cross覆盖，独立2factor改变same-side远端路由，但该两起点未闭。停止固定批，不增q/field/source/degree/轮次；未来须明确新的same-side覆盖结构。",
+      "other_metrics": {
+        "object_level": "finalgraph",
+        "graph_generated": true,
+        "graph_edges": 1248,
+        "field": 5,
+        "symplectic_dimension": 4,
+        "points": 156,
+        "lines": 156,
+        "incidence_edges": 936,
+        "incidence_degree": 6,
+        "internal_factor_edges_each": 156,
+        "internal_degree": 2,
+        "starts": 2,
+        "legal_proposals": 2000,
+        "profiles": [
+          {
+            "start": 0,
+            "seed": 20261027103121,
+            "initial_bad": 4721,
+            "final_bad": 4090,
+            "raw": 1027,
+            "legal": 1000,
+            "illegal_rejects": 27,
+            "accepted": 485,
+            "strict_improvements": 268
+          },
+          {
+            "start": 1,
+            "seed": 20261027103122,
+            "initial_bad": 4834,
+            "final_bad": 4098,
+            "raw": 1021,
+            "legal": 1000,
+            "illegal_rejects": 21,
+            "accepted": 471,
+            "strict_improvements": 252
+          }
+        ],
+        "first_formal_proposal_calibrated": true,
+        "all936_incidence_edges_retained": true,
+        "exactly156_edges_in_each_factor": true,
+        "whole_graph_all_pairs_BFS_performed": true,
+        "roots_checked": 312,
+        "unordered_distance_histogram": {
+          "1": 1248,
+          "2": 8438,
+          "3": 34740,
+          "4": 4090
+        },
+        "production_total_CPU_seconds": 1.8563930249999998,
+        "root_check_CPU_seconds": 0.036682278000000006,
+        "producer_BFS_performed": false,
+        "pending_root_check": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave10/gq312_internal_cycles",
+      "source_statuses": {
+        "terminal.json": "TWO_FIXED_2FACTOR_PROFILES_COMPLETE_NO_HIT",
+        "search_result.json": "TWO_FIXED_2FACTOR_PROFILES_COMPLETE_NO_HIT",
+        "best.independent_check.json": "INDEPENDENT_ALL_ROOT_BFS_MATCH"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/REPORT.md",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/terminal.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/search_result.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best.edges",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best_parameters.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best.factors.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/geometry.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/incidence.edges",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/first_proposal_calibration.json",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/generate.py",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/search.cpp",
+        "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/run.py"
+      ],
+      "new_lower_bound": false,
+      "wiki": {
+        "round_aggregate": null,
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "coverage_status": "wave10-complete-ready-for-root-helper"
+      },
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "distance_text": "完整312点1248边图simple、connected、8regular；root唯一全312源BFS确认D4，4090个>3无序坏对，与production精确R3评分一致。936旧incidence和两侧各156条factor边完全匹配，所有内部度2。"
+    }
+  ],
+  "wiki_gaps": {
+    "missing_independent_row_ids": [
+      "ddp-wave10-degree-reduction-scout",
+      "ddp-wave10-new-structure-scout",
+      "ddp-wave10-binary1152-edge-local",
+      "ddp-wave10-gq312-internal-cycles"
+    ]
+  },
+  "pending": [],
+  "Wiki_or_ledger_modified": false
+}

@@ -1,0 +1,15 @@
+# Fixedβ5155 homogeneous-normal pilot
+
+Actual status: COMPLETE_NO_BETA5155_ALL_NORMAL_TRANSLATIONS_D9. Phase0 feedback is saved separately before later phases; complete per-representative checked masks/failure witnesses are in REPRESENTATIVE_STATUS.csv. FORM_COUNTS.csv and COEFFICIENT_FORMS.u32 retain the new homogeneous endpoint forms generated once, without scalar1512 endpoint/BFS re-evaluation.
+
+The new prediction was supported at the first gate:2302 of6959 new projective representatives cover all6959 phase0 endpoints. Therefore changing the ratio really can repair the old return-fiber obstruction. But these choices do not simultaneously repair the other fibers: fixed phases1 through11 reduce the survivor counts to584,220,64,21,11,6,4,3,2,1,0. Each of the6959 representatives has a saved actual failed phase and missing residue; none is unresolved. The infinity branch failed at phase0 with6085 endpoints and first missing18.
+
+The complete negative conclusion does not require claiming that every representative was tested on all49 phases. One fully evaluated missing phase already rejects that representative. The pilot used10177 representative-phase evaluations and stopped when all were rejected; the inverse-phase bridge would only be needed to certify a positive all-phase survivor. Combining these new6959 rejections with the inheritedτ1512 rejection and the pure-phase zero obstruction exhausts the fixedβ5155 normal domain. The other41 actions remain outside this result. No target graph or BFS was produced.
+
+This is a fixedβ complete projective-domain experiment, not a bad-pair hill climb. The old experiment frozeτ1512; the new freedom is(cB,cC) modulo common scale, including infinity. Old1512NO and allzero-disconnected are inherited, not rerun. See PAPER_DOMAIN.md for the independent normalization, RIGHT recurrence and inverse-word proof.
+
+Every generated word is an actual sequence of true inverse-paired Cayley darts. An image covering6959 in everyphase gives all identity endpoints within9; left translations give allpairs. Conversely, a missing endpoint in a complete NB<=9 image precludes any path<=9, since an immediate inverse pair in a shortest walk can be removed. The inverse-word map scales U_j by a nonzero factor onto U_-j, so testing phases0..24 is sufficient for all49. A singlephase survivor is not a graph result.
+
+If a complete target was found, only one340991/1022973 graph was written and parameter work stopped; it remains pending root acceptance, with exactdiameter unset. If all6959 new representatives failed, combining the inherited1512NO and zeroNO excludes precisely thisβ5155/fixedphase all-normal family. If work stopped early, untouched masks remain explicitly unresolved; no full-family negative is inferred.
+
+Budget inherits0.949294461 and includes new preparation0.2, compiler0.909598000, actual run and driver CPU; cumulative4.804913207/20CPU, one worker. No nextaction, field, phase, seed, source validation/BFS, solver, ARIS, Lean or review is dispatched. Root alone owns acceptance/counts and global documents.

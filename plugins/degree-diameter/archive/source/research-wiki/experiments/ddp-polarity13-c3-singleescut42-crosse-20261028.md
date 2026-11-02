@@ -1,0 +1,86 @@
+---
+type: experiment
+node_id: exp:ddp-polarity13-c3-singleescut42-crosse-20261028
+title: "One E-S cut/e-helper42 rule: uniform cross-external capacity2<3 excludes family beforeSAT"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: yes
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REPORT.md; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_SCOPE.md; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION_DISPOSITION.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/RESULT.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.md; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/INPUT.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/C_FULL_FIBER_GUARANTEE.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_STATS.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_RECEIPT.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARED_STATE.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_REPORT.md; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/VARIABLE_MAP.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REACH2_MAP.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/model.cnf; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/compile.py; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/decode.py; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/terminal.json; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.md; research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.json"
+added: 2026-10-28T02:49:07Z
+tags: ["ddp", "method-ledger"]
+---
+
+# One E-S cut/e-helper42 rule: uniform cross-external capacity2<3 excludes family beforeSAT
+
+**verdict:** `yes`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** targeted-singlecut-variant-prepared-CNF-uniform-route-exclusion
+
+**目标与阶数：** (4,3)；L=41；条件性n=42（未据此计纪录）
+
+**距目标的证据：** Preparedexact6403var/13226clause CNF but0SAT. CrossE targetfibre3 hasatmost2 within3 via unchangedliftedEtriangle; no allowedaddedroute suppliesanotherendpoint. Uniformmissing>=1; positivec fullR3 remainsvalid but notglobalD3. Noactualgraph orbadpairmeasurement.
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "source_base_n": 13,
+  "old_lift_n": 39,
+  "hypothetical_n": 42,
+  "hypothetical_m": 84,
+  "fixed_cut_oldedge": [
+    0,
+    21
+  ],
+  "fixed_T_base": 8,
+  "c_fixed_oldneighbors": [
+    24,
+    25,
+    26
+  ],
+  "s_pair_options": [
+    27,
+    28,
+    29
+  ],
+  "structural_variables": 93,
+  "structural_assignments": 2008846980,
+  "CNF_variables": 6403,
+  "CNF_clauses": 13226,
+  "CNF_bytes": 178659,
+  "successful_compiler_body_CPU_seconds": 0.110873466,
+  "SAT_calls": 0,
+  "chosen_graphs": 0,
+  "graph_BFS": 0,
+  "word_enumerations": 0,
+  "new_lower_bounds": 0,
+  "uniform_crossE_fibre_capacity": 2,
+  "uniform_crossE_fibre_size": 3,
+  "uniform_missing_lowerbound": 1,
+  "count_type": "paper bound perroot anddifferentEbase; noordinarybadpairs"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REPORT.md](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REPORT.md)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_SCOPE.md](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_SCOPE.md)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION_DISPOSITION.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION_DISPOSITION.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/RESULT.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/RESULT.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.md](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.md)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_COUNTEREXAMPLE_ATTACK.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/INPUT.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/INPUT.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/C_FULL_FIBER_GUARANTEE.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/C_FULL_FIBER_GUARANTEE.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_STATS.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/MODEL_STATS.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_RECEIPT.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_RECEIPT.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARED_STATE.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARED_STATE.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_REPORT.md](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREPARATION_REPORT.md)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/VARIABLE_MAP.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/VARIABLE_MAP.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REACH2_MAP.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/REACH2_MAP.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/model.cnf](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/model.cnf)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/compile.py](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/compile.py)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/decode.py](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/decode.py)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/terminal.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/terminal.json)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.md](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.md)；[research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.json](../../research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/ANALYSIS_CONSTRUCTION.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** The declared oneE-S-cut/e-to-helper rule: all cyclic lift voltages and allowed port assignments, with e-a the sole newly E-incident edge and all other newold edges only S-A or A-A. The same crossE proof is independent of which E-S edge/sheet is cut. No arbitrary singlecuts or changed E-A/extraE rule are excluded.
+
+**仍未完成：** General42graphs or materiallydifferentE-A/secondE/oldincidence rules notexcluded. The fixedcut model isone concrete prepared subfamily; paperclosurecovers the declaredsingleES/e-helper rule, notallcutsurgery.
+
+**启发与重启依据：** Repairing onehelper root does not repair old-old phasecoverage. A soleexternal-to-helper attachment leaves crossE routes trapped in the liftedtriangle. This declaredrule stops withoutSAT; a later rule would need an actual additionalshortcrossE path, not newvoltages or solver time.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

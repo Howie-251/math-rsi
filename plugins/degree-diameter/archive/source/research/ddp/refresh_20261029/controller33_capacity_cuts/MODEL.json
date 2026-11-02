@@ -1,0 +1,50 @@
+{
+  "status": "CNF_READY_NOT_SOLVED",
+  "controller_order": 33,
+  "extra_edge_variables": 495,
+  "all_variables": 65890,
+  "clauses": 194694,
+  "condition": "adjacent or exact-three-walk for every distinct pair; fixed triangles handle self",
+  "fixed_extra_edges": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ]
+  ],
+  "solver_wall_limit": 60,
+  "total_CPU_budget": 90,
+  "canonicalization": "ordered first-discovery block parents, earliest touch at 3*block",
+  "inherited_baseline": {
+    "all_variables": 31845,
+    "clauses": 109466
+  },
+  "stages": [
+    {
+      "name": "nonmatching_triples",
+      "all_variables": 31845,
+      "clauses": 113756,
+      "added_clauses": 4290
+    },
+    {
+      "name": "exact_m3_and_block_matching",
+      "all_variables": 32560,
+      "clauses": 116616
+    },
+    {
+      "name": "weighted_pair_capacity_at_most3",
+      "all_variables": 65890,
+      "clauses": 194694
+    }
+  ],
+  "forbidden_nonmatching_triples": 4290,
+  "exact_m3_flags": 55,
+  "pair_conjunction_terms": 1980,
+  "weighted_occurrences_per_vertex": 330,
+  "weighted_bound_per_vertex": 3,
+  "solver_calls": 0,
+  "encoding_CPU_seconds": 0.28812074600000004
+}

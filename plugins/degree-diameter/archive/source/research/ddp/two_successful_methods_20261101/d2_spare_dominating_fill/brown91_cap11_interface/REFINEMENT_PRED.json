@@ -1,0 +1,11 @@
+{
+  "trigger": "The completed exact-collinear/optimistic-noncollinear resource DP excludes B96..100, while its B101 best scalar witness fails the valid cohort capacity cut.",
+  "new_decision_question": "Does any resource profile at h16/B101 satisfy even the sum of required helper-neighbor excess capacities?",
+  "necessary_cut": "Let d_i=11-s_i, e_i=max(0,s_i-6), delta_i=max(0,91-C_i-6*d_i). Every valid helper graph has sum_i delta_i<=sum_i e_i*d_i.",
+  "prediction": "Maximizing supply-minus-demand directly over the same87 options and source type counts may give a negative optimum and exclude107 outright. A nonnegative optimum remains only a relaxed profile and would need a concrete pin/H rule.",
+  "bounded_refinement": "Use the same integer DP recurrence and resources with one alternate additive objective. No helper graph, source graph, BFS or solver is generated.",
+  "CPU_already_used_compile_and_DP_seconds": 0.832202,
+  "stage_CPU_budget_seconds": 20,
+  "workers": 1,
+  "stop": "Record this single refinement and close with an exclusion or one concrete surviving profile; no repeated slack refinements."
+}

@@ -1,0 +1,42 @@
+✔ [1793/1794] Built DegreeDiameter.Moore64Structure (10s)
+✖ [1794/1794] Building DegreeDiameter.Moore64 (8.7s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Moore64.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/Moore64.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/Moore64.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/Moore64.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/Moore64.setup.json --json
+error: DegreeDiameter/Moore64.lean:27:4: Type mismatch: After simplification, term
+  hh
+ has type
+  onesMatrix * (defectMatrix G)ᵀ = onesMatrix
+but is expected to have type
+  onesMatrix * defectMatrix G = onesMatrix
+error: DegreeDiameter/Moore64.lean:57:72: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  1 * ?a
+in the target expression
+  8 • onesMatrix + 8 • onesMatrix + onesMatrix = 17 • onesMatrix
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hn : Fintype.card V = 64
+hreg : G.IsRegularOfDegree 8
+hBB : defectMatrix G * defectMatrix G = 1
+ht : triangleFree G
+hAB0 : (adjacencyMatrix G * defectMatrix G).trace = 0
+hBA : defectMatrix G * adjacencyMatrix G = adjacencyMatrix G * defectMatrix G
+hBJ : defectMatrix G * onesMatrix = onesMatrix
+hJT : onesMatrixᵀ = onesMatrix
+hJB : onesMatrix * defectMatrix G = onesMatrix
+hAJ : adjacencyMatrix G * onesMatrix = 8 • onesMatrix
+hrel : adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G = 7 • 1 + onesMatrix + defectMatrix G
+hBAB : defectMatrix G * (adjacencyMatrix G * defectMatrix G) = adjacencyMatrix G
+D₀ : Matrix V V ℤ := adjacencyMatrix G * (1 + defectMatrix G) + 1
+E₀ : Matrix V V ℤ := 6 • (1 - defectMatrix G)
+hsq : D₀ ^ 2 = 17 • 1 + 16 • defectMatrix G + 4 • onesMatrix
+hsq' : D₀ ^ 2 = E₀ + 4 • onesMatrix + 11 • (1 + 2 • defectMatrix G)
+hminus : (1 + defectMatrix G) * (1 - defectMatrix G) = 0
+hDE₀ : D₀ * E₀ = E₀
+⊢ 8 • onesMatrix + 8 • onesMatrix + onesMatrix = 17 • onesMatrix
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.Moore64
+error: build failed

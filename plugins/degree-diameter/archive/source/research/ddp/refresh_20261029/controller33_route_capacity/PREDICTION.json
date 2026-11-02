@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BEFORE_SINGLE_SMALL_STATISTIC",
+  "scope": "Only saved successful C30 and saved failing C33 best; no new controller, optimization, BFS, SAT, or C11 enumeration.",
+  "inputs": {
+    "C30": "research/ddp/breadth_20261027_wave4/mizuno_d3_source/construction.json: controller",
+    "C33_best": "research/ddp/refresh_20261029/controller33_canonical_labeling/RELABELED33.edges",
+    "C30_designated_triangles": "research/ddp/breadth_20261027_wave4/mizuno_d3_source/controller_structure.json: triangles"
+  },
+  "paper_necessary_condition": "A simple4regular33-vertex controller with a designated triangle factor and a length3 route for every distinct nonadjacent pair has t(v)+c4(v)<=4. Here t counts all triangles and c4 all simple4cycles, including chorded cycles.",
+  "paper_quotient_consequences": "Each designated-block pair has at most3 extra edges; three must form a perfect matching. Pairs of multiplicity3 themselves form a matching on the11 blocks. Every two extra edges between the same blocks determine one distinct four-cycle, whether disjoint or sharing one endpoint.",
+  "prediction": "The saved C33 best violates at least one of the local t+c4<=4 or derived quotient restrictions, so the new necessary clauses directly prune this stored failure. If all pass, retain it as an explicit counterexample to sufficiency and do not expand the sample.",
+  "control": "The successful C30 must satisfy its own necessary bound t+c4<=5; C33's stronger bound need not hold there. Independently counted NB3 endpoint totals should match36-2t-2c4 at every root in both saved graphs.",
+  "outputs": "Counts and explicit violating vertices/block-pairs only, plus proof and source-code review of whether these restrictions were explicitly encoded.",
+  "workers": 1,
+  "CPU_budget_seconds": 2,
+  "stop": "Exactly one statistic run on these two saved controllers. No new templates, graph modification, seed, optimization, solver, or C11 data generation.",
+  "before_counting_revision": {
+    "source_parse_correction": "Initial invocation stopped while assuming triangle factor equals port0/1 cycles, before any short-cycle/NB statistic or C33 read. Correct source partition is the already saved10 triangles in controller_structure.json.",
+    "additional_paper_checks_before_statistics": "Also record triple-multiplicity block matching and root proposed weighted pair lower bound L(v)<=3, its exact counted portion and its gap to t+c4-1. No sample expansion."
+  }
+}

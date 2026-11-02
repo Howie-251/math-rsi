@@ -1,0 +1,152 @@
+def DegreeDiameter.tripleExclusiveNeighbors.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → Finset V :=
+fun {V} [Fintype V] G u v => G.neighborFinset u \ DegreeDiameter.commonNeighborVertices G u v
+@DegreeDiameter.mem_tripleExclusiveNeighbors : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v x : V),
+  x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v ↔ G.Adj u x ∧ ¬G.Adj v x
+@DegreeDiameter.commonNeighborVertices_comm : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v : V),
+  DegreeDiameter.commonNeighborVertices G u v = DegreeDiameter.commonNeighborVertices G v u
+@DegreeDiameter.triple_exclusive_disjoint : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v : V),
+  Disjoint (DegreeDiameter.tripleExclusiveNeighbors G u v) (DegreeDiameter.tripleExclusiveNeighbors G v u)
+@DegreeDiameter.triple_exclusive_common_disjoint : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v : V),
+  Disjoint (DegreeDiameter.tripleExclusiveNeighbors G u v) (DegreeDiameter.commonNeighborVertices G u v)
+@DegreeDiameter.n62_triple_exclusive_endpoints : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            u ∉ DegreeDiameter.tripleExclusiveNeighbors G u v ∧ v ∉ DegreeDiameter.tripleExclusiveNeighbors G u v
+@DegreeDiameter.n62_triple_exclusive_card : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V}, DegreeDiameter.defectMatrix G u v = 3 → (DegreeDiameter.tripleExclusiveNeighbors G u v).card = 4
+@DegreeDiameter.n62_triple_exclusive_independent : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x y : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v →
+              y ∈ DegreeDiameter.tripleExclusiveNeighbors G u v → ¬G.Adj x y
+@DegreeDiameter.n62_triple_exclusive_common_nonadj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x y : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v →
+              y ∈ DegreeDiameter.commonNeighborVertices G u v → ¬G.Adj x y
+@DegreeDiameter.n62_triple_exclusive_opposite_common_card : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v → (DegreeDiameter.commonNeighborVertices G x v).card = 1
+@DegreeDiameter.n62_triple_cross_neighbors_eq : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v →
+              {y ∈ G.neighborFinset x | y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u} =
+                DegreeDiameter.commonNeighborVertices G x v
+@DegreeDiameter.n62_triple_cross_degree_one : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v →
+              {y ∈ G.neighborFinset x | y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u}.card = 1
+@DegreeDiameter.n62_triple_exclusive_unique_neighbor : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v →
+              ∃! y, y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u ∧ G.Adj x y
+@DegreeDiameter.tripleExclusiveMate : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      DegreeDiameter.degreeAtMostEight G →
+        DegreeDiameter.diameterAtMostTwo G →
+          Fintype.card V = 62 →
+            {u v : V} →
+              DegreeDiameter.defectMatrix G u v = 3 →
+                { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v } →
+                  { y // y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u }
+@DegreeDiameter.tripleExclusiveMate_adj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3)
+  (x : { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v }),
+  G.Adj ↑x ↑(DegreeDiameter.tripleExclusiveMate G hdeg hdiam hcard hb x)
+@DegreeDiameter.tripleMatchingEquiv : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      DegreeDiameter.degreeAtMostEight G →
+        DegreeDiameter.diameterAtMostTwo G →
+          Fintype.card V = 62 →
+            {u v : V} →
+              DegreeDiameter.defectMatrix G u v = 3 →
+                { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v } ≃
+                  { y // y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u }
+@DegreeDiameter.tripleMatchingEquiv_adj_iff : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3)
+  (x : { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v })
+  (y : { y // y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u }),
+  G.Adj ↑x ↑y ↔ (DegreeDiameter.tripleMatchingEquiv G hdeg hdiam hcard hb) x = y
+@DegreeDiameter.n62_triple_exclusive_six_remaining : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3)
+  (x : { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v }),
+  (G.neighborFinset ↑x \ {u, ↑(DegreeDiameter.tripleExclusiveMate G hdeg hdiam hcard hb x)}).card = 6
+'DegreeDiameter.mem_tripleExclusiveNeighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.commonNeighborVertices_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.triple_exclusive_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.triple_exclusive_common_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_common_nonadj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_opposite_common_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_cross_neighbors_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_cross_degree_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_unique_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleExclusiveMate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleExclusiveMate_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleMatchingEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleMatchingEquiv_adj_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_six_remaining' depends on axioms: [propext, Classical.choice, Quot.sound]
+ReviewN62TripleMatching.lean:73:39: error: Application type mismatch: The argument
+  x
+has type
+  V
+but is expected to have type
+  { x // x ∈ tripleExclusiveNeighbors G u v }
+in the application
+  e x
+@n62_triple_exclusive_remaining_outside : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : degreeAtMostEight G) (hdiam : diameterAtMostTwo G) (hcard : Fintype.card V = 62) {u v z : V}
+  (hb : defectMatrix G u v = 3) (x : { x // x ∈ tripleExclusiveNeighbors G u v }),
+  z ∈ G.neighborFinset ↑x \ {u, ↑(tripleExclusiveMate G hdeg hdiam hcard hb x)} →
+    z ≠ u ∧
+      z ≠ v ∧ z ∉ commonNeighborVertices G u v ∧ z ∉ tripleExclusiveNeighbors G u v ∧ z ∉ tripleExclusiveNeighbors G v u
+@n62_triple_exclusive_exterior_card : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V},
+          defectMatrix G u v = 3 →
+            ∀ (x : { x // x ∈ tripleExclusiveNeighbors G u v }),
+              {z ∈ G.neighborFinset ↑x |
+                    z ≠ u ∧
+                      z ≠ v ∧
+                        z ∉ commonNeighborVertices G u v ∧
+                          z ∉ tripleExclusiveNeighbors G u v ∧ z ∉ tripleExclusiveNeighbors G v u}.card =
+                6
+'DegreeDiameter.n62_triple_exclusive_remaining_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_exterior_card' depends on axioms: [propext, Classical.choice, Quot.sound]

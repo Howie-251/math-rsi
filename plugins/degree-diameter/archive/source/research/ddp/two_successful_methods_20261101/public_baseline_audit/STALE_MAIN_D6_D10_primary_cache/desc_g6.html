@@ -1,0 +1,630 @@
+<HTML>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<HEAD>
+   <TITLE> Largest Known (Degree, Diameter)-Graphs (Description)</TITLE>
+</HEAD>
+<BODY>
+<HR SIZE=6></P>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<H2>Largest Known (Degree, Diameter)-Graphs</H2>
+<h3>Diameter 6 </h3>
+Last modification: October 15, 2026.
+ <address> http://www-mat.upc.es/grup_de_grafs/desc_g.html </address>
+ <DT><B>row adjacency list </B> format: the first vertex of each row is adjacent to all the other vertices in that row.</DT>
+ <DT><B>implicit adjacency list </B> format:  each row corresponds to a vertex (row 1, vertex 0;  row 2, vertex 1; and so on) and contains all vertices adjacent to it.</DT>
+ <DT><B>adjacency list NX</B> NetworkX format.  <a href="https://networkx.org/documentation/stable/reference/readwrite/adjlist.html" target="_blank"> NetworkX format. </a></DT>
+  <DT><B>semidirect product</B> Follows the notation of the original contributions from Dinneen and Hafner <a href="https://arxiv.org/pdf/math/9504214" target="_blank">  (arXiv preprint) </a> Networks, 24 (1994) 359-367:   Z<sub>m</sub> &#x22C9;<sub>a</sub> Z<sub>n</sub>,
+of order m&middot;n.  Group operation  defined as [x,y] &times; [u,v] = [(x+u) mod m, (y&middot;a<sup>u</sup>+v) mod n]].
+</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 3    DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=36></A>
+<!--  <iMG ALIGN=top SRC="gif/130.gif"> <B>GFS</B> -->
+<DT> <b>Exoo_132</b>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>3</B>, Diameter = <B>6</B>; Order =<B>132</B>; Moore bound=190;
+</p>
+<DT> Communicated by G. Exoo (May 22, 1998). <A href="https://isu.indstate.edu/~gexoo/DD/index.html" target="_blank"> G.E. data </A>  Ord.: 132 / Size: 198 / 3-reg.  / Diam.: 6  / Girth: 6 / Avg.dist: 4.72149 / Alg.conn. 0.437172  / Domin. number: 35  / Aut.group.ord.: 2 / cycles 3-14 :  (0, 0, 0, 1, 2, 0, 4, 12, 16, 676, 396, 676)
+<DT> Details of this construction at: Geoffrey Exoo. A family of graphs and the degree/diameter problem.&nbsp; <A href="https://doi.org/10.1002/jgt.1007" target="_blank">   <I>J. Graph Theory</I><B> 37</B>  (2001), 118-124.</A> </DT>
+<DT> Download the <a href="adjacencies/adjD6/Exoo_132.txt" target="_blank"> implicit adjacency list </a>  of the graph.
+<DT> Download the <a href="adjacencies/adjD6/Exoo_132_NXadjlist.txt" target="_blank"> NX adjacency list </a>  of the graph.  
+ <dt> --------------------
+<DT> Other <b>non-isomorphic</b> instances, several with a <b>lower average distance</b>, larger girth and automorphism groups, found by Francesc Comellas (2025). All graphs have order 132, size 198 and are 3-regular.
+ <DT> ** Girth: 5 / Avg.dist: 4.72415 / Alg.conn. 0.415114 /  Dom.num.: 36 / Aut.group.ord.: 4 / cycles 3-14 :   (0, 0, 3, 0, 0, 0, 0, 0, 24, 708, 348, 726).  <A href="adjacencies/adjD6/132_G1_adjlist.txt" target="_blank"> G1 132 adjlist NX </A></DT>   
+<DT> ** Girth: 5 / Avg.dist: 4.72276 / Alg.conn. 0.419280 /  Dom.num.: 36 / Aut.group.ord.: 4 / cycles 3-14 :   (0, 0, 2, 0, 1, 0, 2, 4, 20, 698, 364, 710).  <A href="adjacencies/adjD6/132_G2_adjlist.txt" target="_blank"> G2 132 adjlist NX </A></DT>  
+<DT> ** Girth: 5 / Avg.dist:  4.72137 / Alg.conn. 0.422815 /  Dom.num.: 35 / Aut.group.ord.: 2 / cycles 3-14 :  (0,  0, 1, 0, 2, 0, 4, 8, 16, 688, 380, 694).  <A href="adjacencies/adjD6/132_G3_adjlist.txt" target="_blank"> G3 132 adjlist NX </A></DT>  
+<DT> ** Girth: 7 / Avg.dist: 4.71536 / Alg.conn. 0.444035 /  Dom.num.: 36 / Aut.group.ord.: 4 / cycles 3-14 :  (0,  0,  0,  0, 3, 0, 6, 4, 20, 706, 356, 706).  <A href="adjacencies/adjD6/132_G4_adjlist.txt" target="_blank"> G4 132 adjlist NX </A></DT>  
+<DT> ** Girth: 7 / Avg.dist: 4.71999 / Alg.conn. 0.444035 / Dom.num.: 35 / Aut.group.ord.: 4 /  cycles 3-14 :  (0,  0,  0, 0, 3,  0, 6, 12, 12, 678, 396,  678).  <A href="adjacencies/adjD6/132_G5_adjlist.txt" target="_blank"> G5 132 adjlist NX </A></DT> 
+<DT> ** Girth: 7  / Avg.dist: 4.71999 / Alg.conn. 0.444035  / Dom.num.: 35 / Aut.group.ord.: 12 / cycles 3-14 :  (0,  0,  0, 0, 3,  0, 6, 12, 12, 678, 396,  678).  <A href="adjacencies/adjD6/132_G6_adjlist.txt" target="_blank"> G6 132 adjlist NX </A></DT> 
+<DT>** Girth: 7  / Avg.dist: 4.71999 / Alg.conn. 0.444035 /  Dom.num.: 35 / Aut.group.ord.: 6 / cycles 3-14 :  (0,  0,  0, 0, 3,  0, 6, 12, 12, 678, 396,  678).  <A href="adjacencies/adjD6/132_G7_adjlist.txt" target="_blank"> G7 132 adjlist NX </A></DT>  
+<DT>** Girth: 7 / Avg.dist: 4.71443 / Alg.conn. 0.423029 /  Dom.num.: 36 / Aut.group.ord.: 4 / cycles 3-14 :  (0,  0,  0, 0, 1,  0, 10, 10, 16 , 697, 360, 710 ).  <A href="adjacencies/adjD6/132_G8_adjlist.txt" target="_blank"> G8 132 adjlist NX </A></DT>  
+<DT>**  Girth: 5 / Avg.dist: 4.72415 / Alg.conn.0.419280 /  Dom.num.: 36 / Aut.group.ord.: 12 / cycles 3-14 :  (0, 0, 3, 0, 0, 0, 0, 0, 24, 708, 348, 726 ).  <A href="adjacencies/adjD6/132_G9_adjlist.txt" target="_blank"> G9 132 adjlist NX </A></DT> 
+<DT>  </DT>
+
+<DT>This <a href="adjacencies/adjD6/132_Exoo-more_SageMath.txt" target="_blank"> SageMath script</a>, computes several of their properties.  This is the <a href="https://sagecell.sagemath.org/?q=dxtpcl" target="_blank"> online version </a>.</DT>
+
+<DT>  </DT>
+ <dt> --------------------
+<DT> 13 further <b>non-isomorphic</b>  (3,6)-graphs of order 132  were found by Michel de Messieres (michel@demessieres.com, October  2026). All graphs have order 132, size 198 and are 3-regular.
+
+<DT>**  Girth: 8 / Avg.dist: 4.71316 / Alg.conn.: 0.423412 / Dom.num.: 35 /  Aut.group.ord.: 2 / cycles 3-14 : [0, 0, 0, 0, 0, 1, 10, 10, 34, 643, 420, 668]<a href="adjacencies/adjD6/132_X132-1_adjlist.txt">X132-1 132 adjlist NX</a></DT>
+<DT>**  Girth: 7 / Avg.dist: 4.71825 / Alg.conn.: 0.426230 / Dom.num.: 35 /  Aut.group.ord.: 2 /  cycles 3-14  [0, 0, 0, 0, 3, 0, 6, 9, 66, 550, 484, 616]  <a href="adjacencies/adjD6/132_X132-2_adjlist.txt">X132-2 132 adjlist NX</a></DT>
+<DT>**  Girth: 7 / Avg.dist: 4.71825   / Alg.conn.: 0.407437 / Dom.num.: 35 /  Aut.group.ord.: 6/  cycles 3-14   [0, 0, 0, 0, 3, 0, 6, 9, 90, 492, 516, 600] <a href="adjacencies/adjD6/132_X132-3_adjlist.txt">X132-3 132 adjlist NX</a></DT>
+<DT>**   Girth: 7 / Avg.dist: 4.71883 / Alg.conn.: 0.443046 / Dom.num.: 35 /  Aut.group.ord.: 2 /   cycles 3-14   [0, 0, 0, 0, 3, 0, 6, 10, 40, 612, 444, 642] <a href="adjacencies/adjD6/132_X132-4_adjlist.txt">X132-4 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.71964 / Alg.conn.: 0.422368 / Dom.num.: 35 /  Aut.group.ord.: 1 /  cycles 3-14    [0, 0, 1, 0, 2, 0, 4, 5, 64, 568, 476, 622] <a href="adjacencies/adjD6/132_X132-5_adjlist.txt">X132-5 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.71964 / Alg.conn.: 0.419507 / Dom.num.: 35 /  Aut.group.ord.: 1 /  cycles 3-14  [0, 0, 1, 0, 2, 0, 4, 5, 68, 560, 477, 627] <a href="adjacencies/adjD6/132_X132-6_adjlist.txt">X132-6 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.71964 / Alg.conn.: 0.422355 / Dom.num.: 36 /  Aut.group.ord.: 1 /  cycles 3-14   [0, 0, 1, 0, 2, 0, 4, 5, 67, 561, 479, 625] <a href="adjacencies/adjD6/132_X132-7_adjlist.txt">X132-7 132 adjlist NX</a></DT>
+<DT>**   Girth: 5 / Avg.dist: 4.72022 / Alg.conn.: 0.422885 / Dom.num.: 35 /  Aut.group.ord.: 1 /  cycles 3-14  [0, 0, 1, 0, 2, 0, 4, 6, 42, 625, 430, 656] <a href="adjacencies/adjD6/132_X132-8_adjlist.txt">X132-8 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.72022 / Alg.conn.: 0.422876 / Dom.num.: 36 /  Aut.group.ord.: 1 /  cycles 3-14  [0, 0, 1, 0, 2, 0, 4, 6, 43, 624, 429, 655] <a href="adjacencies/adjD6/132_X132-9_adjlist.txt">X132-9 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.72022 / Alg.conn.: 0.418608 / Dom.num.: 35 /   Aut.group.ord.: 1 /  cycles 3-14   [0, 0, 1, 0, 2, 0, 4, 6, 69, 557, 474, 626] <a href="adjacencies/adjD6/132_X132-10_adjlist.txt">X132-10 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.72080  / Alg.conn.: 0.419435 / Dom.num.: 35 / Aut.group.ord.: 1 /  cycles 3-14  [0, 0, 1, 0, 2, 0, 4, 7, 44, 617, 435, 649] <a href="adjacencies/adjD6/132_X132-11_adjlist.txt">X132-11 132 adjlist NX</a></DT>
+<DT>**   Girth: 5 / Avg.dist: 4.72080  / Alg.conn.: 0.422334 / Dom.num.: 35 / Aut.group.ord.: 1 /  cycles 3-14   [0, 0, 1, 0, 2, 0, 4, 7, 42, 619, 438, 648] <a href="adjacencies/adjD6/132_X132-12_adjlist.txt">X132-12 132 adjlist NX</a></DT>
+<DT>**  Girth: 5 / Avg.dist: 4.72149 / Alg.conn.: 0.419280 / Dom.num.: 36 /  Aut.group.ord.: 2 /  cycles 3-14   [0, 0, 2, 0, 0, 1, 2, 4, 38, 644, 424, 666]<a href="adjacencies/adjD6/132_X132-13_adjlist.txt">X132-13 132 adjlist NX</a></DT>
+
+<BR>
+
+<DT>This <a href="adjacencies/adjD6/132_Exoo-yetmore_SageMath.txt" target="_blank"> SageMath script</a>, computes several of their properties.  This is the <a href="https://sagecell.sagemath.org/?q=ksovyd" target="_blank"> online version </a>.</DT>
+
+<BR>
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 4    DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=46></A>
+<DT> <b>H<sub>3</sub>++</b>  
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>4</B>, Diameter = <B>6</B>; Order = <B>760</B>; Moore bound=1457;   
+</p>
+
+<DT> Obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who 
+set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results.
+<DT> 
+The graph is obtained from the incidence graph of the generalized hexagon
+H(3), which has 364 points, 364 lines, degree 4, girth 12 and diameter 6.
+A set of 32 point-line incidences (flags) is selected, and each corresponding
+edge is subdivided by inserting a new vertex. These 32 vertices are then
+joined by a 2-regular graph consisting of three cycles of lengths 8, 8 and 16,
+preserving degree 4 and producing a graph of order 760. The selected flags
+form two orbits of length 16 under a Sylow 2-subgroup of order 128 contained
+in the centraliser of an involution of  Aut(H(3)) = G<sub>2</sub>(3):2.
+The additional edges connect vertices only within the same orbit and were
+determined using exact-cost simulated annealing. The vertices are labelled
+0?363 for points, 364?727 for lines and 728?759 for the inserted vertices.
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download the edge list and more information detailing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/deg4-dia6-n760.edges.txt" target="_blank">  local edge list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD6/760_Bhakar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=fyyzsw
+" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=753
+<DT>H<sub>3</sub>++  Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 14, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Incidence graph (Levi graph) of the split Cayley hexagon H(3), with 728 vertices, 4-regular, diameter 6 -- ,  with 25 of its 1,456  edges subdivided, and a 2-factor placed on the 25 subdivision vertices to bring them back to degree 4. Nothing else is altered: the other 1,431  edges are kept, no edge is added between the original vertices, and each subdivision vertex is joined to the two ends of the edge it subdivides. The 2-factor is not a single cycle -- it is the disjoint union of a 12-cycle and a 13-cycle. In the attached adjacency list vertices 0..727 are the hexagon, in the same order as the attached base graph, and 728..752 are the subdivision vertices. This is the construction family of F. Comellas (H(3) with deleted incidences and new vertices joined by an internal 2-factor, 746, 2 October 2026) as developed by N. Bhakar (21 subdivided incidences with a Hamiltonian cycle on the new vertices, 749, 9 October 2026); what is new here is 25 subdivisions together with a 2-factor that is not a single cycle.
+<DT> Download the <a href="adjacencies/adjD6/deg4_diam6_n753_adjlist.txt" target="_blank">  local raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD6/753_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=kcbvvi" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=749
+<DT> Obtained by Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 9, 2026). Graph found from the former H(3) construction with 21 subdivided incidences and a Hamiltonian cycle on the new vertices. The improvement came from an exact fast cost for the broken pairs, using the unique geodesics of the hexagon, which made the annealing over the edge set and the cycle far more thorough. The searches were executed with Claude Fable assisting with implementation and the analysis and summarization of the results..
+<DT> Download the <a href="adjacencies/adjD6/749_4_6.edges" target="_blank"> local edge list </a>  of the graph.
+<dt> This <a href="adjacencies/adjD6/749_bakhar_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs  including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=rosfok" target="_blank"> online version </a></dt>
+
+<BR>
+<DT>Former result, Order = 746
+<DT> Obtained by Francesc Comellas (October 2, 2026), with the help of OpenAI GPT-5.6 Sol. 
+From the generalized hexagon $H_3$  (with order 728) , incidence edges of the generalized hexagon are deleted to free degree, and the resulting capacity is used to attach new vertices, each to one point and one line, while an internal $2$-factor supplies their remaining degree.
+<DT> Download the <a href="adjacencies/adjD6/deg4D6_746_adjlist.txt" target="_blank"> raw adjacency list of this graph</a>.
+This <a href="adjacencies/adjD6/746_comellas_SageMath.txt" target="_blank"> SageMath script </a>  computes several properties of H<sub>3</sub>(K<sub>3</sub>)+ .  This is the <a href="https://sagecell.sagemath.org/?q=vrskqd" target="_blank"> online version </a>.</DT>
+
+
+
+<BR>
+<DT>Former result, Order = 745
+<DT> H<sub>3</sub>(K<sub>3</sub>)+ Jitendra Prajapati  (Indian Institute of Technology Madras, 23f1001521@ds.study.iitm.ac.in; August 9, 2026)  obtained this graph  with AI coding tools from   H<sub>3</sub>(K<sub>3</sub>)   -- see below-- by five rounds of local modification (degree-preserving vertex insertions plus 2-switches), so all the intermediate graphs are also (4,6)-graphs. The exact edge changes from the original graph 740CG_adjlist.txt  can be found at:
+<A HREF= "https://github.com/infinityscroll/degree-diameter-n46" target="_blank">https://github.com/infinityscroll/degree-diameter-n46.</A></DT>
+<DT> Download the <a href="adjacencies/adjD6/n46_745_NXadjlist.txt" target="_blank"> NX adjacency list of H3(K3)+</a>.
+This <a href="adjacencies/adjD6/n46_745_SageMath.txt" target="_blank"> SageMath script </a>  computes several properties of H<sub>3</sub>(K<sub>3</sub>)+ .  This is the <a href="https://sagecell.sagemath.org/?q=fwticq" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT>Former result, Order = 740 ;  <b>H<sub>3</sub>(K<sub>3</sub>)</b> </DT>
+<DT>  Graph obtained from the generalized hexagon <i>H<sub>3</sub></i> by replacement
+of some of its vertices (see figure) by complete graphs <i>K<sub>3</sub></i>
+<dt><iMG ALIGN=top SRC="gif/740.png" height="150" >
+
+<DT>F. Comellas and J. G&oacute;mez,
+<A HREF="https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/CoGo95-7Kal.pdf" target="_blank">
+New large graphs with given degree and diameter.</A>,   
+<DT><I> Graph Theory, Combinatorics and Algorithms, vol 1</sub></i>,  Yousef Alavi and Allen Schwenk (Eds.), John Wiley  & Sons, Inc.; 
+New York (1995) pp. 221-233.  ISBN 0-471-30437-9.  (Proc. of the Seventh Quadrennial International Conference on the Theory and Applications of Graphs, Kalamazoo, MI, USA, June 1992.)
+ <DT> Download the <a href="adjacencies/adjD6/740CG_adjlist.txt" target="_blank"> NX adjacency list of H3(K3)</a> or/and the <a href="adjacencies/adjD6/H3_adjlist.txt" target="_blank"> NX adjacency list of H3 </a> (the generalized hexagon H3, base of the former graph)</a>
+
+<DT>This <a href="adjacencies/adjD6/CG740_SageMath.txt" target="_blank"> SageMath script </a>, constructs H3(K3) from H3  and computes several of their properties.  This is the <a href="https://sagecell.sagemath.org/?q=eilbsb" target="_blank"> online version </a>.
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 5    DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=56></A>
+<b>H<sub>4</sub>+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+Degree= <B>5</B>, Diameter = <B>6</B>; Order =<B>2836</B>; Moore bound=6826;   
+</p>
+
+<DT> Obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who 
+set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results.
+<DT> 
+ The graph is constructed from the incidence graph of the generalized hexagon
+H(4), which has 1365 points, 1365 lines, degree 5, girth 12 and diameter 6.
+A set of 106 point-line incidences (flags) is selected, and each corresponding
+edge is subdivided by inserting a new vertex. These 106 vertices are then
+joined according to a cubic graph F, preserving degree 5 and producing
+a graph of order 2836. The graph F, of diameter 6 and with 881 vertex pairs
+at distance 6, was first obtained using simulated annealing with edge
+switches to minimise the number of pairs at distance 6 or more. With F fixed,
+the 106 flags were then selected using a min-conflicts relocation algorithm.
+The vertices are labelled 0?1364 for points, 1365?2729 for lines and
+2730?2835 for the inserted vertices. 
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download the edge list and more information detailing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/deg5-dia6-n2836.edges.txt" target="_blank">  local edge list </a>  of the graph. </DT>
+<DT>This <a href="adjacencies/adjD6/2836_Bhakar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=rltxkn" target="_blank"> online version </a>.</DT> 
+
+
+<BR>
+<DT> Former result, order=2820
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Incidence graph of the split Cayley generalized hexagon H(4) (2730 vertices, 5-regular, diameter 6). Hermitian spread of 65 pairwise opposite lines; subdivided: 2 edges on 45 spread lines (90 new vertices); on every line the points whose cyclic label lies in a fixed difference cover of  Z<sub>5</sub>  stay untouched. New vertices at one spread line form a clique; the remaining slots carry external pattern edges. The pattern graph is invariant under a cyclic subgroup of order 5 of the regular group SL(2,4) of the good spread lines; 9 of the 12 line orbits carry 2 subdivided edges per line.
+<DT> Download the <a href="adjacencies/adjD6/deg5_diam6_n2820_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD6/2820_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=2794
+<DT>H<sub>4</sub>(K<sub>3</sub>)++  Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained from the generalized hexagon <i>H<sub>4</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>3</sub></i>.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d5_k6_n2794.edgest" target="_blank"> local edge list </a>  of the graph.</DT>  
+  <!-- <dt> This <a href="adjacencies/adjD4/2794_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q= " target="_blank"> online version </a>.</dt> -->
+
+<BR>
+<DT>Former result, Order = 2783
+<DT>H<sub>4</sub>(K<sub>3</sub>)++ Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA;  September 4, 2026).  Five rounds of removal/addition of vertices to the graph with 2778 vertices from Petrit Isufi. Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.   Download the <a href="adjacencies/adjD6/deg5_diam6_n2783_adjlist.txt" target="_blank"> raw adjacency list </a>.</DT>
+<DT> This <a href="adjacencies/adjD6/27xx_d5D6_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=dtdssb" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT>Former result, Order = 2782
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA;  August 31,2026).  Four rounds of removal/addition of vertices to the graph below with 2778 vertices from Petrit Isufi.</DT>
+
+<BR>
+<DT>Former result, Order = 2778
+<DT>Graph constructed with the help of AI tools by Petrit Isufi (isufi.petrit@proton.me; Wuppertal, Germany. August 27, 2026).  </DT>
+<DT> This graph comes from the construction below [PiGoMiPe09]:  the split Cayley hexagon H<sub>q</sub> with the K<sub>q-1</sub> block replacement. After reimplementing it as a Python module that reproduces the published value  (5,6) = 2772  exactly,  a search over the free parameters of this construction is performed: the labels assigned to each block and the cyclic matching  phases between block pairs. Giving each block one label more than the
+published version, and letting a search pick the phases, yields the new result of  2778.
+The final  graph has  2778 nodes and 6945 edges, is 5-regular with  avg. dist.: 5.194755 </DT>
+<DT> Download the <a href="adjacencies/adjD6/graph_n2778_d5_k6.txt" target="_blank"> edge list </a>  of the graph.</DT>
+<DT> This <a href="adjacencies/adjD6/2778_d5D6_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graph. This is the <a href="https://sagecell.sagemath.org/?q=xwgtfb" target="_blank"> online version </a>.</DT>
+<BR>
+
+<DT> Former result, order 2772
+<DT>  Graph obtained from the generalized hexagon <i>H<sub>4</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>3</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+  G. Pineda-Villavicencio, J. G&oacute;mez, M. Miller, H. P&eacute;rez-Ros&eacute;s.  New largest known graphs of diameter 6. <A HREF= "https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20269" target="_blank"> Networks 53 (2009) 315-328.</A>
+</DT>
+
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 6    DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=66></A>
+<b>H<sub>5</sub>+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>6</B>, Diameter = <B>6</B>; Order =<B>8802</B>; Moore bound=23437;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Incidence graph of the split Cayley generalized hexagon H(5) (7812 vertices, 6-regular, diameter 6). Hermitian spread of 126 pairwise opposite lines; subdivided: 3 edges on 30 spread lines, 2 edges on 90 spread lines (270 new vertices); on every line the points whose cyclic label lies in a fixed difference cover of  Z<sub>6</sub>  stay untouched. New vertices at one spread line form a clique; the remaining slots carry external pattern edges. The pattern graph is invariant under a subgroup of order 10 of the regular group SL(2,5) of the good spread lines; 3 line orbits carry 3 subdivided edges per line, the other 9 carry 2.
+<DT> Download the <a href="adjacencies/adjD6/deg6_diam6_n8082_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD6/8802_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=hjfwqy" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=2794
+<DT> H<sub>5</sub>(K<sub>4</sub>)++ Rithwik Gupta (rithwikca2020@gmail.com );   September 8, 2026). Graph  found through AI-assisted exhaustive computational searches (details to come).
+<DT>Download the <a href="adjacencies/adjD6/N6_6_7984.edges" target="_blank"> local edge list </a>.</DT>
+<DT> This <a href="adjacencies/adjD6/7984_d6D6_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=goyqrh" target="_blank"> online version </a>.</DT>
+
+
+ <BR>
+<DT>Former result, Order = 7938
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA;   September 4, 2026).
+Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.   
+<DT> One new vertex is added to the 7937-vertex graph H5(K4)++ (below): three of its edges are deleted and the new vertex is joined to their six endpoints. Relative to P. Isufi's 7,932-vertex graph, the whole chain deletes 15 edges and adds six vertices, joined to the 30 freed endpoints and to each other by three edges; the graph is 6-regular. 
+<DT>Download the <a href="adjacencies/adjD6/deg6_diam6_n7938_adjlist.txt" target="_blank"> raw adjacency list </a>.</DT>
+<DT> This <a href="adjacencies/adjD6/7938_d6D6_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=isijac" target="_blank"> online version </a>.</DT>
+
+ <BR>
+<DT>Former result, Order = 7937
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA;  August 31,2026).  More removal/addition of vertices to the graph below. 
+<DT> Download the <a href="adjacencies/adjD6/deg6_diam6_n7937_adjlist.txt" target="_blank"> raw adjacency list </a>.</DT>
+<DT> This <a href="adjacencies/adjD6/7937-7934-7932_d6D6_SageMath.txt" target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=myruxw" target="_blank"> online version </a>.</DT>
+
+ <BR>
+<DT>Former result, Order = 7934
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA;  August 31,2026).  Four rounds of removal/addition of vertices to the graph below with 7932 vertices from Petrit Isufi.</DT>
+
+<BR>
+<DT>Former result, Order = 7932
+<DT>Graph constructed with the help of AI tools by Petrit Isufi (isufi.petrit@proton.me; Wuppertal, Germany. August 27, 2026).  </DT>
+<DT> This graph comes from the construction below [PiGoMiPe09]:  the split Cayley hexagon H<sub>q</sub> with the K<sub>q-1</sub> block replacement. After reimplementing it as a Python module that reproduces the published value  (6,6) = 7917  exactly,  a search over the free parameters of this construction is performed: the labels assigned to each block and the cyclic matching  phases between block pairs. Giving each block one label more than the
+published version, and letting a search pick the phases, yields the new result of  7932.
+The final  graph has  7932 nodes and 23796 edges, is 6-regular with  avg. dist.: 5.272137 </DT>
+<DT> Download the <a href="adjacencies/adjD6/graph_n7932_d6_k6.txt" target="_blank"> edge list </a>  of the graph.</DT>
+<BR>
+
+<DT> Former result, order 7917
+<DT>  Graph obtained from the generalized hexagon <i>H<sub>5</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>4</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+G. Pineda-Villavicencio, J. G&oacute;mez, M. Miller, H. P&eacute;rez-Ros&eacute;s.  New largest known graphs of diameter 6. <A HREF= "https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20269" target="_blank"> Networks 53 (2009) 315-328.</A>
+</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 7    DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=76></A>
+<B>Bhakar_12654</B>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree= <B>7</B>, Diameter =<B>6</B>; Order =12654; Moore bound=65318.</DT>
+</p>
+
+<DT> Obtained by  Nishant Bhakar (nishant.bhakar@gmail.com, Redmond, WA, USA; October 15, 2026), who 
+set the research,  selected the topics to pursue, and reviewed the results. Claude Fable assisted with the computational searches, code development, analysis, and summarization of the results.</DT>
+<DT> 
+This <b> Cayley graph </b> is constructed over the semidirect product
+Z<sub>18</sub> &#x22C9;<sub>85</sub>
+Z<sub>703</sub>  The graph has three inverse-pair generators
+(17,397), (13,486), and (10,188), corresponding to the integers 12348, 9625, and 7218,
+respectively, together with the involution (9,0), corresponding to the integer 6327.
+</DT>
+<DT>In  <a href="https://github.com/f4t4nt/degree-diameter-graphs" target="_blank"> this link </a> you can download the edge list and more information detailing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/deg7-dia6-n12654.edges.txt" target="_blank">  local raw adjacency list </a>  of the graph.</DT>
+<DT>This <a href="adjacencies/adjD6/12654_Bhakar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=decfwz" target="_blank"> online version </a>.</DT>
+
+
+
+<BR>
+<DT> Former result, order=12642
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 9, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   <B>Cayley graph</B> . Found as a semidirect produc Z<sub>42</sub> (&#8906;<sub>2</sub>) Z<sub>301</sub>; generators  [40,272 ]<>[2,116 ]:[12,247 ]<>[30,173 ]:[29,266 ]<>[13,168 ]:[21,98 ]<>[21,98 ]. Avg. Dist. 5.217608, Dist. Distrib. [ 1, 7,  42, 252, 1450, 6026, 4864 ], transmission: 65961.
+<DT> Download the <a href="adjacencies/adjD6/deg7D6_12642_impladjlist.txt" target="_blank"> implicit adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD6/12642_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=12264
+ <DT> <B>Cayley graph</B>. Found as a semidirect product, 12264 nodes and 42924 edges  (F.Comellas 2024):   Z<sub>24</sub> (&#8906;<sub>90</sub>) Z<sub>511</sub>;  generators [13,77]<>[11,245]:[6,157]<>[18,214]:[15,50]<>[9,281]:[12,7]<>[12,7].</b> Avg. dist.: 5.197423, Dist. Distrib.  [1,7,42,252,1463,5957,4542] , transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_90_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+ <!--
+<DT>  **  Z_24 x(125) Z_511, generators [9,122]<>[15,52]:[19,168]<>[5,70]:[18,254]<>[6,369]:[12,231]<>[12,231]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_125_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT>  **  Z_24 x(139) Z_511, generators [18,219]<>[6,292]:[9,373]<>[15,30]:[5,467]<>[19,152][12,252]<>[12,252]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_139_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+ <DT>  **   Z_24 x(153) Z_511, generators [6,206]<>[18,424]:[7,30]<>[17,72]:[3,437]<>[21,136]:[12,266]<>[12,266]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_153_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT>  **   Z_24 x(167) Z_511, generators [7,62]<>[17,111]:[3,413]<>[21,399]:[6,410]<>[18,339]:[12,119]<>[12,119]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_167_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT>  **  Z_24 x(202) Z_511, generators  [23,321]<>[1,55]:[21,488]<>[3,5 ]:[18,192]<>[6,74]:[12,469]<>[12,469]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_202_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+ <DT>  **  Z_24 x(335) Z_511, generators  [18,116]<>[6,80]:[13,13]<>[11,440]:[15,383]<>[9,250]:[12,21]<>[12,21]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_335_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT>  **   Z_24 x(468) Z_511, generators [23,219]<>[1,219]:[18,2]<>[6,19]:[21,12]<>[3,47]:[12,35]<>[12,35]. Avg. dist.: 5.197423  (1,7,42,252,1463,5957,4542) transmission: 63736.  <A href="adjacencies/adjD6/12264_24_511_468_adjlist.txt" target="_blank"> adjlist NX </A></DT>
+<DT>All graphs are isomorphic.</DT>
+-->
+
+<BR>
+<DT>Former result, Order = 11988 
+<DT> Communicated by Eyal Loz, Math Dep., Auckland Univ., New Zealand (July 2006)</DT> 
+<DT> Voltage graph  Z_36 x(2) Z_333, B(0,3),  voltages [(18,108)|(14,61)(34,195)(23,14)],  avg. dist.:  5.1779431</DT>
+<DT> Z_m x(a) Z_n represents a semidirect product of cyclic groups [x,y][u,v]= [x + u mod m, y*a^u + v mod n].
+<DT> <A href="adjacencies/adjD6/Loz_11988.txt" target="_blank"> ( raw adjacency list from Loz )</a> <A href="https://web.archive.org/web/20160315000000*/http://www.eyal.com.au/wiki/The_Degree/Diameter_Problem" target="_blank"> :::  Link to Eyal Loz's original data</A>.  ---  <a href="adjacencies/adjD6/11988_Loz_volt_adjlist.txt" target="_blank">    adjlist NX version</A>.
+ </DT>
+<DT> Found also as a semidirect product (no voltages), some instances have a lower average distance (F. Comellas 2024): </DT>
+<DT>  **  Z_36 x(5)Z_333 with generators [26,80]<>[10,301] : [14,3]<>[22,321] : [1,60]<>[35,321] :[18,324] and their inverses. Avg. dist. 5.177943  <a href="adjacencies/adjD6/11988_36_333_5_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<DT>  **   Z_36 x(56)Z_333 with generators [14,2]<>[22,310]:[34,72]<>[2,315]:[31,113]<>[5,326]:[18,324] and their inverses. Avg. dist. 5.180195  <a href="adjacencies/adjD6/11988_36_333_56_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<DT>  **  Z_36 x(59)Z_333 with generators [14,216]<>[22,279]:[1,235]<>[35,250]:[26,218]<>[10,10]:[18,99] and their inverses. Avg. dist. 5.180195  <a href="adjacencies/adjD6/11988_36_333_59_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+
+
+</DT>
+
+<!--
+Former result  Exoo 11232
+<DT>Voltage graph, obtained by G. Exoo,  using PSL(3,3) over a base multigraph of order 2.
+<DT> Download the <a href="adjacencies/Exoo_11232.txt"> adjacency list </a>  of
+THE GRAPH.
+-->
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%           DEGREE = 8    DIAM = 6          %%%%%%%%%%%%%%%%%%%%%% -->
+<A NAME=86></A>
+<b>H<sub>7</sub>+</b>  
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>8</B>, Diameter = <B>6</B>; Order =<B>40560</B>; Moore bound=156865;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Incidence graph of the split Cayley generalized hexagon H(7) (39216 vertices, 8-regular,  diameter 6). Hermitian spread of 344 pairwise opposite lines; the 8 lines of one regulus stay untouched, on each of the other 336 lines 4 of the 8 incident edges are subdivided (1344 new vertices): the points of every such line carry cyclic labels in Z<sub>8</sub> (hyperplanes through the 3-space of the fixed regulus) and exactly the points whose label lies in a difference cover of  Z<sub>8</sub> stay untouched - the largest uniform choice the construction allows. New vertices of one  spread line form a clique; each new vertex has 3 further "external" edges. The external edges are invariant under a group of order 336 (isomorphic to SL(2,7)) that acts regularly on the 336 subdivided spread lines and preserves the label structure, so they are given by 6 edge orbits
+<DT> Download the <a href="adjacencies/adjD6/deg8_diam6_n40560_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.</DT>
+
+<BR>
+<DT> Former result, order=39792
+<DT> H<sub>7</sub>(K<sub>5</sub>)+ Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained from the generalized hexagon <i>H<sub>7</sub></i> by replacement  of some of its vertices  by complete graphs <i>K<sub>5</sub></i>.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d8_k6_n39792.edgest" target="_blank"> local edge list </a>  of the graph.</DT>  
+  <dt> This <a href="adjacencies/adjD4/39792_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q= " target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT>Former result, Order = 39678 
+<DT> Obtained by Francesc Comellas (September 24, 2026), with the help of OpenAI GPT-5.6 Sol.  From graph H<sub>7</sub>(K<sub>5</sub>), consider one of the four  K<sub>5</sub> copies introduced. Three vertices have degree seven and two have degree eight. Introduce a new vertex  and join it to all five vertices of K<sub>5</sub>. Delete one of the external edges of the two vertices that now have degree nine and join the  vertices of degree seven to the new vertex added. The new vertex has now degree seven. Perform this modification independently at each of the four exceptional K<sub>5</sub>'s, thus four new vertices have been introduced,  each with degree seven. Finally, add two independent edges between these new vertices. The final graph is 8-regular and has 39676 and diameter 6. 
+Now consider  again one copy of K<sub>5</sub> and choose one external edge incident with each of its five vertices. Delete these five edges and introduce a new vertex and join it to all the five vertices of K<sub>5</sub>, thus all its vertices keep degree eight. The new vertex is joined now to  three of the five vertices that have degree seven. By testing all different choices one results in a graph that has 39677 vertices,  maximum degree 8, and diameter 6, although it is no longer regular.  A similar process, adding a new vertex,  repairs 8-regularity and leads to a 39678 graph with size 158712, avg.dist: 5.34846 and girth: 3.
+<DT> Download the <a href="adjacencies/adjD6/39678_deg8D6_edges.txt" target="_blank"> edge list </a>  of the graph.</DT>
+
+<BR>
+<DT>Former result, Order = 39672 
+<DT>  Graph obtained by J. Gomez (2005) from the generalized hexagon <i>H<sub>7</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>5</sub></i> using the same technique than in the reference for entry
+ <A HREF="desc_g6.html#46" target="_blank">(4,6)=740</a>
+<DT> J. G&oacute;mez.  On large (<FONT face=Symbol>D</FONT>,6)-graphs. 
+<em>Networks</em> <b>46</b> (2005), pp. 82-87.
+<a href="http://dx.doi.org/10.1002/net.20075" target="_blank"> doi:10.1002/net.20075 </a>.
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%           DEGREE = 9    DIAM = 6          %%%%%%%%%%%%%%%%%%%%%% -->
+<A NAME=96></A>
+<b>H<sub>8</sub>(K<sub>6</sub>)+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>9</B>, Diameter = <B>6</B>; Order =<B>77418</B>; Moore bound=337042;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Incidence graph of the split Cayley generalized hexagon H(8) (74898 vertices, 9-regular,  diameter 6). Hermitian spread of 513 pairwise opposite lines; the 9 lines of one regulus stay  untouched, on each of the other 504 lines 5 of the 9 incident edges are subdivided (2520 new vertices): the points of every such line carry cyclic labels in Z<sub>9</sub> (hyperplanes through the 3-space of the fixed regulus) and exactly the points whose label lies in a difference cover of   Z<sub>9</sub>  stay untouched - the largest uniform choice the construction allows. New vertices of one  spread line form a clique; each new vertex has 3 further "external" edges. The external edges are invariant under a group of order 504 (isomorphic to SL(2,8)) that acts regularly on the 504  subdivided spread lines and preserves the label structure, so they are given by 8 edge orbits (label, label, group element).
+<DT> Download the <a href="adjacencies/adjD6/deg9_diam6_n77418_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.</DT>
+
+<BR>
+<DT> Former result, order=76113
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained from the generalized hexagon <i>H<sub>8</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>6</sub></i>.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d9_k6_n76113.edges" target="_blank"> local edge list </a>  of the graph.</DT>  
+  <dt> This <a href="adjacencies/adjD4/76113_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q= " target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT>Former result, Order = 39678 
+<DT>  Graph obtained from the generalized hexagon <i>H<sub>8</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>6</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+
+<DT>  G. Pineda-Villavicencio, J. G&oacute;mez, M. Miller, H. P&eacute;rez-Ros&eacute;s.  New largest known graphs of diameter 6. <A HREF= "https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20269" target="_blank"> Networks 53 (2009) 315-328.</A>
+</DT>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%           DEGREE = 10    DIAM = 6        %%%%%%%%%%%%%%%%%%%%%% -->
+<A NAME=106></A>
+<b>H<sub>9</sub>+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>10</B>, Diameter = <B>6</B>; Order=<B>137180</B>; Moore bound=664301;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Incidence graph of the split Cayley generalized hexagon H(9) (132860 vertices, 10-regular, diameter 6). Hermitian spread of 730 pairwise opposite lines; the 10 lines of one regulus stay untouched, on each of the other 720 lines 6 of the 10 incident edges are subdivided (4320 new vertices): the points of every such line carry cyclic labels in Z<sub>10</sub> (hyperplanes through the 3-space of the fixed regulus) and exactly the points whose label lies in a difference cover of  Z<sub>10</sub> stay untouched - the largest uniform choice the construction allows. New vertices of one  spread line form a clique; each new vertex has 3 further "external" edges. The external edges  are invariant under a group of order 720 (isomorphic to SL(2,9)) that acts regularly on the 720  subdivided spread lines and preserves the label structure, so they are given by 9 edge orbits  (label, label, group element).
+<DT> Download  <a href="adjacencies/adjD6/deg10_diam6_n137180.zip" target="_blank">  a .zip with the files that should generate the graph</a>. I have not been able to verify it independently.</DT>
+
+<BR>
+<DT> Former result, order=135056
+<DT>H<sub>9</sub>(K<sub>7</sub>)  Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, September 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained from the generalized hexagon <i>H<sub>9</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>7</sub></i>.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d10_k6_n135056.edges" target="_blank"> local edge list </a>  of the graph.</DT>  
+ 
+
+<BR>
+<DT>Former result, Order = 134690 
+<DT>  Graph obtained from the generalized hexagon <i>H<sub>9</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>6</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+
+<DT> J. G&oacute;mez.  On large (<FONT face=Symbol>D</FONT>,6)-graphs. 
+<em>Networks</em> <b>46</b> (2005), pp. 82-87.
+<a href="http://dx.doi.org/10.1002/net.20075" target="_blank"> doi:10.1002/net.20075 </a>.
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 11  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=116></A>
+<DT> <b>H<sub>7</sub>+</b> 
+<DT> Degree = <B>11</B>, Diameter = <B>6</B>; Order =<B>186033</B>; Moore bound= 1222222 ; 
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   The 182,618 vertex (11,6) graph of R. Rajiv with 3,415 new vertices added; no edge of his graph  is changed. Each new vertex is joined to vertices that still had a free degree slot, and in some cases to other new vertices. The accompanying file lists every new vertex with all of its neighbours. Total edges: 1010817. Original edges: 977485 (unchanged). New edges to old vertices: 29185. New edges between new vertices: 4147. Minimum degree: 7, Maximum degree: 11.
+Degree distrib. [7:3, 8:11, 9:13, 10:24658, 11:161348]
+<DT> Download  <a href="adjacencies/adjD6/deg11_diam6_n186033_added_vertices.txt" target="_blank">  the extra edges to be added to the graph below</a>.</DT>
+<DT> Download the <a href="adjacencies/adjD6/deg11_diam6_n186033_networkx.adjlist.gz" target="_blank"> local  raw adjacency list </a>  of the graph (compressed .gz ).</DT>  
+
+<BR>
+<DT> Former result, order=182618
+<DT> H<sub>7</sub>+ Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained from the incidence graph of the generalized hexagon <i>H<sub>9</sub></i> by a particular process.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d11_k6_n182618.edges" target="_blank"> local edge list </a>  of the graph.</DT>  
+ 
+<BR>
+<DT>Former result, Order = 134690  
+<DT> H<sub>7</sub>(T<sub>4</sub>).  J. Gomez, M.A. Fiol. Dense Compound Graphs.<em>Ars Combinatoria</em>, <b>20-A</b> (1985), pp. 211-237.  <A 
+  href="https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/GoFi85-Ars_Comb_20A_211-237.pdf" target="_blank"> link to the paper </A>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 12  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=126></A>
+<b>H<sub>11</sub>+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>12</B>, Diameter = <B>6</B>; Order =<B>364032</B>; Moore bound=2125873;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>  Incidence graph of the split Cayley generalized hexagon H(11) (354312 vertices, 12-regular,  diameter 6). Hermitian spread of 1332 pairwise opposite lines; subdivided: 8 edges on 480 spread  lines, 7 edges on 840 spread lines (9720 new vertices); on every line the points whose cyclic label lies in a fixed difference cover of Z_12 stay untouched. New vertices at one spread line  form a clique; the remaining slots carry external pattern edges. The pattern graph is invariant under a subgroup of order 120 of the regular group SL(2,11) of the good spread lines; of its 11 line orbits 4 carry 8 subdivided edges per line and 7 carry 7.
+<DT> Download  <a href="adjacencies/adjD6/deg12_diam6_n364032.zip" target="_blank">  a .zip with the files that should generate the graph</a>. I have not been able to verify it independently.</DT>
+
+<BR>
+<DT> Former result, order=359 772
+<DT> H<sub>11</sub>(K<sub>8</sub>) Graph obtained from the generalized hexagon <i>H<sub>11</sub></i> by replacement
+of some of its vertices  by complete graphs <i>K<sub>8</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+<DT>  G. Pineda-Villavicencio, J. G&oacute;mez, M. Miller, H. P&eacute;rez-Ros&eacute;s.  New largest known graphs of diameter 6. <A HREF= "https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20269" target="_blank"> Networks 53 (2009) 315-328.</A>
+</DT>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 13  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=136></A>
+<DT> <b>H<sub>9</sub>(T<sub>4</sub>)+</b>  
+<p  style="background-color: Gainsboro; font-size: large">
+Degree= <B>13</B>, Diameter= <B>6</B>; Order =<B>535495</B>; Moore bound= 3528890; 
+</p>
+
+<DT>   Mike McCormick ??   <a href="https://github.com/calgulbenkian"  target="_blank">  calgulbenkian </a>  ( ?? ; October 20, 2026), with Claude ?. 
+<DT> Information on the graph construction is available
+<A  href="https://github.com/elder-plinius/V3R1T4S/tree/main/known-knowns/biggest-graphs"  target="_blank"> at this link</a>.
+<DT> Download the <a href="adjacencies/adjD6/G_13_6_n535495.edges.gz"  target="_blank"> local compressed edge list </a>  of the graph.</DT>
+
+<BR>
+<DT> Former result,  order=1424474
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   The 534234 vertex (13,6) graph below of R. Rajiv with 1,068 new vertices added; no edge of his graph
+ is changed. Each new vertex is joined to vertices that still had a free degree slot, and in some cases to other new vertices. The accompanying file lists every new vertex with all of its neighbours. Total edges: 3472032. Original edges: 34604385 (unchanged). New edges to old vertices: 11048. New edges between new vertices:  546. Minimum degree: 9, Maximum degree: 13.
+Degree distrib. [9:10, 10: 230, 11: 6091, 12:1950, 13:527021]
+
+<DT> Download  <a href="adjacencies/adjD6/deg13_diam6_n535302_added_vertices.txt" target="_blank">  the extra edges to be added to the graph below</a>.</DT>
+<DT> Download the <a href="adjacencies/adjD6/deg13_diam6_n535302_networkx.adjlist.gz" target="_blank"> local  raw adjacency list </a>  of the graph (compressed .gz ).</DT>  
+
+<BR>
+<DT> Former result, order=534234
+<DT> H<sub>9</sub>(T<sub>4</sub>)+ Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained 
+from the graph below by  local modifications.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d13_k6_n534234.edges.xz" target="_blank"> local edge list </a>  of the graph (compressed).</DT>  
+ 
+<BR>
+<DT>Former result, Order = 531440 
+<DT> H<sub>9</sub>(T<sub>4</sub>). J. Gomez, M.A. Fiol. Dense Compound Graphs.<em>Ars Combinatoria</em>, <b>20-A</b> (1985), pp. 211-237.  <A 
+  href="https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/GoFi85-Ars_Comb_20A_211-237.pdf"> link to the paper </A>
+</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 14  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=146></A>
+<b>H<sub>13</sub>+</b>  
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree= <B>14</B>, Diameter = <B>6</B>; Order =<B>824124</B>; Moore bound=5631277;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Incidence graph of the split Cayley generalized hexagon H(13) (804468 vertices, 14-regular,
+ diameter 6). Hermitian spread of 2198 pairwise opposite lines; the 14 lines of one regulus stay
+untouched, on each of the other 2184 lines 9 of the 14 incident edges are subdivided (19656 new
+ vertices): the points of every such line carry cyclic labels in Z_14 (hyperplanes through the
+3-space of the fixed regulus) and exactly the points whose label lies in a difference cover of
+Z_14 stay untouched - the largest uniform choice the construction allows. New vertices of one
+spread line form a clique; each new vertex has 4 further "external" edges. The external edges  are invariant under a group of order 2184 (isomorphic to SL(2,13)) that acts regularly on the 2184 subdivided spread lines and preserves the label structure, so they are given by 18 edge orbits (label, label, group element).
+<DT> Download  <a href="adjacencies/adjD6/deg14_diam6_n824124.zip" target="_blank">  a .zip with the files that should generate the graph</a>. I have not been able to verify it independently.</DT>
+
+<BR>
+<DT> Former result, order=816294
+<DT>  H<sub>13</sub>(K<sub>10</sub>) Graph obtained from the generalized hexagon <i>H<sub>13</sub></i> by replacement of some of its vertices  by complete graphs <i>K<sub>10</sub></i> using the same technique than
+in  reference  <A HREF="desc_g6.html#46" target="_blank">(4,6)</a>
+
+<DT>  G. Pineda-Villavicencio, J. G&oacute;mez, M. Miller, H. P&eacute;rez-Ros&eacute;s.  New largest known graphs of diameter 6. <A HREF= "https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20269" target="_blank"> Networks 53 (2009) 315-328.</A>
+</DT>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 15  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=156></A>
+<DT> <b>H<sub>11</sub>(T<sub>4</sub>)+</b> 
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>15</B>, Diameter = <B>6</B>; Order =<B>1424896</B>; Moore bound=8687926  
+</p>
+
+<DT>   Mike McCormick ??   <a href="https://github.com/calgulbenkian"  target="_blank">  calgulbenkian </a>  ( ?? ; October 20, 2026), with Claude ?. 
+<DT> Information on the graph construction is available
+<A  href="https://github.com/elder-plinius/V3R1T4S/tree/main/known-knowns/biggest-graphs"  target="_blank"> at this link</a>.</DT>
+
+
+<BR>
+<DT> Former result,  order=1424474
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>    The 1,424,472 vertex (15,6) graph below of R. Rajiv with 2 new vertices added; no edge of his graph is
+ changed. Each new vertex is joined to vertices that still had a free degree slot, and in some
+ cases to other new vertices. The accompanying file lists every new vertex with all of its neighbours.
+<DT> Download  <a href="adjacencies/adjD6/deg15_diam6_n1424474_added_vertices.txt" target="_blank">  the extra edges to be added to the graph below</a>. I have not been able to verify it independently.</DT>
+
+<BR>
+<DT> Former result, order=1424472
+<DT> H<sub>11</sub>(T<sub>4</sub>)+ Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained 
+from the graph below by  local modifications.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d15_k6_n1424472.edges.xz" target="_blank"> local edge list </a>  of the graph (compressed).</DT>  
+ 
+<BR>
+<DT>Former result, Order = 1417248 
+<DT> H<sub>11</sub>(T<sub>4</sub>). J. Gomez, M.A. Fiol. Dense Compound Graphs.<em>Ars Combinatoria</em>, <b>20-A</b> (1985), pp. 211-237.  <A 
+  href="https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/GoFi85-Ars_Comb_20A_211-237.pdf" target="_blank"> link to the paper </A></DT>
+
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 16  DIAM = 6    %%%%%%%%%%%% -->
+<A NAME=166></A>
+<DT> <b>H<sub>11</sub>(T<sub>5</sub>)+</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>16</B>, Diameter = <B>6</B>; Order =<B>1783834;</B>; Moore bound= 13017857; 
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   The 1,779,528 vertex (16,6) graph below of R. Rajiv with 4,306 new vertices added; no edge of his
+graph is changed. Each new vertex is joined to vertices that still had a free degree slot, and in some cases to other new vertices. The accompanying file lists every new vertex with all of  its neighbours.
+<DT> Download  <a href="adjacencies/adjD6/deg16_diam6_n1783834_added_vertices.txt" target="_blank">  the extra edges to be added to the graph below</a>. I have not been able to verify it independently.</DT>
+
+<BR>
+<DT> Former result, order=1779528
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5.  Graph obtained 
+from the graph below by local modifications.
+ <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+<DT> Download the <a href="adjacencies/adjD6/graph_d16_k6_n1779528.edges.xz" target="_blank"> local edge list </a>  of the graph (compressed).</DT>  
+
+<BR>
+<DT>Former result, Order = 1771560
+<DT><b>H<sub>11</sub>(T<sub>5</sub>)</b>.  J. Gomez, M.A. Fiol. Dense Compound Graphs.<em>Ars Combinatoria</em>, <b>20-A</b> (1985), pp. 211-237.  <A 
+  href="https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/GoFi85-Ars_Comb_20A_211-237.pdf" target="_blank"> link to the paper </A>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<hr style="height: 4px; border: none; background-color: violet;">
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+</BODY>
+</HTML>
+
+
+

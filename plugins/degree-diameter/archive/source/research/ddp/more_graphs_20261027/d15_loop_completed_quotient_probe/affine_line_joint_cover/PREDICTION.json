@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_BEFORE_JOINT_POINT_SUPPORT_OR_MODEL",
+  "sources": [{"n":15552,"m":116316,"D":4,"all_raw_affine_lines":2808,"free_pins":648,"bin_size":81},{"n":102060,"m":765045,"D":5,"all_raw_affine_lines":3510,"free_pins":810,"bin_size":243}],
+  "prediction": "At most five affine free three-point lines can jointly cover all old targets at radius D-1 on at least one source, even though no five old complete-fiber columns cover.",
+  "domain": "All original2808/3510 raw affine lines, including empty fullfiber-column lines and all cosets; no blockmask column deduplication. Multiple selected lines may share a controller or pins. Use the union of selected pins, at most15 distinct spokes.",
+  "initial_targets": "Zero and plus/minus every coordinate basis vector in every targetfiber:9/11 points perblock. These are only necessary point constraints, never a full-cover certificate.",
+  "point_clause": "OR all line selectors incident to any actual freepin whose cached R_(D-1) contains the target. Exact partial-fiber support; never old fullfiber masks.",
+  "CEG": "At most8 solver rounds per source. SAT selectors<=5 expand to distinct pins<=15; each candidate receives FULL originaln cached-ball OR. If missing, add the firstmissing target in every missingfiber and its negative as valid new point constraints. No bestscore choice or randomseed.",
+  "negative": "UNSAT of the necessary point-clause model excludes the complete <=5line family computationally. UNKNOWN,8roundlimit or budget leaves domain open.",
+  "lex": "No lex or prior-negative cut is used in this batch, keeping the complete five-line family independent of previous rawUNSAT assumptions.",
+  "budget": {"aggregate_CPU_seconds":130,"workers":1,"prep_parent_CPU_seconds":15,"solver_CPU_seconds_per_source":50,"max_CEG_rounds_per_source":8,"per_call_seconds":"At most remaining source solverCPU, reserving1second for OS/parse guard; not a mechanical10second window","source_D_BFS":0,"new_balls":0,"carried_interface_CPU_seconds":0.127398117},
+  "solver": "Existing CaDiCaL only; one call per strengthened CEG round, no identical-CNF or seed retry. Every child CPU hardlimit is bounded by remaining source budget.",
+  "SAT_acceptance": "Fulln cacheOR, exact <=15unique freepins, actual selected source degrees and complete retained-edge export. First hit stops both sources forparent freshcheck/Gemini.",
+  "stop": "Firsthit,sourceUNKNOWN/UNSAT,8rounds or budget. No ninth round or timer expansion."
+}

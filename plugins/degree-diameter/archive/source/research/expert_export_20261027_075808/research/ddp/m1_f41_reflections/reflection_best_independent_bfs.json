@@ -1,0 +1,117 @@
+{
+  "status": "COMPLETE_INDEPENDENT_ALL_ROOT_BFS",
+  "method": "Python parses each complete edge list and builds fresh adjacency, then deque BFS from every vertex; no search generator, group formula, distance cache, or two-root inference is used.",
+  "graphs": [
+    {
+      "branch": "mixed",
+      "input": "complete_mixed.best.edges",
+      "vertices": 656,
+      "edges": 1640,
+      "simple": true,
+      "degree_histogram": {
+        "5": 656
+      },
+      "connected": true,
+      "all_roots_checked": 656,
+      "diameter": 6,
+      "bad_unordered_pairs_beyond_five": 1804,
+      "ordered_distance_histogram": {
+        "0": 656,
+        "1": 3280,
+        "2": 13120,
+        "3": 52480,
+        "4": 171216,
+        "5": 185976,
+        "6": 3608
+      },
+      "eccentricity_histogram": {
+        "6": 656
+      },
+      "two_roots": {
+        "0": {
+          "distance_histogram": {
+            "0": 1,
+            "1": 5,
+            "2": 20,
+            "3": 80,
+            "4": 263,
+            "5": 278,
+            "6": 9
+          },
+          "maximum_distance": 6,
+          "missing_within_five": 9
+        },
+        "328": {
+          "distance_histogram": {
+            "0": 1,
+            "1": 5,
+            "2": 20,
+            "3": 80,
+            "4": 259,
+            "5": 289,
+            "6": 2
+          },
+          "maximum_distance": 6,
+          "missing_within_five": 2
+        }
+      },
+      "cpu_seconds": 0.274659746
+    },
+    {
+      "branch": "both",
+      "input": "complete_both.best.edges",
+      "vertices": 656,
+      "edges": 1640,
+      "simple": true,
+      "degree_histogram": {
+        "5": 656
+      },
+      "connected": true,
+      "all_roots_checked": 656,
+      "diameter": 6,
+      "bad_unordered_pairs_beyond_five": 984,
+      "ordered_distance_histogram": {
+        "0": 656,
+        "1": 3280,
+        "2": 13120,
+        "3": 52480,
+        "4": 176464,
+        "5": 182368,
+        "6": 1968
+      },
+      "eccentricity_histogram": {
+        "6": 656
+      },
+      "two_roots": {
+        "0": {
+          "distance_histogram": {
+            "0": 1,
+            "1": 5,
+            "2": 20,
+            "3": 80,
+            "4": 272,
+            "5": 276,
+            "6": 2
+          },
+          "maximum_distance": 6,
+          "missing_within_five": 2
+        },
+        "328": {
+          "distance_histogram": {
+            "0": 1,
+            "1": 5,
+            "2": 20,
+            "3": 80,
+            "4": 266,
+            "5": 280,
+            "6": 4
+          },
+          "maximum_distance": 6,
+          "missing_within_five": 4
+        }
+      },
+      "cpu_seconds": 0.271853884
+    }
+  ],
+  "cpu_seconds": 0.5465208760000001
+}

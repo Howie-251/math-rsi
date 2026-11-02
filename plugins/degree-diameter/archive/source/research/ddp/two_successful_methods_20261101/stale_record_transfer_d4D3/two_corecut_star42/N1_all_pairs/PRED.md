@@ -1,0 +1,13 @@
+# N1: complete3075 two-disjoint-edge / one4star candidates
+
+Prediction before execution: at leastone eligibleconfiguration covers all41 oldvertices fromnewroot41 within3. Acomplete42/D3 graph isnotpredicted;old-old coverage remains aseparate exacttest.
+
+Onlythe selectedcachedMessieresN1normalized41/82quarticJSON isparsedonce asconstructioninput. ItsD3 is inherited fromprimary,not rerun. Oldordinary9-cover andadjacentsplit/degree3-rootnegatives are differentrules;no othersource isused. Thefinitecandidate domain isall3075unorderedvertex-disjointpairs from82oldedges;newlabel41 connects totheirfourendpointsafterdeletingthetwoedges. Everycandidateis42/84all4regular,retaining80oldedges.
+
+Write all3075 canonicalpairparameters,then evaluateeachfinalgraph byordinaryBFS: newroot41first;onlyR3passes receiveBFSfromall41oldlabels,tostopatfirstfailure. Savefirstnewrootandfirstold-oldfailure withactualshortestdistance/pathandfullcut/starparameters. Ifthatfirstold-oldfailurehasbothendpointsoutsidefourpins,makeonlyoneoriginal41source shortestpathdiagnostic forthatpair,includingthecutedgesonthatonepath. Thisdoesnotenumeratealloldgeodesicsorclaimuniqueness. Otherwise nooriginalsource traversaloccurs.
+
+ForH=G−2cutsandP=fourpins,newrootR3 iffR2_H(P)=all41. Anyold-oldroute throughthenewstarwithbothendpointsoutsidePcostsatleast4,so itcannotrepairaD3failureofsuchapair. Actualtests neverthelessuseallfinalgraph routes,notanoverstrongpureHconditionforpinendpoints.
+
+Firstcompletehitwrites42/84edgefile,parameters,all42roothistogramsanddistancewitness,andstopsthe batch. Remainingplannedpairsaremarkedunvisited,nottested. Ifall3075finishwithoutahit,theexactNOscopeisonlythisN1/two-disjoint-oldedges/one4star rule;itdoesnotexcludeN2/N3orall(4,3)graphs. CPUinterruptionisUNKNOWNanddoesnotauthorizecontinuation.
+
+Samecase20CPU includingprior0.121139383,allpreparation/imports/failures,oneworker. No download,sourceD3/allrootBFS,field,solver,Lean,ARIS,hash,root/WikiorHTMLedits. Nobudgetreset,sourcechange,morecuts,seed orlongtailsearch.

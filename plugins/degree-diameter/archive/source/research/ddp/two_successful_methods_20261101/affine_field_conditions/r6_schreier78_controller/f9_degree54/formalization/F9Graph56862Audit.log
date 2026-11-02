@@ -1,0 +1,75 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → Nat → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, @LE.le Nat instLENat (@SimpleGraph.Walk.length V G u v p) D
+def DegreeDiameter.Portfolio.F9Graph56862.graph : SimpleGraph (Fin 56862) :=
+{ Adj := fun u v => u ≠ v ∧ ((∃ p t, F9Graph56862.forward u p t = v) ∨ ∃ p t, F9Graph56862.forward v p t = u),
+  symm := F9Graph56862.graph._proof_1, loopless := F9Graph56862.graph._proof_2 }
+def DegreeDiameter.Portfolio.F9Graph56862.forward : Fin 56862 → Fin 6 → F9Graph56862.F → Fin 56862 :=
+fun u p t =>
+  F9Graph56862.liftAt (F9Graph56862.controller (F9Graph56862.controllerOf u) p)
+    (F9Graph56862.fiberStep (F9Graph56862.controllerOf u) p t (F9Graph56862.fiberOf u))
+def DegreeDiameter.Portfolio.F9Graph56862.stepVec : Fin 78 →
+  Fin 6 → F9Graph56862.F → F9Graph56862.Vec → F9Graph56862.Vec :=
+fun a p t x => F9Graph56862.act (F9Graph56862.matrix a p) x + t • F9Graph56862.direction (F9Graph56862.inversePort p)
+def DegreeDiameter.Portfolio.F9Graph56862.matrix : Fin 78 → Fin 6 → F9Graph56862.Mat :=
+fun a p => F9Graph56862.matrixPool (F9Graph56862.chart a p)
+def DegreeDiameter.Portfolio.F9Graph56862.inversePort : Fin 6 → Fin 6 :=
+![1, 0, 3, 2, 4, 5]
+DegreeDiameter.Portfolio.F9Graph56862.decodeVec_encodeVec (x : F9Graph56862.Vec) :
+  F9Graph56862.decodeVec (F9Graph56862.encodeVec x) = x
+DegreeDiameter.Portfolio.F9Graph56862.encodeVec_decodeVec (x : Fin 729) :
+  F9Graph56862.encodeVec (F9Graph56862.decodeVec x) = x
+DegreeDiameter.Portfolio.F9Graph56862.forward_reverse (u : Fin 56862) (p : Fin 6) (t : F9Graph56862.F) :
+  F9Graph56862.forward (F9Graph56862.forward u p t) (F9Graph56862.inversePort p) (-t) = u
+DegreeDiameter.Portfolio.F9Graph56862.adj_iff_forward (u v : Fin 56862) :
+  F9Graph56862.graph.Adj u v ↔ ∃ p t, F9Graph56862.forward u p t = v
+DegreeDiameter.Portfolio.F9Graph56862.degree_fifty_four (u : Fin 56862) : F9Graph56862.graph.degree u = 54
+DegreeDiameter.Portfolio.F9Graph56862.bounded_walk_of_route (u v : Fin 56862) (p q r : Fin 6) (n : F9Graph56862.Vec)
+  (hc : F9Graph56862.routeController (F9Graph56862.controllerOf u) p q r = F9Graph56862.controllerOf v)
+  (hf :
+    F9Graph56862.routeVec (F9Graph56862.controllerOf u) p q r n (F9Graph56862.decodeVec (F9Graph56862.fiberOf u)) =
+      F9Graph56862.decodeVec (F9Graph56862.fiberOf v)) :
+  ∃ w, w.length ≤ 3
+DegreeDiameter.Portfolio.F9Graph56862.model_basis_valid (k : Fin 169) (i : Fin 3) :
+  F9Graph56862.modelNoise k (F9Graph56862.act (F9Graph56862.modelInverse k) (F9Graph56862.basisVec i)) =
+    F9Graph56862.basisVec i
+DegreeDiameter.Portfolio.F9Graph56862.pair_valid (a b : Fin 78) (h : ¬∃ p, F9Graph56862.controller a p = b) :
+  F9Graph56862.PairCheck a b
+DegreeDiameter.Portfolio.F9Graph56862.nb_noise_valid (a b : Fin 78) (h : ¬∃ p, F9Graph56862.controller a p = b)
+  (d : F9Graph56862.Vec) :
+  F9Graph56862.routeVec a (F9Graph56862.wordP0 (F9Graph56862.controllerWord a b))
+      (F9Graph56862.wordP1 (F9Graph56862.controllerWord a b)) (F9Graph56862.wordP2 (F9Graph56862.controllerWord a b))
+      (F9Graph56862.nbNoise a b d) 0 =
+    d
+DegreeDiameter.Portfolio.F9Graph56862.adjacent_valid (a : Fin 78) (p : Fin 6) (d : Fin 729) :
+  F9Graph56862.routeVec a (F9Graph56862.adjP0 a p d) (F9Graph56862.adjP1 a p d) (F9Graph56862.adjP2 a p d)
+      (F9Graph56862.adjNoise a p d) 0 =
+    F9Graph56862.decodeVec d
+DegreeDiameter.Portfolio.F9Graph56862.diameterAtMost_three : DiameterAtMost F9Graph56862.graph 3
+DegreeDiameter.Portfolio.F9Graph56862.not_diameterAtMost_two : ¬DiameterAtMost F9Graph56862.graph 2
+DegreeDiameter.Portfolio.F9Graph56862.concrete_order_degree_and_exact_D3 :
+  Fintype.card (Fin 56862) = 56862 ∧
+    (∀ (v : Fin 56862), F9Graph56862.graph.degree v ≤ 54) ∧
+      DiameterAtMost F9Graph56862.graph 3 ∧ ¬DiameterAtMost F9Graph56862.graph 2
+theorem DegreeDiameter.Portfolio.F9Graph56862.concrete_order_degree_and_exact_D3 : Fintype.card (Fin 56862) = 56862 ∧
+  (∀ (v : Fin 56862), F9Graph56862.graph.degree v ≤ 54) ∧
+    DiameterAtMost F9Graph56862.graph 3 ∧ ¬DiameterAtMost F9Graph56862.graph 2 :=
+⟨Fintype.card_fin 56862,
+  ⟨F9Graph56862.degree_le_fifty_four, ⟨F9Graph56862.diameterAtMost_three, F9Graph56862.not_diameterAtMost_two⟩⟩⟩
+theorem DegreeDiameter.Portfolio.F9Graph56862.concrete_regular_and_exact_D3 : Fintype.card (Fin 56862) = 56862 ∧
+  (∀ (v : Fin 56862), F9Graph56862.graph.degree v = 54) ∧
+    DiameterAtMost F9Graph56862.graph 3 ∧ ¬DiameterAtMost F9Graph56862.graph 2 :=
+⟨Fintype.card_fin 56862,
+  ⟨F9Graph56862.degree_fifty_four, ⟨F9Graph56862.diameterAtMost_three, F9Graph56862.not_diameterAtMost_two⟩⟩⟩
+def DegreeDiameter.Portfolio.F9Graph56862.FinalClaim : Prop :=
+Fintype.card (Fin 56862) = 56862 ∧
+  (∀ (v : Fin 56862), F9Graph56862.graph.degree v ≤ 54) ∧
+    DiameterAtMost F9Graph56862.graph 3 ∧ ¬DiameterAtMost F9Graph56862.graph 2
+'DegreeDiameter.Portfolio.F9Graph56862.degree_fifty_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F9Graph56862.diameterAtMost_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F9Graph56862.not_diameterAtMost_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F9Graph56862.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F9Graph56862.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

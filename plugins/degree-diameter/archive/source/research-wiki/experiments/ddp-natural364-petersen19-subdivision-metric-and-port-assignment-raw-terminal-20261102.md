@@ -1,0 +1,370 @@
+---
+type: experiment
+node_id: exp:ddp-natural364-petersen19-subdivision-metric-and-port-assignment-raw-terminal-20261102
+title: "自然364 Petersen19合作骨架：235 metric过门→6helper轨道全raw UNSAT，诊断仍UNKNOWN"
+idea_id: "idea:ddp-open-parameter-construction-20261026"
+verdict: partial
+confidence: high
+date: "2026-11-02"
+hardware: ""
+duration: ""
+provenance: "research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/run_once.py; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SKELETON.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ALL_PATTERN_METRICS.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SURVIVORS.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/BEST_METRIC_PATTERN.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ASSIGNMENT_EXACTNESS_PAPER.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ROOT_DISPOSITION.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/run_once.py; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/HELPER_ORBITS.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PORT_ASSIGNMENT_TERMINAL_SCOPE_REVIEW.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/run_once.py; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/run_once.py; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/MODEL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/RESULT.json"
+added: 2026-11-02T02:50:01Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 自然364 Petersen19合作骨架：235 metric过门→6helper轨道全raw UNSAT，诊断仍UNKNOWN
+
+**verdict:** `partial`  ·  **confidence:** `high`  ·  tests `idea:ddp-open-parameter-construction-20261026`
+
+## Metrics
+**对象层级：** helper_metric_and_exact_port_assignment_raw_solver_cohort
+
+**目标与阶数：** (4,5)；L=364；条件性n=383（未据此计纪录）
+
+**距目标的证据：** No complete383targetgraphgenerated. 5005labelledPetersen9-edge-subdivisionhelperpatterns getsmallHmetricqueries;235diam4patternsform6helperorbits. SixexactportassignmentCNFsreturnrawUNSATwithoutprooflogging/checking; orbit0coverage-localization stopsUNKNOWN athelpers0..1. NotactualtargetdiametermeasurementorformalglobalNO.；改变14helper叶/无port父点弱点，选全部helper有oldports的Petersen19。5005labelledpatterns中235的Hdiam4、4770的Hdiam5，metric正预测支持；95095是helper小图root queries，不是source/383BFS。120Petersenautomorphisms给6helper轨道，只重标helper，不猜旧ports对称。exactassignment用每port唯一owner/总容量28及19×364=6916覆盖OR，orbit0 MODEL1848vars/10528clauses；R2–R4旧缓存、R0/R1现有邻接。前5和此前未测第6各rawUNSAT/return20，无proofchecked，不能冒formal族NO。orbit0诊断0..8、0..3 rawUNSAT，0..1在2秒UNKNOWN；尚不能区分单helper自身覆盖还是sharedassignment冲突，不叫最小核。case9.371241682/40，0target383graph/BFS/Lean/ARIS。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "new_graphs": 0,
+  "new_parameter_pairs": 0,
+  "new_Lean_instances": 0,
+  "new_independent_method_claims": 0,
+  "single_cohort_research_record": true,
+  "source_n": 364,
+  "source_m": 714,
+  "free_ports": 28,
+  "helper_n": 19,
+  "helper_m": 24,
+  "subdivided_distinct_Petersenedges": 9,
+  "helper_spoke_capacities": {
+    "original10": 1,
+    "subdivision9": 2
+  },
+  "conditional_target_n": 383,
+  "conditional_target_m": 766,
+  "conditional_degree": 4,
+  "metric_stage": {
+    "status": "METRIC_SURVIVORS_PENDING_28PORT_ASSIGNMENT",
+    "patterns": 5005,
+    "expected_domain": 5005,
+    "helper_metric_BFS_roots": 95095,
+    "diameter_histogram": {
+      "5": 4770,
+      "4": 235
+    },
+    "minimum_helper_diameter": 4,
+    "survivors": 235,
+    "prediction_supported": true,
+    "new_numeric_CPU": 0.800420978,
+    "read_CPU_charge": 0.5,
+    "prepare_CPU_charge": 0.25,
+    "case_CPU": 1.550420978,
+    "case_cap": 5,
+    "source_or_target383_BFS_oldball_portassignment_solver_Lean_ARIS": 0,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "terminal": true,
+    "scope": "fixednatural364preservedhost/freeportsdistance5;Petersen10eachof9distinctedgesonesubdivision;nototherhelpergraphs/general4D5",
+    "next": "assignmentinterfaceifmetricpass;elseSTOPnoother_subdivisioncount_skeletonladder"
+  },
+  "Petersen_automorphisms": 120,
+  "metric_survivors": 235,
+  "helper_orbits": 6,
+  "oldports_transitivity_assumed": false,
+  "representative_orbit0_model": {
+    "variables": 1848,
+    "assignment_variables": 532,
+    "clauses": 10528,
+    "coverage_clauses": 6916
+  },
+  "all_solver_cases": [
+    {
+      "orbit": 0,
+      "pattern": 25,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.30417399999999994,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    },
+    {
+      "orbit": 1,
+      "pattern": 65,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.114652,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    },
+    {
+      "orbit": 2,
+      "pattern": 306,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.11497700000000005,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    },
+    {
+      "orbit": 3,
+      "pattern": 328,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.21404099999999995,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    },
+    {
+      "orbit": 4,
+      "pattern": 1283,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.367512,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    },
+    {
+      "orbit": 5,
+      "pattern": 1284,
+      "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+      "returncode": 20,
+      "solver_CPU": 0.12869599999999998,
+      "wall_killed": false,
+      "proof_logged": false,
+      "proof_checked": false
+    }
+  ],
+  "orbits_untested": 0,
+  "original_first5_batch_preserved": {
+    "status": "NO_HIT_BOUNDED_HELPER_ORBIT_ASSIGNMENTS",
+    "helper_orbits": 6,
+    "orbits_tested": 5,
+    "orbits_untested": 1,
+    "cases": [
+      {
+        "orbit": 0,
+        "pattern": 25,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.30417399999999994,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      },
+      {
+        "orbit": 1,
+        "pattern": 65,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.114652,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      },
+      {
+        "orbit": 2,
+        "pattern": 306,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.11497700000000005,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      },
+      {
+        "orbit": 3,
+        "pattern": 328,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.21404099999999995,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      },
+      {
+        "orbit": 4,
+        "pattern": 1283,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.367512,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      }
+    ],
+    "prior_CPU": 1.550420978,
+    "input_read_CPU_charge": 0.5,
+    "prepare_CPU_charge": 0.25,
+    "parent_CPU": 2.102159779,
+    "solver_CPU": 1.115356,
+    "case_CPU": 5.517936757,
+    "case_cap": 40,
+    "candidate383_generated": false,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "source_or_target383_BFS_Lean_ARIS": 0,
+    "scope": "atmost5helperorbits of fixedPetersen9subdivision family;RAW_UNSATnotproofchecked andUNKNOWNpreserved;noallfamilyNO",
+    "terminal": true,
+    "next": "freshbaseline_independentfull383BFS_Lean_ARISifhit;otherwiseSTOPnoparamseedtimerextensions"
+  },
+  "sixth_previously_untested_orbit_batch": {
+    "status": "NO_HIT_BOUNDED_HELPER_ORBIT_ASSIGNMENTS",
+    "helper_orbits": 6,
+    "orbits_tested": 1,
+    "prior_orbits_tested": 5,
+    "orbits_untested": 0,
+    "cases": [
+      {
+        "orbit": 5,
+        "pattern": 1284,
+        "status": "RAW_UNSAT_NOT_PROOFCHECKED",
+        "returncode": 20,
+        "solver_CPU": 0.12869599999999998,
+        "wall_killed": false,
+        "proof_logged": false,
+        "proof_checked": false
+      }
+    ],
+    "prior_CPU": 5.517936757,
+    "input_read_CPU_charge": 0.5,
+    "prepare_CPU_charge": 0.25,
+    "parent_CPU": 0.44559749600000004,
+    "solver_CPU": 0.12869599999999998,
+    "case_CPU": 6.842230253,
+    "case_cap": 40,
+    "candidate383_generated": false,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "source_or_target383_BFS_Lean_ARIS": 0,
+    "scope": "oneremaininghelperorbitplus5inheritedterminalcases of fixedPetersen9subdivisionfamily;RAW_UNSATnotproofchecked andUNKNOWNpreserved;noallfamilyNO",
+    "terminal": true,
+    "next": "freshbaseline_independentfull383BFS_Lean_ARISifhit;otherwiseSTOPnoparamseedtimerextensions"
+  },
+  "coverage_split_diagnostic": {
+    "status": "UNKNOWN_SUBMODEL_STOP",
+    "orbit": 0,
+    "original_pattern": 25,
+    "remaining_raw_UNSAT_helper_set": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "incompatible_split": null,
+    "cases": [
+      {
+        "case": 0,
+        "helpers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "status": "RAW_UNSAT",
+        "returncode": 20,
+        "CPU": 0.017581999999999997,
+        "killed": false
+      },
+      {
+        "case": 1,
+        "helpers": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": "RAW_UNSAT",
+        "returncode": 20,
+        "CPU": 0.11855799999999998,
+        "killed": false
+      },
+      {
+        "case": 2,
+        "helpers": [
+          0,
+          1
+        ],
+        "status": "UNKNOWN",
+        "returncode": 0,
+        "CPU": 2.001128,
+        "killed": false
+      }
+    ],
+    "new_solver_calls": 3,
+    "solver_CPU": 2.137268,
+    "parent_CPU": 0.041743429000000006,
+    "prior_CPU": 6.842230253,
+    "read_prepare_CPU_charge": 0.35,
+    "case_CPU": 9.371241682,
+    "casecap": 40,
+    "proof_checked": false,
+    "source_BFS_oldball_newtarget_Lean_ARIS": 0,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "terminal": true,
+    "scope": "onlyorbit0CNFhelpercoverageconstraintlocalization;rawUNSATnotformal/generalNo",
+    "next": "useidentifiedlocalorjointobstacletochangehelperconnectionrules;noresumingoldsolverwindows"
+  },
+  "proof_logged": false,
+  "proof_checked": false,
+  "single_or_shared_obstruction_classified": false,
+  "minimal_UNSAT_core_claimed": false,
+  "samecase_CPU": 9.371241682,
+  "case_cap": 40,
+  "source_or_target383_BFS_oldball_Lean_ARIS": 0,
+  "complete383_graph_generated": false,
+  "all_numeric_terminal": true,
+  "helper14_node_or_Bfourcoeff_scope_changed": false,
+  "same_Goal": "ACTIVE",
+  "old_N8_n61": "PAUSED"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/run_once.py](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/run_once.py)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SKELETON.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SKELETON.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ALL_PATTERN_METRICS.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ALL_PATTERN_METRICS.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SURVIVORS.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/SURVIVORS.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/BEST_METRIC_PATTERN.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/BEST_METRIC_PATTERN.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ASSIGNMENT_EXACTNESS_PAPER.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ASSIGNMENT_EXACTNESS_PAPER.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/ROOT_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/run_once.py](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/run_once.py)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/HELPER_ORBITS.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/HELPER_ORBITS.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PORT_ASSIGNMENT_TERMINAL_SCOPE_REVIEW.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/PORT_ASSIGNMENT_TERMINAL_SCOPE_REVIEW.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/run_once.py](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/run_once.py)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/remaining_orbit5/orbit5/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/run_once.py](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/run_once.py)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/coverage_split_diagnostic/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit0/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit1/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit2/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit3/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/MODEL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/MODEL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/natural364_petersen_subdivision19/port_assignment_sat/orbit4/RESULT.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** Fixednatural364/714 oldgraphpreserved,noaddedoldold,max4/D5,28actualdegree3ports. HelperH isPetersen10with9distinctedges eachsubdividedonce,H19/m24;10originalhelpersown1porteach,9subdivisionhelpersown2each. All5005labelledpatternsmetricchecked;235necessarysurvivorsreducevia120Petersenautomorphismsto6helperorbits,withoutassuminganyoldporttransitivity. AllsixassignmentmodelsareterminalrawUNSAT_NOT_PROOFCHECKED;noformalUNSATcertificate/no383file. Orbit0diagnostic0..8and0..3rawUNSAT,0..1two-secondUNKNOWN;noclaimofminimalcore,singlehelperimpossibilityorclassifiedsharedconflict. Nototherhelpergraphs,othersubdivisioncounts,arbitraryfiniteH,general383/(4,5).
+
+**正向保证：** Sourceisnatural364/714with28freeports,notpublic364/728all4regular. RetainedoldedgesinheritoldoldD5; thecandidateorder383isconditionalonly.；5005islabelledsubdivisionparametercount,notnonisomorphicgraphcount. The235metricdiam4patternsareanecessarygatebecauseeveryhelperownsaportarclength1;Hdiam5cannotcovereachothersportswithin5.；Petersen120automorphismsreducehelperpatterns to6orbits; no oldportautomorphism/labelgaugeassumed. Helperpermutationpreservescapacityandthecompleteassignmentproblem.；Atoldportspacing5,helper-to-oldwalk<=5cannottraversebetweenoldportsandreturntoH. Thusunion_g R_(4-dH)(P_g)exactlymodelshelper-oldcoverage; H-Hdiam4andoldoldinheritedcompleteD5cases.；Portoneownerandhelpercapacitycardinality areexact; representativeorbit0has1848vars/10528clauses/6916coverageOR. Prefixatmostkencodingreviewissaved; no CNF orcoverage rerun bypublisher.；All6rawUNSATstatusesretainproof_logged=false/proof_checked=false. First5historicalbatchandonesixthneworbitwindowareseparate,notoldtimerrestart.；Diagnostic0..8and0..3rawUNSATwith0..1UNKNOWNdoesnotidentifya minimumUNSATcore orsinglehelper/sharedconflict. Stoppingatthelimitispreserved.；Allnumericsterminal,source/target383BFS,oldballrecompute,LeanandARISzero. Newacceptedgraph/parameter/methodcountsremainzero.
+
+**仍未完成：** RawUNSATwasnotproofchecked. General383/(4,5),otherhelpergraphs,otherhosts,oldedgechanges,addedoldold,andlargerk remainoutside thisboundedmodelscope. No classificationofsinglehelpervsjointassignmentobstruction,no minimalUNSATcore. New3D9readsandoldBfourcoeffNOarenotpartofthisnode. No graph/parameter/Lean/independentmethod/recordclaim.
+
+**启发与重启依据：** A newhelperconnectionrule genuinely passes metric while oldk14NOdoesnottransfer: allhelpersownports andsomeH19havediameter4. Exacthelper-oldcoverage is still a separateassignmentobligation. Completehelperorbitcoverage plusrawUNSAT provides boundednegativeevidence atsolverlevel,butnoproofcheckedformalNO. Diagnosticshrinksrawconflictto0..3coverageyet0..1UNKNOWNstopsclassification; donotclaimwhichmechanismfailed. StopthisfixedPetersen19familywithoutmorewindows,subdivisioncounts,seeds orproofchecking.
+
+**单独的重启条件：** STOP thisPetersen9-subdivisionhelperfamily andtheorbit0diagnostic; noresumingoldsixwindows,newseed/subdivisioncount orautomaticproofchecking. A separatelyauthorized changedmechanism mustnotinheritoldk14NOoutsideitsscope.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

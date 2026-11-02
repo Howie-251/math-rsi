@@ -1,0 +1,124 @@
+{
+  "status": "PAPER_DERIVATION_COMPLETE_NO_GRAPH_SEARCH",
+  "claim": "If P is a simple undirected internal adjacency and PC=CP, the endpoint-internal path supports merge; arbitrary other-side internal Q of maximum degree<=s need not commute.",
+  "formula": {
+    "equal_degree_upper": "r*q^2 + r*q*(q+1) + r*(r-1) + r*(r-1)^2",
+    "mixed_degree_upper": "p*q^2 + s*q*(q+1) + p*(p-1) + p*(p-1)^2",
+    "type": "pointwise on the commuting side, after commutation forces degree p to be constant"
+  },
+  "algebra": {
+    "C_square": "C^2=q^2*I+(q+1)*J",
+    "regularity": "PC=CP implies P*J=J*P; since P is undirected this makes all vertex degrees equal",
+    "support": "support(P*C)=support(C*P), including restriction to far targets",
+    "automorphism_subclass": "P=sum of collinearity-automorphism permutation matrices only when the sum is symmetric, has zero diagonal, and already has entries in {0,1}; this sum commutes with C",
+    "excluded_generalization": "Deleting loops or thresholding multiplicities need not preserve commutation; arbitrary automorphism-derived deduplicated graphs are not excluded without checking PC=CP"
+  },
+  "cases": [
+    {
+      "q": 3,
+      "side_order": 40,
+      "n": 80,
+      "target_D": 3,
+      "target_Delta": 5,
+      "savedL": 72,
+      "commuting_side_degree": 1,
+      "other_side_max_degree": 1,
+      "far_targets_per_root": 27,
+      "pointwise_capacity_upper_bound": 21,
+      "terms": {
+        "merged_endpoint_internal_routes": 9,
+        "opposite_side_internal_relay": 12,
+        "internal_two_steps": 0,
+        "internal_three_steps": 0
+      },
+      "uncovered_far_targets_per_commuting_side_root_at_least": 6,
+      "unordered_bad_pairs_on_commuting_side_at_least": 120,
+      "obstruction": "D3 impossible if either side commutes with its closed collinearity matrix",
+      "scope": "original equal-r-regular scope, also valid if other side has maximum degree<=r"
+    },
+    {
+      "q": 5,
+      "side_order": 156,
+      "n": 312,
+      "target_D": 3,
+      "target_Delta": 8,
+      "savedL": 253,
+      "commuting_side_degree": 2,
+      "other_side_max_degree": 2,
+      "far_targets_per_root": 125,
+      "pointwise_capacity_upper_bound": 114,
+      "terms": {
+        "merged_endpoint_internal_routes": 50,
+        "opposite_side_internal_relay": 60,
+        "internal_two_steps": 2,
+        "internal_three_steps": 2
+      },
+      "uncovered_far_targets_per_commuting_side_root_at_least": 11,
+      "unordered_bad_pairs_on_commuting_side_at_least": 858,
+      "obstruction": "D3 impossible if either side commutes with its closed collinearity matrix",
+      "scope": "original equal-r-regular scope, also valid if other side has maximum degree<=r"
+    },
+    {
+      "q": 7,
+      "side_order": 400,
+      "n": 800,
+      "target_D": 3,
+      "target_Delta": 11,
+      "savedL": 715,
+      "commuting_side_degree": 3,
+      "other_side_max_degree": 3,
+      "far_targets_per_root": 343,
+      "pointwise_capacity_upper_bound": 333,
+      "terms": {
+        "merged_endpoint_internal_routes": 147,
+        "opposite_side_internal_relay": 168,
+        "internal_two_steps": 6,
+        "internal_three_steps": 12
+      },
+      "uncovered_far_targets_per_commuting_side_root_at_least": 10,
+      "unordered_bad_pairs_on_commuting_side_at_least": 2000,
+      "obstruction": "D3 impossible if either side commutes with its closed collinearity matrix",
+      "scope": "original equal-r-regular scope, also valid if other side has maximum degree<=r"
+    },
+    {
+      "q": 8,
+      "side_order": 585,
+      "n": 1170,
+      "target_D": 3,
+      "target_Delta": 12,
+      "savedL": 810,
+      "commuting_side_degree": 2,
+      "other_side_max_degree": 3,
+      "far_targets_per_root": 512,
+      "pointwise_capacity_upper_bound": 348,
+      "terms": {
+        "merged_endpoint_internal_routes": 128,
+        "opposite_side_internal_relay": 216,
+        "internal_two_steps": 2,
+        "internal_three_steps": 2
+      },
+      "uncovered_far_targets_per_commuting_side_root_at_least": 164,
+      "unordered_bad_pairs_on_commuting_side_at_least": 47970,
+      "obstruction": "D3 impossible if either side commutes with its closed collinearity matrix",
+      "scope": "max-degree-3 near-regular allowed; commutation forces regular degree<=2 on an odd side"
+    }
+  ],
+  "max_degree_scope_note": "Parity is only an obstruction to exact regularity. In particular q8 max3 internal graphs with one degree2 vertex remain legal; noncommuting choices on both sides are unresolved.",
+  "residual_status": {
+    "q3r1": "one separate complete finite MILP was UNKNOWN with no incumbent; not rerun",
+    "q5r2": "existing two-start finite profile D4/4090 bad; not rerun or generalized to all choices",
+    "q7r3": "no graph construction or search",
+    "q8max3": "no graph construction or search; open noncommuting near-regular case"
+  },
+  "evidence": [
+    "research/ddp/breadth_20261027_wave11/gq_internal_capacity/REPORT.md",
+    "research/ddp/breadth_20261027_wave11/gq80_paired_matchings/terminal.json",
+    "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best.independent_check.json"
+  ],
+  "review_scope": "Self-contained same-model paper derivation; no external-review or formal-proof claim",
+  "graph_generation_count": 0,
+  "BFS_count": 0,
+  "solver_calls": 0,
+  "new_lower_bounds": 0,
+  "CPU_seconds": 2.0349000000002837e-05
+}

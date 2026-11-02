@@ -1,0 +1,141 @@
+# B25 — center cycles, heavy port closure, and actual quotient bounds
+
+### Review Metadata & Scope Disclosure
+
+- **Requested / Selected Model**: Gemini 3.8 Flash (High), reasoning effort `high`.
+- **CLI / Backend Metadata**: Antigravity CLI executing against Gemini backend via proxy (`US-Dedicated-P1-1`), default temperature, effort `high`.
+- **Execution & Modification Disclosure**: Zero shell commands, background tasks, or build tools executed during this review. Zero workspace files created or modified. Build logs and Lean outputs inspected are pre-existing local execution records.
+- **Reading Scope Disclosure**:
+  - **Fully read sources**:
+    - [`proofs/dd82/n62/CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md) (all 197 lines)
+    - [`proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md) (all 163 lines)
+    - [`formal/DegreeDiameter/N62RepeatComponentBounds.lean`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatComponentBounds.lean) (all 148 lines)
+    - [`formal/ReviewN62RepeatComponentBounds.lean`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/ReviewN62RepeatComponentBounds.lean) (all 46 lines)
+    - [`formal/N62_REPEAT_COMPONENT_BOUNDS_HANDOFF.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/N62_REPEAT_COMPONENT_BOUNDS_HANDOFF.md) (all 34 lines)
+    - [`formal/logs/n62-repeat-component-bounds-second.log`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/logs/n62-repeat-component-bounds-second.log) (all 9 lines)
+    - [`formal/logs/n62-repeat-component-bounds-type-axiom-audit.log`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/logs/n62-repeat-component-bounds-type-axiom-audit.log) (all 53 lines)
+  - **Partially read / inspected predecessor references**:
+    - [`SHORT_COMPONENT_COUNT_BOUND.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/SHORT_COMPONENT_COUNT_BOUND.md) (all 109 lines)
+    - [`CONNECTED_REPEAT_TRIANGLE_WITNESS_REFINEMENT.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_TRIANGLE_WITNESS_REFINEMENT.md) (Sections 3–6)
+    - [`CONNECTED_REPEAT_MIXED_TRACE_AND_ROOT_PATTERNS.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_MIXED_TRACE_AND_ROOT_PATTERNS.md) (Sections 1–4)
+
+---
+
+### (1) Center Cycle Exclusion (`CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md`)
+
+#### 1. Mathematical Derivations & Logic Audit
+- **Exclusion of $C_4$ Component in $\Gamma$** ([lines 52–114](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md#L52-L114)):
+  - Suppose $\Gamma$ contains a 4-cycle. Its 4 vertices are the triangles of two disjoint unit diamonds:
+    $$T_z = \{x,y,z\}, \quad T_w = \{x,y,w\} \quad \text{and} \quad T_u = \{a,b,u\}, \quad T_v = \{a,b,v\},$$
+    where $x,y$ and $a,b$ are the shared-edge endpoints, and $z,w$ and $u,v$ are the tips (8 distinct vertices).
+  - In a 4-cycle, the neighbors of $T_z$ and $T_w$ are $T_u$ and $T_v$. Thus their centers lie in $T_u \cap T_v = \{a,b\}$. Because centers of distinct triangles are distinct, label $a,b$ so that $c(T_z)=a$ and $c(T_w)=b$. Symmetrically, $c(T_u), c(T_v) \in T_z \cap T_w = \{x,y\}$, so label $c(T_u)=x$ and $c(T_v)=y$ (Formula (3)).
+  - Because $a,b$ are centers of triangles on $\{x,y\}$, $a,b$ are common original neighbors of $x,y$. Since $B_{xy}=1$ and $x \not\sim y$, $N_G(x) \cap N_G(y) = \{a,b\}$ exactly (Formula (4)). Thus $u \not\sim y$ and $v \not\sim x$.
+  - At center $a$, its repeat row in the diamond is $B_a = e_b + e_u + e_v$. As center of $T_z$, its extra witness for $x,y$ is $b$; its witnesses for $\{x,z\}$ and $\{y,z\}$ must be $u$ and $v$. Because $u \sim x, u \not\sim y$ and $v \sim y, v \not\sim x$, this uniquely forces:
+    $$u \sim z \quad \text{and} \quad v \sim z. \tag{5}$$
+  - Symmetrically, at center $b$ with row $B_b = e_a + e_u + e_v$ for $T_w$, the witnesses force:
+    $$u \sim w \quad \text{and} \quad v \sim w. \tag{6}$$
+  - Consequently, tips $z$ and $w$ share both $u$ and $v$ as common original neighbors, giving $c_G(z,w) \ge 2 \implies B_{zw} \ge 1$.
+  - But $z,w$ are the tips of a unit diamond, which has $B_{zw}=0$. An edge $B_{zw}=1$ would complete a unit $K_4$, isolating a 4-vertex component in $B$ and contradicting connectedness on 62 vertices.
+  - Thus $\mathbf{C_4}$ **is strictly excluded**.
+- **Analysis of $P_4$ (NOT Excluded)** ([lines 115–188](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md#L115-L188)):
+  - In a 4-vertex path $T_z - T_u - T_w - T_v$, internal centers lie on shared edges while endpoint centers lie at tips:
+    $$c(T_z) = u, \quad c(T_w) = a, \quad c(T_u) = x, \quad c(T_v) = w. \tag{7}$$
+  - The resulting 8-vertex induced original graph $A[\{x,y,z,w\}, \{a,b,u,v\}]$ is uniquely forced with exactly 11 cross-edges:
+    $$A[\{x,y,z,w\}, \{a,b,u,v\}] = \begin{pmatrix} 1 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1 \end{pmatrix}. \tag{9}$$
+  - Two distinct outside witnesses are required: $B_u = e_a + e_b + e_p$ ($p \sim y,z$) and $B_w = e_x + e_y + e_q$ ($q \sim b,v$). If $p = q$, edges $pz, pb, zb$ would form an original triangle (impossible); thus $p \ne q$ is distinct.
+  - A repeat edge between tips $z$ and $v$ ($B_{zv}=1$) remains open and uncontradicted.
+  - Hence $P_4$ is **not excluded**, and the necessary component list for $\Gamma$ is now strictly:
+    $$\mathbf{\{K_1, K_2, P_3, P_4\}}.$$
+- **Verdict**: **PASS (Provable as stated).** Labeling choices are permutation-independent; derivations and the non-exclusion of $P_4$ are verified exact.
+
+---
+
+### (2) Heavy Port Closure & Strict Capacity Bound (`CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md`)
+
+#### 1. Mathematical Derivations & Constraints Audit
+- **Strict Inequality $3L_3 < 2d$** ([lines 75–101](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md#L75-L101)):
+  - $2d$ heavy endpoints $x \in D$ each have one unit mate $a(x) \in W$, giving $\sum_{w \in W} \ell(w) = 2d$, where $\ell(w) \le 3$ and $L_3 = |\{w \in W : \ell(w)=3\}|$.
+  - If $3L_3 = 2d$, all $2d$ light mates belong to $W_3$. Consider $Z = D \cup W_3$.
+    - Every $x \in D$ has its heavy mate in $D \subset Z$ and unit mate in $W_3 \subset Z$.
+    - Every $w \in W_3$ has all 3 unit repeat neighbors in $D \subset Z$.
+    - Thus no positive repeat edge leaves $Z$.
+  - $Z$ is nonempty ($d \ge 1$) and proper ($Z$ is disjoint from the $3d$ vertices of generated triangles $S$). This isolates a proper closed component in $B$, contradicting connectedness ($c=1$).
+  - Hence $\mathbf{3L_3 < 2d}$, which forces:
+    $$\mathbf{L_3 \le \left\lfloor \frac{2d - 1}{3} \right\rfloor}.$$
+- **Numerical Trace & Five-Cycle Bounds** ([lines 102–128](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md#L102-L128)):
+  - Trace bound $\tau \le 248 - 24d + 2\lfloor(2d-1)/3\rfloor$:
+    - $d=1$: $L_3 \le 0 \implies \tau \le 224$.
+    - $d=3$: $L_3 \le \lfloor 5/3 \rfloor = 1 \implies \tau \le 248 - 72 + 2 = \mathbf{178}$ (improved from 180).
+    - $d=5$: $L_3 \le \lfloor 9/3 \rfloor = 3 \implies \tau \le 134$.
+    - $d=7$: $L_3 \le \lfloor 13/3 \rfloor = 4 \implies \tau \le 88$.
+    - $d=9$: $L_3 \le \lfloor 17/3 \rfloor = 5 \implies \tau \le 248 - 216 + 10 = \mathbf{42}$ (improved from 44).
+  - Unconditional range for $c_5$ at $d=9$:
+    $\tau = 10c_5 - 24976 \in [0, 42] \implies 24976 \le 10c_5 \le 25018 \implies \mathbf{2498 \le c_5 \le 2501}$.
+    **Audit Confirmation**: This bound $c_5 \le 2501$ holds **unconditionally with respect to type-1 triangles**; it does *not* prove that type-0 triangles exist for $d=9$ alone.
+- **Multigraph $F$ on Light Mates** ([lines 129–151](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md#L129-L151)):
+  - Multigraph $F$ on vertex set $L$ (distinct light mates) with edges $\{a(x), a(h(x))\}$. D1 distinct mates ensure $F$ is loopless; parallel edges are allowed.
+  - Degree of $w$ in $F$ is $\ell(w) \in \{1, 2, 3\}$.
+  - If a connected component of $F$ were 3-regular, its vertices and the corresponding heavy endpoints would form a $B$-closed set disjoint from $S$, violating connectedness.
+  - Section 3 is accurately titled "A componentwise multigraph restriction", providing a necessary structural condition on $F$.
+- **Verdict**: **PASS (Provable as stated).** Algebraic bounds and proper closure contradiction verified.
+
+---
+
+### (3) Lean 4 Formalization: Component Bounds (`N62RepeatComponentBounds.lean`)
+
+#### 1. Inspection of Formal Proofs & Theorems
+- **Restricted Row Sum & Evenness**:
+  - `n62_repeat_component_defect_row`: Directly proves $\sum_{y \in \text{vertices}(C)} B_{xy} = 3$ for $x \in C.\text{supp}$.
+  - `symmetric_zero_diagonal_sum_even`: Private lemma proving that any symmetric zero-diagonal integer matrix on a finite set has an even double sum, using an involution argument (`Prod.swap`) in $\mathbb{Z}/2\mathbb{Z}$.
+  - `n62_repeat_component_size_even`: Combines the double sum $\sum_{x \in C}\sum_{y \in C} B_{xy} = 3 \cdot n_C$ with evenness to prove $n_C \equiv 0 \pmod 2$.
+    **Hypothesis Check**: Does **not** require $B \le 2$; relies only on raw order-62 hypotheses.
+- **Minimum Component Size $\ge 4$**:
+  - `n62_repeat_component_size_ge_four`: Takes explicit premise `hbound : ∀ x y, defectMatrix G x y ≤ 2`.
+    Positive and even cardinality forces any size $< 4$ to be 2. If $n_C = 2$, row sum 3 requires the off-diagonal entry to be 3, directly contradicting $B_{xy} \le 2$. Thus $n_C \ge 4$.
+- **Quotient Budget & Square Bound**:
+  - `n62_repeat_quotient_reverse_positive`: Balance $n_C R_{CD} = n_D R_{DC}$ and $n_C, n_D > 0$ force $R_{CD} > 0 \implies R_{DC} > 0$.
+  - `n62_repeat_quotient_budget_term_nonnegative`: $R_{CD}(R_{DC} - 1) \ge 0$ for all $C, D$.
+  - `n62_repeat_quotient_budget`: Subtracts row sum 8 from the diagonal quadratic identity to formally prove:
+    $$\sum_D R_{CD}(R_{DC} - 1) = n_C + 2 - R_{CC}.$$
+  - `n62_repeat_component_size_ge_internal_square_sub_two`: Isolating the diagonal term $R_{CC}(R_{CC}-1) \le n_C + 2 - R_{CC}$ yields $R_{CC}^2 - 2 \le n_C$.
+
+#### 2. Log & Axiom Audit
+- **Build Log** ([`formal/logs/n62-repeat-component-bounds-second.log`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/logs/n62-repeat-component-bounds-second.log)):
+  - Built exit 0 (1338 jobs).
+  - The sole compiler warning is an unused section variable `[Fintype V]` in the private lemma `symmetric_zero_diagonal_sum_even`.
+- **Axiom Audit** ([`formal/logs/n62-repeat-component-bounds-type-axiom-audit.log`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/logs/n62-repeat-component-bounds-type-axiom-audit.log)):
+  - All 7 exported declarations depend strictly on standard Lean core axioms:
+    $$\text{axioms: } [\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}].$$
+  - Zero `sorry`, zero `native_decide`, zero custom axioms. All 3 example callers in `ReviewN62RepeatComponentBounds.lean` compile.
+- **Formal Boundary**:
+  Evenness and budget identities are fully verified. No trace 17, component count bound ($c \le 9$), connectedness, or finite quotient enumeration is claimed in this module.
+- **Verdict**: **PASS (Airtight Lean formalization).**
+
+---
+
+### Record of Clarification & Precision Adjustments
+
+1. **Precision on $d=9$ Triangle Types**:
+   As noted in the B24 post-audit, the deduction that "not all nongenerated unit triangles are type 1" requires **both** $d=9$ and $v_{\text{extra}}=11$ (yielding $s=1, k=2, c_{\text{out}}=0$). The summary table below preserves both explicit conditions.
+2. **Unconditional $c_5 \le 2501$ Bound**:
+   The bound $c_5 \le 2501$ at $d=9$ is now proved unconditionally with respect to the existence of type-1 triangles (via $3L_3 < 2d \implies L_3 \le 5 \implies \tau \le 42$). However, this does **not** prove the existence of any type-0 triangle for $d=9$ in general when $v_{\text{extra}} < 11$.
+
+---
+
+### Scoped Summary Table
+
+| Source File / Component | Target Subject | Audit Verdict | Load-Bearing Mechanism / Formal Boundary |
+| :--- | :--- | :---: | :--- |
+| [`CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_CENTER_CYCLE_EXCLUSION.md) | Center graph components | **PASS** | $C_4$ forces duplicated common neighbors for diamond tips, contradicting $B_{zw}=0$. $P_4$ is not excluded (exact 11-edge bipartite cross-graph). $\Gamma$ components strictly $\{K_1, K_2, P_3, P_4\}$. |
+| [`CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md) | Strict port capacity & $\tau$ | **PASS** | $3L_3 = 2d$ isolates proper $B$-closed set $D \cup W_3$; hence $3L_3 < 2d \implies L_3 \le \lfloor(2d-1)/3\rfloor$. Improves $d=3 \implies \tau \le 178$ and $d=9 \implies \tau \le 42, 2498 \le c_5 \le 2501$ unconditionally. |
+| [`N62RepeatComponentBounds.lean`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatComponentBounds.lean) | Formal component bounds | **PASS** | Proves component evenness via $\mathbb{Z}/2\mathbb{Z}$ involution, $n_C \ge 4$ under $B \le 2$, and exact quotient budget $\sum R_{CD}(R_{DC}-1) = n_C + 2 - R_{CC}$. Core Lean axioms only. |
+
+### Global Mathematical Scope
+- The center graph component reduction to $\{K_1, K_2, P_3, P_4\}$ and the strict port capacity bound $3L_3 < 2d$ are necessary structural constraints.
+- Neither paper asserts graph realizability of any remaining configuration, eliminates any remaining value $d \in \{1,3,5,7,9\}$, or claims an exclusion of order 62. The exact degree-diameter $N(8,2)$ problem remains open.
+
+
+## Local disposition
+
+Accepted within each stated scope. P4 and all d values remain open; the d=9 five-cycle upper bound no longer assumes a type-1 triangle. The Lean result is the actual graph component bounds, with B≤2 explicit only in the minimum-size theorem. This review inspected existing build records and did not execute a build. Model/effort fields record the requested and CLI-selected model, not independent backend attestation; prose assertions about backend routing add no independent evidence. No full order-62 or exact-value claim is made.
+

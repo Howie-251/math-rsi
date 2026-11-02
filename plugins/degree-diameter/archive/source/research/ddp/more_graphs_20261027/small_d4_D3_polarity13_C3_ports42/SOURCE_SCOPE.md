@@ -1,0 +1,11 @@
+# Source/scope check:13-point polarity, three layers and ports at42 vertices
+
+Fresh [Comellas main](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), read2026-10-28 02:27:18UTC, still lists **(4,3)=41**, with no bold/strong/boldstyle optimal mark. The [official D3 entry](https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html) gives41-vertex constructions and Moore bound53, without an upper-bound41 or optimal statement. This repeats the limited primary scope of the old upper_bound_reading.json; it is not an exhaustive upper-bound literature result or proof that42is open.
+
+The exact old `ddp-wave5-fano-split42` exclusion is inherited: start from O4=KG(7,3), split the seven independent Fano vertices by3^7 unordered2+2 partitions, and add one of six fixed cyclic matching shifts. All13122 inputs fail. Its report explicitly excludes neither arbitrary matching permutations/orientations nor general42graphs. The proposed13-point polarity C3lift plus three P3helpers/arbitrary cross-fiber ports is a different source and attachment rule. Both the original REPORT.md and upper_bound_reading.json are linked and recorded in SOURCE_SCOPE.json.
+
+The old branched340 theorem fixes a170vertex base, a Z2double, matching-only K2,2branches and verticals on untouched fibers. The ordinary-cover1344 theorem fixes that other base and a locally-bijective unbranched cover. Neither applies automatically to new helpers, arbitrary port additions or this13-point source. No same exact construction exclusion was found in the350-row targeted ledger read.
+
+The separately completed census filter does exclude **quartic Cayley** D3 graphs above41, but not general42graphs or allVT graphs. No Cayley or vertex-transitive action is assumed for the arbitrary-port/P3helper model. Any later proved covering projection or Cayley structure must be checked against the corresponding scoped results.
+
+This scout built no source geometry/model/graph, ran no BFS/SAT, downloaded no large data and created no raw method. Proposed42/84/4regular counts are parent model specifications, not a new graph result. The exact producer/model remains responsible for actual construction and verification; oldD2/N8 work stays paused.

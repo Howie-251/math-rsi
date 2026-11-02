@@ -1,0 +1,309 @@
+{
+  "status": "STOP_SIGNED_F2_TRUE_INVERSE_FAILURE",
+  "prediction": "Actual type1/reverse-type3 signed-F2 relation fails to return x=0 after noise1; no automatic transfer.",
+  "prediction_supported": true,
+  "hypothetical_target": {
+    "order": 3072,
+    "maximum_degree": 10,
+    "diameter": 4
+  },
+  "input": "research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/source15552_AFFINE_RELATIONS.json",
+  "coefficient_rule": "0→0,1→1,2→integer−1 then mod2; no field homomorphism claimed",
+  "source_controller_count": 192,
+  "source_relation_records_read": 960,
+  "global_types_read": 5,
+  "new_true_arc_reverse_tests_before_stop": 26,
+  "new_actual_global_stays_skipped": 8,
+  "counterexample": {
+    "kind": "ACTUAL_DIRECTED_RELATION_NOT_RECIPROCAL",
+    "global_type": 1,
+    "source_label": 0,
+    "target_label": 183,
+    "input_controller": 0,
+    "output_controller": 11,
+    "input_coordinates": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "noise": 1,
+    "output_coordinates": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "original_arc": {
+      "from": 0,
+      "to": 11,
+      "pivot": 0,
+      "v": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "c": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "B": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          2
+        ]
+      ],
+      "v_offset": 25,
+      "c_offset": 0,
+      "column_offsets": [
+        18,
+        69,
+        72,
+        66
+      ]
+    },
+    "signed_integer_B": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        0,
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "signed_integer_v": [
+      1,
+      -1,
+      -1,
+      0
+    ],
+    "binary_arc": {
+      "from": 0,
+      "to": 11,
+      "B": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "c": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "reverse_original_arcs": [
+      {
+        "from": 11,
+        "to": 0,
+        "pivot": 0,
+        "v": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "c": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "B": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            2
+          ]
+        ],
+        "v_offset": 40,
+        "c_offset": 0,
+        "column_offsets": [
+          15,
+          57,
+          39,
+          69
+        ]
+      }
+    ],
+    "reverse_binary_arcs": [
+      {
+        "from": 11,
+        "to": 0,
+        "B": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "c": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "all_actual_reverse_noise_candidates": [
+      {
+        "reverse_controller": 0,
+        "noise": 0,
+        "coordinates": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "label": 2
+      },
+      {
+        "reverse_controller": 0,
+        "noise": 1,
+        "coordinates": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "label": 13
+      }
+    ],
+    "reverse_target_arc_count": 1,
+    "entire_global_labels_are_distinct": true
+  },
+  "graph_generated": false,
+  "new_target_BFS_roots": 0,
+  "old_F3_field_rank_graph_BFS_Lean_checks": 0,
+  "solver_ARIS_remote_install_or_hash": 0,
+  "alternative_lift_or_field": 0,
+  "exact_scope": "Only the specified literal signed-integer then F2 transfer of these actual five templates/controller.",
+  "not_excluded": [
+    "other binary relations",
+    "other generators or integer lifts",
+    "general degree10 diameter4 graphs"
+  ],
+  "preparation_charge_seconds": 0.2,
+  "actual_process_CPU_seconds": 0.039746384,
+  "total_charged_CPU_seconds": 0.239746384,
+  "CPU_budget_seconds": 20.0,
+  "worker_count": 1,
+  "root_files_modified": false,
+  "graph_parameter_Lean_increment": [
+    0,
+    0,
+    0
+  ],
+  "next": "STOP_REPORT_EXACT_WITNESS_NO_SYMMETRIZATION_OR_SECOND_LIFT"
+}

@@ -1,0 +1,77 @@
+{
+  "date_UTC": "2026-11-02",
+  "status": "READ_ONLY_COMPLETE_NO_SAME_SCOPE_TERMINAL_LOCATED_IN_BOUNDED_HISTORY",
+  "target": [11, 4, 3646],
+  "source_directory": "research/ddp/more_graphs_20261027/d11_D4_current3645/",
+  "source": {
+    "n": 3645,
+    "m": 20044,
+    "degree_histogram": {"10": 7, "11": 3638},
+    "labels": "0..3644",
+    "literal": "source3645.edges",
+    "literal_format": "author undirected edge list with type comments, no numeric n/m header",
+    "header_format_copy": "source3645.header.edges",
+    "header": [3645, 20044],
+    "recipe": "construction.author.json",
+    "profile": "SOURCE_PROFILE.json",
+    "D4": "INHERITED_NO_SOURCE_REVALIDATION"
+  },
+  "free_vertices": [3456, 3489, 3564, 3571, 3583, 3603, 3643],
+  "new_rule": {
+    "domain": "all 20044 actual source edges uv, each exactly one deletion",
+    "new_vertex": 3645,
+    "new_neighbors": "deduplicated F union {u,v}, all of them",
+    "other_edges": "all other source edges preserved",
+    "new_vertex_degree": "at most 9",
+    "conditional_n": 3646,
+    "conditional_m": "20044 - 1 + |F union {u,v}|",
+    "degree_bound": 11,
+    "exact_newroot_condition": "R3_G(F union {u,v}) = V(G)",
+    "equivalent_cached_condition": "R3_G({u,v}) covers all 743 saved F-union holes",
+    "oldold_D4": "SEPARATE_CANDIDATE_CHECK_REQUIRED"
+  },
+  "history": {
+    "full_onecut_maximal_star_terminal": "NOT_LOCATED_IN_BOUNDED_READ; not a universal absence claim",
+    "paired_host_2673": "two cuts, not this scope",
+    "paired_switch_679": "three cuts and selected free subsets, not this scope",
+    "preserved_edges_strict_NO": "inherited, deletion not covered",
+    "inserted_layer_645_proposal": "same-rule proper subdomain; original READ_GATE marked NOT_SELECTED/unexecuted, no terminal located",
+    "degree2_subdivision": "does not connect F7 and cannot close this rule",
+    "author_historical_growth": "not exhaustive final-source failure"
+  },
+  "cache_entries_relative_to_source_directory": {
+    "free_union_metadata": "absorbed_pair_probe/FREE_R3_CACHE.json",
+    "free_union_bits": "absorbed_pair_probe/free_R3.u64le.bin",
+    "free_union_covered": 2902,
+    "free_union_missing": 743,
+    "barrier_proof": "COVER_RESULT.json",
+    "endpoint_metadata": "absorbed_pair_probe/ENDPOINT_CACHE.json",
+    "endpoint_bits": "absorbed_pair_probe/endpoint_R3.u64le.bin",
+    "endpoint_labelled_rows": 1964,
+    "extra_metadata": "absorbed_switch_probe/NEW_R3_CACHE.json",
+    "extra_bits": "absorbed_switch_probe/new_R3.u64le.bin",
+    "extra_labelled_rows": 29,
+    "words_per_row": 57,
+    "word_format": "little-endian uint64; word j bit k = vertex64*j+k; zero final padding",
+    "binding": "use explicit metadata root order, merge by actual labels; do not assume disjoint cache roots or complete inserted-layer cache"
+  },
+  "paper_interface": "research/ddp/more_graphs_20261027/d11_D4_current3645/ONE_CUT_STAR_INTERFACE.md",
+  "history_read_scope": [
+    "canonical source3645 Wiki node and current 459-row ledger records mentioning3645",
+    "source-directory paired-host and paired-switch range files",
+    "original current-source READ_GATE and preserved-edge recovery gate"
+  ],
+  "new_operations": {
+    "web": 0,
+    "source_literal_parse": 0,
+    "binary_ball_read": 0,
+    "BFS": 0,
+    "candidate_generation": 0,
+    "solver": 0,
+    "Lean": 0,
+    "Wiki_edit_or_rebuild": 0
+  },
+  "conservative_onecut_read_prep_CPU_seconds": 0.5,
+  "cost_note": "preserved-edge recheck cost remains separate inherited read cost; no numeric budget reset",
+  "next": "STOP_READ_GATE; parent may separately authorize one finite all20044 batch, reusing cached labels and adding only missing R3 roots"
+}

@@ -1,0 +1,119 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.2
+c clang++-Clang 19.1.2 (https://github.com/llvm/llvm-project 7ba7d8e2f7b6445b60679da826210cdde29eaf8b)
+c Jan  1 1980 00:00:00
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 60 seconds real time (due to '-t 60')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/delete_star6_58/proof.lrat'
+c writing binary proof trace to '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/delete_star6_58/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/delete_star6_58/input.cnf'
+c opening file to read '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/delete_star6_58/input.cnf'
+c found 'p cnf 2949 11079' header
+c parsed 11079 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant irredundant
+c         MB    restarts       trail    variables
+c          level   conflicts       glue      remaining
+c 
+c *  0.00  4  0 0   0    0    0  0% 0 9933 2344 79%
+c {  0.00  4  0 0   0    0    0  0% 0 9933 2344 79%
+c i  0.00  4  0 0   0    1    0 21% 0 9933 2198 75%
+c i  0.00  4  1 0   0    2    0 30% 0 9933 2191 74%
+c i  0.01  4 13 0   5   62   52 42% 5 9933 2165 73%
+c -  0.01  5 12 1  33  303  260 38% 7 8162 2165 73%
+c i  0.01  5  9 1  33  573  441 38% 6 8162 2137 72%
+c -  0.02  5  9 2  37  903  439 37% 6 8050 2137 72%
+c }  0.02  5  9 2  37 1002  504 37% 5 8050 2137 72%
+c [  0.02  5  0 2  37 1002  504  0% 0 8050 2137 72%
+c F  0.02  5  3 2  37 1003  504 47% 0 8050 2137 72%
+c i  0.02  5  3 2  37 1003  504 47% 0 8050 2136 72%
+c i  0.02  5  3 2  37 1004  504 57% 0 8050 2125 72%
+c -  0.04  5 14 3  37 1804 1020 52% 9 7998 2124 72%
+c i  0.05  5 11 3  38 2461 1312 46% 8 7998 2037 69%
+c i  0.06  5 11 3  38 2635  481 11% 7 7650 2031 69%
+c i  0.06  5 11 3  38 2691  505 11% 7 7650 1991 68%
+c i  0.06  5 10 3  38 2712  515 11% 7 7650 1961 66%
+c ]  0.06  5 10 3  38 2721  517 10% 7 7650 1858 63%
+c 0  0.06  5 10 3  38 2721  517 10% 7 7650 1858 63%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs_augmentation/delete_star6_58/proof.lrat' closed
+c LRAT 5097 added clauses 42.43%
+c LRAT 6917 deleted clauses 57.57%
+c LRAT 321723 bytes (0.31 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.05   99.53% search
+c         0.03   65.59% stable
+c         0.02   33.31% unstable
+c         0.00    6.69% parse
+c         0.00    0.24% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.05   92.18% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               387        14.22 %  of conflicts
+c conflicts:                  2721     51251.62    per second
+c decisions:                  3427     64549.55    per second
+c fixed:                      1091        37.00 %  of all variables
+c learned:                    2642        97.10 %  per conflict
+c learned_lits:              39139       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                  10308        26.34 %  learned literals
+c minishrunken:               3332         8.51 %  learned literals
+c otfs:                         19         0.70 %  of conflict
+c propagations:             214518         4.04 M  per second
+c reduced:                     176         6.47 %  per conflict
+c rephased:                      1      2721.00    interval
+c restarts:                     38        71.61    interval
+c stabilizing:                   1        63.18 %  of conflicts
+c subsumed:                    812         6.46 %  of all clauses
+c strengthened:                 19         0.15 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.06    seconds
+c total real time since initialization:            0.06    seconds
+c maximum resident set size of process:           10.64    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

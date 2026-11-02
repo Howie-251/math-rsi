@@ -1,0 +1,13 @@
+# Single E-S cut42 family: uniformly excluded beforeSAT
+
+**The declared rule is strictly excluded by a cross-external route obstruction.** The initial existence prediction is refuted, while the separate uniform R3 certificate for c remains valid. SAT calls, chosen graphs and graph BFS are all zero. No exact graph diameter or ordinary bad-pair total was measured.
+
+The three external base points0,1,4 induce a triangle. In its C3 lift, a source external vertex can reach at most two of the three lifts of a different external base within3 using pure external paths: the direct edge and the two-edge route through the third base. A nonbacktracking3-edge triangle route returns to the source base.
+
+The declared changes create no alternative short cross-external path. Each secant has only one external neighbor and its secant mate has that same external base, so E-S-S-E returns to the original external base; E-S-E backtracks. Absolute points have no external neighbors. The only newly external-incident edge is e-a, and a has no second external neighbor; its other neighbors cannot reach a different external in the remaining short length. Deleting one E-S edge cannot add a route. Therefore the different external target fibre always misses at least one state, for every voltage and allowed port completion. The independent paper[ANALYSIS_COUNTEREXAMPLE_ATTACK.md](ANALYSIS_COUNTEREXAMPLE_ATTACK.md) gives the complete path classification and symbolic witnesses.
+
+For the saved gauge, lambda01=lambda04=0 and tau=lambda14. From oldvertex0 to fibre{3,4,5}, the reachable sheets are{0,-tau}. Tau0 or1 missesvertex4; tau2 missesvertex5. These are conditional uniform witnesses, not a new expanded graph test or a measured bad-pair count.
+
+Preparation is retained unchanged:6403 variables,13226 clauses,178659bytes;93 structural variables over2008846980 assignments. The actual fixed model deletes(0,21), uses basecut(0,7), fixes c to24/25/26, and lets s21 pair with27/28/29. Preparation CPU was0.110873466 seconds; no solver window was consumed. The saved CNF, compiler/decoder, literal maps and initial PREDICTION remain available, and PREPARATION_REPORT/PREPARED_STATE record the historical preparation phase. RESULT and terminal give this final mathematical termination.
+
+The cross-external proof closes the same declared oneE-S-cut/e-helper rule independently of which E-S cut or sheet is selected; it does not exclude arbitrary42 graphs, all forms of one-edge surgery, an added E-A route or a second freed external port. The original no-cut exclusion in the parent directory is unchanged. No next template was compiled in this termination step.

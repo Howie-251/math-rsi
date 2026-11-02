@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_BEFORE_R6_OR_CANDIDATE_QUERY",
+  "prediction": "At least one of root0six incidentedges, subdivided once, has complete newrootR7 coverage; any such passer must still satisfy all affected oldroots before graph acceptance.",
+  "target_Delta": 6,
+  "target_D": 7,
+  "savedL": 20400,
+  "hypothetical_n": 20401,
+  "source_CSR": "research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/adjacency.csr.u32le.bin",
+  "source_n": 20400,
+  "source_m": 61200,
+  "source_D7_inherited": true,
+  "source_D7_BFS_repeated": false,
+  "fixed_deleted_edges": [
+    [
+      0,
+      850
+    ],
+    [
+      0,
+      4183
+    ],
+    [
+      0,
+      13044
+    ],
+    [
+      0,
+      16575
+    ],
+    [
+      0,
+      17412
+    ],
+    [
+      0,
+      18426
+    ]
+  ],
+  "fixed_case_order": "Increasing neighbor label",
+  "operation": "Delete edge0-v, addnew20400 adjacent0andv; no other changes. Newdegree2, allolddegrees6, m61201.",
+  "newroot_gate": "SourceR6(0) union R6(v)=allsource vertices iff actual newroot eccentricity atmost7.",
+  "complete_oldpair_check": "SourceR3({0,v}) plusnewroot. Bothoutside roots have distanceatleast4 tocutends, so a sourcepath usingdeletededge has lengthatleast9>7 andis not an inheritedD7 route.",
+  "CPU_budget_seconds": 5,
+  "stop": "Firstcompletehit or sixcases or actualCPUlimit. No extraedge/helper or Aut work; fullsource singleedgescope onlyif separate transitivityproof supports it."
+}

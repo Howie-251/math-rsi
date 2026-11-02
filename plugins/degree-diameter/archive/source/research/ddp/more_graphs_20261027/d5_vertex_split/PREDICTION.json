@@ -1,0 +1,72 @@
+{
+  "prediction_id": "D5_ADJACENT_SINGLE_VERTEX_SPLIT",
+  "status": "FROZEN_BEFORE_ENUMERATION",
+  "fixed_cases": [
+    {
+      "Delta": 5,
+      "source_n": 650,
+      "target_n": 651,
+      "source_m": 1625,
+      "degree_histogram": {
+        "5": 650
+      },
+      "source": "research/ddp/m1_degree5_transfer/rithwik650_source.edges"
+    },
+    {
+      "Delta": 6,
+      "source_n": 1518,
+      "target_n": 1519,
+      "source_m": 4554,
+      "degree_histogram": {
+        "6": 1518
+      },
+      "source": "1518_source_SageMath.txt:rajiv1518 sparse6 literal",
+      "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD5/1518_rishabhrajiv_SageMath.txt"
+    },
+    {
+      "Delta": 7,
+      "source_n": 2810,
+      "target_n": 2811,
+      "source_m": 9835,
+      "degree_histogram": {
+        "7": 2810
+      },
+      "source": "research/ddp/m1_d7d5_source/baseline_normalized.edges"
+    }
+  ],
+  "baseline_read_date": "2026-10-27",
+  "operation": "Same adjacent disjoint-neighborhood single-vertex split; all other old edges retained.",
+  "capacity_formula": "2+a*sum((Delta-1)^j,j=0..4)+b*sum((Delta-1)^j,j=0..3)",
+  "degree4_global_capacity": {
+    "maximum_capacity": 324,
+    "target_n": 365,
+    "enumerations": 0
+  },
+  "capacity_preserved_parts": {
+    "5": [
+      "1+4",
+      "2+3"
+    ],
+    "6": [
+      "1+5",
+      "2+4",
+      "3+3"
+    ],
+    "7": [
+      "1+6",
+      "2+5",
+      "3+4"
+    ]
+  },
+  "newroot_condition": "For each oldy, d_H(S,y)<=4 or d_H(T,y)<=3; swap for other root.",
+  "oldold_full_condition": "For H-distance>5 old pairs, min(dSx+dSy+2,dTx+dTy+2,dSx+dTy+3,dTx+dSy+3)<=5.",
+  "affected_pair_lemma": "Given sourceD<=5, any old pair whose original <=5 path usesv has one endpoint inR1_H(N(v)); otherwise both endpoints need>=2 steps toN and passingv needs>=6. Thus only<=Delta^2 H-roots are needed to find relevant old far pairs.",
+  "execution": "Every source vertex/all unordered nonempty parts; necessary newroot screen first, then affected oldpairs, then producer fullBFS for every exact passer.",
+  "calibration": "One firstpartition percase: two new-root radius5 miss sets checked directly; no unrelated full-source checks.",
+  "candidate_handling": "Write first successful edge list percase immediately and notifyroot; root独立final验收.",
+  "workers": 1,
+  "CPU_total_budget_seconds": 120,
+  "no_random_rounds": true,
+  "no_extra_sources": true,
+  "stop_rule": "Accurate incomplete/UNKNOWN cursor if resource bound prevents completion; this is last split batch, no automatic extensions."
+}

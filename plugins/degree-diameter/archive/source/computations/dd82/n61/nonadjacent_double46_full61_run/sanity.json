@@ -1,0 +1,89 @@
+{
+  "status": "PASSED",
+  "solver_calls": 0,
+  "counter_gate_truth_assignments": 1952,
+  "shared_threshold_assignments": 160,
+  "conditional_cap_assignments": 128,
+  "lex_assignments": 289,
+  "assignment_cases": [
+    {
+      "label": "all-free-edges-absent",
+      "rejected_groups": [
+        "all_1830_original_pairs_covered",
+        "all_original_degrees_8"
+      ],
+      "original_edges": 16,
+      "degree_group_passed": false,
+      "covered_pairs": 70,
+      "fixed_branch_structure": true,
+      "target_candidate": false
+    },
+    {
+      "label": "sparse-actual-assignment",
+      "rejected_groups": [
+        "R_parent_vectors_nonincreasing_lex",
+        "adjacent_common_at_most_1",
+        "all_1830_original_pairs_covered",
+        "all_original_degrees_8",
+        "global_common_at_most_3",
+        "selected_roots_no_other_double"
+      ],
+      "original_edges": 124,
+      "degree_group_passed": false,
+      "covered_pairs": 550,
+      "fixed_branch_structure": true,
+      "target_candidate": false
+    },
+    {
+      "label": "dense-actual-assignment",
+      "rejected_groups": [
+        "R_parent_vectors_nonincreasing_lex",
+        "adjacent_common_at_most_1",
+        "all_original_degrees_8",
+        "global_common_at_most_3",
+        "selected_roots_no_other_double"
+      ],
+      "original_edges": 1067,
+      "degree_group_passed": false,
+      "covered_pairs": 1830,
+      "fixed_branch_structure": true,
+      "target_candidate": false
+    },
+    {
+      "label": "8-regular-circulant-roots-0-8-sorted-R",
+      "rejected_groups": [
+        "all_1830_original_pairs_covered",
+        "global_common_at_most_3",
+        "selected_roots_no_other_double"
+      ],
+      "original_edges": 244,
+      "degree_group_passed": true,
+      "covered_pairs": 854,
+      "fixed_branch_structure": true,
+      "target_candidate": false
+    },
+    {
+      "label": "same-8-regular-graph-reversed-R-names",
+      "rejected_groups": [
+        "R_parent_vectors_nonincreasing_lex",
+        "all_1830_original_pairs_covered",
+        "global_common_at_most_3",
+        "selected_roots_no_other_double"
+      ],
+      "original_edges": 244,
+      "degree_group_passed": true,
+      "covered_pairs": 854,
+      "fixed_branch_structure": true,
+      "target_candidate": false
+    }
+  ],
+  "original_pairs_per_case": 1830,
+  "in_memory_variables": 504158,
+  "in_memory_clauses": 1816574,
+  "primary_edge_variables": 1658,
+  "fixed_original_edges": 16,
+  "formal_input_written": false,
+  "complete_positive_example_available": false,
+  "circulant_bfs_diameter": 4,
+  "note": "All groups and all1830 actual adjacency/common-count/threshold/coverage values agree with independent integer checks on five graph assignments. The circulant certifies only fixed root structure and degree8; it fails diameter2 and isolated-double requirements. No target is claimed."
+}

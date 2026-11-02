@@ -1,0 +1,176 @@
+{
+  "status": "KERNEL_VERIFIED_TWO_CONCRETE_ORDERED_F4_CLONE_RECIPE_GRAPHS",
+  "checked_UTC": "2026-11-01T04:42:15.604998+00:00",
+  "Lean_version": "4.24.0",
+  "namespace": "DegreeDiameter.Portfolio.F4PlaneBlockClones",
+  "entry": "formal/DegreeDiameter/Portfolio/F4PlaneBlockClonesExact.lean",
+  "audit_entry": "formal/F4PlaneBlockClonesAudit.lean",
+  "graphs": [
+    {
+      "cap": 21,
+      "order": 3984,
+      "carrier": "Fin3840 \u2295 Fin144",
+      "graph": "graph21",
+      "carrier_equiv": "label21 : V21 \u2243 Fin3984",
+      "new_numeric_label": "3840+j",
+      "theorem": "concrete_d21_n3984"
+    },
+    {
+      "cap": 22,
+      "order": 4192,
+      "carrier": "Fin3840 \u2295 Fin352",
+      "graph": "graph22",
+      "carrier_equiv": "label22 : V22 \u2243 Fin4192",
+      "new_numeric_label": "3840+j",
+      "theorem": "concrete_d22_n4192"
+    }
+  ],
+  "conclusion_each": "card=order \u2227 maximum_degree\u2264cap \u2227 true-Walk D\u22643 \u2227 not D\u22642",
+  "final_theorems_have_no_certificate_or_capacity_premises": true,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "general_clone_theorem": "DegreeDiameter.Portfolio.FullNeighborhoodClones.diameterAtMost",
+  "general_old_old_statement": "old_walk_bound_iff for every old u,v and every n; collapse maps all extension walks to same-length source walks",
+  "general_degree_statements": [
+    "degree_old: degree old=source degree+actual clone-neighbor load",
+    "degree_new: degree clone=source degree of its center"
+  ],
+  "general_theorem_not_counted_as_a_concrete_graph": true,
+  "ordered_input_binding": "INPUT_BINDING_CHECK.json",
+  "old3840_sources_changed": false,
+  "old3840_modules_recompiled": false,
+  "new_graph_BFS_rerun": false,
+  "old_graph_BFS_rerun": false,
+  "solver_called": false,
+  "new_unproved_axiom": false,
+  "sorryAx": false,
+  "native_decide": false,
+  "ASCII_edge_parser_equivalence_Lean_verified": false,
+  "labeled_Fin_graph_transport_theorem_claimed": false,
+  "explicit_Sum_to_Fin_label_equiv_proved": true,
+  "full_new_build_CPU_including_failed_attempts": 33.52250899999999,
+  "announced_phase_budgets": {
+    "general_clone_CPU": 600,
+    "concrete_plane_and_load_CPU": 600,
+    "each_module_hard_CPU_limit": 115
+  },
+  "worker_count": 1,
+  "new_module_receipts": [
+    {
+      "module": "FullNeighborhoodClones",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/FullNeighborhoodClones.olean",
+        "DegreeDiameter/Portfolio/FullNeighborhoodClones.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 2.48904,
+      "wall_seconds": 2.5745238810777664,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/FullNeighborhoodClones.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesDefinitions",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/F4PlaneBlockClonesDefinitions.olean",
+        "DegreeDiameter/Portfolio/F4PlaneBlockClonesDefinitions.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 4.749155999999999,
+      "wall_seconds": 5.079135797917843,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesDefinitions.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesPlane",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/F4PlaneBlockClonesPlane.olean",
+        "DegreeDiameter/Portfolio/F4PlaneBlockClonesPlane.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 3.0399059999999998,
+      "wall_seconds": 3.131721142679453,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesPlane.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesCapacity",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/F4PlaneBlockClonesCapacity.olean",
+        "DegreeDiameter/Portfolio/F4PlaneBlockClonesCapacity.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 5.248962000000001,
+      "wall_seconds": 5.355100888758898,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesCapacity.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesLoad",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/F4PlaneBlockClonesLoad.olean",
+        "DegreeDiameter/Portfolio/F4PlaneBlockClonesLoad.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 2.160348,
+      "wall_seconds": 2.7199341878294945,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesLoad.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesExact",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/DegreeDiameter/Portfolio/F4PlaneBlockClonesExact.olean",
+        "DegreeDiameter/Portfolio/F4PlaneBlockClonesExact.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 2.317436,
+      "wall_seconds": 2.5037733130156994,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesExact.log"
+    },
+    {
+      "module": "F4PlaneBlockClonesAudit",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/F4PlaneBlockClonesAudit.olean",
+        "F4PlaneBlockClonesAudit.lean"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 2.244669,
+      "wall_seconds": 2.321956790983677,
+      "CPU_budget_seconds": 115,
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesAudit.log"
+    }
+  ],
+  "review_scope": "New full-old-neighborhood clone encoding and these two actual recipe witnesses; prior paper A or fixed3840 reviews do not cover this encoding",
+  "external_reviews": {
+    "A": "PENDING_ROOT_NEW_ENCODING_REVIEW",
+    "B": "PENDING_ROOT_NEW_PROOF_CONNECTION_REVIEW",
+    "C": "PENDING_ROOT_FINAL_SOURCE_REVIEW"
+  },
+  "review_workflow_complete": false,
+  "public_record_claim": false
+}

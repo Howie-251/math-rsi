@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:9px;border:1px solid #ccd4db;text-align:left;vertical-align:top}.note{background:#eef5fa;padding:16px}.table-wrap{overflow-x:auto}nav{margin:18px 0}nav a{margin-right:14px}small{color:#526477}code{overflow-wrap:anywhere}</style></head><body>
+<h1>当前任务：四步提升的全局覆盖问题</h1>
+<p>更新：2026-10-27 05:30:04 UTC。Goal ACTIVE；范围4≤Δ≤12、D∈{3,4,5}。<strong>已验证新下界仍为0。</strong>下文门槛指保存的2026-10-26公开快照；没有新的纪录声明。</p>
+<div class="note">已恢复两套不同的F₃⁴路由规则，并得到能自动覆盖近端纤维的新几何构造；远端覆盖仍未完成。本轮有限试验均已终态，没有正在后台续跑的控制图搜索。后续继续必须改变实际覆盖瓶颈，不追加失败方法的起点或预算。</div>
+<nav><a href="expert_review_20261027/STATUS.html">专家快照 HTML</a><a href="expert_review_20261027/STATUS.md">专家快照文字版</a><a href="DD_EXPERT_REVIEW_20261027.zip">专家材料 ZIP</a><a href="ddp/breadth_20261027_wave5/REPORT.md">第五轮汇总</a></nav>
+<p>专家材料保留03:15:51 UTC截点，方便对外讨论；本页与第五轮汇总记录后续结果，未向外部专家发送文件。</p>
+<h2>点数如何确定</h2>
+<p>四步机制给出n=81c、Δ=12。保存门槛5832=81×72，所以控制器至少73点；80、84、104分别来自实际基图提升、群、仿射平面旗和已有四正则图，须同时满足控制走法与坐标覆盖。普通控制直径四不足以保证提升直径四。</p>
+<p>新四维商chart使全部108个约化四字词满秩，要求exact-NB4控制器。原72点实例的另一套chart只有100个满秩四字词，但其同点balanced路由和二步plane pencils可以补全纤维，形成I∪R2∪RG4宽规则。两套规则的条件不能混用。</p>
+<h2>这一轮实际完成了什么</h2>
+<div class="table-wrap"><table><tr><th>构造入口</th><th>结果与停止原因</th></tr>
+<tr><td>31点双bowtie全局控制图</td><td>3起点、600000次合法交换，无raw NB3 passer；最好独立检查D4、7个&gt;3无序对。31点矩阵工具已校准，但收到候选0、solver调用0。未生成837点图。</td></tr>
+<tr><td>Fano分裂42点图</td><td>固定3⁷×6=13122候选全部完成；最好独立检查D4、45个&gt;3无序对。只关闭固定分裂和匹配范围。</td></tr>
+<tr><td>C10的80点控制提升</td><td>8×25000提案；最好宽缺项160有序对，独立检查D5、20个&gt;4无序对。16个代表缺项已见于作者旧记录，不是数值改善；不生成6480点图。</td></tr>
+<tr><td>仿射平面旗80点trade</td><td>固定几何结构的前8个规范方案都保证同点、相邻及二步纤维覆盖，但远端宽覆盖仍失败。最好图独立检查D5、208个&gt;4无序对。其余7图没有重复普通BFS；不追加方向、B顺序或解数。</td></tr>
+<tr><td>HS850非均匀分支</td><td>六参数模型的12&lt;17容量障碍被一次26参数放松解除。固定4×25000提案仍失败；完整850源独立检查12正则、D4、26180个&gt;3无序对。模型整体未排除，HS入口已停止。</td></tr>
+<tr><td>104点已知图的新提升筛</td><td>唯一短路0–24–4–32只能提供27&lt;81个坐标，root独立枚举全部≤4walk确认。固定投影的8424点D4提升受阻，没有进行标号搜索。</td></tr>
+<tr><td>另外两个短路容量入口</td><td>Heisenberg729的五逆对Cayley模型由短证明统一排除；F₂³通用三步chart的197568规范输入均失败，并得到Fano方向障碍。后者最佳候选全部36词已作一次独立校准。两者都不排除任意同阶图。</td></tr>
+</table></div>
+<p>此外，两种六点基图因8&lt;13容量停止；84阶固定群全部820个四元逆闭生成集未达exact-NB4。详见第五轮报告。这些行包含同一机制的变体和工具，不作为独立方法数。</p>
+<h2>剩下的数学问题</h2>
+<p>已有规则能自动覆盖近端，但没有同时覆盖所有远端控制点及其坐标。仿射旗trade使局部五圈覆盖成立，普通直径却达到五；C10保留源结构仍有远端缺项。下一构造需要同时安排短路的全局分布和纤维端点，单独减少局部缺项没有继续投入的依据。</p>
+<p>三个subagent已分别承担构造与规则恢复、非均匀分支及短路容量、已有源图筛查；最终保存图的独立核验由主代理整合。同图检查记录会复用。Gemini最后一次成功互审接受的是固定192点商图补边障碍，未把该回执扩张为本轮全部代码或结论的验收。</p>
+<p><a href="ddp/breadth_20261027_wave5/RESULTS.json">本轮机器可读结果</a> · <a href="progress_ddp_20261027_0430.html">04:30阶段页</a> · <a href="ddp/breadth_20261027_wave4/REPORT.md">第四轮汇总</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p>
+<p>最近人工指导仍是多比较有实质差别的构造、及时跳出无新覆盖依据的长尾。没有新下界，没有新成果Lean验收；旧D2/n61/SAT继续暂停。</p>
+</body></html>

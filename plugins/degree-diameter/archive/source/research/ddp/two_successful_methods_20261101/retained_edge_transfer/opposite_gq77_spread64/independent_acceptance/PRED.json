@@ -1,0 +1,14 @@
+{
+  "status": "PRE_EXECUTION_PREDICTION",
+  "target": "../graph_d64_D3_n160050.edges",
+  "independence": "Fresh finite arithmetic and validator. No producer source, producer geometry, route cache, or prior acceptance executed or read.",
+  "construction": "GF7 coordinates (u0,u1,v0,v1); beta^2=3 for GF49. Lexicographic canonical PG(3,7) points; all rank-two RREF subspaces; retain B=0; sort eight-point sets lexicographically.",
+  "predicted_counts": {"points":400,"rank_two_RREF_subspaces":2850,"isotropic_lines":400,"points_per_line":8,"lines_per_point":8,"projection_obligations":160000,"spread_lines":50,"old_vertices":160000,"old_incident_flags":3200,"old_edges":5118400,"new_vertices":50,"new_edges":3200,"vertices":160050,"edges":5121600,"degree":64},
+  "projection_scope": "All 400 points x 400 lines: find q,m with q on l and p,q on m; additionally require unique projected q for every nonincident pair.",
+  "spread": "Finite slopes m=0..48 as (m%7,m/7), V=mU in GF49, then infinity U=0; each of 400 points must have exactly one owner.",
+  "literal_scope": "Check declared header, every endpoint, u<v, strict lexicographic order, no duplicate edges, every edge against independently derived adjacency formula, edge count, degree 64 at every vertex. Independently derive formula cap/exact degree 64, so allowed subset and 64-regularity imply equality with complete formula.",
+  "distance_scope": "Read actual reusable OppositeGQ35SpreadWalks and OppositeIncidenceSpreadFamily proofs, independently verify all finite premises and explain all old-old/old-new/new-new short walks. Literal queue BFS at exactly 50 new roots, never all 160000 old roots. Exact D3 follows finite-premise all-pairs upper bound and 160050>1+64+64^2.",
+  "budget": "At most 120 total CPU seconds for compilation, finite geometry, literal binding, and 50 new-root BFS; one worker; no solver, Lean build, hash, install, source regeneration, or claimed public priority.",
+  "failure_rule": "First contradiction or budget exhaustion stops acceptance; missing or unfinished graph is pending, never PASS.",
+  "ownership": "Only independent_acceptance/"
+}

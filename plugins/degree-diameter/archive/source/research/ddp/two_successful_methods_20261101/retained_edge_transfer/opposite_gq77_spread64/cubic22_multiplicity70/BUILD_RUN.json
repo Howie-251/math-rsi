@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-11-01T08:09:23.121920+00:00",
+  "budget_CPU_seconds": 30,
+  "workers": 1,
+  "preparation_CPU_seconds": 0.013759445000000002,
+  "compile_runs": 1,
+  "production_runs": 1,
+  "BFS": 0,
+  "solver": 0,
+  "Lean": 0,
+  "compile": {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "-DNDEBUG",
+      "produce.cpp",
+      "-o",
+      "produce"
+    ],
+    "exit_code": 0,
+    "CPU_seconds": 1.1695019999999998
+  },
+  "production": {
+    "command": [
+      "./produce"
+    ],
+    "exit_code": 0,
+    "child_CPU_seconds": 0.9947030000000001,
+    "RLIMIT_CPU_seconds": 28
+  },
+  "total_measured_CPU_seconds": 2.1803343429999997,
+  "wall_seconds": 2.349440947175026,
+  "finished_utc": "2026-11-01T08:09:25.455738+00:00",
+  "status": "PRODUCER_PASS_AWAIT_FRESH_INDEPENDENT_ACCEPTANCE"
+}

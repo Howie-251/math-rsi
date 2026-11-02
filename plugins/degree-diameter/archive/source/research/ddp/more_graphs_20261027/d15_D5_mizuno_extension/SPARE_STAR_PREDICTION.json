@@ -1,0 +1,17 @@
+{
+  "prediction_id": "P_D15_FULL_SPARE_STAR",
+  "status": "FROZEN_BEFORE_LITERAL_PROFILE_AND_STAR_SCAN",
+  "prediction": "The current100132 source has no nonisolated vertex whose entire open neighborhood lies among current degree<15 vertices.",
+  "scope": "Every one of the100132 actual source vertices as a prototype; source unchanged, one false twin with exactly N(v) as new pins. No approximate stars or arbitrary pin changes.",
+  "exact_test": "For each saturated vertex u of degree15, increment satN[v] for every neighbor v. A prototype v passes iff degree(v)>0 and satN[v]=0.",
+  "uniform_cover_reason": "For z distinct from prototype v, a shortest v-to-z path starts in N(v), so the new twin is at most that distance from z. It reaches v in2. With old D<=5 this is a complete old-graph cover, and every old pin has a spare slot.",
+  "source_n": 100132,
+  "source_m_external_expectation_only": 749732,
+  "target_Delta": 15,
+  "target_D": 5,
+  "hypothetical_n": 100133,
+  "CPU_budget_for_extra_scan_seconds": 1,
+  "implementation": "Reuse native profile adjacency and degrees; no second parse or BFS for negative result.",
+  "counterfactual_hit": "If the prediction is refuted by a full spare star, export the first literal graph and check its new root once, then notify root for independent first-parameter acceptance.",
+  "authorization": "Root delegated this complementary exact check through new_method_source_scout; no duplicated D15 scan there."
+}

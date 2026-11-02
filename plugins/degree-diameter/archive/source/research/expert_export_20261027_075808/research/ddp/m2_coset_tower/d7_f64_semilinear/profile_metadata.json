@@ -1,0 +1,75 @@
+{
+  "field": "F2[t]/(t^6+t+1)",
+  "polynomial_binary": 67,
+  "r": 8,
+  "r_order": 21,
+  "Frobenius_exponent": 8,
+  "K_order": 42,
+  "H_order": 6,
+  "group_product": "(x,a,e)*(y,b,f)=(x+r^a*y^(8^e),a+8^e*b mod21,e+f mod2)",
+  "group_inverse": "(x,a,e)^-1=(r^(-8^e*a)*x^(8^e),-8^e*a mod21,e)",
+  "encoding": "x+64*(a+21*e)",
+  "layer_sizes": [
+    2688,
+    448,
+    64
+  ],
+  "first_representatives": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      7,
+      0
+    ],
+    [
+      1,
+      7,
+      1
+    ]
+  ],
+  "normalization_proof": "NORMALIZATION.md",
+  "normalization": "Choose an A21 pair required by HH; genuine K rotation conjugation normalizes its x to1 and changes a for e=1; Frobenius and inversion give a in1,3,7.",
+  "inverse_pairs_file": "profile.inverse_pairs.json",
+  "inverse_pairs_count": 1300,
+  "inverse_pair_class_counts": {
+    "zero_x": 19,
+    "A21": 420,
+    "BC42": 861
+  },
+  "other_pairs_include_noninvolutory_a0_e1": true,
+  "pair_table_order": "ascending encoded id g with g<actual_semilinear_inverse(g)",
+  "input_order": "first branch outer, then j<k in the ascending pair table with the first pair removed",
+  "inputs_per_first_branch": 843051,
+  "raw_total": 5058306,
+  "HH_pass_per_first_branch": 747348,
+  "HH_total": 4484088,
+  "all_other_two_pairs_are_distinct_and_different_from_first": true,
+  "filters": [
+    "exact K-orbit HH",
+    "exact HW3H union KW1H union HW1K BB",
+    "ordinary actual-graph three-root BFS"
+  ],
+  "no_cyclic_group_inverse_or_center_quotient_used": true,
+  "profile_HH_target": 2000,
+  "full_search_authorized_in_this_run": false,
+  "stop_on_actual_three_root_D5": true
+}

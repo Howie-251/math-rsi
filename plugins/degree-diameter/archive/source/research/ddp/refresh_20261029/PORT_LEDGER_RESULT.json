@@ -1,0 +1,50 @@
+{
+  "status": "PORT_ACCOUNT_ONLY_COMPLETE",
+  "family": [
+    13,
+    5
+  ],
+  "source": "delivery/families.json",
+  "assumption": "Each vertex is one uniform-radix-r router; each network edge consumes one port at each endpoint; r>=13",
+  "interpretation": "Potential endpoint slot count only; current physical devices/endpoints/capacities unspecified",
+  "rows": [
+    {
+      "n": 51417,
+      "m": 324451,
+      "routers_added": 0,
+      "links_added": 0,
+      "endpoint_slot_formula": "51417*r - 648902",
+      "slot_change_formula": "0*r - 0",
+      "zero_change_radix": null,
+      "illustrative_uniform_radix16_slots": 173770,
+      "illustrative_uniform_radix16_change": 0
+    },
+    {
+      "n": 51437,
+      "m": 324651,
+      "routers_added": 20,
+      "links_added": 200,
+      "endpoint_slot_formula": "51437*r - 649302",
+      "slot_change_formula": "20*r - 400",
+      "zero_change_radix": "20",
+      "illustrative_uniform_radix16_slots": 173690,
+      "illustrative_uniform_radix16_change": -80
+    },
+    {
+      "n": 51457,
+      "m": 324863,
+      "routers_added": 40,
+      "links_added": 412,
+      "endpoint_slot_formula": "51457*r - 649726",
+      "slot_change_formula": "40*r - 824",
+      "zero_change_radix": "103/5",
+      "illustrative_uniform_radix16_slots": 173586,
+      "illustrative_uniform_radix16_change": -184
+    }
+  ],
+  "throughput_test_run": false,
+  "latency_test_run": false,
+  "routing_simulation_run": false,
+  "graph_verification_repeated": false,
+  "CPU_seconds": 0.002019220000000002
+}

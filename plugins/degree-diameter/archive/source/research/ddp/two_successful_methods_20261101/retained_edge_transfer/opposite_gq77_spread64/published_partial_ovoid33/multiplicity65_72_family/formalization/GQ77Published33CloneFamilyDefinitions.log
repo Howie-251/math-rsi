@@ -1,0 +1,13 @@
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.ovoid : Fin 33 → OppositeGQ77Spread.Point :=
+![20, 32, 40, 42, 43, 44, 52, 57, 85, 119, 122, 133, 147, 165, 179, 199, 230, 248, 251, 260, 265, 279, 295, 312, 315,
+  322, 323, 326, 337, 347, 364, 378, 394]
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.center : (k : ℕ) → CloneIndex k → Source.Vertex :=
+fun k j => baseCenter j.2
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.graph : (k : ℕ) → SimpleGraph (Vertex k) :=
+fun k => FullNeighborhoodClones.graph OppositeGQ77Spread.graph (center k)
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.label : (k : ℕ) → Vertex k ≃ Fin (160050 + 1650 * k) :=
+fun k => (OppositeGQ77Spread.label.sumCongr (cloneLabel k)).trans finSumFinEquiv
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.FinalClaim : ℕ → Prop :=
+fun k =>
+  Fintype.card (Vertex k) = 160050 + 1650 * k ∧
+    (∀ (v : Vertex k), (graph k).degree v ≤ 64 + k) ∧ DiameterAtMost (graph k) 3 ∧ ¬DiameterAtMost (graph k) 2

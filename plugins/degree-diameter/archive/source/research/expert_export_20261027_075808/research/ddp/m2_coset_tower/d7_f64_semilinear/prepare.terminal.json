@@ -1,0 +1,99 @@
+{
+  "status": "PREFLIGHT_GRAPHS_READY_FOR_INDEPENDENT_CHECK",
+  "cumulative_cpu_seconds": 1.544716,
+  "cumulative_cpu_limit_seconds": 60.0,
+  "worker_count": 1,
+  "runs": [
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/search.cpp",
+        "-o",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/search"
+      ],
+      "log": "compile.log",
+      "returncode": 0,
+      "cpu_seconds": 1.5014820000000002,
+      "wall_seconds": 1.5053362660109997
+    },
+    {
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/search",
+        "check",
+        "65",
+        "1346",
+        "1539",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/preflight_0"
+      ],
+      "log": "preflight_0.log",
+      "returncode": 0,
+      "cpu_seconds": 0.021387000000000267,
+      "wall_seconds": 0.022284287959337234
+    },
+    {
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/search",
+        "check",
+        "1793",
+        "64",
+        "1666",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear/preflight_1"
+      ],
+      "log": "preflight_1.log",
+      "returncode": 0,
+      "cpu_seconds": 0.02106700000000017,
+      "wall_seconds": 0.022104959934949875
+    }
+  ],
+  "samples": [
+    {
+      "sample_index": 0,
+      "inverse_pair_representatives": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ]
+      ],
+      "parameters_file": "preflight_0.json",
+      "edges_file": "preflight_0.edges",
+      "three_root_bad_pairs": 216384
+    },
+    {
+      "sample_index": 1,
+      "inverse_pair_representatives": [
+        [
+          1,
+          7,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          5,
+          1
+        ]
+      ],
+      "parameters_file": "preflight_1.json",
+      "edges_file": "preflight_1.edges",
+      "three_root_bad_pairs": 395808
+    }
+  ],
+  "profile_started": false
+}

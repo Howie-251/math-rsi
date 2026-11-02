@@ -1,0 +1,45 @@
+{
+  "status": "READ_ONLY_CHANGED_INTERFACE_REVIEW_COMPLETE",
+  "files_read": [
+    "prepare.py",
+    "run.py",
+    "../../production/cover.cpp",
+    "../../pool/build_pool.py"
+  ],
+  "coefficient_index_binding": "New orbit reuses the same 91 coefficient points and generator permutations; run.py asserts exact equality to coefficient_points91.txt before using the 364 flat and 756 nonflat plane maps.",
+  "current_sources": {
+    "11": {
+      "n": 37631,
+      "m": 205329,
+      "degree_cache": "accepted_d11_d12_full_neighborhood_clones/source_degrees_d11.u8.bin"
+    },
+    "12": {
+      "n": 42402,
+      "m": 245937,
+      "degree_cache": "accepted_d11_d12_full_neighborhood_clones/source_degrees_d12.u8.bin"
+    }
+  },
+  "old42398_used": false,
+  "whole_classes": "Frobenius-stable Btw has five fixed points plus five pairs. F3-defined plane embeddings commute with Frobenius, so actual folded distinct pins have size 10+s. run.py derives pins from actual fold labels and checks current degree/cardinality; remaining anchor cap is Delta-len(pins).",
+  "full_current_coverage": "cover.cpp parses all n vertices/all m edges of the chosen current source and runs one multisource closed depth-4 traversal. Its missing list is over 0..n-1, including all augmentation vertices. The core_missing count in run.py is only a diagnostic. All old edges are copied unchanged for a hit; a guarded hit gets another selected-set full-current R4 check.",
+  "finite_pool_result_read": {
+    "D11_distinct_pinsets": 0,
+    "D12_distinct_pinsets": 30,
+    "D12_mandatory_pin_histogram": {
+      "10": 5,
+      "11": 5,
+      "12": 20
+    }
+  },
+  "observations_sent_to_producer": [
+    "prepare.py seed_matrix_F9 metadata differs from the actual explicit R used by ../run.py and ../orbit.json. Numerical pool reads the correct saved orbit; metadata should be corrected without changing or rerunning pool data.",
+    "The existing native prepare searches for a single guard even at anchor_cap=0. For mandatory-missing 12-pin items, the adapter must classify no remaining guard budget rather than accept that guard or assert if one is returned. This is a changed-interface capacity case, not a new coverage computation."
+  ],
+  "review_execution": {
+    "source_or_ball_recomputations": 0,
+    "BFS_runs": 0,
+    "solver_calls": 0,
+    "graphs_generated": 0
+  },
+  "scope": "Only changed adapter and cache interfaces; no duplicate source validation or producer numeric run."
+}

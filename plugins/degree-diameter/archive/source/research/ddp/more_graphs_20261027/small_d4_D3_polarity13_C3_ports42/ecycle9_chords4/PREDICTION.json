@@ -1,0 +1,49 @@
+{
+  "timestamp_UTC": "2026-10-28 02:46 UTC",
+  "status": "PREDICTIONS_BEFORE_COMPILE_OR_SOLVER",
+  "target": {
+    "Delta": 4,
+    "D": 3,
+    "n": 42,
+    "saved_public_lower_bound": 41
+  },
+  "question": "Can globally reassigned E-S attachments supply missing cross-E routes while retaining full-fibre helper coverage?",
+  "previous_unknown": "Single deleted E-S plus one E-helper spoke repairs a helper target bottleneck, but cannot create a third endpoint between different external base fibres in <=3 steps.",
+  "changed_rule": {
+    "external_core": "Nine E vertices form C9, indices mod9.",
+    "secant_matching": "Nine S-S pairs, each with exactly one endpoint s_i whose base is adjacent to chosen absolute base T=8.",
+    "new_ES_attachments": "E_i-s_i and E_(i+4)-s_prime_i for i=0..8; all eighteen old E-S attachments are reassigned.",
+    "old_AS": "Retain cyclic3 lift edges from twelve A-S base edges, each with a ternary shift; fix S-S pairs to identity for this concrete family.",
+    "ports": "Delete both E-S end edges of pair0. Add helpers a-b-c. a attaches E0,E4 and one A; b attaches two A; c attaches all three T lifts. Each freed S takes one eligible A free port, remaining four A ports form two A-A edges.",
+    "degree_accounting": "Old72-2+helperpath2+spokes8+oldold4=84; all42 vertices degree4."
+  },
+  "predictions": [
+    {
+      "id": "E_E",
+      "claim": "All nine E vertices are pairwise at distance <=3 for every structural assignment.",
+      "reason": "C9 steps give offsets 1,2,3. Each S-S pair gives an offset4 path of length3. Removed pair0 is replaced by E0-a-E4 length2."
+    },
+    {
+      "id": "c_all",
+      "claim": "c reaches all42 vertices in <=3 for every structural assignment.",
+      "reason": "Its full T fibre reaches all S neighboring T in2, their S mates in3, and every A fibre in<=3. Exactly one T-neighbor S is attached to each E; the removed E0 branch is restored by c-b-a-E0."
+    },
+    {
+      "id": "a_E",
+      "claim": "a reaches all nine E in<=3.",
+      "reason": "E0 and E4 have cycle R2 sets of size5 whose union is all nine."
+    },
+    {
+      "id": "joint_existence",
+      "claim": "There may be a completion of the remaining A-S shifts and free ports with all pairs D3.",
+      "evidence_limit": "The three positive route-class guarantees do not imply joint coverage of remaining A/S/helper pairs. This existential prediction may be refuted."
+    }
+  ],
+  "scope": "One concrete non-Cayley-assumed 42-point family with fixed C9/chord assignment and fixed deleted pair0. Does not preserve Brown13 external projection and is not covered by the prior unchanged-lift or single-ES-cut exclusions.",
+  "execution": {
+    "SAT_calls": 0,
+    "chosen_graphs": 0,
+    "BFS": 0
+  },
+  "next_decision": "Check the three positive guarantees and attack remaining route classes. If valid and no uniform obstruction, compile one exact complete-pair CNF and run a single explicitly budgeted solver call; no seed/reencoding loop."
+}

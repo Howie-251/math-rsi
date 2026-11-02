@@ -1,0 +1,148 @@
+{
+  "status": "SMALL_MATRIX_SEMANTICS_PASSED",
+  "AND_truth_table_assignments": 8,
+  "matrix_assignments": 6,
+  "records": [
+    {
+      "name": "triangular_prism",
+      "n": 6,
+      "cross_degree": 1,
+      "variables": 39,
+      "clauses": 111,
+      "assigned_variables": 39,
+      "false_clauses": 0,
+      "exact_degrees": true,
+      "failed_degrees": [],
+      "bad_pairs": 0,
+      "bad_pairs_by_type": {
+        "cross": 0,
+        "left": 0,
+        "right": 0
+      },
+      "diameter": 2,
+      "target_graph": true,
+      "complete_clause_check_matches_BFS": true
+    },
+    {
+      "name": "both_coverages_valid",
+      "n": 12,
+      "cross_degree": 2,
+      "variables": 252,
+      "clauses": 786,
+      "assigned_variables": 252,
+      "false_clauses": 0,
+      "exact_degrees": true,
+      "failed_degrees": [],
+      "bad_pairs": 0,
+      "bad_pairs_by_type": {
+        "cross": 0,
+        "left": 0,
+        "right": 0
+      },
+      "diameter": 2,
+      "target_graph": true,
+      "complete_clause_check_matches_BFS": true
+    },
+    {
+      "name": "cross_covered_but_same_side_fails",
+      "n": 12,
+      "cross_degree": 3,
+      "variables": 288,
+      "clauses": 918,
+      "assigned_variables": 288,
+      "false_clauses": 6,
+      "exact_degrees": true,
+      "failed_degrees": [],
+      "bad_pairs": 6,
+      "bad_pairs_by_type": {
+        "cross": 0,
+        "left": 3,
+        "right": 3
+      },
+      "diameter": 3,
+      "target_graph": false,
+      "complete_clause_check_matches_BFS": true
+    },
+    {
+      "name": "same_side_covered_but_cross_fails",
+      "n": 14,
+      "cross_degree": 2,
+      "variables": 399,
+      "clauses": 1253,
+      "assigned_variables": 399,
+      "false_clauses": 7,
+      "exact_degrees": true,
+      "failed_degrees": [],
+      "bad_pairs": 7,
+      "bad_pairs_by_type": {
+        "cross": 7,
+        "left": 0,
+        "right": 0
+      },
+      "diameter": 3,
+      "target_graph": false,
+      "complete_clause_check_matches_BFS": true
+    },
+    {
+      "name": "rows_correct_columns_wrong",
+      "n": 12,
+      "cross_degree": 2,
+      "variables": 252,
+      "clauses": 786,
+      "assigned_variables": 252,
+      "false_clauses": 2,
+      "exact_degrees": false,
+      "failed_degrees": [
+        [
+          "right",
+          0
+        ],
+        [
+          "right",
+          1
+        ]
+      ],
+      "bad_pairs": 0,
+      "bad_pairs_by_type": {
+        "cross": 0,
+        "left": 0,
+        "right": 0
+      },
+      "diameter": 2,
+      "target_graph": false,
+      "complete_clause_check_matches_BFS": true
+    },
+    {
+      "name": "columns_correct_rows_wrong",
+      "n": 12,
+      "cross_degree": 2,
+      "variables": 252,
+      "clauses": 786,
+      "assigned_variables": 252,
+      "false_clauses": 2,
+      "exact_degrees": false,
+      "failed_degrees": [
+        [
+          "left",
+          0
+        ],
+        [
+          "left",
+          1
+        ]
+      ],
+      "bad_pairs": 0,
+      "bad_pairs_by_type": {
+        "cross": 0,
+        "left": 0,
+        "right": 0
+      },
+      "diameter": 2,
+      "target_graph": false,
+      "complete_clause_check_matches_BFS": true
+    }
+  ],
+  "official_C29_model_built": false,
+  "solver_calls": 0,
+  "elapsed_cpu": 0.009195769999999999
+}

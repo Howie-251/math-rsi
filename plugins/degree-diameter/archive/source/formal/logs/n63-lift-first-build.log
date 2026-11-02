@@ -1,0 +1,55 @@
+✔ [2549/2550] Built DegreeDiameter.N63Norm (27s)
+✖ [2550/2550] Building DegreeDiameter.N63Lift (17s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N63Lift.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Lift.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Lift.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Lift.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Lift.setup.json --json
+error: DegreeDiameter/N63Lift.lean:44:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (∑ i ∈ ?s, ?p i).homogenize ?n
+in the target expression
+  (fun q => (MvPolynomial.aeval ![X ^ 2 + 1, X]) (q.homogenize p.natDegree)) p =
+    (fun q => (MvPolynomial.aeval ![X ^ 2 + 1, X]) (q.homogenize p.natDegree))
+      (∑ i ∈ Finset.range (p.natDegree + 1), C (p.coeff i) * X ^ i)
+
+p : ℚ[X]
+hp :
+  (fun q => (MvPolynomial.aeval ![X ^ 2 + 1, X]) (q.homogenize p.natDegree)) p =
+    (fun q => (MvPolynomial.aeval ![X ^ 2 + 1, X]) (q.homogenize p.natDegree))
+      (∑ i ∈ Finset.range (p.natDegree + 1), C (p.coeff i) * X ^ i)
+⊢ cyclotomicLift p = ∑ j ∈ Finset.range (p.natDegree + 1), C (p.coeff j) * (X ^ 2 + 1) ^ j * X ^ (p.natDegree - j)
+error: DegreeDiameter/N63Lift.lean:78:17: Type mismatch: After simplification, term
+  Finset.mem_range.mp hi.left
+ has type
+  i < d + 1
+but is expected to have type
+  i ≤ d
+error: DegreeDiameter/N63Lift.lean:79:15: Type mismatch: After simplification, term
+  Finset.mem_range.mp hj.left
+ has type
+  j < d + 1
+but is expected to have type
+  j ≤ d
+error: DegreeDiameter/N63Lift.lean:87:27: Type mismatch: After simplification, term
+  Finset.mem_range.mp hj
+ has type
+  j < d + 1
+but is expected to have type
+  j ≤ d
+error: DegreeDiameter/N63Lift.lean:94:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (term d).natDegree
+in the target expression
+  (fun j => (term j).natDegree) d ≤ (Finset.range d.succ).sup fun j => (term j).natDegree
+
+case a
+p : ℚ[X]
+hp : p ≠ 0
+d : ℕ := p.natDegree
+term : ℕ → ℚ[X] := fun j => C (p.coeff j) * (X ^ 2 + 1) ^ j * X ^ (d - j)
+hb : (X ^ 2 + 1).natDegree = 2
+hb0 : X ^ 2 + 1 ≠ 0
+ht : ∀ j ≤ d, p.coeff j ≠ 0 → (term j).natDegree = d + j
+hc : ∀ (j : ℕ), term j ≠ 0 → p.coeff j ≠ 0
+hpair : {j | j ∈ Finset.range (d + 1) ∧ term j ≠ 0}.Pairwise fun i j => (term i).natDegree ≠ (term j).natDegree
+hle : (fun j => (term j).natDegree) d ≤ (Finset.range d.succ).sup fun j => (term j).natDegree
+⊢ 2 * d ≤ (Finset.range (d + 1)).sup fun i => (term i).natDegree
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N63Lift
+error: build failed

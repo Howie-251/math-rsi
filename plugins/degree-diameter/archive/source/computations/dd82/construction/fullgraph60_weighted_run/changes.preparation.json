@@ -1,0 +1,61 @@
+{
+  "run_id": "dd82-v3-fullgraph-weighted60-20261013",
+  "previous_preparation_run_id": "dd82-v3-fullgraph60-weighted-20261013",
+  "naming_correction_only": true,
+  "original_preparation_preserved": true,
+  "status": "PREPARED_NOT_RUN",
+  "compile": {
+    "command": [
+      "g++",
+      "-O3",
+      "-std=c++17",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted.cpp",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/search.bin"
+    ],
+    "exit_code": 0,
+    "cpu_seconds": 1.399783,
+    "wall_seconds": 1.4185678474605083,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 20,
+    "wall_limit_seconds": 30,
+    "memory_limit_bytes": 4294967296
+  },
+  "change_sanity_process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/search.bin",
+      "change_sanity",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/seed.edges",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run",
+      "0",
+      "0"
+    ],
+    "exit_code": 0,
+    "cpu_seconds": 0.013540000000000177,
+    "wall_seconds": 0.017628934234380722,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 5,
+    "wall_limit_seconds": 10,
+    "memory_limit_bytes": 4294967296
+  },
+  "change_sanity": {
+    "passed": true,
+    "inverse_candidates_for_one_real_move": 1,
+    "inverse_ban_persists_across_weight_updates": true,
+    "last_move_changes_after_next_move": true,
+    "jump_formula_moves_checked": 64,
+    "jump_checked_at_t_minus_one_and_t": true,
+    "subset_jump": 21,
+    "cpu_seconds": 0.011938,
+    "wall_seconds": 0.010676037
+  },
+  "changes": [
+    "Ban the exact inverse of the most recent accepted switch, including across weight updates",
+    "Jump weights by the exact first strict-improvement threshold over all eligible moves",
+    "Direct graph equality against the last four accepted states; no hashes",
+    "Save first/best/final bad-pair lists and overlap, maximum weight and distinct incremented pairs"
+  ],
+  "formal_search_started": false
+}

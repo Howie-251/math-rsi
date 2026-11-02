@@ -1,0 +1,187 @@
+structure DegreeDiameter.D2MatchTemplate.{u_1} {V : Type u_1} (G : SimpleGraph V) (r i j k w a : V) : Prop
+number of parameters: 8
+fields:
+  DegreeDiameter.D2MatchTemplate.root_i : G.Adj r i
+  DegreeDiameter.D2MatchTemplate.root_j : G.Adj r j
+  DegreeDiameter.D2MatchTemplate.root_k : G.Adj r k
+  DegreeDiameter.D2MatchTemplate.i_ne_j : i ≠ j
+  DegreeDiameter.D2MatchTemplate.i_ne_k : i ≠ k
+  DegreeDiameter.D2MatchTemplate.j_ne_k : j ≠ k
+  DegreeDiameter.D2MatchTemplate.w_ne_root : w ≠ r
+  DegreeDiameter.D2MatchTemplate.a_ne_root : a ≠ r
+  DegreeDiameter.D2MatchTemplate.w_ne_a : w ≠ a
+  DegreeDiameter.D2MatchTemplate.root_w_nonadj : ¬G.Adj r w
+  DegreeDiameter.D2MatchTemplate.root_a_nonadj : ¬G.Adj r a
+  DegreeDiameter.D2MatchTemplate.w_a_nonadj : ¬G.Adj w a
+  DegreeDiameter.D2MatchTemplate.root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y
+  DegreeDiameter.D2MatchTemplate.w_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = i ∨ x = j ∨ x = k)
+  DegreeDiameter.D2MatchTemplate.a_parents : ∀ (x : V), G.Adj r x → (G.Adj x a ↔ x = i ∨ x = j)
+  DegreeDiameter.D2MatchTemplate.ordinary_parent_unique : ∀ (y : V),
+      y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x'
+constructor:
+  DegreeDiameter.D2MatchTemplate.mk.{u_1} {V : Type u_1} {G : SimpleGraph V} {r i j k w a : V} (root_i : G.Adj r i)
+    (root_j : G.Adj r j) (root_k : G.Adj r k) (i_ne_j : i ≠ j) (i_ne_k : i ≠ k) (j_ne_k : j ≠ k) (w_ne_root : w ≠ r)
+    (a_ne_root : a ≠ r) (w_ne_a : w ≠ a) (root_w_nonadj : ¬G.Adj r w) (root_a_nonadj : ¬G.Adj r a)
+    (w_a_nonadj : ¬G.Adj w a) (root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y)
+    (w_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = i ∨ x = j ∨ x = k))
+    (a_parents : ∀ (x : V), G.Adj r x → (G.Adj x a ↔ x = i ∨ x = j))
+    (ordinary_parent_unique :
+      ∀ (y : V),
+        y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x') :
+    DegreeDiameter.D2MatchTemplate G r i j k w a
+def DegreeDiameter.twoOneRow.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → V → Prop :=
+fun {V} [Fintype V] G v a b =>
+  ∀ (x : V), DegreeDiameter.defectMatrix G v x = (2 * if x = a then 1 else 0) + if x = b then 1 else 0
+def DegreeDiameter.d2Class.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → V → V → Finset V :=
+fun {V} [Fintype V] G r w a i => {x | x ≠ r ∧ ¬G.Adj r x ∧ x ≠ w ∧ x ≠ a ∧ G.Adj i x}
+@DegreeDiameter.n62_d2_four_rows : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            DegreeDiameter.twoOneRow G r w a ∧
+              DegreeDiameter.twoOneRow G i j k ∧ DegreeDiameter.twoOneRow G j i k ∧ DegreeDiameter.twoOneRow G w r a
+@DegreeDiameter.n62_two_nonadj_repeats_zero_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {v a b : V},
+          a ≠ b →
+            ¬G.Adj v a →
+              ¬G.Adj v b →
+                0 < DegreeDiameter.defectMatrix G v a →
+                  0 < DegreeDiameter.defectMatrix G v b → DegreeDiameter.zeroTriangleVertex G v
+@DegreeDiameter.n62_d2_named_zero_triangles : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            DegreeDiameter.zeroTriangleVertex G i ∧
+              DegreeDiameter.zeroTriangleVertex G j ∧
+                DegreeDiameter.zeroTriangleVertex G k ∧
+                  DegreeDiameter.zeroTriangleVertex G w ∧ DegreeDiameter.zeroTriangleVertex G a
+@DegreeDiameter.two_one_row_mul_adjacency : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {v a b y : V},
+  DegreeDiameter.twoOneRow G v a b →
+    (DegreeDiameter.defectMatrix G * DegreeDiameter.adjacencyMatrix G) v y =
+      2 * DegreeDiameter.adjacencyMatrix G a y + DegreeDiameter.adjacencyMatrix G b y
+@DegreeDiameter.defect_neighbor_le_commuted : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  G.IsRegularOfDegree 8 →
+    DegreeDiameter.diameterAtMostTwo G →
+      ∀ {v x y : V},
+        G.Adj v x →
+          DegreeDiameter.defectMatrix G x y ≤ (DegreeDiameter.defectMatrix G * DegreeDiameter.adjacencyMatrix G) v y
+@DegreeDiameter.n62_d2_third_repeat_in_class : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            ∃ c ∈ DegreeDiameter.d2Class G r w a k, DegreeDiameter.threeUnitRow G a r w c ∧ ¬G.Adj a c
+@DegreeDiameter.n62_d2_k_repeat_zero_on_two_neighborhoods : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            ∀ (x : V), G.Adj i x ∨ G.Adj j x → DegreeDiameter.defectMatrix G k x = 0
+@DegreeDiameter.d2_neighborhoods : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r i j k w a : V},
+  DegreeDiameter.D2MatchTemplate G r i j k w a →
+    G.neighborFinset i = insert r (insert w (insert a (DegreeDiameter.d2Class G r w a i))) ∧
+      G.neighborFinset j = insert r (insert w (insert a (DegreeDiameter.d2Class G r w a j))) ∧
+        G.neighborFinset k = insert r (insert w (DegreeDiameter.d2Class G r w a k))
+@DegreeDiameter.n62_d2_class_sizes : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            (DegreeDiameter.d2Class G r w a i).card = 5 ∧
+              (DegreeDiameter.d2Class G r w a j).card = 5 ∧ (DegreeDiameter.d2Class G r w a k).card = 6
+@DegreeDiameter.d2_classes_disjoint : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r i j k w a u v : V},
+  DegreeDiameter.D2MatchTemplate G r i j k w a →
+    G.Adj r u → G.Adj r v → u ≠ v → Disjoint (DegreeDiameter.d2Class G r w a u) (DegreeDiameter.d2Class G r w a v)
+@DegreeDiameter.n62_d2_class_commutation : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            ∀ (y : V),
+              DegreeDiameter.defectMatrix G r y + DegreeDiameter.defectMatrix G w y +
+                      DegreeDiameter.defectMatrix G a y +
+                    ∑ x ∈ DegreeDiameter.d2Class G r w a i, DegreeDiameter.defectMatrix G x y =
+                  2 * DegreeDiameter.adjacencyMatrix G j y + DegreeDiameter.adjacencyMatrix G k y ∧
+                DegreeDiameter.defectMatrix G r y + DegreeDiameter.defectMatrix G w y +
+                      DegreeDiameter.defectMatrix G a y +
+                    ∑ x ∈ DegreeDiameter.d2Class G r w a j, DegreeDiameter.defectMatrix G x y =
+                  2 * DegreeDiameter.adjacencyMatrix G i y + DegreeDiameter.adjacencyMatrix G k y
+@DegreeDiameter.d2_class_parent : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r i j k w a u v x : V},
+  DegreeDiameter.D2MatchTemplate G r i j k w a →
+    G.Adj r u → G.Adj r v → x ∈ DegreeDiameter.d2Class G r w a u → (G.Adj v x ↔ v = u)
+@DegreeDiameter.n62_d2_class_repeat_weights : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a c : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            c ∈ DegreeDiameter.d2Class G r w a k →
+              DegreeDiameter.threeUnitRow G a r w c →
+                (∀ x ∈ DegreeDiameter.d2Class G r w a i,
+                    ∑ y ∈ DegreeDiameter.d2Class G r w a j, DegreeDiameter.defectMatrix G x y = 2) ∧
+                  (∀ y ∈ DegreeDiameter.d2Class G r w a j,
+                      ∑ x ∈ DegreeDiameter.d2Class G r w a i, DegreeDiameter.defectMatrix G y x = 2) ∧
+                    ∀ q ∈ DegreeDiameter.d2Class G r w a k,
+                      (∑ x ∈ DegreeDiameter.d2Class G r w a i, DegreeDiameter.defectMatrix G x q =
+                          1 - if q = c then 1 else 0) ∧
+                        ∑ y ∈ DegreeDiameter.d2Class G r w a j, DegreeDiameter.defectMatrix G y q =
+                          1 - if q = c then 1 else 0
+@DegreeDiameter.n62_d2_class_support : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            (∀ x ∈ DegreeDiameter.d2Class G r w a i,
+                ∑ y ∈ DegreeDiameter.d2Class G r w a j, DegreeDiameter.defectMatrix G x y = 2 ∧
+                  ∑ q ∈ DegreeDiameter.d2Class G r w a k, DegreeDiameter.defectMatrix G x q = 1 ∧
+                    ∀ y ∉ DegreeDiameter.d2Class G r w a j ∪ DegreeDiameter.d2Class G r w a k,
+                      DegreeDiameter.defectMatrix G x y = 0) ∧
+              ∀ y ∈ DegreeDiameter.d2Class G r w a j,
+                ∑ x ∈ DegreeDiameter.d2Class G r w a i, DegreeDiameter.defectMatrix G y x = 2 ∧
+                  ∑ q ∈ DegreeDiameter.d2Class G r w a k, DegreeDiameter.defectMatrix G y q = 1 ∧
+                    ∀ x ∉ DegreeDiameter.d2Class G r w a i ∪ DegreeDiameter.d2Class G r w a k,
+                      DegreeDiameter.defectMatrix G y x = 0
+@DegreeDiameter.n62_d2_class_neighbor_counts : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k w a : V},
+          DegreeDiameter.D2MatchTemplate G r i j k w a →
+            (∀ x ∈ DegreeDiameter.d2Class G r w a i,
+                {y ∈ DegreeDiameter.d2Class G r w a j | G.Adj y x}.card = 1 ∧
+                  {q ∈ DegreeDiameter.d2Class G r w a k | G.Adj q x}.card = 1) ∧
+              ∀ q ∈ DegreeDiameter.d2Class G r w a k,
+                (if G.Adj a q then 1 else 0) + {x ∈ DegreeDiameter.d2Class G r w a i | G.Adj x q}.card = 1 ∧
+                  (if G.Adj a q then 1 else 0) + {y ∈ DegreeDiameter.d2Class G r w a j | G.Adj y q}.card = 1
+@DegreeDiameter.no_n62_d2_match_template : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {r i j k w a : V}, DegreeDiameter.D2MatchTemplate G r i j k w a → False
+'DegreeDiameter.n62_d2_four_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_two_nonadj_repeats_zero_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_named_zero_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.two_one_row_mul_adjacency' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.defect_neighbor_le_commuted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_third_repeat_in_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_k_repeat_zero_on_two_neighborhoods' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.d2_neighborhoods' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_class_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.d2_classes_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_class_commutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.d2_class_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_class_repeat_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_class_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d2_class_neighbor_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_n62_d2_match_template' depends on axioms: [propext, Classical.choice, Quot.sound]

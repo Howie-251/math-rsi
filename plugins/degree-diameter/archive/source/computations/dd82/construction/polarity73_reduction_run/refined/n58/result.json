@@ -1,0 +1,54 @@
+{
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "-t",
+    "28",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/polarity73_reduction_run/refined/n58/input.cnf"
+  ],
+  "exit_code": 10,
+  "wall_timeout": false,
+  "termination_signal": null,
+  "cpu_seconds": 0.963712,
+  "wall_seconds": 1.1343021355569363,
+  "cpu_budget_seconds": 30,
+  "wall_budget_seconds": 45,
+  "cpu_affinity": [
+    1
+  ],
+  "threads": 1,
+  "memory_limit_bytes": 4294967296,
+  "per_file_limit_bytes": 268435456,
+  "status": "REFINED_SCREEN_SAT_CHECKED",
+  "n": 58,
+  "scope": "All polarity73 deletion sets at the specified order, with necessary unit-deficit new-neighbor choices; partial choices, not a target graph. Incoming capacity at higher-deficit vertices is not constrained.",
+  "variables": 18325,
+  "clauses": 73630,
+  "solver_calls": 1,
+  "proof_logging": false,
+  "proof_checked": false,
+  "complete_graph_constructed": false,
+  "purpose": "candidate_discovery",
+  "decode_process": {
+    "command": [
+      "/opt/conda/bin/python3",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/polarity73_reduction_run/refined/screen.py",
+      "decode",
+      "--n",
+      "58"
+    ],
+    "exit_code": 0,
+    "wall_timeout": false,
+    "termination_signal": null,
+    "cpu_seconds": 0.15846200000000005,
+    "wall_seconds": 0.165777325630188,
+    "cpu_budget_seconds": 15,
+    "wall_budget_seconds": 20,
+    "cpu_affinity": [
+      1
+    ],
+    "threads": 1,
+    "memory_limit_bytes": 4294967296,
+    "per_file_limit_bytes": 268435456
+  },
+  "mathematical_conclusion": "Necessary screen model only; saved deletion set needs complete graph completion."
+}

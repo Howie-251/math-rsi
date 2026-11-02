@@ -1,0 +1,42 @@
+{
+  "prediction": "The minimum raw endpoint count of nonbacktracking words of length at most8 in the fixed440state controller is at least641.",
+  "source_actual_group": {
+    "N": 6611,
+    "M": 40,
+    "action": 193
+  },
+  "controller": {
+    "normal_modulus": 11,
+    "phase_modulus": 40,
+    "action": 6,
+    "law": "LEFT: (n,I)(m,J)=(n+6^I*m,I+J)",
+    "positive_darts_normal_phase": [
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        9,
+        6
+      ]
+    ],
+    "involution": [
+      0,
+      20
+    ]
+  },
+  "target_next_compatible_prime": 641,
+  "maximum_length": 8,
+  "expected_prefix_count": 2351462,
+  "inverse": "(-6^(-I)*n,-I)",
+  "resources": {
+    "workers": 1,
+    "worker_CPU_hard_limit_seconds": 3,
+    "compile": false
+  },
+  "scope": "Controller words counted by endpoint and last dart; no field image, target word list, source/new graph or BFS."
+}

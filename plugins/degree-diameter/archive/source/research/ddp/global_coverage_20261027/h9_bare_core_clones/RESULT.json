@@ -1,0 +1,105 @@
+{
+  "status": "GLOBAL_INTEGER_UPPER_BOUND_BELOW987",
+  "prediction_id": "H9_BARE41356_ORDINARY_CLONE_THRESHOLD",
+  "source_core_file": "research/ddp/global_coverage_20261027/h9_clone_capacity/core.edges",
+  "bare_core_vertices": 41356,
+  "bare_core_edges": 234318,
+  "degree_histogram": {
+    "7": 168,
+    "9": 112,
+    "10": 6174,
+    "11": 14112,
+    "12": 20790
+  },
+  "total_degree_deficit": 27636,
+  "saturated_vertices": 20790,
+  "forced_zero_prototypes": 40782,
+  "allowed_prototypes": 574,
+  "allowed_degree_histogram": {
+    "7": 168,
+    "9": 112,
+    "11": 294
+  },
+  "per_variable_integer_upper_bound_histogram": {
+    "1": 490,
+    "2": 84
+  },
+  "nonempty_packing_rows": 3556,
+  "known_feasible_clones": 343,
+  "known_old_H3copies": 280,
+  "known_old_pads": 63,
+  "all280_H3copy_K_neighborhoods_match_some_K_prototype": true,
+  "known343_all_degree_budgets_pass": true,
+  "upper_bounds": {
+    "sum_individual_bounds": 658,
+    "integer_row_cover": 343,
+    "number_cover_rows": 287,
+    "total_deficit_over_min_allowed_degree": 3948
+  },
+  "global_clones_upper_bound": 343,
+  "total_order_upper_bound": 41699,
+  "upper_bound_known_attained": true,
+  "exact_optimum": 343,
+  "required_clones": 987,
+  "target_order": 42343,
+  "target_Delta": 12,
+  "target_D": 5,
+  "savedL": 42342,
+  "can_reach_target": false,
+  "hypothesis_result": "SUPPORTED_GLOBAL_CAPACITY_EXCLUSION",
+  "LP_calls": 0,
+  "MILP_calls": 0,
+  "BFS_count": 0,
+  "default_author_verifier_run": false,
+  "new_target_graphs_generated": 0,
+  "new_lower_bounds": 0,
+  "scope": "Fixed barepartialfoldK41356, allS/colors/edges fixed, any nonnegative ordinaryclone counts of ANYKvertex; clone neighborhoods exactlyNK(v), no new-new edges.",
+  "fixed41636_63_result_used_as_upper_bound": false,
+  "CPU_seconds": 0.430727308,
+  "certificate_rows_partition_all_allowed_variables": true,
+  "known343_attains_every_certificate_row": true,
+  "certificate_group_types": [
+    {
+      "variables_per_group": 1,
+      "budget": 1,
+      "group_count": 196
+    },
+    {
+      "variables_per_group": 2,
+      "budget": 1,
+      "group_count": 63
+    },
+    {
+      "variables_per_group": 9,
+      "budget": 3,
+      "group_count": 28
+    }
+  ],
+  "star_containment_extension": {
+    "status": "PROVED_BY_EXISTING_PACKING_CERTIFICATE_NO_NEW_COMPUTATION",
+    "retained_core_order": 41356,
+    "degree_cap": 12,
+    "condition": "For each countednewpoint i, some v in K satisfies NK(v) subseteq Ai=NG(i) intersect K.",
+    "prototype_choice": "Choose exactly one qualifyingcorevertex per countedpoint; choice may be arbitrary.",
+    "inequality": "sum_{v in NK(u)}t_v <= number of countednewneighbors of u <=12-degreeK(u)",
+    "global_star_containing_newpoints_upper_bound": 343,
+    "all_star_containing_total_order_upper_bound": 41699,
+    "upper_bound_attained_by_ordinary_clones": true,
+    "extra_core_anchors_allowed": true,
+    "new_new_edges_allowed": true,
+    "mixed_nonstar_points_allowed_for_subcount_bound": true,
+    "global_D5_guarantee_for_allstar_class": "The ordinarytwin spanning subgraph has D<=5, and addingedges cannot increase distance.",
+    "current986_extras_require_at_least_nonstar": 643,
+    "strict_improvement987_extras_require_at_least_nonstar": 644,
+    "nonstar_definition": "For every v in K, NK(v) is not a subset of Ai.",
+    "scope_exclusions": [
+      "Not all pencil vertices necessarily contain a completecorestar",
+      "Reverse inclusion Ai subseteq NK(v) is insufficient",
+      "Deletingcoreedges or changingthecore is outside this certificate"
+    ],
+    "iterative_scope": "Repeatedclones+anchors covered only if each newpoint retains a traceable fullcorestar.",
+    "new_optimization_calls": 0,
+    "new_BFS_calls": 0,
+    "new_candidate_graphs": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_BEFORE_SINGLE_MATCHING_EDGE_DELETION_TESTS",
+  "prediction": "At least one of the432 within-cell matching edges can be removed while all972sourcevertices remain at distance<=3; its two newlyspare endpoints may bypass the oldfree-only15pin lowerbound.",
+  "target_Delta": 13,
+  "target_D": 3,
+  "savedL": 972,
+  "possible_extension_n": 973,
+  "source": "../source972.edges",
+  "source_n": 972,
+  "source_m": 6264,
+  "source_D3_inherited": true,
+  "scope": "All432 undirected edges whose endpoints lie in the same27cell, sortedu/v. Delete onlyoneedge; no sourceBFS ormultiplecut repair.",
+  "exact_criterion": "InH=G-e, u/v radius3 coverall972. Then eachx inN_G(u)-v andy inN_G(v)-u must satisfy dist_H(x,y)<=3; allotheroldshortpaths avoide. Depth3checks do not scan thirdlayerneighbor edges.",
+  "budget_native_CPU_seconds": 3,
+  "compile_budget": "Normalcompile reported separately",
+  "safe_followup": "Onlyifsafe>0, chooseonee by olddual-weighted newu/v column gain, rebuildall110eligible R2 inthatH, solveonce<=5CPU/<=13pins. No loop over safecuts x solver.",
+  "stop": "0safe closesall432singledeletions. Ifselectedcoverfails/UNKNOWN stop; no moredeletededges/templates.",
+  "new_graphs_generated": 0
+}

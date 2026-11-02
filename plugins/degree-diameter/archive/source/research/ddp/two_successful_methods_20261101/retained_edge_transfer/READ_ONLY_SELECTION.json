@@ -1,0 +1,75 @@
+{
+  "status": "READ_ONLY_SELECTION_WAITING_ROOT_SYNC_AND_BASELINE",
+  "date": "2026-11-01",
+  "primary_handoff_read": "context/dd-two-successful-methods-20261101/DD_TWO_METHODS_HANDOFF_20261101/TWO_SUCCESSFUL_CONSTRUCTION_METHODS.md",
+  "primary_success_evidence_read": [
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031.md",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/construction/family_generator.py",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/construction/families.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/evidence/FINAL_RESULTS_PROOF.md",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/evidence/D11_INDEPENDENT_37631.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/evidence/D12_INDEPENDENT_REPRESENTATIVE_42377.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/evidence/D13_FIRST_NEWROOT_51418.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/f5/generate.py",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/f5/PROOF_SKELETON.md",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/f5/PROOF_AUDIT.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/f5/INDEPENDENT_VALIDATION.json",
+    "research-wiki/DDP_METHOD_LEDGER.json",
+    "expert_review_current/FOUR_GRAPH_RESULTS_20261031_files/coverage/LATEST_PAUSED_RESULT.json"
+  ],
+  "ledger_records_read": 379,
+  "source": {
+    "parameters": "research/ddp/refresh_20261029/f5_full_d20_D3/PARAMETERS.json",
+    "literal_edges": "research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges",
+    "generator": "research/ddp/refresh_20261029/f5_full_d20_D3/generate.py",
+    "n": 3750,
+    "m": 37500,
+    "degree": 20,
+    "diameter": 3,
+    "accepted_basis": "Existing all3750-root independent validation and fixed-formula Lean; no repeat validation proposed"
+  },
+  "selected_interface": "Promote maximum degree from20 to21 or22, retain all37500 source edges, and add complete-open-neighborhood false twins. This is the concrete A/B combination interface proposed by root, part of A rather than a third main line.",
+  "mathematical_rule": {
+    "centers_with_multiplicity": "Choose nonnegative integers m_v. Add m_v new vertices adjacent exactly to the original open neighborhood N_G(v), never connecting new clones to each other.",
+    "old_capacity": "For each old x, sum_{v in N_G(x)}m_v <= k, where k=1 for Delta21 and k=2 for Delta22.",
+    "new_degree": 20,
+    "D3_argument": "Old-old paths retained. A new clone of v follows any old v-target path, with owner v reached in2. Two clones whose owners have old distance1 use a3-edge crossed path; distance2 uses a common pin; distance3 uses the two internal vertices of the old3-path; equal owners use any common pin. Therefore old capacity is the only joint obligation for this prescribed clone rule.",
+    "counting_bound": "20 sum m_v <=3750k; Delta21 adds<=187 (order<=3937), Delta22 adds<=375 (order<=4125). This is an upper bound, not an attainment claim."
+  },
+  "first_bounded_subfamily": {
+    "center_plane": "P={x in F5^3:x0+x1+x2=0},25points; its normal is nonzero on ell0,ell1,ell2,ell3.",
+    "block_partition_proof": "For one controller fiber a, the25 centers in P have disjoint full neighborhoods: difference of two centers cannot lie in any source ell_p direction. In each of the4 adjacent fibers, their25 five-point neighbor lines partition all125 old vertices exactly once.",
+    "controller_variables": "r_a in{0,..,k},a=0..29. For each controller b require sum_{a in N_C(b)}r_a<=k.",
+    "expanded_centers": "For each a, each x in P and each copy j<r_a, create one clone with literal20-pin neighborhood given by the saved source chart.",
+    "new_order": "3750+25 sum r_a",
+    "prediction_k1": "The actual C30 admits a capacity1 controller vector with sum r_a>=5, producing at least125 new clones/order3875. This is a prediction, not computed.",
+    "prediction_k2": "Doubling any such capacity1 vector is feasible at capacity2, giving at least250 new clones/order4000; a complete capacity2 controller search could improve it. This is conditional, not computed.",
+    "important_scope": "Controller optimum only decides this25-center-block family. It does not exclude arbitrary3750-variable clone packing or other covering neighborhoods."
+  },
+  "proposed_budget_after_root_go": {
+    "controller_stage": "One worker, <=5 CPU seconds, deterministic complete branch-and-bound for the30-variable capacity1/2 problem; no SAT timer continuation or source BFS. Save r, integer bound, literal center list and generated pins.",
+    "construction_stage": "Only if fresh public baseline is beaten and root selects a vector: generate one full edge table and check actual old capacity/maxdegree/new-root coverage; do not rerun the four accepted source graphs. Root owns independent final validation.",
+    "baseline_stop": "If current published lower bounds are >=3937 for Delta21 and >=4125 for Delta22, this entire prescribed clone packing cannot improve them, so stop before controller search. Otherwise choose the parameter with a concrete attainable target.",
+    "permission_boundary": "No new mathematical experiment until root confirms Wiki/Goal synchronization; no numerical work has been started in this selection task."
+  },
+  "old_scope_comparison": {
+    "not_found_in_ledger": "No old row for the literal3750 source promoted to Delta21/22 with original-open-neighborhood capacity packing.",
+    "closed_d11_cap12": "accepted37631 source/cap12 complete-old-neighborhood clone packing has exact upper4017, final order<=41648<42402. Different source and degree interface; do not rerun.",
+    "closed_f5_induced": "Fixed3750 source, vertex deletion to maxdegree16/n>=1921/D3, LRAT-checked exclusion. New plan keeps all old vertices/edges and raises cap, so outside that domain.",
+    "closed_f5_restricted_noise": "Two coefficient100 domains at degree10/D4 and S80/C21 uniform16 rules are unrelated; no restart proposed.",
+    "other_stops_preserved": "D15 D4/D5 single/K2/K8 UNKNOWN timers, D13 old40/43 pools, full-neighborhood clone/copy exclusions and small old matching trials remain stopped."
+  },
+  "unselected_backup_read_only": {
+    "source": "research/ddp/more_graphs_20261027/d15_D6_current1428361_source/source1428361.author.adjlist.txt",
+    "new_parameter": "(15,6), not the old(15,4)/(15,5) timer",
+    "interface": "Saved profile has32071 freepoints and exactly two degree15/minSat2 prototypes323107,1323865; both near-stars retain13 mandatoryfreepins, leaving2 guards. Old scope stopped before any proxy/guard/R5 computation.",
+    "candidate_future_question": "A new jointly covering two-fault certificate could preserve all oldD6 routes if the closedB1 of13 mandatorypins plus<=2 freeguards covers N(f1) union N(f2). No such test run/proposed concurrently; select only if primary clone interface loses to baseline and root chooses it.",
+    "why_not_selected_now": "The source3750 raised-cap interface has an immediate D3 guarantee and only a30-variable capacity choice; do not open a second A subline just to broaden activity."
+  },
+  "experiments_started": 0,
+  "old_graphs_reverified": 0,
+  "BFS_runs": 0,
+  "solver_calls": 0,
+  "new_graphs": 0,
+  "baseline_status": "Root performing directed primary-source check for Delta21/22; not yet claimed above public baseline."
+}

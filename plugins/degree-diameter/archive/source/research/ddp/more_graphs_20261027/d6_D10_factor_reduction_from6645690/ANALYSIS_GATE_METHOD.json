@@ -1,0 +1,85 @@
+{
+  "status": "PAPER_VALID_COMPLETE_PARAMETER_ENUMERATION_NOT_EXECUTED",
+  "current_source6645690_bound": false,
+  "original_current_source_proposal": "ROOT_QUESTION_NOT_EXECUTED.md",
+  "actual_seed": {
+    "order": 6641680,
+    "degree": 7,
+    "diameter_inherited": 10,
+    "recipe": "../d7_D10_current6645690_source/old6641680_primary/construction.json",
+    "README": "../d7_D10_current6645690_source/old6641680_primary/README.md",
+    "normal_modulus": 83021,
+    "normal_factors": [61, 1361],
+    "phase_modulus": 80,
+    "law": "LEFT",
+    "actor": 4400,
+    "actor_orders_mod61_mod1361": [20, 80],
+    "positive_normal_phase": [[4907, 38], [21040, 3], [63695, 58]],
+    "involution_normal_phase": [74603, 40]
+  },
+  "fixed_core": {
+    "order": 108880,
+    "normal_modulus": 1361,
+    "phase_modulus": 80,
+    "actor": 317,
+    "positive_normal_phase": [[824, 38], [625, 3], [1089, 58]],
+    "involution_normal_phase": [1109, 40],
+    "zeroing_whole_involution_allowed": false
+  },
+  "conditional_target": {
+    "hypothetical_order": 1415440,
+    "kernel_order": 13,
+    "questions": [{"degree": 6, "diameter": 10, "keep_h": false}, {"degree": 7, "diameter": 9, "keep_h": true}],
+    "actual_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "source_D10_inherited_to_target": false
+  },
+  "gate": {
+    "projection_homomorphism_required": true,
+    "missing_core_endpoint_uniformly_rejects": true,
+    "freely_reduced_word_count_below13_uniformly_rejects": true,
+    "count_at_least13_sufficient": false,
+    "saturation13_allowed": true,
+    "keep_true_inverse_letter_labels": true,
+    "cancel_extra_quotient_relations_allowed": false,
+    "divide_word_count_by2_at_involution_core_endpoint_allowed": false,
+    "reason_no_inverse_collapse": "a40=1 on F13: a lift over h_Q has square normal2t, so only t0 is involutory.",
+    "coefficient_form_gate": "Optional future exact upper bound: fewer than13 distinct linear endpoint forms at a core slot rejects that actor for all free normals. Not computed here."
+  },
+  "normalization": {
+    "small_field": 13,
+    "legal_actors": [1, 12, 5, 8],
+    "actor_orders": [1, 2, 4, 4],
+    "h_small_normal_forced_zero": true,
+    "nontrivial_actor_pivot_indices": {"12": 1, "5": 0, "8": 0},
+    "nontrivial_actor_representatives_each": 14,
+    "trivial_actor_representatives": 183,
+    "representatives_per_rule": 225,
+    "allzero_normal_form_excluded_for_missing_kernel_generation": true,
+    "complete_for_fixed_large_projection_and_four_actors": true,
+    "arbitrary_other_Cayley_sets_complete": false
+  },
+  "connectivity": {
+    "own_core_connection_rule_onto_required": true,
+    "onto_core_computed_here": false,
+    "nontrivial_actor_argument": "A normalized zero pivot with nontrivial actor and some nonzero remaining normal have a nonzero small commutator; its1361st power isolates the full F13 kernel.",
+    "trivial_actor_argument": "For a nonzero small-normal generator, its108880th power isolates a nonzero pure F13 element.",
+    "simple_intended_degree_all_settings": true
+  },
+  "target_parameter_family_execution": "NOT_EXECUTED; paused by parent in favor of small degree/diameter questions.",
+  "inherited_core_gates": [
+    {"rule": "degree6_D10_remove_h", "result": "core_from_old6641680/degree6_D10_remove_h.json", "core_exact_D": 9, "minimum_raw_multiplicity": 67, "slots_below13": 0, "gate_passes": true},
+    {"rule": "degree7_D9_keep_h", "result": "core_from_old6641680/degree7_D9_keep_h.json", "core_exact_D": 8, "minimum_raw_multiplicity": 81, "slots_below13": 0, "gate_passes": true}
+  ],
+  "numerical_verdict": "Only necessary core gates passed; all target parameter evaluation remains NOT_EXECUTED.",
+  "core_BFS": 0,
+  "source_BFS": 0,
+  "candidate_BFS": 0,
+  "word_enumerations": 0,
+  "parameter_evaluations": 0,
+  "graphs_generated": 0,
+  "solver_calls": 0,
+  "new_research_rows": 0,
+  "proof": "ANALYSIS_GATE_METHOD.md"
+}

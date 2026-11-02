@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 开放参数研究</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}</style></head><body>
+<h1>当前任务：构造超过公开纪录的完整度数—直径图</h1>
+<p>更新：2026-10-26 17:45:54 UTC。范围 4≤Δ≤12，D∈{3,4,5}。Goal 持续进行；旧 N(8,2) 暂停。</p>
+<div class="note"><strong>尚无已验证新下界。</strong>已完成必要 Wiki 合并并开展实际推导、完整图生成和独立检查。当前两个构造入口是小商图电压覆盖，以及从已知完整图删匹配、加入两点的扩张。M3仿射控制图路线暂时停下。已有候选都因直径或共同覆盖条件失败。</div>
+<h2>当前机制与真正的数学障碍</h2>
+<p><strong>M1：群的两份拷贝与电压边。</strong>初始内部／跨侧度分配1＋5已推导精确三步覆盖式，并对部分群证明或完整判定不可行。改为2＋4后，126点的 F₇⋊C₉ 模板仍没有合法图：13,365个商骨架中10,149个被符号容量排除，其余3,216个骨架的49,227,360个合法赋值已全部检查。只关闭该精确定义模板，不排除一般126点图或其他分配。</p>
+<p>M1在(7,4)的702点候选仍有1,404对距离5。保留C₁₃平移、释放C₂₇对称后，完整2,268个单电压邻居均变差；120秒定向单/双电压修复也未改善，最佳与末态均经完整图BFS检查。该批已结束，未排除整个电压族。</p>
+<p><strong>M1在(5,5)的两种度数分配均已有完整有限结果。</strong>内部2／跨侧3的四族已保存；新增内部4／跨侧1的四族也完成823个骨架、501645个射影代表，其中399329合法图均被完整评分。最佳666点图仍有666对距离6。只关闭指定群及每侧两个非对合逆对的范围，不排除其他构造。</p>
+<p>保留这张图的C₃₇平移、放松其他对称后，18基点电压商的形式路线容量充足；实际缺陷为九个37圈各附一片叶到每个圈点。全部1593个合法单电压修改中，9个只反转环方向、图不变，其余全部恶化。没有启动重复的局部退火。</p>
+<p><strong>M1在(7,5)的2824点profile已结束并独立验收。</strong>正确复现公开2810点源后，改用F₃₅₃⋊C₄生成2824点七正则图。一个120CPU秒profile未命中，最好仍172264坏对、直径6。完整best/last边表全源BFS均失败；不将程序正常退出当作成功，不追加相同种子队列。</p>
+<p><strong>当前实际新入口：完整已知图的两点匹配扩张。</strong>从2810点图删六条互不相接的边，加入u、v，将原边两端分别接u、v，再连uv；所有度数保持7，得到2812点完整连通图。十个预定候选已经全部独立检查，均直径6。最好candidate02仍有364坏对：350旧旧、14新旧；删边图H原有514坏对，新点只修复164对。主要失败是旧点路径损伤。H中的精确距离公式已证明，并与十张图所有点对逐项一致。下一步须把旧路径损伤加入端点选择，不追加相同覆盖贪心队列。当前计算均已结束。</p>
+<p><strong>M3固定控制图路线暂时停下。</strong>此前二元102与三元31固定边界未成功；新的diamond加九三角结构确实改变共享顶点的外部接口，但120CPU秒后仍有8个A³有序零元、控制直径4。没有合格控制图，没有启动纤维搜索。保留这次有限失败，不排除一般仿射构造。</p>
+<h2>已知基线与本轮实际对象</h2>
+<p>2026-10-26重新读取 <a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas公开主表</a>：相关门槛(5,5)=650、(7,5)=2810、(12,3)=810；已检验(6,3)=120、(7,4)=684。完整27格启动快照保留；最终声称新纪录前仍需再次核对相关公开来源。</p>
+<table><thead><tr><th>类别</th><th>实际证据</th></tr></thead><tbody>
+<tr><td>已知基线复现</td><td>导入包5张已知图的准备期报告；本轮为实际生成器恢复120、684、810规则及2810完整图。2810来源展示的群运算与参数直接组合有差异，已按原边表恢复并全源核验。这些均非新纪录。</td></tr>
+<tr><td>新候选，未满足目标</td><td>128/144点六度候选直径4；126点六度最好候选仍315坏对；702/720点七度候选直径5，分别1,404/2,700坏对。完整边表均已保存，全源BFS独立检查。(5,5)新增4+1分配的666点图有666坏对；(7,5)2824点图有172264坏对。二者直径均6。</td></tr>
+<tr><td>已验证新下界</td><td>0；没有把点数超过门槛但直径不合格的图登记成功。</td></tr>
+<tr><td>只关闭子族</td><td>1＋5广义二面体等范围的纸面限制；C₆×A₄ 1＋5完整46,080项有限判定；F₇⋊C₉ 2＋4完整有限判定；原三层循环仿射控制模板的容量障碍。作用域不同，不合并成全域排除。</td></tr>
+<tr><td>UNKNOWN / 有限预算未命中</td><td>31点固定联合端口模型有一次发现级UNSAT，无证明日志；其余启发式未命中不当作UNSAT。</td></tr>
+<tr><td>审阅与形式化</td><td>一次实际Gemini SCOPED ACCEPT覆盖早期指定推导与C₆×A₄判定、容量多项式；不覆盖后来的全部结果。Lean尚未开展，按Goal后置到新数学成果。</td></tr>
+</tbody></table>
+<h2>最近人工意见及实际落实</h2>
+<p>用户要求导入后立即研究新范围，不等待确认；约每小时报告，不强制换题。已切换AGENTS、研究brief、query_pack与恢复入口，旧n61谱／分类／SAT安排保持暂停。用户随后询问“到现在为止有啥卓越成果吗”，已明确答复尚无新纪录，阶段降维与局部排除不算目标成功。最新旧h7、T≤34等成果、失败记录及原comments均保留。更新本页后继续研究，用户未回复不暂停。</p>
+<p><a href="../research-wiki/DD82_PROGRESS_AND_COMMENTS_20261018.md">唯一人工意见记录</a> · <a href="../research-wiki/query_pack.md">Wiki当前入口</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a> · <a href="progress_dd82_before_portfolio_20261026.html">旧研究页面原样归档</a></p>
+<h2>直接证据入口</h2>
+<p><a href="ddp/m1_d5_four_one_results.md">4+1四族完整结果</a> · <a href="ddp/m1_c37_diagnosis/DIAGNOSIS.md">666点缺陷与完整单电压邻域</a> · <a href="ddp/m1_d7d5_source/RECOVERY_NOTES.md">2810源图恢复</a> · <a href="ddp/m1_d7d5_f353_results.md">2824点终态与独立验收</a> · <a href="ddp/m3_diamond31/REPORT.md">diamond控制图结果</a> · <a href="ddp/m1_matching_augmentation/INDEPENDENT_CHECK_REPORT.md">2812点十候选独立验收</a> · <a href="ddp/m1_matching_augmentation/DISTANCE_CHECK.md">匹配扩张精确距离公式</a> · <a href="ddp/m1_d5_faithful_results.md">654/656/666三族完整结果</a> · <a href="ddp/m3_control31_diagnosis/REPORT.md">31点控制图共同路由与联合SAT</a> · <a href="ddp/m1_d5_projective_reduction.md">当前(5,5)共轭／项目规约</a> · <a href="ddp/m1_degree5_transfer/SOURCE_NOTES.md">650与648原始来源连接</a> · <a href="ddp/m1_fullgraph_repair/C13_PROFILE.md">702点C13修复终态</a> · <a href="ddp/m3_binary_triangle_partition_102.md">二元三角控制实验</a> · <a href="ddp/M1_EXPERIMENT_PLAN.md">M1实际计划、预算和反馈</a> · <a href="ddp/m1_voltage_criterion.md">1＋5精确覆盖推导</a> · <a href="ddp/m1_q63_quotient/DERIVATION.md">126点模板完整范围</a> · <a href="ddp/m3_capacity_independent.md">仿射控制条件与31–33点反馈</a> · <a href="ddp/second_mechanism/DERIVATION_PACKAGE.md">仿射原源及具体反例</a> · <a href="../reviews/ddp/20261026_start_review/DISPOSITION.md">实际审阅范围和意见处置</a></p>
+</body></html>

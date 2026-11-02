@@ -1,0 +1,552 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The complete fixed-Brown57 ten-deletion lower bound is supported by the reviewed mathematics and completed exact finite checks. One cosmetic dependency sentence was corrected and re-read; no open proof gap remains. Assurance is same-family/provisional, not formal verification.",
+  "trace_path": "reviews/dd82/proof-checker-brown9-complete-20261011/",
+  "agent_id": "/root/proof_review_brown9_complete",
+  "reviewer_model": "gpt-6-astra (requested; backend attestation unavailable)",
+  "reviewer_reasoning": "ultra (requested; backend attestation unavailable)",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "actual_backend_model": null,
+  "actual_backend_reasoning": null,
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T09:21:10Z",
+  "scope": {
+    "canonical_statement": "For every finite simple undirected graph G on {0,...,56} union {x}, if maximum degree(G)<=8 and diameter(G)<=2, and B is the supplied Brown57 graph, then |E(B) minus E(G)|>=10 and the number of added old-old edges equals |E(B) minus E(G)|.",
+    "not_claimed": [
+      "Nonexistence of arbitrary order-58 graphs",
+      "An upper bound ruling out orders58-62",
+      "Lean or other formal verification",
+      "Cross-family acceptance",
+      "Attested backend model identity"
+    ],
+    "user_overrides": [
+      "Markdown and JSON audit artifacts only",
+      "No hashes, checksums, or manifests",
+      "No TeX, PDF, HTML",
+      "No author-file edits by this reviewer",
+      "No formal/ or research-wiki/ writes",
+      "No dedicated order63-65 work",
+      "One CPU and no more than60 wall seconds per finite check",
+      "No SAT or added-edge completion search"
+    ]
+  },
+  "audited_inputs": {
+    "primary_proofs": [
+      "proofs/dd82/construction/BROWN_NINE_DELETE_OBSTRUCTION.md",
+      "proofs/dd82/construction/BROWN_R9_SEVEN_III_OBSTRUCTION.md"
+    ],
+    "full_load_bearing_dependencies": [
+      "proofs/dd82/construction/BROWN_R9_SIX_III_OBSTRUCTION.md",
+      "proofs/dd82/construction/BROWN_R9_EIGHT_III_OBSTRUCTION.md",
+      "proofs/dd82/construction/BROWN_EIGHT_DELETE_OBSTRUCTION.md",
+      "proofs/dd82/construction/BROWN_EXTENSION_OBSTRUCTION.md",
+      "proofs/dd82/construction/BROWN57_PROOF.md"
+    ],
+    "finite_sources": [
+      "computations/dd82/construction/brown_r9_a6_domination.cpp",
+      "computations/dd82/construction/brown_r9_a7_cover19.cpp",
+      "computations/dd82/construction/brown_r9_a7_cover21.cpp",
+      "computations/dd82/construction/brown_r9_eight_iii_facts.py",
+      "computations/dd82/construction/brown_eight_delete_facts.py"
+    ],
+    "finite_data": [
+      "computations/dd82/construction/brown57.edges",
+      "computations/dd82/construction/brown_r9_a6_domination.json",
+      "computations/dd82/construction/brown_r9_a7_cover19.json",
+      "computations/dd82/construction/brown_r9_a7_cover21.json",
+      "computations/dd82/construction/brown_r9_eight_iii_facts.json"
+    ],
+    "excluded_from_evidence": [
+      "Prior proof-review verdicts",
+      "Exploratory brown_r9_ee_profile enumeration",
+      "SAT/solver results",
+      "Known order63-65 exclusions"
+    ]
+  },
+  "details": {
+    "theorem_documents_audited": 7,
+    "primary_theorems_audited": 2,
+    "obligations": [
+      {
+        "id": "B01",
+        "uses": [],
+        "statement": "Concrete input is the 57-vertex simple Brown graph",
+        "justification": "Independently checked 224 distinct ordered pairs u<v, labels 0..56, and equality with the displayed F7 orthogonality rule.",
+        "evidence": "RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "B02",
+        "uses": [
+          "B01"
+        ],
+        "statement": "C,I,E degrees and neighbor counts",
+        "justification": "Independent reconstruction gives sizes 8,21,28; C degree 7 with neighbors only E; other degrees 8; E has two C and three I neighbors; I has four I neighbors.",
+        "evidence": "RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "B03",
+        "uses": [
+          "B01",
+          "B02"
+        ],
+        "statement": "Triangle and edge-type premises",
+        "justification": "14 III, 42 IEE, exactly two of each at every I; II/CE/IE/EE counts 42/56/84/42; each non-CE edge in one triangle and every CE edge in none.",
+        "evidence": "RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "G01",
+        "uses": [
+          "B01"
+        ],
+        "statement": "Order-58 regularity and edge balance",
+        "justification": "1+7+7*7=57 forces every candidate degree to be 8; candidate has 232 edges, x has 8, so 224 old-old edges and equal old deletion/addition counts.",
+        "evidence": "BROWN_EXTENSION_OBSTRUCTION.md:29",
+        "status": "discharged"
+      },
+      {
+        "id": "G02",
+        "uses": [
+          "G01",
+          "B03"
+        ],
+        "statement": "Every internal vertex loses an old triangle",
+        "justification": "58 <= 65-2*t(v) gives t(v)<=3, while every old I vertex starts in four. Added edges cannot remove surviving triangles.",
+        "evidence": "BROWN_EXTENSION_OBSTRUCTION.md:31",
+        "status": "discharged"
+      },
+      {
+        "id": "G03",
+        "uses": [
+          "G01",
+          "B02"
+        ],
+        "statement": "Exact deficits and necessary coverage budget",
+        "justification": "k=d+1_C; S has size 8 and k>0; sigma=sum_S(k-1). Every old vertex outside the retained closed neighborhood needs a new incidence from S. Unreached C and I targets consume distinct such incidences.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:30",
+        "status": "discharged"
+      },
+      {
+        "id": "L01",
+        "uses": [
+          "B02",
+          "B03",
+          "G01",
+          "G02",
+          "G03"
+        ],
+        "statement": "Exclusion of r<=7",
+        "justification": "21<=3r; equality makes seven III triangles a partition and deletions a matching. No added edge touches S; C forces S=C, which fails to reach I.",
+        "evidence": "BROWN_EXTENSION_OBSTRUCTION.md:33",
+        "status": "discharged"
+      },
+      {
+        "id": "L02",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "r=8, a=8",
+        "justification": "At most three double endpoints; C demand forces all selected I endpoints double, j<=3 and no spare for I, giving <=9 reachable I.",
+        "evidence": "BROWN_EIGHT_DELETE_OBSTRUCTION.md:66",
+        "status": "discharged"
+      },
+      {
+        "id": "L03",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "r=8, a=7, II extra",
+        "justification": "Seven triangles partition I; distinct extra edge of an already selected triangle gives one double endpoint, j<=1 and I coverage <=3.",
+        "evidence": "BROWN_EIGHT_DELETE_OBSTRUCTION.md:80",
+        "status": "discharged"
+      },
+      {
+        "id": "L04",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "r=8, a=7, CE extra",
+        "justification": "Seven triangles partition I; sigma<=1, e<=1, retained C coverage <=e, j<=1; I upper bound <=7.",
+        "evidence": "BROWN_EIGHT_DELETE_OBSTRUCTION.md:92",
+        "status": "discharged"
+      },
+      {
+        "id": "L05",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "r=8, a=7, IE extra",
+        "justification": "Union at least20 implies at most one repeated vertex; sigma<=2, e<=1, j<=3; I upper bounds 13 or 2.",
+        "evidence": "BROWN_EIGHT_DELETE_OBSTRUCTION.md:106",
+        "status": "discharged"
+      },
+      {
+        "id": "L06",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "r=8, a=7, EE extra",
+        "justification": "Union at least20 gives sigma<=1, e<=2, j<=3; I upper bounds17 or10. Together L02-L06 cover all r=8 cases.",
+        "evidence": "BROWN_EIGHT_DELETE_OBSTRUCTION.md:134",
+        "status": "discharged"
+      },
+      {
+        "id": "P01",
+        "uses": [
+          "B03",
+          "G02"
+        ],
+        "statement": "Exhaustive r=9 split",
+        "justification": "a+b<=9 and 3a+b>=21 imply 6<=a<=9. At a=8 choose eight base III edges and one extra of one of four actual edge types; a=9 is all II.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:11",
+        "status": "discharged"
+      },
+      {
+        "id": "P02",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "a=6 block reduction",
+        "justification": "Equality forces six disjoint III blocks and three IEE blocks at missing vertices. The missing triple is an III triangle in each of14 families; external neighbor sets are disjoint, so deletions form a matching and S must dominate the original graph.",
+        "evidence": "BROWN_R9_SIX_III_OBSTRUCTION.md:11; RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P03",
+        "uses": [
+          "B01",
+          "B03"
+        ],
+        "statement": "All relevant seven-III family sizes",
+        "justification": "Independent enumeration:42 cover19, zero cover20, two cover21; no other family covers at least19.",
+        "evidence": "RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P04",
+        "uses": [
+          "P02",
+          "P03",
+          "G03"
+        ],
+        "statement": "a=7, cover19, complete known-deletion reduction",
+        "justification": "Each family has a unique central triangle on both repeated vertices; six remaining triangles disjoint. Extras occupy two disjoint five-point blocks at the missing vertices. Three central choices yield9+3+3=15 fixed cases; only fixed repeated endpoints carry spare weight.",
+        "evidence": "BROWN_R9_SEVEN_III_OBSTRUCTION.md:37; RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P05",
+        "uses": [
+          "P03",
+          "B03",
+          "G03"
+        ],
+        "statement": "a=7, cover21, complete extras-first enumeration",
+        "justification": "Two partitions; extras pool203=21+56+84+42. Every actual deletion set has a representation. Fix at most two affected base triangles excluding extra edges. Independent enumeration gives145040 cases and verifies known/unknown disjointness and total spare<=3.",
+        "evidence": "BROWN_R9_SEVEN_III_OBSTRUCTION.md:73; RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P06",
+        "uses": [
+          "P05"
+        ],
+        "statement": "Exact residual h(S) correction",
+        "justification": "For every unaffected triangle, selecting0 or2 causes no extra uncovered vertex under the appropriate deletion; selecting1 permits two partners and forces one loss iff both have only that S-neighbor. Distinct blocks cause independent new losses, disjoint from initial uncovered vertices.",
+        "evidence": "BROWN_R9_SEVEN_III_OBSTRUCTION.md:89",
+        "status": "discharged"
+      },
+      {
+        "id": "C01",
+        "uses": [
+          "P02",
+          "P04",
+          "P05"
+        ],
+        "statement": "Candidate and block coverage of the C++ searches",
+        "justification": "C and all possible positive-deficit vertices are included; known weights exact, unknown blocks weight0. At most two per block; five-point blocks additionally enforce original adjacency. Each genuine S obeys all restrictions.",
+        "evidence": "brown_r9_a6_domination.cpp:4; brown_r9_a7_cover19.cpp:8; brown_r9_a7_cover21.cpp:9",
+        "status": "discharged"
+      },
+      {
+        "id": "C02",
+        "uses": [
+          "C01"
+        ],
+        "statement": "DFS target/ignore branching completeness",
+        "justification": "For a putative successful S*, maintain chosen subset S* and ignored targets outside its known retained closed neighborhood. Select its first available target dominator, or ignore a target truly uncovered by S*. Excluding earlier dominators loses no such path. M bounds its final uncovered count.",
+        "evidence": "brown_r9_a6_domination.cpp:7; brown_r9_a7_cover19.cpp:9; brown_r9_a7_cover21.cpp:10",
+        "status": "discharged"
+      },
+      {
+        "id": "C03",
+        "uses": [
+          "C02"
+        ],
+        "statement": "Pruning, terminal predicates and termination",
+        "justification": "Candidate count and largest individual gains give optimistic bounds. The witness path has sufficient remaining ignore budget. Empty unignored target set still branches to eight selections. Leaves use real uncovered/spare counts and cover21 adds h. Every recursive step increases selection depth or ignored count.",
+        "evidence": "brown_r9_a6_domination.cpp:5; brown_r9_a7_cover19.cpp:9; brown_r9_a7_cover21.cpp:10",
+        "status": "discharged"
+      },
+      {
+        "id": "C04",
+        "uses": [
+          "C03",
+          "P06"
+        ],
+        "statement": "Concrete completed finite exclusions",
+        "justification": "Fresh compilation and one-CPU runs finish with a6:14/1189/zero; a7-19:42/630/107074/zero; a7-21:2/145040/5805357/zero, complete=1. Node arrays and normalized type counts match author JSON.",
+        "evidence": "RAW_CPP_CHECKS.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P07",
+        "uses": [
+          "B03",
+          "G03"
+        ],
+        "statement": "a=8, EE extra, full21 union",
+        "justification": "All14 families have the three repeated points as a selected triangle. Its one deleted edge permits at most two double endpoints. sigma<=2,e<=2,j<=4; retained I plus repairs <=20.",
+        "evidence": "BROWN_R9_EIGHT_III_OBSTRUCTION.md:33; RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P08",
+        "uses": [
+          "B02",
+          "B03",
+          "G03"
+        ],
+        "statement": "a=8, EE extra, union20",
+        "justification": "All42 families and their two EE options satisfy the six Z-incidence facts. For e<=1 reach <=19 I. At e=2 only k=j-sigma<=2 degree-one I points cover Z; old coverage 0,3,5 plus new budget2-k gives2,4,5<6.",
+        "evidence": "BROWN_R9_EIGHT_III_OBSTRUCTION.md:44; RAW_FINITE_CHECK.json",
+        "status": "discharged"
+      },
+      {
+        "id": "P09",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "Every all-II r=9 pattern",
+        "justification": "Union covers I; base spare <=R=3a-21 and remaining II deletions add at most2 each, so sigma<=a-3<=6. e=0 and C demand requires j<=sigma; exact substitution yields I coverage<=3j<=18.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:41",
+        "status": "discharged"
+      },
+      {
+        "id": "P10",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "a=8, CE extra",
+        "justification": "III union covers21; base spare<=3 and CE gives at most1 at C. sigma<=4,e<=1, retained C coverage<=e, hence j<=4. With sigma=D-j+epsilon_C, I bound=3j+3e+epsilon_C<=16.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:59",
+        "status": "discharged"
+      },
+      {
+        "id": "P11",
+        "uses": [
+          "B02",
+          "B03",
+          "G02",
+          "G03"
+        ],
+        "statement": "a=8, IE extra",
+        "justification": "Union21:base spare<=3 plus1; union20:base spare<=4 and extra I endpoint is the missing vertex, giving no extra spare. sigma<=4,e<=1,j<=5. Exact substitution gives I bound<=19 (j>=e), or2 when j=0,e=1.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:74",
+        "status": "discharged"
+      },
+      {
+        "id": "T01",
+        "uses": [
+          "L01",
+          "L02",
+          "L03",
+          "L04",
+          "L05",
+          "L06",
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "C04",
+          "P07",
+          "P08",
+          "P09",
+          "P10",
+          "P11"
+        ],
+        "statement": "Fixed-Brown extension requires at least10 old deletions and equally many old-old additions",
+        "justification": "Cases r<=7,r=8,r=9 are exhausted. All dependencies are read and discharged by local mathematics plus explicit completed finite checks; no arbitrary-order58 nonexistence inference.",
+        "evidence": "BROWN_NINE_DELETE_OBSTRUCTION.md:95",
+        "status": "discharged"
+      }
+    ],
+    "issues": [
+      {
+        "id": "MINOR-01",
+        "severity": "MINOR",
+        "status": "OVERSTATED",
+        "impact": "COSMETIC",
+        "category": "SCOPE_OVERCLAIM",
+        "location": "proofs/dd82/construction/BROWN_R9_SIX_III_OBSTRUCTION.md:27",
+        "statement_before": "every Brown edge belongs to one triangle",
+        "why_invalid": "The 56 CE edges belong to no triangle. The particular edge mm' is II and belongs to one, so the argument is unaffected; its stated at-most-one premise already suffices.",
+        "counterexample": "YES: any of the 56 CE edges refutes the universal wording, not the branch theorem.",
+        "affects": "No downstream proof obligation; wording only.",
+        "minimal_fix": "Replace 'one triangle' with 'at most one triangle'.",
+        "resolution": "Fixed by the parent/author during this audit; reviewer re-read line27 and confirmed the exact correction. No proof or computation changed.",
+        "open": false
+      }
+    ],
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "counterexample_attempts": [
+      {
+        "id": "CE01",
+        "target": "Common incidence budget",
+        "attempt": "Allow new edges joining two S vertices, overlapping C coverage, repeated neighborhoods, and internal targets already in S.",
+        "result": "All can waste incidences but cannot create more new distance-two targets than sigma; the inequalities remain upper bounds."
+      },
+      {
+        "id": "CE02",
+        "target": "All-II r9 branch",
+        "attempt": "Concentrate both endpoints of every extra II deletion on vertices already deficient; choose only highest-deficit I vertices.",
+        "result": "Each deletion adds at most two to total max(d-1,0); sigma<=6 and the exact cancellation still gives at most3j<=18 internal targets."
+      },
+      {
+        "id": "CE03",
+        "target": "a8 CE/IE branches",
+        "attempt": "Select the CE endpoint in C; in IE union20 select the unique missed I point; examine j=0,e=1 and j<e boundary.",
+        "result": "epsilon_C/epsilon terms account for these possibilities; upper bounds16 and19 remain valid, with boundary2."
+      },
+      {
+        "id": "CE04",
+        "target": "a7 coverage enumeration",
+        "attempt": "Look for a seven-triangle family of union20, missing a central triangle, overlapping unknown blocks, extra II edges outside selected triangles, or more than the allowed global spare.",
+        "result": "Independent enumeration found no such relevant omitted family; all42 cover19 and2 cover21 families satisfy the reductions and all630/145040 cases satisfy the block/spare claims."
+      },
+      {
+        "id": "CE05",
+        "target": "DFS ignore/pruning completeness",
+        "attempt": "Ignored target later becomes covered; uncovered target has zero available dominators; all remaining targets are already covered before depth8; repeated ordering of dominators.",
+        "result": "Only a consistent witness path is required. Ignoring only genuinely final-uncovered targets keeps budget sound, zero-dominator targets can be ignored within M, and depth-eight extension remains searched."
+      },
+      {
+        "id": "CE06",
+        "target": "h(S) residual deletion correction",
+        "attempt": "Zero, one, and two selections in an unaffected triangle; both partners have unique S-neighbor; safe partner has another S-neighbor; two blocks attempt to affect same lost target.",
+        "result": "Local three-case proof is exhaustive; lost target lies within its disjoint unaffected block and was initially covered, proving additive exactness."
+      },
+      {
+        "id": "CE07",
+        "target": "a8 EE Z bound",
+        "attempt": "Use both cross-edge endpoints a,b as the degree-one selected internal vertices; maximize j and e in full-cover case.",
+        "result": "a,b neighborhoods overlap in both endpoints, so their union<=4; otherwise union<=5. Full-cover bound reaches at most20."
+      },
+      {
+        "id": "CE08",
+        "target": "Dependency sentence at a6 line27",
+        "attempt": "Compare the universal triangle-membership wording with CE edges.",
+        "result": "A wording counterexample was found, reported, corrected by parent/author, and re-read. No theorem counterexample."
+      }
+    ],
+    "mandatory_checks": {
+      "definitions": "C,I,E are vertex sets; E(B),E(G) edge sets. Local uses of R as repeated-point set vs the old deletion set are explicitly scoped. No type drift affects a proof.",
+      "hypothesis_discharge": "All applications are represented by the dependency ledger. Particular care was given to matching only in a6 or partition base edges, never arbitrary repair edges.",
+      "inequalities": "Verified regularity, triangle loss count, sigma, all root CE/IE/all-II cancellations, and both EE coverage branches.",
+      "interchanges": "Not applicable: finite sets and finite sums only.",
+      "probability": "Not applicable: no random or probabilistic argument.",
+      "uniformity": "No asymptotic statements; universal scope is over candidate G with the fixed supplied B.",
+      "edge_cases": "Logged in counterexample_attempts.",
+      "dependencies": "Acyclic; source mathematics and finite inputs checked directly, not prior audit verdicts."
+    },
+    "deterministic_results": {
+      "a6": {
+        "families": 14,
+        "nodes": 1189,
+        "survivors": 0,
+        "run_wall_seconds": 0.006022
+      },
+      "a7_cover19": {
+        "families": 42,
+        "cases": 630,
+        "nodes": 107074,
+        "survivors": 0,
+        "run_wall_seconds": 0.148798
+      },
+      "a7_cover21": {
+        "families": 2,
+        "cases": 145040,
+        "nodes": 5805357,
+        "survivors": 0,
+        "complete": true,
+        "run_wall_seconds": 8.055732
+      },
+      "independent_families": {
+        "six_disjoint": 14,
+        "seven_cover19": 42,
+        "seven_cover20": 0,
+        "seven_cover21": 2,
+        "eight_cover21": 14,
+        "eight_cover20": 42,
+        "eight_cover20_ee_alternatives": 84
+      },
+      "raw_artifacts": [
+        "RAW_CPP_CHECKS.json",
+        "RAW_FINITE_CHECK.json"
+      ]
+    },
+    "artifact_validation": {
+      "all_json_parses": true,
+      "obligation_count": 28,
+      "all_obligations_discharged": true,
+      "dependency_dag_acyclic": true,
+      "directory_formats": [
+        "Markdown",
+        "JSON"
+      ],
+      "corrected_dependency_sentence_reread": true
+    }
+  },
+  "recovery": {
+    "rounds": 1,
+    "source_edits_by_reviewer": [],
+    "source_change_during_audit": "Parent/author fixed the reported cosmetic phrase in BROWN_R9_SIX_III_OBSTRUCTION.md:27; reviewer re-read the line after the change.",
+    "no_further_check_required": "The only revision was wording; graph, programs, finite outputs, and mathematical dependencies were unchanged."
+  }
+}

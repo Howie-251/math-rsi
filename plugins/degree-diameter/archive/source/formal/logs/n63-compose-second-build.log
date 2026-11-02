@@ -1,0 +1,21 @@
+✖ [2551/2551] Building DegreeDiameter.N63Compose (7.0s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N63Compose.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Compose.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Compose.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Compose.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Compose.setup.json --json
+error: DegreeDiameter/N63Compose.lean:39:20: expected token
+error: DegreeDiameter/N63Compose.lean:39:7: Missing cases:
+error: DegreeDiameter/N63Compose.lean:34:41: unsolved goals
+p : ℚ[X]
+hm : p.Monic
+hi : Irreducible p
+hn : ¬IsSquare ((-4) ^ p.natDegree * eval (-29 / 4) p)
+E : Type
+inst✝¹ : Field E
+inst✝ : Algebra ℚ E
+x : E
+hx : minpoly ℚ x = p
+hxint : IsIntegral ℚ x
+this : Algebra ℚ ℚ := nomatch
+⊢ Irreducible (map (algebraMap ℚ ↥ℚ⟮x⟯) n63Quadratic - C (IntermediateField.AdjoinSimple.gen ℚ x))
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N63Compose
+error: build failed

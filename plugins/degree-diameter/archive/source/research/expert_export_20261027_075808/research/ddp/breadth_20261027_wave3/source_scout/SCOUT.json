@@ -1,0 +1,44 @@
+{
+  "candidate_count": 1,
+  "mechanism": "Reuse a verified universal F3^5 route chart, synthesize an inverse-consistently labelled quartic exact-NB5 controller",
+  "source": "literature/dd82/arxiv_2606.15860.txt §2.3, Appendix A.6.1",
+  "known_positive_guarantee": "Any simple quartic exact-NB5 controller with inverse-consistent four-symbol labeling gives a simple12regular lift of order243 times controller order and diameter at most5.",
+  "matrix_data": "route_chart_F3_5.json",
+  "independent_chart_check": "chart_check.json",
+  "verified_rank_words": 324,
+  "minimum_controller_order_to_beat_saved42342": 175,
+  "prospective_controller175_order": 42525,
+  "controller_attempts": [
+    {
+      "type": "A5 times C3 Cayley",
+      "order": 180,
+      "scope_count": 13296,
+      "actual_S_sets": 11931,
+      "analytically_disconnected_four_involution_sets": 1365,
+      "best_exact_reached": 163,
+      "result": "no exact-NB5 controller",
+      "report": "route_chart_controller180/REPORT.md"
+    },
+    {
+      "type": "F31 semidirect C6 Cayley",
+      "order": 186,
+      "actual_two_pair_sets": 2926,
+      "best_exact_reached": 147,
+      "result": "no exact-NB5 controller in this composition",
+      "report": "route_chart_controller186/RESULT.json"
+    },
+    {
+      "type": "NonCayley fixed35-pentagon plus external2factor",
+      "order": 175,
+      "profile": "4starts x10000 proposals",
+      "best_exact_NB5_missing_ordered_pairs": 2696,
+      "result": "fixed finite profile failed",
+      "report": "../pentagon175_controller/REPORT.md"
+    }
+  ],
+  "new_lower_bounds": 0,
+  "large_lift_generated": false,
+  "remaining_gap": "A controller with the exact reduced-length5 coverage property has not been found; ordinary diameter<=5 alone is insufficient.",
+  "independence_note": "This is not a new broad construction class; it reuses an existing affine route-chart theorem with a complete fiber-side sufficient condition. It differs from the stopped low-dimensional fixed-controller trials in making the remaining obligation a separate exact controller-routing problem.",
+  "second_candidate": "No second unrelated mechanism with reliable explicit parameters and a verified positive routing guarantee was established in this bounded scout."
+}

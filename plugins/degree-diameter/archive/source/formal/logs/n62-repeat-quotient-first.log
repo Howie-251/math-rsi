@@ -1,0 +1,59 @@
+✖ [1181/1181] Building DegreeDiameter.N62RepeatQuotient (72s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatQuotient.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatQuotient.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatQuotient.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatQuotient.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatQuotient.setup.json --json
+error: DegreeDiameter/N62RepeatQuotient.lean:91:21: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?a - ?b) * ?c
+in the target expression
+  (adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G - 7 • 1 - onesMatrix) * repeatMembershipMatrix G =
+    repeatMembershipMatrix G * (repeatQuotientMatrix G * repeatQuotientMatrix G + repeatQuotientMatrix G) -
+        7 • repeatMembershipMatrix G -
+      repeatMembershipMatrix G * repeatSizeMatrix G
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+hAS : adjacencyMatrix G * repeatMembershipMatrix G = repeatMembershipMatrix G * repeatQuotientMatrix G
+hBS : defectMatrix G * repeatMembershipMatrix G = 3 • repeatMembershipMatrix G
+hAAS :
+  adjacencyMatrix G * adjacencyMatrix G * repeatMembershipMatrix G =
+    repeatMembershipMatrix G * (repeatQuotientMatrix G * repeatQuotientMatrix G)
+⊢ (adjacencyMatrix G * adjacencyMatrix G + adjacencyMatrix G - 7 • 1 - onesMatrix) * repeatMembershipMatrix G =
+    repeatMembershipMatrix G * (repeatQuotientMatrix G * repeatQuotientMatrix G + repeatQuotientMatrix G) -
+        7 • repeatMembershipMatrix G -
+      repeatMembershipMatrix G * repeatSizeMatrix G
+error: DegreeDiameter/N62RepeatQuotient.lean:101:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a - b - c ≥ -9
+where
+ a := repeatSizeMatrix G D C
+ b := (repeatQuotientMatrix G * repeatQuotientMatrix G) D C
+ c := repeatQuotientMatrix G D C
+error: DegreeDiameter/N62RepeatQuotient.lean:117:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (repeatMembershipMatrix ?G * ?M) ?x ?C
+in the target expression
+  (fun M => M x C) (adjacencyMatrix G * repeatMembershipMatrix G) =
+    (fun M => M x C) (repeatMembershipMatrix G * repeatQuotientMatrix G)
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+D : (repeatSupport G).ConnectedComponent
+hreg : G.IsRegularOfDegree 8
+x : V
+hx : x ∈ D.supp
+hxD : (repeatSupport G).connectedComponentMk x = D
+hrow : ∑ y, adjacencyMatrix G x y = 8
+C : (repeatSupport G).ConnectedComponent
+hh :
+  (fun M => M x C) (adjacencyMatrix G * repeatMembershipMatrix G) =
+    (fun M => M x C) (repeatMembershipMatrix G * repeatQuotientMatrix G)
+⊢ repeatQuotientMatrix G D C = ∑ y, adjacencyMatrix G x y * repeatComponentIndicator G C y
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62RepeatQuotient
+error: build failed

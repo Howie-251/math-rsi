@@ -1,0 +1,70 @@
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:24:4: error: don't know how to synthesize implicit argument `α`
+  @Eq (V ⊕ ?m.23 p q l m hp hq) (atOld e p l) (atOld e q m)
+context:
+P : Type u_1
+L : Type u_2
+V : Type u_3
+J : Type u_4
+e : V ≃ P × L
+Inc : P → L → Prop
+spread : J → L
+p q : P
+l m : L
+hp : Inc p m
+hq : Inc q l
+⊢ Type (max u_3 ?u.382)
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:24:18: error: don't know how to synthesize implicit argument `J`
+  @atOld P L V (?m.23 p q l m hp hq) e q m
+context:
+P : Type u_1
+L : Type u_2
+V : Type u_3
+J : Type u_4
+e : V ≃ P × L
+Inc : P → L → Prop
+spread : J → L
+p q : P
+l m : L
+hp : Inc p m
+hq : Inc q l
+⊢ Type ?u.382
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:24:4: error: don't know how to synthesize implicit argument `J`
+  @atOld P L V (?m.23 p q l m hp hq) e p l
+context:
+P : Type u_1
+L : Type u_2
+V : Type u_3
+J : Type u_4
+e : V ≃ P × L
+Inc : P → L → Prop
+spread : J → L
+p q : P
+l m : L
+hp : Inc p m
+hq : Inc q l
+⊢ Type ?u.382
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:47:12: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:48:12: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:61:9: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:62:9: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:63:9: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:68:11: error: Type mismatch: After simplification, term
+  hw
+ has type
+  w.length ≤ 3
+but is expected to have type
+  (cast ⋯ w.reverse).length ≤ 3
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:71:15: error: Type mismatch: After simplification, term
+  oldnew i (e v).1 (e v).2
+ has type
+  ∃ (w : (graph e Inc spread).Walk (Sum.inr i) (Sum.inl (e.symm ((e v).1, (e v).2)))), w.length ≤ 3
+but is expected to have type
+  ∃ (p : (graph e Inc spread).Walk (Sum.inr i) (Sum.inl v)), p.length ≤ 3
+DegreeDiameter/Portfolio/OppositeGQ35SpreadWalks.lean:78:14: error(lean.unknownIdentifier): Unknown identifier `weak_old`
+'DegreeDiameter.Portfolio.OppositeGQSpread.diameter_three' depends on axioms: [sorryAx, Quot.sound]

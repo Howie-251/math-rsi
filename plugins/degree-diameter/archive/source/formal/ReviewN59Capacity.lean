@@ -1,0 +1,23 @@
+import DegreeDiameter.N59Capacity
+
+#print DegreeDiameter.nonedgeVertices
+#print DegreeDiameter.nonedgeDefectBudget
+#print DegreeDiameter.heavyZeroRepeats
+#print DegreeDiameter.orderedHeavyZeroPairs
+#print DegreeDiameter.zeroTriangleVertices
+#print DegreeDiameter.nonzeroTriangleVertices
+#print DegreeDiameter.globalHeavyZeroPairs
+#check @DegreeDiameter.n59_nonzero_nonedge_budget_le_four
+#check @DegreeDiameter.ordered_heavy_pair_outside_witnesses_two
+#check @DegreeDiameter.ordered_heavy_pairs_le_pair_indicator_sum
+#check @DegreeDiameter.n59_nonzero_local_heavy_capacity
+#check @DegreeDiameter.zero_heavy_degree_identity
+#check @DegreeDiameter.n59_global_heavy_zero_pairs_covered
+#check @DegreeDiameter.n59_nonzero_triangle_vertices_at_least_twenty
+#print axioms DegreeDiameter.n59_nonzero_nonedge_budget_le_four
+#print axioms DegreeDiameter.ordered_heavy_pair_outside_witnesses_two
+#print axioms DegreeDiameter.ordered_heavy_pairs_le_pair_indicator_sum
+#print axioms DegreeDiameter.n59_nonzero_local_heavy_capacity
+#print axioms DegreeDiameter.zero_heavy_degree_identity
+#print axioms DegreeDiameter.n59_global_heavy_zero_pairs_covered
+#print axioms DegreeDiameter.n59_nonzero_triangle_vertices_at_least_twenty

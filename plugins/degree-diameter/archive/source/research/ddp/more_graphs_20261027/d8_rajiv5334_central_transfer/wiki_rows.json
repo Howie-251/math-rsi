@@ -1,0 +1,80 @@
+{
+  "updated_UTC": "2026-10-27 15:32:28 UTC",
+  "rows": [
+    {
+      "id": "ddp-rajiv5334-central-c3-obstruction-20261027",
+      "title": "Rajiv5334双层为何刚够：固定2667基图只有两条短路线，三层提升不可能",
+      "family": "ordinary cyclic voltage covers",
+      "record_type": "necessary-route-capacity-model-no-final-graph",
+      "target_Delta": 8,
+      "target_D": 5,
+      "savedL": 5334,
+      "n": {
+        "actual": null,
+        "hypothetical": 8001
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "FixedC21semidirectF127base,r25,positivephases2/3/6/8andtranslations60/122/81/42;all<=5reducedwords. DirectcentralC3 arbitraryfourvoltages excluded by witness before81assignmenttests. Furtherordinarycovercorollary requires actual two-base-walk count, notjustcountvectors.",
+      "failure_or_result": "22409约化词完整检查；8个端点仅2种模3计数向量。首端点(phase1,x48)甚至仅baC和CdB两条≤5路线；任意中央连接只能到两个sheet，不能覆盖3层。原C2奇偶[0,0,1,1]恰分别给1/0，解释源双层为何够。0个连接赋值运行、0图、0BFS，CPU0.084秒。",
+      "lesson_and_restart_condition": "不运行已被完整短路见证排除的81赋值，不扩中央层数或seed。固定基图只有两条短路还直接阻止任意>2-sheet普通graphcover；若继续原源机制须有效改变基图/路线，不是改centralvoltages。",
+      "positive_guarantees": [
+        "Exactorder25mod127is21;theprojectionispreciselytheexisting5334source quotient.",
+        "All22409reducedwords<=5areenumerated;theliteralwitnesshasexactlytwobasewalks.",
+        "Coveringmapsliftanybasewalkuniquely,soanyk-sheetordinarycoverwithk>2hasatmosttwoaccessibleverticesinthiswitnessfiber."
+      ],
+      "unclosed_gap": "未排除其它素域、群作用、相位或非普通提升，也未取得新的(8,5)纪录。",
+      "outcome_class": "COMPLETE_FIXED_BASE_ROUTE_OBSTRUCTION_NO_NEW_GRAPH",
+      "wiki_verdict": "no",
+      "other_metrics": {
+        "reduced_words": 22409,
+        "witness_phase": 1,
+        "witness_x": 48,
+        "witness_words": [
+          "baC",
+          "CdB"
+        ],
+        "integer_signedcounts": [
+          [
+            -1,
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            -1
+          ]
+        ],
+        "old_source_parity": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "source_two_layer_witness_values": [
+          1,
+          0
+        ],
+        "ordinary_cover_max_sheets": 2,
+        "assignments_executed": 0,
+        "source_BFS": 0,
+        "new_BFS": 0,
+        "CPU_seconds": 0.083968252,
+        "prediction_supported": true,
+        "new_graphs_generated": 0
+      },
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/PLAN.json",
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/OBSTRUCTION.json",
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/MULTIPLICITY.json",
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/RESULT.json",
+        "research/ddp/more_graphs_20261027/d8_rajiv5334_central_transfer/analyze.py"
+      ]
+    }
+  ]
+}

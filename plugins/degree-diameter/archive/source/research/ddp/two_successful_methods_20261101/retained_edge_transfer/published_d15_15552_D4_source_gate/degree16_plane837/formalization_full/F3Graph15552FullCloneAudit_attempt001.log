@@ -1,0 +1,31 @@
+graph : SimpleGraph (Fin 15552 ⊕ Fin 837)
+label : Vertex ≃ Fin 16389
+def DegreeDiameter.Portfolio.F3Graph15552.Clone16389.FinalClaim : Prop :=
+Fintype.card Vertex = 16389 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 837), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3
+theorem DegreeDiameter.Portfolio.F3Graph15552.Clone16389.d16_16389 : Fintype.card Vertex = 16389 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 837), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_four, not_diameterAtMost_three⟩⟩⟩
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.d16_16389' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.F3Graph15552.Clone16389.final_claim : FinalClaim :=
+d16_16389
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.final_claim' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.diameterAtMost_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.not_diameterAtMost_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.load_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.pinOwner_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.label_new' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16389.old_walk_bound_iff' depends on axioms: [propext, Quot.sound]

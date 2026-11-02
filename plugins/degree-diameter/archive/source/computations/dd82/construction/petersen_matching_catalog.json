@@ -1,0 +1,196 @@
+{
+  "petersen_labeling": "outer cycle 0..4, inner star 5..9, spokes i--(i+5)",
+  "condition": "maximum degree of P intersect M(P) is at most one",
+  "permutation_convention": "M[u] is the target label of source u",
+  "complete_enumeration": true,
+  "permutations_processed": 3628800,
+  "total_S10": 3628800,
+  "admissible_permutations": 611400,
+  "rejected_permutations": 3017400,
+  "cpu_seconds": 0.117415,
+  "cpu_limit_seconds": 3,
+  "threads": 1,
+  "pinned_cpu": 0,
+  "counts_by_intersection_edge_number": {
+    "0": 2880,
+    "1": 46800,
+    "2": 158400,
+    "3": 240600,
+    "4": 158400,
+    "5": 4320
+  },
+  "first_permutation_by_intersection_edge_number": {
+    "0": [
+      0,
+      2,
+      4,
+      1,
+      3,
+      6,
+      8,
+      5,
+      7,
+      9
+    ],
+    "1": [
+      0,
+      1,
+      3,
+      5,
+      9,
+      6,
+      4,
+      7,
+      2,
+      8
+    ],
+    "2": [
+      0,
+      1,
+      3,
+      2,
+      6,
+      8,
+      5,
+      7,
+      9,
+      4
+    ],
+    "3": [
+      0,
+      1,
+      3,
+      2,
+      6,
+      7,
+      4,
+      9,
+      8,
+      5
+    ],
+    "4": [
+      0,
+      1,
+      3,
+      2,
+      6,
+      7,
+      8,
+      5,
+      4,
+      9
+    ],
+    "5": [
+      0,
+      1,
+      3,
+      2,
+      9,
+      7,
+      8,
+      5,
+      6,
+      4
+    ]
+  },
+  "edge_disjoint_exists": true,
+  "scope": "Necessary condition on one matching only; no claim of a complete degree-8 diameter-2 graph",
+  "independent_edge_disjoint_witness_check": {
+    "verified": true,
+    "method": "Python rebuilds Petersen neighbor sets and checks every image-neighbor intersection"
+  },
+  "read_only_best_state_diagnostic": {
+    "source": "petersen_six_fibers.best.params.json",
+    "saved_iteration": 246611968,
+    "saved_orbit_missing": 10,
+    "parameters": {
+      "A": {
+        "permutation": [
+          5,
+          9,
+          8,
+          7,
+          6,
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "intersection_degrees_in_source_order": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "intersection_edges": 0,
+        "satisfies_necessary_condition": true,
+        "unavoidable_orbit_missing_lower_bound": 0
+      },
+      "B": {
+        "permutation": [
+          7,
+          8,
+          9,
+          5,
+          6,
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "intersection_degrees_in_source_order": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "intersection_edges": 0,
+        "satisfies_necessary_condition": true,
+        "unavoidable_orbit_missing_lower_bound": 0
+      },
+      "C": {
+        "permutation": [
+          6,
+          7,
+          8,
+          9,
+          5,
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "intersection_degrees_in_source_order": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "intersection_edges": 0,
+        "satisfies_necessary_condition": true,
+        "unavoidable_orbit_missing_lower_bound": 0
+      }
+    }
+  }
+}

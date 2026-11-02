@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 开放参数研究</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}</style></head><body>
+<h1>当前任务：构造超过公开纪录的完整度数—直径图</h1>
+<p>更新：2026-10-26 18:44:16 UTC。范围4≤Δ≤12，D∈{3,4,5}。当前按机制集中(5,5)，其2026-10-26公开门槛为650；27格仍是选题池。旧N(8,2)继续暂停。</p>
+<div class="note"><strong>已验证新下界：0。</strong>本轮没有新纪录。完成的有限判定、失败图、源图结构和距离公式分别保存，不把它们当成目标成功。两条主机制现为M1电压覆盖与M2分层树／叶子连接；此前固定匹配修复和M3控制图路线暂时停下。</div>
+<h2>当前机制、未闭条件与下一动作</h2>
+<p><strong>M1：内部反射生成元的电压图。</strong>F₄₁⋊C₈的新分支已经完整检查：44个商骨架、14,059,884个赋值、13,740,658个合法赋值；mixed/both最优分别1804/984坏对，两张656点完整图独立全源BFS均为五正则、直径6。这是指定族的完整失败，未排除一般656点图。</p>
+<p>三个非忠实作用群的商与形式容量诊断已完整结束，用时4.22CPU秒。随后最小分支F₁₃⋊C₂₈ mixed全部48骨架×13³＝105,456赋值已完整检查，无D5解；最优728点图独立全源BFS为五正则、直径6、5,278坏对。F₁₇⋊C₂₄与F₂₉⋊C₁₂仅完成容量诊断，尚未运行平移赋值搜索。</p>
+<p><strong>M2：从已知650图恢复的分层结构。</strong>原图精确分为25组，每组1个组头、5个块头、20片叶子；每片叶子还有4条叶间边。500/125/25三层度数、全部端口与1625条原边已精确恢复。组间3条／5条叶边构成块匹配，5条型组对组成五个互不相交K₅；这些是已知图的结构，不是新构造。</p>
+<p>40条不共端点旧叶边替换的唯一676点候选已完整验收：简单连通、五正则，但直径6、2,172坏对。组头对全部通过；组头—块头仍有6坏对，组头—叶170，块头—块头14，块头—叶776，叶—叶1206。旧—旧坏对1309，新—旧863。总成本0.531CPU秒，没有随机修复队列。</p>
+<p>精确加权叶距离公式已给出六类点对的充要条件。26组无法照搬源图全部3/5组对重数，因为每组80叶半边为偶数、25个奇数之和为奇数。新的K₂₆一因子3/4连接可满足全部度数，但对角块匹配保持全局块编号，必有73,060个异编号叶坏对，结合其他类型得到总坏对至少92,300的纸面下界；其唯一实际图为D8、103,041坏对。唯一循环配对跟进解除该保持量，叶图与块商均连通，仍D7、27,142坏对。没有得到新的D5图。</p>
+<p><strong>实际在途状态：</strong>所有已启动计算均结束，无后台搜索。下一数学入口是从保存的循环图588个组头—块头坏对中区分块级路线缺失与叶端口不相容，接入完整覆盖条件；不继续原样抽样。</p>
+<h2>本阶段实际终态</h2>
+<table><thead><tr><th>对象／范围</th><th>结果与结论边界</th></tr></thead><tbody>
+<tr><td>2812点六匹配联合修复</td><td>一个120CPU秒profile结束。完整最佳图从364改善到331坏对，仍直径6；最后图339坏对。强单删损伤下界best为330，不能冒充实际331。没有续seed。</td></tr>
+<tr><td>650源的全部651点两边扩张</td><td>1,313,000个合法两边匹配全部完成，所有新根至少缺19点；整份直方图独立复核。全族直径恰6。保存图最大度5、唯一度4、实际59坏对；59不是全族总缺陷最小值。</td></tr>
+<tr><td>651点移动度数缺口</td><td>全部3230单步均变差，最小61。两个61邻图各自全部3230步仅能改善回原59图。仅此两个指定邻域，不是全二步或一般651排除；未运行退火。</td></tr>
+<tr><td>F41双反射分支</td><td>完整约1374万合法图评分，最优仍D6。生产、校准与独立验收合计约195.565CPU秒。已终止，无追加队列。</td></tr>
+<tr><td>已知基线与旧阶段</td><td>120、684、810规则及650、2810源的复现均非新纪录。此前degree5的2+3／4+1有限族、C37诊断、2824点profile、M3控制图失败均保留。</td></tr>
+<tr><td>审阅／形式化</td><td>只有早期指定结果的实际Gemini审阅回执，未覆盖本页后续结果；无新Grok或Lean成果。新纪录仍须重新核对来源、完整验证及规定验收。</td></tr>
+</tbody></table>
+<h2>本轮得到的可用数学关系</h2>
+<p>配对六匹配扩张中，原图G到两组端点A、B的距离a、b直接给出精确新根距离a+1、b+1；旧对距离是删边图距离与a(x)+a(y)+2、b(x)+b(y)+2的最小值。完整单删边损伤表的下界只会漏掉多删边共同损伤。单点扩张也有对应精确公式。这些关系已进入实际筛选与生成，仍不保证存在合格图。</p>
+<h2>人工意见与记录</h2>
+<p>用户询问“到现在为止有啥卓越成果吗”，答复仍是这轮没有新纪录或决定性突破。每小时只报告，不强制换方向；本次转向源图的分层结构，是基于已恢复的完整对象和固定修复的实际反馈。原comments和旧n61成果完整保留，未恢复旧任务。</p>
+<p><a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">公开主表</a> · <a href="../research-wiki/DD82_PROGRESS_AND_COMMENTS_20261018.md">唯一人工意见记录</a> · <a href="../research-wiki/query_pack.md">Wiki入口</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a> · <a href="progress_ddp_20261026_1745.html">此前本轮阶段原页</a> · <a href="progress_dd82_before_portfolio_20261026.html">旧DD82页面</a></p>
+<h2>直接证据</h2>
+<p><a href="ddp/m1_f41_reflections/SEARCH_REPORT.md">F41完整有限结果</a> · <a href="ddp/m1_matching_joint/REPORT.md">共同修复与精确距离</a> · <a href="ddp/matching_single_vertex650/REPORT.md">651完整扩张族</a> · <a href="ddp/degree_deficit651/LOOKAHEAD.md">缺口移动与两个选定出口</a> · <a href="ddp/source650_hierarchy/REPORT.md">650精确层次与端口</a> · <a href="ddp/m2_hierarchical676/REPORT.md">676插入候选结果</a> · <a href="ddp/m2_hierarchical676/DISTANCE_RULES.md">六类精确距离条件</a> · <a href="ddp/m2_factorization676/cyclic_pairing/REPORT.md">唯一循环配对结果</a> · <a href="ddp/m2_factorization676/ROUTING_DIAGNOSIS.md">对角连接统一障碍</a> · <a href="ddp/m1_reflection_nonfaithful/p13_mixed_search/SEARCH_REPORT.md">728完整有限检查</a></p>
+</body></html>

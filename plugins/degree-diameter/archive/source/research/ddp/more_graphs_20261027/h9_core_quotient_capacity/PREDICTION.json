@@ -1,0 +1,12 @@
+{
+  "prediction_id": "H9_CORE_ONLY_QUOTIENT_DELTA11",
+  "frozen_before_capacity_check": true,
+  "statement": "At least one degree12 extra in the fixed original42342 graph has no complete split-core phi-pair in its neighborhood, so its degree remains12 after any allowed core-only quotient.",
+  "base": "Original Dhar42342 graph, excluding the newly added vertices42342 and later",
+  "core": {"labels": "0..41355", "split_phi_pairs": 7959},
+  "allowed_operation": "Identify either member of any chosen subset of the7959 disjoint core split-pairs. Keep every extra distinct and retain every quotient edge; no vertex deletions or extra merges.",
+  "necessary_condition_for_Delta11": "Every degree12 extra must have both endpoints of at least one allowed pair as neighbors. Otherwise its12 distinct incident neighbor classes can never decrease.",
+  "budget": {"workers": 1, "CPU_seconds_hard": 15},
+  "excluded_operations": ["BFS", "MIP", "search", "S/c_optimization", "pointdeletion", "extramerging", "hashes"],
+  "scope_limit": "Only the fixed42342 graph with core-pair identification and all extras retained. No claim about other quotients, changed cores or general degree11 constructions."
+}

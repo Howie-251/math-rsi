@@ -1,0 +1,89 @@
+{
+  "finished_utc": "2026-11-01T07:03:24.435657+00:00",
+  "status": "STOP_FIXED10_RULE_PUBLICLY_DOMINATED_AFTER_FINITE_PASS",
+  "finite_precheck": "PASS",
+  "numerical_CPU_seconds": 0.177169576,
+  "numerical_CPU_budget_seconds": 30,
+  "workers": 1,
+  "local_unproduced_target": {
+    "n": 160550,
+    "m": 5153600,
+    "max_degree": 65,
+    "new_vertices": 500,
+    "new_edges": 32000,
+    "new_to_new_edges": 0,
+    "degree_histogram": {
+      "64": 128550,
+      "65": 32000
+    },
+    "diameter": "exact3 by existing full-neighborhood clone lemma plus accepted source; not newly instantiated or verified here"
+  },
+  "public_guarantee": {
+    "Delta": 65,
+    "D": 3,
+    "n": 160750,
+    "formula": "160000+50*(2*7+1)",
+    "larger_than_fixed10_target_by": 200,
+    "basis": "Published odd-q Tallini partial-ovoid construction as explicitly recorded in later primary paper; classical opposite-GQ source, published spread and Delorme general induced-subgraph duplication theorem.",
+    "separately_published_numeric160750_entry_located": false,
+    "edge_table_located": false,
+    "global_optimum_certified": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2203.04553#S1",
+      "location": "section1,Table1,reference13; section3.1 excludes q7 from its odd-square coordinate construction",
+      "fact": "Odd q construction of a maximal partial ovoid of W(3,q) of size2q+1.",
+      "original_reference": "G.Tallini,Fibrations through lines in a nonsingular quadric Q4,q of PG(4,q),Atti Accad.Peloritana66(1988),127-146(1989).",
+      "original_text_or_coordinates_obtained": false
+    },
+    {
+      "url": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+      "location": "section3.4.2",
+      "fact": "classical oppositeGQ(7,7) has160000 vertices,cap64,D3"
+    },
+    {
+      "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "location": "section7 p297;section8(a) p298",
+      "fact": "general induced-subgraph duplication plus symplectic50line spread"
+    }
+  ],
+  "public_theorem_binding": {
+    "A0": "O15 times spread50",
+    "A1": "empty",
+    "condition_a": "vacuous",
+    "condition_b": "every external vertex adjacent to at most one A0vertex; partialovoid uniqueness suffices",
+    "condition_c": "105K2 plus540isolates; minsource degree63 supplies an external neighbor; distance sums at most3",
+    "classical_source_used": true,
+    "local160050_source_used": false
+  },
+  "published_larger_O_inheritable": "15-point object exists abstractly by cited construction, but original recipe/coordinates not obtained and no literal15-point local check performed.",
+  "same_2022_paper_q7_scope": "No construction larger than15 applicable toW(3,7) located insection1,Table1,section3.1;43=q^2-q+1 is upperbound,notwitness;newexplicitcoordinates require odd-squareq.",
+  "search_batches": [
+    [
+      "\"W(3,7)\" \"partial ovoid\"",
+      "\"W(3,q)\" \"partial ovoids\" \"q=7\"",
+      "\"diameter 3\" \"degree 65\" graph",
+      "\"160550\" graph diameter"
+    ],
+    [
+      "partial ovoid symplectic generalized quadrangle W(3,q) odd size construction 7",
+      "\"W(3,7)\" ovoid 29",
+      "\"partial ovoids\" \"W(3\" Cossidente",
+      "\"symplectic\" \"partial ovoids\" \"twisted cubic\""
+    ]
+  ],
+  "primary_search_batches": 2,
+  "queries": 8,
+  "later_actions": "Only opens/finds of already located primary sources; no additional query.",
+  "candidate_graph_generated": false,
+  "source_edgefile_read": false,
+  "BFS": 0,
+  "Lean": 0,
+  "solver": 0,
+  "install": 0,
+  "hash": 0,
+  "accepted_counts_changed": false,
+  "running": false,
+  "next": "This10-point rule is terminal. Recovering a published larger witness, or any new independently authorized rule, is a separate task."
+}

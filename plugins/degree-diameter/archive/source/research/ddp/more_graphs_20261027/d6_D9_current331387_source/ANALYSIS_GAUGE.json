@@ -1,0 +1,164 @@
+{
+  "status": "SOURCE_AND_GAUGE_RECOVERED_NO_TARGET_NUMERIC_BATCH",
+  "source": {
+    "Delta": 6,
+    "D": 9,
+    "n": 331387,
+    "m": 994161,
+    "phase_modulus": 49,
+    "normal_modulus": 6763,
+    "action": 41,
+    "action_exact_order": 49,
+    "action_power7": 569,
+    "action_power49": 1,
+    "normal_modulus_prime": true,
+    "positive_generators": [
+      [
+        25,
+        1254
+      ],
+      [
+        18,
+        541
+      ],
+      [
+        47,
+        4642
+      ]
+    ],
+    "inverse_generators": [
+      [
+        24,
+        2125
+      ],
+      [
+        31,
+        3289
+      ],
+      [
+        2,
+        1300
+      ]
+    ],
+    "positive_source_IDs": [
+      170329,
+      122275,
+      322503
+    ],
+    "source_D_inherited": true
+  },
+  "operation": "RIGHT law(j,n)(k,t)=((j+k)mod49,(n*action^k+t)modq)",
+  "actual_C_edge_action": "SourceC emits producte(GEN[k],vertex),i.e.left-multiplication edges under this operation. Right-multiplication Cayley edges with the same inverse-closed set are isomorphic by group inversion; this observation is specific to the one-base Cayley model.",
+  "gauge": {
+    "inner_element": [
+      0,
+      2654
+    ],
+    "map_before_scaling": "(j,n)->(j,n+(41^j-1)*c)",
+    "shifted_normal": [
+      0,
+      3868,
+      5184
+    ],
+    "field_scale": 3100,
+    "phase_multiplier": 2,
+    "phase_inverse_multiplier": 25,
+    "new_action": 184,
+    "new_action_exact_order": 49,
+    "normalized_positives": [
+      [
+        1,
+        0
+      ],
+      [
+        36,
+        1
+      ],
+      [
+        45,
+        1512
+      ]
+    ],
+    "normalized_inverses": [
+      [
+        48,
+        0
+      ],
+      [
+        13,
+        5694
+      ],
+      [
+        4,
+        1216
+      ]
+    ],
+    "centered_integer_normal_lift": [
+      0,
+      1,
+      1512
+    ],
+    "lambda": 1512
+  },
+  "proposed_unique_next_field": {
+    "q": 6959,
+    "compatibility": "q=1mod49",
+    "minimality_checks": [
+      {
+        "candidate": 6812,
+        "smallest_divisor": 2,
+        "prime": false
+      },
+      {
+        "candidate": 6861,
+        "smallest_divisor": 3,
+        "prime": false
+      },
+      {
+        "candidate": 6910,
+        "smallest_divisor": 2,
+        "prime": false
+      },
+      {
+        "candidate": 6959,
+        "smallest_divisor": null,
+        "prime": true
+      }
+    ],
+    "hypothetical_n": 340991,
+    "hypothetical_m": 1022973,
+    "primitive_action_count": 42,
+    "primitive_action_test": "beta^49=1 and beta^7!=1",
+    "fixed_normalized_positives": [
+      [
+        1,
+        0
+      ],
+      [
+        36,
+        1
+      ],
+      [
+        45,
+        1512
+      ]
+    ],
+    "source_integer_lift_preserved": true,
+    "target_roots_enumerated": 0,
+    "target_field_endpoint_evaluations": 0,
+    "graphs": 0,
+    "BFS": 0
+  },
+  "connectivity_paper": "With g1=(1,0) and g2=(36,1),g1^-36*g2=(0,1).Thus every prime target and every compatible beta is generated,independently of third normal1512.",
+  "proposed_finite_prediction": "At least one of all42 exactorder49 embeddings at the unique nextfield6959 preserves the complete normal image at the predeclared thinnestC49 NB<=9 slot; actualD9 remains a separate full identity-BFS question.",
+  "source_graphs_downloaded": 0,
+  "author_C_executed": false,
+  "source_BFS": 0,
+  "target_word_scans": 0,
+  "target_root_enumerations": 0,
+  "actual_candidate_graphs": 0,
+  "actual_candidate_D": null,
+  "ordinary_bad_unordered_pairs": null,
+  "scope_note": "Source-recovery stage only; its targetzero counters are historical,not a claim that later production was absent.",
+  "completed_followup": "field6959_all_embeddings/RESULT.json"
+}

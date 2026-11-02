@@ -1,0 +1,22 @@
+{
+  "frozen_before_completion": true,
+  "question": "Does a current-class folded Redei15 blocking set extend the actual degree13/D5 source51417 by one complete vertex?",
+  "prediction": "At least one frozen11/12/13-pin neighborhood completes with at most2 eligibleoldanchors.",
+  "source": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/source51417.adjlist.txt",
+  "source_format": "zero-based adjacency rows,u followedneighbors,#comments,noheader",
+  "source_n": 51417,
+  "source_m": 324451,
+  "degree_cap": 13,
+  "core_n": 50554,
+  "extras": 863,
+  "target": {"degree":13,"diameter":5,"savedL":51417,"hypothetical_n":51418,"actual_n":null,"actual_D":null},
+  "mapping": "currentpoint_to_core13.u16.bin; oldpi12 andoldorientation not reused",
+  "core_rule": "Orientation-free whole-current-class lift of a plane blocking set; actualmandatoryR4 must covercore50554 or stop",
+  "phase1_order": "11pins(cap2),12pins(cap1),13pins(cap0); thenpinslex,originalpoolindex",
+  "deferred": "10pin/cap3 records frozen butnot attempted; no automatic thirdanchor/MIP/greedy escalation",
+  "budget": "one worker; parent+sourceconversion+compile+allnative<=120CPU; first5profile; firstfullgraphstop",
+  "acceptance": "actualolddegrees<13,selectedneighborcount<=13,andfreshcompleteR4coverall51417oldvertices;preservealloldedges",
+  "stop": "firstcompletehit,corecounterexample,phase1finitepoolterminal,orbudgetUNKNOWN",
+  "shared_delivery_modified": false,
+  "old_source_BFS": 0
+}

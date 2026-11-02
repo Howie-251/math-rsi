@@ -1,0 +1,3 @@
+# Preserved prelaunch source-path correction
+
+The first invocation of run_once.py raised FileNotFoundError while locating the declared controller PARAMETERS.json. The path BASE=HERE.parents[2] pointed at affine_field_conditions; corrected to HERE.parents[1], which is r6_schreier78_controller. This exception occurred before header creation, compilation, any validator child or any graph read. The subsequent executable batch compiled once and validated once. The initial read-only failure was not CPU-instrumented and is outside the explicitly recorded executable-batch measurement boundary. No failed graph-validation output was overwritten.

@@ -1,0 +1,22 @@
+{
+  "updated_UTC": "2026-11-01 19:07 UTC",
+  "status": "ROOT_ACCEPTED_BOUNDED_ENGINEERING_MODEL_ONLY",
+  "read_evidence": [
+    "RESULT.json",
+    "TERMINAL.json"
+  ],
+  "port_model": "Each link uses one port at each endpoint; server/nonnetwork slots=Pn-2m. P16 source15552:16200, final16389:4554, change-11646.",
+  "traffic_model": "16fixed labels,240ordered unitflows,sorted-neighbor single-shortest routing; directedlink capacity1",
+  "observations": "Mean hops2.875->2.9, peak directed load4->4, fixed-route common rate cap1/4->1/4. Remove samplebusiest undirectedlink(122,1171), all240 remain reachable;8paths change,6gain1hop.",
+  "scope": "240 fixed sampled flows, one selected failed link, fixed routing and abstract port model; no global fault diameter or allpairs traffic inference",
+  "traffic_BFS_roots": 32,
+  "source_validity_or_fullD3_reverification": false,
+  "cumulative_case_CPU_seconds": 0.322703,
+  "industrial_advantage_claimed": false,
+  "new_graph_parameter_Lean_counts": [
+    0,
+    0,
+    0
+  ],
+  "decision": "STOP finitepilot; preserve measurement, no autonomous scaleup."
+}

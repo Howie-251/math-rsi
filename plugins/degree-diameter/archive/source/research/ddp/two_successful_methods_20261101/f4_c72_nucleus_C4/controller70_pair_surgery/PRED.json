@@ -1,0 +1,16 @@
+{
+  "question":"Can deleting an adjacent pair u,v from the literalExoo72 and adding one perfectmatching between their four remaining neighbor sets produce a usable70point5regularD3controller?",
+  "target_if_full_fiber_success":{"Delta":22,"D":3,"n":4480},
+  "source":"../Exoo72/INPUT.json controller, same literal source already bound to Exoo72edges;no old D3 rerun",
+  "parameter_domain":"All180source edgesu<v, each24permutations sigma of four A=N(u)-v and B=N(v)-u;4320assignments,not distinctgraphs",
+  "surgery":"Deleteu,v and all incidentedges;add matching A_i--B_sigma(i). Keep all other edges and relabel retainedoldvertices in ascendingorder.",
+  "prediction_before_test":"The new matching repairs old A-to-B routes but can lose the old two-step A_i-u-A_j and B_i-v-B_j routes. Because the source hasgirth5,AunionB is independent in H=G-{u,v}. A same-sidepair can have a <=3path in H+matching iff an oldH<=3path already exists OR one matchingedge at its first/last step connects to an old commonneighbor. The gate must retain existing paths; omitting them would be too strong.",
+  "A_pair_gate":"existing_H(A_i,A_j)<=3 OR D[j,sigma(i)] OR D[i,sigma(j)], D[i,j]=N_H(A_i)intersectionN_H(B_j)nonempty",
+  "B_pair_gate":"existing_H(B_i,B_j)<=3 OR D[sigma^-1(i),j] OR D[sigma^-1(j),i]",
+  "falsification":"Any actual <=3same-side path with gatefalse refutes this cut and it must not be used. Structural A/Bdisjointness and nooldedges inAunionB are checked for all180sourceedges before applying it.",
+  "test_order":["All4320cheap exactsame-side gates","If allfail,saveper-edge D/existingmatrices and per-assignment failingpair proof;no fullcontrollerBFS","If survivors,check literal70adjacency/simplicity/5regularity and allrootcontrollerR3","Only actualD3survivors get cached-style unique-route24conic/120generalquotient gates;stop at firstcomplete24-domain survivor and return interface,noSAT"],
+  "budget_CPU_seconds":20,
+  "workers":1,
+  "forbidden":["fibergraph","SAT","Lean","hash","install","oldsourceBFS","newsource/portseed/modulusladder"],
+  "scope":"Allfailure closes only this Exoo72 adjacent-two-vertex deletion plus crossperfectmatching family,not general70controllers. Controlleralone is not a new4480graph."
+}

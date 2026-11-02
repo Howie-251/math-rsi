@@ -1,0 +1,100 @@
+def DegreeDiameter.commonNeighborVertices.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → Finset V :=
+fun {V} [Fintype V] G u v => {x ∈ G.neighborFinset u | G.Adj x v}
+@DegreeDiameter.mem_commonNeighborVertices : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (u v x : V),
+  x ∈ DegreeDiameter.commonNeighborVertices G u v ↔ G.Adj u x ∧ G.Adj v x
+@DegreeDiameter.n62_triple_repeat_rows : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            (∀ (x : V), DegreeDiameter.defectMatrix G u x = if x = v then 3 else 0) ∧
+              ∀ (x : V), DegreeDiameter.defectMatrix G v x = if x = u then 3 else 0
+@DegreeDiameter.n62_triple_repeat_nonadj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {u v : V}, DegreeDiameter.defectMatrix G u v = 3 → u ≠ v ∧ ¬G.Adj u v
+@DegreeDiameter.n62_triple_endpoint_zero_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {u v : V}, DegreeDiameter.defectMatrix G u v = 3 → DegreeDiameter.zeroTriangleVertex G u
+@DegreeDiameter.n62_triple_common_card : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V}, DegreeDiameter.defectMatrix G u v = 3 → (DegreeDiameter.commonNeighborVertices G u v).card = 4
+@DegreeDiameter.n62_triple_common_nonadj : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x y : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.commonNeighborVertices G u v →
+              y ∈ DegreeDiameter.commonNeighborVertices G u v → ¬G.Adj x y
+@DegreeDiameter.n62_triple_common_rows : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.commonNeighborVertices G u v →
+              ∀ (y : V),
+                DegreeDiameter.defectMatrix G x y =
+                  if y ∈ DegreeDiameter.commonNeighborVertices G u v ∧ y ≠ x then 1 else 0
+@DegreeDiameter.n62_triple_common_pair_neighbors : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x y : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.commonNeighborVertices G u v →
+              y ∈ DegreeDiameter.commonNeighborVertices G u v →
+                x ≠ y → DegreeDiameter.commonNeighborVertices G x y = {u, v}
+@DegreeDiameter.n62_triple_outside_common_neighbors_unique : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v z x y : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            z ≠ u →
+              z ≠ v →
+                x ∈ DegreeDiameter.commonNeighborVertices G u v →
+                  y ∈ DegreeDiameter.commonNeighborVertices G u v → G.Adj z x → G.Adj z y → x = y
+@DegreeDiameter.n62_triple_pair_component : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            DegreeDiameter.repeatComponentVertices G ((DegreeDiameter.repeatSupport G).connectedComponentMk u) = {u, v}
+@DegreeDiameter.n62_triple_common_component : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.commonNeighborVertices G u v →
+              DegreeDiameter.repeatComponentVertices G ((DegreeDiameter.repeatSupport G).connectedComponentMk x) =
+                DegreeDiameter.commonNeighborVertices G u v
+@DegreeDiameter.n62_triple_component_sizes : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            DegreeDiameter.repeatComponentSize G ((DegreeDiameter.repeatSupport G).connectedComponentMk u) = 2 ∧
+              ∃ C,
+                DegreeDiameter.repeatComponentVertices G C = DegreeDiameter.commonNeighborVertices G u v ∧
+                  DegreeDiameter.repeatComponentSize G C = 4
+'DegreeDiameter.mem_commonNeighborVertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_repeat_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_repeat_nonadj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_endpoint_zero_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_common_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_common_nonadj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_common_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_common_pair_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_outside_common_neighbors_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_pair_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_common_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_component_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]

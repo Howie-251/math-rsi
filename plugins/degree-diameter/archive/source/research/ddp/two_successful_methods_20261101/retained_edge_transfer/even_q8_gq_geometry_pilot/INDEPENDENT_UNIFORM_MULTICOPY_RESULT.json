@@ -1,0 +1,325 @@
+{
+  "status": "PASS_PREDICTION_SUPPORTED_WITH_PLAIN_PROOF",
+  "scope": "uniform full-source-N copies k>=1, old adj fixed, every old non-D saturated at cap delta+k, nonempty finite new helper batch",
+  "exact_route_condition": "h in S_c union closedNB(S_T(c))",
+  "degree_cost": "a_h+d_h<=Delta, with a counting distinct offdiag clone classes",
+  "necessary_bound": "R*(R-1)<=floor((Delta+2)^2/4)",
+  "balanced": {
+    "R": 65,
+    "delta": 81,
+    "M": 4160,
+    "excluded_uniform_k": [
+      1,
+      45
+    ],
+    "max_excluded_cap": 126,
+    "bound_at_max": 4096,
+    "next_cap": 127,
+    "bound_at_next": 4160
+  },
+  "Payne": {
+    "R": 64,
+    "delta": 80,
+    "M": 4032,
+    "excluded_uniform_k": [
+      1,
+      44
+    ],
+    "max_excluded_cap": 124,
+    "bound_at_max": 3969,
+    "next_cap": 125,
+    "bound_at_next": 4032
+  },
+  "toy": {
+    "status": "PASS_NO_FINITE_COUNTEREXAMPLE",
+    "matching": "T(c)=c xor1",
+    "owner_representation": "arbitrary subsets of all t helpers, bit h means h owns at least one clone in class c",
+    "routes_are_center_necessary_condition_only": true,
+    "cases": [
+      {
+        "M": 4,
+        "t": 4,
+        "owner_assignments": 65536,
+        "configurations": 4194304,
+        "route_valid": 1486232,
+        "route_valid_with_empty_class": 37920,
+        "route_valid_with_multi_owner_class": 1485696,
+        "route_valid_with_both": 37920,
+        "route_valid_all_classes_singleton_nonempty": 536,
+        "minimum_helper_cap": 2,
+        "cap_histogram": {
+          "2": 256,
+          "3": 15732,
+          "4": 225439,
+          "5": 618751,
+          "6": 497991,
+          "7": 128063
+        },
+        "minimum_cap_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            15,
+            0,
+            15,
+            0
+          ],
+          "a_by_helper": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 2,
+          "sum_a_times_d_plus2": 16
+        },
+        "first_empty_class_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            15,
+            0,
+            15,
+            0
+          ],
+          "a_by_helper": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 2,
+          "sum_a_times_d_plus2": 16
+        },
+        "first_multi_owner_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            15,
+            0,
+            15,
+            0
+          ],
+          "a_by_helper": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 2,
+          "sum_a_times_d_plus2": 16
+        },
+        "first_empty_and_multi_owner_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            15,
+            0,
+            15,
+            0
+          ],
+          "a_by_helper": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 2,
+          "sum_a_times_d_plus2": 16
+        }
+      },
+      {
+        "M": 6,
+        "t": 3,
+        "owner_assignments": 262144,
+        "configurations": 2097152,
+        "route_valid": 466908,
+        "route_valid_with_empty_class": 66304,
+        "route_valid_with_multi_owner_class": 466098,
+        "route_valid_with_both": 66304,
+        "route_valid_all_classes_singleton_nonempty": 810,
+        "minimum_helper_cap": 3,
+        "cap_histogram": {
+          "3": 512,
+          "4": 15186,
+          "5": 114893,
+          "6": 197956,
+          "7": 113976,
+          "8": 24385
+        },
+        "minimum_cap_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            7,
+            0,
+            7,
+            0,
+            7,
+            0
+          ],
+          "a_by_helper": [
+            3,
+            3,
+            3
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 3,
+          "sum_a_times_d_plus2": 18
+        },
+        "first_empty_class_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            7,
+            0,
+            7,
+            0,
+            7,
+            0
+          ],
+          "a_by_helper": [
+            3,
+            3,
+            3
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 3,
+          "sum_a_times_d_plus2": 18
+        },
+        "first_multi_owner_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            7,
+            0,
+            7,
+            0,
+            7,
+            0
+          ],
+          "a_by_helper": [
+            3,
+            3,
+            3
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 3,
+          "sum_a_times_d_plus2": 18
+        },
+        "first_empty_and_multi_owner_witness": {
+          "helper_graph_edge_mask": 0,
+          "owner_subset_masks_by_class": [
+            7,
+            0,
+            7,
+            0,
+            7,
+            0
+          ],
+          "a_by_helper": [
+            3,
+            3,
+            3
+          ],
+          "d_by_helper": [
+            0,
+            0,
+            0
+          ],
+          "minimal_cap": 3,
+          "sum_a_times_d_plus2": 18
+        }
+      }
+    ],
+    "total_configurations": 6291456,
+    "total_route_valid": 1953140,
+    "counterexamples": 0
+  },
+  "steps": [
+    {
+      "step": "compile",
+      "exit_code": 0,
+      "CPU_seconds": 0.8911778659999999
+    },
+    {
+      "step": "toy",
+      "exit_code": 0,
+      "CPU_seconds": 0.203202561
+    }
+  ],
+  "total_CPU_seconds": 1.112448014,
+  "prior_singleton_toy_reexecuted": false,
+  "largegraphs_generated": 0,
+  "old_geometry_or_field_retests": 0,
+  "BFS_runs": 0,
+  "Lean_runs": 0,
+  "solver_calls": 0,
+  "automatic_k2_or_other_graph_production": false,
+  "excluded_scope_not_extended_to": [
+    "nonuniform copies",
+    "joint construction before saturation",
+    "changes to old edges",
+    "higher cap",
+    "different initial code",
+    "entire A family"
+  ],
+  "abstract_host_code_version": {
+    "host": "delta-regular simple graph",
+    "premises": [
+      "center open neighborhoods pairwise disjoint",
+      "union N(c)=V(host) minus D",
+      "D subset C and isolated in host induced on C",
+      "C minus D induces matching T"
+    ],
+    "uniform_k": "all integers k>=1; cap delta+k; old adj fixed; nonempty finite new-helper batch only",
+    "necessary_bound": "card(C minus D)<=floor((delta+k+2)^2/4)",
+    "GF8_coordinates_needed_for_count_proof": false
+  },
+  "nonapplication_metadata_inherited_not_retested": {
+    "q7_P33": {
+      "host_order": 160050,
+      "center_count": 1650,
+      "pin_union": 105600,
+      "old_free_complement": 54450,
+      "complement_subset_of_C": false
+    },
+    "F9_U10": {
+      "host_order": 56862,
+      "center_count": 810,
+      "pin_union": 43740,
+      "old_free_complement": 13122,
+      "complement_subset_of_C": false
+    }
+  },
+  "new_lemma_in_existing_remote_three_target_B_C_scope": false
+}

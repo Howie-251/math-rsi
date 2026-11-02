@@ -1,0 +1,143 @@
+{
+  "scope": "Four prescribed tiny implementation regression families only; no production search",
+  "group": {
+    "p": 5,
+    "m": 4,
+    "r": 2
+  },
+  "vertices": 40,
+  "edges_per_legal_graph": 100,
+  "root_vertex_ids": [
+    0,
+    20
+  ],
+  "vertex_id": "layer*20+translation*4+quotient",
+  "A": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "method": "independent explicit undirected edge set, every-source BFS for every legal assignment",
+  "counts": [
+    {
+      "kind": "mixed",
+      "beta": 0,
+      "sigma": 0,
+      "tau": 1,
+      "raw_assignments": 125,
+      "legal_assignments": 80,
+      "illegal_assignments": 45,
+      "two_root_missing_histogram": {
+        "0": 80
+      },
+      "diameter_histogram": {
+        "3": 36,
+        "4": 44
+      },
+      "examples": {
+        "diameter_at_most5": {
+          "parameters": [
+            1,
+            1,
+            0
+          ],
+          "two_root_missing": 0,
+          "diameter": 4
+        }
+      }
+    },
+    {
+      "kind": "mixed",
+      "beta": 1,
+      "sigma": 0,
+      "tau": 1,
+      "raw_assignments": 125,
+      "legal_assignments": 100,
+      "illegal_assignments": 25,
+      "two_root_missing_histogram": {
+        "0": 100
+      },
+      "diameter_histogram": {
+        "3": 54,
+        "4": 46
+      },
+      "examples": {
+        "diameter_at_most5": {
+          "parameters": [
+            0,
+            1,
+            0
+          ],
+          "two_root_missing": 0,
+          "diameter": 4
+        }
+      }
+    },
+    {
+      "kind": "both",
+      "beta": 2,
+      "sigma": 0,
+      "tau": 1,
+      "raw_assignments": 625,
+      "legal_assignments": 400,
+      "illegal_assignments": 225,
+      "two_root_missing_histogram": {
+        "0": 400
+      },
+      "diameter_histogram": {
+        "3": 64,
+        "4": 332,
+        "5": 4
+      },
+      "examples": {
+        "diameter_at_most5": {
+          "parameters": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "two_root_missing": 0,
+          "diameter": 4
+        }
+      }
+    },
+    {
+      "kind": "both",
+      "beta": 2,
+      "sigma": 1,
+      "tau": 1,
+      "raw_assignments": 625,
+      "legal_assignments": 400,
+      "illegal_assignments": 225,
+      "two_root_missing_histogram": {
+        "0": 400
+      },
+      "diameter_histogram": {
+        "3": 64,
+        "4": 332,
+        "5": 4
+      },
+      "examples": {
+        "diameter_at_most5": {
+          "parameters": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "two_root_missing": 0,
+          "diameter": 4
+        }
+      }
+    }
+  ],
+  "total_raw": 1500,
+  "total_legal": 980,
+  "cpu_seconds": 0.613426465
+}

@@ -1,0 +1,411 @@
+{
+  "status": "TARGETED_SUCCESS_MECHANISM_ANALYSIS_COMPLETE",
+  "source": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/source51417.adjlist.txt",
+  "source_n": 51417,
+  "prototype": 51013,
+  "deleted_pin": 11352,
+  "guard": 50577,
+  "prototype_layer": "sourceextra",
+  "deleted_layer": "sourcecore",
+  "guard_layer": "sourceextra",
+  "degrees": {
+    "51013": 10,
+    "11352": 13,
+    "50577": 11
+  },
+  "neighborhoods": {
+    "51013": [
+      2813,
+      9214,
+      11352,
+      15101,
+      25662,
+      33884,
+      38121,
+      38574,
+      42842,
+      48533
+    ],
+    "11352": [
+      45032,
+      45492,
+      46220,
+      47212,
+      47859,
+      48752,
+      48996,
+      49317,
+      49778,
+      50066,
+      50848,
+      51013,
+      51287
+    ],
+    "50577": [
+      45032,
+      45492,
+      46220,
+      47212,
+      47859,
+      48752,
+      48996,
+      49317,
+      49778,
+      50066,
+      51275
+    ]
+  },
+  "neighborhood_layers": {
+    "51013": {
+      "core": 10,
+      "extras": 0
+    },
+    "11352": {
+      "core": 10,
+      "extras": 3
+    },
+    "50577": {
+      "core": 10,
+      "extras": 1
+    }
+  },
+  "shared_deleted_guard_neighbors": [
+    45032,
+    45492,
+    46220,
+    47212,
+    47859,
+    48752,
+    48996,
+    49317,
+    49778,
+    50066
+  ],
+  "shared_count": 10,
+  "guard_neighbors_subset_deleted": false,
+  "deleted_neighbors_subset_guard": false,
+  "deleted_only_neighbors": [
+    50848,
+    51013,
+    51287
+  ],
+  "guard_only_neighbors": [
+    51275
+  ],
+  "prototype_guard_common_neighbors": [],
+  "mandatory_guard_common_neighbors": [],
+  "pairwise_distances": {
+    "51013,51013": 0,
+    "51013,11352": 1,
+    "51013,50577": 3,
+    "11352,51013": 1,
+    "11352,11352": 0,
+    "11352,50577": 2,
+    "50577,51013": 3,
+    "50577,11352": 2,
+    "50577,50577": 0
+  },
+  "mandatory": [
+    2813,
+    9214,
+    15101,
+    25662,
+    33884,
+    38121,
+    38574,
+    42842,
+    48533
+  ],
+  "missing_count": 3614,
+  "profiles": {
+    "core": {
+      "count": 3535,
+      "prototype_distance_histogram": {
+        "4": 71,
+        "5": 3464
+      },
+      "deleted_distance_histogram": {
+        "3": 71,
+        "4": 3464
+      },
+      "guard_distance_histogram": {
+        "3": 75,
+        "4": 3460
+      },
+      "joint_distance_histogram": {
+        "4,3,3": 69,
+        "4,3,4": 2,
+        "5,4,3": 6,
+        "5,4,4": 3458
+      },
+      "guard_minus_deleted_histogram": {
+        "-1": 6,
+        "0": 3527,
+        "1": 2
+      },
+      "shortest_guard_route_with_shared_firststep": 3529
+    },
+    "extras": {
+      "count": 79,
+      "prototype_distance_histogram": {
+        "4": 8,
+        "5": 71
+      },
+      "deleted_distance_histogram": {
+        "3": 8,
+        "4": 71
+      },
+      "guard_distance_histogram": {
+        "3": 8,
+        "4": 71
+      },
+      "joint_distance_histogram": {
+        "4,3,3": 8,
+        "5,4,4": 71
+      },
+      "guard_minus_deleted_histogram": {
+        "0": 79
+      },
+      "shortest_guard_route_with_shared_firststep": 79
+    }
+  },
+  "saved_target_mask_guard_row": 12950,
+  "saved_target_mask_popcount": 3614,
+  "all_missing_guard_distance_at_most4": true,
+  "all_missing_prototype_short_routes_need_deleted_firststep": true,
+  "private_firststep_proof": "NoMpinhasdistance<=4toanymissingtarget;sourceprototypeD<=5forcesallprototype->target routes<=5tostartwithdeletedpin.",
+  "all_missing_have_shared_shortest_guard_firststep": false,
+  "guard_shortest_branch_contributions": [
+    {
+      "neighbor": 45032,
+      "neighbor_degree": 13,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 423,
+      "missing_with_unique_shortest_firststep": 367,
+      "core_unique_shortest_firststep": 355,
+      "extra_unique_shortest_firststep": 12
+    },
+    {
+      "neighbor": 45492,
+      "neighbor_degree": 9,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 412,
+      "missing_with_unique_shortest_firststep": 395,
+      "core_unique_shortest_firststep": 383,
+      "extra_unique_shortest_firststep": 12
+    },
+    {
+      "neighbor": 46220,
+      "neighbor_degree": 13,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 620,
+      "missing_with_unique_shortest_firststep": 593,
+      "core_unique_shortest_firststep": 575,
+      "extra_unique_shortest_firststep": 18
+    },
+    {
+      "neighbor": 47212,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 0,
+      "missing_with_unique_shortest_firststep": 0,
+      "core_unique_shortest_firststep": 0,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 47859,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 752,
+      "missing_with_unique_shortest_firststep": 155,
+      "core_unique_shortest_firststep": 155,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 48752,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 737,
+      "missing_with_unique_shortest_firststep": 109,
+      "core_unique_shortest_firststep": 109,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 48996,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 0,
+      "missing_with_unique_shortest_firststep": 0,
+      "core_unique_shortest_firststep": 0,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 49317,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 748,
+      "missing_with_unique_shortest_firststep": 156,
+      "core_unique_shortest_firststep": 156,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 49778,
+      "neighbor_degree": 12,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 740,
+      "missing_with_unique_shortest_firststep": 118,
+      "core_unique_shortest_firststep": 118,
+      "extra_unique_shortest_firststep": 0
+    },
+    {
+      "neighbor": 50066,
+      "neighbor_degree": 11,
+      "shared_with_deleted": true,
+      "missing_with_this_shortest_firststep": 431,
+      "missing_with_unique_shortest_firststep": 408,
+      "core_unique_shortest_firststep": 388,
+      "extra_unique_shortest_firststep": 20
+    },
+    {
+      "neighbor": 51275,
+      "neighbor_degree": 13,
+      "shared_with_deleted": false,
+      "missing_with_this_shortest_firststep": 96,
+      "missing_with_unique_shortest_firststep": 6,
+      "core_unique_shortest_firststep": 6,
+      "extra_unique_shortest_firststep": 0
+    }
+  ],
+  "route_examples": [
+    {
+      "layer": "core",
+      "target": 689,
+      "distances": [
+        4,
+        3,
+        3
+      ],
+      "guard_shortest_path": [
+        50577,
+        45032,
+        51264,
+        689
+      ],
+      "guard_firststep": 45032,
+      "guard_firststep_shared_with_deleted": true,
+      "prototype_route_via_deleted_length": 4
+    },
+    {
+      "layer": "core",
+      "target": 7384,
+      "distances": [
+        4,
+        3,
+        4
+      ],
+      "guard_shortest_path": [
+        50577,
+        45492,
+        13659,
+        47904,
+        7384
+      ],
+      "guard_firststep": 45492,
+      "guard_firststep_shared_with_deleted": true,
+      "prototype_route_via_deleted_length": 4
+    },
+    {
+      "layer": "core",
+      "target": 14555,
+      "distances": [
+        5,
+        4,
+        3
+      ],
+      "guard_shortest_path": [
+        50577,
+        51275,
+        45825,
+        14555
+      ],
+      "guard_firststep": 51275,
+      "guard_firststep_shared_with_deleted": false,
+      "prototype_route_via_deleted_length": 5
+    },
+    {
+      "layer": "core",
+      "target": 0,
+      "distances": [
+        5,
+        4,
+        4
+      ],
+      "guard_shortest_path": [
+        50577,
+        45032,
+        6270,
+        50615,
+        0
+      ],
+      "guard_firststep": 45032,
+      "guard_firststep_shared_with_deleted": true,
+      "prototype_route_via_deleted_length": 5
+    },
+    {
+      "layer": "extras",
+      "target": 50615,
+      "distances": [
+        4,
+        3,
+        3
+      ],
+      "guard_shortest_path": [
+        50577,
+        45032,
+        6270,
+        50615
+      ],
+      "guard_firststep": 45032,
+      "guard_firststep_shared_with_deleted": true,
+      "prototype_route_via_deleted_length": 4
+    },
+    {
+      "layer": "extras",
+      "target": 50555,
+      "distances": [
+        5,
+        4,
+        4
+      ],
+      "guard_shortest_path": [
+        50577,
+        45032,
+        6270,
+        10064,
+        50555
+      ],
+      "guard_firststep": 45032,
+      "guard_firststep_shared_with_deleted": true,
+      "prototype_route_via_deleted_length": 5
+    }
+  ],
+  "hypothesis_neighborhood_containment_supported": false,
+  "targeted_BFS_roots": [
+    51013,
+    11352,
+    50577
+  ],
+  "targeted_BFS_root_count": 3,
+  "one_targeted_batch": true,
+  "source_allsource_BFS": 0,
+  "newgraph_BFS": 0,
+  "new_candidates": 0,
+  "raw_mapping_used": false,
+  "CPU_seconds": 0.234364358,
+  "actual_core_neighborhoods_equal": true,
+  "full_neighborhood_proxy_or_false_twin": false,
+  "guard_branch_privacy_scope": "Shortestguardroutesonly;all<=4branchessentialitynottested",
+  "originalbase_control_file": "ORIGINALBASE_CONTROL.json",
+  "mechanism_report": "MECHANISM.md",
+  "future_selection_rule": "Preferfreeproxiesoftheunique saturatedpin withsame/high-overlapactualcore neighborhood;checkretainedproxyfirst,thenactualwholecurrentR4;notarbitraryanchorcombinations"
+}

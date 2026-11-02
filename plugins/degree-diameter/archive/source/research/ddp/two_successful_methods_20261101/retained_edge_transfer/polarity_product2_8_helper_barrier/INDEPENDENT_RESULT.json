@@ -1,0 +1,119 @@
+{
+  "status": "SUPPORTED_PAPER_ROUTE_BARRIER_SCALAR_PASS",
+  "prediction_file": "PREDICTION_AND_PROOF.md",
+  "assumptions": "Genuine looped GQ polarity quotients A(q2), B(q8), the stated absolute sets, all original source and uniform-r full-N clone edges retained, finite simple augmentation at cap 27+r.",
+  "source_is_published_abstract_interface_not_generated_here": true,
+  "source_order": 8775,
+  "center_count": 325,
+  "source_center_degree": 26,
+  "source_noncenter_count": 8450,
+  "source_noncenter_degree": 27,
+  "hard_target_count": 650,
+  "mandatory_direct_X_bound": 2,
+  "mandatory_radius_two_X_bound": 6,
+  "per_helper_necessary_inequality": "650 <= (6+2*r)*p_h + 2*sum_{g~h} p_g",
+  "summed_necessary_inequality": "650 <= 2*(r+15)^2",
+  "rows": [
+    {
+      "r": 0,
+      "cap": 27,
+      "hard_targets": 650,
+      "integer_quadratic_maximum": 450,
+      "maximizing_helper_degree": [
+        12
+      ],
+      "hard_targets_minus_bound": 200,
+      "excludes_nonempty_helper_batch": true
+    },
+    {
+      "r": 1,
+      "cap": 28,
+      "hard_targets": 650,
+      "integer_quadratic_maximum": 512,
+      "maximizing_helper_degree": [
+        12
+      ],
+      "hard_targets_minus_bound": 138,
+      "excludes_nonempty_helper_batch": true
+    },
+    {
+      "r": 2,
+      "cap": 29,
+      "hard_targets": 650,
+      "integer_quadratic_maximum": 578,
+      "maximizing_helper_degree": [
+        12
+      ],
+      "hard_targets_minus_bound": 72,
+      "excludes_nonempty_helper_batch": true
+    },
+    {
+      "r": 3,
+      "cap": 30,
+      "hard_targets": 650,
+      "integer_quadratic_maximum": 648,
+      "maximizing_helper_degree": [
+        12
+      ],
+      "hard_targets_minus_bound": 2,
+      "excludes_nonempty_helper_batch": true
+    },
+    {
+      "r": 4,
+      "cap": 31,
+      "hard_targets": 650,
+      "integer_quadratic_maximum": 722,
+      "maximizing_helper_degree": [
+        12
+      ],
+      "hard_targets_minus_bound": -72,
+      "excludes_nonempty_helper_batch": false
+    }
+  ],
+  "excluded_r": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excluded_caps": [
+    27,
+    28,
+    29,
+    30
+  ],
+  "first_not_excluded": {
+    "r": 4,
+    "cap": 31,
+    "not_an_existence_result": true
+  },
+  "paper_attack": {
+    "source_loop_removal": "covered: only absolute-product vertices lose a loop; deleting loops cannot add routes",
+    "repeated_clones": "covered by replacing initial clone with its source center for an old-X suffix",
+    "arbitrary_free_peer_edges": "covered: first pin uses one of r+1 free slots; at most r peers remain",
+    "multiple_helpers_and_repeated_class_ownership": "covered by actual pin counts and undirected double counting",
+    "both_endpoint_degree_cost": "each helper-free and free-free edge consumes its actual endpoint slots; unused global consistency can only strengthen the bound",
+    "exhaustive_helper_path_types": "first step to F or H; a saturated old noncenter cannot be adjacent to any new helper"
+  },
+  "complementary_agent": {
+    "name": "/root/f9_56862_independent",
+    "scope": "paper-only independent 2/6 factor-route check",
+    "result": "SUPPORTED",
+    "tools_or_computations": 0
+  },
+  "scalar_CPU_seconds": 0.0,
+  "CPU_measurement_note": "The sole run's time.process_time reading was below timing resolution for the tiny scalar loop; preparation/execution is not asserted to have zero cost.",
+  "scalar_CPU_limit_seconds": 5,
+  "operations": {
+    "scalar_checks": 1,
+    "graph_generation": 0,
+    "graph_parsing": 0,
+    "field_or_geometry_computation": 0,
+    "BFS": 0,
+    "Lean": 0,
+    "solver": 0,
+    "web_queries": 0,
+    "paid_reviews": 0
+  },
+  "scope": "Only the fixed published source, complete uniform copying, mandatory-edge-preserving augmentation, and existence of a nonempty helper batch. No global N(Delta,3), priority, construction or kernel claim."
+}

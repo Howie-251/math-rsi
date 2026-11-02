@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETE_FIXED3640_Q_LINE_D13_DEGREE_POOL",
+  "source_n": 51417,
+  "source_m": 324451,
+  "degree_cap": 13,
+  "raw_lines": 3640,
+  "degree_legal_distinct_pinsets": 0,
+  "all_F3_defined_lines_hit_saturated_pin": true,
+  "H3_fixed_points": 364,
+  "H3_free_points": 108,
+  "H3_saturated_points": 256,
+  "fixed_free_points_per_line_histogram": {
+    "0": 874,
+    "1": 1529,
+    "2": 936,
+    "3": 285,
+    "4": 16
+  },
+  "every_line_hit_by_saturated_H3_point": false,
+  "saturated_pin_count_histogram": {
+    "1": 47,
+    "2": 159,
+    "3": 280,
+    "4": 459,
+    "5": 665,
+    "6": 942,
+    "7": 735,
+    "8": 253,
+    "9": 55,
+    "10": 45
+  },
+  "mandatory_pin_count_histogram": {
+    "7": 1764,
+    "10": 1876
+  },
+  "P_AT_LEAST_ONE_FREE_LINE": "REFUTED",
+  "CPU_seconds": 0.089210711,
+  "CPU_limit_seconds": 5,
+  "BFS": 0,
+  "R4_evaluations": 0,
+  "anchor_tests": 0,
+  "new_graphs": 0,
+  "scope": "Only all3640 F3-defined fullsingular Q9lines; no non-F3-defined Qlines or changedsource.",
+  "fixed_allfree_line_count": 16,
+  "fixed_allfree_fullpin_count_histogram": {
+    "7": 16
+  },
+  "fixed_allfree_blockedpin_count_histogram": {
+    "3": 16
+  },
+  "one_blocked_fixed_allfree_lines": 0,
+  "minimal_example": {
+    "line_index": 1,
+    "pins": [
+      50481,
+      50482,
+      50483,
+      50484,
+      50485,
+      50486,
+      50553
+    ],
+    "saturated_pins": [
+      50484,
+      50485,
+      50486
+    ]
+  },
+  "deletion_pool_generated": false,
+  "deletion_followup_reason": "All16 have3 saturatedpins; parent conditional oneblockedpin followup does not apply.",
+  "decision": "Stop this finitefullQline pool; no further deletion or otherline scope authorized by this task."
+}

@@ -1,0 +1,2 @@
+现在有真实技能成稿，请审具体执行设计，不再扩读DD全库。主文件 base/skills/mathrsi-meta-evolve/SKILL.md，两参考 references/aris-adaptation.md 和 evidence-and-transfer.md。用户最新明确：先写完整meta并集成，然后Root自己实际按它+DD context改现有base v1到v2及加入DD插件；不是先私下改插件再补日志；不要强制无历史agent完整试跑（那是过度验证），但可多Sol承担具体作者/核对。当前用户要求快速交付、成熟证据及时回收实施，不以全库每一文件读完为开工前提。现行五个workflow继续保留，增量修改不另起炉灶；Markdown详细可执行，薄Python。
+请按research-review的数学维护composed适配，读这三个真实文件及需要的现行 docs/EVOLUTION_WORKFLOW.md，检查：能否由Root直接执行并自然接回已有skills；取证/分层/改真实caller/跨模型讨论/自用核查/接纳是否具体；是否仍有无收益前置、仅原则或自我复制。给真正缺口及最小具体修法，正确就说明。不要先要求整个项目全部重新审计，不要加hash/评分框架/强制独立盲测，不以模型同意当数学证明。返回实际阅读范围和少量必要修法。

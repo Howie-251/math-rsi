@@ -1,0 +1,10 @@
+def DegreeDiameter.Portfolio.OppositeGQ77Spread.graph : SimpleGraph Vertex :=
+OppositeIncidenceSpread.graph oldEquiv linePoint spread
+@[reducible] def DegreeDiameter.Portfolio.OppositeGQ77Spread.Inc : Point → Line → Prop :=
+fun p l => OppositeIncidenceSpread.Inc linePoint p l
+def DegreeDiameter.Portfolio.OppositeGQ77Spread.oldEquiv : Old ≃ Point × Line :=
+finProdFinEquiv.symm
+def DegreeDiameter.Portfolio.OppositeGQ77Spread.label : Vertex ≃ Fin 160050 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.OppositeGQ77Spread.FinalClaim : Prop :=
+Fintype.card Vertex = 160050 ∧ (∀ (v : Vertex), graph.degree v ≤ 64) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

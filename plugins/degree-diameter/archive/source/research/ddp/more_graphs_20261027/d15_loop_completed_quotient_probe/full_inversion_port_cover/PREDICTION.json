@@ -1,0 +1,59 @@
+{
+  "timestamp_UTC": "2026-10-28T05:11:08.711359+00:00",
+  "status": "FROZEN_BEFORE_FULL_INVERSION_GROUP_SUPPORT_OR_SOLVER",
+  "sources": [
+    {
+      "source_n": 15552,
+      "source_m": 116316,
+      "D": 4,
+      "bin_size": 81,
+      "group_count": 336,
+      "free_pins": 648,
+      "zero_singletons": 24,
+      "nonzero_sign_pairs": 312,
+      "target_inversion_orbits": 7872,
+      "input": "../full_free_directions/source15552_FREE_DIRECTION_GROUPS.json"
+    },
+    {
+      "source_n": 102060,
+      "source_m": 765045,
+      "D": 5,
+      "bin_size": 243,
+      "group_count": 420,
+      "free_pins": 810,
+      "zero_singletons": 30,
+      "nonzero_sign_pairs": 390,
+      "target_inversion_orbits": 51240,
+      "input": "../full_free_directions/source102060_FREE_DIRECTION_GROUPS.json"
+    }
+  ],
+  "rule": "Chooseaunionofanyactualfree-port inversionorbits: zero singletoncost1 ornonzero plus/minuspaircost2,totaldistinctspokes<=15. Appendonevertex,retainalloldedges.",
+  "falsifiable_prediction": "Oneofthe twofull648/810-free-port domains admits a complete R_(D-1) cover among itsinversion-invariant neighborhoods, producinganew completegraph.",
+  "new_scope": "336/420group selectors partitionall648/810freepoints andincludeall13projectivedirections ofeach3Dfixedspace. Oldcanonical selfline models usedonlyoneof13directions; theyareinheritedhistory,notnewsolverseeds. OldunrestrictedMILP isnotrerun.",
+  "source_automorphism": "Existingactualallc0 linearchart relationbinding makesglobalfiber negation anautomorphism. Groupportsets are itsorbits. Thereforegroup-ball supports are equalontargetinversionpairs;takeone representativeperorbit.",
+  "counter": "Atmost15 standardposition sequentialcounter onexpanded selectorlist; cost2literal occurstwice. No inputlistdedup.",
+  "verification": "Packedarbitrarywidth supportrows avoiduint64 overflowfor336/420groups. SATdecode mustpasssumcost=distinctpins<=15,actualselectedfreedegrees,allreducedclauses andexplicitcachedballORagainstthefulloriginaln targets beforeedgeexport.",
+  "ball_sources": "ExactlyexistingR3_MASKS for15552 andradius4.u64le for102060;no newballs/sourceD BFS.",
+  "budget": {
+    "aggregate_CPU_seconds": 100,
+    "workers": 1,
+    "prep_CPU_limit_seconds": 10,
+    "per_source_unique_solver_calls": 1,
+    "per_source_CaDiCaL_seconds": 40,
+    "solver_OS_CPU_soft_hard": [
+      42,
+      43
+    ],
+    "carried_direction_worker_CPU_seconds": 0.063390872
+  },
+  "execution_order": [
+    15552,
+    102060
+  ],
+  "stop": "FirstverifiedSAT,twocompletedcalls,oraggregatebudget. No seed/sample/modelorbudgetladder. UNKNOWNnotinfeasible.",
+  "candidate_orders": {
+    "15552": 15553,
+    "102060": 102061
+  },
+  "not_all_free_subsets": "Completeonlyinversion-invariant neighborhoods onallactualfreeports,notunrestrictedpinsets."
+}

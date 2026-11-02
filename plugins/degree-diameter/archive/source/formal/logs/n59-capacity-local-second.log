@@ -1,0 +1,30 @@
+⚠ [1792/1793] Replayed DegreeDiameter.N59ZeroCore
+warning: DegreeDiameter/N59ZeroCore.lean:21:29: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [commonZeroNeighbors,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N59ZeroCore.lean:50:14: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵h̵r̵,̵ ̵N̵e̵.̵s̵y̵m̵m̵[̲N̲e̲.̲s̲y̲m̲m̲ hab, Ne.symm hac, Ne.symm had, Ne.symm hbc, Ne.symm hbd, Ne.symm hcd,
+  ̲  ̲ ̲ ̲ ̲ ̲SimpleGraph.adj_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✖ [1793/1793] Building DegreeDiameter.N59Capacity (18s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N59Capacity.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N59Capacity.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N59Capacity.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N59Capacity.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N59Capacity.setup.json --json
+error: DegreeDiameter/N59Capacity.lean:233:37: Application type mismatch: The argument
+  Eq.trans_le hswap ?m.207
+has type
+  ∑ a ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj a.1 y ∧ G.Adj y a.2}.card ≤ ?m.205
+but is expected to have type
+  ∑ p ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj p.1 y ∧ G.Adj y p.2}.card ≤ ?m.200
+in the application
+  Eq.trans_le (Eq.symm hleft) (Eq.trans_le hswap ?m.207)
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N59Capacity
+error: build failed

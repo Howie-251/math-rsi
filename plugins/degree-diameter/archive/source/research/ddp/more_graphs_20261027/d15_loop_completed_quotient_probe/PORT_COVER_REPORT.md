@@ -1,0 +1,55 @@
+# Port cover frame on the two recovered degree15 sources
+
+All work in this report is terminal. These are restricted domains within the already bound15552/D4 and102060/D5 sources. The source edges and distance caches were retained; no new source BFS, ball, graph or lower bound was produced. The earlier all648/all810 free-pin cover UNKNOWN results remain unchanged.
+
+The recovered affine tables have zero translations, so offset inversion is a source automorphism. Each specified zero selfline triangle has a fixed zero pin and one nonzero plus/minus pair. These are72/90 canonical old pins across24/30 loop controllers. They are a strict subset of the648/810 actual free pins. The paper ANALYSIS_INVERSION_COVER proves the atom costs and full-target coverage equivalence; it performs no numerical calculation.
+
+Four successive, separately frozen questions were tested. First, all24/30 zero singletons together miss528/300 targets; consequently no zero-only subset works. This cached union check costs0.020998152 CPU seconds. Second, all zero selfline triangles together cover, but every five-controller triangle choice fails:42504/142506 subsets all tested, no budget cursor or missing subset. Its CPU receipt is1.563466221. This rejects the specified homogeneous nine-helper template at its zero-helper necessary gate; it does not reject arbitrary cooperation.
+
+Third, inversion-invariant neighbor sets select a zero atom at cost1 or a plus/minus pair at cost2 in each controller, with total cost at most15. Complete cached coverage clauses plus that cardinality condition give48/60 selector variables, with72/90 weighted counter inputs. Exact duplicate support clauses are removed, not targets sampled. The two models have7488/47970 distinct cover rows and9762/50820 total clauses. Each returns CaDiCaL code20, UNSAT for its restricted canonical atom domain. Solver CPU receipts are0.129095 and1.286253; full shared preparation/solver CPU is6.624201379. There is no independently checked UNSAT proof artifact, so this is the recorded computational result, not a new general impossibility theorem.
+
+Fourth, the same72/90 old pins are allowed individually, without tying opposite pins. This changes the model and is not merely another random encoding of the inversion model. Complete exact support domains give15528/100350 distinct coverage clauses. The first single calls, about3 CPU seconds each, return UNKNOWN on both sources; the shared initial model batch costs11.495787772. Their prediction, files and results are preserved.
+
+The parent then authorized one explicit budget reassessment of each unchanged independent-pin CNF, with no ports, offsets, seed or model change. The15552/D4 model returns code20, restricted canonical72-pin UNSAT, using5.952846 solver CPU seconds. The102060/D5 model reaches its25-second call and returns code0, UNKNOWN, using24.927958 solver CPU seconds. The complete two-source continuation costs30.891580073 aggregate CPU seconds, below its60-CPU budget; no source is pending. No third call is authorized or launched.
+
+Therefore the final D4 result is a raw solver UNSAT for the fixed72-pin independent domain. It does not reject all648 free pins, whose old model remains UNKNOWN. The final D5 result is UNKNOWN even for the fixed90-pin independent domain, and cannot reject that domain or all810 free pins. Neither source has a candidate, expanded graph, actual new diameter or ordinary bad-pair count. The subset counters are cached coverage tests, not failed graphs.
+
+The root's PREDICTION/RESULT pairs are the original cache-experiment receipts. The source scout's now-saved CACHE_PROBE_REPRODUCER.py and accompanying README are explicitly a post-hoc, unexecuted reproduction aid for the two heredoc cache probes, not a snapshot of the original heredocs. It requires a new output directory and preserves the original PREDICTION/RESULT files. It is not a second run or an additional numerical verification. The two CODE_REVIEW.md/json files review the weighted cardinality and arbitrary-width packed-support mappings, including bits beyond64 and exclusion of auxiliary variables from graph edges. They make no independent UNSAT-proof claim.
+
+All costs above are shared batch receipts across two sources, not twice-incurred per-source totals. The older quotient and affine recovery costs, and older large-cover UNKNOWN costs, are recorded separately in their original files. This report stops the current fixed port frame; no further triangle shift, orbit, helper number, solver timer or source/field ladder is started.
+
+Evidence: canonical_zero_port_probe/{PREDICTION.json,RESULT.json}; selfline_helper9_probe/{PREDICTION.json,RESULT.json}; inversion_port_cover/{PREDICTION.json,RESULT.json,CODE_REVIEW.md,CODE_REVIEW.json}; canonical_independent_port_cover/{PREDICTION.json,RESULT.json,CONTINUATION_PREDICTION.json,CONTINUATION_RESULT.json,CODE_REVIEW.md,CODE_REVIEW.json}; ANALYSIS_INVERSION_COVER.md/json. Original source provenance and accepted/reported diameters remain in the corresponding source records.
+
+## Complete free directions, independent pins and sufficient lines
+
+The later fixed-space recovery expands the original single-direction restrictions to all648/810 actual free points in3-dimensional spaces. A fixed-word prediction at equalcost3 is supported:27->81 and81->243 final-fiber endpoints. The complete336/420 inversion-atom models nevertheless return uncertified raw UNSAT, aggregate73.957748614. This is not a negative result for arbitrary non-invariant neighbor sets.
+
+The subsequent full independent-pin SAT restores all15552/102060 target rows, adds WLOG inversion lex and an explicitly dependent cut for the previously tested invariant domain, and calls each source once for60 seconds. Both return UNKNOWN; the aggregate receipt is127.968020737 under160. No candidate or source remains pending. The full singleappend question is OPEN. No third timer, new seed or enlarged domain follows this result.
+
+A parallel geometric sufficient model selects at most5 affine3lines and requires each target fiber to be completely covered by one selected line. The2808/3510 raw lines reduce to312/390 exact distinct full-block masks; both small CNFs return raw UNSAT, aggregate3.85650486. This cannot reject multi-line joint completion of a block or arbitrary free-pin covers. Source edges, cached radii and accepted examples remain unchanged.
+
+Exact receipts and scopes are in full_free_directions/{REPORT.md,ROUTE_COSSET_REPORT.md,ANALYSIS_DIRECTION_COVER.md}, full_inversion_port_cover/{RESULT.json,REPORT.md}, full_independent_port_cover/{RESULT.json,MODEL_SCOPE.md,ANALYSIS_LEX_SCOPE.md}, and affine_line_block_cover/{RESULT.json,REPORT.md,ANALYSIS_LINE_CERTIFICATE.md}. Shared fixed-space CPU appears as carried history in multiple batch receipts and must not be summed as a fresh rerun. No new graph, ball or source BFS was produced.
+
+## Complete joint affine-line point model
+
+The saved blockmask diagnostic finds all nine affine cosets equal at full-fiber level. A separate fixed old-cache point-column check nevertheless finds XOR1062/6849 and partial-fiber unions66/231. The complete joint model accordingly retains all2808/3510 raw lines and uses point-support clauses, not the old312/390 full-block representatives. Its at-most-five line domain allows several partial line covers to combine inside one fiber.
+
+Both initial necessary-point formulas, on1728/4620 zero/basis targets, return raw UNSAT in11.707798/8.833548 solver CPU seconds. Aggregate25.794664232 is under130. There are no SAT candidates, full-point candidate OR checks, refinements, graph exports or new radius computations. There is no lex or inherited-negative dependency in this complete line-domain test. No independently checked UNSAT proof was produced.
+
+This broadens the previous certificate negative to the complete at-most-five affine-line family on these two sources. It still does not exclude arbitrary fifteen free pins, or more than five overlapping lines with at most fifteen distinct points. Those general independent-point questions remain UNKNOWN and no timer is renewed. See affine_line_joint_cover/{RESULT.json,REPORT.md,MODEL_SCOPE.md,ANALYSIS_JOINT_CEG.md}. All evidence stays in the original two source records; no new method or Wiki row is added.
+
+## Signed-frame transfer source gate
+
+A subsequent conditional cross-characteristic rule would replace a signed projective five-frame F3 module by its F2 version and target3072/max10/D4. The short-word transfer theorem is valid under its common-sign, zero-translation and inverse-port hypotheses. The actual source15552 fails the prerequisite at controller0: u2=u1+u4 gives a dependent four-subset. Five kernels and two subsets suffice; CPU0.003352509, signed arcs0, binary recipes/graphs/BFS/solver0. This source-gate variant stays in the same original source record. It does not close general(10,4), change the earlier UNKNOWN results or launch a different field/basis experiment.
+
+## Intrinsic36-point original-field induced rule
+
+A different fixed source-aware reduction uses the actual support3 kernel matroid: P2 plus the two intrinsic nonzero axis choices gives36 originalF3 points per controller. All192 source profiles pass, and the one resulting actual6912/22896 graph has maximum11, within the intended cap13. Its first root0/source1 nevertheless reaches only1296 in R4 and misses5616, first new4/source9. This is an actual failed graph, not another incomplete cover assignment. Exact globalD/connectedness/ordinary bad pairs remain uncomputed. The source's D4 is not inherited.
+
+Profile plus actual production costs0.657185279 CPU seconds, with zero old-source BFS and one new root check. There are no alternate subsets or edge changes. Both the retained general singleappend UNKNOWN and general(13,4) remain outside this negative. See matroid36_induced_subset/production6912/{RESULT.json,REPORT.md} and matroid36_induced_subset/ANALYSIS_SET_DEGREE.md.
+
+## Rank-one reflection quotient: gate and degree obstruction
+
+The source-derived two intrinsic rank-one reflections per controller would give a10368/max14/D4 quotient if globally compatible. All3840 actual arc-state pairs are classified, producing1812 distinct clauses and a2SAT UNSAT result, CPU0.445824661. No orbit map or quotient graph exists from this run;10368 remains hypothetical.
+
+The saved nonloop arc5/controller1->4 forbids all four state pairs. A paper degree lemma shows that any true quotient from this two-choice partition family with maxdegree<=14 must satisfy arc Aut compatibility at every nonloop controller. It counts the union of both source members' neighbors, not the Aut-only one-representative shortcut. Thus this exact family is degree-blocked even without a global Aut assumption. The strengthening reads only existing ARC data, adding no matrix test, CSP, graph or BFS. General folds/involutions and general(14,4) remain outside its scope. See rank1_reflection_quotient/{ANALYSIS_QUOTIENT_PROOF.md,ANALYSIS_DEGREE_NECESSITY.md,NONLOOP_ZERO_ALLOWED_ARC.json}.

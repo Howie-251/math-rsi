@@ -1,0 +1,6 @@
+@diameter_two_card_le : ∀ {V : Type u_1} [inst : Fintype V] [Nonempty V] (G : SimpleGraph V) (k : ℕ)
+  (forward : V → Fin k → V),
+  (∀ (u v : V), G.Adj u v → ∃ i, forward u i = v) → DiameterAtMost G 2 → Fintype.card V ≤ 1 + k + k * k
+'DegreeDiameter.Portfolio.OppositeGQSpread.diameter_two_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

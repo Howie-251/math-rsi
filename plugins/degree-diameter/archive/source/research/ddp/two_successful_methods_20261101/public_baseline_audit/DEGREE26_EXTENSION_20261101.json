@@ -1,0 +1,136 @@
+{
+  "status": "COMPLETE_BOUNDED_CAP26_PUBLIC_FORMULA_REVIEW",
+  "checked_UTC": "2026-11-01T05:34:44.740106+00:00",
+  "target": {
+    "maximum_degree": 26,
+    "diameter": 3
+  },
+  "best_located_public_source_guarantee": 7514,
+  "explicit_opposite_GQ_base_order": 7225,
+  "separately_published_7514_edge_list_located": false,
+  "guarantee_type": "direct mathematical inference from published opposite-GQ formula, existing ovoid/spread geometry and Delorme1985Section7 general induced-subgraph duplication theorem; not an explicit numeric row found in a record table",
+  "formula": "7225+(4^2+1)^2=7225+289=7514",
+  "global_record_confirmed": false,
+  "public_guarantee_at_least_candidate_located": false,
+  "candidate_at_assignment": {
+    "order": 7531,
+    "edges": 97750,
+    "maximum_degree": 26,
+    "degree_histogram_prediction": {
+      "25": 306,
+      "26": 7225
+    },
+    "source_order": 7242,
+    "source_regular_degree": 25,
+    "source_reported_independent_all_roots_PASS_by_parent": true,
+    "generated_at_assignment": false,
+    "legality_checked_by_this_task": false,
+    "source_ovoid_literal_binding_checked_by_this_task": false,
+    "minus_best_located_classical_guarantee": 17,
+    "first_invention_confirmed": false
+  },
+  "classical_7514_derivation": {
+    "base": "Public opposite graph onP×L for symplecticW(3,4),order7225,maxdegree25,D3",
+    "sets": "O an ovoid with17points, R a line spread with17lines; S=O×R has289vertices",
+    "raw_unique_provider": "For any target(p,l),its unique raw adjacent member ofS is(o(l),r(p)),whereo(l)is uniqueOpoint onl,andr(p)is unique spread line throughp.",
+    "centers_not_pairwise_distance_at_least3": true,
+    "induced_S_structure": "17isolatedflagvertices and136disjointK2components on272nonflagvertices. The unique-provider map restricted toS is an involution; its17fixedpoints correspond toOpoint/spreadline incidences.",
+    "Delorme_Section7_A0": "S",
+    "Delorme_Section7_A1": "empty",
+    "condition_a": "vacuous for emptyA1",
+    "condition_b": "Every vertex outsideS has exactly1Sneighbor by unique provider; hence at most1.",
+    "condition_c": "EachScomponent is a singleton orK2. Choose an outside neighborz of one endpoint; for every required orderedx,ywithincomponent, distances tox,y sum<=3. Outside neighbors exist since old degree>=24 butSdegree<=1.",
+    "conclusion": "The stated general duplication theorem gives order7225+289,maxdegree<=26,D3.",
+    "not_the_same_published_numeric_example": "This records a source-formula inference made here; no7514graph was generated or separately located.",
+    "warning": "Do not justifySusingonlythepairwise-distance>=3specialcase:adjacentpairedcentersviolateit. Thegeneralinduced-subgraph statement anditscomponentconditionaretheappropriatepublishedtheorem."
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+      "position": "Section3.4.2",
+      "content_read": "opposite-GQ order/degree formula andGQ(q,q)existence",
+      "local_file": "arxiv_2608_27253v2.html"
+    },
+    {
+      "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "citation": "C.Delorme,Grands Graphes,EJC6(1985)291-302",
+      "position": "Section7p297general induced-subgraph duplication;Section8(a)p298-299q^2+1line spread",
+      "local_file": "delorme1985_primary_text.txt"
+    },
+    {
+      "url": "https://arxiv.org/html/2309.01228v1#S4.SS1",
+      "citation": "BartDeBruyn,An infinite family of hyperovals ofQ+(5,q),qeven",
+      "position": "Section4.1opening andSection4.2Lemma4.7",
+      "content_read": "Forqeven an ellipticquadric has a symplecticgeneralizedquadrangle whose lines areits tangent lines; each such line meets theovoid exactly once. This appliesq4 and provides17pointovoid."
+    },
+    {
+      "url": "https://cage.ugent.be/~hvm/artikels/139.pdf",
+      "citation": "Offer,Thas,VanMaldeghem,Arch.Math.84(2005)375-384;DOI10.1007/s00013-004-1161-5",
+      "position": "Section2.1p376-377",
+      "content_read": "ovoid/spread definitions andsize st+1;elliptic hyperplane sections yieldovoidofQ(4,q),whichforqevenisselfdualandisomorphictoW(q)."
+    },
+    {
+      "url": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "position": "Theorem3,Table2,Proposition2/Corollary1,Section7.1",
+      "best_cap26_IQ": {
+        "order": 5526,
+        "q": 17,
+        "superdegree": 8
+      },
+      "best_cap26_Paley": {
+        "order": 5219,
+        "q": 17,
+        "superdegree": 8
+      },
+      "conditions": "qprimepower;IQdmod4in{0,3};Paley2d+1primepower1mod4."
+    }
+  ],
+  "additional_boundary_check": {
+    "url": "https://ideosphere.ai/papers/polar-degdiam",
+    "entry": "Q14",
+    "order": 8775,
+    "actual_maxdegree_reported": 27,
+    "minimum_degree_reported": 26,
+    "why_not_cap26_counterexample": "Themaximumis27;minimum26doesnotmakeitadegree26graph. Underlyingclassicq2×q8productlikewisehasmaxdegree27."
+  },
+  "prior_art": {
+    "exact_ovoid_times_spread_recipe_explicitly_seen_in_read_Delorme_text": false,
+    "general_induced_subgraph_duplication_already_published": true,
+    "specific_7531_rule_or_public_at_least7531_located": false,
+    "original_JGT1985_opposite_article_full_text_obtained": false,
+    "limitation": "TheearlierJGT1985fulltextretrievalreturnedpublisherabstract;notretried. Cannotclaimtheoriginalarticleorallclassicliteraturelacksthisovoid/spreadrecipeorflag-staraugmentation."
+  },
+  "web_scope": {
+    "query_batches": 2,
+    "batch_budget": 2,
+    "queries": [
+      [
+        "\"7531\" \"diameter\" graph",
+        "\"7514\" \"graph\" \"diameter\"",
+        "\"symplectic quadrangle\" \"elliptic quadric\" ovoid even",
+        "\"Delorme\" \"ovoid\" \"spread\" graphs diameter"
+      ],
+      [
+        "\"diameter 3\" \"degree 26\" graph",
+        "\"opposite\" \"generalized quadrangle\" \"ovoid\" \"spread\"",
+        "\"W(3,4)\" \"ovoid\" \"17\"",
+        "\"7531\" \"7514\" graph degree"
+      ]
+    ],
+    "numeric_query_relevant_recall_low": true,
+    "global_catalogue_exhaustive": false,
+    "new_primary_reads_only_targeted_geometry_and_one_misleading_max27_entry": true
+  },
+  "operations": {
+    "graph_data_reads": 0,
+    "graph_generation": 0,
+    "BFS": 0,
+    "solver": 0,
+    "Lean": 0,
+    "installs": 0,
+    "hashes": 0,
+    "frozen_expert_snapshot_changes": 0,
+    "Goal_changes": 0
+  },
+  "decision": "Nopublic>=7531stopconditionlocated. Ifproduceracceptsthefixedcandidate,itbeatsbest-locatedclassical7514guaranteeby17,whileglobalrecordandpriorityremainunconfirmed."
+}

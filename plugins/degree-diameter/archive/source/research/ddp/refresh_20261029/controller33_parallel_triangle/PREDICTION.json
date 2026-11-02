@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-29T15:26:09Z",
+  "status": "FROZEN_BEFORE_CONTROLLER_ENUMERATION",
+  "source": "research/ddp/breadth_20261027_wave4/mizuno_d3_source/construction.json",
+  "source_structure": "research/ddp/breadth_20261027_wave4/mizuno_d3_source/controller_structure.json",
+  "scope": "Each of ten actual disjoint source triangles, each of eight choices of one external edge at each triangle vertex. Subdivide these three edges with a new triangle. Exactly80 fixed literal settings.",
+  "hypothetical_target": {
+    "n": 2112,
+    "Delta": 16,
+    "D": 3
+  },
+  "controller": {
+    "n": 33,
+    "m": 66,
+    "Delta": 4
+  },
+  "predictions": {
+    "structural": "Ten old disjoint triangles plus one new triangle; exactly three externalC5 becomeC6, other three remainC5. All source routes avoiding the three cutedges remain. New triangle supplies new possible cross-cycle three-step routes.",
+    "existence": "At least one of the80 controllers has an NB3 route for every nonadjacent or equal ordered pair."
+  },
+  "test": "Complete length3 nonbacktracking counts, not graph BFS and not a complete F4 fiber certificate.",
+  "first_missing_classification": [
+    "old-old",
+    "new-old",
+    "new-new",
+    "self"
+  ],
+  "budget_cpu_seconds": 20,
+  "workers": 1,
+  "stop": "All80 then stop; report any pass before matrix search; no new templates, seeds or target graph.",
+  "prior_scopes": "Not old2760 n31 insertion, not cyclic3-layer voltage domain; old33 random samples do not cover all2factors."
+}

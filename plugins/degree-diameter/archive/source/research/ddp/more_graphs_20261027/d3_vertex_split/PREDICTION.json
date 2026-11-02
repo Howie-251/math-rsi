@@ -1,0 +1,101 @@
+{
+  "prediction_id": "D3_ADJACENT_SINGLE_VERTEX_SPLIT",
+  "status": "FROZEN_BEFORE_ENUMERATION",
+  "operation": "Remove source vertexv, split its full old neighborhood into nonempty unordered partsS/T, replacev by adjacentu/w; every other source edge retained. Old vertices retain degree; split vertices have degrees|S|+1,|T|+1.",
+  "prior_exact_scope_match": false,
+  "prior_scope_distinction": "Wiki Fano split42 changes7 points of O4 plus matching; not this operation on41/253/810 record sources.",
+  "old_pair_criterion": "For everya inN(v), y outsideN(v) andv: if d_(G-v)(a,y)>3, the side containinga must intersectN(v) intersectN_(G-v)(y). BothN endpoints are always <=3; neitherN endpoint keeps an original <=3 path not usingv.",
+  "new_root_criterion": "For each oldy, d_H(S,y)<=2 or d_H(T,y)<=1; swapS/T for other new root.",
+  "capacity_bound": "For smallerparta<=b witha+b=d(v), radius3 capacity from smaller split vertex <=2+a*(Delta^2-Delta+1)+b*Delta.",
+  "capacity_table": [
+    {
+      "Delta": 4,
+      "n_plus1": 42,
+      "max_capacity": 36
+    },
+    {
+      "Delta": 5,
+      "n_plus1": 73,
+      "max_capacity": 59
+    },
+    {
+      "Delta": 6,
+      "n_plus1": 121,
+      "max_capacity": 113
+    },
+    {
+      "Delta": 7,
+      "n_plus1": 171,
+      "max_capacity": 159
+    },
+    {
+      "Delta": 8,
+      "n_plus1": 254,
+      "max_capacity": 262
+    },
+    {
+      "Delta": 9,
+      "n_plus1": 586,
+      "max_capacity": 339
+    },
+    {
+      "Delta": 10,
+      "n_plus1": 651,
+      "max_capacity": 507
+    },
+    {
+      "Delta": 11,
+      "n_plus1": 716,
+      "max_capacity": 623
+    },
+    {
+      "Delta": 12,
+      "n_plus1": 811,
+      "max_capacity": 872
+    }
+  ],
+  "globally_closed_parameters": [
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11
+  ],
+  "fixed_cases": [
+    {
+      "Delta": 8,
+      "source_n": 253,
+      "target_n": 254,
+      "all_vertices": 253,
+      "all_unordered_nonempty_partitions_per_vertex": 127,
+      "only_capacity_survivor_part_sizes": [
+        4,
+        4
+      ],
+      "survivors_per_vertex": 35
+    },
+    {
+      "Delta": 12,
+      "source_n": 810,
+      "target_n": 811,
+      "all_vertices": 810,
+      "all_unordered_nonempty_partitions_per_vertex": 2047,
+      "only_capacity_survivor_part_sizes": [
+        6,
+        6
+      ],
+      "survivors_per_vertex": 462
+    }
+  ],
+  "sources": [
+    "context/DD_PORTFOLIO_START_20261026/baselines/d8_D3_known.edges",
+    "research/ddp/more_graphs_20261027/d3d4_transfer/source810.raw_adj.txt"
+  ],
+  "budget": "One worker; total<=120CPU seconds including prep/compile; stop records actual cursor if incomplete.",
+  "validation": "At most one first-balanced-partition full-graph calibration per source; every exact-condition passer gets producer all-source BFS. Root owns independent final acceptance.",
+  "no_random_search": true,
+  "no_bad_pair_optimization": true,
+  "no_new_sources_after_scope_freeze": true
+}

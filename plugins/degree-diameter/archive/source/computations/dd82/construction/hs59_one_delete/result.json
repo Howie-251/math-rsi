@@ -1,0 +1,37 @@
+{
+  "status": "CHECKED_UNSAT",
+  "exit_code": 20,
+  "wall_seconds": 0.19302380830049515,
+  "cpu_seconds": 0.12336799999999999,
+  "cpu_budget_seconds": 60,
+  "pinned_cpu": 0,
+  "memory_limit_GiB": 4,
+  "variables": 9156,
+  "clauses": 32386,
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "60",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs59_one_delete/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs59_one_delete/proof.lrat"
+  ],
+  "seed_independent_check": {
+    "n": 59,
+    "edges": 236,
+    "max_degree": 8,
+    "bad_pair_count": 82,
+    "diameter": 3,
+    "valid_target": false
+  },
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs59_one_delete/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/hs59_one_delete/proof.lrat"
+    ],
+    "exit_code": 20,
+    "verified": true
+  }
+}

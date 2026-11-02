@@ -1,0 +1,1 @@
+Final gate files are in `research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/c30_f2_fivecover_gate/`. This directory retains only the initial prediction/budget preparation history. No binary graph was generated.

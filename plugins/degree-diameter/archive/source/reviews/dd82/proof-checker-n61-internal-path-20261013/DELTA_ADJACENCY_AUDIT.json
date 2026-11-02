@@ -1,0 +1,99 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The new actual-A endpoint-adjacency exclusion and rh=0 argument are sound modulo the explicit imports and previously reviewed local template. All eight delta obligations are discharged. This is an explicitly reused same-family provisional review, separate from the original fresh audit.",
+  "audited_inputs": ["proofs/dd82/n61/INTERNAL_DOUBLE_ENDPOINT_ADJACENCY_EXCLUSION.md"],
+  "trace_path": "reviews/dd82/proof-checker-n61-internal-path-20261013/",
+  "agent_id": "/root/internal_path_proof_check",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-13T15:27:48Z",
+  "review_provenance": {
+    "freshness": "Explicitly reused reviewer delta after the same agent's original completed fresh two-manuscript review",
+    "primary_input": "Read directly in full after author stability was confirmed; lines1-156",
+    "configuration_evidence": "Parent confirmed requested model gpt-6-astra and reasoning_effort ultra, not independent backend attestation",
+    "manuscript_edits": false,
+    "new_external_review": false,
+    "original_fresh_audit_expanded": false,
+    "draft_status_note": "Manuscript references a pending fresh checker; this receipt supplies reused provisional review only."
+  },
+  "dependencies": [
+    {"source": "proofs/dd82/n61/INTERNAL_DOUBLE_PATH_LOCAL.md", "use": "Exact same-A local partition, commutation, B[T], parent sizes and ordinary-vertex degree rule", "review": "PROOF_AUDIT.md in this directory; completed fresh same-family provisional review"},
+    {"source": "proofs/dd82/n61/INTERNAL_DOUBLE_PATH_FOLLOWUP.md", "use": "Previously reviewed beta-one component confinement, only for stated combined consequence"},
+    {"source": "proofs/dd82/n61/CONNECTED_TRIPLE_EXCLUSION.md", "use": "Inherited arbitrary61 actual defect baseline; prior computation and certificate not rerun"},
+    {"source": "proofs/dd82/n61/DOUBLE_DEFECT_CYCLE_OBSTRUCTION.md", "use": "Inherited D path-forest property; prior review status recorded in original audit, no reproof"}
+  ],
+  "details": {
+    "theorems_audited": 2,
+    "frozen_delta_obligations": 8,
+    "discharged_obligations": ["D01", "D02", "D03", "D04", "D05", "D06", "D07", "D08"],
+    "issues": [],
+    "counterexamples_found": 0,
+    "new_assumptions": [],
+    "fixes": [],
+    "proven_conclusions": [
+      "A_uw=0 for every consecutive triple u,v,w of the actual double-defect path forest",
+      "Toeplitz distance-two coefficient a2=0 on every D path with at least three vertices",
+      "r*h=0 for the actual local intersections",
+      "The four unexcluded local tuples (r,h,beta) are (0,1,0),(1,0,0),(0,2,1),(2,0,1)"
+    ],
+    "counterexample_probes": [
+      "Possible residual endpoint defect port",
+      "Overlap of P and Q under epsilon1",
+      "No ordinary neutral vertex or concentration in one neutral class",
+      "Self-incidence in attachment-neighbor counts",
+      "A_tz=1 in the mixed-overlap contradiction",
+      "Repeated weighted clique edge in B[T]",
+      "Accidental elimination of both surviving beta1 types"
+    ],
+    "scope_exclusions": [
+      "No internal-double nonexistence theorem",
+      "No isolated adjacent-double exclusion",
+      "No realizability assertion for the four remaining types",
+      "No order61 exclusion, global triangle-freeness or changed global existence bound",
+      "No implementation, solver, external or formal verification"
+    ]
+  },
+  "state": "completed",
+  "subsequent_reused_increments": [
+    {
+      "increment": 2,
+      "freshness": "Explicitly reused reviewer, after the initial two-claim delta receipt",
+      "input": "proofs/dd82/n61/INTERNAL_DOUBLE_ENDPOINT_ADJACENCY_EXCLUSION.md",
+      "reviewed_snapshot": "Author-confirmed stable revised manuscript, lines1-176, read directly in full",
+      "changed_mathematical_scope": "New section5 adds h<=1 and removes the intermediate type (r,h,beta)=(0,2,1); earlier two proofs mathematically unchanged",
+      "verdict": "PASS",
+      "reason_code": "all_proofs_complete",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional",
+      "added_obligations": ["D09", "D10"],
+      "added_obligations_discharged": 2,
+      "issues": [],
+      "counterexample_probes": [
+        "h>=2 supplies distinct z,z', so the distinct-pair identity is applicable",
+        "A_zz'=1 is permitted and only strengthens the defect lower bound",
+        "Symmetry converts the T-column sum to row saturation",
+        "z' lies in Z disjoint from T, without any parent or overlap normalization"
+      ],
+      "proof": "For z in P intersection Q, local actual commutation gives sum_T B_tz=4. Symmetry, nonnegativity and row-four force B_zz'=0 for z' in Z. A second distinct shared attachment has the two common original neighbors u,w, forcing B_zz'>=1. Thus h<=1, removing only (r,h,beta)=(0,2,1) from the intermediate list.",
+      "new_external_review": false,
+      "manuscript_edits": false,
+      "original_fresh_audit_expanded": false
+    }
+  ],
+  "latest_cumulative_delta_scope": {
+    "verdict": "PASS",
+    "new_claim_count": 3,
+    "discharged_delta_obligations": 10,
+    "claims": ["A_uw=0 and therefore a2=0", "r*h=0", "h<=1"],
+    "surviving_necessary_types_r_h_beta": [[0, 1, 0], [1, 0, 0], [2, 0, 1]],
+    "remaining_beta_one_scope": "The surviving (2,0,1) tuple is confined to three-vertex D components by the already reviewed original followup, and is not excluded here.",
+    "provenance": "Two expressly reused same-family provisional increments; original initial details preserved above; no fresh or external acceptance of the new manuscript",
+    "open_issues": []
+  }
+}

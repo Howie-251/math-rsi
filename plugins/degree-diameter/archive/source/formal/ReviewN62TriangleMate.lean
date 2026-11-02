@@ -1,0 +1,16 @@
+import DegreeDiameter.N62TriangleMate
+
+open DegreeDiameter
+#print DegreeDiameter.threeUnitRow
+#check @DegreeDiameter.n62_edge_defect_le_one
+#check @DegreeDiameter.n62_triangle_third_mate
+#check @DegreeDiameter.n62_triangle_within_root
+#check @DegreeDiameter.n62_triangle_mate_no_triangle_neighbor
+#check @DegreeDiameter.n62_triangle_mate_exists
+#check @DegreeDiameter.n62_triangle_has_paired_triangle
+#print axioms DegreeDiameter.n62_edge_defect_le_one
+#print axioms DegreeDiameter.n62_triangle_third_mate
+#print axioms DegreeDiameter.n62_triangle_within_root
+#print axioms DegreeDiameter.n62_triangle_mate_no_triangle_neighbor
+#print axioms DegreeDiameter.n62_triangle_mate_exists
+#print axioms DegreeDiameter.n62_triangle_has_paired_triangle

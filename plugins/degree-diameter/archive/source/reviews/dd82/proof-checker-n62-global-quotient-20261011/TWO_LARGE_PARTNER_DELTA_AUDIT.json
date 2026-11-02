@@ -1,0 +1,78 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "bounded_incremental_delta_with_author_fix",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_after_fresh_blind_post_fix_review",
+  "summary": "Corrected source passes the primary14-obligation mathematical check and the actual fresh-blind review receipt. The original CRITICAL reversed quotient coefficient was author-repaired and its history is preserved.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_TWELVE_TWO_LARGE_PARTNER_EXCLUSIONS.md",
+      "scope": "All corrected122 lines",
+      "line_count": 122,
+      "size_bytes": 4997,
+      "mtime_utc": "2026-10-11T11:11:47.812776+00:00"
+    }
+  ],
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T11:14:36.470510+00:00",
+  "details": {
+    "primary_mathematical_verdict": "PASS",
+    "micro_claims_discharged": 14,
+    "open_mathematical_issues": 0,
+    "issues": [
+      {
+        "id": "LP-01",
+        "severity": "CRITICAL",
+        "status": "RESOLVED_WITH_BLIND_REVIEW",
+        "original_proof_status": "UNJUSTIFIED",
+        "impact": "GLOBAL",
+        "category": "DIMENSION_TRACKING / LOGICAL_GAP",
+        "location": "First-case final d_K identity",
+        "before": "d_K on H incorrectly set to3, yielding a claimed multiple-of3 left side",
+        "after": "d_K on H=5;20=5x_v+3d_Y(v), and x_v=2 or3 gives residue10 or5",
+        "fix_strategy": "CORRECT_COEFFICIENT / ADD_DERIVATION",
+        "author_applied_fix": true,
+        "source_edited_by_reviewer": false,
+        "blind_post_fix_check": "PASS"
+      }
+    ],
+    "reviewer_tool_failures": [
+      {
+        "tool": "followup_task",
+        "target": "signed_spectral_delta",
+        "error": "agent thread limit reached",
+        "executed": false
+      },
+      {
+        "tool": "spawn_agent",
+        "target": "large_partner_blind",
+        "error": "agent thread limit reached",
+        "executed": false
+      }
+    ],
+    "required_followup": null,
+    "confirmed_primary_conclusions": [
+      "The corrected12x20,s1,t2 contradiction is valid",
+      "The12x24,s0,t2 parity contradiction is valid",
+      "Conditional combined H12 list has eight entries"
+    ],
+    "solver_or_lp_dependency": false,
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "blind_post_fix_receipt": {
+      "path": "reviews/dd82/proof-checker-n62-two-partners-blind-20261011/PROOF_AUDIT.json",
+      "reviewer_id": "/root/proof_review_n62_two_partners_blind",
+      "verdict": "PASS",
+      "no_prior_target_audits_read": true,
+      "generated_at": "2026-10-11T11:19:50.857260+00:00",
+      "inspected_at": "2026-10-11T11:32:14.055497+00:00",
+      "scope": "Current corrected first-case proof and second exclusion; actual receipt read."
+    }
+  },
+  "updated_at": "2026-10-11T11:32:14.055497+00:00"
+}

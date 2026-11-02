@@ -1,0 +1,9 @@
+# URSA16384 exposes a four-chart GF4 interface
+
+The frozen literal prediction is supported. Under labels v=256g+x, all16384 vertices have degree16, the64 controller vertices each have four neighbors, and every one of256 directed controller ports is exactly an affine F4 line relation for every one of256 fiber inputs. The full original source was parsed once; no graph BFS was performed. CPU0.381141023 seconds.
+
+Exactly four global relation types occur, once at each controller vertex. Constants are all0. Their projective line subspaces and canonical GF4-linear columns are saved in INTERFACE.json. Type inverses are0↔3 and1↔2. Type0 has eight8-cycles, and type1 has sixteen4-cycles. On the four base cells g=16c+h, their permutations are alpha=(0123), beta=(0132), with inverses for types3/2. The internal16-label maps are not plain cyclic additions in these labels.
+
+This provides a specific transfer interface, rather than an arbitrary graph template. A natural controlled question is whether these four actual GF4 charts can replace the GF3 charts on the already known76-controller with the same base alpha/beta. That would give19456 vertices at degree16. It is not guaranteed: the older GF3 reduced-two-word pencil may have only four hyperplanes, whereas GF4 needs five. The transfer is separately frozen under c19_controller_transfer/ and will be tested only once. No controller group grid or chart adjustment is authorized here.
+
+The current official main table and description list URSA16384 as the degree16/diameter4 entry, communicated2026-09-18; its literal source URL is saved in SOURCE_FACTS.json. SourceD4 is inherited rather than rechecked. The previously studied Mizuno1920 degree16/diameter3 source was explicitly skipped because its edge-local30-controller/adjacent pencils were already analyzed in the Wiki. No global Wiki/HTML/delivery file was edited.

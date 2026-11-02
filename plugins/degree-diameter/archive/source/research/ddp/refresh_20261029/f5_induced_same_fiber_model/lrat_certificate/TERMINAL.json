@@ -1,0 +1,59 @@
+{
+  "status": "LRAT_VERIFIED_UNSAT_EXACT_CNF",
+  "verified_UNSAT_of_exact_CNF": true,
+  "input": {
+    "path": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_same_fiber_model/model.cnf",
+    "header": "p cnf 333551 2316695",
+    "bytes": 50142680,
+    "mtime_ns": 1793319811541261316,
+    "inode": 43165286377
+  },
+  "solver": {
+    "name": "solver",
+    "pid": 1790221,
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+      "-q",
+      "-t",
+      "120",
+      "--lrat",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_same_fiber_model/model.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_same_fiber_model/lrat_certificate/certificate.lrat"
+    ],
+    "returncode": 20,
+    "CPU_hard_limit_seconds": 121,
+    "CPU_seconds": 61.3944,
+    "wall_seconds": 61.569498009979725,
+    "observation_timeouts": 12,
+    "same_PID_waited_to_exit": true
+  },
+  "checker": {
+    "name": "checker",
+    "pid": 1807056,
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_same_fiber_model/model.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_same_fiber_model/lrat_certificate/certificate.lrat"
+    ],
+    "returncode": 20,
+    "CPU_hard_limit_seconds": 90,
+    "CPU_seconds": 0.5875179999999958,
+    "wall_seconds": 0.6164128594100475,
+    "observation_timeouts": 0,
+    "same_PID_waited_to_exit": true
+  },
+  "certificate_whole_CPU_seconds": 62.00419991199999,
+  "certificate_whole_CPU_limit": 220,
+  "combined_whole_CPU_seconds": 119.899128932,
+  "combined_solver_CPU_seconds": 115.80051699999999,
+  "wall_seconds": 62.18889892101288,
+  "proof_bytes": 53841287,
+  "error": null,
+  "running": false,
+  "automatic_retry": false,
+  "source_CNF_modified_by_this_run": false,
+  "old_terminal_modified": false,
+  "new_graphs": 0,
+  "BFS_runs": 0,
+  "mathematical_encoding_scope": "CNF certificate only; H65 and graph-to-CNF preservation remain separate review obligations"
+}

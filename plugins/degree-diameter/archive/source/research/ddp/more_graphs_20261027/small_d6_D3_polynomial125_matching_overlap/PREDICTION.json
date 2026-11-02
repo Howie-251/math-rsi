@@ -1,0 +1,38 @@
+{
+  "timestamp_UTC": "2026-10-28T02:56:36.260906+00:00",
+  "status": "FROZEN_BEFORE_FIRST_Q5_ENDPOINT_TEST",
+  "target_Delta": 6,
+  "target_D": 3,
+  "hypothetical_n": 125,
+  "savedL": 120,
+  "reason_for_q5": "New q7 allmatching bound yields image+3q²+1<q³ forq>=7. q5 is the small boundary case withorder125 justabove current120; this selects the field by a route-budget threshold, not by sequential prime trials.",
+  "source": "F5³: (a,b,c)~(s,a*s-b,a²*s+a*s²-c);delete loops. Not an alreadygenerated source in this directory.",
+  "fixed_root": [
+    0,
+    0,
+    0
+  ],
+  "degree_guarantee": "source degree4 at5absolute points, degree5 otherwise; adding arbitrary simple complementmatching givesmaxdegree6.",
+  "prediction": "For every eligible partner x ofroot p0, |B2_G(x) minus B3_G(p0)|<=24. If true an arbitrary matching cannot giveD3 even in q5.",
+  "test_method": "Use explicit length0/1/2 endpoint formulas at125 vertices andthe125 formal3walk rootimage, allowing formal loops but removingthem yields actual paths ofatmostsame length. No BFS, no sourceedgearray ormatching assignment search.",
+  "root_route_union_upper": {
+    "root_unmatched": "|A|+|B2(p)|+deg(p)*q = |A|+41 forq5",
+    "root_matched": "|A|+max_x|B2(x)\\A|+(|B2(p)|-1)+deg(p)*q+q = |A|+maxoutside+45 forq5",
+    "deduplication": "Every M(u) for matched oldneighboru lies inboth the middle-M andlast-M sets (subtractk), andM(p) is inbothfirst-M andlast-M sets (subtract1). For the last-M set exclude p explicitly before upperbounding, so these removals are distinct.",
+    "full_obligation": "Classify zeroM,oneM atthreepositions,twoM asMGM. Never omit twoM routes."
+  },
+  "expected_formal_root_image_size": 55,
+  "conditional_strict_upper_if_prediction": 124,
+  "conditional_missing_lower_bound": 1,
+  "budget": {
+    "fields": [
+      5
+    ],
+    "potential_partners": 125,
+    "symbolic_triples_atroot": 125,
+    "BFS": 0,
+    "matching_tests": 0,
+    "solver_calls": 0
+  },
+  "scope": "Exactly this q5 source plusarbitrary onecomplementmatching; ifpredictionfails, preserve actualmax anditswitness, do not claim impossible orlaunch unboundedmatchingsearch."
+}

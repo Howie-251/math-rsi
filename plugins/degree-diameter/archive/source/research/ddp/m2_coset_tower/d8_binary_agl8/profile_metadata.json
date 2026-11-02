@@ -1,0 +1,41 @@
+{
+  "scope": "Exactly 2000 deterministic HH-coloured tuples, no symmetry reductions or complete-family claim.",
+  "component_order": [
+    "allones invol",
+    "plane4 invol",
+    "weight6 invol",
+    "weight2 inverse pair",
+    "nonplane4 inverse pair"
+  ],
+  "component_list_order": "generator_lists.json: increasing involution code, increasing minimum inverse-pair code",
+  "indices_at_cursor_j": [
+    "j mod8",
+    "(13j+7) mod56",
+    "(23j+19) mod56",
+    "(17j+31) mod756",
+    "(37j+5) mod1540"
+  ],
+  "cursor_range": [
+    0,
+    2000
+  ],
+  "all_2000_generator_sets_distinct": true,
+  "only_patterns_tested": "two inverse pairs and three involutions, with the named fixed colour allocation",
+  "all_candidates_legal_and_HH_verified_before_BFS": true,
+  "scoring": "actual graph construction followed by three exact depth-five BFS roots, one per proven left-G orbit",
+  "roots": [
+    0,
+    7168,
+    8192
+  ],
+  "root_weights": [
+    7168,
+    1024,
+    128
+  ],
+  "bad_pair_formula": "(7168*miss_leaf+1024*miss_block+128*miss_head)/2",
+  "BB_optimization_used": false,
+  "normal_H_formula_used": false,
+  "full_production_started": false,
+  "next_cursor": 2000
+}

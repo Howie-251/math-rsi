@@ -1,0 +1,13 @@
+# Current degree13 core coverage without assuming the old colours
+
+Let F be the saved33397-vertex full fold and K the actual0..50553 induced core of the published51417 graph. Use the17157 generic splitfibers of the old author13witness to partition K into33397 labelled classes:16240 singletons and17157 pairs. The candidate class numbering is bound to the cached Q_data rawpoint representatives and the old leastpoint ordering.
+
+The new source check establishes the following actual finite facts, without an H9 incidence rebuild or BFS: its complete simple quotient edge set is exactly the saved166425-edge F; simultaneous swapping of all pairs is a K automorphism; every singleton/singleton or singleton/pair quotientedge is complete; every pair/pair quotientedge has2 or4 edges; the resulting splitcolour parity constraints are consistent.
+
+A two-edge pair/pair block invariant under simultaneous swap must be one of the two perfect matchings. A four-edge block is complete. Consequently for every currentvertex v and every F-neighbor of its class rho(v), there is a K-neighbor in that target class. Every Fwalk can be lifted step by step starting at either current representative. This local lifting property is all that the stable blocking-neighbor rule needs.
+
+For each of the existing702 PGL3(F3) Redei placements in an F3-defined singular plane, the raw B15 is Frobenius-stable. Thus it contains every member of each selected Frobenius class. Under the canonical point_to_core13 map its mandatory pinset is exactly rho^-1(pi0(B)), where pi0 is the fully folded rawpoint-to-F map. Reversing an individual splitpair's raw orientation cannot change this mandatory pinset.
+
+The already accepted polar-distance/blocking argument gives R4_F(pi0(B))=V(F). Starting at any v in K, lift such a length<=4 Fpath. Its endpoint is in the complete preimage rho^-1(pi0(B)), so R4_K(mandatorypins)=V(K). The actual degree13 core can therefore use the uniform coverage rule even though its colours and edges differ from the old50750 core. This is an application of the existing polar theorem to the actual checked quotient, not an assumption that the old core was retained.
+
+Scope is crucial: this proves core coverage for whole-Frobenius-class pinsets, including precisely the702 F3-projectivity placements currently under consideration. It does not bind arbitrary nonstable raw sets or establish a fully oriented raw H9 incidence realization of the currentcolours. Such a stronger realization is unnecessary for this finite proposed pool. The863 existing extras still require actual current-graph coverage, and every old/new degree must satisfy13. Original51417 D5 is inherited from the public construction; it was not reverified by allsource BFS here.

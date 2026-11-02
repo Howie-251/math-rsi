@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}code{overflow-wrap:anywhere}.table-wrap{overflow-x:auto}nav{margin:18px 0}nav a{margin-right:16px}th{font-weight:600}section{margin-top:30px}.muted{color:#526477}li{margin:6px 0}</style></head><body><h1>当前任务：H(9)部分折叠的联合构造</h1>
+<p>更新：2026-10-27 03:49:48 UTC。Goal ACTIVE；范围4≤Δ≤12、D∈{3,4,5}。当前聚焦(12,5)，已验证新下界0。</p>
+<div class="note">新的几何入口为合法拆分和着色自动保证直径≤5，当前研究集中在度预算与点数。作者已有41699点例子，当前保存门槛42342（本轮重读D5条目仍为该值）；没有把旧例复现计为新成果。</div>
+<nav><a href="expert_review_20261027/STATUS.html">专家说明 HTML</a><a href="DD_EXPERT_REVIEW_20261027.zip">专家材料 ZIP</a><a href="expert_review_20261027/STATUS.md">可编辑文本</a></nav>
+<h2>现在改变了什么</h2>
+<p>按用户要求扩大方法比较，停止失败模板的连续加种子。新采用 <a href="https://zenodo.org/records/23056128">H(9)部分折叠原始构造</a>：33033个generic fiber可逐点选择合并或两色拆分，364个子六边形点可选复制数。点线双射及合并给出直径≤5保证，逐点度数由明确局部公式决定；群轨道常值只是作者的搜索限制，可以解除。</p>
+<p>固定作者原7959个拆分点和280份复制，四种加入顺序都零新增。更强的满载点闭包已排除这些固定量下的全部真拆分超集；不再追加加入顺序。现在允许删旧拆分、重选颜色及改变复制数，做四个预定区域的有限联合试验。</p>
+<p>四个预定区域的联合试验已结束：求解器均报告局部最优、gap为零，四区增益都为零，状态仍为作者41636点核心。root核对最终三态及复制数与已独立计算负载的旧状态逐项相同，复用该检查；没有重复BFS。这只覆盖四个区域外固定的子问题。已停止，不扩大局部球或追加起点；全局S/c选择及后续pencil规则仍开放。</p>
+<p>这些仍是部分系统与充分条件；尚无超过42342点的新完整图。若出现越线状态，仍须按原始几何生成完整边表，独立验证，再刷新公开基线并完成规定审阅和Lean。</p>
+<h2>本轮其余入口已收束</h2>
+<table><tr><th>入口</th><th>真实结果</th></tr>
+<tr><td>192点控制提升</td><td>独立检查普通D6、144个>5无序对；exact-NB5缺2752个有序对。固定有限试验已停。</td></tr>
+<tr><td>F₂⁴通用四步路由表</td><td>2419200个规范候选全部无表；不再搜索对应控制图。</td></tr>
+<tr><td>三度控制器的度分配</td><td>exact-NB4阶数≤20，参数不够；exact-NB5阶数≤44，42/44仍开放。</td></tr>
+<tr><td>585点核心批量增阶</td><td>便宜样本回到已知复制组；独立二步支配组在十二度下至多796点。一般互助批量未排除。</td></tr>
+<tr><td>364→728分支二提升</td><td>25秒必要匹配求解UNK2026-10-27 03:48:19 UTCN，无728点图；不是不存在证明。</td></tr></table>
+<p>普通距离坏对与恰五步非回退缺项不能互换。未把参数变化虚计为全新构造大类。</p>
+<p><a href="ddp/breadth_20261027_wave3/RESULTS.json">本轮汇总数据</a> · <a href="ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/REPORT.md">几何公式与源数据</a> · <a href="ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/root_monotone_closure.json">单调扩展闭包</a> · <a href="progress_ddp_20261027_0323.html">上一阶段与路由控制图结果</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p>
+<p>专家包保持03:15:51 UTC截点；后续进展以本页和阶段汇总为准。Gemini有限审阅不等于全部数学或代码已通过，没有新成果Lean验收。</p>
+</body></html>

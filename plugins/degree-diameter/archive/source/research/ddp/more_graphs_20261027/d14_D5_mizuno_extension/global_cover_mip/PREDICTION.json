@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_BEFORE_GLOBAL_MIP",
+  "timestamp": "2026-10-27T17:30:54.097250+00:00",
+  "question": "Can simultaneous binary selection find a14pin fullR4cover missed by the completed64greedyconstructions?",
+  "prediction_exists": "There may be a<=14pin cover in the complete3685column family; no-existence is not inferred from greedy or a timeout.",
+  "prediction_operational": "The global constraint-generation MIP will produce at leastone modelcandidate that passes the complete cachedR4 check within the fixedwindow; this is falsifiable and separate from mathematical existence.",
+  "model": {
+    "variables": "3685binaryx, one per exactcachedfreevertex",
+    "cardinality": "sum x<=14",
+    "constraints": "For everyoldtarget v, sum x_p overp withv inR4(p)>=1",
+    "objective": "0 feasibility"
+  },
+  "candidate_preservation": "All3685columns retained; initialrows and everycut are exact originaltargetconstraints. No symmetryfix, greedycolumnrestriction or targetrelaxation used for success. A modelincumbent must pass all94186targets in the completecache before acceptance.",
+  "fixed_protocol": {
+    "initial_rows": "128lowest-support targetIDs +128equallyspaced targetIDs, deduplicated",
+    "cuts_per_failed_candidate": "Up to1024 newlyviolated targets, halfminimumsupport and halfequallyspaced through allmissingIDs, deterministic.",
+    "maximum_model_candidates": 8,
+    "one_MIP_per_changed_constraintset": true,
+    "stop_noincumbent": "Stop withUNKNOWN; do not coldrestart sameconstraints.",
+    "first_MIP_wall_limit_seconds": 5,
+    "later_MIP_wall_limit_seconds": 8
+  },
+  "budgets": {
+    "workers": 1,
+    "cumulative_solver_CPU_seconds": 30,
+    "solver_CPU_working_limit": 29,
+    "whole_process_CPU_seconds": 60,
+    "whole_process_wall_seconds": 180
+  },
+  "solver": "Installedscipy.optimize.milp/HiGHS, standardNumPy/SciPy only; no installs.",
+  "BFS": 0,
+  "old_ball_recomputation": 0,
+  "new_hashes": 0
+}

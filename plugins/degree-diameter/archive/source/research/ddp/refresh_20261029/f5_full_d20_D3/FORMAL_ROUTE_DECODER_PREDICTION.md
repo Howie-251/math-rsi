@@ -1,0 +1,3 @@
+# 有限位移decoder批
+
+仅读这张3750图的PARAMETERS，不构造图、不BFS。拟返回：780非邻或相同controller对各一条nonbacktracking三port词；36合法三port词各125个零起点位移的噪声逆像（4500）；4种相邻port各125个位移的两种回退pencil噪声证书（500）。Lean随后检查这些小证书并用已证明的仿射兼容推广到任意起点；没有3750²决定过程。若任何所需位移未覆盖则返回精确缺口并停止。prep单workerCPU120秒，不安装。

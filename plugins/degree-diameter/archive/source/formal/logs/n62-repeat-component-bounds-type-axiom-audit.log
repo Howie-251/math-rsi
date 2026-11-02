@@ -1,0 +1,52 @@
+@DegreeDiameter.n62_repeat_component_defect_row : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent) {x : V},
+          x ∈ C.supp → ∑ y ∈ DegreeDiameter.repeatComponentVertices G C, DegreeDiameter.defectMatrix G x y = 3
+@DegreeDiameter.n62_repeat_component_size_even : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent), Even (DegreeDiameter.repeatComponentSize G C)
+@DegreeDiameter.n62_repeat_component_size_ge_four : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) →
+          ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent), 4 ≤ DegreeDiameter.repeatComponentSize G C
+@DegreeDiameter.n62_repeat_quotient_reverse_positive : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C D : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          0 < DegreeDiameter.repeatQuotientMatrix G C D → 0 < DegreeDiameter.repeatQuotientMatrix G D C
+@DegreeDiameter.n62_repeat_quotient_budget_term_nonnegative : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C D : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          0 ≤ DegreeDiameter.repeatQuotientMatrix G C D * (DegreeDiameter.repeatQuotientMatrix G D C - 1)
+@DegreeDiameter.n62_repeat_quotient_budget : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          ∑ D, DegreeDiameter.repeatQuotientMatrix G C D * (DegreeDiameter.repeatQuotientMatrix G D C - 1) =
+            ↑(DegreeDiameter.repeatComponentSize G C) + 2 - DegreeDiameter.repeatQuotientMatrix G C C
+@DegreeDiameter.n62_repeat_component_size_ge_internal_square_sub_two : ∀ {V : Type u_1} [inst : Fintype V]
+  (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          DegreeDiameter.repeatQuotientMatrix G C C ^ 2 - 2 ≤ ↑(DegreeDiameter.repeatComponentSize G C)
+'DegreeDiameter.n62_repeat_component_defect_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_size_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_size_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_reverse_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_budget_term_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_quotient_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_size_ge_internal_square_sub_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

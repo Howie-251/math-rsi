@@ -1,0 +1,248 @@
+---
+type: experiment
+node_id: exp:ddp-k5-q16-f3four-actual-r4-voltage-route-gates-12d4-20261030
+title: "K5/Q16/F3^4真实短路线：NB4证书失败后保全商门30项，完整电压域全部排除"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: no
+confidence: high
+date: "2026-10-30"
+hardware: "Single worker; one finite native common-voltage search; no solver."
+duration: "ExactNB4 .043517287CPU; actualprovider .647435435CPU; all preparation+gates+actual call charged whole2.157211698CPU."
+provenance: "research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/BASE_INPUT.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/D16_PAPER_STOP.md; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/FIRST_FAILURE.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PASS_ASSIGNMENTS.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PREDICTION_AND_SCOPE.md; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/REPORT.md; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/RESULT.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/TERMINAL.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/WORDS.json; research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/run_once.py; research/ddp/refresh_20261029/k5_actual_route_provider_gate/DERIVATION_PACKAGE.md; research/ddp/refresh_20261029/k5_actual_route_provider_gate/FAILURE_WITNESSES.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/HANDLE.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/PASS_ASSIGNMENTS.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/PREDICTION_AND_SCOPE.md; research/ddp/refresh_20261029/k5_actual_route_provider_gate/RAW_WORDS.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/REAL_ROUTE_CACHE.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/RESULT.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/TERMINAL.json; research/ddp/refresh_20261029/k5_actual_route_provider_gate/check_once.py; research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION.json; research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION_HANDLE.json; research/ddp/refresh_20261029/k5_q16_actual_R4/COMPILE_HANDLE.json; research/ddp/refresh_20261029/k5_q16_actual_R4/INPUT_SCOPE.json; research/ddp/refresh_20261029/k5_q16_actual_R4/MODEL_CODE.md; research/ddp/refresh_20261029/k5_q16_actual_R4/NATIVE_TERMINAL.json; research/ddp/refresh_20261029/k5_q16_actual_R4/PREDICTION_AND_SCOPE.md; research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_HANDLE.json; research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_RESULT.json; research/ddp/refresh_20261029/k5_q16_actual_R4/ROOT_CODE_REVIEW.md; research/ddp/refresh_20261029/k5_q16_actual_R4/RUN_HANDLE.json; research/ddp/refresh_20261029/k5_q16_actual_R4/TERMINAL.json; research/ddp/refresh_20261029/k5_q16_actual_R4/prepare.py; research/ddp/refresh_20261029/k5_q16_actual_R4/run_once.py; research/ddp/refresh_20261029/k5_q16_actual_R4/search.cpp; research/ddp/refresh_20261029/k5_q16_actual_R4/COLLISION_WITNESS.json; reviews/ddp/k5_q16_actual_route_20261030.prompt.md; reviews/ddp/k5_q16_actual_route_20261030.response.json; reviews/ddp/k5_q16_actual_route_20261030.DISPOSITION.md; research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN_RESULT.json; research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN.md"
+added: 2026-10-30T03:03:30Z
+tags: ["ddp", "method-ledger"]
+---
+
+# K5/Q16/F3^4真实短路线：NB4证书失败后保全商门30项，完整电压域全部排除
+
+**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** controller
+
+**目标与阶数：** (12,4)；L=6156；controller n=6480；条件性n=6480（未据此计纪录）；从属目标：[162]
+
+**距目标的证据：** One calibration graph is simple12regular; root0 R4=4563/6480, so D>4. Global diameter not computed. The complete voltage domain is excluded using exact route caches, not full graph enumeration.；The sufficient exact-NB4 V4 gate tested4096/failed4096 in0.043517287CPU, which alone did not exclude actual D4. A distinct necessary actual-route provider gate includes all341 words of length0..4 and their true field images, merges only equal signed deck-word keys, and retains30/4096 in0.647435435CPU. The one full actual-Q16 call then decides all122880 lifts: every assignment fails the zero-root own-base field/deck slot,0root0-pass candidates,0main-enumeration graphs/BFS. Native0.058621CPU, child0.059756CPU, total charged2.157211698CPU including preparation and both gates. One separately recorded calibration graph6480/38880 is simple12regular; literal BFS root0 and exact cache agree pointwise6480entries, R4=4563, first missing162. Fixed actual-D4 family stopped.；保存校准目标162=(base0,r²,field0)虽有9个V4 provider，完整共同电压仅给e五次/r⁴四次，缺r²，解释路线重复而非缺少形式提供者。真实静态外审SUCCESS/SOUND AS STATED；外审未重跑枚举，校准只1根对6480目标比较，主枚举0候选BFS。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "complete_tree_gauge_assignments": 16777216,
+  "inverse_ports": [
+    1,
+    0,
+    3,
+    2
+  ],
+  "group": "Q16",
+  "quotient": "V4",
+  "star_identity_edges": 4,
+  "free_chords": 6,
+  "exact_NB4_projection_count": 4096,
+  "exact_NB4_projection_passes": 0,
+  "exact_NB4_gate_CPU_seconds": 0.043517287,
+  "exact_NB4_gate_excludes_actual_D4_alone": false,
+  "actual_provider_projection_count": 4096,
+  "actual_provider_passes": 30,
+  "actual_provider_failures": 4066,
+  "actual_words_per_base_root": 341,
+  "actual_merged_keys_per_root": 161,
+  "actual_provider_CPU_seconds": 0.647435435,
+  "actual_full_lifts": 122880,
+  "fully_decided_lifts": 122880,
+  "root0_pass_candidates": 0,
+  "root0_failed_base_counts": [
+    122880,
+    0,
+    0,
+    0,
+    0
+  ],
+  "main_numeric_calls": 1,
+  "main_driver_pid": 4156313,
+  "main_child_pid": 4156316,
+  "child_CPU_seconds": 0.059756,
+  "whole_CPU_seconds": 2.157211698,
+  "native_CPU_seconds": 0.058621,
+  "whole_CPU_budget": 90,
+  "main_enumeration_graphs_generated": 0,
+  "main_enumeration_BFS_runs": 0,
+  "calibration_graphs_generated": 1,
+  "calibration_BFS_roots": 1,
+  "calibration_n": 6480,
+  "calibration_m": 38880,
+  "calibration_simple": true,
+  "calibration_degree": 12,
+  "calibration_R4": 4563,
+  "calibration_first_missing": 162,
+  "calibration_cache_literal_pointwise_matches": 6480,
+  "actual_D4_lift_family_excluded": true,
+  "current_running": false,
+  "pending": [],
+  "accepted_graphs": 0,
+  "new_record": false,
+  "new_independent_method_claimed": false,
+  "actual_route_static_review": {
+    "status": "SUCCESS_SOUND_AS_STATED",
+    "actual_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "thread_id": "331e724d-ce51-4f66-81c4-6664c08e52e2",
+    "scope": "Static support for tree gauge, all341 raw route images including backtracking, provider necessity, exact field/deck cache implementation and complete30x4096 assignment scope. Fixed K5/these F3^4 charts/ordinary Q16 only.",
+    "reviewer_reran_code_or_enumeration": false,
+    "calibration_BFS_roots": 1,
+    "calibration_root_to_all6480_targets_compared": true,
+    "main_search_BFS_roots": 0,
+    "all6480_source_BFS_claimed": false,
+    "negative_Lean_formalization": false,
+    "response": "reviews/ddp/k5_q16_actual_route_20261030.response.json",
+    "disposition": "reviews/ddp/k5_q16_actual_route_20261030.DISPOSITION.md"
+  },
+  "saved_calibration_collision_provider_keys": 9,
+  "saved_calibration_collision_distinct_deck_values": 2
+}
+```
+
+
+
+**从属变体：**
+```json
+[
+  {
+    "label": "D16_inverse_orbit_capacity_paper_cancel_before_numeric_20261030",
+    "status": "EXACT_NB4_CERTIFICATE_PAPER_EXCLUDED_NO_NUMERIC",
+    "reason": "K5 has24 closed NB4 words,12 reversal pairs; D16 requires13 inverse orbits.",
+    "actual_D4_lift_excluded": false,
+    "numerical_calls": 0
+  },
+  {
+    "label": "Q16_all4096_V4_exact_NB4_sufficient_certificate_gate_20261030",
+    "status": "COMPLETE_ALL4096_Q16_V4_ASSIGNMENTS_REJECTED",
+    "prediction": "At least one projection passes",
+    "prediction_result": "REFUTED",
+    "tested": 4096,
+    "passed": 0,
+    "diagonal_identity_coset_threshold": 6,
+    "other_threshold": 4,
+    "CPU_seconds": 0.043517287,
+    "actual_D4_family_excluded": false,
+    "graphs_generated": 0,
+    "BFS_runs": 0,
+    "solver_calls": 0
+  },
+  {
+    "label": "Q16_all4096_V4_actual_short_route_provider_necessary_gate_20261030",
+    "status": "COMPLETE_ACTUAL_ROUTE_PROVIDER_GATE_HAS_PASS",
+    "prediction": "Short/backtracking route union can survive even though the stronger NB4 certificate fails",
+    "prediction_result": "SUPPORTED",
+    "tested": 4096,
+    "passed": 30,
+    "failed": 4066,
+    "words0through4": 341,
+    "keys_per_root": 161,
+    "remaining_full_assignments": 122880,
+    "CPU_seconds": 0.647435435,
+    "graphs_generated": 0,
+    "BFS_runs": 0,
+    "actual_D4_family_excluded_by_this_gate_alone": false
+  },
+  {
+    "label": "Q16_literal6480_graph_one_root_cache_calibration_20261030",
+    "status": "PASS_EXACT_CACHE_BINDING_ACTUAL_GRAPH_R4_FAIL",
+    "n": 6480,
+    "m": 38880,
+    "simple": true,
+    "degree": 12,
+    "root": 0,
+    "literal_R4": 4563,
+    "cache_R4": 4563,
+    "pointwise_matches": 6480,
+    "first_missing": 162,
+    "actual_graphs_generated": 1,
+    "BFS_roots": 1,
+    "global_diameter_computed": false,
+    "ordinary_bad_unordered_pairs": null
+  },
+  {
+    "label": "Q16_all122880_surviving_voltage_assignments_actual_R4_complete_20261030",
+    "status": "COMPLETE_NO_FULL_GRAPH",
+    "tested": 122880,
+    "untested": 0,
+    "root0_pass_candidates": 0,
+    "root0_own_base_failures": 122880,
+    "actual_numeric_calls": 1,
+    "native_CPU_seconds": 0.058621,
+    "child_CPU_seconds": 0.059756,
+    "whole_CPU_seconds": 2.157211698,
+    "old_full_NB4_gate_used": false,
+    "graph_generations": 0,
+    "BFS_roots": 0,
+    "solver_calls": 0,
+    "running": false,
+    "pending": [],
+    "actual_fixed_D4_family_excluded": true
+  },
+  {
+    "label": "saved_calibration_provider_collision_explanation_actual_static_review_20261030",
+    "status": "EXACT_SAVED_WITNESS_STATIC_REVIEW_SUPPORTED_NO_NEW_ENUMERATION",
+    "scope": "One saved failed calibration; no full enumeration repeated",
+    "voltages": [
+      9,
+      8,
+      1,
+      8,
+      0,
+      8
+    ],
+    "source": 0,
+    "target": 162,
+    "target_base": 0,
+    "missing_deck": 2,
+    "missing_deck_name": "r^2",
+    "field_coordinate": 0,
+    "V4_coset": 0,
+    "projected_provider_keys": 9,
+    "actual_Q16_value_histogram": {
+      "identity": 5,
+      "r^4": 4
+    },
+    "actual_distinct_deck_values": 2,
+    "required_deck_values_in_coset": 4,
+    "interpretation": "Passing a projected provider count does not allow each target to choose independent voltages: these nine keys collide into only two values under the one common assignment.",
+    "graph_generation_or_BFS_or_search_repeated": false,
+    "actual_external_review": {
+      "status": "SUCCESS_SOUND_AS_STATED",
+      "actual_model": "gemini-3.8-flash-high",
+      "effort": "high",
+      "thread_id": "331e724d-ce51-4f66-81c4-6664c08e52e2",
+      "scope": "Static support for tree gauge, all341 raw route images including backtracking, provider necessity, exact field/deck cache implementation and complete30x4096 assignment scope. Fixed K5/these F3^4 charts/ordinary Q16 only.",
+      "reviewer_reran_code_or_enumeration": false,
+      "calibration_BFS_roots": 1,
+      "calibration_root_to_all6480_targets_compared": true,
+      "main_search_BFS_roots": 0,
+      "all6480_source_BFS_claimed": false,
+      "negative_Lean_formalization": false,
+      "response": "reviews/ddp/k5_q16_actual_route_20261030.response.json",
+      "disposition": "reviews/ddp/k5_q16_actual_route_20261030.DISPOSITION.md"
+    }
+  }
+]
+```
+
+**原始证据：** [research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/BASE_INPUT.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/BASE_INPUT.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/D16_PAPER_STOP.md](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/D16_PAPER_STOP.md)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/FIRST_FAILURE.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/FIRST_FAILURE.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PASS_ASSIGNMENTS.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PASS_ASSIGNMENTS.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PREDICTION_AND_SCOPE.md](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/PREDICTION_AND_SCOPE.md)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/REPORT.md](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/REPORT.md)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/RESULT.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/RESULT.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/TERMINAL.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/TERMINAL.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/WORDS.json](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/WORDS.json)；[research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/run_once.py](../../research/ddp/refresh_20261029/k5_q16_NB4_quotient_gate/run_once.py)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/DERIVATION_PACKAGE.md](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/DERIVATION_PACKAGE.md)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/FAILURE_WITNESSES.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/FAILURE_WITNESSES.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/HANDLE.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/HANDLE.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/PASS_ASSIGNMENTS.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/PASS_ASSIGNMENTS.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/PREDICTION_AND_SCOPE.md](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/PREDICTION_AND_SCOPE.md)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/RAW_WORDS.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/RAW_WORDS.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/REAL_ROUTE_CACHE.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/REAL_ROUTE_CACHE.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/RESULT.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/RESULT.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/TERMINAL.json](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/TERMINAL.json)；[research/ddp/refresh_20261029/k5_actual_route_provider_gate/check_once.py](../../research/ddp/refresh_20261029/k5_actual_route_provider_gate/check_once.py)；[research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION_HANDLE.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/CALIBRATION_HANDLE.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/COMPILE_HANDLE.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/COMPILE_HANDLE.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/INPUT_SCOPE.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/INPUT_SCOPE.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/MODEL_CODE.md](../../research/ddp/refresh_20261029/k5_q16_actual_R4/MODEL_CODE.md)；[research/ddp/refresh_20261029/k5_q16_actual_R4/NATIVE_TERMINAL.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/NATIVE_TERMINAL.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/PREDICTION_AND_SCOPE.md](../../research/ddp/refresh_20261029/k5_q16_actual_R4/PREDICTION_AND_SCOPE.md)；[research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_HANDLE.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_HANDLE.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_RESULT.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/PREPARE_RESULT.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/ROOT_CODE_REVIEW.md](../../research/ddp/refresh_20261029/k5_q16_actual_R4/ROOT_CODE_REVIEW.md)；[research/ddp/refresh_20261029/k5_q16_actual_R4/RUN_HANDLE.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/RUN_HANDLE.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/TERMINAL.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/TERMINAL.json)；[research/ddp/refresh_20261029/k5_q16_actual_R4/prepare.py](../../research/ddp/refresh_20261029/k5_q16_actual_R4/prepare.py)；[research/ddp/refresh_20261029/k5_q16_actual_R4/run_once.py](../../research/ddp/refresh_20261029/k5_q16_actual_R4/run_once.py)；[research/ddp/refresh_20261029/k5_q16_actual_R4/search.cpp](../../research/ddp/refresh_20261029/k5_q16_actual_R4/search.cpp)；[research/ddp/refresh_20261029/k5_q16_actual_R4/COLLISION_WITNESS.json](../../research/ddp/refresh_20261029/k5_q16_actual_R4/COLLISION_WITNESS.json)；[reviews/ddp/k5_q16_actual_route_20261030.prompt.md](../../reviews/ddp/k5_q16_actual_route_20261030.prompt.md)；[reviews/ddp/k5_q16_actual_route_20261030.response.json](../../reviews/ddp/k5_q16_actual_route_20261030.response.json)；[reviews/ddp/k5_q16_actual_route_20261030.DISPOSITION.md](../../reviews/ddp/k5_q16_actual_route_20261030.DISPOSITION.md)；[research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN_RESULT.json](../../research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN_RESULT.json)；[research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN.md](../../research/ddp/refresh_20261029/SYMMETRY_AND_REAL_ROUTE_TURN.md)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** Fixed K5 porting from two oriented complementary C5s, inverse ports [1,0,3,2], stored F3^4 four-chart/noise input. Ordinary right Q16 voltages on all ten K5 edges; star-tree gauge fixes four edges to identity and leaves six independent chords. Whole 16^6=16777216 voltage domain covered by 4066 rejected V4 projections plus 30*4096 full-Q16 assignments. Not other groups, chart sets, bases, nonordinary lifts, or general N(12,4).
+
+**正向保证：** All 108 reduced four-port words of the stored F3^4 chart are rank4; this is a binding for a sufficient certificate, not the actual D4 gate.；Tree gauge is a deck relabeling and preserves the field graph; all six chord values remain independent.；Actual-route filtering uses all length0..4 raw words, including backtracking field noise; only signed deck words are freely reduced.；A field coordinate needs four distinct deck targets in each V4 coset, so fewer than four provider keys is necessary failure, not a sufficient success test.；The actual full search does not reuse the failed full-NB4 gate as an actual-graph filter.
+
+**仍未完成：** No accepted6480(12,4) graph. General N(12,4), other groups/base/chart/voltage constructions remain open; this result is a finite exact fixed-rule exclusion, not a general bound or Lean theorem.
+
+**启发与重启依据：** The stronger full-NB4 certificate was too restrictive to infer actual impossibility: true short-route provider filtering left30 projections. The complete retained domain still fails specifically at the zero-root own-base target coverage; this precise common-voltage rule is now closed. Stop this fixed K5/Q16/chart family without group,seed,chart or timer ladder. Any future rule needs a real structural change and explicit new coverage justification.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

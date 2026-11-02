@@ -1,0 +1,204 @@
+{
+  "protocol": "manual-v1.2-feedback-loop",
+  "stage": "04",
+  "research_round": "N59_MANUAL12_ACTIVE",
+  "return_revision": "r2_20260929",
+  "read_cutoff_utc": "2026-09-29T03:35:33.925554+00:00",
+  "original_archive": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928.zip",
+  "original_round": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928",
+  "run_id": "manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z",
+  "run_directory": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z",
+  "input_matching": {
+    "START_HERE.md": true,
+    "THEORY.md": true,
+    "THEORY_WORKING.md": true,
+    "CODEX_HANDOFF.md": true,
+    "N59_33_FRONTIER_AND_STATUS.json": true,
+    "FORMAL_STATUS.md": true,
+    "RESEARCH_CHECKPOINT.md": true,
+    "formal/ParentColumnBridge.lean": true,
+    "formal/TriangleTransport.lean": true
+  },
+  "run_revision": "r2_20260928",
+  "session_count": 1,
+  "started_utc": "2026-09-28T12:51:37Z",
+  "finished_utc": "2026-09-28T23:53:56Z",
+  "result": "UNRESOLVED",
+  "computation_question": {
+    "accepted_delta": "N8 theoretical closure; N1/N2; S7-K4; H5-guarded N5/N14/N15",
+    "execution_scope": "26 m0 roots + 7 m1/K4 roots; no P16/K3 search",
+    "minimum_recovery": [
+      "campaign/task/cube scope and constraints",
+      "SAT full A and exact verification",
+      "solver return state/log",
+      "wall time, sampled CPU, sampled RSS"
+    ],
+    "not_requested": [
+      "ablation campaign",
+      "relaxed diagnostic inputs",
+      "old RAW reruns",
+      "new parent-signature enumeration",
+      "automatic cluster submission"
+    ],
+    "purpose": "DECISIVE_SEARCH",
+    "question": "Can the 33 remaining conditional c1 representatives be realized by a single actual 59-vertex A/B graph? In particular, is H5 with every zero-triangle vertex of matching type 2211 realizable?",
+    "result_semantics": {
+      "FAILURE": "Record actual failure; not mathematical nonexistence.",
+      "SAT": "Check original graph first, then branch/delta; preserve valid-original conflicts.",
+      "TIMEOUT": "No exclusion and no inferred structural witness.",
+      "UNSAT": "Raw exclusion of this exact conditional input; all owners/leaves must close."
+    }
+  },
+  "logical_representatives": 33,
+  "closed_representatives": 0,
+  "open_representatives": 33,
+  "roots": 33,
+  "nodes": 99,
+  "leaf_states": {
+    "RAW_UNSAT_NEW": 1,
+    "TIMEOUT": 65
+  },
+  "untried_leaf_ids": [],
+  "attempts": 99,
+  "attempt_states": {
+    "TIMEOUT": 98,
+    "RAW_UNSAT_NEW": 1
+  },
+  "attempt_reasons": {
+    "task_timeout": 98,
+    "none": 1
+  },
+  "solver_exit_codes": {
+    "-2": 98,
+    "20": 1
+  },
+  "solver_log_sizes": {
+    "0": 98,
+    "16": 1
+  },
+  "groups": {
+    "m0_1-1-1-1-1-1": {
+      "roots": 7,
+      "leaves": 14,
+      "root_attempt_states": {
+        "TIMEOUT": 7
+      },
+      "leaf_states": {
+        "TIMEOUT": 14
+      },
+      "r2_constraint_roots": 0,
+      "splits": {
+        "t3_exists": 6,
+        "m0_1-1-1-1-1-1_q2_shape0": 1
+      }
+    },
+    "m0_2-1-1-1-1": {
+      "roots": 8,
+      "leaves": 16,
+      "root_attempt_states": {
+        "TIMEOUT": 8
+      },
+      "leaf_states": {
+        "TIMEOUT": 16
+      },
+      "r2_constraint_roots": 0,
+      "splits": {
+        "t3_exists": 7,
+        "m0_2-1-1-1-1_q2_shape0": 1
+      }
+    },
+    "m0_2-2-1-1": {
+      "roots": 6,
+      "leaves": 12,
+      "root_attempt_states": {
+        "TIMEOUT": 6
+      },
+      "leaf_states": {
+        "TIMEOUT": 11,
+        "RAW_UNSAT_NEW": 1
+      },
+      "r2_constraint_roots": 6,
+      "splits": {
+        "t3_exists": 5,
+        "parent_overlap_9_10_ge1": 1
+      }
+    },
+    "m0_3-1-1-1": {
+      "roots": 5,
+      "leaves": 10,
+      "root_attempt_states": {
+        "TIMEOUT": 5
+      },
+      "leaf_states": {
+        "TIMEOUT": 10
+      },
+      "r2_constraint_roots": 5,
+      "splits": {
+        "t3_exists": 5
+      }
+    },
+    "m1_1-1-1-1": {
+      "roots": 7,
+      "leaves": 14,
+      "root_attempt_states": {
+        "TIMEOUT": 7
+      },
+      "leaf_states": {
+        "TIMEOUT": 14
+      },
+      "r2_constraint_roots": 0,
+      "splits": {
+        "R2_P3_exists": 6,
+        "R2_C3_exists": 1
+      }
+    }
+  },
+  "splits": {
+    "t3_exists": 23,
+    "parent_overlap_9_10_ge1": 1,
+    "m0_2-1-1-1-1_q2_shape0": 1,
+    "m0_1-1-1-1-1-1_q2_shape0": 1,
+    "R2_P3_exists": 6,
+    "R2_C3_exists": 1
+  },
+  "actual_wall_seconds": 39739.0,
+  "sampled_solver_cpu_seconds": 1293262.8,
+  "sampled_solver_cpu_hours": 359.23966666666666,
+  "average_sampled_solver_cores": 32.54391907194444,
+  "sampled_cpu_over_active_solver_wall": 0.9982835474539713,
+  "sampled_utilization_of_54_slots": 0.6026651679989711,
+  "peak_live_solvers": 54,
+  "peak_live_builders": 2,
+  "first_snapshot_with_54_solvers": "2026-09-28T15:56:27Z",
+  "last_snapshot_with_54_solvers": "2026-09-28T19:53:46Z",
+  "sampled_solver_aggregate_peak_rss_mib": 32879.140625,
+  "sampled_solver_aggregate_peak_rss_gib": 32.10853576660156,
+  "parent_sampled_cpu_hours": 98.99513055555556,
+  "template_count": 20,
+  "variables_range": [
+    1194276,
+    1984130
+  ],
+  "clauses_range": [
+    4851426,
+    8242731
+  ],
+  "omitted_production_cnf_bytes": 3248024295,
+  "r2_constraint_roots": 11,
+  "no_controlled_encoding_comparison": true,
+  "no_new_solver_or_lean_execution_in_recovery": true,
+  "formal_status": {
+    "status": "NOT_KERNEL_CHECKED",
+    "files": {
+      "ParentColumnBridge.lean": 127,
+      "TriangleTransport.lean": 127
+    },
+    "lean": null,
+    "lake": null,
+    "mathlib_version": null,
+    "axioms_output": null,
+    "scope": "Local explicit-hypothesis lemmas only; not complete N8/N15/N59 formalization",
+    "network_install_attempted": false,
+    "source_directory": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/local_checks/formal_source"
+  }
+}

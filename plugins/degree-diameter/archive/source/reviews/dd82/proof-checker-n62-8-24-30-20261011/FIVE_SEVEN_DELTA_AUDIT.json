@@ -1,0 +1,191 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The four-point-component companion lemma and the two exact five/seven-component applications are justified; twelve obligations discharged and no open issues. Quotient enumeration and universal connectedness are outside this delta review.",
+  "review_scope": "delta",
+  "audited_input_files": [
+    "proofs/dd82/n62/FIVE_SEVEN_COMPONENT_QUOTIENT_EXCLUSIONS.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n62-8-24-30-20261011/",
+  "thread_id": "/root/proof_review_n62_8_24_30",
+  "thread_id_kind": "canonical_reviewer_task_path",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_family": "openai",
+  "reviewer_model_metadata_basis": "Parent-reported explicit original spawn invocation; actual backend identity not independently attested",
+  "reviewer_context": "Continuation delta review; reviewer did not author target; not a new isolated review context",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T11:55:05+00:00",
+  "details": {
+    "claims_audited": 3,
+    "uniform_lemmas_audited": 1,
+    "applications_audited": 2,
+    "rounds": 1,
+    "source_changed": false,
+    "issues": [],
+    "issue_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "proof_obligations": [
+      {
+        "id": "D01",
+        "status": "discharged",
+        "verification": "**Actual binding** (5–9,31–36,63–65). C is an actual connected support component of the actual symmetric nonnegative integer row-sum-three B. Thus its rows have no support outside C. Quotient internal degrees count original neighbors at every vertex, by equitability."
+      },
+      {
+        "id": "D02",
+        "status": "discharged",
+        "verification": "**Local triangle-freeness** (82–89). Triangle pairing produces a closed connected support component of exactly six vertices through any original triangle vertex. The component containing such a vertex is unique, so it cannot also be the stipulated four-point C. This proves triangle-freeness only for vertices of C; triangles elsewhere are permitted."
+      },
+      {
+        "id": "D03",
+        "status": "discharged",
+        "verification": "**Original edge forces a double repeat** (93–105). If u,v∈C are adjacent, local triangle-freeness gives c(u,v)=0, hence Buv=0. For C={u,v,x,y}, the full row sum is therefore Bux+Buy=3. Under the cited B≤2 bound, integrality forces the unordered values {1,2}. No positive support can escape C."
+      },
+      {
+        "id": "D04",
+        "status": "discharged",
+        "verification": "**Double-root coverage applies to this edge** (109). Choosing an endpoint of this particular double edge as root gives exactly one exceptional parent triple and one exceptional parent pair, with all other outside parent sets singleton. The intersection classification and already checked D2/BIN exclusions leave D0_MATCH, D0_EDGE_BOUT, or D1_MATCH. This is coverage for an arbitrary double edge, not merely existence of some D1 root somewhere in the graph."
+      },
+      {
+        "id": "D05",
+        "status": "discharged",
+        "verification": "**D1 really has six distinct vertices** (46–56,110–111). In the D1 source, 0,w,a are distinct, and the calculation at (1,w) gives Baw=0; at (0,a) it gives B[X,a]=0. Thus w's remaining repeat r and a's two units are ordinary points. For every ordinary y, Bwy+Bay+Σx∈C1 Bxy=1_{C2∪C3∪C4}(y). Nonnegativity makes each Bay≤1, so a's remaining two units occur at distinct p,q. At y=r, Bwr=1 forces Bar=0, so r differs from p and q. All three ordinary points differ from 0,w,a."
+      },
+      {
+        "id": "D06",
+        "status": "discharged",
+        "verification": "**All six D1 vertices lie in the heavy component** (50–54,110–111). The positive repeat edges 0w,0a,wr,ap,aq connect all six vertices to 0. This concerns one actual component, not a union of the heavy and generated-triangle components. Therefore its order is at least six and it cannot be C."
+      },
+      {
+        "id": "D07",
+        "status": "discharged",
+        "verification": "**D0 identity and branch selection** (112–119). The D0 theorem forces complete rows on {0,w,a,b} forming the connected alternating 2,1,2,1 cycle, so these four vertices constitute the entire support component and it equals C. D0_MATCH induces no original edges. The given original edge rules it out, leaving D0_EDGE_BOUT, which induces exactly the matching edges 0b and wa and hence has rCC=1."
+      },
+      {
+        "id": "D08",
+        "status": "discharged",
+        "verification": "**Companion has six distinct vertices** (57–61,114–116). The D0 source constructs S={1,2,3} in the root neighborhood and three distinct ordinary outside vertices c1,c2,c3, with B(i,ci)=1. Distinctness follows from Σx∈X B(x,ci)=1 in BOUT; a coincidence would contribute two units. The ci are distinct from a because a~ci, and from w by its complete repeat row; they are outside X and distinct from 0. Consequently S and {ci} are disjoint and both avoid {0,w,a,b}."
+      },
+      {
+        "id": "D09",
+        "status": "discharged",
+        "verification": "**Companion is exactly a closed connected unit prism, independent in G** (57–61,115–119). In S the repeat entries are all one by the D0 parent data. All ci neighbor both a and b, and Bab=2 with a,b nonadjacent. The triangle-free heavy endpoint a makes {ci} independent in G. Every pair of ci has B≥1 from their common neighbors a,b; each ci also has B(ci,i)=1. These three required units exhaust every ci row, forcing the unit triangle and no additional repeat edges. The S rows are likewise exhausted by their unit triangle and matching edges to ci. The resulting two triangles and matching form a connected closed six-vertex component. In BOUT each ci has unique root parent b∉S, so no original edge crosses between the two triples. Each triple is independent in G, hence the whole companion is independent."
+      },
+      {
+        "id": "D10",
+        "status": "discharged",
+        "verification": "**Five-component application** (124–140). The listed sizes sum to 62. The first actual quotient cell has order four and r11=1, so it contains an original edge. The lemma forces a distinct support component of order six. None of the complete five listed sizes is six. Only this diagonal entry and the complete size list are needed; the off-diagonal matrix entries and enumeration coverage are not assumptions of the deduction."
+      },
+      {
+        "id": "D11",
+        "status": "discharged",
+        "verification": "**Seven-component application** (144–162). These listed sizes also sum to 62. Each of the first three actual quotient cells has order four and internal degree one. Applying the lemma to any single such component forces a size-six support component, absent from the complete displayed size list. No assertion of three different companions is needed."
+      },
+      {
+        "id": "D12",
+        "status": "discharged",
+        "verification": "**Scope and statement match** (19–27,164–179). The argument proves the uniform four-point lemma and excludes the two exact size/internal-degree patterns, hence the displayed matrices. It neither assumes nor proves that those patterns exhaust five/seven-component quotients, and does not infer B connected or exclude an arbitrary legal graph."
+      }
+    ],
+    "obligations_discharged": 12,
+    "open_obligations": [],
+    "counterexample_pass": [
+      {
+        "id": "CE01",
+        "attempt": "A triangle in C or elsewhere.",
+        "analysis": "A triangle through a vertex of C forces its component to have order six, contradicting the hypothesis. A triangle outside C creates no contradiction with the proof and is not silently prohibited.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE02",
+        "attempt": "Repeat weights 3 and 0 instead of 2 and 1.",
+        "analysis": "The cited global bound excludes this. More locally, a weight-three entry exhausts both endpoint rows and makes a closed two-vertex component, which cannot occur inside the connected four-point C. Thus the needed local bound follows without the global triple-repeat enumeration.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE03",
+        "attempt": "Identify D1 ordinary endpoints to fit four vertices.",
+        "analysis": "Setting p=q would require Bay=2 at one ordinary y and violate the displayed right-hand side bound 1. Setting r=p or r=q would give Bwy+Bay≥2 and the same contradiction. They cannot coincide with 0,w,a by their ordinary status. The component cannot be compressed this way.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE04",
+        "attempt": "Attach six D1 vertices to different components.",
+        "analysis": "The five explicit positive repeat edges connect all six to 0, so splitting them would contradict the definition of a support component.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE05",
+        "attempt": "Let the D0 companion overlap the original four points, or collapse two ci.",
+        "analysis": "Root-neighborhood versus ordinary-point locations exclude overlap with S; complete repeat rows and the original edges a~ci exclude the heavy/light points; the D0 commutation row sum excludes coincident ci. Thus six distinct points are actually present.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE06",
+        "attempt": "Allow extra repeat edges from the companion or original edges between its triples.",
+        "analysis": "Every companion row already uses three units, excluding repeat exits. In BOUT the unique original root parent of every ci is b outside S, excluding original cross-edges; triangle-freeness at a excludes edges within the ci triple.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      },
+      {
+        "id": "CE07",
+        "attempt": "Hide an extra size-six component outside either candidate list.",
+        "analysis": "The applications explicitly assume complete component lists whose sizes sum to all 62 vertices. There are no remaining vertices for such a component. If the lists were only partial, the conclusion would not follow; that weaker hypothesis is not asserted.",
+        "result": "no_counterexample_under_stated_hypotheses"
+      }
+    ],
+    "counterexamples_found": 0,
+    "fixes": [],
+    "new_dependency_checks": [
+      {
+        "path": "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md",
+        "scope": "Section 2: D0 companion prism and original independence"
+      },
+      {
+        "path": "proofs/dd82/n62/D1_MATCH_HARD_BRANCH_REDUCTION.md",
+        "scope": "Section 1: six distinct vertices connected in the D1 heavy component"
+      },
+      {
+        "path": "proofs/dd82/n62/D0_DOUBLE_COMPONENTS_AND_D1_OUTLET.md",
+        "scope": "Sections 1 and 2: complete D0 rows, ci distinctness, branch internal degrees"
+      }
+    ],
+    "previously_read_mathematical_dependencies": [
+      "Actual graph identities",
+      "Triangle-pairing closed six-vertex component consequence",
+      "Arbitrary-double-root parent classification",
+      "D2 and D0_EDGE_BIN saturated-row exclusions"
+    ],
+    "dependency_dag": "acyclic; recorded in the Markdown audit",
+    "key_findings": [
+      "Triangle-freeness is proved only for the four-point component; triangles elsewhere are permitted.",
+      "The raw D1 ordinary-point identity forces r,p,q to be distinct and different from 0,w,a; positive B edges put all six in the same heavy component.",
+      "An original internal edge excludes D0_MATCH and leaves D0_EDGE_BOUT with internal degree one.",
+      "The D0 companion has six distinct vertices, all repeat rows saturated, connected unit-prism support, and no original edges.",
+      "Each application uses only its complete component-size list and one size-four cell with internal degree one."
+    ],
+    "optional_dependency_simplification": "Within an actual connected four-point support component, an entry three is impossible because it would exhaust both endpoint rows and form a closed two-point component. Thus the local B<=2 bound does not require the global triple-repeat enumeration.",
+    "analytic_interchanges": "None; all sums are finite",
+    "probability_asymptotics_uniformity": "Not applicable",
+    "acceptance_gate": "PASS",
+    "scope_exclusions": [
+      "Quotient-enumeration completeness",
+      "Universal B connectedness",
+      "Integration with three-component exclusions",
+      "Arbitrary order-62 exclusion",
+      "N(8,2) exact value",
+      "Lean formalization or cross-family acceptance"
+    ],
+    "solver_or_enumeration_used": false,
+    "source_edits": [],
+    "output_formats": [
+      "Markdown",
+      "JSON"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "id": "ddp-current650-critical-middle-fivecut-hub-gate-10D3-20261027",
+    "title": "Source650 one-hub / at most five cuts: 1952 FF cuts excluded, 128 FF edges remain",
+    "family": "edge freeing and endpoint-hub insertion",
+    "record_type": "necessary-condition-analysis",
+    "target_Delta": 10,
+    "target_D": 3,
+    "savedL": 650,
+    "n": {
+      "actual": null,
+      "hypothetical": 651
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "scope": "One hub adjacent to ALL distinct endpoints of 1..5 deleted old edges; all other old edges retained; no other added edges. No exclusion of arbitrary 651-vertex graphs.",
+    "failure_or_result": "Complete 3250-edge critical matching analysis: FF 1952 size9 / 126 size8 / 2 size7; FP1040 and PP130 all size0. Size9 forbids those1952 cuts. Prediction all FF forbidden refuted; 128 FF remain unexcluded. The inherited five-cut endpoint-port bound120<130 is conditional and does not exclude the actual full family. No modified graph/BFS/solver.",
+    "lesson_and_restart_condition": "Unique three-geodesics force deleted-edge endpoint sets to cover critical pairs, yielding a strict local cut obstruction. A complete family decision would need joint constraints on the128 unexcluded FF edges and hub R2 port coverage. Do not restart with more cuts/helpers or infer success from matching<9.",
+    "positive_guarantee": "Each size9 certificate contains18 distinct physical vertices outside the cut endpoints, forcing at least11 total hub pins, impossible at max degree10. Root verified P/F structure and endpoint R2 port bounds are reused.",
+    "unclosed_gap": "The128 FF edges with matching7/8 may or may not extend to legal <=5-cut/one-hub insertions. No arbitrary651 graph or other rewiring family is excluded.",
+    "other_metrics": {
+      "source_n": 650,
+      "source_m": 3250,
+      "source_D_inherited": 3,
+      "P_vertices": 130,
+      "F_vertices": 520,
+      "port_twin_pairs_sharing_eight_F_neighbors": 65,
+      "source_edge_types": {
+        "FF": 2080,
+        "FP": 1040,
+        "PP": 130
+      },
+      "matching_histograms": {
+        "FF": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 2,
+          "8": 126,
+          "9": 1952
+        },
+        "FP": {
+          "0": 1040,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "PP": {
+          "0": 130,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      "first_unexcluded_FF": [
+        1,
+        9,
+        8
+      ],
+      "first_matching7_FF": [
+        16,
+        132,
+        7
+      ],
+      "inherited_endpoint_R2_P_union_max": {
+        "FF": 40,
+        "FP": 24,
+        "PP": 8
+      },
+      "prediction": "REFUTED",
+      "complete_walk_counts": {
+        "length2_row_sum": 100,
+        "length3_row_sum": 1000,
+        "walk_type": "ordinary walks; not distances or NB routes"
+      },
+      "source_distance_BFS_count": 0,
+      "modified_graphs": 0,
+      "modified_BFS_count": 0,
+      "solver_calls": 0,
+      "native_CPU_seconds": 0.02883,
+      "total_parent_children_CPU_seconds_excluding_inherited_root_structure": 0.8167302740000001,
+      "inherited_root_structure_CPU_seconds": 0.026184923,
+      "new_lower_bounds": 0,
+      "untested_source_edges": 0,
+      "UNKNOWN_source_edges": 0
+    },
+    "outcome_class": "complete-necessary-gate-partial-exclusion-with-open-family",
+    "wiki_verdict": "yes",
+    "primary_source_directory": "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate",
+    "source_urls": [
+      "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n650d10k3.txt"
+    ],
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/REPORT.md",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/RESULT.json",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/STRUCTURE_ROOT.json",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/EDGE_CRITICAL_MATCHINGS.jsonl",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/WALK_COUNT_SCHEMA.json",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/A2.u16le.bin",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/A3.u16le.bin",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/critical.cpp",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/run.py",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/RUN_RECEIPT.json",
+      "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/terminal.json"
+    ]
+  }
+]

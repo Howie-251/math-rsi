@@ -1,0 +1,41 @@
+Symmetric zero-diagonal row-sum-3 N matrices, up to relabeling:
+N1:
+  (0, 0, 0, 3)
+  (0, 0, 3, 0)
+  (0, 3, 0, 0)
+  (3, 0, 0, 0)
+N2:
+  (0, 0, 1, 2)
+  (0, 0, 2, 1)
+  (1, 2, 0, 0)
+  (2, 1, 0, 0)
+N3:
+  (0, 1, 1, 1)
+  (1, 0, 1, 1)
+  (1, 1, 0, 1)
+  (1, 1, 1, 0)
+
+N=J-I branch: exact L,Q and Gram counts
+  L bits=(0, 0, 0) (C8 blocks=0): commuting Q=13, elementary Gram survivors=0
+  L bits=(0, 0, 1) (C8 blocks=1): commuting Q=5, elementary Gram survivors=0
+  L bits=(0, 1, 0) (C8 blocks=1): commuting Q=5, elementary Gram survivors=0
+  L bits=(0, 1, 1) (C8 blocks=2): commuting Q=1, elementary Gram survivors=0
+  L bits=(1, 0, 0) (C8 blocks=1): commuting Q=5, elementary Gram survivors=0
+  L bits=(1, 0, 1) (C8 blocks=2): commuting Q=1, elementary Gram survivors=0
+  L bits=(1, 1, 0) (C8 blocks=2): commuting Q=1, elementary Gram survivors=0
+  L bits=(1, 1, 1) (C8 blocks=3): commuting Q=1, elementary Gram survivors=1
+
+Unique elementary Gram survivor:
+  candidate D-row supports=24
+  support incidences per V-vertex=[4]
+  six-block resolutions=0
+  GF(2) certificate verified: XOR gives 0=1
+
+All triple-edge finite checks passed.
+Seven template orbit audit: {'double_parent_intersection_orbits': 3, 'double_parent_intersection_signatures': [0, 1, 2], 'simple_parent_intersection_orbits_before_forbidden_case': 3, 'simple_surviving_orbits': 2, 'disjoint_edge_case_b_orbits': [[4, 5], [6, 7, 8]], 'recommended_instance_count': 7}
+S_DISJOINT orbit audit: {'representatives': [[10, 16], [10, 34], [34, 41], [11, 22], [11, 35], [22, 35], [11, 12], [22, 23], [35, 36], [11, 17], [22, 28], [35, 42]], 'signature_count': 12, 'ordered_endpoint_representatives': [[10, 34], [11, 22], [11, 35], [22, 35]], 'swappable_endpoint_representatives': [[10, 16], [34, 41], [11, 12], [22, 23], [35, 36], [11, 17], [22, 28], [35, 42]]}
+All survivor row patterns: {"(1, 2, 3, 0)": ["0011", "0110", "1001", "1100"], "(1, 3, 0, 2)": ["0011", "0101", "1010", "1100"], "(2, 0, 3, 1)": ["0011", "0101", "1010", "1100"], "(2, 3, 1, 0)": ["0100", "0111", "1000", "1011"], "(3, 0, 1, 2)": ["0010", "0111", "1000", "1101"], "(3, 2, 0, 1)": ["0100", "0111", "1000", "1011"]}
+Arithmetic: n65 residues 7 17
+Arithmetic: n64 mod11 residues 9 5
+Arithmetic: n64 determinant mod5 3
+n59 single-triangle necessary candidates: [{"rows": [["1111", 1], ["22", 4], ["22", 4]], "a": [2, 0, 0], "private_fiber_coupling": false}, {"rows": [["211", 2], ["211", 3], ["22", 4]], "a": [2, 0, 0], "private_fiber_coupling": false}, {"rows": [["1111", 0], ["1111", 2], ["1111", 2]], "a": [4, 0, 0], "private_fiber_coupling": false}, {"rows": [["1111", 1], ["1111", 1], ["1111", 2]], "a": [2, 2, 0], "private_fiber_coupling": true}]

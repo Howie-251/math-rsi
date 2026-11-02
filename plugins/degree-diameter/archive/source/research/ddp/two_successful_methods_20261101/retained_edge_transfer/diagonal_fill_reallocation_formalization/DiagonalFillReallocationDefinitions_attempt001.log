@@ -1,0 +1,44 @@
+DegreeDiameter/Portfolio/DiagonalFillReallocationDefinitions.lean:27:23: error: Type mismatch
+  H.symm h
+has type
+  H.Adj y (Sum.inl x)
+but is expected to have type
+  match Sum.inl (Sum.inl y), Sum.inl (Sum.inl (Sum.inl x)) with
+  | Sum.inl (Sum.inl x), Sum.inl (Sum.inl y) => H.Adj x y
+  | Sum.inl (Sum.inl (Sum.inl v)), Sum.inl (Sum.inr c) => U.Adj v (center c)
+  | Sum.inl (Sum.inr c), Sum.inl (Sum.inl (Sum.inl v)) => U.Adj (center c) v
+  | Sum.inl (Sum.inl (Sum.inr val)), Sum.inr val_1 => True
+  | Sum.inr val, Sum.inl (Sum.inl (Sum.inr val_1)) => True
+  | x, x_1 => False
+DegreeDiameter/Portfolio/DiagonalFillReallocationDefinitions.lean:32:23: error: Type mismatch
+  H.symm h
+has type
+  H.Adj y (Sum.inr j)
+but is expected to have type
+  match Sum.inl (Sum.inl y), Sum.inl (Sum.inl (Sum.inr j)) with
+  | Sum.inl (Sum.inl x), Sum.inl (Sum.inl y) => H.Adj x y
+  | Sum.inl (Sum.inl (Sum.inl v)), Sum.inl (Sum.inr c) => U.Adj v (center c)
+  | Sum.inl (Sum.inr c), Sum.inl (Sum.inl (Sum.inl v)) => U.Adj (center c) v
+  | Sum.inl (Sum.inl (Sum.inr val)), Sum.inr val_1 => True
+  | Sum.inr val, Sum.inl (Sum.inl (Sum.inr val_1)) => True
+  | x, x_1 => False
+DegreeDiameter/Portfolio/DiagonalFillReallocationDefinitions.lean:53:36: error: Application type mismatch: The argument
+  h
+has type
+  match Sum.inl (Sum.inl x), Sum.inl (Sum.inl x) with
+  | Sum.inl (Sum.inl x), Sum.inl (Sum.inl y) => H.Adj x y
+  | Sum.inl (Sum.inl (Sum.inl v)), Sum.inl (Sum.inr c) => U.Adj v (center c)
+  | Sum.inl (Sum.inr c), Sum.inl (Sum.inl (Sum.inl v)) => U.Adj (center c) v
+  | Sum.inl (Sum.inl (Sum.inr val)), Sum.inr val_1 => True
+  | Sum.inr val, Sum.inl (Sum.inl (Sum.inr val_1)) => True
+  | x, x_1 => False
+but is expected to have type
+  H.Adj x x
+in the application
+  H.loopless x h
+DegreeDiameter/Portfolio/DiagonalFillReallocationDefinitions.lean:99:30: error: Type mismatch
+  h
+has type
+  Adj.{max u_1 u_2} H x y
+but is expected to have type
+  Adj.{max (max u_3 u_2) u_1} (graph U H center) (old x) (old y)

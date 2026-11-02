@@ -1,0 +1,35 @@
+# Baer-plane blocking neighborhoods:410 legal N12 source candidates
+
+The new degree-only source pool is complete in its explicit scope. Each of364 H9 flatplanes centered at an F3-rational projective point was tested against all7560 PGL3(F9)-images of the standard13point Baer PG2(F3), giving2751840 plane/subplane occurrences. On the current N11 source37631, no raw13point Baer set passes the olddegree filter. On the current N12 source42397,1383 occurrences pass olddegree, and410 also fold to at most12 distinct pins. Those410 folded pinsets are all different:12 have10 pins and leave2anchor slots;105 have11 pins and leave1slot;293 have12 pins and leave0slots. The other973 degree-allowed raw sets fold to13pins and exceed the degree budget.
+
+This is a source-pool result, not a new graph or full-source coverage claim. The source graph42397 is previously accepted by per-step actualdegree and completeR4 induction, with latest independent allsource graph42377. The N11 source37631 is unchanged. No coverage BFS, anchor search, incidence reconstruction, WL refinement, solver or shared-document change was performed. The first later actual-core R4 check is predicted to have zero missing core vertices, but was deliberately not run here.
+
+## Blocking proof and its graph scope
+
+Let K=F9 and k=F3. Let the totally singular plane Pi be the projectivization of a three-dimensional K-vector space with basis e1,e2,e3. For a K-invertible3by3 coordinate map T, its Baer point set is
+
+    B_T = { projective(T(c1e1+c2e2+c3e3)) : nonzero c in k^3 }.
+
+It has(3^3-1)/(3-1)=13 distinct projective points. For any old raw H9 point p, its polar form restricts to a K-linear functional ell on Pi. The composition c -> ell(Tc), viewed over k, maps k^3 to K, a k-space of dimension2. Its kernel has dimension at least1, so some nonzero c gives a point x in B_T with B(p,x)=0. Thus every polar hyperplane section of Pi meets B_T. This uses only linear algebra and works for every projective image of the standard Baer subplane; the raw13point set is noncollinear because it contains a projective frame.
+
+The established classical flat Q(6,9) embedding gives incidence-graph point distance at most4 exactly when B(p,x)=0. The calibrated partial-fold projection does not increase these graph steps. Therefore every old bare-core vertex reaches some pin in the complete folded image pi(B_T) within at most4 graph steps. The point-to-point route is four graph steps, not two. Attaching a new vertex to the entire distinct folded image gives new-to-bare-core distance at most5.
+
+This proof covers the37471-point N11 bare core or the41356-point N12 bare core represented by the reused point-to-core maps. It does not automatically cover extra copies, later attachments or all current source vertices. Those still require actual whole-source R4 completion and a degree check before any graph may be accepted. Folding may identify raw points, but every distinct folded image must remain in the selected neighbor set. No raw13point subset is discarded after degree filtering to fit the cap. Supporting established scope is in global_coverage_20261027/h9_quadric_line_rule/REPORT.md and the prior calibrated point-to-core mapping evidence.
+
+## Why the orbit is complete and has7560 members
+
+The coefficient projective plane PG2(F9) has91points. The standard PG2(F3) consists of its13 points with all normalized coordinates in F3. We act on these91point masks with coordinate cycle, shear(x+y,y,z), and diag(4x,y,z), using the established F9 code4=1+t with t^2=-1. Native arithmetic verifies that4 has multiplicative order8 and every generator is a91point permutation. Breadth-first mask closure yields exactly7560 distinct13point masks, with an explicit parent/generator forest.
+
+These are full PGL generators, not an assumption about H9 automorphisms. Conjugating E12(1) by powers of diag4 supplies E12(a) for every nonzero a in F9. The cycle supplies E23 and E31, and root commutators supply the other three elementary directions. These generate SL3(F9), while the primitive determinant of diag4 supplies all determinant classes, hence GL3(F9) and its projective quotient.
+
+The standard Baer set stabilizer inside PGL3(F9) is exactly PGL3(F3). For any stabilizer element, take the images of a standard projective frame; they form an F3 frame. An F3 projectivity returns them to the standard frame, and a projectivity fixing a frame pointwise is the identity. Thus the stabilizer has order3^3*(3^3-1)*(3^2-1)=5616. PGL3(F9) has order9^3*(9^3-1)*(9^2-1)=42456960, and the quotient is7560. Any embedded PG2(F3) is fixed by its frame and prime-subfield constructions, so this is the full Baer-subplane orbit in the coefficient plane. This coefficient-plane PGL action is not claimed to extend to the source graph.
+
+## Actual scope, filtering and stored witnesses
+
+The364 centers are exactly the66430-point coordinate-cache entries whose seven normalized coordinates all lie in F3. The reused six Pluecker equations plus polar equation give each three-dimensional flatplane kernel. The chosen plane basis is explicitly checked to lie in F3 and span a totally singular plane. Each plane's91coefficient points is mapped into the existing global66430point IDs; no incidence graph is rebuilt.
+
+For each current source and plane, a91bit allowed mask marks raw points whose folded core vertex has degree strictly below its cap. A Baer mask must be contained in it. Only surviving raw sets are folded, deduplicated and checked for distinct pin count at mostDelta. Olddegree is charged once per distinct folded neighbor, regardless of raw multiplicity. Actual folded pinsets are deduplicated across all tested planes and Baer masks. The410 N12 occurrences remain410 distinct pinsets, with one occurrence each. Primary witnesses contain the flatplane center in124 cases and omit it in286; no claim that all candidates avoid complete core stars is made.
+
+pool11.json is empty and pool12.json records every sorted pinset, current degrees and anchor capacity. Every record includes a complete13point witness with original point IDs and coordinates, its plane basis, Baer orbit index, exact91bit mask words and coefficient indices. All occurrence references are retained. planes.json records each tested plane and all91global point IDs. orbit.json plus baer_masks.u64.bin records all7560 masks, generator permutations and the parent forest. sources.json and current degree files bind both calibrated fold maps to their fixed current graphs.
+
+The100plane profile processed756000 Baer occurrences in0.003297 plane-enumeration CPU seconds, projecting0.0381121 native seconds. The completed native task used0.053358 CPU seconds; compilation used2.868507, and the driver measured2.924713 total child CPU seconds, below15. All364planes were completed. N11 has no degree-legal Baer neighborhood in this scope; this is not an exclusion of Baer blocking sets in other planes or of general N11 constructions. N12 yields a new legal source pool, with actual full-source completion deferred to the separately authorized production task. This pool task is terminal.

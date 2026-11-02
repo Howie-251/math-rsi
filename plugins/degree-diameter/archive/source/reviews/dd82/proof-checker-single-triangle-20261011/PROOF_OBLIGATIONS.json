@@ -1,0 +1,248 @@
+{
+  "theorem_statement": "Every simple undirected graph on 59 vertices with maximum degree at most 8, a path of length one or two between every distinct pair, and actual N15 matching B rows at all zero-triangle vertices cannot have exactly one triangle.",
+  "assumptions": [
+    "finite simple undirected original graph",
+    "59 vertices",
+    "maximum degree at most 8",
+    "one-or-two-edge path property",
+    "actual N15 complete matching rows only at zero-triangle vertices"
+  ],
+  "conditional_contradiction_assumption": "T=1",
+  "dag_acyclic": true,
+  "obligations": [
+    {
+      "id": "MC01",
+      "sequent": "Graph hypotheses ⊢ 8-regularity",
+      "justification_and_hypothesis_discharge": "Root-ball upper bound 1+8d; 59>57",
+      "location": "Main 15",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC02",
+      "sequent": "MC01 ⊢ B diagonal 0, B≥0, row sums 6, AB=BA",
+      "justification_and_hypothesis_discharge": "Actual adjacency, path premise, regular AJ=JA",
+      "location": "Main 17–23",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC03",
+      "sequent": "Zero endpoint on actual edge ⊢ B=0",
+      "justification_and_hypothesis_discharge": "Any common neighbor would make a triangle",
+      "location": "Main 23",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC04",
+      "sequent": "Positive B pair at zero endpoint ⊢ (AB)_xy=B_xy",
+      "justification_and_hypothesis_discharge": "N15 full induced support, MC02 symmetry/commutation",
+      "location": "H5 65–69",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC05",
+      "sequent": "MC04 ⊢ trace-difference localization",
+      "justification_and_hypothesis_discharge": "Finite trace sums; zero B terms vanish",
+      "location": "H5 71–75",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC06",
+      "sequent": "MC01–02 ⊢ trace formulas through degree five",
+      "justification_and_hypothesis_discharge": "Exact matrix identities and finite traces",
+      "location": "Global 53–79",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC07",
+      "sequent": "Simple 8-regular graph ⊢ tr(A⁵)=10C₅+210T",
+      "justification_and_hypothesis_discharge": "Simple walks; unique used triangle for nonsimple words",
+      "location": "Global 81–89",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC08",
+      "sequent": "MC06–07 + N15 ⊢ remainder congruence",
+      "justification_and_hypothesis_discharge": "s_zero=10, 2Q₂_zero=10; integral C₅",
+      "location": "Global 91–109",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC09",
+      "sequent": "MC08 + T=0 ⊢ contradiction",
+      "justification_and_hypothesis_discharge": "10 does not divide 24662",
+      "location": "Global 103",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC10",
+      "sequent": "T=1 + MC02–03 ⊢ residual row types 22,211,1111",
+      "justification_and_hypothesis_discharge": "Residual mass 4; every nonedge repeat is zero and has entry ≤2",
+      "location": "H5 77",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC11",
+      "sequent": "MC04 + MC10 ⊢ q=a+2c and e=4−c",
+      "justification_and_hypothesis_discharge": "Same actual row quadratic form counted twice",
+      "location": "H5 79–92",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC12",
+      "sequent": "T=1 + MC11 ⊢ necessary local c ranges",
+      "justification_and_hypothesis_discharge": "Zero repeat cannot meet both other triangle vertices",
+      "location": "H5 94–96",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC13",
+      "sequent": "MC10 ⊢ even number of 211 rows",
+      "justification_and_hypothesis_discharge": "Degree-sum parity in actual nonedge B=2 graph",
+      "location": "H5 98",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC14",
+      "sequent": "MC08 + T=1 ⊢ Σc≡4 mod5",
+      "justification_and_hypothesis_discharge": "e=4−c for each of three triangle rows",
+      "location": "H5 100",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC15",
+      "sequent": "MC06 + row squares ⊢ n₂₁₁+2n₁₁₁₁≡2 mod4",
+      "justification_and_hypothesis_discharge": "Four-walk identity, integral C₄",
+      "location": "H5 102–116",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC16",
+      "sequent": "MC12–15 ⊢ exactly four necessary row candidates",
+      "justification_and_hypothesis_discharge": "Exhaustive small integer partitions, including all labels",
+      "location": "H5 118–125",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC17",
+      "sequent": "T=1 ⊢ disjoint independent private six-sets",
+      "justification_and_hypothesis_discharge": "Regularity; each violation creates another triangle",
+      "location": "H5 129–133; Main 33",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC18",
+      "sequent": "MC17 ⊢ a_u=m_uv+m_uw cyclically",
+      "justification_and_hypothesis_discharge": "Actual common-neighbor identity B_ux=d_Pu(x)",
+      "location": "H5 133–139",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC19",
+      "sequent": "MC16 + MC18 ⊢ unique all1111 candidate, m=(2,0,0)",
+      "justification_and_hypothesis_discharge": "Nonnegative cross-edge counts impose triangle inequalities",
+      "location": "H5 141–145",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC20",
+      "sequent": "MC19 ⊢ two cross edges form matching",
+      "justification_and_hypothesis_discharge": "Cross degrees equal entries in all1111 triangle rows, hence ≤1",
+      "location": "H5 145",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC21",
+      "sequent": "MC04 + MC19 ⊢ complete support forms",
+      "justification_and_hypothesis_discharge": "Unit weights make each zero repeat's support degree exactly 1",
+      "location": "H5 147–151",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC22",
+      "sequent": "MC17 + MC19–21 ⊢ R sizes and edges, cardinality(R_w)=4",
+      "justification_and_hypothesis_discharge": "Exhaust all private/triangle locations of repeats; no disjointness premise",
+      "location": "H5 153; Main 35–41",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC23",
+      "sequent": "MC22 ⊢ d_Pu(x)=1+1_Ru(x), and cyclic formulas",
+      "justification_and_hypothesis_discharge": "All common neighbors with u are in P_u for x∈R",
+      "location": "Main 47–51",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC24",
+      "sequent": "MC20 ⊢ B_pv=1 exactly for active p",
+      "justification_and_hypothesis_discharge": "Common neighbors are u and P_v neighbors",
+      "location": "Main 53–57",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC25",
+      "sequent": "MC17,20,22,23 ⊢ two disjoint internal light pairs",
+      "justification_and_hypothesis_discharge": "Common neighbors only u,R; adjacent R_u points have disjoint parent pairs",
+      "location": "Main 59–63",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC26",
+      "sequent": "MC24–25 + N15 ⊢ internal pairs use all inactive points",
+      "justification_and_hypothesis_discharge": "Active internal endpoint would force forbidden qv edge",
+      "location": "Main 65",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC27",
+      "sequent": "MC24,26 + N15 ⊢ no P_u–P_w light pairs",
+      "justification_and_hypothesis_discharge": "Other known light endpoint has no neighbor in P_w",
+      "location": "Main 67–71",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC28",
+      "sequent": "MC20,26 + N15 ⊢ at most two P_u–P_v light pairs",
+      "justification_and_hypothesis_discharge": "Inactive endpoints excluded; two actual active edges have B=0",
+      "location": "Main 73",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC29",
+      "sequent": "MC17,20,23 ⊢ B block totals 8+h_uv,8+h_uw",
+      "justification_and_hypothesis_discharge": "All common neighbors in R; count 36 pairs and actual cross edges",
+      "location": "Main 79–103",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC30",
+      "sequent": "MC27–29 ⊢ k_uv≥3, k_uw≥4",
+      "justification_and_hypothesis_discharge": "Entries 0,1,2; h≥0; ≤2 and 0 light entries",
+      "location": "Main 93–109",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC31",
+      "sequent": "MC17,19 + N15 ⊢ k_uv+k_uw≤6",
+      "justification_and_hypothesis_discharge": "P_v∪P_w independent; each of six P_u points contributes ≤1",
+      "location": "Main 113–115",
+      "status": "DISCHARGED"
+    },
+    {
+      "id": "MC32",
+      "sequent": "MC30–31 ⊢ T≠1",
+      "justification_and_hypothesis_discharge": "7≤k_uv+k_uw≤6",
+      "location": "Main 117",
+      "status": "DISCHARGED"
+    }
+  ],
+  "open_obligations": [],
+  "unproved_but_explicit_premises": [
+    "N15 under the stated quantification"
+  ],
+  "out_of_scope": [
+    "N15 for arbitrary n59 graphs",
+    "H5 with two or more triangles",
+    "optional short-cycle corollary",
+    "Lean formalization"
+  ]
+}

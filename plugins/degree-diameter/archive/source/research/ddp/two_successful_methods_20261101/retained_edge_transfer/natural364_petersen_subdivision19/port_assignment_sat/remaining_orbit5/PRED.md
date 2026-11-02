@@ -1,0 +1,5 @@
+# 对首次批次的明确重评：只补最后一个未测helper orbit
+
+实际235个metricpass patterns分为6个Petersen-aut orbits。首次预定最多5orbit已全部terminal rawUNSAT，实际solver总1.115356CPU，非timeout；还有1个从未测的orbit。为了不机械留下这个廉价缺口，保持全case40CPU不清零，只授权第6orbit一次新5秒窗口。前5 CNF/solver/RESULT均不重跑、不续旧timer。
+
+使用相同精确assignment建模规则与已保存orbit归约；只读现有代表，不重新枚120automorphisms/5005patterns。新driver完整源码保留。新case继承首次batch5.517936757CPU，再计输入read.5/prep.25及actualCPU，总cap40。无hit后整个6orbit族按raw solver证据记录，无proofchecked不冒正式NO，不自动换细分数/新seed。

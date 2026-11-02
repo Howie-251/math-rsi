@@ -1,0 +1,13 @@
+{
+  "prediction_id": "P10",
+  "frozen_before_exact_anchor_completion": true,
+  "statement": "At least one of the fixed7 degree-feasible Q-line mandatory10-pin candidates can be completed using at most2 currently degree-feasible anchors to yield a full42343-vertex graph of maximum degree12 and diameter at most5.",
+  "base": {"n": 42342, "m": 245217, "known_D_at_most": 5, "target_Delta": 12, "target_D": 5},
+  "fixed_inputs": ["quadric_extension/RESULT.json rows7 with saved missing_vertices", "h9_quadric_line_extension_pool/pool.json records7"],
+  "anchors": "Every current full-base vertex of degree below12, excluding the candidate's10 mandatory pins. Existing extras are allowed. No third anchor.",
+  "exact_algorithm": "Once per target in the union of the7 saved missing sets, reverse radius4 BFS in the unchanged base computes available-anchor coverers. Check all1-anchor intersections, then every allowed first anchor against the intersection of coverers of its uncovered targets for a distinct second anchor.",
+  "completeness": "Current old-old distances remain at most5. A new point has distance at most5 to every old point iff its complete neighbor set R4-covers the old graph. Saved mandatory coverage already covers all other targets, so exact set cover of each saved missing set by at most2 allowed anchors is necessary and sufficient.",
+  "stop": "First full candidate, complete fixed7 impossibility, or CPU limit UNKNOWN. No new centers/lines/seeds, no missing-count optimization.",
+  "budget": {"workers": 1, "CPU_seconds_hard": 60, "CPU_seconds_soft": 54},
+  "forbidden": ["rerun7mandatoryR4", "allavailable-anchor ball greedy", "thirdanchor", "newgraph", "allsourceBFS", "hashes"]
+}

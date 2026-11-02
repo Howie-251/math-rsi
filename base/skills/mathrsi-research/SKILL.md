@@ -18,7 +18,8 @@ mathrsi-prove
   formula-derivation / proof-writer / 领域方法 / 并行作者与核算
        ↓ 实际证明、证书或原题允许的反例
 mathrsi-verify
-  按需assemble → 独立核验 → proof-checker修复回路 → 按需Lean
+  自然语言证明：按需assemble → 所需核验与proof-checker修复回路
+  仅形式目标/Lean出口：直接lean-formalize → 实际导出、构建与公理审计
        ↓ 原题范围内的结论与真实验证证据
 mathrsi-handoff
   完整可读证明 → 复现与按需HTML/包 → wiki、恢复与交接
@@ -42,6 +43,7 @@ prove ──局部提前验证──→ verify ──该义务结论──→ �
 | 规格/调查完整，尚无可执行方法 | route-loop | 首批具体任务交prove |
 | 在途证明、有效路线和可信断点 | prove | 使用已有成果闭合当前义务 |
 | 完整候选、见证或反例 | verify | 核原题证据，修实际缺口 |
+| 只要形式目标、固定Lean见证或已有Lean出口 | verify的直接Lean分支 | 对齐原声明，消费真实export/build/公理并返回；不先造TeX审计 |
 | 只缺阅读页、包或暂停交接 | handoff | 按真实状态交付 |
 
 独立调用子工作流尊重其范围。授权解题到底时，子阶段返回边界后由本入口接棒。可短证的问题直接写完整推导与相称核验，不制造多条路线、探针程序或空目录。
@@ -98,7 +100,7 @@ ARIS双端实现及helper见 [ARIS_REUSE](../../../docs/ARIS_REUSE.md)。Codex�
 
 Root读报告，判断下一行动怎样改变原缺口。可行动路线可以含未证引理；应明确假设、输入连接、下游用途和先做什么。把第一批任务直接交prove，不能在这里只交计划就结束已授权解题。
 
-这层执行 ARIS auto-review-loop 的数学适配，由 route-loop 持有外层轮次：恢复、审阅及证据对话、实质修正、结果回收、带新证据复核、逐轮记忆与终轮交接都要实际完成。research-review通过显式composed接口把当前审阅产物交回同一累计报告；它的对话不另起一个修法调度者。原版训练/投稿评分门改为本次数学路线的交接判断，最终证明仍由proof-checker验收。跨模型通过仓内[Python MCP桥接](../../../docs/REVIEWER_MCP.md)和宿主工具执行；router只解析配置，实际调用与回复必须存在。子循环额度用完返回最有根据的下一动作或精确缺口；Root继续其它授权工作，不因此自动暂停Goal。
+这层执行 ARIS auto-review-loop 的数学适配，由 route-loop 持有外层轮次：恢复、审阅及证据对话、实质修正、结果回收、带新证据复核、逐轮记忆与终轮交接都要实际完成。research-review通过显式composed接口把当前审阅产物交回同一累计报告；它的对话不另起一个修法调度者。原版训练/投稿评分门改为本次数学路线的交接判断，自然语言证明的正式审计仍由proof-checker承担；仅形式目标按verify的直接Lean分支验收。跨模型通过仓内[Python MCP桥接](../../../docs/REVIEWER_MCP.md)和宿主工具执行；router只解析配置，实际调用与回复必须存在。子循环额度用完返回最有根据的下一动作或精确缺口；Root继续其它授权工作，不因此自动暂停Goal。
 
 ## 3. 推进证明，立即收回可用成果
 
@@ -128,17 +130,19 @@ Root必须消费新信息：新定理适用就证明输入条件并接入；只�
 
 ## 4. 装配与验收，消费真实证据
 
-调用verify，传原规格、实际候选和证据。分散片段由它调用assemble；完整稿直接核原输入、覆盖和实际算术，再执行proof-checker。纯解析稿不制造证书程序，计算稿不以程序成功省掉覆盖，按需Lean不更换原目标。
+调用verify，传原规格、实际候选、证据与本次需要的成果形式。自然语言分散片段由它调用assemble；需要正式证明审计的完整稿核原输入、覆盖和实际算术后执行proof-checker。仅要求形式目标、固定Lean见证或已有Lean出口时，直接进入lean-formalize，核原声明与实际定义、导出、目标构建和传递公理，不强制先造TeX或paper-audit；已有有效证据复用并说明是否本次运行。若同时要求可读证明正式审计，两项分别完成并消费。纯解析稿不制造证书程序，计算稿不以程序成功省掉覆盖，Lean不更换原目标。
 
 ```text
 读取 mathrsi-verify/SKILL.md，执行完整原题范围。
 原题 <spec>；候选 <入口>；证据和允许进口 <文件>。
-已有完整稿直接用，片段按assemble接通。
-按本宿主proof-checker实际合同审计与修复，Markdown按其输入适配。
-Lean范围 <用户要求/具体义务/不需要>；返回真实VERIFICATION及audit位置。
+已有完整自然语言稿直接用，需成稿的片段按assemble接通。
+成果范围 <自然语言正式审计/仅形式目标/两者>。
+自然语言正式审计按本宿主proof-checker合同执行，Markdown按其输入适配。
+仅形式目标直接执行或复用lean-formalize，返回原声明对齐、actual export/build/公理与pending。
+Lean范围 <实际目标模块/具体义务/不需要>；返回真实VERIFICATION及适用的audit位置。
 ```
 
-Root读真实audit未闭项、独核范围和形式声明。文字遗漏或索引错误在验证内修并检查受影响处；需要新数学/选取/分类则带caller交回prove。proof-checker拥有证明修复回路，主流程不另套“直到所有模型赞同”。原回应保留；模型误读可据数学事实反驳，不能篡改成对方PASS。
+Root读适用的真实audit未闭项、独核范围和形式声明；仅形式目标消费export/build/公理及其范围，不把未调用proof-checker当作缺一次必经步骤。文字遗漏或索引错误在验证内修并检查受影响处；需要新数学/选取/分类则带caller交回prove。proof-checker拥有证明修复回路，主流程不另套“直到所有模型赞同”。原回应保留；模型误读可据数学事实反驳，不能篡改成对方PASS。
 
 原目标成立且本任务规定的核验齐备后进入handoff。指定服务失败时分别保存已成立数学与未完成审阅，继续独立工作；等待不是认可，服务失败也不是数学反例。局部scope始终返回原调用方。
 
@@ -160,11 +164,13 @@ Root读真实audit未闭项、独核范围和形式声明。文字遗漏或索�
 
 [PLUGIN_CONTRACT](../../../docs/PLUGIN_CONTRACT.md)规定插件接收当前义务并返回数学产物。Property B的实际入口是survey中的 [propertyb-literature](../../../plugins/propertyb/skills/propertyb-literature/SKILL.md)，route/prove中的 [propertyb-bound-lab](../../../plugins/propertyb/skills/propertyb-bound-lab/SKILL.md)，verify中的 [propertyb-certificate](../../../plugins/propertyb/skills/propertyb-certificate/SKILL.md)。交清阶段与scope，只执行相关部分，避免领域技能再递归启动整个通用流程。
 
+已启用Degree–diameter时，先执行[mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)对齐图对象与本次终点。prepare/survey调用[dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)核公开基线、原wiki种子与已知族合法代入，与通用research-lit共享一次调查；返回精确进口和受影响队列。route-loop/prove按当前义务调用[dd-construction](../../../plugins/degree-diameter/skills/dd-construction/SKILL.md)处理真实source、覆盖与度数caller，或调用同一transfer重判换源/规则后的证据；verify调用[dd-obstruction-certificate](../../../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)，消费必要域/有限证书，也按其§4–5核正构造的字面属性、全点对覆盖、证据继承和固定Lean出口。各阶段给实际图/参数、允许操作、已有证明与未闭条件，读回精确命题、输入连接、实际结果和剩余后接原义务；领域技能不另开同级阶段，handoff只取已有核验及复现入口。未启用插件时仍用base通用能力，不强制套图论方法。
+
 这套衔接以两个已解项目的实际工作为依据，详见 [实证转折](../../../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。Property B T33中，24点局部分支接成实际caller后，返回仍开放的23点继续，最终由全部点数分支装配新Main得到原染色。局部核验不是最终交付入口。一般k研究从RS原文重新对齐组合基线，再把同一实际超图的结构与概率估计接起来；文献回流给出了可用接口，不只是论文目录。
 
 ECC旧43/10题中，文献类别上限与实际代表合法性、互异性共同闭合目录；完整遍历与低权拒绝见证承担不同义务。较弱配对必要条件全被排除后即可结束原题，无需继续更昂贵的三行扩张。发现代表可以启发式，覆盖则需要严格证据。新45/11、五元35的Lean及36研究仍未完成，不能因方法可复用写成它们已解。
 
-新经验先进入任务wiki，记准确条件与来源。值得跨题复用的按[独立维护工作流](../../../docs/EVOLUTION_WORKFLOW.md)提炼：由维护owner读真实证据、修改实际调用、组织针对性审阅及独立使用试验，再消费结果决定修订、拒绝或纳入下一版。这个流程只在相应维护授权下执行，不是每次解题后自动触发；解题中不改base、不降低原验收。archive是复用资产，旧Goal不是当前授权，按当前义务读原材料而不从零重做已有研究。
+新经验先进入任务wiki，记准确条件与来源。值得跨题复用的按[独立维护工作流](../../../docs/EVOLUTION_WORKFLOW.md)提炼：由维护owner读真实证据、修改实际调用、组织针对性审阅及实际使用核查，再消费结果决定修订、拒绝或纳入下一版。这个流程只在相应维护授权下执行，不是每次解题后自动触发；解题中不改base、不降低原验收。archive是复用资产，旧Goal不是当前授权，按当前义务读原材料而不从零重做已有研究。
 
 ## 一轮执行结束时
 

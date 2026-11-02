@@ -1,0 +1,326 @@
+[
+  {
+    "id": "ddp-h9-d13-full-qline-pool-empty-20261027",
+    "title": "(13,5)完整Q9-line：3640项全被满度pin挡住",
+    "family": "H9 degree13 transfer",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 13,
+    "target_D": 5,
+    "savedL": 51417,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "3640条F3-defined fullQ9lines一次过滤全部degree阻断；7pin线1764条、10pin线1876条；16条四fixedpins全free的线仍各有3个满度非fixedpair pins，无单满pin删除实例。",
+    "failure_or_result": "3640条F3-defined fullQ9lines一次过滤全部degree阻断；7pin线1764条、10pin线1876条；16条四fixedpins全free的线仍各有3个满度非fixedpair pins，无单满pin删除实例。",
+    "lesson_and_restart_condition": "不能把Rédei/Baer空池自动外推Qline；已对更小邻域实际检查。此固定fullmandatory规则也空后停止，不从删2/3pins起机械续修。",
+    "unclosed_gap": "No new complete graph in this probe; other parameters and mechanisms remain open.",
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "lines": 3640,
+      "feasible_pool": 0,
+      "allfixed_free_lines": 16,
+      "blocked_nonfixed_pins_on_each_of16": 3,
+      "CPU_seconds": 0.089210711,
+      "BFS": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/qline_pool/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/qline_pool/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/qline_pool/terminal.json"
+    ]
+  },
+  {
+    "id": "ddp-h3-helper13-tree-class-exclusion-20261027",
+    "title": "(4,5)13helpers整体树形方案：全部拓扑归约后排除",
+    "family": "Natural H3 polarity port extension",
+    "record_type": "positive-local-obstruction",
+    "target_Delta": 4,
+    "target_D": 5,
+    "savedL": 364,
+    "n": {
+      "actual": null,
+      "hypothetical": 377
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "k13强制H为diam≤4的degree≤4tree、全部28ports使用。3276个leaftriples的good(T)全0先排333及含3-leafbranch拓扑；余唯一2222拓扑的81900个(T,parentport)也全部good0<18。因此固定364/714host保边且不加old-old边的13helper类全排；必要helpers现至少14。",
+    "failure_or_result": "k13强制H为diam≤4的degree≤4tree、全部28ports使用。3276个leaftriples的good(T)全0先排333及含3-leafbranch拓扑；余唯一2222拓扑的81900个(T,parentport)也全部good0<18。因此固定364/714host保边且不加old-old边的13helper类全排；必要helpers现至少14。",
+    "lesson_and_restart_condition": "原存在预测被反驳、后maxgood<18障碍预测被支持，二者不混作构造成功。停止该host的helper逐阶长尾；k14未查，任意377图/其它host不受此结论。",
+    "unclosed_gap": "No new complete graph in this probe; other parameters and mechanisms remain open.",
+    "outcome_class": "positive-local-obstruction",
+    "wiki_verdict": "yes",
+    "other_metrics": {
+      "stage1_triples": 3276,
+      "stage1_maximum_good_count": 0,
+      "stage1_existence_prediction": "REFUTED",
+      "stage2_pairs": 81900,
+      "stage2_maximum_good_count": 0,
+      "stage2_obstruction_prediction": "SUPPORTED",
+      "stage1_CPU_seconds": 0.0188914,
+      "stage2_CPU_seconds": 0.299655898,
+      "minimum_helpers": 14,
+      "BFS": 0,
+      "new_graphs": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/RESULT.json",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/terminal.json"
+    ]
+  },
+  {
+    "id": "ddp-d13-d3-972-odd-fiber-source-20261027",
+    "title": "(13,3)当前972来源与奇数纤维预测：待literal检验",
+    "family": "Route-chart source transfer",
+    "record_type": "source-recovery-partial",
+    "target_Delta": 13,
+    "target_D": 3,
+    "savedL": 972,
+    "n": {
+      "actual": null,
+      "hypothetical": 973
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "scope": "官方主表972，旧描述页仍952。作者完整文件表列52470byte deg13_diam3_n972.txt，README说明36×GF3³ block-and-line；当前literal尚未取得，未猜degree/余量、未构造图。若跨块外度12且块内matching，则27奇数块各至少一未匹配点，预测≥36spares及可能≤13spare R2 cover，尚未检验。",
+    "failure_or_result": "官方主表972，旧描述页仍952。作者完整文件表列52470byte deg13_diam3_n972.txt，README说明36×GF3³ block-and-line；当前literal尚未取得，未猜degree/余量、未构造图。若跨块外度12且块内matching，则27奇数块各至少一未匹配点，预测≥36spares及可能≤13spare R2 cover，尚未检验。",
+    "lesson_and_restart_condition": "以当前972为基线，不能把旧952+1算纪录。后续取得已知literal后直接检验这个明确的奇纤维预测；不继续旧描述页或重复源穷举。",
+    "unclosed_gap": "No new complete graph in this probe; other parameters and mechanisms remain open.",
+    "outcome_class": "source-recovery-partial",
+    "wiki_verdict": "partial",
+    "other_metrics": {
+      "indexed_n": 972,
+      "indexed_source_bytes": 52470,
+      "source_literal_received": false,
+      "source_profile_completed": false,
+      "odd_fiber_prediction_tested": false,
+      "BFS": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D3_chart_transfer/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D3_chart_transfer/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D3_chart_transfer/terminal.json"
+    ]
+  },
+  {
+    "id": "ddp-d14-d5-94186-source-profile-20261027",
+    "title": "(14,5)94186源实际绑定：3685可接点、3700槽",
+    "family": "Mizuno current-source extension",
+    "record_type": "source-recovery",
+    "target_Delta": 14,
+    "target_D": 5,
+    "savedL": 94186,
+    "n": {
+      "actual": 94186,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 14,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "实际完整边表94186/m657452，degree12:15、13:3670、14:90501，free3685/slots3700。旧Mizuno88452源在相同labels仅111共同边，未恢复纤维映射；数值前缀不能当旧核心。",
+    "failure_or_result": "实际完整边表94186/m657452，degree12:15、13:3670、14:90501，free3685/slots3700。旧Mizuno88452源在相同labels仅111共同边，未恢复纤维映射；数值前缀不能当旧核心。",
+    "lesson_and_restart_condition": "只继承公开源D5，不重全源。以实际free slots和邻域类型选择覆盖预测，不能照搬原fiber labels。",
+    "unclosed_gap": "No third-parameter complete record has been generated in these source/rareclass stages.",
+    "outcome_class": "source-recovery",
+    "wiki_verdict": "partial",
+    "other_metrics": {
+      "source_n": 94186,
+      "source_m": 657452,
+      "degree_histogram": {
+        "12": 15,
+        "13": 3670,
+        "14": 90501
+      },
+      "free_vertices": 3685,
+      "free_slots": 3700,
+      "source_allBFS": 0,
+      "CPU_seconds": 1.141946663
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/REPORT.md",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/SOURCE.json",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/SOURCE_PROFILE.json"
+    ]
+  },
+  {
+    "id": "ddp-d14-d5-rare15-cover-failure-20261027",
+    "title": "(14,5)稀有15点类：全部14子集无完整覆盖",
+    "family": "Mizuno current-source extension",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 14,
+    "target_D": 5,
+    "savedL": 94186,
+    "n": {
+      "actual": null,
+      "hypothetical": 94187
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "15个degree12点中52155/85397为false twins；其余pairs无共同邻点。15次R4与15个留一子集全部完成，漏9754..11640；14个不同邻域代表与全15的并相同，仍漏9754。0新图。",
+    "failure_or_result": "15个degree12点中52155/85397为false twins；其余pairs无共同邻点。15次R4与15个留一子集全部完成，漏9754..11640；14个不同邻域代表与全15的并相同，仍漏9754。0新图。",
+    "lesson_and_restart_condition": "稀有双余量不保证覆盖互补，false twins重复路线。停止这个固定子集，下一规则改全部free点并以全覆盖为唯一接受条件；不按漏点减少无限微调。",
+    "unclosed_gap": "No third-parameter complete record has been generated in these source/rareclass stages.",
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "R4_balls": 15,
+      "fourteen_subsets": 15,
+      "minimum_newroot_uncovered_old_vertices": 9754,
+      "maximum_newroot_uncovered_old_vertices": 11640,
+      "missing_vertex_degree_histogram": {
+        "13": 409,
+        "14": 9345
+      },
+      "prediction": "REFUTED",
+      "CPU_including_compile": 1.499629988
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/REPORT.md",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/RARE15_PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/RARE15_RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-h3-364-helper-minimum13-20261027",
+    "title": "自然H3固定host：1..13 helpers已排，至少需14个新点",
+    "family": "Natural H3 polarity port extension",
+    "record_type": "positive-local-theorem",
+    "target_Delta": 4,
+    "target_D": 5,
+    "savedL": 364,
+    "n": {
+      "actual": null,
+      "hypothetical": 378
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Only fixed364/714 host, retain old edges, add no old-old edges, and respect degree4. Full1..13 helper class excluded; arbitrary377 graphs/otherhosts outside scope.",
+    "failure_or_result": "先由28个distance5 ports和helper连通性推出k≥13；后对所有k13 tree拓扑作完整归约，3276 triple与81900(T,parent)均无足够外部R2分区覆盖，故1..13全部排除，k≥14。",
+    "lesson_and_restart_condition": "原377未排状态已由helper13_tree_probe整体有限反例覆盖更新。停止此host逐阶helper长尾，不启动k14。",
+    "unclosed_gap": "No arbitrary(4,5) exclusion or complete newgraph; k14 and otherhosts remain untested.",
+    "outcome_class": "positive-local-theorem",
+    "wiki_verdict": "yes",
+    "other_metrics": {
+      "minimum_helpers": 14,
+      "first_possible_order": 378,
+      "new_experiments": 0,
+      "k13_tree_class_excluded": true,
+      "k14_tested": false
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/RESULT.json",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/MULTI_VERTEX_PORT_BARRIER.md",
+      "research/ddp/more_graphs_20261027/d4_D5_polarity_extensions/helper13_tree_probe/REPORT.md"
+    ]
+  },
+  {
+    "id": "ddp-h9-d13-nonstable-qline-empty-20261027",
+    "title": "(13,5)非稳定线wholeclass：43680闭包也被满度挡住",
+    "family": "H9 degree13 transfer",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 13,
+    "target_D": 5,
+    "savedL": 51417,
+    "n": {
+      "actual": null,
+      "hypothetical": 51418
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "1120个F3plane中87360个nonstable Q9line occurrences共轭合并为43680次closure实际检查；12960闭包的唯一fixed点free，12096闭包card≤13，但所有closure均有满度pin，合法池0。",
+    "failure_or_result": "1120个F3plane中87360个nonstable Q9line occurrences共轭合并为43680次closure实际检查；12960闭包的唯一fixed点free，12096闭包card≤13，但所有closure均有满度pin，合法池0。",
+    "lesson_and_restart_condition": "只需1个free固定点的预测仍被其余满度pin反驳。12个仅1满pin诊断全部fullsize19，删后18>13，无singlefault生产池；这次0.172CPU恢复诊断不计新line实验。停止该固定scope，不扩其它plane或删多点。",
+    "unclosed_gap": "General source extension feasibility remains open; no complete newgraph was generated.",
+    "outcome_class": "FINITE_RULE_COMPLETE_NO_HIT",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "nominal_occurrences": 87360,
+      "closure_tests": 43680,
+      "conjugate_identical_duplicates_skipped": 43680,
+      "stable_lines_repeated": 0,
+      "degree_feasible": 0,
+      "card_atmost13": 12096,
+      "CPU_seconds": 0.19877266,
+      "BFS": 0,
+      "diagnostic_recovery_CPU_seconds": 0.17191,
+      "diagnostic_recovery_new_line_experiments": 0,
+      "one_saturated_diagnostics": 12,
+      "one_saturated_full_pin_counts": {
+        "19": 12
+      },
+      "one_saturated_after_deletion_counts": {
+        "18": 12
+      },
+      "feasible_singlefault_pool": 0,
+      "prediction": "REFUTED"
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/nonstable_qline_pool/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/nonstable_qline_pool/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/nonstable_qline_pool/PREDICTION.json"
+    ]
+  },
+  {
+    "id": "ddp-d14-d5-allfree64-cover-probe-20261027",
+    "title": "(14,5)全部3685可接点：64个完整14pin构造无命中",
+    "family": "Mizuno current-source extension",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 14,
+    "target_D": 5,
+    "savedL": 94186,
+    "n": {
+      "actual": null,
+      "hypothetical": 94187
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "复用rare15球、一次补3670球，allfree union覆盖全部94186；各target支持455..824。冻结64个不同首选，按最稀少未覆target约束及最大完整gain，每项选14pins，64/64完成，0命中，漏3705..4479；0图/0newroot及旧source全BFS。",
+    "failure_or_result": "复用rare15球、一次补3670球，allfree union覆盖全部94186；各target支持455..824。冻结64个不同首选，按最稀少未覆target约束及最大完整gain，每项选14pins，64/64完成，0命中，漏3705..4479；0图/0newroot及旧source全BFS。",
+    "lesson_and_restart_condition": "全候选点到达能力不缺，障碍转为14连接的共同覆盖，不能凭union满或总漏减少称解。操作预测64项命中被反驳，任意≤14freepin存在性仍UNRESOLVED。保存43MB完整R4与支持缓存，停止这个生成规则，不加starts或按3705续修；转其它参数。",
+    "unclosed_gap": "General source extension feasibility remains open; no complete newgraph was generated.",
+    "outcome_class": "FINITE_RULE_COMPLETE_NO_HIT",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "free_candidates": 3685,
+      "reused_R4_balls": 15,
+      "new_R4_balls": 3670,
+      "allfree_union_missing": 0,
+      "target_support_min": 455,
+      "target_support_max": 824,
+      "frozen_constructs": 64,
+      "constructs_completed": 64,
+      "hits": 0,
+      "newroot_missing_min": 3705,
+      "newroot_missing_max": 4479,
+      "CPU_including_compile": 4.412178511,
+      "operation_prediction": "REFUTED",
+      "global_atmost14_existence_prediction": "UNRESOLVED",
+      "R4_cache_bytes": 43394560
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/RESULT.json",
+      "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/PREDICTION.json"
+    ]
+  }
+]

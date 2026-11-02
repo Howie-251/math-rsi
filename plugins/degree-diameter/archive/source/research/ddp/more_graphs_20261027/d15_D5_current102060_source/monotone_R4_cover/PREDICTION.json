@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_BEFORE_ACTUAL810_R4_BUILD",
+  "prediction": "All810 currentfree closedR4 neighborhoods cover the102060 source, and some subset of at most15 covers it completely, producing102061/max15/D5.",
+  "target_Delta": 15,
+  "target_D": 5,
+  "savedL": 102060,
+  "source_n": 102060,
+  "source_m": 765045,
+  "source": "../source102060.author.adjlist.txt",
+  "source_profile": "../SOURCE_PROFILE.json",
+  "hypothetical_n": 102061,
+  "eligible_pins": 810,
+  "rule": "Keep every originaledge, add one newvertex102060 joined to at most15 distinct old degree14 vertices; no old-old extraedge or other helper.",
+  "phase1": "One native truncated R4 build of all810 roots, scanning only layers0..3. Savebitsets, target support, allunion, ball sizes and exact duplicate rows. <=3CPU for phase1.",
+  "phase2": "If unionfull and rowmodelmanageable, one shared<=10CPU preparation+constraint-generation feasibility run; no per-call budget reset, no old100132 cache/64rule, no score/seed. Fulltargetcheck everycandidate; firstactualhit export andfullnewrootBFS thennotifyparent.",
+  "stop": "Unionhole=>stop immediately with literal target. Infeasible or UNKNOWN=>accurate fixedscope, no budget/guard continuation.",
+  "source_D5": "Inherited publishedcurrent record; no oldsource allrootBFS."
+}

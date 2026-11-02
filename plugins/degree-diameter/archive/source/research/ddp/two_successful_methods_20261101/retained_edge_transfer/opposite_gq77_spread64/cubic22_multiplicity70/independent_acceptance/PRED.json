@@ -1,0 +1,87 @@
+{
+  "status": "PREDICTION_BEFORE_FRESH_CANDIDATE_READ",
+  "scope": "A70 only; immutable original accepted source160050",
+  "candidate": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq77_spread64/cubic22_multiplicity70/graph_d70_D3_n166650.edges",
+  "source": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq77_spread64/graph_d64_D3_n160050.edges",
+  "point_ids_outer": [
+    57,
+    119,
+    165,
+    251,
+    265,
+    347,
+    399,
+    71,
+    133,
+    179,
+    216,
+    279,
+    312,
+    364,
+    85,
+    147,
+    193,
+    230,
+    293,
+    326,
+    378,
+    1
+  ],
+  "base_index_rule": "baseindex=50*i+j; point order outer, original source ordered spread50 inner",
+  "clone_index_rule": "copy outer0..5; k=1100*copy+baseindex; newlabel=160050+k",
+  "expected_vertices": 166650,
+  "expected_edges": 5544000,
+  "expected_old_edges_exact": 5121600,
+  "expected_new_edges": 422400,
+  "expected_new_new_edges": 0,
+  "expected_new_vertices": 6600,
+  "expected_base_centers": 1100,
+  "expected_new_degree_each": 64,
+  "expected_old_pin_load_histogram": {
+    "0": 89650,
+    "6": 70400
+  },
+  "expected_degree_histogram": {
+    "64": 96250,
+    "70": 70400
+  },
+  "full_N_obligation": "Every new vertex exactly its base center full open N in immutable literal original source; all six repetitions individually checked",
+  "BFS_plan": "Ordinary FIFO queue R3 BFS on all6600 new roots, first10 pilot; if prediction exceeds remaining90CPU budget stop and report without extending budget",
+  "expected_BFS_histogram_distribution": [
+    {
+      "distance_histogram": [
+        1,
+        64,
+        3191,
+        163394
+      ],
+      "roots": 132
+    },
+    {
+      "distance_histogram": [
+        1,
+        64,
+        3254,
+        163331
+      ],
+      "roots": 6468
+    }
+  ],
+  "BFS_histogram_class_prediction": "For each base center, a source bonus neighbor (label160000..160049) predicts(1,64,3191,163394); absence predicts(1,64,3254,163331). All six copies checked against class, then aggregate132/6468 checked.",
+  "all_pairs_proof": "Inherited accepted source D3 plus generic full-source-open-neighborhood clones; samecenter2steps, adjacentcenters3steps; valid for every prefix using only original source endpoints",
+  "non_D2_order_bound": 4901,
+  "workers": 1,
+  "CPU_budget_seconds_including_compile": 90,
+  "old_root_BFS_runs": 0,
+  "forbidden": [
+    "read65graph",
+    "producer code",
+    "producer CENTERS/neighborhood cache/passedflags",
+    "sourceGQ reconstruction",
+    "Lean",
+    "solver",
+    "install",
+    "download",
+    "hash"
+  ]
+}

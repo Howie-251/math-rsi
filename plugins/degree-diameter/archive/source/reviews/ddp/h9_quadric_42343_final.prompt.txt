@@ -1,0 +1,16 @@
+同线程最终数学成果审阅（不重跑BFS）。
+已有P10找到完整候选并由root独立验收：
+research/ddp/global_coverage_20261027/candidate42343/graph_d12_D5_n42343.edges
+root_precheck.json
+independent_all_source_BFS.json
+verify_all.cpp
+以及quadric_anchor_completion/{PREDICTION.json,REPORT.md,first_success.json,RESULT.json}（如文件名有差异看实际目录）。
+新增点label42342，邻居[452,4633,6195,10312,12353,13822,20168,21068,24695,29805,36474,38101]，mandatory几何10pins+anchors4633/20168。完整旧42342全部245217边保留，新12边→n42343 m245229。root从rawsource独立重建做12pins R4，遗漏0，旧12邻居度均<=11。再从展开edge表独立全42343源BFS：simple true，max12，diameter5，badunordered0，unreachable0，eccentricity5共42343，4workers15.1209wall60.3519CPU。
+刚实时浏览Comellas官方table https://web.mat.upc.edu/francesc.comellas/delta-d/taula_delta_d.html 及desc_g/desc_g5.html#Dhar_42342仍(12,5)42342。故数学上超过所核对公开基线1点。尚未对外发布，Lean未完，Goal保持active。新candidate正式可复现说明由agent收束中。
+
+先纠正你上轮2项越界表述：
+(1) P8 d_K(Ai,Aj)<=3是独立批的充分证书，不是必要条件。即使没有新新直接边，新增点仍可经另一新增点与旧pins互助。因此P8失败只反驳该静态核心证书，不能推出675点“不能同时作为independent vertices安全加入”。请明确修正这一句。
+(2) 全mandatorypins是我们定理的充分前提；删一个pin后本证明失效，不等于对应实际距离必然超5，不应写必要性。
+我们接受其余uniformoldcore-new证明与有限精确2anchor批的审阅。你上轮状态newgraph0是当时截点，现已被上述新instance验收替代。
+
+请实际读新文件，检查：oldgraph全D5(P3已有986归纳)+新增点全部oldR4的数学桥接；edge变更/度数/完整BFS证据是否足以支持“已有公开下界42342提升至42343”的数学声明；公开新颖性范围仅以刚核对官方表为准，非最优值。请给具体错误或明确数学成果可接受，并明确Lean仍未完成、不将Goal标complete。不要启动全源BFS、哈希、重复审计或额外构造，只核对承重证据。

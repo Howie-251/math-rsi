@@ -1,0 +1,9 @@
+# Independentendpointk5:PASS
+
+Actualcompletegraph (69,3),n=168300,m=5649600. Exactn mheader/strictlexbody/simplelabels checked. Every5121600oldsourceedge retainedexactly; all528000newedges joinoldsource tonewlabels,0newnew. All8250literalnewN64sets exactlyequaltheirimmutablefilledsourcecenterN. sourceoldlabelcutis160050,including50originalfills. Degree64count62700,degree69count105600; sourcepinload5at105600oldvertices,0at54450.
+
+Shared../../PROOF.md givesallpairsandallprefixcurrentR2pincoverage withinteriorsonlyinthefixed160050source,includingitsoriginalfillnodes. Repeatedcentersuseanoldcommonneighbor; adjacentcentersusethethree-edgeold-centerroute. Nofuturecloneorcenterindependenceisassumed. CollapseHomtosourcepreservesnonD2. Thusdegreecap69andexactD3holdforthisendpoint independentlyofthemaximalBFS.
+
+SourceR2wasenumeratedonceforeach1650centersbeforeanynewfileinput,R=3185for33centersand3248for1617;sourceR3inferredfromacceptedD3. Histogramformula(1,64,R+5,159985−R+8245)givesproof-derivedclasses[{'histogram': [1, 64, 3190, 165045], 'roots': 165}, {'histogram': [1, 64, 3253, 164982], 'roots': 8085}]. Thiscasehas0newrootBFS. ItsallpairsandprefixD3areprovedfromitsownliteralbindingandimmutable-sourcepathconstruction;themaxcaseBFSisnotusedtoinferitsdiameter.
+
+LiteralbindingCPU0.937384,newBFSCPU0;overallfamily21.419453053CPU includingonecompile/sourceparse/R2prediction/eightbindings/maxBFS/aggregation,below180budget.0oldR3/field/geometry/Leanchecksrepeated. Allsharedprocessesterminal. Comparedwithseparatelycheckedpublished-methodguarantee168250,advantage50;globalpriorityandnewconcreteLeanarenotclaimedhere.

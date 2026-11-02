@@ -1,0 +1,2 @@
+请审当前已写入的MathRSI新meta技能及本次实际执行，直接读：base/skills/mathrsi-meta-evolve/SKILL.md、两份references、development/evolution/dd-v2-20261102/EVOLUTION.md、docs/PLUGIN_CONTRACT.md。用户要求先把meta写详细并集成，Root再实际按它+DD context改现有v1到v2；不能另起炉灶，不能先改完DD再追写元流程。用户明确拒绝强制无历史agent完整试跑：Root直接自用，Sol做具体作者/核对，必要受影响接口检查即可。三个Sol现正按EVOLUTION执行B1/B2-B4/P1。
+本轮只检查真实设计缺口：1分类是否可执行并保持原目标；2是否仍有无限阅读/验证/模型共识前置；3有没有把历史DD当v1实验；4原ARIS复用是否明确而非空标签；5插件原wiki与任务wiki归属是否准确。请给少量真正的问题、原件定位和最小修法，正确直接认可。HERO：不加hash/评分/恶意用户框架，不要求重跑旧数学。按research-review维护composed范式返回实际阅读范围，本调用不是证明或新版本性能认证。

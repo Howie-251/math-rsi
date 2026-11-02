@@ -1,0 +1,81 @@
+{
+  "status": "EXACT_CONDITIONAL_MODEL_PROVED_NO_COMPUTATION",
+  "source_hypotheses": {
+    "n": 1141,
+    "degree": 14,
+    "simple": true,
+    "diameter_at_most": 3
+  },
+  "operation": {
+    "cut_matching_size": 7,
+    "pins": 14,
+    "new_hubs": 1,
+    "hypothetical_n": 1142,
+    "hypothetical_m": 7994,
+    "degree": 14
+  },
+  "identities": {
+    "set_distance": "d_(G-M)(S,t)=d_G(S,t)",
+    "new_root": "d_K(h,t)=1+d_G(S,t)",
+    "old_pair": "d_K(p,q)=min(d_(G-M)(p,q),2+d_G(p,S)+d_G(q,S))",
+    "hub_repair_D3": "(p in S and q in N_G[S]) or (q in S and p in N_G[S])"
+  },
+  "source_distance_at_most2_automatic": true,
+  "old_pair_constraints_needed_only_for_source_distance3": true,
+  "possible_matching_intersections_on_one_geodesic": [
+    [],
+    [
+      "first"
+    ],
+    [
+      "middle"
+    ],
+    [
+      "last"
+    ],
+    [
+      "first",
+      "last"
+    ]
+  ],
+  "exact_lazy_formulation": {
+    "edge_variable": "binary y_e",
+    "pin_variable": "binary x_v=sum_incident y_e",
+    "matching_cardinality": "sum y_e=7",
+    "hub_constraints": "sum_{v in R2_G(t)} x_v>=1",
+    "auxiliary_domain": "continuous[0,1] sufficient",
+    "survival_aux": "r_P<=1-y_e for every edge of source pathP",
+    "hub_aux_a": [
+      "a<=x_p",
+      "a<=sum_{v in N_G[q]}x_v"
+    ],
+    "hub_aux_b": [
+      "b<=x_q",
+      "b<=sum_{v in N_G[p]}x_v"
+    ],
+    "route_OR": "sum_P r_P+a+b>=1",
+    "lower_reification_constraints_required": false
+  },
+  "middle_edge_necessary_cut": "sum_{e in F_pq}y_e<=|F_pq|-1+x_p+x_q",
+  "unique3_middle_cut_alone_sufficient": false,
+  "actual_graph_n": null,
+  "actual_D": null,
+  "this_analysis": {
+    "source_reads": 0,
+    "cache_reads": 0,
+    "edge_enumerations": 0,
+    "graph_constructions": 0,
+    "BFS": 0,
+    "solver_runs": 0
+  },
+  "scope": "Exactly one hub on endpoints of a size7 matching in the bound source; proof gives equivalence, not existence or exclusion.",
+  "sparse_unique_first_port_cut": {
+    "hypotheses": "d_G(u,t)=3 and H_u(t)={v}, where H_u(t)={v in N_G(u):d_G(v,t)=2}",
+    "inequality": "y_uv<=sum_{s in N_G[t]}x_s",
+    "scope": "Necessary globally; when y_uv=1 it is the exact remaining requirement for pair(u,t)",
+    "auxiliaries": 0,
+    "edge_variables": 1,
+    "pin_variables": 15,
+    "new_numeric_computation": false
+  }
+}

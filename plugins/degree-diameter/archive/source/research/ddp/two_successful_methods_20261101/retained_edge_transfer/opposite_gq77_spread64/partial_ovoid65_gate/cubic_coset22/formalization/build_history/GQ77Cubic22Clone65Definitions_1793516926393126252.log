@@ -1,0 +1,8 @@
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone65.center : CloneIndex → Source.Vertex :=
+fun k => OvoidSpreadCloneCapacity.center OppositeGQ77Spread.oldEquiv ovoid OppositeGQ77Spread.spread (clonePair k)
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone65.graph : SimpleGraph Vertex :=
+FullNeighborhoodClones.graph OppositeGQ77Spread.graph center
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone65.label : Vertex ≃ Fin 161150 :=
+(OppositeGQ77Spread.label.sumCongr (Equiv.refl CloneIndex)).trans finSumFinEquiv
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone65.FinalClaim : Prop :=
+Fintype.card Vertex = 161150 ∧ (∀ (v : Vertex), graph.degree v ≤ 65) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

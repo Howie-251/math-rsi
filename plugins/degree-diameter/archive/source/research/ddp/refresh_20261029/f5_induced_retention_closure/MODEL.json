@@ -1,0 +1,114 @@
+{
+  "status": "PREPARED_NOT_SOLVED",
+  "variables": 300221,
+  "clauses": 1170873,
+  "keep_variables": 3750,
+  "keep_variable_rule": "old vertex v corresponds to DIMACS v+1",
+  "n_at_least": 1921,
+  "n_exactly_fixed": false,
+  "max_degree": 16,
+  "conditional_degree_counter": "exact at-least-four-deleted threshold; only selected centers require it",
+  "global_cardinality": "balanced exact binary addition and constant comparator",
+  "sum_bits_little_endian": [
+    296185,
+    296188,
+    296191,
+    296194,
+    296197,
+    296200,
+    296203,
+    296206,
+    296209,
+    296212,
+    296215,
+    296218,
+    296219
+  ],
+  "controller_unique_distance3_pairs_ordered": 258,
+  "closure_clauses": 32250,
+  "equivalent_uncompressed_intermediate_implications": 4031250,
+  "unique_OR_sets_by_size": {
+    "5": 3000,
+    "25": 990
+  },
+  "stages": [
+    {
+      "name": "conditional_retained_degree_at_most16",
+      "new_variables": 273750,
+      "new_clauses": 1016250
+    },
+    {
+      "name": "exact_binary_sum_at_least1921",
+      "new_variables": 18731,
+      "new_clauses": 78633
+    },
+    {
+      "name": "unique_control_geodesic_closure_including_cached_OR_gates",
+      "new_variables": 3990,
+      "new_clauses": 75990
+    }
+  ],
+  "literal_controlled_counterexample_clause": {
+    "controller_path": [
+      0,
+      18,
+      29,
+      5
+    ],
+    "middle_old_id": 2250,
+    "left_old_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "right_old_ids": [
+      625,
+      626,
+      627,
+      628,
+      629,
+      670,
+      671,
+      672,
+      673,
+      674,
+      690,
+      691,
+      692,
+      693,
+      694,
+      710,
+      711,
+      712,
+      713,
+      714,
+      730,
+      731,
+      732,
+      733,
+      734
+    ],
+    "left_OR_variable": 296262,
+    "right_OR_variable": 296263,
+    "clause": [
+      2251,
+      -296262,
+      -296263
+    ],
+    "controlled_rule_violation_endpoints": [
+      1,
+      626
+    ]
+  },
+  "source_edge_table_reads": 0,
+  "source_adjacency_cache_reads": 1,
+  "BFS_runs": 0,
+  "solver_calls": 0,
+  "new_graphs_generated": 0,
+  "necessary_only": true,
+  "SAT_requires_actual_induced_D3_check": true,
+  "CPU_seconds": 2.5501791039999997,
+  "byteorder": "little"
+}

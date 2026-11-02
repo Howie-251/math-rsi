@@ -1,0 +1,9 @@
+# Selective access to the complete quartic Cayley census
+
+**ZIP index accessible with HTTP206; no graph member extracted.** The official author-page href is `http://atlas.graphsym.net/Cay4val/Cay4valUpTo1025.zip`. A single HTTPS Range request on the same host/path read only the last131072 bytes. The server honored206. ZIP64 EOCD and the complete97638-byte central directory were already in that tail, so no further archive request was needed. Total body reads, including23210 bytes of author HTML, were154282 bytes, below the2MB budget; request timeout was15 seconds. Archive size is25270947286 bytes.
+
+CENTRAL_INDEX.json saves all1021 names, filename orders, compressed/uncompressed sizes, local-header offsets, compression methods and flags. The names bind exactly one file to each order5..1025. HTTP_HEADERS.json preserves the original response headers and Content-Range receipt. The allowed tail read contained33336 opaque bytes before the central directory; they were not parsed as a graph member, decompressed, or saved as a member.
+
+The12 order42..53 files total47456 compressed /76777 uncompressed bytes. The57 order105..161 files total5696157 compressed /9241976 uncompressed bytes. Every selected member uses ZIP compression8 (raw deflate). These members can be read individually using each saved local-header offset, resolving its filename/extra lengths, and requesting only the corresponding compressed segment. INDEX_SUMMARY.json includes the order108 entry and exact selected-range totals.
+
+This is metadata-only access:0 member-payload range requests,0 extracted graph files,0 graph parsing/search/BFS/solver, and no hashes. No diameter bound or negative existence result follows from the index. The next decision can authorize a small selected-member filter instead of downloading the roughly25.27GB archive; no such extraction or filter was started here.

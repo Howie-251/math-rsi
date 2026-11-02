@@ -1,0 +1,41 @@
+{
+  "prediction": "The minimum exact raw count of nonbacktracking words of length at most9 in the49phase projection is at least6959.",
+  "source_reported_order": 331387,
+  "source_reported_group": "RIGHT C49 semidirect_41 F6763",
+  "normalized_positive_phases": [
+    1,
+    36,
+    45
+  ],
+  "normalized_inverse_phases": [
+    48,
+    13,
+    4
+  ],
+  "normalization": "j_prime=2*j modulo49",
+  "target_next_compatible_prime": 6959,
+  "target_origin": "source scout independently supplied the next compatible prime before this DP run",
+  "state_definition": "phase0..48 and last dart0..5; last6 denotes none only at depth0",
+  "inverse_indices": [
+    3,
+    4,
+    5,
+    0,
+    1,
+    2
+  ],
+  "start": [
+    0,
+    6
+  ],
+  "maximum_length": 9,
+  "word_rule": "append any of6darts except the immediate inverse of the last dart",
+  "expected_total_including_empty": 2929687,
+  "hypothesis_note": "The official2929686 omits the empty prefix; exact sum is1+6*sum(5^i,i=0..8).",
+  "resources": {
+    "workers": 1,
+    "worker_process_CPU_hard_limit_seconds": 3,
+    "compilation": false
+  },
+  "scope": "Projected raw endpoint counts only; no normal-field evaluation, word list, graph or BFS."
+}

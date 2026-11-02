@@ -1,0 +1,61 @@
+⚠ [1792/1798] Replayed DegreeDiameter.N59ZeroCore
+warning: DegreeDiameter/N59ZeroCore.lean:21:29: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [commonZeroNeighbors,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N59ZeroCore.lean:50:14: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵h̵r̵,̵ ̵N̵e̵.̵s̵y̵m̵m̵[̲N̲e̲.̲s̲y̲m̲m̲ hab, Ne.symm hac, Ne.symm had, Ne.symm hbc, Ne.symm hbd, Ne.symm hcd,
+  ̲  ̲ ̲ ̲ ̲ ̲SimpleGraph.adj_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1793/1798] Replayed DegreeDiameter.N59Capacity
+warning: DegreeDiameter/N59Capacity.lean:295:48: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [heavyZeroRepeats, zeroTriangleVertices,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1794/1798] Replayed DegreeDiameter.N62STouch
+warning: DegreeDiameter/N62STouch.lean:156:8: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62STouch.0.DegreeDiameter.adjacency_nonnegative`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [1798/1798] Building DegreeDiameter.N62TripleRepeat (86s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62TripleRepeat.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleRepeat.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleRepeat.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleRepeat.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleRepeat.setup.json --json
+error: DegreeDiameter/N62TripleRepeat.lean:99:46: Unknown identifier `u`
+error: DegreeDiameter/N62TripleRepeat.lean:157:46: Unknown identifier `u`
+warning: DegreeDiameter/N62TripleRepeat.lean:183:2: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: DegreeDiameter/N62TripleRepeat.lean:246:15: Invalid field `symm`: The environment does not contain `Function.symm`
+  hxy
+has type
+  x = y → False
+error: DegreeDiameter/N62TripleRepeat.lean:243:4: unsolved goals
+case neg.h
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v x : V
+hb : defectMatrix G u v = 3
+hx : x ∈ commonNeighborVertices G u v
+y : V
+hy : y ∈ commonNeighborVertices G u v
+hxy : ¬x = y
+⊢ 0 < if y = x then 0 else 1
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62TripleRepeat
+error: build failed

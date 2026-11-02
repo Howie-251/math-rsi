@@ -1,0 +1,63 @@
+def DegreeDiameter.doublePairMate.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset V → Finset V :=
+fun {V} [Fintype V] G P => {z | ∃ x ∈ P, DegreeDiameter.defectMatrix G x z = 1}
+structure DegreeDiameter.D1MatchParentTemplate.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) (r w a : V) : Prop
+number of parameters: 6
+fields:
+  DegreeDiameter.D1MatchParentTemplate.parents : DegreeDiameter.DoubleRootParentData G r w a
+  DegreeDiameter.D1MatchParentTemplate.w_a_nonadj : ¬G.Adj w a
+  DegreeDiameter.D1MatchParentTemplate.parent_overlap_one : (DegreeDiameter.rootParents G r w ∩
+          DegreeDiameter.rootParents G r a).card =
+      1
+constructor:
+  DegreeDiameter.D1MatchParentTemplate.mk.{u_1} {V : Type u_1} [Fintype V] {G : SimpleGraph V} {r w a : V}
+    (parents : DegreeDiameter.DoubleRootParentData G r w a) (w_a_nonadj : ¬G.Adj w a)
+    (parent_overlap_one : (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 1) :
+    DegreeDiameter.D1MatchParentTemplate G r w a
+structure DegreeDiameter.DoubleRootParentData.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) (r w a : V) : Prop
+number of parameters: 6
+fields:
+  DegreeDiameter.DoubleRootParentData.w_ne_root : w ≠ r
+  DegreeDiameter.DoubleRootParentData.a_ne_root : a ≠ r
+  DegreeDiameter.DoubleRootParentData.w_ne_a : w ≠ a
+  DegreeDiameter.DoubleRootParentData.root_w_nonadj : ¬G.Adj r w
+  DegreeDiameter.DoubleRootParentData.root_a_nonadj : ¬G.Adj r a
+  DegreeDiameter.DoubleRootParentData.root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y
+  DegreeDiameter.DoubleRootParentData.w_parent_card : (DegreeDiameter.rootParents G r w).card = 3
+  DegreeDiameter.DoubleRootParentData.a_parent_card : (DegreeDiameter.rootParents G r a).card = 2
+  DegreeDiameter.DoubleRootParentData.ordinary_parent : ∀ (y : V),
+      y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∃! x, G.Adj r x ∧ G.Adj x y
+constructor:
+  DegreeDiameter.DoubleRootParentData.mk.{u_1} {V : Type u_1} [Fintype V] {G : SimpleGraph V} {r w a : V}
+    (w_ne_root : w ≠ r) (a_ne_root : a ≠ r) (w_ne_a : w ≠ a) (root_w_nonadj : ¬G.Adj r w) (root_a_nonadj : ¬G.Adj r a)
+    (root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y)
+    (w_parent_card : (DegreeDiameter.rootParents G r w).card = 3)
+    (a_parent_card : (DegreeDiameter.rootParents G r a).card = 2)
+    (ordinary_parent : ∀ (y : V), y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∃! x, G.Adj r x ∧ G.Adj x y) :
+    DegreeDiameter.DoubleRootParentData G r w a
+@DegreeDiameter.closedDoubleFour_pair_mates : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r w b a : V},
+  DegreeDiameter.ClosedDoubleFour G r w b a →
+    DegreeDiameter.doublePairMate G {r, w} = {a, b} ∧ DegreeDiameter.doublePairMate G {a, b} = {r, w} ∧ {a, b} ≠ {r, w}
+@DegreeDiameter.n62_double_pair_mate_properties : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (¬∃ r w a, DegreeDiameter.D1MatchParentTemplate G r w a) →
+          ∀ {P : Finset V},
+            P ∈ DegreeDiameter.doubleRepeatPairs G →
+              DegreeDiameter.doublePairMate G P ∈ DegreeDiameter.doubleRepeatPairs G ∧
+                DegreeDiameter.doublePairMate G (DegreeDiameter.doublePairMate G P) = P ∧
+                  DegreeDiameter.doublePairMate G P ≠ P
+@DegreeDiameter.n62_double_repeat_pairs_even_of_no_d1 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (¬∃ r w a, DegreeDiameter.D1MatchParentTemplate G r w a) → Even (DegreeDiameter.doubleRepeatPairs G).card
+@DegreeDiameter.n62_exists_d1_match_parent : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) → ∃ r w a, DegreeDiameter.D1MatchParentTemplate G r w a
+'DegreeDiameter.closedDoubleFour_pair_mates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_pair_mate_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_repeat_pairs_even_of_no_d1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_exists_d1_match_parent' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,92 @@
+{
+  "status":"READ_ONLY_CM253_FOURCUT8STAR_SOURCE_AND_SCOPE_LOCATED",
+  "actual_source":{
+    "name":"CM_253",
+    "authors":"F.Comellas and M.Mitjana",
+    "original_date":"1994-08",
+    "source_type":"Cayley graph on semidirect product, explicitly stated by primary description",
+    "primary_URL":"https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html#83",
+    "primary_cache":"research/ddp/two_successful_methods_20261101/public_baseline_audit/comellas_desc_g3.html",
+    "primary_cache_lines":[185,186,189,192,193,194,195],
+    "source_date_evidence":"Obtained(08/1994)byComellas/Mitjana; cachedpage also links1996-12-01 archive snapshot",
+    "n":253,
+    "m":1012,
+    "degree":8,
+    "diameter":3,
+    "literal_edge_cache":"context/DD_PORTFOLIO_START_20261026/baselines/d8_D3_known.edges",
+    "other_cached_copy":"research/ddp/more_graphs_20261027/d3_vertex_split/source253.edges",
+    "source_recipe":"context/DD_PORTFOLIO_START_20261026/baselines/generator_specs.json entryd8_D3",
+    "generator_code_read_not_executed":"context/DD_PORTFOLIO_START_20261026/tools/reproduce_known_cayley.py",
+    "old_source_validation_reused":"context/DD_PORTFOLIO_START_20261026/validation/d8_D3.json",
+    "old_validation_scope":"all253roots ordinaryBFS and independentbitsets; no newrun",
+    "old_ordered_distance_histogram":{"0":253,"1":2024,"2":13156,"3":48576},
+    "public_original_adjacency":"https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/CM_253.txt",
+    "public_NX_adjacency":"https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/253_11_23_9_CM_adjlist.txt",
+    "network_or_raw_graph_parse_this_gate":false
+  },
+  "literal_group_interface":{
+    "phase_order":11,
+    "normal_modulus":23,
+    "action":9,
+    "RIGHT_law":"(x,y)*(u,v)=((x+u)mod11,(y*9^u+v)mod23)",
+    "label":"23*x+y",
+    "positive_generators":[[7,2],[10,4],[1,16],[9,17]],
+    "corresponding_true_inverses_from_primary":[[4,11],[1,10],[10,11],[2,3]],
+    "literal_generation_rule":"reproduce_known_cayley.py uses q=((x+u)%m)*n+(y*pow(a,u,n)+v)%n, so actualneighborsare h*s",
+    "safe_symmetry":"commonLEFTGmultiplication acts transitively onvertices;4positiveinverseclasses coveroldedges; noedge-transitivitybetweenclasses inferred",
+    "main_star_not_used_to_identify_source":true
+  },
+  "new_rule":{
+    "delete":"fourvertex-disjointactualsourceoldedges",
+    "add":"one newpoint joined toalleightendpoints",
+    "candidate_n":254,
+    "candidate_m":1016,
+    "candidate_degree":8,
+    "old_edges_retained":1008,
+    "same_fixed_source_fourcut8star_old_strict_NO_or_UNKNOWN":"NOT_LOCATED in boundedactualsource/surgery/Wiki scope checks",
+    "cutsets_enumerated_this_gate":0,
+    "candidate_generated":false
+  },
+  "reusable_route_data":{
+    "edge_unique3_witness_cache":"research/ddp/breadth_20261027_wave10/degree_reduction_scout/source253_to_degree7.forced_edges.json",
+    "unique3_metadata":"research/ddp/breadth_20261027_wave10/degree_reduction_scout/source253_to_degree7.json",
+    "old_unique3_unordered_pair_count":9108,
+    "old_edges_with_one_unique3_path_saved":1012,
+    "all_source_edges_forced_in_spanning_delete_only_model":true,
+    "witness_scope_limitation":"Onepathperedge,notallunique3paths. The indicatededge maybefirst/last ratherthanmiddle; no complete1+1criticalbipartitegraphs are saved.",
+    "example_cached_edge":[0,33],
+    "example_cached_unique3_path":[0,33,7,245],
+    "example_edge_position":"first,notmiddle; cannotdirectlyuseas1+1bottleneck",
+    "allpairs_distance_matrix_or_identity_full_distance_array":"NOT_LOCATED in actualsource materials; validationstores onlyglobalhistogram/totals",
+    "shortest_word_count_array":"NOT_LOCATED",
+    "all_middlecut_criticalrelations":"NOT_LOCATED",
+    "single_split_surgery_distance_data":"OldRESULTstores pervertexcounts/calibration,notreusablecompleteCM253distance/countarrays"
+  },
+  "old_scopes_inherited_distinct_from_new_rule":[
+    {
+      "receipt":"research/ddp/more_graphs_20261027/d3_vertex_split/REPORT.md",
+      "scope":"singlevertexadjacentsplit with disjointcompletepartitionofold8neighbors; all253vertices/32131nonemptyunorderedpartitions,8855capacityfeasible4+4 cases allnewrootfail",
+      "outcome":"completeNOonlythatsplitrule"
+    },
+    {
+      "receipt":"research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/REPORT.md",
+      "scope":"fixedF7^3polynomialdegree7source plus any one simple complementmatching, includingpartial",
+      "outcome":"rootR3<=302<343,strictfamilyNO; different343source,notCM253cuts"
+    },
+    {
+      "receipt":"research/ddp/breadth_20261027_wave5/binary_route_chart3/REPORT.md",
+      "scope":"F2^3fourfixedglobalinverselabelmatrices,onebinarynoiseparameter,all36reducedthreewords individuallyrank3 universalchart;197568normalizedinputs plusFanoproof",
+      "outcome":"strictNOonlyuniversalglobalchart; notedge-local/multiroute/generaldegree8D3 orCM253star"
+    },
+    {
+      "receipt":"research/ddp/breadth_20261027_wave10/degree_reduction_scout/source253_to_degree7.json",
+      "scope":"allspanningmaxdegree7D3subgraphsoftheexact253source,arbitrarydeletionsbutnonewedges/vertices",
+      "outcome":"alledgesforcedbyunique3paths;doesnotapplywhennewstarcanrepairpaths"
+    }
+  ],
+  "next_unexecuted_question":"Constructcomplete1+1middlecriticalbipartitegraphsforthe4canonicalfirstedgesandcheckactual7matching/vertexcoverbeforeanyfourcutenumeration",
+  "new_BFS_field_graph_cut_solver_Lean_or_remote":0,
+  "conservative_read_preparation_CPU_seconds":0.8,
+  "CPU_cap_seconds":5,
+  "next":"STOP readgate; rootmayauthorizeoneboundedactualcriticalrelationtest, noautomaticnewsourceorcutbatch"
+}
