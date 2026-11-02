@@ -1,0 +1,60 @@
+def Aris4Math.General.RS.AcceptedAt : ℕ → ℕ → ℝ → Prop :=
+fun k M p =>
+  0 ≤ p ∧
+    p ≤ 1 ∧
+      ↑M * (↑M - 1) / (2 ^ (k - 1)) ^ 2 * Aris4Math.General.RS.jk k p < Aris4Math.General.RS.ak k p ^ (↑M / 2 ^ (k - 1))
+def Aris4Math.General.RS.RSAccepts : ℕ → ℕ → Prop :=
+fun k M => 1 ≤ M ∧ ∃ p, Aris4Math.General.RS.AcceptedAt k M p
+def Aris4Math.General.RS.rsBudget : ℕ → ℕ :=
+fun k => (Finset.filter (Aris4Math.General.RS.RSAccepts k) (Finset.range (k * 2 ^ k))).sup id
+def Aris4Math.General.RS.integerGain : ℕ → ℕ → ℕ :=
+fun k M => ⌊√↑M / (8 * (1 + Real.log ↑k))⌋₊
+def Aris4Math.General.RS.Uniform.{u} : {V : Type u} → Finset (Finset V) → ℕ → Prop :=
+fun {V} E k => ∀ e ∈ E, e.card = k
+def Aris4Math.General.RS.PropertyB.{u} : {V : Type u} → Finset (Finset V) → Prop :=
+fun {V} E => ∃ c, Aris4Math.General.RS.Bichromatic E c
+def Aris4Math.General.RS.Bichromatic.{u} : {V : Type u} → Finset (Finset V) → (V → Bool) → Prop :=
+fun {V} E c => ∀ e ∈ E, (∃ x ∈ e, c x = true) ∧ ∃ x ∈ e, c x = false
+Aris4Math.General.RS.rsBudget_characterization_twelve {k : ℕ} (hk : 12 ≤ k) :
+  Aris4Math.General.RS.RSAccepts k (Aris4Math.General.RS.rsBudget k) ∧
+    ∀ (M : ℕ), Aris4Math.General.RS.RSAccepts k M → M ≤ Aris4Math.General.RS.rsBudget k
+Aris4Math.General.RS.propertyB_of_general_growth_twelve.{u} {V : Type u} [Finite V] (E : Finset (Finset V)) {k : ℕ}
+  (hk : 12 ≤ k) (hu : Aris4Math.General.RS.Uniform E k)
+  (hE :
+    E.card ≤ Aris4Math.General.RS.rsBudget k + Aris4Math.General.RS.integerGain k (Aris4Math.General.RS.rsBudget k)) :
+  Aris4Math.General.RS.PropertyB E
+GeneralGrowthTwelveAudit.original_complete_statement.{u} (k : ℕ) (hk : 12 ≤ k) :
+  ∃ B,
+    (1 ≤ B ∧
+        ∃ p,
+          0 ≤ p ∧
+            p ≤ 1 ∧
+              ↑B * (↑B - 1) / (2 ^ (k - 1)) ^ 2 * ∫ (y : ℝ) in 0..p, (1 - y ^ 2) ^ (k - 1) <
+                (1 - (1 - p) ^ k) ^ (↑B / 2 ^ (k - 1))) ∧
+      (∀ (M : ℕ),
+          1 ≤ M →
+            (∃ p,
+                0 ≤ p ∧
+                  p ≤ 1 ∧
+                    ↑M * (↑M - 1) / (2 ^ (k - 1)) ^ 2 * ∫ (y : ℝ) in 0..p, (1 - y ^ 2) ^ (k - 1) <
+                      (1 - (1 - p) ^ k) ^ (↑M / 2 ^ (k - 1))) →
+              M ≤ B) ∧
+        2 ^ k ≤ B ∧
+          B < k * 2 ^ k ∧
+            2 ≤ ⌊√↑B / (8 * (1 + Real.log ↑k))⌋₊ ∧
+              ∀ (V : Type u) [Finite V] (E : Finset (Finset V)),
+                (∀ e ∈ E, e.card = k) →
+                  E.card ≤ B + ⌊√↑B / (8 * (1 + Real.log ↑k))⌋₊ →
+                    ∃ coloring, ∀ e ∈ E, (∃ red ∈ e, coloring red = true) ∧ ∃ blue ∈ e, coloring blue = false
+'Aris4Math.General.RS.rsBudget_characterization_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.rsBudget_parameter_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.propertyB_of_accepted_gain_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.propertyB_of_general_growth_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.non_propertyB_edges_ge_general_growth_twelve' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GeneralGrowthTwelveAudit.original_complete_statement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GeneralGrowthTwelveAudit.original_noncolorable_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+real 7.70
+user 6.05
+sys 1.29

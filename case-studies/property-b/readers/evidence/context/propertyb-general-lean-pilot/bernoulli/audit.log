@@ -1,0 +1,15 @@
+'Aris4Math.General.RS.bernoulli_harris' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.bernoulli_rpow_jensen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.bernoulli_harris_events' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.bernoulliProb_all_edges_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+Aris4Math.General.RS.bernoulli_harris.{u_1} {V : Type u_1} [Fintype V] {p : ℝ} (hp : 0 ≤ p) (hp1 : p ≤ 1)
+  (f g : (V → Bool) → ℝ) (hf : Monotone f) (hg : Monotone g) :
+  bernoulliExpect p f * bernoulliExpect p g ≤ bernoulliExpect p fun b => f b * g b
+Aris4Math.General.RS.bernoulli_rpow_jensen.{u_1} {V : Type u_1} [Fintype V] {p a : ℝ} (hp : 0 ≤ p) (hp1 : p ≤ 1)
+  (ha : 0 < a) (f : (V → Bool) → ℝ) : a ^ bernoulliExpect p f ≤ bernoulliExpect p fun b => a ^ f b
+Aris4Math.General.RS.bernoulliProb_all_edges_hit.{u_1} {V : Type u_1} [Fintype V] {p : ℝ} (hp : 0 ≤ p) (hp1 : p ≤ 1)
+  (edges : Finset (Finset V)) :
+  ∏ e ∈ edges, (1 - (1 - p) ^ e.card) ≤ bernoulliProb p fun b => ∀ e ∈ edges, ∃ v ∈ e, b v = true
+Aris4Math.General.RS.bernoulliProb_hits.{u_1} {V : Type u_1} [Fintype V] (p : ℝ) (s : Finset V) :
+  (bernoulliProb p fun b => ∃ v ∈ s, b v = true) = 1 - (1 - p) ^ s.card
+Aris4Math.General.RS.sum_bernoulliWeight.{u_1} {V : Type u_1} [Fintype V] (p : ℝ) : ∑ b, bernoulliWeight p b = 1

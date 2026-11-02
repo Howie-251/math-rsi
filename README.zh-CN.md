@@ -1,6 +1,6 @@
 # MathRSI
 
-[English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md)
+[English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md)
 
 **以 ARIS 完整技能和领域知识组织数学研究。** 从文献查漏到严密证明，把发现、推导、计算、审阅、形式化与可复现交接接成实际工作流。
 
@@ -49,6 +49,16 @@
 ECC保留[首版草案](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，等待用户安排另一位领域agent重做；它未按本次Property B标准验收，未加入项目默认技能发现。已授权的ECC原交接只读快照见[经验来源](development/context/ecc-source/README.md)；没有写入或恢复ECC原研究。
 
 工作流的具体衔接提炼自[Property B与ECC的六条历史转折](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)，包括局部核验返回原义务、完整覆盖与拒绝证据分工，以及较弱必要条件已足够时及时收束。本轮开发读取和整理这些经验，未重新解题或重放全部生产证据，也未据此宣称通用提速已经验证。
+
+## 研究案例：Property B 超图二染色
+
+**k = 5–12 的逐项下界，以及覆盖全部 k ≥ 12 的统一定理。** 一般定理和较早的五元下界33、34已有端到端Lean；其余逐项结果各自的纸面证明、计算证书和独核范围在[案例页](case-studies/property-b/README.md)中列明。
+
+[![Property B 下界增益](case-studies/property-b/assets/delta.png)](case-studies/property-b/README.md)
+
+这些研究先通过 **ARIS** 完成，再沉淀成 **MathRSI 的工作流和 Property B 插件**。它们是方法来源与成果案例；后续新题再检验 MathRSI v1 本身的效果。案例包括完整可读证明、Lean源码与审计入口，以及真实失败与有效修法。
+
+**[案例首页（English）](case-studies/property-b/README.md)** · [完整证明HTML](case-studies/property-b/readers/PROPERTY_B_GENERAL_BOUND.html) · [Lean阅读页](case-studies/property-b/readers/PROPERTY_B_GENERAL_LEAN.html)。克隆或下载后，在浏览器打开 `case-studies/property-b/index.html`；全文阅读页为中文，公式与图离线可读。
 
 ## 可直接使用
 

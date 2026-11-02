@@ -1,0 +1,31 @@
+Aris4Math.General.RS.pilotTarget_of_fin.{u}
+  (hfin :
+    ∀ (n : ℕ) (F : Finset (Finset (Fin n))),
+      Aris4Math.General.RS.Uniform F 17 → F.card ≤ 2 ^ 17 → Aris4Math.General.RS.PropertyB F) :
+  Aris4Math.General.RS.PilotTarget
+Aris4Math.General.RS.propertyB_of_fin_criterion.{u} (k : ℕ) (C : ℕ → ℕ → Prop)
+  (hfin :
+    ∀ (n : ℕ) (F : Finset (Finset (Fin n))),
+      Aris4Math.General.RS.Uniform F k → C F.card (Aris4Math.General.RS.gamma F) → Aris4Math.General.RS.PropertyB F)
+  {V : Type u} [Finite V] (E : Finset (Finset V)) (hU : Aris4Math.General.RS.Uniform E k)
+  (hC : C E.card (Aris4Math.General.RS.gamma E)) : Aris4Math.General.RS.PropertyB E
+'Aris4Math.General.RS.bare_finite_pilot_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.bare_finite_criterion_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+        7.70 real         1.20 user         1.76 sys
+          1196523520  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              155463  page reclaims
+                 902  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2803  voluntary context switches
+               33392  involuntary context switches
+          4276745835  instructions retired
+          2577544276  cycles elapsed
+           126102336  peak memory footprint

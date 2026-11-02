@@ -1,0 +1,298 @@
+{
+  "verdict": "PASS",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "checks": {
+    "source_hash_match": "pass",
+    "information_fidelity": "pass",
+    "structure": "pass",
+    "math_code_tables": "pass",
+    "callouts": "pass",
+    "safety_escaping": "pass",
+    "placeholder_leak": "pass"
+  },
+  "blocking_issues": [],
+  "warnings": [],
+  "summary": "The latest case index faithfully preserves all 94 source content blocks, including both tables, four code blocks, every heading/list/paragraph, and the exact PNG figure. Each of the six promoted readers equals its original HTML after only documented href/src adaptations; all 94 copied supporting files and directly mapped non-HTML targets match their original bytes. Local targets and HTML fragments resolve. Static safety and offline Edge checks found no material fidelity, safety, or usability issue. This is a render/portability review only, not validation of mathematical claims, Lean proofs, arithmetic results, or model-review conclusions.",
+  "reviewed_at_utc": "2026-11-02T06:49:17.659670+00:00",
+  "reviewer_route": {
+    "backend": "codex",
+    "source": "host-default",
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "transport": "native",
+    "identity_scope": "Configured fresh native reviewer route; no separate provider-side identity attestation."
+  },
+  "scope": {
+    "source": "case-studies/property-b/README.md",
+    "generated": "case-studies/property-b/index.html",
+    "contract": "base/skills/skills-codex/render-html/SKILL.md",
+    "adapters": [
+      "case-studies/property-b/tools/render_index.py",
+      "case-studies/property-b/tools/package_readers.py"
+    ],
+    "manifests_and_reports": [
+      "case-studies/property-b/readers/PORTABILITY_MANIFEST.json",
+      "development/propertyb-case-20261102/PORTABILITY.json",
+      "development/propertyb-case-20261102/BROWSER_READERS.json",
+      "development/propertyb-case-20261102/BROWSER_INDEX.json"
+    ],
+    "original_html_directory": "/Users/rfy_naiveai/Desktop/aris4math",
+    "not_performed": [
+      "Mathematical truth audit",
+      "Lean build",
+      "Arithmetic certificate replay",
+      "Recursive historical archive link repair",
+      "External HTTP link reachability checks",
+      "Exhaustive visual inspection of every proof paragraph"
+    ]
+  },
+  "independent_evidence": {
+    "index_source_sha256": "fdc959e233b6e701a73b6717f91ca294c7596f609fca2829c1c2595dfe4e058b",
+    "index_metadata_sha256": "fdc959e233b6e701a73b6717f91ca294c7596f609fca2829c1c2595dfe4e058b",
+    "index_full_source_body_comparison": {
+      "status": "PASS",
+      "blocks": 94,
+      "headings": 7,
+      "paragraphs_including_image": 22,
+      "list_items": 4,
+      "code_blocks": 4,
+      "table_headers": 7,
+      "table_cells": 50,
+      "method": "Independent Markdown subset extraction compared in order with HTMLParser text blocks inside main, excluding generated header/footer; image alt retained."
+    },
+    "index_figure": "Base64-decoded embedded PNG equals assets/delta.png byte for byte.",
+    "readers": [
+      {
+        "reader": "PROPERTY_B_GENERAL_BOUND.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 55,
+        "element_counts": {
+          "h1": 2,
+          "h2": 10,
+          "h3": 41,
+          "h4": 0,
+          "ul": 3,
+          "ol": 2,
+          "li": 23,
+          "table": 7,
+          "tr": 38,
+          "td": 129,
+          "th": 29,
+          "pre": 0,
+          "code": 3,
+          "details": 4,
+          "summary": 4,
+          "mjx-container": 1049,
+          "svg": 1105
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {
+          "mjx-eqn:1": 2,
+          "mjx-eqn:2": 2,
+          "mjx-eqn:3": 2,
+          "mjx-eqn:4": 2
+        }
+      },
+      {
+        "reader": "PROPERTY_B_GENERAL_LEAN.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 28,
+        "element_counts": {
+          "h1": 2,
+          "h2": 6,
+          "h3": 1,
+          "h4": 0,
+          "ul": 0,
+          "ol": 1,
+          "li": 6,
+          "table": 1,
+          "tr": 5,
+          "td": 12,
+          "th": 3,
+          "pre": 2,
+          "code": 74,
+          "details": 1,
+          "summary": 1,
+          "mjx-container": 118,
+          "svg": 122
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {}
+      },
+      {
+        "reader": "PROPERTY_B_GENERAL_LEAN_PILOT.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 56,
+        "element_counts": {
+          "h1": 2,
+          "h2": 5,
+          "h3": 6,
+          "h4": 0,
+          "ul": 0,
+          "ol": 2,
+          "li": 10,
+          "table": 6,
+          "tr": 42,
+          "td": 112,
+          "th": 19,
+          "pre": 1,
+          "code": 34,
+          "details": 1,
+          "summary": 1,
+          "mjx-container": 11,
+          "svg": 11
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {}
+      },
+      {
+        "reader": "M6_GE67.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 102,
+        "element_counts": {
+          "h1": 2,
+          "h2": 10,
+          "h3": 18,
+          "h4": 45,
+          "ul": 1,
+          "ol": 4,
+          "li": 30,
+          "table": 9,
+          "tr": 54,
+          "td": 142,
+          "th": 29,
+          "pre": 2,
+          "code": 21,
+          "details": 12,
+          "summary": 12,
+          "mjx-container": 902,
+          "svg": 948
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {}
+      },
+      {
+        "reader": "M8_M9_IMPROVEMENTS.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 33,
+        "element_counts": {
+          "h1": 1,
+          "h2": 5,
+          "h3": 21,
+          "h4": 0,
+          "ul": 0,
+          "ol": 2,
+          "li": 10,
+          "table": 3,
+          "tr": 18,
+          "td": 55,
+          "th": 12,
+          "pre": 3,
+          "code": 14,
+          "details": 1,
+          "summary": 1,
+          "mjx-container": 256,
+          "svg": 280
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {}
+      },
+      {
+        "reader": "K12_LOCK_COMPARISON.html",
+        "independent_parsed_tag_rewrite_exact": true,
+        "changed_start_tags": 18,
+        "element_counts": {
+          "h1": 2,
+          "h2": 7,
+          "h3": 1,
+          "h4": 0,
+          "ul": 0,
+          "ol": 1,
+          "li": 7,
+          "table": 2,
+          "tr": 10,
+          "td": 40,
+          "th": 10,
+          "pre": 1,
+          "code": 8,
+          "details": 1,
+          "summary": 1,
+          "mjx-container": 232,
+          "svg": 234
+        },
+        "metadata_preserved": true,
+        "code_blocks_exact": true,
+        "callouts_exact": true,
+        "duplicate_ids": {}
+      }
+    ],
+    "reader_comparison_method": "Parsed original start tags independently; applied only manifest ordinary href/src value mappings at original tag positions; reconstructed text equaled the delivered page exactly. Separately checked unchanged element counts, code blocks, metadata and callout classes, preserved query/fragment, existing local paths, HTML fragments, and exact non-HTML target bytes.",
+    "supporting_files": {
+      "exact_original_bytes": 94,
+      "direct_rewritten_non_html_targets_exact_original_bytes": true
+    },
+    "safety": {
+      "scripts": 0,
+      "event_handler_attributes": 0,
+      "unsafe_executable_urls": 0,
+      "unexpected_external_or_executable_css": 0,
+      "template_placeholders_or_private_parser_markers": 0,
+      "broken_direct_local_links_or_html_fragments": 0,
+      "svg_data_images_independently_decoded_and_xml_inspected": 3
+    },
+    "independent_browser": {
+      "browser": "Microsoft Edge 156.0.4314.58",
+      "driver": "Python Playwright sync API; chromium.launch(channel=\"msedge\", headless=True)",
+      "network": "HTTP and HTTPS routes aborted; file navigation only",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pages": [
+        "case-studies/property-b/index.html",
+        "case-studies/property-b/readers/M6_GE67.html"
+      ],
+      "results": {
+        "index_document_width": 390,
+        "m6_document_width": 390,
+        "k_10_11_12_cells": "white-space: nowrap confirmed on latest regenerated index",
+        "m6_hidden_math": "The sole hidden math container is in the historical duplicate body H1, not proof content."
+      }
+    },
+    "screenshots_independently_viewed": [
+      "development/propertyb-case-20261102/screenshots/index-desktop-table.png",
+      "development/propertyb-case-20261102/screenshots/index-phone-results.png",
+      "development/propertyb-case-20261102/screenshots/property_b_general_bound-phone-proof.png",
+      "development/propertyb-case-20261102/screenshots/property_b_general_lean-desktop-proof.png"
+    ],
+    "other_browser_evidence": "Read BROWSER_READERS.json (all six pages at desktop and phone sizes) and latest BROWSER_INDEX.json; treated these as supplied evidence, independently supplemented as above."
+  },
+  "expected_source_features_checked": [
+    "Historical reader metadata and dates are unchanged; the current README hash is checked against index metadata. Historical generation metadata is not represented as this publication date.",
+    "The historical readers retain inert close buttons and an empty image in a closed lightbox template; there are no scripts or event handlers. These are not missing requested figures or executable content.",
+    "Three historical GENERAL_BOUND SVG data images were independently decoded and parsed; no scripts, event handlers, foreignObject, or external references were present. The new index PNG data URI is the documented adapter output.",
+    "GENERAL_BOUND retains four duplicate MathJax equation-label IDs from its original source. No href/xlink:href targets any of those duplicate IDs, glyph IDs remain resolvable, and no current rendering or navigation defect was found; no content-changing archive cleanup is requested.",
+    "Wide tables/formulas use historical responsive overflow behavior; the current index table first column uses nowrap after the reported CSS fix."
+  ]
+}
+
+Independent review note
+
+PASS — 0 blocking issues, 0 warnings. Same-family / provisional.
+
+I directly read the render skill, project instructions, README, generated index, both adapters, manifest, portability report, browser records, and the six original and promoted HTML pages. The six historical readers were not judged against newly written mathematics: their non-link content was compared exactly with their source HTML. All direct mapped non-HTML dependencies were also compared with their original bytes.
+
+Actual execution in this review used tools.exec_command with cat, rg, and sed for direct source inspection, followed by independent inline python3 programs using html.parser.HTMLParser, pathlib, urllib.parse, hashlib, base64 and xml.etree.ElementTree. Those programs performed the in-order 94-block Markdown/HTML comparison, the parsed-tag link-only reconstruction, supporting-file equality, URL/fragment resolution, safety scans and SVG inspection recorded above; all assertions completed with exit code 0. A separate inline python3 Playwright program launched Microsoft Edge with channel=msedge, headless=True, aborted HTTP(S), and loaded the latest local index and M6 reader at 390×844. It confirmed the corrected nowrap cells, 390-pixel document widths and the provenance of the hidden duplicate-title formula. Four supplied screenshots were opened with view_image and visually inspected. The latest index source hash was rechecked after the CSS-only regeneration.
+
+No source HTML, Markdown, adapter, mathematical evidence, or original workspace file was edited. No Lean or mathematical checker was executed. External website availability and recursive links inside historical Markdown are outside this review's stated boundary.

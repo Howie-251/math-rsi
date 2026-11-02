@@ -1,0 +1,36 @@
+def Aris4Math.General.RS.rsFailureProbability.{u} : {V : Type u} → [Finite V] → Finset (Finset V) → ℝ → ℝ :=
+fun {V} [Finite V] E p => Aris4Math.General.RS.failureProb (Aris4Math.General.RS.relabel (Fintype.equivFin V) E) p
+Aris4Math.General.RS.rs_recoloring_failure_le.{u} {V : Type u} [Finite V] (E : Finset (Finset V)) (k : ℕ) (hk : 2 ≤ k)
+  (hu : Aris4Math.General.RS.Uniform E k) {p : ℝ} (hp : 0 < p) (hp1 : p ≤ 1) :
+  Aris4Math.General.RS.rsFailureProbability E p ≤
+    1 - Aris4Math.General.RS.ak k p ^ (↑E.card / 2 ^ (k - 1)) +
+      ↑(Aris4Math.General.RS.gamma E) / (2 ^ (k - 1)) ^ 2 * Aris4Math.General.RS.jk k p
+Aris4Math.General.RS.propertyB_of_rs_bound.{u} {V : Type u} [Finite V] (E : Finset (Finset V)) (k : ℕ) (hk : 2 ≤ k)
+  (hu : Aris4Math.General.RS.Uniform E k) {p : ℝ} (hp : 0 < p) (hp1 : p ≤ 1)
+  (hbound :
+    1 - Aris4Math.General.RS.ak k p ^ (↑E.card / 2 ^ (k - 1)) +
+        ↑(Aris4Math.General.RS.gamma E) / (2 ^ (k - 1)) ^ 2 * Aris4Math.General.RS.jk k p <
+      1) :
+  Aris4Math.General.RS.PropertyB E
+Aris4Math.General.RS.propertyB_seventeen_of_at_most_two_pow.{u} : Aris4Math.General.RS.PilotTarget
+'Aris4Math.General.RS.rs_recoloring_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.propertyB_of_rs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.bare_seventeen_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+        9.63 real         4.65 user         2.08 sys
+          2293563392  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              236928  page reclaims
+                 855  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2799  voluntary context switches
+               49635  involuntary context switches
+          4157163104  instructions retired
+          2164151692  cycles elapsed
+           124087032  peak memory footprint

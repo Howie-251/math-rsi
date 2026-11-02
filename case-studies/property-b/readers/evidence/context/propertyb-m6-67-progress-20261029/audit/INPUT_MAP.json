@@ -1,0 +1,2068 @@
+{
+  "artifact_kind": "assembly_engineering_input_and_evidence_map",
+  "generated_at": "2026-10-29T09:42:46.170517+00:00",
+  "original_statement": "For every finite set V and every set E of distinct six-element subsets with |E|<=66, there exists chi:V->{red,blue} such that every A in E contains both colors; hence m(6)>=67.",
+  "canonical_quantifiers": "forall finite V, forall E subset {A subset V : |A|=6}, |E|<=66 -> exists chi forall A in E exists x,y in A: chi(x)!=chi(y)",
+  "external_hypotheses": [
+    "A0"
+  ],
+  "internal_hypotheses": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10"
+  ],
+  "explicitly_not_external": [
+    "paircover",
+    "v27..44",
+    "minimum degree",
+    "regularity",
+    "linear intersections",
+    "balanced coloring",
+    "a pre-existing lock tuple",
+    "a numerical certificate supplied by the theorem caller"
+  ],
+  "assumptions": [
+    {
+      "id": "A0",
+      "hypothesis": "V finite; E is a set of distinct six-subsets of V; |E|<=66",
+      "external": true,
+      "where": "Main§1",
+      "discharged": "Original theorem input"
+    },
+    {
+      "id": "A1",
+      "hypothesis": "H not PropertyB and vertex-minimal among original counterexamples",
+      "external": false,
+      "where": "Main§2",
+      "discharged": "Contradiction context plus well-ordering finite vertex counts"
+    },
+    {
+      "id": "A2",
+      "hypothesis": "Every distinct pair covered",
+      "external": false,
+      "where": "Main§2",
+      "discharged": "Uncovered-pair contraction preserves edge size/simplicity after dedup and noncolorability"
+    },
+    {
+      "id": "A3",
+      "hypothesis": "27<=v<=44",
+      "external": false,
+      "where": "Main§2",
+      "discharged": "Explicit v<=10 coloring,16 balanced cases, pair-degree inequality"
+    },
+    {
+      "id": "A4",
+      "hypothesis": "Exactly66 edges and totaldegree396",
+      "external": false,
+      "where": "Main§2",
+      "discharged": "Add distinct six-edges; colorability of augmented graph implies original coloring"
+    },
+    {
+      "id": "A5",
+      "hypothesis": "Minimum degree/codegree/lock trace restrictions",
+      "external": false,
+      "where": "Main§5-7 and local sources",
+      "discharged": "Actual input-specific selection and exhaustive internal cases; no global regularity/linearity assumption"
+    },
+    {
+      "id": "A6",
+      "hypothesis": "Conditional nonempty uniform finite permutation sample with distinct actual locks/slots",
+      "external": false,
+      "where": "Main§3 and each actual certificate",
+      "discharged": "Actual selected distinct points, recorded legal distinct positions, free vertices uniformly permuted"
+    },
+    {
+      "id": "A7",
+      "hypothesis": "Quota family consists of distinct five-sets; common bad-pair vector; finite capacities",
+      "external": false,
+      "where": "Main§4",
+      "discharged": "Original H simple; actual links/avoided subfamilies; real pair counts induce common vector"
+    },
+    {
+      "id": "A8",
+      "hypothesis": "A complete type domain contains the current actual degree/trace input",
+      "external": false,
+      "where": "Main§5.5,§6-7 and per-domain independent checks",
+      "discharged": "Actual degree ordering, full multiset clique capacities and exact parent restriction; zero/negative impossible traces treated explicitly"
+    },
+    {
+      "id": "A9",
+      "hypothesis": "Every reached actual local type has some legal layout with U<1",
+      "external": false,
+      "where": "Numerical evidence map",
+      "discharged": "Completed exact rational programs and independent replay on full reached domains; layout may depend on selected type"
+    },
+    {
+      "id": "A10",
+      "hypothesis": "Current completed-H coloring restricts to original edges",
+      "external": false,
+      "where": "Main§8",
+      "discharged": "Original edges are subset of augmented edges; contraction used only to derive paircover"
+    }
+  ],
+  "symbols": [
+    [
+      "H=(V,E)",
+      "finite simple6-uniform hypergraph",
+      "Original input, then one internally completed actual counterexample"
+    ],
+    [
+      "v=|V|",
+      "natural number",
+      "After reduction27..44"
+    ],
+    [
+      "M",
+      "natural number fixed66",
+      "Never reuse65-edge numerical results"
+    ],
+    [
+      "d(x)",
+      "natural actual incidence degree",
+      "Changes only when graph explicitly augmented before case analysis"
+    ],
+    [
+      "lambda_xy",
+      "natural actual pair codegree",
+      ">=1 only after paircover reduction"
+    ],
+    [
+      "delta",
+      "natural actual minimum degree",
+      "Some general integerQ statements instead use its explicit lower bound; source identifies which"
+    ],
+    [
+      "S,p",
+      "ordered distinct actual lock tuple; injective position tuple in1..v",
+      "Labels remain attached even positions not sorted"
+    ],
+    [
+      "ell_T",
+      "nonnegative integer actual edge-trace multiplicity",
+      "sum ell=66"
+    ],
+    [
+      "e_h,f_h,w_h",
+      "nonnegative rational conditional probabilities/bookkeeping weights",
+      "Zero conditions and capacities from Main§3"
+    ],
+    [
+      "A_h,B_h,C_h,D_h,U",
+      "nonnegative rational upper-bound terms/lower deduction",
+      "C_h is all distinct ordered-pair bookkeeping, not actual witness count"
+    ],
+    [
+      "R,f_R,N",
+      "avoided lock subset; actual subfamily count; support upper bound",
+      "R also denotes actual low-degree set in local proofs; local scope prevents conflation"
+    ],
+    [
+      "S(f,q),q_*(f,N)",
+      "integer component support lower relaxation; necessary pair quota",
+      "q_2 old two-bound and q_3 strengthened unique-complement versions kept separate"
+    ],
+    [
+      "z_TU",
+      "nonnegative integer actual unordered bad-pair vector",
+      "One same vector for every avoided subset at a fixed center"
+    ],
+    [
+      "Z,Q",
+      "integer degree-budget surplus and reciprocal denominator maximum",
+      "Q here is selection constant, not the pair-bound C_h"
+    ],
+    [
+      "tau",
+      "nonnegative integer actual triple trace multiplicity",
+      "Range follows actual pair capacities in the relevant local source"
+    ],
+    [
+      "P_v",
+      "internal all-simple/paircover/exact66 branch proposition",
+      "Not an added original theorem assumption"
+    ]
+  ],
+  "evidence": [
+    {
+      "branch": "v<=10",
+      "domain": "Any finite V with |V|<=10",
+      "method": "Explicit balanced split, each color class<=5",
+      "numeric_rows": 0
+    },
+    {
+      "branch": "v11..26",
+      "domain": "All16 integer vertex counts",
+      "evidence": "root/BASE_DOMAIN_CHECK.json",
+      "method": "Balanced-color exact rational union bound",
+      "numeric_rows": 16,
+      "maximum": "792/805"
+    },
+    {
+      "branch": "v27..30",
+      "domain": "All4 vertex counts after internal reduction",
+      "evidence": "root/BASE_DOMAIN_CHECK.json",
+      "method": "Zero-lock exact rational bound",
+      "numeric_rows": 4,
+      "maximum": "179971/180090"
+    },
+    {
+      "branch": "v31..33",
+      "domain": "All actual minimum/partner/trace branches",
+      "evidence": "independent31_33/CHECK.json",
+      "numeric_rows": 143,
+      "quota_table_entries": 125,
+      "comparison": "All143 exact equality",
+      "maximum": "163866331/163881900"
+    },
+    {
+      "branch": "v34",
+      "domain": "All actual minimum degrees7..11",
+      "evidence": [
+        "independent34_min10/CHECK.json",
+        "34_min9/CHECK.json",
+        "34_min11/CERTIFICATE.json",
+        "34_min11/REPLAY_ORIGINAL.json"
+      ],
+      "numeric_rows": 87,
+      "breakdown": {
+        "minimum7_8": 11,
+        "minimum9": 27,
+        "minimum10": 40,
+        "minimum11": 9
+      },
+      "comparison": "Exact row equality in their respective independent checks; old adaptive rows retain old quota version",
+      "maximum": "156204893/156318120"
+    },
+    {
+      "branch": "v35",
+      "domain": "All actual minimum degrees7..11",
+      "evidence": "independent_new_branches/CHECK.json",
+      "numeric_rows": 306,
+      "breakdown": [
+        {
+          "minimum": 7,
+          "profiles": 24,
+          "maximum": "61407061/61410690"
+        },
+        {
+          "minimum": 8,
+          "profiles": 58,
+          "maximum": "4961743/4962480"
+        },
+        {
+          "minimum": 9,
+          "profiles": 114,
+          "maximum": "29774683/29774880"
+        },
+        {
+          "minimum": 10,
+          "profiles": 102,
+          "maximum": "3721291/3721860"
+        },
+        {
+          "minimum": 11,
+          "profiles": 8,
+          "maximum": "13429/13485"
+        }
+      ],
+      "comparison": "Some older adaptive input rows have different independent but valid strict bounds; not all exact equality",
+      "maximum": "29774683/29774880",
+      "role_limit": "This auditor authored component lemma; independent lemma audit is elsewhere"
+    },
+    {
+      "branch": "v36..38",
+      "domain": "Complete adaptive and failed-parent four-lock continuations; includes redundant passing rows",
+      "evidence": "independent36_38/RESULTS.json",
+      "numeric_rows": 5604,
+      "breakdown": [
+        {
+          "v": 36,
+          "replayed": 3234,
+          "maximum": "480239/480240"
+        },
+        {
+          "v": 37,
+          "replayed": 1495,
+          "maximum": "1334992/1335015"
+        },
+        {
+          "v": 38,
+          "replayed": 875,
+          "maximum": "9343777/9345105"
+        }
+      ],
+      "comparison": {
+        "equal": 5535,
+        "independent_stronger": 2,
+        "independent_weaker_but_strict": 67
+      },
+      "four_lock_rows": 5386,
+      "role_limit": "Independent checker authored component lemma; independently audited lemma and table from independent31_33 discharge that import"
+    },
+    {
+      "branch": "v39",
+      "domain": "37 distinguished-fourth degree tuples times27 multiset patterns",
+      "evidence": "independent39/CHECK.json",
+      "numeric_rows": 999,
+      "comparison": "All999 exact equality;34 nonmonotone label-position layouts retained",
+      "maximum": "113467943/113476275"
+    },
+    {
+      "branch": "v40..41",
+      "domain": "Raw90+672=762 types; actual structure excludes1+20=21",
+      "evidence": "root/INDEPENDENT40_41.json",
+      "numeric_rows": 741,
+      "structural_excluded": 21,
+      "comparison": "All741 retained rows exact equality",
+      "maximum": "74754181/74760840"
+    },
+    {
+      "branch": "v42..44",
+      "domain": "All32 labelled K5 partitions filtered by actual re-selection to31/26/26",
+      "evidence": "../propertyb-m6-67-diagnosis-20261029/integer-lock/TAIL_ARITHMETIC.json",
+      "numeric_rows": 83,
+      "comparison": "All83 exact equality",
+      "maximum": "1382147533/1383075540"
+    }
+  ],
+  "probability_mode": "All probabilities and expectations are on finite uniform actual vertex permutations. No asymptotic limits, infinite-series interchange, a.s./w.h.p. upgrades or uniform big-O claims occur.",
+  "dag": {
+    "D": {
+      "description": "Finite simple six-uniform target and typed actual objects",
+      "requires": [],
+      "source_units": [
+        "G-S01"
+      ]
+    },
+    "R": {
+      "description": "Lossless minimal-counterexample reduction, small v, exact66 completion",
+      "requires": [
+        "D"
+      ],
+      "source_units": [
+        "G-S02"
+      ]
+    },
+    "P": {
+      "description": "Greedy witness, conditional weights, valid failure upper bound",
+      "requires": [
+        "D"
+      ],
+      "source_units": [
+        "G-S03",
+        "IMPORT-S01"
+      ]
+    },
+    "Qold": {
+      "description": "Old ceiling link quota and common-vector/maximum subtraction",
+      "requires": [
+        "D",
+        "P"
+      ],
+      "source_units": []
+    },
+    "Q2": {
+      "description": "CW and feedback-vertex component support quotas",
+      "requires": [
+        "Qold"
+      ],
+      "source_units": []
+    },
+    "Q3": {
+      "description": "Unique-complement support strengthening and component DP quota",
+      "requires": [
+        "Q2"
+      ],
+      "source_units": [
+        "G-S04"
+      ]
+    },
+    "S": {
+      "description": "Integer unit-lock and successive-minimum/weak-wedge/fourth-lock selection",
+      "requires": [
+        "R"
+      ],
+      "source_units": [
+        "G-S05",
+        "MID-S01",
+        "MID-S02"
+      ]
+    },
+    "C": {
+      "description": "Complete actual trace recovery, repeated blocks, preserved parent traces and labels",
+      "requires": [
+        "D",
+        "S"
+      ],
+      "source_units": [
+        "G-S05"
+      ]
+    },
+    "B2730": {
+      "description": "Zero-lock v27-30 exact strict bounds",
+      "requires": [
+        "R",
+        "P"
+      ],
+      "source_units": [
+        "G-S06"
+      ]
+    },
+    "B3133": {
+      "description": "All actual minimum-degree cases at v31-33",
+      "requires": [
+        "R",
+        "P",
+        "Q3",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S06",
+        "L31-S01",
+        "L31-S02",
+        "L31-S03",
+        "L31-S04",
+        "L31-S05",
+        "L31-S06",
+        "L31-S07"
+      ]
+    },
+    "B34": {
+      "description": "v34 minimum7-11 complete structure and87 local types",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "Q2",
+        "Q3",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S07",
+        "L349-S01",
+        "L349-S02",
+        "L349-S03",
+        "L349-S04",
+        "L349-S05",
+        "L3410-S01",
+        "L3410-S02",
+        "L3410-S03",
+        "L3410-S04",
+        "L3410-S05",
+        "L3410-S06",
+        "L3411-S01",
+        "L3411-S02",
+        "L3411-S03",
+        "L3411-S04",
+        "L3411-S05",
+        "L3411-S06"
+      ]
+    },
+    "B35": {
+      "description": "v35 minimum7-11 complete structure and306 recorded local inputs",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "Q2",
+        "Q3",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S07",
+        "L359-S01",
+        "L359-S02",
+        "L359-S03",
+        "L359-S04",
+        "L3510-S01",
+        "L3510-S02",
+        "L3510-S03",
+        "L3510-S04",
+        "L3510-S05",
+        "L3511-S01"
+      ]
+    },
+    "B3638": {
+      "description": "v36-38 all minimums and all failed-parent fourth-lock continuations",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "Q2",
+        "Q3",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S06",
+        "L36-S01",
+        "L36-S02",
+        "L36-S03",
+        "L36-S04",
+        "L36-S05",
+        "L36-S06",
+        "L36-S07",
+        "L36-S08"
+      ]
+    },
+    "B39": {
+      "description": "v39 triple+weak-fourth full999-type branch",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S06",
+        "L39-S01",
+        "L39-S02",
+        "L39-S03",
+        "L39-S04",
+        "L39-S05"
+      ]
+    },
+    "B4041": {
+      "description": "v40/41 unit locks and actual forbidden-trace re-selection",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S06",
+        "L4041-S01",
+        "L4041-S02",
+        "L4041-S03",
+        "L4041-S04",
+        "L4041-S05",
+        "L4041-S06"
+      ]
+    },
+    "B4244": {
+      "description": "v42-44 nine-degree pools and actual high-trace avoidance",
+      "requires": [
+        "R",
+        "P",
+        "Qold",
+        "S",
+        "C"
+      ],
+      "source_units": [
+        "G-S06",
+        "DIAG-S01",
+        "DIAG-S02"
+      ]
+    },
+    "T": {
+      "description": "Original at-most66-edge coloring and m6>=67",
+      "requires": [
+        "R",
+        "B2730",
+        "B3133",
+        "B34",
+        "B35",
+        "B3638",
+        "B39",
+        "B4041",
+        "B4244"
+      ],
+      "source_units": [
+        "G-S08"
+      ]
+    },
+    "E": {
+      "description": "Evidence scopes, role independence and final review bookkeeping",
+      "requires": [
+        "T"
+      ],
+      "source_units": [
+        "G-S09"
+      ]
+    }
+  },
+  "topological_order": [
+    "D",
+    "R",
+    "P",
+    "Qold",
+    "Q2",
+    "Q3",
+    "S",
+    "C",
+    "B2730",
+    "B3133",
+    "B34",
+    "B35",
+    "B3638",
+    "B39",
+    "B4041",
+    "B4244",
+    "T",
+    "E"
+  ],
+  "cycle_check": "ACYCLIC",
+  "semantic_cycle_note": "Noncolorability assumption used locally only after independently established strict sufficient configurations; final theorem is not a premise of its own selection lemmas.",
+  "obligations": [
+    {
+      "obligation_id": "G-S01-O01",
+      "unit_id": "G-S01",
+      "dag_node": "D",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Define finite simple six-uniform H and original Bool/two-color witness",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S01-O02",
+      "unit_id": "G-S01",
+      "dag_node": "D",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State original quantifiers: all finite V, all sets E of distinct six-subsets, |E|<=66",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S01-O03",
+      "unit_id": "G-S01",
+      "dag_node": "D",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Define internal P_v; record that it is not an external hypothesis",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O01",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Choose vertex-minimal counterexample without strengthening original input",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O02",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Identify uncovered pair; every edge image remains six-element and coloring pulls back",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O03",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Derive pair coverage and5d(x)=sum codegrees",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O04",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Exclude v<=10 by two color classes of size<=5",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O05",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Exclude all16 integers11..26 by balanced-color union bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O06",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Derive v<=44 from v ceil((v-1)/5)<=396 and45 endpoint405",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O07",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "For27<=v<=44 add distinct edges to66; preserve noncolorability and paircover",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S02-O08",
+      "unit_id": "G-S02",
+      "dag_node": "R",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Use degrees and traces of the same completed H thereafter",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O01",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Define distinct actual lock vertices, legal distinct positions and trace multiplicities",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O02",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Prove greedy red-free conclusion and single-intersection blue-failure witness",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O03",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Derive free-position endpoint and ordered-pair conditional weights",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O04",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Derive locked-position weights and all zero/capacity conditions",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O05",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Count distinct ordered pairs with ell_T(ell_U-delta_TU)",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O06",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Subtract only a bound on actual nonsingle-intersection bookkeeping weight",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S03-O07",
+      "unit_id": "G-S03",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Use pointwise min then union over finite positions; U<1 yields an actual original coloring",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O01",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Prove old link quota using distinct five-set intersections<=4",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O02",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Record one common actual bad-pair vector and capacities across all avoided pools",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O03",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Show full-pool, max_R and joint deductions have correct lower-bound direction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O04",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Prove CW component independent-set/support bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O05",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Prove feedback-vertex-to-forest support bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O06",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Prove unique-complement support>=11 under its exact inequality",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O07",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Component supports disjoint; relaxed component partitions lower support",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S04-O08",
+      "unit_id": "G-S04",
+      "dag_node": "Q3",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "At-most-q DP and minimum accepted q_* remain necessary bounds; allow unused budget",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S05-O01",
+      "unit_id": "G-S05",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Integer-degree Q selection: positive denominators, nonempty low pool, Caro-Wei expectation and integer rounding",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S05-O02",
+      "unit_id": "G-S05",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Successive min-unit-neighbor pools: actual minimizers and joint degree charges",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S05-O03",
+      "unit_id": "G-S05",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Fixed actual unit-edge weak wedge: disjoint row classes and strict summed contradiction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S05-O04",
+      "unit_id": "G-S05",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Fourth-lock outside excess E=5T-3(v-1)-2L; positive pool and degree average",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S05-O05",
+      "unit_id": "G-S05",
+      "dag_node": "C",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Trace multiset equations, singleton/empty recovery, repeated doubled pair and exact parent restriction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O01",
+      "unit_id": "G-S06",
+      "dag_node": "B2730",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v27-30 zero-lock common pair quota and all four exact bounds",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O02",
+      "unit_id": "G-S06",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v31-33 all minimum-degree cases with143 actual types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O03",
+      "unit_id": "G-S06",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v36-38 actual selection and every failed triple continued rather than dropped",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O04",
+      "unit_id": "G-S06",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v39 full37 degree tuples times27 multiset patterns",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O05",
+      "unit_id": "G-S06",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v40/41 complete domain762;21 structural exclusions and741 retained rows",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S06-O06",
+      "unit_id": "G-S06",
+      "dag_node": "B4244",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v42-44 actual re-selection excludes high traces;31/26/26 retained patterns",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O01",
+      "unit_id": "G-S07",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v34 actual minimum range7..11 and complete87-type branch",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O02",
+      "unit_id": "G-S07",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v34 minimum9: three partner branches, actual tau0 arms or double-nine low codegree",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O03",
+      "unit_id": "G-S07",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v34 unique minimum10:23 degree surplus and17 codegree surplus select two11-degree lambda2 partners",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O04",
+      "unit_id": "G-S07",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v34 minimum11: harmonic inequality including isolated A and exact equality branch",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O05",
+      "unit_id": "G-S07",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v35 actual minimum range7..11 and complete306-row coverage",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O06",
+      "unit_id": "G-S07",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v35 minimum9: actual low nonunit partner and bounded common-unit center",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O07",
+      "unit_id": "G-S07",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v35 minimum10: three independently strict domains exclude configurations before new structural contradiction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S07-O08",
+      "unit_id": "G-S07",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v35 minimum11: actual24-point11-degree pool, unit edge and weak wedge",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S08-O01",
+      "unit_id": "G-S08",
+      "dag_node": "T",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "All integers27..44 are covered by actual branch conclusions",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S08-O02",
+      "unit_id": "G-S08",
+      "dag_node": "T",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Contradict same completed counterexample; restrict coloring to original edges",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S08-O03",
+      "unit_id": "G-S08",
+      "dag_node": "T",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Remove every internal degree/paircover/point-count/certificate premise from original theorem",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S08-O04",
+      "unit_id": "G-S08",
+      "dag_node": "T",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Conclude m(6)>=67 without asserting equality or higher parameters",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S09-O01",
+      "unit_id": "G-S09",
+      "dag_node": "E",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Map each completed domain to actual certificate and actual independent replay scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S09-O02",
+      "unit_id": "G-S09",
+      "dag_node": "E",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Separate mathematical selection, domain equality, numeric bounds, role/family independence",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S09-O03",
+      "unit_id": "G-S09",
+      "dag_node": "E",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Do not claim all fractions equal where independent valid deductions are weaker/stronger",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "G-S09-O04",
+      "unit_id": "G-S09",
+      "dag_node": "E",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Final external review is a root-owned pending step, not this executor ledger",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S01-O01",
+      "unit_id": "L31-S01",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State31-33 internal theorem and fixed66/simple/paircover input",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S02-O01",
+      "unit_id": "L31-S02",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "CW component bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S02-O02",
+      "unit_id": "L31-S02",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Feedback-vertex component bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S02-O03",
+      "unit_id": "L31-S02",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Unique-complement component bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S02-O04",
+      "unit_id": "L31-S02",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Disjoint supports and relaxed DP direction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S02-O05",
+      "unit_id": "L31-S02",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual link family simple and all125 exported quota inputs covered",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S03-O01",
+      "unit_id": "L31-S03",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v31 minimum6..11 one-lock selection",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S03-O02",
+      "unit_id": "L31-S03",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v31 min12 >=7 degree12 vertices and <=6 codegree partner",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S04-O01",
+      "unit_id": "L31-S04",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v32 min7..11 positive unit pools and complete35 partner types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S05-O01",
+      "unit_id": "L31-S05",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v32 min12 low-degree/high-degree pair alternatives",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S05-O02",
+      "unit_id": "L31-S05",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Harmonic wedge contradiction with positive bipartite degrees",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S05-O03",
+      "unit_id": "L31-S05",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual13/12/12 wedge and all4 trace patterns",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S06-O01",
+      "unit_id": "L31-S06",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v33 ordinary minimum/unit-partner domain except3 exceptional14-degree cases",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S06-O02",
+      "unit_id": "L31-S06",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v33 delta9 budget forces another9-degree/codegree2 partner",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S06-O03",
+      "unit_id": "L31-S06",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v33 delta10/11 guarantees4/3 actual degree14 neighbors and complete27 traces each",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L31-S07-O01",
+      "unit_id": "L31-S07",
+      "dag_node": "B3133",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "143 strict actual layouts; exact independent injection and quota replay scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "MID-S01-O01",
+      "unit_id": "MID-S01",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual first and common unit pools use minimum degrees, positive common pool and full interval",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "MID-S02-O01",
+      "unit_id": "MID-S02",
+      "dag_node": "S",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Old two-bound component relaxation; joint same-vector avoided pools; actual assigned labels; old failed cases are historical",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S01-O01",
+      "unit_id": "L36-S01",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Source title and theorem-bearing continuation scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S02-O01",
+      "unit_id": "L36-S02",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Internal36-38 theorem and exact probability/import scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S03-O01",
+      "unit_id": "L36-S03",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Specified actual unit edge weak-wedge row inequality",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S04-O01",
+      "unit_id": "L36-S04",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Outside excess identity, positive eligible pool and actual fourth degree bound",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S05-O01",
+      "unit_id": "L36-S05",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Complete multiset clique decomposition and parent-trace restriction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S06-O01",
+      "unit_id": "L36-S06",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v37 nine andv38 six degree/partner branches",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S06-O02",
+      "unit_id": "L36-S06",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Every27 failed parent extended to1452/855 actual types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S07-O01",
+      "unit_id": "L36-S07",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v36 min7..9 complete adaptive domains",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S07-O02",
+      "unit_id": "L36-S07",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v36 min10 actual low pool>=24 and specified-edge weak wedge;48 parents with19 extended to3048",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S07-O03",
+      "unit_id": "L36-S07",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v36 regular11 actual unit edge;2 passing traces plus31 four-lock continuation types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L36-S08-O01",
+      "unit_id": "L36-S08",
+      "dag_node": "B3638",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Certificate map and retained/redundant-row replay counts",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S01-O01",
+      "unit_id": "L349-S01",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State internal34/min9 theorem and role scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S02-O01",
+      "unit_id": "L349-S02",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual unit pool>=21, minimum unit degree<=13; three passing low partner types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S03-O01",
+      "unit_id": "L349-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Degree12 partner unique edge; choose external unit arm of degree12/13",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S03-O02",
+      "unit_id": "L349-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "No triple intersection forces endpoint codegree1..11; complete22 types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S04-O01",
+      "unit_id": "L349-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Minimum unit degree13 costs4u, u21/22",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S04-O02",
+      "unit_id": "L349-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "At least7/10 nine-degree vertices; another9 point with codegree2/3",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L349-S05-O01",
+      "unit_id": "L349-S05",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "27 complete strict profiles and original-coloring interface",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S01-O01",
+      "unit_id": "L3410-S01",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State internal34/min10 theorem and40-type candidate scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S02-O01",
+      "unit_id": "L3410-S02",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Repeated10-degree pair: all codegrees1..10",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S03-O01",
+      "unit_id": "L3410-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Unique10-degree baseline373 and u16..23",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S03-O02",
+      "unit_id": "L3410-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "At least10 eleven-degree nonunit partners, at most7 codegree>=3; choose actual two lambda2 partners",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S04-O01",
+      "unit_id": "L3410-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Complete29 actual triple types",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S04-O02",
+      "unit_id": "L3410-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Exactly3 component max_R repairs; others full-pool deduction",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S05-O01",
+      "unit_id": "L3410-S05",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Complete selection split returns actual coloring",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3410-S06-O01",
+      "unit_id": "L3410-S06",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual certificate and probability/import scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S01-O01",
+      "unit_id": "L3411-S01",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State internal34/min11 theorem and complete9-type candidate scope",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S02-O01",
+      "unit_id": "L3411-S02",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "R>=12, outside<=22; A12/13,C>=14,c<=7; actual units11..b",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S03-O01",
+      "unit_id": "L3411-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "No good wedge implies row t_z<=u_x-10",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S03-O02",
+      "unit_id": "L3411-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Only positive-degree A counted in reciprocal sum; a>=|A_+|",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S03-O03",
+      "unit_id": "L3411-S03",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Harmonic cardinality bound and exact equality force R12/outside22 degree12/cross-unit/internal-lambda3",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S04-O01",
+      "unit_id": "L3411-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual outside center partitions12 R vertices into>=3 groups",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S04-O02",
+      "unit_id": "L3411-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Selected three distinct groups force no center-plus-two-endpoints trace; tau0..3 full classification",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S04-O03",
+      "unit_id": "L3411-S04",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Four good-wedge types with center12/13 andlambda2",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S05-O01",
+      "unit_id": "L3411-S05",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Same-vector maximum avoided component quota and9 exact strict bounds",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3411-S06-O01",
+      "unit_id": "L3411-S06",
+      "dag_node": "B34",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Two probability implementations and both component programs compare9 rows and21 quota inputs",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L359-S01-O01",
+      "unit_id": "L359-S01",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State internal35/min9 theorem; adaptive min-unit e<=11 imported",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L359-S02-O01",
+      "unit_id": "L359-S02",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "u23..27 and at least57-2u codegree2 partners",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L359-S02-O02",
+      "unit_id": "L359-S02",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Degree budget forces actual nonunit partner of degree9/10",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L359-S03-O01",
+      "unit_id": "L359-S03",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Positive common-unit pool and actual center upper12/13",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L359-S04-O01",
+      "unit_id": "L359-S04",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Three degree tuples times2 trace patterns;6 strict max_R rows; retain108 adaptive rows",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S01-O01",
+      "unit_id": "L3510-S01",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State internal35/min10 theorem and shared assumptions",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S02-O01",
+      "unit_id": "L3510-S02",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "DomainA: actual common unit point for10/10 unit pair,79 nonnegative traces",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S02-O02",
+      "unit_id": "L3510-S02",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "DomainB: two11-degree unit arms,21 nonnegative traces",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S02-O03",
+      "unit_id": "L3510-S02",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "DomainC: actual12 center of10/10 codegree2 pair,2 traces",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S03-O01",
+      "unit_id": "L3510-S03",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Assume noncolorable only afterA/B strict sufficient bounds exclude configurations",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S03-O02",
+      "unit_id": "L3510-S03",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Unit-neighbor cost2u-1 and actual codegree2 count force low10-degree partner",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S04-O01",
+      "unit_id": "L3510-S04",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual high pool17..23 and common-unit support34-c force degree12 center",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3510-S05-O01",
+      "unit_id": "L3510-S05",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "102 accepted domains only, no negative traces or exploratory four-lock failures used",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3511-S01-O01",
+      "unit_id": "L3511-S01",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "At least24 eleven-degree vertices atv35",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3511-S01-O02",
+      "unit_id": "L3511-S01",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Choose actual unit edge in this low pool and discharge110<112",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L3511-S01-O03",
+      "unit_id": "L3511-S01",
+      "dag_node": "B35",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Full8 labelled weak-wedge traces strict; repeated all-unit labels harmless",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S01-O01",
+      "unit_id": "L39-S01",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State actual39-point branch; exact66/simple/paircover input",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S02-O01",
+      "unit_id": "L39-S02",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "IntegerQ gives3 actual low unit locks",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S02-O02",
+      "unit_id": "L39-S02",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Outside excess and complete fourth-degree boundD10/11/12",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S03-O01",
+      "unit_id": "L39-S03",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "One doubled new pair; repeated two-trace allowed;6+3x7 multiset patterns",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S04-O01",
+      "unit_id": "L39-S04",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Full999 degree/trace domain and all actual label-position layouts strict",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L39-S05-O01",
+      "unit_id": "L39-S05",
+      "dag_node": "B39",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Actual initial965/34 repair coverage and independent999-row exact replay",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S01-O01",
+      "unit_id": "L4041-S01",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "State actual40/41 branches and shared probability mechanism",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S02-O01",
+      "unit_id": "L4041-S02",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "IntegerQ selects4/5 low unit locks; complete90/672 raw domains",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S03-O01",
+      "unit_id": "L4041-S03",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Max_R old-ceiling quota on same actual vector, no summation",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S04-O01",
+      "unit_id": "L4041-S04",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v40 low pool and actual replacement excludes unique bad same-edge type",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S05-O01",
+      "unit_id": "L4041-S05",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v41 separate outside8 case; weighted9/10 pool and conflict count force replacement",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S05-O02",
+      "unit_id": "L4041-S05",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Uniqueness of original common pair edge prevents new all-same-edge trace",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "L4041-S06-O01",
+      "unit_id": "L4041-S06",
+      "dag_node": "B4041",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "21 structural exclusions;741 retained strict actual layouts",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "DIAG-S01-O01",
+      "unit_id": "DIAG-S01",
+      "dag_node": "B4244",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Generic integer reciprocal/Q criterion, exact finite degree samples and positive denominators",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "DIAG-S02-O01",
+      "unit_id": "DIAG-S02",
+      "dag_node": "B4244",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v42 actual nine-degree replacement excludes all5 trace",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "DIAG-S02-O02",
+      "unit_id": "DIAG-S02",
+      "dag_node": "B4244",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "v43/44 nine actual unit points select five with all traces<=3",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "DIAG-S02-O03",
+      "unit_id": "DIAG-S02",
+      "dag_node": "B4244",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Complete32 partitions filtered to31/26/26;83 strict exact replays",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "IMPORT-S01-O01",
+      "unit_id": "IMPORT-S01",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "General greedy failure witness independent of M65",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "IMPORT-S01-O02",
+      "unit_id": "IMPORT-S01",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Conditional free/locked endpoint and ordered-pair weights with full capacity conditions",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "IMPORT-S01-O03",
+      "unit_id": "IMPORT-S01",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Full-pool and joint avoided bad-pair subtraction apply to any total edge budget",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    },
+    {
+      "obligation_id": "IMPORT-S01-O04",
+      "unit_id": "IMPORT-S01",
+      "dag_node": "P",
+      "context": "Same actual finite simple6-uniform H; original or internally derived hypotheses as located in the source span",
+      "goal": "Reset sum ell and M to66; old65 numerical selection/results not imported",
+      "rule": "Source proof / declared generic import / previously completed deterministic evidence; inspect cited span",
+      "side_conditions": "Explicit input-domain and version mapping in INPUT_MAP.json; no new global premise allowed",
+      "disposition": "INVENTORIED_NOT_FRESHLY_ADJUDICATED"
+    }
+  ],
+  "scope_limitations": [
+    "Engineering/source-accounting preparation only; executor is not fresh",
+    "No new mathematical acceptance verdict, no new full computation, no cross-family reviewer called here",
+    "Standard implementation/rational-arithmetic trust; no Lean for this parameter",
+    "Final root-owned review dispositions are separate from this inventory"
+  ],
+  "final_mathematical_verdict": null
+}

@@ -1,0 +1,125 @@
+def Aris4Math.General.RS.Uniform.{u} : {V : Type u} → Finset (Finset V) → ℕ → Prop :=
+fun {V} E k => ∀ e ∈ E, e.card = k
+def Aris4Math.General.RS.Bichromatic.{u} : {V : Type u} → Finset (Finset V) → (V → Bool) → Prop :=
+fun {V} E c => ∀ e ∈ E, (∃ x ∈ e, c x = true) ∧ ∃ x ∈ e, c x = false
+def Aris4Math.General.RS.PropertyB.{u} : {V : Type u} → Finset (Finset V) → Prop :=
+fun {V} E => ∃ c, Aris4Math.General.RS.Bichromatic E c
+def Aris4Math.General.RS.PilotTarget.{u} : Prop :=
+∀ (V : Type u) [Finite V] (E : Finset (Finset V)),
+  Aris4Math.General.RS.Uniform E 17 → E.card ≤ 2 ^ 17 → Aris4Math.General.RS.PropertyB E
+def Aris4Math.General.RS.singlePairs.{u} : {V : Type u} → Finset (Finset V) → Finset (Finset V × Finset V) :=
+fun {V} E => {ef ∈ E ×ˢ E | ef.1 ≠ ef.2 ∧ (ef.1 ∩ ef.2).card = 1}
+def Aris4Math.General.RS.gamma.{u} : {V : Type u} → Finset (Finset V) → ℕ :=
+fun {V} E => (Aris4Math.General.RS.singlePairs E).card
+def Aris4Math.General.RS.ak : ℕ → ℝ → ℝ :=
+fun k p => 1 - (1 - p) ^ k
+def Aris4Math.General.RS.jk : ℕ → ℝ → ℝ :=
+fun k p => ∫ (y : ℝ) in 0..p, (1 - y ^ 2) ^ (k - 1)
+def Aris4Math.General.RS.FlipWitness : {n : ℕ} →
+  Finset (Finset (Fin n)) → (Fin n → Bool) → Finset (Fin n) → Fin n → Prop :=
+fun {n} E c flipped x => ∃ e ∈ E, x ∈ e ∧ Aris4Math.General.RS.Mono e c (c x) ∧ Disjoint e flipped
+def Aris4Math.General.RS.flippedAfter : {n : ℕ} →
+  Finset (Finset (Fin n)) → (Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → ℕ → Finset (Fin n) :=
+fun {n} E c b σ x =>
+  Nat.brecOn x fun x f =>
+    (match (motive := (x : ℕ) → Nat.below x → Finset (Fin n)) x with
+      | 0 => fun x => ∅
+      | t.succ => fun x =>
+        if ht : t < n then
+          let x_1 := (Equiv.symm σ) ⟨t, ht⟩;
+          if b x_1 = true ∧ Aris4Math.General.RS.FlipWitness E c x.1 x_1 then insert x_1 x.1 else x.1
+        else x.1)
+      f
+def Aris4Math.General.RS.finalColor : {n : ℕ} →
+  Finset (Finset (Fin n)) → (Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → Fin n → Bool :=
+fun {n} E c b σ x => if x ∈ Aris4Math.General.RS.flippedAfter E c b σ n then !c x else c x
+def Aris4Math.General.RS.Failure : {n : ℕ} →
+  Finset (Finset (Fin n)) → (Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → Prop :=
+fun {n} E c b σ => ∃ e ∈ E, ∃ q, Aris4Math.General.RS.Mono e (Aris4Math.General.RS.finalColor E c b σ) q
+def Aris4Math.General.RS.sampleWeight : {n : ℕ} → ℝ → (Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → ℝ :=
+fun {n} p c b _σ =>
+  Aris4Math.General.RS.bernoulliWeight (1 / 2) c * Aris4Math.General.RS.bernoulliWeight p b /
+    ↑(Fintype.card (Equiv.Perm (Fin n)))
+def Aris4Math.General.RS.sampleExpect : {n : ℕ} → ℝ → ((Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → ℝ) → ℝ :=
+fun {n} p f =>
+  Aris4Math.General.RS.bernoulliExpect (1 / 2) fun c =>
+    Aris4Math.General.RS.bernoulliExpect p fun b => Aris4Math.General.RS.permExpect (f c b)
+def Aris4Math.General.RS.sampleProb : {n : ℕ} → ℝ → ((Fin n → Bool) → (Fin n → Bool) → Equiv.Perm (Fin n) → Prop) → ℝ :=
+fun {n} p P => Aris4Math.General.RS.sampleExpect p fun c b σ => if P c b σ then 1 else 0
+def Aris4Math.General.RS.rsFailureProbability.{u} : {V : Type u} → [Finite V] → Finset (Finset V) → ℝ → ℝ :=
+fun {V} [Finite V] E p => Aris4Math.General.RS.failureProb (Aris4Math.General.RS.relabel (Fintype.equivFin V) E) p
+Aris4Math.General.RS.rs_recoloring_failure_le.{u} {V : Type u} [Finite V] (E : Finset (Finset V)) (k : ℕ) (hk : 2 ≤ k)
+  (hu : Aris4Math.General.RS.Uniform E k) {p : ℝ} (hp : 0 < p) (hp1 : p ≤ 1) :
+  Aris4Math.General.RS.rsFailureProbability E p ≤
+    1 - Aris4Math.General.RS.ak k p ^ (↑E.card / 2 ^ (k - 1)) +
+      ↑(Aris4Math.General.RS.gamma E) / (2 ^ (k - 1)) ^ 2 * Aris4Math.General.RS.jk k p
+Aris4Math.General.RS.propertyB_of_rs_bound.{u} {V : Type u} [Finite V] (E : Finset (Finset V)) (k : ℕ) (hk : 2 ≤ k)
+  (hu : Aris4Math.General.RS.Uniform E k) {p : ℝ} (hp : 0 < p) (hp1 : p ≤ 1)
+  (hbound :
+    1 - Aris4Math.General.RS.ak k p ^ (↑E.card / 2 ^ (k - 1)) +
+        ↑(Aris4Math.General.RS.gamma E) / (2 ^ (k - 1)) ^ 2 * Aris4Math.General.RS.jk k p <
+      1) :
+  Aris4Math.General.RS.PropertyB E
+theorem Aris4Math.General.RS.propertyB_seventeen_of_at_most_two_pow.{u} : Aris4Math.General.RS.PilotTarget :=
+fun V [Finite V] E hu hm =>
+  Aris4Math.General.RS.propertyB_of_rs_bound E 17
+    (Mathlib.Meta.NormNum.isNat_le_true (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2))
+      (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 17)) (Eq.refl true))
+    hu
+    (Mathlib.Meta.NormNum.isNNRat_lt_true
+      (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero))
+      (Mathlib.Meta.NormNum.isNNRat_div
+        (Mathlib.Meta.NormNum.isNNRat_mul (Eq.refl HMul.hMul)
+          (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one))
+          (Mathlib.Meta.NormNum.isNNRat_inv_pos
+            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 17))))
+          (Eq.refl (Nat.mul 1 1)) (Eq.refl 17)))
+      (Eq.refl true))
+    (Mathlib.Meta.NormNum.isRat_le_true
+      (Mathlib.Meta.NormNum.IsNNRat.to_isRat
+        (Mathlib.Meta.NormNum.isNNRat_div
+          (Mathlib.Meta.NormNum.isNNRat_mul (Eq.refl HMul.hMul)
+            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one))
+            (Mathlib.Meta.NormNum.isNNRat_inv_pos
+              (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 17))))
+            (Eq.refl (Nat.mul 1 1)) (Eq.refl 17))))
+      (Mathlib.Meta.NormNum.IsNNRat.to_isRat
+        (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one)))
+      (Eq.refl true))
+    (Eq.mpr
+      (id
+        (congrArg (fun x => x < 1)
+          (congr (congrArg (fun x => HAdd.hAdd (1 - Aris4Math.General.RS.ak 17 x ^ (↑E.card / 2 ^ 16))) (one_div 17))
+            (congrArg (fun x => ↑(Aris4Math.General.RS.gamma E) / (2 ^ 16) ^ 2 * Aris4Math.General.RS.jk 17 x)
+              (one_div 17)))))
+      (Eq.mp
+        (congrArg (fun x => x < 1)
+          (congr (congrArg (fun x => HAdd.hAdd (1 - Aris4Math.General.RS.ak 17 x ^ (↑E.card / 2 ^ 16))) (one_div 17))
+            (congrArg (fun x => ↑(Aris4Math.General.RS.gamma E) / (2 ^ 16) ^ 2 * Aris4Math.General.RS.jk 17 x)
+              (one_div 17))))
+        (Aris4Math.General.RS.pilot_estimate_actual E hm)))
+'Aris4Math.General.RS.sum_sampleWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.sampleWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.rs_recoloring_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.propertyB_of_rs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.propertyB_seventeen_of_at_most_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GeneralRSPilotAudit.original_seventeen_statement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GeneralRSPilotAudit.general_rs_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+        7.23 real         4.94 user         1.34 sys
+          2298380288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              223531  page reclaims
+               14857  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2592  voluntary context switches
+               38728  involuntary context switches
+          4118183656  instructions retired
+          1534880297  cycles elapsed
+           122301104  peak memory footprint

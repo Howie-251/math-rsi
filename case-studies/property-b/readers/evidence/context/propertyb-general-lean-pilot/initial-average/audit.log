@@ -1,0 +1,18 @@
+Aris4Math.General.RS.initial_monoCount_average.{u_1} {V : Type u_1} [Fintype V] (E : Finset (Finset V)) (k : ℕ)
+  (hk : 1 ≤ k) (hE : Uniform E k) : (bernoulliExpect (1 / 2) fun c => ↑(monoCount E c)) = ↑E.card / 2 ^ (k - 1)
+Aris4Math.General.RS.initial_power_average.{u_1} {V : Type u_1} [Fintype V] (E : Finset (Finset V)) (k : ℕ) (hk : 1 ≤ k)
+  (hE : Uniform E k) {a : ℝ} (ha : 0 < a) :
+  a ^ (↑E.card / 2 ^ (k - 1)) ≤ bernoulliExpect (1 / 2) fun c => a ^ ↑(monoCount E c)
+Aris4Math.General.RS.initial_residual_conditional.{u_1} {V : Type u_1} [Fintype V] (E : Finset (Finset V)) (k : ℕ)
+  (hE : Uniform E k) {p : ℝ} (hp : 0 ≤ p) (hp1 : p ≤ 1) (c : V → Bool) :
+  (bernoulliProb p fun b => ∃ e ∈ E, (∃ q, Mono e c q) ∧ ∀ x ∈ e, b x = false) ≤ 1 - ak k p ^ monoCount E c
+Aris4Math.General.RS.initial_residual_average.{u_1} {V : Type u_1} [Fintype V] (E : Finset (Finset V)) (k : ℕ)
+  (hk : 1 ≤ k) (hE : Uniform E k) {p : ℝ} (hp : 0 < p) (hp1 : p ≤ 1) :
+  (bernoulliExpect (1 / 2) fun c => bernoulliProb p fun b => ∃ e ∈ E, (∃ q, Mono e c q) ∧ ∀ x ∈ e, b x = false) ≤
+    1 - ak k p ^ (↑E.card / 2 ^ (k - 1))
+def Aris4Math.General.RS.monoCount.{u_1} : {V : Type u_1} → Finset (Finset V) → (V → Bool) → ℕ :=
+fun {V} E c => {e ∈ E | ∃ q, Mono e c q}.card
+'Aris4Math.General.RS.initial_monoCount_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.initial_power_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.initial_residual_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.initial_residual_average' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,25 @@
+Aris4Math.General.RS.orderSum_eq_jk (k : ℕ) (p : ℝ) :
+  p * Aris4Math.General.RS.orderSum (k - 1) p = Aris4Math.General.RS.jk k p
+Aris4Math.General.RS.finite_order_sum_eq_jk (k : ℕ) (hk : 1 ≤ k) (p : ℝ) :
+  p *
+      ∑ a ∈ Finset.range k,
+        ∑ b ∈ Finset.range k,
+          ↑((k - 1).choose a) * ↑((k - 1).choose b) * p ^ (a + b) * (1 - p) ^ (k - 1 - b) *
+            (↑a.factorial * ↑b.factorial / ↑(a + b + 1).factorial) =
+    Aris4Math.General.RS.jk k p
+'Aris4Math.General.RS.finite_order_sum_eq_jk' depends on axioms: [propext, Classical.choice, Quot.sound]
+def Aris4Math.General.RS.orderSum : ℕ → ℝ → ℝ :=
+fun n p =>
+  ∑ a ∈ Finset.range (n + 1),
+    ∑ b ∈ Finset.range (n + 1),
+      ↑(n.choose a) * ↑(n.choose b) * p ^ (a + b) * (1 - p) ^ (n - b) *
+        (↑a.factorial * ↑b.factorial / ↑(a + b + 1).factorial)
+def Aris4Math.General.RS.jk : ℕ → ℝ → ℝ :=
+fun k p => ∫ (y : ℝ) in 0..p, (1 - y ^ 2) ^ (k - 1)
+def Aris4Math.General.RS.ak : ℕ → ℝ → ℝ :=
+fun k p => 1 - (1 - p) ^ k
+'Aris4Math.General.RS.orderSum_eq_jk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.beta_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.jk_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.jk_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.ak_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
