@@ -143,6 +143,10 @@ Model CLIs and accounts, search access, and optional TeX/Lean environments are s
 
 ---
 
+## Contributors
+
+**Created and maintained by [Yang Ruofeng (@wanshuiyin)](https://github.com/wanshuiyin)**, author of ARIS. MathRSI brings together his research workflow design and the Property B and ECC project experience in the [LIS Research Group](https://github.com/lisresearchgroup) repository.
+
 ## Provenance & License
 
 MathRSI's workflow and bundled ARIS skill adaptations build on **[ARIS (Auto-claude-code-research-in-sleep)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)** (snapshot commit `c485faa59a68e51c6575dea67ca57abc7a6a2b9c`, Copyright (c) 2026 wanshuiyin) and research artifacts from the Property B and ECC projects. See **[docs/PROVENANCE.md](docs/PROVENANCE.md)**, [`base/ARIS_SNAPSHOT.json`](base/ARIS_SNAPSHOT.json), and [`mcp-servers/SOURCE.md`](mcp-servers/SOURCE.md) for exact file-level provenance.

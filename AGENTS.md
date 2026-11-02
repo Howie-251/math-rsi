@@ -11,6 +11,8 @@
 
 ## 分工与变更
 
+Git 提交使用项目维护者已关联 GitHub 的身份；本仓已配置 `Yang Ruofeng <76990859+wanshuiyin@users.noreply.github.com>`（`wanshuiyin`）。发布前核对实际 author，避免沿用 Mac 自动生成的 `.local` 邮箱。旧本机署名通过 `.mailmap` 规范化；不擅自重写已发布历史。README 的作者栏与 GitHub 自动贡献统计分别维护。
+
 Root 负责核心契约、关键判断与最终验收。Sol 可负责完整且可验收的插件、文档和检查任务；多个作者分目录拥有写权限，不覆盖他人在途文件。Gemini 可承担正文组织，Root 核对新增断言与事实，Grok 检查关键设计漏洞。
 
 插件运行时不直接改核心或原目标。开发阶段若确需共同接口调整，由 Root 协调为可审阅变更。仓库使用同一 main，后续功能使用短期分支；多代理代码冲突时再加独立 worktree。
