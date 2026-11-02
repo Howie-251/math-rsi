@@ -1,0 +1,15 @@
+usage: research_wiki.py [-h]
+                        {init,slug,add_edge,rebuild_query_pack,rebuild_index,stats,log,ingest_paper,add_claim,upsert_idea,add_experiment,sync} ...
+
+ARIS Research Wiki utilities
+
+positional arguments:
+  {init,slug,add_edge,rebuild_query_pack,rebuild_index,stats,log,ingest_paper,add_claim,upsert_idea,add_experiment,sync}
+    ingest_paper        Create (or update) a papers/<slug>.md page
+    add_claim           Create (or update) a claims/<slug>.md node
+    upsert_idea         Create (or update) an ideas/<slug>.md node
+    add_experiment      Create (or update) an experiments/<slug>.md node
+    sync                Batch ingest from a list of arXiv IDs
+
+options:
+  -h, --help            show this help message and exit

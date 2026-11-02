@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "source_revision": "c485faa59a68e51c6575dea67ca57abc7a6a2b9c",
+  "verified_upstream_files": 207,
+  "skills_per_host": 30,
+  "relocated_copy": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/research_wiki.py",
+        "init",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "Research wiki initialized at /var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/research_wiki.py",
+        "add_claim",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki",
+        "--slug",
+        "smoke-local-obligation",
+        "--name",
+        "Integration fixture: no mathematical assertion",
+        "--status",
+        "unproven",
+        "--statement",
+        "This fixture checks local claim bookkeeping only.",
+        "--evidence",
+        "No proof or numerical computation has been supplied."
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "query_pack.md rebuilt: 60 chars\nClaim added: /var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki/claims/smoke-local-obligation.md [status=unproven]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/research_wiki.py",
+        "stats",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "\ud83d\udcda Research Wiki Stats\nPapers:      0\nIdeas:       0 (0 failed, 0 succeeded)\nExperiments: 0\nClaims:      1 (1 unproven)\nEdges:       0\nWiki root:   /var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/research-wiki\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/reviewer_route.py",
+        "--project",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+        "--host",
+        "codex"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "{\"backend\": \"codex\", \"host\": \"codex\", \"source\": \"host-default\", \"model\": \"gpt-6-astra\", \"effort\": \"ultra\", \"transport\": \"native\", \"fresh_tool\": \"spawn_agent\", \"continuation_tool\": \"send_input\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/reviewer_route.py",
+        "--project",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+        "--host",
+        "codex"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "{\"backend\": \"grok\", \"host\": \"codex\", \"source\": \"project\", \"model\": \"grok-4.7\", \"effort\": \"xhigh\", \"transport\": \"mcp\", \"fresh_tool\": \"mcp__grok__grok\", \"continuation_tool\": \"mcp__grok__grok-reply\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/reviewer_route.py",
+        "--project",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+        "--host",
+        "codex",
+        "--reviewer",
+        "gemini",
+        "--effort",
+        "high"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "{\"backend\": \"antigravity\", \"host\": \"codex\", \"source\": \"inline\", \"model\": \"gemini-4-argon-high\", \"effort\": \"high\", \"transport\": \"mcp\", \"fresh_tool\": \"mcp__antigravity__antigravity\", \"continuation_tool\": \"mcp__antigravity__antigravity-reply\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/tools/reviewer_route.py",
+        "--project",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+        "--host",
+        "codex",
+        "--reviewer",
+        "nonexistent"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "reviewer route error: unknown reviewer backend: 'nonexistent'\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/skills/skills-codex/render-html/scripts/render_html.py",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/fixture.md",
+        "--template",
+        "academic",
+        "--out",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/academic.html",
+        "--offline",
+        "--title",
+        "MathRSI integration fixture"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "wrote /private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/academic.html (8,938 bytes, 0 TOC entries, source sha256 871ef1ae3348...)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base/skills/render-html/scripts/render_html.py",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/fixture.md",
+        "--template",
+        "dashboard",
+        "--out",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/dashboard.html",
+        "--offline",
+        "--title",
+        "MathRSI integration fixture"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace",
+      "ARIS_REPO": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/relocated-base",
+      "exit_code": 0,
+      "stdout": "wrote /private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-aris-smoke-1glxxj3z/task-workspace/dashboard.html (8,679 bytes, 0 TOC entries, source sha256 871ef1ae3348...)\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Offline local integration only: provenance, wiki claim bookkeeping, reviewer parsing, both HTML templates. No model/network/Lean/LaTeX invocation.",
+  "offline_math": "Raw formula text retained; no embedded SVG math claimed."
+}

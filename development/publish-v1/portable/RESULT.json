@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "source_commit": "4b08fc114d12fb2ae9939530d2bc3b36d195250f",
+  "source_branch": "publish/v1",
+  "source_repository": "/Users/rfy_naiveai/Desktop/MathRSI",
+  "clone": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+  "canonical_clone": "/private/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+  "scratch": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh",
+  "starter_workspace": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-proof-repair.lA05i6",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_version": "git version 2.50.1 (Apple Git-155)",
+  "commands": [
+    {
+      "name": "clone",
+      "argv": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--single-branch",
+        "--branch",
+        "publish/v1",
+        "/Users/rfy_naiveai/Desktop/MathRSI",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh",
+      "exit_code": 0,
+      "stdout_log": "clone.stdout.log",
+      "stderr_log": "clone.stderr.log"
+    },
+    {
+      "name": "source-commit",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "source-commit.stdout.log",
+      "stderr_log": "source-commit.stderr.log"
+    },
+    {
+      "name": "python-version",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "--version"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "python-version.stdout.log",
+      "stderr_log": "python-version.stderr.log"
+    },
+    {
+      "name": "git-version",
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "git-version.stdout.log",
+      "stderr_log": "git-version.stderr.log"
+    },
+    {
+      "name": "links",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "tools/check_links.py"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "links.stdout.log",
+      "stderr_log": "links.stderr.log"
+    },
+    {
+      "name": "smoke",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "base/tests/smoke_bundle.py",
+        "--out-dir",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/smoke"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "smoke.stdout.log",
+      "stderr_log": "smoke.stderr.log"
+    },
+    {
+      "name": "mcp-tests",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "mcp-servers/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "mcp-tests.stdout.log",
+      "stderr_log": "mcp-tests.stderr.log"
+    },
+    {
+      "name": "example-root",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "examples/proof-repair/replay.py"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "example-root.stdout.log",
+      "stderr_log": "example-root.stderr.log"
+    },
+    {
+      "name": "example-unrelated",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi/examples/proof-repair/replay.py"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/unrelated",
+      "exit_code": 0,
+      "stdout_log": "example-unrelated.stdout.log",
+      "stderr_log": "example-unrelated.stderr.log"
+    },
+    {
+      "name": "wiki-helper-help",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi/base/tools/research_wiki.py",
+        "--help"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/unrelated",
+      "exit_code": 0,
+      "stdout_log": "wiki-helper-help.stdout.log",
+      "stderr_log": "wiki-helper-help.stderr.log"
+    },
+    {
+      "name": "starter-copy",
+      "argv": [
+        "/bin/sh",
+        "-c",
+        "See STARTER_COPY_COMMAND.sh"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "starter-copy.stdout.log",
+      "stderr_log": "starter-copy.stderr.log"
+    },
+    {
+      "name": "final-clone-status",
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-v1-portable-w6n6a9hh/math-rsi",
+      "exit_code": 0,
+      "stdout_log": "final-clone-status.stdout.log",
+      "stderr_log": "final-clone-status.stderr.log"
+    }
+  ],
+  "all_exit_zero": true,
+  "starter_copy_exact": true,
+  "starter_copy_files": [
+    "PROOF.tex",
+    "REQUEST.md"
+  ],
+  "reference_theorem_exact": true,
+  "symlink_count": 89,
+  "all_symlinks_relative_internal_existing": true,
+  "clone_clean_after_checks": true,
+  "audit_harness_note": "Initial symlink assertion used the noncanonical /var path against resolved /private/var targets on macOS. Canonicalizing the clone root fixed this audit-only comparison; no product files or test outcomes changed and no suite rerun was needed.",
+  "scope": "Fresh local Git clone and offline instructions only; no host/model calls, CLI registrations, TeX/Lean build or archived Goal execution."
+}
