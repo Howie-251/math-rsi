@@ -86,10 +86,6 @@ python3 -B base/tests/smoke_bundle.py --help
 
 链接检查覆盖维护中的主流程/插件文档和内部别名；原始历史档案里的旧HTML/日志链接另有归档说明。base的独立smoke实际验证被复制的上游资源和wiki/router/renderer。组内仓库为 [lisresearchgroup/math-rsi](https://github.com/lisresearchgroup/math-rsi)，开发使用短期分支。英文首页与快速开始提供克隆、运行示例和跨模型配置入口。
 
-## 作者与贡献者
-
-**项目发起与维护：[Yang Ruofeng（@wanshuiyin）](https://github.com/wanshuiyin)**，ARIS 作者。MathRSI 结合其数学研究工作流设计与 Property B、ECC 项目的实际经验，在 [LIS Research Group](https://github.com/lisresearchgroup) 仓库维护。
-
 ## 来源
 
 [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) 固定来源、许可证与领域提炼说明见 [PROVENANCE](docs/PROVENANCE.md)。ARIS与MathRSI工作流沿用MIT；归档学术论文与第三方原件保留各自权利，不能将仓库MIT标题理解为重新许可这些作品。
