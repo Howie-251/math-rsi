@@ -1,0 +1,11 @@
+Aris4Math.General.RS.sampleProb_pairEvent {n k : ℕ} (f g : Finset (Fin n)) (hfg : (f ∩ g).card = 1) (hf : f.card = k)
+  (hg : g.card = k) (hk : 1 ≤ k) (q : Bool) (p : ℝ) :
+  (sampleProb p fun c b σ => PairEvent f g c b σ q) = jk k p / 2 ^ (2 * k - 1)
+Aris4Math.General.RS.sampleProb_pairEvent_formula {n k : ℕ} (f g : Finset (Fin n)) (hf : f.card = k) (hg : g.card = k)
+  (hk : 1 ≤ k) (q : Bool) (p : ℝ) :
+  (sampleProb p fun c b σ => PairEvent f g c b σ q) = if (f ∩ g).card = 1 then jk k p / 2 ^ (2 * k - 1) else 0
+'Aris4Math.General.RS.sampleProb_pairEvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.sampleProb_pairEvent_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.pairEvent_iff_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.permProb_pairLocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.pairIntegrand_average' depends on axioms: [propext, Classical.choice, Quot.sound]

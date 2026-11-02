@@ -1,0 +1,57 @@
+The RS-core pilot is sound for its stated scope. For every finite simple \(k\)-uniform hypergraph with \(k\ge 2\) and every \(0<p\le 1\), the formalized recoloring failure probability is at most the stated residual-plus-single-intersection bound, and that strict inequality yields Property B. The 17-uniform call is a real use of this criterion: every finite simple 17-uniform \(E\) with at most \(131072\) edges has a `Bool` coloring with both colors on every edge. The \(k\ge 17\) growing-integer theorem is not part of this development.
+
+I did not run Lean. The verdict is from the current source and the existing logs.
+
+## Statements
+
+**(P)** `rs_recoloring_failure_le` says: for finite \(V\), \(E:\mathrm{Finset}(\mathrm{Finset}\,V)\), \(k\ge 2\), every edge of cardinality \(k\), and \(0<p\le 1\),
+
+\[
+\mathrm{rsFailureProbability}\,E\,p
+\le 1-a_k(p)^{|E|/2^{k-1}}+\gamma(E)\,J_k(p)/(2^{k-1})^2.
+\]
+
+**(C)** `propertyB_of_rs_bound` has the same hypotheses plus that right-hand side \(<1\), and concludes `PropertyB E`.
+
+**(Pilot)** `propertyB_seventeen_of_at_most_two_pow` is `PilotTarget`: for finite \(V\) and 17-uniform \(E\) with \(|E|\le 2^{17}\), `PropertyB E`. It calls **(C)** at \(p=1/17\). `ReviewAuditGeneralRSPilot.lean` restates both in the original vocabulary — \(\forall e\in E,\,e.\mathrm{card}=17\), \(|E|\le 131072\), and a coloring \(V\to\mathrm{Bool}\) with both colors on every edge — and closes them by `exact`.
+
+## Definitions match the criterion
+
+`Uniform`, `Bichromatic`, and `PropertyB` are the usual ones. `singlePairs` is the set of ordered pairs \((e,f)\in E\times E\) with \(e\neq f\) and \(|e\cap f|=1\); `gamma` is its cardinality. `ak k p = 1-(1-p)^k` and `jk k p = \int_0^p (1-y^2)^{k-1}\,dy`. These are definitionally what the audit file inlines.
+
+The sample is the finite model asked for in the stage goal: fair initial colors, independent Bernoulli(\(p\)) eligibility, and a uniform permutation, with total mass `1`. A vertex is processed once, in increasing \(\sigma\)-order, and flips only when it is eligible and some edge through it is initially monochromatic in its own initial color and still disjoint from the flipped set. `Failure` is a monochromatic edge of `finalColor`. `rsFailureProbability` runs that algorithm on `relabel (Fintype.equivFin V) E`. Cardinality, uniformity, and \(\gamma\) are invariant, and a successful `finalColor` is pulled back by \(c\circ f\).
+
+The \(k\ge 2\) argument is uniform in \(k\). The constant \(17\) appears only in the numerical caller.
+
+## Connections that were attacked
+
+The failure cover is the right one. An edge that stays at its initial color has every eligibility bit false. An edge that becomes monochromatic in a new color has a last flipped vertex \(x\) and a witness edge \(g\) with \(f\cap g=\{x\}\). `PairEvent` is exactly that necessary condition, including the ordered constraints \(\sigma z<\sigma x\) on the same-color side of \(f\) and \(\sigma x<\sigma z\) on eligible vertices of \(g\). It is not claimed to be sufficient. `pairEvent_iff_local` sends it to the pivot, the disjoint sets \(f\setminus\{x\}\) and \(g\setminus\{x\}\), and `BeforeAfter`.
+
+`beforeAfter_ratio` is \(a!\,b!/(a+b+1)!\), for disjoint \(A,B\) not containing the pivot, with inactive vertices cancelled. The block embedding is only an internal numbering. `beta_nat` is the same factorial ratio as \(\int_0^1 t^a(1-t)^b\,dt\), proved by a polynomial recurrence. Finite Bernoulli sums pass through the integral because the integrands are continuous. Coordinates factor only because the pivot and the two punctured edges are disjoint; overlapping edges are not treated as independent. The averaged integrand is
+
+\[
+\frac p2\Bigl(\frac{1+pt}2\Bigr)^{k-1}\Bigl(\frac{1-pt}2\Bigr)^{k-1}
+= 2^{1-2k}\,p\,(1-p^2t^2)^{k-1}.
+\]
+
+`jk_rescale` is Mathlib’s substitution \(p\int_0^1 f(pt)\,dt=\int_0^p f\), so one color has probability \(J_k(p)/2^{2k-1}\). The two colors and \(2^{2k-1}=2\cdot(2^{k-1})^2\) give \(\gamma J_k(p)/(2^{k-1})^2\). That is the same constant as \(\gamma J_k(p)/4^{k-1}\).
+
+The residual term is also the right inequality. Given the initial coloring, the monochromatic edges — overlaps included — contribute increasing hit events. `bernoulli_harris` is the product-Bernoulli induction for every \(p\in[0,1]\): the conditional covariance is \(p(1-p)(u_1-u_0)(v_1-v_0)\). Thus the conditional residual probability is at most \(1-a_k(p)^X\). The mean of \(X\) is exactly \(|E|/2^{k-1}\), by linearity. Since \(t\mapsto a^t\) is convex for \(a>0\), Jensen supplies \(\mathbb E[a^X]\ge a^{\mathbb E X}\), which upper-bounds the failure probability. Empty \(E\) is included.
+
+The pilot estimate is strict for the actual \(\gamma(E)\). It uses \(\gamma\le |E|^2\), \(J_{17}(1/17)\le 1/17\), and \(a_{17}(1/17)>1/2\). Then \(a^{|E|/2^{16}}\ge a^2>1/4\) and \(\gamma J/d^2\le 4/17<1/4\).
+
+## Axioms and build records
+
+`#print axioms` on `sum_sampleWeight`, `sampleWeight_nonneg`, `rs_recoloring_failure_le`, `propertyB_of_rs_bound`, `propertyB_seventeen_of_at_most_two_pow`, and both audit theorems lists only `propext`, `Classical.choice`, and `Quot.sound`. The RS sources contain no `sorry`, `admit`, `axiom`, or `native_decide`.
+
+`final-build.log` records `Built Aris4Math.General.RS.PilotMain` as job 2538/2538 and `Build completed successfully (2538 jobs)`. `final-build-confirm.log` replays that target and reports the same success. `final-audit-result.json` records `lake env lean ReviewAuditGeneralRSPilot.lean` with exit code 0. The linter positions in those logs match the current `Algorithm.lean`.
+
+## What remains unformalized
+
+The completed Lean result is the RS inequality, the strict coloring criterion, and the direct 17-uniform call with \(|E|\le 2^{17}\). It does not formalize the minimum-vertex reduction, the intersection-graph integer gain, the quantity \(B_{\mathrm{RS}}(k)\), or
+
+\[
+m(k)\ge B_{\mathrm{RS}}(k)+1+\left\lfloor\frac{\sqrt{B_{\mathrm{RS}}(k)}}{8(1+\log k)}\right\rfloor
+\]
+
+for growing \(k\ge 17\).

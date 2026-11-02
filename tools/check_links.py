@@ -15,6 +15,13 @@ def main() -> int:
     root = Path(__file__).resolve().parents[1]
     files = [root / "README.md", root / "README.zh-CN.md", root / "AGENTS.md"]
     files.extend(sorted((root / "examples").rglob("*.md")))
+    # Case landing pages are maintained; copied historical proof sources retain
+    # their original context and have a separate HTML portability check.
+    for case in sorted((root / "case-studies").glob("*")):
+        files.extend(sorted(case.glob("*.md")))
+        reader_guide = case / "readers/README.md"
+        if reader_guide.exists():
+            files.append(reader_guide)
     for directory in [root / "docs", root / "mcp-servers", *sorted((root / "base/skills").glob("mathrsi-*"))]:
         files.extend(sorted(directory.rglob("*.md")))
     for domain in (root / "plugins").iterdir():

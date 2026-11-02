@@ -1,0 +1,24 @@
+Aris4Math.General.RS.beforeAfter_ratio {n : ℕ} (A B : Finset (Fin n)) (x : Fin n) (hAB : Disjoint A B) (hxA : x ∉ A)
+  (hxB : x ∉ B) :
+  ↑(Fintype.card { σ // BeforeAfter A B x σ }) / ↑(Fintype.card (Perm (Fin n))) =
+    ↑A.card.factorial * ↑B.card.factorial / ↑(A.card + B.card + 1).factorial
+'actual_position_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Aris4Math.General.RS.card_beforeAfter' depends on axioms: [propext, Classical.choice, Quot.sound]
+       16.52 real         1.50 user         1.92 sys
+          1313570816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              167094  page reclaims
+                 971  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2803  voluntary context switches
+               32484  involuntary context switches
+          4184042834  instructions retired
+          2406856606  cycles elapsed
+           125938496  peak memory footprint

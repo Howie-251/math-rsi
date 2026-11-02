@@ -1,0 +1,96 @@
+{
+  "scope": "Export from staged Git index to a separate temporary directory; no original workspace argument, no symlink to original project; maintained Markdown and promoted HTML direct closure only.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "tools/check_links.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Checked 69 documents and 1096 local link targets; 0 missing.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "case-studies/property-b/tools/package_readers.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "result": {
+        "status": "PASS",
+        "pages": [
+          {
+            "reader": "PROPERTY_B_GENERAL_BOUND.html",
+            "bytes": 5544284,
+            "local_href_src_occurrences": 90,
+            "distinct_rewrites": 54,
+            "svg_elements": 1105,
+            "math_containers": 1049,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          },
+          {
+            "reader": "PROPERTY_B_GENERAL_LEAN.html",
+            "bytes": 587477,
+            "local_href_src_occurrences": 37,
+            "distinct_rewrites": 20,
+            "svg_elements": 122,
+            "math_containers": 118,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          },
+          {
+            "reader": "PROPERTY_B_GENERAL_LEAN_PILOT.html",
+            "bytes": 187194,
+            "local_href_src_occurrences": 61,
+            "distinct_rewrites": 39,
+            "svg_elements": 11,
+            "math_containers": 11,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          },
+          {
+            "reader": "M6_GE67.html",
+            "bytes": 3958749,
+            "local_href_src_occurrences": 143,
+            "distinct_rewrites": 64,
+            "svg_elements": 948,
+            "math_containers": 902,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          },
+          {
+            "reader": "M8_M9_IMPROVEMENTS.html",
+            "bytes": 1416420,
+            "local_href_src_occurrences": 45,
+            "distinct_rewrites": 24,
+            "svg_elements": 280,
+            "math_containers": 256,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          },
+          {
+            "reader": "K12_LOCK_COMPARISON.html",
+            "bytes": 1122000,
+            "local_href_src_occurrences": 26,
+            "distinct_rewrites": 17,
+            "svg_elements": 234,
+            "math_containers": 232,
+            "remote_src": [],
+            "fidelity": "not rerun; requires original --source workspace"
+          }
+        ],
+        "copied_supporting_files": 94,
+        "copied_supporting_bytes": 9456137,
+        "original_available": false,
+        "errors": [],
+        "scope": "Six promoted HTML pages and their direct href/src targets; not recursive historical Markdown/archive validation or mathematics verification."
+      }
+    }
+  ],
+  "elapsed_seconds": 1.634,
+  "status": "PASS",
+  "mathematics_or_lean_executed": false
+}

@@ -1,0 +1,21 @@
+✖ [685/685] Building Aris4Math.General.RS.Algorithm (2.1s)
+trace: .> LEAN_PATH=/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/Users/rfy_naiveai/Desktop/aris4math/formal/.lake/build/lib/lean /Users/rfy_naiveai/Desktop/aris4math/.tools/elan/toolchains/leanprover--lean4---v4.24.0/bin/lean /Users/rfy_naiveai/Desktop/aris4math/formal/Aris4Math/General/RS/Algorithm.lean -o /Users/rfy_naiveai/Desktop/aris4math/formal/.lake/build/lib/lean/Aris4Math/General/RS/Algorithm.olean -i /Users/rfy_naiveai/Desktop/aris4math/formal/.lake/build/lib/lean/Aris4Math/General/RS/Algorithm.ilean -c /Users/rfy_naiveai/Desktop/aris4math/formal/.lake/build/ir/Aris4Math/General/RS/Algorithm.c --setup /Users/rfy_naiveai/Desktop/aris4math/formal/.lake/build/ir/Aris4Math/General/RS/Algorithm.setup.json --json
+warning: Aris4Math/General/RS/Algorithm.lean:116:33: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: Aris4Math/General/RS/Algorithm.lean:167:34: Ambiguous term
+  not_imp
+Possible interpretations:
+  _root_.not_imp : ¬(?m.30 → ?m.31) ↔ ?m.30 ∧ ¬?m.31
+  
+  Classical.not_imp : ¬(?m.30 → ?m.31) ↔ ?m.30 ∧ ¬?m.31
+error: Aris4Math/General/RS/Algorithm.lean:167:4: Type mismatch: After simplification, term
+  hinit
+ has type
+  ∃ x, ∃ (_ : x ∈ f), ¬c x = q
+but is expected to have type
+  ∃ z ∈ f, c z ≠ q
+error: Lean exited with code 1
+Some required targets logged failures:
+- Aris4Math.General.RS.Algorithm
+error: build failed

@@ -1,0 +1,51 @@
+{
+  "status": "KERNEL_CHECKED",
+  "date": "2026-10-21",
+  "main_module": "Aris4Math.General.Growth.Twelve",
+  "main_theorem": "Aris4Math.General.RS.propertyB_of_general_growth_twelve",
+  "range": "all natural k >= 12",
+  "original_domain": "any finite type V; E : Finset (Finset V); every e in E has cardinality k",
+  "external_hypotheses": [
+    "12 <= k",
+    "Uniform E k",
+    "E.card <= rsBudget k + integerGain k (rsBudget k)"
+  ],
+  "conclusion": "exists Bool coloring with true and false in every original edge",
+  "maximum": "rsBudget_characterization_twelve: actual maximum over all positive natural budgets satisfying exact integral/rpow acceptance",
+  "gain_minimum": 2,
+  "gain_theorem": "Aris4Math.General.RS.integerGain_two_twelve",
+  "build": {
+    "command": "lake build Aris4Math.General.Growth.Twelve",
+    "exit_code": 0,
+    "lake_jobs": 2576,
+    "wall_seconds": 15.64,
+    "user_seconds": 17.98,
+    "system_seconds": 3.18,
+    "log": "BUILD.log"
+  },
+  "audit": {
+    "source": "formal/ReviewAuditGeneralGrowth12.lean",
+    "command": "lake env lean ReviewAuditGeneralGrowth12.lean",
+    "exit_code": 0,
+    "wall_seconds": 7.7,
+    "user_seconds": 6.05,
+    "system_seconds": 1.29,
+    "log": "REVIEW_AUDIT.log"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx": false,
+  "native_decide": false,
+  "new_axioms": false,
+  "reproduction": "local incremental build and separately compiled original-vocabulary import; not another-machine reproduction",
+  "reviews": "parent-managed; no reviewer call by this executor",
+  "comparison_D_E": "not formalized here",
+  "changed_sources": [
+    "formal/Aris4Math/General/Growth/Twelve.lean",
+    "formal/ReviewAuditGeneralGrowth12.lean"
+  ],
+  "remaining_lean_obligations": []
+}

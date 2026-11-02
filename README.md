@@ -1,6 +1,6 @@
 # MathRSI
 
-[中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md)
+[中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md) · [Property B case study](case-studies/property-b/README.md)
 
 **An agent-executable workflow and domain knowledge harness for rigorous mathematical research, built on a self-contained adaptation of [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep).**
 
@@ -107,6 +107,18 @@ Provides a self-contained knowledge base (`plugins/propertyb/knowledge/`) and fo
 ### Error-Correcting Codes (`plugins/ecc/`) — Draft
 
 Retains an initial draft ([`mathrsi-ecc`](plugins/ecc/skills/mathrsi-ecc/SKILL.md)) and read-only historical handoff snapshots ([`development/context/ecc-source/`](development/context/ecc-source/README.md)) that informed MathRSI's workflow transitions. It is not yet accepted to the Property B standard and is excluded from default skill discovery.
+
+---
+
+## Research Case: Property B
+
+**Individual lower bounds for k = 5–12 and a uniform theorem for every k ≥ 12.** The general theorem and the earlier five-uniform bounds 33 and 34 have end-to-end Lean proofs; the individual bounds have their own paper and computational verification scopes, detailed in the [case study](case-studies/property-b/README.md).
+
+[![Property B lower-bound improvements](case-studies/property-b/assets/delta.png)](case-studies/property-b/README.md)
+
+These studies were carried out with **ARIS**, then distilled into MathRSI's workflows and Property B plugin. The case includes full offline proof readers, formal source, direct evidence links, and the lessons that shaped the harness. New tasks will evaluate MathRSI v1 itself.
+
+**[Read the case](case-studies/property-b/README.md)** · [Full proof HTML](case-studies/property-b/readers/PROPERTY_B_GENERAL_BOUND.html) · [Lean reader](case-studies/property-b/readers/PROPERTY_B_GENERAL_LEAN.html). Clone or download the repository and open `case-studies/property-b/index.html` to read the HTML locally.
 
 ---
 
