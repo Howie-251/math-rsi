@@ -1,0 +1,146 @@
+# Start a mathematical task with MathRSI
+
+MathRSI is a set of readable agent workflows, bundled ARIS skills, and domain knowledge. You give a working agent the repository's entry skill and your mathematical task. The agent reads the relevant instructions, performs the work, consumes the resulting proofs and checks, and continues from the actual remaining obligation. There is no MathRSI server or generic scheduler command to start.
+
+This guide works with Codex or Claude Code. The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
+
+## Get the repository and choose a workspace
+
+You need access to the private GitHub repository, Git, and an installed, authenticated agent host. Python 3.9+ runs the included replay and reviewer bridges. Additional tools are needed only for the actions you choose: reviewer CLIs and accounts for external reviews, network/search access for literature work, TeX for PDF compilation, or a task-specific Lean environment for formalization. None of these accounts or toolchains is supplied by cloning the repository.
+
+Run in a terminal, choosing a different parent directory if desired:
+
+```bash
+mkdir -p "$HOME/src"
+git clone https://github.com/lisresearchgroup/math-rsi.git "$HOME/src/math-rsi"
+cd "$HOME/src/math-rsi"
+export MATHRSI_ROOT="$(pwd -P)"
+export ARIS_REPO="$MATHRSI_ROOT/base"
+python3 --version
+```
+
+Git will use your existing GitHub authentication. The HTTPS URL can also be replaced with the organization's SSH clone URL when your account is configured for SSH.
+
+Keep the current problem in its own workspace. If you already have a specification, proofs, a `NEXT_SESSION.md`, or a research wiki, use that directory. Read the recovery entry and then the original evidence it points to; do not initialize a second wiki or replace old file names just to match this guide. For a new task:
+
+```bash
+mkdir -p "$HOME/research/my-problem"
+export TASK_ROOT="$(cd "$HOME/research/my-problem" && pwd -P)"
+```
+
+Place the problem statement and available source materials there. The workflow will create only the documents the task needs. A short proof can live in one document; a long investigation benefits from a specification, proof directory, wiki, and recovery entry. See [workspace and recovery guidance](WORKSPACE.md).
+
+The exports above apply to this terminal. In each new shell, set `ARIS_REPO` to **this clone's `base` directory** again. Agent tool calls may use independent shells, so include the export in the same call as a helper, or use its absolute path:
+
+```bash
+export ARIS_REPO="$HOME/src/math-rsi/base"
+python3 "$ARIS_REPO/tools/research_wiki.py" --help
+```
+
+An old task may have its own `tools/` or `.aris/tools/` helpers, which some upstream resolvers prefer. Tell the agent to use this clone's absolute helper paths and inspect any local overrides before relying on them. Do not run the bundled upstream installers to set up MathRSI; the complete skills and resources are already in `base/`. Details are in [ARIS reuse](ARIS_REUSE.md).
+
+## Launch Codex or Claude Code
+
+Starting the host in the clone allows its project skill aliases to be discovered. Give it access to the task directory as well. Choose one host:
+
+```bash
+cd "$MATHRSI_ROOT"
+codex --add-dir "$TASK_ROOT"
+```
+
+```bash
+cd "$MATHRSI_ROOT"
+claude --add-dir "$TASK_ROOT"
+```
+
+These are agent-host commands, not MathRSI commands. Check your installed host's `--help` if it differs. With a desktop host, select the clone as the project and grant the task directory through that host's directory controls. You can also start in an existing task workspace and explicitly provide the skill's absolute path; project aliases may then be unavailable, but reading the actual skill works.
+
+In the chat, paste a request like the following, replacing paths and the problem with your actual values. Shell variables in chat text are not automatically expanded; supply their absolute values or explicitly ask the agent to resolve them from the terminal.
+
+```text
+Read /absolute/path/to/math-rsi/base/skills/mathrsi-research/SKILL.md
+and execute it for the task in /absolute/path/to/my-problem.
+
+The original problem and constraints are in problem.md. Restore the existing
+specification, NEXT_SESSION.md, relevant wiki entries, proofs and evidence
+before deciding where to enter. For a new problem, begin with preparation
+and actual literature discovery, then fix the precise original statement.
+
+Continue through the applicable stages to a supported proof, construction,
+permitted counterexample, or precise unresolved obligation. Read each stage's
+actual output before starting its successor. Preserve the original target.
+Use helpers only from /absolute/path/to/math-rsi/base/tools, setting
+ARIS_REPO=/absolute/path/to/math-rsi/base in each helper shell call.
+Keep generated research files in the task workspace and reuse its wiki.
+
+Use the reviewer setup agreed for this task. Record actual calls and their
+scope; report unavailable dependencies accurately. Deliver a readable proof,
+verification evidence and a recovery/handoff entry. Do not change MathRSI's
+core or its acceptance conditions while solving the problem.
+```
+
+For Property B, add: “Also read `plugins/propertyb/skills/mathrsi-propertyb/SKILL.md` in this clone and use its methods where they address the current obligation.” The repository contains the corresponding knowledge and executable checks. The ECC plugin remains a draft; see its own status before using it as a validated domain workflow.
+
+The MathRSI entry skills are host-neutral. When they call an embedded ARIS skill, **Codex reads `base/skills/skills-codex/<name>/SKILL.md`; Claude reads `base/skills/<name>/SKILL.md`**. Relative aliases under `.agents/skills/` and `.claude/skills/` support project discovery. If loaded, `$mathrsi-research` in Codex or `/mathrsi-research` in Claude can invoke the entry; explicit file reading remains usable when discovery has not refreshed.
+
+## Enter at the stage your evidence supports
+
+You do not need to restart a whole research cycle to check an existing proof. The main entry chooses among these stages, or you can request one stage directly:
+
+| What you have | Entry skill | What it should actually return |
+| --- | --- | --- |
+| A new question or unclear specification | `mathrsi-prepare` | Precise statement, investigated literature and imports, current gaps |
+| A fixed question but an uncertain method | `mathrsi-route-loop` | Reviewed and probed route, explicit unproved obligations, first executable tasks |
+| A usable route or unfinished proof | `mathrsi-prove` | Actual lemmas, proof, certificate, counterexample, or precise remaining connection |
+| A complete candidate proof or witness | `mathrsi-verify` | Checks in the original scope, actual audit and repairs, verification status |
+| Established results needing readable delivery | `mathrsi-handoff` | Proof, reproducibility instructions, wiki and recovery/handoff entry |
+
+For example, a stage-only request can say:
+
+```text
+Read /absolute/path/to/math-rsi/base/skills/mathrsi-verify/SKILL.md.
+Verify the original theorem in FORMAL_SPEC.md against PROOF.tex in my task
+workspace. Execute the applicable proof-checker procedure for this host,
+repair concrete gaps while preserving the statement, and write VERIFICATION.md
+linking the real audit and evidence. Return the result and remaining obligation;
+this request is only for verification, not a new research cycle.
+```
+
+When the main entry delegates a stage, that stage returns to its caller; the caller starts the successor once. A local verification returns to the proof obligation it checked. Literature questions can return to survey without repeating an unchanged investigation. [The workflow map](WORKFLOWS.md) explains these transitions and the actual internal skill calls.
+
+## Connect the reviewers you will use
+
+Choose the review route and its budget before asking for a review-bearing stage. Codex can use a fresh native reviewer when the host provides one; that is same-family evidence and is reported as provisional. External reviewers require the corresponding installed CLI, authentication, and a real MCP service loaded into the host. A Python bridge being present in the clone does not establish model access.
+
+Follow [reviewer installation and invocation](REVIEWER_MCP.md) for the host-specific registration commands, tool parameters, timeouts, first-call and continuation contracts. Register only the services you need, restart or reconnect the host, and inspect its actual tool directory. The guide includes Grok, Antigravity/Gemini, Codex, and Claude-review routes; their continuation APIs differ. Credentials remain in your normal CLI/provider environment, outside the repository and proof files.
+
+Tell the executing agent which available backend/model/effort you intend and let it preserve those settings across subcalls. `base/tools/reviewer_route.py` only resolves configuration; running it does not call a model or complete a review. A reviewer response must be read, its specific concern addressed, and the resulting proof checked. Save the raw response, scope, session identity and actual completion state. A failed service call leaves that review pending while independent mathematical work may continue.
+
+## Try the bounded proof-repair example
+
+For an immediate local replay with no model call or TeX installation:
+
+```bash
+cd "$MATHRSI_ROOT"
+python3 examples/proof-repair/replay.py
+```
+
+It exactly checks a counterexample to the input proof's independence assertion and the rational arithmetic in the repair. To run the agent workflow yourself, copy only the starter into a fresh workspace:
+
+```bash
+export TASK_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/mathrsi-proof-repair.XXXXXX")"
+cp "$MATHRSI_ROOT/examples/proof-repair/starter/REQUEST.md" "$TASK_ROOT/REQUEST.md"
+cp "$MATHRSI_ROOT/examples/proof-repair/starter/PROOF.tex" "$TASK_ROOT/PROOF.tex"
+```
+
+Launch your chosen host with access to `TASK_ROOT` as above, then use the natural-language invocation in the [example README](../examples/proof-repair/README.md). Keep the completed `reference/` out of the reviewer input if you want a fresh exercise. Compare your result with the reference after your run; a saved reference audit does not certify a new execution.
+
+The historical trial repaired the proof and obtained same-family/provisional reviews. Its TeX compilation attempts returned **127** because `pdflatex` was missing, so PDF compilation remained pending. No Lean verification or full new-research chain was exercised. The example explains exactly what the replay and trial establish.
+
+## Keep the result usable next time
+
+Keep the precise theorem, full proof and evidence in the task workspace, and update its existing wiki as facts become available. Read back the relevant entity pages: the generated wiki query pack is navigation and may omit a detail needed by the next obligation. Initialize a wiki only when the task genuinely needs one and none exists, following the host's bundled `research-wiki` skill.
+
+At a handoff or interruption, leave a short recovery entry pointing to the original specification, supported results, remaining obligations, actual live work and first useful next action. Record the MathRSI revision used (`git rev-parse HEAD` in the clone), any local changes, and the enabled plugin. Record mathematical proof, arithmetic replay, formal verification, model review and PDF generation in their own actual scopes. A missing rendering dependency need not erase a proved theorem, and a successful rendering command does not prove one.
+
+Workflow improvements belong to a separate authorized maintenance change; see [version evolution](EVOLUTION_WORKFLOW.md). Solving a new task does not resume the archived research projects or modify their historical results.

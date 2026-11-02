@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}\label{thm:target}
+Let $V$ be a finite set and let $\mathcal E\subseteq\binom V4$ have
+$m=|\mathcal E|\le 7$. There is a coloring $c:V\to\{0,1\}$ whose
+restriction to every $e\in\mathcal E$ takes both values.
+\end{theorem}
+\begin{proof}
+Color each vertex independently and uniformly with one of two colors.
+For each edge $e$, let $B_e$ be the event that $e$ is monochromatic.
+Since each edge has four vertices, $\Pr(B_e)=2/2^4=1/8$.
+The vertex colors are independent, so the events $B_e$ are independent.
+Consequently
+\[
+ \Pr\!\left(\bigcap_{e\in\mathcal E}B_e^c\right)
+ =\prod_{e\in\mathcal E}\Pr(B_e^c)=(7/8)^m>0.
+\]
+Any coloring in this event proves the conclusion.
+\end{proof}
+\end{document}

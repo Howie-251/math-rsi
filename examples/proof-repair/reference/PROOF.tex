@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}\label{thm:target}
+Let $V$ be a finite set and let $\mathcal E\subseteq\binom V4$ have
+$m=|\mathcal E|\le 7$. There is a coloring $c:V\to\{0,1\}$ whose
+restriction to every $e\in\mathcal E$ takes both values.
+\end{theorem}
+\begin{proof}
+Color each vertex independently and uniformly with one of two colors.
+For each edge $e$, let $B_e$ be the event that $e$ is monochromatic.
+Since each edge has four vertices, $\Pr(B_e)=2/2^4=1/8$.
+For every coloring, the indicator of $\bigcup_{e\in\mathcal E}B_e$
+is at most the sum of the indicators of the $B_e$.
+Averaging this pointwise inequality over the finite probability space gives
+\[
+ \Pr\!\left(\bigcup_{e\in\mathcal E}B_e\right)
+ \le \sum_{e\in\mathcal E}\Pr(B_e)=\frac{m}{8}.
+\]
+Hence
+\[
+ \Pr\!\left(\bigcap_{e\in\mathcal E}B_e^c\right)
+ =1-\Pr\!\left(\bigcup_{e\in\mathcal E}B_e\right)
+ \ge 1-\frac{m}{8}\ge\frac18>0.
+\]
+Any coloring in this event proves the conclusion.
+\end{proof}
+\end{document}
