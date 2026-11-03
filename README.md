@@ -8,7 +8,9 @@ Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** (
 
 MathRSI organizes mathematical research from problem formulation and literature verification to route exploration, proof construction, independent auditing, optional Lean formalization, and reproducible handoff. MathRSI provides structured Markdown skills, domain plugins, cross-model review bridges, and verification contracts that coding agents (Claude Code and Codex) execute step by step while preserving exact quantifiers and original problem obligations.
 
-![MathRSI: specialize, learn, evolve](figures/mathrsi/01-evolution.png)
+![ARIS research in Property B and ECC informs MathRSI v1; independent DD history informs incremental v2 with meta-evolve and a DD plugin](figures/mathrsi/01-evolution.png)
+
+Standalone ARIS research in Property B and ECC informed the unified v1 workflow. Independent DD research evidence then informed the current incremental v2: outer maintenance, workflow improvements, and a DD plugin. ECC remains a draft. [Figure sources and review](figures/mathrsi/README.md).
 
 ---
 
@@ -81,7 +83,9 @@ As defined in the [Plugin Contract](docs/PLUGIN_CONTRACT.md), plugins receive th
 
 The top-level orchestrator ([`mathrsi-research`](base/skills/mathrsi-research/SKILL.md)) owns stage transitions. It inspects existing workspace evidence, delegates one subworkflow scope at a time, reads the returned artifacts and remaining obligations, and dispatches the next step.
 
-![Inside MathRSI Base: five adaptive subworkflows](figures/mathrsi/02-workflows.png)
+![Five solving subworkflows with embedded ARIS, continuous research wiki, optional Lean, and separate mathrsi-meta-evolve maintenance](figures/mathrsi/02-workflows.png)
+
+Research memory spans all five stages, with targeted returns for literature, route revision, and proof repair. The separate outer `mathrsi-meta-evolve` classifies evidence: Base and Plugin changes proceed through implementation, review, use, and adoption; Task and Defer remain in the wiki or backlog.
 
 | Subworkflow | What It Does | Embedded ARIS Skills Used | Primary Outputs |
 | :--- | :--- | :--- | :--- |

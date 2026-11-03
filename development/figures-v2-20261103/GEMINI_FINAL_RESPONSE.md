@@ -1,0 +1,22 @@
+**实际查看范围说明**：已通过 `view_file` 直接读取并视觉审阅了仓库内新生成的两张 PNG 原图（[01-evolution.png](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/01-evolution.png) 与 [02-workflows.png](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/02-workflows.png)）。
+
+**结论：两张图均无真实事实、箭头或拼写问题，可直接采用发布。**
+
+---
+
+### 1. [01-evolution.png](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/01-evolution.png) 核验结果
+* **版本演进与 DD 历史事实**：
+  * 三列主干 `v0 · ARIS research` $\xrightarrow{\text{Distill}}$ `MathRSI v1` $\xrightarrow{\text{Evolve}}$ `MathRSI v2` 层次清晰；`Property B research` 与 `ECC research` 准确归位在 `v0`（`Standalone skills`）下。
+  * 左下角绿色卡片 `DD research evidence (Proofs · Failed routes · Checks · Wiki | Historical research archive)` 独立于 `v0`/`v1` 之外，无任何来自 `v1` 的箭头，不会产生“DD 由 v1 解出”的误导。
+  * `MathRSI v1` 向下引出 `Existing implementation`，与 `DD research evidence` 共同汇入底部紫色 `mathrsi-meta-evolve (Classify evidence → Modify in place → Review & use)`，再经 `Base + plugin updates` 箭头向上进入 `MathRSI v2`（含 `mathrsi-base-v2`、`Property B plugin`、`ECC plugin draft`、`Degree–diameter plugin`、`New: mathrsi-meta-evolve`），方向与版本事实完全吻合。
+* **拼写与可读性**：所有英文单词、连字符（`Degree–diameter`、`Error-correcting`）与技能名拼写无误，留白与字号清晰。
+
+### 2. [02-workflows.png](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/02-workflows.png) 核验结果
+* **五阶段主流程与插件层**：
+  * 顶部 `mathrsi-research` 与 `Research wiki & evidence` 贯穿全流程；中间 `01 Prepare` 至 `05 Handoff` 五阶段正向箭头、上方 `Targeted literature lookup`（`03 → 01`）及下方 `Rethink the route`（`03 → 02`）、`Repair / local return`（`04 → 03`）三条回流弧线方向全部正确，`04 Verify` 保留 `Lean when useful` 与 `lean-formalize (optional)`。
+  * 插件层通过 5 根双向虚线对齐 5 个阶段，底部并列展示 `Property B`（橙）、`Degree–diameter`（绿）、`ECC (draft)`（蓝）三张卡片。
+* **外层 `mathrsi-meta-evolve` 隔离与分流**：
+  * 底部紫色 `mathrsi-meta-evolve (Outer workflow · improve the next version)` 作为独立横带置于最下方，未与 `05 Handoff` 串联，不会误读为第六个解题阶段。
+  * 内部流向 `Research evidence → Classify` 后清晰分为两支：上支 `Base / Plugin → Modify in place → Review & use → Next version` 沿右侧外沿经 `Next-version feedback` 指向右上角 `Base & plugin updates`；下支 `Task-specific / Defer → Keep in task wiki or backlog` 在带内闭环，准确表达了任务状态留 Wiki、外层改进进下一版的边界。
+* **拼写与可读性**：全图英文文案、技能胶囊名称及图例拼写零错误，视觉对比度和排版可直接用于 README。
+
