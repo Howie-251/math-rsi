@@ -2,6 +2,8 @@
 
 [中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md) · [Property B case study](case-studies/property-b/README.md)
 
+Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)) · **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)). Each tag preserves a complete repository snapshot and stays fixed; `main` follows the current recommended version. v2 adds meta-evolve, the degree–diameter plugin, and workflow improvements to v1.
+
 **An agent-executable workflow and domain knowledge harness for rigorous mathematical research, built on a self-contained adaptation of [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep).**
 
 MathRSI organizes mathematical research from problem formulation and literature verification to route exploration, proof construction, independent auditing, optional Lean formalization, and reproducible handoff. MathRSI provides structured Markdown skills, domain plugins, cross-model review bridges, and verification contracts that coding agents (Claude Code and Codex) execute step by step while preserving exact quantifiers and original problem obligations.
@@ -14,8 +16,8 @@ MathRSI organizes mathematical research from problem formulation and literature 
 
 - **Enter at the current evidence stage**: Start from a raw problem statement, resume an in-progress proof workspace, or jump directly to auditing and repairing a complete candidate proof.
 - **Keep lemmas bound to the original problem**: Intermediate reductions, conditional lemmas, and computational certificates are tracked against their actual callers so the agent can check whether a local result actually closes the main theorem.
-- **Self-contained dual-host ARIS bundle**: Ships with **9 MathRSI workflow skills**, **30 bundled ARIS skills** in both Claude Code (`base/skills/`) and Codex (`base/skills/skills-codex/`) layouts, **53 helper scripts** (`base/tools/`), **4 MCP reviewer bridge servers** (`mcp-servers/`), and the **Property B domain plugin** (`plugins/propertyb/`). No external ARIS checkout or global installer is required.
-- **Clean separation of core, domain, and workspace**: Running a task or domain plugin updates only the problem's task workspace. Reusable domain tools are curated into plugins, and general workflow lessons are distilled into the next base iteration through a separate, human-authorized [evolution workflow](docs/EVOLUTION_WORKFLOW.md).
+- **Self-contained dual-host ARIS bundle**: Ships with **10 MathRSI skills** (9 solving skills plus the outer maintenance skill), **32 bundled ARIS skills** in both Claude Code (`base/skills/`) and Codex (`base/skills/skills-codex/`) layouts, **53 helper scripts** (`base/tools/`), **4 MCP reviewer bridge servers** (`mcp-servers/`), and **Property B** (`plugins/propertyb/`) and **degree–diameter** (`plugins/degree-diameter/`) domain plugins. No external ARIS checkout or global installer is required.
+- **Clean separation of core, domain, and workspace**: Running a task or domain plugin updates only the problem's task workspace. Reusable domain tools are curated into plugins, and general workflow lessons are distilled into the next base iteration through the separate [`mathrsi-meta-evolve` skill](base/skills/mathrsi-meta-evolve/SKILL.md), within the maintenance scope already authorized by the user.
 
 ---
 
@@ -55,12 +57,20 @@ Start Codex or Claude Code in the clone, with access to your task directory. The
 
 ---
 
+## Maintain the existing MathRSI version
+
+Read [`base/skills/mathrsi-meta-evolve/SKILL.md`](base/skills/mathrsi-meta-evolve/SKILL.md) with the research source, current maintenance record, and allowed change scope. It classifies evidence into base behavior, domain knowledge, task state, or deferred proposals, implements supported changes, and uses the affected behavior. Invoke `/mathrsi-meta-evolve` in Claude Code or `$mathrsi-meta-evolve` in Codex; both aliases share the same body. See the [evolution guide](docs/EVOLUTION_WORKFLOW.md) for a copyable request.
+
+The bundled ARIS `meta-optimize` and `meta-apply` have separate host-specific aliases and retain their original contracts; they are not alternate names for this mathematical adaptation. The [v2 changes](docs/V2_CHANGES.md) use DD research evidence to incrementally revise the existing v1 workflows and add the DD plugin. The [maintenance record](development/evolution/dd-v2-20261102/EVOLUTION.md) tracks actual use, review, and adoption; archived DD results are historical sources, not outcomes produced by MathRSI v1 or v2.
+
+---
+
 ## Three-Layer Architecture
 
 | Layer | Location | Role |
 | :--- | :--- | :--- |
-| **Base Core** | `base/` | 9 MathRSI orchestration & subworkflow skills, 30 dual-host ARIS skills, shared verification contracts, and `base/tools/` helpers (`ARIS_REPO=<clone>/base`). |
-| **Domain Plugins** | `plugins/` | Domain reductions, proved lemmas, counterexample maps, and domain checkers. Includes the complete **Property B** plugin (`plugins/propertyb/`, 4 skills + archive) and a draft **ECC** plugin (`plugins/ecc/`). |
+| **Base Core** | `base/` | 9 MathRSI solving skills plus `mathrsi-meta-evolve`, 32 dual-host ARIS skills, shared verification contracts, and `base/tools/` helpers (`ARIS_REPO=<clone>/base`). |
+| **Domain Plugins** | `plugins/` | Domain reductions, proved lemmas, counterexample maps, and domain checkers. Includes the complete **Property B** plugin (`plugins/propertyb/`, 4 skills + archive), the **degree–diameter** plugin (`plugins/degree-diameter/`, 4 skills + source wiki and supporting archive), and a draft **ECC** plugin (`plugins/ecc/`). |
 | **Task Workspace** | User task dir | Problem-specific `FORMAL_SPEC.md`, `research-wiki/`, proof drafts, computational logs, `VERIFICATION.md`, and `NEXT_SESSION.md`. |
 
 As defined in the [Plugin Contract](docs/PLUGIN_CONTRACT.md), plugins receive the active mathematical obligation and return scoped evidence to the calling stage. Plugins never mutate `base/` or weaken the original acceptance criteria during a problem-solving run.
@@ -78,7 +88,7 @@ The top-level orchestrator ([`mathrsi-research`](base/skills/mathrsi-research/SK
 | **1. [`mathrsi-prepare`](base/skills/mathrsi-prepare/SKILL.md)** | Chains [`mathrsi-specify`](base/skills/mathrsi-specify/SKILL.md) (preliminary) $\rightarrow$ [`mathrsi-survey`](base/skills/mathrsi-survey/SKILL.md) (broad alias/citation/errata search & primary-source verification) $\rightarrow$ `mathrsi-specify` (final). | `research-lit`, `research-wiki`, `wiki-enrich` | `FORMAL_SPEC.md`, `LITERATURE.md`, updated wiki entities |
 | **2. [`mathrsi-route-loop`](base/skills/mathrsi-route-loop/SKILL.md)** | Mathematical adaptation of ARIS `auto-review-loop`: proposes a proof route, runs adversarial review, executes informative math/compute probes, revises the route, and rechecks with persistent reviewer memory. | `auto-review-loop` *(math adaptation)*, `research-review` *(composed)* | `ROUTE_REPORT.md` with first concrete proof obligations & reviewer traces |
 | **3. [`mathrsi-prove`](base/skills/mathrsi-prove/SKILL.md)** | Stabilizes objects and derivations, drafts lemmas, runs domain computations or parallel workers with exclusive write scopes, and binds results back to the original problem caller. | `formula-derivation`, `proof-writer`, `proof-orchestrator` *(optional)* | `PROOF_DRAFT.md`, computational certificates, or exact blocking gaps |
-| **4. [`mathrsi-verify`](base/skills/mathrsi-verify/SKILL.md)** | Calls [`mathrsi-assemble`](base/skills/mathrsi-assemble/SKILL.md) when pieces are scattered, checks domain coverage and independent exact arithmetic, runs the ARIS `proof-checker` audit-and-repair loop, and connects optional Lean formalization. | `proof-writer` *(via assemble)*, `proof-checker`, `lean-formalize` *(optional)* | `PROOF.md` / `PROOF.tex`, `VERIFICATION.md`, `PROOF_AUDIT.md` |
+| **4. [`mathrsi-verify`](base/skills/mathrsi-verify/SKILL.md)** | For a natural-language proof, assembles scattered pieces and performs the applicable checks and `proof-checker` repair loop. A formal-only goal goes directly to `lean-formalize`, checking the actual export, definitions, build, and axioms without requiring TeX first. | `proof-writer` *(via assemble)*, `proof-checker`, `lean-formalize` *(optional)* | `PROOF.md` / `PROOF.tex`, `VERIFICATION.md`, `PROOF_AUDIT.md` |
 | **5. [`mathrsi-handoff`](base/skills/mathrsi-handoff/SKILL.md)** | Packages the readable proof, standalone reproduction inputs/commands, citation checks, optional HTML/PDF views, updated wiki state, and resumption notes. | `render-html`, `citation-audit` / `paper-compile` *(when requested)* | `HANDOFF.md`, `NEXT_SESSION.md`, reproducible bundle |
 
 ### Targeted Return Paths, Wiki Memory, and Adversarial Review
@@ -104,6 +114,12 @@ Provides a self-contained knowledge base (`plugins/propertyb/knowledge/`) and fo
 | **[`propertyb-bound-lab`](plugins/propertyb/skills/propertyb-bound-lab/SKILL.md)** | Integrates with `route-loop` (failure diagnosis & probes) and `prove` (lock selection, actual traces, common bad pairs, signed repair gates, general-$k$ bounds). |
 | **[`propertyb-certificate`](plugins/propertyb/skills/propertyb-certificate/SKILL.md)** | Integrates with `verify` for domain coverage checks, exact rational arithmetic replay, and binding local certificates to the global coloring statement. |
 
+### Degree–Diameter (`plugins/degree-diameter/`) — v2 Addition
+
+The [domain entry](plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md) connects to the existing five workflows. [`dd-construction`](plugins/degree-diameter/skills/dd-construction/SKILL.md) develops current-graph coverage, frozen-source clones, and algebraic routes; [`dd-obstruction-certificate`](plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md) binds scoped exclusions, exact certificates, and Lean exports to the actual graph; [`dd-transfer-diagnosis`](plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md) rechecks inherited evidence when the source, rule, field, or public baseline changes. Each returns to its calling stage.
+
+The [plugin guide](plugins/degree-diameter/README.md) includes the source research wiki, proofs, programs, failures, reviews, and formalization archive. New tasks write their own workspace wiki. Historical validity, comparison dates, and verification scopes stay separate; copying an archive neither resumes its Goal nor reruns its proofs.
+
 ### Error-Correcting Codes (`plugins/ecc/`) — Draft
 
 Retains an initial draft ([`mathrsi-ecc`](plugins/ecc/skills/mathrsi-ecc/SKILL.md)) and read-only historical handoff snapshots ([`development/context/ecc-source/`](development/context/ecc-source/README.md)) that informed MathRSI's workflow transitions. It is not yet accepted to the Property B standard and is excluded from default skill discovery.
@@ -116,7 +132,7 @@ Retains an initial draft ([`mathrsi-ecc`](plugins/ecc/skills/mathrsi-ecc/SKILL.m
 
 [![Property B lower-bound improvements](case-studies/property-b/assets/delta.png)](case-studies/property-b/README.md)
 
-These studies were carried out with **ARIS**, then distilled into MathRSI's workflows and Property B plugin. The case includes full offline proof readers, formal source, direct evidence links, and the lessons that shaped the harness. New tasks will evaluate MathRSI v1 itself.
+These studies were carried out with **ARIS**, then distilled into MathRSI's workflows and Property B plugin. The case includes full offline proof readers, formal source, direct evidence links, and the lessons that shaped the harness. New tasks can evaluate the selected MathRSI revision itself.
 
 **[Read the case](case-studies/property-b/README.md)** · [Full proof HTML](case-studies/property-b/readers/PROPERTY_B_GENERAL_BOUND.html) · [Lean reader](case-studies/property-b/readers/PROPERTY_B_GENERAL_LEAN.html). Clone or download the repository and open `case-studies/property-b/index.html` to read the HTML locally.
 
@@ -133,12 +149,13 @@ These studies were carried out with **ARIS**, then distilled into MathRSI's work
 - **[Reviewer MCP Setup](docs/REVIEWER_MCP.md)** — Registering and invoking the bundled `grok-exec`, `antigravity-exec`, `codex-exec`, and `claude-review` MCP servers.
 - **[Plugin Contract](docs/PLUGIN_CONTRACT.md)** — How domain plugins interface with the five subworkflows without mutating the base core.
 - **[Workspace Conventions](docs/WORKSPACE.md)** — Artifact layout, `research-wiki` usage, and session recovery via `NEXT_SESSION.md`.
-- **[Evolution Workflow](docs/EVOLUTION_WORKFLOW.md)** — Standalone maintenance workflow for distilling, reviewing, and testing general workflow lessons for the next base iteration.
+- **[v2 Changes](docs/V2_CHANGES.md)** — Concrete changes to v1, DD stage integration, and evidence boundaries.
+- **[Evolution Guide](docs/EVOLUTION_WORKFLOW.md)** — Human entry to [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md), which maintains the executable process for improving the existing base and plugins from research evidence.
 - **[Architecture Figures](figures/mathrsi/README.md)** — High-resolution diagrams, generation prompts, and visual alignment review records.
 
 ---
 
-## Validation & Current v1 Scope
+## Validation & Current Version Scope
 
 The v1 implementation has been exercised through isolated bundle tests, targeted workflow trials, and real domain-checker replays. [Validation records](development/VALIDATION.md) retain the commands, review responses, and precise scope.
 
@@ -149,7 +166,7 @@ The v1 implementation has been exercised through isolated bundle tests, targeted
 | [Proof-repair trial](development/figure-workflow-check-20261101/REPORT.md) | A fresh agent found false independence of overlapping-edge events, repaired the proof using a union bound, preserved the theorem, and completed fresh source reviews and handoff. Review was same-family/provisional. PDF compilation remains pending because the test machine lacked TeX. |
 | Property B replays and local workflow trial | Selected exact certificate checks run from the bundled resources; early local verification returns to its original proof obligation. See the records for each parameter's coverage. |
 
-ECC remains a draft plugin. The v2 node in Figure 1 is the next iteration design. A complete new long research task and systematic efficiency or recursive self-improvement benchmarks remain to be evaluated.
+ECC remains a draft plugin. The v2 implementation keeps the v1 workflow and adds the DD plugin, direct formal-target verification, and more explicit consumption of changed baselines, changed objects, and shared coverage. [v2 changes](docs/V2_CHANGES.md) distinguish implemented behavior from the current adoption and review record. A complete new long research task and systematic efficiency or recursive self-improvement benchmarks remain to be evaluated.
 
 Model CLIs and accounts, search access, and optional TeX/Lean environments are supplied by the user. The repository includes the workflow and bridge source, not these services or toolchains. Use the task's pinned Lean dependencies when formalizing an existing project.
 
@@ -157,7 +174,7 @@ Model CLIs and accounts, search access, and optional TeX/Lean environments are s
 
 ## Provenance & License
 
-MathRSI's workflow and bundled ARIS skill adaptations build on **[ARIS (Auto-claude-code-research-in-sleep)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)** (snapshot commit `c485faa59a68e51c6575dea67ca57abc7a6a2b9c`, Copyright (c) 2026 wanshuiyin) and research artifacts from the Property B and ECC projects. See **[docs/PROVENANCE.md](docs/PROVENANCE.md)**, [`base/ARIS_SNAPSHOT.json`](base/ARIS_SNAPSHOT.json), and [`mcp-servers/SOURCE.md`](mcp-servers/SOURCE.md) for exact file-level provenance.
+MathRSI's workflow and bundled ARIS skill adaptations build on **[ARIS (Auto-claude-code-research-in-sleep)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)** (snapshot commit `c485faa59a68e51c6575dea67ca57abc7a6a2b9c`, Copyright (c) 2026 wanshuiyin) and research artifacts from the Property B, ECC, and degree–diameter projects. See **[docs/PROVENANCE.md](docs/PROVENANCE.md)**, [`base/ARIS_SNAPSHOT.json`](base/ARIS_SNAPSHOT.json), and [`mcp-servers/SOURCE.md`](mcp-servers/SOURCE.md) for exact file-level provenance.
 
 - The MathRSI workflow, scripts, and bundled ARIS components are licensed under the **[MIT License](LICENSE)**.
 - Archived academic papers, preprints, and third-party historical reference materials under `plugins/` and `development/` retain their original authors' and publishers' copyrights; the repository's MIT license does not relicense those third-party works.

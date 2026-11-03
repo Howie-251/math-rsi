@@ -1,0 +1,433 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "solver_calls": 0,
+  "case": "n60",
+  "scope": "Exact degree8 diameter2 completion with all original bad-pair endpoints R free to change every incident edge, and only the saved source O/O induced subgraph fixed; anchored construction domain, not all graphs of this order; R-to-O rows lexicographically sorted by relabeling R only",
+  "n": 60,
+  "degree_target": 8,
+  "source_graph": "computations/dd82/construction/fullgraph60_weighted_run/candidate.current.edges",
+  "source_edges": 240,
+  "original_bad_pairs": [
+    [
+      10,
+      50
+    ],
+    [
+      21,
+      23
+    ],
+    [
+      21,
+      45
+    ],
+    [
+      22,
+      48
+    ],
+    [
+      22,
+      52
+    ],
+    [
+      23,
+      37
+    ],
+    [
+      26,
+      32
+    ],
+    [
+      26,
+      52
+    ],
+    [
+      26,
+      55
+    ],
+    [
+      28,
+      45
+    ],
+    [
+      28,
+      55
+    ],
+    [
+      29,
+      50
+    ],
+    [
+      30,
+      50
+    ],
+    [
+      31,
+      33
+    ],
+    [
+      31,
+      51
+    ],
+    [
+      33,
+      56
+    ],
+    [
+      34,
+      37
+    ],
+    [
+      34,
+      39
+    ],
+    [
+      36,
+      50
+    ],
+    [
+      37,
+      46
+    ],
+    [
+      37,
+      58
+    ],
+    [
+      39,
+      46
+    ],
+    [
+      39,
+      56
+    ],
+    [
+      45,
+      51
+    ],
+    [
+      48,
+      49
+    ],
+    [
+      49,
+      58
+    ]
+  ],
+  "repair_vertices": [
+    10,
+    21,
+    22,
+    23,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    37,
+    39,
+    45,
+    46,
+    48,
+    49,
+    50,
+    51,
+    52,
+    55,
+    56,
+    58
+  ],
+  "outside_vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    25,
+    27,
+    35,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    47,
+    53,
+    54,
+    57,
+    59
+  ],
+  "variables": 57920,
+  "clauses": 186741,
+  "variable_kinds": {
+    "free_A_edge": 1175,
+    "exact_degree_threshold": 15379,
+    "actual_two_free_edge_path": 40550,
+    "lex_equal_prefix": 816
+  },
+  "primary_edge_variables": 1175,
+  "fixed_pairs": 595,
+  "fixed_edges": 94,
+  "fixed_nonedges": 501,
+  "all_original_pair_count": 1770,
+  "coverage_clauses": 1261,
+  "simplified_fixed_coverage_pairs": 509,
+  "simplifications": {
+    "coverage_fixed_direct": 94,
+    "coverage_fixed_two_edge_path": 415,
+    "one_fixed_edge_path": 4700,
+    "zero_path": 27888,
+    "two_free_edge_path": 40550,
+    "coverage_emitted": 1261
+  },
+  "clause_groups": [
+    {
+      "name": "all_original_vertices_exact_degree",
+      "first_clause": 1,
+      "last_clause": 58934,
+      "clauses": 58934
+    },
+    {
+      "name": "all_actual_original_pair_coverage_with_faithful_constant_simplification",
+      "first_clause": 58935,
+      "last_clause": 181845,
+      "clauses": 122911
+    },
+    {
+      "name": "lexicographic_R_to_O_row_order",
+      "first_clause": 181846,
+      "last_clause": 186741,
+      "clauses": 4896
+    }
+  ],
+  "exact_degree_constraints": 60,
+  "all_bad_pair_obligations_retained": true,
+  "relaxed_input_written": false,
+  "source_assignment_sanity": "PASSED_RELABELLED_SOURCE_ASSIGNMENT_SANITY",
+  "cnf_bytes": 3172989,
+  "mathematical_dependencies": [
+    "proofs/dd82/construction/JOINT_BOUNDARY_COMPLETION_DIRECTION.md"
+  ],
+  "helper_reuse": "CNFEmitter, enforce_exact, add_iff_and; generic definitions only",
+  "no_order61_defect_assumptions": true,
+  "edit_radius": null,
+  "independently_fixed_R_O_degree_split": false,
+  "review_status": "Root-managed review of this sorted delta; prior base review alone does not attest it",
+  "preparation_cpu_seconds": 0.717888686,
+  "preparation_wall_seconds": 0.7469847574830055,
+  "added_variables": 816,
+  "added_clauses": 4896,
+  "base_prefix": {
+    "input": "computations/dd82/construction/joint_boundary_completion_run/n60/input.cnf",
+    "variables": 57104,
+    "clauses": 181845,
+    "body_copied_verbatim": true,
+    "auxiliary_definitions_compared_to_input": true
+  },
+  "row_order": {
+    "rows": [
+      10,
+      21,
+      22,
+      23,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      39,
+      45,
+      46,
+      48,
+      49,
+      50,
+      51,
+      52,
+      55,
+      56,
+      58
+    ],
+    "columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      27,
+      35,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      47,
+      53,
+      54,
+      57,
+      59
+    ],
+    "direction": "lexicographically nondecreasing",
+    "outside_labels_fixed": true,
+    "ties_allowed": true,
+    "graph_automorphism_assumed": false,
+    "RR_edges_relabelled_consistently": true
+  },
+  "lex_sanity": "PASSED",
+  "relabelled_source_bad_pairs": [
+    [
+      10,
+      29
+    ],
+    [
+      21,
+      28
+    ],
+    [
+      21,
+      39
+    ],
+    [
+      21,
+      48
+    ],
+    [
+      21,
+      51
+    ],
+    [
+      22,
+      50
+    ],
+    [
+      22,
+      52
+    ],
+    [
+      23,
+      30
+    ],
+    [
+      23,
+      58
+    ],
+    [
+      26,
+      29
+    ],
+    [
+      26,
+      33
+    ],
+    [
+      29,
+      58
+    ],
+    [
+      30,
+      45
+    ],
+    [
+      30,
+      50
+    ],
+    [
+      31,
+      34
+    ],
+    [
+      31,
+      36
+    ],
+    [
+      31,
+      55
+    ],
+    [
+      32,
+      37
+    ],
+    [
+      32,
+      56
+    ],
+    [
+      33,
+      46
+    ],
+    [
+      34,
+      52
+    ],
+    [
+      36,
+      56
+    ],
+    [
+      37,
+      46
+    ],
+    [
+      45,
+      49
+    ],
+    [
+      49,
+      56
+    ],
+    [
+      55,
+      56
+    ]
+  ],
+  "inherited_small_input_sanity": {
+    "path": "computations/dd82/construction/joint_boundary_completion_run/n60/small_input_sanity.json",
+    "rerun": false
+  },
+  "source_dependencies": [
+    "computations/dd82/construction/joint_boundary_completion_run/encode.py",
+    "computations/dd82/construction/joint_boundary_completion_run/sorted/encode.py"
+  ]
+}

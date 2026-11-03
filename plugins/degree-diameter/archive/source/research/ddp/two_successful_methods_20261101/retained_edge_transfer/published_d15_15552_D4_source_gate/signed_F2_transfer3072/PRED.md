@@ -1,0 +1,11 @@
+# One literal signed-coefficient F2 transfer
+
+New rule only: read the actual five global(B,v,c) templates and192-controller table recovered from the accepted192×F3^4 source. Lift coefficient0→0,1→1,2→integer−1, then reduce these integers modulo2. This is a new rule, not a field homomorphism or an inherited characteristic-transfer theorem. Binary labels are16*a+sum_i x_i2^i; each old controller relation gives two noise choices t∈F2, so a reciprocal simple construction would have maximum degree10 and order3072.
+
+Concrete falsifiable prediction before execution: type1 with reverse type3 fails the new actual reverse-noise condition. The signed integer expression B3*v1=(0,−3,0,0) vanishes modulo3 but becomes e1 modulo2, outside the binary span of v3=(1,1,1,1). At controller0, x=0,t=1 should produce global0→183 but have no actual reverse output. This is a paper prediction only until the pilot checks the saved literals.
+
+For each forward output in the first controller's five global types, locate the actual reverse-controller relation and test whether some binary noise returns exactly to the input. Ignore virtual stays only when the entire label is unchanged. Verify the two noise outputs are distinct. Stop at the first actual failure; no symmetrization, alternative coefficient interpretation, coordinate basis or new field is tried. If basic conditions all pass, generate only this3072 candidate, verify reciprocal simple degrees, and perform at most one final-target allroot radius4 traversal with an explicit CPU cap. A complete D≤4 hit is saved and reported to root; no public-record claim is implied.
+
+Old scope: signed5_frame_gate stopped at a failed projective-frame premise, before any signed arcs or binary construction. That is a different conditional normalization and does not close the present literal rule. Its F3 kernel/rank tests are inherited without rerun. The old source15552 graph, D4, formalization and geometry are not revalidated.
+
+Newcase20CPU total including preparation and failures, one worker, no reset. No old field laws, old graph/BFS, ARIS, Lean, solver, remote, install or hashes. Parent owns root documents and acceptance. Peer PAPER_INTERFACE.md is a paper prediction, not a substitute for actual pilot receipts.

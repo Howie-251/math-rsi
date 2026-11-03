@@ -1,0 +1,90 @@
+{
+  "status": "COMPLETE_ALL4096_NO_HIT",
+  "prediction": "JOINT_REFUTED_COMPLETE_FIXED_FAMILY",
+  "n": 125,
+  "m": 375,
+  "degree": 6,
+  "target_D": 3,
+  "savedL": 120,
+  "planned": 4096,
+  "completed": 4096,
+  "untested": 0,
+  "actual_candidate_graphs": 4096,
+  "representative_root_R3_checks": 4096,
+  "hits": 0,
+  "actual_global_D": null,
+  "ordinary_bad_unordered_pairs": null,
+  "source_BFS": 0,
+  "fullglobalD_BFS": 0,
+  "solver_calls": 0,
+  "native_CPU_seconds": 0.024836,
+  "rule_variants": 0,
+  "execution_receipt": {
+    "aggregate_CPU_budget_seconds": 15,
+    "compiler_process_CPU_seconds": 1.161616,
+    "child_process_CPU_seconds": 1.1875749999999998,
+    "driver_CPU_seconds": 0.002271770999999999,
+    "workers": 1,
+    "live_handle": null,
+    "native_process_CPU_seconds": 0.025958999999999843,
+    "measured_run_total_CPU_seconds": 1.1898467709999998,
+    "exec_session_id": 40310,
+    "process_exit_code": 0,
+    "PID": null,
+    "PID_capture_status": "not captured; actualexecsession40310 completed exit0"
+  },
+  "control_prediction": {
+    "four_paths_supported": true,
+    "four_vertical_targets_actual_distance": 3,
+    "all_four_targets_R3": true,
+    "canonical_R3_missing": 18,
+    "canonical_first_missing_id": 2,
+    "canonical_first_missing_coordinates": [
+      0,
+      2,
+      0
+    ],
+    "extra_BFS_for_control": 0
+  },
+  "common_uncovered_target_intersection": {
+    "computed": false,
+    "targets": null,
+    "reason": "Only percase R3histogram/missingcount/firstmissing were saved, not fulluncovered masks/lists. No graph orBFS rerun was made to recover them."
+  },
+  "connected_status": null,
+  "case_schema_note": "Firstfailed representative root is sufficientnegative. All4096 fail atroot0, so no furtherorbitroot needed. Missingcounts are rootstates, notunorderedpairs.",
+  "saved_first_missing_witness_analysis": {
+    "analysis_input": "existing CASES.jsonl only",
+    "rows": 4096,
+    "first_missing_id_histogram": {
+      "2": 4096
+    },
+    "all_saved_first_witnesses_same": true,
+    "single_common_saved_witness_if_any": 2,
+    "new_graphs_or_BFS": 0,
+    "scope": "A common first_missing inallrows gives a universal witness among these4096 cases. No fulluncovered intersection claimed."
+  },
+  "post_experiment_paper_extension": {
+    "status": "INDEPENDENT_PAPER_VALID",
+    "actual_enumerated_settings_unchanged": 4096,
+    "scope": "Same fixedq5source +absoluteC5step1; any a-independent antipodalshift M(a,v)=(a+tau(v),-v) fornonzero v, withtau nonzero andtau(-v)=-tau(v).",
+    "free_unordered_nonzero_v_pairs": 12,
+    "strictly_excluded_shift_assignments_by_paper": 16777216,
+    "additional_settings_enumerated": 0,
+    "uniform_missing_pair_gauge": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ]
+    ],
+    "ordinary_bad_unordered_pairs_measured": null,
+    "proof": "ANALYSIS_ANTIPODAL_OBSTRUCTION.md/json",
+    "decision": "Stop allsuch antipodalshift rules, not justthe reciprocal subset. Other matchingpartner topologies remainopen."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "timestamp_UTC": "2026-10-28T03:00:44.682101+00:00",
+  "status": "FROZEN_BEFORE_CONSTRUCTION_TESTS",
+  "target_Delta": 6,
+  "target_D": 3,
+  "hypothetical_n": 125,
+  "savedL": 120,
+  "previous_new_evidence": "Allsinglematching augmentations of theq5source fail: rootR3<=120<125. But thefiveabsolute vertices have two freeports each; singlematching used atmostone.",
+  "changed_rule": "Retain source; addaC5 onallfiveabsolute points andonecomplementmatching on120nonabsolute points. This is not asinglematching onallvertices.",
+  "coordinates": "a∈F5, v=(y,h), y=b−a²/2, h=c−a³−4ay. Inverse b=y+a²/2,c=h+a³+4ay.",
+  "old_edges": "For t∈F5: (a,y,h)↔(a+t,−y−t²/2,−h+4ty+t³), deleteonly v0,t0loops.",
+  "new_absolute_edges": "v0: a↔a±1. Absolute points are independent in source; this repairs every pair amongthem to<=2.",
+  "new_nonabsolute_edges": "For v=s*rep_L≠0 withfirstnonzero normalizedprojectiverep, τ(v)=κ_L/s, κ_L∈F5*. Add(a,v)↔(a+τ(v),−v). Six projective directions,4096κ.",
+  "guarantees": [
+    "τ(−v)=−τ(v), henceinvolution/simplematching offabsolute points.",
+    "Everyoldedge v→−v hast0; newτ≠0 givesno oldedgeduplicate.",
+    "125vertices/375edges/all6regular.",
+    "a-translation is aC5automorphism,25vertexorbits soall25 a0roots sufficeforD3."
+  ],
+  "targeted_prediction": {
+    "claim": "The preselected coefficienttuple repairs allfour oldvertical badtargets (0,0,c),c=1..4 fromp0.",
+    "canonical_coefficients": "κ(1,3)=4; otherfiveprojectivedirectionsκ=1.",
+    "old_coordinates_paths": {
+      "c1": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "c4": "Negatefirst/thirdcoordinates ofthec1path.",
+      "c2": "Root-oldneighbor withfirstcoordinateu2, thenM thenoldedge; τ=u2 givesc=−u³=2.",
+      "c3": "Root-oldneighbor withu1, thenM thenoldedge; τ=2u givesc=−2u³=3."
+    },
+    "why_coefficients": "For oldneighbor(u,0,0), v=(2u²,u³), soτ=u or2u yields terminalvertical c=−u³ or−2u³. Chooseκ(1,3)=4 foru1 andκ(1,1)=1 foru2 tocomplementC5repairsofc1/c4."
+  },
+  "joint_prediction": "Atleastone completeκ assignment maycoverall125targets fromall25roots; nojointguarantee isclaimed. A bounded fullfamily check canrefute it.",
+  "budget": {
+    "parameter_assignments": 4096,
+    "aggregate_CPU_seconds": 15,
+    "workers": 1,
+    "old_source_BFS": 0,
+    "maximum_representative_roots_per_graph": 25,
+    "field_or_rule_extensions": 0,
+    "solver_calls": 0
+  },
+  "scope": "One fixed q5source, absoluteC5step1, antipodal v-orbit reciprocal-shiftmatching; not allsource-preserving maxdegree6 augmentations orall125graphs.",
+  "stop": "Save everytestedtuple firstfailorfullhit, comparethetargetedpathprediction. Ifzero hits stopthisexactfamily, not automaticallytuneexponent/spoke/matchingtopology."
+}

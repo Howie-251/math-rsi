@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_BEFORE_MODIFIED_ADJACENCY_OR_COVERAGE",
+  "source": "../source6804.edges",
+  "recipe": "../construction.json",
+  "source_n": 6804,
+  "source_m": 44226,
+  "source_delta": 13,
+  "source_D": 4,
+  "source_D_basis": "Inherited primary author source; no original graph BFS repeated",
+  "source_label": "vertex=81*(i+7*j)+x0+3*x1+9*x2+27*x3; identity controller=0",
+  "control_A": {
+    "change": "Delete the entire 3402-edge z matching",
+    "target_delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "hypothetical_record_order": 6804,
+    "prediction": "The root (identity controller,zero fiber) has at least one target outside its closed radius 4; the z insertion packet is needed by the fixed source.",
+    "if_first_root_full": "Check exactly the 81 identity-controller fiber roots, using left multiplication to justify coverage of all graph roots; report any full graph to root."
+  },
+  "control_B": {
+    "change": "Keep the same z controller matching but replace gamma(x)=-x+(0,0,1,0) by gamma(x)=-x",
+    "target_delta": 13,
+    "target_D": 4,
+    "record_claim": false,
+    "prediction": "The root (identity controller,zero fiber) loses coverage because removing the affine shift collapses previously complementary translated hyperplane packets.",
+    "scope": "One identity-zero depth-4 root check; no scan over offsets or additional sources"
+  },
+  "stop": "Stop each control on its first root with missing targets; do not infer an exact diameter.",
+  "budget": "At most 2 CPU seconds, one worker; parse original source once; no original all-source BFS, download, hash or parameter search."
+}

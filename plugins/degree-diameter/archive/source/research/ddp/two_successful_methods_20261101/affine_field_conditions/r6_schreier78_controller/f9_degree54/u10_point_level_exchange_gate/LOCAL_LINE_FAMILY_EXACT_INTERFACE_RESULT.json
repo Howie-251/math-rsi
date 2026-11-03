@@ -1,0 +1,210 @@
+{
+  "status": "INDEPENDENT_TWO_AND_THREE_DIRECTION_IFF_SUPPORTED_BY_PAPER_AND_ACTUAL_LOCAL_WITNESSES",
+  "q": 9,
+  "two_direction_iff": "ceil(A/q)+ceil(B/q)<=q for nonnegative integer A,B and independent directions",
+  "three_direction_positive_iff": "exists a,b,c in1..q-1: A<=bc,B<=a(q-c),C<=(q-a)(q-b)",
+  "pair_cases": [
+    {
+      "counts": [
+        50,
+        31
+      ],
+      "ceil_supports": [
+        6,
+        4
+      ],
+      "feasible": false
+    },
+    {
+      "counts": [
+        27,
+        54
+      ],
+      "ceil_supports": [
+        3,
+        6
+      ],
+      "feasible": true,
+      "actual_witness_verified": true
+    },
+    {
+      "counts": [
+        0,
+        81
+      ],
+      "ceil_supports": [
+        0,
+        9
+      ],
+      "feasible": true,
+      "actual_witness_verified": true
+    },
+    {
+      "counts": [
+        0,
+        0
+      ],
+      "ceil_supports": [
+        0,
+        0
+      ],
+      "feasible": true,
+      "actual_witness_verified": true
+    },
+    {
+      "counts": [
+        0,
+        82
+      ],
+      "ceil_supports": [
+        0,
+        10
+      ],
+      "feasible": false
+    }
+  ],
+  "target19_actual_darts": [
+    {
+      "source": 17,
+      "target": 19,
+      "source_port": 0,
+      "source_port_name": "a_plus",
+      "target_port": 1,
+      "target_port_name": "a_minus",
+      "chart_index": 0,
+      "chart_id": "cross_0_1_forward",
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "noise_direction": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "source": 45,
+      "target": 19,
+      "source_port": 3,
+      "source_port_name": "b_minus",
+      "target_port": 2,
+      "target_port_name": "b_plus",
+      "chart_index": 3,
+      "chart_id": "cross_2_3_reverse",
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          5,
+          8,
+          4
+        ]
+      ],
+      "noise_direction": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": 71,
+      "target": 19,
+      "source_port": 2,
+      "source_port_name": "b_plus",
+      "target_port": 3,
+      "target_port_name": "b_minus",
+      "chart_index": 2,
+      "chart_id": "cross_2_3_forward",
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          4
+        ],
+        [
+          7,
+          6,
+          6
+        ]
+      ],
+      "noise_direction": [
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "target19_basis_determinant": 2,
+  "three_cases": [
+    {
+      "counts": [
+        12,
+        50,
+        11
+      ],
+      "profiles_checked": 512,
+      "feasible_profiles": 0,
+      "feasible": false
+    },
+    {
+      "counts": [
+        12,
+        50,
+        3
+      ],
+      "profiles_checked": 512,
+      "feasible_profiles": 1,
+      "profile": [
+        8,
+        6,
+        2
+      ],
+      "feasible": true,
+      "explicit_lines": 65,
+      "actual_disjoint_pins": 585
+    }
+  ],
+  "arbitrary_complete_line_unions": true,
+  "requires_fixed_W": false,
+  "local_iff_is_global_all_targets_guarantee": false,
+  "remaining_coupling": "same source center subset must transport consistently through all six actual darts; independently feasible target line families may have incompatible pullbacks",
+  "generation_decision": "select valid projection supports/slabs first, then transport actual source center subsets across every dart and test simultaneous compatibility; do not optimize only 837/832 counts",
+  "solver_calls": 0,
+  "new_point_pool_enumerations": 0,
+  "old_field_checks": 0,
+  "old_allrank_checks": 0,
+  "source_graph_reads": 0,
+  "BFS_runs": 0,
+  "Lean_runs": 0,
+  "new_graphs": 0,
+  "CPU_budget_seconds": 3,
+  "total_CPU_seconds": 0.017331504999999997,
+  "all_processes_terminal": true
+}

@@ -1,0 +1,67 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 23 obligations discharged for the fixed-Brown57 eight-deletion obstruction and its r>=9 corollary; same-family provisional semantic acceptance.",
+  "scope": "For the fixed labelled Brown57 graph B, every finite simple undirected G on V(B) plus one new vertex with maximum degree <=8 and diameter <=2 must have at least 9 net old-edge deletions; its old-old addition count equals its deletion count. No exclusion of arbitrary order-58 graphs or >=9-deletion extensions.",
+  "trace_path": "reviews/dd82/proof-checker-brown8-20261011/",
+  "thread_id": "/root/proof_review_brown8",
+  "review_agent_ids": [
+    "/root/proof_review_brown8"
+  ],
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "model_metadata": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "ultra",
+    "spawn_configuration_accepted": true,
+    "fork_turns": "none",
+    "actual_backend_model": null,
+    "actual_backend_reasoning_effort": null,
+    "attestation": "Only requested/accepted spawn configuration reported by parent; no independent backend attestation or other agent identifier exposed."
+  },
+  "generated_at": "2026-10-11 08:30:48 UTC",
+  "audited_inputs": [
+    "proofs/dd82/construction/BROWN_EIGHT_DELETE_OBSTRUCTION.md",
+    "proofs/dd82/construction/BROWN_EXTENSION_OBSTRUCTION.md",
+    "proofs/dd82/construction/BROWN57_PROOF.md",
+    "computations/dd82/construction/brown_eight_delete_facts.py",
+    "computations/dd82/construction/brown_eight_delete_facts.json",
+    "computations/dd82/construction/brown57.py",
+    "computations/dd82/construction/brown57.edges"
+  ],
+  "details": {
+    "theorems_audited": 3,
+    "main_target": "exactly-eight-deletion exclusion",
+    "combined_conclusion": "at least nine deletions, additions equal deletions",
+    "obligations_total": 23,
+    "obligations_discharged": 23,
+    "issues": [],
+    "counterexamples_found": 0,
+    "open_counterexample_candidates": 0,
+    "source_fixes": 0,
+    "prior_review_verdicts_read": false,
+    "finite_evidence": "independent_finite_check.json",
+    "obligation_ledger": "PROOF_OBLIGATIONS.json",
+    "assumption_ledger": "PROOF_SKELETON.md"
+  },
+  "checks": {
+    "finite_check_passed": true,
+    "finite_check_cpu_processes": 1,
+    "finite_check_timeout_seconds": 30,
+    "heavy_search": false,
+    "semantic_review_completed": true,
+    "cross_family_review": false,
+    "lean_checked": false
+  },
+  "overrides": {
+    "source_modification": false,
+    "wiki_writes": false,
+    "tex_pdf_html": false,
+    "artifact_digests": "omitted by explicit instruction"
+  }
+}

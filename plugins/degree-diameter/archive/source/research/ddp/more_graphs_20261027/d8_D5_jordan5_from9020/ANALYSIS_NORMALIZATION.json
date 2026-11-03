@@ -1,0 +1,99 @@
+{
+  "status": "SPECIFIED_JORDAN_CLASSES_NORMALIZATION_AND_CONNECTIVITY_VALID",
+  "group_order": 5500,
+  "hypothetical_degree": 8,
+  "hypothetical_edges": 22000,
+  "module": {
+    "field_order": 5,
+    "dimension": 2
+  },
+  "positive_projected_normal_phase": [
+    [
+      1,
+      1
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "actions": [
+    {
+      "lambda": 2,
+      "matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "exact_order": 20,
+      "fourth_power_shear_coefficient": 2
+    },
+    {
+      "lambda": 3,
+      "matrix": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "exact_order": 20,
+      "fourth_power_shear_coefficient": 3
+    }
+  ],
+  "exact_order20_GL2F5_classes_complete": true,
+  "normalization": {
+    "kill_v1": "c=(A-I)^-1*v1; conjugation sendsvi tovi+(I-A^ji)c",
+    "residual_translation_gauge": false,
+    "centralizer_units": "[[a,b],[0,a]],a nonzero",
+    "centralizer_order": 20,
+    "cyclic_condition": "second_coordinate nonzero",
+    "canonical_first_cyclic_vector": [
+      0,
+      1
+    ],
+    "strata_counts_per_lambda": {
+      "first_cyclic_v2": 625,
+      "first_cyclic_v3": 125,
+      "first_cyclic_v4": 25
+    },
+    "per_lambda": 775,
+    "total": 1550,
+    "all_invariant_line_omitted": "all module coordinates stay in span(e1), so thefullgroup is not generated"
+  },
+  "connectivity": {
+    "pure_module_word": "(gi*g1^(-ji))^11=(0,vi,phase0)",
+    "pure_module_reason": "phase0 normalfactorC11xV;11 killsC11 and is1 inF5",
+    "cyclic_span": "det(vi,Avi)=-yi^2 nonzero",
+    "quotient_normal_g1g3": 5,
+    "quotient_normal_g3g1": 9,
+    "quotient_commutator_normal": 7,
+    "quotient_phase_generator": 1,
+    "connected_every_retained_tuple": true
+  },
+  "raw_controller_result": "controller_capacity/RESULT.json",
+  "raw_minimum": 78,
+  "raw_first_minimum_slot": 110,
+  "raw_target_module_size": 25,
+  "module_vectors_enumerated_here": 0,
+  "parameter_graphs_here": 0,
+  "BFS_here": 0,
+  "actual_D": null,
+  "scope": "Fixed C11action2/phases1,6,7,9/normals1,8,2,8 and only GL2F5 exact-order20 actions; no othermatrixorders or sourceframes."
+}

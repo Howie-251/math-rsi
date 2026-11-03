@@ -1,0 +1,2001 @@
+# Research Wiki Log
+
+_Append-only timeline._
+- `2026-10-11T07:22:08Z` Wiki initialized
+- `2026-10-11T07:35:13Z` upsert_idea: added idea:dd82-original-graph-foundations [stage=active outcome=pending]
+- `2026-10-11T07:35:13Z` upsert_idea: added idea:dd82-brown57-extension [stage=active outcome=pending]
+- `2026-10-11T07:35:13Z` upsert_idea: added idea:dd82-n59-matching-row-c4 [stage=active outcome=pending]
+- `2026-10-11T07:35:13Z` ingest_paper: ingested paper:širáň2011_large_graphs_diameter (arxiv:)
+- `2026-10-11T07:35:13Z` add_experiment: added exp:dd82-brown57-independent-bfs [verdict=yes confidence=high]
+- `2026-10-11T07:35:13Z` add_experiment: added exp:dd82-brown57-seven-delete [verdict=partial confidence=high]
+- `2026-10-11T07:35:13Z` add_experiment: added exp:dd82-n59-c4-local-charge [verdict=yes confidence=high]
+- `2026-10-11T07:41:31Z` Recovered original scope; compiled Moore and Brown57 lower bound; stored reviewed conditional C4 result and retained all full-order gaps.
+- `2026-10-11T07:51:14Z` add_claim: added claim:dd82-brown57-existence [status=verified] prov=reviews/dd82/proof-checker-20261011
+- `2026-10-11T07:51:14Z` add_claim: added claim:dd82-paper-upper63 [status=verified] prov=reviews/dd82/proof-checker-20261011
+- `2026-10-11T07:51:14Z` add_claim: added claim:dd82-brown57-eight-edits [status=verified] prov=reviews/dd82/proof-checker-20261011
+- `2026-10-11T07:51:14Z` add_claim: added claim:dd82-n59-local-c4-exclusion [status=verified] prov=reviews/dd82/proof-checker-20261011
+- `2026-10-11T07:59:14Z` upsert_idea: added idea:dd82-n63-cyclotomic-trace [stage=active outcome=pending]
+- `2026-10-11T07:59:15Z` upsert_idea: added idea:dd82-n59-global-trace [stage=active outcome=pending]
+- `2026-10-11T08:05:53Z` add_claim: added claim:dd82-n63-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-paper-upper62 [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-n59-zero-matching-trace [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-n59-local-c5-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-n59-local-c7-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-n59-local-c8-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:05:54Z` add_claim: added claim:dd82-n59-local-c9-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:07:08Z` add_experiment: added exp:dd82-n63-norm-table [verdict=yes confidence=high]
+- `2026-10-11T08:07:09Z` add_experiment: added exp:dd82-brown58-local-switch-trap [verdict=partial confidence=high]
+- `2026-10-11T08:29:17Z` add_claim: updated claim:dd82-paper-upper63 [status=verified] prov=reviews/dd82/proof-checker-reductions-20261011
+- `2026-10-11T08:29:17Z` add_claim: updated claim:dd82-n59-zero-matching-trace [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:29:17Z` add_claim: updated claim:dd82-n59-local-c9-exclusion [status=verified] prov=reviews/dd82/proof-checker-n63-trace-20261011
+- `2026-10-11T08:29:17Z` add_claim: added claim:dd82-n62-seven-template-reduction [status=verified] prov=reviews/dd82/proof-checker-reductions-20261011
+- `2026-10-11T08:29:17Z` add_claim: added claim:dd82-n59-single-triangle-normal-form [status=verified] prov=reviews/dd82/proof-checker-reductions-20261011
+- `2026-10-11T08:35:10Z` add_claim: added claim:dd82-brown57-nine-edits [status=verified] prov=reviews/dd82/proof-checker-brown8-20261011
+- `2026-10-11T08:35:10Z` add_claim: updated claim:dd82-paper-upper63 [status=verified] prov=reviews/dd82/proof-checker-reductions-20261011
+- `2026-10-11T08:35:10Z` add_claim: updated claim:dd82-n62-seven-template-reduction [status=verified] prov=reviews/dd82/proof-checker-reductions-20261011
+- `2026-10-11T08:40:12Z` add_claim: added claim:dd82-n59-single-triangle-exclusion [status=verified] prov=reviews/dd82/proof-checker-single-triangle-20261011
+- `2026-10-11T08:40:12Z` upsert_idea: added idea:dd82-n62-proof-certification [stage=active outcome=pending]
+- `2026-10-11T08:40:12Z` add_experiment: added exp:dd82-n62-s-touch-lrat-profile [verdict=partial confidence=high]
+- `2026-10-11T08:51:52Z` add_claim: added claim:dd82-n15-heavy-endpoint-bound [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T08:51:52Z` add_claim: added claim:dd82-n59-shared-edge-two-triangle-exclusion [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T08:51:53Z` add_claim: added claim:dd82-brown-r9-eight-iii-ee-exclusion [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T08:51:53Z` add_experiment: added exp:dd82-brown-dominating-repair-return [verdict=no confidence=high]
+- `2026-10-11T09:03:51Z` add_claim: updated claim:dd82-n15-heavy-endpoint-bound [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T09:03:51Z` add_claim: updated claim:dd82-n59-shared-edge-two-triangle-exclusion [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T09:03:51Z` add_claim: updated claim:dd82-brown-r9-eight-iii-ee-exclusion [status=verified] prov=reviews/dd82/proof-checker-next-bridges-20261011
+- `2026-10-11T09:03:51Z` add_experiment: added exp:dd82-n62-s-touch-binary-120s [verdict=no confidence=high]
+- `2026-10-11T09:20:46Z` add_claim: added claim:dd82-n59-zero-support-transport [status=verified] prov=reviews/dd82/proof-checker-transport-a6-butterfly-20261011
+- `2026-10-11T09:20:46Z` add_claim: added claim:dd82-n59-shared-vertex-two-triangle-exclusion [status=verified] prov=reviews/dd82/proof-checker-transport-a6-butterfly-20261011
+- `2026-10-11T09:20:46Z` add_claim: added claim:dd82-brown-r9-six-iii-exclusion [status=verified] prov=reviews/dd82/proof-checker-transport-a6-butterfly-20261011
+- `2026-10-11T09:21:35Z` upsert_idea: added idea:dd82-n60-a5-cayley [stage=piloted outcome=negative]
+- `2026-10-11T09:21:35Z` add_experiment: added exp:dd82-n60-a5-cayley-complete-family [verdict=no confidence=high]
+- `2026-10-11T09:31:21Z` add_claim: added claim:dd82-brown57-ten-edits [status=verified] prov=reviews/dd82/proof-checker-brown9-complete-20261011
+- `2026-10-11T09:31:21Z` add_claim: added claim:dd82-n59-common-zero-cap [status=verified] prov=reviews/dd82/proof-checker-zero-core-20261011
+- `2026-10-11T09:31:21Z` add_claim: added claim:dd82-n59-global-heavy-capacity [status=verified] prov=reviews/dd82/proof-checker-zero-core-20261011
+- `2026-10-11T09:41:50Z` add_claim: updated claim:dd82-n59-common-zero-cap [status=verified] prov=reviews/dd82/proof-checker-zero-core-20261011
+- `2026-10-11T09:41:50Z` add_claim: updated claim:dd82-n59-global-heavy-capacity [status=verified] prov=reviews/dd82/proof-checker-zero-core-20261011
+- `2026-10-11T09:41:50Z` upsert_idea: added idea:dd82-brown-three-switch [stage=piloted outcome=negative]
+- `2026-10-11T09:41:50Z` add_experiment: added exp:dd82-brown-three-switch-complete [verdict=no confidence=high]
+- `2026-10-11T09:45:21Z` add_claim: added claim:dd82-n59-seven-triangles-disjoint [status=verified] prov=reviews/dd82/proof-checker-seven-triangle-slack-20261011
+- `2026-10-11T09:45:21Z` add_claim: added claim:dd82-n59-heavy-cross-slack [status=verified] prov=reviews/dd82/proof-checker-seven-triangle-slack-20261011
+- `2026-10-11T09:45:22Z` add_claim: added claim:dd82-n59-seven-triangles-core-repeat [status=verified] prov=reviews/dd82/proof-checker-seven-triangle-slack-20261011
+- `2026-10-11T09:56:10Z` add_claim: added claim:dd82-n62-s-touch-exclusion [status=verified] prov=reviews/dd82/proof-checker-s-touch-three-20261011
+- `2026-10-11T10:19:12Z` add_claim: added claim:dd82-n59-seven-triangle-repeat-budget [status=verified] prov=reviews/dd82/proof-checker-seven-repeat-budget-20261011
+- `2026-10-11T10:19:12Z` add_claim: added claim:dd82-n62-triangle-pairing [status=verified] prov=reviews/dd82/proof-checker-n62-pairing-20261011
+- `2026-10-11T10:19:12Z` add_claim: added claim:dd82-n62-simple-repeat-exclusion [status=verified] prov=reviews/dd82/proof-checker-n62-pairing-20261011
+- `2026-10-11T10:19:13Z` add_claim: added claim:dd82-n62-d2-exclusion [status=verified] prov=reviews/dd82/proof-checker-n62-d2-20261011
+- `2026-10-11T10:19:13Z` add_claim: added claim:dd82-n62-bin-exclusion [status=verified] prov=reviews/dd82/proof-checker-n62-bin-20261011
+- `2026-10-11T10:19:13Z` add_claim: updated claim:dd82-n62-s-touch-exclusion [status=verified] prov=reviews/dd82/proof-checker-s-touch-three-20261011
+- `2026-10-11T10:30:13Z` add_claim: added claim:dd82-n62-d1-outlet [status=verified] prov=reviews/dd82/proof-checker-n62-d0-outlet-20261011
+- `2026-10-11T10:30:13Z` add_claim: updated claim:dd82-n62-simple-repeat-exclusion [status=verified] prov=reviews/dd82/proof-checker-n62-pairing-20261011
+- `2026-10-11T10:30:13Z` add_claim: updated claim:dd82-n59-global-heavy-capacity [status=verified] prov=reviews/dd82/proof-checker-zero-core-20261011
+- `2026-10-11T10:42:20Z` add_claim: added claim:dd82-n62-hard-d1-reduction [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d1-reduction-20261011
+- `2026-10-11T10:42:20Z` add_claim: added claim:dd82-n62-d1-c4-transport [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d1-reduction-20261011
+- `2026-10-11T10:55:59Z` add_claim: updated claim:dd82-n62-d2-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d2-20261011
+- `2026-10-11T10:55:59Z` add_claim: updated claim:dd82-n62-bin-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-bin-20261011
+- `2026-10-11T10:55:59Z` add_claim: updated claim:dd82-n62-simple-repeat-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-pairing-20261011
+- `2026-10-11T10:56:00Z` add_claim: added claim:dd82-n62-d1-canonical-two-cases [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d1-reduction-20261011/CANONICAL_DIAGNOSTIC_DELTA_AUDIT.md
+- `2026-10-11T10:56:00Z` add_experiment: added exp:dd82-n62-hard-d1-two-diagnostic [verdict=partial confidence=high]
+- `2026-10-11T11:18:29Z` add_claim: added claim:dd82-n62-global-component-quotient [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011
+- `2026-10-11T11:18:29Z` add_claim: added claim:dd82-n62-d1-component-minimum [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/DELTA_MINIMUM_COMPONENT_AUDIT.md
+- `2026-10-11T11:18:29Z` add_claim: added claim:dd82-n62-d1-generated-component-fourteen [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/PURE_TWELVE_EXCLUSION_DELTA_AUDIT.md
+- `2026-10-11T11:18:29Z` add_claim: added claim:dd82-n62-d1-twelve-exterior-inequalities [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/EXACT_MOMENT_DELTA_AUDIT.md
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-d2-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d2-20261011
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-bin-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-bin-20261011
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-d1-c4-transport [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-d1-reduction-20261011
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-global-component-quotient [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-d1-component-minimum [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/DELTA_MINIMUM_COMPONENT_AUDIT.md
+- `2026-10-11T11:35:40Z` add_claim: updated claim:dd82-n62-d1-generated-component-fourteen [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/PURE_TWELVE_EXCLUSION_DELTA_AUDIT.md
+- `2026-10-11T11:35:41Z` add_claim: updated claim:dd82-n62-d1-twelve-exterior-inequalities [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/EXACT_MOMENT_DELTA_AUDIT.md
+- `2026-10-11T11:35:41Z` add_claim: updated claim:dd82-n62-d1-outlet [status=verified] prov=reviews/dd82/proof-checker-n62-d0-outlet-20261011
+- `2026-10-11T11:35:41Z` add_claim: added claim:dd82-n62-d1-twelve-large-partners [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-two-partners-blind-20261011/PROOF_AUDIT.json
+- `2026-10-11T11:35:41Z` add_claim: added claim:dd82-n62-d1-both-components-fourteen [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/SIXTEEN_PARTNER_DELTA_AUDIT.json
+- `2026-10-11T11:51:33Z` add_claim: added claim:dd82-n62-three-components-excluded [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-12-20-30-20261011/INTEGRATION_DELTA_AUDIT.json
+- `2026-10-11T12:17:02Z` add_claim: updated claim:dd82-n62-d1-both-components-fourteen [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-global-quotient-20261011/SIXTEEN_PARTNER_DELTA_AUDIT.json
+- `2026-10-11T12:17:03Z` add_claim: updated claim:dd82-n62-three-components-excluded [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-12-20-30-20261011/INTEGRATION_DELTA_AUDIT.json
+- `2026-10-11T12:17:03Z` add_claim: added claim:dd82-n62-repeat-support-connected [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-8-24-30-20261011/CONNECTED_INTEGRATION_DELTA_AUDIT.json
+- `2026-10-11T12:17:03Z` add_claim: added claim:dd82-n62-connected-unit-triangle-patterns [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-unit-triangles-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:17:03Z` add_claim: added claim:dd82-n62-actual-repeat-components-equitable-lean [status=verified] prov=formal/logs/n62-repeat-components-type-axiom-audit-final.log
+- `2026-10-11T12:37:31Z` add_claim: added claim:dd82-n62-short-component-count-bound [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-sixth-trace-20261011/SHORT_COMPONENT_COUNT_DELTA_AUDIT.json
+- `2026-10-11T12:37:31Z` add_claim: added claim:dd82-n62-connected-mixed-trace [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-mixed-trace-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:37:31Z` add_claim: added claim:dd82-n62-triangle-witness-refinement [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-triangle-witnesses-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:37:32Z` add_claim: added claim:dd82-n62-sixth-cycle-determinant [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-sixth-trace-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:37:32Z` add_claim: added claim:dd82-n62-actual-quotient-identities-lean [status=verified] prov=formal/logs/n62-repeat-quotient-type-axiom-audit.log
+- `2026-10-11T12:37:32Z` add_claim: updated claim:dd82-n62-connected-unit-triangle-patterns [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-unit-triangles-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:37:32Z` add_claim: updated claim:dd82-n62-actual-repeat-components-equitable-lean [status=verified] prov=formal/logs/n62-repeat-components-type-axiom-audit-final.log
+- `2026-10-11T12:37:32Z` add_claim: updated claim:dd82-n62-repeat-support-connected [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-8-24-30-20261011/CONNECTED_INTEGRATION_DELTA_AUDIT.json
+- `2026-10-11T12:54:53Z` add_claim: updated claim:dd82-n62-short-component-count-bound [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-sixth-trace-20261011/SHORT_COMPONENT_COUNT_DELTA_AUDIT.json
+- `2026-10-11T12:54:53Z` add_claim: updated claim:dd82-n62-triangle-witness-refinement [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-triangle-witnesses-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:54:54Z` add_claim: updated claim:dd82-n62-sixth-cycle-determinant [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-sixth-trace-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:54:54Z` add_claim: updated claim:dd82-n62-actual-quotient-identities-lean [status=verified] prov=formal/logs/n62-repeat-quotient-type-axiom-audit.log
+- `2026-10-11T12:54:54Z` add_claim: added claim:dd82-n62-center-cycle-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-triangle-witnesses-20261011/CENTER_CYCLE_DELTA_AUDIT.json
+- `2026-10-11T12:54:54Z` add_claim: added claim:dd82-n62-strict-heavy-port-capacity [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-sixth-trace-20261011/HEAVY_PORT_DELTA_AUDIT.json
+- `2026-10-11T12:54:54Z` add_claim: added claim:dd82-n62-actual-component-bounds-lean [status=verified] prov=formal/logs/n62-repeat-component-bounds-type-axiom-audit.log
+- `2026-10-11T12:54:54Z` add_claim: added claim:dd82-n62-actual-quotient-trace-lean [status=verified] prov=formal/logs/n62-repeat-quotient-trace-type-axiom-audit.log
+- `2026-10-11T12:54:55Z` add_claim: added claim:dd82-n62-heavy-original-lift [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/PROOF_AUDIT.json
+- `2026-10-11T12:54:55Z` add_experiment: added exp:dd82-n58-multiedge-annealing-probe [verdict=no confidence=high]
+- `2026-10-11T13:02:47Z` add_claim: updated claim:dd82-n62-actual-quotient-trace-lean [status=verified] prov=formal/logs/n62-repeat-quotient-trace-type-axiom-audit.log
+- `2026-10-11T13:02:47Z` add_claim: updated claim:dd82-n62-heavy-original-lift [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/PROOF_AUDIT.json
+- `2026-10-11T13:02:47Z` add_claim: added claim:dd82-n62-heavy-base-seventeen-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-base-seventeen-20261011/PROOF_AUDIT.json
+- `2026-10-11T13:02:48Z` add_claim: added claim:dd82-n62-strict-triangle-capacity [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/STRICT_CAPACITY_DELTA_AUDIT.json
+- `2026-10-11T13:02:48Z` add_claim: added claim:dd82-n62-diamond-trace-refinement [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/DIAMOND_TRACE_DELTA_AUDIT.json
+- `2026-10-11T13:02:48Z` add_claim: added claim:dd82-n62-triple-repeat-geometry-lean [status=verified] prov=formal/logs/n62-triple-repeat-type-axiom-audit.log
+- `2026-10-11T13:17:55Z` add_claim: updated claim:dd82-n62-heavy-base-seventeen-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-base-seventeen-20261011/PROOF_AUDIT.json
+- `2026-10-11T13:17:55Z` add_claim: updated claim:dd82-n62-strict-triangle-capacity [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/STRICT_CAPACITY_DELTA_AUDIT.json
+- `2026-10-11T13:17:55Z` add_claim: updated claim:dd82-n62-diamond-trace-refinement [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-heavy-original-20261011/DIAMOND_TRACE_DELTA_AUDIT.json
+- `2026-10-11T13:17:55Z` add_claim: updated claim:dd82-n62-triple-repeat-geometry-lean [status=verified] prov=formal/logs/n62-triple-repeat-type-axiom-audit.log
+- `2026-10-11T13:17:56Z` add_claim: added claim:dd82-n62-triple-analytic-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-triple-analytic-20261011/PROOF_AUDIT.json
+- `2026-10-11T13:17:56Z` add_claim: added claim:dd82-n62-triple-matching-lean [status=verified] prov=formal/logs/n62-triple-matching-type-axiom-audit-final.log
+- `2026-10-11T13:17:56Z` add_claim: added claim:dd82-n62-component-weight-budget-lean [status=verified] prov=formal/logs/n62-repeat-component-budget-type-axiom-audit.log
+- `2026-10-11T13:30:23Z` add_claim: updated claim:dd82-n62-triple-analytic-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-triple-analytic-20261011/PROOF_AUDIT.json
+- `2026-10-11T13:30:24Z` add_claim: updated claim:dd82-n62-triple-matching-lean [status=verified] prov=formal/logs/n62-triple-matching-type-axiom-audit-final.log
+- `2026-10-11T13:30:24Z` add_claim: updated claim:dd82-n62-component-weight-budget-lean [status=verified] prov=formal/logs/n62-repeat-component-budget-type-axiom-audit.log
+- `2026-10-11T13:30:24Z` add_claim: updated claim:dd82-n62-repeat-support-connected [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n62-8-24-30-20261011/CONNECTED_INTEGRATION_DELTA_AUDIT.json
+- `2026-10-11T13:30:24Z` add_claim: added claim:dd82-n62-triple-cells-lean [status=verified] prov=formal/logs/n62-triple-cells-type-axiom-audit.log
+- `2026-10-11T13:30:24Z` add_claim: added claim:dd82-n62-triple-four-block-lean [status=verified] prov=formal/logs/n62-triple-four-block-type-axiom-audit.log
+- `2026-10-11T14:49:40Z` add_claim: added claim:dd82-n62-complete-computer-assisted-exclusion [status=verified] prov=context/dd82
+- `2026-10-11T14:49:40Z` add_claim: added claim:dd82-induced-hs-obstruction-58-61 [status=verified] prov=computations/dd82/construction/hs_augmentation
+- `2026-10-11T14:49:40Z` add_experiment: added exp:dd82-hs-augmentation-first-batch [verdict=no confidence=high]
+- `2026-10-11T14:54:31Z` ingest_paper: ingested paper:przybocki2026_doubly_saturated_ramsey (arxiv:)
+- `2026-10-11T14:54:31Z` ingest_paper: ingested paper:mizuno2026_new_lower_bounds (arxiv:)
+- `2026-10-11T14:57:50Z` upsert_idea: updated idea:dd82-n62-proof-certification [stage=archived outcome=positive]
+- `2026-10-11T14:57:50Z` add_claim: added claim:dd82-small-cyclic-lift-obstructions [status=verified] prov=computations/dd82/construction
+- `2026-10-11T14:57:50Z` add_experiment: added exp:dd82-hs-seven-delete-other-shapes [verdict=no confidence=high]
+- `2026-10-11T15:04:55Z` add_claim: added claim:dd82-hs59-one-deletion-obstruction [status=verified] prov=computations/dd82/construction/hs59_one_delete
+- `2026-10-11T15:04:55Z` add_experiment: added exp:dd82-hs59-one-deletion [verdict=no confidence=high]
+- `2026-10-11T15:07:52Z` add_claim: added claim:dd82-four-orbit-cyclic60-obstruction [status=verified] prov=computations/dd82/construction
+- `2026-10-11T15:07:52Z` add_experiment: added exp:dd82-cyclic60-four-orbits [verdict=no confidence=high]
+- `2026-10-11T15:19:32Z` add_claim: added claim:dd82-petersen-reflection-translation-obstruction [status=verified] prov=computations/dd82/construction
+- `2026-10-11T15:19:32Z` add_experiment: added exp:dd82-petersen-six-fibers [verdict=partial confidence=high]
+- `2026-10-11T15:39:17Z` add_claim: added claim:dd82-hs59-two-delete-obstruction [status=verified] prov=proofs/dd82/construction/HS59_TWO_DELETE_DESIGN.md
+- `2026-10-11T15:39:17Z` add_claim: added claim:dd82-petersen-cycle-energy [status=verified] prov=proofs/dd82/construction/PETERSEN_CYCLE_ENERGY.md
+- `2026-10-11T15:39:17Z` add_claim: added claim:dd82-petersen-twin-twenty-obstruction [status=verified] prov=proofs/dd82/construction/PETERSEN_DOUBLE_HS_REPAIR.md
+- `2026-10-11T15:39:17Z` add_experiment: added exp:dd82-petersen-free-matching-and-twin-repair [verdict=partial confidence=high]
+- `2026-10-11T15:52:20Z` add_claim: added claim:dd82-hs59-3-delete-obstruction [status=verified] prov=proofs/dd82/construction/HS59_THREE_DELETE_DESIGN.md
+- `2026-10-11T15:52:20Z` add_claim: added claim:dd82-hs59-4-delete-obstruction [status=verified] prov=proofs/dd82/construction/HS59_FOUR_DELETE_DESIGN.md
+- `2026-10-11T15:52:20Z` add_claim: added claim:dd82-hs59-5-delete-obstruction [status=verified] prov=proofs/dd82/construction/HS59_FIVE_DELETE_DESIGN.md
+- `2026-10-11T15:52:20Z` add_experiment: added exp:dd82-petersen-route-cap-radius-two [verdict=no confidence=high]
+- `2026-10-11T15:57:42Z` add_claim: added claim:dd82-cayley-58-61-exclusion [status=verified] prov=proofs/dd82/construction/CAYLEY_58_61_OBSTRUCTION.md
+- `2026-10-11T16:17:30Z` add_claim: added claim:dd82-hs59-6-delete-obstruction [status=verified] prov=proofs/dd82/construction/HS59_SIX_DELETE_DESIGN.md
+- `2026-10-11T16:17:30Z` add_claim: added claim:dd82-fixed-root-layer-obstruction [status=verified] prov=proofs/dd82/construction/PETERSEN_FIXED_ROOT_LAYER_OBSTRUCTION.md
+- `2026-10-11T16:17:30Z` add_claim: added claim:dd82-equal-fiber-capacity [status=verified] prov=proofs/dd82/construction/EQUAL_FIBER_SINGLE_MATCHING_CAPACITY.md
+- `2026-10-11T16:17:30Z` add_experiment: added exp:dd82-fixed-root-joint-table [verdict=partial confidence=high]
+- `2026-10-11T16:17:30Z` add_experiment: added exp:dd82-twin60-deflate59 [verdict=no confidence=high]
+- `2026-10-11T16:28:37Z` add_claim: added claim:dd82-hs59-deleted-degree7-obstruction [status=verified] prov=proofs/dd82/construction/HS59_SPARSE_AUXILIARY_REMAINDER.md
+- `2026-10-11T16:28:37Z` add_claim: added claim:dd82-six-fiber-cross-degree-rigidity [status=verified] prov=proofs/dd82/construction/SIX_FIBER_CROSS_DEGREE_RIGIDITY.md
+- `2026-10-11T16:28:37Z` add_experiment: added exp:dd82-new-twin-seed-unrestricted-switches [verdict=partial confidence=high]
+- `2026-10-11T16:34:42Z` add_experiment: updated exp:dd82-new-twin-seed-unrestricted-switches [verdict=partial confidence=high]
+- `2026-10-11T16:34:42Z` add_experiment: added exp:dd82-hs59-empty-auxiliary-joint [verdict=partial confidence=high]
+- `2026-10-12T02:47:09Z` add_claim: added claim:dd82-hs59-one-delete-arbitrary-additions [status=sound-modulo-imports] prov=proofs/dd82/construction/HS59_ONE_DELETE_ARBITRARY_ADDITIONS.md
+- `2026-10-12T02:47:09Z` add_claim: added claim:dd82-six-fiber-degree-two-reduction [status=verified] prov=proofs/dd82/construction/SIX_FIBER_DEGREE_TWO_RIGIDITY.md
+- `2026-10-12T02:47:09Z` add_claim: added claim:dd82-six-fiber-internal-degree-screen [status=verified] prov=proofs/dd82/construction/SIX_FIBER_INTERNAL_DEGREE_SCREEN.md
+- `2026-10-12T02:47:09Z` add_experiment: added exp:dd82-twin59-to58-deflation [verdict=no confidence=high]
+- `2026-10-12T02:47:09Z` add_experiment: added exp:dd82-old-core-unwind-repairs [verdict=no confidence=high]
+- `2026-10-12T02:56:44Z` add_claim: updated claim:dd82-hs59-one-delete-arbitrary-additions [status=sound-modulo-imports] prov=proofs/dd82/construction/HS59_ONE_DELETE_ARBITRARY_ADDITIONS.md
+- `2026-10-12T02:56:44Z` add_claim: added claim:dd82-six-fiber-degree-one-quotient [status=verified] prov=proofs/dd82/construction/SIX_MATCHING_FIBERS_QUOTIENT.md
+- `2026-10-12T03:05:56Z` add_claim: added claim:dd82-hs58-one-delete-arbitrary-additions [status=sound-modulo-imports] prov=proofs/dd82/construction/HS58_ONE_DELETE_ARBITRARY_ADDITIONS.md
+- `2026-10-12T03:05:56Z` add_claim: added claim:dd82-degree-one-half-obligation [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_HALF_CUBIC_OBLIGATION.md
+- `2026-10-12T03:16:01Z` add_experiment: added exp:dd82-twin58-three-switch-two-deletions [verdict=no confidence=high]
+- `2026-10-12T03:25:42Z` add_claim: updated claim:dd82-hs58-one-delete-arbitrary-additions [status=sound-modulo-imports] prov=proofs/dd82/construction/HS58_ONE_DELETE_ARBITRARY_ADDITIONS.md
+- `2026-10-12T03:25:42Z` add_claim: updated claim:dd82-six-fiber-degree-two-reduction [status=verified] prov=proofs/dd82/construction/SIX_FIBER_DEGREE_TWO_RIGIDITY.md
+- `2026-10-12T03:25:42Z` add_claim: updated claim:dd82-six-fiber-internal-degree-screen [status=verified] prov=proofs/dd82/construction/SIX_FIBER_INTERNAL_DEGREE_SCREEN.md
+- `2026-10-12T03:27:30Z` add_claim: added claim:dd82-d1-local-configuration-catalog [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_LOCAL_CONFIGURATION_CATALOG.md
+- `2026-10-12T03:34:40Z` add_experiment: added exp:dd82-d1-homogeneous-configurations [verdict=no confidence=high]
+- `2026-10-12T03:36:28Z` add_claim: updated claim:dd82-d1-local-configuration-catalog [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_LOCAL_CONFIGURATION_CATALOG.md
+- `2026-10-12T03:36:28Z` add_claim: updated claim:dd82-degree-one-half-obligation [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_HALF_CUBIC_OBLIGATION.md
+- `2026-10-12T03:43:40Z` add_claim: added claim:dd82-d1-general-bridge-exclusion [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_GENERAL_BRIDGE_EXCLUSION.md
+- `2026-10-12T03:43:40Z` add_claim: added claim:dd82-uniform-six-fiber-petersen-reduction [status=sound-modulo-imports] prov=proofs/dd82/construction/SIX_FIBER_UNIFORM_MODEL_REDUCTION.md
+- `2026-10-12T03:43:40Z` add_experiment: added exp:dd82-d1-general-bridge-screen [verdict=no confidence=high]
+- `2026-10-12T03:50:01Z` add_claim: updated claim:dd82-d1-general-bridge-exclusion [status=sound-modulo-imports] prov=proofs/dd82/construction/D1_GENERAL_BRIDGE_EXCLUSION.md
+- `2026-10-12T03:50:01Z` add_claim: updated claim:dd82-uniform-six-fiber-petersen-reduction [status=sound-modulo-imports] prov=proofs/dd82/construction/SIX_FIBER_UNIFORM_MODEL_REDUCTION.md
+- `2026-10-12T04:10:06Z` add_experiment: added exp:dd82-nonuniform-six-fiber-quotients [verdict=partial confidence=high]
+- `2026-10-12T04:10:06Z` add_experiment: added exp:dd82-variable-fiber-candidates60 [verdict=no confidence=high]
+- `2026-10-12T04:11:39Z` add_claim: added claim:dd82-equitable-six-fiber-frontier [status=sound-modulo-imports] prov=reviews/dd82/20261012_C13_root_notes.md
+- `2026-10-12T04:11:39Z` add_claim: added claim:dd82-variable-001223-exclusion [status=verified] prov=reviews/dd82/20261012_C13_root_notes.md
+- `2026-10-12T04:36:11Z` add_claim: added claim:dd82-variable-hub-local-obstruction [status=sound-modulo-imports] prov=reviews/dd82/20261012_C14_root_notes.md
+- `2026-10-12T04:36:12Z` add_claim: updated claim:dd82-equitable-six-fiber-frontier [status=sound-modulo-imports] prov=reviews/dd82/20261012_C14_root_notes.md
+- `2026-10-12T04:36:12Z` add_experiment: updated exp:dd82-nonuniform-six-fiber-quotients [verdict=partial confidence=high]
+- `2026-10-12T04:36:12Z` add_experiment: added exp:dd82-variable-fiber-exact-gram [verdict=no confidence=high]
+- `2026-10-12T04:41:52Z` add_claim: added claim:dd82-hs58-two-delete-addition-budget [status=verified] prov=reviews/dd82/20261012_C15_root_notes.md
+- `2026-10-12T05:00:45Z` add_claim: updated claim:dd82-hs58-two-delete-addition-budget [status=verified] prov=reviews/dd82/20261012_C16_root_notes.md
+- `2026-10-12T05:00:45Z` add_claim: added claim:dd82-petersen-pair-cycle-budgets [status=verified] prov=reviews/dd82/20261012_C16_root_notes.md
+- `2026-10-12T05:00:45Z` add_experiment: added exp:dd82-hs58-two-delete-three-add-auxiliary [verdict=partial confidence=high]
+- `2026-10-12T05:00:46Z` add_experiment: added exp:dd82-hs58-two-delete-three-add-seeds [verdict=no confidence=high]
+- `2026-10-12T05:26:30Z` add_experiment: added exp:dd82-hs58-two-delete-four-add-auxiliary [verdict=partial confidence=high]
+- `2026-10-12T05:26:30Z` add_experiment: added exp:dd82-hs58-two-delete-four-add-joint [verdict=no confidence=high]
+- `2026-10-12T05:26:30Z` add_experiment: added exp:dd82-hs58-four-add-type6-all-edits [verdict=partial confidence=high]
+- `2026-10-12T05:26:30Z` add_experiment: added exp:dd82-petersen-four-fiber-reassembly [verdict=no confidence=high]
+- `2026-10-12T05:51:20Z` add_claim: updated claim:dd82-hs58-two-delete-addition-budget [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T05:51:20Z` add_claim: added claim:dd82-hs58-two-delete-universal-obstruction [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T05:51:20Z` add_claim: added claim:dd82-petersen-four-fiber-boundary-rigidity [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T05:51:20Z` add_experiment: added exp:dd82-hs58-two-delete-five-add-auxiliary [verdict=partial confidence=high]
+- `2026-10-12T05:51:20Z` add_experiment: updated exp:dd82-hs58-four-add-type6-all-edits [verdict=partial confidence=high]
+- `2026-10-12T06:02:54Z` add_experiment: added exp:dd82-hs58-five-add-construction [verdict=no confidence=high]
+- `2026-10-12T06:02:54Z` add_experiment: added exp:dd82-petersen-paired-core-exchange [verdict=no confidence=high]
+- `2026-10-12T06:02:54Z` add_experiment: added exp:dd82-petersen-binary-palette [verdict=no confidence=high]
+- `2026-10-12T06:02:54Z` add_claim: added claim:dd82-hs58-no-cross-endpoint-coverage [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T06:02:54Z` add_claim: added claim:dd82-petersen-binary-palette-exclusion [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T06:08:37Z` add_claim: added claim:dd82-hs58-no-cross-five-add-exclusion [status=verified] prov=reviews/dd82/20261012_C17_C18_root_notes.md
+- `2026-10-12T06:35:00Z` add_claim: updated claim:dd82-hs58-two-delete-addition-budget [status=verified] prov=reviews/dd82/20261012_two_delete_and_internal_root_notes.md; local root and independent same-family source checks, not external review or Lean
+- `2026-10-12T06:35:00Z` add_claim: added claim:dd82-hs58-two-delete-global-addition-bound [status=verified] prov=reviews/dd82/20261012_two_delete_and_internal_root_notes.md; local root and independent same-family source checks, not external review or Lean
+- `2026-10-12T06:35:00Z` add_claim: added claim:dd82-hs58-saturated-disjoint-all-additions [status=verified] prov=reviews/dd82/20261012_two_delete_and_internal_root_notes.md; local root and independent same-family source checks, not external review or Lean
+- `2026-10-12T06:35:00Z` add_experiment: added exp:dd82-hs58-five-add-remaining-geometries [verdict=no confidence=high]
+- `2026-10-12T06:35:00Z` add_experiment: added exp:dd82-hs58-all-remaining-joint [verdict=partial confidence=high]
+- `2026-10-12T06:41:52Z` add_claim: added claim:dd82-hs58-a6-repeated-port-pairs [status=verified] prov=reviews/dd82/20261012_two_delete_and_internal_root_notes.md; local root checks, not external review or Lean
+- `2026-10-12T06:41:52Z` add_experiment: added exp:dd82-petersen-internal-reassembly [verdict=no confidence=high]
+- `2026-10-12T06:41:52Z` add_experiment: added exp:dd82-petersen-fixed-route-repair [verdict=no confidence=high]
+- `2026-10-12T06:46:17Z` add_experiment: added exp:dd82-hs58-a6-direct-failed-seed [verdict=no confidence=high]
+- `2026-10-12T07:12:21Z` add_claim: added claim:dd82-hs58-two-delete-six-addition-remainder [status=verified] prov=reviews/dd82/20261012_six_addition_remainder_root_notes.md; local mathematical and checked-computation review, not external acceptance or Lean
+- `2026-10-12T07:12:21Z` add_claim: added claim:dd82-petersen-tight-row-internal-obstruction [status=verified] prov=reviews/dd82/20261012_six_addition_remainder_root_notes.md; local mathematical and checked-computation review, not external acceptance or Lean
+- `2026-10-12T07:12:21Z` add_experiment: added exp:dd82-hs58-a6-saturated-joint [verdict=no confidence=high]
+- `2026-10-12T07:12:21Z` add_experiment: added exp:dd82-petersen-tight-row-repair [verdict=no confidence=high]
+- `2026-10-12T07:25:17Z` add_claim: added claim:dd82-hs58-two-delete-arbitrary-additions-exclusion [status=verified] prov=reviews/dd82/20261012_six_addition_remainder_root_notes.md; local proof and independent certificate checks, external review and Lean pending
+- `2026-10-12T07:25:17Z` add_experiment: added exp:dd82-petersen-joint-p-domain-repair [verdict=no confidence=high]
+- `2026-10-12T07:36:08Z` add_claim: added claim:dd82-transitive60-s5-a5c2-a6 [status=verified] prov=reviews/dd82/20261012_six_addition_remainder_root_notes.md; root source/proof/output checks and independent full-graph BFS; external review and Lean pending
+- `2026-10-12T07:36:08Z` add_experiment: added exp:dd82-coset60-four-actions [verdict=no confidence=high]
+- `2026-10-12T08:01:28Z` add_claim: added claim:dd82-transitive60-s6 [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:01:28Z` add_claim: added claim:dd82-prime-automorphism-60-61 [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:01:28Z` add_claim: added claim:dd82-vt60-odd-abelian-normal [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:01:28Z` add_claim: added claim:dd82-primitive60-nine-catalog-actions [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:01:28Z` add_experiment: added exp:dd82-coset60-s6-a4 [verdict=no confidence=high]
+- `2026-10-12T08:01:28Z` add_experiment: added exp:dd82-primitive60-catalog-orbits [verdict=no confidence=high]
+- `2026-10-12T08:23:52Z` add_claim: added claim:dd82-order7-n59 [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:23:52Z` add_claim: added claim:dd82-cyclic5-two-independent-orbits [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:23:52Z` add_claim: added claim:dd82-cyclic5-seed20-four-orbit-exclusion [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:23:52Z` add_experiment: added exp:dd82-cyclic5-seed50-switch [verdict=no confidence=high]
+- `2026-10-12T08:23:52Z` add_experiment: added exp:dd82-cyclic5-seed20-signature-lift [verdict=partial confidence=high]
+- `2026-10-12T08:23:52Z` add_experiment: added exp:dd82-cyclic5-seed20-switch [verdict=no confidence=high]
+- `2026-10-12T08:23:52Z` add_experiment: added exp:dd82-cyclic5-four-orbit-quotient-profile [verdict=no confidence=high]
+- `2026-10-12T08:28:23Z` add_claim: added claim:dd82-cyclic7-order58-fixed-layer [status=verified] prov=reviews/dd82/20261012_automorphisms_and_cyclic5_root_notes.md
+- `2026-10-12T08:28:23Z` add_experiment: added exp:dd82-cyclic7-order58-seed [verdict=no confidence=high]
+- `2026-10-12T08:28:23Z` add_experiment: added exp:dd82-cyclic7-order58-switch [verdict=no confidence=high]
+- `2026-10-13T07:59:37Z` wiki-enrich: enriched paper:mizuno2026_new_lower_bounds from local-primary-text literature/dd82/arxiv_2606.15860.txt (sections 2.2-2.3, 4-5, A.7-A.8), with project transfer note; filled 9/9 TODO sections, preserved existing thesis and protected fields. Local source reuse follows V3 bounded task; no new download or mathematical result.
+- `2026-10-13T07:59:37Z` wiki-enrich: enriched paper:przybocki2026_doubly_saturated_ramsey from local-primary-text literature/dd82/arxiv_2604.21187.txt (sections 1.1-1.2, 3-4), with project transfer note; filled 9/9 TODO sections, preserved existing thesis and protected fields. Local source reuse follows V3 bounded task; no new download or mathematical result.
+- `2026-10-13T08:08:54Z` add_claim: added claim:dd82-f9-c7-58-excluded [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-false-twins58-f9-20261013/PROOF_AUDIT.json
+- `2026-10-13T08:08:54Z` add_experiment: added exp:dd82-f9-c7-full-coverage [verdict=no confidence=high]
+- `2026-10-13T08:40:02Z` add_experiment: added exp:dd82-full-false-twin58-cnf [verdict=partial confidence=high]
+- `2026-10-13T08:40:02Z` add_experiment: added exp:dd82-full-false-twin58-anneal [verdict=partial confidence=high]
+- `2026-10-13T08:48:33Z` add_claim: added claim:dd82-false-twin58-residual-connected [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-residual-connected-20261013/PROOF_AUDIT.json
+- `2026-10-13T08:48:33Z` add_experiment: updated exp:dd82-full-false-twin58-cnf [verdict=partial confidence=high]
+- `2026-10-13T09:53:46Z` add_experiment: added exp:dd82-v3-cyclic5-full60-cnf [verdict=partial confidence=high]
+- `2026-10-13T09:53:46Z` add_experiment: added exp:dd82-v3-cyclic5-full60-quotient-design [verdict=partial confidence=high]
+- `2026-10-13T10:09:19Z` add_claim: added claim:dd82-cyclic5-twelve-pentagons-obstruction [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-c5-twelve-pentagons-20261013/PROOF_AUDIT.json
+- `2026-10-13T10:09:19Z` add_experiment: added exp:dd82-v3-cyclic5-full60-quotient-escape [verdict=partial confidence=high]
+- `2026-10-13T10:13:06Z` Completed same-thread C5 review4: both actual quotients excluded by generalized pentagon obstruction; full family open, further sampling paused. Updated claim/experiment outcomes and stale residual/G4/G6 review or plan references; preserved historical raw results.
+- `2026-10-13T10:32:36Z` upsert_idea: added idea:dd82-fullgraph60-dynamic-pair-weights [stage=active outcome=pending]
+- `2026-10-13T10:46:08Z` upsert_idea: updated idea:dd82-fullgraph60-dynamic-pair-weights [stage=piloted outcome=mixed]
+- `2026-10-13T10:46:08Z` add_experiment: added exp:dd82-v3-fullgraph-weighted60-20261013 [verdict=partial confidence=high]
+- `2026-10-13T11:14:47Z` upsert_idea: added idea:dd82-actual-defect-components61 [stage=active outcome=pending]
+- `2026-10-13T11:28:40Z` add_claim: added claim:dd82-n61-three-defect-components-excluded [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-c3-lift-20261013/PROOF_AUDIT.json; reviews/dd82/proof-checker-n61-components-20261013/PROOF_AUDIT.json
+- `2026-10-13T11:28:40Z` upsert_idea: updated idea:dd82-actual-defect-components61 [stage=active outcome=mixed]
+- `2026-10-13T11:28:40Z` add_experiment: added exp:dd82-n61-large-size-screen [verdict=partial confidence=high]
+- `2026-10-13T12:10:35Z` add_claim: added claim:dd82-n61-connected-weighted-defect [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-norm-lifting-20261013/PROOF_AUDIT.md
+- `2026-10-13T12:10:35Z` upsert_idea: updated idea:dd82-actual-defect-components61 [stage=active outcome=mixed]
+- `2026-10-13T12:14:00Z` add_claim: updated claim:dd82-n61-connected-weighted-defect [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-norm-lifting-20261013/PROOF_AUDIT.md
+- `2026-10-13T12:14:00Z` upsert_idea: updated idea:dd82-actual-defect-components61 [stage=archived outcome=positive]
+- `2026-10-13T12:47:37Z` add_claim: added claim:dd82-n61-connected-triple-layer-reduction [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-triple-local-20261013/PROOF_AUDIT.md
+- `2026-10-13T12:47:37Z` upsert_idea: added idea:dd82-connected-triples61 [stage=active outcome=pending]
+- `2026-10-13T13:11:50Z` add_claim: added claim:dd82-n61-no-triple-defect [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-triple-local-20261013/PROOF_AUDIT.md
+- `2026-10-13T13:11:50Z` upsert_idea: updated idea:dd82-connected-triples61 [stage=archived outcome=positive]
+- `2026-10-13T13:12:42Z` add_claim: updated claim:dd82-n61-connected-triple-layer-reduction [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-triple-local-20261013/PROOF_AUDIT.md
+- `2026-10-13T13:33:40Z` upsert_idea: added idea:dd82-adjacent-doubles61 [stage=active outcome=pending]
+- `2026-10-13T13:38:06Z` add_claim: added claim:dd82-n61-double-support-path-forest [status=sound-modulo-imports] prov=dd82-v3-adjacent-doubles61-20261013; fresh local proof check and actual Gemini direction round1
+- `2026-10-13T13:38:06Z` add_claim: added claim:dd82-n61-adjacent-double-template [status=sound-modulo-imports] prov=dd82-v3-adjacent-doubles61-20261013; fresh local proof check and actual Gemini direction round1
+- `2026-10-13T14:14:09Z` add_claim: added claim:dd82-n61-adjacent-double-port-propagation [status=sound-modulo-imports] prov=dd82-v3-adjacent-doubles61-20261013; explicit reused local proof delta and actual Gemini round3 acceptance
+- `2026-10-13T14:14:09Z` upsert_idea: updated idea:dd82-adjacent-doubles61 [stage=archived outcome=unknown]
+- `2026-10-13T14:34:20Z` upsert_idea: added idea:dd82-joint-boundary-completion [stage=active outcome=pending]
+- `2026-10-13T14:59:02Z` upsert_idea: updated idea:dd82-joint-boundary-completion [stage=active outcome=pending]
+- `2026-10-13T15:04:15Z` upsert_idea: updated idea:dd82-joint-boundary-completion [stage=active outcome=pending]
+- `2026-10-13T15:07:54Z` upsert_idea: added idea:dd82-internal-double-path61 [stage=proposed outcome=pending]
+- `2026-10-13T15:12:00Z` upsert_idea: updated idea:dd82-joint-boundary-completion [stage=piloted outcome=unknown]
+- `2026-10-13T15:15:22Z` upsert_idea: updated idea:dd82-joint-boundary-completion [stage=archived outcome=unknown]
+- `2026-10-13T15:28:23Z` upsert_idea: updated idea:dd82-internal-double-path61 [stage=active outcome=pending]
+- `2026-10-13T15:49:16Z` add_claim: added claim:dd82-n61-internal-double-structure [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-internal-path-20261013/PROOF_AUDIT.json; DELTA_ADJACENCY_AUDIT.json; DELTA_PORT_MODEL_AUDIT.json; reviews/dd82/20261013_V3_n61_internal_proof_model_review.json
+- `2026-10-13T15:49:16Z` upsert_idea: updated idea:dd82-internal-double-path61 [stage=active outcome=pending]
+- `2026-10-13T16:02:40Z` add_claim: added claim:dd82-n61-internal-common-attachment-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-internal-path-20261013/DELTA_COMMON_ATTACHMENT_INTEGRATION.json; SOURCE_REVIEW.json; reviews/dd82/20261013_V3_n61_internal_initial_results_review.json
+- `2026-10-13T16:02:40Z` upsert_idea: updated idea:dd82-internal-double-path61 [stage=active outcome=pending]
+- `2026-10-13T16:13:47Z` add_claim: updated claim:dd82-n61-internal-common-attachment-exclusion [status=sound-modulo-imports] prov=reviews/dd82/proof-checker-n61-internal-path-20261013/DELTA_COMMON_ATTACHMENT_INTEGRATION.json; SOURCE_REVIEW.json; reviews/dd82/20261013_V3_n61_internal_initial_results_review.json; 20261013_V3_n61_internal_final_results_review.json
+- `2026-10-13T16:13:47Z` upsert_idea: updated idea:dd82-internal-double-path61 [stage=archived outcome=unknown]
+- `2026-10-13T16:40:42Z` upsert_idea: added idea:dd82-polarity73-monotone-reduction [stage=active outcome=pending]
+- `2026-10-18T06:06:52Z` add_experiment: added exp:dd82-internal-double61-five-profiles-20261013 [verdict=partial confidence=high]
+- `2026-10-18T06:06:52Z` add_experiment: added exp:dd82-adjacent-double61-seven-types-20261013 [verdict=partial confidence=high]
+- `2026-10-18T06:06:52Z` add_experiment: added exp:dd82-polarity73-initial-screens-20261013 [verdict=partial confidence=high]
+- `2026-10-18T06:06:52Z` 2026-10-18 documentation reconciliation from actual 2026-10-13 evidence: added DD82_PROGRESS_AND_COMMENTS_20261018.md with verbatim user feedback, full coarse remaining61 scope and polarity73 baseline results; refreshed polarity idea and historical internal-double claim without changing proof status; backfilled three experiment records via ARIS helpers; synchronized gap_map, RESEARCH_BRIEF, paused NEXT_SESSION and actual round2 review state/memory. No new mathematical claim, solver run or external review; no global bound change.
+- `2026-10-18T06:07:48Z` Verified the new/updated local evidence links and experiment index entries; generated query pack retains paused status and actual 2/4 review boundary. Used an absolute overview link in RESEARCH_BRIEF so its copied query-pack link resolves from both locations. No solver or external review run.
+- `2026-10-18T06:08:48Z` Completed user-comment capture with the earlier explicit63–65/Lean research preference and requests for stage/time accounting, alongside the recent breakthrough, remaining61-space and ARIS/AGENTS feedback. User quotations remain separate from evidence-based responses; no new time-allocation estimate was invented.
+- `2026-10-18T07:20:33Z` 2026-10-18 resumed active Goal under DD82_HUMAN_IN_LOOP_GOAL.md. Human feedback remains in existing overview comments; created research/progress.html, registered current plan and active recovery state. Resume same polarity73 mechanism with refined necessary screen and complete-candidate emphasis; discovery no-proof budget30CPU/45wall per order, no old61 loop restarted. Previous turn classified progress in state/documentation, not mathematics.
+- `2026-10-18T07:27:51Z` add_experiment: added exp:dd82-polarity73-refined-screen-20261018 [verdict=partial confidence=high]
+- `2026-10-18T07:27:51Z` Actual new2026-10-18 progress: refined58SAT and59UNKNOWN; fixed58deletion contradiction via forced0-2 and unit1, independently recomputed without screen choices. Updated readable HTML, actual experiment, idea and recovery. Same-thread Gemini round3 submitted; no accepted response yet. No mathematical bound change; Goal active.
+- `2026-10-18T07:28:57Z` Refreshed brief and human-feedback overview with actual2026-10-18 refinement and precise fixed-D proof; earlier13October snapshot kept explicitly historical. Round3 pending, no family exclusion or goal closure.
+- `2026-10-18T07:36:34Z` Round3 actual SUCCESS accepted refined screen and fixed-D proof. Root rejects unguarded deleted-vertex degree equation, unsupported almost-certainUNKNOWN forecast and arbitrary triangle-edge claim; accepts need to stop weak-screen accumulation. One full same-A variable-D58 profile chosen, no59. Source checked and candidate JSON integration fixed; preparation underway, no solver launched yet.
+- `2026-10-18T07:40:52Z` add_experiment: added exp:dd82-polarity73-complete-variable58-20261018 [verdict=partial confidence=high]
+- `2026-10-18T07:40:52Z` Actual complete variable-D58 profile endedUNKNOWN,28.043004CPU seconds; no model/certificate. Exact full-family model and eight semantic checks recorded. Bounded delivery and HTML updated; no59complete run, no repeat scheduled. Final same-thread result review4 pending preparation; Goal active and interval unchanged.
+- `2026-10-18T07:50:10Z` upsert_idea: added idea:dd82-global-matchings58 [stage=proposed outcome=pending]
+- `2026-10-18T07:56:49Z` add_experiment: added exp:dd82-global-matchings58-pilot-20261018 [verdict=partial confidence=high]
+- `2026-10-18T08:06:32Z` add_experiment: added exp:dd82-global-matchings58-prefix-capacity-20261018 [verdict=partial confidence=high]
+- `2026-10-18T08:09:45Z` add_claim: added claim:dd82-regular-prefix-repair-capacity [status=verified] prov=computations/dd82/construction/global_matchings58_run/prefix_capacity/PREFIX_CAPACITY.md; prefix_capacity.json; degree_capacity.json; reviews/dd82/20261018_global_matchings58_results_review.json
+- `2026-10-18T08:13:26Z` add_experiment: added exp:dd82-global-matchings58-joint-f5-tail-20261018 [verdict=partial confidence=high]
+- `2026-10-18T08:20:23Z` 2026-10-18 global-matchings58 completed3actualGemini rounds:8realdiameter3graphs, all8F6 ruledoutbyintegercapacity, soleF5completionUNKNOWN. No globalintervalchange. LatesthumanHTMLlocationreminderhandledatfixedresearch/progress.html; originalgoalcontinues.
+- `2026-10-18T08:26:43Z` upsert_idea: added idea:dd82-free-cross58 [stage=proposed outcome=pending]
+- `2026-10-18T08:26:43Z` dd82-hil-free-cross58-20261018: selected one exact joint Hamilton-parts input; PLAN registered; no new solver yet; prior global-matching loop CLOSED3/4.
+- `2026-10-18T08:34:56Z` add_experiment: added exp:dd82-free-cross58-20261018 [verdict=partial confidence=high]
+- `2026-10-18T08:41:01Z` add_claim: added claim:dd82-free-cross58-hamilton-exclusion [status=drafted] prov=proofs/dd82/construction/FREE_CROSS58_HAMILTON_BRIDGE.md; computations/dd82/construction/free_cross58_run/encoding.json; computations/dd82/construction/free_cross58_run/certification/result.json; computations/dd82/construction/free_cross58_run/certification/certificate_check.log; computations/dd82/construction/free_cross58_run/CODE_REVIEW.md
+- `2026-10-18T08:41:01Z` add_experiment: updated exp:dd82-free-cross58-20261018 [verdict=no confidence=high]
+- `2026-10-18T08:41:01Z` Free-cross58 exact31581/102341 CNF independently LRAT verified. Local full induced-Hamilton-parts bridge proves restricted-family exclusion. Final Gemini2 pending exec137; no whole58 exclusion, no target.
+- `2026-10-18T08:42:36Z` add_claim: updated claim:dd82-free-cross58-hamilton-exclusion [status=verified] prov=proofs/dd82/construction/FREE_CROSS58_HAMILTON_BRIDGE.md; computations/dd82/construction/free_cross58_run/encoding.json; computations/dd82/construction/free_cross58_run/certification/result.json; computations/dd82/construction/free_cross58_run/certification/certificate_check.log; computations/dd82/construction/free_cross58_run/CODE_REVIEW.md; reviews/dd82/20261018_free_cross58_final_review.json
+- `2026-10-18T08:42:36Z` Actual final Gemini2 SUCCESS accepted free-cross58 checked UNSAT and full induced-cycle-partition bridge; mechanism CLOSED2/4 and claim verified at computational-paper level, not Lean. All jobs terminal; no general58 exclusion. HTML file-location reminder satisfied; Goal ACTIVE.
+- `2026-10-18T08:53:28Z` upsert_idea: added idea:dd82-joint-twofactor58 [stage=proposed outcome=pending]
+- `2026-10-18T08:53:28Z` Previous goal turn classified progress: free-cross58 exact CNF certified, full induced-Hamilton family bridge accepted2/4. Continued with paper rejection of4+4 and selected full joint twofactor equitable domain, one60CPU90wall no-proof discovery input; no new solve yet.
+- `2026-10-18T08:57:50Z` add_claim: added claim:dd82-equitable-two-block58-reduction [status=drafted] prov=proofs/dd82/construction/EQUITABLE_TWO_BLOCK58_REDUCTION.md; computations/dd82/construction/joint_twofactor58_run/PLAN.md
+- `2026-10-18T09:10:06Z` add_claim: updated claim:dd82-equitable-two-block58-reduction [status=verified] prov=proofs/dd82/construction/EQUITABLE_TWO_BLOCK58_REDUCTION.md; reviews/dd82/20261018_joint_twofactor58_direction.json
+- `2026-10-18T09:10:06Z` 用户澄清每小时仅HTML报告并指定n58后新旧n61有界对齐；n58纸面归约实际Gemini接受，更新claim与恢复入口/HTML；对齐处理中，未运行旧61 SAT。
+- `2026-10-18T09:13:11Z` add_experiment: added exp:dd82-joint-twofactor58-20261018 [verdict=partial confidence=high]
+- `2026-10-18T09:13:11Z` joint-twofactor58唯一profile UNKNOWN57.906149CPU秒；更新实际实验和HTML。旧新61对齐正在完成，n58同一数学路线保留。
+- `2026-10-18T09:17:05Z` 完成root旧新61有界对齐，继承全[3,3]RAW覆盖用于避重，认证层不升格；更新G7/brief/comments/HTML。n58同一路线新分量刚性待第3轮复核，无额外计算。
+- `2026-10-18T09:21:10Z` add_claim: added claim:dd82-n61-old33-double-incidence-equivalence [status=verified] prov=proofs/dd82/n61/OLD_NEW61_ALIGNMENT_MATH.md; proofs/dd82/n61/OLD_NEW61_ALIGNMENT_EVIDENCE.md; reviews/dd82/20261018_old_new61_alignment_review.json
+- `2026-10-18T09:21:10Z` add_claim: added claim:dd82-no-two-cell-equitable58 [status=verified] prov=proofs/dd82/construction/JOINT_TWOFACTOR58_COMPONENT_CONSTRAINTS.md; reviews/dd82/20261018_joint_twofactor58_component_review.json
+- `2026-10-18T09:21:10Z` 有界旧新61对齐实际Gemini ACCEPT后完成：新增纯映射claim，不升级RAW；更正内部路径草稿/claim和执行入口的研究优先级。n58分量刚性与完整equitable族排除实际第3轮接受，新增精确依赖claim；更大诱导二因子推论第4轮在途，无计算。
+- `2026-10-18T09:23:05Z` add_claim: added claim:dd82-induced-twofactor58-size-bound [status=verified] prov=proofs/dd82/construction/INDUCED_TWOFACTOR58_SIZE_BOUND.md; reviews/dd82/20261018_joint_twofactor58_induced_bound_review.json
+- `2026-10-18T09:23:05Z` 实际第4轮ACCEPT后，诱导二正则58上界claim写入；joint机制4/4按实际交付完成，全5阶段accepted，UNKNOWN原件保留。旧新61有界对齐COMPLETE，不重跑旧域。Goal ACTIVE，不为报告节奏强制转向。
+- `2026-10-18T09:24:39Z` 最终整合：旧新61有界对齐与n58全域诱导上界均接受；RESEARCH_BRIEF/NEXT_SESSION重写为当前事实，HTML原路径原子更新并检查UTF8及全部相对链接。Goal继续ACTIVE，每小时仅报告；无旧SAT/Lean或新预算。
+- `2026-10-18T09:34:57Z` add_claim: added claim:dd82-twofactor60-cycle-rigidity [status=drafted] prov=.aris/traces/research-review/dd82-twofactor60-extension-20261018/001-prompt.md
+- `2026-10-18T09:34:57Z` add_claim: added claim:dd82-induced-maxdegree-two58-bound [status=drafted] prov=.aris/traces/research-review/dd82-twofactor60-extension-20261018/001-prompt.md
+- `2026-10-18T09:34:57Z` upsert_idea: added idea:dd82-nonuniform58 [stage=active outcome=pending]
+- `2026-10-18T09:34:57Z` Continued after completed old/new61 alignment. New local60 binary-block rigidity and widened58 induced-degree bound await one direct Gemini review; in parallel, new nonuniform58 direction review and source preparation. No new solver or target yet. Hourly means HTML reporting only.
+- `2026-10-18T09:40:02Z` add_claim: updated claim:dd82-twofactor60-cycle-rigidity [status=verified] prov=reviews/dd82/20261018_twofactor60_extension_review.json
+- `2026-10-18T09:40:02Z` add_claim: updated claim:dd82-induced-maxdegree-two58-bound [status=verified] prov=reviews/dd82/20261018_twofactor60_extension_review.json
+- `2026-10-18T09:40:02Z` One actual new Gemini ACCEPT directly reviewed general60 binary block classification and global induced-degree2 bound≤29, plus widened58 bound≤28. Pure60 proof imports old pentagon exclusion;58 retains LRAT dependency. No full-order exclusion, solver or Lean. Separate nonuniform58 construction source review finishing.
+- `2026-10-18T09:46:48Z` add_experiment: added exp:dd82-nonuniform58-20261018 [verdict=partial confidence=high]
+- `2026-10-18T09:46:48Z` upsert_idea: updated idea:dd82-nonuniform58 [stage=piloted outcome=unknown]
+- `2026-10-18T09:46:49Z` nonuniform58 unique profile terminal UNKNOWN exit0 at28.016724CPU/28.150117wall after1.093080CPU preparation. No model/certificate, no further profile. Actual result review2 pending; continue the same structural paper question without a forced hourly pivot.
+- `2026-10-18T09:50:54Z` nonuniform58 actual round2 SUCCESS/ACCEPT received and root accepted experiment-bridge. No mathematical exclusion or new target; UNKNOWN unchanged. Keep the same mechanism active for paper correlation analysis, not an hourly hypothesis pivot. No live solver/MCP or extra profile.
+- `2026-10-18T09:56:50Z` add_claim: added claim:dd82-pp5-nonuniform58-front-obstruction [status=drafted] prov=computations/dd82/construction/nonuniform58_run/PROJECTIVE_PLANE_FRONT_OBSTRUCTION.md
+- `2026-10-18T09:56:50Z` Continued the same nonuniform58 paper route after round2 accepted UNKNOWN. Exact fixed-C chord compatibility matching lemma recorded locally. A concretePP5 incidence front was then uniformly excluded by three zero-repair rows, even allowing both sides arbitrary2factors. This is local paper evidence only, not a new free-C-family exclusion or solver result.
+- `2026-10-18T10:09:33Z` add_claim: added claim:dd82-nonuniform58-affine-front-exclusion [status=verified] prov=reviews/dd82/20261018_nonuniform58_structural_review.json
+- `2026-10-18T10:09:33Z` add_claim: added claim:dd82-nonuniform58-compatible-chord-reduction [status=verified] prov=reviews/dd82/20261018_nonuniform58_structural_review.json
+- `2026-10-18T10:09:33Z` add_claim: updated claim:dd82-pp5-nonuniform58-front-obstruction [status=verified] prov=reviews/dd82/20261018_nonuniform58_structural_review.json
+- `2026-10-18T10:09:33Z` Nonuniform58 substantive round3 actual scoped ACCEPT: affine25+3 front uniformly excluded; fixed-C partner and right-support forest constraints accepted. Same mechanism active3/4; full free-C construction and57–61 remain open. No new solve.
+- `2026-10-18T10:13:40Z` Concrete F5 incidence-trade diagnosis complete: three independent degree-preserving swaps turn all three special q values from0 to1 and destroy ordinary pairwise intersection, but preserve every ordinary-to-special support intersection. The q1 repeated-path budget forces a special triangle, then a high column outside all three supports requires base-right degree3. This exact front is impossible even with both2factors free. Local paper proof only; not round3 accepted, not all trades excluded. No computation or parameter ladder.
+- `2026-10-18T10:42:18Z` add_claim: added claim:dd82-independent-affine-three-trades-exclusion [status=verified] prov=reviews/dd82/20261018_nonuniform58_final_direction_review.json
+- `2026-10-18T10:42:18Z` add_claim: added claim:dd82-cyclic28-monotone-completion-exclusion [status=verified] prov=reviews/dd82/20261018_cyclic28_completion_obstruction_review.json
+- `2026-10-18T10:42:18Z` upsert_idea: added idea:dd82-cyclic28-monotone-completion58 [stage=archived outcome=negative]
+- `2026-10-18T10:42:18Z` DD82: complete paper exclusion of all far-pair-covering six-set cyclic28 sources under monotone old-column deletion plus two free new columns. Formal computation cancelled before execution. Nonmonotone repair requires at least four old columns to gain source nonedges. Actual fresh Gemini scoped acceptance; no all58 exclusion.
+- `2026-10-18T10:47:15Z` Completed one bounded paper diagnosis after HTML update: free-left-factor source geometry does not force the original labelled cycle, witnessed by swapping0/1. Degree restoration and joint right/cross cover remain open; no new compute. New61 complete induced-degree2 bound is awaiting its own direct review, not borrowed acceptance.
+- `2026-10-18T10:48:23Z` add_claim: added claim:dd82-binary-cycle-cross-cover-classification [status=verified] prov=reviews/dd82/20261018_twofactor60_extension_review.json
+- `2026-10-18T10:48:23Z` add_claim: added claim:dd82-induced-maxdegree-two61-bound [status=verified] prov=reviews/dd82/20261018_induced61_bound_review.json
+- `2026-10-18T10:48:23Z` New complete paper theorem directly accepted: every61vertex maxdegree8 diameter2 graph has induced maximumdegree2 subsets of at most29. Uses only general binary perfect-cross cycle-block classification, not oldI12/RAW/pentagon terminal theorem. Whole61 remains open. No computation or Lean.
+- `2026-10-18T12:17:00Z` add_claim: added claim:dd82-free-factor-cyclic58-new-columns-not-both-five [status=drafted] prov=computations/dd82/construction/free_factors_cyclic58_run/ROW_CHANGE_GEOMETRY.md
+- `2026-10-18T12:17:00Z` User-directed old58 scope alignment completed with explicit RAW and hidden-structure limits; old parity lemma provenance corrected. Next58 bounded deletion geometry; n61 second-order aggregate port nonnegativity is automatic and the probe stops. No formal solver, no target, no order closure. See DD82_NEXT_ACTION_COMPARISON_20261018.md. Geometry review cell314 in flight, no acceptance yet.
+- `2026-10-18T12:18:28Z` add_claim: updated claim:dd82-free-factor-cyclic58-new-columns-not-both-five [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/ROW_CHANGE_GEOMETRY.md; reviews/dd82/20261018_free_factors_cyclic58_geometry_review.json
+- `2026-10-18T12:18:28Z` Actual free-factors round2 SUCCESS directly accepts5+5 proof and scoped comparison; cell314 terminal processed.61 second-order aggregate test completed automatic, no new cut.5+6 author proof pending root verification. No formal input/solver.
+- `2026-10-18T12:20:19Z` 5＋6的作者稿DELETION_56_FEASIBILITY.md已完整落盘，根代理逐步核对了唯一高删除奇偶类的连续段引理、偏移14/19分支及最终重复旧列14矛盾，未发现缺口；当前为本地纸面闭合，另一数学代理的独立核读在途。它不在已结束的Gemini第2轮回执内，尚无该篇直接跨模型接受。6＋6保持未决，正式输入/solver均未启动。
+- `2026-10-18T12:31:52Z` add_claim: updated claim:dd82-free-factor-cyclic58-new-columns-not-both-five [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/ROW_CHANGE_GEOMETRY.md; reviews/dd82/20261018_free_factors_cyclic58_geometry_review.json
+- `2026-10-18T12:31:52Z` add_claim: added claim:dd82-free-factor-cyclic58-new-columns-both-six [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/DELETION_56_FEASIBILITY.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_56_LOCAL_REVIEW.md; reviews/dd82/20261018_free_factors_cyclic58_56_review.json
+- `2026-10-18T12:31:52Z` add_claim: added claim:dd82-free-factor-cyclic58-unmodified-path [status=drafted] prov=computations/dd82/construction/free_factors_cyclic58_run/UNMODIFIED_FACTOR_RIGIDITY.md
+- `2026-10-18T12:31:52Z` 2026-10-18 12:32 UTC：5+6删除表完整纸面证明获独立本地PASS及实际第3轮直接ACCEPT；当前固定源目标两新列必须6度。代码接入两项已证exact6剪枝，正式输入仍未生成，独立delta复核在途；6+6共同实现开放。未修改行另迫左因子保留原圈连续六点五条路径边，仅本地纸面，不在该回执内。
+- `2026-10-18T12:38:10Z` 2026-10-18 12:35 UTC：唯一完整58输入已执行：56215变量179415子句，含两项已接受exact6条件，UNKNOWN27.580646CPU/28.144402墙钟秒，正常soft28，无模型/证书。原5+5和新6+6检查对象分别287/299坏对，仅预设语义。6+6新稿本地独立PASS，排除不相交和交集至少3；交集1/2尚未外部闭合。实际同线程round4复核在途cell339，包含新66稿/H稿和实际实验，不能先写接受。
+- `2026-10-18T12:44:20Z` add_claim: added claim:dd82-free-factor-cyclic58-overlap-one-or-two [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_OVERLAP_GEOMETRY.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_OVERLAP_LOCAL_REVIEW.md; reviews/dd82/20261018_free_factors_cyclic58_final_review.json
+- `2026-10-18T12:44:20Z` add_claim: updated claim:dd82-free-factor-cyclic58-unmodified-path [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/UNMODIFIED_FACTOR_RIGIDITY.md; reviews/dd82/20261018_free_factors_cyclic58_final_review.json
+- `2026-10-18T12:44:20Z` add_claim: added claim:dd82-free-factor-cyclic58-two-overlap-exclusion [status=drafted] prov=computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_TWO_OVERLAP.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_TWO_OVERLAP_LOCAL_REVIEW.md
+- `2026-10-18T12:44:20Z` 2026-10-18 12:43 UTC：实际round4 SUCCESS已处理，接受唯一UNKNOWN交付、新66 r0/r>=3排除及独立H路径条件，有限loop CLOSED4/4。根处置纠正reviewer对UNKNOWN的无证据同构震荡归因及全域唯一方向措辞。后续r2完整本地PASS、r1稿在写，不借旧回执接受。
+- `2026-10-18T12:51:08Z` add_claim: added claim:dd82-free-factor-cyclic58-source-exclusion [status=drafted] prov=proofs/dd82/construction/FREE_FACTOR_CYCLIC58_SOURCE_EXCLUSION.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_ONE_OVERLAP.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_TWO_OVERLAP.md
+- `2026-10-18T12:51:08Z` 2026-10-18 12:49 UTC：当前固定循环58来源完整纸面闭合：最后r2、r1均根核读与独立本地PASS；新的终结定理直接复核在途cell351，不属于已关闭四轮loop。唯一solver仍UNKNOWN27.580646CPU，非计算证书。定理甚至先排左点对覆盖，不依赖右侧补全；全58–61仍开放。
+- `2026-10-18T12:54:06Z` add_claim: updated claim:dd82-free-factor-cyclic58-source-exclusion [status=verified] prov=proofs/dd82/construction/FREE_FACTOR_CYCLIC58_SOURCE_EXCLUSION.md; reviews/dd82/20261018_free_factor_cyclic58_source_exclusion_review.json
+- `2026-10-18T12:54:06Z` add_claim: updated claim:dd82-free-factor-cyclic58-two-overlap-exclusion [status=verified] prov=computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_TWO_OVERLAP.md; computations/dd82/construction/free_factors_cyclic58_run/DELETION_66_TWO_OVERLAP_LOCAL_REVIEW.md; reviews/dd82/20261018_free_factor_cyclic58_source_exclusion_review.json
+- `2026-10-18T12:54:06Z` 2026-10-18 12:53 UTC：指定循环来源完整左前端排除获新的单次直接ACCEPT；r1/r2及合并条件全链接受。旧四轮loop保持closed；本次是新终结定理直接复核。cell351终态保存处理，当前无MCP或solver。唯一原实验UNKNOWN27.580646CPU，非证书。
+- `2026-10-18T12:55:34Z` add_claim: added claim:dd82-transverse-projective-repair-obstruction [status=drafted] prov=computations/dd82/construction/nonuniform58_run/TRANSVERSE_PROJECTIVE_REPAIR_DIAGNOSIS.md
+- `2026-10-18T12:55:34Z` 2026-10-18 12:55 UTC：更新HTML后继续的PG(2,5)非共线三删点/外部删线前端也已纸面统一排除：22普通行必须q≥2，三侧线各只能补1，剩3升级线被迫为三条顶点连线，其交点普通行q≤1。根推导和作者独立核对完成，尚无本篇直接跨模型回执；无计算/新stage，不扩大其他删除配置。
+- `2026-10-18T13:12:49Z` add_claim: added claim:dd82-involution58-regular-double-interface-exclusion [status=verified] prov=.aris/traces/research-review/dd82-involution58-root.md
+- `2026-10-18T13:12:49Z` 2026-10-18：58自由对合的正则双接口商完整排除获直接SCOPED ACCEPT，完整自由对合仍开放。Brown实际joint-boundary源纠正为孪生点缩减而非Brown；新42边重连规则被点0四三角否掉。n61明确H35满足双五色和无三角，却由a0五点对缺陷下界6大于4不能补全。无新SAT或阶数排除。 具体下一动作比较见DD82_NEXT_ACTION_COMPARISON_20261018.md。Brown更广的共同重连容量计数正在独立核读，暂不记为直接接受。
+- `2026-10-18T13:16:47Z` 2026-10-18 13:16:46 UTC: HTML/comparison/brief/feedback synced with actual Brown uniform obstruction (direct review pending), accepted involution obstacle and concrete H35 failure. No old SAT or new target.
+- `2026-10-18T13:19:54Z` add_claim: added claim:dd82-brown58-one-ce-matching-exclusion [status=verified] prov=.aris/traces/research-review/dd82-brown58-one-ce-matching-root.md
+- `2026-10-18T13:19:54Z` 2026-10-18 13:19:54 UTC: Brown58一CE保留加EE匹配的完整模板排除直接SCOPED ACCEPT。新纯计数继承固定Brown已检查事实，至少14个E内坏对；无新SAT或Lean，所有II/CI共同选择已关闭。 HTML updated; continue bounded KG(7,3) parent-color feasibility diagnosis against known Fano partition result.
+- `2026-10-18T13:24:00Z` 2026-10-18 13:24:00 UTC: 更新HTML后继续实际H来源判断已完成：奇图O4的完美7码恰为Fano STS7，父点五分区恰要求不存在的STS7大集；核Ji2005及Phelps1990明确非存在陈述，继承经典结果不重证。仅关闭O4来源，无枚举或SAT。下一具体61问题在真实H和两套五类父点上同时达到逐点重复rho≤4和总重复≤130；若实现再立即接完整X/Y端口，不能把弱模型当目标。
+- `2026-10-18T13:48:32Z` add_claim: added claim:dd82-involution58-c4-support-obstruction [status=verified] prov=.aris/traces/research-review/dd82-c4-c7-root.md
+- `2026-10-18T13:48:33Z` add_claim: added claim:dd82-cyclic7-h35-parent-source-exclusion [status=verified] prov=.aris/traces/research-review/dd82-c4-c7-root.md
+- `2026-10-18T13:48:33Z` 2026-10-18 13:48:33 UTC: C4支撑及C7 H来源两新证明直接接受；实际C5 H首个前端通过rho3/90，固定H packing义务推进，非完整61。
+- `2026-10-18T13:55:05Z` add_claim: added claim:dd82-h35-low-rho-insufficient-example [status=verified] prov=.aris/traces/research-review/dd82-cyclic5-h35-root.md
+- `2026-10-18T13:55:05Z` 2026-10-18 13:55:04 UTC: C5首个低rho真实H由70个packing完整分类否定补全，最终第3轮接受，阶段关闭；六星固定前端Hall短反例本地完成，整体Goal继续。
+- `2026-10-18T14:14:36Z` add_claim: added claim:dd82-pg5-two-points-two-lines-pure-incidence-exclusion [status=verified] prov=proofs/dd82/construction/PG5_TWO_POINTS_TWO_LINES_PURE_INCIDENCE_OBSTRUCTION.md
+- `2026-10-18T14:14:36Z` add_claim: added claim:dd82-six-star-h35-hall-completion-boundary [status=verified] prov=proofs/dd82/n61/SIX_STAR_H35_GENERAL_HALL_BOUNDARY.md
+- `2026-10-18T14:14:36Z` add_claim: added claim:dd82-involution59-one-fixed-point-regular-double-exclusion [status=verified] prov=proofs/dd82/construction/INVOLUTION59_ONE_FIXED_POINT_DIAGNOSIS.md
+- `2026-10-18T14:14:36Z` 2026-10-18：新纯射影关联58来源统一排除、反射六星两规则完成障碍、59单固定点正则双接口排除，三篇获新直接SCOPED ACCEPT。用户要求的58旧范围对齐与61下一动作比较已置顶，原题仍57至61，未按定理数切换主线。
+- `2026-10-18T14:30:47Z` add_claim: added claim:dd82-general-six-star-parent-coverage [status=verified] prov=proofs/dd82/n61/GENERAL_SIX_STAR_H35_NORMALIZATION.md
+- `2026-10-18T14:38:35Z` 一般六星共同模型唯一求解UNKNOWN：88.012765 CPU／88.135652墙钟秒，exit0，无模型或证明。新完整规范化与30对真实父类覆盖统一排除了旧固定反射配色的提升，但一般H/U/V/A6/P5仍开放。后续AP实际缺陷恰2及两种入星轮廓都是现模型隐含结构，未产生统一矛盾或生成规则，不加时重跑。58旧范围对齐完成；指定循环源后来由新证明排除，旧固定圈结论不整体覆盖新自由因子。58不规则自由对合预算只到必要式，未有共同P/Q规则；不启动分量枚举。结果同线程复核正在进行，方向接受和实际UNKNOWN分别记账。
+- `2026-10-18T14:39:47Z` add_claim: updated claim:dd82-general-six-star-parent-coverage [status=verified] prov=proofs/dd82/n61/GENERAL_SIX_STAR_H35_NORMALIZATION.md
+- `2026-10-18T14:39:47Z` 一般六星H35规范化保留第二重复色、P第二色及全部带标号σ。真实A/P父类要求全部30对当前已覆盖，并使未覆盖类外集合至多5点且独立。每个P至少与两个不同中心同色，因此整个旧反射对角配色骨架不能提升。A–P实际缺陷总量恰2，六星收到P边的轮廓只有(5,3,3,3,3,3)或(4,4,3,3,3,3)；三种中心重色分配均为当前共同模型自动包含的限制，未形成统一矛盾或生成规则。一般六星及相邻双缺陷分支仍开放。唯一共同求解UNKNOWN88.012765CPU／88.135652墙钟秒，无图或证书，结果同线程第二轮实际SCOPED ACCEPT，有限阶段两轮收束，不恢复旧输入。 原始回执reviews/dd82/20261018_joint_six_star_h35_result_review.json；整体57≤N(8,2)≤61不变。
+- `2026-10-18T14:56:34Z` ingest_paper: ingested paper:ramezani2019_some_regular_signed (arxiv:1909.06817)
+- `2026-10-18T14:56:34Z` 定向读取Ramezani arXiv1909.06817原始PDF第2至3.1节，六正则两特征值的允许参数与十点有符号K5线图例。自行用定向关联矩阵给R0=2I−BᵀB消除整体符号歧义；三份直和虽满足R²+R=6I，却有20个无符号亏缺目标，违反本题最多13个。未证明一般30点精确抵消不存在，不启动枚举。
+- `2026-10-18T15:00:13Z` 本轮继续实际共同构造诊断：Brown58新EI星形规则保度、修复hub覆盖，但统一至少7坏对；60十五C4正则接口32>30、任意二重KG单接口与任意双接口匹配15>13、达到弱阈值的K3□C10²又被共同匹配整数矩阵否定；61局部排列给精确互反配边法，但同星自动平衡规则10>9失败。均为新纸面结果，根已核承重推导，60另有独立代理核对；一次直接外部复核cell515在途，不记为接受。没有新求解、目标图或全阶排除。后续符号文献核对另记本地状态，不借此回执。
+- `2026-10-18T15:07:02Z` add_claim: added claim:dd82-brown58-ei-star-rewiring-obstruction [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:07:02Z` add_claim: added claim:dd82-four-cycle-fibers60-capacity [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:07:02Z` add_claim: added claim:dd82-double-kneser60-matching-obstruction [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:07:02Z` add_claim: added claim:dd82-cartesian60-single-interface-obstruction [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:07:02Z` add_claim: added claim:dd82-six-star-local-permutation-boundary [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:07:02Z` ingest_paper: ingested paper:stanić2020_notes_exceptional_signed (arxiv:)
+- `2026-10-18T15:07:02Z` 2026-10-18 15:07:02 UTC：五份共同接口规则纸面证明获实际SCOPED ACCEPT并登记准确范围；精确符号抵消60新稿独立复核在途，旧UNKNOWN不改。
+- `2026-10-18T15:08:42Z` add_claim: added claim:dd82-exact-sign-cancellation60-obstruction [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:08:42Z` add_claim: updated claim:dd82-cartesian60-single-interface-obstruction [status=verified] prov=.aris/traces/research-review/dd82-joint-interface-rules-root.md
+- `2026-10-18T15:08:43Z` 2026-10-18 15:08:42 UTC：接口规则两轮实际SCOPED ACCEPT已收尾，六稿范围及HTML/brief/恢复入口同步；继续同一61构造的Latin局部换边纸面诊断。
+- `2026-10-18T15:16:41Z` 2026-10-18 15:16:41 UTC：采纳用户收束及页面意见；主力n61一般共同结构，明确接父类续查原C5来源，暂停58/60特殊模板续修；HTML只保留一个当前任务。
+- `2026-10-18T15:29:28Z` 2026-10-18 15:29:28 UTC：按用户要求完成C5原来源两型续查，新736组合/4730packing全部双色不合格；主线保留一般H35，叶图公式明确只是原条件等价落实。
+- `2026-10-18T15:32:05Z` add_claim: added claim:dd82-cyclic5-h35-joint-parent-source-exclusion [status=verified] prov=.aris/traces/research-review/dd82-cyclic5-joint-parent-root.md
+- `2026-10-18T15:32:05Z` 2026-10-18 15:32:05 UTC：C5共同父类续查及一般叶图第1–3节实际SCOPED ACCEPT；全部MCP终态。继续一般叶度计数，仅必要轮廓，未解决共同配边。
+- `2026-10-18T15:41:16Z` 一般n61叶图稿§5本地推导：五个未覆盖集相交图至多一条边，转成同一无向叶边的P标号覆盖条件；未证旧模型逻辑独立、无新计算或阶数排除。HTML唯一当前任务，28个旧阶段明确归历史。
+- `2026-10-18T15:59:34Z` 一般n61 ε0必要双packing归约为18点/8边线性森林及五点多重核，完整S给出三个强迫T类与12点二分。本地已核，直接复核在途；完整61共同模型准备，未正式求解，ε1保留。
+- `2026-10-18T16:25:52Z` add_claim: added claim:dd82-n61-epsilon0-checked-exclusion [status=verified] prov=dd82-hil-double-packing18-full61-20261018; exact mathematical/source review, semantic checks, unchanged-CNF independent lrat-trim and actual final Gemini receipt
+- `2026-10-18T16:25:52Z` 2026-10-18 16:25:52 UTC: 完整相邻双缺陷ε0分支独立LRAT验证并直接范围接受；非特殊配色族，ε1及其他61仍开放。发现4.643433CPU、取证5.026064CPU、检查0.136446CPU。关闭旧ε0运行，准备任意配色/自由tη的ε1完整共同输入；未正式运行。页面一项当前任务，58/60失败模板不恢复。
+- `2026-10-18T16:30:11Z` 2026-10-18 16:30:10 UTC: ε=1完整共同代码和独立检查器已完成，根全源码核读及同家族数学核读均通过；实际小语义1952通用真值+64端口真值+5实际图赋值（每份1830对）通过，1.718930CPU／7.830270004墙钟秒。内存102623变量433048子句，841主变量；无正式CNF、无solver、无完整正例。特别核了blocked=own=port=1的合法情况，未误用ε=0自身零端口。新机制方向/全源码直接复核cell645已启动且最近同handle观察仍在运行，返回将保存reviews/dd82/20261018_epsilon1_full61_direction_code_review.json；不重启调用。待实际回执后才唯一prepare/solve。ε0四轮及全部计算终态，不恢复。
+- `2026-10-18T16:39:15Z` 唯一置顶任务与30个历史阶段已整理；ε1源码直接复核结束接受，新共享星η0矛盾仍local only；继续原唯一完整检验。
+- `2026-10-18T16:41:27Z` ε1完整输入唯一发现正常RAW UNSAT 5.519699CPU秒；独立取证另立，尚无ε1认证排除。
+- `2026-10-18T16:46:31Z` ε1独立C LRAT认证通过；与ε0合并排除所有相邻双缺陷，完整范围最终直接复核cell671在途。
+- `2026-10-18T16:49:41Z` add_claim: added claim:dd82-n61-adjacent-double-checked-exclusion [status=verified] prov=dd82-hil-epsilon1-full61-20261018; complete epsilon0/epsilon1 graph-to-CNF coverage, independent C LRAT checking and actual final scoped review
+- `2026-10-18T16:49:41Z` 完整相邻双缺陷分支合并排除获最终接受；全域原图边Delta≤1。总问题仍57≤N≤61，继续非相邻双缺陷共同结构。
+- `2026-10-18T16:52:01Z` 澄清n61剩余：两大开放工作范围＋旧[3,3]认证缺口；非相邻分支进入同一R46三份闭邻覆盖共同实现，本地稿未得对象或矛盾。
+- `2026-10-19T02:57:31Z` 回答当前n61进度：完整相邻双缺陷已证书关闭；非空非邻D匹配与空D开放、旧RAW认证缺口保留。记录有界t1/[3,2,2]避重，更新唯一HTML当前任务；新1658自由原边模型仅编码中，无新solver结果。
+- `2026-10-19T03:03:23Z` add_claim: added claim:dd82-n61-nonadjacent-double46-core [status=verified] prov=proofs/dd82/n61/NONADJACENT_DOUBLE_NEXT_CORE.md
+- `2026-10-19T03:08:27Z` 处理用户对主要精力的询问：新实现/复核占比较高，旧材料有界避重已结束。必要新代码回执后直接唯一求解，不叠加附加审阅；cell23仍在途，无正式求解。
+- `2026-10-19T03:11:00Z` 落实用户优先纸面推导要求：同步AGENTS/sole Goal/HTML和数学代理；Lean继续后置，中间推导不逐条开外审。保留已准备的一次新完整图检验，无加预算。
+- `2026-10-19T03:21:40Z` add_claim: added claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/NONADJACENT_DOUBLE_DEFECT_PROPAGATION.md
+- `2026-10-19T03:21:40Z` 唯一非邻完整检验UNKNOWN已终态，不重跑；落实纸面优先，新增逐点传播和h6外部共端口6≤5短排除，本地证据，不声称整个h6/n61关闭。HTML唯一任务已更新。
+- `2026-10-19T03:24:32Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/NONADJACENT_DOUBLE_DEFECT_PROPAGATION.md
+- `2026-10-19T03:24:32Z` 同一纸面传播稿再得h5外部相同端口的四点缺陷分量矛盾；仅本地完整证明，无新计算/外审/Lean。下一问保留W内父点缺陷项继续推导。
+- `2026-10-19T03:41:19Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/NONADJACENT_DOUBLE_DEFECT_PROPAGATION.md
+- `2026-10-19T03:41:19Z` 2026-10-19 03:40 UTC：按用户要求连续纸面推导；h5相同端口须双W、h6有W端口强迫匹配、h7合法归约h6不同端口。本地证据，无新solver/MCP/Lean。
+- `2026-10-19T04:13:02Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_TWO_C_PORTS_ZERO_W_DEFECT_EXCLUSION.md
+- `2026-10-19T04:27:04Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/NONADJACENT_DOUBLE_H7_MATCHING_STRUCTURE.md
+- `2026-10-19T04:35:47Z` 用户研究指导已接入：统一矩阵/父边约束优先，停止自动小case细分；恰一W与h7继承最新完整纸面结果，保留h5/h6、D为空和RAW缺口；HTML按五项核心问题报告。
+- `2026-10-19T04:44:48Z` add_claim: added claim:dd82-n61-common-matrix-obstruction [status=drafted] prov=proofs/dd82/n61/H5_DISJOINT_C_PORTS_TWO_W_REPEATS.md
+- `2026-10-19T04:44:48Z` 2026-10-19 04:44:48 UTC：统一矩阵方法关闭h5四不同C端口的完整τW2；预算4/6仍开放。h6矩阵/父行推广明确止点，不计新排除。人工统一研究指导保持，更新HTML后继续实际数学。
+- `2026-10-19T04:57:00Z` add_claim: updated claim:dd82-n61-common-matrix-obstruction [status=drafted] prov=proofs/dd82/n61/H5_DISJOINT_C_PORTS_TWO_W_REPEATS.md
+- `2026-10-19T04:57:00Z` 2026-10-19 04:57:00 UTC：统一延伸得到六重复点匹配支撑；k4/6未闭。具体障碍EᵀFv保留，四分割弱规则失败，不自动细分或重跑。两三角整体入口有界检查未得矛盾。
+- `2026-10-19T05:22:33Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_SPECIAL_PARENT_EDGE_EXCLUSION.md
+- `2026-10-19T05:22:33Z` add_claim: updated claim:dd82-n61-common-matrix-obstruction [status=drafted] prov=proofs/dd82/n61/H5_DISJOINT_C_PORTS_TWO_W_REPEATS.md
+- `2026-10-19T05:22:33Z` 用户统一约束指导持续执行：完整排除h6特殊父边QP，更新剩余h6的共同生成前端；h5有限归零不升级为整体闭合。HTML保持唯一当前任务，继续实际三组共同配边研究。
+- `2026-10-19T05:24:47Z` h6单组抽取有界检查完成：局部必要条件不够，所列局部对象又被真实C–W覆盖排除；保存通用零父列共同匹配筛选。三组Gram总量未闭合，不新增范围结论。
+- `2026-10-19T05:35:04Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_REPEAT_SUPPORT_MATCHING_THEOREM.md
+- `2026-10-19T05:35:04Z` h6不同双W端口重复支撑必匹配的本地证明落盘；完整共同输入通过语义/本地源码检查后启动唯一88秒发现，直接Gemini复核并行，当前无终态。
+- `2026-10-19T05:41:49Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_REPEAT_SUPPORT_MATCHING_THEOREM.md
+- `2026-10-19T05:41:49Z` 本段完成：h6重复支撑匹配及任意重复边的统一强迫父格；新完整共同模型唯一UNKNOWN（87.867778 CPU秒），Gemini源码复核SCOPED ACCEPT终态。无在途，两个输入均冻结，继续纸面共同实现而非追加小case求解。
+- `2026-10-19T06:02:05Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_REPEAT_SUPPORT_MATCHING_THEOREM.md
+- `2026-10-19T06:02:05Z` n61继续统一推导：新增任意重复边W邻集规则、全部普通尾点单射及完整尾行需求；单边手工见证定位方法止点。主投影61整除条件只排旧形式谱候选。一般h5/h6、无双缺陷及RAW缺口保持，未新跑求解。详见当前ledger与progress.html。
+- `2026-10-19T06:05:42Z` 更新HTML后继续的整体算子检查已完成：尾点单射未消除真实剩余C边与缺陷项，不推出不变子空间/−2谱障碍；未新增排除或计算。止点附匹配定理及当前ledger。
+- `2026-10-19T06:37:00Z` add_claim: updated claim:dd82-n61-nonadjacent-defect-propagation [status=drafted] prov=proofs/dd82/n61/H6_REPEAT_SUPPORT_MATCHING_THEOREM.md
+- `2026-10-19T06:37:00Z` 全尾容量≤4与两份真实五点父类分割已入wiki/HTML；旧局部例不可补。两轮Gemini方向讨论终态，错误界未采纳。全域模2判据仅必要、独立排除力未证；无新完整h6关闭，Goal ACTIVE。
+- `2026-10-19T06:40:29Z` 同一父行不等式统一排正重复点属于或连接C_x/C_y，并排τ2与重复边共存；明确尾点两父类外仍有真实余边，不计重排式为新突破。
+- `2026-10-19T11:10:20Z` 用户新谱Goal已接入AGENTS/执行入口/规格说明/brief/NEXT/HTML；只研究n61，局部自动延伸停止，先做已有材料对照。
+- `2026-10-19T11:12:29Z` upsert_idea: added idea:dd82-n61-global-closure-spectral [stage=active outcome=pending]
+- `2026-10-19T11:12:29Z` n61整体谱来源对照已建立；旧项目原文和文献实际阅读边界已入表，输入测试包原件待路径补齐。接续独立的因子提升/整数重数推导。
+- `2026-10-19T11:30:17Z` add_claim: added claim:dd82-n61-full-factor-lift-and-global-trace [status=drafted] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; 2026-10-19 local mathematical derivation; first bounded external review pending
+- `2026-10-19T11:30:17Z` n61整体谱：对照已写，输入包原件路径仍待补；完整因子提升及同图混合迹纸面完成，排除全不可拆谱范围和T40；真实三角形不变闭包缺非三角边压缩控制，未全域收尾。
+- `2026-10-19T11:34:41Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/001-review.response.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/DISPOSITION.md
+- `2026-10-19T11:34:41Z` n61谱机制首轮检查终态1/2，范围内接受并保留基础imports；根拒绝无依据K非不变断言。更新后已续推准确K+AK闭包和外泄式，尚无整体迹矛盾，继续同一数学任务。
+- `2026-10-19T11:52:24Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/002-review.response.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/ROUND2_DISPOSITION.md
+- `2026-10-19T11:52:24Z` n61精确边界矩阵双向归约，新增n0=0且b(F)=0完整排除；同线程第2轮SCOPED ACCEPT终态。Q整数压缩思路止点明确；继续P_E与真实H加权配边，无整阶收尾。
+- `2026-10-19T12:05:37Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/ROUND2_DISPOSITION.md (only previously reviewed sections)
+- `2026-10-19T12:11:42Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; .aris/traces/auto-review-loop/dd82-n61-global-spectral-20261019/ROUND2_DISPOSITION.md (only previously reviewed sections)
+- `2026-10-19T12:35:33Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; old external receipts cover only their original sections
+- `2026-10-19T12:35:33Z` Whole standard A60 integral self-adjoint root is now proved sufficient as well as necessary for a target graph; exact reconstruction removes separate post-lift adjacency/coverage obligations. Same existing idea/claim updated; no n61 closure.
+- `2026-10-19T12:41:44Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; old external receipts cover only their original sections
+- `2026-10-19T12:41:44Z` Exact common-glue criterion and conditional all-block reflection constraint added after HTML update. Initial realization and repeated eigenspaces remain open; no newly excluded whole graph family.
+- `2026-10-19T12:43:43Z` A given multiplicity-free split B now has an exact binary finite-group plus integer-trace initial-lift criterion (proof §7.6); no enumeration or coverage claim for repeated spectra.
+- `2026-10-19T13:02:36Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md; computations/dd82/spectral/odd_primary_square_check.result.json (finite-field check only)
+- `2026-10-19T13:02:36Z` add_experiment: added exp:dd82-odd-primary-square-f3-small [verdict=yes confidence=high]
+- `2026-10-19T13:02:36Z` Initial-lift work connected to full defect-tree norm and critical-group Smith layers; primitive-form checker passed exact small F3 reference enumeration. No new complete n61 graph range closed.
+- `2026-10-19T13:15:04Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.10; literature/dd82/stanic2020_exceptional_signed_graphs.pdf p107; computations/dd82/spectral/odd_primary_square_check.result.json (finite-field check only)
+- `2026-10-19T13:15:04Z` Completed full PSD defect-spectrum exclusion via inherited D/E8 root representation plus repeated-root and degree-sum proof; reused existing nodes; indefinite full n61 remainder stays open; HTML updated and mathematical inertia work continues.
+- `2026-10-19T13:18:19Z` Post-HTML continuation: full boundary inertia identity for arbitrary n0; explicit n0=0 cycle contribution; T=0 identity and indefinite norm sign limitations recorded. No extra complete exclusion beyond PSD range; no factor catalogue or new computation.
+- `2026-10-19T14:01:49Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.13; literature/dd82/stanic2020_exceptional_signed_graphs.pdf p107; computations/dd82/spectral/odd_primary_square_check.result.json (finite-field check only); square_partition_moment_diagnostic.md (conditional moment diagnostic only)
+- `2026-10-19T14:01:49Z` add_experiment: added exp:dd82-n61-square-partition-five-moment-stop-20261019 [verdict=no confidence=high]
+- `2026-10-19T14:01:49Z` T39 complete paper exclusion by full invariant flow space and shared moment 1140>980; T<=38. Existing nodes updated; no all61 claim, no old-test replay. Continue uniform moment prerequisites.
+- `2026-10-19T14:10:42Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.14; literature/dd82/stanic2020_exceptional_signed_graphs.pdf p107; computations/dd82/spectral/odd_primary_square_check.result.json (finite-field check only); square_partition_moment_diagnostic.md (conditional moment diagnostic only)
+- `2026-10-19T14:10:42Z` After HTML continued mathematics: reused old invariant core, new actual high-point square-moment 109k<=16n2 uniformly proves T<=37. Exact remaining scope and boundary obligation updated; no new solver, external review or Lean.
+- `2026-10-19T14:26:25Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.15; literature/dd82/stanic2020_exceptional_signed_graphs.pdf p107; .aris/traces/auto-review-loop/dd82-high-point-square-moment-20261019/DISPOSITION.md (7.14 only); prior finite-field/moment diagnostics retain their scope
+- `2026-10-19T14:26:25Z` 2026-10-19 14:25 UTC — Updated existing global spectral claim/idea: T≤35 via shared boundary/complement budget; scoped new external receipt only covers T≤37; no new graph or full n61 closure. Continued actual mathematics after HTML update.
+- `2026-10-19T14:35:40Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.16; literature/dd82/stanic2020_exceptional_signed_graphs.pdf p107; .aris/traces/auto-review-loop/dd82-high-point-square-moment-20261019/DISPOSITION.md (7.14 only); previous finite diagnostics retain their original scope
+- `2026-10-19T14:35:40Z` 2026-10-19 14:35 UTC — Continued after HTML: full nonnegative Q and actual cross-edge shared budgets prove n0=0 ⇒ T≤34; global bound remains35. No automatic T34 classification.
+- `2026-10-19T14:40:13Z` 2026-10-19 14:39 UTC — Added bounded nonbacktracking arithmetic diagnostic to existing spectral idea/claim: finite mod4 square check; long primitive-cycle positivity automatic. No additional n61 range exclusion.
+- `2026-10-19T14:53:13Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.18; classical root-representation import in7.10; .aris/traces/auto-review-loop/dd82-full-matrix-complement-20261019/ (review pending); previous receipts retain their scope
+- `2026-10-19T14:53:13Z` 2026-10-19 14:52 UTC — Global T<=34 via forced rank-one complement; no per-n0 classification. New actual bounded review in progress; Arf shortcut closed as automatic identity.
+- `2026-10-19T15:01:05Z` 2026-10-19 15:00 UTC — Actual full-matrix review SCOPED ACCEPT, completed1/2, thread ab9c8e9c-afff-4453-8fd4-15db4fe41482. Raw receipt retained; root corrected no-double wording; no widening imports or remaining T<=34.
+- `2026-10-19T15:12:05Z` add_claim: updated claim:dd82-n61-full-factor-lift-and-global-trace [status=sound-modulo-imports] prov=proofs/dd82/n61/GLOBAL_SPECTRAL_FACTOR_ARITHMETIC.md §§1–7.19; §7.19 local derivation; actual scoped Gemini acceptance §§7.15–7.18 in .aris/traces/auto-review-loop/dd82-full-matrix-complement-20261019/; imports unchanged
+- `2026-10-19T15:12:05Z` 2026-10-19 15:12 UTC: §7.19 sole low-degree split-factor exclusion for d<=19 saved; root+agent local proof, prior external acceptance7.15–7.18 only. Two exact method stop points recorded; HTML/current entries synced. Goal remains active; all n61 graph ranges not closed.
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-original-graph-foundations.md
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-brown57-extension.md
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-n61-global-closure-spectral.md
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-n63-cyclotomic-trace.md
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-n59-global-trace.md
+- `2026-10-26T16:00:19Z` Pause old execution without changing mathematical outcome: dd82-n59-matching-row-c4.md
+- `2026-10-26T16:00:19Z` ingest_paper: ingested paper:comellas2026_table_large_degreediameter (arxiv:)
+- `2026-10-26T16:00:19Z` Converted canonical Comellas paper node to stable imported ddp-prefixed slug before linking.
+- `2026-10-26T16:00:19Z` upsert_idea: added idea:ddp-open-parameter-construction-20261026 [stage=active outcome=pending]
+- `2026-10-26T16:00:19Z` upsert_idea: added idea:ddp-counterexample-gates-20261026 [stage=active outcome=pending]
+- `2026-10-26T16:00:19Z` add_experiment: added exp:ddp-known-baselines-20261026 [verdict=partial confidence=high]
+- `2026-10-26T16:00:19Z` Merged four DD portfolio drafts through installed helpers; new execution activated, DD82 paused with outcomes preserved. Source map stable slug conversion; package baseline evidence not rerun. Updated comments/navigation/HTML with original archives.
+- `2026-10-26T16:12:25Z` upsert_idea: added idea:ddp-m1-two-orbit-voltage [stage=active outcome=pending]
+- `2026-10-26T16:12:25Z` upsert_idea: added idea:ddp-m3-affine-line-cover [stage=active outcome=pending]
+- `2026-10-26T16:12:25Z` add_experiment: added exp:ddp-m1-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T16:12:25Z` M1 first4 finite profiles ended; all4 expanded candidates independently checked, no record. Changed degree allocation, started6x120s finite profiles. M3 recovered public810 affine-line rules and tests controller feasibility. HTML updated with actual evidence and stable old-history links.
+- `2026-10-26T16:34:44Z` add_experiment: added exp:ddp-m1-q63-exact-20261026 [verdict=no confidence=high]
+- `2026-10-26T16:34:44Z` add_experiment: added exp:ddp-m3-control-capacity-20261026 [verdict=partial confidence=high]
+- `2026-10-26T16:34:44Z` add_experiment: added exp:ddp-m1-d7-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T16:34:44Z` Recorded complete q63 template decision, scopedM3 capacity/counterexamples, degree7 failed candidates, actual source reading and Gemini SCOPED ACCEPT disposition. No new record, no Lean; continue constructive mechanisms.
+- `2026-10-26T16:57:33Z` add_experiment: added exp:ddp-m1-c13-repair-20261026 [verdict=no confidence=high]
+- `2026-10-26T16:57:33Z` add_experiment: added exp:ddp-m3-binary102-20261026 [verdict=no confidence=high]
+- `2026-10-26T16:57:33Z` add_experiment: added exp:ddp-m1-d5-prunings-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:14:21Z` add_experiment: added exp:ddp-m1-d5-projective-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:14:22Z` add_experiment: added exp:ddp-m3-control31-joint-boundary-20261026 [verdict=no confidence=medium]
+- `2026-10-26T17:41:35Z` upsert_idea: updated idea:ddp-m1-two-orbit-voltage [stage=active outcome=pending]
+- `2026-10-26T17:41:35Z` upsert_idea: updated idea:ddp-m3-affine-line-cover [stage=archived outcome=pending]
+- `2026-10-26T17:41:35Z` upsert_idea: added idea:ddp-matching-augmentation [stage=active outcome=pending]
+- `2026-10-26T17:41:35Z` add_experiment: added exp:ddp-m1-d5-four-one-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:41:35Z` add_experiment: added exp:ddp-m1-c37-diagnosis-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:41:35Z` add_experiment: added exp:ddp-m3-diamond31-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:41:35Z` add_experiment: added exp:ddp-m1-d7d5-f353-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:41:35Z` 2026-10-26: recorded actual4+1 finite completion, C37 local diagnosis, diamond31 and2824 profile failures. No new bound. Fixed affine-controller route paused; matching augmentation is the second active construction entry, with ten candidates only.
+- `2026-10-26T17:45:54Z` add_experiment: added exp:ddp-matching-ten-20261026 [verdict=no confidence=high]
+- `2026-10-26T17:45:54Z` upsert_idea: updated idea:ddp-matching-augmentation [stage=active outcome=pending]
+- `2026-10-26T18:29:48Z` add_experiment: added exp:ddp-matching-joint-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:29:48Z` add_experiment: added exp:ddp-single-vertex651-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:29:48Z` add_experiment: added exp:ddp-degree-deficit651-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:29:48Z` add_experiment: added exp:ddp-f41-reflections-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:29:48Z` upsert_idea: updated idea:ddp-matching-augmentation [stage=archived outcome=pending]
+- `2026-10-26T18:29:48Z` upsert_idea: added idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T18:29:48Z` Recorded completed joint repair, entire651 two-edge family, degree-deficit finite neighborhoods, and F41 reflection families. No new bound. Fixed-source matching repair paused; M1 continues with a bounded nonfaithful-action capacity diagnosis, while the recovered650 hierarchy supplies the second construction mechanism.
+- `2026-10-26T18:42:02Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T18:42:02Z` upsert_idea: updated idea:ddp-m1-two-orbit-voltage [stage=active outcome=pending]
+- `2026-10-26T18:42:02Z` add_experiment: added exp:ddp-hierarchical676-insertion-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:42:02Z` add_experiment: added exp:ddp-nonfaithful13-mixed-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:42:02Z` Latest terminal evidence captured:676 insertion D6/2172; p13 mixed complete105456/D6/5278; exact hierarchy rules and parity obstruction. NEXT_SESSION refreshed; no new bound.
+- `2026-10-26T18:44:16Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T18:44:16Z` add_experiment: added exp:ddp-hierarchical676-factorization-20261026 [verdict=no confidence=high]
+- `2026-10-26T18:44:16Z` Final current status: all launched batches terminal; M2 cyclic candidate D7/27142, no new bound. Original HTML/comments and recovery notes synchronized.
+- `2026-10-26T19:35:13Z` upsert_idea: updated idea:ddp-m1-two-orbit-voltage [stage=piloted outcome=pending]
+- `2026-10-26T19:35:13Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T19:35:13Z` add_experiment: added exp:ddp-nonfaithful-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-26T19:35:13Z` add_experiment: added exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-26T19:35:13Z` M2 known650 algebraic reconstruction, exact route criteria, fixed finite tower outcomes and Z98 paper exclusion synchronized. No new record. F64 three-pair batch terminal; remaining two-pair/two-involution scope open. Actual two-round Gemini errors are being disposed separately, never treated as proof.
+- `2026-10-26T19:37:35Z` add_experiment: updated exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-26T19:38:59Z` F64 best independent all3200-root verification complete: D6,83328 badpairs. Gemini round2 BB equality refuted by16 omitted reachable blocks in saved q41 graph; corrected set matches BFS. All current work terminal; zero new lower bounds, Goal remains active.
+- `2026-10-26T19:55:04Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T19:55:04Z` add_experiment: added exp:ddp-f64-central-quotient-20261026 [verdict=no confidence=high]
+- `2026-10-26T20:19:18Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T20:19:18Z` add_experiment: added exp:ddp-f64-semilinear-20261026 [verdict=no confidence=high]
+- `2026-10-26T20:19:18Z` Synchronized completed faithful semilinear family; zero new bounds, no new claim, Goal active.
+- `2026-10-26T20:53:58Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T20:53:59Z` add_experiment: added exp:ddp-agl7-two-pairs-20261026 [verdict=no confidence=high]
+- `2026-10-26T20:53:59Z` add_experiment: added exp:ddp-agl8-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T20:53:59Z` Updated nonnormal-H evidence and triangular-head preparation; no new claim or record.
+- `2026-10-26T21:16:37Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T21:16:38Z` add_experiment: added exp:ddp-head-triangle-r5-20261026 [verdict=no confidence=high]
+- `2026-10-26T21:16:38Z` Synced r5 complete finite failure, unique independent final check, current r1 authorization and q11/c43 mathematical preparation. No new lower bound.
+- `2026-10-26T21:34:13Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T21:34:13Z` add_experiment: added exp:ddp-head-triangle-r1-20261026 [verdict=no confidence=high]
+- `2026-10-26T21:34:13Z` add_experiment: added exp:ddp-head-triangle-c43-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T21:34:13Z` Synced r1 fullnegative, c43 profile/uniqueindependentcheck and live c31 finiteproduction; no new lower bound.
+- `2026-10-26T22:04:17Z` upsert_idea: updated idea:ddp-m2-hierarchical-cover [stage=active outcome=pending]
+- `2026-10-26T22:04:17Z` upsert_idea: added idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T22:04:17Z` add_experiment: added exp:ddp-head-triangle-c31-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:04:17Z` add_experiment: added exp:ddp-head-triangle-c31-nonfaithful-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:04:17Z` add_experiment: added exp:ddp-head-triangle-c61-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:04:17Z` add_experiment: added exp:ddp-head-triangle-q11-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:04:17Z` add_experiment: added exp:ddp-affine-cayley330-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:04:18Z` Synced 2026-10-26 22:04:17 UTC: c31/c31nonfaithful/c61 full fixed scopes failed; q11 profile-only; Cayley330 fullfixedgroup failed; bounded272 ongoing. Zero new lower bounds; no formal claims added.
+- `2026-10-26T22:06:26Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T22:06:27Z` add_experiment: added exp:ddp-affine-cayley272-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:06:27Z` Synced 2026-10-26 22:06:26 UTC: AGL1(17) complete fixedgroup S8 failure, unique all272source final done, zero new bounds, all launched batches terminal.
+- `2026-10-26T22:32:40Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T22:32:40Z` upsert_idea: added idea:ddp-bicayley220-one-reflection [stage=archived outcome=negative]
+- `2026-10-26T22:32:40Z` upsert_idea: added idea:ddp-polarity585-complete-replication [stage=archived outcome=negative]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-affine-cayley312-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-affine-cayley342-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-affine-cayley258-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-affine-parameter-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-affine-cayley320-char2-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-bicayley220-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` add_experiment: added exp:ddp-polarity585-replication-20261026 [verdict=no confidence=high]
+- `2026-10-26T22:32:40Z` Synced 2026-10-26 22:32:40 UTC: symbolic affine coverage, complete312/342/258 failures, char2-320 and bicayley220 capacity exclusions, scoped585 replication bound. All started checks terminal; zero new bounds; Goal active.
+- `2026-10-26T23:00:04Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:00:05Z` upsert_idea: added idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-affine930-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-affine930-tight-linear-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-affine930-d11-fivepair-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-affine930-d12-fixed-extension-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-affine820-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-bicayley172-profile-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` add_experiment: added exp:ddp-bicayley820-release-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:00:05Z` Synced 2026-10-26 23:00:04 UTC: tight-fiber equations, complete930d11fivepair branch failure, fixed30d12extensions,820pureCayley and172/820two-orbit profiles. Allchecks terminal; zero newbounds; Goalactive.
+- `2026-10-26T23:27:11Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:27:11Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-affine930-d11-fourpair-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-affine930-surplus-one-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-affine820-phase-moves-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-affine812-two-modes-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-cyclic4-172-release-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-cyclic4-172-two-coordinate-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` add_experiment: added exp:ddp-affine816-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:27:11Z` Synced 2026-10-26 23:27:11 UTC: full930d11fixedgroup exclusion,812complete2modes,820phase moves,172fourorbit improvement andtwo-coordinate minimum;816andbalanced172nextactualbatches. Zero newbounds,Goalactive.
+- `2026-10-26T23:31:16Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:31:16Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:31:16Z` add_experiment: added exp:ddp-affine816-maximin-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:31:16Z` add_experiment: added exp:ddp-cyclic4-172-balanced-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:31:16Z` add_experiment: added exp:ddp-cyclic4-172-balanced-pair-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:31:16Z` Finalsync 2026-10-26 23:31:16 UTC: allnewbatches terminal;816maximin76fail,balanced172bad258D4independentlychecked andfullpairneighborhoodunchanged. Zero newbounds,Goalactive.
+- `2026-10-26T23:46:28Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:46:28Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-26T23:46:28Z` add_experiment: added exp:ddp-affine816-sixpair-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:46:28Z` add_experiment: added exp:ddp-affine816-fourpair-tight-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:46:28Z` add_experiment: added exp:ddp-cyclic4-172-triple-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:46:28Z` add_experiment: added exp:ddp-cyclic4-172-edge-switch-20261026 [verdict=no confidence=high]
+- `2026-10-26T23:46:28Z` Checkpoint 2026-10-26 23:46:28 UTC:816sixpair/fourpairclosed;172triple/edge-switchlocalminimum;newstructuralpreparationonly;zero newbounds.
+- `2026-10-27T00:14:22Z` upsert_idea: updated idea:ddp-affine-cayley-d3 [stage=active outcome=pending]
+- `2026-10-27T00:14:22Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-affine816-full-closure-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-cyclic4-loop-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-cyclic4-loop-surgery-20261026 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-cyclic4-loop-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-cyclic4-124-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-affine4-shared-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` add_experiment: added exp:ddp-affine4-independent-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:14:22Z` Checkpoint 2026-10-27 00:14:22 UTC: fixed816degree≤12closed,sharedslopeflatness,loop/124/irregularprofilescomplete;zero newbounds,GoalACTIVE.
+- `2026-10-27T00:30:31Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-27T00:30:31Z` add_experiment: added exp:ddp-nonabelian4-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:30:31Z` add_experiment: added exp:ddp-q64-256-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:30:31Z` Checkpoint 2026-10-27 00:30:31 UTC: Q64actual256profilecomplete,D4/832,uniqueallrootcheck;centralquotientobstacle;zero newbounds,GoalACTIVE.
+- `2026-10-27T00:55:16Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=active outcome=pending]
+- `2026-10-27T00:55:16Z` add_experiment: added exp:ddp-q64-central-one-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:55:16Z` add_experiment: added exp:ddp-q64-central-two-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:55:16Z` add_experiment: added exp:ddp-q64-quotient-descent-20261027 [verdict=no confidence=high]
+- `2026-10-27T00:55:16Z` Checkpoint 2026-10-27 00:55:16 UTC: exactcentralmethod,403/74958scopesclosed,16startLprofilebest4;shortclosedrouteobstacle;zero newbounds,GoalACTIVE.
+- `2026-10-27T01:30:41Z` add_experiment: added exp:ddp-q64-triangle-lift-20261027 [verdict=no confidence=high]
+- `2026-10-27T01:30:41Z` add_experiment: added exp:ddp-q64-central-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T01:30:42Z` Results checkpoint 2026-10-27 01:30:41 UTC: HTML navigation refreshed; triangle profile and fixed22 results recorded; user pace feedback and next-run policy preserved. Goal panel paused; no new experiment launched; zero new lower bounds.
+- `2026-10-27T01:48:31Z` Gemini channel checked 2026-10-27 01:48:31 UTC: SUCCESS, bridge reports gemini-3.8-flash-high/high. Narrow construction-excerpt check only; later research not reviewed by this call.
+- `2026-10-27T02:11:40Z` upsert_idea: added idea:ddp-breadth-20261027 [stage=active outcome=pending]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-regular122-anneal-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-psl2-13-cayley-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-pgl2-7-orbits126-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-mobius108-schreier-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-line960-internal-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-q8-lift112-d4-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` add_experiment: added exp:ddp-psl2-23-orbits3542-d5-20261027 [verdict=no confidence=high]
+- `2026-10-27T02:11:40Z` Breadth checkpoint 2026-10-27 02:11:40 UTC: 7 finite construction profiles independently checked and stopped; standard product and fixed line-template obstructions; user breadth/pivot policy persisted; Goal ACTIVE, zero new bounds.
+- `2026-10-27T02:12:30Z` upsert_idea: updated idea:ddp-bicayley-d3 [stage=archived outcome=mixed]
+- `2026-10-27T02:51:40Z` Wave2 checkpoint 2026-10-27 02:51:40 UTC: source105/254 and Q64 profile stopped; controller32/33 necessary route tests failed; source/fiber budget obstructions recorded; user asks for honest positive rationale versus conjectural scouting; zero new bounds, Goal ACTIVE.
+- `2026-10-27T03:15:51Z` Expert discussion snapshot 2026-10-27 03:15:51 UTC: zero new lower bounds; scoped exclusions and failed explicit graphs; positive universal-chart theorem separated from unachieved controller condition. Local HTML, editable text and small selected-evidence archive prepared; research continues.
+- `2026-10-27T03:23:28Z` add_experiment: added exp:ddp-wave3-route-chart-controller-20261027 [verdict=no confidence=high]
+- `2026-10-27T03:23:28Z` Progress 2026-10-27 03:23:28 UTC: expert HTML/Markdown/ZIP ready; chart sufficient condition checked, controller175 final pending cleared; 192-controller source and capacity inspection delegated, not yet a claimed production run. Goal active; zero new lower bounds.
+- `2026-10-27T03:48:19Z` upsert_idea: added idea:ddp-h9-partial-fold-independent-states [stage=active outcome=pending]
+- `2026-10-27T03:48:19Z` add_experiment: added exp:ddp-wave3-chart-geometry-followup-20261027 [verdict=no confidence=high]
+- `2026-10-27T03:48:19Z` Goal continuation 2026-10-27 03:48:19 UTC: previous goal turn PROGRESS (expert packet and actual controller probes); current turn PROGRESS (new verified scopes, recovered H9 sufficient construction, source state and exact monotone closure). Joint region trial dispatched; zero new lower bounds; goal remains active.
+- `2026-10-27T03:49:48Z` add_experiment: updated exp:ddp-wave3-chart-geometry-followup-20261027 [verdict=no confidence=high]
+- `2026-10-27T03:49:48Z` Joint H9 finite profile terminal 2026-10-27 03:49:48 UTC: all4 predetermined subproblems returned local optimum with zero gain; final state identical to root-checked baseline, no duplicateBFS. Goal active, zero new lower bounds. No expansion of region radius queued; global splitting and pencil rules remain open.
+- `2026-10-27T04:28:30Z` add_experiment: added exp:ddp-wave4-global-geometry-and-record-cover-20261027 [verdict=no confidence=high]
+- `2026-10-27T04:28:30Z` upsert_idea: added idea:ddp-q3-three-step-plane-pencil31 [stage=active outcome=pending]
+- `2026-10-27T04:28:30Z` Goal continuation 2026-10-27 04:28:30 UTC: previous turn PROGRESS; current turn PROGRESS via actual global trials, new primary data, verified involution and additive obstruction, and complete localF3 pattern data. Zero new lower bounds. Only the explicitly dispatched31triangle-overlap family remains in preparation/running; old finite profiles stay stopped.
+- `2026-10-27T04:30:44Z` add_experiment: added exp:ddp-controller31-triangle-overlap2760-20261027 [verdict=no confidence=high]
+- `2026-10-27T04:30:44Z` 2026-10-27 04:30:44 UTC 第四轮完成。H9全局生成与当前纪录加点均未越线；UNKNOWN不作不可行证明。明确192点几何商的保旧边max4补度由短见证排除，Gemini实际回执仅接受该范围。新三步原始规则与F3局部18模式已恢复，证书计数将可越线阶限定为31（837点）；指定2760个三角重叠候选全缺必要NB3路，已停止，一般31控制器与全局证书开放。研究Goal继续，新下界0；旧专家包未改。
+- `2026-10-27T05:30:18Z` add_experiment: added exp:ddp-wave5-controller-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T06:04:52Z` add_experiment: added exp:ddp-wave6-covers-linker-20261027 [verdict=no confidence=high]
+- `2026-10-27T06:41:27Z` add_experiment: added exp:ddp-wave7-matching-signing-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley258-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley272-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley312-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley320-char2-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley330-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-cayley342-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine-parameter-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine4-independent-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:02Z` add_experiment: updated exp:ddp-affine4-shared-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine812-two-modes-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine816-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine816-fourpair-tight-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine816-full-closure-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine816-maximin-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine816-sixpair-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine820-phase-moves-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine820-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-d11-fivepair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-d11-fourpair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-d12-fixed-extension-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-surplus-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-affine930-tight-linear-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-agl7-two-pairs-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-agl8-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-bicayley172-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-bicayley220-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-bicayley820-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-controller31-triangle-overlap2760-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-124-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-pair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-edge-switch-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-triple-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-172-two-coordinate-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-loop-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-loop-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-cyclic4-loop-surgery-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-degree-deficit651-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-f41-reflections-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-f64-central-quotient-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-f64-semilinear-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-head-triangle-c31-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-head-triangle-c31-nonfaithful-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-head-triangle-c43-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:03Z` add_experiment: updated exp:ddp-head-triangle-c61-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-head-triangle-q11-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-head-triangle-r1-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-head-triangle-r5-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-hierarchical676-factorization-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-hierarchical676-insertion-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-known-baselines-20261026 [verdict=partial confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-line960-internal-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-c13-repair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-c37-diagnosis-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-d5-four-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-d5-projective-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-d5-prunings-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-d7-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-d7d5-f353-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m1-q63-exact-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m3-binary102-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m3-control-capacity-20261026 [verdict=partial confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m3-control31-joint-boundary-20261026 [verdict=no confidence=medium]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-m3-diamond31-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-matching-joint-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-matching-ten-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-mobius108-schreier-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-nonabelian4-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-nonfaithful-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-nonfaithful13-mixed-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-pgl2-7-orbits126-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-polarity585-replication-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-psl2-13-cayley-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-psl2-23-orbits3542-d5-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-256-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-central-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-central-one-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-central-two-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-quotient-descent-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q64-triangle-lift-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-q8-lift112-d4-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:04Z` add_experiment: updated exp:ddp-regular122-anneal-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: updated exp:ddp-single-vertex651-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-extension105-d4 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-extension254-d4 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-lexicographic-products [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-line1664-d4 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-ternary8424-degree-budget [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-sl23-c8-biorbit384-d5 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-two-orbit128-scout [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-two-orbit128-search [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave2-triangle-bowtie32-controller [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-source-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-pentagon175-controller [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-controller-lift192 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-binary-route-chart4 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-cubic-nb5-bounds [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-debruijn256 [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-binary-branch364 [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-hexagon-partial-fold-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-hexagon-partial-fold-greedy [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-hexagon-partial-fold-joint [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave3-tits585-batch-extension [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-global-partial-fold [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-equitable-global [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-pencil-source [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-record37628-single-extension [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-record42342-single-extension [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-record37628-global-cover [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-controller364-quotient [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave5-chart4-quotient-probe [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave5-mizuno-d4-source [verdict=partial confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave5-mizuno-d4-c10-wide-search [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave5-affine-flag80-trade [verdict=no confidence=high]
+- `2026-10-27T07:33:05Z` add_experiment: added exp:ddp-wave5-nb4-base-capacity [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-cayley84-nb4 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-bhakar104-wide-screen [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-global31-two-bowties [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-controller31-pattern-solver [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-binary-route-chart3 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-hs850-branch-lift [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-hs850-orbit10-relaxation [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-fano-split42 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave5-heisenberg729-capacity [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-tensor-product-screen [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-voltage2008-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-lamplighter384-capacity [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-cyclic-cover369 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-cyclic-cover1560 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-affine-linker504 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-metacyclic78-degree5 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave6-record252-mechanism-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave7-shortcut-matching-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave7-shortcut650 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave7-signed-double340 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave7-branched-double340-capacity [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave7-rajiv252-cell-structure [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave8-insertion171 [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave8-menon1296-screen [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave8-menon1296-unrestricted [verdict=no confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave8-cooperative-extension-scout [verdict=partial confidence=high]
+- `2026-10-27T07:33:06Z` add_experiment: added exp:ddp-wave9-cooperative37630 [verdict=no confidence=high]
+- `2026-10-27T07:34:05Z` add_experiment: updated exp:ddp-wave6-tensor-product-screen [verdict=no confidence=high]
+- `2026-10-27T07:34:05Z` add_experiment: updated exp:ddp-wave7-shortcut-matching-scout [verdict=partial confidence=high]
+- `2026-10-27T07:34:05Z` add_experiment: updated exp:ddp-wave8-cooperative-extension-scout [verdict=partial confidence=high]
+- `2026-10-27T07:35:44Z` add_experiment: updated exp:ddp-wave7-matching-signing-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:35:44Z` add_experiment: updated exp:ddp-wave4-global-geometry-and-record-cover-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine816-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine816-fourpair-tight-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine816-maximin-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine816-sixpair-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine930-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine930-d11-fivepair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine930-surplus-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-affine930-tight-linear-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:36:18Z` add_experiment: updated exp:ddp-nonfaithful13-mixed-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley258-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley272-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley312-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley320-char2-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley330-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-cayley342-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine-parameter-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine4-independent-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine4-shared-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:13Z` add_experiment: updated exp:ddp-affine812-two-modes-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine816-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine816-fourpair-tight-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine816-full-closure-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine816-maximin-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine816-sixpair-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine820-phase-moves-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine820-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-d11-fivepair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-d11-fourpair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-d12-fixed-extension-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-surplus-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-affine930-tight-linear-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-agl7-two-pairs-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-agl8-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-bicayley172-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-bicayley220-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-bicayley820-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-controller31-triangle-overlap2760-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-124-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-pair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-edge-switch-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-triple-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-172-two-coordinate-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-loop-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-loop-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-cyclic4-loop-surgery-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-degree-deficit651-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-f41-reflections-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:14Z` add_experiment: updated exp:ddp-f64-central-quotient-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-f64-semilinear-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-c31-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-c31-nonfaithful-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-c43-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-c61-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-q11-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-r1-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-head-triangle-r5-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-hierarchical676-factorization-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-hierarchical676-insertion-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-known-baselines-20261026 [verdict=partial confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-line960-internal-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-c13-repair-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-c37-diagnosis-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-d5-four-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-d5-projective-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-d5-prunings-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-d7-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-d7d5-f353-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m1-q63-exact-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m3-binary102-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m3-control-capacity-20261026 [verdict=partial confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m3-control31-joint-boundary-20261026 [verdict=no confidence=medium]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-m3-diamond31-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-matching-joint-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-matching-ten-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-mobius108-schreier-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-nonabelian4-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-nonfaithful-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:15Z` add_experiment: updated exp:ddp-nonfaithful13-mixed-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-pgl2-7-orbits126-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-polarity585-replication-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-psl2-13-cayley-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-psl2-23-orbits3542-d5-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-256-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-central-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-central-one-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-central-two-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-quotient-descent-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q64-triangle-lift-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-q8-lift112-d4-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-regular122-anneal-20261027 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-single-vertex651-20261026 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-extension105-d4 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-extension254-d4 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-lexicographic-products [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-line1664-d4 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-ternary8424-degree-budget [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-sl23-c8-biorbit384-d5 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-two-orbit128-scout [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-two-orbit128-search [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave2-triangle-bowtie32-controller [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-source-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-pentagon175-controller [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-controller-lift192 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-binary-route-chart4 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-cubic-nb5-bounds [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-debruijn256 [verdict=no confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-binary-branch364 [verdict=partial confidence=high]
+- `2026-10-27T07:55:16Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-greedy [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-joint [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave3-tits585-batch-extension [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-global-partial-fold [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-equitable-global [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-pencil-source [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-record37628-single-extension [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-record42342-single-extension [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-record37628-global-cover [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-controller364-quotient [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-chart4-quotient-probe [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-mizuno-d4-source [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-mizuno-d4-c10-wide-search [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-affine-flag80-trade [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-nb4-base-capacity [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-cayley84-nb4 [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-bhakar104-wide-screen [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-global31-two-bowties [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-controller31-pattern-solver [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-binary-route-chart3 [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-hs850-branch-lift [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-hs850-orbit10-relaxation [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-fano-split42 [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave5-heisenberg729-capacity [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-tensor-product-screen [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-voltage2008-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-lamplighter384-capacity [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-cyclic-cover369 [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-cyclic-cover1560 [verdict=no confidence=high]
+- `2026-10-27T07:55:17Z` add_experiment: updated exp:ddp-wave6-affine-linker504 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave6-metacyclic78-degree5 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave6-record252-mechanism-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave7-shortcut-matching-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave7-shortcut650 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave7-signed-double340 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave7-branched-double340-capacity [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave7-rajiv252-cell-structure [verdict=partial confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave8-insertion171 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave8-menon1296-screen [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave8-menon1296-unrestricted [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave8-cooperative-extension-scout [verdict=partial confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: updated exp:ddp-wave9-cooperative37630 [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: added exp:ddp-wave10-degree-reduction-scout [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: added exp:ddp-wave10-new-structure-scout [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: added exp:ddp-wave10-binary1152-edge-local [verdict=no confidence=high]
+- `2026-10-27T07:55:18Z` add_experiment: added exp:ddp-wave10-gq312-internal-cycles [verdict=no confidence=high]
+- `2026-10-27T07:58:08Z` add_experiment: updated exp:ddp-wave10-degree-reduction-scout [verdict=no confidence=high]
+- `2026-10-27T07:58:08Z` add_experiment: updated exp:ddp-wave10-new-structure-scout [verdict=no confidence=high]
+- `2026-10-27T07:58:08Z` add_experiment: updated exp:ddp-wave10-binary1152-edge-local [verdict=no confidence=high]
+- `2026-10-27T07:58:08Z` add_experiment: updated exp:ddp-wave10-gq312-internal-cycles [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley258-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley272-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley312-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley320-char2-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley330-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-cayley342-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine-parameter-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine4-independent-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine4-shared-slope-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine812-two-modes-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine816-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:48Z` add_experiment: updated exp:ddp-affine816-fourpair-tight-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine816-full-closure-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine816-maximin-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine816-sixpair-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine820-phase-moves-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine820-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-d11-fivepair-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-d11-fourpair-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-d12-fixed-extension-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-surplus-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-affine930-tight-linear-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-agl7-two-pairs-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-agl8-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-bicayley172-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-bicayley220-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-bicayley820-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-controller31-triangle-overlap2760-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-coset-towers-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-124-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-balanced-pair-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-edge-switch-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-release-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-triple-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-172-two-coordinate-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-loop-capacity-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-loop-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-cyclic4-loop-surgery-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-degree-deficit651-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-f41-reflections-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-f64-central-quotient-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:49Z` add_experiment: updated exp:ddp-f64-semilinear-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-c31-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-c31-nonfaithful-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-c43-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-c61-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-q11-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-r1-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-head-triangle-r5-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-hierarchical676-factorization-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-hierarchical676-insertion-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-known-baselines-20261026 [verdict=partial confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-line960-internal-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-c13-repair-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-c37-diagnosis-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-d5-four-one-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-d5-projective-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-d5-prunings-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-d7-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-d7d5-f353-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-first-profile-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m1-q63-exact-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m3-binary102-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m3-control-capacity-20261026 [verdict=partial confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m3-control31-joint-boundary-20261026 [verdict=no confidence=medium]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-m3-diamond31-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-matching-joint-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-matching-ten-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-mobius108-schreier-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-nonabelian4-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-nonfaithful-remaining-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-nonfaithful13-mixed-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-pgl2-7-orbits126-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:50Z` add_experiment: updated exp:ddp-polarity585-replication-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-psl2-13-cayley-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-psl2-23-orbits3542-d5-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-256-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-central-matching-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-central-one-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-central-two-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-quotient-descent-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q64-triangle-lift-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-q8-lift112-d4-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-regular122-anneal-20261027 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-single-vertex651-20261026 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-extension105-d4 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-extension254-d4 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-lexicographic-products [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-line1664-d4 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-ternary8424-degree-budget [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-sl23-c8-biorbit384-d5 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-two-orbit128-scout [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-two-orbit128-search [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave2-triangle-bowtie32-controller [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-source-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-pentagon175-controller [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-controller-lift192 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-binary-route-chart4 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-cubic-nb5-bounds [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-debruijn256 [verdict=no confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-binary-branch364 [verdict=partial confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:51Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-greedy [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave3-hexagon-partial-fold-joint [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave3-tits585-batch-extension [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-global-partial-fold [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-equitable-global [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-pencil-source [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-record37628-single-extension [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-record42342-single-extension [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-record37628-global-cover [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-controller364-quotient [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-chart4-quotient-probe [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-mizuno-d4-source [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-mizuno-d4-c10-wide-search [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-affine-flag80-trade [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-nb4-base-capacity [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-cayley84-nb4 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-bhakar104-wide-screen [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-global31-two-bowties [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-controller31-pattern-solver [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-binary-route-chart3 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-hs850-branch-lift [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-hs850-orbit10-relaxation [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-fano-split42 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave5-heisenberg729-capacity [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-tensor-product-screen [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-voltage2008-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-lamplighter384-capacity [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-cyclic-cover369 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-cyclic-cover1560 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-affine-linker504 [verdict=no confidence=high]
+- `2026-10-27T08:25:52Z` add_experiment: updated exp:ddp-wave6-metacyclic78-degree5 [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave6-record252-mechanism-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave7-shortcut-matching-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave7-shortcut650 [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave7-signed-double340 [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave7-branched-double340-capacity [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave7-rajiv252-cell-structure [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave8-insertion171 [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave8-menon1296-screen [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave8-menon1296-unrestricted [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave8-cooperative-extension-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave9-cooperative37630 [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave10-degree-reduction-scout [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave10-new-structure-scout [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave10-binary1152-edge-local [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: updated exp:ddp-wave10-gq312-internal-cycles [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-binary72-tight-words [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-gq-internal-capacity [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-new-route-scout [verdict=no confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-polynomial343-matching-scout [verdict=partial confidence=high]
+- `2026-10-27T08:25:53Z` add_experiment: added exp:ddp-wave11-gq-commuting-obstruction [verdict=no confidence=high]
+- `2026-10-27T09:18:51Z` add_experiment: added exp:ddp-wave12-route-complementarity [verdict=partial confidence=high]
+- `2026-10-27T09:28:35Z` add_experiment: updated exp:ddp-wave12-route-complementarity [verdict=partial confidence=high]
+- `2026-10-27T10:11:04Z` add_experiment: added exp:ddp-h9-global-coverage-20261027 [verdict=partial confidence=high]
+- `2026-10-27T10:43:01Z` add_experiment: updated exp:ddp-h9-global-coverage-20261027 [verdict=partial confidence=high]
+- `2026-10-27T10:44:09Z` add_experiment: added exp:ddp-h9-qline-42343 [verdict=yes confidence=high]
+- `2026-10-27T10:48:13Z` add_experiment: updated exp:ddp-h9-qline-42343 [verdict=yes confidence=high]
+- `2026-10-27T10:50:19Z` add_experiment: updated exp:ddp-h9-qline-42343 [verdict=yes confidence=high]
+- `2026-10-27T11:38:49Z` add_experiment: added exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T11:38:49Z` add_experiment: added exp:ddp-h9-qline-d11-family-37631 [verdict=yes confidence=high]
+- `2026-10-27T11:38:49Z` add_experiment: added exp:ddp-h9-d10-free-r4-exactcover [verdict=partial confidence=high]
+- `2026-10-27T11:38:49Z` add_experiment: added exp:ddp-more-graphs-20261027-source-slack-monotone [verdict=partial confidence=high]
+- `2026-10-27T11:38:49Z` add_experiment: added exp:ddp-more-graphs-20261027-adjacent-single-vertex-split [verdict=partial confidence=high]
+- `2026-10-27T11:50:06Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T11:50:06Z` add_experiment: updated exp:ddp-h9-qline-d11-family-37631 [verdict=yes confidence=high]
+- `2026-10-27T11:50:06Z` add_experiment: updated exp:ddp-h9-d10-free-r4-exactcover [verdict=partial confidence=high]
+- `2026-10-27T12:06:15Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T12:06:15Z` add_experiment: updated exp:ddp-h9-qline-d11-family-37631 [verdict=yes confidence=high]
+- `2026-10-27T12:06:15Z` add_experiment: updated exp:ddp-h9-d10-free-r4-exactcover [verdict=partial confidence=high]
+- `2026-10-27T12:20:38Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T12:20:38Z` add_experiment: added exp:ddp-h9-d11-ninepin-twoanchor-20261027 [verdict=partial confidence=high]
+- `2026-10-27T12:27:25Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T12:27:25Z` add_experiment: updated exp:ddp-h9-d11-ninepin-twoanchor-20261027 [verdict=partial confidence=high]
+- `2026-10-27T12:27:25Z` add_experiment: added exp:ddp-more-graphs-20261027-metacyclic-d5-cyclotomic-transfer [verdict=partial confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: updated exp:ddp-h9-d11-ninepin-twoanchor-20261027 [verdict=partial confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: updated exp:ddp-more-graphs-20261027-metacyclic-d5-cyclotomic-transfer [verdict=partial confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: added exp:ddp-h9-d12-ninepin-saturated-deletion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: added exp:ddp-h9-d12-eightpin-rare-prefix-20261027 [verdict=partial confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: added exp:ddp-h9-d11-cross-pin-block-20261027 [verdict=partial confidence=high]
+- `2026-10-27T12:49:20Z` add_experiment: added exp:ddp-more-graphs-20261027-d4-loz-source-transfer [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-h9-d11-ninepin-twoanchor-20261027 [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-more-graphs-20261027-metacyclic-d5-cyclotomic-transfer [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-h9-d12-ninepin-saturated-deletion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-h9-d12-eightpin-rare-prefix-20261027 [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-h9-d11-cross-pin-block-20261027 [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: updated exp:ddp-more-graphs-20261027-d4-loz-source-transfer [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: added exp:ddp-more-graphs-20261027-d4-free-p61-fourpair-pattern [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: added exp:ddp-more-graphs-20261027-d4-two-involution-pattern [verdict=partial confidence=high]
+- `2026-10-27T13:09:14Z` add_experiment: added exp:ddp-more-graphs-20261027-d4-nonfaithful-fourpair-actions [verdict=partial confidence=high]
+- `2026-10-27T13:09:15Z` add_experiment: added exp:ddp-d4-loz-r2-crt-free-pattern-20261027 [verdict=partial confidence=high]
+- `2026-10-27T13:09:15Z` add_experiment: added exp:ddp-h9-d12-ninepin-coreguard-20261027 [verdict=partial confidence=high]
+- `2026-10-27T13:09:15Z` add_experiment: added exp:ddp-h9-d12-adjacent-line-anchor-block-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-h9-d11-ninepin-twoanchor-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-more-graphs-20261027-metacyclic-d5-cyclotomic-transfer [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-h9-d12-ninepin-saturated-deletion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-h9-d12-eightpin-rare-prefix-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-h9-d11-cross-pin-block-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-more-graphs-20261027-d4-loz-source-transfer [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-more-graphs-20261027-d4-free-p61-fourpair-pattern [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-more-graphs-20261027-d4-two-involution-pattern [verdict=partial confidence=high]
+- `2026-10-27T14:08:25Z` add_experiment: updated exp:ddp-more-graphs-20261027-d4-nonfaithful-fourpair-actions [verdict=partial confidence=high]
+- `2026-10-27T14:08:26Z` add_experiment: updated exp:ddp-d4-loz-r2-crt-free-pattern-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:26Z` add_experiment: updated exp:ddp-h9-d12-ninepin-coreguard-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:08:26Z` add_experiment: updated exp:ddp-h9-d12-adjacent-line-anchor-block-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-h9-baer13-first-construction-20261027 [verdict=yes confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-h9-baer-nonflat-rational-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-h9-d11-global-single-fault-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-h9-d12-two-saturated-deletions-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-nonabelian16-fibre-aaaa-20261027 [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-more-graphs-20261027-d4-parallel-phase-source [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-more-graphs-20261027-michel684-prime43-transfer [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-more-graphs-20261027-michel684-p43-free-projective [verdict=partial confidence=high]
+- `2026-10-27T14:20:17Z` add_experiment: added exp:ddp-more-graphs-20261027-small120-cayley-d4 [verdict=partial confidence=high]
+- `2026-10-27T15:10:07Z` add_experiment: added exp:ddp-d10-dhar2485-route-intuition-20261027 [verdict=partial confidence=high]
+- `2026-10-27T15:10:07Z` add_experiment: added exp:ddp-d10-dhar2485-literal127-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:10:07Z` add_experiment: added exp:ddp-d10-dhar-source25-quadratic101-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:10:07Z` add_experiment: added exp:ddp-d10-source25-free-r25-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:27:58Z` add_experiment: updated exp:ddp-d10-source25-free-r25-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:27:58Z` add_experiment: added exp:ddp-exoo72-critical-route-intuition-20261027 [verdict=partial confidence=high]
+- `2026-10-27T15:27:58Z` add_experiment: added exp:ddp-exoo72-minimal73-rootcover-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:27:58Z` add_experiment: added exp:ddp-exoo72-balanced-c14-rule-20261027 [verdict=no confidence=high]
+- `2026-10-27T15:32:28Z` add_experiment: added exp:ddp-rajiv5334-central-c3-obstruction-20261027 [verdict=no confidence=high]
+- `2026-10-27T16:02:06Z` add_experiment: added exp:ddp-rajiv441-exact-flag-recovery-20261027 [verdict=partial confidence=high]
+- `2026-10-27T16:02:06Z` add_experiment: added exp:ddp-uniform-flag-d4-mechanism-bound-20261027 [verdict=no confidence=high]
+- `2026-10-27T16:02:07Z` add_experiment: added exp:ddp-flag-heawood105-controlled-20261027 [verdict=no confidence=high]
+- `2026-10-27T16:02:07Z` add_experiment: added exp:ddp-rajiv1518-c4-profile-recovery-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-psl23-c3-2024-degree6-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-psl25-c4-1950-c6-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-psl25-c4-1950-c3-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-psl25-c5-1560-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h9-redei15-blocking-shape-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h9-redei15-fixed-pool-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h9-redei15-new-four-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h3-364-single-port-barrier-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h3-364-two-root-port-barrier-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h3-364-helper-minimum13-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h9-d13-51417-source-binding-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: added exp:ddp-h9-d13-redei702-pool-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:07:40Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-psl23-c3-2024-degree6-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-psl25-c4-1950-c6-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-psl25-c4-1950-c3-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-psl25-c5-1560-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-redei15-blocking-shape-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-redei15-fixed-pool-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-redei15-new-four-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h3-364-single-port-barrier-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h3-364-two-root-port-barrier-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h3-364-helper-minimum13-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-d13-51417-source-binding-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-d13-redei702-pool-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: added exp:ddp-h9-d13-raw-gauge-obstruction-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: added exp:ddp-h9-d13-baer-wholeclass-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:10:44Z` add_experiment: updated exp:ddp-h9-qline-d12-family-42377 [verdict=yes confidence=high]
+- `2026-10-27T17:18:53Z` add_experiment: added exp:ddp-h9-d13-full-qline-pool-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:18:53Z` add_experiment: added exp:ddp-h3-helper13-tree-class-exclusion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:18:53Z` add_experiment: added exp:ddp-d13-d3-972-odd-fiber-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: updated exp:ddp-h9-d13-full-qline-pool-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: updated exp:ddp-h3-helper13-tree-class-exclusion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: updated exp:ddp-d13-d3-972-odd-fiber-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: added exp:ddp-d14-d5-94186-source-profile-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: added exp:ddp-d14-d5-rare15-cover-failure-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:20:44Z` add_experiment: updated exp:ddp-h3-364-helper-minimum13-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-h9-d13-full-qline-pool-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-h3-helper13-tree-class-exclusion-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-d13-d3-972-odd-fiber-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-d14-d5-94186-source-profile-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-d14-d5-rare15-cover-failure-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:26:52Z` add_experiment: updated exp:ddp-h3-364-helper-minimum13-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:26:53Z` add_experiment: added exp:ddp-h9-d13-nonstable-qline-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:26:53Z` add_experiment: added exp:ddp-d14-d5-allfree64-cover-probe-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-spare-star-actual-three-sources-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-d13-singlefault-star-guard-mechanism-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-d14-global-cover-mip-unknown-20261027 [verdict=partial confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-d15-source-and-20ball-prediction-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-d15-allfree64-cover-probe-20261027 [verdict=no confidence=high]
+- `2026-10-27T17:50:48Z` add_experiment: added exp:ddp-afy70-2fold-d6-capacity-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:50:49Z` add_experiment: added exp:ddp-afy70-3fold-d7-capacity-20261027 [verdict=yes confidence=high]
+- `2026-10-27T17:57:40Z` add_experiment: added exp:ddp-neighborhood-proxy-transfer-d14-d15-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:01:05Z` add_experiment: updated exp:ddp-d15-source-and-20ball-prediction-20261027 [verdict=yes confidence=high]
+- `2026-10-27T18:01:05Z` add_experiment: updated exp:ddp-d15-allfree64-cover-probe-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:01:05Z` add_experiment: updated exp:ddp-neighborhood-proxy-transfer-d14-d15-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d13-newborn40-fullstar-blocked-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d11-d4-current3645-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d11-d4-free7-monotone-barrier-20261027 [verdict=yes confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d11-d4-twoedge-absorption2673-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d12-d4-current6156-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:21:15Z` add_experiment: added exp:ddp-d12-d4-6156-route-form-analysis-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:32:57Z` add_experiment: added exp:ddp-d11-d4-one-switch-absorption679-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:32:57Z` add_experiment: added exp:ddp-d12-d4-wide-filter-c20-slice8000-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:32:57Z` add_experiment: added exp:ddp-d12-d4-four-rank3-packet65-20261027 [verdict=yes confidence=high]
+- `2026-10-27T18:32:57Z` add_experiment: added exp:ddp-d12-d4-six-route-packet-negative-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:32:57Z` add_experiment: added exp:ddp-d13-d4-current6804-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:46:25Z` add_experiment: added exp:ddp-d13-d4-matching-control-a-delete-all-z-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:46:25Z` add_experiment: added exp:ddp-d13-d4-matching-control-b-zero-affine-offset-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:46:57Z` add_experiment: added exp:ddp-d4-d6-current760-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:46:57Z` add_experiment: added exp:ddp-d4-d6-flag-layer-absorption45568-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:48:42Z` add_experiment: added exp:ddp-d13-d4-central-matching-packets-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:48:42Z` add_experiment: added exp:ddp-d13-d4-c9-action4-transfer-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:51:36Z` add_experiment: added exp:ddp-current-d6d6-8802-source-binding-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:51:36Z` add_experiment: added exp:ddp-current-d5d6-2836-no-free-proxy-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:55:02Z` add_experiment: added exp:ddp-cubic-current200-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:55:02Z` add_experiment: added exp:ddp-cubic200-vertex-split600-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:55:03Z` add_experiment: added exp:ddp-cubic-d6-split-root-capacity-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:55:03Z` add_experiment: added exp:ddp-d16-d4-ursa-c19-transfer19456-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:55:31Z` add_experiment: added exp:ddp-d16-d4-ursa16384-gf4-interface-20261027 [verdict=partial confidence=high]
+- `2026-10-27T18:59:15Z` add_experiment: added exp:ddp-ursa-gf4-route-capacity-and-c19-pencils-20261027 [verdict=yes confidence=high]
+- `2026-10-27T18:59:15Z` add_experiment: added exp:ddp-ursa-gf4-closed-b4-974-20261027 [verdict=no confidence=high]
+- `2026-10-27T18:59:15Z` add_experiment: updated exp:ddp-d16-d4-ursa-c19-transfer19456-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:05:32Z` add_experiment: added exp:ddp-d11-d6-current186033-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:05:32Z` add_experiment: added exp:ddp-d11d6-onefault-core-proxy-analysis-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:05:32Z` add_experiment: added exp:ddp-d11-d6-unique-onefault-star-exact2-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:13:48Z` add_experiment: added exp:ddp-polarity585-port-steiner-local-premises-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:13:48Z` add_experiment: added exp:ddp-polarity585-all-preserved-edge-extensions-theorem-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:13:52Z` add_experiment: added exp:ddp-q8-polarity-eight-anchor-graft-paper-refutation-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:14:14Z` add_experiment: updated exp:ddp-q8-polarity-eight-anchor-graft-paper-refutation-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:15:33Z` add_experiment: added exp:ddp-d9-d3-polarity585-involution-parallelclasses-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:17:59Z` add_experiment: added exp:ddp-d6-d3-matching3-insertion121-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:23:23Z` add_experiment: added exp:ddp-d9-d3-sigma-edge-spread32-no-fourcover-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:32:40Z` add_experiment: added exp:ddp-current-d14d3-1141-source-profile-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:38:01Z` add_experiment: added exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:38:01Z` add_experiment: added exp:ddp-current-d6d7-20400-source-recipe-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:38:01Z` add_experiment: added exp:ddp-d4-d9-7884-canonical109-r4-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:41:35Z` add_experiment: added exp:ddp-d4-d9-generic-ab109-all71286-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:41:35Z` add_experiment: updated exp:ddp-current-d14d3-1141-source-profile-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:58:36Z` add_experiment: updated exp:ddp-current-d6d7-20400-source-recipe-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T19:58:37Z` add_experiment: added exp:ddp-20400-rooted-wl-actual-automorphism-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:58:37Z` add_experiment: added exp:ddp-20400-six-wl-aut-regular-action-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:58:37Z` add_experiment: added exp:ddp-20400-normal425-voltage-recipe-20261027 [verdict=yes confidence=high]
+- `2026-10-27T19:58:37Z` add_experiment: added exp:ddp-d6-d7-20400-single-edge-subdivision20401-20261027 [verdict=no confidence=high]
+- `2026-10-27T19:58:37Z` add_experiment: added exp:ddp-d6-d7-fixed-normal425-centered-all-larger-moduli-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-20400-h48-source-semidirect-recipe-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-20400-quotient816-normal49-capacity-20261027 [verdict=partial confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-20400-four-generators-d10-three-subsets-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-20400-chi5-complete-quartic-cayley216-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-20400-chi6-complete-quartic-cayley216-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-d6-d7-h48-fieldmodule-four-reps2625-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-d6-d8-q11-h48-single-control98736-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-d6-d8-q11-projective1463-plus-control-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-q53-two-module-controls-degree6-d10-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:51:14Z` add_experiment: added exp:ddp-d4-d9-p109-order18-phase-family-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:53:05Z` add_experiment: added exp:ddp-q13-two-order8-module-controls-d6-d8-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:53:05Z` add_experiment: added exp:ddp-source6000-q9-two-module-controls-d5-d8-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:53:05Z` add_experiment: added exp:ddp-source6000-q9-free-b-complete162-d5-d8-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:53:05Z` add_experiment: added exp:ddp-current-d5d7-6000-source-cyclic-capacity-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:54:41Z` add_experiment: added exp:ddp-d5-d8-gf9-fullnormal132698-plus162-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:56:23Z` add_experiment: added exp:ddp-h4-coupled-flag-linker-subdivision-control-20261027 [verdict=yes confidence=high]
+- `2026-10-27T20:56:24Z` add_experiment: updated exp:ddp-d5-d8-gf9-fullnormal132698-plus162-20261027 [verdict=no confidence=high]
+- `2026-10-27T20:56:24Z` add_experiment: added exp:ddp-source6000-q17-four-controls-d5-d9-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:01:33Z` add_experiment: added exp:ddp-d4-d7-actual1344-c3-transfer-ordinarycover-barrier-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:04:56Z` add_experiment: added exp:ddp-loz3243-source-exact-three-orbit-recipe-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:04:56Z` add_experiment: added exp:ddp-loz3243-p139-r6-controlled9591-d4d9-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:07:17Z` add_experiment: added exp:ddp-d16-d5-current147456-source-no-free-ports-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:08:01Z` add_experiment: added exp:ddp-current-d12d6-364032-primary-regularity-star-screen-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:17:06Z` add_experiment: added exp:ddp-d11d4-twin-square-buddy-selection-empty-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:17:06Z` add_experiment: updated exp:ddp-d13-d3-972-odd-fiber-source-20261027 [verdict=partial confidence=high]
+- `2026-10-27T21:17:06Z` add_experiment: added exp:ddp-d13-d3-actual972-singlevertex-r2cover13-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:21:43Z` add_experiment: added exp:ddp-d13-d3-actual972-joint-buddy-threshold24-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:21:43Z` add_experiment: added exp:ddp-source972-affineblocks-freepaths-buddy-routing-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:21:43Z` add_experiment: added exp:ddp-current-d15d3-1620-actual-regularity-no-spare-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:24:39Z` add_experiment: added exp:ddp-source972-single-matching-edge-release432-no-safe-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:24:39Z` add_experiment: added exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:29:16Z` add_experiment: added exp:ddp-source972-fixed-matching-relocation0-26-forced-bridge-20261027 [verdict=no confidence=high]
+- `2026-10-27T21:29:16Z` add_experiment: added exp:ddp-d15-d5-current102060-singlevertex-r4cover15-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:38:45Z` add_experiment: added exp:ddp-d13-d3-actual972-k6-minfdom48-fixedcenters-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:38:45Z` add_experiment: added exp:ddp-d13-d3-actual972-k6-unfixed-center-lp-control-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:42:01Z` add_experiment: added exp:ddp-d13-d3-actual972-all108-star982-20261027 [verdict=yes confidence=high]
+- `2026-10-27T21:50:14Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T21:50:14Z` add_experiment: added exp:ddp-d14-d4-current9720-recipe-regularity-spare-screen-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:11:50Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T22:11:50Z` add_experiment: added exp:ddp-current9720-centralc9-two-plainpower-controls-16d4-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:11:50Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T22:12:05Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-27T22:30:28Z` add_experiment: added exp:ddp-current9720-bphase54-centralc9-controller-synthesis-16d4-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:30:29Z` add_experiment: added exp:ddp-current9720-centralc9-residual18-complete-phase-rule-16d4-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:30:29Z` add_experiment: added exp:ddp-ursa64-source-rankguided-doublecycle-graft65-20261027 [verdict=no confidence=high]
+- `2026-10-27T22:32:03Z` add_experiment: added exp:ddp-naturalh3-canonical-reflection-twisted-prism728-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:37:04Z` add_experiment: added exp:ddp-d13-d6-current538740-source-slack-and-exactproxy-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:37:04Z` add_experiment: added exp:ddp-m10-one-readonly-controller-frame-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:40:54Z` add_experiment: added exp:ddp-d16-d6-current1793786-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:41:00Z` add_experiment: updated exp:ddp-m10-one-readonly-controller-frame-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:43:55Z` add_experiment: added exp:ddp-gq7-three-sheet-rref-j2550-and-uniform-f-obstruction-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:49:09Z` add_experiment: added exp:ddp-gq8-canonical-circlepole-c3-3705-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:53:36Z` add_experiment: added exp:ddp-rajiv56952-centered-f137-transfer-7d7-20261027 [verdict=yes confidence=high]
+- `2026-10-27T22:54:42Z` add_experiment: updated exp:ddp-rajiv56952-centered-f137-transfer-7d7-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:03:52Z` add_experiment: added exp:ddp-current139679-normalized-q6211-all22-embeddings-8d7-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:03:52Z` add_experiment: added exp:ddp-d10-d7-current624690-source-recovery-20261027 [verdict=partial confidence=high]
+- `2026-10-27T23:07:09Z` add_experiment: added exp:ddp-current624690-fixed-central-c180-doublelift-10d7-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:07:09Z` add_experiment: added exp:ddp-d15-d6-current1428361-source-slack-profile-20261027 [verdict=no confidence=high]
+- `2026-10-27T23:07:09Z` add_experiment: updated exp:ddp-gq8-canonical-circlepole-c3-3705-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:18:18Z` add_experiment: added exp:ddp-current360-q8-orbit-q5q7-field-controls-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:23:55Z` add_experiment: added exp:ddp-q8-source360-free-semi3-q5-critical-gate-20261027 [verdict=no confidence=high]
+- `2026-10-27T23:23:55Z` add_experiment: added exp:ddp-conder1250-edge-subdivision-two-cut-helper-family-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:28:32Z` add_experiment: added exp:ddp-current600-cubic-source-odd-bipartite-premise-refuted-20261027 [verdict=partial confidence=high]
+- `2026-10-27T23:33:55Z` add_experiment: added exp:ddp-current202550-normalized-f4201-all20-embeddings-5d10-20261027 [verdict=yes confidence=high]
+- `2026-10-27T23:51:32Z` add_experiment: added exp:ddp-current650-critical-middle-fivecut-hub-gate-10d3-20261027 [verdict=yes confidence=high]
+- `2026-10-28T00:01:06Z` add_experiment: added exp:ddp-current1141-geodesic-diversity-split-critical-middle-14d3-20261027 [verdict=yes confidence=high]
+- `2026-10-28T00:05:37Z` add_experiment: added exp:ddp-current1141-seven-matching-cuts-onehub-milp-14d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:09:35Z` add_experiment: added exp:ddp-current12654-fixed342-f43-allprojective-controls-7d6-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:09:53Z` add_experiment: updated exp:ddp-current12654-fixed342-f43-allprojective-controls-7d6-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:14:45Z` add_experiment: added exp:ddp-d8-d6-current40560-source-recipe-regularity-20261028 [verdict=no confidence=high]
+- `2026-10-28T00:16:20Z` add_experiment: added exp:ddp-current331387-normalized-f6959-all42-embeddings-6d9-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:21:29Z` add_experiment: added exp:ddp-current264440-authorleft-f641-all16-embeddings-7d8-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:24:50Z` add_experiment: added exp:ddp-current331387-ramified6860-fixed-vector-quotient-obstruction-6d9-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:25:02Z` add_experiment: updated exp:ddp-current331387-ramified6860-fixed-vector-quotient-obstruction-6d9-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:34:53Z` add_experiment: added exp:ddp-source9020-two-jordan-f5sq-classes-all1550-8d5-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:43:59Z` add_experiment: updated exp:ddp-source9020-two-jordan-f5sq-classes-all1550-8d5-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:44:00Z` add_experiment: added exp:ddp-loz1100-z275-all25-preserving-lifts-8d5-20261028 [verdict=yes confidence=high]
+- `2026-10-28T00:57:31Z` add_experiment: added exp:ddp-current4601361-normalized-f49663-all60-embeddings-8d9-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:03:45Z` add_experiment: added exp:ddp-d14-d5-complete-target-r4-cover-mip-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:17:55Z` add_experiment: added exp:ddp-source4522590-pairdrop-h45-f811-all120-9d8-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:17:55Z` add_experiment: added exp:ddp-current1332774-normalized-f487-all18-embeddings-7d9-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:17:55Z` add_experiment: updated exp:ddp-d6-d3-matching3-insertion121-20261027 [verdict=no confidence=high]
+- `2026-10-28T01:35:15Z` add_experiment: added exp:ddp-old6641680-small-factor13-core-gates-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:35:19Z` add_experiment: updated exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-10-28T01:42:17Z` add_experiment: updated exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-10-28T01:49:02Z` add_experiment: added exp:ddp-c3-times-quarterturn108-all3066-4d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:49:23Z` add_experiment: added exp:ddp-sign-quarterturn108-all3066-4d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T01:54:26Z` add_experiment: added exp:ddp-published-quartic-cayley-census69orders-4d3-d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:00:36Z` add_experiment: added exp:ddp-psl2-11-c5-coset132-all10-6d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:08:55Z` add_experiment: updated exp:ddp-psl2-11-c5-coset132-all10-6d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:09:14Z` add_experiment: added exp:ddp-psl2-11-c2-coset330-all1132-5d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:09:14Z` add_experiment: added exp:ddp-rajiv252-fullneighborhood-clone253-criticaledges-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:13:11Z` add_experiment: updated exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-10-28T02:27:39Z` add_experiment: updated exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-10-28T02:43:58Z` add_experiment: added exp:ddp-polarity13-c3-freeports-threehelpers42-4d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:45:18Z` add_experiment: added exp:ddp-polarity13-c3-singleescut42-crosse-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:49:06Z` add_experiment: updated exp:ddp-polarity13-c3-freeports-threehelpers42-4d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:49:07Z` add_experiment: updated exp:ddp-polarity13-c3-singleescut42-crosse-20261028 [verdict=yes confidence=high]
+- `2026-10-28T02:49:07Z` add_experiment: added exp:ddp-polarity13-ecycle9-chords4-42-uniformt-obstruction-20261028 [verdict=yes confidence=high]
+- `2026-10-28T03:01:36Z` add_experiment: added exp:ddp-michel684-three-crossmatching-deletions-6d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T03:06:09Z` add_experiment: updated exp:ddp-wave11-polynomial343-matching-scout [verdict=partial confidence=high]
+- `2026-10-28T03:06:09Z` add_experiment: added exp:ddp-small-d6-d3-polynomial125-matching-overlap-20261028 [verdict=no confidence=high]
+- `2026-10-28T03:07:56Z` add_experiment: added exp:ddp-polynomial125-absolutec5-reciprocal4096-6d3-20261028 [verdict=yes confidence=high]
+- `2026-10-28T03:33:29Z` add_experiment: added exp:ddp-hexagon126-c7-girth6-perfectmatching-4d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T03:35:16Z` add_experiment: updated exp:ddp-hexagon126-c7-girth6-perfectmatching-4d4-20261028 [verdict=yes confidence=high]
+- `2026-10-28T04:18:25Z` add_experiment: added exp:ddp-bhakar104-balanced-split-absorbed-edge105-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:18:26Z` add_experiment: added exp:ddp-exoo72-split-edge73-inherited-r2-obstruction-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:19:15Z` add_experiment: added exp:ddp-d13-second-generation51445-singlefault-guard4-20261028 [verdict=partial confidence=high]
+- `2026-10-28T04:19:15Z` add_experiment: updated exp:ddp-d15-d5-current102060-singlevertex-r4cover15-20261027 [verdict=yes confidence=high]
+- `2026-10-28T04:19:16Z` add_experiment: added exp:ddp-accepted-d11-d12-full-neighborhood-clone-scan-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:21:02Z` add_experiment: added exp:ddp-michel72-split-edge73-endpoint-gate-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:21:02Z` add_experiment: updated exp:ddp-old6641680-small-factor13-core-gates-20261028 [verdict=yes confidence=high]
+- `2026-10-28T04:49:53Z` add_experiment: added exp:ddp-redei15-nonstable-longside-current42402-placement-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:49:54Z` add_experiment: updated exp:ddp-accepted-d11-d12-full-neighborhood-clone-scan-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:49:54Z` add_experiment: added exp:ddp-five-d5-source-saturated-component-copy-scan-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:49:55Z` add_experiment: added exp:ddp-redei15-stable-triangle-twist-final-source-pools-20261028 [verdict=no confidence=high]
+- `2026-10-28T04:52:46Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T04:52:46Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:05:29Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:05:29Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:05:49Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:05:49Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:16:22Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:16:23Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:25:49Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:25:49Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:41:06Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:41:06Z` add_experiment: updated exp:ddp-d15-d5-current102060-source-slack-profile-20261027 [verdict=yes confidence=high]
+- `2026-10-28T05:48:45Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T05:59:11Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-28T06:09:23Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-10-29T15:20:37Z` upsert_idea: updated idea:ddp-open-parameter-construction-20261026 [stage=active outcome=pending]
+- `2026-10-29T15:20:37Z` upsert_idea: added idea:ddp-math-challenges-and-records [stage=proposed outcome=pending]
+- `2026-10-29T15:20:37Z` upsert_idea: added idea:ddp-network-expansion-value-pilot [stage=proposed outcome=pending]
+- `2026-10-29T15:20:38Z` 2026-10-29 refresh: merge 3 strategy drafts into 1 existing + 2 proposed idea nodes; 12 case evidence links; human resumption recorded; no claims, experiments or ledger rows added; 365/103/3/Lean0 retained.
+- `2026-10-29T15:21:30Z` upsert_idea: updated idea:ddp-open-parameter-construction-20261026 [stage=active outcome=pending]
+- `2026-10-29T15:21:30Z` upsert_idea: updated idea:ddp-math-challenges-and-records [stage=proposed outcome=pending]
+- `2026-10-29T15:21:30Z` upsert_idea: updated idea:ddp-network-expansion-value-pilot [stage=proposed outcome=pending]
+- `2026-10-29T15:21:30Z` 2026-10-29 refresh: merge 3 strategy drafts into 1 existing + 2 proposed idea nodes; 12 case evidence links; human resumption recorded; no claims, experiments or ledger rows added; 365/103/3/Lean0 retained.
+- `2026-10-29T15:24:12Z` add_experiment: updated exp:ddp-redei15-stable-triangle-twist-final-source-pools-20261028 [verdict=no confidence=high]
+- `2026-10-29T15:25:00Z` 2026-10-29 H9 saved-mask projection diagnostic appended to existing stable-twist experiment; opportunity map follows actual 30/30 original-exterior failures. No new method/claim/graph; ledger365 and103/3/Lean0 retained.
+- `2026-10-29T15:29:19Z` add_experiment: added exp:ddp-network-d13-symbolic-port-ledger-20261029 [verdict=partial confidence=high]
+- `2026-10-29T15:29:19Z` upsert_idea: updated idea:ddp-network-expansion-value-pilot [stage=piloted outcome=pending]
+- `2026-10-29T15:29:19Z` 2026-10-29 D13 port-only diagnostic persisted as non-mathematical experiment; idea piloted/pending-performance, no positive industrial claim. Method ledger365/graph103/cells3/Lean0 unchanged.
+- `2026-10-29T15:42:09Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T15:42:10Z` add_experiment: added exp:ddp-source30-triangle-attachment33-endpoint-capacity-20261029 [verdict=no confidence=high]
+- `2026-10-29T15:43:25Z` upsert_idea: updated idea:ddp-q3-three-step-plane-pencil31 [stage=piloted outcome=pending]
+- `2026-10-29T15:43:25Z` 2026-10-29 D3 complete: fixed F5 control appended to existing source; parallel80 and deranged160 controller attachments combined into one experiment, no field graphs or new claim; published review qualifications and unused incorrect NB3 formula preserved. Ledger366/103 examples/3 cells/Lean0.
+- `2026-10-29T16:19:39Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T16:19:39Z` add_experiment: added exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T16:19:39Z` add_experiment: added exp:ddp-f5-fixed3750-restricted-noise-d10d4-two100-families-20261029 [verdict=no confidence=high]
+- `2026-10-29T16:21:24Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T16:21:24Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T16:21:24Z` add_experiment: updated exp:ddp-f5-fixed3750-restricted-noise-d10d4-two100-families-20261029 [verdict=no confidence=high]
+- `2026-10-29T16:22:55Z` upsert_idea: updated idea:ddp-q3-three-step-plane-pencil31 [stage=piloted outcome=pending]
+- `2026-10-29T16:22:55Z` 2026-10-29 full literal F5 graph accepted: source row updated, one3750/20/D3 math-valid novelty-pending experiment and one combined two100 noise experiment. Ledger368; confirmed public-table103/3 retained, validated104/4; completeLean0. Actual compiled snapshot separated from ongoing proof edits. No experiment rerun.
+- `2026-10-29T16:24:14Z` F5 terminal incremental lint PASS: literal positive and noise negative evidence/counters correctly separated; record368, validated104/4, confirmed103/3, noveltypending1, completeLean0. Receipt saved; no numerical rerun.
+- `2026-10-29T16:26:47Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T16:27:21Z` Full3750 formal update: actual INVERSE_COMPILE_RESULT exit0/wall7.524s; compiled inverse snapshot proves2500 fiber reversals, arbitrary-vertex reverse/adjacency equivalence and degree<=20. ediam/literal-edge Lean bridge incomplete; completeLean0. One existing-row upsert, no added record/computation.
+- `2026-10-29T16:59:27Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T16:59:27Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T16:59:27Z` add_experiment: updated exp:ddp-d11-d6-current186033-source-20261027 [verdict=partial confidence=high]
+- `2026-10-29T16:59:27Z` add_claim: added claim:ddp-f5-fin3750-order-degree20-exactd3-20261029 [status=verified] prov=research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json
+- `2026-10-29T16:59:27Z` Final F5 kernel witness persisted: one proof-checker-born verified fixed Fin3750 claim, existing graph/source rows updated; complete formula Lean1; ledger368 and validated104/4 versus confirmed103/3 retained. One bounded11D6 prefix/K6 capacity variant; no computation reruns.
+- `2026-10-29T17:00:19Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T17:00:19Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T17:00:19Z` add_experiment: updated exp:ddp-d11-d6-current186033-source-20261027 [verdict=partial confidence=high]
+- `2026-10-29T17:00:19Z` add_claim: updated claim:ddp-f5-fin3750-order-degree20-exactd3-20261029 [status=verified] prov=research/ddp/refresh_20261029/f5_full_d20_D3/PROOF_AUDIT.json
+- `2026-10-29T17:00:19Z` Final F5 kernel witness persisted: one proof-checker-born verified fixed Fin3750 claim, existing graph/source rows updated; complete formula Lean1; ledger368 and validated104/4 versus confirmed103/3 retained. One bounded11D6 prefix/K6 capacity variant; no computation reruns.
+- `2026-10-29T17:20:01Z` 2026-10-29 expert handoff request recorded verbatim in existing comments; latest HTML/MD/ZIP linked in existing brief. Documentation only; ACTIVE, ledger368, validated104/4, confirmed103/3 and complete formula Lean1 unchanged; no experiment or claim nodes created.
+- `2026-10-29T17:51:01Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T17:51:01Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-10-29T17:51:01Z` add_experiment: updated exp:ddp-f5-fixed3750-restricted-noise-d10d4-two100-families-20261029 [verdict=no confidence=high]
+- `2026-10-29T17:51:01Z` F5 structural turn: three existing nodes gain edge-criticality, fixed quotient/cover ceiling, accepted fixed-matrix oddcycle exclusion and one failed identity-map control; no new ledger/claim nodes or improved graph/Lean instances. Ledger368;104/4 versus confirmed103/3;Lean1;novelty pending. Root brief untouched.
+- `2026-10-29T18:52:16Z` add_experiment: added exp:ddp-d9-d6-current77418-regular-source-gate-20261029 [verdict=partial confidence=high]
+- `2026-10-29T18:52:16Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T18:52:16Z` add_experiment: added exp:ddp-d13-v4580-current51457-fourguard-unknown-20261029 [verdict=partial confidence=high]
+- `2026-10-29T18:52:17Z` add_experiment: added exp:ddp-q8-k64-cube-external2factor-13d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T18:52:17Z` Source/guard/q8 terminal batch: add3 source/problem records, updateoldD13capacityvariant. Ledger368->371;mainnewgraphs0;validated104/4,confirmed103/3,formulaLean1 unchanged. Fourguard SAT/LP and generalcross-pencil2factor UNKNOWN remainopen; only statedsource/deletion/affine gates closed. Rootglobalfiles untouched.
+- `2026-10-29T19:37:36Z` add_experiment: updated exp:ddp-q8-k64-cube-external2factor-13d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T19:37:36Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T19:37:36Z` add_experiment: updated exp:ddp-d13-v4580-current51457-fourguard-unknown-20261029 [verdict=partial confidence=high]
+- `2026-10-29T19:37:37Z` Recorded terminal q8 cyclic variants and fixed38 current51457 strong proxy kernel; updated existing three experiments only; expert handoff revision requested; no new target graph or claim.
+- `2026-10-29T19:40:47Z` Expert handoff 20261029 completed with updated source/data attachments and checked HTML links; human record finalized after root state update; graph counts unchanged.
+- `2026-10-29T20:02:03Z` add_experiment: updated exp:ddp-q8-k64-cube-external2factor-13d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T20:02:03Z` add_experiment: updated exp:ddp-d13-v4580-current51457-fourguard-unknown-20261029 [verdict=partial confidence=high]
+- `2026-10-29T20:02:03Z` Recorded general auxiliary exact-extra-degree lemma, completed full C8 joint-voltage exclusion, and corrected overlap-aware v4580 whole-block negative; existing two records only; external review and independent mod4 check pending.
+- `2026-10-29T20:05:20Z` add_experiment: updated exp:ddp-q8-k64-cube-external2factor-13d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T20:05:20Z` Final actual Gemini SUPPORT and independent110 per-case modulo4 PASS recorded on the existing q8 experiment; no new graph/claim; final query rebuild waits for root state update.
+- `2026-10-29T20:06:57Z` add_experiment: updated exp:ddp-f5-full3750-d20-d3-validated-novelty-pending-20261029 [verdict=yes confidence=high]
+- `2026-10-29T20:06:57Z` Appended literal Allwright41 affine-line controller triangle obstruction to existing F5 route-chart experiment; no new method, graph or claim; final query rebuild remains pending root state update.
+- `2026-10-29T20:07:16Z` Final query pack rebuilt after root 20:06:23 UTC state update, incorporating complete C8 exclusion, actual external/independent PASS, D13 overlap negative and literal41 controller gate; ledger371 and graph counters unchanged.
+- `2026-10-29T20:39:49Z` add_experiment: updated exp:ddp-d13-d4-current6804-source-20261027 [verdict=partial confidence=high]
+- `2026-10-29T20:39:49Z` add_experiment: updated exp:ddp-d14-d4-current9720-recipe-regularity-spare-screen-20261027 [verdict=yes confidence=high]
+- `2026-10-29T20:39:49Z` Recorded completed fixed hubs, complete144 one-line extension negative and both fixed-source adjacent split exclusions on two existing records; arbitrary matching selection preparation only, no real solver handle; final query waits for root.
+- `2026-10-29T20:58:06Z` add_experiment: updated exp:ddp-d13-d4-current6804-source-20261027 [verdict=partial confidence=high]
+- `2026-10-29T20:58:07Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-29T20:58:07Z` Updated actual complete matching selector UNKNOWN and saved full33-family handle/result on existing records; corrected gap_map top ledger count368 to371 only; no new graph or method; final query waits for root.
+- `2026-10-29T21:00:12Z` Final query rebuilt after root20:59:10UTC D4 edge-edit state update: both bounded models terminalUNKNOWN, current6804/9720 adjacent splits excluded, C33 whole family still open; counts371 and104/4 confirmed103/3 Lean1 unchanged.
+- `2026-10-29T21:22:18Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-29T21:22:19Z` Recorded proven candidate-preserving first-discovery labels, actual canonical-model UNKNOWN and static review on existing33 record; inherited literal31/bowtie32 gaps; degree21 opportunity only in existing F5 idea. No new graph/method/claim; final query waits for root.
+- `2026-10-29T21:27:18Z` add_experiment: added exp:ddp-successful-d5-sources-ordinary-cover-route-capacity-20261029 [verdict=yes confidence=high]
+- `2026-10-29T21:27:18Z` Added one aggregate experiment in existing ordinary graph-cover transfer family: three actual final-source NB gates, static106-base/prefix scope; independent six-pair MITM pending. Ledger372, independent methods and graph counters unchanged; final query waits for root.
+- `2026-10-29T21:49:56Z` add_experiment: updated exp:ddp-successful-d5-sources-ordinary-cover-route-capacity-20261029 [verdict=yes confidence=high]
+- `2026-10-29T21:49:56Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T21:49:56Z` add_experiment: updated exp:ddp-d13-v4580-current51457-fourguard-unknown-20261029 [verdict=partial confidence=high]
+- `2026-10-29T21:49:57Z` Confirmed six explicit MITM witnesses and106-prefix proof on cover aggregate; added actual40 static calibration/max40 multiplicity and exact negligible v4580 dominance to existing source rows. Ledger372 and graph counters unchanged; cooperative clique awaits actual result; final query waits for root.
+- `2026-10-29T21:56:14Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T21:56:14Z` Recorded exact two-round provider-chain exclusion of fixedP40 clique cooperation on existing D13 source family; all nonempty subsets includingK1, zero solver/newgraph; expert artifact reviewed read-only; final query waits for root.
+- `2026-10-29T22:01:18Z` User expert-delivery request quoted exactly; completed21:55 HTML/MD/source/ZIP linked in existing comments and gap index; root21:59:17 brief read back unchanged; documentation only, ledger372 and graph/formal counts unchanged.
+- `2026-10-29T22:15:45Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-29T22:15:45Z` add_experiment: updated exp:ddp-h9-d13-51417-source-binding-20261027 [verdict=partial confidence=high]
+- `2026-10-29T22:15:45Z` Recorded completed1800 C11 NB3 gate and moment obstruction, necessary local route budgets/saved-pair counterexample, and bounded full-Aut input gap on two existing rows; no new method/claim; future cut solver and combined review not presumed.
+- `2026-10-29T22:19:37Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-29T22:19:38Z` Updated existing C33 family with one completed capacity-cut model:65890vars/194694clauses, single60sec UNKNOWN,0controller/lift; C11 paper scope retained, combined review pending; no method or graph count increase.
+- `2026-10-29T22:28:55Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-29T22:28:55Z` add_experiment: updated exp:ddp-h9-d13-51417-source-binding-20261027 [verdict=partial confidence=high]
+- `2026-10-29T22:28:55Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T22:28:56Z` Recorded actualSUCCESS static two-proof Gemini review, specified core-swap full-extension signature obstruction, and actual3 R4-certified literal neighborhoods with exact43pool max40; no new method/graph; subsequent tasks not presumed running.
+- `2026-10-29T22:36:54Z` add_experiment: updated exp:ddp-m3-control31-joint-boundary-20261026 [verdict=no confidence=medium]
+- `2026-10-29T22:36:54Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-29T22:36:55Z` Final completed capacity/core-swap batch synchronized after root22:34:04: existing C31 larger380 fullmodel UNKNOWN; fixed43 arbitrary multiplicity max40; unchangedP40 edge-deletion provider inheritance with0newBFS. All numerical/review terminal; ledger372,104/4,confirmed103/3,Lean1 unchanged; expert21:55 snapshot preserved.
+- `2026-10-29T23:08:35Z` add_experiment: added exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:08:35Z` add_experiment: added exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:08:36Z` Recorded two actual generative experiments: fixedF5 induced-retention failed3000control/transversalpaper/generalclosureUNKNOWN, and literal94186 allfreeK2 jointcover newR3/onegreedy/actualmodelstate. Ledger374 experiment/source records, no independentmethod-count or validgraph increase; finalquery pendingroot.
+- `2026-10-29T23:12:51Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:20:27Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:24:30Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:24:30Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:24:30Z` Final induced16/K2-14 synchronization after root23:22:14. SameK2batch call3 used originalremainingbudget: finalUNKNOWN3calls,58.2235solver/67.547291753wholeCPU,stage2preserved,0graphs. Generalinduced remainsUNKNOWN; staticreview2000 vs local3600 kept separate. Ledger374,104/4,confirmed103/3,Lean1 unchanged; expert21:55 snapshot retained.
+- `2026-10-29T23:50:44Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:50:44Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-29T23:50:45Z` Recorded exact supportH refutation, proper-support projection/density exclusion fororder>=1921,20shared-middle literalpredictions, and insufficientK2 equalitycompression on twoexistingrows. No newmethod/graph or enhancedmainRUN; newcombinedreviewpending; finalqueryawaitsroot.
+- `2026-10-30T00:03:34Z` Recorded exact user request and completedcanonical23:55 expertMD/HTML/source/ZIP delivery afterroot2026-10-30_00:02:14. Actualrootreceipt655files/158537095bytes/30+37+10links inheritedwithoutrechecking.21:55filesarchived. Documentationonly:ledger374,104/4,confirmed103/3,Lean1 unchanged; enhanced16solvernotstarted/14K2UNKNOWN/latestlemmasnotexternallyreviewed. Finalcanonicalindex/queryrebuilt.
+- `2026-10-30T00:03:47Z` Recorded exact user request and completedcanonical23:55 expertMD/HTML/source/ZIP delivery afterroot2026-10-30_00:02:14. Actualrootreceipt655files/158537095bytes/30+37+10links inheritedwithoutrechecking.21:55filesarchived. Documentationonly:ledger374,104/4,confirmed103/3,Lean1 unchanged; enhanced16solvernotstarted/14K2UNKNOWN/latestlemmasnotexternallyreviewed. Finalcanonicalindex/queryrebuilt.
+- `2026-10-30T00:25:38Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:25:38Z` Existinginducedrow updated:shared315221model actualUNKNOWN,fullsamefiberclass/H65 merged333551/2316695 actualsinglecall rawUNSATuncertified54.406117solver/57.894923521wholeCPU. support_sharedactualSUCCESS/SOUND AS STATED distinctfrompendingH65review; no strictgeneralexclusion. ledger374 andvalidgraphcountsunchanged;expert23:55frozen;finalquerypendingroot.
+- `2026-10-30T00:39:20Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:39:20Z` Fixedliteral3750source fullinducedn>=1921/max16/D3 computationallyexcluded viaexactCNFLRATVERIFIED+graph-to-CNFpreservation+75000entrysourcebinding. Rawhistorypreserved;H65actualstaticSOUNDcountwordingcorrected;negative notLean/generalN16D3. Uniform75chart50<75onlylocal. Root00:36:09read;14fractionalnoactualyet;ledger374/1044/confirmed1033/Lean1 unchanged;expert23:55frozen.
+- `2026-10-30T00:45:33Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:48:28Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:52:58Z` add_experiment: updated exp:ddp-f5-literal3750-induced-retention-max16-d3-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:52:59Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-30T00:52:59Z` Finalroot00:50:11sync:fixedsource16LRAT-backedexclusionretained;D14exactfractionalRESCALINGfeasibleandrestricted391integerSOLVER_TERMINALUNKNOWNonecall120.016794/124.059995631CPU,24samePIDobservationtimeouts,0candidates/graphs;literalvalidator sourceonly. Allstartednumericterminal. Ledger374/1044/confirmed1033/Lean1 unchanged;expert23:55frozen;finalcanonicalindex/queryrebuilt.
+- `2026-10-30T01:44:04Z` add_experiment: updated exp:ddp-d14-d5-literal94186-allfree-k2-cooperative-cover-20261029 [verdict=partial confidence=high]
+- `2026-10-30T01:44:04Z` add_experiment: added exp:ddp-c21-fano-flag-uniform100-affine-plane-deletion-route-obstruction-16d3-20261030 [verdict=no confidence=high]
+- `2026-10-30T01:44:04Z` add_experiment: added exp:ddp-f5-fiber80-two-type-normal-scaling-chart-rigidity-16d3-20261030 [verdict=no confidence=high]
+- `2026-10-30T01:51:56Z` add_experiment: updated exp:ddp-c21-fano-flag-uniform100-affine-plane-deletion-route-obstruction-16d3-20261030 [verdict=no confidence=high]
+- `2026-10-30T01:51:56Z` add_experiment: updated exp:ddp-f5-fiber80-two-type-normal-scaling-chart-rigidity-16d3-20261030 [verdict=no confidence=high]
+- `2026-10-30T01:51:56Z` add_experiment: added exp:ddp-d15-d4-literal15552-all648-k2-cooperative-cover-20261030 [verdict=partial confidence=high]
+- `2026-10-30T02:04:16Z` Completed previousmathturnfinalquery afterroot01:52:40. Fourcurrentrowsreadback:14allgroupUNKNOWN,C21uniform100paperexcluded,S80frame<=1920paperexcluded/C25unrun,15all648K2UNKNOWN. Ledger377,1044,confirmed1033,Lean1;effectiveGoalACTIVE/D2paused. No newGoal/research/root/expertedit. Newexpertdeliveryentryawaitsactualreadyfiles.
+- `2026-10-30T02:12:33Z` Recorded current user expert-delivery request and READY20261030 MD/HTML/source/ZIP. Updated only delivery pointer in AGENTS/NEXT/BRIEF, preserved old snapshots/plan/math/ledger377 and1044confirmed1033Lean1; no newGoal/research. One final canonical query sync.
+- `2026-10-30T02:56:25Z` add_experiment: updated exp:ddp-d15-d4-literal15552-all648-k2-cooperative-cover-20261030 [verdict=partial confidence=high]
+- `2026-10-30T02:56:25Z` add_experiment: updated exp:ddp-wave2-triangle-factor33-controller [verdict=no confidence=high]
+- `2026-10-30T02:56:25Z` add_experiment: added exp:ddp-k5-q16-f3four-actual-r4-voltage-route-gates-12d4-20261030 [verdict=no confidence=high]
+- `2026-10-30T03:03:30Z` add_experiment: updated exp:ddp-k5-q16-f3four-actual-r4-voltage-route-gates-12d4-20261030 [verdict=no confidence=high]
+- `2026-10-30T03:03:30Z` Completed root03:01:31 final recovery/query sync. D15 synchronous translation kernel0 not allAut; C33 F triangle-free paper lemma actualreviewSOUND; K5/Q16 exactNB4 gate0 versus actualprovider30, then all122880 actual lifts fail. One calibration BFS root to6480 targets only, main search0BFS. Saved9provider collision and actualreview disposition attached to same row. Ledger378,1044,confirmed1033,Lean1;GoalACTIVE,D2paused,expert02:02snapshotfrozen;no new research or root/expert edits.
+- `2026-10-30T03:29:48Z` add_experiment: updated exp:ddp-accepted-d11-d12-full-neighborhood-clone-scan-20261028 [verdict=no confidence=high]
+- `2026-10-30T03:29:48Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-10-30T03:29:48Z` add_experiment: added exp:ddp-d15-d4-literal15552-k8-shared64-backbone-20261030 [verdict=partial confidence=high]
+- `2026-11-01T03:43:11Z` upsert_idea: skipped existing idea ddp-open-parameter-construction-20261026.md (slug dedup)
+- `2026-11-01T03:43:11Z` upsert_idea: skipped existing idea ddp-q3-three-step-plane-pencil31.md (slug dedup)
+- `2026-11-01T03:43:11Z` 2026-11-01 two-successful-method resume: dated append to ideas/ddp-open-parameter-construction-20261026.md; preserve prior evidence and counts
+- `2026-11-01T03:43:11Z` 2026-11-01 two-successful-method resume: dated append to ideas/ddp-q3-three-step-plane-pencil31.md; preserve prior evidence and counts
+- `2026-11-01T03:43:11Z` 2026-11-01 two-successful-method resume: dated append to ideas/ddp-breadth-20261027.md; preserve prior evidence and counts
+- `2026-11-01T03:43:11Z` 2026-11-01 two-successful-method resume: dated append to DD82_PROGRESS_AND_COMMENTS_20261018.md; preserve prior evidence and counts
+- `2026-11-01T03:43:11Z` 2026-11-01 two-successful-method resume: idea:ddp-open-parameter-construction-20261026 --tested_by--> exp:ddp-h9-qline-d11-family-37631
+- `2026-11-01T03:43:12Z` 2026-11-01 two-successful-method resume: idea:ddp-open-parameter-construction-20261026 --tested_by--> exp:ddp-h9-qline-d12-family-42377
+- `2026-11-01T03:43:12Z` 2026-11-01 two-successful-method resume: idea:ddp-open-parameter-construction-20261026 --tested_by--> exp:ddp-d13-singlefault-star-family-51457-20261027
+- `2026-11-01T03:43:12Z` 2026-11-01 two-successful-method resume: idea:ddp-open-parameter-construction-20261026 --tested_by--> exp:ddp-accepted-d11-d12-full-neighborhood-clone-scan-20261028
+- `2026-11-01T03:43:12Z` 2026-11-01 two-successful-method resume: idea:ddp-open-parameter-construction-20261026 --tested_by--> exp:ddp-d15-d4-literal15552-k8-shared64-backbone-20261030
+- `2026-11-01T03:43:13Z` 2026-11-01 two-successful-method resume: idea:ddp-q3-three-step-plane-pencil31 --tested_by--> exp:ddp-wave2-triangle-factor33-controller
+- `2026-11-01T03:43:13Z` 2026-11-01 two-successful-method resume merged into existing Wiki; same Goal, no new research result; D2 remains paused
+- `2026-11-01T03:43:31Z` 2026-11-01 final query refreshed after root restored same Goal ACTIVE; retain old D2 pause
+- `2026-11-01T03:53:43Z` add_experiment: added exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T03:53:43Z` add_experiment: added exp:ddp-four-port-general-q-pencil-obstruction-and-f25-counterexample-20261101 [verdict=partial confidence=high]
+- `2026-11-01T03:54:50Z` 2026-11-01 actual two-mechanism results appended to ideas/ddp-open-parameter-construction-20261026.md;106 named legal graphs/6 pairs, confirmed103/3, Lean1; joint static review pending
+- `2026-11-01T03:54:50Z` 2026-11-01 actual two-mechanism results appended to ideas/ddp-q3-three-step-plane-pencil31.md;106 named legal graphs/6 pairs, confirmed103/3, Lean1; joint static review pending
+- `2026-11-01T03:54:50Z` 2026-11-01 actual two-mechanism results appended to DD82_PROGRESS_AND_COMMENTS_20261018.md;106 named legal graphs/6 pairs, confirmed103/3, Lean1; joint static review pending
+- `2026-11-01T03:54:50Z` 2026-11-01 current gap entry reflects381 records/106 legal named graphs/6 pairs;103 confirmed examples/3 pairs, Lean1; static review pending
+- `2026-11-01T03:54:50Z` 2026-11-01 two mechanism result edges added with bounded positive support; no new verified claim
+- `2026-11-01T04:04:42Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:04:42Z` add_experiment: updated exp:ddp-four-port-general-q-pencil-obstruction-and-f25-counterexample-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:04:42Z` add_experiment: added exp:ddp-five-port-f7-bhakar-c60-20580-validated-known-nonrecord-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:04:42Z` add_experiment: added exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:07:00Z` add_experiment: updated exp:ddp-four-port-general-q-pencil-obstruction-and-f25-counterexample-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:07:00Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:07:01Z` add_experiment: added exp:ddp-f5-clone-fixed16-old-router-engineering-pilot-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:07:01Z` 2026-11-01 final accepted graph/public-comparison and review notes appended to ideas/ddp-open-parameter-construction-20261026.md; no research rerun
+- `2026-11-01T04:07:01Z` 2026-11-01 final accepted graph/public-comparison and review notes appended to ideas/ddp-q3-three-step-plane-pencil31.md; no research rerun
+- `2026-11-01T04:07:01Z` 2026-11-01 final accepted graph/public-comparison and review notes appended to ideas/ddp-network-expansion-value-pilot.md; no research rerun
+- `2026-11-01T04:07:01Z` 2026-11-01 final accepted graph/public-comparison and review notes appended to DD82_PROGRESS_AND_COMMENTS_20261018.md; no research rerun
+- `2026-11-01T04:07:01Z` 2026-11-01 final counts:108 named legal/7 pairs,103 confirmed/3 pairs,4 novelty pending/3 pairs,1 known nonrecord35D3,Lean1;383 ledger records, engineering node outside math ledger
+- `2026-11-01T04:13:33Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:13:33Z` add_experiment: updated exp:ddp-five-port-f7-bhakar-c60-20580-validated-known-nonrecord-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:14:02Z` 2026-11-01 F4-source retained-edge transfer accepted: dated append to ideas/ddp-open-parameter-construction-20261026.md; old evidence preserved, same mechanism, F7 review SUCCESS
+- `2026-11-01T04:14:03Z` 2026-11-01 F4-source retained-edge transfer accepted: dated append to ideas/ddp-q3-three-step-plane-pencil31.md; old evidence preserved, same mechanism, F7 review SUCCESS
+- `2026-11-01T04:14:03Z` 2026-11-01 F4-source retained-edge transfer accepted: dated append to DD82_PROGRESS_AND_COMMENTS_20261018.md; old evidence preserved, same mechanism, F7 review SUCCESS
+- `2026-11-01T04:14:03Z` 2026-11-01 same A mechanism now four terminal expansions fromF5/F4 sources; named110/7, confirmed103/3, noveltyPending6/3, knownNonrecord1, completeFormulaLean1; no new experiment row or math run
+- `2026-11-01T04:18:50Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-11-01T04:19:07Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-11-01T04:19:32Z` 2026-11-01 current public baseline correction: dated append ideas/ddp-breadth-20261027.md; D13current88452, preserve savedL51417 and old graph acceptance
+- `2026-11-01T04:19:33Z` 2026-11-01 current public baseline correction: dated append ideas/ddp-open-parameter-construction-20261026.md; D13current88452, preserve savedL51417 and old graph acceptance
+- `2026-11-01T04:19:33Z` 2026-11-01 current public baseline correction: dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; D13current88452, preserve savedL51417 and old graph acceptance
+- `2026-11-01T04:19:33Z` 2026-11-01 D13 primary current-public lower bound88452: old40graphs remain legal saved-table improvements but publicly dominated; global-known-dominated41 overlaps saved-table103 in40; outside-table pending6/3; no new graph/method/BFS
+- `2026-11-01T04:31:51Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:31:51Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:32:18Z` 2026-11-01 same F4 mechanism: dated controller-bound/C66-scope append to ideas/ddp-q3-three-step-plane-pencil31.md; no new method or graph
+- `2026-11-01T04:32:18Z` 2026-11-01 same F4 mechanism: dated controller-bound/C66-scope append to DD82_PROGRESS_AND_COMMENTS_20261018.md; no new method or graph
+- `2026-11-01T04:32:18Z` 2026-11-01 F4 certificate c<=68 checked statically; fixed3xZ22 176400 voltage assignments negative added as existing-node variant; A new13source terminal awaited; counts unchanged
+- `2026-11-01T04:37:31Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:37:31Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:37:31Z` add_experiment: added exp:ddp-mizuno13-source-full-neighborhood-clone-interface-27-block-affine-phases-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:38:09Z` 2026-11-01 fixedF4 complete formulaLean and Mizuno13 same-method interface: dated append ideas/ddp-open-parameter-construction-20261026.md; preserve old evidence
+- `2026-11-01T04:38:09Z` 2026-11-01 fixedF4 complete formulaLean and Mizuno13 same-method interface: dated append ideas/ddp-q3-three-step-plane-pencil31.md; preserve old evidence
+- `2026-11-01T04:38:09Z` 2026-11-01 fixedF4 complete formulaLean and Mizuno13 same-method interface: dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; preserve old evidence
+- `2026-11-01T04:38:10Z` 2026-11-01 complete fixed formulaLean2,3840 kernel proof distinct from pending external review; one new retained-edge source-interface experiment, no new graph; ledger384/named110/7/saved-table103/3 remain
+- `2026-11-01T04:42:09Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:42:09Z` add_experiment: updated exp:ddp-mizuno13-source-full-neighborhood-clone-interface-27-block-affine-phases-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:42:38Z` 2026-11-01 dated same-mechanism exactF4 paper criterion/uniformH gate append ideas/ddp-q3-three-step-plane-pencil31.md; preserve original restrictions/history
+- `2026-11-01T04:42:38Z` 2026-11-01 dated same-mechanism exactF4 paper criterion/uniformH gate append ideas/ddp-open-parameter-construction-20261026.md; preserve original restrictions/history
+- `2026-11-01T04:42:39Z` 2026-11-01 dated same-mechanism exactF4 paper criterion/uniformH gate append DD82_PROGRESS_AND_COMMENTS_20261018.md; preserve original restrictions/history
+- `2026-11-01T04:42:39Z` 2026-11-01 exact literalC60 F4 certificate criterion paper variant plus uniformH full-block136 upper; no new method/graph/Lean theorem; counts unchanged
+- `2026-11-01T04:44:10Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:44:10Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:44:43Z` 2026-11-01 Lean4 concrete instances and fixed3840 finalC actualPASS: dated append ideas/ddp-open-parameter-construction-20261026.md; newclone review scope remains pending
+- `2026-11-01T04:44:44Z` 2026-11-01 Lean4 concrete instances and fixed3840 finalC actualPASS: dated append ideas/ddp-q3-three-step-plane-pencil31.md; newclone review scope remains pending
+- `2026-11-01T04:44:44Z` 2026-11-01 Lean4 concrete instances and fixed3840 finalC actualPASS: dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; newclone review scope remains pending
+- `2026-11-01T04:44:44Z` 2026-11-01 concrete formulaLean4 includes3984/4192 recipe graphs, generalclonelemma not counted; fixed3840 finalC PASS distinct from pendingclone finalreview91; no new namedgraphs or ledgerrows
+- `2026-11-01T04:47:43Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T04:47:59Z` 2026-11-01 clone finalsource review actualPASS: dated append ideas/ddp-open-parameter-construction-20261026.md, close reviewpending, preserve failed historical3840A/B
+- `2026-11-01T04:47:59Z` 2026-11-01 clone finalsource review actualPASS: dated append DD82_PROGRESS_AND_COMMENTS_20261018.md, close reviewpending, preserve failed historical3840A/B
+- `2026-11-01T04:47:59Z` 2026-11-01 actualclone finalPASS closes finalreviewpending only; Lean4,named110/7,ledger384 unchanged; no new run or review scheduled
+- `2026-11-01T04:55:01Z` add_experiment: updated exp:ddp-mizuno13-source-full-neighborhood-clone-interface-27-block-affine-phases-20261101 [verdict=partial confidence=high]
+- `2026-11-01T04:55:38Z` 2026-11-01 sameMizuno13 interface exactdual206 terminal: dated append ideas/ddp-open-parameter-construction-20261026.md; rawMIP not upgraded, full27affine scope only
+- `2026-11-01T04:55:38Z` 2026-11-01 sameMizuno13 interface exactdual206 terminal: dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; rawMIP not upgraded, full27affine scope only
+- `2026-11-01T04:55:39Z` 2026-11-01 all364-source full27affine W-transverse domain exactT206 from nonnegative integerdual; no new graph/method/row/Lean; planned23 and canceled24 not generated
+- `2026-11-01T05:03:57Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:03:58Z` add_experiment: updated exp:ddp-mizuno13-source-full-neighborhood-clone-interface-27-block-affine-phases-20261101 [verdict=partial confidence=high]
+- `2026-11-01T05:03:58Z` add_experiment: added exp:ddp-opposite-gq35-vertical-spread-24flag-pins-6160-d24-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:04:46Z` 2026-11-01 accepted4336+6160 actualgraph/evidence update ideas/ddp-open-parameter-construction-20261026.md; sameAframework,source6144 notnewgraph
+- `2026-11-01T05:04:46Z` 2026-11-01 accepted4336+6160 actualgraph/evidence update DD82_PROGRESS_AND_COMMENTS_20261018.md; sameAframework,source6144 notnewgraph
+- `2026-11-01T05:04:47Z` 2026-11-01 actual4336and6160 accepted; named112/9,formulaLean5,ledger385; saved103/3 anddominated41overlap40 unchanged; GQLean incomplete/reviewnotsubmitted,23delta actualPASS
+- `2026-11-01T05:17:33Z` add_experiment: updated exp:ddp-opposite-gq35-vertical-spread-24flag-pins-6160-d24-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:18:00Z` 2026-11-01 actualGQ6160 kernelcomplete/Lean6 dated append ideas/ddp-open-parameter-construction-20261026.md; A/B readscopes preserved,finalCpending
+- `2026-11-01T05:18:00Z` 2026-11-01 actualGQ6160 kernelcomplete/Lean6 dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; A/B readscopes preserved,finalCpending
+- `2026-11-01T05:18:00Z` 2026-11-01 fixedGQ6160 unconditionalkernel+Auditcomplete makes concreteformulaLean6; counts112/9/385 unchanged; finalC121actualpending, no new run
+- `2026-11-01T05:21:39Z` add_experiment: updated exp:ddp-opposite-gq35-vertical-spread-24flag-pins-6160-d24-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:22:06Z` 2026-11-01 actualfreshGQ6160 finalC PASS dated append ideas/ddp-open-parameter-construction-20261026.md; finalreviewpending closed,earlierA/Bscope preserved
+- `2026-11-01T05:22:06Z` 2026-11-01 actualfreshGQ6160 finalC PASS dated append DD82_PROGRESS_AND_COMMENTS_20261018.md; finalreviewpending closed,earlierA/Bscope preserved
+- `2026-11-01T05:22:06Z` 2026-11-01 GQ6160 freshfinalC actualPASS closes lastreviewpending; math/solver/Lean/review terminal,counts unchanged,no newmathdispatch
+- `2026-11-01T05:47:28Z` add_experiment: added exp:ddp-opposite-gq44-desarguesian-spread-7242-d25-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:47:28Z` add_experiment: added exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:48:02Z` add_experiment: updated exp:ddp-opposite-gq44-desarguesian-spread-7242-d25-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:48:02Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:48:03Z` 2026-11-01 two new accepted terminal graphs7242/25 and7531/26, full formulaLean8; named114/11,ledger387 not method count; correctpublic26 comparator7514, strictfixed7531 single-extension gate; global/priority unconfirmed.
+- `2026-11-01T05:59:59Z` add_experiment: added exp:ddp-f4-3840-all-edge-essential-degree19-thinning-gate-20261101 [verdict=no confidence=high]
+- `2026-11-01T05:59:59Z` add_experiment: added exp:ddp-rajiv19-orbit-wline-pin-provider-capacity-gates-20261101 [verdict=no confidence=high]
+- `2026-11-01T05:59:59Z` add_experiment: updated exp:ddp-opposite-gq44-desarguesian-spread-7242-d25-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T05:59:59Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:00:26Z` 2026-11-01 fixedF4 pure-thinning19 and Rajiv19 allWline11+8 capacity scopes closed; q8/14 remains unexecuted baselineblocked1201. Existing7242/7531 freshfinalC actualPASS,7531 A Fin-index correction retained,B159pending. ledger389,114/11,Lean8 unchanged; no newgraph/generic lemma.
+- `2026-11-01T06:01:27Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:01:27Z` 2026-11-01 OVOID7531 targetedB actualSUCCESS/PASS, explicit Fin-index correction and finite-input/caller connection accepted; A/B/finalC terminal,389/114_11/Lean8unchanged; controller64 proposal pendingactual,no experimentnode.
+- `2026-11-01T06:18:21Z` add_experiment: added exp:ddp-f4-uniform-k4-regular-deck-single-f-controller-order60-bound-20261101 [verdict=no confidence=high]
+- `2026-11-01T06:18:21Z` add_experiment: added exp:ddp-f4-nucleus-c4-conic-routes-general-quotient-hall-c72-20261101 [verdict=no confidence=high]
+- `2026-11-01T06:18:54Z` 2026-11-01 controller64 same-index free-group bound<=60 closes uniformsingleF atdeck>=16 before numeric enumeration; nucleusC4 conditionalroute theorem plus24/120quotientHall and restricted70surgery terminal0D3. ledger391,named114/11,Lean8,no newgraph/framework.
+- `2026-11-01T06:19:18Z` add_experiment: updated exp:ddp-f4-nucleus-c4-conic-routes-general-quotient-hall-c72-20261101 [verdict=no confidence=high]
+- `2026-11-01T06:19:19Z` 2026-11-01 existingnucleus72 node adds exact180edge/4320matching structuralcross obstruction: two unique demands atone boundaryvertex require matchingdegree2>1; actual312tests retained, no newnode/graph.
+- `2026-11-01T06:31:21Z` add_experiment: added exp:ddp-opposite-gq77-desarguesian-spread-160050-d64-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:31:21Z` add_experiment: updated exp:ddp-f4-nucleus-c4-conic-routes-general-quotient-hall-c72-20261101 [verdict=no confidence=high]
+- `2026-11-01T06:31:52Z` 2026-11-01 accepted160050/64/D3 via freshfullfinitegeometry+exactliteralformula+50newrootBFS separated fromallpairs proof; newnamed115/12,phase11/9,Lean8,ledger392. General70 oldoldmatching gate new14580+inherited4320 terminal; oldcross directmatch proof escape retained; no newframework.
+- `2026-11-01T06:41:44Z` add_experiment: updated exp:ddp-opposite-gq77-desarguesian-spread-160050-d64-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:41:44Z` 2026-11-01 user3250 retained as human source/parameter unverified, finite nohit neithercertifies norrefutes; conditional20and21>=3250 and3750+500/3840+590 only. ExistingGQ160050 AactualencodingPASS/currentIncidence receipt aligned,B198pending/Cpending;counts392/115_12/Lean8unchanged,no newnode.
+- `2026-11-01T06:53:29Z` add_experiment: updated exp:ddp-opposite-gq77-desarguesian-spread-160050-d64-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:53:49Z` add_experiment: updated exp:ddp-opposite-gq77-desarguesian-spread-160050-d64-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T06:53:49Z` 2026-11-01 actualGQ160050400rows/415modulesclosedkernel+independentAuditPASS,std3/nouserhyp;formulaLean9,392/115_12/phase11_9unchanged. A/BactualPASS,onlyfreshfinalC207pending;no compiler jobs/rebuild.
+- `2026-11-01T06:59:44Z` 2026-11-01 latesthuman D3continues plusnewboundedD2 spare-dominating calibrationauthorized; oldN8D2/n61spectralSATremainpaused. Actualclassicq4polarity21to22 all22literalrootsPASS,notrecord/public24,0countchange/no experimentnode.
+- `2026-11-01T07:00:19Z` add_experiment: updated exp:ddp-opposite-gq77-desarguesian-spread-160050-d64-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T07:00:20Z` 2026-11-01 GQ160050 freshfinalC actualSUCCESS/PASS rawsaved; A/B/Cterminal,unchanged392/115_12/Lean9. LatesthumanD3continues,newboundedD2 q4classic22actualPASS/notnewrecord; oldN8D2/n61spectralSATremainpaused,no oldqueue restart.
+- `2026-11-01T07:09:36Z` add_experiment: added exp:ddp-gq77-cubic-three-coset-partial-ovoid22-immutable-clones-161150-d65-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T07:10:21Z` 2026-11-01 actual161150/65 accepted freshsource/candidate literal+1100newrootBFS; O10finitePASS targetblocked160750/0graph, algebraicthree-coset22changesrule. ledger393,named116/13,phase12/10,Lean9; +400onlybestlocatedpublictheorem,world/priorityfalse; new65Lean/A229active,no newframework/source recount.
+- `2026-11-01T07:16:29Z` add_experiment: updated exp:ddp-gq77-cubic-three-coset-partial-ovoid22-immutable-clones-161150-d65-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T07:16:29Z` 2026-11-01 actual65fixed16115024modules+independentAuditPASS,std3/nohyp;formulaLean10,393/116_13/phase12_10unchanged. AactualPASS/productcenter22flags1078nonflags corrected,B235/freshC237pending. Independent finalCPU6.753769767summarynotrerun. D2q8formula74tiespublic74,0q8generation/BFS,nocount.
+- `2026-11-01T07:24:55Z` add_experiment: updated exp:ddp-gq77-cubic-three-coset-partial-ovoid22-immutable-clones-161150-d65-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T07:24:56Z` 2026-11-01 existing161150 A/B/distinctfreshCactualPASS; BPG3F7vs50spreadPG1F49correction. SamecapcurrentfullN65zero compatiblecenters asvariant; D2Brown57fixedoldinduced/cap9 arbitraryH givesorder<=72<74,notoldoldadds.393/116_13/Lean10unchanged; Brown91cap11pending,no91/107graph.
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-gq77-cubic22-multiplicity6-immutable-clones-166650-d70-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-d2-brown91-cap11-fixed-induced-arbitrary-helper-order106-bound-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-r6-f9-sixconic-pgl-halfsets42-crossport-trueinverse-charts-20261101 [verdict=partial confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-r6-k4-double-voltage-z20-full-fixed-family-f9-lift-obstruction-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-r6-c4xa4-two-type-triangle-forced576-fixed-controller-family-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-c60-plus18-clique-helpers-sixregular-controller-exact-cnf-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-r6-schreier3base-z26-sixport-controller78-complete-a3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:24Z` add_experiment: added exp:ddp-michel120-sixregular-trianglefree-f5-full-line-lift-samefiber-bound-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-gq77-cubic22-multiplicity6-immutable-clones-166650-d70-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-d2-brown91-cap11-fixed-induced-arbitrary-helper-order106-bound-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-r6-f9-sixconic-pgl-halfsets42-crossport-trueinverse-charts-20261101 [verdict=partial confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-r6-k4-double-voltage-z20-full-fixed-family-f9-lift-obstruction-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-r6-c4xa4-two-type-triangle-forced576-fixed-controller-family-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-c60-plus18-clique-helpers-sixregular-controller-exact-cnf-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-r6-schreier3base-z26-sixport-controller78-complete-a3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:29:56Z` add_experiment: updated exp:ddp-michel120-sixregular-trianglefree-f5-full-line-lift-samefiber-bound-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:30:20Z` 2026-11-01 sameGoalACTIVE: new70/166650 fullgraph concreteLean11 andA/B/distinctC actualPASS; new54/56862 fullgraph freshliteral/all6084routes/806BFS PASS, concreteLean pending. Ledger402 legal118/15 stage14/12 Lean11; strictBrown91fixedinducedcap11order106, F9local42chart, preciseK4Z20/C4A4stops, C60helper78twoUNKNOWN preserved, newSchreier78 success saved;0math reruns.
+- `2026-11-01T08:34:29Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:34:29Z` add_experiment: added exp:ddp-f9-c78-single-fiber-plane81-immutable-clones-56943-d55-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:34:57Z` 2026-11-01 minimaldelta55/56943accepted:explicitGF9singlefiberplane81N54packing,all81newrootBFSmatchespredictedhist,0oldrootrerun. Reused54node encodingAactualPASS only,concrete54/55D3Leanpending. Ledger403,legal119/16,stage15/13,Lean11;0newframework/0mathreruns.
+- `2026-11-01T08:44:42Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:44:42Z` add_experiment: added exp:ddp-r6-schreier-fixed-even-deck-a3-capacity34-gaussian-obstruction-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:45:22Z` 2026-11-01 minimal localdelta: fixedsixport3base/evenm/fullA3 impliesm<=34 via independent36forms/moments/sixGaussiancharacters; notgeneral6D3,nom34search. Newlocalnode only,0graphs/Lean/framework. Existing54encodingA+structuralBactualPASS,butkernel/Audit/freshCpending;Btimingscorrectedbyroot. Ledger404 legal119/16 stage15/13 Lean11 unchanged;fourgraphHTML/Worddraftunfrozen.
+- `2026-11-01T08:57:11Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:57:12Z` add_experiment: updated exp:ddp-f9-c78-single-fiber-plane81-immutable-clones-56943-d55-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:57:12Z` add_experiment: added exp:ddp-r6-schreier-fixed-m34-complete-domain-2299968-necessary36type-failure-20261101 [verdict=no confidence=high]
+- `2026-11-01T08:57:51Z` 2026-11-01 kernelcompletion actual54/56862and55/56943,std3/no certificate/originalWalk+Audit closesLean13,0newgraphs. A/BallactualPASS,onecombinedfreshC348pendingnot2calls. Newfixedm34nodeall2,299,968legalfailtrue36typegate/0untested/.893814463CPU;ledger405 legal119/16 phase15/13. Publicdualityrevisionawaitactualfinalreport/rootconfirmation;expertbuilder/draftunchangedunfrozen;0mathreruns.
+- `2026-11-01T08:59:27Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:59:27Z` add_experiment: updated exp:ddp-f9-c78-single-fiber-plane81-immutable-clones-56943-d55-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T08:59:27Z` add_experiment: added exp:ddp-delorme-duality-spread-truncated12-inducedmatching-54-55-56-direct-comparison-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:01:29Z` 2026-11-01 finalactual54/55jointfreshCseparatePASS inonecall; currentpublic54=55512/55=56540/56=57568 directpublishedmethodcorollary,notnumericedgefile,D1unidentified/center514K2/generalmatching. Ledger406 legal119/16 stage15/13 Lean13; fourgraphlocalexpertZIPactuallyfrozen53366142bytes/1878files,oldpacketsunchanged;0researchreruns.
+- `2026-11-01T09:14:02Z` add_experiment: added exp:ddp-f9-u6-six-fiber-plane486-double-clones-57834-d56-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:14:02Z` add_experiment: added exp:ddp-f9-c78-base0-complete-plane-open-neighborhood-packing-max7-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:14:03Z` add_experiment: added exp:ddp-f9-c78-all-controller-open-neighborhood-packing-exact10-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:14:03Z` add_experiment: added exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:14:41Z` 2026-11-01 U6new56/57834accepted+closedkernelAuditLean14,newexternalA/B/Cnotdispatched;972newrootsallmatchprediction,nooldR3/fieldrepeats. Base0packing7andwholeC78exactpacking10scopesdistinct;U10five55..59windowsinflightnotgraphs,60stoppedbyIQ64362. Ledger410legal120/17phase16/14Lean14;oldfourgraphZIP119/16/13frozenunchanged;0researchreruns.
+- `2026-11-01T09:30:19Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:30:19Z` add_experiment: updated exp:ddp-f9-u6-six-fiber-plane486-double-clones-57834-d56-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:30:39Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:30:39Z` add_experiment: updated exp:ddp-f9-u6-six-fiber-plane486-double-clones-57834-d56-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:31:14Z` 2026-11-01 existingU10familyrow now5acceptedcompletegraphs55/57672,56/58482,57/59292,58/60102,59/60912 and5explicitkernel/Auditstd3 targets; legal125/20 phase21/17 Lean19,ledger410unchanged.12150newBFSallpredictionsmatch/source810R2only;binding symbolicformulas+externaljreadbacknotAudit#eval12150. NewjointAreturnedawaitroot/Binflight/Cnotstarted;oldU6/55andfrozen4graphpacketpreserved,r7F11localonlyinflight,0researchreruns.
+- `2026-11-01T09:39:38Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:39:38Z` add_experiment: updated exp:ddp-f9-u6-six-fiber-plane486-double-clones-57834-d56-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:40:30Z` 2026-11-01 existingU6+fiveU10sixexplicitoriginaltargetsfreshCactualPASSonegroupedcall383thread8e5aa7a9distinctfromA/B;mathkernelallcomplete125/20Lean19ledger410unchanged. Degree77publicgatebestlocated169750,Tallini15publicnotlocalO22,allPolarStarlegals137424/129903,Hmin128/3baseevenH132;scalar.020526023CPU/one4primaryquery,0graph. Scopeglobal/priorityunconfirmed;frozen4graphpackunchanged.
+- `2026-11-01T09:45:01Z` add_experiment: added exp:ddp-r7-f11-four-orbit-twofive-typed-true-inverse-tenchart-local-interface-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:45:01Z` add_experiment: added exp:ddp-degree77-r7-f11-public-tallini15-gq7-generalduplication-169750-controller-threshold128-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:45:01Z` add_experiment: added exp:ddp-r7-threebase-fixed-m50-symbolic-capacity50-exactcover-all32-fail01-20261101 [verdict=no confidence=high]
+- `2026-11-01T09:45:01Z` add_experiment: added exp:ddp-r7-fourbase-triangle-m33-global2000000-unknown-cap-reached-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:45:01Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:45:44Z` 2026-11-01 actualr7local4orbitsrefutes2orbitprediction/10trueinversechartsPASS;public77derived169750Hmin128;fixedthreebasem50all4802outer32tilingsfail01strictclosed;fourbasem33actual2000000legalglobalUNKNOWNcapreached1.822285705CPU,noautomaticretry. Fourlocal/public/gatenodesadded,existingU10nextBupdated,ledger414/125legal20pairs/stage21_17/Lean19unchanged;0newgraph/BFS/Lean/framework,nohash,nooldcheckrerun,frozenpackuntouched.
+- `2026-11-01T09:53:51Z` add_experiment: updated exp:ddp-gq77-cubic-three-coset-partial-ovoid22-immutable-clones-161150-d65-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:53:52Z` add_experiment: updated exp:ddp-gq77-cubic22-multiplicity6-immutable-clones-166650-d70-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:53:52Z` add_experiment: updated exp:ddp-degree77-r7-f11-public-tallini15-gq7-generalduplication-169750-controller-threshold128-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:53:52Z` add_experiment: updated exp:ddp-r7-fourbase-triangle-m33-global2000000-unknown-cap-reached-20261101 [verdict=partial confidence=high]
+- `2026-11-01T09:53:52Z` add_experiment: added exp:ddp-public-w3f7-partial-ovoid33-primary-table5-corrects-65-70-77-comparison-20261101 [verdict=yes confidence=high]
+- `2026-11-01T09:53:52Z` 2026-11-01 actualprimaryCimrakovaFack2007Table5W7partialovoid33corrects65/70/77publicguarantees161650/169900/181450;legal125/20stage21_17Lean19unchanged,publicdominated43savedoverlap40outsidepending19/14globalrecords0. Existing65/70/77/m33updated+onepubliccorrectionnodeledger415;CRTthreefixedprofilesstrictclosed/triangle123controlledrepairwithlosssaved;noexperimentalrerun,newgraph0,frozenpacketuntouched.
+- `2026-11-01T10:05:40Z` add_experiment: added exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:05:40Z` add_experiment: updated exp:ddp-public-w3f7-partial-ovoid33-primary-table5-corrects-65-70-77-comparison-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:05:41Z` 2026-11-01 P33onefamilyeightactualfullgraphs65..72freshaccepted133legal26pairsstage29_23Lean19;59400literalnewNrowsnotBFS,onlyk8all13200newrootsBFS,1650sourceR2onlyonce,0oldR3/fieldrerun. Onefamilynewnodeledger416 pluspublic33existingreproductionstatusupdate;kernelstagePASSexternalbindingpending,A423encodinginflightB/Cnotrequested;publicdominated43overlap40outsidepending27/22global0,frozenpackunchanged.
+- `2026-11-01T10:07:59Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:08:00Z` 2026-11-01 existingP33onefamilyeightoriginalconcreteLeanandseparateAuditactualPASS+59400binding;24newmoduleszeroFailures95.041500998CPU,3200incpositionsnot528Gramkernel,sourceFin160000plusFin50. ledger416unchanged/133legal26pairsstage29_23Lean27;newA423andB428inflightfreshCnotrequested/localCpacketnotexternal. 0newgraphorresearchrerun,publicdominated43overlap40pending27_22global0,frozenpackunchanged.
+- `2026-11-01T10:24:54Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:24:55Z` 2026-11-01 existingP33familyextendedlower8plusupper7=15actualinstances/140legal33pairsstage36_30Lean34,ledger416zeroNewRows;upper7rawbindings138600BFS24750onlyk15/sourceR2inheritedzeroRepeat,lower59400and13200onlyk8,total198000binding37950BFSacross2graphsnot15allroots;upper2modules9.29735927CPUparent24unchanged. Lower8A/BactualPASS,upper7A438/B440explicitadditionalScopeinflight,freshjoint15Cnotrequested;degree80public327680stopped0graph/theorem/Audit,global0known43pending34_29frozenpackuntouched.
+- `2026-11-01T10:42:38Z` add_experiment: added exp:ddp-even-q8-norm-ovoid65-spread65-payne-ovoid64-small-geometry-pilot-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:42:38Z` add_experiment: added exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T10:42:38Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T10:42:39Z` 2026-11-01 q8freshsmallfieldsandtwoGQgeometriesPASS2.285789276CPU/0sourcegraphs; conditionalfullOspreadsinglehelperbarrierR²4225/4096fixedcap0.145388401CPU,noD3sourceinstantiated. Two localnodesaddedledger418,no graph/Lean/frameworkcountincrease140/33stage36_30Lean34. ExistingP33lower8+upper7explicitA/BactualPASS,freshjoint15C445inflightnotcomplete,priorityfillauditUNKNOWNJGTbodygapconditional+50to0,expert15DRAFTnoZIP/frozenpackuntouched.
+- `2026-11-01T11:01:33Z` add_experiment: added exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:01:34Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:01:34Z` add_experiment: updated exp:ddp-even-q8-norm-ovoid65-spread65-payne-ovoid64-small-geometry-pilot-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:01:34Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:01:34Z` 2026-11-01 twoq8completefilledsources327744/80and342290/81freshaccepted142legal35pairsstage38_32Lean34;two classicalunfilledreproductionsnotnew;129helperBFS0oldroots/fullIncdegreebinding+oldOnlyprefixproof,10.520798412CPU. Onepairedfillrowaddedledger419,existinggeometry/barrierpremiseandP33actualfreshfinalC445updated;15explicitoriginalsPASSonecallnewthreadc2dbf1ba/publicpriorityUNKNOWN,notnewq8review. q8finitepilot2modulesonly0concreteLean. Expert15freezeauthorizedsnapshot140_33excludesq8/frozenolduntouched,0experimentrerun/global0.
+- `2026-11-01T11:18:07Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:18:07Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:18:07Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:18:07Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:18:08Z` add_experiment: added exp:ddp-f9-u10-pointlevel-exchange55-minchange6-lp837-three-direction-obstruction-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:18:49Z` 2026-11-01 oneincrementledger420/142legal35pairsstage38_32Lean34:reuse4nodesadd1localU10node;55exactLPretU9U8closed,minchange6solveronly,capacity837rejectedbyactualtarget48rank3arbitrarylinebound73/product8000;actual19layerW>=811pilotpendingdifferentweightsallowed. q8singlehelper+onecopyarbitraryjointbatch+diagonalb1to5localscopesclosed,0copygraphs. q8finitepilot1225pairs40.105386447CPU/encodingAactualPASS2targets1call;controlledcostreassessment0mathfail,actualPID1602629session41458resumeworkers8/same12000CPU,noq8concreteLean. P33fifteenactualfrozen317192282B816entries16edgefiles140_33snapshotexcludesq8,priorityUNKNOWN/global0. 0experimentrerun/rootfiles/frozenpacketedit.
+- `2026-11-01T11:31:37Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:31:37Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:31:37Z` add_experiment: updated exp:ddp-f9-u10-pointlevel-exchange55-minchange6-lp837-three-direction-obstruction-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:31:37Z` add_experiment: updated exp:ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:32:34Z` 2026-11-01 oneincrement ledger420 unchanged4existingrows,accepted143legal36pairsstage39_33Lean34:addeduniqueq8degree82n346515m14204970/all4225newrootBFSactualmatchedoldOnlyprefixcollapseproof,+65scopedpublic346450/priorityUNKNOWN. SourceLeanpartialactualrunning/new82codeonly300CPUpendingparent,sourceA2PASS/A82cell494inflight/B_Cnotstarted. fixedWret4all19poolnumericalINFEASnoformalUNSAT,837fractionalsanityfeasible;one45varcount832failsprofiles;two_directionceiliff+three_positiveprojectioniffexplicitlocalwitnesses/shared6dartcoupling. Noexperimentrerun/rootfile/oldpackageedit,newexpert3DRAFTpreparingnoZIP.
+- `2026-11-01T11:50:04Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:50:35Z` 2026-11-01 minimalexistingq8rowactual3concreteLean34to37,ledger420/math143_36/stage39_33unchanged;source1104PASS8413.702687CPU/all669905_10385_1097finitepremises,copy82fourPASS53.903200769CPU/finalAuditstd3nopremisesactual,historyfailedretainednotfinalsorry,0oldsourcegenericrecompile. A2+A82actualexplicitPASS,B3singlecallcell516storeq8_3_B_reviewinflight/threadnotreturned/C3notrequested. Rootexpert143_36_37DRAFTalreadyregenerated0ZIP. source17_91planesonlyboundedcouplingprecheckpending0newgraphsolver. 0newmath/auditchecks/render/rootfiles/frozenpackageedit.
+- `2026-11-01T11:55:39Z` add_experiment: updated exp:ddp-f9-u10-pointlevel-exchange55-minchange6-lp837-three-direction-obstruction-20261101 [verdict=partial confidence=high]
+- `2026-11-01T11:56:00Z` 2026-11-01 oneexistingBnodeonlysource17transport7pairscalarimagesiffwithjointscaling/ambientrank3/all91rank2/46transversalmin4dirs8bestoriginal5,onebestnormal104basis010_801actual1539pool811numericalINFEAS3.933452689CPU;baseline810onlycardthresholdfails,norootLP/UNSATcertificate/globalWclaim. Branchstopped:no2ndplane/nooldtimer/no729pool,nextjointcrossdartsupportorstructuralchange. ledger420/math143_36/Lean37unchanged,B3cell516inflight/C3notrequested,0newmath/graph/Lean/docsrender/rootfiles/expertpacketedit.
+- `2026-11-01T11:57:39Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T11:58:06Z` 2026-11-01 minimalq8existingrowexternalstatusonly:actualBsuccessindependentthreadb6529734/onecallall3originalmathkernelbindingPASS/rootdisposition3corrections;actualfreshC3singlecallcell524storeq8_3_C_reviewinflight/threadpendingmustdifferA45b_Bb652,noPASS/noautomaticretry. ledger420/math143_36/Lean37unchanged,0math/docsZIPgraphcheck/source17edit/rootfileedit.
+- `2026-11-01T12:11:32Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:12:02Z` 2026-11-01 finalq8existingrow:actualdistinctfreshCthread a6045506differentA45b_Bb652,onecall3originalmathformalbindingPASS/priorityUNKNOWN/rootcorrectionsincluded. Actualexpertfreeze263869113B3549entries9.543109038CPUlevel1/5raw909069434B/reposcopedpaths/snapshot143_36_37,HTMLtxtWordXMLmetadataPASS,rawC+dispositionincluded,FREE_EDGE_AUGMENTATION/UNIFORM_MULTICOPYexcluded,nohash/oldpacket/graphBFSLeanreruns. ledger420math143_36Lean37unchanged,notGoalcomplete/rootownedfilesuntouched.
+- `2026-11-01T12:27:58Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T12:27:58Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:28:44Z` 2026-11-01 minimalexistingbarrier+7531nodes:uniformallkfixedadjM<=floor((Delta+2)^2/4)closesbalancedk1_45Payne1_44/new6291456subsettoy1.112874562CPU;freeedgewithmandatoryedgesM<=floor((delta+2k+1)^2/4)closesbalanced1_23Payne1_22/.033554806CPU/tinytoyonly.NotP33_F9/not3graphCscope/frozenQ8untouched. Newq4diagonalfillreallocationpredictiononly7532/97750/cap26/keepH90525/remove17clonefill/add17hubfill;producer_indep20CPUeach/notaccepted/noextraLean. ledger420143_36Lean37unchanged/0newrows/mathreruns/rootfiles.
+- `2026-11-01T12:31:05Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:31:06Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:31:06Z` Actual7532accepted:7532/97750/cap26/exactD3;allH90525edgesretained;literal17delete17add;289NUbindings;all290newrootBFSthreeclasspredictionsPASS;oldroot0;producer.195131966CPU/independent1.189883820CPU.New7532Lean_A_B_Cnotdone/notinherited.Q8secondscale346516/14204970cap82predictiononly:65delete65add,30producer40indepCPU,only66BFSplanned/notaccepted/no145.FrozenQ8untouched.Ledger420twoexistingrows144_36Lean37stage40_33;0mathreruns/rootfileedits.
+- `2026-11-01T12:35:13Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:35:13Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:35:13Z` Actual346516mathaccepted/14204970/cap82/exactD3;H13862745retained/65delete65add/full4225NUbinding/only66changedrootBFSmatched/off4160andold0BFS/U_Hendpointprefixproof. Producer.940117171CPU/indep6.192139338CPU.TwoNew7532_346516LeanandA_B_Cnotcompleted;singleAcell559pendingmathencoding/notfinalC. GeneralpartialovoiduniformkpaperSUPPORTED/formula_hist_MooreoldUpair/nographLeanCscope.600CPUoneworker60module90costnodegeneric+twotargetsinprogress/only670plus670newkeywitnesses.83k2publicgateonly0graph. Ledger420twoexistingrows145_36Lean37stage41_33/0reruns/rootedits/frozenpackunchanged.
+- `2026-11-01T12:39:59Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:39:59Z` PaperclarificationGk=FullNeighborhoodClonesonG1firstclone_hubroles;frozenNU_Fpins/disjoint/oldJload0/Hloadkminus1/sourcebounddelta+1/labelskept/collapseG1notH;nonewtheoremcount. Degree83onlyproduceractual350742/14547195/all14204970sourceedgeskept/3.493080617CPU;fresh40CPU68rootinprogressNOTaccepted/no146/notk1Lean600CPUorA559scope.Publicbestlocated350675candidateplus67/priorityUNKNOWN. Ledger420oneexistingq8row145_36Lean37stage41_33unchanged/0newmathruns/rootedits/frozenpackchanges.
+- `2026-11-01T12:41:20Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:41:20Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:41:20Z` Actualunique83/350742/14547195cap83exactD3accepted;parent346516all14204970edgesretained/8450NUbindings/68preselectedBFSallmatch/67twinsactualdistance2+all4225binding/twohubsdistance2/hubclone3walk/4158offandold0BFS/fullendpointandtwoprefixproof;producer3.493080617CPU/indep5.825614568CPU. K1twoA559actualSUCCESSthreade4b6c102mathbindingPASS/formalPENDING/priorityUNKNOWN/rootdispositionfixproducer0_21attribution;83A_notdone/B3freshCnotdispatched. Generic5modulePASSnotconcretetarget;600k1plusseparate15083CPUafterparent/noLean40. Ledger420twoexistingrows146_37Lean37stage42_34/0reruns/rootedits/frozenpackchanges.
+- `2026-11-01T12:49:28Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:49:28Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:49:29Z` ActualQ4original7532kernelFinalClaim_finalclaim_Fin7532_genuineWalkD3_nonD2_std3_noUserPremise_independentAudit_external289labelsPASS;case4module14.510148CPU/sharedbatch108.234539769snapshotnotadditive/binding.023981154CPU. Lean38onlyQ4new;146_37stage42_34unchanged. Q8Definitionssingle60.365404CPUlimitretainedoriginal600budget/targetedrepairsecondPASS3.587344CPU/notoriginaltargetcompletion/83separate150afterparent. Aformalhistorypending_notautomaticPASS/BfreshCnotdispatched. Ledger420twoexistingrows/0mathBFSfieldLeanreruns/rootedits/frozenpackchanges.
+- `2026-11-01T12:55:20Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:55:20Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:55:20Z` Actual3original7532_346516_350742kernel_Audit_explicitFinlabels_trueWalkD3_nonD2_std3_noUserPremise_externalbindingsPASS;sharedk1_13modules108.234539769CPU3failcharged600;83_4firstPASS9.560036958CPU150budget0newfinite_oldsource_recompile. Lean40/146_37stage42_34ledger420twoexistingrows. A2oldmathbindingPASS_formalPendingverdictpreserved;A83explicitnewscopeactualdispatchcell599samee4b6c102threadpending/B3freshCnotdispatched/noinheritoldC. ExpertDRAFT0newZIPawaitactualreviewsandrootfreezeauth.84_98window.370097835CPU3queriesonlyfuture4candidates0graphsqueue/envelopescope_priorityUNKNOWN.0mathBFSLeanreruns/rootedits/frozenpackchanges.
+- `2026-11-01T12:59:41Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:59:41Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T12:59:42Z` ActualA599SUCCESSsamee4b6c102threadsecondexplicitsharedcall/threeexact7532_346516_350742tuplemath_formal_bindingPASS_priorityUNKNOWN;firstA2formalPENDINGhistorypreserved/not3calls/notfinalC. NewB3actualdispatchcell608storediagonal_reallocation_B3_review/threadverdictpending/C3notdispatched/nooldCinherit. DRAFTreceipt146_37Lean40kernel3PASSfreezeentryready0ZIPread/noextrareprepare. Q4small27_34publicgate0graphinprogress/Q8window0graphsqueue. Ledger420twoexistingrows146_37Lean40stage42_34unchanged/0mathBFSLeanruns/rootedits/frozenpacketwrites.
+- `2026-11-01T13:16:07Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:16:07Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:16:07Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:16:07Z` ActualB608threeexacttuplemath_formal_bindingPASSpriorityUNKNOWN/MCPthread67beb729distinctA_e4/generatedfooterb41fwrongrejected/noextracall/newparse. UniqueC618actualdispatchpendingthreadverdict/mustdifferactualA_B/nofreeze. Q4window27_34all8publicblockedSTOP/.103912025CPU3queries/IQ23_8=9954/35_35875Delormeq32+2copiesnotnewMizunopackage/countsunchanged. Separatefixedpublishedproduct2x8S8775C325barrierhardX650pin2_6/650<=2(r+15)^2/excludesr0_3cap27_30/r3short2/r4cap31notexcludednotrun/scalartime0.0belowresolutionnotzerocost/notglobalN/not3targetCscope. ledger420threeexistingrows146_37Lean40stage42_34unchanged/0newgraphs_mathruns_rootedits_frozenpacketwrites.
+- `2026-11-01T13:29:57Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:29:57Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:29:57Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:29:57Z` ActualfinalC618SUCCESS/MCP53b69de0distinctactualA_e4andB67beb/threeexacttuplemath_formal_bindingPASS_priorityUNKNOWN/onefreshsharedcall/0reruns. ThreeoriginalsallmathkernelAuditsABCcomplete/rootONEfreezeauthorizedNOTexecuted/noZIProbabilityclaim/wikiwriteholdafterreceipt. Separate230calibrationallpredictionsPASS/.027416CPU/final230_1035_9D3all230roots/prefix226miss120/jointnotsequential/0portfolioLean/notCscope. Cap31papernecessaryEXISTSsomehelpersomerowGE8distinctclasses/notallheavy/not31exclusion/0runs. Small27_34STOP/86_90_94_98candidates0dispatch. ledger420threeexistingrows146_37Lean40stage42_34unchanged/0rootedits_frozenwrites.
+- `2026-11-01T13:32:08Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:32:08Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:32:08Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:32:09Z` ActualONEexpertfreezeSUCCESSDIAGONAL_REALLOCATION_THREE_RESULTS_20261101ZIP219512166B1439entries7raw761809181Blevel1CPU7.761951546under90snapshot146_37Lean40stage42_34;mathkernelABCcompletepriorityUNKNOWNglobalfalse. Rootacceptedf9oneZIPmetadatacheckmatchednoduplicatepartial/newbarrier_toy_refinemententries0notCscope. ThisWikiupdateonlyreadsactualreceipt/pathsexist/noarchiveopenorvalidation/freeze/paidcall. Ledger420threeexistingrowscountsunchanged/noqueuedsearch/rootownedoldfrozenuntouched/stopafterreceipt.
+- `2026-11-01T13:42:53Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:42:53Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:42:53Z` Actualnew86_363420_15573870and98_414132_19680570ROOTreleasedmathfreshkernelPASS/sourceactualG1not83/84520fullNrows/only68lastblockrootseachallhistmatch/unmeasured16836_67548old0BFS/allpairprefixsourceinteriors;producer6.013320505CPU/fresh9.484730169CPU/new8LeanfirstPASS19.612733651CPU0finite_oldsource_recompile. Ledger420twoexistingrows148_39Lean42stage44_36/outside42_35known43main103_3global0. A655actualdispatchtwonewtuplepending/BfreshCnotdispatched/nooldthreePASSorZIPinherit/90_94notdispatched. FactoroverlappaperSUPPORTED/rootliteral15_32subsets10pairsallPASS/time0.0belowresolutionnotzerocost/0graphLean;cliquefreepredictionattackpendingNOTPASS.0reruns_rootedits_frozenpacketwrites.
+- `2026-11-01T13:44:49Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:44:50Z` Necessaryinheritancecorrectiononly:actual585support72_pair9_Steinertriple1alreadyknown20261027/oldtwoWikiNodeslinked/notnewdiscovery. OldBonferroniU8<=380=>miss>=140/atleast18unownedclassesforthesavedactual585Bfactor;genericpair513correctbutweaker/notuniversalGQ8Steiner/not31exclusion. Newcontentproductcap31routeapplicationandliteralq2smallexperimentonly.0olddata_BFS_tests/newtheoremcounts. Ledger420148_39Lean42unchanged;main86_98receiptamendedwithrealcanonicalprovenanceupsert.
+- `2026-11-01T13:57:45Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T13:57:45Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T13:57:45Z` Actualnew86_98A655e4andB6635da20cd4twoprecisetuplemathformalbindingPASSpriorityUNKNOWN/onecallseach;uniqueC672actualLIVEpending/noRetry/noOldCinherit. LightweightDRAFThtmltxt22215Word833479paths.013449846CPU0ZIPnotold146snapshot. Localfixedcap31cliqueKtallSTOP1620<1625bestt14/.000053CPU;balancedKttallSTOP/Fsurvivors8_19/whole26Nrowcol_twopartintersectionproof/closestt13gap91/.011899883CPU. MINhelperdegree9_16NOTallDeg<=16/unbalanced_generalnoncliqueOPEN. Old58572_9_1inherited/residual18_14_11_8_4notnewdiscovery/0oldretest. NoanotherTemplateSolver_actualjointRuleRequired. ledger420twoexistingrows148_39Lean42stage44_36unchanged/0newmathruns_rootedits_frozenwrites.
+- `2026-11-01T14:07:38Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T14:07:39Z` Exactledger420scopeauditfoundNOpreviousstrictclosurefor5holeswholeAcolumn+copycycles5_4+savedSigma+130freedoldUpins. Olduniformfullmandatoryallsaturatedclique_KttSTOPretained/notapplicablewhenhelperscanmeetfreedU;oldSigmaisverifiedsourceautomorphismnotclosure. OneROOTdispatchedmixedrulePREDG0_10070_154390_pool1750_K6target10076cap31UNKNOWN/prep30CPU/model120inclimports_solver90oneThread/noRestart. Cachedpublic31guarantee10075from20261101q2xq8rep4/noWeb.0graph_parameter_Leanincrements/notnew86_98Cscope/C672samependinghandle. Ledger420oneexistingrow148_39Lean42stage44_36unchanged/0math_solver_old585_BFS_sigmaChecks/rootedits_frozenwrites.
+- `2026-11-01T14:10:51Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T14:10:51Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T14:10:52Z` Actualnew86_98finalC672SUCCESSce6eb098distinctA_e4_B5da/twoexacttuplemathformalbindingPASSpriorityUNKNOWN/0reruns;Ccompletednolongerpending. LightweightccompleteDRAFT22497htmltxt8351Word81paths.014047383CPU0ZIPoldpacketunchanged. MixedG0produceractualPASS10070_154390_pool1750_freedU130degree_sparematch/newBcube342225PASS/sourceprepabout8.552CPU0oldR2SteinerSigmaBFSfield. FixedK6alloldtargetinterfacepaperSUPPORTED0newexperiment;oneMILPsession65524handlecurrentrows62181binary10500nnz7349320prep1.603CPU_solver90total120oneThread_feasibilityunknown_recoveronlysamehandle/notinCscope. Ledger420twoexistingrows148_39Lean42unchanged/0newmathruns_rootedits_frozenwrites.
+- `2026-11-01T14:40:28Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T14:40:28Z` add_experiment: updated exp:ddp-full-ovoid-spread-fixed-cap-singlehelper-rsquare-conditional-saturation-barrier-20261101 [verdict=partial confidence=high]
+- `2026-11-01T14:40:28Z` Actualterminalsync: samecolumnmixednumericUNKNOWN95.395974retained;FULLrationalLPvalid_ownB2ge7REFUTED960min3_fiverefinedstrataPASS;current1750pool_to960targets_A15_105_2625bindingPASS_independent8blocks20pins160gt156ROOTacceptedexactcurrentcyclesSigmaK6exclusion_originalmodel96.064628of120allterminal0graphLean. DispersedBholes73_138_204_269_334G010070_154385pool1750freedU130prepRoot.380353of15_reach105five15eight10onePASS;soleCOLOR91896exit0UNKNOWN49.845277of60solver45noincumbent_781vars51659rows403036nnz_10070targetsubsetwitness8711to8582min7_OWNsubmodelSTOPnotUonlyJOINT_Frepair_general31_no_timer_seed_holeladder. SameoneMechanismnot2method. Rootnew90_380324_16942770r8and94_397228_18311670r12fromactualG1346516not98chain_production30fresh60Lean300each1worker_UNACCEPTED0count_newAB_Cnotdispatched_oldPASSnotinherited. Ledger420twoexistingrows148_39Lean42stage44_36outside42_35known43main103_3global0unchanged_0newqueries_math_graph_BFS_Lean_solver_paidreview_rootowned_orfrozenwrites.
+- `2026-11-01T14:42:41Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T14:42:42Z` Rootactualaccepted90_380324_16942770r8and94_397228_18311670r12fromG1346516not98chain_mathFreshoriginalFinFinalClaimKernelAuditStd3NoPremisescomplete;producer6.067463983of30fresh9.240740672of60_parent1candidateeach1_all84520fullNbinding_only68lastblockBFSpercase_unmeasured33740_50644old0_allpairprefixoldG1interiorTrueWalk;8newLeanfirstPASS19.453559765of300max2.860851_oldfiniteModulesnotrecompiled_alllocalterminal. Existingq8oneRow9validatedinstances_ledger420_150named41pairsLean44stage46_38outside44_37known43main103_3global0. NewA707e4threadshared2originalscopeACTUALDISPATCHpending_BCnotdispatched_noinheritance. Fourselected86_90_94_98mathkernelcomplete_other11publiconly0graphsqueue. Expert4lightpagepreparing_notexistenceclaim0ZIPoldpacketunchanged. Publicmargin74_78Hfillpublic9_13samerule0priorityUNKNOWN. No31scopeExpansion_math_graph_BFS_Lean_solver_web_paidcalls_rootowned_frozenwrites.
+- `2026-11-01T14:49:45Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T14:49:46Z` New90_94A707actualSUCCESSe4thread10798chars2exacttuplemathformalbindingPASSpriorityUNKNOWNrootdispositionread_AterminalnoRetry;B716actualsharednewscope5da20threadpendingstoreendpoint90_94_B_actual_Cnotdispatched_noOldPASSinheritance. FourendpointDRAFTactualreadyhtmltxt35670eachWord9937links136CPU.020191577snapshot150_41_44zeroZIP_renderPredatesAterminal_historyPreserved_noRerender. Futurepublished16_1920readonlyGatesInProgressNoFormalReceiptNoConclusionNoNewGraphLocalCompute. Existingq8oneRowLedger420counts150_41Lean44stage46_38outside44_37known43main103_3global0unchanged0newMethod_noMathGraphBFSLeanSolverWebPaidCallRootownedFrozenWrites.
+- `2026-11-01T15:01:03Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-11-01T15:01:03Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T15:01:03Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T15:01:04Z` Rootacceptednew17_3_2016_16896frompublishedC30F4source1920reproduction0count;existingfullNaffineplaneon6layers0_3_5_7_9_16Wabaplusb96centresN16_1536distinctpinsload1_keep15360edges0newnew_hist16_48017_1536;controllerexactmax6predictionSUPPORTED373nodes.001421773CPU_notnewgenerallemma. Producer.069140557fresh.245867195of30all96newrootsreach2016other95newD3owncenterD2match_actualhist1_16_203_1796numbersoutputnotpriorPrediction_old0BFSsourcefieldrankinherited_actualD3walk1920_170_1187_1921. NewliteralC30Fin2016Lean120pilotauthorizednotcomplete0Lean_reviewsnotdispatched. Public17Comellasactualnorow1920onlymonotone_namedcachedfamiliesnotblockglobalUNKNOWN;18_19thissourcefrozenfullNupper2160_2280blocked2340_2783STOP. ExistingC30sourceonlycanonical1instance_affinefullNcrosslinkNoDuplicateMethod. New90_94A707B716rootdisposedthreefacetPASS_B5dadistinctAe4_freshC732actualdispatchpendingthreadmetadata_noinheritance. FourendpointDRAFT150_41_44snapshot0ZIPexcludesnew17. Ledger420threeExistingRows151_42Lean44stage47_39outside45_38known43main103_3global0_noMathGraphBFSLeanSolverWebPaidCallRootownedFrozenWrites.
+- `2026-11-01T15:09:42Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-11-01T15:09:42Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T15:09:43Z` Actual90_94finalC732SUCCESSbf1ebe1dDistinctAe4B5da8011chars2exacttuplemathformalbindingPASSpriorityUNKNOWNoneSharedFreshCall_terminalremote0liveNoRetry_n17outsideScope. FourendpointnewpaircompleteDRAFT36331htmltxt9929Word141linksCPU.020790179snapshot150_41_44zeroZIP. New17DRAFT17577htmltxt9897Word46linksCPU.028130478snapshot151_42_44mathPASSfullkernelPendingreviewsNOTDISPATCHEDpriorityUNKNOWNzeroZIP. Pilot8PASS59.69639203incl1fail_onlyRow0all64to1920genuineWalkStd3_notFullSourceCloneFinalClaim. FullrootAuthorizedCumulative1200includesPilot_liveSession4008driver1468135max2sourceleavespermodule60_actualSavedHandleCheckpointRead_resumeOnlySameQueue_notOldPilotTERM_notRecompilePASS_oldfield_noSecondCloneInputsCompileTimer. PublishedSource1920reproduction0graphLean_only2016originalAuditcompletionCanAdd1_currentLean44. Ledger420twoExistingRows151_42Lean44stage47_39outside45_38known43main103_3global0unchanged0newMathGraphBFSLeanSolverWebPaidReviewRenderLinksRootownedFrozenWrites.
+- `2026-11-01T15:21:50Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-11-01T15:21:50Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T15:21:50Z` add_experiment: updated exp:ddp-wave5-mizuno-d4-source [verdict=partial confidence=high]
+- `2026-11-01T15:21:50Z` Rootactualaccepted17_2016fullSourceCloneOriginalKernelAuditsTypeBodyStd3NoUserPremiseExternalBind_FINAL102PASS919.636625789of1200incl3failpilot_source30rows900pairs780NB2340basis120pencil7680residual_CloneInputsSymbolicNormal111pinOwnerLabels_external120ctrl1080matrix12dirs96labels;published1920reproduction0Lean_only2016plus1to45_allnative4008_62791_66371terminalNoNativeCompute. Newexact17A766samee4threadstorec30_d17_2016_A_actualpendingBCnotDispatchedNoOtherPASSinheritance. New17expertkernelcomplete21956htmltxt11379Word60linksCPU.030994719snapshot151_42_45INITIAL44saved0ZIP. Public17followup2queriesOneDirectTimeoutTerminalGlobalUNKNOWNnoRetrynoRecordInference. ExistingD4source5832q3dim4C72degree12cap13to16frozenN12allOldEdgesNoNewNew_upper6318_6804_7290_7776blockedCached6804_9720_15552_16384preciseSTOPnotAllD4_0graphsLeanmethod. Newactual15_15552to16readonlyGatePendingReceipt_irregular648deg14_14904deg15notRegular1036capNoConclusionOrComputeAuthorization. Ledger420threeExistingRows151_42Lean45stage47_39outside45_38known43main103_3global0_noMathGraphBFSLeanSolverWebPaidReviewRenderRootownedFrozenWrites.
+- `2026-11-01T16:01:41Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T16:01:41Z` add_experiment: updated exp:ddp-wave4-mizuno-d3-source [verdict=partial confidence=high]
+- `2026-11-01T16:01:41Z` RootacceptedD16D4_16389_128835fromactualpublicirregular15552source648deg14_14904deg15;retain116316oldedges837frozenSimpleN14_15clones12519pinsload1nonewnewvirtualselfoldcenternotclone;oneAll16389FinalRoots268599321orderedpairsExact4_9.905452337of120_sourceonly0duplicatePrelim0_gen4walk0_891_3726_907_1. FreshComellas16384plus5priorityUNKNOWN_savedmain104_4. Oldrank4allpairpredictionREFUTED3648preserved_newMmodnoise91groupsAll3648repair_with33216inherited36864controllerpairsFiniteAllxInterfaceNotGraphKernel. Original180CPUoneworkerpilotcontinueslatestCompileDynamicHandleMayBeTerminalRepairNeeded_Defsattempt1fail21.085587preservedDefs2PASS_noFullTargetNoLean46. Actual17exactA_B_distinctfreshC1e84allRootDisposedPASS_remote0live_fixedExpert151_42_45live152_43_45NewD16outsideCscope. TwoActualExpertDraftReceipts0ZIPnotRerender. Existing2sourceRowsLedger420_152named43pairsLean45stage48_40outside45_38known43global0_oneNewGraphParameter0Lean0method_noOldUNKNOWNFamilyExclusion_noMathGraphBFSLeanSolverWebPaidReviewRootownedFrozenWrites.
+- `2026-11-01T16:06:19Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T16:14:33Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T16:14:33Z` ExplicitUserSteeringSameActiveGoalNewConstructionsD4D5priority_STOPnewD3degreeCopyFielddispatch_preservecompletedD3_D2n61paused_max2questions_current16389proofplusonef9smallerD4D5coverage_notTemplateSweep. Existing15552node24portPreservingPerms8orbits24reps0_1_2_3_9_10_16_35CPU.022993527_2gensmaxlen5_192bindingsCPU.017433091_independentSourceAutFullRowWalkTransfernotAutomatic837CloneAut. Reduced1536pairs1384rank152coset173neededRankwordBasisPilotPASS91cosetGroupsOnly0PASS. Original180pilotFINAL112.392507115_9PASS3failsPreserved_terminalNoLive_onlypairs0to0_0to33allxyTrueWalkle4Std3_fullrow0parentclonePendingNoLean46. Literal125threeWordsOnly82endpointsOmit1_old0to81CPU.013533367NotNewKernel_notnewD3target_pinOwnerPaperReverseFormula0newRank. ActualNov1Main10D4_2556_11D4_3645_vsStaleDetail2485_3444_doNotClaimRecordFromOldDetail. Ledger420oneExistingRow152_43Lean45unchanged_noMathGraphBFSLeanSolverWebPaidRootownedFrozenWrites.
+- `2026-11-01T16:45:35Z` add_experiment: added exp:ddp-d2-public106-internal-pin-old-edge-repair-scoped-gates-20261101 [verdict=partial confidence=high]
+- `2026-11-01T16:45:35Z` add_experiment: updated exp:ddp-loz1100-z275-all25-preserving-lifts-8d5-20261028 [verdict=yes confidence=high]
+- `2026-11-01T16:45:35Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-11-01T16:45:35Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T16:45:36Z` ExplicitD2clarificationPriorq4classic21to22Brown57_91fixedInducedDoneInherited_NewExistingD2oldedgeDeleteAddAuthorized_OldN8n61Paused_D3newdegreeCopyFieldDispatchSTOP_max2questionsD2repairD4proof. NewNecessaryPublic106sourceExperimentNode0newmethod_source106582degree10at34_54plus104deg11oneprimarycommonNeighborProfileDone_Minimal4forcingClosedNoOldRepair_Kdirection252anchorsAllCounterexamples0passNotGeneral107_joint10to11pinsInternalOnlyArbitraryOldRewiring6253vars23161rowsone10sHiGHSUNKNOWNnoIncumbent_case10.514675635of20_independentExactModelPaperSUPPORTED0graphLean. ExistingLoz1100old125ClosednotRerun_newPhaseOnlyF5UNKNOWN11.296287249of20_300formsNoIdenticalAliasNotJoint60TupleRealizability_noTimerRestart. D4fullCumulative1200includesPilot112.393009340_oneworker173basisgroup0ImportOnly_Dynamicformalization_fullHandle_latestRequestedBatchMayBeTerminal_NotOriginalTargetAcceptNoLeanIncrement. Fresh13D5authorREADMEreports88452_574938_13regularD5added10_13_freshmain51417_directREADMEblobrawURLs_AuthorSavedIndependentBFSnotProjectLocalRerun_countsClassificationUnchanged. Ledger421NecessaryNewSourceNodePlus3ExistingRows152_43Lean45main104_4known43outside45_38global0_GraphCatalogNavPreserved_noMathGraphBFSLeanSolverWebPaidRootownedFrozenWrites.
+- `2026-11-01T16:56:30Z` add_experiment: updated exp:ddp-delorme-duality-spread-truncated12-inducedmatching-54-55-56-direct-comparison-20261101 [verdict=yes confidence=high]
+- `2026-11-01T16:56:30Z` add_experiment: updated exp:ddp-public-w3f7-partial-ovoid33-primary-table5-corrects-65-70-77-comparison-20261101 [verdict=yes confidence=high]
+- `2026-11-01T16:56:30Z` add_experiment: updated exp:ddp-five-port-f7-bhakar-c60-20580-validated-known-nonrecord-20261101 [verdict=yes confidence=high]
+- `2026-11-01T16:56:31Z` add_experiment: updated exp:ddp-gq77-published-p33-immutable-fulln64-clone-eight-degree65-72-family-20261101 [verdict=yes confidence=high]
+- `2026-11-01T16:56:31Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T16:56:31Z` add_experiment: updated exp:ddp-d13-singlefault-star-family-51457-20261027 [verdict=yes confidence=high]
+- `2026-11-01T16:56:31Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T16:56:32Z` EvidenceClassClarificationOnly:13D5_88452explicitAuthorCompletePackageReport_AuthorSavedIndepBFSnotProjectRerun_freshMain51417;D3_35875_161650_169900projectSubstitutionCombinationOfPublishedMethods_noNumericAuthorEdgefilesLocated_notGlobalMax. D35Delormeq32_33825plus2x1025;D54to59_1028DeltaIncludesProjectExplicit12Controller;D65to79_160000plus1650DeltaMinus64_JCMCC2007W7partialO33Spread50_OppositeSource_General§7Replication_current65_70_161700_169950plus50old161150_166650BelowGuarantee. Q8_4225DeltaPublishedPolarityProductReplication_86_90_94_98Margins70_74_78_82_ifFilled342290OrdinaryCopyPublic5_9_13_17_ifSameRule0_exactFillPriorityUNKNOWN. Existing31sourceIndexAddedBesideCatalogNav_Existing7nodesNoNewMethodLedger421152_43Lean45main104_4known43unchanged. D4workerOriginalTargetsAuditsReportedPASS675.777657109AwaitRootFulltextNoLean46. NoMathGraphBFSLeanSolverWebPaidReviewRootownedFrozenWrites.
+- `2026-11-01T17:08:14Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T17:08:14Z` add_experiment: updated exp:ddp-d2-public106-internal-pin-old-edge-repair-scoped-gates-20261101 [verdict=partial confidence=high]
+- `2026-11-01T17:08:14Z` add_experiment: updated exp:ddp-schreier78-f9-six-conic-affine-fullgraph-56862-d54-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:08:14Z` add_experiment: updated exp:ddp-even-q8-opposite-gq-spread-fill-complete-pair-d80-327744-d81-342290-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:08:15Z` Rootactualaccepted16389originalSourceCloneTargetsTwoAuditsStd3NoCertificateTrueWalkD4nonD3ExplicitLabelInheritedBind_CPU675.777657109of1200includesPilotAllFailures_source15552PublicReproduction0_clone1Lean46. NewD4originalABsubmitted_pauseExec872missing_AexactPromptNotObservedNoOld17PASS_BoriginalPID3400606liveAtSavedObservationnewPromptNoFinal_noRetry_CnotDispatched. Existing43representativeComparisonCSVandNoveltyJSONlinkedBesideCatalog;ComellasDegree3to16_onlyMain11D5plus3_12D5plus60_16D4plus5_13D5plus40belowAuthor88452;20to26Located2791_2928_3294_3549_6144_7225_7514notGlobalBest_17unknown_user3250clueRetained. D3portfolioInnovationNOTESTABLISHED_threeCandidatesF9ChartsC78_samecapIncidentFlagFill_firstG1diagonalReallocationHub_priorityUNKNOWN_cannotAllOldApplicationCannotCertifyOriginal_repeateddegreesSameMethod_D3NewLadderSTOP. D2sector7PASS_core8_10sameSmallSignatureNotFullTwins_refutedunique_0of5040enumerated_C7UNKNOWN_CPU.014324454of4case10.544587884of20terminal0solverBFS. Ledger421existing4rows152_43Lean46main104_4known43outside45_38global0_noNewMethod_noMathGraphLeanSolverWebReviewRootownedFrozenWrites.
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101 [verdict=partial confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-opposite-gq35-vertical-spread-24flag-pins-6160-d24-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-opposite-gq44-desarguesian-spread-7242-d25-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-gq44-ovoid-spread-immutable-full-neighborhood-clones-7531-d26-d3-20261101 [verdict=yes confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-d2-public106-internal-pin-old-edge-repair-scoped-gates-20261101 [verdict=partial confidence=high]
+- `2026-11-01T17:25:38Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T17:25:39Z` UserRequestedD3caps20to26_twoComplementaryPrimaryBranchesEach2batches8queriesPlusRootGlobalTableAccessAllTerminal_noExternalAtLeast3840_3984_4192_4336_6160_7242_7532Located_knownMethodGuarantees2791_2928_3294_3549_6144_7225_7514_allowedLargestInstancesInPublicSourcesReviewed20261101_RecordCandidates7_notGlobalCertificate_notInnovationProof_priorResearchExists_ComellasStop16NotNoResearch_cap20Rajiv19_2783plusDelormeNotPolarStar_user3250Retained_realTimeWikiAndJGTFulltextGaps. PersistentCurrentComparisonHTMLandOriginalSource33556BLinked. D2actualC7order7_8fixed14cycles_All582EdgesChecked_case10.585169327of20_terminal_independentPaperOnlyC7preservingInternalS10S11Excluded_general107NotExcluded_strongerPinsetOnlyPredictionUntested_D2newComputePausedNoSolverContinuation. D4exactA16731andB11389RootFulltextThreeFacetsPASS_actualThreadsE4and5da_originalATransportUnknownPreserved_onlyOneCompletedA_originalBRecoveredNoResendNoFabricatedMCPSuccess_uniqueDistinctFreshC925ActuallyInflightThreadPendingNoVerdict_noOldScopeInheritance. Existing7rowsLedger421_counts152_43Lean46stage48_40main104_4known43outside45_38global0unchanged_noNewMethod_noMathGraphBFSLeanSolverWebPaidReviewRootownedFrozenWrites.
+- `2026-11-01T17:57:59Z` add_experiment: added exp:ddp-stale-d8d4-loz1100-single-split-boundary-20261101 [verdict=no confidence=high]
+- `2026-11-01T17:57:59Z` add_experiment: added exp:ddp-stale-d8d4-c30-gf4-binary-restriction-fivecover-input-20261101 [verdict=no confidence=high]
+- `2026-11-01T17:57:59Z` add_experiment: added exp:ddp-stale-d4d5-messieres-three41-any-ninecover-capacity-20261101 [verdict=no confidence=high]
+- `2026-11-01T17:57:59Z` add_experiment: added exp:ddp-stale-d3d5-afy70-threecut-twohelpers-repair-20261101 [verdict=no confidence=high]
+- `2026-11-01T17:57:59Z` add_experiment: updated exp:ddp-d15-d4-current15552-source-gap-20261027 [verdict=partial confidence=high]
+- `2026-11-01T17:58:00Z` STALE_RECORD_TRANSFER_TERMINALS_20261101: four scoped terminal experiment nodes added through existing canonical helper; two8D4 gates STOP, three new41source any9cover capacity deficits1/3/1, AFY70 nonadjacent and adjacent-oldrepair rules both exactNO; second rule repairs helper mutual distance but168 remaining configurations fail old-old routes. No graph/BFS/solver/Lean/web rerun. Existing D16 actualC925 PASS field corrected from real root disposition. 152graphs/43pairs/Lean46 preserved; oldn61paused; original human recovery blocks byte-for-byte preserved, no fullWiki reimport.
+- `2026-11-01T18:12:35Z` add_experiment: added exp:ddp-stale-d11d3-715-fixed-induced-arbitrary-helpers-obstruction-20261101 [verdict=no confidence=high]
+- `2026-11-01T18:12:35Z` add_experiment: added exp:ddp-stale-d4d8-loz69-f139-shared4-normalized-endpoints-20261101 [verdict=no confidence=high]
+- `2026-11-01T18:12:35Z` STALE_715_PHASE69_TERMINAL_DELTA_20261101: two canonical experiment nodes added;715 actualP3 correction plus arbitrary finiteH fixed-induced obstruction and paper internalK3 corollary;69phase raw160/coeff159 predictions refuted,19462 normalized domain completeNO max117/139. Prior source/slackt<=5 remains valid historical subset with backlink. No source/solver/Lean/review rerun, no full index/query rebuild, human top blocks preserved;152/43/46 unchanged.
+- `2026-11-01T18:25:00Z` add_experiment: added exp:ddp-stale-d3d9-exoo600-three-four-cut-helper-samples-20261101 [verdict=partial confidence=high]
+- `2026-11-01T18:25:00Z` add_experiment: added exp:ddp-stale-d10d4-signed-f2-15552-transfer3072-inverse-failure-20261101 [verdict=no confidence=high]
+- `2026-11-01T18:25:00Z` EXOO600_SIGNED_F2_TERMINAL_DELTA_20261101: two terminal experiment nodes via canonical helper;Exoo600 threecut and fourcut each10000sampleUNKNOWN with all failures still helper-old, no old-label BFS; signedF2 actual inverse failure0→183 and paper-only sameinteger char3 corollary. No graph/parameter/Lean/method increments, no full rebuild, human top preserved;152/43/46 unchanged.
+- `2026-11-01T18:31:39Z` add_experiment: added exp:ddp-stale-d6d9-331387-source-single-edge-subdivision-all-types-20261101 [verdict=no confidence=high]
+- `2026-11-01T18:31:40Z` D6D9_SOURCE_SINGLE_SUBDIVISION_TERMINAL_20261101: one canonical node combines cached331387 full6regular source interface and allthree positivegenerator endpointR8 failures;lefttranslation exhaustsalloldedge subdivisions. Missing14088/13875/14028;no graph/parameter/Lean increment or sourceD9/oldoldBFS/field/raw rerun. OldF6959/ramified6860 scopes inherited;notgeneral6D9closure. Human top blocks preserved;152/43/46 unchanged.
+- `2026-11-01T18:40:04Z` add_experiment: added exp:ddp-stale-d6d9-beta5155-free-tau-complete-inverse-action-20261101 [verdict=no confidence=high]
+- `2026-11-01T18:40:04Z` D6D9_BETA5155_FREE_TAU_TERMINAL_20261101: onecanonicalnode foractualbeta5155 freeP1 normaldomain completeNO6959new reps;phase0prediction supported2302 butallfailbyphase11,0unresolved,0graphBFS. Same-node paper r→r^-1, tau→tau*r^-9 transport, nosecondnumeric action or doubledcount;remaining40free-tau actionsopen. Oldall42fixed1512text intact+backlink. No source/field/solver/Lean/review rerun;human top preserved,152/43/46 unchanged.
+- `2026-11-01T19:08:28Z` add_experiment: added exp:ddp-stale-d6d9-f6959-primitive49-all-normal-remaining-batch-terminal-20261101 [verdict=no confidence=high]
+- `2026-11-01T19:08:28Z` add_experiment: added exp:ddp-stale-d4d5-natural364-port-matching-two-core-cuts-star365-sample-20261101 [verdict=partial confidence=high]
+- `2026-11-01T19:08:28Z` add_experiment: added exp:ddp-bounded-engineering-port-budget-fixed-traffic-one-link-pilot-20261101 [verdict=partial confidence=high]
+- `2026-11-01T19:08:29Z` THREE_TERMINAL_SCOPES_20261101: three canonical mechanism-level nodes only;20new numerical inverse-pair domains139180normal representatives plus inherited5155/old1512/zero close only fixedF6959 primitive49 phases1,36,45 allnormal family; natural364 portmatching/twocorecut10000sampleUNKNOWN with0oldold BFS; finite engineering model separately marked engineering not mathematical method. Prior6D9 historical text retained with later-scope pointers. Human15oldcells top preserved;152/43/46 unchanged,sameGoalACTIVE,oldN8/n61paused,no automatic restarts or full import/rebuild.
+- `2026-11-01T19:17:55Z` add_experiment: added exp:ddp-stale-d3d6-exoo132-adjacent-helpers-repair134-sample-20261101 [verdict=partial confidence=high]
+- `2026-11-01T19:17:55Z` add_experiment: added exp:ddp-stale-d3d8-chen360-all-single-edge-subdivision361-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T19:17:55Z` TWO_CUBIC_TERMINALS_20261101: twoactualcubicterminalmechanisms,Exoo132to13410000sampleUNKNOWNwith9997firsthelperand3secondhelperfails/both0/oldold0;Chen360to361all540singleedge subdivisions exactNO/newrootdistance9/oldold0. Sourcegate andperedge/sample stages merged,formatguardfailure androotcorrected132 reporting preserved. No source/BFS/solver/Lean/remote rerun,counts152/43/46 unchanged,oldn61paused,sameGoalACTIVE,human15celltopblock preserved. Readonly1250futurepointer is not a newexperiment or launchedplan.
+- `2026-11-01T19:36:04Z` add_experiment: added exp:ddp-d16d4-whole27-fulln-clone864-graph16416-20261101 [verdict=yes confidence=high]
+- `2026-11-01T19:36:04Z` add_experiment: added exp:ddp-stale-d11d3-715-cross-oldclass-helper-min3-tight-route-tradeoff-20261101 [verdict=partial confidence=high]
+- `2026-11-01T19:36:05Z` D16_16416_715_PACKING1250_DELTA_20261101: canonical two newnodes only(one accepted16416 graphversion ofsamewhole27/fullN mechanism;one715enlargedcrossclasspaperboundary),upsertpacking32 inside existing15552/16389canonicalnode,no extra method;Conder1250readonlySTOP attached toexistingnode. Original16389math/Lean/ABfreshC preserved;new16416concreteLean/ARIS pendingnotinherited. Human15oldcells top preserved;counts153/43/46,savedmain105/4,outside45/38,known43overlap40/global0;no33plus,no repeatedBFS,no import/rebuild.
+- `2026-11-01T19:37:35Z` add_experiment: updated exp:ddp-d16d4-whole27-fulln-clone864-graph16416-20261101 [verdict=yes confidence=high]
+- `2026-11-01T19:37:35Z` D16_16416_LEAN47_ROOT_ACCEPTANCE_20261101: existing16416nodeupsert only;actualnewconcretekernel/Audit/typedI32externalbinding ROOTaccepted,Lean46to47,no graphorparameterorrecordincrement. NewA/Bactuallyinflightcell1064,Cnotdispatched,noreviewPASSinherited. Canonical fulln id references fixed locally;human15oldcells top preserved,153/43/47,savedmain105/4,outside45/38,known43overlap40/global0;no computationsorfullrebuild.
+- `2026-11-01T19:44:58Z` add_experiment: updated exp:ddp-stale-d11d3-715-cross-oldclass-helper-min3-tight-route-tradeoff-20261101 [verdict=no confidence=high]
+- `2026-11-01T19:44:58Z` add_experiment: updated exp:ddp-d16d4-whole27-fulln-clone864-graph16416-20261101 [verdict=yes confidence=high]
+- `2026-11-01T19:44:58Z` 715_COMPLETE_CLOSURE_16416_A_ACTUAL_20261101: twoexistingcanonicalnodes updated,no rows/countincrements. Fixed715full edge-preservingnonemptyfiniteaugmentationfamily completepaperNO,oldmixedmin3openpreservedashistory,requiresoldedgechangeornewhost. New16416AactualfulltextrootacceptedthreefacetPASSwithclarifications,threadaf23d117-58eb-43ba-a699-d4f683640eaa;Bexec1064inflight,Cnotdispatched,noB/Cverdict. Human15oldcells top/counts438,153/43/47unchanged;no graph/source/H/formal/paidreview/hashrun.
+- `2026-11-01T19:59:47Z` add_experiment: updated exp:ddp-d16d4-whole27-fulln-clone864-graph16416-20261101 [verdict=yes confidence=high]
+- `2026-11-01T19:59:47Z` add_experiment: added exp:ddp-stale-d4d3-messieres-n1-all3075-two-cut-fourstar42-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T19:59:47Z` FINAL16416_TECHNICAL_REVIEWS_N1_TWO_CUT_20261101: existing16416node exacttechnicalreviews complete(A/B/distinctfreshCactualallthreefacetsROOTfulltextaccepted),0remotewaits,globalpriority/URSAreportgapstillUNKNOWN. One newN1twocut4star42experiment(all3075completeNO,3newrootpassalloldoldfail),notnewsourcegateormethod. Records438to439;153/43/47,savedmain105/4,global0unchanged;human15oldcells top preserved,no computation/review/reimport.
+- `2026-11-01T20:02:30Z` add_experiment: updated exp:ddp-d16d4-whole27-fulln-clone864-graph16416-20261101 [verdict=yes confidence=high]
+- `2026-11-01T20:02:31Z` D16_16416_PORTABLE_EXPERT_DELIVERY_POINTERS_20261101: existing16416node/recoveryentries only portableZIP,HTML/txt/Word,README/reproduce/PACK_RECEIPT pointers;one compact artifactexistencecheck,noZIPopen/replay/BFS/field/Lean/review/wideaudit. Counts439,153/43/47,savedmain105/4/global0unchanged,technicalcomplete,globalpriority/URSAreportgapUNKNOWN,humanexpertfeedbacknotreceived,sameGoalACTIVE,oldpackagesuntouched.
+- `2026-11-01T20:26:19Z` add_experiment: added exp:ddp-stale-d3d6-petersen-route-group14-h20-affine7-scalar-affine16-complete-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T20:26:19Z` add_experiment: added exp:ddp-stale-d4d3-messieres-n2n3-two-cut4star-source-comparison-20261101 [verdict=no confidence=high]
+- `2026-11-01T20:26:19Z` PETERSEN_AND_N2N3_TERMINALS_20261101: two canonical mechanismexperimentnodes only;Petersenraw64gate21/62survivors followedbyactualH20oddwheel/unimodularfacebasisandF16all17mod3mod5rankcompleteNOinexplicit4modelscopes;N2/N3all6150twocut4starNO,onepinoldpair3to4. RootseparatechangedN2thirdcut+oldoldrepairbatchpending/notcoveredbyoldNO/notanothermethod. No graph/parameter/Lean/methodincrements,no reimport/rebuild/rerun/paidreview;human15oldcells top preserved,153/43/47 unchanged.
+- `2026-11-01T20:27:43Z` add_experiment: updated exp:ddp-stale-d4d3-messieres-n2n3-two-cut4star-source-comparison-20261101 [verdict=no confidence=high]
+- `2026-11-01T20:27:43Z` N2_TARGETED_REPAIR_TERMINAL_20261101: existingN2N3nodeupsert only,separate3048parameter targetedthirdcutrepairterminal(duplicatesacrosssixbasesnotremoved,notindependentgraphcount),426oldpairrepairsallnewrootfail,jointpredictionrefuted. Old6150twocutNOscopepreserved,nogeneral3cutNO. Pendingcheckpointhistorical,allbatchesstopped,linepaused,noN4/secondrepair. Counts441,153/43/47unchanged,human15oldcells top preserved,no numeric/review/reimport.
+- `2026-11-01T20:36:58Z` add_experiment: added exp:ddp-stale-d8d4-two684-all-hleft-equivariant-matchings1368-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T20:36:58Z` TWO684_EQUIVARIANT_MATCHING_TERMINAL_20261101: onecanonicalmechanismnode;actual684twoorbitnonCayleyprimarycorrection,right-h*s,shared342NOthenrootauthorizedcompleteS2xH342xH342domain233928NOwith233586newfirst00failandold342skipped,other3slotsNOT_TESTED. Bothpositivepredictionsrefuted;fixedH-equivariantnotallmatching/general8D4. Case2.923628479/10CPU,no sourceDP/BFS/graph/Lean/paidrerun. Human15oldcells top preserved;counts153/43/47unchanged,nextonlyreadold5D3GQpairUNKNOWNinterface,nooldtimerresume/fullrebuild.
+- `2026-11-01T21:02:50Z` add_experiment: updated exp:ddp-wave11-gq80-paired-matchings [verdict=partial confidence=high]
+- `2026-11-01T21:02:51Z` GQ80_C5_ASYMMETRIC_TERMINALS_20261101: existingcanonicalGQ80upsert,no newnode/method. C5completefinitejoinNO separatefromQ1361rawsolverUNSAT(no proof logged/checked) andfullfamilyoldfiveUNKNOWN. Capacity<216predictionrefuted227,argmax158notjointopt,completejointall10769queriesempty;genuinechangedfixedQ/freePonelegalexit20,twostartupfailuresnotsearches. Nograf/BFS/geometry/solver/reviewrerun by sync;human15oldcells top preserved,442and153/43/47unchanged,verdictpartial,stopQ2/action/timer.
+- `2026-11-01T21:22:24Z` add_experiment: added exp:ddp-stale-d6d9-fixed331387-at-most-threecuts-pure-star-complete-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T21:22:24Z` D6D9_THREECUT_STAR_TERMINAL_20261101: onefixedhostoldedge-editexperimentnode,notindependentmethod/graph. Phaseprojectionshortcutrefuted64827/full49,normalsformerlyopen;mandatoryoldpairs32/21/32supported,complete994161-edgehitbound11/7/12gives22/14/24insufficient,0OR/representativechecks. Paperdominanceclosesany<=3distinctcuts/sharedpins/purestarfreedendpointsubset,nooldoldrepair. ScopeNOTgeneral6D9/arbitraryonepoint;stopandpreserveoldsingle/F6959NOhistorywithoutreplay. Case4.575818955/20CPU,supportBFS1/DP1fornewdata,sourceD9validationBFS0,0newgraph. Human15oldcells top preserved,153/43/47 unchanged,next8D3/253read-onlynotresult.
+- `2026-11-01T21:55:42Z` add_experiment: added exp:ddp-stale-d8d3-cm253-star-and-fivecut-one-repair-coupled-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T21:55:42Z` CM253_STAR_REPAIR_TERMINALS_20261101: oneCM253localedge-editexperiment. Fourcutstar27vs18NO;independentrepaircapacity35refutedNOguess;fullcoupled4x1910136halfchoicesbase12+12=24<27closesfive-disjointcuts/oneomitted-endpointnonedgeR/8star. Paperdirecthitclosesany<=5distinctcuts/sharedendpoints/purestarwithoutfull10pinlegalstarassumption. No graph/BFS/field/oldunique3/reviewrerun,case3.686201072/20CPU,153/43/47unchanged,human15top preserved,12cellsnewtested. Nextorder256Cayleyreadonlynotresult;no fullrebuild.
+- `2026-11-01T21:58:57Z` add_experiment: added exp:ddp-stale-d8d3-global-c8-action3-z32-fixed-phases-all-normals-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T21:58:57Z` GLOBAL256_ALL_NORMALS_TERMINAL_20261101: onefixedglobal256C8/action3/cyclicZ32/phases1234allnormalNOexperiment,not57344methods. Capacitypredictionpassesforms63/58/58/58/46/58/58/58;complete57344connectednormalizedall8slotcheckswith3072degree7retained. Oldrowscompatpostprocessminimumincompatiblepair0/2individually320/1344butjoint0,actualwitnessvectorssaved;no newparameterorwordevaluations. Case2.274279767/20CPU,0graph/BFS/field/solver/Lean/review. CM253priorlocalNOdistinctandpointerupdated,nooldreplay. Human15top exact,445expectedrecords/153/43/47unchanged,12cellsnot13,no automaticgroup/phase/timer.
+- `2026-11-01T22:07:22Z` add_experiment: added exp:ddp-stale-d9d3-585-fixedp0-owner-avoiding-fourcorecuts-port16-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T22:07:22Z` SOURCE585_FIXED_P0_PORT16_TERMINAL_20261101: onechanged-oldedge585fixedactualp0=0owner-avoidingprototypeexperiment;notasourcereadnode. ForcedAAownerpairs implyM(O)=O,newrootAneedsfour16maskspartition64. All2080edgesbound,512Cunioncontains0(includes64owner0),eligible1568on448degree7prediction supported;3697DFScompleteNO,32oldsigmasedgeskeptmixed,allfour-oldNOinheritedwithoutreplay. maxvisiteddepth2notmaximumpacking2. p0-ownercuts remainOPEN,p0-z-v-A_vrepairpermitsfreemateexpansion. Nextonlypaper/interface,nop1/seed/numeric. Case1.881081201/20CPU,0graph/BFS/coreR2/field/solver/Lean/review,13cells,153/43/47unchanged,human15top exact,nofullrebuild.
+- `2026-11-01T22:10:54Z` add_experiment: updated exp:ddp-stale-d9d3-585-fixedp0-owner-avoiding-fourcorecuts-port16-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T22:10:54Z` OWNER_P0_PAPER_INTERFACE_20261101: existing585nodepaperupsert,norow/method/graph. k0PORT16NOinheritedunchanged;derived2-(64,8,1)affineplaneandtwoownerp0cutsintersection>=3giveU<=63-k/freeextras<=k/newrootA<=63for k>=2,completepaperNO. Onlyk1necessaryfourdisjoint16masksunion64includingp0,uniquemissingtmatchedfreeowner,3forcedpairs;matchingextensionnotcore/oldoldD3. No numeric/graph/BFS/field/review,446/153/43/47/13cellsunchanged. Human15top exact;buildereditedonlyNOTBUILT,root ownsone15-rowbuild.
+- `2026-11-01T22:23:21Z` add_experiment: updated exp:ddp-stale-d9d3-585-fixedp0-owner-avoiding-fourcorecuts-port16-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T22:23:21Z` SOURCE585_K1_WHOLE_FIXED_P0_TERMINAL_20261101: existing585nodewholefixedactualp0prototypeNO,k0numeric+k>=2paper+k1numeric. K1all64owner/1568far3200DFScomplete0portpackings;P1refuted,P2/coreNOT_ENTERED,notcorefail,0sourceparse/coreR2/BFS/matching/graph. Case2.736357397/20CPUincludesreader.3once. Otherp0/nonmatchingcuts/additionaloldold/multiplehelpers/general9D3OPEN,next10D3actual650FPtransfer45CPUauthorizedbutnoactualHANDLE/resultreported. No node/graph/parameter/Lean/method increment,446/13cells/153/43/47unchanged,human15top exact. Buildereditednotbuilt,rootownsone15rowbuild.
+- `2026-11-01T22:31:40Z` add_experiment: added exp:ddp-stale-d10d3-650-eight-fp-endpoint-transfer651-mip-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-01T22:31:40Z` SOURCE650_FP_TRANSFER_TERMINAL_20261101: one650FPtransferUNKNOWNnode446to447,notmethod/graphcount.1170binary/1302rows/90480nnz,c0,threads1,sole20stimeoutstatus1noincumbent,notINFEASIBLEorstrictNO.15pairings/newoldBFS/graph0,wholecase22.084731374/45CPU.14testedoldcells,0newoldrecordgraphs,153/43/47unchanged.Human15top exact;buildereditedNOTBUILT,rootownsonefinalbuild;noSTATE/ROUND/recovery/REPORTwrites.
+- `2026-11-01T22:47:47Z` add_experiment: added exp:ddp-d16d4-source15552-nonorbit-fulln-local-exchange-no-global-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-01T22:47:47Z` NONORBIT_D4_LOCAL_GLOBAL_TERMINAL_20261101: one15552frozenfullNnonorbitpackingnode447to448,notmethod/graph. Localappend1out2incompleteNO+min4/342singleton4blockersclose≤4outnet+1about864;globalone60swindowwarm864kOk/timecapstill864/rawdual-2384/nodes0LP21593UNKNOWN,no max864.68.299114264/90CPUincludesAPIimportfailureandpost,0sourceD4BFS/field/Lean/ARIS/newgraph. Source14cap2andbinarypremisepreserved;notfinalfalse twins. Actualavailable16416SingleExtensionseparatelylinked,no suite/PASS.14oldcells/153/43/47same;human15top exact,nobuild/reimport/ROOTownedwrites.
+- `2026-11-01T23:29:37Z` add_experiment: added exp:ddp-d16d4-current16416-combination-c-cover-cooperative-seeded-sat-terminal-20261101 [verdict=partial confidence=high]
+- `2026-11-01T23:29:37Z` COMBINATION_C_CURRENT16416_TERMINALS_20261101: one concretecurrent16416CombinationCexperimentnode,not4methods. Available4050/warm29UNKNOWN;cooperative342/all5886maximalHNOandK5all342fail;seeded162greedy21/fixedv12312MIPUNKNOWN;directSATsame1744holes3771varsatmost5cUNKNOWN/exit0,notUNSAT,56159conflicts204313decisions. Total92.342922089/120includesallvisiblefailurecosts,nograph/parameter/Lean. FixedClineSTOP,notgeneral16D4NO;human15top exact,153/43/47unchanged,no fullrebuild/state/progress/builder edits.
+- `2026-11-01T23:30:13Z` add_experiment: updated exp:ddp-d16d4-source15552-nonorbit-fulln-local-exchange-no-global-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-01T23:30:14Z` RESERVED_N0_EXISTING_NONORBIT_FOLLOWUP_20261101: existing448nodefollowuponly;449recordsunchanged. ReservedactualN0/192wholeW27/216mincapgroups,old14cap2,fullrowmapping;warm31kOk,30stimeLimit7811nodesbest31dualabout32UNKNOWN,no32proof/nograph. Nonorbit99.304068265/120includingpriorglobalandAPI;otherClinecostnotadded. No rebuild,index/query/gaphumantop exact,rootfilesuntouched,nofurthernumeric.
+- `2026-11-01T23:43:59Z` add_experiment: added exp:ddp-stale-d3d10-conder1250-frozen4536-protected1178-thirdcut-pintransfer-complete-no-20261101 [verdict=no confidence=high]
+- `2026-11-01T23:53:00Z` add_experiment: added exp:ddp-stale-d3d10-conder1250-three-matching-cuts-fourhelper-star-global-no-20261101 [verdict=no confidence=high]
+- `2026-11-02T00:12:23Z` add_experiment: added exp:ddp-d14d4-two6804-only-cross-arbitrary-matching-point-overlap-complete-no-20261102 [verdict=no confidence=high]
+- `2026-11-02T00:14:21Z` add_experiment: updated exp:ddp-stale-d3d10-conder1250-three-matching-cuts-fourhelper-star-global-no-20261101 [verdict=no confidence=high]
+- `2026-11-02T00:41:40Z` add_experiment: added exp:ddp-stale-d8d4-two684-k19-exact-point-assignment-shift-terminal-unknown-20261102 [verdict=partial confidence=high]
+- `2026-11-02T00:46:43Z` add_experiment: added exp:ddp-stale-d8d4-sampels672-all-right-matchings1344-complete-no-20261102 [verdict=no confidence=high]
+- `2026-11-02T00:49:19Z` add_experiment: added exp:ddp-d9d4-two-loz1100-all-right-matchings2200-complete-no-20261102 [verdict=no confidence=high]
+- `2026-11-02T00:53:23Z` add_experiment: updated exp:ddp-stale-d4d5-natural364-port-matching-two-core-cuts-star365-sample-20261101 [verdict=partial confidence=high]
+- `2026-11-02T01:03:38Z` add_experiment: updated exp:ddp-stale-d4d5-natural364-port-matching-two-core-cuts-star365-sample-20261101 [verdict=no confidence=high]
+- `2026-11-02T01:28:03Z` add_experiment: added exp:ddp-binary-multiroute-packets-c30-insertion-c33-triangle-family-terminal-20261102 [verdict=partial confidence=high]
+- `2026-11-02T01:57:08Z` add_experiment: updated exp:ddp-stale-d10d3-650-eight-fp-endpoint-transfer651-mip-unknown-20261101 [verdict=partial confidence=high]
+- `2026-11-02T01:57:08Z` add_experiment: added exp:ddp-d4-c192-two-binary-inverse-charts-and-cross-packet-repair3072-20261102 [verdict=partial confidence=high]
+- `2026-11-02T02:12:11Z` add_experiment: added exp:ddp-small-d4-rajiv252-bhakar104-cohort-two-cut-four-star-complete-no-20261102 [verdict=no confidence=high]
+- `2026-11-02T02:13:44Z` add_experiment: added exp:ddp-d5-fixed-binary240-four-global-coefficient-c23-cover5520-complete-no-20261102 [verdict=no confidence=high]
+- `2026-11-02T02:26:53Z` add_experiment: updated exp:ddp-d5-fixed-binary240-four-global-coefficient-c23-cover5520-complete-no-20261102 [verdict=partial confidence=high]
+- `2026-11-02T02:35:02Z` add_experiment: added exp:ddp-d4-actual3645-singlecut-maxstar3646-complete-no-and-two-nonbasebase-bound-20261102 [verdict=no confidence=high]
+- `2026-11-02T02:42:17Z` add_experiment: updated exp:ddp-h3-364-helper-minimum13-20261027 [verdict=yes confidence=high]
+- `2026-11-02T02:50:01Z` add_experiment: added exp:ddp-natural364-petersen19-subdivision-metric-and-port-assignment-raw-terminal-20261102 [verdict=partial confidence=high]

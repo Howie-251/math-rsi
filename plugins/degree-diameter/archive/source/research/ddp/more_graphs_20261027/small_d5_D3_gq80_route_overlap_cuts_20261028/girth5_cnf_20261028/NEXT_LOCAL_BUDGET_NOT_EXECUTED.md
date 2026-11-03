@@ -1,0 +1,13 @@
+> Execution update: this saved proposal has now been executed once in ../girth5_local_budget_cnf_20261028/. It returned UNKNOWN, not a graph or exclusion. Both old and updated exact models remain open; the earlier plan below is historical.
+
+# Next local route-budget question — NOT EXECUTED
+
+The girth>=5 GQ80 paired-matching CNF completed one30-second call with UNKNOWN, no witness or target graph. Do not extend that same call/seed/bit ordering merely because it did not succeed. The derived local budget below is paper VALID in ANALYSIS_GIRTH_SCOPE.md, but has not been evaluated, encoded, or given a new execution budget.
+
+On either40-vertex side let C(x) be the original closed collinearity set, size13, and let P be that side's matching. Put y=P(x), and let a_x be the number of selected own-side matching edges with both endpoints in C(x) minus{x}. Because matching edges are required noncollinear, these possible internal edges are the54 cross edges among four groups of three original neighbors.
+
+The girth5 generation rule guarantees B2=1+5+20=26 at every final vertex. On x's own side there are27 original far points; y is already matched at distance1, leaving26 to reach. Matching-first routes supply8 further far targets. Matching-last routes from the12 original collinear points supply exactly12−2a_x far targets; the2a_x endpoints of internal matching edges remain inside C(x). The four opposite-side matching relays supply at most12 far targets and cannot reach y because the mixed4-cycle clause forbids that. Thus fullD3 requires26<=8+(12−2a_x)+12, hence a_x<=3. The dual argument gives this condition at all80 vertices.
+
+One potential next experiment is to add these80 at-most-three constraints to the existing exact girth5/D3 model. A verified sequential counter could encode each54-variable row with linear-size auxiliary variables. This would preserve exactly the same integer graph family, using the new route accounting for propagation. Variable remapping and SAT-witness checks must keep original edge variables distinct from auxiliaries. It is not a new graph template, not a new theorem claim, and not proof that local necessary conditions ensure full coverage.
+
+No counter code, auxiliary-variable count, model, SAT call, time extension, or candidate has been created. First inspect actual current state/sole Wiki before choosing this as the next bounded task. A positive result still needs exported200 edges, one independent all80-root check and first-new-parameter review. UNKNOWN remains open and raw UNSAT without proof stays exploratory. The final goal is a complete new graph, not satisfying this local budget.

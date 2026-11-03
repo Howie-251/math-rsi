@@ -1,0 +1,158 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "bounded_incremental_delta",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T11:10:33.785565+00:00",
+  "summary": "PASS10: exact checker and independent original-graph/coverage verification support 21 exclusions among33 moment cases, with334 point evaluations and12 unexcluded cases. No LP feasibility or graph realization is inferred.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_TWELVE_EXTERIOR_MOMENT_REFINEMENT.md",
+      "scope": "Entire file",
+      "line_count": 98,
+      "size_bytes": 4544,
+      "mtime_utc": "2026-10-11T11:04:33.866995+00:00"
+    },
+    {
+      "path": "computations/dd82/n62/check_component_exterior_separators.py",
+      "scope": "Entire file",
+      "line_count": 59,
+      "size_bytes": 2440,
+      "mtime_utc": "2026-10-11T11:03:55.901838+00:00"
+    },
+    {
+      "path": "computations/dd82/n62/component_exterior_moments.json",
+      "scope": "Entire file",
+      "line_count": 3287,
+      "size_bytes": 42744,
+      "mtime_utc": "2026-10-11T11:01:00.797813+00:00"
+    }
+  ],
+  "details": {
+    "micro_claims_discharged": 10,
+    "issues": [],
+    "source_fixes": 0,
+    "checker_command": "python computations/dd82/n62/check_component_exterior_separators.py",
+    "checker_exit_code": 0,
+    "total_cases": 33,
+    "exact_separators": 21,
+    "pointwise_evaluations": 334,
+    "remaining_cases": [
+      [
+        12,
+        4,
+        4,
+        0,
+        1
+      ],
+      [
+        12,
+        4,
+        4,
+        1,
+        0
+      ],
+      [
+        16,
+        4,
+        3,
+        0,
+        0
+      ],
+      [
+        16,
+        4,
+        3,
+        0,
+        1
+      ],
+      [
+        16,
+        4,
+        3,
+        0,
+        2
+      ],
+      [
+        16,
+        4,
+        3,
+        1,
+        1
+      ],
+      [
+        16,
+        4,
+        3,
+        1,
+        2
+      ],
+      [
+        16,
+        4,
+        3,
+        2,
+        0
+      ],
+      [
+        16,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        20,
+        5,
+        3,
+        0,
+        2
+      ],
+      [
+        20,
+        5,
+        3,
+        1,
+        2
+      ],
+      [
+        24,
+        6,
+        3,
+        0,
+        2
+      ]
+    ],
+    "cases_per_k": {
+      "12": 4,
+      "16": 9,
+      "20": 9,
+      "24": 7,
+      "28": 4
+    },
+    "independent_checks": [
+      "Derived five incidence triples from integer bounds/balance",
+      "Regenerated all33 moments using general squares minus first moments",
+      "Compared all21 paper table coefficient/target rows to data",
+      "Direct polynomial evaluations on all associated domains",
+      "Compared paper remaining list to exact complement"
+    ],
+    "deterministic_integer_evidence": "accepted",
+    "lp_status_or_weights_used_as_proof": false,
+    "scope_exclusions": [
+      "Graph realization of unexcluded entries",
+      "Separate pure12x12 exclusion",
+      "Discovery LP/timing certification",
+      "Full order62 exclusion",
+      "Lean theorem"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated."
+  }
+}

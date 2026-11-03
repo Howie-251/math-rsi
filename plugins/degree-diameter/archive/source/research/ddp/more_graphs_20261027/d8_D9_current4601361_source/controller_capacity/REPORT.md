@@ -1,0 +1,9 @@
+# Bound93phase source: one raw-word prior
+
+The source producer confirmed the actual primary C93/field49477 recipe before this computation. Its normalized positive phases are `[1,22,12,85]` and inverse phases `[92,71,81,8]`. No phases were inferred merely from the order4601361. Source gauge constants, primality and field-action recovery remain in the producer's source notes; they were not recomputed here.
+
+The frozen prediction minraw>=49663 is supported. Aggregated dynamic programming counts exactly53804809 nonbacktracking prefixes of lengths0 through9, including the empty prefix. The minimum over93phases is **575896**, first at phase**33**; all minimum phases are `[33, 60]`, maximum581181. Counts by length are `[1, 8, 56, 392, 2744, 19208, 134456, 941192, 6588344, 46118408]`. `RESULT.json` contains the full93counts, histogram, per-depth phase counts and depth-nine last-dart counts.
+
+State is `(phase,lastdart)` with eight darts plus none8 only for the empty prefix. Appending the specific inverse of the last dart is forbidden. All arithmetic is exact Python integer addition, aggregated over small states; no list of the53.8million words is generated. The whole worker used 0.032571 CPU seconds under a three-second RLIMIT_CPU hard limit, including preparation and output. It exited successfully with no live handle and no compilation.
+
+This is one shared phase-only necessary-capacity diagnostic, not a field-image or diameter certificate. Distinct words can collide in the normal field. The thin phase33 may be useful as a prior, but this note does not impose a separate gate before every actual implicit BFS. The unique numerical producer may use complete identity BFS directly when its measured cost makes that preferable. No source/new graph, field endpoint image, parameter embedding, BFS or solver was evaluated here, and the source diameter was not reverified.

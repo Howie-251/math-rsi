@@ -1,0 +1,51 @@
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:44:4: error: `simp` made no progress
+Try this:
+  abel_nf
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:57:57: error: unsolved goals
+p : Fin 5
+t s : F
+x y : Vec
+⊢ act (matrix p) x + (act (matrix p) y + (t + s) • direction p) =
+    act (matrix p) x + (act (matrix p) y + (t • direction p + s • direction p))
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:58:32: warning: This simp argument is unused:
+  add_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵t̵e̵p̵V̵e̵c̵_̵e̵q̵,̵a̵c̵t̵_̵a̵d̵d̵,̵a̵d̵d̵_̵s̵m̵u̵l̵]̵[̲s̲t̲e̲p̲V̲e̲c̲_̲e̲q̲,̲ ̲a̲c̲t̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:61:49: error: unsolved goals
+p : Fin 5
+t s : F
+x : Vec
+⊢ t • act (matrix p) x + (t * s) • direction p = t • (act (matrix p) x + s • direction p)
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:62:33: warning: This simp argument is unused:
+  smul_add
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵t̵e̵p̵V̵e̵c̵_̵e̵q̵,̵a̵c̵t̵_̵s̵m̵u̵l̵,̵s̵m̵u̵l̵_̵a̵d̵d̵,̵s̵m̵u̵l̵_̵s̵m̵u̵l̵]̵[̲s̲t̲e̲p̲V̲e̲c̲_̲e̲q̲,̲ ̲a̲c̲t̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲s̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:62:42: warning: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵t̵e̵p̵V̵e̵c̵_̵e̵q̵,̵a̵c̵t̵_̵s̵m̵u̵l̵,̵s̵m̵u̵l̵_̵a̵d̵d̵,̵s̵m̵u̵l̵_̵s̵m̵u̵l̵]̵[̲s̲t̲e̲p̲V̲e̲c̲_̲e̲q̲,̲ ̲a̲c̲t̲_̲s̲m̲u̲l̲,̲ ̲s̲m̲u̲l̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:103:2: error: Type mismatch: After simplification, term
+  route_noise_smul ps (-1) q
+ has type
+  routeVec ps (-1 • q) 0 = -1 • routeVec ps q 0
+but is expected to have type
+  routeVec ps (-q) 0 = -routeVec ps q 0
+DegreeDiameter/Portfolio/F3Graph15552Linear.lean:126:2: error: `simp` made no progress
+'DegreeDiameter.Portfolio.F3Graph15552.affine_coset_solve' depends on axioms: [propext, sorryAx, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.coset_solution' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.inverse_basis_solution' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

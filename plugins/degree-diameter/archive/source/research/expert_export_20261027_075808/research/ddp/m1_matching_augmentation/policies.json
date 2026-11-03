@@ -1,0 +1,71 @@
+{
+  "policies": [
+    {
+      "id": 0,
+      "name": "single_orbit_internal_A",
+      "edge_class": 0,
+      "priority": "coverage"
+    },
+    {
+      "id": 1,
+      "name": "single_orbit_internal_B",
+      "edge_class": 1,
+      "priority": "coverage"
+    },
+    {
+      "id": 2,
+      "name": "single_orbit_cross_e",
+      "edge_class": 2,
+      "priority": "coverage"
+    },
+    {
+      "id": 3,
+      "name": "single_orbit_cross_412",
+      "edge_class": 3,
+      "priority": "coverage"
+    },
+    {
+      "id": 4,
+      "name": "single_orbit_cross_1338",
+      "edge_class": 4,
+      "priority": "coverage"
+    },
+    {
+      "id": 5,
+      "name": "single_orbit_cross_186",
+      "edge_class": 5,
+      "priority": "coverage"
+    },
+    {
+      "id": 6,
+      "name": "single_orbit_cross_45",
+      "edge_class": 6,
+      "priority": "coverage"
+    },
+    {
+      "id": 7,
+      "name": "mixed_balanced_coverage",
+      "edge_class": null,
+      "priority": "coverage"
+    },
+    {
+      "id": 8,
+      "name": "mixed_low_critical5",
+      "edge_class": null,
+      "priority": "critical5"
+    },
+    {
+      "id": 9,
+      "name": "mixed_endpoint_separation",
+      "edge_class": null,
+      "priority": "separation"
+    }
+  ],
+  "candidate_count": 10,
+  "matching_size": 6,
+  "randomness": false,
+  "coverage_rule": "For each oriented edge (a,b), use B_G^4(a) union B_G^3(b) for u and the swapped expression for v. Rank balanced union coverage, then coverage by two different selected edges.",
+  "critical5_rule": "Number of unordered old distance-5 pairs whose every shortest path uses this edge; this is exact one-edge damage among old distance-5 pairs, not all deletion damage.",
+  "separation_rule": "Minimum and sum of original distances between the new edge endpoints and all previously selected endpoints.",
+  "tie_breaks": "Deterministic old edge index and orientation. Skip a completed matching already produced, including global u/v exchange."
+}

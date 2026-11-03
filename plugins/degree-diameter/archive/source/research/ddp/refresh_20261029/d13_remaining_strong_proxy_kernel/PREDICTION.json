@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN_BEFORE_KERNEL_EXECUTION",
+  "source_graph": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/continuation/graphs/graph_d13_D5_n51457.edges",
+  "source_n": 51457,
+  "source_m": 324863,
+  "target_maximum_degree": 13,
+  "target_diameter": 5,
+  "candidate_pool": "The original91 frozen prototypes that failed either initial or continuation search (51 total), retaining exactly those whose complete original mandatory set is still free in the actual fixed51457 graph (expected38). Freeze their literal labels and current P before any kernel DP.",
+  "eligibility": "Current prototype v has exactly one degree13 neighbor f; P=N_current(v) minus f, including all newborn neighbors, is entirely degree<13 and |P|<=13.",
+  "certificate": "N_current(f) subset closedB1(P union A), where A contains distinct current free vertices outside P and |A|<=13-|P|.",
+  "exact_domain": "For every residual r in N(f) minus closedB1(P), all useful guards are exactly current-free vertices in closedB1(r), excluding P. Use a shortest-union bitmask DP on all nonzero guard masks, capped at the actual remaining budget. Identical masks may share one least-label representative for this single helper.",
+  "prediction": "At least one of this fixed38 pool satisfies the full strong certificate within its actual guard budget. Complete negative results refute only this strong certificate prediction, not unrestricted R4 extension.",
+  "old_scope_read": {
+    "whole38_kernel_previously_completed": false,
+    "nearest_single_prototype_scope": "second_generation_singlefault/PROXY_KERNEL_RESULT.json, prototype51445 only, unrelated to the old38 pool",
+    "existing_v4580_strong_negative": "refresh_20261029/d13_joint_capacity_read/ANALYSIS.json proves five pairwise-disjoint closedB1 support groups require at least5 guards. Reuse this proof if current P still matches its9 mandatory pins; do not rerun that closed DP."
+  },
+  "source_edge_reads": 1,
+  "workers": 1,
+  "CPU_budget_seconds": 20,
+  "stop": "Stop immediately after the first proof-backed hit; otherwise finish the frozen38 once and stop. No other prototypes, larger proxy radius, seeds, R4 scoring, solver calls, graph generation, or source BFS.",
+  "owner_final_acceptance": "Root constructs the complete51458 graph and performs the unique independent selected-root acceptance after a hit.",
+  "main_Wiki_changed": false
+}

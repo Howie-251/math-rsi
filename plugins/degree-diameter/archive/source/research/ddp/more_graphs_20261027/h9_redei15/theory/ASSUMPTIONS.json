@@ -1,0 +1,42 @@
+{
+  "status": "CONDITIONAL_PAPER_PROOF_COMPLETE",
+  "raw_set": "{[1,x,x^5]:x in F9} union {[0,1,m]:m a secant slope}",
+  "ambient_requirement": "A totally singular F9 projective plane in the actual Q(6,9) coordinate model.",
+  "inherited_interface": [
+    "beta(p,x)=0 implies H9-incidence point distance <=4.",
+    "Actual sigma conversion and saved pi do not increase the even point-walk length.",
+    "Every bare-core vertex has a raw point preimage.",
+    "All distinct pi(B) images are mandatory pins."
+  ],
+  "folding_interface": {
+    "scope": "F3-defined plane with F3 basis; PGL3(F3) orbit only.",
+    "tau_stable": true,
+    "raw_fixed_points": 5,
+    "raw_nonfixed_tau_pairs": 5,
+    "actual_fiber_types": [
+      "singleton",
+      "unsplit {p,tau(p)}"
+    ],
+    "pin_count": "10 + number_of_split_pairs_in_B",
+    "delta11_max_splits": 1,
+    "delta12_max_splits": 2,
+    "anchor_budget": "Delta - 10 - number_of_split_pairs_in_B"
+  },
+  "required_producer_checks": [
+    "Each actual pin has an old degree slot; selected neighbors are distinct.",
+    "Selected mandatory pins plus anchors R4-cover every current graph vertex, including extras.",
+    "Actual resulting degrees satisfy the cap."
+  ],
+  "not_established": [
+    "A degree-legal pool member exists.",
+    "All extras are automatically covered.",
+    "Arbitrary new-new pairs have distance <=5.",
+    "A new graph or lower bound."
+  ],
+  "evidence": [
+    "research/ddp/global_coverage_20261027/h9_quadric_line_rule/REPORT.md",
+    "research/ddp/more_graphs_20261027/h9_baer_plane_pool/THEOREM.md",
+    "research/ddp/more_graphs_20261027/h9_baer_galois_plane_filter/PAIRING.json",
+    "research/ddp/more_graphs_20261027/h9_redei15/SHAPE.json"
+  ]
+}

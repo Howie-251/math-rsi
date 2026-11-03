@@ -1,0 +1,42 @@
+{
+  "timestamp_UTC": "2026-10-28T02:54:24.657735+00:00",
+  "status": "FROZEN_BEFORE_THREE_CONTROL_TESTS",
+  "target_Delta": 6,
+  "target_D": 4,
+  "hypothetical_n": 684,
+  "savedL": 441,
+  "source": "Knownverified Michel684 two-type Cayleyvoltage source; m38/n9/r23, four internalneighbors pertype andthreecrossmatchings",
+  "question": "Is any one entire cross matching redundant for four-step coverage?",
+  "prediction": "Atleastone ofthethree sourcecrossmatchings may be removed while retainingD4. This is a speculative jointcoverage prediction to be checked, not inferred from degree/order.",
+  "structural_intuition": "The source has internal shortpaths on both types and three independently shifted cross matchings. Deleting a complete matching tests actual redundancy between whole route classes rather than local endpoint repair. Retaining left group action gives two root orbits.",
+  "controls": [
+    {
+      "deleted_cross_voltage": [
+        2,
+        2
+      ]
+    },
+    {
+      "deleted_cross_voltage": [
+        2,
+        6
+      ]
+    },
+    {
+      "deleted_cross_voltage": [
+        24,
+        3
+      ]
+    }
+  ],
+  "guarantees": "For each control, keep all vertices and other edges:684/2052/simple6regular. Retained leftgroup action remains transitive on eachtype.",
+  "coverage_test": "For eachdeletedlabel compute all<=4endpoint images atbothidentityroot types; record firstmissing target/path-class andthinphase counts. A failure atone root rejects thatcontrol, notallsource degree6 variants.",
+  "budget": {
+    "controls": 3,
+    "aggregate_CPU_seconds": 15,
+    "workers": 1,
+    "old_source_BFS": 0,
+    "seeds_or_extensions": 0
+  },
+  "scope": "Exactly the original three cross matching deletions, not other voltages/phases/groups/6regular684 graphs. No continuing earlier p43 transfer scope."
+}

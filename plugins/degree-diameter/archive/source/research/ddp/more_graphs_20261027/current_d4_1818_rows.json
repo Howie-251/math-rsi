@@ -1,0 +1,241 @@
+[
+  {
+    "id": "ddp-d13-newborn40-fullstar-blocked-20261027",
+    "title": "51457新生40顶点全邻域检查：全部被满度阻断",
+    "family": "Prototype-neighborhood extension",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 13,
+    "target_D": 5,
+    "savedL": 51417,
+    "n": {
+      "actual": null,
+      "hypothetical": 51458
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "仅51417..51456这40个新顶点的完整Nv一次扫描，合法fullstar0。satN hist1:1,2:7,3:9,4:10,5:4,6:2,7:3,8:1,9:1,10:1,11:1。旧51417已fullstar阻断且degree单调，因此当前51457整图普通false-twin首步不可行。",
+    "failure_or_result": "仅51417..51456这40个新顶点的完整Nv一次扫描，合法fullstar0。satN hist1:1,2:7,3:9,4:10,5:4,6:2,7:3,8:1,9:1,10:1,11:1。旧51417已fullstar阻断且degree单调，因此当前51457整图普通false-twin首步不可行。",
+    "lesson_and_restart_condition": "不刷新原91nearstar失败，不把唯一单满邻点诊断自动派发为新删pin尾部。关闭的是保完整Nv复制，不排更一般扩张。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "prototypes": 40,
+      "candidates": 0,
+      "CPU_seconds": 0.24696204,
+      "BFS": 0,
+      "R4": 0,
+      "newgraphs": 0
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/newborn_fullstar_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/newborn_fullstar_probe/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d11-d4-current3645-source-20261027",
+    "title": "(11,4)3645新源恢复：W9双图+201吸收插入，非45×81",
+    "family": "W9 absorbed-deletion insertion",
+    "record_type": "source-recovery",
+    "target_Delta": 11,
+    "target_D": 4,
+    "savedL": 3645,
+    "n": {
+      "actual": 3645,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "实际3645/20044，3638个degree11和7个degree10，free=[3456,3489,3564,3571,3583,3603,3643]均在201插入层。作者源为3444点W9 incidence-double+164spreadtwins，非45×81纤维；81分组不equitable。minSatN9，单满点模式不适用。",
+    "failure_or_result": "实际3645/20044，3638个degree11和7个degree10，free=[3456,3489,3564,3571,3583,3603,3643]均在201插入层。作者源为3444点W9 incidence-double+164spreadtwins，非45×81纤维；81分组不equitable。minSatN9，单满点模式不适用。",
+    "lesson_and_restart_condition": "先由source证据推翻因子分解猜测，转实际point-copy/line-copy/twin吸收路线。当前3444诱导已有457原边被删，不能把旧几何覆盖直接继承为current图覆盖。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "source_n": 3645,
+      "source_m": 20044,
+      "degree10": 7,
+      "degree11": 3638,
+      "min_saturated_neighbors": 9,
+      "naive81fibers_prediction": "REFUTED",
+      "profile_CPU": 0.04171,
+      "BFS": 0
+    },
+    "outcome_class": "source-recovery",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/REPORT.md",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d11-d4-free7-monotone-barrier-20261027",
+    "title": "(11,4)七空余点R3缺743core：全部保边增点类关闭",
+    "family": "W9 absorbed-deletion insertion",
+    "record_type": "positive-local-port-obstruction",
+    "target_Delta": 11,
+    "target_D": 4,
+    "savedL": 3645,
+    "n": {
+      "actual": null,
+      "hypothetical": 3646
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "all7free的source R3覆盖2902/3645，遗漏743全属原3444core，layer201全覆盖；首witness6到全部7free距离4。故任意新点到6的≤4路最后一条新增edge落在originalfree port，余source路径必须≤3而实际均4，矛盾。",
+    "failure_or_result": "all7free的source R3覆盖2902/3645，遗漏743全属原3444core，layer201全覆盖；首witness6到全部7free距离4。故任意新点到6的≤4路最后一条新增edge落在originalfree port，余source路径必须≤3而实际均4，矛盾。",
+    "lesson_and_restart_condition": "这排除保全部source旧边、max11下任意数量helpers，甚至新增old-old port边的扩张；不排删边吸收。实际障碍是新点缺旧core入口，不是七点子集选择或坏对微调。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "ports": 7,
+      "R3_covered": 2902,
+      "R3_missing": 743,
+      "missing_layer201": 0,
+      "witness": 6,
+      "CPU_seconds": 0.01014,
+      "newgraphs": 0
+    },
+    "outcome_class": "positive-local-port-obstruction",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/REPORT.md",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/RESULT.json",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/COVER_PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/COVER_RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d11-d4-twoedge-absorption2673-20261027",
+    "title": "(11,4)两host边吸收2673项全闭：47新根通过但旧对损坏",
+    "family": "W9 absorbed-deletion insertion",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 11,
+    "target_D": 4,
+    "savedL": 3645,
+    "n": {
+      "actual": null,
+      "hypothetical": 3646
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "冻结实际存在两point-copy/host边2673项，删F，新x连4端点+all7free=11。2626项source R3(S)不足，47项新根完整但旧旧D4反例，0新图、0未试/UNKNOWN。代表ordinal127点p40，3352到2244在修改后>4，不猜精确D或全图坏对数。",
+    "failure_or_result": "冻结实际存在两point-copy/host边2673项，删F，新x连4端点+all7free=11。2626项source R3(S)不足，47项新根完整但旧旧D4反例，0新图、0未试/UNKNOWN。代表ordinal127点p40，3352到2244在修改后>4，不猜精确D或全图坏对数。",
+    "lesson_and_restart_condition": "新根覆盖不是完整图验收。精确低成本验证证明：F端点⊂S给dist_G-F(v,S)=dist_G(v,S)；旧pair若两端均outsideR1_G(Fendpoints)则任何≤4路不经F，故检查至多44旧根+新根完整而非抽样。全两edge+7free固定类已闭；新paired-switch吸收是不同删除集合，须另有预测。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "candidates": 2673,
+      "R3_screen_failures": 2626,
+      "R3_passers": 47,
+      "oldpair_failures": 47,
+      "modified_root_BFS": 1432,
+      "max_old_roots": 44,
+      "endpoint_R3_preparations": 1964,
+      "CPU_total": 2.599767662,
+      "native_CPU": 0.100774,
+      "newgraphs": 0,
+      "source_allBFS_revalidation": 0
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_pair_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_pair_probe/RESULT.json",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_pair_probe/PROOF.md",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_pair_probe/frozen.json",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_pair_probe/first_oldpair_witness.json"
+    ]
+  },
+  {
+    "id": "ddp-d12-d4-current6156-source-20261027",
+    "title": "(12,4)6156真实源：76×81成立，全12正则无增点接口",
+    "family": "Four-base Z19 route-chart",
+    "record_type": "source-recovery",
+    "target_Delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "n": {
+      "actual": 6156,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "6156/36936全degree12、free0。76=4×19 controller，4底点permutations a=(0123),b=(0132)及Z19 voltages；F3^4每fiber81，152相邻fiberpairs每243边，每点四fibers各3neighbors，literal quotient匹配recipe，α/βorder76不是involutions。",
+    "failure_or_result": "6156/36936全degree12、free0。76=4×19 controller，4底点permutations a=(0123),b=(0132)及Z19 voltages；F3^4每fiber81，152相邻fiberpairs每243边，每点四fibers各3neighbors，literal quotient匹配recipe，α/βorder76不是involutions。",
+    "lesson_and_restart_condition": "零free仅关闭固定cap12保全部旧边的连通增点。新80controller必须改变生成规则；作者已报告固定strict wordfilter的19..27voltage结果不原样复跑，但后续分析发现strict条件仅充分，不能自动上升为完整图族排除。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "source_n": 6156,
+      "source_m": 36936,
+      "degree12": 6156,
+      "free_vertices": 0,
+      "controller_n": 76,
+      "fiber_n": 81,
+      "fiber_pairs": 152,
+      "edges_per_fiber_pair": 243,
+      "profile_CPU": 0.067733,
+      "BFS": 0
+    },
+    "outcome_class": "source-recovery",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/REPORT.md",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d12-d4-6156-route-form-analysis-20261027",
+    "title": "6156对照：19形式容量预测被反驳，发现R2筛选可放宽",
+    "family": "Four-base Z19 route-chart",
+    "record_type": "source-route-analysis",
+    "target_Delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "n": {
+      "actual": null,
+      "hypothetical": 6480
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "实际chart reduced4共108：100rank4、8rank3，与作者badwords一致。G4+even至少23不同形式，x0形式容量最小2277>20×81，故不是简单局部19容量上限。原同一voltage向量mod19证书全覆盖，mod20 strict与wide各漏54controller槽，x0 word-image缺3708 endpoints；未构造6480图。",
+    "failure_or_result": "实际chart reduced4共108：100rank4、8rank3，与作者badwords一致。G4+even至少23不同形式，x0形式容量最小2277>20×81，故不是简单局部19容量上限。原同一voltage向量mod19证书全覆盖，mod20 strict与wide各漏54controller槽，x0 word-image缺3708 endpoints；未构造6480图。",
+    "lesson_and_restart_condition": "旧Mizuno pencil引理对任意reduced2word适用，不要求其为最短路；作者程序只豁免最短dist2，故20..27 strict-filter无passer不等于图族数学排除。新检验应只改有证明依据的I∪R2∪G4 admissibility，并先冻结zero-triangle差异切片，不重旧strict负范围。",
+    "unclosed_gap": "No complete newgraph in this finite experiment; unrelatedrules and finalLean remain open.",
+    "other_metrics": {
+      "reduced4_words": 108,
+      "rank4_words": 100,
+      "rank3_words": 8,
+      "min_full_certificate_forms": 23,
+      "min_x0_form_incidence_capacity": 2277,
+      "local19_capacity_prediction": "REFUTED",
+      "fixed_voltage_profiles": 2,
+      "mod20_strict_missing_controller_slots": 54,
+      "mod20_wide_missing_controller_slots": 54,
+      "mod20_x0_word_image_missing_endpoints": 3708,
+      "count_type": "wordimage/sourcezero endpoint diagnostics, not unorderedbadpairs",
+      "CPU_seconds": 0.011393669,
+      "graph_generated": false,
+      "BFS": 0,
+      "voltage_grid_assignments": 0
+    },
+    "outcome_class": "source-route-analysis",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/REPORT.md",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/RESULT.json",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/PENCIL_APPLICABILITY.json",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/NUMERIC_WORD_TABLES.json",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/RESULT.json"
+    ]
+  }
+]

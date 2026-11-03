@@ -1,0 +1,14 @@
+{
+  "frozen_before_search": true,
+  "question": "Can two adjacent new vertices, each attached to three disjoint degree3 ports of the natural364-point H3polarity host, yield a complete366-point degree4 diameter5 graph?",
+  "prediction": "At least one disjoint pair of old-port triples satisfies both complete mutual-shortcut coverage conditions.",
+  "source_expected": {"n":364,"m":714,"degree_histogram":{"3":28,"4":336},"binding":"Natural H3_graph; sourceagent exports exact host and shared portball cache before launch"},
+  "public_Delorme364": "Different4regular728-edge host; not modified or used for artificial freeports",
+  "target": {"degree":4,"diameter":5,"hypothetical_n":366,"savedL":364,"actual_n":null,"actual_D":null},
+  "complete_conditions": ["R4_old(Na) union R3_old(Nb)=all364","R3_old(Na) union R4_old(Nb)=all364","Na,Nb aredisjoint3-subsets ofthe28degree3ports"],
+  "full_graph_proof": "Retainalloldedges; add364--365,364--Na,365--Nb. Both newroot-old distances<=5 follow exactly from thetwo unions; newroots adjacent; old-old inheritsD5.",
+  "scope": {"port_triples":3276,"unordered_disjoint_triple_pairs":3767400,"order":"lex porttriples,lex unorderedpair,firsthitstop"},
+  "budget": "one worker,parent+compile+native<=45CPU; first1000 eligiblepair profile includedonce; completefinitepassifforecastfits",
+  "stopping": "Firstfullgraph or finitepairspacecomplete or CPU/profileUNKNOWN; no thirdroot,newfield,oldedge deletion,orbadpaircurve",
+  "port_balls": "Consume sourceagent current-host shared R3/R4cache; no duplicate computation and no oldsource all-rootBFS"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PAPER_COMPLETE_GLOBAL_EXCLUSION_NOT_ESTABLISHED",
+  "validated": {
+    "sum_a_per_side": 80,
+    "five_cycles_global": 160,
+    "five_cycles_at_root": "8+a_x",
+    "same_side_targets_excluding_mate": 26,
+    "ownfirst_distinct": 8,
+    "ownlast_distinct": "12-2a_x",
+    "relay_route_occurrences": 12,
+    "exact_excess": "E_x=b_x+c_x+d_x=6-2a_x+delta_x",
+    "sum_excess_per_side": "80+sum(delta_x)",
+    "D3_required_excess_per_side": 80,
+    "sufficient_global_obstruction_not_proved": "sumE>=82 on either side"
+  },
+  "definitions": {
+    "b": "ownfirst/ownlast support intersection",
+    "d": "12 minus distinct relay endpoints",
+    "c": "relay support intersect ownfirst-or-ownlast support",
+    "delta": "number of old same-side far nonmate targets not covered from this root"
+  },
+  "prior_cut_equivalence": "2a_x+b_x<=6 is exactly the existing mate-conditioned P(Cx) into Zxy at-least6 cut; not a newly discovered constraint.",
+  "unclosed_joint_condition": "Both sides must satisfy d_x+c_x=6-2a_x-b_x simultaneously under matching involutions and mixed rectangle prohibitions. No forced-overlap bound beyond this identity is established.",
+  "specific_question": "At any a=3 root, do the four opposite matching image lines necessarily collide with one another or the fixed14 own endpoints? FullD3 would require an exact8+6+12 partition. This root type is not forced to exist.",
+  "conditional_unique_route_pairs_per_side_at_least": 480,
+  "conditional_unordered_far_nonmate_pairs_per_side": 520,
+  "conditional_unordered_route_occurrences_per_side": 560,
+  "scalar_sums_not_contradictory": {
+    "a_every_root": 2,
+    "E_every_root": 2,
+    "meaning": "arithmetic profile only, not an actual matching/graph"
+  },
+  "assumptions": [
+    "W(3,3) incidence source",
+    "P/Q noncollinear/nonintersecting perfect matchings",
+    "no mixed four-cycle",
+    "no commuting/automorphism assumption"
+  ],
+  "new_graphs": 0,
+  "BFS": 0,
+  "solver_calls": 0,
+  "numerical_experiments": 0,
+  "global_family_excluded": false,
+  "new_independent_method": false,
+  "inherited_scope": "../girth5_cnf_20261028/ANALYSIS_GIRTH_SCOPE.md"
+}

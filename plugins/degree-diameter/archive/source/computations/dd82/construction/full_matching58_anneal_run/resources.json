@@ -1,0 +1,62 @@
+{
+  "parent_run_id": "dd82-v3-f9-c7-20261013-0749",
+  "optimization_runs": 1,
+  "process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/search",
+      "search",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/seed.edges",
+      "119",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 119.003882,
+    "wall_seconds": 119.57640893757343,
+    "pinned_cpu": 1,
+    "threads": 1,
+    "cpu_limit_seconds": 120,
+    "wall_limit_seconds": 240
+  },
+  "search_report_complete": true,
+  "search": {
+    "status": "BOUNDED_HEURISTIC_COMPLETED",
+    "stop_reason": "cpu_budget",
+    "initial_bad_pairs": 105,
+    "best_bad_pairs": 24,
+    "current_bad_pairs": 32,
+    "proposals": 50232451,
+    "accepted": 2588750,
+    "accepted_uphill": 981994,
+    "random_seed": 2026101301,
+    "temperature_period_proposals": 250000,
+    "temperature_high": 2.5,
+    "temperature_low": 0.15,
+    "cpu_seconds": 119.001425,
+    "cpu_budget_seconds": 119,
+    "threads": 1,
+    "chain_restarts": 0,
+    "complete_enumeration": false
+  },
+  "independent_bfs_process": {
+    "command": [
+      "/opt/conda/bin/python",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/verify_hs_candidate.py",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/candidate.best.json"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 0.0312940000000026,
+    "wall_seconds": 0.03367523476481438,
+    "pinned_cpu": 1,
+    "threads": 1,
+    "cpu_limit_seconds": 5,
+    "wall_limit_seconds": 10
+  },
+  "independent_bfs": {
+    "n": 58,
+    "edges": 232,
+    "max_degree": 8,
+    "bad_pair_count": 24,
+    "diameter": 3,
+    "valid_target": false
+  }
+}

@@ -1,0 +1,29 @@
+DegreeDiameter/N62TriangleParity.lean:24:2: error: unsolved goals
+case pos
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+r a b w u v : V
+hd : Disjoint {r, a, b} {w, u, v}
+hR : ∀ (x : V), defectMatrix G r x = ((if x = a then 1 else 0) + if x = b then 1 else 0) + if x = w then 1 else 0
+hA : ∀ (x : V), defectMatrix G a x = ((if x = r then 1 else 0) + if x = b then 1 else 0) + if x = u then 1 else 0
+hB : ∀ (x : V), defectMatrix G b x = ((if x = r then 1 else 0) + if x = a then 1 else 0) + if x = v then 1 else 0
+y : V
+hy : y ∈ {r, a, b}
+hy' : y ∉ {w, u, v}
+⊢ ¬y = r → ¬y = a → ¬y = b → ¬defectMatrix G r y = 1 ∧ ¬defectMatrix G a y = 1 ∧ ¬defectMatrix G b y = 1
+DegreeDiameter/N62TriangleParity.lean:25:27: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [triangleMateSet, hy,̵ ̵h̵y̵']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62TriangleParity.lean:29:27: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [triangleMateSet, hy̵,̵ ̵h̵R, hA, hB, hyr, hya, hyb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/N62TriangleParity.lean:54:25: error(lean.unknownIdentifier): Unknown constant `Finset.disjoint_self.mp`

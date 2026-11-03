@@ -1,0 +1,55 @@
+{
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "48",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/triple_full61_grid_run/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/triple_full61_grid_run/proof.lrat"
+  ],
+  "exit_code": 20,
+  "wall_timeout": false,
+  "termination_signal": null,
+  "cpu_seconds": 18.810613000000004,
+  "wall_seconds": 19.30320145189762,
+  "cpu_budget_seconds": 50,
+  "wall_budget_seconds": 70,
+  "cpu_affinity": [
+    1
+  ],
+  "threads": 1,
+  "memory_limit_bytes": 4294967296,
+  "per_file_limit_bytes": 268435456,
+  "status": "CHECKED_UNSAT_TEMPLATE",
+  "scope": "Full61 triple-defect template with the proved U-by-Ta coordinates on Z; every original connected triple target has these labels; no C/sigma choice, B simplicity or graph automorphism assumption",
+  "solver_calls": 1,
+  "variables": 151179,
+  "clauses": 484629,
+  "proof_checked": true,
+  "proof_bytes": 39635178,
+  "retained_internal_solver_state": false,
+  "mathematical_conclusion": "The saved full61 template CNF is certified UNSAT; applying this to every connected triple-defect graph also requires the documented reduction and source review",
+  "certificate_check": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+      "--no-trim",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/triple_full61_grid_run/input.cnf",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/n61/triple_full61_grid_run/proof.lrat"
+    ],
+    "exit_code": 20,
+    "wall_timeout": false,
+    "termination_signal": null,
+    "cpu_seconds": 0.472412,
+    "wall_seconds": 0.5669057480990887,
+    "cpu_budget_seconds": 50,
+    "wall_budget_seconds": 70,
+    "cpu_affinity": [
+      1
+    ],
+    "threads": 1,
+    "memory_limit_bytes": 4294967296,
+    "per_file_limit_bytes": null,
+    "verified": true,
+    "scope": "Exact saved input.cnf only; mathematical reduction review remains separate"
+  }
+}

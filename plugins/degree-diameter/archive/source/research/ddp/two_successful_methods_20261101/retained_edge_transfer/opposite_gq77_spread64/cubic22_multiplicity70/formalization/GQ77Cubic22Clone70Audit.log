@@ -1,0 +1,60 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → Nat → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, @LE.le Nat instLENat (@SimpleGraph.Walk.length V G u v p) D
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone70.center : GQ77Cubic22Clone70.CloneIndex →
+  GQ77Cubic22Clone70.Source.Vertex :=
+fun k => GQ77Cubic22Clone65.center (GQ77Cubic22Clone70.clonePair k).2
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone70.graph : SimpleGraph GQ77Cubic22Clone70.Vertex :=
+FullNeighborhoodClones.graph OppositeGQ77Spread.graph GQ77Cubic22Clone70.center
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone70.label : GQ77Cubic22Clone70.Vertex ≃ Fin 166650 :=
+(OppositeGQ77Spread.label.sumCongr (Equiv.refl GQ77Cubic22Clone70.CloneIndex)).trans finSumFinEquiv
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.center_source_label (k : GQ77Cubic22Clone70.CloneIndex) :
+  ↑(OppositeGQ77Spread.label (GQ77Cubic22Clone70.center k)) =
+    ↑(OppositeGQ77Spread.spread (GQ77Cubic22Clone65.clonePair (GQ77Cubic22Clone70.clonePair k).2).2) +
+      400 * ↑(GQ77Cubic22Clone65.ovoid (GQ77Cubic22Clone65.clonePair (GQ77Cubic22Clone70.clonePair k).2).1)
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.clone_label (c : Fin 6) (b : Fin 1100) :
+  ↑(GQ77Cubic22Clone70.cloneLabel (c, b)) = ↑b + 1100 * ↑c
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.label_old (v : GQ77Cubic22Clone70.Source.Vertex) :
+  ↑(GQ77Cubic22Clone70.label (Sum.inl v)) = ↑(OppositeGQ77Spread.label v)
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.label_new (k : GQ77Cubic22Clone70.CloneIndex) :
+  ↑(GQ77Cubic22Clone70.label (Sum.inr k)) = 160050 + ↑k
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.label_new_copy (c : Fin 6) (i : Fin 22) (j : Fin 50) :
+  ↑(GQ77Cubic22Clone70.label (Sum.inr (GQ77Cubic22Clone70.cloneLabel (c, GQ77Cubic22Clone65.cloneLabel (i, j))))) =
+    160050 + 1100 * ↑c + 50 * ↑i + ↑j
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.load_le_six (w : GQ77Cubic22Clone70.Source.Vertex) :
+  FullNeighborhoodClones.load OppositeGQ77Spread.graph GQ77Cubic22Clone70.center w ≤ 6
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.source_no_isolated (v : GQ77Cubic22Clone70.Source.Vertex) :
+  ∃ w, OppositeGQ77Spread.graph.Adj v w
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.old_walk_bound_iff (u v : GQ77Cubic22Clone70.Source.Vertex) (n : ℕ) :
+  (∃ p, p.length ≤ n) ↔ ∃ p, p.length ≤ n
+DegreeDiameter.Portfolio.GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3 :
+  Fintype.card GQ77Cubic22Clone70.Vertex = 166650 ∧
+    (∀ (v : GQ77Cubic22Clone70.Vertex), GQ77Cubic22Clone70.graph.degree v ≤ 70) ∧
+      DiameterAtMost GQ77Cubic22Clone70.graph 3 ∧ ¬DiameterAtMost GQ77Cubic22Clone70.graph 2
+theorem DegreeDiameter.Portfolio.GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3 : Fintype.card
+      GQ77Cubic22Clone70.Vertex =
+    166650 ∧
+  (∀ (v : GQ77Cubic22Clone70.Vertex), GQ77Cubic22Clone70.graph.degree v ≤ 70) ∧
+    DiameterAtMost GQ77Cubic22Clone70.graph 3 ∧ ¬DiameterAtMost GQ77Cubic22Clone70.graph 2 :=
+⟨GQ77Cubic22Clone70.card_vertex,
+  ⟨GQ77Cubic22Clone70.degree_le_seventy,
+    ⟨GQ77Cubic22Clone70.diameterAtMost_three, GQ77Cubic22Clone70.not_diameterAtMost_two⟩⟩⟩
+def DegreeDiameter.Portfolio.GQ77Cubic22Clone70.FinalClaim : Prop :=
+Fintype.card GQ77Cubic22Clone70.Vertex = 166650 ∧
+  (∀ (v : GQ77Cubic22Clone70.Vertex), GQ77Cubic22Clone70.graph.degree v ≤ 70) ∧
+    DiameterAtMost GQ77Cubic22Clone70.graph 3 ∧ ¬DiameterAtMost GQ77Cubic22Clone70.graph 2
+'DegreeDiameter.Portfolio.GQ77Cubic22Clone70.load_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Cubic22Clone70.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

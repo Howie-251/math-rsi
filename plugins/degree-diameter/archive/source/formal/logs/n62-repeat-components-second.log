@@ -1,0 +1,51 @@
+✖ [1162/1162] Building DegreeDiameter.N62RepeatComponents (24s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatComponents.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatComponents.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatComponents.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatComponents.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatComponents.setup.json --json
+error: DegreeDiameter/N62RepeatComponents.lean:51:9: unknown tactic
+error: DegreeDiameter/N62RepeatComponents.lean:47:59: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+B : Matrix V V ℤ
+k : ℤ
+f : V → ℤ
+h0 : ∀ (x y : V), 0 ≤ B x y
+hsym : ∀ (x y : V), B x y = B y x
+hrow : ∀ (x : V), ∑ y, B x y = k
+hf : ∀ (x : V), ∑ y, B x y * f y = k * f x
+x y : V
+hxy : 0 < B x y
+u v : V
+a✝ : v ∈ Finset.univ
+⊢ B u v * f u * f u - B u v * f u * f v = f u * (f u * B u v) - f u * (B u v * f v)
+error: DegreeDiameter/N62RepeatComponents.lean:45:58: unsolved goals
+case calc.step
+V : Type u_1
+inst✝ : Fintype V
+B : Matrix V V ℤ
+k : ℤ
+f : V → ℤ
+h0 : ∀ (x y : V), 0 ≤ B x y
+hsym : ∀ (x y : V), B x y = B y x
+hrow : ∀ (x : V), ∑ y, B x y = k
+hf : ∀ (x : V), ∑ y, B x y * f y = k * f x
+x y : V
+hxy : 0 < B x y
+u : V
+⊢ f u * (f u * ∑ v, B u v - ∑ v, B u v * f v) = 0
+error: DegreeDiameter/N62RepeatComponents.lean:44:47: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+B : Matrix V V ℤ
+k : ℤ
+f : V → ℤ
+h0 : ∀ (x y : V), 0 ≤ B x y
+hsym : ∀ (x y : V), B x y = B y x
+hrow : ∀ (x : V), ∑ y, B x y = k
+hf : ∀ (x : V), ∑ y, B x y * f y = k * f x
+x y : V
+hxy : 0 < B x y
+hz : ∀ (u : V), ∑ v, B u v * f u * (f u - f v) = 0
+⊢ f x = f y
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62RepeatComponents
+error: build failed

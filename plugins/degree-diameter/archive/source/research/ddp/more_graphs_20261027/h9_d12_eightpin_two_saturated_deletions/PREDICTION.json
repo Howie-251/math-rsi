@@ -1,0 +1,13 @@
+{
+  "prediction_id":"TWO_SATURATED_PIN_DELETIONS_ON_42397",
+  "frozen_before_checks":true,
+  "source_n":42397,
+  "source_m":245877,
+  "prediction":"At least one frozen two-saturated-pin deletion yields a complete degree12/D5 extension by at-most-four anchors using complementary two-anchor core repair plus exacttwo tail.",
+  "scope":"Original596 tenpin Q-lines with exactlytwo current degree12 mandatorypins; delete exactlythose two, canonical deduplicate8pinsets, freeze atmostfirst32. Do not retry one-pin/coreguard batches.",
+  "new_rule":"First core-repair anchor must cover the rarest missingcore target. Second must cover every coretarget left by first, so the pair repairs allcore even when neither is a singlecoreguard. For bounded first/second prefixes, complete the residual by exactatmosttwo other anchors. No fifthanchor.",
+  "prefix_limits":{"first_core_repair_masks":16,"second_core_repair_masks_per_first":8},
+  "negative_scope":"Prefix or time-limited nohit does not exclude allfour-anchor completions or the fullunselected deletionpool.",
+  "budget":{"workers":1,"total_parent_plus_children_CPU_seconds":30,"per_item_CPU_seconds":0.7,"max_acceptances":16},
+  "acceptance":"Actualdegree and one selectednative wholecurrentR4; keepoldedges and updatebase. Ifhit appenddelivery preservingold58 and onegenerator edge-set dryrun; otherwise leavefamily unchanged. No MIP,seed,BFSaudit,review,Lean or sharedWiki/HTML/rootproof edits."
+}

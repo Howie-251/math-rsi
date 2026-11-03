@@ -1,0 +1,111 @@
+{
+  "status": "INHERITED_STRICT_NO_ALL_SINGLE_SUBDIVISIONS_ACTUAL_CONDER1250",
+  "parameter": {
+    "degree": 3,
+    "diameter": 10,
+    "current_order": 1250,
+    "single_subdivision_target": 1251
+  },
+  "source_identity": "ConderC1250.2",
+  "primary_communication_date": "2006-08-17",
+  "primary_description": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g10.html#310",
+  "primary_description_cache": "research/ddp/two_successful_methods_20261101/public_baseline_audit/STALE_MAIN_D6_D10_primary_cache/desc_g10.html",
+  "cache_anchor_line": 23,
+  "primary_raw": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD10/C1250.2.graph.txt",
+  "primary_census": "https://www.math.auckland.ac.nz/~conder/symmcubic2048list.txt",
+  "primary_relations": "https://www.math.auckland.ac.nz/~conder/symmcubicgraphrelations-type3.txt",
+  "local_existing_files": [
+    {
+      "path": "research/ddp/more_graphs_20261027/d3_D10_current1250_source/source1250.author.adj",
+      "exists": true
+    },
+    {
+      "path": "research/ddp/more_graphs_20261027/d3_D10_current1250_source/source1250.edges",
+      "exists": true
+    },
+    {
+      "path": "research/ddp/more_graphs_20261027/d3_D10_current1250_source/SOURCE_SageMath.author.py",
+      "exists": true
+    },
+    {
+      "path": "research/ddp/more_graphs_20261027/d3_D10_current1250_source/symmcubicgraphrelations-type3.author.txt",
+      "exists": true
+    }
+  ],
+  "source_reported_and_previously_bound": {
+    "n": 1250,
+    "m": 1875,
+    "degree_histogram": {
+      "3": 1250
+    },
+    "published_D": 10
+  },
+  "source_D10_rechecked": false,
+  "bipartite": false,
+  "bipartite_evidence": "ExistingSOURCE_PROFILE exactparityunion-find;authorcensus agrees;no new2color",
+  "existing_parity_conflict_edge": [
+    382,
+    550
+  ],
+  "published_source_symmetry": "3-arc-regular; vertex- and edge-transitive; non-Cayley",
+  "published_girth": 16,
+  "conditional_prediction": {
+    "lemma_valid": true,
+    "premise": "sourcebipartiteandD<=10",
+    "automatic_newroot_R10_if_premise": true,
+    "applicable_to_actual_source": false,
+    "equation": "d_subdivision(z,t)=1+min(d_G(u,t),d_G(v,t));multi-source distances unchanged inG-e",
+    "degree2root_capacity_B10": 2047,
+    "capacity_alone_blocks1251": false
+  },
+  "existing_single_subdivision": {
+    "receipt": "research/ddp/more_graphs_20261027/d3_D10_conder1250_edge_insertions/A_RESULT.json",
+    "anchor": [
+      0,
+      1
+    ],
+    "n": 1251,
+    "m": 1876,
+    "actual_D": 11,
+    "witness": [
+      1250,
+      1178
+    ],
+    "actual_newroot_checks": 1,
+    "actual_oldroot_checks": 0,
+    "all1875_source_edges_covered_by": "Inheritededge-transitivity;not1875newnumericchecks"
+  },
+  "existing_two_cut_scope": {
+    "receipt": "research/ddp/more_graphs_20261027/d3_D10_conder1250_edge_insertions/REPORT.md",
+    "anchored_objects": 5614,
+    "first_newroot_failures": 5614,
+    "second_helper_oldroot_checks": 0,
+    "scope": "Fixedrawsource,twoedgecuts,allvalid2+2endpointpartitions,adjacenthelpers;notgeneral1252graphs"
+  },
+  "new_HTTP_downloads_raw_parses_degree_checks_2color_BFS_candidates": 0,
+  "solver_Lean_ARIS_review_install_or_hash": 0,
+  "new_graph_parameter_Lean_increment": [
+    0,
+    0,
+    0
+  ],
+  "root_Wiki_modified": false,
+  "next": "STOP_INHERIT_SAME_SOURCE_STRICT_NO_NO1875EDGE_BATCH_OR_OTHER_SOURCE",
+  "conservative_read_preparation_charge_CPU_seconds": 0.1,
+  "writer_process_CPU_seconds": 0.021903863,
+  "total_charged_CPU_seconds": 0.12190485100000001,
+  "CPU_budget_seconds": 5,
+  "all_work_terminal": true,
+  "inherited_endpoint_R9_union_counterexample": {
+    "target": 1178,
+    "endpoints": [
+      0,
+      1
+    ],
+    "endpoint_distances": [
+      10,
+      10
+    ],
+    "basis": "InferredfromexistingnewrootR10failure+exactdistanceformula+publishedsourceD10;no newBFS"
+  }
+}

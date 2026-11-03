@@ -1,0 +1,7 @@
+# Runtime action1856, inverse-action partner5223
+
+Actual status:COMPLETE_NO_RUNTIME_ACTION_ALL_NORMAL_TRANSLATIONS_D9. New domain:6958 finite tau except1512 plus infinity, with old1512NO and allzero-disconnected inherited. Actual phase0 summary:{'phase': 0, 'raw_words': 58767, 'distinct_forms': 54741, 'domain_size': 6959, 'new_representatives_evaluated': 6959, 'phase0_failed': 4683, 'phase0_survivor_count': 2276, 'phase0_domain_complete': True}. Every failed representative has its checkedphase mask and one complete missing-endpoint witness in REPRESENTATIVE_STATUS.csv. FORM_COUNTS.csv and COEFFICIENT_FORMS.u32 retain this action's newly generated homogeneous forms.
+
+RIGHT update(A,B)→(A beta^a+A_d,B beta^a+B_d) and true inverse coefficients are used. One missingphase excludes a representative; a positiveallphase claim would use inverse-word coverage of±phases. A completefamilyNO transports to partner5223 via the paper inverse-action bijection; numeric computations were only performed for1856, not both actions. No conclusion is extended to otherfields orphase sets.
+
+One shared executable was compiled once for this20-domain batch. This domain childCPU2.747765000; cumulativecase30.476889910/90CPU, including oldcase, sharedprep/compile and precedingdomains. No oldsource/field/order/scalar1512 control, graphBFS, solver, ARIS, Lean or review was rerun. Root alone accepts graphs. See ../PRED.md and ../PAPER_BATCH_DOMAIN.md.

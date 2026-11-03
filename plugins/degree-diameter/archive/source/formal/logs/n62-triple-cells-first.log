@@ -1,0 +1,101 @@
+⚠ [1792/1800] Replayed DegreeDiameter.N59ZeroCore
+warning: DegreeDiameter/N59ZeroCore.lean:21:29: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [commonZeroNeighbors,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N59ZeroCore.lean:50:14: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵h̵r̵,̵ ̵N̵e̵.̵s̵y̵m̵m̵[̲N̲e̲.̲s̲y̲m̲m̲ hab, Ne.symm hac, Ne.symm had, Ne.symm hbc, Ne.symm hbd, Ne.symm hcd,
+  ̲  ̲ ̲ ̲ ̲ ̲SimpleGraph.adj_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1793/1800] Replayed DegreeDiameter.N59Capacity
+warning: DegreeDiameter/N59Capacity.lean:295:48: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [heavyZeroRepeats, zeroTriangleVertices,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1794/1800] Replayed DegreeDiameter.N62STouch
+warning: DegreeDiameter/N62STouch.lean:156:8: automatically included section variable(s) unused in theorem `_private.DegreeDiameter.N62STouch.0.DegreeDiameter.adjacency_nonnegative`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [1800/1800] Building DegreeDiameter.N62TripleCells (85s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62TripleCells.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleCells.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62TripleCells.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleCells.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62TripleCells.setup.json --json
+error: DegreeDiameter/N62TripleCells.lean:34:51: Invalid argument name `s₁` for function `Finset.sdiff_subset`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `α`: s̵₁̵α̲
+  • `s`: s₁̵
+  • `t`: s̵₁̵t̲
+  • `a`: s̵₁̵a̲
+error: DegreeDiameter/N62TripleCells.lean:159:71: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v : V
+hb : defectMatrix G u v = 3
+hu : {s ∈ G.neighborFinset u | s ∈ commonNeighborVertices G u v} = commonNeighborVertices G u v
+hv : {s ∈ G.neighborFinset v | s ∈ commonNeighborVertices G u v} = commonNeighborVertices G u v
+⊢ {s ∈ G.neighborFinset u | G.Adj u s ∧ G.Adj v s}.card = 4 ∧ {s ∈ G.neighborFinset v | G.Adj u s ∧ G.Adj v s}.card = 4
+warning: DegreeDiameter/N62TripleCells.lean:168:27: This simp argument is unused:
+  hu
+
+Hint: Omit it from the simp argument list.
+  simp [tripleCommonDegree, ̲hu̵,̵h̵v, ̲n62_triple_common_card G hdeg hdiam hcard hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N62TripleCells.lean:168:30: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp [tripleCommonDegree, ̲hu,h̵v̵,̵ ̲n62_triple_common_card G hdeg hdiam hcard hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N62TripleCells.lean:168:33: This simp argument is unused:
+  n62_triple_common_card G hdeg hdiam hcard hb
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵r̵i̵p̵l̵e̵C̵o̵m̵m̵o̵n̵D̵e̵g̵r̵e̵e̵,̵h̵u̵,̵h̵v̵,̵n̵6̵2̵_̵t̵r̵i̵p̵l̵e̵_̵c̵o̵m̵m̵o̵n̵_̵c̵a̵r̵d̵ ̵G̵ ̵h̵d̵e̵g̵ ̵h̵d̵i̵a̵m̵ ̵h̵c̵a̵r̵d̵ ̵h̵b̵]̵[̲t̲r̲i̲p̲l̲e̲C̲o̲m̲m̲o̲n̲D̲e̲g̲r̲e̲e̲,̲ ̲h̲u̲,̲ ̲h̲v̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/N62TripleCells.lean:174:77: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 62
+u v z : V
+hb : defectMatrix G u v = 3
+hz : z ∈ tripleOuterVertices G u v
+s : V
+hs : s ∈ commonNeighborVertices G u v
+hsz : G.Adj s z
+hzu : z ≠ u
+hzv : z ≠ v
+he : {t ∈ G.neighborFinset z | t ∈ commonNeighborVertices G u v} = {s}
+⊢ {s ∈ G.neighborFinset z | G.Adj u s ∧ G.Adj v s}.card = 1
+warning: DegreeDiameter/N62TripleCells.lean:185:27: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [tripleCommonDegree,̵h̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62TripleCells
+error: build failed

@@ -1,0 +1,430 @@
+[
+  {
+    "id": "ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101",
+    "title": "F5/F4同一保边clone四终图：3984/4192具体公式Lean及fresh最终编码审阅均已PASS",
+    "family": "Prototype-neighborhood extension",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": null,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 (21/22 latest-global values unbound)",
+    "target_is_multivalued": true,
+    "record_type": "multi_parameter_complete_graph_instances",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": 3,
+    "actual_D_scope": "Four literal terminal graphs: inherit full-root D3 of old3750 or3840 source, retain all old edges, independently BFS every new root (150/375 and144/352); no old-source root rerun",
+    "ordinary_bad_unordered_pairs": 0,
+    "ordinary_bad_target_D": 3,
+    "outcome_class": "COMPLETE_TERMINAL_GRAPHS_INDEPENDENTLY_ACCEPTED_PUBLIC_NOVELTY_PENDING",
+    "wiki_verdict": "yes",
+    "distance_text": "同一完整旧邻域clone机制已接受四终图：F5源3900/40500/max21、4125/45000/max22；F4源3984/41280/max21、4192/45440/max22。全部simple、connected、exactD3；分别保留37500或38400旧边，并独验全部150/375/144/352新增根，旧根D3继承。当前本项目21/22度最佳3984/4192，比旧3900/4125多84/67；旧例保留。仅登记四终图，不计525或496构造前缀。",
+    "scope": "Same retained-edge complete-original-neighbourhood clone rule, migrated between two accepted20regular D3 affine sources. OriginalF5/C30 source3750 uses25-point plane x0+x1+x2=0 and30-controller loads. NewGF4/C60 source3840 uses16-point ker(1,1,w) with w label2, transverse to all five directions, and60-controller loads for k1/2. Keep all old vertices/edges; every clone degree20. This is one mechanism with source variants, not four independent frameworks, general graph optimality, or automatic cap ladder.",
+    "positive_guarantees": [
+      "联合完整原邻域clone引理使新旧与新新点对均D≤3，保留全部旧边。",
+      "F5固定平面块结论保留：k1块规则最优6块，不称任意中心全局最优；k2为15块375clone并达该旧源完整邻域clone总容量界。",
+      "GF4实际normal(1,1,w)=[1,1,2]与五方向点积(2,1,2,2,1)全非零；每弧16条4点邻线分割64点，300弧4800条邻线与字面源绑定。",
+      "新迁移60-controller可行块数9/22；严格可行/计数界分别[9,12]/[22,24]。HiGHS报告optimal，但没有独立最优性证书，不能把9/22当认证上界。",
+      "两源所有扩张逐步在当前完整图核20pins闭R2全覆盖；fresh独验分别只读终图和继承源证据，覆盖全部新增根而不重跑旧源根。"
+    ],
+    "unclosed_gap": "当前21/22公开比较仍pending，不计保存主表改善。F5扩张3900/4125尚未Lean；F4扩张3984/4192已完成无证书/容量前提的kernel公式图定理、独立Audit和本次实际fresh最终source审阅SUCCESS/PASS。Sum载体及显式Fin标签等价/逐项ordered RECIPE绑定准确。ASCII解析等价、exact histogram/边数及带标签Fin图transport定理不在Lean声明中。通用clone引理不算实例；总具体公式Lean4。3840和新clone各有独立最终审阅scope，不覆盖新paper chart域推论；旧3840 A/B无实质意见的历史不改写。",
+    "lesson_and_restart_condition": "同一横截平面把两种不同字段/端口数/逐边chart源的原邻域重叠都化为控制器容量，源3840提升实际21/22终图。冻结的GF4块数12/24可达预测未获支持；只保留9/22已实现值及严格上界12/24。两模型已终态，不因solver报告optimal再跑最优性、k3、换plane/seed或工程pilot；下一步需新授权或实质容量/连接规则问题。",
+    "other_metrics": {
+      "validated_graph_instances": [
+        {
+          "Delta": 21,
+          "D": 3,
+          "n": 3900,
+          "m": 40500,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 150,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 22,
+          "D": 3,
+          "n": 4125,
+          "m": 45000,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 375,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 21,
+          "D": 3,
+          "n": 3984,
+          "m": 41280,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "source_n": 3840,
+          "source_m": 38400,
+          "old_edges_retained": 38400,
+          "all_new_roots_checked": 144,
+          "degree_histogram": {
+            "20": 1104,
+            "21": 2880
+          },
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d21_D3_n3984.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+          "formal_scope": "Unconditional fixed ordered formula graph on Sum(Fin3840,Fin144/352), explicit label equivalence toFin3984/4192 with newlabel3840+j; card/degree cap/actualWalkD3/notD2. No Lean ASCII parsing,exactdegreehist or edgecount claim."
+        },
+        {
+          "Delta": 22,
+          "D": 3,
+          "n": 4192,
+          "m": 45440,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "source_n": 3840,
+          "source_m": 38400,
+          "old_edges_retained": 38400,
+          "all_new_roots_checked": 352,
+          "degree_histogram": {
+            "20": 352,
+            "21": 640,
+            "22": 3200
+          },
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d22_D3_n4192.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+          "formal_scope": "Unconditional fixed ordered formula graph on Sum(Fin3840,Fin144/352), explicit label equivalence toFin3984/4192 with newlabel3840+j; card/degree cap/actualWalkD3/notD2. No Lean ASCII parsing,exactdegreehist or edgecount claim."
+        }
+      ],
+      "new_named_complete_graphs": 4,
+      "new_lower_bound_mathematically_verified": false,
+      "confirmed_record_graphs": 0,
+      "source_graph": {
+        "Delta": 20,
+        "D": 3,
+        "n": 3750,
+        "m": 37500
+      },
+      "source_old_root_BFS_runs": 0,
+      "new_roots_independently_checked_total": 1021,
+      "actual_terminal_graphs": 4,
+      "construction_prefixes_independently_accepted": 0,
+      "construction_prefixes_registered_as_new_results": 0,
+      "producer_current_R2_checks": 1021,
+      "producer_CPU_seconds": 1.988829241,
+      "independent_acceptance_CPU_seconds": 0.688096365,
+      "proof_scope": "Fixed old20-neighbourhood clone rule, not general degree-diameter optimality",
+      "block_rule_optima": {
+        "k1_sum_r": 6,
+        "k1_clones": 150,
+        "k1_global_arbitrary_centres_optimum_claimed": false,
+        "k2_sum_r": 15,
+        "k2_clones": 375,
+        "k2_fixed_source_full_neighbourhood_global_optimal": true
+      },
+      "proved_even_cap_formula_family": {
+        "s": "nonnegative integer",
+        "n": "3750+375s",
+        "m": "37500+7500s",
+        "maxdegree": "20+2s",
+        "diameter_at_most": 3,
+        "actually_generated_new_s": [
+          1
+        ],
+        "other_s_graphs_not_generated": true
+      },
+      "independent_acceptance_status": "PASS_TWO_TERMINAL_GRAPHS_COMPLETE_DISTANCE_PROOF",
+      "new_Lean_instances": 2,
+      "static_review_status": "SUCCESS",
+      "static_review_is_graph_validation": false,
+      "source_credit": "OriginalC30: Ryosuke Mizuno controller/framework. NewC60: Bhakar/f4t4nt saved author controller; localGF4 per-edge charts. No originality claim for general cloning.",
+      "independent_construction_framework_claimed": false,
+      "static_review_model": "gemini-3.8-flash-high",
+      "static_review_effort": "high",
+      "static_review_selectedModelLabel": "Gemini 3.8 Flash (High)",
+      "static_review_thread": "7548e5af-769d-4736-a7d2-0ae080f78318",
+      "static_review_scope": "First A/B review covers originalF5 clone/transverse-plane capacity plus originalB only. NewGF4 source migration has no completed dedicated static review; F7 supplement covers F7 math/nonrecord only.",
+      "static_review_correction": "Pins cover radius2; newroot reaches targets within3, not2.",
+      "static_review_code_execution": false,
+      "source_graphs": [
+        {
+          "Delta": 20,
+          "D": 3,
+          "n": 3750,
+          "m": 37500,
+          "field": "F5",
+          "controller_order": 30,
+          "controller_credit": "Ryosuke Mizuno framework/controller"
+        },
+        {
+          "Delta": 20,
+          "D": 3,
+          "n": 3840,
+          "m": 38400,
+          "field": "GF4",
+          "controller_order": 60,
+          "controller_credit": "Bhakar (f4t4nt)"
+        }
+      ],
+      "current_local_best_orders": {
+        "21,3": 3984,
+        "22,3": 4192
+      },
+      "GF4_source_migration": {
+        "normal": [
+          1,
+          1,
+          2
+        ],
+        "field": "F2[w]/(w^2+w+1);w=2",
+        "plane_size": 16,
+        "controller_variables": 60,
+        "neighbourhood_load_cap": [
+          1,
+          2
+        ],
+        "feasible_block_totals": [
+          9,
+          22
+        ],
+        "strict_counting_upper_bounds": [
+          12,
+          24
+        ],
+        "solver_reports_optimal": true,
+        "solver_optimality_independently_certified": false,
+        "strict_block_optimum_intervals": [
+          [
+            9,
+            12
+          ],
+          [
+            22,
+            24
+          ]
+        ],
+        "producer_CPU_seconds": 1.589214495,
+        "independent_acceptance_CPU_seconds": 0.345214651,
+        "producer_current_R2_checks": 496,
+        "source_old_root_BFS_runs": 0,
+        "new_roots_independently_checked": [
+          144,
+          352
+        ],
+        "source_edges_preserved": 38400,
+        "new_named_terminal_graphs": 2,
+        "prefixes_registered_as_results": 0,
+        "extra_k_or_plane_or_seed_search": false
+      },
+      "F4_checkpointA_static_review": "NO_SUBSTANTIVE_VERDICT_OUTPUT_LIMIT_REVIEW_PENDING",
+      "F4_Field_module_compiled": true,
+      "F4_complete_graph_Lean": true,
+      "F4_checkpointB_static_review": "NO_SUBSTANTIVE_VERDICT_OUTPUT_LIMIT_REVIEW_PENDING",
+      "F4_source_formal_graph_scope": "Fixed3840 formula graph: card3840,degree<=20,actualWalkD3 andnotD2; four expanded graphs remain unformalized.",
+      "F4_checkpointC_static_review": "SUCCESS_FINAL_SOURCE3840_ONLY",
+      "formalized_terminal_graph_orders": [
+        3984,
+        4192
+      ],
+      "unformalized_terminal_graph_orders": [
+        3900,
+        4125
+      ],
+      "F4_clone_final_static_review": "ACTUAL_SUCCESS_PASS",
+      "F4_clone_external_review_workflow_completed": true,
+      "formal_clone_carriers": [
+        "Fin3840+Fin144",
+        "Fin3840+Fin352"
+      ],
+      "formal_clone_carrier_Fin_equivalences": [
+        3984,
+        4192
+      ],
+      "formal_clone_new_numeric_label": "3840+j",
+      "formal_clone_final_theorem_names": [
+        "DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d21_n3984",
+        "DegreeDiameter.Portfolio.F4PlaneBlockClones.concrete_d22_n4192"
+      ],
+      "formal_clone_no_certificate_or_capacity_premises": true,
+      "formal_clone_true_Walk_D3_and_not_D2": true,
+      "formal_clone_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "formal_clone_ordered_owner_recipe_binding": true,
+      "formal_clone_ordered_newlabel_binding": true,
+      "formal_clone_ASCII_parser_equivalence": false,
+      "formal_clone_exact_degree_histogram": false,
+      "formal_clone_edge_count": false,
+      "formal_clone_labeled_Fin_graph_transport_claimed": false,
+      "general_clone_lemma_counted_as_graph": false,
+      "F4_clone_final_review_thread": "f3ee0309-4e54-43be-86fc-049d51400b64",
+      "F4_clone_final_review_model": "gemini-3.8-flash-high",
+      "F4_clone_final_review_effort": "high",
+      "F4_clone_final_review_selectedModelLabel": "Gemini 3.8 Flash (High)",
+      "F4_clone_final_review_code_execution": false,
+      "F4_clone_final_review_scope": "ActualFullNeighborhoodClones and allnewDefinitions/Plane/Capacity/Load/Exact; realWalkcases,Sumlabels,orderedrecipebinding,Audit/compilelogs. No premise/caller gap found. ExcludesASCII,histograms,edgecounts,globalrecords.",
+      "F4_clone_final_review_distinct_from3840_C": true
+    },
+    "variants": [
+      {
+        "label": "degree21_terminal",
+        "target": [
+          21,
+          3
+        ],
+        "target_Delta": 21,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 3900,
+          "hypothetical": null
+        },
+        "actual_n": 3900,
+        "actual_m": 40500,
+        "actual_degree": 21,
+        "actual_D": 3,
+        "new_roots_checked": 150,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      },
+      {
+        "label": "degree22_terminal",
+        "target": [
+          22,
+          3
+        ],
+        "target_Delta": 22,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 4125,
+          "hypothetical": null
+        },
+        "actual_n": 4125,
+        "actual_m": 45000,
+        "actual_degree": 22,
+        "actual_D": 3,
+        "new_roots_checked": 375,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      },
+      {
+        "label": "GF4_C60_degree21_source_migration_terminal",
+        "target": [
+          21,
+          3
+        ],
+        "target_Delta": 21,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 3984,
+          "hypothetical": null
+        },
+        "actual_n": 3984,
+        "actual_m": 41280,
+        "actual_degree": 21,
+        "actual_D": 3,
+        "new_roots_checked": 144,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": true,
+        "source_n": 3840,
+        "all_source_edges_retained": 38400,
+        "formal_final_source_review": "ACTUAL_SUCCESS_PASS_FRESH_CLONE_SCOPE"
+      },
+      {
+        "label": "GF4_C60_degree22_source_migration_terminal",
+        "target": [
+          22,
+          3
+        ],
+        "target_Delta": 22,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 4192,
+          "hypothetical": null
+        },
+        "actual_n": 4192,
+        "actual_m": 45440,
+        "actual_degree": 22,
+        "actual_D": 3,
+        "new_roots_checked": 352,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": true,
+        "source_n": 3840,
+        "all_source_edges_retained": 38400,
+        "formal_final_source_review": "ACTUAL_SUCCESS_PASS_FRESH_CLONE_SCOPE"
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PREDICTION.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/CONTROLLER_CAPACITY_MODEL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k1.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k2.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d21.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d22.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/run_once.py",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/SCOPE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/ACCEPTANCE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/check_literal_terminal_graphs.py",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_DISPOSITION.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PREDICTION.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PLANE_DART_CHECK.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/LITERAL_PLANE_BINDING.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/CONTROLLER_CAPACITY_MODEL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/SEARCH_k1.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/SEARCH_k2.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RECIPE_d21.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RECIPE_d22.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d21_D3_n3984.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d22_D3_n4192.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/FINAL_COMPILE_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesAudit.log",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/F4PlaneBlockClonesAudit_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/formalization/INPUT_BINDING_CHECK.json",
+      "formal/DegreeDiameter/Portfolio/FullNeighborhoodClones.lean",
+      "formal/DegreeDiameter/Portfolio/F4PlaneBlockClonesDefinitions.lean",
+      "formal/DegreeDiameter/Portfolio/F4PlaneBlockClonesLoad.lean",
+      "formal/DegreeDiameter/Portfolio/F4PlaneBlockClonesExact.lean",
+      "formal/F4PlaneBlockClonesAudit.lean",
+      "research/ddp/two_successful_methods_20261101/reviews/F4_CLONES_FINAL_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/F4_CLONES_FINAL_DISPOSITION.md"
+    ]
+  }
+]

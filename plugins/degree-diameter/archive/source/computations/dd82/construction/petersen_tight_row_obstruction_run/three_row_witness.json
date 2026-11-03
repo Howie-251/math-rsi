@@ -1,0 +1,212 @@
+{
+  "vertex": 9,
+  "rows": [
+    {
+      "row": [
+        9,
+        2
+      ],
+      "fixed_paths": [
+        [
+          9,
+          27
+        ],
+        [
+          9,
+          17,
+          21
+        ],
+        [
+          9,
+          32,
+          23
+        ],
+        [
+          9,
+          41,
+          28
+        ],
+        [
+          9,
+          57,
+          27
+        ]
+      ],
+      "fixed_targets": [
+        21,
+        23,
+        27,
+        28
+      ],
+      "forbidden_internal_edges": [
+        [
+          1,
+          9
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          21,
+          27
+        ],
+        [
+          23,
+          27
+        ],
+        [
+          27,
+          28
+        ]
+      ]
+    },
+    {
+      "row": [
+        9,
+        5
+      ],
+      "fixed_paths": [
+        [
+          9,
+          57
+        ],
+        [
+          9,
+          17,
+          56
+        ],
+        [
+          9,
+          27,
+          57
+        ],
+        [
+          9,
+          32,
+          52
+        ],
+        [
+          9,
+          41,
+          59
+        ]
+      ],
+      "fixed_targets": [
+        52,
+        56,
+        57,
+        59
+      ],
+      "forbidden_internal_edges": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          52,
+          57
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          57,
+          59
+        ]
+      ]
+    },
+    {
+      "row": [
+        57,
+        0
+      ],
+      "fixed_paths": [
+        [
+          57,
+          9
+        ],
+        [
+          57,
+          18,
+          2
+        ],
+        [
+          57,
+          27,
+          9
+        ],
+        [
+          57,
+          34,
+          3
+        ],
+        [
+          57,
+          49,
+          4
+        ]
+      ],
+      "fixed_targets": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "forbidden_internal_edges": [
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          50,
+          57
+        ],
+        [
+          53,
+          57
+        ],
+        [
+          57,
+          58
+        ]
+      ]
+    }
+  ],
+  "forbidden_neighbors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "remaining_possible_neighbors": [
+    7
+  ],
+  "reasoning": "Each displayed row has five fixed slots on four targets, so its six internal slots must avoid every fixed target. Their union forbids at least seven of the nine possible neighbors of this vertex, contradicting internal degree three.",
+  "independent_of_triangles_and_four_cycles": true
+}

@@ -1,0 +1,48 @@
+{
+  "status": "MODEL_VALIDATED_PROFILE_COMPLETE",
+  "source": "research/ddp/m1_degree5_transfer/rithwik650_source.edges",
+  "source_validation_reused": "research/ddp/m1_degree5_transfer/source_graph_validation.json:rithwik650",
+  "source_n": 650,
+  "source_m": 1625,
+  "source_regular_degree": 5,
+  "source_diameter": 5,
+  "old_distance5_unordered_pairs": 87800,
+  "old_distance5_ordered_pairs": 175600,
+  "matching_vertices": 650,
+  "matching_edges_required": 325,
+  "matching_must_avoid_all1625_source_edges": true,
+  "result_n": 650,
+  "result_m": 1950,
+  "result_degree": 6,
+  "target_diameter": 4,
+  "saved_target_baseline": 441,
+  "same_fixed650_plus_matching_target_found_in_limited_history_search": false,
+  "old651_extension_is_different_goal": true,
+  "fixed_layer_sizes": {
+    "V0": 500,
+    "V1": 125,
+    "V2": 25
+  },
+  "layer_matching_count_constraints": [
+    "2m00+m01+m02=500",
+    "2m11+m01+m12=125",
+    "2m22+m02+m12=25"
+  ],
+  "score_target": "old distance>4, equivalently distance5; never old distance=4",
+  "planned_score": "Exact Boolean relation (I+Adj+Adj^2)^2 for source union F; count uncovered old-distance5 masks and divide by2",
+  "planned_profiles": 2,
+  "planned_legal_matching_switches_per_profile": 5000,
+  "planned_seeds": [
+    2026102776501,
+    2026102776502
+  ],
+  "requested_total_CPU_seconds_including_compile": 20,
+  "search_started": true,
+  "source_BFS_rerun": false,
+  "matching_starts_generated": 2,
+  "proposals_executed": 10000,
+  "compile_started": true,
+  "new_lower_bounds": 0,
+  "pending": [],
+  "execution_result": "terminal.json"
+}

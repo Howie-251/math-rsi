@@ -1,0 +1,151 @@
+⚠ [1792/1793] Replayed DegreeDiameter.N59ZeroCore
+warning: DegreeDiameter/N59ZeroCore.lean:21:29: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [commonZeroNeighbors,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N59ZeroCore.lean:50:14: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵h̵r̵,̵ ̵N̵e̵.̵s̵y̵m̵m̵[̲N̲e̲.̲s̲y̲m̲m̲ hab, Ne.symm hac, Ne.symm had, Ne.symm hbc, Ne.symm hbd, Ne.symm hcd,
+  ̲  ̲ ̲ ̲ ̲ ̲SimpleGraph.adj_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✖ [1793/1793] Building DegreeDiameter.N59Capacity (31s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N59Capacity.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N59Capacity.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N59Capacity.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N59Capacity.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N59Capacity.setup.json --json
+error: DegreeDiameter/N59Capacity.lean:190:63: unsolved goals
+case inl
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hm : ∀ (z : V), zeroTriangleVertex G z → matchingRow G z
+n y : V
+hy : ¬y = n ∧ ¬G.Adj n y
+hs hle :
+  ∀ (a b : V),
+    G.Adj n a →
+      zeroTriangleVertex G a →
+        G.Adj n b → zeroTriangleVertex G b → ¬a = b → defectMatrix G a b = 2 → G.Adj a y → ¬G.Adj y b
+hq0 : commonZeroNeighbors G n y = ∅
+⊢ ∀ (a b : V),
+    G.Adj n a →
+      zeroTriangleVertex G a →
+        G.Adj n b → zeroTriangleVertex G b → ¬a = b → defectMatrix G a b = 2 → G.Adj a y → ¬G.Adj y b
+
+case inr.inl
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hm : ∀ (z : V), zeroTriangleVertex G z → matchingRow G z
+n y : V
+hy : ¬y = n ∧ ¬G.Adj n y
+hs : {p ∈ orderedHeavyZeroPairs G n | G.Adj p.1 y ∧ G.Adj y p.2} ⊆ (commonZeroNeighbors G n y).offDiag
+hle :
+  ∀ (a b : V),
+    G.Adj n a →
+      zeroTriangleVertex G a →
+        G.Adj n b → zeroTriangleVertex G b → ¬a = b → defectMatrix G a b = 2 → G.Adj a y → ¬G.Adj y b
+hq1 : (commonZeroNeighbors G n y).card = 1
+⊢ ∀ (a b : V),
+    G.Adj n a →
+      zeroTriangleVertex G a →
+        G.Adj n b → zeroTriangleVertex G b → ¬a = b → defectMatrix G a b = 2 → G.Adj a y → ¬G.Adj y b
+error: DegreeDiameter/N59Capacity.lean:227:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ p ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj p.1 y ∧ G.Adj y p.2}.card
+in the target expression
+  ∑ a ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj a.1 y ∧ G.Adj y a.2}.card =
+    ∑ b ∈ nonedgeVertices G n, {a ∈ orderedHeavyZeroPairs G n | G.Adj a.1 b ∧ G.Adj b a.2}.card
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hm : ∀ (z : V), zeroTriangleVertex G z → matchingRow G z
+n : V
+hswap :
+  ∑ a ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj a.1 y ∧ G.Adj y a.2}.card =
+    ∑ b ∈ nonedgeVertices G n, {a ∈ orderedHeavyZeroPairs G n | G.Adj a.1 b ∧ G.Adj b a.2}.card
+hleft :
+  ∑ p ∈ orderedHeavyZeroPairs G n, {y ∈ nonedgeVertices G n | G.Adj p.1 y ∧ G.Adj y p.2}.card =
+    2 * (orderedHeavyZeroPairs G n).card
+hright :
+  ∑ y ∈ nonedgeVertices G n, {p ∈ orderedHeavyZeroPairs G n | G.Adj p.1 y ∧ G.Adj y p.2}.card ≤
+    2 * ∑ y ∈ nonedgeVertices G n, if (commonZeroNeighbors G n y).card = 2 then 1 else 0
+⊢ ↑(orderedHeavyZeroPairs G n).card ≤ ∑ y ∈ nonedgeVertices G n, commonZeroPairIndicator G n y
+error: DegreeDiameter/N59Capacity.lean:247:13: don't know how to synthesize implicit argument `s`
+  @Finset.sum_le_sum V ℤ Int.instAddCommMonoid instLatticeInt.toSemilatticeInf.toPartialOrder
+    (fun y => commonZeroPairIndicator G ?m.116 y + if y ∈ heavyZeroRepeats G ?m.116 then 1 else 0)
+    (fun y => defectMatrix G ?m.116 y) (nonedgeVertices G ?m.116) Int.instAddLeftMono fun y hy =>
+    common_zero_pair_capacity_pointwise G hreg hdiam hy
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+hdiam : diameterAtMostTwo G
+n : V
+hfilter : {y ∈ nonedgeVertices G n | y ∈ heavyZeroRepeats G n} = heavyZeroRepeats G n
+hcount : (∑ y ∈ nonedgeVertices G n, if y ∈ heavyZeroRepeats G n then 1 else 0) = ↑(heavyZeroRepeats G n).card
+⊢ Finset V
+error: DegreeDiameter/N59Capacity.lean:247:13: don't know how to synthesize implicit argument `g`
+  @Finset.sum_le_sum V ℤ Int.instAddCommMonoid instLatticeInt.toSemilatticeInf.toPartialOrder
+    (fun y => commonZeroPairIndicator G ?m.116 y + if y ∈ heavyZeroRepeats G ?m.116 then 1 else 0)
+    (fun y => defectMatrix G ?m.116 y) (nonedgeVertices G ?m.116) Int.instAddLeftMono fun y hy =>
+    common_zero_pair_capacity_pointwise G hreg hdiam hy
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+hdiam : diameterAtMostTwo G
+n : V
+hfilter : {y ∈ nonedgeVertices G n | y ∈ heavyZeroRepeats G n} = heavyZeroRepeats G n
+hcount : (∑ y ∈ nonedgeVertices G n, if y ∈ heavyZeroRepeats G n then 1 else 0) = ↑(heavyZeroRepeats G n).card
+⊢ V → ℤ
+error: DegreeDiameter/N59Capacity.lean:247:13: don't know how to synthesize implicit argument `f`
+  @Finset.sum_le_sum V ℤ Int.instAddCommMonoid instLatticeInt.toSemilatticeInf.toPartialOrder
+    (fun y => commonZeroPairIndicator G ?m.116 y + if y ∈ heavyZeroRepeats G ?m.116 then 1 else 0)
+    (fun y => defectMatrix G ?m.116 y) (nonedgeVertices G ?m.116) Int.instAddLeftMono fun y hy =>
+    common_zero_pair_capacity_pointwise G hreg hdiam hy
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+hdiam : diameterAtMostTwo G
+n : V
+hfilter : {y ∈ nonedgeVertices G n | y ∈ heavyZeroRepeats G n} = heavyZeroRepeats G n
+hcount : (∑ y ∈ nonedgeVertices G n, if y ∈ heavyZeroRepeats G n then 1 else 0) = ↑(heavyZeroRepeats G n).card
+⊢ V → ℤ
+error: DegreeDiameter/N59Capacity.lean:247:44: don't know how to synthesize implicit argument `n`
+  @common_zero_pair_capacity_pointwise V inst✝ G hreg hdiam ?m.116 y hy
+context:
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+hdiam : diameterAtMostTwo G
+n : V
+hfilter : {y ∈ nonedgeVertices G n | y ∈ heavyZeroRepeats G n} = heavyZeroRepeats G n
+hcount : (∑ y ∈ nonedgeVertices G n, if y ∈ heavyZeroRepeats G n then 1 else 0) = ↑(heavyZeroRepeats G n).card
+y : V
+hy : y ∈ nonedgeVertices G ?m.116
+⊢ V
+error: DegreeDiameter/N59Capacity.lean:247:38: Failed to infer type of binder `hy`
+error: DegreeDiameter/N59Capacity.lean:247:7: failed to infer `have` declaration type
+error: DegreeDiameter/N59Capacity.lean:237:69: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+hdiam : diameterAtMostTwo G
+n : V
+hfilter : {y ∈ nonedgeVertices G n | y ∈ heavyZeroRepeats G n} = heavyZeroRepeats G n
+hcount : (∑ y ∈ nonedgeVertices G n, if y ∈ heavyZeroRepeats G n then 1 else 0) = ↑(heavyZeroRepeats G n).card
+⊢ ∑ y ∈ nonedgeVertices G n, commonZeroPairIndicator G n y + ↑(heavyZeroRepeats G n).card ≤ nonedgeDefectBudget G n
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N59Capacity
+error: build failed

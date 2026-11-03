@@ -1,0 +1,54 @@
+{
+  "status": "UNIQUE_THREE_PATH_OBSTRUCTION_STOP",
+  "source": {
+    "status": "COMPLETE",
+    "vertices": 170,
+    "edges": 595,
+    "simple": true,
+    "degree_histogram": {
+      "7": 170
+    },
+    "connected": true,
+    "all_source_BFS_roots": 170,
+    "diameter": 3,
+    "ordered_distance_histogram": {
+      "0": 170,
+      "1": 1190,
+      "2": 6840,
+      "3": 20700
+    },
+    "ordered_distance3_pairs": 20700,
+    "ordered_d3_NB3_path_count_histogram": {
+      "1": 10260,
+      "2": 8160,
+      "3": 1440,
+      "4": 720,
+      "5": 60,
+      "6": 60
+    },
+    "unordered_d3_pairs": 10350,
+    "BFS_repeated": false
+  },
+  "unique_three_path_witness": {
+    "pair": [
+      0,
+      50
+    ],
+    "source_distance": 3,
+    "unique_length3_path": [
+      0,
+      46,
+      21,
+      50
+    ],
+    "unique_path_edge_ids": [
+      6,
+      105,
+      106
+    ],
+    "claim": "No path of length<=3 in the 340 lift can use a vertical edge, since it would project to at most2 horizontal edges. The unique 3-edge base path has one sign parity, so one sheet target is unreachable within3 for every signing."
+  },
+  "sign_assignments_tested": 0,
+  "lift340_generated": false,
+  "CPU_seconds": 0.159082266
+}

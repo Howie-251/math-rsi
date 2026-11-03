@@ -1,0 +1,207 @@
+{
+  "status": "ACTUAL_Q8_GEOMETRY_PASS_NOT_A_LARGE_GRAPH",
+  "q": 8,
+  "F8": {
+    "elements": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "encoding": "binary polynomial coefficients in F2",
+    "modulus": "x^3+x+1",
+    "modulus_bits": 11,
+    "addition": "bitwise XOR",
+    "table": "F8_FIELD_TABLE.csv"
+  },
+  "F64": {
+    "elements": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "encoding": "a+8*b = a+b*z over F8",
+    "modulus": "z^2+z+1",
+    "addition": "bitwise XOR",
+    "product": "(a,b)*(c,d)=(a*c+b*d,a*d+b*c+b*d), with F8 operations",
+    "conjugate": "(a+b,b)",
+    "trace": "b",
+    "norm": "a^2+a*b+b^2",
+    "table": "F64_FIELD_TABLE.csv",
+    "trace_norm_table": "F64_TRACE_NORM.csv"
+  },
+  "PG3": {
+    "canonical": "first nonzero coordinate scaled to1",
+    "point_order": "lexicographic tuple(x0,x1,x2,x3)",
+    "points": "PG3_POINTS.tsv",
+    "all_RREF_2D_subspaces": "ALL_4745_RREF_SUBSPACES.tsv",
+    "isotropic_line_order": "isotropic rows of the RREF table, line column gives literal ID",
+    "incidence": "ORIGINAL_INCIDENCE.tsv",
+    "all_nonincident_projections": "ORIGINAL_ALL_NONINCIDENT_PROJECTIONS.csv"
+  },
+  "Gram_matrix": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "B": "x0*y3+x1*y2+x1*y3+y0*x3+y1*x2+y1*x3",
+  "quadratic": "x0*x3+x1^2+x1*(x2+x3)+(x2+x3)^2",
+  "F64_coordinate_binding": "u=x0+z*x1, v=x2+z*x3; B=Tr(u*vprime+uprime*v)",
+  "P": {
+    "coords": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "original_point_id": 2,
+    "spread_owner": 64,
+    "perpendicular_hyperplane": "x0=0"
+  },
+  "O65": {
+    "formula": "(1,a,b+c,c), c=Norm(a+b*z), all a,b in F8, followed by P",
+    "ordered_points": "OVOID65.tsv",
+    "all_pair_receipt": "OVOID65_ALL_PAIR_CHECKS.csv",
+    "line_intersections": "OVOID65_LINE_INTERSECTIONS.csv"
+  },
+  "spread65": {
+    "lambda_order": "0..63 as F64 code, infinity=64",
+    "slope_basis": "lambda=a+b*z: [(1,0,a,b),(0,1,b,a+b)]",
+    "infinity_basis": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "line_binding": "SPREAD65.tsv"
+  },
+  "derived": {
+    "points": "DERIVED_POINTS.tsv",
+    "point_order": "original canonical point order restricted to x0=1",
+    "lines": "DERIVED_LINES.tsv",
+    "line_order": "576 retained original lines in original order, then64H(a,b) in lex(a,b)",
+    "hyperbolic_line": "H(a,b)={(1,a,b+t,t):t in F8}",
+    "incidence": "DERIVED_INCIDENCE.tsv",
+    "all_nonincident_projections": "DERIVED_ALL_NONINCIDENT_PROJECTIONS.csv",
+    "O64": "OVOID64.tsv",
+    "O64_intersections": "OVOID64_DERIVED_LINE_INTERSECTIONS.csv",
+    "spread64": "DERIVED_SPREAD64.tsv"
+  },
+  "conditional_sources_only": {
+    "balanced": {
+      "degree": 81,
+      "n": 342225,
+      "fill": 65,
+      "n_after_fill": 342290,
+      "product_centers": 4225
+    },
+    "Payne": {
+      "degree": 80,
+      "n": 327680,
+      "fill": 64,
+      "n_after_fill": 327744,
+      "product_centers": 4096
+    }
+  },
+  "new_large_graphs": 0,
+  "new_BFS": 0,
+  "new_Lean": 0,
+  "other_q": 0,
+  "new_graph_production_authorization": false,
+  "actual_summary": "RESULT.json",
+  "actual_CPU_terminal": "TERMINAL.json"
+}

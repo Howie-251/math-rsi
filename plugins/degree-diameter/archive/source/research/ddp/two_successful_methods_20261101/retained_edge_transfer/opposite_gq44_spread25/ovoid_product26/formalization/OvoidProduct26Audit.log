@@ -1,0 +1,52 @@
+def DegreeDiameter.Portfolio.OvoidSpreadCloneCapacity.center.{u_1, u_2, u_3, u_4, u_5} : {P : Type u_1} →
+  {L : Type u_2} → {V : Type u_3} → {J : Type u_4} → {I : Type u_5} → V ≃ P × L → (I → P) → (J → L) → I × J → V ⊕ J :=
+fun {P} {L} {V} {J} {I} e ovoid spread ij => Sum.inl (e.symm (ovoid ij.1, spread ij.2))
+def DegreeDiameter.Portfolio.OvoidProduct26.center : OvoidProduct26.CloneIndex → OvoidProduct26.Source.Vertex :=
+OvoidSpreadCloneCapacity.center OppositeGQ44Spread.oldEquiv OvoidProduct26.ovoid OppositeGQ44Spread.spread
+def DegreeDiameter.Portfolio.OvoidProduct26.graph : SimpleGraph OvoidProduct26.Vertex :=
+FullNeighborhoodClones.graph OppositeGQ44Spread.graph OvoidProduct26.center
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.OvoidProduct26.label : OvoidProduct26.Vertex ≃ Fin 7531 :=
+(OppositeGQ44Spread.label.sumCongr OvoidProduct26.cloneLabel).trans finSumFinEquiv
+DegreeDiameter.Portfolio.OvoidProduct26.center_source_label (i j : Fin 17) :
+  ↑(OppositeGQ44Spread.label (OvoidProduct26.center (i, j))) =
+    ↑(OppositeGQ44Spread.spread j) + 85 * ↑(OvoidProduct26.ovoid i)
+DegreeDiameter.Portfolio.OvoidProduct26.clone_label (i j : Fin 17) : ↑(OvoidProduct26.cloneLabel (i, j)) = ↑j + 17 * ↑i
+DegreeDiameter.Portfolio.OvoidProduct26.label_old (v : OvoidProduct26.Source.Vertex) :
+  ↑(OvoidProduct26.label (Sum.inl v)) = ↑(OppositeGQ44Spread.label v)
+DegreeDiameter.Portfolio.OvoidProduct26.label_new (i j : Fin 17) :
+  ↑(OvoidProduct26.label (Sum.inr (i, j))) = 7242 + 17 * ↑i + ↑j
+DegreeDiameter.Portfolio.OvoidProduct26.load_le_one (w : OvoidProduct26.Source.Vertex) :
+  FullNeighborhoodClones.load OppositeGQ44Spread.graph OvoidProduct26.center w ≤ 1
+DegreeDiameter.Portfolio.OvoidProduct26.old_walk_bound_iff (u v : OvoidProduct26.Source.Vertex) (n : ℕ) :
+  (∃ p, p.length ≤ n) ↔ ∃ p, p.length ≤ n
+DegreeDiameter.Portfolio.OvoidProduct26.concrete_order_degree_and_exact_D3 :
+  Fintype.card OvoidProduct26.Vertex = 7531 ∧
+    (∀ (v : OvoidProduct26.Vertex), OvoidProduct26.graph.degree v ≤ 26) ∧
+      DiameterAtMost OvoidProduct26.graph 3 ∧ ¬DiameterAtMost OvoidProduct26.graph 2
+theorem DegreeDiameter.Portfolio.OvoidProduct26.concrete_order_degree_and_exact_D3 : Fintype.card
+      OvoidProduct26.Vertex =
+    7531 ∧
+  (∀ (v : OvoidProduct26.Vertex), OvoidProduct26.graph.degree v ≤ 26) ∧
+    DiameterAtMost OvoidProduct26.graph 3 ∧ ¬DiameterAtMost OvoidProduct26.graph 2 :=
+⟨OvoidProduct26.card_vertex,
+  ⟨OvoidProduct26.degree_le_twenty_six, ⟨OvoidProduct26.diameterAtMost_three, OvoidProduct26.not_diameterAtMost_two⟩⟩⟩
+def DegreeDiameter.Portfolio.OvoidProduct26.FinalClaim : Prop :=
+Fintype.card OvoidProduct26.Vertex = 7531 ∧
+  (∀ (v : OvoidProduct26.Vertex), OvoidProduct26.graph.degree v ≤ 26) ∧
+    DiameterAtMost OvoidProduct26.graph 3 ∧ ¬DiameterAtMost OvoidProduct26.graph 2
+'DegreeDiameter.Portfolio.OvoidProduct26.load_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.OvoidProduct26.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.OvoidProduct26.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

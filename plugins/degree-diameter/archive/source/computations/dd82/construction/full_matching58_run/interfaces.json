@@ -1,0 +1,42 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "solver_calls": 0,
+  "solver_command_template": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "--lrat",
+    "-t",
+    "{cpu_seconds}",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/proof.lrat"
+  ],
+  "checker_command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/dd82-lrat-check/lrat-trim-rel-0.2.0/lrat-trim",
+    "--no-trim",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/input.cnf",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/proof.lrat"
+  ],
+  "sat_decode_command": [
+    "/opt/conda/bin/python",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_prepare.py",
+    "decode",
+    "--log",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/solver.log"
+  ],
+  "independent_bfs_command": [
+    "/opt/conda/bin/python",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/verify_hs_candidate.py",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_run/candidate.json"
+  ],
+  "suggested_profile": {
+    "cpu_seconds": 30,
+    "wall_seconds": 40,
+    "threads": 1,
+    "memory_bytes": 4294967296,
+    "proof_output_limit_bytes": 268435456
+  },
+  "status_semantics": {
+    "sat": "Decode full graph and independently BFS before accepting it",
+    "unsat": "RAW until exact-input LRAT verifies",
+    "unknown": "No exclusion or feasibility conclusion"
+  }
+}

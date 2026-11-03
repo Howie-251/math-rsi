@@ -1,0 +1,28 @@
+{
+  "task": "Brown91/cap11 fixed-old-induced-graph D2 interface, no graph production",
+  "source": "Classical q9 PG(2,9) orthogonal Brown graph: 91 points; 10 absolute degree9, 36 internal and 45 external nonabsolute degree10; inherited classical D2",
+  "scope": "Add arbitrary helpers with arbitrary helper graph H and old-helper edges, keeping the 91-point old induced graph exactly fixed; degree cap11 and diameter cap2",
+  "historical_exact_case_check": "Directed rg in research/context/proofs/reviews found no existing Brown91/cap11/107 helper interface result. Old cap8/n61 queues remain paused.",
+  "public_target": {"inherited_official_11_2_order": 106, "first_improving_target": 107, "new_public_search": 0},
+  "predictions": [
+    "The generic projective-line coverage bound yields h<=16 (order<=107), so only h16 can improve inherited public106.",
+    "For h16 the total pin count B is at least96; subtracting compulsory absolute-pin overlap may strengthen this.",
+    "All noncollinear pinsets fail at h16. Every 107-point candidate requires at least one pinset with >=6 nonabsolute points on a tangent line, excluding its contact point.",
+    "All old vertices must receive at least one helper edge. Nonabsolute points then have unique helper owners; every internal owner has degree_H>=5 and s<=6, every external owner has degree_H>=3 and s<=8, and singly assigned absolute points have owner degree_H>=6 and s<=5.",
+    "A small integer relaxation using these geometric pinset types and old-type counts will either exclude107 or provide a concrete type/size pattern for a subsequent explicit grouping/H test. A numerical pass will not be called a graph or an existence result."
+  ],
+  "geometric_bounds": {
+    "s0": "closed coverage0",
+    "s_positive": "N_G[S]=S union polar lines, so closed coverage<=10s+1",
+    "noncollinear_s_ge3": "closed coverage<=9s+3, reduced by at least the number of absolute pins",
+    "non_tangent_collinear": "closed coverage<=10s+1-max(0,2s-10); additional fixed-point losses may be used",
+    "tangent_without_contact": "s<=9; all pins external; closed coverage=10s+1",
+    "tangent_with_contact": "closed coverage=9s+1"
+  },
+  "planned_computation": "One bounded small-integer dynamic program over16 helper slots, absolute/internal/external pin counts and geometric type capacity bounds; no field arithmetic, adjacency graph, helper-graph enumeration or solver.",
+  "budget_CPU_seconds": 20,
+  "workers": 1,
+  "graph_generation": 0, "BFS": 0, "SAT": 0, "MIP": 0, "Lean": 0,
+  "hashes": 0, "installs": 0,
+  "stop": "After the finite arithmetic result and a concrete next interface or exclusion, write PROOF/RESULT/TERMINAL. Do not pursue q/seed ladders or strengthen the closed Brown57 entry."
+}

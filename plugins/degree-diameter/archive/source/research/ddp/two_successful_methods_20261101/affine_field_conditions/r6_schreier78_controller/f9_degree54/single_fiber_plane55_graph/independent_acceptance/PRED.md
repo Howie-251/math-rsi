@@ -1,0 +1,9 @@
+# New independent extension prediction — before new literal validation
+
+One scope only: accepted56862/54regular/D3 source, add81 independent false twins of centers in its controller0 plane W={(a,b,4a)} overGF3[w]/(w²+1), j=9a+b, centerlabela+9b+81mul(4,a), newlabel56862+j. The integer4 is GF9 element1+w. New pins must be the immutable source fullN54. No alternative planes/fibers/caps/fields searched. Singleworker45CPU cap including input prep/compile/validation/aggregation.
+
+Predict fullnewgraph56943vertices1539648edges, preserving all1535274sourceedges exactly plus4374new-old edges and0new-new. Predict81fullN54 sets pairwise disjoint, oldload≤1 and degreehistogram54:52569,55:4374. Literal acceptance will freshly read both edgefiles, independently recalculate centers, bind each newN to its sourceN, and check complete newliteraldegree/order/simple; sourcefield/controller and oldroot BFS are inherited rather than rerun.
+
+Concrete distance prediction: our alreadyaccepted independent806root CSV contains all81center labels. Each ofthese has sourcehist(1,54,2476,54331). Replacing a sourcecenter by a fullN clone keeps distances to allotheroldvertices, while its originalcenter is atdistance2. All80othernewclones have distance3 because their pinsets are disjoint and their distinctcenters have sourceD3. Therefore each of81newroots must haveexacthist(1,54,2477,54411). Verifyall81by ordinary queueR3 BFS on the newliteralgraph;0oldroot BFS. Expected/actual perroot rows and disagreements will be preserved. This class prediction follows before the newfile is read, not from its measured BFS.
+
+Allprefix/currentclone D3 is proved via immutable-source paths whose interiorvertices remain old. It never requires a futureclone. The sourceallpairs premise is inherited from../../independent_acceptance/SUMMARY.json/PROOF.md; it is not revalidated here. Newgraph legality, Lean and publicpriority remain distinct.

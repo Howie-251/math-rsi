@@ -1,0 +1,137 @@
+def DegreeDiameter.rootParents.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → Finset V :=
+fun {V} [Fintype V] G r y => {x ∈ G.neighborFinset r | G.Adj x y}
+structure DegreeDiameter.DoubleRootParentData.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) (r w a : V) : Prop
+number of parameters: 6
+fields:
+  DegreeDiameter.DoubleRootParentData.w_ne_root : w ≠ r
+  DegreeDiameter.DoubleRootParentData.a_ne_root : a ≠ r
+  DegreeDiameter.DoubleRootParentData.w_ne_a : w ≠ a
+  DegreeDiameter.DoubleRootParentData.root_w_nonadj : ¬G.Adj r w
+  DegreeDiameter.DoubleRootParentData.root_a_nonadj : ¬G.Adj r a
+  DegreeDiameter.DoubleRootParentData.root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y
+  DegreeDiameter.DoubleRootParentData.w_parent_card : (DegreeDiameter.rootParents G r w).card = 3
+  DegreeDiameter.DoubleRootParentData.a_parent_card : (DegreeDiameter.rootParents G r a).card = 2
+  DegreeDiameter.DoubleRootParentData.ordinary_parent : ∀ (y : V),
+      y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∃! x, G.Adj r x ∧ G.Adj x y
+constructor:
+  DegreeDiameter.DoubleRootParentData.mk.{u_1} {V : Type u_1} [Fintype V] {G : SimpleGraph V} {r w a : V}
+    (w_ne_root : w ≠ r) (a_ne_root : a ≠ r) (w_ne_a : w ≠ a) (root_w_nonadj : ¬G.Adj r w) (root_a_nonadj : ¬G.Adj r a)
+    (root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y)
+    (w_parent_card : (DegreeDiameter.rootParents G r w).card = 3)
+    (a_parent_card : (DegreeDiameter.rootParents G r a).card = 2)
+    (ordinary_parent : ∀ (y : V), y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∃! x, G.Adj r x ∧ G.Adj x y) :
+    DegreeDiameter.DoubleRootParentData G r w a
+structure DegreeDiameter.D1MatchParentTemplate.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) (r w a : V) : Prop
+number of parameters: 6
+fields:
+  DegreeDiameter.D1MatchParentTemplate.parents : DegreeDiameter.DoubleRootParentData G r w a
+  DegreeDiameter.D1MatchParentTemplate.w_a_nonadj : ¬G.Adj w a
+  DegreeDiameter.D1MatchParentTemplate.parent_overlap_one : (DegreeDiameter.rootParents G r w ∩
+          DegreeDiameter.rootParents G r a).card =
+      1
+constructor:
+  DegreeDiameter.D1MatchParentTemplate.mk.{u_1} {V : Type u_1} [Fintype V] {G : SimpleGraph V} {r w a : V}
+    (parents : DegreeDiameter.DoubleRootParentData G r w a) (w_a_nonadj : ¬G.Adj w a)
+    (parent_overlap_one : (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 1) :
+    DegreeDiameter.D1MatchParentTemplate G r w a
+@DegreeDiameter.n62_double_endpoint_zero_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {r w : V}, DegreeDiameter.defectMatrix G r w = 2 → DegreeDiameter.zeroTriangleVertex G r
+@DegreeDiameter.n62_double_root_normal_form : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w : V},
+          DegreeDiameter.defectMatrix G r w = 2 →
+            ∃ a,
+              DegreeDiameter.DoubleRootParentData G r w a ∧
+                DegreeDiameter.twoOneRow G r w a ∧
+                  DegreeDiameter.zeroTriangleVertex G r ∧ DegreeDiameter.zeroTriangleVertex G w
+@DegreeDiameter.double_root_edge_parents_disjoint : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r w a : V},
+  DegreeDiameter.zeroTriangleVertex G w →
+    G.Adj w a → Disjoint (DegreeDiameter.rootParents G r w) (DegreeDiameter.rootParents G r a)
+@DegreeDiameter.n62_double_root_overlap_classification : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w : V},
+          DegreeDiameter.defectMatrix G r w = 2 →
+            ∃ a,
+              DegreeDiameter.DoubleRootParentData G r w a ∧
+                DegreeDiameter.twoOneRow G r w a ∧
+                  ((DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 0 ∨
+                    (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 1 ∧ ¬G.Adj w a ∨
+                      (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 2 ∧ ¬G.Adj w a)
+@DegreeDiameter.double_root_overlap_two_template : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {r w a : V},
+  DegreeDiameter.DoubleRootParentData G r w a →
+    DegreeDiameter.zeroTriangleVertex G w →
+      (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 2 →
+        ∃ i j k, DegreeDiameter.D2MatchTemplate G r i j k w a
+@DegreeDiameter.n62_double_root_overlap_two_impossible : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w a : V},
+          DegreeDiameter.DoubleRootParentData G r w a →
+            DegreeDiameter.zeroTriangleVertex G w →
+              (DegreeDiameter.rootParents G r w ∩ DegreeDiameter.rootParents G r a).card = 2 → False
+@DegreeDiameter.n62_double_root_d0_or_d1 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w : V},
+          DegreeDiameter.defectMatrix G r w = 2 →
+            ∃ a,
+              DegreeDiameter.twoOneRow G r w a ∧
+                (DegreeDiameter.DoubleRootParentData G r w a ∧
+                    Disjoint (DegreeDiameter.rootParents G r w) (DegreeDiameter.rootParents G r a) ∨
+                  DegreeDiameter.D1MatchParentTemplate G r w a)
+@DegreeDiameter.double_root_disjoint_parent_template : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {r w a : V},
+  DegreeDiameter.DoubleRootParentData G r w a →
+    Disjoint (DegreeDiameter.rootParents G r w) (DegreeDiameter.rootParents G r a) →
+      ∃ i j k p q, DegreeDiameter.D0ParentTemplate G r i j k p q w a
+@DegreeDiameter.n62_double_root_template_coverage : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w : V},
+          DegreeDiameter.defectMatrix G r w = 2 →
+            ∃ a,
+              DegreeDiameter.twoOneRow G r w a ∧
+                (DegreeDiameter.D1MatchParentTemplate G r w a ∨
+                  ∃ i j k p q, DegreeDiameter.D0ParentTemplate G r i j k p q w a)
+@DegreeDiameter.n62_double_root_d0_match_closed : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w a : V},
+          DegreeDiameter.DoubleRootParentData G r w a →
+            Disjoint (DegreeDiameter.rootParents G r w) (DegreeDiameter.rootParents G r a) →
+              ¬G.Adj w a → ∃ b, DegreeDiameter.ClosedDoubleFour G r w b a
+@DegreeDiameter.n62_d0_edge_closed_from_parents : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k p q w a : V},
+          DegreeDiameter.D0ParentTemplate G r i j k p q w a → G.Adj w a → ∃ b, DegreeDiameter.ClosedDoubleFour G r w b a
+@DegreeDiameter.n62_double_root_d1_or_closed_component : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r w : V},
+          DegreeDiameter.defectMatrix G r w = 2 →
+            (∃ a, DegreeDiameter.D1MatchParentTemplate G r w a) ∨ ∃ a b, DegreeDiameter.ClosedDoubleFour G r w b a
+'DegreeDiameter.n62_double_endpoint_zero_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.double_root_edge_parents_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_overlap_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.double_root_overlap_two_template' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_overlap_two_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_d0_or_d1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.double_root_disjoint_parent_template' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_template_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_d0_match_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d0_edge_closed_from_parents' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_root_d1_or_closed_component' depends on axioms: [propext, Classical.choice, Quot.sound]

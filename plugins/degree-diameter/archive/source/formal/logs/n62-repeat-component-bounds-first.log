@@ -1,0 +1,19 @@
+✖ [1254/1254] Building DegreeDiameter.N62RepeatComponentBounds (72s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatComponentBounds.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatComponentBounds.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatComponentBounds.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatComponentBounds.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatComponentBounds.setup.json --json
+error: DegreeDiameter/N62RepeatComponentBounds.lean:18:2: Type mismatch: After simplification, term
+  hh
+ has type
+  (∑ x_1, if (repeatSupport G).connectedComponentMk x_1 = C then defectMatrix G x x_1 else 0) = 3
+but is expected to have type
+  ∑ x_1 with (repeatSupport G).connectedComponentMk x_1 = C, defectMatrix G x x_1 = 3
+error: DegreeDiameter/N62RepeatComponentBounds.lean:29:12: Unknown identifier `CharTwo.add_self_eq_zero`
+error: DegreeDiameter/N62RepeatComponentBounds.lean:61:2: Type mismatch: After simplification, term
+  hz
+ has type
+  3 * ↑(repeatComponentSize G C) = 0
+but is expected to have type
+  ↑(repeatComponentSize G C) = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62RepeatComponentBounds
+error: build failed

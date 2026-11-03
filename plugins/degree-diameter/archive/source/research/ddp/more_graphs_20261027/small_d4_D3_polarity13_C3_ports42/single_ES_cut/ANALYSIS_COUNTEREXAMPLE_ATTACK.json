@@ -1,0 +1,104 @@
+{
+  "status": "PAPER_UNIFORM_CROSS_E_OBSTRUCTION_FOR_DECLARED_SINGLE_ES_CUT_RULE",
+  "completed_at_utc": "2026-10-28T02:42:29.674085+00:00",
+  "target_Delta": 4,
+  "target_D": 3,
+  "hypothetical_n": 42,
+  "actual_n": null,
+  "actual_D": null,
+  "ordinary_bad_unordered_pairs": null,
+  "input_read_scope": {
+    "cached_actual_base_input": "research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/INPUT.json",
+    "cached_actual_class_proof": "research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/ANALYSIS_EXTERNAL_OBSTRUCTION.md",
+    "new_rule_prediction": "research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/single_ES_cut/PREDICTION.json",
+    "new_INPUT_existed_at_initial_read": false,
+    "scope_binding": "Newrule is read from parent and PREDICTION; no new candidate or new compiler output is validated by this analysis."
+  },
+  "declared_rule": "Delete one E-S lifted edge e-s; add e-a; helpers a-b-c; c joined to one full absolute fibre; a,b otherwise attach onlyA; s attached to one A; all remaining newold-old edges onlyA-A.",
+  "old_no_cut_obstruction_applicable_without_new_argument": false,
+  "why_old_proof_not_directly_reusable": [
+    "Not all72old lift edges retained.",
+    "e and s have newly freed degree slots, so newold endpoints are not restricted toA.",
+    "The old assertion that helper-to-E shortpaths must be h-A-S-E fails: b-a-e-E is now allowed."
+  ],
+  "deck_action": {
+    "C3_symmetry_guaranteed": false,
+    "reason": "One of three lifted E-S edges is singled out and deleted; fixed e-a, helperP3 and arbitrary ports are not invariant under the old cyclic sheet action.",
+    "hypothetical_hit_validation": "An actual candidate would require an independent all42-root BFS; one root or an unproved deck orbit is insufficient."
+  },
+  "old_base_classes": {
+    "E_axes_base_IDs": [
+      0,
+      1,
+      4
+    ],
+    "E_lifts": 9,
+    "S_weight2_base_count": 6,
+    "A_absolute_base_IDs": [
+      8,
+      9,
+      11,
+      12
+    ],
+    "old_encoding": "3*base_ID+sheet",
+    "E_induced_graph": "K3 on the three axes; liftedges are C3 perfect matchings.",
+    "S_to_E": "EachS has one oldEneighbor; its pairedS has that sameEbase.",
+    "A_to_E": "No edges."
+  },
+  "new_cross_E_proof": {
+    "new_E_incident_edges": "Only e-a; a has no secondEneighbor.",
+    "A_E_edges_created": false,
+    "S_E_neighbors_added": false,
+    "shortpath_cases": [
+      "A simpleE-to-E path of length<=3 that entersA cannot exit toE at its last step becauseA has noEneighbor.",
+      "E-S-S-E ends at the sameEbase because pairedS share thatEbase.",
+      "E-S-E or E-E-S-E only backtracks through the uniqueEneighbor ofS; deleting e-s cannot add anotherEneighbor.",
+      "An a-containing shortpath cannot join distinctEtargets: a only meets e inE, and its otherneighbors b/A have noEneighbor; mixed E-E-a-E is a backtrack.",
+      "Thus differentEbase endpoints within3 can use only the directEtriangle edge or the2edge route through its thirdEbase. PureE nonbacktracking3walks return to the sourceEbase."
+    ],
+    "different_target_E_fibre_size": 3,
+    "maximum_distinct_target_lifts_within3": 2,
+    "uniform_missing_target_per_source_and_other_Ebase_at_least": 1,
+    "conclusion": "Every graph in this declared single_ES_cut/e-to-helper family failsD<=3, uniformly over chord trits and every allowed port assignment.",
+    "counterexample_units": "Uniform route-class capacity, not a measured bad-pair count or an actual graph diameter."
+  },
+  "symbolic_witness": {
+    "source": "E0,s",
+    "target_fibre": "E1,all3sheets",
+    "orientations": "E0->E1:lambda01, E0->E4:lambda04, E1->E4:lambda14",
+    "reachable_target_sheets_within3": [
+      "s+lambda01 mod3",
+      "s+lambda04-lambda14 mod3"
+    ],
+    "missing": "Any sheet outside this set of size<=2.",
+    "canonical_tree_conditional": {
+      "assumption": "E0-E1 and E0-E4 tree shifts remain0, as in the saved base tree.",
+      "source_vertex": 0,
+      "target_fibre_vertices": [
+        3,
+        4,
+        5
+      ],
+      "tau": "oriented chordE1->E4",
+      "tau0_missing_vertex": 4,
+      "tau1_missing_vertex": 4,
+      "tau2_missing_vertex": 5,
+      "note": "General obstruction does not depend on this gauge or these particular numeric witnesses."
+    }
+  },
+  "c_positive_status": "Not refuted by this attack. c may cover all42 while old-old crossE pairs still fail.",
+  "exact_scope_limit": "Does not exclude arbitrary42graphs, all single-edge cuts, or a changed rule adding an E-A edge, a secondE port, or other changed source incidence. No such continuation is executed here.",
+  "independent_review": "Expert_brief_evidence independently reviewed the crossE path classification and witness formulas as VALID in a separate paper-only message; filelinks may be added separately.",
+  "execution": {
+    "graphs_generated": 0,
+    "candidate_checks": 0,
+    "graph_BFS": 0,
+    "old_source_BFS": 0,
+    "SAT_calls": 0,
+    "new_models": 0,
+    "word_enumerations": 0,
+    "CRC_or_hash": 0,
+    "paid_external_review_calls": 0
+  },
+  "decision": "The declared family has a paper obstruction; no SAT call or candidate BFS is needed for this rule. Producer/root owns its final termination and same-family raw record."
+}

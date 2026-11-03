@@ -1,0 +1,71 @@
+{
+  "n": 256,
+  "degree": 8,
+  "diameter_target": 3,
+  "group_order": 64,
+  "edge_u": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "edge_v": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "tree_edge_indices": [
+    0,
+    3,
+    6
+  ],
+  "free_edge_indices": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "phase_mask_convention": "bit k is the phase of free_edge_indices[k]",
+  "coefficient_order": "same as free_edge_indices; signed coefficients interpreted modulo 32",
+  "dart_convention": "2*edge is edge_u to edge_v; 2*edge+1 is its inverse",
+  "expected_reduced_walks_per_root_by_length": [
+    1,
+    8,
+    56,
+    392
+  ]
+}

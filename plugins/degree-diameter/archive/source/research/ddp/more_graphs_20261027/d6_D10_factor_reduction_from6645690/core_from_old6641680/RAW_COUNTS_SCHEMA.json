@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "file": "degree6_D10_remove_h_rawcounts.u64le.bin",
+      "count": 108880,
+      "dtype": "uint64",
+      "endianness": "little",
+      "byte_length": 871040,
+      "rule": "degree6_D10_remove_h"
+    },
+    {
+      "file": "degree7_D9_keep_h_rawcounts.u64le.bin",
+      "count": 108880,
+      "dtype": "uint64",
+      "endianness": "little",
+      "byte_length": 871040,
+      "rule": "degree7_D9_keep_h"
+    }
+  ],
+  "endpoint_encoding": "1361*phase+normal1361",
+  "phase_range": [
+    0,
+    79
+  ],
+  "normal_range": [
+    0,
+    1360
+  ],
+  "empty_word": "Included once at endpoint0.",
+  "source_letter_order": [
+    "positive0",
+    "positive1",
+    "positive2",
+    "inverse0",
+    "inverse1",
+    "inverse2",
+    "h"
+  ],
+  "source_inverse_indices": [
+    3,
+    4,
+    5,
+    0,
+    1,
+    2,
+    6
+  ],
+  "restricted_degree6_letters": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "degree7_letters": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "DP_state": "(endpoint,last originalsourceletter),notdeduplicatedbyprojectedendpoints",
+  "DP_transition": "outgoingletter d gets sum_over_last minus count(last=inverse[d]);empty prefix separatelyinitialized",
+  "scope": "Onlyprojectedraw multiplicities,not13component endpointimages."
+}

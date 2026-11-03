@@ -1,0 +1,46 @@
+def DegreeDiameter.Portfolio.OppositeGQSpread.graph.{u_1, u_2, u_3, u_4} : {P : Type u_1} →
+  {L : Type u_2} → {V : Type u_3} → {J : Type u_4} → V ≃ P × L → (P → L → Prop) → (J → L) → SimpleGraph (V ⊕ J) :=
+fun {P} {L} {V} {J} e Inc spread =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl u, Sum.inl v => u ≠ v ∧ Inc (e u).1 (e v).2 ∧ Inc (e v).1 (e u).2
+      | Sum.inl u, Sum.inr j => Inc (e u).1 (e u).2 ∧ Inc (e u).1 (spread j)
+      | Sum.inr j, Sum.inl u => Inc (e u).1 (e u).2 ∧ Inc (e u).1 (spread j)
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.Inc : OppositeGQ35Spread.Point → OppositeGQ35Spread.Line → Prop :=
+fun p l => ∃ i, OppositeGQ35Spread.linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.graph : SimpleGraph OppositeGQ35Spread.Vertex :=
+OppositeGQSpread.graph OppositeGQ35Spread.oldEquiv OppositeGQ35Spread.Inc OppositeGQ35Spread.spread
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.oldEquiv : OppositeGQ35Spread.Old ≃
+  OppositeGQ35Spread.Point × OppositeGQ35Spread.Line :=
+finProdFinEquiv.symm
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.label : OppositeGQ35Spread.Vertex ≃ Fin 6160 :=
+finSumFinEquiv
+DegreeDiameter.Portfolio.OppositeGQ35Spread.old_label (p : OppositeGQ35Spread.Point) (l : OppositeGQ35Spread.Line) :
+  ↑(OppositeGQ35Spread.old p l) = ↑l + 96 * ↑p
+DegreeDiameter.Portfolio.OppositeGQ35Spread.label_old (v : OppositeGQ35Spread.Old) :
+  ↑(OppositeGQ35Spread.label (Sum.inl v)) = ↑v
+DegreeDiameter.Portfolio.OppositeGQ35Spread.label_new (j : OppositeGQ35Spread.New) :
+  ↑(OppositeGQ35Spread.label (Sum.inr j)) = 6144 + ↑j
+DegreeDiameter.Portfolio.OppositeGQ35Spread.concrete_order_degree_and_exact_D3 :
+  Fintype.card OppositeGQ35Spread.Vertex = 6160 ∧
+    (∀ (v : OppositeGQ35Spread.Vertex), OppositeGQ35Spread.graph.degree v ≤ 24) ∧
+      DiameterAtMost OppositeGQ35Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ35Spread.graph 2
+theorem DegreeDiameter.Portfolio.OppositeGQ35Spread.concrete_order_degree_and_exact_D3 : Fintype.card
+      OppositeGQ35Spread.Vertex =
+    6160 ∧
+  (∀ (v : OppositeGQ35Spread.Vertex), OppositeGQ35Spread.graph.degree v ≤ 24) ∧
+    DiameterAtMost OppositeGQ35Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ35Spread.graph 2 :=
+⟨OppositeGQ35Spread.card_vertex,
+  ⟨OppositeGQ35Spread.degree_le_twentyfour,
+    ⟨OppositeGQ35Spread.diameterAtMost_three, OppositeGQ35Spread.not_diameterAtMost_two⟩⟩⟩
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.FinalClaim : Prop :=
+Fintype.card OppositeGQ35Spread.Vertex = 6160 ∧
+  (∀ (v : OppositeGQ35Spread.Vertex), OppositeGQ35Spread.graph.degree v ≤ 24) ∧
+    DiameterAtMost OppositeGQ35Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ35Spread.graph 2
+'DegreeDiameter.Portfolio.OppositeGQ35Spread.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.OppositeGQ35Spread.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

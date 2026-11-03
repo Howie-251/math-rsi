@@ -1,0 +1,15 @@
+{
+  "frozen_before_numeric_affine_relation_recovery": true,
+  "prediction": "Both loop-completed fixed partitions admit a complete affine parallel-line relation on every directed quotient arc, in the literal base-3 local-offset coordinates.",
+  "inputs": [
+    {"source":"actual15552","n":15552,"m":116316,"bin_size":81,"dimension":4},
+    {"source":"actual102060","n":102060,"m":765045,"bin_size":243,"dimension":5}
+  ],
+  "coordinate_convention": "Local offset x=sum_i x_i*3^i, x_i in F3, with no change of labels or basis.",
+  "inherited_gate": "../RESULT.json certifies both full loop-completed five-by-three equitable partitions.",
+  "candidate_map": "Use row0 output difference to normalize v at its first nonzero coordinate j. Q_v(y)=y-y_j*v. c=Q_v(row0 output); column_i=Q_v(row e_i output)-c. Verify the exact three-element set B*x+c+F3*v against all literal outputs.",
+  "stop": "First arc counterexample stops that source. No alternative coordinates, dimensions, partitions or guessed frame.",
+  "CPU_limit_seconds":10,
+  "no_source_modification": true,
+  "no_distances_balls_solver_or_new_graph": true
+}

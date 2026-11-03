@@ -1,0 +1,11 @@
+# 一次完整的全局C23电压构造批：保关键packet，分散自由电压
+
+已有：四globalcoeff全NO；实际point-edge自由度下最紧8→70的66条flow差rank65，已线性构造全23phase。全28920个unordered packets共2699760条NB≤5路径，所有signed flows互异、每pair至少66，故“永久同流碰撞”没有排此族。但把未用变量置0的21非零边局部解只使critical一个packet全23，首diagonal0→0仅9phase。
+
+生成规则发生有效变化：固定那22个独立path差方程δ_i·θ=i，保证关键packet始终全23；对其完整仿射解空间，给938个free point-edge变量独立均匀F23值，再按RREF补22个pivot。每条反向edge电压取负；所有样本定义完整的5520点/22080边/8regular普通覆盖。不能假定旧controller对称。树gauge等价剩721自由度，这里保留960坐标只会重复gauge表示、不影响正确性。
+
+固定一个种子20261102与32个样本，不循环调seed、不hillclimb坏pair，不延长旧solver。关键22方程每个样本强检；P1是全部样本关键packet仍全23。要检验的P2是分散自由变量能在至少一例中同时补满此前首坏diagonal0→0并保关键packet；P2并不等于整图成功。真正返回目标仍是任何样本在全部28920个packets中phase并F23；若命中，立即保存完整5520边表供新图验收。
+
+每个样本读取一次已有flowcache，逐packet精确phase-union。全C23 fibre平移和u↔v反向使全部这些packet全23等价实际cover D≤5；保diagonal空walk。保存全部32个电压、每例全覆盖packet数/未覆phase义务数/diagonal与cross分类/首反例；最佳例另存精确每packet分布和按原NB条数的失败类别。只以完整D5为成功，不把少几百缺口登记为新图。
+
+新增prepare预算.2 CPU，生成RREF+编译一次+native一次CPU8秒硬限，墙20秒；累计继承3.535598698CPU，本固定base的当前累计cap20CPU。没有重新枚路径、source验证、图BFS、solver、Lean、ARIS。无hit则暂停此无额外结构的自由电压采样为UNKNOWN，不排整族、不自动33rd sample/seed或转另一个fold/base；下一动作须来自具体反馈或第二条A线。

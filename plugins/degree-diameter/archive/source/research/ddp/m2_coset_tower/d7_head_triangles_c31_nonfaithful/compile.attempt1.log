@@ -1,0 +1,62 @@
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp: In function ‘std::array<int, 3> reps(const Key&)’:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:31:74: error: reference to ‘internal’ is ambiguous
+   31 | array<int,3> reps(const Key&k){return {32+A*k.j,nonsquares[k.yi]+P+A*k.k,internal[k.ii]};}
+      |                                                                          ^~~~~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:7:
+/usr/include/c++/11/bits/ios_base.h:1021:3: note: candidates are: ‘std::ios_base& std::internal(std::ios_base&)’
+ 1021 |   internal(ios_base& __base)
+      |   ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:23:25: note:                 ‘std::vector<int> internal’
+   23 | vector<int> nonsquares, internal;
+      |                         ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:31:88: error: could not convert ‘{(32 + (((int)A) * ((int)k.Key::j))), ((nonsquares.std::vector<int>::operator[](((std::vector<int>::size_type)((int)k.Key::yi))) + ((int)P)) + (((int)A) * ((int)k.Key::k))), <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘std::array<int, 3>’
+   31 | array<int,3> reps(const Key&k){return {32+A*k.j,nonsquares[k.yi]+P+A*k.k,internal[k.ii]};}
+      |                                                                                        ^
+      |                                                                                        |
+      |                                                                                        <brace-enclosed initializer list>
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp: In function ‘void init()’:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:42:58: error: reference to ‘internal’ is ambiguous
+   42 |  for(int g=1;g<QL;g++)if((g/P)%3==0&&g%P&&g<qinverses[g])internal.push_back(g);
+      |                                                          ^~~~~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:7:
+/usr/include/c++/11/bits/ios_base.h:1021:3: note: candidates are: ‘std::ios_base& std::internal(std::ios_base&)’
+ 1021 |   internal(ios_base& __base)
+      |   ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:23:25: note:                 ‘std::vector<int> internal’
+   23 | vector<int> nonsquares, internal;
+      |                         ^~~~~~~~
+In file included from /usr/include/c++/11/cassert:44,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:3:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:43:32: error: reference to ‘internal’ is ambiguous
+   43 |  assert(nonsquares.size()==15&&internal.size()==225);
+      |                                ^~~~~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:7:
+/usr/include/c++/11/bits/ios_base.h:1021:3: note: candidates are: ‘std::ios_base& std::internal(std::ios_base&)’
+ 1021 |   internal(ios_base& __base)
+      |   ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:23:25: note:                 ‘std::vector<int> internal’
+   23 | vector<int> nonsquares, internal;
+      |                         ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp: In function ‘void keyout(std::ostream&, const Key&)’:
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:79:224: error: reference to ‘internal’ is ambiguous
+   79 | void keyout(ostream&o,const Key&k){o<<"{\"cursor\":"<<k.cursor<<",\"anchor_j\":"<<k.j<<",\"second_field\":"<<nonsquares[k.yi]<<",\"second_j\":"<<k.k<<",\"internal_pair_index\":"<<k.ii<<",\"internal_pair_representative\":"<<internal[k.ii]<<'}';}
+      |                                                                                                                                                                                                                                ^~~~~~~~
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/istream:38,
+                 from /usr/include/c++/11/fstream:38,
+                 from /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:7:
+/usr/include/c++/11/bits/ios_base.h:1021:3: note: candidates are: ‘std::ios_base& std::internal(std::ios_base&)’
+ 1021 |   internal(ios_base& __base)
+      |   ^~~~~~~~
+/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_head_triangles_c31_nonfaithful/production.cpp:23:25: note:                 ‘std::vector<int> internal’
+   23 | vector<int> nonsquares, internal;
+      |                         ^~~~~~~~

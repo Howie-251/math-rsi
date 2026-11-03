@@ -1,0 +1,74 @@
+{
+  "prediction": "In Q=C49 x C20 with generators(1,0),(-13,1),(-4,12), the target(0,10) has exactdistance10; hence the fixed Z6860-normal transfer cannot have diameter9 for any valid C49action.",
+  "prediction_origin": "Parent supplied the deductive integer argument before this bounded c-audit; no graph observation is used.",
+  "fixed_normal_modulus": 6860,
+  "factorization": [
+    20,
+    343
+  ],
+  "hypothetical_group_order": 336140,
+  "positive_full_generator_phase_normal": [
+    [
+      1,
+      0
+    ],
+    [
+      36,
+      1
+    ],
+    [
+      45,
+      1512
+    ]
+  ],
+  "quotient_positive_generators_phase_normal20": [
+    [
+      1,
+      0
+    ],
+    [
+      -13,
+      1
+    ],
+    [
+      -4,
+      12
+    ]
+  ],
+  "quotient_target": [
+    0,
+    10
+  ],
+  "nine_step_necessary_conditions": [
+    "abs(a)+abs(b)+abs(c)<=9",
+    "b+12*c=10 mod20",
+    "a-13*b-4*c=0 mod49"
+  ],
+  "finite_audit_scope": "For c=-9..9, take the least absolute b representative of10-12*c modulo20; keep onlyabs(b)+abs(c)<=9, then minimizeabs(a) in its phase congruence.",
+  "predicted_eligible_absolute_c": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "predicted_minimum_costs_by_absolute_c": {
+    "1": 25,
+    "2": 20,
+    "3": 26,
+    "4": 13,
+    "6": 10
+  },
+  "length10_witness_abc": [
+    -2,
+    -2,
+    6
+  ],
+  "prohibited_computations": [
+    "quotient BFS",
+    "word enumeration",
+    "field image",
+    "full graph construction"
+  ],
+  "scope": "Only this fixed literal normal vector and Z6860 mechanism, all actions allowed by the group definition; not all degree6 diameter9 graphs."
+}

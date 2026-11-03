@@ -1,0 +1,140 @@
+{
+  "status": "COMMON_GLOBAL_D5_CORE_AND_ATTACHMENT_RULE_GAP_ESTABLISHED",
+  "scope": "Existingwave3/wave4author data only; graph structure and source recovery, no optimization",
+  "old_graph": {
+    "n": 41699,
+    "m": 237699,
+    "degree_histogram": {
+      "10": 5635,
+      "12": 22344,
+      "11": 13720
+    }
+  },
+  "current_graph": {
+    "n": 42342,
+    "m": 245217,
+    "degree_histogram": {
+      "12": 27946,
+      "10": 3149,
+      "11": 11190,
+      "9": 48,
+      "8": 7,
+      "7": 2
+    }
+  },
+  "common_partial_fold_core": {
+    "n": 41356,
+    "m": 234318,
+    "same_label_induced_edge_equality": true,
+    "old_witness_split_fibers": 7959,
+    "global_D_upper_bound": 5,
+    "global_guarantee": "Oldwitness G(S,c),Theorem5.1; no BFS"
+  },
+  "old_known_extension": {
+    "H3_extra_copies": 280,
+    "ordinary_padding_twins": 63,
+    "core_before_padding_n": 41636,
+    "final_n": 41699
+  },
+  "current_extras_from_common_core": {
+    "n": 986,
+    "core_extra_edges": 10517,
+    "extra_extra_edges": 382,
+    "Ncore_full_neighborhood_equal": 176,
+    "not_equal": 810,
+    "meaning": "Structural equality only; not geometric H3copy/pencil types",
+    "full_neighborhood_containment_beyond_equality_tested": true,
+    "star_containing_count": 176,
+    "strict_superset_only_count": 0,
+    "non_star_count": 810
+  },
+  "current_certified_twin_subgraph": {
+    "n": 41532,
+    "core_n": 41356,
+    "extras": 176,
+    "global_D_upper_bound": 5,
+    "proof": "Deleteextra-extraedges; ordinarytwins ofcommoncore byLemma2.2. Extraactualedges onlyshorten.",
+    "maximality_claimed": false
+  },
+  "label_identity_difference": {
+    "old_edges_missing": 3369,
+    "current_edges_not_in_old": 10887,
+    "construction_deletion_history_inferred": false,
+    "arbitrary_relabel_embedding_excluded": false
+  },
+  "old280_signature_correspondence": {
+    "pairable": 158,
+    "no_equal_signature_supply": 122,
+    "canonical_tail_tail_mismatches": 6,
+    "induced_retention_claim_for158": false,
+    "certified_induced_subset_copies": 154,
+    "common_induced_subset_order": 41510,
+    "mapping_evidence": "structural_classification.json/old280_certified_induced_subset",
+    "maximality_claimed": false
+  },
+  "old63_padding_equal_signatures_in_current": 0,
+  "final165_numeric_cut": {
+    "prefix_n": 42177,
+    "prefix_m": 243411,
+    "cross_edges": 1805,
+    "suffix_internal_edges": 1,
+    "suffix_internal_edge": [
+      42280,
+      42314
+    ],
+    "suffix_is_pencil_type_claimed": false,
+    "author_stage_ID_mapping_provided": false
+  },
+  "classification_by_numeric_cut": {
+    "prefix_extras821_copylike": 146,
+    "prefix_extras821_noncopylike": 675,
+    "final165_copylike": 30,
+    "final165_noncopylike": 135
+  },
+  "missing_original_rules": [
+    "pencilgeometric definition and neighbor/anchor rule",
+    "closed splitset definition",
+    "current extras copy/pencil/type/relabel witness",
+    "global old-new and new-new D5 proof fornoncertifiedextras",
+    "actual final165stage order/coverage certificate"
+  ],
+  "interpretation_limits": [
+    "810 do notcontainanycompletecorestar,evenwithextraanchors; geometricpencilidentityandotherglobalroutesnotinferred",
+    "equalNcore doesnotaloneprove completeH3-blowup; tail-tailcheckedseparately",
+    "fixed41636+63limit doesnotconstrain allreconfiguredH3copies",
+    "sourceD5 theorem reused onlywhereitsstructuralhypothesesestablished"
+  ],
+  "execution": {
+    "labelled_edge_comparisons": 1,
+    "additional_Ncore_structural_classification": 1,
+    "BFS_runs": 0,
+    "R4_cover_or_domination_searches": 0,
+    "copy_packing_or_greedy_profiles": 0,
+    "downloads": 0,
+    "source_verifiers_executed": false,
+    "comparison_CPU_seconds": 1.0487458859999998,
+    "structural_classification_CPU_seconds": 0.684848762,
+    "additional_star_containment_classification": 1,
+    "star_containment_CPU_seconds": 0.190848075
+  },
+  "evidence_paths": [
+    "adjacency_comparison.json",
+    "structural_classification.json",
+    "current_extra_signatures.json",
+    "REPORT.md",
+    "P_STAR_PREDICTION.json",
+    "star_containment.json"
+  ],
+  "new_lower_bounds": 0,
+  "pending": [],
+  "next_automatic_action": "NONE; completed once, no further distance/optimization/embedding",
+  "P_star": {
+    "frozen_before_execution": true,
+    "prediction": "nonstar>=643",
+    "outcome": "CONFIRMED",
+    "actual_nonstar": 810,
+    "bare_core_packing_bound_from_root": 343,
+    "packing_optimization_repeated": false,
+    "evidence": "star_containment.json"
+  }
+}

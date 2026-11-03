@@ -1,0 +1,175 @@
+{
+  "status": "COMPLETE_FINITE_PUBLIC_FORMULA_EXTENSION_NOT_GLOBAL_TABLE",
+  "checked_UTC": "2026-11-01T04:53:42.450824+00:00",
+  "scope": "Directed extension of existing public_baseline_audit to maximum-degree caps 23 and 24, diameter at most 3; literature/formula reading and small integer substitution only.",
+  "results": {
+    "23": {
+      "best_located_public_source_guarantee": 3549,
+      "type": "direct_substitution_in_published_PolarStar_construction",
+      "family": "Brown_ER16_star_Paley13",
+      "formula": "(16^2+16+1)*13",
+      "q": 16,
+      "structure_degree": 17,
+      "super_degree": 6,
+      "super_order": 13,
+      "maxdegree_bound": 23,
+      "candidate_order_not_generated_by_this_task": 4336,
+      "public_guarantee_exceeds_candidate": false,
+      "candidate_exceeds_located_guarantee_by": 787,
+      "global_record_confirmed": false
+    },
+    "24": {
+      "best_located_public_source_guarantee": 6144,
+      "type": "direct_substitution_in_published_Delorme_opposite_GQ_construction",
+      "family": "opposite_GQ_Payne_q4_s3_t5",
+      "formula": "(3+1)*(5+1)*(1+3*5)^2",
+      "q": 4,
+      "s": 3,
+      "t": 5,
+      "maxdegree_bound": 24,
+      "diameter": 3,
+      "candidate_order_not_generated_by_this_task": 4544,
+      "public_guarantee_exceeds_candidate": true,
+      "public_guarantee_exceeds_candidate_by": 1600,
+      "global_record_confirmed": false,
+      "recommendation": "Do not generate 4544 solely to improve the prior public lower bound."
+    }
+  },
+  "formula_family_maxima": {
+    "23": {
+      "PolarStar_IQ": {
+        "cap": 23,
+        "family": "PolarStar_IQ",
+        "q": 13,
+        "superdegree": 8,
+        "degree": 22,
+        "order": 3294
+      },
+      "PolarStar_Paley": {
+        "cap": 23,
+        "family": "PolarStar_Paley",
+        "q": 16,
+        "superdegree": 6,
+        "superorder": 13,
+        "degree": 23,
+        "order": 3549
+      },
+      "BDF_as_listed_in_PolarStar_Table2": {
+        "cap": 23,
+        "family": "BDF_as_listed_in_PolarStar_Table2",
+        "q": 13,
+        "superdegree": 9,
+        "degree": 23,
+        "order": 3294
+      }
+    },
+    "24": {
+      "PolarStar_IQ": {
+        "cap": 24,
+        "family": "PolarStar_IQ",
+        "q": 16,
+        "superdegree": 7,
+        "degree": 24,
+        "order": 4368
+      },
+      "PolarStar_Paley": {
+        "cap": 24,
+        "family": "PolarStar_Paley",
+        "q": 17,
+        "superdegree": 6,
+        "superorder": 13,
+        "degree": 24,
+        "order": 3991
+      },
+      "BDF_as_listed_in_PolarStar_Table2": {
+        "cap": 24,
+        "family": "BDF_as_listed_in_PolarStar_Table2",
+        "q": 16,
+        "superdegree": 7,
+        "degree": 24,
+        "order": 3822
+      }
+    }
+  },
+  "applicability": {
+    "Brown_ER": "q any prime power; order q^2+q+1, degree bound q+1, diameter2, Property R per PolarStar Theorem3. q16 is valid.",
+    "IQ": "superdegree d >=0 and d mod4 in {0,3}; superorder2d+2. Do not apply at d6 or d9.",
+    "Paley": "2d+1 a prime power congruent1mod4, d even; Paley13 has d6 and PropertyR1, valid with BrownER16.",
+    "Delorme_single_GQ_polarity": "q=2^(2m+1), m>=0; q16 invalid. This restriction does not apply to opposite_GQ.",
+    "opposite_GQ": "Existing GQ(s,t); does not require polarity on the original GQ. Payne q4 gives (s,t)=(3,5); degree24/order6144.",
+    "opposite_GQ_exact_degree": "GQ(3,5) has64points and96lines. Quotient vertices are point-line pairs:6144. 384incident flags lose a loop and have degree23; other5760 vertices degree24. Thus this 6144point construction is not a cap23 counterexample."
+  },
+  "sources": [
+    {
+      "url": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "location": "Theorem3, Table2, Proposition2/Corollary1, Section7.1",
+      "local_primary": "polarstar2024_primary_text.txt"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+      "location": "Section3.4.2 explicit opposite-GQ order/degree and q-1,q+1 existence",
+      "local_primary": "arxiv_2608_27253v2.html"
+    },
+    {
+      "url": "https://arxiv.org/abs/1005.2250v2",
+      "location": "Author abstract explicitly constructs Payne-derived GQ(q-1,q+1)",
+      "role": "independent primary corroboration of valid q4 geometry; metadata only read"
+    },
+    {
+      "citation": "C.Delorme, Large bipartite graphs with given degree and diameter, J.GraphTheory9(1985),325-334",
+      "location": "Original construction credited in arXiv2608.27253v2 reference20; original article not newly fetched."
+    },
+    {
+      "url": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "location": "Grands Graphes, distinct EJC1985 paper, sections2,7,8; existing text reused",
+      "local_primary": "delorme1985_primary_text.txt"
+    }
+  ],
+  "search": {
+    "web_search_batches": 4,
+    "batch_limit": 4,
+    "new_arxiv_metadata_retries": 0,
+    "queries": [
+      [
+        "degree diameter graph diameter 3 degree 23 24 PolarStar 4370 2026",
+        "PolarStar supernode graph IQ degree 2 d 2 2024 Paley proposition 2"
+      ],
+      [
+        "\"diameter 3\" \"degree 23\" graph",
+        "\"diameter 3\" \"degree 24\" graph",
+        "\"PolarStar\" \"23\" \"24\" 4368 3549"
+      ],
+      [
+        "\"degree diameter\" \"23\" \"24\" \"diameter 3\" graphs largest",
+        "\"diameter-three\" \"23\" \"24\" graphs 2026 lower bounds",
+        "\"diameter 3\" \"degree 24\" largest 4000",
+        "\"degree 23\" \"diameter three\" graph"
+      ],
+      [
+        "generalized quadrangle (3,5) Payne 24 6144 diameter 3",
+        "generalized quadrangle (3,5) Payne derivation q4 existence"
+      ]
+    ],
+    "limitations": "This is not exhaustive across all papers/catalogues; public guarantees are best located in this bounded primary-source review, not a certified globally strongest table. Search snippets were discovery only; numerical conclusions use the cited primary formulas."
+  },
+  "operations": {
+    "graph_generation": 0,
+    "graph_reads": 0,
+    "BFS": 0,
+    "solver": 0,
+    "Lean": 0,
+    "author_contact": 0,
+    "installs": 0,
+    "expert_package_changes": 0,
+    "existing_audit_files_changed": 0
+  },
+  "novelty_caution": "Both new proposed orders were ungenerated candidates at task assignment. This source audit accepts no new graph and certifies no global record.",
+  "dated_supplements": [
+    {
+      "date": "2026-11-01",
+      "file": "DEGREE23_24_EXTENSION_SPREAD_SUPPLEMENT_20261101.json",
+      "status": "COMPLETE_BOUNDED_PRIOR_ART_CHECK_NO_EXPLICIT_6160_LOCATED",
+      "original_baseline_rows_preserved": true
+    }
+  ]
+}

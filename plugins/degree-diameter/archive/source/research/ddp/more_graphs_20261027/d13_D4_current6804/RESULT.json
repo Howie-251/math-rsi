@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE_PREDICTION_REFUTED_NO_SPARES",
+  "n": 6804,
+  "m": 44226,
+  "simple": true,
+  "loops": 0,
+  "repeated_edge_rows": 0,
+  "degree_histogram": {
+    "13": 6804
+  },
+  "free_vertices": [],
+  "free_count": 0,
+  "source_sections": {
+    "symbol a: (v, x) -- (a(v), M x + lambda d) (the same edges as a^-1)": 20412,
+    "symbol b: (v, x) -- (b(v), M x + lambda d) (the same edges as b^-1)": 20412,
+    "symbol z: (v, x) -- (z(v), M x + c), each pair once": 3402
+  },
+  "fiber_count": 84,
+  "fiber_size": 81,
+  "intrafiber_edges": 0,
+  "controller_degree_histogram": {
+    "5": 84
+  },
+  "fiber_pair_edgecount_histogram": {
+    "243": 168,
+    "81": 42
+  },
+  "plain_matching_edges": 3402,
+  "plain_degree_histogram": {
+    "1": 6804
+  },
+  "plain_neighbor_fiber_rule": "g -> (g+42) mod84, hence always a different fiber",
+  "plain_fiber_coordinate_rule": "x -> -x+(0,0,1,0) over F3",
+  "plain_relation_misses": [],
+  "min_saturated_neighbors": 13,
+  "saturated_neighbor_count_histogram": {
+    "13": 6804
+  },
+  "prediction_disposition": "REFUTED",
+  "reason": "The reflection is between paired controller fibers g and gz, rather than within one odd-size fiber; it has no graph fixed vertex.",
+  "D": null,
+  "source_reported_D": 4,
+  "source_D4_basis": "Inherited current primary recipe/public report; not revalidated by BFS.",
+  "allfree_R3_executed": false,
+  "graph_BFS": 0,
+  "candidate_search": false,
+  "CPU_seconds": 0.132923931,
+  "edge_preserving_extension_obstruction": "All old vertices are saturated. No connected enlargement preserving every source edge and maximum degree13 can attach even one new vertex, regardless of helper count.",
+  "running": false,
+  "pending": [],
+  "source_stage_finished_UTC": "2026-10-27T18:29:32.894814+00:00",
+  "source_stage_wall_seconds": 86.979426
+}

@@ -1,0 +1,61 @@
+{
+  "status": "READY_COMPLETE_GENERIC_ENDPOINT_FORMS",
+  "binary_file": "generic_ab109.forms.bin",
+  "header": "20bytes: ASCII ABF1; then LEuint32[version1,p109,action_count6,slots_per_action324]",
+  "action_stream": "LEuint32r; then324slots orderedroot,end,phase. EachslotLEuint32[root,end,phase,count],followedbycount*3 unsigned8bytes[ua,ub,uc].",
+  "coefficient_semantics": "translationendpoint=(ua*A+ub*B+uc)mod109; standardrightvoltagelift, C=1,looptranslation0.",
+  "slot_id": "108root+36end+phase,localtoaction",
+  "roots": [
+    4,
+    34,
+    43,
+    71,
+    82,
+    93
+  ],
+  "p": 109,
+  "phase_order": 36,
+  "slot_count_total": 1944,
+  "triples_total": 656320,
+  "named_words_enumerated": 708570,
+  "all_NB_lengths_included": [
+    0,
+    9
+  ],
+  "producer_parameter_domain": 71286,
+  "canonical_r4_A29_B92_control": "All108root0 slots exactmissing sets MATCH existingactualproducer; noBFS.",
+  "canonical_control_matched": true,
+  "family_validity": "Parentproof: all are simple4regular. C/D commutator is nonzerotranslation(1-r^3) inprimeF109 andphasegcd(3,10)=1, givingconnected108phasecover. Voltageorders18/18/6/12 retained.",
+  "CPU_seconds": 0.868743189,
+  "parameter_search": false,
+  "graph_generation": false,
+  "BFS": 0,
+  "running": false,
+  "pending": [],
+  "action_minimum_forms": [
+    {
+      "r": 4,
+      "minimum": 265
+    },
+    {
+      "r": 34,
+      "minimum": 266
+    },
+    {
+      "r": 43,
+      "minimum": 266
+    },
+    {
+      "r": 71,
+      "minimum": 266
+    },
+    {
+      "r": 82,
+      "minimum": 265
+    },
+    {
+      "r": 93,
+      "minimum": 266
+    }
+  ]
+}

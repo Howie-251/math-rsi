@@ -1,0 +1,7 @@
+# 391支撑池完整整数构造执行审阅
+
+Root已读prepare.py和MODEL、SELECTOR_MAP的cap1/cap2实际条目。391支撑是具体精确分数向量的正组额外限制，不是整个K2的无损缩减。双方各391个selector、forward sequential prefix≤13允许每个合法选择用真实prefix扩展；379 cap1 mutex、12 cap2允许双侧同组。
+
+全部94186目标的两侧正literal覆盖行直接编码。只合并完整literal集合相等的514条重复行；187858行并未按代表目标抽样。R3/R4按同一original group位映射到7个uint64/目标。
+
+唯一调用窗口120、CPU硬121、whole150含4.008762751准备；观察5秒超时只轮询同PID。SAT必须完整94186 cached检查、组cap检查及按member_spares重建真实旧端口。只有实际新边表独立验收后才接受新图。UNKNOWN立即停；rawUNSAT仅为该受限pool探索结论，不追加cert或外推all K2，也不换seed自动续算。

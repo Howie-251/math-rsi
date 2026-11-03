@@ -1,0 +1,7 @@
+# orbit0原始UNSAT究竟是单helper覆盖不足还是共享assignment不兼容？
+
+6个helper-orbit精确assignment模型各唯一window均快速rawUNSAT，没有383图。此处不重跑全模型/旧timers，不换pattern或seed，只定位orbit0的覆盖失败类型。
+
+结构prefix的port exact1/helpercap本身可显式分配，必可满足。19组helper-old coverage按每helper364clauses。已知全19组rawUNSAT，二分当前已UNSAT的helper集合，分别求两半。若一半rawUNSAT，只继续该半；若两半SAT，保存两份实际满足assignment，说明各侧覆盖可以但合用同assignment不兼容。若缩到单helper rawUNSAT，则是该helper的路线分配自身不够，不能归因跨helper冲突。任何UNKNOWN即停止，不猜其分支。
+
+最多10个新子模型，每个一次2秒窗口/外CPU3硬限，不重复全19。所有SAT返回逐clause验真并保存portowners/activehelpers，不冒完整图；UNSAT仍raw/notproofchecked，不能扩所有H19或一般(4,5)。累计继承6.842230253CPU，新read.15/prep.2+actualCPU，全case40保持。无sourceBFS/新球/targetgraph/Lean/ARIS。

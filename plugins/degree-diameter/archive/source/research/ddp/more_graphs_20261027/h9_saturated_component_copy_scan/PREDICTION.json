@@ -1,0 +1,69 @@
+{
+  "timestamp_UTC": "2026-10-28T04:40:02.653593+00:00",
+  "status": "FROZEN_BEFORE_ALL_SATURATED_COMPONENT_SCAN",
+  "source_order": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "sources": [
+    {
+      "Delta": 11,
+      "n": 37631,
+      "m": 205329,
+      "file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/more_graphs_20261027/h9_d11_followups/graph_d11_D5_n37631.edges",
+      "format": "edges"
+    },
+    {
+      "Delta": 12,
+      "n": 42402,
+      "m": 245937,
+      "file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/more_graphs_20261027/h9_redei15/production/continuation/graphs/graph_d12_D5_n42402.edges",
+      "format": "edges"
+    },
+    {
+      "Delta": 13,
+      "n": 51457,
+      "m": 324863,
+      "file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/continuation/graphs/graph_d13_D5_n51457.edges",
+      "format": "edges"
+    },
+    {
+      "Delta": 14,
+      "n": 94186,
+      "m": 657452,
+      "file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/source94186.edges",
+      "format": "edges"
+    },
+    {
+      "Delta": 15,
+      "n": 102060,
+      "m": 765045,
+      "file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/source.csr.u32le.bin",
+      "format": "csr"
+    }
+  ],
+  "source_D5": "Each specified actual source alreadybound/reported or acceptedD5; no revalidation.",
+  "falsifiable_prediction": "At least one complete connected component of saturatedvertices on these five sources admits whole-component copying with legalboundaryloads, anoutsideexit at everyvertex andinternaldiameter<=3.",
+  "complete_finite_scope": "All connectedcomponents of G[{v:degree(v)=Delta}] on eachfixedsource, not an increasingk search or arbitraryvertexsubsets. Stopfirsthit orallfivecomplete orbudget.",
+  "necessary_gates": [
+    "For eachoutsidepin x, load=|N(x)intersectionC| <=Delta-degree(x).",
+    "Every c inC hasatleastone outside neighbor.",
+    "|C|<=Moore(Delta,3)=1+Delta+Delta(Delta-1)+Delta(Delta-1)^2."
+  ],
+  "exact_final_gate": "Only components passingdegree/exit/size receiveinternalallrootR3. Internaldiameter<=3 givesconstructivecompleteD5 proof.",
+  "construction": "CopyC asnewCprime withsameinternaledges andnewcprimetoeveryoldoutside neighbor ofc;retainalloldedges. Newdegree=olddegree=Delta; oldboundarydegreeincrements exactlyload.",
+  "diameter_proof": "Newcopy-to-oldoutside followsoldshortestpath innewC untilfirstexit, thenoldpath, <=5. Newcopy cprime toold d inC usescprime-p-c oflength2 viaanoutside neighbor, theninternalc-to-d<=3. Newnewdist<=3; oldoldretained.",
+  "budget": {
+    "aggregate_CPU_seconds": 15,
+    "workers": 1,
+    "old_source_BFS": 0,
+    "R4": 0,
+    "solver_calls": 0,
+    "other_sources_or_unsaturated_C": 0
+  },
+  "hit": "Savecompleteexpandededges/literalC/internaldiameterevidence/boundaryloads,thenstopforparentfirstnecessarycheck.",
+  "negative_scope": "Only this sufficient saturated-component-copyrule closes; no generalnonexistence, guardorprototypeextension."
+}

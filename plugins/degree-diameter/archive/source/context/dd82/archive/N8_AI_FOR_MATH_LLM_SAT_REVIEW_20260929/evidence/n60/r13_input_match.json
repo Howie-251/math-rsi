@@ -1,0 +1,251 @@
+{
+  "observed_at_utc": "2026-09-29T03:35:05.886615+00:00",
+  "run_id": "r13_manual12_r02_20260928_v1",
+  "source_run": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1",
+  "original_package": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928.zip",
+  "original_documents_equal_to_unpacked": {
+    "START_HERE.md": true,
+    "THEORY.md": true,
+    "CODEX_HANDOFF.md": true,
+    "CONSTRAINTS.json": true,
+    "COVERAGE_DELTA.json": true,
+    "FORMAL_STATUS.md": true,
+    "RESEARCH_CHECKPOINT.md": true
+  },
+  "session": {
+    "session": 1,
+    "started_at_utc": "2026-09-28T09:02:22Z",
+    "deadline_at_utc": "2026-09-28T21:02:22Z",
+    "limit_seconds": 43200.0,
+    "workers": 50,
+    "attempt_limits_seconds": [
+      7200.0,
+      43200.0
+    ],
+    "resume": false,
+    "status": "SESSION_LIMIT",
+    "active_seconds": 43200.0,
+    "research_round": "Round13",
+    "encoding_version": "n60_round13_manual12_r02_20260928_v1",
+    "package_revision": "r02_20260928",
+    "computation_question": "Decide the full remaining Q038/Q040 ranges after adding accepted R13F shared-tail, exact row-profile, packing and scoped auxiliary-endpoint conditions. Keep all twenty old open leaves and their four complementary cubes; inherit four theory-covered leaves. No relaxed model, new enumeration or performance comparison.",
+    "purpose": "decision_search",
+    "command": [
+      "/opt/conda/bin/python3",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/code_snapshot/sat60/round13_r02/queue.py",
+      "--manifest",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/branch_manifest.json",
+      "--solver",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+      "--solver",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/cadical-sc2025/build/cadical",
+      "--verifier",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/code_snapshot/sat60/round13_r02/verify_candidate.py",
+      "--results-dir",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1",
+      "--scratch-dir",
+      "/tmp/n60_round13_r02_r13_manual12_r02_20260928_v1",
+      "--run-id",
+      "r13_manual12_r02_20260928_v1",
+      "--workers",
+      "50",
+      "--session-hours",
+      "12",
+      "--attempt-limits",
+      "7200,43200",
+      "--milestones-hours",
+      "2,12,24,72",
+      "--verification-seconds",
+      "300",
+      "--progress-interval",
+      "60"
+    ],
+    "solvers": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+      "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/cadical-sc2025/build/cadical"
+    ],
+    "solver_args": [],
+    "verifier": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/code_snapshot/sat60/round13_r02/verify_candidate.py",
+    "results_dir": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1",
+    "manifest": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/branch_manifest.json",
+    "scratch_dir": "/tmp/n60_round13_r02_r13_manual12_r02_20260928_v1",
+    "enabled_constraints": {
+      "Q_C01_040": [
+        "R13C-GLOBAL-B3",
+        "R13C-GLOBAL-HEAVY-TRIANGLE",
+        "R13F-32-SHARED-ONLY",
+        "R13F-32-TAIL2111",
+        "R13F-32-INDEPENDENT",
+        "R13F-32-EIGHT-PACKING",
+        "R13F-32-MIXED",
+        "R13F-221-TRANSLATION"
+      ],
+      "Q_C02_038": [
+        "R13C-GLOBAL-B3",
+        "R13C-GLOBAL-HEAVY-TRIANGLE",
+        "R13C-038-MT",
+        "R13C-038-T21",
+        "R13C-038-HEAVY-TRANSPORT",
+        "R13C-038-COMMON-IN-BLOCK",
+        "R13F-32-SHARED-ONLY",
+        "R13F-32-TAIL2111",
+        "R13F-32-INDEPENDENT",
+        "R13F-32-EIGHT-PACKING",
+        "R13F-32-MIXED",
+        "R13F-221-TRANSLATION",
+        "R13F-038-32-SIMPLE-ENDS"
+      ]
+    },
+    "feedback_modules": {
+      "Q_C01_040": {
+        "R13F-32-SHARED-ONLY": "all distinct u,v,x: B_uv=3 and B_ux=2 imply B_vx=1",
+        "R13F-32-TAIL2111": "row32(u) and B_ux=2 imply row2111(x); n2111>=3*n32; no a=0/1 pruning",
+        "R13F-32-INDEPENDENT": "B[L,L]=0; n32<=n311 and n32<=2*n221+n2111",
+        "R13F-32-EIGHT-PACKING": "n32<=7; n2111+n11111>=4*n32; Q038 only: D<=3, E<=4",
+        "R13F-32-MIXED": "PARTIAL: row32 and its actual B3 partner have t=0; partner is row311",
+        "R13F-221-TRANSLATION": "PARTIAL: row221 has t=0 and no A edge to a positive B partner; no path/cycle circuit"
+      },
+      "Q_C02_038": {
+        "R13F-32-SHARED-ONLY": "all distinct u,v,x: B_uv=3 and B_ux=2 imply B_vx=1",
+        "R13F-32-TAIL2111": "row32(u) and B_ux=2 imply row2111(x); n2111>=3*n32; no a=0/1 pruning",
+        "R13F-32-INDEPENDENT": "B[L,L]=0; n32<=n311 and n32<=2*n221+n2111",
+        "R13F-32-EIGHT-PACKING": "n32<=7; n2111+n11111>=4*n32; Q038 only: D<=3, E<=4",
+        "R13F-32-MIXED": "PARTIAL: row32 and its actual B3 partner have t=0; partner is row311",
+        "R13F-221-TRANSLATION": "PARTIAL: row221 has t=0 and no A edge to a positive B partner; no path/cycle circuit",
+        "R13F-038-32-SIMPLE-ENDS": "Q038 only: an E-row32 identity cannot touch an endpoint of any Lambda-weight-2 pair"
+      }
+    },
+    "baseline_constraints": {
+      "Q_C01_040": {
+        "all_roots": "Inherited full E1/A+B, true nonbipartite B components, adjacent B<=2, t(v)<=2"
+      },
+      "Q_C02_038": {
+        "all_roots": "Inherited full E1/A+B, true nonbipartite B components, adjacent B<=2, t(v)<=2",
+        "Q038": {
+          "source": "C13 accepted continuation, sections 1-8F; Round13 H_038",
+          "Lambda": "XX^T-3I; connected, nonbipartite, triangle-free support; weights<=2",
+          "m_upper": 5,
+          "incidence_triangle_sum_upper": 2,
+          "weighted_triangle_budget": "3*T_D+2*T_E<=48",
+          "matching": "Round11 identity-preserving matching channels; all E-E constraints retained"
+        }
+      }
+    },
+    "memory_reserve_mib": 8192,
+    "memory_per_worker_estimate_mib": "2500",
+    "finished_at_utc": "2026-09-28T21:02:23Z"
+  },
+  "state_manifest_task_ids_match": true,
+  "all_80_symbolic_literals_match_actual_maps": true,
+  "all_130_attempt_input_and_literals_match": true,
+  "leaf_coverage_matches_saved": true,
+  "formula_inputs": {
+    "Q_C01_040": {
+      "source": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/instances/Q_C01_040",
+      "header": "p cnf 1120715 4306458",
+      "cnf_in_zip": false,
+      "enabled_constraints": [
+        "R13C-GLOBAL-B3",
+        "R13C-GLOBAL-HEAVY-TRIANGLE",
+        "R13F-32-SHARED-ONLY",
+        "R13F-32-TAIL2111",
+        "R13F-32-INDEPENDENT",
+        "R13F-32-EIGHT-PACKING",
+        "R13F-32-MIXED",
+        "R13F-221-TRANSLATION"
+      ],
+      "feedback_modules": {
+        "R13F-32-SHARED-ONLY": "all distinct u,v,x: B_uv=3 and B_ux=2 imply B_vx=1",
+        "R13F-32-TAIL2111": "row32(u) and B_ux=2 imply row2111(x); n2111>=3*n32; no a=0/1 pruning",
+        "R13F-32-INDEPENDENT": "B[L,L]=0; n32<=n311 and n32<=2*n221+n2111",
+        "R13F-32-EIGHT-PACKING": "n32<=7; n2111+n11111>=4*n32; Q038 only: D<=3, E<=4",
+        "R13F-32-MIXED": "PARTIAL: row32 and its actual B3 partner have t=0; partner is row311",
+        "R13F-221-TRANSLATION": "PARTIAL: row221 has t=0 and no A edge to a positive B partner; no path/cycle circuit"
+      },
+      "stage_clauses": {
+        "block_degrees": 109269,
+        "pair_constraints_and_witnesses": 2468166,
+        "iteration5_B_row_sums": 321840,
+        "round11_B_tree_and_odd": 347098,
+        "round7_internal_A_certificates": 357796,
+        "round7_scoped_B_support_rules": 0,
+        "round7_B_threshold_aliases": 0,
+        "round7_cycle_interface": 0,
+        "round7_weight_profile_partition": 3343,
+        "round7_secondary_split": 857,
+        "round11_global_high_support_four": 38913,
+        "round11_complementary_queue_split": 3428,
+        "round13_global_B3": 1770,
+        "round13_triangles_and_heavy_endpoints": 191633,
+        "r13f_exact_B_and_row_aliases": 153960,
+        "R13F-32-SHARED-ONLY": 205320,
+        "R13F-32-TAIL2111": 18000,
+        "R13F-32-INDEPENDENT": 59370,
+        "R13F-32-EIGHT-PACKING": 15057,
+        "R13F-32-MIXED": 7140,
+        "R13F-221-TRANSLATION": 3498
+      },
+      "variables": 1120715,
+      "clauses": 4306458,
+      "primary_edge_variables": 1711
+    },
+    "Q_C02_038": {
+      "source": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N60_ROUND13_PRO_TO_CODEX_manual-v1.2-feedback-loop_r02_20260928/runs/r13_manual12_r02_20260928_v1/formulas/instances/Q_C02_038",
+      "header": "p cnf 872623 3266788",
+      "cnf_in_zip": false,
+      "enabled_constraints": [
+        "R13C-GLOBAL-B3",
+        "R13C-GLOBAL-HEAVY-TRIANGLE",
+        "R13C-038-MT",
+        "R13C-038-T21",
+        "R13C-038-HEAVY-TRANSPORT",
+        "R13C-038-COMMON-IN-BLOCK",
+        "R13F-32-SHARED-ONLY",
+        "R13F-32-TAIL2111",
+        "R13F-32-INDEPENDENT",
+        "R13F-32-EIGHT-PACKING",
+        "R13F-32-MIXED",
+        "R13F-221-TRANSLATION",
+        "R13F-038-32-SIMPLE-ENDS"
+      ],
+      "feedback_modules": {
+        "R13F-32-SHARED-ONLY": "all distinct u,v,x: B_uv=3 and B_ux=2 imply B_vx=1",
+        "R13F-32-TAIL2111": "row32(u) and B_ux=2 imply row2111(x); n2111>=3*n32; no a=0/1 pruning",
+        "R13F-32-INDEPENDENT": "B[L,L]=0; n32<=n311 and n32<=2*n221+n2111",
+        "R13F-32-EIGHT-PACKING": "n32<=7; n2111+n11111>=4*n32; Q038 only: D<=3, E<=4",
+        "R13F-32-MIXED": "PARTIAL: row32 and its actual B3 partner have t=0; partner is row311",
+        "R13F-221-TRANSLATION": "PARTIAL: row221 has t=0 and no A edge to a positive B partner; no path/cycle circuit",
+        "R13F-038-32-SIMPLE-ENDS": "Q038 only: an E-row32 identity cannot touch an endpoint of any Lambda-weight-2 pair"
+      },
+      "stage_clauses": {
+        "block_degrees": 60368,
+        "pair_constraints_and_witnesses": 1710126,
+        "iteration5_B_row_sums": 162864,
+        "round11_B_tree_and_odd": 165279,
+        "round7_internal_A_certificates": 170840,
+        "round7_scoped_B_support_rules": 0,
+        "round7_B_threshold_aliases": 0,
+        "round7_cycle_interface": 0,
+        "round7_weight_profile_partition": 1975,
+        "round7_secondary_split": 497,
+        "round11_Lambda_far_and_matching": 410297,
+        "round11_complementary_queue_split": 1988,
+        "round13_global_B3": 906,
+        "round13_triangles_and_heavy_endpoints": 112111,
+        "round13_Q038_Lambda_counts_and_transfer": 237885,
+        "r13f_exact_B_and_row_aliases": 77928,
+        "R13F-32-SHARED-ONLY": 54984,
+        "R13F-32-TAIL2111": 16272,
+        "R13F-32-INDEPENDENT": 58506,
+        "R13F-32-EIGHT-PACKING": 16030,
+        "R13F-32-MIXED": 3684,
+        "R13F-221-TRANSLATION": 1830,
+        "R13F-038-32-SIMPLE-ENDS": 2418
+      },
+      "variables": 872623,
+      "clauses": 3266788,
+      "primary_edge_variables": 1693
+    }
+  },
+  "scope": "Artifact identity and coverage bookkeeping only; no new proof, solver, Lean or full encoding audit."
+}

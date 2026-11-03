@@ -1,0 +1,129 @@
+{
+  "status": "ROOT_ACCEPTED_COMPLETE_SINGLECUT_MAXSTAR_NO_WITH_CACHED_TWO_NONBASEBASE_BOUND_STOP",
+  "target": [
+    11,
+    4,
+    3646
+  ],
+  "actual": {
+    "status": "COMPLETE_NO_ANY_SINGLE_SOURCE_CUT_ONLY_NEW_STAR_MAX11_D4",
+    "native": {
+      "source_n": 3645,
+      "source_m": 20044,
+      "domain_edges": 20044,
+      "cached_R3_roots_reused": 1993,
+      "new_R3_queries": 1652,
+      "newroot_pass": 0,
+      "oldold_fail": 0,
+      "candidate_oldroot_BFS": 0,
+      "source_singlepair_diagnostic_queries": 0,
+      "best_missing_holes": 305,
+      "best_cut": [
+        108,
+        1643
+      ],
+      "full_D4_hit": false,
+      "complete_domain": true,
+      "classes": {
+        "base_base": {
+          "edges": 18485,
+          "newroot_fail": 18485,
+          "newroot_pass": 0,
+          "oldold_fail": 0
+        },
+        "base_inserted": {
+          "edges": 914,
+          "newroot_fail": 914,
+          "newroot_pass": 0,
+          "oldold_fail": 0
+        },
+        "inserted_inserted": {
+          "edges": 645,
+          "newroot_fail": 645,
+          "newroot_pass": 0,
+          "oldold_fail": 0
+        }
+      }
+    },
+    "prediction_inserted_layer_pass_supported": false,
+    "old_source_D4_revalidation_BFS": 0,
+    "old_free_R3_recomputed": false,
+    "compile_CPU": 1.0136589999999999,
+    "child_CPU": 0.02398099999999996,
+    "parent_CPU": 0.0054711190000000035,
+    "prior_read_CPU": 1.0,
+    "new_read_CPU_charge": 0.5,
+    "prepare_CPU_charge": 0.25,
+    "failed_input_preparation_CPU_charge": 0.1,
+    "case_CPU": 2.8931111190000003,
+    "case_cap": 15,
+    "new_accepted_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "new_Lean_ARIS_solver": 0,
+    "scope": "actual3645;deleteexactlyoneoriginaledge;addonevertexwithonlynewoldspokes;maximallegalP=all7freepluscutendsdominatesallsubsets;otheroldedgeskeep;noextraoldoldrepairs",
+    "terminal": true,
+    "next": "newacceptanceifhit;elseSTOP_NO_AUTOMATIC_SECOND_CUT_OR_REPAIR_SEED"
+  },
+  "cached_postprocess": {
+    "status": "CACHED_CLASS_MAXIMA_IMPLY_TWO_NON_BASEBASE_CUTS_NO",
+    "source": "ALL_EDGES.tsv, one completed read of all20044 existingrows;no newballsorcutsearch",
+    "holes_to_cover": 743,
+    "classes": {
+      "base_base": {
+        "edges": 18485,
+        "maximum_holes_covered": 438,
+        "witness": [
+          108,
+          1643
+        ]
+      },
+      "base_inserted": {
+        "edges": 914,
+        "maximum_holes_covered": 356,
+        "witness": [
+          1568,
+          3510
+        ]
+      },
+      "inserted_inserted": {
+        "edges": 645,
+        "maximum_holes_covered": 338,
+        "witness": [
+          3505,
+          3510
+        ]
+      }
+    },
+    "two_non_basebase_upper": 712,
+    "remaining_holes_at_least": 31,
+    "scope": "anytwo distinctsourcecuts,possiblysharedends,bothoutsideinducedfirst3444;oneonlynewoldstar+allfree7,nootheroldedits;P<=11",
+    "not_claimed": "two-cutenumeration or feasibilitywhenbasebasepresent",
+    "conservative_postprocess_CPU_charge": 0.05
+  },
+  "scope_review": "ONE_CUT_TERMINAL_SCOPE_REVIEW.md",
+  "paper_interface": "research/ddp/more_graphs_20261027/d11_D4_current3645/ONE_CUT_STAR_INTERFACE.md",
+  "root_read": [
+    "PRED.md",
+    "run.cpp",
+    "run_once.py",
+    "CACHE_BINDING.json",
+    "RESULT.json",
+    "ONE_CUT_TERMINAL_SCOPE_REVIEW.md"
+  ],
+  "final_case_CPU": 2.943111119,
+  "case_cap": 15,
+  "all_numeric_terminal": true,
+  "new_accepted_graph_parameter_Lean": [
+    0,
+    0,
+    0
+  ],
+  "source_D4_revalidation": false,
+  "oldold_stage": "NOT_ENTERED_NO_NEWROOT_PASS",
+  "stop": "noautomaticsecondcut/repair/seed; distinctsourcesandbroadereditsremainopen",
+  "next": "natural364helper14 exactoldscope and cooperative-route interface, notsinglecutladder",
+  "Goal_complete": false
+}

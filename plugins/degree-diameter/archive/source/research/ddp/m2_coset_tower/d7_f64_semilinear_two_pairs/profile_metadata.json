@@ -1,0 +1,90 @@
+{
+  "group_engine": "engine.hpp, same checked semilinear multiplication/inverse as d7_f64_semilinear; legality now requires exactly two nonidentity involutions",
+  "group_product": "(x,a,e)*(y,b,f)=(x+r^a*y^(8^e), a+8^e*b mod21,e+f mod2)",
+  "inverse": "(r^(-8^e*a)*x^(8^e), -8^e*a mod21,e)",
+  "field_polynomial_binary": 67,
+  "r_encoding": 8,
+  "r_order": 21,
+  "encoding": "x+64*(a+21e)",
+  "layer_sizes": [
+    2688,
+    448,
+    64
+  ],
+  "normalization_proof": "SCOPE.md",
+  "independent_machine_scope": "normalization_inputs.json",
+  "actual_machine_scope": "generated_scope.json",
+  "all_representatives_and_orbit_members_matched": true,
+  "type_I": {
+    "first_involutions": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "second_involution_representatives": "20 Frobenius2 orbits for each first, each represented by minimum encoded id; full orbit members retained",
+    "other_pairs": "all unordered distinct pairs from 1300 true inverse pairs",
+    "raw_total": 33774000,
+    "HH_total": 31274334
+  },
+  "type_II": {
+    "involutions": "all unordered distinct choices from the 45 actual non-A21 involutions",
+    "first_pair_representatives": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        3,
+        0
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        7,
+        0
+      ],
+      [
+        1,
+        7,
+        1
+      ]
+    ],
+    "other_pair": "all 1299 true inverse pairs excluding the fixed first pair",
+    "raw_total": 7716060,
+    "HH_total": 7708176
+  },
+  "raw_total": 41490060,
+  "HH_total": 38982510,
+  "enumeration_order": "TypeI: first involution index, second orbit index, pair j<k. Then TypeII: first pair branch, involution j<k, other pair index in 1299-list.",
+  "Frobenius_map": "(x,a,e)->(x^2,2a mod21,e)",
+  "no_arbitrary_field_scaling_or_extra_reduction": true,
+  "filters": [
+    "actual HH orbit coverage",
+    "exact HW3H union KW1H union HW1K",
+    "actual three-root BFS"
+  ],
+  "profile_HH_target": 2000,
+  "profile_prefix_is_not_unbiased_sample": true,
+  "full_production_started": false,
+  "stop_on_actual_D5": true,
+  "one_involution_preflight_only": true,
+  "old_preflights_repeated": false
+}

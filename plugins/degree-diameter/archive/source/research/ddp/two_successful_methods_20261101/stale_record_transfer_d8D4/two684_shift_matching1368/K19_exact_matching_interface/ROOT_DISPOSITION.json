@@ -1,0 +1,558 @@
+{
+  "status": "ROOT_ACCEPTED_K19_FULL_AND_FIXED_LAYOUT_UNKNOWN_CASE_STOP",
+  "review_UTC": "2026-11-02 00:38:01 UTC",
+  "source": [
+    7,
+    4,
+    684,
+    2394
+  ],
+  "target": [
+    8,
+    4,
+    1368
+  ],
+  "scope": "actualfixedsource,K19-equivariantmatching;strictsupersetofclosedH342domain",
+  "full_exact_model": {
+    "status": "COMPLETE_ACTUAL_POINT_CNF",
+    "original_variables": 24624,
+    "aux_variables": 49176,
+    "total_variables": 73800,
+    "clauses": 172800,
+    "point_cover_clauses": 24624,
+    "ALO_clauses": 72,
+    "Sinz_AMO_clauses": 147456,
+    "gauge_units": 648,
+    "cover_literals": 29499552,
+    "all_literals": 29844360,
+    "CNF_bytes": 166236739,
+    "empty_point_clauses": 0,
+    "point_clause_length_min": 1190,
+    "point_clause_length_max": 1202,
+    "base_masks": 1679616,
+    "nonzero_base_masks": 500256,
+    "all24624_normalized_targets": true,
+    "old_DP_source_BFS_runs": 0,
+    "actual_build_CPU": 0.456378
+  },
+  "full_window": {
+    "status": "UNKNOWN_SINGLE_CADICAL_WINDOW",
+    "terminal": true,
+    "prior_readgate_CPU": 1.0,
+    "new_prep_charge": 1.0,
+    "charges": [
+      {
+        "phase": "CONVERT_OLD_CACHE_NO_DP",
+        "CPU": 0.034366,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "python",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py"
+        ]
+      },
+      {
+        "phase": "COMPILE",
+        "CPU": 1.0443230000000001,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "g++",
+          "-O2",
+          "-std=c++17",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp",
+          "-o",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model"
+        ]
+      },
+      {
+        "phase": "BUILD_EXACT_POINT_CNF",
+        "CPU": 0.4581670000000001,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model",
+          "16.91885736"
+        ]
+      },
+      {
+        "phase": "ONLY_CADICAL_WINDOW",
+        "CPU": 60.041635,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+          "-t",
+          "60",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+        ]
+      }
+    ],
+    "parent_actual_CPU": 0.01945272,
+    "cumulative_case_CPU": 63.697950855,
+    "CPU_cap": 100.0,
+    "solver_calls": 1,
+    "native_return_code": 0,
+    "source_literal_parse_count": 0,
+    "old_endpoint_DP_repeated": 0,
+    "sourceD4validity_BFS": 0,
+    "old_H233928_repeated": 0,
+    "candidate_allroot_BFS": 0,
+    "source_field_Lean_ARIS_runs": 0,
+    "new_graph_parameter_Lean_count": [
+      0,
+      0,
+      0
+    ],
+    "formal_negative_family_verdict": "UNRESOLVED_UNLESS_ROOT_SEPARATELY_ACCEPTS_CHECKED_EVIDENCE",
+    "automatic_continuation": false,
+    "model": {
+      "status": "COMPLETE_ACTUAL_POINT_CNF",
+      "original_variables": 24624,
+      "aux_variables": 49176,
+      "total_variables": 73800,
+      "clauses": 172800,
+      "point_cover_clauses": 24624,
+      "ALO_clauses": 72,
+      "Sinz_AMO_clauses": 147456,
+      "gauge_units": 648,
+      "cover_literals": 29499552,
+      "all_literals": 29844360,
+      "CNF_bytes": 166236739,
+      "empty_point_clauses": 0,
+      "point_clause_length_min": 1190,
+      "point_clause_length_max": 1202,
+      "base_masks": 1679616,
+      "nonzero_base_masks": 500256,
+      "all24624_normalized_targets": true,
+      "old_DP_source_BFS_runs": 0,
+      "actual_build_CPU": 0.456378
+    },
+    "native": {
+      "argv": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+        "-t",
+        "60",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+      ],
+      "return_code": 0,
+      "s_status_lines": [],
+      "statistics": {
+        "conflicts": 132263,
+        "decisions": 338929,
+        "propagations": 81741996,
+        "restarts": 492
+      },
+      "solver_calls": 1,
+      "proof_logging": false,
+      "proof_checked": false,
+      "charges": [
+        {
+          "phase": "CONVERT_OLD_CACHE_NO_DP",
+          "CPU": 0.034366,
+          "exit": 0,
+          "wall_hard_killed": false,
+          "argv": [
+            "python",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py"
+          ]
+        },
+        {
+          "phase": "COMPILE",
+          "CPU": 1.0443230000000001,
+          "exit": 0,
+          "wall_hard_killed": false,
+          "argv": [
+            "g++",
+            "-O2",
+            "-std=c++17",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp",
+            "-o",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model"
+          ]
+        },
+        {
+          "phase": "BUILD_EXACT_POINT_CNF",
+          "CPU": 0.4581670000000001,
+          "exit": 0,
+          "wall_hard_killed": false,
+          "argv": [
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model",
+            "16.91885736"
+          ]
+        },
+        {
+          "phase": "ONLY_CADICAL_WINDOW",
+          "CPU": 60.041635,
+          "exit": 0,
+          "wall_hard_killed": false,
+          "argv": [
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+            "-t",
+            "60",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+          ]
+        }
+      ]
+    },
+    "raw_solver_comment": "c UNKNOWN",
+    "final_readonly_summary_charge": 0.1,
+    "cumulative_case_CPU_before_final_summary": 63.597950855,
+    "prediction_verdict": "UNRESOLVED_NO_SAT_OR_UNSAT_IN_SINGLE_WINDOW",
+    "K19_family_status": "UNKNOWN_NOT_EXCLUDED"
+  },
+  "assignment_projection": {
+    "status": "FROZEN_ONE_ELIGIBLE_SIGMA",
+    "eligible": true,
+    "sigma": [
+      27,
+      10,
+      13,
+      19,
+      2,
+      1,
+      15,
+      35,
+      34,
+      0,
+      14,
+      12,
+      7,
+      16,
+      9,
+      4,
+      17,
+      5,
+      22,
+      24,
+      18,
+      25,
+      29,
+      30,
+      3,
+      21,
+      20,
+      31,
+      28,
+      23,
+      32,
+      11,
+      6,
+      8,
+      33,
+      26
+    ],
+    "minimum_capacity": 19,
+    "raw": {
+      "run_status": "HighsStatus.kWarning",
+      "model_status": "HighsModelStatus.kTimeLimit",
+      "message": "Time limit reached",
+      "value_valid": true,
+      "solver_CPU": 5.149360753,
+      "child_CPU_sofar": 5.5555435939999995,
+      "objective_function_value": -19.0,
+      "mip_node_count": 0,
+      "mip_dual_bound": -668.0,
+      "mip_gap": 34.1578947368421,
+      "primal_solution_status": 2,
+      "num_primal_infeasibilities": 0
+    },
+    "solver_calls": 1,
+    "child_actual_CPU": 5.559948747,
+    "graph_generated": false
+  },
+  "frozen_shift_model": {
+    "status": "COMPLETE_FIXED_SIGMA_EXACT_SHIFT_POINT_CNF",
+    "original_shift_variables": 684,
+    "aux_variables": 648,
+    "total_variables": 1332,
+    "clauses": 26586,
+    "point_clauses": 24624,
+    "ALO": 36,
+    "AMO": 1908,
+    "gauge_units": 18,
+    "point_literals": 819432,
+    "all_literals": 823950,
+    "point_length_min": 19,
+    "point_length_max": 50,
+    "empty_point_clauses": 0,
+    "CNF_bytes": 3223120,
+    "actual_build_CPU": 0.401819087,
+    "sigma": [
+      27,
+      10,
+      13,
+      19,
+      2,
+      1,
+      15,
+      35,
+      34,
+      0,
+      14,
+      12,
+      7,
+      16,
+      9,
+      4,
+      17,
+      5,
+      22,
+      24,
+      18,
+      25,
+      29,
+      30,
+      3,
+      21,
+      20,
+      31,
+      28,
+      23,
+      32,
+      11,
+      6,
+      8,
+      33,
+      26
+    ],
+    "all_targets_preserved": true,
+    "old_DP_source_BFS_runs": 0
+  },
+  "frozen_shift_terminal": {
+    "status": "UNKNOWN_SINGLE_FIXED_SIGMA_SHIFT_WINDOW",
+    "terminal": true,
+    "cumulative_case_CPU": 90.92231466299998,
+    "CPU_cap": 100.0,
+    "SAT_calls": 1,
+    "native_return_code": 0,
+    "full_K19_family_verdict": "UNKNOWN_NOT_EXCLUDED",
+    "wall_seconds": 26.207127332687378,
+    "stop": true,
+    "final_readonly_summary_charge": 0.1,
+    "raw_solver_comment": "c UNKNOWN"
+  },
+  "local_tight_row": {
+    "prior_case_CPU": 90.922314663,
+    "new_preparation_CPU_charge": 0.2,
+    "cap_CPU": 100,
+    "old_source_DP_BFS_solver_newgraph": 0,
+    "tight_rows": 1,
+    "nontrivial_tight_rows": 1,
+    "selection": "fewestnonemptythenlex;atleast2nonsingletons;capacity19",
+    "root_orbit": 28,
+    "target_orbit": 28,
+    "packets": [
+      {
+        "r": 4,
+        "mask": 32768,
+        "points": [
+          15
+        ],
+        "size": 1
+      },
+      {
+        "r": 13,
+        "mask": 4608,
+        "points": [
+          9,
+          12
+        ],
+        "size": 2
+      },
+      {
+        "r": 16,
+        "mask": 4104,
+        "points": [
+          3,
+          12
+        ],
+        "size": 2
+      },
+      {
+        "r": 23,
+        "mask": 32784,
+        "points": [
+          4,
+          15
+        ],
+        "size": 2
+      },
+      {
+        "r": 26,
+        "mask": 4096,
+        "points": [
+          12
+        ],
+        "size": 1
+      },
+      {
+        "r": 28,
+        "mask": 137605,
+        "points": [
+          0,
+          2,
+          7,
+          8,
+          11,
+          12,
+          17
+        ],
+        "size": 7
+      },
+      {
+        "r": 30,
+        "mask": 4,
+        "points": [
+          2
+        ],
+        "size": 1
+      },
+      {
+        "r": 32,
+        "mask": 16384,
+        "points": [
+          14
+        ],
+        "size": 1
+      },
+      {
+        "r": 35,
+        "mask": 80,
+        "points": [
+          4,
+          6
+        ],
+        "size": 2
+      }
+    ],
+    "numeric_DFS_nodes": 5,
+    "memo_states": 0,
+    "status": "TIGHT_ROW_INDIVIDUALLY_TILEABLE_NOT_GLOBAL_MATCHING",
+    "prediction_status": "REFUTED",
+    "local_shifts": [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      0,
+      0,
+      0,
+      4,
+      0,
+      14,
+      0,
+      0,
+      12
+    ],
+    "union": 524287,
+    "actual_diagnostic_CPU": 0.015485542000000001,
+    "cumulative_case_CPU": 91.137800205,
+    "terminal": true,
+    "new_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ],
+    "no_new_solver": true,
+    "no_second_row": true
+  },
+  "propagation_model": {
+    "same_variables": 1332,
+    "original_clauses": 26586,
+    "entailed_binary_clauses": 2603,
+    "total_clauses": 29189,
+    "root_orbit": 28,
+    "target_orbit": 28,
+    "sum_packet_sizes": 19,
+    "local_witness_all_binary_pass": true,
+    "local_witness_t0_gauge_pass": true,
+    "actual_build_CPU": 0.014459586999999996,
+    "solution_domain_unchanged": true
+  },
+  "propagation_terminal": {
+    "status": "UNKNOWN_PROPAGATION_WINDOW",
+    "native_return_code": 0,
+    "native_actual_CPU": 5.0020620000000005,
+    "root_build_parent_CPU": 0.016777851999999996,
+    "prior_case_CPU": 91.137800205,
+    "prep_charge": 0.2,
+    "cumulative_case_CPU": 96.35664161899999,
+    "case_CPU_cap": 100,
+    "binary_count": 2603,
+    "terminal": true,
+    "no_more_windows_or_sigma2": true,
+    "graph_generated": false,
+    "new_graph_parameter_Lean": [
+      0,
+      0,
+      0
+    ]
+  },
+  "scope_conclusions": {
+    "original_full_K19": "UNKNOWN_NOT_NO",
+    "assignment_min19": "necessaryonly_notoptimal_notpointcover",
+    "frozen_sigma": "UNKNOWN_NOT_UNSAT",
+    "local_tight_row_prediction": "REFUTED_specific28to28isindividuallytileable",
+    "no_claim_of_global_incompatibility": true,
+    "propagation_2603binaries": "entailedoncapacity19row,sameσ/domain;one5sUNKNOWN",
+    "old233928Hscope": "strictNoinherited_notrerun_notK19No"
+  },
+  "read": [
+    "READ_GATE.md",
+    "MODEL_EXACTNESS_PAPER.md",
+    "MODEL_SCOPE_ATTACK.md",
+    "ASSIGNMENT_SHIFT_DECOMPOSITION_PAPER.md",
+    "LOCAL_TIGHT_ROW_PAPER.md",
+    "TIGHT_ROW_PROPAGATION_PAPER.md",
+    "exact_point_model/build_model.cpp",
+    "exact_point_model/run_once.py",
+    "exact_point_model/assignment_then_shift/build_shift_once.py"
+  ],
+  "new_graph_parameter_Lean": [
+    0,
+    0,
+    0
+  ],
+  "actual_source_parses": 0,
+  "old_source_DP_D4_BFS_field_runs": 0,
+  "candidate_ordinary_BFS": 0,
+  "fresh_acceptance_suite_runs": 0,
+  "whole_case_CPU_seconds": 96.356641619,
+  "case_CPU_cap_seconds": 100,
+  "all_numeric_processes_terminal": true,
+  "native_SAT_windows_seconds": [
+    60,
+    20,
+    5
+  ],
+  "assignment_MIP_window_seconds": 5,
+  "solver_no_proof_claim": true,
+  "stop": "noσ2/noothertranslation/seed/noMIPorSATcontinuationforthiscase;K19familyremainsopen",
+  "next_changed_source": "published672Cayleysourceandfullfinite672rightmatchingdomain,notmoreK19CSP",
+  "Goal_status": "ACTIVE",
+  "goal_complete": false
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PREDICTION_BEFORE_GATE_EXECUTION",
+  "same_Goal": true,
+  "controller": "Literal Michel120 degree6/D3 source already saved at research/ddp/m1_sources/graph_6_3_n120.txt",
+  "source_provenance_inherited": [
+    "research/ddp/m1_sources/SOURCE_NOTES.md",
+    "research/ddp/m1_sources/120_recovered_construction.json",
+    "research/ddp/m1_sources/desc_g3.html",
+    "research/ddp/m1_sources/zenodo_23136968_metadata.json"
+  ],
+  "candidate_only": {"Delta": 30, "D": 3, "n": 15000, "fiber": "F5^3", "ports": 6, "neighbors_per_port": 5},
+  "directions_if_first_gate_survives": [[1,0,0],[1,1,1],[1,2,4],[1,3,4],[1,4,1],[0,0,1]],
+  "port_labels": "Sorted neighbor index at each controller vertex",
+  "primary_prediction": "If any controller vertex belongs to no triangle, any full-port-line affine lift with no within-fiber edges has at most 1+6*(5-1)=25 endpoints in that same125-point fiber at length<=3. True inverse reverse-edge relations cancel affine offsets and leave only one backtracking line per incident edge. This excludes D3 before matrix choice.",
+  "primary_actual_checks": ["literal edge-list simple/degree check", "all120 vertex triangle counts", "one triangle-free neighborhood witness if present"],
+  "if_triangle_gate_fails": "Stop this fixed controller/full-line/no-intrafiber rule; no119/111 controller, internal-edge variant, seed, group, or field followup.",
+  "secondary_prediction_only_if_primary_survives": "Precompute unique-controller-distance3 ordered pairs. Each word x-u-v-y forbids the middle-edge quotient projectivity from mapping the incoming projected port(u,x) ray to the outgoing projected port(v,y) ray. Enumerate exactly PGL2(F5),120 bijections of6 projective rays (not S6). Any empty edge domain excludes the fixed controller/fullF5lines/3D affine-offset rule.",
+  "secondary_survival_scope": "Only necessary quotient interface; not sufficient, no matrices, no simultaneous assignment or graph result.",
+  "resources": {"CPU_budget_seconds": 30, "workers": 1, "fiber_graphs": 0, "BFS": 0, "Lean": 0, "SAT": 0, "MIP": 0, "source_fetch": 0, "source_full_BFS_rerun": 0, "install": 0},
+  "inherited_theory": "C72 GENERAL_QUOTIENT_INTERFACE.md and general_quotient_relaxation/PROOF.md supply the unique-path quotient-rank necessity; q5/r6 is a new interface, not the q4/S5 relaxation.",
+  "accepted_counts_unchanged": {"named_legal_instances": 116, "parameter_pairs": 13, "stage_graphs": 12, "stage_parameter_pairs": 10, "concrete_formula_Lean_instances": 10}
+}

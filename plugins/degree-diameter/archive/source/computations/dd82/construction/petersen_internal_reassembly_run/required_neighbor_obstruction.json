@@ -1,0 +1,138 @@
+{
+  "source": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_four_fiber_reassembly_run/seed.json",
+  "rows": [
+    {
+      "source": 0,
+      "blocks": [
+        {
+          "target_fiber": 2,
+          "direct": 25,
+          "routes_using_target_internal_edge": [
+            20,
+            27,
+            28
+          ],
+          "routes_through_other_fibers": {
+            "1": 28,
+            "3": 26,
+            "4": 21,
+            "5": 25
+          },
+          "missing_targets": [
+            22,
+            23,
+            24,
+            29
+          ],
+          "required_internal_neighbors": [
+            1,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "target_fiber": 3,
+          "direct": 37,
+          "routes_using_target_internal_edge": [
+            32,
+            35,
+            39
+          ],
+          "routes_through_other_fibers": {
+            "1": 35,
+            "2": 36,
+            "4": 31,
+            "5": 33
+          },
+          "missing_targets": [
+            30,
+            34,
+            38
+          ],
+          "required_internal_neighbors": [
+            4,
+            5,
+            7
+          ]
+        }
+      ],
+      "required_internal_neighbors": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "required_degree": 5,
+      "available_internal_degree": 3
+    },
+    {
+      "source": 1,
+      "blocks": [
+        {
+          "target_fiber": 2,
+          "direct": 29,
+          "routes_using_target_internal_edge": [
+            24,
+            26,
+            27
+          ],
+          "routes_through_other_fibers": {
+            "1": 23,
+            "3": 21,
+            "4": 22,
+            "5": 29
+          },
+          "missing_targets": [
+            20,
+            25,
+            28
+          ],
+          "required_internal_neighbors": [
+            0,
+            6,
+            8
+          ]
+        },
+        {
+          "target_fiber": 3,
+          "direct": 33,
+          "routes_using_target_internal_edge": [
+            32,
+            34,
+            38
+          ],
+          "routes_through_other_fibers": {
+            "1": 30,
+            "2": 31,
+            "4": 30,
+            "5": 39
+          },
+          "missing_targets": [
+            35,
+            36,
+            37
+          ],
+          "required_internal_neighbors": [
+            0,
+            2,
+            3
+          ]
+        }
+      ],
+      "required_internal_neighbors": [
+        0,
+        2,
+        3,
+        6,
+        8
+      ],
+      "required_degree": 5,
+      "available_internal_degree": 3
+    }
+  ],
+  "cpu_seconds": 0.0005587709999999996,
+  "conclusion": "No cubic internal graph in fiber0 can cover both boundary fibers with these fixed external matchings and P2/P3, regardless of internal graphs in fibers1,4,5.",
+  "scope": "Read-only route witness; no enumeration, solver, or BFS replay"
+}

@@ -1,0 +1,115 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.2
+c clang++-Clang 19.1.2 (https://github.com/llvm/llvm-project 7ba7d8e2f7b6445b60679da826210cdde29eaf8b)
+c Jan  1 1980 00:00:00
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 30 seconds real time (due to '-t 30')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_twin_five_matchings/proof.lrat'
+c writing binary proof trace to '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_twin_five_matchings/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_twin_five_matchings/input.cnf'
+c opening file to read '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_twin_five_matchings/input.cnf'
+c found 'p cnf 5700 20740' header
+c parsed 20740 clauses in 0.01 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c *  0.01  6  0 0   0    0    0  0% 0 20740 5700 100%
+c {  0.01  7  0 0   0    0    0  0% 0 20740 5700 100%
+c i  0.01  7  0 0   0    1    0  2% 0 20740 5699 100%
+c i  0.01  7  0 0   0    2    0  1% 0 20740 5698 100%
+c i  0.01  7  0 0   0    3    0  7% 0 20740 5697 100%
+c i  0.01  7  1 0   0    6    2 17% 0 20740 5678 100%
+c i  0.01  7  7 0   0   12    7 37% 1 20740 5677 100%
+c i  0.01  7 10 0   2   28   19 65% 2 20740 5645 99%
+c i  0.02  7 13 0  10   81   55 68% 3 20740 5644 99%
+c i  0.02  7 11 0  18  107   68 71% 3 20740 5611 98%
+c i  0.02  7 11 0  18  109   69 71% 3 20740 5278 93%
+c i  0.02  7 11 0  18  111   70 70% 3 20740 5277 93%
+c i  0.02  7 11 0  18  112   70 70% 3 20740 5276 93%
+c i  0.02  7 10 0  18  113   70 70% 3 20740 5275 93%
+c i  0.02  7 10 0  18  114   70 70% 3 20740 5274 93%
+c i  0.02  7 10 0  18  116   71 70% 3 20740 5273 93%
+c i  0.02  7  9 0  30  188  119 74% 4 20740 4766 84%
+c i  0.03  7  9 0  30  195  119 75% 4 20740 2527 44%
+c }  0.03  7  9 0  30  197  119 75% 4 20740 858 15%
+c 0  0.03  7  9 0  30  197  119 75% 4 20740 858 15%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_release_twin_five_matchings/proof.lrat' closed
+c LRAT 5017 added clauses 98.92%
+c LRAT 55 deleted clauses 1.08%
+c LRAT 116279 bytes (0.11 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.02   98.67% search
+c         0.02   93.51% unstable
+c         0.01   33.25% parse
+c         0.00    4.42% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.02   72.35% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:                68        34.52 %  of conflicts
+c conflicts:                   197     10239.62    per second
+c decisions:                   501     26040.85    per second
+c fixed:                      4842        84.95 %  of all variables
+c learned:                     189        95.94 %  per conflict
+c learned_lits:               7814       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   5204        66.60 %  learned literals
+c minishrunken:                194         2.48 %  learned literals
+c otfs:                          2         1.02 %  of conflict
+c propagations:             229966        11.95 M  per second
+c restarts:                     30         6.57    interval
+c subsumed:                     53         0.25 %  of all clauses
+c strengthened:                  2         0.01 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.03    seconds
+c total real time since initialization:            0.03    seconds
+c maximum resident set size of process:           11.97    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

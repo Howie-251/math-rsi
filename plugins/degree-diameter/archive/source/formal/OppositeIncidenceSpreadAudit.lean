@@ -1,0 +1,11 @@
+import DegreeDiameter.Portfolio.OppositeIncidenceSpreadFamily
+open DegreeDiameter.Portfolio
+#print OppositeIncidenceSpread.Inc
+#print OppositeIncidenceSpread.graph
+#print OppositeIncidenceSpread.forward
+#check @OppositeIncidenceSpread.degree_le
+#check @OppositeIncidenceSpread.card_family
+#check @OppositeIncidenceSpread.diameterAtMost_three
+#check @OppositeIncidenceSpread.not_diameterAtMost_two
+#check @OppositeIncidenceSpread.order_degree_and_exact_D3
+#print axioms OppositeIncidenceSpread.order_degree_and_exact_D3

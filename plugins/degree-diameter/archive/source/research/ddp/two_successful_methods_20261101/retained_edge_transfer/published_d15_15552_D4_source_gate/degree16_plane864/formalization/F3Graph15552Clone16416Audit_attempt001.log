@@ -1,0 +1,39 @@
+graph : SimpleGraph (Fin 15552 ⊕ Fin 864)
+label : Vertex ≃ Fin 16416
+def DegreeDiameter.Portfolio.F3Graph15552.Clone16416.FinalClaim : Prop :=
+Fintype.card Vertex = 16416 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 864), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3
+theorem DegreeDiameter.Portfolio.F3Graph15552.Clone16416.d16_16416 : Fintype.card Vertex = 16416 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 864), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_four, not_diameterAtMost_three⟩⟩⟩
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.d16_16416' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.F3Graph15552.Clone16416.final_claim : FinalClaim :=
+original_concrete_goal
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.final_claim' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.diameterAtMost_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.not_diameterAtMost_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.load_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.pinOwner_forward' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.label_new' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.old_walk_bound_iff' depends on axioms: [propext, Quot.sound]
+theorem DegreeDiameter.Portfolio.F3Graph15552.Clone16416.original_concrete_goal : Fintype.card Vertex = 16416 ∧
+  (∀ (v : Fin 15552 ⊕ Fin 864), graph.degree v ≤ 16) ∧
+    (∀ (u v : Fin 15552 ⊕ Fin 864), ∃ w, w.length ≤ 4) ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3 :=
+d16_16416
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.original_concrete_goal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.center_label' depends on axioms: [propext, Quot.sound]

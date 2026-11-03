@@ -1,0 +1,108 @@
+graph80 : SimpleGraph DegreeDiameter.Portfolio.EvenQ8Source.Derived.Vertex
+D80_327744.label : D80_327744.Vertex ≃ Fin 327744
+def DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.FinalClaim : Prop :=
+Fintype.card D80_327744.Vertex = 327744 ∧
+  (∀ (u : DegreeDiameter.Portfolio.EvenQ8Source.Derived.Vertex), graph80.degree u ≤ 80) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph80 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph80 2
+DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.final_claim : D80_327744.FinalClaim
+theorem DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.final_claim : D80_327744.FinalClaim :=
+id
+  (Eq.mp
+    (congrArg
+      (fun x =>
+        Fintype.card
+              (DegreeDiameter.Portfolio.EvenQ8Source.Derived.Old ⊕
+                DegreeDiameter.Portfolio.EvenQ8Source.Derived.Helper) =
+            x ∧
+          (∀
+              (u :
+                DegreeDiameter.Portfolio.EvenQ8Source.Derived.Old ⊕
+                  DegreeDiameter.Portfolio.EvenQ8Source.Derived.Helper),
+              (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                      DegreeDiameter.Portfolio.EvenQ8Source.Derived.oldEquiv
+                      DegreeDiameter.Portfolio.EvenQ8Source.Derived.linePoint
+                      DegreeDiameter.Portfolio.EvenQ8Source.Derived.spread).degree
+                  u ≤
+                8 * 10) ∧
+            DegreeDiameter.Portfolio.DiameterAtMost
+                (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                  DegreeDiameter.Portfolio.EvenQ8Source.Derived.oldEquiv
+                  DegreeDiameter.Portfolio.EvenQ8Source.Derived.linePoint
+                  DegreeDiameter.Portfolio.EvenQ8Source.Derived.spread)
+                3 ∧
+              ¬DegreeDiameter.Portfolio.DiameterAtMost
+                  (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                    DegreeDiameter.Portfolio.EvenQ8Source.Derived.oldEquiv
+                    DegreeDiameter.Portfolio.EvenQ8Source.Derived.linePoint
+                    DegreeDiameter.Portfolio.EvenQ8Source.Derived.spread)
+                  2)
+      (congr (congrArg HAdd.hAdd (congr (congrArg HMul.hMul (Fintype.card_fin 512)) (Fintype.card_fin 640)))
+        (Fintype.card_fin 64)))
+    (DegreeDiameter.Portfolio.OppositeIncidenceSpread.order_degree_and_exact_D3
+      DegreeDiameter.Portfolio.EvenQ8Source.Derived.oldEquiv DegreeDiameter.Portfolio.EvenQ8Source.Derived.linePoint
+      DegreeDiameter.Portfolio.EvenQ8Source.Derived.pointLine DegreeDiameter.Portfolio.EvenQ8Source.Derived.spread
+      DegreeDiameter.Portfolio.EvenQ8Source.Derived.spreadOwner (of_decide_eq_true (id (Eq.refl true))) Derived.hline
+      Derived.howner Derived.project (of_decide_eq_true (id (Eq.refl true)))))
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.final_claim' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D80_327744.label_new' depends on axioms: [propext, Quot.sound]
+graph81 : SimpleGraph DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Vertex
+D81_342290.label : D81_342290.Vertex ≃ Fin 342290
+def DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.FinalClaim : Prop :=
+Fintype.card D81_342290.Vertex = 342290 ∧
+  (∀ (u : DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Vertex), graph81.degree u ≤ 81) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph81 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph81 2
+DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.final_claim : D81_342290.FinalClaim
+theorem DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.final_claim : D81_342290.FinalClaim :=
+id
+  (Eq.mp
+    (congrArg
+      (fun x =>
+        Fintype.card
+              (DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Old ⊕
+                DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Helper) =
+            x ∧
+          (∀
+              (u :
+                DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Old ⊕
+                  DegreeDiameter.Portfolio.EvenQ8Source.Balanced.Helper),
+              (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.oldEquiv
+                      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.linePoint
+                      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.spread).degree
+                  u ≤
+                9 * 9) ∧
+            DegreeDiameter.Portfolio.DiameterAtMost
+                (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                  DegreeDiameter.Portfolio.EvenQ8Source.Balanced.oldEquiv
+                  DegreeDiameter.Portfolio.EvenQ8Source.Balanced.linePoint
+                  DegreeDiameter.Portfolio.EvenQ8Source.Balanced.spread)
+                3 ∧
+              ¬DegreeDiameter.Portfolio.DiameterAtMost
+                  (DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph
+                    DegreeDiameter.Portfolio.EvenQ8Source.Balanced.oldEquiv
+                    DegreeDiameter.Portfolio.EvenQ8Source.Balanced.linePoint
+                    DegreeDiameter.Portfolio.EvenQ8Source.Balanced.spread)
+                  2)
+      (congr (congrArg HAdd.hAdd (congr (congrArg HMul.hMul (Fintype.card_fin 585)) (Fintype.card_fin 585)))
+        (Fintype.card_fin 65)))
+    (DegreeDiameter.Portfolio.OppositeIncidenceSpread.order_degree_and_exact_D3
+      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.oldEquiv DegreeDiameter.Portfolio.EvenQ8Source.Balanced.linePoint
+      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.pointLine DegreeDiameter.Portfolio.EvenQ8Source.Balanced.spread
+      DegreeDiameter.Portfolio.EvenQ8Source.Balanced.spreadOwner (of_decide_eq_true (id (Eq.refl true))) Balanced.hline
+      Balanced.howner Balanced.project (of_decide_eq_true (id (Eq.refl true)))))
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.final_claim' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.label_old' depends on axioms: [propext, Quot.sound]
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.D81_342290.label_new' depends on axioms: [propext, Quot.sound]
+DegreeDiameter.Portfolio.EvenQ8SourceFull.d80_327744 : D80_327744.FinalClaim
+theorem DegreeDiameter.Portfolio.EvenQ8SourceFull.d80_327744 : D80_327744.FinalClaim :=
+D80_327744.final_claim
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.d80_327744' depends on axioms: [propext, Classical.choice, Quot.sound]
+DegreeDiameter.Portfolio.EvenQ8SourceFull.d81_342290 : D81_342290.FinalClaim
+theorem DegreeDiameter.Portfolio.EvenQ8SourceFull.d81_342290 : D81_342290.FinalClaim :=
+D81_342290.final_claim
+'DegreeDiameter.Portfolio.EvenQ8SourceFull.d81_342290' depends on axioms: [propext, Classical.choice, Quot.sound]

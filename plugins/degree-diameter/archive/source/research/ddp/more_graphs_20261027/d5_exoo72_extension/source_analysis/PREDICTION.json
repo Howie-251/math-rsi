@@ -1,0 +1,19 @@
+{
+  "prediction_id": "P_EXOO72_CRITICAL_EDGE_MATCHING",
+  "frozen_before_local_cycle_and_route_counts": true,
+  "falsifiable_prediction": "Every source edge has a critical-pair graph with matching size at least6. If true, deleting any sourceedge cannot be repaired by one degree<=5 new vertex without adding old-old edges.",
+  "rationale": "Source72 is close to its five-degree three-step route limits and likely uses many unique short routes. A degree5 newvertex can fix a lost <=3 old-old route only if at least one oldendpoint is among its5 neighbors. Six disjoint forced losses are a uniform obstruction.",
+  "target": [
+    5,
+    3
+  ],
+  "savedL": 72,
+  "n": {
+    "actual": null,
+    "hypothetical": 73
+  },
+  "scope": "One new vertex, preserve sourceold-old edges except deletions, no old-old additions. Predictiontestedby local<=3 path supports, not graph BFS or candidate tuplegrid.",
+  "no_counteragent_ORscan_overlap": true,
+  "workers": 1,
+  "CPU_budget_seconds": 120
+}

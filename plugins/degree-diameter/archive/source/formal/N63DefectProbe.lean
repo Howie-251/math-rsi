@@ -1,0 +1,12 @@
+import DegreeDiameter.N63Defect
+
+#print DegreeDiameter.n63Chebyshev
+#print DegreeDiameter.n63Annihilator
+#check DegreeDiameter.n63_row_two_classification
+#check DegreeDiameter.n63_doubled_edge_isolated
+#check DegreeDiameter.n63_unit_defect_isCycles
+#check DegreeDiameter.n63_unit_defect_component_cycle
+#check DegreeDiameter.n63_chebyshev_cycle_mulVec
+#check DegreeDiameter.n63_original_defect_local_factor
+#check DegreeDiameter.n63_original_defect_annihilator
+#print axioms DegreeDiameter.n63_original_defect_annihilator

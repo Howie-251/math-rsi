@@ -1,0 +1,39 @@
+{
+  "status": "PASS_FROM_TASK_WORKSPACE",
+  "records": [
+    {
+      "name": "case_list",
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-dd-cwd-zj1nxss4",
+      "DD_PLUGIN": "/Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter",
+      "command": "python3 -B \"$DD_PLUGIN/archive/source/constructors/late_graphs/rebuild.py\" --list",
+      "exit_code": 0,
+      "result": {
+        "cases": 50
+      }
+    },
+    {
+      "name": "exact_dual",
+      "cwd": "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi-dd-cwd-zj1nxss4",
+      "DD_PLUGIN": "/Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter",
+      "command": "python3 -B \"$DD_PLUGIN/tools/replay_mizuno_dual.py\"",
+      "exit_code": 0,
+      "result": {
+        "status": "PASS_EXACT_DUAL_ARITHMETIC",
+        "columns": 364,
+        "minimum_coefficient": 10001,
+        "denominator": 10000,
+        "RHS": 2061908,
+        "bound": "515477/2500",
+        "integer_blocks_at_most": 206,
+        "scope": "Declared necessary controller/cost relaxation for all 364-source selections, one complete affine W-transverse 27-point block per selected original fiber; geometric row necessity imported from original proof",
+        "missing_original_input_reconstructed": "LP_INPUT.json",
+        "source_writes": 0,
+        "solver_calls": 0,
+        "graph_generation": 0,
+        "Lean_runs": 0,
+        "CPU_seconds": 0.007096000000000002
+      }
+    }
+  ],
+  "scope": "Only case listing and existing exact dual from an external task cwd; no graph rebuild/BFS/solver/Lean or tool change"
+}

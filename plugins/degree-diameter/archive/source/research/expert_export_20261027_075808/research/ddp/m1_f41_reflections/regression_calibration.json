@@ -1,0 +1,64 @@
+{
+  "status": "REGRESSION_PASSED_CALIBRATION_COMPLETE",
+  "regression_checks": [
+    {
+      "case": 0,
+      "raw": 125,
+      "legal": 80,
+      "exact_histogram_match": true,
+      "child_cpu_seconds": 0.001988
+    },
+    {
+      "case": 1,
+      "raw": 125,
+      "legal": 100,
+      "exact_histogram_match": true,
+      "child_cpu_seconds": 0.0016929999999999996
+    },
+    {
+      "case": 2,
+      "raw": 625,
+      "legal": 400,
+      "exact_histogram_match": true,
+      "child_cpu_seconds": 0.0019820000000000003
+    },
+    {
+      "case": 3,
+      "raw": 625,
+      "legal": 400,
+      "exact_histogram_match": true,
+      "child_cpu_seconds": 0.001822999999999999
+    },
+    {
+      "case": "saved_f41_negative",
+      "exact_edge_set_match": true,
+      "root_missing": [
+        11,
+        14
+      ],
+      "child_cpu_seconds": 0.002411
+    }
+  ],
+  "pilots": [
+    {
+      "branch": "mixed",
+      "raw": 100000,
+      "legal": 95160,
+      "minimum_missing_seen": 54,
+      "child_cpu_seconds": 1.2068329999999998,
+      "estimated_full_branch_cpu_seconds": 34.41044099657419
+    },
+    {
+      "branch": "both",
+      "raw": 100000,
+      "legal": 97561,
+      "minimum_missing_seen": 38,
+      "child_cpu_seconds": 1.3873640000000003,
+      "estimated_full_branch_cpu_seconds": 156.81432415657898
+    }
+  ],
+  "total_child_cpu_seconds": 2.604094,
+  "production_estimate_cpu_seconds": 191.22476515315316,
+  "raw_production_assignments": 14059884,
+  "legal_expected": 13740658
+}

@@ -1,0 +1,2133 @@
+---
+type: experiment
+node_id: exp:ddp-d15-d4-current15552-source-gap-20261027
+title: "16/D4/16389完整kernel实际Lean46；原目标A/B与distinctfresh C925全部actualPASS，priorityUNKNOWN"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: partial
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/d15_D4_current15552/REPORT.md; research/ddp/more_graphs_20261027/d15_D4_current15552/RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_FACTS.json; research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE.json; research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_STATUS.json; research/ddp/more_graphs_20261027/d15_D4_current15552/DOWNLOAD_RECEIPT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/PREDICTION.json; research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE_PREDICTION.json; research/ddp/more_graphs_20261027/d15_D4_current15552/profile_actual.py; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREPARATION_RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/SOLVER_RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/prepare.cpp; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/run.py; research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/ANALYSIS_PROOF.md; research/ddp/more_graphs_20261027/d15_D4_current15552/HISTORY_SOURCE_GAP/REPORT.md; research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/PREDICTION.json; research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/REPORT.md; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/PREDICTION.json; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/RESULT.json; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/terminal.json; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/FREE_COMPONENTS.json; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/EXACT_ROW_GROUPS.jsonl; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/UNIQUE_ROW_REPRESENTATIVES.i32le.bin; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/counter.cpp; research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/generator.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/source15552_AFFINE_RELATIONS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PORT_COVER_REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/continue_once.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER_README.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source15552_FREE_DIRECTION_GROUPS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_SEARCH_PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/route_cosset_probe.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/MODEL_15552.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/TERMINAL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/CHECKPOINT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/prepare.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/TERMINAL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_15552.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_102060.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_15552.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_102060.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_15552.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_102060.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_15552.cnf; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_102060.cnf; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/prepare.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_SCOPE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RAW_ANALYSIS_FIELDS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_LINE_BLOCK_MASKS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.cnf; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stderr; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RAW_ANALYSIS_FIELDS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/MODEL_SCOPE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RAW_ANALYSIS_FIELDS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/TERMINAL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/CEG_CURSOR.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/support_loader.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/INITIAL_TARGETS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_MODEL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_TARGETS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.cnf; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/INITIAL_TARGETS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_MODEL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_TARGETS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.cnf; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_JOINT_LINE_INTERFACE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source102060_JOINT_LINE_INTERFACE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source102060_FREE_DIRECTION_GROUPS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/offset_diagnostic.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/point_column_offset_probe.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PROFILE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/LABEL_POOL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/source_vertex_ids.txt; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/INPUT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/DEGREE_PROFILE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/CASE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/TERMINAL.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/HANDLE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/WORKER_HANDLE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/radius4.cpp; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/graph_induced_n6912.edges; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/worker.stdout; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/PREDICTION.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/run.py; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/LOCAL_REFLECTION_CHOICES.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ARC_CHOICE_PAIRS.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/TWOSAT_RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/RESULT.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/REPORT.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.md; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.json; research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/NONLOOP_ZERO_ALLOWED_ARC.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/INDEPENDENT_PLANE_INTERFACE_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOCAL27_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PARAMETERS.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RECIPE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PROOF.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/graph_d16_D4_n16389.edges; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ALL837_ROLE_BINDINGS.tsv; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/STRUCTURE_PROOF.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/TERMINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL837_ACTUAL_ROLE_BINDINGS.tsv; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL16389_FINAL_ROOT_BFS.csv; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/GENUINE_FOUR_WALK.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/DRIVER_HANDLE.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/CHECKPOINT.json; expert_review_current/D16_D4_16389_20261101_DRAFT_RECEIPT.json; expert_review_current/D16_D4_16389_20261101.html; expert_review_current/D16_D4_16389_20261101.html.txt; expert_review_current/D16_D4_16389_20261101.docx; research/graph_catalog.html; research/graph_catalog.html.txt; research/graph_catalog.csv; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_INDEPENDENT_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/SYMMETRY_REDUCED_KERNEL_SCOPE.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_PRED.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_LEAN_PILOT_DISPOSITION.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_PREPARATION_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/FINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/F3Graph15552PilotAudit_attempt001.log; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/DRIVER_HANDLE.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/CHECKPOINT.json; research/ddp/two_successful_methods_20261101/public_baseline_audit/CATALOG_D3_COMPARISON_SOURCES_20261101.json; research/ddp/two_successful_methods_20261101/public_baseline_audit/SOURCE_TRACE_D3_DOMINATED_NOTE.md; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_FULL_LEAN_DISPOSITION.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/EXTERNAL_BINDING_RESULT.json; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullAudit_attempt001.log; research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullCloneAudit_attempt001.log; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_REQUEST.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_REQUEST.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_RECOVERED_STATUS.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_STATUS.json; research/public_comparison_current.csv; research/ddp/two_successful_methods_20261101/public_baseline_audit/COMPARISON_AND_NOVELTY_STATUS_20261101.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DISPOSITION.md; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_DISPOSITION.md; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DELIVERED_GEMINI_RAW.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_REQUEST.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_RESPONSE.txt; research/public_comparison_current.html; research/public_comparison_current.html.txt; research/ddp/two_successful_methods_20261101/public_baseline_audit/D3_CAP20_26_USER_SEARCH_SUMMARY_20261101.json; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_DISPOSITION.md; research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_GEMINI_RAW.json"
+added: 2026-11-01T17:57:59Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 16/D4/16389完整kernel实际Lean46；原目标A/B与distinctfresh C925全部actualPASS，priorityUNKNOWN
+
+**verdict:** `partial`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** candidate_graph_or_family
+
+**目标与阶数：** (16,4)；L=16384；candidate_graph_or_family n=16389；从属目标：[[15, 4], [10, 4], [13, 4], [14, 4]]
+
+**距目标的证据：** 实际D=4，目标D=4；普通无序坏对=0；complete literal final16389-root BFS once;all268599321orderedpairs<=4,everyrootexact4;sourceonlyBFS0；用户总图清单入口：[HTML清单](../../research/graph_catalog.html) · [HTML原样源码](../../research/graph_catalog.html.txt) · [CSV清单](../../research/graph_catalog.csv)。这是既有总账派生的152行/43参数/Lean45导航，不是第二Wiki或总账；口径为103个历史D5 prefix＋继承F5/3750一图＋48个stage完整实例。107项链接literal边表，45个早期prefix链接原generator/params；不重生成。
+
+SOURCE_GAP已解；全648R3 union满、支持67..185，仅容量必要pass。单MIP UNKNOWN，不是无解；actual15553未生成。solver实际22.983918811CPU超过5CPU目标，含compileprep23.953803925，未重启。 新loop-completed统计PASS：192controllers，其中24各有27self-entry。原ordinary81/243不equitable事实保留；新结果未认证完整affine关系，不改变旧IP UNKNOWN。 该recipe恢复实际SUPPORTED：960 arcs/77760 rowsets全MATCH，可准确重建原simple source；没有生成新图或新直径结论。 最新四probe：24zero总并集漏528；全部42504个五三角形选择失败；48原子模型raw UNSAT。72独立pin模型初轮UNKNOWN，一次同CNF复评return20/5.952846 solverCPU得restricted raw UNSAT，无独立UNSAT proof。0候选；不能推出全部648 free或一般15553无解。 完整sourcefree接口SUPPORTED；同cost3的固定word端点数27→81，局部coset互补SUPPORTED。该完整inversion域CaDiCaL return20/rawUNSAT(无独立proof)，solverCPU35.16384300000001；0候选、未试0、新球/BFS0。不能据此排一般非取负不变邻域。 新full-independent单次60s返回UNKNOWN/code0，solverCPU59.902466999999994；两源batch127.968020737<160，0候选/未试。affine line 2808原列→312完整blockmask，rawUNSAT/code20，solverCPU0.5527359999999999；仅该充分证书负结果，0图。 缓存诊断：同方向9cosets的fullblock columns均相同，但固定两line逐点列XOR1062，故joint未按旧blockmask去重。实际joint首轮code20/rawUNSAT，solverCPU11.707798；两源aggregate25.794664232，SAT/fullOR/cuts/新图均0。此负结果不排任意15freepin。 该门0.003352509CPU即失败：u2=u1+u4三点共线，subset[0,1,2,4] rank3，不能经换基变为projective5-frame。条件跨特征短word定理本身VALID，但前提不适用实际source；signedarc0、binaryrecipe/graph/BFS/solver0。 全192结构profile PASS，实际诱导图6912/22896/simple、degree1..11，cap13门通过；首root0(旧1) R4=1296/漏5616，首漏new4(旧9)，D4反驳。新图BFS1/sourceBFS0，exact globalD/连通/普通坏对null；profile+production.657185279CPU，实际失败图1，不是新下界。 该gate.445824661CPU，无global Aut/orbitmap/商图。条件Aut商degree≤14和D≤4证明VALID，但兼容性实际UNSAT。强化证明按两个source代表邻集union计数，nonloop degree≤14迫全部出arc Aut兼容；arc5四对全禁，故该二择fold无max14商。10368只hyp，actual n/D/坏对null，0新矩阵/degree-CSP/图/BFS。 最新root数学接受16/4/16389/128835，源15552/116316为public复现不计新图且不规则648deg14/14904deg15，不能套regular15的1036上限。保116316旧边，837个完整旧simpleN克隆/12519pins/oldload1/newnew0，虚self只在旧centre删，hist14:72/15:4410/16:11907。fresh一次all16389finalroots/268599321orderedpairs/everyrootexact4，共9.905452337/120CPU；其中15552旧label与837新label都是finalgraph根，另sourceonlyBFS0/重复预验newroot0。真4路0--891--3726--907--1，oldsource内点prefix/retraction证明齐。freshComellas16384实际主表+5，savedmain新104/4，但priority/globalUNKNOWN。global单wordfullrank4预言失败3648pair保留，新Mmodnoise余类91组修好all3648，连33216继承rank4共36864controllerpair有限allx证书，不是新graph/kernel。新Lean pilot原180CPU累计1worker在进行，按动态handle区分最近compile终态待修与activePID，所有fail成本保留，完整原目标尚未闭不计Lean46。 最新用户要求D3范围已较充分，停止派发新D3度数/copy倍率/field变体，新构造优先D4/D5且先具体较小degree覆盖问题；完成D3成果保留，D2n61继续暂停，同Goal最多2mainquestions。当前16/D4/16389数学验收不重计。实际source24个port-preserving置换/8轨各24、reps0,1,2,3,9,10,16,35，.022993527CPU；2生成元/maxlen5/192绑定 .017433091CPU。独立纸面支持源graphAut与完整行真Walk转移，不自动作用837clone/不把source说全传递。约简有限数据1536pairs=1384rank+152coset，173neededrankword basis全已pilotPASS，91cosetgroups仅group0PASS。原180CPU pilot FINAL112.392507115/9PASS/3fail保留，terminal无live；只0→0与0→33对全x,yFin81真Walk≤4/std3，fullrow0/parent/clone仍pending不计46。125literal3words从0只达82controller、漏1即old0→81，.013533367CPU，仅未来D4下界输入非新formal非D3目标；pinOwner逆公式为纸面无新rank。新选题须用freshmain10D4=2556/11D4=3645，详情旧2485/3444不得据此宣record。 最新完整D4证明已由root授权累计1200CPU含pilot112.393009340、1kernelworker，173basis/group0只import不重编。root已接受新finite44/44PASS、91/91coset全闭、173rankbasis先前PASS；source degree/8完整rows与endpoints/clone/originaltargets/Audits/binding接续尚未整体闭。实际入口formalization_full/DRIVER_HANDLE+CHECKPOINT，本次读native状态FULL_FAILED_NEEDS_REPAIR、running=False、accounted542.059551CPU/完成50模块；这是当前所请求批次状态，不替代原16389target/Audit完整接受，仍Lean45。用户D2澄清后另条主线改为public106允许删补旧边，旧N8/n61仍停，D3新degree/copy/field派发STOP；8D5门已终态不占第三线。 本次来源澄清时gq已报告D4 full675.777657109/1200终态、原targets与Audits PASS，但root仍待全文接受；此为worker实际报告而非root正式具体实例收据，不提前增Lean46，原合法152/43/45不变。 最新root全文接受16389完整source/clone原targets、两独立Audit/std3/无certificate前提、trueWalkD4/nonD3、显式Fin标签及继承binding：675.777657109/1200CPU含pilot与全部失败，公开15552复现0，clone唯一+1Lean到46。旧待root段落已被该实际处置覆盖。新scope原A/B已提交但pause后exec872丢失；A恢复未见精确D4prompt/完整判定，不能借旧17PASS，B原PID3400606在保存观察中live且见新prompt、尚无final；不重试，C未派。catalog与专家actualsnapshot152/43/46已更新，0ZIP。43参数比较CSV区分Comellas(main仅degree3..16)、作者包、公式保证与全球未知；11D5+3/12D5+60/16D4+5仅main，13D5main+40仍低于作者88452。D3整批innovationNOT_ESTABLISHED，三候选贡献保留但priorityUNKNOWN；不能认定全旧应用，也不认证原创。20..26已有source2791/2928/3294/3549/6144/7225/7514不是globalbest；17D3仍UNKNOWN，用户3250线索保留。 最新外审实际推进：root全文读A16731字、实际SUCCESS/e4线程三facetPASS；B原11389字恢复全文也已接受三facetPASS，不伪造MCP SUCCESS、不重发B。原丢失A transportUNKNOWN历史保留，只计一次完成A。唯一distinctfresh C实际cell925在途，thread待实际返回，未有C判定、不借旧D3/17PASS。A纠正文案Fin192非未经证明Z192、只有global vertex全相等才收缩holding、单条长4walk不单独证明lower；原kernel/BFS分别给上下界。七组D3本轮largest-found候选及HTML另有明确检索范围，global0不变。 后续actualC925完整18981字已root接受math/formal/bindingPASS，thread81f0a971与A e4/B5da不同；A/B/finalC本scope全终态，globalpriority仍UNKNOWN，不增加已计152/43/46。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "actual_source_bound": true,
+  "source_n": 15552,
+  "source_m": 116316,
+  "degree_histogram": {
+    "14": 648,
+    "15": 14904
+  },
+  "free_count": 648,
+  "free_slots": 648,
+  "minSatN": 12,
+  "onefault_count": 0,
+  "source_BFS": 0,
+  "profile_CPU_seconds": 1.962155108,
+  "contiguous81_bins_equitable": false,
+  "free_per81bin_histogram": {
+    "27": 24,
+    "0": 168
+  },
+  "old_sourcegap_history_preserved": true,
+  "old_192fivechart_prediction": "REFUTED",
+  "closedR3_balls_prepared": 648,
+  "allfree_R3_union": 15552,
+  "minimum_target_support": 67,
+  "maximum_target_support": 185,
+  "model_variables": 648,
+  "model_coverage_rows": 15552,
+  "matrix_nonzeros": 1496880,
+  "solver_runs": 1,
+  "solver_status": "UNKNOWN_NO_INCUMBENT",
+  "requested_solver_CPU_seconds": 5,
+  "solver_CPU_budget_met": false,
+  "observed_solver_CPU_seconds": 22.983918811,
+  "prep_CPU_seconds": 0.028104,
+  "compile_CPU_seconds": 0.7000065980000001,
+  "total_cover_batch_CPU_seconds": 23.953803925,
+  "new_source_BFS": 0,
+  "baseline_date": "2026-10-27",
+  "independent_method_count_added": 0,
+  "cached_support_unique_rows": 15552,
+  "cached_support_duplicate_groups": 0,
+  "cached_support_redundant_rows": 0,
+  "free_induced_degree_histogram": {
+    "2": 648
+  },
+  "free_induced_edges": 648,
+  "free_component_count": 216,
+  "free_component_types": {
+    "C3": 216
+  },
+  "new_support_diagnostic_solver_runs": 0,
+  "new_support_diagnostic_BFS": 0,
+  "new_support_diagnostic_R3_balls": 0,
+  "new_label_repartition_trials": 0,
+  "support_counter_native_CPU_seconds": 0.028769,
+  "support_counter_compile_CPU_seconds": 1.303613315,
+  "support_counter_total_CPU_seconds": 1.3347356570000002,
+  "support_counter_hard_RLIMIT_CPU_seconds": 3,
+  "support_duplicate_prediction": "REFUTED",
+  "consecutive243_bins_equitable": false,
+  "consecutive243_bin_bad_cell_count": 64,
+  "consecutive243_partition_CPU_seconds": 0.114556914,
+  "virtual_loop_completed_fixed_quotient": {
+    "label": "virtual_selfloop_completed_fixed_fiber_relation",
+    "target_Delta": 15,
+    "target_D": 4,
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "fixed_bin_size": 81,
+    "fixed_controller_count": 192,
+    "all_rows_tested": 15552,
+    "complete_equitable": true,
+    "five_target_controllers_each_three_neighbors": true,
+    "within_controller_target_signature_uniform": true,
+    "virtual_self_entries": 648,
+    "loop_controllers": 24,
+    "loops_per_loop_controller": 27,
+    "source_modified": false,
+    "ordinary_adjacency_failure_retracted": false,
+    "full_affine_relation_certified": false,
+    "graphs": 0,
+    "BFS": 0,
+    "R4_or_R3_balls": 0,
+    "solver_calls": 0,
+    "partition_check_CPU_seconds": 0.05999908400000001,
+    "shared_two_source_complete_probe_CPU_seconds": 0.565593974,
+    "status": "COMPLETE_FIXED_VIRTUAL_LOOP_QUOTIENT_PREDICTION_SUPPORTED",
+    "scope": "Onlypredefined81/243binswithonevirtualselfentryateachactualdegree14point;notanewgraphorchangedlabelpartition"
+  },
+  "virtual_loop_probe_shared_CPU_not_double_counted": 0.565593974,
+  "fixed_coordinate_affine_relation_recovery": {
+    "label": "complete_fixed_coordinate_affine_line_relation_recovery",
+    "target_Delta": 15,
+    "target_D": 4,
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "dimension": 4,
+    "bin_size": 81,
+    "controller_count": 192,
+    "directed_arcs_verified": 960,
+    "arc_rows_compared": 77760,
+    "virtual_selfloops_seen": 648,
+    "complete_affine_relation_certificate": true,
+    "original_graph_exactly_reconstructible": true,
+    "relation_formula": "Q_v(y)=B*x+c;allactualthreepointtargetsetsverified",
+    "loop_deletion": "Onlysamecontrollerandsameoffset;crosscontrollerequaloffsetretained",
+    "new_graph_or_distance_bound": false,
+    "source_modified": false,
+    "BFS": 0,
+    "balls": 0,
+    "solver_calls": 0,
+    "new_graphs": 0,
+    "source_recovery_CPU_seconds": 0.09822721899999999,
+    "shared_two_source_recovery_CPU_seconds": 0.803465985,
+    "status": "COMPLETE_EXACT_SOURCE_AFFINE_RECIPE_RECOVERED",
+    "scope": "Onlyoriginalfixed81/243labelcoordinates;notachangedcontrollerorconstructionsearch"
+  },
+  "shared_affine_probe_CPU_not_double_counted": 0.803465985,
+  "canonical_port_frame_four_probes": {
+    "variants": [
+      {
+        "target_Delta": 15,
+        "target_D": 4,
+        "target": [
+          15,
+          4
+        ],
+        "savedL": 15552,
+        "source_n": 15552,
+        "actual_new_n": null,
+        "actual_D": null,
+        "ordinary_bad_unordered_pairs": null,
+        "new_graphs": 0,
+        "new_balls": 0,
+        "source_BFS": 0,
+        "label": "canonical_zero_only_cached_union_gate",
+        "port_count": 24,
+        "cached_radius": 3,
+        "covered": 15024,
+        "missing": 528,
+        "first_missing": 28,
+        "status": "COMPLETE_ALL_ZERO_PORTS_UNION_INCOMPLETE",
+        "scope": "Onlycanonicalzeropins;allunionmissrejectseverysubset",
+        "solver_calls": 0,
+        "shared_two_source_CPU_seconds": 0.020998152
+      },
+      {
+        "target_Delta": 15,
+        "target_D": 4,
+        "target": [
+          15,
+          4
+        ],
+        "savedL": 15552,
+        "source_n": 15552,
+        "actual_new_n": null,
+        "actual_D": null,
+        "ordinary_bad_unordered_pairs": null,
+        "new_graphs": 0,
+        "new_balls": 0,
+        "source_BFS": 0,
+        "label": "homogeneous_nine_helper_zero_selfline_gate",
+        "zero_triangles": 24,
+        "five_controller_subsets_planned": 42504,
+        "five_controller_subsets_tested": 42504,
+        "all_triangle_union_missing": 0,
+        "all_five_choices_failed": true,
+        "status": "COMPLETE_FIXED_HOMOGENEOUS_HELPER_ZERO_GATE_REFUTED",
+        "scope": "Specifiedhomogeneousninehelpertemplatewithfiveselflinecontrollers;nocandidatehelpergraphbuilt",
+        "solver_calls": 0,
+        "shared_two_source_CPU_seconds": 1.5634662209999999
+      },
+      {
+        "target_Delta": 15,
+        "target_D": 4,
+        "target": [
+          15,
+          4
+        ],
+        "savedL": 15552,
+        "source_n": 15552,
+        "actual_new_n": null,
+        "actual_D": null,
+        "ordinary_bad_unordered_pairs": null,
+        "new_graphs": 0,
+        "new_balls": 0,
+        "source_BFS": 0,
+        "label": "canonical_inversion_atom_cover_model",
+        "selector_variables": 48,
+        "weighted_counter_inputs": 72,
+        "cached_pins": 72,
+        "unique_complete_support_rows": 7488,
+        "CNF_variables": 1200,
+        "CNF_clauses": 9762,
+        "solver_calls": 1,
+        "status": "UNSAT_RESTRICTED_CANONICAL_MODEL",
+        "solver_return_code": 20,
+        "solver_CPU_seconds": 0.129095,
+        "shared_two_source_CPU_seconds": 6.6242013790000005,
+        "UNSAT_proof_independently_checked": false,
+        "scope": "Onlyzero_and_plusminus_selfline_atoms_cost1_2;notallfreeinversionorbits"
+      },
+      {
+        "target_Delta": 15,
+        "target_D": 4,
+        "target": [
+          15,
+          4
+        ],
+        "savedL": 15552,
+        "source_n": 15552,
+        "actual_new_n": null,
+        "actual_D": null,
+        "ordinary_bad_unordered_pairs": null,
+        "new_graphs": 0,
+        "new_balls": 0,
+        "source_BFS": 0,
+        "label": "canonical_independent_pin_cover_two_budget_stages",
+        "selector_variables": 72,
+        "cached_pins": 72,
+        "unique_complete_support_rows": 15528,
+        "CNF_variables": 1224,
+        "CNF_clauses": 17802,
+        "solver_calls": 2,
+        "initial_status": "UNKNOWN",
+        "initial_solver_return_code": 0,
+        "initial_solver_CPU_seconds": 3.001899,
+        "final_status": "UNSAT_RESTRICTED_CANONICAL_INDEPENDENT_MODEL",
+        "continuation_return_code": 20,
+        "continuation_solver_CPU_seconds": 5.952845999999999,
+        "initial_shared_two_source_CPU_seconds": 11.495787772,
+        "continuation_shared_two_source_CPU_seconds": 30.891580072999997,
+        "same_CNF_and_ports_in_continuation": true,
+        "third_call_launched": false,
+        "UNSAT_proof_independently_checked": false,
+        "scope": "Any<=15individualpinsinthesamecanonical72_or90_domain;notall648_or810freepins"
+      }
+    ],
+    "shared_batch_CPU_receipts": {
+      "zero_probe_CPU_seconds": 0.020998152,
+      "five_triangle_probe_CPU_seconds": 1.5634662209999999,
+      "inversion_model_CPU_seconds": 6.6242013790000005,
+      "independent_model_initial_CPU_seconds": 11.495787772,
+      "independent_same_model_once_continuation_CPU_seconds": 30.891580072999997
+    },
+    "full_free_domain_excluded": false,
+    "new_graphs": 0,
+    "source_BFS": 0,
+    "new_balls": 0,
+    "actual_new_diameter": null,
+    "strict_independent_UNSAT_proof_checked": false,
+    "independent_model_third_call": false,
+    "method_count_increment": 0,
+    "pending": []
+  },
+  "cache_probe_reproducer": {
+    "status": "POST_HOC_UNEXECUTED_REPRODUCTION_AID",
+    "original_heredoc_snapshot": false,
+    "new_output_directory_required": true,
+    "original_prediction_or_result_overwritten": false,
+    "new_numeric_runs": 0
+  },
+  "full_free_projective_inversion_cover": {
+    "label": "full_free_fixed_spaces_projective_directions_inversion_cover",
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "fixed_space_interface": {
+      "source": "source15552",
+      "n": 15552,
+      "m": 116316,
+      "D": 4,
+      "bin_size": 81,
+      "dimension": 4,
+      "loop_controller_count": 24,
+      "free_pin_count": 648,
+      "group_count": 336,
+      "groups_partition_all_actual_free": true,
+      "CPU_seconds": 0.011459512999999998,
+      "fixedspace_dimension_per_controller": 3,
+      "free_points_per_controller": 27,
+      "projective_directions_per_controller": 13,
+      "canonical_directions_per_controller": 1,
+      "new_directions_per_controller": 12,
+      "new_noncanonical_free_pins": 576,
+      "singleton_groups": 24,
+      "pair_groups": 312,
+      "interface_file": "source15552_FREE_DIRECTION_GROUPS.json",
+      "same_word_route_witness": {
+        "controller_word": [
+          0,
+          0,
+          11,
+          46
+        ],
+        "new_direction_p": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "canonical_v0": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "old_endpoint_count": 27,
+        "new_endpoint_count": 81,
+        "intersection_count": 27,
+        "new_targets_outside_old": 54
+      },
+      "route_probe_CPU_seconds": 0.025301759,
+      "route_scope": "Same fixed word only; not full R3/R4 or all-target coverage."
+    },
+    "selector_domain": "Allactualfreeverticespartitionedintozero_cost1_andplusminus_cost2atoms;S=-S",
+    "model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "source_D": 4,
+      "group_selectors": 336,
+      "free_pins": 648,
+      "expanded_weight_inputs": 648,
+      "target_inversion_orbits": 7872,
+      "unique_target_rows": 7584,
+      "variables": 10704,
+      "clauses": 28290,
+      "whole_source_target_count": 15552,
+      "prep_parent_CPU_seconds": 0.316616031,
+      "source_BFS": 0,
+      "new_balls": 0,
+      "status": "SOLVER_UNSAT_FULL_INVERSION_DOMAIN_UNCERTIFIED",
+      "solver_return_code": 20,
+      "solver_CPU_seconds": 35.16384300000001,
+      "solver_wall_seconds": 35.2328644618392,
+      "CaDiCaL_requested_seconds": 40,
+      "selected_pins": [],
+      "solver_calls": 1,
+      "candidate_graphs": 0
+    },
+    "source_models_complete": 2,
+    "shared_aggregate_CPU_seconds": 73.95774861400001,
+    "carried_interface_CPU_seconds": 0.063390872,
+    "route_probe_CPU_seconds_separate": 0.025301759,
+    "UNSAT_proof_independently_checked": false,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "actual_joint_prediction_disposition": "LOCAL_ROUTE_SUPPORTED_FULL_INVERSION_SOLVER_UNSAT_UNCERTIFIED",
+    "noninvariant_domain_excluded": false
+  },
+  "full_free_independent_model": {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "full_free_independent_asymmetric_pin_cover",
+    "actual_source_model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "source_D": 4,
+      "independent_pin_selectors": 648,
+      "target_rows_before_dedup": 15552,
+      "unique_target_rows": 15552,
+      "cover_literals": 1496880,
+      "counter_inputs": 648,
+      "ordered_inversion_pairs": 312,
+      "lex_prefix_variables": 313,
+      "lex_smaller_label_selected_at_first_difference": true,
+      "asymmetry_cut_final_prefix_false": true,
+      "negative_dependency": "previous full-invariant rawUNSAT, no prooflog certification",
+      "variables": 11329,
+      "clauses": 38132,
+      "prep_parent_CPU_seconds": 0.663528369,
+      "source_BFS": 0,
+      "new_balls": 0,
+      "status": "UNKNOWN",
+      "solver_return_code": 0,
+      "solver_CPU_seconds": 59.902466999999994,
+      "solver_wall_seconds": 60.111805602908134,
+      "CaDiCaL_requested_seconds": 60,
+      "selected_pins": [],
+      "solver_calls": 1,
+      "candidate_graphs": 0
+    },
+    "selector_domain": "Allactual648_or810freepinsindependent_cost1_withlexWLOG_andpriorinvariantnegativecut",
+    "all_original_targets_unfolded": true,
+    "asymmetry_negative_dependency": "Priorfull-inversionrawUNSAT,unverifiedprooflog",
+    "actual_asymmetric_domain_status": "UNKNOWN",
+    "unrestricted_domain_excluded": false,
+    "shared_aggregate_CPU_seconds": 127.968020737,
+    "carried_directions_CPU_seconds": 0.063390872,
+    "additional_timer_planned": false
+  },
+  "affine_line_full_block_certificate": {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "full_free_affine_line_full_block_certificate",
+    "actual_source_model": {
+      "source": "source15552",
+      "n": 15552,
+      "m": 116316,
+      "D": 4,
+      "bin_size": 81,
+      "raw_line_count": 2808,
+      "positive_unique_masks": 312,
+      "block_union_missing_count": 0,
+      "first_missing_controller": null,
+      "first_missing_controller_max_points_from_any_line": null,
+      "five_largest_column_size_sum": 290,
+      "preparation_parent_CPU_seconds": 0.38647661000000005,
+      "solver_calls": 1,
+      "candidate": null,
+      "actual_new_graph_n": null,
+      "actual_new_graph_D": null,
+      "ordinary_bad_unordered_pairs": null,
+      "line_selectors": 312,
+      "CNF_variables": 1872,
+      "CNF_clauses": 3614,
+      "target_block_clauses": 192,
+      "CNF_file": "source15552.cnf",
+      "solver_returncode": 20,
+      "solver_CPU_seconds": 0.5527359999999999,
+      "status": "RAW_UNSAT_FOR_LINE_BLOCK_CERTIFICATE"
+    },
+    "scope": "Atmost5affine3lines;eachcontrollerfullcoveredbyoneindividualselectedline;notmultilinepartialblockcompletion",
+    "shared_aggregate_CPU_seconds": 3.8565048600000003,
+    "UNSAT_proof_independently_checked": false,
+    "general_freepin_cover_excluded": false,
+    "new_method_or_row": false
+  },
+  "affine_line_offset_diagnostics": {
+    "stored_offset_blockmask_diagnostic": {
+      "source": "source15552",
+      "n": 15552,
+      "D": 4,
+      "raw_lines": 2808,
+      "controller_count_with_lines": 24,
+      "direction_groups": 312,
+      "cosets_per_group": 9,
+      "groups_with_all_nine_masks_equal": 312,
+      "all_groups_equal": true,
+      "nonreference_coset_comparisons": 2496,
+      "equal_nonreference_coset_comparisons": 2496,
+      "distinct_masks_per_group_histogram": {
+        "1": 312
+      },
+      "first_counterexample": null,
+      "joint_cover_interface": "source15552_JOINT_LINE_INTERFACE.json",
+      "interface_all_lines_pins_cache_rows_checked": true
+    },
+    "stored_offset_diagnostic_CPU_seconds": 0.127398117,
+    "fixed_offset_point_column_counterexample": {
+      "L0_pins": [
+        0,
+        16,
+        23
+      ],
+      "Lp_pins": [
+        32,
+        36,
+        52
+      ],
+      "cached_balls_read": 6,
+      "fullfiber_blockmasks_equal": true,
+      "point_columns_equal": false,
+      "point_XOR_size": 1062,
+      "L0_total_point_coverage": 4962,
+      "Lp_total_point_coverage": 4962,
+      "first_differing_target": 0,
+      "first_differing_fiber": {
+        "controller": 0,
+        "L0_size": 39,
+        "Lp_size": 39,
+        "intersection_size": 12,
+        "union_size": 66
+      }
+    },
+    "fixed_offset_point_column_CPU_seconds": 0.006358512000000004,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "solver_calls": 0,
+    "new_graphs": 0
+  },
+  "complete_affine_line_joint_CEG": {
+    "label": "complete_raw_affine_line_joint_point_cover_CEG",
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 15553
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "actual_source_model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "D": 4,
+      "status": "SOLVER_UNSAT_COMPLETE_AT_MOST_FIVE_LINE_DOMAIN_UNCERTIFIED",
+      "all_raw_lines": 2808,
+      "initial_point_targets": 1728,
+      "final_point_targets": 1728,
+      "rounds": [
+        {
+          "source_n": 15552,
+          "D": 4,
+          "round": 0,
+          "all_line_variables": 2808,
+          "selected_line_limit": 5,
+          "current_point_targets": 1728,
+          "unique_point_support_rows": 1728,
+          "variables": 19656,
+          "clauses": 35414,
+          "cover_literals": 1594416,
+          "source_solver_CPU_used_before": 0.0,
+          "source_solver_CPU_remaining_before": 50.0,
+          "CaDiCaL_requested_seconds": 49,
+          "OS_CPU_soft_hard": [
+            50,
+            50
+          ],
+          "parent_prep_CPU": 0.9440852559999999,
+          "solver_return_code": 20,
+          "solver_CPU_seconds": 11.707798,
+          "solver_wall_seconds": 11.731566309928894,
+          "source_solver_CPU_used_after": 11.707798,
+          "status": "SOLVER_UNSAT_NECESSARY_POINT_MODEL_UNCERTIFIED"
+        }
+      ],
+      "solver_calls": 1,
+      "source_solver_CPU_seconds": 11.707798,
+      "full_point_OR_candidate_checks": 0,
+      "CNF_domain": "all raw affine free3lines, atmost5, jointpointcoverage",
+      "new_balls": 0,
+      "source_BFS": 0
+    },
+    "raw_columns_complete": true,
+    "old_blockmask_dedup_used": false,
+    "partial_fiber_gains_jointly_allowed": true,
+    "prior_invariant_negative_dependency": false,
+    "lex_used": false,
+    "source_status": "SOLVER_UNSAT_COMPLETE_AT_MOST_FIVE_LINE_DOMAIN_UNCERTIFIED",
+    "shared_aggregate_CPU_seconds": 25.794664232000002,
+    "carried_offset_interface_CPU_seconds": 0.127398117,
+    "SAT_candidates": 0,
+    "fullpoint_OR_candidate_checks": 0,
+    "added_CEG_constraints": 0,
+    "UNSAT_proof_independently_checked": false,
+    "negative_scope": "All<=5originalaffinefreelinesjointcoveronthefixedsource;rawsolverdecision",
+    "general_freepin_domain_excluded": false,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0
+  },
+  "signed_five_frame_binary_transfer_gate": {
+    "label": "signed_five_frame_binary_transfer_prerequisite",
+    "target_Delta": 10,
+    "target_D": 4,
+    "target": [
+      10,
+      4
+    ],
+    "savedL": 2485,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 3072
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "source_maps_checked": 5,
+    "source_maps_rank": 3,
+    "source_kernel_dimension": 1,
+    "four_subset_checks": 2,
+    "first_bad_controller": 0,
+    "first_bad_subset": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "first_bad_subset_rank": 3,
+    "literal_dependence": "u2=u1+u4",
+    "signed_arcs_checked": 0,
+    "binary_recipes": 0,
+    "new_graphs": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "CPU_seconds": 0.003352509,
+    "conditional_transfer_lemma_status": "VALID_BUT_SOURCE_PROJECTIVEFRAME_PREMISE_FAILS",
+    "status": "SOURCE_PREREQUISITE_REFUTED_TARGET_NOT_GENERATED",
+    "actual_target_order": null,
+    "alternate_basis_or_field_tried": false
+  },
+  "intrinsic_matroid36_induced_graph": {
+    "label": "intrinsic_support3_matroid_C36_induced_graph",
+    "target_Delta": 13,
+    "target_D": 4,
+    "target": [
+      13,
+      4
+    ],
+    "savedL": 6804,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": 6912,
+      "hypothetical": 6912
+    },
+    "actual_m": 22896,
+    "actual_max_degree": 11,
+    "actual_min_degree": 1,
+    "degree_histogram": {
+      "1": 48,
+      "2": 720,
+      "3": 48,
+      "4": 1152,
+      "5": 1104,
+      "6": 144,
+      "7": 1392,
+      "10": 1920,
+      "11": 384
+    },
+    "actual_D": null,
+    "connectivity": null,
+    "ordinary_bad_unordered_pairs": null,
+    "actual_graphs_generated": 1,
+    "source_profile_controllers": 192,
+    "points_per_controller": 36,
+    "profile_all_rank4_support3": true,
+    "new_graph_BFS_roots": 1,
+    "source_BFS": 0,
+    "root_checked": 0,
+    "root_original_source_label": 1,
+    "root_R4": 1296,
+    "root_R4_missing": 5616,
+    "root_shells": [
+      1,
+      6,
+      35,
+      208,
+      1046
+    ],
+    "first_missing_new_label": 4,
+    "first_missing_source_label": 9,
+    "subset_gate_CPU_seconds": 0.071742091,
+    "production_aggregate_CPU_seconds": 0.5854431880000001,
+    "gate_plus_production_CPU_seconds": 0.657185279,
+    "degree_prediction_status": "SUPPORTED_MAXDEGREE_AT_MOST13",
+    "D4_prediction_status": "REFUTED_ONE_ACTUAL_ROOT",
+    "status": "ACTUAL_INDUCED6912_GRAPH_FAILS_D4",
+    "alternative_subsets_or_edge_changes": 0,
+    "same_root_degree_Moore_bound_R4": 6667,
+    "same_root_degree_Moore_formula": "1+6*(1+10+100+1000)"
+  },
+  "original_source_profile_candidate_graphs": 0,
+  "original_singleappend_new_graphs_generated": 0,
+  "actual_generated_failed_induced_graphs": 1,
+  "graph_count_note": "Historicalsource/singleappendgraphcountsretainedwithscopednames;oneactualfailedinducedgraphnowexists;noneisnewlowerbound.",
+  "rank1_reflection_quotient_gate": {
+    "label": "intrinsic_rank1_reflection_quotient_gate_and_degree_obstruction",
+    "target_Delta": 14,
+    "target_D": 4,
+    "target": [
+      14,
+      4
+    ],
+    "savedL": 9720,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 10368
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "conditional_degree_upper_if_Aut": 14,
+    "conditional_fixed_source_points": 5184,
+    "conditional_orbits": 10368,
+    "actual_orbit_map": null,
+    "local_choices_per_controller": 2,
+    "controllers": 192,
+    "complete_arc_choice_tests": 3840,
+    "raw_forbidden_pairs": 3648,
+    "unique_2SAT_clauses": 1812,
+    "selfarc_tautologies_removed": 48,
+    "2SAT_calls": 1,
+    "2SAT_solve_CPU_seconds": 0.010793251999999975,
+    "gate_aggregate_CPU_seconds": 0.445824661,
+    "external_solver_calls": 0,
+    "source_BFS": 0,
+    "new_graphs": 0,
+    "status": "AUT_CLASS_UNSAT_AND_BROADER_TWO_CHOICE_PARTITION_MAX14_IMPOSSIBLE",
+    "first_conflict_controller": 0,
+    "stronger_degree_witness_arc_id": 5,
+    "stronger_degree_witness_source": 1,
+    "stronger_degree_witness_target": 4,
+    "stronger_degree_witness_source_is_nonloop": true,
+    "stronger_degree_witness_allowed_pairs": [],
+    "stronger_scope": "Everyfiberchoosesoneofthetwointrinsicline-preservingrank1reflections;truequotientusingALLsourceedgescannotmaxdegree14evenwithoutAut",
+    "quotient_neighbors_without_Aut": "Unionneighborsofbothsourcemembers;notone-representativeshortcut",
+    "new_matrix_checks_for_stronger_scope": 0,
+    "new_degree_CSP": 0,
+    "new_BFS": 0,
+    "other_involution_or_partition_types_excluded": false
+  },
+  "historical_degree15_source_recovery_goal": {
+    "target_Delta": 15,
+    "target_D": 4,
+    "savedL": 15552,
+    "n": {
+      "actual": 15552,
+      "hypothetical": 15553
+    },
+    "record_type": "source-recovery",
+    "old_samecap15_append_UNKNOWN_and_restricted_closures_preserved": true
+  },
+  "validated_graph_instances": [
+    {
+      "Delta": 16,
+      "D": 4,
+      "n": 16389,
+      "m": 128835,
+      "actual_diameter": 4,
+      "mathematically_validated_complete_graph": true,
+      "complete_Lean_graph_instance": true,
+      "known_nonrecord": false,
+      "known_publicly_dominated": false,
+      "latest_global_record_confirmed": false,
+      "confirmed_publictable_improvement": true,
+      "best_located_public_lower_bound": 16384,
+      "bounded_gain": 5,
+      "public_comparison_status": "EXCEEDS_ACTUAL_CURRENT_COMELLAS16384_BY5_GLOBAL_PRIORITY_UNKNOWN",
+      "graph_path": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/graph_d16_D4_n16389.edges",
+      "source_n": 15552,
+      "source_m": 116316,
+      "source_original_is_public_not_new_graph": true,
+      "source_degree_histogram": {
+        "14": 648,
+        "15": 14904
+      },
+      "source_regular15": false,
+      "all116316_source_edges_retained": true,
+      "new_fullN_clones": 837,
+      "new_edges": 12519,
+      "new_new_edges": 0,
+      "new_roles_complete_N_bound": 837,
+      "center_degree_histogram": {
+        "14": 36,
+        "15": 801
+      },
+      "distinct_old_pins": 12519,
+      "maximum_old_load": 1,
+      "degree_histogram": {
+        "14": 72,
+        "15": 4410,
+        "16": 11907
+      },
+      "virtualself_filtered_at_oldcenter_not_at_clone_label": true,
+      "actual_final_graph_BFS_roots": 16389,
+      "final_old_labelled_roots": 15552,
+      "final_new_labelled_roots": 837,
+      "old_source_only_BFS_roots": 0,
+      "preliminary_or_duplicate_newroot_BFS": 0,
+      "all_ordered_pairs_within4": 268599321,
+      "everyroot_eccentricity4": true,
+      "actual_genuine4walk": [
+        0,
+        891,
+        3726,
+        907,
+        1
+      ],
+      "allpair_everyprefix_source_interior_Walk_and_retraction_proof": true,
+      "formal_status": "ROOT_ACCEPTED_COMPLETE_ORIGINAL_KERNEL_TWO_AUDITS_STD3_INHERITED_EXTERNAL_BINDING",
+      "external_A": "ACTUAL_EXACT_SCOPE_THREE_FACETS_PASS_ROOT_DISPOSED",
+      "external_B": "ACTUAL_ORIGINAL_RECOVERED_THREE_FACETS_PASS_ROOT_DISPOSED",
+      "external_fresh_C": "ACTUAL_EXACT_SCOPE_THREE_FACETS_PASS_ROOT_DISPOSED",
+      "old17_or90_94_review_inherited": false,
+      "priority": "UNKNOWN",
+      "global_record_certified": false,
+      "independent_result": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/RESULT.json",
+      "ROOT_release": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json",
+      "complete_concrete_Lean_status": "PASS_COMPLETE_SOURCE15552_AND_CLONE16389_ORIGINAL_TARGETS_AUDITS_AND_INHERITED_BINDING",
+      "concrete_original_target": "DegreeDiameter.Portfolio.F3Graph15552.Clone16389.d16_16389",
+      "concrete_final_claim": "DegreeDiameter.Portfolio.F3Graph15552.Clone16389.final_claim",
+      "formal_final_receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json",
+      "formal_label": "Fin16389",
+      "formal_carrier": "Fin15552⊕Fin837",
+      "formal_user_certificate_premises": false,
+      "formal_standard_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "formal_true_Walk_D4_nonD3": true,
+      "formal_ASCII_edge_parser_theorem": false,
+      "external_A_thread": "e4b6c102-1c55-4739-82e4-d281acc2e835",
+      "external_B_thread": "5da20cd4-ab3f-4327-9df5-8d0e80d7eee3",
+      "external_fresh_C_thread": "81f0a971-8801-49b0-aca1-dbf71b602fc0"
+    }
+  ],
+  "mathematically_validated_complete_graph": true,
+  "validated_example_orders": [
+    16389
+  ],
+  "new_lower_bound_mathematically_verified": true,
+  "example_orders": [
+    16389
+  ],
+  "new_named_complete_graphs": 1,
+  "new_Lean_instances": 1,
+  "new_frameworks": 0,
+  "new_parameter_pairs": [
+    [
+      16,
+      4
+    ]
+  ],
+  "source15552_reproduction_new_graph_increment": 0,
+  "degree16_plane837_actual_graph": {
+    "status": "ROOT_ACCEPTED_COMPLETE_LEGAL_D16_D4_16389_FULL_LITERAL_ALLROOT_INDEPENDENT_PROOF_LEAN_PENDING_PRIORITY_UNKNOWN",
+    "instance": [
+      16,
+      4,
+      16389,
+      128835
+    ],
+    "source": [
+      15,
+      4,
+      15552,
+      116316
+    ],
+    "source_irregular_not_regular15": true,
+    "old_degrees": {
+      "14": 648,
+      "15": 14904
+    },
+    "selected_whole_planes": 31,
+    "plane": "x1=0 in actualF3^4;27points",
+    "packing": "FOUND31_NOT_OPTIMUM",
+    "packing_CPU": 7.714861215,
+    "packing_nodes": 8722884,
+    "frozen_actual_simple_N_rule": true,
+    "virtualself_removed_only_at_oldcenter": true,
+    "new_clones": 837,
+    "new_pins": 12519,
+    "oldload": 1,
+    "oldedges_retained": 116316,
+    "newnew": 0,
+    "final_hist": {
+      "14": 72,
+      "15": 4410,
+      "16": 11907
+    },
+    "all_final_BFS_roots": 16389,
+    "final_old_labelled_roots": 15552,
+    "final_new_labelled_roots": 837,
+    "sourceonly_BFS": 0,
+    "duplicate_preliminary_newroot_BFS": 0,
+    "ordered_pairs": 268599321,
+    "fresh_CPU": 9.905452337,
+    "fresh_budget": 120,
+    "proof": "genuineoldsourceinteriorendpointreplacement_and_everyprefix;actualfinalallrootBFSalsoallowsretractiontosourceD4",
+    "root_release": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json",
+    "existing_fullN_affine_mechanism_node": "ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101",
+    "new_general_method_or_lemma": false
+  },
+  "actual_global_coset4_source_D4_interface": {
+    "status": "SUPPORTED_ALL3648_MISSING_PAIRS_HAVE_SHORT_REFERENCE_OFFSET_COSET_COVER",
+    "old_single_fullrank4_prediction": "REFUTED_ON3648_CONTROLLER_PAIRS_RETAINED",
+    "all_pairs": 36864,
+    "inherited_fullrank_pairs": 33216,
+    "remaining_coset_pairs_repaired": 3648,
+    "used_complete_groups": 91,
+    "global_words": 781,
+    "new_shortwords": 156,
+    "used_coset_words": 151,
+    "column_certificates": 565,
+    "column_equations": 2260,
+    "coverage_witnesses": 7371,
+    "allx_formula": "Mw*x+cw+Hw=Mr*x+cr+((cw-cr)+Hw)ifcolumnsofMw-MrbelongHw;transportnoisealpha-sumxi*di",
+    "actual960arc_binding": true,
+    "atomic_kernel_ranks_not_retested": true,
+    "source_D4_finite_paper_interface_complete": true,
+    "complete_Lean": false,
+    "new_graph_or_kernel_increment": 0,
+    "note": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_NOTE.md",
+    "result": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_RESULT.json"
+  },
+  "degree16_original_Lean_pilot": {
+    "status": "HISTORICAL_PARTIAL_PILOT_ACCEPTED_FULL1200_WORKFLOW_NOW_SEPARATELY_AUTHORIZED_INCLUDING_PILOT",
+    "budget_CPU": 180,
+    "workers": 1,
+    "full_original_target_complete": false,
+    "concrete_Lean_increment": 0,
+    "latest_compile_status_as_read": "PILOT_COMPLETE_REPRESENTATIVE_TRUE_WALKS_PASS_ROW0_INCOMPLETE_CONTROLLED_COST_STOP",
+    "latest_compile_running_as_read": false,
+    "latest_compile_driver_pid": 2396211,
+    "latest_accounted_CPU_as_read": 112.39300934000002,
+    "latest_completed_modules": [
+      "F3Graph15552Definitions",
+      "F3Graph15552Linear",
+      "F3Graph15552Routes",
+      "F3Graph15552PilotData",
+      "F3Graph15552PilotCertificate",
+      "F3Graph15552PilotWalks",
+      "F3Graph15552PilotAudit",
+      "F3Graph15552Row0Data",
+      "F3Graph15552Row0FullrankCertificate"
+    ],
+    "all_failed_attempts_preserved": [
+      {
+        "module": "F3Graph15552Definitions",
+        "attempt": 1,
+        "CPU_seconds": 21.085587,
+        "exit_code": 1
+      },
+      {
+        "module": "F3Graph15552Linear",
+        "attempt": 1,
+        "CPU_seconds": 5.211375,
+        "exit_code": 1
+      },
+      {
+        "module": "F3Graph15552Routes",
+        "attempt": 1,
+        "CPU_seconds": 2.543071,
+        "exit_code": 1
+      }
+    ],
+    "initial_Definitions_syntax_failure_CPU": 21.085587,
+    "Definitions_attempt2_PASS": true,
+    "scope": "newsourceDefinitions_Linear_Routesinterfacespilot;full16389originalnotyetkernelclosed",
+    "latest_terminal_needs_interface_repair": false,
+    "same180_budget_repair_allowed": true,
+    "no_new_compile_timer": true,
+    "driver_handle": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/DRIVER_HANDLE.json",
+    "checkpoint": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/CHECKPOINT.json",
+    "observed_UTC": "2026-11-01 16:01:40 UTC",
+    "old_PASS_modules_not_recompiled": true,
+    "all_previous_compile_sessions_terminal": true,
+    "modules_PASS": 9,
+    "failed_attempts_preserved": 3,
+    "cumulative_CPU": 112.392507115,
+    "cumulative_budget": 180,
+    "root_disposition": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_LEAN_PILOT_DISPOSITION.json",
+    "FINAL": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/FINAL.json",
+    "representative_genuine_Walk_theorems": [
+      {
+        "controller_pair": [
+          0,
+          0
+        ],
+        "domain": "allx_yFin81",
+        "length_le": 4
+      },
+      {
+        "controller_pair": [
+          0,
+          33
+        ],
+        "domain": "allx_yFin81",
+        "length_le": 4
+      }
+    ],
+    "standard_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "user_certificate_premises": false,
+    "holding_step_rule": "onlyequalGLOBALlabelstoNil_walks",
+    "fullrank173_basis_PASS": true,
+    "coset_group0_only_PASS": true,
+    "fullrow0_complete": false,
+    "source_full_D4_complete": false,
+    "clone16389_finalclaim_complete": false,
+    "partial_source_and_clone_FinalClaim_only_typed": true,
+    "same180_budget_reset": false,
+    "future_fullqueue_authorized_or_started": false
+  },
+  "degree16_actual_current_public_gate": {
+    "status": "ACTUAL_CURRENT_PRIMARY_TABLE_CONFIRMS16384_TARGET16389_PRODUCTION_GATE_PASS",
+    "checked_UTC": "2026-11-01 15:38 UTC",
+    "current_Comellas": 16384,
+    "new_n": 16389,
+    "margin": 5,
+    "global_priority": "UNKNOWN",
+    "freshmain_over_stale_description": true,
+    "report": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.md",
+    "source_original_credit_retained": true
+  },
+  "degree16_expert_DRAFT": {
+    "status": "UNFROZEN_EXPERT_DRAFT_MATH_AND_FULL_LEAN_ACCEPTED_NEW_SCOPE_AB_PENDING_C_NOT_DISPATCHED",
+    "snapshot": {
+      "named": 152,
+      "parameters": 43,
+      "Lean": 46
+    },
+    "HTML": "expert_review_current/D16_D4_16389_20261101.html",
+    "HTML_source": "expert_review_current/D16_D4_16389_20261101.html.txt",
+    "Word": "expert_review_current/D16_D4_16389_20261101.docx",
+    "receipt": "expert_review_current/D16_D4_16389_20261101_DRAFT_RECEIPT.json",
+    "outputs": [
+      {
+        "path": "D16_D4_16389_20261101.html",
+        "bytes": 24939
+      },
+      {
+        "path": "D16_D4_16389_20261101.html.txt",
+        "bytes": 24939
+      },
+      {
+        "path": "D16_D4_16389_20261101.docx",
+        "bytes": 12369
+      }
+    ],
+    "selected_links": 67,
+    "CPU": 0.030561713000000004,
+    "ZIP_created": false,
+    "freeze_performed": false,
+    "rendered_Lean_state": "NOT_STARTED",
+    "rendered_state_is_historical_generation_not_actual_live_pilot": true,
+    "complete_original_Lean": true
+  },
+  "derived_user_graph_catalog_navigation": {
+    "status": "NAVIGATION_ONLY_EXISTING_COUNTS_UNCHANGED",
+    "HTML": "research/graph_catalog.html",
+    "HTML_source": "research/graph_catalog.html.txt",
+    "CSV": "research/graph_catalog.csv",
+    "named_rows": 152,
+    "parameter_groups": 43,
+    "concrete_Lean_instances": 46,
+    "instance_partition": {
+      "historical_D5_prefixes": 103,
+      "inherited_F5_3750": 1,
+      "accepted_stage": 48
+    },
+    "literal_edge_table_links": 107,
+    "early_prefix_generator_parameter_links": 45,
+    "derived_not_second_Wiki_or_ledger": true,
+    "graph_regeneration_BFS_compile_network_runs": 0,
+    "D3_comparison_source_index": "research/ddp/two_successful_methods_20261101/public_baseline_audit/CATALOG_D3_COMPARISON_SOURCES_20261101.json",
+    "D3_comparison_pairs": 31,
+    "current_comparison_csv": "research/public_comparison_current.csv",
+    "representative_parameters": 43,
+    "comparison_and_novelty_status": "research/ddp/two_successful_methods_20261101/public_baseline_audit/COMPARISON_AND_NOVELTY_STATUS_20261101.json",
+    "current_comparison_HTML": "research/public_comparison_current.html",
+    "current_comparison_HTML_source": "research/public_comparison_current.html.txt"
+  },
+  "latest_user_diameter_selection_instruction": {
+    "status": "EXPLICIT_USER_STEERING_SAME_ACTIVE_GOAL",
+    "new_construction_priorities": [
+      "D4",
+      "D5"
+    ],
+    "stop_new_D3_dispatch": [
+      "degree_variants",
+      "copy_multiplicities",
+      "field_variants"
+    ],
+    "completed_D3_results_retained": true,
+    "D3_generally_excluded": false,
+    "D2_n61_still_paused": true,
+    "main_questions_maximum": 2,
+    "current_question": "D4_16_16389_original_kernel_and_later_newscope_review_completion",
+    "complementary_question": "f9_select_one_smaller_degree_D4_or_D5_concrete_coverage_question_not_template_sweep",
+    "strict_old_exclusions_not_rerun": true,
+    "UNKNOWN_not_family_exclusion": true,
+    "no_new_Goal_or_Wiki": true
+  },
+  "actual15552_port_preserving_controller_symmetry": {
+    "status": "NONTRIVIAL_PORT_PRESERVING_SYMMETRY_FOUND",
+    "accepted_permutations": 24,
+    "orbits": 8,
+    "orbit_sizes": [
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "representatives": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      16,
+      35
+    ],
+    "CPU": 0.022993527,
+    "source_only": true,
+    "global_five_type_dependence_required": true,
+    "independent_paper": "SUPPORTED_actualsource_graph_automorphism_and_alltarget_row_Walk_transfer",
+    "independent_note": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_INDEPENDENT_NOTE.md",
+    "source_transitive_claimed": false,
+    "partial_pair_pilot_promoted_to_fullrow": false,
+    "action_on837_clone_code_automatic": false,
+    "new_graph_Lean_method_increment": [
+      0,
+      0,
+      0
+    ]
+  },
+  "actual15552_two_symmetry_generator_interface": {
+    "status": "PASS_TWO_GENERATORS_SUFFICE",
+    "generators": 2,
+    "max_word_length": 5,
+    "positive_controller_start_bindings": 192,
+    "source_generator_commutation_cases_for_future_kernel": 1920,
+    "CPU": 0.017433091,
+    "result": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_RESULT.json",
+    "kernel_symmetry_complete": false,
+    "new_graph_Lean_method_increment": [
+      0,
+      0,
+      0
+    ]
+  },
+  "symmetry_reduced_D4_kernel_scope": {
+    "status": "EXACT_REDUCED_PROOF_DATA_SCOPE_NOT_KERNEL",
+    "representatives": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      10,
+      16,
+      35
+    ],
+    "pairs": 1536,
+    "fullrank_pairs": 1384,
+    "coset_pairs": 152,
+    "needed_distinct_fullrank_words": 173,
+    "all_needed_rankword_basis_already_kernel_PASS": true,
+    "new_fullrank_word_basis_checks": 0,
+    "coset_groups_total": 91,
+    "already_kernel_PASS_coset_groups": [
+      0
+    ],
+    "new_coset_groups_remaining": 90,
+    "fullrow0_complete": false,
+    "source_full_D4_complete": false,
+    "clone16389_original_complete": false,
+    "finite_data_not_kernel": true,
+    "result": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/SYMMETRY_REDUCED_KERNEL_SCOPE.json"
+  },
+  "literal_controller_nonD3_input_for_D4_lower_bound": {
+    "status": "PASS_CONCRETE_CONTROLLER_NON_D3_INPUT_SELECTED",
+    "source_controller": 0,
+    "target_controller": 1,
+    "old_source_labels": [
+      0,
+      81
+    ],
+    "literal_three_words": 125,
+    "distinct_endpoints": 82,
+    "target_controller1_omitted": true,
+    "CPU": 0.013533367000000001,
+    "new_formal_nonD3_target_complete": false,
+    "not_new_kernel": true,
+    "no_graph_BFS_field_rank_solver_Lean": true,
+    "note": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_NOTE.md",
+    "result": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_RESULT.json"
+  },
+  "clone837_pinOwner_paper_interface": {
+    "status": "PAPER_REVERSE_TYPE_FORMULA_NO_NEW_RANK_OR_KERNEL",
+    "note": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_NOTE.md",
+    "scope": "actualglobaltype_Bq_Bp_identities_and_Wx1zero_reverse_formula_layerOwner;sourceAdj_bridge_required",
+    "new_rank_BFS_Lean": 0,
+    "source_symmetry_does_not_automatically_preserve_clone_code": true
+  },
+  "smaller_D4_actual_main_table_caution": {
+    "date": "2026-11-01",
+    "actual_current_main": {
+      "D10_D4": 2556,
+      "D11_D4": 3645
+    },
+    "stale_description": {
+      "D10_D4": 2485,
+      "D11_D4": 3444
+    },
+    "use_main_over_stale_detail_for_record_comparison": true,
+    "new_queries_this_sync": 0,
+    "stale_detail_cannot_establish_new_record": true
+  },
+  "active_research_selection_user_clarification": {
+    "sameGoalACTIVE": true,
+    "main_questions_max": 2,
+    "current_mainquestions": [
+      "D2public106_oldedge_deletion_addition_repair",
+      "D4_16389_originalproof_completion"
+    ],
+    "D3_new_degree_copy_field_dispatch": "STOP",
+    "oldN8_n61": "PAUSED",
+    "D2_prior_q4classic21to22_Brown57_91_fixedinduced": "ALREADY_DONE_INHERIT_NOT_RESTART",
+    "newD2_oldedges_may_change": true,
+    "new_phase8D5_gate": "TERMINAL_UNKNOWN_NOT_THIRD_LIVE_LINE"
+  },
+  "degree16_full_cumulative1200_workflow": {
+    "status": "ROOT_ACCEPTED_COMPLETE_ORIGINAL_SOURCE_AND_CLONE_KERNEL_AUDITS_INHERITED_BINDING",
+    "cumulative_budget_CPU": 1200,
+    "workers": 1,
+    "base_pilot_CPU": 112.39300934000002,
+    "pilot173_rankbasis_and_coset_group0_import_only": true,
+    "no_old_PASS_recompile": true,
+    "latest_as_read_status": "FULL_FAILED_NEEDS_REPAIR",
+    "latest_as_read_running": false,
+    "latest_as_read_driver_pid": 3119077,
+    "latest_as_read_CPU": 542.059551094,
+    "latest_checkpoint_completed_modules": 50,
+    "remaining_requested_modules": [
+      "F3Graph15552FullDegree",
+      "F3Graph15552FullCloneInputs"
+    ],
+    "full_original_parent_clone_acceptance_received": true,
+    "concrete_Lean_increment": 1,
+    "driver_handle": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/DRIVER_HANDLE.json",
+    "checkpoint": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/CHECKPOINT.json",
+    "observed_UTC": "2026-11-01 16:45:34 UTC",
+    "general_helpers_not_original_target_completion": true,
+    "root_accepted_new_finite_modules_PASS": [
+      44,
+      44
+    ],
+    "all_coset_groups_kernel_closed": [
+      91,
+      91
+    ],
+    "fullrank173_basis_previously_kernel_PASS": true,
+    "remaining_original_obligations": [
+      "source_degree",
+      "eight_complete_rows_and_endpoint_assembly",
+      "clone",
+      "original_targets",
+      "standalone_audits",
+      "external_binding"
+    ],
+    "finite_module_PASS_not_original_target_completion": true,
+    "FINAL": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json",
+    "root_disposition": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_FULL_LEAN_DISPOSITION.json",
+    "cumulative_CPU": 675.777657109,
+    "all_native_terminal": true
+  },
+  "degree16_latest_worker_report_not_root_acceptance": {
+    "status": "SUPERSEDED_BY_ACTUAL_ROOT_FULLTEXT_ACCEPTANCE",
+    "reported_cumulative_CPU": 675.777657109,
+    "cumulative_budget": 1200,
+    "native_terminal": true,
+    "root_original_target_acceptance_received": true,
+    "complete_Lean_increment": 1,
+    "source_and_clone_true_originals_need_root_fulltext_read": true
+  },
+  "degree16_original_full_kernel_acceptance": {
+    "status": "ROOT_ACCEPTED_COMPLETE_ORIGINAL_SOURCE_AND_CLONE_KERNEL_AUDITS_EXTERNAL_BINDING",
+    "source_original": "DegreeDiameter.Portfolio.F3Graph15552.d15_15552",
+    "clone_original": "DegreeDiameter.Portfolio.F3Graph15552.Clone16389.d16_16389",
+    "source_final_claim": "DegreeDiameter.Portfolio.F3Graph15552.final_claim",
+    "clone_final_claim": "DegreeDiameter.Portfolio.F3Graph15552.Clone16389.final_claim",
+    "source_carrier": "Fin15552",
+    "clone_carrier": "Fin15552⊕Fin837",
+    "explicit_label": "Fin16389",
+    "true_Walk_D4_nonD3": true,
+    "user_certificate_premises": 0,
+    "standalone_Source_and_Clone_Audits_PASS": true,
+    "standard_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "cumulative_CPU": 675.777657109,
+    "cumulative_budget": 1200,
+    "pilot_included": true,
+    "new_successful_modules": 68,
+    "pilot_successful_modules": 9,
+    "new_failed_attempts": 3,
+    "pilot_failed_attempts": 3,
+    "all_failures_cost_preserved": true,
+    "representative_rows": 8,
+    "endpoint_bindings": 1536,
+    "fullrank173_imported": true,
+    "coset_groups": 91,
+    "symmetry_generators": 2,
+    "clone_owner_load_le1": true,
+    "center_independence_assumed": false,
+    "old_PASS_recompiled": 0,
+    "new_BFS": 0,
+    "source_reproduction_increment": 0,
+    "clone_Lean_increment": 1,
+    "external_binding": "inheritedsmallliteral_and837orderedlabels_plus12519actualfullNpins;notLeanASCIIparser_or837rowAuditEval"
+  },
+  "degree16_exact_new_scope_reviews": {
+    "A": {
+      "status": "ACTUAL_DELIVERED_SUCCESS_ROOT_FULLTEXT_DISPOSED_THREE_FACETS_PASS",
+      "thread": "e4b6c102-1c55-4739-82e4-d281acc2e835",
+      "model": "gemini-3.8-flash-high/high",
+      "root_read_chars": 16731,
+      "math": "PASS",
+      "formal": "PASS",
+      "binding": "PASS",
+      "priority": "UNKNOWN",
+      "old_transport_UNKNOWN_preserved": true,
+      "completed_exact_scope_A_calls": 1,
+      "raw": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DELIVERED_GEMINI_RAW.json",
+      "disposition": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DISPOSITION.md"
+    },
+    "B": {
+      "status": "ORIGINAL_COMPLETED_RESPONSE_RECOVERED_ROOT_FULLTEXT_DISPOSED_THREE_FACETS_PASS",
+      "thread": "5da20cd4-ab3f-4327-9df5-8d0e80d7eee3",
+      "root_read_chars": 11389,
+      "math": "PASS",
+      "formal": "PASS",
+      "binding": "PASS",
+      "priority": "UNKNOWN",
+      "original_call_no_resend": true,
+      "MCP_SUCCESS_not_fabricated": true,
+      "raw_text": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_RESPONSE.txt",
+      "disposition": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_DISPOSITION.md"
+    },
+    "freshC": {
+      "status": "ACTUAL_SINGLE_DISTINCT_FRESH_C925_SUCCESS_ROOT_FULLTEXT_THREE_FACETS_PASS",
+      "actual_exec_cell": 925,
+      "thread": "81f0a971-8801-49b0-aca1-dbf71b602fc0",
+      "distinct_from_A_B": true,
+      "root_read_characters": 18981,
+      "math": "PASS",
+      "formal": "PASS",
+      "binding": "PASS",
+      "priority": "UNKNOWN",
+      "old_scope_PASS_inherited": false,
+      "paid_retry": false,
+      "raw": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_GEMINI_RAW.json",
+      "disposition": "research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_DISPOSITION.md"
+    },
+    "new_paid_retries": 0,
+    "restarts": 0,
+    "old_scope_PASS_inherited": false,
+    "all_A_B_fresh_C_actual_received_and_root_disposed": true
+  },
+  "current_Comellas_vs_global_and_innovation_scope": {
+    "main_scope": "degree3..16;diameter2..10",
+    "main_comparisons": {
+      "11D5": "+3",
+      "12D5": "+60",
+      "16D4": "+5",
+      "13D5": "+40butbelowauthor88452"
+    },
+    "D3_entire_portfolio_innovation": "NOT_ESTABLISHED",
+    "validity_not_priority": true,
+    "all31_D3_formula_bounds_not_global_records": true,
+    "candidate_contributions": [
+      {
+        "mechanism": "F9/C78 six-port source54/56862",
+        "known": "Schreier lift and affine framework; old full-N cloning",
+        "candidate_new_content": "Actual eight true-inverse charts, adjacent-layer plane complements, common compatibility and fixed C78 words. Not a direct substitution in the checked Delorme comparator; novelty/priority unconfirmed.",
+        "repeated_endpoints": "55..59 share one plane/U10 packing interface",
+        "proof": "affine_field_conditions/r6_schreier78_controller/f9_degree54/PROOF.md"
+      },
+      {
+        "mechanism": "same-cap spread fill",
+        "known": "opposite-GQ source, spread, general augmentation",
+        "candidate_new_content": "Incident-flag pins and complete D3 coverage at unchanged cap; precise original JGT attribution gap remains.",
+        "repeated_endpoints": "65..79 gains arise from same source fill",
+        "proof": "public_baseline_audit/SPREAD_FILL_SOURCE_PRIORITY_20261101.md"
+      },
+      {
+        "mechanism": "diagonal reallocation",
+        "known": "higher multiplicities are old full-N cloning once firstG1 fixed",
+        "candidate_new_content": "FirstG1 omits diagonal clone-filler edges and adds hub; full replacement route proof. General rule established under actual geometry hypotheses, priority unknown.",
+        "repeated_endpoints": "higher degrees are parameter instances, not independent mechanisms",
+        "proof": "retained_edge_transfer/DIAGONAL_FILL_REALLOCATION_GENERAL_NOTE.md"
+      }
+    ],
+    "candidate_priority": "UNKNOWN",
+    "cannot_conclude_all_merely_old_applications": true,
+    "cannot_certify_originality": true,
+    "repeated_degree_copies_not_new_methods": true,
+    "exact_JGT_fill_gap": "Delorme JGT9(1985)325–334 fulltext and direct descendants; absence of located exactfill is not evidence of novelty",
+    "small_D3_located_sources": {
+      "20": 2791,
+      "21": 2928,
+      "22": 3294,
+      "23": 3549,
+      "24": 6144,
+      "25": 7225,
+      "26": 7514
+    },
+    "small_D3_numbers_not_global_best": true,
+    "D17_D3_comparison": "UNKNOWN",
+    "user_reported3250_clue": "RETAINED_PENDING_PRIMARY_CONFIRMATION_NOT_ERASED_BY_WEAKER_LOCATED_SOURCE",
+    "comparison_csv": "research/public_comparison_current.csv",
+    "status_file": "research/ddp/two_successful_methods_20261101/public_baseline_audit/COMPARISON_AND_NOVELTY_STATUS_20261101.json"
+  },
+  "current_user_D3_20_26_comparison": {
+    "status": "SEVEN_LOCAL_INSTANCES_LARGEST_FOUND_IN_REVIEWED_PUBLIC_SOURCES",
+    "statement": "截至2026-11-01，本轮已查公开来源中未找到达到或超过这七张本地图点数的外部构造；本地为所查资料中最大实例，列为纪录候选。",
+    "summary": "research/ddp/two_successful_methods_20261101/public_baseline_audit/D3_CAP20_26_USER_SEARCH_SUMMARY_20261101.json",
+    "HTML": "research/public_comparison_current.html",
+    "global_priority": "UNKNOWN",
+    "method_novelty": "NOT_ESTABLISHED",
+    "global_certified_records": 0
+  }
+}
+```
+
+
+
+**从属变体：**
+```json
+[
+  {
+    "name": "consecutive64x243_label_partition_test",
+    "status": "GLOBAL_PATTERN_REFUTED",
+    "bad_cell_count": 64,
+    "source_BFS": 0,
+    "CPU_seconds": 0.114556914,
+    "scope": "Only this consecutive label grouping; no inference that the graph lacks another fibre model."
+  },
+  {
+    "label": "virtual_selfloop_completed_fixed_fiber_relation",
+    "target_Delta": 15,
+    "target_D": 4,
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "fixed_bin_size": 81,
+    "fixed_controller_count": 192,
+    "all_rows_tested": 15552,
+    "complete_equitable": true,
+    "five_target_controllers_each_three_neighbors": true,
+    "within_controller_target_signature_uniform": true,
+    "virtual_self_entries": 648,
+    "loop_controllers": 24,
+    "loops_per_loop_controller": 27,
+    "source_modified": false,
+    "ordinary_adjacency_failure_retracted": false,
+    "full_affine_relation_certified": false,
+    "graphs": 0,
+    "BFS": 0,
+    "R4_or_R3_balls": 0,
+    "solver_calls": 0,
+    "partition_check_CPU_seconds": 0.05999908400000001,
+    "shared_two_source_complete_probe_CPU_seconds": 0.565593974,
+    "status": "COMPLETE_FIXED_VIRTUAL_LOOP_QUOTIENT_PREDICTION_SUPPORTED",
+    "scope": "Onlypredefined81/243binswithonevirtualselfentryateachactualdegree14point;notanewgraphorchangedlabelpartition"
+  },
+  {
+    "label": "complete_fixed_coordinate_affine_line_relation_recovery",
+    "target_Delta": 15,
+    "target_D": 4,
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "dimension": 4,
+    "bin_size": 81,
+    "controller_count": 192,
+    "directed_arcs_verified": 960,
+    "arc_rows_compared": 77760,
+    "virtual_selfloops_seen": 648,
+    "complete_affine_relation_certificate": true,
+    "original_graph_exactly_reconstructible": true,
+    "relation_formula": "Q_v(y)=B*x+c;allactualthreepointtargetsetsverified",
+    "loop_deletion": "Onlysamecontrollerandsameoffset;crosscontrollerequaloffsetretained",
+    "new_graph_or_distance_bound": false,
+    "source_modified": false,
+    "BFS": 0,
+    "balls": 0,
+    "solver_calls": 0,
+    "new_graphs": 0,
+    "source_recovery_CPU_seconds": 0.09822721899999999,
+    "shared_two_source_recovery_CPU_seconds": 0.803465985,
+    "status": "COMPLETE_EXACT_SOURCE_AFFINE_RECIPE_RECOVERED",
+    "scope": "Onlyoriginalfixed81/243labelcoordinates;notachangedcontrollerorconstructionsearch"
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "canonical_zero_only_cached_union_gate",
+    "port_count": 24,
+    "cached_radius": 3,
+    "covered": 15024,
+    "missing": 528,
+    "first_missing": 28,
+    "status": "COMPLETE_ALL_ZERO_PORTS_UNION_INCOMPLETE",
+    "scope": "Onlycanonicalzeropins;allunionmissrejectseverysubset",
+    "solver_calls": 0,
+    "shared_two_source_CPU_seconds": 0.020998152
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "homogeneous_nine_helper_zero_selfline_gate",
+    "zero_triangles": 24,
+    "five_controller_subsets_planned": 42504,
+    "five_controller_subsets_tested": 42504,
+    "all_triangle_union_missing": 0,
+    "all_five_choices_failed": true,
+    "status": "COMPLETE_FIXED_HOMOGENEOUS_HELPER_ZERO_GATE_REFUTED",
+    "scope": "Specifiedhomogeneousninehelpertemplatewithfiveselflinecontrollers;nocandidatehelpergraphbuilt",
+    "solver_calls": 0,
+    "shared_two_source_CPU_seconds": 1.5634662209999999
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "canonical_inversion_atom_cover_model",
+    "selector_variables": 48,
+    "weighted_counter_inputs": 72,
+    "cached_pins": 72,
+    "unique_complete_support_rows": 7488,
+    "CNF_variables": 1200,
+    "CNF_clauses": 9762,
+    "solver_calls": 1,
+    "status": "UNSAT_RESTRICTED_CANONICAL_MODEL",
+    "solver_return_code": 20,
+    "solver_CPU_seconds": 0.129095,
+    "shared_two_source_CPU_seconds": 6.6242013790000005,
+    "UNSAT_proof_independently_checked": false,
+    "scope": "Onlyzero_and_plusminus_selfline_atoms_cost1_2;notallfreeinversionorbits"
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "canonical_independent_pin_cover_two_budget_stages",
+    "selector_variables": 72,
+    "cached_pins": 72,
+    "unique_complete_support_rows": 15528,
+    "CNF_variables": 1224,
+    "CNF_clauses": 17802,
+    "solver_calls": 2,
+    "initial_status": "UNKNOWN",
+    "initial_solver_return_code": 0,
+    "initial_solver_CPU_seconds": 3.001899,
+    "final_status": "UNSAT_RESTRICTED_CANONICAL_INDEPENDENT_MODEL",
+    "continuation_return_code": 20,
+    "continuation_solver_CPU_seconds": 5.952845999999999,
+    "initial_shared_two_source_CPU_seconds": 11.495787772,
+    "continuation_shared_two_source_CPU_seconds": 30.891580072999997,
+    "same_CNF_and_ports_in_continuation": true,
+    "third_call_launched": false,
+    "UNSAT_proof_independently_checked": false,
+    "scope": "Any<=15individualpinsinthesamecanonical72_or90_domain;notall648_or810freepins"
+  },
+  {
+    "label": "full_free_fixed_spaces_projective_directions_inversion_cover",
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "fixed_space_interface": {
+      "source": "source15552",
+      "n": 15552,
+      "m": 116316,
+      "D": 4,
+      "bin_size": 81,
+      "dimension": 4,
+      "loop_controller_count": 24,
+      "free_pin_count": 648,
+      "group_count": 336,
+      "groups_partition_all_actual_free": true,
+      "CPU_seconds": 0.011459512999999998,
+      "fixedspace_dimension_per_controller": 3,
+      "free_points_per_controller": 27,
+      "projective_directions_per_controller": 13,
+      "canonical_directions_per_controller": 1,
+      "new_directions_per_controller": 12,
+      "new_noncanonical_free_pins": 576,
+      "singleton_groups": 24,
+      "pair_groups": 312,
+      "interface_file": "source15552_FREE_DIRECTION_GROUPS.json",
+      "same_word_route_witness": {
+        "controller_word": [
+          0,
+          0,
+          11,
+          46
+        ],
+        "new_direction_p": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "canonical_v0": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "old_endpoint_count": 27,
+        "new_endpoint_count": 81,
+        "intersection_count": 27,
+        "new_targets_outside_old": 54
+      },
+      "route_probe_CPU_seconds": 0.025301759,
+      "route_scope": "Same fixed word only; not full R3/R4 or all-target coverage."
+    },
+    "selector_domain": "Allactualfreeverticespartitionedintozero_cost1_andplusminus_cost2atoms;S=-S",
+    "model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "source_D": 4,
+      "group_selectors": 336,
+      "free_pins": 648,
+      "expanded_weight_inputs": 648,
+      "target_inversion_orbits": 7872,
+      "unique_target_rows": 7584,
+      "variables": 10704,
+      "clauses": 28290,
+      "whole_source_target_count": 15552,
+      "prep_parent_CPU_seconds": 0.316616031,
+      "source_BFS": 0,
+      "new_balls": 0,
+      "status": "SOLVER_UNSAT_FULL_INVERSION_DOMAIN_UNCERTIFIED",
+      "solver_return_code": 20,
+      "solver_CPU_seconds": 35.16384300000001,
+      "solver_wall_seconds": 35.2328644618392,
+      "CaDiCaL_requested_seconds": 40,
+      "selected_pins": [],
+      "solver_calls": 1,
+      "candidate_graphs": 0
+    },
+    "source_models_complete": 2,
+    "shared_aggregate_CPU_seconds": 73.95774861400001,
+    "carried_interface_CPU_seconds": 0.063390872,
+    "route_probe_CPU_seconds_separate": 0.025301759,
+    "UNSAT_proof_independently_checked": false,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "actual_joint_prediction_disposition": "LOCAL_ROUTE_SUPPORTED_FULL_INVERSION_SOLVER_UNSAT_UNCERTIFIED",
+    "noninvariant_domain_excluded": false
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "full_free_independent_asymmetric_pin_cover",
+    "actual_source_model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "source_D": 4,
+      "independent_pin_selectors": 648,
+      "target_rows_before_dedup": 15552,
+      "unique_target_rows": 15552,
+      "cover_literals": 1496880,
+      "counter_inputs": 648,
+      "ordered_inversion_pairs": 312,
+      "lex_prefix_variables": 313,
+      "lex_smaller_label_selected_at_first_difference": true,
+      "asymmetry_cut_final_prefix_false": true,
+      "negative_dependency": "previous full-invariant rawUNSAT, no prooflog certification",
+      "variables": 11329,
+      "clauses": 38132,
+      "prep_parent_CPU_seconds": 0.663528369,
+      "source_BFS": 0,
+      "new_balls": 0,
+      "status": "UNKNOWN",
+      "solver_return_code": 0,
+      "solver_CPU_seconds": 59.902466999999994,
+      "solver_wall_seconds": 60.111805602908134,
+      "CaDiCaL_requested_seconds": 60,
+      "selected_pins": [],
+      "solver_calls": 1,
+      "candidate_graphs": 0
+    },
+    "selector_domain": "Allactual648_or810freepinsindependent_cost1_withlexWLOG_andpriorinvariantnegativecut",
+    "all_original_targets_unfolded": true,
+    "asymmetry_negative_dependency": "Priorfull-inversionrawUNSAT,unverifiedprooflog",
+    "actual_asymmetric_domain_status": "UNKNOWN",
+    "unrestricted_domain_excluded": false,
+    "shared_aggregate_CPU_seconds": 127.968020737,
+    "carried_directions_CPU_seconds": 0.063390872,
+    "additional_timer_planned": false
+  },
+  {
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "actual_new_n": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0,
+    "label": "full_free_affine_line_full_block_certificate",
+    "actual_source_model": {
+      "source": "source15552",
+      "n": 15552,
+      "m": 116316,
+      "D": 4,
+      "bin_size": 81,
+      "raw_line_count": 2808,
+      "positive_unique_masks": 312,
+      "block_union_missing_count": 0,
+      "first_missing_controller": null,
+      "first_missing_controller_max_points_from_any_line": null,
+      "five_largest_column_size_sum": 290,
+      "preparation_parent_CPU_seconds": 0.38647661000000005,
+      "solver_calls": 1,
+      "candidate": null,
+      "actual_new_graph_n": null,
+      "actual_new_graph_D": null,
+      "ordinary_bad_unordered_pairs": null,
+      "line_selectors": 312,
+      "CNF_variables": 1872,
+      "CNF_clauses": 3614,
+      "target_block_clauses": 192,
+      "CNF_file": "source15552.cnf",
+      "solver_returncode": 20,
+      "solver_CPU_seconds": 0.5527359999999999,
+      "status": "RAW_UNSAT_FOR_LINE_BLOCK_CERTIFICATE"
+    },
+    "scope": "Atmost5affine3lines;eachcontrollerfullcoveredbyoneindividualselectedline;notmultilinepartialblockcompletion",
+    "shared_aggregate_CPU_seconds": 3.8565048600000003,
+    "UNSAT_proof_independently_checked": false,
+    "general_freepin_cover_excluded": false,
+    "new_method_or_row": false
+  },
+  {
+    "label": "complete_raw_affine_line_joint_point_cover_CEG",
+    "target_Delta": 15,
+    "target_D": 4,
+    "target": [
+      15,
+      4
+    ],
+    "savedL": 15552,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 15553
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "actual_source_model": {
+      "source_n": 15552,
+      "source_m": 116316,
+      "D": 4,
+      "status": "SOLVER_UNSAT_COMPLETE_AT_MOST_FIVE_LINE_DOMAIN_UNCERTIFIED",
+      "all_raw_lines": 2808,
+      "initial_point_targets": 1728,
+      "final_point_targets": 1728,
+      "rounds": [
+        {
+          "source_n": 15552,
+          "D": 4,
+          "round": 0,
+          "all_line_variables": 2808,
+          "selected_line_limit": 5,
+          "current_point_targets": 1728,
+          "unique_point_support_rows": 1728,
+          "variables": 19656,
+          "clauses": 35414,
+          "cover_literals": 1594416,
+          "source_solver_CPU_used_before": 0.0,
+          "source_solver_CPU_remaining_before": 50.0,
+          "CaDiCaL_requested_seconds": 49,
+          "OS_CPU_soft_hard": [
+            50,
+            50
+          ],
+          "parent_prep_CPU": 0.9440852559999999,
+          "solver_return_code": 20,
+          "solver_CPU_seconds": 11.707798,
+          "solver_wall_seconds": 11.731566309928894,
+          "source_solver_CPU_used_after": 11.707798,
+          "status": "SOLVER_UNSAT_NECESSARY_POINT_MODEL_UNCERTIFIED"
+        }
+      ],
+      "solver_calls": 1,
+      "source_solver_CPU_seconds": 11.707798,
+      "full_point_OR_candidate_checks": 0,
+      "CNF_domain": "all raw affine free3lines, atmost5, jointpointcoverage",
+      "new_balls": 0,
+      "source_BFS": 0
+    },
+    "raw_columns_complete": true,
+    "old_blockmask_dedup_used": false,
+    "partial_fiber_gains_jointly_allowed": true,
+    "prior_invariant_negative_dependency": false,
+    "lex_used": false,
+    "source_status": "SOLVER_UNSAT_COMPLETE_AT_MOST_FIVE_LINE_DOMAIN_UNCERTIFIED",
+    "shared_aggregate_CPU_seconds": 25.794664232000002,
+    "carried_offset_interface_CPU_seconds": 0.127398117,
+    "SAT_candidates": 0,
+    "fullpoint_OR_candidate_checks": 0,
+    "added_CEG_constraints": 0,
+    "UNSAT_proof_independently_checked": false,
+    "negative_scope": "All<=5originalaffinefreelinesjointcoveronthefixedsource;rawsolverdecision",
+    "general_freepin_domain_excluded": false,
+    "new_graphs": 0,
+    "new_balls": 0,
+    "source_BFS": 0
+  },
+  {
+    "label": "signed_five_frame_binary_transfer_prerequisite",
+    "target_Delta": 10,
+    "target_D": 4,
+    "target": [
+      10,
+      4
+    ],
+    "savedL": 2485,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 3072
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "source_maps_checked": 5,
+    "source_maps_rank": 3,
+    "source_kernel_dimension": 1,
+    "four_subset_checks": 2,
+    "first_bad_controller": 0,
+    "first_bad_subset": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "first_bad_subset_rank": 3,
+    "literal_dependence": "u2=u1+u4",
+    "signed_arcs_checked": 0,
+    "binary_recipes": 0,
+    "new_graphs": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "CPU_seconds": 0.003352509,
+    "conditional_transfer_lemma_status": "VALID_BUT_SOURCE_PROJECTIVEFRAME_PREMISE_FAILS",
+    "status": "SOURCE_PREREQUISITE_REFUTED_TARGET_NOT_GENERATED",
+    "actual_target_order": null,
+    "alternate_basis_or_field_tried": false
+  },
+  {
+    "label": "intrinsic_support3_matroid_C36_induced_graph",
+    "target_Delta": 13,
+    "target_D": 4,
+    "target": [
+      13,
+      4
+    ],
+    "savedL": 6804,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": 6912,
+      "hypothetical": 6912
+    },
+    "actual_m": 22896,
+    "actual_max_degree": 11,
+    "actual_min_degree": 1,
+    "degree_histogram": {
+      "1": 48,
+      "2": 720,
+      "3": 48,
+      "4": 1152,
+      "5": 1104,
+      "6": 144,
+      "7": 1392,
+      "10": 1920,
+      "11": 384
+    },
+    "actual_D": null,
+    "connectivity": null,
+    "ordinary_bad_unordered_pairs": null,
+    "actual_graphs_generated": 1,
+    "source_profile_controllers": 192,
+    "points_per_controller": 36,
+    "profile_all_rank4_support3": true,
+    "new_graph_BFS_roots": 1,
+    "source_BFS": 0,
+    "root_checked": 0,
+    "root_original_source_label": 1,
+    "root_R4": 1296,
+    "root_R4_missing": 5616,
+    "root_shells": [
+      1,
+      6,
+      35,
+      208,
+      1046
+    ],
+    "first_missing_new_label": 4,
+    "first_missing_source_label": 9,
+    "subset_gate_CPU_seconds": 0.071742091,
+    "production_aggregate_CPU_seconds": 0.5854431880000001,
+    "gate_plus_production_CPU_seconds": 0.657185279,
+    "degree_prediction_status": "SUPPORTED_MAXDEGREE_AT_MOST13",
+    "D4_prediction_status": "REFUTED_ONE_ACTUAL_ROOT",
+    "status": "ACTUAL_INDUCED6912_GRAPH_FAILS_D4",
+    "alternative_subsets_or_edge_changes": 0,
+    "same_root_degree_Moore_bound_R4": 6667,
+    "same_root_degree_Moore_formula": "1+6*(1+10+100+1000)"
+  },
+  {
+    "label": "intrinsic_rank1_reflection_quotient_gate_and_degree_obstruction",
+    "target_Delta": 14,
+    "target_D": 4,
+    "target": [
+      14,
+      4
+    ],
+    "savedL": 9720,
+    "source_n": 15552,
+    "source_m": 116316,
+    "n": {
+      "actual": null,
+      "hypothetical": 10368
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "conditional_degree_upper_if_Aut": 14,
+    "conditional_fixed_source_points": 5184,
+    "conditional_orbits": 10368,
+    "actual_orbit_map": null,
+    "local_choices_per_controller": 2,
+    "controllers": 192,
+    "complete_arc_choice_tests": 3840,
+    "raw_forbidden_pairs": 3648,
+    "unique_2SAT_clauses": 1812,
+    "selfarc_tautologies_removed": 48,
+    "2SAT_calls": 1,
+    "2SAT_solve_CPU_seconds": 0.010793251999999975,
+    "gate_aggregate_CPU_seconds": 0.445824661,
+    "external_solver_calls": 0,
+    "source_BFS": 0,
+    "new_graphs": 0,
+    "status": "AUT_CLASS_UNSAT_AND_BROADER_TWO_CHOICE_PARTITION_MAX14_IMPOSSIBLE",
+    "first_conflict_controller": 0,
+    "stronger_degree_witness_arc_id": 5,
+    "stronger_degree_witness_source": 1,
+    "stronger_degree_witness_target": 4,
+    "stronger_degree_witness_source_is_nonloop": true,
+    "stronger_degree_witness_allowed_pairs": [],
+    "stronger_scope": "Everyfiberchoosesoneofthetwointrinsicline-preservingrank1reflections;truequotientusingALLsourceedgescannotmaxdegree14evenwithoutAut",
+    "quotient_neighbors_without_Aut": "Unionneighborsofbothsourcemembers;notone-representativeshortcut",
+    "new_matrix_checks_for_stronger_scope": 0,
+    "new_degree_CSP": 0,
+    "new_BFS": 0,
+    "other_involution_or_partition_types_excluded": false
+  }
+]
+```
+
+**原始证据：** [research/ddp/more_graphs_20261027/d15_D4_current15552/REPORT.md](../../research/ddp/more_graphs_20261027/d15_D4_current15552/REPORT.md)；[research/ddp/more_graphs_20261027/d15_D4_current15552/RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_FACTS.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_FACTS.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_STATUS.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_STATUS.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/DOWNLOAD_RECEIPT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/DOWNLOAD_RECEIPT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/SOURCE_PROFILE_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/profile_actual.py](../../research/ddp/more_graphs_20261027/d15_D4_current15552/profile_actual.py)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREPARATION_RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/PREPARATION_RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/SOLVER_RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/SOLVER_RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/prepare.cpp](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/prepare.cpp)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/run.py](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/run.py)；[research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/ANALYSIS_PROOF.md](../../research/ddp/more_graphs_20261027/d15_D4_current15552/single_vertex_R3_cover/ANALYSIS_PROOF.md)；[research/ddp/more_graphs_20261027/d15_D4_current15552/HISTORY_SOURCE_GAP/REPORT.md](../../research/ddp/more_graphs_20261027/d15_D4_current15552/HISTORY_SOURCE_GAP/REPORT.md)；[research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/fiber243_binding/RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/REPORT.md](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/REPORT.md)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/RESULT.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/RESULT.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/terminal.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/terminal.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/FREE_COMPONENTS.json](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/FREE_COMPONENTS.json)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/EXACT_ROW_GROUPS.jsonl](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/EXACT_ROW_GROUPS.jsonl)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/UNIQUE_ROW_REPRESENTATIVES.i32le.bin](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/UNIQUE_ROW_REPRESENTATIVES.i32le.bin)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/counter.cpp](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/counter.cpp)；[research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/run.py](../../research/ddp/more_graphs_20261027/d15_D4_current15552/support_structure/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/generator.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/generator.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/source15552_AFFINE_RELATIONS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_relation_recovery/source15552_AFFINE_RELATIONS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PORT_COVER_REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/PORT_COVER_REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/ANALYSIS_INVERSION_COVER.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_zero_port_probe/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/selfline_helper9_probe/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/inversion_port_cover/CODE_REVIEW.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CONTINUATION_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/continue_once.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/continue_once.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/canonical_independent_port_cover/CODE_REVIEW.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER_README.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/CACHE_PROBE_REPRODUCER_README.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source15552_FREE_DIRECTION_GROUPS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source15552_FREE_DIRECTION_GROUPS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_SEARCH_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_SEARCH_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/route_cosset_probe.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/route_cosset_probe.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ROUTE_COSSET_REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/ANALYSIS_DIRECTION_COVER.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/MODEL_15552.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/MODEL_15552.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/TERMINAL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/TERMINAL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/CHECKPOINT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/CHECKPOINT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/prepare.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/prepare.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/TERMINAL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/TERMINAL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_15552.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_15552.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_102060.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_102060.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_15552.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_15552.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_102060.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/INPUT_102060.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_15552.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_15552.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_102060.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/solver_102060.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_15552.cnf](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_15552.cnf)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_102060.cnf](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/model_102060.cnf)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/ANALYSIS_LEX_SCOPE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/prepare.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/prepare.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_SCOPE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/MODEL_SCOPE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RAW_ANALYSIS_FIELDS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_independent_port_cover/RAW_ANALYSIS_FIELDS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_LINE_BLOCK_MASKS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_LINE_BLOCK_MASKS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.cnf](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.cnf)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stderr](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552.stderr)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/ANALYSIS_LINE_CERTIFICATE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RAW_ANALYSIS_FIELDS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_inversion_port_cover/RAW_ANALYSIS_FIELDS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/MODEL_SCOPE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/MODEL_SCOPE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RAW_ANALYSIS_FIELDS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/RAW_ANALYSIS_FIELDS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/TERMINAL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/TERMINAL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/CEG_CURSOR.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/CEG_CURSOR.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/support_loader.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/support_loader.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/ANALYSIS_JOINT_CEG.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/INITIAL_TARGETS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/INITIAL_TARGETS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_MODEL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_MODEL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_TARGETS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_TARGETS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.cnf](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.cnf)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/round00.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source15552/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/INITIAL_TARGETS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/INITIAL_TARGETS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_MODEL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_MODEL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_TARGETS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_TARGETS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.cnf](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.cnf)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/round00.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_joint_cover/source102060/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_JOINT_LINE_INTERFACE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source15552_JOINT_LINE_INTERFACE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source102060_JOINT_LINE_INTERFACE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/source102060_JOINT_LINE_INTERFACE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source102060_FREE_DIRECTION_GROUPS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/full_free_directions/source102060_FREE_DIRECTION_GROUPS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/offset_diagnostic.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/offset_diagnostic.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/OFFSET_DIAGNOSTIC_REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/point_column_offset_probe.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/point_column_offset_probe.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/affine_line_block_cover/POINT_COLUMN_OFFSET_REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/signed5_frame_gate/ANALYSIS_TRANSFER_PROOF.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PROFILE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/PROFILE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/LABEL_POOL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/LABEL_POOL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/source_vertex_ids.txt](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/source_vertex_ids.txt)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/INPUT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/INPUT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/DEGREE_PROFILE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/DEGREE_PROFILE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/CASE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/CASE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/TERMINAL.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/TERMINAL.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/HANDLE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/HANDLE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/WORKER_HANDLE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/WORKER_HANDLE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/radius4.cpp](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/radius4.cpp)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/graph_induced_n6912.edges](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/graph_induced_n6912.edges)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/worker.stdout](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/production6912/worker.stdout)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/matroid36_induced_subset/ANALYSIS_SET_DEGREE.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/PREDICTION.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/PREDICTION.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/run.py](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/run.py)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/LOCAL_REFLECTION_CHOICES.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/LOCAL_REFLECTION_CHOICES.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ARC_CHOICE_PAIRS.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ARC_CHOICE_PAIRS.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/TWOSAT_RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/TWOSAT_RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/RESULT.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/RESULT.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/REPORT.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/REPORT.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_QUOTIENT_PROOF.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.md](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.md)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/ANALYSIS_DEGREE_NECESSITY.json)；[research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/NONLOOP_ZERO_ALLOWED_ARC.json](../../research/ddp/more_graphs_20261027/d15_loop_completed_quotient_probe/rank1_reflection_quotient/NONLOOP_ZERO_ALLOWED_ARC.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/INDEPENDENT_PLANE_INTERFACE_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/INDEPENDENT_PLANE_INTERFACE_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOCAL27_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOCAL27_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROL_PACKING_TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LATEST_PUBLIC_16_D4_GATE_20261101.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PARAMETERS.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PARAMETERS.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RECIPE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RECIPE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PROOF.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PROOF.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/graph_d16_D4_n16389.edges](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/graph_d16_D4_n16389.edges)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ALL837_ROLE_BINDINGS.tsv](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ALL837_ROLE_BINDINGS.tsv)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/STRUCTURE_PROOF.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/STRUCTURE_PROOF.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL837_ACTUAL_ROLE_BINDINGS.tsv](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL837_ACTUAL_ROLE_BINDINGS.tsv)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL16389_FINAL_ROOT_BFS.csv](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/ALL16389_FINAL_ROOT_BFS.csv)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/GENUINE_FOUR_WALK.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/GENUINE_FOUR_WALK.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/DRIVER_HANDLE.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/DRIVER_HANDLE.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/CHECKPOINT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/CHECKPOINT.json)；[expert_review_current/D16_D4_16389_20261101_DRAFT_RECEIPT.json](../../expert_review_current/D16_D4_16389_20261101_DRAFT_RECEIPT.json)；[expert_review_current/D16_D4_16389_20261101.html](../../expert_review_current/D16_D4_16389_20261101.html)；[expert_review_current/D16_D4_16389_20261101.html.txt](../../expert_review_current/D16_D4_16389_20261101.html.txt)；[expert_review_current/D16_D4_16389_20261101.docx](../../expert_review_current/D16_D4_16389_20261101.docx)；[research/graph_catalog.html](../../research/graph_catalog.html)；[research/graph_catalog.html.txt](../../research/graph_catalog.html.txt)；[research/graph_catalog.csv](../../research/graph_catalog.csv)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_GENERATORS_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_INDEPENDENT_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/CONTROLLER_SYMMETRY_INDEPENDENT_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/SYMMETRY_REDUCED_KERNEL_SCOPE.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/SYMMETRY_REDUCED_KERNEL_SCOPE.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_PRED.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_PRED.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/LOWER_D4_CONTROLLER_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_LEAN_PILOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_LEAN_PILOT_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_NOTE.md](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_PREPARATION_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/CLONE_PIN_OWNER_PREPARATION_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/FINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/FINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/F3Graph15552PilotAudit_attempt001.log](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization/F3Graph15552PilotAudit_attempt001.log)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/DRIVER_HANDLE.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/DRIVER_HANDLE.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/CHECKPOINT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/CHECKPOINT.json)；[research/ddp/two_successful_methods_20261101/public_baseline_audit/CATALOG_D3_COMPARISON_SOURCES_20261101.json](../../research/ddp/two_successful_methods_20261101/public_baseline_audit/CATALOG_D3_COMPARISON_SOURCES_20261101.json)；[research/ddp/two_successful_methods_20261101/public_baseline_audit/SOURCE_TRACE_D3_DOMINATED_NOTE.md](../../research/ddp/two_successful_methods_20261101/public_baseline_audit/SOURCE_TRACE_D3_DOMINATED_NOTE.md)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_FULL_LEAN_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_FULL_LEAN_DISPOSITION.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/EXTERNAL_BINDING_RESULT.json](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/EXTERNAL_BINDING_RESULT.json)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullAudit_attempt001.log](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullAudit_attempt001.log)；[research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullCloneAudit_attempt001.log](../../research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullCloneAudit_attempt001.log)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_REQUEST.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_REQUEST.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_REQUEST.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_REQUEST.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_RECOVERED_STATUS.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_RECOVERED_STATUS.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_STATUS.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_STATUS.json)；[research/public_comparison_current.csv](../../research/public_comparison_current.csv)；[research/ddp/two_successful_methods_20261101/public_baseline_audit/COMPARISON_AND_NOVELTY_STATUS_20261101.json](../../research/ddp/two_successful_methods_20261101/public_baseline_audit/COMPARISON_AND_NOVELTY_STATUS_20261101.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DISPOSITION.md](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DISPOSITION.md)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_DISPOSITION.md](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_DISPOSITION.md)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DELIVERED_GEMINI_RAW.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_A_DELIVERED_GEMINI_RAW.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_REQUEST.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_REQUEST.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_RESPONSE.txt](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_B_RECOVERED_RESPONSE.txt)；[research/public_comparison_current.html](../../research/public_comparison_current.html)；[research/public_comparison_current.html.txt](../../research/public_comparison_current.html.txt)；[research/ddp/two_successful_methods_20261101/public_baseline_audit/D3_CAP20_26_USER_SEARCH_SUMMARY_20261101.json](../../research/ddp/two_successful_methods_20261101/public_baseline_audit/D3_CAP20_26_USER_SEARCH_SUMMARY_20261101.json)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_DISPOSITION.md](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_DISPOSITION.md)；[research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_GEMINI_RAW.json](../../research/ddp/two_successful_methods_20261101/reviews/D16_D4_16389_FINAL_C_GEMINI_RAW.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 同旧sourcegap id更新：actual15552/116316/degree14:648,15:14904已绑定；0源BFS。连续81bins不globallyequitable，192×81五chart预测REFUTED。一次完整648column/15552row closedR3 model,sum<=15，到时无incumbent。 追加一个固定统计变体：仅在原81-bin划分中给648个degree14旧点各补一个virtual self-entry，完整15552rows验证5targetbins×3及bin内signature一致；不改旧图，不换label。 在同一固定坐标中，随后完整认证每个有向quotientarc的affine line relation Q_v(y)=Bx+c，逐全部实际三邻集exact相等，不更换坐标。 追加同一source frame的四个固定缓存/模型变体：zero-only并集、homogeneous9helper的五selfline必要门、cost1/2 inversion原子，以及同72/90域去对称的独立pin cover；后者保留初始3s与一次同CNF预算复评两阶段。不采样旧target、不更改旧source。 新完整固定空间接口精确partition全部648 free为336取负原子(cost1/2)，在sum<=15下完整测试全部inversion-invariant邻域；target折半仅由已证source取负Aut，全部15552旧targets均受约束。 同轮完整independent-pins SAT使用全部648实际free点和全部15552 targets、不取负fold，sum<=15；lex仅选S/-S代表，另以旧fullinv rawUNSAT为依赖跳过invariant域。并行affine3line证书仅问<=5条line能否使每targetfiber由某一选定line独自全覆，不代表全部点cover。 最新joint CEG保全部2808原affine3lines、sum(linevars)<=5，targetclause逐点并允许多line补同fiber；无lex/旧negativecut依赖。初始all-fiber 0±basis的1728必要rows即rawUNSAT，范围为完整<=5line联合覆盖族。 另一次实际source signed5-frame必要门仅检查controller0的5个rank3 maps及2个四向量subset；拟192×F2^4、target(10,4)/3072只是假设，门失败后未造图。 新独立固定诱导规则使用全192个rank4/support3 kernel配置的内禀C=P+(L1minus0)+(L2minus0)，每controller36点；只造这一6912点source诱导图，目标(13,4)，没有替代subset或换域。 最后检每fiber两种内禀coloop rank1反射的完整class：3840实际arc choice-pairs→1812-clause 2SAT UNSAT。进一步从旧ARC仅复制nonloop controller1→4/arc5的四对全禁证人；degree必要lemma关闭这套二择partition的真实quotient max14域，即使不要求Aut。 2026-11-01当前复用同一实际不规则15552源：31个completed-target-disjoint whole27planes给837个原simpleN14/15克隆，16389/128835完整finalallroot独验接受。原cap15各UNKNOWN/严格小域失败保留，不改成整族排除；新cap16是同fullN+affine机制而非新method。
+
+**正向保证：** On this fixed partition, virtual completion gives exactly five target controllers with three entries per row, with a uniform target-controller signature throughout every source controller.；The fixed-source compact affine recipe is now fully certified by all literal directed-arc rows, with virtual selfentries removed only at identical global vertex labels.
+
+**仍未完成：** New16389originalconcreteLeannotcomplete;pilot180CPUactiveauthorization_latestcompilehandlemaybeterminalneedsrepair;newtargetABfreshCnotdispatched;globalpriorityUNKNOWN.Oldcap15scopesremainintheirrecordedstates.
+
+**启发与重启依据：** 用户选择方向覆盖旧D3扩展调度：新图研究只优先D4/D5，不继续D3新degree/倍率/换域；保留全部完成D3证据且不宣D3全族数学关闭。当前证明的成本预测促成24source对称→8代表行接口，不能用两个pair的pilot或row0局部basis当整行/整源。原180累计pilot已controlledcoststop无live且不重置；下一kernel授权按真实root决定、只importPASS，完整Fin16389原claim/Audit闭才Lean+1。另一唯一互补问题由f9选较小D4/D5具体覆盖，不大筛模板，不把UNKNOWN升整族无望。记录实际较新main而非旧details用于竞争门；本次不启动计算、编译、外审或新Goal。 最新full累计1200含pilot授权覆盖旧180pilotcontrolledstop，但不能重置历史CPU或重编173basis/group0。沿formalization_full动态句柄完成source24sym/8rep及原clone目标，不因generalhelper或native一批PASS即宣Fin16389完成。原目标root真实验收前计数45；用户新D2旧边改造明确定义为另一主线，严格旧诱导不变Brown范围不能阻碍新规则，N8/n61不重启。 完整原目标已正式计Lean46，不再等待root原claim接受或重编PASS。后续只收集原新scope A/B真实终态，transport丢失不能冒toolSUCCESS或重复付费，C尚未派。Comellas领先、明确公开作者图、发表方法推论、原创归属四层分账；有效构造+Lean不自动解决priority，重复degree/copy是同规则实例。D3新梯子保持STOP，主线D2有界结构与D4本次审阅收尾。 新D4 A/B已实际完成，只等同一唯一C925真实终态；不重发、不借旧scope，不把pending标PASS。16389原图计数不变。 当前原目标外审已闭合，勿恢复旧C925pending、重投或借旧scope；旧transport历史不删除。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+
+
+
+<!-- D16_16416_715_PACKING1250_DELTA_20261101 -->
+## 2026-11-01 19:36:04 UTC 同机制最新增量，原验收历史保留
+
+旧16389原图、完整具体Lean及原目标A/B/distinctfreshC全部实际PASS保留，不由新版本覆盖。32整plane可行性已实际FOUND：32selected、192targetrows完整一次绑定、160load1/32load0；零目标sumx≥32的solver“optimal”只指可行门，31与32都不是最大packing证明，累计10.139132516/45CPU。它沿用同一source/whole27/fullN机制，0新方法，不自动搜33+。实际新864clone/16416版本已fresh全根验收，见[ddp-d16d4-whole27-fulln-clone864-graph16416-20261101](ddp-d16d4-whole27-fulln-clone864-graph16416-20261101.md)；该新版本的具体Lean和ARIS此刻仍待实际终态，不继承以上16389的完成状态。
+
+
+<!-- D16_16416_LEAN47_ROOT_ACCEPTANCE_20261101 -->
+## 新16416后续实际formal终态
+
+前段“新Lean待完成”是接收前快照；现root已接受新16416具体kernel/Audit及typedI32/864role/12924pin外部小表绑定，完整Lean47。A/B仍在途、C未派；旧16389原完整Lean/ABfreshC并未覆盖或改写。见[新版本当前节点](ddp-d16d4-whole27-fulln-clone864-graph16416-20261101.md)。0新BFS/旧PASS重编，不自动33+。

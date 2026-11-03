@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-09-28T12:51:37Z",
+  "sessions": [
+    {
+      "build_source": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z/source",
+      "build_workers": 2,
+      "child_timeout": 14400,
+      "computation_question": {
+        "accepted_delta": "N8 theoretical closure; N1/N2; S7-K4; H5-guarded N5/N14/N15",
+        "execution_scope": "26 m0 roots + 7 m1/K4 roots; no P16/K3 search",
+        "minimum_recovery": [
+          "campaign/task/cube scope and constraints",
+          "SAT full A and exact verification",
+          "solver return state/log",
+          "wall time, sampled CPU, sampled RSS"
+        ],
+        "not_requested": [
+          "ablation campaign",
+          "relaxed diagnostic inputs",
+          "old RAW reruns",
+          "new parent-signature enumeration",
+          "automatic cluster submission"
+        ],
+        "purpose": "DECISIVE_SEARCH",
+        "question": "Can the 33 remaining conditional c1 representatives be realized by a single actual 59-vertex A/B graph? In particular, is H5 with every zero-triangle vertex of matching type 2211 realizable?",
+        "result_semantics": {
+          "FAILURE": "Record actual failure; not mathematical nonexistence.",
+          "SAT": "Check original graph first, then branch/delta; preserve valid-original conflicts.",
+          "TIMEOUT": "No exclusion and no inferred structural witness.",
+          "UNSAT": "Raw exclusion of this exact conditional input; all owners/leaves must close."
+        }
+      },
+      "execution_command": [
+        "/opt/conda/bin/python3",
+        "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/sat59/jobs/run_structural_v6.py",
+        "--run-dir",
+        "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z",
+        "--mode",
+        "LATEST_CONDITIONAL",
+        "--workers",
+        "54",
+        "--build-workers",
+        "2",
+        "--wall-timeout",
+        "43200",
+        "--first-task-timeout",
+        "10800",
+        "--child-timeout",
+        "14400",
+        "--max-split-depth",
+        "1",
+        "--final-reserve",
+        "900",
+        "--manual-round",
+        "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928",
+        "--solver",
+        "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat"
+      ],
+      "final_reserve": 900,
+      "finished_utc": "2026-09-28T23:53:56Z",
+      "first_task_timeout": 10800,
+      "hostname": "solver1--3d314fb341e6-eakzdwwecp",
+      "initial_available_memory_mb": 307006.7,
+      "max_split_depth": 1,
+      "mode": "LATEST_CONDITIONAL",
+      "package_revision": "r2_20260928",
+      "proof_requested": false,
+      "python": "3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:36:13) [GCC 12.3.0]",
+      "research_round": "N59_MANUAL12_ACTIVE",
+      "result": "UNRESOLVED",
+      "run_directory": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r2_20260928/runs/manual12_solver1--3d314fb341e6-eakzdwwecp_20260928T125131Z",
+      "scheduling_policy": "BOUNDED_ATTEMPTS_UNTRIED_FIRST",
+      "scratch_directory": "/tmp",
+      "solver": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/AE_kissat2025_MAB/kissat",
+      "solver_args": [],
+      "solver_log_limit_mb": 128,
+      "started_utc": "2026-09-28T12:51:37Z",
+      "wall_timeout": 43200,
+      "workers": 54
+    }
+  ]
+}

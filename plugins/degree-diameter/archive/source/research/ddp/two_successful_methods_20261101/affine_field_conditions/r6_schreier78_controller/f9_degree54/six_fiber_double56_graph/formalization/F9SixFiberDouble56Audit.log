@@ -1,0 +1,76 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → Nat → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, @LE.le Nat instLENat (@SimpleGraph.Walk.length V G u v p) D
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.planeCenter.{u_1} : {I : Type u_1} →
+  (I → Fin 78) → I × Fin 81 → Fin 56862 :=
+fun {I} fibers i =>
+  F9Graph56862.liftAt (fibers i.1) (F9Graph56862.encodeVec (F9PlaneClone55.plane (F9PlaneClone55.parameters i.2 0)))
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.baseCenter : F9SixFiberDouble56.BaseIndex → Fin 56862 :=
+fun i => F9SixFiberDouble56.planeCenter F9SixFiberDouble56.chosenFiber (F9SixFiberDouble56.basePair i)
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.center : F9SixFiberDouble56.CloneIndex → Fin 56862 :=
+fun k => F9SixFiberDouble56.baseCenter (F9SixFiberDouble56.clonePair k).2
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.graph : SimpleGraph F9SixFiberDouble56.Vertex :=
+FullNeighborhoodClones.graph F9Graph56862.graph F9SixFiberDouble56.center
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.label : F9SixFiberDouble56.Vertex ≃ Fin 57834 :=
+finSumFinEquiv
+DegreeDiameter.Portfolio.F9SixFiberDouble56.base_label (u : Fin 6) (a b : Fin 9) :
+  ↑(F9SixFiberDouble56.baseLabel (u, F9PlaneClone55.cloneLabel (a, b))) = ↑b + 9 * ↑a + 81 * ↑u
+DegreeDiameter.Portfolio.F9SixFiberDouble56.clone_label (copy : Fin 2) (base : F9SixFiberDouble56.BaseIndex) :
+  ↑(F9SixFiberDouble56.cloneLabel (copy, base)) = ↑base + 486 * ↑copy
+DegreeDiameter.Portfolio.F9SixFiberDouble56.label_old (v : Fin 56862) : ↑(F9SixFiberDouble56.label (Sum.inl v)) = ↑v
+DegreeDiameter.Portfolio.F9SixFiberDouble56.label_new (k : F9SixFiberDouble56.CloneIndex) :
+  ↑(F9SixFiberDouble56.label (Sum.inr k)) = 56862 + ↑k
+DegreeDiameter.Portfolio.F9SixFiberDouble56.label_new_copy (copy : Fin 2) (u : Fin 6) (a b : Fin 9) :
+  ↑(F9SixFiberDouble56.label
+        (Sum.inr
+          (F9SixFiberDouble56.cloneLabel (copy, F9SixFiberDouble56.baseLabel (u, F9PlaneClone55.cloneLabel (a, b)))))) =
+    56862 + 486 * ↑copy + 81 * ↑u + 9 * ↑a + ↑b
+DegreeDiameter.Portfolio.F9SixFiberDouble56.base_center_source_label (u : Fin 6) (a b : Fin 9) :
+  ↑(F9SixFiberDouble56.baseCenter (F9SixFiberDouble56.baseLabel (u, F9PlaneClone55.cloneLabel (a, b)))) =
+    729 * ↑(F9SixFiberDouble56.chosenFiber u) + ↑a + 9 * ↑b + 81 * (F9Graph56862.F.c4 * F9Graph56862.F.ofCode ↑a).code
+DegreeDiameter.Portfolio.F9SixFiberDouble56.common_plane_pin_index_unique.{u_1} {I : Type u_1} (fibers : I → Fin 78)
+  (ht : Function.Injective fun ip => F9Graph56862.controller (fibers ip.1) ip.2) (w : Fin 56862) (i j : I × Fin 81)
+  (hi : F9Graph56862.graph.Adj w (F9SixFiberDouble56.planeCenter fibers i))
+  (hj : F9Graph56862.graph.Adj w (F9SixFiberDouble56.planeCenter fibers j)) : i = j
+DegreeDiameter.Portfolio.F9SixFiberDouble56.sourcePlaneMap_injective (a : Fin 78) (p : Fin 6) :
+  Function.Injective (F9SixFiberDouble56.sourcePlaneMap a p)
+DegreeDiameter.Portfolio.F9SixFiberDouble56.base_load_le_one (w : Fin 56862) :
+  FullNeighborhoodClones.load F9Graph56862.graph F9SixFiberDouble56.baseCenter w ≤ 1
+DegreeDiameter.Portfolio.F9SixFiberDouble56.load_le_two (w : Fin 56862) :
+  FullNeighborhoodClones.load F9Graph56862.graph F9SixFiberDouble56.center w ≤ 2
+DegreeDiameter.Portfolio.F9SixFiberDouble56.old_walk_bound_iff (u v : Fin 56862) (n : ℕ) :
+  (∃ p, p.length ≤ n) ↔ ∃ p, p.length ≤ n
+DegreeDiameter.Portfolio.F9SixFiberDouble56.concrete_order_degree_and_exact_D3 :
+  Fintype.card F9SixFiberDouble56.Vertex = 57834 ∧
+    (∀ (v : F9SixFiberDouble56.Vertex), F9SixFiberDouble56.graph.degree v ≤ 56) ∧
+      DiameterAtMost F9SixFiberDouble56.graph 3 ∧ ¬DiameterAtMost F9SixFiberDouble56.graph 2
+theorem DegreeDiameter.Portfolio.F9SixFiberDouble56.concrete_order_degree_and_exact_D3 : Fintype.card
+      F9SixFiberDouble56.Vertex =
+    57834 ∧
+  (∀ (v : F9SixFiberDouble56.Vertex), F9SixFiberDouble56.graph.degree v ≤ 56) ∧
+    DiameterAtMost F9SixFiberDouble56.graph 3 ∧ ¬DiameterAtMost F9SixFiberDouble56.graph 2 :=
+⟨F9SixFiberDouble56.card_vertex,
+  ⟨F9SixFiberDouble56.degree_le_fifty_six,
+    ⟨F9SixFiberDouble56.diameterAtMost_three, F9SixFiberDouble56.not_diameterAtMost_two⟩⟩⟩
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.FinalClaim : Prop :=
+Fintype.card F9SixFiberDouble56.Vertex = 57834 ∧
+  (∀ (v : F9SixFiberDouble56.Vertex), F9SixFiberDouble56.graph.degree v ≤ 56) ∧
+    DiameterAtMost F9SixFiberDouble56.graph 3 ∧ ¬DiameterAtMost F9SixFiberDouble56.graph 2
+'DegreeDiameter.Portfolio.F9SixFiberDouble56.base_load_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F9SixFiberDouble56.load_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F9SixFiberDouble56.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F9SixFiberDouble56.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

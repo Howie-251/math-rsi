@@ -1,0 +1,22 @@
+{
+  "question":"Does the exact K4-block Z16-voltage single-permutation family contain a simple5regular64vertex diameter3 controller, suitable for later F4 chart synthesis?",
+  "vertices":"(i,t), i in0..3,t inZ16; label4*t+i",
+  "internal_ports":"xor1,xor2,xor3 within the same t",
+  "external_forward":"F(i,t)=(P(i),t+a_i), backward is the actual inverse",
+  "inverse_ports":[0,1,2,4,3],
+  "permutation_representatives":[[0,1,2,3],[1,0,2,3],[1,0,3,2],[1,2,0,3],[1,2,3,0]],
+  "parameter_assignments":327680,
+  "voltages":"all a inZ16^4,65536 per cycle type; assignments,not distinct graphs",
+  "prediction_before_test":"The K4 blocks give6 oriented triangle closedwords per vertex, but also force the generic radius3 slot bound exactly64. A diameter3 controller is possible only when all64 endpoint slots are distinct. In particular the eight signed voltages +/-a_i must be distinct nonzero; this will be verified as a necessary filter before the full4root test. It is uncertain whether any assignment survives the full simultaneous coverage.",
+  "falsification":"Any actual D3 candidate violating the slot or signed-voltage prerequisite refutes that derivation; lack of candidates closes only this explicitly enumerated family.",
+  "simple_graph_filter":"All a_i nonzero (otherwise loop/internal duplicate), and F^2 has no fixed vertex (otherwise forward=backward duplicates). Every surviving controller's5neighbor labels will be checked literally.",
+  "root_reduction":"Translation t->t+c is an automorphism, so four roots(i,0) suffice for full64vertexD3; start i0 then the others.",
+  "budget_CPU_seconds":60,
+  "workers":1,
+  "outputs":["all-domain counts and strict scope","one literal64x5controller+complete4rootcoverage/wordcounts if any candidate exists"],
+  "not_a_graph_result":"A controller alone is not the4096vertex F4 graph; all rank/pencil/chart compatibility remains untested.",
+  "revised_before_any_numeric_assignment":"Root derived a stronger same-index return-word gate. Enumerate all words length<=3 symbolically, internal moves cost0deck displacement, F adds a_i, inverse subtracts a_P^-1i. Predicted root signature counts: id[13,13,13,13],transposition[11,11,13,13],doubletransposition[11,11,11,11],3cycle[17,17,17,13],4cycle[15,15,15,15]. Each type has a root with<16 signatures, excluding every Z16 assignment without numerical enumeration.",
+  "numeric_execution_before_revision":"gate.cpp compiled successfully; its parameter enumeration binary was not run,0voltage assignments evaluated and no numerical handle exists.",
+  "noncommutative_extension_before_test":"Also track reduced free-group words, not just abelian integer exponent vectors. The same root bounds are predicted without commutativity: each compressed word contributes only one deck-group element. If confirmed, every regular deck group of order>15 in this uniformK4/singleF organization is excluded by the paper count, not by enumeration of groups.",
+  "forbidden":["C66 rerun","different modulus/P seed ladder","F4fibergraph","old graph BFS","solver","Lean","hash","install"]
+}

@@ -1,0 +1,119 @@
+{
+  "status": "EXHAUSTIVE_FIXED_ADJACENT_REPAIR_RULE_NO72",
+  "complete": true,
+  "hit": false,
+  "matchings": 166390,
+  "valid_repair_choices": 2455530,
+  "rejected_duplicate_repairs": 40320,
+  "configurations": 7366590,
+  "first_failure_counts": {
+    "helper70_old_R5": 7365708,
+    "helper71_old_R5": 714,
+    "old_old_R5": 168
+  },
+  "both_helpers_all_old_PASS": 168,
+  "first_old_failure": {
+    "pair": [
+      0,
+      17
+    ],
+    "cut_edge_ids": [
+      0,
+      5,
+      7
+    ],
+    "repair": [
+      0,
+      4
+    ],
+    "pins70": [
+      1,
+      3
+    ],
+    "pins71": [
+      2,
+      56
+    ]
+  },
+  "hit_cut_edge_ids": [],
+  "hit_repair": [],
+  "hit_pins70": [],
+  "hit_pins71": [],
+  "gate_CPU_seconds": 1.412169,
+  "date": "2026-11-01",
+  "source": "research/ddp/more_graphs_20261027/cubic_D6_twofold70/source70.edges",
+  "source_legality": "inherited; no validation/D5 BFS or R4 recomputation",
+  "rule": "three matching cuts; choose nondouble old-old endpoint repair; split remaining4 pins2+2 between adjacent helpers",
+  "partition_symmetry": "minimum remaining endpoint assigned helper70; three partitions per valid repair",
+  "inherited_case_CPU_seconds": 1.8639560000000002,
+  "new_batch_measured_CPU_seconds": 2.775128,
+  "cumulative_case_measured_CPU_seconds": 4.660693,
+  "cumulative_CPU_budget": 20,
+  "preparation_note": "one CPU second reserved for preceding brief code/PRED preparation and final receipts; these operations not individually metered",
+  "attempts": [
+    {
+      "name": "compile",
+      "pid": 164199,
+      "exit_code": 0,
+      "CPU_seconds": 1.3232279999999998
+    },
+    {
+      "name": "gate",
+      "pid": 164205,
+      "exit_code": 0,
+      "CPU_seconds": 1.41259
+    }
+  ],
+  "new_graphs": 0,
+  "new_Lean_instances": 0,
+  "stop": true,
+  "exclusion_scope": "Fixed AFY70; delete exactly3 matching old edges; add one nonduplicate old-old edge between two freed endpoints (cut restoration allowed); partition remaining4 freed endpoints2+2 to two adjacent new helpers; no other changes.",
+  "configuration_counts_are_labeled_operation_choices_not_distinct_graph_isomorphism_classes": true,
+  "old_old_candidate_tests_entered": 168,
+  "helper70_radius5_checks": 7366590,
+  "helper71_radius5_checks": 882,
+  "full72root_batches": 0,
+  "first_old_failure_cut_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      56
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "not_excluded": [
+    "different70 sources",
+    "more or nonmatching deletions",
+    "old-old repairs outside freed endpoints",
+    "additional old-old rewiring",
+    "general cubic72/D5 graphs"
+  ],
+  "source_R4_recomputed": false,
+  "source_validity_BFS_repeated": false,
+  "pre_pair_diagnostic_cumulative_measured_CPU_seconds": 4.639084,
+  "one_pair_route_diagnostic_CPU_seconds": 0.021609,
+  "first_old_failure_original_length5_route": [
+    0,
+    2,
+    56,
+    41,
+    40,
+    17
+  ],
+  "first_old_failure_modified_length6_route": [
+    0,
+    2,
+    71,
+    56,
+    41,
+    40,
+    17
+  ],
+  "first_old_failure_final_distance": 6
+}

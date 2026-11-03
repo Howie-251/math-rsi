@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_JOINT_BUDDY_SOLVE",
+  "question": "Can two adjacent new vertices use complementary R2/R1 old-pin coverage although every single newpoint needs at least15 oldpins?",
+  "prediction": "At leastone disjoint pair A,B of at most12 of the108 original degree12 pins satisfies R2(A) union R1(B)=R2(B) union R1(A)=all972, yielding a complete974-point graph with maxdegree13 and diameter3.",
+  "target_Delta": 13,
+  "target_D": 3,
+  "savedL": 972,
+  "source_n": 972,
+  "source_m": 6264,
+  "hypothetical_n": 974,
+  "source": "../source972.author.adjlist.txt",
+  "source_binding": "../SOURCE_PROFILE.json",
+  "fixed_rule": "Retain every oldedge. Adda972,b973 andtheir mutualedge. A/B are disjoint subsets of the108 degree12oldpins, each cardinality<=12; no additional old-old edges or other newpoints.",
+  "model": {
+    "binary_variables": 216,
+    "old_target_cover_constraints": 1944,
+    "pin_disjointness_constraints": 108,
+    "attachment_budgets": [
+      12,
+      12
+    ]
+  },
+  "motivation": "Singlepoint weighted bound15 is closed. Existing buddy capacity does not exclude12 R2 balls plus12 R1 balls; all108free pins dominate the972 source and integerweight mass concentrates onfree targets. This is a new mutualshortcut generation rule.",
+  "budget_CPU_seconds": 20,
+  "workers": 1,
+  "solver_policy": "One small LP diagnostic then one threshold24/12each MIP feasibility call. First completehit checked byactualdegree/oldedge retention and both newroot fullBFS; no sourceold BFS, no seed/guard/score continuation.",
+  "stop": "Firsthit export974 graph andnotifyparent, no automaticprefix. Ifinfeasible/UNKNOWN stop fixedjointmodel."
+}

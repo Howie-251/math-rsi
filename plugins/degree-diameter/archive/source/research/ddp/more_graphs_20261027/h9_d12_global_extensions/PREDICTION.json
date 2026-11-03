@@ -1,0 +1,15 @@
+{
+  "prediction_id": "N12_NEW592_GLOBAL_Q_LINE_EXTENSIONS",
+  "frozen_before_extension_batch": true,
+  "research_question": "Can the new complete geometric line pool yield further whole D5 graphs beyond the verified42345 graph, while honoring actual current degrees and all old vertices at every step?",
+  "prediction": "At least one more complete degree12/D5 extension exists among the fixed592 new10-pin items.",
+  "base": {"n": 42345, "m": 245253, "Delta": 12, "D": 5},
+  "scope": "Exactly592 new10pin/cap2 records from the609-global pool, excluding every record in the historical7-item pool. The13 eight-pin/cap4 records are not run.",
+  "order": "Sort canonical pin tuples ascending; one pass. Each row uses its actual current base. Accept successes and update the base immediately. Failed earlier rows are not retried on later bases.",
+  "per_item": "Fresh degree check, complete mandatoryR4, exact0/1/2anchors from all current degree<12 nonmandatory vertices. No oldR4 cache used as a rejection certificate.",
+  "complete_acceptance": "Every accepted12-or-fewer-neighbor set R4-covers its actual oldbase and preserves maximum degree12. Oldedges retained, hence all-pairsD5 by induction.",
+  "stop_at_first": ["180CPU seconds", "32accepted newvertices", "all592 rows terminal"],
+  "budget": {"workers": 1, "CPU_seconds_hard": 180, "CPU_seconds_soft": 172},
+  "profile": "First10 actual rows, included in this one pass; save true elapsed and check counts.",
+  "not_allowed": ["thirdanchor", "8pinprofile", "newcenters", "old7itemcoverage_retry", "bestmissingoptimization", "allsourceBFS", "historicalgraphwrites", "hashes"]
+}

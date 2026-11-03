@@ -1,0 +1,15 @@
+# Single E–S cut: uniform cross-E obstruction
+
+**The declared e-to-helper rule cannot have D3.** This is a paper result using the saved actual13-point INPUT/class description and the new rule PREDICTION. No actualnew INPUT or candidate existed when the attack began; no graph, SAT, BFS or old-source verification was run. The conclusion is for the declared edge types, not an uninspected compiler.
+
+The old no-cut theorem does not apply verbatim: oneoldedge is deleted and both e and s gain free slots. In particular, b-a-e-E can now reachE without a directA spoke, invalidating the old premise that all helper-to-E shortpaths have form h-A-S-E. Also the singled-out sheet0 cut and fixed e-a edge destroy any automatic C3deck symmetry; any actual proposed hit requires independent all42-root verification.
+
+A different obstruction survives. The three weight1E bases are IDs0,1,4 and formK3; their9lifts are joined along its three C3matching edges. Every weight2S has exactly oneEneighbor, and its pairedS has the sameEbase. No absoluteA has anEneighbor. After the prescribed cut/newedges, the only newE-incident edge is e-a. Helpera has no secondEneighbor, and its otherneighbors b/A have noEneighbor. The new s-A andA-A edges create noE-A adjacency.
+
+Consider a shortest path of length<=3 between differentEbase fibres. If it entersA, its laststep cannot reachE. An E-S-S-E route returns to the sameEbase. E-S-E and E-E-S-E backtrack through the unique actualEneighbor ofS; the cut can only remove such an edge. Any short route involvinga either cannot end inE or backtracks through its soleEneighbor e; in particular E-E-a-E is not a new endpoint route. These exhaust the non-pure-E cases.
+
+The cross-base path is therefore a pureE path in the lifted triangle. There are only two possible distinct endpoints in a chosen otherE fibre within3: the direct1step lift and the2step lift through the thirdEbase. A nonbacktracking3step triangle route returns to the originalEbase; base backtracks are actualbacktracks because every projected edge is a perfect matching. The target fibre has3vertices, so at least one is missed, for every voltage and every allowed port assignment. Thus the whole declared single_ES_cut/e-helper family failsD3.
+
+Explicitly, orient the Etriangle edges0→1,0→4,1→4 with shiftsλ01,λ04,λ14. From(E0,s), the only target sheets inE1 are `{s+λ01, s+λ04−λ14}` modulo3. Under the saved tree gauge λ01=λ04=0, letτ=λ14 and use rootvertex0. The E1fibre is{3,4,5}: τ0 or1 missesvertex4, whileτ2 missesvertex5. These conditional literal witnesses supplement the gauge-independent capacity proof.
+
+This does not refute the separate claim that leafc's fullA fibre reaches all42vertices: globalD3 can fail on old-oldE pairs while c is a full-cover root. Expert_brief_evidence independently confirmed the path classification and formulas in a paper-only review. No actualdiameter or ordinarybad-pair measurement is asserted. No alternatecut, E-A repair, solver, source, or template is proposed or executed by this note.

@@ -1,0 +1,206 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → Nat → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, @LE.le Nat instLENat (@SimpleGraph.Walk.length V G u v p) D
+@[reducible] def DegreeDiameter.Portfolio.OppositeGQ77Spread.Old : Type :=
+Fin 160000
+@[reducible] def DegreeDiameter.Portfolio.OppositeGQ77Spread.New : Type :=
+Fin 50
+@[reducible] def DegreeDiameter.Portfolio.OppositeGQ77Spread.Vertex : Type :=
+OppositeGQ77Spread.Old ⊕ OppositeGQ77Spread.New
+@[reducible] def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.Vertex : ℕ → Type :=
+fun k => GQ77Published33CloneFamily.Source.Vertex ⊕ GQ77Published33CloneFamily.CloneIndex k
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.center : (k : ℕ) →
+  GQ77Published33CloneFamily.CloneIndex k → GQ77Published33CloneFamily.Source.Vertex :=
+fun k j => GQ77Published33CloneFamily.baseCenter j.2
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.graph : (k : ℕ) →
+  SimpleGraph (GQ77Published33CloneFamily.Vertex k) :=
+fun k => FullNeighborhoodClones.graph OppositeGQ77Spread.graph (GQ77Published33CloneFamily.center k)
+def DegreeDiameter.Portfolio.FullNeighborhoodClones.graph.{u_1, u_2} : {V : Type u_1} →
+  {J : Type u_2} → SimpleGraph V → (J → V) → SimpleGraph (V ⊕ J) :=
+fun {V} {J} G center =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl v, Sum.inl w => G.Adj v w
+      | Sum.inl v, Sum.inr j => G.Adj v (center j)
+      | Sum.inr j, Sum.inl v => G.Adj (center j) v
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamily.label : (k : ℕ) →
+  GQ77Published33CloneFamily.Vertex k ≃ Fin (160050 + 1650 * k) :=
+fun k => (OppositeGQ77Spread.label.sumCongr (GQ77Published33CloneFamily.cloneLabel k)).trans finSumFinEquiv
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.base_label (i : Fin 33) (j : Fin 50) :
+  ↑(GQ77Published33CloneFamily.baseLabel (i, j)) = ↑j + 50 * ↑i
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.clone_label (k : ℕ) (copy : Fin k)
+  (base : GQ77Published33CloneFamily.BaseIndex) :
+  ↑((GQ77Published33CloneFamily.cloneLabel k) (copy, base)) = ↑base + 1650 * ↑copy
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.center_source_label (b : GQ77Published33CloneFamily.BaseIndex) :
+  ↑(OppositeGQ77Spread.label (GQ77Published33CloneFamily.baseCenter b)) =
+    ↑(OppositeGQ77Spread.spread (GQ77Published33CloneFamily.basePair b).2) +
+      400 * ↑(GQ77Published33CloneFamily.ovoid (GQ77Published33CloneFamily.basePair b).1)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.label_old (k : ℕ) (v : GQ77Published33CloneFamily.Source.Vertex) :
+  ↑((GQ77Published33CloneFamily.label k) (Sum.inl v)) = ↑(OppositeGQ77Spread.label v)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.label_new (k : ℕ) (copy : Fin k)
+  (base : GQ77Published33CloneFamily.BaseIndex) :
+  ↑((GQ77Published33CloneFamily.label k) (Sum.inr (copy, base))) = 160050 + 1650 * ↑copy + ↑base
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.label_new_coordinates (k : ℕ) (copy : Fin k) (i : Fin 33)
+  (j : Fin 50) :
+  ↑((GQ77Published33CloneFamily.label k) (Sum.inr (copy, GQ77Published33CloneFamily.baseLabel (i, j)))) =
+    160050 + 1650 * ↑copy + 50 * ↑i + ↑j
+DegreeDiameter.Portfolio.GQ77Published33CloneFamily.old_walk_bound_iff (k : ℕ)
+  (u v : GQ77Published33CloneFamily.Source.Vertex) (n : ℕ) : (∃ p, p.length ≤ n) ↔ ∃ p, p.length ≤ n
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamily.ovoid_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamily.copy_load_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamily.old_walk_bound_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 9 : GQ77Published33CloneFamily.Vertex 9 ≃ Fin (160050 + 1650 * 9)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d73_174900 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 9) = 174900 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 9), (GQ77Published33CloneFamily.graph 9).degree v ≤ 73) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 9) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 9) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d73_174900 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 9) =
+    174900 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 9), (GQ77Published33CloneFamily.graph 9).degree v ≤ 73) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 9) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 9) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 9
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim73 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 9) = 174900 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 9), (GQ77Published33CloneFamily.graph 9).degree v ≤ 73) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 9) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 9) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d73_174900' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim73' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 10 : GQ77Published33CloneFamily.Vertex 10 ≃ Fin (160050 + 1650 * 10)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d74_176550 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 10) = 176550 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 10), (GQ77Published33CloneFamily.graph 10).degree v ≤ 74) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 10) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 10) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d74_176550 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 10) =
+    176550 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 10), (GQ77Published33CloneFamily.graph 10).degree v ≤ 74) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 10) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 10) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 10
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim74 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 10) = 176550 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 10), (GQ77Published33CloneFamily.graph 10).degree v ≤ 74) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 10) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 10) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d74_176550' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim74' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 11 : GQ77Published33CloneFamily.Vertex 11 ≃ Fin (160050 + 1650 * 11)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d75_178200 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 11) = 178200 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 11), (GQ77Published33CloneFamily.graph 11).degree v ≤ 75) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 11) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 11) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d75_178200 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 11) =
+    178200 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 11), (GQ77Published33CloneFamily.graph 11).degree v ≤ 75) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 11) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 11) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 11
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim75 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 11) = 178200 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 11), (GQ77Published33CloneFamily.graph 11).degree v ≤ 75) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 11) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 11) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d75_178200' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim75' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 12 : GQ77Published33CloneFamily.Vertex 12 ≃ Fin (160050 + 1650 * 12)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d76_179850 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 12) = 179850 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 12), (GQ77Published33CloneFamily.graph 12).degree v ≤ 76) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 12) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 12) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d76_179850 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 12) =
+    179850 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 12), (GQ77Published33CloneFamily.graph 12).degree v ≤ 76) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 12) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 12) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 12
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim76 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 12) = 179850 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 12), (GQ77Published33CloneFamily.graph 12).degree v ≤ 76) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 12) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 12) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d76_179850' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim76' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 13 : GQ77Published33CloneFamily.Vertex 13 ≃ Fin (160050 + 1650 * 13)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d77_181500 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 13) = 181500 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 13), (GQ77Published33CloneFamily.graph 13).degree v ≤ 77) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 13) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 13) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d77_181500 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 13) =
+    181500 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 13), (GQ77Published33CloneFamily.graph 13).degree v ≤ 77) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 13) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 13) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 13
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim77 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 13) = 181500 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 13), (GQ77Published33CloneFamily.graph 13).degree v ≤ 77) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 13) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 13) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d77_181500' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim77' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 14 : GQ77Published33CloneFamily.Vertex 14 ≃ Fin (160050 + 1650 * 14)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d78_183150 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 14) = 183150 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 14), (GQ77Published33CloneFamily.graph 14).degree v ≤ 78) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 14) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 14) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d78_183150 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 14) =
+    183150 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 14), (GQ77Published33CloneFamily.graph 14).degree v ≤ 78) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 14) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 14) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 14
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim78 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 14) = 183150 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 14), (GQ77Published33CloneFamily.graph 14).degree v ≤ 78) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 14) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 14) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d78_183150' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim78' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+GQ77Published33CloneFamily.label 15 : GQ77Published33CloneFamily.Vertex 15 ≃ Fin (160050 + 1650 * 15)
+DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d79_184800 :
+  Fintype.card (GQ77Published33CloneFamily.Vertex 15) = 184800 ∧
+    (∀ (v : GQ77Published33CloneFamily.Vertex 15), (GQ77Published33CloneFamily.graph 15).degree v ≤ 79) ∧
+      DiameterAtMost (GQ77Published33CloneFamily.graph 15) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 15) 2
+theorem DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d79_184800 : Fintype.card
+      (GQ77Published33CloneFamily.Vertex 15) =
+    184800 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 15), (GQ77Published33CloneFamily.graph 15).degree v ≤ 79) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 15) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 15) 2 :=
+GQ77Published33CloneFamily.fixed_family_target 15
+def DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.FinalClaim79 : Prop :=
+Fintype.card (GQ77Published33CloneFamily.Vertex 15) = 184800 ∧
+  (∀ (v : GQ77Published33CloneFamily.Vertex 15), (GQ77Published33CloneFamily.graph 15).degree v ≤ 79) ∧
+    DiameterAtMost (GQ77Published33CloneFamily.graph 15) 3 ∧ ¬DiameterAtMost (GQ77Published33CloneFamily.graph 15) 2
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.d79_184800' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.GQ77Published33CloneFamilyUpper.final_claim79' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,52 @@
+{
+  "status": "TERMINAL_FIXED_SOURCE_TARGET_EXCLUDED_BY_CAPACITY",
+  "source": "Inherited verified Brown57",
+  "source_order": 57,
+  "source_degree_histogram": {"7": 8, "8": 49},
+  "target_degree_cap": 9,
+  "target_diameter_cap": 2,
+  "operation_scope": "Add arbitrary helpers and arbitrary old-helper/helper-helper edges. The old induced graph is exactly the original Brown57 graph; no old-old additions or deletions.",
+  "helper_graph_restrictions": "None beyond finite simple undirected; no clique or regularity assumption",
+  "historical_exact_case_found": false,
+  "historical_inheritance": [
+    "../PROOF.md",
+    "../RESULT.json",
+    "proofs/dd82/construction/BROWN57_PROOF.md",
+    "proofs/dd82/construction/BROWN_EXTENSION_OBSTRUCTION.md",
+    "proofs/dd82/construction/BROWN_EIGHT_DELETE_OBSTRUCTION.md"
+  ],
+  "necessary_inequalities": {
+    "old_helper_edges": "B=sum_i s_i<=65",
+    "per_helper_old_coverage": "57<=9*s_i+sum_{j adjacent_H i}s_j",
+    "helper_degree": "deg_H(i)+s_i<=9",
+    "summed": "57*h<=18*B-sum_i s_i^2<=18*B-B^2/h",
+    "for_h_at_least_16": "57*h^2-1170*h+4225<=0",
+    "polynomial_at_16": 97,
+    "polynomial_forward_difference": "114*h-1113>=711 for h>=16"
+  },
+  "proved_helper_upper_bound": 15,
+  "proved_order_upper_bound": 72,
+  "order_72_existence_claimed": false,
+  "global_N_9_2_upper_bound_claimed": false,
+  "additional_old_old_edges_covered_by_this_bound": false,
+  "inherited_public_comparison": {
+    "Delta": 9, "D": 2, "located_order": 74,
+    "inherited_from": "../RESULT.json:unexecuted_family_formula_comparison",
+    "new_primary_search": 0,
+    "q8_generation_or_BFS": 0,
+    "matching_public_order_requires_helpers": 17,
+    "75_point_target_requires_helpers": 18,
+    "both_excluded": true
+  },
+  "arithmetic_check": "INTEGER_CHECK.json",
+  "arithmetic_CPU_seconds": 0.000255641,
+  "process_CPU_seconds_through_arithmetic_completion": 0.033277,
+  "process_CPU_measurement_boundary": "Includes Python startup through completion of arithmetic; final JSON serialization/write and interpreter exit excluded",
+  "workers": 1,
+  "graph_generation": 0, "BFS": 0, "solver": 0, "Lean": 0,
+  "helper_graphs_enumerated": 0, "installs": 0, "hashes": 0,
+  "new_graphs": 0, "new_lower_bounds": 0,
+  "accepted_count_increment": 0,
+  "decision": "Stop this Brown57/cap9/fixed-old-induced-graph entry: every extension is below inherited public74. Do not enumerate helper graphs or resume historical D2 queues.",
+  "future_uncertainty": "No follow-up scheduled. A different concrete D2 source or a genuinely different allowed-edge interface would require its own coverage prediction and public-target gate."
+}

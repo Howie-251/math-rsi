@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三参数：N(13,5)≥51457</title><style>body{max-width:1040px;margin:32px auto;padding:0 22px;font:17px/1.8 system-ui;color:#182839}h1{font-size:29px}h2{font-size:23px}.result{background:#e9f5ed;border-left:4px solid #23834c;padding:18px}.note{background:#edf3fa;padding:16px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #ccd6df}a{color:#145f9c}pre{white-space:pre-wrap;background:#f4f6f8;padding:15px}</style></head><body>
+<h1>第三参数已取得：N(13,5)≥51457</h1><p>更新：2026-10-27 17:56:53 UTC。同一Goal ACTIVE；公开表所有未close格子均可选，原27格保留为起始池。旧N(8,2)/n61/SAT/谱继续暂停。</p>
+<div class="result"><strong>本批新增40个（13，5）完整阶数例子。</strong>目前共103例、3个参数；最强51457点图有324863条边，最大度13、直径恰5。这里统计的是不同阶数图，不是103种独立方法。</div>
+<table><tr><th>参数</th><th>公开下界快照</th><th>本轮最强</th><th>完整阶数例子</th></tr><tr><td>(11,5)</td><td>37628</td><td><strong>37631（+3）</strong></td><td>37629–37631，3例</td></tr><tr><td>(12,5)</td><td>42342</td><td><strong>42402（+60）</strong></td><td>42343–42402，60例</td></tr><tr><td>(13,5)</td><td>51417</td><td><strong>51457（+40）</strong></td><td>51418–51457，40例</td></tr></table>
+<h2>此前不知道什么，这次怎样预测和检验</h2>
+<p>完整几何邻域在（13，5）都被满度点挡住，并不说明原图不能扩张。我们扫描已有顶点的完整邻域：源（13，5）有91个原型仅含1个满度邻居，而（14，5）最少有9个。这提示先保留一个几乎完整的旧邻域，删掉唯一接不了的点，再寻找能接替其私有路线的连接点。</p>
+<p><strong>预测得到完整图支持：</strong>第38项原型51013，删去满度邻居11352，保留9个可接点；原来缺3535个核心点和79个先前扩张点。补入50577后，全部3614个遗漏被覆盖，得到51418点完整图，新顶点度10。此前37项只排除了其记录基图上至多两个补点的规则，较大连接预算仍未排除。</p>
+<p>随后仅继续原53个未试项，每项一次，得到另外39图到51457；累计续算3.209CPU秒，生产总12.853CPU秒。全91项终态为40成功、13当时度数阻断、38限定补点范围失败，0未试。没有刷新之前失败项，也不声称最终51457已不可扩张。</p>
+<h2>为何这次补点能替代缺失路线</h2>
+<p>满度点11352与可接点50577共享全部10个核心邻居；前者另连3个外围点，后者另连51275，因此它们不是完整孪生点。3614个遗漏中，3608个有经共享邻居的50577最短路线；剩余6个核心点的最短补路走51275。新连接提供了原九点邻域没有的路线，而非重复增加已经覆盖的部分。</p>
+<p>最小原基图对照还发现：下一张无补点例子的10点邻域，在原51417点图上就已全覆盖；其中保留的50638拥有被删6216的同一核心邻域。因此首次新增顶点对此例的旧目标覆盖并非必要。这里只对照了一例，不把其余39例都外推为原基图可行。<a href="../research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/MECHANISM.md">机制、具体路线与对照</a>。</p>
+<h2>数学验收与审阅</h2>
+<p>首图51418已从完整边表独立重建，并直接比对原官方51417点raw邻接表：原324451条边全部保留，只加10条新边；所有度数≤13，新顶点到全图最远5步。后39步逐一检查实际当前图的完整R4覆盖和度数，保留旧边归纳得到全部点对≤5；各阶数超过D4 Moore界24506，故直径恰5。原公开基图D5事实继承，不重复旧全源BFS。</p>
+<p>一次实际Gemini3.8Flash/high审阅接受首图数学结论和扩张论证；原文及处置均保留。审阅末尾建议后续逐图再独立BFS，这项重复检查按用户既定取舍未采用：首个新参数已独立检查，后续完整currentR4归纳足够，不冒称做过39次独立BFS。<a href="../reviews/ddp/d13_singlefault_star_20261027.DISPOSITION.md">审阅范围及意见处置</a>。完整实际图Lean实例仍0，Goal没有完成。</p>
+<h2>结果、源码与专家包</h2>
+<p><a href="../expert_review_current/MORE_GRAPHS_20261027.zip">完整ZIP</a> · <a href="../expert_review_current/MORE_GRAPHS_20261027.html.txt">本页HTML源码</a> · <a href="../research/ddp/more_graphs_20261027/delivery/families.json">103例全部字面参数</a> · <a href="../research/ddp/more_graphs_20261027/delivery/family_generator.py">统一生成器</a> · <a href="../research/ddp/more_graphs_20261027/FINAL_RESULTS_PROOF.md">数学说明与署名</a></p>
+<pre>python research/ddp/more_graphs_20261027/delivery/family_generator.py --degree 13 --order 51457 --output graph51457.edges</pre>
+<p><a href="../research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/continuation/graphs/graph_d13_D5_n51457.edges">51457完整边表</a> · <a href="../research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/accepted_family40.json">第三族40步</a> · <a href="../research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/independent_newroot51418.json">首图独立验收</a> · <a href="../research/ddp/more_graphs_20261027/delivery/dry_run_d13_51457.json">生成器重建最强图：边表精确一致</a>。</p>
+<p>主文件都保存在global_user/ar4math；下载区只镜像专家包。原51417、37628、42342公开源归Dharunish Yugeswardeenoo，partial-fold/duality基础归Rishabh Rajiv；本项目提供明确新增邻域、有限修复和完整图序列，不宣称首创孪生插入或单点扩张引理。公开主表17:38仍为51417；尚未公开提交或宣称最优。<a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas主表</a>。</p>
+<h2>理解已怎样改变下一步</h2>
+<p>我们已把代理规则迁到（14，5）、（15，5）：要求满点u和可接点w的邻域差分别≤3、≤1，替换旧原型中所有满点，使用完整缓存验覆盖。两个固定源分别虽有1088、205个满点能找到代理，但每个原型仍至少有8、9个满点没有代理，所以没有投影候选。阻碍在连接对象缺失，不是R4坏点减少；固定规则已停止，不靠改tie补不存在的代理。</p>
+<p>此前（14，5）、（15，5）的64次完整连接选择也均未命中，任意14/15点覆盖仍未决。控制同一单余量类型后，平均R4占比分别17.39%、20.11%，密度提升属实，却没有自动实现共同覆盖，因而不再按漏3705/1848续轮。下一步应优先选择已有近完整可用原型或有明确路线代理的新源；原91池已完，不刷新失败。</p>
+<p>固定AFY70普通两重覆盖在D6、三重覆盖在D7均被同纤维短闭路容量排除，未试电压；自然H3固定host的1..13个helper类已排，未逐阶研究14。精确范围、未决和重启条件均在唯一<a href="../research-wiki/DDP_METHOD_LEDGER.md">Research Wiki</a>，228条以上记录含来源、变体与工具，不等于独立方法数。</p>
+<p><a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">唯一恢复入口</a>；保留推导与历史，压缩后从最上方恢复。</p></body></html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}code{overflow-wrap:anywhere}.table-wrap{overflow-x:auto}nav{margin:18px 0}nav a{margin-right:16px}th{font-weight:600}section{margin-top:30px}.muted{color:#526477}li{margin:6px 0}</style></head><body><h1>当前任务：继续构造，向专家呈现真实瓶颈</h1>
+<p>更新：2026-10-27 03:23:28 UTC。Goal ACTIVE；已验证新下界0。</p>
+<div class="note">专家阶段说明已整理好，可直接转发。研究继续进行：通用路由表的纤维覆盖保证已核验，175点控制图有限试验未通过，尚无超过公开下界的新完整图。</div>
+<nav><a href="expert_review_20261027/STATUS.html">给专家看的说明 HTML</a><a href="DD_EXPERT_REVIEW_20261027.zip">精选证据包 ZIP</a><a href="expert_review_20261027/STATUS.md">可编辑文本</a></nav>
+<h2>新增：一个有充分覆盖保证的入口</h2>
+<p>复用 <a href="https://arxiv.org/abs/2606.15860v1">Mizuno 的通用路由表</a>：324个五步约化字对应的5×5矩阵已全部核验满秩。若找到每个有序点对（包括同点）都有恰五步非回退走法的四正则控制图C，就能得到243|C|点、十二正则、直径至多五的图。175点控制图将给42525点，超过保存门槛42342；原文144点所得34992为已知旧结果。</p>
+<p>纤维路由已有充分保证，剩余未知集中在控制图。普通直径≤5并不充分。控制阶数的计数范围为175至324，目前没有找到合格实例。</p>
+<h2>本轮实际结果</h2>
+<table><tr><th>入口</th><th>实际范围与结果</th><th>证据</th></tr>
+<tr><td>A5×C3，180点控制图</td><td>11931个生成集检查；另1365个四对合集因断连排除。该固定群的四元逆闭Cayley exact-NB5范围关闭。</td><td><a href="ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/REPORT.md">范围</a></td></tr>
+<tr><td>F31⋊C6，186点控制图</td><td>仅2926个二非对合逆对集合未通过；其他组成未查。</td><td><a href="ddp/breadth_20261027_wave3/source_scout/route_chart_controller186/RESULT.json">结果</a></td></tr>
+<tr><td>175点五圈端口控制图</td><td>4起点×10000提案后停止。独立检查普通直径6、315个距离大于五的无序对；exact-NB5仍缺2696个有序对。</td><td><a href="ddp/breadth_20261027_wave3/pentagon175_controller/REPORT.md">报告</a> · <a href="ddp/breadth_20261027_wave3/pentagon175_controller/best.independent_check.json">检查</a></td></tr>
+<tr><td>de Bruijn 256点状态图</td><td>最大度8、直径4。保留旧边只补空余度不能达到直径3；该单调加边模板已停止。</td><td><a href="ddp/breadth_20261027_wave3/debruijn256/obstruction.json">短障碍</a></td></tr></table>
+<p>315和2696分别是普通距离的无序坏对数与恰五步非回退的有序缺口，不可互换。没有构造42525点提升。</p>
+<h2>剩余问题与下一动作</h2>
+<p>正向直觉仍有限；通用路由表比单纯点数或必要容量更强，但并未解决控制图。继续从原文小基图电压结构检查192点控制提升的路径容量，先判断能否覆盖，再决定有限试验。已停止的175点骨架及旧局部修补不自动续加种子。</p>
+<p>专家说明列出准确排除范围、代表失败图、互审限制和四项具体咨询问题；说明截点为03:15:51 UTC。Gemini通路可用，其有限意见不等于全部代码或数学已通过。没有新成果Lean验收。</p>
+<p><a href="progress_ddp_20261027_0251.html">上一阶段：第二轮构造与选择依据</a> · <a href="progress_ddp_20261027_0211.html">第一轮七项试验与历史成果</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p>
+</body></html>

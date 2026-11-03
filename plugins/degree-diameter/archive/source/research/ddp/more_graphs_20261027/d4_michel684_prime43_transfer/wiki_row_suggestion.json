@@ -1,0 +1,124 @@
+{
+  "updated_UTC": "2026-10-27 13:33:20 UTC",
+  "row_count": 1,
+  "rows": [
+    {
+      "id": "ddp-more-graphs-20261027-michel684-prime43-transfer",
+      "title": "Michel684七电压的p43迁移：全部形式容量通过，两个固定lift跨层预测失败",
+      "family": "bi-orbit Cayley/voltage constructions",
+      "record_type": "source-derived-nonfaithful-action-capacity-and-two-fixed-lifts",
+      "target_Delta": 7,
+      "target_D": 4,
+      "savedL": 684,
+      "baseline_as_of": "2026-10-27",
+      "n": {
+        "actual": null,
+        "hypothetical": 774
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "actual_D_scope": "No graph edge table or ordinary BFS. Two root-orbit endpoint coverage for exactly two fixed polynomial lifts; missing counts are root-state deficits, not ordinary unordered bad pairs.",
+      "scope": "p43,C9 quotient, roots6/36 of order3; fixed Michel684 phases internal0=4/3,internal1=1/6,cross=2/6/3. All7 free-translation linear-form capacity checked; numerical tests only the single predeclared source-derived polynomial lift at the two roots.",
+      "failure_or_result": "全部36槽自由形式容量最小61>43；两个固定lift均无满跨侧槽，预测REFUTED。r6两root漏116/122，r36漏87/83。0完整774命中，0新图。",
+      "positive_guarantees": [
+        "精确恢复的七个源电压与乘法约定直接复用，没有旧source重验。",
+        "全部7变量自由形式容量支持43，但尚不保证同赋值联合覆盖。"
+      ],
+      "unclosed_gap": "The entire seven-free-translation fixed-phase pattern remains open. No four-variable normalized enumeration has been executed; no other roots, primes or phases tested.",
+      "lesson_and_restart_condition": "固定整数/低系数迁移未能保留跨层覆盖；不能把容量通过当命中，也不能把两个lift失败外推全部自由电压。仅在同一结构有具体联合路线依据及主线程新有限范围决定时重启；不按bad下降续seed。",
+      "outcome_class": "complete-two-fixed-source-lifts-negative-free-capacity-passed",
+      "wiki_verdict": "partial",
+      "new_lower_bound": false,
+      "other_metrics": {
+        "capacity_roots": 2,
+        "slots_per_root": 18,
+        "minimum_freeform_capacity": 61,
+        "canonical_lifts_evaluated": 2,
+        "prediction_verdict": "REFUTED",
+        "complete_cross_side_slots": 0,
+        "full_hits": 0,
+        "new_graphs": 0,
+        "all_source_BFS": 0,
+        "source_reverified": false,
+        "capacity_CPU_seconds": 0.011896338,
+        "canonical_lifts_CPU_seconds": 0.0023553470000000007,
+        "total_process_CPU_seconds": 0.016325184,
+        "pending": []
+      },
+      "variants": [
+        {
+          "label": "canonical-r6-order3",
+          "target": [
+            7,
+            4
+          ],
+          "savedL": 684,
+          "n": {
+            "actual": null,
+            "hypothetical": 774
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "fixed_voltage_translations": [
+            35,
+            6,
+            0,
+            6,
+            2,
+            2,
+            5
+          ],
+          "root_endpoint_missing_counts": [
+            116,
+            122
+          ],
+          "metric_scope": "Two identity-orbit roots; endpoint missing states, not whole-graph ordinary bad pairs. No graph edge table or BFS.",
+          "complete_cross_side_slots": 0,
+          "full_hit": false
+        },
+        {
+          "label": "canonical-r36-order3",
+          "target": [
+            7,
+            4
+          ],
+          "savedL": 684,
+          "n": {
+            "actual": null,
+            "hypothetical": 774
+          },
+          "actual_D": null,
+          "ordinary_bad_unordered_pairs": null,
+          "fixed_voltage_translations": [
+            5,
+            36,
+            0,
+            36,
+            2,
+            2,
+            35
+          ],
+          "root_endpoint_missing_counts": [
+            87,
+            83
+          ],
+          "metric_scope": "Two identity-orbit roots; endpoint missing states, not whole-graph ordinary bad pairs. No graph edge table or BFS.",
+          "complete_cross_side_slots": 0,
+          "full_hit": false
+        }
+      ],
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/REPORT.md",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/SOURCE.json",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/CAPACITY.json",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/RESULT.json",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/terminal.json",
+        "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/check.py"
+      ]
+    }
+  ],
+  "note": "Root merge only; same bi-orbit voltage family. Two fixed lifts do not close the free-translation phasepattern. Actual graph metrics remain null."
+}

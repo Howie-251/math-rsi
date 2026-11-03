@@ -1,0 +1,26 @@
+DegreeDiameter/MatchingZero.lean:83:12: warning: `Finset.eq_empty_iff_forall_not_mem` has been deprecated: Use `Finset.eq_empty_iff_forall_notMem` instead
+DegreeDiameter/MatchingZero.lean:90:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ j, adjacencyMatrix G v j * adjacencyMatrix G j u
+in the target expression
+  (∑ x, (∑ j, (adjacencyMatrix G ^ 0) v j * adjacencyMatrix G j x) * adjacencyMatrix G x u) * adjacencyMatrix G u v = 0
+
+case pos
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+h : triangleFree G
+v : V
+a✝¹ : v ∈ Finset.univ
+u : V
+a✝ : u ∈ Finset.univ
+huv : G.Adj u v
+hcount : commonNeighborCount G v u = 0
+hprod : ∑ j, adjacencyMatrix G v j * adjacencyMatrix G j u = ↑0
+⊢ (∑ x, (∑ j, (adjacencyMatrix G ^ 0) v j * adjacencyMatrix G j x) * adjacencyMatrix G x u) * adjacencyMatrix G u v = 0
+DegreeDiameter/MatchingZero.lean:77:42: warning: This simp argument is unused:
+  pow_two
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.diag_apply, pow_succ, p̵o̵w̵_̵t̵w̵o̵,̵ ̵Matrix.mul_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

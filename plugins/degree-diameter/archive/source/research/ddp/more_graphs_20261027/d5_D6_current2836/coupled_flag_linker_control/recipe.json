@@ -1,0 +1,77 @@
+{
+  "type": "literal_source_edge_surgery",
+  "source": "../source2836.author.edges.txt",
+  "source_n": 2836,
+  "source_reported_D": 6,
+  "source_D_evidence_inherited": "../verification.author.txt",
+  "candidate_n": 2838,
+  "candidate_m": 7095,
+  "new_vertices": [
+    2836,
+    2837
+  ],
+  "deleted_edges": [
+    [
+      911,
+      1775
+    ],
+    [
+      308,
+      1760
+    ],
+    [
+      2730,
+      2765
+    ],
+    [
+      2731,
+      2788
+    ]
+  ],
+  "added_edges": [
+    [
+      911,
+      2836
+    ],
+    [
+      1775,
+      2836
+    ],
+    [
+      2730,
+      2836
+    ],
+    [
+      2765,
+      2836
+    ],
+    [
+      308,
+      2837
+    ],
+    [
+      1760,
+      2837
+    ],
+    [
+      2731,
+      2837
+    ],
+    [
+      2788,
+      2837
+    ],
+    [
+      2836,
+      2837
+    ]
+  ],
+  "new_vertex_roles": "The same two vertices each subdivide one H4 incidence and one edge of the cubic linker; the two vertices are joined. There are two additional vertices total, not four.",
+  "expected_degree": 5,
+  "actual_degree_histogram": {
+    "5": 2838
+  },
+  "selection_rule": "Pick first two lexicographic vertex-disjoint F edges. For each smaller endpoint, take its original H4 flag point and smallest still-unsubdivided incident line; use the same new vertex to subdivide that H4 incidence and that F edge, then join the two new vertices.",
+  "control_count": 1,
+  "full_graph_edge_exported": false
+}

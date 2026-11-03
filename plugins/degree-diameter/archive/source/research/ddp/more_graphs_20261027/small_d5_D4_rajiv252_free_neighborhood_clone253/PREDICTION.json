@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_BEFORE_CRITICALITY_COMPUTATION",
+  "prediction": "There is a prototype x and edge set F avoiding the star of x, meeting every neighbor of x, such that G-F still has D4; adding a full-neighborhood clone then gives253 vertices of maxdegree5 and D4.",
+  "target_Delta": 5,
+  "target_D": 4,
+  "savedL": 252,
+  "hypothetical_n": 253,
+  "source": "research/ddp/second_mechanism/rajiv252.edges",
+  "inherited_source": "252vertices/630edges/5regular/D4 from existing source evidence; no oldsource all-root BFS",
+  "new_analysis": "Enumerate every nonbacktracking walk of length0..4 from each root, exactly426 perroot; intersect route edge-bitmasks separately for each endpoint. Critical edge belongs to some such intersection.",
+  "strict_gate": "Any deleted edge must be noncritical. Noncritical edges avoiding prototype x must together meet every neighbor of x. If all630edges are critical, this source-specific clone+cut family is impossible.",
+  "budget_aggregate_CPU_seconds": 15,
+  "worker_CPU_hard_seconds": 13,
+  "workers": 1,
+  "compile_CPU_seconds": 0,
+  "BFS": 0,
+  "new_graphs": 0,
+  "stop": "After the single criticality and neighborhood necessary-cover gate. No cut-set search, graph generation or bad-pair optimization."
+}

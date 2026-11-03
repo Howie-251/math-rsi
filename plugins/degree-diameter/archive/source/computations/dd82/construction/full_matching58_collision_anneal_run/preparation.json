@@ -1,0 +1,65 @@
+{
+  "parent_run_id": "dd82-v3-f9-c7-20261013-0749",
+  "status": "PREPARED_NOT_RUN",
+  "optimization_runs": 0,
+  "source": "computations/dd82/construction/full_matching58_collision_anneal.cpp",
+  "seed": "computations/dd82/construction/full_matching58_anneal_run/candidate.best.edges",
+  "random_seed": 2026101302,
+  "compile": {
+    "command": [
+      "g++",
+      "-O3",
+      "-std=c++17",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal.cpp",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run/search"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 1.002212,
+    "wall_seconds": 1.017849575728178,
+    "pinned_cpu": 1,
+    "threads": 1,
+    "cpu_limit_seconds": 20,
+    "wall_limit_seconds": 30
+  },
+  "selfcheck_process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run/search",
+      "selfcheck",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_anneal_run/candidate.best.edges",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run/selfcheck.json"
+    ],
+    "exit_code": 0,
+    "child_cpu_seconds": 0.006686000000000067,
+    "wall_seconds": 0.009473532438278198,
+    "pinned_cpu": 1,
+    "threads": 1,
+    "cpu_limit_seconds": 5,
+    "wall_limit_seconds": 10
+  },
+  "selfcheck": {
+    "status": "SELF_CHECK_ONLY",
+    "initial_F": 84,
+    "initial_bad_pairs": 24,
+    "initial_zero_F_rows": 162,
+    "initial_F14_rows": 6,
+    "switches_checked": 315,
+    "graph_and_both_route_energy_formulas_agree": true,
+    "bad_counts_agree": true,
+    "all_reversible_degree_and_gauge_preserving": true,
+    "optimization_runs": 0,
+    "cpu_seconds": 0.004264
+  },
+  "objective": "F=sum_{i<j,a,b} binom(Kij[a,b],2)-168; acceptance uses F alone",
+  "scope": "All 21 free S6 interfaces, root identities only; no fixed HS core or extra K restriction",
+  "proposed_search_command": [
+    "/opt/conda/bin/python",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/full_matching58_collision_anneal_run.py",
+    "run"
+  ],
+  "proposed_cpu_seconds": 60,
+  "internal_search_seconds": 59,
+  "wall_limit_seconds": 150,
+  "launch_waits_for_parent_source_review": true,
+  "independent_bfs_deduplicates_identical_best_graphs": true
+}

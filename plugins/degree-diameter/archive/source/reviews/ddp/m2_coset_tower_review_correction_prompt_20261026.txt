@@ -1,0 +1,30 @@
+Please correct the previous review on this SAME thread. Your construction, orbit, scaling and all-involution checks are useful, but we REJECT the new "ordinary Cayley ball" capacity bound and the resulting q<=11 / q<=31 exclusion claims. They omit real 2-step block jumps. Do not treat the whole previous response as accepted.
+
+Concrete counterexample INSIDE the q41 best graph you reviewed:
+q41,r2,K20,H=<5>,S={(1,6),(16,14),(34,7),(26,13)}, leaf labels x+41*i, blocks820+x+41*b, heads1025+x.
+leaf0 to leaf2 has full distance5 but leaf-only Cayley distance6. A shortest full path is:
+0 -> 247 -> 516 -> 207 -> 822 -> 2.
+Types L,L,L,L,B,L. The last block jump is (2,5) -> block(2,0) -> (2,0), using2 steps, not a head. Any path from0 to2 that visits a head has length>=6. Thus a target outside ordinary leaf ball5 can be reached in full5 with a block jump while no head shortcut is available.
+Exact counts from this saved graph: root0 reaches751 leaves within full distance5. Of them579 have NO head-visiting path<=5 (headshortcut set K union KS union SK has172 targets);235 of those579 have ordinary leaf distance>5 (143 at6,78 at7,14 at8). Full BFS with a seen-head flag checked this distinction. Your claimed (d-1)-regular leaf Moore ball485 therefore cannot bound those579 actual no-head short-route targets.
+
+There is a second issue with (q-1)(d-1)^2 as a per-root "deficit": for groups directly adjacent to that leaf, one leaf edge followed by4 tree steps can cover the entire group; your count did not subtract such groups. Also the bound "at most |S| intergroup edges" relied on faithful field action and does not apply uniformly to the Z25 source (it has5-edge pairs for |S|4).
+
+We now have correct exact head formulas, independently proven and checked target-by-target on source650, q41best and d4F25best:
+h=d-1,k=dh,H=< (0,d)>,K=Ck. Define rho(x,i)=r^(-i)x, U=<r^d>, and R_l=rho(W_l), W_l words of length<=l over S. Equivalently R0={0}, R_(l+1)=R_l union {r^(-j)(z+a):z in R_l,(a,j) in S}.
+- head-to-leaf<=5 iff normalized target rho is in TL=R3 union U*rho(S).
+- head-to-block(x,b)<=5 iff x*r^(-b) in TB=U*R2.
+- head-to-head x<=5 iff x in TH={0} union <r>*S_x.
+Thus missing counts from the head are k(q-|TL|)+d(q-|TB|)+(q-|TH|).
+The elementary capacity from these sets is q<=h^3+1 (and can be smaller for action kernels), not your q<=11/31. This is necessary, not sufficient.
+Observed (|TL|,|TB|,|TH|): source65025/25/25; q41best39/37/41; d4F25best20/19/25. Every predicted target set agrees with full BFS.
+
+We independently selected and started d6/q61/r4 BEFORE receiving your recommendation, on the concrete basis that the same tower permits one inverse pair+three involutions or two inverse pairs+one involution with additional translation centers, and61 is a small field where order30 action and both HH classes are possible. We are not relying on your incorrect capacity argument.
+Its finite candidate-preserving batches are390286 (involution normalized nonzero1 + two inverse pairs),25607 (zero involution + normalized nonzero inverse-pair element + distinct second pair),1564680 (one involution normalized1 + unordered two others + one inverse pair), total1980573 valid. Five-involution sets excluded by block mod3 invariance. During the SAME current search a head-perfect candidate has already appeared:
+S={(1,15),(6,1),(29,29),(18,2),(37,28)}, three root misses=(263,195,0). So complete head routes are achievable, but block/leaf simultaneous coverage remains open. We do not claim success.
+Your final sentence "{j1+j2 mod6}=Z6 is required for port alignment" was unsupported and may ignore head's arbitrary starting quotient. Do not introduce it as a pruning rule without a precise valid derivation.
+
+Requested bounded response:
+1. Explicitly retract or correctly repair the invalid capacity/exclusion conclusions, acknowledging what the concrete example disproves and what it does not.
+2. Check the new exact head-set formulas and identify any actual error.
+3. Give at most ONE concrete, justified condition concerning the remaining block/leaf routes; it may be just an exact expression, no need to invent a strong bound or new parameter.
+No new computation, parameter sweep, files beyond review, or generic audit required. We will record acceptance by part, and your agreement is not itself proof.

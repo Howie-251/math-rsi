@@ -1,0 +1,36 @@
+{
+  "status": "FIXED_CONTROLLER_TWO_NEIGHBOR_TEMPLATE_IMPOSSIBLE_D4",
+  "source": "research/ddp/breadth_20261027_wave2/sources/bhakar104.edges",
+  "source_vertices": 104,
+  "source_degree": 4,
+  "fiber_size": 16,
+  "lift_vertices": 1664,
+  "lift_degree": 8,
+  "target_D": 4,
+  "root_controller_vertex": 0,
+  "target_controller_vertex": 32,
+  "all_controller_walks_of_length_at_most4": [
+    {
+      "vertices": [
+        0,
+        24,
+        4,
+        32
+      ],
+      "source_edge_ids": [
+        0,
+        16,
+        18
+      ],
+      "length": 3,
+      "fiber_endpoint_upper_bound": 8
+    }
+  ],
+  "fiber_endpoint_upper_bound": 8,
+  "required_target_fiber_points": 16,
+  "scope": "This exact controller; no internal fiber edges; each controller neighbor contributes exactly two neighbors per fiber vertex, with the same undirected relation in reverse. The argument permits arbitrary invertible affine maps and even arbitrary two-neighbor relations.",
+  "proof": "Every lift path projects to a controller walk of the same length. There is exactly one projected walk of length at most four between0and32, with length3. Each of its three steps has at most two choices, so any starting fiber point reaches at most8of16 target fiber points.",
+  "CPU_seconds": 0.0005022810000000003,
+  "lift_graphs_generated": 0,
+  "lift_BFS_runs": 0
+}

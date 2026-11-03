@@ -1,0 +1,93 @@
+[
+  {
+    "family": "polynomial graph / matching augmentation",
+    "record_type": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "object_level": "necessary-condition",
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "id": "ddp-wave11-polynomial343-matching-scout",
+    "title": "F7³多项式343源加任意matching：根半径三上界302严格排除",
+    "outcome_class": "STRICT_ALL_SINGLE_MATCHING_EXCLUSION",
+    "target_Delta": 8,
+    "target_D": 3,
+    "savedL": 253,
+    "n": {
+      "actual": null,
+      "hypothetical": 343
+    },
+    "scope": "固定F7³邻接(s,as-b,a²s+as²-c)，删loops，保全部旧边并添加任意一个complement内simple matching，允许partial。完整新根路径分类给B3≤302<343；不枚matching。",
+    "failure_or_result": "首次343形式端点三元组枚举image154/每d22，CPU0.000389805；纸面独立代数证明154并穷尽0M/首M/中M/末M/MGM五类，至少41个根缺项。无源或候选图、BFS、matching试验、solver。",
+    "lesson_and_restart_condition": "旧source节点同id更新；停止此任意singlematching族。奇prime-power q>=7同公式均失败只是同family代数推论，不多计实验或方法。改变连接规则或源才可另立具体问题，不按缺项优化matching。",
+    "unclosed_gap": "一般343/max8/D3图、多个matching、任意加边、删边或重连未被排除。",
+    "other_metrics": {
+      "baseline_date": "2026-10-28",
+      "parent_source_record": "ddp-wave11-polynomial343-matching-scout",
+      "formal_triples": 343,
+      "formal_image": 154,
+      "endpoints_per_first_coordinate": 22,
+      "one_M_first_upper": 50,
+      "one_M_middle_upper": 48,
+      "one_M_last_upper": 43,
+      "two_M_upper": 7,
+      "uniform_R3_upper": 302,
+      "uniform_missing_root_targets_lower_bound": 41,
+      "count_type": "symbolic endpoint upper bound, not ordinary graph bad pairs",
+      "first_exact_endpoint_body_CPU_seconds": 0.000389805,
+      "matching_assignments_tested": 0,
+      "complete_graphs_generated": 0,
+      "source_BFS": 0,
+      "target_BFS": 0,
+      "solver_calls": 0,
+      "UNKNOWN": 0,
+      "same_family_general_odd_q_corollary": "q>=7",
+      "independent_method_count_increment": 0
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/REPORT.md",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/RESULT.json",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/terminal.json",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/check_endpoint_budget.py",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/FORMAL_ENDPOINT_IMAGE.json",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/ANALYSIS_PROOF.md",
+      "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/ANALYSIS_PROOF.json",
+      "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/REPORT.md",
+      "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/RESULT.json",
+      "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/SCOUT_SCOPE_AND_OVERLAP_REVIEW.md",
+      "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/SCOUT_SCOPE_AND_OVERLAP_REVIEW.json"
+    ],
+    "variants": [
+      {
+        "name": "arbitrary-single-matching-endpoint-budget",
+        "status": "STRICT_EXCLUSION",
+        "new_symbolic_triples": 343,
+        "new_matching_tests": 0,
+        "actual_n": null,
+        "actual_D": null,
+        "ordinary_bad_unordered_pairs": null,
+        "report_paths": [
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/REPORT.md",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/PREDICTION.json",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/RESULT.json",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/terminal.json",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/check_endpoint_budget.py",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/FORMAL_ENDPOINT_IMAGE.json",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/ANALYSIS_PROOF.md",
+          "research/ddp/more_graphs_20261027/small_d8_D3_polynomial343_arbitrary_matching_budget/ANALYSIS_PROOF.json",
+          "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/REPORT.md",
+          "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/RESULT.json",
+          "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/SCOUT_SCOPE_AND_OVERLAP_REVIEW.md",
+          "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/SCOUT_SCOPE_AND_OVERLAP_REVIEW.json"
+        ]
+      }
+    ],
+    "positive_guarantees": [
+      "The loop-deleted polynomial formula is simple undirected, maximum degree7, with the origin degree6.",
+      "The origin closed radius-three endpoint image is exactly154, proved algebraically and checked by343 formal triples.",
+      "The five reduced matching-path classes cover every possible augmented path of length at most3, including arbitrary partial matchings."
+    ]
+  }
+]

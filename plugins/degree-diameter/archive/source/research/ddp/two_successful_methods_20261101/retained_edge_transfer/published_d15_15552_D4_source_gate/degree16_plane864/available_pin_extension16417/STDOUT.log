@@ -1,0 +1,70 @@
+{"stage": "PARSING_ACCEPTED_CURRENT_GRAPH_ONCE", "pid": 838897, "child_CPU_sofar": 0.019686921000000003}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 0.297090583, "roots_completed": 512, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 0.497016013, "roots_completed": 1024, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 0.696947252, "roots_completed": 1536, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 0.8968893139999999, "roots_completed": 2048, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 1.096805972, "roots_completed": 2560, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 1.29675519, "roots_completed": 3072, "roots_total": 4050}
+{"stage": "EXACT_CURRENT_DEPTH3_SUPPORTS", "pid": 838897, "child_CPU_sofar": 1.49669779, "roots_completed": 3584, "roots_total": 4050}
+{"stage": "SUPPORTS_COMPLETE_GREEDY_START", "pid": 838897, "child_CPU_sofar": 1.718489977, "eligible_pin_roots": 4050, "unique_columns": 3798, "all_available_union": 16416}
+{"stage": "GREEDY_COMPLETE", "pid": 838897, "child_CPU_sofar": 1.931106245, "greedy_count": 29, "greedy_fullcover": true}
+{"stage": "IMPORTING_EXISTING_SINGLE_THREAD_HIGHS", "pid": 838897, "child_CPU_sofar": 1.931318108}
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+{"stage": "SOLE_HIGHS_COVER_RUN_ACTIVE", "pid": 838897, "child_CPU_sofar": 4.099546431, "window_seconds": 30.0, "variables": 3798, "rows": 16416, "nnz": 9779328}
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 1e+00]
+  RHS    [1e+00, 1e+00]
+Assessing feasibility of MIP using primal feasibility and integrality tolerance of       1e-06
+Solution has               num          max          sum
+Col     infeasibilities      0            0            0
+Integer infeasibilities      0            0            0
+Row     infeasibilities      0            0            0
+Row     residuals            0            0            0
+Presolving model
+16416 rows, 3798 cols, 9779328 nonzeros  3s
+15552 rows, 3798 cols, 9240012 nonzeros  8s
+
+MIP start solution is feasible, objective value is 29
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   15552 rows
+   3798 cols (3798 binary, 0 integer, 0 implied int., 0 continuous)
+   9240012 nonzeros
+MIP-Timing:          10 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               29               100.00%        0      0      0         0    10.9s
+         0       0         0   0.00%   0               29               100.00%        0      0      1      2410    30.2s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      29
+  Dual bound        0
+  Gap               100% (tolerance: 0.01%)
+  P-D integral      19.3109192848
+  Solution status   feasible
+                    29 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            30.16 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 0
+  Nodes             0
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     2410 (total)
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)
+{"stage": "CHILD_TERMINAL", "pid": 838897, "child_CPU_sofar": 34.38959951, "status": "UNKNOWN_NO_AT_MOST16_PIN_COVER_FOUND", "best_pin_count": 29}

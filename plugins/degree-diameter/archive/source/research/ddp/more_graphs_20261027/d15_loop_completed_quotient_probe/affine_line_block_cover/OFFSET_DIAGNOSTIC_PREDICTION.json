@@ -1,0 +1,9 @@
+{
+  "frozen_before_reading_grouped_mask_values":true,
+  "prediction":"Within each actual (controller,direction) group, all nine affine cosets have the same previously computed full-target-fibre block mask. The equality is to be checked directly, not inferred from the312/390 global unique-mask counts.",
+  "inputs":"Existing source*_LINE_BLOCK_MASKS.json raw_lines and full_free_directions/source*_FREE_DIRECTION_GROUPS.json",
+  "joint_cover_interface":"Preserve all2808/3510 original line objects. Same block masks must not be used to deduplicate partial-target coverage in the new joint-fibre model.",
+  "checks":"Contiguous raw_line_index IDs,117 lines per controller,13 directions with9 distinct cosets each, three distinct actual-free pins per line, and exact cached-ball row-label mapping.",
+  "CPU_limit_seconds":5,
+  "new_balls_cached_ball_OR_BFS_solver_graph_runs":0
+}

@@ -1,0 +1,127 @@
+{
+  "status": "COMPLETE_NECESSARY_LINE_IMAGE_SCREEN",
+  "prediction_id": "P_line",
+  "prediction_outcome": "FALSIFIED_BY_NECESSARY_CONDITION",
+  "all810": {
+    "count": 810,
+    "closedstar_pass": 56,
+    "openstar_pass": 56,
+    "open_intersection_histogram": {
+      "1": 719,
+      "2": 32,
+      "10": 56,
+      "6": 2,
+      "5": 1
+    },
+    "closed_intersection_histogram": {
+      "1": 705,
+      "2": 37,
+      "10": 56,
+      "3": 9,
+      "6": 2,
+      "5": 1
+    }
+  },
+  "pre165_675": {
+    "count": 675,
+    "closedstar_pass": 0,
+    "openstar_pass": 0,
+    "open_intersection_histogram": {
+      "1": 654,
+      "2": 21
+    },
+    "closed_intersection_histogram": {
+      "1": 647,
+      "2": 28
+    }
+  },
+  "final165_nonstar135": {
+    "count": 135,
+    "closedstar_pass": 56,
+    "openstar_pass": 56,
+    "open_intersection_histogram": {
+      "1": 65,
+      "10": 56,
+      "2": 11,
+      "6": 2,
+      "5": 1
+    },
+    "closed_intersection_histogram": {
+      "1": 58,
+      "10": 56,
+      "2": 9,
+      "3": 9,
+      "6": 2,
+      "5": 1
+    }
+  },
+  "first_pre165_failure": {
+    "vertex": 41502,
+    "A_i": [
+      7,
+      4212,
+      8259,
+      12377,
+      12453,
+      19260,
+      19421,
+      25736,
+      26058,
+      36805
+    ],
+    "pre165": true,
+    "max_openstar_intersection": 1,
+    "max_closedstar_intersection": 1,
+    "necessary_closedstar_pass": false,
+    "necessary_openstar_pass": false,
+    "closedstar_candidate_centers": []
+  },
+  "geometric_line_signatures_reconstructed": false,
+  "incidence_graph_rebuilt": false,
+  "BFS_performed": false,
+  "default_verifier_imported": false,
+  "CPU_seconds": 0.27746586500000003,
+  "strict_conclusion": "P_line false for all675 original non-star extras; all fixed H3-line exceptions excluded by complete-star containment",
+  "line_images_actually_identified": 0,
+  "passed_necessary_screen_is_not_line_identification": 56,
+  "pre675_pairwise_core_distance_at_least3_pinsets": 647,
+  "first_witness": {
+    "vertex": 41502,
+    "pins": [
+      7,
+      4212,
+      8259,
+      12377,
+      12453,
+      19260,
+      19421,
+      25736,
+      26058,
+      36805
+    ],
+    "pinpairs": 45,
+    "adjacent_pairs": 0,
+    "pairs_with_common_neighbor": 0
+  },
+  "source_pages": [
+    "Lemma4.1 pp4-5",
+    "Theorem5.1 p5"
+  ],
+  "incidence_cache_found": false,
+  "full_geometry_reconstruction_executed": false,
+  "new_graphs": 0,
+  "new_lower_bounds": 0,
+  "next_complementarity_prediction": {
+    "id": "P_irredundant",
+    "subject": 41502,
+    "statement": "Every one of the10 fixed pin R4 balls has a nonempty private region inside K",
+    "status": "PROPOSED_NOT_EXECUTED"
+  },
+  "evidence": [
+    "PREDICTION.json",
+    "necessary_filter.json",
+    "first41502_dispersion.json",
+    "REPORT.md"
+  ],
+  "CPU_seconds_structural_witness": 0.172733246
+}

@@ -1,0 +1,10 @@
+import DegreeDiameter.Portfolio.F4Graph3840Exact
+#print DegreeDiameter.Portfolio.DiameterAtMost
+#print DegreeDiameter.Portfolio.F4Graph3840.graph
+#print DegreeDiameter.Portfolio.F4Graph3840.forward
+#print DegreeDiameter.Portfolio.F4Graph3840.fiberStep
+#print DegreeDiameter.Portfolio.F4Graph3840.stepVec
+#check @DegreeDiameter.Portfolio.F4Graph3840.concrete_order_degree_and_D3
+#check @DegreeDiameter.Portfolio.F4Graph3840.diameter_exact_three_in_project_definition
+#print axioms DegreeDiameter.Portfolio.F4Graph3840.concrete_order_degree_and_D3
+#print axioms DegreeDiameter.Portfolio.F4Graph3840.diameter_exact_three_in_project_definition

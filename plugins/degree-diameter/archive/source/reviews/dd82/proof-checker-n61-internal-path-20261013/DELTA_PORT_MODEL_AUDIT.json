@@ -1,0 +1,110 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The shared-two-parent port theorem and the complete three-type original-A model specification pass their stated mathematical obligations, modulo explicit inherited reductions. All19 obligations are discharged. This is a reused same-family provisional mathematical review, not source, execution, fresh or external acceptance.",
+  "audited_inputs": [
+    "proofs/dd82/n61/INTERNAL_DOUBLE_SHARED_TWO_PORTS.md",
+    "proofs/dd82/n61/INTERNAL_DOUBLE_FULL_GRAPH_DESIGN.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n61-internal-path-20261013/",
+  "agent_id": "/root/internal_path_proof_check",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-13T15:44:26Z",
+  "review_provenance": {
+    "freshness": "Explicitly reused reviewer after the original fresh local/followup audit and separate reused three-exclusion increments",
+    "port_input": "Stable161-line manuscript read directly in full",
+    "model_input": "Complete286-line design read directly; sole final author correction in section5 reread directly after stability confirmation, yielding stable289-line input",
+    "reviewed_clarification": "T-to-Z short counters are exceptional-only; u/w-to-Z defect counters, dP/dQ and endpoint budgets cover all50 Z points, including ordinary endpoint ports",
+    "configuration_evidence": "Parent previously confirmed requested spawn model gpt-6-astra and reasoning_effort ultra; no independent backend attestation",
+    "manuscript_edits": false,
+    "new_external_review": false,
+    "original_fresh_audit_expanded": false,
+    "source_or_execution_review": false
+  },
+  "dependencies": [
+    {
+      "source": "proofs/dd82/n61/INTERNAL_DOUBLE_PATH_LOCAL.md",
+      "use": "Actual-A defect identities, complete local partition, parent counts, B[T], ordinary color rule and commutation",
+      "review_receipt": "PROOF_AUDIT.md and PROOF_AUDIT.json in this directory",
+      "status": "Previously fresh same-family provisional local audit; not rerun"
+    },
+    {
+      "source": "proofs/dd82/n61/INTERNAL_DOUBLE_ENDPOINT_ADJACENCY_EXCLUSION.md",
+      "use": "Three remaining types for the model; the shared-two-parent theorem instead states its own explicit type",
+      "review_receipt": "DELTA_ADJACENCY_AUDIT.md and DELTA_ADJACENCY_AUDIT.json in this directory",
+      "status": "Previously reviewed through two explicitly reused same-family provisional increments; not silently upgraded"
+    },
+    {
+      "source": "proofs/dd82/n61/CONNECTED_TRIPLE_EXCLUSION.md",
+      "use": "Inherited actual61 connected nonnegative row-four defect baseline with entries at most2",
+      "status": "Prior accepted structural theorem with its own finite-enumeration and checked-CNF dependencies; no recomputation"
+    },
+    {
+      "source": "proofs/dd82/n61/DOUBLE_DEFECT_CYCLE_OBSTRUCTION.md",
+      "use": "Inherited D path forest and interpretation of an eventual no-internal-vertex conclusion",
+      "status": "Prior accepted scope and review records documented in original audit; no new proof review"
+    }
+  ],
+  "details": {
+    "port_obligations_discharged": ["S01", "S02", "S03", "S04", "S05", "S06", "S07"],
+    "model_obligations_discharged": ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M10", "M11", "M12"],
+    "total_obligations": 19,
+    "issues": [],
+    "new_assumptions": [],
+    "counterexamples_found": 0,
+    "port_claims": [
+      "Unique endpoint unit ports x,y lie either at q0,p0, or in O_c,O_d, or in O_d,O_c",
+      "A[P] and A[Q] are zero, with exact complete or four-by-four A[P,Q] matching descriptions",
+      "B[P] and B[Q] are zero in the first two port cases; in the third each is the unit edge on the two actual P or Q neighbors of its designated port",
+      "Residual ordinary and attachment defect interfaces equal the actual commutation expressions in equation13"
+    ],
+    "model_claims": [
+      "Every actual internal-double target belongs to one of the three inherited types (r,h,beta)=(0,1,0),(1,0,0),(2,0,1)",
+      "Parent-category and within-class labels normalize the P/Q attachments without choosing unsupported overlaps",
+      "For r>0 only seven reference-to-other five-point ordinary matchings are normalized; r=0,h=1 is retained separately",
+      "Every satisfying model decodes to a simple original61 graph with degree8 and genuine diameter-two coverage on all1830 pairs",
+      "Every actual target admits the specified labels and exact auxiliary values, giving the necessary-model coverage implication",
+      "Generic all-Z-pair defect-upper counters may be omitted without removing valid targets or weakening the retained original degree and coverage semantics"
+    ],
+    "algebraic_predictions_checked": {
+      "free_A_bits_by_r": [1086, 870, 800],
+      "fixed_core_touching_edges": 74,
+      "total_Z_edges": 170,
+      "reference_pairs_fixed_when_r_positive": 175,
+      "reference_edges_fixed_when_r_positive": 35,
+      "remaining_edge_counts_by_r": [170, 135, 135],
+      "total_original_edges": 244,
+      "Z_pairs_without_fixed_core_common_neighbor_by_r": [1073, 1072, 1071],
+      "loose_conjunction_upper_count": 51504,
+      "additional_shared_attachment_pair_upper_count": 14,
+      "additional_shared_attachment_conjunction_upper_count": 672,
+      "status": "Algebraic predictions only, not emitted counts, runtime data or measured speedup"
+    },
+    "counterexample_probes": [
+      "A port in its own attachment set and parity of the resulting internal degree sum",
+      "Mixed opposite-set/ordinary ports, neutral ordinary ports and coincident ports",
+      "A double defect entry inside P or Q despite a binary commutation right side",
+      "Unjustified preservation of neutral-parent labels by the attachment matching",
+      "Applying a five-point reference normalization to the r0,h1 six-ordinary-point block",
+      "Using a second ordinary-block permutation after its reference matching was fixed",
+      "Ordinary vertices with nonzero endpoint defect, requiring all50 endpoint counters",
+      "Confusing partial witness implications with actual two-edge AND equivalences",
+      "Treating omission of redundant B-upper counts as permission to drop original pair coverage"
+    ],
+    "scope_exclusions": [
+      "No source-code or emitted-CNF verification",
+      "No graph search, solver result or certificate verification",
+      "No fresh or external acceptance of these new inputs",
+      "No actual internal-double or order61 exclusion",
+      "No realizability claim for any port case or remaining type",
+      "No certified implementation size or runtime promise"
+    ]
+  },
+  "state": "completed"
+}

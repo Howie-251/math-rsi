@@ -1,0 +1,201 @@
+{
+  "status": "READ_ONLY_ANALYSIS_COMPLETE",
+  "new_graphs": 0,
+  "new_BFS_calls": 0,
+  "solver_calls": 0,
+  "main_Wiki_changed": false,
+  "successful40": {
+    "all_neighbor_labels_below51417": true,
+    "evidence": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/newborn_fullstar_probe/RESULT.json",
+    "literal_family_file": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/accepted_family40.json",
+    "static_original_base_R4_pool_ready": false,
+    "reason": "Accepted40 records certify whole actual-current graph at each step. Except first accepted set and the separately checked original-base control v3962, they are not a stored family of independently certified G51417-static R4 covers. Reverse transfer from an augmented graph is invalid.",
+    "existing_originalbase_controls": [
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/items/ord037_v51013_selected.json",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/ORIGINALBASE_CONTROL.json"
+    ],
+    "original91_pool": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/frozen91.json",
+    "original91_pool_type": "Full literal mandatory sets and residual guard budgets; not all have complete coverage certificates.",
+    "joint_repacking_current_decision": "Do not start a41-point packing model from this read. Parent literal analysis finds38 old failed prototypes still have all mandatory pins free in the final graph; shared-port locking is not their existing obstruction."
+  },
+  "repeat_edges_and_old_scope": {
+    "same_helper": "Selected old-neighbor labels must be distinct; duplicate guards or a guard already mandatory would create a duplicate new-old edge.",
+    "different_helpers": "The same old pin may be reused by different helpers up to its integer remaining degree capacity. The successful40 already share15 pins according to parent literal accounting, so a global disjointness constraint would be wrong.",
+    "old_guard_mask_dedup": "Native cover.cpp keeps one least-label representative of each identical nonzero target mask for a single helper cover. This is not a cross-helper all-different constraint.",
+    "original91": "First38 original-source candidates tested;37 exact<=2 failures and first hit. The other53 visited once on changing accepted source:39 hits,13 degree blocks,1 exact one-guard failure. It was greedy sequential acceptance, not joint capacity optimization.",
+    "ordinary_fullNv_stop": "Original51417 every old prototype has an original saturated neighbor; final40 newborn fullNv also all blocked. This closes exact whole-open-neighborhood clones, not partial stars or arbitrary guard sets.",
+    "old_core_packing": "global_coverage_20261027/h9_clone_capacity and h9_bare_core_clones concern different fixed cores and ordinary full-star clones (optima63/343); they do not close this51417 near-star/guard family.",
+    "known_four_guard_model": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/second_generation_singlefault/MIP_MODEL.json",
+    "known_four_guard_result": "Prototype51445, omitted35572, current51457, mandatory9,750 targets,13026 unique masks. Exact<=2 fails; sole<=4 MIP UNKNOWN after safeguard, not infeasible. Its strong proxy kernel is negative. It is not v4580."
+  },
+  "v4580": {
+    "prototype": 4580,
+    "omitted_saturated_pin": 45089,
+    "mandatory": [
+      4628,
+      9574,
+      14663,
+      20519,
+      26997,
+      33721,
+      37436,
+      40798,
+      44310
+    ],
+    "full_remaining_guard_budget": 4,
+    "old_cache_json": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/items/ord000_v4580.json",
+    "old_cache_binary": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/items/ord000_v4580.masks.u64.bin",
+    "cache_source_n": 51417,
+    "old_missing_targets": 2752,
+    "old_core_missing": 2724,
+    "old_extra_missing": 28,
+    "eligible_old_guards": 13239,
+    "unique_nonzero_old_masks": 13186,
+    "old_words_per_row": 43,
+    "zero_support_targets": 0,
+    "exact_le2_complete": true,
+    "old_le3_or_le4_model_found": false,
+    "min_target_support": 1828,
+    "max_target_support": 3985,
+    "free_same_core_neighborhood_proxy_for45089": [],
+    "omitted_pin_neighbors": [
+      137,
+      577,
+      1254,
+      2195,
+      2752,
+      3579,
+      4280,
+      4580,
+      5025,
+      50015,
+      50828,
+      51093,
+      51397
+    ],
+    "largest_single_masks": [
+      {
+        "guard": 3579,
+        "covered": 1095,
+        "relation": "actual free neighbor of45089",
+        "old_degree": 10,
+        "current_degree_from40_literals": 10
+      },
+      {
+        "guard": 4280,
+        "covered": 1089,
+        "relation": "actual free neighbor of45089",
+        "old_degree": 10,
+        "current_degree_from40_literals": 10
+      },
+      {
+        "guard": 5025,
+        "covered": 1086,
+        "relation": "actual free neighbor of45089",
+        "old_degree": 10,
+        "current_degree_from40_literals": 10
+      },
+      {
+        "guard": 2195,
+        "covered": 1072,
+        "relation": "actual free neighbor of45089",
+        "old_degree": 10,
+        "current_degree_from40_literals": 10
+      }
+    ],
+    "largest_four_union": {
+      "guards": [
+        3579,
+        4280,
+        5025,
+        2195
+      ],
+      "covered": 1941,
+      "missing": 811
+    },
+    "best_partner_for_largest_single": {
+      "guards": [
+        3579,
+        2195
+      ],
+      "covered": 1820,
+      "missing": 932,
+      "scope": "Best pair among those containing3579; not a global best-pair claim."
+    },
+    "one_cached_greedy4_control": {
+      "guards": [
+        3579,
+        2195,
+        50584,
+        50901
+      ],
+      "covered": 2490,
+      "missing": 262,
+      "scope": "One cache-only diversity diagnostic; not an exhaustive search or a feasible cover."
+    },
+    "private_route_reason": "For each target outside B4(mandatory), every prototype4580-to-target path of length<=5 must begin with45089, because every other first step is mandatory. This follows from the inherited D5 guarantee and the complete mandatory missing set; no fresh BFS is needed.",
+    "strong_proxy_obstruction": {
+      "sufficient_certificate": "N(45089) subset closedB1(mandatory union guards)",
+      "five_disjoint_supports": [
+        {
+          "target": 137,
+          "old_free_closed_B1_coverers": [
+            6209,
+            50795,
+            50889
+          ]
+        },
+        {
+          "target": 577,
+          "old_free_closed_B1_coverers": [
+            5619
+          ]
+        },
+        {
+          "target": 1254,
+          "old_free_closed_B1_coverers": [
+            10136,
+            50901
+          ]
+        },
+        {
+          "target": 50015,
+          "old_free_closed_B1_coverers": [
+            47095,
+            47679,
+            48482,
+            49163,
+            49460,
+            49879,
+            50584,
+            51298,
+            51323
+          ]
+        },
+        {
+          "target": 50828,
+          "old_free_closed_B1_coverers": [
+            39121,
+            42510
+          ]
+        }
+      ],
+      "guard_lower_bound": 5,
+      "applicability": "The five listed targets all have original degree13 and no accepted40 step can attach to them. Their closed neighborhoods are unchanged in current51457; current free support can only shrink. Thus this strong one-step proxy cannot work with<=4 guards, but unrestricted R4 cover is not excluded."
+    },
+    "free_same_core_proxy_scope": "Eligible old-free guards outside the nine mandatory labels; no claim about a redundant mandatory label."
+  },
+  "root_current_single_prototype_model": {
+    "path": "research/ddp/refresh_20261029/d13_v4580_fourguard/",
+    "source_n": 51457,
+    "mandatory_count": 9,
+    "current_missing_targets_parent_reported": 2755,
+    "eligible_guards_parent_reported": 13115,
+    "unique_nonzero_masks_parent_reported": 13057,
+    "model": "One complete-current-target binary cover with sum guards<=4, no joint41-helper packing.",
+    "budget_parent_reported": "100aggregateCPU, sole CaDiCaL solver window60; actual current status remains owned by parent receipts.",
+    "prediction": "The four-column simultaneous actual R4 cover exists for this one current mandatory set; SAT must supply it, otherwise a complete UNSAT refutes it within this precise domain; UNKNOWN remains open.",
+    "do_not_reuse_old_mask_order_as_current": "Old target set2752 and row43-word binding is different from current2755; do not assume the difference is exactly three newborn labels, filter only old representatives, or append zero columns. Current model must use its freshly bound full target/guard matrix.",
+    "no_additional_run_by_this_agent": true
+  }
+}

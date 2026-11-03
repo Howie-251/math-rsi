@@ -1,0 +1,25 @@
+DegreeDiameter/Portfolio/F9Graph56862Linear.lean:26:58: error: unsolved goals
+a : Fin 78
+p q : Fin 6
+x : Vec
+⊢ stepVec a p 0 (stepVec (controller a q) (inversePort q) 0 (stepVec a q 0 x)) = stepVec a p 0 x
+DegreeDiameter/Portfolio/F9Graph56862Linear.lean:27:55: warning: This simp argument is unused:
+  stepVec_reverse
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵o̵u̵t̵e̵V̵e̵c̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵c̵o̵n̵t̵r̵o̵l̵l̵e̵r̵_̵r̵e̵v̵e̵r̵s̵e̵,̵s̵t̵e̵p̵V̵e̵c̵_̵r̵e̵v̵e̵r̵s̵e̵]̵[̲r̲o̲u̲t̲e̲V̲e̲c̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲,̲ ̲c̲o̲n̲t̲r̲o̲l̲l̲e̲r̲_̲r̲e̲v̲e̲r̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F9Graph56862Linear.lean:30:58: error: unsolved goals
+a : Fin 78
+p q : Fin 6
+x : Vec
+⊢ stepVec (controller (controller a p) q) (inversePort q) 0 (stepVec (controller a p) q 0 (stepVec a p 0 x)) =
+    stepVec a p 0 x
+DegreeDiameter/Portfolio/F9Graph56862Linear.lean:31:36: warning: This simp argument is unused:
+  stepVec_reverse
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵o̵u̵t̵e̵V̵e̵c̵,̵P̵i̵.̵z̵e̵r̵o̵_̵a̵p̵p̵l̵y̵,̵s̵t̵e̵p̵V̵e̵c̵_̵r̵e̵v̵e̵r̵s̵e̵]̵[̲r̲o̲u̲t̲e̲V̲e̲c̲,̲ ̲P̲i̲.̲z̲e̲r̲o̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

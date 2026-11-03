@@ -1,0 +1,177 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_bounded_obligations_discharged",
+  "summary": "No concrete gap in the declared three-component integer quotient diagnostic or the 6/24/32 actual-graph exclusion. Exact enumeration corroborated; semantic review remains same-family provisional.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "thread_id": "/root/proof_review_n62_d1_reduction/sixteen_pure_arithmetic",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "not independently attested by available runtime metadata",
+  "reviewer_reasoning_actual": "not independently attested by available runtime metadata",
+  "reviewer_family": "openai",
+  "reviewer_context": "reused_agent_delta_review_not_fresh_fork",
+  "context_provenance": "This same subagent previously read and checked Sections 4-5 of D1_TWELVE_SIXTEEN_PARTNER_EXCLUSION.md. Root then reassigned these distinct new targets. The agent did not author or edit these target sources; no prior audit output was used as evidence.",
+  "generated_at": "2026-10-11T11:40:15.724166+00:00",
+  "trace_path": "reviews/dd82/proof-checker-n62-three-components-20261011",
+  "declared_inputs": [
+    "computations/dd82/n62/three_component_quotients.py",
+    "computations/dd82/n62/three_component_quotients.json",
+    "proofs/dd82/n62/THREE_COMPONENT_6_24_32_EXCLUSION.md"
+  ],
+  "dependencies_read": [
+    "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md",
+    "proofs/dd82/n62/TRIANGLE_PAIRING_SIMPLE_REPEAT_EXCLUSION.md",
+    "proofs/dd82/n62/S_TOUCH_SATURATED_ROW_EXCLUSION.md"
+  ],
+  "scope": "Two bounded targets only. No whole-project, whole-paper-family, or order-62 exclusion verdict. Current D1 minimum bounds and global B<=2 are explicit conditional imports for diagnostic annotations/domain, not revalidated here.",
+  "workflow_overrides": [
+    "Root explicitly requested reused-agent delta context, no subagents, only PROOF_AUDIT.md/.json, no hashes, no HTML/PDF/TeX, and no other scope expansion. No source edits or wiki writes performed."
+  ],
+  "details": {
+    "theorems_audited": 1,
+    "computational_classifications_audited": 1,
+    "obligations": [
+      {
+        "dedup_key": "3CQ-FOUNDATIONS",
+        "location": "GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md:138-172",
+        "status": "discharged_in_declared_scope",
+        "payload": "The B-eigenvalue-three space consists exactly of vectors constant on support components, by the weighted Dirichlet identity. AB=BA makes it A-invariant. Thus R has nonnegative integer entries, row sum eight, balance, and R^2+R=10I+1 n^T. On n-perpendicular the polynomial is x^2+x-10. Integer characteristic polynomial forces equal conjugate multiplicities, so three components give trace seven. Even component sizes follow from weighted degree three. Section 3 uses no D1 bound or global B<=2."
+      },
+      {
+        "dedup_key": "3CQ-ENUM-COVERAGE",
+        "location": "three_component_quotients.py:20-28",
+        "status": "discharged_in_declared_scope",
+        "payload": "All diagonal entries a,e,i are nonnegative with a+e+i=7, so each is at most seven. Therefore range(8) for a,e omits no candidate. Given a,e,i, the independent choices b=0..8-a, d=0..8-e, g=0..8-i determine exactly every nonnegative row-sum-eight matrix once. The sum of (9-a)(9-e)(9-i) over a+e+i=7 is 9108."
+      },
+      {
+        "dedup_key": "3CQ-EXACT-FILTERS",
+        "location": "three_component_quotients.py:29-38",
+        "status": "discharged_in_declared_scope",
+        "payload": "Integer Q=R^2+R-10I is computed entrywise. Equal rows mean Q=1 n^T with n uniquely determined. The explicit n>=4 and even tests specify the retained domain; Q1=62 1 makes sum(n)=62 automatic. The balance test checks every ordered pair. Component minimum four is conditional on excluding size-two repeat components, for example by B<=2; this task does not reprove that imported exclusion."
+      },
+      {
+        "dedup_key": "3CQ-CANONICALIZATION",
+        "location": "three_component_quotients.py:39-45",
+        "status": "discharged_in_declared_scope",
+        "payload": "Every permutation simultaneously reorders n, R rows and R columns. The minimum over all six permutations gives the same key exactly for component relabellings; it neither merges distinct orbits nor drops any. All retained n have distinct entries, and each of the three observed orbits contains six labelled matrices."
+      },
+      {
+        "dedup_key": "3CQ-INDEPENDENT-RESULT",
+        "location": "three_component_quotients.json",
+        "status": "discharged_in_declared_scope",
+        "payload": "A separately written checker enumerated all 45 nonnegative length-three rows summing to eight, then all row triples, filtering trace seven. It checked 9108 matrices, retained 18 labelled matrices and exactly three canonical orbits, exactly matching all saved sizes and matrices. Exit code zero; CPU affinity one."
+      },
+      {
+        "dedup_key": "3CQ-D1-CONDITIONAL-MARKS",
+        "location": "three_component_quotients.py:47-61; GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md:184-200",
+        "status": "discharged_in_declared_scope",
+        "payload": "The ordered marks use assumed current-paper |H|,|K|>=14, plus r_HK>=4 and r_KH>=3 for H!=K, or r_HH>=4 for H=K. These are necessary conditions only. Independent marking reproduces every JSON pair. The current-paper size bounds are flagged imports, not newly accepted by this task; no marked pair is asserted realizable."
+      },
+      {
+        "dedup_key": "3CQ-62432-PARENT-PARTITION",
+        "location": "THREE_COMPONENT_6_24_32_EXCLUSION.md:81-97",
+        "status": "discharged_in_declared_scope",
+        "payload": "For h in H, v in K, B_hv=0 because components are distinct. All neighbors of h lie in K, and v has exactly two K-neighbors. Thus c(h,v) is exactly the sum of membership indicators in their parent pairs. The distinct-vertex identity gives those indicators equal 1 minus membership in P(v), proving a disjoint partition of the six H vertices."
+      },
+      {
+        "dedup_key": "3CQ-62432-UNIQUE-PAIR",
+        "location": "THREE_COMPONENT_6_24_32_EXCLUSION.md:99-115",
+        "status": "discharged_in_declared_scope",
+        "payload": "A nonnegative integral repeat row of sum three cannot be positive at all five other H vertices. Choose h2 with B_h1h2=0. H is G-independent, so h1,h2 have exactly one common neighbor, which lies in K. Because K vertices have exactly two H-neighbors, the corresponding parent pair occurs at exactly that one vertex."
+      },
+      {
+        "dedup_key": "3CQ-62432-TRIANGLE",
+        "location": "THREE_COMPONENT_6_24_32_EXCLUSION.md:117-136",
+        "status": "discharged_in_declared_scope",
+        "payload": "The simple 2-regular induced graph G[K] supplies distinct v0,v1,v2 on a nonbacktracking length-two walk and then the other neighbor v3 of v2. Consecutive disjoint partitions imply P(v3)=H minus (P(v1) union P(v2))=P(v0). Uniqueness forces v3=v0, making an actual triangle on three distinct vertices."
+      },
+      {
+        "dedup_key": "3CQ-TRIANGLE-PAIRING-IMPORT",
+        "location": "TRIANGLE_PAIRING_SIMPLE_REPEAT_EXCLUSION.md:15-112; S_TOUCH_SATURATED_ROW_EXCLUSION.md:25-75",
+        "status": "discharged_in_declared_scope",
+        "payload": "For an actual triangle, t(v)<=1 makes its two incident triangle-repeat entries exactly one, leaving one unit mate. The S_TOUCH contradiction applies to this saturated root structure without using global simple B: each fixed row follows from specified unit entries exhausting sum three. Commutation then makes mates distinct and outside the triangle neighborhood; the indicator identity forces their three vertices to form another G-triangle. Matching unit repeats and internal triangle unit repeats exhaust all six rows, giving a closed connected six-vertex B-support component. No B<=2 or triple-repeat exclusion is used."
+      },
+      {
+        "dedup_key": "3CQ-62432-COMPONENT-CONTRADICTION",
+        "location": "THREE_COMPONENT_6_24_32_EXCLUSION.md:138-164",
+        "status": "discharged_in_declared_scope",
+        "payload": "The original triangle lies in K. Pairing places it in a connected closed six-vertex repeat-support component. Components sharing a vertex coincide, so K would have size six, contrary to 24. This proof does not depend on enumeration completeness, D1 classification/minimum size, or B<=2."
+      }
+    ],
+    "issues": [],
+    "counterexample_attempts": [
+      {
+        "key": "3CQ-BOUNDARY-DIAGONAL8",
+        "attempt": "Could a diagonal entry eight be omitted by range(8)?",
+        "resolution": "No: all diagonal entries are nonnegative and their sum is seven."
+      },
+      {
+        "key": "3CQ-PERMUTATION-LOSS",
+        "attempt": "Could simultaneous relabelling merge a different quotient or miss an orbit?",
+        "resolution": "All six permutations are enumerated on n and both R axes; independent full-row enumeration reproduces all 18 labelled survivors."
+      },
+      {
+        "key": "3CQ-MIN2-DOMAIN",
+        "attempt": "Could a positive even size-two component be silently omitted?",
+        "resolution": "It is explicitly outside the retained n>=4 domain. Coverage of actual graphs therefore imports the no-size-two consequence of B<=2; the pure graph exclusion does not."
+      },
+      {
+        "key": "3CQ-CYCLE6",
+        "attempt": "Could a longer K-cycle carry period-three parent labels without a triangle?",
+        "resolution": "Such cycles can have periodic labels, but any repeated label equals P(v0) after three steps. Its unique representative forces the vertex itself to return. This is exactly the added hypothesis that rules out a longer cycle through v0."
+      },
+      {
+        "key": "3CQ-WALK-COLLISION",
+        "attempt": "Could a short walk repeat vertices before the claimed triangle?",
+        "resolution": "Simplicity excludes loops; the other-neighbor choice excludes v2=v0 and v3=v1. The forced v3=v0 closes a triangle with three distinct vertices."
+      },
+      {
+        "key": "3CQ-PAIRING-EXTERNAL-REPEATS",
+        "attempt": "Could extra weighted repeat entries join the paired triangles to the rest of K?",
+        "resolution": "Each of the six vertices already has three distinct unit entries, exhausting its nonnegative repeat row of sum three. The paired support is connected and closed."
+      }
+    ],
+    "dependency_dag": {
+      "quotient_diagnostic": [
+        "actual_graph_identities",
+        "component_equitability_and_trace",
+        "conditional_component_minimum_four"
+      ],
+      "D1_marks": [
+        "quotient_diagnostic",
+        "current_paper_D1_sizes_at_least_fourteen_assumed",
+        "D1_quotient_incidence_bounds"
+      ],
+      "graph_exclusion": [
+        "actual_graph_identities",
+        "specified_actual_quotient",
+        "parent_pair_partition",
+        "unique_parent_pair",
+        "triangle_pairing"
+      ],
+      "triangle_pairing": [
+        "actual_graph_identities",
+        "S_TOUCH_saturated_row_argument"
+      ],
+      "dependency_cycle_found": false
+    },
+    "validation": {
+      "command": "python - <<'PY'\nimport itertools\nimport json\nimport os\nfrom pathlib import Path\n\nos.sched_setaffinity(0, {min(os.sched_getaffinity(0))})\nrows = [(a,b,8-a-b) for a in range(9) for b in range(9-a)]\ntested = 0\nraw = []\ncanonical = {}\nfor R in itertools.product(rows, repeat=3):\n    if sum(R[j][j] for j in range(3)) != 7:\n        continue\n    tested += 1\n    Q = tuple(tuple(sum(R[i][k]*R[k][j] for k in range(3)) + R[i][j] - (10 if i == j else 0) for j in range(3)) for i in range(3))\n    if len(set(Q)) != 1:\n        continue\n    n = Q[0]\n    if not all(v >= 4 and v % 2 == 0 for v in n):\n        continue\n    if not all(n[i]*R[i][j] == n[j]*R[j][i] for i in range(3) for j in range(3)):\n        continue\n    assert sum(n) == 62\n    raw.append((n,R))\n    forms = [(tuple(n[i] for i in p), tuple(tuple(R[i][j] for j in p) for i in p)) for p in itertools.permutations(range(3))]\n    key = min(forms)\n    canonical[key] = canonical.get(key, 0) + 1\n\nexpected = json.loads(Path('computations/dd82/n62/three_component_quotients.json').read_text())\nexpected_keys = {(tuple(q['sizes']), tuple(map(tuple,q['R']))) for q in expected['canonical_quotients']}\nassert tested == expected['tested_matrices'] == 9108\nassert set(canonical) == expected_keys\nfor q in expected['canonical_quotients']:\n    n,R = q['sizes'],q['R']\n    independently_marked = []\n    for h in range(3):\n        for k in range(3):\n            if min(n[h],n[k]) < 14 or R[h][k] < 4:\n                continue\n            if h != k and R[k][h] < 3:\n                continue\n            independently_marked.append([h,k])\n    assert independently_marked == q['necessary_D1_component_pairs']\nprint(json.dumps({'candidate_rows':len(rows),'tested_trace7':tested,'raw_survivors':len(raw),'canonical_count':len(canonical),'orbits':[{'sizes':n,'R':R,'labelled_count':count} for (n,R),count in sorted(canonical.items())],'json_matrices_and_D1_marks_match':True,'cpu_affinity_count':len(os.sched_getaffinity(0))},indent=2))\nPY",
+      "working_directory": "/inspire/hdd/project/project-public/mahaitong-240108120090/global_user/ar4math",
+      "exit_code": 0,
+      "tool_reported_wall_seconds": 0.005598339,
+      "stdout": "{\n  \"candidate_rows\": 45,\n  \"tested_trace7\": 9108,\n  \"raw_survivors\": 18,\n  \"canonical_count\": 3,\n  \"orbits\": [\n    {\n      \"sizes\": [\n        6,\n        24,\n        32\n      ],\n      \"R\": [\n        [\n          0,\n          8,\n          0\n        ],\n        [\n          2,\n          2,\n          4\n        ],\n        [\n          0,\n          3,\n          5\n        ]\n      ],\n      \"labelled_count\": 6\n    },\n    {\n      \"sizes\": [\n        8,\n        24,\n        30\n      ],\n      \"R\": [\n        [\n          2,\n          6,\n          0\n        ],\n        [\n          2,\n          1,\n          5\n        ],\n        [\n          0,\n          4,\n          4\n        ]\n      ],\n      \"labelled_count\": 6\n    },\n    {\n      \"sizes\": [\n        12,\n        20,\n        30\n      ],\n      \"R\": [\n        [\n          3,\n          0,\n          5\n        ],\n        [\n          0,\n          2,\n          6\n        ],\n        [\n          2,\n          4,\n          2\n        ]\n      ],\n      \"labelled_count\": 6\n    }\n  ],\n  \"json_matrices_and_D1_marks_match\": true,\n  \"cpu_affinity_count\": 1\n}\n",
+      "deterministic_result_status": "accepted_exact_integer_check"
+    },
+    "source_edits": [],
+    "open_scope": [
+      "The remaining two three-component quotients are not excluded.",
+      "Connected B and other component counts are not enumerated.",
+      "No retained integer quotient or D1 mark asserts graph realizability.",
+      "Semantic acceptance is provisional without a separate cross-family overlay.",
+      "No new Lean formalization or full order-62 result."
+    ]
+  }
+}

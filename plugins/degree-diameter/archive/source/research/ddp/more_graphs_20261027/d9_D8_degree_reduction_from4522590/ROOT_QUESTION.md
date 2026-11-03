@@ -1,0 +1,13 @@
+# Degree and order tradeoff from the current10D8 construction
+
+Fresh public main table checked2026-10-28 at01:07UTC: N(9,8)>=1961496 and N(10,8)>=4522590, neither assertedoptimal. https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html . The degree10 source is new to this project’s actualconstructor scope.
+
+Actual source is AUTHOR LEFT C90 acting by3 onZ50251=31*1621, with five inverse pairs. The actor has order30 onC31 and45 onF1621; it is incorrect to require primitive90 field actions. Keep the sourcefield gauge positive norms0/1/-371/-187/-771, sourcepositive phases24/35/34/39/26, and smallC31 norms22/8/4/4/9. Sourcefield-only conjugation/scaling preserve the small coordinate; sourceD8 is inherited only for the known oldgraph, not targets.
+
+Proposed, pre-experiment prediction: removing one sourceinversepair and adding h=(phase45,normal31=0,field=0), while reducing thefield to811, can produce a complete degree9/D<=8 graph. Parameter count is5deletions*24primitive45field actions=120. The target order90*31*811=2262690 is the smallest compatible primefield order in this fixedcontroller class that exceeds1961496: the threshold is703.045..., and721/766 are composite while811 is prime. The target has10182105 edges.
+
+Why this rule is worth testing: shrinking thefield roughly halves the vertexvolume while reducing degree by one; the new involution provides control-coordinate shortcuts that could replace a deletedpair. It reversesC31 and acts as identity onthefield, so it is not a fieldreflection and there is no inheritedD8 guarantee. This is a fixed controlledfamily, not allnormals or all31 possibleinvolutionpositions.
+
+All9phases are distinct/nonzero, hence simple9regular. The newh’s commutator isolatespureC31 because everyretainedsmallnormal is nonzero; the retainedphases plus45 generateC90. If the zero-field-normal pair is retained, its commutator with a nonzeronormal isolates thefield after clearingC31. If thatpair is removed, test whether thefour affine centres b_i/(1-beta^j_i) allcoincide; commoncentres imply disconnection, otherwise thefield is generated. The complementarypaper records this exactly, without a separatecoarse BFS.
+
+One complete implicitidentityR8 check per connectedcase will decide the targetbound by Cayley transitivity. The fixedbatch has90CPU hardbudget plus separatecompilecost; firsthit savescompleteparameters/generator/histogram and stops withthe restUNTESTED for oneindependentcheck/Gemini. Otherwise all120 or an honestUNKNOWN/cursor terminal is saved. NegativeglobalD remainsnull. No sourceBFS, nextfield, phasesweep or badpair-driven continuation.

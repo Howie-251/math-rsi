@@ -1,0 +1,28 @@
+import DegreeDiameter.Portfolio.F9SixFiberDouble56Exact
+open DegreeDiameter.Portfolio
+set_option pp.explicit true in
+#print DiameterAtMost
+#print F9SixFiberDouble56.planeCenter
+#print F9SixFiberDouble56.baseCenter
+#print F9SixFiberDouble56.center
+#print F9SixFiberDouble56.graph
+#print FullNeighborhoodClones.graph
+#print F9SixFiberDouble56.label
+#check F9SixFiberDouble56.base_label
+#check F9SixFiberDouble56.clone_label
+#check F9SixFiberDouble56.label_old
+#check F9SixFiberDouble56.label_new
+#check F9SixFiberDouble56.label_new_copy
+#check F9SixFiberDouble56.base_center_source_label
+#check F9SixFiberDouble56.common_plane_pin_index_unique
+#check F9SixFiberDouble56.sourcePlaneMap_injective
+#check F9SixFiberDouble56.base_load_le_one
+#check F9SixFiberDouble56.load_le_two
+#check F9SixFiberDouble56.old_walk_bound_iff
+#check F9SixFiberDouble56.concrete_order_degree_and_exact_D3
+#print F9SixFiberDouble56.concrete_order_degree_and_exact_D3
+#print F9SixFiberDouble56.FinalClaim
+#print axioms F9SixFiberDouble56.base_load_le_one
+#print axioms F9SixFiberDouble56.load_le_two
+#print axioms F9SixFiberDouble56.concrete_order_degree_and_exact_D3
+#print axioms F9SixFiberDouble56.final_claim

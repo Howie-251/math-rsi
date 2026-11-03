@@ -1,0 +1,11 @@
+# Closed-neighborhood proxy kernel: complete negative
+
+This was frozen after the main four-guard MIP ended UNKNOWN, on the same prototype51445 and unchanged51457/324863 source. It used no second MIP, source distance BFS, graph candidate or change of mandatory pins. The nine mandatory pins remain those recorded in the original prediction; omitted full pin f=35572.
+
+A sufficient complete-cover certificate is N(f) subset closedB1(P union guards). For t in R4(f), t!=f, take the first neighbor h on an f-to-t route: d(h,t)<=3. If a selected pin s has d(s,h)<=1, then d(s,t)<=4. The case t=f is at distance<=2 from a selected pin through any covered neighbor of f. Hence R4(f) subset R4(selected). Since the complete old neighborhood P union{f} of the existing prototype covers all current vertices at R4 by its accepted D5, this proxy certificate would prove a full new extension. Actual degree and selected-R4 verification would still precede graph export.
+
+Actual adjacency gives13 neighbors of f, of which mandatory closedB1 covers2. The remaining11 targets are[45946,46329,46764,47790,47979,48465,48762,48921,49547,50130,50867]. Every useful guard must lie in their closed-neighborhood union; the larger union over all13 neighbors has141 labels. After current-degree and mandatory exclusions,32 free vertices remain,30 with nonzero target masks. Thus the full one-step proxy kernel is tiny and complete.
+
+Targets48762 and50130 have no eligible guard coverer. The union of all current eligible guards therefore cannot satisfy this proxy condition, irrespective of a cardinality bound. The exact cap4 DP also finished with291 states and no solution. This strictly excludes only the stated closedB1-proxy certificate on this source/pins. It does not exclude a four-guard R4 cover whose routes do not realize this stronger local certificate; the unrestricted four-guard main problem stays UNKNOWN.
+
+KernelCPU0.267225001 seconds. The whole prototype has consumed29.651644798 aggregateCPU seconds, below45. The kernel generated zero graphs and did not trigger selected-R4 verification. No R2 proxy, other prototype or later solver was started. Original mainPRED, two-guard result, MIP logs and UNKNOWN were retained.

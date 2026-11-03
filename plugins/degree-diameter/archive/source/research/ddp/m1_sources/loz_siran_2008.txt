@@ -1,0 +1,747 @@
+PAGE 1
+AUSTRALASIAN JOURNAL OF COMBINATORICS
+Volume 41 (2008), Pages 63–80
+New record graphs in the degree-diameter problem
+Eyal Loz Jozef ˇSir´aˇn
+Department of Mathematics
+University of Auckland
+Auckland
+New Zealand
+Abstract
+In 1994, Dinneen and Hafner ( Networks 24 No. 7, 359–367) published a
+table of largest orders of graphs of given degree up to 15 and d iameter up
+to 10, known to that date. The table also contained 48 new valu es found
+by the authors with the help of computer searches over Cayley graphs of
+semidirect products of (mostly) cyclic groups. Prior to our work, only
+relatively few values in the table have been improved; updat es have been
+maintained on the web.
+With the help of voltage graphs in combination with random co mputer
+search we have substantially improved more than half of the v alues in (all
+earlier updates of) the table.
+1 Introduction
+The problem of ﬁnding the largest order nd,k of an undirected graph of a given
+maximum degree d and a given diameter k has been known for nearly ﬁve decades as
+the degree-diameter problem. An obvious upper bound on nd,k is the Moore bound
+nd,k ≤ 1 + d + d(d − 1) + · · ·+ d(d − 1)k−1. Non-trivial work is needed to show that
+equality in this bound holds only if (a) k = 1 and d ≥ 1, or (b) k = 2 and d = 2,
+3, 7 (and, possibly, 57), or (c) k ≥ 3 and d = 2. Apart from these and some other
+small values of d and k, the orders of the current largest graphs of maximum degree
+d and diameter k appear to be very far from the Moore bound.
+The directed analogue of the problem, which is to ﬁnd the larg est order n′
+d,k of
+a digraph of maximum out-degree d and diameter k, has been studied as well; here
+the directed Moore bound is n′
+d,k ≤ 1 + d + d2 + · · ·+ dk. In sharp contrast to the
+undirected case, digraphs of order asymptotically matchin g the order of the directed
+Moore bound are known. For example, the Kautz digraphs (whic h are iterated line
+digraphs of complete digraphs) are of order dk−1(d + 1) [14]; other digraphs of similar
+asymptotic order are also available [15]. The state of the kn owledge, however, is
+diﬀerent with regard to vertex-transitive and Cayley digra phs, which arise naturally
+in the context of the directed degree diameter problem and ha ve applications in
+the study of eﬃcient interconnected networks design. Order s of the current largest
+
+PAGE 2
+NEW RECORD GRAPHS 64
+vertex-transitive digraphs are very far from the directed M oore bound. For a detailed
+survey of results concerning both better upper bounds as wel l as constructions of
+current largest examples we refer to [11].
+Besides explicit constructions that often give inﬁnite cla sses of relatively large
+graphs or digraphs of particular degree and diameter, a numb er of researchers focused
+on random generation of such (di)graphs for computationall y tractable values of d
+and k. In a sense, this eﬀort culminated in [3] with the publicatio n of a table of
+the then largest orders of graphs of given degree up to 15 and d iameter up to 10.
+Included in this table were also 48 new values found by the aut hors with the help
+of computer search over Cayley graphs of semidirect product s of (in most cases)
+cyclic groups. In the next 12 years only relatively few value s in the table have been
+improved. Updates have been maintained on the web [19, 20]; c hronology of the
+updates and additional explanatory material about the grap hs can be found on the
+same web-sites.
+Among the new construction methods surveyed in [11] an impor tant role is played
+by the regular covering construction. The essence of the construction is to “blow up”
+relatively small quotient graphs , possibly with loops, semi edges and multiple edges,
+into large graphs called lifts. The lifting is determined by associating a ﬁnite group
+with the quotient graph in a particular way through a so-call ed voltage assignment ,
+forming a voltage graph from the quotient. Lifts turn out to preserve vertex degrees
+and it is easy to control their diameter by the properties of t he voltage graphs. A
+short summary of details of this construction (for both grap hs as well as digraphs)
+will be given in Section 2.
+Voltage graphs have been successfully used in the degree-diameter problem before;
+see e.g. [10]. A justiﬁcation of their good potential in a ran dom generation of large
+graphs of given degree and diameter was indicated in [1, 2]. T he method of covering
+spaces relates well with the Cayley graph generation of [3] s ince every Cayley graph
+is a lift of a one-vertex voltage graph. These facts have pre- determined our choice
+of using voltage graphs in our random generation. Moreover, guided by the success
+of [3] with Cayley graphs of semidirect products of cyclic gr oups, we have used the
+same groups for our voltage assignments. In Section 3 we will brieﬂy outline our
+random algorithm for generation of suitable voltage assign ments on carefully chosen
+quotients with accompanying explanations regarding notat ion and lists of voltages.
+This way we have been able to improve more than half of the curr ent largest orders
+of graphs of given degree d ≤ 16 and diameter k ≤ 10. In Section 4 we present the
+new graphs in a tabular form. We also present some new vertex- transitive digraphs,
+improving and adding to the list of known digraphs contained in [8] [5]. Some issues
+that have emerged from our search are discussed in the ﬁnal se ction.
+2 V oltage graphs and lifts
+The theory of voltage graphs originated in the early seventi es of the 20th century
+in the context of re-visiting the proof of the Map Color Theor em. The development
+of the theory, which can be regarded as a discrete version of t he well known theory
+
+PAGE 3
+NEW RECORD GRAPHS 65
+of covering spaces in algebraic topology, begun with the pap er [6] and culminated
+in the monograph [7] that laid foundations of modern topolog ical graph theory. We
+outline the essentials just for (undirected) graphs; digra phs will be mentioned in the
+conclusion of this section.
+Let Γ be a ﬁnite, undirected graph, possibly with loops and mu ltiple edges. We
+also allow semiedges, that is, edges with just one end-verte x and with the other end
+dangling. To facilitate the description of voltages, we wil l think of the (undirected)
+edges of Γ that are not semiedges as pairs of oppositely direc ted edges, called darts.
+A semiedge admits, by deﬁnition, just one direction (into th e unique incident vertex).
+The number of elements in the set D of all darts of Γ is therefore twice the number
+of all edges of Γ minus the number of semiedges. If e is a dart, then e−1 will denote
+the dart reverse to e; in the case of a semi-edge we set e−1 = e by deﬁnition.
+Let G be a ﬁnite group. A mapping α : D → G will be called a voltage assignment
+if α(e−1) = ( α(e))−1, for any dart e ∈ D. Thus, a voltage assignment sends a pair of
+mutually reverse darts onto a pair of mutually inverse eleme nts of the group. Note
+that if e is a semiedge, then the voltage condition means that α(e) has order at most
+two in G. The pair (Γ , α) is the voltage graph , which determines the lift Γ α of Γ as
+follows. Let V be the vertex set of Γ. The vertex set and the dart set of the lif t are
+V α = V × G and Dα = D × G. In the lift, ( e, g) is a dart from the vertex ( u, g)
+to the vertex ( v, h) if and only if e is a dart from u to v in Γ and h = gα(e). The
+lift itself is considered to be undirected, since ( e, g) and ( e−1, gα(e)) form a pair of
+mutually reverse darts and therefore give rise to an undirec ted edge of Γ α .
+The projection π : Γ α → Γ given by π(e, g) = e and π(v, g) = v is, topologically,
+a regular covering of Γ by Γ α . This is the reason why Γ is often called a (regular)
+quotient. For any vertex v and any dart e of the quotient, the sets π−1(v) and π−1(e)
+are called ﬁbres above v and e. If e is a semi-edge then (in order not to have semi-
+edges in the lift) one usually assumes that α(e) has order two in G, in which case
+π−1(e) is a perfect matching on the vertices in π−1(v). For any ﬁxed h ∈ G the
+mapping ( e, g) ↦→(e, hg) determines an automorphism of the lift Γ α . This way the
+voltage group G acts regularly (that is, transitively and freely) on each ﬁb re as a
+group of automorphisms of the lift. In particular, if the quo tient has just one vertex,
+then G acts regularly on the vertex set of the lift; moreover, if con nected, the lift
+is in such a case a Cayley graph for the group G and the generating set consisting
+of the voltages assigned to loops and semiedges attached to t he single vertex of the
+quotient. Conversely, all Cayley graphs are lifts of single -vertex graphs.
+An example of three coverings and lifts is given in Fig. 1, whe re the composition
+of the coverings induced by the voltage assignments on the du mbbell graph in the
+group Z5 and on the Petersen graph in Z2 gives the same lift (the graph of the
+dodecahedron) as a voltage assignment on the dumbbell graph in the group Z10. We
+note that a composition of two regular coverings rarely resu lts in a regular covering
+as in Fig. 1. Necessary and suﬃcient conditions for this to ha ppen can be found in
+[12] and for a suﬃcient condition related to the degree-diam eter problem we refer
+to [1].
+It is clear that the degree of a vertex v of the quotient is inherited by all vertices
+in the ﬁbre above v in the lift. This gives a trivial way to control vertex degree s in
+
+PAGE 4
+NEW RECORD GRAPHS 66
+Γ
+(Γ α )β =  Γ
+γ
+α
+γ
+β in Z
+in Z
+in Z
+0
+1
+5
+10
+2
+αΓ
+2
+Figure 1: Three examples of lifting, with voltages in cyclic groups.
+the lifts. As regards determining the diameter of the lift, b y the observation about
+the regular action of the voltage group on ﬁbres it is suﬃcien t to choose one vertex
+from each ﬁbre and check all distances in the lift from the cho sen vertices.
+We also mention the important and well-known fact that for ev ery voltage assign-
+ment α on a connected quotient Γ and for any choice of a spanning tree T of Γ there
+is a voltage assignment β on Γ in the same group with β(e) equal to the identity for
+any dart e in T and such that the lifts Γ α and Γ β are isomorphic.
+The outlined theory can easily be adapted to digraphs. Indee d, the discussion
+about turning undirected edges into pairs of oppositely dir ected darts is vacuous
+for digraphs. A voltage assignment is simply any mapping from directed edges to
+elements of a group. Concepts such as lift, covering, ﬁbre, a nd so on are introduced
+completely analogously to the undirected case and we leave t he details to the reader.
+3 Generating large graphs
+In this section we concentrate on (undirected) graphs. Moti vated by the success of
+the groups used in [3, 8] and by the analysis in [1] we have conc entrated on exclusively
+using semidirect products of cyclic groups as voltage group s in this paper. Recall
+that if Zm and Zn are cyclic groups of orders m and n and if r is an integer such
+that 1 ≤ r ≤ n − 1 and rn ≡ 1 (mod m), the elements of the semidirect product
+Zm ⋊r Zn of the two groups relative to r are ordered pairs ( a, b) where a ∈ Zm and
+b ∈ Zn, with multiplication given by ( a, b)(c, d) = ( a + rbc, b + d).
+We now outline our procedure for generating large graphs of g iven degree and
+
+PAGE 5
+NEW RECORD GRAPHS 67
+diameter. Given a target degree and diameter, we begin with s electing appropriate
+candidates for the quotient Γ (of degree equal to the target d egree) and the voltage
+group G. This is followed by running a random process of selecting el ements from
+the group as voltages on edges, loops and semiedges of the quo tient, preassigning the
+identity element to all edges of a ﬁxed spanning tree of the qu otient. In the process
+of selection, (partial) assignments giving multiple adjac encies or loops in the lift are
+immediately rejected.
+After a selection has been completed, we determine the diame ter of the lift in
+order to check if the voltage assignment was successful. Com puting the diameter
+requires O(|Γ |2|G|) steps where |Γ | is the number of vertices of the quotient and |G|
+is the order of the group. Obviously, smaller quotients enab le faster computations.
+If, within a predetermined number of attempts, all the gener ated voltage assignments
+give lifts of diameter larger than the target diameter, a new group is selected. If,
+on the other hand, a successful assignment is found, the resu lt is recorded and the
+procedure stops.
+The results of our computations are given in a tabular form in the next section.
+Our experiments have shown that it was not feasible to run com putations on quo-
+tients of order 5 or more. All the quotients we have considere d have therefore at most
+4 vertices. In the tables of results we have used the followin g notation to describe
+the quotients:
+B(s, l): Bouquet (a single-vertex graph) with s semi edges and l loops.
+D(l, e): Dipole (a two-vertex graph) with l loops at each vertex and e edges.
+T (l, e): K3 with l loops at each vertex and e edges joining any two vertices.
+X(l, e): K4 with l loops at each vertex and e edges between any two vertices.
+Semiedges have been used only with bouquet quotients and no s uch quotient will
+have more than one semiedge, that is, s = 0 or 1.
+In order to specify the voltage assignments that determine t he corresponding
+large graphs of given degree and diameter we have arranged th e voltages in the form
+of a list of pairs ( ai, bi) ∈ Zm ⋊r Zn arranged in blocks enclosed in square brackets.
+The following is the explanation of the “grammar” we have use d in the lists as given
+in the tables. With each type of quotients used we give the gen eral structure of the
+corresponding list of voltages.
+Bouquets B(s, l): The list of voltages for a bouquet with one semiedge ( s = 1) and
+l loops will have the form [( a0, b0)|(a1, b1) . . . (al, bl)], where ( a0, b0) is the voltage on
+the semiedge. In the case of a bouquet with just l loops ( s = 0) the list will be
+simply [( a1, b1)(a2, b2) . . . (al, bl)].
+Dipoles D(l, e): Assuming the vertices of the dipole are denoted 1 and 2, the li st
+will have the form [ V1][D12][V2] where the blocks Vi contain the l voltages on the
+loops on the vertex i ∈ { 1, 2} and the block D12 lists the e voltages on the darts
+from 1 to 2.
+The graphs T (l, e) and X(l, e): The corresponding lists of voltages are formed by
+way of generalisation of the arrangement used for dipoles. T hat is, we assume that for
+t = 3, 4 the vertex set of Kt is {1, 2, . . . , t}. The list of voltages for T (l, e) will have the
+
+PAGE 6
+NEW RECORD GRAPHS 68
+form [ V1][D12D13][V2][D23][V3] where Vi is the list of the l voltages on loops attached
+to the vertex i and Dij are the e voltages on the darts from i to j. Finally, the list of
+voltages for X(l, e) will have the form [ V1][D12D13D14][V2][D23D24][V3][D34][V4] with
+the meaning of the symbols similar to the above.
+An illustration of two quotients and the corresponding list s is in Figs. 2 and 3,
+for the table entries regarding degree 7 and diameter 6, and d egree 4 and diameter
+9, respectively.
+(195,34)
+(61,14)
+(108,18)
+(14,23)
+[(108,18)|(61,14)(195,34)(14,23)]
+Figure 2: The quotient and the list of voltages for degree 7 an d diameter 6.
+(71,2)
+(100, 24)
+(0,0)(0,0)
+(48,9)
+(31,21)
+[(100,24)][(0,0)(0,0)][(31,21)][(48,9)][(71,2)]
+Figure 3: The quotient and the list of voltages for degree 4 an d diameter 9.
+4 Tables and results
+The tables are divided into seven parts. The ﬁrst two tables a re a summary of the
+orders of all the undirected and directed graphs we found. Th e third table displays
+data on the generated graphs of order less than 20,000; their adjacency lists can
+be downloaded from [17] and [18]. The fourth table describes all the larger graphs
+
+PAGE 7
+NEW RECORD GRAPHS 69
+we found; the column labeled %M-B in the third and fourth tables represents the
+percentage of the Moore bound reached with the order of the co rresponding graphs.
+The ﬁfth table displays data on the Cayley digraphs that we fo und. Finally, the
+sixth and seventh tables list the complete sets of all non iso morphic Cayley digraphs
+for some small values of d and k, including many graphs that were not available
+before. Adjacency lists to these digraphs are linked from [1 7] and [18]. Tables 6 and
+7 were constructed using exhaustive search on all possible g roups.
+Table 1: Summary of the new largest orders of the undirected graphs pr esented
+in Tables 3 and 4.
+d\k 4 5 6 7 8 9 10
+4 1,320 3,243 7,575 17,703
+5 624 5,516 17,030 57,840 187,056
+6 390 1,404 19,383 76,461 307,845 1,253,615
+7 11,988 52,768 249,660 1,223,050 6,007,230
+8 1,100 5,060 131,137 734,820 4,243,100 24,897,161
+9 1,550 8,200 279,616 1,686,600 12,123,288 65,866,350
+10 2,286 13,140 583,083 4,293,452 27,997,191 201,038,922
+11 19,500 1,001,268 7,442,328 72,933,102 600,380,000
+12 29,470 1,999,500 15,924,326 158,158,875 1,506,252,500
+13 40,260 3,322,080 29,927,790 249,155,760 3,077,200,700
+14 57,837 55,913,932 600,123,780 7,041,746,081
+15 76,518 8,599,986 90,001,236 1,171,998,164 10,012,349,898
+16 140,559,416 2,025,125,476 12,951,451,931
+Table 2: Summary of the new largest orders of the Cayley digraphs pres ented
+in Table 5 (italic) and the Cayley digraphs presented in Tabl es 6 and 7.
+d \ k 3 4 5 6 7 8 9 10
+2 20 27 171
+3 27 60 165 2,041 5,115 11,568
+4 465 1,378 42,309 137,370
+5 3,775 1,010,658
+6 9,020
+
+PAGE 8
+NEW RECORD GRAPHS 70
+Table 3: The smaller graphs (of order less than 20,000).
+Group
+Order Degree Diameter m n r %M-B Quotient
+1,320 4 7 33 20 2 30.18 D(1, 2)
+Voltages [(21,19)][(0,0)(30,7)][(26,2)]
+3,243 4 8 47 23 2 24.71 T (1, 1)
+Voltages [(8,14)][(0,0)(0,0)][(20,10)][(45,11)][(18,18)]
+7,575 4 9 101 25 5 19.24 T (1, 1)
+Voltages [(100,24)][(0,0)(0,0)][(31,21)][(48,9)][(71,2)]
+17,703 4 10 281 21 59 14.99 T (1, 1)
+Voltages [(160,4)][(0,0)(0,0)][(119,1)][(179,10)][(67,13)]
+624 5 5 13 24 2 36.57 D(1, 3)
+Voltages [(12,1)][(0,0)(9,1)(2,13)][(5,20)]
+5,516 5 7 394 7 191 20.20 D(1, 3)
+Voltages [(376,6)][(0,0)(146,6)(221,2)][(326,2)]
+17,030 5 8 131 65 3 15.59 D(1, 3)
+Voltages [(58,45)][(0,0)(52,1)(105,44)][(31,16)]
+390 6 4 13 15 3 41.62 D(2, 2)
+Voltages [(8,2)(4,14)][(0,0)(6,13)][(4,9)(7,7)]
+1,404 6 5 117 6 16 29.95 D(1, 4)
+Voltages [(4,2)][(0,0)(71,2)(34,3)(100,1)][(52,1)]
+19,383 6 7 923 21 48 16.54 B(0, 3)
+Voltages [(865,19)(330,7)(97,11)]
+11,988 7 6 333 36 2 18.35 B(1, 3)
+Voltages [(108,18)|(61,14)(195,34)(14,23)]
+1,100 8 4 55 20 2 34.36 B(0, 4)
+Voltages [(27,4)(11,12)(9,9)(11,19)]
+5,060 8 5 115 44 2 22.58 B(0, 4)
+Voltages [(14,25)(21,2)(25,7)(29,32)]
+1,550 9 4 155 10 4 29.43 B(1, 4)
+Voltages [(0,5)|(1,7)(52,4)(136,6)(72,1)]
+8,200 9 5 205 40 7 19.46 B(1, 4)
+Voltages [(130,20)|(155,38)(203,14)(87,18)(0,1)]
+2,286 10 4 254 9 37 27.87 B(0, 5)
+Voltages [(253,2)(210,8)(38,5)(111,8)(37,4)]
+13,140 10 5 365 36 18 17.80 B(0, 5)
+Voltages [(263,6)(2,5)(201,20)(325,29)(169,14)]
+19,500 11 5 325 60 17 15.95 B(1, 5)
+Voltages [(234,30)|(179,5)(178,38)(283,1)(285,10)(306,46)]
+
+PAGE 9
+NEW RECORD GRAPHS 71
+Table 4: The larger graphs (of order exceeding 20,000).
+Group
+Order Degree Diameter m n r %M-B Quotient
+57,840 5 9 1205 48 22 13.23 B(1, 2)
+Voltages [(1165,24)|(491,41)(849,15)]
+187,056 5 10 3897 48 506 10.70 B(1, 2)
+Voltages [(765,24)|(3312,37)(1861,44)]
+76,461 6 8 2317 33 79 13.04 B(0, 3)
+Voltages [(1871,31)(1722,26)(1817,23)]
+307,845 6 9 6841 45 122 10.50 B(0, 3)
+Voltages [(5722,40)(5970,12)(3528,44)]
+1,253,615 6 10 22793 55 72 8.55 B(0, 3)
+Voltages [(21654,34)(11504,49)(22520,44)]
+52,768 7 7 1649 32 19 13.46 B(1, 3)
+Voltages [(1088,16)|(96,31)(586,24)(1521,21)]
+249,660 7 8 6935 36 23 10.61 B(1, 3)
+Voltages [(1197,18)|(3556,7)(6634,3)(4597,19)]
+1,223,050 7 9 24461 50 4828 8.66 B(1, 3)
+Voltages [(11895,25)|(7818,43)(15052,37)(7103,48)]
+6,007,230 7 10 66747 90 233 7.09 B(1, 3)
+Voltages [(6422,45)|(51477,13)(22951,35)(38463,52)]
+131,137 8 7 1847 71 11 11.94 B(0, 4)
+Voltages [(816,49)(1527,32)(601,19)(358,70)]
+734,820 8 8 12247 60 658 9.56 B(0, 4)
+Voltages [(6983,39)(7376,26)(410,27)(2413,16)]
+4,243,100 8 9 42431 100 274 7.88 B(0, 4)
+Voltages [(24880,85)(444,18)(36184,37)(32820,65)]
+24,897,161 8 10 341057 73 2103 6.61 B(0, 4)
+Voltages [(310448,53)(177761,43)(68031,31)(35532,28)]
+279,616 9 7 4369 64 22 10.37 B(1, 4)
+Voltages [(3553,32)|(3696,46)(1800,41)(3639,11)(724,38)]
+1,686,600 9 8 23425 72 182 7.81 B(1, 4)
+Voltages [(21675,36)|(12166,13)(15523,61)(20107,57)(13014,23)]
+12,123,288 9 9 168379 72 2242 7.02 B(1, 4)
+Voltages [(70579,36)|(133512,24)(107217,34)(59314,52)(66721,49)]
+65,866,350 9 10 346665 190 239 4.77 B(1, 4)
+Voltages [(246390,95)|(152624,64)(161470,78)(295436,184)(158475,173)]
+
+PAGE 10
+NEW RECORD GRAPHS 72
+Group
+Order Degree Diameter m n r %M-B Quotient
+583,083 10 7 3811 153 7 9.75 B(0, 5)
+Voltages [(978,115)(2539,74)(2553,53)(1953,41)(1425,113)]
+4,293,452 10 8 63139 68 1378 7.97 B(0, 5)
+Voltages [(7668,40)(16311,5)(15555,20)(7399,52)(22796,21)]
+27,997,191 10 9 1036933 27 3979 5.78 B(0, 5)
+Voltages [(930549,20)(912214,23)(656652,6)(849847,11)(527163,8)]
+201,038,922 10 10 531849 378 3620 4.61 B(0, 5)
+Voltages [(45789,159)(82505,117)(47344,316)(287530,344)(443446,190)]
+1,001,268 11 7 27813 36 149 8.19 B(1, 5)
+Voltages [(14097,18)|(16956,20)(26380,7)(10013,21)(24861,34)(5702,4)]
+7,442,328 11 8 310097 24 26987 6.08 B(1, 5)
+Voltages [(304732,12)|(224872,15)(62519,10)(223381,8)(93496,13)
+(183245,19)]
+72,933,102 11 9 368349 198 113 5.96 B(1, 5)
+Voltages [(28382,99)|(27703,196)(62272,94)(308948,123)(32154,32)
+(62308,149)]
+600,380,000 11 10 341125 440 157 4.91 X(1, 3)
+Voltages [(31691,411)][(0,0)(99550,185)(60165,251)(0,0)(231334,349)
+(313099,87)(0,0)(112517,278)(160342,268)][(157467,433)]
+[(323365,254)(16622,346)(326002,374)(269993,262)(83914,219)
+(25515,415)][(36341,105)][(131753,366)(210675,185)
+(324856,343)][(93609,232)]
+29,470 12 5 421 70 27 15.24 B(0, 6)
+Voltages [(207,57)(411,49)(245,61)(280,18)(87,38)(238,36)]
+1,999,500 12 7 33325 60 122 8.55 B(0, 6)
+Voltages [(21898,16)(22824,31)(13770,38)(29676,55)(2489,28)(13071,29)]
+15,924,326 12 8 723833 22 1330 6.19 B(0, 6)
+Voltages [(551696,18)(429671,12)(471582,13)(663978,15)
+(286237,7)(420363,16)]
+158,158,875 12 9 421757 375 1472 5.58 B(0, 6)
+Voltages [(97451,218)(406305,64)(63300,170)(156195,321)
+(294559,78)(106616,372)]
+1,506,252,500 12 10 602501 625 793 4.83 X(3, 2)
+Voltages [(195900,98)(405903,173)(375979,531)][(0,0)(62501,596)(0,0)
+(532725,416)(0,0)(416901,163)][(262471,430)(248176,337)
+(422271,491)][(199371,123)(476984,595)(274309,120)
+(298662,494)][(218686,143)(486428,13)(333671,123)]
+[(74314,569)(372842,389)][(207063,226)(426030,541)(120275,280)]
+
+PAGE 11
+NEW RECORD GRAPHS 73
+Group
+Order Degree Diameter m n r %M-B Quotient
+40,260 13 5 671 60 82 13.69 B(1, 6)
+Voltages [(0,30)|(205,45)(482,50)(160,7)(585,17)(405,39)(419,39)]
+3,322,080 13 7 34605 96 143 7.84 B(1, 6)
+Voltages [(33120,48)|(2596,10)(19715,71)(5625,85)(22987,23)
+(27099,63)(7180,6)]
+29,927,790 13 8 997593 30 31979 5.88 B(1, 6)
+Voltages [(729479,15)|(828328,20)(265150,6)(309408,3)
+(726797,15)(905640,2)(945332,17)]
+249,155,760 13 9 741535 84 2327 4.08 X(2, 3)
+Voltages [(506416,62)(303593,61)][(0,0)(537895,21)(122479,55)(0,0)
+(243024,65)(689455,67)(0,0)(686359,39)(556972,42)][(606797,2)
+(444577,46)][(199750,0)(344951,64)(22322,57)
+(307674,23)(462208,78)(377024,53)][(620250,81)(562449,56)]
+[(370941,0)(22279,57)(126774,23)]
+[(285562,0)(708329,37)]
+3,077,200,700 13 10 4396001 175 2471 4.20 X(2, 3)
+Voltages [(1050834,82)(4051224,95)][(0,0)(2718431,162)(778139,79)(0,0)
+(1215107,1)(1384247,148)(0,0)(220738,35)(4207404,106)]
+[(3515510,153)(3216151,30)][(2974242,84)(1761761,37)
+(301884,43)(3187698,59)(1881495,51)(370287,8)][(3893317,102)
+(1456322,122)][(3048922,15)(2001427,86)(841304,131)]
+[(3285076,63)(2714782,44)]
+57,837 14 5 1483 39 28 13.35 B(0, 7)
+Voltages [(339,1)(997,37)(867,32)(214,6)(581,32)(316,21)(606,31)]
+55,913,932 14 8 325081 43 6588 5.87 X(4, 2)
+Voltages [(106430,7)(313773,8)(223714,20)(189186,12)][(0,0)(192573,37)
+(0,0)(296775,29)(0,0)(300803,40)][(309059,5)(47776,24)
+(136369,9)(320594,6)][(81013,21)(210541,18)(22155,21)
+(323259,14)][(98259,35)(265132,29)(311819,11)(157171,18)]
+[(19417,28)(46745,22)][(36149,1)(125761,8)
+(25326,32)(42761,24)]
+600,123,780 14 9 3334021 45 1614 4.85 X(4, 2)
+Voltages [(1246729,33)(2245306,35)(2370184,38)(3311623,8)]
+[(0,0)(903039,39)(0,0)(1147042,24)(0,0)(2458550,34)]
+[(1751124,29)(582205,37)(2885098,28)(2542248,0)]
+[(930208,5)(1991355,16)(863201,19)(904646,33)]
+[(79860,21)(2911987,23)(3289358,24)(468687,1)]
+[(1418592,13)(617741,44)][(1081896,41)(2509432,32)
+(1949080,26)(1516089,35)]
+7,041,746,081 14 10 62316337 113 8864 4.37 B(0, 7)
+Voltages [(4821549,46)(58679374,110)(29318275,6)(25838660,1)
+(41798940,9)(25321982,81)
+(47965471,21)]
+
+PAGE 12
+NEW RECORD GRAPHS 74
+Group
+Order Degree Diameter m n r %M-B Quotient
+76,518 15 5 1417 54 29 12.33 B(1, 7)
+Voltages [(650,27)|(218,45)(933,4)(325,32)(168,12)(963,53)(219,16)
+(32,28)]
+8,599,986 15 7 159259 54 1712 7.07 B(1, 7)
+Voltages [(6700,27)|(126036,47)(57600,4)(150432,19)(51748,40)
+(152314,41)(81233,21)(140934,30)]
+90,001,236 15 8 13417 3354 9 5.28 D(3, 9)
+Voltages [(2398,154)(5487,3145)(5419,960)][(0,0)(7869,2606)
+(1953,383)(7457,926)(1106,2402)(11049,1954)(9262,168)
+(7197,2331)(5331,1826)][(6101,2859)(478,2166)(5944,920)]
+1,171,998,164 15 9 2307083 127 30803 4.91 X(3, 3)
+Voltages [(361079,95)(326285,29)(2120223,7)][(0,0)(468726,21)
+(1045888,35)(0,0)(426615,10)(2079467,109)(0,0)(557531,26)
+(1369074,81)][(486204,24)(2072011,82)(901322,37)]
+[(60626,45)(55799,4)(2237110,71)(1416832,68)
+(1258150,92)(1362776,53)][(1964780,58)(2083678,77)
+(1955847,30)][(816675,105)(518794,94)(1707609,54)]
+[(1775741,123)(1476939,106)(503929,37)]
+10,012,349,898 15 10 6867181 1458 23984 2.99 B(1, 7)
+Voltages [(4196252,729)|(1048331,565)(1612817,455)(2771588,1147)
+(4683982,596)(1023932,784)(4859964,844)(1292623,1291)]
+140,559,416 16 8 924733 38 66209 4.79 X(2, 4)
+Voltages [(490996,32)(585355,20)][(0,0)(135355,34)(250349,33)
+(536336,5)(0,0)(678535,20)(314276,18)(904791,36)
+(0,0)(703279,1)(425301,25)(457434,4)][(849796,37)
+(643215,25)][(4852,14)(702331,36)(282942,0)(198986,34)
+(374258,9)(563413,14)(34875,35)(864260,22)]
+[(206530,4)(649398,17)][(647783,14)(175996,35)(315460,21)
+(627328,20)][(815187,30)(754790,0)]
+2,025,125,476 16 9 2707387 187 3310 4.60 X(2, 4)
+Voltages [(1294721,172)(2383050,55)][(0,0)(1365324,92)(2484671,138)
+(1215141,123)(0,0)(1389967,165)(1354321,127)(1346953,57)
+(0,0)(1916639,7)(2538792,10)(2070390,179)][(405480,172)
+(418292,174)][(2645580,125)(1546086,141)(2124669,86)
+(682388,157)(2443933,69)(1998539,172)(155882,13)
+(1310956,161)][(494047,41)(1354355,39)][(1745234,24)
+(1086274,36)(573209,135)(437724,124)]
+[(1479853,33)(321564,6)]
+12,951,451,931 16 10 12138193 1067 8428 1.96 B(0, 8)
+Voltages [(3123830,833)(563013,411)(7468050,376)(5156666,345)
+(7771080,199)(6588767,930)(8316960,59)(2549080,1041)]
+
+PAGE 13
+NEW RECORD GRAPHS 75
+Table 5: Cayley digraphs.
+Group
+Order Degree Diameter m n r
+2,041 3 8 157 13 14
+Voltages [(98,7)(39,3)(100,4)]
+5,115 3 9 341 15 69
+Voltages [(31,12)(317,5)(251,14)]
+11,568 3 10 723 16 44
+Voltages [(714,1)(650,12)(25,13)]
+465 4 5 31 15 28
+Voltages [(12,13)(14,8)(12,11)(29,7)]
+1,378 4 6 53 26 10
+Voltages [(12,4)(8,15)(11,23)(9,25)]
+42,309 4 9 1567 27 193
+Voltages [(73,10)(502,25)(1237,20)(177,6)]
+137,370 4 10 4579 30 160
+Voltages [(1164,21)(3604,25)(4090,24)(1597,4)]
+3,775 5 6 151 25 9
+Voltages [(57,19)(141,20)(81,10)(66,16)(135,8)]
+1,010,658 5 10 15313 66 46
+Voltages [(11099,39)(295,5)(7518,63)(8292,16)(6136,57)]
+9,020 6 6 451 20 84
+Voltages [(52,8)(122,10)(228,6)(36,13)(161,16)(359,15)]
+Table 6: The sizes of the complete sets of all non-isomorphic Cayley d igraphs for
+some small values of d and k found with an exhaustive search. Voltages to all the
+digraphs that can be constructed with semidirect products a re in Table 7 (adjacency
+lists to these digraphs are linked from [17] and [18]).
+Degree Diameter Order Is Arc-Transitive ♯ Distinct Cayley Digraphs
+2 4 20 No 3
+2 5 27 Yes 2
+2 8 171 No 1
+3 3 27 No 3
+3 4 60 No 18
+3 5 165 No 2
+
+PAGE 14
+NEW RECORD GRAPHS 76
+Table 7: List of all non-isomorphic Cayley digraphs presented in Tab le 6 for
+semidirect products. The additional ten graphs for degree 3 and diameter 4 are
+not constructed with semidirect products and their adjacen cy lists are linked from
+[17] and [18]).
+Group
+Order Degree Diameter m n r
+20 2 4 5 4 2
+Voltages α1: [(0,1)(1,0)]
+α2: [(0,1)(1,3)]
+α3: [(0,3)(1,0)]
+27 2 5 9 3 4
+Voltages α1: [(1,0)(2,1)]
+α2: [(1,0)(2,2)]
+171 2 8 19 9 4
+Voltages α: [(0,4)(1,5)]
+27 3 3 9 3 4
+Voltages α1: [(0,1)(1,0)(2,1)]
+α2: [(0,2)(1,0)(5,2)]
+α3: [(1,0)(1,1)(8,1)]
+60 3 4 5 12 2
+Voltages α1: [(0,1)(1,4)(1,9)]
+α2: [(0,1)(1,4)(4,5)]
+α3: [(0,1)(1,8)(4,9)]
+α4: [(0,2)(1,3)(3,10)]
+α5: [(0,2)(1,9)(1,10)]
+α6: [(0,3)(1,4)(2,7)]
+α7: [(0,3)(1,4)(3,11)]
+α8: [(0,7)(1,4)(2,11)]
+165 3 5 11 15 3
+Voltages α1: [(0,1)(1,3)(1,11)]
+α2: [(0,4)(1,12)(9,14)]
+5 Remarks
+Graphs and digraphs presented in this paper are a notable imp rovement of the state
+of knowledge in the degree-diameter problem.
+In the case of graphs, more than half of the values were improv ed (in fact, 65 out
+of the 120 values from [19, 20]), in some cases by more than a fa ctor of 3. However,
+with the smaller graphs the improvements are more modest and vary in size. We will
+return to commenting on the extent of our improvements at the end of this section,
+preceded by a discussion on theoretical issues that emerged from our computations.
+
+PAGE 15
+NEW RECORD GRAPHS 77
+Most of the graphs listed in our tables are actually Cayley gr aphs (i.e., regular lifts
+of bouquets) of semidirect products of cyclic groups. In the literature there appears
+to be no general lower bound on the order of largest Cayley gra phs of degree d and
+diameter k. However, it follows from [4] that for d > k there are vertex-transitive
+graphs of degree d, diameter k, and order asymptotically as large as ( d/2)k. The
+fact that most of the graphs of [4] are non-Cayley was proved i n [13]. The results for
+Cayley graphs in our tables suggest that the same lower bound should be provable
+for Cayley graphs and not just for vertex-transitive graphs . On the other hand, the
+order of the graphs we have found appears to drift away from th e Moore bound
+relatively quickly.
+A very distinct behaviour was noted when considering all the searches done on
+bouquet quotients (producing Cayley graphs), as some tripl es of parameters m, n, r
+for our voltage groups Zm ⋊r Zn seem to have performed much more successfully than
+other triples. For example, choosing m and n such that the congruence rn ≡ 1 (mod
+m) has a large number of solutions (that is, “rich in the r-values”) was in general a
+much more successful strategy compared with the values of m and n that were “poor
+in the r-values”. A perhaps less surprising outcome was that groups Zm ⋊r Zn with a
+relatively big centre did very poorly. Thus, most of the grou ps we have used have a
+trivial centre, up to a few exceptions with a very small non-t rivial centre. A similar
+but not so distinct behaviour carried through to the groups f ound for the quotients
+of order 2, 3 and 4.
+In addition, we have noted that certain choices of triples m, n, r have led to “good
+groups” that seem to work “very quickly” in the sense that res ults have usually
+arisen well within the predetermined number of attempts. In contrast, “bad groups”
+even when showing good prospects during diameter testing (e .g., having the vast
+majority of vertices within the target diameter distance fr om each other in a large
+number of voltage selections) have failed an exhaustive sea rch of all possible voltage
+assignments. We believe that an explanation of such a behavi our is a challenging
+problem of independent interest.
+A possible line of reasoning to explain certain aspects of th e behaviour described
+above is based on a probabilistic argument which we now outli ne. For a group G let
+Aut(G) be its automorphism group and let I(G) be the set of all involutions of G.
+Lemma 1 Let s ∈ { 0, 1} and l ≥ 2. Assume that there exists a voltage assignment
+α in a group G on the bouquet B(s, l) with non-involutory elements assigned to the
+loops, such that the lift has diameter k. Further, let the set of voltages in α be
+preserved by b automorphisms of G. Then, the probability that a randomly chosen
+voltage assignment on B(s, l) yields a lift of diameter k is at least
+|Aut(G)|
+b|I(G)|s
+( |G| − |I(G)| − 1
+l
+) −1
+Proof. Since we assume existence of at least one voltage assignment α as above,
+the reciprocal of the product of the binomial coeﬃcient with |I(G)|s represents the
+probability that exactly the voltage assignment α has been selected at random. The
+
+PAGE 16
+NEW RECORD GRAPHS 78
+action of Aut( G) on α gives, by our assumption, further |Aut(G)|/b voltage assign-
+ments giving a lift with the same parameters. 2
+This simple observation suggests that a group with a large au tomorphism group
+will have a higher value of the probability estimate given in Lemma 1 and thus will
+be a favourable candidate for random search. Moreover, this appears to apply to all
+quotients we have considered.
+Speciﬁcally, semidirect products of cyclic groups do have r elatively large auto-
+morphism groups. Indeed, by a result of [16], if the group G = Zm ⋊r Zn has a trivial
+centre, then |Aut(G)| = mφ(m) where φ(m) is the Euler totient function. Lemma 1
+now has the following consequence.
+Lemma 2 Let s ∈ { 0, 1} and l ≥ 2. Let G = Zm ⋊r Zn have a trivial centre.
+Suppose that there exists a voltage assignment α in a group G on the bouquet B(s, l)
+with non-involutory elements assigned to the loops, such th at the lift has diameter
+k. Further, assume that only the trivial automorphism of G setwise preserves the
+voltages in α. Then, the probability that a randomly chosen voltage assig nment on
+B(s, l) yields a lift of diameter k is at least
+mφ(m)
+|I(G)|s
+( |G| − |I(G)| − 1
+l
+) −1
+A thorough look at the tables shown in Section 4 and also in [5] , [3] and [8] sug-
+gests that most successful semidirect products have a large value of m in comparison
+to n, and a trivial centre, with m having a large value of φ(m); in addition, it turns
+out that the voltage assignments therein are indeed setwise preserved by the trivial
+automorphism only. In many cases, mostly for graphs with sma ll degree, Lemma
+2 then gives a relatively large value of the probability esti mate. Therefore, a quick
+random computation will indicate with suﬃciently high prob ability if a suitable set
+of voltages exists. This suggests a possible explanation to the observation made in
+[8] and also in our own computations that record graphs are fo und either quickly, or
+not at all.
+Since the family of semidirect products is relatively rich, Lemma 2 appears to be
+a useful tool in eliminating groups that will have very small chance to be successful
+in practice.
+We conclude with returning to observations on the size of our improvements. We
+believe that further small improvements using the voltage c onstructions method are
+possible, in particular for graphs of big orders. However, a dditional improvements
+by, say, a factor of at least two, seem less likely now by our me thods, as orders of most
+of our bigger graphs are already about 5% of the correspondin g Moore bound. When
+one considers the Lemmas 1 and 2 it is clear that in order for a s uccessful voltage
+set to be found randomly (assuming at least one such set exist s), many random sets
+must be checked, and with increase in the size of the graphs an d groups this will
+involve computational times that are impractical by today’ s standards.
+
+PAGE 17
+NEW RECORD GRAPHS 79
+Moreover, when considering computational evidence, it app ears that with groups
+of bigger size, less distinct voltage sets exist (here we mea n sets that are not mapped
+to each other by group automorphisms). Thus, it appears like ly that for the graphs
+of orders only about 5% of the Moore bound, the groups are in th e range where many
+such sets are available for us to ﬁnd. Improvements by a facto r of at least two will
+probably also mean that the number of such distinct sets in th e groups will decrease
+by some factor and the likelihood of ﬁnding any such sets will decrease even further.
+For example, when considering Lemma 2, it is easy to see why ev en if there was a
+group of order 40% of the Moore bound for degree 16 and diamete r 10 with exactly
+one successful distinct voltage set, ﬁnding it randomly see ms unlikely.
+Acknowledgments
+The authors would like to thank C. Paul Bonnington, Michael J . Dinneen, Paul
+Hafner and Joseph Heled from the University of Auckland for t heir support and ad-
+vice in the writing of this paper.
+All the results presented in this paper were independently c onﬁrmed by Peter Nel-
+son and Michael Brough, students of University of Auckland, as a part of a summer
+scholarship project supervised by the authors.
+This research was done as a part of the PhD program of Eyal Loz u nder the super-
+vision of C. Paul Bonnington and Jozef ˇSir´ aˇ n from the University of Auckland. The
+ﬁrst author is supported by the Top Achiever Doctoral Schola rship of the TEC of
+New Zealand. The second author acknowledges partial suppor t by his RSNZ Mars-
+den Fund Grant and by the VEGA Grant No. 1/2004/05 and the APVV Grants No.
+20-000704 and 0040-06.
+References
+[1] L. Brankovic, M. Miller, J. Plesnk, J. Ryan and J. ˇSir´ aˇ n, A note on Construct-
+ing large Cayley graphs of given degree and diameter by volta ge assignments,
+Electronic J. Combinatorics 5 (1998) No. 1, Article R9.
+[2] L. Brankovic, M. Miller, J. Plesnk, J. Ryan and J. ˇSir´ aˇ n, Large graphs with small
+degree and diameter: a voltage assignment approach, Australas. J. Combin. 18
+(1998), 65–76.
+[3] M. J. Dinneen and P. R. Hafner, New results for the degree/ diameter problem,
+Networks 24 (1994), 359–367.
+[4] V. Faber, J. W. Moore and W. Y. C. Chen, Cycle preﬁx digraph s for symmetric
+interconnection networks, Networks 23 no. 7 (1993), 641–649.
+[5] M. J. Dinneen, Algebraic Methods for Eﬃcient Network Con structions, Master’s
+Thesis, Department of Computer Science, University of Vict oria, Victoria, B.C.
+Canada, 1991.
+
+PAGE 18
+NEW RECORD GRAPHS 80
+[6] J. L. Gross, Voltage graphs, Discrete Math. 9 (1974), 239–246.
+[7] J. L. Gross and T. W. Tucker, Topological Graph Theory, John Wiley and Sons
+Inc., 1987 and Dover, 2001.
+[8] P. R. Hafner, Large Cayley graphs and digraphs with small degree and diameter,
+Computational Algebra and Number Theory (W. Bosma and van der Poorten,
+Eds.) Kluwer, Amsterdam (1995), 291–302.
+[9] A. J. Hoﬀman and R. R. Singleton, On Moore graphs with diam eter 2 and 3,
+IBM J. Res. Develop. 4 (1960), 497–504.
+[10] B. D. McKay, M. Miller and J. ˇSir´ aˇ n, A note on large graphs of diameter two and
+given maximum degree, J. Combin. Theory Ser. B 74 No. 1 (1998), 110–118.
+[11] M. Miller and J. ˇSir´ aˇ n, Moore graphs and beyond: A survey of the degree-
+diameter problem, Electronic J. Combinatorics , Dynamic Survey DS14 (Dec. 5,
+2005).
+[12] J. ˇSiagiov´ a, Composition of regular coverings of graphs and voltage assignments,
+Australas. J. Combin. 28 (2003), 131–136.
+[13] J. ˇSiagiov´ a and T. Vetr ´ ık, New lower bounds for Cayley graphsof given degree
+and diameter, manuscript (2007).
+[14] W. H. Kautz, Design of optimal interconnection network s for multiprocessors,
+Architecture and design of digital computers, Nato Advance d Summer Institute
+(1969), 249–272.
+[15] M. A. Fiol, L. A. Yebra and I. Alegre de Miquel, Line digra ph iteration and the
+(d, k) digraph problem, IEEE Trans. Computers, C–33 (1984), 400– 403.
+[16] Gary L. Walls, Automorphism Gruops, Amer. Math. Monthl y, Vol. 93, No. 6
+(1986), 459–462.
+[17] On-line table: http://www.math.auckland.ac.nz/∽eloz002/degreediameter/
+[18] Moore Bound database on-line: http://moorebound.indstate.edu/
+[19] Charles Delorme’s LaTeX Table: http://www.lri.fr/∽cd/Or.dvi
+[20] Francesc Comellas’s WWW Table:
+http://maite71.upc.es/grup de grafs/table g.html
+(Received 26 Feb 2007; revised 3 Nov 2007)

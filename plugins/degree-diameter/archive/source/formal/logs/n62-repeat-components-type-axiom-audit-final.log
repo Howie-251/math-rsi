@@ -1,0 +1,90 @@
+def DegreeDiameter.repeatSupport.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → SimpleGraph V :=
+fun {V} [Fintype V] G => { Adj := fun x y => x ≠ y ∧ 0 < DegreeDiameter.defectMatrix G x y, symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.repeatComponentVertices.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] → (G : SimpleGraph V) → (DegreeDiameter.repeatSupport G).ConnectedComponent → Finset V :=
+fun {V} [Fintype V] G C => {x | x ∈ C.supp}
+def DegreeDiameter.repeatComponentIndicator.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] → (G : SimpleGraph V) → (DegreeDiameter.repeatSupport G).ConnectedComponent → V → ℤ :=
+fun {V} [Fintype V] G C x => if x ∈ C.supp then 1 else 0
+def DegreeDiameter.repeatComponentNeighborCount.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] → (G : SimpleGraph V) → (DegreeDiameter.repeatSupport G).ConnectedComponent → V → ℕ :=
+fun {V} [Fintype V] G C x => {y ∈ G.neighborFinset x | y ∈ C.supp}.card
+def DegreeDiameter.repeatComponentDegree.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      (DegreeDiameter.repeatSupport G).ConnectedComponent → (DegreeDiameter.repeatSupport G).ConnectedComponent → ℕ :=
+fun {V} [Fintype V] G D C => DegreeDiameter.repeatComponentNeighborCount G C (Exists.choose ⋯)
+def DegreeDiameter.repeatQuotientMatrix.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      Matrix (DegreeDiameter.repeatSupport G).ConnectedComponent (DegreeDiameter.repeatSupport G).ConnectedComponent
+        ℤ :=
+fun {V} [Fintype V] G D C => ↑(DegreeDiameter.repeatComponentDegree G D C)
+@DegreeDiameter.n62_repeat_support_adj_iff : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (x y : V), (DegreeDiameter.repeatSupport G).Adj x y ↔ 0 < DegreeDiameter.defectMatrix G x y
+@DegreeDiameter.integer_weighted_harmonic_edge_eq : ∀ {V : Type u_1} [inst : Fintype V] (B : Matrix V V ℤ) (k : ℤ)
+  (f : V → ℤ),
+  (∀ (x y : V), 0 ≤ B x y) →
+    (∀ (x y : V), B x y = B y x) →
+      (∀ (x : V), ∑ y, B x y = k) → (∀ (x : V), ∑ y, B x y * f y = k * f x) → ∀ {x y : V}, 0 < B x y → f x = f y
+@DegreeDiameter.n62_repeat_harmonic_constant : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (f : V → ℤ),
+          (∀ (x : V), ∑ y, DegreeDiameter.defectMatrix G x y * f y = 3 * f x) →
+            ∀ {x y : V}, (DegreeDiameter.repeatSupport G).Reachable x y → f x = f y
+@DegreeDiameter.mem_repeatComponentVertices : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (C : (DegreeDiameter.repeatSupport G).ConnectedComponent) (x : V),
+  x ∈ DegreeDiameter.repeatComponentVertices G C ↔ x ∈ C.supp
+@DegreeDiameter.n62_repeat_component_indicator_harmonic : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent) (x : V),
+          ∑ y, DegreeDiameter.defectMatrix G x y * DegreeDiameter.repeatComponentIndicator G C y =
+            3 * DegreeDiameter.repeatComponentIndicator G C x
+@DegreeDiameter.adjacency_mul_repeat_indicator : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+  (DegreeDiameter.adjacencyMatrix G).mulVec (DegreeDiameter.repeatComponentIndicator G C) = fun x =>
+    ↑(DegreeDiameter.repeatComponentNeighborCount G C x)
+@DegreeDiameter.n62_repeat_component_neighbor_count_harmonic : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent) (x : V),
+          ∑ y, DegreeDiameter.defectMatrix G x y * ↑(DegreeDiameter.repeatComponentNeighborCount G C y) =
+            3 * ↑(DegreeDiameter.repeatComponentNeighborCount G C x)
+@DegreeDiameter.n62_repeat_components_equitable : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C D : (DegreeDiameter.repeatSupport G).ConnectedComponent) {x y : V},
+          x ∈ D.supp →
+            y ∈ D.supp →
+              DegreeDiameter.repeatComponentNeighborCount G C x = DegreeDiameter.repeatComponentNeighborCount G C y
+@DegreeDiameter.n62_repeat_component_degree_spec : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (D C : (DegreeDiameter.repeatSupport G).ConnectedComponent) {x : V},
+          x ∈ D.supp → DegreeDiameter.repeatComponentNeighborCount G C x = DegreeDiameter.repeatComponentDegree G D C
+@DegreeDiameter.n62_repeat_component_internal_degree : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ (C : (DegreeDiameter.repeatSupport G).ConnectedComponent),
+          ∀ x ∈ C.supp, {y ∈ G.neighborFinset x | y ∈ C.supp}.card = DegreeDiameter.repeatComponentDegree G C C
+'DegreeDiameter.n62_repeat_support_adj_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.integer_weighted_harmonic_edge_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_harmonic_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.mem_repeatComponentVertices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_indicator_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.adjacency_mul_repeat_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_neighbor_count_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_components_equitable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_degree_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_repeat_component_internal_degree' depends on axioms: [propext, Classical.choice, Quot.sound]

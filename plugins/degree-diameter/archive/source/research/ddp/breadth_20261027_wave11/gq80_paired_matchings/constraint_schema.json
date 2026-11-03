@@ -1,0 +1,16 @@
+{
+  "schema": "all_simple_internal_edges_binary_v1",
+  "objective": "zero, feasibility only",
+  "variable_count": 1560,
+  "degree_equality_count": 80,
+  "far_pair_cover_count": 1080,
+  "cover_clause_variable_count": 41,
+  "preassigned_edges": [],
+  "symmetry_constraints": [],
+  "degree_rhs": 1,
+  "cover_lower_bound": 1,
+  "variable_domain": "binary",
+  "full_model": "model.json",
+  "cover_rule": "for far x,y: own edges x-z(z in C[y]) or y-z(z in C[x]); opposite edges l-m(l in I[x],m in I[y])",
+  "exactness": "Only same-side far pairs need repair. Matching-only paths reduce to length0/1; routes with two incidence edges are precisely own-internal-first, own-internal-last, or opposite-internal-middle."
+}

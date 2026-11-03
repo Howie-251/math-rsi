@@ -1,0 +1,2638 @@
+{
+  "schema": "ddp-wiki-recent-rows-v1",
+  "date": "2026-10-27",
+  "source_waves": [
+    2,
+    3,
+    4
+  ],
+  "threshold_snapshot": "context/DD_PORTFOLIO_START_20261026/registry/cases.json",
+  "row_count": 30,
+  "rows_are_not_independent_method_count": true,
+  "wave9": "ONGOING_EXCLUDED_FROM_RESULT_AUDIT",
+  "rows": [
+    {
+      "id": "ddp-wave2-extension105-d4",
+      "title": "固定104c→105单点四spoke增阶",
+      "family": "source-edge deletion and vertex insertion",
+      "wave": 2,
+      "record_type": "finite-family-exhaustion",
+      "target_Delta": 4,
+      "target_D": 4,
+      "savedL": 104,
+      "n": {
+        "actual": 105,
+        "hypothetical": 105
+      },
+      "actual_D": 5,
+      "actual_D_scope": "saved_explicit_graph",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 8,
+      "ordinary_bad_target_D": 4,
+      "scope": "固定104c删两条不接边、加一点连其四端点；后续两个局部邻域属于本源跟进",
+      "failure_or_result": "20904合法候选全部无D4；bestD5/8。两局部跟进也无改善，best复用同一图验收。",
+      "positive_guarantees": [
+        "所有候选simple4regular105/210",
+        "完整既定参数范围"
+      ],
+      "unclosed_gap": "不排其他增阶操作或一般105图；不是整个source扩张族穷尽。",
+      "lesson_and_restart_condition": "此source已收束，不追加局部自由点或多边交换。",
+      "other_metrics": {
+        "raw_source_edge_pairs": 21528,
+        "legal_candidates": 20904
+      },
+      "relations": [],
+      "variants": [
+        {
+          "id": "complete-two-edge-switch-neighborhood",
+          "scope": "保存best的全部普通单步2switch",
+          "legal_neighbors": 40740,
+          "strict_improvements": 0,
+          "best_unchanged": true,
+          "actual_D_reused": 5,
+          "bad_unordered_reused": 8
+        },
+        {
+          "id": "fixed-nine-vertex-degree-completion",
+          "scope": "只释放12/13的八条incident边，九点准确残余degree",
+          "completions": 230,
+          "best_unchanged": true,
+          "actual_D_reused": 5,
+          "bad_unordered_reused": 8
+        }
+      ],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/extension105_d4",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_DISJOINT_EDGE_PAIRS_NO_D4",
+        "two_edge_switches/terminal.json": "COMPLETE_TWO_EDGE_SWITCH_NEIGHBORHOOD_NO_D4",
+        "two_branch_completion/terminal.json": "COMPLETE_FIXED_NINE_VERTEX_COMPLETIONS_NO_D4"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/extension105_d4/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/extension105_d4/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/best.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/best.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/first_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/first_expected.txt",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/inputs.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/production.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/run.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/source.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/terminal.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/best.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/best.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/best.verification_reuse.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/candidates.jsonl",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/completions.txt",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/first.expected.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/first.independent_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/fixed.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/inputs.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/run.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/source.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_branch_completion/terminal.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/best.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/best.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/best.verification_reuse.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/first.cpp_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/first.expected.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/first.independent_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/inputs.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/run.json",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/source.edges",
+        "research/ddp/breadth_20261027_wave2/extension105_d4/two_edge_switches/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-finite-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-extension254-d4",
+      "title": "252→254四matching-edge双点增阶",
+      "family": "source-edge deletion and vertex insertion",
+      "wave": 2,
+      "record_type": "finite-profile",
+      "target_Delta": 5,
+      "target_D": 4,
+      "savedL": 252,
+      "n": {
+        "actual": 254,
+        "hypothetical": 254
+      },
+      "actual_D": 5,
+      "actual_D_scope": "saved_explicit_graph",
+      "actual_graph_Delta": 5,
+      "ordinary_bad_unordered_pairs": 133,
+      "ordinary_bad_target_D": 4,
+      "scope": "固定252源四条不接边及方向；8starts×10000提案",
+      "failure_or_result": "bestD5/133，完成有限批次，不是所有四matching扩张穷尽。",
+      "positive_guarantees": [
+        "全部候选simple5regular254/635"
+      ],
+      "unclosed_gap": "其他四matching赋值和其他254图仍开放。",
+      "lesson_and_restart_condition": "固定批次停止，不加seed/删边数/source。",
+      "other_metrics": {
+        "proposals": 80000,
+        "legal_trials": 78252
+      },
+      "relations": [
+        "same_mechanism_as:ddp-wave2-extension105-d4"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/extension254_d4",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_8_START_PROFILE_NO_D4"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/extension254_d4/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/extension254_d4/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/best.edges",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/best.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/first.cpp_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/first.expected.edges",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/first.independent_calibration.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/inputs.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/run.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/source.edges",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/source_check.json",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/starts.jsonl",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/starts.txt",
+        "research/ddp/breadth_20261027_wave2/extension254_d4/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-lexicographic-products",
+      "title": "全部27格均匀lexicographic产品阶数界",
+      "family": "uniform graph products",
+      "wave": 2,
+      "record_type": "parameter/capacity",
+      "target_Delta": null,
+      "target_D": null,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "G[H]，connected|G|≥2、任意simple|H|≥2；含均匀independent blowup",
+      "failure_or_result": "330个参数对的Moore/degree数值上界筛；无可越线入口。",
+      "positive_guarantees": [
+        "Δ(G[H])=|H|Δ(G)+Δ(H)",
+        "D由base及局部replacement约束"
+      ],
+      "unclosed_gap": "不含非均匀blowup或任意replacement。",
+      "lesson_and_restart_condition": "必须改变均匀产品模板，不能换seed。",
+      "other_metrics": {
+        "parameter_pairs": 330,
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/lexicographic_products",
+      "source_statuses": {
+        "RESULTS.json": "COMPLETE_27_CASE_UNIFORM_LEXICOGRAPHIC_BOUND_SCREEN"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/lexicographic_products/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/lexicographic_products/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/lexicographic_products/RESULTS.json"
+      ],
+      "new_lower_bound": false,
+      "target_cells": [
+        {
+          "case_id": "d4_D3",
+          "degree_cap": 4,
+          "target_diameter": 3,
+          "saved_baseline": 41,
+          "parameter_pairs_examined": 4,
+          "maximum_optimistic_order_bound": 14,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 7,
+            "optimistic_order_bound": 14,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d4_D4",
+          "degree_cap": 4,
+          "target_diameter": 4,
+          "saved_baseline": 104,
+          "parameter_pairs_examined": 4,
+          "maximum_optimistic_order_bound": 18,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 9,
+            "optimistic_order_bound": 18,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d4_D5",
+          "degree_cap": 4,
+          "target_diameter": 5,
+          "saved_baseline": 364,
+          "parameter_pairs_examined": 4,
+          "maximum_optimistic_order_bound": 22,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 11,
+            "optimistic_order_bound": 22,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d5_D3",
+          "degree_cap": 5,
+          "target_diameter": 3,
+          "saved_baseline": 72,
+          "parameter_pairs_examined": 5,
+          "maximum_optimistic_order_bound": 14,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 7,
+            "optimistic_order_bound": 14,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d5_D4",
+          "degree_cap": 5,
+          "target_diameter": 4,
+          "saved_baseline": 252,
+          "parameter_pairs_examined": 5,
+          "maximum_optimistic_order_bound": 18,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 9,
+            "optimistic_order_bound": 18,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d5_D5",
+          "degree_cap": 5,
+          "target_diameter": 5,
+          "saved_baseline": 650,
+          "parameter_pairs_examined": 5,
+          "maximum_optimistic_order_bound": 22,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 2,
+            "base_order_Moore_bound": 11,
+            "optimistic_order_bound": 22,
+            "minimum_product_degree": 4
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d6_D3",
+          "degree_cap": 6,
+          "target_diameter": 3,
+          "saved_baseline": 120,
+          "parameter_pairs_examined": 8,
+          "maximum_optimistic_order_bound": 44,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 22,
+            "optimistic_order_bound": 44,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d6_D4",
+          "degree_cap": 6,
+          "target_diameter": 4,
+          "saved_baseline": 441,
+          "parameter_pairs_examined": 8,
+          "maximum_optimistic_order_bound": 92,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 46,
+            "optimistic_order_bound": 92,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d6_D5",
+          "degree_cap": 6,
+          "target_diameter": 5,
+          "saved_baseline": 1518,
+          "parameter_pairs_examined": 8,
+          "maximum_optimistic_order_bound": 188,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 94,
+            "optimistic_order_bound": 188,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d7_D3",
+          "degree_cap": 7,
+          "target_diameter": 3,
+          "saved_baseline": 170,
+          "parameter_pairs_examined": 9,
+          "maximum_optimistic_order_bound": 44,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 22,
+            "optimistic_order_bound": 44,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d7_D4",
+          "degree_cap": 7,
+          "target_diameter": 4,
+          "saved_baseline": 684,
+          "parameter_pairs_examined": 9,
+          "maximum_optimistic_order_bound": 92,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 46,
+            "optimistic_order_bound": 92,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d7_D5",
+          "degree_cap": 7,
+          "target_diameter": 5,
+          "saved_baseline": 2810,
+          "parameter_pairs_examined": 9,
+          "maximum_optimistic_order_bound": 188,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 3,
+            "base_order_Moore_bound": 94,
+            "optimistic_order_bound": 188,
+            "minimum_product_degree": 6
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d8_D3",
+          "degree_cap": 8,
+          "target_diameter": 3,
+          "saved_baseline": 253,
+          "parameter_pairs_examined": 12,
+          "maximum_optimistic_order_bound": 106,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 53,
+            "optimistic_order_bound": 106,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d8_D4",
+          "degree_cap": 8,
+          "target_diameter": 4,
+          "saved_baseline": 1100,
+          "parameter_pairs_examined": 12,
+          "maximum_optimistic_order_bound": 322,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 161,
+            "optimistic_order_bound": 322,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d8_D5",
+          "degree_cap": 8,
+          "target_diameter": 5,
+          "saved_baseline": 5334,
+          "parameter_pairs_examined": 12,
+          "maximum_optimistic_order_bound": 970,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 485,
+            "optimistic_order_bound": 970,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d9_D3",
+          "degree_cap": 9,
+          "target_diameter": 3,
+          "saved_baseline": 585,
+          "parameter_pairs_examined": 14,
+          "maximum_optimistic_order_bound": 106,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 53,
+            "optimistic_order_bound": 106,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d9_D4",
+          "degree_cap": 9,
+          "target_diameter": 4,
+          "saved_baseline": 1768,
+          "parameter_pairs_examined": 14,
+          "maximum_optimistic_order_bound": 322,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 161,
+            "optimistic_order_bound": 322,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d9_D5",
+          "degree_cap": 9,
+          "target_diameter": 5,
+          "saved_baseline": 9020,
+          "parameter_pairs_examined": 14,
+          "maximum_optimistic_order_bound": 970,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 4,
+            "base_order_Moore_bound": 485,
+            "optimistic_order_bound": 970,
+            "minimum_product_degree": 8
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d10_D3",
+          "degree_cap": 10,
+          "target_diameter": 3,
+          "saved_baseline": 650,
+          "parameter_pairs_examined": 17,
+          "maximum_optimistic_order_bound": 212,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 106,
+            "optimistic_order_bound": 212,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d10_D4",
+          "degree_cap": 10,
+          "target_diameter": 4,
+          "saved_baseline": 2485,
+          "parameter_pairs_examined": 17,
+          "maximum_optimistic_order_bound": 852,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 426,
+            "optimistic_order_bound": 852,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d10_D5",
+          "degree_cap": 10,
+          "target_diameter": 5,
+          "saved_baseline": 33397,
+          "parameter_pairs_examined": 17,
+          "maximum_optimistic_order_bound": 3412,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 1706,
+            "optimistic_order_bound": 3412,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d11_D3",
+          "degree_cap": 11,
+          "target_diameter": 3,
+          "saved_baseline": 715,
+          "parameter_pairs_examined": 18,
+          "maximum_optimistic_order_bound": 212,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 106,
+            "optimistic_order_bound": 212,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d11_D4",
+          "degree_cap": 11,
+          "target_diameter": 4,
+          "saved_baseline": 3444,
+          "parameter_pairs_examined": 18,
+          "maximum_optimistic_order_bound": 852,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 426,
+            "optimistic_order_bound": 852,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d11_D5",
+          "degree_cap": 11,
+          "target_diameter": 5,
+          "saved_baseline": 37628,
+          "parameter_pairs_examined": 18,
+          "maximum_optimistic_order_bound": 3412,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 5,
+            "base_order_Moore_bound": 1706,
+            "optimistic_order_bound": 3412,
+            "minimum_product_degree": 10
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d12_D3",
+          "degree_cap": 12,
+          "target_diameter": 3,
+          "saved_baseline": 810,
+          "parameter_pairs_examined": 23,
+          "maximum_optimistic_order_bound": 374,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 6,
+            "base_order_Moore_bound": 187,
+            "optimistic_order_bound": 374,
+            "minimum_product_degree": 12
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d12_D4",
+          "degree_cap": 12,
+          "target_diameter": 4,
+          "saved_baseline": 5832,
+          "parameter_pairs_examined": 23,
+          "maximum_optimistic_order_bound": 1874,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 6,
+            "base_order_Moore_bound": 937,
+            "optimistic_order_bound": 1874,
+            "minimum_product_degree": 12
+          },
+          "cannot_exceed_saved_baseline": true
+        },
+        {
+          "case_id": "d12_D5",
+          "degree_cap": 12,
+          "target_diameter": 5,
+          "saved_baseline": 42342,
+          "parameter_pairs_examined": 23,
+          "maximum_optimistic_order_bound": 9374,
+          "maximizing_parameters": {
+            "fiber_size": 2,
+            "base_degree": 6,
+            "base_order_Moore_bound": 4687,
+            "optimistic_order_bound": 9374,
+            "minimum_product_degree": 12
+          },
+          "cannot_exceed_saved_baseline": true
+        }
+      ],
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-line1664-d4",
+      "title": "固定Bhakar104×F2⁴二邻点线关系提升",
+      "family": "fixed-controller affine line relations",
+      "wave": 2,
+      "record_type": "capacity",
+      "target_Delta": 8,
+      "target_D": 4,
+      "savedL": 1100,
+      "n": {
+        "actual": null,
+        "hypothetical": 1664
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "固定104投影、16fiber、无内部边、每控制边最多两个邻点，含非线性关系放宽",
+      "failure_or_result": "0→32只有唯一三路且无其他≤4walk，至多8<16，指定投影模板统一排除。",
+      "positive_guarantees": [
+        "完整walk包含反走",
+        "源104D4复用"
+      ],
+      "unclosed_gap": "不排其他控制图、内部边、更大branch或一般1664图。",
+      "lesson_and_restart_condition": "须改变投影路线容量；矩阵/seed不能补足。",
+      "other_metrics": {
+        "capacity": 8,
+        "required_states": 16,
+        "graphs_generated": 0,
+        "source_n": 104,
+        "all_walk_witness": [
+          0,
+          24,
+          4,
+          32
+        ]
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/line1664_d4",
+      "source_statuses": {
+        "terminal.json": "STOPPED_NECESSARY_CAPACITY_OBSTRUCTION"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/line1664_d4/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/line1664_d4/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/capacity.json",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/controller_short_walk_witness.json",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/root_controller_witness_check.json",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/run.json",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/scope.json",
+        "research/ddp/breadth_20261027_wave2/line1664_d4/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-ternary8424-degree-budget",
+      "title": "固定104×81三邻点degree预算提升",
+      "family": "fixed-controller affine line relations",
+      "wave": 2,
+      "record_type": "capacity",
+      "target_Delta": 12,
+      "target_D": 4,
+      "savedL": 5832,
+      "n": {
+        "actual": null,
+        "hypothetical": 8424
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "固定104、branch cap3、Δ12；允许内部预算但独占四路迫使全边branch3",
+      "failure_or_result": "全部208控制边被迫branch3，内部余量0；0→32唯一三路仅27<81。",
+      "positive_guarantees": [
+        "2208个unique-distance4有序槽用于强迫预算",
+        "另有真实无四walk的三路见证"
+      ],
+      "unclosed_gap": "不排更高branch/不同控制器/任意lift。",
+      "lesson_and_restart_condition": "须改变degree/路径机制，不能仅换域赋值。",
+      "other_metrics": {
+        "forced_edges": 208,
+        "unique_distance4_ordered_slots": 2208,
+        "capacity": 27,
+        "required_states": 81,
+        "graphs_generated": 0
+      },
+      "relations": [
+        "degree_variant_of:ddp-wave2-line1664-d4",
+        "later_wide_chart_screen:ddp-wave5-bhakar104-wide-screen"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/ternary8424_degree_budget",
+      "source_statuses": {
+        "RESULT.json": "COMPLETE_UNIQUE_ROUTE_DEGREE_BUDGET_SCREEN"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/ternary8424_degree_budget/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/ternary8424_degree_budget/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/ternary8424_degree_budget/RESULT.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-sl23-c8-biorbit384-d5",
+      "title": "SL2(F3)×C8双轨道2+2模板",
+      "family": "bi-orbit Cayley/voltage constructions",
+      "wave": 2,
+      "record_type": "capacity",
+      "target_Delta": 4,
+      "target_D": 5,
+      "savedL": 364,
+      "n": {
+        "actual": null,
+        "hypothetical": 384
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "固定group及2+2分配全部13824个SL quotient triples",
+      "failure_or_result": "最大最小fiber容量5<8，全固定模板排除；未开实际图profile。",
+      "positive_guarantees": [],
+      "unclosed_gap": "不排其他生成元组成、群或非同模板图。",
+      "lesson_and_restart_condition": "需改变quotient短路容量。",
+      "other_metrics": {
+        "quotient_triples": 13824,
+        "capacity": 5,
+        "required_states": 8,
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_FIXED_GROUP_2_PLUS2_TEMPLATE_CAPACITY_EXCLUSION"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/BEST_QUOTIENT_WITNESS.json",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/CAPACITY.json",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/capacity.raw.json",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/capacity_input.txt",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/sl23.json",
+        "research/ddp/breadth_20261027_wave2/sl23_c8_biorbit384_d5/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-two-orbit128-scout",
+      "title": "Q64双轨道2+4：phase容量来源筛",
+      "family": "bi-orbit Cayley/voltage constructions",
+      "wave": 2,
+      "record_type": "capacity-pass-scout",
+      "target_Delta": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "n": {
+        "actual": null,
+        "hypothetical": 128
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "32个phase模式；只是必要容量筛",
+      "failure_or_result": "14模式通过，未作参数搜索；交给后续独立有限profile。",
+      "positive_guarantees": [
+        "32phasefiber各需32状态",
+        "短词算术校准"
+      ],
+      "unclosed_gap": "容量通过不是D3存在证据。",
+      "lesson_and_restart_condition": "只建议一次有界实际profile，已由search执行。",
+      "other_metrics": {
+        "phase_patterns": 32,
+        "surviving_patterns": 14,
+        "actual_searches": 0
+      },
+      "relations": [
+        "prepares:ddp-wave2-two-orbit128-search"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/two_orbit128_scout",
+      "source_statuses": {
+        "RESULT.json": "COMPLETE_32_PHASE_NECESSARY_CAPACITY_SCREEN"
+      },
+      "report_paths": [],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/two_orbit128_scout/RESULT.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_scout/SCOPE.md",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_scout/TIGHT_SUM.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-two-orbit128-search",
+      "title": "Q64双轨道128实际14phase有限试验",
+      "family": "bi-orbit Cayley/voltage constructions",
+      "wave": 2,
+      "record_type": "finite-profile",
+      "target_Delta": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "n": {
+        "actual": 128,
+        "hypothetical": 128
+      },
+      "actual_D": 4,
+      "actual_D_scope": "saved_explicit_graph",
+      "actual_graph_Delta": 6,
+      "ordinary_bad_unordered_pairs": 928,
+      "ordinary_bad_target_D": 3,
+      "scope": "14个通过phase，各固定三段邻域/两次kick；非全部Q64参数穷尽",
+      "failure_or_result": "bestD4/928；所有预定phase完成后停止。",
+      "positive_guarantees": [
+        "two-orbit作用代表根数与全图计数相符"
+      ],
+      "unclosed_gap": "代表根deficit29不是928无序坏对。",
+      "lesson_and_restart_condition": "该有限profile停止，不能以余预算加kick。",
+      "other_metrics": {
+        "representative_deficit_sum": 29,
+        "translation_factor_to_unordered": 32,
+        "legal_score_evaluations": 13422
+      },
+      "relations": [
+        "profile_of:ddp-wave2-two-orbit128-scout"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/two_orbit128_search",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_14_PHASE_PROFILE_NO_D3"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/best.edges",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/best.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/first.cpp_calibration.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/first.python_calibration.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/first_expected.txt",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/inputs.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/rules.txt",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/run.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/search.terminal.json",
+        "research/ddp/breadth_20261027_wave2/two_orbit128_search/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-triangle-factor33-controller",
+      "title": "33点三角端口控制系统固定有限合成",
+      "family": "four-label affine route-chart lifts",
+      "wave": 2,
+      "record_type": "finite-profile",
+      "target_Delta": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "n": {
+        "actual": 33,
+        "hypothetical": 891
+      },
+      "actual_D": 4,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 12,
+      "ordinary_bad_target_D": 3,
+      "scope": "固定三角骨架+external2factor，8starts各100000提案；32是33的共享三角结构跟进",
+      "failure_or_result": "best controllerD4/12普通坏对；容量U缺量684、28个有序不足槽。",
+      "positive_guarantees": [
+        "simplequartic及固定三角边/externaldegree保持",
+        "优化U=I+3A+9A²+27A³完整必要上界"
+      ],
+      "unclosed_gap": "U≥27也非实际fiber覆盖；本次未达必要条件，未生成提升图。",
+      "lesson_and_restart_condition": "三角端口骨架已收束，不追加31/34/seed；不排整个控制器族。",
+      "other_metrics": {
+        "capacity_deficit_ordered": 684,
+        "capacity_insufficient_ordered_slots": 28,
+        "proposals": 800000,
+        "large_lift_generated": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/triangle_factor33_controller",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_8_START_PROFILE_NO_FEASIBLE_CONTROL"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/best.capacity.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/best.edges",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/best.independent_capacity_check.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/best.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/first.cached.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/first.capacity.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/first.edges",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/first.score.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/first_calibration.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/inputs.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/inputs.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/process.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/production_terminal.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/run.json",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/starts.jsonl",
+        "research/ddp/breadth_20261027_wave2/triangle_factor33_controller/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave2-triangle-bowtie32-controller",
+      "title": "32点三角端口控制系统固定有限合成",
+      "family": "four-label affine route-chart lifts",
+      "wave": 2,
+      "record_type": "finite-profile",
+      "target_Delta": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "n": {
+        "actual": 32,
+        "hypothetical": 864
+      },
+      "actual_D": 4,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 4,
+      "ordinary_bad_target_D": 3,
+      "scope": "固定三角骨架+external2factor，8starts各100000提案；32是33的共享三角结构跟进",
+      "failure_or_result": "best controllerD4/4普通坏对；容量U缺量324、14个有序不足槽。",
+      "positive_guarantees": [
+        "simplequartic及固定三角边/externaldegree保持",
+        "优化U=I+3A+9A²+27A³完整必要上界"
+      ],
+      "unclosed_gap": "U≥27也非实际fiber覆盖；本次未达必要条件，未生成提升图。",
+      "lesson_and_restart_condition": "三角端口骨架已收束，不追加31/34/seed；不排整个控制器族。",
+      "other_metrics": {
+        "capacity_deficit_ordered": 324,
+        "capacity_insufficient_ordered_slots": 14,
+        "proposals": 800000,
+        "large_lift_generated": false
+      },
+      "relations": [
+        "structural_followup_of:ddp-wave2-triangle-factor33-controller"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_8_START_PROFILE_NO_FEASIBLE_CONTROL"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/REPORT.md",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/best.capacity.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/best.edges",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/best.independent_capacity_check.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/best.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/first.cached.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/first.capacity.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/first.edges",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/first.score.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/first_calibration.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/inputs.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/inputs.txt",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/preparation_attempts.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/process.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/production_terminal.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/run.json",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/starts.jsonl",
+        "research/ddp/breadth_20261027_wave2/triangle_bowtie32_controller/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-source-scout",
+      "title": "通用F3⁵五步chart与180/186控制器固定群筛",
+      "family": "four-label affine route-chart lifts",
+      "wave": 3,
+      "record_type": "word-rank/source-scout",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42525
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "原文通用chart；Cayley控制器子试验为从属有限群范围，不是独立新大类",
+      "failure_or_result": "324/324词rank5且逆一致；尚无≥175点quartic exact-NB5控制器。",
+      "positive_guarantees": [
+        "任意合格逆标号controller C给243|C|点、degree12、D≤5"
+      ],
+      "unclosed_gap": "ordinaryD≤5不足以代替exactNB5；chart正向结果不等于新图。",
+      "lesson_and_restart_condition": "仅有明确新控制器结构/路由覆盖才继续，不排队换群。",
+      "other_metrics": {
+        "rank5_words": 324,
+        "minimum_controller_order": 175
+      },
+      "relations": [],
+      "variants": [
+        {
+          "id": "A5xC3-180",
+          "hypothetical_lift_n": 43740,
+          "scope": "全部13296个四元inverse-closed S",
+          "actual_sets_checked": 11931,
+          "two_noninvolution_inverse_pair_sets": 3321,
+          "mixed_onepair_twoinvolutions": 8610,
+          "four_involution_sets_disconnected": 1365,
+          "best_exactNB5_endpoints_two_pair": 163,
+          "best_exactNB5_endpoints_mixed": 162,
+          "all_scope_excluded": true,
+          "actual_D": null
+        },
+        {
+          "id": "F31:C6-186",
+          "hypothetical_lift_n": 45198,
+          "scope": "仅2926个二非对合逆对组成",
+          "actual_sets_checked": 2926,
+          "all_scope_excluded": true,
+          "other_compositions_open": true,
+          "actual_D": null
+        }
+      ],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/source_scout",
+      "source_statuses": {
+        "SCOUT.json": null,
+        "route_chart_controller186/RESULT.json": "COMPLETE_TWO_INVERSE_PAIR_CONTROLLER_SCOPE_NO_HIT",
+        "route_chart_controller180/RESULT.json": "COMPLETE_TWO_INVERSE_PAIR_CONTROLLER_SCOPE_NO_HIT",
+        "route_chart_controller180/mixed_involutions/RESULT.json": "COMPLETE_8610_MIXED_COMPOSITION_NO_HIT"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/source_scout/THEOREM_SCOPE_REVIEW.md",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/source_scout/SCOUT.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/THEOREM_SCOPE_REVIEW.md",
+        "research/ddp/breadth_20261027_wave3/source_scout/chart_check.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_F3_5.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/RESULT.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/group.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller180/mixed_involutions/RESULT.json",
+        "research/ddp/breadth_20261027_wave3/source_scout/route_chart_controller186/RESULT.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "positive-local-rule-with-scoped-controller-failures",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-pentagon175-controller",
+      "title": "35个C5固定骨架的175控制器",
+      "family": "four-label affine route-chart lifts",
+      "wave": 3,
+      "record_type": "finite-profile",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": 175,
+        "hypothetical": 42525
+      },
+      "actual_D": 6,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 315,
+      "ordinary_bad_target_D": 5,
+      "scope": "四starts各10000外2factor交换提案；不排整个C5骨架",
+      "failure_or_result": "best controller ordinaryD6/315；exactNB5缺2696有序对。",
+      "positive_guarantees": [
+        "每点C5保证self有NB5闭路",
+        "simplequartic逆标号一致"
+      ],
+      "unclosed_gap": "其他ordered pair的exactNB5未闭，未生成42525图。",
+      "lesson_and_restart_condition": "profile停止，不追加starts/group。",
+      "other_metrics": {
+        "exact_NB5_missing_ordered_pairs": 2696,
+        "proposals": 40000
+      },
+      "relations": [
+        "uses_chart:ddp-wave3-source-scout"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/pentagon175_controller",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_4_START_PROFILE_NO_EXACT_NB5"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/best.edges",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/best.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/best.labels.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/first_calibration.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/first_expected.txt",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/inputs.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/production_terminal.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/run.json",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/starts.txt",
+        "research/ddp/breadth_20261027_wave3/pentagon175_controller/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-controller-lift192",
+      "title": "原6点base的C4×C8电压192控制器",
+      "family": "four-label affine route-chart lifts",
+      "wave": 3,
+      "record_type": "finite-profile",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": 192,
+        "hypothetical": 46656
+      },
+      "actual_D": 6,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 144,
+      "ordinary_bad_target_D": 5,
+      "scope": "固定base/group，八starts×25000单坐标提案；非全部电压空间",
+      "failure_or_result": "best controller ordinaryD6/144；exactNB5缺2752有序对。",
+      "positive_guarantees": [
+        "沿原144结构移植校准",
+        "32fiber平移作用使代表缺86×32=2752"
+      ],
+      "unclosed_gap": "所有exactNB5槽仍未闭，未生成46656提升。",
+      "lesson_and_restart_condition": "父profile停止，不扩group/sheet/base。",
+      "other_metrics": {
+        "representative_NB5_misses": 86,
+        "exact_NB5_missing_ordered_pairs": 2752,
+        "proposals": 200000
+      },
+      "relations": [
+        "uses_chart:ddp-wave3-source-scout"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/controller_lift192",
+      "source_statuses": {
+        "terminal.json": "FINITE_VOLTAGE_TRIAL_FAILED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/controller_lift192/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/controller_lift192/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/base_words.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/best.edges",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/best.labels.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/capacity.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/first_calibration.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/input.txt",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/search_output.json",
+        "research/ddp/breadth_20261027_wave3/controller_lift192/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-binary-route-chart4",
+      "title": "F2⁴四逆标签通用四步chart完整空间",
+      "family": "four-label affine route-chart lifts",
+      "wave": 3,
+      "record_type": "word-rank",
+      "target_Delta": 8,
+      "target_D": 4,
+      "savedL": 1100,
+      "n": {
+        "actual": null,
+        "hypothetical": 1104
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "F2维4、四无不动点逆标签、一步单参数、全部108约化四词均满秩",
+      "failure_or_result": "2419200规范候选全部失败；只此规范模型统一排除。",
+      "positive_guarantees": [
+        "aaaa循环基规范完整",
+        "单保存候选108词独立校准"
+      ],
+      "unclosed_gap": "没有chart/控制器/大图；不能假定72controller。",
+      "lesson_and_restart_condition": "必须改变通用路由要求或机制，不加seed。",
+      "other_metrics": {
+        "canonical_space": 2419200,
+        "examined": 2419200,
+        "words": 108,
+        "minimum_hypothetical_controller_order": 69,
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/binary_route_chart4",
+      "source_statuses": {
+        "search_result.json": "EXHAUSTIVE_NORMALIZED_SPACE_NO_CHART",
+        "terminal.json": "EXHAUSTIVE_NORMALIZED_SPACE_NO_CHART"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/failure_words.json",
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/first_candidate.ranks.json",
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/root_rank_calibration.json",
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/search_result.json",
+        "research/ddp/breadth_20261027_wave3/binary_route_chart4/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-cubic-nb5-bounds",
+      "title": "三价exact-NB4/NB5控制器谱与计数界",
+      "family": "four-label affine route-chart lifts",
+      "wave": 3,
+      "record_type": "theoretical-controller-bound",
+      "target_Delta": null,
+      "target_D": null,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "仅cubic exact-NB4/5控制器，odd-label fiber chart尚未给出",
+      "failure_or_result": "NB4阶≤20；NB5阶≤44，42/44开放，不声称≤40。",
+      "positive_guarantees": [
+        "自含有理谱与有限域算术检查"
+      ],
+      "unclosed_gap": "未构造42/44图；不能自动映射到某个27格提升目标。",
+      "lesson_and_restart_condition": "有真实odd-label chart和控制器正向结构才继续。",
+      "other_metrics": {
+        "controller_Delta": 3,
+        "exact_NB4_order_bound": 20,
+        "exact_NB5_order_bound": 44,
+        "NB5_open_orders": [
+          42,
+          44
+        ],
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/cubic_nb5_bounds",
+      "source_statuses": {
+        "RESULTS.json": "COMPLETE_SMALL_ARITHMETIC_AND_FORCED_CORE_CHECKS",
+        "terminal.json": "COMPLETE_NB4_STOP_NB5_42_44_OPEN"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/cubic_nb5_bounds/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/cubic_nb5_bounds/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/cubic_nb5_bounds/RESULTS.json",
+        "research/ddp/breadth_20261027_wave3/cubic_nb5_bounds/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-debruijn256",
+      "title": "无向4字母4位状态移位图256及补边障碍",
+      "family": "state-shift / de Bruijn graphs",
+      "wave": 3,
+      "record_type": "explicit-graph-plus-capacity",
+      "target_Delta": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "n": {
+        "actual": 256,
+        "hypothetical": 256
+      },
+      "actual_D": 4,
+      "actual_D_scope": "saved_explicit_graph",
+      "actual_graph_Delta": 8,
+      "ordinary_bad_unordered_pairs": 12354,
+      "ordinary_bad_target_D": 3,
+      "scope": "固定x--(4x+a)mod256去loops/duplicates；全部旧边保留的Δ8补边",
+      "failure_or_result": "实际D4/12354；(27,73)到全部亏度点各至少2步，新增边路线≥5，所有单调补边失败。",
+      "positive_guarantees": [
+        "真实入边恢复反向邻居，不用模256除4",
+        "固定源connected"
+      ],
+      "unclosed_gap": "不排删边重连或其他state图。",
+      "lesson_and_restart_condition": "必须改变旧边保留约束，不能填度余量继续搜。",
+      "other_metrics": {
+        "edges": 1014,
+        "degree_histogram": {
+          "6": 4,
+          "7": 12,
+          "8": 240
+        },
+        "deficit_vertices": 16,
+        "deficit_slots": 20
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/debruijn256",
+      "source_statuses": {
+        "terminal.json": "STOPPED_FIXED_SOURCE_AUGMENTATION_OBSTRUCTION"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/debruijn256/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/debruijn256/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/debruijn256/obstruction.json",
+        "research/ddp/breadth_20261027_wave3/debruijn256/source.edges",
+        "research/ddp/breadth_20261027_wave3/debruijn256/source_check.json",
+        "research/ddp/breadth_20261027_wave3/debruijn256/source_distances.json",
+        "research/ddp/breadth_20261027_wave3/debruijn256/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-binary-branch364",
+      "title": "364核binary branching必要matching MILP",
+      "family": "branched binary covers",
+      "wave": 3,
+      "record_type": "solver-UNKNOWN",
+      "target_Delta": 5,
+      "target_D": 5,
+      "savedL": 650,
+      "n": {
+        "actual": null,
+        "hypothetical": 728
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "固定364核；edge关系bijection或K2,2，必要matching必须击中全部unique5 geodesics",
+      "failure_or_result": "25秒求解无incumbent、无不可行证明，UNKNOWN；未生成728图。",
+      "positive_guarantees": [
+        "固定源D5及34860唯一路义务已准备"
+      ],
+      "unclosed_gap": "必要matching尚未解决；即使通过仍非全图D5证书。",
+      "lesson_and_restart_condition": "需新结构/明确有限授权，不能把UNKNOWN当UNSAT。",
+      "other_metrics": {
+        "unique_path_constraints": 34860,
+        "solver_status": "UNKNOWN",
+        "incumbent_returned": false,
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/binary_branch364",
+      "source_statuses": {
+        "terminal.json": "NECESSARY_MATCHING_UNKNOWN"
+      },
+      "report_paths": [],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/binary_branch364/source.edges",
+        "research/ddp/breadth_20261027_wave3/binary_branch364/source_distances.json",
+        "research/ddp/breadth_20261027_wave3/binary_branch364/source_profile.json",
+        "research/ddp/breadth_20261027_wave3/binary_branch364/terminal.json",
+        "research/ddp/breadth_20261027_wave3/binary_branch364/unique5_paths.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "solver-UNKNOWN-not-infeasible",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-hexagon-partial-fold-scout",
+      "title": "H9任意split/copy/twin定理与逐点witness恢复",
+      "family": "H9 partial-fold split/copy/twin geometry",
+      "wave": 3,
+      "record_type": "source-recovery",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "原H9/duality与部分折叠作者资料；已有41699成品的局部结构恢复",
+      "failure_or_result": "V/E与degree公式恢复；原witness S7959+copies280+twins63=41699，非新record。",
+      "positive_guarantees": [
+        "点到线≤5奇路径投影给任意合法S/c的D≤5",
+        "H3完整blowup和旧邻居twins保留D≤5"
+      ],
+      "unclosed_gap": "原PSL/PΓL轨道作用未恢复，后续pencil邻接/证明缺失；未做大BFS。",
+      "lesson_and_restart_condition": "已有逐点Q数据足够解除轨道常值约束，无需换群。",
+      "other_metrics": {
+        "known_author_n": 41699,
+        "known_core_n": 41636,
+        "Q_vertices": 33033,
+        "H3_vertices": 364,
+        "target_core_gain": 707,
+        "source_known_D_upper_bound": 5
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout",
+      "source_statuses": {},
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/THEOREM_SCOPE_REVIEW.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/22907863_README.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/22907863_large-graphs-diameter-five-duality-order-four-split-cayley-hexagon-H9.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/23056128_README.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/23056128_partial-folds-split-cayley-hexagon-H9-large-graphs-diameter-five.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/Q_data.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/THEOREM_SCOPE_REVIEW.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/duality_source/graph_d10k5_n33397.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/duality_source/graph_d10k5_n33397_regular.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/duality_source/graph_d11k5_n35203.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/duality_source/graph_d12k5_n38167.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/duality_source/tau.txt.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/graph_d11k5_n36563.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/graph_d12k5_n41699.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/graph_d13k5_n50750.edges.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/tau.txt.xz",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/witnesses/pf_d11_k5_n36563.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/witnesses/pf_d12_k5_n41699.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/witnesses/pf_d13_k5_n50750.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/structure_check.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/witness12_state.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/zenodo_22907863.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/zenodo_23056128.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "source-recovery-no-new-graph",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [
+          "research-wiki/ideas/ddp-h9-partial-fold-independent-states.md"
+        ],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-hexagon-partial-fold-greedy",
+      "title": "H9逐点解除orbit常值：四序greedy与单调闭包",
+      "family": "H9 partial-fold split/copy/twin geometry",
+      "wave": 3,
+      "record_type": "finite-profile-plus-monotone-exclusion",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42343
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "原S固定为子集、H3 copies固定280；任意重染也包含在root后续闭包排除内",
+      "failure_or_result": "四序新增0；root强迫闭包禁全部25074 merged，故该指定单调cone任何真S超集不可能。",
+      "positive_guarantees": [
+        "合法状态仍有几何D≤5保证",
+        "逐点degree精确维护与独立重算"
+      ],
+      "unclosed_gap": "允许删除旧split或改变copies仍开放；未展开新大图。",
+      "lesson_and_restart_condition": "必须做结构交换，不再加批量split或重染。",
+      "other_metrics": {
+        "partial_state_core_order": 41636,
+        "split_fibers": 7959,
+        "copies": 280,
+        "merged_forbidden": 25074,
+        "actual_D_measured": false
+      },
+      "relations": [
+        "uses_source:ddp-wave3-hexagon-partial-fold-scout"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy",
+      "source_statuses": {
+        "terminal.json": "FOUR_FIXED_GREEDY_PROFILES_COMPLETE"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/best_loads.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/best_state.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/blocking_stats.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/monotone_closure_witness.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/root_monotone_closure.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_greedy/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-monotone-cone-exclusion-plus-profile",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-hexagon-partial-fold-joint",
+      "title": "H9四预定region联合S/c/copies MILP",
+      "family": "H9 partial-fold split/copy/twin geometry",
+      "wave": 3,
+      "record_type": "finite-local-optimization",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42343
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "四预定region、域外固定，freegeneric820/820/899/901；copy变量1/1/28/28",
+      "failure_or_result": "四区均Optimal gap0，gain0；best核心41636且state未变。",
+      "positive_guarantees": [
+        "允许删除/加split、重染、改copies",
+        "边界外degree约束完整纳入",
+        "所有逐点degree通过"
+      ],
+      "unclosed_gap": "仅局部子问题optimal，不排全局部分折叠；没有展开大图。",
+      "lesson_and_restart_condition": "不扩大旧区域；须新的全局结构步骤。",
+      "other_metrics": {
+        "partial_state_core_order": 41636,
+        "solver_statuses": [
+          "Optimal",
+          "Optimal",
+          "Optimal",
+          "Optimal"
+        ],
+        "objective_gain": 0
+      },
+      "relations": [
+        "structural_followup_of:ddp-wave3-hexagon-partial-fold-greedy"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint",
+      "source_statuses": {
+        "terminal.json": "FOUR_PREDETERMINED_JOINT_SUBPROBLEMS_TERMINAL"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/best_loads.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/best_state.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/current_state.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_0_candidate.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_0_result.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_0_stderr.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_0_stdout.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_1_candidate.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_1_result.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_1_stderr.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_1_stdout.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_2_candidate.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_2_result.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_2_stderr.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_2_stdout.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_3_candidate.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_3_result.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_3_stderr.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/region_3_stdout.txt",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/regions.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/root_state_identity.json",
+        "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_joint/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-local-optimum-not-global-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave3-tits585-batch-extension",
+      "title": "Tits585批量spoke增阶来源和严格子类界",
+      "family": "multi-vertex extension with spoke cooperation",
+      "wave": 3,
+      "record_type": "source-scout/capacity",
+      "target_Delta": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "保留585旧核；12个单组贪心仅来源试验，独立二步支配组装填子类另有界",
+      "failure_or_result": "所有样本回到旧复制；独立支配组在Δ12总n≤796<810。未排共享spoke/新点互助一般模型。",
+      "positive_guarantees": [
+        "旧old-old≤3保持",
+        "给出一般批量新旧/新新完整覆盖条件"
+      ],
+      "unclosed_gap": "没有新的同时满足degree预算的批量图；12样本不是全部组枚举。",
+      "lesson_and_restart_condition": "须设计非复制组并用互助覆盖，不仅把组大小8变9/10。",
+      "other_metrics": {
+        "source_n": 585,
+        "source_degree_histogram": {
+          "8": 65,
+          "9": 520
+        },
+        "greedy_starts": 12,
+        "independent_group_order_bound_Delta12": 796,
+        "graphs_generated": 0
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave3/tits585_batch_extension",
+      "source_statuses": {
+        "RESULT.json": null
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave3/tits585_batch_extension/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave3/tits585_batch_extension/REPORT.md",
+        "research/ddp/breadth_20261027_wave3/tits585_batch_extension/RESULT.json"
+      ],
+      "new_lower_bound": false,
+      "target_cells": [
+        {
+          "Delta": 10,
+          "D": 3,
+          "savedL": 650
+        },
+        {
+          "Delta": 11,
+          "D": 3,
+          "savedL": 715
+        },
+        {
+          "Delta": 12,
+          "D": 3,
+          "savedL": 810
+        }
+      ],
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+          "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-global-partial-fold",
+      "title": "H9全局三态三起点固定单点退火",
+      "family": "H9 partial-fold split/copy/twin geometry",
+      "wave": 4,
+      "record_type": "finite-profile-partial-state",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42343
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "全部33033generic自由三态，copies固定0；三starts各50CPU秒",
+      "failure_or_result": "最好合法核心38383/S4986；另两终态1068/1124实际点度13，不能当Δ12图。",
+      "positive_guarantees": [
+        "允许先删后增，不再固定作者S",
+        "合法state的D≤5仍由原几何定理提供"
+      ],
+      "unclosed_gap": "未越逐点degree能垒；未证明全局模型不行；没有展开大图。",
+      "lesson_and_restart_condition": "本单点惩罚profile停止，需结构变化非追加时限。",
+      "other_metrics": {
+        "partial_state_core_order": 38383,
+        "best_legal_S": 4986,
+        "fixed_copies": 0,
+        "starts": 3,
+        "search_CPU_seconds": 150.021963
+      },
+      "relations": [
+        "global_followup_of:ddp-wave3-hexagon-partial-fold-joint"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/global_partial_fold",
+      "source_statuses": {
+        "terminal.json": "TERMINAL_BOUNDED_GLOBAL_SEARCH_NO_IMPROVEMENT"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/batch_result.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/best_legal.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/best_legal_state.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/build_metrics.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/degree_check.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/execution_metrics.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/input.txt",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/preset.json",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/search_log.jsonl",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start0_anneal_end.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start0_best_legal.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start0_final.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start1_anneal_end.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start1_best_legal.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start1_final.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start2_anneal_end.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start2_best_legal.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/start2_final.states",
+        "research/ddp/breadth_20261027_wave4/global_partial_fold/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-equitable-global",
+      "title": "H9单锚点equitable全局cell MILP",
+      "family": "H9 partial-fold split/copy/twin geometry",
+      "wave": 4,
+      "record_type": "solver-UNKNOWN",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42343
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "一个几何绝对点anchor，650genericcells/12H3cells，全部cell常值；无固定域外",
+      "failure_or_result": "一次MILP无incumbent，UNKNOWN；未生成大图。",
+      "positive_guarantees": [
+        "33397点逐项检查equitable",
+        "非从作者S局部改进模型"
+      ],
+      "unclosed_gap": "cell常值是实际限制；无不可行证明。",
+      "lesson_and_restart_condition": "须新的结构/单独授权有限profile，不能写全逐fiber排除。",
+      "other_metrics": {
+        "variables": 1312,
+        "constraint_rows": 2613,
+        "generic_cells": 650,
+        "H3_cells": 12,
+        "incumbent_returned": false,
+        "solver_status": "UNKNOWN"
+      },
+      "relations": [
+        "same_geometry_as:ddp-wave4-global-partial-fold"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/equitable_global",
+      "source_statuses": {
+        "terminal.json": "GLOBAL_CELL_TARGET_UNKNOWN_NO_VALID_INCUMBENT"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/equitable_global/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/equitable_global/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/equitable_global/partition.json",
+        "research/ddp/breadth_20261027_wave4/equitable_global/partition_summary.json",
+        "research/ddp/breadth_20261027_wave4/equitable_global/terminal.json",
+        "research/ddp/breadth_20261027_wave4/equitable_global/worker_result.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "solver-UNKNOWN-not-infeasible",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-pencil-source",
+      "title": "Dhar后续pencil资料：当前37628/42342原图已得",
+      "family": "H9 partial fold with later pencil augmentation",
+      "wave": 4,
+      "record_type": "source-recovery",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "Zenodo23653049及主表实际href原始图；不猜作者未公开性",
+      "failure_or_result": "原图已得，pencil生成邻接、witness及D证明未恢复。",
+      "positive_guarantees": [
+        "source直接邻接与主表数据匹配",
+        "可用旧点degree余量已恢复"
+      ],
+      "unclosed_gap": "只有图数据，无可迁移新pencil规则。",
+      "lesson_and_restart_condition": "需明确原始规则后才能以pencil做生成，不继续泛搜。",
+      "other_metrics": {
+        "source_orders": [
+          37628,
+          42342
+        ],
+        "source_known_D": 5,
+        "actual_D_measured": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/pencil_source",
+      "source_statuses": {
+        "SCOUT.json": "CURRENT_AUTHOR_GRAPHS_FOUND_PENCIL_RULE_NOT_RECOVERED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/pencil_source/SOURCE_NOTES.md",
+        "research/ddp/breadth_20261027_wave4/pencil_source/README.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/pencil_source/CURRENT_GRAPHS.txt",
+        "research/ddp/breadth_20261027_wave4/pencil_source/README.md",
+        "research/ddp/breadth_20261027_wave4/pencil_source/SCOUT.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/SOURCE_NOTES.md",
+        "research/ddp/breadth_20261027_wave4/pencil_source/deg11_diam5_n37628.txt",
+        "research/ddp/breadth_20261027_wave4/pencil_source/deg12_diam5_n42342.txt",
+        "research/ddp/breadth_20261027_wave4/pencil_source/degree11_append_order_check.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/degree_capacity_42342.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/github_dharunish_profile.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/github_dharunish_repos.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/github_homepage_files.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/graph_37628.adjlist.txt",
+        "research/ddp/breadth_20261027_wave4/pencil_source/graph_42342.adjlist.txt",
+        "research/ddp/breadth_20261027_wave4/pencil_source/pencil122_neighborhood_test.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/raw_sources.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/raw_structure_initial.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/search_api_2.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/search_api_3.json",
+        "research/ddp/breadth_20261027_wave4/pencil_source/zenodo_23653049.json"
+      ],
+      "new_lower_bound": false,
+      "target_cells": [
+        {
+          "Delta": 11,
+          "D": 5,
+          "savedL": 37628
+        },
+        {
+          "Delta": 12,
+          "D": 5,
+          "savedL": 42342
+        }
+      ],
+      "outcome_class": "source-recovery-no-new-graph",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-record37628-single-extension",
+      "title": "37628→37629纪录图单点全R4覆盖有限试验",
+      "family": "record-graph monotone vertex extension",
+      "wave": 4,
+      "record_type": "finite-cover-profile",
+      "target_Delta": 11,
+      "target_D": 5,
+      "savedL": 37628,
+      "n": {
+        "actual": null,
+        "hypothetical": 37629
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "全部2504可接旧点R4球；8个起始profile，每个greedy补至11邻居并扫一轮全部坐标",
+      "failure_or_result": "best仍漏115个new-old目标，独立multi-source覆盖检查MATCH；未展开新图。",
+      "positive_guarantees": [
+        "old-old距离不增",
+        "单点D5完整条件恰为所选R4球覆盖全部旧点",
+        "度预算通过"
+      ],
+      "unclosed_gap": "覆盖miss不是已展开图的全源无序坏对；有限profile不排其他邻居集。",
+      "lesson_and_restart_condition": "不增加seed/坐标轮数；8是起始profile数，绝非8邻居上限，firstpin也可替换。",
+      "other_metrics": {
+        "source_n": 37628,
+        "source_known_D_upper_bound": 5,
+        "coverage_uncovered_vertices": 115,
+        "profiles": 8,
+        "neighbor_cap": 11,
+        "eight_means": "initial profiles, not pins cap",
+        "all_coordinates_mutable": true,
+        "expanded_graph_generated": false
+      },
+      "relations": [
+        "degree_variant_of:ddp-wave4-record42342-single-extension"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/record37628_single_extension",
+      "source_statuses": {
+        "terminal.json": "FINITE_8_PIN_PROFILE_FAILED",
+        "result.json": "FINITE_8_PIN_PROFILE_FAILED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/independent_cover_check.json",
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/result.json",
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/run.stderr.txt",
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/source_profile.json",
+        "research/ddp/breadth_20261027_wave4/record37628_single_extension/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-record42342-single-extension",
+      "title": "42342→42343纪录图单点全R4覆盖有限试验",
+      "family": "record-graph monotone vertex extension",
+      "wave": 4,
+      "record_type": "finite-cover-profile",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": null,
+        "hypothetical": 42343
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "全部14396可接旧点R4球；8个起始profile，每个greedy补至12邻居并扫一轮全部坐标",
+      "failure_or_result": "best仍漏648个new-old目标，独立multi-source覆盖检查MATCH；未展开新图。",
+      "positive_guarantees": [
+        "old-old距离不增",
+        "单点D5完整条件恰为所选R4球覆盖全部旧点",
+        "度预算通过"
+      ],
+      "unclosed_gap": "覆盖miss不是已展开图的全源无序坏对；有限profile不排其他邻居集。",
+      "lesson_and_restart_condition": "不增加seed/坐标轮数；8是起始profile数，绝非8邻居上限，firstpin也可替换。",
+      "other_metrics": {
+        "source_n": 42342,
+        "source_known_D_upper_bound": 5,
+        "coverage_uncovered_vertices": 648,
+        "profiles": 8,
+        "neighbor_cap": 12,
+        "eight_means": "initial profiles, not pins cap",
+        "all_coordinates_mutable": true,
+        "expanded_graph_generated": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/record42342_single_extension",
+      "source_statuses": {
+        "terminal.json": "FINITE_8_PIN_PROFILE_FAILED",
+        "result.json": "FINITE_8_PIN_PROFILE_FAILED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/independent_cover_check.json",
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/result.json",
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/run.stderr.txt",
+        "research/ddp/breadth_20261027_wave4/record42342_single_extension/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "finite-profile-failure-not-whole-family-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-record37628-global-cover",
+      "title": "37628单点全部2504候选的全局覆盖MILP",
+      "family": "record-graph monotone vertex extension",
+      "wave": 4,
+      "record_type": "solver-UNKNOWN",
+      "target_Delta": 11,
+      "target_D": 5,
+      "savedL": 37628,
+      "n": {
+        "actual": null,
+        "hypothetical": 37629
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "全部37628覆盖行、2504二元变量、sum≤11；单solverhandle",
+      "failure_or_result": "CPU硬限终止，solver未返回，无incumbent/不可行证明，UNKNOWN。",
+      "positive_guarantees": [
+        "模型含全部候选，不是只8候选",
+        "20260765非零覆盖关系已构建"
+      ],
+      "unclosed_gap": "未找到覆盖不等于UNSAT；无新图/D。",
+      "lesson_and_restart_condition": "该solverhandle已停不重启；如有新结构证据再独立决定。",
+      "other_metrics": {
+        "variables": 2504,
+        "coverage_rows": 37628,
+        "cardinality_cap": 11,
+        "solver_status": "UNKNOWN",
+        "incumbent_returned": false,
+        "solver_returned": false,
+        "total_CPU_seconds": 59.066855350999994
+      },
+      "relations": [
+        "global_followup_of:ddp-wave4-record37628-single-extension"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/record37628_global_cover",
+      "source_statuses": {
+        "terminal.json": "PROCESS_TERMINATED_UNKNOWN_NO_VALID_COVER"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/record37628_global_cover/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/record37628_global_cover/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/record37628_global_cover/matrix_metadata.json",
+        "research/ddp/breadth_20261027_wave4/record37628_global_cover/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "solver-UNKNOWN-not-infeasible",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-controller364-quotient",
+      "title": "H3显式对合商192与所有单调补度障碍",
+      "family": "four-label affine route-chart lifts",
+      "wave": 4,
+      "record_type": "explicit-controller-plus-capacity",
+      "target_Delta": 12,
+      "target_D": 5,
+      "savedL": 42342,
+      "n": {
+        "actual": 192,
+        "hypothetical": 46656
+      },
+      "actual_D": 5,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 0,
+      "ordinary_bad_target_D": 5,
+      "scope": "固定H3对合商，保留全部旧边、maximumdegree4的所有simple补边",
+      "failure_or_result": "商图普通D5但exactNB5缺6288有序对；root10对角短障碍排除所有指定加边补度。",
+      "positive_guarantees": [
+        "真实置换逐边核对involution",
+        "商图simple connected",
+        "degree2/3/4共4/36/152点"
+      ],
+      "unclosed_gap": "ordinary>5坏对0不表示exactNB5通过；不排其他商/删边/一般192控制器。",
+      "lesson_and_restart_condition": "需改变projection或允许删边，不能补度继续搜。",
+      "other_metrics": {
+        "edges": 362,
+        "exact_NB5_missing_ordered_pairs": 6288,
+        "exact_NB5_missing_diagonal": 192,
+        "deficit_vertices": 40,
+        "deficit_slots": 44,
+        "large_lift_generated": false
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/controller364_quotient",
+      "source_statuses": {
+        "terminal.json": "TERMINAL_EXPLICIT_QUOTIENT_ALL_ADDITIVE_COMPLETIONS_OBSTRUCTED"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/augmentation_obstruction.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/automorphisms.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/quotient.edges",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/quotient.independent_check.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/quotient_check.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/quotient_input.txt",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/quotient_mapping.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/root_obstruction_check.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/root_two_anchor_refinement.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/source_local_check.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/terminal.json",
+        "research/ddp/breadth_20261027_wave4/controller364_quotient/tool_snapshot.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-model-bound-or-exclusion",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-mizuno-d3-source",
+      "title": "Mizuno新版D3边局部矩阵与18个F3模式",
+      "family": "four-label affine route-chart lifts",
+      "wave": 4,
+      "record_type": "source-recovery/word-rank",
+      "target_Delta": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "n": {
+        "actual": null,
+        "hypothetical": 837
+      },
+      "actual_D": null,
+      "actual_D_scope": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "scope": "原30控制器=10K3及6C5，2-(6,3,2)交汇；q4原图1920，q3是另问题",
+      "failure_or_result": "18局部模式/pencil已恢复；原框架good计数给controller n≤31，q3越810只剩31。",
+      "positive_guarantees": [
+        "无内部translation",
+        "每相邻fiber平面pencil覆盖27",
+        "边矩阵可随edge变，不强加通用chart"
+      ],
+      "unclosed_gap": "30×27=810仅公式，不宣称q3全局证书/图已复现；尚缺31控制器。",
+      "lesson_and_restart_condition": "应构造真正global31证书，不恢复旧32/33profile。",
+      "other_metrics": {
+        "source_controller_n": 30,
+        "source_q": 4,
+        "source_n": 1920,
+        "source_Delta": 16,
+        "source_reported_D": 3,
+        "q3_naive_n": 810,
+        "q3_graph_generated": false,
+        "local_patterns": 18,
+        "controller_order_bound": 31
+      },
+      "relations": [],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/mizuno_d3_source",
+      "source_statuses": {
+        "SCOUT.json": "SOURCE_RULE_RECOVERED_Q3_LOCAL_DATA_READY_NO_WINNING_CONTROLLER"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/README.md",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/PROOF_ja.md",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/README.md",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/README_ja.md",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/SCOUT.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/bfs_certificate.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/construction.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/controller_certificate.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/controller_structure.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/cross_checks.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/local_check.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/original_independent_certificate.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/q3_linear_problem.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/q3_local_patterns.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/results_degree16-diameter3.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/results_degree16-diameter3_certificate.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/results_directories.json",
+        "research/ddp/breadth_20261027_wave4/mizuno_d3_source/verification_run.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "source-recovery-no-new-graph",
+      "matched_existing_id": null,
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [],
+        "related_nonexperiment_nodes": [
+          "research-wiki/ideas/ddp-q3-three-step-plane-pencil31.md"
+        ],
+        "missing_independent_experiment_node": true,
+        "creation_action": "backfill-needed"
+      }
+    },
+    {
+      "id": "ddp-wave4-controller31-triangle-extension",
+      "title": "31三角重叠扩张2760完整指定族",
+      "family": "four-label affine route-chart lifts",
+      "wave": 4,
+      "record_type": "finite-family-exhaustion",
+      "target_Delta": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "n": {
+        "actual": 31,
+        "hypothetical": 837
+      },
+      "actual_D": 4,
+      "actual_D_scope": "saved_controller_only;hypothetical_lift_not_generated",
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 15,
+      "ordinary_bad_target_D": 3,
+      "scope": "345不同triangle/C5点对×8指定插入，2760不同标号quartic图",
+      "failure_or_result": "raw passers0；best controllerD4/15，requiredNB3缺34有序对。",
+      "positive_guarantees": [
+        "全部候选simplequartic",
+        "完整实际三角计数11/12均未漏"
+      ],
+      "unclosed_gap": "没有patternCSP或837图；只排这指定插入族。",
+      "lesson_and_restart_condition": "该族停止，不排一般31控制器。",
+      "other_metrics": {
+        "candidates": 2760,
+        "raw_passers": 0,
+        "required_NB3_missing_ordered_pairs": 34
+      },
+      "relations": [
+        "uses_local_rule:ddp-wave4-mizuno-d3-source"
+      ],
+      "variants": [],
+      "primary_source_directory": "research/ddp/breadth_20261027_wave4/controller31_triangle_extension",
+      "source_statuses": {
+        "terminal.json": "COMPLETE_FINITE_FAMILY_NO_RAW_NB3_PASSERS"
+      },
+      "report_paths": [
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/REPORT.md"
+      ],
+      "evidence_paths": [
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/REPORT.md",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/all_candidate_summaries.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/best.independent_check.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/best_raw_coverage.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/first_calibration.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/inputs.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/passers.json",
+        "research/ddp/breadth_20261027_wave4/controller31_triangle_extension/terminal.json"
+      ],
+      "new_lower_bound": false,
+      "outcome_class": "specified-finite-family-exclusion",
+      "matched_existing_id": "exp:ddp-controller31-triangle-overlap2760-20261027",
+      "wiki": {
+        "round_aggregates": [
+          "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+        ],
+        "independent_experiment_nodes_found": [
+          "research-wiki/experiments/ddp-controller31-triangle-overlap2760-20261027.md"
+        ],
+        "related_nonexperiment_nodes": [],
+        "missing_independent_experiment_node": false,
+        "creation_action": "reuse-existing-do-not-duplicate"
+      }
+    }
+  ],
+  "wiki_gaps": {
+    "aggregate_notes_read": [
+      "research-wiki/experiments/ddp-wave3-route-chart-controller-20261027.md",
+      "research-wiki/experiments/ddp-wave3-chart-geometry-followup-20261027.md",
+      "research-wiki/experiments/ddp-wave4-global-geometry-and-record-cover-20261027.md"
+    ],
+    "matched_existing": [
+      {
+        "id": "ddp-wave4-controller31-triangle-extension",
+        "matched_existing_id": "exp:ddp-controller31-triangle-overlap2760-20261027"
+      }
+    ],
+    "missing_independent_row_ids": [
+      "ddp-wave2-extension105-d4",
+      "ddp-wave2-extension254-d4",
+      "ddp-wave2-lexicographic-products",
+      "ddp-wave2-line1664-d4",
+      "ddp-wave2-ternary8424-degree-budget",
+      "ddp-wave2-sl23-c8-biorbit384-d5",
+      "ddp-wave2-two-orbit128-scout",
+      "ddp-wave2-two-orbit128-search",
+      "ddp-wave2-triangle-factor33-controller",
+      "ddp-wave2-triangle-bowtie32-controller",
+      "ddp-wave3-source-scout",
+      "ddp-wave3-pentagon175-controller",
+      "ddp-wave3-controller-lift192",
+      "ddp-wave3-binary-route-chart4",
+      "ddp-wave3-cubic-nb5-bounds",
+      "ddp-wave3-debruijn256",
+      "ddp-wave3-binary-branch364",
+      "ddp-wave3-hexagon-partial-fold-scout",
+      "ddp-wave3-hexagon-partial-fold-greedy",
+      "ddp-wave3-hexagon-partial-fold-joint",
+      "ddp-wave3-tits585-batch-extension",
+      "ddp-wave4-global-partial-fold",
+      "ddp-wave4-equitable-global",
+      "ddp-wave4-pencil-source",
+      "ddp-wave4-record37628-single-extension",
+      "ddp-wave4-record42342-single-extension",
+      "ddp-wave4-record37628-global-cover",
+      "ddp-wave4-controller364-quotient",
+      "ddp-wave4-mizuno-d3-source"
+    ],
+    "asset_directories_not_experiments": [
+      "research/ddp/breadth_20261027_wave2/sources"
+    ],
+    "correction": "record37628/42342 used8 initial profiles and11/12 neighbors, every coordinate mutable; not8pin cap",
+    "no_wiki_writes_performed": true
+  }
+}

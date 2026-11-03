@@ -1,0 +1,44 @@
+{
+  "status": "CURRENT_PRIMARY_SOURCE_BOUND_WITHOUT_LITERAL_DOWNLOAD",
+  "author": "Ryosuke Mizuno",
+  "paper": "New lower bounds for the degree/diameter problem via interaction with a browser-accessible LLM",
+  "source_n": 147456,
+  "source_m": 1179648,
+  "source_reported_D": 5,
+  "source_Delta": 16,
+  "source_all_vertices_degree16": true,
+  "degree_evidence": "Author Theorem2.1 explicitly states G4 simple connected16regular on147456 with diameter5; official current description independently gives degree16 count147456 and m1179648.",
+  "primary_read_scope": [
+    "Theorem2.1",
+    "§2.3 construction overview",
+    "DefinitionA.7",
+    "LemmaA.8 degree proof",
+    "AppendixA.5 controller",
+    "AppendixA.6.2 GF4^5 chart",
+    "OfficialD5 lines335–342",
+    "Current main table degree16/diameter5 entry"
+  ],
+  "source_urls": {
+    "current_main": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+    "official_description": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html",
+    "author_paper": "https://arxiv.org/html/2606.15860v1",
+    "author_paper_doi": "https://doi.org/10.48550/arXiv.2606.15860v1"
+  },
+  "raw_edge_header_read": false,
+  "raw_literal_downloaded": false,
+  "header_substitute": "No literal header claimed: the author theorem and current maintained description bind exactly the current147456 source and settle regularity before any graph fetch.",
+  "recipe": {
+    "controller": "The144-vertex simple quartic controller in AppendixA.5; six-base voltage lift over C4×C6.",
+    "fiber": "GF4^5,1024 vertices per controller vertex",
+    "vertices": "V(C)×GF4^5;144×4^5=147456",
+    "edges": "For each directed controller label t from u to v, connect(u,x) to(v,A_t*x+lambda*b_t) for every lambda inGF4; inverse consistent chart and labels identify reverse edges.",
+    "matrix_location": "Actual GF4 matrices/vectors are the published AppendixA.6.2 data, not a re-use of the separate16D4 source.",
+    "degree_reason": "Four different controller neighbors; for each one the four lambda choices are distinct because b_t is nonzero. Hence exactly4×4=16 neighbors.",
+    "diameter_reason": "Published exact-NB5 controller and universal5-step route chart; inherited author theorem, not rerun here."
+  },
+  "ledger_query": {
+    "updated_UTC": "2026-10-27 21:04:56 UTC",
+    "specific_actual147456_or_target16D5_matches": [],
+    "related_old_work": "Old controller175/180/192 and universal-chart studies are distinct scopes; this is the fixed published source spare-star/property check."
+  }
+}

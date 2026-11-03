@@ -1,0 +1,227 @@
+diff --git a/base/skills/mathrsi-assemble/SKILL.md b/base/skills/mathrsi-assemble/SKILL.md
+index 1320003..4bf2505 100644
+--- a/base/skills/mathrsi-assemble/SKILL.md
++++ b/base/skills/mathrsi-assemble/SKILL.md
+@@ -17,6 +17,7 @@ description: 将原题、已证明引理、准确文献进口与计算证据装
+ 
+ | 当前输入 | 本次实际动作 | 交给调用方的结果 |
+ |---|---|---|
++| 仅要求形式目标，或完整Lean出口已在手 | 读原目标和导出入口，确认不需另组织自然语言正文；返回caller建议verify直接Lean分支 | 原声明、实际模块/导出与已知连接或缺口；不为经过assemble先造TeX或调用writer |
+ | 分散的已证引理、文献进口与证书 | 读取实际证明和证据，把它们按原输入到结论排序，再调用proof-writer写现用正文 | 完整候选正文，或准确指出哪一步仍无上游供给的部分稿 |
+ | 已有完整现稿 | 读主命题和实际引用，确认关键连接；只修真正遗漏的说明 | 沿用的正文入口、改动和是否可交验证；不声称重复执行writer |
+ | 局部定理及caller | 仅组织该局部命题、必要定义、依赖和实际应用 | 可被原prove/verify消费的局部正文与条件，不升级成原题完成 |
+@@ -26,7 +27,11 @@ description: 将原题、已证明引理、准确文献进口与计算证据装
+ 
+ ## 读取什么，在哪里写
+ 
+-先读任务的原规格、现有恢复记录、现用证明入口，以及本次要装配的引理和证据。已有项目沿用其名称。新正文已确定要做正式proof-checker审计时，可直接选任务工作区的 `PROOF.tex`作为唯一正文，用可识别的定理/证明环境写作；不必先造Markdown再转TeX。短证明、仅Markdown交付或未确定正式审计时默认 `PROOF.md`即可。用户已有 `paper/main.tex`、`proof/main.tex` 或指定其他路径时，更新那个入口，不另外制造平行“正式版本”。任务状态留在原工作区，不写入本技能或领域插件。
++先读任务的原规格、现有恢复记录、现用证明入口，以及本次要装配的引理和证据。
++
++**仅形式目标无需先装配自然语言正文。** 若只验Lean见证/出口且不需要写作，读取真实声明与模块后直接返回caller，由其进入[verify的直接Lean分支](../mathrsi-verify/SKILL.md)；不把TeX、proof-writer或proof-checker加为形式验收前置。Lean模块本身尚待连接则标出实际接口，返回caller交lean-formalize；需要新数学时建议prove。若用户也要求可读证明或其正式审计，继续本技能组织该正文，Lean证据不能代替正文论证。
++
++已有项目沿用其名称。新正文已确定要做正式proof-checker审计时，可直接选任务工作区的 `PROOF.tex`作为唯一正文，用可识别的定理/证明环境写作；不必先造Markdown再转TeX。短证明、仅Markdown交付或未确定正式审计时默认 `PROOF.md`即可。用户已有 `paper/main.tex`、`proof/main.tex` 或指定其他路径时，更新那个入口，不另外制造平行“正式版本”。任务状态留在原工作区，不写入本技能或领域插件。
+ 
+ 本技能使用本仓完整 ARIS。Codex 读 [proof-writer](../skills-codex/proof-writer/SKILL.md)，Claude 读 [proof-writer 主线](../proof-writer/SKILL.md)。先完整读对应入口，再调用它处理明确目标。它默认写 `PROOF_PACKAGE.md`，所以**本次调用明确指定所选 `PROOF.tex`、`PROOF.md` 或现用正文路径及格式**；不让writer自行多生成一个默认版本。这是本次写作任务的明确目标，不是修改上游源码。helper 按[本仓调用约定](../../../docs/ARIS_REUSE.md)绑定本副本 `base/tools`，不回退作者机器的 ARIS 仓库或全局安装。
+ 
+@@ -86,7 +91,7 @@ ARIS writer 返回三种有意义的结果。`PROVABLE AS STATED`的证明仍由
+ 
+ ## 4. 返回给验证或证明推进的内容
+ 
+-可进入完整验证时，返回实际正文入口、原规格、主结果、关键进口和计算证据位置，以及此次装配新增或改动的连接。把这些链接写回现有恢复记录即可，不要求另造 `ASSEMBLY_STATE.json`。没有实质未证连接才能称“完整候选证明已装配”；此语仍不等于最终验收已完成。
++可进入完整验证时，返回实际正文入口、原规格、主结果、关键进口和计算证据位置，以及此次装配新增或改动的连接。仅形式目标的直接返回则给原声明、实际模块/导出及连接状态，不虚构一份正文或正式audit。把这些链接写回现有恢复记录即可，不要求另造 `ASSEMBLY_STATE.json`。没有实质未证连接才能称“完整候选证明已装配”；此语仍不等于最终验收已完成。
+ 
+ 不能完整装配时，返回原题仍开、已经写好的严格部分、最小缺口、上下游接口和下一项 prove 行动。已有条件引理保留其准确假设，便于继续研究。若发现主定理必要前提或主要路线判断有误，由 prove 决定是否退回路线工作流；assemble 不自行改变研究目标或提高预算。
+ 
+diff --git a/base/skills/mathrsi-research/SKILL.md b/base/skills/mathrsi-research/SKILL.md
+index 778541c..6bad582 100644
+--- a/base/skills/mathrsi-research/SKILL.md
++++ b/base/skills/mathrsi-research/SKILL.md
+@@ -18,7 +18,8 @@ mathrsi-prove
+   formula-derivation / proof-writer / 领域方法 / 并行作者与核算
+        ↓ 实际证明、证书或原题允许的反例
+ mathrsi-verify
+-  按需assemble → 独立核验 → proof-checker修复回路 → 按需Lean
++  自然语言证明：按需assemble → 所需核验与proof-checker修复回路
++  仅形式目标/Lean出口：直接lean-formalize → 实际导出、构建与公理审计
+        ↓ 原题范围内的结论与真实验证证据
+ mathrsi-handoff
+   完整可读证明 → 复现与按需HTML/包 → wiki、恢复与交接
+@@ -42,6 +43,7 @@ prove ──局部提前验证──→ verify ──该义务结论──→ 
+ | 规格/调查完整，尚无可执行方法 | route-loop | 首批具体任务交prove |
+ | 在途证明、有效路线和可信断点 | prove | 使用已有成果闭合当前义务 |
+ | 完整候选、见证或反例 | verify | 核原题证据，修实际缺口 |
++| 只要形式目标、固定Lean见证或已有Lean出口 | verify的直接Lean分支 | 对齐原声明，消费真实export/build/公理并返回；不先造TeX审计 |
+ | 只缺阅读页、包或暂停交接 | handoff | 按真实状态交付 |
+ 
+ 独立调用子工作流尊重其范围。授权解题到底时，子阶段返回边界后由本入口接棒。可短证的问题直接写完整推导与相称核验，不制造多条路线、探针程序或空目录。
+@@ -98,7 +100,7 @@ ARIS双端实现及helper见 [ARIS_REUSE](../../../docs/ARIS_REUSE.md)。Codex
+ 
+ Root读报告，判断下一行动怎样改变原缺口。可行动路线可以含未证引理；应明确假设、输入连接、下游用途和先做什么。把第一批任务直接交prove，不能在这里只交计划就结束已授权解题。
+ 
+-这层执行 ARIS auto-review-loop 的数学适配，由 route-loop 持有外层轮次：恢复、审阅及证据对话、实质修正、结果回收、带新证据复核、逐轮记忆与终轮交接都要实际完成。research-review通过显式composed接口把当前审阅产物交回同一累计报告；它的对话不另起一个修法调度者。原版训练/投稿评分门改为本次数学路线的交接判断，最终证明仍由proof-checker验收。跨模型通过仓内[Python MCP桥接](../../../docs/REVIEWER_MCP.md)和宿主工具执行；router只解析配置，实际调用与回复必须存在。子循环额度用完返回最有根据的下一动作或精确缺口；Root继续其它授权工作，不因此自动暂停Goal。
++这层执行 ARIS auto-review-loop 的数学适配，由 route-loop 持有外层轮次：恢复、审阅及证据对话、实质修正、结果回收、带新证据复核、逐轮记忆与终轮交接都要实际完成。research-review通过显式composed接口把当前审阅产物交回同一累计报告；它的对话不另起一个修法调度者。原版训练/投稿评分门改为本次数学路线的交接判断，自然语言证明的正式审计仍由proof-checker承担；仅形式目标按verify的直接Lean分支验收。跨模型通过仓内[Python MCP桥接](../../../docs/REVIEWER_MCP.md)和宿主工具执行；router只解析配置，实际调用与回复必须存在。子循环额度用完返回最有根据的下一动作或精确缺口；Root继续其它授权工作，不因此自动暂停Goal。
+ 
+ ## 3. 推进证明，立即收回可用成果
+ 
+@@ -128,17 +130,19 @@ Root必须消费新信息：新定理适用就证明输入条件并接入；只
+ 
+ ## 4. 装配与验收，消费真实证据
+ 
+-调用verify，传原规格、实际候选和证据。分散片段由它调用assemble；完整稿直接核原输入、覆盖和实际算术，再执行proof-checker。纯解析稿不制造证书程序，计算稿不以程序成功省掉覆盖，按需Lean不更换原目标。
++调用verify，传原规格、实际候选、证据与本次需要的成果形式。自然语言分散片段由它调用assemble；需要正式证明审计的完整稿核原输入、覆盖和实际算术后执行proof-checker。仅要求形式目标、固定Lean见证或已有Lean出口时，直接进入lean-formalize，核原声明与实际定义、导出、目标构建和传递公理，不强制先造TeX或paper-audit；已有有效证据复用并说明是否本次运行。若同时要求可读证明正式审计，两项分别完成并消费。纯解析稿不制造证书程序，计算稿不以程序成功省掉覆盖，Lean不更换原目标。
+ 
+ ```text
+ 读取 mathrsi-verify/SKILL.md，执行完整原题范围。
+ 原题 <spec>；候选 <入口>；证据和允许进口 <文件>。
+-已有完整稿直接用，片段按assemble接通。
+-按本宿主proof-checker实际合同审计与修复，Markdown按其输入适配。
+-Lean范围 <用户要求/具体义务/不需要>；返回真实VERIFICATION及audit位置。
++已有完整自然语言稿直接用，需成稿的片段按assemble接通。
++成果范围 <自然语言正式审计/仅形式目标/两者>。
++自然语言正式审计按本宿主proof-checker合同执行，Markdown按其输入适配。
++仅形式目标直接执行或复用lean-formalize，返回原声明对齐、actual export/build/公理与pending。
++Lean范围 <实际目标模块/具体义务/不需要>；返回真实VERIFICATION及适用的audit位置。
+ ```
+ 
+-Root读真实audit未闭项、独核范围和形式声明。文字遗漏或索引错误在验证内修并检查受影响处；需要新数学/选取/分类则带caller交回prove。proof-checker拥有证明修复回路，主流程不另套“直到所有模型赞同”。原回应保留；模型误读可据数学事实反驳，不能篡改成对方PASS。
++Root读适用的真实audit未闭项、独核范围和形式声明；仅形式目标消费export/build/公理及其范围，不把未调用proof-checker当作缺一次必经步骤。文字遗漏或索引错误在验证内修并检查受影响处；需要新数学/选取/分类则带caller交回prove。proof-checker拥有证明修复回路，主流程不另套“直到所有模型赞同”。原回应保留；模型误读可据数学事实反驳，不能篡改成对方PASS。
+ 
+ 原目标成立且本任务规定的核验齐备后进入handoff。指定服务失败时分别保存已成立数学与未完成审阅，继续独立工作；等待不是认可，服务失败也不是数学反例。局部scope始终返回原调用方。
+ 
+@@ -164,7 +168,7 @@ Root读真实audit未闭项、独核范围和形式声明。文字遗漏或索
+ 
+ ECC旧43/10题中，文献类别上限与实际代表合法性、互异性共同闭合目录；完整遍历与低权拒绝见证承担不同义务。较弱配对必要条件全被排除后即可结束原题，无需继续更昂贵的三行扩张。发现代表可以启发式，覆盖则需要严格证据。新45/11、五元35的Lean及36研究仍未完成，不能因方法可复用写成它们已解。
+ 
+-新经验先进入任务wiki，记准确条件与来源。值得跨题复用的按[独立维护工作流](../../../docs/EVOLUTION_WORKFLOW.md)提炼：由维护owner读真实证据、修改实际调用、组织针对性审阅及独立使用试验，再消费结果决定修订、拒绝或纳入下一版。这个流程只在相应维护授权下执行，不是每次解题后自动触发；解题中不改base、不降低原验收。archive是复用资产，旧Goal不是当前授权，按当前义务读原材料而不从零重做已有研究。
++新经验先进入任务wiki，记准确条件与来源。值得跨题复用的按[独立维护工作流](../../../docs/EVOLUTION_WORKFLOW.md)提炼：由维护owner读真实证据、修改实际调用、组织针对性审阅及实际使用核查，再消费结果决定修订、拒绝或纳入下一版。这个流程只在相应维护授权下执行，不是每次解题后自动触发；解题中不改base、不降低原验收。archive是复用资产，旧Goal不是当前授权，按当前义务读原材料而不从零重做已有研究。
+ 
+ ## 一轮执行结束时
+ 
+diff --git a/base/skills/mathrsi-verify/SKILL.md b/base/skills/mathrsi-verify/SKILL.md
+index 1321db9..6212293 100644
+--- a/base/skills/mathrsi-verify/SKILL.md
++++ b/base/skills/mathrsi-verify/SKILL.md
+@@ -21,6 +21,7 @@ flowchart TD
+     B -->|分散的完整候选| C[assemble调用proof-writer形成正文]
+     B -->|已有完整正文| D[读取原证明与依赖]
+     B -->|局部义务| E[隔离该命题、实际caller与必要依赖]
++    B -->|仅形式目标或Lean出口| K[执行或复用lean-formalize及实际导出审计]
+     C -->|连接已齐| D
+     C -->|新数学缺口| R[保留有效部分与准确缺口，返回caller]
+     D --> F[核原输入连接；执行适用的覆盖与独立精确检查]
+@@ -32,7 +33,7 @@ flowchart TD
+     H --> J[按checker修复、同步正文、复审与closure]
+     J --> I
+     F -->|仅确定性局部核验| I
+-    I -->|有形式化要求或具体收益| K[执行或复用lean-formalize及实际导出审计]
++    I -->|另有形式化要求或具体收益| K
+     K --> L[写VERIFICATION并返回原caller]
+     I --> L
+     H -->|实质数学缺口| R
+@@ -41,6 +42,7 @@ flowchart TD
+ 
+ | 当前收到的材料 | 立即执行什么 | 读什么结果后才能继续 |
+ |---|---|---|
++| 只要求形式目标、固定Lean见证或已有Lean出口 | 读原声明、真实定义、工程和导出，直接进§4执行或复用lean-formalize；不先制造TeX或proof-checker审计 | 目标连接、实际export/build/公理及未完成项；依scope返回原caller |
+ | 完整现稿及原规格 | 直接读现稿、进口和证据，确认本次原定理；不重复writer | 从任意原输入到结论的论证及此次尚需验证的事实 |
+ | 引理、表、证书散落，但声称已足以解题 | 把原题和实际材料交assemble，由它实际调用proof-writer | 完整正文与连接状态；缺新数学就交回缺口，不靠审阅补成已证 |
+ | prove交来的一个高风险义务 | 读该命题、上下游caller和相关域，只检查其所需材料 | 精确局部结论、适用条件与剩余；返回原prove继续下游 |
+@@ -56,7 +58,9 @@ flowchart TD
+ 
+ 恢复时从最后一项具体未核事实进入。已有验证对哪个版本、哪个域、哪些声明有效，按实际材料确认；源声明、输入或算法变了，只重核受影响的义务和下游。上次服务不可用与上次数学失败分开保存。不要重开已完成的旧研究、重复未变的整卷审阅，或因一次交付中断重跑所有算术。
+ 
+-完整候选还散落在多份记录时，调用 assemble，交原题、已证引理、进口和证书，消费其正文和连接状态。它若指出缺实质数学，将缺口返回caller建议交prove；此时可以按原scope验证已有局部结果，但不能发起一个假定全证已齐的最终审计。已有完整稿则继续以下步骤。新稿已确定正式审计时可由assemble直接生成唯一 `PROOF.tex`，免去不必要的双载体；已有Markdown需要保留时才按下文适配。
++**先选本次要验收的成果形式。** 用户只要求形式目标、固定Lean见证或已有Lean出口时，直接进§4，给lean-formalize原命题、实际定义、工程与当前义务；已有证据按版本和范围复用。无需为了进入验证先写TeX、调用proof-writer或运行proof-checker。若还要求自然语言证明的正式审计，按§2–3执行该部分，并将Lean证据交回相应audit；形式结果不替代尚未审计的正文。两者由本verify消费后一起返回，局部调用仍回原prove。具体输入与准确返回见[固定Lean出口例](references/lean-target-entry.md)。
++
++自然语言完整候选还散落在多份记录时，调用 assemble，交原题、已证引理、进口和证书，消费其正文和连接状态。它若指出缺实质数学，将缺口返回caller建议交prove；此时可以按原scope验证已有局部结果，但不能发起一个假定全证已齐的最终审计。已有完整稿则继续以下步骤。新稿已确定正式审计时可由assemble直接生成唯一 `PROOF.tex`，免去不必要的双载体；已有Markdown需要保留时才按下文适配。
+ 
+ ## 1. 先处理本次真正未决的证据问题
+ 
+@@ -78,11 +82,11 @@ flowchart TD
+ 
+ ## 2. 区分局部对抗审阅与完整证明审计
+ 
+-先选本次缺口需要的路径。仅核一个算术值或固定证书，执行§1的确定性检查即可；它未覆盖的分类完整性、原对象连接仍需数学论证，不能一并写成程序已验。推进中的局部归约疑问可做下述有界research-review或所需局部Lean，结果回原义务。完整候选或已自足局部定理要正式审计时，直接进§3的proof-checker，通常不先对同稿再跑一次research-review。已有核验复用；只有新增的具体疑问或用户明确要求才另加相应检查，不把两种审阅机械叠加，也不禁止必要时对不同义务采用不同证据。
++先选本次缺口需要的路径。仅核一个算术值或固定证书，执行§1的确定性检查即可；它未覆盖的分类完整性、原对象连接仍需数学论证，不能一并写成程序已验。推进中的局部归约疑问可做下述有界research-review或所需局部Lean，结果回原义务。完整自然语言候选或已自足局部定理要做正式证明审计时，直接进§3的proof-checker，通常不先对同稿再跑一次research-review。已有核验复用；只有新增的具体疑问或用户明确要求才另加相应检查，不把两种审阅机械叠加，也不禁止必要时对不同义务采用不同证据。
+ 
+ 一个新归约、代码与公式接口、候选反例或局部共同约束，可以复用 [research-review Codex](../skills-codex/research-review/SKILL.md)／[Claude 主线](../research-review/SKILL.md)的取证、reviewer路由和trace机制执行一个数学审阅slot。输入是原始局部证明、定义、实际 caller、代码与具体疑问。先读相应技能和backend/trace合同，实际调用选定reviewer并保存原始回应、读取/执行范围；这个slot由当前verify持有范围和返回点，不启动原版论文评分/共识循环，也不声称已跑完整research-review。修真实问题，必要时仅复核新增证据；本地短义务可用独立agent，相应同家族范围如实provisional，用户指定外部reviewer的要求不被替换。
+ 
+-这一slot要形成可消费的回答，例如“归约R有没有漏掉非满支撑输入，若没有，哪一步已经覆盖它”。收到意见先核原文：真实漏洞交给对应推导/实现修；模型误读则记录引用和理由，保留原回应。修后回查该疑问及受影响调用；其结论只解决这个slot。完整候选仍进入下面的checker流程，不能用一封“总体认可”替代全证审计。
++这一slot要形成可消费的回答，例如“归约R有没有漏掉非满支撑输入，若没有，哪一步已经覆盖它”。收到意见先核原文：真实漏洞交给对应推导/实现修；模型误读则记录引用和理由，保留原回应。修后回查该疑问及受影响调用；其结论只解决这个slot。需要自然语言正式审计的完整候选仍进入下面的checker流程，不能用一封“总体认可”替代全证审计。只验形式目标时走§4，不因候选完整而增加paper-audit。
+ 
+ 这里实际保留research-review的**原件审阅、必要的同会话证据澄清/反驳、结论与原证据对照、具体未证项及补证建议回交**。例如reviewer认为漏了边界，先给原段落和实际边界推导让它回查；若仍有争议，把原意见、回应与尚未解决的推论一起交回verify，由当前执行者判断下一步。数学适配到此返回，不沿原Step3/4的“直到双方同意”、论文实验计划或叙事改写继续；不由research-review另派证明或计算修法。`— composed:`若使用，只约定累计报告由谁写，不自动改变这些执行边界。真正修推导/代码由当前verify在范围内执行，需新数学则回prove；后续核新增证据时仍保留真实对话和原始负面意见，不只记transport成功。
+ 
+@@ -124,17 +128,19 @@ checker 未过其轮次上限时，消费它的 unrecoverable report：具体阻
+ 
+ ## 4. 需要时接 Lean，完成它真正负责的义务
+ 
+-用户要求 Lean、继续现有形式工程，或具体关键连接值得形式检查时，读 [lean-formalize Codex](../skills-codex/lean-formalize/SKILL.md)／[Claude 主线](../lean-formalize/SKILL.md)并执行。提供原命题、实际定义、固定工程、关键 proof route、当前待证接口与已有证据。它可以在证明推进中早已运行；本阶段复用当前有效结果，不要求把 Lean 永远拖到全文完成之后。
++本节可以直接从形式目标入口进入；不以§3或TeX正文已完成为前提。用户要求 Lean、继续现有形式工程，或具体关键连接值得形式检查时，读 [lean-formalize Codex](../skills-codex/lean-formalize/SKILL.md)／[Claude 主线](../lean-formalize/SKILL.md)并执行。提供原命题、实际定义、固定工程、关键 proof route、当前待证接口与已有证据。它可以在证明推进中早已运行；本阶段复用当前有效结果，不要求把 Lean 永远拖到全文完成之后。
++
++直接进入时，先把用户原声明与实际导出类型、展开定义对齐，识别结论是否仍带未供给的证书或额外假设。随后按lean-formalize完成所需证明/构建/审计，或读取当前有效的已有结果；数学缺口返回原caller建议prove，库/API问题在形式化内部处理。收回结果后写§5的VERIFICATION并返回原caller；仅形式目标不制造canonical PROOF_AUDIT，也不自行转handoff。
+ 
+ 若从 checker 内部调用 Lean，返回其 checked scope、exported declaration、语义对齐、build 与传递公理证据给原 audit；不由 Lean 再调用 checker。若是 verify 直接组织两项工作，也保持各自产物与 scope，不新造相互递归的验证栈。
+ 
+ Lean 完成需从任意原输入装配出主命题的证明项，实际构建目标模块，展开类型和定义，检查传递公理；multi-module 另作实际入口的独立 import，短单文件按原技能不额外新建工程。`Certificate x → Target x`需要构造所需证书，定义 `Target : Prop`不是证明它。A/B/C 依它的语义对齐、关键论证和最终 export 流程；未变化的证据复用，明确指定的 reviewer 缺失保持 pending。
+ 
+-保存实际命令/退出码/输出，区分增量构建、干净重建和他人独立复现。信任基础按任务允许值说明，不把某个旧项目的 native_decide 禁令变成所有数学通用要求。形式 theorem 已核与某项交付/跨模型复核尚缺可以同时成立，不能因服务失败撤销已经成立的形式结果。
++保存实际命令/退出码/输出，区分本次执行、静态消费历史构建、增量构建、干净重建和他人独立复现。静态读取源码与已有日志不能写成本次运行成功；缺少的目标构建或公理证据保持待核。信任基础按任务允许值说明，不把某个旧项目的 native_decide 禁令变成所有数学通用要求。形式 theorem 已核与某项交付/跨模型复核尚缺可以同时成立，不能因服务失败撤销已经成立的形式结果。
+ 
+ ## 5. 写出能驱动下一步的 VERIFICATION.md
+ 
+-复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
++复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项（本次无自然语言正式审计时明确未调用）；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
+ 
+ 完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能只引用该记录；不会为了进入交付自行造一个 verified claim。
+ 
+diff --git a/base/skills/mathrsi-verify/references/lean-target-entry.md b/base/skills/mathrsi-verify/references/lean-target-entry.md
+new file mode 100644
+index 0000000..b31947c
+--- /dev/null
++++ b/base/skills/mathrsi-verify/references/lean-target-entry.md
+@@ -0,0 +1,45 @@
++# 仅形式目标：从实际 Lean 出口直接验证
++
++本例说明[mathrsi-verify](../SKILL.md)如何消费已有形式结果，不要求先制造自然语言正文或TeX审计。它来自DD历史构造，适用的是入口选择与证据消费，不把源任务的图参数变成通用要求。历史源码与结果随[DD资料层](../../../../plugins/degree-diameter/archive/source/)提供；新任务状态和运行产物写自己的工作区。
++
++## 输入和实际读取
++
++任务只要求核固定F4公式图的形式出口。读取原目标、[实际Exact模块](../../../../plugins/degree-diameter/archive/source/formal/DegreeDiameter/Portfolio/F4Graph3840Exact.lean)、[图定义](../../../../plugins/degree-diameter/archive/source/formal/DegreeDiameter/Portfolio/F4Graph3840.lean)、[原题审计入口](../../../../plugins/degree-diameter/archive/source/formal/F4Graph3840Audit.lean)。沿Exact的import读取它实际依赖的直径与下界；不要把同目录的未用尝试模块当成证明前提。
++
++两个真实导出位于namespace `DegreeDiameter.Portfolio.F4Graph3840`：
++
++```lean
++concrete_order_degree_and_D3 :
++  Fintype.card (Fin 3840) = 3840 ∧
++    (∀ u, graph.degree u ≤ 20) ∧ DiameterAtMost graph 3
++
++diameter_exact_three_in_project_definition :
++  DiameterAtMost graph 3 ∧ ¬ DiameterAtMost graph 2
++```
++
++`DiameterAtMost`在[SingleExtension](../../../../plugins/degree-diameter/archive/source/formal/DegreeDiameter/Portfolio/SingleExtension.lean)定义为`∀ u v, ∃ p : G.Walk u v, p.length ≤ D`，包含相等端点的零步Walk。`graph`是`Fin 3840`上的实际公式邻接，方向由有限域仿射步给出；它不是一个将外部直径证书作为假设的定理。
++
++读取[历史Exact构建结果](../../../../plugins/degree-diameter/archive/source/research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/formalization/F4Graph3840Exact_RESULT.json)、[独立import审计结果](../../../../plugins/degree-diameter/archive/source/research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/formalization/F4Graph3840Audit_RESULT.json)及[完整审计输出](../../../../plugins/degree-diameter/archive/source/research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/formalization/F4Graph3840Audit.log)。后者实际打印定义、两个导出类型与传递公理，仅为`propext`、`Classical.choice`、`Quot.sound`；审计结果记录exit0。原命令中的作者机器绝对路径属于历史，不是新克隆可直接运行的命令。
++
++## 按修改后的入口行动
++
++先判断用户要核的是上述形式命题，还是另要可读证明的正式审计。仅形式目标直接进入lean-formalize，交真实模块、原声明、定义和已有证据，执行其适用流程；没有尚待写作的正文就跳过assemble/writer，没有自然语言正式审计要求就不启动proof-checker。不生成一个表示未运行checker的canonical PROOF_AUDIT。
++
++已有有效构建可按任务范围复用。若当前授权仅为历史证据消费，读取源、结果和日志后明确本次未构建；若任务要求在当前工程运行，按lean-formalize选实际目标模块、固定依赖并保存新命令与输出，不能拿历史exit0替代新运行。缺关键定义、原题连接、目标构建或公理证据，标明缺什么并处理；新数学回原caller建议prove，API/工程问题在形式化内部修。指定跨模型审阅是否完成另按真实回执报告，不以源码编译替代。
++
++若还要求自然语言证明正式审计，给该正文及上述形式证据，按verify§2–3的proof-checker合同运行。两份证据各自支撑自己的scope，不把形式定理升级为外部文件解析器、完整论文或公开纪录认证。
++
++## 可消费的返回
++
++只消费上述历史材料时，可以返回：
++
++```text
++范围：固定F4公式图的两个形式出口；本次静态读取并复用历史构建/审计，未运行Lean。
++已对齐：3840阶、最大度≤20、每对端点有实际≤3 Walk，且项目定义下非D≤2。
++证据：Exact_RESULT与Audit_RESULT记exit0；Audit.log给实际定义、导出与标准三项传递公理。
++没有由这些声明证明：恰20正则、ASCII边表解析/一致性、Mathlib ediam等式或全球纪录。
++自然语言正式审计：本次未请求、未调用proof-checker；其它指定review缺项另列。
++返回：原verify调用方消费该scope；若来自prove局部义务，回原prove继续，不转最终handoff。
++```
++
++同一返回也可能是“导出只证明Certificate→Target，实际输入尚未构造Certificate”，此时原形式目标保持未闭。对于新任务，不照抄本例参数、公理允许集或历史状态；按真实目标读取和执行。

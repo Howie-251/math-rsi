@@ -1,0 +1,53 @@
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:12:98: error: unsolved goals
+a : Fin 60
+p : Fin 5
+x : Vec
+⊢ 0 • direction (inversePort p) = 0
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:17:31: error(lean.unknownIdentifier): Unknown identifier `zero_smul`
+Try this:
+  abel_nf
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:16:61: error: unsolved goals
+a : Fin 60
+p : Fin 5
+t : F
+x y : Vec
+⊢ act (matrix a p) x + (act (matrix a p) y + t • direction (inversePort p)) =
+    act (matrix a p) x + (act (matrix a p) y + (t • direction (inversePort p) + 0 • direction (inversePort p)))
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:17:42: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [stepVec, act_add, zero_smul,̵ ̵a̵d̵d̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:32:23: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  act ?A (?x + ?y)
+in the target expression
+  (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) (x + y) =
+    (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) x +
+      (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) y
+
+a : Fin 60
+p : Fin 5
+x✝ x y : Vec
+⊢ (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) (x + y) =
+    (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) x +
+      (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) y
+DegreeDiameter/Portfolio/F4Graph3840Routes.lean:33:23: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  act ?A (?t • ?x)
+in the target expression
+  (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) (t • x) =
+    t • (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) x
+
+a : Fin 60
+p : Fin 5
+x✝ : Vec
+t : F
+x : Vec
+⊢ (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) (t • x) =
+    t • (fun x => act (matrix (controller a p) (inversePort p)) (act (matrix a p) x)) x
+'DegreeDiameter.Portfolio.F4Graph3840.degree_le_twenty' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph3840.bounded_walk_of_route' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,26 @@
+def DegreeDiameter.degreeAtMostEight.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Prop :=
+fun {V} [Fintype V] G => ∀ (v : V), G.degree v ≤ 8
+def DegreeDiameter.diameterAtMostTwo.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => ∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v
+def DegreeDiameter.Exists82 : ℕ → Prop :=
+fun n => ∃ V x G, Fintype.card V = n ∧ DegreeDiameter.degreeAtMostEight G ∧ DegreeDiameter.diameterAtMostTwo G
+def DegreeDiameter.IsExact82 : ℕ → Prop :=
+fun n => DegreeDiameter.Exists82 n ∧ ∀ (m : ℕ), DegreeDiameter.Exists82 m → m ≤ n
+@DegreeDiameter.card_le_one_add_eight_mul_degree : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → ∀ (r : V), Fintype.card V ≤ 1 + 8 * G.degree r
+@DegreeDiameter.moore_bound : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → Fintype.card V ≤ 65
+@DegreeDiameter.regular_of_card_gt_57 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G → DegreeDiameter.diameterAtMostTwo G → 57 < Fintype.card V → G.IsRegularOfDegree 8
+@DegreeDiameter.exists82_le_65 : ∀ {n : ℕ}, DegreeDiameter.Exists82 n → n ≤ 65
+'DegreeDiameter.card_le_one_add_eight_mul_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.moore_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.regular_of_card_gt_57' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.exists82_le_65' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem original_graph_bound.{u_1} : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (v : V), G.degree v ≤ 8) → (∀ (u v : V), u ≠ v → G.Adj u v ∨ ∃ w, G.Adj u w ∧ G.Adj w v) → Fintype.card V ≤ 65 :=
+fun {V} [Fintype V] G hdeg hpaths => DegreeDiameter.moore_bound G hdeg hpaths
+'original_graph_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+exit_status=0

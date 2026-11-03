@@ -1,0 +1,22 @@
+import DegreeDiameter.Portfolio.GQ77Cubic22Clone70Exact
+open DegreeDiameter.Portfolio
+set_option pp.explicit true in
+#print DiameterAtMost
+#print GQ77Cubic22Clone70.center
+#print GQ77Cubic22Clone70.graph
+#print FullNeighborhoodClones.graph
+#print GQ77Cubic22Clone70.label
+#check GQ77Cubic22Clone70.center_source_label
+#check GQ77Cubic22Clone70.clone_label
+#check GQ77Cubic22Clone70.label_old
+#check GQ77Cubic22Clone70.label_new
+#check GQ77Cubic22Clone70.label_new_copy
+#check GQ77Cubic22Clone70.load_le_six
+#check GQ77Cubic22Clone70.source_no_isolated
+#check GQ77Cubic22Clone70.old_walk_bound_iff
+#check GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3
+#print GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3
+#print GQ77Cubic22Clone70.FinalClaim
+#print axioms GQ77Cubic22Clone70.load_le_six
+#print axioms GQ77Cubic22Clone70.concrete_order_degree_and_exact_D3
+#print axioms GQ77Cubic22Clone70.final_claim

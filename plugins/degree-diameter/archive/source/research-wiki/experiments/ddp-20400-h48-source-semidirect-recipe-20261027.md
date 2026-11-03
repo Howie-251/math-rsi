@@ -1,0 +1,132 @@
+---
+type: experiment
+node_id: exp:ddp-20400-h48-source-semidirect-recipe-20261027
+title: "20400 actual H48补群恢复：17次Ntwist命中，小半直积生成元全61200边匹配"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: yes
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/REPORT.md; research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/PREDICTION.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/RESULT.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/SOURCE_SEMIDIRECT_RECIPE.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/CANDIDATE_TESTS.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/run.py"
+added: 2026-10-27T20:51:14Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 20400 actual H48补群恢复：17次Ntwist命中，小半直积生成元全61200边匹配
+
+**verdict:** `yes`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** known_source_or_recovery
+
+**目标与阶数：** (6,7)；L=20400；known_source_or_recovery n=20400
+
+**距目标的证据：** H=<β,α>order48，Hlaw(u,v)(U,V)=(u+(-1)^v U mod3,v+V mod16)。Mα=[[4,2],[1,1]],Mβ=[[0,4],[1,4]]mod5；χα17=5 primitive16/χβ=1。A=(0,0;0;0,1),B=(0,2;1;1,12),C=(0,4;5;2,11)。source小代数配方READY，全部61200edges literalMATCH，已交新field理论与唯一producer。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "source_n": 20400,
+  "source_m": 61200,
+  "Ntwist_scope_upper": 425,
+  "Ntwists_tested": 17,
+  "first_hit_index": 16,
+  "beta_Ntwist": [
+    1,
+    3,
+    0
+  ],
+  "H_order": 48,
+  "H_Ncosets_distinct": 48,
+  "alpha_matrix_mod5": [
+    [
+      4,
+      2
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "beta_matrix_mod5": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "alpha_scalar17": 5,
+  "alpha_scalar17_order": 16,
+  "beta_scalar17": 1,
+  "positive_generators": [
+    {
+      "index": 0,
+      "name": "A",
+      "normal5": [
+        0,
+        0
+      ],
+      "c17": 0,
+      "u": 0,
+      "v": 1,
+      "actual_root_image": 850
+    },
+    {
+      "index": 1,
+      "name": "B",
+      "normal5": [
+        0,
+        2
+      ],
+      "c17": 1,
+      "u": 1,
+      "v": 12,
+      "actual_root_image": 4183
+    },
+    {
+      "index": 2,
+      "name": "C",
+      "normal5": [
+        0,
+        4
+      ],
+      "c17": 5,
+      "u": 2,
+      "v": 11,
+      "actual_root_image": 13044
+    }
+  ],
+  "all_vertex_group_coordinates": 20400,
+  "source_directed_adjacencies_matched": 122400,
+  "source_undirected_edges_matched": 61200,
+  "CPU_seconds": 0.167126902,
+  "source_BFS": 0,
+  "large_group_enumeration": false,
+  "new_graphs": 0
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/REPORT.md](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/REPORT.md)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/PREDICTION.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/PREDICTION.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/RESULT.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/RESULT.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/SOURCE_SEMIDIRECT_RECIPE.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/SOURCE_SEMIDIRECT_RECIPE.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/CANDIDATE_TESTS.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/CANDIDATE_TESTS.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/run.py](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/h48_complement/run.py)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 只actualN425的最多425fixedtwists β=nB^4，实际第17项n=(1,3,0)即首hit；验证ord3/alpha inversion、48Ncosetsdistinct、actions和3positivegenerator normalforms，再按semidirect rightsteps全source122400arcs匹配。0BFS/大群枚举/新field/候选。
+
+**仍未完成：** Newfieldrepresentations and complete newgraphdiameter results are separate authorized tasks; no newlowerbound or Lean claim here.
+
+**启发与重启依据：** actualregular作用把group equality化为0image比较，固定Ntwist可恢复complement和真正可迁移生成元，而非只凭群名猜参数。新field必须由独立VALID表示与fullcoverage实验判断，不继承sourceD7；本恢复自身已停。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

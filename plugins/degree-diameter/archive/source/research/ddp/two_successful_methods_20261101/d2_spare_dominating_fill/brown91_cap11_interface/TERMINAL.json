@@ -1,0 +1,25 @@
+{
+  "status": "TERMINAL_ANALYTIC_EXCLUSION_H16_AND_ABOVE",
+  "source": "Brown91 fixed old induced graph",
+  "target": "cap11, D2, order107",
+  "result": "Impossible within this scope: helper count<=15, final order<=106",
+  "stages": [
+    {"script":"pin_profiles/check_once.py","owner":"root","CPU_seconds":0.23839998,"status":"PASS_COMPLETE_COLLINEAR_GEOMETRY_PROFILES"},
+    {"script":"check_once.py","compile_CPU_seconds":0.465746,"DP_full_process_CPU_seconds":0.366456,"driver_analysis_CPU_seconds":0.003056152,"status":"PASS_TYPE_RESOURCE_RELAXATION","exit_code":0},
+    {"script":"refine_once.py","compile_CPU_seconds":0.484498,"DP_full_process_CPU_seconds":0.456565,"driver_analysis_CPU_seconds":0.001857849,"status":"PASS_COHORT_OBJECTIVE_RELAXATION","exit_code":0}
+  ],
+  "accounted_scope_CPU_seconds": 2.016578981,
+  "CPU_budget_seconds": 20,
+  "timing_boundary": "Full compile/DP child process CPU plus measured Python analysis segments and root-reported geometry phase; every Python interpreter startup/final write is not claimed included",
+  "workers": 1,
+  "source_or_target_edgelists_generated": 0,
+  "helper_graphs_enumerated": 0,
+  "BFS": 0, "SAT": 0, "MIP": 0, "Lean": 0,
+  "new_primary_search": 0, "installs": 0, "hashes": 0,
+  "jobs_running": 0,
+  "continuation_scheduled": false,
+  "old_N8_D2_n61_queues_restarted": false,
+  "paper_certificate": "PROOF.md sections4-6: per-profile ed-delta<=4s-a-24; total forces B101 and all H degrees full, contradicting odd degree sum75",
+  "numerical_pass_used_as_existence_claim": false,
+  "scope_expansion": false
+}

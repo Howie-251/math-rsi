@@ -1,0 +1,116 @@
+{
+  "status": "READ_ONLY_CACHE_INTERFACE_PASS",
+  "reviewed_UTC": "2026-10-28T04:04:59.467601+00:00",
+  "cache_directory": "monotone_R4_cover",
+  "source_binding": {
+    "literal": "source102060.author.adjlist.txt",
+    "n": 102060,
+    "m": 765045,
+    "reported_D": 5,
+    "source_D5_BFS_repeated": 0,
+    "historical100132_cache_used": false,
+    "construction_binding": "Existing cover.cpp parses current source once; its mark operation simultaneously writes each ball and corresponding target row. The same adjacency object writes CSR. This review did not repeat the raw-source parse or distances."
+  },
+  "eligible_columns": {
+    "count": 810,
+    "file": "monotone_R4_cover/eligible.txt",
+    "order_matches": [
+      "SOURCE_PROFILE.json/free_vertices",
+      "monotone_R4_cover/PREFLIGHT.json/eligible_labels"
+    ],
+    "first_labels": [
+      0,
+      13,
+      26,
+      31,
+      44,
+      45,
+      62,
+      63
+    ],
+    "last_labels": [
+      51242,
+      51247,
+      51260,
+      51270
+    ],
+    "old_degree": 14
+  },
+  "radius4": {
+    "file": "monotone_R4_cover/radius4.u64le.bin",
+    "dtype": "<u8",
+    "shape": [
+      810,
+      1595
+    ],
+    "bytes": 10335600,
+    "row_index": "eligible column index",
+    "bit_index": "old vertex ID0..102059",
+    "closed_ball": true,
+    "last_word_valid_low_bits": 44,
+    "last_word_padding_bits": 20,
+    "nonzero_padding_rows_checked": 0
+  },
+  "target_rows": {
+    "file": "monotone_R4_cover/target_rows.u64le.bin",
+    "dtype": "<u8",
+    "shape": [
+      102060,
+      13
+    ],
+    "bytes": 10614240,
+    "row_index": "old target vertex ID",
+    "bit_index": "eligible column index0..809",
+    "last_word_valid_low_bits": 42,
+    "last_word_padding_bits": 22,
+    "nonzero_padding_rows_checked": 0
+  },
+  "CSR": {
+    "file": "monotone_R4_cover/source.csr.u32le.bin",
+    "dtype": "<u4",
+    "header": [
+      102060,
+      1530090
+    ],
+    "offset_entries": 102061,
+    "offset_start_bytes": 8,
+    "neighbor_start_bytes": 408252,
+    "neighbor_entries": 1530090,
+    "total_bytes": 6528612,
+    "offsets_start_end": [
+      0,
+      1530090
+    ],
+    "all_eligible_degrees_checked": 14
+  },
+  "exact_static_model": {
+    "binary_variables": 810,
+    "target_rows": 102060,
+    "cover": "For every target t, sum of x_r over set bits in target_rows[t] >=1.",
+    "cardinality": "sum(x_r)<=15",
+    "equivalence": "A selected pin gives a new-root route of length<=5 exactly for its closed source R4 targets. Old-old D5 is inherited since all old edges remain. Distinct eligible pins have degree14 and receive one new edge, so maxdegree15 holds.",
+    "no_row_sampling": true,
+    "dedup_or_BFS_required": false
+  },
+  "old_solve_reuse": {
+    "safe_to_reuse": [
+      "Little-endian memmap shapes.",
+      "fullcheck: selected R4 rows OR, mask last word to44 valid bits.",
+      "Map selected columns through eligible labels.",
+      "Binary/cardinality and complete old-target coverage check before any graph claim."
+    ],
+    "must_not_reuse_as_new_full_model": [
+      "active/rare/spread target subset or constraint-generation loop.",
+      "np.unique or repeated duplicate-row tests.",
+      "Old shared10CPU budget or assumed historical100132 source."
+    ]
+  },
+  "execution": {
+    "source_BFS": 0,
+    "R4_ball_recomputation": 0,
+    "models_built": 0,
+    "solver_calls": 0,
+    "candidate_graphs": 0
+  },
+  "implementation_review": "full_static_R4_cover/CODE_REVIEW.json"
+}

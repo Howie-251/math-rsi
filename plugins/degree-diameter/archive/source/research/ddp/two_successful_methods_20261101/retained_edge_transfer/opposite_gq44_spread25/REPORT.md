@@ -1,0 +1,11 @@
+# Producer result: fixed 7242-point candidate
+
+The unique fixed GF4 balanced-GQ spread augmentation succeeded. The complete edge table graph_d25_D3_n7242.edges has 7242 vertices and 90525 edges and is simple 25-regular. The source has 7225 vertices and 90100 edges, with exactly 425 incident flags of degree 24 and 6800 nonflags of degree 25. All 90100 old edges are retained. Seventeen new degree-25 vertices use the 425 flag deficits exactly once.
+
+The frozen literal geometry has 85 points and 85 five-point lines, five lines per point, and all 6800 nonincident unique-projection checks passed. Its 17-line GF16 slope spread partitions all 85 points. All seventeen actual insertions passed the complete-current-graph radius-2 coverage check from 25 pins, including every previously inserted new vertex; the current graph orders were 7225 through 7241 and every uncovered count was zero. Every pin had degree 24 before use, and the final graph is 25-regular. PROOF.md binds the literal fields/incidence/spread data and gives the old-old, old-new and new-new routes proving exact diameter 3.
+
+Production used 0.252167557 CPU seconds, one worker, zero solver calls, and one ordinary final root-0 connectivity BFS. No source or final all-roots BFS was run here. Initial geometry preparation cost 0.050489278 CPU seconds separately. Fresh independent literal acceptance and concrete Lean are root-owned separate tasks, presently pending from the producer's perspective. No further construction is running; no other field, spread or degree was tried.
+
+The [2026-11-01 limited public comparison](../../public_baseline_audit/DEGREE25_EXTENSION_20261101.md) locates the classical 7225 formula as best located for (25,3), so this candidate adds 17 vertices relative to that located formula. It does not certify a global record or priority. Classical symplectic GQ, spread and opposite-product attribution is retained; the 7225 source reproduction is not counted as a new graph.
+
+Primary evidence: PARAMETERS.json, FIELD_TABLES.json, PROJECTION_WITNESSES.json, GQ_AXIOM_CHECK.json, SOURCE_CHECK.json, EXTENSION_STEPS.json, RESULT.json, TERMINAL.json, PROOF.md, prepare_geometry.py, generate_once.py, and the unique complete edge table.

@@ -1,0 +1,37 @@
+{
+  "status": "PRODUCTION_PASS",
+  "total_CPU_seconds": 1.242568592,
+  "CPU_budget_seconds": 30.0,
+  "single_worker": true,
+  "all_children_terminal": true,
+  "steps": [
+    {
+      "phase": "compile",
+      "command": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/single_fiber_plane55_graph/generate.cpp",
+        "-o",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/single_fiber_plane55_graph/generate"
+      ],
+      "returncode": 0,
+      "CPU_seconds_including_driver": 0.7691012919999999
+    },
+    {
+      "phase": "generate",
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/single_fiber_plane55_graph/generate",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/graph_d54_D3_n56862.edges",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/single_fiber_plane55_graph/ORDERED_PINS.tsv",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/single_fiber_plane55_graph"
+      ],
+      "returncode": 0,
+      "CPU_seconds_including_driver": 0.4486415790000001
+    }
+  ],
+  "BFS_solver_Lean_runs": 0,
+  "source_BFS_repeated": false,
+  "new_graph_counted_by_producer": false,
+  "measurement_boundary": "Python imports/preparation, exact interface conversion, one C++compile, original literal source/pin binding, fullgraph creation, result aggregation"
+}

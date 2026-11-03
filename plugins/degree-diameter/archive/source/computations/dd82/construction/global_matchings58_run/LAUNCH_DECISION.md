@@ -1,0 +1,3 @@
+# Launch decision
+
+2026-10-18: latest comments re-read. Fresh same-family xhigh reviewer reports no blocker in generate.py/runner.py;49 small marginal-gain BFS cases already passed. DirectionGemini1 is still in flight; this is not claimed as cross-model acceptance. Under current human-in-loop §6, a concrete bounded experiment proceeds after necessary mathematical/code checks rather than waiting for all reviews. Old V3 sequencing is superseded where contradictory. One batch0..7,60CPU/90wall including independentBFS, no restart or oldlocal switches. Root will incorporate the actual direction response when returned.

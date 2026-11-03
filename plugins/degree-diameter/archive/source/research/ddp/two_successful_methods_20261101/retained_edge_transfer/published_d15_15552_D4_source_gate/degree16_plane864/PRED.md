@@ -1,0 +1,9 @@
+# Fixed I32 whole27-plane graph production
+
+Predict one complete n16416 graph withmaximumdegree≤16 anddiameter4,usingthealreadyaccepted15552sourceandfrozenI32packing. Exactedgecount,centerdegrees,oldpinloads andfinaldegrees mustcome fromtheliteral rows,not a guessed14/15split. The stronger freshsuite prediction isthat everyfinalroot hasatleast6966 OLD vertices atdistanceexactly4;producerdoesnotmeasureit.
+
+OnlytheI32incontroller_pack32_gate/SELECTED_BLOCKS.json isused,sortedcontrollerindexouter and27 offsetcodesx0+9*x2+27*x3 inner(x3,x2,x0). Centerj=81*I[j//27]+offset[j%27],newlabel15552+j. For864centers copytheentire originalsimpleN14/15 frozenfromsource15552.author.adjlist.txt;theoldcenter'svirtualself isalreadydeleted. Neverrefilterbythenewclone'slabel oraddbacktheoldcenter. Preserveall116316oldedges,addonlynew-oldedges,no new-new.
+
+Readtheoriginalrawonce solelyasproductioninput,without sourceD4/BFS/field/rank/kernelrevalidation. Theinheritedplane/transversal/target-disjoint proofpredicts pinload≤1. TheoldsourcegenuineWalkD4 andfullN endpointreplacementprovideallpair/prefixD4withoutcenterindependence;controllerprojectionmaxdegree≤5 givesB3≤106controllers,soatleast86*81=6966oldverticesbeyond3perroot. This predictionisfortheindependentfinalgraphsuite,notproducerBFS.
+
+Productioncap20CPU includesallpreparation/failures,oneworker,onefixedgraph. No33+packing,prefixfiles,newsource/field/BFS/Lean/ARIS/hash/installation/root/Wikioroldfrozenfile edits. Actualraw/parameters/rolebindings/receipts areproduced first;rootdoesnotcountthenewgraphuntilfreshacceptancePASS. Currentrootpublicgate16384 isaboundedcomparison,globalpriorityUNKNOWN.

@@ -1,0 +1,90 @@
+{
+  "operation": "(a,b)*(c,d)=(a+r^b*c,b+d); right voltage multiplication",
+  "parent_source": "../SOURCE.json",
+  "source_graph_loaded_or_reverified": false,
+  "common_inner_conjugation": "Conjugating by (c,0) changes translation a of phase b by c*(1-r^b). Since r^4=r!=1, choose c to make A1 translation0.",
+  "side_gauge": "Old B_h becomes new B_(h*S0^-1); crossT becomes T*S0^-1, firstcross=e; B-internalg becomes S0*g*S0^-1; A unchanged.",
+  "normalized_phase_pattern": {
+    "internal_A": [
+      4,
+      3
+    ],
+    "internal_B": [
+      1,
+      6
+    ],
+    "cross_A_to_B": [
+      0,
+      4,
+      1
+    ]
+  },
+  "normalized_voltages": {
+    "A1": [
+      0,
+      4
+    ],
+    "A2": [
+      "u",
+      3
+    ],
+    "B1": [
+      "v",
+      1
+    ],
+    "B2": [
+      "w",
+      6
+    ],
+    "T0": [
+      0,
+      0
+    ],
+    "T1": [
+      "s",
+      4
+    ],
+    "T2": [
+      "t",
+      1
+    ]
+  },
+  "free_variable_order": [
+    "u",
+    "v",
+    "w",
+    "s",
+    "t"
+  ],
+  "normalization_scope": "All5 free translations after valid common and side coordinate changes; nonzero scalar multiplication yields projective representatives. Possible isomorphic duplicates remain.",
+  "connectedness": "Pure phase4 generates C9 on A; identity cross transfers it to B. Any nonzero free translation voltage compared to its pure phase gives nonzero additive F43 translation; hence all nonzero tuples connected. Allzero disconnected.",
+  "simplicity_and_degree": "Internal inverse phases distinct/nonzero; each side has four internal arcs. Three cross phases0,4,1 distinct; even cross identity connects different types. Degree7 throughout.",
+  "projective_charts": [
+    {
+      "first_nonzero_index": 0,
+      "cases": 3418801
+    },
+    {
+      "first_nonzero_index": 1,
+      "cases": 79507
+    },
+    {
+      "first_nonzero_index": 2,
+      "cases": 1849
+    },
+    {
+      "first_nonzero_index": 3,
+      "cases": 43
+    },
+    {
+      "first_nonzero_index": 4,
+      "cases": 1
+    }
+  ],
+  "cases_per_action": 3500201,
+  "actions": [
+    6,
+    36
+  ],
+  "total_scope": 7000402
+}

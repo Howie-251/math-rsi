@@ -1,0 +1,16 @@
+{
+  "frozen_before_worker_imports_preparation_or_solver": true,
+  "prediction": "The necessary global seven-cut perfect-matching model is feasible. This predicts neither a full D3 graph nor a new lower bound.",
+  "target_Delta": 14,
+  "target_D": 3,
+  "savedL": 1141,
+  "hypothetical_n": 1142,
+  "scope": "Fixed source1141; delete exactly7 pairwise-disjoint source edges, and add one hub adjacent to all14 distinct cut endpoints. All other old edges remain, no other changes.",
+  "model": "1141 binary endpoint x and7987 binary cut y. Sum y=7; incident y sum=x at each old vertex; all1141 closed-R2 endpoint-cover rows; all173821 cached unique3 critical-middle rows y_uv<=x_p+x_q. Objective sum x is constant14.",
+  "actual_check": "Every incumbent is constructed as actual1142/7994/simple14regular modified graph and native R3 checked. Up to32 source-distance3 bad pairs per failed incumbent give exact path-survival OR/hub-path constraints. At most10 incumbent rounds in the single aggregate budget; no bad-pair objective or local move optimization.",
+  "lazy_paper": "debruijn independently confirmed exact OR and source-distance<=2 survival before numerical execution. Closed neighborhoods include the endpoint itself. Aux variables may be continuous0..1; integer x/y determine actual paths.",
+  "production_CPU_hard_limit_seconds": 60,
+  "budget_includes": "worker imports, source/cache preparation, all solver rounds, driver and native verification children; compile separate",
+  "stop": "First complete modified-D3 hit, infeasibility,10incumbents, aggregateCPU limit, or actual implementation contradiction. No sixth/eighth cut, second helper or other source.",
+  "additional_pre_run_first_loss_rule": "At most one lex singleton target per directed sourceedge: y_uv <= sum closedN(target) x, using cached FIRST_SUPPORTS. This is an explicitly bounded extra necessary row set, not a changed candidate family."
+}

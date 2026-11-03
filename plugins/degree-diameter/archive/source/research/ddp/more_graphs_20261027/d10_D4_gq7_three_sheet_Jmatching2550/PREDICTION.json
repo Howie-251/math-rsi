@@ -1,0 +1,20 @@
+{
+  "target": [
+    10,
+    4
+  ],
+  "saved_public_lower_bound": 2485,
+  "proposed_order": 2550,
+  "frozen_before_generation": true,
+  "question": "Can the unused point degree slot of a three-sheet W(7) lift remove the known coordinate-flat obstruction by a spread-preserving projective involution?",
+  "geometry": "V=F49^2, F49=F7[j]/(j^2-3), coordinates(a,b,c,d), B=ac'-ca'+3(bd'-db'). Points normalized first nonzero1, lexicographic IDs. Lines are isotropic two-spaces with canonical RREF basis.",
+  "voltage": "P->L phase chi(a_L^2-3 b_L^2) in Z3; chi(3^k)=k mod3. This coefficient-only voltage without J has a previously derived axis-flat obstruction, inherited without generating that control.",
+  "edges": "Three-sheet incidence matching, K3 on each line fibre, three line twins for each of the50 Desarguesian spread lines with copied incidence matching and K3, and same-sheet point matching p--Jp where J(a,b,c,d)=(3b,a,3d,c).",
+  "specific_prediction": "J has no projective fixed points, preserves each spread line and makes all vertices degree10. All opposite point pairs with B(Jp,r)=0 have every sheet reached by one point matching, two incidence edges and one line-fibre triangle step. All opposite line pairs with M intersect J(L) nontrivially have the analogous route. This includes the previous canonical axis-flat counterexample. Test whether the remaining opposite pairs are simultaneously covered by the fixed norm voltages.",
+  "refutation": "Any actual radius4 missing target refutes complete diameter4. Independently, arbitrary voltages in this fixed line-triangle/twin construction have global diameter at most5, so such a miss establishes exact diameter5.",
+  "finite_scope": "One fixed q7/eta3/primitive3/norm/RREF/J candidate. No basis, eta, voltage, matching or seed sweep after failure.",
+  "verification": "Construct actual graph, check simple/undirected10regular, traverse roots until first radius4 failure; if none, all2550 roots certify D<=4. Native10CPU hard limit plus compilation separately; no repeated published-source BFS.",
+  "positive_followup": "Export literal graph and recipe, independently verify first new parameter and focused Gemini review. A failed graph has no new-lower-bound credit.",
+  "predicted_J_repaired_opposite_point_pairs_unordered": 9800,
+  "count_reason": "For each p, (Jp)^perp contains57 points; its intersection with p^perp is the8-point spread line through p. Thus49 opposite targets per root, 400*49/2=9800."
+}

@@ -1,0 +1,65 @@
+def DegreeDiameter.nonedgeVertices.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → Finset V :=
+fun {V} [Fintype V] G n => {y | y ≠ n ∧ ¬G.Adj n y}
+def DegreeDiameter.nonedgeDefectBudget.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → ℤ :=
+fun {V} [Fintype V] G n => ∑ y ∈ DegreeDiameter.nonedgeVertices G n, DegreeDiameter.defectMatrix G n y
+def DegreeDiameter.heavyZeroRepeats.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → Finset V :=
+fun {V} [Fintype V] G n => {y | DegreeDiameter.zeroTriangleVertex G y ∧ DegreeDiameter.defectMatrix G n y = 2}
+def DegreeDiameter.orderedHeavyZeroPairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → Finset (V × V) :=
+fun {V} [Fintype V] G n => {p ∈ (DegreeDiameter.zeroNeighbors G n).offDiag | DegreeDiameter.defectMatrix G p.1 p.2 = 2}
+def DegreeDiameter.zeroTriangleVertices.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset V :=
+fun {V} [Fintype V] G => Finset.filter (DegreeDiameter.zeroTriangleVertex G) Finset.univ
+def DegreeDiameter.nonzeroTriangleVertices.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset V :=
+fun {V} [Fintype V] G => {n | ¬DegreeDiameter.zeroTriangleVertex G n}
+def DegreeDiameter.globalHeavyZeroPairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (V × V) :=
+fun {V} [Fintype V] G =>
+  {p ∈ DegreeDiameter.zeroTriangleVertices G ×ˢ DegreeDiameter.zeroTriangleVertices G |
+    DegreeDiameter.defectMatrix G p.1 p.2 = 2}
+@DegreeDiameter.n59_nonzero_nonedge_budget_le_four : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        ∀ {n : V}, ¬DegreeDiameter.zeroTriangleVertex G n → DegreeDiameter.nonedgeDefectBudget G n ≤ 4
+@DegreeDiameter.ordered_heavy_pair_outside_witnesses_two : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {n : V} {p : V × V},
+  p ∈ DegreeDiameter.orderedHeavyZeroPairs G n →
+    {y ∈ DegreeDiameter.nonedgeVertices G n | G.Adj p.1 y ∧ G.Adj y p.2}.card = 2
+@DegreeDiameter.ordered_heavy_pairs_le_pair_indicator_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+    ∀ (n : V),
+      ↑(DegreeDiameter.orderedHeavyZeroPairs G n).card ≤
+        ∑ y ∈ DegreeDiameter.nonedgeVertices G n, DegreeDiameter.commonZeroPairIndicator G n y
+@DegreeDiameter.n59_nonzero_local_heavy_capacity : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+          ∀ {n : V},
+            ¬DegreeDiameter.zeroTriangleVertex G n →
+              ↑(DegreeDiameter.orderedHeavyZeroPairs G n).card + ↑(DegreeDiameter.heavyZeroRepeats G n).card ≤ 4
+@DegreeDiameter.zero_heavy_degree_identity : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+    (DegreeDiameter.globalHeavyZeroPairs G).card +
+        ∑ n ∈ DegreeDiameter.nonzeroTriangleVertices G, (DegreeDiameter.heavyZeroRepeats G n).card =
+      2 * (DegreeDiameter.zeroTriangleVertices G).card
+@DegreeDiameter.n59_global_heavy_zero_pairs_covered : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+          (DegreeDiameter.globalHeavyZeroPairs G).card ≤
+            ∑ n ∈ DegreeDiameter.nonzeroTriangleVertices G, (DegreeDiameter.orderedHeavyZeroPairs G n).card
+@DegreeDiameter.n59_nonzero_triangle_vertices_at_least_twenty : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 59 →
+        (∀ (z : V), DegreeDiameter.zeroTriangleVertex G z → DegreeDiameter.matchingRow G z) →
+          20 ≤ (DegreeDiameter.nonzeroTriangleVertices G).card
+'DegreeDiameter.n59_nonzero_nonedge_budget_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.ordered_heavy_pair_outside_witnesses_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.ordered_heavy_pairs_le_pair_indicator_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n59_nonzero_local_heavy_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.zero_heavy_degree_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n59_global_heavy_zero_pairs_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n59_nonzero_triangle_vertices_at_least_twenty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

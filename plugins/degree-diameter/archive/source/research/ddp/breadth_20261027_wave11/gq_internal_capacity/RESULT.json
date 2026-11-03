@@ -1,0 +1,2206 @@
+{
+  "status": "COMPLETE_NECESSARY_CAPACITY_SCREEN_NO_GRAPH_SEARCH",
+  "mechanism": "GQ(q,q) incidence retained; arbitrary simple r-regular internal graph on each side",
+  "baseline_snapshot": "context/DD_PORTFOLIO_START_20261026/registry/cases.json",
+  "baseline_as_of": "2026-10-26",
+  "scope": {
+    "q": "prime powers 2<=q<=11",
+    "degree_cap": 12,
+    "r": "integer 0<=r<=11-q; Nr even required",
+    "graph_order": "2(q+1)(q^2+1)",
+    "graph_degree": "q+1+r",
+    "target_diameter": 3
+  },
+  "formula": {
+    "far": "q^3",
+    "upper": "2*r*q^2 + r*q*(q+1) + r*(r-1) + r*(r-1)^2",
+    "simplified_upper": "3*r*q^2 + r*q + r^2*(r-1)",
+    "type": "average over all roots in one bipartition side; necessary only"
+  },
+  "summary": {
+    "parameter_pairs": 47,
+    "legal_by_regular_graph_parity": 36,
+    "active_legal_pairs": 35,
+    "strict_D3_order_improving_pairs": 19,
+    "legal_strict_D3_order_improving_pairs": 16,
+    "legal_strict_D3_necessary_passes": 3,
+    "legal_strict_D3_capacity_excluded": 13,
+    "D4_or_D5_strict_order_improvements": 0
+  },
+  "necessary_passes": [
+    {
+      "q": 3,
+      "r": 1,
+      "n": 80,
+      "degree": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 30,
+      "status": "NECESSARY_PASS_NO_GRAPH_CONSTRUCTED"
+    },
+    {
+      "q": 5,
+      "r": 2,
+      "n": 312,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 164,
+      "status": "NECESSARY_PASS_ALREADY_TESTED_FINITE_PROFILE_FAILED"
+    },
+    {
+      "q": 7,
+      "r": 3,
+      "n": 800,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 480,
+      "status": "NECESSARY_PASS_NO_GRAPH_CONSTRUCTED"
+    }
+  ],
+  "max_degree_relaxation": {
+    "scope": "Allow arbitrary simple internal graphs of maximum degree at most r on each side. The same average U bound remains valid; parity is not an obstruction to this larger scope.",
+    "proof": "The CA far route total is 2*m_P*q^2 <= N*r*q^2. All other upper bounds already use degree upper bounds only.",
+    "strict_D3_order_improving_pairs": 19,
+    "capacity_excluded_pairs": 15,
+    "necessary_passes": [
+      {
+        "q": 3,
+        "r": 1,
+        "n": 80,
+        "degree": 5,
+        "savedL": 72,
+        "far_targets_per_root": 27,
+        "average_capacity_upper_bound": 30
+      },
+      {
+        "q": 5,
+        "r": 2,
+        "n": 312,
+        "degree": 8,
+        "savedL": 253,
+        "far_targets_per_root": 125,
+        "average_capacity_upper_bound": 164
+      },
+      {
+        "q": 7,
+        "r": 3,
+        "n": 800,
+        "degree": 11,
+        "savedL": 715,
+        "far_targets_per_root": 343,
+        "average_capacity_upper_bound": 480
+      },
+      {
+        "q": 8,
+        "r": 3,
+        "n": 1170,
+        "degree": 12,
+        "savedL": 810,
+        "far_targets_per_root": 512,
+        "average_capacity_upper_bound": 618
+      }
+    ],
+    "important_open_case": {
+      "q": 8,
+      "internal_max_degree": 3,
+      "n": 1170,
+      "graph_max_degree": 12,
+      "savedL": 810,
+      "status": "NECESSARY_PASS_NEAR_REGULAR_CHOICES_NOT_SEARCHED",
+      "detail": "Each side has 585 vertices. An internal graph may have one degree-2 vertex and 584 degree-3 vertices. Exact 3-regular parity failure does not exclude this maximum-degree template."
+    },
+    "followup": "research/ddp/breadth_20261027_wave11/gq_commuting_obstruction/REPORT.md"
+  },
+  "existing_profile": {
+    "path": "research/ddp/breadth_20261027_wave10/gq312_internal_cycles/best.independent_check.json",
+    "q": 5,
+    "r": 2,
+    "n": 312,
+    "degree": 8,
+    "actual_D": 4,
+    "bad_unordered_pairs_gt3": 4090,
+    "verification": "root independent all-312-root BFS already completed; not rerun",
+    "scope": "two finite internal-2-factor search starts only, not all 2-regular internal choices"
+  },
+  "positive_routing_basis": "Retaining all GQ incidence edges keeps every opposite-side pair within 3 and every collinear same-side pair within 2, and gives full D<=4. Far same-side pairs are the only D3 obligation.",
+  "graph_generation_count": 0,
+  "BFS_count": 0,
+  "parameter_search_proposals": 0,
+  "new_lower_bounds": 0,
+  "parameters": [
+    {
+      "q": 2,
+      "r": 0,
+      "side_order": 15,
+      "n": 30,
+      "degree": 3,
+      "target_D": 3,
+      "savedL": null,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -8,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": false,
+      "strict_D3_order_improvement": false,
+      "status": "OUTSIDE_ACTIVE_DEGREE_RANGE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": null,
+          "strict_order_improvement": null,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": null,
+          "strict_order_improvement": null,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": null,
+          "strict_order_improvement": null,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 1,
+      "side_order": 15,
+      "n": 30,
+      "degree": 4,
+      "target_D": 3,
+      "savedL": 41,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 14,
+      "capacity_terms": {
+        "internal_then_incidence_average": 4,
+        "incidence_then_internal_average": 4,
+        "opposite_side_internal_relay": 6,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": 6,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 41,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 104,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 364,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 2,
+      "side_order": 15,
+      "n": 30,
+      "degree": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 32,
+      "capacity_terms": {
+        "internal_then_incidence_average": 8,
+        "incidence_then_internal_average": 8,
+        "opposite_side_internal_relay": 12,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": 24,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 72,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 252,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 3,
+      "side_order": 15,
+      "n": 30,
+      "degree": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 60,
+      "capacity_terms": {
+        "internal_then_incidence_average": 12,
+        "incidence_then_internal_average": 12,
+        "opposite_side_internal_relay": 18,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 52,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 120,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 441,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 1518,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 4,
+      "side_order": 15,
+      "n": 30,
+      "degree": 7,
+      "target_D": 3,
+      "savedL": 170,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 104,
+      "capacity_terms": {
+        "internal_then_incidence_average": 16,
+        "incidence_then_internal_average": 16,
+        "opposite_side_internal_relay": 24,
+        "pure_internal_two_steps": 12,
+        "pure_internal_three_steps": 36
+      },
+      "capacity_margin": 96,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 170,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 684,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 2810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 5,
+      "side_order": 15,
+      "n": 30,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 170,
+      "capacity_terms": {
+        "internal_then_incidence_average": 20,
+        "incidence_then_internal_average": 20,
+        "opposite_side_internal_relay": 30,
+        "pure_internal_two_steps": 20,
+        "pure_internal_three_steps": 80
+      },
+      "capacity_margin": 162,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 253,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1100,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 5334,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 6,
+      "side_order": 15,
+      "n": 30,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 264,
+      "capacity_terms": {
+        "internal_then_incidence_average": 24,
+        "incidence_then_internal_average": 24,
+        "opposite_side_internal_relay": 36,
+        "pure_internal_two_steps": 30,
+        "pure_internal_three_steps": 150
+      },
+      "capacity_margin": 256,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 7,
+      "side_order": 15,
+      "n": 30,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 392,
+      "capacity_terms": {
+        "internal_then_incidence_average": 28,
+        "incidence_then_internal_average": 28,
+        "opposite_side_internal_relay": 42,
+        "pure_internal_two_steps": 42,
+        "pure_internal_three_steps": 252
+      },
+      "capacity_margin": 384,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 8,
+      "side_order": 15,
+      "n": 30,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 560,
+      "capacity_terms": {
+        "internal_then_incidence_average": 32,
+        "incidence_then_internal_average": 32,
+        "opposite_side_internal_relay": 48,
+        "pure_internal_two_steps": 56,
+        "pure_internal_three_steps": 392
+      },
+      "capacity_margin": 552,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 2,
+      "r": 9,
+      "side_order": 15,
+      "n": 30,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 8,
+      "average_capacity_upper_bound": 774,
+      "capacity_terms": {
+        "internal_then_incidence_average": 36,
+        "incidence_then_internal_average": 36,
+        "opposite_side_internal_relay": 54,
+        "pure_internal_two_steps": 72,
+        "pure_internal_three_steps": 576
+      },
+      "capacity_margin": 766,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 0,
+      "side_order": 40,
+      "n": 80,
+      "degree": 4,
+      "target_D": 3,
+      "savedL": 41,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -27,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 41,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 104,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 364,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 1,
+      "side_order": 40,
+      "n": 80,
+      "degree": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 30,
+      "capacity_terms": {
+        "internal_then_incidence_average": 9,
+        "incidence_then_internal_average": 9,
+        "opposite_side_internal_relay": 12,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": 3,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "NECESSARY_PASS_NO_GRAPH_CONSTRUCTED",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 72,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 252,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 2,
+      "side_order": 40,
+      "n": 80,
+      "degree": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 64,
+      "capacity_terms": {
+        "internal_then_incidence_average": 18,
+        "incidence_then_internal_average": 18,
+        "opposite_side_internal_relay": 24,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": 37,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 120,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 441,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 1518,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 3,
+      "side_order": 40,
+      "n": 80,
+      "degree": 7,
+      "target_D": 3,
+      "savedL": 170,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 108,
+      "capacity_terms": {
+        "internal_then_incidence_average": 27,
+        "incidence_then_internal_average": 27,
+        "opposite_side_internal_relay": 36,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 81,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 170,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 684,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 2810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 4,
+      "side_order": 40,
+      "n": 80,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 168,
+      "capacity_terms": {
+        "internal_then_incidence_average": 36,
+        "incidence_then_internal_average": 36,
+        "opposite_side_internal_relay": 48,
+        "pure_internal_two_steps": 12,
+        "pure_internal_three_steps": 36
+      },
+      "capacity_margin": 141,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 253,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1100,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 5334,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 5,
+      "side_order": 40,
+      "n": 80,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 250,
+      "capacity_terms": {
+        "internal_then_incidence_average": 45,
+        "incidence_then_internal_average": 45,
+        "opposite_side_internal_relay": 60,
+        "pure_internal_two_steps": 20,
+        "pure_internal_three_steps": 80
+      },
+      "capacity_margin": 223,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 6,
+      "side_order": 40,
+      "n": 80,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 360,
+      "capacity_terms": {
+        "internal_then_incidence_average": 54,
+        "incidence_then_internal_average": 54,
+        "opposite_side_internal_relay": 72,
+        "pure_internal_two_steps": 30,
+        "pure_internal_three_steps": 150
+      },
+      "capacity_margin": 333,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 7,
+      "side_order": 40,
+      "n": 80,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 504,
+      "capacity_terms": {
+        "internal_then_incidence_average": 63,
+        "incidence_then_internal_average": 63,
+        "opposite_side_internal_relay": 84,
+        "pure_internal_two_steps": 42,
+        "pure_internal_three_steps": 252
+      },
+      "capacity_margin": 477,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 3,
+      "r": 8,
+      "side_order": 40,
+      "n": 80,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 27,
+      "average_capacity_upper_bound": 688,
+      "capacity_terms": {
+        "internal_then_incidence_average": 72,
+        "incidence_then_internal_average": 72,
+        "opposite_side_internal_relay": 96,
+        "pure_internal_two_steps": 56,
+        "pure_internal_three_steps": 392
+      },
+      "capacity_margin": 661,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 0,
+      "side_order": 85,
+      "n": 170,
+      "degree": 5,
+      "target_D": 3,
+      "savedL": 72,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -64,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 72,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 252,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 1,
+      "side_order": 85,
+      "n": 170,
+      "degree": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 52,
+      "capacity_terms": {
+        "internal_then_incidence_average": 16,
+        "incidence_then_internal_average": 16,
+        "opposite_side_internal_relay": 20,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -12,
+      "capacity_pass": false,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 120,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 441,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 1518,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 2,
+      "side_order": 85,
+      "n": 170,
+      "degree": 7,
+      "target_D": 3,
+      "savedL": 170,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 108,
+      "capacity_terms": {
+        "internal_then_incidence_average": 32,
+        "incidence_then_internal_average": 32,
+        "opposite_side_internal_relay": 40,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": 44,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 170,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 684,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 2810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 3,
+      "side_order": 85,
+      "n": 170,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 174,
+      "capacity_terms": {
+        "internal_then_incidence_average": 48,
+        "incidence_then_internal_average": 48,
+        "opposite_side_internal_relay": 60,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 110,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 253,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1100,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 5334,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 4,
+      "side_order": 85,
+      "n": 170,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 256,
+      "capacity_terms": {
+        "internal_then_incidence_average": 64,
+        "incidence_then_internal_average": 64,
+        "opposite_side_internal_relay": 80,
+        "pure_internal_two_steps": 12,
+        "pure_internal_three_steps": 36
+      },
+      "capacity_margin": 192,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 5,
+      "side_order": 85,
+      "n": 170,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 360,
+      "capacity_terms": {
+        "internal_then_incidence_average": 80,
+        "incidence_then_internal_average": 80,
+        "opposite_side_internal_relay": 100,
+        "pure_internal_two_steps": 20,
+        "pure_internal_three_steps": 80
+      },
+      "capacity_margin": 296,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 6,
+      "side_order": 85,
+      "n": 170,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 492,
+      "capacity_terms": {
+        "internal_then_incidence_average": 96,
+        "incidence_then_internal_average": 96,
+        "opposite_side_internal_relay": 120,
+        "pure_internal_two_steps": 30,
+        "pure_internal_three_steps": 150
+      },
+      "capacity_margin": 428,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 4,
+      "r": 7,
+      "side_order": 85,
+      "n": 170,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 64,
+      "average_capacity_upper_bound": 658,
+      "capacity_terms": {
+        "internal_then_incidence_average": 112,
+        "incidence_then_internal_average": 112,
+        "opposite_side_internal_relay": 140,
+        "pure_internal_two_steps": 42,
+        "pure_internal_three_steps": 252
+      },
+      "capacity_margin": 594,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 0,
+      "side_order": 156,
+      "n": 312,
+      "degree": 6,
+      "target_D": 3,
+      "savedL": 120,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -125,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 120,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 441,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 1518,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 1,
+      "side_order": 156,
+      "n": 312,
+      "degree": 7,
+      "target_D": 3,
+      "savedL": 170,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 80,
+      "capacity_terms": {
+        "internal_then_incidence_average": 25,
+        "incidence_then_internal_average": 25,
+        "opposite_side_internal_relay": 30,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -45,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 170,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 684,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 2810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 2,
+      "side_order": 156,
+      "n": 312,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 164,
+      "capacity_terms": {
+        "internal_then_incidence_average": 50,
+        "incidence_then_internal_average": 50,
+        "opposite_side_internal_relay": 60,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": 39,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "NECESSARY_PASS_ALREADY_TESTED_FINITE_PROFILE_FAILED",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 253,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1100,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 5334,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 3,
+      "side_order": 156,
+      "n": 312,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 258,
+      "capacity_terms": {
+        "internal_then_incidence_average": 75,
+        "incidence_then_internal_average": 75,
+        "opposite_side_internal_relay": 90,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 133,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 4,
+      "side_order": 156,
+      "n": 312,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 368,
+      "capacity_terms": {
+        "internal_then_incidence_average": 100,
+        "incidence_then_internal_average": 100,
+        "opposite_side_internal_relay": 120,
+        "pure_internal_two_steps": 12,
+        "pure_internal_three_steps": 36
+      },
+      "capacity_margin": 243,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 5,
+      "side_order": 156,
+      "n": 312,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 500,
+      "capacity_terms": {
+        "internal_then_incidence_average": 125,
+        "incidence_then_internal_average": 125,
+        "opposite_side_internal_relay": 150,
+        "pure_internal_two_steps": 20,
+        "pure_internal_three_steps": 80
+      },
+      "capacity_margin": 375,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 5,
+      "r": 6,
+      "side_order": 156,
+      "n": 312,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 125,
+      "average_capacity_upper_bound": 660,
+      "capacity_terms": {
+        "internal_then_incidence_average": 150,
+        "incidence_then_internal_average": 150,
+        "opposite_side_internal_relay": 180,
+        "pure_internal_two_steps": 30,
+        "pure_internal_three_steps": 150
+      },
+      "capacity_margin": 535,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "r": 0,
+      "side_order": 400,
+      "n": 800,
+      "degree": 8,
+      "target_D": 3,
+      "savedL": 253,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -343,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 253,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1100,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 5334,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "r": 1,
+      "side_order": 400,
+      "n": 800,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 154,
+      "capacity_terms": {
+        "internal_then_incidence_average": 49,
+        "incidence_then_internal_average": 49,
+        "opposite_side_internal_relay": 56,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -189,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "r": 2,
+      "side_order": 400,
+      "n": 800,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 312,
+      "capacity_terms": {
+        "internal_then_incidence_average": 98,
+        "incidence_then_internal_average": 98,
+        "opposite_side_internal_relay": 112,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": -31,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "r": 3,
+      "side_order": 400,
+      "n": 800,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 480,
+      "capacity_terms": {
+        "internal_then_incidence_average": 147,
+        "incidence_then_internal_average": 147,
+        "opposite_side_internal_relay": 168,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 137,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "NECESSARY_PASS_NO_GRAPH_CONSTRUCTED",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 7,
+      "r": 4,
+      "side_order": 400,
+      "n": 800,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 343,
+      "average_capacity_upper_bound": 664,
+      "capacity_terms": {
+        "internal_then_incidence_average": 196,
+        "incidence_then_internal_average": 196,
+        "opposite_side_internal_relay": 224,
+        "pure_internal_two_steps": 12,
+        "pure_internal_three_steps": 36
+      },
+      "capacity_margin": 321,
+      "capacity_pass": true,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": false,
+      "status": "NO_STRICT_D3_ORDER_IMPROVEMENT",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 8,
+      "r": 0,
+      "side_order": 585,
+      "n": 1170,
+      "degree": 9,
+      "target_D": 3,
+      "savedL": 585,
+      "far_targets_per_root": 512,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -512,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 585,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 1768,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 9020,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 8,
+      "r": 1,
+      "side_order": 585,
+      "n": 1170,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 512,
+      "average_capacity_upper_bound": 200,
+      "capacity_terms": {
+        "internal_then_incidence_average": 64,
+        "incidence_then_internal_average": 64,
+        "opposite_side_internal_relay": 72,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -312,
+      "capacity_pass": false,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 8,
+      "r": 2,
+      "side_order": 585,
+      "n": 1170,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 512,
+      "average_capacity_upper_bound": 404,
+      "capacity_terms": {
+        "internal_then_incidence_average": 128,
+        "incidence_then_internal_average": 128,
+        "opposite_side_internal_relay": 144,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": -108,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 8,
+      "r": 3,
+      "side_order": 585,
+      "n": 1170,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 512,
+      "average_capacity_upper_bound": 618,
+      "capacity_terms": {
+        "internal_then_incidence_average": 192,
+        "incidence_then_internal_average": 192,
+        "opposite_side_internal_relay": 216,
+        "pure_internal_two_steps": 6,
+        "pure_internal_three_steps": 12
+      },
+      "capacity_margin": 106,
+      "capacity_pass": true,
+      "regularity_parity_possible": false,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "REGULARITY_PARITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 9,
+      "r": 0,
+      "side_order": 820,
+      "n": 1640,
+      "degree": 10,
+      "target_D": 3,
+      "savedL": 650,
+      "far_targets_per_root": 729,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -729,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 650,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 2485,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 33397,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 9,
+      "r": 1,
+      "side_order": 820,
+      "n": 1640,
+      "degree": 11,
+      "target_D": 3,
+      "savedL": 715,
+      "far_targets_per_root": 729,
+      "average_capacity_upper_bound": 252,
+      "capacity_terms": {
+        "internal_then_incidence_average": 81,
+        "incidence_then_internal_average": 81,
+        "opposite_side_internal_relay": 90,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -477,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 715,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 3444,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 37628,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 9,
+      "r": 2,
+      "side_order": 820,
+      "n": 1640,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 729,
+      "average_capacity_upper_bound": 508,
+      "capacity_terms": {
+        "internal_then_incidence_average": 162,
+        "incidence_then_internal_average": 162,
+        "opposite_side_internal_relay": 180,
+        "pure_internal_two_steps": 2,
+        "pure_internal_three_steps": 2
+      },
+      "capacity_margin": -221,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    },
+    {
+      "q": 11,
+      "r": 0,
+      "side_order": 1464,
+      "n": 2928,
+      "degree": 12,
+      "target_D": 3,
+      "savedL": 810,
+      "far_targets_per_root": 1331,
+      "average_capacity_upper_bound": 0,
+      "capacity_terms": {
+        "internal_then_incidence_average": 0,
+        "incidence_then_internal_average": 0,
+        "opposite_side_internal_relay": 0,
+        "pure_internal_two_steps": 0,
+        "pure_internal_three_steps": 0
+      },
+      "capacity_margin": -1331,
+      "capacity_pass": false,
+      "regularity_parity_possible": true,
+      "active_degree_range": true,
+      "strict_D3_order_improvement": true,
+      "status": "D3_AVERAGE_CAPACITY_IMPOSSIBLE",
+      "all_target_comparisons": [
+        {
+          "target_D": 3,
+          "savedL": 810,
+          "strict_order_improvement": true,
+          "routing_guarantee": "D3 requires additional coverage"
+        },
+        {
+          "target_D": 4,
+          "savedL": 5832,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        },
+        {
+          "target_D": 5,
+          "savedL": 42342,
+          "strict_order_improvement": false,
+          "routing_guarantee": "D<=4 from retained incidence graph"
+        }
+      ]
+    }
+  ],
+  "CPU_seconds": 0.0006663010000000011
+}

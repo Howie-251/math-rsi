@@ -1,0 +1,75 @@
+{
+  "audit_skill": "proof-checker",
+  "generated_at": "2026-10-11T09:26:24Z",
+  "agent_id": "/root/proof_review_zero_core",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "requested_fork_turns": "none on initial reviewer spawn; this delta continues that reviewer",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_metadata_provenance": "requested initial route; no separate backend attestation",
+  "actual_backend_model": null,
+  "actual_backend_reasoning": null,
+  "reviewer_family": "openai",
+  "executor_model": "not separately attested",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "independence_relative_to_prior_audit": "same reviewer and context; not a second independent review",
+  "submitted_inputs": [
+    "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md"
+  ],
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "The additional complete paper proves 59<=4m-3T, m>=20, and T>=7 using only actual global 2211 zero rows and equal-weight adjacency; exact slack and all stated T=7,m=20 consequences are justified. Same-family provisional paper review.",
+  "trace_path": "reviews/dd82/proof-checker-zero-core-20261011",
+  "report_path": "reviews/dd82/proof-checker-zero-core-20261011/DELTA_PROOF_AUDIT.md",
+  "preserved_prior_review": "The earlier two-paper PROOF_AUDIT and its ledger remain separate and unchanged.",
+  "details": {
+    "submitted_papers_audited": 1,
+    "complete_source_read": true,
+    "source_line_range": "1-134",
+    "obligations_total": 22,
+    "obligations_discharged": 22,
+    "explicit_assumption_obligations": [
+      "D04"
+    ],
+    "issues": [],
+    "counterexample_attempts": 10,
+    "verified_counterexamples": 0,
+    "unresolved_counterexample_candidates": 0,
+    "new_author_fixes": 0,
+    "dependency_dag": "acyclic",
+    "external_mathematical_dependencies": [],
+    "unneeded_prior_results": [
+      "zero-heavy endpoint theorem",
+      "zero-support transport theorem",
+      "zero vertices have at least two nonzero neighbors",
+      "core pair-coverage bound",
+      "trace identities",
+      "short-cycle exclusions"
+    ],
+    "new_conclusions": [
+      "59<=4m-3T",
+      "m>=20",
+      "T>=7",
+      "Exact nonnegative slack identity",
+      "Four necessary equality conditions for T=7,m=20"
+    ],
+    "proof_mode": "finite paper counting; no solver or formal evidence",
+    "source_mutation": "none"
+  },
+  "scope_limits": [
+    "Global zero-row N15 is assumed, not proved for arbitrary legal graphs.",
+    "Mixed-weight support nonedges are not required by this theorem.",
+    "The equality consequences apply to T=7,m=20 only.",
+    "No remaining N15 graph, arbitrary order-59 graph, or all of H5 is excluded.",
+    "The exact degree-diameter value remains open.",
+    "No Lean, compilation, graph enumeration, or dedicated order-63-65 argument was performed."
+  ],
+  "task_overrides": [
+    "Markdown and JSON only",
+    "No author, formal, or wiki edits",
+    "No content fingerprints or artifact inventory products"
+  ]
+}

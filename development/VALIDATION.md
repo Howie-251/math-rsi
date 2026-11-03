@@ -1,5 +1,13 @@
 # MathRSI 验证记录
 
+## 2026-11-03：按meta技能完成DD驱动的v2增量实现
+
+先写成并集成 `mathrsi-meta-evolve`，Root 再按它分类、修改现有 v1 并回收三名 Sol 的实际产物；完整过程与采纳范围在[本轮维护记录](evolution/dd-v2-20261102/EVOLUTION.md)。保留原五流程和 ARIS 能力，新增 DD 四技能及原 wiki／源资料，修纯 Lean 入口、基线变化消费、对象变化后的证据继承和共同覆盖判断。没有新建平行 base。
+
+[接口核查](evolution/dd-v2-20261102/implement/FINAL_INTERFACE_CHECKS.json)保存新技能格式、仓内路径、双端发现和 diff 检查；[DD实际使用](../plugins/degree-diameter/evidence/IMPLEMENTATION.md)保存完整源复制范围、364列精确dual、50构造入口及3840点图重建／字面结构检查；[任务cwd调用](evolution/dd-v2-20261102/implement/TASK_CWD_REPLAY.json)实际运行新薄适配并exit0。既有 D5 当前覆盖重放和未变 ARIS 搬迁smoke复用，不重复旧大型计算。纯形式入口使用原F4声明与历史构建审计作静态输入，没有新Lean构建。
+
+Gemini 的集成审阅发现实际派发只接Property B、DD命令cwd不统一，已修到具体技能而非只改文档；同会话定点复核确认原三项问题解决。Grok的meta审阅指出原research-review共识循环不能靠composed自动取消，已明确替换维护调用合同。完整回应与后续领域讨论均在本轮reviews，准确范围由EVOLUTION消费。以上支持当前实现与有界接口，不冒作新版完整长题或通用效率评测；原数学状态与暂停研究保持。
+
 ## 2026-11-02：组内 v1 发布准备与独立克隆核验
 
 新增中英文首页、两张已确认的图、英文快速开始及可运行证明修复示例；完整 base、ARIS 双端、Property B 知识与 MCP 桥接保持自包含。Gemini 参与首页组织与正文写作，最后静态读取成稿后未发现实质发布阻碍；完整回应与 Root 处置见[发布报告](publish-v1/REPORT.md)。

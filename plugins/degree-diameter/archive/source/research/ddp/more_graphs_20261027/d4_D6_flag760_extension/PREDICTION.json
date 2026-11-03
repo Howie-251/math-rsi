@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN_BEFORE_SOURCE_PROFILE_OR_CANDIDATE_EVALUATION",
+  "target_delta": 4,
+  "target_D": 6,
+  "savedL": 760,
+  "savedL_date": "2026-10-27",
+  "hypothetical_n": 761,
+  "actual_candidate_n": null,
+  "actual_candidate_D": null,
+  "prediction": "At least one currently existing original H(3) incidence edge e and current inserted-layer edge f can be absorbed together: delete e,f and add x adjacent to their four distinct endpoints, retaining maximum degree 4 and diameter at most 6.",
+  "expected_author_binding_to_verify": {
+    "source_n": 760,
+    "source_m": 1520,
+    "base_labels": [0, 727],
+    "layer_labels": [728, 759],
+    "layer_structure": "32 vertices, two neighbors in original H(3), and a 2-factor with cycle lengths 8,8,16"
+  },
+  "candidate_scope": "All present original point-line edges in the actual source times all present layer-layer edges, in sorted endpoint order; four distinct endpoints required.",
+  "verification_lemma": "For cut endpoint set T of size four, source R5(T)=V is equivalent to complete new-root coverage. All possibly damaged old pairs have at least one endpoint in source R2(T), so modified-graph BFS from source R2(T) plus x checks all pairs.",
+  "preparation_budget": "At most 3 CPU seconds and 5 minutes wall; no candidate BFS or candidate search by source scout.",
+  "producer": "/root/expert_brief_evidence",
+  "primary_source": "https://github.com/f4t4nt/degree-diameter-graphs/tree/main/graphs/deg4/dia6",
+  "fresh_main_table": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+}

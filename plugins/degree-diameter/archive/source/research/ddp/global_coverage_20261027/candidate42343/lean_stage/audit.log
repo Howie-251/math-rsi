@@ -1,0 +1,30 @@
+def DegreeDiameter.Portfolio.DiameterAtMost.{u_1} : {V : Type u_1} → SimpleGraph V → ℕ → Prop :=
+fun {V} G D => ∀ (u v : V), ∃ p, p.length ≤ D
+def DegreeDiameter.Portfolio.PinsCoverRadius.{u_1} : {V : Type u_1} → SimpleGraph V → Set V → ℕ → Prop :=
+fun {V} G pins r => ∀ (v : V), ∃ u ∈ pins, ∃ p, p.length ≤ r
+@DegreeDiameter.Portfolio.singleVertexExtension_diameter : ∀ {V : Type u_1} (G : SimpleGraph V) (pins : Set V)
+  {D r : ℕ},
+  DegreeDiameter.Portfolio.DiameterAtMost G D →
+    DegreeDiameter.Portfolio.PinsCoverRadius G pins r →
+      DegreeDiameter.Portfolio.DiameterAtMost (DegreeDiameter.Portfolio.singleVertexExtension G pins) (max D (r + 1))
+@DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive : ∀ {V : Type u_1} (G : SimpleGraph V)
+  (pins : Set V),
+  DegreeDiameter.Portfolio.DiameterAtMost G 5 →
+    DegreeDiameter.Portfolio.PinsCoverRadius G pins 4 →
+      DegreeDiameter.Portfolio.DiameterAtMost (DegreeDiameter.Portfolio.singleVertexExtension G pins) 5
+@DegreeDiameter.Portfolio.parentDepthCertificate_sound : ∀ {V : Type u_1} {G : SimpleGraph V} {pins : Set V}
+  {radius : ℕ} (cert : DegreeDiameter.Portfolio.ParentDepthCertificate G pins radius),
+  DegreeDiameter.Portfolio.PinsCoverRadius G pins radius
+@DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive_of_parentDepth : ∀ {V : Type u_1} (G : SimpleGraph V)
+  (pins : Set V),
+  DegreeDiameter.Portfolio.DiameterAtMost G 5 →
+    ∀ (cert : DegreeDiameter.Portfolio.ParentDepthCertificate G pins 4),
+      DegreeDiameter.Portfolio.DiameterAtMost (DegreeDiameter.Portfolio.singleVertexExtension G pins) 5
+'DegreeDiameter.Portfolio.singleVertexExtension_diameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.parentDepthCertificate_sound' depends on axioms: [propext]
+'DegreeDiameter.Portfolio.singleVertexExtension_diameterAtMostFive_of_parentDepth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

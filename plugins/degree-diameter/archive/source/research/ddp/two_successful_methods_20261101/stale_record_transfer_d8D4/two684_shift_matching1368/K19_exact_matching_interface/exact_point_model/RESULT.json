@@ -1,0 +1,166 @@
+{
+  "status": "UNKNOWN_SINGLE_CADICAL_WINDOW",
+  "terminal": true,
+  "prior_readgate_CPU": 1.0,
+  "new_prep_charge": 1.0,
+  "charges": [
+    {
+      "phase": "CONVERT_OLD_CACHE_NO_DP",
+      "CPU": 0.034366,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "python",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py"
+      ]
+    },
+    {
+      "phase": "COMPILE",
+      "CPU": 1.0443230000000001,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp",
+        "-o",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model"
+      ]
+    },
+    {
+      "phase": "BUILD_EXACT_POINT_CNF",
+      "CPU": 0.4581670000000001,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model",
+        "16.91885736"
+      ]
+    },
+    {
+      "phase": "ONLY_CADICAL_WINDOW",
+      "CPU": 60.041635,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+        "-t",
+        "60",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+      ]
+    }
+  ],
+  "parent_actual_CPU": 0.01945272,
+  "cumulative_case_CPU": 63.697950855,
+  "CPU_cap": 100.0,
+  "solver_calls": 1,
+  "native_return_code": 0,
+  "source_literal_parse_count": 0,
+  "old_endpoint_DP_repeated": 0,
+  "sourceD4validity_BFS": 0,
+  "old_H233928_repeated": 0,
+  "candidate_allroot_BFS": 0,
+  "source_field_Lean_ARIS_runs": 0,
+  "new_graph_parameter_Lean_count": [
+    0,
+    0,
+    0
+  ],
+  "formal_negative_family_verdict": "UNRESOLVED_UNLESS_ROOT_SEPARATELY_ACCEPTS_CHECKED_EVIDENCE",
+  "automatic_continuation": false,
+  "model": {
+    "status": "COMPLETE_ACTUAL_POINT_CNF",
+    "original_variables": 24624,
+    "aux_variables": 49176,
+    "total_variables": 73800,
+    "clauses": 172800,
+    "point_cover_clauses": 24624,
+    "ALO_clauses": 72,
+    "Sinz_AMO_clauses": 147456,
+    "gauge_units": 648,
+    "cover_literals": 29499552,
+    "all_literals": 29844360,
+    "CNF_bytes": 166236739,
+    "empty_point_clauses": 0,
+    "point_clause_length_min": 1190,
+    "point_clause_length_max": 1202,
+    "base_masks": 1679616,
+    "nonzero_base_masks": 500256,
+    "all24624_normalized_targets": true,
+    "old_DP_source_BFS_runs": 0,
+    "actual_build_CPU": 0.456378
+  },
+  "native": {
+    "argv": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+      "-t",
+      "60",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+    ],
+    "return_code": 0,
+    "s_status_lines": [],
+    "statistics": {
+      "conflicts": 132263,
+      "decisions": 338929,
+      "propagations": 81741996,
+      "restarts": 492
+    },
+    "solver_calls": 1,
+    "proof_logging": false,
+    "proof_checked": false,
+    "charges": [
+      {
+        "phase": "CONVERT_OLD_CACHE_NO_DP",
+        "CPU": 0.034366,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "python",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py"
+        ]
+      },
+      {
+        "phase": "COMPILE",
+        "CPU": 1.0443230000000001,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "g++",
+          "-O2",
+          "-std=c++17",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp",
+          "-o",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model"
+        ]
+      },
+      {
+        "phase": "BUILD_EXACT_POINT_CNF",
+        "CPU": 0.4581670000000001,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model",
+          "16.91885736"
+        ]
+      },
+      {
+        "phase": "ONLY_CADICAL_WINDOW",
+        "CPU": 60.041635,
+        "exit": 0,
+        "wall_hard_killed": false,
+        "argv": [
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+          "-t",
+          "60",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+        ]
+      }
+    ]
+  },
+  "raw_solver_comment": "c UNKNOWN",
+  "final_readonly_summary_charge": 0.1,
+  "cumulative_case_CPU_before_final_summary": 63.597950855,
+  "prediction_verdict": "UNRESOLVED_NO_SAT_OR_UNSAT_IN_SINGLE_WINDOW",
+  "K19_family_status": "UNKNOWN_NOT_EXCLUDED"
+}

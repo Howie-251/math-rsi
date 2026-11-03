@@ -1,0 +1,40 @@
+{
+  "field": 3,
+  "dimensions": 3,
+  "directions": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "inverse_ports": [
+    1,
+    0,
+    3,
+    2
+  ],
+  "input": "A simple inverse-port-consistent quartic controller C; for an improving instance of this scheme n must equal31.",
+  "edge_options": "18 two-matching bad-turn patterns and realizing matrices from q3_local_patterns.json; opposite edge transposes the pattern and uses inverse matrix.",
+  "variables": "one binary z[e,k] per undirected edge and option, with sum_k z[e,k]=1",
+  "n31_variables": 1116,
+  "cover_constraints": "For each nonadjacent ordered pair (u,v), including u=v, at least one NB3 walk has central turn outside its selected bad pattern.",
+  "strong_n31_constraints": "Let a[u,v,e,k] count oriented NB3 walks u\u2192v with central edge e that are good under option k. Enforce sum_(e,k) a*z=2 on diagonal,0 on adjacent pairs,1 elsewhere; this is G=J-A+I.",
+  "global_constraints_solved": false,
+  "field_size4_choices_not_reused": true
+}

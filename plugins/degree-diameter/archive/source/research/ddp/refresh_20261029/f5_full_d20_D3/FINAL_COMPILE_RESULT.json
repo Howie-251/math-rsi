@@ -1,0 +1,91 @@
+{
+  "status": "KERNEL_VERIFIED_CONCRETE_ORDER_DEGREE_AND_EXACT_DIAMETER_IN_PROJECT_DEFINITION",
+  "checked_UTC": "2026-10-29T16:45:31.289080+00:00",
+  "Lean_version": "4.24.0",
+  "namespace": "DegreeDiameter.Portfolio.F5Graph3750",
+  "vertex_type": "Fin 3750",
+  "graph_definition": "DegreeDiameter.Portfolio.F5Graph3750.graph",
+  "order": 3750,
+  "maximum_degree_bound": 20,
+  "diameter_exact": 3,
+  "diameter_definition": "DiameterAtMost G D := forall u v, exists p : G.Walk u v, p.length <= D",
+  "concrete_construction_theorem": "DegreeDiameter.Portfolio.F5Graph3750.concrete_order_degree_and_D3",
+  "exact_diameter_theorem": "DegreeDiameter.Portfolio.F5Graph3750.diameter_exact_three_in_project_definition",
+  "core_formula_Lean_verified": true,
+  "literal_edge_file_equality_Lean_verified": false,
+  "degree_exact20_Lean_verified": false,
+  "mathlib_ediam_theorem_claimed": false,
+  "nonbacktracking_controller_required_cells": 780,
+  "all_controller_cells": 900,
+  "NB_zero_source_decoder_checks": 4500,
+  "adjacent_zero_source_decoder_checks": 500,
+  "exact_diameter_one_step_checks": 20,
+  "exact_diameter_two_step_checks": 400,
+  "global_vertex_pair_decide": false,
+  "source_BFS_repeated": false,
+  "old103_reverified": false,
+  "sorry_used": false,
+  "native_decide_used": false,
+  "new_axioms_used": false,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "final_axioms_output": "'DegreeDiameter.Portfolio.F5Graph3750.concrete_order_degree_and_D3' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'DegreeDiameter.Portfolio.F5Graph3750.diameter_exact_three_in_project_definition' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+  "source_snapshot_directory": "research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_FINAL_SOURCES",
+  "compiled_modules": [
+    "F5Graph3750",
+    "F5Graph3750Routes",
+    "F5Graph3750RouteWords",
+    "F5Graph3750RouteData",
+    "F5Graph3750ControllerCertificate",
+    "F5Graph3750NBDecoderCertificate",
+    "F5Graph3750AdjacentCertificate",
+    "F5Graph3750Diameter",
+    "F5Graph3750Exact"
+  ],
+  "final_decoder_batch": {
+    "status": "COMPLETE",
+    "records": [
+      {
+        "module": "F5Graph3750NBDecoderCertificate",
+        "pid": 2448043,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750NBDecoderCertificate.log"
+      },
+      {
+        "module": "F5Graph3750AdjacentCertificate",
+        "pid": 2460213,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750AdjacentCertificate.log"
+      },
+      {
+        "module": "F5Graph3750Diameter",
+        "pid": 2463954,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_KERNEL_DECODERS_F5Graph3750Diameter.log"
+      }
+    ],
+    "wall_seconds": 59.081401117146015,
+    "CPU_seconds": 59.373934999999996,
+    "CPU_budget_seconds": 110,
+    "all_modules_compiled": true
+  },
+  "final_exact_batch": {
+    "status": "COMPLETE",
+    "records": [
+      {
+        "module": "F5Graph3750Exact",
+        "pid": 2482509,
+        "exit_code": 0,
+        "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_full_d20_D3/FORMAL_EXACT_THREE_F5Graph3750Exact.log"
+      }
+    ],
+    "wall_seconds": 2.869178894907236,
+    "CPU_seconds": 2.7793949999999996,
+    "CPU_budget_seconds": 110,
+    "all_modules_compiled": true
+  },
+  "all_final_processes_terminal": true
+}

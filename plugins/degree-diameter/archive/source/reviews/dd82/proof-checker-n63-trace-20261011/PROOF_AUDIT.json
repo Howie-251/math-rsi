@@ -1,0 +1,217 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Seven scoped proof packages pass provisional semantic review; all finite arithmetic checks pass; one cosmetic notation collision was corrected and reread.",
+  "audited_inputs": [
+    "proofs/dd82/FOUNDATIONS.md",
+    "proofs/dd82/construction/N63_CYCLOTOMIC_SPECTRAL_OBSTRUCTION.md",
+    "computations/dd82/construction/n63_cyclotomic_norms.py",
+    "computations/dd82/construction/n63_cyclotomic_norms.json",
+    "computations/dd82/construction/n63_cyclotomic_norms.table.md",
+    "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md",
+    "proofs/dd82/n59/matching_zero_r2_c5_exclusion_20261011.md",
+    "proofs/dd82/n59/matching_zero_r2_c7_exclusion_20261011.md",
+    "proofs/dd82/n59/matching_zero_r2_c8_exclusion_20261011.md",
+    "proofs/dd82/n59/matching_zero_r2_c9_exclusion_20261011.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n63-trace-20261011",
+  "agent_id": "/root/proof_review_n63_trace",
+  "agent_id_kind": "canonical_task_name",
+  "executor_model": "not independently attested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_model_metadata_status": "requested route only; actual backend not independently attested",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "reviewer_reasoning_metadata_status": "requested; not independently attested",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T08:03:39+00:00",
+  "details": {
+    "proof_packages_audited": 7,
+    "full_primary_sources_read": true,
+    "prior_reviews_read": false,
+    "source_edits_by_reviewer": false,
+    "formal_files_read_or_modified": false,
+    "scope_verdicts": [
+      {
+        "id": "F",
+        "source": "proofs/dd82/FOUNDATIONS.md",
+        "verdict": "PASS",
+        "scope": "Original graph root bound, regularity, defect identities, and paper exclusions of n=64,65."
+      },
+      {
+        "id": "N63",
+        "source": "proofs/dd82/construction/N63_CYCLOTOMIC_SPECTRAL_OBSTRUCTION.md",
+        "verdict": "PASS",
+        "scope": "Arbitrary original-graph paper exclusion of n=63; field bridge and norm arithmetic checked, no complete Lean result inferred."
+      },
+      {
+        "id": "TR",
+        "source": "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md",
+        "verdict": "PASS",
+        "scope": "Exact correction identity/congruence under matching rows only at zero-triangle vertices; all-zero triangle-free subcase impossible."
+      },
+      {
+        "id": "C5",
+        "source": "proofs/dd82/n59/matching_zero_r2_c5_exclusion_20261011.md",
+        "verdict": "PASS",
+        "scope": "Only a simple length-5 R2 cycle on selected zero-triangle vertices with matching 2211 rows is excluded."
+      },
+      {
+        "id": "C7",
+        "source": "proofs/dd82/n59/matching_zero_r2_c7_exclusion_20261011.md",
+        "verdict": "PASS",
+        "scope": "Only a simple length-7 R2 cycle on selected zero-triangle vertices with matching 2211 rows is excluded."
+      },
+      {
+        "id": "C8",
+        "source": "proofs/dd82/n59/matching_zero_r2_c8_exclusion_20261011.md",
+        "verdict": "PASS",
+        "scope": "Only a simple length-8 R2 cycle on selected zero-triangle vertices with matching 2211 rows is excluded."
+      },
+      {
+        "id": "C9",
+        "source": "proofs/dd82/n59/matching_zero_r2_c9_exclusion_20261011.md",
+        "verdict": "PASS",
+        "scope": "Only a simple length-9 R2 cycle on selected zero-triangle vertices with matching 2211 rows is excluded."
+      }
+    ],
+    "arithmetic_sources_verdict": "PASS",
+    "issues": [
+      {
+        "id": "PC-01",
+        "severity": "MINOR",
+        "status": "UNCLEAR",
+        "impact": "COSMETIC",
+        "category": "NORMALIZATION_MISMATCH",
+        "subtype": "notation_collision",
+        "location": "matching_zero_global_trace_obstruction_20261011.md:11,33 (initial version)",
+        "statement": "e_v denoted both a standard-basis vector in Be_v and a scalar correction.",
+        "why_invalid": "Notation was ambiguous; there was no mathematical contradiction after distinguishing the types.",
+        "counterexample": "NO",
+        "affects": "Notation only; no theorem, hypothesis, or argument changes.",
+        "minimal_fix": "Use a bold standard-basis vector and an explicit definition; retain scalar e_v.",
+        "resolution": "RESOLVED_BY_AUTHOR",
+        "resolution_checked": "Corrected trace proof reread in full; current lines 11,33,35,97,99 distinguish types.",
+        "new_tests_required": false
+      }
+    ],
+    "open_issues": [],
+    "counterexamples_found": 0,
+    "unresolved_counterexample_candidates": 0,
+    "counterexample_attempts": [
+      "N63 doubled-edge eigenvalues, repeated components, extra mu=2 modes, conductor conjugates, ell=3 exception, and scalar-extension dimensions.",
+      "Trace coefficients, repeated-vertex walks, chords, overlapping triangles, and nonzero correction rows.",
+      "C5 forced light endpoints and outside-neighbor distinctness.",
+      "C7 no assumed global neighborhood classification and no duplicate charge counting.",
+      "C8 initially free step-three edges and parity-only capacity bound.",
+      "C9 arbitrary chord before elimination, saturated outside neighborhoods, and all 512 local subsets."
+    ],
+    "checks_file": "reviews/dd82/proof-checker-n63-trace-20261011/audit_checks.json",
+    "check_command": "timeout 65s python3 reviews/dd82/proof-checker-n63-trace-20261011/audit_checks.py",
+    "checks": {
+      "status": "PASS",
+      "norm_rows_checked": 63,
+      "nonsquare_rows": 62,
+      "exception": [
+        3
+      ],
+      "norm_method": "Bareiss determinant of multiplication by 29+4mu",
+      "cyclotomic_method": "all divisor products equal t^ell-1",
+      "source_generator_imported_or_run": false,
+      "closed_walk_graphs_checked": 1099,
+      "closed_walk_scope": "all labeled simple graphs of orders 1 through 5; general degree correction",
+      "regular_trace_check": {
+        "n": 59,
+        "degree": 8,
+        "triangles": 354,
+        "s": 14278,
+        "w": 86966,
+        "trace_A5": 119770
+      },
+      "cycle_checks": {
+        "5": {
+          "internal_common_neighbors_from_zero": [
+            2,
+            1,
+            0,
+            0,
+            1
+          ]
+        },
+        "7": {
+          "internal_common_neighbors_from_zero": [
+            2,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "8": {
+          "internal_common_neighbors_from_zero": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        "9": {
+          "internal_common_neighbors_from_zero": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "external_subset_size_counts": {
+            "0": 1,
+            "2": 9,
+            "4": 9
+          }
+        }
+      },
+      "cpu_limit_seconds": 60,
+      "cpu_seconds": 0.172896
+    },
+    "unverified_imports": [
+      "H5/N15 bridge and definitions are not audited; direct original-graph statements do not require them.",
+      "Formal-status remarks and Lean upper62 are not audited or established."
+    ],
+    "excluded_claims": [
+      "exact N(8,2)",
+      "formal upper bound 62",
+      "H5 impossibility",
+      "all n59 graphs impossible",
+      "mixed-type or longer cycles excluded",
+      "historical RAW certification"
+    ],
+    "assumption_changes": [],
+    "user_overrides": [
+      "No input or output digests/checksums/manifests",
+      "No TeX/PDF/HTML ritual",
+      "Read-only proof sources and formal/ for this reviewer",
+      "No approval required",
+      "Wiki claim persistence delegated to parent"
+    ],
+    "skill_and_references_read": [
+      "AGENTS.md",
+      ".agents/skills/proof-checker/SKILL.md",
+      ".agents/skills/shared-references/reviewer-routing.md",
+      ".agents/skills/shared-references/reviewer-independence.md",
+      ".agents/skills/shared-references/assurance-contract.md"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "frozen_before_scan": true,
+  "question": "Does either actual51417degree13 or94186degree14 source contain a fullopenneighborhood whosevertices allhave degree slack?",
+  "prediction": "At leastone currentactualsource has sucha complete sparestar, allowinga false-twin extension withoutsetcover.",
+  "source_scopes": [
+    {"degree":13,"n":51417,"m":324451,"source":"research/ddp/more_graphs_20261027/d13_D5_h9_transfer/source51417.edges"},
+    {"degree":14,"n":94186,"m":657452,"source":"research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/source94186.edges"}
+  ],
+  "ledger_check": "Currentledger entriescoverD13geometrypools/sourcebinding andD14rare15/allfreecover; no completefullopen-neighborhood sparestar scan oftheseactualsources found. D14false-twin pair observation isnotthiscomplete rule.",
+  "exact_rule": "Foroldv,N(v)allhave degree<Delta. AddnewzadjacenttoeveryvertexofN(v);preservealloldedges. Newdeg=deg(v)<=Delta.",
+  "diameter_proof": "Anyv->xoldshortestroute forx!=v canreplaceitsfirstvertexbyz;z->v haslength2viaanyneighbor. ThusD<=5inheritsfromsource.",
+  "budget": "oneworker<=3CPU,noBFS/hash;scanallverticesofbothactualsourcesoncebyedges",
+  "stopping": "Fullfixedsourcescans;firstcandidateperactualsourceexportedforroot;0candidatesclosesonlythisliteralneighborhoodrule",
+  "no_followup": "No deleting1/2saturatedneighbors,approximate stars,newdownloads ornewcoverageoptimizer",
+  "shared_Wiki_HTML_ZIP_modified": false
+}

@@ -1,0 +1,810 @@
+{
+  "status": "ALL_DELTA_U_V_PARAMETERS_PHASE0_CAPACITY_OBSTRUCTED",
+  "group": "F2^6 semidirect C6 by cyclic coordinate shift",
+  "group_order": 384,
+  "generators": [
+    "t=(delta,1)",
+    "t_inverse=(T_inverse delta,-1)",
+    "a=(u,0)",
+    "b=(v,0)"
+  ],
+  "formal_input_variables": [
+    "u0",
+    "u1",
+    "u2",
+    "u3",
+    "u4",
+    "u5",
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5"
+  ],
+  "shift_convention": "T moves lamp bit i to i+1 modulo6; output bit r of T^s u is u_(r-s mod6)",
+  "all_words_length_at_most5": 1365,
+  "phase0_words": 351,
+  "phase0_word_count_by_length": {
+    "0": 1,
+    "1": 2,
+    "2": 6,
+    "3": 20,
+    "4": 70,
+    "5": 252
+  },
+  "all_phase0_integer_net_shifts_zero": true,
+  "all_phase0_delta_coefficients_zero": true,
+  "phase0_capacity": 30,
+  "required_phase0_lamps": 64,
+  "minimum_missing_phase0_lamps": 34,
+  "forms_by_shift_letter_count": {
+    "0": [
+      0,
+      1,
+      64,
+      65
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      32,
+      33,
+      64,
+      65,
+      66,
+      67,
+      96,
+      97,
+      128,
+      129,
+      130,
+      131,
+      192,
+      193,
+      194,
+      2048,
+      2049,
+      2080,
+      2081,
+      2112,
+      2113,
+      2144
+    ],
+    "4": [
+      0,
+      1,
+      2,
+      4,
+      16,
+      32,
+      64,
+      128,
+      256,
+      1024,
+      2048
+    ]
+  },
+  "two_shift_forms_by_excursion_direction": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      64,
+      65,
+      66,
+      67,
+      128,
+      129,
+      130,
+      131,
+      192,
+      193,
+      194
+    ],
+    "-1": [
+      0,
+      1,
+      32,
+      33,
+      64,
+      65,
+      96,
+      97,
+      2048,
+      2049,
+      2080,
+      2081,
+      2112,
+      2113,
+      2144
+    ]
+  },
+  "two_shift_direction_capacities": {
+    "1": 15,
+    "-1": 15
+  },
+  "two_shift_direction_intersection_count": 4,
+  "four_shift_new_forms": [
+    4,
+    16,
+    256,
+    1024
+  ],
+  "forms": [
+    {
+      "form": 0,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shortest_witness_word": []
+    },
+    {
+      "form": 1,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "shortest_witness_word": [
+        "a"
+      ]
+    },
+    {
+      "form": 2,
+      "u_shift_exponents": [
+        1
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        32,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "T"
+      ]
+    },
+    {
+      "form": 3,
+      "u_shift_exponents": [
+        0,
+        1
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        33,
+        3,
+        6,
+        12,
+        24,
+        48
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "T",
+        "a"
+      ]
+    },
+    {
+      "form": 4,
+      "u_shift_exponents": [
+        2
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        16,
+        32,
+        1,
+        2,
+        4,
+        8
+      ],
+      "shortest_witness_word": [
+        "t",
+        "t",
+        "a",
+        "T",
+        "T"
+      ]
+    },
+    {
+      "form": 16,
+      "u_shift_exponents": [
+        4
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        4,
+        8,
+        16,
+        32,
+        1,
+        2
+      ],
+      "shortest_witness_word": [
+        "T",
+        "T",
+        "a",
+        "t",
+        "t"
+      ]
+    },
+    {
+      "form": 32,
+      "u_shift_exponents": [
+        5
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        1
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "t"
+      ]
+    },
+    {
+      "form": 33,
+      "u_shift_exponents": [
+        0,
+        5
+      ],
+      "v_shift_exponents": [],
+      "output_bit_linear_form_rows": [
+        3,
+        6,
+        12,
+        24,
+        48,
+        33
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "t",
+        "a"
+      ]
+    },
+    {
+      "form": 64,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "shortest_witness_word": [
+        "b"
+      ]
+    },
+    {
+      "form": 65,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        65,
+        130,
+        260,
+        520,
+        1040,
+        2080
+      ],
+      "shortest_witness_word": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "form": 66,
+      "u_shift_exponents": [
+        1
+      ],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        96,
+        129,
+        258,
+        516,
+        1032,
+        2064
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "T",
+        "b"
+      ]
+    },
+    {
+      "form": 67,
+      "u_shift_exponents": [
+        0,
+        1
+      ],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        97,
+        131,
+        262,
+        524,
+        1048,
+        2096
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "T",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "form": 96,
+      "u_shift_exponents": [
+        5
+      ],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        66,
+        132,
+        264,
+        528,
+        1056,
+        2049
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "t",
+        "b"
+      ]
+    },
+    {
+      "form": 97,
+      "u_shift_exponents": [
+        0,
+        5
+      ],
+      "v_shift_exponents": [
+        0
+      ],
+      "output_bit_linear_form_rows": [
+        67,
+        134,
+        268,
+        536,
+        1072,
+        2081
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "t",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "form": 128,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2048,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ],
+      "shortest_witness_word": [
+        "t",
+        "b",
+        "T"
+      ]
+    },
+    {
+      "form": 129,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2049,
+        66,
+        132,
+        264,
+        528,
+        1056
+      ],
+      "shortest_witness_word": [
+        "t",
+        "b",
+        "T",
+        "a"
+      ]
+    },
+    {
+      "form": 130,
+      "u_shift_exponents": [
+        1
+      ],
+      "v_shift_exponents": [
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2080,
+        65,
+        130,
+        260,
+        520,
+        1040
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "b",
+        "T"
+      ]
+    },
+    {
+      "form": 131,
+      "u_shift_exponents": [
+        0,
+        1
+      ],
+      "v_shift_exponents": [
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2081,
+        67,
+        134,
+        268,
+        536,
+        1072
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "b",
+        "T",
+        "a"
+      ]
+    },
+    {
+      "form": 192,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        0,
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2112,
+        192,
+        384,
+        768,
+        1536,
+        3072
+      ],
+      "shortest_witness_word": [
+        "t",
+        "b",
+        "T",
+        "b"
+      ]
+    },
+    {
+      "form": 193,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [
+        0,
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2113,
+        194,
+        388,
+        776,
+        1552,
+        3104
+      ],
+      "shortest_witness_word": [
+        "t",
+        "b",
+        "T",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "form": 194,
+      "u_shift_exponents": [
+        1
+      ],
+      "v_shift_exponents": [
+        0,
+        1
+      ],
+      "output_bit_linear_form_rows": [
+        2144,
+        193,
+        386,
+        772,
+        1544,
+        3088
+      ],
+      "shortest_witness_word": [
+        "t",
+        "a",
+        "b",
+        "T",
+        "b"
+      ]
+    },
+    {
+      "form": 256,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        2
+      ],
+      "output_bit_linear_form_rows": [
+        1024,
+        2048,
+        64,
+        128,
+        256,
+        512
+      ],
+      "shortest_witness_word": [
+        "t",
+        "t",
+        "b",
+        "T",
+        "T"
+      ]
+    },
+    {
+      "form": 1024,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        4
+      ],
+      "output_bit_linear_form_rows": [
+        256,
+        512,
+        1024,
+        2048,
+        64,
+        128
+      ],
+      "shortest_witness_word": [
+        "T",
+        "T",
+        "b",
+        "t",
+        "t"
+      ]
+    },
+    {
+      "form": 2048,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        64
+      ],
+      "shortest_witness_word": [
+        "T",
+        "b",
+        "t"
+      ]
+    },
+    {
+      "form": 2049,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        129,
+        258,
+        516,
+        1032,
+        2064,
+        96
+      ],
+      "shortest_witness_word": [
+        "T",
+        "b",
+        "t",
+        "a"
+      ]
+    },
+    {
+      "form": 2080,
+      "u_shift_exponents": [
+        5
+      ],
+      "v_shift_exponents": [
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        130,
+        260,
+        520,
+        1040,
+        2080,
+        65
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "b",
+        "t"
+      ]
+    },
+    {
+      "form": 2081,
+      "u_shift_exponents": [
+        0,
+        5
+      ],
+      "v_shift_exponents": [
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        131,
+        262,
+        524,
+        1048,
+        2096,
+        97
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "b",
+        "t",
+        "a"
+      ]
+    },
+    {
+      "form": 2112,
+      "u_shift_exponents": [],
+      "v_shift_exponents": [
+        0,
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        192,
+        384,
+        768,
+        1536,
+        3072,
+        2112
+      ],
+      "shortest_witness_word": [
+        "T",
+        "b",
+        "t",
+        "b"
+      ]
+    },
+    {
+      "form": 2113,
+      "u_shift_exponents": [
+        0
+      ],
+      "v_shift_exponents": [
+        0,
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        193,
+        386,
+        772,
+        1544,
+        3088,
+        2144
+      ],
+      "shortest_witness_word": [
+        "T",
+        "b",
+        "t",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "form": 2144,
+      "u_shift_exponents": [
+        5
+      ],
+      "v_shift_exponents": [
+        0,
+        5
+      ],
+      "output_bit_linear_form_rows": [
+        194,
+        388,
+        776,
+        1552,
+        3104,
+        2113
+      ],
+      "shortest_witness_word": [
+        "T",
+        "a",
+        "b",
+        "t",
+        "b"
+      ]
+    }
+  ],
+  "CPU_seconds": 0.002471081,
+  "parameter_masks_tested": 0,
+  "graphs_generated": 0,
+  "BFS_performed": false,
+  "other_ring_lengths_or_generating_sets_tested": false,
+  "pending": []
+}

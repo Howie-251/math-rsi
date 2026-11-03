@@ -1,0 +1,109 @@
+{
+  "status": "EXACT_LABELLED_ALGEBRAIC_RECONSTRUCTION",
+  "group": {
+    "translation_modulus": 25,
+    "quotient_modulus": 20,
+    "action": 2,
+    "multiplication": "(x,k)(y,l)=(x+2^k*y mod25,k+l mod20)"
+  },
+  "generators": [
+    {
+      "element": [
+        21,
+        9
+      ],
+      "original_neighbor_of_leaf_zero": 246,
+      "inverse": [
+        17,
+        11
+      ],
+      "involution": false,
+      "source_single_edge_damage": 78
+    },
+    {
+      "element": [
+        1,
+        10
+      ],
+      "original_neighbor_of_leaf_zero": 251,
+      "inverse": [
+        1,
+        10
+      ],
+      "involution": true,
+      "source_single_edge_damage": 45
+    },
+    {
+      "element": [
+        10,
+        10
+      ],
+      "original_neighbor_of_leaf_zero": 260,
+      "inverse": [
+        10,
+        10
+      ],
+      "involution": true,
+      "source_single_edge_damage": 49
+    },
+    {
+      "element": [
+        17,
+        11
+      ],
+      "original_neighbor_of_leaf_zero": 292,
+      "inverse": [
+        21,
+        9
+      ],
+      "involution": false,
+      "source_single_edge_damage": 78
+    }
+  ],
+  "H": "(0,5j), j=0..3",
+  "K": "(0,k), k=0..19",
+  "labels": {
+    "leaf": "x+25*k",
+    "block": "500+5*x+(k mod5)",
+    "head": "625+x"
+  },
+  "vertices": 650,
+  "leaf_edges": 1000,
+  "tree_edges": 625,
+  "all_1625_original_edges_exactly_reconstructed": true,
+  "all_compressed_groups_blocks_and_ports_exactly_matched": true,
+  "verified_automorphism_generators": [
+    {
+      "name": "a",
+      "element": [
+        1,
+        0
+      ],
+      "all_original_edges_preserved": true
+    },
+    {
+      "name": "d",
+      "element": [
+        0,
+        1
+      ],
+      "all_original_edges_preserved": true
+    }
+  ],
+  "proven_automorphism_subgroup_order": 500,
+  "full_automorphism_group_recomputed": false,
+  "normal_subgroup_P": "(x,4j), x in Z25,j in Z5; isomorphic C25 semidirect C5",
+  "P_regular_on_125_blocks": true,
+  "P_leaf_orbits": {
+    "count": 4,
+    "size_each": 125,
+    "invariant": "k mod4"
+  },
+  "group_pair_multiplicity_histogram": {
+    "3": 250,
+    "5": 50
+  },
+  "five_edge_group_pairs": "exactly distinct x,y with x=y mod5",
+  "cpu_seconds": 0.013864043999999999,
+  "scope": "One exact reconstruction and two explicit permutation checks; no isomorphism search or new candidate."
+}

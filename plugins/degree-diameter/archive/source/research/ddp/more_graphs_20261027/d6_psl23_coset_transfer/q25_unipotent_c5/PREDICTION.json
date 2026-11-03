@@ -1,0 +1,32 @@
+{
+  "frozen_before_candidate_evaluation": true,
+  "question": "Does PSL2(F25) on the right cosets of its fixed F5-unipotent subgroup admit a degree6 diameter<=5 graph in the specified complete valence5+matching profile?",
+  "target": {
+    "Delta": 6,
+    "D": 5,
+    "n": 1560,
+    "savedL": 1518
+  },
+  "field": "Reuse fixed GF25=F5[u]/(u^2-2), a+5b, and the cached C4 right-coset representatives times cached H4.",
+  "H": "{[[1,t],[0,1]]:t in F5}",
+  "matching": "S=diag(2,3), a PSL involution normalizing and inverting H.",
+  "fixed_scope": "One fixed matching S plus each of the expected60 distinct external self-paired valence5 orbitals represented by outside involutions modulo H conjugation. No field/subgroup followup.",
+  "expected_counts": {
+    "group": 7800,
+    "index": 1560,
+    "normalizer": 100,
+    "normalizer_cosets": 20,
+    "involutions": 325,
+    "normalizer_involutions": 25,
+    "outside_involutions": 300,
+    "external_H_classes": 60,
+    "matching_cosets_in_one_N_conjugacy_orbit": 5
+  },
+  "prediction": {
+    "id": "P1_NORMALIZER_COVER",
+    "claim": "At least one of the fixed60 candidates reaches every one of the20 normalizer cosets within5 steps. This is a testable exploratory prediction; complete1560 coverage remains the success criterion."
+  },
+  "budget": "One worker, total<=60CPU seconds including preparation; first8 profile; stop on first complete R5 hit, all60, contradictory structural counts, or budget UNKNOWN.",
+  "reuse_scope": "No old graph BFS, old group enumeration or field grid. New right cosets and generator permutations are necessary new-action preparation.",
+  "verification": "One new first-graph ordinary-root R5 equals production bitset; any hit exports complete edges and literal parameters for root independent acceptance. No allsource BFS here."
+}

@@ -1,0 +1,8 @@
+# Actual161150 encoding review A
+
+Actual SUCCESS/PASS, fresh thread `673b3491-a6aa-48d7-93e3-d4f95e7c1bbe`, requested gemini-3.8-flash-high/high, CLI-selected Gemini3.8FlashHigh. Original return metadata and text are preserved in GQ161150_A_GEMINI_RAW.json. The reviewer read actual concrete definitions, ordered labels/center indexing, all-line finite-check meaning, generic clone/capacity connections and current proof/Audit receipts; it ran no builds or BFS. It found no structural encoding defect, hidden independence premise or label permutation. The review finished after the kernel batch, so its actual source observations include all24 passed modules, beyond the initially planned encoding-only snapshot.
+
+One terminology correction: the chosen1100 centers are original PRODUCT vertices, not all incidence flags. Exactly22 are incident point-line pairs, with their removed self-slot replaced by the actual source bonus owner; the other1078 are nonincident. The .inl constructor identifies original product vertices rather than incidence. Actual definitions, external binding, hO/hS and the proof use the correct unchanged graph; this prose correction does not affect PASS. The source centers themselves induce231K2+638isolates, and no independence premise is assumed.
+
+The review keeps independent numerical acceptance separate; in actual root state it is already complete, including literal source/fullN binding and all1100newrootBFS, no oldroot run. Finite-field derivation and ASCII edge binding remain external evidence. Global record and priority remain uncertified. No retry or extra validation is warranted by these terminology/status clarifications.
+

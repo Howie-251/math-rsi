@@ -1,0 +1,16 @@
+graph : SimpleGraph (Fin 15552)
+source_label : Fin 15552 ≃ Fin 15552
+@[reducible] def DegreeDiameter.Portfolio.F3Graph15552.FinalClaim : Prop :=
+SourceFinalClaim
+theorem DegreeDiameter.Portfolio.F3Graph15552.d15_15552 : Fintype.card (Fin 15552) = 15552 ∧
+  (∀ (v : Fin 15552), graph.degree v ≤ 15) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 4 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 3 :=
+⟨Fintype.card_fin 15552, ⟨degree_le_fifteen, ⟨diameterAtMost_four, not_diameterAtMost_three⟩⟩⟩
+'DegreeDiameter.Portfolio.F3Graph15552.d15_15552' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.F3Graph15552.final_claim : FinalClaim :=
+d15_15552
+'DegreeDiameter.Portfolio.F3Graph15552.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.diameterAtMost_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.not_diameterAtMost_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

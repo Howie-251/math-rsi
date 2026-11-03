@@ -1,0 +1,59 @@
+{
+  "status": "COMPLETE_THREE_EXISTING_GRAPHS_READ_ONLY_DIAGNOSIS",
+  "cpu_seconds": 0.30885964,
+  "graphs": [
+    {
+      "name": "baseline650",
+      "source": "research/ddp/m1_degree5_transfer/rithwik650_source.edges",
+      "vertices": 650,
+      "edges": 1625,
+      "groups": 25,
+      "blocks": 125,
+      "cross_group_head_block_pairs_checked": 3000,
+      "own_group_head_block_pairs_trivially_covered": 125,
+      "bad_head_block_pairs": 0,
+      "category_counts": {
+        "covered": 3000
+      },
+      "port_independent_obstruction_exists": false,
+      "head_block_route_condition_exact_full_head_BFS_match": true,
+      "cpu_seconds": 0.067724548
+    },
+    {
+      "name": "expanded676",
+      "source": "research/ddp/m2_hierarchical676/candidate.edges",
+      "vertices": 676,
+      "edges": 1690,
+      "groups": 26,
+      "blocks": 130,
+      "cross_group_head_block_pairs_checked": 3250,
+      "own_group_head_block_pairs_trivially_covered": 130,
+      "bad_head_block_pairs": 6,
+      "category_counts": {
+        "block_paths_exist_but_middle_ports_do_not_align": 6,
+        "covered": 3244
+      },
+      "port_independent_obstruction_exists": false,
+      "head_block_route_condition_exact_full_head_BFS_match": true,
+      "cpu_seconds": 0.071533828
+    },
+    {
+      "name": "cyclic676",
+      "source": "research/ddp/m2_factorization676/cyclic_pairing/candidate.edges",
+      "vertices": 676,
+      "edges": 1690,
+      "groups": 26,
+      "blocks": 130,
+      "cross_group_head_block_pairs_checked": 3250,
+      "own_group_head_block_pairs_trivially_covered": 130,
+      "bad_head_block_pairs": 588,
+      "category_counts": {
+        "block_paths_exist_but_middle_ports_do_not_align": 588,
+        "covered": 2662
+      },
+      "port_independent_obstruction_exists": false,
+      "head_block_route_condition_exact_full_head_BFS_match": true,
+      "cpu_seconds": 0.16176196399999998
+    }
+  ]
+}

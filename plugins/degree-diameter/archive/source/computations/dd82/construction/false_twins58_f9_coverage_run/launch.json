@@ -1,0 +1,29 @@
+{
+  "parent_run_id": "dd82-v3-f9-c7-20261013-0749",
+  "phase": "finite outer-coverage experiment",
+  "domain": "computations/dd82/construction/false_twins58_f9_domain_run/triples.txt",
+  "expected_triples": 10080,
+  "cpu_budget_seconds": 60,
+  "profile_prefix": 64,
+  "one_cpu": true,
+  "independent_bfs": "delegated to parent/separate implementation",
+  "workflow": "ARIS DD82 mathematical adaptation",
+  "skills": [
+    ".agents/skills/proof-writer/SKILL.md",
+    ".agents/skills/experiment-bridge/SKILL.md"
+  ],
+  "adaptation": {
+    "plan": "DD82_V3_ARIS_GEMINI_PLAN_20261013.md plus explicit assigned finite experiment",
+    "backend": "local exact integer graph computation",
+    "code_review": "local self-check; parent review separately",
+    "sanity": "prefix expanded-edge direct/common-neighbour comparison; no independent BFS claim",
+    "disabled": [
+      "GPU training",
+      "paper scoring",
+      "hashes",
+      "extra manifest",
+      "automatic ablation"
+    ],
+    "external_review": "Gemini direction/results handled by parent same-mechanism thread; not yet reviewed"
+  }
+}

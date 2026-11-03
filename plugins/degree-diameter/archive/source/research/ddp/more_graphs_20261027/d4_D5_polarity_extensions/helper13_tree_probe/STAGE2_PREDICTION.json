@@ -1,0 +1,15 @@
+{
+  "frozen_before_computation": true,
+  "question": "Does the sole remaining13vertex diam4 helpertree center+4parents+8leaves fail a uniform leafcell capacity condition?",
+  "prediction": "Maximumgood(T,p)<18 over all3276triplesT and25externalparentports p.",
+  "helper_topology": "center degree4/noports;4parents each2leaves and1oldport;8leaves each3oldports;all28portsusedonce",
+  "good_definition": "good(T,p)={q outsideTandp: R2(q)withoutq subset R4(T)unionR3(p)}",
+  "necessary_condition": "Everyleaf must haveall18 foreignlevel2-leafports in good(T,p);otherhelperexits contributeonlyR2/R1/port to disjointowncells",
+  "scope_pairs": 81900,
+  "order": "lex3276triples,thenascendingparentportoutsideT",
+  "budget": "oneCPUworker<=5CPU;first1000includedprofile;sharedcachedballs only,noBFS",
+  "topology_reduction": "A13helperdegree4tree using28oldports mustdiam<=4;center3forces333;center4withanyki3 isexcludedbystage1good0;remaining2222",
+  "if_max_ge18": "Returnstatistic/witness only;no assignmentsearch",
+  "if_max_lt18": "ExcludeentirefixednaturalH3oldedgepreserving/noaddedoldoldedge13helperextensionclass;notarbitrary377graphs",
+  "no_k14_followup": true
+}

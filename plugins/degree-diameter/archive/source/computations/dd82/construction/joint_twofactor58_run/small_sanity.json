@@ -1,0 +1,189 @@
+{
+  "status": "SMALL_SEMANTICS_PASSED",
+  "AND_truth_assignments": 8,
+  "explicit_assignments": 7,
+  "records": [
+    {
+      "name": "valid_graph_before_P_normalization",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 8,
+      "failed_degrees": [],
+      "cross_route_mismatches": 8,
+      "bad_pairs": 0,
+      "same_side_bad_pairs": 0,
+      "diameter": 2,
+      "target_graph": true,
+      "normalized_target": false,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "normalized_after_right_order_[0, 1, 2, 3]",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 0,
+      "failed_degrees": [],
+      "cross_route_mismatches": 0,
+      "bad_pairs": 0,
+      "same_side_bad_pairs": 0,
+      "diameter": 2,
+      "target_graph": true,
+      "normalized_target": true,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "normalized_after_right_order_[2, 0, 3, 1]",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 0,
+      "failed_degrees": [],
+      "cross_route_mismatches": 0,
+      "bad_pairs": 0,
+      "same_side_bad_pairs": 0,
+      "diameter": 2,
+      "target_graph": true,
+      "normalized_target": true,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "same_side_covered_cross_routes_fail",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 16,
+      "failed_degrees": [],
+      "cross_route_mismatches": 16,
+      "bad_pairs": 4,
+      "same_side_bad_pairs": 0,
+      "diameter": 3,
+      "target_graph": false,
+      "normalized_target": false,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "cross_counts_exact_but_same_side_fails",
+      "n": 18,
+      "cross_degree": 2,
+      "variables": 6219,
+      "clauses": 20160,
+      "assigned_variables": 6219,
+      "false_clauses": 27,
+      "failed_degrees": [],
+      "cross_route_mismatches": 0,
+      "bad_pairs": 27,
+      "same_side_bad_pairs": 27,
+      "diameter": 3,
+      "target_graph": false,
+      "normalized_target": false,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "cross_degree_failure",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 7,
+      "failed_degrees": [
+        [
+          "cross_degree",
+          0,
+          0
+        ],
+        [
+          "cross_degree",
+          1,
+          1
+        ]
+      ],
+      "cross_route_mismatches": 5,
+      "bad_pairs": 3,
+      "same_side_bad_pairs": 0,
+      "diameter": 3,
+      "target_graph": false,
+      "normalized_target": false,
+      "complete_semantics_matches": true
+    },
+    {
+      "name": "internal_degree_failure",
+      "n": 8,
+      "cross_degree": 1,
+      "variables": 528,
+      "clauses": 1664,
+      "assigned_variables": 528,
+      "false_clauses": 5,
+      "failed_degrees": [
+        [
+          "internal_degree",
+          0,
+          0
+        ],
+        [
+          "internal_degree",
+          0,
+          1
+        ]
+      ],
+      "cross_route_mismatches": 2,
+      "bad_pairs": 1,
+      "same_side_bad_pairs": 1,
+      "diameter": 3,
+      "target_graph": false,
+      "normalized_target": false,
+      "complete_semantics_matches": true
+    }
+  ],
+  "normalizations": [
+    {
+      "initial_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "restoring_order": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "exact_labeled_edge_isomorphism_checked": true
+    },
+    {
+      "initial_order": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "restoring_order": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "exact_labeled_edge_isomorphism_checked": true
+    }
+  ],
+  "positive_example": {
+    "m": 4,
+    "internal_degree": 2,
+    "cross_degree": 1,
+    "cross_excess": 1
+  },
+  "official_m29_model_built": false,
+  "solver_calls": 0,
+  "elapsed_cpu": 0.043244727
+}

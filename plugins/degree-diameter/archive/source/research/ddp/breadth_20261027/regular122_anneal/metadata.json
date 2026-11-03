@@ -1,0 +1,26 @@
+{
+  "n": 122,
+  "degree": 6,
+  "target_D": 3,
+  "saved_baseline": 120,
+  "starts": 8,
+  "proposals_per_start": 250000,
+  "seeds": [
+    20261027180,
+    20261027181,
+    20261027182,
+    20261027183,
+    20261027184,
+    20261027185,
+    20261027186,
+    20261027187
+  ],
+  "initialization": "fresh 6regular circulant +/-1,+/-2,+/-3, independently mixed by 10000 legal random two-edge switches; no uniform-distribution claim",
+  "method": "unrestricted degree-preserving two-edge Metropolis annealing; five 50000-proposal cooling epochs from temperature8 to0.1 per start",
+  "score": "exact all122-root radius3 bitset union; no orbit symmetry",
+  "budget_CPU_seconds": 90,
+  "preparation_CPU_seconds": 0.839461,
+  "production_limit_CPU_seconds": 87.160539,
+  "worker_count": 1,
+  "first_calibration": "one formal start independently ordinary-BFS all122 roots; score reused"
+}

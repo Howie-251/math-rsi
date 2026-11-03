@@ -1,0 +1,13 @@
+search.cpp: In function ‘int main(int, char**)’:
+search.cpp:117:11: error: conflicting declaration ‘std::ofstream f’
+  117 |  ofstream f("production_terminal.json");
+      |           ^
+search.cpp:80:41: note: previous declaration as ‘int f’
+   80 |  ifstream input("inputs.txt");int n,s,m,f;input>>n>>s>>m>>f;assert(n==N&&s==STARTS&&m==EXT&&f==33);
+      |                                         ^
+search.cpp:118:3: error: invalid operands of types ‘int’ and ‘const char [12]’ to binary ‘operator<<’
+  118 |  f<<"{\"status\":\""<<status<<"\",\"running\":false,\"found_capacity_feasible_control\":"<<(hit?"true":"false")<<",\"starts_scope\":8,\"starts_completed\":"<<completed<<",\"proposals\":"<<proposals<<",\"legal_switch_candidates\":"<<legal<<",\"exact_all_root_capacity_scores\":"<<scores<<",\"accepted_moves\":"<<accepted<<",\"best_capacity_deficit_ordered\":"<<global.lack<<",\"best_insufficient_ordered_slots\":"<<global.slots<<",\"best_bad_unordered_pairs_gt3\":"<<global.bad<<",\"production_CPU_seconds\":"<<cpu()<<",\"scope_exhausted\":"<<(!hit&&!limited?"true":"false")<<",\"entire_controller_family_exhausted\":false,\"first_score_reused\":true,\"cursor\":{\"start\":"<<cursor_start<<",\"step\":"<<cursor_step<<"}}\n";
+      |  ~^~~~~~~~~~~~~~~~~~
+      |  |  |
+      |  |  const char [12]
+      |  int

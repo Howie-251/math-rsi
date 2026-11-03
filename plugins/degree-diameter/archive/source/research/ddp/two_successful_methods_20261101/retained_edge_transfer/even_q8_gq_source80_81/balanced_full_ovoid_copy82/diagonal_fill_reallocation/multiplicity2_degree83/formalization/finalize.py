@@ -1,0 +1,10 @@
+import json,re,time
+from pathlib import Path
+D=Path(__file__).resolve().parent;s=json.loads((D/'CHECKPOINT.json').read_text());assert not s['running'];mods=['Q8DiagonalFill83'+x for x in['Definitions','Inputs','Exact','Audit']];assert set(s['completed'])==set(mods)
+b=json.loads((D/'EXTERNAL_INPUT_BINDING.json').read_text());assert b['status'].startswith('PASS_')
+a=next(a for a in s['attempts']if a['module']=='Q8DiagonalFill83Audit'and a['PASS']);log=Path(a['log']).read_text();assert 'error:'not in log and'sorryAx'not in log
+for group in re.findall(r'depends on axioms: \[([^\]]*)\]',log):assert set(x.strip()for x in group.split(',')if x.strip())<={'propext','Classical.choice','Quot.sound'}
+cpu=s['CPU_seconds']+b['CPU_seconds']+time.process_time();assert cpu<150
+r=dict(status='ORIGINAL_D83_350742_KERNEL_AUDIT_EXTERNAL_ROLE_BINDING_PASS',target='DegreeDiameter.Portfolio.Q8DiagonalFill83.d83_350742',FinalClaim='DegreeDiameter.Portfolio.Q8DiagonalFill83.FinalClaim',final_claim='DegreeDiameter.Portfolio.Q8DiagonalFill83.final_claim',order=350742,max_degree=83,genuine_Walk_D3=True,not_D2=True,no_user_certificate_premises=True,axioms=['propext','Classical.choice','Quot.sound'],label='Fin350742',new_modules=4,all_first_attempt_PASS=True,CPU_seconds=cpu,CPU_budget_seconds=150,Audit_log=a['log'],external_binding=str(D/'EXTERNAL_INPUT_BINDING.json'),parent_source='Q8DiagonalFill.d82_346516',parent_source_order=346516,new_role_count=4226,new_finite_geometry_checks=0,old_modules_modified_or_recompiled=False,large_graph_reads=0,BFS=0,running=False,active_modules=[],priority='UNKNOWN',external_review_calls=0)
+for name in['FINAL.json','STAGE_STATE.json']:(D/name).write_text(json.dumps(r,indent=2)+'\n')
+s.update(status=r['status'],CPU_seconds=cpu,running=False,active_modules=[],final_receipt=str(D/'FINAL.json'));(D/'CHECKPOINT.json').write_text(json.dumps(s,indent=2)+'\n');(D/'HANDLE.json').write_text(json.dumps(dict(status=r['status'],running=False,active_modules=[],CPU_seconds=cpu),indent=2)+'\n');print(json.dumps(r))

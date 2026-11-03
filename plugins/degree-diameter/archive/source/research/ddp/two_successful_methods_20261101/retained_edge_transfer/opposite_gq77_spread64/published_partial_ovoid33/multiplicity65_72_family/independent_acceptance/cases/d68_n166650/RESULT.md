@@ -1,0 +1,1 @@
+PASS: (68,3),n=166650,m=5544000. Completeoldbody/newN64/labels/degree bindingandold-onlyallpairs/prefixproof. ActualnewBFSroots=0,oldR3roots=0; smallergraphsarenotinferredfrommaxBFS. SeeSUMMARY.json,PROOF.md andsharedTERMINAL.

@@ -1,0 +1,73 @@
+{
+  "status": "CONDITIONAL_Q4_LITERAL_FLAG_RULE_OUTSIDE_DEGREE_RANGE",
+  "operator": "A=points,B/C=flags; A seesotherpoints offlagline;BCcrossusesmarkedpointinotherline, distinctlines;Cinternalclique is samepointpanel.",
+  "uniform_formula": {
+    "order": "v+2v(t+1)",
+    "degree_A": "s(t+1)",
+    "degree_B": "s+st=s(t+1)",
+    "degree_C": "st+t=t(s+1)"
+  },
+  "cases": [
+    {
+      "label": "source_s2_t2",
+      "A": 63,
+      "B": 189,
+      "C": 189,
+      "order": 441,
+      "line_size": 3,
+      "lines_per_point": 3,
+      "degrees_A_B_C": [
+        6,
+        6,
+        6
+      ],
+      "max_degree": 6,
+      "A_only_split_order": 504,
+      "A_only_split_max_degree_lower_bound": 6,
+      "within_active_maxdegree12": true
+    },
+    {
+      "label": "conditional_unitary_q4_points",
+      "A": 208,
+      "B": 1248,
+      "C": 1248,
+      "order": 2704,
+      "line_size": 3,
+      "lines_per_point": 6,
+      "degrees_A_B_C": [
+        12,
+        12,
+        15
+      ],
+      "max_degree": 15,
+      "A_only_split_order": 2912,
+      "A_only_split_max_degree_lower_bound": 15,
+      "within_active_maxdegree12": false
+    },
+    {
+      "label": "conditional_unitary_q4_dual",
+      "A": 416,
+      "B": 1248,
+      "C": 1248,
+      "order": 2912,
+      "line_size": 6,
+      "lines_per_point": 3,
+      "degrees_A_B_C": [
+        15,
+        15,
+        12
+      ],
+      "max_degree": 15,
+      "A_only_split_order": 3328,
+      "A_only_split_max_degree_lower_bound": 15,
+      "within_active_maxdegree12": false
+    }
+  ],
+  "unitary_coordinate_identification_status": "Notattempted. Sourceabstractflaggeometry isexact; itsidentificationwithnaturalHermitianpointsversusdual isnotassumed. Bothnaturalq4orientationcounts failthedegreegate beforethisidentificationcouldhelp.",
+  "unitary_parameter_derivation": "PG2(q^2) hasq^4+q^2+1points; nondegenerateHermitianisotropiclocus hasq^3+1, so v=q^2(q^2-q+1). Nonisotropicpointperpline hasq^2+1points ofwhichq+1isotropic, givingr=q(q-1)orthogonalnonisopoints,pairedbyuniquethirdorthogonalpoint into r/2 triads. Atq4: v208, r12, pointdegreeintriadgeometry6,triads416,flags1248. Itsdual interchanges s2/t5 withs5/t2.",
+  "no_route_claim": "No q4diameter theorem or q4candidate was generated; degree15 alreadyexceedsDelta<=12. MerelysplittingA cannotlowerB/Cdegrees. Alteringcrossorpanelruleswouldbe anewmechanism requiringfullrouteproof.",
+  "CPU_seconds": 0.00043006400000000083,
+  "source_BFS": 0,
+  "q4_graphs_generated": 0,
+  "pending": []
+}

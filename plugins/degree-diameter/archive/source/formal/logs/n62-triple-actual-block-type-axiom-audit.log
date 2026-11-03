@@ -1,0 +1,96 @@
+def DegreeDiameter.triplePositiveLabel.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      DegreeDiameter.degreeAtMostEight G →
+        DegreeDiameter.diameterAtMostTwo G →
+          Fintype.card V = 62 →
+            {u v : V} →
+              DegreeDiameter.defectMatrix G u v = 3 →
+                Fin 4 ≃ { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v } :=
+fun {V} [Fintype V] G hdeg hdiam hcard {u v} hb => (Finset.equivFinOfCardEq ⋯).symm
+def DegreeDiameter.tripleNegativeLabel.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      DegreeDiameter.degreeAtMostEight G →
+        DegreeDiameter.diameterAtMostTwo G →
+          Fintype.card V = 62 →
+            {u v : V} →
+              DegreeDiameter.defectMatrix G u v = 3 →
+                Fin 4 ≃ { y // y ∈ DegreeDiameter.tripleExclusiveNeighbors G v u } :=
+fun {V} [Fintype V] G hdeg hdiam hcard {u v} hb =>
+  (DegreeDiameter.triplePositiveLabel G hdeg hdiam hcard hb).trans
+    (DegreeDiameter.tripleMatchingEquiv G hdeg hdiam hcard hb)
+def DegreeDiameter.tripleActualCrossBlock.{u_1} : {V : Type u_1} →
+  [inst : Fintype V] →
+    (G : SimpleGraph V) →
+      DegreeDiameter.degreeAtMostEight G →
+        DegreeDiameter.diameterAtMostTwo G →
+          Fintype.card V = 62 → {u v : V} → DegreeDiameter.defectMatrix G u v = 3 → Matrix (Fin 4) (Fin 4) ℤ :=
+fun {V} [Fintype V] G hdeg hdiam hcard {u v} hb i j =>
+  DegreeDiameter.defectMatrix G ↑((DegreeDiameter.triplePositiveLabel G hdeg hdiam hcard hb) i)
+    ↑((DegreeDiameter.tripleNegativeLabel G hdeg hdiam hcard hb) j)
+@DegreeDiameter.n62_triple_exclusive_zero_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {u v x : V},
+          DegreeDiameter.defectMatrix G u v = 3 →
+            x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v → DegreeDiameter.zeroTriangleVertex G x
+@DegreeDiameter.n62_triple_matching_repeat_neighbor_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3)
+  (x z : { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v }),
+  ∑ y ∈ G.neighborFinset ↑z, DegreeDiameter.defectMatrix G (↑x) y =
+    DegreeDiameter.defectMatrix G ↑x ↑((DegreeDiameter.tripleMatchingEquiv G hdeg hdiam hcard hb) z)
+@DegreeDiameter.n62_triple_matching_repeat_symmetric : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3)
+  (x z : { x // x ∈ DegreeDiameter.tripleExclusiveNeighbors G u v }),
+  DegreeDiameter.defectMatrix G ↑x ↑((DegreeDiameter.tripleMatchingEquiv G hdeg hdiam hcard hb) z) =
+    DegreeDiameter.defectMatrix G ↑z ↑((DegreeDiameter.tripleMatchingEquiv G hdeg hdiam hcard hb) x)
+@DegreeDiameter.n62_triple_labels_adj_iff : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3) (i j : Fin 4),
+  G.Adj ↑((DegreeDiameter.triplePositiveLabel G hdeg hdiam hcard hb) i)
+      ↑((DegreeDiameter.tripleNegativeLabel G hdeg hdiam hcard hb) j) ↔
+    i = j
+@DegreeDiameter.n62_triple_actual_block_symmetric : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3) (i j : Fin 4),
+  DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb i j =
+    DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb j i
+@DegreeDiameter.n62_triple_actual_block_diagonal : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3) (i : Fin 4),
+  DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb i i = 0
+@DegreeDiameter.n62_triple_actual_block_nonnegative : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3) (i j : Fin 4),
+  0 ≤ DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb i j
+@DegreeDiameter.n62_triple_actual_block_row_sum : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3) (i : Fin 4),
+  ∑ j, DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb i j = 3
+@DegreeDiameter.n62_triple_actual_block_classification : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  (hdeg : DegreeDiameter.degreeAtMostEight G) (hdiam : DegreeDiameter.diameterAtMostTwo G) (hcard : Fintype.card V = 62)
+  {u v : V} (hb : DegreeDiameter.defectMatrix G u v = 3),
+  ∃ σ,
+    σ 0 = 0 ∧
+      (DegreeDiameter.tripleFourPattern
+          (fun i j => DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb (σ i) (σ j)) 3 0 0 ∨
+        DegreeDiameter.tripleFourPattern
+            (fun i j => DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb (σ i) (σ j)) 2 1 0 ∨
+          DegreeDiameter.tripleFourPattern
+            (fun i j => DegreeDiameter.tripleActualCrossBlock G hdeg hdiam hcard hb (σ i) (σ j)) 1 1 1)
+'DegreeDiameter.triplePositiveLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleNegativeLabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.tripleActualCrossBlock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_exclusive_zero_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_matching_repeat_neighbor_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_matching_repeat_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_labels_adj_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_actual_block_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_actual_block_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_actual_block_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_actual_block_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triple_actual_block_classification' depends on axioms: [propext, Classical.choice, Quot.sound]

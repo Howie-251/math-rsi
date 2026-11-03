@@ -1,0 +1,163 @@
+diff --git a/base/skills/mathrsi-prepare/SKILL.md b/base/skills/mathrsi-prepare/SKILL.md
+index 2938648..e9afd3a 100644
+--- a/base/skills/mathrsi-prepare/SKILL.md
++++ b/base/skills/mathrsi-prepare/SKILL.md
+@@ -57,17 +57,20 @@ description: 数学研究的准备子工作流，实际串联原题初步澄清
+ 读取本仓 mathrsi-survey/SKILL.md 并执行。
+ 调查 <W>/FORMAL_SPEC.md 的初步问题，复用原wiki和ref。
+ 已启用插件 <实际入口与阶段> 一并交给你；Property B按survey中的
+-propertyb-literature调用执行领域种子、查询和误读核对，与通用发现共享一轮调查。
++propertyb-literature调用执行领域种子、查询和误读核对；已启用DD则按survey的
++DD分支读领域入口和transfer的公开比较段。两者各与通用发现共享本次调查，已有结果补差异。
+ 本轮未知是 <异名/基线/反例/指定进口>；新题首轮广搜，已有调查补差异。
+ 结果写 LITERATURE.md，保留实际查询和原文位置。
+ 返回可用结论及条件、基线、候选反例、关键未读来源，
+ 说明哪些发现影响正式目标的解释。不要替用户换目标。
+ ```
+ 
+-领域插件提供当前任务的具体查询与原文定位。例如Property B要对齐参数、同一基线及公式范围。让survey与领域literature分工消费同一报告，避免两个agent重复广搜；并行查不同来源时指定一个报告和wiki writer。
++领域插件提供当前任务的具体查询与原文定位。例如Property B要对齐参数、同一基线及公式范围。已启用DD时，将 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md) 和 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4交给survey，附当前 `(d,D,n)`、最大度／正则要求、固定任务还是竞争目标及原caller；按survey的DD分支取历史wiki与公开比较为种子，返回合法构造族代入及其实际影响。让survey与领域阅读共享同一报告和一次发现，已有DD材料只补新缺口，避免两个agent重复广搜；并行查不同来源时指定一个报告和wiki writer。
+ 
+ 收到调查，读回基线与拟用进口的精确结论、版本、编号、前提和原题映射。找到现成证明就核对、复述或按用户要求寻找独立证明；找到反例先验原对象和性质。未搜到解答只表示当前搜索范围，不能作为原创或为真的证据。
+ 
++若新基线影响正在准备或恢复的竞争目标，直接比较原候选与新保证，回交哪些任务仍值得做、哪些仅服务于已失效的纪录主张、第一项替代动作是什么；有上层 caller 就由它撤换实际队列，不另启一轮准备。用户固定的构造／证明任务继续保留，只有比较结论改变。DD 的公开33点 partial ovoid 既超过旧 O22 目标，也提供了更强源输入；因此返回应包含“停止原竞争队列，读取新源的适用条件”，而非只在 LITERATURE 中追加一行数值。原件和比较边界见[基线转折](../mathrsi-meta-evolve/references/evidence-and-transfer.md#4-链三基线改变的是研究价值不是图的合法性)。
++
+ 关键原文缺失时返回survey补那一项，未变来源不重查。缺失不阻止另一路线时保留条件状态并继续独立工作，不让单一检索服务阻塞整个研究。
+ 
+ ## 4. 调查交回 specify 定稿
+diff --git a/base/skills/mathrsi-prove/SKILL.md b/base/skills/mathrsi-prove/SKILL.md
+index 03cbdbe..2d6fbad 100644
+--- a/base/skills/mathrsi-prove/SKILL.md
++++ b/base/skills/mathrsi-prove/SKILL.md
+@@ -79,7 +79,21 @@ proof-writer即使写“PROVABLE AS STATED”，也先读其正文并检查最
+ 
+ ### 领域数学、构造搜索或确定性计算
+ 
+-读取已启用插件的实际工作技能，给当前分支及真实输入。例如Property B可调用 [propertyb-bound-lab](../../../plugins/propertyb/skills/propertyb-bound-lab/SKILL.md) 处理选点、共同约束或残型；需要接入证书范围时读其certificate技能。其它领域由其已安装插件或实际领域程序负责，不要求存在同名adapter。
++读取已启用插件的实际工作技能，给当前分支及真实输入。例如Property B可调用 [propertyb-bound-lab](../../../plugins/propertyb/skills/propertyb-bound-lab/SKILL.md) 处理选点、共同约束或残型；需要接入证书范围时读其certificate技能。
++
++已启用DD时，先用 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)对齐当前图义务：源图／控制器／有限域与实际标签、允许保留／删除／新增哪些边、度数cap、距离进口及原caller。构造推进实际调用 [dd-construction](../../../plugins/degree-diameter/skills/dd-construction/SKILL.md)；必要门、失败点对、有限域／整数证书或固定图属性核查调用 [dd-obstruction-certificate](../../../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)。换源／规则或基线影响路线时将新旧输入交 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)，收回后继续原prove义务，不重复全轮文献调查。调用材料可以是：
++
++```text
++读取本克隆DD插件中本次选用的dd-construction或dd-obstruction-certificate/SKILL.md。
++当前义务及父caller：<现用草稿的准确位置>；原规格与实际source/参数/标签：<文件>。
++允许改边与已有距离/度数证据：<准确范围>；只写 <任务独占目录>，不改archive。
++构造返回真实图定义、sourceN/route输入绑定、degree与全部pair的caller或准确缺条件；
++排除/核验返回必要性依据、完整声明域、实际证书/失败target、命令与执行范围。
++若执行程序，按DD运行参考绑定本克隆插件根，输出写当前任务，不按旧日志cwd执行。
++结果返回本prove原义务，不另起verify/handoff或旧Goal。
++```
++
++收回DD产物立即接草稿：图满足存在性规格就准备候选验证，条件定理仍缺source前提就补该caller，必要PASS继续共同赋值／覆盖，严格NO只关闭其实际操作域。历史构建／BFS静态复用与本次运行分别记，完整候选再按本流程返回父调度者。其它领域由其已安装插件或实际领域程序负责，不要求存在同名adapter。
+ 
+ 计算前先固定它要验证的数学谓词、原输入进入该域的依据、精确或近似算术及输出如何被证明消费。探索可采用启发式；最终存在性见证需核合法性和全部所需性质，全域排除则须覆盖其完整声明域。样本或松弛坏型只能改变路线判断。已有程序适用就复用；成本不清的大计算先跑一个能暴露分支量、内存与读回量的真实调用，再安排全量。
+ 
+@@ -87,8 +101,12 @@ proof-writer即使写“PROVABLE AS STATED”，也先读其正文并检查最
+ 
+ 发现、成员核验、目录无遗漏、全部拒绝和原题连接是不同的义务，可以由不同证据完成。目录来自启发式并不妨碍严格收尾：若已有充分分类上限，完整核合格互异代表数量后可建立覆盖，无须重造穷尽发现器。也不能用重验保存成员代替缺失的无遗漏。多行或多视图任务先看便宜的必要联合条件能否结束当前范围，再决定是否展开更高阶域；必要pair为空可排其覆盖的扩张，非空则只给后继输入。
+ 
++局部工具返回失败时，先核它与原义务的方向。例如插件只返回各短路线的 rank，而目标要求同一源输入下所有路线像的并覆盖；单路不满秩可能只是充分工具失败。下一任务应取回实际路线像、共同参数和组合式，证明并覆盖或给原目标的未覆盖见证，不能擅自按每路另选源输入。必要门通过时，把存活输入送入仍未闭的共同赋值／覆盖，保持原 caller 开放。若已有证明该局部门对固定族确实必要，则依其全域拒绝关闭准确范围，无需更强计算。DD 的共同 coset 补齐和必要 chart 门的不同返回见[覆盖接口](../mathrsi-meta-evolve/references/evidence-and-transfer.md#2-链一覆盖的是共同路线并满秩只是其中一种工具)及[实际门结果](../mathrsi-meta-evolve/references/evidence-and-transfer.md#5-链四必要门unknown精确证书与实际构造分别消费)。
++
+ 若出现新进口、等价问题或文献反例疑问，回调 [mathrsi-survey](../mathrsi-survey/SKILL.md)：给准确命题、当前式子、已查来源及希望核清的条件，要求定向补查原文/引用链。消费其版本、条件和来源后回到**同一个证明义务**，不用重做不受影响的全部检索。短小明确的来源查询也可直接用仓内research-lit。Lean/API报错用web-debug-search或现有工程工具，不把网络搜索变成另一个无边界主任务。
+ 
++回调发现更强基线时，当前 prove 协调者还要改实际行动：若目标是超过公开保证，取消尚未派发且只追旧门槛的任务，携已核比较及新的可用输入回原 route owner，或直接执行已支持的新路线；在途产物按原状态回收，合法的旧证明保留。若用户固定要某个对象／定理，则原义务继续，只修比较措辞，不把基线数值换成新规格。返回记录要写明撤掉或保留了哪项任务和紧接着执行什么，不能只追加一条文献链接。
++
+ ## 3. 独占任务并行推进，完整产物立即收割
+ 
+ 能独立验收的引理、局部实现、分块精确复算、来源核查与覆盖子分支，可以在当前授权下主动交给Sol或项目指定worker；主代理保留关键数学、共同对象、路线选择与最终集成。用户或项目有专项模型分工时遵循该分工；没有可用委派工具时本代理直接执行，不等待一个虚构worker。很小的改动直接做，不为凑并发派发。
+@@ -123,6 +141,8 @@ proof-writer即使写“PROVABLE AS STATED”，也先读其正文并检查最
+ 
+ 新预算或参数改变时，先从原输入重新推出必要域与选择条件，再复用重叠成果。不能把旧表的残型清单或少数tight输入当新域：Property B的边数增加可能同时改变顶点上下端、低度点数量和锁选择，ECC则可能改变母码/尾型和共同扩张。重建受影响接口后，只对新增域、改变的条件及下游重核；未变的重结果仍复用。
+ 
++生成规则或源对象改变时，不把“旧结果”整体清空或整体沿用。写清旧对象、新对象及保留／新增关系，沿每个正在使用的结论检查依赖：正向定理的假设仍满足就继承，变动的 caller 补证；旧失败用到的限制已解除，就只保留其原域，重新处理新域。DD 冻结源邻域的 clone 定理要求生成前先保存定理所指的源数据，后继新点不能混入该源；换为一张已增点图时就以那张图为新源重新供给条件。cross-only 失败也不能排除放宽后的任意边界 matching，须用新规则下的实际路径和共同剩余义务判断。完整领域条件和反例见[正负证据继承](../mathrsi-meta-evolve/references/evidence-and-transfer.md#3-链二对象变了哪些旧证明保留哪些旧失败已越界)；本处只决定应继承什么、补证什么和停止哪份过期任务。
++
+ 随后直接做下一项已授权动作：引理成立就代入并算真正活跃界；父型严格就停止展开；只剩未闭子域就缩小下一批；见证达到目标就核完整性质；结果暴露代码错就修代码并核受影响范围。不能每回收一个结果就只汇报“下一步建议”。
+ 
+ ### 对具体论证执行research-review的数学适配
+diff --git a/base/skills/mathrsi-route-loop/SKILL.md b/base/skills/mathrsi-route-loop/SKILL.md
+index a7e424a..4110b9f 100644
+--- a/base/skills/mathrsi-route-loop/SKILL.md
++++ b/base/skills/mathrsi-route-loop/SKILL.md
+@@ -77,12 +77,18 @@ reviewer: grok（仅示例，实际沿用户/项目路由）；cwd: /task。
+ 
+ ## Phase C：实际修复、推导、探针，并收回结果
+ 
+-按关切的下游影响做实作，不停在“建议验证”。调用 [formula-derivation](../skills-codex/formula-derivation/SKILL.md)处理目标量和公式链不稳的问题：给原对象、允许条件、散落不等式、当前caller与独占输出路径，收回同一对象上的完整推导包。关键引理已准确时调用 [proof-writer](../skills-codex/proof-writer/SKILL.md)直接证明或找反例；收回更弱定理时保留其用途，同时原义务继续开放。领域结构问题交插件真实子技能；可独立验收的作者/独核任务按独占目录分工，Root同时处理共同对象、关键数学和整体判断。
++按关切的下游影响做实作，不停在“建议验证”。调用 [formula-derivation](../skills-codex/formula-derivation/SKILL.md)处理目标量和公式链不稳的问题：给原对象、允许条件、散落不等式、当前caller与独占输出路径，收回同一对象上的完整推导包。关键引理已准确时调用 [proof-writer](../skills-codex/proof-writer/SKILL.md)直接证明或找反例；收回更弱定理时保留其用途，同时原义务继续开放。领域结构问题交已启用插件的真实子技能；可独立验收的作者/独核任务按独占目录分工，Root同时处理共同对象、关键数学和整体判断。
++
++已启用DD插件时，读取[mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)确认当前图目标；将实际source、失败输入、新旧规则、共同参数和本轮待判问题交[dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)，收回哪些正证据可继承、哪些旧否证已越界以及具体下一动作。涉及构造/路线覆盖的修法实际交[dd-construction](../../../plugins/degree-diameter/skills/dd-construction/SKILL.md)，给原caller与输出写域，读回图定义、degree/共同覆盖证明或未覆盖见证；有精确局部门或有限证书义务时交[dd-obstruction-certificate](../../../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)，只消费其实际核验范围。把这些产物代回本轮候选再进入D，不用插件完成标签代替共同条件，也不让领域作者自行启动prove/verify或下一轮。其它插件按同一输入/消费/返回合同选其实际入口。
+ 
+ 每项重要关切落实为实际改变：修正证明和正式候选正文、补进口原证明、改程序并运行受影响输入、构造严格反例，或形成当前不能完成的准确义务。报告中链接变更文件与真实结果；承诺下一轮修复不计已处理。一个新引理即使成立若不能影响活跃界，先查能否与别的改进联合；没有下游用途则换提案。条件引理仍保留准确假设、结论和重启用途。
+ 
++候选修改了对象、允许操作或参数时，在原报告先写新旧关系，再分开处理正证据和负记录。正结论逐项看新对象是否仍满足原假设；可继承的定理保留，只补改变的输入连接。旧否证逐项看依赖的限制是否仍在：限制已解除就收窄其适用域，不能继续拒绝新候选；旧障碍未变则不因换种子或名字重算同一域。DD 从 cross-only 改为任意边界 matching 时，旧“必须直接匹配”论证失效，实际同侧边修好了旧点对，但仍须处理其余共同路线；这既不推翻原 cross-only 排除，也不证明新构造成功。原件与冻结源的正向继承例见[对象改变链](../mathrsi-meta-evolve/references/evidence-and-transfer.md#3-链二对象变了哪些旧证明保留哪些旧失败已越界)。
++
+ 计算先复用程序，固定真正检查的谓词、输入域、精确/近似算术和不同结果触发的决定。必要模型中的坏型说明松弛或充分界失败，不能当原题反例；一个严格反例可否定候选全称引理，小域全过只用于结构或成本判断。启发式目录可以结合“成员合法且不等价＋适用的已证分类上限”建立完整性，不强制重做发现过程；若目标是存在性，找到见证就完整核验。查接受成员合法并不补足漏删/覆盖义务。
+ 
++若探针检查的是比原义务更强的局部充分条件，失败后先回读实际量词：原目标需要逐个局部贡献独自成功，还是同一对象提供的贡献合起来覆盖？例如逐路 rank 不满不自动否定共同路线像的并；要求插件返回同一源输入下各像、允许的共同参数及未覆盖见证，再决定做组合证明或确证排除。只有已证明该 rank 门对当前固定族确属必要，其全域失败才能关闭该族。反过来，必要门 PASS 只交回存活输入与下一项共同赋值／覆盖义务，不能返回“构造已得”。DD 的 D4 共同 coset 补齐与 F4 局部门通过后仍缺共同 chart，分别见[覆盖链](../mathrsi-meta-evolve/references/evidence-and-transfer.md#2-链一覆盖的是共同路线并满秩只是其中一种工具)和[门的返回意义](../mathrsi-meta-evolve/references/evidence-and-transfer.md#5-链四必要门unknown精确证书与实际构造分别消费)。
++
+ 发出作者、程序或异步审阅任务后立即记录真实ID、输入、命令、输出及当前状态。成熟产物一到就读完整论证、关键输入和原始结果，按决定所需做相称独核，不能等整批或拿worker completed当验收。未结束时沿同任务监控，推进其它独立修复；失败保留实际退出码/范围，修真实问题再继续。局部verify需要时给明确属性/范围，收回后接原prove/当前路线义务，不把它扩成整题终审或另开同级流程。
+ 
+ 成本计入生成、共同对象运输、序列化、保存、读回、独核和后继联合。完整必要域与端到端测量已经可承接，就做完需要的域；小内核快或核心只剩几类不代表整个联合扩张便宜。若局部代表变少但后继共同域没变，重新判断表示。超预算的必要动作明确留开并比较足够的替代方案，不能自动跳过后声称路线已检查。
+@@ -108,6 +114,8 @@ reviewer: grok（仅示例，实际沿用户/项目路由）；cwd: /task。
+ 
+ 新障碍涉及遗漏术语、等价问题或进口时，调用 [mathrsi-survey](../mathrsi-survey/SKILL.md) / [research-lit](../skills-codex/research-lit/SKILL.md)，交确切问题和已查证据，例如“文献T的联合规范化是否保持前一步选择”。只补新链或原文条件，收回版本、定理定位与条件后回**同一义务和当前phase**，不从零重启整题准备。
+ 
++若返回的是提高了的公开基线，马上消费到当前路线：核同域条件和本次合法代入，标记哪些候选已被支配，撤掉仅为原竞争门槛服务的待派发任务；将可用的新源／工具及首批未闭条件接入本轮实作。已运行或在途任务按真实状态处理，保留其可复用产物与已用预算，不重写历史结果。用户固定的证明／构造目标仍执行；若只有选题授权才在其范围内换目标。DD 中 F7 合法实例失去纪录价值、O22 竞争队列转向公开 P33 输入是这个返回动作的实例，不增加另一套查新工作流。
++
+ 同一卡点两轮没有改变证据、未证条件或下一决定，Root接管具体缺口或重拆，比较表示/共同约束/其它路线，停止同样内容空转。纯资源等待保存实际断点，不强迫换理论；仍有明确新工作则继续。指定reviewer不可用时保存失败，做不依赖该意见的实作；本次所需review没完成便报告不完整，不悄悄换成Root自审。探索轮次用尽只收卷此子范围，不自动暂停整个Goal。
+ 
+ ## Phase E：每轮落盘、更新断点，再进入下一动作
+diff --git a/base/skills/mathrsi-specify/SKILL.md b/base/skills/mathrsi-specify/SKILL.md
+index 2cb5727..5a60ed6 100644
+--- a/base/skills/mathrsi-specify/SKILL.md
++++ b/base/skills/mathrsi-specify/SKILL.md
+@@ -99,6 +99,8 @@ description: 整理数学研究的初步问题或恢复既有任务，并在文
+ 
+ 如果调用了ARIS `novelty-check`，其建议评估的是贡献与近邻工作，不是更改原目标的权限。它的PROCEED／CAUTION／ABANDON及分数不是数学真值；用户指定任务可以继续复现、证明或改进已有结果。只有用户原本交给agent选题时，才在允许范围内提出替代问题。
+ 
++若原任务是“超过已知界／选择有竞争力的目标”，定稿还要说明比较的是哪种对象、哪条已核保证及来源日期；已知构造族在合法参数下的推论也参加比较，不能只对照一张表的已列实例。新来源抬高基线时，把受影响候选及新的竞争门槛交回 prepare／原 caller，让它实际调整队列；不把新门槛静默替换成用户固定的数学参数。若用户固定要构造某个对象，则继续原交付，只撤回已失效的“新纪录”措辞。DD 中 O22 构造合法但被 P33 公开机制超过，是这两种状态分开的[具体例子](../mathrsi-meta-evolve/references/evidence-and-transfer.md#4-链三基线改变的是研究价值不是图的合法性)。
++
+ ## 4. 写成可供求解与验收的正式规格
+ 
+ 规格应让后继agent不靠聊天记录知道自己须证明什么。采用定义—目标—允许终点—依赖的自然结构即可，不需填满无关栏目。对长任务通常包含以下内容：
+diff --git a/base/skills/mathrsi-survey/SKILL.md b/base/skills/mathrsi-survey/SKILL.md
+index 6c23cf7..cc49452 100644
+--- a/base/skills/mathrsi-survey/SKILL.md
++++ b/base/skills/mathrsi-survey/SKILL.md
+@@ -92,7 +92,26 @@ flowchart TD
+ 
+ 调用返回后，survey报告owner实际读领域提取，将独有正文合入 `LITERATURE.md`；若保留独占提取稿，就把它作为有明确内容的附件链接，canonical报告仍写出关键进口与用途，不再复制一份同内容总报告。wiki由本轮指定owner合并更新。领域子调用中的ARIS提取、原PDF和来源证据继续保留；它并不取得调度后继prove的权限。
+ 
+-未启用领域插件或其它数学题走下面通用research-lit分支。ECC草案未按本轮标准验收，不因题目是码论就自动加载；只有用户明确授权使用时才作为指定领域输入，保持其draft状态，不读取或恢复原研究。
++### 已启用 DD 时，实际接入构造族与公开比较
++
++当前题属于 degree–diameter 且插件已启用时，读取 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)的接手／公开比较段和 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，再按[调用地图](../../../plugins/degree-diameter/references/reading-and-calling.md)定位本次原件。输入包括 `(d,D,n)`、最大度还是正则、固定构造还是竞争目标、已有来源和原caller。以随仓[历史 research-wiki](../../../plugins/degree-diameter/archive/source/research-wiki/)及[公开比较目录](../../../plugins/degree-diameter/archive/source/research/ddp/two_successful_methods_20261101/public_baseline_audit/)为本地种子，读与当前参数／机制相关的实体、来源和后续更正；历史比较不冒作今日最强纪录，归档wiki只读，新事实写当前任务wiki。
++
++本survey协调者持有唯一一次research-lit发现与LITERATURE writer；DD子调用负责本次领域关键词、构造族条件与合法代入，不另开平行广搜。已取得同范围结果时传给DD阅读者，只补未核来源或条件；新题仍执行本次需要的外部查漏，不把归档视为全领域覆盖。可直接发出：
++
++```text
++读取本克隆 plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md，
++并执行 dd-transfer-diagnosis 的§4公开比较范围。
++原题/当前义务、(d,D,n)、最大度/正则、固定/竞争目标及原caller见本次输入。
++读archive/source/research-wiki相关页与public_baseline_audit相关原件，
++给本轮research-lit的领域关键词、构造族/引用链及确切缺源；已有发现结果一并消费，
++不重复完整广搜。调查由当前survey统一调用research-lit并传composed到LITERATURE.md。
++返回已发表实例、已知族合法代入、条件/版本/原文定位及候选影响；
++只写 work/literature/dd/ 独占提取稿或返回正文，不改archive、共享LITERATURE或另建wiki。
++```
++
++收到DD提取后，按本技能§3–5核原对象、参数存在性、最大度／正则条件和一般复制等组合规则；将明确发表值、合法代入推论与未核当前最优分开合入 `LITERATURE.md`。只比某家族已列实例不足以支撑竞争判断。把“旧比较→新保证→受影响候选／可用新源→剩余条件”返回prepare或原route-loop／prove义务，父caller据此调整实际队列；固定目标保持不变。原公式及证明留在DD，不在survey重抄；引用、wiki及后续深读仍按下文共享流程完成。
++
++未启用领域插件、或无对应已启用领域分支的数学题，走下面通用research-lit分支。ECC草案未按本轮标准验收，不因题目是码论就自动加载；只有用户明确授权使用时才作为指定领域输入，保持其draft状态，不读取或恢复原研究。
+ 
+ ### 通用发现分支与共享结果消费
+ 
+@@ -167,6 +186,8 @@ research-lit的20篇／前三页规则用于发现，不是数学进口的阅读
+ 
+ 基线回答“在同一原对象和参数范围内，已经知道什么”。写出上下界、严格性、归一化、有限起点与依赖。表中分开原文明确报告的纪录、由原文公式本次代入推得的数、以及我们新组合的推论。渐近领先项更好不必在小参数更强；“充分大”未给阈值就不擅自给有限起点。没有完成当前纪录查漏时称“本次已核来源中的基线”，不要称世界最强。
+ 
++当调查会决定候选是否有竞争价值，除表列实例还要检查已知构造族能否在本参数合法代入：核参数存在性、对象限制及组合规则，再写本次推得的保证。表中“已构造下界”和“理论上界”必须分列；一般族未单列该数值不等于没有这一保证。返回 caller 时给旧比较→新保证→受影响候选／队列→可用新输入或具体缺源，使它能立即改变下一动作。合法性、验证等级与纪录价值分别保留，不要求重跑未变构造。DD 的 F7 实例被 Delorme 合法代入超过、P33 表的33与上界43被误读风险，见[实际比较链](../mathrsi-meta-evolve/references/evidence-and-transfer.md#4-链三基线改变的是研究价值不是图的合法性)；这里只复用消费动作，领域公式仍由插件提供。
++
+ 如果后继已形成明确方法／贡献，需要单独核“某结果是否已被包含”，这时才调用novelty-check。先读对应宿主入口，交给它原题、候选delta、上述近邻与原文定位，而非只说“评价新颖性”：
+ 
+ ```text

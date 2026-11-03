@@ -1,0 +1,36 @@
+{
+  "timestamp_UTC": "2026-10-28T04:23:25.548089+00:00",
+  "status": "FROZEN_BEFORE_TWO_VERTEX_ADJACENCY_BINDING",
+  "rule": "For an oldedgeu-v add adjacentnewuprime/vprime;uprime attaches exactlyN(u)minus{v},vprime exactlyN(v)minus{u};retainalloldedges.",
+  "source_candidates": [
+    {
+      "Delta": 11,
+      "n": 37631,
+      "source": "h9_d11_followups/graph_d11_D5_n37631.edges"
+    },
+    {
+      "Delta": 12,
+      "n": 42402,
+      "source": "h9_redei15/production/continuation/graphs/graph_d12_D5_n42402.edges"
+    }
+  ],
+  "cached_degree_observation_only": {
+    "degree11_full_vertices_with_satN1": [],
+    "degree12_full_vertices_with_satN1": [
+      28565,
+      36331
+    ]
+  },
+  "falsifiable_prediction": "The onlypossible degree12 fullendpoint pair28565/36331 is anoldedge and its sharedfreeboundaryhas enoughslots, givingan automaticpairclone extensionwithoutR4search.",
+  "necessary_degree_gate": "Because everycurrentvertex hasasaturatedneighbor, botholdendpoints mustbesaturatedandhaveeachotherastheironlysaturatedneighbor. Everysharedboundarypin requiresdeficit>=2, everyotherboundarypindeficit>=1.",
+  "diameter_guarantee": "Foroldtargett notin{u,v},copyashortestu-tpath:ifitfirstusesedgeu-v,replaceitsfirsttwooldverticesbyuprime-vprime,thenexitviaN(v)minus{u};otherwiseexituprimeviathefirstoldneighbor. Endpointcases use2or3steps throughnonemptyboundary. Sameforvprime;newnewdist1;oldoldretained. ThusDnew<=max(Dold,3).",
+  "resource_and_scope": {
+    "CPU_seconds": 15,
+    "new_graphs": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "source_degree_scan_repeated": false,
+    "planned_binding": "Readonly actualneighbors andsharedpinloads for the2literaldegree12 endpoints. Noenumerationofnewgraphs."
+  },
+  "not_old_rules": "NotanindividualfullNvclone,not ananchor-repairedQlinepair,notthe51445guardmodel. Oldfullneighborsareavoidedbycopyingtheedgeinternally."
+}

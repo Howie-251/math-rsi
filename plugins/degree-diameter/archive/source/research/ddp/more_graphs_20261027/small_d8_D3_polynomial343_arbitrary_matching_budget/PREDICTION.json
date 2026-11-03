@@ -1,0 +1,40 @@
+{
+  "timestamp_UTC": "2026-10-28T02:54:24.656644+00:00",
+  "status": "FROZEN_BEFORE_ENDPOINT_ENUMERATION",
+  "parent_source_record": "ddp-wave11-polynomial343-matching-scout",
+  "target_Delta": 8,
+  "target_D": 3,
+  "hypothetical_n": 343,
+  "savedL": 253,
+  "source_formula": "p=(a,b,c) neighbor (s, a*s-b, a*a*s+a*s*s-c) overF7, delete loops",
+  "root": [
+    0,
+    0,
+    0
+  ],
+  "question": "Does one whole extra matching have enough short-path capacity from a loop-deficient source root to repair the polynomial source?",
+  "new_prediction": "The formal three-walk endpoint image from root0 has size at most194. If so the complete arbitrary singlematching augmentation family is impossible, without optimizing matching.",
+  "formal_endpoint_formula": [
+    "d",
+    "v*(d-u)",
+    "v*(d-u)*(v+d+u)"
+  ],
+  "enumeration_domain": "u,v,d inF7, exactly343 symbolic triples; formal loops allowed only for an upperbound.",
+  "why_includes_source_B3": "root0 has a formal loop. Every true simple-source walk of length<=3 can be padded atroot tolength3 in the loop-allowed formula.",
+  "augmentation_route_bound": {
+    "zero_matching_edges": "formal_endpoint_image_size",
+    "one_M_first": "max source B2<=1+7+7*6=50",
+    "one_M_middle": "deg_G(root0)*maxB1<=6*8=48, includes G-M length2 andG-M-G length3",
+    "one_M_last": "source B2(root0)<=1+6+6*6=43",
+    "two_M": "only M-G-M for a simple shortestpath, atmost7 distinct endpoints",
+    "total_upper": "formal_endpoint_image_size+148",
+    "claim_limit": "Bound is deliberately loose and may doublecount; all terms are upperbounds. It excludes only source+one simplematching if its sum<343."
+  },
+  "budget": {
+    "symbolic_tuple_enumerations": 343,
+    "solver_calls": 0,
+    "expanded_graphs": 0,
+    "BFS": 0
+  },
+  "next_decision": "Compute endpoint image once, compare predicted threshold, ask independent paper check. Ifstrict bound fails, preserve refutation and reconsider; do not run matching optimization."
+}

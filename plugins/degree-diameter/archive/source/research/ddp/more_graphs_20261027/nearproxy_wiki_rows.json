@@ -1,0 +1,69 @@
+[
+  {
+    "id": "ddp-neighborhood-proxy-transfer-d14-d15-20261027",
+    "title": "N13成功代理迁移：D14/D15每个原型仍缺8/9个代理",
+    "family": "Near-neighborhood proxy transfer",
+    "record_type": "finite-proxy-eligibility-experiment",
+    "target_Delta": null,
+    "target_D": 5,
+    "savedL": null,
+    "target_is_multivalued": true,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Two actualfixedsources94186/100132; fullu atdegreeDelta, freew with|N(u)\\N(w)|<=3 and|N(w)\\N(u)|<=1; deterministic maxcommon/mindegree/label proxy; alloldprototypefull-neighborhood projections.",
+    "failure_or_result": "D14找到1088个满pin有代理，D15找到205个满pin有代理（207pairs），但全部原型仍分别至少8/9个满pin无任何代理，故0投影候选、0R4检查、0图。不能登记badpairs或实际D。",
+    "lesson_and_restart_condition": "阈值和规则直接继承N13真实10core共有邻域/extra差异，理解确实改变了下一实验。此scope阻在代理存在性，改tie不能补无代理满pin；不放宽阈值逐层长尾，不泛排所有proxy或任意14/15点覆盖。只有不同route结构/新source有依据才重启。",
+    "unclosed_gap": "Broaderproxyrelations, nonstar rules and arbitrary14/15graph extensions remain open; no newrecordhere.",
+    "outcome_class": "FIXED_PROXY_RELATION_COMPLETE_NO_PROJECTED_CANDIDATE",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "prediction": "REFUTED_FOR_FIXED_RULE",
+      "CPU_including_compile": 2.30092,
+      "BFS": 0,
+      "R4_recomputed": 0,
+      "R4_candidate_checks": 0,
+      "newgraphs": 0
+    },
+    "variants": [
+      {
+        "label": "D14source",
+        "target_Delta": 14,
+        "target_D": 5,
+        "savedL": 94186,
+        "source_n": 94186,
+        "source_m": 657452,
+        "free_vertices": 3685,
+        "wedges": 669198,
+        "qualifying_pairs": 1088,
+        "saturated_u_with_proxy": 1088,
+        "minimum_unproxied_saturated_neighbors": 8,
+        "projected_candidates": 0
+      },
+      {
+        "label": "D15source",
+        "target_Delta": 15,
+        "target_D": 5,
+        "savedL": 100132,
+        "source_n": 100132,
+        "source_m": 749732,
+        "free_vertices": 2498,
+        "wedges": 523529,
+        "qualifying_pairs": 207,
+        "saturated_u_with_proxy": 205,
+        "minimum_unproxied_saturated_neighbors": 9,
+        "projected_candidates": 0
+      }
+    ],
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/REPORT.md",
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/RESULT.json"
+    ]
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "status": "FROZEN_BEFORE_RADIUS_COMPUTATION",
+  "target_Delta": 5,
+  "target_D": 6,
+  "savedL": 2836,
+  "source_n": 2836,
+  "candidate_n": 2838,
+  "rule": "Pick first two lexicographic vertex-disjoint F edges. For each smaller endpoint, take its original H4 flag point and smallest still-unsubdivided incident line; use the same new vertex to subdivide that H4 incidence and that F edge, then join the two new vertices.",
+  "intuition": "Each new root is attached to both ends of a working linker edge and shares a point with one of those existing flags; the buddy supplies another linker pair. Test whether these complementary local access routes already suffice globally.",
+  "prediction": "Both new roots have eccentricity at most6. This is necessary, not sufficient, for final diameter6.",
+  "deleted_edges": [
+    [
+      911,
+      1775
+    ],
+    [
+      308,
+      1760
+    ],
+    [
+      2730,
+      2765
+    ],
+    [
+      2731,
+      2788
+    ]
+  ],
+  "added_edges": [
+    [
+      911,
+      2836
+    ],
+    [
+      1775,
+      2836
+    ],
+    [
+      2730,
+      2836
+    ],
+    [
+      2765,
+      2836
+    ],
+    [
+      308,
+      2837
+    ],
+    [
+      1760,
+      2837
+    ],
+    [
+      2731,
+      2837
+    ],
+    [
+      2788,
+      2837
+    ],
+    [
+      2836,
+      2837
+    ]
+  ],
+  "new_old_neighbor_sets": {
+    "z": [
+      911,
+      1775,
+      2730,
+      2765
+    ],
+    "w": [
+      308,
+      1760,
+      2731,
+      2788
+    ]
+  },
+  "fixed_controls": 1,
+  "stop": "First failed new root stops; no alternate flags, F edges, pair orientation, or helper variants. Passing roots alone does not establish old-old coverage.",
+  "whole_source_BFS": 0
+}

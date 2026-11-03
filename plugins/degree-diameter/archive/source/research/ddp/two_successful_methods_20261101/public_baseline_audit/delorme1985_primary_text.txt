@@ -1,0 +1,495 @@
+PAGE 1
+Europ. 1. Combinatorics (1985) 6, 291-302 
+Grands Graphes de Degre et Diametre Donnes 
+CHARLES DELORME 
+We give some constructions of graphs with given degree and diameter, having a large number 
+of vertices. The recipes given here involve incidence graphs of generalized quadrangles and 
+hexagons. 
+INTRODUCTION 
+Le probleme traite ici a sa source dans les reseaux de communications. 
+So it G un graphe simple et non oriente. La distance de deux sommets est la longueur 
+du plus court chemin les joignant dans Ie graphe; Ie diametre de G est la plus grande 
+des distances entre deux sommets de G. 
+Le degre d'un sommet est Ie nombre des aretes auquel il appartient; Ie degre G est Ie 
+plus grand des degres de ses sommets. 
+Le probleme est de trouver des graphes ayant un diametre D donne et un degre .::l 
+donne, et comptant Ie plus possible de sommets. 
+Le lien avec les reseaux de communication est clair: les sommets representent les 
+stations, les aretes, les liaisons entre ces stations; on s'efforce d'avoir un reseau etendu, 
+mais une station possede un nombre limite d'entrees-sorties, et on veut limiter Ie nombre 
+des stations intermediaires necessaires aux communications. 
+Divers auteurs ont deja travaille a la question: l'on trouvera une bibliographie etendue 
+dans [3] ou [6]. 
+On donne ici des techniques derivant des quadrangles generalises et des hexagones 
+generalises. 
+Pour finir on donne aussi des tables precisant les meilleures valeurs numeriques connues 
+(fin 1983) et leur comportement asymptotique. 
+1. QUELQUES RApPELS 
+Le graphe d'incidence d'une geometrie est Ie graphe biparti dont les sommets sont 
+d'une part les points, d'autre part les blocs de la geometrie. Un sommet-point et un 
+sommet-bloc du graphe sont adjacents dans Ie graphe si et seulement si Ie point et Ie 
+bloc correspondants de la geometrie sont incidents. 
+La geometrie est un quadrangle generalise (resp. un hexagone generalise) lorsque son 
+graphe d'incidence est de maille 8 (resp. 12)etdediametre4(resp.6).Sile degre de 
+tous les sommets est q+1, Ie nombre des sommets est 2(q+1)(q2+1) (resp. 2(q+l)x 
+(q4+ q 2+1). 
+On sait aussi que dans Ie graphe d'incidence d'un quadrangle generalise, entre deux 
+points a la distance d ~ 3, il y a exactement un chemin de longueur d, qui est contenu 
+dans un circuit de longueur 8, et entre deux points a distance 4, il y a q + 1 chemins de 
+longueur 4, deux a deux disjoints. On a bien sur une propriete analogue pour les hexagones 
+generalises. 
+On sait construire de tels graphes et geometries lorsque q = 1 (c'est evident, et ce cas 
+sera exclu par la suite) et lorsque q est une puissance de nombre premier [1]. Ces graphes 
+fournissent effectivement des valeurs interessantes pour les diametres 4 et 6. 
+On ne s'interessera ici qu'aux quadrangles les plus simples, decrits par [13]. Les points 
+sont les points de l'espace projectif de dimension 3 sur Ie corps Fq , les blocs sont les 
+291 
+0195-6698/85/040291 + 12 $02.00/0 © 1985 Academic Press Inc. (London) Limited 
+brought to you by COREView metadata, citation and similar papers at core.ac.uk
+provided by Elsevier - Publisher Connector 
+PAGE 2
+292 C. Delorme 
+droites de cet espace dont les coordonnees pliickeriennes verifient X12 = X34 (en plus de 
+la relation X12X34 - X13X24 + X l4X 23 = 0); autrement dit, les blocs incidents au point de 
+coordonnees homogtmes t(x l , x2, X3, x4) sont dans Ie plan d'equation XlX 2 - X2Xl - X3X 4 + 
+X4X3 = O. Rappelons que les points de la droite de coordonnees pliickeriennes (xij ) -sont 
+les combinaisons lineaires non nulles de t(O, X12, Xl3, X I 4), t( -Xl2, 0, X23, X24), 
+t( -X13, -X23 , 0, X34 ) et t(X I4 , X24, X34, 0), autrement dit, ce sont les solutions du systeme 
+[
+0 X34 
+X 34 0 
+X24 -X14 
+X 23 -X13 
+Lorsque q est une puissance de 2, on peut attacher au point M de coordonnees 
+\x, y, z, t) la droite f(M) de coordonnees pliickeriennes (X12' Xl3 , X14 , X23, X24, X34) = 
+(h, x, z, t, y, h), avec h2 = xy - zt. On constate que Ie point P de coordonnees t( p, q, r, s) 
+est sur f(M) si et seulement si M est sur f( Q), ou Q est Ie point de coordonnees 
+t(p2, q2, r2, S2), ce qui montre que f donne une dualite, c'est a dire un automorphisme du 
+graphe echangeant les sommets-points et les sommets-blocs (avec f2( Q) = P). 
+Lorsque q est une puissance impaire de 2, disons q = 22a -t, on a meme une po/arite, 
+c'est a dire une dualite involutive. Au point M de coordonnees homogenes t(x, y, Z, t) on 
+associe la droite 7T(M) = f(M'), ou M' a pour coordonnees les puissances 2a -iemes de 
+celles de M. Ainsi M est sur 7T(P) si et seulement si P est sur 7T(M). 
+On sait aussi que les hexagones generalises classiques ont une dualite quand q est une 
+puissance de 3, et une polarite quand q est une puissance impaire de 3 [12]. 
+2. CONSTRUCTION USANT DE LA POLARITE 
+THEOREME. Si q est une puissance impaire de 2, if existe un graphe de degre q + 1 de 
+diametre 3, ayant (q + 1)( q2 + 1) sommets. Si q est une puissance impaire de 3, if existe un 
+graphe de degre q + 1 de diametre 5, ayant (q + 1)( q4 + q2 + 1) sommets. 
+Pour cela, on forme Ie quotient des graphes d'incidence par leur polarite 71': autrement 
+dit, Ies sommets seront les points de la geometrie, deux sommets M et N etant adjacents 
+si M est sur 7T(N), on ce qui revient au meme, si N est sur 7T(M). Comme dans Ie 
+graphe incidence d'un quadrangle generalise tout sommet-point est a la distance au plus 
+3 de tout sommet-bloc, Ie quotient aura pour diametre 3. Meme chose au sujet des 
+hexagones generalises. 
+La figure 1 correspond au cas des quadrangles avec q = 2. 
+( 0) ( e ) 
+FIGURE 1. (a) Quadrangle (napperon de Payne), (b) grapbe d'ineidenee (de Tutte-Coxeter), (e) grapbe quotient. 
+PAGE 3
+Grands graphes 293 
+3. CONSTRUCTIONS USANT DE LA DUALITE 
+Voici d'abord une construction voisine de celie des graphes Cpo L'ensemble des sommets 
+est Z/mZx Qk, ou m est un entier ~3 et Q l'ensemble des points d'un quadrangle 
+generalise possedant une dualite f. Le sommet (a, XI, ... ,Xk) est adjacent aux q + 1 
+sommets (a + 1, X2, ••• , xk, y) ou y est incident au bloc f( XI)' et aux q + 1 sommets 
+(a -1, z, XI, ... ,Xk-I) ou Z verifie la condition: f(z) est adjacent a Xk' Cette condition 
+equivaut a: z est incident au blocjl(Xk), car fest une dualite. 
+On obtient ainsi un graphe de degre maximum 2(q+ 1). Pour estimer Ie diametre, on 
+observera que des chemins de longueur 3k permettent de relier tout sommet dont la 
+premiere coordonnee est a a tout sommet dont la premiere coordonnee est a - 3k, ou 
+a-k, ou a+k ou a+3k. 
+On pourra faire la meme chose avec les hexagones generalises pourvus d'une dualite, 
+les chemins de longueur 5k joignent cette fois les sommets dont la premiere coordonnee 
+est a a ceux de premiere coordonnee a - 5k + 21k, 0:0;;;; 1:0;;;; 5. 
+Pour les degres 2(2a + 1) et les diametres 3h, ou h;c 0 mod 3, on a un graphe a 
+3(2a + 1)h(4a + 1)h sommets. Pour les degres 2(3a + 1), et les diametres 5h, ou h;c 0 mod 5 
+on a un graphe a 5(3a + l)h(9 2a +9 a + l)h sommets, pour les degres2(3 a + 1) etles diametres 
+25h,ou h;c 0 mod 3, on a un graphe a 3(3a + 1)5h(92a +9 a + 1)5h sommets. 
+4. USAGE DES PRODUITS 
+Observons que les graphes-quotients obtenus au paragraphe 2 ont la propriete P, 
+c'est-a-dire qu'entre deux points a la distance D (ou D est Ie diametre du graphe), il 
+existe un chemin de longueur D + 1. Cela resulte du fait suivant: si X et y sont a la 
+distance 3 (dans Ie cas des quadrangles generalises), les sommets-points x' et y' correspon­
+dant a X et y dans Ie graphe d'incidence sont a la distance 4. Parmi les q + 1 chemins de 
+longueur 4 joignant x' a y', au plus 2 utilisent des aretes de la forme (z, 7T(Z)), ou 7T est 
+la polarite (sinon Ie graphe d'incidence contiendrait des cycles de longueur < 8). Ceux 
+qui restent donnent des chemins de longueur 4 entre X et y dans Ie quotient, et il en 
+reste, vu que q + 1 ~ 3 (ce serait faux pour q = 1). La preuve se fait de la meme fa~on 
+pour les hexagones generalises. 
+Ceci permet d'augmenter Ie diametre de 1 et Ie degre de d, et de multiplier Ie nombre 
+des sommets par au moins 2d, plus precisement par 8 pour d = 3, par 2d + 1 si 2d + 1 est 
+une puissance de premier avec d pair, et par 2d pour les autres valeurs de d [5]. 
+Par exemple, Ie graphe-quotient de quadrangle obtenu pour q = 8, a 585 sommets de 
+degre 9 et de diametre 3, donne un graphe de degre 12 et de diametre 4 a 4680 sommets. 
+Rappelons comment sont constitues les produits par des groupes: a partir d'un groupe 
+fini r, et d'une partie S de r, stable par passage a l'inverse et ne contenant pas l'element 
+neutre de r, on forme Ie graphe G' dont les sommets sont les elements de r, deux sommets 
+x' et y' etant adjacents si X,-I y ' est dans S. Alors G' est regulier de degre Ie cardinal de 
+S. 
+Le produit G * G' est forme comme suit: les sommets sont les elements de G x G', ses 
+aretes sont de deux sortes, d'une part les «x, x'), (x, y)), ou (x', y') est une arete de G', 
+d'autre part les «x, x'), (y, y')), ou (x, y) est un arc de G et y' = cp(x,y)(x')a(x,y)o ou cp(x,y) 
+est un automorphisme de r et a(x,y) un element de r. Si 1/1' est un automorphisme de r, 
+Ie groupe oppose rO de r opere sur (x, y) * G' par automorphisme, en associant a 'Y 
+l'automorphisme (x, x)-~ (x, x'1/I'( 'Y)), (y, y')~ (y' a(x~ y)cp(x,y) 1/1'( 'Y)a(x,y»)' Donc rO opere 
+sur tout T * G', ou T est un arbre de G, transitivement sur chaque copie (x, G') de 0'. 
+Ceci permet de ne regarder que les distances a un sommet de chaque copie de 0'. Pour 
+plus de details, voir [4]. 
+PAGE 4
+294 C. Delorme 
+2 
+:1 
+5 6 8 10 II 
+~~I 
+14 15 16 17 
+2 
+:1 I 
+4 5 8 II 12 
+~~I 
+14 15 16 17 
+-I -2 
+'j 1-' j-"J' 
+2 
+I 
+0 3 4 6 7 8 10 12 13 14 15 16 17 
+FIGURE 2. 
+On va fournir it un graphe d'incidence G d'un quadrangle generalise ou d'un hexagone 
+generalise une orientation telle que (i) entre deux sommets it la distance maximum D 
+(D = 4 ou 6) il existe un chemin de longueur D contenant 2 arcs consecutifs et (ii) en 
+chaque sommet il arrive et il part au moins un arc. 
+Pour cela, prenons un couplage parfait dans G (il en existe, car G est regulier biparti) 
+[2, ch. 7]. Les aretes de ce couplage seront orientees des sommets-points vers les sommets­
+blocs, et les autres aretes en sens contraire. 
+De la sorte (ii) est evidemment realise, et (i) a lieu, car entre deux sommets it la distance 
+D il existe un chemin de longueur D commen~ant par une arete du couplage. 
+Ceci permet d'utiliser les produits suivants: 
+(a) G*F4 (Ll+l,D+l,4n) cf.[4] 
+(b) G * C19 (Ll +2, D+2, 19n) idem 
+(c) G * C35 (Ll +2, D+3, 35n) avec l'arete ((a, m), (a', 8m» au­
+dessus de l'arc (a, a'). 
+La figure 2 permet de verifier que ce produit convient pour D;;. 2, avec les conditions 
+(i) et (ii) (on a 8 2 == -6 mod 35 et 8 . 13 == -1 mod 35) 
+(d) Le produit G * 83 (Ll + 1, D+2, n· 6). 
+Le groupe des permutations d'un ensemble a 3 elements est d'ordre 6. Choisissons une 
+transposition t et une permutation circulaire s. On munit 83 des aretes (u, tu), et au-dessus 
+d'un arc (a, a') de G on met les aretes ((a, u), (a', sus 2 ». Ceci convient pour D;;. 3, avec 
+les conditions (i) et (ii), vu la figure 3. II est clair en outre que si G est biparti, Ie produit 
+G * 83 l'est aussi. 
+5. GRAPHES DE DEGRE 3(q+1) 
+Construisons des graphes de degre 3(q + 1), ou q est une puissance de nombre premier, 
+de diametre 6, it 18(q2+q+l? sommets. 
+Pour cela nous considerons un plan projectif sur Ie corps it q elements, <;m peut observer 
+que c'est un 'triangle generalise', ou les blocs sont les droites, et possedant une dualite 
+f (et me me une polarite). 
+PAGE 5
+1-
+o 
+I 
+1 
+2 -
+id 
+Grands graphes 
+2 • • • • 
+~ 
+~~: 
+3~3 
+s fs fS2 
+FIGURE 3. 
+295 
+L'ensemble des sommets de G est Zj9Z x Zj2Z x p 3 , ou Pest l'ensemble des points 
+du plan projectif. Les voisins de (a, b, x, y, z) sont les q + 1 points (a + 1, b, y, z, t), ou t 
+parcourt f(x), les q+ 1 points (a -1, b, t, x, y), ou t parcourt f'(z), qui est la droite des 
+points t tels que f( t) passe par z, et enfin les q + 1 points (ra, b + 1, x, t, z), ou 
+si b = 1, alors ra = 4a et t parcourt f(y) 
+si b = 0, alors ra = 7 a et t parcourt l' (y). 
+Pour verifier que Ie diametre est bien 6, on utilisera la figure 4. 
+0-+0 0-+1 1-+1 
+0 +++--- 0+0+0+ +++---
+1 ---0+0 +0+0-0 +++0+0 
+2 ---0-0 ++++0+ -0--0-
+3 ------ -0-0-0 ------
+4 --0-0+ +++-0- ---0+0 
+FIGURE 4. 
+Le mode d'emploi sera clair sur l'exemple suivant: dans la ligne 1 de la colonne O~ 1, 
+on lit +0+0-0. Cette expression symbolise un chemin qui permet d'aller de tout point 
+de (a, 0; P, P, P) a tout point de (7 a + 1,1; P, P, P). En efiet, a partir de (a, 0, x, y, z) on 
+atteint successivement les points de (a + 1, 0; y, z, X), de (7a +7, 1;·y, Z, X), de (7a + 
+8, 1; Z, X, Y), de (a + 5, 0; Z, P, Y), de (a + 4, 0; P, Z, P) et enfin on arrive aux points de 
+(7 a + 1, 1; P, P, P) (X designe f(x) ou I'(x), etc). 
+Pour aller de (a, 0; x, y, Z) a un point quelconque de (7a -1,1; P, P, P), on utiliserait 
+Ie chemin symbolise par -0-0+0, obtenu par changement de signe a partir du precedent. 
+On pourra verifier sans difficulte que les chemins indiques dans Ie tableau ont bien les 
+proprietes voulues. 
+Pour aller de (a, b, . , . , .) a (a + x, b, . , . , .) on utilisera Ie chemin indique a la ligne x 
+de la colonne (b~ b). 
+Sur la figure 5 on dessine les chemins de (2,0) a (6,1) et de (1,0) a (5,0) 
+Un travail analogue foumit, a partir des quadrangles generalises munis d'une dualite, 
+des graphes de degre 3(q + 1), de diametre 9, ayant 42(q + 1?(q2+ I? sommets, ou q est 
+une puissance de 2. 
+On prendra ra=5a pour b=1 et ra=17a pour b=O, et Zj21Z au lieu de Zj9Z. 
+Le controle du diametre se fera a l'aide de la figure 6. 
+6. CONSTRUCTIONS SPECIALES POUR LES DIAMETRES 3 ET 5. 
+Avec un quadrangle generalise muni d'une dualite j, formons un graphe de degre 
+3(q+ 1), de diametre 3, a 12(q+ l)(q2+ 1) sommets; c'est possible si q est une puissance 
+de 2. L'ensemble des sommets est VI x Q, ou VI est l'ensemble des sommets du graphe 
+Dl ci-dessous (afiecte d'une orientation quelconque) et Q l'ensemble des points du 
+PAGE 6
+296 C. Delonne 
+FIGURE 5. 
+quadrangle. Les aretes sont les paires « a, x), (b, y)), ou (a, b) est un arc de D\ et y E!( x). 
+Le diametre est 3 car entre deux sommets distincts ou non de D\ il existe un chemin, 
+non necessairement elementaire, de longueur 3 exactement. 
+De meme, avec un hexagone generalise possedant une dualite, et Ie graphe D z, on 
+trouve des graphes de diametre 5, de degre 3( q + 1), ayant 30( q + 1)( q4 + q2 + 1) sommets, 
+ou q est une puissance de 3. 
+Le meme procede, applique a un hexagone generalise possedant une dualite et au 
+compose du graphe de Petersen et de la clique a 11 sommets, foumit un graphe de degre 
+4( q + 1), a 11 O( q + 1)( q4 + q2 + 1) sommets, si q est une puissance de 3. 
+Les graphes deftnis dans cette section presentent l'interet que Ie rapport du nombre de 
+leurs sommets a .1 D depasse la borne inferieure connue( en avril 1982) pour 
+lim infd ... OO (N /.1 D), a savoir 8/27 pour Ie diametre 3 et 256/3125 pour Ie diametre 5, 
+pour q assez grand. 
+7. AUGMENTATION DU DEGRE (GENERALITES) 
+Soient 0 un graphe, et A un sous-graphe induit de O. On dira que 0' est obtenu en 
+dedoublant A dans 0 si l'ensemble des sommets de 0 est la reunion (disjointe) de 0 et 
+0-+0 0-+1 1-+1 
+0 ++0 +++ +0- +++ +++ -0- +++ ++0 +0-
+1 +++ +++ 0-0 0+0 -0- ++0 +0- 0-0 
+2 +++ 0++ ++0 +++ +0+ 0+0 +++ +++ 0+0 
+3 +++ +++ +++ ++- 0-- +++ +++ 
+4 +++ 0-- --0 +0+ +++ 0-0 0-0 +++ 
+5 +++ 0+0 0-0 +++ +0+ 0-- -+0 
+6 +0+ +++ +0+ 00+ 0-- ++0 +++ +0-
+7 +0+ +0+ 0-0 0+0 -0- +++ --0 -0+ 0-0 
+8 0-- -+0 +++ -0- 0+0 +++ 0++ ++0 
+9 +++ +++ +++ -0- +++ +++ +++ +++ +++ 
+10 0-0 +++ +0+ 0-0 +++ +++ 0-0 
+FIGURE 6. 
+PAGE 7
+Grands graphes 297 
+( a ) 
+FIGURE 7. (a) Compose de K3 et K4 , (b) compose de Cs et l4,. 
+d'une copie de A, un sommet x de G etant adjacent a un sommet y de la copie de A si 
+et seulement si x est deja adjacent au sommet de A dont y est la copie. 
+Considerons a present un graphe G de diametre D, de degre maximum .:1, et une suite 
+de sous-graphes induits Ao::::> AI::::> A 2::::> ... de G tels que 
+(a) pour tout i ~ 0, Ie voisinage de Ai+1 dans G est indus dans Ai et tout sommet de 
+Ai - Ai+1 est adjacent a au plus un sommet de Ai+1 
+(b) tout sommet de G - Ao est adjacent a au plus un sommet de Ao 
+(c) toute composante connexe B de Ao a la ptopriete que pour to us x et y dans B, il 
+existe z dans G hors de Ao tel que d (x, z) + d (y, z) :s; D. 
+Le graphe G' obtenu en dedoublant A o, puis Al dans Ao et sa copie, puis A2 dans AI 
+et ses copies, etc, (I'operation s'arrete surement, car l'un des Ai est vide) ales proprietes 
+suivantes: son degre est .:1 + 1, son diametre est D, Ie nombre de ses sommets est 
+I GI + IAol + 21AII +41A21 + ... 2ilAii + ... ; de plus, si G est biparti, G' l'est aussi, si G est 
+k-connexe, G' l'est aussi. 
+Je ne donne pas la preuve (qui ne presente aucune difficulte), mais plutot un exemple: 
+a partir du 9-cycle, on construit un graphe de degre 3 de diametre 4 a 16 sommets. 
+Si G est de diametre ~ 2, de degre .:1, on pourra prendre pour Ao un ensemble de 
+sommets dont les distances mutuelles sont au moins 3 (autrement dit un stable du carre 
+G2); Ie dedoublement de Ao augmente Ie nombre de sommets d'au moins IGI/(.:12+1). 
+Pour avoir une augmentation de r du degre, on pourra 'de - r + 1 - upler', ce qui amene 
+FIGURE 8. 
+PAGE 8
+298 C. Delorme 
+FIGURE 9. 
+une augmentation du nombre de sommets de (r-1)(A o+rA I +··· riA i +·· .). Le meme 
+exemple que ci-dessus donne un graphe de degre 4 de diametre 4, a 25 sommets, avec r = 2. 
+8. EXEMPLEs D'AuGMENTATION DU DEGRE 
+(a) Graphes d'incidence de quadrangles generalises 
+Considerons Ie quadrangle d'ordre q, ou q est une puissance de premier, dont les points 
+sont ceux de l'espace projectif de dimension 3 sur Ie corps GFq a q elements et dont les 
+blocs adjacents au point Mo de coordonnees homogenes Xo (ou txo= (xo, Yo, zo, to» sont 
+les droites passant par Mo et situees dans Ie plan d'equation XoY - YoX - zot + toz = 0, ou 
+encore txo UX = 0, ou U est la matrice produit de Kronecker 
+Prenons deux elements de a et b de Fq tels que Ie polynome T2 - aT + b2 soit irreductible 
+dans Fq[ T]. Soit A la matrice 
+Elle n'a pas de vecteur propre, vu que son polynome caracteristique est (T2 - aT + b2)2. 
+Done les points de coordonnees X et AX sont diiIerents. Comme 
+UA=[ a -b -bJ ®[ 0 1J o -1 0 
+est antisymetrique, la droite qui les joint est un bloc. En outre, A2 - aA + b2 1= 0, done 
+Ie point de coordonnees A2 X est sur la droite definie par ceux de coordonnees X et AX. 
+Ceci prouve que les droites ainsi formees realisent une partition de l'espace, en q2+ 1 
+droites disjointes. 
+II s'ensuit que Ie graphe d'incidence du quadrangle contient q2+ 1 sommets dont les 
+distances mutuelles valent 4. 
+Si Al est l'un de ces sommets, et Ao l'union du voisinage de Al et des q2+ 1 sommets 
+en question, Ie dedoublement de A foumit une augmentation du degre de 1 et du nombre 
+PAGE 9
+Grands graphes 299 
+de sommets de q2+ q+4. En particulier, pour q = 5, on arrive a un graphe de degre 7, a 
+312 + 34 = 346 sommets. 
+Les graphes ainsi formes sont encore bipartis et 2-connexes. 
+(b) Graphes d' incidence des hexagones generalises 
+On sait egalement construire des hexagones generalises d'ordre q,ou q est une puissance 
+de premier, tels que leur graphe d'incidence contienne q3 + 1 sommets dont les distances 
+mutuelles valent 6 [14]. 
+On prendra pour A2 I'un de ces sommets, pour Al Ie voisinage de A2 et les q3+ 1 
+sommets, pour Ao I'union de Al et du voisinage de Al dans.Ie graphe. De la sorte, IA21 = 1, 
+IAII = q3 + q + 2, IAol = q4 + 2q3 + q2 + 2q + 2. Par exemple, pour q = 5, on obtient un graphe 
+de degre 7, de diametre 6 ayant 7812+912+2(132)+4=8992 sommets. 
+Les graphes ainsi obtenus sont encore bipartis et 2-connexes. 
+(c) Graphes-quotients pour les quadrangles ayant une polarite 
+En raison de la polarite, un ordre convenable des sommets du graphe d'incidence Q 
+donne une matrice d'adjacence de la forme 
+C®[O 1] =A 1 0 ' 
+OU C est symetrique. Le nombre de coefficients egaux a 1 sur la diagonale de C est Ie 
+nombre des points absolus pour la polarite. C'est aussi la trace de C. Si on remplace ces 
+coefficients par des coefficients nuls, on obtient la matrice d'incidence du graphe 
+quotient Q'. 
+Le fait que A soit la matrice d'adjacence du graphe d'incidence du quadrangle generalise 
+d'ordre q se traduit par (C 3 - (2.1-1) C) + C = J (chaque sommet-bloc est a distance 3 
+ou 1 de chaque sommet-point, et Ie chemin de longueur minimum est unique). On a donc 
+tr C 3 = tr J + 2q tr C. D'autre part Ie coefficient diagonal de C 3 qui correspond a un 
+sommet x du quotient Q' est Ie nombre des chemins de longueur exactement 3, non 
+necessairement elementaires et pouvant emprunter une boucle autour des sommets de 
+degre q de Q' (qui correspondent aux points et blocs absolus de la polarite), qui joignent 
+x a lui-meme. On notera que Q' ne contient pas de 3-cycles, et que deux sommets absolus 
+sont certainement a distance ;;. 3, car Q a pour maille 8. Chaque sommet non absolu est 
+donc adjacent a au plus un sommet absolu. II apparalt alors que Ie coefficient diagonal 
+correspondant a un sommet absolu dans C 3 est 1 + 2q, que Ie coefficient correspondant 
+a un autre sommet est Ie nombre (0 ou 1) de sommets absolus qui lui sont adjacents. La 
+contribution a la trace de C 3 est donc n(1 + 2q) pour les n sommets absolus, nq pour les 
+auires, car chaque sommet absolu est adjacent a q sommets, tous non absolus. 
+On a donc tr C 3 = n(1 + 2q) + nq = (1 + q)(1 + q2) + 2qn vu Ie calcul des traces, c'est-a­
+dire n = 1 + q2. Par suite, Q' comporte q2 + 1 sommets mutuellement a distance 3. 
+Ce resultat s'observe aisement pour q = 2 (figure 1). Pour q = 8, on obtient par dedouble­
+ment, detriplement etc de la partie Ao formee des 65 sommets absolus, des graphes a 
+650, 715 ... sommets de diametre 3 pour les degres 10,11 ... 
+REMARQUES: Chaque sommet non absolu est voisin d'exactement 1 sommet absolu. 
+Les graphes obtenus ont encore la propriete P. 
+(d) Graphes quotients pour les hexagones ayant une polarite. 
+PAGE 10
+300 C. Delorme 
+Comme precedemment, Ie graphe d'incidence H a une matrice d'adjacence de la forme 
+oil C est symetrique. La suppression des 1 sur la diagonale de C fournit la matrice 
+d'adjacence du graphe quotient H'. 
+Chaque sommet-bloc de h est a distance 5, 3 ou 1 de chaque sommet-point, et Ie chemin 
+de longueur minimum est unique. Cela se traduit par (C 5 -(4.:1-3)C 3 +(.:1-1)x 
+(3.:1-1)C) + (C 3 - (2.:1-1)C) + C = J. On a donc en passant aux traces tr C 5 -4q tr C 3 + 
+3q 2 C = tr J. Comme H est de maille 12, H' ne contient pas de cycles de longueur 3, 4, 
+5 et les sommets de degres q ont pour distances mutuelles 5. Chaque sommet non absolu 
+est donc a distance.;; 2 d'au plus un sommet absolu. On peut aloes en examinant les 
+chemins fermes de longueur 5 evaluer la trace de C 5• La contribution d'un sommet absolu 
+est 1 +4q + 5q2, celle d'un sommet a distance 1 d'un sommet absolu est 1 +4q, celle d'un 
+sommet a distance 2 d'un sommet absolu est 1. Comme un sommet absolu est a distance 
+1 de q sommets, et a distance 2 de q2 sommets, la trace de C 5 est n(1 + 4q + 5q2) + 
+nq(4q+l)+ nq 2=n(1+5q+lOq2). Le calcul des traces donne donc n(1+5q+l0q2)-
+4q·n(1+3q)+3q2n=q5+q4+q3+q2+q+l, c'est-a-dire n=.q3+1. Ainsi H' possede 
+qJ + 1 sommets de degre q, dont les distances mutuelles valent 5. 
+Pour q = 3, on obtient par dedoublement et detriplement de Ao et AI oil AI est formee 
+de ces somrnets absolus, et Ao de l'union de Al et de son voisin age dans h', des graphes 
+de degres 5 et 6, de diametre 5, a 532 et 756 sommets respectivement. 
+REMARQUES: Tout sommet de H' est a distance au plus 2 de exactement 1 sommet 
+absolu. 
+Les graphes obtenus ont encore la propriete P. 
+( e ) Graphes des plans projectifs. 
+Les methodes decrites plus haut (section 7) ne donnent que des resultats ridicules en 
+diametre 2. 
+Rappelons que Ie graphe d'incidence du plan projectif construit sur Ie corps a q elements 
+admet une polarite: au point de coordonnees homogenes Xo, oil txo = (xo, Yo, zo), on 
+associe la droite d'equation txoX = O. Les points absolus pour cette polarite forment en 
+caracteristique 2la droite d'equation (1,1, l)X = O. En dedoublant dans Ie graphe quotient 
+Ie point de coordonnees t( 1, 1, 1) on obtient encore un graphe de degre q + 1, de diametre 
+2, a q2+ q +2 sommets (par example 74 pour q=8). 
+Au contraire, si q est une puissance de premier impair, les points absolus sont deux a 
+deux non adjacents, en nombre q + 1, mais parmi les q2 autres points, q(q + 1)/2 sont 
+adjacents a 2 points absolus et les q( q - 1) restants ne sont adjacents a aucun point absolu. 
+En dedoublant la partie A formee des points absolus, on augmente donc Ie degre de 
+2. En dedoublant des sommets d'un triangle de droites absolues, on n'augmente Ie degre 
+que de 1. On pourra donc, en dedoublant plusieurs fois l'ensemble des points absolus, 
+construire des graphes a q2 + q + 1 + r( q + 1) sommets de degre q + 1 + 2r; en dedoublant 
+ensuite les sornmets d'un triangle de droites absolues, on obtiendra des graphes a 
+q2+ q +l+r(q+1)+3 sommets, de degre q+l+2r+1. 
+9. INSERTION DE SOMMETS SUR LES ARETES 
+Soit Gun graphe d'incidence d'un hexagone generalise. Choisissons une arete (u, v). 
+Sur chaque arete (a, b) de G telle que inf(d(a,u),d(a,v»=2 et que 
+PAGE 11
+Grands graphes 301 
+TABLE 1 
+D 2 3 4 5 6 7 8 9 10 11 
+u 8/27 3/16 44 /5 5 2/81 r 7 3.2- 8 r 9 3·r lo 2- 11 
+Cs Cp prod. Cp compo. §5 Cs Cp Cs Cp Cs 
+0·296 0·187 0·082 0·024 0·0078 0·0117 0·0019 0·0029 0· 0005 
+v 33 /27 2.55/66 66/17 14/3 8 5·r lO 
+1010/11 11 
+Cs Cp quad. prod. hexa. prod. compo. §5 §3 compo . 
+0·210 0·136 0·056 0·0021 0·0049 0· 034 
+Les types Cs et Cp sont decrits dans [8]. 
+Les types quad., hexa. , § 5 sont decrits dans Ie present article 
+La composition (compo.) est decrite dans [6]. 
+Les produits (prod.) sont decrits dans [4,5] . 
+inf( d (b, u), d (b, v» = 3, inserons un sommet supplementaire. II y a ainsi 2qJ nouveaux 
+sommets, et Ie degre n'a pas augmente. Montrons que Ie diametre est passe a la valeur 7. 
+Toute paire de sommets de G appartient a au moins un circuit de longueur 12 de G. 
+Un tel circuit contient au plus deux aretes a modifier, donc devient de longueur 12 ou 
+14 apres modification. La distance des anciens sommets dans Ie nouveau graphe est donc 
+au plus 7. Les distances mutuelles des nouveaux sommets sont evidemment au plus 7. 
+Enfin, soient x un ancien sommet et y un nouveau. Si un des sommets de G voisins de 
+y est a la distance 6 de x dans G, l'arete de G recevant y s'insere dans un circuit de 
+longueur 12 de G, donc dans un circuit de longueur 14 du nouveau graphe. Sur ce circuit, 
+la distance de x a y ne depasse pas 7. Sinon, un des sommets z de G voisins de y est a 
+la distance d ~ 4 de x. Le chemin de G Ie longueur d entre x et z porte au plus 2 aretes 
+a modifier, donc la nouvelle distance entre x et z est au plus 6, et celle entre x et y est 
+au plus 7. 
+On notera que les graphes ainsi obtenus sont encore bipartis et 2-connexes. 
+Dans Ie nouveau graphe, la partie Ao des sommets tels que inf(d(x, u), d(x, v»~2 a 
+pour voisinage precisement l'ensemble des nouveaux sommets, chacun d'eux est adjacent 
+a au plus un sommet de Ao. Pour chaque paire (x, y) de sommets de Ao, il existe un 
+nouveau sommet z tel que d (x, z) + d (y, z) ~ 7. Les nouveaux sommets etant de degre 2 
+seulement, on pourra dedoubler Ao a q - 1 reprises sans modifier Ie degre ni Ie diametre. 
+TABLE 2 
+Table des valeurs connues (fin 1983) 
+D 
+,:i 2 3 4 5 6 7 8 9 10 
+3 10 20 38 70 128 180 286 462 708 
+4 15 40 95 364 128 856 1872 3708 7000 
+5 24 60 174 532 2734 2988 7000 11 340 30240 
+6 32 105 320 820 7817 10920 19138 43744 131232 
+7 50 120 480 1550 8998 31248 62536 156340 562824 
+8 57 200 807 2550 39223 48984 154800 524288 1310729 
+9 74 585 1178 5050 74906 160800 480250 1176690 5883450 
+10 91 650 1755 7550 132869 380835 1117 550 3906250 14981200 
+11 94 715 2925 11388 142474 723060 1990050 5580498 33217 250 
+12 133 780 4680 17563 354323 1346440 3778261 20155392 85887453 
+13 136 845 5265 25844 374464 2146224 7211 386 24340680 130691232 
+14 183 910 5850 37107 804 481 4289520 12694773 80707214 322 828 871 
+15 186 1215 7605 54796 842062 6432816 22303302 81352872 550731776 
+PAGE 12
+302 C. Delorme 
+On obtient ainsi quelques graphes interessants pour Ie diametre 7 qui sont encore 
+bipartis et 2-connexes; par exemple, pour q = 2, Ie graphe d'incidence de I'hexagone 
+generalise d'ordre 2 a 126 sommets, I'insertion de sommets fait passer Ie nombre des 
+sommets a 142, et Ie diametre a 7, Ie dedoublement de Ao ajoute 14 sommets: on trouve 
+un graphe a 156 sommets . Plus generalement; cette construction donne un graphe de 
+degre q + 1, de diametre 7, biparti et 2-connexe, qui comporte 2(q + 1)(q4+ q2+ 1) + 2q3+ 
+(q -1)(2(q2+ q + 1) = 2q(q4 + q3 + 3q2+ q + 1) sommets. 
+10. RESULTATS NUMERIQUES 
+Posons UD = lim inf Ll - D N(Ll, D) et VD = lim sup Ll- D N(Ll, D), ou N(Ll, D) est Ie 
+nombre maximum des sommets d'un graphe de degre Ll et de diametre D. La majoration 
+de Moore donne VD"';;; 1. Les diverses techniques de construction foumissent les minor­
+ations de la table 1. 
+BIBLIOGRAPHIE 
+1. C. T. Benson, Minimal graphs of girth 8 and 12, Canad. 1. Math. 18 (1966), 1091-1094 
+2. C. Berge, Graphes et hypergraphes, Dunod, Paris, France, 1974 
+3. J. C. Bermond and B. Bollobas, Diameters in graphs : a survey, Congr. Numer . 32 (1981), 3-27 
+4. J. C . Bermond, C. Delorme and G. Farhi, Large graphs with given degree and diameter II, J. Combin. 
+Theory, Ser. B 36 (1984), 32-48 
+5. J. C. Bermond, C. Delorme and G. Farhi, Large graphs with given degree and diameter III, Ann. Discrete 
+Math . 13 (1982), 23-32 
+6. J. C. Bermond, C. Delorme and J. J. Quisquater, Grands graphes non diriges de degre et diametre fixes, 
+Ann. Discrete Math. 17 (1982) , 65-73 
+7. N. Biggs, Algebraic graph theory, Cambridge Tracts in Math. 67 (1974) 
+8. C. Delorme and G. Farhi, Large graphs with given degree and diameter 1, IEEE Trans. Comput.33 (1984), 
+857-860 
+9. P. Dembowski, Finite Geometries, Springer Verlag, Berlin, Germany 1968 
+10. S. E. Payne, Finite generalized quadrangles: a survey. Proc. Intern. Con! on Projective Planes 219-261. 
+Washington State University Press, 1973. 
+11. J. J. Quisquater, New constructions of large graphs with fixed degree and diameter, to appear. 
+12. M. A. Ronan , A geometric characterization of Moufang hexagons, Invent . Math . 57 (1980), 227-262 
+13. R. Singleton, On minimal graphs of maximum even girth, J. Combin. Theory 1 (1966),306-332 
+14. J. A. Thas, Polar spaces, generalized hexagons, and perfect codes, 1. Combin. Theory, Ser. A 29 (1980), 87-93 
+Received 11 June 1982 and in revised form 3 December 1984 
+CHARLES DELORME 
+Universite Paris-Sud, Departement de Mathematiques, 
+Botiment 425, 91405 Orsay Cedex, France 

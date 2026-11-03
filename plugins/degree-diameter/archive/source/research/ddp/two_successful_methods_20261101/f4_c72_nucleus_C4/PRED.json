@@ -1,0 +1,16 @@
+{
+  "target":{"Delta":22,"D":3,"n":4608,"expected_edges":50688},
+  "mechanism_change":"72point5regular controller x F4^3,20crossneighbors plus2 intrafiber C4 neighbors along nucleusN. This changes the selflayer route rule; previousfull-pencil/rankC60<=68 bound does not apply.",
+  "controllers":[{"name":"Exoo72","path":"research/ddp/more_graphs_20261027/d5_exoo72_extension/root_cover_preflight/source.edges"},{"name":"Michel72","path":"research/ddp/more_graphs_20261027/small_d5_D3_michel72_split_edge73/source/source72.edges"}],
+  "labels":"64*u+x0+4*x1+16*x2;sortedlocalneighbors giveports0..4;reverseports are actualneighborlookups",
+  "field":"F4=F2[w]/(w^2+w+1),code2=w,additionXOR",
+  "directions":"L0=(0,0,1),L1..4=(1,t,t^2),t=0,1,w,w+1;nucleusN=(0,1,0)",
+  "internal_edges":"x~x+N andx~x+wN,forming C4 on each affineN-line",
+  "cross_edges":"y=A_e*Frob_sigma(x)+tL_reverseport,t inF4;actualinverse on reverse dart",
+  "maps":"60PGL2F4 projectivities h normalizedbyfirstnonzero1;Sym^2h times Frobenius0/1 yields120distinct conicpermutations. Each orientededgep->r has24choices. Foru<v,scale soTN=2N forlinear sigma0,3N forsigma1;reverse must satisfy actual semilinearinverse.",
+  "prediction_before_test":"The new C4 shifts plus all five tangentplanes repair controllerdistance0; tangent/secant routes with shifts repair distances1,2. Only controllerdistance3 needs rank3 noise, equivalent to the middle conicpermutation sending its incoming direction away from the outgoing direction. Unique distance3 controller routes impose necessary forbidden permutation entries; some72controller may retain a nonempty24map domain on every edge.",
+  "actual_test_order":["Verify120semilinearconicpermutations and per-edge24domain with actualreverse/C4shift identities","Count both saved72controllers' shortwords in their new controller role;collect unique-route forbidden pairs and prune actual24domains","If any edge domain empty,strictlystop that controller in this new rule;no SAT","At mostone60CPU SAT on the preferred survivingcontroller,allordered distance3pairs rankgood","Recheck returned CNF/selection and all route classes;generate at mostone complete4608graph only if newproof has no gap"],
+  "budgets":{"preprocessing_CPU_seconds":120,"solver_CPU_seconds":60,"solver_calls_maximum":1,"workers":1},
+  "forbidden":["oldC60graphmutation","oldsourceD3BFSasnewresult","Lean","hash","install","controller/portseed/field/C4ladder"],
+  "counts_boundary":"Controller feasibility/localproof/SAT model alone are not a complete graph result;independent literal BFS root-owned."
+}

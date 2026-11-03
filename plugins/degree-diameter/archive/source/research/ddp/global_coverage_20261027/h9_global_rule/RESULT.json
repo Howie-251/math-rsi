@@ -1,0 +1,451 @@
+{
+  "status": "COMPLETE_P1_TO_P6_GLOBAL_RULE_REVIEW",
+  "mechanism": "H9 partial fold plus globally certified extra vertices",
+  "target": {
+    "maximum_degree": 12,
+    "diameter": 5,
+    "saved_baseline_n": 42342
+  },
+  "new_lower_bounds": 0,
+  "new_graphs_generated": 0,
+  "inherited_geometry": {
+    "point_line_bijection": "Point-to-line incidence distance is odd and at most5; replace every line L by sigma_inverse(L).",
+    "partial_fold": "Quotient does not increase distances; allowed S/c need not be orbit-constant.",
+    "H3_copies": "Independent nonempty copy classes; complete bipartite adjacency between adjacent prototypes.",
+    "ordinary_twins": "Frozen exact open neighborhoods; all new twins independent; diameter at most max(oldD,3).",
+    "new_discovery": false
+  },
+  "reliable_base": {
+    "n": 41356,
+    "m": 234318,
+    "labels": [
+      0,
+      41355
+    ],
+    "D_upper_bound": 5,
+    "D_evidence_scope": "Inherited sameS/c partial-fold geometry plus exact induced-core adjacency match; no new BFS.",
+    "current_extras": 986,
+    "full_old41699_identity_subgraph": false
+  },
+  "source_gaps": [
+    "Pencil geometry definition, geometric labels, anchors and nonstar attachment generator have not been recovered.",
+    "Last165 vertices are further append vertices, not identified as pencils.",
+    "All986 actual append steps now have a global diameter certificate; this is not a formula to generate the810 nonstar neighbor sets.",
+    "Full old41699 graph embedding and geometric labels of all extras have not been established."
+  ],
+  "batch_sufficient_conditions": {
+    "old_new": "For every i, closed_radius4_B(A_i)=V(B).",
+    "new_new": "For every i<j, d_B(A_i,A_j)<=3.",
+    "old_old": "All old edges retained and D(B)<=5.",
+    "necessary": false,
+    "exact_alternative": "Weighted graph on extras: w_ij=min(direct-new-edge cost1,2+d_B(A_i,A_j)); its shortest paths give exact new-new distances."
+  },
+  "sequential_theorem": {
+    "hypotheses": "D(G_previous)<=5; E_i is exactly the neighbors already present; radius4 computed only in induced G_previous.",
+    "identity": "d_Gnew(i,v)=1+d_Gprevious(E_i,v)",
+    "conclusion": "D(G_new)<=5; induction covers previous new vertices as well as core.",
+    "classification_required": false
+  },
+  "frozen_source_predictions": [
+    {
+      "id": "P1",
+      "base_n": 42177,
+      "added_n": 165,
+      "status": "REFUTED_SUFFICIENT_BATCH_CERTIFICATE",
+      "static_R4_failed_vertices": 7,
+      "pairset_distance_gt3_pairs": 1,
+      "pairset_failed_pair": [
+        42293,
+        42329
+      ],
+      "evidence": "../tail165_mechanism/RESULT.json"
+    },
+    {
+      "id": "P2",
+      "base_n": 42177,
+      "added_n": 165,
+      "status": "SUPPORTED_COMPLETE_SEQUENTIAL_CERTIFICATE",
+      "failures": 0,
+      "base_D5_now_follows_from_P3": true,
+      "evidence": "../tail165_mechanism/RESULT.json"
+    },
+    {
+      "id": "P3",
+      "base_n": 41356,
+      "added_n": 986,
+      "status": "SUPPORTED_COMPLETE_SEQUENTIAL_CERTIFICATE",
+      "failures": 0,
+      "base_D5_inherited": true,
+      "all_final_pairs_D_upper": 5,
+      "evidence": "../tail165_mechanism/RESULT.json"
+    },
+    {
+      "id": "P4",
+      "status": "SUPPORTED",
+      "subject": 42326,
+      "helper": 42177,
+      "original_pin_count": 12,
+      "pin_change": false,
+      "static_missing": 1,
+      "only_helper_added_missing": 0,
+      "helper_direct_neighbor_of_subject": false,
+      "safe_induced_subgraph_n": 42179,
+      "path": [
+        42326,
+        37638,
+        42177,
+        25879,
+        10162,
+        41838
+      ],
+      "evidence": "../tail165_mechanism/P4_RESULT.json"
+    },
+    {
+      "id": "P5",
+      "status": "PARTIALLY_REFUTED",
+      "vertices": [
+        42293,
+        42329
+      ],
+      "static_R4_missing": [
+        0,
+        1
+      ],
+      "pinset_distance": 4,
+      "only_pair_added_new_new_distance": 6,
+      "full_graph_new_new_distance": 5,
+      "full_path": [
+        42293,
+        36398,
+        42291,
+        14650,
+        9751,
+        42329
+      ],
+      "helper": 42291,
+      "not_both_individually_safe": true,
+      "evidence": "../tail165_mechanism/P5_RESULT.json"
+    }
+  ],
+  "future_edge_rule": {
+    "edge": [
+      42280,
+      42314
+    ],
+    "exclude_at_earlier_step": 42280,
+    "may_use_when_added": 42314
+  },
+  "counterexamples": [
+    {
+      "id": "P5_two_leaves",
+      "old_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "old_D": 4,
+      "new_vertices": [
+        5,
+        6
+      ],
+      "new_old_edges": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "new_new_edges": [],
+      "each_R4_attachment_covers_old": true,
+      "each_single_addition_D": 5,
+      "batch_D": 6,
+      "new_pair_distance": 6,
+      "verification": "Closed-form path distances; no BFS. Seven vertices are minimal for a distance6 pair."
+    },
+    {
+      "id": "C10_two_double_spokes",
+      "old_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "old_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "old_D": 5,
+      "new_vertices": [
+        10,
+        11
+      ],
+      "new_old_edges": [
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          6
+        ]
+      ],
+      "new_new_edges": [],
+      "each_R4_attachment_covers_old": true,
+      "attachment_set_distance": 4,
+      "all_old_new_D_upper": 5,
+      "batch_D": 6,
+      "new_pair_distance": 6,
+      "maximum_degree": 3,
+      "verification": "Cycle metric min(abs(i-j),10-abs(i-j)); no BFS."
+    }
+  ],
+  "geometric_pencil_prediction": {
+    "status": "UNRECOVERED_CONDITIONAL_MODEL_NOT_AUTHOR_DEFINITION",
+    "hypothesis": "A new pencil point attaches to all quotient point-images of one actual H9 line.",
+    "if_true_guarantee": "Old partial-fold core to this one new point <=5 by point-line odd path projection.",
+    "does_not_imply": "Pencil-pencil <=5; line-line incidence paths may have length6.",
+    "missing_rule": "For every new-class pair, a core attachment distance<=3 or explicit cooperative total route<=5, including H3 copies and anchors."
+  },
+  "interpretation_limits": [
+    "Failure of P1/P2/P3 excludes only the stated certificate/order, not the actual source diameter or general pencil construction.",
+    "This review does not claim a new record, source full BFS, pencil recovery, or all extras have a known type."
+  ],
+  "evidence": [
+    "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/THEOREM_SCOPE_REVIEW.md",
+    "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/23056128_partial-folds-split-cayley-hexagon-H9-large-graphs-diameter-five.txt",
+    "research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/verify_witness.py",
+    "research/ddp/breadth_20261027_wave4/pencil_source/SOURCE_NOTES.md",
+    "research/ddp/breadth_20261027_wave4/pencil_source/README.md",
+    "research/ddp/breadth_20261027_wave4/pencil_source/zenodo_23653049.json",
+    "research/ddp/global_coverage_20261027/h9_relation/adjacency_comparison.json",
+    "research/ddp/global_coverage_20261027/h9_relation/structural_classification.json",
+    "research/ddp/global_coverage_20261027/tail165_mechanism/RESULT.json",
+    "research/ddp/global_coverage_20261027/tail165_mechanism/P4_RESULT.json",
+    "research/ddp/global_coverage_20261027/tail165_mechanism/P5_RESULT.json",
+    "research/ddp/global_coverage_20261027/h9_bare_core_clones/RESULT.json",
+    "research/ddp/global_coverage_20261027/h9_bare_core_clones/integer_upper_bound.json",
+    "research/ddp/global_coverage_20261027/h9_bare_core_clones/STAR_CONTAINMENT_EXTENSION.json",
+    "research/ddp/global_coverage_20261027/h9_relation/star_containment.json",
+    "research/ddp/global_coverage_20261027/h9_global_rule/P6_PREDICTION.md",
+    "research/ddp/global_coverage_20261027/tail165_mechanism/P6_RESULT.json"
+  ],
+  "additional_provable_subgraph": {
+    "n": 41532,
+    "vertices": "common core41356 plus all176 extras whose N_core equals a core full open neighborhood; not necessarily a numeric prefix",
+    "D_upper_bound": 5,
+    "proof": "Simultaneous ordinary twins of the frozen core after discarding every extra-extra edge; restoring actual extra-extra edges only decreases distances.",
+    "new_geometry_identification": false,
+    "remaining_extras_without_this_certificate": 810,
+    "complete_clone_blowup_missing_edges": 9,
+    "missing_edges_limit": "Negates exact complete clone-blowup structure, not the ordinary-twin diameter guarantee.",
+    "BFS_performed": false
+  },
+  "BFS_performed_by_report_owner": false,
+  "full_all_source_BFS_repeated": false,
+  "global_existing_graph_certificate": {
+    "n": 42342,
+    "D_upper_bound": 5,
+    "maximum_degree": 12,
+    "type": "Complete sequential induction from proven41356core using all986 earlier-prefix R4 checks",
+    "new_record": false,
+    "actual_new_graph": false,
+    "generative_attachment_formula_recovered": false
+  },
+  "source_check_scope": {
+    "static_R4_checks": 165,
+    "sequential_R4_checks": 986,
+    "CPU_seconds": 1.19352,
+    "P4_CPU_seconds": 0.115644713,
+    "P5_CPU_seconds": 0.162624569,
+    "full_all_source_BFS": false,
+    "pin_optimization": false,
+    "new_graphs_generated": 0,
+    "owner": "root"
+  },
+  "shortcut_mechanism": {
+    "ordinary_twin_spanning_subgraph_preserves_old_old_distances": true,
+    "proof": "Replace each old-twin(v)-old segment by old-v-old, never increasing length.",
+    "helper42177": {
+      "core_vertices": [
+        37638,
+        25879
+      ],
+      "old_prefix_distance_lower_bound": 3,
+      "new_distance": 2,
+      "derivation": "Otherwise pin37638 already reaches41838 within4 via25879-10162-41838, contradicting P1/P4 missing."
+    },
+    "helper42291": {
+      "core_vertices": [
+        36398,
+        14650
+      ],
+      "old_prefix_distance_lower_bound": 3,
+      "new_distance": 2,
+      "derivation": "Otherwise pinset distance to9751<=3, contradicting old pinset distance4."
+    }
+  },
+  "fullstar_capacity": {
+    "scope": "Fixed retained K41356, maximum degree12; counted new points each have some NK(v) subseteq A_i. Extra core anchors and new-new edges allowed.",
+    "global_star_newpoints_upper_bound": 343,
+    "all_star_total_order_upper_bound": 41699,
+    "attained": true,
+    "certificate_rows": 287,
+    "allowed_prototypes": 574,
+    "certificate_groups": [
+      {
+        "variables_per_group": 1,
+        "budget": 1,
+        "groups": 196
+      },
+      {
+        "variables_per_group": 2,
+        "budget": 1,
+        "groups": 63
+      },
+      {
+        "variables_per_group": 9,
+        "budget": 3,
+        "groups": 28
+      }
+    ],
+    "current_minimum_nonstar": 643,
+    "strict_record42343_minimum_nonstar": 644,
+    "current_measured_star": 176,
+    "current_measured_exact_star": 176,
+    "current_measured_strict_superset": 0,
+    "current_measured_nonstar": 810,
+    "not_an_all_H9_upper_bound": true,
+    "new_optimization_calls": 0,
+    "new_BFS_calls": 0
+  },
+  "last_macro_prediction": {
+    "id": "P6",
+    "status": "REFUTED_COMPLETE_FIXED_SCOPE",
+    "prediction_file": "P6_PREDICTION.md",
+    "base_prefix_n": 42177,
+    "fixed_helpers": [
+      42177,
+      42291
+    ],
+    "augmented_base_n": 42179,
+    "remaining_batch_n": 163,
+    "prediction": "Every remaining attachment R4-covers the augmented base and every pair of remaining attachment sets has base-distance<=3, ignoring remaining internal edges.",
+    "helper_base_D5_proved_from_existing_records": true,
+    "test_batches": 1,
+    "adjust_pins": false,
+    "add_third_helper_after_failure": false,
+    "failure_interpretation": "These two helpers do not form a universal shortcut layer for this tail; other structured layers and P3 remain open/valid respectively.",
+    "executed_by_report_owner": false,
+    "all163_R4_pass": false,
+    "original_success_rows_reused": 156,
+    "helper_radius_certificates_reused": 326,
+    "newly_tested_R4_rows": 7,
+    "newly_passing_vertex": 42326,
+    "remaining_failed_vertices": [
+      42327,
+      42329,
+      42330,
+      42331,
+      42337,
+      42338
+    ],
+    "all_remaining_pinset_pairs_distance_le3": true,
+    "repaired_pair_pin_path": [
+      36398,
+      42291,
+      14650,
+      9751
+    ],
+    "CPU_seconds": 0.422154869,
+    "new_graphs_generated": 0,
+    "full_all_source_BFS": false,
+    "result_file": "../tail165_mechanism/P6_RESULT.json",
+    "decision": "Stop this fixed two-helper layer. No third helper, pin changes or residual-miss optimization."
+  },
+  "pending": [],
+  "mechanism_decision": {
+    "known_existing_graph_global_certificate_complete": true,
+    "bulk_nonstar_generator_recovered": false,
+    "two_helper_universal_layer_refuted": true,
+    "next_research_question": "Recover geometric indexing, attachments and anchor formulas for a bulk of non-star points, with all cross-class routes<=5 and degree budgets.",
+    "quantitative_requirement_for_fixed_core_strict_record": "At least644 non-star extras among987 extras needed for n42343.",
+    "no_automatic_third_helper": true,
+    "no_pin_optimization": true,
+    "no_new_template": true
+  }
+}

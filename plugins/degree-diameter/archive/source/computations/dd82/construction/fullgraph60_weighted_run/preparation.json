@@ -1,0 +1,132 @@
+{
+  "run_id": "dd82-v3-fullgraph60-weighted-20261013",
+  "status": "PREPARED_NOT_RUN",
+  "seed_source": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_all_matchings_run/candidate.best.edges",
+  "source_record": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/twin_seed_unrestricted_switch_run/twin60.json",
+  "source_edge_text_copied_exactly": true,
+  "initial_n": 60,
+  "initial_edges": 240,
+  "initial_bad_pairs": 20,
+  "old_neighborhood_reference": {
+    "index": 0,
+    "seed_bad_pairs": 20,
+    "complete": true,
+    "unordered_edge_pairs": 28680,
+    "disjoint_edge_pairs": 27000,
+    "existing_edge_rejections": 11560,
+    "valid_distinct_switches": 42440,
+    "best_distinct_neighbor_bad_pairs": 22,
+    "best_change": {
+      "removed": [
+        [
+          40,
+          53
+        ],
+        [
+          41,
+          59
+        ]
+      ],
+      "added": [
+        [
+          40,
+          59
+        ],
+        [
+          41,
+          53
+        ]
+      ]
+    },
+    "cpu_seconds": 0.011998,
+    "bad_pair_histogram": {
+      "22": 5,
+      "24": 5,
+      "25": 5,
+      "26": 20,
+      "27": 25,
+      "28": 65,
+      "29": 80,
+      "30": 240,
+      "31": 435,
+      "32": 490,
+      "33": 640,
+      "34": 1640,
+      "35": 1010,
+      "36": 2085,
+      "37": 2150,
+      "38": 3810,
+      "39": 4875,
+      "40": 5550,
+      "41": 3420,
+      "42": 3180,
+      "43": 1985,
+      "44": 5705,
+      "45": 1225,
+      "46": 3765,
+      "48": 10,
+      "49": 10,
+      "50": 10
+    }
+  },
+  "domain": "All simple 8-regular labelled graphs on 60 vertices; unrestricted two-edge switches",
+  "score": "sum of positive integer pair weights over uncovered pairs; all initial weights one",
+  "local_minimum_action": "Increment every current uncovered pair weight by one; scan again",
+  "compile": {
+    "command": [
+      "g++",
+      "-O3",
+      "-std=c++17",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted.cpp",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/search.bin"
+    ],
+    "exit_code": 0,
+    "cpu_seconds": 1.0078369999999999,
+    "wall_seconds": 1.0677109211683273,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 20,
+    "wall_limit_seconds": 30,
+    "memory_limit_bytes": 4294967296
+  },
+  "sanity_process": {
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/search.bin",
+      "sanity",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run/seed.edges",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run",
+      "0",
+      "0"
+    ],
+    "exit_code": 0,
+    "cpu_seconds": 0.09410300000000008,
+    "wall_seconds": 0.11561234667897224,
+    "pinned_cpu": 0,
+    "threads": 1,
+    "cpu_limit_seconds": 5,
+    "wall_limit_seconds": 10,
+    "memory_limit_bytes": 4294967296
+  },
+  "sanity": {
+    "passed": true,
+    "initial_bad_pairs": 20,
+    "legal_proposals_checked": 1000,
+    "unit_weight_checks": 500,
+    "nonuniform_weight_checks": 500,
+    "weight_increment_check": true,
+    "cpu_seconds": 0.091463,
+    "wall_seconds": 0.095449028
+  },
+  "rng_used": false,
+  "planned_search_command": [
+    "/opt/conda/bin/python3",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/fullgraph60_weighted_run.py",
+    "run"
+  ],
+  "planned_process_cpu_limit": 60,
+  "planned_process_wall_limit": 90,
+  "planned_internal_cpu_limit": 59,
+  "formal_search_started": false,
+  "independent_final_bfs_owner": "root"
+}

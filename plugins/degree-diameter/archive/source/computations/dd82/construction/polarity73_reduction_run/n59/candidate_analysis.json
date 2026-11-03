@@ -1,0 +1,102 @@
+{
+  "status": "LOCAL_CAPACITY_CONTRADICTION_WRITER_CHECKED",
+  "target_graph": false,
+  "scope": "Only this saved actual deletion set; no exclusion of other deletions or arbitrary rewiring",
+  "source_candidate": "computations/dd82/construction/polarity73_reduction_run/n59/deletion_candidate.json",
+  "source_ambient": "geometry.edges",
+  "deleted": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    10,
+    11,
+    12,
+    15,
+    24,
+    28,
+    32,
+    33,
+    40
+  ],
+  "retained_n": 59,
+  "bad_pairs": 415,
+  "unit_deficit_vertex_count": 25,
+  "empty_unique_new_neighbor_domains": [
+    20,
+    22,
+    31,
+    48,
+    66,
+    69
+  ],
+  "forced_unique_new_edges": [],
+  "witness": {
+    "unit_deficit_vertex": 20,
+    "old_neighbors": [
+      7,
+      22,
+      27,
+      37,
+      52,
+      57,
+      69
+    ],
+    "deficit": 1,
+    "saturated_bad_partners": [
+      16,
+      42
+    ],
+    "saturated_partner_neighbors": {
+      "16": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        72
+      ],
+      "42": [
+        5,
+        16,
+        31,
+        36,
+        43,
+        49,
+        62,
+        71
+      ]
+    },
+    "old_neighbor_intersection": [
+      43
+    ],
+    "intersection_vertex_deficits": {
+      "43": 0
+    },
+    "permissible_unique_new_neighbor_domain": [],
+    "old_lost_witnesses": [
+      {
+        "pair": [
+          20,
+          16
+        ],
+        "unique_deleted_old_common_neighbor": 40
+      },
+      {
+        "pair": [
+          20,
+          42
+        ],
+        "unique_deleted_old_common_neighbor": 10
+      }
+    ]
+  },
+  "proof": "Each selected saturated vertex keeps its entire neighborhood. The degree7 vertex has exactly one new neighbor p. To repair every selected bad pair, p must belong to the intersection of their old neighborhoods and itself have positive deficit. The explicitly computed permissible intersection is empty.",
+  "original_adjacency_recomputed_from_ambient": true,
+  "solver_calls": 0,
+  "new_deletion_sets_enumerated": 0,
+  "elapsed_cpu_seconds": 0.0012578320000000004
+}

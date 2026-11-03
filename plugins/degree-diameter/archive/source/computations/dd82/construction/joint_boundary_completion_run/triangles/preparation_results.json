@@ -1,0 +1,950 @@
+{
+  "cases": {
+    "n58": {
+      "encoding": {
+        "status": "PREPARED_NOT_RUN",
+        "solver_calls": 0,
+        "case": "n58",
+        "scope": "Exact degree8 diameter2 completion with all original bad-pair endpoints R free to change every incident edge, and only the saved source O/O induced subgraph fixed; anchored construction domain, not all graphs of this order; R-to-O rows lexicographically sorted by relabeling R only; explicit proven per-vertex triangle upper budget 3",
+        "n": 58,
+        "degree_target": 8,
+        "source_graph": "computations/dd82/construction/twin59_to_58_deflation_run/component.path1.edges",
+        "source_edges": 232,
+        "original_bad_pairs": [
+          [
+            3,
+            41
+          ],
+          [
+            9,
+            53
+          ],
+          [
+            12,
+            41
+          ],
+          [
+            14,
+            53
+          ],
+          [
+            28,
+            53
+          ],
+          [
+            29,
+            41
+          ],
+          [
+            40,
+            50
+          ],
+          [
+            40,
+            56
+          ],
+          [
+            41,
+            45
+          ],
+          [
+            41,
+            49
+          ],
+          [
+            42,
+            50
+          ],
+          [
+            42,
+            51
+          ],
+          [
+            42,
+            54
+          ],
+          [
+            43,
+            53
+          ],
+          [
+            44,
+            57
+          ],
+          [
+            45,
+            52
+          ],
+          [
+            45,
+            53
+          ],
+          [
+            46,
+            54
+          ],
+          [
+            47,
+            52
+          ],
+          [
+            48,
+            55
+          ],
+          [
+            49,
+            53
+          ]
+        ],
+        "repair_vertices": [
+          3,
+          9,
+          12,
+          14,
+          28,
+          29,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "outside_vertices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "variables": 228092,
+        "clauses": 828328,
+        "variable_kinds": {
+          "free_A_edge": 1092,
+          "exact_degree_threshold": 14541,
+          "actual_two_free_edge_path": 37536,
+          "lex_equal_prefix": 759,
+          "actual_triangle_indicator": 13424,
+          "triangle_upper_threshold": 160740
+        },
+        "primary_edge_variables": 1092,
+        "fixed_pairs": 561,
+        "fixed_edges": 84,
+        "fixed_nonedges": 477,
+        "all_original_pair_count": 1653,
+        "coverage_clauses": 1230,
+        "simplified_fixed_coverage_pairs": 423,
+        "simplifications": {
+          "coverage_fixed_direct": 84,
+          "coverage_fixed_two_edge_path": 339,
+          "one_fixed_edge_path": 4032,
+          "zero_path": 27312,
+          "two_free_edge_path": 37536,
+          "coverage_emitted": 1230
+        },
+        "clause_groups": [
+          {
+            "name": "all_original_vertices_exact_degree",
+            "first_clause": 1,
+            "last_clause": 55742,
+            "clauses": 55742
+          },
+          {
+            "name": "all_actual_original_pair_coverage_with_faithful_constant_simplification",
+            "first_clause": 55743,
+            "last_clause": 169580,
+            "clauses": 113838
+          },
+          {
+            "name": "lexicographic_R_to_O_row_order",
+            "first_clause": 169581,
+            "last_clause": 174134,
+            "clauses": 4554
+          },
+          {
+            "name": "actual_triangle_equivalences",
+            "first_clause": 174135,
+            "last_clause": 225814,
+            "clauses": 51680
+          },
+          {
+            "name": "per_vertex_triangle_upper_bounds_only",
+            "first_clause": 225815,
+            "last_clause": 828328,
+            "clauses": 602514
+          }
+        ],
+        "exact_degree_constraints": 58,
+        "all_bad_pair_obligations_retained": true,
+        "relaxed_input_written": false,
+        "source_assignment_sanity": "PASSED_TRIANGLE_EXTENDED_SOURCE_ASSIGNMENT_SANITY",
+        "cnf_bytes": 16334335,
+        "mathematical_dependencies": [
+          "proofs/dd82/construction/JOINT_BOUNDARY_COMPLETION_DIRECTION.md"
+        ],
+        "helper_reuse": "CNFEmitter, enforce_exact, add_iff_and; generic definitions only",
+        "no_order61_defect_assumptions": true,
+        "edit_radius": null,
+        "independently_fixed_R_O_degree_split": false,
+        "review_status": "Root-managed review of this triangle delta; no execution/review acceptance inferred",
+        "preparation_cpu_seconds": 2.357992578,
+        "preparation_wall_seconds": 2.4261510334908962,
+        "added_variables": 174923,
+        "added_clauses": 658748,
+        "base_prefix": {
+          "input": "computations/dd82/construction/joint_boundary_completion_run/n58/input.cnf",
+          "variables": 53169,
+          "clauses": 169580,
+          "body_copied_verbatim": true,
+          "auxiliary_definitions_compared_to_input": true
+        },
+        "row_order": {
+          "rows": [
+            3,
+            9,
+            12,
+            14,
+            28,
+            29,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "direction": "lexicographically nondecreasing",
+          "outside_labels_fixed": true,
+          "ties_allowed": true,
+          "graph_automorphism_assumed": false,
+          "RR_edges_relabelled_consistently": true
+        },
+        "relabelled_source_bad_pairs": [
+          [
+            3,
+            29
+          ],
+          [
+            3,
+            56
+          ],
+          [
+            9,
+            49
+          ],
+          [
+            12,
+            40
+          ],
+          [
+            14,
+            53
+          ],
+          [
+            28,
+            56
+          ],
+          [
+            29,
+            43
+          ],
+          [
+            29,
+            51
+          ],
+          [
+            29,
+            52
+          ],
+          [
+            29,
+            57
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            41,
+            55
+          ],
+          [
+            42,
+            44
+          ],
+          [
+            42,
+            46
+          ],
+          [
+            43,
+            54
+          ],
+          [
+            43,
+            56
+          ],
+          [
+            44,
+            55
+          ],
+          [
+            45,
+            54
+          ],
+          [
+            47,
+            56
+          ],
+          [
+            48,
+            56
+          ],
+          [
+            50,
+            56
+          ]
+        ],
+        "inherited_small_input_sanity": {
+          "path": "computations/dd82/construction/joint_boundary_completion_run/n58/small_input_sanity.json",
+          "rerun": false
+        },
+        "source_dependencies": [
+          "computations/dd82/construction/joint_boundary_completion_run/encode.py",
+          "computations/dd82/construction/joint_boundary_completion_run/sorted/encode.py",
+          "computations/dd82/construction/joint_boundary_completion_run/triangles/encode.py"
+        ],
+        "triangle_added_variables": 174164,
+        "triangle_added_clauses": 654194,
+        "triangle_budget": 3,
+        "triangle_free_assumption": false,
+        "triangle_indicators": 13424,
+        "fully_fixed_triangle_count": 0,
+        "conjunction_sanity": "PASSED",
+        "sorted_parent_prefix": {
+          "input": "computations/dd82/construction/joint_boundary_completion_run/sorted/n58/input.cnf",
+          "variables": 53928,
+          "clauses": 174134,
+          "body_copied_verbatim": true
+        },
+        "inherited_sanity_receipts": {
+          "source": "computations/dd82/construction/joint_boundary_completion_run/sorted/n58/source_sanity.json",
+          "lex": "computations/dd82/construction/joint_boundary_completion_run/sorted/n58/lex_sanity.json",
+          "tiny_graph": "computations/dd82/construction/joint_boundary_completion_run/n58/small_input_sanity.json",
+          "graph_or_lex_checks_rerun": false
+        },
+        "sorted_stage_added_variables": 759,
+        "sorted_stage_added_clauses": 4554
+      },
+      "preparation": {
+        "command": [
+          "/opt/conda/bin/python3",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/joint_boundary_completion_run/triangles/encode.py",
+          "prepare",
+          "--case",
+          "n58"
+        ],
+        "exit_code": 0,
+        "wall_timeout": false,
+        "termination_signal": null,
+        "cpu_seconds": 2.439641,
+        "wall_seconds": 2.518858052790165,
+        "cpu_budget_seconds": 30,
+        "wall_budget_seconds": 45,
+        "cpu_affinity": [
+          1
+        ],
+        "threads": 1,
+        "memory_limit_bytes": 4294967296,
+        "per_file_limit_bytes": null,
+        "status": "PREPARED_NOT_RUN",
+        "solver_calls": 0
+      }
+    },
+    "n60": {
+      "encoding": {
+        "status": "PREPARED_NOT_RUN",
+        "solver_calls": 0,
+        "case": "n60",
+        "scope": "Exact degree8 diameter2 completion with all original bad-pair endpoints R free to change every incident edge, and only the saved source O/O induced subgraph fixed; anchored construction domain, not all graphs of this order; R-to-O rows lexicographically sorted by relabeling R only; explicit proven per-vertex triangle upper budget 2",
+        "n": 60,
+        "degree_target": 8,
+        "source_graph": "computations/dd82/construction/fullgraph60_weighted_run/candidate.current.edges",
+        "source_edges": 240,
+        "original_bad_pairs": [
+          [
+            10,
+            50
+          ],
+          [
+            21,
+            23
+          ],
+          [
+            21,
+            45
+          ],
+          [
+            22,
+            48
+          ],
+          [
+            22,
+            52
+          ],
+          [
+            23,
+            37
+          ],
+          [
+            26,
+            32
+          ],
+          [
+            26,
+            52
+          ],
+          [
+            26,
+            55
+          ],
+          [
+            28,
+            45
+          ],
+          [
+            28,
+            55
+          ],
+          [
+            29,
+            50
+          ],
+          [
+            30,
+            50
+          ],
+          [
+            31,
+            33
+          ],
+          [
+            31,
+            51
+          ],
+          [
+            33,
+            56
+          ],
+          [
+            34,
+            37
+          ],
+          [
+            34,
+            39
+          ],
+          [
+            36,
+            50
+          ],
+          [
+            37,
+            46
+          ],
+          [
+            37,
+            58
+          ],
+          [
+            39,
+            46
+          ],
+          [
+            39,
+            56
+          ],
+          [
+            45,
+            51
+          ],
+          [
+            48,
+            49
+          ],
+          [
+            49,
+            58
+          ]
+        ],
+        "repair_vertices": [
+          10,
+          21,
+          22,
+          23,
+          26,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          39,
+          45,
+          46,
+          48,
+          49,
+          50,
+          51,
+          52,
+          55,
+          56,
+          58
+        ],
+        "outside_vertices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          24,
+          25,
+          27,
+          35,
+          38,
+          40,
+          41,
+          42,
+          43,
+          44,
+          47,
+          53,
+          54,
+          57,
+          59
+        ],
+        "variables": 209240,
+        "clauses": 744101,
+        "variable_kinds": {
+          "free_A_edge": 1175,
+          "exact_degree_threshold": 15379,
+          "actual_two_free_edge_path": 40550,
+          "lex_equal_prefix": 816,
+          "actual_triangle_indicator": 15150,
+          "triangle_upper_threshold": 136170
+        },
+        "primary_edge_variables": 1175,
+        "fixed_pairs": 595,
+        "fixed_edges": 94,
+        "fixed_nonedges": 501,
+        "all_original_pair_count": 1770,
+        "coverage_clauses": 1261,
+        "simplified_fixed_coverage_pairs": 509,
+        "simplifications": {
+          "coverage_fixed_direct": 94,
+          "coverage_fixed_two_edge_path": 415,
+          "one_fixed_edge_path": 4700,
+          "zero_path": 27888,
+          "two_free_edge_path": 40550,
+          "coverage_emitted": 1261
+        },
+        "clause_groups": [
+          {
+            "name": "all_original_vertices_exact_degree",
+            "first_clause": 1,
+            "last_clause": 58934,
+            "clauses": 58934
+          },
+          {
+            "name": "all_actual_original_pair_coverage_with_faithful_constant_simplification",
+            "first_clause": 58935,
+            "last_clause": 181845,
+            "clauses": 122911
+          },
+          {
+            "name": "lexicographic_R_to_O_row_order",
+            "first_clause": 181846,
+            "last_clause": 186741,
+            "clauses": 4896
+          },
+          {
+            "name": "actual_triangle_equivalences",
+            "first_clause": 186742,
+            "last_clause": 244991,
+            "clauses": 58250
+          },
+          {
+            "name": "per_vertex_triangle_upper_bounds_only",
+            "first_clause": 244992,
+            "last_clause": 744101,
+            "clauses": 499110
+          }
+        ],
+        "exact_degree_constraints": 60,
+        "all_bad_pair_obligations_retained": true,
+        "relaxed_input_written": false,
+        "source_assignment_sanity": "PASSED_TRIANGLE_EXTENDED_SOURCE_ASSIGNMENT_SANITY",
+        "cnf_bytes": 14394918,
+        "mathematical_dependencies": [
+          "proofs/dd82/construction/JOINT_BOUNDARY_COMPLETION_DIRECTION.md"
+        ],
+        "helper_reuse": "CNFEmitter, enforce_exact, add_iff_and; generic definitions only",
+        "no_order61_defect_assumptions": true,
+        "edit_radius": null,
+        "independently_fixed_R_O_degree_split": false,
+        "review_status": "Root-managed review of this triangle delta; no execution/review acceptance inferred",
+        "preparation_cpu_seconds": 2.217035118,
+        "preparation_wall_seconds": 2.2727768532931805,
+        "added_variables": 152136,
+        "added_clauses": 562256,
+        "base_prefix": {
+          "input": "computations/dd82/construction/joint_boundary_completion_run/n60/input.cnf",
+          "variables": 57104,
+          "clauses": 181845,
+          "body_copied_verbatim": true,
+          "auxiliary_definitions_compared_to_input": true
+        },
+        "row_order": {
+          "rows": [
+            10,
+            21,
+            22,
+            23,
+            26,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            36,
+            37,
+            39,
+            45,
+            46,
+            48,
+            49,
+            50,
+            51,
+            52,
+            55,
+            56,
+            58
+          ],
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            24,
+            25,
+            27,
+            35,
+            38,
+            40,
+            41,
+            42,
+            43,
+            44,
+            47,
+            53,
+            54,
+            57,
+            59
+          ],
+          "direction": "lexicographically nondecreasing",
+          "outside_labels_fixed": true,
+          "ties_allowed": true,
+          "graph_automorphism_assumed": false,
+          "RR_edges_relabelled_consistently": true
+        },
+        "relabelled_source_bad_pairs": [
+          [
+            10,
+            29
+          ],
+          [
+            21,
+            28
+          ],
+          [
+            21,
+            39
+          ],
+          [
+            21,
+            48
+          ],
+          [
+            21,
+            51
+          ],
+          [
+            22,
+            50
+          ],
+          [
+            22,
+            52
+          ],
+          [
+            23,
+            30
+          ],
+          [
+            23,
+            58
+          ],
+          [
+            26,
+            29
+          ],
+          [
+            26,
+            33
+          ],
+          [
+            29,
+            58
+          ],
+          [
+            30,
+            45
+          ],
+          [
+            30,
+            50
+          ],
+          [
+            31,
+            34
+          ],
+          [
+            31,
+            36
+          ],
+          [
+            31,
+            55
+          ],
+          [
+            32,
+            37
+          ],
+          [
+            32,
+            56
+          ],
+          [
+            33,
+            46
+          ],
+          [
+            34,
+            52
+          ],
+          [
+            36,
+            56
+          ],
+          [
+            37,
+            46
+          ],
+          [
+            45,
+            49
+          ],
+          [
+            49,
+            56
+          ],
+          [
+            55,
+            56
+          ]
+        ],
+        "inherited_small_input_sanity": {
+          "path": "computations/dd82/construction/joint_boundary_completion_run/n60/small_input_sanity.json",
+          "rerun": false
+        },
+        "source_dependencies": [
+          "computations/dd82/construction/joint_boundary_completion_run/encode.py",
+          "computations/dd82/construction/joint_boundary_completion_run/sorted/encode.py",
+          "computations/dd82/construction/joint_boundary_completion_run/triangles/encode.py"
+        ],
+        "triangle_added_variables": 151320,
+        "triangle_added_clauses": 557360,
+        "triangle_budget": 2,
+        "triangle_free_assumption": false,
+        "triangle_indicators": 15150,
+        "fully_fixed_triangle_count": 0,
+        "conjunction_sanity": "PASSED",
+        "sorted_parent_prefix": {
+          "input": "computations/dd82/construction/joint_boundary_completion_run/sorted/n60/input.cnf",
+          "variables": 57920,
+          "clauses": 186741,
+          "body_copied_verbatim": true
+        },
+        "inherited_sanity_receipts": {
+          "source": "computations/dd82/construction/joint_boundary_completion_run/sorted/n60/source_sanity.json",
+          "lex": "computations/dd82/construction/joint_boundary_completion_run/sorted/n60/lex_sanity.json",
+          "tiny_graph": "computations/dd82/construction/joint_boundary_completion_run/n60/small_input_sanity.json",
+          "graph_or_lex_checks_rerun": false
+        },
+        "sorted_stage_added_variables": 816,
+        "sorted_stage_added_clauses": 4896
+      },
+      "preparation": {
+        "command": [
+          "/opt/conda/bin/python3",
+          "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/joint_boundary_completion_run/triangles/encode.py",
+          "prepare",
+          "--case",
+          "n60"
+        ],
+        "exit_code": 0,
+        "wall_timeout": false,
+        "termination_signal": null,
+        "cpu_seconds": 2.2966219999999997,
+        "wall_seconds": 2.368450205773115,
+        "cpu_budget_seconds": 30,
+        "wall_budget_seconds": 45,
+        "cpu_affinity": [
+          2
+        ],
+        "threads": 1,
+        "memory_limit_bytes": 4294967296,
+        "per_file_limit_bytes": null,
+        "status": "PREPARED_NOT_RUN",
+        "solver_calls": 0
+      }
+    }
+  },
+  "solver_calls": 0,
+  "scope": "Actual preparation only; no target or exclusion."
+}

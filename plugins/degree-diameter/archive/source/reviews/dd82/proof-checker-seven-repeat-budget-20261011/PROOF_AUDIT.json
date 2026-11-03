@@ -1,0 +1,290 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 38 recorded obligations are discharged; the exact repeat-budget identity, W bounds, W=5 weighted-triangle exclusion, and both W=6 forced isolated-support incidence conclusions are sound under the explicit actual-graph N15 hypotheses. Same-family provisional paper review only.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_task_id": "/root/proof_review_seven_repeat_budget",
+  "reviewer_family": "openai",
+  "reviewer_request_metadata": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "ultra",
+    "source": "proof-checker SKILL.md target settings",
+    "spawn_request_telemetry_available_to_worker": false
+  },
+  "reviewer_backend_attestation": {
+    "status": "not_attested",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "note": "Requested or skill-target settings are not represented as observed backend metadata."
+  },
+  "generated_at": "2026-10-11T09:57:11.648791+00:00",
+  "trace_path": "reviews/dd82/proof-checker-seven-repeat-budget-20261011",
+  "reviewed_inputs": [
+    {
+      "path": "proofs/dd82/n59/seven_triangle_nonzero_repeat_budget_20261011.md",
+      "content_scope": "complete mathematical content read"
+    },
+    {
+      "path": "proofs/dd82/n59/zero_heavy_global_capacity_20261011.md",
+      "content_scope": "complete mathematical content read"
+    },
+    {
+      "path": "proofs/dd82/n59/heavy_cross_repeat_slack_20261011.md",
+      "content_scope": "complete mathematical content read"
+    },
+    {
+      "path": "proofs/dd82/n59/nonzero_support_transport_20261011.md",
+      "content_scope": "complete mathematical content read"
+    },
+    {
+      "path": "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md",
+      "content_scope": "complete mathematical content read"
+    }
+  ],
+  "assumptions": [
+    "One finite simple undirected graph on 59 vertices with maximum degree at most 8 and diameter at most 2.",
+    "B is the actual defect A^2+A-7I-J of that graph.",
+    "Every zero-triangle vertex has the exact induced-support N15 row: weights 2,2,1,1 with only the two equal-weight support edges.",
+    "The main theorem has T=7 and m=21."
+  ],
+  "details": {
+    "obligation_count": 38,
+    "obligations_discharged": 38,
+    "issues": [],
+    "severity_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "obligations": [
+      {
+        "id": "P01",
+        "statement_and_discharge": "Legal graph ⊢ 8-regular; two-step ball bound for any hypothetical degree≤7 root",
+        "status": "discharged"
+      },
+      {
+        "id": "P02",
+        "statement_and_discharge": "P01 ⊢ B symmetric, nonnegative, zero diagonal, row sum 6, AB=BA, nonedge budget 6−2t; actual matrix identity and diameter",
+        "status": "discharged"
+      },
+      {
+        "id": "P03",
+        "statement_and_discharge": "N15 ⊢ any pair has ≤2 zero common neighbors; common zero set independent, each weight class a matching, no two-colored positive defect triangle",
+        "status": "discharged"
+      },
+      {
+        "id": "P04",
+        "statement_and_discharge": "P03 ⊢ l_n+2h_n+k_n+R_n=6−2t(n), R_n≥0; double count zero-neighbor pairs and additional common neighbors outside the root neighborhood",
+        "status": "discharged"
+      },
+      {
+        "id": "P05",
+        "statement_and_discharge": "P04 ⊢ 59≤4m−3T, m≥20, T≥7; zero heavy incidence identity and m≤3T",
+        "status": "discharged"
+      },
+      {
+        "id": "P06",
+        "statement_and_discharge": "P04 ⊢ exact global slack 2(4m−3T−59)=sum l_n+2D+sum R_n; subtract 2 card(Z)=2H_ZZ+K",
+        "status": "discharged"
+      },
+      {
+        "id": "P07",
+        "statement_and_discharge": "Exact induced N15 and AB=BA ⊢ sum_{y∼x}B_ry=B_rx for each positive zero support x; same-weight support mate computes the transposed matrix entry",
+        "status": "discharged"
+      },
+      {
+        "id": "P08",
+        "statement_and_discharge": "P07 ⊢ isolated equal-weight zero matching edges, isolated-zero transport, and e_r=5+Q_N−s_N−K_r; nonnegative summands and exact partition of weighted support edges",
+        "status": "discharged"
+      },
+      {
+        "id": "P09",
+        "statement_and_discharge": "Heavy cross pair ⊢ one unit slack term; if q=2, both induced cross pairs cannot be heavy because a unit triangle edge cannot transport weight 2 to an isolated zero",
+        "status": "discharged"
+      },
+      {
+        "id": "P10",
+        "statement_and_discharge": "P09 ⊢ injective charging and K≤R_NZ; a charged light pair's unique N and Z common neighbors recover its source heavy pair",
+        "status": "discharged"
+      },
+      {
+        "id": "P11",
+        "statement_and_discharge": "W=0 ⊢ zero row shapes 22 or 1111 at nonzero roots; exclude 211 and pair 22 by transport, retaining isolated light supports in 1111",
+        "status": "discharged"
+      },
+      {
+        "id": "P12",
+        "statement_and_discharge": "W=0 ⊢ heavy charges disjoint from isolated-light terms; a charged light pair has no neighbor in its root's nonzero support, hence is paired",
+        "status": "discharged"
+      },
+      {
+        "id": "P13",
+        "statement_and_discharge": "P11,P12 and traces ⊢ W≠0; a+b≤4, a even, b≡2a mod5 force a=b=0, then 84>76 light cross incidences",
+        "status": "discharged"
+      },
+      {
+        "id": "P14",
+        "statement_and_discharge": "Actual defect traces ⊢ 8C4=6n+s−12T; tr A4=126n+s−12T and direct walk count tr A4=120n+8C4",
+        "status": "discharged"
+      },
+      {
+        "id": "P15",
+        "statement_and_discharge": "8-regular simple graph ⊢ tr A5=10C5+210T; five-distinct-position walks and uniquely assigned triangle/backtrack walks, 30+18·10 per triangle",
+        "status": "discharged"
+      },
+      {
+        "id": "P16",
+        "statement_and_discharge": "P15 and exact induced zero rows ⊢ fifth trace and congruence; tr A5=428n+w−2s+102T, zero rows s_v=10,Q2=5; also the all-zero contradiction",
+        "status": "discharged"
+      },
+      {
+        "id": "M01",
+        "statement_and_discharge": "T=7,m=21 ⊢ disjoint original triangles and nonedge budget 4; equality in sum t(n)=21≥m",
+        "status": "discharged"
+      },
+      {
+        "id": "M02",
+        "statement_and_discharge": "P06,M01 ⊢ 8=l1+2l2+2h2+4h3+R_NN+R_NZ; identify multiplicities and oriented N-N contributions",
+        "status": "discharged"
+      },
+      {
+        "id": "M03",
+        "statement_and_discharge": "P03 ⊢ P=l2+h2+3h3 and W=P+R_NN/2; bijection between N-pair/zero-common-pair rectangles, and nonadjacency at zero vertices",
+        "status": "discharged"
+      },
+      {
+        "id": "M04",
+        "statement_and_discharge": "M02,M03 ⊢ 8=2W+l1−2h3+R_NZ; exact substitution, no inequality or pairing assumption",
+        "status": "discharged"
+      },
+      {
+        "id": "M05",
+        "statement_and_discharge": "M02–M04,P10,P13 ⊢ 1≤W≤6 and 2W+K≤12; h3≤2, nonnegative l1,R_NZ, and K≤R_NZ",
+        "status": "discharged"
+      },
+      {
+        "id": "M06",
+        "statement_and_discharge": "W=6 ⊢ h3=2,l1=R_NZ=K=l2=h2=R_NN=0,P=6; equality in preceding nonnegative bounds",
+        "status": "discharged"
+      },
+      {
+        "id": "M07",
+        "statement_and_discharge": "M06 ⊢ two unit repeat triangles sharing ≤1 vertex, no other N-N repeats, and no nonzero common neighbor on them; two distinct zero pairs cannot give a shared N-pair without ≥3 zero common neighbors",
+        "status": "discharged"
+      },
+      {
+        "id": "M08",
+        "statement_and_discharge": "R_NZ=K=0 ⊢ every positive cross repeat is light and q=2, with no nonzero common neighbor; pointwise nonnegative slack",
+        "status": "discharged"
+      },
+      {
+        "id": "M09",
+        "statement_and_discharge": "W=5 ⊢ h3=1,l1=R_NZ=K=0; h3≥1 from M04 and h3≤1 from W≥3h3",
+        "status": "discharged"
+      },
+      {
+        "id": "M10",
+        "statement_and_discharge": "Row sums and zero-row squares ⊢ s=506+2F+2K; count N-N excess twice, cross-heavy excess once per N row",
+        "status": "discharged"
+      },
+      {
+        "id": "M11",
+        "statement_and_discharge": "W=5,M10,P14 ⊢ only two doubled triangle edges or two new distinct unit edges; enumerate the two leftover weight units and require F≡0 mod4",
+        "status": "discharged"
+      },
+      {
+        "id": "M12",
+        "statement_and_discharge": "Doubled-edge pattern ⊢ x_v∼w,x_w∼v and neither adjacent to u; singleton zero supports isolated, triangle partners excluded by M08, weight-2 endpoint unavailable to a unit zero",
+        "status": "discharged"
+      },
+      {
+        "id": "M13",
+        "statement_and_discharge": "M12 ⊢ p_uv=q_uv=0 and p_uw=q_uw=0; full AB/BA expansions and p+q≤1 from unique N common neighbor and disjoint original triangles",
+        "status": "discharged"
+      },
+      {
+        "id": "M14",
+        "statement_and_discharge": "M13 ⊢ e_u=−4,e_v=e_w=−1, all other 18 remainders 2; Q_N=1, square sums 10,7,7, no zero pair at u,v,w; other roots' four zeros paired",
+        "status": "discharged"
+      },
+      {
+        "id": "M15",
+        "statement_and_discharge": "M14,P16 ⊢ doubled pattern impossible; sum e=30 and 30+7≠4 mod5",
+        "status": "discharged"
+      },
+      {
+        "id": "M16",
+        "statement_and_discharge": "W=6 ⊢ degree-0 remainder 2; degree-2 remainder 1 paired or 2 isolated; triangle-partner cross edges forbidden by absence of N common neighbors",
+        "status": "discharged"
+      },
+      {
+        "id": "M17",
+        "statement_and_discharge": "Disjoint repeat triangles ⊢ j_vw=j_wv and row sums 0 or 2; full AB/BA expansion, paired supports supply no j terms",
+        "status": "discharged"
+      },
+      {
+        "id": "M18",
+        "statement_and_discharge": "M17,P16 ⊢ all six active and all directional j=1; each triangle excludes active count 1, fifth trace forces total q∈{1,6}, so q=6, then solve three degree-2 equations",
+        "status": "discharged"
+      },
+      {
+        "id": "M19",
+        "statement_and_discharge": "Shared repeat triangles ⊢ original edges between outer pairs form a matching; two incident edges would create a forbidden N common neighbor for a repeat pair",
+        "status": "discharged"
+      },
+      {
+        "id": "M20",
+        "statement_and_discharge": "M19 ⊢ e_u=c0 and sum e=36+c0+q; Q_N(u)=1+c0,s_N(u)=6,K_u=0 and other 20 row contributions",
+        "status": "discharged"
+      },
+      {
+        "id": "M21",
+        "statement_and_discharge": "Shared case ⊢ j_au=c_a, j_ab=j_ba, and counterparts; complete AB/BA expansions at central and outer repeat edges",
+        "status": "discharged"
+      },
+      {
+        "id": "M22",
+        "statement_and_discharge": "M21,P16 ⊢ c0=2,q=4 and each outer root splits its two isolated zero repeats one per endpoint; parity excludes c0=1, trace excludes c0=0",
+        "status": "discharged"
+      }
+    ],
+    "checked_claims": [
+      "8 = 2W + l_1 - 2h_3 + R_NZ",
+      "1 <= W <= 6 and 2W+K <= 12",
+      "W=5: unit repeat triangle plus two distinct further unit edges",
+      "W=6: two unit repeat triangles sharing at most one vertex",
+      "W=6 disjoint: all six active and each directional j=1",
+      "W=6 shared: exactly two original outer matching edges and all four outer vertices active"
+    ],
+    "counterexample_pass": {
+      "performed": true,
+      "method": "Finite symbolic and combinatorial adversarial case checks; no graph search.",
+      "counterexamples_found": 0,
+      "unresolved_candidates": 0,
+      "cases": [
+        "Three common zero neighbors and two-color matching obstruction",
+        "Heavy-cross pair with both induced cross repeats heavy",
+        "W=0 with isolated light supports retained",
+        "All five distributions of the two extra W=5 weight units",
+        "W=5 heavy triangle with x_v and x_w included in AB/BA",
+        "W=6 disjoint with zero or one active vertex",
+        "W=6 shared outer matching sizes 0, 1, and 2",
+        "All original triangle-partner contributions in decisive row products"
+      ]
+    },
+    "assumption_changes": [],
+    "proof_source_edits": [],
+    "formal_verification_performed": false,
+    "cross_family_review_performed": false,
+    "asymptotic_or_interchange_obligations": "not applicable: all reasoning finite",
+    "scope_limits": [
+      "N15 is an explicit hypothesis, not proved for arbitrary legal graphs.",
+      "No remaining incidence pattern is constructed or asserted realizable.",
+      "No complete order-59 exclusion or exact degree-diameter value follows.",
+      "Review is same-family/provisional, without backend model attestation."
+    ]
+  }
+}

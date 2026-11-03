@@ -1,0 +1,626 @@
+[
+  {
+    "id": "ddp-stale-d3d9-exoo600-three-four-cut-helper-samples-20261101",
+    "title": "3D9 Exoo600→602改边：三cut与四cut各10000样本均漏helper覆盖，整规则保持UNKNOWN并停止",
+    "family": "vertex splitting and matching",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "record_type": "bounded_candidate_or_input_transfer_gate",
+    "target_Delta": 3,
+    "target_D": 9,
+    "savedL": 600,
+    "baseline_date": "2026-11-01 current main table; source legality inherited",
+    "n": {
+      "actual": null,
+      "hypothetical": 602
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "No accepted final target graph or complete global target diameter; source facts and scoped checks only",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 9,
+    "scope": "One fixed inherited Exoo600 cubic/D9 source. First fixed-seed10000 distinct configurations:3matching cuts,1original-nonedge endpoint repair,remaining4pins2+2 at adjacent helpers. Second10000:4matching cuts,onepin percut,remaining4endpoints2old repairs,adjacent helpers2+2. Bounded samples only, not complete domains; no other seed/source/cut pattern.",
+    "outcome_class": "UNKNOWN_TWO_10000_SAMPLES_NO_HIT_STOP",
+    "new_lower_bound": false,
+    "distance_text": "旧source非二分，不能使用odd-bipartite自动细分覆盖。三cut样本9999先漏helper600、1案600通过却601到old2距10；四cut真实消除“同cut两端必同为pins”的强制关联，但10000案全部漏helper600R9。两轮双方helper都通过为0，modified old-labelled BFS均0，不能说本轮发现old-old损伤。两次“出现双方helper覆盖”预测均被样本推翻；不是整个3cut/4cut族NO。",
+    "lesson_and_restart_condition": "STOP both bounded samples under the same20CPU ledger. No fifth cut, secondseed or source-D9/BFS rerun. A future experiment needs a genuinely changed premise; AFY70/D5 completeNO must not be imported as Exoo600/D9 exclusion.",
+    "restart_condition": "STOP both bounded samples under the same20CPU ledger. No fifth cut, secondseed or source-D9/BFS rerun. A future experiment needs a genuinely changed premise; AFY70/D5 completeNO must not be imported as Exoo600/D9 exclusion.",
+    "unclosed_gap": "The general degree/diameter target remains open; stop only the explicitly sampled or failed input rule.",
+    "other_metrics": {
+      "new_graphs": 0,
+      "new_parameter_pairs": 0,
+      "new_Lean_instances": 0,
+      "new_independent_method_claims": 0,
+      "Moore_bound": 1534,
+      "located_baseline": 600,
+      "Moore_space": 934,
+      "Moore_gap_is_not_constructibility": true,
+      "source_order": 600,
+      "source_edges": 900,
+      "source_degree": 3,
+      "source_D9": "primary inherited; no sourceD9BFS",
+      "source_bipartite": false,
+      "symmetry_unbound": true,
+      "target_cubic_edges": 903,
+      "three_cut": {
+        "seed": 202611010309,
+        "distinct_configurations_finished": 10000,
+        "rejected_helper600": 9999,
+        "rejected_helper601": 1,
+        "both_helpers_passed": 0,
+        "rejected_old_old": 0,
+        "helper_root_BFS_count": 10001,
+        "modified_graph_old_label_BFS_count": 0,
+        "first_helper600_failure": {
+          "configuration": {
+            "cut_edge_indices": [
+              255,
+              455,
+              637
+            ],
+            "cut_edges": [
+              [
+                85,
+                122
+              ],
+              [
+                167,
+                551
+              ],
+              [
+                232,
+                400
+              ]
+            ],
+            "repair": [
+              122,
+              400
+            ],
+            "pins600": [
+              85,
+              551
+            ],
+            "pins601": [
+              167,
+              232
+            ]
+          },
+          "BFS": {
+            "root": 600,
+            "target": 49,
+            "distance": 10,
+            "reached": 602,
+            "eccentricity": 10,
+            "actual_path": [
+              600,
+              85,
+              282,
+              376,
+              210,
+              431,
+              58,
+              334,
+              206,
+              456,
+              49
+            ]
+          }
+        },
+        "first_helper601_failure": {
+          "configuration": {
+            "cut_edge_indices": [
+              15,
+              238,
+              578
+            ],
+            "cut_edges": [
+              [
+                5,
+                325
+              ],
+              [
+                79,
+                253
+              ],
+              [
+                212,
+                462
+              ]
+            ],
+            "repair": [
+              5,
+              79
+            ],
+            "pins600": [
+              212,
+              462
+            ],
+            "pins601": [
+              253,
+              325
+            ]
+          },
+          "BFS": {
+            "root": 601,
+            "target": 2,
+            "distance": 10,
+            "reached": 602,
+            "eccentricity": 10,
+            "actual_path": [
+              601,
+              253,
+              371,
+              569,
+              512,
+              36,
+              328,
+              142,
+              109,
+              531,
+              2
+            ]
+          }
+        },
+        "prediction_both_helpers_supported": false,
+        "complete_configuration_family_exclusion": false
+      },
+      "four_cut": {
+        "seed": 202611010309,
+        "distinct_configurations_finished": 10000,
+        "rejected_helper600": 10000,
+        "rejected_helper601": 0,
+        "both_helpers_passed": 0,
+        "rejected_old_old": 0,
+        "helper_root_BFS_count": 10000,
+        "modified_graph_old_label_BFS_count": 0,
+        "first_helper600_failure": {
+          "configuration": {
+            "cut_edge_indices": [
+              255,
+              455,
+              637,
+              715
+            ],
+            "cut_edges": [
+              [
+                85,
+                122
+              ],
+              [
+                167,
+                551
+              ],
+              [
+                232,
+                400
+              ],
+              [
+                267,
+                428
+              ]
+            ],
+            "repairs": [
+              [
+                122,
+                267
+              ],
+              [
+                167,
+                232
+              ]
+            ],
+            "pins600": [
+              85,
+              400
+            ],
+            "pins601": [
+              428,
+              551
+            ]
+          },
+          "BFS": {
+            "root": 600,
+            "target": 2,
+            "distance": 10,
+            "reached": 602,
+            "eccentricity": 10,
+            "actual_path": [
+              600,
+              85,
+              282,
+              461,
+              25,
+              501,
+              103,
+              177,
+              592,
+              531,
+              2
+            ]
+          }
+        },
+        "prediction_both_helpers_supported": false,
+        "complete_configuration_family_exclusion": false
+      },
+      "first_rule_charged_CPU": 1.4148908329999998,
+      "cumulative_charged_CPU": 2.860445652,
+      "CPU_budget": 20,
+      "no_timer_reset": true,
+      "actual_modified_helper_root_BFS_total": 20001,
+      "modified_old_label_root_BFS": 0,
+      "source_validity_D9_BFS": 0,
+      "helper_cooperation_formula": "R7_K(A) union R7_K(B) union [R8_K(A) intersect R8_K(B)] covers all old vertices",
+      "complete_family_exclusion": false,
+      "ordinary_fulltarget_badpairs": null,
+      "global_target_D": null,
+      "terminal": true
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/PRED.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/NOTE.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/PAPER_NOTE.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/run.cpp",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/run_once.py",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/ATTEMPTS.csv",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/PRED.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/NOTE.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/PAPER_NOTE.md",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/run.cpp",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/run_once.py",
+      "research/ddp/two_successful_methods_20261101/stale_record_transfer_d3D9/two_helper_repair602/four_cut_spread_pins/ATTEMPTS.csv",
+      "research/ddp/more_graphs_20261027/d3_D9_current600_source/SOURCE_REPORT.md",
+      "research/ddp/more_graphs_20261027/d3_D9_current600_source/SOURCE_PROFILE.json",
+      "research/ddp/more_graphs_20261027/d3_D9_current600_source/CONDITIONAL_SUBDIVISION_LEMMA.md"
+    ]
+  },
+  {
+    "id": "ddp-stale-d10d4-signed-f2-15552-transfer3072-inverse-failure-20261101",
+    "title": "10D4目标3072的signed-F2迁移：0→183无反向，指定整数lift仅char3可能互反，未构造图",
+    "family": "Route-chart source transfer",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "record_type": "bounded_candidate_or_input_transfer_gate",
+    "target_Delta": 10,
+    "target_D": 4,
+    "savedL": 2556,
+    "baseline_date": "2026-11-01 current main table; source legality inherited",
+    "n": {
+      "actual": null,
+      "hypothetical": 3072
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "No accepted final target graph or complete global target diameter; source facts and scoped checks only",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "Only the literal signed integer lift0→0,1→1,2→−1 of the five actual F3 affine templates, then reduction toF2; original192 controller unchanged. No field-homomorphism claim, symmetrization, alternate integer representatives or other fields/templates tested. Paper corollary uses the same signed integers and unique11→0 return arc to require characteristic3.",
+    "outcome_class": "STOP_SIGNED_F2_TRUE_INVERSE_FAILURE",
+    "new_lower_bound": false,
+    "distance_text": "F2不是旧F3证明自动特化：26个新关系逆检查后实际0→183(globaltype1,noise1)仅有type3可回controller0，binary reverse噪声候选标签2/13都非0；真互反关系失败，8个真实global stays跳过。singularB本非GL，检查的是存在reverse noise。signed整数B3v1=−3e1，旧mod3为0而F2残留e1；指定同一整数lift在任意char≠3亦无法由v3=(1,1,1,1)抵消。0图/0BFS，未尝试ORsymm修度数或第二lift。",
+    "lesson_and_restart_condition": "STOP this one signed-F2 recipe and do not scan positive2/fields or silently symmetrize. The characteristic condition is only for these exact signed integer representatives; redesigned matrices or different representatives and general10D4 remain open. OldF3 source/kernel remains accepted but is not a certificate for the failed transfer.",
+    "restart_condition": "STOP this one signed-F2 recipe and do not scan positive2/fields or silently symmetrize. The characteristic condition is only for these exact signed integer representatives; redesigned matrices or different representatives and general10D4 remain open. OldF3 source/kernel remains accepted but is not a certificate for the failed transfer.",
+    "unclosed_gap": "The general degree/diameter target remains open; stop only the explicitly sampled or failed input rule.",
+    "other_metrics": {
+      "new_graphs": 0,
+      "new_parameter_pairs": 0,
+      "new_Lean_instances": 0,
+      "new_independent_method_claims": 0,
+      "Moore_bound": 8201,
+      "located_baseline": 2556,
+      "Moore_space": 5645,
+      "hypothetical_target": 3072,
+      "target_margin_if_legal": 516,
+      "Moore_gap_is_not_constructibility": true,
+      "inherited_source": {
+        "n": 15552,
+        "controller_count": 192,
+        "fiber": "F3^4",
+        "published_reproduction": true,
+        "controller_only_inherited": true
+      },
+      "coefficient_rule": "0→0,1→1,2→integer−1 then mod2; no field homomorphism claimed",
+      "counterexample": {
+        "kind": "ACTUAL_DIRECTED_RELATION_NOT_RECIPROCAL",
+        "global_type": 1,
+        "source_label": 0,
+        "target_label": 183,
+        "input_controller": 0,
+        "output_controller": 11,
+        "input_coordinates": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "noise": 1,
+        "output_coordinates": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "original_arc": {
+          "from": 0,
+          "to": 11,
+          "pivot": 0,
+          "v": [
+            1,
+            2,
+            2,
+            0
+          ],
+          "c": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "B": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              2,
+              2,
+              2
+            ]
+          ],
+          "v_offset": 25,
+          "c_offset": 0,
+          "column_offsets": [
+            18,
+            69,
+            72,
+            66
+          ]
+        },
+        "signed_integer_B": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            1
+          ],
+          [
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "signed_integer_v": [
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "binary_arc": {
+          "from": 0,
+          "to": 11,
+          "B": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ]
+          ],
+          "v": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "c": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "reverse_original_arcs": [
+          {
+            "from": 11,
+            "to": 0,
+            "pivot": 0,
+            "v": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "c": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "B": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                1,
+                2
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                2
+              ]
+            ],
+            "v_offset": 40,
+            "c_offset": 0,
+            "column_offsets": [
+              15,
+              57,
+              39,
+              69
+            ]
+          }
+        ],
+        "reverse_binary_arcs": [
+          {
+            "from": 11,
+            "to": 0,
+            "B": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                1
+              ]
+            ],
+            "v": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "c": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "all_actual_reverse_noise_candidates": [
+          {
+            "reverse_controller": 0,
+            "noise": 0,
+            "coordinates": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "label": 2
+          },
+          {
+            "reverse_controller": 0,
+            "noise": 1,
+            "coordinates": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "label": 13
+          }
+        ],
+        "reverse_target_arc_count": 1,
+        "entire_global_labels_are_distinct": true
+      },
+      "new_true_arc_reverse_tests": 26,
+      "actual_global_stays_skipped": 8,
+      "paper_char3_necessary_corollary": {
+        "status": "PAPER_ONLY_SAME_SIGNED_INTEGER_FAMILY",
+        "unique_return_controller11_to0": true,
+        "obstruction": "0=−3e1+s(1,1,1,1) forces s0 then3=0",
+        "scope": "all fields of char!=3 for these fixed signed coefficients; not different integer lifts or redesigned relations",
+        "new_field_runs": 0
+      },
+      "integral_type0_contrast": "B0v0=0 and B0^2=I−v0e0^T hold as signed integer identities; one successfultype does not transfer alltypes",
+      "actual_process_CPU": 0.04016489,
+      "charged_CPU": 0.24016489000000002,
+      "preparation_charge": 0.2,
+      "CPU_budget": 20,
+      "new_target_graph_generated": false,
+      "target_BFS": 0,
+      "old_F3_field_rank_graph_BFS_Lean_checks": 0,
+      "solver_remote_runs": 0,
+      "terminal": true
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/PRED.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/NOTE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/PAPER_INTERFACE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/COUNTEREXAMPLE.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/NEW_BINARY_GLOBAL_TYPES.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/signed_F2_transfer3072/run_once.py"
+    ]
+  }
+]

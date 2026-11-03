@@ -1,0 +1,55 @@
+{
+  "status": "PAPER_DOUBLE_TRIANGLE_SUBFAMILY_EXCLUDED_GENERAL_F_NEW_NECESSARY_CONDITIONS",
+  "same_goal": true,
+  "scope": "C33 = designated 11K3 edge-disjoint union arbitrary simple cross-block 2-factor F; all distinct nonadjacent pairs require exact length3 NB route",
+  "double_triangle_subfamily": {
+    "F": "11 disjoint K3",
+    "exact_translation": "line graph of simple cubic bipartite H on22vertices/33edges",
+    "self_contained_coarse_order_upper": 29,
+    "published_max_order_before_divisibility": 22,
+    "published_max_order_after_cubic_divisibility": 21,
+    "published_reference": "arXiv:2103.11898v2 Theorem2 p2, actual PDF read by root",
+    "published_source": "https://arxiv.org/pdf/2103.11898",
+    "not_new_theorem": true
+  },
+  "general_C33_status": "UNKNOWN unchanged",
+  "proof_status": "Root and complementary-agent paper checks; actual Gemini static SOUND AS STATED; not Lean",
+  "solver_calls": 0,
+  "BFS_calls": 0,
+  "enumeration_calls": 0,
+  "graphs_generated": 0,
+  "new_complete_graphs": 0,
+  "wiki_changed": false,
+  "next_rule": "Preserve full C33 family modulo proved exclusion: forbid every F triangle component, retain all F cycles>=4. Do not enumerate cubic22 or automatically restart old solver.",
+  "general_F_intermediate_necessary": {
+    "F_triangle_components_max": 3,
+    "designated_I_block_F_triangle_vertices_max": 1,
+    "I_neighbors_of_F_triangle_vertex_must_belong_to_F_cycle_length_at_least": 5,
+    "F_triangle_root_C4_count": 0,
+    "F_triangle_root_distance_layers": [
+      1,
+      4,
+      8,
+      20
+    ],
+    "bound": "B3(r)<=29+2k for F-triangle root, k=#I-neighbors on F>=4"
+  },
+  "general_F_necessary": {
+    "F_triangle_components_max": 0,
+    "F_cycle_minimum_length": 4,
+    "theorem": "For C33 with designated11K3 I plus cross-block2factor F and diameter<=3, F contains no K3 component",
+    "mechanism": "A hypothetical F triangle has3 roots; exact33 ball capacity forces their3 pairs of I partners to hit3 disjoint sets of4 external I blocks, requiring12 available blocks where only8 exist",
+    "broader_structural_consequence": "Within this I-triangle-factor plus F-2factor framework, if F contains K3 and diameter<=3 then controller order<=30"
+  },
+  "saved_best_not_repaired": {
+    "F_cycle_lengths": [
+      24,
+      5,
+      4
+    ],
+    "missing_nonadjacent_ordered_pairs": 28,
+    "already_passes_new_cut": true,
+    "performance_improvement_measured": false
+  },
+  "external_review": "reviews/ddp/controller33_no_external_triangle_20261030.DISPOSITION.md"
+}

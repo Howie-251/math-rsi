@@ -1,0 +1,48 @@
+def DegreeDiameter.doubleNonedgePairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V) :=
+fun {V} [Fintype V] G => {P | ∃ x y, x ≠ y ∧ ¬G.Adj x y ∧ DegreeDiameter.defectMatrix G x y = 2 ∧ P = {x, y}}
+def DegreeDiameter.doubleRepeatPairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V) :=
+fun {V} [Fintype V] G => {P | ∃ x y, x ≠ y ∧ DegreeDiameter.defectMatrix G x y = 2 ∧ P = {x, y}}
+def DegreeDiameter.nonedgePairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V) :=
+fun {V} [Fintype V] G => {P | ∃ x y, x ≠ y ∧ ¬G.Adj x y ∧ P = {x, y}}
+def DegreeDiameter.fourCycleFlags.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V × Finset V) :=
+fun {V} [Fintype V] G =>
+  (DegreeDiameter.nonedgePairs G).biUnion fun P =>
+    Finset.image (fun Q => (P, Q)) (Finset.powersetCard 2 (DegreeDiameter.oppositePair G P))
+@DegreeDiameter.n62_four_cycle_flags_even : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 62 → Even (DegreeDiameter.fourCycleFlags G).card
+@DegreeDiameter.n62_four_cycle_flag_incidence : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) →
+          (DegreeDiameter.fourCycleFlags G).card =
+            (DegreeDiameter.unitNonedgePairs G).card + 3 * (DegreeDiameter.doubleNonedgePairs G).card
+@DegreeDiameter.n62_double_repeat_incidence : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) →
+          2 * (DegreeDiameter.unitNonedgePairs G).card + 4 * (DegreeDiameter.doubleNonedgePairs G).card +
+              6 * (G.cliqueFinset 3).card =
+            186
+@DegreeDiameter.n62_double_nonedge_pair_count_odd : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) → Odd (DegreeDiameter.doubleNonedgePairs G).card
+@DegreeDiameter.n62_double_repeat_pairs_eq_nonedge_pairs : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → DegreeDiameter.doubleRepeatPairs G = DegreeDiameter.doubleNonedgePairs G
+@DegreeDiameter.n62_double_repeat_pair_count_odd : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 2) → Odd (DegreeDiameter.doubleRepeatPairs G).card
+'DegreeDiameter.n62_four_cycle_flags_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_four_cycle_flag_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_repeat_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_nonedge_pair_count_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_repeat_pairs_eq_nonedge_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_double_repeat_pair_count_odd' depends on axioms: [propext, Classical.choice, Quot.sound]

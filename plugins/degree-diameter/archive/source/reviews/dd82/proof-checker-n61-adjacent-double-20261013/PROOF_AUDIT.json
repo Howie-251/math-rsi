@@ -1,0 +1,72 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "No substantive mathematical defect found modulo explicit accepted imports. Parent corrected the sole cosmetic wording issue and reviewer reread it. Full-model specification coverage also checked. Same-family provisional; no adjacent-double or order61 exclusion is established.",
+  "audited_inputs": [
+    "proofs/dd82/n61/ADJACENT_DOUBLE_REPEAT_LOCAL.md",
+    "proofs/dd82/n61/DOUBLE_DEFECT_CYCLE_OBSTRUCTION.md",
+    "proofs/dd82/n61/ADJACENT_DOUBLE_DIRECTION.md",
+    "proofs/dd82/n61/ADJACENT_DOUBLE_FULL_GRAPH_MODEL.md",
+    "proofs/dd82/n61/ADJACENT_DOUBLE_PORT_PROPAGATION.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n61-adjacent-double-20261013/",
+  "thread_id": "/root/n61_adjacent_double_proof_check",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "cycle_shard": {
+    "thread_id": "/root/n61_adjacent_double_proof_check/cycle_lemma_readonly",
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning": "ultra",
+    "scope": "DOUBLE_DEFECT_CYCLE_OBSTRUCTION.md only",
+    "finding": "No substantive issue found; concrete counterexamples verify the need for oddness and constant diagonal."
+  },
+  "generated_on": "2026-10-13",
+  "details": {
+    "claimed_results_audited": 7,
+    "obligations_checked": 27,
+    "final_coverage_delta": "FULL_GRAPH_MODEL.md lines86-122: revised binary port thresholds, seven selected cases and1050 within-cell parent lexicographic ordering clauses per case preserve a representative of every actual graph. No source code, generated clauses or solve evidence reviewed.",
+    "same_mechanism_delta": "Stable PORT_PROPAGATION.md read completely in reused context. Exact S/T color counts, K/P overlap only at(q,p), eight-point closed-component exclusion of shared-parent Z edges, and5-epsilon repeated-color count all checked. No old proof rerun or new computation.",
+    "accepted_imports": [
+      "CONNECTED_TRIPLE_EXCLUSION.md: actual B has connected positive support, nonnegative entries in {0,1,2}, zero diagonal and row sum four."
+    ],
+    "mathematical_status": "sound-modulo-imports",
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "issues": [
+      {
+        "id": "MINOR-1",
+        "severity": "MINOR",
+        "status": "UNCLEAR",
+        "impact": "COSMETIC",
+        "category": "notation",
+        "location": "proofs/dd82/n61/ADJACENT_DOUBLE_REPEAT_LOCAL.md:191",
+        "note": "The two five-point sets N_Z(p), N_Z(q) are transversals; an individual Z neighbor does not form a transversal.",
+        "minimal_fix": "Each of the sets N_Z(p) and N_Z(q) is a transversal of the five U classes and also of the five V classes.",
+        "resolution": "Closed: parent applied the wording correction and reviewer reread local lines188-197.",
+        "manuscript_edited_by_reviewer": false
+      },
+      {
+        "id": "MINOR-2",
+        "severity": "MINOR",
+        "status": "UNCLEAR",
+        "impact": "COSMETIC",
+        "category": "notation",
+        "location": "proofs/dd82/n61/ADJACENT_DOUBLE_PORT_PROPAGATION.md:8",
+        "note": "Opening terminology called both K and P matchings although K has a degree-two row and column.",
+        "resolution": "Closed: author changed the wording to adjacency interface K and defect matching P; reviewer reread it. No mathematics changed.",
+        "manuscript_edited_by_reviewer": false
+      }
+    ],
+    "scope_limits": [
+      "Necessary template, not a sufficiency theorem or executed graph classification.",
+      "No new CNF implementation or solver output was reviewed.",
+      "No external or Lean acceptance is claimed."
+    ],
+    "adaptation": "V3 mathematical review: no rendering, paper scoring, hashes, experiments, external calls, old solver reruns or Lean; writes restricted to this review directory."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "prepared_before_execution": true,
+  "date_UTC": "2026-11-01",
+  "role": "same-family independent literal-terminal-graph acceptance",
+  "old_source": "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/graph_d20_D3_n3840.edges",
+  "inherited_source_independent_PASS": "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+  "inherited_evidence_scope": "Select only the existing all-3840-root PASS, n/m, diameter and graph identity; do not rerun source-root distances",
+  "old_source_expected": {
+    "n": 3840,
+    "m": 38400,
+    "regular_degree": 20,
+    "diameter": 3
+  },
+  "terminals": [
+    {
+      "file": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d21_D3_n3984.edges",
+      "n": 3984,
+      "m": 41280,
+      "maximum_degree": 21,
+      "new_roots": 144,
+      "new_labels": [
+        3840,
+        3983
+      ]
+    },
+    {
+      "file": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d22_D3_n4192.edges",
+      "n": 4192,
+      "m": 45440,
+      "maximum_degree": 22,
+      "new_roots": 352,
+      "new_labels": [
+        3840,
+        4191
+      ]
+    }
+  ],
+  "prediction": "Both literal terminal graphs retain all 38400 source edges, satisfy their degree bounds, and all newly labeled roots reach every terminal vertex within three edges. This is not acceptance before execution.",
+  "checks": [
+    "actual header and every edge row",
+    "valid labels",
+    "no loops",
+    "no repeated unordered edges",
+    "symmetric reconstructed adjacency",
+    "degree histogram",
+    "every literal old edge retained",
+    "independent three-layer BFS for every new root in its full terminal graph"
+  ],
+  "all_pairs_proof": "Old-old paths of length at most three survive because every old edge is retained; every pair with a new endpoint is covered by exhaustive terminal new-root BFS and undirected symmetry",
+  "checker_logic_origin": "Reused independent literal-edge and new-root BFS implementation; no producer code or cached ball is used",
+  "worker_count": 1,
+  "CPU_budget_seconds": 30,
+  "clean_stop_alarm_CPU_seconds": 29,
+  "old_source_roots_rerun": 0,
+  "production_recipe_or_cache_used": false,
+  "hashes_checksums_installations": false,
+  "terminal_graphs_in_scope": 2,
+  "prefix_scope": "496 new roots across two final graphs are not 496 independently accepted prefixes or new records",
+  "local_comparison": "If accepted, these become the strongest local orders 3984/4192 at degrees 21/22; earlier 3900/4125 instances remain valid",
+  "public_global_comparison": "pending",
+  "novelty": "pending",
+  "Lean_formalization": "incomplete",
+  "global_record_claim": false,
+  "stop_rule": "Stop after these two terminal acceptance results; do not search or rerun previously accepted graphs"
+}

@@ -1,0 +1,8 @@
+def DegreeDiameter.Portfolio.OvoidProduct26.center : CloneIndex → Source.Vertex :=
+OvoidSpreadCloneCapacity.center OppositeGQ44Spread.oldEquiv ovoid OppositeGQ44Spread.spread
+def DegreeDiameter.Portfolio.OvoidProduct26.graph : SimpleGraph Vertex :=
+FullNeighborhoodClones.graph OppositeGQ44Spread.graph center
+def DegreeDiameter.Portfolio.OvoidProduct26.label : Vertex ≃ Fin 7531 :=
+(OppositeGQ44Spread.label.sumCongr cloneLabel).trans finSumFinEquiv
+def DegreeDiameter.Portfolio.OvoidProduct26.FinalClaim : Prop :=
+Fintype.card Vertex = 7531 ∧ (∀ (v : Vertex), graph.degree v ≤ 26) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

@@ -1,0 +1,80 @@
+{
+  "status": "PRODUCTION_PASS_ONE_COMPLETE_DEGREE82_GRAPH_PENDING_FRESH_ACCEPTANCE",
+  "producer_result": {
+    "status": "PRODUCED_ONE_COMPLETE_GRAPH_AND_FULL_N81_INTERFACE_PENDING_FRESH_ACCEPTANCE",
+    "n": 346515,
+    "m": 14204970,
+    "source_n": 342290,
+    "source_m": 13862745,
+    "source_parse_count": 1,
+    "centers": 4225,
+    "N_size": 81,
+    "expected_actual_ordered_rows": 342225,
+    "all_expected_actual_N_rows_equal": true,
+    "pin_union": 342225,
+    "old_load0": 65,
+    "old_load1": 342225,
+    "degree81": 4290,
+    "degree82": 342225,
+    "retained_source_edges": 13862745,
+    "new_old_edges": 342225,
+    "new_new_edges": 0,
+    "center_matching_edges": 2080,
+    "center_induced_isolates": 65,
+    "header": true,
+    "strictlex_body": true,
+    "prefix_rows": 4226,
+    "predicted_diag_roots": 65,
+    "predicted_offdiag_roots": 4160,
+    "BFS_runs": 0,
+    "Lean_runs": 0,
+    "old_field_geometry_projection_checks": 0,
+    "accepted_graphs": 0,
+    "producer_CPU_seconds": 0.785961
+  },
+  "receipts": [
+    {
+      "stage": "compile",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "produce.cpp",
+        "-o",
+        "produce"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 1.353369,
+      "wall_seconds": 1.3694089278578758
+    },
+    {
+      "stage": "produce",
+      "command": [
+        "./produce",
+        "../balanced/graph_d81_D3_n342290.edges",
+        "28.143996548"
+      ],
+      "exit_code": 0,
+      "CPU_seconds": 0.788591,
+      "wall_seconds": 1.1171849854290485
+    }
+  ],
+  "wrapper_CPU_seconds": 0.004300050999999999,
+  "accounted_CPU_seconds": 2.146262777,
+  "CPU_budget_seconds": 30,
+  "wall_seconds": 2.4892746061086655,
+  "single_worker": true,
+  "source_parse_count": 1,
+  "new_accepted_graphs": 0,
+  "new_concrete_Lean": 0,
+  "BFS_runs": 0,
+  "old_field_geometry_projection_rechecks": 0,
+  "source80_used": false,
+  "graph83plus_generated": false,
+  "root_counts_modified": false,
+  "parent_source_or_Lean_modules_modified": false,
+  "sourcefill_priority": "UNKNOWN",
+  "global_record_claim": false,
+  "running": false,
+  "active_processes": []
+}

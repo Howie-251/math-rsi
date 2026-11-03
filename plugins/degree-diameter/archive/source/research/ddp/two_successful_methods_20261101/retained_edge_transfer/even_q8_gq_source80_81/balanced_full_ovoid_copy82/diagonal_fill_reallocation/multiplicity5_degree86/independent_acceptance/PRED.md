@@ -1,0 +1,1 @@
+先于独验执行：degree86唯一candidate使用actual G1/346516；r4新role blocks、total k5，最后block copy3测65actual diag+first2actual off+hub共68根。预测diag(1,80,5254,358085)、off(1,81,5333,358005)、hub(1,65,5269,358085)。全部16904 newrole邻域和保parent全边都将实际绑定，16836根不BFS，靠old-parent内点证明。与98共一套60CPU/单worker预算，parent只流读一次；完整scope见[共同PRED](../../multiplicity5_17_independent_acceptance/PRED.md)。未读producer邻域逻辑。

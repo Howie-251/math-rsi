@@ -1,0 +1,42 @@
+{
+  "status": "FROZEN_BEFORE_NEAR_NEIGHBOR_PROXY_COMPUTATION",
+  "timestamp": "2026-10-27T17:49:31.117202+00:00",
+  "prediction": "At leastone fixednear-neighborhood proxyprojection yields a completecachedR4cover and an n+1graph for D14 or D15.",
+  "sources": [
+    {
+      "delta": 14,
+      "source_n": 94186,
+      "source_m": 657452,
+      "source_graph": "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/source94186.edges",
+      "free_ports": 3685,
+      "words_per_ball": 1472,
+      "R4_cache": "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/allfree_R4.u64le.bin",
+      "cache_metadata": "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/BALLS_META.json"
+    },
+    {
+      "delta": 15,
+      "source_n": 100132,
+      "source_m": 749732,
+      "source_graph": "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/source100132.edges",
+      "free_ports": 2498,
+      "words_per_ball": 1565,
+      "R4_cache": "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/allfree_cover_probe/allfree_R4.u64le.bin",
+      "cache_metadata": "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/allfree_cover_probe/BALLS_META.json"
+    }
+  ],
+  "rule": {
+    "full_vertex_u": "degree exactlyDelta",
+    "proxy_w": "actualdegree<Delta; |N(u)minusN(w)|<=3 and|N(w)minusN(u)|<=1",
+    "tie": "Maximum commonneighbors, thenminimumdegree(w), thenminimumlabel(w), oneproxy perfullu",
+    "prototype_order": "Alloldvertices ascendinglabel; replaceeachfullneighbor byitsfixedproxy, keepallfreeneighbors, rejectifanyfullneighbor lacksproxy, dedup literalpinsets",
+    "success": "AtmostDelta distinctfreepins whose completecachedR4 union is alloldvertices. Firsthit stopforeachsource; exactdegree andexpandededges exported."
+  },
+  "implementation": "Commonneighbor counts via wedges fromeachfreew; no n^2matrix, BFS, newballs, solver/greedy, field/proxythreshold/tie grid or knownD13rerun.",
+  "budget": {
+    "workers": 1,
+    "CPU_per_source_max": 5,
+    "total_CPU_includingcompile_max": 12
+  },
+  "no_new_download": true,
+  "no_hashes": true
+}

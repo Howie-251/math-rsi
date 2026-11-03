@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DD研究：H9整体覆盖与非克隆捷径</title><style>body{max-width:1050px;margin:36px auto;padding:0 22px;font:17px/1.75 system-ui;color:#182839}h1{font-size:29px}h2{font-size:23px;margin-top:30px}.note{background:#edf4fb;padding:15px;border-left:4px solid #37699c}table{border-collapse:collapse;width:100%;font-size:15px}th,td{border:1px solid #cbd6df;padding:10px;text-align:left;vertical-align:top}a{color:#155bb2}.scroll{overflow:auto}code{background:#f1f4f7}small{color:#526373}</style></head><body>
+<h1>当前任务：恢复H9非克隆新增点的整体覆盖规则</h1>
+<p>更新：2026-10-27 10:11:53 UTC。原Goal ACTIVE；范围4≤Δ≤12、D∈{3,4,5}。<strong>已验证新下界仍为0。</strong>当前选择(12,5)，保存的公开门槛42342点（2026-10-26）；正式纪录前需刷新。已有42342点图是研究对照，不是本项目新构造。</p>
+<div class="note">已落实“不深陷每次只改善几百点对”的指导：1152单/双边局部修补收束，未启动的2520枚举取消；固定核心的克隆数量路线也已由整类上界结束。保留预测和反例，转向能同时保证所有类型点对的生成规则。没有局部坏对优化或横向模板大筛。</div>
+<h2>原先不知道什么，为什么选这组对照</h2>
+<p>旧41699与当前42342图共享同编号的41356点部分折叠核心K，234318条边完全相同。K的直径≤5来自已有H9几何定理。因此可直接比较新增点的作用，而不用重做旧几何复现。完整旧41699图尚未证明嵌在当前图内，附加区编号不能直接继承。</p>
+<p>核心问题：多出的点是否只是更多克隆？若不是，它们怎样提供额外路线，又怎样保证新点之间也在五步内？</p>
+<h2>整类上界实际改变了选题</h2>
+<p><strong>保留K时，任何普通克隆扩展最多增加343点，总阶≤41699。</strong>287个分割度预算行给出上界，旧280 copies+63 twins达到它。即使每个新点增加锚点或相互连接，只要其K邻域包含某个完整N<sub>K</sub>(v)，此类点总数仍≤343。未使用优化器，也没有把少量样本失败冒充整类排除。</p>
+<p>当前986个新增点的宽包含分类实测：176点含完整核心星，810点不含。要由同K超过42342，至少需要644个不含完整星的新点。因此继续增加克隆数无法突破；下一连接规则必须处理大规模非克隆覆盖。这个结论不适用于删改K，也没有排除所有pencil机制。</p>
+<h2>先预测，再检验：覆盖为何依赖加入顺序</h2>
+<div class="scroll"><table><tr><th>具体预测</th><th>实际检验</th><th>因此改变什么</th></tr>
+<tr><td>P1：最后165点相对42177前缀，可忽略互助、独立整批安全加入。</td><td>推翻。7个旧邻集不满足完整R4覆盖，1对旧邻集的距离条件失败。这些是充分证书失败数，不是最终图坏对数。</td><td>不把新点作用理解成互不影响的附件，也不调pins逐洞修复。</td></tr>
+<tr><td>P2/P3：按原标签逐点加入，每一步都能保住完整五步覆盖。</td><td>最后165步与从共同K起全部986步均通过：实际更早邻集的R4覆盖整个更早诱导图。</td><td>得到已有42342图完整D≤5归纳证书，涵盖所有新—旧、新—新点对；先前新增点可为后续提供捷径。</td></tr>
+<tr><td>P4：只保留helper42177，不改变subject42326的12pins，就能恢复其完整覆盖。</td><td>支持。42178点base中R4全覆盖，helper并不直接邻subject。</td><td>helper的作用是缩短旧图内部距离；普通独立克隆做不到这一点。</td></tr>
+<tr><td>P5：42293/42329都独立安全，但仅同时加入会相距6，完整图借其它helper变5。</td><td>部分推翻：两者静态缺项为0与1，不能称二者都独立安全；距离6→5及helper42291路线确实成立。</td><td>保留实际捷径，撤回错误的独立安全部分。</td></tr>
+<tr><td>P6：固定这两个helpers，能让剩余163点组成完整安全的一批。</td><td>推翻。全部新点对的pinset距离条件通过，但仍有6个点不满足完整R4。只新测原7个失败行，其余证书直接复用。</td><td><strong>停止两helper通用层猜测；不加第三helper，不围绕剩余遗漏继续修补。</strong></td></tr></table></div>
+<p>两条实际五步路：</p>
+<p><code>42326—37638—42177—25879—10162—41838</code><br><code>42293—36398—42291—14650—9751—42329</code></p>
+<p>普通独立克隆经过的旧—旧路径可用旧原型替代，不会缩短旧距离；这两个helpers则提供了真正的旧核心捷径。这是下一规则需要保留的作用，不代表两个helper已能解释全部成功。</p>
+<h2>现在继续什么，哪些已经停止</h2>
+<p>继续同一个问题：810个不含完整核心星的点，能否由几何line-image及少量锚点的统一规则产生；点到线的既有五步几何覆盖怎样补足所有新类之间的路线。代理分别研究邻域识别、几何新—新覆盖条件、预测与反例，root整合实际规则与检验。尚未恢复可泛化的810点生成公式，这是当前实质缺口。</p>
+<p>完整星数量搜索、旧S/c与MIP范围、1152局部修补、两helper续补均不再派发。仍开放的其他机制没有被登记为整族无望；本阶段不自动恢复它们。旧D2/n61/SAT/谱继续暂停。</p>
+<h2>证据与验收状态</h2>
+<p>本轮新图0、坏对优化0、LP/MIP0，未重复旧图全源BFS。已有图的完整有序覆盖证书、预测验证、局部/整类论证、新纪录和Lean分别记账。最新Gemini回执仍只覆盖先前限定范围，未冒称本轮已获Gemini或Lean接受。</p>
+<p><a href="ddp/global_coverage_20261027/REPORT.md">当前完整研究报告</a> · <a href="ddp/global_coverage_20261027/h9_bare_core_clones/REPORT.md">343整类上界</a> · <a href="ddp/global_coverage_20261027/h9_relation/REPORT.md">核心与810分类</a> · <a href="ddp/global_coverage_20261027/tail165_mechanism/P6_RESULT.json">P6实际结果</a></p>
+<p><a href="../research-wiki/experiments/ddp-h9-global-coverage-20261027.md">当前Wiki实验节点</a> · <a href="../research-wiki/DDP_METHOD_LEDGER.md">唯一方法账本（160条记录，非独立方法数）</a> · <a href="../context/DD_PORTFOLIO_START_20261026/RESEARCH_GOAL.md">原Goal修订</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p>
+<p><a href="progress_ddp_20261027_0916.html">已收束的上一轮对照页</a> · <a href="../expert_review_current/EXPERT_REVIEW.html">07:58专家快照（保持原截点）</a></p>
+</body></html>

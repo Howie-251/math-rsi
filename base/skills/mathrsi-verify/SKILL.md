@@ -21,6 +21,7 @@ flowchart TD
     B -->|分散的完整候选| C[assemble调用proof-writer形成正文]
     B -->|已有完整正文| D[读取原证明与依赖]
     B -->|局部义务| E[隔离该命题、实际caller与必要依赖]
+    B -->|仅形式目标或Lean出口| K[执行或复用lean-formalize及实际导出审计]
     C -->|连接已齐| D
     C -->|新数学缺口| R[保留有效部分与准确缺口，返回caller]
     D --> F[核原输入连接；执行适用的覆盖与独立精确检查]
@@ -32,7 +33,7 @@ flowchart TD
     H --> J[按checker修复、同步正文、复审与closure]
     J --> I
     F -->|仅确定性局部核验| I
-    I -->|有形式化要求或具体收益| K[执行或复用lean-formalize及实际导出审计]
+    I -->|另有形式化要求或具体收益| K
     K --> L[写VERIFICATION并返回原caller]
     I --> L
     H -->|实质数学缺口| R
@@ -41,6 +42,7 @@ flowchart TD
 
 | 当前收到的材料 | 立即执行什么 | 读什么结果后才能继续 |
 |---|---|---|
+| 只要求形式目标、固定Lean见证或已有Lean出口 | 读原声明、真实定义、工程和导出，直接进§4执行或复用lean-formalize；不先制造TeX或proof-checker审计 | 目标连接、实际export/build/公理及未完成项；依scope返回原caller |
 | 完整现稿及原规格 | 直接读现稿、进口和证据，确认本次原定理；不重复writer | 从任意原输入到结论的论证及此次尚需验证的事实 |
 | 引理、表、证书散落，但声称已足以解题 | 把原题和实际材料交assemble，由它实际调用proof-writer | 完整正文与连接状态；缺新数学就交回缺口，不靠审阅补成已证 |
 | prove交来的一个高风险义务 | 读该命题、上下游caller和相关域，只检查其所需材料 | 精确局部结论、适用条件与剩余；返回原prove继续下游 |
@@ -56,11 +58,15 @@ flowchart TD
 
 恢复时从最后一项具体未核事实进入。已有验证对哪个版本、哪个域、哪些声明有效，按实际材料确认；源声明、输入或算法变了，只重核受影响的义务和下游。上次服务不可用与上次数学失败分开保存。不要重开已完成的旧研究、重复未变的整卷审阅，或因一次交付中断重跑所有算术。
 
-完整候选还散落在多份记录时，调用 assemble，交原题、已证引理、进口和证书，消费其正文和连接状态。它若指出缺实质数学，将缺口返回caller建议交prove；此时可以按原scope验证已有局部结果，但不能发起一个假定全证已齐的最终审计。已有完整稿则继续以下步骤。新稿已确定正式审计时可由assemble直接生成唯一 `PROOF.tex`，免去不必要的双载体；已有Markdown需要保留时才按下文适配。
+**先选本次要验收的成果形式。** 用户只要求形式目标、固定Lean见证或已有Lean出口时，直接进§4，给lean-formalize原命题、实际定义、工程与当前义务；已有证据按版本和范围复用。无需为了进入验证先写TeX、调用proof-writer或运行proof-checker。若还要求自然语言证明的正式审计，按§2–3执行该部分，并将Lean证据交回相应audit；形式结果不替代尚未审计的正文。两者由本verify消费后一起返回，局部调用仍回原prove。具体输入与准确返回见[固定Lean出口例](references/lean-target-entry.md)。
+
+自然语言完整候选还散落在多份记录时，调用 assemble，交原题、已证引理、进口和证书，消费其正文和连接状态。它若指出缺实质数学，将缺口返回caller建议交prove；此时可以按原scope验证已有局部结果，但不能发起一个假定全证已齐的最终审计。已有完整稿则继续以下步骤。新稿已确定正式审计时可由assemble直接生成唯一 `PROOF.tex`，免去不必要的双载体；已有Markdown需要保留时才按下文适配。
 
 ## 1. 先处理本次真正未决的证据问题
 
 沿原输入到结论检查关键接口，选择能解决实际疑问的检查。纯解析证明不需要制造算术表；计算机辅助证明不能省去数据含义和覆盖。至少分清下面三种对象，避免一个程序 PASS 被重复解释成三个结论。
+
+先按已启用插件选择领域检查。Property B读取[propertyb-certificate](../../../plugins/propertyb/skills/propertyb-certificate/SKILL.md)，给原超图、完整域及实际证书，收回覆盖、准确算术和原染色连接。Degree–diameter读取[mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)对齐图目标，再实际执行[dd-obstruction-certificate](../../../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)的相关部分：排除义务给允许操作、必要性与有限域；正构造给实际图/标签/正文、度数与全点对覆盖证据、保留或删除的边及旧源结果，按§4–5核字面属性、覆盖、证据继承和固定Lean出口。收回准确命题、实际输入/检查范围、与原图的连接及剩余；verify亲自把它代入当前义务。仅形式目标仍直接本verify§4，按需在该范围消费领域输入，不先绕一遍自然语言审计。领域核验不另启动完整verify/proof-checker，局部结果回原prove；未启用插件时用本任务实际检查器，不强制加载上述领域。
 
 先沿着实际证明读一遍：在每个非平凡调用处，找到它使用的精确命题，并确认当前对象给出了全部前提。若只是推导对象和符号未说清，可将这段原式、允许条件和下游用途交 [formula-derivation Codex](../skills-codex/formula-derivation/SKILL.md)／[Claude主线](../formula-derivation/SKILL.md)，读取其稳定定义与逐步推导后再核原调用；它新提出的条件仍需供给。若已有正确证明但正文漏了一步，用 [proof-writer Codex](../skills-codex/proof-writer/SKILL.md)／[Claude主线](../proof-writer/SKILL.md)补写那段，指定更新现用正文，不新造平行完整稿。若其实缺一个新定理，返回prove，不能在验证记录中把“待推导”改成已证。
 
@@ -78,11 +84,11 @@ flowchart TD
 
 ## 2. 区分局部对抗审阅与完整证明审计
 
-先选本次缺口需要的路径。仅核一个算术值或固定证书，执行§1的确定性检查即可；它未覆盖的分类完整性、原对象连接仍需数学论证，不能一并写成程序已验。推进中的局部归约疑问可做下述有界research-review或所需局部Lean，结果回原义务。完整候选或已自足局部定理要正式审计时，直接进§3的proof-checker，通常不先对同稿再跑一次research-review。已有核验复用；只有新增的具体疑问或用户明确要求才另加相应检查，不把两种审阅机械叠加，也不禁止必要时对不同义务采用不同证据。
+先选本次缺口需要的路径。仅核一个算术值或固定证书，执行§1的确定性检查即可；它未覆盖的分类完整性、原对象连接仍需数学论证，不能一并写成程序已验。推进中的局部归约疑问可做下述有界research-review或所需局部Lean，结果回原义务。完整自然语言候选或已自足局部定理要做正式证明审计时，直接进§3的proof-checker，通常不先对同稿再跑一次research-review。已有核验复用；只有新增的具体疑问或用户明确要求才另加相应检查，不把两种审阅机械叠加，也不禁止必要时对不同义务采用不同证据。
 
 一个新归约、代码与公式接口、候选反例或局部共同约束，可以复用 [research-review Codex](../skills-codex/research-review/SKILL.md)／[Claude 主线](../research-review/SKILL.md)的取证、reviewer路由和trace机制执行一个数学审阅slot。输入是原始局部证明、定义、实际 caller、代码与具体疑问。先读相应技能和backend/trace合同，实际调用选定reviewer并保存原始回应、读取/执行范围；这个slot由当前verify持有范围和返回点，不启动原版论文评分/共识循环，也不声称已跑完整research-review。修真实问题，必要时仅复核新增证据；本地短义务可用独立agent，相应同家族范围如实provisional，用户指定外部reviewer的要求不被替换。
 
-这一slot要形成可消费的回答，例如“归约R有没有漏掉非满支撑输入，若没有，哪一步已经覆盖它”。收到意见先核原文：真实漏洞交给对应推导/实现修；模型误读则记录引用和理由，保留原回应。修后回查该疑问及受影响调用；其结论只解决这个slot。完整候选仍进入下面的checker流程，不能用一封“总体认可”替代全证审计。
+这一slot要形成可消费的回答，例如“归约R有没有漏掉非满支撑输入，若没有，哪一步已经覆盖它”。收到意见先核原文：真实漏洞交给对应推导/实现修；模型误读则记录引用和理由，保留原回应。修后回查该疑问及受影响调用；其结论只解决这个slot。需要自然语言正式审计的完整候选仍进入下面的checker流程，不能用一封“总体认可”替代全证审计。只验形式目标时走§4，不因候选完整而增加paper-audit。
 
 这里实际保留research-review的**原件审阅、必要的同会话证据澄清/反驳、结论与原证据对照、具体未证项及补证建议回交**。例如reviewer认为漏了边界，先给原段落和实际边界推导让它回查；若仍有争议，把原意见、回应与尚未解决的推论一起交回verify，由当前执行者判断下一步。数学适配到此返回，不沿原Step3/4的“直到双方同意”、论文实验计划或叙事改写继续；不由research-review另派证明或计算修法。`— composed:`若使用，只约定累计报告由谁写，不自动改变这些执行边界。真正修推导/代码由当前verify在范围内执行，需新数学则回prove；后续核新增证据时仍保留真实对话和原始负面意见，不只记transport成功。
 
@@ -124,17 +130,19 @@ checker 未过其轮次上限时，消费它的 unrecoverable report：具体阻
 
 ## 4. 需要时接 Lean，完成它真正负责的义务
 
-用户要求 Lean、继续现有形式工程，或具体关键连接值得形式检查时，读 [lean-formalize Codex](../skills-codex/lean-formalize/SKILL.md)／[Claude 主线](../lean-formalize/SKILL.md)并执行。提供原命题、实际定义、固定工程、关键 proof route、当前待证接口与已有证据。它可以在证明推进中早已运行；本阶段复用当前有效结果，不要求把 Lean 永远拖到全文完成之后。
+本节可以直接从形式目标入口进入；不以§3或TeX正文已完成为前提。用户要求 Lean、继续现有形式工程，或具体关键连接值得形式检查时，读 [lean-formalize Codex](../skills-codex/lean-formalize/SKILL.md)／[Claude 主线](../lean-formalize/SKILL.md)并执行。提供原命题、实际定义、固定工程、关键 proof route、当前待证接口与已有证据。它可以在证明推进中早已运行；本阶段复用当前有效结果，不要求把 Lean 永远拖到全文完成之后。
+
+直接进入时，先把用户原声明与实际导出类型、展开定义对齐，识别结论是否仍带未供给的证书或额外假设。随后按lean-formalize完成所需证明/构建/审计，或读取当前有效的已有结果；数学缺口返回原caller建议prove，库/API问题在形式化内部处理。收回结果后写§5的VERIFICATION并返回原caller；仅形式目标不制造canonical PROOF_AUDIT，也不自行转handoff。
 
 若从 checker 内部调用 Lean，返回其 checked scope、exported declaration、语义对齐、build 与传递公理证据给原 audit；不由 Lean 再调用 checker。若是 verify 直接组织两项工作，也保持各自产物与 scope，不新造相互递归的验证栈。
 
 Lean 完成需从任意原输入装配出主命题的证明项，实际构建目标模块，展开类型和定义，检查传递公理；multi-module 另作实际入口的独立 import，短单文件按原技能不额外新建工程。`Certificate x → Target x`需要构造所需证书，定义 `Target : Prop`不是证明它。A/B/C 依它的语义对齐、关键论证和最终 export 流程；未变化的证据复用，明确指定的 reviewer 缺失保持 pending。
 
-保存实际命令/退出码/输出，区分增量构建、干净重建和他人独立复现。信任基础按任务允许值说明，不把某个旧项目的 native_decide 禁令变成所有数学通用要求。形式 theorem 已核与某项交付/跨模型复核尚缺可以同时成立，不能因服务失败撤销已经成立的形式结果。
+保存实际命令/退出码/输出，区分本次执行、静态消费历史构建、增量构建、干净重建和他人独立复现。静态读取源码与已有日志不能写成本次运行成功；缺少的目标构建或公理证据保持待核。信任基础按任务允许值说明，不把某个旧项目的 native_decide 禁令变成所有数学通用要求。形式 theorem 已核与某项交付/跨模型复核尚缺可以同时成立，不能因服务失败撤销已经成立的形式结果。
 
 ## 5. 写出能驱动下一步的 VERIFICATION.md
 
-复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
+复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项（本次无自然语言正式审计时明确未调用）；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
 
 完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能只引用该记录；不会为了进入交付自行造一个 verified claim。
 

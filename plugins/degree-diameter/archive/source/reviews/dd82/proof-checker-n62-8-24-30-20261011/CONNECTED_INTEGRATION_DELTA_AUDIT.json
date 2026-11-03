@@ -1,0 +1,234 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_integration_obligations_complete",
+  "summary": "The combined connected-repeat reduction and its triangle, double-repeat and four-cycle consequences correctly compose the stated local and computational imports. Fifteen integration obligations are discharged; no source edit or fresh exact-checker execution was needed. Order-62 existence and N(8,2) remain open.",
+  "review_scope": "integration_delta",
+  "audited_input_files": [
+    "proofs/dd82/n62/CONNECTED_REPEAT_REDUCTION.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n62-8-24-30-20261011/",
+  "thread_id": "/root/proof_review_n62_8_24_30",
+  "thread_id_kind": "canonical_reviewer_task_path",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_family": "openai",
+  "reviewer_model_metadata_basis": "Parent-reported explicit original spawn invocation; actual backend identity not independently attested",
+  "reviewer_context": "Continuation integration delta; reviewer did not author target; not a newly isolated context",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T12:00:47+00:00",
+  "details": {
+    "rounds": 1,
+    "source_changed": false,
+    "issues": [],
+    "issue_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "proof_obligations": [
+      {
+        "id": "I01",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Actual graph → actual quotient** (5–7,22–33). The support components partition all 62 vertices; B is the actual matrix, not an assigned relaxation. Its row-sum-three component indicators span the eigenvalue-three space. Commutation makes the partition equitable for A, supplying a nonnegative integer R with row sum eight, edge balance, and R²+R=10I+1nᵀ. The imported exact trace identity applies to these same components."
+      },
+      {
+        "id": "I02",
+        "status": "discharged_with_stated_imports",
+        "verification": "**A D1 pair exists before it is selected** (23–28). Under general B≤2, let d count unordered double pairs and T original triangles. The four-cycle parity gives d−T odd; triangle pairing makes T even, hence d is positive odd. If every double were D0, the closed four-vertex D0 components would partition the doubles into groups of exactly two, making d even. Thus the selected D1 pair exists; this does not follow from odd parity alone without D0 closure."
+      },
+      {
+        "id": "I03",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Minimum nonempty component order four** (36–39,54). A support component has even order because its total row weight 3n is twice its unordered edge weight. It cannot have order two under B≤2: zero diagonal would require its sole off-diagonal entry to equal three. Hence every component has even size at least four. This correctly retains the general triple-repeat exclusion."
+      },
+      {
+        "id": "I04",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Associated components coincide** (27–35). If H=K, D1 actual incidences give rHH≥4. All quotient diagonal entries are nonnegative, so tr(R)≥4, and c=17−2tr(R)≤9. The proof does not count H twice or assume a second large component in this branch."
+      },
+      {
+        "id": "I05",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Associated components differ** (36–41). The imported chain gives |H|,|K|≥14. All remaining c−2 components have order at least four, so 62≥28+4(c−2)=4c+20. Integer c≤10 follows; c+2tr(R)=17 makes c odd, hence c≤9. No disjointness beyond H≠K is needed, since distinct support components are disjoint."
+      },
+      {
+        "id": "I06",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Exactly the remaining component counts** (41–44). The positive integer c is odd and at most nine, so it is initially in {1,3,5,7,9}. `THREE_COMPONENT_EXCLUSION.md` applies to the same actual graph and excludes c=3. Its widened minimum-2 classification is stronger than needed under B≤2, so there is no domain gap. The remaining set is exactly {1,5,7,9}."
+      },
+      {
+        "id": "I07",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Large-classification domain covers every actual quotient** (52–59). Actual component orders are positive even integers ≥4 summing to 62; R has nonnegative integer entries, row sums eight, weighted edge balance, and r_ii≤n_i−1. Its trace is (17−c)/2 and it satisfies the full displayed quadratic identity. Sorting sizes and simultaneously relabelling rows and columns preserves these properties and graph meaning. Every needed condition of the imported search is discharged."
+      },
+      {
+        "id": "I08",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Computation output has the stated scope** (61–104). The separately completed exact checker uses precisely c∈{5,7,9} and the domain in I07. Its saved results have 221/201/94 complete partitions, 2/6/0 labelled survivors, 1/1/0 canonical quotients, and all 3358 original row domains reproduced. These are complete finite integer classifications, not timeouts, feasibility estimates, or claims of graph realizability. No D1 annotation or additional size filter is used to discard actual quotients."
+      },
+      {
+        "id": "I09",
+        "status": "discharged_with_stated_imports",
+        "verification": "**The two survivor objects match the graph exclusions** (106–148). The imported c=5 and c=7 canonical size vectors and matrix entries agree with those displayed in the target and in `FIVE_SEVEN_COMPONENT_QUOTIENT_EXCLUSIONS.md`. Each has a size-four component with r_ii=1 and no size-six component. Relabelling equal-size cells does not change these properties. The local lemma therefore excludes every representative in either labelled orbit."
+      },
+      {
+        "id": "I10",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Connectedness follows exhaustively** (146–150). I09 excludes c=5,7; the complete empty classification excludes c=9; I06 has already excluded c=3 and all larger/even counts. Only c=1 remains. The graph has 62 vertices and positive repeat row sum, so c is not zero."
+      },
+      {
+        "id": "I11",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Connected support → triangle-free and no D0** (154–160). An original triangle would produce a closed support component of order six; a D0 double would produce one of order four. Since the unique support component has all 62 vertices, neither exists. Every double is consequently D1 by the imported complete double-root classification. The argument does not confuse connectedness of B with connectedness of G."
+      },
+      {
+        "id": "I12",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Port-bound hypotheses and substitution** (162–169). The global bound 15d+9T+2d1≤186 uses disjoint sets of 2d heavy endpoints, 3d generated-triangle vertices, and 3T original-triangle vertices, together with light mates outside their union. The no-unit-triangle light-mate result is supplied by the cited C4 refinement. Distinct light mates for different heavy endpoints are not assumed: total receiving capacity is three per vertex. Here T=0 and d1=d, yielding 17d≤186. Since 17·11=187, d≤10; positive odd parity gives precisely {1,3,5,7,9}."
+      },
+      {
+        "id": "I13",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Unit-pair count uses unordered weight** (171–172). Summing all 62 rows gives total ordered weight 186 and unordered weight 93. Under B≤2 the latter is u+2d, where u is the number of unordered unit-repeat pairs. Therefore u=93−2d, not 186−2d or 93−d."
+      },
+      {
+        "id": "I14",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Four-cycle factor and zero-repeat pairs** (173–179). Triangle-free G gives B=0 on original edges, each of which has zero common neighbors. A nonedge has common-neighbor count 1+B, so zero-, unit-, and double-repeat nonedges contribute respectively 0,1,3 to choose(c(u,v),2). Every original four-cycle has exactly two opposite unordered vertex pairs in this count. Thus 2C4=u+3d=93+d, yielding C4=(93+d)/2∈{47,48,49,50,51}."
+      },
+      {
+        "id": "I15",
+        "status": "discharged_with_stated_imports",
+        "verification": "**Generated triangles and honest final scope** (181–192). Each double produces its actual common-neighbor unit B triangle, and the imported disjointness result makes these d triples pairwise disjoint. The target explicitly does not assert that all unit B triangles are generated. It presents the connectedness and counting conclusions as necessary conditions and preserves the open order-62 and N(8,2) goals, with exact computation distinguished from Lean certification."
+      }
+    ],
+    "obligations_discharged": 15,
+    "open_obligations": [],
+    "counterexample_pass": [
+      {
+        "id": "CE01",
+        "attempt": "H=K counted as two components.",
+        "analysis": "The branches are separate: only H≠K uses the 28-vertex lower bound; H=K uses the trace. No unjustified double counting occurs.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE02",
+        "attempt": "A small residual size-two component.",
+        "analysis": "This would require a weight-three edge. General B≤2 is explicitly retained before the n_i≥4 search domain is used; the stronger dependency was not mistakenly removed with the separate c=3 simplification.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE03",
+        "attempt": "No D1 root despite odd doubles.",
+        "analysis": "Complete D0 components contain exactly two doubles, so an all-D0 graph contradicts odd d. The selection of H,K is therefore legitimate.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE04",
+        "attempt": "An unsearched c=11 or larger.",
+        "analysis": "Both H=K and H≠K branches bound every possible actual c by nine after parity; no larger odd count escapes the classification split.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE05",
+        "attempt": "A missing labelled survivor or unrealizable quotient used as a graph.",
+        "analysis": "The graph-to-integer map is only a necessary-condition map. The imported computation is complete on that domain, and the uniform companion lemma is invariant under component relabelling. No survivor is assumed realizable.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE06",
+        "attempt": "Shared light mates reduce the port count.",
+        "analysis": "The count is of unit incidences from 2d heavy endpoints; a shared receiver contributes at most its total row weight three. Injectivity is unnecessary, so sharing does not invalidate 17d≤186.",
+        "result": "no_interface_counterexample"
+      },
+      {
+        "id": "CE07",
+        "attempt": "A factor-of-two error in final cycle counts.",
+        "analysis": "Ordered row weight 186 first becomes unordered edge weight 93. The independent four-cycle identity then divides the opposite-pair contribution by two. These are distinct, correctly applied factors. At d=1, the exact substitution is u=91 and u+3d=94, hence C4=47. At d=9 it gives u=75, u+27=102, hence C4=51.",
+        "result": "no_interface_counterexample"
+      }
+    ],
+    "counterexamples_found": 0,
+    "fixes": [],
+    "retained_imports": [
+      "Actual graph identities, equitable quotient and component trace identity",
+      "General triple-repeat exclusion B<=2, retaining its separate finite-check dependency",
+      "Triangle pairing, D2/BIN exclusions, complete D0/D1 classification and closed D0 components containing two doubles",
+      "Full minimum-size chain giving both associated D1 components H,K at least 14 vertices, with H=K permitted",
+      "THREE_COMPONENT_EXCLUSION.md with complete positive-even minimum-2 quotient classification and three local exclusions",
+      "Complete exact c=5,7,9 integer quotient classifications on even sizes at least 4",
+      "Four-point companion lemma and the two specified five/seven-component applications",
+      "Generated-triangle disjointness and D1 light-mate no-unit-triangle theorem for the global port bound"
+    ],
+    "import_interfaces_read": [
+      "proofs/dd82/n62/THREE_COMPONENT_EXCLUSION.md",
+      "proofs/dd82/n62/D1_TWELVE_SIXTEEN_PARTNER_EXCLUSION.md",
+      "proofs/dd82/n62/D1_COMPONENT_MINIMUM_SIZES.md",
+      "proofs/dd82/n62/D1_MATCH_C4_TRANSPORT_REFINEMENT.md",
+      "reviews/dd82/proof-checker-n62-large-quotients-20261011/PROOF_AUDIT.json",
+      "computations/dd82/n62/large_component_quotients_check.json"
+    ],
+    "large_classification_receipt_binding": {
+      "scope": "c in {5,7,9}; positive even n_i>=4 with sum 62; nonnegative integer R; row sums 8; balance; diagonal below size; trace (17-c)/2; exact quadratic identity",
+      "saved_status": "VERIFIED_EXHAUSTIVE_INTEGER_QUOTIENT_CHECK",
+      "row_domains_compared": 3358,
+      "partitions_completed": [
+        221,
+        201,
+        94
+      ],
+      "labelled_survivors": [
+        2,
+        6,
+        0
+      ],
+      "canonical_survivors": [
+        1,
+        1,
+        0
+      ],
+      "execution_repeated_in_this_delta": false
+    },
+    "dependency_dag": "acyclic; connectedness is concluded after classifications and never used to justify an upstream search premise",
+    "accepted_consequences": {
+      "repeat_support_components": 1,
+      "original_graph_triangle_free": true,
+      "all_double_pairs_D1": true,
+      "allowed_double_pair_counts": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "unit_unordered_pairs": "93 - 2*d",
+      "original_four_cycles": "(93 + d)/2",
+      "allowed_four_cycle_counts": [
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    "analytic_interchanges": "None; finite exact identities only",
+    "acceptance_gate": "PASS_WITH_STATED_IMPORTS",
+    "scope_exclusions": [
+      "No fresh re-audit of stable source proofs",
+      "No fresh execution or implementation review of exact checkers",
+      "No graph construction",
+      "No arbitrary order-62 exclusion",
+      "No exact N(8,2)",
+      "No Lean or cross-family certification"
+    ],
+    "new_solver_or_enumeration_used": false,
+    "source_edits": [],
+    "output_formats": [
+      "Markdown",
+      "JSON"
+    ]
+  }
+}

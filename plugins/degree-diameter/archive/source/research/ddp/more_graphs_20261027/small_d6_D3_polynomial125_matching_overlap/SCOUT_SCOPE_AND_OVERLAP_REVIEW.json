@@ -1,0 +1,60 @@
+{
+  "status": "VALID_READ_ONLY_SCOPE_AND_OVERLAP_BOUND_CHECK",
+  "completed_at_utc": "2026-10-28T03:00:11.677197+00:00",
+  "read_files": [
+    "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/check_overlap.py",
+    "research/ddp/more_graphs_20261027/small_d6_D3_polynomial125_matching_overlap/RESULT.json",
+    "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/REPORT.md",
+    "research/ddp/breadth_20261027_wave11/polynomial343_matching_scout/RESULT.json",
+    "research/ddp/breadth_20261027_wave7/shortcut650/REPORT.md",
+    "research/ddp/breadth_20261027_wave7/shortcut650/MODEL.md",
+    "research/ddp/breadth_20261027_wave7/shortcut_matching_scout/REPORT.md"
+  ],
+  "dedup_scope": {
+    "sole_ledger_rows_at_read": 353,
+    "prior_same_F5cube_source_plus_matching_run_found": false,
+    "interpretation": "No prior exact formula/q5 construction found in the targeted read; current parent endpoint test is separate new work.",
+    "polynomial343_prior_scope": "Only q7 fixed source algebraic screen was previously recorded, no source graph/BFS/matching. The new q7 arbitrary-M capacity closure is now inherited from parent/expert.",
+    "shortcut650_distinct_scope": "500leaf Cayley group Z25 semidirect2 C20,125coset blocks and25heads; target6D4. Two fixed5000-switch profiles, not a full matching-family exclusion. The125block layer is not this standaloneF5cube polynomial source."
+  },
+  "formula_review": {
+    "one_step": "(u,a*u-b,a*a*u+a*u*u-c)mod5",
+    "two_step": "(d,b+u*(d-a),c+(d-a)*(u*u+(a+d)*u))mod5",
+    "ball2_definition_in_code": "Union of root itself and every formal1/2step endpoint, not exact2steps only.",
+    "loop_handling": "The only extra formal steps are selfloops. Erasing them preserves endpoints and shortens walks, so the union is exactly the real closedB2 of the loop-deleted source.",
+    "root_A_handling": "Origin has a formal selfloop. Every actualold walk of length<=3 can be padded there to3steps; conversely deleting loops from any formal3walk gives an actualold walk of length<=3. Thus the formal imageA equals the real closedB3(origin).",
+    "eligible_root_partners": "All125 triples except root and its4oldneighbors, represented exactly by forbidden={(u,0,0):u inF5}."
+  },
+  "dedup_review": {
+    "matched_root_partner": "x=M(0)",
+    "zero_matching_edges": "At most|A|=55, inherited parent endpoint count.",
+    "one_M_first": "Only B2(x) outsideA adds; parent finite maximum20.",
+    "one_M_tail": "M(B2(0)) has at most21images. Its element M(0)=x is already counted by A or B2(x), so at most20new endpoints.",
+    "one_M_middle": "For each v in4oldneighbors, w=M(v) itself is already in tail. Only its atmost5oldneighbors add: atmost4*5=20.",
+    "two_M": "A shortest3step path with two matching edges has form M-G-M; atmostdegG(x)<=5 endpoints. Consecutive matching steps cancel.",
+    "three_M": "Three consecutive matching steps reduce to one; already in first class.",
+    "matched_root_upper": 120,
+    "unmatched_root_reported_upper": 96,
+    "unmatched_bound_review": "Conservative and safe: first andtwoMclasses vanish; tail plus middle remain bounded.",
+    "uniform_missing_root_targets_lower_bound": 5,
+    "all_path_classes_complete": true,
+    "errors_found": []
+  },
+  "inherited_parent_numerics": {
+    "A": 55,
+    "root_closed_B2": 21,
+    "eligible_partner_count": 120,
+    "max_partner_B2_outside_A": 20,
+    "finite_rows_recomputed_by_this_review": false
+  },
+  "auxiliary_automorphism_lemma": "For any involutive source automorphism on an odd source order, a fixedroot has unchanged radius under its matching. This was sent toexpert for the same-family auxiliary proof, not a separate method/experiment.",
+  "decision": "The old recommendation of this family is superseded by the uniform matching bound. No q5 matching construction, solver, source BFS or field continuation should start from this source.",
+  "execution": {
+    "graphs_generated": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "new_endpoint_enumerations": 0,
+    "matching_assignments": 0,
+    "new_raw_rows": 0
+  }
+}

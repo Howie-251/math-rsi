@@ -1,0 +1,91 @@
+{
+  "status": "ALGEBRAIC_RULE_VALID_NO_UNIFORM_OBSTRUCTION_IDENTIFIED",
+  "completed_at_utc": "2026-10-28T03:03:31.062676+00:00",
+  "target_Delta": 6,
+  "target_D": 3,
+  "hypothetical_n": 125,
+  "hypothetical_m": 375,
+  "actual_n": null,
+  "actual_D": null,
+  "parent_baseline": 120,
+  "coordinate_change": {
+    "field": 5,
+    "forward": "y=b-a^2/2; h=c-a^3-4*a*y",
+    "inverse": "b=y+a^2/2; c=h+a^3+4*a*y",
+    "bijection": true,
+    "old_step": "(a,y,h)->(a+t,-y-t^2/2,-h+4*t*y+t^3)",
+    "derivation_checked": "Substitute original symmetric polynomial adjacency and cancel all a-dependent terms. No graph construction or enumeration.",
+    "absolute_vertices": "Exactlyv=(y,h)=(0,0); t0 is their deleted source selfloop."
+  },
+  "augmentation": {
+    "absolute_fibre": "Fivev0 vertices form the addedC5 on a, edges a--a+1.",
+    "nonabsolute_matching": "v=t*rep_L, tau(v)=kappa_L/t; pair(a,v)--(a+tau(v),-v).",
+    "projective_representatives": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "kappa_domain": "F5* independently for each of6directions",
+    "parameter_settings": 4096,
+    "not_graph_isomorphism_count": true,
+    "involution_check": "tau(-v)=-tau(v), so two matching steps return to(a,v); nonzero v is never fixed.",
+    "old_edge_overlap_check": "An old step sendingv to-v forces its y-coordinate t^2/2=0, so t=0. New tau(v)!=0, so every matching edge is a nonedge of the source. No old absolute-absolute edge exists.",
+    "loops_or_duplicate_edges_added": false,
+    "source_degree_histogram_derived": {
+      "4": 5,
+      "5": 120
+    },
+    "source_edges_derived": 310,
+    "added_matching_edges": 60,
+    "added_absolute_cycle_edges": 5,
+    "total_edges_derived": 375,
+    "final_regular_degree_derived": 6,
+    "old_edges_preserved": true
+  },
+  "C5_action": {
+    "map": "(a,v)->(a+r,v), r inF5",
+    "source_invariance": "The transformed old-step formula is independent ofa.",
+    "augmentation_invariance": "The absolute cycle is translation-invariant and tau depends only onv.",
+    "semiregular_action": true,
+    "orbit_count": 25,
+    "representative_roots": "(a=0,v) for all25v inF5^2",
+    "all_25_representative_roots_sufficient_for_global_D3_check": true,
+    "one_root_sufficient_without_further_proof": false,
+    "graph_Cayley_or_full_VT_presumed": false
+  },
+  "old_exclusions_not_transferred": {
+    "arbitrary_single_matching_R3_atmost120": "Does not apply: absolute vertices now get two new edges, consecutive augmentation steps alongC5 need not cancel.",
+    "odd_order_involutive_automorphism_matching": "Does not apply to this whole augmentation, which is not a single involution matching and can move the old absolute fixedroots."
+  },
+  "exact_scope": "Exactly the six-direction reciprocal shift family and fixed absoluteC5,4096 parameter settings. Not all C5-equivariant matchings, all complement matchings with an absolute cycle, or all125vertex graphs.",
+  "attack_result": "No uniform missing route class was identified in this bounded algebraic review; this is not a proof of existence or D3.",
+  "execution": {
+    "graphs_generated": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "candidate_matching_assignments": 0,
+    "source_profile_repeated": false
+  },
+  "decision": "Ready for the parent-authorized single finite4096 production batch, with actual simple/degree and complete25-orbit-root coverage required for a hit. No numeric batch is launched by this note."
+}

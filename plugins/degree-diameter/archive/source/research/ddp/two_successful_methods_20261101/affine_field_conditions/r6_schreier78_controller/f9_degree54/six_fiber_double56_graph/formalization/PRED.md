@@ -1,0 +1,11 @@
+# Concrete fixed56 Lean prediction and budget
+
+This new scope begins after the complete57834/1587762file closed and was handed to the fresh independent validator. It does not delay independent acceptance and does not recompile or change any source54or clone55module.
+
+New namespace: `DegreeDiameter.Portfolio.F9SixFiberDouble56`. Carrier is literally `Fin56862 ⊕ Fin972`, with an explicit equivalence to Fin57834. CloneIndexFin972decomposes as Fin2×Fin486, and BaseIndexFin486as Fin6×Fin81. Use exactly U=[0,1,2,3,9,15], the already proved55plane/parameters, baseIndex=81*uIndex+9*a+b, cloneIndex=486*copy+baseIndex, newlabel56862+cloneIndex. Every center lies in the immutable original F9Graph56862.graph; no current55graph appears in the new graph formula.
+
+Finite obligations are only36chart-index equalities to controller0and injectivity of the36-entry `(uIndex,port)` controller target map. Reuse the completed55pinMap_injective, pinInverse/parameters lemmas without repeating their field checks. A common old pin then fixes uIndex and port, and the reused local inverse fixes a,b, proving base load≤1. Projection of an adjacent972clone index to its Fin2copy coordinate is injective, proving total old load≤2without a vertex×clone sweep.
+
+The existing arbitrary-index clone Walk/collapse lemmas and the unconditional original54source theorem should close card57834, degree≤56, actual bounded SimpleGraph.Walk D3and nonD2, with no certificate premises. A separate Audit will import Exact and print/check actual graph, label, original target type/body and axioms. The allowed final axioms are only propext, Classical.choice, Quot.sound.
+
+Total new budget300CPU seconds, including preparation and failed attempts, one worker, per-module hard limit60CPU. Explicit existing LEAN_PATH and pinned Lean4.24.0 only; no fetching, installation, native computation oracle, unproved axiom, source recompilation or extra graph/BFS run. Typed ordered recipe binding will compare972producer rows and reference the fresh independent literal summary, rather than repeat a third large-edge validation. Stop on a substantive interface failure; do not vary target/U/field/copy count. Counts and A/B/freshC review remain root owned.

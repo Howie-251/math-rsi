@@ -1,0 +1,58 @@
+{
+  "timestamp_UTC": "2026-10-28T03:43:11.998527+00:00",
+  "status": "FROZEN_BEFORE_FINITE_SURGERY_BATCH",
+  "target_Delta": 4,
+  "target_D": 4,
+  "hypothetical_n": 105,
+  "savedL": 104,
+  "source": "Only cached104c/bhakar104.edges,104/208/all4regular/D4 alreadyverified. Full source distances reused withoutsourceBFS.",
+  "question": "Can an absorbed oldedge supply exactly the ports needed to repair both children of a2+2split while retainingold-oldD4?",
+  "operation": {
+    "split": "For eacholdv, partition N_G(v)=A disjointunion B, |A|=|B|=2; canonical A containslowestneighbor. Oldv=u retainsA, neww104 takesB, addu-w.",
+    "absorbed_edge": "Chooseorientedoldedge x-y withboth endpoints outsideclosedN_G[v]. Deletexy, addu-x,w-y. Retainallotheroldedges.",
+    "degree_edges": "Eachchild has2oldneighbors+buddy+extraoldpin=4; x/y loseoneandgainone.105/210/simple4regular.",
+    "new_vs_old_scope": "Changedoldedges andextra childports; not plainadjacentsplit orpuretwo-disjointcut-fourspoke insertion."
+  },
+  "finite_scope": {
+    "source_vertices": 104,
+    "canonical_partitions_per_vertex": 3,
+    "edge_orientations": 2,
+    "outside_closed_neighborhood_oldedges_per_vertex": 192,
+    "raw_parameter_objects": 119808,
+    "distinct_graphs_claimed": false
+  },
+  "known_closed_overlap_gates": [
+    "If candidate4regular105 andknownbest105 exactsame-label edge symmetricdifference is0or4, inheritknownnegative(best/complete40740one2switchscope), no newgraphBFS.",
+    "If all symmetricdifference edges lie insideU={12,13,41,44,48,49,52,53,104}, inheritold230simpledegreecompletions withsamefrozen202edges; no enumeratinglegacygraphs."
+  ],
+  "predictions": [
+    {
+      "id": "NEWROOT_REPAIR",
+      "claim": "Atleastone newnonoverlap parameter object willrepairall lostfar targets forbothchildren, unlike plainsplit.",
+      "basis": "Extraedge endpoint x covers exactlyR3_G(x) ofu lostfar, andy analogously; sourceadjacencyxy allowsbuddy-y routingtoabsorbcutpath loss.",
+      "limit": "Anexistentialprediction tobe checked; childcoverage isnot allgraphcoverage."
+    },
+    {
+      "id": "EXACT_CHILD_GATE",
+      "claim": "Childrenbothcoverall105 in<=4 iff E_A subsetR3G(x) andE_B subsetR3G(y), whereE_A={t:dG(v,t)=4 andno a∈A hasdG(a,t)=3},E_B analog.",
+      "basis": "Independentpaper ANALYSIS_COVERAGE.md, source metric gateexact notjustoptimistic."
+    },
+    {
+      "id": "JOINT_GRAPH",
+      "claim": "One such operationmayretaincompleteold-oldD4 andgivea105pointrecord.",
+      "limit": "Full finitefamily testcanrefuteit. No recordclaim untilcompleteproductioncertificate+independentall105BFS."
+    }
+  ],
+  "verification": "Onefirstnonoverlap literalcalibration compare cachedchildgate toactualtwochildR4, reuseplain split E_A/E_B misseswithoutnewoldsplitBFS. Gatepass graphcheckoldroots S=(B2_G(v) unionB1_G({x,y})) minus{v},atmost24. Everyotheroldpair hasold4path avoidingv/cut, soinheritD4. Firsthitexport210edges forrootindependentall105 check/Gemini.",
+  "failure_analysis": "Ifchildgatepassesbutoldrootfails savefirstsuchgraph/parameters andspecificbadpair; enumerateoriginalNB<=4prefixesonlyfromthatbadsourceonce toclassifydestroyedxy/cross-splitroutes, not countmicroimprovements.",
+  "budget": {
+    "aggregate_CPU_seconds": 30,
+    "workers": 1,
+    "parameter_objects_max": 119808,
+    "solver_calls": 0,
+    "random_starts": 0,
+    "SA_moves": 0,
+    "followup_cut_or_port_expansion": 0
+  },
+  "stop": "Exhaustfixedscopeorresourcebudget; saveuntestedexplicitlyiflimit. Skipstrictlyclosedoverlaps. No additionalcuts/partitions/sources/seedafterfailure withoutasubstantivenewcoveragequestion undercurrentGoal."
+}

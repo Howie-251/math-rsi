@@ -1,0 +1,601 @@
+{
+  "status": "KERNEL_COMPLETE_UNCONDITIONAL_6160_GRAPH_WITH_IMPORT_TYPE_AXIOM_AUDIT",
+  "final_module": "formal/DegreeDiameter/Portfolio/OppositeGQ35SpreadExact.lean",
+  "audit_module": "formal/OppositeGQ35SpreadAudit.lean",
+  "namespace": "DegreeDiameter.Portfolio.OppositeGQ35Spread",
+  "theorem": "concrete_order_degree_and_exact_D3",
+  "type": "Fintype.card Vertex = 6160 \u2227 (\u2200 v, graph.degree v \u2264 24) \u2227 DiameterAtMost graph 3 \u2227 \u00acDiameterAtMost graph 2",
+  "carrier": "Fin6144 \u2295 Fin16",
+  "Fin6160_equivalence": "label; label_old v=v; label_new j=6144+j",
+  "exported_certificate_premises": [],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "module_count": 79,
+  "projection_point_line_pairs_kernel_checked": 6144,
+  "original_line_entries_kernel_bound_to_fast_tables": 384,
+  "original_pointLine_entries_kernel_bound_to_fast_tables": 384,
+  "positive_incidence_coverage_checks": 384,
+  "spread_owner_checks": 64,
+  "finite_CPU_all_attempts": 678.6217000000001,
+  "finite_CPU_budget": 750,
+  "generic_CPU_conservative_all_attempts": 63.413666999999805,
+  "generic_CPU_budget": 450,
+  "all_CPU_conservative": 742.035367,
+  "all_CPU_budget": 1200,
+  "CPU_note": "Child-rusage start/end subtraction is recorded in current harness. Earlier Slots receipt33.065214 includes inherited child usage from preceding commands and is retained as a conservative overcount; no unchanged module was rebuilt to repair its timing.",
+  "single_module_CPU_limit": 115,
+  "max_batch_workers": 3,
+  "old_modules_changed": false,
+  "old_modules_recompiled": false,
+  "BFS_runs_in_this_formalization": 0,
+  "solver_calls": 0,
+  "native_decide": false,
+  "unproved_axioms": false,
+  "hashes": false,
+  "independent_literal_acceptance": "PASS all6160roots; see ../independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+  "input_binding": "INPUT_BINDING_CHECK.json",
+  "external_review": {
+    "A": "SUCCESS/PASS see reviews/GQ6160_A_DISPOSITION.md",
+    "B": "SUCCESS/SOUND ARCHITECTURE at read scope; see reviews/GQ6160_B_DISPOSITION.md",
+    "C": "PENDING_ROOT_FINAL_SCOPE"
+  },
+  "global_novelty": "UNCONFIRMED",
+  "module_receipts": [
+    {
+      "module": "OppositeGQ35SpreadGeneric",
+      "exit_code": 0,
+      "CPU_seconds": 2.005874,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadGeneric_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadGeneric.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadDefinitions",
+      "exit_code": 0,
+      "CPU_seconds": 2.5767939999999996,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDefinitions_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDefinitions.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadWalks",
+      "exit_code": 0,
+      "CPU_seconds": 2.122718,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadWalks_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadWalks.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadSlots",
+      "exit_code": 0,
+      "CPU_seconds": 33.065214,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadSlots_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadSlots.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadLowerGeneric",
+      "exit_code": 0,
+      "CPU_seconds": 1.994863,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/lower_helper/COMPILE_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/lower_helper/attempt_01.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadFastTables",
+      "exit_code": 0,
+      "CPU_seconds": 42.008028,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadFastTables_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadFastTables.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputData",
+      "exit_code": 0,
+      "CPU_seconds": 7.714759,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputData_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputData.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadIncidence",
+      "exit_code": 0,
+      "CPU_seconds": 13.160392,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadIncidence_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadIncidence.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputChecks",
+      "exit_code": 0,
+      "CPU_seconds": 1.88636,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputChecks_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputChecks.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow00",
+      "exit_code": 0,
+      "CPU_seconds": 6.159805999999998,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow00_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow00.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow01",
+      "exit_code": 0,
+      "CPU_seconds": 6.370103,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow01_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow01.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow02",
+      "exit_code": 0,
+      "CPU_seconds": 7.1191770000000005,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow02_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow02.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow03",
+      "exit_code": 0,
+      "CPU_seconds": 7.358226,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow03_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow03.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow04",
+      "exit_code": 0,
+      "CPU_seconds": 7.79082,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow04_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow04.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow05",
+      "exit_code": 0,
+      "CPU_seconds": 7.20851,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow05_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow05.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow06",
+      "exit_code": 0,
+      "CPU_seconds": 7.215232,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow06_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow06.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow07",
+      "exit_code": 0,
+      "CPU_seconds": 7.556712999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow07_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow07.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow08",
+      "exit_code": 0,
+      "CPU_seconds": 7.800946,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow08_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow08.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow09",
+      "exit_code": 0,
+      "CPU_seconds": 7.9142,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow09_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow09.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow10",
+      "exit_code": 0,
+      "CPU_seconds": 7.665972,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow10_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow10.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow11",
+      "exit_code": 0,
+      "CPU_seconds": 8.349759,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow11_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow11.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow12",
+      "exit_code": 0,
+      "CPU_seconds": 8.34993,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow12_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow12.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow13",
+      "exit_code": 0,
+      "CPU_seconds": 8.233906,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow13_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow13.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow14",
+      "exit_code": 0,
+      "CPU_seconds": 8.50907,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow14_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow14.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow15",
+      "exit_code": 0,
+      "CPU_seconds": 8.568867000000001,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow15_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow15.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow16",
+      "exit_code": 0,
+      "CPU_seconds": 7.948114,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow16_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow16.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow17",
+      "exit_code": 0,
+      "CPU_seconds": 8.086935,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow17_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow17.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow18",
+      "exit_code": 0,
+      "CPU_seconds": 8.328449,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow18_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow18.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow19",
+      "exit_code": 0,
+      "CPU_seconds": 8.360286,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow19_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow19.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow20",
+      "exit_code": 0,
+      "CPU_seconds": 7.9743759999999995,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow20_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow20.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow21",
+      "exit_code": 0,
+      "CPU_seconds": 8.172033,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow21_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow21.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow22",
+      "exit_code": 0,
+      "CPU_seconds": 8.219811,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow22_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow22.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow23",
+      "exit_code": 0,
+      "CPU_seconds": 8.008572000000001,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow23_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow23.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow24",
+      "exit_code": 0,
+      "CPU_seconds": 8.318363999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow24_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow24.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow25",
+      "exit_code": 0,
+      "CPU_seconds": 8.342423,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow25_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow25.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow26",
+      "exit_code": 0,
+      "CPU_seconds": 8.017217,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow26_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow26.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow27",
+      "exit_code": 0,
+      "CPU_seconds": 8.314598,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow27_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow27.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow28",
+      "exit_code": 0,
+      "CPU_seconds": 8.349638,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow28_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow28.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow29",
+      "exit_code": 0,
+      "CPU_seconds": 7.999341,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow29_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow29.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow30",
+      "exit_code": 0,
+      "CPU_seconds": 8.231913,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow30_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow30.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow31",
+      "exit_code": 0,
+      "CPU_seconds": 8.277125,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow31_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow31.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow32",
+      "exit_code": 0,
+      "CPU_seconds": 7.900117999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow32_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow32.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow33",
+      "exit_code": 0,
+      "CPU_seconds": 8.289973999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow33_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow33.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow34",
+      "exit_code": 0,
+      "CPU_seconds": 8.378854,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow34_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow34.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow35",
+      "exit_code": 0,
+      "CPU_seconds": 8.041322000000001,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow35_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow35.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow36",
+      "exit_code": 0,
+      "CPU_seconds": 8.334616,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow36_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow36.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow37",
+      "exit_code": 0,
+      "CPU_seconds": 8.368283,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow37_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow37.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow38",
+      "exit_code": 0,
+      "CPU_seconds": 8.176745,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow38_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow38.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow39",
+      "exit_code": 0,
+      "CPU_seconds": 8.411043,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow39_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow39.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow40",
+      "exit_code": 0,
+      "CPU_seconds": 8.387525,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow40_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow40.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow41",
+      "exit_code": 0,
+      "CPU_seconds": 8.104509,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow41_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow41.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow42",
+      "exit_code": 0,
+      "CPU_seconds": 8.348943,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow42_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow42.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow43",
+      "exit_code": 0,
+      "CPU_seconds": 8.307659999999998,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow43_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow43.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow44",
+      "exit_code": 0,
+      "CPU_seconds": 7.860053,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow44_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow44.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow45",
+      "exit_code": 0,
+      "CPU_seconds": 8.148897999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow45_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow45.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow46",
+      "exit_code": 0,
+      "CPU_seconds": 8.121234,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow46_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow46.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow47",
+      "exit_code": 0,
+      "CPU_seconds": 8.036591,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow47_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow47.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow48",
+      "exit_code": 0,
+      "CPU_seconds": 8.120416,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow48_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow48.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow49",
+      "exit_code": 0,
+      "CPU_seconds": 8.169197,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow49_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow49.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow50",
+      "exit_code": 0,
+      "CPU_seconds": 7.9522070000000005,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow50_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow50.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow51",
+      "exit_code": 0,
+      "CPU_seconds": 8.082269,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow51_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow51.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow52",
+      "exit_code": 0,
+      "CPU_seconds": 8.211411,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow52_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow52.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow53",
+      "exit_code": 0,
+      "CPU_seconds": 8.192419,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow53_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow53.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow54",
+      "exit_code": 0,
+      "CPU_seconds": 8.216046,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow54_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow54.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow55",
+      "exit_code": 0,
+      "CPU_seconds": 8.225525,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow55_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow55.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow56",
+      "exit_code": 0,
+      "CPU_seconds": 8.094773,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow56_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow56.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow57",
+      "exit_code": 0,
+      "CPU_seconds": 8.17273,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow57_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow57.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow58",
+      "exit_code": 0,
+      "CPU_seconds": 8.183124,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow58_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow58.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow59",
+      "exit_code": 0,
+      "CPU_seconds": 8.219175,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow59_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow59.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow60",
+      "exit_code": 0,
+      "CPU_seconds": 8.496006,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow60_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow60.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow61",
+      "exit_code": 0,
+      "CPU_seconds": 8.396809,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow61_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow61.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow62",
+      "exit_code": 0,
+      "CPU_seconds": 8.056221,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow62_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow62.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputRow63",
+      "exit_code": 0,
+      "CPU_seconds": 8.115234,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow63_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputRow63.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadInputs",
+      "exit_code": 0,
+      "CPU_seconds": 2.8104509999999996,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputs_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadInputs.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadDegree",
+      "exit_code": 0,
+      "CPU_seconds": 2.0336600000000002,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDegree_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDegree.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadDiameter",
+      "exit_code": 0,
+      "CPU_seconds": 1.8831250000000002,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDiameter_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadDiameter.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadLower",
+      "exit_code": 0,
+      "CPU_seconds": 1.8672499999999999,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadLower_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadLower.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadExact",
+      "exit_code": 0,
+      "CPU_seconds": 1.9645130000000002,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadExact_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadExact.log"
+    },
+    {
+      "module": "OppositeGQ35SpreadAudit",
+      "exit_code": 0,
+      "CPU_seconds": 1.96264,
+      "receipt": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadAudit_RESULT.json",
+      "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq35_spread24/formalization/OppositeGQ35SpreadAudit.log"
+    }
+  ]
+}

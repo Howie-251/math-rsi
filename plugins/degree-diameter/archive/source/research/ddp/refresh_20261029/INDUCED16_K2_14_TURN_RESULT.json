@@ -1,0 +1,294 @@
+{
+  "status": "INDUCED16_K2_14_BATCH_COMPLETE_NO_NEW_RECORD",
+  "updated_at": "2026-10-29T23:20:56.498437+00:00",
+  "previous_goal_turn_classification": "progress: exact C11 obstruction and new D13 coverage sets with a strict fixed-pool capacity bound",
+  "current_goal_turn_classification": "progress: different-parameter mechanisms, a literal controlled induced graph, tested unique-geodesic closure model, actual two-helper SAT/counterexample feedback and bounded remaining-budget re-evaluation",
+  "goal_status": "ACTIVE",
+  "new_complete_target_instances": 0,
+  "generated_failed_complete_graphs": 1,
+  "new_concrete_Lean_instances": 0,
+  "accepted_totals": {
+    "legal_instances": 104,
+    "parameter_pairs": 4,
+    "confirmed_main_table_instances": 103,
+    "confirmed_main_table_pairs": 3,
+    "concrete_formula_Lean_instances": 1,
+    "degree20_D3_latest_global_novelty": "pending"
+  },
+  "active_math_mechanisms_this_batch": [
+    "vertex-induced restriction of successful F5 graph, target(16,3)",
+    "K2 cooperative extension of literal94186 graph, target(14,5)"
+  ],
+  "baseline16": {
+    "n": 1920,
+    "checked_on": "2026-10-29",
+    "source": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  },
+  "controlled_induced_rule": {
+    "status": "COMPLETE_SINGLE_RULE_REJECTED_BY_LITERAL_PAIR",
+    "source": "research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges",
+    "source_edge_table_reads": 1,
+    "source_BFS_runs": 0,
+    "graphs_generated": 1,
+    "induced_BFS_roots": 1,
+    "n": 3000,
+    "m": 24000,
+    "degree_histogram": {
+      "16": 3000
+    },
+    "old_unique_shortest_path": [
+      1,
+      2250,
+      3625,
+      626
+    ],
+    "controller_path": [
+      0,
+      18,
+      29,
+      5
+    ],
+    "ports": [
+      0,
+      2,
+      1
+    ],
+    "path_uniqueness_basis": "Saved unique controller distance-three path plus full-rank noise map; no new source BFS.",
+    "deleted_path_vertices": [
+      2250,
+      3625
+    ],
+    "bad_pair_old_ids": [
+      1,
+      626
+    ],
+    "bad_pair_new_ids": [
+      0,
+      500
+    ],
+    "bad_pair_induced_distance": 4,
+    "one_induced_shortest_path_old_ids": [
+      1,
+      277,
+      224,
+      417,
+      626
+    ],
+    "root_distance_histogram": {
+      "0": 1,
+      "1": 16,
+      "2": 202,
+      "3": 2012,
+      "4": 767,
+      "5": 2
+    },
+    "root_R3_size": 2231,
+    "root_R3_missing": 769,
+    "fiber_missing_counts": [
+      12,
+      32,
+      22,
+      36,
+      28,
+      36,
+      36,
+      36,
+      36,
+      24,
+      6,
+      32,
+      36,
+      36,
+      11,
+      13,
+      36,
+      13,
+      21,
+      30,
+      24,
+      36,
+      33,
+      13,
+      30,
+      13,
+      14,
+      30,
+      33,
+      11
+    ],
+    "paper_bound_not_global_measurement": {
+      "fiber_pair": [
+        0,
+        5
+      ],
+      "retained_targets_in_fiber5": 100,
+      "minimum_bad_retained_sources_in_fiber0_per_target": 20,
+      "unordered_bad_pairs_lower_bound": 2000,
+      "scope": "Provided route argument; only the stated single root was measured here."
+    },
+    "global_diameter_computed": false,
+    "global_bad_pair_count_computed": false,
+    "CPU_seconds": 0.048149758,
+    "pending": [],
+    "new_record": false
+  },
+  "transversal_family_paper_exclusion": {
+    "n": 3000,
+    "degree": 16,
+    "scope": "each fiber deletes25 points meeting every line in all four fixed directions exactly once",
+    "exact_bad_unordered_pairs_between_fibers0_and5": 3600,
+    "all_graph_bad_pairs_at_least": 3600,
+    "measurement_scope": "one root only;3600 is a locally independently checked paper count",
+    "external_review_scope": "original2000 lower bound and family exclusion; not the later exact3600 strengthening",
+    "proof": "f5_induced_transversal_deletion/DERIVATION.md"
+  },
+  "induced_retention_model": {
+    "variables": 300221,
+    "clauses": 1170873,
+    "keep_variables": 3750,
+    "n_at_least": 1921,
+    "n_exactly_fixed": false,
+    "max_degree": 16,
+    "closure_clauses": 32250,
+    "equivalent_uncompressed_intermediate_implications": 4031250,
+    "necessary_only": true,
+    "CPU_seconds": 2.5501791039999997
+  },
+  "induced_retention_actual": {
+    "status": "UNKNOWN",
+    "rounds": [
+      {
+        "round": 1,
+        "solver": {
+          "returncode": -9,
+          "CPU_seconds": 15.011320999999999,
+          "wall_seconds": 15.118462577462196,
+          "observation_timeout": true,
+          "pid": 405131,
+          "command": [
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+            "-q",
+            "-t",
+            "15",
+            "-w",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_retention_closure/cegis_round_01/candidate.sol",
+            "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/refresh_20261029/f5_induced_retention_closure/working.cnf"
+          ]
+        },
+        "solver_CPU_cumulative": 15.011320999999999,
+        "status": "UNKNOWN"
+      }
+    ],
+    "actual_solver_calls": 1,
+    "solver_CPU_seconds": 15.011320999999999,
+    "solver_CPU_budget": 60.0,
+    "total_CPU_seconds_including_prior_preparation": 17.651953417999998,
+    "prior_charged_CPU_seconds": 2.598328862,
+    "total_CPU_budget": 90.0,
+    "wall_seconds": 15.157519657164812,
+    "last_round": 1,
+    "exact_bad_pair_cuts": 0,
+    "extra_clauses": 0,
+    "current_variables": 300221,
+    "base_CNF_rebuilt": false,
+    "source_edge_text_reads": 0,
+    "hit": null,
+    "running": false,
+    "automatic_resume_allowed": false,
+    "UNSAT_certification": "none; raw solver outcome only",
+    "pending": []
+  },
+  "d14_route_gate": {
+    "status": "NECESSARY_ROUTE_GATE_NO_REJECTION",
+    "source_n": 94186,
+    "source_m": 657452,
+    "completed_R3_roots": 3685,
+    "zero_R3_provider_targets": 0,
+    "minimum_R3_provider_count": 25,
+    "maximum_R3_provider_count": 119,
+    "minimum_T0_R4_support": -1,
+    "minimum_T0_effective_capacity": -1,
+    "opposition_edges": 0,
+    "odd_cycle_found": false,
+    "R3_CPU_seconds": 0.088,
+    "native_CPU_seconds": 0.335022,
+    "source_edge_reads": 1,
+    "old_R4_cache_reads": 1,
+    "new_R4_runs": 0,
+    "source_D5_BFS": 0,
+    "solver_calls": 0,
+    "running": false,
+    "compile_CPU_seconds": 1.6473839999999997,
+    "driver_CPU_seconds": 0.003045746000000002,
+    "aggregate_CPU_seconds": 1.994530046,
+    "CPU_budget_seconds": 10,
+    "workers": 1,
+    "source_graph": "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/source94186.edges",
+    "old_R4_cache": "research/ddp/more_graphs_20261027/d14_D5_mizuno_extension/allfree_cover_probe/allfree_R4.u64le.bin",
+    "new_R3_cache": "allfree_R3.u64le.bin",
+    "K2_constructed": false,
+    "pending": []
+  },
+  "d14_K2_model": {
+    "selector_variables": 7370,
+    "all_variables": 103180,
+    "initial_target_count": 338,
+    "initial_coverage_rows": 676,
+    "initial_total_clauses": 203308,
+    "side_pin_limit": 13,
+    "greedy_root_missing_counts": [
+      3881,
+      3559
+    ],
+    "gate_and_prepare_CPU_seconds": 7.814843227000001
+  },
+  "d14_initial_stage2_actual_summary": {
+    "status": "UNKNOWN_SOLVER_RETURN",
+    "solver_calls": 2,
+    "solver_CPU_seconds": 19.21988,
+    "whole_batch_CPU_seconds": 28.25784697
+  },
+  "d14_same_batch_final_summary": {
+    "status": "UNKNOWN_SOLVER_RETURN",
+    "solver_calls": 3,
+    "new_solver_calls": 1,
+    "solver_CPU_seconds": 58.2235,
+    "whole_batch_CPU_seconds": 67.547291753,
+    "shared_solver_CPU_budget": 60,
+    "whole_batch_CPU_budget": 90,
+    "full_source_two_root_checks": 1,
+    "cached_full_cover_hit": false,
+    "error": null,
+    "pending": [],
+    "same_original_batch": true,
+    "old_stage2_records_preserved": true
+  },
+  "d14_actual_feedback": {
+    "round1_SAT_full_source_root_missing": [
+      6292,
+      6096
+    ],
+    "exact_real_coverage_rows_added": 512,
+    "refined_model_rows": 1188,
+    "remaining_budget_reassessment": "Parent authorized original remaining budget after actualSAT/full-target counterexample feedback; no budget reset, no observation-timeout restart",
+    "resumed_first_round": 3,
+    "resumed_window_seconds": 39,
+    "final_status_is_not_family_exclusion": true
+  },
+  "external_static_review": {
+    "status": "SUCCESS",
+    "verdicts": [
+      "PASS",
+      "PASS"
+    ],
+    "actual_model": "gemini-3.8-flash-high",
+    "actual_effort": "high",
+    "threadId": "12c1d715-0369-4a25-9755-3fb41033c3bd",
+    "disposition": "reviews/ddp/f5_induced_geodesic_20261029.DISPOSITION.md",
+    "scope": "paper transversal exclusion and compressed closure logic, not numeric/whole-CNF/Lean/novelty certification"
+  },
+  "all_numerical_work_terminal": true,
+  "pending": [],
+  "decision": "Stop these numerical batches. The entire four-direction-transversal deletion family is excluded, but general induced restrictions and general K2 extensions remain open. A new run needs a specific new construction rule, stronger structural representation or useful actual feedback; do not reset budgets or mechanically grow seeds/orders/helper counts.",
+  "expert_delivery": "existing21:55 expert snapshot retained; current research is in progress and the sole Wiki."
+}

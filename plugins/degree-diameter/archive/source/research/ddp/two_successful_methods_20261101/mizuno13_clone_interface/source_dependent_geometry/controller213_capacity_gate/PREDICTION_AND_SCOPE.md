@@ -1,0 +1,9 @@
+# Prediction and single-call scope
+
+Local full27 affine W-transverse blocks have175 regular and28 exceptional g4-capable sources. The remaining161 sources receive optimistic cost6 even when local g3 legality is unverified. The strengthened all364 cost gate bounds full blocks by215 and leaves the213-block target open. This next batch asks only whether the literal controller necessary inequalities admit any binary choice of at least213 sources.
+
+There are364 binary variables x_a. Target b has row sum_{a ordinary->b} x_a + x_mate(b)<=3. The matching source is also an ordinary provider, so its coefficient is2. Before calling the solver, check364 rows and columns each sum5, four distinct ordinary incoming/source targets, matching involution, and precisely one coefficient2 plus three coefficient1 per row/column. Add sumx>=213 and sum c_a*x_a<=1092, where c=5 for the203 witnessed-g4 sources and6 for the other161. P load and affine layer compatibility are omitted, making a necessary relaxation.
+
+One scipy.optimize.milp/installed HiGHS feasibility call, zero objective, one thread, solver time_limit55 seconds and whole-process CPU soft59/hard60 seconds. No objective maximization, additional cuts, solver restart, phase CSP, H search, point graph, or BFS. Persist PID/start time/model and the actual solver status. If an integer vector exists, independently recompute all364 literal controller rows and cardinality/cost using Python integers. A returned vector is a controller capacity witness only, not a local phase assignment or a graph. Raw infeasibility remains a solver result without an independently checked proof. On timeout or a solver limit return UNKNOWN and stop.
+
+Prediction is undecided: the213..215 window is narrow but the necessary relaxation may still admit a vector. Either outcome changes the next decision without automatically opening another model.

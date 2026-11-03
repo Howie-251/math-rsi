@@ -1,0 +1,283 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_computational_obligations_complete",
+  "summary": "Independent exact bounded computation reproduces all five/seven/nine-component quotients and every original row domain; no mathematical defect found in the stated finite classification.",
+  "thread_id": "/root/proof_review_n62_quotient_search",
+  "trace_path": "reviews/dd82/proof-checker-n62-large-quotients-20261011/",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "deterministic_check_status": "VERIFIED_EXHAUSTIVE_INTEGER_QUOTIENT_CHECK",
+  "generated_at": "2026-10-11T11:56:22.361588+00:00",
+  "audited_inputs": [
+    "computations/dd82/n62/component_quotient_search.py",
+    "computations/dd82/n62/component_quotients_5.json",
+    "computations/dd82/n62/component_quotients_7.json",
+    "computations/dd82/n62/component_quotients_9.json",
+    "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md (Section 3 interface)"
+  ],
+  "details": {
+    "finite_classifications_audited": 3,
+    "issues": [],
+    "obligations": [
+      {
+        "id": "Q1",
+        "claim": "Actual-graph quotient interface and minimum component size",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "Section 3 deduction checked; size >=4 explicitly imports B<=2 and evenness"
+      },
+      {
+        "id": "Q2",
+        "claim": "Complete sorted size-partition coverage",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "Independent combinations-with-replacement agrees with all 221/201/94 size partitions"
+      },
+      {
+        "id": "Q3",
+        "claim": "Exhaustive balanced row domains and diagonal identity",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "Coprime gcd parametrization justified; independent weak-row/divisibility enumeration matches all 3358 domains"
+      },
+      {
+        "id": "Q4",
+        "claim": "Pair identities and full search coverage",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "Both ordered off-diagonal equations checked; independent forward search validates every full-matrix entry"
+      },
+      {
+        "id": "Q5",
+        "claim": "Truthful completed versus timed-out classification",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "All partitions finished in three fresh reruns; zero-budget run reports timeout and zero completed partitions"
+      },
+      {
+        "id": "Q6",
+        "claim": "Canonicalization within equal-size blocks",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "Direct-product group enumeration recovers exactly labelled orbits of sizes 2 and 6"
+      },
+      {
+        "id": "Q7",
+        "claim": "Separation of D1 annotations and finite quotient scope",
+        "status": "DISCHARGED_IN_STATED_SCOPE",
+        "evidence": "D1 is postprocessing only and imports H,K>=14; no graph realizability or Lean claim"
+      }
+    ],
+    "original_search_or_reports_modified": false,
+    "independent_checker": "computations/dd82/n62/check_large_component_quotients.py",
+    "independent_result": "computations/dd82/n62/large_component_quotients_check.json",
+    "independent_wall_seconds": 12.14738080650568,
+    "cpu_count": 1,
+    "hard_budget_seconds": 30,
+    "row_domains_compared": 3358,
+    "classifications": [
+      {
+        "components": 5,
+        "size_partitions_total": 221,
+        "size_partitions_completed": 221,
+        "partitions_with_empty_row_domain": 218,
+        "maximum_single_row_domain": 9,
+        "labelled_solutions": 2,
+        "canonical_count": 1,
+        "canonical_quotients": [
+          {
+            "sizes": [
+              4,
+              8,
+              10,
+              20,
+              20
+            ],
+            "R": [
+              [
+                1,
+                2,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                2,
+                0,
+                0,
+                5
+              ],
+              [
+                2,
+                0,
+                0,
+                4,
+                2
+              ],
+              [
+                0,
+                0,
+                2,
+                2,
+                4
+              ],
+              [
+                0,
+                2,
+                1,
+                4,
+                1
+              ]
+            ],
+            "labelled_count": 2,
+            "orbit_size": 2
+          }
+        ],
+        "reference_matches": true,
+        "every_original_row_domain_matches": true
+      },
+      {
+        "components": 7,
+        "size_partitions_total": 201,
+        "size_partitions_completed": 201,
+        "partitions_with_empty_row_domain": 193,
+        "maximum_single_row_domain": 92,
+        "labelled_solutions": 6,
+        "canonical_count": 1,
+        "canonical_quotients": [
+          {
+            "sizes": [
+              4,
+              4,
+              4,
+              10,
+              10,
+              10,
+              20
+            ],
+            "R": [
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                5,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0,
+                1,
+                1,
+                4
+              ],
+              [
+                0,
+                2,
+                0,
+                1,
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                0,
+                0,
+                1,
+                1,
+                0,
+                4
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2
+              ]
+            ],
+            "labelled_count": 6,
+            "orbit_size": 6
+          }
+        ],
+        "reference_matches": true,
+        "every_original_row_domain_matches": true
+      },
+      {
+        "components": 9,
+        "size_partitions_total": 94,
+        "size_partitions_completed": 94,
+        "partitions_with_empty_row_domain": 88,
+        "maximum_single_row_domain": 665,
+        "labelled_solutions": 0,
+        "canonical_count": 0,
+        "canonical_quotients": [],
+        "reference_matches": true,
+        "every_original_row_domain_matches": true
+      }
+    ],
+    "source_reruns": [
+      {
+        "components": 5,
+        "all_non_timing_fields_match": true,
+        "search_nodes": 20,
+        "wall_seconds": 0.022279225289821625
+      },
+      {
+        "components": 7,
+        "all_non_timing_fields_match": true,
+        "search_nodes": 218,
+        "wall_seconds": 0.17460793256759644
+      },
+      {
+        "components": 9,
+        "all_non_timing_fields_match": true,
+        "search_nodes": 3390,
+        "wall_seconds": 0.9287228658795357
+      }
+    ],
+    "zero_budget_check": {
+      "status": "TIME_BUDGET_EXHAUSTED",
+      "size_partitions_completed": 0
+    },
+    "operational_notes": [
+      "Original --seconds polling is cooperative and can exceed its target during row generation/canonicalization; COMPLETE still means the entire domain was exhausted."
+    ],
+    "imported_hypotheses": [
+      "Actual graph regularity and repeat matrix identity",
+      "Symmetric nonnegative integer B with zero diagonal and row sum three",
+      "B<=2 from external triple-repeat elimination for minimum component size four"
+    ],
+    "scope": "k in {5,7,9}; even n_i>=4; sum n_i=62; nonnegative integer R; row sum 8; trace (17-k)/2; balance; R^2+R=10I+1n^T; R_ii<n_i; simultaneous component relabeling",
+    "nonclaims": [
+      "No graph realizability or graph nonexistence result is certified",
+      "The minimum size four uses the external actual-graph B<=2 reduction",
+      "D1 annotations and their H,K>=14 imports are not used or certified",
+      "Other component counts are outside this check",
+      "This is external exact computation, not a Lean theorem",
+      "The separate new five/seven-component graph-exclusion proof was not reviewed",
+      "No work on orders 63-65"
+    ],
+    "output_policy": "Markdown/JSON audit reports; reusable Python checker explicitly requested; no digests, new axioms, or Lean changes"
+  }
+}

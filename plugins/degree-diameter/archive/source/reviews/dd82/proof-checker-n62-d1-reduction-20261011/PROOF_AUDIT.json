@@ -1,0 +1,81 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 36 obligations in the stated D1_MATCH local reduction and completed transport appendix are discharged. Same-family provisional acceptance; no D1 exclusion or order-62 upper bound follows.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_MATCH_HARD_BRANCH_REDUCTION.md",
+      "scope": "All 209 lines, sections 1–5 and completed additional transport section (16)",
+      "line_count": 209,
+      "size_bytes": 12067,
+      "mtime_utc": "2026-10-11T10:25:37.913760+00:00",
+      "last_line": "No equality between the original and repeat perfect matchings has been established. The single internal repeat edge in C3 has not yet been transported into a contradiction with the empty internal repeat graph in C2."
+    }
+  ],
+  "audited_imports": [
+    {
+      "path": "proofs/dd82/n62/TRIANGLE_PAIRING_SIMPLE_REPEAT_EXCLUSION.md",
+      "scope": "Universal triangle pairing and closure of repeat prism, sections 1–4"
+    },
+    {
+      "path": "proofs/dd82/n62/S_TOUCH_SATURATED_ROW_EXCLUSION.md",
+      "scope": "Actual-parent saturated-row derivation used by universal pairing; no global simplicity needed"
+    },
+    {
+      "path": "proofs/dd82/n62/D0_DOUBLE_COMPONENTS_AND_D1_OUTLET.md",
+      "scope": "Section 1 D0_MATCH component theorem only; not the global outlet/parity argument"
+    },
+    {
+      "path": "proofs/dd82/n62/RECOVERED_REDUCTION.md",
+      "scope": "Elementary exact graph identities and local parent-template definitions only; no finite checker rerun"
+    }
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n62-d1-reduction-20261011",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "executor_model": "unattested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "reviewer_reasoning_requested": "ultra",
+  "backend_attestation": "Requested model and effort recorded; actual returned backend metadata unavailable.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:30:59.710311+00:00",
+  "details": {
+    "theorems_audited": 1,
+    "micro_claims_audited": 36,
+    "micro_claims_discharged": 36,
+    "completed_appendix_in_scope": true,
+    "open_obligations_within_claim": 0,
+    "issues": [],
+    "counterexample_pass": "Targeted algebraic collision, repeat-weight, reroot, matching-multiplicity and triangle-status checks; no counterexample found.",
+    "source_fixes": 0,
+    "source_stability": "Author confirmed source stable, including (16).",
+    "scope_exclusions": [
+      "D1_MATCH exclusion",
+      "arbitrary order-62 upper bound",
+      "existence of a graph satisfying these conditions",
+      "global triple-repeat checker",
+      "order63–65 work",
+      "Lean formalization"
+    ],
+    "checks_run": [
+      "Complete mathematical line-by-line review",
+      "Direct inspection of the relevant paper imports",
+      "Assumption and dependency ledger",
+      "Targeted algebraic counterexample pass"
+    ],
+    "not_run": [
+      "SAT",
+      "triple-repeat finite checker",
+      "Lean build",
+      "TeX/PDF/HTML rendering"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "wiki_claim_record": "Parent workflow owns shared research-wiki integration; suggested proof status sound-modulo-imports."
+  }
+}

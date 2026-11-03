@@ -1,0 +1,54 @@
+`— composed: development/evolution/dd-v2-20261102/EVOLUTION.md`
+
+### 1. 本轮实际阅读范围（静态原件审阅，未修改文件、未执行大图生成或 Lean）
+
+1. 版本与插件契约：[docs/V2_CHANGES.md](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/V2_CHANGES.md)（1–63 行）、[docs/PLUGIN_CONTRACT.md](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/PLUGIN_CONTRACT.md)（1–84 行）、[docs/WORKFLOWS.md](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKFLOWS.md)（35–150 行）
+2. DD 插件入口、四个技能与参考/案例/归档：
+   - [plugins/degree-diameter/README.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/README.md)（1–23 行）
+   - [plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)（1–49 行）
+   - [plugins/degree-diameter/skills/dd-construction/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-construction/SKILL.md)（1–55 行）
+   - [plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)（1–51 行）
+   - [plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)（1–50 行）
+   - [plugins/degree-diameter/references/programs-and-replay.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/programs-and-replay.md)（1–89 行）、[references/reading-and-calling.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/reading-and-calling.md)（1–48 行）
+   - [plugins/degree-diameter/examples/affine-common-coverage.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/examples/affine-common-coverage.md)（1–34 行）、[examples/frozen-clones-and-diagonal.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/examples/frozen-clones-and-diagonal.md)（1–34 行）、[examples/mizuno-exact-dual.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/examples/mizuno-exact-dual.md)（1–30 行）
+   - [plugins/degree-diameter/archive/README.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/archive/README.md)（1–30 行）、[evidence/IMPLEMENTATION.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/evidence/IMPLEMENTATION.md)（1–12 行）
+3. Base 五阶段调用与消费对账：[base/skills/mathrsi-research/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md)（1–178 行）、[mathrsi-prepare/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md)（1–100 行）、[mathrsi-survey/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md)（1–241 行）、[mathrsi-route-loop/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md)（1–152 行）、[mathrsi-prove/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md)（1–210 行）、[mathrsi-assemble/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-assemble/SKILL.md)（1–115 行）、[mathrsi-verify/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md)（1–176 行）及 [verify/references/lean-target-entry.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/references/lean-target-entry.md)（1–46 行）、[mathrsi-handoff/SKILL.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md)（1–131 行）。
+
+---
+
+### 2. 已成立且跨文件对齐的设计（直接认可）
+
+1. **Base v2 的四项核心行为变化均已落到具体调用与消费位置，而非停留在原则表**：
+   - **仅形式目标/固定 Lean 出口直入分支**：在 [mathrsi-research/SKILL.md:21-22, 46, 133-145](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L133-L145)、[mathrsi-assemble/SKILL.md:20, 32](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-assemble/SKILL.md#L32)、[mathrsi-verify/SKILL.md:24, 45, 61, 130-140](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md#L61) 及 [lean-target-entry.md](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/references/lean-target-entry.md) 中完全闭环——不强制先造 TeX 或跑 `proof-checker`，直接核原声明、实际 `graph`/`DiameterAtMost` 定义、导出构建与传递公理，不伪造 canonical `PROOF_AUDIT.json`，完成后返回原 caller。
+   - **公开基线与已知构造族代入驱动队列更新**：[mathrsi-survey/SKILL.md:170](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L170) 产出同域合法代入保证与新可用输入 $\to$ [mathrsi-prepare/SKILL.md:71](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md#L71)、[mathrsi-route-loop/SKILL.md:115](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L115)、[mathrsi-prove/SKILL.md:94](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L94) 消费该返回，撤掉仅服务于旧竞争门槛的待派任务并切入新源（如 P33），同时保留已生成实例的数学合法性。
+   - **对象/规则改变后的正负证据分类继承与共同覆盖量词**：[mathrsi-route-loop/SKILL.md:84, 88](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md#L84-L88) 与 [mathrsi-prove/SKILL.md:90, 130](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L90) 明确要求先写新旧对象关系、区分冻结源邻域与演化图状态、检查旧否证所依赖的自加限制是否已解除，以及将单路满秩失败转回“同一源坐标下路线像并覆盖”或未覆盖见证。
+2. **DD 插件的整理层、只读 archive 与薄 Python 工具可执行**：
+   - 四个技能（`mathrsi-degree-diameter`、`dd-construction`、`dd-obstruction-certificate`、`dd-transfer-diagnosis`）配合 [reading-and-calling.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/reading-and-calling.md)、[programs-and-replay.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/programs-and-replay.md) 与三个 `examples/`，给出了真实数学条件、失败机制、可运行命令（`rebuild.py --workspace "$run_dir/source"`、`early_d5/verify_covers.py`、`tools/replay_mizuno_dual.py`）和返回消费者。
+   - [archive/README.md](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/archive/README.md) 如实说明了随仓 `archive/source/`（含原 `research-wiki`、证明、源码、Lean）的只读导航用法，明确列出了原包已省略的大边表、`LP_INPUT.json`、`ROUTE_CERTIFICATE.json` 与 `D2 one-oldrepair` 详细见证等缺件边界，且严禁将历史 `ACTIVE`/Goal 当作恢复研究授权。
+   - 外层 `mathrsi-meta-evolve` 与内层五个解题子工作流边界清晰，解题期不静默改 `base` 或 `archive`。
+
+---
+
+### 3. 可达的具体接入问题与最小修法（共 3 处）
+
+#### 问题 1：`mathrsi-prepare`、`mathrsi-survey`、`mathrsi-research`、`docs/WORKFLOWS.md` 的插件派发段落仍只写死 Property B，未把已落地的 DD 插件接进 `prepare/survey` 分支
+- **具体位置与失效路径**：
+  - [docs/PLUGIN_CONTRACT.md:23](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/PLUGIN_CONTRACT.md#L23) 已规定 `prepare/survey` 调用 `mathrsi-degree-diameter` + `dd-transfer-diagnosis` 共享一次调查。
+  - 但在 base 侧实际执行时：[base/skills/mathrsi-survey/SKILL.md:72-95](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L72-L95) 只有 `### 已启用Property B时，实际接入领域文献流程`，且第 95 行写“未启用领域插件或其它数学题走下面通用 research-lit 分支。ECC 草案未按本轮标准验收……”；[base/skills/mathrsi-prepare/SKILL.md:59-60](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md#L59-L60)、[base/skills/mathrsi-research/SKILL.md:165](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L165)、[base/skills/mathrsi-prove/SKILL.md:82](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L82) 和 [docs/WORKFLOWS.md:41](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKFLOWS.md#L41) 也都只点名了 Property B。
+  - 当 agent 按 `prepare` $\to$ `survey` 处理 DD 任务时，读到 `survey` 第 72–95 行会因不是 Property B 而直接落入纯通用分支，跳过读取 DD 插件的 `archive/source/research-wiki/`、153 图目录与已知构造族代入规则。
+- **最小修法**：
+  1. 在 [base/skills/mathrsi-survey/SKILL.md:94-95](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-survey/SKILL.md#L94-L95)（并在 [mathrsi-prepare/SKILL.md:59-60](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md#L59-L60) 与 [docs/WORKFLOWS.md:41](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKFLOWS.md#L41) 同步一句话）补入 DD 分支：
+     > 已启用 Degree–diameter 插件时，读取 [mathrsi-degree-diameter](../../../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md) 与 [dd-transfer-diagnosis](../../../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，将 `plugins/degree-diameter/archive/source/research-wiki/` 及公开比较目录作为本地种子，核对目标 `(d,D)` 的发表实例、已知构造族（Delorme、GQ spread/ovoid、仿射提升等）合法代入保证及正则/最大度条件，与通用 `research-lit` 共享同一次调查并合入 `LITERATURE.md`。
+  2. 在 [base/skills/mathrsi-research/SKILL.md:165](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md#L165) 与 [base/skills/mathrsi-prove/SKILL.md:82](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md#L82) 紧随 Property B 补一句 DD 四个技能的对应入口链接。
+
+#### 问题 2：DD 技能与案例中的命令默认在“插件根目录”运行，与 base 技能“在任务工作区运行命令”存在 `cwd` 偏差
+- **具体位置与失效路径**：
+  - Base 约定在**任务工作区**启动命令（[docs/ARIS_REUSE.md:15](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/ARIS_REUSE.md#L15)），而 [dd-construction/SKILL.md:18](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-construction/SKILL.md#L18)（`early_d5/verify_covers.py`）、[dd-obstruction-certificate/SKILL.md:32](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md#L32)（`tools/replay_mizuno_dual.py`）和三个 `examples/` 均直接写相对路径 `archive/source/...` 或 `tools/replay_mizuno_dual.py`（仅在 [programs-and-replay.md:3](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/programs-and-replay.md#L3) 注明“从插件根目录执行”）。Agent 在任务工作区直接复制这些命令会因路径不存在报错。
+- **最小修法**：
+  - 在 [dd-construction/SKILL.md:18](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-construction/SKILL.md#L18)、[dd-obstruction-certificate/SKILL.md:32](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md#L32) 和 [programs-and-replay.md:3](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/references/programs-and-replay.md#L3) 补一句：从任务工作区调用时，显式带本克隆插件根路径 `DD_PLUGIN="/path/to/MathRSI/plugins/degree-diameter"`（或先切到 `"$DD_PLUGIN"` 并将 `--workspace` / `--output` 指向当前任务工作区目录）。
+
+#### 问题 3：[docs/PLUGIN_CONTRACT.md:26](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/PLUGIN_CONTRACT.md#L26) 的 `verify` 入口说明与 DD 文本中少量英文词粘连
+- **具体位置与失效路径**：
+  1. [docs/PLUGIN_CONTRACT.md:26](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/PLUGIN_CONTRACT.md#L26) 将 `verify` 阶段的 DD 入口简写为 `obstruction`（[dd-obstruction-certificate](file:///Users/rfy_naiveai/Desktop/MathRSI/plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)）。实际上该技能的 §4–5 同时承担了**正构造图的字面/覆盖属性核验、证据继承与固定 Lean 导出核对**；在表格“输入与返回用途”栏补明“含正构造图的字面/覆盖/证据继承核验与固定 Lean 导出核对（§4–5）”，可防止 `verify` 在验正构造图时误以为 `obstruction` 只处理不可能证明。
+  2. DD 四个技能与 `examples/` 中存在少量英文词紧贴无空格（如 `dd-construction` 中的 `regulardegree`、`controllerports`、`sortedneighbors`、`partialovoid`；`dd-obstruction-certificate` 中的 `rawUNSAT`、`all-rootBFS`、`actualcarrier`），DD 作者润色细节时顺手加空格即可，避免 agent 检索符号名时误判。
+

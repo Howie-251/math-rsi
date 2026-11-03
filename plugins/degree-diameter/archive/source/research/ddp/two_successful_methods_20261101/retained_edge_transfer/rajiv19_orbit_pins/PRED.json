@@ -1,0 +1,20 @@
+{
+  "source": "Rajiv September2026 fibre extension q11,19degree,2783vertices; actual public generator/gadget pending readback",
+  "mechanism": "Retain source edges; add one new vertex with at most19 old point pins, each point has degree18 and one spare slot.",
+  "fixed_pins": "S0={(a,1,0,0):a in F11},11points in one transvection orbit",
+  "prediction_before_test": "S0 covers all1331 point targets within2 via the unique collinear Sa with a=target a. In each of12line classes its incidence neighbors are one complete11line pencil; radius2 line coverage is that pencil plus its gadget-neighbor boundary. Remaining8point pins should be chosen for uncovered lines, not for point coverage.",
+  "specific_provider_prediction": "For any extra point r, within each class its radius2 line set is the whole11line pencil containing its unique incident line, plus the4 external gadget neighbors of that incident line (if actual gadget edges are external).",
+  "falsification": "Actual generator beta/incidence or gadget edges giving different pencil association or provider sets refutes the corresponding formula. Failure of a fixedS0+8cover only excludes this fixedorbit rule, not all19pin covers or source extensions.",
+  "inherited": "Public source D3,pointdegree18 and the general retained-edge extension lemma are inherited; no old D3 BFS or source reproduction counted new.",
+  "budget_preprocessing_CPU_seconds":60,
+  "budget_solver_CPU_seconds":30,
+  "solver_calls_maximum":1,
+  "workers":1,
+  "outputs":["explicit exact provider formula and prediction comparison","one complete static leftover-line cover model if capacity does not exclude it","actual pins and complete currentR2/degree check only if returned feasible"],
+  "source_BFS_roots":0,
+  "revised_prediction_before_actual_test": "Prefer11 affine points on one W-line L0 over the transvection orbit. Collinearity handles targets with affine projection on L0; otherwise the unique same-transvection-orbit L0 point reaches in2 since |X|=6>11/2 implies X+X=F11. Every other lineclass sees all11pencils; only L0's own class remains, with provider its whole11linepencil plus4gadgetneighbors of its Kvertex.",
+  "controlled_comparison": "Compare fixed transvection orbit with the11Ppoints of author class0/beta vertex0. No alternate L0/seed loop. Freeze actual beta labels by the author's PG canonical ordering and pencil/base/z convention.",
+  "revised_single_solver_scope": "Before any solver, root generalized to121binary choose<=9 arbitrary Kvertices. Their providers (whole pencil plus4gadgetneighbors) must cover121targets;8providers cannot by15*8<121. Choose any selectedKvertex as11point baseWline and lift the8others to singlepoints. This is the complete Wline-base family up to class copies, avoiding base seeds. Same one30CPU budget, no earlier solver was run.",
+  "all_base_capacity_prediction_before_test": "Any9selected Kvertices leave at least2 of11pencils unselected; their22targets can only be covered by the9selected gadget neighborhoods. For each of55omitted-penc il pairs, sum the9largest per-vertex gadget contributions outside those pencils. Values<22 strictly exclude that omitted pair. If all55exclude, stop without solver; otherwise one complete9provider model remains allowed.",
+  "forbidden":["old all-source D3 BFS","install","hash","Lean","seed ladder","UNKNOWN timer continuation"]
+}

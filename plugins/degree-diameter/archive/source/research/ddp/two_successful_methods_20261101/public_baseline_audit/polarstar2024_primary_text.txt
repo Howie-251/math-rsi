@@ -1,0 +1,1491 @@
+PAGE 1
+PolarStar: Expanding the Horizon of Diameter-3 Networks
+Kartik Lakhotia
+kartik.lakhotia@intel.com
+Intel
+Santa Clara, CA, USA
+Laura Monroe
+lmonroe@lanl.gov
+Los Alamos National
+Laboratory
+Los Alamos, NM, USA
+Kelly Isham
+kisham@colgate.edu
+Colgate University
+Hamilton, NY, USA
+Maciej Besta
+mbesta@inf.ethz.ch
+ETH Zürich
+Zurich, Switzerland
+Nils Blach
+nils.blach@inf.ethz.ch
+ETH Zürich
+Zurich, Switzerland
+Torsten Hoefler
+torsten.hoefler@inf.ethz.ch
+ETH Zürich
+Zurich, Switzerland
+Fabrizio Petrini
+fabrizio.petrini@intel.com
+Intel
+Santa Clara, CA, USA
+ABSTRACT
+We present PolarStar, a novel family of diameter-3 network topolo-
+gies derived from the star product of low-diameter factor graphs.
+PolarStar gives the largest known diameter-3 network topolo-
+gies for almost all radixes, thus providing the best known scalable
+diameter-3 network. Compared to current state-of-the-art diameter-
+3 networks, PolarStar achieves 1.3× geometric mean increase in
+scale over Bundlefly, 1.9× over Dragonfly, and 6.7× over 3-D Hy-
+perX. PolarStar has many other desirable properties, including a
+modular layout, large bisection, high resilience to link failures and
+a large number of feasible configurations for every radix.
+We give a detailed evaluation with simulations of synthetic and
+real-world traffic patterns and show that PolarStar exhibits compa-
+rable or better performance than current diameter-3 networks.
+CCS CONCEPTS
+• Networks→ Network architectures; Network performance
+evaluation; Data center networks; • Mathematics of comput-
+ing→ Graph theory; Extremal graph theory.
+KEYWORDS
+Networks; High-Performance Networks; Network Topology; Net-
+work Architecture; Network Evaluation; Extremal Graph Theory
+This research is, in part, based upon work supported by the Office of the Director
+of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity
+(IARPA), through the Advanced Graphical Intelligence Logical Computing Environ-
+ment (AGILE) research program, under Army Research Office (ARO) contract number
+W911NF22C0081. The views and conclusions contained herein are those of the au-
+thors and should not be interpreted as necessarily representing the official policies
+or endorsements, either expressed or implied, of the ODNI, IARPA, ARO, or the U.S.
+Government. This work was also supported by the U.S. Department of Energy through
+the Los Alamos National Laboratory, operated by Triad National Security, LLC, for
+the National Nuclear Security Administration of U.S. Department of Energy (Contract
+No. 89233218CNA000001), and by the U.S. DOE LDRD program at Los Alamos Na-
+tional Laboratory under project number 20230692ER. The U.S. Government retains
+an irrevocable, nonexclusive, royalty-free license to publish, translate, reproduce, use,
+or dispose of the published form of the work and to authorize others to do the same.
+This paper has been assigned the LANL identification number LA-UR-22-30347, ver. 2.
+This work is licensed under a Creative Commons Attribution
+International 4.0 License.
+SPAA ’24, June 17–21, 2024, Nantes, France
+© 2024 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-0416-1/24/06.
+https://doi.org/10.1145/3626183.3659975
+ACM Reference Format:
+Kartik Lakhotia, Laura Monroe, Kelly Isham, Maciej Besta, Nils Blach,
+Torsten Hoefler, and Fabrizio Petrini. 2024. PolarStar: Expanding the Horizon
+of Diameter-3 Networks. In Proceedings of the 36th ACM Symposium on
+Parallelism in Algorithms and Architectures (SPAA ’24), June 17–21, 2024,
+Nantes, France. ACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/
+3626183.3659975
+1 INTRODUCTION
+1.1 Motivation
+The largest current supercomputers contain tens to hundreds of
+thousands of processing nodes. For example, Frontier, the most
+powerful system in the Top500 list [49], has 9, 408 CPUs and 37, 632
+GPUs [13]. The fourth-ranked supercomputer, Fugaku, has 158, 976
+processing nodes [20]. Future supercomputers will be even larger,
+since the size of the system determines peak compute performance.
+Equally important is the diameter, as this affects communica-
+tion latency and injection bandwidth per switch. Low-diameter
+networks, especially of diameters 2 [33] and 3 [36], are of great
+interest, providing low-latency and cost-effective high-bandwidth
+communication infrastructure.
+We address here this question: what is the largest diameter-3
+network topology that can be built using switches of a given radix?
+Current technological advances make this question especially
+timely. The emergence of high-radix optical IO modules with high
+shoreline density has increased interest in scalable low-diameter
+networks [17, 34, 45, 61]. Co-packaging of these with compute nodes
+on the same chip greatly enhances available bandwidth per node.
+Each packet consumes bandwidth on only a few links, limiting neg-
+ative effects of tail latency and improving system performance [
+19].
+Low-diameter networks are then required to efficiently utilize
+bandwidth on co-packaged chips. Since each router is integrated
+with a compute node, scalability of a co-packaged system is iden-
+tified with the order of the graph defining the network topology.
+1.2 Related Work
+Given the importance of low-diameter topologies and the technolog-
+ical constraints on switch radix, it makes sense to design networks
+with the largest order (number of nodes) possible given diameter𝐷
+and router degree𝑑. This is the degree-diameter problem [46], and
+the order of𝐺 is bounded above by the Moore bound [28]. Networks
+with good Moore-bound efficiency (proximity to Moore bound) are
+not only highly scalable, but also cost-effective and power-efficient
+345
+
+PAGE 2
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+as they can realize a system of given size with relatively lower radix
+switches and fewer cables. Unfortunately, the largest known graphs
+for
+𝐷 > 2 and𝑑 > 2 are much smaller in size than the Moore bound.
+64, 79506
+63, 68962
+64, 40700
+64, 33792
+64, 11132
+62, 34200
+10
+20
+30
+40
+50
+0 32 64 96 128
+Percentage of Moore Bound
+Network Radix
+StarMax
+PolarStar
+Bundlefly
+Dragonfly
+Kautz Graph
+HyperX
+Spectralfly
+Figure 1: Scalability of direct diameter-3 topologies with respect to the Moore
+bound. Data labels show the largest number of nodes and corresponding
+radix in each topology for radix ≤ 64. StarMax denotes an upper bound on
+the largest graphs theoretically achievable with 𝑃− and𝑅−star products –
+the mathematical constructs used in state-of-the-art Bundlefly and PolarStar
+networks. For Spectralfly, which is not a fixed diameter topology, we only
+compare design points with diameter≤ 3 and largest scale for a given radix (if
+it exists). For Kautz networks, we consider each link as bidirectional.
+Some diameter-2 networks such as Polarfly [37] and Slimfly [7]
+approach the Moore bound. However, their scale is limited by
+the small Moore-bound for diameter-2 (𝑑2+ 1 for radix𝑑). Since
+diameter-2 networks only span a few thousand nodes for feasible
+radixes, they are not suitable for massive-scale datacenters and
+HPC systems.
+On the other hand, diameter-3 networks have a high enough
+Moore bound to address scalability requirements (𝑑3−𝑑2+𝑑+ 1
+for radix𝑑). Dragonfly [36] and HyperX [2] are popular diameter-3
+topologies deployed in large systems [13, 39], but these topologies
+exhibit poor Moore-bound efficiency, as shown in Figure 1, which
+drives up the network cost and power consumption. Kautz net-
+works [44] used in SiCortex’s fabric [59], are directed topologies
+with near Moore-bound scalability for directed graphs. However,
+almost all deployed off-chip networking systems [9, 24, 31, 51, 60]
+and interconnects [2, 35, 36, 42] feature bidirectional links. Treating
+each link of a Kautz network as bidirectional doubles the degree of
+nodes, resulting in a higher Moore-bound and lower efficiency. For
+diameter-3, bidirectional Kautz networks have < 13% asymptotic
+Moore-bound efficiency, which is 2.4× smaller than PolarStar.
+Recently, Lei et al. introduced Bundlefly [40], a modular diameter-
+3 network based on star product of two graphs. Its inter-module
+links can be bundled into multi-core fibers to reduce cabling cost.
+However, its Moore-bound efficiency varies, as shown in Figure 1.
+Creating largest diameter-3 graphs is an open problem in mathe-
+matics. There is a big gap between the best-known diameter-3
+graphs and the Moore bound. The Combinatorics Wiki leader-
+board [46] lists some of the largest diameter-3 graphs as of 2013, up
+to radix 20. The construction in [6], also utilized by state-of-the-art
+Bundlefly [40], surpasses the leaderboard for radixes 18− 20. To the
+best of our knowledge, the construction in [6] also gives the largest
+known graphs for most radixes > 20, before our construction.
+In this paper, we construct a new family of diameter-3 graphs that
+improve upon the previous best [6, 46] for almost all radixes≥ 18,
+achieving a 1.3× geometric mean higher scale than Bundlefly [40].
+1.3 Contributions
+We propose a new family of network topologies called PolarStar
+that extends PolarFly [ 37] to large diameter-3 networks using a
+mathematical construct called the star product.
+• PolarStar gives the largest known diameter-3 direct networks for
+almost all radixes, achieving 1.3×, 1.9× and 6.7× geometric mean
+increase in scale over Bundlefly, Dragonfly and HyperX. The base
+graphs are some of the largest known diameter-3 graphs.
+• PolarStar reaches near-optimal scalability for diameter-3 star
+products that can be constructed with the currently known prop-
+erties of the factor graphs that give low-diameter star-products.
+Further optimizations on these diameter-limited star products
+are unlikely to provide notable benefits.
+• PolarStar extends several networking benefits of PolarFly, including
+a modular layout amenable to bundling of links into multi-core
+fibers and a large bisection cut.
+• PolarStar has a large design space and it exists with multiple
+configurations for every radix in[8, 128].
+• We design a routing mechanism for PolarStar using its theoreti-
+cal properties, and show comparable or better performance than
+existing diameter-3 networks on synthetic and real-world motifs.
+2 BACKGROUND
+2.1 Network Model
+In direct networks, each switch is directly linked to or integrated
+with a compute endpoint. Hence, the topology of a direct network
+can be modeled as an undirected graph𝐺(𝑉,𝐸) where𝑉(𝐺) is the
+set of switching nodes, or vertices,|𝑉(𝐺)| is the order of𝐺, and𝐸
+is the set of links, or edges. Each node has𝑑 links to other nodes
+where𝑑 is the network radix, or degree. The maximum length of
+shortest paths between any node pair is the diameter 𝐷. In this
+paper, we consider networks of diameter 3.
+2.2 The Moore Bound
+Moore bound [28] is an upper bound on the number of nodes 𝑁
+that a graph of degree𝑑 and diameter𝐷 may have. This bound is
+𝑁≤ 1+𝑑·
+𝐷−1∑︁
+𝑖=0
+(𝑑− 1)𝑖.
+For diameter-3, the Moore bound is𝑁≤𝑑3−𝑑2+𝑑+ 1.
+The only graphs with𝐷≥ 2 and𝑑≥ 2 that achieve the Moore
+bound are cycles, the Hoffman-Singleton graph, the Petersen graph
+[5, 15, 28] and a hypothetical diameter-2 degree-57 graph [14].
+These graphs are not suited for large-scale network design: degree-
+2 cycles with low diameter are very small, and the others have
+only one design point each. Few graphs even come close to the
+Moore bound. The latest leaderboard of degree-diameter problem
+from [
+46] shows that the best known diameter-3 graphs, with the
+most relevant degrees, reach only 25− 30% of the Moore bound.
+The PolarStar construction proposed here is larger than the best
+known graphs, which are discussed in [6] and [40].
+346
+PAGE 3
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+2.3 Network Properties
+In this section, we compare PolarStar with Slimfly [7], PolarFly [37],
+Dragonfly [36], HyperX [ 2], MegaFly [ 23, 57], SpectralFly [ 63],
+Bundlefly [40] and Fat-trees, on the basis of several desirable net-
+work properties. This comparison may be seen in Table 1.
+T
+opology Direct Scalability Stable Design-space 𝐷≤ 3 Bundlability
+Fat-tr
+ee /reve /reve
+PolarFly /reve 
+Slimfly /reve 
+3-D HyperX 
+Dragonfly 
+Bundlefly 
+Megafly /reve 
+Spectralfly 
+PolarStar 
+ 
+Table 1: Network Properties assessment: battery levels represent network’s
+standing in terms of the corresponding property “ ”: very good, “ ”: fair,
+“/reve”: not good.𝐷 is Network Diameter
+Directness: Every switch in a direct network is attached to one
+or more endpoints, whereas indirect networks have some switch-
+ing nodes not attached to any endpoint. Directness is a desirable
+property; for example – if co-packaged modules are used – indirect
+networks such as Fat-tree and MegaFly require fabricating two
+types of chips, which increases their cost. Further, a switch-only
+chip in these topologies theoretically requires twice the number of
+ports than a co-packaged chip with an endpoint.
+Scalability
+: Absolute scale achieved by a topology depends upon
+the Moore bound for its diameter and its Moore-bound efficiency.
+Diameter-2 networks such as PolarFly [ 37] approach the Moore
+bound but are limited in scale as the bound is small for diameter
+2. Three-level Fat-trees scale similarly to diameter-2 networks but
+additional levels can be used to increase scalability.
+Diameter-3 networks have a large Moore bound that can cover
+hundreds of thousands of nodes with common switch radixes. How-
+ever, known diameter-3 networks such as HyperX and SpectralFly
+have poor Moore-bound efficiency. PolarStar has the highest Moore-
+bound efficiency among diameter-3 network topologies.
+Low-diameter
+: Networks with small diameter enable low-latency
+remote accesses and can sustain high ingestion bandwidth per
+switch. Diameter≤ 3 is preferred as it provides both performance
+and scalability at low cost.
+Stable Design-Space
+: A desirable topology provides several con-
+figurations for all radixes, and provides stable scaling (consistent
+Moore-bound efficiency without jitters). This allows system de-
+sign at various scales (dictated by customer demands) with limited
+choices for switch radixes (constrained by redesign costs, avail-
+ability etc.). Slimfly and PolarFly [7] have few feasible radixes and
+configurations. Bundlefly’s [40] Moore-bound efficiency fluctuates
+significantly with the radix (Figure 1). PolarStar features several con-
+figurations for every radix and has a more stable Moore-bound effi-
+ciency. Although SpectralFly can be constructed for many radixes,
+it has diameter-3 for very few radixes, as shown in Figure 1.
+Bundlability: Bundlefly [40] introduced the concept of bundling
+friendly networks as modular topologies with multiple links be-
+tween adjacent modules (logical groups of nodes) that can be packed
+together in a Multi-Core Fiber [3]. This reduces cabling cost and
+complexity. Both Bundlefly and PolarStar are amenable to bundling
+as per this description. The largest Dragonfly and Megafly construc-
+tions are less bundling friendly – there is one link between each
+pair of node groups. Multiple links can be used between adjacent
+groups to make these topologies bundlable [13]. However, doing so
+reduces their scalability and Moore-bound efficiency proportionally.
+Additionally, large racks that can accommodate multiple logical
+groups can also enable bundling inter-rack cables.
+3 APPROACH
+The star product is a non-commutative product of two factor graphs,
+presented by Bermond, Delorme and Farhi in [ 6]. Under certain
+conditions, the product can achieve a lower diameter than the
+sum of the diameters of the factors. Lei et al. used a star-product
+construction for Bundlefly [40].
+In this paper, we also use the star product, but devise new prop-
+erties for our factor graphs that differ from the original ones from
+[6] used for Bundlefly. These new properties permit larger factor
+graphs of our own design, and allow us to construct the PolarStar
+star-product topology, which is larger than Bundlefly and all other
+previously known diameter-3 networks.
+The factor graphs we use not only have large order but also have
+many other qualities that carry over to the star product, which
+are useful for networking. We analyze these and the networking
+characteristics of PolarStar throughout the paper.
+4 STAR PRODUCTS
+4.1 Intuition for the Star Product
+The star product generalizes the Cartesian product𝐺×𝐻. In the
+Cartesian product, copies of𝐻, called supernodes, replace vertices
+of structure graph𝐺. Edges join corresponding vertices in any two
+copies𝐻1 and𝐻2, when 𝐻1 and𝐻2 are joined by an edge in 𝐺.
+Figure 2a illustrates this.
+The edges of a star product are also determined by bijections
+between vertices in neighboring supernodes. In this case, however,
+the requirement that edges be constructed between correspond-
+ing vertices is relaxed. The bijections need not even be the same
+between different pairs of neighboring supernodes. Carefully select-
+ing the bijective connections may provide a product of diameter at
+most 1 more than that of the structure graph. We will later discuss
+how the selection of bijections permits this constrained diameter.
+Intuitively, the star product retains the large-scale form of the
+structure graph𝐺 and embeds copies of the supernode𝐻 in place
+of vertices of 𝐺. The supernodes are then connected bijectively,
+with edges as desired. Figure 2 compares a Cartesian product with
+an example star product on the same factor graphs with its large-
+scale structure graph and supernode embeddings and connectivity.
+Figure 5 shows our star product construction.
+4.2 Formal Definition
+The following formal Definition 1 is taken from [6]. In this paper,
+we call𝐺 the structure graph and𝐺′ the supernode.
+Definition 1. [6] Let 𝐺 = (𝑋,𝐸) and𝐺′ = (𝑋′,𝐸′) be two
+graphs . Take an arbitrary orientation of the edges of 𝐺 and let𝑈 be
+the resulting set of arcs. For each arc(𝑥,𝑦) in𝑈 , let𝑓(𝑥,𝑦) :𝑋′→𝑋′
+be a bijection. The star product 𝐺∗ =𝐺∗𝐺′ is defined as follows:
+347
+PAGE 4
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+(a) The Cartesian product𝐿3×𝐶4. Corresponding nodes in neighboring copies
+of𝐶4 are joined by an edge. The bijection is simply the identity.
+(b) An example star product𝐿3∗𝐶4. In this particular star product, neighboring
+supernodes are all joined with the same bijection 𝑓 =(01)( 2)( 3).
+Figure 2: A comparison of the Cartesian product 𝐿3×𝐶4 with an example star
+product𝐿3∗𝐶4. The structure graph 𝐿3 is the path graph on three vertices,
+and the supernode𝐶4 is the cycle graph on four vertices.
+(1) The vertex set of 𝐺∗ is the Cartesian product 𝑋×𝑋′.
+(2) Vertex(𝑥,𝑥′) is joined to vertex(𝑦,𝑦′) if and only if either
+(a) 𝑥 =𝑦 and(𝑥′,𝑦′)∈ 𝐸′, or
+(b)(𝑥,𝑦)∈ 𝑈 and𝑦′ = 𝑓(𝑥,𝑦)(𝑥′).
+In this definition, condition 2𝑎 replaces nodes of𝐺 with copies
+of𝐺′. Condition 2𝑏 joins copies of𝐺′ to each other. The bijection
+𝑓(𝑥,𝑦) in 2𝑏 is the rule for bijective connectivity from vertices of𝐺
+to vertices of𝐺′ across the arc(𝑥,𝑦).
+4.3 Order, Degree, and Diameter
+Using the following facts, one may construct a large diameter-
+constrained graph from two smaller graphs.
+(1) The number of vertices is|𝑉(𝐺∗)| =|𝑉(𝐺)||𝑉(𝐺′)|.
+(2) If the maximum degrees in𝐺 and𝐺′ are𝑑 and𝑑′ respectively,
+the maximum degree of𝐺∗ is𝑑∗≤𝑑+𝑑′.
+(3) If the diameters of𝐺 and𝐺′ are𝐷 and𝐷′, respectively, then
+the diameter of𝐺∗ is given by𝐷∗≤𝐷+𝐷′.
+Appropriate bijections for connectivity between adjacent supern-
+odes can reduce the diameter𝐷∗ to at most𝐷+ 1. In this paper, we
+will use the same bijection𝑓 for all arcs of the structure graph, and
+construct a star product with this restricted diameter. In Section
+5.2, we describe such a bijection.
+5 A LOW-DIAMETER STAR PRODUCT
+Section 4.3 gives upper bounds on degrees and diameters of star
+products. In Section 5.1, we define properties on the factor graph
+that allow us to construct a star product with diameter at most 1
+more than that of the structure graph.
+Bermond et al. describe properties P and P∗ on graphs𝐺 and𝐺′
+giving large star products with minimal or no increase in diameter
+over that of𝐺 [6]. Our new properties R and R∗ are similar in spirit
+but are not the same.
+In particular, our R∗ weakens P∗ by allowing any diameter, unlike
+P∗ which restricts diameter of𝐺′ to≤ 2. Our R strengthens P by
+requiring that all vertex pairs be joined by a path of length diameter
+𝐷 and consequently, by a path of length𝐷+ 1. In contrast, P only
+requires that vertices with a path of length 𝐷 between them be
+joined by a path of length𝐷+ 1 as well.
+Weakening P∗ permits us to design𝐼𝑄 , a𝐺′ supernode graph
+with Property R∗ that can have diameter > 2 and a larger order
+than previously known supernodes with Property P∗. Using 𝐼𝑄 ,
+and noting that Erdős-Rényi polarity graphs have Property R, we
+produce a larger star product having diameter 3.
+Using the new𝑅 properties, we thus improve on the two largest
+known star-product graphs given in [ 6], with 1.06× and 1.21×
+geometric mean improvement for radixes in the range [8, 128].
+In fact, this new family of diameter-3 graphs is larger than any
+diameter-3 graphs previously designed for almost all radixes.
+More importantly for this community, PolarStar is much larger
+than state-of-the-art Bundlefly [40], which is a𝑃-star-product based
+on [6]. Bundlefly does not use our larger supernode, nor does it use
+an optimal structure graph. PolarStar thus achieves 1.3× geometric
+mean larger scale than Bundlefly, for network radixes in[8, 128].
+5.1 Useful Factor-Graph Properties
+5.1.1 Structure-Graph Property 𝑅. This first property and its asso-
+ciated proposition apply to the structure graph𝐺, and highlight its
+path diversity. We will later see that this diversity enables reach-
+ability in𝐷+ 1 hops between all vertex pairs in the star product.
+Property R. A graph𝐺 of diameter𝐷 has Property R if any vertex
+pair𝑥,𝑦 ∈𝑉(𝐺) can be joined by a path of length 𝐷.
+Note that in the definition of Property R, self-loops (if they exist
+in𝐺) are permissible as part of the length-𝐷 path.
+5.1.2 Supernode Properties 𝑅∗ and 𝑅1. The next properties, R∗
+and R1, apply to the supernode𝐺′. These properties address paths
+internal to supernodes. Given that paths between supernodes are
+defined by application of a bijection
+𝑓 to supernode vertices, we
+may use these to define a short path through the star product.
+Property R∗. Graph𝐺′ satisfies Property R∗ if there is an involution
+𝑓 so that for any 𝑥′,𝑦′∈𝑉(𝐺′), at least one of the following is true:
+(a) 𝑦′ =𝑥′
+(b) 𝑦′ = 𝑓(𝑥′)
+(c)(𝑥′,𝑦′)∈ 𝐸(𝐺′)
+(d)(𝑓(𝑥′),𝑓(𝑦′))∈ 𝐸(𝐺′)
+Proposition 1. A graph𝐺′ of degree𝑑′ having Property R∗ has at
+most 2𝑑′+ 2 vertices.
+Proof. Fix some vertex𝑦 in𝐺′. We will count how many other
+vertices there can be. Let 𝑥 be a vertex in𝐺′. By Property R∗, at
+least one of the following is true:
+(1) 𝑦 =𝑥, giving exactly one choice for𝑥.
+(2) 𝑦 = 𝑓(𝑥): Since 𝑓 is a bijection, then there is exactly one
+choice for𝑥, namely𝑓−1(𝑦).
+(3)(𝑥,𝑦)∈ 𝐸(𝐺′), giving deg(𝑦) choices for𝑥.
+(4)(𝑓(𝑥),𝑓(𝑦)) ∈𝐸(𝐺′): since 𝑓 is a function, 𝑓(𝑦) is fixed.
+Therefore there are deg(𝑓(𝑦)) choices for𝑥.
+Altogether, we have at most 2+ deg(𝑦)+ deg(𝑓(𝑦)) total ver-
+tices, assuming all conditions are disjoint. Since deg(𝑦)≤ 𝑑′ and
+deg(𝑓(𝑦))≤ 𝑑′,𝐺′ can have at most 2+ 2𝑑′ vertices. □
+348
+PAGE 5
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+(a)𝑦′ = 𝑥′: An 𝑥′-alternating path
+of length 2 through the structure
+graph.
+(b) 𝑦′ = 𝑓(𝑥′): An 𝑥′-alternating
+path of length 3 through the struc-
+ture graph, using the length-2 𝑥′-
+alternating path between𝑎1 and𝑦.
+(c) (𝑥′,𝑦′) ∈ 𝐸(𝐺′): 𝑥′- and
+𝑦′-alternating paths of length 2
+through the structure graph, with
+a hop through supernode 𝑦 (or𝑥).
+(d) (𝑓(𝑥′),𝑓 (𝑦′)) ∈ 𝐸(𝐺′): 𝑥′-
+and𝑦′-alternating paths of length 2
+through the structure graph, with a
+hop through supernode𝑎1.
+Figure 3: This figure illustrates Theorem 1 on a diameter-2 structure graph with property 𝑅, showing how paths are constructed from 2- and 3-hop alternating
+paths. The star product path may include a 1-hop supernode detour, shown in 3c and 3d, which is permitted by Property R ∗ on𝐺′.
+Definition 2. Let𝐺∗𝐺′ be a star product where 𝐺′ has Prop-
+erty R∗. A𝑥′-alternating path in𝐺∗𝐺′ is a path between supernodes
+of the form((𝑎0,𝑥′),(𝑎1,𝑓(𝑥′)),(𝑎2,𝑥′),... ), where(𝑎0,𝑎 1,𝑎 2,...)
+is a path in 𝐺, and the second entries in the path elements alternate
+between𝑥′ and𝑓(𝑥′).
+When𝐺′ has Property R∗, the alternating path is the only kind
+of path that exists between supernodes, by definition of the star
+product. This is because𝑓 is an involution i.e.𝑓 2(𝑥′) =𝑥′.
+Subproperties (c) and (d) of Property R∗ allow a hop from any
+alternating path to any other. This is quite powerful, and is key to
+Theorem 1, establishing the low diameter of these star products.
+Lemma 1. Let𝐺∗𝐺′ be a star product where 𝐺′ has Property R∗.
+For all𝑥′∈𝐺′, there is an alternating path in 𝐺∗𝐺′ for every path
+in𝐺. All alternating paths are of this form.
+Proof. Follows from the definition of the bijective star product,
+and the fact that𝑓 2(𝑥′) =𝑥′ for all𝑥′. □
+The following Property R1 is Property𝑃𝑖 in [6] for the special
+case𝑖 = 1, which is needed for diameter-3 star products.
+Property R1. [6] A graph𝐺′ has Property R 1 if there is a bijection
+𝑓 , with 𝑓 2 an automorphism of𝐺′, so that the set of edges 𝐸(𝐺′)∪
+𝑓(𝐸(𝐺′)) is the entire set of edges in the complete graph on 𝑉(𝐺′).
+5.2 Star Products of Low Diameter
+Here we give criteria for a star product𝐺∗𝐺′ to have diameter at
+most𝐷+ 1. This occurs when𝐺 has diameter𝐷, and either
+• The structure graph𝐺 has Property R and the supernode𝐺′
+has Property R∗ (Theorem 1), or
+• The supernode𝐺′ has Property R1 (Theorem 2, [6]).
+We define a path in the star product from (𝑥,𝑥′) to(𝑦,𝑦′). The
+strategy here is to identify𝑥′- and𝑦′-alternating paths of length
+𝐷 from supernodes 𝑥 (or neighbors of 𝑥) to 𝑦. We take a single
+hop from the 𝑥′ to the 𝑦′ alternating paths if necessary, using
+Subproperties (c) and (d) from Property R∗.
+Figure 3 illustrates Theorem 1, showing the diameter-3 problem
+of interest for this paper. The theorem, its proof, and the figure give
+insight into routing strategies discussed in Section 9.2.
+Theorem 1. Let𝐺 and𝐺′ be graphs that satisfy Property R and R∗,
+respectively. Define𝑓(𝑥,𝑦)(𝑥′) = 𝑓(𝑥′) (from Property R∗) for every
+edge(𝑥,𝑦) of𝐺. If diameter of 𝐺 is𝐷, the star product 𝐺∗ =𝐺∗𝐺′
+is a graph with diameter at most 𝐷+ 1.
+Proof. Let(𝑥,𝑥′) and(𝑦,𝑦′) be nodes in𝐺∗𝐺′. By Property R
+of𝐺, there are length-𝐷𝑥′− and𝑦′−alternating paths joining su-
+pernodes𝑥 and𝑦, and also joining supernodes𝑎 and𝑦 in𝐺∗𝐺′,
+where𝑎 is a neighbor of𝑥 in𝐺.
+We consider the exhaustive set of cases relating 𝑥′ and𝑦′ as
+described in Property R∗. For simplicity of presentation, we assume
+that 𝐷 is even. The same proof holds for 𝐷 odd, reversing the
+reasoning for cases (a) and (b).
+(a) If 𝑦′ =𝑥′, we stay in the length-𝐷𝑥′-alternating path.
+(b) If𝑦′ = 𝑓(𝑥′), we take 1 hop to(𝑎,𝑓(𝑥′)) (𝑎 a neighbor of
+𝑥 in𝐺), then stay in the length-𝐷𝑥′-alternating path from
+(𝑎,𝑓(𝑥′)) to(𝑦,𝑓(𝑥′)), giving a length𝐷+ 1 path.
+In the remaining cases, we start with a𝐷-hop𝑥′- alternating path
+and take 1 hop in some supernode to a parallel𝐷-hop𝑦′- alternating
+path, giving a length𝐷+1 path. Supernode choice depends on which
+of(𝑥′,𝑦′) or(𝑓(𝑥′),𝑓(𝑦′)) is in𝐸(𝐺′).
+(c) If(𝑥′,𝑦′)∈ 𝐸(𝐺′), we may take 1 hop from(𝑏,𝑥′) to(𝑏,𝑦′)
+at any node(𝑏,𝑥′) in the𝑥′-alternating path. We reach such
+(𝑏,𝑥′) on even hops.
+(d) If(𝑓(𝑥′),𝑓(𝑦′))∈ 𝐸(𝐺′), we may take1 hop from(𝑏,𝑓 (𝑥′))
+to(𝑏,𝑓 (𝑦′)) at any node(𝑏,𝑓 (𝑥′)) in the𝑥′-alternating path.
+We reach such(𝑏,𝑓 (𝑥′)) on odd hops.
+□
+Each of the cases in the proof of Theorem 1 are illustrated in
+Figure 3, for𝐷 = 2. Figure 3c illustrates case (c), where the intra-
+supernode hop is taken 2 hops into the path at supernode 𝑦. We
+might also have taken this hop at supernode 𝑥 which is 0 hops
+into the path. Likewise, Figure 3d illustrates case (d), where the
+intra-supernode hop is taken 1 hop into the path at supernode𝑎1.
+The following theorem from [6] was stated for Property𝑃𝑖. We
+restate the theorem for our special case where𝑖 = 1, to get diameter
+𝐷+ 1. The proof is the same as that found in [6].
+349
+PAGE 6
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+Theorem 2. [6] Let𝐺 be a graph of diameter 𝐷≥ 2, and let𝐺′
+have Property R 1. Define 𝑓(𝑥,𝑦)(𝑥′) = 𝑓(𝑥′) (from Property R 1) for
+every arc(𝑥,𝑦) of an arbitrary orientation of the edges of 𝐺. Then
+𝐺∗𝐺′ has diameter at most 𝐷+ 1.
+6 CHOOSING GOOD FACTOR GRAPHS
+We want to choose the largest feasible structure graph and supern-
+ode, since the order of the star product is the product of the orders
+of the factor graphs. We also want factor graphs with properties
+useful for networking (including the𝑅 properties, among others).
+• For the structure graph, we use the Erdős-Rényi (𝐸𝑅𝑞) family
+of polarity graphs, introduced by Erdős and Rényi [21] and by
+Brown [11]. This family of graphs has Property R and is larger
+than any other known family of diameter-2graphs, so is an excel-
+lent structure graph candidate.𝐸𝑅𝑞 has many other networking
+advantages that the star-product inherits [18, 37, 38].
+• For the supernode, we construct a new graph having Property R∗
+called Inductive-Quad (IQ). IQ is larger than all other supernodes
+with properties known to produce diameter-3 star product with
+𝐸𝑅𝑞, and thus, is a better 𝐺′ candidate than any existing con-
+struction. IQ attains the bound on R∗ graphs; thus, no supernode
+with property R∗, P∗ or P1, can be larger than𝐼𝑄 .
+6.1 Choice of the Structure Graph 𝐺
+6.1.1 𝐸𝑅𝑞 and its Networking Properties. The Erdős-Rényi (ER) or
+Brown family of polarity graphs [11, 21] is based on finite projec-
+tive geometry, where adjacency is defined by orthogonality. These
+graphs were used for the PolarFly [ 37], SymSig [ 10] and demi-
+PN [12] networks, due to their many advantages [37, 38].
+These desirable networking properties carry over to the star
+product. Thus, the family of ER graphs is an excellent candidate for
+the structure graph, since these graphs do have Property R, as per
+Theorem 3. Advantages include:
+• 𝐸𝑅 graphs are larger than other known diameter-2 graphs at
+almost all degrees, as shown in Figure 4. The order of𝐸𝑅 graphs
+for degree𝑞+ 1 is𝑞2+𝑞+ 1, so they asymptotically reach the
+diameter-2 Moore bound (𝑞2+ 2𝑞+ 2).
+• 𝐸𝑅 has a large number of feasible degrees: an𝐸𝑅 graph exists for
+any degree𝑞+ 1, where𝑞 is a prime power.
+• 𝐸𝑅 has a modular layout.
+• 𝐸𝑅 has high bisection bandwidth.
+Figure 4: Moore-bound comparison for some known families of diameter-2
+graphs: the𝐸𝑅 graph, the McKay-Miller-Širáň graphs [ 48], the best Cayley
+graphs [1], and the Paley graph. It can be seen that any larger structure graph
+would only marginally increase the size of the star product.
+6.1.2 Construction of 𝐸𝑅𝑞. The vertices of𝐸𝑅𝑞 are vectors(𝑥,𝑦,𝑧),
+with𝑥,𝑦,𝑧 ∈ F𝑞, the finite field of order𝑞. Vertices𝑣 and𝑤 are adja-
+cent if their dot product𝑣·𝑤 = 0, with addition and multiplication
+as in F𝑞. Since adjacency is defined by orthogonality of two vectors,
+all multiples of any two vectors retain the same adjacency rela-
+tionship. Thus, we move to projective space, considering only the
+left-normalized form of each vector (so the leftmost non-zero entry
+of each vector is 1). The ER graph has these left-normalized vectors
+as the vertices and edges between all orthogonal vector pairs. Note
+that arithmetic over F𝑞 is used to compute orthogonality. See [47]
+for details of arithmetic over F𝑞 and [37] for ER graph construction.
+𝐸𝑅𝑞 is a diameter-2 graph. This may intuitively be seen by con-
+sidering perpendicularity in Euclidean space. Each pair of distinct
+vectors𝑣0 and𝑣1 is orthogonal to a common𝑤 =𝑣0×𝑣1, the cross
+product of𝑣0 and𝑣1. The 2-hop path from𝑣0 to𝑣1 is then given by
+(𝑣0,𝑤,𝑣 1). The intuition is similar in the case of finite geometry.
+Certain vertices in 𝐸𝑅𝑞 are self-orthogonal, since we use the
+arithmetic of F𝑞. If we allow the self-loops as factor-graph edges,
+the condition of Property R then holds for all vertices.
+Theorem 3. ER𝑞 has Property R for all prime powers 𝑞.
+Proof. Any pair of vertices(𝑥,𝑦) in an ER graph are connected
+by a 2−hop path via the cross product vertex𝑤 =𝑥×𝑦. For some
+pairs{𝑥,𝑦},𝑤 may be the same as𝑥 or𝑦, in which case the 2−hop
+path includes a self-loop. □
+Factor graph self-loops then add edges to the star product, as in
+Figure 5c, and we drop any remaining self-loops in the product.
+6.2 Choice of the Supernode 𝐺′
+(a) The structure graph𝐺:𝐸𝑅3.
+ (b)𝐺∗𝐺′:𝐸𝑅3∗𝑃𝑎𝑙𝑒𝑦(5).
+(c) The supernode𝐺′: Paley(5). We show a non-self-loop
+supernode (green) and the connections between two non-
+loop supernodes (green).𝐸𝑅3 happens to have vertices with
+self-loops. In that case, the star product adds edges to those
+supernodes, as shown in red.
+Figure 5: Construction of the star product 𝐸𝑅3∗𝑃𝑎𝑙𝑒𝑦(5).
+For the supernode𝐺′, we construct a new family of graphs, called
+Inductive-Quad (𝐼𝑄 ). This family, where it exists, has Property
+𝑅∗ and meets the upper bound on the order of a supernode. We
+also mention the Paley graph [22, 50] as a𝐺′ candidate. It is only
+slightly smaller, and has symmetricity, useful in network design.
+The Inductive-Quad and Paley graphs give the largest star-products
+for almost all radixes: the𝐼𝑄 supernode almost always produces the
+largest star product, and Paley produces the largest of the others.
+We show the star-product construction of PolarStar in Figure 5.
+350
+PAGE 7
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+Sup
+ernodes Order Permitted𝑑′ Symmetric 𝑅∗ 𝑅1
+Inductiv
+e-Quad 2𝑑′+ 2 0 or 3 (mod 4) N Y N
+Paley [22, 50] 2𝑑′+ 1 even, 2𝑑′+ 1 a prime power Y N Y
+BDF [6] 2𝑑′ all N Y N
+Cayley [48] 2𝑑′+𝛿,𝛿 ∈{ 0,±1} 2𝑑′+𝛿 a prime power Y N Y
+Complete 𝑑′+ 1 all Y Y Y
+Table 2: Comparison of parameters of degree 𝑑′ supernodes.
+Other supernode topologies may be of interest, so we mention
+these here for completeness. For instance, complete graphs provide
+densely-connected regions of locality, and Cayley graphs are highly
+symmetric [
+48]. The BDF graphs are designed in [6] specifically for
+large star products. We list supernode choices in Table 2, and show
+the orders of𝐼𝑄 and Paley for relevant radixes in Figure 7.
+6.2.1 Construction of Inductive-Quad Graphs. We show here a new
+construction of a degree-𝑑′ R∗ graph that reaches the upper bound
+2𝑑′+ 2 on order of R∗ graphs.
+We begin with two base R∗ Inductive-Quad graphs shown in
+Figure 6a:𝐼𝑄 0 of degree𝑑′ = 0 with 2 vertices, and𝐼𝑄 3 of degree
+𝑑′ = 3 with 8 vertices. Both have 2𝑑′+ 2 vertices.
+We then inductively construct a graph of degree 𝑑′+ 4 with
+Property R∗ from a graph𝐼𝑄𝑑′ of degree𝑑′ with Property R∗ that
+has 2𝑑′+ 2 vertices. As shown in Figure 6b,𝑉(𝐼𝑄𝑑′) may be parti-
+tioned into two disjoint sets of𝑑+ 1 vertices each:𝐴 and𝑓(𝐴). To
+construct𝐼𝑄𝑑′+4, we add the 8 vertices of𝐼𝑄 3:
+{𝑥′,𝑓(𝑥′),𝑦′,𝑓(𝑦′),𝑧′,𝑓(𝑧′),𝑤′,𝑓(𝑤′)}
+along with the𝐼𝑄 3 edges. Next, we add the following edges:
+• between{𝑥′,𝑓(𝑥′),𝑧′,𝑓(𝑧′)} and all vertices in𝐴, and
+• between{𝑦′,𝑓(𝑦′),𝑤′,𝑓(𝑤′)} and all vertices in𝑓(𝐴).
+𝑥′ 𝑓(𝑥′)
+𝑦′ 𝑓(𝑦′)
+𝑓(𝑧′)𝑧′
+𝑤′ 𝑓(𝑤′)
+𝑮𝟑
+′
+𝑥′ 𝑓(𝑥′)
+𝑮𝟎
+′
+(a) Base Inductive-Quad graphs of degree 𝑑′ = 0 and𝑑′ = 3.
+𝑥′ 𝑓(𝑥′)
+𝑦′ 𝑓(𝑦′)
+𝑓(𝑧′)𝑧′
+𝑤′ 𝑓(𝑤′)
+𝐺3
+′𝐴
+𝑓(𝐴)
+𝐺𝑑′
+′
+𝑮𝒅′+𝟒
+′
+(b) The construction of the Inductive-Quad graph of degree 𝑑′+ 4 from an
+Inductive-Quad graph of degree𝑑′ and𝐼𝑄 3.
+Figure 6: Inductive construction of Inductive-Quad topology with embedded
+bijection𝑓 that satisfies Property R∗.
+Proposition 2. 𝐼𝑄𝑑′ has 2𝑑′+ 2 vertices and degree 𝑑′ = 4𝑛 or
+𝑑′ = 4𝑛+ 3, and has Property R∗.
+Proof. The order and degree follow from the construction. Prop-
+erty R∗ follows by induction, noting by inspection that𝐼𝑄 0 and𝐼𝑄 3
+both have Property R∗, and noting that the inductive construction
+then guarantees Property R∗. □
+Corollary 1. For every integer 𝑛≥ 0, there exists a graph 𝐺′
+𝑑′ of
+degree𝑑′ = 4𝑛 or𝑑′ = 4𝑛+ 3 that satisfies𝑅∗ and has 2𝑑′+ 2 vertices.
+Corollary 1 implies that the 𝐼𝑄 graphs are larger than those dis-
+cussed in [6], as those graphs have a smaller𝐺′ supernode.
+It is also true that graphs𝐺′
+𝑑′ satisfying𝑅∗ and having 2𝑑′+ 2
+vertices exist only for𝑑′ = 4𝑛 or𝑑′ = 4𝑛+ 3 for some non-negative
+integer𝑛, but we do not prove this here.
+7 DESIGN SPACE OF POLARSTAR
+We evaluate the scale of network achievable by PolarStar and com-
+pare it against existing diameter-3 topologies.
+7.1 Theoretical Analysis
+Recall the degree of star product𝐺∗𝐺′ is deg(𝐺)+ deg(𝐺′), and
+the order is|𝑉(𝐺)|·|𝑉(𝐺′)|. Our structure graph is𝐸𝑅𝑞, which has
+degree𝑑 =𝑞+ 1 and order𝑞2+𝑞+ 1, where𝑞 is a prime power.
+Using a Inductive-Quad supernode of degree𝑑′, we get a PolarStar
+𝐺∗ of degree𝑑∗ =𝑑+𝑑′ and order
+|𝑉(𝐺∗)| =(𝑞2+𝑞+ 1)( 2𝑑′+ 2) =(𝑞2+𝑞+ 1)( 2𝑑∗− 2𝑞).
+The order is maximized for
+arg max𝑞 𝑉(𝐺∗) =(𝑑∗− 1)+
+√︁
+(𝑑∗− 1)(𝑑∗− 2)
+3 ≈ 2𝑑∗
+3 . (1)
+Substituting this value of 𝑞, we get that the maximum order of
+PolarStar for a given degree𝑑∗ is
+max
+Inductive-Quad
+|𝑉(𝐺∗)|≈ 8𝑑3∗+ 12𝑑2∗+ 18𝑑∗
+27 . (2)
+Similarly, maxPaley|𝑉(𝐺∗)|≈ 8𝑑 3
+∗
+27 . Thus, PolarStar asymptotically
+reaches 8
+27
+th Moore bound for diameter-3 graphs.
+In practice, the degree distribution among factor graphs is con-
+strained as (a)𝑞 must be a prime power in an ER graph of degree
+𝑞+ 1, and (b) Inductive-Quad and Paley graphs exist for a subset
+of integer radixes, as shown in Table 2. Therefore, we evaluate all
+feasible combinations of𝑑 and𝑑′ =𝑑∗−𝑑 for both Inductive-Quad
+and Paley supernodes to find the largest configuration.
+7.2 Scalability in Practice
+Figure 1 compares the scalability of PolarStar and other direct
+diameter-3 topologies, in terms of their Moore-bound efficiency.
+Clearly, PolarStar exceeds the scalability of all known diameter-3
+topologies. Compared to HyperX [2] and Dragonfly [36], it achieves
+6.7× and 1.9× geometric mean increase in the order, respectively.
+Unlike the state-of-the-art Bundlefly [40], PolarStar offers a con-
+struction for every network radix and more consistent scaling with
+respect to the Moore bound. Overall, it is 1.3× geometric mean
+larger than Bundlefly, which results from the use of more scalable
+structure graphs and supernodes in its star product, with more
+possibilities of degree distributions for better optimization of scale.
+PolarStar also approaches the optimal scale for a star-product
+network with the currently known factor graph properties that give
+a diameter-3 product. This is because (a) the Erdős-Rényi structure
+351
+PAGE 8
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+16, 1330
+32, 9906
+64, 79506
+128, 627570
+1E+1
+1E+2
+1E+3
+1E+4
+1E+5
+1E+6
+0 32 64 96 128
+Number of Nodes
+Network radix
+PolarStar-QuadGraph
+16, 1197
+32, 9525
+64, 77613
+128, 620597
+0 32 64 96 128
+Network radix
+PolarStar-Paley
+Figure 7: Feasible combinations of radix and order in PolarStar.
+graph asymptotically reaches the diameter-2 Moore bound, and
+(b) the Inductive-Quad supernode topology reaches the optimal
+order for graphs satisfying Property R∗.
+For all radixes, the largest PolarStar order for degrees𝑘∈[ 8, 128]
+is constructed with the Inductive-Quad supernode, except 𝑘 =
+23, 50, 56, 80, where Paley supernode gives a larger topology. Po-
+larStar also offers a wide range of network orders for each radix, as
+shown in Figure 7. This diversity of feasible designs is enabled by
+varying (a) the degree distribution between structure and supernode
+graphs, and (b) the choice of supernode graph.
+8 LAYOUT
+Physical deployment favors modular topologies comprised of smaller
+identical subgraphs that may be implemented as blades or racks.
+Also, if multiple links connect adjacent modules, they can be bun-
+dled into Multicore Fibers (MCFs) to reduce cable count [3, 40]. We
+explain the hierarchically modular structure of PolarStar shown in
+Figure 8 and point to opportunities for bundling links in PolarStar.
+Consider a maximum order PolarStar of degree 𝑑∗ with 𝐸𝑅𝑞
+structure graph of degree𝑞+ 1≈ 2𝑑∗
+3 (Equation (1)), and Inductive-
+Quad supernode of degree𝑑′ =𝑑∗−(𝑞+ 1). In this PolarStar, the
+supernode is the smallest building block (Figure 5) of2𝑑∗− 2𝑞 nodes,
+and is replicated 𝑞2+𝑞+ 1 times (once per node of 𝐸𝑅𝑞). There
+are 2(𝑑∗−𝑞) links between each pair of adjacent supernodes. If
+these can be bundled in an MCF, we get 𝑞(𝑞+ 1)2 inter-module
+MCFs (same as the non-self-loop edges in 𝐸𝑅𝑞 [37]). Therefore,
+such bundling reduces the global cables by a factor of≈ 2𝑑∗
+3 .
+The next level in modular hierarchy is the supernode clusters. As
+shown in [37],𝐸𝑅𝑞 graph can be divided into𝑞+ 1 clusters with
+approximately𝑞 links between each pair of clusters. In PolarStar,
+this translates to 𝑞+ 1 supernode clusters with approximately 𝑞
+bundles of links between each pair as shown in Figure 8c.
+9 EV ALUATION: SYNTHETIC PATTERNS
+9.1 Topologies
+We compare PolarStar with Bundlefly [40], Megafly [23, 57] and
+Spectralfly [63] as state-of-the-art diameter-3 networks, 3-D Hy-
+perX [2] and Dragonfly [ 36] as popular diameter-3 networks in
+practice, and 3-level Fat-trees [43] as the most widely used network,
+as is standard, using Booksim simulator [30].
+Networks such as torus, hypercube or Flattened Butterfly have
+been shown to have lower performance than these baselines [7, 36].
+We also explored the Galaxyfly family of flexible low-diameter
+topologies [41]. A diameter-3 Galaxyfly is isomorphic to a Dragon-
+fly, which is included in the comparison.
+Netw
+ork Parameters # Routers Network
+Radix # Endpoints
+PolarStar
+with Inductive-Quad (PS-IQ) 𝑑=12, 𝑑′=3, p=5 1,064 15 5,320
+PolarStar with Paley (PS-Pal) 𝑑=9, 𝑑′=6, p=5 993 15 4,965
+Bundlefly (BF) 𝑑=11, 𝑑′=4, p=5 882 15 4,410
+3-D HyperX (HX) 9× 9× 8 , p=8 648 23 5,184
+Dragonfly (DF) a=12, h=6, p=6 876 17 5,256
+Spectralfly (SF) 𝜌=23,𝑞=13, p=8 1,092 24 8,736
+Megafly (MF) 𝜌=8,𝑎=16, p=8 1,040 16 4,160
+3-level Fat-tree (FT) n=3, p=18 972 36 5,832
+Table 3: Simulated configurations of topologies. Endpoints per router =𝑝.
+The configurations of topologies used are shown in Table 3. For
+direct diameter-3 networks,𝑝, the number of endpoints per router,
+is 1/4th of total ports (1/3rd of the network radix). For Fat-tree
+and Dragonfly, we use the built-in BookSim constructions and
+routing [30]. Booksim’s Fat-tree topology for router radix 2𝑝 and
+3 layers has𝑝2 = 324 routers in each layer, with top layer routers
+having half the radix (18). This configuration supports𝑝3 = 5, 832
+endpoints. In Megafly and Fat-tree, half and one-third of the routers,
+respectively, have endpoints on half of their ports.
+9.2 Minimal Path Computation in PolarStar
+We use the properties of structure graph𝐺 and supernode𝐺′ to
+compute each minimal path (minpath) in PolarStar. This signifi-
+cantly reduces the storage requirements of the router compared
+to table-based routing which stores output port along minpath
+towards every router in the network.
+The structure graph in PolarStar is anErdős-Rényi polarity graph
+with diameter𝐷 = 2 and has Property R. We describe minpaths
+in Inductive-Quad supernode that satisfies Property R∗; computa-
+tion for a Paley supernode is similar. Our minpath computations
+are amenable to incremental routing and therefore, suitable for
+destination-based routing.
+If the source and destination are adjacent, minpath is just the
+edge between them. Next, we show that when source and destina-
+tion are in adjacent supernodes, there is a 2-hop minpath between
+them. These paths are graphically illustrated in Figure 3 when
+routing from(𝑎1,𝑓(𝑥′)) to(𝑦,𝑦′). For clarity and alignment with
+Figure 3, we assume(𝑎1,𝑓(𝑥′)) is the source, and(𝑦,𝑦′) is the des-
+tination. We compute the minimal paths in this case by individually
+evaluating all scenarios of Property R∗:
+(a) 𝑦′ =𝑥′→(𝑎1,𝑓(𝑥′)) and(𝑦,𝑥′) are adjacent.
+(b) 𝑦′ = 𝑓(𝑥′)→ We do not hop to supernode𝑦 directly from
+the source. From Property R, there is a 2-hop path(𝑎1,𝑏 1,𝑦)
+in structure graph𝐺. We take the corresponding path in𝐺∗
+which is((𝑎1,𝑓(𝑥′)),(𝑏1,𝑥′),(𝑦,𝑓(𝑥′))), see Figure 3b.
+(c)(𝑦′,𝑥′)∈ 𝐸(𝐺′)→ we use the path
+((𝑎1,𝑓(𝑥′)),(𝑦,𝑥′),(𝑦,𝑦′)), as shown in Figure 3c.
+(d)(𝑓(𝑦′),𝑓(𝑥′))∈ 𝐸(𝐺′)→ we use the path
+((𝑎1,𝑓(𝑥′)),(𝑎1,𝑓(𝑦′)),(𝑦,𝑦′)), as shown in Figure 3d.
+Lastly, we consider the case when source and destination are
+neither adjacent nor in adjacent supernodes. This is also shown in
+Figure 3 where source is(𝑥,𝑥′) and destination is(𝑦,𝑦′). From Prop-
+erty R, there exists a 2-hop path(𝑥,𝑎 1,𝑦) in𝐺. In𝐺∗, we always hop
+352
+PAGE 9
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+(a) Modular layout for 𝐸𝑅7 graph [37]. Each group
+of 3 triangles with a common node is a non-quadric
+cluster. Red nodes form a quadric cluster. Magenta
+edges connect two clusters.
+(b) Layout of PolarStar 11 with an 𝐸𝑅7 structure
+graph. Each𝐸𝑅7 node becomes an𝐼𝑄 3 supernode
+in PolarStar. The highlighted links and incident
+supernodes are a supernode cluster.
+(c) Each pair of supernode clusters in PolarStar are
+connected by multiple link bundles in magenta.
+Each link bundle corresponds to a single inter-
+cluster link of𝐸𝑅7 shown in Figure 8a.
+Figure 8: Hierarchical Modular Layout for PolarStar derived from a layout for ER structure graphs used in the PolarFly network [ 37]. Adjacent supernodes are
+connected by a bundle of links and adjacent supernode clusters are connected by multiple such bundles.
+from(𝑥,𝑥′) to(𝑎1,𝑓(𝑥′)). Since(𝑎1,𝑓(𝑥′)) is in a supernode adja-
+cent to(𝑦,𝑦′), we then take the 2-hop path to(𝑦,𝑦′) as described
+above, giving an overall path of length at most 3.
+9.3 Routing
+We use the following well-known routing schemes:
+• Minimal Routing (MIN): Each packet between the source and
+destination is routed along a shortest path. In MF, we use the path
+diversity between routers within the same supernode (group). We
+saw poor performance on SF and BF when using a single minpath
+per router pair, so for these we store all minpaths for every
+destination in a large routing table. HX also uses all minpaths but
+computes them by aligning coordinates in each dimension, so
+does not require large routing tables [2]. For PolarStar, minpath
+is analytically computed as described in Section 9.2. It only stores
+shortest paths in the structure graph and requires significantly
+less memory compared to SF and BF.
+• Load-balancing Adaptive Routing (UGAL): Valiant routing bal-
+ances the load by misrouting each packet via a randomly chosen
+intermediate router. In our implementation, we sample4 interme-
+diate routers at random for misrouting. We predict path latency
+for valiant paths and minpaths using local buffer occupancy, and
+select the smallest latency path. Note that UGAL routing in SF,
+BF and HX uses multiple minpaths stored in routing tables.
+9.4 Simulation Setup
+We analyze network performance using the cycle-accurate BookSim
+simulator [30]. Simulation parameters (latency, bandwidth) are
+normalized to the values of a single link. Credit-based flow-control
+is used to create backpressure and restrict injection for congestion-
+control. Packets are of size 4 flits and input-queued routers have
+128 flit buffers per port and 4 virtual channels (VCs). Dragonfly and
+Megafly respectively use 2 and 1 VCs for MIN routing, and 3 and 2
+VCs for UGAL routing. A warm-up phase precedes simulations so
+the network may reach steady-state before measurements.
+We analyze network performance for synthetic traffic patterns
+that represent crucial applications. Such patterns are widely used
+to evaluate network topologies [2, 7, 36, 37, 40].
+(1) Uniform random traffic – the destination of each packet is se-
+lected uniformly at random (represents graph processing and
+irregular algorithms e.g. sparse linear algebra [8, 16]).
+(2) Random permutation traffic – a fixed permutation mapping𝜏
+of source to destination routers is chosen uniformly at random.
+Endpoints on a router𝑅𝑠 transmit only to corresponding end-
+points on router𝜏(𝑅𝑠). This pattern also emulates permutation
+traffic for co-packaged nodes with both compute and router. Per-
+mutation traffic is commonly seen in FFT, physics simulations
+and collectives [7]. The random permutation pattern represents
+traffic generated by these applications when process IDs are
+randomly mapped to nodes.
+(3) Bit Shuffle traffic - the destination address is obtained by shifting
+the source address bits to the left by 1 (𝑑𝑖 =𝑠(𝑖−1) mod𝑏). This
+pattern is common in FFT and sorting algorithms [4].
+(4) Bit Reverse traffic - the destination address is obtained by revers-
+ing the bit order of source address (𝑑𝑖 =𝑠𝑏−𝑖−1). This pattern
+occurs in Cooley-Tukey FFT, binary search and dynamic tree
+data structures [25, 55, 62].
+Bit Shuffle and Bit Reverse traffic uses2𝑏 endpoints, where 2𝑏 is the
+largest power of two no more than the total endpoints. Endpoint IDs
+are contiguous for each router and supernode/group in hierarchical
+topologies (PolarStar, Bundlefly, Dragonfly, Megafly, Fat-tree). In
+such topologies, almost all endpoints in a supernode communicate
+with only two other supernodes under Bit Shuffle traffic.
+9.5 Results
+Figure 9 compares PolarStar performance against the baseline topolo-
+gies, for different routing schemes and traffic patterns. Labels fol-
+low the scheme <topology>-<routing>. Load is normalized to the
+peak injection bandwidth.
+Overall, PS-Pal and PS-IQ perform competitively for most of the
+patterns. With MIN routing, PS-Pal and PS-IQ sustain more than
+75% of full injection bandwidth (load) on uniform traffic. SF and BF
+use all minpaths available and have marginally better performance,
+but require significantly higher storage for routing tables than PS-*.
+With adaptive UGAL routing, PS-Pal and PS-IQ sustain between
+0.4 to 0.6 of the full load on various traffic patterns. Their perfor-
+mance is significantly better than DF and is comparable to BF (also
+a star-product), even though BF stores multiple minpaths for UGAL.
+353
+PAGE 10
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+0.0 0.2 0.4 0.6 0.8 1.0
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+DF-MIN
+FT-NCA
+MF-MIN
+PS-IQ-MIN
+PS-Pal-MIN
+(a) Uniform traffic, MIN routing.
+0.0 0.2 0.4 0.6 0.8 1.0
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-M_MIN
+HX-M_MIN
+PS-IQ-MIN
+PS-Pal-MIN
+SF-M_MIN (b) Uniform traffic, MIN routing.
+0.0 0.2 0.4 0.6 0.8 1.0
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-UGAL
+DF-UGAL
+FT-NCA
+HX-UGAL
+MF-UGAL
+PS-IQ-UGAL
+PS-Pal-UGAL
+SF-UGAL
+(c) Uniform traffic, UGAL routing.
+0.0 0.2 0.4 0.6
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-UGAL
+DF-UGAL
+FT-NCA
+HX-UGAL
+MF-UGAL
+PS-IQ-UGAL
+PS-Pal-UGAL
+SF-UGAL (d) Random Permutation traffic.
+0.0 0.2 0.4 0.6 0.8 1.0
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-UGAL
+DF-UGAL
+FT-NCA
+HX-UGAL
+MF-UGAL
+PS-IQ-UGAL
+PS-Pal-UGAL
+SF-UGAL
+(e) Bit-reverse traffic.
+0.0 0.2 0.4 0.6
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-UGAL
+DF-UGAL
+FT-NCA
+HX-UGAL
+MF-UGAL
+PS-IQ-UGAL
+PS-Pal-UGAL
+SF-UGAL (f) Bit-shuffle traffic.
+Figure 9: Performance comparison of several topologies. Latency is measured
+up to the highest injection rate for which simulation is stable. Beyond this,
+the network is saturated and latency increases with simulation time. In SF and
+BF, each routing table stores all minpaths to every destination. Unlike other
+topologies, they exhibit subpar performance when a single minpath is used.
+Bit Shuffle performance of MF and DF is poor because they only
+have one link between each pair of supernodes [ 23], as opposed
+to BF and PS-* which have multiple links between the supernodes.
+This pattern thus highlights the benefits of star-product topologies
+over DF and MF. Comparatively, MF performs better on Bit Reverse
+pattern which has more balanced load distribution. For most traffic
+patterns, HX and SF sustain the highest injection rate. They have
+a high degree of symmetry, and high link density. However, they
+lack scaling efficiency (Figure 1) and have6.7× and 12.8× geometric
+mean lower scale than PolarStar, respectively.
+9.6 Adversarial Traffic
+For hierarchical topologies – PS-*, BF, DF and MF, we implement
+an adversarial pattern where all endpoints in a supernode transmit
+to endpoints in only one other supernode, resulting in congestion
+on global (inter-supernode) links. For every source and destination
+pair, we enforce the longest possible minpath (3-hops in PS-*, BF, DF
+and MF, and 4-hops in FT), and in PS-* and BF, also the maximum
+number of global hops (3 in PS-*, 2 in BF). This traffic pattern has
+been used for worst-case analysis of BF, DF and MF [23, 36, 40]. This
+may not be the worst-case pattern for PS-*. The true worst-case
+0.0 0.2 0.4 0.6 0.8
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+BF-UGAL
+DF-UGAL
+MF-UGAL
+PS-IQ-UGAL
+PS-Pal-UGAL
+0.0 0.2 0.4 0.6 0.8 1.0
+Offered Load
+0
+20
+40
+60
+80
+100Average Latency
+ FT-NCA
+PS-IQ-UGAL
+PS-Pal-UGAL
+Figure 10: Performance of topologies under adversarial traffic.
+may depend on the routing algorithm and the minimum bisection,
+which is NP-hard to compute for generic graphs.
+Figure 10 shows network performance for this traffic pattern.
+DF and MF saturate at the lowest bandwidth with only a single
+link between each supernode pair. BF and PS-* perform better
+because they have multiple links between every supernode pair. PS-
+IQ performance is better than BF and PS-Pal because of a relatively
+larger proportion of global links in the particular configuration.
+10 EV ALUATION: REAL-WORLD MOTIFS
+10.1 Simulation Setup
+To compare the performance of topologies on real-world motifs, we
+use the SST simulator [54] and the network configurations listed in
+Table 3, and construct topologies using SST’s Merlin library [27].
+We compare PolarStar (PS-IQ) against the built-in Dragonfly,
+HyperX and Fat-tree modules in Merlin. We evaluate both MIN
+and adaptive UGAL routing mechanisms for these topologies. For
+HyperX, Merlin provides DOAL routing which adaptively routes at
+most once in each dimension. For simulation, we set router buffer
+size to 64 KB per port, router and link latencies to 20 ns and link
+bandwidth to 4 GBps.
+We use two motifs obtained from the Ember Communication
+Pattern Library [26] of SST:
+• Allreduce – An important collective in scientific computing, linear
+solvers and distributed Machine Learning [52, 53, 56].
+• Sweep3D – This is a wavefront communication pattern moving di-
+agonally on a 2D processor grid. It stresses network latency and is
+commonly seen in particle simulations and iterative solvers [29].
+Message size is 64KB for Allreduce. For both motifs, we measure
+time for 10 iterations. Process IDs are mapped linearly to endpoints.
+10.2 Results
+0
+600
+1200
+1800
+2400
+3000
+3600
+MIN UGAL
+Time (ms)
+PolarStar
+Dragonfly
+HyperX
+Fat-tree
+(a) Allreduce Collective
+0
+20
+40
+60
+80
+100
+120
+MIN UGAL
+Time (ms)
+PolarStar
+Dragonfly
+HyperX
+Fat-tree (b) Sweep3D motif
+Figure 11: Performance of the Allreduce and Sweep3D motifs.
+354
+PAGE 11
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+Allreduce executes fastest on Fat-tree with similar performance
+on both MIN and adaptive UGAL routing. On the other hand, UGAL
+performs significantly better than MIN on PolarStar, Dragonfly and
+HyperX. PolarStar execution time on Adaptive routing is compara-
+ble to Fat-tree and better than HyperX. It achieves 2.4× and 1.4×
+speedup over Dragonfly with MIN and UGAL routing. On Sweep3D,
+PolarStar is marginally faster than Dragonfly with MIN routing. On
+UGAL routing, PolarStar’s performance is similar to HyperX and
+Fat-tree, and 1.28× better than Dragonfly. The improvement over
+MIN routing is smaller than that seen on Allreduce.
+Overall, PolarStar performs better than Dragonfly and compa-
+rable to Fat-tree and HyperX. However, it has significantly higher
+Moore-bound efficiency than HyperX (Figure 1) and can achieve
+similar scale with smaller switch radix (Table 3).
+11 STRUCTURAL ANALYSIS
+11.1 Bisection Analysis
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0 32 64 96 128
+Normalized Edges in Bisection
+Network Radix
+PolarStar
+HyperX
+Bundlefly
+Dragonfly
+Jellyfish
+Spectralfly
+Megafly
+Optimal
+Figure 12: Fraction of links crossing the minimum bisection estimated by
+METIS [ 32]. PolarStar, Bundlefly and Spectralfly use their largest feasible
+(diameter-3) constructions for each radix. Jellyfish has the same radix and
+scale as PolarStar. Fat-tree and Megafly bisection is normalized by the network
+links incident with routers that have attached endpoints.
+Figure 12 shows the minimum bisection of different topologies
+for network radix in range[8, 128]. The minimum bisection is esti-
+mated using METIS [32] for PolarStar, Spectralfly, Megafly, Bundle-
+fly and Dragonfly. We also compare against Jellyfish which uses a
+random graph topology [58]. Among the direct networks, Jellyfish
+has the highest fraction of links in bisection due to the random
+connectivity between vertices, though its diameter is more than
+3. Spectralfly uses Ramanujan graphs that optimize the expansion
+properties. Hence, it has a large bisection (comparable to Jellyfish),
+but very few feasible diameter-3 constructions. Among the other
+diameter-3 topologies, PolarStar has the highest proportion of links
+crossing the bisection, with an average of 29.6% across all radixes.
+Comparatively, Bundlefly, Dragonfly, HyperX and even the indi-
+rect Megafly only have 22
+.9%, 17.8%, 17.4% and 25.5% links in the
+bisection cut, respectively. The improved bisection cut can be attrib-
+uted to the (a) large bisection of the𝐸𝑅 topology of the structure
+graph [37], and (b) good radix distribution across supernode and
+structure graphs due to many choices for supernode radix.
+Figure 13 shows the size of bisection cut of PolarStar as a function
+of radix and supernode topologies. PolarStar with Inductive-Quad
+and Paley supernodes have an average 29.5% and 26.6% edges in
+the bisection cut, respectively. The former also offers a more stable
+bisection across a range of radixes. This is because Inductive-Quad
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0 32 64 96 128
+Normalized Edges in Bisection
+Network Radix
+PolarStar-IQ
+PolarStar-Paley
+Figure 13: Minimum bisection of PolarStar with Inductive-Quad and Paley
+supernodes, approximated by METIS [32].
+has more feasible radixes and allows better distribution of radix
+between structure graph and supernode. Comparatively, the limited
+choice of radixes for Paley graphs may result in a PolarStar with
+large supernodes and small structure graphs. Such a network will
+have small bisection because most of the links are concentrated
+within dense supernode subgraphs.
+3
+4
+5
+6
+7
+8
+9
+0 0.2 0.4 0.6 0.8
+Link Failure Ratio
+Network Diameter
+PolarStar-IQ Bundlefly Dragonfly HyperX Fat-tree Megafly Spectralfly
+2.5
+3
+3.5
+4
+4.5
+5
+5.5
+0 0.2 0.4 0.6 0.8
+Link Failure Ratio
+Average Shortest Path Length
+Figure 14: Network Diameter and Average Path Length as a function of random
+link failures. For Fat-tree and Megafly, we only consider the distance between
+nodes that have endpoints. PolarStar-Paley behavior is similar to PolarStar-IQ
+and is not shown for clarity.
+11.2 Fault Tolerance
+To estimate fault tolerance, we simulate 100 random link failure
+scenarios until disconnection. We randomly select a simulation with
+median disconnection ratio, and report the variation in network
+diameter and average shortest path length in Figure 14.
+PolarStar and Bundlefly have similar resilience with a 60% dis-
+connection ratio. Dragonfly has a higher 65% disconnection ratio.
+However, at low failure ratios, Dragonfly’s diameter and average
+shortest path length increase rapidly. This is likely because if a
+global link fails, shortest paths between corresponding groups have
+to traverse other groups. HyperX and Spectralfly are the most
+resilient of diameter-3 topologies due to higher connection den-
+sity, although they suffer from poor scalablity (Figure 1). All direct
+topologies in Figure 14 have a higher disconnection ratio than the
+indirect topologies Fat-tree and Megafly. Like Dragonfly, Megafly
+has only one global link between each pair of groups. Therefore,
+its diameter increases to 6 with just 5% failed links, and its average
+shortest path length increases faster than the Fat-tree.
+355
+PAGE 12
+SPAA ’24, June 17–21, 2024, Nantes, France Kartik Lakhotia et al.
+REFERENCES
+[1] Marcel Abas. 2017. Large Networks of Diameter Two Based on Cayley Graphs.
+In Computer Science On-line Conference. Springer, 225–233.
+[2] Jung Ho Ahn, Nathan Binkert, Al Davis, Moray McLaren, and Robert S Schreiber.
+2009. HyperX: topology, routing, and packaging of efficient large-scale networks.
+In Proceedings of the Conference on High Performance Computing Networking,
+Storage and Analysis. 1–11.
+[3] Yoshinari Awaji, Kunimasa Saitoh, and Shoichiro Matsuo. 2013. Optical Fiber
+Telecommunications VIB: Chapter 13. Transmission Systems Using Multicore Fibers.
+Elsevier Inc. Chapters.
+[4] Jun Ho Bahn and Nader Bagherzadeh. 2008. A generic traffic model for on-chip
+interconnection networks. Network on Chip Architectures (2008), 22.
+[5] Eiichi Bannai and Tatsuro Ito. 1973. On finite Moore graphs.Journal of the Faculty
+of Science, the University of Tokyo. Sect. 1 A, Mathematics 20 (1973), 191–208.
+[6] J.C. Bermond, C. Delorme, and G. Farhi. 1982. Large graphs with given degree
+and diameter III. Ann. of Discrete Math. 13 (1982), 23–32.
+[7] Maciej Besta and Torsten Hoefler. 2014. Slim Fly: A cost effective low-diameter
+network topology. In SC’14: proceedings of the international conference for high
+performance computing, networking, storage and analysis. IEEE, 348–359.
+[8] Maciej Besta and Torsten Hoefler. 2015. Accelerating irregular computations with
+hardware transactional memory and active messages. In Proceedings of the 24th
+International Symposium on High-Performance Parallel and Distributed Computing.
+161–172.
+[9] Mark S Birrittella, Mark Debbage, Ram Huggahalli, James Kunz, Tom Lovett,
+Todd Rimmer, Keith D Underwood, and Robert C Zak. 2015. Intel® omni-path
+architecture: Enabling scalable, high performance fabrics. In 2015 IEEE 23rd
+Annual Symposium on High-Performance Interconnects. IEEE, 1–9.
+[10] Dhananjay Brahme, Onkar Bhardwaj, and Vipin Chaudhary. 2013. SymSig: A low
+latency interconnection topology for HPC clusters. In 20th Annual International
+Conference on High Performance Computing. IEEE, 462–471.
+[11] W. G. Brown. 1966. On Graphs that do not Contain a Thomsen Graph.Can. Math.
+Bull. 9, 3 (1966), 281–285. https://doi.org/10.4153/CMB-1966-036-2
+[12] Cristóbal Camarero, Carmen Martínez, Enrique Vallejo, and Ramón Beivide.
+2016. Projective networks: Topologies for large parallel computer systems. IEEE
+Transactions on Parallel and Distributed Systems 28, 7 (2016), 2003–2016.
+[13] Charles Q Choi. 2022. The Beating Heart of the World’s First Exascale Super-
+computer. https://spectrum.ieee.org/frontier-exascale-supercomputer.
+[14] C. Dalfó. 2019. A survey on the missing Moore graph. Linear Algebra Appl.
+(2019).
+[15] R. M. Damerell. 1973. On Moore graphs. Proc. Camb. Phil. Soc. 74 (1973), 227–236.
+[16] Hoang-Vu Dang, Roshan Dathathri, Gurbinder Gill, Alex Brooks, Nikoli Dryden,
+Andrew Lenharth, Loc Hoang, Keshav Pingali, and Marc Snir. 2018. A lightweight
+communication runtime for distributed graph analytics. In2018 IEEE International
+Parallel and Distributed Processing Symposium (IPDPS). IEEE, 980–989.
+[17] Stuart Daudlin, Anthony Rizzo, Nathan C Abrams, Sunwoo Lee, Devesh Khilwani,
+Vaishnavi Murthy, James Robinson, Terence Collier, Alyosha Molnar, and Keren
+Bergman. 2021. 3D-Integrated Multichip Module Transceiver for Terabit-Scale
+DWDM Interconnects. In Optical Fiber Communications, OFC 2021.
+[18] Aleyah Dawkins, Kelly Isham, Ales Kubicek, Kartik Lakhotia, and Laura Monroe.
+2024. Edge-Disjoint Spanning Trees on Star-Product Networks. arXiv preprint
+arXiv:2403.12231 (2024).
+[19] Jeffrey Dean and Luiz André Barroso. 2013. The Tail at Scale. Commun. ACM
+56 (2013), 74–80. http://cacm.acm.org/magazines/2013/2/160173-the-tail-at-
+scale/fulltext
+[20] Jack Dongarra. 2020. Report on the Fujitsu Fugaku System. Technical Report
+ICL-UT-20-06. University of Tennessee, Knoxville.
+[21] Paul Erdős and Alfred Rényi. 1962. On a problem in the theory of graphs. Publ.
+Math. Inst. Hungar. Acad. Sci. 7A (1962), 623–641.
+[22] Paul L. Erdos and Alfréd Rényi. 1963. Asymmetric graphs. Acta Mathematica
+Academiae Scientiarum Hungarica 14 (1963), 295–315.
+[23] Mario Flajslik, Eric Borch, and Mike A Parker. 2018. Megafly: A topology for
+exascale systems. In High Performance Computing (ISC High Performance 2018).
+Springer, 289–310.
+[24] Denis Foley and John Danskin. 2017. Ultra-performance Pascal GPU and NVLink
+interconnect. IEEE Micro 37, 2 (2017), 7–17.
+[25] Bernard Gold and Charles M Rader. 1969. Digital processing of signals. Digital
+processing of signals (1969).
+[26] Simon David Hammond, Karl Scott Hemmert, Michael J Levenhagen, Arun F
+Rodrigues, and Gwendolyn Renae Voskuilen. 2015. Ember: Reference Communi-
+cation Patterns for Exascale. Technical Report. Sandia National Lab.(SNL-NM),
+Albuquerque, NM (United States).
+[27] Karl Scott Hemmert. 2018. Merlin Element Library Deep Dive. Technical Report.
+Sandia National Lab.(SNL-NM), Albuquerque, NM (United States).
+[28] A. J. Hoffman and R. R. Singleton. 1960. On Moore Graphs with Diameters 2
+and 3. IBM Journal of Research and Development 4, 5 (1960), 497–504. https:
+//doi.org/10.1147/rd.45.0497
+[29] Adolfy Hoisie, Olaf Lubeck, and Harvey Wasserman. 2007. Performance analysis
+of wavefront algorithms on very-large scale distributed systems. In Workshop on
+wide area networks and high performance computing. Springer, 171–187.
+[30] Nan Jiang, Daniel U Becker, George Michelogiannakis, James Balfour, Brian
+Towles, David E Shaw, John Kim, and William J Dally. 2013. A detailed and
+flexible cycle-accurate network-on-chip simulator. In 2013 IEEE international
+symposium on performance analysis of systems and software (ISPASS). IEEE.
+[31] Christoforos Kachris and Ioannis Tomkos. 2012. A survey on optical interconnects
+for data centers. IEEE Communications Surveys & Tutorials 14, 4 (2012), 1021–
+1036.
+[32] George Karypis and Vipin Kumar. 2009. MeTis: Unstructured Graph Partitioning
+and Sparse Matrix Ordering System, Version 4.0. https://github.com/KarypisLab/
+METIS.
+[33] G. Kathareios, C. Minkenberg, B. Prisacari, G. Rodriguez, and Torsten Hoefler.
+2015. Cost-Effective Diameter-Two Topologies: Analysis and Evaluation. In
+Proceedings of the International Conference for High Performance Computing,
+Networking, Storage and Analysis (Austin, TX, USA). ACM.
+[34] Gordon Keeler. [n. d.]. ERI Programs Panel - Phase II Overview. DARPA ERI
+Summit 2019.
+[35] John Kim, William J Dally, and Dennis Abts. 2007. Flattened butterfly: a cost-
+efficient topology for high-radix networks. In Proceedings of the 34th annual
+international symposium on Computer architecture. 126–137.
+[36] John Kim, Wiliam J. Dally, Steve Scott, and Dennis Abts. 2008. Technology-
+Driven, Highly-Scalable Dragonfly Topology. In Proceedings of the 35th ISCA.
+IEEE Computer Society, Washington, DC, USA.
+[37] Kartik Lakhotia, Maciej Besta, Laura Monroe, Kelly Isham, Patrick Iff, Torsten
+Hoefler, and Fabrizio Petrini. 2022. PolarFly: A Cost-Effective and Flexible Low-
+Diameter Topology. In Proceedings of the International Conference on High Perfor-
+mance Computing, Networking, Storage and Analysis. IEEE, 1–15.
+[38] Kartik Lakhotia, Kelly Isham, Laura Monroe, Maciej Besta, Torsten Hoefler, and
+Fabrizio Petrini. 2023. In-network Allreduce with Multiple Spanning Trees on
+PolarFly. In Proceedings of the 35th ACM Symposium on Parallelism in Algorithms
+and Architectures. 165–176.
+[39] Kartik Lakhotia, Fabrizio Petrini, Rajgopal Kannan, and Viktor Prasanna. 2021.
+Accelerating Allreduce with in-network reduction on Intel PIUMA. IEEE Micro
+42, 2 (2021), 44–52.
+[40] Fei Lei, Dezun Dong, Xiangke Liao, and José Duato. 2020. Bundlefly: A low-
+diameter topology for multicore fiber. InProceedings of the 34th ACM International
+Conference on Supercomputing.
+[41] Fei Lei, Dezun Dong, Xiangke Liao, Xing Su, and Cunlu Li. 2016. Galaxyfly: A
+Novel Family of Flexible-Radix Low-Diameter Topologies for Large-Scales Inter-
+connection Networks. In Proceedings of the 2016 International Conference on Su-
+percomputing (Istanbul, Turkey) (ICS ’16). Association for Computing Machinery,
+New York, NY, USA, Article 24, 12 pages. https://doi.org/10.1145/2925426.2926275
+[42] Charles E Leiserson. 1985. Fat-trees: Universal networks for hardware-efficient
+supercomputing. IEEE transactions on Computers 100, 10 (1985), 892–901.
+[43] Charles E. Leiserson. 1985. Fat-trees: universal networks for hardware-efficient
+supercomputing. IEEE Trans. Comput. 34, 10 (Oct. 1985), 892–901.
+[44] Dongsheng Li, Xicheng Lu, and Jinshu Su. 2004. Graph-theoretic analysis of
+Kautz topology and DHT schemes. In IFIP International Conference on Network
+and Parallel Computing. Springer, 308–315.
+[45] Lightmatter. [n. d.]. https://lightmatter.co/.
+[46]
+E Loz, H. Pérez-Rosés, and G.Pineda-Villavicencio. 2010. The Degree-Diameter
+Problem for General Graphs. http://www.combinatoricswiki.org/wiki/The_
+Degree_Diameter_Problem_for_General_Graphs.
+[47] Robert J. McEliece. 1987. Finite Fields for Computer Scientists and Engineers.
+Springer, Boston, MA.
+[48] Brendan D. McKay, Mirka Miller, and Jozef Širán. 1998. A note on Large Graphs
+of Diameter Two and Given Maximum Degree. Journal of Combinatorial Theory,
+Series B (1998).
+[49] Hans Meuer, Erich Strohmaier, Jack Dongarra, Horst Simon, and Martin Meuer.
+2023. Top 500: The List. https://top500.org/lists/top500/.
+[50] R E Paley. 1933. On Orthogonal Matrices. Journal of Mathematics and Physics 12
+(1933), 311–320.
+[51] Gregory F Pfister. 2001. An introduction to the infiniband architecture. High
+performance mass storage and parallel I/O 42, 617-632 (2001), 10.
+[52] Karl E Prikopa, Wilfried N Gansterer, and Elias Wimmer. 2016. Parallel iterative
+refinement linear least squares solvers based on all-reduce operations. Parallel
+Comput. 57 (2016), 167–184.
+[53] Rolf Rabenseifner. 2004. Optimization of collective reduction operations. In
+International Conference on Computational Science, Vol. 3036. 1–9.
+[54] Arun F Rodrigues, K Scott Hemmert, Brian W Barrett, Chad Kersey, Ron Oldfield,
+Marlo Weston, Rolf Risen, Jeanine Cook, Paul Rosenfeld, Elliot Cooper-Balis,
+et al
+. 2011. The structural simulation toolkit. ACM SIGMETRICS Performance
+Evaluation Review 38, 4 (2011), 37–42.
+[55] Hamid Sarbazi-Azad, Mohamed Ould-Khaoua, and Lewis M. Mackenzie. 2001.
+Communication delay in hypercubes in the presence of bit-reversal traffic.Parallel
+356
+PAGE 13
+PolarStar: Expanding the Horizon of Diameter-3 Networks SPAA ’24, June 17–21, 2024, Nantes, France
+Comput. 27, 13 (2001), 1801–1816.
+[56] Alexander Sergeev and Mike Del Balso. 2018. Horovod: fast and easy distributed
+deep learning in TensorFlow. arXiv preprint arXiv:1802.05799 (2018).
+[57] Alexander Shpiner, Zachy Haramaty, Saar Eliad, Vladimir Zdornov, Barak Gafni,
+and Eitan Zahavi. 2017. Dragonfly+: Low cost topology for scaling datacenters.
+In 2017 IEEE 3rd International Workshop on High-Performance Interconnection
+Networks in the Exascale and Big-Data Era (HiPINEB). IEEE, 1–8.
+[58] Ankit Singla, Chi-Yao Hong, Lucian Popa, and P. Brighten Godfrey. 2012. Jellyfish:
+networking data centers randomly. In Proceedings of the 9th USENIX NSDI (San
+Jose, CA). USENIX Association, Berkeley, CA, USA, 17–17.
+[59] Lawrence C Stewart and David Gingold. 2006. A new generation of cluster
+interconnect. White Paper, SiCortex Inc (2006).
+[60] Ola Torudbakken and Ashok V Krishnamoorthy. 2013. A 50Tbps optically-cabled
+InfiniBand datacenter switch. In Optical Fiber Communication Conference. Optica
+Publishing Group, OTu3H–1.
+[61] Mark Wade, Erik Anderson, Shaha Ardalan, Pavan Bhargava, Sidney Buchbinder,
+Michael Davenport, John Fini, Haiwei Lu, Chen Li, and Roy Meade. 2020. TeraPHY:
+a Chiplet Technology for Low-Power, High-Bandwidth In-Package optical I/O.
+IEEE Micro 40, 2 (2020), 63–71.
+[62] Robert Wilber. 1989. Lower bounds for accessing binary search trees with
+rotations. SIAM journal on Computing 18, 1 (1989), 56–67.
+[63] Stephen Young, Sinan Aksoy, Jesun Firoz, Roberto Gioiosa, Tobias Hagge, Mark
+Kempton, Juan Escobedo, and Mark Raugas. 2022. SpectralFly: Ramanujan Graphs
+as Flexible and Efficient Interconnection Networks. In 2022 IEEE International
+Parallel and Distributed Processing Symposium (IPDPS). 1040–1050.
+357

@@ -1,0 +1,125 @@
+{
+  "status": "PAPER_UNIFORM_T_BRANCH_OBSTRUCTION_JOINT_D3_EXISTENCE_REFUTED",
+  "completed_at_utc": "2026-10-28T02:48:26.748894+00:00",
+  "target_Delta": 4,
+  "target_D": 3,
+  "hypothetical_n": 42,
+  "hypothetical_m": 84,
+  "actual_n": null,
+  "actual_D": null,
+  "ordinary_bad_unordered_pairs": null,
+  "input_scope": {
+    "new_rule_prediction": "research/ddp/more_graphs_20261027/small_d4_D3_polarity13_C3_ports42/ecycle9_chords4/PREDICTION.json",
+    "actual_new_compilation_exists": false,
+    "bound_from": "Declared preserved A-S cyclic lift, S-S pair rule, Ecycle/chords, specified two E-S deletions and helper/port domain.",
+    "old_two_exclusion_files_modified": false
+  },
+  "classes": {
+    "E_count": 9,
+    "E_indices": "0..8 modulo9",
+    "S_pairs": 9,
+    "pair_i": "s_i is the endpoint adjacent to baseT=8; mate=s_prime_i",
+    "A_count": 12,
+    "full_T_fibre_count": 3,
+    "helper_path": "a-b-c"
+  },
+  "declared_cut_rule": {
+    "deleted_edges": [
+      "E0-s0",
+      "s_prime0-E4"
+    ],
+    "new_E_helper_edges": [
+      "a-E0",
+      "a-E4"
+    ],
+    "a_other_neighbors": [
+      "b",
+      "oneA"
+    ],
+    "b_other_neighbors": [
+      "a",
+      "c",
+      "twoA"
+    ],
+    "c_neighbors": [
+      "b",
+      "allthreeT-lifts"
+    ],
+    "freed_S_new_neighbors": "oneA each; no newEneighbor",
+    "other_new_old_edges": "twoA-A port pairs"
+  },
+  "positive_predictions": {
+    "E_E": {
+      "status": "PAPER_VALID_UNIFORM",
+      "proof": "C9 covers distance1/2/3 offsets. All distance4 pairs use their3step S-pair chord; deleted chord0 is replaced by E0-a-E4 of length2."
+    },
+    "c_all": {
+      "status": "PAPER_VALID_UNIFORM",
+      "proof": "FullT-fibre reaches eachT-neighbor S in2, eachmate in3 and allA throughT-S-A in3. It reaches E_i throughs_i fori!=0. Missing E0 branch uses c-b-a-E0. Helpers are within2."
+    },
+    "a_E": {
+      "status": "PAPER_VALID_UNIFORM",
+      "proof": "From a use E0/E4 then at most2C9steps. Their cycleR2 sets union allnineE."
+    },
+    "simultaneous_path_guarantees_compatible": true,
+    "interpretation": "These guarantees hold under the same degree-legal structural rules; none asserts global D3. They can coexist with the counterexample below."
+  },
+  "uniform_counterexample": {
+    "root_t": "The unique lift of absolute baseT whose preserved old A-S matching edge joins s0.",
+    "root_existence": "Exactly one such t exists because T-to-s0base is a preserved C3lift matching.",
+    "root_neighbors": [
+      "s0",
+      "oneT-adjacentS from eachotherclass",
+      "c"
+    ],
+    "target_class": "allnineEvertices",
+    "branch_bounds": [
+      {
+        "first_neighbor": "s0",
+        "E_targets_within2_after_first_step_at_most": 0,
+        "reason": "BothE-Sendlinks of pair0 are absent. s0/mate have noEneighbor; new S-A endpoints also have noEneighbor."
+      },
+      {
+        "first_neighbor": "c",
+        "E_targets_within2_after_first_step_at_most": 0,
+        "reason": "c only meetsT-lifts andb, neither A norb has anEneighbor. c-b-a-E needs3 after c, so4 from t."
+      },
+      {
+        "first_neighbor": "otherS_j",
+        "E_targets_within2_after_first_step_at_most": 4,
+        "reason": "One attachedE, its two Ecycle neighbors, and one Eattached to the S-Smate. Routes throughA end inS/helper/A, notE at the remaining depth."
+      },
+      {
+        "first_neighbor": "otherS_k",
+        "E_targets_within2_after_first_step_at_most": 4,
+        "reason": "Same complete local-neighbor classification."
+      }
+    ],
+    "E_R3_capacity_upper_bound": 8,
+    "E_targets_required": 9,
+    "missing_E_targets_at_least": 1,
+    "symbolic_endpoint_enclosure": "F(j) union F(k), F(i)={i-1,i,i+1,i+4}mod9 for the two uncut T-adjacent S neighbors; choose any E outside this set.",
+    "mixed_helper_caveat_checked": "The new a-E0/E4 neighbors do not add anE via t-S-E-a: that3step endpoint is helpera, notE.",
+    "conclusion": "Every degree-legal member of the declared family fails D<=3, independent of A-S trits and allowed port choices.",
+    "counts_are": "Paper route-class capacity, not actual graph BFS or measured ordinary bad pairs."
+  },
+  "prediction_outcomes": {
+    "three_positive_predictions": "SUPPORTED_BY_UNIFORM_PAPER_PATHS",
+    "joint_existence": "REFUTED_BY_UNIFORM_8_LT9_E_TARGET_CAPACITY"
+  },
+  "why_c_full_cover_not_enough": "c needs3steps to someE, so t-c followed by that route has4steps. Symmetric D3 coverage from c is not inherited by its neighbor t.",
+  "a_to_A_focus": "No conclusion about exactness of the separately suggested a-to-A necessary budget is needed; the t-to-E obstruction already decides joint existence.",
+  "independent_review": "Expert_brief_evidence independently confirmed all four t branches and reported VALID to root/producer; paper-only, no external numeric call.",
+  "scope_limit": "Only this fixed Ecycle/chord/cut/fullT-helper rule; not arbitrary42graphs or all redesigned polarity constructions.",
+  "execution": {
+    "graphs_generated": 0,
+    "graph_decodes": 0,
+    "candidate_checks": 0,
+    "graph_BFS": 0,
+    "SAT_calls": 0,
+    "new_models_compiled": 0,
+    "word_enumerations": 0,
+    "paid_external_review_calls": 0
+  },
+  "terminal_action": "Stop this declared batch without CNF/SAT; no free-spoke retuning or extra template is executed by this analysis."
+}

@@ -1,10 +1,10 @@
 # MathRSI：从问题准备到可检查证明的工作流
 
-两张[架构图](../figures/mathrsi/README.md)概括了内外两层：本页执行五组解题子流程；经验进入下一版base的独立开发消费见[版本演进工作流](EVOLUTION_WORKFLOW.md)，不把维护混成第六个解题阶段。
+两张[架构图](../figures/mathrsi/README.md)概括了内外两层：本页执行五组解题子流程；经验反馈由独立外层技能 [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md) 执行，人读说明见[版本演进入口](EVOLUTION_WORKFLOW.md)，不把维护混成第六个解题阶段。
 
-[数学研究总控](../base/skills/mathrsi-research/SKILL.md)负责选择当前入口、调用子流程、读取产物并决定下一行动。它不把整项工作变成阶段名称的清单，也不替代理规定唯一证明技术。八项数学技能组成五组有独立交付的子流程；内部复用本仓完整ARIS、当前领域方法及已有程序，不创建新的调度平台。
+[数学研究总控](../base/skills/mathrsi-research/SKILL.md)负责选择当前入口、调用子流程、读取产物并决定下一行动。它不把整项工作变成阶段名称的清单，也不替代理规定唯一证明技术。八项数学子技能与总控组成五组有独立交付的解题流程；内部复用本仓完整ARIS、当前领域方法及已有程序，不创建新的调度平台。
 
-新题通常从准备开始。已有明确路线可以直接prove；已有完整证明直接verify；只需交接已有研究则直接handoff。原规格、wiki、证据和文件名都沿用任务工作区，技能源码留在MathRSI。每组完成后由唯一上层调度者读取产物，在同一轮内继续已授权工作；用户只要求其中一阶段时才在该交付点结束。
+新题通常从准备开始。已有明确路线可以直接prove；已有完整证明直接verify；仅形式目标直接走verify的Lean入口，不要求先写TeX；只需交接已有研究则直接handoff。原规格、wiki、证据和文件名都沿用任务工作区，技能源码留在MathRSI。每组完成后由唯一上层调度者读取产物，在同一轮内继续已授权工作；用户只要求其中一阶段时才在该交付点结束。
 
 **阶段调度只由一个调用者拥有。** 由mathrsi-research调用时，它是唯一上层调度者；被调用的prepare、route-loop、prove、verify或handoff只完成本次scope，返回产物、未闭义务及next，不自行启动同级下一stage。内部局部调用仍可执行：prepare调用specify／survey，verify调用assemble／proof-checker，route-loop／prove调用定点survey或局部verify；这些调用完成后回原调用点。用户直接调用某个子流程且明确授权接续时，当前代理承担唯一调度职责，切入下一阶段一次，不能同时让另一个父调度者再启动一遍。
 
@@ -17,9 +17,10 @@ flowchart TD
     N[新题或需要恢复/澄清] --> P[prepare: specify初步 → survey → specify定稿]
     P --> R[route-loop: 提案 → 审阅 → 探针 → 实质修订/复核]
     R --> V[prove: 推导/证明/计算 → 回收核验 → 接实际caller]
-    V --> C[verify: 按需assemble → 适用独核 → proof-checker → 按需Lean]
+    V --> C[verify: 自然语言审计或直接Lean目标 → 准确证据]
     C --> H[handoff: 可读证明/复现材料/wiki/恢复入口]
     E[已有完整证明] --> C
+    F[仅形式目标/已有Lean出口] --> C
     L[明确短证明或已有路线] --> V
     R -->|准确的新文献问题| S[survey增量查漏/原文核读]
     V -->|进口/等价问题/反例疑问| S
@@ -38,7 +39,7 @@ flowchart TD
 
 随后 [mathrsi-survey](../base/skills/mathrsi-survey/SKILL.md)把本地PDF和wiki作为种子，真正调用research-lit及可用的外部来源，查异名、等价表述、前后引用、反例和勘误。发现阅读可先看前三页；关键数学进口继续读完整声明、证明及必要前置，记版本、条件、原文位置与本题映射。ingest创建骨架后，wiki-enrich补基础内容，重要数学条件仍从原文核对，不把骨架填满当作数学已审。
 
-specify初步模式只交回规格与调查委托，由prepare执行一次survey；不是specify先调查、prepare再重查。已启用Property B时，survey实际接 [propertyb-literature](../plugins/propertyb/skills/propertyb-literature/SKILL.md)的查询、archive种子、误读及来源核对，共享一次research-lit和唯一LITERATURE writer；领域独占提取稿作为附件或返回正文合入。ECC草案保持未验收状态，不自动加载。
+specify初步模式只交回规格与调查委托，由prepare执行一次survey；不是specify先调查、prepare再重查。启用领域插件时共享一次research-lit和唯一LITERATURE writer：Property B实际接[propertyb-literature](../plugins/propertyb/skills/propertyb-literature/SKILL.md)的查询、archive种子、误读及来源核对；Degree–diameter实际接[mathrsi-degree-diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)和[dd-transfer-diagnosis](../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，将原wiki与公开比较目录作本地种子，核目标(d,D)的发表实例、已知族合法代入及正则/最大度条件，返回原进口与受影响队列。领域独占提取稿作为附件或返回正文合入，不各跑一轮发现；ECC草案保持未验收状态，不自动加载。
 
 specify定稿再消费调查，固定精确原题、允许进口和验收边界。文献已有直接证明就组织其准确推论；发现反例就先核是不是原命题反例。查新不强不能成为agent自行改题的理由。用户固定的任务可能是复现、独立证明或指定目标，不由新颖性分数取消。
 
@@ -122,9 +123,11 @@ specify定稿再消费调查，固定精确原题、允许进口和验收边界�
 
 ## 子流程四：装配与验证完整候选，或提前核一个关键局部义务
 
-[mathrsi-verify](../base/skills/mathrsi-verify/SKILL.md)先区分本次是全题还是局部。候选散落时内部调用 [mathrsi-assemble](../base/skills/mathrsi-assemble/SKILL.md)，由它用proof-writer组织原题、严格引理、进口和证据，形成 `PROOF.md`或沿用现有TeX。已有完整且准确的稿件直接复用，不为触发writer重写。
+[mathrsi-verify](../base/skills/mathrsi-verify/SKILL.md)先区分本次是全题还是局部。自然语言候选散落时内部调用 [mathrsi-assemble](../base/skills/mathrsi-assemble/SKILL.md)，由它用proof-writer组织原题、严格引理、进口和证据，形成 `PROOF.md`或沿用现有TeX。已有完整且准确的稿件直接复用，不为触发writer重写。
 
 验证针对实际疑问选择覆盖论证、独立精确复算、局部审阅、完整proof-checker和按需Lean。ARIS proof-checker拥有自己的义务审计、反例检查、修复与复审；verify实际运行该流程并消费其真实 `PROOF_AUDIT`，不取一段prompt后自造canonical audit。Markdown适配为TeX时保留原句和输入对应；detector没看到theorem而返回N/A不等于证明已审。
+
+**仅形式目标可以直接进入lean-formalize。** 用户只核固定Lean见证或已有导出时，不先制造TeX、writer或proof-checker审计；给真实模块、原声明、定义与已有证据，消费actual export/build/传递公理后返回原caller。需要自然语言正式审计时仍执行原checker合同，两项各自报告。实例见[固定F4出口](../base/skills/mathrsi-verify/references/lean-target-entry.md)。
 
 Lean由用户要求、现有工程或具体义务收益决定。复用有效构建，核真实主模块、原命题类型、传递公理与实际输入连接；`Certificate x → Target x`还需供给证书。API问题留形式化内部，新的数学缺口回prove。无数值表的纯证明不制造算术检查，无形式化要求的短证明不强制Lean。
 
@@ -162,6 +165,20 @@ Lean由用户要求、现有工程或具体义务收益决定。复用有效构�
 由上层调度相应阶段，保留已有有效结果。
 ```
 
+## Degree–diameter通过现有五流程接入
+
+DD的四个技能不组成第二套主workflow。[mathrsi-degree-diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)先核有限简单无向图、最大度/直径/阶数及本次终点，再按以下实际接口返回父阶段。
+
+| 父阶段 | 领域调用与输入 | 返回后的实际消费 |
+|---|---|---|
+| prepare/survey | 总入口＋[dd-transfer-diagnosis](../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)：原规格、公开来源、已查基线 | 固定对象/进口；竞争目标更新候选队列，固定构造题保持原目标；共享一次文献调查 |
+| route-loop | transfer＋[dd-construction](../plugins/degree-diameter/skills/dd-construction/SKILL.md)：实际失败输入与共同对象 | 采用改变障碍的新规则及首项探针，不把旧充分条件失败写成全域不可能 |
+| prove | construction或[dd-obstruction-certificate](../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)：真实source、参数、允许操作 | 接图定义、degree、全部点对覆盖caller或准确条件/缺口 |
+| verify | [dd-obstruction-certificate](../plugins/degree-diameter/skills/dd-obstruction-certificate/SKILL.md)：正文、实际图/model/证书及有限域 | 核精确有限命题；§4–5也核正构造的字面属性、覆盖、证据继承与固定Lean出口；局部回原prove，不另开最终verify |
+| handoff | 已有领域证明、运行/审阅范围与复现入口 | base按所需交付取材料；源wiki只读，新任务wiki留当前工作区 |
+
+[DD资料层](../plugins/degree-diameter/README.md)随仓保留原wiki和支撑原件；新构造/排除条件先读完整证明及caller。上表是当前实现接口，历史DD不是MathRSI v1/v2的新解题实验；本轮具体使用见[v2说明](V2_CHANGES.md)。
+
 ## 连续使用与宿主调用
 
 主流程会按现有产物串接，子流程返回时不自行启动下一stage；下面是用户希望手动逐阶段操作时的序列，不能与另一个正在运行的主调度重复发起。斜线只用于已正确发现本仓技能的Claude；Codex使用美元调用或先读实际路径。不支持的新flag不靠示例文字“创造”出来，各技能接受自然语言说明当前输入与任务。
@@ -191,3 +208,7 @@ $mathrsi-handoff  整理实际结论与交接。
 下一步由真实结果决定：缺一个文献条件就定点补查；引理没接上caller就补连接；同一卡点持续无信息才重判表示和路线。局部预算耗尽保存精确断点并返回调用方，不自动暂停整个Goal；服务故障保留pending并继续无依赖工作。Goal、总预算和用户暂停以实际授权及宿主状态为准，文档里的“下一步”不构成恢复旧Goal的授权。
 
 本页说明可执行使用方式，不宣称所有新流程已经过模型、联网或长期研究的完整行为验收。实际验证与未测范围统一查看 [VALIDATION](../development/VALIDATION.md)及其所链接记录。
+
+## 独立的外层维护入口
+
+已有研究、失败与人工更正需要转成当前 MathRSI 的改动时，读取 [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md)。它与上述九项解题技能合计十项 MathRSI 技能，沿现有版本修改 base、插件或文档，保留原题工作区；不自动在 handoff 后启动。执行细节只由该 SKILL 维护，[EVOLUTION_WORKFLOW](EVOLUTION_WORKFLOW.md) 给出材料准备、调用和结果边界。Claude 使用 `/mathrsi-meta-evolve`，Codex 使用 `$mathrsi-meta-evolve`，或直接读同一主文件。

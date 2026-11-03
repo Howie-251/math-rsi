@@ -1,0 +1,27 @@
+graph : SimpleGraph Vertex
+label : Vertex ≃ Fin 397228
+def DegreeDiameter.Portfolio.Q8DiagonalFill94.FinalClaim : Prop :=
+Fintype.card Vertex = 397228 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 94) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+DegreeDiameter.Portfolio.Q8DiagonalFill94.d94_397228 :
+  Fintype.card Vertex = 397228 ∧
+    (∀ (v : Vertex), graph.degree v ≤ 94) ∧
+      DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+theorem DegreeDiameter.Portfolio.Q8DiagonalFill94.d94_397228 : Fintype.card Vertex = 397228 ∧
+  (∀ (v : Vertex), graph.degree v ≤ 94) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2 :=
+⟨card_vertex, ⟨degree_le, ⟨diameterAtMost_three, not_diameterAtMost_two⟩⟩⟩
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.d94_397228' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.Q8DiagonalFill94.final_claim : FinalClaim :=
+d94_397228
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.load_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.old_walk_bound_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.copy_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.label_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.label_new' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.label_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.Q8DiagonalFill94.label_hub' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+# Actual source-to-original-target bridge
+
+New Inputs proves pinOwner_forward and load_le_one for the new864 centers without any field/rank or negative-pair enumeration. Exact imports the already closed literal source FullExact once and uses FullNeighborhoodClones.degree_le/diameterAtMost/not_diameterAtMost. d16_16416 and original_concrete_goal have no user premises. Walks are genuine SimpleGraph.Walk; old_walk_bound_iff also preserves nonD3. Source reproduction contributes no new result. Standalone Audit has separately imported Exact and printed target types, bodies and axioms. External small-table binding matches all864 labels and12924 pins to the actual independently parsed graph; it is not a Lean ASCII parser theorem.

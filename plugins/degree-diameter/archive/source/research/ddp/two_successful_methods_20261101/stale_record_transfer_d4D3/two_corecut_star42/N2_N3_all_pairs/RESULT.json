@@ -1,0 +1,293 @@
+{
+  "status": "COMPLETE_NO_N2_AND_N3_ALL_TWO_DISJOINT_EDGECUT4STAR42",
+  "prediction": "AtleastoneofN2/N3hasanewrootR3pass;completegraphnotpredicted",
+  "prediction_newroot_supported": true,
+  "source_results": [
+    {
+      "source_id": "N2",
+      "source": "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/alternative41_ninecover_gate/source_N2.NORMALIZED_ADJ.json",
+      "cached_source_JSON_parse_count": 1,
+      "source_n": 41,
+      "source_m": 82,
+      "source_degree_D3_nonisomorphism": "INHERITED_NOT_REVALIDATED",
+      "actual_disjoint_edgepair_domain": 3075,
+      "configurations_started": 3075,
+      "configurations_finished": 3075,
+      "newroot_BFS": 3075,
+      "newroot_R3_passed": 6,
+      "final_oldlabel_BFS": 14,
+      "oldold_failed_after_newrootpass": 6,
+      "first_newroot_failure": {
+        "configuration": {
+          "index": 0,
+          "old_edge_indices": [
+            0,
+            4
+          ],
+          "old_cut_edges": [
+            [
+              0,
+              18
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "new_label": 41,
+          "four_pins": [
+            0,
+            1,
+            4,
+            18
+          ]
+        },
+        "BFS": {
+          "root": 41,
+          "target": 2,
+          "distance": 4,
+          "reached": 42,
+          "eccentricity": 4,
+          "actual_path": [
+            41,
+            0,
+            37,
+            23,
+            2
+          ],
+          "distance_histogram": {
+            "0": 1,
+            "1": 4,
+            "2": 11,
+            "3": 20,
+            "4": 6
+          }
+        }
+      },
+      "first_oldold_failure": {
+        "configuration": {
+          "index": 303,
+          "old_edge_indices": [
+            4,
+            11
+          ],
+          "old_cut_edges": [
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              35
+            ]
+          ],
+          "new_label": 41,
+          "four_pins": [
+            1,
+            2,
+            4,
+            35
+          ]
+        },
+        "BFS": {
+          "root": 0,
+          "target": 1,
+          "distance": 4,
+          "reached": 42,
+          "eccentricity": 4,
+          "actual_path": [
+            0,
+            18,
+            8,
+            13,
+            1
+          ],
+          "distance_histogram": {
+            "0": 1,
+            "1": 4,
+            "2": 12,
+            "3": 24,
+            "4": 1
+          }
+        },
+        "pin_relation": "ONE_PIN",
+        "old_original_route": [
+          0,
+          37,
+          4,
+          1
+        ]
+      },
+      "original_source_single_pair_diagnostic_checks": 1,
+      "pair_stage_counts": {
+        "NEWROOT_R3_FAIL": 3069,
+        "OLDOLD_R3_FAIL": 6
+      },
+      "remaining_unvisited_pairs": 0,
+      "whole_fixed_source_rule_excluded": true,
+      "status": "COMPLETE_NO_THIS_SOURCE_TWO_CUT4STAR42"
+    },
+    {
+      "source_id": "N3",
+      "source": "research/ddp/two_successful_methods_20261101/stale_record_transfer_d4D5/alternative41_ninecover_gate/source_N3.NORMALIZED_ADJ.json",
+      "cached_source_JSON_parse_count": 1,
+      "source_n": 41,
+      "source_m": 82,
+      "source_degree_D3_nonisomorphism": "INHERITED_NOT_REVALIDATED",
+      "actual_disjoint_edgepair_domain": 3075,
+      "configurations_started": 3075,
+      "configurations_finished": 3075,
+      "newroot_BFS": 3075,
+      "newroot_R3_passed": 0,
+      "final_oldlabel_BFS": 0,
+      "oldold_failed_after_newrootpass": 0,
+      "first_newroot_failure": {
+        "configuration": {
+          "index": 0,
+          "old_edge_indices": [
+            0,
+            4
+          ],
+          "old_cut_edges": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "new_label": 41,
+          "four_pins": [
+            0,
+            1,
+            3,
+            5
+          ]
+        },
+        "BFS": {
+          "root": 41,
+          "target": 7,
+          "distance": 4,
+          "reached": 42,
+          "eccentricity": 4,
+          "actual_path": [
+            41,
+            0,
+            15,
+            34,
+            7
+          ],
+          "distance_histogram": {
+            "0": 1,
+            "1": 4,
+            "2": 11,
+            "3": 20,
+            "4": 6
+          }
+        }
+      },
+      "first_oldold_failure": null,
+      "original_source_single_pair_diagnostic_checks": 0,
+      "pair_stage_counts": {
+        "NEWROOT_R3_FAIL": 3075
+      },
+      "remaining_unvisited_pairs": 0,
+      "whole_fixed_source_rule_excluded": true,
+      "status": "COMPLETE_NO_THIS_SOURCE_TWO_CUT4STAR42"
+    }
+  ],
+  "configurations_started": 6150,
+  "configurations_finished": 6150,
+  "source_cached_JSON_parses": 2,
+  "complete_fixed_N2_N3_rule_exclusion": true,
+  "hit": null,
+  "CPU_cap_reached": false,
+  "one_original_source_pair_diagnostic": {
+    "source_id": "N2",
+    "configuration": {
+      "index": 303,
+      "old_edge_indices": [
+        4,
+        11
+      ],
+      "old_cut_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          35
+        ]
+      ],
+      "new_label": 41,
+      "four_pins": [
+        1,
+        2,
+        4,
+        35
+      ]
+    },
+    "pin_relation": "ONE_PIN",
+    "old_source_single_pair": {
+      "root": 0,
+      "target": 1,
+      "distance": 3,
+      "actual_path": [
+        0,
+        37,
+        4,
+        1
+      ],
+      "visited_when_target_found": 34,
+      "partial_discovery_max_distance": 3,
+      "partial_discovery_histogram": {
+        "-1": 7,
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 17
+      },
+      "traversal_stopped_after_target_discovery": true,
+      "minus1_is_unvisited_not_unreachable": true,
+      "source_global_D3_verified": false
+    },
+    "actual_new_shortest_path": [
+      0,
+      18,
+      8,
+      13,
+      1
+    ],
+    "actual_new_distance": 4,
+    "cuts_on_this_saved_old_route": [
+      [
+        1,
+        4
+      ]
+    ],
+    "old_route_unique_claimed": false,
+    "all_oldgeodesics_enumerated": false,
+    "total_sourcepair_diagnostics": 1
+  },
+  "total_sourcepair_diagnostics": 1,
+  "source_D3_allroot_or_nonisomorphism_or_field_validation": 0,
+  "graph_scope": "OnlyeachcachedMessieresN2/N3,two disjoint oldedge deletions plusone4star;notothercuts/sources/general4D3",
+  "prior_readgate_CPU_seconds": 1.125664745,
+  "preparation_charge_seconds": 0.1,
+  "actual_process_CPU_seconds": 0.277189697,
+  "cumulative_charged_CPU_seconds": 1.502854442,
+  "CPU_budget_seconds": 5.0,
+  "worker_count": 1,
+  "no_timer_reset": true,
+  "new_graph_parameter_Lean_increment_before_root_acceptance": [
+    0,
+    0,
+    0
+  ],
+  "solver_field_Lean_ARIS_network_install_hash": 0,
+  "root_Wiki_HTML_modified": false,
+  "next": "STOP_NO_NEW_CUT_SOURCE_SEED_OR_TIMER"
+}

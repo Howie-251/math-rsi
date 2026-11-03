@@ -1,0 +1,80 @@
+{
+  "source_id": "Loz1100 officialB(0,4) semidirect Cayley source",
+  "source_order": 1100,
+  "degree": 8,
+  "D": 4,
+  "baseline_date": "2026-10-27",
+  "source_parameters": {
+    "m": 20,
+    "n": 55,
+    "action": 2,
+    "generators": [
+      [
+        4,
+        27
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        19,
+        11
+      ]
+    ]
+  },
+  "operation": "(i,x)*(j,y)=(i+j mod20,x*r^j+y modN)",
+  "existing_local_source": "context/DD_PORTFOLIO_START_20261026/baselines/d8_D4_known.edges",
+  "existing_specs": "context/DD_PORTFOLIO_START_20261026/baselines/generator_specs.json",
+  "source_credit": "EyalLoz,2006;Comellas officialD4 source and laterCayley descriptions.",
+  "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+  "source_not_reverified": true,
+  "reorder_inverse_pairs": [
+    [
+      1,
+      33
+    ],
+    [
+      12,
+      11
+    ],
+    [
+      11,
+      48
+    ],
+    [
+      16,
+      43
+    ]
+  ],
+  "normalization": "Conjugate allgenerators by(0,22), then x->3x mod55; invert/reorder pairs only.",
+  "normalized_generators": [
+    [
+      1,
+      0
+    ],
+    [
+      12,
+      33
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      16,
+      19
+    ]
+  ],
+  "fixed_polynomials": {
+    "A": 0,
+    "B": "r^10-1",
+    "C": 1,
+    "D": "1+r+r^4"
+  },
+  "composite_ring_warning": "Action2 hasglobalorder20 butCRT orders4(mod5)/10(mod11);Phi20(2)=205 !=0 mod55. Targetprimitive20 capacity usesPhi20, not a false sourcecyclotomic identity."
+}

@@ -1,0 +1,426 @@
+PAGE 1
+New lower bounds for the degree-diameter problem
+from generalized quadrangles and hexagons*
+Rishabh Rajiv
+Vancouver, BC, Canada
+rishabh.rajiv@alumni.ubc.ca
+September 2026
+Abstract
+We give two constructions of large graphs of small diameter from generalized polygons.
+The first, for diameter three, removes from the symplectic quadrangle W (q) a point, the
+points collinear with it and the lines through it, and adds Cayley edges on the orbits of the
+transvections with that centre. We prove that these fibre extensions have diameter three
+whenever a single graph on q2 vertices does, and that when it does not, a matching on the
+points can repair the pairs it leaves at distance four. The second attaches new vertices to
+incidence graphs of generalized quadrangles and hexagons: recursively, intowers of hexagons,
+and to the compound graphs of G´ omez and Fiol after deleting some matching edges at a
+set of pairwise non-collinear points or pairwise non-concurrent lines, which we show keeps
+the diameter. The constructions improve the known lower bounds for the degree-diameter
+problem at the 14 pairs (14 , 3), (15, 3), (19, 3), (20, 3), (13, 4), (14, 4), (15, 4), (17, 4), (18, 4),
+(19, 4), (11, 6), (13, 6), (15, 6) and (16 , 6).
+MSC 2020: 05C35 (primary); 51E12, 05C12 (secondary).
+Keywords: degree-diameter problem, generalized quadrangle, generalized hexagon, compound
+graph.
+1 Introduction
+The degree-diameter problem asks for N (d, k), the largest order of a graph of maximum degree
+at most d and diameter at most k; see the survey of Miller and ˇSir´ aˇ n [16]. The Moore bound
+M (d, k) = 1 +d Pk−1
+i=0 (d − 1)i is attained only in a few cases [12, 1], and the largest known orders
+are tabulated by Comellas [3] and on the Combinatorics Wiki [4].
+Generalized polygons lie behind many entries of these tables. The incidence graph of a
+generalized n-gon of order ( q, q) is a bipartite Moore graph of diameter n [7, 21]. Its quotients
+by polarities give graphs of diameter three and five [5], and compound graphs, made of several
+copies of such an incidence graph joined by perfect matchings, give many of the largest known
+graphs of diameter four and six [8, 2]. Vertices have been added to such graphs before, by
+* Accompanying dataset: complete machine-readable descriptions of all 13 graphs, their adjacency and edge
+lists, and standalone verification programs (Section 5), deposited at Zenodo, doi:10.5281/zenodo.23052995.
+ Independent researcher. ORCID: 0009-0000-8626-5234.
+1
+PAGE 2
+substituting complete graphs for vertices [10, 18], and several known graphs add a few vertices
+to compounds [6, 14].
+This paper adds two mechanisms. In Section 2 we remove a point ∞, the points collinear
+with it and the lines through it from the symplectic quadrangle W (q), and add Cayley edges on
+the orbits of the transvections with centre ∞. Theorem 1 shows that these fibre extensions have
+diameter three as soon as one graph on q2 vertices does, for every prime power q; no polarity
+is needed, and Lemma 3 repairs the remaining pairs with a matching on the points when that
+graph falls short. They are a diameter-three analogue of Hafner’s description [11] of the graphs
+of McKay, Miller and ˇSir´ aˇ n [15]. In Sections 3 and 4 we attach new vertices to bipartite graphs
+of even diameter, using a parity fact of G´ omez, Fiol and Serra [9] (Lemma 1): recursively, in
+towers of generalized hexagons (Theorem 2), and to the compound graphs of [8], whose degree
+we first free by deleting matching edges at a set of pairwise non-collinear points or pairwise
+non-concurrent lines (Lemma 5 and Theorem 3). To our knowledge the fibre extensions, the
+matching repair, the tower recursion and the deletion lemma are new. Table 1 lists the resulting
+bounds.
+(d, k) previous bound new bound gain constr. new /M(d, k)
+(14, 3) 1053 [20] 1088 +35 F 0 .425
+(15, 3) 1458 [3] 1539 +81 M 0 .486
+(19, 3) 2470 [13] 2783 +313 F 0 .427
+(20, 3) 2750 [20] 2783 +33 F 0 .365
+(13, 4) 6600 [3] 6611 +11 S 0 .270
+(14, 4) 8266 [3] 8288 +22 S 0 .249
+(15, 4) 11759 [3] 11780 +21 S 0 .266
+(17, 4) 19040 [4] 19121 +81 S 0 .257
+(18, 4) 23800 [4] 23956 +156 S 0 .255
+(19, 4) 23970 [4] 25050 +1080 S 0 .214
+(11, 6) 156864 [3] 182618 +25754 T 0 .149
+(13, 6) 531440 [3] 534234 +2794 S 0 .151
+(15, 6) 1417248 [3] 1424472 +7224 S 0 .164
+(16, 6) 1771560 [3] 1779528 +7968 S 0 .137
+Table 1: New lower bounds for N (d, k), with the previous bound, the largest published order at
+degree at most d and diameter k as of September 2026, and its source; the gain is the new bound
+minus the previous one. Construction: F, fibre extension (Section 2); M, fibre extension repaired
+by a matching (Section 2.1); T, tower (Section 3); S, surgery on a compound (Section 4). The
+last column is the ratio of the new order to the Moore bound. The (20 , 3) bound is given by the
+(19, 3) graph.
+1.1 Generalized polygons and a parity fact
+A generalized n-gon of order (q, q) is a point-line incidence structure whose incidence graph is
+bipartite and (q + 1)-regular, with diameter n and girth 2n; it has (qn − 1)/(q − 1) points and as
+many lines. We use the symplectic quadrangle W (q), with n = 4, and the split Cayley hexagon
+H(q) of Tits [22], with n = 6, both of which exist for every prime power q [17, 23]. Conversely,
+a (q + 1)-regular bipartite graph of diameter n on 2(qn − 1)/(q − 1) vertices attains the bipartite
+2
+PAGE 3
+Moore bound, so it has girth 2 n and is the incidence graph of a generalized n-gon of order (q, q)
+[21]; our verification program uses this to recognize these graphs. Two points are collinear if
+they lie on a common line, and two lines are concurrent if they share a point.
+Lemma 1. Let G be a connected bipartite graph with parts A and B and diameter at most k,
+where k is even. Then every vertex of A is within distance k − 1 of every vertex of B [9, § 1].
+Hence a new vertex joined to one vertex of A and one vertex of B is within distance k of every
+vertex of G.
+Proof. A path between A and B has odd length, so the distance between a vertex of A and a
+vertex of B is odd and at most k, hence at most k − 1. The new vertex reaches A through its
+neighbour in B, and B through its neighbour in A.
+2 Fibre extensions of the symplectic quadrangle
+Let q be a prime power and V = F4
+q with the alternating form f (x, y) = x0y1 −x1y0 +x2y3 −x3y2.
+The points of W (q) are the 1-subspaces of V and its lines are the totally isotropic 2-subspaces.
+For a point P not on a line ℓ exactly one point of ℓ is collinear with P [17]; in particular
+W (q) has no triangles. Fix ∞ = ⟨e0⟩. The points collinear with or equal to ∞ form the plane
+∞⊥ = {v1 = 0}. Let P = {⟨v⟩ : v1 ̸= 0}, whose points have unique representativesp = (a, 1, b, c),
+and let L be the set of lines not through ∞. Then |P| = q3 and |L| = q2(q + 1); every line ℓ ∈ L
+meets ∞⊥ in a single point m(ℓ) ̸= ∞ and has q points in P; and for representatives p, p′
+f (p + ye0, p′) = f (p, p′) + y (y ∈ Fq). (1)
+Let M0, . . . , Mq be the lines through ∞. For a point m ∈ Mi \ {∞}, the q lines of L through m
+form its pencil Π(m), and the class Fi is the union of the q pencils of the points of Mi \ {∞}.
+The classes partition L into q + 1 sets of q2 lines. For λ ∈ Fq the transvection zλ(v) = v + λv1e0
+preserves f , and the group Z = {zλ} ∼= (Fq, +) fixes ∞⊥ pointwise and fixes every Mi and every
+pencil. In coordinates, zλ(a, 1, b, c) = (a + λ, 1, b, c).
+Lemma 2. The group Z acts freely on P and regularly on each pencil Π(m).
+Proof. Freeness on P follows from the formula for zλ. If zλ(ℓ) = ℓ with λ ̸= 0 and p ∈ ℓ ∩ P,
+then p and p + λe0 lie in the 2-space ℓ, so e0 ∈ ℓ, which is false. So Z acts freely on the q lines
+of Π(m), hence regularly.
+Definition 1. Let X, X′ ⊆ F∗
+q be closed under negation. For each class Fi fix a bijection βi :
+{0, . . . , q−1}× Fq → Fi with βi(a, l+λ) = zλ(βi(a, l)), so that βi({a}× Fq) is a pencil (Lemma 2).
+Let K be a graph on {0, . . . , q− 1} ×Fq that contains every pencil edge {(a, l), (a, l+ x)} with
+x ∈ X ′. The fibre extension Γ(q; X, X′; K) has vertex set P ∪ Land the following edges: p ∼ ℓ
+for p ∈ ℓ; p ∼ zx(p) for p ∈ Pand x ∈ X; and βi(u) ∼ βi(v) for every class i and every edge uv
+of K.
+The fibre extension has q3 + q2(q + 1) vertices. Points have degree q + 1 +|X|, and the line
+βi(u) has degree q + degK(u).
+Theorem 1. If X ∪ X ′ = F∗
+q and K has diameter at most 3, then Γ(q; X, X′; K) has diameter
+at most 3.
+3
+PAGE 4
+Proof. We bound the distance δ between two distinct vertices, according to their types.
+Two points p, p′. Let y = −f (p, p′). If y = 0, then p and p′ are collinear on a line of L and
+δ = 2. If y ∈ X, then p ∼ zy(p), and by (1) the point zy(p) equals p′ or is collinear with it, so
+δ ≤ 3. If y ∈ X ′, put r = z−y(p′). By (1), r = p or r is collinear with p; for a line ℓ ∈ Lthrough
+p and r, the sequence p, ℓ, zy(ℓ), p′ is a path, so δ ≤ 3.
+A point p and a line ℓ not through p. Let u be the point of ℓ collinear with p. If u ∈ P,
+then p, pu, u, ℓis a path. Otherwise u = m(ℓ), the line pu lies in the pencil Π( u) together with
+ℓ, and ℓ = zy(pu) with y ̸= 0. If y ∈ X ′ then p, pu, ℓis a path, and if y ∈ X then zy(p) ∈ ℓ and
+p, zy(p), ℓis a path.
+Two lines meeting in a point u. If u ∈ P, then δ = 2. Otherwise the two lines lie in one
+pencil, ℓ′ = zy(ℓ) with y ̸= 0. They are adjacent if y ∈ X ′, and if y ∈ X then ℓ, w, zy(w), ℓ′ is a
+path for any w ∈ ℓ ∩ P.
+Two disjoint lines in different classes. Let ℓ ∈ Fi and ℓ′ ∈ Fj with i ̸= j, let m = m(ℓ), and
+let u be the point of ℓ′ collinear with m. The points m and m(ℓ′) are not collinear, since together
+with ∞ they would form a triangle, so u ∈ P. The line mu lies in Π( m), so mu = zy(ℓ) with
+y ̸= 0. If y ∈ X ′ then ℓ, zy(ℓ), u, ℓ′ is a path, and if y ∈ X then w = z−y(u) ∈ ℓ and ℓ, w, u, ℓ′ is
+a path.
+Two disjoint lines in one class. They are βi(u) and βi(v) with u and v at distance at most
+3 in K, and βi maps edges of K to edges.
+Two lines of one class meet only if they lie in the same pencil, since otherwise their common
+point would form a triangle with their points on Mi. Now let ℓ, ℓ′ be lines of one class in different
+pencils, and suppose that a path of length at most 3 between them passes through a point. Every
+inner vertex of such a path is adjacent to ℓ or to ℓ′, so by symmetry we may assume that the
+point p follows ℓ, that is, p ∈ ℓ. The vertex after p is then ℓ′, or a line of the class through p,
+or a point zy(p) of ℓ′. In the first two cases a line of the class other than ℓ meets ℓ at p; in the
+third, the line zy(ℓ) of the pencil of ℓ meets ℓ′ at zy(p). All three are impossible, so such a path
+uses only edges of K, and K must join the pencils of a class. We take K to be the pencil edges
+together with a gadget of maximum degree t ≥ 1, so that lines have degree at most q + |X ′| + t.
+For q = 8, with F8 = F2[x]/(x3 +x+1), X ′ = {1, x, x2} and X = F∗
+8 \X ′, a 3-regular gadget gives
+a graph of order 1 ,088 and maximum degree 14, in which points have degree 13. For q = 11,
+with X ′ = {±1, ±3} and X = {±2, ±4, ±5}, a 4-regular gadget gives order 2 ,783 and maximum
+degree 19, in which points have degree 18. The gadgets were found by simulated annealing and
+are part of the data.
+By the argument above, every vertex u of K is within distance 3 in K of the q2 − q vertices
+outside its pencil. This gives necessary conditions. First, q2 − q + 1 ≤ M (|X ′| + t, 3). Second,
+when t = 1, the non-backtracking walks of length at most 3 from u that use a gadget edge, which
+are the only walks leaving the pencil of u, number 3|X ′|2 + |X ′| + 1, so 3|X ′|2 + |X ′| + 1 ≥ q2 − q.
+Third, |X| + |X ′| ≥q − 1, where |X| and |X ′| are even when q is odd. These conditions show
+that no fibre extension improves the known bounds for q ≤ 7, and that for q ≥ 13 the maximum
+degree exceeds 20: maximum degree at most 20 forces q = 13, |X| = |X ′| = 6 and t = 1, and
+then 3|X ′|2 + |X ′| + 1 = 115 < 156. For q = 8, 9 and 11 they do not exclude fibre extensions of
+maximum degree 13, 15 and 18, which would improve the known bounds at these degrees; we
+have not found the gadgets they would need. For q = 9 the next subsection reaches degree 15
+with a gadget that leaves some pairs at distance four.
+4
+PAGE 5
+2.1 Repairing a gadget with a matching
+A point p ∈ Plies on exactly one line of each class: its q + 1 lines meet ∞⊥ in q + 1 points, and
+two of them on one line Mi would form a triangle with p. Write ℓi(p) for the line of Fi through
+p.
+Lemma 3. Let X ∪ X ′ = F∗
+q, let Γ = Γ(q; X, X′; K), and let N be a matching on P such that
+every pair of lines at distance more than 3 in Γ is {ℓi(p), ℓi(p′)} for some class i and some edge
+pp′ of N . Then Γ with the edges of N added has diameter at most 3, and its points have degree
+q + 1 + |X| or q + 2 + |X|.
+Proof. Adding edges does not increase distances. In the proof of Theorem 1 only the last case
+used an edge of K other than a pencil edge, so every pair at distance more than 3 in Γ consists
+of two lines of one class in different pencils. Such a pair is {ℓi(p), ℓi(p′)} with pp′ ∈ N , and
+ℓi(p), p, p′, ℓi(p′) is a path.
+An edge pp′ of N serves one pair in each of the q + 1 classes at once, so a matching can
+repair a gadget that is far from closing. For q = 9, with F9 = F3[x]/(x2 + 1), X ′ = {±1, ±x},
+so that each pencil carries K3 □ K3, and X = {±1 ± x}, a 2-regular gadget gives lines of degree
+9 + 4 + 2 = 15 and points of degree 10 + 4 = 14. Our gadget is a voltage lift: nine arcs ( s, s′, δ)
+with δ ∈ Z9 join (u, s) to (u + δ, s′) for every pencil index u ∈ {0, . . . ,8}, the sum taken modulo
+9. It leaves 72 pairs of lines at distance four in each class, 720 in all. A matching of 363 edges,
+found with a constraint solver, satisfies Lemma 3 and leaves 3 points unmatched. The result
+has order 1 ,539 and maximum degree 15. The gadget and the matching are part of the data.
+3 Towers of generalized hexagons
+Definition 2. Let G0, . . . , Gr be connected bipartite graphs, where Ga has parts Aa and Ba,
+such that Na = P
+b>a |V (Gb)| ≤min(|Aa|, |Ba|) for every a < r. A tower on G0, . . . , Gr is the
+disjoint union of the Ga together with, for all a < band every vertex v of Gb, one edge from
+v to Aa and one edge from v to Ba, where distinct vertices of the levels b > areceive distinct
+neighbours in Aa and in Ba.
+A vertex v of Ga then has degree deg Ga(v) + 2a + h(v), where h(v) ∈ {0, 1} records whether
+v received a neighbour from a level b > a.
+Theorem 2. If every Ga has diameter at most k, where k is even, then every tower on
+G0, . . . , Gr has diameter at most k.
+Proof. We use induction on r; for r = 0 there is nothing to prove. The levels 1 , . . . , rinduce
+a tower T ′ on G1, . . . , Gr, which has diameter at most k by induction. Two vertices of G0 are
+within distance k in G0. A vertex of T ′ has a neighbour in A0 and a neighbour in B0, so by
+Lemma 1 it is within distance k of every vertex of G0.
+Take for Ga the incidence graph of H(qa), which has 2( q6
+a − 1)/(qa − 1) vertices and degree
+qa + 1. The tower [ q0, . . . , qr] = [9 , 7, 5, 4] satisfies the condition of Definition 2 and has the
+degrees and orders of Table 2. Every vertex has degree at most 11, so it is a graph of maximum
+degree 11 and diameter 6 on 182 ,618 = 132,860 + 49,758 vertices. The previous bound 156 ,864
+is the order of the compound H7(T4) of G´ omez and Fiol on four copies of the incidence graph
+5
+PAGE 6
+of H(7) [8]. Since N0 ≤ |V (G0)|/2, a tower with at least two levels whose first level is H(q) has
+at most 3( q6 − 1)/(q − 1) vertices and maximum degree at least q + 2. For q ≤ 16 this bound
+exceeds the largest published order at degree q + 2 and diameter 6 only for q = 9 and, by 28
+vertices, for q = 11 (Appendix B). For q = 17 it also exceeds the published value at degree 19;
+graphs of degree 19 and diameter 6 are not treated here.
+level a q a |V (Ga)| Na 1
+2 |V (Ga)| degree
+0 9 132860 49758 66430 10 + 0 + 1 = 11
+1 7 39216 10542 19608 8 + 2 + 1 = 11
+2 5 7812 2730 3906 6 + 4 + 1 = 11
+3 4 2730 0 1365 5 + 6 + 0 = 11
+Table 2: The tower of degree 11 and diameter 6. Level a is the incidence graph of H(qa); its
+vertices have degree ( qa + 1) + 2a + h, and Na of its 1
+2 |V (Ga)| points, and as many of its lines,
+receive a neighbour from the levels b > a.
+4 Surgery on compound graphs
+Let I be the incidence graph of a generalized n-gon of order ( q, q) with n ∈ {4, 6}, point set P
+and line set L, and fix a bijection x 7→ ¯x from P to L. Let T be a tournament on {1, . . . , m}
+and H a graph on {1, . . . , m} with deg H (i) = indeg T (i) for all i. Such a pair can exist only if m
+2
+
+is even; for m = 4 we use in-degrees 1 , 1, 2, 2, and for m = 5 a regular tournament.
+Definition 3. The compound C = C(I; T, H) consists of m copies I1, . . . , Im of I, where Ii has
+the half-blocks Pi and Li, together with two perfect matchings for every pair {i, j} of blocks: a
+type-changing matching, xi ∼ ¯xj for x ∈ P , when i → j in T ; and a type-preserving matching,
+xi ∼ xj for x ∈ P if {i, j} ∈H, and ℓi ∼ ℓj for ℓ ∈ L otherwise.
+A point of Ii lies in outdeg T (i) + degH (i) = m − 1 matchings and a line in indeg T (i) + (m −
+1−degH (i)) = m−1, so C is (q +m)-regular on 2m(qn −1)/(q −1) vertices. These are compound
+graphs in the sense of G´ omez and Fiol [8, 2]; we writeQq(Tm) and Hq(Tm) for n = 4 and n = 6.
+Lemma 4. The compound C(I; T, H) has diameter at most n. More precisely, a perfect match-
+ing between half-blocks Ui and Vj, with U, V∈ {P, L} and i ̸= j, puts every vertex of Ui within
+distance n of every vertex of V j, the other half-block of block j, and every vertex of U i within
+distance n of every vertex of Vj, by paths that use only that matching and edges of Ii and Ij.
+Proof. From u ∈ Ui, cross to its partner in Vj, which is within distance n − 1 of every vertex
+of V j by Lemma 1. From w ∈ U i, walk at most n − 1 steps in Ii to the partner of the target
+v ∈ Vj, and then cross. A type-changing matching ( U ̸= V ) therefore covers the pairs ( Pi, Pj)
+and ( Li, Lj), and a type-preserving matching ( U = V ) covers the pairs ( Pi, Lj) and ( Li, Pj).
+Within a block, I has diameter n.
+Lemma 5. Let S ⊆ P be a set of pairwise non-collinear points. Deleting from a type-preserving
+matching between Pi and Pj the edges xixj with x ∈ S keeps the diameter at most n. The same
+holds for a set of pairwise non-concurrent lines and a matching between Li and Lj, and several
+type-preserving matchings may be cut in this way at the same time.
+6
+PAGE 7
+Proof. By Lemma 4 the matching is needed only for the pairs ( Pi, Lj) and ( Li, Pj), through
+paths of the forms ai, aj, . . . , ℓj and ℓi, . . . , ai, aj. Exchanging i and j turns the second form into
+the first, so let a ∈ S and ℓ ∈ L, and let d(a, ℓ) = 2r + 1 ≤ n − 1 in I. If r = 0, let a′ be another
+point of ℓ; if r ≥ 1, let a′ be the point after a on a shortest path from a to ℓ. In both cases a′ is
+collinear with a, so a′ /∈ S and the edge a′
+ia′
+j remains. The walk
+ai, . . . , a′
+i, a′
+j, . . . , ℓj
+has length 2 + 1 + 1 = 4 ≤ n if r = 0, and 2 + 1 + (2r − 1) = 2r + 2 ≤ n if r ≥ 1. It uses only
+edges of Ii, Ij and the same matching, so cuts in different matchings do not interact. The case
+of lines is dual.
+For n = 4 and r = 1 the point a′ is the unique point of ℓ collinear with a. The proof uses
+only a shortest path and not the quadrangle axiom, so it applies to hexagons as well, where a
+set of pairwise non-collinear points can be much larger than an ovoid.
+Theorem 3. Let s ≥ 0, and let C′ be obtained from C(I; T, H) by cutting every type-preserving
+matching of points at one set SP of pairwise non-collinear points, and every type-preserving
+matching of lines at one set SL of pairwise non-concurrent lines (Lemma 5). Add t new vertices,
+each joined to one point and one line of every block, so that every vertex of C′ receives at most
+s more new neighbours than the number of matching edges it lost, and join the new vertices by a
+graph Y of maximum degree at most q − m + s and diameter at most n. The result has maximum
+degree at most d = q + m + s and diameter at most n.
+Proof. A vertex of C′ has degree at most q + m + s by construction, and a new vertex has degree
+at most 2 m + (q − m + s) = q + m + s. Two vertices of C′ are within distance n by Lemmas 4
+and 5. A new vertex has a point and a line of every block Ij as neighbours, so by Lemma 1 it
+is within distance n of every vertex of Ij. Two new vertices are within distance n in Y .
+The half-block Pi lies in deg H (i) = indeg T (i) type-preserving matchings, and Li lies in
+outdegT (i) of them. So the cuts free indeg T (i) |SP | slots on Pi and outdeg T (i) |SL| slots on
+Li, and the spare degree adds s slots at every vertex. For s = 0 the number t of new vertices
+is at most the least of these numbers. With m = 4 and in-degrees 1 , 1, 2, 2 this gives t ≤
+min(|SP |, |SL|), and with m = 5 and a regular tournament it gives t ≤ 2 min(|SP |, |SL|). When
+s ≥ 1 no cut is needed.
+Table 3 lists our graphs. The cut sets were found by local search, and the graphs Y by
+computer search among random and metacyclic Cayley graphs and modifications of incidence
+graphs of small generalized polygons, including vertex substitution as in [10, 18]. The exception
+is (19, 4), where Y is Q5(T4) with two attached vertices, itself given by Theorem 3. Every Y is
+part of the data. At every cell of Table 3 except (19 , 4), the previous bound is the order of the
+compound without surgery or exceeds it by fewer than 70 vertices.
+5 Verification and data
+The dataset, deposited at Zenodo (doi:10.5281/zenodo.23052995), contains for every graph a
+witness file, which describes the construction, and an explicit adjacency or edge list. A stan-
+dalone script, which shares no code with the search programs, checks each graph. For a fibre
+extension it rebuilds W (q) from coordinates and the graph from (q, X, X′, K), and the matching
+7
+PAGE 8
+(d, k) polygon m s |SP | | SL| t ∆(Y ) order
+(13, 4) W (9) 4 0 51 82 51 5 6611
+(14, 4) W (9) 5 0 51 82 88 4 8288
+(15, 4) W (11) 4 0 68 122 68 7 11780
+(17, 4) W (13) 4 0 81 170 81 8 19121
+(18, 4) W (13) 5 0 78 170 156 8 23956
+(19, 4) W (13) 5 1 0 0 1250 9 25050
+(13, 6) H(9) 4 0 3875 3878 2794 5 534234
+(15, 6) H(11) 4 0 7369 7226 7224 7 1424472
+(16, 6) H(11) 5 0 7369 7226 7968 6 1779528
+Table 3: Surgery on compounds (Theorem 3): the polygon, the number m of blocks, the spare
+degree s, the sizes of the cut sets, the number t of new vertices, the maximum degree of Y and
+the order 2 m(qk − 1)/(q − 1) + t, where the polygon is a generalized k-gon.
+where there is one, compares the result with the shipped list, checks the hypotheses of Theorem 1
+or Lemma 3, and runs breadth-first search from every vertex. For a tower or a compound with
+surgery it checks the SHA-256 hash of the edge list, that the graph is simple with maximum
+degree d, and the construction edge by edge: every block or level is a ( q + 1)-regular bipartite
+graph on 2( qk − 1)/(q − 1) vertices of diameter k, hence the incidence graph of a generalized
+k-gon; the blocks of a compound are identical; the edges between blocks are the matchings
+of the design minus the cut sets, which consist of pairwise non-collinear points and pairwise
+non-concurrent lines; every new vertex has one neighbour in each half-block of each block, and
+every vertex of a level b one in each half-block of every level a < b; and Y has diameter at most
+k. Theorems 2 and 3 then give the diameter. The script also runs breadth-first search from a
+sample of vertices, or from every vertex on request with a bit-parallel program in C included in
+the dataset. Breadth-first search from every vertex gives eccentricity exactly k for every graph;
+for the graphs of Sections 3 and 4 two further programs confirmed this when the graphs were
+found. All 13 graphs pass. Appendix B lists other graphs that also improve the known bounds,
+by less; they are not part of the dataset.
+Acknowledgements
+The search and the preparation of this paper were carried out with substantial assistance from
+Anthropic’s Claude Fable 5.1 and Opus 5.5 (AI models), which generated hypotheses, wrote the
+search, analysis and verification software as autonomous coding agents, and guided the allocation
+of computing resources. Every graph claimed here is verified by the self-contained programs in
+the dataset, which share no code with the search software.
+References
+[1] E. Bannai and T. Ito, On finite Moore graphs , J. Fac. Sci. Univ. Tokyo Sect. IA Math. 20
+(1973), 191-208.
+8
+PAGE 9
+[2] J.-C. Bermond, C. Delorme and J.-J. Quisquater, Strategies for interconnection networks:
+some methods from graph theory , J. Parallel Distrib. Comput. 3 (1986), 433-449.
+[3] F. Comellas, Table of large graphs with given degree and diameter , arXiv:2406.18994;
+web table at https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_
+diameter.html, accessed 29 September 2026.
+[4] The degree diameter problem for general graphs , Combinatorics Wiki,
+http://combinatoricswiki.org/wiki/
+The_Degree_Diameter_Problem_for_General_Graphs, accessed 29 September 2026.
+[5] C. Delorme, Grands graphes de degr´ e et diam` etre donn´ es, European J. Combin. 6 (1985),
+291-302.
+[6] C. Delorme and J. G´ omez, Some new large compound graphs , European J. Combin. 23
+(2002), 539-547.
+[7] W. Feit and G. Higman, The nonexistence of certain generalized polygons , J. Algebra 1
+(1964), 114-131.
+[8] J. G´ omez and M. A. Fiol,Dense compound graphs, Ars Combin. 20-A (1985), 211-237.
+[9] J. G´ omez, M. A. Fiol and O. Serra, On large (∆, D)-graphs, Discrete Math. 114 (1993),
+219-235.
+[10] J. G´ omez, I. Pelayo and C. Balbuena,New large graphs with given degree and diameter six ,
+Networks 34 (1999), 154-161.
+[11] P. R. Hafner, Geometric realisation of the graphs of McKay-Miller-ˇSir´ aˇ n, J. Combin. Theory
+Ser. B 90 (2004), 223-232.
+[12] A. J. Hoffman and R. R. Singleton, On Moore graphs with diameters 2 and 3, IBM J. Res.
+Develop. 4 (1960), 497-504.
+[13] K. Isham, K. Lakhotia, L. Monroe and F. Petrini, Kronecker products, polarity quotients
+and large graph constructions , arXiv:2608.27253, 2026.
+[14] E. Loz and G. Pineda-Villavicencio, New benchmarks for large-scale networks with given
+maximum degree and diameter , Comput. J. 53 (2010), 1092-1105.
+[15] B. D. McKay, M. Miller and J. ˇSir´ aˇ n,A note on large graphs of diameter two and given
+maximum degree, J. Combin. Theory Ser. B 74 (1998), 110-118.
+[16] M. Miller and J. ˇSir´ aˇ n,Moore graphs and beyond: a survey of the degree/diameter problem ,
+Electron. J. Combin. 20(2) (2013), Dynamic Survey DS14v2.
+[17] S. E. Payne and J. A. Thas, Finite Generalized Quadrangles, 2nd ed., EMS Series of Lectures
+in Mathematics, European Mathematical Society, Z¨ urich, 2009.
+[18] G. Pineda-Villavicencio, J. G´ omez, M. Miller and H. P´ erez-Ros´ es,New largest known graphs
+of diameter 6, Networks 53 (2009), 315-328.
+9
+PAGE 10
+[19] R. Rajiv, Four new largest known graphs of diameter three , Zenodo, 2026, doi:10.5281/
+zenodo.21180071.
+[20] R. Rajiv, Improved lower bounds for the degree-diameter problem from metacyclic groups,
+coset graphs and affine lifts , Zenodo, 2026, doi:10.5281/zenodo.22073603.
+[21] R. Singleton, On minimal graphs of maximum even girth , J. Combin. Theory 1 (1966),
+306-332.
+[22] J. Tits, Sur la trialit´ e et certains groupes qui s’en d´ eduisent, Publ. Math. Inst. Hautes
+´Etudes Sci. 2 (1959), 13-60.
+[23] H. Van Maldeghem, Generalized Polygons, Monographs in Mathematics 93, Birkh¨ auser,
+Basel, 1998.
+A The graphs
+The parameters of each graph of Table 1 are in Section 2 and Tables 2 and 3; the rest is in
+the dataset, which gives each graph explicitly in the file named below (the hash is that of the
+uncompressed list).
+(d, k) n constr. file in the dataset SHA-256 (first 16 hex digits)
+(14, 3) 1088 F graph d14 k3 n1088.adj [source identifier omitted]
+(15, 3) 1539 M graph d15 k3 n1539.edges.xz [source identifier omitted]
+(19, 3) 2783 F graph d19 k3 n2783.adj [source identifier omitted]
+(13, 4) 6611 S graph d13 k4 n6611.edges.xz [source identifier omitted]
+(14, 4) 8288 S graph d14 k4 n8288.edges.xz [source identifier omitted]
+(15, 4) 11780 S graph d15 k4 n11780.edges.xz [source identifier omitted]
+(17, 4) 19121 S graph d17 k4 n19121.edges.xz [source identifier omitted]
+(18, 4) 23956 S graph d18 k4 n23956.edges.xz [source identifier omitted]
+(19, 4) 25050 S graph d19 k4 n25050.edges.xz [source identifier omitted]
+(11, 6) 182618 T graph d11 k6 n182618.edges.xz [source identifier omitted]
+(13, 6) 534234 S graph d13 k6 n534234.edges.xz [source identifier omitted]
+(15, 6) 1424472 S graph d15 k6 n1424472.edges.xz [source identifier omitted]
+(16, 6) 1779528 S graph d16 k6 n1779528.edges.xz [source identifier omitted]
+B Intermediate graphs
+The following graphs were found on the way to Table 1. Their orders lie strictly between the
+previous bound and the new bound, so each also improves the previous bound (S, surgery on a
+compound; T, tower). Each was checked by breadth-first search from every vertex; they are not
+part of the dataset.
+(d, k) previous intermediate orders (all above the previous value)
+(13, 4) 6600 6607 (S), 6609 (S), 6610 (S)
+(14, 4) 8266 8280 (S), 8284 (S), 8286 (S)
+(15, 4) 11759 11775 (S), 11778 (S), 11779 (S)
+(17, 4) 19040 19118 (S)
+(13, 6) 531440 531448 (T), 531458 (T), 534170 (S), 534174 (S), 534185 (S),
+534204 (S), 534212 (S), 534216 (S), 534224 (S)
+(15, 6) 1417248 1422308 (S), 1423836 (S)
+(16, 6) 1771560 1779372 (S), 1779396 (S), 1779462 (S)
+10

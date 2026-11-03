@@ -1,0 +1,88 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All obligations in the D0_EDGE_BIN saturated-row contradiction are discharged; no global repeat simplicity or triple-edge elimination is used. Same-family semantic judgment remains provisional.",
+  "trace_path": "reviews/dd82/proof-checker-n62-bin-20261011/",
+  "reviewer_task": "/root/proof_review_n62_bin",
+  "reviewer_backend": "codex-agent",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": null,
+  "reviewer_reasoning_actual": null,
+  "runtime_attestation": "Actual backend model and reasoning metadata were not independently exposed to this reviewer.",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:11:23Z",
+  "reviewed_inputs": [
+    {
+      "path": "proofs/dd82/n62/D0_EDGE_BIN_SATURATED_ROW_EXCLUSION.md",
+      "scope": "Complete proof, lines 1–79"
+    },
+    {
+      "path": "proofs/dd82/n62/RECOVERED_REDUCTION.md",
+      "scope": "Actual graph identities in Step 1 and D0_EDGE_BIN branch derivation in Step 6"
+    },
+    {
+      "path": "context/dd82/archive/N8_AI_FOR_MATH_LLM_SAT_REVIEW_20260929/theory/n62/n62_root_templates.json",
+      "scope": "Complete D0_EDGE_BIN template object"
+    }
+  ],
+  "details": {
+    "theorems_audited": 1,
+    "rounds": 1,
+    "issues": [],
+    "open_obligations": [],
+    "obligations_discharged": [
+      "F1 actual graph repeat identities",
+      "F2 complete root row",
+      "F3 complete w row",
+      "F4 unique residual unit endpoint c in Y excluding w",
+      "F5 A_cw=0 at (i,w)",
+      "F6 A_ac=1 at (0,c)",
+      "F7 A_cb=1 at (c,w)",
+      "F8 triangle abc implies B_bc>=1",
+      "F9 distinct i,b summands force 2<=1"
+    ],
+    "counterexample_pass": {
+      "method": "Direct algebraic boundary and assumption-removal attempts",
+      "attempts": [
+        "Residual unit duplicated at j or k",
+        "Residual unit split among multiple endpoints",
+        "c placed at 0, in X, or at w",
+        "c=a",
+        "Final summation indices identified",
+        "Double or triple repeat entries elsewhere",
+        "BIN replaced by BOUT"
+      ],
+      "counterexamples_found": 0,
+      "unresolved_candidates": 0
+    },
+    "template_alignment": {
+      "status": "confirmed_by_read_only_exact_JSON_check",
+      "w": 9,
+      "a": 10,
+      "b": 4,
+      "fixed_B": [[0,9,2],[0,10,1],[4,9,1]],
+      "B_1_on_X_2_through_8": [1,1,0,0,0,0,0],
+      "global_B_mode": "0/1/2",
+      "global_B_mode_used": false
+    },
+    "scope": "Only the actual-graph D0_EDGE_BIN branch is excluded by this reviewed proof.",
+    "not_claimed": [
+      "D0_EDGE_BOUT exclusion",
+      "Any other branch exclusion",
+      "Complete order-62 nonexistence",
+      "Exact degree-diameter value",
+      "Lean implementation or theorem",
+      "Independent re-certification of seven-template coverage"
+    ],
+    "source_edits": false,
+    "formal_edits": false,
+    "wiki_edits": false,
+    "sat_runs": 0,
+    "additional_agents_spawned": 0,
+    "source_fixes_required": 0
+  }
+}

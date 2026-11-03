@@ -1,0 +1,67 @@
+{
+  "argv": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+    "-t",
+    "60",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+  ],
+  "return_code": 0,
+  "s_status_lines": [],
+  "statistics": {
+    "conflicts": 132263,
+    "decisions": 338929,
+    "propagations": 81741996,
+    "restarts": 492
+  },
+  "solver_calls": 1,
+  "proof_logging": false,
+  "proof_checked": false,
+  "charges": [
+    {
+      "phase": "CONVERT_OLD_CACHE_NO_DP",
+      "CPU": 0.034366,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "python",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/convert_cache.py"
+      ]
+    },
+    {
+      "phase": "COMPILE",
+      "CPU": 1.0443230000000001,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "g++",
+        "-O2",
+        "-std=c++17",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model.cpp",
+        "-o",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model"
+      ]
+    },
+    {
+      "phase": "BUILD_EXACT_POINT_CNF",
+      "CPU": 0.4581670000000001,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/build_model",
+        "16.91885736"
+      ]
+    },
+    {
+      "phase": "ONLY_CADICAL_WINDOW",
+      "CPU": 60.041635,
+      "exit": 0,
+      "wall_hard_killed": false,
+      "argv": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/cadical",
+        "-t",
+        "60",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/K19_exact_matching_interface/exact_point_model/K19_EXACT_POINT.cnf"
+      ]
+    }
+  ]
+}

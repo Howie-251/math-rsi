@@ -1,0 +1,19 @@
+import DegreeDiameter.N59ZeroCore
+
+#print DegreeDiameter.zeroTriangleVertex
+#print DegreeDiameter.commonZeroNeighbors
+#check @DegreeDiameter.matching_row_positive_value
+#check @DegreeDiameter.matching_row_equal_positive_adj
+#check @DegreeDiameter.independent_matching_rows_no_defect_triangle
+#check @DegreeDiameter.common_zero_neighbors_card_le_two
+#print axioms DegreeDiameter.matching_row_positive_value
+#print axioms DegreeDiameter.matching_row_equal_positive_adj
+#print axioms DegreeDiameter.independent_matching_rows_no_defect_triangle
+#print axioms DegreeDiameter.common_zero_neighbors_card_le_two
+
+#check @DegreeDiameter.zero_vertex_edge_defect_zero
+#check @DegreeDiameter.zero_heavy_has_nonzero_common_neighbor
+#check @DegreeDiameter.n59_zero_heavy_has_nonzero_common_neighbor
+#print axioms DegreeDiameter.zero_vertex_edge_defect_zero
+#print axioms DegreeDiameter.zero_heavy_has_nonzero_common_neighbor
+#print axioms DegreeDiameter.n59_zero_heavy_has_nonzero_common_neighbor

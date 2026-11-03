@@ -1,0 +1,16 @@
+{
+  "question":"Can within-side boundarymatching edges repair the unique-cross obligations that ruled out purecross matching after deleting adjacentu,v from Exoo72?",
+  "source":"Same literalExoo72 and saved Hboundary/unique-route evidence;old4320cross assignments inherited,not rerun.",
+  "rule_change":"After removing u,v,allow any perfectmatching on the8boundary vertices AunionB,including A-A andB-B edges. Such newedges can support newA-B routes through oldH two-step connections,so the old must-directly-match-each-unique-cross argument does not apply.",
+  "complete_domain":"8pointperfectmatchings=105:24purecross inherited,72withoneA-A andoneB-B pair,9withtwoA-A andtwoB-B pairs. Newly evaluated only180*81=14580assignments.",
+  "WLOG_perfectmatching":"EveryHboundaryvertex hasdegree4 and allotherretainedvertices degree5;newoldoldedges preservingH/max5 form a partialmatching on the independent8pointboundary. Extendit to a perfectmatching without destroyingdiameter<=3,so all105cover all such repairs.",
+  "prediction_before_test":"The previous directcross obstruction may disappear when same-side matching steps are admitted. The correct exact boundarypair gate is existing_H(s,t)<=3 OR dist_H(mate(s),t)<=2 OR dist_H(s,mate(t))<=2. Directmatching is included bydist0;existing routes may not be dropped.",
+  "cut_derivation":"A<=3simplepath uses at most1matchingedge,since consecutive matchingedges backtrack and two separatedmatchingedges need an Hboundaryedge. The sole matchingedge must befirstorlast,since middleposition likewise needs an Hboundaryedge. Hboundaryindependence is inherited from actualall180checks.",
+  "falsification":"Any newmatching graph with a shortboundarypair path but falsegate would refute thiscut;use no such cut if found.",
+  "cache_reuse":"Reuse saved same-sideH<=3 andcrossH<=2 matrices;crossH<=3 follows from saveduniqueAi-u-v-Bj routes (onlyoldshortpath through the deletedvertices is that one),or compute the missingcache directly if needed. No oldsourceD3 rerun.",
+  "budget_CPU_seconds":15,
+  "workers":1,
+  "test_order":["All14580new exact28boundarypair gates","Only survivors generate literal70controller and testcontrollerD3","Only trueD3survivors get conic24/general120unique-route Hall gate;stopfirstallconic24nonemptyinterface","NoSAT orfibergraph;completefailure maycombine inherited24cross to close all105oldoldrepairs at eachsourceedge"],
+  "forbidden":["old4320rerun","solver","fibergraph","Lean","hash","install","newcontroller/seed/deletionsurgeryladder"],
+  "strict_scope":"Only Exoo72,deleteanadjacent2vertexpair,retainallotherHedges,maxdegree5oldoldedge-repair. Not nonadjacentdeletions,fourpointdeletions,othergraphs orall70controllers."
+}

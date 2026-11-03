@@ -1,0 +1,54 @@
+{
+  "timestamp_UTC": "2026-10-28T05:17:37.104235+00:00",
+  "status": "FROZEN_BEFORE_FIRST_FULL_INDEPENDENT_SAT_MODELS",
+  "sources": [
+    {
+      "n": 15552,
+      "m": 116316,
+      "D": 4,
+      "free_independent_pins": 648,
+      "target_rows_before_dedup": 15552,
+      "hypothetical_new_n": 15553
+    },
+    {
+      "n": 102060,
+      "m": 765045,
+      "D": 5,
+      "free_independent_pins": 810,
+      "target_rows_before_dedup": 102060,
+      "hypothetical_new_n": 102061
+    }
+  ],
+  "rule": "Everyactualfreepin getsone independent binaryvariable;selectatmost15,retainalloldedges. Constraints coverALLoldtargets bycachedR3/R4,notfoldedbyinversion.",
+  "prediction": "At leastoneasymmetric fullfreeportneighborhood cancoverthewholesource inR_(D-1), yieldingacompletegraph.",
+  "new_domain": "Firstcomplete648/810independent-pinSATdomain. Oldcanonical72/90SATandfull648/810MILPUNKNOWN arepreservedhistory,notrerun.",
+  "lex_WLOG": "Sortnonfixedinversionpairsbyminlabel;atfirstpairwhereselections differ,thelowerlabelmustbeselected. Prefixequalaux tracksallpriorpairequalities. This choosesbetweenS andinversion(S),neverforcespairselectionequal. Zeroportvariablesremainindependent.",
+  "asymmetry_cut": "Finalprefixequal=false,soatleastonepairhasoneendpointselected. This excludesonlytheinvariantdomain ruledoutbythetwosavedfullinversionrawUNSATresults.",
+  "asymmetry_dependency": {
+    "directory": "../full_inversion_port_cover",
+    "source_statuses": [
+      "SOLVER_UNSAT_FULL_INVERSION_DOMAIN_UNCERTIFIED",
+      "SOLVER_UNSAT_FULL_INVERSION_DOMAIN_UNCERTIFIED"
+    ],
+    "UNSAT_prooflog_verified": false,
+    "conditional_negative_scope": "NewasymmetricUNSATpluspriorinvariantUNSATwouldcoverallfullfreepinsetscomputationally,dependentonthetwopriornumericalUNSATresults.",
+    "positive_scope": "Anydecodedfullcovergraphisvalidindependentlyofthepriornegativeclaims."
+  },
+  "counter": "Ordinaryatmost15overall648/810singleliteralinputs;16thresholdsequentialcounter.",
+  "SAT_acceptance": "Decodeunique<=15pins;checkallfullnclauses,explicitcachedballORforalloriginaln,actualselecteddegreesfromsourceedges/CSR;thenexportcompletegraphandstopfirsthit.",
+  "budget": {
+    "aggregate_CPU_seconds": 160,
+    "prep_parent_CPU_seconds": 25,
+    "workers": 1,
+    "per_source_unique_solver_calls": 1,
+    "CaDiCaL_seconds_per_source": 60,
+    "solver_OS_CPU_soft_hard": [
+      62,
+      63
+    ],
+    "new_balls": 0,
+    "source_D_BFS": 0,
+    "carried_directions_CPU_seconds": 0.063390872
+  },
+  "stop": "FirstverifiedSATortwoterminalcalls/budget.No newseed/domain/timercontinuation.UNKNOWNdoesnotexclude."
+}

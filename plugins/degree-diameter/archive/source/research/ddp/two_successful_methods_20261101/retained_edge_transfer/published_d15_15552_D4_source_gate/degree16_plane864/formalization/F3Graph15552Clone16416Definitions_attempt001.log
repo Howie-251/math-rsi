@@ -1,0 +1,19 @@
+DegreeDiameter/Portfolio/F3Graph15552Clone16416Definitions.lean:23:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (↑(?m.100 % 3)).val
+in the target expression
+  81 * ↑(layer ⟨↑j / 27, ⋯⟩) +
+      (ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 0) +
+            3 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 1) +
+          9 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 2) +
+        27 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 3)) =
+    81 * ↑(layer ⟨↑j / 27, ⋯⟩) + ↑j % 3 + 9 * (↑j / 3 % 3) + 27 * (↑j / 9 % 3)
+
+j : Fin 864
+⊢ 81 * ↑(layer ⟨↑j / 27, ⋯⟩) +
+      (ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 0) +
+            3 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 1) +
+          9 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 2) +
+        27 * ZMod.val (![↑(↑j % 3), 0, ↑(↑j / 3 % 3), ↑(↑j / 9 % 3)] 3)) =
+    81 * ↑(layer ⟨↑j / 27, ⋯⟩) + ↑j % 3 + 9 * (↑j / 3 % 3) + 27 * (↑j / 9 % 3)
+label : Vertex ≃ Fin 16416
+'DegreeDiameter.Portfolio.F3Graph15552.Clone16416.label_new' depends on axioms: [propext, Quot.sound]

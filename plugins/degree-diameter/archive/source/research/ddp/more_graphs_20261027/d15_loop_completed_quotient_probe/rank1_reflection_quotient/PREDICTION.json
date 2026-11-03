@@ -1,0 +1,13 @@
+{
+  "frozen_before_reflection_pair_tests_and_2SAT":true,
+  "prediction":"The two canonical coloop-reflection choices at every actual15552 controller admit a globally compatible192-Boolean assignment, yielding one actual involutory source automorphism with27 fixed points per81-point fibre.",
+  "local_rule":"For each of the two coloop lines u, let ell annihilate the other four kernel lines, normalized by ell(u)=1. Set R=I-2u*ell overF3. No other involutions or controller permutations are allowed.",
+  "exact_arc_condition":"For every actual arc a→b with normalized outputv, Qv=I-v*e_j^T, require Rb*v in<span(v)> and Qv*Rb*B=B*Ra. Recorded B is Qv-valued and every arc has c=0.",
+  "2SAT":"One variable per controller chooses its two ordered coloop reflections. Each forbidden choice pair gives (choice_a != forbidden_a) OR (choice_b != forbidden_b). Same-variable selfarc pairs must reduce correctly to a unit clause or tautology.",
+  "SAT_acceptance":"Recheck every one of the960 arc equations using the selected matrices. Only then save the source involution and oldvertex→orbit map, with54 classes percontroller/10368 total.",
+  "UNSAT_acceptance":"Save the exact forbidden-pair clauses and an implication contradiction witness; stop this prescribed two-choice class, with no other involution/frame/field search.",
+  "conditional_target":{"Delta":14,"D":4,"hypothetical_n":10368,"saved_public_lower_bound":9720},
+  "CPU_budget":{"aggregate_seconds":10,"2SAT_solve_seconds_max":5},
+  "source_BFS_solver_external_or_graph_generation":0,
+  "paper_confirmation":"Expert independently confirmed QvB=B and the stated relation automorphism condition before the numeric run. Quotient degree/D theorem is conditional on actual SAT+all-arc verification."
+}

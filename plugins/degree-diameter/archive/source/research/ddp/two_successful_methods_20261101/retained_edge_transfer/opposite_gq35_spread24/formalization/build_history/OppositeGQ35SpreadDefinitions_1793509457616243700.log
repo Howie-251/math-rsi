@@ -1,0 +1,48 @@
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:19:72: warning: unused variable `i`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:22:37: error(lean.unknownIdentifier): Unknown identifier `finProdFinEquiv.symm`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:26:33: error(lean.unknownIdentifier): Unknown identifier `finSumFinEquiv`
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:28:0: error: Not a definitional equality: the left-hand side
+  ↑(old p l)
+is not definitionally equal to the right-hand side
+  ↑l + 96 * ↑p
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:28:77: error: Type mismatch
+  rfl
+has type
+  ?m.16 = ?m.16
+but is expected to have type
+  ↑(old p l) = ↑l + 96 * ↑p
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:29:0: error: Not a definitional equality: the left-hand side
+  ↑(label (Sum.inl v))
+is not definitionally equal to the right-hand side
+  ↑v
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:29:62: error: Type mismatch
+  rfl
+has type
+  ?m.8 = ?m.8
+but is expected to have type
+  ↑(label (Sum.inl v)) = ↑v
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:30:0: error: Not a definitional equality: the left-hand side
+  ↑(label (Sum.inr j))
+is not definitionally equal to the right-hand side
+  6144 + ↑j
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:30:67: error: Type mismatch
+  rfl
+has type
+  ?m.14 = ?m.14
+but is expected to have type
+  ↑(label (Sum.inr j)) = 6144 + ↑j
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:31:55: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.graph : SimpleGraph Vertex :=
+OppositeGQSpread.graph oldEquiv Inc spread
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.Inc : Point → Line → Prop :=
+fun p l => ∃ i, linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.oldEquiv : Old ≃ Point × Line :=
+sorry
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.label : Vertex ≃ Fin 6160 :=
+sorry
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.FinalClaim : Prop :=
+Fintype.card Vertex = 6160 ∧ (∀ (v : Vertex), graph.degree v ≤ 24) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

@@ -1,0 +1,58 @@
+def DegreeDiameter.threeUnitRow.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → V → V → Prop :=
+fun {V} [Fintype V] G v a b c =>
+  ∀ (x : V), defectMatrix G v x = ((if x = a then 1 else 0) + if x = b then 1 else 0) + if x = c then 1 else 0
+@n62_edge_defect_le_one : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G → diameterAtMostTwo G → Fintype.card V = 62 → ∀ {r a : V}, G.Adj r a → defectMatrix G r a ≤ 1
+@n62_triangle_third_mate : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r a b : V},
+          G.Adj r a → G.Adj r b → G.Adj a b → ∃ w, w ≠ r ∧ w ≠ a ∧ w ≠ b ∧ ¬G.Adj r w ∧ threeUnitRow G r a b w
+@n62_triangle_within_root : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r a b : V},
+          G.Adj r a →
+            G.Adj r b → G.Adj a b → ∀ (x y : V), G.Adj r x → G.Adj r y → (G.Adj x y ↔ x = a ∧ y = b ∨ x = b ∧ y = a)
+@n62_triangle_mate_no_triangle_neighbor : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r a b w : V},
+          G.Adj r a →
+            G.Adj r b →
+              G.Adj a b → w ≠ r → w ≠ a → w ≠ b → threeUnitRow G r a b w → ¬G.Adj r w ∧ ¬G.Adj a w ∧ ¬G.Adj b w
+@n62_triangle_mate_exists : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r a b : V},
+          G.Adj r a →
+            G.Adj r b →
+              G.Adj a b → ∃ w, w ≠ r ∧ w ≠ a ∧ w ≠ b ∧ threeUnitRow G r a b w ∧ ¬G.Adj r w ∧ ¬G.Adj a w ∧ ¬G.Adj b w
+@n62_triangle_has_paired_triangle : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  degreeAtMostEight G →
+    diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r a b : V},
+          G.Adj r a →
+            G.Adj r b →
+              G.Adj a b →
+                ∃ w u v,
+                  G.Adj w u ∧
+                    G.Adj w v ∧
+                      G.Adj u v ∧
+                        Disjoint {r, a, b} {w, u, v} ∧
+                          (∀ x ∈ {r, a, b}, ∀ y ∈ {w, u, v}, ¬G.Adj x y) ∧
+                            threeUnitRow G r a b w ∧
+                              threeUnitRow G a r b u ∧
+                                threeUnitRow G b r a v ∧
+                                  threeUnitRow G w u v r ∧ threeUnitRow G u w v a ∧ threeUnitRow G v w u b
+'DegreeDiameter.n62_edge_defect_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_third_mate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_within_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_mate_no_triangle_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_mate_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_has_paired_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]

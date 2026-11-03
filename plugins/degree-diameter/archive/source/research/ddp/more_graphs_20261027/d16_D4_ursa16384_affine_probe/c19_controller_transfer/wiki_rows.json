@@ -1,0 +1,73 @@
+[
+  {
+    "id": "ddp-d16-d4-ursa-c19-transfer19456-20261027",
+    "title": "URSA GF4四全局chart迁移C19单候选19456：首根ecc5且963缺项",
+    "family": "URSA GF4 four-type route-chart transfer",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 16,
+    "target_D": 4,
+    "savedL": 16384,
+    "n": {
+      "actual": 19456,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": 16,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "从官方URSA16384完整literal提取64controller×F4^4及四全局线关系，反向type0↔3、1↔2。其四base permutations与已知76/C19相同，故只移到该固定76controller：va=(0,12,4,0),vb=(17,0,0,1)。实际simple connected16regular19456/155648，首根0 ecc5即停止；全局D未知但至少5。 完整341词含回退的缓存分类逐点匹配全部963缺项。",
+    "failure_or_result": "首根R4遗漏963个target；0→4最短距离5，路线[0,4864,127,14601,5020,4]。不是963无序坏对。未跑其余1023代表根、未导失败图edges，input/test.cpp可重建唯一候选。",
+    "lesson_and_restart_condition": "源b^4/B^4是fullrank闭路，C19总b电压18非零使其失闭。另有四controller槽各只有唯一rank3≤4route，任何仿射offset都仍仅64/256，故固定controller及线性关系不能靠offset救；slot61又实证四超平面只208。重启必须改变真实控制路线，同时保全闭路/联合覆盖，不做offset或电压微调续分数。",
+    "unclosed_gap": "Only this literal transfer is refuted. Exact globaldiameter and generalGF4-controller existence are unresolved.",
+    "other_metrics": {
+      "source_n": 16384,
+      "source_controller_n": 64,
+      "source_fiber_order": 256,
+      "source_global_relation_types": 4,
+      "source_degree16": 16384,
+      "source_profile_CPU": 0.381141023,
+      "candidate_n": 19456,
+      "candidate_m": 155648,
+      "first_root": 0,
+      "first_root_eccentricity": 5,
+      "single_root_R4_missing_targets": 963,
+      "global_D_lower_bound": 5,
+      "roots_checked": 1,
+      "candidate_parameters_tested": 1,
+      "missing_by_controller_counts": {
+        "0": 39,
+        "2": 36,
+        "17": 36,
+        "30": 192,
+        "32": 192,
+        "39": 36,
+        "42": 192,
+        "47": 192,
+        "61": 48
+      },
+      "native_CPU": 0.006902,
+      "compile_plus_run_CPU": 1.50833013,
+      "source_BFS_repeated": 0,
+      "unique_rank3_slots": [
+        30,
+        32,
+        42,
+        47
+      ],
+      "unique_route_cover": 64,
+      "pencil_slot61_cover": 208,
+      "self_slot0_cover": 217,
+      "cached_word_image_match": true
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/INTERFACE.json",
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/c19_controller_transfer/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/c19_controller_transfer/REPORT.md",
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/c19_controller_transfer/RESULT.json",
+      "research/ddp/more_graphs_20261027/d16_D4_ursa16384_affine_probe/route_capacity/C19_SLOT_ANALYSIS.json"
+    ]
+  }
+]

@@ -1,0 +1,343 @@
+Partial folds of the split Cayley hexagon H(9)
+and large graphs of diameter five *
+Rishabh Rajiv
+Vancouver, BC, Canada
+rishabh.rajiv@alumni.ubc.ca
+September 2026
+Abstract
+Let Γ be the incidence graph of the split Cayley hexagon H(9) and τ a duality of order
+four. The quotient F = Γ /⟨τ ⟩ is a graph on 33397 vertices of maximum degree 10 and
+diameter 5; it identifies each point p of H(9) with the point τ 2p. We show how to undo
+this identification on any set of such pairs while keeping the diameter at most 5. For every
+bijection σ from the points to the lines of a generalized hexagon, the graph on the points in
+which x and y are adjacent whenever one of them lies on the image of the other has diameter
+at most 5. Choosing σ(p) between τ pand τ −1p according to a colouring of the pairs, the
+partial fold that keeps a set S of pairs apart has 33397 + |S| vertices and diameter at most
+5, and its degrees are determined by S and the colouring. Together with a blow-up of the
+points of the subhexagon H(3) and twin vertices, integer programming over these choices
+gives N (11, 5) ≥ 36563, N (12, 5) ≥ 41699 and N (13, 5) ≥ 50750 for the degree-diameter
+problem; the previously published lower bounds were 35203, 38167 and 44232.
+MSC 2020: 05C35 (primary); 05B25, 05C25, 51E12 (secondary).
+Keywords: degree-diameter problem, generalized hexagon, duality, polarity graph, quotient
+graph.
+1 Introduction
+The degree-diameter problem asks for N (d, k), the largest order of a graph of maximum degree
+at most d and diameter at most k; see the survey of Miller and ˇSir´ aˇ n [14]. The Moore bound
+N (d, k) ≤ M (d, k) = 1 + d
+k−1X
+i=0
+(d − 1)i
+is attained only in a few cases [13, 1, 4], and lower bounds come from explicit constructions.
+Tables of the largest known orders are maintained by Comellas [3] and on the Combinatorics
+Wiki [5].
+* Accompanying dataset: complete machine-readable descriptions of all three graphs, their edge lists, the duality
+τ and standalone verification programs (Section 6), deposited at Zenodo, doi:10.5281/zenodo.23056128.
+ Independent researcher. ORCID: 0009-0000-8626-5234.
+1
+
+Quotients of incidence graphs of generalized polygons by polarities are a classical source
+of such constructions: the polarity graphs of projective planes of Erd˝ os and R´ enyi [9] and of
+Brown [2] have diameter two, and Delorme [6, 7] used polarities of generalized quadrangles and
+hexagons. If Γ is the incidence graph of a generalized n-gon of order ( q, q) and π is a polarity,
+the quotient Γ/⟨π⟩ has maximum degree q + 1 and diameter at most n − 1. In [15] we observed
+that the argument works for any group of automorphisms that contains a duality, and applied
+it to the split Cayley hexagon H(9), which has no polarity but has dualities of order four. If τ
+is one of them, the quotient F = Γ/⟨τ ⟩ has 33397 vertices, maximum degree 10 and diameter
+5 (Theorem 2.1 below). Together with twin vertices it gave the bounds N (10, 5) ≥ 33397,
+N (11, 5) ≥ 35203 and N (12, 5) ≥ 38167. A companion paper [17] gives further constructions
+from generalized quadrangles and hexagons, by other means.
+The quotient F identifies every point p of H(9) with the point τ 2p. In this paper we undo this
+identification on part of H(9) while keeping the diameter at most 5. The key is an observation
+about pairings of points with lines in a generalized hexagon (Lemma 3.1): for every bijection
+σ from points to lines, the graph on the points in which x and y are adjacent whenever one of
+them lies on the image of the other has diameter at most 5. For a polarity σ this is the polarity
+graph. We take σ(p) ∈ {τ p, τ−1p}, chosen by a colouring of the pairs {p, τ2p}, and show that
+the resulting graph maps onto F , its edges between two neighbouring pairs forming a perfect
+matching or a complete bipartite graph K2,2 (Lemma 4.1). The partial folds obtained from it
+by identifying the two points of some of the pairs have 33397 +|S| vertices when a set S of pairs
+is kept apart, and their degrees are determined by S and the colouring (Theorem 5.1). Blowing
+up the points of the subhexagon H(3) (Theorem 5.2) and adding twins, we obtain the following
+bounds.
+Theorem 1.1. N (11, 5) ≥ 36563, N (12, 5) ≥ 41699 and N (13, 5) ≥ 50750.
+(d, k) previous bound new bound gain new /M(d, k)
+(11, 5) 35203 [15] 36563 +1360 0 .299
+(12, 5) 38167 [15] 41699 +3532 0 .216
+(13, 5) 44232 [16] 50750 +6518 0 .173
+Table 1: New lower bounds for N (d, k), with the previous bound, the largest published order at
+degree at most d and diameter k as of September 2026, and its source; the gain is the new bound
+minus the previous one. The last column is the ratio of the new order to the Moore bound.
+Section 2 collects what we use about H(9), the duality τ and the quotient F , and the twin
+lemma. Section 3 proves the pairing lemma and Section 4 the local structure of the pairings
+built from τ . Section 5 introduces partial folds and the blow-up and proves Theorem 1.1, and
+Section 6 describes the verification and the data. Appendix A lists the graphs, and Appendix B
+lists 15 further graphs found along the way whose orders also exceed the previous bounds.
+2 Preliminaries
+2.1 Generalized hexagons
+All graphs are finite and simple, and N (x) denotes the set of neighbours of a vertex x. A
+generalized hexagon of order (s, t) is a point-line incidence structure in which every line has s + 1
+2
+
+points, every point lies on t + 1 lines, and the incidence graph, the bipartite graph on points
+and lines with edges given by incidence, has diameter 6 and girth 12 [19]. For order ( q, q) the
+incidence graph is ( q + 1)-regular with 2(1 + q + q2 + q3 + q4 + q5) vertices. An automorphism
+of the incidence graph either preserves the set of points, and is a collineation, or interchanges
+points and lines, and is a duality. A polarity is a duality of order two, and a point x is absolute
+for a polarity π if it lies on the line πx.
+The points of the split Cayley hexagon H(q) are the points of the parabolic quadric Q(6, q)
+of PG(6 , q) with equation X0X4 + X1X5 + X2X6 = X 2
+3 , and its lines are the lines of Q(6, q)
+whose Grassmann coordinates pij satisfy
+p12 = p34, p 54 = p32, p 20 = p35, p 65 = p30, p 01 = p36, p 46 = p31.
+It is a generalized hexagon of order ( q, q) [18, 19]. For q = 9 its incidence graph Γ has 132860
+vertices. Raising every coordinate to its third power induces a collineation φ of H(9) of order
+two. The points and lines it fixes are those defined over F3; they form a subhexagon H(3) with
+364 points and 364 lines.
+2.2 The fold of H(9)
+The quotient Γ/G of a graph Γ by a group G of automorphisms has the G-orbits on V (Γ) as its
+vertices, two distinct orbits being adjacent if some vertex of one is adjacent to some vertex of
+the other.
+Theorem 2.1([15, Theorem 1.1 and its proof]). H(9) has a duality τ of order four with τ 2 = φ,
+and τ induces a polarity π of H(3) with 28 absolute points. The quotient F = Γ/⟨τ ⟩ has 33397
+vertices and 166425 edges; 33033 of its vertices have degree 10, 336 have degree 7 and 28 have
+degree 6; and F has diameter 5.
+We fix such a duality τ , write φ = τ 2, and write P and L for the sets of points and lines
+of H(9). Since τ commutes with φ, it maps the incidence graph of H(3) to itself; the polarity
+π of Theorem 2.1 is its restriction, so τ h= πh for a point h of H(3), and as φh = h also
+τ −1h = τ φh= τ h.
+A point p outside H(3) lies in the fiber {p, φp}, of size two, and a point of H(3) forms a
+fiber of its own. The orbit of p under ⟨τ ⟩ is {p, τ p, φp, τ−1p}, whose points are the two points
+of the fiber of p, and the orbit of a point h of H(3) is {h, τ h}. Every orbit contains a point, so
+the vertices of F correspond to the fibers, and we identify them. The 33033 fibers of size two
+are the generic fibers; they are the vertices of degree 10 of F , and the 364 points of H(3) are
+the others. We write ¯p for the fiber of a point p, and Q for the subgraph of F induced by the
+generic fibers.
+2.3 Twins
+A twin of a vertex v is a new vertex adjacent to exactly the neighbours of v. Twins were used for
+the degree-diameter problem by Delorme [6, 8] and by G´ omez, Fiol and Serra [11]; for example,
+the largest known graphs of degree 10 and 11 and diameter 3 arise from the polarity graph of
+W (8) by adding one and two twins of each of its 65 absolute points [10]. We use the following
+form.
+3
+
+Lemma 2.2. Let H be a connected graph with at least two vertices and diameter at most k,
+where k ≥ 3. For each vertex v choose an integer cv ≥ 0, and let H ′ be obtained from H by
+adding cv twins of each vertex v, no two new vertices being adjacent. Then H ′ has diameter at
+most k. A twin of v has degree degH v, and a vertex u of H has degree degH u + P
+v∈N (u) cv in
+H ′.
+Proof. The degrees are clear. For a vertex z of H ′ let ρ(z) be the vertex of H of which z is a
+twin, and let ρ(z) = z if z ∈ V (H). A new vertex z and a vertex u of H are adjacent if and only
+if ρ(z) and u are adjacent. Let z, z′ be distinct vertices of H ′, and put a = ρ(z) and b = ρ(z′).
+If a = b, then z and z′ are not adjacent and have the neighbours of a in common, so
+d(z, z′) = 2. If dH (a, b) = t ≥ 2, let a, a1, . . . , at−1, bbe a path in H. Its inner vertices lie
+in H, so z, a1, . . . , at−1, z′ is a path in H ′ and d(z, z′) ≤ t ≤ k. If a and b are adjacent and
+one of z, z′ lies in H, then z and z′ are adjacent. If both are new, then z, b, a, z′ is a path, so
+d(z, z′) ≤ 3 ≤ k.
+3 Pairings of points with lines
+Lemma 3.1. Let P and L be the points and lines of a generalized hexagon, and let σ : P → L
+be a bijection. Let Gσ be the graph on P in which distinct points x and y are adjacent when y
+lies on σ(x) or x lies on σ(y). Then Gσ has diameter at most 5.
+Proof. Let x, y∈ P. The incidence graph is bipartite of diameter 6, so it has a path
+x = x0, L1, x1, L2, . . . , xj−1, Lj = σ(y)
+from x to the line σ(y) with 2 j − 1 ≤ 5. Put yi = σ−1(Li), so that yj = y. For 1 ≤ i ≤ j the
+point xi−1 lies on σ(yi), and so does xi when i < j. Hence x0, y1, x1, . . . , xj−1, yj is a walk of
+length 2j − 1 ≤ 5 in Gσ once repeated consecutive vertices are removed.
+If σ is a polarity, then Gσ is the polarity graph, with its loops at the absolute points removed.
+The lemma needs neither that σ is an automorphism nor any relation between σ(x) and σ(y):
+any bijection will do. What σ controls is the degree. A point x is adjacent to the other points
+of σ(x) and to the points σ−1(M ) for the lines M through x, so its degree is at most 2( q + 1) in
+a hexagon of order ( q, q), and it is smaller when the two sets overlap. The pairings below make
+the overlap as large as the fold allows.
+4 Pairings from a duality of order four
+Let ε : P → {0, 1} satisfy ε(φp) = ε(p) for every point p, and put σε(p) = τ pif ε(p) = 1 and
+σε(p) = τ −1p if ε(p) = 0. For a point h of H(3) we have τ −1h = τ h, so the value of ε on H(3)
+does not matter. We write Gε for Gσε.
+Lemma 4.1. σε is a bijection from P to L, and φ is an automorphism of Gε. The map p 7→ ¯p
+sends every edge of Gε to an edge of F , and no two points of one fiber are adjacent. Let ¯p and
+¯r be adjacent in F .
+(i) If both fibers are generic, the edges of Gε between them form a perfect matching when
+ε(p) ̸= ε(r) and a complete bipartite graph K2,2 when ε(p) = ε(r).
+4
+
+(ii) If ¯p is generic and r is a point of H(3), then r is adjacent to both p and φp.
+(iii) If p and r are points of H(3), they are adjacent.
+Moreover, a point h of H(3) is adjacent in F to exactly three generic fibers, and to 3 or 4 points
+of H(3) according as it is absolute for π or not, and a generic fiber is adjacent in F to at most
+one point of H(3).
+Proof. If σε(p) = σε(p′) with p ̸= p′, then ε(p) ̸= ε(p′), say τ p= τ −1p′, and then p′ = φp, which
+has the colour of p. So σε is injective, hence bijective, as |P| = |L|. As φ commutes with τ and
+preserves ε, it commutes with σε and is an automorphism of Gε.
+For a point p let Rp be the set of the ten points of the line τ −1p. A line M lies on p if and
+only if the point τ −1M lies on τ −1p, and the orbit of M contains the fiber of τ −1M . So the
+neighbours of ¯p in F are the fibers of the points of Rp, other than ¯p itself.
+Let p be a point outside H(3). The line τ −1p is not fixed by φ, since otherwise p = τ (τ −1p)
+would be. So it contains no two points of one fiber, and at most one point of H(3), because two
+such points would span a line fixed by φ. Nor does it contain p or φp. Since φ interchanges p
+and φp and interchanges the lines τ pand φτ p= τ −1p, it suffices to show that neither p nor φp
+lies on τ p. Applying τ to the incident pair ( p, τ p) gives the incident pair ( τ p, φp), and applying
+τ −1 to (φp, τ p) gives (τ p, p), since τ −1φ = τ ; so p lies on τ pif and only if φp does. In that case
+τ pis the line through p and φp, which φ fixes, whereas φ(τ p) = τ −1p ̸= τ pbecause p is not in
+H(3). Hence the fibers of the points of Rp are ten distinct fibers different from ¯p, at most one
+of which is a point of H(3); this is why generic fibers have degree 10 in F .
+The neighbours of p in Gε are the points of σε(p), which are Rp if ε(p) = 0 and φRp if
+ε(p) = 1, together with the points σ−1
+ε (M ) for the lines M through p. For such M the point
+r = τ −1M lies in Rp, and σ−1
+ε (M ) is r if ε(r) = 1 and φr if ε(r) = 0. So for each r ∈ Rp the
+point p is adjacent to r or φr from the first set and to r or φr from the second: to the same
+point when ε(p) ̸= ε(r), and to both points of the fiber of r when the colours agree (for r in
+H(3) both are r). This gives the edges at p in (i) and (ii); applying φ gives those at φp. Every
+neighbour of p lies in a fiber of Rp, so none lies in the fiber of p.
+For a point h of H(3) the line σε(h) = τ h= πh is a line of H(3). Its ten points consist of the
+four points of H(3) on it and six other points, which the involution φ permutes without fixed
+points, in three generic fibers. A line M through h is τ rfor the point r = τ −1M on τ −1h = τ h,
+and σ−1
+ε (M ) is r or φr. So the neighbours of h in Gε are the points of τ hother than h, and the
+neighbours of h in F are their fibers: three generic fibers, both of whose points are adjacent to
+h, and the points of H(3) on πh other than h, of which there are three if h is absolute and four
+otherwise. This gives (ii) from the side of h, and (iii).
+5 Partial folds
+Choose a set S of generic fibers and a colouring c : S → {0, 1}. The partial fold G(S, c) is
+obtained from Gε, with ε = c on the fibers in S and ε = 0 elsewhere, by identifying the two
+points of every generic fiber outside S. We call the fibers in S split and the other generic fibers
+merged. For a generic fiber f let h(f ) be its neighbour in H(3), if it has one; by Lemma 4.1,
+3 · 364 = 1092 generic fibers have one.
+Theorem 5.1. G(S, c) has 33397 + |S| vertices and diameter at most 5. A merged fiber f has
+degree 10 +|NQ(f ) ∩ S|; a point of a fiber f ∈ S has degree 10 +|{g ∈ NQ(f ) ∩ S : c(g) = c(f )}|;
+5
+
+and a point h of H(3) has degree 7 − [h absolute] + s(h), where s(h) is the number of fibers in
+S among the three generic fibers adjacent to h.
+Proof. There are 364 + 2|S| + (33033 − |S|) vertices. By Lemma 4.1 the two points of a merged
+fiber are not adjacent, so the identification creates no loop, and identifying two vertices does
+not increase any distance; so the diameter bound follows from Lemma 3.1. The degrees follow
+from Lemma 4.1: a merged fiber meets a merged neighbour or a point of H(3) in one edge and
+a split neighbour in two; a point of a split fiber meets a merged neighbour or a point of H(3)
+once, and a split neighbour once or twice according as its colour differs or agrees; and a point
+h of H(3) meets each of its 4 − [h absolute] neighbours in H(3) once and each adjacent generic
+fiber once, or twice if the fiber is split.
+For S = ∅ the partial fold is F itself, and for S the set of all generic fibers and a constant
+colouring it is Gε itself, in which a point outside H(3) has degree 20, or 19 if its fiber is adjacent
+to a point of H(3). The theorem shows that splitting a fiber costs one unit of degree at each
+merged neighbour, and at each split neighbour of the same colour, so the colouring decides where
+the extra degree goes.
+Finally, we blow up the points of H(3). For cH : H(3) → Z≥0, replace each point h of H(3)
+by 1 +cH (h) pairwise non-adjacent copies, each adjacent to every copy of every neighbour of h,
+and call the result G(S, c, cH ).
+Theorem 5.2. G(S, c, cH ) has 33397 + |S| + P
+h cH (h) vertices and diameter at most 5. A
+vertex in or equal to a generic fiber f has its degree from Theorem 5.1 plus cH (h(f )), where
+cH (h(f )) = 0 if f has no neighbour in H(3); and every copy of a point h of H(3) has degree
+7 − [h absolute] + s(h) + P cH (h′), the sum over the neighbours h′ of h in H(3).
+Proof. Copies of distinct vertices x and y are at distance d(x, y): a path lifts to copies, and the
+image of a path is a walk. Two copies of one vertex have a common neighbour. So the diameter
+is still at most 5. A copy of x is adjacent to all copies of the neighbours of x, which gives the
+degrees.
+So G(S, c, cH ) has maximum degree at most 10 + δ exactly when the loads of Theorems 5.1
+and 5.2 stay within δ at every vertex, a system of linear inequalities in the indicator variables ofS
+and c and the integers cH (h). Twins of arbitrary vertices (Lemma 2.2) can be added afterwards
+wherever degree remains. We searched for large solutions with δ = 1 , 2, 3, using the integer
+programming solver HiGHS [12]: for δ = 1 by local search followed by a large-neighbourhood
+search that re-solves the integer program on a few regions at a time, and for δ = 2 and 3
+by solving the whole integer program over states that are constant on the orbits of a group
+of automorphisms of Q isomorphic to PSL(2 , 8), of order 504, respectively PΓL(2 , 8), of order
+1512. Twins were then added by an integer program. Each graph was built from its state by
+two independent programs, which agree edge for edge. Table 2 lists the three graphs.
+Proof of Theorem 1.1. The graphs of Table 2 have maximum degree 11, 12 and 13 and diameter
+at most 5 by Theorems 5.1 and 5.2 and Lemma 2.2, and orders 36563, 41699 and 50750.
+The twins of [15] are limited by the degree of the vertices they attach to. If H is 10-regular,
+summing the degree condition of Lemma 2.2 over all vertices gives 10 P
+v cv ≤ δ |V (H)| at
+maximum degree 10 + δ, so twins alone add at most 3339, 6679 and 10019 vertices to a 10-
+regular graph on 33397 vertices for δ = 1, 2 and 3; the graphs of [15] added 1806 and 4770. The
+6
+
+δ (d, k) |S| C twins n
+1 (11 , 5) 3075 91 0 36563
+2 (12 , 5) 7959 280 63 41699
+3 (13 , 5) 17157 196 0 50750
+Table 2: The three twinned partial folds: the number |S| of split fibers, the number C =P
+h cH (h) of added copies of points of H(3), the number of further twins (Lemma 2.2), and the
+order n = 33397 + |S| + C + twins. Each graph has maximum degree 10 + δ and diameter 5.
+graphs of Table 2 add 3166, 8302 and 17353; the last two exceed these bounds, because a partial
+fold adds up to 33033 vertices before any twin is added, and at δ = 3 it has 17157 split fibers.
+6 Verification and data
+The dataset, deposited at Zenodo (doi:10.5281/zenodo.23056128), contains the duality τ as a
+permutation of the 132860 vertices of Γ and, for each graph of Table 2, a witness file, which
+gives the set S, the colouring c, the counts cH and the vertices that the further twins copy,
+and an explicit edge list. A standalone script in Python, which uses only the standard library
+and shares no code with the search programs, checks the SHA-256 hash of each edge list, that
+the graph is simple with maximum degree d, and that the eccentricity is 5 at a fixed sample of
+vertices, or at every vertex on request. On request it also rebuilds Γ from the coordinates of
+Section 2, checks that τ is a duality of order four whose square fixes 728 vertices, and rebuilds
+every graph from its witness, which reproduces the shipped edge list edge for edge. Breadth-first
+search from every vertex, by two further programs, one of them in C and included in the dataset,
+found every eccentricity equal to 5; these graphs are not vertex-transitive, so a search from one
+vertex would not suffice. The graphs of Appendix B are listed but not included.
+Acknowledgements
+The search and the preparation of this paper were carried out with substantial assistance from
+Anthropic’s Claude Fable 5.1 and Opus 5.5 (AI models), which generated hypotheses, wrote the
+search, analysis and verification software as autonomous coding agents, and guided the allocation
+of computing resources. Every graph claimed here is verified by the self-contained programs in
+the dataset, which share no code with the search software.
+References
+[1] E. Bannai and T. Ito, On finite Moore graphs , J. Fac. Sci. Univ. Tokyo Sect. IA Math. 20
+(1973), 191-208.
+[2] W. G. Brown, On graphs that do not contain a Thomsen graph , Canad. Math. Bull. 9
+(1966), 281-285.
+[3] F. Comellas, Table of large graphs with given degree and diameter , arXiv:2406.18994;
+web table at https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_
+diameter.html, accessed 29 September 2026.
+7
+
+[4] R. M. Damerell, On Moore graphs, Proc. Cambridge Philos. Soc. 74 (1973), 227-236.
+[5] The degree diameter problem for general graphs , Combinatorics Wiki,
+http://combinatoricswiki.org/wiki/
+The_Degree_Diameter_Problem_for_General_Graphs, accessed 29 September 2026.
+[6] C. Delorme, Grands graphes de degr´ e et diam` etre donn´ es, European J. Combin. 6 (1985),
+291-302.
+[7] C. Delorme, Large bipartite graphs with given degree and diameter , J. Graph Theory 9
+(1985), 325-334.
+[8] C. Delorme and G. Farhi, Large graphs with given degree and diameter. Part I, IEEE Trans.
+Comput. C-33 (1984), 857-860.
+[9] P. Erd˝ os and A. R´ enyi,On a problem in the theory of graphs (in Hungarian), Magyar Tud.
+Akad. Mat. Kutat´ o Int. K¨ ozl.7 (1962), 623-641.
+[10] J. G´ omez,Some new large (∆, 3)-graphs, Networks 53 (2009), 1-5.
+[11] J. G´ omez, M. A. Fiol and O. Serra, On large (∆, D)-graphs, Discrete Math. 114 (1993),
+219-235.
+[12] Q. Huangfu and J. A. J. Hall, Parallelizing the dual revised simplex method, Math. Program.
+Comput. 10 (2018), 119-142.
+[13] A. J. Hoffman and R. R. Singleton, On Moore graphs with diameters 2 and 3, IBM J. Res.
+Develop. 4 (1960), 497-504.
+[14] M. Miller and J. ˇSir´ aˇ n,Moore graphs and beyond: a survey of the degree/diameter problem ,
+Electron. J. Combin. 20(2) (2013), Dynamic Survey DS14v2.
+[15] R. Rajiv, Large graphs of diameter five from a duality of order four of the split Cayley
+hexagon H(9), Zenodo, 2026, doi:10.5281/zenodo.22907863.
+[16] R. Rajiv, New lower bounds for the degree-diameter problem from Cayley graphs, orbit
+graphs and lifts , Zenodo, 2026, doi:10.5281/zenodo.22928337.
+[17] R. Rajiv, New lower bounds for the degree-diameter problem from generalized quadrangles
+and hexagons , Zenodo, 2026, doi:10.5281/zenodo.23052995.
+[18] J. Tits, Sur la trialit´ e et certains groupes qui s’en d´ eduisent, Publ. Math. Inst. Hautes
+´Etudes Sci. 2 (1959), 13-60.
+[19] H. Van Maldeghem, Generalized Polygons, Monographs in Mathematics 93, Birkh¨ auser,
+Basel, 1998.
+8
+
+A The graphs
+Table 2 gives the parameters of each graph of Table 1. The dataset gives its witness and the
+graph explicitly, in the file named below (the hash is that of the uncompressed list).
+(d, k) n δ file in the dataset SHA-256 (first 16 hex digits)
+(11, 5) 36563 1 graph d11k5 n36563.edges.xz e21ea4d9bc132d15
+(12, 5) 41699 2 graph d12k5 n41699.edges.xz 3b2a59e4c6a56e5c
+(13, 5) 50750 3 graph d13k5 n50750.edges.xz dfc98d664dcdbd42
+B Intermediate graphs
+The following graphs were found on the way to Table 1. Their orders lie strictly between the
+previous bound and the new bound, so each of them also improves the previous bound. All are
+graphs G(S, c, cH ), some with further twins, except the three marked with an asterisk, which
+are partial folds G(S, c). Each was checked by breadth-first search from every vertex; they are
+not part of the dataset.
+(d, k) previous intermediate orders (all above the previous value)
+(11, 5) 35203 36454 ∗, 36549, 36559
+(12, 5) 38167 39296 ∗, 39338∗, 39580, 39632, 39650, 39659, 40173, 40677
+(13, 5) 44232 44442, 44518, 44558, 44596
+9

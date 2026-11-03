@@ -1,0 +1,108 @@
+✖ [2551/2551] Building DegreeDiameter.N63Compose (15s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N63Compose.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Compose.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N63Compose.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Compose.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N63Compose.setup.json --json
+error: DegreeDiameter/N63Compose.lean:17:23: unsolved goals
+case p1.h.hf.h_add_left.h_exp
+K : Type u_1
+inst✝ : Field K
+r : K
+h : ¬IsSquare (29 + 4 * r)
+p : K[X] := X ^ 2 + X - C (7 + r)
+⊢ 2 ≤ max (max (2 * 1) 1) 0
+error: DegreeDiameter/N63Compose.lean:18:31: unsolved goals
+case coeff_ne_zero
+K : Type u_1
+inst✝ : Field K
+r : K
+h : ¬IsSquare (29 + 4 * r)
+p : K[X] := X ^ 2 + X - C (7 + r)
+hm : p.Monic
+⊢ 1 ≠ 0
+error: DegreeDiameter/N63Compose.lean:35:40: unsolved goals
+case p1.h.hf.h_add_left.h_exp
+p : ℚ[X]
+hm : p.Monic
+hi : Irreducible p
+hn : ¬IsSquare ((-4) ^ p.natDegree * eval (-29 / 4) p)
+⊢ 2 ≤ max (max (2 * 1) 1) 0
+error: DegreeDiameter/N63Compose.lean:40:38: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  DivisionRing.toRatAlgebra
+inferred
+  ℚ⟮x⟯.algebra'
+error: DegreeDiameter/N63Compose.lean:40:58: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  DivisionRing.toRatAlgebra
+inferred
+  ℚ⟮x⟯.algebra'
+error: DegreeDiameter/N63Compose.lean:43:16: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  DivisionRing.toRatAlgebra
+inferred
+  ℚ⟮x⟯.algebra'
+error: DegreeDiameter/N63Compose.lean:44:42: synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized
+  DivisionRing.toRatAlgebra
+inferred
+  ℚ⟮x⟯.algebra'
+info: DegreeDiameter/N63Compose.lean:46:56: Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: DegreeDiameter/N63Compose.lean:34:41: unsolved goals
+case h.e'_3
+p : ℚ[X]
+hm : p.Monic
+hi : Irreducible p
+hn : ¬IsSquare ((-4) ^ p.natDegree * eval (-29 / 4) p)
+E : Type
+inst✝¹ : Field E
+inst✝ : Algebra ℚ E
+x : E
+hx : minpoly ℚ x = p
+hxint : IsIntegral ℚ x
+pb : PowerBasis ℚ ↥ℚ⟮x⟯ := IntermediateField.adjoin.powerBasis hxint
+hnorm : ¬IsSquare ((-4) ^ sorry * eval (-29 / 4) (minpoly ℚ sorry))
+hdisc : ¬IsSquare (29 + 4 * pb.gen)
+hquad : Irreducible (X ^ 2 + X - C (7 + sorry))
+⊢ -7 + X + (X ^ 2 - C (IntermediateField.AdjoinSimple.gen ℚ x)) = X + X ^ 2 + (-C 7 - C (sorry ()))
+warning: DegreeDiameter/N63Compose.lean:45:48: This simp argument is unused:
+  pb
+
+Hint: Omit it from the simp argument list.
+  simp [n63Quadratic, p̵b̵,̵ ̵map_sub, map_add, map_pow,
+      IntermediateField.adjoin.powerBasis_gen, C_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N63Compose.lean:45:52: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp [n63Quadratic, pb, map_s̵u̵b̵,̵ ̵m̵ap̵_̵a̵dd, map_pow,
+      IntermediateField.adjoin.powerBasis_gen, C_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N63Compose.lean:45:70: This simp argument is unused:
+  map_pow
+
+Hint: Omit it from the simp argument list.
+  simp [n63Quadratic, pb, map_sub, map_add, ̵m̵a̵p̵_̵p̵o̵w̵,̵
+      IntermediateField.adjoin.powerBasis_gen, C_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N63Compose.lean:46:4: This simp argument is unused:
+  IntermediateField.adjoin.powerBasis_gen
+
+Hint: Omit it from the simp argument list.
+  simp [n63Quadratic, pb, map_sub, map_add, map_pow, I̵n̵t̵e̵r̵m̵e̵d̵i̵a̵t̵e̵F̵i̵e̵l̵d̵.̵a̵d̵j̵o̵i̵n̵.̵p̵o̵w̵e̵r̵B̵a̵s̵i̵s̵_̵g̵e̵n̵,̵ ̵C_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/N63Compose.lean:46:45: This simp argument is unused:
+  C_add
+
+Hint: Omit it from the simp argument list.
+  simp [n63Quadratic, pb, map_sub, map_add, map_pow,
+      IntermediateField.adjoin.powerBasis_gen,̵ ̵C̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N63Compose
+error: build failed

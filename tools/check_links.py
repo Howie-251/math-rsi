@@ -26,6 +26,11 @@ def main() -> int:
         files.extend(sorted(directory.rglob("*.md")))
     for domain in (root / "plugins").iterdir():
         files.extend(sorted((domain / "skills").rglob("*.md")))
+        for directory in ("references", "examples"):
+            files.extend(sorted((domain / directory).rglob("*.md")))
+        for entry in (domain / "README.md", domain / "archive/README.md"):
+            if entry.exists():
+                files.append(entry)
         readme = domain / "knowledge/README.md"
         if readme.exists():
             files.append(readme)
@@ -40,6 +45,7 @@ def main() -> int:
         text = source.read_text(encoding="utf-8")
         text = re.sub(r"^```[^\n]*\n.*?^```[^\n]*$", "", text,
                       flags=re.MULTILINE | re.DOTALL)
+        text = re.sub(r"`[^`\n]*`", "", text)
         text = re.sub(r"\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)", "", text)
         text = re.sub(r"\$[^$\n]*\$", "", text)
         for target in re.findall(r"\]\(([^\n)]+)\)", text):

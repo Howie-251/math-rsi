@@ -1,0 +1,9 @@
+# Cachedquartic41 to42 bytwo disjointcorecuts andone4star
+
+Positiveprediction beforeanynew numerical test: at leastone pair ofvertex-disjoint edges inselectedcachedMessieresN1 admitsnewrootR3 coverageofall41oldvertices afterreplacingthetwoedges byfournewspokes. Thispredicts onlya necessarynewrootpass,not afull42graph orrecord.
+
+Readexistingdegree/labelmetadata andpreciseoldscopes first. Do nottreatAllwrightordinaryC9cover/affine-line transfer negatives,orN1/N2/N3ordinary9-covernegatives,asthisedge-edit rule. Theoldadjacentvertexsplitcreatesdegree≤3newroots andisuniformlyblockedatorder42 byB3≤40;one4starhasdegree4andescapesthatpremise. Ifsame-sourcesame-two-cutstarstrictNO isfound,inherititandstop.
+
+Selectonlyoneactualcached41source,notasource/template sweep. The41/82simplequarticmetadatacanbeinherited;no graphorroutecalculationisneededforfinite-domaincardinality. TwounordereddisjointedgesgiveruleG−2cutsplusnewlabel41connectedtoallfourendpoints:42/84all4regular. NewrootR3iffR2_(G−2cuts)(fourpins)=all41. Old-oldD3mustbeseparatelycheckedifnewrootpasses.
+
+ThisinterfaceperformsnoBFS,balls,candidateenumeration,solver,field,Lean,networkornewsourceD3validation. Budget5CPU finite reads/prep,thenstop. Anyactual3075-casebatchrequiresrootauthorization.

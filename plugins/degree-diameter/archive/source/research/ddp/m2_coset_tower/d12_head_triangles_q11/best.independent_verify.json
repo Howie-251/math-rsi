@@ -1,0 +1,210 @@
+{
+  "status": "COMPLETE_PROOF_SUPPORTED_THREE_ORBIT_VERIFICATION",
+  "verification_method": "complete BFS from one representative of each proved left-G layer orbit",
+  "n": 43923,
+  "m": 263538,
+  "simple": true,
+  "connected": true,
+  "min_degree": 12,
+  "max_degree": 12,
+  "diameter": 7,
+  "target_diameter": 5,
+  "valid": false,
+  "bad_unordered_pairs": 14133405,
+  "unreachable_unordered_pairs": 0,
+  "roots_checked": 3,
+  "root_vertices": [
+    0,
+    39930,
+    43560
+  ],
+  "root_orbit_sizes": [
+    39930,
+    3630,
+    363
+  ],
+  "represented_root_count": 43923,
+  "full_source_BFS_performed": false,
+  "ordered_distance_histogram": {
+    "0": 43923,
+    "1": 527076,
+    "2": 5797110,
+    "3": 61699110,
+    "4": 557542590,
+    "5": 1275353310,
+    "6": 28259550,
+    "7": 7260
+  },
+  "bad_unordered_pairs_by_type": {
+    "LL": 11280225,
+    "LB": 2236080,
+    "LH": 119790,
+    "BB": 424710,
+    "BH": 72600,
+    "HH": 0
+  },
+  "representative_roots": [
+    {
+      "root": 0,
+      "layer": "leaf",
+      "unreachable": 0,
+      "eccentricity": 6,
+      "missing": 624,
+      "distance_histogram": {
+        "0": 1,
+        "1": 12,
+        "2": 132,
+        "3": 1404,
+        "4": 12669,
+        "5": 29081,
+        "6": 624
+      },
+      "distance_histograms_by_target_layer": {
+        "leaf": {
+          "0": 1,
+          "1": 11,
+          "2": 120,
+          "3": 1272,
+          "4": 11475,
+          "5": 26486,
+          "6": 565
+        },
+        "block": {
+          "1": 1,
+          "2": 11,
+          "3": 119,
+          "4": 1082,
+          "5": 2361,
+          "6": 56
+        },
+        "head": {
+          "2": 1,
+          "3": 13,
+          "4": 112,
+          "5": 234,
+          "6": 3
+        }
+      },
+      "missing_by_target_layer": [
+        565,
+        56,
+        3
+      ]
+    },
+    {
+      "root": 39930,
+      "layer": "block",
+      "unreachable": 0,
+      "eccentricity": 7,
+      "missing": 870,
+      "distance_histogram": {
+        "0": 1,
+        "1": 12,
+        "2": 132,
+        "3": 1410,
+        "4": 12921,
+        "5": 28577,
+        "6": 868,
+        "7": 2
+      },
+      "distance_histograms_by_target_layer": {
+        "leaf": {
+          "1": 11,
+          "2": 121,
+          "3": 1309,
+          "4": 11902,
+          "5": 25971,
+          "6": 616
+        },
+        "block": {
+          "0": 1,
+          "2": 9,
+          "3": 101,
+          "4": 938,
+          "5": 2347,
+          "6": 232,
+          "7": 2
+        },
+        "head": {
+          "1": 1,
+          "2": 2,
+          "4": 81,
+          "5": 259,
+          "6": 20
+        }
+      },
+      "missing_by_target_layer": [
+        616,
+        234,
+        20
+      ]
+    },
+    {
+      "root": 43560,
+      "layer": "head",
+      "unreachable": 0,
+      "eccentricity": 6,
+      "missing": 530,
+      "distance_histogram": {
+        "0": 1,
+        "1": 12,
+        "2": 130,
+        "3": 1430,
+        "4": 13130,
+        "5": 28690,
+        "6": 530
+      },
+      "distance_histograms_by_target_layer": {
+        "leaf": {
+          "2": 110,
+          "3": 1430,
+          "4": 12320,
+          "5": 25740,
+          "6": 330
+        },
+        "block": {
+          "1": 10,
+          "2": 20,
+          "4": 810,
+          "5": 2590,
+          "6": 200
+        },
+        "head": {
+          "0": 1,
+          "1": 2,
+          "5": 360
+        }
+      },
+      "missing_by_target_layer": [
+        330,
+        200,
+        0
+      ]
+    }
+  ],
+  "orbit_reduction_proof": {
+    "group": "(F11^2 x C3) semidirect (F11 semidirect C10)",
+    "K_product": "(b,j)(d,l)=(b+2^(2j)d,j+l)",
+    "action": "(u,v,w) -> (2^(3j)u+b*2^j*v,2^j*v,w)",
+    "H": "{(b,0): b in F11}",
+    "head_triangle_preservation": "left (z,k) sends (u,v,w) to (z_uv+k(u,v),z_w+w); same uv and distinct w are preserved",
+    "leaf_edge_preservation": "left t sends {g,gs} to {tg,(tg)s}",
+    "tree_edge_preservation": "left t sends g -> gH -> gK to tg -> (tg)H -> (tg)K",
+    "transitivity": "left G is transitive on G, G/H and G/K; these are exactly the three labeled layers",
+    "block_witness": "(x,(0,j)) sends root H to block(x,j)",
+    "head_witness": "(x,identity_K) sends root K to head(x)",
+    "action_composition_basis_checks": 36300,
+    "head_edge_checks_all_K_and_A_basis_translations": 41019,
+    "full_edge_formula_matched_saved_graph": true,
+    "consequence": "maximum representative eccentricity is exact diameter; weighted distance histograms and bad pair counts are exact"
+  },
+  "independent_edges_exactly_equal": true,
+  "original_BB_missing": 234,
+  "BB_all_3630_targets_pointwise_match": true,
+  "all_10_original_BB_masks_match": true,
+  "CPU_seconds": 0.822879706,
+  "graph_reconstruction_CPU_seconds": 0.282306414,
+  "three_BFS_CPU_seconds": 0.20198158999999993,
+  "BB_CPU_seconds": 0.004675899999999955,
+  "scope": "Only profile.best; no preflight or other graph; no candidate search; no full43923-source BFS"
+}

@@ -1,0 +1,681 @@
+---
+type: experiment
+node_id: exp:ddp-wave12-route-complementarity
+title: "同72控制图的路线互补：方向、紧路与closed-plane联合覆盖的受控预测验证"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: partial
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/breadth_20261027_wave12/route_complementarity/REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/PREDICTIONS.md; research/ddp/breadth_20261027_wave12/route_complementarity/CONTROLLED_PREDICTION.md; research/ddp/breadth_20261027_wave12/route_complementarity/same_slot_success_failure.json; research/ddp/breadth_20261027_wave12/route_complementarity/ternary_success_fixture.json; research/ddp/breadth_20261027_wave12/route_complementarity/binary_best_analysis/RESULT.json; research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/ACTUAL_SLOT_CHECK.json; research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/FIXTURES.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/analysis.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled.edges; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled_parameters.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/actual_prediction_check.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_test.py; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/SECOND_EDGE_REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/second_edge_analysis.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/joint_two_edge_analysis.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/MATRIX_SHEAR_REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_prediction.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_parameters.json; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear.edges; research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_prediction_check.json; research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/REPORT.md; research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/RESULT.json; research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/diagnose.py; research/ddp/breadth_20261027_wave12/route_complementarity/self_plane_prediction_check.json; research/ddp/breadth_20261027_wave12/route_complementarity/port_preserving_test/terminal.json"
+added: 2026-10-27T09:28:35Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 同72控制图的路线互补：方向、紧路与closed-plane联合覆盖的受控预测验证
+
+**verdict:** `partial`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** candidate_graph_or_family
+
+**目标与阶数：** (8,4)；L=1100；candidate_graph_or_family n=1152；条件性n=1152（未据此计纪录）
+
+**距目标的证据：** 实际D=5，目标D=4；普通无序坏对=12800；Latest matrix/direction-shear1152 graph only;root independent all1152 ordinary BFS.Other controlledb-only graph13424 is a separatevariant;original12384 reused.；P1原固定线性部分独立平移仍max12。b-only图D5/13424；矩阵协同图虽修好0→10并保468tight，仍D5/12800（原best12384，净多416）。首个新损(0,5)由rank2闭路方向失去唯一补点5导致，self0 union16→15，缓存确认全部x唯一漏x XOR5。零新下界，非全局改进。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "object_level": "finalgraph",
+  "snapshot_UTC": "2026-10-27 09:16:32 UTC",
+  "controller_order": 72,
+  "inherited_source_binary_order": 1152,
+  "inherited_source_binary_bad_unordered_pairs": 12384,
+  "inherited_source_binary_D": 5,
+  "inherited_source_measurement_reused": true,
+  "old_graph_BFS_repeated": false,
+  "inherited_ternary_success_order": 5832,
+  "inherited_ternary_success_degree": 12,
+  "inherited_ternary_success_D": 4,
+  "inherited_ternary_fixture_not_new_discovery": true,
+  "P1": {
+    "status": "SUPPORTED",
+    "candidate_id": 68,
+    "base_slot": [
+      0,
+      10
+    ],
+    "all_routes": [
+      "0020",
+      "322"
+    ],
+    "rank_pair": [
+      3,
+      3
+    ],
+    "normals": [
+      6,
+      9
+    ],
+    "independent_translate_max_union": 12,
+    "missing_per_source_fiber_value_at_least": 4,
+    "conditional_bad_between_these_two_fibers_at_least": 64,
+    "conditional_count_type": "Theoretical bound only,not fullgraph ordinary measurement",
+    "global_or_edge_local_offset_searches": 0
+  },
+  "controlled_variable": {
+    "edge": [
+      0,
+      18
+    ],
+    "new_T_columns": [
+      2,
+      4,
+      8,
+      3
+    ],
+    "new_b": 3,
+    "new_Tinv_columns": [
+      9,
+      1,
+      2,
+      4
+    ],
+    "new_reverse_b": 8,
+    "other143_relations_original": true,
+    "offsets": 0
+  },
+  "tight_ordered_controller_slots": 468,
+  "repaired_slot_actual_missing": 0,
+  "new_graph_bad_minus_reused_source": 416,
+  "actual_full_graphs_generated": 2,
+  "root_full_BFS_graph_count": 2,
+  "root_full_BFS_roots": 2304,
+  "actual_check_CPU_seconds": 0.610148743,
+  "second_edge_diagnostic": {
+    "edge": [
+      0,
+      36
+    ],
+    "forward": [
+      36,
+      0
+    ],
+    "status": "FROZEN_SECOND_EDGE_ROUTE_LINEAR_DIAGNOSTIC_NO_GRAPH",
+    "fixed_first_b": 3,
+    "directions_examined": 15,
+    "repair_directions": 8,
+    "selected_second_b": 1,
+    "selected_second_reverse_b": 12,
+    "selected_damage_ordered_slots": 4,
+    "selected_predicted_tight_missing_ordered": 512,
+    "selected_predicted_tight_missing_unordered": 256,
+    "graph_generated": false,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "CPU_seconds": 0.035941722
+  },
+  "old_scouts_and_unreviewed_GQ_claims_not_stage_results": true,
+  "target_slot_ordered_pairs_total": 256,
+  "target_slot_old_missing_ordered_from_base0_to10": 64,
+  "target_slot_newly_repaired_ordered_from_base0_to10": 64,
+  "joint_two_edge_diagnostic": {
+    "status": "COMPLETE_JOINT225_LINEAR_DIAGNOSTIC_NO_GRAPH",
+    "assignments_examined": 225,
+    "assignments_expected": 225,
+    "target_rank4_assignments": 120,
+    "feasible_target4_and_all468_tight4": 0,
+    "all468_tight4_without_target_repair_assignments": 1,
+    "only_all_tight4_original_assignment": [
+      1,
+      3
+    ],
+    "minimum_damage_given_target_rank4": 2,
+    "best_damage_assignment": [
+      3,
+      3
+    ],
+    "best_is_already_measured_single_edge_graph": true,
+    "affected_tight_slots": 28,
+    "unchanged_tight_slots": 440,
+    "graph_generated": false,
+    "full_graph_score_computed": false,
+    "BFS_count": 0,
+    "CPU_seconds": 0.03596703600000001
+  },
+  "all_current_diagnostics_terminal": true,
+  "pending": [],
+  "next_decision": "Same72 mechanism:protectall468tight ranks ANDall72closedself-plane unions before testingothermulti-route coverage undernewT/bcoordination;nooffset,b-onlyslice,thirdb,matrixgrid,newtemplate automatically.",
+  "history_only_paths": [
+    "research/ddp/breadth_20261027_wave12/gq80_overlap_bound/REPORT.md",
+    "research/ddp/breadth_20261027_wave12/compound_route_scout/REPORT.md"
+  ],
+  "latest_controlled_graph": "matrix_shear",
+  "b_only_bad_minus_reused_source": 1040,
+  "latest_bad_minus_b_only": -624,
+  "global_coverage_improvement_over_original_claimed": false,
+  "controlled_graph_results": [
+    {
+      "kind": "b_only",
+      "n": 1152,
+      "degree": 8,
+      "actual_D": 5,
+      "ordinary_bad_unordered_pairs": 13424,
+      "source_old_bad_reused": 12384
+    },
+    {
+      "kind": "T_and_b_output_shear",
+      "n": 1152,
+      "degree": 8,
+      "actual_D": 5,
+      "ordinary_bad_unordered_pairs": 12800,
+      "source_old_bad_reused": 12384
+    }
+  ],
+  "matrix_shear_prediction": {
+    "prediction_id": "P5_COUPLED_OUTPUT_SHEAR_PRESERVES_TIGHT_RANKS",
+    "candidate_count": 1,
+    "matrix_grid_assignments": 0,
+    "target_rank4": true,
+    "all468tight_rank4": true,
+    "actual_target_missing": 0,
+    "actual_tight_missing": [],
+    "CPU_seconds": 0.007999690999999996
+  },
+  "off_target_self_diagnosis": {
+    "status": "FIRST_NEW_DAMAGE_EXPLAINED_BY_SELF_ROUTE_COMPLEMENTARITY_LOSS",
+    "posthoc_selected_pair": [
+      0,
+      5
+    ],
+    "old_distance": 4,
+    "new_distance": 5,
+    "source_base": 0,
+    "target_base": 0,
+    "closed_routes": 33,
+    "closed_route_length_histogram": {
+      "0": 1,
+      "4": 28,
+      "2": 4
+    },
+    "sole_old_covering_word": "0123",
+    "old_columns": [
+      8,
+      13,
+      13,
+      8
+    ],
+    "new_columns": [
+      8,
+      12,
+      12,
+      8
+    ],
+    "ranks_before_after": [
+      2,
+      2
+    ],
+    "old_image": [
+      0,
+      5,
+      8,
+      13
+    ],
+    "new_image": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "old_union_size": 16,
+    "new_union_size": 15,
+    "new_zero_input_missing": [
+      5
+    ],
+    "total_linear_maps_all_identity": true,
+    "selected_input_drifts_all_zero": true,
+    "secondary_rank_drop_word": "0213",
+    "secondary_rank_drop_not_cause_of_selected_target_loss": true,
+    "all33_words_free_reduce_empty": true,
+    "consistent_affine_offsets_cancel": true,
+    "predicted_missing_for_any_input": "x XOR5",
+    "cache_all16_predictions_match": true,
+    "conditional_unordered_self_losses": 8,
+    "not_full416migration_account": true,
+    "new_graphs_generated": 0,
+    "BFS_count": 0,
+    "CPU_seconds": 0.016139035999999995
+  },
+  "self_cache_prediction_check": {
+    "status": "SPECIFIC_SELF_PLANE_DAMAGE_AND_TRANSLATION_PREDICTION_MATCH",
+    "all16_predicted_self_holes_match": true,
+    "old_BFS_repeated": false,
+    "new_BFS_repeated": false,
+    "CPU_seconds": 0.0016384329999999982
+  },
+  "b_only_diagnostic_and_actual": {
+    "frozen_direction_diagnostics": 15,
+    "target_rank4_directions": 8,
+    "all_target_rank4_directions_damage_tight_slots": true,
+    "selected_tight_damage_slots": 2,
+    "damaged_tight_ordered_missing_each_direction": 128,
+    "damaged_tight_ordered_missing_both_directions": 256,
+    "damaged_tight_unordered_pairs": 128,
+    "scope": "Earlier fixedT b-only0/18 diagnostic and itsone actualgraph13424;not thelatestmatrixshear.",
+    "actual_bad_unordered_pairs": 13424
+  },
+  "port_preserving_followup": {
+    "status": "NOT_STARTED_STOPPED_BY_USER_STEERING",
+    "relations_evaluated": 0,
+    "graphs_generated": 0,
+    "survivor_count": null
+  }
+}
+```
+
+
+
+**从属变体：**
+```json
+[
+  {
+    "id": "inherited_F3_same_slot",
+    "status": "INHERITED_SUCCESS_FIXTURE_NOT_NEW_DISCOVERY",
+    "base_slot": [
+      0,
+      10
+    ],
+    "route": "AACA",
+    "route_rank": 4,
+    "image_size": 81,
+    "source_n": 5832,
+    "source_D": 4,
+    "actual_n": null,
+    "actual_D": null,
+    "scope": "Same controller slot of old successfulF3 construction;targeted certificate comparison,not a new graph."
+  },
+  {
+    "id": "inherited_F3_pencil",
+    "status": "INHERITED_SUCCESS_FIXTURE_NOT_NEW_DISCOVERY",
+    "base_slot": [
+      0,
+      1
+    ],
+    "subspace_sizes": [
+      27,
+      27,
+      27,
+      27
+    ],
+    "common_core_size": 9,
+    "union_size": 81,
+    "all81_source_fiber_states_covered": true,
+    "actual_D": null
+  },
+  {
+    "id": "translation_bound_fixtures",
+    "status": "FIVE_SYNTHETIC_FIXTURES_MATCH_HAND_CALCULATIONS",
+    "fixture_maxima": [
+      16,
+      12,
+      16,
+      63,
+      81
+    ],
+    "actual_graph_generated": false,
+    "scope": "Five synthetic subspace fixtures,including route multiplicity;not separate methods."
+  },
+  {
+    "id": "P1_actual_slot",
+    "status": "FIXED_LINEAR_PART_OFFSET_REPAIR_EXCLUDED",
+    "base_slot": [
+      0,
+      10
+    ],
+    "candidate_id": 68,
+    "images": [
+      [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        9,
+        11,
+        13,
+        15
+      ]
+    ],
+    "normals": [
+      6,
+      9
+    ],
+    "independent_translate_max_union": 12,
+    "missing_per_source_fiber_at_least": 4,
+    "conditional_unordered_bad_between_these_two_fibers_at_least": 64,
+    "ordinary_bad_unordered_pairs": null,
+    "scope": "Any inverse-consistent offsets with fixedbest68 maps/vectors;not other1023 inputs."
+  },
+  {
+    "id": "P2_all15_single_edge_directions",
+    "status": "FIXED_EDGE_B_ONLY_OFFSET0_SCOPE_ALL_FAIL_D4",
+    "edge": [
+      0,
+      18
+    ],
+    "directions_examined": 15,
+    "target_rank4_directions": 8,
+    "diagnostic_summary": [
+      {
+        "b": 1,
+        "reverse_b": 8,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 0
+      },
+      {
+        "b": 2,
+        "reverse_b": 1,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 12
+      },
+      {
+        "b": 3,
+        "reverse_b": 9,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 2
+      },
+      {
+        "b": 4,
+        "reverse_b": 2,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 8
+      },
+      {
+        "b": 5,
+        "reverse_b": 10,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 6
+      },
+      {
+        "b": 6,
+        "reverse_b": 3,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 10
+      },
+      {
+        "b": 7,
+        "reverse_b": 11,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 4
+      },
+      {
+        "b": 8,
+        "reverse_b": 4,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 8
+      },
+      {
+        "b": 9,
+        "reverse_b": 12,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 6
+      },
+      {
+        "b": 10,
+        "reverse_b": 5,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 6
+      },
+      {
+        "b": 11,
+        "reverse_b": 13,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 8
+      },
+      {
+        "b": 12,
+        "reverse_b": 6,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 10
+      },
+      {
+        "b": 13,
+        "reverse_b": 14,
+        "target_rank": 3,
+        "damaged_ordered_unique4_slots": 4
+      },
+      {
+        "b": 14,
+        "reverse_b": 7,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 12
+      },
+      {
+        "b": 15,
+        "reverse_b": 15,
+        "target_rank": 4,
+        "damaged_ordered_unique4_slots": 2
+      }
+    ],
+    "graphs_generated": 0,
+    "actual_D": null,
+    "scope": "Linear diagnostics only;allT/otherb/offset0 fixed;not arbitrary single-edge changes."
+  },
+  {
+    "id": "P2_one_actual_controlled_graph",
+    "status": "ONE_CONTROLLED_GRAPH_MEASURED",
+    "edge": [
+      0,
+      18
+    ],
+    "new_b": 3,
+    "n": {
+      "actual": 1152,
+      "hypothetical": 1152
+    },
+    "actual_graph_Delta": 8,
+    "actual_D": 5,
+    "actual_D_scope": "root independent all1152 ordinary BFS on controlled.edges",
+    "ordinary_bad_unordered_pairs": 13424,
+    "ordinary_bad_target_D": 4,
+    "target_slot_missing": 0,
+    "tight_slot_ordered_missing": [
+      128,
+      128
+    ],
+    "old_source_bad_reused": 12384,
+    "target_slot_old_missing_ordered": 64,
+    "target_slot_newly_repaired_ordered": 64
+  },
+  {
+    "id": "second_edge0_36_complete",
+    "status": "FROZEN_SECOND_EDGE_ROUTE_LINEAR_DIAGNOSTIC_NO_GRAPH",
+    "fixed_first_edge": [
+      0,
+      18
+    ],
+    "fixed_first_b": 3,
+    "edge": [
+      0,
+      36
+    ],
+    "forward": [
+      36,
+      0
+    ],
+    "directions_examined": 15,
+    "target0_to10_rank4_preserved_all15": true,
+    "repair37_63_directions": 8,
+    "selected_b": 1,
+    "selected_reverse_b": 12,
+    "selected_damage_ordered_slots": 4,
+    "selected_damaged_base_pairs": [
+      [
+        2,
+        36
+      ],
+      [
+        26,
+        68
+      ]
+    ],
+    "predicted_tight_missing_ordered": 512,
+    "predicted_tight_missing_unordered": 256,
+    "graph_generated": false,
+    "n": {
+      "actual": null,
+      "hypothetical": 1152
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "scope": "Only the fixedfirstb3 and15 secondedge directions;no actualtwoedgegraph andnot all joint225."
+  },
+  {
+    "id": "joint_two_edges225_complete",
+    "status": "COMPLETE_JOINT225_LINEAR_DIAGNOSTIC_NO_GRAPH",
+    "forward_edges": [
+      [
+        0,
+        18
+      ],
+      [
+        36,
+        0
+      ]
+    ],
+    "assignments_examined": 225,
+    "target_rank4_assignments": 120,
+    "feasible_target4_and_all468_tight4": 0,
+    "all_tight4_original_assignment_without_target_repair": [
+      1,
+      3
+    ],
+    "minimum_damage_given_target_rank4": 2,
+    "best_assignment": [
+      3,
+      3
+    ],
+    "best_same_as_already_measured_singleedge_graph": true,
+    "affected_tight_slots": 28,
+    "graph_generated": false,
+    "n": {
+      "actual": null,
+      "hypothetical": 1152
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "BFS_count": 0,
+    "scope": "AllT,offset0,other142branch relations fixed;complete15x15slice only,not generaledge-local."
+  },
+  {
+    "id": "coupled_matrix_direction_shear",
+    "status": "ONE_MATRIX_DIRECTION_GRAPH_MEASURED",
+    "prediction_id": "P5_COUPLED_OUTPUT_SHEAR_PRESERVES_TIGHT_RANKS",
+    "edge": [
+      0,
+      18
+    ],
+    "new_T_columns": [
+      2,
+      4,
+      8,
+      3
+    ],
+    "new_b": 3,
+    "new_reverse_b": 8,
+    "other143_relations_original": true,
+    "offsets": 0,
+    "frozen_candidate_count": 1,
+    "matrix_grid_assignments": 0,
+    "n": {
+      "actual": 1152,
+      "hypothetical": 1152
+    },
+    "actual_graph_Delta": 8,
+    "actual_D": 5,
+    "actual_D_scope": "rootone independentall1152 ordinaryBFS for thismatrix_shear.edges",
+    "ordinary_bad_unordered_pairs": 12800,
+    "ordinary_bad_target_D": 4,
+    "target0_to10_missing": 0,
+    "all468tight_rank4": true,
+    "tight_slot_missing": [],
+    "old_source_bad_reused": 12384,
+    "earlier_bonly_bad": 13424,
+    "global_improvement_over_original": false,
+    "graph_generated": true
+  },
+  {
+    "id": "offtarget_self_plane_loss",
+    "status": "FIRST_NEW_DAMAGE_EXPLAINED_BY_SELF_ROUTE_COMPLEMENTARITY_LOSS",
+    "diagnosis_type": "POSTHOC_SINGLE_SLOT_PLUS_FOLLOWUP_CACHE_PREDICTION",
+    "source_base": 0,
+    "target_base": 0,
+    "selected_vertexpair": [
+      0,
+      5
+    ],
+    "old_distance": 4,
+    "new_cached_distance": 5,
+    "closed_routes": 33,
+    "old_only_covering_word": "0123",
+    "old_image": [
+      0,
+      5,
+      8,
+      13
+    ],
+    "new_image": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "ranks": [
+      2,
+      2
+    ],
+    "old_union_size": 16,
+    "new_union_size": 15,
+    "lost_point": 5,
+    "all_word_maps_identity": true,
+    "all_offsets_cancel_by_free_reduction": true,
+    "predicted_self_hole": "x XOR5",
+    "all16_cache_prediction_matches": true,
+    "derived_unordered_self_loss": 8,
+    "ordinary_bad_unordered_pairs": null,
+    "scope": "Thisone selfslot,not decomposition ofall416netbadincrease.",
+    "graph_generated": false,
+    "actual_D": null,
+    "BFS_count": 0
+  }
+]
+```
+
+**原始证据：** [research/ddp/breadth_20261027_wave12/route_complementarity/REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/PREDICTIONS.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/PREDICTIONS.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/CONTROLLED_PREDICTION.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/CONTROLLED_PREDICTION.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/same_slot_success_failure.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/same_slot_success_failure.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/ternary_success_fixture.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/ternary_success_fixture.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/binary_best_analysis/RESULT.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/binary_best_analysis/RESULT.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/ACTUAL_SLOT_CHECK.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/ACTUAL_SLOT_CHECK.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/FIXTURES.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/translation_bound_check/FIXTURES.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/analysis.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/analysis.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled.edges](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled.edges)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled_parameters.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/controlled_parameters.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/actual_prediction_check.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/actual_prediction_check.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_test.py](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_test.py)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/SECOND_EDGE_REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/SECOND_EDGE_REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/second_edge_analysis.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/second_edge_analysis.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/joint_two_edge_analysis.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/joint_two_edge_analysis.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/MATRIX_SHEAR_REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/MATRIX_SHEAR_REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_prediction.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_prediction.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_parameters.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear_parameters.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear.edges](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_shear.edges)；[research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_prediction_check.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/controlled_edge_change/matrix_prediction_check.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/REPORT.md](../../research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/REPORT.md)；[research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/RESULT.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/RESULT.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/diagnose.py](../../research/ddp/breadth_20261027_wave12/route_complementarity/off_target_first_damage/diagnose.py)；[research/ddp/breadth_20261027_wave12/route_complementarity/self_plane_prediction_check.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/self_plane_prediction_check.json)；[research/ddp/breadth_20261027_wave12/route_complementarity/port_preserving_test/terminal.json](../../research/ddp/breadth_20261027_wave12/route_complementarity/port_preserving_test/terminal.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 同一72控制图best68：P1一个真实槽，固定T的单边15/第二边15/两边225诊断，及一个冻结T/b协同。共2个新受控图、各一次全源BFS；off-target只解释self0一槽与缓存16输入。不扫其它1023、不搜offset、不排一般edge-local。
+
+**正向保证：** P1证明原best68固定maps/vectors的任意inverse-consistent offsets不能修0→10；不外推其它线性输入。；T/b协同的冻结预报target全256覆盖及all468tight保持，均由latestmatrix唯一全源BFS支持。；self0全部33closed路线free-reduce空，方向像对consistent offsets不变；具体x XOR5预报已用新距离缓存全部16输入核对，无重复BFS。；原F3同槽满rank路线及共同corepencil是继承对照，不计新成功。
+
+**仍未完成：** 尚无D4图；最新12800比原12384仍多416。单槽因果解释只覆盖self0的8个无序损失，不是全部净增分解。一般edge-local及能同时保护468tight和所有72self unions的T/b协同仍开放；当前无待验候选。
+
+**启发与重启依据：** 继续同72机制：任何新T/b协调先保468tight AND全部72同fiber closed-plane union，再检验多路覆盖。停offset及已闭固定T的单/双b切片，不自动第三b、矩阵grid或换模板；先提出具体预测再生成实际图。 最新人工纠偏后停止此1152局部修补线；2520筛选未启动已取消，非失败/UNKNOWN。局部保护认识仅作后续整体覆盖设计依据，不自动加边/样本/轮次。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

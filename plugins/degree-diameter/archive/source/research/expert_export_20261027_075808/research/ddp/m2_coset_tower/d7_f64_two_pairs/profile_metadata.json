@@ -1,0 +1,47 @@
+{
+  "field": "F2[t]/(t^6+t+1)",
+  "field_polynomial_binary": 67,
+  "primitive_element": 2,
+  "action_element": 8,
+  "action_order": 21,
+  "original_quotient_order": 42,
+  "central_quotient_order": 21,
+  "Hbar_quotient_step": 7,
+  "Hbar_order": 3,
+  "original_layer_sizes": [
+    2688,
+    448,
+    64
+  ],
+  "quotient_layer_sizes": [
+    1344,
+    448,
+    64
+  ],
+  "normalized_involution_projections": "[(1,0),(y,0)] for y=0,...,63; identity and repeated projections retained",
+  "pair_representatives_file": "profile.quotient_pairs.json",
+  "pair_representative_order": "ascending encoded group id g=x+64*j with g<inverse(g)",
+  "pair_indices": "0<=a<=b<640, allowing repeated projected pairs",
+  "input_order": "y outer; a middle; b inner ascending a,...,639",
+  "raw_total": 13127680,
+  "HH_total_from_independent_scope": 5693310,
+  "first_normalization": "simultaneous nonzero field scaling only; H and K preserved",
+  "no_additional_quotient_unit_or_projective_reduction": true,
+  "lift_rules": [
+    "Each noninvolutory quotient inverse pair has exactly two distinct C42 inverse-pair lifts.",
+    "Repeated pair projections require the two distinct lifts; different projections admit either lift independently.",
+    "Nonzero involution projection x has lifts (x,0) and (x,21).",
+    "Zero involution projection has only the nonidentity lift (0,21).",
+    "For y=1 the two involution lifts must be distinct.",
+    "No C42 lifts were searched in this profile."
+  ],
+  "filters": [
+    "exact HH multiplicative-orbit coverage",
+    "exact BB: Hbar W3 Hbar union Kbar W1 Hbar union Hbar W1 Kbar",
+    "only after BB pass: quotient block/head BFS to every target layer"
+  ],
+  "leaf_leaf_acceptance": "quotient LL is not sufficient; original C42 LL must be checked",
+  "profile_is_prefix_not_representative_sample": true,
+  "profile_HH_target": 2000,
+  "authorized_full_enumeration": false
+}

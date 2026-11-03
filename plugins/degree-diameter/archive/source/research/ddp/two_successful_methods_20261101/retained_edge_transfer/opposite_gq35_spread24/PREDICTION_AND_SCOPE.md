@@ -1,0 +1,11 @@
+# Prediction and bounded construction scope
+
+Use only GF4=F2[w]/(w^2+w+1). Points(a,b,c) are the64 elements of GF4^3. The16 vertical lines hold(b,c) fixed and varya. Ordinary lines are the affine point sets p+t*(b*d2+c*d1,d1,d2), t inGF4, with(d1,d2) ranging over the five projective directions. Deduplicate these literal sets. Predict80 ordinary plus16 vertical lines, four points per line and six lines per point, satisfying the full generalized-quadrangle axiom. Verify it before constructing the graph. The16 vertical lines should partition all64 points and form a spread.
+
+Old vertices are all64*96 point-line pairs(p,l). Adjacency is p in m and q in l for(p,l),(q,m), with loops removed. Predict6144 vertices,73536 edges,384 flags of degree23 and5760 nonflags of degree24. No complete old-source BFS will run.
+
+Add one new vertex per vertical line li, with24 pins S_i={(a,b):a in li and a in b}. These16 pin sets partition all384 degree23 flags. Predict each full pin set has radius2 coverage of every old vertex, and of every previously added new vertex. Before each insertion, actually perform a multi-source radius2 expansion over the complete current graph and check all pin degrees<24. Preserve all old edges. Predict the unique final graph has6160 vertices,73920 edges, is simple24regular, and has diameter3. Root will perform independent all-source validation; this producer will not do it.
+
+Covering argument to attack: for oldtarget(p,l), choose a in li collinear with p and b througha meetingl; a line througha,p and the intersection b intersectl yield a walk of length at most2 fromflag(a,b). For another spreadline lj, choose collinear a inli and c inlj; flags(a,ac),(c,ac) are adjacent, giving new-new distance at most3. Ordinary old-old distance at most3 follows by independently projecting the opposite point onto each of the two endpoint lines. Any repeated consecutive vertex in these short walks is suppressed, avoiding loop dependence.
+
+One worker, whole process CPU at most45 seconds, no solver, install, Lean, hash, seed, other spread, q-family, or old-source all-roots BFS. If the literal GQ axioms or source degree model fails, stop with a concrete counterexample rather than altering the rule. Public inheritance/record status is being checked separately; a successful graph here is not automatically novel or globally best.

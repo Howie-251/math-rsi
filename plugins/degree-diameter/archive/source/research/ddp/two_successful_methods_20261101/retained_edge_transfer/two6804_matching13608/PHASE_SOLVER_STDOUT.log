@@ -1,0 +1,55 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 4e+02]
+  Cost   [0e+00, 0e+00]
+  Bound  [1e+00, 1e+00]
+  RHS    [1e+00, 6e+02]
+Presolving model
+166 rows, 121 cols, 13310 nonzeros  0s
+162 rows, 121 cols, 10033 nonzeros  0s
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   162 rows
+   121 cols (121 binary, 0 integer, 0 implied int., 0 continuous)
+   10033 nonzeros
+MIP-Timing:       0.016 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   0               inf                  inf        0      0      4       243     0.0s
+
+Symmetry detection completed in 0.0s
+Found 1 full orbitope(s) acting on 110 columns
+
+ T     100       0        46 100.00%   0               0                  0.00%     1109      3    476      3854     0.5s
+       101       0        47 100.00%   0               0                  0.00%     1109      3    476      3899     0.5s
+
+Solving report
+  Status            Optimal
+  Primal bound      0
+  Dual bound        0
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0
+  Solution status   feasible
+                    0 (objective)
+                    0 (bound viol.)
+                    3.49720252757e-13 (int. viol.)
+                    0 (row viol.)
+  Timing            0.55 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 2
+  Nodes             101
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     3899 (total)
+                    0 (strong br.)
+                    240 (separation)
+                    1808 (heuristics)

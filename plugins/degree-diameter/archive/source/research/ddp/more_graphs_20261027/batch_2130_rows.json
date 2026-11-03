@@ -1,0 +1,183 @@
+[
+  {
+    "id": "ddp-source972-fixed-matching-relocation0-26-forced-bridge-20261027",
+    "title": "(13,3)972固定0–26重定位：唯一桥825–968修首反例但仍损旧对",
+    "family": "cooperative multi-vertex extension",
+    "record_type": "finite-matching-relocation-experiment",
+    "outcome_class": "finite-family-exhaustion",
+    "wiki_verdict": "no",
+    "object_level": "necessary-condition",
+    "target_Delta": 13,
+    "target_D": 3,
+    "savedL": 972,
+    "n": {
+      "actual": null,
+      "hypothetical": 973
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "scope": "仅固定e0-26，删e加一条原108free间非边，要求旧972仍D3。full-full criticalpair332/326迫使桥825-968，因此1必要合法桥的测试完整覆盖此fixed-e任意oldfree单桥范围；不扩全部432。",
+    "failure_or_result": "1/1必要桥实测，0完整D3变体。原332-0-26-326被新332-825-968-326修复，但332到347仍>3；预测REFUTED。仅1modifiedR3/3crosspairs，继承端点0/26通过不重跑，无新R2/solver/973图。",
+    "lesson_and_restart_condition": "一个critical route会强迫连接选择，修它仍须同步保护所有中段routes。固定单桥relocation全闭后停止，不按余坏点追加桥或换e。其它改变范围须新的明确生成规则。",
+    "unclosed_gap": "Other deletedmatching edges, multiplebridges, or repair simultaneously involving a newvertex remain outside this fixed-e singlebridge scope.",
+    "other_metrics": {
+      "source_n_inherited": 972,
+      "source_m_inherited": 6264,
+      "deleted_edge": [
+        0,
+        26
+      ],
+      "original_free_count": 108,
+      "forced_bridge": [
+        825,
+        968
+      ],
+      "necessary_legal_bridges": 1,
+      "bridges_tested": 1,
+      "full_D3_variants": 0,
+      "unattempted_bridges": 0,
+      "modified_radius3_roots": 1,
+      "crosspairs_checked_until_failure": 3,
+      "inherited_endpoint_R3_passes_not_rerun": 2,
+      "original_source_BFS": 0,
+      "new_R2_balls": 0,
+      "solver_runs": 0,
+      "new973_graphs_generated": 0,
+      "edgefiles_exported": 0,
+      "route_witness": {
+        "deleted_edge": [
+          0,
+          26
+        ],
+        "forced_bridge": [
+          825,
+          968
+        ],
+        "first_old_critical_route": [
+          332,
+          0,
+          26,
+          326
+        ],
+        "first_route_repair": [
+          332,
+          825,
+          968,
+          326
+        ],
+        "remaining_old_critical_route": [
+          332,
+          0,
+          26,
+          347
+        ],
+        "remaining_pair": [
+          332,
+          347
+        ],
+        "modified_distance_lower_bound": 4,
+        "modified_exact_distance": null,
+        "scope": "One complete modified radius3 traversal from332, only complete crossingcriterion needed after inheritedendpointpasses; no globalbadpaircount."
+      },
+      "CPU_seconds": 0.004350192000000003,
+      "compile_CPU_seconds": 0,
+      "baseline_date": "2026-10-27",
+      "scope_not_all432": true
+    },
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/BINDING.json",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/terminal.json",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/ROUTE_WITNESS.json",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_relocation/run.py",
+      "research/ddp/more_graphs_20261027/d13_D3_current972_source/matching_edge_release/CASES.jsonl"
+    ]
+  },
+  {
+    "id": "ddp-d15-D5-current102060-singlevertex-R4cover15-20261027",
+    "title": "Current102060 actual810-pin R4 matrix complete; threshold15 constraint generation UNKNOWN",
+    "family": "record-graph monotone vertex extension",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 15,
+    "target_D": 5,
+    "savedL": 102060,
+    "n": {
+      "actual": null,
+      "hypothetical": 102061
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Actual102060/765045 source. One newpoint joined to<=15 of810 currentdegree14 pins; alloldedges retained, no otheredges. One shared10CPU native-preparation+sparseconstraint-generation feasibility batch. Historical100132 source/cache/64plans unused.",
+    "failure_or_result": "All810 actualclosedR4 rows complete, union102060, target support70..309, balls24269..24414, duplicateballrows0 and102060unique targetrows. Initial256target MIP found15pins but fulltargetunion missed3510, so rejected withoutgraph. Add495 truecounterexamples to751targets; nextMIP time limit/primalNone. UNKNOWN,0completegraph/newrootBFS/newlowerbound.",
+    "lesson_and_restart_condition": "Currentdegree slack and24% ball density allow a completecover matrix, but do not prove15-ball jointcoverage. Sparsecounterexamplegeneration avoids the82.7million-entry densematrix; allunique targetrows prevent simpleequality compression. The frozenbudget ended withoutproof orcandidate; no automaticseed/time/bad-target-score continuation. A later task must explicitly reassess the unresolved model or supply structural reduction.",
+    "positive_guarantee": "For this sole-newvertex rule, exact union of oldclosedR4(pins)=allsource is necessary and sufficient for newrootdist<=5, with old-oldD5 inherited. Every intermediary was checked against all102060targets before acceptance.",
+    "unclosed_gap": "The exact15-pin cover remains unresolved. No claim of arbitrarysingleappend, helpers, sourceedge changes or generalN(15,5) exclusion.",
+    "other_metrics": {
+      "source_n": 102060,
+      "source_m": 765045,
+      "source_reported_D": 5,
+      "eligible_pins": 810,
+      "source_truncated_R4_roots": 810,
+      "source_R4_layer_edge_expansion": "Only source layers0..3; no layer4edge scan",
+      "scanned_arcs_layers0to3": 28114290,
+      "all_eligible_R4_union": 102060,
+      "ball_size_range": [
+        24269,
+        24414
+      ],
+      "target_support_range": [
+        70,
+        309
+      ],
+      "duplicate_ball_rows": 0,
+      "unique_target_support_rows": 102060,
+      "full_dense_binary_matrix_allocated": false,
+      "initial_constraints": 256,
+      "initial_nonzeros": 34312,
+      "initial_subset_LP_minimum": 4.847825446878384,
+      "MIP_calls": 2,
+      "first_submodel_selection_count": 15,
+      "first_submodel_fulltarget_missing": 3510,
+      "first_submodel_selection_accepted": false,
+      "new_true_counterexample_rows": 495,
+      "final_constraints": 751,
+      "final_nonzeros": 83204,
+      "final_MIP_status": 1,
+      "final_MIP_status_label": "TIME_LIMIT_NO_INCUMBENT",
+      "source_allroot_diameter_BFS": 0,
+      "candidate_newroot_BFS": 0,
+      "new_lower_bounds": 0,
+      "UNKNOWN": 1,
+      "prediction": "UNRESOLVED_AT_SHARED_BUDGET",
+      "phase1_CPU_seconds": 1.4231423669999999,
+      "phase2_parent_children_CPU_seconds": 8.093057796,
+      "total_shared_CPU_seconds": 9.516202857,
+      "ordinary_bad_count_units": "Not measured:3510is one intermediate pinselection R4-complement, not graphunordered badpairs",
+      "old100132_reused": false
+    },
+    "outcome_class": "shared-budget-limited-unresolved-integer-feasibility",
+    "wiki_verdict": "yes",
+    "primary_source_directory": "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover",
+    "related_source_record_id": "ddp-d15-D5-current102060-source-slack-profile-20261027",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/REPORT.md",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/PREFLIGHT.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/LP_DIAGNOSTIC.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/CONSTRAINT_GENERATION_LOG.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/RESULT.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/BUDGET.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/cover.cpp",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/build_balls.py",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/solve.py",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/RUN_HANDLE.json",
+      "research/ddp/more_graphs_20261027/d15_D5_current102060_source/monotone_R4_cover/terminal.json"
+    ]
+  }
+]

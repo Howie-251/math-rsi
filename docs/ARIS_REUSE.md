@@ -4,7 +4,7 @@ MathRSI 携带可以直接读取和执行的 ARIS 实现。`base/skills/mathrsi-
 
 ## 实现位置、版本与宿主
 
-上游固定为 [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/c485faa59a68e51c6575dea67ca57abc7a6a2b9c)，提交 `c485faa59a68e51c6575dea67ca57abc7a6a2b9c`。实际文件在 [`../base/`](../base/)，不依赖另一个 `aris_main` 工作目录。MIT 许可证与逐文件来源保存在 [`LICENSE`](../base/LICENSE) 和 [`ARIS_SNAPSHOT.json`](../base/ARIS_SNAPSHOT.json)。快照共 207 个上游文件、2,915,213 字节：两宿主各 30 个技能、各 44 个技能目录内文件，两套各 32 个公共资源，53 个工具，以及 leaf 和许可证。
+上游固定为 [ARIS](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/c485faa59a68e51c6575dea67ca57abc7a6a2b9c)，提交 `c485faa59a68e51c6575dea67ca57abc7a6a2b9c`。实际文件在 [`../base/`](../base/)，不依赖另一个 `aris_main` 工作目录。MIT 许可证与逐文件来源保存在 [`LICENSE`](../base/LICENSE) 和 [`ARIS_SNAPSHOT.json`](../base/ARIS_SNAPSHOT.json)。当前快照共 214 个上游文件、2,983,972 字节，两宿主各 32 个技能，另含公共资源、53 个工具、leaf、许可证及 meta 相关模板；准确文件范围以快照清单为准。新增的 meta-optimize／meta-apply 保留各宿主原版合同。
 
 Claude 读取 `base/skills/<name>/SKILL.md`，Codex 读取 `base/skills/skills-codex/<name>/SKILL.md`。不要把主线 Claude 的工具声明当成 Codex 工具名，或把两套 `shared-references` 互换。主线 `proof-orchestrator` 的 NOTICE、两个版本的六份 proof-orchestrator references、三份 Lean references、Codex 的 `agents/openai.yaml`、两套 HTML renderer/templates 均在原目录内。Claude bounded fan-out 使用 [`aris-fanout-leaf.md`](../base/agents/aris-fanout-leaf.md)。宿主若支持项目技能发现，可使用指向这些实际目录的仓库内相对别名；直接要求 agent 先读上述 SKILL.md 也能使用，不必执行全局安装。
 
@@ -134,6 +134,19 @@ python3 -B /path/to/MathRSI/base/tests/smoke_bundle.py \
   --out-dir /tmp/mathrsi-aris-smoke-evidence
 ```
 
-该小检查核对快照的 207 个源文件 Git blob 身份，把 base 搬到独立临时路径，从不同任务工作区通过绝对路径执行本副本的 wiki 初始化／未证 claim 写入／stats、路由默认／项目／inline 优先级与非法 backend，以及两个宿主的两种 HTML 模板。它不改 HOME、不运行 upstream installer、不访问网络、不调用付费模型，不测试 Lean/LaTeX 或通用研究效率。
+该小检查按当前快照清单核对上游源文件 Git blob 身份，把 base 搬到独立临时路径，从不同任务工作区通过绝对路径执行本副本的 wiki 初始化／未证 claim 写入／stats、路由默认／项目／inline 优先级与非法 backend，以及两个宿主的两种 HTML 模板。它不改 HOME、不运行 upstream installer、不访问网络、不调用付费模型，不测试 Lean/LaTeX 或通用研究效率。
 
-已运行的 [`RESULT.json`](../base/tests/evidence/RESULT.json) 保存全部 9 条实际 argv、cwd、ARIS_REPO、退出码、stdout/stderr；[`academic.html`](../base/tests/evidence/academic.html) 与 [`dashboard.html`](../base/tests/evidence/dashboard.html) 是离线 raw-math 展示样例，fixture wiki 中 claim 明确为 `unproven`。临时执行目录结束后已删除；已保留输出可查。集成报告在 [`BUNDLE_REPORT.md`](../development/aris-integration/BUNDLE_REPORT.md)。这项验证只说明本地调用链和资源齐全；任何新数学结论仍须按上述对应义务验收。
+此前 207 文件快照上已运行的 [`RESULT.json`](../base/tests/evidence/RESULT.json) 保存全部 9 条实际 argv、cwd、ARIS_REPO、退出码、stdout/stderr；[`academic.html`](../base/tests/evidence/academic.html) 与 [`dashboard.html`](../base/tests/evidence/dashboard.html) 是离线 raw-math 展示样例，fixture wiki 中 claim 明确为 `unproven`。临时执行目录结束后已删除；已保留输出可查。集成报告在 [`BUNDLE_REPORT.md`](../development/aris-integration/BUNDLE_REPORT.md)。这项验证只说明本地调用链和资源齐全；任何新数学结论仍须按上述对应义务验收。
+
+## 外层维护：数学适配与原版 meta 合同分开
+
+[MathRSI meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md) 是数学研究经验驱动的现有版本维护技能，Claude/Codex 共用主体；它消费研究原件、定位当前 caller、实现修改并实际使用，详见 [人读说明](EVOLUTION_WORKFLOW.md)。它不替代五个解题子工作流，也不把原版 ML 评分、events 门槛或独立 applier 人工调用门混成数学维护的新前置。具体保留与替换见 [ARIS 数学适配](../base/skills/mathrsi-meta-evolve/references/aris-adaptation.md)。
+
+原版入口仍可单独调用，按其自身合同执行：
+
+| 能力 | Claude 原版 | Codex 原版 |
+| --- | --- | --- |
+| 分析使用证据、提出 harness 优化 | [meta-optimize](../base/skills/meta-optimize/SKILL.md) | [meta-optimize](../base/skills/skills-codex/meta-optimize/SKILL.md) |
+| 按原版规则落地已批准的优化 | [meta-apply](../base/skills/meta-apply/SKILL.md) | [meta-apply](../base/skills/skills-codex/meta-apply/SKILL.md) |
+
+两宿主发现目录均有 meta-optimize、meta-apply 相对别名；Claude 为 `/meta-optimize`、`/meta-apply`，Codex 为 `$meta-optimize`、`$meta-apply`。MathRSI 的 `/mathrsi-meta-evolve` / `$mathrsi-meta-evolve` 指向另一份共享主技能，不能把它的维护执行记成原版 meta-apply 已运行。新增别名不安装 hooks、不修改用户全局技能或凭据。当前快照新增内容是否已实际运行，依本轮记录报告；旧 smoke 收据不自动扩张成新 meta 流程验收。

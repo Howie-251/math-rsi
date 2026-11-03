@@ -1,0 +1,44 @@
+{
+  "status": "READY_FOR_INDEPENDENT_SAMPLE_CHECK",
+  "scope_lists_match": true,
+  "all_87_involutions_match": true,
+  "both_type_I_twenty_orbits_match_member_by_member": true,
+  "type_II_forty_five_involutions_match": true,
+  "range_counts_match": true,
+  "candidate_ranges_not_enumerated": true,
+  "profile_started": false,
+  "sample_edges": "preflight.edges",
+  "sample_parameters": "preflight.json",
+  "sample_bad_pairs": 368928,
+  "cumulative_cpu_seconds": 1.9446720000000002,
+  "cumulative_cpu_limit_seconds": 60.0,
+  "runs": [
+    {
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear_two_pairs/search.cpp",
+        "-o",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear_two_pairs/search"
+      ],
+      "log": "compile.log",
+      "returncode": 0,
+      "cpu_seconds": 1.9226880000000002,
+      "wall_seconds": 1.9267697967588902
+    },
+    {
+      "command": [
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear_two_pairs/search",
+        "prepare",
+        "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/m2_coset_tower/d7_f64_semilinear_two_pairs"
+      ],
+      "log": "prepare.log",
+      "returncode": 0,
+      "cpu_seconds": 0.020851000000000397,
+      "wall_seconds": 0.022161800414323807
+    }
+  ],
+  "normalization_input_file": "normalization_inputs.json",
+  "actual_scope_file": "generated_scope.json"
+}

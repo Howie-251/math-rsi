@@ -1,0 +1,90 @@
+{
+  "status": "VALID_FIXED_SELFLINE_INVERSION_ATOM_COVER_FORMULATION",
+  "inherited_source_condition": "AllcertifiedaffinerelationsQv(y)=Bx+c_havec0",
+  "automorphism": "(controller,x)->(controller,-x)",
+  "virtual_selfloop_deletion_commutes_with_automorphism": true,
+  "atoms_per_specified_controller": [
+    "zero_singleton_cost1",
+    "plus_minus_selfline_pair_cost2"
+  ],
+  "source15552_controllers": 24,
+  "source15552_atom_variables": 48,
+  "source102060_controllers": 30,
+  "source102060_atom_variables": 60,
+  "atoms_pairwise_disjoint": true,
+  "weighted_cost_equals_expanded_pin_count": true,
+  "pair_cover_column": "ORoftwomembercachedballs",
+  "zero_and_pair_variables_must_equal": false,
+  "complete_scope": "Inversion-invariantneighborchoicesonlyinspecifiedzeroselflinetriangles",
+  "all_free_vertex_inversion_invariant_scope_claimed": false,
+  "single_new_point_cover_condition": "FulloldtargetR_(D-1)(S)coverand|S|<=15",
+  "old_edges_retained": true,
+  "actual_free_pin_binding_still_required": true,
+  "source15552_zero_union_missing": 528,
+  "source102060_zero_union_missing": 300,
+  "source15552_all_five_triangle_subsets_failed": 42504,
+  "source102060_all_five_triangle_subsets_failed": 142506,
+  "old_subfamily_failures_settle_new_atom_model": false,
+  "this_paper_numerical_checks": 0,
+  "this_paper_graphs": 0,
+  "this_paper_BFS": 0,
+  "this_paper_balls": 0,
+  "this_paper_solver_calls": 0,
+  "atom_solver_outcome_claimed_here": false,
+  "evidence": [
+    "affine_relation_recovery/RESULT.json",
+    "affine_relation_recovery/ANALYSIS_AFFINE_CERTIFICATE.md",
+    "canonical_zero_port_probe/RESULT.json",
+    "selfline_helper9_probe/RESULT.json"
+  ],
+  "inherited_atom_solver_results": [
+    {
+      "n": 15552,
+      "status": "UNSAT_RESTRICTED_CANONICAL_MODEL",
+      "solver_return_code": 20,
+      "solver_CPU_seconds": 0.129095
+    },
+    {
+      "n": 102060,
+      "status": "UNSAT_RESTRICTED_CANONICAL_MODEL",
+      "solver_return_code": 20,
+      "solver_CPU_seconds": 1.286253
+    }
+  ],
+  "inherited_independent_initial_results": [
+    {
+      "n": 15552,
+      "status": "UNKNOWN",
+      "solver_return_code": 0,
+      "solver_CPU_seconds": 3.001899
+    },
+    {
+      "n": 102060,
+      "status": "UNKNOWN",
+      "solver_return_code": 0,
+      "solver_CPU_seconds": 3.007581
+    }
+  ],
+  "inherited_independent_once_continuation_results": [
+    {
+      "n": 15552,
+      "D": 4,
+      "status": "UNSAT_RESTRICTED_CANONICAL_INDEPENDENT_MODEL",
+      "return_code": 20,
+      "solver_CPU_seconds": 5.952845999999999,
+      "wall_seconds": 5.976000264286995,
+      "pins": []
+    },
+    {
+      "n": 102060,
+      "D": 5,
+      "status": "UNKNOWN",
+      "return_code": 0,
+      "solver_CPU_seconds": 24.927957999999997,
+      "wall_seconds": 25.04787727072835,
+      "pins": []
+    }
+  ],
+  "UNSAT_proof_independently_checked": false,
+  "no_further_model_or_timer": true
+}

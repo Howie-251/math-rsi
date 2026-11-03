@@ -1,0 +1,17 @@
+import DegreeDiameter.Portfolio.OppositeGQ77SpreadExact
+open DegreeDiameter.Portfolio
+#print OppositeGQSpread.graph
+#print OppositeIncidenceSpread.Inc
+#print OppositeGQ77Spread.graph
+#print OppositeGQ77Spread.Inc
+#print OppositeGQ77Spread.oldEquiv
+#print OppositeGQ77Spread.label
+#print OppositeGQ77Spread.spread
+#check OppositeGQ77Spread.old_label
+#check OppositeGQ77Spread.label_old
+#check OppositeGQ77Spread.label_new
+#check OppositeGQ77Spread.concrete_order_degree_and_exact_D3
+#print OppositeGQ77Spread.concrete_order_degree_and_exact_D3
+#print OppositeGQ77Spread.FinalClaim
+#print axioms OppositeGQ77Spread.concrete_order_degree_and_exact_D3
+#print axioms OppositeGQ77Spread.final_claim

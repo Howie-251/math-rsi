@@ -1,0 +1,79 @@
+{
+  "status": "AUTHORIZED_BOUNDED_PROFILE",
+  "group": "Q64 central quotient D32",
+  "n": 256,
+  "degree": 8,
+  "target_D": 3,
+  "base_multiplicities": [
+    3,
+    3,
+    2,
+    2,
+    3,
+    3
+  ],
+  "tree": [
+    0,
+    3,
+    6
+  ],
+  "independent_edges": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14
+  ],
+  "dependent_edges": [
+    12,
+    15
+  ],
+  "dependent_full_voltages": [
+    "h12=inv(h2)*c*h7",
+    "h15=inv(h9)*c*h11"
+  ],
+  "edge_center_masks": [
+    0,
+    1,
+    2,
+    0,
+    4,
+    8,
+    0,
+    16,
+    32,
+    64,
+    128,
+    256,
+    18,
+    512,
+    1024,
+    320
+  ],
+  "starts": 16,
+  "source_start": 0,
+  "fresh_starts": 15,
+  "fresh_seed": 20261027091,
+  "kick_rng": "std::mt19937_64 seeded20261027091, separate from Python starts",
+  "segments_per_start": 9,
+  "maximum_strict_moves_per_segment": 30,
+  "full_single_coordinate_neighborhood": 341,
+  "objective": "lexicographic(L=2*Nempty+Nsingleton distinct forms,Nempty,minimum center deficit only when L0)",
+  "projection_legality": "general GF2 consistency: equal parallel projections impose (mask_e XOR mask_f).z = 1 XOR baselinebit_e XOR baselinebit_f",
+  "phase_filter": null,
+  "kicks": "two distinct independent coordinates changed; dependencies recomputed; legal GF2 required",
+  "center_search": "only L0 projections; exact2048 center assignments subject to general GF2 legality; immediate stop at0",
+  "source_calibration": "four roots*256 saved radius3 entries; no new BFS or source2048 scan",
+  "best_policy": "if no L0, only projection/L; otherwise unique best actual center lift",
+  "CPU_budget_seconds": 180,
+  "worker_count": 1,
+  "preparation_compile_CPU_seconds": 1.675062,
+  "process_CPU_limit_seconds": 177.324938,
+  "entire_family_exhausted": false
+}

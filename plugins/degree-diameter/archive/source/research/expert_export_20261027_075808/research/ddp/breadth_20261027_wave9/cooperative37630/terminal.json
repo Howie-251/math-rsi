@@ -1,0 +1,146 @@
+{
+  "status": "TWO_FIXED_COOPERATIVE_PROFILES_COMPLETE_NO_HIT",
+  "source_n": 37628,
+  "source_edges": 205296,
+  "new_n": 37630,
+  "new_edges": 205317,
+  "eligible_vertices": 2504,
+  "shareable_vertices": 315,
+  "effective_spoke_capacity": 2819,
+  "closedR3_R4_preparation_roots": 2504,
+  "preparation_depth": 4,
+  "preparation_CPU_seconds": 0.195998,
+  "greedy_candidate_scores": 99818,
+  "coordinate_candidate_scores": 149320,
+  "best_joint_missing": 25,
+  "best_missA": 10,
+  "best_missB": 15,
+  "first_formal_coordinate_calibrated": true,
+  "full_graph_generated": true,
+  "source_all_root_BFS_rerun": false,
+  "producer_final_root_BFS_performed": false,
+  "CPU_seconds": 0.783999,
+  "CPU_internal_limit_seconds": 26,
+  "starts_planned": 2,
+  "starts_actual": 2,
+  "profiles": [
+    {
+      "start": 0,
+      "initialized": true,
+      "removed_old_best_pin": 3814,
+      "initial_joint_missing": 25,
+      "initial_A": [
+        22207,
+        16383,
+        30245,
+        34099,
+        475,
+        3760,
+        27391,
+        15017,
+        35172,
+        7935
+      ],
+      "initial_B": [
+        13143,
+        19858,
+        26357,
+        843,
+        4640,
+        33358,
+        36740,
+        33676,
+        31376,
+        1754
+      ],
+      "sweeps": [
+        {
+          "index": 0,
+          "before": 25,
+          "after": 25,
+          "strict_replacements": 0,
+          "positions_scanned": 20,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "start": 1,
+      "initialized": true,
+      "removed_old_best_pin": -1,
+      "initial_joint_missing": 351,
+      "initial_A": [
+        22207,
+        16383,
+        30245,
+        475,
+        3760,
+        32909,
+        36740,
+        13143,
+        8308,
+        3765
+      ],
+      "initial_B": [
+        3432,
+        1884,
+        2523,
+        37057,
+        62,
+        27391,
+        31561,
+        7935,
+        33676,
+        19858
+      ],
+      "sweeps": [
+        {
+          "index": 0,
+          "before": 351,
+          "after": 341,
+          "strict_replacements": 1,
+          "positions_scanned": 20,
+          "complete": true
+        },
+        {
+          "index": 1,
+          "before": 341,
+          "after": 340,
+          "strict_replacements": 1,
+          "positions_scanned": 20,
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "process_returncode": 0,
+  "compile_CPU_seconds": 2.3237010000000002,
+  "native_CPU_seconds_including_source_prep": 0.7879149999999999,
+  "driver_CPU_seconds": 0.0020188309999999987,
+  "total_CPU_seconds_including_prep_compile_search": 3.113637224,
+  "wall_seconds": 3.1242093592882156,
+  "total_CPU_budget_seconds": 30,
+  "native_CPU_hard_limit_seconds": 27,
+  "workers": 1,
+  "restarts": 0,
+  "source": "research/ddp/breadth_20261027_wave4/pencil_source/deg11_diam5_n37628.txt",
+  "old_single_pin_source": "research/ddp/breadth_20261027_wave4/record37628_single_extension/result.json",
+  "old_D5_evidence": "Author published README/Zenodo23653049 plus Comellas D5 entry; author/table raw rows already compared equal in pencil_source/SOURCE_NOTES.md. No local full-source D5 BFS is claimed here.",
+  "scope": "Two adjacent new vertices, each at most10 old pins, sharing only old deficit>=2; exactly the two prescribed deterministic initializations and at most2 complete coordinate sweeps per start.",
+  "new_lower_bounds": 0,
+  "pending": [],
+  "root_independent_check": "best.independent_check.json",
+  "root_independent_check_status": "COMPLETE_NEGATIVE_CANDIDATE_CHECK",
+  "root_independent_check_CPU_seconds": 0.647212327,
+  "independent_scope": "Rebuilt explicit best.edges; retained all source edges, exact21 new edges, maxdegree11; ordinary full BFS only from two new roots, not all-pairs.",
+  "independent_new_root_eccentricities": [
+    6,
+    6
+  ],
+  "independent_new_old_bad_unordered_pairs": 25,
+  "independent_missing_sets_match": true,
+  "whole_graph_all_pairs_BFS_performed": false,
+  "fixed_scope_complete": true,
+  "general_two_node_template_excluded": false,
+  "stopped_after_fixed_profiles": true
+}

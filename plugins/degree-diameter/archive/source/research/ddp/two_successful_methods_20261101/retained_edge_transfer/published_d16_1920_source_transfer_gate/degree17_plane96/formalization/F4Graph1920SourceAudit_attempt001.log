@@ -1,0 +1,16 @@
+graph : SimpleGraph (Fin 1920)
+source_label : Fin 1920 ≃ Fin 1920
+def DegreeDiameter.Portfolio.F4Graph1920.SourceFinalClaim : Prop :=
+Fintype.card (Fin 1920) = 1920 ∧
+  (∀ (v : Fin 1920), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2
+theorem DegreeDiameter.Portfolio.F4Graph1920.d16_1920 : Fintype.card (Fin 1920) = 1920 ∧
+  (∀ (v : Fin 1920), graph.degree v ≤ 16) ∧
+    DegreeDiameter.Portfolio.DiameterAtMost graph 3 ∧ ¬DegreeDiameter.Portfolio.DiameterAtMost graph 2 :=
+⟨Fintype.card_fin 1920, ⟨degree_le_sixteen, ⟨diameterAtMost_three, not_diameterAtMost_two⟩⟩⟩
+'DegreeDiameter.Portfolio.F4Graph1920.d16_1920' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DegreeDiameter.Portfolio.F4Graph1920.final_claim : FinalClaim :=
+d16_1920
+'DegreeDiameter.Portfolio.F4Graph1920.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.diameterAtMost_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F4Graph1920.not_diameterAtMost_two' depends on axioms: [propext, Classical.choice, Quot.sound]

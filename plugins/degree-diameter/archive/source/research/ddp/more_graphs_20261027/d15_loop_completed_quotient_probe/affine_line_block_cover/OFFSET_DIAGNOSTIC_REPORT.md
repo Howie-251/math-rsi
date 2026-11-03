@@ -1,0 +1,9 @@
+Direct comparison of the already computed block masks supports the offset-invariance prediction at the full-fibre-column level.
+
+For15552, all312 (controller,direction) groups have one identical block mask across all9 affine cosets:312/312 groups and2496/2496 nonreference-coset comparisons pass. For102060, all390 groups likewise pass, with3120/3120 comparisons. There is no counterexample. This was tested on each stored mask rather than inferred from the previous312/390 global distinct-mask totals.
+
+Thus translating a line does not change which target fibres that single line completely covers in these actual sources. This does not establish equality of the line's covered target vertices, proper-fibre subsets, or possible joint coverage with other lines. The forthcoming joint-line model must preserve all2808/3510 raw lines, including any empty block-mask column; replacing them by the312/390 representatives would discard information needed by that different model.
+
+source15552_JOINT_LINE_INTERFACE.json and source102060_JOINT_LINE_INTERFACE.json provide every original line: zero-based line_id, one-based selector_variable, controller/direction, three literal pins, conservative cost3, and zero-based existing-ball row indices. All IDs are contiguous, every line has three distinct actual-free labels in its stated controller, and the cache rows map back to exactly those labels. Both original cache formats and complete eligible row orders are included. Selected lines' pins must be unioned before adding spokes, so shared old pins receive one edge.
+
+This worker used0.127398117 CPU seconds and only read existing mask and free-interface JSON data. No ball content, ball OR, graph BFS, solver or new graph was computed. Evidence: OFFSET_DIAGNOSTIC_PREDICTION.json, offset_diagnostic.py, OFFSET_DIAGNOSTIC.json and the two joint-line interfaces.

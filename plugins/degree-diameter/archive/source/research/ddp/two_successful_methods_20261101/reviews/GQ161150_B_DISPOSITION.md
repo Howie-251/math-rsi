@@ -1,0 +1,8 @@
+# Actual161150 finite-to-generic bridge review B
+
+Actual SUCCESS/PASS on fresh thread `bd71e1ff-ec0e-4fe0-ac0c-1173797de121`, requested gemini-3.8-flash-high/high, CLI-selected Gemini3.8FlashHigh. Complete original return is retained in GQ161150_B_GEMINI_RAW.json. It read actual all400line/3200position certificate coverage, owners and inverse-position bridge, source hS, Fin1100 product indexing, generic adjacent-center Walk lifting, load bound and nonD2 collapseHom transfer. It found no missing premise or unproved certificate; no new build/BFS was executed.
+
+Two corrections to the returned prose are necessary. The400 source points form PG(3,7), not PG(1,49). The latter parametrizes the50 spread lines; Fin400 in Lean is an index set, not a field or a50-point projective line. The actual definitions and universal hO proof consistently use all400points/400lines, so this is a reviewer terminology error, not a finite-table or type error. Also, exact64regularity of the source and exact64clone degrees are established by external literal checks; the closed Lean claim proves the required upper bound65, not a separate exact-regularity theorem.
+
+The original B checkpoint described Exact/Audit as downstream work; both now have actual exit0 and the final closed graph theorem/Audit use only propext, Classical.choice, Quot.sound with no user certificate premises. All1100 new-root BFS and full oldbody/immutable-neighborhood binding have separately completed. Actual receipts govern status; no recompilation or paid retry is needed for stale checkpoint prose. Fresh final-C is a distinct scope and remains separately tracked. Global record/priority remain uncertified.
+

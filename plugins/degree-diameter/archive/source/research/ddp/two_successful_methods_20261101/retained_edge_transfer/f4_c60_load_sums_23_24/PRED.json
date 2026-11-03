@@ -1,0 +1,49 @@
+{
+  "status": "PREDICTION_PREPARATION_ONLY_PUBLIC_COMPARISON_PENDING",
+  "same_main_mechanism": "full original open-neighborhood cloning with GF4 transverse plane blocks",
+  "source": "f4_c60_edge_projective fixed3840 graph; no source distance rerun",
+  "fixed_candidates": [
+    {
+      "cap": 23,
+      "formula": "r21+r22",
+      "blocks": 31,
+      "clones": 496,
+      "predicted_order": 4336,
+      "predicted_edges": 48320,
+      "target_D": 3,
+      "controller_load_bound": 3
+    },
+    {
+      "cap": 24,
+      "formula": "2*r22",
+      "blocks": 44,
+      "clones": 704,
+      "predicted_order": 4544,
+      "predicted_edges": 52480,
+      "target_D": 3,
+      "controller_load_bound": 4
+    }
+  ],
+  "prediction": "The exact60-row sums preserve the stated load bounds; all repeated-owner clone indices remain distinct, with no new-new edges. The proved generic clone mechanism then preserves D3 and non-D2.",
+  "production_condition": "Wait for root public comparison and explicit execution notification; omit any cap whose public baseline already exceeds its candidate.",
+  "preparation_and_production_aggregate_CPU_limit": 30,
+  "formalization_aggregate_CPU_limit": 300,
+  "each_new_Lean_module_CPU_limit": 115,
+  "workers_initial": 1,
+  "solver_calls_planned": 0,
+  "new_seed_plane_capacity_optimization_pool": false,
+  "independent_acceptance": "root responsibility after production; producer does not run independent BFS",
+  "graph_generated": false,
+  "new_graph_or_record_claim": false,
+  "current_cap23_status": "ROOT_AUTHORIZED_EXECUTION_ONLY_CAP23",
+  "current_cap24_status": "STOP_NOT_PRODUCED_PUBLIC6144_EXCEEDS4544",
+  "cap24_public_notice_from_root": {
+    "source": "arXiv2608.27253v2 section3.4.2; Delorme opposite-GQ, (s,t)=(3,5)",
+    "degree": 24,
+    "order": 6144,
+    "verification_scope": "received from root public-comparison work; not independently re-searched here"
+  },
+  "cap23_public_comparison_source": "public_baseline_audit/DEGREE23_24_EXTENSION.md/.json",
+  "cap23_best_located_public": 3549,
+  "cap23_global_novelty_unconfirmed": true
+}

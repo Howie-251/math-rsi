@@ -1,0 +1,122 @@
+{
+  "status": "ALL_PREDECLARED_CALIBRATION_PREDICTIONS_PASS",
+  "checks": {
+    "factor_row_size3": true,
+    "factor_symmetric": true,
+    "factor_loops_exactly_abs": true,
+    "factor_cube_identity_all225_pairs": true,
+    "factor_distinct_abs_no_edge_or_common_neighbor": true,
+    "factor_closed_absolute_neighborhoods_partition15": true,
+    "source_simple_symmetric": true,
+    "source_predicted_edge_count1000": true,
+    "source_predicted_degree_hist": true,
+    "source_all25_centers_degree8": true,
+    "source_center_openN_partition_other200": true,
+    "prefix_predicted_radius3_hist": true,
+    "prefix_predicted_miss120": true,
+    "final_simple_symmetric": true,
+    "final_n230_m1035": true,
+    "final_regular9": true,
+    "all230_final_BFS_predictions_match": true
+  },
+  "factor_cube_mismatches": [],
+  "factor_absolute_pair_errors": [],
+  "source": {
+    "n": 225,
+    "m": 1000,
+    "degree_histogram": {
+      "8": 25,
+      "9": 200
+    },
+    "BFS_roots": 0
+  },
+  "prefix": {
+    "n": 226,
+    "m": 1005,
+    "degree_histogram": {
+      "5": 1,
+      "8": 20,
+      "9": 205
+    },
+    "BFS_root": 225,
+    "BFS_limit": 3,
+    "histogram_d0_to_d3": [
+      1,
+      5,
+      40,
+      60
+    ],
+    "within_radius3": 106,
+    "missed_within_radius3": 120,
+    "missing_within_radius3_is_not_disconnectedness_claim": true
+  },
+  "final": {
+    "n": 230,
+    "m": 1035,
+    "degree_histogram": {
+      "9": 230
+    },
+    "BFS_roots": 230,
+    "all_roots_eccentricity3": true,
+    "histogram_classes": {
+      "old_abs_abs_or_nonabs_nonabs": [
+        {
+          "histogram": [
+            1,
+            9,
+            48,
+            172
+          ],
+          "root_count": 125
+        }
+      ],
+      "old_exactly_one_abs": [
+        {
+          "histogram": [
+            1,
+            9,
+            46,
+            174
+          ],
+          "root_count": 100
+        }
+      ],
+      "helper": [
+        {
+          "histogram": [
+            1,
+            9,
+            60,
+            160
+          ],
+          "root_count": 5
+        }
+      ]
+    },
+    "prediction_mismatches": [],
+    "actual_distance3_witness": [
+      0,
+      7
+    ]
+  },
+  "CPU_seconds_rusage": 0.027415999999999996,
+  "CPU_seconds_process_time": 0.02742095,
+  "CPU_limit_seconds": 5,
+  "operations": {
+    "literal_factor_cube_check": 1,
+    "source_BFS": 0,
+    "prefix_root_BFS": 1,
+    "final_root_BFS": 230,
+    "field_or_geometry": 0,
+    "old_graph_parsing": 0,
+    "Lean": 0,
+    "solver": 0,
+    "web": 0,
+    "paid_review": 0,
+    "hash": 0
+  },
+  "portfolio_graph_increment": 0,
+  "new_parameter_increment": 0,
+  "Lean_increment": 0,
+  "existing_three_graph_C_scope": false
+}

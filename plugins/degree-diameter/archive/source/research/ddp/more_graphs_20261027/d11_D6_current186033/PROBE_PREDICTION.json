@@ -1,0 +1,20 @@
+{
+  "frozen_before_R5_queries": true,
+  "prediction": "The unique prototype19161, after omitting its saturated neighbor78477, admits at most two free guards that restore full radius-five coverage of all186033 old vertices.",
+  "source_n": 186033,
+  "source_m": 1010817,
+  "target_degree": 11,
+  "target_D": 6,
+  "prototype": 19161,
+  "prototype_degree": 10,
+  "deleted_saturated_pin": 78477,
+  "mandatory_pins": [72425,85923,89934,95946,103392,107088,113094,120546,127006],
+  "guard_cap": 2,
+  "guard_pool": "All actual source vertices of degree below11, excluding the nine mandatory pins.",
+  "order": "First any source-derived free proxies near78477, fixed without coverage scores; then exact0/1/2-guard feasibility on the mandatory missing set. Equal missing-coverage masks keep their least labelled guard.",
+  "accept": "Actual selected pins are distinct, all have source degree below11, total degree at most11, and a fresh complete radius-five traversal from the selected set covers every old vertex.",
+  "budget_CPU_seconds": 30,
+  "unknown_boundary": "Stop on the actual CPU budget; partial mask generation or incomplete exact pair decision is UNKNOWN rather than infeasible.",
+  "scope": "One actual source and its unique at-most-one-saturated-neighbor prototype; no arbitrary pin-set optimization or new source.",
+  "source_allBFS": 0
+}

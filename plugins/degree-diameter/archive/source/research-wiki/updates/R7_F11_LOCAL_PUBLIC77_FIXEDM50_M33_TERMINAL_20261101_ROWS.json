@@ -1,0 +1,1131 @@
+[
+  {
+    "family": "Affine lift with typed inverse ports",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 77,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 bounded primary-source derived guarantee; global/priority uncertified",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "partial",
+    "id": "ddp-r7-f11-four-orbit-twofive-typed-true-inverse-tenchart-local-interface-20261101",
+    "title": "F11七port：两轨预测被推翻，132类2+5与10张真逆chart实际成立",
+    "record_type": "local_finite_typed_port_analysis",
+    "actual_D_scope": "有限PGL轨道、选定端口及10真逆chart；未造controller或完整图。",
+    "outcome_class": "PREDICTION_PARTLY_REFUTED_FIXED_TYPED_LOCAL_INTERFACE_PASS",
+    "distance_text": "预测264+660两轨被实际110/220/264/330四轨推翻；792七子集132为(0,0,2,5)、660为(1,2,2,2)。只前132类给264×2+330×5；finalports=[1,4,inf,0,2,3,5]、pi=[1,0,3,2,4,5,6]。10真实逆chart的360个NBturn全rank3，各12plane相邻覆盖1331，含重标.131403188CPU。独立单chart反例.000518141CPU：归一PGL逆的quotient多6倍，(0,1,1)错误往返(0,6,6)，reverse noise不能修；producer真实逆无缺陷。",
+    "scope": "固定F11/132-profile对象/finalpi；非任意七子集、sorted邻标、任意same-type配对或所有29chart验证。端口接口是两directed2factor加三perfectmatching。",
+    "positive_guarantees": [
+      "实际1320个PGL置换、924六子集、792七子集；六子集四轨各自补集不变。",
+      "真实反向必须T^-1和noise=-t；PGL尺度等价不能替代字面线性逆。",
+      "已继承机制：中间chart的36秩条件覆盖NB三步，相邻12plane互补，同纤维靠controller三角；本次只实际检验F11接口，不当一般常识的新定理。"
+    ],
+    "unclosed_gap": "局部PASS仍缺符合固定port的完整controller；0图/BFS/Lean，不计新构造。",
+    "lesson_and_restart_condition": "预测被推翻后实际改变生成规则：只选132类和固定真逆角色，弃任意sorted标号/PGL归一逆；随后先核公开竞争门再派有界controller实验。",
+    "other_metrics": {
+      "new_named_complete_graphs": 0,
+      "new_Lean_instances": 0,
+      "new_frameworks": 0,
+      "full_graphs_generated": 0,
+      "BFS_runs": 0,
+      "Lean_compilations": 0,
+      "six_orbit_sizes": [
+        110,
+        220,
+        264,
+        330
+      ],
+      "seven_profiles": [
+        {
+          "counts": [
+            0,
+            0,
+            2,
+            5
+          ],
+          "objects": 132
+        },
+        {
+          "counts": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "objects": 660
+        }
+      ],
+      "final_ports": [
+        1,
+        4,
+        "inf",
+        0,
+        2,
+        3,
+        5
+      ],
+      "reverse_ports": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "charts_checked": 10,
+      "NBturn_rank3_checks": 360,
+      "planes_per_pencil": 12,
+      "producer_CPU_seconds": 0.131403188,
+      "independent_counterexample_CPU_seconds": 0.0005181409999999997,
+      "two_orbits_prediction_refuted": true,
+      "producer_inverse_defect_found": false,
+      "all_processes_terminal": true
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/PARAMETERS.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/CHART_CHECKS.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/CONTROLLER_INTERFACE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/INDEPENDENT_MECHANISM_NOTE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/INDEPENDENT_INVERSE_COUNTEREXAMPLE.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_f11_port_orbits/INDEPENDENT_INVERSE_COUNTEREXAMPLE.py"
+    ]
+  },
+  {
+    "family": "Published-source comparison gate",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 77,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 bounded primary-source derived guarantee; global/priority uncertified",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "partial",
+    "id": "ddp-degree77-r7-f11-public-tallini15-gq7-generalduplication-169750-controller-threshold128-20261101",
+    "title": "77度公开门169750：Tallini15×GQ7/spread一般复制；F11纤维需H≥128",
+    "record_type": "published_method_direct_scalar_comparison",
+    "actual_D_scope": "已发表机制的标量代入和可核推论；0controller/图/BFS/Lean。",
+    "outcome_class": "BEST_LOCATED_DERIVED_PUBLIC_GUARANTEE_169750_MIN_CONTROLLER128",
+    "distance_text": "公开oppositeGQ(7,7)160000/64度，Tallini15 partialovoid×50 spread给750中心，一般Delorme§7复制13次推出169750=160000+13×750。中心诱导105K2+540isolates，复制有newnew匹配，不能用dist≥3特例。PolarStar IQ684合法组合max137424(q53,d23,degree77)，Paley417组合max129903(q49,d26,degree76)。F11³=1331，H127给169037不足，H128给170368；三base/evenm最小H132/m44。",
+    "scope": "一次4primary查询、已存原始论文及.020526023CPU标量；169750是本次组合已发表机制的推论，不是原论文列数值或独立公开边表。只用公开Tallini15，不用本地160050/O22；任意公开augmentation/全球最高/priority未穷尽。",
+    "positive_guarantees": [
+      "Tallini15存在性据primary研究论文Ceria等§1/Table1所引结果；未取得原坐标，不冒复现169750边表。",
+      "原始Delorme§7适用matching中心；已核其他GQ产品/复制与全部合法PolarStar窗口均不超过本门。",
+      "H132/175692只条件例子，不预判可行controller。"
+    ],
+    "unclosed_gap": "degree77全球维护表、任意复制最优与优先权未穷尽；本门不产图。",
+    "lesson_and_restart_condition": "先据169750筛选有竞争力的规模，再有界计算；局部PASS/条件点数不计图，完整fiber须另外生成验收。",
+    "other_metrics": {
+      "new_named_complete_graphs": 0,
+      "new_Lean_instances": 0,
+      "new_frameworks": 0,
+      "full_graphs_generated": 0,
+      "BFS_runs": 0,
+      "Lean_compilations": 0,
+      "best_located_derived_guarantee": 169750,
+      "source_n": 160000,
+      "source_degree": 64,
+      "public_partial_ovoid": 15,
+      "spread_lines": 50,
+      "centers": 750,
+      "replications": 13,
+      "center_matching_edges": 105,
+      "center_isolates": 540,
+      "PolarStarIQ_legal_cases": 684,
+      "PolarStarPaley_legal_cases": 417,
+      "PolarStarIQmax": 137424,
+      "PolarStarPaleymax": 129903,
+      "minimumH": 128,
+      "minimum_threebase_evenH": 132,
+      "minimum_threebase_evenm": 44,
+      "scalar_CPU_seconds": 0.020526023,
+      "primary_query_batches": 1,
+      "queries": 4,
+      "unpublished_local_graph_used_as_public": false,
+      "global_record_or_priority_certified": false
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/DEGREE77_R7_F11_TARGET_GATE_20261101.md",
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/DEGREE77_R7_F11_TARGET_GATE_20261101.json",
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/DEGREE77_R7_F11_TARGET_GATE_20261101_scalar_check.py"
+    ]
+  },
+  {
+    "family": "Affine lift with typed inverse ports",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 77,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 bounded primary-source derived guarantee; global/priority uncertified",
+    "n": {
+      "actual": null,
+      "hypothetical": 199650
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "no",
+    "id": "ddp-r7-threebase-fixed-m50-symbolic-capacity50-exactcover-all32-fail01-20261101",
+    "title": "固定三base七port m50严格闭域：26+3×8支持，32tiling全缺0→1路线",
+    "record_type": "fixed_controller_topology_strict_exclusion",
+    "actual_D_scope": "固定三baseA/B/S/T/R、simple七port、m50完整A³严格排除；fullF11³无intrafi边lift亦失败，非一般7D3上界。",
+    "outcome_class": "STRICT_FIXED_THREEBASE_M50_COMPLETE_DOMAIN_ALL32_TILINGS_FAIL01",
+    "distance_text": "R只base0 half、交换base1/2避旧S/T重复。实际1029词counts=[[50,64,64],[64,52,56],[64,56,52]]，只该topology evenm≤50。m50 root00必须50型无重复，独立symbolicidentity给26base+三8块；a0归一2/10，d三值排序保图。4802outer全域、844可行base、3736blocks、8140pairnodes，32root00tiling全在0→1失败，0未试/0完整controller。含prepare/编译/identity .919086454CPU。",
+    "scope": "仅此三base拓扑m50、simple和完整A³；旧mod10 passingprofile是必要门旧OPEN，已被本次完整exactcover严格终态覆盖。smaller evenm≤48开放，无自动48/46/44梯子；非所有七port或其他F11机制排除。",
+    "positive_guarantees": [
+      "事前symbolic最小>36获支持、实际50，使最高端m50成为明确有限门。",
+      "50真实wordforms与26+三8块逐整数向量相等；不重复旧residue枚举。",
+      "缺三walk的0→1 pair非邻（相邻总有backtrack三walk）；继承障碍代入F11，两步至多7×121=847<1331，故此固定fullfiber确不D3；非新普适定理。"
+    ],
+    "unclosed_gap": "m50严格失败；同topology evenm≤48/其他拓扑开放，不自动降模数。",
+    "lesson_and_restart_condition": "同层可行32对象均无法同时补0→1，缺的是兼容路线；停止最高端，改四base生成规则且保B三角，再过symbolic/公开门做一次global批次，避免按坏对微降续算。",
+    "other_metrics": {
+      "new_named_complete_graphs": 0,
+      "new_Lean_instances": 0,
+      "new_frameworks": 0,
+      "full_graphs_generated": 0,
+      "BFS_runs": 0,
+      "Lean_compilations": 0,
+      "symbolic_words": 1029,
+      "symbolic_counts": [
+        [
+          50,
+          64,
+          64
+        ],
+        [
+          64,
+          52,
+          56
+        ],
+        [
+          64,
+          56,
+          52
+        ]
+      ],
+      "fixed_topology_even_m_bound": 50,
+      "fixed_topology_controller_bound": 150,
+      "outer_visited": 4802,
+      "outer_total": 4802,
+      "root00_tilings": 32,
+      "full_support_tests": 32,
+      "first_failure_pair": [
+        0,
+        1
+      ],
+      "passing_controllers": 0,
+      "unvisited": 0,
+      "accounted_CPU_seconds": 0.919086454,
+      "old_mod10_OPEN_superseded": true,
+      "smaller_even_m_remaining_upper": 48,
+      "automatic_lower_modulus_authorized": false,
+      "all_processes_terminal": true
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/SYMBOLIC_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/M50_RESIDUE_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/DISTINCT_FORMS.tsv",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/INDEPENDENT_M50_NOTE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/SYMBOLIC_IDENTITY_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/check_symbolic_identity.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/gate.cpp",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_schreier_controller_gate/m50_exact_cover/run_gate.py"
+    ]
+  },
+  {
+    "family": "Affine lift with typed inverse ports",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": 77,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 bounded primary-source derived guarantee; global/priority uncertified",
+    "n": {
+      "actual": null,
+      "hypothetical": 175692
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "partial",
+    "id": "ddp-r7-fourbase-triangle-m33-global2000000-unknown-cap-reached-20261101",
+    "title": "四base三角m33：1372词容量门支持；200万合法global样本终态UNKNOWN",
+    "record_type": "fixed_controller_topology_bounded_global_sampling_unknown",
+    "actual_D_scope": "固定四base m33/e11有限global参数采样；0完整controller witness/图；非全族排除。",
+    "outcome_class": "UNKNOWN_SAMPLE_CAP_REACHED_2000000_LEGAL_NO_CONTROLLER_NOT_EXHAUSTIVE",
+    "distance_text": "A四循环，B在012零电压三循环、base3平移m/3；S/T/R三无固定base匹配。实际1372词16类最小51、3|m，首competitive m33/H132条件175692（对169750+5942）。实际batch用a3=0 gauge、保e11单位五轨[1,2,3,11,22]各400000，共2000000合法，seed2026110107、16191788原PRNG输出。终态UNKNOWN_SAMPLE_CAP_REACHED，0witness，含编译1.822285705CPU<30。首(3,3)失败1962566，02:36946/11:386/01:84/12:15/03:3；37434过首门、488过02，最后3在03止。",
+    "scope": "单固定topology/Z33、归一branch内合法global随机样本；非全域穷举/非family排除。24MB按序实际attempt记录保存；因无witness未执行132controller与17424pairword导出。unusedCPU不自动授权下一批。",
+    "positive_guarantees": [
+      "symboliccounts=[[69,62,56,66],[62,61,62,67],[56,62,69,66],[66,67,66,51]]，只给此规则m≤51且3|m，不证明m33存在。",
+      "每候选独立生成，覆盖反馈不改变下一候选，0hillclimb。",
+      "实际报告代表(22,26,31,0,25,17,21,21,4,27)的signature=[[33,33,33,32],[33,33,33,32],[33,33,31,33],[32,32,33,33]]；缺03{5}/13{8}/22{9,24}/30{28}/31{25}，仅报告代表，非全族或样本整体最优断言。"
+    ],
+    "unclosed_gap": "无完整exact3walk controller；采样UNKNOWN仍不知m33是否存在，0F11完整图/BFS/Lean。",
+    "lesson_and_restart_condition": "改变结构让部分16类同时覆盖，但少量缺口不足以无限计算。51型同层门贡献绝大多数失败，应据缺路线及首失败分布作root下一机制决策；当前停止，不自动第二seed/hillclimb/m梯子或模板清单。",
+    "other_metrics": {
+      "new_named_complete_graphs": 0,
+      "new_Lean_instances": 0,
+      "new_frameworks": 0,
+      "full_graphs_generated": 0,
+      "BFS_runs": 0,
+      "Lean_compilations": 0,
+      "symbolic_words": 1372,
+      "symbolic_counts": [
+        [
+          69,
+          62,
+          56,
+          66
+        ],
+        [
+          62,
+          61,
+          62,
+          67
+        ],
+        [
+          56,
+          62,
+          69,
+          66
+        ],
+        [
+          66,
+          67,
+          66,
+          51
+        ]
+      ],
+      "symbolic_minimum": 51,
+      "symbolic_CPU_seconds": 0.011546033,
+      "m": 33,
+      "conditional_controller_order": 132,
+      "conditional_gain": 5942,
+      "legal_candidates": 2000000,
+      "legal_limit": 2000000,
+      "branch_representatives": [
+        1,
+        2,
+        3,
+        11,
+        22
+      ],
+      "branch_counts": [
+        400000,
+        400000,
+        400000,
+        400000,
+        400000
+      ],
+      "seed": 2026110107,
+      "raw_PRNG_draws": 16191788,
+      "first_failure_counts": [
+        0,
+        84,
+        36946,
+        3,
+        0,
+        386,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1962566
+      ],
+      "representative_parameters": [
+        22,
+        26,
+        31,
+        0,
+        25,
+        17,
+        21,
+        21,
+        4,
+        27
+      ],
+      "representative_signature": [
+        [
+          33,
+          33,
+          33,
+          32
+        ],
+        [
+          33,
+          33,
+          33,
+          32
+        ],
+        [
+          33,
+          33,
+          31,
+          33
+        ],
+        [
+          32,
+          32,
+          33,
+          33
+        ]
+      ],
+      "attempt_file_bytes": 24000000,
+      "accounted_CPU_seconds": 1.8222857049999996,
+      "CPU_budget": 30,
+      "family_exclusion": false,
+      "search_complete": false,
+      "literal_controller_exported": false,
+      "automatic_retry_authorized": false,
+      "all_processes_terminal": true
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/DISTINCT_FORMS.tsv",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/count_symbolic.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/EXAMPLE_COVERAGE.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/search.cpp",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r7_fourbase_triangle_controller/m33_global_batch/run_once.py"
+    ]
+  },
+  {
+    "id": "ddp-f9-controller-u10-plane-clone-degree55-59-window-public-stop60-20261101",
+    "title": "同一U10plane五完整图55..59：独验／五具体Lean-Audit／A/B及freshC逐六target实际通过",
+    "family": "Prototype-neighborhood extension",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": null,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 current bounded primary-source derived guarantee; global/priority notcertified",
+    "record_type": "complete_literal_graph_family_global_novelty_pending",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": 3,
+    "actual_D_scope": "Allfivecomplete endpointgraphs: full literal oldbody/newN binding,12150newrootR3 BFS matching allclasspredictions; sourceD3/nonD2 inherited; fiveexplicit originalLean declarations and separateAudit eachstd3/nocertificate. No sourceoldR3 or fieldchecks repeated.",
+    "ordinary_bad_unordered_pairs": 0,
+    "ordinary_bad_target_D": 3,
+    "wiki_verdict": "yes",
+    "outcome_class": "COMPLETE_LITERAL_ACCEPTANCE_UNCONDITIONAL_ORIGINAL_KERNEL_AUDIT_A_B_DISTINCT_FRESH_GROUPED_C_EXPLICIT_EACH_TARGET_PASS",
+    "distance_text": "同一固定U10×Wplane的810 baseN54，各复制k1..5，五完整图(55,3)57672/1579014、(56,3)58482/1622754、(57,3)59292/1666494、(58,3)60102/1710234、(59,3)60912/1753974均fresh独验PASS。所有图保原1535274边、0newnew，43740旧pins负载k、degree54点13122+810k，highdegree点43740。全部12150新根BFS逐类符合(1,54,2449+k,54358+809k)，只共享810sourcecenter R2=.006682CPU，0旧R3/field重验；独验总8.612202832CPU、生产2.551701953CPU。具体5声明concrete_55_57672至concrete_59_60912和独立jointAudit全PASS，4currentmodules/std3/无证书，含prep/binding11.340915234CPU。12150逐j recipe binding依符号label/center定理＋外部readback，不是Audit #eval12150。公开保证下优势1132/914/696/478/260；新六target A/B与一次distinctfreshC383明确分别逐target PASS，全部实际完成，不是六次调用。",
+    "scope": "已接受原56862/54源、固定C78exactmax10的同一U10集合、既有Wplane、每原N54复制k次、0newnew；只k1..5端点。公共比较为已读published-method直接代入，含Delorme q16/stdC12/generalmatching组合与合法PolarStarIQ/Paley小整数窗口，不认证全球最高。",
+    "positive_guarantees": [
+      "直接候选公式n=56862+810k，degree≤54+k，m=1535274+43740k；810basecenters还须实际oldN绑定、currentprefix完整覆盖与fresh验收。",
+      "新一批四primaryqueries未定位阻断五个具体端点的数值条目，但高degree维护表缺口与任意复制/非矩形/未召回图保留。",
+      "公开IQ/Paley所有合法窗口小整数代入给60强阻断；正margin不是新图，negativegate不外推其他机制/degree60无解。"
+    ],
+    "unclosed_gap": "本地完整数学图／字面独验、无前提具体Lean原目标／独立Audit和A/B/distinctfreshC均actualPASS。最终C只有一次透明六target grouped call383，thread8e5aa7a9-5e17-4c5c-aa19-a4beb6d3ee71，明确分别审U6及五U10原目标，非六次调用，不继承此前source54/55 verdict。全球最高／原创／优先权未认证；旧四图冻结包119/16/Lean13不含这批。",
+    "lesson_and_restart_condition": "从base0max7受限界转固定C78 wholeopenN exactmax10后，唯一U10确定810原N54，不改field/controller。五个有据公开正margin端点现全部实际生成验收并分别闭合原目标；一套连接规则计5实例，不报5方法或每clone前缀。k6/degree60仍被PolarStarIQ64362阻断，未生成/实例化，不续更高k或degree梯子。下一B现已F11局部接口PASS，公开77门169750，固定三base m50严格失败，继而四base m33一次200万合法global样本终态UNKNOWN；0controller/图，不自动续算。见本轮r7四节点。原family五图及六target A/B/freshC实际全部完成不变。",
+    "other_metrics": {
+      "new_named_complete_graphs": 5,
+      "new_Lean_instances": 5,
+      "new_frameworks": 0,
+      "base_centers": 810,
+      "source_n": 56862,
+      "selected_k": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "candidate_orders": [
+        57672,
+        58482,
+        59292,
+        60102,
+        60912
+      ],
+      "candidate_margins": [
+        1132,
+        914,
+        696,
+        478,
+        260
+      ],
+      "accepted_endpoints_in_this_record": 5,
+      "current_status": "ALL_MATH_KERNEL_AUDIT_AND_EXTERNAL_A_B_FRESH_C_COMPLETE_GLOBAL_PRIORITY_UNCERTIFIED",
+      "degree60_target": 61722,
+      "degree60_public_IQ": 64362,
+      "degree60_gain": -2640,
+      "degree60_production_authorized": false,
+      "public_query_batches": 1,
+      "public_queries": 4,
+      "global_record_or_priority_certified": false,
+      "window_rows": [
+        {
+          "Delta": 55,
+          "D": 3,
+          "k": 1,
+          "candidate_n": 57672,
+          "candidate_m": 1579014,
+          "derived_guarantee": 56540,
+          "guarantee_family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+          "candidate_gain": 1132,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 37,
+            "dprime": 16,
+            "Delta": 54,
+            "n": 47838
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 32,
+            "dprime": 20,
+            "Delta": 53,
+            "n": 43337
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 56540,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 4
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 56375
+          },
+          "production_selected": true
+        },
+        {
+          "Delta": 56,
+          "D": 3,
+          "k": 2,
+          "candidate_n": 58482,
+          "candidate_m": 1622754,
+          "derived_guarantee": 57568,
+          "guarantee_family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+          "candidate_gain": 914,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 32,
+            "dprime": 23,
+            "Delta": 56,
+            "n": 50736
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 37,
+            "dprime": 18,
+            "Delta": 56,
+            "n": 52059
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 57568,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 5
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 57400
+          },
+          "production_selected": true
+        },
+        {
+          "Delta": 57,
+          "D": 3,
+          "k": 3,
+          "candidate_n": 59292,
+          "candidate_m": 1666494,
+          "derived_guarantee": 58596,
+          "guarantee_family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+          "candidate_gain": 696,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 37,
+            "dprime": 19,
+            "Delta": 57,
+            "n": 56280
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 37,
+            "dprime": 18,
+            "Delta": 56,
+            "n": 52059
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 58596,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 6
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 58425
+          },
+          "production_selected": true
+        },
+        {
+          "Delta": 58,
+          "D": 3,
+          "k": 4,
+          "candidate_n": 60102,
+          "candidate_m": 1710234,
+          "derived_guarantee": 59624,
+          "guarantee_family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+          "candidate_gain": 478,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 37,
+            "dprime": 20,
+            "Delta": 58,
+            "n": 59094
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 37,
+            "dprime": 20,
+            "Delta": 58,
+            "n": 57687
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 59624,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 7
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 59450
+          },
+          "production_selected": true
+        },
+        {
+          "Delta": 59,
+          "D": 3,
+          "k": 5,
+          "candidate_n": 60912,
+          "candidate_m": 1753974,
+          "derived_guarantee": 60652,
+          "guarantee_family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+          "candidate_gain": 260,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 43,
+            "dprime": 15,
+            "Delta": 59,
+            "n": 60576
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 37,
+            "dprime": 20,
+            "Delta": 58,
+            "n": 57687
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 60652,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 8
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 60475
+          },
+          "production_selected": true
+        },
+        {
+          "Delta": 60,
+          "D": 3,
+          "k": 6,
+          "candidate_n": 61722,
+          "candidate_m": 1797714,
+          "derived_guarantee": 64362,
+          "guarantee_family": "PolarStarIQ",
+          "candidate_gain": -2640,
+          "IQ_max": {
+            "family": "PolarStarIQ",
+            "q": 43,
+            "dprime": 16,
+            "Delta": 60,
+            "n": 64362
+          },
+          "Paley_max": {
+            "family": "PolarStarPaley",
+            "q": 41,
+            "dprime": 18,
+            "Delta": 60,
+            "n": 63751
+          },
+          "q16_duplication": {
+            "family": "Delorme q16 duality/stdC12/general inducedmatching replication",
+            "n": 61680,
+            "source_n": 52428,
+            "source_degree": 51,
+            "k": 9
+          },
+          "q32_fold_duplication": {
+            "family": "Delorme q32 folded polarity absolute replication",
+            "n": 61500
+          },
+          "production_selected": false
+        }
+      ],
+      "large_graph_BFS_solver_Lean_runs_in_public_gate": 0,
+      "validated_graph_instances": [
+        {
+          "Delta": 55,
+          "D": 3,
+          "n": 57672,
+          "m": 1579014,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "known_nonrecord": false,
+          "confirmed_publictable_improvement": false,
+          "latest_global_record_confirmed": false,
+          "best_located_public_lower_bound": 56540,
+          "bounded_gain": 1132,
+          "concrete_original_theorem": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.concrete_55_57672",
+          "final_claim": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.final_claim55",
+          "independent_new_roots": 810,
+          "histogram": [
+            1,
+            54,
+            2450,
+            55167
+          ],
+          "formal_scope": "Unconditional actualfixedgraph/card/maxdegree/trueWalkD3/nonD2,std3,explicitcaseandseparatejointAudit;recipe12150rowbindingexternalnotAudit#eval.",
+          "external_A_B_distinctfreshC_actualPASS": true
+        },
+        {
+          "Delta": 56,
+          "D": 3,
+          "n": 58482,
+          "m": 1622754,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "known_nonrecord": false,
+          "confirmed_publictable_improvement": false,
+          "latest_global_record_confirmed": false,
+          "best_located_public_lower_bound": 57568,
+          "bounded_gain": 914,
+          "concrete_original_theorem": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.concrete_56_58482",
+          "final_claim": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.final_claim56",
+          "independent_new_roots": 1620,
+          "histogram": [
+            1,
+            54,
+            2451,
+            55976
+          ],
+          "formal_scope": "Unconditional actualfixedgraph/card/maxdegree/trueWalkD3/nonD2,std3,explicitcaseandseparatejointAudit;recipe12150rowbindingexternalnotAudit#eval.",
+          "external_A_B_distinctfreshC_actualPASS": true
+        },
+        {
+          "Delta": 57,
+          "D": 3,
+          "n": 59292,
+          "m": 1666494,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "known_nonrecord": false,
+          "confirmed_publictable_improvement": false,
+          "latest_global_record_confirmed": false,
+          "best_located_public_lower_bound": 58596,
+          "bounded_gain": 696,
+          "concrete_original_theorem": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.concrete_57_59292",
+          "final_claim": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.final_claim57",
+          "independent_new_roots": 2430,
+          "histogram": [
+            1,
+            54,
+            2452,
+            56785
+          ],
+          "formal_scope": "Unconditional actualfixedgraph/card/maxdegree/trueWalkD3/nonD2,std3,explicitcaseandseparatejointAudit;recipe12150rowbindingexternalnotAudit#eval.",
+          "external_A_B_distinctfreshC_actualPASS": true
+        },
+        {
+          "Delta": 58,
+          "D": 3,
+          "n": 60102,
+          "m": 1710234,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "known_nonrecord": false,
+          "confirmed_publictable_improvement": false,
+          "latest_global_record_confirmed": false,
+          "best_located_public_lower_bound": 59624,
+          "bounded_gain": 478,
+          "concrete_original_theorem": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.concrete_58_60102",
+          "final_claim": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.final_claim58",
+          "independent_new_roots": 3240,
+          "histogram": [
+            1,
+            54,
+            2453,
+            57594
+          ],
+          "formal_scope": "Unconditional actualfixedgraph/card/maxdegree/trueWalkD3/nonD2,std3,explicitcaseandseparatejointAudit;recipe12150rowbindingexternalnotAudit#eval.",
+          "external_A_B_distinctfreshC_actualPASS": true
+        },
+        {
+          "Delta": 59,
+          "D": 3,
+          "n": 60912,
+          "m": 1753974,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": true,
+          "known_nonrecord": false,
+          "confirmed_publictable_improvement": false,
+          "latest_global_record_confirmed": false,
+          "best_located_public_lower_bound": 60652,
+          "bounded_gain": 260,
+          "concrete_original_theorem": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.concrete_59_60912",
+          "final_claim": "DegreeDiameter.Portfolio.F9U10PlaneCloneFamily.final_claim59",
+          "independent_new_roots": 4050,
+          "histogram": [
+            1,
+            54,
+            2454,
+            58403
+          ],
+          "formal_scope": "Unconditional actualfixedgraph/card/maxdegree/trueWalkD3/nonD2,std3,explicitcaseandseparatejointAudit;recipe12150rowbindingexternalnotAudit#eval.",
+          "external_A_B_distinctfreshC_actualPASS": true
+        }
+      ],
+      "mathematically_validated_complete_graph": true,
+      "new_lower_bound_mathematically_verified": false,
+      "one_family_not_five_methods": true,
+      "source_order": 56862,
+      "source_degree": 54,
+      "source_edges_retained_each": 1535274,
+      "new_new_edges": 0,
+      "base_pin_union": 43740,
+      "total_new_R3_BFS_roots": 12150,
+      "source_R2_only_centers_shared": 810,
+      "source_R2_only_each": 2449,
+      "source_R2_CPU": 0.006682,
+      "old_source_R3_field_checks": 0,
+      "producer_CPU": 2.551701953,
+      "fresh_independent_CPU": 8.612202832,
+      "concrete_Lean_CPU": 11.340915234,
+      "concrete_original_targets": 5,
+      "current_formal_modules": 4,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "certificate_premises": [],
+      "audit_exit_code": 0,
+      "recipe_rows_bound_external": 12150,
+      "recipe_binding_method": "symboliclabel/center equations inLean plus externalorderedrowreadbackbyj;NOT#eval12150inAudit",
+      "source_U6_old_modules_recompiled": false,
+      "all_local_processes_terminal": true,
+      "external_joint_reviews": {
+        "A": {
+          "status": "ACTUAL_SUCCESS_PASS_EXPLICIT_EACH_SIX_ORIGINAL_TARGETS",
+          "threadId": "176eb111-e27d-43a5-a8f5-96b2c577e1fe",
+          "raw": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_A_GEMINI_RAW.json",
+          "disposition": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_A_DISPOSITION.md",
+          "calls": 1,
+          "transparent_grouped_scope": [
+            {
+              "Delta": 56,
+              "n": 57834
+            },
+            {
+              "Delta": 55,
+              "n": 57672
+            },
+            {
+              "Delta": 56,
+              "n": 58482
+            },
+            {
+              "Delta": 57,
+              "n": 59292
+            },
+            {
+              "Delta": 58,
+              "n": 60102
+            },
+            {
+              "Delta": 59,
+              "n": 60912
+            }
+          ],
+          "inferred_from_source54_55": false
+        },
+        "B": {
+          "status": "ACTUAL_SUCCESS_PASS_EXPLICIT_EACH_SIX_ORIGINAL_TARGETS",
+          "threadId": "a538f72d-c42d-4cb9-8dc8-79b37de75d7c",
+          "raw": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_B_GEMINI_RAW.json",
+          "disposition": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_B_DISPOSITION.md",
+          "calls": 1,
+          "transparent_grouped_scope": [
+            {
+              "Delta": 56,
+              "n": 57834
+            },
+            {
+              "Delta": 55,
+              "n": 57672
+            },
+            {
+              "Delta": 56,
+              "n": 58482
+            },
+            {
+              "Delta": 57,
+              "n": 59292
+            },
+            {
+              "Delta": 58,
+              "n": 60102
+            },
+            {
+              "Delta": 59,
+              "n": 60912
+            }
+          ],
+          "inferred_from_source54_55": false
+        },
+        "C": {
+          "status": "ACTUAL_SUCCESS_PASS_EXPLICIT_EACH_SIX_ORIGINAL_TARGETS",
+          "threadId": "8e5aa7a9-5e17-4c5c-aa19-a4beb6d3ee71",
+          "raw": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_FINAL_C_GEMINI_RAW.json",
+          "disposition": "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_FINAL_C_DISPOSITION.md",
+          "calls": 1,
+          "transparent_grouped_scope": [
+            {
+              "Delta": 56,
+              "n": 57834
+            },
+            {
+              "Delta": 55,
+              "n": 57672
+            },
+            {
+              "Delta": 56,
+              "n": 58482
+            },
+            {
+              "Delta": 57,
+              "n": 59292
+            },
+            {
+              "Delta": 58,
+              "n": 60102
+            },
+            {
+              "Delta": 59,
+              "n": 60912
+            }
+          ],
+          "inferred_from_source54_55": false
+        },
+        "all_complete": true,
+        "A_calls": 1,
+        "B_calls": 1,
+        "freshC_calls": 1,
+        "not_six_calls_per_checkpoint": true,
+        "A_disposition_corrections": [
+          "U6sourceR2=2476not2531;U10sourceR2=2449",
+          "degree60/64362ispubliclowerboundconstruction_notupperbound"
+        ]
+      },
+      "new_parameters": [
+        57,
+        58,
+        59
+      ],
+      "local_representatives_updated": [
+        55,
+        56
+      ],
+      "old55_U6_graphs_preserved": true,
+      "degree60_produced": false,
+      "concrete_Lean_complete": true,
+      "external_A_B_C": "ALL_ACTUAL_PASS_ONE_GROUPED_CALL_EACH_A_B_DISTINCT_FRESH_C_EXPLICIT_SIX_TARGET_VERDICTS"
+    },
+    "evidence_paths": [
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/CONTROLLER_U10_DEGREE55_59_WINDOW_20261101.json",
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/CONTROLLER_U10_DEGREE55_59_WINDOW_20261101.md",
+      "research/ddp/two_successful_methods_20261101/public_baseline_audit/DEGREE54_55_DUALITY_PRODUCT_REPLICATION_20261101.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/PRED.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/PARAMETERS.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/FINAL_COMPILE_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/INPUT_BINDING_CHECK.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/F9U10PlaneCloneFamilyAudit_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/F9U10PlaneCloneFamilyAudit.log",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/CHECKPOINT_A.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/CHECKPOINT_B.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/formalization/CHECKPOINT_C.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/graphs/d55_D3_n57672.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/cases/d55_n57672/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/graphs/d56_D3_n58482.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/cases/d56_n58482/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/graphs/d57_D3_n59292.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/cases/d57_n59292/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/graphs/d58_D3_n60102.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/cases/d58_n60102/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/graphs/d59_D3_n60912.edges",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/r6_schreier78_controller/f9_degree54/u10_plane_clone_family/independent_acceptance/cases/d59_n60912/SUMMARY.json",
+      "formal/DegreeDiameter/Portfolio/F9U10PlaneCloneFamilyDefinitions.lean",
+      "formal/DegreeDiameter/Portfolio/F9U10PlaneCloneFamilyInputs.lean",
+      "formal/DegreeDiameter/Portfolio/F9U10PlaneCloneFamilyExact.lean",
+      "formal/F9U10PlaneCloneFamilyAudit.lean",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_A_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_A_DISPOSITION.md",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_B_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_B_DISPOSITION.md",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_FINAL_C_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/U6_AND_U10_SIX_TARGETS_FINAL_C_DISPOSITION.md"
+    ],
+    "target_is_multivalued": true,
+    "variants": [
+      {
+        "label": "55degree",
+        "target": [
+          55,
+          3
+        ],
+        "savedL": 56540,
+        "candidate_order": 57672,
+        "gain": 1132,
+        "production_selected": true,
+        "mathematically_validated_complete_graph": true,
+        "actual_order": 57672,
+        "actual_edges": 1579014,
+        "complete_Lean_graph_instance": true
+      },
+      {
+        "label": "56degree",
+        "target": [
+          56,
+          3
+        ],
+        "savedL": 57568,
+        "candidate_order": 58482,
+        "gain": 914,
+        "production_selected": true,
+        "mathematically_validated_complete_graph": true,
+        "actual_order": 58482,
+        "actual_edges": 1622754,
+        "complete_Lean_graph_instance": true
+      },
+      {
+        "label": "57degree",
+        "target": [
+          57,
+          3
+        ],
+        "savedL": 58596,
+        "candidate_order": 59292,
+        "gain": 696,
+        "production_selected": true,
+        "mathematically_validated_complete_graph": true,
+        "actual_order": 59292,
+        "actual_edges": 1666494,
+        "complete_Lean_graph_instance": true
+      },
+      {
+        "label": "58degree",
+        "target": [
+          58,
+          3
+        ],
+        "savedL": 59624,
+        "candidate_order": 60102,
+        "gain": 478,
+        "production_selected": true,
+        "mathematically_validated_complete_graph": true,
+        "actual_order": 60102,
+        "actual_edges": 1710234,
+        "complete_Lean_graph_instance": true
+      },
+      {
+        "label": "59degree",
+        "target": [
+          59,
+          3
+        ],
+        "savedL": 60652,
+        "candidate_order": 60912,
+        "gain": 260,
+        "production_selected": true,
+        "mathematically_validated_complete_graph": true,
+        "actual_order": 60912,
+        "actual_edges": 1753974,
+        "complete_Lean_graph_instance": true
+      },
+      {
+        "label": "60degree",
+        "target": [
+          60,
+          3
+        ],
+        "savedL": 64362,
+        "candidate_order": 61722,
+        "gain": -2640,
+        "production_selected": false,
+        "mathematically_validated_complete_graph": false
+      }
+    ]
+  }
+]

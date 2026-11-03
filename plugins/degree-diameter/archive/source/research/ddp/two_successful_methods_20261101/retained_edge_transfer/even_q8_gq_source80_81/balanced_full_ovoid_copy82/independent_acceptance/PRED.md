@@ -1,0 +1,11 @@
+# Fresh degree82 acceptance prediction before graph input
+
+One authorized balanced fullO×spread onecopy endpoint only, n346515/m14204970/cap82. Source is mathematically accepted342290/13862745/all81regular balanced filledsource, not Payne327744 and not a clone-expanded source. One worker, total120CPU including small accepted-input binding, compile, one sourceparse/one candidateparse, complete4225N81bindings, degree/load/simple checks, all4225ordinarynewrootBFS and aggregation.
+
+Reconstruct ordered centers from accepted OVOID65.tsv/SPREAD65.tsv: h=65i+j, center=o_i*585+S_j, newlabel342290+h. Classify diagonal by the actual spreadowner ofo_i. Producer PASS, expected/actual N caches and BFS predictions are not validation inputs. Read the literal source and candidate together, compare every13862745oldedge exactly and exhaust both streams; capture only the4225sourcecenter neighborhoods. Check each81-list equals its candidate clone's entire neighborlist, pinunion is the342225source vertices outside65diagonal centers, including all65originalsourcefills.
+
+Expected counts:342225newoldedges/0newnew; degree81 on4290vertices=65oldD+4225clones, degree82 on342225sourcepins. Every actualprefix retainscap82 because each new list has81distinctpreviouslyunused sourcepins. Saveall4226prefixrows and orderedbinding.
+
+Use actual candidateCSR for ordinaryradius3queueBFS from all4225newlabels. Predict65diagonal roots (1,81,5249,341184),4160offdiagonal (1,81,5329,341104), compare everydistanceclass/root, not merely totalreachable. SourceR2formulas are prior predictions, not newly measured oldradiusballs. No oldrootBFS/sourceR2/field/smallgeometry/projection/Lean/solver.
+
+Allpairs/prefix proof: source exactD3 and complete oldbody remain. Replace first or last sourcecenter by a clone in sourcewalks; adjacentcenters use clone(c)-d-c-clone(d), samecenter uses anyoldneighbor. All interiorvertices are immutable source, so nofutureclone is needed. Do not inferprefix diameter solely by deleting vertices from the finalBFSgraph. Map everyclone to itscenter and fixsourcevertices to obtain actualgraphhomomorphism; source nonD2 witness thenpersists. No extra witnessBFS needed. Root owns acceptancecounters/publicpriority/Lean; no nextgraph orcopyk.

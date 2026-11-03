@@ -1,0 +1,138 @@
+---
+type: experiment
+node_id: exp:ddp-stale-d6d9-fixed331387-at-most-threecuts-pure-star-complete-no-20261101
+title: "6D9固定331387源：三删边六星的旧路线容量障碍；纸面推广排尽至多三任意删边纯星"
+idea_id: "idea:ddp-open-parameter-construction-20261026"
+verdict: no
+confidence: high
+date: "2026-11-01"
+hardware: ""
+duration: ""
+provenance: "research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/HISTORY_SOURCE_GATE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_INTERFACE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_SEAM_VERIFIER.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_once.cpp; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_INPUT_BINDING.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_DATA_SCHEMA.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_DISTANCE.u8; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_SHORTEST_COUNTS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE0_LABELS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE1_LABELS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE2_LABELS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE0.u64; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE1.u64; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE2.u64; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_LABELS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_PATHS.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_ALL_PHASE_TUPLES.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RAW_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_HANDLE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_PRED.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_OLD_OBLIGATION_GATE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_run_once.py; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_obligation_once.cpp; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_INPUT_BINDING.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_CACHED_SPHERE4_PATHS.u32; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE0_MASK_CLASSES.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE1_MASK_CLASSES.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE2_MASK_CLASSES.tsv; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RAW_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NEGATIVE_CERTIFICATE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RESULT.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TERMINAL.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_HANDLE.json; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_PROOF.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_NOTE.md; research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/ROOT_DISPOSITION.json"
+added: 2026-11-01T21:22:24Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 6D9固定331387源：三删边六星的旧路线容量障碍；纸面推广排尽至多三任意删边纯星
+
+**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:ddp-open-parameter-construction-20261026`
+
+## Metrics
+**对象层级：** fixed_host_edge_edit_pure_star_experiment_with_paper_dominance
+
+**目标与阶数：** (6,9)；L=331387；条件性n=331388（未据此计纪录）
+
+**距目标的证据：** No331388candidategraphwasgenerated. Completecritical-oldpairgateandpaperdominanceexcludeD<=9fortheexactpure-star editfamily;itsfullstarhasacertifiedoldpairatdistance10,notanallpairdiametermeasurement.；三阶段预测有明确分工：相位shortcut被推翻，3个缺集相位支持均49，64827相位组合无空交；该中间结果单独没有排normal错开。随后实际共享d/c给出三类32/21/32个旧点对，其全部9-geodesics穿过首cut，支持middlemandatory预测。每类完整扫描994161条源边，去碰首端点11条后994150候选；mask类431/203/419，单额外边最多命中11/7/12项，两边上界22/14/24严格小于32/21/32，至少10/7/8项未补。容量障碍预测支持，0maskpairOR/0实际12代表检查，非抽样失败。纸面支配把同界推广到过滤11边，再由全端点星支配子星，排任意≤3distinctcuts（可共享）纯星；全星max6且某旧pair距离恰10。累计4.575818955/20CPU；因旧d/M未存，新问题supportBFS1/shortestcountDP1必要且完整保存，sourceD9validityBFS0/旧single查询0/F6959重验0/候选图0。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "new_graphs": 0,
+  "new_parameter_pairs": 0,
+  "new_Lean_instances": 0,
+  "new_independent_method_claims": 0,
+  "source_n": 331387,
+  "source_m": 994161,
+  "source_degree": 6,
+  "source_D9_inherited": true,
+  "source_RIGHT_binding": "C49 semidirectF6763, authorLEFTCayley inverted to actualRIGHTsource, lefttranslations used",
+  "source_not_new_portfolio_graph": true,
+  "hypothetical_three_disjointcut_order": 331388,
+  "hypothetical_edges": 994164,
+  "hypothetical_all_regular_degree": 6,
+  "phase_projection_domains": 64827,
+  "missing_phase_supports": [
+    49,
+    49,
+    49
+  ],
+  "empty_phase_projection_intersections": 0,
+  "phase_shortcut_prediction_supported": false,
+  "normal_offsets_after_phase_alone": "HISTORICALLY_OPEN_SUPERSEDED_BY_FINAL_OLD_ROUTE_NO",
+  "critical_oldpairs": [
+    32,
+    21,
+    32
+  ],
+  "middle_mandatory_geodesic_prediction_supported": true,
+  "complete_edges_scanned_per_firsttype": 994161,
+  "first_endpoints_incident_edges_filtered": 11,
+  "eligible_edges_per_firsttype": 994150,
+  "mask_classes": [
+    431,
+    203,
+    419
+  ],
+  "zero_mask_edges": [
+    940914,
+    956564,
+    939533
+  ],
+  "max_other_edge_hits": [
+    11,
+    7,
+    12
+  ],
+  "two_other_edges_hit_upper": [
+    22,
+    14,
+    24
+  ],
+  "unavoidably_unrepaired_at_least": [
+    10,
+    7,
+    8
+  ],
+  "old_route_barrier_prediction_supported": true,
+  "complete_numeric_three_disjointcut_NO": true,
+  "maskpair_OR_checks": 0,
+  "actual_representative_edgepair_checks": 0,
+  "paper_extension": "anyatmost3distinctcuts,sharedendpointsallowed,arbitrarynewneighborhoodsubsetoffreedendpoints,purestaronly",
+  "paper_full_star_max_degree": 6,
+  "paper_failed_oldpair_distance": 10,
+  "paper_not_Lean": true,
+  "new_question_support_BFS_roots": 1,
+  "new_question_shortest_count_DP_exports": 1,
+  "source_D9_validity_BFS_roots": 0,
+  "old_single_subdivision_queries_repeated": 0,
+  "old_obligation_additional_BFS_DP": 0,
+  "source_field_or_F6959_rechecks": 0,
+  "full_seam_verifier_executed": false,
+  "candidate_graphs_generated": 0,
+  "wholecase_CPU_seconds": 4.575818955,
+  "wholecase_CPU_cap_seconds": 20,
+  "all_numeric_processes_terminal": true,
+  "complete_scoped_NO": true,
+  "not_general_6D9_or_arbitrary_onepoint_NO": true,
+  "inherited_stopped_history_node_ids": [
+    "ddp-stale-d6d9-331387-source-single-edge-subdivision-all-types-20261101",
+    "ddp-stale-d6d9-f6959-primitive49-all-normal-remaining-batch-terminal-20261101"
+  ],
+  "next_readonly_question": "8D3/253sourceinterface;notanactualresultornumericcontinuation"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/HISTORY_SOURCE_GATE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/HISTORY_SOURCE_GATE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_INTERFACE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_INTERFACE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_SEAM_VERIFIER.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_SEAM_VERIFIER.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_once.cpp](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/profile_once.cpp)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_INPUT_BINDING.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_INPUT_BINDING.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_DATA_SCHEMA.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_DATA_SCHEMA.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_DISTANCE.u8](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_DISTANCE.u8)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_SHORTEST_COUNTS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_IDENTITY_SHORTEST_COUNTS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE0_LABELS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE0_LABELS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE1_LABELS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE1_LABELS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE2_LABELS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_M_TYPE2_LABELS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE0.u64](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE0.u64)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE1.u64](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE1.u64)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE2.u64](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_CRITICAL_TYPE2.u64)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_LABELS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_LABELS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_PATHS.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_SPHERE4_PATHS.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_ALL_PHASE_TUPLES.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_ALL_PHASE_TUPLES.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RAW_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RAW_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_HANDLE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_HANDLE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PROFILE_NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_PRED.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_PRED.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_OLD_OBLIGATION_GATE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/PAPER_OLD_OBLIGATION_GATE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_run_once.py](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_run_once.py)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_obligation_once.cpp](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/old_obligation_once.cpp)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_INPUT_BINDING.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_INPUT_BINDING.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_CACHED_SPHERE4_PATHS.u32](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_CACHED_SPHERE4_PATHS.u32)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE0_MASK_CLASSES.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE0_MASK_CLASSES.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE1_MASK_CLASSES.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE1_MASK_CLASSES.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE2_MASK_CLASSES.tsv](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TYPE2_MASK_CLASSES.tsv)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RAW_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RAW_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NEGATIVE_CERTIFICATE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NEGATIVE_CERTIFICATE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RESULT.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_RESULT.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TERMINAL.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_TERMINAL.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_HANDLE.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_HANDLE.json)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/OLD_NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_PROOF.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_PROOF.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_NOTE.md](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/FINAL_NOTE.md)；[research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/ROOT_DISPOSITION.json](../../research/ddp/two_successful_methods_20261101/stale_record_transfer_d6D9/source_interface/threecut_star331388_gate/ROOT_DISPOSITION.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** FixedactualRodriguez–Canale331387/994161simple6regularD9host,boundRIGHTCayleyC49semidirectF6763andlefttranslations. Numericgateclosesallthreevertex-disjointoldedgecutsplusonesix-endpointstar,includingallnormal/phaseplacements. Paperdominanceextendstoeverysetofatmostthreedistinctoldedge deletions,sharedendpointsallowed,andoneaddedvertexwitharbitraryneighborhoodamongthefreedendpoints;allremainingoldedgesretained,noaddedoldoldrepair,nootheredits. Notgeneral6D9orarbitraryonepointrewiring.
+
+**正向保证：** DeletingonlyedgesinsidepinsetPpreservesnearestP-distance:d_(G-F)(P,v)=d_G(P,v);translatedendpoint-R8missingintersectionemptyiffnewrootR9coversall.；All32/21/32certifiedcriticalpairshaveallsource9-geodesicsthroughthechosenfirstcut;fourotherpinsmusthitB3ofatleastoneend.；Completeedge-hitcardinalityboundsettlesallnormal/phasechoiceswithoutmaskpairOR,12representativechecks,candidategraphorBFS.；Filteredincidentedgesaredominatedbyeligibleedges;fullfreed-endpointstarismaxdegree6anddominatesanyneighborhoodsubset,extendingNOtosharedcutsandnonregularfinalgraphs.
+
+**仍未完成：** >=4cuts,addedoldoldrepairs,oldvertexdeletion,multiplehelpers,otherhostsandarbitraryonepointextensions/generalN(6,9)remainunexcluded. Noacceptednewgraph/parameter/Lean,notanindependentmethodincrement;GoalACTIVEandhumanfeedbackstillrequired.
+
+**启发与重启依据：** STOPthewholefixed331387hostpure-starwith<=3olddeletions,notjustaparticularphase/normalplacement. Thephaseprojectionshortcutfailedtodecidefullnormalintersection,butcriticaloldroutesprovidedastrongercompleteobstructionbeforecandidate generation. Extraedgesmustrepairdistinctmandatoryoldpairs,notmerelycoverthenewrootorloweraggregatebadpairs. Apossiblepurestarsuccessmustdelete>=4oldedges,orchangeallowedrule(e.g.oldoldrepair),hostorhelpercount;noneisautomaticallyauthorized. Nextrootquestionisonly8D3/253source-readinterface,notanexperimentresult.
+
+**单独的重启条件：** Aconcreteboundedquestionoutsidefixed-host<=3deletionpurestar,suchasoldoldrepair,>=4cuts,otherhostormultiplehelpers;currentNOisnotpermissiontoautostartanyofthese. Do notrerunphase/normaloffsets,firsttriples,oldsingle-subdivision,F6959familyorunusedfullseamverifier.
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

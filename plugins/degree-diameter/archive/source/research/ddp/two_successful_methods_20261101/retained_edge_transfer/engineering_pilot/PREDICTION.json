@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_BEFORE_ONE_ENGINEERING_PILOT",
+  "main_physical_ports_per_router": 24,
+  "count_only_ports_per_router": [32,48],
+  "graphs": ["accepted3750/37500 source", "new3900/40500 max21 graph", "new4125/45000 max22 graph"],
+  "traffic": "Old router labels (17+233*i) mod3750 for i0..15. All240 distinct ordered pairs. Each source injects1 total, split1/15 per target. No new router is a traffic endpoint.",
+  "routing": "Uniform over every complete shortest path for each demand, using integer BFS shortest-path counts and reverse dependency accumulation; not locally uniform next-hop ECMP.",
+  "link_model": "Full duplex, capacity1 separately in each directed arc. Static fluid loads, no queues or real throughput measurement.",
+  "predictions": {
+    "hops": "Old-old shortest distances and therefore average hops exactly unchanged by complete-open-neighborhood false-twin additions.",
+    "port_slots": "Endpoint slots equal r*n-2m; net slot change per new degree20 clone is r-40, so r24/32 lose slots, r48 gain slots.",
+    "load": "Expect directed peak load not to increase under this fixed equal-shortest-path workload; this is falsifiable, not a mathematical monotonicity claim.",
+    "new_edges": "Expect positive traffic using new edges, without claiming workload represents all routers."
+  },
+  "traffic_fraction_definitions": ["Probability mass whose selected shortest path uses at least one new edge", "New-edge hop-volume divided by total directed hop-volume"],
+  "CPU_budget_seconds": 10,
+  "workers": 1,
+  "routing_BFS_sources_per_graph": 16,
+  "source_D3_reverification": false,
+  "faults_wiring_and_additional_metrics": "Not measured; no additional platform, no further engineering batch after completion."
+}

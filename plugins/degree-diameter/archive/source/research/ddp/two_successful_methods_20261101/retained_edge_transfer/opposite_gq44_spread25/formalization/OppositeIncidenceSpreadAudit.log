@@ -1,0 +1,59 @@
+def DegreeDiameter.Portfolio.OppositeIncidenceSpread.Inc.{u_1, u_2} : {P : Type u_1} →
+  {L : Type u_2} → {a : ℕ} → (L → Fin a → P) → P → L → Prop :=
+fun {P} {L} {a} linePoint p l => ∃ i, linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeIncidenceSpread.graph.{u_1, u_2, u_3, u_4} : {P : Type u_1} →
+  {L : Type u_2} →
+    {V : Type u_3} → {J : Type u_4} → {a : ℕ} → V ≃ P × L → (L → Fin a → P) → (J → L) → SimpleGraph (V ⊕ J) :=
+fun {P} {L} {V} {J} {a} e linePoint spread => OppositeGQSpread.graph e (OppositeIncidenceSpread.Inc linePoint) spread
+def DegreeDiameter.Portfolio.OppositeIncidenceSpread.forward.{u_1, u_2, u_3, u_4} : {P : Type u_1} →
+  {L : Type u_2} →
+    {V : Type u_3} →
+      {J : Type u_4} →
+        {a b : ℕ} →
+          [DecidableEq V] →
+            V ≃ P × L → (L → Fin a → P) → (P → Fin b → L) → (J → L) → (P → J) → V ⊕ J → Fin (a * b) → V ⊕ J :=
+fun {P} {L} {V} {J} {a b} [DecidableEq V] e linePoint pointLine spread spreadOwner u i =>
+  OppositeGQSpread.slot e spread spreadOwner linePoint pointLine u (finProdFinEquiv.symm i)
+@OppositeIncidenceSpread.degree_le : ∀ {P : Type u_1} {L : Type u_2} {V : Type u_3} {J : Type u_4} {a b : ℕ}
+  [inst : Fintype V] [inst_1 : Fintype J] [inst_2 : DecidableEq V] [inst_3 : DecidableEq P] (e : V ≃ P × L)
+  (linePoint : L → Fin a → P) (pointLine : P → Fin b → L) (spread : J → L) (spreadOwner : P → J),
+  (∀ (p : P) (l : L), OppositeIncidenceSpread.Inc linePoint p l → ∃ i, pointLine p i = l) →
+    (∀ (p : P) (j : J), OppositeIncidenceSpread.Inc linePoint p (spread j) → j = spreadOwner p) →
+      ∀ (u : V ⊕ J), (OppositeIncidenceSpread.graph e linePoint spread).degree u ≤ a * b
+@OppositeIncidenceSpread.card_family : ∀ {P : Type u_1} {L : Type u_2} {V : Type u_3} {J : Type u_4} [inst : Fintype P]
+  [inst_1 : Fintype L] [inst_2 : Fintype V] [inst_3 : Fintype J] (e : V ≃ P × L),
+  Fintype.card (V ⊕ J) = Fintype.card P * Fintype.card L + Fintype.card J
+@OppositeIncidenceSpread.diameterAtMost_three : ∀ {P : Type u_1} {L : Type u_2} {V : Type u_3} {J : Type u_4} {a : ℕ}
+  (e : V ≃ P × L) (linePoint : L → Fin a → P) (spread : J → L),
+  0 < a →
+    (∀ (p : P) (l : L),
+        ∃ q m,
+          OppositeIncidenceSpread.Inc linePoint q l ∧
+            OppositeIncidenceSpread.Inc linePoint p m ∧ OppositeIncidenceSpread.Inc linePoint q m) →
+      DiameterAtMost (OppositeIncidenceSpread.graph e linePoint spread) 3
+@OppositeIncidenceSpread.not_diameterAtMost_two : ∀ {P : Type u_1} {L : Type u_2} {V : Type u_3} {J : Type u_4}
+  {a b : ℕ} [inst : Fintype P] [inst_1 : Fintype L] [Fintype V] [inst_3 : Fintype J] [DecidableEq V] [DecidableEq P]
+  (e : V ≃ P × L) (linePoint : L → Fin a → P) (pointLine : P → Fin b → L) (spread : J → L) (spreadOwner : P → J),
+  (∀ (p : P) (l : L), OppositeIncidenceSpread.Inc linePoint p l → ∃ i, pointLine p i = l) →
+    (∀ (p : P) (j : J), OppositeIncidenceSpread.Inc linePoint p (spread j) → j = spreadOwner p) →
+      1 + a * b + (a * b) ^ 2 < Fintype.card P * Fintype.card L + Fintype.card J →
+        ¬DiameterAtMost (OppositeIncidenceSpread.graph e linePoint spread) 2
+@OppositeIncidenceSpread.order_degree_and_exact_D3 : ∀ {P : Type u_1} {L : Type u_2} {V : Type u_3} {J : Type u_4}
+  {a b : ℕ} [inst : Fintype P] [inst_1 : Fintype L] [inst_2 : Fintype V] [inst_3 : Fintype J] [inst_4 : DecidableEq V]
+  [inst_5 : DecidableEq P] (e : V ≃ P × L) (linePoint : L → Fin a → P) (pointLine : P → Fin b → L) (spread : J → L)
+  (spreadOwner : P → J),
+  0 < a →
+    (∀ (p : P) (l : L), OppositeIncidenceSpread.Inc linePoint p l → ∃ i, pointLine p i = l) →
+      (∀ (p : P) (j : J), OppositeIncidenceSpread.Inc linePoint p (spread j) → j = spreadOwner p) →
+        (∀ (p : P) (l : L),
+            ∃ q m,
+              OppositeIncidenceSpread.Inc linePoint q l ∧
+                OppositeIncidenceSpread.Inc linePoint p m ∧ OppositeIncidenceSpread.Inc linePoint q m) →
+          1 + a * b + (a * b) ^ 2 < Fintype.card P * Fintype.card L + Fintype.card J →
+            Fintype.card (V ⊕ J) = Fintype.card P * Fintype.card L + Fintype.card J ∧
+              (∀ (u : V ⊕ J), (OppositeIncidenceSpread.graph e linePoint spread).degree u ≤ a * b) ∧
+                DiameterAtMost (OppositeIncidenceSpread.graph e linePoint spread) 3 ∧
+                  ¬DiameterAtMost (OppositeIncidenceSpread.graph e linePoint spread) 2
+'DegreeDiameter.Portfolio.OppositeIncidenceSpread.order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

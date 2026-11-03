@@ -1,0 +1,82 @@
+{
+  "status": "ONE_PAPER_ROUND_COMPLETE_WITH_SCOPED_GLOBAL_EXCLUSION",
+  "base": "fixedH9partialfoldK41356",
+  "mandatory_newpoint_pins": "Every pi(point) on its chosen geometricline; extraanchors optional; degreebudgets separate.",
+  "positive_rules": {
+    "old_to_line_vertex": "pointline oddpath projection gives<=5",
+    "pairwise_nonopposite_lines": "incidence line-distance<=4 projects to newnew<=4",
+    "one_center_line": "allchosenlinesmeetonecenterline: newnew<=4",
+    "adjacent_projected_centers": "eachchosenline meets sigma(ai), actualpi(ai)formcoreclique: newnew<=5"
+  },
+  "counts": {
+    "q": 9,
+    "distinct_lines_meeting_one_center": 91,
+    "one_per_line_required_for_91c": true,
+    "actual_core_clique_number": 3,
+    "one_per_line_adjacent_center_newpoint_upper_bound": 273,
+    "duplicate_safe_adjacent_center_newpoint_upper_bound": 165,
+    "duplicate_safe_total_order_upper_bound": 41521,
+    "generic_duplicate_safe_upper_before_core_check": 245,
+    "target_newpoints": 987
+  },
+  "duplicate_safe_proof": "Eachnewpointuses>=1corepin in U=closedneighborhoodofcenterclique; |U|<=c(14-c)<=33; eachcoredeficit<=5.",
+  "canonical_anchor": {
+    "formula": "pi(sigma^-1(L))",
+    "universal_D5_proved": false,
+    "universal_rule_refuted": false,
+    "missing": "Source oddpath argument onlygives6fornewnew; needextraoppositepair-routingcondition.",
+    "sufficient_extra_condition": "Actualcanonicalanchors havepairwisecoredistance<=3, withdegreebudgetspassing.",
+    "common_single_anchor_upper_bound": 5
+  },
+  "not_claimed": [
+    "No complete geometricclassificationofcurrent810nonstarvertices",
+    "No identificationofthecurrentlast165withthe165upperbound",
+    "No exclusionofgenerallineimagefamilies",
+    "No H9counterexampletothecanonicalanchorformula"
+  ],
+  "computation": {
+    "status": "COMPLETE_SINGLE_COMMON_NEIGHBOR_PASS",
+    "source": "research/ddp/global_coverage_20261027/h9_bare_core_clones/bare_core.edges",
+    "n": 41356,
+    "m": 234318,
+    "maximum_degree": 12,
+    "minimum_degree": 7,
+    "edge_intersections_evaluated": 234318,
+    "max_edge_common_neighbors": 1,
+    "max_witness": {
+      "u": 656,
+      "v": 3819,
+      "common_neighbors": [
+        8051
+      ]
+    },
+    "edge_common_neighbor_histogram": {
+      "0": 233940,
+      "1": 378
+    },
+    "proven_core_clique_upper_bound": 3,
+    "clique_bound_reason": "In a cclique everyedgehasatleastc-2commonneighbors.",
+    "K11_excluded_by_max_common_neighbors": true,
+    "one_per_geometric_line_newpoint_bound": 273,
+    "one_per_geometric_line_total_order_bound": 41629,
+    "arbitrary_repeated_linevertices_bound": 165,
+    "arbitrary_repeated_linevertices_total_order_bound": 41521,
+    "budget_bound_formula": "Everynewvertexhasatleastonepin in N_K[C]; |N_K[C]|<=c(D+2-c), old deficit<=D-mindegK.",
+    "budget_bound_scope": "Any numberofdistinctnewverticesperline isallowed, but everyline mustmeetoneofthese clique-centered sigma-lines and everyfoldedpointimageofthatline mustbe a pin.",
+    "general_lineimage_family_excluded": false,
+    "target_newvertices": 987,
+    "graph_generated": false,
+    "BFS_count": 0,
+    "clique_enumeration_count": 0,
+    "packing_calls": 0,
+    "solver_calls": 0,
+    "workers": 1,
+    "CPU_seconds": 0.399005426
+  },
+  "graph_generated": false,
+  "BFS_count": 0,
+  "packing_calls": 0,
+  "solver_calls": 0,
+  "new_lower_bounds": 0,
+  "terminal_action": "Stop this paperround and concentratedcenterclass; noadditionalcentertemplateorsearchstarted"
+}

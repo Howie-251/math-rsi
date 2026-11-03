@@ -1,0 +1,49 @@
+{
+  "timestamp_UTC": "2026-10-28 04:00:23 UTC",
+  "status": "FROZEN_BEFORE_NEW_GENERATION_PROFILE",
+  "target_Delta": 13,
+  "target_D": 5,
+  "publicL": 51417,
+  "current_accepted_order": 51457,
+  "hypothetical_new_order": 51458,
+  "source": "singlefault_star_probe/continuation/graphs/graph_d13_D5_n51457.edges",
+  "prototype": 51445,
+  "prototype_degree": 10,
+  "omit_saturated_pin": 35572,
+  "mandatory_free_pins": [
+    34733,
+    35143,
+    36009,
+    36416,
+    36820,
+    37243,
+    37703,
+    38124,
+    51385
+  ],
+  "mandatory_current_degrees": [
+    12,
+    12,
+    12,
+    12,
+    11,
+    12,
+    11,
+    12,
+    11
+  ],
+  "intuition": "A newly born lowdegree prototype inherits the successful near-complete-star mechanism. Its singlefull neighbor isomitted fromnewpins,notremoved fromsource;freeguardsreplace thatroute whilealloldpathsremain.",
+  "falsifiable_prediction": "These9mandatory pins plusatmost2currentfreeguards willcoverthecompletecurrent51457 atR4. Ifnot, testtheactualfullremaining4guard budget withoneboundedbinarycovermodel, usingthe sameprepared targetmasks ratherthan changingprototype/seed.",
+  "closed_scope_not_repeated": "Original91 prototypes wereoriginalsourcevertices; newborn40 check onlyfullNv degree legality, notthispartialNv R4/guardproblem. No originalfailedprototype isrefreshed.",
+  "actual_verification": "Retainalloldedges,distinctfreepins,total<=13; completecurrentR4 union beforeexport. Sameaccepted single-extensionlemma andpreviousgenericreviewapply. No oldallsourceBFS.",
+  "budget": {
+    "aggregate_CPU_seconds": 45,
+    "workers": 1,
+    "prototypes": 1,
+    "existing_prepare_calls": 1,
+    "optional_full4guard_MIP_calls": 1,
+    "optional_MIP_seconds": 25,
+    "seeds_or_otherprototypes": 0
+  },
+  "stop": "Onefullsingleprototypebatch, no laterguardladder ornewprototype automatically. Ifpositive,exportcandidate51458 andliteral/evidence forrootaccounting."
+}

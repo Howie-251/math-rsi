@@ -1,0 +1,13 @@
+DegreeDiameter/Portfolio/F9SixFiberDouble56Definitions.lean:38:2: error: 'change' tactic failed, pattern
+  729 * ↑(chosenFiber u) + ((F.ofCode ↑a).code + 9 * (F.ofCode ↑b).code + 81 * (F.c4 * F.ofCode ↑a).code) = ?m.69
+is not definitionally equal to target
+  ↑(baseCenter (baseLabel (u, F9PlaneClone55.cloneLabel (a, b)))) =
+    729 * ↑(chosenFiber u) + ↑a + 9 * ↑b + 81 * (F.c4 * F.ofCode ↑a).code
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.center : CloneIndex → Fin 56862 :=
+fun k => baseCenter (clonePair k).2
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.graph : SimpleGraph Vertex :=
+FullNeighborhoodClones.graph F9Graph56862.graph center
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.label : Vertex ≃ Fin 57834 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.F9SixFiberDouble56.FinalClaim : Prop :=
+Fintype.card Vertex = 57834 ∧ (∀ (v : Vertex), graph.degree v ≤ 56) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

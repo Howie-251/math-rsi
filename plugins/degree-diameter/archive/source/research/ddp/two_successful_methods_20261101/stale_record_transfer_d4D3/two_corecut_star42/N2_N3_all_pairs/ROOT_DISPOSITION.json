@@ -1,0 +1,88 @@
+{
+  "status": "ROOT_ACCEPTED_COMPLETE_NO_N2_N3_TWO_CUT4STAR42",
+  "updated_UTC": "2026-11-01 20:23:53 UTC",
+  "root_read": [
+    "PRED.md",
+    "run_once.py",
+    "RESULT.json",
+    "TERMINAL.json",
+    "ONE_OLDPAIR_ROUTE_DIAGNOSTIC.json"
+  ],
+  "source_ids": [
+    "N2",
+    "N3"
+  ],
+  "all_domain_sizes": [
+    3075,
+    3075
+  ],
+  "completed": 6150,
+  "prediction_supported": true,
+  "newroot_passes": [
+    6,
+    0
+  ],
+  "oldold_fails_after_newroot_pass": [
+    6,
+    0
+  ],
+  "candidate_oldroot_BFS": [
+    14,
+    0
+  ],
+  "one_original_source_pair_diagnostic": {
+    "source": "N2",
+    "pair": [
+      0,
+      1
+    ],
+    "pins": [
+      1,
+      2,
+      4,
+      35
+    ],
+    "cuts": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        35
+      ]
+    ],
+    "pin_relation": "ONE_PIN",
+    "old_path": [
+      0,
+      37,
+      4,
+      1
+    ],
+    "old_distance": 3,
+    "new_shortest_path": [
+      0,
+      18,
+      8,
+      13,
+      1
+    ],
+    "new_distance": 4,
+    "old_route_unique_claimed": false
+  },
+  "contrast_to_N1": "N1had3newrootpassbutoldoldfailwithfirstBOTH_NONPIN;N2has6butfirstONE_PINfails;N3hasnone. Changedsourcealonedidnotmakebothtypesofroutework.",
+  "strict_scope": "OnlycachedN2/N3 fixed41sources,two disjointoldedgedeletions,newpointjoinedtoallfourendpoints",
+  "not_excluded": "Other41hosts,morecutsandoldoldrepair,differentgenerationrules,general4D3",
+  "next": "StopthisruleforN1/N2/N3;requireexplicitoldcritical-routecompensationbeforeanotherrewireexperiment,noblindN4/cuts/sourcebatch.",
+  "source_D3_allroot_nonisomorphism_rechecks": 0,
+  "new_graph_parameter_Lean_increment": [
+    0,
+    0,
+    0
+  ],
+  "wholecase_CPU_seconds": 1.503331119,
+  "wholecase_CPU_cap_seconds": 5,
+  "all_processes_terminal": true,
+  "same_Goal": "ACTIVE",
+  "Goal_complete": false
+}

@@ -1,0 +1,76 @@
+{
+  "status": "SUPPORTED_PAPER_PROOF_NO_GAP_FOUND",
+  "reviewed_source": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/DIAGONAL_FILL_REALLOCATION_GENERAL_NOTE.md",
+  "scope": "Conditional on an actual finite GQ(s,t), s,t>=2, an actual line spread R=st+1, actual partial ovoid p, and the stated accepted filled-source H interface; all integer uniform k>=1.",
+  "formula_order": "delta*R^2+R+k*(pR+1)",
+  "formula_edges": "delta*(delta*R^2+R)/2+k*(delta*pR+R-p)",
+  "actual_maxdegree": "delta+k",
+  "histogram": {
+    "delta+k": "delta*pR-p+R",
+    "delta": "delta*R^2-delta*pR+p+k*(pR-p)",
+    "delta-1": "k*p",
+    "R": "k"
+  },
+  "partial_ovoid_sufficient": true,
+  "full_ovoid_needed": false,
+  "same_center_k_copies_route": "clone(c,r)-u-clone(c,r2), u in N_U(c)",
+  "adjacent_centers_route": "clone(c,r)-d-c-clone(d,r2)",
+  "own_filler_route": "clone(o,S_j)-(o,M)-F_j with M!=S_j through o",
+  "other_filler_first_step_via_omitted_F_impossible": true,
+  "hub_collapse_hom_asserted": false,
+  "prefix_old_only_routes": true,
+  "old_U_Moore_witness": {
+    "inequality": "st>=s+t implies delta<=2R-1; R>=5; delta*(R^2-delta)-1>0",
+    "ball_bound": "For any fixed a in U, H radius2 contains <=delta^2+1 total vertices, while |U| is larger.",
+    "survival": "A new common clone neighbor would imply its center is an old common neighbor; hubs have no U neighbors. No new U-U adjacency."
+  },
+  "exact_D3_supported_for_all_k": true,
+  "source_note_edited": false,
+  "editorial_clarifications_only": [
+    "Explicit same-center-copy case for k>1",
+    "Spell out fixed-root Moore inequality",
+    "Maximum degree is exactly delta+k because R original fillers attain it"
+  ],
+  "new_graphs": 0,
+  "new_Lean": 0,
+  "new_external_reviews": 0,
+  "covered_by_old_Q8_final_C": false,
+  "public_priority": "UNKNOWN_NOT_REVIEWED",
+  "global_record_claimed": false,
+  "graph_field_BFS_solver_Lean_runs": 0,
+  "scalar_enumeration": 0,
+  "old_U_only_general_route": "(a,L),(r,N),(s,K),(b,M): r in L collinear with b, s in M collinear with a, K=rb,N=as; choose distinct points when a or b is incident, then contract consecutive identical graph vertices.",
+  "k1_full_neighborhood_reuse_clarification": {
+    "status": "SUPPORTED_EXACT_IDENTIFICATION_NO_GAP",
+    "source": "G1",
+    "copied_centers": "existing first clones and first hub, not original GQ centers",
+    "new_copy_index": "Fin(k-1) times J",
+    "J_independent": true,
+    "J_complete_neighborhoods_pairwise_disjoint": true,
+    "all_pins_in_original_H": true,
+    "frozen_source_load_bound": "k-1 on H, zero on J",
+    "source_degree_bound": "delta+1",
+    "result_degree_bound": "delta+k",
+    "source_regular_required": false,
+    "new_copy_collapse_target": "G1, not H",
+    "actual_existing_generic_interfaces_read": [
+      "graph",
+      "degree_old",
+      "degree_new",
+      "degree_le",
+      "diameterAtMost",
+      "not_diameterAtMost",
+      "old_walk_bound_iff"
+    ],
+    "q8k2_label_binding": {
+      "first_clone_center": "342290+h",
+      "first_hub_center": 346515,
+      "new_clone": "346516+h",
+      "new_hub": 350741,
+      "source_labels_fixed": true
+    },
+    "kernel_compilation_asserted": false,
+    "new_theorem_or_graph_count": 0,
+    "new_Lean_or_C_scope": false
+  }
+}

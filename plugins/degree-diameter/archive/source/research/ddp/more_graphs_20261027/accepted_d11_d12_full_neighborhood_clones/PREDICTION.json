@@ -1,0 +1,35 @@
+{
+  "timestamp_UTC": "2026-10-28T04:09:46.950838+00:00",
+  "status": "FROZEN_BEFORE_FIRST_FINAL_SOURCE_FULL_NV_SCAN",
+  "targets": [
+    {
+      "Delta": 11,
+      "D": 5,
+      "source_n": 37631,
+      "source_m": 205329,
+      "source": "h9_d11_followups/graph_d11_D5_n37631.edges"
+    },
+    {
+      "Delta": 12,
+      "D": 5,
+      "source_n": 42402,
+      "source_m": 245937,
+      "source": "h9_redei15/production/continuation/graphs/graph_d12_D5_n42402.edges"
+    }
+  ],
+  "why_not_repeat": "Readledger/localnotesfoundnoglobalfullNv/minSatN profilefor these two finalacceptedgraphs. Completedgeometrypoolsarenotallneighborhoods. Degree13original/newborn fullNv allblocked alreadyinherited andnotrescanned.",
+  "criterion": "For anyoldprototypev withnonemptyNv,allcurrentoldneighborsdegree<Delta givesavalidfalse-twin newvertex adjacentexactlyNv. CompleteD5 isautomatic,notjustlocallyplausible.",
+  "proof": "Foroldtargett!=v pickoldv-to-tshortestpath<=5,firstneighboru inNv thenu-to-t<=4;newz-to-u gives<=5. For t=v useanyneighboru length2. Oldoldpathsretain. Degreepin+1<=Delta andnewdeg|Nv|<=Delta. This works ontheactualsuccessivegraph.",
+  "falsifiable_prediction": "Atleastone ofthetwo finalsources mayretain a fullfree neighborhood, yieldingliteralneworderwithoutsetcoversearch. Ifzero, recordfull-classdegree obstruction andstop thisroute.",
+  "experiment": "Once readactualacceptededges/degree/adjacency,scanalloldNv forcurrentfullpins. No graphdistanceBFS/R4 recomputation/MIP. Ifpositive optionallyappendatmost5perparameterunderremainingbudget, eachcurrentdegree/retentioncheckedandstep saved.",
+  "budget": {
+    "aggregate_CPU_seconds": 10,
+    "workers": 1,
+    "sources": 2,
+    "max_successful_appends_per_parameter": 5,
+    "solver_calls": 0,
+    "old_source_BFS": 0,
+    "D13_rescan": 0
+  },
+  "stop": "If allNvblocked,closesonlyfullNvclone onthiscurrentsource; notallmonotoneextensions. NoautomaticpartialNv/guardladder fromthisscan."
+}

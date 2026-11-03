@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN_BEFORE_ROUTE_BLOCK_COMPUTATION",
+  "source_graph": "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/singlefault_star_probe/continuation/graphs/graph_d13_D5_n51457.edges",
+  "source_n": 51457,
+  "source_m": 324863,
+  "prototype": 4580,
+  "omitted_saturated_pin": 45089,
+  "mandatory_P": [
+    4628,
+    9574,
+    14663,
+    20519,
+    26997,
+    33721,
+    37436,
+    40798,
+    44310
+  ],
+  "guard_limit": 4,
+  "prepared_json": "research/ddp/refresh_20261029/d13_v4580_fourguard/prepared.json",
+  "prepared_binary": "research/ddp/refresh_20261029/d13_v4580_fourguard/prepared.masks.u64.bin",
+  "prepared_missing_targets": 2755,
+  "prepared_unique_guard_masks": 13057,
+  "route_blocks": "For each of the13 actual current neighbors r of45089, define T_r = current mandatory-missing targets intersect closedB3(r). Verify their union is all2755 missing targets. Omit empty blocks from the bit DP only.",
+  "guard_block_bit": "A cached guard receives bit r iff its actual current R4 mask contains every target in T_r. Do not require guard distance<=1 from r.",
+  "complete_sufficient_scope": "Choose at most4 cached guard representatives whose whole-block bits cover every nonempty T_r. This suffices for full target coverage, but can fail when different guards jointly cover a single block.",
+  "prediction": "Allowing guards that cover entire branch blocks through longer actual R4 routes yields a complete at-most-four-guard block cover for this fixed current prototype. A complete negative refutes only this sufficient branch-block domain, not arbitrary four-guard R4 coverage.",
+  "relation_to_prior_closedB1_proxy": "A guard at distance<=1 from r covers closedB3(r) within R4 and therefore all T_r. The new rule also allows farther guards certified by the saved exact R4 columns, and ignores empty branch blocks. No graph distance>=2 guard is rejected merely for its distance to r.",
+  "old_scope_read": {
+    "same_whole_route_block_domain_previously_completed": false,
+    "nearest_scopes": [
+      "second_generation_singlefault/PROXY_KERNEL_RESULT.json: different prototype51445, closedB1 only",
+      "refresh_20261029/d13_remaining_strong_proxy_kernel/: current38-pool closedB1 certificate only",
+      "refresh_20261029/d13_v4580_fourguard/: unrestricted target-cover SAT UNKNOWN",
+      "refresh_20261029/d13_v4580_fractional_gate/: unrestricted fractional cover UNKNOWN"
+    ]
+  },
+  "local_radius3_expansions": 13,
+  "source_allroot_BFS": 0,
+  "new_selected_R4_BFS": 0,
+  "solver_calls": 0,
+  "complete_graphs_to_generate": 0,
+  "workers": 1,
+  "CPU_budget_seconds": 20,
+  "stop": "One fixed prototype and these13 whole branch blocks only. First hit is immediately saved for root, otherwise stop after the complete small DP. No alternative blockings, new prototypes, seeds, timers, solver, or old-scope rerun.",
+  "main_Wiki_changed": false,
+  "revisions": [
+    {
+      "id": "OVERLAP_AWARE_ACCEPTANCE_BEFORE_DP",
+      "status": "FROZEN_BEFORE_CORRECTED_ACCEPTANCE_DP",
+      "reason": "All10 coverable nonempty route blocks jointly contain all2755 missing targets; requiring responsibility for every overlapping block was stronger than the natural whole-block-union rule.",
+      "unchanged_scope": "Same fixed source/prototype/P, same13 saved local B3 blocks, same13057 guards and same9 nonzero whole-block masks. No graph reads, new balls, seeds, guards or block refinements.",
+      "acceptance": "The union of actual target sets of blocks fully covered by selected guards equals all2755 missing targets. At most4 guards. It is not necessary to cover all11 block bits.",
+      "prediction": "A <=4guard hit may exist after removing the unnecessary responsibility for redundant overlapping blocks; only this natural whole-block sufficient domain is tested.",
+      "CPU_budget_seconds": 1,
+      "DP_calls": 1,
+      "save_reachable_state_masks_and_predecessors": true,
+      "stop": "Stop on the first proof-backed hit and return literal S to root, otherwise finish this one DP and stop. No block refinement."
+    }
+  ]
+}

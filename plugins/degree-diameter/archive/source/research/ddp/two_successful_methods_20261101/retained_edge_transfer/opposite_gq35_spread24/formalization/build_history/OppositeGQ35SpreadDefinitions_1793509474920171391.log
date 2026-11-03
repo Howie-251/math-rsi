@@ -1,0 +1,26 @@
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:23:37: error: Type mismatch
+  finProdFinEquiv.symm
+has type
+  Fin (?m.1 * ?m.2) ≃ Fin ?m.1 × Fin ?m.2
+but is expected to have type
+  Old ≃ Point × Line
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:29:0: error: Not a definitional equality: the left-hand side
+  ↑(old p l)
+is not definitionally equal to the right-hand side
+  ↑l + 96 * ↑p
+DegreeDiameter/Portfolio/OppositeGQ35SpreadDefinitions.lean:29:77: error: Type mismatch
+  rfl
+has type
+  ?m.16 = ?m.16
+but is expected to have type
+  ↑(old p l) = ↑l + 96 * ↑p
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.graph : SimpleGraph Vertex :=
+OppositeGQSpread.graph oldEquiv Inc spread
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.Inc : Point → Line → Prop :=
+fun p l => ∃ i, linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.oldEquiv : Old ≃ Point × Line :=
+sorry
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.label : Vertex ≃ Fin 6160 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.FinalClaim : Prop :=
+Fintype.card Vertex = 6160 ∧ (∀ (v : Vertex), graph.degree v ≤ 24) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

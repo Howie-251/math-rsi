@@ -1,0 +1,471 @@
+{
+  "audit_skill": "proof-checker",
+  "generated_at": "2026-10-11T09:22:41Z",
+  "agent_id": "/root/proof_review_zero_core",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_reviewer_reasoning": "ultra",
+  "requested_fork_turns": "none",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_metadata_provenance": "requested route only; independent backend attestation unavailable",
+  "actual_backend_model": null,
+  "actual_backend_reasoning": null,
+  "reviewer_family": "openai",
+  "executor_model": "not separately attested",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "submitted_inputs": [
+    "proofs/dd82/n59/independent_zero_common_neighbors_20261011.md",
+    "proofs/dd82/n59/zero_core_pair_coverage_20261011.md"
+  ],
+  "obligation_count": 37,
+  "obligations": [
+    {
+      "id": "F01",
+      "dependencies": [],
+      "sequent": "Legal order-59 graph => every vertex has degree eight.",
+      "rule_and_side_condition_discharge": "Root-ball union bound 59 <= 1 + 8 deg(v), integrality, and maximum degree eight.",
+      "source_location": "FOUNDATIONS.md:17-23; pair-coverage:19",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "F02",
+      "dependencies": [
+        "F01"
+      ],
+      "sequent": "Actual B is symmetric, has diagonal zero, and B_xy = common(x,y)+A_xy-1 >= 0 off diagonal.",
+      "rule_and_side_condition_discharge": "Simple undirected adjacency arithmetic and diameter two.",
+      "source_location": "FOUNDATIONS.md:25-29",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "F03",
+      "dependencies": [
+        "F01",
+        "F02"
+      ],
+      "sequent": "B has row sum six and AB=BA.",
+      "rule_and_side_condition_discharge": "A1=8*1 and AJ=JA=8J; B=A^2+A-7I-J.",
+      "source_location": "FOUNDATIONS.md:31",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "F04",
+      "dependencies": [
+        "F02",
+        "F03"
+      ],
+      "sequent": "For all v, nonedge defect sum is 6-2t(v), and t(v)<=3.",
+      "rule_and_side_condition_discharge": "Each triangle at v contributes once on each of its two incident edges.",
+      "source_location": "FOUNDATIONS.md:38-43",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "F05",
+      "dependencies": [],
+      "sequent": "For every zero vertex, its entire actual B support has weights 2211 and induces exactly the equal-weight pair edges.",
+      "rule_and_side_condition_discharge": "Explicit premise of the submissions; not derived for arbitrary legal graphs.",
+      "source_location": "pair-coverage:5; N15 contract:3; single-triangle:13-25",
+      "status": "discharged",
+      "assumption_only": true
+    },
+    {
+      "id": "E01",
+      "dependencies": [
+        "F02",
+        "F04"
+      ],
+      "sequent": "If z is zero and B_zv=2, then zv is a nonedge and t(v)<=2.",
+      "rule_and_side_condition_discharge": "True edges incident to a zero have no common neighbors; subtract the heavy nonedge from the row budget.",
+      "source_location": "heavy-endpoint:15-17",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E02",
+      "dependencies": [
+        "E01",
+        "F04"
+      ],
+      "sequent": "If t(v)=2, H=G[N(v)] has two edges; z has three parents and every other point outside N[v] has one parent.",
+      "rule_and_side_condition_discharge": "The heavy repeat consumes the whole nonedge budget; common-parent count is 1+B_vy.",
+      "source_location": "heavy-endpoint:21-35",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E03",
+      "dependencies": [
+        "E02"
+      ],
+      "sequent": "The independent three-parent set S of z contains an H-isolated vertex p.",
+      "rule_and_side_condition_discharge": "The nonisolated subgraph of a two-edge graph is either two disjoint edges or a path of length two, with independence number two.",
+      "source_location": "heavy-endpoint:35-41",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E04",
+      "dependencies": [
+        "E02",
+        "E03",
+        "F01"
+      ],
+      "sequent": "The neighbors of p are v,z and six ordinary sole-parent children, none adjacent to z.",
+      "rule_and_side_condition_discharge": "Regularity; p has no H-neighbor; a child-z edge creates a triangle at z.",
+      "source_location": "heavy-endpoint:43-45",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E05",
+      "dependencies": [
+        "E02",
+        "E04",
+        "F02",
+        "F03"
+      ],
+      "sequent": "For each ordinary child y, (BA)_vy=0=(AB)_vy, so B_py=0.",
+      "rule_and_side_condition_discharge": "Row v is supported on H-degrees and the weight-two z; sole parent p has H-degree zero and z-y is absent; every AB summand is nonnegative.",
+      "source_location": "heavy-endpoint:49-61",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E06",
+      "dependencies": [
+        "E04",
+        "E05",
+        "F02"
+      ],
+      "sequent": "The selected parent p is zero, so N15 applies to p.",
+      "rule_and_side_condition_discharge": "Every actual incident edge at p has defect zero, including pv and pz.",
+      "source_location": "heavy-endpoint:63-66",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "E07",
+      "dependencies": [
+        "E02",
+        "E03",
+        "E04",
+        "E06",
+        "F05"
+      ],
+      "sequent": "The t(v)=2 case is impossible, hence B_zv=2 with z zero implies t(v)<=1.",
+      "rule_and_side_condition_discharge": "The two remaining parents in S have B_pq=1 and all other P-vertices have B_pq=0; they exhaust the two light endpoints and must be adjacent, contrary to S independent.",
+      "source_location": "heavy-endpoint:70-82",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "X01",
+      "dependencies": [
+        "F02",
+        "F05"
+      ],
+      "sequent": "If x is zero and B_rx>0, then (BA)_xr=B_xr.",
+      "rule_and_side_condition_discharge": "Root r belongs to the support of row x, whose unique support-neighbor is its equal-weight mate.",
+      "source_location": "transport:20",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "X02",
+      "dependencies": [
+        "X01",
+        "F03"
+      ],
+      "sequent": "For every such x,r, sum_y A_xy B_ry = B_rx.",
+      "rule_and_side_condition_discharge": "Symmetry of A,B and AB=BA make BA symmetric, transferring the equation to (r,x).",
+      "source_location": "transport:20-22",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "X03",
+      "dependencies": [
+        "X02",
+        "F02",
+        "F05"
+      ],
+      "sequent": "Any adjacent zero support vertices have equal weights one or two and no other positive-support neighbors.",
+      "rule_and_side_condition_discharge": "Each transport sum dominates the opposite endpoint weight; equalities and positivity eliminate all remaining terms.",
+      "source_location": "transport:24-28",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "X04",
+      "dependencies": [
+        "X02",
+        "X03"
+      ],
+      "sequent": "Any unmatched zero support vertex has an independent set of nonzero support neighbors with total weight its own weight.",
+      "rule_and_side_condition_discharge": "No zero support neighbor is possible; exact transport gives the sum; a neighbor-neighbor edge would create a triangle at the zero.",
+      "source_location": "transport:30",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "X05",
+      "dependencies": [
+        "X03",
+        "X04"
+      ],
+      "sequent": "Q2(r)-sum_x b_x^2+5 = 5+QN(r)-sN(r)-Kr.",
+      "rule_and_side_condition_discharge": "Finite weighted-edge decomposition: each isolated zero contributes b_x^2 to the cross-edge sum; each paired edge contributes k^2 to Q2 and 2k^2 to the square sum.",
+      "source_location": "transport:32-38",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I01",
+      "dependencies": [
+        "F02",
+        "F05"
+      ],
+      "sequent": "Positive B on an independent U subset Z is a union of alternating paths and even cycles, so has no triangle.",
+      "rule_and_side_condition_discharge": "At most one endpoint of each weight at every vertex; symmetry makes each weight class a matching; a finite union of two matchings has the stated components.",
+      "source_location": "independent-zero:9-11",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I02",
+      "dependencies": [
+        "I01",
+        "F02"
+      ],
+      "sequent": "For all distinct r,s, at most two common neighbors belong to Z.",
+      "rule_and_side_condition_discharge": "Common zero neighbors form an independent set; any three give a positive defect triangle because each pair has common neighbors r,s.",
+      "source_location": "independent-zero:13-15",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I03",
+      "dependencies": [
+        "I02",
+        "F02"
+      ],
+      "sequent": "Every B=2 pair with a zero endpoint has a nonzero common neighbor.",
+      "rule_and_side_condition_discharge": "It is a nonedge with exactly three common neighbors, at most two of them zero.",
+      "source_location": "independent-zero:17",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I04",
+      "dependencies": [
+        "I03",
+        "F05"
+      ],
+      "sequent": "Each zero vertex z has at least one neighbor in N.",
+      "rule_and_side_condition_discharge": "N15 gives two heavy endpoints, and either heavy pair supplies such a common neighbor.",
+      "source_location": "independent-zero:21",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I05",
+      "dependencies": [
+        "I04",
+        "E07",
+        "F05",
+        "F02"
+      ],
+      "sequent": "If z has only one nonzero neighbor n and heavy endpoints u,v, then n,u,v form a triangle, t(u)=t(v)=1, and B_un=1.",
+      "rule_and_side_condition_discharge": "The sole nonzero common neighbor for both heavy pairs must be n; uv is the heavy-pair edge; apply the endpoint theorem at z.",
+      "source_location": "independent-zero:23",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I06",
+      "dependencies": [
+        "I05",
+        "X03"
+      ],
+      "sequent": "In row u the zero repeat z cannot have a zero support mate.",
+      "rule_and_side_condition_discharge": "The forced edge zn joins positive row weights two and one, contradicting paired-edge isolation if z had a mate.",
+      "source_location": "independent-zero:25",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I07",
+      "dependencies": [
+        "I05",
+        "I06",
+        "X04"
+      ],
+      "sequent": "Every zero vertex has at least two neighbors in N.",
+      "rule_and_side_condition_discharge": "Unmatched z must receive total weight two from nonzero support neighbors; its unique nonzero neighbor n supplies exactly one.",
+      "source_location": "independent-zero:25-27",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I08",
+      "dependencies": [
+        "I07",
+        "F01"
+      ],
+      "sequent": "m>=15.",
+      "rule_and_side_condition_discharge": "2(59-m)<=e(N,Z)<=6m, since every nonzero vertex has two nonzero triangle neighbors.",
+      "source_location": "independent-zero:33-37",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I09",
+      "dependencies": [
+        "I08"
+      ],
+      "sequent": "For every graph in scope, m<=3T; consequently T>=5.",
+      "rule_and_side_condition_discharge": "The union of triangle vertex sets has m<=3T.",
+      "source_location": "independent-zero:37",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I10",
+      "dependencies": [
+        "I08",
+        "I09"
+      ],
+      "sequent": "If T=5, then m=15 and the five triangles are vertex-disjoint.",
+      "rule_and_side_condition_discharge": "Equality in m<=3T bounds the union cardinality by the sum of five triangle cardinalities.",
+      "source_location": "independent-zero:43",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "I11",
+      "dependencies": [
+        "I10",
+        "I07",
+        "F01"
+      ],
+      "sequent": "In the T=5 case, eN=15+k with k=0 or 1, and the zero-degree excess patterns are exactly those listed.",
+      "rule_and_side_condition_discharge": "8*15-2(15+k)=90-2k>=88; the sum of nonnegative integer excesses is 2-2k, whose partitions are 0 or 2 or 1+1.",
+      "source_location": "independent-zero:43-51",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C01",
+      "dependencies": [
+        "I07",
+        "F01"
+      ],
+      "sequent": "2<=dN(v)<=8 for all v, sum_v dN(v)=8m, and m>=15.",
+      "rule_and_side_condition_discharge": "Triangle vertices have two triangle neighbors; zero vertices use I07; count incidences with N using regularity.",
+      "source_location": "pair-coverage:19-27,39-43",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C02",
+      "dependencies": [
+        "I07",
+        "F01"
+      ],
+      "sequent": "eN<=5m-59.",
+      "rule_and_side_condition_discharge": "The cut count 8m-2eN>=2(59-m) rearranges to the stated bound.",
+      "source_location": "pair-coverage:45-49",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C03",
+      "dependencies": [],
+      "sequent": "For 2<=d<=8, choose(d,2)<=1+(9/2)(d-2).",
+      "rule_and_side_condition_discharge": "Difference equals (d-2)(8-d)/2, nonnegative throughout the stated interval.",
+      "source_location": "pair-coverage:55-59",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C04",
+      "dependencies": [
+        "C01",
+        "C03"
+      ],
+      "sequent": "sum_v choose(dN(v),2)<=36m-472.",
+      "rule_and_side_condition_discharge": "Sum the chord inequality over 59 vertices and use sum_v dN(v)=8m.",
+      "source_location": "pair-coverage:61-63",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C05",
+      "dependencies": [
+        "F01"
+      ],
+      "sequent": "Direct edges in N plus all length-two paths with endpoints in N cover every unordered N-pair.",
+      "rule_and_side_condition_discharge": "Diameter two; middle vertices are counted by choose(dN(v),2) and endpoints are distinct by simplicity.",
+      "source_location": "pair-coverage:65",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C06",
+      "dependencies": [
+        "C05"
+      ],
+      "sequent": "choose(m,2)<=eN+sum_v choose(dN(v),2)-3T.",
+      "rule_and_side_condition_discharge": "Delete all length-two covers of adjacent N-pairs; direct-edge covers remain. Edge/opposite-vertex incidences count these paths exactly 3T.",
+      "source_location": "pair-coverage:67-69",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C07",
+      "dependencies": [
+        "F02"
+      ],
+      "sequent": "The alternative exact defect identity and its 3T edge-defect sum hold.",
+      "rule_and_side_condition_discharge": "Sum 1+B_rs=A_rs+common(r,s) over unordered N-pairs; every triangle lies in N and contributes three edge incidences.",
+      "source_location": "pair-coverage:71-76",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C08",
+      "dependencies": [
+        "C02",
+        "C04",
+        "C06",
+        "I09"
+      ],
+      "sequent": "choose(m,2)<=40m-531.",
+      "rule_and_side_condition_discharge": "Substitute the two upper bounds and the universal incidence inequality 3T>=m into C06, preserving the signs.",
+      "source_location": "pair-coverage:78-80",
+      "status": "discharged",
+      "assumption_only": false
+    },
+    {
+      "id": "C09",
+      "dependencies": [
+        "C01",
+        "C08",
+        "I09"
+      ],
+      "sequent": "m>=17 and T>=6.",
+      "rule_and_side_condition_discharge": "m=15 would require 105<=69 and m=16 would require 120<=109; m>=15 leaves m>=17, then 3T>=m implies T>=6.",
+      "source_location": "pair-coverage:82",
+      "status": "discharged",
+      "assumption_only": false
+    }
+  ],
+  "limit_order_map": [],
+  "issues": []
+}

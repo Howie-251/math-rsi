@@ -1,0 +1,19 @@
+DegreeDiameter/Portfolio/F9Graph56862Degree.lean:16:2: error: Tactic `apply` failed: could not unify the conclusion of `Prod.ext rfl`
+  ?m.81 = ?m.81
+with the goal
+  (p, t) = (p, s)
+
+Note: The full type of `Prod.ext rfl` is
+  ?m.81.2 = ?m.81.2 → ?m.81 = ?m.81
+
+case refl
+u : Fin 56862
+p : Fin 6
+t s : F
+h : (fun pt => forward u pt.1 pt.2) (p, t) = (fun pt => forward u pt.1 pt.2) (p, s)
+hp : controller (controllerOf u) p = controller (controllerOf u) p
+⊢ (p, t) = (p, s)
+'DegreeDiameter.Portfolio.F9Graph56862.degree_fifty_four' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

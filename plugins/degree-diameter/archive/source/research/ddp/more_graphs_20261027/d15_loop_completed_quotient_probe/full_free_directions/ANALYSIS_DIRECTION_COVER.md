@@ -1,0 +1,43 @@
+# All free-space projective directions under inversion
+
+The expanded model is mathematically valid for all inversion-invariant neighbor sets within the actual free vertices, provided the producer's fixed-space/label check matches those vertices exactly. It is a different domain from the old single-direction72/90-pin model. It is still a restriction of general free-pin extension. This paper performs no ball computation, cache OR, solver or graph experiment.
+
+In the actual relation tables B is a square representative matrix with its pivot row zero. For the normalized direction v with pivot coordinate one, Q_v(y)=y-y_pivot*v is also written as a square matrix. Its image is the pivot-zero hyperplane, so Q_v*B=B. On a self-controller relation the virtual fixed points satisfy Q_v(x)=B*x. Thus the free-space equation is
+
+    F_s = ker(B-Q_v) = ker(Q_v*(B-I)).
+
+This agrees with the parent's notation. If a quotient matrix is instead stored with the zero row removed, the corresponding equation is B*x=Q_v*x; one must not subtract an identity matrix of a different shape. The source scout checks the actual kernel dimension and exact free labels. In the intended certified interface every F_s has dimension3 and27 points, and the selfline L_s=<v_s> is contained in F_s.
+
+For x in F_s, the completed self relation is x+L_s. After omitting the virtual stay, it gives the two other members of that triangle. Therefore F_s is partitioned into nine selfline triangles, indexed by the two-dimensional quotient F_s/L_s. The previously used zero selfline is only the zero coset of this quotient.
+
+Each three-dimensional F_s has one zero vector and13 projective directions, each direction being exactly a pair {p,-p}. There are14 inversion orbits. Across24 or30 distinct loop controllers this gives336 or420 binary atom variables. Their expanded domains have24*27=648 and30*27=810 old pins. A zero atom costs1, a nonzero pair costs2. Atoms are disjoint, so the weighted sum equals the expanded neighbor-set cardinality exactly. Each selected old pin has actual degree14 and gains one edge; a new vertex with total cost at most15 is degree-legal.
+
+All certified affine translations are zero. Hence (controller,x)->(controller,-x) preserves every relation, the deleted-loop condition and the actual simple graph. For an inversion atom O, its cached cover column is the OR of the member balls. Since O is invariant, a target t is covered by O if and only if -t is covered. It is therefore exact to keep one constraint per target inversion orbit. Each controller-zero is individually fixed; they must not all be identified with each other. The complete target-orbit counts before any further exact support deduplication are7872=(15552+192)/2 and51240=(102060+420)/2.
+
+The full model consequently represents precisely all S=-S subsets of the free domain with |S|<=15. It is not a without-loss normalization of arbitrary free-pin neighborhoods. An arbitrary S can be replaced by -S at the same cost, but replacing it by S union -S may exceed the budget. This distinction remains essential when interpreting a negative or unknown solver result.
+
+There is a concrete local reason for the additional directions to provide different routes. The old canonical pair {v_s,-v_s} has its same-controller closed R1 contained in the single zero triangle, of size3. For p outside L_s, the pair {p,-p} lies in two different nonzero quotient cosets, p+L_s and -p+L_s. Its same-controller closed R1 contains both complete triangles, of size6, at the same cost2. The twelve noncanonical projective directions split into four quotient projective directions, with three different lifts along L_s in each. They can therefore address the eight nonzero quotient cosets that the original line never directly enters; they are not merely another label or offset of that old line.
+
+More generally, a controller word w of length at most r has a linear endpoint relation
+
+    y in M_w*p + W_w,
+
+where M_w is the product of its representative matrices and W_w is spanned by the transported step directions. Allowing a virtual stay here changes no closed radius-r set, since the stay can be omitted from an actual path. The old zero-line inputs for this word reach W_w+M_w*L_s. A new direction p provides a genuinely different affine coset for this word exactly when M_w*p is outside W_w+M_w*L_s. Other words may still reach that target; this criterion is a route-complementarity mechanism, not a claim of an old global unsupported target. It also explains why extra directions can add value even though the unlimited union of all old selfline triangles already covers every target.
+
+The falsifiable joint prediction for the current scheduled experiment is that at least one of the two sources admits a cost-at-most15 full cover after these twelve new directions per controller are included. Its specific mechanism is the different F_s/L_s cosets and their transported affine images, rather than a lower bad-target score. The producer's own frozen prediction supplies the experiment chronology; this supplementary paper does not claim an independent pre-experiment registration. A solver timeout leaves this existence prediction open. Even if both symmetry-restricted models return UNSAT, arbitrary non-invariant S and other source modifications remain outside the result.
+
+For a positive assignment, only actual atom selectors are expanded to a distinct old-pin set S; counter auxiliaries are not edges. Check weighted count, actual free degrees and the complete original-target OR. Adding one new vertex adjacent to S preserves all old edges and gives d(new,t)=1+d_G(S,t). Thus this full cover is sufficient for the new graph's whole diameter bound, and also necessary for this particular single append. No LP point, partial cover or solver status without that witness is an actual graph. Reported original D4/D5 is inherited, never inferred merely from the affine recipe.
+
+Evidence: ../affine_relation_recovery/{RESULT.json,source15552_AFFINE_RELATIONS.json,source102060_AFFINE_RELATIONS.json}; ../ANALYSIS_INVERSION_COVER.md; the producer's fixed-space and full-free atom model receipts when complete. This paper's numerical runs, balls, BFS, solver calls and graphs are all zero.
+
+## Inherited concrete route checks
+
+The scout's completed fixed-space interface confirms every stated3-dimensional kernel and all648/810 actual free labels, with336/420 exact partition atoms. Its CPU receipt is0.063390872 seconds and it computes no balls, cache OR, solver or graph.
+
+A separate parent-frozen, bounded fixed-word check gives two concrete instances of the affine-coset mechanism. In the15552 source, the controller word [0,0,11,46] and p=[0,0,1,1] have rank(W)=3, M*v0 in W and M*p outside W. The old three-pin choice {0,+v0,-v0} reaches27 endpoints along that word; the equally costly {0,+p,-p} reaches all81 points of the final fiber, adding54. In the102060 source, word [0,0,90,192,172] and p=[0,0,1,2,0] have rank(W)=4 with the same inclusion/noninclusion, changing81 endpoints to the full243, adding162.
+
+These conclusions follow algebraically because W has codimension one: W, M*p+W and -M*p+W are the three distinct cosets. The producer's literal three-neighbor endpoint enumeration confirms the predicted counts and intersections, with no BFS or new radius ball. The bounded search was frozen, then the selected word's endpoint prediction was stored before that endpoint enumeration; it is not represented as a randomly chosen full graph or a globally registered cover prediction. Recorded route-check CPU is0.025301759 seconds.
+
+This supports a specific source-route prediction at equal cost3. It neither proves full-graph coverage nor asserts that a new complete R ball dominates the old complete R ball; other controller words were not included in this comparison. The full336/420-atom experiment remains the separate joint test. Evidence is ROUTE_COSSET_SEARCH_PREDICTION.json, ROUTE_COSSET_PREDICTION.json, ROUTE_COSSET_RESULT.json and ROUTE_COSSET_REPORT.md. This paper merely inherits those receipts and performs no numerical run.
+
+Inherited full-inversion terminal result: both complete336/420-atom models return raw UNSAT, without an independently checked proof. They cover all7872/51240 target inversion orbits, representing all15552/102060 old targets. The shared batch CPU is73.957748614, with no candidate or unattempted source. The local fixed-word mechanism remains supported, while this complete symmetry-restricted joint prediction receives negative solver results. The general non-invariant free-pin problem is not settled. This is inherited producer data; the paper runs no solver or new numerical test.

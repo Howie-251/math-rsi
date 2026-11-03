@@ -1,0 +1,17 @@
+{
+  "frozen_before_computation": true,
+  "question": "Does the diameter4 13-helper tree center+3branches+9leaves admit a degree4/D5 extension of the fixed364/714 naturalH3 host to377vertices?",
+  "prediction": "At least one assignment of all28 distinctports, one tocenter andthree toeachleaf, satisfies complete oldvertexcoverage fromall13newroots.",
+  "target": {"Delta":4,"D":5,"savedL":364,"hypothetical_n":377,"actual_n":null,"actual_D":null},
+  "fixed_topology": "center c joinedto3branchvertices b_i;eachb_i joinedto3leaves;center has1oldport,eachleaf has3,branches0;eacholdport usedonce",
+  "leaf_coverage": "ForleaftripleT, R4(T) union R2(samebranchother6ports+centerport) union otherbranch18ports=V364",
+  "necessary_good_set": "good(T)={p outsideT: R2(p) withoutp iscontainedinR4(T)}; all18otherbranchportsmustbegood(T)",
+  "stage1": "Enumerateall3276triples fromactual28ports; ifmaximumgoodcount<18, stopwithuniformtopologyexclusion",
+  "stage2_if_capacity_passes": "Finitebranch/leafassignment search usingmasks, andcheckall13rootcoverconditionsbeforeexport; no localbadpaircurve",
+  "internal_branch_coverage_obligation": "R3(ownbranch9ports+centerport) union R1(other18ports)=V364",
+  "center_coverage": "AutomaticfromR4(centerport) andR2oftheother27ports,whose28cells partitionV364",
+  "budget": "oneworker<=30CPU totalincludingsetup;reusePORT_BALLS andPORT_CLASSES,no repeatedBFS",
+  "scope": "Onlythisfixedcenterdegree3,b_i degree4,nineleaves topology; other13vertex treesunexamined",
+  "acceptance": "Allnewroot-old coverage, actualdegrees, alloldedgesretained; firstcomplete377graphthenoneindependentallsourceBFS",
+  "shared_ZIP_or_Wiki_modified": false
+}

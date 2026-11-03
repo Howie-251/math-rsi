@@ -1,0 +1,254 @@
+# SageMathCell online  --> https://sagecell.sagemath.org/?q=bbhboc
+#  (5,5) = 650; Moore bound=1706;
+# 
+# 
+
+'''
+ Main properties of the graph
+rithwik650   | Ord.: 650 / Size: 1625 / Diam.: 5 / Avg.dist: 4.20825 / 5-reg.? True /  Girth: 7   
+conder648    | Ord.: 648 / Size: 1620 / Diam.: 5 / Avg.dist: 4.23957 / 5-reg.? True /  Girth: 7   
+ Symmetry properties of the graph
+rithwik650   | Aut.group.ord.: 500 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+conder648    | Aut.group.ord.: 648 /  Cayley ? True ---  vtx.trans. ? True -- edge.trans. ? False
+Degree histogram rithwik650  : [0, 0, 0, 0, 0, 650]
+Degree histogram conder648 : [0, 0, 0, 0, 0, 648]
+
+ Automorphism group structure
+ C_n is the cyclic group of order n;  x means direct product; : means semidirect product.
+rithwik650  : (C25 : C5) : C4  |  center order: 1
+conder648 : ((C2 x C2) : (C3 . ((C3 x C3) : C3) = (C3 x C3) . (C3 x C3))) : C2  |  center order: 1
+
+rithwik650   distance distrib from vtx. 0: [1, 5, 20, 80, 274, 270]
+conder648    distance distrib from vtx. 0: [1, 5, 20, 80, 252, 290]
+
+Number of k-cycles for k=3 up to 8
+rithwik650    0 | 0 | 0 | 0 | 250 | 3500
+conder648     0 | 0 | 0 | 0 | 1296 | 3564
+
+'''
+
+
+import networkx as nx
+
+rithwik650 =  Graph(r":~?IIfA?Q?k@gBoG_R?i@[BGEoM_^@AAKCgHoS_j@YA{EG?O@_D?M@wE?Oo??_AI?GCOPoA?cAQ?WCoQoC?gAY?gDORoE?kAa?wDoSoG?oAi??AOTo@?SAq?OAoUoB?WAy?_BOVoD?[BA?oBoWoF?_@e@?COLOH?c@m@OCoMOJ?g@u@_DONOL?k@}@oDoOOG?{B?GSAON_pAF?gBGG?aOJ?sACGkB?L_aAL?sB_GoboM?yAOHCBoN?dAR@?BwH_dOP@?A[ESC_O_g@f@KCOIOYOS@EAgEkDOQ?j@l@WCgJ?ZoV@KAsFCE?R_m@r??D?Jo\O@@QB?F[?_T?p@x?KBGIo]oC?sAoFs@OL_l@~?WB_J__OF?yA{GKIO]@FAdAgFgQ?hoj@{CcIcJ?^`IAjAsEOO?jOm@eCCI{JoY@AApB?EgOokop@kCOJSEOZ`DAv@gF?P_mOZ@qC[JkF?\@GA|@sFWQOno]@wCgKCFoX?|BBA?EWN_pO`@gB{K[G_Y`?AVAKEoOOeOc@mCGHkHO[@BA\AWFGP?fof@sCSICI?\`EAbBcJ_VoxOyAyE?M[Mon@`BhBoJwW_yo|B?EKMsN_d``BnB{H_W_{P?AYEKNKOOd`MBtCGH_Ro|pBAYD?NcP?f@PBHCSHwS_qpEA_DKKsPog`SBNC_IOTOsPHAeDWLKQ_i@VBTBGIgU?torAkDcLcL?j`YBZBSJ?UovOuAqDoL{Lol@\B`B_JWV_wpXBYFKOCU_v@sCBDkLw\P@P[B_FWO[VOw`vCHDwMO]@Ap^BeFcOsW?y@yCNECMg]pCPaBkFoPKWoq@vCTCkKg]@DpKBKFcPcROr`yCZCwL?]pFPNBQFoP{S?q@iC`DCKgYpGpQBKEoQSSor`lCfDOL?Z`IPTBQE{QkT_t@oBzD[LW[O~PWBWFGN{Xp@ANCxE_OWc@MphCGHCRsY`AaQC~EkOocpOPkCMHOSKZPCATDDEwNgaPPpnB{GgSc[?~aJDJFCO?b@RPqCAGsS{[p@AMDPFOOWbpSptCGH?TS\`AaPDVF[Ooc`UPwCMHKTk]PCASD\FgPGdPJPzByGgQ{^?~AJCpEONwb@KpdC?GsRSX`?aMCvGKS?gP\qCDAIGVc`PPAbDzGWSWh@^QFDGISV{a@QaeE@GcSohp_qIDMI_WSapSAhEFGoTGi`aQLDSIkWkb`TakELG{T_jPbqODYIwT{cPJAmD`HGQodpWqRCmH_USd@KAXDfHSRGe`YP|CsHkUk^`La[DlF{R_fPZq?CyHwVC_PNA^DrGGRwg@\QaEEKS[CgpaBEEPIOWgppcqdD]KWXSh`WBFEVI[TwkPeQgD_JGXkiPWarE\IgUOl@fqjDeJSYCj@YAuEbIsUglphQmDkJ_Y[d`ZaxEhH[V?m`iqWDqJkYseP\A{EnHgVWnPkQZDwJwZKf@]a~EtHsVoo@lq]D}KCZcfp_BAEzI?WGopnQ`ECKOZ{ppjbZFpI{Z?v@{qoEqLs[KkPlB]FDJGZWvppqrEwM?[cl@cB\FJJSXGv`rQuESL{[{lpdb_FPJ_X?r@sqxEQKs\Sm`dBMFVJkXWrpuQ{EWL?\knPebPF\JwXos`vq~E]LK]Co@gBSFbKCYGtPxRAEcLW][ophbVFhKOY_u@yrDEiLc]sp`jBYFnL{[ozaFr_FMM{aCq@sBoGbKc\G{QHRIFSNG^SqptbrFvKo\_|@}RLFYNS^kr`vBuF|K{\w|p~rOF_N__CsPwbxGBLG[G{a@RRFCNK_[t@pbsGHLS[_|QArUFINW_stprBvGNL_[w}ACRXFONc`Ku`obhGTLk[OyaDr[FEMk`cvPqBkGZLw[gzQFO?ByNgm{EPJCRK`BGTxJBSpJEOSSwSX@od]Mv?CNo}q{OYCmPOqKKpWClLTCoXHPb`pdFCT{zc?_~b{Jr@kR@DRHOsDaQwt[RPdDFMHEW[XWBmoBC?NsnSF@KcUKfBSUPJrUPMEUS_wkXpqD`M|?OOG~a|o\CsP[qcL`XcoLZC{X`QRbPgFIUGz{@P@B~Jx@wRXEBIovDgRCtsS@edIMNEc[pWroOECEO?nkFpMCXKlB_UhKbVpPE[SkxCY`rdcNB?[O`?Q~O_CyPgq{MPZCrL`DGXxRBcpjFOUS{SA@AcAJ~ACRpErKOyDmROuKSpgDLMTEo\HXbpoHCKOKoCG`Nc[KrBkV@LRXPSEaSwx[ZPtDfNH?gOx@B?obD?PsrSN@[cuLfDSYPRrePmFUU_{kApCCDKDAOSHFbLo|DsR[ucT`hdOMZE{\`YRrOKCQOWo[HPPC^KxBwVXMBYpVEgTCxs[@udiNN?sPP@rAOeDEQ?rkNp]CxLlD_YhSbfppF[Uk|CB`DcGKJA[S`GRNP?DyRgu{UPjDRM`FG\xZBsoNCWOcosI@QcaK~CCVpMr[PYEmTOyK[pwDlNT@?PhAbBohDKQKsCO`^c{LrDkZ@TRhPsFaUw|[CPFCJKPAgSxHBOpBE?RsvSV@kdUMfFS]PZruOQC]OopKIpSCdLDCOWHNb\p\EsT[yc\`xdoNZ@KQ@BRDOkDQQWs[PP`C~LxDwZXUBipvFgVC|sD@GcMKVAsTPHrQPEEES?vkVpmDXMlF_]h[bvoTCcO{pcJ`TcgLJC[W`OR^P_EyTgy{]PzDrN`@WQXCBEonDWQcssQ@adAL~ECZpUrkPyFmVO}KDpICPK\B?ThIbRpHEKSKwCW`nd[MrFk^@\RxOWCiPGp{KPVCjLPCgWxPB_pbF?TszS^@{duNf^O}h|bzfwnq^g~X~B}v}N}_@?I?k@gCOI_X?}ACCgIOU_r@iBcFgOOb`HAYDCIgUom``BIEcLw[Oy`xByGKOgaPEaPCmHcRggPQajDYJCUgmP^b@EIKcXgspibXEyMC[wyPubpFiNk^h?QAcHG]PCahEQMcbHIQcdhKQZcxHySCghQqedPIiTcjxWQqdhJYVKmh]Q}e@KMWcphcRIeZKyYCshiRVepLiZcvho")
+
+conder648 = Graph(r":~?IGbWAaDKIgTok`ZAyD{HGQoe`NBQEkLgZow`rBiF[KGWoq`fCAGKOg`pCaJCYG{NG]o}`~CqHkRgfpOabDII[QGcpIaVDaJKUglp[azDyJ{TGipUanEQKkXgrpgbREiL[WGopabF?A?K?g@oC_J?Y?{AGCoI_V?q@kBgFoO_b@IA[DGIoU_n@aBKEgLo[_z@yB{GGOoa`FD_SCUPOpYDDDkS[V@QP\DJDwSsVpRpSCxDSRkT`NPVC~EOTcXPUpeD\E[T{Y@WPhDbEgUSYpXp_DPECTKW`TPbDVCoQcRPIpMClC{Q{S@KPPCrDGRSSpLpGC`CcQKQ`HPJCf@OWCDP_oUED@[W[B@aOLEJ?wWsBpboOEP@CXKC`dOREVA?XcGPeoaE\AKX{E@gOXEb@gYSEpho[Eh@sYkF`jO^En?_UcAPYoIDl?kU{?@[O@Dr?GVS?p\oCDx?SVk@`^OFD~BONcLO}ouB|B[N{M@?OxCBBgOSMp@ooBpBCNKK_|OrBvC?PCOPCpACTCKP[P@EPDCZCWPsPpFo{CHBsOkN`BO~CNA_MCIOwoiBdAkM[J?yOlBjAwMsJozocBXASLkH_vOfB^???wwg?_EFF?G?gwG@_CFB?O@WugA_IEv?W@GuGB_GEr?K@?vg@?HE~?C@OvG??JEz?oAWzgE_QF^?wAGzGF_OFZ@?AwxgG_UFN@GAgxGH_SFJ?{A_ygF?TFV?sAoyGE?VFR@_Bw}gK_]Fv@gBg}GL_[Fr@oCW{gM_aFf@wCG{GN__Fb@kC?|gL?`Fn@cCO|GK?bFjAODX@gQ_iGNAWDH@GR_gGJA_Dw~gS_mF~AgDg~GT_kFzA[D`?gR?lGFASDp?GQ?nGBB?ExCgW_uGfBGEhCGX_sGbBOFXAgY_yGVBWFHAGZ_wGRBKF@BgX?xG^BCFPBGW?zGZBoGXFg]`AG~BwGHFG^`?GzC?GxDg_`EGnCGGhDG``CGjB{G`Eg^@DGvBsGpEG]@FGrC_HxIgc`MHVCgHhIGd`KHRCoIXGge`QHFCwIHGGf`OHBCkI@Hgd@PHNCcIPHGc@RHJDOJXLgi`YHnDWJHLGj`WHjD_JxJgk`]H^DgJhJGl`[HZD[J`Kgj@\HfDSJpKGi@^HbE?KxOgo`eIFEGKhOGp`cIBEOLXMgq`iHvEWLHMGr`gHrEKL@Ngp@hH~ECLPNGo@jHz?CL_[a{O?BYFKnK?ov@oJt?GLw[Q|oDB_FWnc@?w`vJz?[MO\A~OEBeFSn{AOv@sJh?_Lw\QyoJBWFWmsA_u`vJn?sN?^bAOKBqF{okBo|@{KL?wNW^RBoPBwGGpCC?}aBKR@KNo_BDOQB}GCp[DO|A?K@@ONW_R?oVBoGGoSD_{aBKF@cO_aauOWCIGklkEpBAGJ\@gOwaQvo\COGwmCF@CaNJb@{PObAxO]CUGsm[GPBAKJPA?OwbQsobCGGwlSG`AaNJVASQ?dbKOcCaH[rKHpHASKtAWQWdRLohCgHgrcI@IaZKzAkQoeBNOiCmHcr{JPHAWL@AoQWeROonC_HgsSJ`GaZLFBCR_gbQOoCyIKskKpNA_LLBGRwgRRotD?IWtCL@OafLRB[SOhBTOuDEISt[MPNAcLXB_RwhRUozCwIWtsM`MafL^BsT?jbEO{DQI{pkNpTAkK\BwTWjRFp@DWJGqCO@UarKbCKTokBHPAD]JCq[PPTAoKhCOTWkRIpFDOJGqsP`SarKnCcU_maiPGDiJkikQpZAwIlCgUwmQjpLDoJwjCR@[a~IrC{VOnAlPMDuJsj[SPZA{I`D?UwnQgpRDgJwiSS`Ya~IfDSW?paoPSEAK[kKTp`BCJDDWWWpQppXEGKgkcU@abJJJDkWoqArPYEMKck{VP`BGIxDoWWqQmp^E?KgjsV`_bJI~ECX_sacP_EYLKhKWpfBOITEGXwsQdpdE_LWhcX@gbVIZE[YOtAfPeEeLSh{YPfBSIHE_XwtQapjEWLWgsY`ebVINE{Z?vRGFsb[LcZ`cRyplEsL{qP|guBZE{XK}{[pmB`Kg]qMOvPoETNZFCZowrJFmb_L{[PdrvpvEqM?p`{GzBWFAWs}K\PlbaK[^IM_u`peNNfFk[_yRMF[bsMS\@fRmpxFKMkrpvg{BfFSX{z{^psBlL?\QNoyPuE`MjFs\OzrPFUbwMk\pgrjqBFIMor@uH@BcFYXczK_PrbmKs\iO?x`veZMvG[]?|RSFgcKNC]`iRsqDFcN[tPyhABrFkYk|[apyBxLW]APO|P{ElNBGc]o}rVFacON[^PjrpqNFaN_s`xHFBoFqYS{kbPxbyLK]YP_{`|efNNHK^`?QaGOccNs_@PSGqPF{OKgqChGB~GCS\A[dq?CDIO`QQp?QADHOjHS_P@qdGUcgOK_pQsJqZFyOOhaEHLB{GIStBKeP~cEI[`iR?~aBdNOvH{`@BQgFwc{Oc``SR{q\GSO{iP}hMCJG[TK~[gqECPIg^qSPBQGDTNzIC`pCqjF}d?O{aPTr~qfGQP?jA?HRCGGaTd?KhQDcQIs_IS`AaHdZOFIka`EQmGCdSPSb@VSAqhGkPkjq@hSCVGsT|?{jqKC\J?_aTpEQMD`ORIsbPFqpGIdWPkbpWsDqrGiPokaBHXCSGyUT@kkQJc]JK_yU@DaNdfO^J[c@HQsFGdkQCc`YRcqtHCQ[lPqhYCbHKUkx[mqQChJW[qVPHQSDlMZJccpIqvFMdoQ[dPZrfq~HAQ_m@sH^C_HQVCyKnQPciJc\IV`GaTdrMfKKd`KQyEoeCQse@\RWr@H[RKmpkh_CnHcV[u[pqWCtJoZQWpKQYDxLjKSePLq|EueGRKep]rZrJHYROn`mHdCkHiVsvKqQVcuJ{ZiX@JaZd~LvK{f@NR?E{e[Rcf`_R]rLHsR{oPnheCzH{WKv{sq]D@KG[AYPNQ_EDMBLCfpOrBFAe_R{gP`r`rVHqS?p@pHjCwIAWcwktQ\dAKS[YY`Ma`eJMN")
+
+
+graphs = [('rithwik650  ', rithwik650 ), ('conder648   ', conder648 )]
+
+rithwik650nx =rithwik650.networkx_graph()
+conder648nx =conder648.networkx_graph()
+
+
+def count_k_cycles(G, k):
+    count = 0
+    visited = set()
+    def dfs(path, start, depth):
+        nonlocal count
+        current = path[-1]
+        # Early exit if we?re going too deep
+        if depth == k:
+            if start in G.neighbors(current):
+                # Normalize to avoid duplicates
+                cycle = tuple(sorted(path))
+                if cycle not in visited:
+                    visited.add(cycle)
+                    count += 1
+            return
+        for neighbor in G.neighbors(current):
+            if neighbor not in path and neighbor >= start:
+                dfs(path + [neighbor], start, depth + 1)
+    for v in G.vertices():
+        dfs([v], v, 1)
+    return count   # each cycle counted twice (once forward, once reverse)
+
+def algebraic_connectivity(G):
+    """
+    Compute the algebraic connectivity (Fiedler value) of a graph G.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The second-smallest eigenvalue of the Laplacian matrix of G
+    """
+    L = G.laplacian_matrix()
+    eigenvalues = L.eigenvalues()
+    eigenvalues.sort()
+    
+    if len(eigenvalues) < 2:
+        return 0  # Trivial case: empty or isolated vertex graph
+    return eigenvalues[1]
+
+
+def check_all_isomorphisms(graph_list):
+    n = len(graph_list)
+    print("\n Isomorphism check of all pairs (a dot means the pair ARE isomorphic):")
+    for i in range(n):
+        label_i, G_i = graph_list[i]
+        for j in range(i + 1, n):
+            label_j, G_j = graph_list[j]
+            if G_i.is_isomorphic(G_j):
+#               print(".", end="")
+                print(f"{label_i} IS isomorphic to {label_j}")
+            else:
+                print(f"{label_i} NOT isomorphic to {label_j}")
+                
+def non_isomorphic(graph_list):
+    reps = []
+    labels = []
+
+    for label, G in graph_list:
+        if not any(G.is_isomorphic(H) for _, H in reps):
+            reps.append((label, G))
+            labels.append(label.strip())   # remove extra spaces if you want    
+    return labels
+
+def isomorphic(graph_list):
+    labels = []
+
+    for i, (label, G) in enumerate(graph_list):
+        if any(i != j and G.is_isomorphic(H) for j, (_, H) in enumerate(graph_list)):
+            labels.append(label.strip())
+
+    return labels
+
+def compare_graphs_list(graphs):
+    canon = {}
+    count =1
+    for label, G in graphs:
+        s6 = G.canonical_label().sparse6_string()
+
+#        print(f"{label.strip():15} : {s6[:40]}...")
+
+        canon.setdefault(s6, []).append(label.strip())
+    print("\n noniso ->",len(canon))
+    print("\nGroups:")
+    for group in canon.values():
+        if len(group) > 1:
+            print(count,"Isomorphic :", ", ".join(group))
+            count=count+1
+        else:
+            print(count,"Unique      :", group[0])
+            count=count+1
+
+
+
+print("\n START \n")
+
+#noniso = non_isomorphic(graphs)
+#print(len(noniso), " non-isomorphic -> ",noniso)
+
+#iso=isomorphic(graphs)
+#print(len(iso), " isomorphic -> ",iso,"\n")
+
+
+compare_graphs_list(graphs)
+
+
+nonisographs = graphs
+
+
+
+# Print properties for each graph in the list
+print("\n Main properties of the graph\n")
+for label, graph in nonisographs:
+    print(f"{label} | Ord.: {graph.order()} / Size: {graph.size()} / Diam.: {graph.diameter()} / Avg.dist: {graph.average_distance().n(digits=6)} / 5-reg.? {graph.is_regular(k=5)} /  Girth: {graph.girth()}   ")#/  Alg.conn. {algebraic_connectivity(graph).n(digits=6)} ")# /   Domin. number: {graph.dominating_set(value_only=True)} ")
+
+print("\n Symmetry properties of the graph\n")
+for label, graph in nonisographs:
+    print(f"{label} | Aut.group.ord.: {graph.automorphism_group().order()} /  Cayley ? {graph.is_cayley()} ---  vtx.trans. ? {graph.is_vertex_transitive()} -- edge.trans. ? {graph.is_edge_transitive()}" )
+
+print("Degree histogram rithwik650  :", nx.degree_histogram(rithwik650nx) )  
+print("Degree histogram conder648 :", nx.degree_histogram(conder648nx) )  
+    
+'''    
+print("\n Properties of the graphs as at arXiv\n")
+for label, graph in nonisographs:
+    print(f"{label} & {graph.average_distance().n(digits=6)}  & {graph.girth()}  &  {algebraic_connectivity(graph).n(digits=6)}   &  {graph.automorphism_group().order()} \\\\ ")
+''' 
+    
+# Check isomorphisms
+# print(f"Are isomorphic G5 and G6? {G5.is_isomorphic(G6)}")
+
+#check_all_isomorphisms(nonisographs)
+
+print("\n")
+
+
+# automorphism group structure
+print(" Automorphism group structure")
+print(' C_n is the cyclic group of order n;  x means direct product; : means semidirect product.\n')
+
+Arithwik650  = rithwik650.automorphism_group()
+Aconder648  =conder648.automorphism_group()
+print('rithwik650  :', Arithwik650.structure_description(), ' |  center order:',Arithwik650.center().order())
+print('conder648 :', Aconder648.structure_description(), ' |  center order:',Aconder648.center().order())
+
+print("\n")
+
+
+
+# Compute the distance distribution from a given vertex v in graph G
+# Returns a list where the i-th element is the number of vertices at distance i from v
+def distance_distribution(G, v):
+    from collections import Counter    
+    distances = G.shortest_path_lengths(v)
+    distribution = Counter(distances.values())
+    result = [distribution[d] for d in sorted(distribution)]    
+    return result
+
+print("\n")
+for label, graph in nonisographs:
+    print(f"{label} distance distrib from vtx. 0: {distance_distribution(graph, 0)}")
+
+
+# Counting k-cycles for each graph
+print("\nNumber of k-cycles for k=3 up to 8")
+for label, graph in nonisographs:
+    print(f"{label} "," | ".join(str(count_k_cycles(graph, k)) for k in range(3, 9)))
+
+
+
+
+'''
+# from 0 versio Molodtsov?
+
+for name, G in nonisographs:
+    fname = name.strip() + "_adjlst.txt"
+    s = "; ".join(
+        "{}-{}".format(v, ",".join(map(str, G.neighbors(v))))
+        if G.neighbors(v) else str(v)
+        for v in G.vertices(sort=True)
+    )
+    with open(fname, "w") as f:
+        f.write(s)
+
+'''
+# from 0
+       
+for label, _ in nonisographs:
+    base = label.strip()            
+    G = globals()[base + "nx"]      
+
+    with open(f"{base}_edges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u},{v}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+
+'''
+# from 1
+        
+for label, _ in nonisographs:
+    base = label.strip()   
+    G = globals()[base + "nx"] 
+
+    with open(f"{base}_Zedges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u+1},{v+1}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+'''       
+print("\n DONE \n")        
+##
+##

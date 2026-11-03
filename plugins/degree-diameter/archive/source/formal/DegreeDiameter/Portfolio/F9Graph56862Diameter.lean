@@ -1,0 +1,8 @@
+import DegreeDiameter.Portfolio.F9Graph56862Certificates
+import DegreeDiameter.Portfolio.F9Graph56862Adjacent
+import DegreeDiameter.Portfolio.F9Graph56862DiameterInterface
+namespace DegreeDiameter.Portfolio.F9Graph56862
+theorem diameterAtMost_three : DiameterAtMost graph 3 :=
+  diameter_of_local_decoders controller_valid nb_noise_valid adjacent_valid
+#print axioms diameterAtMost_three
+end DegreeDiameter.Portfolio.F9Graph56862

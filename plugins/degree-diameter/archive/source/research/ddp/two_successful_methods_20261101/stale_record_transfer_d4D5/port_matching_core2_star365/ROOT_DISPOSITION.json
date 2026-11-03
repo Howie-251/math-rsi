@@ -1,0 +1,128 @@
+{
+  "updated_UTC": "2026-11-01 19:07 UTC",
+  "status": "ROOT_ACCEPTED_BOUNDED_SAMPLE_UNKNOWN_NOT_FAMILY_NO",
+  "read_evidence": [
+    "PRED.md",
+    "RESULT.json",
+    "NOTE.md",
+    "TERMINAL.json",
+    "run.cpp",
+    "PAPER_SCOPE_REVIEW.md"
+  ],
+  "source": "natural364/714; inherited28degree3 ports,336degree4 core; not public364/728 regular literal",
+  "rule": "Perfectmatching of28oldports;two disjoint OLD core-coreedgecuts;one4star tothosefourendpoints.",
+  "target": [
+    4,
+    5,
+    365
+  ],
+  "degree_accounting": "714+14-2+4=730; each port gains1, each of4 cut endpoints loses1/gains1, newroot has4; all365 vertices degree4",
+  "old_strict_scope_boundary": "Prior pureappend/helper13 negatives retain alloldedges and forbid newold-old edges. This rule changes both.",
+  "distinct_configurations_finished": 10000,
+  "newroot_R5_passes": 0,
+  "old_label_BFS_roots": 0,
+  "first_newroot_failure": {
+    "configuration": {
+      "core_cut_pool_indices": [
+        151,
+        423
+      ],
+      "core_cut_edges": [
+        [
+          43,
+          58
+        ],
+        [
+          151,
+          314
+        ]
+      ],
+      "port_matching": [
+        [
+          2,
+          256
+        ],
+        [
+          11,
+          126
+        ],
+        [
+          24,
+          216
+        ],
+        [
+          56,
+          341
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          74,
+          356
+        ],
+        [
+          85,
+          307
+        ],
+        [
+          98,
+          230
+        ],
+        [
+          116,
+          267
+        ],
+        [
+          117,
+          195
+        ],
+        [
+          200,
+          298
+        ],
+        [
+          215,
+          237
+        ],
+        [
+          249,
+          320
+        ],
+        [
+          331,
+          343
+        ]
+      ]
+    },
+    "BFS": {
+      "root": 364,
+      "target": 0,
+      "distance": 6,
+      "reached": 365,
+      "eccentricity": 6,
+      "actual_path": [
+        364,
+        43,
+        54,
+        56,
+        360,
+        345,
+        0
+      ]
+    }
+  },
+  "prediction_verdict": "At leastone newrootR5 pass predicted; not supported in this fixedseed sample. Failure occurs before old-old checks.",
+  "whole_rule_exclusion": false,
+  "cumulative_case_CPU_seconds": 1.537876879,
+  "CPU_budget_seconds": 20,
+  "new_graph_parameter_Lean_counts": [
+    0,
+    0,
+    0
+  ],
+  "goal_completed": false,
+  "decision": "STOP sample; no additional seed, cuts, hillclimb, H14 or automatic sample increase.",
+  "independent_paper_review": "ROOT_READ_ACCEPTED: exactnewrootR5 iffR4_H(cutendpoints) coversallold; separateoldoldneeded; allcandidateD<=6 fromoldD5 pluscutdetour argument. Firstsavednewrootdistance6 makesonlythatcandidateD6,notafamilyNO;0oldoldBFS."
+}

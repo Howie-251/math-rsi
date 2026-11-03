@@ -1,0 +1,94 @@
+{
+  "status": "READ_GATE_COMPLETE_K19_DOMAIN_STRICTLY_LARGER_THAN_CLOSED_H_DOMAIN_NO_SAME_K19_NO_LOCATED",
+  "date_UTC": "2026-11-02",
+  "target": [
+    8,
+    4,
+    1368
+  ],
+  "source": {
+    "name": "Michel de Messieres 684 two-orbit host",
+    "n": 684,
+    "m": 2394,
+    "degree": 7,
+    "D4": "inherited; no rerun",
+    "recipe": "research/ddp/m1_sources/684_recovered_construction.json",
+    "generator_read_not_executed": "research/ddp/m1_sources/recover_684.py",
+    "literal_not_parsed": "research/ddp/m1_sources/graph_7_4_n684.txt",
+    "old_literal_binding": "research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/RUN_SOURCE_LITERAL_BINDING.json"
+  },
+  "actual_group": {
+    "coordinates": "(a,b), a mod38,b mod9",
+    "law": "(a,b)(c,d)=(a+23^b*c mod38,b+d mod9)",
+    "old_edges": "(tau,h)--(rho,h*s), s in actual S_tau,rho",
+    "label": "342*tau+9*a+b",
+    "common_automorphisms": "left H multiplication"
+  },
+  "K19": {
+    "elements": "(2*l,0), l in Z19",
+    "left_action": "(tau,a,b)->(tau,a+2*l mod38,b)",
+    "normality": "h(2*l,0)h^-1=(2*23^b*l mod38,0)",
+    "free": true,
+    "orbit_count": 36,
+    "orbit_size": 19,
+    "orbit_index": "r=18*tau+2*b+epsilon, epsilon=a mod2",
+    "orbit_representative_label": "342*tau+9*epsilon+b",
+    "vertex_label": "nu(r,k)=342*tau+9*(epsilon+2*k)+b, k=0..18",
+    "inverse_label": "tau=floor(v/342); a=floor((v-342*tau)/9); b=(v-342*tau) mod9; epsilon=a mod2; k=(a-epsilon)/2"
+  },
+  "old_edge_K_voltage": {
+    "input": "r=(tau,b,epsilon), s=(c,d) in S_tau,rho",
+    "m": "m=[epsilon+23^b*c]_38",
+    "target_orbit": "rprime=18*rho+2*((b+d) mod9)+(m mod2)",
+    "voltage": "lambda=(m-(m mod2))/2 mod19",
+    "action": "(r,k)->(rprime,k+lambda mod19)",
+    "computed_tables": "NOT_GENERATED"
+  },
+  "complete_new_matching_domain": {
+    "parameters": "sigma in S36; t_r independently in Z19",
+    "forward": "(r,k,copy0)<->(sigma(r),k+t_r,copy1)",
+    "reverse": "(s,k,copy1)->(sigma^-1(s),k-t_sigma^-1(s),copy0)",
+    "binary_choices": 24624,
+    "row_column_equations": 72,
+    "no_involution_constraint": true,
+    "gauge": "none proposed or used"
+  },
+  "strict_domain_inclusion": {
+    "old": "all H-left-equivariant maps (tau,h)->(pi(tau),h*t_tau), 2*342^2=233928 already completeNO",
+    "inclusion": "K is subgroup of H, so old maps are K-equivariant",
+    "strict_witness": "identity orbit permutation; shift1 on one K orbit only and shift0 on the other35; nonidentity right translation on an H orbit cannot have fixed points",
+    "old_NO_not_new_NO": true
+  },
+  "exact_cover_model_interface": {
+    "old_set": "A_ij^(a) subset Z19: exact old length-a endpoint coordinates from (i,0) to orbit j",
+    "obligations": "(i,j,k), 36*36*19=24624",
+    "choice_hits": "choice(r,s,t) hits(i,j,k) iff k in union_(a+b<=3) A_ir^(a)+t+A_sj^(b)",
+    "coverage": "OR/sum>=1 over selected choices is actual endpoint coverage, not word count",
+    "one_cross": "<=4 cross-copy paths with3cross contain consecutive inverse matching steps; reduce to1cross",
+    "source_root_reps": 36,
+    "old_two_H_root_reps_not_sufficient": true,
+    "conditional_sufficiency": "row/column perfect matching plus all cross obligations and inherited sourceD4 suffice for mathematical D<=4; actual candidate binding/acceptance not performed"
+  },
+  "reusable_old_inputs": {
+    "endpoint_cache": "research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/OLD_LENGTH_LE3_ENDPOINT_SETS.json",
+    "cache_schema": "exact_lengths0..3; existing H-typed endpoint rows",
+    "reuse_formula": "from orbit representative h_r=(epsilon,b), old endpoint h_r*u using stored H endpoint u; decompose actual label into (rprime,k); do not rerun old DP",
+    "closed_scope": "research/ddp/two_successful_methods_20261101/stale_record_transfer_d8D4/two684_shift_matching1368/ROOT_DISPOSITION.json"
+  },
+  "history_scope": "Finite same-host reports/papers/Wiki/source recipe check; old closed domain explicitly H-equivariant only. No identical K19/36-orbit completeNO located; not a global absence claim.",
+  "operations": {
+    "source_edge_parses": 0,
+    "old_DP": 0,
+    "BFS": 0,
+    "field_checks": 0,
+    "new_action_enum": 0,
+    "solver": 0,
+    "graph_generation": 0,
+    "Lean": 0,
+    "review_calls": 0,
+    "primary_requests": 0
+  },
+  "CPU_cap_seconds": 5,
+  "conservative_read_preparation_CPU_charge": 1.0,
+  "next": "STOP_READ_GATE; root must separately select and budget any exact precomputation/model/numerical window; no new parameter list or automatic run"
+}

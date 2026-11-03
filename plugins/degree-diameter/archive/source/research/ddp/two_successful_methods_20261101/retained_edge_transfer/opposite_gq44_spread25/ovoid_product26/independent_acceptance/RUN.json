@@ -1,0 +1,38 @@
+{
+  "workers": 1,
+  "cpu_limit_per_process_seconds": 30,
+  "steps": [
+    {
+      "step": "compile",
+      "command": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/independent_acceptance/check_literal.cpp",
+        "-o",
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/independent_acceptance/check_literal"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.1646556109189987,
+      "user_cpu_seconds": 1.067361,
+      "system_cpu_seconds": 0.090318
+    },
+    {
+      "step": "check",
+      "command": [
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/independent_acceptance/check_literal",
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/graph_d25_D3_n7242.edges",
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/graph_d26_D3_n7531.edges",
+        "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/independent_acceptance"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.06910587102174759,
+      "user_cpu_seconds": 0.062475999999999976,
+      "system_cpu_seconds": 0.0039040000000000047
+    }
+  ],
+  "total_child_cpu_seconds": 1.2240589999999998
+}

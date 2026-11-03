@@ -1,0 +1,23 @@
+✖ [1792/1792] Building DegreeDiameter.N62RepeatQuotientTrace (22s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/N62RepeatQuotientTrace.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatQuotientTrace.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/N62RepeatQuotientTrace.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatQuotientTrace.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/N62RepeatQuotientTrace.setup.json --json
+error: DegreeDiameter/N62RepeatQuotientTrace.lean:40:24: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -1 • M.trace
+in the target expression
+  M.trace - -1 * M.trace = 0
+
+V : Type u_1
+inst✝ : Fintype V
+P : Matrix V V ℤ
+hcube : P ^ 3 = 157604 • P
+this : Fact (Nat.Prime 1063) := { out := of_decide_eq_true (id (Eq.refl true)) }
+f : ℤ →+* ZMod 1063 := Int.castRingHom (ZMod 1063)
+M : Matrix V V (ZMod 1063) := f.mapMatrix P
+hM : M ^ 3 = 157604 • M
+hp : ∀ (k : ℕ), M ^ (2 * k + 1) = 157604 ^ k • M
+hcoef : 157604 ^ 531 = -1
+hf : -1 • M.trace = M.trace
+⊢ M.trace - -1 * M.trace = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.N62RepeatQuotientTrace
+error: build failed

@@ -1,0 +1,23 @@
+{
+  "status": "READ_ONLY_READY_NO_NEW_NUMERICAL_AUTHORIZATION",
+  "source": {"n": 650, "m": 3250, "max_degree": 10, "D_inherited": 3, "F": 520, "P": 130, "P_twin_classes": 65, "P_cycles_inherited": [79, 21, 30]},
+  "old_result": {"status": "UNKNOWN_F_COVER_MODEL_NO_INCUMBENT", "solver_calls": 1, "solver_CPU_seconds": 20.013963667, "old_case_CPU_seconds": 22.084731374, "frozen_prototypes": 0, "PP_pairings_checked": 0, "newroot_BFS": 0, "oldroot_BFS": 0},
+  "PP_oldedge_branch": {"implemented": true, "executed": false, "source": "FP_once.py:263-273", "semantics": "Preserve already-present PP pair; both nonstar donor endpoints remain degree9", "edges_formula": "3252 + actual_new_PP_pairs", "affects_F_cover_model": false, "reason": "No repair endpoint is a star-P; a z-to-F walk using a new PP repair has length at least4"},
+  "exact_F_cover_projection": {"old_variables": 1170, "new_F_selection_variables": 520, "retained_star_P_variables": 130, "total_binary_variables": 650, "rows": 652, "constraints": ["Each twin-class selects at most2 F vertices", "Number of selected star-P in class is at most selected F in class", "Total selected F=8 and star-P=2", "Inherited520 exact source-R2 F coverage rows"], "status": "PAPER_EQUIVALENCE_NOT_NEW_MODEL_RUN", "do_not_merge_star_P_twins_without_R2_packet_binding": true},
+  "single_next_question": "Does any two-star-P selection survive the grouped eight-F-packet capacity bound with twin-class quotas?",
+  "falsifiable_prediction_for_future_PRED": "At least one pair survives this bound; currently unsupported and untested",
+  "diagnostic": {"input_packets": "520 F and130 P source-R2-to-F masks extracted only from saved coefficient rows", "per_class_costs": [0, 1, 2], "required_class_cost": "Number of the two star-P in that class", "total_cost": 8, "upper_bound": "Maximize sum of within-class best one/two-packet union cardinalities on uncovered F; cross-class overlaps ignored", "failure_implication": "Upper<uncovered count excludes that star pair", "all_pairs_failure_implication": "Entire necessary F-cover subproblem excluded", "survival_implication": "Only this capacity bound passes; no actual coverage/graph conclusion", "executed": false},
+  "minimal_inputs": ["FP_MODEL.json row_labels/variable_labels", "FP_MODEL_MATRIX.npz coverage rows only", "research/ddp/more_graphs_20261027/d10_D3_current650_critical_middle_gate/STRUCTURE_ROOT.json labels/twin pairs"],
+  "new_matrix_or_packet_data_read": false,
+  "old_scope": "Same-source delete1..5 oldedges + sole hub to all cut endpoints + no other addededge completeNO remains separate",
+  "measured_standard_library_read_CPU_seconds": 0.002869774,
+  "conservative_read_and_preparation_charge_CPU_seconds": 0.25,
+  "read_CPU_cap_seconds": 1,
+  "new_source_parses": 0,
+  "new_numeric_diagnostics": 0,
+  "solver_calls": 0,
+  "BFS": 0,
+  "field_or_Lean_or_reviews": 0,
+  "new_graphs_or_parameters": 0,
+  "next": "STOP; root decides whether to authorize this one saved-coefficient diagnostic"
+}

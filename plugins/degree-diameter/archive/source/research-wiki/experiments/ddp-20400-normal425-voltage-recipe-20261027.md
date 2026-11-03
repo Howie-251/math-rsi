@@ -1,0 +1,78 @@
+---
+type: experiment
+node_id: exp:ddp-20400-normal425-voltage-recipe-20261027
+title: "20400实际源恢复N=C5²×C17正规覆盖：48base/288darts完整61200边匹配"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: yes
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/REPORT.md; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/PREDICTION.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/RESULT.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/COVER_RECIPE.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/NORMAL_GENERATORS.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/WORD_SEARCH.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/run.py"
+added: 2026-10-27T19:58:37Z
+tags: ["ddp", "method-ledger"]
+---
+
+# 20400实际源恢复N=C5²×C17正规覆盖：48base/288darts完整61200边匹配
+
+**verdict:** `yes`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** known_source_or_recovery
+
+**目标与阶数：** (6,7)；L=20400；known_source_or_recovery n=20400
+
+**距目标的证据：** a=(s0s1s2)^2，原wordorder10；z=(s0s2s4)^5，wordorder85；b由B^4共轭，a/b/z阶5/5/17且两两交换独立。N425normal成立，48base abelian voltage recipe READY，已交expert m18/19 producer与debruijn1200投影分析，后续结果分列。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "source_n": 20400,
+  "source_m": 61200,
+  "shortword_scope_upper": 936,
+  "actual_short_words_tested": 51,
+  "shortword_prefix_stopped_after_witnesses": true,
+  "normal_N_order": 425,
+  "normal_N_factors": [
+    5,
+    5,
+    17
+  ],
+  "normality_conjugate_checks": 18,
+  "orbit_count": 48,
+  "orbit_size": 425,
+  "source_vertex_coordinates": 20400,
+  "directed_base_ports": 288,
+  "source_directed_adjacencies_matched": 122400,
+  "source_undirected_edges_matched": 61200,
+  "reverse_ports_checked": true,
+  "N_orbits_enumerated": true,
+  "large_Gamma_group_enumeration": false,
+  "multiplication_table": false,
+  "CPU_seconds": 0.114659876,
+  "graph_BFS": 0,
+  "candidate_graphs": 0,
+  "formula_order": "1200*m; onlym17sourcevalidatedhere"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/REPORT.md](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/REPORT.md)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/PREDICTION.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/PREDICTION.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/RESULT.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/RESULT.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/COVER_RECIPE.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/COVER_RECIPE.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/NORMAL_GENERATORS.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/NORMAL_GENERATORS.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/WORD_SEARCH.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/WORD_SEARCH.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/run.py](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/normal425_cover/run.py)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 复用6实际leftAut与CSR，固定最多936个len≤4 NB词的lex前缀；51词即找到a5/z17见证，b=B^4aB^-4首共轭成功。实际commutation/independence/425orbit与18conjugate0images核验正规；48×425原顶点坐标＋全部122400arcs/61200edges逐项配方match。无sourceBFS/大群枚举/新候选。
+
+**仍未完成：** Newmodulus graph results and projected capacity are separate agent tasks; this record claims no new lowerbound or Lean theorem.
+
+**启发与重启依据：** regular action使wordorder可读0cycle，conjugate0image足以判N membership，从原图缺gens转为真实参数cover。可改最后modulus得到1200m点普通abelian voltage图，但degree/connected/D7必须逐新实例实查，不能把sourceD7/regular群表示自动迁移。只恢复此源，不扫更多群。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

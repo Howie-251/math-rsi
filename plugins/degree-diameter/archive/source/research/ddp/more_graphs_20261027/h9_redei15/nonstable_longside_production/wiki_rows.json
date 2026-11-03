@@ -1,0 +1,189 @@
+[
+  {
+    "id": "ddp-redei15-nonstable-longside-current42402-placement-20261028",
+    "title": "Rédei15 nonstable-plane longside family:64line gate passes but complete5971968-parameter degree pool empty",
+    "family": "H9 blocking-neighborhood extension",
+    "record_type": "new-placement-variant-of-existing-successful-Redei15-mechanism",
+    "related_existing_ids": [
+      "ddp-h9-redei15-blocking-shape-20261027",
+      "ddp-h9-redei15-fixed-pool-20261027",
+      "ddp-h9-redei15-new-four-20261027"
+    ],
+    "target_Delta": null,
+    "target_D": 5,
+    "savedL": null,
+    "targets": [
+      {
+        "Delta": 12,
+        "D": 5,
+        "savedL": 42342,
+        "current_accepted_source": 42402,
+        "hypothetical_n": 42403
+      },
+      {
+        "Delta": 13,
+        "D": 5,
+        "savedL": 51417,
+        "current_accepted_source": 51457,
+        "hypothetical_n": 51458
+      }
+    ],
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "status": "COMPLETE_FIXED_NONSTABLE_REDEI_DEGREE_POOL_EMPTY",
+    "variants": [
+      {
+        "label": "degree12_first_longside_gate",
+        "source_n": 42402,
+        "source_m": 245937,
+        "rational_lines": 3640,
+        "closure_cap": 3,
+        "eligible_lines": 64,
+        "candidate_graphs": 0,
+        "target_Delta": 12,
+        "target_D": 5,
+        "savedL": 42342,
+        "target": [
+          12,
+          5
+        ]
+      },
+      {
+        "label": "degree12_nonstable_full_projectivity_pool",
+        "source_n": 42402,
+        "source_m": 245937,
+        "planes": 384,
+        "raw_parameters": 5971968,
+        "affine_pattern_masks": 486,
+        "subset_tests": 186624,
+        "degree_legal_patterns": 0,
+        "distinct_C12": 0,
+        "R4_calls": 0,
+        "candidate_graphs": 0,
+        "target_Delta": 12,
+        "target_D": 5,
+        "savedL": 42342,
+        "target": [
+          12,
+          5
+        ]
+      },
+      {
+        "label": "degree13_complete_longside_gate_and_uniform_plane15_corollary",
+        "source_n": 51457,
+        "source_m": 324863,
+        "rational_lines": 3640,
+        "closure_cap": 4,
+        "eligible_lines": 0,
+        "one_split_line_pair_was_allowed": true,
+        "all3merged_lines_with_all3pins_full": 1764,
+        "all3split_lines": 1876,
+        "oriented_rawmap_assumed": false,
+        "candidate_graphs": 0,
+        "stronger_corollary_reference": "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/ANALYSIS_PLANE_CLOSURE.md",
+        "target_Delta": 13,
+        "target_D": 5,
+        "savedL": 51417,
+        "target": [
+          13,
+          5
+        ]
+      }
+    ],
+    "question": "Can a different Galois footprint of the successful minimal15point blocker avoid saturated fixed points and yield a new retained-edge extension?",
+    "prediction": "At leastone new nonstable placement supplies12currentfree pins and fullcurrentR4.",
+    "prediction_disposition": "Line-embedding existence proved and degree12 firstgate supported; fullplacement existence refuted by complete degreepool.",
+    "positive_guarantees": [
+      "Standard six-point longside complement is a Baer subline, so an explicit projectivity maps it to all six nonfixed points on a rational line.",
+      "Whole-class closure gives orientation-free inheritedcoreR4 for any legal complete blocking set.",
+      "The normalized24×8×81 projectivities exhaust the fixed longside footprint in each selected plane.",
+      "The firstline gate was implemented withcap4 for degree13, not the incomplete all-three-merge-only subgate.",
+      "Cardinality forces every legal D12 nonstable-plane Rédei15 wholeclosure into the completed six-point-longside family; this is not only an arbitrary selected footprint."
+    ],
+    "verification_scope": "Existing source-bound point/class maps and finaldegree caches,3640line necessarygates,384cached planes and186624 exact81bit subset tests. NoR4/BFS/solver/graph.",
+    "failure_reason": "The degree12 on-line threepins can all be free, but no affineRédei ninepoint pattern simultaneously lies in the off-line unsplit/free availability sets.",
+    "closed_scope": "当前42402/cap12上所有非Frobenius稳定奇异平面中的projective Rédei15 whole-class邻域、总pins<=12：cardinality强制3内部phi pairs及完整6点longside；64合法交线×6planes×15552项目参数经486/mask精确去重，共186624实际mask tests覆盖5971968原参数。D13先全3640line cap4门，并用当前全局singleton/phi-pair绑定加强为任意单奇异平面15点whole-class总pins<=13不可合法。",
+    "remaining_open_scope": [
+      "Stable-plane full PGL3(F9) placements",
+      "Other blockers or rawsets of fewerthan15 points",
+      "Multi-plane or different cooperative rules",
+      "Orientation-dependent direct maps requiring new actual binding"
+    ],
+    "reusable_insight": "Use a projectively characterized Galois footprint to remove the fixed-point bottleneck, but check all off-line classes together. A nonempty line gate is necessary only.",
+    "restart_condition": "This finite placement scope is complete; no automatic extra affine maps, planes, anchors or changedsource retry from the empty pool.",
+    "CPU_seconds": null,
+    "observed_computational_CPU_checkpoint_sum_seconds": 0.5556526509999999,
+    "CPU_budget_seconds": 60,
+    "CPU_accounting_note": "aggregate_CPU_seconds is the sum of recorded preparation checkpoints and the completed production process; initial gate optional-diagnostic serialization overhead after its checkpoint was not separately timed. It is not asserted as exact entire-pipeline process usage. Gate had10CPU hardlimit; all other recorded work was subsecond, far below60CPU budget.",
+    "initial_gate_exit_code": 1,
+    "initial_gate_failure_phase": "optional per-line numeric diagnostic serialization after RESULT and both eligible pools were already complete",
+    "gate_numerical_repeat": false,
+    "R4_native_calls": 0,
+    "new_graphs": 0,
+    "solver_calls": 0,
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/POOL_RESULT.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/POOL12.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/RESULT.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/TERMINAL.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/run.py",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/prepare.py",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/RESULT.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/TERMINAL.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/eligible_lines_d12.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/eligible_lines_d13.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/LONGSIDE_PROOF.md",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/LONGSIDE_PROOF.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/ANALYSIS_PLANE_CLOSURE.md",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/ANALYSIS_PLANE_CLOSURE.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/NONSTABLE_PLANES64.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/PLANES64_RESULT.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/AFFINE_PATTERNS.json",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/affine_patterns.txt",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_gate/prepare_planes64.py",
+      "research/ddp/more_graphs_20261027/h9_redei15/nonstable_longside_production/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/bind_source.py",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/RESULT.json",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/fold13_classes.json",
+      "research/ddp/more_graphs_20261027/d13_D5_h9_transfer/CORE_COVER_TRANSFER.md"
+    ],
+    "capture_screen": "clean",
+    "target_is_multivalued": true,
+    "scope": "当前42402/cap12上所有非Frobenius稳定奇异平面中的projective Rédei15 whole-class邻域、总pins<=12：cardinality强制3内部phi pairs及完整6点longside；64合法交线×6planes×15552项目参数经486/mask精确去重，共186624实际mask tests覆盖5971968原参数。D13先全3640line cap4门，并用当前全局singleton/phi-pair绑定加强为任意单奇异平面15点whole-class总pins<=13不可合法。",
+    "failure_or_result": "D12首门64线非空但完整384plane pool degreelegal0，0C12/0R4/0graph/0solver。D13 cap4首门0：1764条三pair全merge且3pin全满，1876条三pair全split，无mixed；引用全局D13 fiber绑定推出更强15点plane-set界。0新sourceBFS。",
+    "lesson_and_restart_condition": "非稳定几何和完整projectivity域确实存在，首门非空不保证off-line9类能同时unsplit/free。D12本非稳定plane Rédei15 wholeclosure族已完整关闭；不续anchors/planes。D13强结论依赖实际全局fiber绑定与全3640line统计，不借旧12map或未恢复orientation。",
+    "unclosed_gap": "稳定plane的任意PGL3(F9) placements、其它blockers、少于15raw点、multi-plane或实质不同协作规则未被该结论排除；不自动执行。",
+    "outcome_class": "complete-degree-pool-empty-with-data-bound-closure-theorems-no-graph",
+    "other_metrics": {
+      "actual_planes": 384,
+      "projectivity_parameters_per_plane": 15552,
+      "affine_masks_per_plane": 486,
+      "parameter_multiplicity_per_mask": 32,
+      "actual_mask_tests": 186624,
+      "raw_projectivity_parameters_covered": 5971968,
+      "degree_legal_neighborhoods": 0,
+      "R4_calls": 0,
+      "source_BFS": 0,
+      "solver_calls": 0,
+      "candidate_graphs": 0,
+      "D13_gate_eligible": 0,
+      "D13_stronger_plane15_theorem": true,
+      "D12_all_nonstable_plane_Redei15_scope_closed": true,
+      "sourcebound_D13_fibers_required": true,
+      "oriented_D13_raw_graph_map_assumed": false,
+      "checkpoint_CPU_subtotal_seconds": 0.5556526509999999,
+      "CPU_accounting_note": "aggregate_CPU_seconds is the sum of recorded preparation checkpoints and the completed production process; initial gate optional-diagnostic serialization overhead after its checkpoint was not separately timed. It is not asserted as exact entire-pipeline process usage. Gate had10CPU hardlimit; all other recorded work was subsecond, far below60CPU budget.",
+      "initial_gate_exit_code": 1,
+      "initial_gate_failure_phase": "optional per-line numeric diagnostic serialization after RESULT and both eligible pools were already complete",
+      "gate_numerical_repeat": false,
+      "new_lower_bound_mathematically_verified": false,
+      "record_not_independent_method_count": true
+    }
+  }
+]

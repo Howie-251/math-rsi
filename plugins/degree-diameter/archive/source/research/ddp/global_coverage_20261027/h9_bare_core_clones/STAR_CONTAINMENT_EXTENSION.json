@@ -1,0 +1,27 @@
+{
+  "status": "PROVED_BY_EXISTING_PACKING_CERTIFICATE_NO_NEW_COMPUTATION",
+  "retained_core_order": 41356,
+  "degree_cap": 12,
+  "condition": "For each countednewpoint i, some v in K satisfies NK(v) subseteq Ai=NG(i) intersect K.",
+  "prototype_choice": "Choose exactly one qualifyingcorevertex per countedpoint; choice may be arbitrary.",
+  "inequality": "sum_{v in NK(u)}t_v <= number of countednewneighbors of u <=12-degreeK(u)",
+  "global_star_containing_newpoints_upper_bound": 343,
+  "all_star_containing_total_order_upper_bound": 41699,
+  "upper_bound_attained_by_ordinary_clones": true,
+  "extra_core_anchors_allowed": true,
+  "new_new_edges_allowed": true,
+  "mixed_nonstar_points_allowed_for_subcount_bound": true,
+  "global_D5_guarantee_for_allstar_class": "The ordinarytwin spanning subgraph has D<=5, and addingedges cannot increase distance.",
+  "current986_extras_require_at_least_nonstar": 643,
+  "strict_improvement987_extras_require_at_least_nonstar": 644,
+  "nonstar_definition": "For every v in K, NK(v) is not a subset of Ai.",
+  "scope_exclusions": [
+    "Not all pencil vertices necessarily contain a completecorestar",
+    "Reverse inclusion Ai subseteq NK(v) is insufficient",
+    "Deletingcoreedges or changingthecore is outside this certificate"
+  ],
+  "iterative_scope": "Repeatedclones+anchors covered only if each newpoint retains a traceable fullcorestar.",
+  "new_optimization_calls": 0,
+  "new_BFS_calls": 0,
+  "new_candidate_graphs": 0
+}

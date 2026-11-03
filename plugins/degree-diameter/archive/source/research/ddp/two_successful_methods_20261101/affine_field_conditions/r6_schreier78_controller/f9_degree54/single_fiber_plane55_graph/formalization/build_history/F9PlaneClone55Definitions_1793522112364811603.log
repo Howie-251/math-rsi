@@ -1,0 +1,40 @@
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:11:49: error(lean.unknownIdentifier): Unknown identifier `finProdFinEquiv`
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:21:34: error(lean.unknownIdentifier): Unknown identifier `finSumFinEquiv`
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:23:0: error: Not a definitional equality: the left-hand side
+  ↑(cloneLabel (a, b))
+is not definitionally equal to the right-hand side
+  ↑b + 9 * ↑a
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:23:78: error: Type mismatch
+  rfl
+has type
+  ?m.23 = ?m.23
+but is expected to have type
+  ↑(cloneLabel (a, b)) = ↑b + 9 * ↑a
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:24:0: error: Not a definitional equality: the left-hand side
+  ↑(label (Sum.inl v))
+is not definitionally equal to the right-hand side
+  ↑v
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:24:68: error: Type mismatch
+  rfl
+has type
+  ?m.10 = ?m.10
+but is expected to have type
+  ↑(label (Sum.inl v)) = ↑v
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:25:0: error: Not a definitional equality: the left-hand side
+  ↑(label (Sum.inr i))
+is not definitionally equal to the right-hand side
+  56862 + ↑i
+DegreeDiameter/Portfolio/F9PlaneClone55Definitions.lean:25:75: error: Type mismatch
+  rfl
+has type
+  ?m.14 = ?m.14
+but is expected to have type
+  ↑(label (Sum.inr i)) = 56862 + ↑i
+def DegreeDiameter.Portfolio.F9PlaneClone55.center : CloneIndex → Fin 56862 :=
+fun i => liftAt 0 (encodeVec (plane (parameters i 0)))
+def DegreeDiameter.Portfolio.F9PlaneClone55.graph : SimpleGraph Vertex :=
+FullNeighborhoodClones.graph F9Graph56862.graph center
+def DegreeDiameter.Portfolio.F9PlaneClone55.label : Vertex ≃ Fin 56943 :=
+sorry
+def DegreeDiameter.Portfolio.F9PlaneClone55.FinalClaim : Prop :=
+Fintype.card Vertex = 56943 ∧ (∀ (v : Vertex), graph.degree v ≤ 55) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

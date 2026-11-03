@@ -1,0 +1,12 @@
+{
+  "prediction_id": "P_Qline",
+  "frozen_before_coordinate_generation_and_line_test": true,
+  "subject_vertices": {"first": 41502, "last": 42176, "count": 675},
+  "statement": "Every one of the675 original non-star extras has a core-neighbor set A_i containing the full partial-fold image of a projective line contained in the ambient quadric Q(6,9). Extra pins may be anchors.",
+  "first_falsifier": 41502,
+  "complete_candidate_rule": "Enumerate all pairs of distinct core pins and all original point lifts of each pair. Their projective span is the only possible line. Generate all10 points, verify the quadric equation, and test that all10 folded images belong to A_i.",
+  "completeness": "A partial fold identifies at most2 original points per core vertex. A10-point line thus has at least5 distinct images, so any qualifying line contains a pair of distinct A_i pins. Enumerating every such pair and its lifts covers lines even when A_i has anchors or the line image has fewer than10 vertices.",
+  "positive_scope_if_matched": "Identifies adjacency geometry of an existing successful source only. Ambient quadric lines are not automatically H9 incidence lines; neither old-new nor new-new D5 follows from a match alone.",
+  "budget": {"workers": 1, "CPU_seconds_hard": 60, "stop_at_first_failed_vertex": true},
+  "forbidden_operations": ["full_H9_incidence_line_generation", "default_verifier_import", "BFS", "new_graph", "optimization", "external_search", "hashes"]
+}

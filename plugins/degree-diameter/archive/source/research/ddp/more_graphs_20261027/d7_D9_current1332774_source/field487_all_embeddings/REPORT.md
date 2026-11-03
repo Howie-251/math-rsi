@@ -1,0 +1,13 @@
+# FixedF487 source transfer: all18 actions failD9
+
+The frozen prediction of at least one complete hit is refuted for this exact family. All18 primitive54 field actions were tested, each by direct actual implicit identity-radius9 BFS of a1498986-vertex,5246451-edge Cayley graph. **Zero hits;18 tested;zero untested or UNKNOWN.** The source graph was not rebuilt or BFS-verified.
+
+The source is the actual primary C54/normal24681 recipe, not the factorization-based C162 guess. Its field-only conjugacy and scale preserve the C57 controller. The fixed target uses LEFT law, small action47, field prime487, phases33/2/16, normal57 values10/2/2 and field values1/-155/-56, with involution phase27/smallnormal19/field0. All source/gauge constants are in the parent directory. `EXECUTION_MODEL.json` specifies the actual target graph and canonical labels.
+
+Before each BFS, code computes true inverse darts from the current action and checks component/full-normal multiplication. The seven distinct nonzero phases prove simplicity and degree7. Connectivity is a paper consequence of the fixed generators, independently of their radius9 outcome. Component shifts57/487 and phase transitions are precomputed and combined byCRT, then actual graph neighbours are scanned. This is not a formal-word or thin-image proxy.
+
+Every radius9 check fails. Counts outside the identity radius9 range from 116 to 221; all18 counts and their first missing IDs are retained in `CASES.jsonl` and per-case JSON. These are root-state counts, not ordinary unordered bad-pair totals. No negative graph's exact global diameter was computed: aggregate and per-case globalD remain null. In particular the result must not be called exactD10. The Cayley left action makes each actual failure a valid D9 rejection for that graph.
+
+The native body used 0.628528 CPU seconds; full native-process usage was 0.634574. Compilation was recorded separately at 0.771135 CPU seconds. One worker had a hard60CPU limit, exited0, and checkpoint cursor18 is terminal; exec session11091 has completed. There was one compile and one native batch, no oldsource BFS, no retry, no solver and no follow-on prime/vector/phase test. The complete graph formula is saved, but no failed edge lists were exported.
+
+This closes exactly field487, all18 primitive54 embeddings, the preserved C57/phase54 controller and the frozen field vector1/-155/-56. It does not exclude other normal vectors, phase frames, fields or generalN(7,9). There is no new lower bound. The raw Wiki input is one family record including its source/gauge stage, not an extra row per layer or action.

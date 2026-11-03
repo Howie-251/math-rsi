@@ -1,0 +1,932 @@
+{
+  "field": {
+    "characteristic": 3,
+    "order": 9,
+    "presentation": "F3[w]/(w^2+1)",
+    "encoding": "a+3b represents a+bw, a,b in0..2",
+    "multiplication": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        2,
+        1,
+        6,
+        8,
+        7,
+        3,
+        5,
+        4
+      ],
+      [
+        0,
+        3,
+        6,
+        2,
+        5,
+        8,
+        1,
+        4,
+        7
+      ],
+      [
+        0,
+        4,
+        8,
+        5,
+        6,
+        1,
+        7,
+        2,
+        3
+      ],
+      [
+        0,
+        5,
+        7,
+        8,
+        1,
+        3,
+        4,
+        6,
+        2
+      ],
+      [
+        0,
+        6,
+        3,
+        1,
+        7,
+        4,
+        2,
+        8,
+        5
+      ],
+      [
+        0,
+        7,
+        5,
+        4,
+        2,
+        6,
+        8,
+        3,
+        1
+      ],
+      [
+        0,
+        8,
+        4,
+        7,
+        3,
+        2,
+        5,
+        1,
+        6
+      ]
+    ],
+    "inverses": [
+      0,
+      1,
+      2,
+      6,
+      5,
+      4,
+      3,
+      8,
+      7
+    ]
+  },
+  "port_parameters": [
+    "inf",
+    0,
+    1,
+    2,
+    3,
+    6
+  ],
+  "port_vectors": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      6,
+      2
+    ]
+  ],
+  "forward_edge_relation": "y=T_plus[p] x + noise ell_p; reverse uses T_minus_exact_inverse[p]",
+  "orientation_convention": "For each edge of each self-inverse matching port, choose one direction; positive usesT_plus, negative usesT_minus_exact_inverse.",
+  "charts": [
+    {
+      "port_index": 0,
+      "port_parameter": "inf",
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "complement": [
+        "inf",
+        4,
+        5,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "f_plus_images_in_B_order": [
+        "inf",
+        5,
+        7,
+        4,
+        8
+      ],
+      "Q_plus": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "H": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "H_inverse": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "T_plus": [
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    },
+    {
+      "port_index": 1,
+      "port_parameter": 0,
+      "B": [
+        "inf",
+        1,
+        2,
+        3,
+        6
+      ],
+      "complement": [
+        0,
+        4,
+        5,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "f_plus_images_in_B_order": [
+        0,
+        5,
+        7,
+        4,
+        8
+      ],
+      "Q_plus": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "H": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "H_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "T_plus": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    },
+    {
+      "port_index": 2,
+      "port_parameter": 1,
+      "B": [
+        "inf",
+        0,
+        2,
+        3,
+        6
+      ],
+      "complement": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        1,
+        4,
+        8,
+        2
+      ],
+      "f_plus_images_in_B_order": [
+        7,
+        8,
+        1,
+        4,
+        5
+      ],
+      "Q_plus": [
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "H": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "H_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "T_plus": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          7,
+          6,
+          6
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          8,
+          2
+        ],
+        [
+          5,
+          4,
+          4
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          4,
+          0
+        ],
+        [
+          6,
+          0,
+          4
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    },
+    {
+      "port_index": 3,
+      "port_parameter": 2,
+      "B": [
+        "inf",
+        0,
+        1,
+        3,
+        6
+      ],
+      "complement": [
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        1,
+        4,
+        8,
+        2
+      ],
+      "f_plus_images_in_B_order": [
+        7,
+        8,
+        2,
+        4,
+        5
+      ],
+      "Q_plus": [
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "H": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "H_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "T_plus": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          7,
+          8
+        ],
+        [
+          3,
+          7,
+          5
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          2
+        ],
+        [
+          4,
+          6,
+          3
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          6,
+          0,
+          4
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    },
+    {
+      "port_index": 4,
+      "port_parameter": 3,
+      "B": [
+        "inf",
+        0,
+        1,
+        2,
+        6
+      ],
+      "complement": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        1,
+        4,
+        4,
+        2
+      ],
+      "f_plus_images_in_B_order": [
+        5,
+        8,
+        4,
+        7,
+        3
+      ],
+      "Q_plus": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "H": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          6,
+          1
+        ]
+      ],
+      "H_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ],
+      "T_plus": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          4
+        ],
+        [
+          8,
+          2,
+          3
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          4,
+          4,
+          7
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          7,
+          0
+        ],
+        [
+          6,
+          0,
+          7
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    },
+    {
+      "port_index": 5,
+      "port_parameter": 6,
+      "B": [
+        "inf",
+        0,
+        1,
+        2,
+        3
+      ],
+      "complement": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "halfset_orbit_id": 0,
+      "f_plus_coefficients": [
+        1,
+        4,
+        4,
+        2
+      ],
+      "f_plus_images_in_B_order": [
+        5,
+        8,
+        4,
+        7,
+        6
+      ],
+      "Q_plus": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "H": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      "H_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          1,
+          0
+        ],
+        [
+          2,
+          6,
+          1
+        ]
+      ],
+      "T_plus": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          3,
+          5,
+          8
+        ]
+      ],
+      "T_minus_exact_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          5,
+          2,
+          6
+        ]
+      ],
+      "T_plus_squared": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          6,
+          0,
+          7
+        ]
+      ],
+      "T_plus_squared_is_identity": false
+    }
+  ]
+}

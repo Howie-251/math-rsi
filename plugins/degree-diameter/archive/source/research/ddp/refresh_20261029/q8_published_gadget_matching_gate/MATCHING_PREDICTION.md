@@ -1,0 +1,9 @@
+# 从作者成功K64中保留三步路径的删边门
+
+新q8辅助图的全跨pencil二因子模型90秒UNKNOWN，未续算。现在使用作者已成功的K64/6regular：96条cube边固定，96条额外三regular边允许删除，目标每点删除一条额外边，得到K64/5regular且D≤3。若有正例，再按Theorem1生成1088/13主图。
+
+先枚举实际source64的全部简单≤3路径，逐pair记录每条路径的额外边集合；若某额外边在一对端点的所有短路径中出现，则它D3-critical、不可删。若某vertex的三条额外边都不可删，立即停止，无需SAT。否则只对96个删边变量建一个perfectmatching+每pair至少一条路径存活的完整小模型；原1792边模型不重启。
+
+预测：成功source的冗余短路允许至少一个不破坏D3的额外perfectmatching。该预测若被critical门或精确模型否定，只关闭此固定published K64的纯删减域，不排一般二因子或q8 fibre方法。
+
+本门仅64点source路径枚举，CPU预算≤20秒（含唯一可能的SAT-t10），与此前q8组约91.4秒合计不超120CPU。无main1088原图重验、无颜色/field/seed变化。sourcecredit与Range读取另存原回执。

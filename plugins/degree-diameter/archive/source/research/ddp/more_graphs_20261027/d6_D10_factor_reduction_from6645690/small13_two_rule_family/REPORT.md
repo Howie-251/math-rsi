@@ -1,0 +1,19 @@
+# Old6641680 fixed-core F13 replacement: both complete families fail
+
+The complete two-rule batch tested225 normalized settings for degree6/D10 and225 for degree7/D9, alternating the rules for each parameter. All450 implicit target graphs failed their assigned identity radius. Zero objects are unvisited or UNKNOWN; no new lower bound, hit distance file or failed-graph edge export was produced. Exact larger global diameters and ordinary unordered bad-pair totals remain uncomputed/null.
+
+This uses the actual old6641680 primary recipe, not an invented factorization of current6645690. The fixed core is F1361 semidirect_317 C80, with positive normal/phase pairs(824,38),(625,3),(1089,58), and h=(1109,40). The small component is F13. True inverses were computed in that field; h has forced smallnormal0. The already completed108880-core gates, including minima67/81 and generation, were inherited without a new core or old-source BFS.
+
+All four legal actors a^80=1 in F13* are covered. The three nontrivial actors5,8,12 contribute14 normalized P1 classes each; actor1 contributes183 P2 classes. Nontrivial cases were tried first, then trivial ones, using the frozen deterministic ordering. Saved translation/scaling normalization and the nonzero-kernel connectivity proof cover the whole fixed small-coordinate family. Distinct nonzero phases and true inverses give simple graphs of the intended degree. Their common order is1415440, with4246320 or4954040 edges. Current public baselines1394189 for(6,10) and1332774 for(7,9) were checked by parent before this batch; no record is claimed.
+
+The implicit LEFT law is
+(z,t,j)*(w,s,k)=(z+317^j*w mod1361,t+a^j*s mod13,j+k mod80).
+State encoding is id=t+13*(z+1361*j). A shared algebraic core transition table is only a neighbor precomputation, not a core distance traversal. Every actual object received a complete identity R_D traversal. Left Cayley translations make one full identity ball sufficient for the global diameter bound. On failure, CASES.jsonl preserves its exact radius endpoint deficit, layer counts, first missing decoded state and the preselected thin-slot13-bit mask.
+
+Route complementarity is distinct from whole-target success. At the preselected core slots(j17,z395) for degree6 and(j31,z684) for degree7,34 and48 settings respectively cover every one of the13 small coordinates, but all still fail elsewhere. These masks are reads of13 bytes from each already computed distance array, not new word/image enumerations or BFS.
+
+The first missing target is in the identity-core fiber(j0,z0,t!=0) for396/450 objects, **not all450**. The other54 objects have first_missing_id>=13, so their entire identity-core13fiber is covered at the assigned radius and their first deficit lies elsewhere. The first counterexample to a universal return-fiber explanation is object2: actor5,smallnormals[0,1,0],degree6D10, firstmissing373=(j0,z28,t9). Its thinmask7103 has popcount11. Therefore neither the selected thin slot nor the identity return fiber alone explains the complete family obstruction; closure comes from all450 full target radius decisions.
+
+Measured workerCPU13.2292seconds; compilation4.369663; whole child processes17.601028 and driver0.005371632, aggregate17.606401823seconds, below120. Worker PID385538/session85431 ended exit0. There were no solvers, oldsource/core BFS, extra fields or continued parameters. Negative graph globalD stays null. The generator script is saved for deterministic reconstruction; it was not run to print millions of failed edges.
+
+The source audit, core gates, normalization and this target batch are one family history. The old unexecuted report/PRED remains historical evidence; this new directory records the later executed outcome. The combined raw keeps the existing family id. Stop this complete finite class without pursuing the smallest radius deficit or a new seed.

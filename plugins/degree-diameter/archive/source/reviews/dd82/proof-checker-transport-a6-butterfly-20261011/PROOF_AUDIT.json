@@ -1,0 +1,183 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All four submitted paper claims pass within their explicit scopes; Brown finite premise independently reproduced. Same-family provisional, no Lean or cross-family acceptance.",
+  "agent_id": "/root/proof_review_transport_a6_butterfly",
+  "thread_id": "/root/proof_review_transport_a6_butterfly",
+  "executor_model": "Codex; exact backend variant not attested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "reviewer_model_metadata": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "ultra",
+    "fork_turns": "none",
+    "actual_returned_model": null,
+    "actual_returned_reasoning_effort": null,
+    "opaque_agent_id": null,
+    "canonical_task_name": "/root/proof_review_transport_a6_butterfly",
+    "provenance": "Parent reports exact spawn arguments; spawn response exposed only task_name. No backend attestation is available."
+  },
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "context_independence": {
+    "fresh_context": true,
+    "inherited_author_history": false,
+    "parent_task_contained_short_proof_outline": true,
+    "judgment_basis": "Full primary files and load-bearing dependencies read directly; no previous audit verdict used as evidence."
+  },
+  "generated_at": "2026-10-11T09:08:35.156874+00:00",
+  "trace_path": "reviews/dd82/proof-checker-transport-a6-butterfly-20261011",
+  "primary_inputs": [
+    "proofs/dd82/n59/nonzero_support_transport_20261011.md",
+    "proofs/dd82/n59/two_triangles_shared_vertex_reduction_20261011.md",
+    "proofs/dd82/n59/two_triangles_shared_vertex_exclusion_20261011.md",
+    "proofs/dd82/construction/BROWN_R9_SIX_III_OBSTRUCTION.md",
+    "computations/dd82/construction/brown_r9_a6_domination.cpp",
+    "computations/dd82/construction/brown_r9_a6_domination.json"
+  ],
+  "dependency_inputs_read_fully": [
+    "proofs/dd82/n59/n15_heavy_endpoints_avoid_two_triangles_20261011.md",
+    "proofs/dd82/n59/matching_zero_global_trace_obstruction_20261011.md",
+    "proofs/dd82/n59/two_triangles_shared_edge_exclusion_20261011.md",
+    "proofs/dd82/construction/BROWN_EIGHT_DELETE_OBSTRUCTION.md",
+    "proofs/dd82/construction/BROWN_EXTENSION_OBSTRUCTION.md",
+    "computations/dd82/construction/brown_eight_delete_facts.py",
+    "computations/dd82/construction/brown57.edges"
+  ],
+  "workflow_inputs": [
+    "AGENTS.md",
+    ".agents/skills/proof-checker/SKILL.md",
+    ".agents/skills/shared-references/reviewer-routing.md",
+    ".agents/skills/shared-references/reviewer-independence.md",
+    ".agents/skills/shared-references/assurance-contract.md",
+    ".agents/skills/shared-references/fan-out-pattern.md",
+    ".aris/installed-skills-codex.txt"
+  ],
+  "input_tracking_policy": "No hashes, checksums, or artifact manifest generated, per explicit user instruction.",
+  "details": {
+    "papers_audited": 4,
+    "top_level_and_local_claim_groups": [
+      {
+        "id": "T1",
+        "input": "proofs/dd82/n59/nonzero_support_transport_20261011.md",
+        "verdict": "PASS",
+        "statement": "Every root of an original legal n59 graph satisfying actual N15 at every zero-triangle vertex obeys the three exact transport/support conclusions, the remainder formula, and the displayed trace consequences.",
+        "scope": "No N15 imposed at nonzero roots; no universal derivation of zero-row N15."
+      },
+      {
+        "id": "T2",
+        "input": "proofs/dd82/n59/two_triangles_shared_vertex_reduction_20261011.md",
+        "verdict": "PASS",
+        "statement": "Under the preceding hypotheses and exactly two triangles sharing precisely one vertex, the actual row/transport parameters satisfy one of Templates I–III up to the stated relabeling, with the claimed private-neighborhood interpretation.",
+        "scope": "Necessary parameter classification, not realizability; superseded by T4 as an exclusion route."
+      },
+      {
+        "id": "T3_T4",
+        "input": "proofs/dd82/n59/two_triangles_shared_vertex_exclusion_20261011.md",
+        "verdict": "PASS",
+        "statement": "The stated local one-triangle root with six private zero neighbors and two weight-two zero nonedge repeats is impossible; consequently exactly two triangles sharing precisely one vertex are impossible under global zero-row N15.",
+        "scope": "Disjoint T=2, higher triangle counts, upstream N15 applicability, and unconditional n59 nonexistence remain open."
+      },
+      {
+        "id": "B1_B4",
+        "input": "proofs/dd82/construction/BROWN_R9_SIX_III_OBSTRUCTION.md",
+        "verdict": "PASS",
+        "statement": "A degree-at-most-eight diameter-at-most-two graph on the fixed labeled Brown57 vertices plus one new vertex cannot delete exactly nine old edges while destroying exactly six distinct III triangles.",
+        "scope": "Only the r9/a6 branch; no r>=10 necessity or arbitrary order58 exclusion."
+      }
+    ],
+    "issues": [],
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "proof_obligation_ledger": "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/PROOF_SKELETON.md",
+    "counterexample_pass": "Completed; attempts and hypothesis checks recorded in PROOF_AUDIT.md. No verified counterexample or unresolved candidate.",
+    "dependency_dag": "acyclic",
+    "finite_exact_arithmetic": true,
+    "limit_probability_asymptotic_obligations": "not applicable",
+    "computed_checks": [
+      {
+        "name": "Independent Python decomposition",
+        "command": "timeout 30s python3 - <<'PY'\nfrom pathlib import Path\np = Path('reviews/dd82/proof-checker-transport-a6-butterfly-20261011/INDEPENDENT_CHECK.md')\nsource = p.read_text().split('```python\\n', 1)[1].split('\\n```', 1)[0]\nexec(compile(source, str(p), 'exec'))\nPY",
+        "exit_code": 0,
+        "source": "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/INDEPENDENT_CHECK.md",
+        "result": "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/INDEPENDENT_CHECK.json",
+        "families": 14,
+        "external_cases": 4802,
+        "nodes": 4802,
+        "dominating_8_sets": 0,
+        "wall_seconds": 0.12605375424027443,
+        "cpu_seconds": 0.126039,
+        "peak_rss_kib": 12460,
+        "timeout_seconds": 30,
+        "processes": 1,
+        "sat_solver_calls": 0
+      },
+      {
+        "name": "Submitted C++ reproduction",
+        "command": "g++ -O3 -std=c++17 computations/dd82/construction/brown_r9_a6_domination.cpp -o /tmp/dd82_a6_review_20261011 && timeout 30s /tmp/dd82_a6_review_20261011 computations/dd82/construction/brown57.edges",
+        "exit_code": 0,
+        "compile_and_run_tool_wall_seconds": 1.2588833689999999,
+        "timeout_seconds": 30,
+        "processes": 1,
+        "families": 14,
+        "nodes_by_family": [
+          83,
+          85,
+          83,
+          84,
+          93,
+          83,
+          81,
+          87,
+          91,
+          83,
+          84,
+          83,
+          84,
+          85
+        ],
+        "nodes_total": 1189,
+        "dominating_8_sets": 0,
+        "deletion_compatible_sets": 0,
+        "sat_solver_calls": 0
+      }
+    ],
+    "read_commands": [
+      "cat AGENTS.md .agents/skills/proof-checker/SKILL.md",
+      "cat .agents/skills/shared-references/{reviewer-routing,reviewer-independence,assurance-contract,fan-out-pattern}.md",
+      "cat (all primary_inputs listed above)",
+      "cat (all dependency_inputs_read_fully listed above)",
+      "nl -ba (the four theorem-bearing primary papers)",
+      "rg -n N15/original-legal/root-bound scope definitions in proofs/dd82/n59 and Brown papers; rg --files for relevant edges and endpoint sources"
+    ],
+    "files_written": [
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/PROOF_AUDIT.md",
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/PROOF_AUDIT.json",
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/PROOF_SKELETON.md",
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/PROOF_CHECK_STATE.json",
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/INDEPENDENT_CHECK.md",
+      "reviews/dd82/proof-checker-transport-a6-butterfly-20261011/INDEPENDENT_CHECK.json"
+    ],
+    "author_papers_edited": false,
+    "formal_files_edited": false,
+    "external_consultations": 0,
+    "wiki_integration": "Delegated to parent for central integration; this reviewer left wiki untouched.",
+    "open_research_goal": "exactN(8,2) remains open",
+    "not_established": [
+      "Universal zero-row N15",
+      "Unconditional order59 nonexistence",
+      "Disjoint two-triangle exclusion",
+      "All higher triangle counts",
+      "Complete Brown r9 exclusion",
+      "Necessity of at least ten Brown deletions",
+      "Arbitrary order58 nonexistence",
+      "Lean formalization",
+      "Cross-family semantic acceptance"
+    ]
+  }
+}

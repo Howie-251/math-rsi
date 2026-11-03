@@ -1,0 +1,21 @@
+def DegreeDiameter.defectMatrix.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Matrix V V ℤ :=
+fun {V} [Fintype V] G =>
+  DegreeDiameter.adjacencyMatrix G * DegreeDiameter.adjacencyMatrix G + DegreeDiameter.adjacencyMatrix G - 7 • 1 -
+    DegreeDiameter.onesMatrix
+def DegreeDiameter.unitNonedgePairs.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset (Finset V) :=
+fun {V} [Fintype V] G => {P | ∃ x y, x ≠ y ∧ ¬G.Adj x y ∧ DegreeDiameter.defectMatrix G x y = 1 ∧ P = {x, y}}
+def SimpleGraph.cliqueFinset.{u_1} : {α : Type u_1} →
+  (G : SimpleGraph α) → [Fintype α] → [DecidableEq α] → [DecidableRel G.Adj] → ℕ → Finset (Finset α) :=
+fun {α} G [Fintype α] [DecidableEq α] [DecidableRel G.Adj] n => {s | G.IsNClique n s}
+@DegreeDiameter.n62_simple_repeat_incidence : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 1) →
+          2 * (DegreeDiameter.unitNonedgePairs G).card + 6 * (G.cliqueFinset 3).card = 186
+@DegreeDiameter.no_n62_simple_defect_graph : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → (∀ (x y : V), DegreeDiameter.defectMatrix G x y ≤ 1) → False
+'DegreeDiameter.n62_simple_repeat_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.no_n62_simple_defect_graph' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,695 @@
+{
+  "status": "EXACT_SMALL_TABLE_CLASSIFICATION_PASS",
+  "scope": "only one or two full-plane deletions from this U10; arbitrary partial centers in all other fibers",
+  "outside_controllers_with_at_most_two_blockers": {
+    "30": {
+      "original_blocking_planes": [
+        61
+      ],
+      "shared_targets": {
+        "61": [
+          25
+        ]
+      }
+    },
+    "43": {
+      "original_blocking_planes": [
+        74
+      ],
+      "shared_targets": {
+        "74": [
+          12
+        ]
+      }
+    },
+    "33": {
+      "original_blocking_planes": [
+        59,
+        72
+      ],
+      "shared_targets": {
+        "59": [
+          7
+        ],
+        "72": [
+          46,
+          59
+        ]
+      }
+    },
+    "46": {
+      "original_blocking_planes": [
+        59,
+        72
+      ],
+      "shared_targets": {
+        "59": [
+          33,
+          72
+        ],
+        "72": [
+          20
+        ]
+      }
+    }
+  },
+  "focus_case": {
+    "removed": [
+      59,
+      72
+    ],
+    "retained": [
+      31,
+      32,
+      44,
+      45,
+      60,
+      61,
+      73,
+      74
+    ],
+    "occupied_target_fibers": [
+      0,
+      1,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25,
+      26,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35,
+      38,
+      39,
+      41,
+      42,
+      44,
+      45,
+      47,
+      48,
+      51,
+      53,
+      54,
+      57,
+      58,
+      60,
+      61,
+      63,
+      64,
+      66,
+      67,
+      70,
+      71,
+      73,
+      74,
+      76,
+      77
+    ],
+    "free_target_fibers": [
+      2,
+      3,
+      4,
+      7,
+      10,
+      15,
+      16,
+      17,
+      20,
+      23,
+      27,
+      30,
+      33,
+      36,
+      37,
+      40,
+      43,
+      46,
+      49,
+      50,
+      52,
+      55,
+      56,
+      59,
+      62,
+      65,
+      68,
+      69,
+      72,
+      75
+    ],
+    "admissible_controllers": [
+      33,
+      46,
+      59,
+      72
+    ],
+    "admissible_count": 4,
+    "additional_normalized_optimum": "2",
+    "additional_center_capacity": "162",
+    "baseline_additional_centers": 162,
+    "center_gap": "0",
+    "total_center_capacity": "810",
+    "primal_normalized": {
+      "59": "1",
+      "72": "1"
+    },
+    "primal_center_weights": {
+      "59": "81",
+      "72": "81"
+    },
+    "dual_target_multipliers": {
+      "33": "1",
+      "46": "1"
+    },
+    "dual_upper_bound_multipliers": {},
+    "exact_fraction_certificate_PASS": true,
+    "linprog_iterations": 3
+  },
+  "focus_conflict_graph": "C4=59--33--72--46--59",
+  "focus_edges": [
+    {
+      "controllers": [
+        33,
+        59
+      ],
+      "shared_targets": [
+        7
+      ],
+      "actual_darts": [
+        {
+          "target": 7,
+          "left": {
+            "source": 33,
+            "target": 7,
+            "source_port": 3,
+            "source_port_name": "b_minus",
+            "target_port": 2,
+            "target_port_name": "b_plus",
+            "chart": 3,
+            "chart_id": "cross_2_3_reverse",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                4,
+                2
+              ],
+              [
+                5,
+                8,
+                4
+              ]
+            ],
+            "noise_direction": [
+              1,
+              1,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 59,
+            "target": 7,
+            "source_port": 2,
+            "source_port_name": "b_plus",
+            "target_port": 3,
+            "target_port_name": "b_minus",
+            "chart": 2,
+            "chart_id": "cross_2_3_forward",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                7,
+                6,
+                6
+              ]
+            ],
+            "noise_direction": [
+              1,
+              2,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        }
+      ]
+    },
+    {
+      "controllers": [
+        33,
+        72
+      ],
+      "shared_targets": [
+        46,
+        59
+      ],
+      "actual_darts": [
+        {
+          "target": 46,
+          "left": {
+            "source": 33,
+            "target": 46,
+            "source_port": 5,
+            "source_port_name": "t",
+            "target_port": 5,
+            "target_port_name": "t",
+            "chart": 6,
+            "chart_id": "self_5_plus",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                4,
+                4
+              ],
+              [
+                3,
+                5,
+                8
+              ]
+            ],
+            "noise_direction": [
+              1,
+              6,
+              2
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 72,
+            "target": 46,
+            "source_port": 3,
+            "source_port_name": "b_minus",
+            "target_port": 2,
+            "target_port_name": "b_plus",
+            "chart": 3,
+            "chart_id": "cross_2_3_reverse",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                4,
+                2
+              ],
+              [
+                5,
+                8,
+                4
+              ]
+            ],
+            "noise_direction": [
+              1,
+              1,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        },
+        {
+          "target": 59,
+          "left": {
+            "source": 33,
+            "target": 59,
+            "source_port": 2,
+            "source_port_name": "b_plus",
+            "target_port": 3,
+            "target_port_name": "b_minus",
+            "chart": 2,
+            "chart_id": "cross_2_3_forward",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                7,
+                6,
+                6
+              ]
+            ],
+            "noise_direction": [
+              1,
+              2,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 72,
+            "target": 59,
+            "source_port": 4,
+            "source_port_name": "s",
+            "target_port": 4,
+            "target_port_name": "s",
+            "chart": 5,
+            "chart_id": "self_4_minus",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                5,
+                3
+              ],
+              [
+                4,
+                4,
+                7
+              ]
+            ],
+            "noise_direction": [
+              1,
+              3,
+              2
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        }
+      ]
+    },
+    {
+      "controllers": [
+        46,
+        59
+      ],
+      "shared_targets": [
+        33,
+        72
+      ],
+      "actual_darts": [
+        {
+          "target": 33,
+          "left": {
+            "source": 46,
+            "target": 33,
+            "source_port": 5,
+            "source_port_name": "t",
+            "target_port": 5,
+            "target_port_name": "t",
+            "chart": 7,
+            "chart_id": "self_5_minus",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                2,
+                3,
+                3
+              ],
+              [
+                5,
+                2,
+                6
+              ]
+            ],
+            "noise_direction": [
+              1,
+              6,
+              2
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 59,
+            "target": 33,
+            "source_port": 3,
+            "source_port_name": "b_minus",
+            "target_port": 2,
+            "target_port_name": "b_plus",
+            "chart": 3,
+            "chart_id": "cross_2_3_reverse",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                4,
+                2
+              ],
+              [
+                5,
+                8,
+                4
+              ]
+            ],
+            "noise_direction": [
+              1,
+              1,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        },
+        {
+          "target": 72,
+          "left": {
+            "source": 46,
+            "target": 72,
+            "source_port": 2,
+            "source_port_name": "b_plus",
+            "target_port": 3,
+            "target_port_name": "b_minus",
+            "chart": 2,
+            "chart_id": "cross_2_3_forward",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                7,
+                6,
+                6
+              ]
+            ],
+            "noise_direction": [
+              1,
+              2,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 59,
+            "target": 72,
+            "source_port": 4,
+            "source_port_name": "s",
+            "target_port": 4,
+            "target_port_name": "s",
+            "chart": 4,
+            "chart_id": "self_4_plus",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                6,
+                6,
+                4
+              ],
+              [
+                8,
+                2,
+                3
+              ]
+            ],
+            "noise_direction": [
+              1,
+              3,
+              2
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        }
+      ]
+    },
+    {
+      "controllers": [
+        46,
+        72
+      ],
+      "shared_targets": [
+        20
+      ],
+      "actual_darts": [
+        {
+          "target": 20,
+          "left": {
+            "source": 46,
+            "target": 20,
+            "source_port": 3,
+            "source_port_name": "b_minus",
+            "target_port": 2,
+            "target_port_name": "b_plus",
+            "chart": 3,
+            "chart_id": "cross_2_3_reverse",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                3,
+                4,
+                2
+              ],
+              [
+                5,
+                8,
+                4
+              ]
+            ],
+            "noise_direction": [
+              1,
+              1,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          },
+          "right": {
+            "source": 72,
+            "target": 20,
+            "source_port": 2,
+            "source_port_name": "b_plus",
+            "target_port": 3,
+            "target_port_name": "b_minus",
+            "chart": 2,
+            "chart_id": "cross_2_3_forward",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                6,
+                4
+              ],
+              [
+                7,
+                6,
+                6
+              ]
+            ],
+            "noise_direction": [
+              1,
+              2,
+              1
+            ],
+            "affine_map": "y=M*x+t*noise_direction, t in F9",
+            "plane_map": "x=(a,b,4a) if restricted to original W; arbitrary center choices also bounded by target capacities"
+          }
+        }
+      ]
+    }
+  ],
+  "covering_constraints": [
+    {
+      "target": 33,
+      "controllers": [
+        46,
+        59
+      ],
+      "rhs": 81
+    },
+    {
+      "target": 46,
+      "controllers": [
+        33,
+        72
+      ],
+      "rhs": 81
+    }
+  ],
+  "single_replacement_constraints": [
+    {
+      "target": 25,
+      "controllers": [
+        30,
+        61
+      ],
+      "rhs": 81
+    },
+    {
+      "target": 12,
+      "controllers": [
+        43,
+        74
+      ],
+      "rhs": 81
+    }
+  ],
+  "field_encoding": "F3[w]/(w^2+1); element a+3b encodes a+bw; 4=1+w, arithmetic never integer mod9",
+  "source_parameters": "../PARAMETERS.json",
+  "point_level_realization_attempted": false
+}

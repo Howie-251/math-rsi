@@ -1,0 +1,86 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 36 obligations in the six-section actual-graph quotient paper are discharged, conditional on its explicit inspected/reused imports. Generated motif, D0 prism, quotient, D1 port and signed-trace conclusions pass; no D1 parity or order-62 exclusion follows.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md",
+      "scope": "All six sections and remaining-gap statement; all 284 lines",
+      "line_count": 284,
+      "size_bytes": 12156,
+      "mtime_utc": "2026-10-11T10:48:01.806544+00:00",
+      "last_line": "at-most-two incidence bounds in Section 4."
+    }
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n62-global-quotient-20261011",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "executor_model": "unattested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_reasoning": "ultra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_family": "openai",
+  "backend_attestation": "Requested model/effort recorded; actual backend metadata unavailable for main reviewer and shard.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T10:58:41.318863+00:00",
+  "details": {
+    "sections_audited": 6,
+    "micro_claims_audited": 36,
+    "micro_claims_discharged": 36,
+    "open_obligations_within_claim": 0,
+    "issues": [],
+    "source_fixes": 0,
+    "parallel_shard": {
+      "agent_id": "/root/proof_review_n62_d1_reduction/signed_spectral_delta",
+      "scope": "Sections 3 and 6 only",
+      "obligation_keys": [
+        "component-eigenspace-equitability",
+        "actual-component-quotient-identity",
+        "quotient-conjugacy-trace",
+        "component-parity-and-bookkeeping",
+        "negative-eigenspace-and-equal-parts",
+        "signed-basis-integrality-and-trace",
+        "signed-internal-count-constancy",
+        "d0-signed-contributions-extra-component"
+      ],
+      "concrete_errors": [],
+      "scope_limit": "Assigned spectral and sign checks only; no whole-paper verdict by shard."
+    },
+    "counterexample_pass": "Generated overlap, odd-order D0 permutation, A component mixing, zero-dimensional eigenspace, signed contribution, mate collision and coincident H/K cases checked; no counterexample found.",
+    "imports": [
+      "Actual graph identities",
+      "Recovered triple-repeat exclusion and root-template coverage",
+      "D2_MATCH and D0_EDGE_BIN exclusions",
+      "Universal triangle pairing",
+      "D0 local closed component theorem",
+      "Hard-D1 complete rows, reroot and C4 light-mate theorem"
+    ],
+    "dependency_status": "Sound modulo explicitly cited paper imports; triple-repeat finite checker not rerun.",
+    "checks_run": [
+      "Complete mathematical review",
+      "Assumption/type/dependency ledger",
+      "Independent spectral shard with eight deduplicated obligations",
+      "Finite-dimensional algebra and targeted degeneracy checks"
+    ],
+    "not_run": [
+      "SAT",
+      "Triple-repeat finite checker",
+      "Lean build",
+      "TeX/PDF/HTML rendering"
+    ],
+    "scope_exclusions": [
+      "Evenness of D1 double-edge count",
+      "Classification of components containing generated triangles",
+      "Arbitrary order-62 exclusion",
+      "Original-graph-to-CNF bridge",
+      "Cross-family acceptance",
+      "Order63–65 work"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "wiki_claim_record": "Shared wiki integration remains with parent; suggested proof status sound-modulo-imports."
+  }
+}

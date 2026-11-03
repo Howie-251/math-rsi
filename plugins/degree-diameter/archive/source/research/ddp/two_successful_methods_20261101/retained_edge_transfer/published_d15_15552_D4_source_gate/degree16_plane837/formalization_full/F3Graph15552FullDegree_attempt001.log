@@ -1,0 +1,18 @@
+DegreeDiameter/Portfolio/F3Graph15552FullDegree.lean:21:40: error: Application type mismatch: The argument
+  inverse_basis p
+has type
+  ∀ (j : Fin 4),
+    act (matrix (inverseType p)) (act (matrix p) (basisVec j)) =
+      basisVec j - basisVec j (pivot (inverseType p)) • direction (inverseType p)
+but is expected to have type
+  ∀ (j : Fin 4), ?m.13 (basisVec j) = ?m.14 (basisVec j)
+in the application
+  linear_map_ext ?m.13 ?m.14 ?m.15 ?m.16 ?m.17 ?m.18 (inverse_basis p)
+DegreeDiameter/Portfolio/F3Graph15552FullDegree.lean:37:2: error: `simp` made no progress
+DegreeDiameter/Portfolio/F3Graph15552FullDegree.lean:66:53: error(lean.unknownIdentifier): Unknown constant `SimpleGraph.mem_neighborFinset.mp`
+'DegreeDiameter.Portfolio.F3Graph15552.degree_le_fifteen' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.source_no_isolated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.Portfolio.F3Graph15552.inverse_action' depends on axioms: [propext, sorryAx, Quot.sound]

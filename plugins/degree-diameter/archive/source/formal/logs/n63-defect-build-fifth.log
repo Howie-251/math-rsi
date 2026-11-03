@@ -1,0 +1,27 @@
+DegreeDiameter/N63Defect.lean:270:2: error: Tactic `rfl` failed: The left-hand side
+  Pi.single (p.getVert p.reverse.length) 1 + Pi.single u 1 - (Pi.single u 1 + Pi.single u 1)
+is not definitionally equal to the right-hand side
+  0
+
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 63
+hreg : G.IsRegularOfDegree 8
+u : V
+p : (n63UnitDefectGraph G hreg).Walk u u
+hp : p.IsCycle
+⊢ Pi.single (p.getVert p.reverse.length) 1 + Pi.single u 1 - (Pi.single u 1 + Pi.single u 1) = 0
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hdeg : degreeAtMostEight G
+hdiam : diameterAtMostTwo G
+hcard : Fintype.card V = 63
+hreg : G.IsRegularOfDegree 8
+u : V
+p : (n63UnitDefectGraph G hreg).Walk u u
+hp : p.IsCycle
+⊢ Pi.single (p.getVert p.reverse.length) 1 + Pi.single u 1 - (Pi.single u 1 + Pi.single u 1) = 0

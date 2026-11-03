@@ -1,0 +1,276 @@
+{
+  "status": "BOUNDED_ENGINEERING_PILOT_COMPLETE",
+  "date": "2026-11-01",
+  "port_accounting_16ports": [
+    {
+      "name": "published_source15552",
+      "switches": 15552,
+      "network_links": 116316,
+      "inherited_degree_histogram": {
+        "14": 648,
+        "15": 14904
+      },
+      "physical_ports_per_switch": 16,
+      "network_port_endpoints": 232632,
+      "available_non_network_switch_port_slots": 16200,
+      "slots_identity_Pn_minus2m": 16200
+    },
+    {
+      "name": "accepted_clone16389",
+      "switches": 16389,
+      "network_links": 128835,
+      "inherited_degree_histogram": {
+        "14": 72,
+        "15": 4410,
+        "16": 11907
+      },
+      "physical_ports_per_switch": 16,
+      "network_port_endpoints": 257670,
+      "available_non_network_switch_port_slots": 4554,
+      "slots_identity_Pn_minus2m": 4554
+    }
+  ],
+  "port_accounting_change": {
+    "switches_added": 837,
+    "network_links_added": 12519,
+    "server_port_slot_change": -11646
+  },
+  "physical3750_24_32ports_inherited": {
+    "24": {
+      "physical_ports_total": 90000,
+      "network_endpoints_used": 75000,
+      "remaining_endpoint_slots": 15000,
+      "slot_increment_vs_source": 0
+    },
+    "32": {
+      "physical_ports_total": 120000,
+      "network_endpoints_used": 75000,
+      "remaining_endpoint_slots": 45000,
+      "slot_increment_vs_source": 0
+    }
+  },
+  "prior_pilot_inherited": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/engineering_pilot/RESULT.json",
+  "new_workload_differs_from_old_pilot": "endpoints floor(i*n/16), unit demand, deterministic single shortest path, one link failure",
+  "graph_literal_parses_for_new_traffic_question": 1,
+  "graph_source": "research/ddp/refresh_20261029/f5_full_d20_D3/graph_d20_D3_n3750.edges",
+  "source_n_inherited": 3750,
+  "source_m_inherited": 37500,
+  "source_degree_diameter_Lean_acceptance": "inherited; no new validity or all-root diameter verification",
+  "workload_endpoints": [
+    0,
+    234,
+    468,
+    703,
+    937,
+    1171,
+    1406,
+    1640,
+    1875,
+    2109,
+    2343,
+    2578,
+    2812,
+    3046,
+    3281,
+    3515
+  ],
+  "ordered_nonself_unit_flows": 240,
+  "routing": "sort neighbors; BFS first parent; one shortest path per flow",
+  "link_capacity_model": "each directed link capacity1, full duplex; independent ideal static link capacities",
+  "baseline": {
+    "routing_BFS_sources": 16,
+    "requested_flows": 240,
+    "reachable_flows": 240,
+    "unreachable_flows": 0,
+    "total_hops_of_routed_flows": 690,
+    "mean_hops_of_routed_flows": 2.875,
+    "peak_directed_link_unit_flow_load": 4,
+    "one_peak_directed_link": [
+      122,
+      1171
+    ],
+    "fixed_route_common_flow_rate_upper_bound": 0.25,
+    "fixed_route_common_flow_rate_exact_fraction": "1/4",
+    "sample_target_expansion_counts": [
+      {
+        "source": 0,
+        "expanded_for_sample_targets": 320
+      },
+      {
+        "source": 234,
+        "expanded_for_sample_targets": 279
+      },
+      {
+        "source": 468,
+        "expanded_for_sample_targets": 324
+      },
+      {
+        "source": 703,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 937,
+        "expanded_for_sample_targets": 328
+      },
+      {
+        "source": 1171,
+        "expanded_for_sample_targets": 330
+      },
+      {
+        "source": 1406,
+        "expanded_for_sample_targets": 329
+      },
+      {
+        "source": 1640,
+        "expanded_for_sample_targets": 319
+      },
+      {
+        "source": 1875,
+        "expanded_for_sample_targets": 240
+      },
+      {
+        "source": 2109,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 2343,
+        "expanded_for_sample_targets": 291
+      },
+      {
+        "source": 2578,
+        "expanded_for_sample_targets": 237
+      },
+      {
+        "source": 2812,
+        "expanded_for_sample_targets": 332
+      },
+      {
+        "source": 3046,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 3281,
+        "expanded_for_sample_targets": 319
+      },
+      {
+        "source": 3515,
+        "expanded_for_sample_targets": 312
+      }
+    ]
+  },
+  "one_link_removed": {
+    "routing_BFS_sources": 16,
+    "requested_flows": 240,
+    "reachable_flows": 240,
+    "unreachable_flows": 0,
+    "total_hops_of_routed_flows": 696,
+    "mean_hops_of_routed_flows": 2.9,
+    "peak_directed_link_unit_flow_load": 4,
+    "one_peak_directed_link": [
+      125,
+      250
+    ],
+    "fixed_route_common_flow_rate_upper_bound": 0.25,
+    "fixed_route_common_flow_rate_exact_fraction": "1/4",
+    "sample_target_expansion_counts": [
+      {
+        "source": 0,
+        "expanded_for_sample_targets": 320
+      },
+      {
+        "source": 234,
+        "expanded_for_sample_targets": 279
+      },
+      {
+        "source": 468,
+        "expanded_for_sample_targets": 324
+      },
+      {
+        "source": 703,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 937,
+        "expanded_for_sample_targets": 328
+      },
+      {
+        "source": 1171,
+        "expanded_for_sample_targets": 408
+      },
+      {
+        "source": 1406,
+        "expanded_for_sample_targets": 329
+      },
+      {
+        "source": 1640,
+        "expanded_for_sample_targets": 319
+      },
+      {
+        "source": 1875,
+        "expanded_for_sample_targets": 240
+      },
+      {
+        "source": 2109,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 2343,
+        "expanded_for_sample_targets": 291
+      },
+      {
+        "source": 2578,
+        "expanded_for_sample_targets": 566
+      },
+      {
+        "source": 2812,
+        "expanded_for_sample_targets": 389
+      },
+      {
+        "source": 3046,
+        "expanded_for_sample_targets": 316
+      },
+      {
+        "source": 3281,
+        "expanded_for_sample_targets": 319
+      },
+      {
+        "source": 3515,
+        "expanded_for_sample_targets": 588
+      }
+    ]
+  },
+  "changes": {
+    "removed_undirected_link": [
+      122,
+      1171
+    ],
+    "baseline_bidirectional_unit_flow_load_on_removed_link": 8,
+    "rerouted_path_count": 8,
+    "max_detour_hops_among_still_routed_flows": 1,
+    "detour_histogram": {
+      "0": 234,
+      "1": 6
+    },
+    "mean_hop_change": 0.02499999999999991,
+    "peak_directed_load_change": 0
+  },
+  "prediction_all_sample_flows_connected_and_max_detour_at_most1": true,
+  "traffic_route_BFS_total": 32,
+  "old_allroot_validity_or_D3_BFS": 0,
+  "source15_or_final16_graph_parses": 0,
+  "scope": "240 fixed sampled flows, one selected failed link, fixed routing and abstract port model; no global fault diameter or allpairs traffic inference",
+  "industrial_advantage_claimed": false,
+  "real_hardware_throughput_measured": false,
+  "wiring_lengths_or_money_cost_measured": false,
+  "new_graph_parameter_Lean_increment": [
+    0,
+    0,
+    0
+  ],
+  "process_CPU_seconds_subtotal_before_receipts": 0.100023721,
+  "conservative_preparation_charge_seconds": 0.2,
+  "cumulative_CPU_seconds_subtotal": 0.300023721,
+  "CPU_budget_seconds": 5.0,
+  "worker_count": 1,
+  "followup_started": false
+}

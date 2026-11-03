@@ -1,0 +1,7 @@
+# Suggested Wiki update: N11 global single-fault family is closed on37631
+
+Add or update one canonical experiment entry for the new global single-fault9pin scope, distinct from the old240 deletions of degree-legal lines. The complete degree scan covers all5380830 nonH9 singular Qlines, produces17 actual9pin sets with zero overlap with the old240, and complete exact<=2anchor testing rejects all17 on the unchanged37631 source. There are no unknown items, produced graphs or new lower bounds.
+
+Evidence: h9_d11_single_fault_global_pool/REPORT.md and pool.json for the exhaustive source pool and witnesses; h9_d11_single_fault_extensions/REPORT.md, RESULT.json, frozen_candidates.json and cache_binding.json for complete current-source coverage and exact anchor intersections. The pool compile-plus-native cost was3.351992CPU seconds; this full completion batch used0.596710CPU seconds. No BFS of all sources, solver, independent review or Lean work was performed.
+
+Scope: preserve every37631 source edge; one new point with the nine free folded pins from a full10pin nonH9 Qline having exactly one saturated foldedpin, plus at most two eligible old anchors; the saturated deleted pin cannot be restored. This finite family is exhausted. Do not rerun it with new seeds or longer windows. Reopening requires a changed source or an effectively changed neighborhood/degree rule. Do not populate constructed-graph diameter or bad-pair metrics because no graph was produced. Keep the main58-example delivery unchanged.

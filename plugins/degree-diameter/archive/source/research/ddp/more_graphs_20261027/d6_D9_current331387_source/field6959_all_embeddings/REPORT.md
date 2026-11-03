@@ -1,0 +1,13 @@
+# F6959: all42 normalized source embeddings fail D9
+
+The frozen family completed: **42=34 strict thin-image rejections+8 actual implicit graphs failing identityR9**, with no hit, unknown or untested embedding. The D≤9 prediction is refuted. Negative exact global diameters and ordinary unordered bad-pair totals remain null; a truncated R9 failure was not renamed D10.
+
+The actual Rodríguez–Canale source331387 and its small official C recipe are bound in ../SOURCE_NOTES.md and ../PROVENANCE.json. Its RIGHT-law group C49⋊41F6763 has exact action order49. Source conjugation c2654, scaling3100 and phase multiplier2 give β184 and positive generators(1,0),(36,1),(45,1512). The single next compatible prime6959 gives hypothetical order340991/edges1022973. Only this field, literal normal vector, phases and all42 exactorder49 embeddings were tested. No source graph or source D9 BFS was repeated.
+
+The independent49-phase capacity DP gave2,929,687 nonbacktracking prefixes through length9 and minimum raw multiplicity58,581 at preselected phase23. The producer reused that gate and recomputed each target action's complete phase23 residue image. Every inverse used the true target RIGHT law; all factors were initialized before inverse checks. Missing images strictly reject34 embeddings before graph generation. ROOTS.json, CASES.jsonl and THIN_IMAGES.u8.bin preserve the complete root list, every image's complement, and the full image rows.
+
+Eight embeddings passed the thin gate and were instantiated as actual340991-vertex,1022973-edge,simple6regular implicit Cayley graphs. Each received one identity closed-R9 search; all eight had a missing target. CASES.jsonl records each witness and truncated distance histogram. Connectivity for every embedding follows from g1⁻³⁶g2=(0,1), not from extending these negative searches. Had a search covered all vertices, its actual histogram would determine exact global diameter by Cayley transitivity; none did. The independent source/gauge/connectivity proof is ../ANALYSIS_GAUGE_PROOF.md/json, and no extra graph validation was performed by the proof reviewer.
+
+Native CPU0.795891seconds; native process0.797501+driver0.001520=0.799021 within the20CPU production limit. Compilation was separate0.711308seconds. All42 embeddings are terminal. No failed edge lists, solver, source BFS or new lower bound were produced. This closes the exact fixed6959/normal1512/phase family only; it does not exclude other degree6/D9 constructions. No next prime, λ, phase or seed is continued.
+
+Reproduce with `python research/ddp/more_graphs_20261027/d6_D9_current331387_source/field6959_all_embeddings/run.py` from the project root. RESULT.json and terminal.json preserve the finished cursor42.

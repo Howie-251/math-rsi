@@ -1,0 +1,108 @@
+{
+  "checked_on_utc": "2026-11-01",
+  "task": "Reconcile the user-provided 3250 against primary public sources for maximum degree 20 and diameter at most 3",
+  "status": "user_provided_source_and_parameter_unverified",
+  "user_provided_order": 3250,
+  "intended_parameter": {"maximum_degree": 20, "diameter_at_most": 3, "binding_confirmed": false},
+  "source_url": null,
+  "author": null,
+  "publication_date": null,
+  "primary_3250_or_stronger_located_this_check": false,
+  "global_record_confirmed": false,
+  "priority_confirmed": false,
+  "user_claim_denied": false,
+  "user_claim_reclassified_as_typo_or_other_parameter": false,
+  "search_is_exhaustive": false,
+  "search_batches": [
+    {
+      "batch": 1,
+      "queries": [
+        "\"3250\" \"diameter\" \"20\" graph",
+        "\"3250\" \"degree-diameter\"",
+        "\"degree 20\" \"diameter 3\" graph 2026",
+        "\"degree diameter\" \"October 2026\" graph 20"
+      ],
+      "target_primary_located": false
+    },
+    {
+      "batch": 2,
+      "queries": [
+        "\"3250\" \"diameter-three\"",
+        "\"3250\" \"20,3\" graph",
+        "\"3250\" \"degree\" \"diameter\" site:github.com",
+        "\"3250\" graph \"October\" \"2026\""
+      ],
+      "target_primary_located": false
+    }
+  ],
+  "current_primary_reads": [
+    {
+      "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html",
+      "access": "web open successful on 2026-11-01",
+      "limitation": "Does not establish a complete global current baseline for degrees 20, 21, 22"
+    },
+    {
+      "url": "https://combinatoricswiki.org/wiki/The_Degree/Diameter_Problem",
+      "access": "timeout",
+      "complete_current_content_obtained": false
+    },
+    {
+      "url": "https://api.github.com/repos/rmizuno42/ddp/contents/README.md?ref=main",
+      "html_url": "https://github.com/rmizuno42/ddp/blob/main/README.md",
+      "status": 200,
+      "retrieved_utc": "2026-11-01T06:38:24.037227+00:00",
+      "read_scope": "full decoded text filtered for 3250 and target parameter spellings",
+      "order_3250_hit": false,
+      "latest_related_readme_commit_date": "2026-10-23T05:13:27Z"
+    },
+    {
+      "url": "https://api.github.com/repos/rmizuno42/ddp/contents/results.json?ref=main",
+      "html_url": "https://github.com/rmizuno42/ddp/blob/main/results.json",
+      "status": 200,
+      "retrieved_utc": "2026-11-01T06:38:25.462632+00:00",
+      "read_scope": "full decoded index text filtered for 3250 and target parameter spellings",
+      "order_3250_hit": false
+    },
+    {
+      "url": "https://api.github.com/repos/rmizuno42/ddp/contents/results?ref=main",
+      "status": 200,
+      "retrieved_utc": "2026-11-01T06:38:27.029584+00:00",
+      "target_degree20_21_22_diameter3_directory_listed": false,
+      "scope_only": "results directory listing, not an exhaustive repository content search"
+    },
+    {
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns/biggest-graphs?ref=main",
+      "html_url": "https://github.com/elder-plinius/V3R1T4S/tree/main/known-knowns/biggest-graphs",
+      "status": 200,
+      "retrieved_utc": "2026-11-01T06:38:24.017460+00:00",
+      "read_scope": "directory listing only",
+      "latest_related_scope_commit_date": "2026-10-29T23:08:21Z"
+    },
+    {
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns/biggest-graphs/README.md?ref=main",
+      "html_url": "https://github.com/elder-plinius/V3R1T4S/blob/main/known-knowns/biggest-graphs/README.md",
+      "status": 200,
+      "retrieved_utc": "2026-11-01T06:38:25.298891+00:00",
+      "read_scope": "full decoded README filtered for 3250 and target parameter spellings; no unread subdirectory treated as checked",
+      "order_3250_hit": false
+    }
+  ],
+  "github_request_headers": {"Accept": "application/vnd.github+json", "Cache-Control": "no-cache"},
+  "earlier_primary_evidence_reused": "REPORT.md and its Rajiv July/August/September, Delorme, PolarStar evidence; no large graph re-download",
+  "certified_source_guarantees_unchanged": [
+    {"maximum_degree": 20, "diameter_at_most": 3, "order": 2791, "explicit_published_order": 2783, "kind": "2791 is a general-formula inference"},
+    {"maximum_degree": 21, "diameter_at_most": 3, "order": 2928, "kind": "PolarStar IQ family"},
+    {"maximum_degree": 22, "diameter_at_most": 3, "order": 3294, "kind": "PolarStar IQ family"}
+  ],
+  "conditional_effect_if_20_D3_3250_primary_confirmed": {
+    "degree20_guarantee_at_least": 3250,
+    "degree21_guarantee_at_least": 3250,
+    "degree21_reason": "A graph with maximum degree at most 20 also satisfies maximum degree at most 21",
+    "degree22_guarantee_at_least": 3294,
+    "historical3750_difference": 500,
+    "current3840_difference": 590,
+    "global_record_follows": false
+  },
+  "next_source_question": "Confirm the intended maximum degree, diameter, author/source URL and public date of the user's 3250; retain the user observation pending source/expert clarification",
+  "operations": {"graph_generation": false, "bfs": false, "solver": false, "lean": false, "installation": false, "author_contact": false, "old_frozen_package_change": false, "root_file_change": false, "wiki_change": false}
+}

@@ -1,0 +1,107 @@
+{
+  "updated": "2026-10-27 03:49:48 UTC",
+  "goal_status": "ACTIVE",
+  "new_lower_bounds": 0,
+  "entries": [
+    {
+      "method": "state-shift256",
+      "status": "GENERATED_GRAPH_AND_MONOTONE_FILL_OBSTRUCTION",
+      "n": 256,
+      "degree": 8,
+      "ordinary_D": 4,
+      "bad_unordered_gt3": 12354,
+      "source": "debruijn256/obstruction.json"
+    },
+    {
+      "method": "quartic universal F3^5 chart",
+      "status": "324_WORDS_RANK5_VERIFIED",
+      "source": "source_scout/chart_check.json",
+      "new_lower_bound": false
+    },
+    {
+      "method": "A5xC3 quartic controller",
+      "status": "FIXED_GROUP_EXACT_NB5_CAYLEY_SCOPE_EXCLUDED",
+      "n": 180,
+      "source": "source_scout/route_chart_controller180/REPORT.md"
+    },
+    {
+      "method": "F31:C6 two-inverse-pair controller",
+      "status": "FINITE_COMPOSITION_FAILED_OTHER_COMPOSITIONS_OPEN",
+      "n": 186,
+      "source": "source_scout/route_chart_controller186/RESULT.json"
+    },
+    {
+      "method": "pentagon175 controller",
+      "status": "FINITE_PROFILE_FAILED",
+      "n": 175,
+      "ordinary_D": 6,
+      "bad_unordered_gt5": 315,
+      "exact_NB5_missing_ordered": 2696,
+      "source": "pentagon175_controller/best.independent_check.json"
+    },
+    {
+      "method": "six-base C4xC8 controller",
+      "status": "FINITE_PROFILE_FAILED",
+      "n": 192,
+      "ordinary_D": 6,
+      "bad_unordered_gt5": 144,
+      "exact_NB5_missing_ordered": 2752,
+      "source": "controller_lift192/best.independent_check.json"
+    },
+    {
+      "method": "universal binary dimension4 chart",
+      "status": "NORMALIZED_SPACE_EXHAUSTED_NO_CHART",
+      "candidates": 2419200,
+      "source": "binary_route_chart4/terminal.json"
+    },
+    {
+      "method": "cubic exact-NB4/5 degree allocation",
+      "status": "NB4_ORDER_AT_MOST20_NB5_AT_MOST44",
+      "NB5_target_orders_open": [
+        42,
+        44
+      ],
+      "source": "cubic_nb5_bounds/REPORT.md"
+    },
+    {
+      "method": "585 batch extension",
+      "status": "KNOWN_DUPLICATION_AND_SCOPED_DOMINATION_BOUND",
+      "independent_domination_degree12_order_upper": 796,
+      "mutual_help_batch_open": true,
+      "source": "tits585_batch_extension/REPORT.md"
+    },
+    {
+      "method": "364 binary branching lift",
+      "status": "NECESSARY_MATCHING_UNKNOWN_TIME_LIMIT",
+      "target_n": 728,
+      "explicit_target_graph_generated": false,
+      "source": "binary_branch364/terminal.json"
+    },
+    {
+      "method": "H9 partial fold source",
+      "status": "PUBLISHED_DIAMETER_SUFFICIENT_CONDITION_AND_LOCAL_DATA_READY",
+      "Q_vertices": 33033,
+      "author_degree12_order": 41699,
+      "saved_record": 42342,
+      "source": "hexagon_partial_fold_scout/REPORT.md"
+    },
+    {
+      "method": "H9 fixed S plus280copies extension",
+      "status": "ALL_STRICT_MONOTONE_SUPERSETS_EXCLUDED",
+      "original_splits": 7959,
+      "remaining_merged": 25074,
+      "source": "hexagon_partial_fold_greedy/root_monotone_closure.json"
+    },
+    {
+      "method": "H9 joint region trade",
+      "status": "FOUR_PREDETERMINED_JOINT_SUBPROBLEMS_TERMINAL",
+      "source": "hexagon_partial_fold_joint/terminal.json",
+      "best_core_order": 41636,
+      "gain": 0,
+      "regions_completed": 4,
+      "solver_optimality_scope": "four fixed outside-boundary subproblems only",
+      "root_state_check": "hexagon_partial_fold_joint/root_state_identity.json"
+    }
+  ],
+  "scope_note": "Parameter variants are not independent broad construction classes. Ordinary distance and exact-NB5 counts have different semantics; UNKNOWN is not an exclusion."
+}

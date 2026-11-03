@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "rounds": 1,
+  "review_agent_ids": [
+    "/root/n61_c3_lift_fresh_check"
+  ],
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "PASS",
+  "acceptance_gate": "PASS",
+  "acceptance_scope": "The complete new (12,21,28) mathematical exclusion, with the c=3 corollary accepted relative to its explicit inherited classification and companion theorem.",
+  "open_issues": [],
+  "fatal_fixed": 0,
+  "critical_fixed": 0,
+  "major_fixed": 0,
+  "minor_fixed": 0,
+  "counterexamples_found": 0,
+  "counterexample_candidates": 0,
+  "inherited_finite_run_recertified": false,
+  "proof_edits": false,
+  "wiki_edits": false,
+  "global_goal_status": "OPEN: original all58-61 goal remains open regardless of c=3 closure.",
+  "actual_inputs": [
+    {
+      "path": "AGENTS.md",
+      "read_scope": "complete",
+      "role": "project instructions"
+    },
+    {
+      "path": ".agents/skills/proof-checker/SKILL.md",
+      "read_scope": "complete",
+      "role": "proof-checker workflow, subject to requested V3 adaptation"
+    },
+    {
+      "path": "proofs/dd82/n61/THREE_COMPONENT_12_21_28_EXCLUSION.md",
+      "read_scope": "complete, lines 1-346",
+      "role": "all mathematics freshly reviewed"
+    },
+    {
+      "path": "proofs/dd82/n61/GENERAL_THREE_DEFECT_COMPONENT_QUOTIENTS.md",
+      "read_scope": "complete, lines 1-204",
+      "role": "actual defect and quotient definitions, necessary reduction, inherited complete c=3 classification and precise scope"
+    },
+    {
+      "path": "proofs/dd82/n61/THREE_COMPONENT_6_25_30_EXCLUSION.md",
+      "read_scope": "complete, lines 1-238",
+      "role": "companion theorem statement and scope inspected; exclusion imported, not recertified in this review"
+    },
+    {
+      "path": "computations/dd82/n61/component_quotient_three.py",
+      "read_scope": "complete, read-only",
+      "role": "inherited finite dependency domain and filters inspected; not executed"
+    },
+    {
+      "path": "computations/dd82/n61/component_quotient_three.result.json",
+      "read_scope": "complete, read-only",
+      "role": "inherited complete table and two permutation classes inspected; run not recertified"
+    }
+  ],
+  "timestamp": "2026-10-13T11:16:31.148958+00:00"
+}

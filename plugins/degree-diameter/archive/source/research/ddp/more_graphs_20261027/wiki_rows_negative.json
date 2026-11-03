@@ -1,0 +1,1217 @@
+{
+  "updated_UTC": "2026-10-27 11:33:36 UTC",
+  "row_count": 2,
+  "rows": [
+    {
+      "id": "ddp-more-graphs-20261027-source-slack-monotone",
+      "title": "当前D3/D4源的保边扩点：满度筛与极性65类覆盖界",
+      "family": "record-graph monotone vertex extension",
+      "record_type": "fixed-known-source-degree-and-necessary-cover-screen",
+      "target_is_multivalued": true,
+      "target_Delta": null,
+      "target_D": null,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "actual_D_scope": "No augmented target graph generated. Existing source degree histograms/structural regularity and forced-class R2 covering numbers only.",
+      "scope": "Current D4 degree4..12 records: no old degree slack. D3 q8 actual585/650/715 sources: all eligible pins, same cap, all old edges retained. Additional canonical regularD3 source histograms retained in evidence.",
+      "failure_or_result": "D4 fixedsources全满度；实际D3 source650全10regular。585和715的eligible-R2 cover最优恰65，分别超过9/11pins预算；715虽全部eligible球的union=715，仍不能用11球覆盖。小互助块585 t≤7、715 t≤5也由65spokes下界排除。",
+      "positive_guarantees": [
+        "保留所有旧边可保持oldold近端覆盖，但新增点仍须完整R_(D-1)覆盖。",
+        "65个特殊类给出每类至少一pin的精确覆盖下界；不是把union覆盖误作有限budget覆盖。"
+      ],
+      "unclosed_gap": "Not a nonexistence theorem for arbitrary586/651/716 or D4 baseline+1 graphs; larger cooperative585/715 blocks, deleted/replaced old edges and genuinely new sources remain outside this scope.",
+      "lesson_and_restart_condition": "满度源立即止；有余量先看可选pins在全部必要目标类上的覆盖下界。只在获得有实际度余量的新非同构source或改变连接机制/全局路由规则时重开，不换seed或重编号重复闭族。",
+      "outcome_class": "complete-fixed-source-monotone-extension-negative",
+      "wiki_verdict": "partial",
+      "new_lower_bound": false,
+      "other_metrics": {
+        "new_lower_bounds": 0,
+        "solver_calls": 0,
+        "greedy_starts": 0,
+        "new_all_source_BFS_calls": 0,
+        "new_length2_walk_checks": 195,
+        "native_screen_CPU_seconds": 0.037165033,
+        "D3_source650_degree_histogram": {
+          "10": 650
+        },
+        "D3_source715_degree_histogram": {
+          "9": 130,
+          "10": 65,
+          "11": 520
+        },
+        "D3_source715_union_all_eligible_R2": 715,
+        "D3_source715_minimum_eligible_cover": 65,
+        "additional_regular_D3_representatives": [
+          {
+            "Delta": 4,
+            "D": 3,
+            "source_n": 41,
+            "source_m": 82,
+            "eligible_pins": 0
+          },
+          {
+            "Delta": 5,
+            "D": 3,
+            "source_n": 72,
+            "source_m": 180,
+            "eligible_pins": 0
+          },
+          {
+            "Delta": 12,
+            "D": 3,
+            "source_n": 810,
+            "source_m": 4860,
+            "eligible_pins": 0
+          },
+          {
+            "Delta": 6,
+            "D": 3,
+            "source_n": 120,
+            "source_m": 360,
+            "eligible_pins": 0
+          },
+          {
+            "Delta": 7,
+            "D": 3,
+            "source_n": 170,
+            "source_m": 595,
+            "eligible_pins": 0
+          },
+          {
+            "Delta": 8,
+            "D": 3,
+            "source_n": 253,
+            "source_m": 1012,
+            "eligible_pins": 0
+          }
+        ],
+        "counts_are_source_or_cover_metrics_not_candidate_bad_pairs": true,
+        "pending": []
+      },
+      "variants": [
+        {
+          "id": "D4-d4-source104-no-slack",
+          "label": "D4 source104,Delta4",
+          "target": [
+            4,
+            4
+          ],
+          "target_Delta": 4,
+          "target_D": 4,
+          "savedL": 104,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 105
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 104,
+          "known_source_m": 208,
+          "known_source_degree_histogram": {
+            "4": 104
+          },
+          "degree_evidence_kind": "reused existing raw-source verification",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Nishant Bhakar,2026-08-27;104c official source",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d5-source252-no-slack",
+          "label": "D4 source252,Delta5",
+          "target": [
+            5,
+            4
+          ],
+          "target_Delta": 5,
+          "target_D": 4,
+          "savedL": 252,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 253
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 252,
+          "known_source_m": 630,
+          "known_source_degree_histogram": {
+            "5": 252
+          },
+          "degree_evidence_kind": "actual edge-degree histogram; no newBFS",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Rishabh Rajiv,2026-09-24;A7 orbit graph",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d6-source441-no-slack",
+          "label": "D4 source441,Delta6",
+          "target": [
+            6,
+            4
+          ],
+          "target_Delta": 6,
+          "target_D": 4,
+          "savedL": 441,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 442
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 441,
+          "known_source_m": 1323,
+          "known_source_degree_histogram": {
+            "6": 441
+          },
+          "degree_evidence_kind": "actual edge-degree histogram; no newBFS",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Rishabh Rajiv,2026-09-24;PSU(3,3) orbit graph",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d7-source684-no-slack",
+          "label": "D4 source684,Delta7",
+          "target": [
+            7,
+            4
+          ],
+          "target_Delta": 7,
+          "target_D": 4,
+          "savedL": 684,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 685
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 684,
+          "known_source_m": 2394,
+          "known_source_degree_histogram": {
+            "7": 684
+          },
+          "degree_evidence_kind": "actual edge-degree histogram; no newBFS",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Michel de Messieres,2026-10-05;two-base voltage lift",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d8-source1100-no-slack",
+          "label": "D4 source1100,Delta8",
+          "target": [
+            8,
+            4
+          ],
+          "target_Delta": 8,
+          "target_D": 4,
+          "savedL": 1100,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 1101
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 1100,
+          "known_source_m": 4400,
+          "known_source_degree_histogram": {
+            "8": 1100
+          },
+          "degree_evidence_kind": "actual edge-degree histogram; no newBFS",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Eyal Loz,2006;official1100 source",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d9-source1768-no-slack",
+          "label": "D4 source1768,Delta9",
+          "target": [
+            9,
+            4
+          ],
+          "target_Delta": 9,
+          "target_D": 4,
+          "savedL": 1768,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 1769
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 1768,
+          "known_source_m": 7956,
+          "known_source_degree_histogram": {
+            "9": 1768
+          },
+          "degree_evidence_kind": "derived from official construction counts and maximum degree9",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Francesc Comellas,2026-10-21;modified1700 source",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": "m=1700*9/2-191+497=7956=1768*9/2; every degree<=9 implies every degree=9",
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d10-source2485-no-slack",
+          "label": "D4 source2485,Delta10",
+          "target": [
+            10,
+            4
+          ],
+          "target_Delta": 10,
+          "target_D": 4,
+          "savedL": 2485,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 2486
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 2485,
+          "known_source_m": 12425,
+          "known_source_degree_histogram": {
+            "10": 2485
+          },
+          "degree_evidence_kind": "actual edge-degree histogram; no newBFS",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Dharunish Yugeswardeenoo,2026-08-17;semidirect Cayley graph",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d11-source3444-no-slack",
+          "label": "D4 source3444,Delta11",
+          "target": [
+            11,
+            4
+          ],
+          "target_Delta": 11,
+          "target_D": 4,
+          "savedL": 3444,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 3445
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 3444,
+          "known_source_m": 18942,
+          "known_source_degree_histogram": {
+            "11": 3444
+          },
+          "degree_evidence_kind": "official description explicitly11-regular; not re-downloaded",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Dharunish Yugeswardeenoo,2026-10-07;doubledW(9) incidence with spread twins",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D4-d12-source5832-no-slack",
+          "label": "D4 source5832,Delta12",
+          "target": [
+            12,
+            4
+          ],
+          "target_Delta": 12,
+          "target_D": 4,
+          "savedL": 5832,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 5833
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 5832,
+          "known_source_m": 34992,
+          "known_source_degree_histogram": {
+            "12": 5832
+          },
+          "degree_evidence_kind": "official description explicitly12-regular route-chart lift; not re-downloaded",
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "eligible_pins": 0,
+          "scope": "Keep all old edges at the same degree cap; every old vertex saturated, so no connected augmentation by any positive number of new vertices.",
+          "source_credit": "Ryosuke Mizuno,2026-09-25;route-chart lift",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html",
+          "derivation": null,
+          "actual_D_scope": "No augmented target graph generated; these are known-source degree facts."
+        },
+        {
+          "id": "D3-d9-source585-monotone",
+          "label": "D3 Delorme source585,Delta9",
+          "target": [
+            9,
+            3
+          ],
+          "target_Delta": 9,
+          "target_D": 3,
+          "savedL": 585,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 586
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 585,
+          "known_source_m": 2600,
+          "known_source_degree_histogram": {
+            "8": 65,
+            "9": 520
+          },
+          "eligible_pins": 65,
+          "status": "CLOSED_ALL_BUDGETED_ELIGIBLE_R2_COVERS",
+          "source_credit": "C.Delorme polarity/duplication construction; adjacency supplied byV.Pelekhaty; maintained byF.Comellas.",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n585d9k3.txt",
+          "actual_D_scope": "No augmented target graph generated; this is a known-source degree/necessary-cover screen.",
+          "eligible_target_classes": 65,
+          "targets_per_class": 1,
+          "classes_hit_by_each_eligible_R2": 1,
+          "minimum_budgeted_eligible_R2_cover": 65,
+          "new_vertex_pin_budget": 9,
+          "small_cooperative_block_closed_through_size": 7,
+          "scope": "All eligible pins, not only samples. Every class needs a spoke and each eligibleR2 hits one class; single-pinset cover number65>9. Any added block t<=7 also has at mostDelta*t<65spokes. Larger cooperative blocks not excluded."
+        },
+        {
+          "id": "D3-d10-source650-monotone",
+          "label": "D3 Delorme source650,Delta10",
+          "target": [
+            10,
+            3
+          ],
+          "target_Delta": 10,
+          "target_D": 3,
+          "savedL": 650,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 651
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 650,
+          "known_source_m": 3250,
+          "known_source_degree_histogram": {
+            "10": 650
+          },
+          "eligible_pins": 0,
+          "status": "CLOSED_FIXED_SOURCE_NO_DEGREE_SLACK",
+          "source_credit": "C.Delorme polarity/duplication construction; adjacency supplied byV.Pelekhaty; maintained byF.Comellas.",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n650d10k3.txt",
+          "actual_D_scope": "No augmented target graph generated; this is a known-source degree/necessary-cover screen.",
+          "scope": "The actual official650 source is10-regular, not the bare replication with unfilled degree slots; all connected monotone extensions are impossible at cap10."
+        },
+        {
+          "id": "D3-d11-source715-monotone",
+          "label": "D3 Delorme source715,Delta11",
+          "target": [
+            11,
+            3
+          ],
+          "target_Delta": 11,
+          "target_D": 3,
+          "savedL": 715,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 716
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "known_source_n": 715,
+          "known_source_m": 3770,
+          "known_source_degree_histogram": {
+            "9": 130,
+            "10": 65,
+            "11": 520
+          },
+          "eligible_pins": 195,
+          "status": "CLOSED_ALL_BUDGETED_ELIGIBLE_R2_COVERS",
+          "source_credit": "C.Delorme polarity/duplication construction; adjacency supplied byV.Pelekhaty; maintained byF.Comellas.",
+          "source_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n715d11k3.txt",
+          "actual_D_scope": "No augmented target graph generated; this is a known-source degree/necessary-cover screen.",
+          "eligible_target_classes": 65,
+          "targets_per_class": 3,
+          "classes_hit_by_each_eligible_R2": 1,
+          "minimum_budgeted_eligible_R2_cover": 65,
+          "new_vertex_pin_budget": 11,
+          "small_cooperative_block_closed_through_size": 5,
+          "scope": "All eligible pins, not only samples. Every class needs a spoke and each eligibleR2 hits one class; single-pinset cover number65>11. Any added block t<=5 also has at mostDelta*t<65spokes. Larger cooperative blocks not excluded."
+        }
+      ],
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d3d4_transfer/REPORT.md",
+        "research/ddp/more_graphs_20261027/d3d4_transfer/RESULT.json",
+        "research/ddp/more_graphs_20261027/d3d4_transfer/SOURCES.json",
+        "research/ddp/more_graphs_20261027/d3d4_transfer/screen.py"
+      ]
+    },
+    {
+      "id": "ddp-more-graphs-20261027-adjacent-single-vertex-split",
+      "title": "同一相邻单点拆分跨D3/D4/D5：固定八源完整范围无命中",
+      "family": "vertex splitting and matching",
+      "record_type": "complete-fixed-operation-finite-enumeration-with-capacity-prefilters",
+      "target_is_multivalued": true,
+      "target_Delta": null,
+      "target_D": null,
+      "savedL": null,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "ordinary_bad_target_D": null,
+      "actual_D_scope": "No successful full target candidate. Eight variant counts are sourcevertices/partitions/necessary-root failures, not ordinary badpairs. Calibration metrics remain inside each variant.",
+      "scope": "One fixed operation: split sourcev into adjacentu,w; disjoint nonempty parts ofcompleteN(v), no other oldedge change. Eight actualsources acrossD3/D4/D5; every sourcevertex and unorderedpart completed. Separate capacity proof excludes specifiedotherdegree targets without fake enumeration.",
+      "failure_or_result": "八源共1981530无序分割，其中容量拒1321591、精确新根检查659939，全部规范S侧新根已失败，0完整候选。D5虽NB容量全过，首步geodesic singleton阻碍说明走步数余量不能替代两侧路线互补。",
+      "positive_guarantees": [
+        "旧点度不变，新两点度由part大小+1精确控制。",
+        "newroot条件只作必要筛；若通过才检查oldold和producer全图BFS，不冒充整图成功。",
+        "完整规则和数值预筛在各PROPOSITION中给出；D5受影响旧对可限于R1_H(N)端点，但本批无新根通过，后阶段未执行。"
+      ],
+      "unclosed_gap": "Other nonisomorphic253/810/104/441/684/650/1518/2810sources and general targetorder graphs remain open. Multi-split, overlapping attachments and other oldedge changes are different mechanisms, not excluded here.",
+      "lesson_and_restart_condition": "按NB根容量选择参数，容量过线后还要每个最远层目标能从两侧首步到达。当前实际源存在独占首步远目标，邻集不能仅靠相邻两点分开。按约暂停该方向；只在明确改变连接机制或取得有不同覆盖结构的新source时重开，不续seed/局部bad优化或自动跨case。",
+      "outcome_class": "complete-fixed-operation-negative-eight-source-variants",
+      "wiki_verdict": "partial",
+      "new_lower_bound": false,
+      "other_metrics": {
+        "new_lower_bounds": 0,
+        "fixed_source_variant_count": 8,
+        "independent_method_count": 1,
+        "all_vertex_scope_complete": true,
+        "raw_unordered_partitions": 1981530,
+        "capacity_rejections": 1321591,
+        "exact_newroot_condition_evaluations": 659939,
+        "all_newroot_checks_failed": true,
+        "exported_successful_candidate_graphs": 0,
+        "producer_success_graphs": 0,
+        "calibration_only": {
+          "D3_full_graphs": 2,
+          "D4_two_root_graphs": 3,
+          "D5_two_root_graphs": 3,
+          "not_best_candidates": true
+        },
+        "native_CPU_per_batch": {
+          "D3": 0.238373,
+          "D4": 0.094959,
+          "D5": 0.757271
+        },
+        "CPU_scope": "native runtime only; each one worker;prep/compile separate.",
+        "paper_capacity_exclusions": {
+          "D3_degree_targets": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "D3_capacity_maxima": [
+            36,
+            59,
+            113,
+            159,
+            339,
+            507,
+            623
+          ],
+          "D4_degree5": {
+            "maximum_capacity": 235,
+            "target_n": 253,
+            "enumerations": 0
+          },
+          "D5_degree4": {
+            "maximum_capacity": 324,
+            "target_n": 365,
+            "enumerations": 0
+          }
+        },
+        "counts_are_not_ordinary_bad_pairs": true,
+        "random_starts": 0,
+        "bad_pair_optimization_moves": 0,
+        "pending": []
+      },
+      "variants": [
+        {
+          "id": "D3-d8-source253-adjacent-split",
+          "label": "D3,Delta8,source253",
+          "target": [
+            8,
+            3
+          ],
+          "target_Delta": 8,
+          "target_D": 3,
+          "savedL": 253,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 254
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 253,
+          "known_source_m": 1012,
+          "known_source_degree_histogram": {
+            "8": 253
+          },
+          "source_credit": "F.Comellas and M.Mitjana,1994;official semidirect Cayley source.",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 253,
+            "raw_unordered_nonempty_partitions": 32131,
+            "capacity_rejected": 23276,
+            "root_conditions_evaluated": 8855,
+            "canonical_S_newroot_rejected": 8855,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "canonical_mask": 15,
+              "S": [
+                33,
+                39,
+                49,
+                103
+              ],
+              "T": [
+                163,
+                224,
+                234,
+                241
+              ],
+              "source_vertex0_reused_as_S_vertex": true,
+              "new_T_vertex": 253,
+              "split_new_degrees": [
+                5,
+                5
+              ]
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "One complete expanded calibration graph/allsource BFS; entire predicted ordinary badpair set matched.",
+            "scope": "Only this fixed calibration, no optimization.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d3_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/d8_RESULT.json",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/enumerate.cpp"
+          ]
+        },
+        {
+          "id": "D3-d12-source810-adjacent-split",
+          "label": "D3,Delta12,source810",
+          "target": [
+            12,
+            3
+          ],
+          "target_Delta": 12,
+          "target_D": 3,
+          "savedL": 810,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 811
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 810,
+          "known_source_m": 4860,
+          "known_source_degree_histogram": {
+            "12": 810
+          },
+          "source_credit": "Dharunish Yugeswardeenoo,2026-10-07;current official3-base affine-voltage source.",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 810,
+            "raw_unordered_nonempty_partitions": 1658070,
+            "capacity_rejected": 1283850,
+            "root_conditions_evaluated": 374220,
+            "canonical_S_newroot_rejected": 374220,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "canonical_mask": 63,
+              "S": [
+                270,
+                282,
+                294,
+                405,
+                415,
+                425
+              ],
+              "T": [
+                567,
+                581,
+                592,
+                756,
+                761,
+                763
+              ],
+              "source_vertex0_reused_as_S_vertex": true,
+              "new_T_vertex": 810,
+              "split_new_degrees": [
+                7,
+                7
+              ]
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "One complete expanded calibration graph/allsource BFS; entire predicted ordinary badpair set matched.",
+            "scope": "Only this fixed calibration, no optimization.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d3_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/d12_RESULT.json",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d3_vertex_split/enumerate.cpp"
+          ]
+        },
+        {
+          "id": "D4-d4-source104-adjacent-split",
+          "label": "D4,Delta4,source104",
+          "target": [
+            4,
+            4
+          ],
+          "target_Delta": 4,
+          "target_D": 4,
+          "savedL": 104,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 105
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 104,
+          "known_source_m": 208,
+          "known_source_degree_histogram": {
+            "4": 104
+          },
+          "source_credit": "Nishant Bhakar,2026-08-27;104c official source",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 104,
+            "raw_unordered_nonempty_partitions": 728,
+            "capacity_rejected": 416,
+            "root_conditions_evaluated": 312,
+            "canonical_S_newroot_rejected": 312,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                24,
+                25
+              ],
+              "T": [
+                26,
+                27
+              ],
+              "source_vertex_reused_as_S_root": 0,
+              "T_root_new_label": 104
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius4 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d4_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/d4_RESULT.json",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/enumerate.cpp"
+          ]
+        },
+        {
+          "id": "D4-d6-source441-adjacent-split",
+          "label": "D4,Delta6,source441",
+          "target": [
+            6,
+            4
+          ],
+          "target_Delta": 6,
+          "target_D": 4,
+          "savedL": 441,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 442
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 441,
+          "known_source_m": 1323,
+          "known_source_degree_histogram": {
+            "6": 441
+          },
+          "source_credit": "Rishabh Rajiv,2026-09-24;PSU(3,3) orbit graph",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 441,
+            "raw_unordered_nonempty_partitions": 13671,
+            "capacity_rejected": 9261,
+            "root_conditions_evaluated": 4410,
+            "canonical_S_newroot_rejected": 4410,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                117,
+                170,
+                194
+              ],
+              "T": [
+                197,
+                208,
+                227
+              ],
+              "source_vertex_reused_as_S_root": 0,
+              "T_root_new_label": 441
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius4 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d4_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/d6_RESULT.json",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/enumerate.cpp"
+          ]
+        },
+        {
+          "id": "D4-d7-source684-adjacent-split",
+          "label": "D4,Delta7,source684",
+          "target": [
+            7,
+            4
+          ],
+          "target_Delta": 7,
+          "target_D": 4,
+          "savedL": 684,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 685
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 684,
+          "known_source_m": 2394,
+          "known_source_degree_histogram": {
+            "7": 684
+          },
+          "source_credit": "Michel de Messieres,2026-10-05;two-base voltage lift",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 684,
+            "raw_unordered_nonempty_partitions": 43092,
+            "capacity_rejected": 4788,
+            "root_conditions_evaluated": 38304,
+            "canonical_S_newroot_rejected": 38304,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                40,
+                77
+              ],
+              "T": [
+                228,
+                267,
+                362,
+                366,
+                561
+              ],
+              "source_vertex_reused_as_S_root": 0,
+              "T_root_new_label": 684
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius4 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d4_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/d7_RESULT.json",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d4_vertex_split/enumerate.cpp"
+          ]
+        },
+        {
+          "id": "D5-d5-source650-adjacent-split",
+          "label": "D5,Delta5,source650",
+          "target": [
+            5,
+            5
+          ],
+          "target_Delta": 5,
+          "target_D": 5,
+          "savedL": 650,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 651
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 650,
+          "known_source_m": 1625,
+          "known_source_degree_histogram": {
+            "5": 650
+          },
+          "source_credit": "Rithwik Gupta,2026-09-08;official650 D5 source, different fromDelorme650 D3.",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 650,
+            "raw_unordered_nonempty_partitions": 9750,
+            "capacity_rejected": 0,
+            "root_conditions_evaluated": 9750,
+            "canonical_S_newroot_rejected": 9750,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                246
+              ],
+              "T": [
+                251,
+                260,
+                292,
+                500
+              ],
+              "S_root_label": 0,
+              "new_T_root_label": 650
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius5 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d5_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/d5_RESULT.json",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/enumerate.cpp"
+          ],
+          "geodesic_first_step_obstruction": {
+            "source_vertex": 0,
+            "exclusive_first_neighbor": 246,
+            "example_far_target": 55,
+            "number_of_targets_with_this_exclusive_first_neighbor": 11,
+            "source_distance_to_each_target": 5,
+            "H_distance_from_exclusive_neighbor_to_each_target": 4,
+            "other_first_neighbors_H_distance_to_targets": ">4",
+            "scope": "Uniqueness of first step, not uniqueness of the entire geodesic; derived from saved calibration plus known sourceD<=5, no new BFS."
+          }
+        },
+        {
+          "id": "D5-d6-source1518-adjacent-split",
+          "label": "D5,Delta6,source1518",
+          "target": [
+            6,
+            5
+          ],
+          "target_Delta": 6,
+          "target_D": 5,
+          "savedL": 1518,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 1519
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 1518,
+          "known_source_m": 4554,
+          "known_source_degree_histogram": {
+            "6": 1518
+          },
+          "source_credit": "Rishabh Rajiv,2026-08-24;PSL(2,23) coset source fromofficialSageMath sparse6.",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 1518,
+            "raw_unordered_nonempty_partitions": 47058,
+            "capacity_rejected": 0,
+            "root_conditions_evaluated": 47058,
+            "canonical_S_newroot_rejected": 47058,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                329
+              ],
+              "T": [
+                435,
+                533,
+                776,
+                967,
+                981
+              ],
+              "S_root_label": 0,
+              "new_T_root_label": 1518
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius5 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d5_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/d6_RESULT.json",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/enumerate.cpp"
+          ],
+          "geodesic_first_step_obstruction": {
+            "source_vertex": 0,
+            "exclusive_first_neighbor": 329,
+            "example_far_target": 38,
+            "number_of_targets_with_this_exclusive_first_neighbor": 20,
+            "source_distance_to_each_target": 5,
+            "H_distance_from_exclusive_neighbor_to_each_target": 4,
+            "other_first_neighbors_H_distance_to_targets": ">4",
+            "scope": "Uniqueness of first step, not uniqueness of the entire geodesic; derived from saved calibration plus known sourceD<=5, no new BFS."
+          }
+        },
+        {
+          "id": "D5-d7-source2810-adjacent-split",
+          "label": "D5,Delta7,source2810",
+          "target": [
+            7,
+            5
+          ],
+          "target_Delta": 7,
+          "target_D": 5,
+          "savedL": 2810,
+          "baseline_as_of": "2026-10-27",
+          "n": {
+            "actual": null,
+            "hypothetical": 2811
+          },
+          "actual_D": null,
+          "actual_graph_Delta": null,
+          "ordinary_bad_unordered_pairs": null,
+          "ordinary_bad_target_D": null,
+          "actual_D_scope": "No accepted full target candidate. Partition/newroot rejection counts only; calibration object explicitly separated.",
+          "known_source_n": 2810,
+          "known_source_m": 9835,
+          "known_source_degree_histogram": {
+            "7": 2810
+          },
+          "source_credit": "Dharunish Yugeswardeenoo,2026-10-07;two-copy semidirect voltage source.",
+          "status": "COMPLETE_FIXED_SOURCE_ALL_VERTICES_AND_UNORDERED_PARTITIONS_NO_HIT",
+          "counts": {
+            "all_source_vertices": 2810,
+            "raw_unordered_nonempty_partitions": 177030,
+            "capacity_rejected": 0,
+            "root_conditions_evaluated": 177030,
+            "canonical_S_newroot_rejected": 177030,
+            "both_newroots_pass": 0,
+            "complete_passers": 0
+          },
+          "calibration": {
+            "purpose": "Fixed firstpartition model calibration only; not best graph or accepted new candidate.",
+            "parameters": {
+              "split_source_vertex": 0,
+              "S": [
+                1176
+              ],
+              "T": [
+                1379,
+                1405,
+                1450,
+                1591,
+                1817,
+                2743
+              ],
+              "S_root_label": 0,
+              "new_T_root_label": 2810
+            },
+            "actual_full_candidate_n": null,
+            "actual_full_candidate_D": null,
+            "ordinary_candidate_bad_unordered_pairs": null,
+            "type": "Two new-root radius5 checks only; no wholegraph diameter/badpair measurement.",
+            "scope": "Only both new-root miss sets of fixed firstpartition.",
+            "exact_set_match": true
+          },
+          "whole_target_candidate_exported": false,
+          "scope": "All source vertices, all nonempty unordered partitions ofN(v); exact cap filter counted; adjacent splitpoints, disjoint fullneighbor assignment, every other oldedge retained.",
+          "restart_condition": "This fixed operation/source is complete. Requires a genuinely new nonisomorphic source or a changed connection/routing mechanism, not seed/label changes.",
+          "report_paths": [
+            "research/ddp/more_graphs_20261027/d5_vertex_split/REPORT.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/d7_RESULT.json",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/PROPOSITION.md",
+            "research/ddp/more_graphs_20261027/d5_vertex_split/enumerate.cpp"
+          ],
+          "geodesic_first_step_obstruction": {
+            "source_vertex": 0,
+            "exclusive_first_neighbor": 1176,
+            "example_far_target": 254,
+            "number_of_targets_with_this_exclusive_first_neighbor": 15,
+            "source_distance_to_each_target": 5,
+            "H_distance_from_exclusive_neighbor_to_each_target": 4,
+            "other_first_neighbors_H_distance_to_targets": ">4",
+            "scope": "Uniqueness of first step, not uniqueness of the entire geodesic; derived from saved calibration plus known sourceD<=5, no new BFS."
+          }
+        }
+      ],
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d3_vertex_split/REPORT.md",
+        "research/ddp/more_graphs_20261027/d3_vertex_split/RESULT.json",
+        "research/ddp/more_graphs_20261027/d3_vertex_split/PROPOSITION.md",
+        "research/ddp/more_graphs_20261027/d3_vertex_split/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d3_vertex_split/terminal.json",
+        "research/ddp/more_graphs_20261027/d4_vertex_split/REPORT.md",
+        "research/ddp/more_graphs_20261027/d4_vertex_split/RESULT.json",
+        "research/ddp/more_graphs_20261027/d4_vertex_split/PROPOSITION.md",
+        "research/ddp/more_graphs_20261027/d4_vertex_split/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d4_vertex_split/terminal.json",
+        "research/ddp/more_graphs_20261027/d5_vertex_split/REPORT.md",
+        "research/ddp/more_graphs_20261027/d5_vertex_split/RESULT.json",
+        "research/ddp/more_graphs_20261027/d5_vertex_split/PROPOSITION.md",
+        "research/ddp/more_graphs_20261027/d5_vertex_split/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d5_vertex_split/terminal.json"
+      ]
+    }
+  ],
+  "note": "Root owns capture/normalize/helper/canonical nodes. This is input only; no Wiki graph edits. Actual successful wholecandidate n/D/bad fields allnull; sourcefacts and calibrations have explicit separate scope. Split variants exactly8, not8methods."
+}

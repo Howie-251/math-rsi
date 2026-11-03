@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_BEFORE_STRUCTURAL_SELECTION_AND_DELETION_ROOT_TEST",
+  "target_Delta": 11,
+  "target_D": 4,
+  "savedL": 3645,
+  "hypothetical_n": 3646,
+  "selection_rule": "Lexicographically first T0 in3280..3443 whose original mapped spreadline copyL0 has intact full square: N(T0)-{T1}=N(L0)-{L1}=10pointcopies, N(T1)-{T0}=N(L1)-{L0}=10pointcopies, T0T1 andL0L1 present. No score/oldbadpair selection.",
+  "intuition": "An untouched twin-line square supplies exact alternative same-length routes for any old path through deletedT0 whose endpoints are notT1. Only rootT1 must be checked for old-oldD4; debruijn owns independent proof/filter.",
+  "prediction": "The structurally selected first intact T0 is redundant for old-oldD4; moreover at least one legal A/B allocation of deletion-created and original spare slots gives both new roots fullR4 coverage inH=G-T0.",
+  "new_neighbor_rule": "Remove v; add adjacent a,b. Each receives <=10 distinct oldpins; oldpin totalusage <=11-degree_H. Pinpool = N_G(v) union(originalfree minusv). Distances MUST be inH.",
+  "acceptance_formula": "R3_H(A) unionR2_H(B)=V(H), and reverse; passing newroots alone is not fullcandidate proof. First establish old-old protection or check remaining affectedpairs.",
+  "filter_owner": "debruijn_check alone computes H pinR2/R3/thin support filters; this file owner does structural selection plus at most1T1-root deletionBFS. No duplicate cutgraph cache.",
+  "budget_CPU_seconds": 5,
+  "stop": "One structural selection only; no v score scan, pin microrepair or old2673/switch679 repeat."
+}

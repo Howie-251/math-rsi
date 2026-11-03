@@ -1,0 +1,35 @@
+{
+  "task": "Brown57 fixed-induced-old-graph capacity at degree cap 9",
+  "scope": "Inherit the already verified simple 57-point Brown source with 8 vertices of degree 7 and 49 of degree 8. Add h helpers, arbitrary old-helper edges, and arbitrary helper-helper graph H; the old induced graph must stay exactly the source.",
+  "historical_exact_scope_check": {
+    "method": "Read parent D2 PROOF/RESULT and source construction/obstruction files; rg Brown57/cap9/degree9/formula terms in research, context, proofs and reviews.",
+    "finding": "Located the old cap8 obstruction and q8/cap9 classical formula comparison, but no existing Brown57-to-cap9 arbitrary-helper capacity proof. No historical queue is resumed."
+  },
+  "prediction": "Every diameter-at-most-two extension in this scope has h<=15 and order<=72, hence cannot match the inherited public (9,2) order 74 or improve it at 75.",
+  "planned_argument": [
+    "Write s_i for helper i's number of old pins and B=sum_i s_i. Old degree budgets imply B<=8*2+49=65.",
+    "All 57 old targets of helper i must lie in N_G[S_i] union the old pin sets of H-neighbors. Counting direct pin targets inside the closed neighborhoods gives 57<=9*s_i+sum_{j adjacent_H i}s_j.",
+    "Summation and deg_H(i)+s_i<=9 give 57*h<=18*B-sum_i s_i^2<=18*B-B^2/h.",
+    "For h>=16 the last right-hand side is maximized over 0<=B<=65 at B=65. Therefore 57*h^2-1170*h+4225<=0. Its value at 16 is 97 and its forward difference is positive for h>=16, contradiction."
+  ],
+  "failure_checks": [
+    "H is arbitrary, not necessarily a clique or regular.",
+    "Helper-to-old direct adjacency must be counted, and is counted by N_G[S_i].",
+    "The old-old edge set is fixed exactly. This proof is not automatically a bound when additional old-old edges are allowed.",
+    "Ignoring helper-helper distance obligations only relaxes the model, so a contradiction from helper-old obligations is sufficient.",
+    "Order 72 is a necessary upper bound in this fixed-source scope, not an existence claim or global upper bound on N(9,2)."
+  ],
+  "numerical_budget": {
+    "CPU_seconds": 10,
+    "workers": 1,
+    "allowed": "small integer and rational arithmetic only",
+    "graph_generation": 0,
+    "BFS": 0,
+    "solver": 0,
+    "Lean": 0,
+    "new_primary_search": 0,
+    "installs": 0,
+    "hashes": 0
+  },
+  "stop": "After the proof and one finite arithmetic check, write PROOF/RESULT/TERMINAL and close this fixed-source/public-target entry. Do not enumerate helper graphs or seeds."
+}

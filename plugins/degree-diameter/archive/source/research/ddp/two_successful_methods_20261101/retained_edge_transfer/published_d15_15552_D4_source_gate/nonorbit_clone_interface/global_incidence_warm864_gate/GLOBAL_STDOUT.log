@@ -1,0 +1,61 @@
+{"stage": "IMPORTING_SINGLE_THREAD_API", "pid": 643515, "hard_CPU": 80}
+{"stage": "MODEL_READY_WARM864_HANDCHECKED", "pid": 643515, "variables": 15552, "rows": 15552, "incidence_nonzeros": 232632, "matrix": "CSC unitdata, columnc=originalsimpleN(c)", "variable_domain": "binary0to1,onecloneperoldcenter", "objective": "minimize -sum x", "rhs": "16-originaldegree", "source_literal": "research/ddp/more_graphs_20261027/d15_D4_current15552/source15552.author.adjlist.txt", "source_literal_parses": 1, "known_start_count": 864, "known_start_binary": true, "known_start_all_rows_handchecked": true, "start_load_histogram": {"0": 2628, "1": 12924}, "scipy_version": "1.15.3", "threads": 1, "time_limit": 60.0, "no_W27_or_targetdisjoint_constraint": true, "only_one_passModel_setSolution_run": true, "independent_optimality_proof": false}
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+{"stage": "RUN_ACTIVE", "pid": 643515, "warm_set_status": "HighsStatus.kOk", "solver_runs_started": 1}
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 1e+00]
+  RHS    [1e+00, 2e+00]
+Assessing feasibility of MIP using primal feasibility and integrality tolerance of       1e-06
+Solution has               num          max          sum
+Col     infeasibilities      0            0            0
+Integer infeasibilities      0            0            0
+Row     infeasibilities      0            0            0
+Row     residuals            0            0            0
+Presolving model
+15552 rows, 15552 cols, 232632 nonzeros  0s
+15552 rows, 15552 cols, 232632 nonzeros  0s
+
+MIP start solution is feasible, objective value is -864
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   15552 rows
+   15552 cols (15552 binary, 0 integer, 0 implied int., 0 continuous)
+   232632 nonzeros
+MIP-Timing:         2.2 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -2384           -864             175.93%        0      0      0         0     2.2s
+         0       0         0   0.00%   -2384           -864             175.93%        0      0      0     21593    60.0s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      -864
+  Dual bound        -2384
+  Gap               175.93% (tolerance: 0.01%)
+  P-D integral      101.712595511
+  Solution status   feasible
+                    -864 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            60.05 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 0
+  Nodes             0
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     21593 (total)
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)
+{"stage": "CHILD_TERMINAL", "pid": 643515, "status": "NO_VERIFIED_IMPROVEMENT_UNKNOWN", "best_count": 864}

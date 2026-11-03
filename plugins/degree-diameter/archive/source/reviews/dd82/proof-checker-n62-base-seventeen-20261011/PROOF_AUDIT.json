@@ -1,0 +1,33 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_proofs_complete_modulo_explicit_imports",
+  "summary": "The new d=9 exclusion of seventeen base edges and its load-bearing heavy-lift predecessor pass a fresh scoped review; all earlier connected/D1/degree-four/port reductions remain explicit imports.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_agent": "/root/proof_review_n62_base_seventeen",
+  "generated_at": "2026-10-11T12:57:15Z",
+  "trace_path": "reviews/dd82/proof-checker-n62-base-seventeen-20261011/",
+  "audited_inputs": [
+    "proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_BASE_NEAR_EXTREMAL_EXCLUSION.md",
+    "proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_ORIGINAL_SUBGRAPH.md"
+  ],
+  "source_statements_consulted_for_imports": [
+    "proofs/dd82/n62/CONNECTED_REPEAT_REDUCTION.md",
+    "proofs/dd82/n62/GLOBAL_DOUBLE_TRIANGLE_QUOTIENT.md",
+    "proofs/dd82/n62/D1_MATCH_C4_TRANSPORT_REFINEMENT.md"
+  ],
+  "details": {
+    "issues": [],
+    "obligations_checked": 19,
+    "source_edits": false,
+    "candidate_graph_enumeration": false,
+    "upstream_classifications_rerun": false,
+    "prior_review_verdicts_used_as_evidence": false,
+    "formal_verification": false,
+    "counterexample_pass": "Manual exact structural checks recorded in PROOF_AUDIT.md; no counterexample to a stated claim found.",
+    "unconditional_result": "For d=9, |E(F)|<=16, |E(G[D])|<=32, and at least 26 heavy original incidences go to W or other generated triangles.",
+    "conditional_result": "If every pair of base vertices has distance at most two, all those incidences go to W and the predecessor gives e_B(W)<=7.",
+    "not_established": ["An order-62 contradiction", "Exclusion of d=9", "Realizability of a surviving signed base", "A universal diameter bound for F"]
+  }
+}

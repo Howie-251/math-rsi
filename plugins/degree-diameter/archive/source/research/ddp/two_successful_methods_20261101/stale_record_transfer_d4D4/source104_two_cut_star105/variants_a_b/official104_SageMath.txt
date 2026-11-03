@@ -1,0 +1,253 @@
+# SageMathCell online https://sagecell.sagemath.org/?q=quqwmm
+#  (4,4)=104  Moore bound=161;
+#   
+'''
+ Main properties of the graph
+bakhar104c | Ord.: 104 / Size: 208 / Diam.: 4 / Avg.dist: 3.31441 / 4-reg.? True / Girth: 6  /  Alg.conn. 1.00000 /  Domin. number: 24.0 
+bakhar104b | Ord.: 104 / Size: 208 / Diam.: 4 / Avg.dist: 3.32039 / 4-reg.? True / Girth: 5  /  Alg.conn. 1.00000 /  Domin. number: 24.0 
+bakhar104  | Ord.: 104 / Size: 208 / Diam.: 4 / Avg.dist: 3.32039 / 4-reg.? True / Girth: 5  /  Alg.conn. 1.00000 /  Domin. number: 24.0 
+uberti100  | Ord.: 100 / Size: 200 / Diam.: 4 / Avg.dist: 3.32323 / 4-reg.? True / Girth: 6  /  Alg.conn. 1.13380 /  Domin. number: 23.0 
+exoo98     | Ord.:  98 / Size: 196 / Diam.: 4 / Avg.dist: 3.27540 / 4-reg.? True / Girth: 6  /  Alg.conn. 1.03099 /  Domin. number: 22.0 
+ Symmetry properties of the graph
+bakhar104c | Aut.group.ord.: 32 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+bakhar104b | Aut.group.ord.: 1 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+bakhar104  | Aut.group.ord.: 1 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+uberti100  | Aut.group.ord.: 240 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+exoo98     | Aut.group.ord.: 14 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False
+
+noniso -> 5
+1 Unique      : bakhar104c
+2 Unique      : bakhar104b
+3 Unique      : bakhar104
+4 Unique      : uberti100
+5 Unique      : exoo98
+
+ Automorphism group structure: x means direct product; : means semidirect product.
+bakhar104c : (C4 x C2 x C2) : C2  |  center order: 4
+bakhar104b : 1  |  center order: 1
+bakhar104 : 1  |  center order: 1
+uberti100 : C2 x S5  |  center order: 2
+exoo98    : C14  |  center order: 14
+
+bakhar104c  distance distrib from vtx. 0: [1, 4, 12, 36, 51]
+bakhar104c  distance distrib from vtx. 9: [1, 4, 12, 36, 51]
+
+bakhar104b  distance distrib from vtx. 0: [1, 4, 12, 33, 54]
+bakhar104b  distance distrib from vtx. 9: [1, 4, 12, 34, 53]
+
+bakhar104   distance distrib from vtx. 0: [1, 4, 12, 36, 51]
+bakhar104   distance distrib from vtx. 9: [1, 4, 12, 35, 52]
+
+uberti100   distance distrib from vtx. 0: [1, 4, 12, 31, 52]
+uberti100   distance distrib from vtx. 9: [1, 4, 12, 31, 52]
+
+exoo98      distance distrib from vtx. 0: [1, 4, 12, 33, 48]
+exoo98      distance distrib from vtx. 9: [1, 4, 12, 33, 48]
+
+Number of k-cycles for k=3 up to 9
+bakhar104c   0 0 0 24 96 628 1632
+bakhar104b   0 0 4 28 88 610 1616
+bakhar104    0 0 4 28 88 609 1616
+uberti100    0 0 0 90 0 540 1800
+exoo98       0 0 0 28 154 546 1624
+
+'''
+
+
+import networkx as nx
+
+bakhar104c = Graph(r":~?@ge??C_?U?@g?F_OQ@@WCE_O]A@GGD__YA@wKC_oUB@gKFa?qGBW_Ma?}HBGcLaOyHBwgKa_uIBggNaoqJBWkMao}ODH?Tc@YODxCScPUPDhCVc`QQDXGUc`]RDHKTcpYRDx_gMIKhOXslNsaeJCXHfak}hQhFeqwxRI?nOCuXKcIaKrm[LsTOhrW{SX{oPIOpNXgtOtQ`LBhTeag|gQlCfq{yUIOmOte[IRmfICIXJBp[gatDVXksPy?tNhwpOEAdKBd`fRX@hb[weBLEXIKqNuV")
+
+bakhar104b = Graph(r":~?@g`?A@_gM?_WIB`GUE`waHagmKbWyNcHEQcxQTdh]WePuYep}[GIE]GiMPDqAOCaEPCqIQDAMRDQQSDaUTDqYODa]IIGkhbAiLIwwkKG{lKW_mKgcnKw?o_REAKgKr`BQDLWWu`r]wMzc{mbuzNjo~mBuxNjg~hc@@hsDAgCHBhSLCgcPDhsTEhCXFhS@FeCaXQXhIesm[RDA\RTE]RdI^RtMESG\P_DI@SwHS_tUCTgTVbPdWVgwYUT}NEt`Ya@pXUwc\UdqIFdl\ap|[VgoWVT~")
+bakhar104 = Graph(r":~?@ga??A_OMA@GKD`?YD@w?E_O]GaWiJb@ALCWwQbpMFCG?P_PIACwKS`@UDDgWVeHeYexo_fQE]Gh{bdaAVGX?acQMQHHKddAYTHy_niAehIigjiqqkJYsmja}oLZCukb]oKzCskbUrLjOvaBaHMWgyarmKNCALNSEMNcINNsM@OGH@_sICOwTC`cUFPg@FmcazNse{Qjc|QzxKSKtPmCxQrtM_SIDTgdIbTyPShTUeTi\VeSlWVhhKUT}ZRT`YfCxXUxtNUdq]QDl\fsd[Vh`IVT~")
+uberti100 = Graph(r":~?@c`OA@_gMCd?sRa_yJBwoObPEMC`QNCpUIC@YJCP]KC`aH_GEA_wQD`g]GbxAPchMIawqLbhWbdqQWHXceea]ZFho^fQASGXSagAomgQsngawogq{phA_ohQcpNIWgIbufIQk}fagkNx{jJSAAA@Kr_ocILG?CArU@@Oou__WLLwKFBbaCA?{x`OcOMg?ECRm@@pGqhaefIhwjfqq_JYCmga}bKIOphQaqTdarTtesSDatSTeuSDIvSTLYmDHSUzdRTTqyTDX\mtTVVn")
+exoo98    = Graph(r":~?@a_GA?_GWD`WUDaoiIaOiEAh?NbwON_O}TDGcScpQODHgX`@eMEWkXfpyRFhs]e`ycGwwbeAMTGycgfQafIIOgjauWJYGlfqurKi[qkRIFJbIwLyGvjB]AIR]|ARqpNJk{a@CwNKGCOYp@lcEBBBL@dPk~`p{yPhWYPGGcLSaBFqUPISPIaA?cbAw~RGshJw_ZKsyQIayBDb`OdrKxcaS|ShosMGs_OdQ`NSM@FA|UhbxA``[iUGCFIwkeMTiA@bAOGRP[apCtdR@BVgoOMhgjNeB")
+
+bakhar104cnx = bakhar104c.networkx_graph()
+bakhar104bnx = bakhar104b.networkx_graph()
+bakhar104nx = bakhar104.networkx_graph()
+uberti100nx = uberti100.networkx_graph()
+exoo98nx =exoo98.networkx_graph()
+
+# List of graphs to process
+graphs = [ ('bakhar104c ', bakhar104c),('bakhar104b ', bakhar104b),('bakhar104  ', bakhar104), ('uberti100  ', uberti100), ('exoo98     ', exoo98 )]
+
+
+def count_k_cycles(G, k):
+    count = 0
+    visited = set()
+    def dfs(path, start, depth):
+        nonlocal count
+        current = path[-1]
+        # Early exit if we?re going too deep
+        if depth == k:
+            if start in G.neighbors(current):
+                # Normalize to avoid duplicates
+                cycle = tuple(sorted(path))
+                if cycle not in visited:
+                    visited.add(cycle)
+                    count += 1
+            return
+        for neighbor in G.neighbors(current):
+            if neighbor not in path and neighbor >= start:
+                dfs(path + [neighbor], start, depth + 1)
+    for v in G.vertices():
+        dfs([v], v, 1)
+    return count   # each cycle counted twice (once forward, once reverse)
+
+def algebraic_connectivity(G):
+    """
+    Compute the algebraic connectivity (Fiedler value) of a graph G.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The second-smallest eigenvalue of the Laplacian matrix of G
+    """
+    L = G.laplacian_matrix()
+    eigenvalues = L.eigenvalues()
+    eigenvalues.sort()
+    
+    if len(eigenvalues) < 2:
+        return 0  # Trivial case: empty or isolated vertex graph
+    return eigenvalues[1]
+
+
+def domination_number(G):
+    """
+    Compute the domination number of a graph G using MILP.
+    INPUT:
+        - G: a SageMath Graph
+    OUTPUT:
+        - The domination number (integer)
+    """
+    p = MixedIntegerLinearProgram(maximization=False)
+    x = p.new_variable(binary=True)   
+    # Objective: minimize the number of chosen vertices
+    p.set_objective(sum(x[v] for v in G.vertices()))
+    # Constraint: each vertex is dominated
+    for v in G.vertices():
+        p.add_constraint(x[v] + sum(x[u] for u in G.neighbors(v)) >= 1)
+    return p.solve()
+
+def compare_graphs_list(graphs):
+    canon = {}
+    count =1
+    for label, G in graphs:
+        s6 = G.canonical_label().sparse6_string()
+
+#        print(f"{label.strip():15} : {s6[:40]}...")
+
+        canon.setdefault(s6, []).append(label.strip())
+    print("\n noniso ->",len(canon))
+    print("\nGroups:")
+    for group in canon.values():
+        if len(group) > 1:
+            print(count,"Isomorphic :", ", ".join(group))
+            count=count+1
+        else:
+            print(count,"Unique      :", group[0])
+            count=count+1
+
+
+# Print properties for each graph in the list
+print("\n Main properties of the graph\n")
+for label, graph in graphs:
+    print(f"{label} | Ord.: {graph.order()} / Size: {graph.size()} / Diam.: {graph.diameter()} / Avg.dist: {graph.average_distance().n(digits=6)} / 4-reg.? {graph.is_regular(k=4)} / Girth: {graph.girth()}  /  Alg.conn. {algebraic_connectivity(graph).n(digits=6)} ")# /  Domin. number: {domination_number(graph)} ")
+
+print("Degree histogram bakhar104c:", nx.degree_histogram(bakhar104cnx))  
+print("Degree histogram bakhar104b:", nx.degree_histogram(bakhar104bnx))  
+print("Degree histogram bakhar104 :", nx.degree_histogram(bakhar104nx))  
+print("Degree histogram uberti100 :", nx.degree_histogram(uberti100nx))  
+print("Degree histogram exoo98    :", nx.degree_histogram(exoo98nx))  
+              
+print("\n Symmetry properties of the graph\n")
+for label, graph in graphs:
+    print(f"{label} | Aut.group.ord.: {graph.automorphism_group().order()} /  Cayley ? {graph.is_cayley()} ---  vtx.trans. ? {graph.is_vertex_transitive()} -- edge.trans. ? {graph.is_edge_transitive()}" )
+
+compare_graphs_list(graphs)
+
+
+# automorphism group structure
+print("\n Automorphism group structure: x means direct product; : means semidirect product.") 
+Abakhar104c  = bakhar104c.automorphism_group()
+print('bakhar104c :', Abakhar104c.structure_description(), ' |  center order:',Abakhar104c.center().order())           
+Abakhar104b  = bakhar104b.automorphism_group()
+print('bakhar104b :', Abakhar104b.structure_description(), ' |  center order:',Abakhar104b.center().order())           
+Abakhar104  = bakhar104.automorphism_group()
+print('bakhar104 :', Abakhar104.structure_description(), ' |  center order:',Abakhar104.center().order())           
+Auberti100  = uberti100.automorphism_group()
+print('uberti100 :', Auberti100.structure_description(), ' |  center order:',Auberti100.center().order())
+Aexoo98  = exoo98.automorphism_group()
+print('exoo98    :', Aexoo98.structure_description(), ' |  center order:',Aexoo98.center().order())
+print("\n") 
+    
+'''    
+print("\n Properties of the graphs as at arXiv\n")
+for label, graph in nonisographs:
+    print(f"{label} & {graph.average_distance().n(digits=6)}  & {graph.girth()}  &  {algebraic_connectivity(graph).n(digits=6)}   &  {graph.automorphism_group().order()} \\\\ ")
+''' 
+
+
+# Compute the distance distribution from a given vertex v in graph G
+# Returns a list where the i-th element is the number of vertices at distance i from v
+def distance_distribution(G, v):
+    from collections import Counter    
+    distances = G.shortest_path_lengths(v)
+    distribution = Counter(distances.values())
+    result = [distribution[d] for d in sorted(distribution)]    
+    return result
+
+
+for label, graph in graphs:
+    print(f"{label} distance distrib from vtx. 0: {distance_distribution(graph, 0)}")
+    print(f"{label} distance distrib from vtx. 9: {distance_distribution(graph, 9)}")
+    
+# Counting k-cycles for each graph
+print("\nNumber of k-cycles for k=3 up to 9")
+for label, graph in graphs:
+    print(f"{label} ", " ".join(str(count_k_cycles(graph, k)) for k in range(3, 10)))
+
+print("\n")
+
+'''
+# from 0 versio Molodtsov 
+for name, G in  graphs:
+    fname = name.strip() + "_adjlst.txt"
+    s = "; ".join(
+        "{}-{}".format(v, ",".join(map(str, G.neighbors(v))))
+        if G.neighbors(v) else str(v)
+        for v in G.vertices(sort=True)
+    )
+    with open(fname, "w") as f:
+        f.write(s)
+
+
+# from 0
+       
+for label, _ in  graphs:
+    base = label.strip()            
+    G = globals()[base + "nx"]      
+
+    with open(f"{base}_edges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u},{v}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+
+'''
+
+# from 1
+        
+for label, _ in graphs:
+    base = label.strip()   
+    G = globals()[base + "nx"] 
+
+    with open(f"{base}_Zedges.txt", "w") as f:
+        f.write(",".join(
+            f"{{{u+1},{v+1}}}"
+            for u, v in sorted((min(u, v), max(u, v)) for u, v in G.edges())
+        ))
+       
+print("\n DONE \n")  
+
+##

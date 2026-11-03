@@ -1,0 +1,109 @@
+{
+  "status": "PASS_CLASSICAL_REPRODUCTION",
+  "task": "Bounded user-requested feasibility adaptation of retained-edge filling to D=2",
+  "scope": "one q4 source and one augmented graph; inherit odd-q obstruction; former N(8,2)/n61 queues remain paused",
+  "single_point_interface": "S subset of spare vertices; |S|<=Delta; N_G[S]=V(G)",
+  "clique_helper_interface": "h-1+|S_i|<=Delta; old pin load(v)<=Delta-deg_G(v); N_G[S_i] union (union_j S_j)=V for each i",
+  "independent_helper_interface": "N_G[S_i]=V for every i; every pair S_i,S_j intersects; old loads respect spare budgets",
+  "source_q4": {
+    "n": 21,
+    "m": 50,
+    "degree_histogram": {
+      "4": 5,
+      "5": 16
+    }
+  },
+  "pins": [
+    1,
+    4,
+    11,
+    14,
+    17
+  ],
+  "pole_id": 5,
+  "pole_coordinates": [
+    1,
+    1,
+    1
+  ],
+  "closed_pin_coverage": 21,
+  "point_type_prediction": "all 21 old point rows match absolute/pole/other_nonabsolute predictions",
+  "final_q4": {
+    "n": 22,
+    "m": 55,
+    "degree_histogram": {
+      "5": 22
+    },
+    "diameter": 2,
+    "retained_old_edges": 50,
+    "added_edges": 5
+  },
+  "independent_validation": {
+    "literal_final_all_roots_BFS": 22,
+    "root_histograms": [
+      1,
+      5,
+      16
+    ],
+    "unordered_pair_distances": {
+      "1": 55,
+      "2": 176
+    },
+    "imports_generator_or_geometry": false
+  },
+  "inherited_q7_control": {
+    "old_n": 57,
+    "cap": 8,
+    "spare_vertices": 8,
+    "uncovered_saturated_vertices": 21,
+    "new_generation": 0,
+    "new_BFS": 0
+  },
+  "necessary_source_gate": "If closed N_G[T] != V for all spare old vertices T, no nonempty retained-edge same-cap D2 augmentation exists, even with arbitrary helper edges or added old-old edges",
+  "same_cap_continuation": "Stopped: all vertices of the 22-point graph have degree 5",
+  "source_specific_helper_limit": "For this even-q polarity source (q>=4), each absolute u has q-1 saturated private nonabsolute neighbors whose only spare old neighbor is u. Every helper must pin every u. Unit spare on U therefore permits at most one helper, even with arbitrary helper edges or added old-old edges. This is a direct geometry/degree corollary, no search.",
+  "public_comparison": {
+    "official_known_order_at_5_2": 24,
+    "this_order": 22,
+    "record": false,
+    "augmentation": "classical, as explicitly recorded by Bachraty-Siran 2015 section 2",
+    "global_optimality_24": "not claimed"
+  },
+  "novelty_accounting": {
+    "new_lower_bounds": 0,
+    "new_parameter_records": 0,
+    "new_concrete_Lean_instances": 0,
+    "accepted_global_count_increment": 0,
+    "classical_calibrations": 1
+  },
+  "actual_total_CPU_seconds": 0.05225703,
+  "actual_wall_seconds": 0.05673367530107498,
+  "workers": 1,
+  "solver_calls": 0,
+  "Lean_runs": 0,
+  "numerical_work_terminal": true,
+  "continuation_scheduled": false,
+  "evidence": [
+    "PRED.json",
+    "PROOF.md",
+    "SOURCE_CREDIT.md",
+    "COORDINATES_AND_TYPES.json",
+    "PINS.json",
+    "source_d5_D2_n21.edges",
+    "graph_d5_D2_n22.edges",
+    "PRODUCTION_RESULT.json",
+    "INDEPENDENT_VALIDATION.json",
+    "TERMINAL.json"
+  ],
+  "unexecuted_family_formula_comparison": {
+    "q": 8,
+    "Delta": 9,
+    "D": 2,
+    "order_formula_value": 74,
+    "official_table_located_order": 74,
+    "q8_graph_generated": false,
+    "q8_BFS_runs": 0,
+    "new_record": false,
+    "source": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  }
+}

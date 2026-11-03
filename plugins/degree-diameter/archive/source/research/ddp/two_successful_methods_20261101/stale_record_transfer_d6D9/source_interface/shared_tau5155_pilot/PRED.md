@@ -1,0 +1,13 @@
+# Fixedβ5155: complete residual projective normal domain
+
+Prediction before execution: at least one new projective normal representative gives all6959 endpoints in phase0. This only predicts a necessary return-fiber improvement, not D9 or a graph. Continue through other phases only inside the same fixed finite domain and cumulative20CPU budget; report genuine survivors or exact untested work.
+
+Old scope was onlyτ1512 for42 actions; the34thin-image failures were scalar images at that sameτ. Fixing the saved actionβ5155 and allowing the previously frozen normal ratioτ is therefore a changed generator rule. The selected action is an existing complete source-compatible control, not a parameter adjusted after repeated bad-pair searches. No otheraction, field, phases, seed or local optimization is varied.
+
+Actual target RIGHT law is(j,n)(a,c)=(j+a,nβ^a+c), phaseZ49, normalF6959. Positive phases1,36,45 have homogeneous normal coefficients(0,0),(1,0),(0,1) for(cB,cC). The true inverse has phase−a and coefficient−β^(−a) times the positive coefficient. A word coefficient pair updates(A,B)→(Aβ^a+A_d,Bβ^a+B_d). Do not use the phase69 model's current-phase weighting.
+
+Common normal conjugation uniquely sets the first normal0 becauseβ−1≠0. Nonzero global scale gives P1(F6959): representatives(cB,cC)=(1,τ),τ∈F6959, plus infinity(0,1). Allzero is disconnected on the full group. Skip inheritedτ1512NO without re-evaluating its image or BFS, leaving6958finiteτ plus infinity=6959 new representatives. Infinity is not dropped. This normalization covers all original three normal translations at these fixed phases/action, possibly with further isomorphic duplicates not quotient here.
+
+Generate NB words of length≤9 once, using the six fixed dart types and true inverse map. Group their new coefficient pairs by endpointphase and deduplicate. First evaluate all new representatives at phase0 and save PHASE0_RESULT.json. Then use fixed phase order1..24 on the surviving domain. Inverse words give U_−j=−β^−j U_j, so these25 phase tests represent all49 phases. A survivor of everyphase has a complete≤9 word cover; only then generate one complete340991/1022973 edge list and stop other parameter work, pending root acceptance. A complete rejection of every new representative combines with the inherited1512NO and allzeroNO to close only this β5155/fixedphase/all-normal family. Partial computation remains UNKNOWN with each representative's checkedphase mask saved.
+
+Case cumulative20CPU includes prior actualscope receipt0.949294461, all new preparation/compilation/failures and run. One worker, no reset, no retry. No old source6763 orfieldlaw checks, no oldτ1512 endpoint/BFS control, no solver/ARIS/Lean/hash/remote. No extension after this finite pilot.

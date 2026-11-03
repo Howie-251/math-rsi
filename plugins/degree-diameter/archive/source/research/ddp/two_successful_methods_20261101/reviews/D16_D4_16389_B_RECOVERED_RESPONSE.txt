@@ -1,0 +1,94 @@
+### Independent Complementary Checkpoint B Review
+
+**Target**: $(\Delta, D, n, m) = (16, 4, 16389, 128835)$  
+**Source**: Published reproduction $(15, 4, 15552, 116316)$ (counted strictly as reproduction: $+0$ portfolio result; $+1$ Lean concrete instance for the clone).  
+**Baseline Boundary**: Exceeds currently read Comellas main table ($16384$) by $+5$; global priority strictly **UNKNOWN**; no global SOTA claim.
+
+---
+
+### Facet 1: Mathematics — **PASS**
+
+1. **Complete Simple Graph & Degree**:
+   - The graph $G$ has order $n = 16389$, size $m = 128835$, maximum degree $\Delta = 16$, and exact diameter $D = 4$ ([`ROOT_GRAPH_RELEASE.json`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json#L4-L42)).
+   - Degree histogram is $14: 72, 15: 4410, 16: 11907$.
+   - All $116316$ edges of published source $S$ ($14: 648, 15: 14904$) are preserved unconditionally.
+   - Cloning adds $837$ vertices ($31 \text{ layers} \times 27 \text{ points}$ in $W = \{x_1 = 0\}$) and $12519$ new–old edges ($36 \times 14 + 801 \times 15$); new–new edges are $0$ ([`PROOF.md#L35-L40`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PROOF.md#L35-L40)).
+
+2. **Full Frozen Old Neighborhoods, Pin Load $\le 1$, & Virtual-Self**:
+   - The $837$ clones are constructed by copying the literal open source neighborhood $N_S(c_j)$ of each center $c_j$.
+   - Virtual self-loops are filtered at the source center level before freezing $N_S(c_j)$ ([`ROOT_GRAPH_RELEASE.json#L34`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/ROOT_GRAPH_RELEASE.json#L34)). Clones are not connected to their own center ($d(x_{c_j}, c_j) = 2$ via any old neighbor $u \in N_S(c_j)$).
+   - Because $W = \{x_1 = 0\}$ intersects $\ker B$ only at $0$ and the 31 target-controller sets are pairwise disjoint, all 12519 old pins are distinct (load $\le 1$) ([`PROOF.md#L25-L33`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/PROOF.md#L25-L33)).
+
+3. **Genuine All-Pair & Prefix Walk Bound $\le 4$**:
+   - Retraction $\pi : G \to S$ fixing old vertices and mapping $x_c \mapsto c$ preserves edges.
+   - For any pair $s, t$ with source distance $L = \text{dist}_S(\pi(s), \pi(t)) \le 4$:
+     - $L \ge 2$: Endpoints are lifted to $s, t$ while interior vertices remain entirely in old source $S$ (length $L \le 4$).
+     - $L = 1$ (adjacent source centers): Handled via the 3-edge path $x_c - d - c - x_d \le 4$ ([`STRUCTURE_PROOF.md#L41-L44`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/STRUCTURE_PROOF.md#L41-L44)). No independence of centers is assumed.
+     - $L = 0$: Uses an old common neighbor $u \in N_S(c)$ (path length 2, possible as $\min \deg_S = 14$).
+   - This holds identically for every prefix of clones.
+
+4. **Exact Diameter 4 (Non-$D3$)**:
+   - Controller projection has loopless maximum degree $\le 5$, implying ball $B_3 \le 106$ controllers. With 192 controllers, at least $86 \times 81 = 6966$ old vertices must have distance $> 3$ from any root ([`STRUCTURE_PROOF.md#L21-L32`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/STRUCTURE_PROOF.md#L21-L32)).
+   - Direct independent BFS on all 16389 final-graph roots confirmed eccentricity 4 for every root, min old $R4 = 13066 > 6966$ ([`RESULT.json#L34-L42`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/RESULT.json#L34-L42)).
+   - Exact genuine distance-4 witness in $G$: $0 - 891 - 3726 - 907 - 1$ ([`NOTE.md#L13-L17`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/NOTE.md#L13-L17)).
+
+---
+
+### Facet 2: Formal Lean Kernel Target — **PASS**
+
+1. **Unconditional Target & Standard Axioms**:
+   - Source target: `DegreeDiameter.Portfolio.F3Graph15552.d15_15552` and `final_claim` ([`F3Graph15552FullExact.lean#L5-L8`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullExact.lean#L5-L8)).
+   - Clone target: `DegreeDiameter.Portfolio.F3Graph15552.Clone16389.d16_16389` and `final_claim` ([`F3Graph15552FullCloneExact.lean#L15-L18`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullCloneExact.lean#L15-L18)).
+   - Zero user-certificate premises: carrier is `Fin 15552 ⊕ Fin 837` with explicit equivalence `label : Vertex ≃ Fin 16389` ([`F3Graph15552Definitions.lean#L102`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552Definitions.lean#L102)).
+   - Axiom check verified in logs: strictly `[Classical.choice, Quot.sound, propext]` ([`F3Graph15552FullAudit_attempt001.log#L9-L16`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullAudit_attempt001.log#L9-L16), [`F3Graph15552FullCloneAudit_attempt001.log#L11-L28`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/F3Graph15552FullCloneAudit_attempt001.log#L11-L28)).
+
+2. **Resolution of Missing Controller Pairs (Global Coset Groups)**:
+   - The naive hypothesis that all pairs are covered by single full-rank 4-step words was properly recorded as refuted (256/625 words were full rank, leaving 3648 pairs) ([`NEW_ROUTE4_RESULT.json#L2-L17`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/NEW_ROUTE4_RESULT.json#L2-L17)).
+   - Fully solved by 91 global coset groups with reference words of length $\le 2$ and 173 full-rank words covering all pairs modulo noise space ([`GLOBAL_COSET4_NOTE.md#L3-L29`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/GLOBAL_COSET4_NOTE.md#L3-L29), [`F3Graph15552Linear.lean#L36-L48`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552Linear.lean#L36-L48)).
+   - Holding steps contract to `SimpleGraph.Walk.nil` when vertices coincide and to a true edge otherwise ([`F3Graph15552Routes.lean#L22-L33`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552Routes.lean#L22-L33)).
+
+3. **Symmetry Transfer (8 Rows $\to$ All 192)**:
+   - Two automorphism generators of the centralizer of the controller actions commute with `controller a p` ([`F3Graph15552FullSymmetryCertificate0.lean#L7`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullSymmetryCertificate0.lean#L7)).
+   - Full coverage from the 8 representative rows $\{0, 1, 2, 3, 9, 10, 16, 35\}$ via transport words of length $\le 5$ is verified kernel-side by `decide +kernel` ([`F3Graph15552FullSymmetryCoverage.lean#L5-L6`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullSymmetryCoverage.lean#L5-L6)).
+   - `diameterAtMost_of_representatives` lifts these 8 rows to the full graph diameter $\le 4$ ([`F3Graph15552FullSymmetry.lean#L76-L100`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullSymmetry.lean#L76-L100)).
+
+4. **Non-$D3$ Witness & Clone Owner Recovery**:
+   - Lower witness $0 \to 81$: Tested via 125 3-step controller paths in `lower_no_controller_three` ([`F3Graph15552FullLower.lean#L11-L49`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullLower.lean#L11-L49)).
+   - Symbolic owner recovery `recover` and total decoder `ownerIndex` prove `pinOwner_forward` and `load_le_one` ([`F3Graph15552FullCloneInputs.lean#L586-L707`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Portfolio/F3Graph15552FullCloneInputs.lean#L586-L707)).
+   - Reused `FullNeighborhoodClones` automatically supplies degree bound $\le 16$, diameter $\le 4$, and non-$D3$ preservation without new axioms.
+
+---
+
+### Facet 3: External Artifact Binding Scope — **PASS**
+
+1. **Artifact Alignment**:
+   - Inherited source data: 960 controller transitions, 5 global $(B, v, c)$ types, and 837 ordered center labels ([`EXTERNAL_BINDING_RESULT.json#L12-L16`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/EXTERNAL_BINDING_RESULT.json#L12-L16)).
+   - Fresh candidate data: 12519 full-$N$ pin bindings bound in `ALL837_ACTUAL_ROLE_BINDINGS.tsv` and verified by independent C++ verifier.
+   - Clean boundaries: No Lean ASCII parser or 837-row Audit evaluation theorem is falsely claimed ([`EXTERNAL_BINDING_RESULT.json#L30-L31`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/EXTERNAL_BINDING_RESULT.json#L30-L31)).
+
+2. **Budget and Execution Limits**:
+   - Lean formalization completed in $675.78$ CPU s (limit $1200$ s), single worker, all modules $\le 60$ s CPU ([`FINAL.json#L4-L6`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/formalization_full/FINAL.json#L4-L6)).
+   - Independent validator completed in $9.905$ CPU s (limit $120$ s) ([`TERMINAL.json#L5-L6`](file:///inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/two_successful_methods_20261101/retained_edge_transfer/published_d15_15552_D4_source_gate/degree16_plane837/independent_acceptance/TERMINAL.json#L5-L6)).
+   - Failed attempts preserved honestly in cumulative accounting (3 pilot, 3 formalization).
+
+---
+
+### Verdict Summary
+
+```json
+{
+  "targets": [
+    {
+      "Delta": 16,
+      "D": 4,
+      "n": 16389,
+      "m": 128835,
+      "math": "PASS",
+      "formal": "PASS",
+      "binding": "PASS",
+      "priority": "UNKNOWN",
+      "blocking_gap": null
+    }
+  ]
+}
+```

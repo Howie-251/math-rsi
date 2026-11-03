@@ -1,0 +1,245 @@
+{
+  "status": "ALL_SPECIFIED_TEMPLATE_PARAMETERS_OBSTRUCTED",
+  "root": [
+    "U",
+    0,
+    0,
+    0
+  ],
+  "target_fiber": [
+    "V",
+    1,
+    4
+  ],
+  "parameter_order": [
+    "alpha",
+    "beta",
+    "gamma1",
+    "gamma2",
+    "gamma3",
+    "gamma4"
+  ],
+  "complete_affine_forms": [
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        1
+      ],
+      "constant": 0
+    },
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        1
+      ],
+      "constant": 1
+    },
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        1
+      ],
+      "constant": 4
+    },
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        1
+      ],
+      "constant": 10
+    },
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        16
+      ],
+      "constant": 0
+    },
+    {
+      "coeff": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        16
+      ],
+      "constant": 5
+    },
+    {
+      "coeff": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 0
+    },
+    {
+      "coeff": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 2
+    },
+    {
+      "coeff": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 0
+    },
+    {
+      "coeff": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 2
+    },
+    {
+      "coeff": [
+        16,
+        16,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 0
+    },
+    {
+      "coeff": [
+        16,
+        16,
+        1,
+        0,
+        0,
+        0
+      ],
+      "constant": 2
+    }
+  ],
+  "capacity": 12,
+  "required": 17,
+  "one_cross_routes": [
+    {
+      "length": 2,
+      "route": [
+        "s1",
+        "+b"
+      ],
+      "affine_shift": "beta+gamma1",
+      "constants": [
+        0,
+        2
+      ]
+    },
+    {
+      "length": 3,
+      "route": [
+        "+a",
+        "+a",
+        "s1"
+      ],
+      "affine_shift": "2alpha+gamma1",
+      "constants": [
+        0,
+        2
+      ]
+    },
+    {
+      "length": 3,
+      "route": [
+        "-a",
+        "s1",
+        "-b"
+      ],
+      "affine_shift": "-alpha-beta+gamma1",
+      "constants": [
+        0,
+        2
+      ]
+    }
+  ],
+  "three_cross_index_triples": [
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      4,
+      3,
+      0
+    ],
+    [
+      2,
+      4,
+      3
+    ],
+    [
+      3,
+      4,
+      2
+    ]
+  ],
+  "three_cross_merged_families": [
+    {
+      "affine_shift": "gamma4-gamma3",
+      "branch_set": "X4-X3+X0",
+      "constants": [
+        0,
+        1,
+        4,
+        10
+      ],
+      "cardinality_upper_bound_from_sizes": 4
+    },
+    {
+      "affine_shift": "gamma2+gamma3-gamma4",
+      "branch_set": "X2-X4+X3",
+      "constants": [
+        0,
+        5
+      ],
+      "cardinality_upper_bound_from_sizes": 2
+    }
+  ],
+  "union_bound": "3*|X1| + |X4|*|X3|*|X0| + |X2|*|X4|*|X3| = 6+4+2 = 12 < 17",
+  "scope": "All alpha,beta,gamma1..4 in C17. Also all choices of branch constants with these same sizes (4,2,2,1,1) at these same k positions; no other size distributions or branch positions are classified.",
+  "CPU_source": "SCREEN.json"
+}

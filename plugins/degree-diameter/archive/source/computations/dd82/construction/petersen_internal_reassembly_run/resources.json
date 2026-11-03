@@ -1,0 +1,83 @@
+{
+  "source": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_four_fiber_reassembly_run/seed.edges",
+  "scope": "Fixed 97-bad seed's fifteen matching interfaces and P2/P3; screen all labeled P0/P1 against both fixed boundary fibers, then coupled P4/P5 preserving exact45 only if both first domains survive",
+  "command": [
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_internal_reassembly.bin",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_four_fiber_reassembly_run/seed.edges",
+    "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/computations/dd82/construction/petersen_internal_reassembly_run"
+  ],
+  "exit_code": 0,
+  "search": {
+    "labeled_Petersen_catalog_size": 30240,
+    "completed_boundary_screens": 1,
+    "stop_reason": "complete_empty_boundary_domain_fiber0",
+    "coupled45_decompositions": 0,
+    "boundary_valid45_decompositions": 0,
+    "joint_assemblies": 0,
+    "best_bad_pairs": 97,
+    "best_energy": 118,
+    "cpu_seconds": 0.108814,
+    "cpu_budget_seconds": 5,
+    "solver_runs": 0
+  },
+  "search_child_cpu_seconds": 0.11190299999999999,
+  "verification_child_cpu_seconds": 0.060616,
+  "parent_cpu_seconds": 0.010747469000000003,
+  "wall_seconds": 0.18984004855155945,
+  "total_cpu_budget_seconds": 10,
+  "solver_runs": 0,
+  "unique_expanded_graphs_checked": 2,
+  "checks": [
+    {
+      "file": "best.json",
+      "method": "independent BFS of expanded edges",
+      "result": {
+        "n": 60,
+        "edges": 240,
+        "max_degree": 8,
+        "bad_pair_count": 97,
+        "diameter": 3,
+        "valid_target": false
+      }
+    },
+    {
+      "file": "best_new.json",
+      "method": "independent BFS of expanded edges",
+      "result": {
+        "n": 60,
+        "edges": 240,
+        "max_degree": 8,
+        "bad_pair_count": 111,
+        "diameter": 3,
+        "valid_target": false
+      }
+    },
+    {
+      "file": "fiber0.best_boundary.json",
+      "method": "same full edge list as best.json; reuse its independent BFS",
+      "result": {
+        "n": 60,
+        "edges": 240,
+        "max_degree": 8,
+        "bad_pair_count": 97,
+        "diameter": 3,
+        "valid_target": false
+      }
+    },
+    {
+      "file": "fiber0.best_single.json",
+      "method": "same full edge list as best.json; reuse its independent BFS",
+      "result": {
+        "n": 60,
+        "edges": 240,
+        "max_degree": 8,
+        "bad_pair_count": 97,
+        "diameter": 3,
+        "valid_target": false
+      }
+    }
+  ],
+  "skipped_initial_proposal": "P4/P5-only was not run: it leaves existing 02/03/12/13 bad blocks unchanged",
+  "p1_boundary_screen_started": false,
+  "coupled45_stage_started": false
+}

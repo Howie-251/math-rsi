@@ -1,0 +1,173 @@
+{
+  "status": "COMPLETE_NO_N1_TWO_DISJOINT_EDGECUT_ONE4STAR_D3",
+  "prediction": "AtleastoneconfigurationpassesnewrootR3;fullgraphnotpredicted.",
+  "prediction_newroot_supported": true,
+  "source_id": "MessieresN1",
+  "source_n": 41,
+  "source_m": 82,
+  "target_n": 42,
+  "target_m": 84,
+  "target_degree": 4,
+  "target_D": 3,
+  "exact_domain": 3075,
+  "cached_source_JSON_parse_count": 1,
+  "finite_pair_parameters_listed": 3075,
+  "configurations_finished": 3075,
+  "pair_stage_counts": {
+    "NEWROOT_R3_FAIL": 3072,
+    "OLDOLD_R3_FAIL": 3
+  },
+  "newroot_ordinary_BFS_checks": 3075,
+  "newroot_R3_passed": 3,
+  "final_candidate_old_label_BFS_checks": 4,
+  "oldold_failures_after_newroot_pass": 3,
+  "first_newroot_failure": {
+    "configuration": {
+      "index": 0,
+      "old_edge_indices": [
+        0,
+        4
+      ],
+      "old_cut_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "new_label": 41,
+      "four_pins": [
+        0,
+        1,
+        2,
+        7
+      ]
+    },
+    "BFS": {
+      "root": 41,
+      "target": 5,
+      "distance": 4,
+      "reached": 42,
+      "eccentricity": 4,
+      "actual_path": [
+        41,
+        0,
+        19,
+        20,
+        5
+      ],
+      "distance_histogram": {
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 19,
+        "4": 6
+      }
+    }
+  },
+  "first_oldold_failure": {
+    "configuration": {
+      "index": 1374,
+      "old_edge_indices": [
+        20,
+        57
+      ],
+      "old_cut_edges": [
+        [
+          5,
+          15
+        ],
+        [
+          17,
+          22
+        ]
+      ],
+      "new_label": 41,
+      "four_pins": [
+        5,
+        15,
+        17,
+        22
+      ]
+    },
+    "BFS": {
+      "root": 1,
+      "target": 33,
+      "distance": 4,
+      "reached": 42,
+      "eccentricity": 4,
+      "actual_path": [
+        1,
+        17,
+        41,
+        22,
+        33
+      ],
+      "distance_histogram": {
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 24,
+        "4": 1
+      }
+    },
+    "both_endpoints_nonpin": true
+  },
+  "original_source_single_pair_diagnostic_checks": 1,
+  "one_oldpair_diagnostic": {
+    "original_source_pair": {
+      "root": 1,
+      "target": 33,
+      "distance": 3,
+      "actual_path": [
+        1,
+        17,
+        22,
+        33
+      ],
+      "visited_when_target_first_found": 24,
+      "partial_discovered_max_distance": 3,
+      "partial_discovery_histogram": {
+        "-1": 17,
+        "0": 1,
+        "1": 4,
+        "2": 12,
+        "3": 7
+      },
+      "traversal_stopped_after_target_discovery": true,
+      "minus1_is_unvisited_not_unreachable": true,
+      "global_source_eccentricity_or_D3_verified": false
+    },
+    "new_candidate_distance": 4,
+    "cut_edges_on_this_one_original_route": [
+      [
+        17,
+        22
+      ]
+    ],
+    "all_original_geodesics_enumerated": false,
+    "uniqueness_claimed": false,
+    "single_pair_only": true
+  },
+  "hit": null,
+  "remaining_unvisited_pairs": 0,
+  "exact_NO_scope": "OnlytheliteralMessieresN1,all3075unordereddisjointoldedgepairs,delete2edges/addone4star;notN2/N3orgeneral(4,3).",
+  "source_D3_allroot_BFS_or_geodesic_enumeration": 0,
+  "solver_field_Lean_ARIS_network_hash": 0,
+  "root_Wiki_modified": false,
+  "new_graph_parameter_Lean_increment_before_root_acceptance": [
+    0,
+    0,
+    0
+  ],
+  "prior_case_CPU_seconds": 0.121139383,
+  "new_preparation_charge_seconds": 0.1,
+  "actual_process_CPU_seconds": 0.128974352,
+  "cumulative_charged_CPU_seconds": 0.350113735,
+  "CPU_budget_seconds": 20.0,
+  "worker_count": 1,
+  "next": "STOP_REPORT_NO_SOURCE_CUT_SEED_MODEL_OR_TIMER_EXTENSION"
+}

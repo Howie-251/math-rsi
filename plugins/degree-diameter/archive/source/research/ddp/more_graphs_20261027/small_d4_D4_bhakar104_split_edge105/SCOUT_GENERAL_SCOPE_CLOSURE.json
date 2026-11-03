@@ -1,0 +1,91 @@
+{
+  "status": "FULL_FIXED_SOURCE_OPERATION_CLOSED_BY_NEW_BATCH_AND_INHERITANCE",
+  "reviewed_UTC": "2026-10-28T03:48:42.110421+00:00",
+  "source": "Nishant Bhakar104c, triangle-free four-regular graph,104 vertices/208edges",
+  "target": {
+    "Delta": 4,
+    "D": 4,
+    "n": 105,
+    "m": 210
+  },
+  "operation": "Choose any sourcevertex v, split its four neighbors into unordered parts A,B ofsize2, form adjacent children u,w with originalneighbors A,B, delete one sourceedge x-y, then add u-x,w-y; retain all other sourceedges. Only literal simple legal outputs are included.",
+  "new_batch_evidence": {
+    "result": "RESULT.json",
+    "planned_and_visited_parameter_tuples": 119808,
+    "known_old_2switch_skips": 12,
+    "additional_old230_skips": 0,
+    "exact_two_child_gate_rejections": 119796,
+    "gate_passers": 0,
+    "unvisited": 0,
+    "actual_expanded_calibration_graphs": 1,
+    "source_BFS": 0
+  },
+  "inherited_exclusion": {
+    "id": "ddp-wave2-extension105-d4",
+    "report": "research/ddp/breadth_20261027_wave2/extension105_d4/REPORT.md",
+    "complete_legal_two_disjoint_edge_absorptions": 20904,
+    "all_failed_D4": true
+  },
+  "classification": [
+    {
+      "case": "x,y outside closed N_G[v]",
+      "parameter_tuples": 119808,
+      "disposition": "Already complete new batch; failures plus exact old-neighborhood skips recorded in RESULT."
+    },
+    {
+      "case": "Non-v-incident cut with x in A or y in B",
+      "parameter_tuples": 3744,
+      "disposition": "Illegal duplicate retained or moved spoke. Triangle-free source means a non-v cut has at most one endpoint in N(v)."
+    },
+    {
+      "case": "Non-v-incident cut with x in B",
+      "disposition": "The added u-x restores original v-x. With B={x,b}, the only old edges finally removed are v-b and x-y; the new child w joins their four distinct endpoints. Thus this is an old two-disjoint-cut/four-spoke absorption."
+    },
+    {
+      "case": "Non-v-incident cut with y in A",
+      "disposition": "Swap the two child roles, relabel w as original v and u as the new point, then obtain the same old two-disjoint-cut/four-spoke absorption. No vertex-transitivity assumption is used."
+    },
+    {
+      "case": "All legal degenerate non-v-incident cases above",
+      "parameter_tuples": 3744,
+      "disposition": "Inherited old20904 exclusion, not re-enumerated or reverified."
+    },
+    {
+      "case": "Cut incident to source v",
+      "disposition": "In the literal added edges u-x,w-y, an endpoint v identified with u causes either u-u selfloop or duplicate u-w buddy. No further legal output."
+    }
+  ],
+  "count_derivation": {
+    "per_vertex_partitions": 3,
+    "source_vertices": 104,
+    "source_edges": 208,
+    "non_v_incident_edges": 204,
+    "raw_orientations_per_cut": 2,
+    "raw_non_v_incident_tuples": 127296,
+    "edges_outside_closed_neighborhood_per_v": 192,
+    "outside_tuples": 119808,
+    "non_v_edges_touching_Nv_per_v": 12,
+    "proof_of_12": "Each of four neighbors has three edges away from v. No two source neighbors are adjacent because there are no triangles, so these are12 distinct edges, each with exactly one endpoint inN(v).",
+    "per_partition_neighbor_touching_orientations": 24,
+    "per_partition_legal_degenerate_orientations": 12,
+    "per_partition_illegal_orientations": 12,
+    "legal_degenerate_tuples": 3744,
+    "illegal_tuples": 3744,
+    "total_legal_parameter_tuples": 123552,
+    "counts_role": "Parameter tuples in a canonical unordered2+2 split; not claimed distinct or nonisomorphic graphs."
+  },
+  "scope_closed": "All legal balanced2+2 adjacent vertex splits plus one oriented sourceedge absorption, for the fixed labeled104c source. New outside-neighborhood batch and inherited degenerate cases together exhaust the operation.",
+  "not_closed": [
+    "General105-vertex maxdegree4 diameter4 graphs.",
+    "Other104-point sourcegraphs.",
+    "Unbalanced splits, multiple cuts, other added edges or other operations."
+  ],
+  "chronology": "The original RESULT closed only the frozen outside-N[v] batch. This later paper classification closes the remaining endpoint domains of the same operation without modifying the original numerical result or rerunning it.",
+  "execution_this_scope_check": {
+    "new_candidate_enumerations": 0,
+    "new_graphs": 0,
+    "BFS": 0,
+    "solver_calls": 0,
+    "old_neighborhood_regeneration": 0
+  }
+}

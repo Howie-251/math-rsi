@@ -1,0 +1,101 @@
+{
+  "record_type": "normalized_shard_response",
+  "shard_id": "trace_obligations",
+  "agent_id": "/root/proof_review_seven_triangle_slack/trace_obligations",
+  "model_requested": "gpt-6-astra",
+  "reasoning_requested": "ultra",
+  "actual_model": null,
+  "actual_reasoning": null,
+  "backend_attestation": "unavailable",
+  "entries": [
+    {
+      "dedup_key": "trace-fourth-identity",
+      "payload": {
+        "location": "matching_zero_global_trace_obstruction_20261011.md Steps 1–2; heavy_cross_repeat_slack_20261011.md Step 5",
+        "derivation": [
+          "With n=59, regularity gives tr(A²)=8n, AJ=8J, BJ=6J, tr(B)=0, and tr(AB)=6T.",
+          "The two evaluations tr(A²B)=6n+s−6T and tr(A²B)=tr(A⁴)+6T−120n yield tr(A⁴)=126n+s−12T.",
+          "Non-simple four-walks contribute 8n from one used edge and 4n·binom(8,2)=112n from a three-vertex path; simple four-cycles contribute eight each, including chorded cycles. Thus tr(A⁴)=120n+8C₄ and 8C₄=6n+s−12T."
+        ],
+        "local_finding": "The fourth-trace identity has the stated constants."
+      }
+    },
+    {
+      "dedup_key": "trace-fifth-matrix-identity",
+      "payload": {
+        "location": "matching_zero_global_trace_obstruction_20261011.md Step 2",
+        "derivation": [
+          "ABJ=48J, so tr(A³B)=7tr(AB)+tr(ABJ)+tr(AB²)−tr(A²B)=48T+42n+w−s.",
+          "A³J=512J, so tr(A⁵)=7tr(A³)+tr(A³J)+tr(A³B)−tr(A⁴)=428n+w−2s+102T."
+        ],
+        "local_finding": "No missing term or coefficient discrepancy appeared."
+      }
+    },
+    {
+      "dedup_key": "five-walk-nonsimple-count",
+      "payload": {
+        "location": "matching_zero_global_trace_obstruction_20261011.md Step 3",
+        "derivation": [
+          "A repetition among the five cyclic positions of a loopless closed five-walk occurs at cyclic distance two. Removing that immediate backtrack leaves a triangle.",
+          "The used-edge graph is either the triangle or the triangle plus one external incident edge, and therefore has a unique triangle; unused chords do not affect uniqueness.",
+          "For a walk confined to the triangle, edge multiplicities are all odd and sum to five, hence are 3,1,1. Three choices of tripled edge, two directions and five starts give 30 walks.",
+          "An external incident edge yields two directions and five starts. There are 3(8−2)=18 such edges. Thus each triangle contributes 30+18·10=210 non-simple walks, and tr(A⁵)=10C₅+210T."
+        ],
+        "counterexample_probe": "An external endpoint joined to several triangle vertices creates no overcount because those extra edges are not used. Chords likewise do not invalidate the simple-walk contribution.",
+        "local_finding": "The non-simple count and unique-triangle assignment are justified."
+      }
+    },
+    {
+      "dedup_key": "trace-global-remainder-congruence",
+      "payload": {
+        "location": "matching_zero_global_trace_obstruction_20261011.md Steps 4–6",
+        "derivation": [
+          "Comparison gives 10C₅=428n+w−2s−108T. With w=2ΣQ₂(v) and e_v=Q₂(v)−s_v+5, this becomes 5C₅=209n+Σe_v−54T.",
+          "An exact zero N15 row has s_v=10 and Q₂(v)=5, so e_v=0 and the sum restricts to N.",
+          "At n=59, 209n≡1 and −54≡1 modulo five, hence Σ_{v∈N}e_v+T≡4 modulo five."
+        ],
+        "local_finding": "No nonzero-row shape assumption is needed for this congruence."
+      }
+    },
+    {
+      "dedup_key": "support-transport-row-remainder",
+      "payload": {
+        "location": "nonzero_support_transport_20261011.md Proof",
+        "derivation": [
+          "For x∈Z and B_rx>0, N15 in row x gives (BA)_xr=B_xr; symmetry and AB=BA give Σ_{y∼x}B_ry=B_rx.",
+          "For adjacent zero support vertices x,y, transport gives opposite weight inequalities, hence equal weights and no other positive-support neighbors.",
+          "An unpaired zero support vertex sees an independent set of nonzero support neighbors with total weight B_rx.",
+          "For unpaired zero set I, Q₂(r)=Q_N(r)+Σ_{x∈I}B_rx²+K_r and s_r=s_N(r)+Σ_{x∈I}B_rx²+2K_r. Thus e_r=5+Q_N(r)−s_N(r)−K_r."
+        ],
+        "local_finding": "The formula applies at nonzero roots without assuming N15 there."
+      }
+    },
+    {
+      "dedup_key": "seven-triangle-row-patterns-isolated-slack",
+      "payload": {
+        "location": "heavy_cross_repeat_slack_20261011.md Step 3",
+        "derivation": [
+          "T=7, |N|=21 imply t(v)=1 for every v∈N. Under condition (3), each nonzero row's nonzero support is its two unit triangle partners.",
+          "Remaining row weight four in Z has possible partitions 22,211,1111. Pattern 211 is impossible because the lone heavy support vertex cannot pair and cannot receive weight two from an independent subset of the unit triangle edge; the same argument forces pairing in 22.",
+          "A 1111 row with p_n matching edges has 4−2p_n unpaired vertices, totalling 2b.",
+          "Each unpaired light cross pair has a nonzero triangle-partner common neighbor. It has exactly two common neighbors overall, so q≤1 and r=1."
+        ],
+        "local_finding": "The row classification and all 2b isolated-light contributions follow."
+      }
+    },
+    {
+      "dedup_key": "seven-triangle-trace-arithmetic-contradiction",
+      "payload": {
+        "location": "heavy_cross_repeat_slack_20261011.md Step 5",
+        "derivation": [
+          "The row squares give s=380+10a+6(21−a)=506+4a. Therefore 8C₄=776+4a and a is even.",
+          "At each nonzero root Q_N=1,s_N=2, so e_n=4−K_n: zero for 22, and 4−p_n for 1111. Hence Σe_n=42−2a+b and b≡2a modulo five.",
+          "Taking the parent's assigned Step 4 bound a+b≤4 as input, a∈{0,2,4}. The a=2 and a=4 residue conditions contradict the respective allowed b intervals; a=0 forces b=0.",
+          "With a=0 there are 21·4=84 cross light incidences, but the 38 zero rows have only 38·2=76 unit entries available."
+        ],
+        "local_finding": "The arithmetic and incidence contradiction agree, conditional on the Step 4 disjoint-charging bound audited by the parent reviewer."
+      }
+    }
+  ],
+  "scope": "Read-only obligation rederivation; no overall acceptance decision, file modifications, web access, executable calculations, formalization, or artifact generation by the shard."
+}

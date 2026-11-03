@@ -1,0 +1,640 @@
+{
+  "status": "UNIFORM_ROUTE_OBSTRUCTION_BASE_BINDING_MATCH",
+  "absolute_base_ids": [
+    8,
+    9,
+    11,
+    12
+  ],
+  "secant_base_ids": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    10
+  ],
+  "external_base_ids": [
+    0,
+    1,
+    4
+  ],
+  "class_counts": {
+    "external": 3,
+    "secant": 6,
+    "absolute": 4
+  },
+  "base_vertices": [
+    {
+      "point": 0,
+      "coordinates": [
+        0,
+        0,
+        1
+      ],
+      "type": "external",
+      "neighbors": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "neighbor_type_counts": {
+        "external": 2,
+        "secant": 2
+      }
+    },
+    {
+      "point": 1,
+      "coordinates": [
+        0,
+        1,
+        0
+      ],
+      "type": "external",
+      "neighbors": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "neighbor_type_counts": {
+        "secant": 2,
+        "external": 2
+      }
+    },
+    {
+      "point": 2,
+      "coordinates": [
+        0,
+        1,
+        1
+      ],
+      "type": "secant",
+      "neighbors": [
+        3,
+        4,
+        9,
+        11
+      ],
+      "neighbor_type_counts": {
+        "absolute": 2,
+        "external": 1,
+        "secant": 1
+      }
+    },
+    {
+      "point": 3,
+      "coordinates": [
+        0,
+        1,
+        2
+      ],
+      "type": "secant",
+      "neighbors": [
+        2,
+        4,
+        8,
+        12
+      ],
+      "neighbor_type_counts": {
+        "external": 1,
+        "absolute": 2,
+        "secant": 1
+      }
+    },
+    {
+      "point": 4,
+      "coordinates": [
+        1,
+        0,
+        0
+      ],
+      "type": "external",
+      "neighbors": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "neighbor_type_counts": {
+        "secant": 2,
+        "external": 2
+      }
+    },
+    {
+      "point": 5,
+      "coordinates": [
+        1,
+        0,
+        1
+      ],
+      "type": "secant",
+      "neighbors": [
+        1,
+        6,
+        9,
+        12
+      ],
+      "neighbor_type_counts": {
+        "secant": 1,
+        "absolute": 2,
+        "external": 1
+      }
+    },
+    {
+      "point": 6,
+      "coordinates": [
+        1,
+        0,
+        2
+      ],
+      "type": "secant",
+      "neighbors": [
+        1,
+        5,
+        8,
+        11
+      ],
+      "neighbor_type_counts": {
+        "external": 1,
+        "absolute": 2,
+        "secant": 1
+      }
+    },
+    {
+      "point": 7,
+      "coordinates": [
+        1,
+        1,
+        0
+      ],
+      "type": "secant",
+      "neighbors": [
+        0,
+        10,
+        11,
+        12
+      ],
+      "neighbor_type_counts": {
+        "secant": 1,
+        "external": 1,
+        "absolute": 2
+      }
+    },
+    {
+      "point": 8,
+      "coordinates": [
+        1,
+        1,
+        1
+      ],
+      "type": "absolute",
+      "neighbors": [
+        3,
+        6,
+        10
+      ],
+      "neighbor_type_counts": {
+        "secant": 3
+      }
+    },
+    {
+      "point": 9,
+      "coordinates": [
+        1,
+        1,
+        2
+      ],
+      "type": "absolute",
+      "neighbors": [
+        2,
+        5,
+        10
+      ],
+      "neighbor_type_counts": {
+        "secant": 3
+      }
+    },
+    {
+      "point": 10,
+      "coordinates": [
+        1,
+        2,
+        0
+      ],
+      "type": "secant",
+      "neighbors": [
+        0,
+        7,
+        8,
+        9
+      ],
+      "neighbor_type_counts": {
+        "secant": 1,
+        "absolute": 2,
+        "external": 1
+      }
+    },
+    {
+      "point": 11,
+      "coordinates": [
+        1,
+        2,
+        1
+      ],
+      "type": "absolute",
+      "neighbors": [
+        2,
+        6,
+        7
+      ],
+      "neighbor_type_counts": {
+        "secant": 3
+      }
+    },
+    {
+      "point": 12,
+      "coordinates": [
+        1,
+        2,
+        2
+      ],
+      "type": "absolute",
+      "neighbors": [
+        3,
+        5,
+        7
+      ],
+      "neighbor_type_counts": {
+        "secant": 3
+      }
+    }
+  ],
+  "absolute_to_external_two_step_paths": [
+    {
+      "absolute_base": 8,
+      "external_base": 0,
+      "unique_base_path": [
+        8,
+        10,
+        0
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            8,
+            10
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            0,
+            10
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 8,
+      "external_base": 1,
+      "unique_base_path": [
+        8,
+        6,
+        1
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            6,
+            8
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            1,
+            6
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 8,
+      "external_base": 4,
+      "unique_base_path": [
+        8,
+        3,
+        4
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            3,
+            8
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        },
+        {
+          "base_edge": [
+            3,
+            4
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": false
+        }
+      ]
+    },
+    {
+      "absolute_base": 9,
+      "external_base": 0,
+      "unique_base_path": [
+        9,
+        10,
+        0
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            9,
+            10
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            0,
+            10
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 9,
+      "external_base": 1,
+      "unique_base_path": [
+        9,
+        5,
+        1
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            5,
+            9
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            1,
+            5
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 9,
+      "external_base": 4,
+      "unique_base_path": [
+        9,
+        2,
+        4
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            2,
+            9
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        },
+        {
+          "base_edge": [
+            2,
+            4
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 11,
+      "external_base": 0,
+      "unique_base_path": [
+        11,
+        7,
+        0
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            7,
+            11
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            0,
+            7
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 11,
+      "external_base": 1,
+      "unique_base_path": [
+        11,
+        6,
+        1
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            6,
+            11
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            1,
+            6
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 11,
+      "external_base": 4,
+      "unique_base_path": [
+        11,
+        2,
+        4
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            2,
+            11
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        },
+        {
+          "base_edge": [
+            2,
+            4
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 12,
+      "external_base": 0,
+      "unique_base_path": [
+        12,
+        7,
+        0
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            7,
+            12
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            0,
+            7
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 12,
+      "external_base": 1,
+      "unique_base_path": [
+        12,
+        5,
+        1
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            5,
+            12
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": false
+        },
+        {
+          "base_edge": [
+            1,
+            5
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        }
+      ]
+    },
+    {
+      "absolute_base": 12,
+      "external_base": 4,
+      "unique_base_path": [
+        12,
+        3,
+        4
+      ],
+      "lift_endpoint_sheet": "source_sheet+signed_chord_shifts mod3",
+      "shift_terms": [
+        {
+          "base_edge": [
+            3,
+            12
+          ],
+          "coefficient": -1,
+          "tree_fixed_zero": true
+        },
+        {
+          "base_edge": [
+            3,
+            4
+          ],
+          "coefficient": 1,
+          "tree_fixed_zero": false
+        }
+      ]
+    }
+  ],
+  "absolute_to_external_paths_per_base_pair": 1,
+  "external_lift_vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    12,
+    13,
+    14
+  ],
+  "external_lift_count": 9,
+  "each_direct_abs_spoke_external_R3_capacity": 3,
+  "P3_middle_helper": 40,
+  "P3_middle_internal_degree": 2,
+  "P3_middle_spoke_count": 2,
+  "P3_middle_external_coverage_upper": 6,
+  "P3_middle_external_missing_lowerbound": 3,
+  "general_three_helper_scope": "Retain all39 oldlift edges; allow any simple helper graph and any added edges at the12degree3 absolute ports, respecting maxdegree4.",
+  "necessary_helper_spokes": 3,
+  "necessary_helper_internal_maxdegree": 1,
+  "three_helper_connected_graph_with_maxdegree1": false,
+  "CPU_seconds": 0.000600980000000001,
+  "solver_calls": 0,
+  "graph_BFS": 0,
+  "selected_graphs": 0,
+  "voltage_assignments_enumerated": 0
+}

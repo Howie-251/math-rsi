@@ -1,0 +1,5266 @@
+{
+  "schema": "N59.manual-v1.2-feedback-loop.pro-to-codex.r2.spec",
+  "document_kind": "HANDOFF_SPEC_NOT_LIVE_SERVER_LEDGER",
+  "protocol": "manual-v1.2-feedback-loop",
+  "problem": "N59",
+  "original_research_identifier": "N59_MANUAL12_ACTIVE",
+  "numeric_iteration": null,
+  "package_revision": "r2_20260928",
+  "supersedes_organization_only": "N59_MANUAL12_ACTIVE_PRO_TO_CODEX_r1",
+  "upstream_feedback_package": "N59_MANUAL12_ACTIVE_CODEX_TO_PRO_r1_20260922.zip",
+  "phase": "02",
+  "research_state": "CHECKPOINT_ONLY",
+  "original_problem_solved": false,
+  "authority": {
+    "current_count": "THEORY_WORKING.md §9.5, L677–688",
+    "latest_math": "THEORY_WORKING.md §16/N15, L963–1032",
+    "corrections": [
+      "§0 correction",
+      "§3.2 nonedge baseline",
+      "§9 supersedes §8 state"
+    ]
+  },
+  "counts": {
+    "source_root_representatives": 35,
+    "remaining_root_representatives": 33,
+    "m0": 26,
+    "m1_K4": 7,
+    "m1_K3_open": 0,
+    "open_coarse_classes": 5,
+    "new_core_family_closures": 1,
+    "new_complete_coarse_class_closures": 1,
+    "root_representatives_removed_via_coarse_closure": 2,
+    "new_m0_root_layer_closures": 0,
+    "new_reroot_count_removals_this_revision": 0,
+    "recommended_execution_entries": 33,
+    "arithmetic": "35−2=33; m0=26 unchanged; m1/K4=7; no extra subtraction for earlier N7 or for P16 task count"
+  },
+  "classes": [
+    {
+      "class_id": "m0_K4_3-1-1-1",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "necessary_Q2": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "representative_count": 5,
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ]
+    },
+    {
+      "class_id": "m0_K4_2-2-1-1",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "necessary_Q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "representative_count": 6,
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ]
+    },
+    {
+      "class_id": "m0_K5_2-1-1-1-1",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "necessary_Q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "representative_count": 8,
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ]
+    },
+    {
+      "class_id": "m0_K6_1-1-1-1-1-1",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "necessary_Q2": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "representative_count": 7,
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ]
+    },
+    {
+      "class_id": "m1_K3_2-1-1",
+      "m": 1,
+      "K": 3,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1
+      ],
+      "necessary_Q2": [],
+      "representative_count": 0,
+      "mathematical_status": "COARSE_CLASS_THEORY_CLOSED_CONDITIONAL",
+      "depends_on": [
+        "D_K3_MATCH",
+        "D_LATEST_K3_COVER",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "previous_necessary_Q2": [
+        4,
+        5
+      ],
+      "closure_source": "N8 + inherited P28/T28 + D_LATEST_K3_COVER"
+    },
+    {
+      "class_id": "m1_K4_1-1-1-1",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "necessary_Q2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "representative_count": 7,
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ]
+    }
+  ],
+  "representatives": [
+    {
+      "representative_id": "N59R38:m0_K4_3-1-1-1:Q0",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 0,
+      "source_z2_cap": 23,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_3-1-1-1_q0",
+      "archived_v6_spec_id": "v6_m0_3-1-1-1_q0",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_3-1-1-1:Q0]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q0",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 0,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 23,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q0",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q0",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q0",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_3-1-1-1_q0",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:40Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_3-1-1-1_q0__d1_t3_exists_yes",
+              "manual12_m0_3-1-1-1_q0__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_3-1-1-1:Q1",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 1,
+      "source_z2_cap": 23,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_3-1-1-1_q1",
+      "archived_v6_spec_id": "v6_m0_3-1-1-1_q1",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_3-1-1-1:Q1]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q1",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 1,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 23,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q1",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q1",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q1",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_3-1-1-1_q1",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:24:39Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_3-1-1-1_q1__d1_t3_exists_yes",
+              "manual12_m0_3-1-1-1_q1__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_3-1-1-1:Q2",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 2,
+      "source_z2_cap": 23,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_3-1-1-1_q2",
+      "archived_v6_spec_id": "v6_m0_3-1-1-1_q2",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_3-1-1-1:Q2]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q2",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 2,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 23,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q2",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q2",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q2",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_3-1-1-1_q2",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:10Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_3-1-1-1_q2__d1_t3_exists_yes",
+              "manual12_m0_3-1-1-1_q2__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_3-1-1-1:Q3",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 3,
+      "source_z2_cap": 23,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_3-1-1-1_q3",
+      "archived_v6_spec_id": "v6_m0_3-1-1-1_q3",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_3-1-1-1:Q3]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q3",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 3,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 23,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q3",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q3",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q3",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_3-1-1-1_q3",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:59Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_3-1-1-1_q3__d1_t3_exists_yes",
+              "manual12_m0_3-1-1-1_q3__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_3-1-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 22,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_3-1-1-1_q4",
+      "archived_v6_spec_id": "v6_m0_3-1-1-1_q4",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_3-1-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 22,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q4",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q4",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_3-1-1-1_q4",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:59Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_3-1-1-1_q4__d1_t3_exists_yes",
+              "manual12_m0_3-1-1-1_q4__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4",
+        "N2"
+      ],
+      "optional_representative_interfaces": [
+        "N5-K4-TIE"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q0",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 0,
+      "source_z2_cap": 21,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q0",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q0",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q0]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q0",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 0,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 21,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q0",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q0",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q0",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q0",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:20:18Z",
+                "finished_utc": "2026-09-21T22:22:00Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q0__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q0__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q1",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 1,
+      "source_z2_cap": 21,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q1",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q1",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q1]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q1",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 1,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 21,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q1",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q1",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q1",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q1",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:22:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q1__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q1__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q2",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 2,
+      "source_z2_cap": 21,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q2",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q2",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q2]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q2",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 2,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 21,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q2",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q2",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q2",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q2",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:26:21Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q2__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q2__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q3",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 3,
+      "source_z2_cap": 21,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q3",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q3",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q3]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q3",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 3,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 21,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q3",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q3",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q3",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q3",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:26:15Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q3__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q3__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 20,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q4",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q4",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 20,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q4",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q4",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q4",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:26:15Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q4__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q4__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 5,
+      "source_z2_cap": 20,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-2-1-1_q5",
+      "archived_v6_spec_id": "v6_m0_2-2-1-1_q5",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K4_2-2-1-1:Q5]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 20,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q5",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q5",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "coverage_dependencies_added": [
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-2-1-1_q5",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:26:15Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-2-1-1_q5__d1_t3_exists_yes",
+              "manual12_m0_2-2-1-1_q5__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1",
+        "§6.3",
+        "§7.1-K4",
+        "§7.2-K4",
+        "N1"
+      ],
+      "optional_representative_interfaces": [
+        "N5-K4",
+        "N9",
+        "§11",
+        "N12",
+        "N14",
+        "N15"
+      ],
+      "representative_mode_note": "Only with coverage preserving ALL K4 roots Q≤4 across both profiles. Current Q5 alone is NOT H5."
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q0",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 0,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q0",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q0",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q0]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q0",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 0,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q0",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q0",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q0",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q0",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:20:18Z",
+                "finished_utc": "2026-09-21T22:21:41Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q0__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q0__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q1",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 1,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q1",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q1",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q1]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q1",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 1,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q1",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q1",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q1",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q1",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:24:30Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q1__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q1__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q2",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 2,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q2",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q2",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q2]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q2",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 2,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q2",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q2",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q2",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q2",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:25:30Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q2__d1_m0_2_1_1_1_1_q2_shape0_yes",
+              "manual12_m0_2-1-1-1-1_q2__d1_m0_2_1_1_1_1_q2_shape0_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q3",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 3,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q3",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q3",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q3]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q3",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 3,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q3",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q3",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q3",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q3",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:28:06Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q3__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q3__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": [
+        "§7.1–7.2-K5"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 17,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q4",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q4",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 17,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q4",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q4",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q4",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:28:06Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q4__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q4__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": [
+        "§7.1–7.2-K5"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q5",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 5,
+      "source_z2_cap": 17,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q5",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q5",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q5]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 17,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q5",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q5",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q5",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:28:06Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q5__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q5__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": [
+        "§7.1–7.2-K5"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q6",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 6,
+      "source_z2_cap": 16,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q6",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q6",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q6]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q6",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 6,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 16,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q6",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q6",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q6",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q6",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:28:06Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q6__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q6__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": [
+        "§7.1–7.2-K5"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q7",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 5,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 7,
+      "source_z2_cap": 15,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_2-1-1-1-1_q7",
+      "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q7",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K5_2-1-1-1-1:Q7]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q7",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 5,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 7,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 15,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-1-1-1-1_q7",
+        "archived_v6_spec_id": "v6_m0_2-1-1-1-1_q7",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K5_2-1-1-1-1:Q7",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_2-1-1-1-1_q7",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:28:06Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_2-1-1-1-1_q7__d1_t3_exists_yes",
+              "manual12_m0_2-1-1-1-1_q7__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": [
+        "§7.1–7.2-K5"
+      ]
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q0",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 0,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q0",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q0",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q0]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q0",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 0,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q0",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q0",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q0",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q0",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:20:18Z",
+                "finished_utc": "2026-09-21T22:21:11Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q0__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q0__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q1",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 1,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q1",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q1",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q1]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q1",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 1,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q1",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q1",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q1",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q1",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:25:25Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q1__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q1__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q2",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 2,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q2",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q2",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q2]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q2",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 2,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q2",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q2",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q2",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q2",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:22:36Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q2__d1_m0_1_1_1_1_1_1_q2_shape0_yes",
+              "manual12_m0_1-1-1-1-1-1_q2__d1_m0_1_1_1_1_1_1_q2_shape0_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q3",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 3,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q3",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q3",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q3]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q3",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 3,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q3",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q3",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q3",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q3",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:13Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q3__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q3__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q4",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q4",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q4",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q4",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q4",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:13Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q4__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q4__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q5",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 5,
+      "source_z2_cap": 13,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q5",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q5",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q5]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 13,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q5",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q5",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q5",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:13Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q5__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q5__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q6",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 0,
+      "K": 6,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 6,
+      "source_z2_cap": 12,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q6",
+      "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q6",
+      "depends_on": [
+        "D_M0",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m0_K6_1-1-1-1-1-1:Q6]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q6",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 6,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 6,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 12,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_1-1-1-1-1-1_q6",
+        "archived_v6_spec_id": "v6_m0_1-1-1-1-1-1_q6",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K6_1-1-1-1-1-1:Q6",
+        "representative_rule_ids": [
+          "REP-K6-QLE6"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m0_1-1-1-1-1-1_q6",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:27:13Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m0_1-1-1-1-1-1_q6__d1_t3_exists_yes",
+              "manual12_m0_1-1-1-1-1-1_q6__d1_t3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [
+        "C1"
+      ],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q1",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 1,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q1",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q1",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q1]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q1",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 1,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q1",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q1",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q1",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q1",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q1__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q1__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q2",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 2,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q2",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q2",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q2]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q2",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 2,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q2",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q2",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q2",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q2",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q2__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q2__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q3",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 3,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q3",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q3",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q3]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q3",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 3,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q3",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q3",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q3",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q3",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q3__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q3__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q4",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q4",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q4",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q4",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q4",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q4__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q4__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q5",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 5,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q5",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q5",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q5]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q5",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q5",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q5",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q5__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q5__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q6",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 6,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q6",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q6",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q6]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q6",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 6,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q6",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q6",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q6",
+        "representative_rule_ids": [],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q6",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:49Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q6__d1_r2_p3_exists_yes",
+              "manual12_m1_1-1-1-1_q6__d1_r2_p3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    },
+    {
+      "representative_id": "N59R38:m1_K4_1-1-1-1:Q7",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 4,
+      "root_nonedge_repeat_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_Q2": 7,
+      "source_z2_cap": 14,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_1-1-1-1_q7",
+      "archived_v6_spec_id": "v6_m1_1-1-1-1_q7",
+      "depends_on": [
+        "D_M1_K4",
+        "D_V6_M1K4_Q8_RAW",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K4_1-1-1-1:Q7]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q7",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 7,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 14,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_1-1-1-1_q7",
+        "archived_v6_spec_id": "v6_m1_1-1-1-1_q7",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M1_K4",
+          "D_V6_M1K4_Q8_RAW",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m1_K4_1-1-1-1:Q7",
+        "representative_rule_ids": [
+          "REP-M1K4-NOP3"
+        ],
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_m1_1-1-1-1_q7",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:21:23Z",
+                "finished_utc": "2026-09-21T22:23:12Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_m1_1-1-1-1_q7__d1_r2_c3_exists_yes",
+              "manual12_m1_1-1-1-1_q7__d1_r2_c3_exists_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "OPEN_CONDITIONAL",
+      "execution": "ROOT_TASK",
+      "full_root_parent_matrix_remains_variable": true,
+      "new_applicable_interfaces": [],
+      "optional_representative_interfaces": []
+    }
+  ],
+  "new_closed_representatives": [
+    {
+      "representative_id": "N59R38:m1_K3_2-1-1:Q4",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 3,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 4,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_2-1-1_q4",
+      "archived_v6_spec_id": "v6_m1_2-1-1_q4",
+      "depends_on": [
+        "D_K3_MATCH",
+        "D_LATEST_K3_COVER",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K3_2-1-1:Q4]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K3_2-1-1:Q4",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 3,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 4,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_2-1-1_q4",
+        "archived_v6_spec_id": "v6_m1_2-1-1_q4",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_K3_MATCH",
+          "D_LATEST_K3_COVER",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "COVERED_BY_CORE_UNION_NOT_QUEUED_AS_SECOND_MAIN_FRONTIER",
+        "joint_cover_group": "COVER_K3_BY_P_UNION",
+        "core_union": [
+          "P16"
+        ],
+        "root_to_core_bijection_claimed": false,
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "current_core_cover": [
+          "P16"
+        ],
+        "core_cover_dependencies_added": [
+          "INHERITED_T28_CLOSED",
+          "P28-CLOSED"
+        ],
+        "inherited_core_union": [
+          "P16",
+          "P28"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_core_P16",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:20:18Z",
+                "finished_utc": "2026-09-21T22:20:52Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_core_P16__d1_alpha_0_1_shared_yes",
+              "manual12_core_P16__d1_alpha_0_1_shared_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "COARSE_CLASS_THEORY_CLOSED_CONDITIONAL",
+      "new_proof": "N8 + inherited P28/T28 + D_LATEST_K3_COVER",
+      "action": "REMOVE_FROM_NECESSARY_FRONTIER_AND_STOP_NEW_EXPLORATION",
+      "server_attempt_status_rewrite": false,
+      "coverage_note": "Q4/Q5 jointly covered by the same P16 owner in r1; close each root record once, core task once."
+    },
+    {
+      "representative_id": "N59R38:m1_K3_2-1-1:Q5",
+      "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+      "m": 1,
+      "K": 3,
+      "root_nonedge_repeat_profile": [
+        2,
+        1,
+        1
+      ],
+      "exact_Q2": 5,
+      "source_z2_cap": 18,
+      "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+      "archived_v5_task_id": "v5_m1_2-1-1_q5",
+      "archived_v6_spec_id": "v6_m1_2-1-1_q5",
+      "depends_on": [
+        "D_K3_MATCH",
+        "D_LATEST_K3_COVER",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "source_spec": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "source_record": "/representatives/[representative_id=N59R38:m1_K3_2-1-1:Q5]",
+      "z2_cap_source": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json original archived value; applies only to named legal root",
+      "upstream_r1_record": {
+        "representative_id": "N59R38:m1_K3_2-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 1,
+        "K": 3,
+        "root_nonedge_repeat_profile": [
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m1_2-1-1_q5",
+        "archived_v6_spec_id": "v6_m1_2-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_K3_MATCH",
+          "D_LATEST_K3_COVER",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "COVERED_BY_CORE_UNION_NOT_QUEUED_AS_SECOND_MAIN_FRONTIER",
+        "joint_cover_group": "COVER_K3_BY_P_UNION",
+        "core_union": [
+          "P16"
+        ],
+        "root_to_core_bijection_claimed": false,
+        "source_handoff_spec": "dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+        "frozen_math_status": "OPEN_CONDITIONAL",
+        "new_server_state_known": false,
+        "current_core_cover": [
+          "P16"
+        ],
+        "core_cover_dependencies_added": [
+          "INHERITED_T28_CLOSED",
+          "P28-CLOSED"
+        ],
+        "inherited_core_union": [
+          "P16",
+          "P28"
+        ]
+      },
+      "last_observed_server": {
+        "source": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+        "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+        "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00",
+        "owner_tasks": [
+          {
+            "task_id": "manual12_core_P16",
+            "state": "SPLIT_OPEN",
+            "attempts": [
+              {
+                "number": 1,
+                "state": "TIMEOUT",
+                "reason": "task_timeout",
+                "started_utc": "2026-09-21T16:20:18Z",
+                "finished_utc": "2026-09-21T22:20:52Z",
+                "return_code": -2
+              }
+            ],
+            "children": [
+              "manual12_core_P16__d1_alpha_0_1_shared_yes",
+              "manual12_core_P16__d1_alpha_0_1_shared_no"
+            ]
+          }
+        ]
+      },
+      "current_live_server_state": "UNKNOWN_NOT_QUERIED",
+      "new_encoding_task_id": null,
+      "new_encoding_deployed": false,
+      "new_encoding_deployed_scope": "THIS_PHASE02_DID_NOT_DEPLOY; other live changes unknown",
+      "mathematical_status": "COARSE_CLASS_THEORY_CLOSED_CONDITIONAL",
+      "new_proof": "N8 + inherited P28/T28 + D_LATEST_K3_COVER",
+      "action": "REMOVE_FROM_NECESSARY_FRONTIER_AND_STOP_NEW_EXPLORATION",
+      "server_attempt_status_rewrite": false,
+      "coverage_note": "Q4/Q5 jointly covered by the same P16 owner in r1; close each root record once, core task once."
+    }
+  ],
+  "inherited_removed_representatives": [
+    {
+      "original_representative": {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q5",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "exact_Q2": 5,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 22,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_3-1-1-1_q5",
+        "archived_v6_spec_id": "v6_m0_3-1-1-1_q5",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_3-1-1-1:Q5",
+        "representative_rule_ids": []
+      },
+      "frozen_math_status": "REROOT_DOMINATED_CONDITIONAL",
+      "source_file": "THEORY_WORKING.md",
+      "source_section": "M7 / (M.19)",
+      "source_lines": [
+        651,
+        704
+      ],
+      "natural_language_proof": "COMPLETE_IN_SAVED_SOURCE_UNDER_LISTED_PREMISES",
+      "lean_status": "NOT_KERNEL_CHECKED",
+      "new_server_raw_unsat": false,
+      "current_server_action_performed": false
+    },
+    {
+      "original_representative": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q6",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 6,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 19,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q6",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q6",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q6",
+        "representative_rule_ids": [
+          "REP-M0K4-T3"
+        ]
+      },
+      "frozen_math_status": "REROOT_DOMINATED_CONDITIONAL",
+      "source_file": "THEORY_WORKING.md",
+      "source_section": "M5–M6 / (M.17)",
+      "source_lines": [
+        518,
+        646
+      ],
+      "natural_language_proof": "COMPLETE_IN_SAVED_SOURCE_UNDER_LISTED_PREMISES",
+      "lean_status": "NOT_KERNEL_CHECKED",
+      "new_server_raw_unsat": false,
+      "current_server_action_performed": false
+    },
+    {
+      "original_representative": {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q7",
+        "id_namespace": "NEW_HANDOFF_SPEC_NOT_SERVER_ID",
+        "m": 0,
+        "K": 4,
+        "root_nonedge_repeat_profile": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "exact_Q2": 7,
+        "mathematical_status": "OPEN_CONDITIONAL",
+        "source_z2_cap": 18,
+        "z2_cap_source": "ARCHIVE_SPEC /representatives matched by m,K,profile,exact_q2",
+        "z2_cap_scope": "NAMED_LEGAL_ROOT_ONLY",
+        "archived_v5_task_id": "v5_m0_2-2-1-1_q7",
+        "archived_v6_spec_id": "v6_m0_2-2-1-1_q7",
+        "current_server_task_id": null,
+        "current_server_state": null,
+        "depends_on": [
+          "D_M0",
+          "D_OLD_MOMENT_CAPS"
+        ],
+        "full_root_parent_matrix_remains_variable": true,
+        "execution": "ROOT_TASK",
+        "proposed_entry_id": "ENTRY:m0_K4_2-2-1-1:Q7",
+        "representative_rule_ids": [
+          "REP-M0K4-T3"
+        ]
+      },
+      "frozen_math_status": "THEORY_CLOSED_CONDITIONAL",
+      "source_file": "THEORY_WORKING.md",
+      "source_section": "M4 / (M.9)",
+      "source_lines": [
+        427,
+        508
+      ],
+      "natural_language_proof": "COMPLETE_IN_SAVED_SOURCE_UNDER_LISTED_PREMISES",
+      "lean_status": "NOT_KERNEL_CHECKED",
+      "new_server_raw_unsat": false,
+      "current_server_action_performed": false
+    }
+  ],
+  "inherited_dependencies": [
+    {
+      "id": "D_GRAPH",
+      "statement": "G为简单59点8-正则图、直径至多2；A对称0/1零对角；B=A²+A−7I−J，B非负、对称、零对角、行和6，AB=BA。",
+      "depends_on": [],
+      "sources": [
+        "V6 §2",
+        "MATCH §1.2"
+      ],
+      "status": "BASE_MATHEMATICAL_CONTRACT"
+    },
+    {
+      "id": "D_C1",
+      "statement": "沿用c1及历史归约：supp(B)连通、继承非二分/无完全图K4等已列明合同。历史c3/c5等关闭冻结；本交接不重新证明或认证。",
+      "depends_on": [
+        "D_GRAPH"
+      ],
+      "sources": [
+        "V6 §2",
+        "V6_HANDOFF §1.2",
+        "MATCH §1.2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_ROOT",
+      "statement": "t(v)是真实三角形数；k(v)数非边上B>0的支撑；m=min t，K=max_{t=m}k；合法根集合L_{m,K}(G)={v:t(v)=m,k(v)=K}非空。",
+      "depends_on": [
+        "D_GRAPH"
+      ],
+      "sources": [
+        "V6 §2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_M0",
+      "statement": "活动m0四模板，B≤4、t∈{0,1,2,3}、零根分层1+8+50、全部父关联可变；所有t=0点k≤K。保持其继承六类归约，不借用m1专用条件。",
+      "depends_on": [
+        "D_C1",
+        "D_ROOT"
+      ],
+      "sources": [
+        "MATCH §1.2/§9",
+        "V6 §5.1",
+        "R1 §2",
+        "W §A"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_OLD_MOMENT_CAPS",
+      "statement": "每个根任务继承其命名合同中的Q2/Z2及已有组合割；本JSON的Z2值从ARCHIVE_SPEC逐项读取，仅用于该合法根实例，不能施加到任意核心标签。",
+      "depends_on": [
+        "D_ROOT"
+      ],
+      "sources": [
+        "ARCHIVE_SPEC /representatives",
+        "V6 §2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_K6_ALL_LEGAL_QLE7",
+      "statement": "在所继承m0/K6合同下，对每一个t=0,k=6合法根有Q2≤7。W §D反证明确使用此全称前提；不能仅从旧必要代表清单的最大值7反推它。其更早独立推导未在本交接重新恢复。",
+      "depends_on": [
+        "D_M0"
+      ],
+      "sources": [
+        "W §D开头",
+        "R1 §3"
+      ],
+      "status": "EXPLICIT_INHERITED_SCOPE_PREMISE_NOT_REPROVED"
+    },
+    {
+      "id": "D_R1_K6_SHAPE_COVER",
+      "statement": "任何同合同K6/Q7根的异常图属于首轮五形状；0、1、4在各自全部父集合下已关闭，余2、3。继承完整覆盖和证据，不重枚举。",
+      "depends_on": [
+        "D_M0"
+      ],
+      "sources": [
+        "R1 §3",
+        "SHAPES"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_RAW_R31",
+      "statement": "MATCH [R31]：m1/(3,1)完整最小根分拆关闭，提供全图非边B≤2。精确历史任务/日志未在本轮读取。",
+      "depends_on": [
+        "D_C1"
+      ],
+      "sources": [
+        "MATCH §1.3"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_RAW_R22",
+      "statement": "MATCH [R22]：t=1、非边分拆(2,2)顶点继承异常非邻、Q=1/3/7及ell20排除和Q≤8，仅余ell11_same/split；该依赖并非只对最大支撑根。",
+      "depends_on": [
+        "D_C1"
+      ],
+      "sources": [
+        "MATCH §1.3"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_RAW_RK3",
+      "statement": "MATCH [RK3]：全局m1/K3下全部k3合法根继承Q≥4（旧Q1与新增Q2/3排除）；不得用于K4中的k3点。",
+      "depends_on": [
+        "D_ROOT",
+        "D_C1"
+      ],
+      "sources": [
+        "MATCH §1.3"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_M1_K4",
+      "statement": "由继承报告得t∈{1,2}、B≤2；R2非平凡成分K2/P3/C3，C3成对，P3中心唯一三角形另两点t1,k4；D2是真边匹配。K4不具备K3的R2全局匹配结论。",
+      "depends_on": [
+        "D_RAW_R31",
+        "D_RAW_R22",
+        "D_ROOT"
+      ],
+      "sources": [
+        "MATCH §§2–5,8",
+        "V6 §5.1"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_V6_M1K4_Q8_RAW",
+      "statement": "同合同m1/K4/(1,1,1,1)/Q8为2026-09-11前已完整raw关闭；旧实际ID v6_m1_1-1-1-1_q8。本次不重跑。",
+      "depends_on": [
+        "D_M1_K4",
+        "D_OLD_MOMENT_CAPS"
+      ],
+      "sources": [
+        "V6 §3"
+      ],
+      "status": "INHERITED_RAW_CLOSED_FULL_SCOPE"
+    },
+    {
+      "id": "D_K3_MATCH",
+      "statement": "全局m1/K3：t1/t2、B≤2；R2=M恰覆盖t1点；R1为59点简单2-因子；全部B=2支撑是R2与D2的不交匹配。没有AR1=R1A结论。",
+      "depends_on": [
+        "D_RAW_R31",
+        "D_RAW_R22",
+        "D_RAW_RK3"
+      ],
+      "sources": [
+        "MATCH §7"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_LATEST_K3_COVER",
+      "statement": "LATEST C1/C2：n1∈{16,28}，每t1点Q∈{4,5,6}，每图至少有Q4或Q5合法根；P16/P28/T28联合覆盖全部K3候选。最新完整组合证明仍缺文，按用户要求条件继承。",
+      "depends_on": [
+        "D_K3_MATCH"
+      ],
+      "sources": [
+        "LATEST C1/C2",
+        "V6 §1.1"
+      ],
+      "status": "LATEST_CONDITIONAL_FULL_PROOF_MISSING"
+    },
+    {
+      "id": "D_P_CORE",
+      "statement": "LATEST C3及V6 §4.1：P16/P28分别4/7个互不相交六点核心，固定A/B/t/M及四端口；核心外其余t2，跨核心端口可重合。",
+      "depends_on": [
+        "D_LATEST_K3_COVER"
+      ],
+      "sources": [
+        "LATEST C3",
+        "V6 §4.1",
+        "V6_HANDOFF §6"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_P_R1_DOMAIN",
+      "statement": "首轮每核心11种外邻域，4二元型各1、6单元型各4、空型25；端口容量与纯t2三角形余量22/9。",
+      "depends_on": [
+        "D_P_CORE"
+      ],
+      "sources": [
+        "R1 §5",
+        "V6 §4.3"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_T_STRUCT",
+      "statement": "T28：28个t1点U组成14条M；14个不同t2中心c_i，余17个t2点Y；每M公共邻点恰为其中心及两个来自不同M的t1点；每t1点在赋值三元组出现一次；三元组真实独立、三对B=1。",
+      "depends_on": [
+        "D_LATEST_K3_COVER"
+      ],
+      "sources": [
+        "LATEST C2/C4",
+        "V6 §4.2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_T_C4_TRIANGLE_COUNT",
+      "statement": "LATEST_T_C4_TRIANGLE_COUNT：全图30个真实三角形，28个含t1，余2个纯t2在Y形成共享边双三角形；全图恰1条真B=2边；Y三角形端口次数分布0×2、1×2、2×13。端口不等于全部中心—Y边。",
+      "depends_on": [
+        "D_T_STRUCT"
+      ],
+      "sources": [
+        "LATEST C4",
+        "R1 §6.1"
+      ],
+      "status": "LATEST_CONDITIONAL_FULL_PROOF_MISSING"
+    },
+    {
+      "id": "D_T_R1_ALIGNMENT",
+      "statement": "首轮§6.2：在上述实际提升合同下，T的每t1点Q=5，唯一三角形为u c_head(u) y_u；短有向2/3/4圈禁止、X+Yprime=1。这些不由2入2出单独推出。",
+      "depends_on": [
+        "D_K3_MATCH",
+        "D_LATEST_K3_COVER",
+        "D_T_STRUCT",
+        "D_T_C4_TRIANGLE_COUNT"
+      ],
+      "sources": [
+        "R1 §6.2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_T_R1_CIRCULANT_CLOSED",
+      "statement": "首轮已排除所有14点两非零不同步长循环H及全部端口/补边提升，含新有限证据和全端口容量论证；继承，不重跑。",
+      "depends_on": [
+        "D_T_R1_ALIGNMENT"
+      ],
+      "sources": [
+        "R1 §§6.3–6.5"
+      ],
+      "status": "INHERITED_CONDITIONAL_AUXILIARY_FAMILY_CLOSED"
+    },
+    {
+      "id": "D_R1_M0K4_REROOT",
+      "statement": "首轮§4.1：m0/K4的t3星形给合法零根Q≤3，t3路径给合法零根Q≤5；必须跨两K4分拆比较所有合法根。",
+      "depends_on": [
+        "D_M0",
+        "D_ROOT"
+      ],
+      "sources": [
+        "R1 §4.1",
+        "MATCH §9"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_R1_M1K4_REROOT",
+      "statement": "首轮§4.3：m1/K4中存在R2-P3成分，产生t1,k4且Q≤6合法根。配对C3未排除。",
+      "depends_on": [
+        "D_M1_K4"
+      ],
+      "sources": [
+        "R1 §4.3"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    },
+    {
+      "id": "D_R1_PARENT_LOAD",
+      "statement": "首轮§4.2：加权父负载为5或6时，仅在新父点满足k=K等完整资格条件后给低Q合法根；权负载不等于W §A的f_p。",
+      "depends_on": [
+        "D_M0",
+        "D_ROOT"
+      ],
+      "sources": [
+        "R1 §4.2"
+      ],
+      "status": "INHERITED_CONDITIONAL"
+    }
+  ],
+  "new_dependency_edges": {
+    "N8": [
+      "D_GRAPH",
+      "D_C1",
+      "D_K3_MATCH",
+      "D_P_CORE",
+      "D_P_R1_DOMAIN",
+      "U:P0-P5",
+      "U:P9"
+    ],
+    "K3_COMPLETE_CONDITIONAL": [
+      "N8",
+      "D_LATEST_K3_COVER",
+      "U:P7(P28)",
+      "W38:C(T28)"
+    ],
+    "H5": "m0/K4 and no legal root Q≤4, across both root profiles",
+    "N15": [
+      "D_GRAPH",
+      "D_C1",
+      "D_M0",
+      "D_ROOT",
+      "U:M5-M8",
+      "C1",
+      "A1/A2",
+      "N5-K4",
+      "§7",
+      "N9",
+      "§11",
+      "N12",
+      "§14",
+      "N14"
+    ]
+  },
+  "constraint_registry": [
+    {
+      "interface_id": "C1",
+      "original_result_id": "§1.1/C1",
+      "title": "真实父列和与孤立异常点列零",
+      "use": "EXACT_NECESSARY_INHERITED_BRIDGE",
+      "quantified_scope": "任意零三角形根r、任意p∈N(r)及异常E_i；不要求该父点是零根。",
+      "premises": "D_GRAPH；按[T]§1的真实零根BFS分层。",
+      "formula": "Σ_{p∈P}B[p,E_i]=Σ_{j:F_ij=1}e_j；F中i孤立 ⇒ ∀p∈P,B[p,E_i]=0且n_pi=1−rho_pi。",
+      "proof_source": "§1.1/C1; 原稿L53–61",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "P=N(r),rho_pi=A[p,E_i],e_i=B[r,E_i],F_ij=A[E_i,E_j]；非独立自由列和。",
+      "candidate_preservation_and_complement": "恒等式直接来自AB=BA(r,E_i)，非负性给单项界；适用范围外不使用孤立推论。",
+      "encoding_request": "复用现有A/B及父列计数；若显式加入孤立门控，isolated_i↔全部F_ij为0。已被完整A/B隐含，效果未测，不另建工程。",
+      "minimum_semantic_test": "检查F孤立标志双向性；有F邻点时不能强迫整列0；真实B重数不能换成B>0。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [
+        "N59Continuation.parent_repeat_le_column_budget",
+        "N59Continuation.isolated_exception_parent_repeat_zero"
+      ],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "草稿仅给单父条目界/列零；完整C1等式、根正B支撑恰为异常集、非负性及AB=BA从原图导出仍未形式化。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N1",
+      "original_result_id": "N1",
+      "title": "2211/Q5三角形加孤立重端：完整形状直接排除",
+      "use": "DIRECT_SHAPE_EXCLUSION",
+      "quantified_scope": "每个合法m0/K4/2211且Q2=5的根r，全部父集合与全部完整59点延拓。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 m0/K4；e_a=e_b=2,e_c=e_d=1。",
+      "formula": "禁止F恰为{ac,ad,cd}且b孤立的全部同权重标号；不要求H5或次级最小Q。",
+      "proof_source": "N1; §2 原稿L80–101",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "F为当前根四个异常点的六个真实A条目；两个重点/两个单位点可分别置换，不固定父签名。",
+      "candidate_preservation_and_complement": "该完整F直接不可能。其余Q5的匹配、单位中心星、重端路径仍须保留，除非另有相应守卫。根层本身不关闭。",
+      "encoding_request": "可提前删除该F的同权轨道，或生成守卫于同模板/精确Q的禁形子句；不要给高低权点任意交换标签。",
+      "minimum_semantic_test": "从既有六个F literal确认恰为三角形+孤立重端；不误删三角形含义不同或其他Q的形状；不重跑该已证形状。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N2",
+      "original_result_id": "N2",
+      "title": "3111/Q4全层重异常点普通邻集交叠上界",
+      "use": "EXACT_NECESSARY",
+      "quantified_scope": "任意合法m0/K4/3111,Q2=4零根；a权3，b为a的唯一异常邻点，c,d权1。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 m0/K4/3111,Q2=4。",
+      "formula": "H_ab=0，H_ac+H_ad≤1。F仍允许{ab,bc}（d孤立）或{ab,cd}两种；短路径时还可用H_ac=0。",
+      "proof_source": "N2; §3 原稿L103–175，纠正段§3.2",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "H_ij=Σ_{x∈O}(A[E_i,x]∧A[E_j,x])；F和父关联均保持真实变量。",
+      "candidate_preservation_and_complement": "覆盖全部父关联与两种F；不是短路径关闭，更不是整个Q4关闭。两种F及其全部合法父集合必须留下。",
+      "encoding_request": "利用已有common-neighbor AND精确求H；H_ab零和另外两交叠总数≤1可作为小容量约束。命名b先由F确定或作全同权析取。",
+      "minimum_semantic_test": "两种F均保留；三重普通邻点同时计入两个H，不能被只记一次而逃过总和；不得复活撤回的“短路径UNSAT”。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N5-K4",
+      "original_result_id": "N5",
+      "title": "t3星形/路径的严格换根上界",
+      "use": "REPRESENTATIVE_CONSTRAINT",
+      "quantified_scope": "对每个m0/K4目标图G及其中t(v)=3点；结论给全体L_{0,4}(G)中的存在根，不在固定父签名中选。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4；[MATCH]§9的t3根邻域型和父列转移，零根全局支撑上界。",
+      "formula": "t3邻域星K1,3⇒∃合法3111根Q≤2；t3邻域P4⇒∃合法2211根Q≤4。故H5⇒∀v,t(v)≤2；min_{L04}Q≥3⇒无t3星。",
+      "proof_source": "N5; §6.1–6.2 原稿L341–412；仅使用K=s=4的明确应用",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "t(v)为真实三角形数；t3邻域是8个邻点中3条真实边加孤点。Q比较跨两K4分拆的全部合法根。",
+      "candidate_preservation_and_complement": "保留两分拆所有Q≤4入口；无低Q根的图才进入加强后的Q5代表。Q5含t3旧根实例可换到低Q，不能登记旧实例UNSAT。",
+      "encoding_request": "首选Q5代表模式加入全图t≤2，不为59点全部建Q计数器。较低“无t3星”只在完整最小根覆盖模式下用。",
+      "minimum_semantic_test": "保留3111/2211所有低Q出口；t3-free不加到一般m0/K5/K6；模板根Q5不等于已编码全局H5。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": "§6.1在K>s时称新零点“合法”的句子单列SCOPE-01，不向K>s导出合法换根；K=s=4应用无此资格缺口。"
+    },
+    {
+      "interface_id": "N5-K4-TIE",
+      "original_result_id": "§6.2末",
+      "title": "可选同Q优先2211的代表规则",
+      "use": "REPRESENTATIVE_CONSTRAINT",
+      "quantified_scope": "仅m0/K4，在所有L04先最小化Q，同值优先2211；不是只在3111内选。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 完整同Q优先规则及N5-K4。",
+      "formula": "采用该规则后，选中的3111/Q4代表可加全图t≤2。",
+      "proof_source": "§6.2末; 原稿L411–412",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "根分拆和Q为真实根统计；同值偏好不是增加图自同构。",
+      "candidate_preservation_and_complement": "有限非空L04保证最小和同值偏好存在；t3星有Q≤2，路径有2211/Q≤4。保留全部低Q和2211/Q4出口。",
+      "encoding_request": "可用有存在性支持的分支条件而非逐点比较；必须登记此新选根模式，未启用时不得加3111/Q4 t3-free。",
+      "minimum_semantic_test": "无同值规则时模块关闭；2211/Q4入口不删；与其他根最大化/父签名内最小化不兼容时不叠加。",
+      "priority": "P3",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§6.3",
+      "original_result_id": "§6.3",
+      "title": "K4真B2/B3边结构",
+      "use": "EXACT_NECESSARY",
+      "quantified_scope": "每个m0/K4图G，全体真实边上的B值；不要求H5。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4及§6.1的唯一见证、[MATCH]t3邻域合同。",
+      "formula": "真B=3边构成t3星形点配对；真B=2非平凡成分为K2（两端t2）或P3（中心t3、两端t2）；t3路径点无t3邻点。",
+      "proof_source": "§6.3; 原稿L413–425",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "D_j(x,y)↔A_xy=1∧B_xy=j，j=2,3；绝非非边R_j。",
+      "candidate_preservation_and_complement": "由所有t3的两种邻域及t2三角形预算推出，保留其他真B值/非边重复结构；m1与K5/K6不套用。",
+      "encoding_request": "复用真实边重数与t分类，必要时局部度/三点关系表达；只在能精确区分D与R时启用。",
+      "minimum_semantic_test": "同一B=2在A=0时不得进入D2；用现有t类型检查K2/P3端点，避免把m0非边R2强制匹配。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§7.1-K4",
+      "original_result_id": "§7.1",
+      "title": "K4全图t1点不允许唯一非边重数4",
+      "use": "EXACT_NECESSARY",
+      "quantified_scope": "任意m0/K4图中每个t(v)=1点v，不要求v为最小三角形根。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4；[MATCH]§1.4任意根父列式。",
+      "formula": "t(v)=1⇒不存在非边u满足B_vu=4。等价后果：K4任意非边B=4两端均t0。",
+      "proof_source": "§7.1; 原稿L431–442",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "Auv=0，Buv精确重数；t1非边总重4让该u成为唯一支撑。",
+      "candidate_preservation_and_complement": "换出的零根有至少五个支撑，违反K4。不得改成全图B≤3：t0–t0的B4尚未在一般范围排除。",
+      "encoding_request": "带t1和非边守卫的单条目上界；保留t0–t0B4在低Q中的可能。",
+      "minimum_semantic_test": "检查真实边B4不是本条对象；不让K4的守卫变成仅当前根t=1；不使用m1 R31。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§7.2-K4",
+      "original_result_id": "§7.2",
+      "title": "K4所有零点无42分拆",
+      "use": "EXACT_NECESSARY",
+      "quantified_scope": "每个m0/K4图的任意零点v，包括k(v)<4的点。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4。",
+      "formula": "禁止非边正B多重集为(4,2)；不要求H5。",
+      "proof_source": "§7.2; 原稿L444–454",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "分拆只数A_vu=0且B_vu>0的真实条目；t(v)=0时总重6。",
+      "candidate_preservation_and_complement": "两异常点F有边/无边已完整覆盖，所有父集自由；其他零点分拆未由本条排除。",
+      "encoding_request": "绑定全图零点/行重数后禁止恰一B4与一B2；不把全部零点误设合法2211。",
+      "minimum_semantic_test": "行支撑数而非总权；222、321等低Q情形不由这条删；此为结构测试非重跑已证42搜索。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§7.1–7.2-K5",
+      "original_result_id": "§7.1–7.2",
+      "title": "K5的非极值高重数产生低Q出口",
+      "use": "REPRESENTATIVE_CONSTRAINT",
+      "quantified_scope": "每个m0/K5图G，若存在指定非极值顶点，则在全体L_{0,5}中存在合法根。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=5；§7.1/§7.2相应前提。",
+      "formula": "∃t1点唯一非边B4⇒∃合法21111根Q≤3；∃零点分拆42⇒∃合法21111根Q≤2。",
+      "proof_source": "§7.1–7.2; 原稿L431–454",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "检测的是全图局部行型；结论根是新的真实零点，k=5由证明保证。",
+      "candidate_preservation_and_complement": "保留K5/Q0–3时Q4–7代表可无前一种t1型；保留Q0–2时Q3–7代表可无零42。所有规则都选全体L05最低Q，可共同保全代表。旧高Q根不是UNSAT。",
+      "encoding_request": "可选高Q代表模式用全图行型禁令，无需全59Q比较；不可把这些存在性结论无条件用在任意固定根。",
+      "minimum_semantic_test": "确认K5低Q2和Q3出口完整；不将根分拆固定成当前任意父签名以替代量词。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§7.3",
+      "original_result_id": "§7.3",
+      "title": "K4零33产生合法3111/Q≤3",
+      "use": "REPRESENTATIVE_CONSTRAINT",
+      "quantified_scope": "每个m0/K4图，若存在任意零点的非边分拆33。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4。",
+      "formula": "零33存在⇒∃r∈L04,profile(r)=3111,Q(r)≤3；故min合法Q≥4的代表范围可无零33。",
+      "proof_source": "§7.3; 原稿L456–468",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "两个非边B3异常点；父集大小4，F两种/父集相同或不同已在正文覆盖。",
+      "candidate_preservation_and_complement": "保留3111/Q0–3完整出口；不禁止一般低Q候选中的33零点。",
+      "encoding_request": "可选跨两K4分拆的最小Q代表模式；作为H5依赖直接保留，不强制全量新根比较。",
+      "minimum_semantic_test": "低Q3111出口不删；F空且父集相同的c1封闭B分量理由只在该型用。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N8",
+      "original_result_id": "N8",
+      "title": "P16整族及K3联合覆盖关闭",
+      "use": "STOP_AND_MATH_LEDGER",
+      "quantified_scope": "任意满足原P16合同的完整59点提升；任意选择核心、私有集合、端口重合和外部R1；不设s=0。",
+      "premises": "D_GRAPH,D_C1,D_K3_MATCH,D_P_CORE,D_P_R1_DOMAIN；[U]P0–P5、P9的全部实际前提。P16独立关闭不用T28；整K3关闭另依赖D_LATEST_K3_COVER、[U]P7的P28关闭和[W38]§C的T28关闭及原各项依赖。",
+      "formula": "P16⇒⊥。继承K3⊆P16∪P28∪T28及后两族关闭后，m1/K3⇒⊥（条件性合同）。",
+      "proof_source": "N8; §9 原稿L605–688",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "原核心C_s、私有四点集、Z25、Y全核心外、αβγη、M非边B2匹配与值精确R1；不与旧BFS根编号重用。",
+      "candidate_preservation_and_complement": "覆盖整个P16，不仅s=1、中央Q5或α共享叶。删除两个K3必要代表仅计一次；原P16及其两叶TIMEOUT仍TIMEOUT，新增理论迁移字段。没有将P/R结构移植m1/K4。",
+      "encoding_request": "停止新P16主探索并迁移K3数学状态，不生成“确认UNSAT”的新CNF。核对当前case确为同P合同；更弱REPORT_BACKED队列无三族覆盖时不得套用整K3删除。",
+      "minimum_semantic_test": "检查两K3代表共同指向manual12_core_P16，删除入口只一次；历史attempt不可改；s=1反证中的临时B块不得编到别类。",
+      "priority": "P0",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [
+        "N59TriangleTransport.triangle_shadow_transport",
+        "N59TriangleTransport.impossible_shadow_avoidance",
+        "N59TriangleTransport.distinguished_support_must_meet",
+        "N59TriangleTransport.actual_repeat_distinguished_support_must_meet"
+      ],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "仅§9.3交换关系有未运行草稿；§9.2私有集合计数及至少两点避例外、R2伙伴不能为e/f、中心第二三角形含η与η不能当三角形端口的完整图映射未形式化。",
+        "D_LATEST_K3_COVER完整组合证明原件仍缺；不得把条件K3闭合升为无条件N59结论。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N9",
+      "original_result_id": "N9",
+      "title": "K4零411产生合法Q≤4",
+      "use": "REPRESENTATIVE_CONSTRAINT",
+      "quantified_scope": "任意m0/K4图中任意零点v分拆411；全部F及父集。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 K=4；[U]M5–M8及§7.3的合法根覆盖。",
+      "formula": "存在零411⇒∃r∈L04,Q(r)≤4。故H5下无零411；结合§7.1/§7.2及非边预算，H5下所有非边B≤3。",
+      "proof_source": "N9; §10 原稿L690–765",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "分拆是任意零点的非边B行，不是仅当前合法根；B≤3只针对非边且守卫H5。",
+      "candidate_preservation_and_complement": "保留全部两分拆Q≤4；不得由H5后果改成全部m0低Q全局cap3。N9不移出Q5代表。",
+      "encoding_request": "在明确H5代表模式可加非边cap3/无411；其他范围只登记存在性出口。",
+      "minimum_semantic_test": "守卫关闭时不降低m0的继承B≤4；没有低Q出口即不启用无411代表规则。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "§11",
+      "original_result_id": "§11.1–11.2",
+      "title": "H5零点的重数端点限制",
+      "use": "GUARDED_NECESSARY",
+      "quantified_scope": "H5下每个零点z及其任意非边正重复点v，包含非极值零点。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 全局m=0,K=4；H5:=¬∃r∈L_{0,4}(G),Q2(r)≤4；并继承[U]M5–M8的全称界/换根。",
+      "formula": "t(z)=0∧B_zv=2⇒t(v)≤1；t(z)=0∧B_zv=3⇒t(v)=0。",
+      "proof_source": "§11.1–11.2; 原稿L766–792；N4(§5)仅是前一式的合法根版本",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "值精确非边B2/B3，与真实边D2不同；t和B由同一图精确计算。",
+      "candidate_preservation_and_complement": "只在H5。不得禁止t1–t1非边B3；§11.3明确未得到该一般禁令。N15后零点本身无B3，使第二式在最终模式中冗余。",
+      "encoding_request": "可作为分阶段传播模块；最终N15已覆盖部分效果，可关闭冗余编码，效果待测。",
+      "minimum_semantic_test": "不能把t(z)=0省略；非边与真实边分离；K5/K6和一般低Q模块均不得启用。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N12",
+      "original_result_id": "N12",
+      "title": "H5全图零321排除",
+      "use": "GUARDED_NECESSARY",
+      "quantified_scope": "H5下所有零点，非边分拆321的全部异常图与全部父集。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 全局m=0,K=4；H5:=¬∃r∈L_{0,4}(G),Q2(r)≤4；并继承[U]M5–M8的全称界/换根。",
+      "formula": "H5⇒不存在零点分拆321。",
+      "proof_source": "N12; §13 原稿L853–911，前置§12/N11排非空F",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "任意零点的值精确B行，不预先把它称合法K4根。",
+      "candidate_preservation_and_complement": "非空F与空F的证明合并覆盖321全部范围；仅H5。最终N15将其纳入统一零点行型，不单独累计范围数。",
+      "encoding_request": "优先最终N15模式统一表达；若单独使用保留H5门控，不另建大量321父标签任务。",
+      "minimum_semantic_test": "无H5时321不删；不把§12非空F排除误记为全部321已证，必须引用§13。",
+      "priority": "P2",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N14",
+      "original_result_id": "N14",
+      "title": "H5下合法2211/Q5只剩两条不交边",
+      "use": "GUARDED_NECESSARY",
+      "quantified_scope": "H5下每个合法零根r；a,b权2，c,d权1。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 全局m=0,K=4；H5:=¬∃r∈L_{0,4}(G),Q2(r)≤4；并继承[U]M5–M8的全称界/换根。",
+      "formula": "F={ab,cd}；其余四条跨权边为0。",
+      "proof_source": "N14; §15 原稿L934–962，结合§4.1/N1的四形状完备覆盖",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "当前根异常图六个真实A条目；H5下星形换根、三角形直接排除、重端路径§15排除。",
+      "candidate_preservation_and_complement": "不先固定父集；同权置换不会漏图。低Q出口完整留下；不能称任意旧Q5根的路径/星形皆UNSAT。",
+      "encoding_request": "最小实施先在有证明的Q5代表模式固定重边及单位边、四跨边为0；同时保留现有完整父矩阵。",
+      "minimum_semantic_test": "四种F只有在H5覆盖模式下最后只保留匹配；一般Q5单独用N1时不得删另外三种。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "本条完整图论命题未写成已检查Lean模块；图对象、精确根选择及原命题到形式前提的连接未验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    },
+    {
+      "interface_id": "N15",
+      "original_result_id": "N15",
+      "title": "H5所有零点都是合法2211/Q5匹配型",
+      "use": "GUARDED_NECESSARY",
+      "quantified_scope": "H5下对每个v∈V(G)，若t(v)=0；结论全图量词，非某一父签名。",
+      "premises": "D_GRAPH + D_C1 + D_ROOT + D_M0；原59点8正则简单图、真实B、B≤4、全局K及完整根范围；不得使用m1专用R31/R22。 全局m=0,K=4；H5:=¬∃r∈L_{0,4}(G),Q2(r)≤4；并继承[U]M5–M8的全称界/换根。 依次使用N5、§7、N9、N12、§14、N14；§16证明最后222也不可能。",
+      "formula": "∀v:t(v)=0⇒非边正B重数恰{2,2,1,1}，且两个B2支撑点相邻、两个B1支撑点相邻，四条交叉边均不在。于是v∈L04且Q(v)=5。",
+      "proof_source": "N15; §16 原稿L963–1032",
+      "source_file": "THEORY_WORKING.md",
+      "actual_object_and_variable_semantics": "R_j(v,x)↔v≠x∧A_vx=0∧B_vx=j；j=1,2。对零点恰有2个R2和2个R1，其他非边B=0；在其四支撑点上精确匹配。",
+      "candidate_preservation_and_complement": "每个无合法Q≤4出口的候选满足此全称结论；有低Q出口的候选由两分拆Q0–4保留。Q5匹配全族仍开放，根代表数不变。不能无条件要求所有零点合法。",
+      "encoding_request": "Q5新代表模式中，复用逐点t和B阈值精确定义R1/R2；零点门控行数与同值支撑邻接/异值非邻接。可从N14根F常量化起步；全零点模块开销待测，无需全59个Q计数器。",
+      "minimum_semantic_test": "检查t=0守卫、非边/精确值、同一行distinct支撑点和重数而非boolean；其他低Q实例关模块。证明覆盖依赖不得把“全部零点合法”当作验证输入。",
+      "priority": "P1",
+      "implementation_status": "NOT_IMPLEMENTED_BY_PHASE02",
+      "natural_language_proof": "COMPLETE_AS_SAVED_WITH_LISTED_PREMISES",
+      "lean_theorems": [],
+      "lean_result": "NOT_KERNEL_CHECKED",
+      "missing_formal_bridges": [
+        "§14父三元集的完备分类、§16.1两个未用父为零、两次换根保持真实图及父集交恰1的连接均尚未形式化。",
+        "ParentColumnBridge只是局部条目/列零草稿，不是N15或选根保全的形式验证。"
+      ],
+      "codex_formal_work": "恢复实际Lean/Mathlib环境后忠实转写；记录版本、命令、输出和#print axioms。不得用新axiom、sorry或削弱命题替代数学桥梁。",
+      "use_gate": "CONDITIONAL_SOURCE_SUPPORTED",
+      "notes": ""
+    }
+  ],
+  "execution_cover": {
+    "entries": [
+      {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q0",
+        "scope": [
+          0,
+          4,
+          [
+            3,
+            1,
+            1,
+            1
+          ],
+          0
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_3-1-1-1_q0"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q1",
+        "scope": [
+          0,
+          4,
+          [
+            3,
+            1,
+            1,
+            1
+          ],
+          1
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_3-1-1-1_q1"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q2",
+        "scope": [
+          0,
+          4,
+          [
+            3,
+            1,
+            1,
+            1
+          ],
+          2
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_3-1-1-1_q2"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q3",
+        "scope": [
+          0,
+          4,
+          [
+            3,
+            1,
+            1,
+            1
+          ],
+          3
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_3-1-1-1_q3"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_3-1-1-1:Q4",
+        "scope": [
+          0,
+          4,
+          [
+            3,
+            1,
+            1,
+            1
+          ],
+          4
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_3-1-1-1_q4"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q0",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          0
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q0"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q1",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          1
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q1"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q2",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          2
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q2"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q3",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          3
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q3"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q4",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          4
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q4"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K4_2-2-1-1:Q5",
+        "scope": [
+          0,
+          4,
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          5
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-2-1-1_q5"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q0",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          0
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q0"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q1",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          1
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q1"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q2",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          2
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q2"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q3",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          3
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q3"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q4",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          4
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q4"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q5",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          5
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q5"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q6",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          6
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q6"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K5_2-1-1-1-1:Q7",
+        "scope": [
+          0,
+          5,
+          [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          7
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_2-1-1-1-1_q7"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q0",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          0
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q0"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q1",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          1
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q1"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q2",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          2
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q2"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q3",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          3
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q3"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q4",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          4
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q4"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q5",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          5
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q5"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m0_K6_1-1-1-1-1-1:Q6",
+        "scope": [
+          0,
+          6,
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          6
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m0_1-1-1-1-1-1_q6"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q1",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          1
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q1"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q2",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          2
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q2"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q3",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          3
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q3"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q4",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          4
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q4"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q5",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          5
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q5"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q6",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          6
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q6"
+        ]
+      },
+      {
+        "representative_id": "N59R38:m1_K4_1-1-1-1:Q7",
+        "scope": [
+          1,
+          4,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          7
+        ],
+        "last_observed_owner_tasks": [
+          "manual12_m1_1-1-1-1_q7"
+        ]
+      }
+    ],
+    "removed_core_owner": "manual12_core_P16",
+    "retain_old_owner_attempts": true,
+    "P16_to_Q4_Q5_was_joint_not_bijective": true,
+    "H5_cover": "m0/K4 graphs with a legal Q≤4 root remain in ALL 10 low-Q entries across 3111/2211; remaining graphs satisfy H5 and have a 2211/Q5 representative obeying N15. No old arbitrary Q5 instance is declared UNSAT."
+  },
+  "last_completed_server_feedback": {
+    "run_id": "manual12_cpudatacollect--a33d9970e8a9-duqkdhgfvp_20260921T162014Z",
+    "source": "dependencies/codex_return_20260922/dependencies/recovery_summary.json",
+    "attempts": 88,
+    "all_attempts_state": "TIMEOUT",
+    "unstarted_leaves": 14,
+    "new_sat": 0,
+    "new_raw_unsat": 0,
+    "new_structural_models": 0,
+    "read_cutoff_utc": "2026-09-22T08:20:34.537076+00:00"
+  },
+  "formal": {
+    "state": "BLOCKED_ENVIRONMENT_NOT_KERNEL_CHECKED",
+    "files": [
+      "formal/ParentColumnBridge.lean",
+      "formal/TriangleTransport.lean"
+    ],
+    "triangle_transport_attempt_log": "formal/triangle_transport_attempt.log",
+    "triangle_exit_code": 127,
+    "parent_individual_execution_log": null,
+    "toolchain_version": null,
+    "mathlib_version": null,
+    "print_axioms_output": null,
+    "all_graph_theorems_formal_verified": false
+  },
+  "open_scope_issues": [
+    {
+      "id": "SCOPE-01",
+      "source": "THEORY_WORKING.md §6.1",
+      "issue": "Unique witnesses give k(p)=s; legal-root qualification when K>s not established by the stated premise.",
+      "blocked_use": "Do not promote the K>s generic descent to a legal-root cut. No new proof supplied by phase02.",
+      "unaffected_use": "N5-K4 explicit K=s=4 application, N8 and 33-count remain source-supported."
+    }
+  ],
+  "withdrawn_or_superseded": [
+    {
+      "source": "§3.2",
+      "claim": "3111/Q4 shortpath directly closed",
+      "state": "WITHDRAWN",
+      "replacement": "N2 bound; retain BOTH F shapes"
+    },
+    {
+      "source": "§8.6",
+      "claim": "34 open roots, P16 open with s=0",
+      "state": "SUPERSEDED_BY_N8",
+      "replacement": "33 open roots; P16 conditional closed; do not double count Q5"
+    },
+    {
+      "source": "§7.4/§10.6/§13.4/§14",
+      "claim": "intermediate zero type lists",
+      "state": "INTERMEDIATE_ONLY",
+      "replacement": "H5 final N15; still guarded, no extra layer subtraction"
+    }
+  ],
+  "production_authorization": {
+    "auto_start": false,
+    "trigger": "HUMAN_ONLY",
+    "new_budget_authorized_by_packaging": false,
+    "previous_explicit_configuration": "55 CPU threads inclusive of building/checking/solving; 12–18h total wall clock only when an authorized campaign is triggered; prior consumed time not replenished here"
+  },
+  "research_resource_record": {
+    "research_round": "N59_MANUAL12_ACTIVE",
+    "protocol": "manual-v1.2-feedback-loop",
+    "upstream_package": "N59_MANUAL12_ACTIVE_CODEX_TO_PRO_r1_20260922.zip",
+    "status": "CHECKPOINT_ONLY",
+    "root_frontier_before": 35,
+    "root_frontier_current": 33,
+    "this_runtime_first_observed_utc": "2026-09-28T09:09:12Z",
+    "prior_attempt_start_reported_utc": "2026-09-28T07:43:55Z",
+    "prior_attempt_duration_not_added_to_active_reasoning": true,
+    "local_target_sat_smt_ilp_calls": 0,
+    "remote_jobs": 0,
+    "real_subagents": 0,
+    "local_cpu_quota_cores": 4,
+    "memory_limit_bytes": 4294967296,
+    "active_reasoning_duration": "UNKNOWN",
+    "eight_hour_target_confirmed": false,
+    "correction": "3111/Q4短链直接排除的中途声明撤回；删边改变非边减一项，已转为全层重异常点交叠限制。",
+    "new_core_closure": "P16-CLOSED-CONDITIONAL",
+    "new_coarse_closure": "m1/K3 conditional, using inherited P28/T28 closures and latest cover",
+    "resource_timing_note": "Use actual saved tool-clock observations only. Earlier summaries contain inconsistent later clock values; no duration is inferred from them.",
+    "latest_saved_theorem": "N15: all zero vertices in H5 are legal 2211/Q5; 222 excluded by two reroots",
+    "last_observed_utc": "2026-09-28T11:01:43Z"
+  },
+  "packaging_operations": {
+    "new_math": false,
+    "target_solver_calls": 0,
+    "new_production_cnf": 0,
+    "lean_invocations": 0,
+    "remote_jobs": 0,
+    "hash_verification": false
+  },
+  "sources": {
+    "T": {
+      "path": "THEORY_WORKING.md",
+      "description": "本次同轮续研1032行原稿；§9.5确定33层，§16/N15为最后数学增量。"
+    },
+    "REC": {
+      "path": "dependencies/research_source/research_record.json",
+      "description": "原研究能力、时间观察、修正与33层状态；不是运行台账。"
+    },
+    "RUN": {
+      "path": "dependencies/codex_return_20260922/RESULTS.md",
+      "description": "2026-09-22回包完整结果报告，88次TIMEOUT，无新数学排除。"
+    },
+    "RUN_START": {
+      "path": "dependencies/codex_return_20260922/START_HERE.md",
+      "description": "回包原入口；其35层说明是当时状态，不覆盖本包33层。"
+    },
+    "RUN_TREE": {
+      "path": "dependencies/codex_return_20260922/dependencies/run/task_tree.json",
+      "description": "本次实际取得的102节点、88次attempt完整原树；原状态不改写。"
+    },
+    "CAMPAIGN": {
+      "path": "dependencies/codex_return_20260922/dependencies/run/campaign.json",
+      "description": "35代表/34入口和原owner、case、依赖。"
+    },
+    "RECOVERY": {
+      "path": "dependencies/codex_return_20260922/dependencies/recovery_summary.json",
+      "description": "04解析摘要；与原树同一批数据，不再次累计运行次数。"
+    },
+    "IMPL": {
+      "path": "dependencies/codex_return_20260922/dependencies/implementation/IMPLEMENTATION.md",
+      "description": "已实际运行的r1代码/变量语义快照，不是当前服务器在线核对。"
+    },
+    "CLUSTER": {
+      "path": "dependencies/codex_return_20260922/dependencies/implementation/RUN_ON_CLUSTER.md",
+      "description": "旧人工运行说明，保留原件；不得直接恢复其中P16和旧35层主队列。"
+    },
+    "U": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/THEORY_WORKING.md",
+      "description": "上轮完整783行原稿：P0–P10、M0–M8；P28关闭及K4既有下降。"
+    },
+    "U_THEORY": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/THEORY.md",
+      "description": "r1已整理的完整数学说明。"
+    },
+    "U_HANDOFF": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/CODEX_HANDOFF.md",
+      "description": "r1逐项数学—编码交接；旧P16开放状态被本包N8替代。"
+    },
+    "U_START": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/START_HERE.md",
+      "description": "r1接续和缺失前提清单。"
+    },
+    "J35": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/N59_35_FRONTIER_AND_STATUS.json",
+      "description": "35层原规格及23项继承依赖、原ID、Z2上限。"
+    },
+    "U_CHECKPOINT": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/RESEARCH_CHECKPOINT.md",
+      "description": "r1保存的更早研究检查点，不冒充本次09-28检查点。"
+    },
+    "U_FORMAL": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/FORMAL_STATUS.md",
+      "description": "旧形式化说明，保留历史状态。"
+    },
+    "W38": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/current_38/N59_THEORY_CONTINUATION_20260916_WORKING.md",
+      "description": "完整440行证明：§A运输，§C一般T28，最后G节38层。"
+    },
+    "H38": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/current_38/CODEX_N59_38_FRONTIER_INCREMENTAL_HANDOFF.md",
+      "description": "原定义、前提、选择根和精确乘积绑定的完整合同。"
+    },
+    "J38": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/current_38/N59_38_FRONTIER_AND_DEPENDENCIES.json",
+      "description": "38层来源规格；只作历史来源，不是本包开放队列。"
+    },
+    "MATCH": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/v6/N59_STRUCTURAL_SAT_V6/sources/N59_V5_FORWARD_MATCHING_AND_CYCLE_THEORY_20260908.md",
+      "description": "任意根父列§1.4、R31/R22/RK3准确范围、K3结构§7、t3换根§9。"
+    },
+    "LATEST": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/v6/N59_STRUCTURAL_SAT_V6/LATEST_CONVERSATION_CLAIMS_20260908.md",
+      "description": "最新K3/P/T命题登记，仍不是缺失的完整上游组合证明。"
+    },
+    "R1": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/round1/N59_ROUND1_20260915/ROUND1_REPORT.md",
+      "description": "首轮完整证明和有限证据作用范围；未重跑。"
+    },
+    "V6": {
+      "path": "dependencies/codex_return_20260922/dependencies/pro_input/dependencies/upstream/dependencies/input_documents/N59_C1_STRUCTURAL_SAT_V6_RESULTS_AND_THEORY_HANDOFF_20260911 (1).md",
+      "description": "原图定义、m1/K4/Q8完整raw范围、P核心原合同及V6历史。"
+    }
+  }
+}

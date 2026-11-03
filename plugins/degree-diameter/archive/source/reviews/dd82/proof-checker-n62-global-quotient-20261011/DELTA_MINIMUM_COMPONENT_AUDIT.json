@@ -1,0 +1,80 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "bounded_incremental_delta",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "All 24 minimum-size and exterior-moment obligations are discharged. H,K have size at least12; H=K has size at least14; K12 forces H12 with cross degrees4 and opposite internal degrees0,1; the five H12 triples and general moment/type restrictions follow. No remaining case is excluded by this audit.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_COMPONENT_MINIMUM_SIZES.md",
+      "scope": "All eight sections and remaining-gap statement",
+      "line_count": 290,
+      "size_bytes": 10326,
+      "mtime_utc": "2026-10-11T11:00:36.795433+00:00",
+      "last_line": "research conclusions."
+    }
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n62-global-quotient-20261011",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-11T11:05:54.670710+00:00",
+  "details": {
+    "sections_audited": 8,
+    "micro_claims_audited": 24,
+    "micro_claims_discharged": 24,
+    "open_obligations_within_claim": 0,
+    "issues": [],
+    "source_fixes": 0,
+    "parallel_shard": {
+      "agent_id": "/root/proof_review_n62_d1_reduction/signed_spectral_delta",
+      "scope": "Sections6 and8",
+      "dedup_keys": [
+        "k12-incidence-and-diagonal-reduction",
+        "general-exterior-first-moments",
+        "general-exterior-square-moments",
+        "general-exterior-cross-moment",
+        "specialized-moments-and-opposite-diagonals",
+        "exterior-gram-and-pointwise-bounds",
+        "even-exterior-type-counts"
+      ],
+      "concrete_errors": []
+    },
+    "imports_reused": [
+      "Actual order62 graph and B identities",
+      "Hard-D1 complete local rows",
+      "C4 refinement B_pq=0",
+      "Component equitability, even sizes and D1 quotient incidence bounds"
+    ],
+    "checks_run": [
+      "Complete mathematical delta review",
+      "Exhaustive hand check of displayed small integer cases",
+      "Independent exterior-moment and diagonal-case shard",
+      "Direct matrix derivation of all general moments",
+      "Targeted saturation, integrality, empty-exterior and component-mixing checks"
+    ],
+    "counterexamples_found": 0,
+    "scope_exclusions": [
+      "component_exterior_moments.py implementation/results",
+      "LP feasibility and separating quadratics",
+      "Exclusion of the five H12 triples",
+      "Larger component-pair classification",
+      "Double-edge parity",
+      "Order62 nonexistence",
+      "Lean formalization",
+      "Order63–65 work"
+    ],
+    "not_run": [
+      "Solver",
+      "Finite graph enumeration",
+      "Lean build",
+      "TeX/PDF/HTML rendering"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated.",
+    "wiki_claim_record": "Parent owns shared wiki integration; suggested proof status sound-modulo-imports."
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "status": "COMPLETE_NO_HITS_FIXED_VERTEX_SPLIT_OPERATION",
+  "family": "vertex splitting and matching",
+  "baseline_read_date": "2026-10-27",
+  "official_baseline_D3": {
+    "8": 253,
+    "12": 810
+  },
+  "official_baseline_source": "https://web.mat.upc.edu/francesc.comellas/delta-d/taula_delta_d.html",
+  "capacity_closed_degrees": [
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11
+  ],
+  "capacity_scope": "Any source of order equal to the corresponding current baseline and maxdegree<=Delta, under this one-vertex adjacent split operation.",
+  "fixed_source_cases": [
+    {
+      "degree_cap": 8,
+      "source_n": 253,
+      "target_n": 254,
+      "source_m": 1012,
+      "status": "COMPLETE_NO_HITS",
+      "all_vertices_completed": 253,
+      "last_vertex": 252,
+      "last_mask": 253,
+      "raw_unordered_nonempty_partitions": 32131,
+      "capacity_rejected": 23276,
+      "exact_condition_evaluated": 8855,
+      "new_u_rejected": 8855,
+      "new_w_rejected_after_u_pass": 0,
+      "old_cross_pair_rejected_after_newroots_pass": 0,
+      "passers": 0,
+      "neighbor_radius3_BFS": 2024,
+      "producer_passer_allsource_BFS": 0,
+      "first_partition_calibration_allsource_BFS": 1,
+      "calibration_exact_bad_pair_set_match": true,
+      "calibration_predicted_bad_unordered_pairs": 144,
+      "calibration_actual_bad_unordered_pairs": 144,
+      "calibration_D": 4,
+      "passing_partitions": [],
+      "cumulative_CPU_seconds": 0.010211,
+      "calibration_parameters": {
+        "split_source_vertex": 0,
+        "canonical_mask": 15,
+        "S": [
+          33,
+          39,
+          49,
+          103
+        ],
+        "T": [
+          163,
+          224,
+          234,
+          241
+        ],
+        "source_vertex0_reused_as_S_vertex": true,
+        "new_T_vertex": 253,
+        "split_new_degrees": [
+          5,
+          5
+        ]
+      },
+      "ordinary_bad_pair_scope": "The144/813 counts describe only the fixed first-partition calibration graph, not a best graph or family minimum."
+    },
+    {
+      "degree_cap": 12,
+      "source_n": 810,
+      "target_n": 811,
+      "source_m": 4860,
+      "status": "COMPLETE_NO_HITS",
+      "all_vertices_completed": 810,
+      "last_vertex": 809,
+      "last_mask": 4093,
+      "raw_unordered_nonempty_partitions": 1658070,
+      "capacity_rejected": 1283850,
+      "exact_condition_evaluated": 374220,
+      "new_u_rejected": 374220,
+      "new_w_rejected_after_u_pass": 0,
+      "old_cross_pair_rejected_after_newroots_pass": 0,
+      "passers": 0,
+      "neighbor_radius3_BFS": 9720,
+      "producer_passer_allsource_BFS": 0,
+      "first_partition_calibration_allsource_BFS": 1,
+      "calibration_exact_bad_pair_set_match": true,
+      "calibration_predicted_bad_unordered_pairs": 813,
+      "calibration_actual_bad_unordered_pairs": 813,
+      "calibration_D": 4,
+      "passing_partitions": [],
+      "cumulative_CPU_seconds": 0.238373,
+      "calibration_parameters": {
+        "split_source_vertex": 0,
+        "canonical_mask": 63,
+        "S": [
+          270,
+          282,
+          294,
+          405,
+          415,
+          425
+        ],
+        "T": [
+          567,
+          581,
+          592,
+          756,
+          761,
+          763
+        ],
+        "source_vertex0_reused_as_S_vertex": true,
+        "new_T_vertex": 810,
+        "split_new_degrees": [
+          7,
+          7
+        ]
+      },
+      "ordinary_bad_pair_scope": "The144/813 counts describe only the fixed first-partition calibration graph, not a best graph or family minimum."
+    }
+  ],
+  "complete_total_raw_unordered_partitions": 1690201,
+  "capacity_rejections": 1307126,
+  "exact_balanced_partitions": 383075,
+  "producer_verified_passers": 0,
+  "materialized_calibration_graphs": 2,
+  "exported_candidate_graphs": 0,
+  "new_lower_bounds": 0,
+  "native_CPU_seconds": 0.238373,
+  "CPU_measurement_scope": "Cumulative native enumeration and both calibrations; compilation/prep not included in this number.",
+  "workers": 1,
+  "random_starts": 0,
+  "optimization_moves": 0,
+  "source_allpairs_BFS_repeated": false,
+  "pending": [],
+  "next_action": "Stop this exact operation on the fixed253/810 sources; do not add source variants or local moves automatically.",
+  "restart_conditions": "A distinct source with different structural coverage, or an explicitly changed operation/routing rule; no additional seeds in the same finite family.",
+  "not_excluded": [
+    "All graphs of order254/811.",
+    "Other253/810 source graphs.",
+    "Nonadjacent, overlapping-neighborhood or multi-vertex split operations.",
+    "Operations that delete or replace other old edges."
+  ],
+  "source_credits": {
+    "253": "F.Comellas and M.Mitjana,1994; known semidirect-product Cayley graph.",
+    "810": "Dharunish Yugeswardeenoo,October7,2026; current official3-base affine-voltage source."
+  },
+  "evidence": [
+    "PREDICTION.json",
+    "PROPOSITION.md",
+    "enumerate.cpp",
+    "d8_RESULT.json",
+    "d12_RESULT.json",
+    "source253.edges",
+    "source810.edges"
+  ]
+}

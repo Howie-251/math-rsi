@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:9px;border:1px solid #ccd4db;text-align:left;vertical-align:top}.note{background:#eef5fa;padding:16px}.table-wrap{overflow-x:auto}nav{margin:18px 0}nav a{margin-right:14px}code{overflow-wrap:anywhere}</style></head><body>
+<h1>当前任务：六度直径四的全局覆盖构造</h1><p>更新：2026-10-27 06:40:40 UTC。Goal ACTIVE，范围4≤Δ≤12、D∈{3,4,5}。<strong>已验证新下界仍为0。</strong>门槛指保存的2026-10-26快照，没有新纪录声明。</p>
+<div class="note">固定650点图加完美匹配的10000次交换已结束，最好图独立检查仍为D5，未达到目标D4。另一个340点签名机制及一次分支跟进已被短路容量排除。全部有限批次终态，没有后台续跑；一般构造研究继续。</div>
+<nav><a href="expert_review_20261027/STATUS.html">专家快照 HTML</a><a href="DD_EXPERT_REVIEW_20261027.zip">专家材料 ZIP</a><a href="ddp/breadth_20261027_wave7/REPORT.md">第七轮汇总</a><a href="ddp/breadth_20261027_wave7/RESULTS.json">机器结果</a></nav>
+<p>专家材料保留03:15:51 UTC截点；本页记录后续研究。没有向外部专家发送文件。</p>
+<h2>650点方案：覆盖哪些点对，哪些仍未闭</h2>
+<p>已知源图650点、五正则、D5。保留1625条旧边，加325条补图完美匹配，所有点恰好六度。目标D4的保存门槛为441，故阶数已足够；全部旧距离≤4的点对自动保留，只需缩短87800个旧距离五无序对。</p>
+<p>两个初态分别按C25分层行配对、以及旧距离五图中的匹配构造，325条新边最初全为旧距离五。随后允许全局换边，不保留初态的对称性或距离限制。原定2×5000次合法交换全部完成，评分完整包含一条或两条新匹配边的路径。</p>
+<p>root从完整边表独立验证全部650根，并确认旧边全保留、新增边确是perfect matching。最好图六正则、连通、实际D5，31918个无序对仍超过四步；共55882个原远端对已缩短，但所有层对仍有缺项。</p>
+<div class="table-wrap"><table><tr><th>层对</th><th>原距离五</th><th>仍超过四步</th></tr><tr><td>叶–叶</td><td>52250</td><td>18816</td></tr><tr><td>叶–块 / 叶–头</td><td>25000 / 5500</td><td>9198 / 2084</td></tr><tr><td>块–块 / 块–头 / 头–头</td><td>3750 / 1000 / 300</td><td>1344 / 364 / 112</td></tr></table></div>
+<p><a href="ddp/breadth_20261027_wave7/shortcut650/best.edges">650点完整边表</a> · <a href="ddp/breadth_20261027_wave7/shortcut650/best.F.edges">新增匹配</a> · <a href="ddp/breadth_20261027_wave7/shortcut650/best.independent_check.json">唯一全源核验</a></p>
+<h2>340点方案：先在数学必要条件处止损</h2>
+<p>对已知170点七正则D3图作带签名双覆盖，再加纤维内匹配，得到拟定340点八度图，目标D3，保存门槛253。近端点对自动覆盖；原距离三点对必须有两条不同parity的三步路径。</p>
+<p>170点不是逐个猜阶数：结合越过门槛、Moore界和三步路线数量，在保存的D3源中只有它通过参数筛。但实际图的0到50只有三步路0–46–21–50，root已局部独立确认。三步lift路不能再花一步翻纤维，所以任意签名都漏一个sheet；全部这类图实际恰D4，没有搜索符号。</p>
+<p>一次结构跟进允许在基边matching上双分支，其余基点保留纤维内匹配，度仍为八。它仍必须击中5130条已验证的唯一三路。每边最多击中40条，85条matching已不够；完整整数证书进一步给出2810&lt;5130的上界。root独立核对路径及整数不等式，没有做matching或符号盲搜。这只关闭固定源的指定双覆盖/分支族。</p>
+<p><a href="ddp/breadth_20261027_wave7/signed_double340/mechanism_parameter_screen.json">点数选择依据</a> · <a href="ddp/breadth_20261027_wave7/branched_double340_capacity/certificate.independent_check.json">分支容量独立证书</a></p>
+<h2>已有252图的生成机制已恢复</h2>
+<p>缺失附件不再阻挡组合生成。已有边表可解释为七胞元结构：A是其余六胞元K6的one-factorization，C是六胞元的perfect matching，B是三胞元组及补四胞元matching。按包含关系和B三角形重建全部630边，与原图逐边相同；无重复BFS或附件下载。</p>
+<p>保持此胞元/三角形/度配额模板，D4强迫胞元数≤7，因此不能原样增加胞元超过252。这个结论不是一般(5,4)上界。作者原始A7置换数组仍未取回；完整组合生成规则已恢复，二者不混同。</p>
+<p><a href="ddp/breadth_20261027_wave7/rajiv252_cell_structure/REPORT.md">252生成规则</a> · <a href="ddp/breadth_20261027_wave7/rajiv252_cell_structure/coordinate_tables.json">全部编号坐标对应</a></p>
+<p>三个subagent分别做参数与结构侦察、实际匹配搜索、签名与分支容量推导；主代理负责最终独立验证。目录数包含机制跟进和来源恢复，不作为独立方法数。</p>
+<p><a href="progress_ddp_20261027_0604.html">06:04阶段页</a> · <a href="ddp/breadth_20261027_wave6/REPORT.md">第六轮</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p><p>后续需要改变实际远端覆盖条件；已停止试验不原样追加预算。没有新成果Lean验收，旧D2/n61/SAT继续暂停。</p></body></html>

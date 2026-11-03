@@ -1,0 +1,99 @@
+✖ [1161/1161] Building DegreeDiameter.Defect (59s)
+trace: .> LEAN_PATH=/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Cli/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/batteries/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/Qq/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/aesop/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/importGraph/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/plausible/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/packages/mathlib/.lake/build/lib/lean:/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/DegreeDiameter/Defect.lean -o /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/Defect.olean -i /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/Defect.ilean -c /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/Defect.c --setup /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/ir/DegreeDiameter/Defect.setup.json --json
+error: DegreeDiameter/Defect.lean:29:85: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+u v : V
+⊢ {x ∈ G.neighborFinset v | G.Adj u x}.card = {w ∈ G.neighborFinset u | G.Adj w v}.card
+warning: DegreeDiameter/Defect.lean:30:25: This simp argument is unused:
+  SimpleGraph.adjMatrix_mul_apply
+
+Hint: Omit it from the simp argument list.
+  simp [adjacencyMatrix, S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵a̵d̵j̵M̵a̵t̵r̵i̵x̵_̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵commonNeighborCount]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/Defect.lean:33:30: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+hreg : G.IsRegularOfDegree 8
+v : V
+⊢ ↑{x ∈ G.neighborFinset v | G.Adj v x}.card - 7 v v - 1 = 0
+warning: DegreeDiameter/Defect.lean:35:4: This simp argument is unused:
+  SimpleGraph.adjMatrix_mul_self_apply_self
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, adjacencyMatrix, onesMatrix, S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵a̵d̵j̵M̵a̵t̵r̵i̵x̵_̵m̵u̵l̵_̵s̵e̵l̵f̵_̵a̵p̵p̵l̵y̵_̵s̵e̵l̵f̵,̵ ̵hreg v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/Defect.lean:35:47: This simp argument is unused:
+  hreg v
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, adjacencyMatrix, onesMatrix,
+  ̵  ̵ ̵ ̵SimpleGraph.adjMatrix_mul_self_apply_self,̵ ̵h̵r̵e̵g̵ ̵v̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/Defect.lean:37:74: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+⊢ onesMatrixᵀ = onesMatrix
+warning: DegreeDiameter/Defect.lean:39:39: This simp argument is unused:
+  onesMatrix
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, adjacencyMatrix, o̵n̵e̵s̵M̵a̵t̵r̵i̵x̵,̵ ̵Matrix.transpose_mul, Matrix.transpose_add,
+  ̲  ̲ ̲ ̲Matrix.transpose_sub, Matrix.transpose_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/Defect.lean:40:48: This simp argument is unused:
+  Matrix.transpose_smul
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, adjacencyMatrix, onesMatrix, Matrix.transpose_mul, Matrix.transpose_add,
+  ̲  ̲ ̲ ̲M̵a̵t̵r̵i̵x̵.̵t̵r̵a̵n̵s̵p̵o̵s̵e̵_̵s̵u̵b̵,̵ ̵M̵a̵t̵r̵i̵x̵.̵t̵r̵a̵n̵s̵p̵o̵s̵e̵_̵s̵m̵u̵l̵]̵M̲a̲t̲r̲i̲x̲.̲t̲r̲a̲n̲s̲p̲o̲s̲e̲_̲s̲u̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/Defect.lean:43:88: unsolved goals
+V : Type u_1
+inst✝ : Fintype V
+G : SimpleGraph V
+u v : V
+huv : u ≠ v
+⊢ 7 u v = 0
+warning: DegreeDiameter/Defect.lean:44:34: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, onesMatrix, M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵huv, adjacency_sq_common_count]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: DegreeDiameter/Defect.lean:44:52: This simp argument is unused:
+  huv
+
+Hint: Omit it from the simp argument list.
+  simp [defectMatrix, onesMatrix, Matrix.one_apply, h̵u̵v̵,̵ ̵adjacency_sq_common_count]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: DegreeDiameter/Defect.lean:91:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 0
+  a + b + c - d - e ≤ 64
+where
+ a := ↑(Fintype.card V)
+ b := (8 * (8 * onesMatrix)) u v
+ c := (8 * onesMatrix) u v
+ d := (7 * onesMatrix) u v
+ e := (↑(Fintype.card V) * onesMatrix) u v
+error: DegreeDiameter/Defect.lean:111:0: Unexpected name `DegreeDiameter` after `end`: The current section is unnamed
+
+Hint: Delete the name `DegreeDiameter` to end the current unnamed scope; outer named scopes can then be closed using additional `end` command(s):
+  end ̵D̵e̵g̵r̵e̵e̵D̵i̵a̵m̵e̵t̵e̵r̵
+error: Lean exited with code 1
+Some required targets logged failures:
+- DegreeDiameter.Defect
+error: build failed
+
+exit_status=1

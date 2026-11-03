@@ -1,0 +1,80 @@
+{
+  "status": "ACTUAL_TWO_FIBER_SOURCE_READY_SAME_SHARED_RIGHTSHIFT_SCOPE_NOT_LOCATED",
+  "read_only_gate_complete": true,
+  "source": {
+    "name": "Michel_684",
+    "author": "Michel de Messieres",
+    "official_communication_date": "2026-10-05",
+    "primary_description_URL": "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#74",
+    "author_record_URL": "https://doi.org/10.5281/zenodo.23167440",
+    "primary_description_cache": "research/ddp/m1_sources/desc_g4.html",
+    "primary_cache_relevant_lines": [169, 170, 172, 174, 175, 176, 177, 178],
+    "primary_explicit_source_type": "two-vertex voltage lift; two automorphism orbits; not vertex-transitive",
+    "is_Cayley_on_684_vertices": false,
+    "n": 684,
+    "m": 2394,
+    "degree": 7,
+    "diameter": 4,
+    "source_validity": "Inherited exact cached edge binding and two-orbit distance certificate; not rerun",
+    "literal_edge_cache": "research/ddp/m1_sources/graph_7_4_n684.txt",
+    "literal_edge_cache_parsed_this_gate": false,
+    "recovered_recipe": "research/ddp/m1_sources/684_recovered_construction.json",
+    "reconstruction_code_read_not_executed": "research/ddp/m1_sources/recover_684.py",
+    "source_provenance_note": "research/ddp/m1_sources/SOURCE_NOTES.md"
+  },
+  "actual_recipe": {
+    "group": "H=C38 semidirect_23 C9, order342",
+    "coordinates": "(a,b), 0<=a<38, 0<=b<9",
+    "multiplication": "(a,b)*(c,d)=((a+23^b*c) mod38,(b+d) mod9)",
+    "inverse": "(a,b)^-1=((-23^(-b)*a) mod38,(-b) mod9)",
+    "vertex_label": "342*tau+9*a+b",
+    "forward_neighbor": "(tau,h) -> (rho,h*s), s in S[tau][rho]",
+    "literal_reconstruction_code_binding": "recover_684.py: u=encode(b,(a,k)); for c and s in S[b][c], v=encode(c,mul((a,k),s)); encode(b,g)=b*m*n+g[0]*n+g[1]. Read only, not imported/executed.",
+    "S00": [[4,4],[8,5],[25,3],[29,6]],
+    "S01": [[2,2],[2,6],[24,3]],
+    "S10": [[26,7],[24,3],[2,6]],
+    "S11": [[10,1],[23,6],[26,8],[29,3]],
+    "symmetry_used_for_proposed_gate": "common left H multiplication, transitive within each source tau type; not a one-orbit Cayley action"
+  },
+  "corrected_new_family": {
+    "domain": "one shared t in H342",
+    "matching": "(tau,h,copy0)--(tau,h*t,copy1); inverse crossing uses t^-1",
+    "candidate_n_if_generated": 1368,
+    "candidate_m_if_generated": 5472,
+    "candidate_degree_if_generated": 8,
+    "one_cross_condition": "For all tau,rho, union over sigma and a+b<=3 of A_tau,sigma(a)*t*A_sigma,rho(b) equals H342",
+    "candidate_generated": false,
+    "right_shifts_tested": 0,
+    "endpoint_sets_enumerated": 0,
+    "source_or_candidate_BFS_roots": 0,
+    "same_fixed_host_shared_right_t342_strict_NO_found": false,
+    "same_scope_prior_status": "NOT_LOCATED in finite local source/method/Wiki checks; not a global absence assertion"
+  },
+  "different_old_scopes_inherited": [
+    {
+      "path": "research/ddp/more_graphs_20261027/d4_vertex_split/REPORT.md",
+      "scope": "all684 vertices and43092 unordered nonempty neighbor partitions for one adjacent split684->685; complete NO; not this two-copy matching"
+    },
+    {
+      "path": "research/ddp/more_graphs_20261027/d4_michel684_prime43_transfer/free_projective_scope/REPORT.md",
+      "scope": "p43/order774/fixedphase/free normalized translations,7000402 projective parameters; complete NO; changes host field/group rather than duplicating actual684"
+    },
+    {
+      "path": "research/ddp/more_graphs_20261027/small_d6_D4_michel684_cross_matching_deletion/MODEL_SCOPE.md",
+      "scope": "delete one of3 whole original cross matchings to degree6 on684; complete NO for3 controls; not add one intercopy matching"
+    },
+    {
+      "path": "research/ddp/breadth_20261027_wave7/signed_double340/REPORT.md",
+      "scope": "170point degree7D3 signed doublecover plus vertical matching to340/degree8; different source and target diameter"
+    }
+  ],
+  "read_search_scope": "Finite local source filenames and bounded small text/recipe/Wiki searches; official cached #74 read; no HTTP required",
+  "search_limitation": "An initial text search was broader than needed and matched raw numeric adjacency text; subsequently restricted to small reports/recipes. No raw graph was parsed, generated, or validated.",
+  "new_graph_count": 0,
+  "next": "STOP after source interface; root may authorize one complete342t endpoint gate using two actual source-type roots",
+  "budget": {
+    "CPU_cap_seconds": 5,
+    "conservative_accounted_read_search_and_preparation_CPU_seconds": 1.5,
+    "measurement_kind": "Conservative charge for bounded local reads/searches and document preparation; no numeric kernel or graph validation executed"
+  }
+}

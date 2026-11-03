@@ -1,0 +1,21 @@
+def DegreeDiameter.triangleMateSet.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → Finset V → Finset V :=
+fun {V} [Fintype V] G T => {y | y ∉ T ∧ ∃ x ∈ T, DegreeDiameter.defectMatrix G x y = 1}
+@DegreeDiameter.n62_triangle_mate_set_properties : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {T : Finset V},
+          G.IsNClique 3 T →
+            G.IsNClique 3 (DegreeDiameter.triangleMateSet G T) ∧
+              Disjoint T (DegreeDiameter.triangleMateSet G T) ∧
+                DegreeDiameter.triangleMateSet G (DegreeDiameter.triangleMateSet G T) = T
+@DegreeDiameter.n62_triangle_mate_set_ne : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 → ∀ {T : Finset V}, G.IsNClique 3 T → DegreeDiameter.triangleMateSet G T ≠ T
+@DegreeDiameter.n62_triangle_count_even : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G → Fintype.card V = 62 → Even (G.cliqueFinset 3).card
+'DegreeDiameter.n62_triangle_mate_set_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_mate_set_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_triangle_count_even' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,324 @@
+{
+  "source_A": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/polarity_product2_8_helper_barrier/controlled_q2_square_clique5_230/PARAMETERS.json",
+  "source_B": "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/source585.implicit_adj.txt",
+  "source_ports": "research/ddp/polarity585_replication/SOURCE_PARTITION_CHECK.json",
+  "source_sigma": "research/ddp/more_graphs_20261027/d9_D3_polarity_cover_prediction/involution_probe/sigma.json",
+  "A_literal_rows": [
+    [
+      0,
+      5,
+      10
+    ],
+    [
+      1,
+      6,
+      11
+    ],
+    [
+      2,
+      7,
+      12
+    ],
+    [
+      3,
+      8,
+      13
+    ],
+    [
+      4,
+      9,
+      14
+    ],
+    [
+      0,
+      6,
+      9
+    ],
+    [
+      1,
+      5,
+      7
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      3,
+      7,
+      9
+    ],
+    [
+      4,
+      5,
+      8
+    ],
+    [
+      0,
+      12,
+      13
+    ],
+    [
+      1,
+      13,
+      14
+    ],
+    [
+      2,
+      10,
+      14
+    ],
+    [
+      3,
+      10,
+      11
+    ],
+    [
+      4,
+      11,
+      12
+    ]
+  ],
+  "B_absolute_labels": [
+    0,
+    73,
+    86,
+    90,
+    101,
+    108,
+    120,
+    127,
+    129,
+    138,
+    147,
+    158,
+    166,
+    172,
+    181,
+    188,
+    197,
+    204,
+    216,
+    219,
+    226,
+    236,
+    242,
+    256,
+    260,
+    269,
+    279,
+    285,
+    292,
+    303,
+    312,
+    320,
+    325,
+    334,
+    344,
+    350,
+    355,
+    364,
+    376,
+    382,
+    387,
+    395,
+    403,
+    415,
+    419,
+    431,
+    436,
+    445,
+    453,
+    460,
+    467,
+    478,
+    482,
+    490,
+    502,
+    508,
+    515,
+    528,
+    536,
+    544,
+    551,
+    554,
+    562,
+    575,
+    580
+  ],
+  "sigma_absolute_pairs": [
+    [
+      73,
+      86
+    ],
+    [
+      90,
+      120
+    ],
+    [
+      101,
+      108
+    ],
+    [
+      127,
+      129
+    ],
+    [
+      138,
+      158
+    ],
+    [
+      147,
+      181
+    ],
+    [
+      166,
+      172
+    ],
+    [
+      188,
+      197
+    ],
+    [
+      204,
+      260
+    ],
+    [
+      216,
+      236
+    ],
+    [
+      219,
+      256
+    ],
+    [
+      226,
+      242
+    ],
+    [
+      269,
+      303
+    ],
+    [
+      279,
+      325
+    ],
+    [
+      285,
+      292
+    ],
+    [
+      312,
+      320
+    ],
+    [
+      334,
+      382
+    ],
+    [
+      344,
+      355
+    ],
+    [
+      350,
+      387
+    ],
+    [
+      364,
+      376
+    ],
+    [
+      395,
+      436
+    ],
+    [
+      403,
+      415
+    ],
+    [
+      419,
+      453
+    ],
+    [
+      431,
+      445
+    ],
+    [
+      460,
+      467
+    ],
+    [
+      478,
+      502
+    ],
+    [
+      482,
+      508
+    ],
+    [
+      490,
+      515
+    ],
+    [
+      528,
+      551
+    ],
+    [
+      536,
+      575
+    ],
+    [
+      544,
+      554
+    ],
+    [
+      562,
+      580
+    ]
+  ],
+  "inherited_A_cube": "A^3=4A+J, prior actual230 calibration",
+  "new_B_cube_check": "NEW_B_CUBE_CHECK.json",
+  "inherited_sigma": "old actual2600-edge preservation/order2; not rerun",
+  "source_product_label": "585*x+y",
+  "source_n": 8775,
+  "source_m": 118300,
+  "code": "a=0..4 times saved B_absolute_labels in saved increasing order",
+  "copy_convention": "0=original source center; copies1,2,3,4; copy4 absent at b0=0 for all five a",
+  "clone_label_order": "start8775; copy outer1..4, then a0..4, then saved increasing B-port label; skip five holes",
+  "mandatory_n": 10070,
+  "mandatory_m": 151970,
+  "copy_cycles": "all present class representatives in copy order, closing cycle",
+  "sigma_matching": "same a and copy, actual saved32 nonfixed B-port pairs",
+  "cycle_edges": 1620,
+  "sigma_peer_edges": 800,
+  "peer_edges": 2420,
+  "n": 10070,
+  "m": 154390,
+  "cap": 31,
+  "predicted_degree_histogram": {
+    "28": 20,
+    "29": 1600,
+    "30": 130,
+    "31": 8320
+  },
+  "pool_size": 1750,
+  "predicted_spare_histogram": {
+    "1": 130,
+    "2": 1600,
+    "3": 20
+  },
+  "npz": "G0_INPUT.npz",
+  "npz_keys": {
+    "indptr": "int64 shape10071",
+    "indices": "int32 shape308780, sorted each row, both directions",
+    "pool": "int32 shape1750, ascending vertex labels",
+    "spare": "int32 shape1750, exact31-degree",
+    "n": "int32 scalar10070"
+  },
+  "helpers_not_generated": true,
+  "root_joint_model": "six helpers K6; each\u226426 pins; root owns one exact MILP",
+  "final10076_feasibility": "UNKNOWN_NOT_SOLVED_HERE",
+  "priority": "UNKNOWN",
+  "portfolio_increment": 0
+}

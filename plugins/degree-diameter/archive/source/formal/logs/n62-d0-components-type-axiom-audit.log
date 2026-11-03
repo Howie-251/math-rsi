@@ -1,0 +1,124 @@
+structure DegreeDiameter.D0ParentTemplate.{u_1} {V : Type u_1} (G : SimpleGraph V) (r i j k b d w a : V) : Prop
+number of parameters: 10
+fields:
+  DegreeDiameter.D0ParentTemplate.root_i : G.Adj r i
+  DegreeDiameter.D0ParentTemplate.root_j : G.Adj r j
+  DegreeDiameter.D0ParentTemplate.root_k : G.Adj r k
+  DegreeDiameter.D0ParentTemplate.root_b : G.Adj r b
+  DegreeDiameter.D0ParentTemplate.root_d : G.Adj r d
+  DegreeDiameter.D0ParentTemplate.i_ne_j : i ≠ j
+  DegreeDiameter.D0ParentTemplate.i_ne_k : i ≠ k
+  DegreeDiameter.D0ParentTemplate.j_ne_k : j ≠ k
+  DegreeDiameter.D0ParentTemplate.b_ne_d : b ≠ d
+  DegreeDiameter.D0ParentTemplate.i_ne_b : i ≠ b
+  DegreeDiameter.D0ParentTemplate.i_ne_d : i ≠ d
+  DegreeDiameter.D0ParentTemplate.j_ne_b : j ≠ b
+  DegreeDiameter.D0ParentTemplate.j_ne_d : j ≠ d
+  DegreeDiameter.D0ParentTemplate.k_ne_b : k ≠ b
+  DegreeDiameter.D0ParentTemplate.k_ne_d : k ≠ d
+  DegreeDiameter.D0ParentTemplate.w_ne_root : w ≠ r
+  DegreeDiameter.D0ParentTemplate.a_ne_root : a ≠ r
+  DegreeDiameter.D0ParentTemplate.root_w_nonadj : ¬G.Adj r w
+  DegreeDiameter.D0ParentTemplate.root_a_nonadj : ¬G.Adj r a
+  DegreeDiameter.D0ParentTemplate.w_ne_a : w ≠ a
+  DegreeDiameter.D0ParentTemplate.root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y
+  DegreeDiameter.D0ParentTemplate.w_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = i ∨ x = j ∨ x = k)
+  DegreeDiameter.D0ParentTemplate.a_parents : ∀ (x : V), G.Adj r x → (G.Adj x a ↔ x = b ∨ x = d)
+  DegreeDiameter.D0ParentTemplate.ordinary_parent_unique : ∀ (y : V),
+      y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x'
+constructor:
+  DegreeDiameter.D0ParentTemplate.mk.{u_1} {V : Type u_1} {G : SimpleGraph V} {r i j k b d w a : V} (root_i : G.Adj r i)
+    (root_j : G.Adj r j) (root_k : G.Adj r k) (root_b : G.Adj r b) (root_d : G.Adj r d) (i_ne_j : i ≠ j)
+    (i_ne_k : i ≠ k) (j_ne_k : j ≠ k) (b_ne_d : b ≠ d) (i_ne_b : i ≠ b) (i_ne_d : i ≠ d) (j_ne_b : j ≠ b)
+    (j_ne_d : j ≠ d) (k_ne_b : k ≠ b) (k_ne_d : k ≠ d) (w_ne_root : w ≠ r) (a_ne_root : a ≠ r)
+    (root_w_nonadj : ¬G.Adj r w) (root_a_nonadj : ¬G.Adj r a) (w_ne_a : w ≠ a)
+    (root_independent : ∀ (x y : V), G.Adj r x → G.Adj r y → ¬G.Adj x y)
+    (w_parents : ∀ (x : V), G.Adj r x → (G.Adj x w ↔ x = i ∨ x = j ∨ x = k))
+    (a_parents : ∀ (x : V), G.Adj r x → (G.Adj x a ↔ x = b ∨ x = d))
+    (ordinary_parent_unique :
+      ∀ (y : V),
+        y ≠ r → ¬G.Adj r y → y ≠ w → y ≠ a → ∀ (x x' : V), G.Adj r x → G.Adj r x' → G.Adj x y → G.Adj x' y → x = x') :
+    DegreeDiameter.D0ParentTemplate G r i j k b d w a
+structure DegreeDiameter.D0EdgeBoutTemplate.{u_1} {V : Type u_1} (G : SimpleGraph V) (r i j k p q w a b : V) : Prop
+number of parameters: 11
+fields:
+  DegreeDiameter.D0EdgeBoutTemplate.parents : DegreeDiameter.D0ParentTemplate G r i j k p q w a
+  DegreeDiameter.D0EdgeBoutTemplate.edge_wa : G.Adj w a
+  DegreeDiameter.D0EdgeBoutTemplate.root_b : G.Adj r b
+  DegreeDiameter.D0EdgeBoutTemplate.b_ne_i : b ≠ i
+  DegreeDiameter.D0EdgeBoutTemplate.b_ne_j : b ≠ j
+  DegreeDiameter.D0EdgeBoutTemplate.b_ne_k : b ≠ k
+  DegreeDiameter.D0EdgeBoutTemplate.b_ne_p : b ≠ p
+  DegreeDiameter.D0EdgeBoutTemplate.b_ne_q : b ≠ q
+  DegreeDiameter.D0EdgeBoutTemplate.bout_common_neighbors : ∃ t u, t ≠ u ∧ G.Adj w t ∧ G.Adj t b ∧ G.Adj w u ∧ G.Adj u b
+constructor:
+  DegreeDiameter.D0EdgeBoutTemplate.mk.{u_1} {V : Type u_1} {G : SimpleGraph V} {r i j k p q w a b : V}
+    (parents : DegreeDiameter.D0ParentTemplate G r i j k p q w a) (edge_wa : G.Adj w a) (root_b : G.Adj r b)
+    (b_ne_i : b ≠ i) (b_ne_j : b ≠ j) (b_ne_k : b ≠ k) (b_ne_p : b ≠ p) (b_ne_q : b ≠ q)
+    (bout_common_neighbors : ∃ t u, t ≠ u ∧ G.Adj w t ∧ G.Adj t b ∧ G.Adj w u ∧ G.Adj u b) :
+    DegreeDiameter.D0EdgeBoutTemplate G r i j k p q w a b
+def DegreeDiameter.ClosedDoubleFour.{u_1} : {V : Type u_1} → [Fintype V] → SimpleGraph V → V → V → V → V → Prop :=
+fun {V} [Fintype V] G r w b a =>
+  r ≠ w ∧
+    r ≠ b ∧
+      r ≠ a ∧
+        w ≠ b ∧
+          w ≠ a ∧
+            b ≠ a ∧
+              DegreeDiameter.twoOneRow G r w a ∧
+                DegreeDiameter.twoOneRow G w r b ∧ DegreeDiameter.twoOneRow G a b r ∧ DegreeDiameter.twoOneRow G b a w
+@DegreeDiameter.n62_d0_parent_root_row : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k b d w a : V}, DegreeDiameter.D0ParentTemplate G r i j k b d w a → DegreeDiameter.twoOneRow G r w a
+@DegreeDiameter.n62_d0_parent_repeat_profile : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k b d w a : V},
+          DegreeDiameter.D0ParentTemplate G r i j k b d w a →
+            ∀ (x : V), G.Adj r x → DegreeDiameter.defectMatrix G i x = (if x = j then 1 else 0) + if x = k then 1 else 0
+@DegreeDiameter.n62_d0_match_closed_component : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k p q w a : V},
+          DegreeDiameter.D0ParentTemplate G r i j k p q w a →
+            ¬G.Adj w a →
+              ∃ b,
+                DegreeDiameter.ClosedDoubleFour G r w b a ∧
+                  ¬G.Adj r w ∧ ¬G.Adj r b ∧ ¬G.Adj r a ∧ ¬G.Adj w b ∧ ¬G.Adj w a ∧ ¬G.Adj b a
+@DegreeDiameter.bout_common_neighbors_of_unit_repeat : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {w b : V},
+  w ≠ b →
+    ¬G.Adj w b → DegreeDiameter.defectMatrix G w b = 1 → ∃ t u, t ≠ u ∧ G.Adj w t ∧ G.Adj t b ∧ G.Adj w u ∧ G.Adj u b
+@DegreeDiameter.n62_d0_bout_closed_component : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V),
+  DegreeDiameter.degreeAtMostEight G →
+    DegreeDiameter.diameterAtMostTwo G →
+      Fintype.card V = 62 →
+        ∀ {r i j k p q w a b : V},
+          DegreeDiameter.D0EdgeBoutTemplate G r i j k p q w a b →
+            DegreeDiameter.ClosedDoubleFour G r w b a ∧
+              G.Adj r b ∧ G.Adj w a ∧ ¬G.Adj r w ∧ ¬G.Adj r a ∧ ¬G.Adj w b ∧ ¬G.Adj b a
+@DegreeDiameter.closedDoubleFour_no_external_repeat : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {r w b a v x : V},
+  DegreeDiameter.ClosedDoubleFour G r w b a →
+    v = r ∨ v = w ∨ v = b ∨ v = a → x ≠ r → x ≠ w → x ≠ b → x ≠ a → DegreeDiameter.defectMatrix G v x = 0
+@DegreeDiameter.d0_bout_template_of_unit_repeat : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V)
+  {r i j k p q w a b : V},
+  DegreeDiameter.D0ParentTemplate G r i j k p q w a →
+    G.Adj w a →
+      G.Adj r b →
+        b ≠ i →
+          b ≠ j →
+            b ≠ k →
+              b ≠ p →
+                b ≠ q → DegreeDiameter.defectMatrix G w b = 1 → DegreeDiameter.D0EdgeBoutTemplate G r i j k p q w a b
+'DegreeDiameter.n62_d0_parent_root_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d0_parent_repeat_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d0_match_closed_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.bout_common_neighbors_of_unit_repeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.n62_d0_bout_closed_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.closedDoubleFour_no_external_repeat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DegreeDiameter.d0_bout_template_of_unit_repeat' depends on axioms: [propext, Classical.choice, Quot.sound]

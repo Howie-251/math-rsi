@@ -1,0 +1,178 @@
+{
+  "status": "SMALL_SEMANTICS_PASSED",
+  "AND_truth_assignments": 8,
+  "explicit_assignments": 5,
+  "records": [
+    {
+      "name": "positive_C4_C6_two_chords",
+      "n": 10,
+      "variables": 339,
+      "clauses": 1057,
+      "assigned_variables": 339,
+      "false_clauses": 0,
+      "failed_counters": [],
+      "exact_degrees": true,
+      "in_scope": true,
+      "bad_pairs": 0,
+      "diameter": 2,
+      "target_graph": true,
+      "model_target": true,
+      "active_path_types": {
+        "fixed_cross": 32,
+        "chord_cross": 4,
+        "fixed_chord": 4,
+        "cross_cross": 1
+      },
+      "complete_clause_semantics_matches_BFS": true
+    },
+    {
+      "name": "all_degrees_correct_but_coverage_fails",
+      "n": 10,
+      "variables": 339,
+      "clauses": 1057,
+      "assigned_variables": 339,
+      "false_clauses": 1,
+      "failed_counters": [],
+      "exact_degrees": true,
+      "in_scope": true,
+      "bad_pairs": 1,
+      "diameter": 3,
+      "target_graph": false,
+      "model_target": false,
+      "active_path_types": {
+        "fixed_cross": 32,
+        "chord_cross": 4,
+        "cross_cross": 3,
+        "fixed_chord": 4
+      },
+      "complete_clause_semantics_matches_BFS": true
+    },
+    {
+      "name": "cross_degree_failure",
+      "n": 10,
+      "variables": 339,
+      "clauses": 1057,
+      "assigned_variables": 339,
+      "false_clauses": 3,
+      "failed_counters": [
+        {
+          "kind": "left_cross_degree",
+          "vertex": 0,
+          "actual": 1,
+          "target": 2
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 0,
+          "actual": 1,
+          "target": 2
+        }
+      ],
+      "exact_degrees": false,
+      "in_scope": false,
+      "bad_pairs": 1,
+      "diameter": 3,
+      "target_graph": false,
+      "model_target": false,
+      "active_path_types": {
+        "fixed_cross": 28,
+        "chord_cross": 3,
+        "fixed_chord": 4,
+        "cross_cross": 1
+      },
+      "complete_clause_semantics_matches_BFS": true
+    },
+    {
+      "name": "chord_number_and_degree_failure",
+      "n": 10,
+      "variables": 339,
+      "clauses": 1057,
+      "assigned_variables": 339,
+      "false_clauses": 4,
+      "failed_counters": [
+        {
+          "kind": "total_chords",
+          "vertex": null,
+          "actual": 1,
+          "target": 2
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 1,
+          "actual": 1,
+          "target": 2
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 3,
+          "actual": 1,
+          "target": 2
+        }
+      ],
+      "exact_degrees": false,
+      "in_scope": false,
+      "bad_pairs": 1,
+      "diameter": 3,
+      "target_graph": false,
+      "model_target": false,
+      "active_path_types": {
+        "fixed_cross": 32,
+        "chord_cross": 2,
+        "fixed_chord": 2,
+        "cross_cross": 1
+      },
+      "complete_clause_semantics_matches_BFS": true
+    },
+    {
+      "name": "matching_failure_with_real_chord_chord_path",
+      "n": 12,
+      "variables": 577,
+      "clauses": 1812,
+      "assigned_variables": 577,
+      "false_clauses": 16,
+      "failed_counters": [
+        {
+          "kind": "right_chord_incidence",
+          "vertex": 0,
+          "actual": 2,
+          "target": 1
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 0,
+          "actual": 3,
+          "target": 2
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 2,
+          "actual": 3,
+          "target": 2
+        },
+        {
+          "kind": "right_cross_plus_chord_degree",
+          "vertex": 6,
+          "actual": 0,
+          "target": 2
+        }
+      ],
+      "exact_degrees": false,
+      "in_scope": false,
+      "bad_pairs": 12,
+      "diameter": 3,
+      "target_graph": false,
+      "model_target": false,
+      "active_path_types": {
+        "fixed_cross": 40,
+        "chord_cross": 5,
+        "fixed_chord": 4,
+        "chord_chord": 1
+      },
+      "complete_clause_semantics_matches_BFS": true
+    }
+  ],
+  "official_28_30_model_built": false,
+  "solver_calls": 0,
+  "elapsed_cpu": 0.01017474900000001,
+  "elapsed_wall": 0.010185007005929947
+}

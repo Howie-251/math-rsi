@@ -1,0 +1,13 @@
+{
+  "frozen_before_targeted_analysis": true,
+  "fixed_source_n": 51417,
+  "prototype": 51013,
+  "deleted_saturated_pin": 11352,
+  "guard": 50577,
+  "hypothesis": "Thefreeextra guard is a partialneighborhood proxy forthedeletedcorepin: itsneighbors arecontainedin thedeletedpin neighborhood, so thelostcriticalroutescanbereusedthroughsharedfirststeps.",
+  "falsifiable_checks": ["Testliteralopen-neighborhoodcontainmentanddifferences","Countoriginal3614holes byprototype/deleted/guard distance andcore/extra label","Checkwhetherallholes haveaguardshortestroute whosefirststepissharedwithdeletedpin"],
+  "known_production_fact": "Deleting11352 leaves9pins and3614holes=3535core+79extras;guard50577coversall3614 in thesavedtargetmask",
+  "analysis_scope": "Onebatchedtargeteddistanceanalysis ofonlythreestatedoldvertices onoriginal51417source;notnewgraphverification",
+  "budget": "oneCPU second; nooldallsourceBFS,newgraphBFS,rawmapping,oldcorecolorassumptionornewsearch",
+  "interpretation_limit": "Anyshortest-routebranchprivacyislabelledassuch,notautomaticallynecessityamongalllength<=4routes"
+}

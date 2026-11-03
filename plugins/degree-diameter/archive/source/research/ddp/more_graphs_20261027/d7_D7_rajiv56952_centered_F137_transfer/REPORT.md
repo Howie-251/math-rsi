@@ -1,0 +1,13 @@
+# Unique centeredF137 transfer:69048 vertices, exactD8
+
+The sole frozen candidate is simple, connected and7regular, with69048 vertices241668 edges. One complete identity BFS gives distance histogram[1,7,42,252,1512,8443,32678,25926,187]. Cayley vertex-transitivity makes its global diameter exactly8. The187 radius7 misses are identity-root states, not an ordinary unordered bad-pair count; first target26 is(phase0,translation26). Thus the targetD7 prediction is refuted, and no new lower bound over56952 is obtained. No other prime, action, translation or seed was tried.
+
+The official Rajiv56952 entry gives Z24 semidirect44 Z2373, right law(i,y)(j,v)=(i+j,y*44^j+v), and IDs3082,5577,17883,29904,40986,53484,55264. Its published implicit adjacency row0 was fetched as a short prefix and matches those seven IDs exactly. The full source graph was not downloaded or traversed. Source inverse pairs and44^24=1 were verified arithmetically.
+
+Splitting2373=21*113, the conjugation uses h=(0,714), where714 is0mod21 and36mod113. It preserves all module21 translations while producing centered field113 positives-3,-21,-37 and involution0. It is not a full-module shift36. The unique target is q137 with primitive8root10, action695mod2877 and positives(1,2326),(2,390),(7,1881), together with their true inverses(23,2617),(22,2832),(17,918) and involution(12,0). Full literals and conventions are in RECIPE.json.
+
+Before graph construction, complete nonbacktracking words of lengths0..7 were enumerated on the504-state quotient:391910 words, minimum endpoint multiplicity663 at(phase6,translation9). This exceeds137 and permits the candidate but does not guarantee distinct field endpoints. CAPACITY.json retains all504 counts. The actual graph then received exactly one full identity BFS; R7_MISSING.json and identity_distances.u8.bin preserve its result.
+
+An initial inverse assertion read future factors[inv[k]] before they were initialized. It aborted before any capacity or graph computation. INITIALIZATION_ERROR.json/.log retain the error. Splitting initialization and assertion into two loops fixed this routine implementation issue without changing the mathematical rule. It is not a second candidate or a mathematical negative.
+
+The successful execution used0.011695 native CPU seconds,0.013702 process CPU including startup/output, and0.912817 CPU including compilation/driver. Including the initial encoding-error run, total CPU was1.794808; cumulative native-process CPU0.016127 remains below10. Sourceq113 BFS0, actual target graphs1, identity BFS1, ordinary bad pairs unmeasured. The frozen rule stops here; the general CRT construction family is not excluded.

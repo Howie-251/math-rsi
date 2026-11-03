@@ -1,0 +1,117 @@
+{
+  "protocol": "manual-v1.2-feedback-loop",
+  "stage": "04",
+  "round": "I12_CP02",
+  "return_revision": "r1_12h_final",
+  "collection_begin_utc": "2026-09-29T03:37:56.514989+00:00",
+  "collection_end_utc": "2026-09-29T03:37:59.151545+00:00",
+  "original_pro_archive": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/N61_I12_CP02_PRO_TO_CODEX_manual-v1.2-feedback-loop_r1.zip",
+  "upstream_archive_entries": 493,
+  "source_round": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N61_I12_CP02_PRO_TO_CODEX_manual-v1.2-feedback-loop_r1",
+  "source_run": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N61_I12_CP02_PRO_TO_CODEX_manual-v1.2-feedback-loop_r1/runs/n61_I12_CP02_r1_portfolio55_12h_run1",
+  "run_id": "n61_I12_CP02_r1_portfolio55_12h_run1",
+  "run_status": "complete",
+  "mathematical_status": "unresolved",
+  "input_identity_match": true,
+  "log_header_and_commands_match": true,
+  "input_tracking_limit": "Runtime recorded paths/version/identities/header, not a start-time CNF byte snapshot. Current paired input is included.",
+  "actual_invocations": [
+    {
+      "invocation": 1,
+      "started_at_utc": "2026-09-28T09:01:13Z",
+      "deadline_at_utc": "2026-09-28T21:01:13Z",
+      "global_seconds": 43200.0,
+      "task_seconds": 43200.0,
+      "resume": false,
+      "retry_statuses": []
+    }
+  ],
+  "solver": [
+    {
+      "path": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/degree_diameter_sat/solvers/satcomp2025/cadical-sc2025/build/cadical",
+      "version": "sc2025"
+    }
+  ],
+  "actual_CNF": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N61_I12_CP02_PRO_TO_CODEX_manual-v1.2-feedback-loop_r1/generated/inside.cnf",
+  "encoding_version": "n61_i12_cp02_r1_increment_v1",
+  "variables": 177303,
+  "clauses": 674458,
+  "enabled_constraints": [
+    "I10_full61_degree_diameter_four_P5",
+    "I12.1_four_known_P5_roots",
+    "I12.11_exact_global_W_count",
+    "I12.14_MATCH_or_isolated_W_bound",
+    "I12.18_exact_global_W_le_5"
+  ],
+  "logical_inputs": 1,
+  "solver_configurations": 55,
+  "statuses": {
+    "timeout": 55
+  },
+  "reasons": {
+    "global_deadline": 55
+  },
+  "statistics": {
+    "wall_seconds": {
+      "available": 55,
+      "minimum": 43199.331,
+      "maximum": 43204.046,
+      "median": 43201.436,
+      "total": 2376065.0129999993
+    },
+    "process_cpu_seconds": {
+      "available": 55,
+      "minimum": 42684.84,
+      "maximum": 42766.55,
+      "median": 42726.28,
+      "total": 2349982.420000001
+    },
+    "peak_RSS_MB": {
+      "available": 55,
+      "minimum": 355.0,
+      "maximum": 476.53,
+      "median": 398.48
+    },
+    "conflicts": {
+      "available": 55,
+      "minimum": 34181001,
+      "maximum": 40627023,
+      "median": 38413835,
+      "total": 2102771220
+    },
+    "learned_clauses_cumulative": {
+      "available": 55,
+      "minimum": 33339925,
+      "maximum": 39692144,
+      "median": 37521687,
+      "total": 2053257770
+    },
+    "search_time_percent": {
+      "available": 55,
+      "minimum": 90.96,
+      "maximum": 91.73,
+      "median": 91.29
+    }
+  },
+  "allocated_cpu_hours_upper_bound": 660,
+  "measured_cpu_hours": 652.7728944444447,
+  "models": [],
+  "graph_validation_records": [],
+  "run_file_extensions": {
+    ".log": 56,
+    ".jsonl": 1,
+    ".json": 58,
+    ".lock": 1
+  },
+  "formal_execution_source": "/inspire/hdd/global_user/mahaitong-240108120090/mathagent/formal_loop/N61_I12_CP02_PRO_TO_CODEX_manual-v1.2-feedback-loop_r1/formal/codex_check/execution.json",
+  "formal_successful_compiles": [],
+  "new_mathematical_information": false,
+  "new_closed_ranges": 0,
+  "comparison": "not_measured; no preselected comparable control batch",
+  "skipped_large_runtime_files": [
+    "progress.jsonl: periodic snapshots retained on shared path",
+    "seed01..54 full solver logs: all final statistics/excerpts included; originals retained"
+  ],
+  "operations": "Read, parse and copy existing files only. No solver/Lean/build/cluster submission.",
+  "next_stage_recommendation": "03: implement accepted graph-bound structural interfaces; not a run authorization"
+}

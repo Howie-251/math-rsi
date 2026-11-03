@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "scope": "one saved failing old pair only; no BFS and no complete source/candidate rerun",
+  "pair": [
+    0,
+    17
+  ],
+  "old_source_length5_route": [
+    0,
+    2,
+    56,
+    41,
+    40,
+    17
+  ],
+  "old_route_cut_edges": [
+    [
+      2,
+      56
+    ]
+  ],
+  "actual_modified_length6_route": [
+    0,
+    2,
+    71,
+    56,
+    41,
+    40,
+    17
+  ],
+  "final_distance_lower_bound": "outside R5 in the already completed candidate test",
+  "final_distance": 6,
+  "explanation": "Deleted edge(2,56) on this old5route becomes2--71--56, adding one step. This route alone does not exclude other5routes; the saved exact R5 failure supplies that lower bound.",
+  "CPU_seconds": 0.021609
+}

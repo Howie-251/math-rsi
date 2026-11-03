@@ -1,0 +1,199 @@
+[
+  {
+    "id": "ddp-d11-d4-one-switch-absorption679-20261027",
+    "title": "(11,4)paired-switch补路679项：原反例修好但仍无完整图",
+    "family": "W9 absorbed-deletion insertion",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 11,
+    "target_D": 4,
+    "savedL": 3645,
+    "n": {
+      "actual": null,
+      "hypothetical": 3646
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "在先前47个newroot通过候选中，只取firstbadpair端点处存在的copy-switch，得35组；Smax必要界剪2个子集，其余679全测。541新根不足、138新根通过但旧旧D4反例，0图/未试/UNKNOWN。代表original127确将3352–2244修成经newx两步路，但66–1863仍>4。",
+    "failure_or_result": "在先前47个newroot通过候选中，只取firstbadpair端点处存在的copy-switch，得35组；Smax必要界剪2个子集，其余679全测。541新根不足、138新根通过但旧旧D4反例，0图/未试/UNKNOWN。代表original127确将3352–2244修成经newx两步路，但66–1863仍>4。",
+    "lesson_and_restart_condition": "这说明新增wholepairedswitch能补一类路线却没同时修全部旧路；固定F3+最大free子集规则已闭，不追新badpair再加switch。与旧两edge范围分开。",
+    "unclosed_gap": "This finite result does not resolve generalgraph construction or completeLean.",
+    "other_metrics": {
+      "switch_groups": 35,
+      "necessary_bound_pruned_subsets": 2,
+      "candidates_evaluated": 679,
+      "newroot_fail": 541,
+      "newroot_pass": 138,
+      "oldpair_fail": 138,
+      "modified_roots_BFS": 1677,
+      "max_old_roots": 41,
+      "old_R3_balls_reused": 1964,
+      "new_R3_balls": 29,
+      "CPU_total": 2.744826601,
+      "newgraphs": 0
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_switch_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d11_D4_current3645/absorbed_switch_probe/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d12-d4-wide-filter-c20-slice8000-20261027",
+    "title": "C20零三角切片8000项宽证书失败：不等于8000图不存在",
+    "family": "Four-base Z19 route-chart",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "n": {
+      "actual": null,
+      "hypothetical": 6480
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "固定va=(0,x,y,0),vb=(z,0,0,1)，x,y,z∈C20，8000项全未通过有旧pencil引理依据的I∪R2∪100G4充分证书；其中7220 simple-controller、780 nonsimple全保留。全部在base0已失败，0图/BFS。",
+    "failure_or_result": "固定va=(0,x,y,0),vb=(z,0,0,1)，x,y,z∈C20，8000项全未通过有旧pencil引理依据的I∪R2∪100G4充分证书；其中7220 simple-controller、780 nonsimple全保留。全部在base0已失败，0图/BFS。",
+    "lesson_and_restart_condition": "这关闭的是充分certificate切片，不是全部actualD4 lift；不满秩路径的并仍可能补齐，所以不能把旧strict与新wide负结果当数学整族排除。原字面mod20另有actual x0缺3708的独立诊断，只有那个字面真正被refuted。",
+    "unclosed_gap": "This finite result does not resolve generalgraph construction or completeLean.",
+    "other_metrics": {
+      "assignments": 8000,
+      "simple_controllers": 7220,
+      "nonsimple_controllers": 780,
+      "certificate_passers": 0,
+      "native_CPU": 0.006084,
+      "total_CPU": 1.33422,
+      "BFS": 0,
+      "graphs": 0,
+      "actual_lift_nonexistence_proved": false
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/REPORT.md",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/RESULT.json",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/zero_triangle_wide20/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/zero_triangle_wide20/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d12-d4-four-rank3-packet65-20261027",
+    "title": "四rank3路线并非pencil：每源只65/81，改offset无救",
+    "family": "Four-base Z19 route-chart",
+    "record_type": "positive-local-route-obstruction",
+    "target_Delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "AABa/Abaa/Babb/BBAb在base0闭合；y9,m20使四路同到phase10。四法向量(0,1,2,2),(0,1,1,2),(1,0,1,2),(1,0,1,1)秩4而非2，全部81source的并恒65、缺16。",
+    "failure_or_result": "AABa/Abaa/Babb/BBAb在base0闭合；y9,m20使四路同到phase10。四法向量(0,1,2,2),(0,1,1,2),(1,0,1,2),(1,0,1,1)秩4而非2，全部81source的并恒65、缺16。",
+    "lesson_and_restart_condition": "独立四法向量给仿射坐标双射，四平面补集为四坐标均非零的2^4点，故任何offset都不能让此四route包覆盖全fiber。不是没有四路，而是方向安排不形成共同pencil。只排此route包，不排其它pathunion/lifts。",
+    "unclosed_gap": "This finite result does not resolve generalgraph construction or completeLean.",
+    "other_metrics": {
+      "normals_rank": 4,
+      "hyperplane_size": 27,
+      "source_coordinates": 81,
+      "union_size": 65,
+      "missing": 16,
+      "CPU": 0.007854,
+      "BFS": 0,
+      "graphs": 0
+    },
+    "outcome_class": "positive-local-route-obstruction",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/bad4_packet_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/bad4_packet_probe/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d12-d4-six-route-packet-negative-20261027",
+    "title": "最小六路线增强仍缺：aab/BAA未补齐16点残留",
+    "family": "Four-base Z19 route-chart",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 12,
+    "target_D": 4,
+    "savedL": 6156,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "在x10,y9,m20四坏词包上只加入自然三步逆对aab/BAA；六路线确同到base0/phase10，但81source的并为77(9源)、75(18源)、73(54源)，零source缺[9,18,33,57]，0full。",
+    "failure_or_result": "在x10,y9,m20四坏词包上只加入自然三步逆对aab/BAA；六路线确同到base0/phase10，但81source的并为77(9源)、75(18源)、73(54源)，零source缺[9,18,33,57]，0full。",
+    "lesson_and_restart_condition": "基于16点残留选最小一对新方向仍不能共同覆盖，故按预算停止固定packet线，不换其它三词或跑20个z电压；没有把更少局部遗漏当新图或自动续算理由。",
+    "unclosed_gap": "This finite result does not resolve generalgraph construction or completeLean.",
+    "other_metrics": {
+      "source_coordinates": 81,
+      "union_size_histogram": {
+        "77": 9,
+        "75": 18,
+        "73": 54
+      },
+      "full_covers": 0,
+      "CPU": 0.011305,
+      "voltage_followup_assignments": 0,
+      "BFS": 0,
+      "graphs": 0
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/six_route_packet_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d12_D4_current6156/route_capacity_analysis/six_route_packet_probe/RESULT.json"
+    ]
+  },
+  {
+    "id": "ddp-d13-d4-current6804-source-20261027",
+    "title": "(13,4)6804全正则：奇数fiber匹配预测被跨fiber反射推翻",
+    "family": "C84 ternary route-chart plus central matching",
+    "record_type": "source-recovery",
+    "target_Delta": 13,
+    "target_D": 4,
+    "savedL": 6804,
+    "n": {
+      "actual": 6804,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 4,
+    "scope": "实际simple6804/44226，全13regular、free0、minSatN13；84个81fiber均independent。额外3402反射matching边连接controller g与g+42（非平凡中心y^6），坐标x→−x+(0,0,1,0)，均跨42对不同fiber，非fiber内部匹配。",
+    "failure_or_result": "实际simple6804/44226，全13regular、free0、minSatN13；84个81fiber均independent。额外3402反射matching边连接controller g与g+42（非平凡中心y^6），坐标x→−x+(0,0,1,0)，均跨42对不同fiber，非fiber内部匹配。",
+    "lesson_and_restart_condition": "不能只因81奇数就假定84个未匹配spares：controller中心平移消除了fixedfiber。当前cap13保全部旧边增点/多helper没有接口，未跑R3/BFS或SAT。固定真实source与旧84-controllerquarticNB模型分层，不泛排修改controller/删边。",
+    "unclosed_gap": "This finite result does not resolve generalgraph construction or completeLean.",
+    "other_metrics": {
+      "source_n": 6804,
+      "source_m": 44226,
+      "degree13": 6804,
+      "free_vertices": 0,
+      "matching_edges": 3402,
+      "paired_fibers": 42,
+      "intrafiber_edges": 0,
+      "profile_CPU": 0.132924,
+      "odd_internalmatching_prediction": "REFUTED",
+      "BFS": 0
+    },
+    "outcome_class": "source-recovery",
+    "wiki_verdict": "partial",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/REPORT.md",
+      "research/ddp/more_graphs_20261027/d13_D4_current6804/RESULT.json"
+    ]
+  }
+]

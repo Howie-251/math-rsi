@@ -1,0 +1,293 @@
+{
+  "audit_skill": "proof-checker",
+  "review_type": "bounded_incremental_delta",
+  "verdict": "PASS",
+  "reason_code": "all_local_proofs_complete_modulo_named_imports",
+  "summary": "PASS28: all seven size-sixteen cases are excluded, including the eight-vertex (3,2) type; together with the reviewed dependencies, both D1-associated components have size at least14.",
+  "audited_inputs": [
+    {
+      "path": "proofs/dd82/n62/D1_TWELVE_SIXTEEN_PARTNER_EXCLUSION.md",
+      "scope": "All313 lines",
+      "line_count": 313,
+      "size_bytes": 11279,
+      "mtime_utc": "2026-10-11T11:24:28.725868+00:00"
+    }
+  ],
+  "generated_at": "2026-10-11T11:32:14.055497+00:00",
+  "thread_id": "/root/proof_review_n62_d1_reduction",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_reasoning_requested": "ultra",
+  "reviewer_model_actual": "unattested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "details": {
+    "micro_claims_discharged": 28,
+    "issues": [],
+    "source_fixes": 0,
+    "author_papers_modified": false,
+    "obligations": [
+      {
+        "id": "S01",
+        "title": "Actual graph scope and orientation",
+        "check": "A is the original symmetric adjacency matrix; r_CD counts neighbors in D from C. The imported actual quotient R²+R=10I+1nᵀ has nonnegative integer entries and satisfies component edge balance.",
+        "status": "discharged"
+      },
+      {
+        "id": "S02",
+        "title": "Whole-component types",
+        "check": "Equitability makes (d_H,d_K) constant on each exterior B-component, so every joint type is a union of whole components; it need not be a single component.",
+        "status": "discharged"
+      },
+      {
+        "id": "S03",
+        "title": "Even component and type sizes",
+        "check": "B has integer weights and row sum three, so 3|E| is twice the total unordered B-weight. Each component and each type has even size, without using B≤2.",
+        "status": "discharged"
+      },
+      {
+        "id": "S04",
+        "title": "Joint and individual divisibilities",
+        "check": "For a type T_ij, each vertex of H has an integer common number of neighbors in T_ij; edge balance gives 12|iN_ij. Similarly 16|jN_ij. The same argument applies to a single component within a type, including zero-coordinate cases.",
+        "status": "discharged"
+      },
+      {
+        "id": "S05",
+        "title": "Exact moment specialization",
+        "check": "Substituting h=12,k=16,a=4,b=3 into the accepted formulas gives N=34, Sx=48−12s, Fx=72−12s², Sy=80−16t, Fy=144−16t², C=48(3−s−t).",
+        "status": "discharged"
+      },
+      {
+        "id": "S06",
+        "title": "Pointwise domain",
+        "check": "The distinct components and degree eight give x+y≤8. Keeping H and K terms in the actual neighbor identities gives (s+1)x+3y≤12 and 4x+(t+1)y≤16; all omitted contributions are nonnegative.",
+        "status": "discharged"
+      },
+      {
+        "id": "S07",
+        "title": "Actual component-vector identity",
+        "check": "B1_L=3·1_L implies (A²+A)1_L=10·1_L+|L|·1. At every vertex outside L, (A d_L)+d_L=|L|. No invariance of an individual component under A is assumed.",
+        "status": "discharged"
+      },
+      {
+        "id": "S08",
+        "title": "Complete mixed-coordinate domain",
+        "check": "With s,t≥0 and x,y positive, x+3y≤12 and 4x+y≤16 give 1≤x,y≤3. Thus the nine displayed types exhaust mixed possibilities.",
+        "status": "discharged"
+      },
+      {
+        "id": "S09",
+        "title": "Divisor table",
+        "check": "The values lcm(2,12/gcd(12,x),16/gcd(16,y)) are exactly 48,24,48,48,24,48,16,8,16 in the displayed row-major order.",
+        "status": "discharged"
+      },
+      {
+        "id": "S10",
+        "title": "First mixed exclusions",
+        "check": "A positive divisor-48 type exceeds the total 34. Types (3,1),(3,3) require at least 16 vertices and factorial x contribution 96>Fx≤72.",
+        "status": "discharged"
+      },
+      {
+        "id": "S11",
+        "title": "Type (2,2) exclusion",
+        "check": "Its size would be exactly 24. It contributes Sx=48, impossible for s>0. For s=0 it exhausts Sx but contributes only Fx=48<72, so no other vertex can repair the deficit.",
+        "status": "discharged"
+      },
+      {
+        "id": "S12",
+        "title": "Both surviving mixed sizes",
+        "check": "The only candidates are P=(1,2) with 24 vertices and M=(3,2) with eight. A second multiple for M contributes at least 96 to Fx. This explicitly retains the formerly omitted M possibility.",
+        "status": "discharged"
+      },
+      {
+        "id": "S13",
+        "title": "No coexistence and cross moment",
+        "check": "P and M together contribute Sx=48,Fx=48. This exceeds Sx when s>0 and exhausts it with an Fx deficit when s=0. Each alone contributes C=48, so C is zero or 48.",
+        "status": "discharged"
+      },
+      {
+        "id": "S14",
+        "title": "Cases (0,0),(0,1)",
+        "check": "Their required cross moments are 144 and 96, respectively, contradicting the preceding complete possibilities.",
+        "status": "discharged"
+      },
+      {
+        "id": "S15",
+        "title": "Case (0,2)",
+        "check": "M violates 4x+3y≤16. P therefore occurs, exhausts Sy=48, and contributes only Fy=48 rather than the required 80.",
+        "status": "discharged"
+      },
+      {
+        "id": "S16",
+        "title": "Case (2,0)",
+        "check": "M violates 3x+3y≤12. P exhausts Sx=24 but contributes Fx=0 rather than the required 24.",
+        "status": "discharged"
+      },
+      {
+        "id": "S17",
+        "title": "Case (1,1), P branch",
+        "check": "After P, the residual x moments are Sx=12,Fx=60. The pointwise bound x≤4 gives x(x−1)≤3x, hence Fx≤36, contradiction.",
+        "status": "discharged"
+      },
+      {
+        "id": "S18",
+        "title": "Case (1,1), M residual",
+        "check": "After the eight M vertices, residual positive x types are pure with Sx=Fx=12. Divisibility makes nonempty x=3 contribute at least 24 and x=4 at least 72 to Fx. Therefore precisely six vertices have type (2,0), with no type (1,0).",
+        "status": "discharged"
+      },
+      {
+        "id": "S19",
+        "title": "Individual M and X components",
+        "check": "Every component inside M has size divisible by eight, so the eight-vertex M is one component. Every component inside X=T20 has size divisible by six, so the six-vertex X is one component.",
+        "status": "discharged"
+      },
+      {
+        "id": "S20",
+        "title": "Actual (1,1) neighbor equations",
+        "check": "d_H is 1 on H, 3 on K and M, 2 on X, and zero elsewhere. At v∈M the identity is 12=3+6+3d_M(v)+2d_X(v)+3, forcing no M−X edges. At v∈X it is 12=2+2d_X(v)+2, forcing d_X(v)=4.",
+        "status": "discharged"
+      },
+      {
+        "id": "S21",
+        "title": "Quotient diagonal contradiction",
+        "check": "For the actual six-vertex component X, R_XX=4. Its diagonal quotient equation has nonnegative other terms and gives R_XX²+R_XX≤|X|+10=16, contradicting 20.",
+        "status": "discharged"
+      },
+      {
+        "id": "S22",
+        "title": "Case (2,1), positive x support",
+        "check": "C=0 makes positive x and y supports disjoint. Summing x−1≤x(x−1)/2 over positive x gives |U|≥24−24/2=12.",
+        "status": "discharged"
+      },
+      {
+        "id": "S23",
+        "title": "Case (2,1), pure y counts",
+        "check": "Writing N01=16a,N02=8b,N03=16c,N04=4d gives a+b+3c+d=4 and b+6c+3d=8. Nonnegative integer solutions force c=0,d=2,b=2,a=0. Thus |V|=24 and |U|+|V|≥36>34.",
+        "status": "discharged"
+      },
+      {
+        "id": "S24",
+        "title": "Case (1,2), pure x counts",
+        "check": "x≤4 and six-point minimum for x=4 exclude that type by Fx≥72>60. The remaining equations give u=3w−24,v=30−3w,8≤w≤10 and 4|w; hence N30=8,N20=6,N10=0.",
+        "status": "discharged"
+      },
+      {
+        "id": "S25",
+        "title": "Case (1,2), pure y counts and exhaustion",
+        "check": "A y=3 type contributes at least 96>80. For counts a=N01,b=N02,d=N04, a=8d−32,b=40−6d and 4≤d≤6 with 4|d force d=4,b=16,a=0. The four nonzero types total 34, leaving no zero type.",
+        "status": "discharged"
+      },
+      {
+        "id": "S26",
+        "title": "Case (1,2), neighbors of type (0,4)",
+        "check": "Such a vertex z exists. Its four K neighbors each have d_H=3 and exhaust the right side 12 in the H identity. Thus z has no neighbor in either positive x exterior type and no neighbor in H.",
+        "status": "discharged"
+      },
+      {
+        "id": "S27",
+        "title": "Final original-graph contradiction",
+        "check": "Degree eight and the exhausted exterior list force the other four neighbors of z into T04∪T02. All eight neighbors have d_K≥2, while d_K(z)=4. The K identity gives 16=(A d_K)(z)+4≥20.",
+        "status": "discharged"
+      },
+      {
+        "id": "S28",
+        "title": "Coverage and combined consequence",
+        "check": "All seven listed cases are excluded. The reviewed minimum-size and exact-separator results restrict H12 to five partner sizes; the reviewed pure twelve, two-large-partner, and twenty-zero-two exclusions remove all other options. Hence H≠12 and H≥14 by evenness. The previously reviewed K12 reduction and exclusion give K≥14. H=K was already ≥14 in the minimum-size source.",
+        "status": "discharged"
+      }
+    ],
+    "case_coverage": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "essential_local_imports": [
+      "Actual component equitability and quotient",
+      "Exact exterior moment and pointwise identities"
+    ],
+    "local_no_triple_dependency": false,
+    "local_minimum_type_size_four_dependency": false,
+    "solver_or_lp_dependency": false,
+    "combined_conclusion": "Every D1 heavy component H and its generated-triangle component K have size at least14, possibly H=K; conditional on named reviewed imports.",
+    "counterexample_pass": {
+      "verified_counterexamples": 0,
+      "unresolved_candidates": 0,
+      "checked_boundaries": [
+        "mixed type (3,2) at eight vertices",
+        "mixed type (2,2) at s=0",
+        "simultaneous P and M at s=0",
+        "possible splitting of M and six-vertex X",
+        "zero types in each pure case",
+        "quotient orientation and nonnegative omitted terms"
+      ]
+    },
+    "primary_exact_check": {
+      "tool": "inline standard-library Python",
+      "exit_code": 0,
+      "scope": "Nine lcm divisors; all seven general-formula substitutions and mixed domain bounds",
+      "mixed_divisors": [
+        48,
+        24,
+        48,
+        48,
+        24,
+        48,
+        16,
+        8,
+        16
+      ]
+    },
+    "parallel_shard": {
+      "agent_id": "/root/proof_review_n62_d1_reduction/sixteen_pure_arithmetic",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning": "ultra",
+      "actual_backend": "unattested",
+      "fork_turns": "none",
+      "scope": "Sections4–5 only",
+      "concrete_issues": [],
+      "dedup_keys": [
+        "D1-12x16-PURE-DOMAIN",
+        "D1-12x16-21-INTEGER",
+        "D1-12x16-12-X-INTEGER",
+        "D1-12x16-12-Y-INTEGER",
+        "D1-12x16-12-EXHAUSTION",
+        "D1-12x16-12-ACTUAL-GRAPH"
+      ],
+      "whole_paper_verdict": false
+    },
+    "prior_blind_receipt_read": "reviews/dd82/proof-checker-n62-two-partners-blind-20261011/PROOF_AUDIT.json",
+    "scope_exclusions": [
+      "Full D1 exclusion",
+      "Heavy components of size at least14",
+      "Arbitrary order62 exclusion",
+      "Lean connection",
+      "Independent-family semantic acceptance"
+    ],
+    "artifact_policy": "Markdown and JSON only; no digests generated."
+  }
+}

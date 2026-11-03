@@ -1,0 +1,541 @@
+<HTML>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<HEAD>
+   <TITLE> Largest Known (Degree, Diameter)-Graphs (Description)</TITLE>
+</HEAD>
+<BODY>
+<HR SIZE=6></P>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<H2>Largest Known (Degree, Diameter)-Graphs</H2>
+<h3>Diameter 3</h3>
+Last modification: October 6, 2026;  April 13, 2025. -- added adjacency lists for entries (9,3), (10,3), (11,3), (12,3), (14,3), (15,3), and (16.3), provided by V. Pelekhaty --
+ <address> https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/taula_delta_d.html</address>
+ <DT><B>raw adjacency list </B> format: the first vertex of each row is adjacent to all the other vertices in that row.</DT>
+ <DT><B>implicit adjacency list </B> format:  each row corresponds to a vertex (row 1, vertex 0;  row 2, vertex 1; and so on) and contains all vertices adjacent to it.</DT>
+ <DT><B>adjacency list NX</B> NetworkX format.  <a href="https://networkx.org/documentation/stable/reference/readwrite/adjlist.html" target="_blank"> NetworkX format. </a></DT>
+ <DT><B>semidirect product</B> Follows the notation of the original contributions from Dinneen and Hafner <a href="https://arxiv.org/pdf/math/9504214" target="_blank">  (arXiv preprint) </a> Networks, 24 (1994) 359-367:   Z<sub>m</sub> &#x22C9;<sub>a</sub> Z<sub>n</sub>,
+of order m&middot;n.  Group operation  defined as [x,y] &times; [u,v] = [(x+u) mod m, (y&middot;a<sup>u</sup>+v) mod n]].
+</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 3    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=33></A>
+<DT> <b>C5xF4</b>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B> 3</B>, Diameter =<B> 3</B>; Order=<B>20</B>; Moore bound=22;<B> optimal </B>  
+</p>
+<dt><iMG ALIGN=top SRC="gif/20.png" height="160" >     <IMG ALIGN=top SRC="gif/20elpass.png" height="160" >
+
+<DT> B. Elpass. Topological constraints on interconnection-limited logic. 1964 Proceedings of the Fifth Annual Symposium on Switching Circuit Theory and Logical Design, Princeton, NJ, USA, 1964, pp. 133-137.
+<a href="https://doi.org/10.1109/SWCT.1964.27" target="_blank">   doi:10.1109/SWCT.1964.27 </a> 
+<DT> A detailed description: I. Alegre, M.A.  Fiol  and  J.L.A Yebra;  Some large graphs with given degree and diameter;  <i>J. Graph Theory</I>,<B>10</B> (1986), pp.219-224. <a href="https://doi.org/10.1002/jgt.3190100211" target="_blank">   doi:10.1002/jgt.3190100211 </a> 
+<DT> Download the  <a href="adjacencies/adjD3/C5xF4_adjlist.txt"  target="_blank"> NX adjacency list </a> of C5xF4.  Download the <a href="adjacencies/adjD3/C5xF4.grf" target="_blank"> implicit adjacency list </a>  of  C5xF4.
+<DT> This <a href="adjacencies/adjD3/C5xF4_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=mxxnht" target="_blank"> online version </a>.</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 4    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=43></A>
+<B>Allwr</B>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>4</B>, Diameter = <B>3</B>; Order =<B>41</B>; Moore bound=53;   
+</DT>
+<!-- <DT><iMG ALIGN=top SRC="gif/allwright_41_1a.png"  height="400" /> <iMG ALIGN=top SRC="gif/allwright_41_2a.png"   height="400" />
+<DT>   &emsp;&emsp;&emsp; -------------- &emsp;&emsp;&emsp; -------------- &emsp;&emsp;&emsp; <B> Graph 1(a) </B>  &emsp;&emsp;&emsp;--------------  &emsp;&emsp;&emsp;--------------&emsp;&emsp;&emsp; -------------- &emsp;&emsp;&emsp;  <B> Graph 2(a)</B>  &emsp;&emsp;&emsp; -------------- 
+--------------  -->
+<DT><iMG ALIGN=top SRC="gif/allwright_41_1a-2a.png"  height="500" /></DT>
+
+<DT><iMG ALIGN=top SRC="gif/allwright_41_G3to6_good.png"  height="400" /></DT>
+
+<DT> Graphs found by 
+James Allwright 
+ (School of Computer Science, University of Westminster) by using a
+heuristic
+algorithm. 
+<DT> 13 non isomorphic graphs with 41 vertices were found.
+<DT> J. Allwright, <A href="https://www.sciencedirect.com/science/article/pii/0166218X9290120Y?via%3Dihub"  target="_blank"> New (Delta, D) graphs discovered by heuristic search.</A> <I> Discrete Applied Mathematics </I>, <B> 37/38</b> (1992), pp. 3--8. 
+<DT>   </DT>
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1a_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(a)</B>.
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1b_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(b)</B>. Obtained from 1(a) by the 2-swap [(25,34),(30,33) to (25,33),(30,34)].
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1c_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(c) </B>. Obtained from 1(b) by the 2-swap [(31,6), (32,5) to (31,5), (32,6)].
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1d_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(d) </B>. Obtained from 1(c) by the 2-swap [(17,20), (28,31) to (17,31), (28,20)].
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1e_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(e) </B>. Obtained from 1(d) by the 2-swap [(16,21), (27,32) to (16,32), (27,21)].
+<DT> <A href="adjacencies/adjD3/deg4D3-41_1f_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 1(f) </B>. Obtained from 1(e) by the 2-swap [(14,33), (19,34) to (14,34), (19,33)].
+<BR>
+<DT> <A href="adjacencies/adjD3/deg4D3-41_2a_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 2(a) </B>. 
+<DT> <A href="adjacencies/adjD3/deg4D3-41_2b_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 2(b) </B>. Obtained from 2(a) by the 2-swap [(4,35), (7,38) to (4,38), (7,35)].
+<DT> <A href="adjacencies/adjD3/deg4D3-41_2c_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 2(c) </B>. Obtained from 2(b) by the 2-swap [(16,31), (17,32) to (16,32), (17,31)].
+<DT></DT>
+<DT> <A href="adjacencies/adjD3/deg4D3-41_G3_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 3 </B>. 
+<DT> <A href="adjacencies/adjD3/deg4D3-41_G4_allwr_adjlist_comellas.txt" target="_blank">Adjacency list NX </A> of <B> Graph 4 </B>. 
+<DT> <A href="adjacencies/adjD3/deg4D3-41_G5_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 5 </B>. 
+<DT> <A href="adjacencies/adjD3/deg4D3-41_G6_allwr_adjlist.txt" target="_blank">Adjacency list NX </A> of <B> Graph 6 </B>. 
+<DT>  Graphs 1(a) to 1(f) all share the same average distance of 2.5036585. 
+Graphs  3, 4, 5 and 6 have an average distance of 2.5. 
+<DT> I corrected Graph 4 from the Fig. 3 of Allwright's paper, as it initially produced a graph with a diameter of 4. If we label the vertices of Graph 4 from Fig. 3 of the paper from left to right and top to bottom (starting with 1), we need to swap the edges (12, 32) and (13, 37) to obtain the intended graph, which gives the correct values for the diameter and the number of k-cycles in the paper. In the above figure, I have removed the wrong edges and added (in red) the correct ones.</DT>
+
+<DT>Three additional graphs with 41 vertices, maximum degree 4 and diameter 3 were obtained by Michel de Messieres (October 2026). They are denoted N1, N2, and N3. The first two are triangle-free (girth 5); N3 has exactly one triangle (girth 3). All three have 82 edges.</DT>
+
+<DT> <A href="adjacencies/adjD3/41_Messieres_N1.adjlistt" target="_blank">Adjacency list NX </A> of <B>Graph N1 </B>. 
+<DT> <A href="adjacencies/adjD3/41_Messieres_N2.adjlistt" target="_blank">Adjacency list NX </A> of <B>Graph N2 </B>. 
+<DT> <A href="adjacencies/adjD3/41_Messieres_N3.adjlistt" target="_blank">Adjacency list NX </A> of <B>Graph N3 </B>. 
+
+<DT> More info at   <a href="https://zenodo.org/records/23220596" target="_blank">   https://zenodo.org/records/23220596 </a>  </DT>
+<DT> This <a href="adjacencies/adjD3/41-Allwr-SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=ehztby" target="_blank"> online version </a>.</DT>
+<DT>  </DT>
+<DT>  Note that a few values computed by this script with respect symmetry group sizes do not match those reported in the paper. I have verified these results with Mathematica and I believe they are correct. Also the value of the number of 10-cycles for Graph 1(b) is 2686 and not 2666 as stated in the paper (likely a misprint, thanks to M. de Messieres for noticing it).  </DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 5    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=53></A>
+<DT> <b>Exoo_72</b>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>5</B>, Diameter = <B>3</B>; Order =<B>72</B>; Moore bound=106;   
+</p>
+<DT> Communicated by G. Exoo (May 22, 1998). <A href="https://isu.indstate.edu/~gexoo/DD/index.html" target="_blank"> G.E. data </A>
+<DT> Download the <a href="adjacencies/adjD3/Exoo_72.txt" target="_blank"> implicit adjacency list </a>  of the graph.
+<DT> Download the <a href="adjacencies/adjD3/Exoo_deg5D3_72_.adjlist.txt" target="_blank"> adjacency list NX </a> of the graph.
+<DT> Geoffrey Exoo. A family of graphs and the degree/diameter problem.&nbsp; <A href="https://doi.org/10.1002/jgt.1007" target="_blank">   <I>J. Graph Theory</I><B> 37</B>  (2001), 118-124.</A> </DT>
+<BR>
+<DT>A non-isomorphic graph was obtained by Michel de Messieres (October 13, 2026), with the help of
+Anthropic's Claude: a geometric construction on the affine plane AG(2,3) = GF(9) (a square at every point, a triangle on every line, wires to perpendicular lines); automorphism group of order 144 ( A&Gamma;L(1,9), SmallGroup(144,182) ), two vertex orbits.  More information at <A  href="https://doi.org/10.5281/zenodo.23510655" target="_blank">  https://doi.org/10.5281/zenodo.23510655 </A>.</DT>
+ <DT> Further fourteen non-isomorphic 5-regular graphs of diameter 3 on 72 vertices, found by Michel de Messieres (October 7, 2026), are given at <A  href="https://doi.org/10.5281/zenodo.23221239" target="_blank"> 
+ https://doi.org/10.5281/zenodo.23221239 </A>.</DT>
+<BR>
+<DT> This <a href="adjacencies/adjD3/72_deg5D3_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the two graphs, their  symmetry group information and  number of k-cycles (k=3..7). This is the <a href="https://sagecell.sagemath.org/?q=wukwof" target="_blank"> online version </a>.</DT>
+
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 6    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME="63"></A>
+<DT> <b>Michel_120</b>
+<p  style="background-color: Gainsboro; font-size: large">
+<DT> Degree = <B>6</B>, Diameter = <B>3</B>; Order =<B>120</B>; Moore bound=187;   
+</p>
+
+<DT> Obtained by Michel de Messieres (michel@demessieres.com, October 4, 2026).
+The search programs were written and run by an AI assistant (Anthropic's Claude) under the author's direction.
+ This graph is the lift of a voltage graph with 2 vertices over the group SmallGroup(60,9) = C5 x A4 (so 2 x 60 = 120 vertices). Each of the two vertex types has one semi-edge (its voltage is an involution, giving a perfect matching inside the type) and five edges to the other type. Its automorphism group has order 60 with two orbits of 60 vertices, so it is not vertex--transitive. This construction is not derived from the 119-vertex graph (whose automorphism group has order 672 and three orbits).
+It was found by a computer search over (number of base vertices) x (all groups of the given order, from GAP's SmallGroups library) x (orders just above the record), optimising the voltages by simulated annealing until every pair of vertices was within distance 3.
+<DT> The graph and a detailed write-up are also on Zenodo  <A  href=" https://doi.org/10.5281/zenodo.23136968" target="_blank">  https://doi.org/10.5281/zenodo.23136968 </A></DT>
+<DT> Download the <a href="adjacencies/adjD3/graph_6_3_n120.txt" target="_blank"> edge list </a>  of the graph. 
+ <dt> This <a href="adjacencies/adjD3/120_demessieres_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=vnrnva" target="_blank"> online version </a>.</dt>
+ 
+ 
+<BR>
+<DT> Former result, order 119.
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 24, 2026) with the use of AI agentic coding systems. Orbit graph from  G = PGL(2,7), of order 336, with orbits V1, V2, V3 of sizes 14,21,84
+and stabilizers of orders 24,16, 4. 
+<DT> In this link:  <A  href="https://zenodo.org/records/22928337" target="_blank"> 
+  https://doi.org/10.5281/zenodo.22928337 </A>
+  you can download the edge list,  and a paper describing the details of the construction of the graph.</DT>
+<DT> Download the <a href="adjacencies/adjD3/graph_d6_k3_n119.edges" target="_blank"> local edge list </a>  of the graph. 
+<dt> This <a href="adjacencies/adjD3/119_rajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q=rbbemv" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order 111.
+<DT> Communicated by G. Exoo (May 19, 2010). <A href="https://isu.indstate.edu/~gexoo/DD/index.html" target="_blank"> G.E. data </A>
+<DT> Download the <a href="adjacencies/adjD3/Exoo-6-3_g111.txt" target="_blank">implicit adjacency list </a>  and the
+ <a href="adjacencies/adjD3/Exoo_deg6D3_111_.adjlist.txt" target="_blank"> NX adjacency list  </a> of the graph.
+<dt>Note that this graph is  <b>vertex-transitive</b> and <b>edge-transitive</b> but not Cayley.</dt>
+<dt> This <a href="adjacencies/adjD3/111_exoo_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=lzanhs" target="_blank"> online version </a>.</dt>
+
+<!-- former result
+108 vertices  by  Otto Wohlmuth
+https://web.archive.org/web/20050411233829/http://www.ti6.tu-harburg.de/~ti6ow/paper1.html
+-->
+
+
+<HR SIZE=3>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 7    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME="73"></A>
+<DT> <b>Rajiv_170</b>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>7</B>, Diameter = <B>3</B>; Order =<B>170</B>; Moore bound=302;   
+</p>
+
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic?s Claude Fable 5.1 and Opus 5.5. Orbit graph from  G = PGL(2,7), G = 3<sup>4</sup>:SL(2, 5), of order 9720, with three orbits, of sizes 20, 30, 120, whose point stabilizers have orders 486, 324, 81.
+<DT> In this link:  <A  href="https://zenodo.org/records/23057003" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23057003 </A> you can download the details and a paper describing the construction of the graph.</dt>
+ 
+  
+<BR>
+<DT> Former result, order=168
+<DT> Communicated by G. Exoo (November 1, 2005). <A href="https://isu.indstate.edu/~gexoo/DD/index.html" target="_blank"> G.E. data </A>
+<DT> Download the <a href="adjacencies/adjD3/Exoo_168.txt" target="_blank"> implicit adjacency list </a> and the <a href="adjacencies/adjD3/Exoo_deg7D3_168_.adjlist.txt" target="_blank"> NX adjacency list  </a> of the Exoo graph.
+<dt> M. Conder found (2011) an optimal <b>Cayley graph</b> (7,3)=168 (non isomorphic with the Exoo graph, which is not Cayley).   <a href="http://combinatoricswiki.org/wiki/Description_of_optimal_Cayley_graphs_found_by_Marston_Conder#Diameter_3_.28Moore_bound_.3D_302.29" target="_blank">  Clik here for more details and the edge list </a>   (original information from Marston Conder at combinatoricswiki.org).
+<DT> F. Comellas (May 2026) found four other <b>non-isomorphic Cayley graphs</b> with properties different from those of Conder's graph. They arise from the group SmallGroup(168,43) and are denoted SG168x43x1, SG168x43x2, SG168x43x4, and SG168x43x5. The graphs SG168x43x1 and SG168x43x2 have girth 4 and an automorphism group of order 336, as does Conder's graph. In contrast, SG168x43x4 has girth 3 and an automorphism group of order 168, while SG168x43x5 has girth 5 and also an automorphism group of order 168. The numbers of cycles and the values of the algebraic connectivity are also different.
+<dt> This <a href="adjacencies/adjD3/168_exoo_conder_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties for all these graphs including symmetry group sizes, distance distributions and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=kublnc" target="_blank"> online version </a>.</dt>
+
+<!--
+Former result
+<DT>Exoo_156.txt Obtained through pasting of small Cayley graphs.
+-->
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 8    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=83></A>
+<DT><B>CM_253</B>  </DT>
+
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree= <B>8</B>, Diameter = <B>3</B>; Order =<B>253</B>;  Moore bound=457.  
+</p>
+
+<DT>Obtained  (08/1994) by F. Comellas, M. Mitjana as a <b>Cayley graph</b> for a semidirect product.
+<DT>Z_11*(9)Z_23 -- [7,2]<>[4,11]; [10,4]<>[1,10]; [1,16]<>[10,11]; [9,17]<>[2,3] </DT>
+<DT>  <a href="https://web.archive.org/web/19961201103859/http://maite71.upc.es/grup_de_grafs/desc_g.html#83" target="_blank">  Snapshot of the web publication </A> (Internet Archive,  December 1, 1996 )
+<DT> Dist. Distrib. 1,8,52,192,  avg. dist.: 2.730159  <a href="adjacencies/adjD3/CM_253.txt" target="_blank"> (implicit adjacency list )</a>  ---  <a href="adjacencies/adjD3/253_11_23_9_CM_adjlist.txt" target="_blank">    adjlist NX</a></DT>
+<DT> Other instances found (F.Comellas 2024) -all are isomorphic to the former-</DT>
+<DT>Z_11*(2)Z_23 -- [5,14]<>[6,1]; [5,11]<>[6,9]; [2,9]<>[9,15]; [10,4]<>[1,15]  Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_2_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<DT>Z_11*(3)Z_23 -- [9,1]<>[2,14]; [4,1]<>[7,21]; [3,12]<>[8,20]; [2,4]<>[9,20]  Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_3_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<DT>Z_11*(4)Z_23 -- [8,9]<>[3,22]; [10,0]<>[1,0]; [5,10]<>[6,3]; [8,14]<>[3,1] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_4_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<DT>Z_11*(6)Z_23 -- [1,17]<>[10,1]; [6,5]<>[5,13]; [8,4]<>[3.10]; [3,3]<>[8,15] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_6_adjlist.txt" target="_blank"> adjlist NX </a></DT>
+<DT>Z_11*(8)Z_23 -- [2,6]<>[9,15]; [2,17]<>[9,8]; [7,14]<>[4,18]; [3,0]<>[8,0] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_8_adjlist.txt" target="_blank"> adjlist NX </a></DT>
+<DT>Z_11*(12)Z_23 -- [2,0]<>[9,0]; [1,8]<>[10,7]; [5,13]<>[6,21]; [6,2]<>[5,10] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_12_adjlist.txt" target="_blank"> adjlist NX </a></DT>
+<DT>Z_11*(13)Z_23 -- [4,3]<>[7,19]; [3,3]<>[8,17]; [5,17]<>[6,13]; [7,18]<>[4,21] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_13_adjlist.txt" target="_blank"> adjlist NX </a></DT>
+<DT>Z_11*(16)Z_23 -- [7,5]<>[4,1]; [3,21]<>[8,1]; [4,3]<>[7,15]; [6,18]<>[5,7] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_16_adjlist.txt" target="_blank"> adjlist NX </a></DT>
+<DT>Z_11*(18)Z_23 -- [2,16]<>[9,15]; [10,19]<>[1,3]; [10,17]<>[1,16]; [4,1]<>[7,17] Avg. dist. 2.730159 <a href="adjacencies/adjD3/253_11_23_18_adjlist.txt" target="_blank"> adjlist NX</a></DT>
+<dt> --------------------
+<DT> <a href="adjacencies/adjD3/253deg8D3-FC.zip" target="_blank"> <b>253deg8D3-FC.zip </b> </a> is a zip file containing the programs used to obtain the results for this graph and for the graphs (3,5), (6,8), (7,6), (7,7), (8,5), (9,4), (10,4), (10,5), (11,5), (12,5), (13,5), (14,5), and (15,5), which were found by the author in 2024. The C program included is the same one that computed this particular (8,3) entry in 1994, with only minor modifications to its output format. See entries (3,5)=70 and (3,8)=360 for other versions of these programs.
+<dt> --------------------
+<DT> This <a href="adjacencies/adjD3/253all-SageMath.txt"> SageMath script </b></a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=bahvid" target="_blank"> <b>online version</b> </a>.
+<dt> --------------------
+<DT>Also obtained in January 1997 as a Cayley graph for semidirect product of Zm with Zn. </DT>
+
+<DT>Z_11*(3)Z_23 -- [2,0]<>[9,0]; [2,13]<>[9,19]; [3,1]<>[8,17]; [4,22]<>[7,2] </DT>
+<DT>  avg. dist.: 2.730159 </DT>
+<DT>M. Sampels. Large networks with small diameter. Proc. 23rd Int. Workshop on Graph Theoretic Concepts in Computer Science (WG'97), <A href="https://link.springer.com/chapter/10.1007/BFb0024505" target="_blank">  LNCS 1335, pp. 288-302. Springer-Verlag, 1997.</A> Communicated July 29, 1997 <a href="adjacencies/adjD3/253_11_23_3_sampels_adjlist.txt" target="_blank"> adjlist NX</a>.</DT>
+<DT>This instance is also isomorphic to the other cases.</DT>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 9   DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=93></A>
+<DT> <b>Q&prime;<sub>8</sub></b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>9</B>, Diameter = <B>3</B>; Order =<B>585</B>; Moore bound= 658;   
+ </p>
+ 
+<DT> Quotient of the incidence graph of a regular generalized quadrangle by a polarity.
+<DT> C. Delorme. Grands graphes de degr&eacute; et diam&egrave;tre donn&eacute;s.<em>Eur. J. Comb.</em> <b>6</b> (1985), pp. 291-302.  <A 
+  href="https://www.sciencedirect.com/science/article/pii/S0195669885800433" target="_blank"> link to the paper </A>
+  <DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n585d9k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n585d9k3_adjlist.txt" target="_blank">  the adjlist NX</a>  of the graph.
+<dt> This <a href="adjacencies/adjD3/585_delorme_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=eurdsl" target="_blank"> online version </a>.</dt>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 10   DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=103></A>
+<DT> <b>Q&prime;<sub>8</sub>d</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>10</B>, Diameter = <B>3</B>; Order =<B>650</B>; Moore bound= 911;   
+ </p>
+ 
+<DT> Quotient of the incidence graph of a regular generalized quadrangle by a polarity with duplication of some vertices.
+<DT> C. Delorme. Grands graphes de degr&eacute; et diam&egrave;tre donn&eacute;s.<em>Eur. J. Comb.</em> <b>6</b> (1985), pp. 291-302.  <A 
+  href="https://www.sciencedirect.com/science/article/pii/S0195669885800433" target="_blank"> link to the paper </A>
+<DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n650d10k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n650d10k3_adjlist.txt" target="_blank"> the adjlist NX</a>  of the graph.
+<dt> This <a href="adjacencies/adjD3/650_delorme_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=zcbwcj" target="_blank"> online version </a>.</dt>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 11  DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=113></A>
+<DT> <b>Q&prime;<sub>8</sub>d</b>
+<p  style="background-color: Gainsboro; font-size: large">
+Degree = <B>11</B>, Diameter = <B>3</B>; Order =<B>715</B>; Moore bound= 1222; 
+</p>
+
+<DT>  Quotient of the incidence graph of a regular generalized quadrangle by a polarity with duplication of some vertices.
+<DT> C. Delorme. Grands graphes de degr&eacute; et diam&egrave;tre donn&eacute;s.<em>Eur. J. Comb.</em> <b>6</b> (1985), pp. 291-302.  <A 
+  href="https://www.sciencedirect.com/science/article/pii/S0195669885800433" target="_blank"> link to the paper </A>
+<DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n715d11k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n715d11k3_adjlist.txt" target="_blank"> the adjlist NX</a>  of the graph.
+<dt> This <a href="adjacencies/adjD3/715_delorme_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=pjplpj" target="_blank"> online version </a>.</dt>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 12    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=123></A>
+<DT> <b>Dhar_810</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>12</B>, Diameter = <B>3</B>; Order =<B>810</B>; Moore bound= 1597;   
+</p>
+
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Lift of a 3-vertex base multigraph. Vertices are triples (base vertex, z in Z_10, x in F_3^3), so the order is 3 x 10 x 27 = 810. A base dart i -> j carrying a voltage a in Z_10 and an affine  map (M, u) over F_3^3 joins (i, z, x) to (j, z + a mod 10, M x + u). <!-- The six darts with their voltages and matrices are listed in the accompanying json; the graph is 12-regular of diameter 3. -->
+
+<DT> Download the <a href="adjacencies/adjD3/deg12_diam3_n810_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/891_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=yrqrwk"_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=791
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Sept. 14, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT> Q&prime;<sub>8</sub>d++.   One new vertex is added to the 790-vertex graph (below): 234 of its edges are deleted and 17 new edges are added between its vertices, and the new vertex is joined to 12 original vertices. Degree histogram : [0, 0, 0, 0, 0, 0, 0, 0, 0, 79, 53, 79, 580]
+<DT> Download the <a href="adjacencies/adjD3/deg12_diam3_n791_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/791_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=heqxmx" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=790
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; August 17,2026). 
+Q&prime;<sub>8</sub>d++. Addition of vertices to the graph below. Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.   Download the <a href="adjacencies/adjD3/deg12_diam3_n790_adjlist.txt" target="_blank"> raw adjacency list </a>.</DT>
+
+
+<BR>
+<DT> Former result, order=786
+<DT> Q&prime;<sub>8</sub>d+, quotient of the incidence graph of a regular generalized quadrangle by a polarity with duplication of some vertices.
+<DT> J. G&oacute;mez. Some new large (&Delta;,3) graphs.<em>Networks</em> <b>53</b> (2009), pp. 1-5.  <A 
+  href="https://doi.org/10.1002/net.20254" target="_blank"> link </A>
+ <DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n786d12k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n786d12k3_adjlist.txt" target="_blank">  the adjlist NX</a>  of the graph.
+ <dt> This <a href="adjacencies/adjD3/786_gomez_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=heqxmx" target="_blank"> online version </a>.</dt>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 13    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=133></A>
+<DT> <b>Michel_952</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>13</B>, Diameter = <B>3</B>; Order =<B>952</B>; Moore bound=2042;  
+</p>
+
+<DT> Two non-isomorphic graphs obtained by Michel de Messieres (October 13, 2026), with the help of  Anthropic's Claude: each vertex of R. Rajiv's (6,3) graph on 119 vertices becomes a block  F<sup>3</sup><sub>2</sub>  (119 &times; 8 = 952), with lines
+between neighbouring blocks as in D. Yugeswardeenoo's (12,3) = 810 and R. Mizuno's route-chart lifts, plus one internal edge per  vertex inside its block. 
+<DT> The graphs and a detailed write-up are on Zenodo  <A  href="  https://doi.org/10.5281/zenodo.23511264" target="_blank">  https://doi.org/10.5281/zenodo.23511264 </A></DT>
+<DT> Download the local  edge lists of <a href="adjacencies/adjD3/deg13D3_n952a_edges.txt" target="_blank"> graph 952a </a>   and <a href="adjacencies/adjD3/deg13D3_n952b_edges.txt" target="_blank"> graph 952b </a>  . 
+ <dt> This <a href="adjacencies/adjD3/952ab_demessieres_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=syzoba" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order=873
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Twin packing on the 810-vertex (12,3) graph: 63 new vertices, each joined to the whole neighbourhood N(v) of a base vertex v. The chosen vertices v have pairwise disjoint open  neighbourhoods, so no base vertex gains more than one edge and no edge of the base graph is changed. A twin preserves distances, so the diameter stays 3.
+<DT> Download the <a href="adjacencies/adjD3/deg13_diam3_n873_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/873_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=edivgc"_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=868
+<DT> Q&prime;<sub>8</sub>d++  Obtained by Michel de Messieres (michel@demessieres.com, October 3, 2026). The search programs were written and run by an AI assistant (Anthropic's Claude) under the author's direction.
+    Start: the 585-vertex graph obtained by folding the generalized quadrangle over GF(8) by its polarity (the (9,3)     construction of the Q'8 family); its 65 absolute ("self-friendly") vertices are those on their own polar line.
+   - "Untied twins": for each of the 65 absolute vertices g we added 4 twins, each adjacent to the 8 other vertices of  g's line but not to g (845 vertices; this frees many degree slots while keeping diameter 3).
+   - A layer of 22 new vertices whose edges, together with extra edges in the unused slots of the existing vertices, were  placed by targeted simulated annealing until the diameter was 3: order 867, maximum degree 13 (only 1 unused slot).
+   - Order 868: starting from the 867-vertex graph, one more layer vertex was added and the annealed edges (layer edges and the extra edges placed in unused slots) were re-optimised; about 890 of the 5,635 edges were moved, the rest kept.
+   (The same family is used by the 856/859 entries: Delorme 1985, G&oacute;mez's duplication; we rebuilt from the base with untied twins and a new layer instead of patching the 859.)
+   <DT> The graph and a detailed write-up are also on Zenodo  <A  href=" https://doi.org/10.5281/zenodo.23136968" target="_blank">  https://doi.org/10.5281/zenodo.23136968 </A></DT>
+<DT> Download the <a href="adjacencies/adjD3/graph_13_3_n868.txt" target="_blank"> edge list </a>  of the graph. 
+ <dt> This <a href="adjacencies/adjD3/868_demessieres_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=lrhwny" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order=859
+<DT>Dharunish Yugeswardeenoo (dharyugi@gmail.com; Sept. 14, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   Three new vertices are added to V. Pelekhaty's 856-vertex graph (below): 354 of its edges are deleted and 80 new edges are added between its vertices; each new vertex is joined to 13 original vertices, and the new vertices are not adjacent to each other.  Degree histogram: [0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 63, 59, 70, 634]
+<DT> Download the <a href="adjacencies/adjD3/deg13_diam3_n859_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/859_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=pnfdjd" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=856
+<DT> Obtained by Vladimir Pelekhaty (vpelekhaty@aol.com, August 6, 2021.) "I started with Jose Gomez's Q&prime;<sub>8</sub>d+ graph (13,3)=851 --see<A 
+  href="https://doi.org/10.1002/net.20254" target="_blank"> link </A>-- , and added a few (odd number of) nodes before <I> regularizing</I> it by connecting the dangling degrees". 
+<DT> Download the <a href="adjacencies/adjD3/vlad.txt" target="_blank"> implicit adjacency list </a>  of the graph. 
+<a href="adjacencies/adjD3/vlad_adjlist.txt" target="_blank">   adjlist NX</a>
+ <dt> This <a href="adjacencies/adjD3/856_pelekhaty_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=nwdfqv" target="_blank"> online version </a>.</dt>
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 14    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=143></A>
+<DT> <b>Com_1141</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>14</B>, Diameter = <B>3</B>; Order =<B>1141</B>; Moore bound= 2563;  
+</p>
+
+<DT> Obtained by Francesc Comellas (October 23, 2026), with the help of OpenAI GPT 6 Astra. 
+<DT>  The base graph is  the graph below, with maximum degree 14, diameter 3, and 1118 vertices (mizopl@gmail.com).   856 original edges are removed and six vertices and 1034 new edges added. 
+A  process that uses simulated annealing for vertex and edge insertions, repeated edge pruning and  alternative attachment exchanges allows the construction of the final graph.
+<DT> Download the <a href="adjacencies/adjD3/deg14D3_1141_.edges" target="_blank"> local edge list of this graph</a>.
+<DT> This <a href="adjacencies/adjD3/1141_comellas_SageMath.txt" target="_blank"> SageMath script </a>  computes several properties of the graphs.  This is the <a href="https://sagecell.sagemath.org/?q=gcoxkc" target="_blank"> online version </a>. 
+</DT>
+
+<BR>
+<DT>Former result, Order = 1118
+<DT>  ????     (mizopl@gmail.com; October 19, 2026).  ????
+<DT>  ????
+<DT> <A  href="https://github.com/elder-plinius/V3R1T4S/pull/457"  target="_blank">More information</a>
+<DT> Download the <a href="adjacencies/adjD3/G_14_3_N1118__adjlist.txt"  target="_blank"> local edge list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/1118_Mizo_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=verstg" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=1116
+<DT> Dharunish Yugeswardeenoo (dharyugi@gmail.com; Chalfont, PA, USA; October 7, 2026).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.
+<DT>   28 new vertices are added to the 1,088-vertex (14,3) graph of R. Rajiv: 19 of its edges are deleted and 21 new edges added between original vertices; the new vertices are joined to 391 original vertices and not to each other..
+<DT> Download the <a href="adjacencies/adjD3/deg14_diam3_n1116_adjlist.txt" target="_blank"> raw adjacency list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/1116_Dhar_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=uwwtsj" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=1094
+<DT> Obtained by Michel de Messieres (michel@demessieres.com, October 3, 2026).
+The search programs were written and run by an AI assistant (Anthropic's Claude) under the author's direction.
+    Rajiv's graph has 512 vertices of degree 13 (512 unused degree slots). We kept ALL 7,360 of its edges (none removed)  and added:  - 6 new vertices, each of degree 14: 80 edges from new vertices to original vertices, 2 edges between new vertices;  - 215 new edges between original vertices, in their unused slots. In total 297 edges were added; 510 of the 512 unused slots are now used. The positions of all added edges were chosen  by simulated annealing, minimising the number of vertex pairs at distance > 3 until it reached 0.
+   Vertices 0--1087 are Rajiv's vertices with his original numbering; 1088?1093 are the new ones.
+<DT> The graph and a detailed write-up are also on Zenodo  <A  href=" https://doi.org/10.5281/zenodo.23136968" target="_blank">  https://doi.org/10.5281/zenodo.23136968 </A></DT>
+<DT> Download the <a href="adjacencies/adjD3/graph_14_3_n1094.txt" target="_blank">edge  list </a>  of the graph. 
+ <dt> This <a href="adjacencies/adjD3/1094_demessieres_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs. This is the <a href="https://sagecell.sagemath.org/?q=lgroes" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order=1088
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. 
+  <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+  <dt> This <a href="adjacencies/adjD3/1088_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q=jnwvdx" target="_blank"> online version </a>.</dt>
+
+
+<BR>
+<DT> Former result, order 1053.
+<DT> <b>Cayley graph</b>. Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems  for the semidirect product Z<sub>9</sub> (&#8906;<sub>16</sub>) Z<sub>117</sub> with generators 
+[7,102 ]<>[2,96 ]:[8,29 ]<>[1,4 ]:[4,14 ]<>[5,43 ]:[1,33 ]<>[8,93 ]:[8,35 ]<>[1,25 ]:[5,95 ]<>[4,1 ]:[2,73 ]<>[7,2 ]:
+avg. dist.:  2.80038,  dist. distrib. [1, 14, 82, 856]
+<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, the verifier (standard-library Python, no dependencies), and a paper describing the construction of the graph.
+<dt> This <a href="adjacencies/adjD3/1053_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q=jsdjws" target="_blank"> online version </a>.</dt>
+
+
+<BR>
+<DT> Former result, order 1032.
+<DT><b>Cayley graph</b>. Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, August 24, 2026) with the use of AI agentic coding systems  for the semidirect product Z<sub>9</sub> (&#8906;<sub>16</sub>) Z<sub>117</sub> with generators 
+[7,102 ]<>[2,96 ]:[8,29 ]<>[1,4 ]:[4,14 ]<>[5,43 ]:[1,33 ]<>[8,93 ]:[8,35 ]<>[1,25 ]:[5,95 ]<>[4,1 ]:[2,73 ]<>[7,2 ]:
+avg. dist.:  2.80038,  dist. distrib. [1, 14, 82, 856]
+<DT>  <A  href="https://zenodo.org/records/22073603" target="_blank"> In this link </A>
+  you can download the adjacency list, the verifier (standard-library Python, no dependencies), and a paper describing the construction of the graph.
+<dt> This <a href="adjacencies/adjD3/1053_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q=jsdjws" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order 1032.
+<DT>Graph obtained by Mark Marosi (August  17, 2026)  Department of Measurement and Information Systems,
+Budapest University of Technology and Economics (BME), Budapest, Hungary (marosi@mit.bme.hu).
+Marosi used  Claude (Anthropic) for the search -details will come later-.
+The graph is a Cayley graph for the semidirect product Z<sub>3</sub> (&#8906;<sub>337</sub>) Z<sub>344</sub> with generators   [1,220 ]<>[2,228 ]:[1,219 ]<>[2,277 ]:[1,105 ]<>[2,15 ]:[1,189 ]<>[2,27 ]:[1,87 ]<>[2,209 ]:[1,43 ]<>[2,301 ]:[1,192 ]<>[2,224 ].  Deg. histogram.: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1032], avg. dist.: 2.798254
+<DT> This is the <a href="https://sagecell.sagemath.org/?q=sbment" target="_blank"> online SageMath script which computes some proerties </a></DT>
+
+
+<BR>
+<DT> Former result, order 979
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca -communicated July 4, 2026)  as a Cayley graph for the semidirect product Z<sub>11</sub> (&#8906;<sub>45</sub>) Z<sub>89</sub> with generators 
+[0,44 ]<>[0,45 ]:[1,43 ]<>[10,3 ]:[1,52 ]<>[10,74 ]:[1,80 ]<>[10,18 ]:[2,8 ]<>[9,57 ]:[4,14 ]<>[7,43 ]:[4,50 ]<>[7,1 ]  
+avg. dist.: 2.785276
+<DT>  <A 
+  href="https://doi.org/10.5281/zenodo.21180071" target="_blank"> In this link </A>
+  you can download the adjacency list, the verifier (standard-library Python, no dependencies), and a paper describing the construction of the graph.
+<dt> This <a href="adjacencies/adjD3/979_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..7). This is the <a href="https://sagecell.sagemath.org/?q=qejakn" target="_blank"> online version </a>.</DT>
+ 
+ <BR>
+<DT> Former result, order 916
+<DT> J. G&oacute;mez. Some new large (&Delta;,3) graphs.<em>Networks</em> <b>53</b> (2009), pp. 1-5.  <A 
+  href="https://doi.org/10.1002/net.20254" target="_blank"> link </A>
+<DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n916d14k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n916d14k3_adjlist.txt" target="_blank"> the adjlist NX</a>  of the graph.
+<dt> This <a href="adjacencies/adjD3/916_gomez_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=vyynkz" target="_blank"> online version </a>.</dt></DT>
+
+ <BR>
+<DT> Former result, order 912
+<DT> Geoff Exoo (2001). G.Exoo. A family of graphs and the degree/diameter problem. <em>J. Graph Theory</em> <b>37</b> (2001), pp. 118-124.  <A 
+  href="https://doi.org/10.1002/jgt.1007" target="_blank"> link </A>
+<DT> Download the <a href="adjacencies/adjD3/Exoo_912.txt"> adjacency list </a>  of the graph.</DT>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 15   DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=153></A>
+<DT> <b>deg15D3_1620</b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>15</B>, Diameter = <B>3</B>; Order =<B>1620</B>; Moore bound= 3166;   
+</p>
+
+<DT>   Mike McCormick ??   <a href="https://github.com/calgulbenkian"  target="_blank">  calgulbenkian </a>  ( ?? ; October 20, 2026), with Claude ?. 
+<DT> Information on the graph construction is available
+<A  href="https://github.com/elder-plinius/V3R1T4S/tree/main/known-knowns/biggest-graphs"  target="_blank"> at this link</a>.
+<DT> Download the <a href="adjacencies/adjD3/G_15_3_n1620.edges.txt"  target="_blank"> local edge list </a>  of the graph.
+<DT>This <a href="adjacencies/adjD3/1620_deg15D3_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..). This is the <a href="https://sagecell.sagemath.org/?q=xbydpu" target="_blank"> online version </a>.</DT>
+
+<BR>
+<DT> Former result, order=1539
+<DT> Obtained by Rishabh Rajiv (rishabh.rajiv@alumni.ubc.ca, Septembert 30, 2026) with the use of AI agentic coding systems Anthropic's Claude Fable 5.1 and Opus 5.5. Fibre extension repaired by a matching 
+  <DT> In this link:  <A  href="https://zenodo.org/records/23052995" target="_blank"> 
+  https://doi.org/10.5281/zenodo.23052995 </A> you can download the details and a paper describing the construction of the graph.
+  <dt> This <a href="adjacencies/adjD3/1539_rishabhrajiv_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3.). This is the <a href="https://sagecell.sagemath.org/?q=utwpna " target="_blank"> online version </a>.</dt>
+
+
+<BR>
+<DT> Former result, order 1458
+<DT>  Construction discovered by Ryosuke Mizuno  (mizuno@aisystemresearch.com, September 25, 2026) through interaction with ChatGPT via its standard web interface.  A simple 15-regular graph on  V(C) &times; F<sup>3</sup><sub>3</sub>, where  C s a 54-vertex simple 5-regular Cayley graph. The route-chart lift construction  of  <a href="https://arxiv.org/abs/2606.15860">[arXiv:2606.15860]</a>  is generalized to allow a self-inverse label and transition matrices depending on directed controller edges. Controllability matrices of rank 3 and pencils of affine planes give diameter at most 3; direct verification establishes diameter exactly 3.
+<DT> More details in Mizuno's   <A  href="https://github.com/rmizuno42/ddp/tree/main/results/degree15-diameter3" target="_blank">  "degree16-diameter3" github folder </A>
+<DT> Download the <a href="adjacencies/adjD3/graph_d15_D3_n1458.edges" target="_blank"> local edge list </a>  of the graph.</DT>
+<dt> This <a href="adjacencies/adjD3/1458_mizuno_SageMath.sage"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=xgahln" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order 1224
+<DT>(&#8855; Q<sub>2,4</sub>)&prime;+ Graph constructed with the help of AI tools by Petrit Isufi (August 13, 2026; isufi.petrit@proton.me). 
+Nine new vertices are added to the  1215-vertex (&#8855; Q<sub>2,4</sub>)&prime;  Delorme-Farhi graph which remains unchanged. Download the <a href="adjacencies/adjD3/graph_n1224_d15_k3.txt" target="_blank"> edge list </a>  of the graph.</dt>
+<DT>  Dharunish Yugeswardeenoo ( August 15, 2026; dharyugi@gmail.com) found independently, also with the help of AI tools, a non-isomorphic graph with the same properties.  Download the <a href="adjacencies/adjD3/G_15_3_n1224.edgelist" target="_blank"> edge list </a>  of this graph.</dt>
+<dt> This <a href="adjacencies/adjD3/1224_xQ24pp_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=bfbxhn" target="_blank"> online version </a>.</dt> 
+
+<BR>
+<DT> Former result, order 1215
+<DT>  (&#8855; Q<sub>2,4</sub>)&prime;  with 1215 vertices. Component with polarity of the cartesian product of the quocient of a quadrangle by a polarity by itself.
+<DT> C. Delorme. Large bipartite graphs with given degree and diameter. 
+  <A href="https://doi.org/10.1002/jgt.3190090304" target="_blank"><i> J. Graph Theory,</i> 9 (1985) 325–334. </A>
+<DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n1215d15k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n1215d15k3_adjlist.txt" target="_blank">  the adjlist NX</a>  of the graph.</DT>
+
+
+<hr style="height: 4px; border: none; background-color: violet;">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%   DEGREE = 16    DIAM = 3    %%%%%%%%%%%% -->
+<A NAME=163></A>
+<DT> <b>Mizuno_1920 </b>
+<p  style="background-color: Gainsboro; font-size: large">
+ Degree = <B>16</B>, Diameter = <B>3</B>; Order =<B>1920</B>; Moore bound= 3857;   
+ </p>
+ 
+<DT>  Construction discovered by Ryosuke Mizuno  (mizuno@aisystemresearch.com, September 25, 2026) through interaction with ChatGPT via its standard web interface.  A simple 16-regular graph on  V(C) &times; F<sup>3</sup><sub>4</sub>, where  C  is a 30-vertex simple 4-regular controller. This generalizes the  route-chart lift construction    of
+  <a href="https://arxiv.org/abs/2606.15860">[arXiv:2606.15860]</a>  by allowing transition matrices to depend on directed controller edges.
+  Controllability matrices of rank 3 and pencils of affine planes establish  diameter at most 3; direct verification establishes diameter exactly 3.
+<DT> More details in Mizuno's   <A  href="https://github.com/rmizuno42/ddp/tree/main/results/degree16-diameter3" target="_blank">  "degree16-diameter3" github folder </A>
+<DT> Download the <a href="adjacencies/adjD3/graph_d16_D3_n1920.edges" target="_blank"> local edge list </a>  of the graph.</DT>
+<dt> This <a href="adjacencies/adjD3/1920_mizuno_SageMath.sage"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=dcywkw" target="_blank"> online version </a>.</dt>
+
+<BR>
+<DT> Former result, order 1610
+<DT>(&#8855; Q<sub>3</sub>)&prime;+  Dharunish Yugeswardeenoo (dharyugi@gmail.com; August 17,2026). 
+Spread-block completion of a product of generalized-quadrangle graphs (see below).  Results obtained by using a hybrid discovery framework in development: LLM-guided search over classical algebraic constructions, combined with local search and exact completion. The specific LLMs used were OpenAI's Sol 5.6 and Anthropic's Claude Fable 5 Max.   
+  xQ3pp  Ord.: 1610 / Size: 12880 / Diam.: 3 / Avg.dist: 2.87602 / 16-reg.? True /  Girth: 3  /  Aut.group.ord.: 1440 /  Cayley ? False ---  vtx.trans. ? False -- edge.trans. ? False /   Automorphism group structure -> xQ24pp: C2 x S6  |  center order: 2 / distance distrib from vtx. 0: [1, 16, 153, 1440] </DT>
+<DT> Download the <a href="adjacencies/adjD3/deg16_diam3_n1610_adjlist.txt" target="_blank"> raw adjacency list </a>.</DT>
+<dt> This <a href="adjacencies/adjD3/1610_d6D3_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=usnvcg" target="_blank"> online version </a>.</dt> 
+
+
+<BR>
+<DT> Former result, order 1600
+<DT> (&#8855; Q<sub>3</sub>)&prime; ;  with 16005 vertices.
+ Component with polarity of the cartesian product of the quocient of a quadrangle by a polarity by itself.
+<DT>  C. Delorme and G. Farhi. Large graphs with given degree and diameter.<em>IEEE Trans, Comput.</em> <b>c-33</b> (1984), pp. 857-860.  <A 
+  href="https://ieeexplore.ieee.org/document/1676504" target="_blank"> link to the paper </A>
+ <DT> Thanks to V. Pelekhaty, you can download the <a href="adjacencies/adjD3/n1600d16k3.txt" target="_blank"> implicit adjacency list </a> and 
+<a href="adjacencies/adjD3/n1600d16k3_adjlist.txt" target="_blank">  the adjlist NX</a>  of the graph.
+<dt> This <a href="adjacencies/adjD3/1600_delfah_SageMath.txt"  target="_blank"> SageMath script </a> computes several properties of the graphs including symmetry group sizes and the number of k-cycles (k=3..10). This is the <a href="https://sagecell.sagemath.org/?q=pqpagn" target="_blank"> online version </a>.</dt> 
+  
+<hr style="height: 4px; border: none; background-color: violet;">
+<hr style="height: 4px; border: none; background-color: violet;">
+</BODY>
+</HTML>

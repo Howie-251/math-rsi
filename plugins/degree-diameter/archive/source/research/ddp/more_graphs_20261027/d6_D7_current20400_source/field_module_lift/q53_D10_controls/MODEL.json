@@ -1,0 +1,74 @@
+{
+  "group": "(F53^2 x C17) semidirect H48, H48=<beta,alpha|beta^3=alpha^16=1, alpha beta alpha^-1=beta^-1>",
+  "H_normal_form": "beta^u alpha^v; u mod3, v mod16",
+  "multiplication": "(X,c,u,v)*(Y,d,U,V)=(X+rho(u,v)Y, c+5^v*d mod17, u+(-1)^v*U mod3, v+V mod16)",
+  "rho": "rho(u,v)=B^u*T^v over F53",
+  "B": [
+    [
+      0,
+      52
+    ],
+    [
+      1,
+      52
+    ]
+  ],
+  "T_controls": [
+    [
+      [
+        49,
+        10
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    [
+      [
+        3,
+        38
+      ],
+      [
+        41,
+        50
+      ]
+    ]
+  ],
+  "vertex_encoding": "x+53*y+2809*(c+17*(u+3*v))",
+  "positive_generators": [
+    {
+      "normal": [
+        0,
+        0
+      ],
+      "c17": 0,
+      "u": 0,
+      "v": 1
+    },
+    {
+      "normal": [
+        0,
+        1
+      ],
+      "c17": 1,
+      "u": 1,
+      "v": 12
+    },
+    {
+      "normal": [
+        0,
+        2
+      ],
+      "c17": 5,
+      "u": 2,
+      "v": 11
+    }
+  ],
+  "inverse_formula": "u_inv=-(-1)^v*u mod3; v_inv=-v mod16; X_inv=-rho(u_inv,v_inv)X; c_inv=-5^(v_inv)*c mod17",
+  "adjacency": "For each positive generator and its true inverse, add the right-product edge g--g*s.",
+  "actual_true_inverse_records": "RESULT.json cases[*].generators_and_true_inverses",
+  "global_diameter_proof": "Left multiplication preserves every right-step Cayley edge. Complete identity BFS reaches all vertices in each case, so its eccentricity equals exact global diameter.",
+  "simple_6regular_proof": "All six generator IDs are distinct and nonidentity; verified inverse pairs multiply to identity in the new group model. Right multiplication is a bijection.",
+  "source_aut_claim": false
+}

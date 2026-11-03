@@ -1,0 +1,10 @@
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.graph : SimpleGraph Vertex :=
+OppositeGQSpread.graph oldEquiv Inc spread
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.Inc : Point → Line → Prop :=
+fun p l => ∃ i, linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.oldEquiv : Old ≃ Point × Line :=
+finProdFinEquiv.symm
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.label : Vertex ≃ Fin 6160 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.OppositeGQ35Spread.FinalClaim : Prop :=
+Fintype.card Vertex = 6160 ∧ (∀ (v : Vertex), graph.degree v ≤ 24) ∧ DiameterAtMost graph 3 ∧ ¬DiameterAtMost graph 2

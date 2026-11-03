@@ -1,0 +1,74 @@
+def DegreeDiameter.Portfolio.OppositeGQSpread.graph.{u_1, u_2, u_3, u_4} : {P : Type u_1} →
+  {L : Type u_2} → {V : Type u_3} → {J : Type u_4} → V ≃ P × L → (P → L → Prop) → (J → L) → SimpleGraph (V ⊕ J) :=
+fun {P} {L} {V} {J} e Inc spread =>
+  {
+    Adj := fun x x_1 =>
+      match x, x_1 with
+      | Sum.inl u, Sum.inl v => u ≠ v ∧ Inc (e u).1 (e v).2 ∧ Inc (e v).1 (e u).2
+      | Sum.inl u, Sum.inr j => Inc (e u).1 (e u).2 ∧ Inc (e u).1 (spread j)
+      | Sum.inr j, Sum.inl u => Inc (e u).1 (e u).2 ∧ Inc (e u).1 (spread j)
+      | Sum.inr val, Sum.inr val_1 => False,
+    symm := ⋯, loopless := ⋯ }
+def DegreeDiameter.Portfolio.OppositeIncidenceSpread.Inc.{u_1, u_2} : {P : Type u_1} →
+  {L : Type u_2} → {a : ℕ} → (L → Fin a → P) → P → L → Prop :=
+fun {P} {L} {a} linePoint p l => ∃ i, linePoint l i = p
+def DegreeDiameter.Portfolio.OppositeGQ44Spread.graph : SimpleGraph OppositeGQ44Spread.Vertex :=
+OppositeIncidenceSpread.graph OppositeGQ44Spread.oldEquiv OppositeGQ44Spread.linePoint OppositeGQ44Spread.spread
+@[reducible] def DegreeDiameter.Portfolio.OppositeGQ44Spread.Inc : OppositeGQ44Spread.Point →
+  OppositeGQ44Spread.Line → Prop :=
+fun p l => OppositeIncidenceSpread.Inc OppositeGQ44Spread.linePoint p l
+def DegreeDiameter.Portfolio.OppositeGQ44Spread.oldEquiv : OppositeGQ44Spread.Old ≃
+  OppositeGQ44Spread.Point × OppositeGQ44Spread.Line :=
+finProdFinEquiv.symm
+def DegreeDiameter.Portfolio.OppositeGQ44Spread.label : OppositeGQ44Spread.Vertex ≃ Fin 7242 :=
+finSumFinEquiv
+def DegreeDiameter.Portfolio.OppositeGQ44Spread.spread : OppositeGQ44Spread.New → OppositeGQ44Spread.Line :=
+![21, 26, 31, 36, 57, 54, 67, 64, 77, 82, 71, 76, 49, 46, 43, 40, 0]
+DegreeDiameter.Portfolio.OppositeGQ44Spread.old_label (p : OppositeGQ44Spread.Point) (l : OppositeGQ44Spread.Line) :
+  ↑(OppositeGQ44Spread.old p l) = ↑l + 85 * ↑p
+DegreeDiameter.Portfolio.OppositeGQ44Spread.label_old (v : OppositeGQ44Spread.Old) :
+  ↑(OppositeGQ44Spread.label (Sum.inl v)) = ↑v
+DegreeDiameter.Portfolio.OppositeGQ44Spread.label_new (j : OppositeGQ44Spread.New) :
+  ↑(OppositeGQ44Spread.label (Sum.inr j)) = 7225 + ↑j
+DegreeDiameter.Portfolio.OppositeGQ44Spread.concrete_order_degree_and_exact_D3 :
+  Fintype.card OppositeGQ44Spread.Vertex = 7242 ∧
+    (∀ (v : OppositeGQ44Spread.Vertex), OppositeGQ44Spread.graph.degree v ≤ 25) ∧
+      DiameterAtMost OppositeGQ44Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ44Spread.graph 2
+theorem DegreeDiameter.Portfolio.OppositeGQ44Spread.concrete_order_degree_and_exact_D3 : Fintype.card
+      OppositeGQ44Spread.Vertex =
+    7242 ∧
+  (∀ (v : OppositeGQ44Spread.Vertex), OppositeGQ44Spread.graph.degree v ≤ 25) ∧
+    DiameterAtMost OppositeGQ44Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ44Spread.graph 2 :=
+have h :=
+  OppositeIncidenceSpread.order_degree_and_exact_D3 OppositeGQ44Spread.oldEquiv OppositeGQ44Spread.linePoint
+    OppositeGQ44Spread.pointLine OppositeGQ44Spread.spread OppositeGQ44Spread.spreadOwner
+    (of_decide_eq_true (id (Eq.refl true))) OppositeGQ44Spread.pointLine_covers OppositeGQ44Spread.spread_unique
+    OppositeGQ44Spread.projection (of_decide_eq_true (id (Eq.refl true)));
+Eq.mp
+  (congrArg
+    (fun x =>
+      Fintype.card (OppositeGQ44Spread.Old ⊕ OppositeGQ44Spread.New) = x ∧
+        (∀ (u : OppositeGQ44Spread.Old ⊕ OppositeGQ44Spread.New),
+            (OppositeIncidenceSpread.graph OppositeGQ44Spread.oldEquiv OppositeGQ44Spread.linePoint
+                    OppositeGQ44Spread.spread).degree
+                u ≤
+              5 * 5) ∧
+          DiameterAtMost
+              (OppositeIncidenceSpread.graph OppositeGQ44Spread.oldEquiv OppositeGQ44Spread.linePoint
+                OppositeGQ44Spread.spread)
+              3 ∧
+            ¬DiameterAtMost
+                (OppositeIncidenceSpread.graph OppositeGQ44Spread.oldEquiv OppositeGQ44Spread.linePoint
+                  OppositeGQ44Spread.spread)
+                2)
+    (congr (congrArg HAdd.hAdd (congr (congrArg HMul.hMul (Fintype.card_fin 85)) (Fintype.card_fin 85)))
+      (Fintype.card_fin 17)))
+  h
+def DegreeDiameter.Portfolio.OppositeGQ44Spread.FinalClaim : Prop :=
+Fintype.card OppositeGQ44Spread.Vertex = 7242 ∧
+  (∀ (v : OppositeGQ44Spread.Vertex), OppositeGQ44Spread.graph.degree v ≤ 25) ∧
+    DiameterAtMost OppositeGQ44Spread.graph 3 ∧ ¬DiameterAtMost OppositeGQ44Spread.graph 2
+'DegreeDiameter.Portfolio.OppositeGQ44Spread.concrete_order_degree_and_exact_D3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DegreeDiameter.Portfolio.OppositeGQ44Spread.final_claim' depends on axioms: [propext, Classical.choice, Quot.sound]

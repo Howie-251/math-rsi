@@ -1,0 +1,152 @@
+{
+  "scope": "New and changed skill interfaces only; no historic math replay or research performance test",
+  "checks": [
+    {
+      "skill": "base/skills/mathrsi-meta-evolve",
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "plugins/degree-diameter/skills/dd-construction",
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "plugins/degree-diameter/skills/dd-obstruction-certificate",
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "plugins/degree-diameter/skills/dd-transfer-diagnosis",
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "skill": "plugins/degree-diameter/skills/mathrsi-degree-diameter",
+      "exit": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/check_links.py"
+      ],
+      "exit": 0,
+      "stdout": "Checked 90 documents and 1340 local link targets; 0 missing.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "aliases": {
+    ".agents": [
+      {
+        "name": "mathrsi-meta-evolve",
+        "target": "../../base/skills/mathrsi-meta-evolve",
+        "exists": true
+      },
+      {
+        "name": "meta-optimize",
+        "target": "../../base/skills/skills-codex/meta-optimize",
+        "exists": true
+      },
+      {
+        "name": "meta-apply",
+        "target": "../../base/skills/skills-codex/meta-apply",
+        "exists": true
+      },
+      {
+        "name": "dd-construction",
+        "target": "../../plugins/degree-diameter/skills/dd-construction",
+        "exists": true
+      },
+      {
+        "name": "dd-obstruction-certificate",
+        "target": "../../plugins/degree-diameter/skills/dd-obstruction-certificate",
+        "exists": true
+      },
+      {
+        "name": "dd-transfer-diagnosis",
+        "target": "../../plugins/degree-diameter/skills/dd-transfer-diagnosis",
+        "exists": true
+      },
+      {
+        "name": "mathrsi-degree-diameter",
+        "target": "../../plugins/degree-diameter/skills/mathrsi-degree-diameter",
+        "exists": true
+      }
+    ],
+    ".claude": [
+      {
+        "name": "mathrsi-meta-evolve",
+        "target": "../../base/skills/mathrsi-meta-evolve",
+        "exists": true
+      },
+      {
+        "name": "meta-optimize",
+        "target": "../../base/skills/meta-optimize",
+        "exists": true
+      },
+      {
+        "name": "meta-apply",
+        "target": "../../base/skills/meta-apply",
+        "exists": true
+      },
+      {
+        "name": "dd-construction",
+        "target": "../../plugins/degree-diameter/skills/dd-construction",
+        "exists": true
+      },
+      {
+        "name": "dd-obstruction-certificate",
+        "target": "../../plugins/degree-diameter/skills/dd-obstruction-certificate",
+        "exists": true
+      },
+      {
+        "name": "dd-transfer-diagnosis",
+        "target": "../../plugins/degree-diameter/skills/dd-transfer-diagnosis",
+        "exists": true
+      },
+      {
+        "name": "mathrsi-degree-diameter",
+        "target": "../../plugins/degree-diameter/skills/mathrsi-degree-diameter",
+        "exists": true
+      }
+    ]
+  },
+  "after_review_repairs": [
+    {
+      "argv": [
+        "python3",
+        "tools/check_links.py"
+      ],
+      "exit": 0,
+      "stdout": "Checked 90 documents and 1367 local link targets; 0 missing.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "validation_note": "Skill frontmatter checks above were completed before prose refinements; frontmatter unchanged. This final pass checks modified links and whitespace only."
+}

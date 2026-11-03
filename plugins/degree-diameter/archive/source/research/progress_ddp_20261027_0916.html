@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路线互补：预测与实际检验</title><style>body{font:17px/1.7 system-ui;max-width:1120px;margin:32px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.35}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5df;padding:10px;text-align:left;vertical-align:top}.note{background:#edf4fb;padding:16px}.diagram{width:390px;max-width:100%;margin:20px auto;text-align:center}.diagram td,.diagram th{text-align:center}.covered{background:#d9eee6}.hole{background:#f6d9d5}a{color:#155bb2}pre{white-space:pre-wrap;background:#f5f7fa;padding:14px}.scroll{overflow:auto}</style></head><body>
+<h1>当前任务：选择整类覆盖规则，收束局部补洞</h1><p>更新：2026-10-27 09:16:17 UTC。Goal ACTIVE，4≤Δ≤12、D=3/4/5；<strong>已验证新下界仍为0。</strong></p>
+<div class="note"><strong>最新人工纠偏：</strong>不深陷每次只减少几百坏点对的局部进展。当前1152单/双边及port-preserving局部修补已收束；2520关系筛选确认未启动，已取消，零枚举、零候选。保留本页对照证据，后续以能否同时覆盖整类点对为继续依据。</div><div class="note">已落实最新人工策略：暂缓独立模板大筛，保留历史；所有代理围绕同一72点控制图的成功/失败对照、反例攻击、受控实验和核验。当前结果是预测检验及连接规则调整，不是新纪录，也不因“培养直觉”宣称Goal完成。</div>
+<h2>选择的可比较对象与原先不知道的问题</h2><p>已有F3⁴构造在72个控制点上给5832点、degree12、D4；保存的F2⁴ best68同样使用该控制图，1152点、degree8，但D5、12384个无序点对超过四步。旧证书、参数和完整枚举直接继承，没有重做旧108通用chart、2419200规范筛或1024图。</p><p>具体未知：二元失败是offset0造成的可补平移，还是路线方向已经不足？同一base槽0→10的AACA在原F3对象满秩、单路覆盖81；二元对象只有AACA和DCC两条短路，各自只能覆盖8点。这是同槽对照，不泛化为特征二构造都不行。</p>
+<h2>先提出预测，再实际检验</h2><div class="scroll"><table><tr><th>事前预测／受控改变</th><th>实际检验</th><th>因此改变什么</th></tr>
+<tr><td>P1：保存二元图至少有一个坏槽，即使每条路线独立平移仍盖不满16。</td><td>0→10两rank3超平面法向6、9，任意平移交4、并恒12。独立coset DP与全部16个源状态核对支持预测。</td><td>固定这组T/b的global或edge-local offsets都救不了该槽，不做offset网格。</td></tr>
+<tr><td>仅改边0→18的方向b：预报目标AACA升秩，同时37↔63唯一四路降秩。</td><td>一张1152图的唯一全源BFS全部验中：目标256个跨fiber对全覆盖（原64缺项修复）；37↔63新增128个无序坏对。整图D5/13424。</td><td>正反向方向由T^-1b耦合，不能独立修正向。两边先后15选和联合225选也没保全目标与468紧槽；没为这些诊断再生成图。</td></tr>
+<tr><td>联动T'=S T、b'=S b：让正向变3但反向仍8；预测目标和468紧槽全保。</td><td>第二张新图唯一BFS支持全部预测，D5/12800。比单b方案少624坏对，但比原图多416，不是全局改进。</td><td>端口方向可通过矩阵与b协调控制；但必须检查闭路平面如何补同一fiber，不能只保护紧路。</td></tr>
+<tr><td>从一个实际反例进一步预测：新self0每个源值x都唯一漏x XOR5。</td><td>读已保存新距离缓存核对16个源值，全部匹配；没有重复BFS。原(0,5)距离4，新距离5。</td><td>下一生成规则同时保护所有同fiber闭路并集，再检查目标槽；反向方向保持并不保证这些平面保持。</td></tr></table></div>
+<h2>方向不足不是靠移动就能补</h2><p>把二元fiber按两张超平面的共同二维核取商，每格代表4个fiber点。两张不同方向只覆盖三格，始终漏一格；offset能移动洞的位置，却不能消灭它。</p>
+<table class="diagram"><tr><th>n6·x ／ n9·x</th><th>0</th><th>1</th></tr><tr><th>0</th><td class="covered">两路覆盖<br>4点</td><td class="covered">一路覆盖<br>4点</td></tr><tr><th>1</th><td class="covered">另一路覆盖<br>4点</td><td class="hole">遗漏<br>4点</td></tr></table>
+<p>对照原三元成功证书的另一个pencil槽0→1：四张27点超平面共享9点核，在二维商里给四个不同方向，1+4·2=9格全部覆盖。这个成功事实已知，本轮用它解释互补方向，而不是登记一次复现为新成果。</p>
+<h2>找到全局恶化的一个具体因果例子</h2><p>新损坏点对(0,5)位于同一fiber0。旧33条四步以内闭walk中，只有ABCD路线补到5。修改后这条route仍rank2，但像改变：</p>
+<pre>路径：0—18—67—18—0，word ABCD
+旧列：[8,13,13,8] → 像 {0,5,8,13}
+新列：[8,12,12,8] → 像 {0,4,8,12}
+全部闭路的并：旧16点 → 新15点，恰漏5。</pre>
+<p>它没有失去秩，而是换来的覆盖与其它路线重复，丢了一个原先独有的补位。所有短闭词都通过逆边消去，所以确定性漂移始终是恒等，inverse-consistent offsets也无法补此洞。这是净增416坏对中的一个核实实例，不是对全部差额的分解。</p>
+<h2>本轮启发与当前止损</h2><p>本轮说明整体构造需要同时保全两类已有覆盖：468个唯一四路满秩，以及72个同fiber闭路平面并集各满16。这些认识保留为后续整体设计的约束；当前不再沿单/双边矩阵或方向修补继续。不会因总坏对小幅下降加轮次，也不立即开启另一批模板大筛。</p><p>严格排除范围不重跑；有限样本或UNKNOWN不记整族无望。有明确预测和反馈时允许有预算地深入，不要求续算前先发明新定理。当前诊断与两张受控图均已终态，无后台图搜索；已完成但暂停的GQ/来源侦察留作历史，不算本阶段成果。</p>
+<p><a href="ddp/breadth_20261027_wave12/route_complementarity/REPORT.md">预测、实验与证据报告</a> · <a href="../research-wiki/DDP_METHOD_LEDGER.md">唯一方法账本</a> · <a href="../context/DD_PORTFOLIO_START_20261026/RESEARCH_GOAL.md">修订后的原Goal</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a></p><p><a href="progress_ddp_20261027_0827.html">上一阶段页</a> · <a href="../expert_review_current/EXPERT_REVIEW.html">已交付的07:58专家源码快照</a></p><p>旧D2/n61/SAT继续暂停。当前P1与受控实验有本地独立证据，未冒称新Gemini/Lean接受。新下界仍0，最终验收不变。</p></body></html>

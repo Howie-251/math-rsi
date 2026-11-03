@@ -1,0 +1,93 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Both complete manuscripts establish their stated necessary local structure, Toeplitz restriction, beta-one confinement, offset restriction and component size at most52, modulo explicit inherited imports. No gap found. Fresh same-family provisional review only; order61 remains open.",
+  "audited_inputs": [
+    "proofs/dd82/n61/INTERNAL_DOUBLE_PATH_LOCAL.md",
+    "proofs/dd82/n61/INTERNAL_DOUBLE_PATH_FOLLOWUP.md"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n61-internal-path-20261013/",
+  "agent_id": "/root/internal_path_proof_check",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-10-13T15:24:55Z",
+  "review_provenance": {
+    "freshness": "Fresh reviewer, fork_turns none, one bounded review round; primary manuscripts read directly in full.",
+    "configuration_evidence": "Parent confirmed requested spawn model gpt-6-astra and reasoning_effort ultra; no independent backend attestation.",
+    "manuscript_edits": false,
+    "new_external_review": false,
+    "reused_reviews_for_new_claims": false,
+    "historical_review_use": "Prior local and Gemini records inspected only for provenance/status of the expressly inherited baseline and path-forest theorem.",
+    "wiki_integration": "Owned by parent, outside this review directory task."
+  },
+  "imports": [
+    {
+      "source": "proofs/dd82/n61/CONNECTED_TRIPLE_EXCLUSION.md",
+      "claims": [
+        "Arbitrary order61 maximum-degree-eight diameter-two targets are 8-regular",
+        "Actual B is symmetric, nonnegative integral, zero-diagonal and row-four",
+        "Actual B has connected positive support and entries in {0,1,2}"
+      ],
+      "import_status": "Inherited accepted structural theorem with explicit finite-enumeration and checked-CNF dependencies; not re-proved or recomputed in this review",
+      "saved_external_status": "reviews/dd82/20261013_V3_n61_triples_final_review.json",
+      "saved_external_thread": "a26ad33b-931a-46cd-a72e-a6cbf6d4ee2a"
+    },
+    {
+      "source": "proofs/dd82/n61/DOUBLE_DEFECT_CYCLE_OBSTRUCTION.md",
+      "claims": ["The actual double-defect support D is a path forest"],
+      "import_status": "Inherited accepted theorem; original writer-checked status sentence is superseded by the explicitly inspected local and external records",
+      "prior_local_review": "reviews/dd82/proof-checker-n61-adjacent-double-20261013/PROOF_AUDIT.md",
+      "prior_local_verdict": "PASS, same-family provisional; fresh cycle review plus read-only cycle shard, with later model deltas separately recorded as reused",
+      "saved_external_status": [
+        "reviews/dd82/20261013_V3_n61_adjacent_direction.json",
+        "reviews/dd82/20261013_V3_n61_adjacent_ports_final_review.json"
+      ],
+      "saved_external_thread": "c486e575-cfca-490a-a2c8-aea4fba5fdb5",
+      "handoff": "prompts/26101313-1/final.md"
+    }
+  ],
+  "saved_external_metadata": {
+    "requested_model": "gemini-3.8-flash-high",
+    "returned_model": "gemini-3.8-flash-high",
+    "requested_effort": "high",
+    "returned_effort": "high",
+    "selected_model_label": "Gemini 3.8 Flash (High)",
+    "status": "SUCCESS",
+    "meaning": "Historical stored CLI metadata for the inspected imports only, not independent backend attestation or current-manuscript external acceptance"
+  },
+  "details": {
+    "theorem_groups_audited": 7,
+    "frozen_micro_claim_count": 24,
+    "discharged_micro_claims": [
+      "L01", "L02", "L03", "L04", "L05", "L06", "L07", "L08",
+      "L09", "L10", "L11", "L12", "L13", "L14", "L15", "L16",
+      "F01", "F02", "F03", "F04", "F05", "F06", "F07", "F08"
+    ],
+    "issues": [],
+    "counterexample_probes": [
+      "Adjacent double incident to an internal vertex; isolated adjacent edge retained",
+      "Full U/W overlap and all three beta-one types",
+      "Epsilon-one extra common neighbor and variable residual vectors",
+      "Exceptional attachments, overlap of P and Q, and exact majority cardinality",
+      "Smallest Toeplitz path, extreme recurrence indices and both terminal gaps",
+      "Repeated offsets versus distinct offsets, and the permitted odd boundary rectangle",
+      "First forbidden component sizes53 and54 with both center-count branches",
+      "Potential misuse as a global triangle-free/equitable/circulant or matching-cover conclusion"
+    ],
+    "counterexamples_found": 0,
+    "proof_method": "Finite exact algebra and combinatorial reasoning, including analytic counterexample-first probes; no graph search or solver",
+    "assumption_changes": [],
+    "limitations": [
+      "The original graph on Z and simultaneous pair coverage remain undetermined",
+      "Beta-one types remain possible in three-vertex components",
+      "No internal-double or adjacent-double exclusion is established",
+      "No sharpness or realizability of the path bound is established",
+      "No full order61 exclusion, new graph above57 or changed global range is established"
+    ]
+  }
+}

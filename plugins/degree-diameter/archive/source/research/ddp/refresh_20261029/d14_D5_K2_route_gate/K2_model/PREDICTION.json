@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN_BEFORE_ONE_GREEDY_AND_MODEL_PREPARATION",
+  "source_n": 94186,
+  "source_m": 657452,
+  "target_delta": 14,
+  "target_D": 5,
+  "new_helpers": 2,
+  "cache_rule": "Only read the newly saved complete R3 and unchanged old complete R4; no further source read or ball computation.",
+  "greedy": "Exactly one deterministic run. Choose each legal (side,port) maximizing newly covered own R4 targets plus newly covered opposite R3 targets. Tie: A before B, then increasing old label. Each side <=13 pins, each side uses each pin at most once, total usage <=current spare. Stop at full coverage,26 choices,or no positive legal gain. No restart, swap, seed or optimization followup.",
+  "single_helper_check": "After each choice and every future SAT candidate, separately test each side's own R4 union. A full <=13-pin side is immediately saved as a single-helper94187 candidate even if K2 is incomplete.",
+  "prediction": "The one greedy control may leave targets unresolved; this does not refute existence. The prepared exact-selector model preserves every feasible K2 of this literal source.",
+  "selectors": "A_j/B_j for all3685 free pins, each side at most13, capacity1 forbids A_j and B_j together, capacity2 allows both.",
+  "initial_rows": "Both root rows for the256 smallest combined R4+R3 provider-count targets, plus128 smallest combined-support targets within the saved legacy9754 missing set, plus that set's smallest label. Every row is an exact original condition; this is not full target coverage.",
+  "future_CEGIS": "Only after root reviews and explicitly invokes the separate runner: at most6 calls, each <=min(15,remaining) seconds, total solver CPU<=60 and whole batch<=90CPU including preparation. Full94186 two-root mask check after every SAT result. Add at most256 actual violated exact rows per side per round, lowest combined support first. Never accept partial rows as full cover; no longer timer.",
+  "prepare_only": true,
+  "solver_calls_authorized_during_preparation": 0,
+  "stop": "A cached full-cover hit is saved immediately for root's unique independent acceptance. Otherwise prepare once and stop before solver.",
+  "policy_revisions": [
+    {
+      "id": "RESUME_REMAINING_ORIGINAL_BATCH_BUDGET",
+      "frozen_before_resume": true,
+      "reason": "Parent/root this turn: real round1 SAT and full-source counterexample supplied512 exact rows; original60/90 budgets remain. Avoid mechanical15CPU short stop, not bad-count improvement.",
+      "mode": "--resume-remaining-budget",
+      "prior_solver_calls": 2,
+      "prior_solver_CPU_seconds": 19.21988,
+      "prior_whole_batch_CPU_seconds": 28.25784697,
+      "restored_active_rows": 1188,
+      "next_round": 3,
+      "window_rule": "floor(min(60-cumulative_solver_CPU-1,90-cumulative_whole_CPU-2)); no15 cap in this explicitly authorized continuation",
+      "stop": "First resumed UNKNOWN or rawUNSAT stops; only a real SAT counterexample permits another call, maximum6 total. Observation timeout only polls samePID.",
+      "old_history_preserved": true,
+      "no_solver_run_in_preparation": true
+    }
+  ]
+}

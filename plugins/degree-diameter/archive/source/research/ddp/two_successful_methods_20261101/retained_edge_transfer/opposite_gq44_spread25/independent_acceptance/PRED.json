@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-11-01T05:27:42.305189+00:00",
+  "scope": "Independent one-time literal acceptance of graph_d25_D3_n7242.edges only",
+  "input": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/graph_d25_D3_n7242.edges",
+  "expected_n": 7242,
+  "expected_m": 90525,
+  "degree_bound": 25,
+  "target_radius": 3,
+  "prediction": "The literal edge list defines a simple connected undirected 25-regular graph with 7242 vertices and 90525 edges; radius-3 BFS from every one of 7242 vertices reaches all 7242 vertices.",
+  "acceptance": [
+    "Header matches actual parsed vertex and edge counts.",
+    "Every edge is an in-range unordered pair of distinct vertices and no unordered pair is repeated.",
+    "The adjacency representation inserts both directions of every literal edge.",
+    "The graph is connected and maximum degree is at most 25.",
+    "Every root 0..7241 is checked independently by a fresh ordinary queue BFS through depth 3, with every root recorded.",
+    "Since 7242 > 1+25+25*24=626, a passing graph has exact diameter 3."
+  ],
+  "failure_record": "Return the first concrete root and target with distance greater than 3 if any root fails.",
+  "independence": "No producer parameters, source checks, extension steps, result, generator, proof, old 7225/6160 source materials, or existing caches are used.",
+  "resource_bound": "One checker worker, CPU hard limit 30 seconds, existing system C++ compiler only.",
+  "excluded_actions": [
+    "No graph repair",
+    "No other graph instance",
+    "No solver",
+    "No Lean",
+    "No installation",
+    "No hashes, checksums, or manifests",
+    "No public-record claim"
+  ]
+}

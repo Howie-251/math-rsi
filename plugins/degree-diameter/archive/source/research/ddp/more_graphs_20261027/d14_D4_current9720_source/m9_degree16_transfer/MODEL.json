@@ -1,0 +1,242 @@
+{
+  "source_construction": "../construction.json",
+  "source_group_M": 5,
+  "new_group_M": 9,
+  "controller_encoding": "9*k+i forSL2matrixX_k andcentrali;identityfirst, othermatriceslexsorted",
+  "vertex_encoding": "81*(9*k+i)+x0+3*x1+9*x2+27*x3",
+  "line_ports": [
+    {
+      "symbol": "a",
+      "SL2": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "central_integer_shift": 1,
+      "M": [
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          0
+        ]
+      ],
+      "d": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "symbol": "a^-1",
+      "SL2": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "central_integer_shift": -1,
+      "M": [
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "d": [
+        2,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "symbol": "b",
+      "SL2": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "central_integer_shift": 2,
+      "M": [
+        [
+          2,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "d": [
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "symbol": "b^-1",
+      "SL2": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "central_integer_shift": -2,
+      "M": [
+        [
+          1,
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "d": [
+        2,
+        2,
+        1,
+        2
+      ]
+    }
+  ],
+  "plain": {
+    "generator_SL2": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "central_step": 1,
+    "M": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "c": [
+      2,
+      0,
+      2,
+      2
+    ]
+  },
+  "variants": [
+    {
+      "extra_power": 2,
+      "plain_powers": [
+        1,
+        -1,
+        2,
+        -2
+      ]
+    },
+    {
+      "extra_power": 3,
+      "plain_powers": [
+        1,
+        -1,
+        3,
+        -3
+      ]
+    }
+  ],
+  "positive_plain_power_rule": "P^k shiftscentralcoordbyk and appliesgamma^k, withtrueinversefornegativek; gamma\u00b2=I soevenpowersfiberI andoddgamma. Do notreusegammaforallnewlabels. No requirementgamma^9=I forgraphedgelegality.",
+  "inverse_and_composition_receipt": "Nativecheckedall81plaininverse/powerimages, gamma\u00b2=I, allfourline-relation reversebranches andall17496\u00d716actualarcs bothmodels.",
+  "deck_equivariance": "For h inSL2(3)\u00d7C9, (g,x)->(hg,x) preserveseveryright-generator/controlleredge because allfiberrelations areindependent ofg. Everyfibercoordinatexhasrepresentative(identity,x), so81roots suffice onlyif needed; bothmodelsfailx0already.",
+  "plain_step_holonomy": "P^9 acts asgamma onfiber overunchangedcontroller; thisdoesnotinvalidate agraph relation. Theplainstep permutation hasorder18, exceptfixed-fiberstates with9-cycles. No homomorphismofC9 into thefiberpermutations wasassumed."
+}

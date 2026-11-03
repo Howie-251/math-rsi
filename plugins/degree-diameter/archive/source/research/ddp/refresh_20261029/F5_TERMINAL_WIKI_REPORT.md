@@ -1,0 +1,11 @@
+# F5 terminal merge: actual graph validity and record novelty separated
+
+The saved full-F5 graph is3750/37500/simple/connected/20regular, exactD3, all3750 roots independently checked, ordinary bad unordered pairs0. Generation CPU.106811736 and independent validation1.824719026 are separate; the existing deterministic reproduction receipt records.126901531. No graph/BFS was rerun by the Wiki writer.
+
+The comparison is to the specifically checked September2026 published2783, a difference967. Latest-global record status and public adoption are unconfirmed. The actual graph review returned SUCCESS/ACCEPT_WITH_QUALIFICATIONS, without reviewer code execution. The final Fin3750 formula graph has a complete kernel-verified order3750/maximum-degree<=20/exact-diameter3 witness. The final proof-checker audit owns a verified claim. Lean text-parser equality and exact20regularity are not claimed and do not withhold this formula-graph witness; see F5_FINAL_LEAN_WIKI_REPORT.md and F5_FINAL_LEAN_WIKI_RECEIPT.json.
+
+Two different degree10/D4 restricted-noise domains each generated100 actual3750/18750 graphs; all failed at the first root0. The triangle/external allocation repairs26/52 and covers the25-point local plane in all100 settings, but the global existence prediction is REFUTED. No exact global D or ordinary bad-pair totals are inferred for these negative candidates. Both fixed domains stop.
+
+The old source experiment was updated, plus one literal positive-graph experiment and one combined two-variant noise experiment in the same affine family. The method ledger is368 records, not368 independent methods. Confirmed-public-table counters stay103 examples/3 cells. Validated construction instances including novelty-pending total104/4, with one pending. The port-account diagnostic remains non-mathematical and does not enter these method/record counters. 11D6 tower-prefix binding was subsequently tested once: structural signatures pass, but H7 color0 free0 blocks the fixed K6 resource rule. Three other half classes were not counted; no K6 graph, radius cache or solver was run.
+
+Evidence and exact serial commands are in F5_TERMINAL_WIKI_RECEIPT.json and F5_TERMINAL_WIKI_ROWS.json. No claim node was created, no source graph or earlier103 examples were revalidated, and no mathematical computation was run during persistence.

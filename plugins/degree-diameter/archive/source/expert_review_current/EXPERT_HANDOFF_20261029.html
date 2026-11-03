@@ -1,0 +1,108 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>度直径图构造成果与专家分析请求 2026年10月29日</title><style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#192f40;background:#f3f5f7}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:32px auto;background:white;padding:44px 56px;box-shadow:0 3px 20px #2438490c;border-top:5px solid #276d83}
+    h1{font-size:31px;line-height:1.4;margin:0 0 22px}h2{font-size:24px;border-bottom:1px solid #dce5e9;padding-bottom:10px;margin:42px 0 18px;scroll-margin-top:20px}h3{font-size:19px;margin:26px 0 12px}
+    p,li{font-size:16px;line-height:1.85}p{margin:14px 0}li{margin:8px 0}a{color:#126a8c;text-decoration-thickness:1px;text-underline-offset:3px}strong{color:#122e40}
+    nav{background:#f2f7f8;border:1px solid #dce8eb;border-radius:6px;padding:15px 22px;margin:22px 0 30px}nav p{margin:0;font-weight:600}nav ol{margin:8px 0;padding-left:22px}nav li{font-size:14px;line-height:1.6;margin:5px 0}
+    .table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.65;margin:18px 0}th,td{border:1px solid #d6e0e5;padding:10px 12px;text-align:left;vertical-align:top}th{background:#eaf2f5;font-weight:600}
+    code{font:0.88em/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:#f1f4f6;padding:2px 4px;border-radius:3px;overflow-wrap:anywhere}pre{padding:16px 18px;background:#f1f4f6;border-left:3px solid #8aafb9;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}pre code{padding:0;background:none}
+    footer{font-size:13px;color:#62737d;margin-top:35px;padding-top:16px;border-top:1px solid #dce5e9}
+    @media(max-width:700px){main{margin:0;padding:25px 19px;border-top-width:4px}h1{font-size:26px}h2{font-size:21px}p,li{font-size:15px}th,td{padding:8px}table{min-width:650px}}
+    @media print{html,body{background:white}main{max-width:none;margin:0;padding:0;border:0;box-shadow:none}p,li{font-size:10.5pt;line-height:1.65}h1{font-size:21pt}h2{font-size:16pt;margin-top:25px}h3{font-size:12pt}nav{display:none}h2,h3{break-after:avoid}table{font-size:9pt}pre,tr{break-inside:avoid}a{color:inherit}.table-scroll{overflow:visible}}
+    </style></head><body><main><nav aria-label="文档目录"><p>阅读导航</p><ol><li><a href="#section-1">一 完整成果与尚未完成的事项</a></li><li><a href="#section-2">二 已成功的构造及可迁移的直觉</a></li><li><a href="#section-3">三 当前问题一 从3750点成功图得到16度直径3图</a></li><li><a href="#section-4">四 当前问题二 两个新增点能否共同覆盖94186点源</a></li><li><a href="#section-5">五 已知边界与可替代方向</a></li><li><a href="#section-6">六 希望收到的反馈与附件使用方法</a></li></ol></nav><h1>度直径图构造现状与专家分析请求</h1>
+<p>研究快照截至2026年10月29日23时55分 UTC。供研究极值图论、有限几何、代数图构造与组合优化的专家讨论。</p>
+<p>我们希望构造有限简单无向连通图，在给定最大度数 Δ 和直径 D 下，取得超过公开下界的阶数。已有三个参数的保边扩张成果，以及一张独立核验并完成固定公式 Lean 证明的3750点、20正则、直径3图。当前尚缺一个能继续产生完整新图的结构规则。</p>
+<p><strong>最希望专家帮助判断的是：现有成功图中的三步路线，哪些可以在降度时共同保留；以及新增点之间怎样互助，才能补足整个图的覆盖。</strong> 下文给出两个定义完整、已有数据支持的当前问题。专家可任选其一；更有根据的其他未定参数或机制也欢迎提出。</p>
+<p>若只有15分钟，建议读第一节成果表、第三节16度问题和第六节反馈请求。第二节解释成功构造；第四节给14度问题；第五节列出已知停止边界，避免重复。完整源码、图、模型和证据随ZIP提供，无需先读研究日志。</p>
+<h2 id="section-1">一 完整成果与尚未完成的事项</h2>
+<p>记 N(Δ,D) 为最大度数至多 Δ、直径至多 D 的有限简单无向图的最大阶数。</p>
+<div class="table-scroll"><table><thead><tr><th>参数 Δ,D</th><th>已核对的公开比较值</th><th>本地最强完整图</th><th>增加点数</th><th>保存的不同阶数实例</th></tr></thead><tbody><tr><td>11,5</td><td>37628</td><td>37631</td><td>3</td><td>37629至37631，共3例</td></tr><tr><td>12,5</td><td>42342</td><td>42402</td><td>60</td><td>42343至42402，共60例</td></tr><tr><td>13,5</td><td>51417</td><td>51457</td><td>40</td><td>51418至51457，共40例</td></tr><tr><td>20,3</td><td>2783，2026年9月公开构造</td><td>3750</td><td>967</td><td>1例，全球最新纪录地位待确认</td></tr></tbody></table></div>
+<p>前三项公开比较值，以及当前研究所用的 (16,3)=1920、(14,5)=94186，均于2026年10月29日再次读取 <a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas 主表</a>核对。该表覆盖到16度，不能据此确认20度的最新纪录。2783的依据是包内 Rajiv 原始论文和公开资料，见<a href="EXPERT_HANDOFF_20261029_files/primary/RAJIV_PAPER.pdf">原论文</a>与<a href="EXPERT_HANDOFF_20261029_files/primary/RAJIV_README.md">原始README</a>。</p>
+<p>现有104个合法实例、4组参数；其中103例、3组参数超过上述主表比较值。103例共享保边单点扩张框架，属于三个序列，不是103种方法。3750点图另外记账，其全球新颖性仍待确认。成果尚未获公开表采用，未证明最优；小度数、小直径方向尚无新纪录。</p>
+<p>3750点固定公式图完成了1例 Lean 见证；原103例的具体图形式化仍未完成。最新两条研究线未产生新的目标图。局部引理、失败图、SAT候选和UNKNOWN均不计入完整成果。</p>
+<h2 id="section-2">二 已成功的构造及可迁移的直觉</h2>
+<h3>保边扩张为什么有效</h3>
+<p>在已合法的图 G 中保留全部旧边，只增加新点 z 及其邻域 S，则合法的精确条件为：</p>
+<pre><code>S ⊆ {v : deg_G(v)&lt;Δ}，|S|≤Δ；
+⋃_{s∈S} B^G_{D−1}(s)=V(G)。</code></pre>
+<p>旧点间距离不会增加，新点到所有旧点的距离由闭球并集保证。三个成功序列逐步在当时的完整图上检验这些条件，包括原外围和此前新增点。基图、几何结构和公开构造归原作者；本项目贡献是具体新增邻域、完整扩张序列及其覆盖验收。</p>
+<p>这也解释了迁移障碍：满度源没有保边增点的端口；有余度时，候选邻域还需同时覆盖所有目标。单纯重排或重复已用邻域，可能受端口容量阻断。</p>
+<h3>3750点图的明确规则</h3>
+<p>取30点四正则、带端口的控制器 C，每层为 F5³，共30×125=3750点。固定方向和矩阵如下，全部运算在F5中。</p>
+<pre><code>ℓ0=(1,0,0)，ℓ1=(0,1,0)，ℓ2=(0,0,1)，ℓ3=(1,1,1)；
+inv=(1,0,3,2)。
+T0=[[0,2,4],[1,0,0],[0,1,3]]
+T1=[[0,1,0],[4,0,3],[2,0,1]]
+T2=[[2,3,1],[0,4,1],[1,0,1]]
+T3=[[2,1,2],[3,3,4],[3,4,4]]
+
+若 b=C[a][p]，则连接
+(a,x)—(b,T_p x+tℓ_inv(p))，t∈F5。
+编码：(a,x0,x1,x2) ↦ 125a+x0+5x1+25x2。</code></pre>
+<p>30行控制器及全部参数见 <a href="F5_D20_D3_3750_20261029/PARAMETERS.json">PARAMETERS.json</a>。反向关系相容，每个端口提供5个不同邻点，四个目标层互异，因此得到简单无向20正则图。</p>
+<p>该构造的点数来自覆盖结构：非回退三步路线的三个噪声方向全部满秩，覆盖整个125点目标层；相邻控制器端点则由六个共线平面互补覆盖。六平面各25点，公共线5点，并集为6×(25−5)+5=125。前者处理780个非邻或同端点的有序控制对，后者处理120个相邻有序控制对。这是两类路线的互补，而不是反复覆盖同一部分点。</p>
+<p>控制器与仿射路线框架继承 <a href="https://raw.githubusercontent.com/rmizuno42/ddp/main/results/degree16-diameter3/certificate/PROOF_ja.md">Ryosuke Mizuno 的原始证明</a>。本项目给出上述具体F5矩阵和完整实例；原作者已有一般框架及其他F5实例，不将使用F5或仿射提升本身主张为首创。</p>
+<p>独立程序从完整边表重建邻接，全部3750根检验通过：37500边、20正则、连通、直径恰3。<a href="F5_D20_D3_3750_20261029/INDEPENDENT_VALIDATION.json">独立结果</a>和<a href="F5_D20_D3_3750_20261029/PROOF_SKELETON.md">证明骨架</a>均随包提供。</p>
+<p>Lean结论针对 Fin 3750 上字面公式定义的图，证明阶数3750、最大度≤20、任意点对有长度≤3的真实 walk，且直径不能≤2。未形式化磁盘文本解析等同性或恰20正则。见<a href="F5_D20_D3_3750_20261029/formal/DegreeDiameter/Portfolio/F5Graph3750Exact.lean">最终定理</a>及<a href="F5_D20_D3_3750_20261029/PROOF_AUDIT.md">证明核对</a>。</p>
+<h2 id="section-3">三 当前问题一 从3750点成功图得到16度直径3图</h2>
+<h3>对象和允许的改动</h3>
+<p>固定第二节完整图 G，任意选择保留顶点集 S，研究诱导子图 G[S]，希望：</p>
+<pre><code>|S|≥1921，maxdeg(G[S])≤16，diam(G[S])≤3。</code></pre>
+<p>每个旧点独立决定保留或删除，阶数只给下限；不要求保留整层，不固定每层点数。这个问题若成功，便超过当前 (16,3)=1920。它与已排除的“保留3750点、只删边”是不同操作。</p>
+<h3>一项合理预测及其失败原因</h3>
+<p>最初受控规则是在每个125点层中删除25点平面 x0+x1+x2=0。它在每条四方向平行线上都删去一个点，因而确实产生3000点、24000边、16正则图。</p>
+<p>但保住度数不等于保住路线。旧标签1和626的唯一三步路径为1—2250—3625—626，两个内部点同时被删除，修改后距离为4。以旧点1为根，三步球只有2231点，遗漏769点；该根最远距离为5。没有把单根统计写成全图直径或全局坏对总数。<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_hyperplane3000/RESULT.json">实际失败图与结果</a>随包保留。</p>
+<p>后续推导把失败扩大到整个精确范围：若每层删25点，且四个方向的每条平行线都恰删一点，则全部此类删除规则都不能保持直径3。第0与第5层之间至少有2000个坏无序点对；本地加强计数为这两层间恰3600。既有 Gemini 静态审阅通过的是原2000下界及旧压缩闭包逻辑，未审阅3600加强或下述最新引理。见<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_transversal_deletion/DERIVATION.md">范围推导</a>和<a href="EXPERT_HANDOFF_20261029_files/primary/reviews/f5_induced_geodesic_20261029.DISPOSITION.md">审阅处置</a>。</p>
+<p>因此已停止该四方向transversal删除族；一般诱导保留仍开放。</p>
+<h3>新认识一 纪录候选必须使用全部30层</h3>
+<p>令 S_a 为第a层保留的坐标，Q={a:S_a非空}。控制器有258条有向唯一三步词。若其两端层保留非空，两个内部层也必须非空，得到129条去反向重复的闭包规则。</p>
+<p>最初预测“所有真子集闭支持至多15层”被反例推翻。完整 NextClosure 枚举得到24575个闭支持，真子集最大为19；其中大小≥16的恰有三组16层和三组19层。</p>
+<p>三组16层支持均在控制器投影上出现距离4，不能支持目标图。三组19层投影距离虽通过，但每组都有4条不共端点的外部控制边；其中某端缺少一个控制邻层，使一个三步回退平面完全不可用。对这样的边 u—v，可推得任意部分层保留都满足：</p>
+<pre><code>|S_u|+|S_v|≤125。</code></pre>
+<p>理由是端点差必须避开一个25点平面的线外部分；按该平面的5个陪集分组，每个陪集两侧合计至多25点。四条不交边相加，19层合计至多(19−4)×125=1875点。</p>
+<p>结合完整闭包枚举，任何超过1875点的直径3诱导子图都必须让全部30层非空。各层点数仍完全自由。这是本地纸面推导与完整有限枚举共同支持的结论，尚未完成最新外审或Lean。完整证据与枚举完备性见<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_shared_routes_model/DERIVATION_PACKAGE.md">统一推导</a>、<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_support_closure/LARGE_PROPER_SUPPORTS.json">闭支持清单</a>及<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_support_closure/DENSITY_LEMMA.md">密度引理</a>。</p>
+<h3>新认识二 五条路线也可能共用一个必选内部点</h3>
+<p>取不属于控制三角形的外部控制边 u→v，端口为p；另取q≠p和u层点w。记 N_p(w) 为其在p目标层的5个邻点，定义：</p>
+<pre><code>X=(w+span(ℓ_q))去掉w，Y=N_p(w)，Z=N_q(w)。
+|X|=4，|Y|=|Z|=5。</code></pre>
+<p>对任意 x∈X、y∈Y，原图全部三步以内路线恰为 x—z—w—y，z∈Z。五条路径只替换z，仍共享不可缺少的w。因此只要 X、Y 都有保留点，就必须保留w且至少保留一个Z点。</p>
+<p>字面例子为w=0、p=1、q=0：X={1,2,3,4}，Y={2500,…,2504}，Z={2250,2255,2260,2265,2270}。20对端点的全部二步及三步路线均已直接枚举，全部符合预测；22500组的一般结论依据通式推导，没有声称逐组实测。见<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_shared_middle_routes/PAIR_RESULTS.json">20对检验</a>及<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_support_closure/MULTIROUTE_LEMMA.md">一般引理</a>。</p>
+<p>这些关系与全30层非空条件已进入增强必要模型：315221变量、1290903子句。<strong>增强主模型仅准备，尚未求解；仍不是完整直径3判据。</strong> 旧300221变量模型的一次15 CPU秒调用为UNKNOWN，0候选，不能据此排除一般诱导子图。新SAT若命中，仍需生成实际诱导图并检验全部根。见<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_shared_routes_model/MODEL.json">模型参数</a>与<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_retention_closure/CEGIS_TERMINAL.json">旧模型终态</a>。</p>
+<h3>希望专家在这里分析什么</h3>
+<p>目前全30层非空使“整个邻层缺失”的密度界不再直接适用，但部分平行线的提供者仍可能全部被删。能否将该密度界推广为依赖各平行线保留情况的不等式，判断降至16度时，是否必然破坏一整类三步覆盖？</p>
+<p>另一个可证伪问题是：全30层非空、度≤16、唯一词闭包和上述共享内部点关系，是否已经迫使总点数≤1920？一个推导可排这个固定机制；一个满足全部必要条件、但仍失败的明确保留集，则能指出缺失的路线类别。二者都比继续减少少量坏点对更能指导下一次生成。</p>
+<h2 id="section-4">四 当前问题二 两个新增点能否共同覆盖94186点源</h2>
+<h3>精确定义</h3>
+<p>固定已有最大度14、直径5的94186点图 G，保留全部旧边。增加相邻新点 y、z，分别连接旧邻域 A、B。因为新点之间已经占用一条边，所以 |A|、|B| 均至多13。</p>
+<p>可用旧端口共3685个，其中3670点余度1、15点余度2。若一个端口被两侧同时使用，必须有余度2。令 R_k(A)=⋃_{a∈A} B_k^G(a)，则这项固定操作的直径条件精确为：</p>
+<pre><code>R4(A)∪R3(B)=V(G)；
+R4(B)∪R3(A)=V(G)。</code></pre>
+<p>理由是 y 到旧目标的最短距离为 min(1+d_G(A,t),2+d_G(B,t))，z同理；旧旧距离不会增加，仍至多5；新点间已有边。成功即可得到94188点图，超过当前 (14,5)=94186。与13度成功序列相比，这里允许一个新点经另一个新点补路，而不是要求两侧独立四步覆盖。</p>
+<h3>已检验到哪里</h3>
+<p>全部旧目标的三步提供者数量为25至119，没有零提供者目标，但这并不解决两侧各13个端口的共同选择问题。</p>
+<p>初始676条精确覆盖行的模型找到一对A、B；在全部94186个目标上核查，y、z仍分别漏6292和6096个目标。加入512条真实违反行后，共1188条行；后续调用返回UNKNOWN。整批3次调用累计58.2235 solver CPU秒，0完整新图。这里的遗漏数是两个新根到旧目标的覆盖缺口，不是全图坏无序点对总数。</p>
+<p>随后做了全覆盖签名的精确等价压缩：3685端口仅缩到3589类，94186目标仅缩到94069类。完整双侧覆盖系统仍有188138条行，表示没有实质缩小，因此停止本次压缩门，没有借此重开求解。K2机制仍未排除。</p>
+<p>原始早期REPORT中的“仅准备”是历史阶段，应以<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/d14_D5_K2_route_gate/K2_model/RESUME_SOLVER_RESULT.json">最终求解结果</a>和<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/d14_K2_exact_signature_compression/RESULT.json">压缩终态</a>为准。<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/d14_K2_exact_signature_compression/PORT_GROUPS.json">完整端口组</a>、两种目标支持矩阵、端口顺序和模型源码均随包提供。</p>
+<h3>希望专家在这里分析什么</h3>
+<p>能否从源图几何或两类闭球的交叠中，得到一组能互补的A、B生成规则？希望规则解释：哪类目标由本侧R4覆盖，哪类必须交给另一侧R3，端口容量如何同时实现。</p>
+<p>若机制本身受阻，能否给出少量带非负权重的目标，使任意两侧各至多13个端口的选择都无法满足双侧覆盖（合计至多26次使用，余度2端口允许共享），或给出一个更小的不可满足目标子系统？当前没有此类证书。只有按完整(R3,R4)覆盖同时相等的端口才能直接合并；较粗几何签名若用来归约，需要说明它为何保全所有目标。</p>
+<h2 id="section-5">五 已知边界与可替代方向</h2>
+<p>以下结论仅适用于所写范围，作为专家选题参考；UNKNOWN不代表整族无解。</p>
+<div class="table-scroll"><table><thead><tr><th>对象或操作</th><th>已知边界</th><th>仍可改变什么</th></tr></thead><tbody><tr><td>固定3750图保留全部顶点、只删边</td><td>每条边都有D3关键见证，不能降度且保D3</td><td>删顶点、重连、换矩阵或控制器</td></tr><tr><td>固定F5矩阵和控制器，三角边选3系数、外边选2系数且不依赖坐标</td><td>全部10^60字面赋值不能D4；外部五环迫两种差集形状交替而矛盾</td><td>坐标依赖、矩阵、拓扑或分支数分配</td></tr><tr><td>33点控制器11K3加任意外部2因子</td><td>完整共同三步路线模型为UNKNOWN；保存best仍失败</td><td>一般非对称块连接仍开放</td></tr><tr><td>同上具有规定C11同时平移对称、满足该NB3证书</td><td>整个精确对称范围已排</td><td>非C11规则；不能外推为普通D3不可能</td></tr><tr><td>13度原40组新增邻域</td><td>全部独立R4覆盖原基图，780对集合距离≤3；固定池的重数最优恰40</td><td>真正的新邻域或改动旧连接</td></tr><tr><td>当前13度图截饱和的固定P40池，再任意新增点互连</td><td>即使新增点成团，提供者删除链也为空，整个固定挂接池失败</td><td>增加guard、改变挂接集或旧边</td></tr><tr><td>小辅助图8Q3加额外度≤2</td><td>成功时额外图必为2因子；整个C8不变范围已排</td><td>一般非循环2因子仍开放</td></tr></tbody></table></div>
+<p>13度方向随后还由受控修改产生了3组新邻域，但与原40组合成的43组固定池也不能支持41个新增点；不是尚未尝试生成新邻域。见<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/d13_core_swap_static_pool/REPORT.md">新邻域及共同容量结果</a>。</p>
+<p>33点控制器若让每个非邻不同端点都有三步路线，可沿用成功F5证书，生成4125点20度候选；普通控制器直径3本身不够。一般对象仍值得有结构依据的建议，但不再仅追加对称模板或旧timer。精确输入、旧停止范围和证明见<a href="EXPERT_HANDOFF_20261029_2155.html">21时55分详细稿</a>、<a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/controller33_C11_exact/DERIVATION_PACKAGE.md">C11范围证明</a>及<a href="EXPERT_HANDOFF_20261029_files/README.md">当前分析附件索引</a>。</p>
+<p>我们也接受其他公开未定参数的构造入口，不要求专家局限于16度、14度或原始参数清单。希望入口与现有成功对象有可解释的联系，或者明确改变覆盖机制；旧D=2任务继续暂停。</p>
+<h2 id="section-6">六 希望收到的反馈与附件使用方法</h2>
+<h3>专家可任选一个问题回应</h3>
+<ol><li>16度诱导问题：哪些局部保留关系能同时保证整类三步路线？能否推出可用的密度限制，或给出满足当前必要条件的明确反例？</li><li>14度双新点问题：能否设计有互补覆盖理由的A、B，或给出针对该精确操作的覆盖障碍证书？</li><li>其他机制：若建议换控制器、矩阵、邻域规则或参数，请说明哪类路线因此新增，哪些覆盖仍保留；最好给一个小型可检验预测。</li><li>贡献定位：是否已有至少3750点、最大度≤20、直径≤3的公开图，或同样的F5矩阵实例？请给可核对出处，以便确定纪录与新颖性范围。</li></ol>
+<p>一个有用反馈可按以下四项写，不要求一次解决全部问题：对象及允许改动；具体预测；推导、反例或小例子；据此建议修改哪条生成规则。请标明证明、猜想或实验建议。无需重验已接受图，也不需要重读全部历史。</p>
+<h3>可直接转交的文件</h3>
+<p>请整体发送同名ZIP，解压后打开 <code>EXPERT_HANDOFF_20261029.html</code>。HTML可离线阅读；<code>.md</code>是可编辑正文，<code>.html.txt</code>是与HTML逐字相同的源码。附件中的研究脚本保留原工程路径及终态保护，现成CNF可直接分析；除下述3750图标准库入口外，不将整个历史搜索宣称为一键运行。</p>
+<div class="table-scroll"><table><thead><tr><th>文件或目录</th><th>内容与用途</th></tr></thead><tbody><tr><td><a href="F5_D20_D3_3750_20261029/README.html">3750点完整图包</a></td><td>全边表、确定性参数、生成器、独立验证器、证明与Lean源码</td></tr><tr><td><a href="MORE_GRAPHS_20261027.zip">原103图生成包</a></td><td>三个完整基图、逐步新增邻域、生成器与验收证据</td></tr><tr><td><a href="EXPERT_HANDOFF_20261029_files/README.md">当前附件索引</a></td><td>16度证明及失败图、14度精确模型和覆盖矩阵、旧边界与来源</td></tr><tr><td><a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/f5_induced_shared_routes_model/DERIVATION_PACKAGE.md">16度统一推导</a></td><td>支持分类、密度界、共享中间点、模型适用范围</td></tr><tr><td><a href="EXPERT_HANDOFF_20261029_files/refresh_20261029/d14_K2_exact_signature_compression/REPORT.md">14度精确压缩说明</a></td><td>原标签到组的映射、容量重建、二进制覆盖矩阵格式</td></tr><tr><td><a href="EXPERT_HANDOFF_20261029_2155.html">21时55分详细稿</a></td><td>C33、D13和64点辅助图的完整历史分析</td></tr></tbody></table></div>
+<p>3750图使用Python标准库即可复现。进入 <code>F5_D20_D3_3750_20261029</code> 后执行：</p>
+<pre><code>python generate.py --parameters PARAMETERS.json --output rebuilt.edges
+python generate.py --parameters PARAMETERS.json --compare graph_d20_D3_n3750.edges --dry-run
+python independent_verify.py graph_d20_D3_n3750.edges --output verify.json</code></pre>
+<p>边表首行为 <code>n m</code>，后续每行 <code>u v</code> 表示无向边。已有完整验收结果随包提供。Lean使用4.24及原mathlib工程，包内包含最终源码和编译证据，不含完整依赖环境。</p>
+<p>14度压缩目标矩阵每行57个小端uint64，94186行，位g表示端口组g；配合PORT_GROUPS及目标类映射，可直接分析两侧覆盖和共享容量。完整原始三步、四步缓存另供核对，不需重做BFS。16度统一推导中的<code>../f5_full_d20_D3/</code>保留字面参数；完整成功图在主包同名目录。</p>
+<p>历史Wiki账本仅作索引快照，其旧路径仍指向原工程，并非全部历史链接的离线镜像；正文所列分析入口定向打包。原件保存在 <code>/inspire/hdd/global_user/mahaitong-240108120090/ar4math/expert_review_current/</code>，聊天下载区只是镜像。本次交付未新增图生成、BFS、求解或Lean编译，原Goal保持ACTIVE。</p><footer>离线正文 · 附件请在完整ZIP解压后阅读 · HTML源码见同名.html.txt</footer></main></body></html>

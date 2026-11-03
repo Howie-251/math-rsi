@@ -1,0 +1,84 @@
+{
+  "created_UTC": "2026-10-27T20:32:58.337046+00:00",
+  "status": "FROZEN_BEFORE_NUMERICAL_CONTROLS",
+  "question": "Can restoring the original normal alpha order8 retain D8 after changing the field to13?",
+  "source_normal_alpha_order": 8,
+  "earlier_q11_normal_alpha_order": 4,
+  "q": 13,
+  "target_Delta": 6,
+  "target_D": 8,
+  "savedL": 80050,
+  "hypothetical_n": 137904,
+  "fixed_controls": [
+    {
+      "alpha": [
+        [
+          8,
+          6
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "alpha_square_scalar": 5
+    },
+    {
+      "alpha": [
+        [
+          9,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "alpha_square_scalar": 8
+    }
+  ],
+  "beta": [
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      12
+    ]
+  ],
+  "chi17_alpha": 5,
+  "positive_generators": {
+    "A": {
+      "V": [
+        0,
+        0
+      ],
+      "c": 0,
+      "u": 0,
+      "v": 1
+    },
+    "B": {
+      "V": [
+        0,
+        1
+      ],
+      "c": 1,
+      "u": 1,
+      "v": 12
+    },
+    "C": {
+      "V": [
+        0,
+        2
+      ],
+      "c": 5,
+      "u": 2,
+      "v": 11
+    }
+  },
+  "prediction": "At least one of the two fixed order8 module embeddings yields complete D8 coverage. This is a prediction, not a guarantee.",
+  "budget_CPU_seconds": 5,
+  "stop": "Only these two controls; no free-vector search or further field after failure. First hit may stop before the second control.",
+  "validation": "Actual simple/undirected6regular adjacency, full identity BFS; connected Cayley graph has global diameter equal to identity eccentricity."
+}

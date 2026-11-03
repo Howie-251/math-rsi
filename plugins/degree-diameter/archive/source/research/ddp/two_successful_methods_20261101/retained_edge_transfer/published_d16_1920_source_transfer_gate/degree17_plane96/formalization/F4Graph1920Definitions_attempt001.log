@@ -1,0 +1,37 @@
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:29:45: warning: This simp argument is unused:
+  Fin.val_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [decodeVec, encodeVec, F̵i̵n̵.̵v̵a̵l̵_̵z̵e̵r̵o̵,̵ ̵Fin.val_one, Fin.val_two, pow_zero, pow_one,
+  ̲  ̲ ̲ ̲show 4 ^ 2 = 16 from rfl, Nat.div_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:29:59: warning: This simp argument is unused:
+  Fin.val_one
+
+Hint: Omit it from the simp argument list.
+  simp only [decodeVec, encodeVec, Fin.val_zero, F̵i̵n̵.̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵Fin.val_two, pow_zero, pow_one,
+  ̲  ̲ ̲ ̲show 4 ^ 2 = 16 from rfl, Nat.div_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:29:72: warning: This simp argument is unused:
+  Fin.val_two
+
+Hint: Omit it from the simp argument list.
+  simp only [decodeVec, encodeVec, Fin.val_zero, Fin.val_one, F̵i̵n̵.̵v̵a̵l̵_̵t̵w̵o̵,̵pow_zero, pow_one,
+  ̲  ̲ ̲ ̲show 4 ^ 2 = 16 from rfl, Nat.div_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DegreeDiameter.Portfolio.F4Graph1920.forward_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:112:33: error(lean.unknownIdentifier): Unknown identifier `finSumFinEquiv`
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:113:0: error: Not a definitional equality: the left-hand side
+  ↑(label (Sum.inr j))
+is not definitionally equal to the right-hand side
+  1920 + ↑j
+DegreeDiameter/Portfolio/F4Graph1920Definitions.lean:113:68: error: Type mismatch
+  rfl
+has type
+  ?m.16 = ?m.16
+but is expected to have type
+  ↑(label (Sum.inr j)) = 1920 + ↑j
+label : Vertex ≃ Fin 2016

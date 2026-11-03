@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_BEFORE_JOINT_K6_MODEL",
+  "target_Delta": 13,
+  "target_D": 3,
+  "savedL": 972,
+  "source_n": 972,
+  "source_m": 6264,
+  "hypothetical_n": 978,
+  "hypothetical_m": 6327,
+  "prediction": "A minimum48-point dominating set of the actualfree inducedpath graph can be colored into6disjoint8-point sets satisfying everyoldfulltarget R2/R1 coverage constraint, producing a complete978-point graph.",
+  "rule": "Add6helpers asK6, eachlinked to8distinctdegree12 oldpins; oldpins disjoint. Preserve everyoldedge. Restrict totalS to minF-dominating48 accordingtoactualpath components; no extraanchors, edgechanges or otherhelpers.",
+  "source_free_components": {
+    "P2": 18,
+    "P3": 6,
+    "P4": 9,
+    "P6": 3
+  },
+  "min_dom_restrictions": "P2 oneof2; P3 center; P4 onefrompositions0/1 andonefrom2/3; P6 positions1and4. Canonicalpath starts atsmallerendpoint. Expert providesliteral mapping.",
+  "explicit_extra_color_restriction": "The6P3centers sortedbyparent canonicalrule arefixed one-to-one tocolors0..5; this is anadditionalrestriction, not claimedWLOG.",
+  "model": "648binary x(color,pin), atmostonecolorperpin, exactly8/color, min-dominatingset constraints. For eachof864oldfulltargets andeachcolor i: sumR1(t)s_p + sum(R2(t)minusR1(t))x_i,p>=1.",
+  "guarantee": "F targets covered byR1(S), soallhelpers within3. Fulltargets checked byall864\u00d76 constraints. Old-oldD3 inherited, helpersmutualdistance1. All6newrootsfullBFS anddegree/oldedgecheck onfirsthit.",
+  "budget_CPU_seconds": 20,
+  "workers": 1,
+  "stop": "OneLP diagnostic andoneMIP feasibilitywithsharedremainingbudget. Firsthitexport andnotifyparent; UNKNOWN/infeasible stops thisexplicitK6rule, noK7/seed/score/budgetcontinuation.",
+  "source_old_allroot_BFS": 0,
+  "cached_R2_reused": true
+}

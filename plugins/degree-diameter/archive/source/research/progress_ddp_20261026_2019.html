@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Degree/Diameter 研究进展</title><style>body{font:17px/1.65 system-ui;max-width:1080px;margin:36px auto;padding:0 20px;color:#17212c}h1,h2{line-height:1.3}a{color:#155bb2}table{border-collapse:collapse;width:100%}td,th{padding:8px;border:1px solid #ccd4db;text-align:left}.note{background:#eef5fa;padding:16px}small{color:#526477}code{overflow-wrap:anywhere}</style></head><body>
+<h1>当前任务：用陪集塔构造新的度数—直径图</h1>
+<p>更新：2026-10-26 20:19:18 UTC。范围4≤Δ≤12，D∈{3,4,5}。最近完成七度、目标直径5的忠实半线性固定塔判定，全部分支均失败；10月26日核对的公开门槛为2810点。旧N(8,2)继续暂停。</p>
+<div class="note"><strong>已验证新下界：0。没有新纪录或决定性突破。</strong>最实质的阶段进展是恢复已知650图的完整代数结构，并据此得到可计算的精确覆盖条件。有限族失败、已知图复现、模型赞同和处理数量都不算目标成功。</div>
+<h2>新增：从已知边表得到明确构造</h2>
+<p>原650图的500片叶子是群Z₂₅⋊₂C₂₀的元素，125个块头和25个组头是H≤K的陪集。四个叶生成元为(21,9)、(17,11)、(1,10)、(10,10)。生成的全部1625条边与原图逐边相同，左群作用在三层各自传递。这解释了原图的五个K₅及组间3/5边重数；它是已知对象的精确恢复，尚未认定为新的公开原创成果。</p>
+<p>同一规则可生成n=q(d²+1)的d正则图；直径5仍须另证。三层传递使三个代表根的完整BFS足以精确计数全部坏点对，最终保存图再独立全源验证。组头覆盖已化成有限域／环中的精确集合覆盖条件，并与已保存图逐点核对。叶间树路径必须计入成本2的同块跳转和成本4的同组跳转。</p>
+<h2>实际完成的固定塔范围</h2>
+<table><thead><tr><th>固定构造</th><th>实际范围与结果</th><th>最好保存图</th></tr></thead><tbody>
+<tr><td>四度，F₂₅，425点</td><td>66个规范候选完整全源检查；全对合型另有纸面障碍。固定塔无D5。</td><td>D7，18,450坏点对</td></tr>
+<tr><td>五度，F₄₁，1066点</td><td>22,932合法候选，必要HH条件留下15,190个完整评分；全对合型纸面排除。固定塔无D5。</td><td>D7，42,230坏点对</td></tr>
+<tr><td>六度，F₆₁，2257点</td><td>1,980,573合法候选完成，累计103.72CPU秒。804个规范候选组头覆盖全部通过，但块头覆盖仍失败。</td><td>D6，127,185坏点对</td></tr>
+<tr><td>七度，Z₉₈，4900点</td><td>完整五步路径计数：一目标块编号下最多覆盖280片叶子，却须覆盖588片；结合HH条件排除整个固定塔。原计划340,200项枚举未启动。</td><td>纸面排除，无搜索候选</td></tr>
+<tr><td>七度，F₆₄，3200点，三个逆对</td><td>1,058,400规范候选全部完成，无D5，累计109.924CPU秒。3016个规范候选完成组头覆盖，无一个完成块头覆盖。</td><td>D6，83,328坏点对；全部3200根独立BFS通过，简单连通七正则</td></tr>
+</tbody></table>
+<p>上述计数是规范输入数，可能存在同构重复。HH过滤后的“最好”仅指实际评分子集的坏点对最少，不冒称跳过子集的全局最优。所有排除都限于所述固定群、子群和生成元类型，不能外推一般同阶图。</p>
+<h2>最新终态：忠实半线性固定塔也未成功</h2>
+<p>循环F₆₄⋊C₄₂的剩余“两逆对＋两对合”分支也已结束。中心二阶作用固定块头／组头、交换每对叶子，因此先压成1856点商图能精确保留这些距离。13,127,680个规范商输入全部完成，5,693,310个通过HH，零个通过精确BB条件，最好仍缺18个目标块头，累计16.739514CPU秒；无需展开提升。结合三逆对有限结果与至多一逆对的纸面排除，关闭整个指定循环塔，不是一般3200点图。</p>
+<p>当前改用K=⟨r,x↦x⁸⟩≅C₇×S₃，H=S₃，仍为3200点七正则的同一陪集塔机制。这个作用忠实，原来把叶边成对集中到同一块对的中心核消失；H对非零横坐标的轨道有3点与6点两种，实际改变了短路线覆盖。群结构、全部逆元类型、允许的共轭及Frobenius规范已独立核对。六个首元代表覆盖5,058,306合法三逆对输入，其中4,484,088通过HH。该三逆对范围现已全部完成：1240个BB通过者均做完整三根评分，无D5；累计12.503756CPU秒。已评分者中的最好图独立全3200根为D6、51,072坏点对，其中LL36,288、LB10,752、LH2,688、BH1,344，BB/HH为零。281个BB通过者同时达到head根全覆盖，但没有同时完成block根覆盖。剩余“两逆对＋两对合”范围现也已完整结束，见下。</p>
+<p>两逆对两对合的41,490,060个合法规范输入全部完成：38,982,510个通过HH，18,524个通过BB并接受完整三根评分，仍无D5；累计89.786032CPU秒。已评分者中最好图的三根缺失为24/30/0，独立全部3200根确认直径6、38,976个坏点对，全部距离6。2652个head根全覆盖只指BB通过子集，不能冒称全范围计数。结合三逆对结果与至多一逆对的280&lt;384容量证明，整个指定忠实半线性塔被排除；一般3200图和其他群／子群结构仍开放。</p>
+<p>当前批次与独立检查均已终止，没有追加种子或新后台批次。M2继续作为研究机制，下一入口需针对完整族的失败改变实际群作用或子群结构，不能把坏点对减少当作距离5已经接近解决。</p>
+<h2>其他终态与错误处置</h2>
+<p>M1剩余非忠实反射三分支已完成3,273,316合法赋值，49.79CPU秒；816点与两张696点最好图独立全源均为五正则D6，分别9792、4350、4524坏点对。加上既有p13与容量结果，只关闭指定双反射范围；没有M1后台队列。</p>
+<p>实际两轮Gemini审阅已返回。构造、轨道计数及head公式获范围明确的认可；第一轮把不经过head的路线误当普通叶Cayley路线，该容量推断已被保存图反例否定并被第二轮撤回。第二轮新增块—块公式又遗漏经目标head的路线；q41保存图实际找到16个被该式漏掉的可达块头。本地修正式与BFS目标集合逐点相同，六类完整路径公式和逐项处置均已保存。回执成功不表示数学全通过。没有新的Grok或Lean成果。</p>
+<p>此前676点插入图D6/2172坏对、循环配对图D7/27142坏对仍是失败对象。端口诊断已确认其全部588个组头—块头坏对都有潜在块级路线，却无对应叶两步路线。匹配扩张、度数缺口修复、M3控制图和旧DD82继续暂停，原结果与限制保留。</p>
+<h2>人工意见与直接证据</h2>
+<p>对“到现在为止有啥卓越成果吗”的答复：本Goal还没有达到新纪录这一成果标准；已有可复用的结构恢复、精确公式和局部构造族排除。继续依据数学与实验反馈研究，不按报告时钟强制换题。</p>
+<p><a href="ddp/source650_hierarchy/ALGEBRAIC_DIAGNOSIS.md">650完整代数重建</a> · <a href="ddp/m2_coset_tower/HEAD_ROUTE_CRITERIA.md">精确head覆盖</a> · <a href="ddp/m2_coset_tower/FULL_ROUTE_CRITERIA.md">六类完整路径条件</a> · <a href="../reviews/ddp/m2_coset_tower_review_disposition_20261026.md">实际审阅与错误处置</a> · <a href="ddp/m2_coset_tower/RING98_SCOPE.md">4900塔完整容量证明</a> · <a href="ddp/m2_coset_tower/d7_f64_three_pairs/REPORT.md">循环3200三逆对批次</a> · <a href="ddp/m2_coset_tower/d7_f64_two_pairs/REPORT.md">剩余分支中心商判定</a> · <a href="ddp/m2_coset_tower/d7_f64_semilinear/STRUCTURE.md">新半线性结构</a> · <a href="ddp/m2_coset_tower/d7_f64_semilinear/NORMALIZATION.md">半线性三逆对规范</a> · <a href="ddp/m2_coset_tower/d7_f64_semilinear_two_pairs/REPORT.md">半线性剩余分支完整结果</a> · <a href="ddp/m2_coset_tower/d6_q61/REPORT.md">2257完整有限结果</a> · <a href="ddp/m2_coset_tower/REVIEW_COUNTEREXAMPLE.md">实际审阅反例</a></p>
+<p><a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">公开主表</a> · <a href="../context/DD_PORTFOLIO_START_20261026/NEXT_SESSION.md">恢复入口</a> · <a href="../research-wiki/query_pack.md">唯一Wiki</a> · <a href="../research-wiki/DD82_PROGRESS_AND_COMMENTS_20261018.md">人工意见记录</a> · <a href="progress_ddp_20261026_1844.html">18:44阶段原页</a> · <a href="progress_ddp_20261026_1745.html">此前本轮原页</a> · <a href="progress_dd82_before_portfolio_20261026.html">旧DD82页面</a></p>
+</body></html>

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "ddp-d15-source-and-20ball-prediction-20261027",
+    "title": "(15,5)100132源与覆盖预测：同单余量类20.11%对17.39%",
+    "family": "Mizuno current-source extension",
+    "record_type": "source-recovery-and-prediction",
+    "target_Delta": 15,
+    "target_D": 5,
+    "savedL": 100132,
+    "n": {
+      "actual": 100132,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": 15,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "实际100132/m749732/max15，degree13:18、14:2480、15:97634，free2498/slots2516。首20free点R4平均20042.3，占20.0159%；先前D14rare15为16.1100%。纠正余量类型后，完整单余量population的D15平均20.1129%、D14平均17.3888%，相同lex20规则也支持更高覆盖比例。",
+    "failure_or_result": "实际100132/m749732/max15，degree13:18、14:2480、15:97634，free2498/slots2516。首20free点R4平均20042.3，占20.0159%；先前D14rare15为16.1100%。纠正余量类型后，完整单余量population的D15平均20.1129%、D14平均17.3888%，相同lex20规则也支持更高覆盖比例。",
+    "lesson_and_restart_condition": "球密度预测获支持，只支持转实际构造，不证明15连接能共同覆盖，更不能把不同source/degree/field的比较当fieldsize单独因果效应。原fiber标签未绑定，不假定前100000就是旧core。 最新17:59主表15,5为102060；100132源仅为历史控制对象，100133已不是纪录目标。",
+    "unclosed_gap": "No general source-family maximality is claimed; final concrete Lean remains incomplete.",
+    "other_metrics": {
+      "source_n": 100132,
+      "source_m": 749732,
+      "free_vertices": 2498,
+      "free_slots": 2516,
+      "sampled_R4_balls": 20,
+      "first20_mean_fraction": 0.200158790396676,
+      "matched_one_slot_mean_D15": 0.20112948488640156,
+      "matched_one_slot_mean_D14": 0.17388806171752097,
+      "matched_one_slot_comparison_CPU": 0.158289577,
+      "source_and20ball_CPU": 1.742385652,
+      "oldsource_allBFS": 0,
+      "sphere_prediction": "SUPPORTED",
+      "global_atmost15_existence": "UNRESOLVED",
+      "latest_public_15_D5": 102060,
+      "latest_public_checked_UTC": "2026-10-27 17:59:33 UTC",
+      "studied_D15_source_is_now_historical": true
+    },
+    "outcome_class": "source-recovery-and-prediction",
+    "wiki_verdict": "yes",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/REPORT.md",
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/RESULT.json",
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/one_slot_comparison/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/one_slot_comparison/RESULT.json",
+      "research/ddp/more_graphs_20261027/PUBLIC_BASELINES_1759.json"
+    ]
+  },
+  {
+    "id": "ddp-d15-allfree64-cover-probe-20261027",
+    "title": "(15,5)全2498可接点：64个完整15pin方案无命中",
+    "family": "Mizuno current-source extension",
+    "record_type": "finite-construction-experiment",
+    "target_Delta": 15,
+    "target_D": 5,
+    "savedL": 100132,
+    "n": {
+      "actual": null,
+      "hypothetical": 100133
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "复用20球、一次补2478球，完整allfree union全盖100132，每target支持364..651。冻结64方案全部完成，0hit，漏1848..2064。0新图/0source全BFS。",
+    "failure_or_result": "复用20球、一次补2478球，完整allfree union全盖100132，每target支持364..651。冻结64方案全部完成，0hit，漏1848..2064。0新图/0source全BFS。",
+    "lesson_and_restart_condition": "局部球比例提高获支持，但同一有限离散选择仍未共同cover；停止该规则，不按1848少于3705续算。所有31MB球缓存保留。任意≤15cover存在性仍UNRESOLVED，不能把64无命中登记为整族无望。 最新17:59主表15,5为102060；100132源仅为历史控制对象，100133已不是纪录目标。",
+    "unclosed_gap": "No general source-family maximality is claimed; final concrete Lean remains incomplete.",
+    "other_metrics": {
+      "candidates": 2498,
+      "reused_R4_balls": 20,
+      "new_R4_balls": 2478,
+      "allfree_union_missing": 0,
+      "target_support_min": 364,
+      "target_support_max": 651,
+      "frozen_candidates": 64,
+      "evaluated": 64,
+      "hits": 0,
+      "newroot_uncovered_targets_min": 1848,
+      "newroot_uncovered_targets_max": 2064,
+      "CPU_including_compile": 4.066048549,
+      "operation_prediction": "REFUTED",
+      "global_existence": "UNRESOLVED",
+      "BFS": 0,
+      "cache_bytes": 31274960,
+      "latest_public_15_D5": 102060,
+      "latest_public_checked_UTC": "2026-10-27 17:59:33 UTC",
+      "studied_D15_source_is_now_historical": true
+    },
+    "outcome_class": "finite-construction-experiment",
+    "wiki_verdict": "no",
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/allfree_cover_probe/REPORT.md",
+      "research/ddp/more_graphs_20261027/d15_D5_mizuno_extension/allfree_cover_probe/RESULT.json",
+      "research/ddp/more_graphs_20261027/PUBLIC_BASELINES_1759.json"
+    ]
+  },
+  {
+    "id": "ddp-neighborhood-proxy-transfer-d14-d15-20261027",
+    "title": "N13成功代理迁移：D14/D15每个原型仍缺8/9个代理",
+    "family": "Near-neighborhood proxy transfer",
+    "record_type": "finite-proxy-eligibility-experiment",
+    "target_Delta": null,
+    "target_D": 5,
+    "savedL": null,
+    "target_is_multivalued": true,
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_D": null,
+    "actual_graph_Delta": null,
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": 5,
+    "scope": "Two actualfixedsources94186/100132; fullu atdegreeDelta, freew with|N(u)\\N(w)|<=3 and|N(w)\\N(u)|<=1; deterministic maxcommon/mindegree/label proxy; alloldprototypefull-neighborhood projections.",
+    "failure_or_result": "D14找到1088个满pin有代理，D15找到205个满pin有代理（207pairs），但全部原型仍分别至少8/9个满pin无任何代理，故0投影候选、0R4检查、0图。不能登记badpairs或实际D。",
+    "lesson_and_restart_condition": "阈值和规则直接继承N13真实10core共有邻域/extra差异，理解确实改变了下一实验。此scope阻在代理存在性，改tie不能补无代理满pin；不放宽阈值逐层长尾，不泛排所有proxy或任意14/15点覆盖。只有不同route结构/新source有依据才重启。 最新17:59主表15,5为102060；100132源仅为历史控制对象，100133已不是纪录目标。",
+    "unclosed_gap": "Broaderproxyrelations, nonstar rules and arbitrary14/15graph extensions remain open; no newrecordhere.",
+    "outcome_class": "FIXED_PROXY_RELATION_COMPLETE_NO_PROJECTED_CANDIDATE",
+    "wiki_verdict": "no",
+    "other_metrics": {
+      "prediction": "REFUTED_FOR_FIXED_RULE",
+      "CPU_including_compile": 2.30092,
+      "BFS": 0,
+      "R4_recomputed": 0,
+      "R4_candidate_checks": 0,
+      "newgraphs": 0,
+      "latest_public_15_D5": 102060,
+      "latest_public_checked_UTC": "2026-10-27 17:59:33 UTC",
+      "studied_D15_source_is_now_historical": true
+    },
+    "variants": [
+      {
+        "label": "D14source",
+        "target_Delta": 14,
+        "target_D": 5,
+        "savedL": 94186,
+        "source_n": 94186,
+        "source_m": 657452,
+        "free_vertices": 3685,
+        "wedges": 669198,
+        "qualifying_pairs": 1088,
+        "saturated_u_with_proxy": 1088,
+        "minimum_unproxied_saturated_neighbors": 8,
+        "projected_candidates": 0
+      },
+      {
+        "label": "D15source",
+        "target_Delta": 15,
+        "target_D": 5,
+        "savedL": 100132,
+        "source_n": 100132,
+        "source_m": 749732,
+        "free_vertices": 2498,
+        "wedges": 523529,
+        "qualifying_pairs": 207,
+        "saturated_u_with_proxy": 205,
+        "minimum_unproxied_saturated_neighbors": 9,
+        "projected_candidates": 0
+      }
+    ],
+    "report_paths": [
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/REPORT.md",
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/PREDICTION.json",
+      "research/ddp/more_graphs_20261027/near_neighborhood_proxy_transfer/RESULT.json",
+      "research/ddp/more_graphs_20261027/PUBLIC_BASELINES_1759.json"
+    ]
+  }
+]

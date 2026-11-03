@@ -1,0 +1,49 @@
+{
+  "status": "READ_ONLY_TARGET_KERNEL_REVIEW_NO_MATHEMATICAL_BLOCKER",
+  "reviewed_UTC": "2026-10-28T04:19:19.555623+00:00",
+  "files": [
+    "search.cpp",
+    "run.py",
+    "generate_edges.py",
+    "parameters.txt",
+    "PARAMETERS.json",
+    "PREDICTION.json"
+  ],
+  "source_review": "../SOURCE_SCOPE_REVIEW.json",
+  "parameter_file_check": {
+    "declared_rows": 225,
+    "actual_rows": 225,
+    "unique_rows": 225,
+    "counts_by_actor": {
+      "5": 14,
+      "8": 14,
+      "12": 14,
+      "1": 183
+    },
+    "matches_complete_proved_normal_form_set": true
+  },
+  "kernel_checks": [
+    "Core normal update is z+317^currentphase*dartnormal, not the old RIGHT-law recurrence.",
+    "Small update is t+a^currentphase*true dartnormal; small inverse is -a^(-phase)*positive normal mod13.",
+    "Both core and small inverse arrays are completely initialized before inverse-product assertions.",
+    "The retained h is (big1109,small0,phase40), preserving the literal old-seed core projection.",
+    "Node encoding is13*(1361*phase+big_normal)+small_normal; nextbase and small transitions use that exact encoding.",
+    "Queue and distance widths fit1415440 vertices; the radius layer is not expanded past its bound.",
+    "Each parameter checks degree6/R10 and degree7/R9 separately. Negative truncated failures retain actualD null; a full cover computes actualeccentricity from the histogram.",
+    "The firstthin mask is read from the same target-distance array, with no extra word enumeration or BFS.",
+    "The deterministic edge generator uses the same LEFT law, newly computed true inverses and optional literal h. One identity-root check is valid by Cayley transitivity and the inherited connectivity proof."
+  ],
+  "budget_and_terminal_note": {
+    "aggregate_declared_CPU": 120,
+    "worker_soft_stop": "Remaining aggregate allowance minus2seconds, checked between cases.",
+    "external_worker_hard_stop": "run.py sets remaining aggregate CPU limit; wall limit150seconds.",
+    "review_note": "Initial driver would preserve RUNNING from a stale checkpoint if externally killed. This was reported as a terminal-recording issue; producer confirmed the actual batch exited0 after all450 objects, so the issue did not affect this run. Producer will add nonzero-exit/RUNNING->UNKNOWN handling without rerunning numeric work."
+  },
+  "reviewer_execution": {
+    "target_graphs_or_BFS": 0,
+    "core_or_source_BFS": 0,
+    "word_or_image_enumerations": 0,
+    "solver_calls": 0,
+    "new_Wiki_rows": 0
+  }
+}

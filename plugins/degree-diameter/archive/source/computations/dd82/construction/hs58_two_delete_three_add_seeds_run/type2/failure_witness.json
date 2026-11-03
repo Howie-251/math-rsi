@@ -1,0 +1,101 @@
+{
+  "old_vertex": 0,
+  "deleted_partner": 1,
+  "old_neighbors": [
+    4,
+    25,
+    30,
+    35,
+    40,
+    45
+  ],
+  "ordinary_old_neighbors": [
+    30,
+    40,
+    45
+  ],
+  "zero_port_old_neighbors": [
+    4,
+    25,
+    35
+  ],
+  "other_deleted_endpoint_neighbors": [],
+  "direct_new_neighbors": [
+    3,
+    4
+  ],
+  "h_one_step_from_ports": [
+    0,
+    1
+  ],
+  "necessary_lost_old_pair_repairs": [
+    {
+      "pair": [
+        1,
+        30
+      ],
+      "old_common_neighbors": [],
+      "necessary_singleton_colors": [
+        3,
+        5
+      ],
+      "actual_singleton_color": 5,
+      "actual_common_neighbors": [
+        55
+      ],
+      "actual_bad_pair": null
+    },
+    {
+      "pair": [
+        1,
+        40
+      ],
+      "old_common_neighbors": [],
+      "necessary_singleton_colors": [
+        3,
+        5
+      ],
+      "actual_singleton_color": 6,
+      "actual_common_neighbors": [],
+      "actual_bad_pair": {
+        "pair": [
+          1,
+          40
+        ],
+        "distance": 3,
+        "common_neighbors": []
+      }
+    },
+    {
+      "pair": [
+        1,
+        45
+      ],
+      "old_common_neighbors": [],
+      "necessary_singleton_colors": [
+        3,
+        5
+      ],
+      "actual_singleton_color": 7,
+      "actual_common_neighbors": [],
+      "actual_bad_pair": {
+        "pair": [
+          1,
+          45
+        ],
+        "distance": 3,
+        "common_neighbors": []
+      }
+    }
+  ],
+  "conditional_reachable_bad_leaves": [
+    4,
+    5
+  ],
+  "forced_missing_new_vertices_if_all_old_pairs_covered": [
+    56,
+    57
+  ],
+  "statement": "If every old-old pair is covered, colors at 30,40,45 must lie in B_1. Then old vertex 0 cannot reach new vertices 56 or 57 within two steps.",
+  "seed_violation": "The deterministic seed uses forbidden colors at old vertices 40 and 45, so the old-old pairs (1,40),(1,45) already fail."
+}

@@ -1,0 +1,755 @@
+[
+  {
+    "id": "ddp-f5-source-plane-block-clone-d21-d22-terminal-graphs-20261101",
+    "title": "F5与F4源同一平面块保边克隆：四张21/22度终图已独验，当前最佳3984与4192",
+    "family": "Prototype-neighborhood extension",
+    "idea_family": "idea:ddp-open-parameter-construction-20261026",
+    "date": "2026-11-01",
+    "target_Delta": null,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01 (21/22 latest-global values unbound)",
+    "target_is_multivalued": true,
+    "record_type": "multi_parameter_complete_graph_instances",
+    "n": {
+      "actual": null,
+      "hypothetical": null
+    },
+    "actual_graph_Delta": null,
+    "actual_D": 3,
+    "actual_D_scope": "Four literal terminal graphs: inherit full-root D3 of old3750 or3840 source, retain all old edges, independently BFS every new root (150/375 and144/352); no old-source root rerun",
+    "ordinary_bad_unordered_pairs": 0,
+    "ordinary_bad_target_D": 3,
+    "outcome_class": "COMPLETE_TERMINAL_GRAPHS_INDEPENDENTLY_ACCEPTED_PUBLIC_NOVELTY_PENDING",
+    "wiki_verdict": "yes",
+    "distance_text": "同一完整旧邻域clone机制已接受四终图：F5源3900/40500/max21、4125/45000/max22；F4源3984/41280/max21、4192/45440/max22。全部simple、connected、exactD3；分别保留37500或38400旧边，并独验全部150/375/144/352新增根，旧根D3继承。当前本项目21/22度最佳3984/4192，比旧3900/4125多84/67；旧例保留。仅登记四终图，不计525或496构造前缀。",
+    "scope": "Same retained-edge complete-original-neighbourhood clone rule, migrated between two accepted20regular D3 affine sources. OriginalF5/C30 source3750 uses25-point plane x0+x1+x2=0 and30-controller loads. NewGF4/C60 source3840 uses16-point ker(1,1,w) with w label2, transverse to all five directions, and60-controller loads for k1/2. Keep all old vertices/edges; every clone degree20. This is one mechanism with source variants, not four independent frameworks, general graph optimality, or automatic cap ladder.",
+    "positive_guarantees": [
+      "联合完整原邻域clone引理使新旧与新新点对均D≤3，保留全部旧边。",
+      "F5固定平面块结论保留：k1块规则最优6块，不称任意中心全局最优；k2为15块375clone并达该旧源完整邻域clone总容量界。",
+      "GF4实际normal(1,1,w)=[1,1,2]与五方向点积(2,1,2,2,1)全非零；每弧16条4点邻线分割64点，300弧4800条邻线与字面源绑定。",
+      "新迁移60-controller可行块数9/22；严格可行/计数界分别[9,12]/[22,24]。HiGHS报告optimal，但没有独立最优性证书，不能把9/22当认证上界。",
+      "两源所有扩张逐步在当前完整图核20pins闭R2全覆盖；fresh独验分别只读终图和继承源证据，覆盖全部新增根而不重跑旧源根。"
+    ],
+    "unclosed_gap": "21/22度最新全球公开比较仍pending，不计confirmed主表改善；四张扩张图均未完整Lean。首批A/B Gemini SUCCESS仅覆盖原F5扩张/四端口q障碍，后来的F7补充SUCCESS只覆盖F7数学与已知非纪录，不扩大到新F4源迁移。F4 checkpointA实际审阅cell38待回，本地Field模块已编译PASS不等于完整图Lean。",
+    "lesson_and_restart_condition": "同一横截平面把两种不同字段/端口数/逐边chart源的原邻域重叠都化为控制器容量，源3840提升实际21/22终图。冻结的GF4块数12/24可达预测未获支持；只保留9/22已实现值及严格上界12/24。两模型已终态，不因solver报告optimal再跑最优性、k3、换plane/seed或工程pilot；下一步需新授权或实质容量/连接规则问题。",
+    "other_metrics": {
+      "validated_graph_instances": [
+        {
+          "Delta": 21,
+          "D": 3,
+          "n": 3900,
+          "m": 40500,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 150,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 22,
+          "D": 3,
+          "n": 4125,
+          "m": 45000,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "old_edges_retained": 37500,
+          "all_new_roots_checked": 375,
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 21,
+          "D": 3,
+          "n": 3984,
+          "m": 41280,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "source_n": 3840,
+          "source_m": 38400,
+          "old_edges_retained": 38400,
+          "all_new_roots_checked": 144,
+          "degree_histogram": {
+            "20": 1104,
+            "21": 2880
+          },
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d21_D3_n3984.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        },
+        {
+          "Delta": 22,
+          "D": 3,
+          "n": 4192,
+          "m": 45440,
+          "actual_diameter": 3,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "latest_global_record_confirmed": false,
+          "confirmed_publictable_improvement": false,
+          "source_n": 3840,
+          "source_m": 38400,
+          "old_edges_retained": 38400,
+          "all_new_roots_checked": 352,
+          "degree_histogram": {
+            "20": 352,
+            "21": 640,
+            "22": 3200
+          },
+          "new_graph": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d22_D3_n4192.edges",
+          "independent_acceptance": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+        }
+      ],
+      "new_named_complete_graphs": 4,
+      "new_lower_bound_mathematically_verified": false,
+      "confirmed_record_graphs": 0,
+      "source_graph": {
+        "Delta": 20,
+        "D": 3,
+        "n": 3750,
+        "m": 37500
+      },
+      "source_old_root_BFS_runs": 0,
+      "new_roots_independently_checked_total": 1021,
+      "actual_terminal_graphs": 4,
+      "construction_prefixes_independently_accepted": 0,
+      "construction_prefixes_registered_as_new_results": 0,
+      "producer_current_R2_checks": 1021,
+      "producer_CPU_seconds": 1.988829241,
+      "independent_acceptance_CPU_seconds": 0.688096365,
+      "proof_scope": "Fixed old20-neighbourhood clone rule, not general degree-diameter optimality",
+      "block_rule_optima": {
+        "k1_sum_r": 6,
+        "k1_clones": 150,
+        "k1_global_arbitrary_centres_optimum_claimed": false,
+        "k2_sum_r": 15,
+        "k2_clones": 375,
+        "k2_fixed_source_full_neighbourhood_global_optimal": true
+      },
+      "proved_even_cap_formula_family": {
+        "s": "nonnegative integer",
+        "n": "3750+375s",
+        "m": "37500+7500s",
+        "maxdegree": "20+2s",
+        "diameter_at_most": 3,
+        "actually_generated_new_s": [
+          1
+        ],
+        "other_s_graphs_not_generated": true
+      },
+      "independent_acceptance_status": "PASS_TWO_TERMINAL_GRAPHS_COMPLETE_DISTANCE_PROOF",
+      "new_Lean_instances": 0,
+      "static_review_status": "SUCCESS",
+      "static_review_is_graph_validation": false,
+      "source_credit": "OriginalC30: Ryosuke Mizuno controller/framework. NewC60: Bhakar/f4t4nt saved author controller; localGF4 per-edge charts. No originality claim for general cloning.",
+      "independent_construction_framework_claimed": false,
+      "static_review_model": "gemini-3.8-flash-high",
+      "static_review_effort": "high",
+      "static_review_selectedModelLabel": "Gemini 3.8 Flash (High)",
+      "static_review_thread": "7548e5af-769d-4736-a7d2-0ae080f78318",
+      "static_review_scope": "First A/B review covers originalF5 clone/transverse-plane capacity plus originalB only. NewGF4 source migration has no completed dedicated static review; F7 supplement covers F7 math/nonrecord only.",
+      "static_review_correction": "Pins cover radius2; newroot reaches targets within3, not2.",
+      "static_review_code_execution": false,
+      "source_graphs": [
+        {
+          "Delta": 20,
+          "D": 3,
+          "n": 3750,
+          "m": 37500,
+          "field": "F5",
+          "controller_order": 30,
+          "controller_credit": "Ryosuke Mizuno framework/controller"
+        },
+        {
+          "Delta": 20,
+          "D": 3,
+          "n": 3840,
+          "m": 38400,
+          "field": "GF4",
+          "controller_order": 60,
+          "controller_credit": "Bhakar (f4t4nt)"
+        }
+      ],
+      "current_local_best_orders": {
+        "21,3": 3984,
+        "22,3": 4192
+      },
+      "GF4_source_migration": {
+        "normal": [
+          1,
+          1,
+          2
+        ],
+        "field": "F2[w]/(w^2+w+1);w=2",
+        "plane_size": 16,
+        "controller_variables": 60,
+        "neighbourhood_load_cap": [
+          1,
+          2
+        ],
+        "feasible_block_totals": [
+          9,
+          22
+        ],
+        "strict_counting_upper_bounds": [
+          12,
+          24
+        ],
+        "solver_reports_optimal": true,
+        "solver_optimality_independently_certified": false,
+        "strict_block_optimum_intervals": [
+          [
+            9,
+            12
+          ],
+          [
+            22,
+            24
+          ]
+        ],
+        "producer_CPU_seconds": 1.589214495,
+        "independent_acceptance_CPU_seconds": 0.345214651,
+        "producer_current_R2_checks": 496,
+        "source_old_root_BFS_runs": 0,
+        "new_roots_independently_checked": [
+          144,
+          352
+        ],
+        "source_edges_preserved": 38400,
+        "new_named_terminal_graphs": 2,
+        "prefixes_registered_as_results": 0,
+        "extra_k_or_plane_or_seed_search": false
+      },
+      "F4_checkpointA_static_review": "PENDING_ACTUAL_CELL38",
+      "F4_Field_module_compiled": true,
+      "F4_complete_graph_Lean": false
+    },
+    "variants": [
+      {
+        "label": "degree21_terminal",
+        "target": [
+          21,
+          3
+        ],
+        "target_Delta": 21,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 3900,
+          "hypothetical": null
+        },
+        "actual_n": 3900,
+        "actual_m": 40500,
+        "actual_degree": 21,
+        "actual_D": 3,
+        "new_roots_checked": 150,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      },
+      {
+        "label": "degree22_terminal",
+        "target": [
+          22,
+          3
+        ],
+        "target_Delta": 22,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 4125,
+          "hypothetical": null
+        },
+        "actual_n": 4125,
+        "actual_m": 45000,
+        "actual_degree": 22,
+        "actual_D": 3,
+        "new_roots_checked": 375,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false
+      },
+      {
+        "label": "GF4_C60_degree21_source_migration_terminal",
+        "target": [
+          21,
+          3
+        ],
+        "target_Delta": 21,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 3984,
+          "hypothetical": null
+        },
+        "actual_n": 3984,
+        "actual_m": 41280,
+        "actual_degree": 21,
+        "actual_D": 3,
+        "new_roots_checked": 144,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false,
+        "source_n": 3840,
+        "all_source_edges_retained": 38400
+      },
+      {
+        "label": "GF4_C60_degree22_source_migration_terminal",
+        "target": [
+          22,
+          3
+        ],
+        "target_Delta": 22,
+        "target_D": 3,
+        "savedL": null,
+        "n": {
+          "actual": 4192,
+          "hypothetical": null
+        },
+        "actual_n": 4192,
+        "actual_m": 45440,
+        "actual_degree": 22,
+        "actual_D": 3,
+        "new_roots_checked": 352,
+        "new_named_complete_graph": true,
+        "latest_global_record_confirmed": false,
+        "new_Lean": false,
+        "source_n": 3840,
+        "all_source_edges_retained": 38400
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PREDICTION.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/CONTROLLER_CAPACITY_MODEL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k1.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/SEARCH_k2.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d21.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/RECIPE_d22.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d21_D3_n3900.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/graph_d22_D3_n4125.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/run_once.py",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/SCOPE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/ACCEPTANCE.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/independent_acceptance/check_literal_terminal_graphs.py",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_DISPOSITION.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PREDICTION.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/PLANE_DART_CHECK.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/LITERAL_PLANE_BINDING.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/CONTROLLER_CAPACITY_MODEL.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/SEARCH_k1.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/SEARCH_k2.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RECIPE_d21.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/RECIPE_d22.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d21_D3_n3984.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/graph_d22_D3_n4192.edges",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/retained_edge_transfer/f4_c60_plane_blocks/independent_acceptance/INDEPENDENT_ACCEPTANCE.json"
+    ]
+  },
+  {
+    "id": "ddp-four-port-general-q-pencil-obstruction-and-f25-counterexample-20261101",
+    "title": "四端口三维一般q路线：精确pencil障碍与F25单点反例，未生成新图",
+    "family": "four-label affine route-chart lifts",
+    "idea_family": "idea:ddp-q3-three-step-plane-pencil31",
+    "date": "2026-11-01",
+    "target_Delta": 100,
+    "target_D": 3,
+    "savedL": null,
+    "baseline_date": "2026-11-01, symbolic family no current-record comparison",
+    "record_type": "symbolic_route_obstruction_and_single_point_counterexample",
+    "n": {
+      "actual": null,
+      "hypothetical": 468750
+    },
+    "actual_graph_Delta": null,
+    "actual_D": null,
+    "actual_D_scope": "No actual lifted graph or graph diameter measured; complete symbolic route obstruction bound to C30, one F25 target checked",
+    "ordinary_bad_unordered_pairs": null,
+    "ordinary_bad_target_D": null,
+    "outcome_class": "positive-local_SYMBOLIC_GENERAL_Q_OBSTRUCTION_SUPPORTED_SCOPED_STATIC_REVIEW_SUCCESS",
+    "wiki_verdict": "partial",
+    "distance_text": "四方向frame下每有向边坏turn恰k=|A∩B|，不同pencil平面6−k，并集q+(6−k)(q²−q)；全turn满秩且pencil全覆仅q5。原C30有30条无triangle/C4外边，沿此边pencil穷尽全部≤3路线，因此q>5实际不可能D3，允许逐边逆相容矩阵/常量位移。F25只验(0,0)→(20,(0,1,alpha))六法向量均非零，目标不可达；缺12000/15625是已证公式值，不是大图BFS坏对数。",
+    "scope": "Complete Fq^3 fibres, simple4regular controller with shared four-direction projective frame; invertible edge-dependent matrices, true inverse reverse edges, direction-line compatibility, full one-dimensional noise. Actual q>5 exclusion requires at least one controller edge in neither a triangle nor a4cycle (fixedC30 has30). Certificate-only uniqueness q5 is distinct from actual q>5 exclusion. F25 literal embedding is one concrete counterexample, not a generated468750-point graph.",
+    "positive_guarantees": [
+      "一般q恒等式为纸面推导，绑定到全部900控制点对/2550个0..3端口词及四port交数0。",
+      "F5字面数据36turn满秩与pencil覆盖继承；单点F25域嵌入保持逆与非零行列式，仍出现实际短路遗漏。",
+      "q<5的partial-rank/多路线联合与其它控制器/端口数/维数/非直线或非uniform fibre不被排除。"
+    ],
+    "unclosed_gap": "一般q结论尚未Lean；首批Gemini实际SUCCESS，支持限定推导，不覆盖后续F7/F4。F7/C60已独验20580、明确非纪录；F4 global纯linear域严格失败后，150逐边独立chart的新域SAT得到3840终图并全3840根独验PASS，另节点保存，不是旧global域被推翻。",
+    "lesson_and_restart_condition": "保行列式不保短路线互补；原C30仅换q>5或逐边矩阵已无用，需增加相邻层短控制路线或实质改变端口/层关系。下一生成方向必须离开承重假设，不自动扩字段或重跑已闭q3模板。",
+    "other_metrics": {
+      "new_graphs": 0,
+      "new_Lean_instances": 0,
+      "lifted_graphs_generated": 0,
+      "source_graph_BFS_runs": 0,
+      "controller_ordered_pairs": 900,
+      "raw_controller_words_0_to3": 2550,
+      "route_class_counts": {
+        "same_layer": 30,
+        "nonadjacent": 750,
+        "triangle_adjacent": 60,
+        "external_adjacent": 60
+      },
+      "external_undirected_edges": 30,
+      "symbolic_identities": {
+        "bad_turns_per_directed_edge": "k=|A intersect B|",
+        "different_backtrack_planes": "6-k",
+        "pencil_union": "q+(6-k)*(q*q-q)",
+        "full_pencil_iff": "k=5-q",
+        "all_good_turns_and_full_pencil_iff_field_size": 5
+      },
+      "q_gt5_minimum_missing_per_target_fibre": "q(q-1)(q-5)",
+      "q_lt5_excluded": false,
+      "global_q_family_claimed_successful": false,
+      "hypothetical_F25_order": 468750,
+      "hypothetical_F25_degree": 100,
+      "F25_counterexample": {
+        "source_controller": 0,
+        "source_coordinate": [
+          0,
+          0,
+          0
+        ],
+        "target_controller": 20,
+        "target_coordinate": "(0,1,alpha)",
+        "field": "F5[alpha]/(alpha^2-2)",
+        "target_fibre_size": 15625,
+        "reachable_by_proved_formula": 3625,
+        "missing_by_proved_formula": 12000,
+        "actual_graph_generated": false,
+        "BFS": false
+      },
+      "numeric_CPU_seconds": 0.03933034,
+      "field_values_enumerated": [
+        5
+      ],
+      "single_F25_target_check": true,
+      "matrix_search": false,
+      "full_field_scan": false,
+      "static_review_status": "SUCCESS",
+      "formalized_in_Lean": false,
+      "later_r5_F7_C60_gate": "SEPARATE_F7_KNOWN_NONRECORD_AND_F4_EDGE_DEPENDENT_ACCEPTED_INSTANCES",
+      "independent_construction_framework_claimed": false,
+      "static_review_model": "gemini-3.8-flash-high",
+      "static_review_effort": "high",
+      "static_review_selectedModelLabel": "Gemini 3.8 Flash (High)",
+      "static_review_thread": "7548e5af-769d-4736-a7d2-0ae080f78318",
+      "static_review_scope": "A original-clone/transverse-plane capacity; B four-port q identity, fixedC30 q>5 obstruction and F25 point only; excludes laterF7 chart.",
+      "static_review_correction": "Pins cover radius2; newroot reaches targets within3, not2.",
+      "static_review_code_execution": false
+    },
+    "variants": [
+      {
+        "label": "general_symbolic_q_gt5_fixedC30_obstruction",
+        "actual_n": null,
+        "hypothetical_n": null,
+        "actual_D": null,
+        "scope": "General finite field order q>5 under exact four-port full-line hypotheses"
+      },
+      {
+        "label": "F25_single_target_counterexample",
+        "target": [
+          100,
+          3
+        ],
+        "actual_n": null,
+        "hypothetical_n": 468750,
+        "actual_D": null,
+        "actual_graph_generated": false,
+        "BFS": false
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/READ_SCOPE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/DERIVATION_PACKAGE.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/ALL_CONTROLLER_ROUTE_CLASSES.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/EXTERNAL_EDGE_0_20.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/FOUR_PORT_PROJECTIVE_TRIPLES.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/F25_COUNTEREXAMPLE_PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/F25_COUNTEREXAMPLE.json",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/check_once.py",
+      "research/ddp/two_successful_methods_20261101/affine_field_conditions/check_F25_counterexample.py",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/A_AND_Q_BOUND_DISPOSITION.md"
+    ]
+  },
+  {
+    "id": "ddp-five-port-f7-bhakar-c60-20580-validated-known-nonrecord-20261101",
+    "title": "Bhakar C60与F7五端口：20580点35正则D3完整独验，但已知35度35875更大",
+    "family": "five-port affine route-chart lifts",
+    "idea_family": "idea:ddp-q3-three-step-plane-pencil31",
+    "date": "2026-11-01",
+    "target_Delta": 35,
+    "target_D": 3,
+    "savedL": 35875,
+    "baseline_date": "2026-11-01, primary Delorme1985 replication lower bound; not latest-global optimum",
+    "n": {
+      "actual": 20580,
+      "hypothetical": null
+    },
+    "record_type": "complete_literal_graph_known_nonrecord",
+    "actual_graph_Delta": 35,
+    "actual_D": 3,
+    "actual_D_scope": "Independent literal graph BFS from all20580 vertices; simple35regular/connected, every R3 full, exactD3",
+    "ordinary_bad_unordered_pairs": 0,
+    "ordinary_bad_target_D": 3,
+    "outcome_class": "COMPLETE_VALIDATED_GRAPH_KNOWN_NONRECORD",
+    "wiki_verdict": "yes",
+    "distance_text": "实际20580/360150、simple无向35regular、exactD3；独立全部20580根PASS，CPU1.707838828。完整3600控制pair与六chart96turn/full8-plane证书先通过，随后仅生成一图。Primary Delorme及replication给35度D3已知35875>20580，差15295，故明确非纪录，不是novelty pending。",
+    "scope": "Exactly literal60-point5regular Bhakar(f4t4nt) controller from saved1620 source darts; fibresF7^3; fixed five conic directions; six invertible charts, paired inverse ports0/1 and2/3, matching port4 uses T4 orT4^-1 by dart orientation. No field/chart/controller search or source1620/3750 revalidation. General route-chart framework is inherited, while this concrete five-port chart is new local instance.",
+    "positive_guarantees": [
+      "全部300实际dart真逆绑定、六chart96个中央turn满秩、每chart八个共线平面并覆盖343。",
+      "所有3600控制层ordered pairs：300adjacent用pencil，其余3300含对角均有NB3，覆盖所有源/目标坐标。",
+      "独验实际读取边表全部20580根，所有closedR3等全顶点集，degree35且simple、connected。"
+    ],
+    "unclosed_gap": "本具体图完整Lean未完成。F7补充Gemini审阅已真实SUCCESS，范围仅六chart真逆、matching定向、96turn及八平面覆盖/3600层对与Delorme已知非纪录比较；未执行BFS/编译/solver，也不覆盖F4新3840图或其Lean。20580仍明确小于已知35875，非纪录状态不因审阅改变。",
+    "lesson_and_restart_condition": "四端口/F5的两组三射影点扩为五端口/F7互补四点，odd port匹配须定向使用真inverse charts，确实产生完整D3推广。下一选题优先真实公开比较与可迁移条件，不因本非纪录图自动续controller66、更多q或形式化梯子。",
+    "other_metrics": {
+      "validated_graph_instances": [
+        {
+          "Delta": 35,
+          "D": 3,
+          "n": 20580,
+          "m": 360150,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "known_nonrecord": true,
+          "public_comparison_status": "KNOWN_NONRECORD_PRIMARY_BOUND",
+          "compared_known_lower_bound": 35875,
+          "comparison_is_latest_global_optimum": false,
+          "latest_global_record_confirmed": false
+        }
+      ],
+      "mathematically_validated_complete_graph": true,
+      "new_lower_bound_mathematically_verified": false,
+      "actual_order": 20580,
+      "actual_edges": 360150,
+      "min_degree": 35,
+      "max_degree": 35,
+      "diameter_exact": 3,
+      "roots_checked": 20580,
+      "graph_generation_CPU_seconds": 0.348461891,
+      "local_gate_CPU_seconds": 0.04097255599999999,
+      "independent_all_root_CPU_seconds": 1.707838828,
+      "actual_charts": 6,
+      "central_turns_rank3": 96,
+      "adjacent_planes": 8,
+      "plane_union": 343,
+      "controller_order": 60,
+      "controller_degree": 5,
+      "controller_author": "Bhakar (f4t4nt)",
+      "framework_credit": "General affine route-chart method inherited; C60 is Bhakar/f4t4nt, not Mizuno C30.",
+      "controller_pairs": 3600,
+      "adjacent_pairs": 300,
+      "required_NB3_pairs": 3300,
+      "complete_Lean_graph_instance": false,
+      "new_Lean_instances": 0,
+      "known_nonrecord": true,
+      "compared_known_lower_bound": 35875,
+      "improvement_vs_compared_known_bound": -15295,
+      "public_comparison": "Delorme1985 q32:33degree33825; two absolute-vertex replicas give35degree35875. Sufficient to show nonrecord, not latest global optimum.",
+      "obsolete_comparison_not_used": "13272 is only one PolarStar-family instance",
+      "static_review_status": "SUCCESS",
+      "first_A_B_review_does_not_cover_this": true,
+      "static_review_thread": "7548e5af-769d-4736-a7d2-0ae080f78318",
+      "independent_construction_framework_claimed": false,
+      "static_review_model": "gemini-3.8-flash-high",
+      "static_review_effort": "high",
+      "static_review_selectedModelLabel": "Gemini 3.8 Flash (High)",
+      "static_review_scope": "F7 six true-inverse charts, oriented matching,96turn/eight-plane/3600pair coverage and known-nonrecord public comparison only; excludesF4 and completeLean.",
+      "static_review_code_execution": false,
+      "static_review_is_graph_validation": false
+    },
+    "variants": [],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/PUBLIC_COMPARISON.md",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/PARAMETERS.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/GATE_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/GENERATION_RESULT.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/CONTROLLER_ROUTE_CERTIFICATE.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/LOCAL_CHART_CERTIFICATE.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/graph_d35_D3_n20580.edges",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/generate.py",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/independent_acceptance/PRED.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/f7_c60_d35/independent_acceptance/check_literal_graph.py",
+      "research/ddp/two_successful_methods_20261101/reviews/F7_GEMINI_RAW.json",
+      "research/ddp/two_successful_methods_20261101/reviews/F7_DISPOSITION.md"
+    ]
+  },
+  {
+    "id": "ddp-f4-bhakar-c60-global-pgl2-complete-negative-edge-dependent-preparing-20261101",
+    "title": "F4/C60：global57600域严格失败，逐边独立charts经SAT构成3840点20正则D3独验通过",
+    "family": "five-port affine route-chart lifts",
+    "idea_family": "idea:ddp-q3-three-step-plane-pencil31",
+    "date": "2026-11-01",
+    "target_Delta": 20,
+    "target_D": 3,
+    "savedL": 3750,
+    "baseline_date": "2026-11-01, local accepted3750, latest-global baseline not bound",
+    "n": {
+      "actual": 3840,
+      "hypothetical": null
+    },
+    "record_type": "complete_edge_dependent_graph_after_closed_global_domain",
+    "actual_graph_Delta": 20,
+    "actual_D": 3,
+    "actual_D_scope": "Independent all3840-root BFS from literal3840/38400 edge graph; simple20regular, exactD3. Prior global domain remains separately excluded.",
+    "ordinary_bad_unordered_pairs": 0,
+    "outcome_class": "GLOBAL_DOMAIN_EXCLUDED_EDGE_DEPENDENT_COMPLETE_GRAPH_ACCEPTED_NOVELTY_PENDING",
+    "wiki_verdict": "yes",
+    "distance_text": "弱forced-turn matching门300dart均通过、1260个真正distance3 unique words，仅证明局部门未排。随后60×60×16=57600 global projectivity triples完整结束：6过forced、0使全部3300required pair有rank3NB3；每pair所有低秩路线零源并集≤61<64的必要性守卫已实测绑定。故排固定纯linear/global五conic/真inverse域，不靠所有adjacent-pencil必要。无3840图/BFS。 后续改变为150无向边各自选择quotient chart并赋真实反向inverse，唯一SAT return10；完整3300 rank3路线+300 full-pencil证书通过，实际生成3840/38400、20regular。fresh全部3840根PASS、R2均354、CPU0.087418572。比本地3750多90；L3750只是本地已验比较，非已绑定最新全球公开值，新3840最新global novelty pending。",
+    "scope": "Fixed literalBhakarC60, F4^3 complete fibres, fixed specified five conic directions and global matrices by port, true inverse pairs and T4^2=I, all4 noise coefficients. Complete PGL2(4) quotient maps account for all longitudinal/shear lifts. Common-zero rank<=2 route capacity makes rank3NB3 necessary for all3300 pairs. Not edge-dependent charts, affine offsets, different frames/controller/fibre relations. Subsequent positive variant releases global-by-port matrices: each of150 undirected edges independently chooses among48 full-pencil PGL2 maps and binds reverse chart to true inverse, with fixed common conic and controller. SAT jointly enforces3300 rank-cover constraints. One complete actual graph, not every edge choice succeeds.",
+    "positive_guarantees": [
+      "60、60、16三组件完备涵盖该global纯线性真inverse商域；纵向/剪切不改变中央rank。",
+      "必要rank已零解，不将port2/3三角边的full pencil额外充分条件冒作必要。",
+      "初准备错误在0 triples前结束；修正后唯一完整枚举，无重复候选，prep exactCPU未保留不补造。",
+      "唯一-t有限调用return10，重核全部CNF/300 dart逆与方向/300pencil/3300路线后生成，不能仅把SAT字样当合法图。",
+      "独立仅读完整字面边表，对全部3840根BFS；所有R3覆盖全图，20regular/simple/connected/exactD3。"
+    ],
+    "unclosed_gap": "新3840未Lean、最新全球纪录pending；当前无针对新F4的已完成跨模型外审。不删除旧global完备排除，也不据本充分域断言所有逐边图成功。",
+    "lesson_and_restart_condition": "局部匹配门可过但global矩阵不能同时覆盖；释放150边独立quotient charts后共同选择可实际实现D3。真实自由度变化解决了旧global障碍，不是换seed或推翻负证明。当前批终态，不自动追加域/偏移/其它control。",
+    "other_metrics": {
+      "actual_lifted_graphs": 1,
+      "full_projectivity_triples": 57600,
+      "forced_survivors": 6,
+      "rank_cover_solutions": 0,
+      "rank_deficient_route_union_upper": 61,
+      "target_fibre_size": 64,
+      "field": "F2[w]/(w^2+w+1)",
+      "global_complete_run_CPU_seconds": 0.084363529,
+      "forced_gate_CPU_seconds": 0.051644237999999995,
+      "initial_failed_prepare_triples": 0,
+      "initial_failed_prepare_exact_CPU_unknown": true,
+      "new_Lean_instances": 0,
+      "independent_construction_framework_claimed": false,
+      "edge_dependent_next_status": "SAT_COMPLETE_LITERAL_GRAPH_INDEPENDENT_ALL_ROOTS_PASS",
+      "edge_dependent_undirected_edges": 150,
+      "edge_dependent_additional_full_pencil_is_sufficient_restriction": true,
+      "edge_dependent_SAT_CPU_upper": 60,
+      "controller_author": "Bhakar(f4t4nt)",
+      "static_review_new_F4": "NOT_COMPLETED",
+      "producer_BFS_runs": 0,
+      "independent_roots_checked": 3840,
+      "independent_validation_status": "PASS_COMPLETE_LITERAL_GRAPH_D3_ALL_3840_ROOTS",
+      "independent_validation_CPU_seconds": 0.087418572,
+      "validated_graph_instances": [
+        {
+          "Delta": 20,
+          "D": 3,
+          "n": 3840,
+          "m": 38400,
+          "mathematically_validated_complete_graph": true,
+          "complete_Lean_graph_instance": false,
+          "known_nonrecord": false,
+          "latest_global_record_confirmed": false,
+          "public_comparison_status": "LATEST_GLOBAL_PENDING"
+        }
+      ],
+      "edge_dependent_solver_calls": 1,
+      "edge_dependent_solver_return_code": 10,
+      "edge_dependent_solver_CPU_seconds": 0.23352299999999998,
+      "edge_dependent_whole_CPU_seconds": 1.609514885,
+      "actual_n": 3840,
+      "actual_m": 38400,
+      "max_degree": 20,
+      "diameter_exact": 3,
+      "new_lower_bound_mathematically_verified": false,
+      "comparison_to_local3750": 90,
+      "complete_global_negative_preserved": true
+    },
+    "variants": [
+      {
+        "label": "weak_forced_turn_matching_gate",
+        "status": "PASSES_NECESSARY_GATE_NO_EXISTENCE_CONCLUSION",
+        "CPU_seconds": 0.051644237999999995,
+        "directed_edges": 300,
+        "unique_distance3_pairs": 1260
+      },
+      {
+        "label": "complete_global_linear_conic_projectivity_scope",
+        "status": "PURE_LINEAR_GLOBAL_CONIC_DOMAIN_EXCLUDED_BY_RANK_NECESSITY",
+        "combinations": 57600,
+        "rank_solutions": 0,
+        "actual_n": null,
+        "hypothetical_n": 3840
+      },
+      {
+        "label": "new_edge_dependent_projectivity_full_pencil_SAT",
+        "status": "SAT_AND_ALL3840_ROOTS_INDEPENDENT_PASS",
+        "actual_n": 3840,
+        "hypothetical_n": null,
+        "whole_CPU_budget": 60,
+        "solver_calls": 1,
+        "additional_sufficient_pencil_domain": true,
+        "actual_m": 38400,
+        "actual_D": 3,
+        "solver_return_code": 10,
+        "solver_CPU_seconds": 0.23352299999999998,
+        "whole_CPU_seconds": 1.609514885,
+        "independent_roots_checked": 3840,
+        "latest_global_record_confirmed": false
+      }
+    ],
+    "report_paths": [
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/PREPARATION_FAILURE.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/CONTROLLER_WORD_CAPACITY.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/PROJECTIVITIES.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/SOLUTIONS.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_global_projective/check_once.py",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/RESULT.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/FORCED_TURNS.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/UNIQUE_DISTANCE3_PATHS.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_forced_turn_gate/check_once.py",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/PREDICTION.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/PROOF.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/REPORT.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/MODEL_CODE.md",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/INPUT.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/MODEL.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/SELECTOR_MAP.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/PAIR_COVERAGE.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/TERMINAL.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/PARAMETERS.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/ROUTE_CERTIFICATE.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/graph_d20_D3_n3840.edges",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/generate.py",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/run_once.py",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/independent_acceptance/PRED.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/independent_acceptance/SUMMARY.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/independent_acceptance/INDEPENDENT_ACCEPTANCE.json",
+      "research/ddp/two_successful_methods_20261101/f4_c60_edge_projective/independent_acceptance/SOURCE.py"
+    ],
+    "ordinary_bad_target_D": 3
+  }
+]

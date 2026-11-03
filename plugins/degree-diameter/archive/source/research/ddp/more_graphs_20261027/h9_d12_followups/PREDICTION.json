@@ -1,0 +1,18 @@
+{
+  "prediction_id": "H9_FIXED6_ON_42343",
+  "frozen_before_newbase_checks": true,
+  "research_question": "Can the shortcuts and consumed degree in the verified42343 base allow any of the remaining6 geometric Q-line mandatory sets to yield further complete D5 extensions with at most2 anchors?",
+  "prediction": "At least one further complete extension exists in this fixed sequential batch.",
+  "base_graph": "research/ddp/global_coverage_20261027/candidate42343/graph_d12_D5_n42343.edges",
+  "base_n": 42343,
+  "base_m": 245229,
+  "target_Delta": 12,
+  "target_D": 5,
+  "candidates": [1, 2, 3, 4, 5, 6],
+  "sequence": "One pass in candidate-index order. Each row uses the actual current base. An accepted complete new point is immediately retained for later rows; a rejected earlier row is not retried after later successes.",
+  "per_candidate": "Fresh current-degree filter; fresh complete mandatory R4 check; if needed, exact set cover of saved actual missing targets by0,1,2 current degree<12 anchors excluding mandatory pins.",
+  "coverage": "Every accepted step keeps all old edges, has maximum degree12, and its complete new neighbor set R4-covers every vertex of that actual current base.",
+  "budget": {"workers": 1, "CPU_seconds_hard": 180, "CPU_seconds_soft": 170},
+  "stop": "At most6 rows, complete result or UNKNOWN at CPU limit; no line/center expansion, thirdanchor, score optimization or automatic retries.",
+  "historical_artifacts": "Do not edit verified42343 graph or its checks. Root owns one final all-source BFS for the last graph."
+}

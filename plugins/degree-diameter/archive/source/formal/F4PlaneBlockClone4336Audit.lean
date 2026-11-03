@@ -1,0 +1,11 @@
+import DegreeDiameter.Portfolio.F4PlaneBlockClone4336
+#print DegreeDiameter.Portfolio.F4PlaneBlockClone4336.graph
+#print DegreeDiameter.Portfolio.F4PlaneBlockClonesFamily.graph
+#print DegreeDiameter.Portfolio.FullNeighborhoodClones.graph
+#print DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.layers23
+#check @DegreeDiameter.Portfolio.F4PlaneBlockLoadSum23.capacity23
+#check @DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label
+#check @DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label_old
+#check @DegreeDiameter.Portfolio.F4PlaneBlockClone4336.label_new
+#check @DegreeDiameter.Portfolio.F4PlaneBlockClone4336.concrete_order_degree_and_exact_D3
+#print axioms DegreeDiameter.Portfolio.F4PlaneBlockClone4336.concrete_order_degree_and_exact_D3

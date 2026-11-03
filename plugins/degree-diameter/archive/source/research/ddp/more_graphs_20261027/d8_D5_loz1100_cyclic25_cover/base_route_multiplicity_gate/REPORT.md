@@ -1,0 +1,12 @@
+# Five routes are available, but simultaneous lift coverage remains incompatible
+
+After all125 frozen metacyclic lifts failed, two new diagnostic predictions were stated and tested against targeted data, rather than another full-graph search. Their inputs included the saved negative graphs; neither is presented as a pre-existing prediction made before the125-object batch.
+
+1. **Prediction:** some verified Loz1100 target has fewer than5 nonbacktracking routes of length<=5, explaining failure of every5fold cover. **Refuted:** an exact(state,lastdart) DP gives minimum exactly5, at identity and g3=(phase11,normal55=1) and its inverse. No source BFS or old diameter check was run. Counts5 do not by themselves exclude ordinary5covers. Counts are exact route multiplicities, not distances or bad-pair counts.
+2. **Prediction:** the five source routes to g3 always alias under each of the125 fixed metacyclic lifts. **Refuted:** the exact five words are stored in FIVE_ROUTE_RESULT.json; their evaluated image sizes are2for10 settings,3for45,4for60,and5for10 settings. Only those5 words were evaluated, with no targetBFS rerun. The scalar or voltage parameters cannot be declared uniformly incapable of satisfying this one tight fibre.
+
+A concrete retained comparison is r2,s=t1. The five g3 routes have deck residues[3,1,0,2,4], all distinct, and the identity kernel fibre is already fully covered by the two fifth-power cycles. Yet the saved actual5500graph still misses62 vertices at radius5; its first witness is(phase0,normal275=61), projecting to source(0,6), a different fibre. This uses the original full-graph result, not a new verification.
+
+Thus a shortage of raw routes or unavoidable aliasing at the tightest fibre is not the current explanation. The shared action/voltage choices must simultaneously cover every source fibre, and the complete125-object calculation shows no such choice in this specified class. A shorter uniform analytic contradiction for that joint failure has not been obtained. Stop this class rather than optimize the remaining counts or test successive fibres. This result does not exclude other ordinary5covers ofLoz1100 or general5500vertex degree8/D5 graphs.
+
+check.py records the first prediction before the source multiplicity DP. five_routes.py records the second before the targeted endpoint evaluations, when the global125 failures and source count5 were already known. CPU costs and the matching saved graph object are in COMPARISON.json. Zero new full graphs, zero quotient/source BFS and zero old target BFS reruns.

@@ -1,0 +1,10 @@
+import DegreeDiameter.N62STouch
+
+#print DegreeDiameter.STouchTemplate
+#print DegreeDiameter.threeUnitRow
+#check @DegreeDiameter.three_unit_triangle_row_third_nonadj
+#check @DegreeDiameter.stouch_b_c_defect_zero
+#check @DegreeDiameter.no_n62_stouch_template
+#print axioms DegreeDiameter.three_unit_triangle_row_third_nonadj
+#print axioms DegreeDiameter.stouch_b_c_defect_zero
+#print axioms DegreeDiameter.no_n62_stouch_template

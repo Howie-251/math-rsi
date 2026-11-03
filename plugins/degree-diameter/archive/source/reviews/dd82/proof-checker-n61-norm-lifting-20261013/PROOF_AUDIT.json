@@ -1,0 +1,232 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "sound_modulo_imports",
+  "summary": "The original scoped lemmas pass; the later connected-weighted-defect combination theorem has a sound dependency connection modulo the explicitly inherited c3 closure and finite screening/enumeration completeness. No order61 exclusion follows.",
+  "scope": "Earlier norm/lifting/capacity results plus a later reused-agent integration proving connected weighted defect for arbitrary order61 targets modulo explicit imports; arbitrary orders58–61 remain open.",
+  "audited_inputs": [
+    "proofs/dd82/n61/COMPONENT_QUOTIENT_GLOBAL_OBSTRUCTIONS.md",
+    "proofs/dd82/n61/COMPONENT_MATCHING_EDGE_OBSTRUCTION.md",
+    "proofs/dd82/n61/COMPONENT_PERIODIC_COLUMN_OBSTRUCTION.md",
+    "proofs/dd82/n61/GENERAL_THREE_DEFECT_COMPONENT_QUOTIENTS.md:necessary definitions in section2",
+    "proofs/dd82/n61/LARGE_DEFECT_COMPONENT_QUOTIENT_DOMAIN.md:necessary arithmetic only",
+    "computations/dd82/n61/component_3_3_15_15_25_resonance.py",
+    "computations/dd82/n61/component_3_3_15_15_25_resonance.result.json",
+    "computations/dd82/n61/component_6_25_30_resonance.py:imported exact routines and main guard",
+    "proofs/dd82/n61/COMPONENT_SIZE_TWO_CAPACITY_OBSTRUCTION.md",
+    "proofs/dd82/n61/CONNECTED_DEFECT_REDUCTION.md",
+    "prompts/26101310-1/final.md:inherited c3 theorem and dependency connection",
+    "proofs/dd82/n61/THREE_COMPONENT_6_25_30_EXCLUSION.md:statement and conclusion scope only",
+    "proofs/dd82/n61/THREE_COMPONENT_12_21_28_EXCLUSION.md:statement and conclusion scope only",
+    "computations/dd82/n61/component_large_size_domain.py",
+    "computations/dd82/n61/component_large_size_screen.py",
+    "computations/dd82/n61/component_row_moment_screen.py",
+    "computations/dd82/n61/component_norm_screen.py",
+    "computations/dd82/n61/component_large_size_domain.result.json:terminal metadata",
+    "computations/dd82/n61/component_large_size_screen.result.json:terminal metadata",
+    "computations/dd82/n61/component_row_moment_screen.result.json:terminal metadata",
+    "computations/dd82/n61/component_norm_screen.result.json:terminal metadata and input connection",
+    "computations/dd82/n61/component_row_moment_code_review.md",
+    "computations/dd82/n61/component_joint_quotient.md",
+    "computations/dd82/n61/component_joint_quotient_code_review.md",
+    "computations/dd82/n61/component_joint_quotient_symmetry_delta_review.md",
+    "computations/dd82/n61/component_joint_quotient.py:selection and terminal status/output routing",
+    "computations/dd82/n61/component_joint_quotient.profile.json:metadata, completed domains, saved models",
+    "computations/dd82/n61/component_joint_quotient.remaining.json:metadata, completed domains, interruption",
+    "computations/dd82/n61/component_joint_quotient.unresolved.json:metadata and all completed domains",
+    "computations/dd82/n61/component_joint_quotient.symmetry-sanity.json",
+    "computations/dd82/n61/component_joint_results_check.py",
+    "computations/dd82/n61/component_joint_results_check.result.json"
+  ],
+  "trace_path": "reviews/dd82/proof-checker-n61-norm-lifting-20261013",
+  "thread_id": "/root/n61_norm_lifting_proof_check",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_configuration": "Inherited fresh Codex sub-agent; no external model-attestation claim.",
+  "generated_at": "2026-10-13T11:51:38.480584+00:00",
+  "details": {
+    "claim_groups_audited": 5,
+    "theorems_audited": 9,
+    "issues": [],
+    "proof_obligations": [
+      {
+        "id": "NORM",
+        "statement": "For every actual order61 component quotient with c>=5, the product of sizes is a positive integer square or five times one.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_QUOTIENT_GLOBAL_OBSTRUCTIONS.md:29-170"
+        ]
+      },
+      {
+        "id": "MATCHING_EDGE",
+        "statement": "A support edge with both diagonal entries one and no third support neighbor cannot lift.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_MATCHING_EDGE_OBSTRUCTION.md:8-41"
+        ]
+      },
+      {
+        "id": "MATCHING_EXAMPLE",
+        "statement": "The displayed (2,5,6,18,30) quotient and its relabelings cannot lift.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_MATCHING_EDGE_OBSTRUCTION.md:43-77"
+        ]
+      },
+      {
+        "id": "EQUAL_BLOCK",
+        "statement": "The stated equal-size external return pattern, a!=beta, and positive nonsquare discriminant imply odd r and trace k-(r-1)/2.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_MATCHING_EDGE_OBSTRUCTION.md:79-104"
+        ]
+      },
+      {
+        "id": "TWO_EIGHT_FIVE_NINE",
+        "statement": "No actual integer quotient exists on eight size2 and nine size5 components.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_MATCHING_EDGE_OBSTRUCTION.md:106-133"
+        ]
+      },
+      {
+        "id": "PERIODIC_COLUMNS",
+        "statement": "The stated coprime additive binary-column and weight hypotheses force period a and (b-1)(r-1)<=delta.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_PERIODIC_COLUMN_OBSTRUCTION.md:34-68"
+        ]
+      },
+      {
+        "id": "PERIODIC_EXAMPLE",
+        "statement": "The displayed (3,3,15,15,25) quotient and its relabelings cannot lift.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_PERIODIC_COLUMN_OBSTRUCTION.md:70-197"
+        ]
+      },
+      {
+        "id": "SIZE_TWO_CAPACITY",
+        "statement": "No actual quotient exists on eight size2, five size5 and two size10 components.",
+        "status": "discharged",
+        "locations": [
+          "COMPONENT_SIZE_TWO_CAPACITY_OBSTRUCTION.md:23-111"
+        ],
+        "review_mode": "reused-agent delta"
+      },
+      {
+        "id": "CONNECTED_DEFECT_COMBINATION",
+        "statement": "Every simple order61 graph with maximum degree<=8 and diameter<=2 has connected positive support of B=A^2+A-7I-J.",
+        "status": "sound-modulo-imports",
+        "locations": [
+          "CONNECTED_DEFECT_REDUCTION.md:24-183"
+        ],
+        "review_mode": "reused-agent combination delta",
+        "imports": [
+          "inherited complete c3 classification and both actual lift exclusions",
+          "complete necessary size/diagonal screens and their terminal records",
+          "reviewed labelled joint enumeration",
+          "reviewed stabilizer representative coverage",
+          "actual disjoint 7+40+18 completed domain records"
+        ],
+        "search_exhaustion_independently_reproved": false
+      }
+    ],
+    "counterexamples_found": 0,
+    "proof_edits": [],
+    "independent_exact_check": {
+      "status": "PASS",
+      "runs": 1,
+      "scope": "Only new C15-versus-Cq gcds and every saved coefficient/cofactor array",
+      "method": "Explicit cycle adjacency characteristic polynomials and independent SymPy QQ gcd",
+      "q_values": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "cpu_hard_limit_seconds": 2,
+      "tool_wall_seconds": 0.307510543,
+      "algebra_cpu_seconds_after_import": 0.135985919,
+      "algebra_wall_seconds_after_import": 0.1385185308754444,
+      "old_table_executed": false,
+      "exit_code": 0
+    },
+    "not_audited": [
+      "independent regeneration of any completed screen/search/gcd",
+      "reproof of inherited c3 classification or either c3 lifting exclusion",
+      "same-thread Gemini round4 result"
+    ],
+    "not_claimed": [
+      "c=1 excluded",
+      "arbitrary order61 excluded",
+      "arbitrary orders58–61 excluded",
+      "exact degree/diameter value determined",
+      "saved-result checker independently certifies exhaustive search",
+      "Lean or solver UNSAT certificate",
+      "fresh independent review for reused-agent deltas"
+    ],
+    "adaptation": "V3: no hashes/manifests, scorecards, rendering, MCP, Lean, queues or extra audits; parent handles wiki integration.",
+    "delta_reviews": [
+      {
+        "id": "size-two-capacity",
+        "review_mode": "reused-agent delta",
+        "review_agent": "/root/n61_norm_lifting_proof_check",
+        "verdict": "PASS",
+        "issues": [],
+        "input": "proofs/dd82/n61/COMPONENT_SIZE_TWO_CAPACITY_OBSTRUCTION.md",
+        "additional_computations": 0,
+        "generated_at": "2026-10-13T12:00:51.023232+00:00",
+        "enumeration_completion_reviewed": false,
+        "combined_theorem_reviewed": false
+      },
+      {
+        "id": "connected-defect-combination",
+        "review_mode": "reused-agent combination delta",
+        "review_agent": "/root/n61_norm_lifting_proof_check",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-imports",
+        "issues": [],
+        "input": "proofs/dd82/n61/CONNECTED_DEFECT_REDUCTION.md",
+        "additional_mathematical_computations": 0,
+        "read_only_saved_record_inspection": true,
+        "generated_at": "2026-10-13T12:06:49.723059+00:00",
+        "enumeration_dependency_connection_reviewed": true,
+        "search_exhaustion_independently_reproved": false,
+        "combined_theorem_reviewed": true,
+        "batch_completed_domains": [
+          7,
+          40,
+          18
+        ],
+        "combined_completed_domains": 65,
+        "saved_models": 3,
+        "lifting_types": 2,
+        "external_round4_status": "pending",
+        "lean_proof": false,
+        "solver_unsat_certificate": false
+      }
+    ]
+  },
+  "updated_at": "2026-10-13T12:06:49.723059+00:00",
+  "historical_scopes": [
+    {
+      "as_of": "2026-10-13T12:00:51.023232+00:00",
+      "scope": "Original norm, matching/equal-size and periodic-column groups, plus the quotient exclusion of (2^8,5^5,10^2); arbitrary orders58–61 remain open.",
+      "verdict": "PASS",
+      "reason_code": "all_proofs_complete",
+      "not_claimed": [
+        "all c=5 excluded",
+        "all c>=5 excluded",
+        "c=1 excluded",
+        "arbitrary order61 excluded",
+        "arbitrary orders58–61 excluded"
+      ],
+      "note": "Preserved pre-integration scope; the original three groups and first capacity delta did not establish a global disconnected-defect exclusion."
+    }
+  ],
+  "proof_status": "sound-modulo-imports"
+}

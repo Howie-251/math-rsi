@@ -1,0 +1,163 @@
+{
+  "updated_UTC": "2026-10-27 16:02:06 UTC",
+  "rows": [
+    {
+      "id": "ddp-rajiv441-exact-flag-recovery-20261027",
+      "title": "Rajiv441完整旗规则恢复：1323边相等，固定point panel与真实配额",
+      "family": "incidence point-line flag operator",
+      "record_type": "known-source-and-controlled-route-analysis",
+      "target_Delta": 6,
+      "target_D": 4,
+      "savedL": 441,
+      "n": {
+        "actual": 441,
+        "hypothetical": null
+      },
+      "actual_D": 4,
+      "actual_graph_Delta": 6,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "Exactpublic441source plus completeflagcoordinateedgecomparison;naturalq4point/dualparameterarithmeticonly. No sourceBFS.",
+      "failure_or_result": "A63/B189/C189实际配额(0,6,0)/(2,0,4)/(0,4,2)。恢复63points/63triads及B/C flags，全部1323边与规则完全相等。初始双triangle模型及C固定line猜测被反驳，实际固定point团。自然q4迁移max15超12，未生成。",
+      "lesson_and_restart_condition": "原四步路线依赖三条incident lines，不可带着错误panel或度数把q4写成degree9；原自然q4规则止损。",
+      "unclosed_gap": "本轮没有产生新的验收通过纪录；一般图及未明示范围仍开放，Lean完整实例0。",
+      "outcome_class": "COMPLETE_BOUNDED_MECHANISM_RESULT_NO_NEW_RECORD",
+      "wiki_verdict": "partial",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/REPORT.md",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/RESULT.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/SOURCE_PROFILE.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/COORDINATES.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/ROUTE_BUDGET.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/Q4_PARAMETER_GATE.json"
+      ],
+      "actual_D_scope": "Existingknown441source fact;exactcoordinateedges recovered,no repeated sourceBFS."
+    },
+    {
+      "id": "ddp-uniform-flag-d4-mechanism-bound-20261027",
+      "title": "完整uniform旗算子的D4机制上界：Δ4..12无法超过保存门槛",
+      "family": "incidence point-line flag operator",
+      "record_type": "necessary-structural-model-no-final-graph",
+      "target_Delta": 6,
+      "target_D": 4,
+      "savedL": 441,
+      "n": {
+        "actual": null,
+        "hypothetical": null
+      },
+      "actual_D": null,
+      "actual_graph_Delta": null,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "Finite nonempty simplebiregular incidence,linesize s+1,pointdegree t+1,s,t>=1;ALL exactprescribedA-B/B-C/C-fixedpoint-clique edges retained;operatorD<=4 andmaxdegree<=12.",
+      "failure_or_result": "D4强迫point-line incidence距≤5，故v≤(s+1)(1+st+s²t²)，n≤v(2t+3)。全部17整数tuple算表除(2,1)外均不过对应门槛；唯一raw105例外由Moore等号及s²t(t−1)=0的markedflag障碍排除。source(2,2)已达此算子441上限。",
+      "lesson_and_restart_condition": "停止整个完整均匀算子的当前D4扩张，非仅q4无效；不排修剪/改BC、非均匀incidence、其它orbitals或一般DDP图。取消的Cpoint→Ctriad数值对照未执行。",
+      "unclosed_gap": "本轮没有产生新的验收通过纪录；一般图及未明示范围仍开放，Lean完整实例0。",
+      "outcome_class": "PAPER_MECHANISM_BOUND_ROOT_REVIEWED_LEAN_PENDING",
+      "wiki_verdict": "no",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/THEOREM.md",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/PARAMETER_BOUNDS.md",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/PARAMETER_BOUNDS.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/RESULT.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/route_complementarity/REPORT.md"
+      ],
+      "other_metrics": {
+        "tuple_count": 17,
+        "uniform_flag_operator_D4_no_improved_saved_cells": true,
+        "source_BFS": 0,
+        "Lean_formal": false,
+        "external_review": false
+      }
+    },
+    {
+      "id": "ddp-flag-heawood105-controlled-20261027",
+      "title": "同旗规则Heawood105实例：AA预测验中，其它类型仍失盖，实际D6",
+      "family": "incidence point-line flag operator",
+      "record_type": "explicit-failed-candidate-graph",
+      "target_Delta": 4,
+      "target_D": 4,
+      "savedL": 104,
+      "n": {
+        "actual": 105,
+        "hypothetical": null
+      },
+      "actual_D": 6,
+      "actual_graph_Delta": 4,
+      "ordinary_bad_unordered_pairs": 735,
+      "scope": "Exactlyone(s2,t1)geometry:21edges/14vertexstars ofFanoHeawood,applycompleteflagoperator. All105candidate roots examined,no oldsourceBFS orrepair.",
+      "failure_or_result": "完整105点189边simpleconnected图，max4/min3，D6，普通无序>4对735。按AA/AB/AC/BB/BC/CC分别0/84/42/21/336/252；首次markedflag A0-C63距6。保住AA预测得到支持，CC失盖预测也支持。",
+      "lesson_and_restart_condition": "incidence距离必要界过线不代表各类同时覆盖；薄t1缺第三条line，不能靠相同规则加helper或局部改漏点。",
+      "unclosed_gap": "本轮没有产生新的验收通过纪录；一般图及未明示范围仍开放，Lean完整实例0。",
+      "outcome_class": "COMPLETE_BOUNDED_MECHANISM_RESULT_NO_NEW_RECORD",
+      "wiki_verdict": "no",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/thin_heawood105/PREDICTION.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/thin_heawood105/construct.py",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/thin_heawood105/RESULT.json",
+        "research/ddp/more_graphs_20261027/d6_rajiv441_orbit_mechanism/thin_heawood105/graph105.edges"
+      ],
+      "actual_D_scope": "All105roots ordinary BFS ofnewcandidate byproducer; failurediagnostic, no repeated source verification.",
+      "ordinary_bad_target_D": 4,
+      "other_metrics": {
+        "new_record": false,
+        "bad_by_types": {
+          "AA": 0,
+          "AB": 84,
+          "AC": 42,
+          "BB": 21,
+          "BC": 336,
+          "CC": 252
+        },
+        "old_source_BFS": 0,
+        "CPU_seconds": 0.007502339
+      }
+    },
+    {
+      "id": "ddp-rajiv1518-c4-profile-recovery-20261027",
+      "title": "Rajiv1518真实C4稳定子、4+1+1邻接与C6因子恢复",
+      "family": "finite-group coset graphs",
+      "record_type": "known-source-and-controlled-route-analysis",
+      "target_Delta": 6,
+      "target_D": 5,
+      "savedL": 1518,
+      "n": {
+        "actual": 1518,
+        "hypothetical": 1950
+      },
+      "actual_D": 5,
+      "actual_graph_Delta": 6,
+      "ordinary_bad_unordered_pairs": null,
+      "scope": "Literal1518publicsource andsourcepermutationrelations; q25/C4profilearithmeticonly. No sourceBFS, no newparametergraph scan byrecoveryagent.",
+      "failure_or_result": "从实际边表的根配色及邻接精确automorphisms恢复order4稳定子与三个involutive连接生成元；profile4+1+1，normalizer24/rootC6。q25/C4得到1950点规则、78候选、C6容量4602但未据容量声称成功。源recipe与2×2matrix编号绑定仍未恢复。",
+      "lesson_and_restart_condition": "保留C6 factor+involutoryvalence4是有依据迁移；q29无C4不能原规则移植；不把未绑定矩阵冒称原作者matrixgenerators。",
+      "unclosed_gap": "本轮没有产生新的验收通过纪录；一般图及未明示范围仍开放，Lean完整实例0。",
+      "outcome_class": "COMPLETE_BOUNDED_MECHANISM_RESULT_NO_NEW_RECORD",
+      "wiki_verdict": "partial",
+      "report_paths": [
+        "research/ddp/more_graphs_20261027/d6_psl23_coset_transfer/source_recovery/REPORT.md",
+        "research/ddp/more_graphs_20261027/d6_psl23_coset_transfer/source_recovery/RESULT.json",
+        "research/ddp/more_graphs_20261027/d6_psl23_coset_transfer/source_recovery/root_stabilizer.json",
+        "research/ddp/more_graphs_20261027/d6_psl23_coset_transfer/source_recovery/source_relations.json"
+      ],
+      "actual_D_scope": "Inheritedknown1518source; targetedsourceautomorphisms only, no repeated BFS.",
+      "other_metrics": {
+        "stabilizer": "C4",
+        "neighbor_suborbits": [
+          4,
+          1,
+          1
+        ],
+        "normalizer_order": 24,
+        "source_root_C6": [
+          0,
+          967,
+          1306,
+          1294,
+          1087,
+          981
+        ],
+        "q25_candidate_count": 78,
+        "q25_tested_by_this_node": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "strict_capacity_delta_obligations_discharged",
+  "summary": "The strict capacity argument and its numerical boundary consequences are correct under the explicitly imported actual connected-repeat and D1 hypotheses.",
+  "reviewer_agent": "/root/proof_review_n62_heavy_original",
+  "reviewer_reused": true,
+  "review_kind": "bounded_delta_review_of_root_authored_proof",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_date": "2026-10-11",
+  "target": "proofs/dd82/n62/CONNECTED_REPEAT_STRICT_TRIANGLE_CAPACITY.md",
+  "source_content_read": [
+    "proofs/dd82/n62/CONNECTED_REPEAT_TRIANGLE_WITNESS_REFINEMENT.md",
+    "proofs/dd82/n62/CONNECTED_REPEAT_HEAVY_PORT_CLOSURE.md",
+    "proofs/dd82/n62/CONNECTED_REPEAT_UNIT_TRIANGLE_PATTERNS.md"
+  ],
+  "scope": "Full strict-capacity note; directly relevant light-mate separation, type-one-center rows, generated-triangle separation, overlap clusters, and strict heavy-port closure. Earlier recursive classifications and unrelated source-paper conclusions are not recertified.",
+  "checked_obligations": 6,
+  "issues": [],
+  "required_fixes": [],
+  "proof_sources_modified": [],
+  "capacity_bounds": {"1": 56, "3": 44, "5": 33, "7": 22, "9": 10},
+  "d9_consequences": [
+    "v_extra + c_out <= 10",
+    "v_extra = 11 is impossible",
+    "v_extra = 10 implies c_out = 0, s = 2, k = 1"
+  ],
+  "not_established": [
+    "Exclusion of any remaining d",
+    "Existence of a type-zero nongenerated triangle",
+    "Exclusion or realizability of the v_extra = 10 boundary"
+  ]
+}

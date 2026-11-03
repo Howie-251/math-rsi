@@ -1,0 +1,11 @@
+{
+  "frozen_before_experiment": true,
+  "question": "Can reducing the quotient from35to25 increase thin-phase route multiplicity while the exact source quadratic generator rule is preserved?",
+  "source": {"quotient": 35, "field": 71, "action": 4, "phases": [1,3,6,7,9], "translations": [0,15,54,67,1]},
+  "target": {"quotient": 25, "field": 101, "order": 2525, "degree": 10, "diameter": 4},
+  "frozen_rule": "Translations[0,r^2-1,-r^2-1,-r,1], all20primitive25actions overF101, same five positive phases.",
+  "prediction": "Every target phase has more than215 reduced words of length<=4, alleviating the source thin-layer route-count constraint. Actual finite-field coverage is a separate test; no success claim follows from route count.",
+  "budget": "one CPU core,<=30 CPU seconds, twenty cases; no free translations/phasepatterns/field grid",
+  "acceptance": "All25 endpoint layers equalF101, followed by explicit graph export and one independent graph verification.",
+  "stop": "If all20 frozen actions fail, stop this exact quadratic/quotient25 rule; examine a structural witness before any further search."
+}

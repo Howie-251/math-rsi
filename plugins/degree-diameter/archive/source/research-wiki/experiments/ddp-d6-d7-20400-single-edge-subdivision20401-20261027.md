@@ -1,0 +1,154 @@
+---
+type: experiment
+node_id: exp:ddp-d6-d7-20400-single-edge-subdivision20401-20261027
+title: "(6,7)20400单边细分：6真Aut代表全新根失败，闭61200边scope"
+idea_id: "idea:ddp-breadth-20261027"
+verdict: no
+confidence: high
+date: "2026-10-27"
+hardware: ""
+duration: ""
+provenance: "research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/REPORT.md; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/PREDICTION.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RESULT.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/terminal.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RADIUS_CACHE.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/probe.cpp; research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/run.py; research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/GENERATORS.json; research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/RESULT.json"
+added: 2026-10-27T19:58:37Z
+tags: ["ddp", "method-ledger"]
+---
+
+# (6,7)20400单边细分：6真Aut代表全新根失败，闭61200边scope
+
+**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:ddp-breadth-20261027`
+
+## Metrics
+**对象层级：** finite-family-exhaustion
+
+**目标与阶数：** (6,7)；L=20400；条件性n=20401（未据此计纪录）
+
+**距目标的证据：** 新根互补预测REFUTED。sourceR6端点并集等价actualnewrootR7覆盖；六代表全失败。纸面结合sourceD7上界，所有固定细分恰D8，但无导出代表/普通坏对总数，actualD保持null。
+
+**其他指标（保持原计数类型）：**
+```json
+{
+  "source_n": 20400,
+  "source_m": 61200,
+  "explicit_cases_evaluated": 6,
+  "symmetry_lift_closed_source_edges": 61200,
+  "source_R6_cached_roots": 7,
+  "source_R6_sizes": [
+    14870,
+    14870,
+    14870,
+    14870,
+    14870,
+    14870,
+    14870
+  ],
+  "representative_cases": [
+    {
+      "deleted_edge": [
+        0,
+        850
+      ],
+      "source_R6_union": 18251,
+      "newroot_R7_missing": 2149,
+      "first_missing_target": 2,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    },
+    {
+      "deleted_edge": [
+        0,
+        4183
+      ],
+      "source_R6_union": 18211,
+      "newroot_R7_missing": 2189,
+      "first_missing_target": 2,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    },
+    {
+      "deleted_edge": [
+        0,
+        13044
+      ],
+      "source_R6_union": 18215,
+      "newroot_R7_missing": 2185,
+      "first_missing_target": 5,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    },
+    {
+      "deleted_edge": [
+        0,
+        16575
+      ],
+      "source_R6_union": 18251,
+      "newroot_R7_missing": 2149,
+      "first_missing_target": 3,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    },
+    {
+      "deleted_edge": [
+        0,
+        17412
+      ],
+      "source_R6_union": 18211,
+      "newroot_R7_missing": 2189,
+      "first_missing_target": 5,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    },
+    {
+      "deleted_edge": [
+        0,
+        18426
+      ],
+      "source_R6_union": 18215,
+      "newroot_R7_missing": 2185,
+      "first_missing_target": 15,
+      "modified_roots_checked": 0,
+      "oldpair_failure_root": -1,
+      "oldpair_failure_target": -1
+    }
+  ],
+  "modified_graph_BFS": 0,
+  "source_full_D7_BFS_repeated": 0,
+  "source_decode_repeated": 0,
+  "Aut_computation_repeated": 0,
+  "hypothetical_m": 61201,
+  "hypothetical_new_degree": 2,
+  "hypothetical_old_degrees": 6,
+  "derived_all_family_D": 8,
+  "unattempted_explicit_cases": 0,
+  "UNKNOWN": 0,
+  "native_CPU_seconds": 0.002806,
+  "compile_CPU_seconds": 0.7956244789999999,
+  "total_batch_CPU_seconds": 0.8002550409999999,
+  "baseline_date": "2026-10-27"
+}
+```
+
+
+
+
+
+**原始证据：** [research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/REPORT.md](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/REPORT.md)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/PREDICTION.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/PREDICTION.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RESULT.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RESULT.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/terminal.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/terminal.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RADIUS_CACHE.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/RADIUS_CACHE.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/probe.cpp](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/probe.cpp)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/run.py](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/single_edge_subdivision20401/run.py)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/GENERATORS.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/GENERATORS.json)；[research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/RESULT.json](../../research/ddp/more_graphs_20261027/d6_D7_current20400_source/rooted_wl_recovery/six_generators/RESULT.json)
+
+**统一查重入口：** [方法账本](../DDP_METHOD_LEDGER.md)；机器字段见同目录 JSON。
+
+## Reasoning
+**实际范围：** 复用actual20400/61200全6regular CSR。根0六incidentedge分别单次细分，newdegree2；七端点R6缓存一次。六项新根R7均漏2149/2189/2185（inversepairs重复），0modifiedBFS/完整图/未试/UNKNOWN。共享6真Aut证Γtransitive，将六代表严格覆盖全源61200条单边细分；61200不是显式枚举数。
+
+**仍未完成：** Otherconnection mechanisms/sources andgeneral20401degree6diameter7graphs remainopen.
+
+**启发与重启依据：** 相邻两R6大球仍有两千多共同远点。仅在真实VT证明后才从六项升全源；停止单边细分，不自动两edge/helper/坏点微调，别外推任意20401图。
+
+有限批次终态不等于整个数学族不存在；范围以以上原文和证据为准。
+
+## Connections
+_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._
+

@@ -1,0 +1,509 @@
+
+--- PAGE 1 ---
+Large graphs of diameter two and given degree
+Jozef ˇSir´aˇn
+Open University, Milton Keynes
+Slovak University of Technology, Bratislava
+Jana ˇSiagiov´aa n dM ´aria ˇZd´ımalov´a
+Slovak University of Technology
+Bratislava
+Abstract
+Let r(d,2), C(d,2), and AC(d,2) be the largest order of a reg-
+ular graph, a Cayley graph, and a Cayley graph of an Abelian
+group, respectively, of diameter 2 and degree d.T h e b e s t c u r -
+rently known lower bounds on these parameters are r(d,2) ≥
+d
+2− d +1f o r d− 1 an odd prime power (with a similar result
+for powers of two), C(d,2)≥ (d +1 )2/2 for degrees d =2 q− 1
+where q is an odd prime power, and AC(d,2)≥ (3/8)(d2 − 4)
+where d =4 q− 2 for an odd prime power q.
+Using a number theory result on distribution of primes we prove,
+for all suﬃciently large d, lower bounds on r(d,2), C(d,2), and
+AC(d,2) of the form c· d2− O(d1.525)f o rc =1 ,1 /2, and 3/8,
+respectively. We also prove results of a similar ﬂavour for vertex-
+transitive graphs and Cayley graphs of cyclic groups.
+1 Introduction
+The degree-diameter problem is to ﬁnd, or at least give good estimates
+on, the largest order of a graph of given maximum degree and diameter.
+In a broader scope the problem also includes analysis and classiﬁcation of
+the largest graphs of given degree and diameter that have been discovered.
+History and development of this area of research has been summed up in
+347
+
+--- PAGE 2 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+the relatively recent survey [16]. Despite numerous deep results there re-
+main fundamental problems to be resolved, even for diameter two. We will
+concentrate on this case and refer the reader interested in higher diameters
+to [16].
+Ford≥ 2l e tn(d,2) be the largest order of a graph of maximum degreed
+and diameter 2. The diameter requirement localized at a vertexv of degree
+d implies that any vertex of such a graph, distinct fromv and not adjacent
+to v, must be one of the at most d− 1 neighbours of some neighbour of
+v. This implies the bound n(d,2) ≤ 1+ d + d(d− 1) = d
+2 +1 , k n o w n
+as the Moore bound for diameter two. By the landmark result of Hoﬀman
+and Singleton [10] who initiated research into the degree-diameter problem,
+the equality n(d,2) = d
+2 + 1 holds if and only if d =2 ,3 ,7 ,a n dp o s s i b l y
+57. The corresponding unique extremal graphs, that is, the Moore graphs
+of diameter two, are the pentagon, the Petersen graph, and the Hoﬀman-
+Singleton graph; the existence of a Moore graph of degree 57 is still in
+doubt. For all the remaining degrees d we have n(d,2)≤ d
+2− 1b y[ 7 ] .
+The best lower bound on n(d,2) comes from the graphs constructed
+by Brown [3] and reads n(d,2) ≥ d2 − d + 1 for all degrees d such that
+d− 1 is an odd prime power. It was later observed in [5] and [7] that
+Brown’s graphs can be extended by one vertex if d− 1i sap o w e ro f2 ,
+giving n(d,2)≥ d2 − d + 2 in this special case. Thus, at least for degrees
+closely related to prime powers, n(d,2) is asymptotically d2.
+Since Brown’s graphs are not regular while the Moore graphs are, it is
+of interest to ask about a ‘regular’ version of the degree-diameter problem.
+As there are no regular graphs of odd order and odd degree, we also allow,
+but only for odd d, graphs of odd order with a single vertex of degreed− 1
+and all the remaining vertices of degree d; such graphs will be referred
+to as almost regular of degree d.L e t n o wr(d,2) denote the largest order
+of a regular or an almost regular graph of degree d ≥ 2 and diameter 2.
+Obviously n(d,2)≥ r(d,2) but it is not clear at all whether equality holds,
+say, for some inﬁnite set of degrees.
+Observe that all the known Moore graphs of diameter two are not only
+regular but vertex-transitive as well. In contrast with this, a result of
+Higman (presented in [4]) says that if a graph of degreed = 57, diameter 2,
+and order d
+2 + 1 = 3250 exists, it is not vertex-transitive. For the interest
+of the reader, the currently known best upper bounds on the order of this
+hypothetical graph can be found in [13]. This has generated interest in the
+348
+
+--- PAGE 3 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+parameter vt(d,2) deﬁned as the largest order of a vertex-transitive graph of
+degree d≥ 2 and diameter 2. By the above result we havevt(d,2) = d2 +1
+for d∈{ 2,3,7} and vt(d,2) ≤ d2 − 1 for all other degrees, including 57.
+The best available lower bound [15] in this case isvt(d,2)≥ (8/9)(d+1/2)2
+for all degrees of the form d =( 3q− 1)/2w h e r eq is a prime power such
+that q≡ 1m o d4 .
+A special class of vertex-transitive graphs are Cayley graphs. Given a
+ﬁnite group G with a unit-free generating set S such that S = S−1,t h e
+Cayley graph Cay(G, S)h a sv e r t e xs e tG and a pair of vertices g,h ∈ G
+are adjacent if g−1h∈ S. Since this condition is equivalent to h−1g ∈ S
+because of S = S−1, the Cayley graph Cay(G, S) is undirected. Obviously,
+the degree of Cay(G, S)i s |S|, and the diameter of Cay(G, S)i s2i fa n d
+only if every non-identity element ofG\S is a product of two elements from
+S. We note that the graphs of [15] giving the lower bound at the end of
+the previous paragraph are vertex-transitive but not Cayley.
+To further reﬁne the analysis, for an arbitrary integer d ≥ 2w el e t
+C(d,2), AC(d,2), and CC(d,2) denote the largest order of a Cayley graph
+of a group, an Abelian group, and a cyclic group, respectively, of diameter 2
+and degree d.F o rd = 2 the three invariants have value 5, and from results
+summed up in [16] one can extract the upper bounds C(d,2)≤ d2− 1a n d
+CC(d,2)≤ AC(d,2)≤ 1+d+d2/2 for alld≥ 3. Our interest, however, will
+be in constructions providing lower bounds which, as it appears, are quite
+far from the upper bounds. For general Cayley graphs the best lower bound
+is C(d,2)≥ (d+1)
+2/2 but we only have it for degreesd =2 q−1w h e r eq is
+an odd prime power [18]. In the Abelian case the best available estimate is
+AC(d,2)≥ (3/8)(d
+2 − 4) where d =4 q− 2 for an odd prime power q,a n d
+for cyclic groups we have CC(d,2)≥ (9/25)(d +3 ) (d− 2) for d =5 p− 3
+where p is an odd prime such that p≡ 2 mod 3; both results have been
+proved in [14]. By [16] the only known lower bound valid for all degrees
+d≥ 3 is the folklore inequalityC(d,2)≥ AC(d,2)≥ CC(d,2) >d 2/4. The
+values ofC(d,2) for d≤ 20 found with the help of computers can be looked
+up in the tables [19].
+Our aim is to extend, at least in the asymptotic sense, the above best
+bounds on n(d,2), vt(d,2), C(d,2), AC(d,2), and CC(d,2) from the very
+restricted sets of degrees related to prime powers toarbitrary degrees. The
+basis of our considerations is a number theory result of [2] about gaps
+between consecutive primes. Details, given in Section 3, are straightfor-
+349
+
+--- PAGE 4 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+ward for Cayley graphs, less obvious for regular graphs, and non-trivial for
+vertex-transitive non-Cayley graphs.
+For completeness we remark that interest in large Cayley graphs and
+digraphs of given diameter and degree has also been motivated by problems
+in group theory and theoretical computer science. Group theory connec-
+tions via the concept of a basis of a group have been outlined in [14] and
+for links with design of interconnection networks we refer to [16]. Impor-
+tance of Cayley graphs in computer generation of record large graphs of
+manageable degree and diameter is well known [16] and emphasized also
+by the recent results of [12] which led to rewriting the tables of current
+largest graphs kept in [19].
+2 A review of two constructions
+To make our explanations self-contained we begin with giving some details
+about the graphs of Brown [3] and McKay-Miller-ˇSir´aˇn[ 1 5 ] .
+For any prime power q the graph B(q) of Brown has vertex set all the
+q
+2 + q + 1 points of a ﬁnite projective plane over the Galois ﬁeld GF(q).
+In other words, vertices of B(q) are equivalence classes [ a, b, c]o ft r i p l e s
+(a, b, c) ̸=( 0,0,0) of elements of GF(q), where two triples are equivalent
+if they are a non-zero multiple of each other. Two distinct vertices [a, b, c]
+and [a′,b ′,c ′] are adjacent in B(q) if and only if the triples are orthogonal,
+that is, if aa′+ bb′+ cc′ = 0. In the terminology of projective geometry
+this means that vertices [a, b, c]a n d[a′,b ′,c ′] are adjacent if and only if the
+point [a, b, c] lies on the line with homogeneous coordinates [ a′,b ′,c ′]. The
+vertex set of B(q) may also be identiﬁed with one-dimensional subspaces
+of a three-dimensional linear space over GF(q), with adjacency deﬁned
+by orthogonality of the subspaces. We remark that Brown’s graphs are
+isomorphic to the graphs of [8] and a polarity version of this construction
+was given in [1].
+The structure of Brown’s graphs is known to a great detail and most of
+the few facts we need for our analysis can be easily veriﬁed by elementary
+linear algebra. Determination of the neighbours of a vertex [a, b, c]o f B(q)
+amounts to classify solutions (x, y, z) of the linear equationax+by+cz =0 .
+Apart from (0,0,0) this equation hasq
+2−1 non-zero solutions representing
+(q2− 1)/(q− 1) = q + 1 distinct projective points, which are diﬀerent from
+[a, b, c] if and only if a2 + b2 + c2 ̸=0 . T h u s ,av e r t e x[a, b, c]h a sq or q +1
+350
+
+--- PAGE 5 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+neighbours according to whether a2 + b2 + c2 is equal to zero or not. The
+number of vertices of degreeq is then equal to the number of self-orthogonal
+projective points (those for which a2 + b2 + c2 = 0), which is known to be
+equal to q+1, see e.g. [1]. Further, for any two distinct verticesu =[ a, b, c]
+and v =[ a′,b ′,c ′] the systemax+by+cz =0a n da′x+b′y+c′z =0c o n s i s t s
+of two linearly independent equations and hence has a one-dimensional
+solution space which, apart from the zero solution, represents a projective
+point, that is, a unique vertex w of B(q). If w ∈{ u, v},t h e nu and v
+are adjacent and exactly one of them is represented by a self-orthogonal
+triple (if both u and v were represented by self-orthogonal triples then the
+system would have two linearly independent solutions (a, b, c)a n d(a
+′,b ′,c ′),
+a contradiction), and if w/∈{ u, v} then w is the unique vertex adjacent to
+both u and v in B(q).
+This discussion shows that the vertex set of B(q) is a disjoint union of
+two sets for which we now reserve the symbolsV and W, where vertices inV
+and W have degreeq+1 and q, respectively, with|V| = q2 and|W| = q+1.
+Further, the above arguments imply that the subgraph ofB(q) induced by
+the set W is edgeless, every pair of distinct vertices of W is connected by
+a unique path of length two, every edge joining two vertices of V lies in a
+unique triangle, while no edge joining a vertex of V with a vertex of W is
+contained in any triangle. In particular, B(q) has diameter 2, and since its
+maximum degree is q +1 ,w eh a v en(d,2)≥ q2 + q +1= d2 − d +1f o r
+d = q +1 .
+Since|W| = q + 1, for any odd q we may extend B(q) by an arbitrary
+perfect matching M between the (even number of) vertices inW and form
+thus a new graphB∗(q). Since B∗(q) is regular of degreeq +1 and still has
+diameter 2, we have r(d,2)≥ d2 − d +1f o r d = q +1w h e r eq is an odd
+prime power. When q is a power of 2 it turns out that all theq + 1 vertices
+of degree q in B(q)h a v et h ef o r m[a, b, a+b]f o ra, b∈ GF(q) and hence are
+all joined to the vertex [1,1,1] of degreeq+ 1 .I nt h i sc a s ew eu s ead i ﬀ e r e n t
+type of extension of B(q) to a regular graph, pointed out in [5, 7]. Namely,
+we extendB(q) by a new vertex incident to theq+1 vertices of degreeq and
+denote the resulting regular graph B∗(q), again. This way of adding the
+new vertex does not change the diameter and thereforer(d,2)≥ d2− d +2
+for q a power of 2.
+Although the extended graphs of Brown lead to very good lower bounds
+on r(d,2) when d− 1 is a prime power, they cannot be used for bounds on
+351
+
+--- PAGE 6 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+vt(d,2) for the same degrees, as we show next.
+Proposition 1 The extended Brown’s graphsB∗(q) are not vertex-transitive
+for any prime power q.
+Proof: The result is straightforward if q is a power of 2, since in this case
+it can be checked that B∗(q) contains exactly two distinct vertices with
+identical neighbours.
+Now, let q be odd. We will borrow the notation introduced earlier
+together with the facts about Brown’s graphs derived above. We saw there
+that any pair of vertices in W is connected by exactly one path of length
+two. Thus, at most ( q +1 )q/2 vertices in V are adjacent to at least one
+vertex from W (in fact, by a reﬁned argument it can be shown that there
+are exactly (q +1 )q/2 such vertices but we will not need this here). This
+means that there is at least one vertex inV ,s a y ,v, not joined to any vertex
+in W. Since every edge joining two vertices of V lies in a unique triangle,
+the subgraph of B(q) induced by all the neighbours of v is isomorphic to a
+matching of (q+1)/2 edges. Recall also that no edge incident to a vertex in
+W is contained in any triangle ofB(q). It follows that no matter howB(q)
+is extended toB
+∗(q) by a matchingM between vertices ofW, the subgraph
+of B∗(q) induced by the set of all neighbours of any vertexw∈ W contains
+just one edge, namely, the edgew′v′where w′∈ W is the unique vertex for
+which ww′∈ M and v′∈ V is the unique vertex adjacent to both w and
+w′. We conclude that the graphs B∗(q) are never vertex-transitive. □
+The current largest vertex-transitive graphs of diameter 2, at least for
+a certain degrees, are the graphs of McKay-Miller- ˇSir´aˇn[ 1 5 ] ;t h e yh a v e
+also been described in two diﬀerent but equivalent ways in [17] and [9].
+Keeping to the original description, let q be an arbitrary prime power such
+that q ≡ 1m o d4a n dl e tF = GF(q). Let X be the set of all non-zero
+squares in F.L e t M(q) be the graph of order 2q2 with vertex set V0∪ V1
+where, for r ∈{ 0,1},t h es e tVr consists of triples ( i, k, r)w i t hi, k∈ F.
+Every vertex (i, k, r)i sa d j a c e n tt ot h eq vertices (j, k+(−1)rij,1− r)f o r
+all j∈ F,a sw e l la st ot h e(q− 1)/2 vertices of the form (i, k+ ξrx, r)f o r
+all x∈ X, with no other adjacency. It was proved in [15] that the graphs
+M(q) are vertex-transitive (and non-Cayley) graphs of diameter 2. Since
+they have degree d =( 3q− 1)/2 and order 2q2, for such degrees d we have
+vt(d,2)≥ (8/9)(d +1 /2)2.
+352
+
+--- PAGE 7 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+The full automorphism group of the graphs M(q) was determined in
+[9]. In what follows we will just need information about certain subgroups
+of this group, which we collect from [15] and [17]. For any s,t ∈ F the
+mapping f
+s,t given by
+fs,t(i, k, r)=( i + s,k + t− (−1)r(is + s2/2),r )
+is an automorphism ofM(q). It can be checked that the collection of all such
+mappings forms a groupH isomorphic, via the bijectionfs,t ↦→ (s,t ), to the
+direct product F+ × F+ where F+ is the additive group of F.M o r e o v e r ,
+H acts regularly on both V0 and V1.
+In order to introduce more automorphisms, let n be the largest integer
+such that 2n divides q− 1a n dl e tq− 1=2 n(2ℓ+ 1). Letting λ = ξ2ℓ+1
+one sees that λ has order 2n in the multiplicative group F ∗ of the ﬁeld F.
+It follows from [15] that the mapping g given by
+g(i, k, r)=( (−ξ)ℓ+ri, λk,1− r)
+is an automorphism of the graphM(q) interchangingV0 and V1. The group
+G generated by g and all the fs,t is a group of automorphisms of M(q),
+transitive on the vertex set of this graph. We will not need any structural
+information about G later on.
+3R e s u l t s
+We are now ready to state and prove our main result.
+Theorem 2 We have the following lower bounds:
+(1) n(d,2)≥ r(d,2)≥ q2 + q +1 for all d≥ 4,w i t hq being the largest
+odd prime power such that q≤ d− 1,
+(2) vt(d,2)≥ 2q2 for all odd d≥ 5,w h e r eq is the largest prime power
+such that q≡ 5m o d8 and (d +1 )/2 <q< (2d +1 )/3,
+(3) C(d,2)≥ 2q2 for all degrees d≥ 5,w h e r eq is the largest odd prime
+power such that q≤ (d +1 )/2,
+(4) AC(d,2)≥ 6q(q−1) for all d≥ 10,w i t hq being the largest odd prime
+power such that q≤ (d +2 )/4,a n d
+353
+
+--- PAGE 8 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+(5) CC(d,2) ≥ 9p(p− 1) for all degrees d ≥ 12,w h e r ep is the largest
+prime such that p≡ 2m o d3 and d/6≤ p≤ (d +3 )/5.
+Proof: The essence of the method is to use the known results summed up
+in the previous two sections and extend the corresponding graphs appro-
+priately. We assume throughout the proof that d and q (and p in the last
+case) satisfy the conditions listed above.
+(1) Let q be an odd prime power as in the statement; by Chebyshev’s
+t h e o r e mw eh a v e(d− 1)/2 <q ≤ d− 1. Let L = B∗(q) be an extended
+Brown’s graph of degree q + 1 ,d i a m e t e r2 ,a n do r d e rq2 + q +1 . T h e
+complement
+ L of L has degree Δ = q2− 1. Let j =⌊(d− q− 1)/2⌋,w h i c h
+means that d = q +1+2 j if d is even, and d = q +1+2 j +1i f d is odd.
+Our strategy will be to extend L by j 2-factors of
+ L if d is even, and by j
+2-factors and a maximum matching coming from a Hamilton cycle of
+ L if
+d is odd, to obtain a regular and an almost regular graph of degree d and
+diameter 2, respectively.
+Observe that for q≥ 3w eh a v eΔ> (q2 +q +1 )/2. By Dirac’s theorem
+[6], the graph
+ L contains a Hamilton cycle, say,C. The graph
+ L\E(C)h a s
+even degree and is therefore 2-factorable by the classical result of Petersen;
+let F
+1,...,F j be a collection ofj pairwise edge-disjoint 2-factors of
+L\E(C).
+If d is even, we let L′be the graph arising from L by putting in all the 2-
+factors Fi for 1 ≤ i ≤ j. By our choice of j the graph L′ is regular of
+degree d.I f d is odd, let L′be obtained from L by putting in the 2-factors
+Fi for 1 ≤ i ≤ j− 1t o g e t h e rw i t ham a t c h i n go f(q2 + q)/2e d g e st a k e n
+from the Hamilton cycle C. The resulting graph L′is obviously almost d-
+regular. In both instances, L′has diameter 2 because (as a consequence of
+the inequality from Chebyshev’s theorem) it is not complete and contains
+L as a spanning subgraph. This shows that r(d,2)≥ q2 + q +1i f q is the
+largest odd prime power not exceeding d− 1, for any d≥ 4.
+(2) We refer to the notation regarding the McKay-Miller- ˇSir´aˇng r a p h
+M(q) introduced before the statement of this theorem. We will extend
+the graph M(q) by adding new edges as follows. First, observe that the
+assumption q≡ 5m o d8i m p l i e st h a tn =2a n d2 ℓ+1=( q− 1)/4, that
+is, λ is a non-square and λ2 = −1. Let Y ⊂ F be a set of non-squares
+closed under inverses, that is, Y = −Y , such that |Y| = d− (3q− 1)/2;
+note that our assumptions imply that this number is positive, even, and
+smaller than (q− 1)/2. Let us extend the graphs M(q) by adding, at each
+vertex (i, k, r), a total of |Y| new edges joining ( i, k, r) to the vertices of
+354
+
+--- PAGE 9 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+the form (i, k+ λry,r ) for all y∈ Y . The resulting graph, denoted MY (q),
+is regular of degree d and has diameter 2 because it contains M(q)a sa
+subgraph. More importantly, by a direct computation one can verify that
+the generators f
+s,t and g of the group G introduced above preserve all the
+added edges. This shows that G is transitive on vertices of MY (q), which
+completes the proof of (2). As far as the assumption ( d +1 )/2 <q<
+(2d +1 )/3 is concerned, we note that the value of q =( 2d +1 )/3i st a k e n
+care of by the McKay-Miller-ˇSir´aˇn graphs for all q≡ 1 mod 4, while in the
+case q =( d +1 )/2 we obtain the Cayley graphs of [18] which will appear
+in the next part of the argument.
+(3) Let L be a Cayley graph of degree 2 q− 1, diameter 2, and order
+2q2, constructed in [18]. An inspection of the construction shows that the
+graph L is a Cayley graph Cay(G, X) for a non-Abelian group G of order
+2q2 containing q2 involutions, and for an inverse-closed generating setX of
+size 2q−1 containingq involutions. It is clearly possible to select additional
+inverse-closed set Y ⊂ G disjoint from X such that Y contains d− 2q +1
+generators, including some odd number of involutions if d is even. This
+yields a Cayley graph L′ = Cay(G, X∪ Y )o fd e g r e ed,d i a m e t e r2 ,a n d
+order 2q2.C o n s e q u e n t l y ,C(d,2) ≥ 2q2 for the largest odd prime power
+q≤ (d +1 )/2.
+(4) Let L be the Cayley graph Cay(G, X)f r o m[ 1 4 ]o fd i a m e t e r2f o r
+an Abelian group G of order 6q(q−1) that contains precisely 3 elements of
+order 2, whereX is an inverse-closed generating set of size 4q−2 containing
+exactly two elements of order 2. Let us select an additional inverse-closed
+set Y ⊂ G disjoint fromX such thatY contains d−4q+2 generators, includ-
+ing an involution ifd is odd. Clearly, the Cayley graphL
+′= Cay(G, X∪Y )
+has degree d,d i a m e t e r2 ,a n do r d e r6q(q− 1).
+(5) Let L be a Cayley graph Cay(G, X) for a cyclic group G of order
+9p(p− 1), degree 5p− 3 and diameter 2 with the single element of order 2
+being outside the generating set X, as given in [14]. Choose an additional
+inverse-closed set Y ⊂ G disjoint from X such that Y contains d− 5p +3
+generators, including the involution if d is odd. Clearly, the Cayley graph
+L′ = Cay(G, X∪ Y ) has degree d, diameter 2, and order 9 p(p− 1). We
+only need to apply this process for primesp such that p≥ d/6a so t h e r w i s e
+we have a better bound CC(d,2) >d 2/4f r o m[ 1 6 ] .□
+Using a highly non-trivial number theory result on the distribution of
+primes it is possible to eliminate q from some of the bounds appearing in
+355
+
+--- PAGE 10 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+Theorem 2. The roots of the result are in a still unresolved conjecture of
+Legendre on the existence of a prime betweenn2 and (n+1)2 for any positive
+integer n. Replacing (n +1 )2 with x and allowing any realx≥ 2l e a d st oa
+stronger form of the conjecture, stipulating that for any realx≥ 2t h e r ei s
+ap r i m ep such that x− 2√
+x +1 <p ≤ x. The ﬁrst result in this direction
+was given by Hoheisel [11] of which we just need a consequence saying that
+there exists a real number θ< 1 such that the interval [x− xθ,x]c o n t a i n s
+a prime number for any suﬃciently large x. Clearly, the stronger form of
+Legendre’s conjecture would follow, at least for suﬃciently large x,i fo n e
+could prove that θ< 1/2 in Hoheisel’s result. This has generated research
+towards making the exponent θ as small as possible. The current record is
+θ =0 .525, established by Baker, Harman and Pintz [2]. That is, by [2], for
+any suﬃciently large x there is a prime p such that x− x0.525 ≤ p≤ x.
+We will use this result of [2] to prove lower bounds on the order of
+the largest graphs of given degree and diameter 2 for all suﬃciently large
+degrees.
+Corollary 3 For all suﬃciently large degreesd we have:
+(a) n(d,2)≥ r(d,2) >d
+2− 2d1.525,
+(b) C(d,2) > (1/2)d2 − 1.39d1.525,
+(c) AC(d,2) > (3/8)d2 − 1.45d1.525.
+Proof: Let d be suﬃciently large and let q be the largest odd prime power
+such thatq≤ D where D is equal tod−1, (d+1)/2, and (d+2)/4 according
+as we are in the case (a), (b), and (c). The result of [2] gives
+q≥ D− D0.525 (1)
+and we will use this estimate in all three instances. In the case (a) when
+D = d− 1 we invoke the ﬁrst part of Theorem 2 combined with (1) which,
+for all suﬃciently large d,g i v e s
+r(d,2)≥ q2 + q +1 > (D− D0.525)2 + D− D0.525 >d 2− 2d1.525 .
+If D =( d +1 )/2, by the third part of Theorem 2 together with (1) we
+obtain
+C(d,2)≥ 2q2 ≥ 2(D−D0.525)2 > (1/2)d2−20.475d1.525 > (1/2)d2−1.39d1.525
+356
+
+--- PAGE 11 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+for all suﬃciently large degrees d, which proves (b). In the case (c) when
+D =( d +2 )/4 we combine the fourth part of Theorem 2 with (1), which
+yields
+AC(d,2)≥ 6q(q− 1) > 6(D− D0.525− 1)2 > (3/8)d2 − 3· 4−0.525d1.525 ,
+that is, AC(d,2) > (3/8)d2 − 1.45d1.525 for all suﬃciently large d. □
+4R e m a r k s
+The construction of the extended graphs of Brown together with Proposi-
+tion 1 leads to the following interesting question. Given a graphG of maxi-
+mum degree d, what is the smallest numberδ = δG such that there exists a
+vertex-transitive graphH of degree d+δ that containsG as a spanning sub-
+graph? The problem is equivalent to ﬁnding a vertex-transitive spanning
+subgraph of largest degree in the complement of G. In this terminology,
+Proposition 1 says that δ
+G > 0i f G = B∗(q), and it would be interesting
+to determine the value of δG in this case.
+Our second remark concerns the number-theoretic approximation bound
+of [2]. Unfortunately, there appears to be no result on the existence of a
+prime from a given congruence classin the interval [x−x
+θ,x]f o rs o m eθ< 1
+and all suﬃciently largex. If there was such a result, the proof of Corollary
+3 would apply also to the cases (2) and (5) of Theorem 2 and we would
+obtain bounds on vt(d,2) and CC(d,2) of the form (8/9)d
+2− O(d1+θ)a n d
+(9/25)d2−O(d1+θ) for all suﬃciently large odd degreed and general degree
+d, respectively.
+In the vertex-transitive case we have stated part (2) of Theorem 2 just
+for q≡ 5 mod 8 and odd degrees d. Recalling that n has been deﬁned as
+the largest integer such that 2n divides q− 1, with q− 1=2 n(2ℓ+1 ) ,o u r
+statement of (2) corresponds to the instance whenn = 2. We can extended
+(2) to all n≥ 2 as follows:
+(2’) If q is the largest prime power such that q ≡ 2n +1m o d2 n+1 and
+(d +1 )/2 <q< (2d +1 )/3,t h e n vt(d,2) ≥ 2q2 for all d of the form
+d =( 3q− 1)/2+2 n−1m for m≤ 2ℓ.
+Indeed, to establish (2’), the only change required in the proof of (2) is to
+take the set Y to be a union of m orbits of the permutation of F ∗ given by
+y↦→ λ2y consisting of non-squares. Such a more general version, however,
+357
+
+--- PAGE 12 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+does not appear as appealing as the simplest form for n =2t h a tw eh a v e
+used in the presentation of part (2) of Theorem 2.
+Finally, we remark that an analysis of the orbit structure of the groupG
+of automorphisms of the McKay-Miller- ˇSir´aˇn graphs M(q), introduced in
+the last paragraph of Section 2, shows that it is not possible to add an extra
+G-invariant perfect matching to M(q) and hence extend the statement (2)
+of Theorem 2 to even degrees.
+Acknowledgement
+The authors acknowledge the support of this research by the VEGA Re-
+search Grants 1/0489/08 and 1/0280/10, the APVV Research Grants 0040-
+06 and 0104-07, and the APVV LPP Research Grants 0145-06 and 0203-06.
+References
+[1] M. Abreu, C. Balbuena and D. Labbate. Adjacency matrices of po-
+larity graphs and of other C4-free graphs of large size. Des. Codes
+Cryptogr., 55:221-233, 2010.
+[2] R. C. Baker, G. Harman and J. Pintz. The diference between consec-
+utive primes. II. Proc. London Math. Soc., 83:532–562, 2001.
+[3] W. G. Brown. On graphs that do not contain a Thompsen graph.
+Canad. Math. Bull., 9:281–285, 1996.
+[4] P. J. Cameron. Permutation Groups. Cambridge Univ. Press, 1999.
+[5] C. Delorme. Examples of products giving large graphs with given
+degree and diameter. Discrete Applied Math., 37-38:157–167, 1992.
+[6] G. Dirac. Some theorems on abstract graphs. Proc. Lond. Math. Soc.,
+2:69–81, 1952.
+[7] P. Erd¨os, S. Fajtlowicz and A.J. Hoﬀman. Maximum degree in graphs
+of diameter 2. Networks, 10:87–90, 1980.
+[8] P. Erd¨os, A. R´enyi, and V. T. S´os. On a problem of graph theory.
+Stud. Sci. Math. Hung., 1:215-235, 1966.
+358
+
+--- PAGE 13 ---
+Large graphs of diameter two and given degree J. ˇSir´aˇne ta l .
+[9] P. Hafner. Geometric realization of the graphs of McKay-Milller-ˇSir´aˇn.
+J. Combin. Theory Ser. B, 90:223–232, 2004.
+[10] A. J. Hoﬀman and R. R. Singleton. On Moore graphs with diameters
+2a n d3 .IBM J. Res. Dev., 4:497–504, 1960.
+[11] G. Hoheisel. Primzahlprobleme in der Analysis. S. Preuss. Ak. Wiss.,
+2:1–13, 1930.
+[12] E. Loz and and J. ˇSir´aˇn. New record graphs in the degree-diameter
+problem. Australas. J. Combin., 41:63–80, 2008.
+[13] M. Maˇcaj and J. ˇSir´aˇn. Search for properties of the missing Moore
+graph. Linear Algebra Appl., 432:2381-2398, 2010.
+[14] H. Macbeth, J. ˇSiagiov´aa n dJ .ˇSir´aˇn. Cayley graphs of given degree
+and diameter for cyclic, Abelian, and metacyclic groups. Submitted,
+2009.
+[15] B.D. McKay, M. Miller and J. ˇSir´aˇn. A note on large graphs of di-
+ameter two and given maximum degree. J. Combin. Theory Ser. B,
+74:110–118, 1998.
+[16] M. Miller and J. ˇSir´aˇn. Moore graphs and beyond: A survey of the
+degree-diameter problem. Electronic J. Combinat.,D y n a m i cs u r v e y
+No. D14 (61pp), 2005.
+[17] J. ˇSiagiov´a. A note on the McKay-Miller- ˇSir´aˇn graphs. J. Combin.
+Theory Ser. B, 81:205–208, 2001.
+[18] J. ˇSiagiov´aa n dJ .ˇSir´aˇn. A note on large Cayley graphs of diameter
+two and given degree. Discrete Math., 305:379–382, 2005.
+[19] On-line tables of the current largest graphs for the degree-diameter
+problem at www.eyal.com.au/wiki/The
+ Degree/Diameter
+ Problem.
+359
+
+--- PAGE 14 ---

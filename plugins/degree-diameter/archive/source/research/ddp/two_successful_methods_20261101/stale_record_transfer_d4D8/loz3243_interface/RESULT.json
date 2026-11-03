@@ -1,0 +1,209 @@
+{
+  "status": "READONLY_INTERFACE_RECOVERED_INHERITED_DIRECT_SCOPES_STOP",
+  "target": {
+    "Delta": 4,
+    "D": 8,
+    "saved_current_order": 3243
+  },
+  "source": {
+    "actual_order": 3243,
+    "actual_edges": 6486,
+    "degree_histogram": {
+      "4": 3243
+    },
+    "D_inherited": 8,
+    "girth_inherited": 10,
+    "literal_path": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/source3243.raw_adj.txt",
+    "recipe_path": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/SOURCE_FACTS.json",
+    "prior_directed_arc_binding": 12972,
+    "source_legality": "INHERITED_NOT_REVERIFIED",
+    "Cayley": false,
+    "vertex_transitive": false
+  },
+  "actual_interface": {
+    "base_count": 3,
+    "group_order": 1081,
+    "phase_modulus": 23,
+    "normal_field": 47,
+    "multiplier": 6,
+    "right_law": "(x,y)*(a,c)=(x+a mod23,y+6^x*c mod47)",
+    "vertex_label": "base*1081+x+23*y",
+    "all_twelve_darts": [
+      {
+        "id": 0,
+        "from": 0,
+        "to": 0,
+        "phase": 3,
+        "translation": 8,
+        "reverse": 1
+      },
+      {
+        "id": 1,
+        "from": 0,
+        "to": 0,
+        "phase": 20,
+        "translation": 40,
+        "reverse": 0
+      },
+      {
+        "id": 2,
+        "from": 1,
+        "to": 1,
+        "phase": 11,
+        "translation": 2,
+        "reverse": 3
+      },
+      {
+        "id": 3,
+        "from": 1,
+        "to": 1,
+        "phase": 12,
+        "translation": 20,
+        "reverse": 2
+      },
+      {
+        "id": 4,
+        "from": 2,
+        "to": 2,
+        "phase": 6,
+        "translation": 35,
+        "reverse": 5
+      },
+      {
+        "id": 5,
+        "from": 2,
+        "to": 2,
+        "phase": 17,
+        "translation": 18,
+        "reverse": 4
+      },
+      {
+        "id": 6,
+        "from": 0,
+        "to": 1,
+        "phase": 0,
+        "translation": 0,
+        "reverse": 7
+      },
+      {
+        "id": 7,
+        "from": 1,
+        "to": 0,
+        "phase": 0,
+        "translation": 0,
+        "reverse": 6
+      },
+      {
+        "id": 8,
+        "from": 0,
+        "to": 2,
+        "phase": 0,
+        "translation": 0,
+        "reverse": 9
+      },
+      {
+        "id": 9,
+        "from": 2,
+        "to": 0,
+        "phase": 0,
+        "translation": 0,
+        "reverse": 8
+      },
+      {
+        "id": 10,
+        "from": 1,
+        "to": 2,
+        "phase": 4,
+        "translation": 45,
+        "reverse": 11
+      },
+      {
+        "id": 11,
+        "from": 2,
+        "to": 1,
+        "phase": 19,
+        "translation": 14,
+        "reverse": 10
+      }
+    ],
+    "expanded_phase_controller_order": 69,
+    "scalar_fiber_order": 47,
+    "neighbors_per_controller_dart": 1,
+    "independent_edge_noise_parameter": false,
+    "not_same_as_D3_q_neighbor_line_rule": true
+  },
+  "inherited_stops": [
+    {
+      "scope": "Keep all old edges, cap4, any connected append",
+      "status": "EXACT_NO_OLD_DEGREE_SLACK",
+      "source": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/REPORT.md"
+    },
+    {
+      "scope": "Any nontrivial ordinary graph cover of this exact3243 source with D<=9, hence D8",
+      "status": "EXACT_NO_BY_PUBLISHED_GIRTH10_AND_UNIQUE_WALK_LIFT",
+      "source": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/REPORT.md"
+    }
+  ],
+  "inherited_single_control": {
+    "status": "SINGLE_FIXED_CONTROL_REFUTED",
+    "n": 9591,
+    "target_D": 9,
+    "first_orbit_root_eccentricity": 10,
+    "first_orbit_root_R9_missing": 245,
+    "all_three_root_BFS_complete": false,
+    "actual_global_D": null,
+    "scope": "F139,r6,stored centered offsets only, not all translation assignments",
+    "recipe": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/CONTROL_RECIPE.json",
+    "result": "research/ddp/more_graphs_20261027/d4_D8_current3243_transfer/CONTROL_RESULT.json"
+  },
+  "old_length_le9_phase_counts_inherited": [
+    {
+      "root_base": 0,
+      "minimum_words": 533
+    },
+    {
+      "root_base": 1,
+      "minimum_words": 510
+    },
+    {
+      "root_base": 2,
+      "minimum_words": 528
+    }
+  ],
+  "new_falsifiable_prediction": {
+    "status": "PROPOSED_NOT_TESTED",
+    "claim": "The fixed69-state phase controller has an ordered slot with fewer than139 nonbacktracking words of lengths0..8.",
+    "diagnostic_object": "69 controller states and12 directed port types with actual inverse-dart involution; word counts by endpoint/lastdart/length only.",
+    "would_exclude_if_supported": "All F139 normal-translation assignments on that fixed phase/controller rule at D8, not all4D8 graphs.",
+    "if_refuted": "A passed count is only necessary; shared translation endpoint coverage still unresolved.",
+    "automatic_authorization_to_run": false
+  },
+  "next": "Stop inherited ordinary-cover and monotone rules. Return actual interface and the one unexecuted69-state length8 capacity question to root; no field/phase/offset ladder.",
+  "scope_not_closed": [
+    "source edge rewiring",
+    "another source",
+    "all otherF139 translation assignments",
+    "general4D8 graphs"
+  ],
+  "primary_URLs": [
+    "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g8.html",
+    "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD8/Loz_3243.txt",
+    "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD8/3243_loz_SageMath.txt"
+  ],
+  "new_source_downloads": 0,
+  "new_source_BFS_validity_or_allroot_runs": 0,
+  "new_nonbacktracking_capacity_runs": 0,
+  "new_field_rank_or_Lean_runs": 0,
+  "new_full_graphs": 0,
+  "solver_web_review_or_hash_runs": 0,
+  "graph_parameter_Lean_increment": [
+    0,
+    0,
+    0
+  ],
+  "root_STATE_HTML_Wiki_modified": false,
+  "CPU_budget_seconds": 20,
+  "measured_metadata_preparation_CPU_seconds": 0.011473003000000002,
+  "read_only_preparation_conservative_charge_seconds": 0.1,
+  "charged_case_CPU_seconds": 0.11147300300000001
+}

@@ -1,0 +1,30 @@
+同一研究线程的新增批次最终数学审阅，实际返回模型metadata照旧记录。请求你只读证据，不重跑全源BFS/搜索，不生成hash，不制造方法数量。
+用户最新明确要求继续找更多例子并跨参数，主力因此返回构造，Lean承重接口/数据保留但完整实例仍0。
+新增结果已独立验收：
+N(11,5)>=37631（公开37628，+3），N(12,5)>=42377（公开42342，+35）。
+共有38个不同阶数完整图：d11 37629..37631共3；d12 42343..42377共35。它们是同一几何规则的两参数族，不是38种方法。各中间前缀的D5不是从最大图删点猜得，而是在每次加入前，root独立检查该12/11邻集R4覆盖全部更早actual graph、原度均<cap、保全部旧边，故逐点归纳。
+root allsource independently read expanded edge files:
+37629 n/m37629/205307 max11 D5 bad0 roots37629；
+37631 n/m37631/205329 max11 D5 bad0 roots37631 wall10.2909/CPU41.0824；
+42343先前已接受；
+42345 max12 D5 bad0全42345根；
+42377 n/m42377/245637 max12 D5 bad0 roots42377 wall15.1431/CPU60.4583。
+请实际读：
+research/ddp/more_graphs_20261027/FINAL_RESULTS_PROOF.md
+research/ddp/more_graphs_20261027/BASELINES_REFRESH.json
+research/ddp/more_graphs_20261027/delivery/README.md
+research/ddp/more_graphs_20261027/delivery/families.json
+research/ddp/more_graphs_20261027/delivery/family_generator.py
+research/ddp/more_graphs_20261027/delivery/dry_run_d11_37631.json
+research/ddp/more_graphs_20261027/delivery/dry_run_d12_42377.json
+research/ddp/more_graphs_20261027/h9_d11_followups/root_sequential_R4_checks.json
+research/ddp/more_graphs_20261027/h9_d11_followups/independent_all_source_BFS_37631.json
+research/ddp/more_graphs_20261027/h9_d12_followups/root_sequential_R4_checks.json
+research/ddp/more_graphs_20261027/h9_d12_global_extensions/root_sequential_R4_checks.json
+research/ddp/more_graphs_20261027/h9_d12_global_extensions/graphs/independent_all_source_BFS_42377.json
+独立checker源码仍global_coverage_20261027/candidate42343/verify_all.cpp，已读过若不变无需重复。
+数学证明需要核对：families35+3每步literal params与edge counts 245217+12k/205296+11j、每个prefix都有完整更早图证书、最大度和精确D5以及新颖性范围。重点找任何实际缺口；N11的point/fold结构恢复有完整WL/quotient检查但未重建全部incidence voltage，最终图证明不依赖这部分猜测而由实际邻集及allsource决定，勿把候选几何解释作为未证公理。
+你上轮修正的“静态核心集合距<=3仅充分/删mandatorypin不必导致实际超径”保持，不再扩大结论。
+批次范围诚实记录：d12初609全域degree池中592新10pin，本轮367终态32成功/280当时base无<=2解/55degree拒，225未试；13个8pin未试；不全局声称Qline族maximal。d11全域degreepool24项，首4项命中37629，余20一次又命中2项，未回扫前失败。
+其他参数真实进展：d10全部364freepins exact10cover LP9.036789、MIP UNKNOWN无incumbent，不排族；D3/D4/D5固定八源singlevertexsplit完整枚举均必要newroot失败，不排一般图。
+请给本批38例/两最强新下界与生成器交付的具体接受/错误处置，保持完整Lean未完成/Goal active，不请求更多重复验证或任意评分。

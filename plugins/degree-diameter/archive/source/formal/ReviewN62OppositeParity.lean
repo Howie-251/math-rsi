@@ -1,0 +1,7 @@
+import DegreeDiameter.N62OppositeParity
+#print DegreeDiameter.unitNonedgePairs
+#print DegreeDiameter.oppositePair
+#check @DegreeDiameter.n62_opposite_pair_properties
+#check @DegreeDiameter.n62_unit_nonedge_pair_count_even
+#print axioms DegreeDiameter.n62_opposite_pair_properties
+#print axioms DegreeDiameter.n62_unit_nonedge_pair_count_even

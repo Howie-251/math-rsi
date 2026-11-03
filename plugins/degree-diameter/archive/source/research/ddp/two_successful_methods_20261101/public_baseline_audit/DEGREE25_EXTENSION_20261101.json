@@ -1,0 +1,140 @@
+{
+  "status": "COMPLETE_BOUNDED_CAP25_PUBLIC_FORMULA_REVIEW",
+  "checked_UTC": "2026-11-01T05:26:03.693065+00:00",
+  "target": {
+    "maximum_degree": 25,
+    "diameter": 3
+  },
+  "best_located_public_source_guarantee": 7225,
+  "best_located_formula": "(s+1)(t+1)(1+st)^2 with s=t=4:25*17^2",
+  "global_record_confirmed": false,
+  "public_guarantee_at_least_candidate_located": false,
+  "candidate": {
+    "order_at_assignment": 7242,
+    "rule": "opposite GQ W(3,4) plus17 spread-indexed flag-star helper vertices",
+    "generated_at_task_assignment": false,
+    "graph_generated_or_checked_by_this_task": false,
+    "candidate_legality_not_asserted_by_literature_audit": true,
+    "claimed_novelty": false,
+    "first_invention_confirmed": false,
+    "candidate_minus_best_located_public_guarantee": 17
+  },
+  "geometry_primary": {
+    "source": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+    "citation": "C.Delorme,Grands Graphes de Degre et Diametre Donnes,European Journal of Combinatorics6(1985),291-302",
+    "local_file": "delorme1985_primary_text.txt",
+    "positions": [
+      "Section1,p291-292:points PG(3,q), symplectic totally isotropic lines via alternating form",
+      "Section8(a),p298-299:irreducible-quadratic matrix construction ofq^2+1 disjoint lines partitioning all projective points"
+    ],
+    "q_condition": "any prime power q; this geometry/spread construction does not require q=2^(odd)",
+    "q4_counts_by_formula": {
+      "points": 85,
+      "lines": 85,
+      "points_per_line": 5,
+      "lines_per_point": 5,
+      "spread_lines": 17,
+      "spread_partition_points": 85
+    },
+    "why_applicable": "q4 is a prime power; the alternating-form quadrangle in Delorme Section1/8(a) is the symplectic W(3,4). The explicit disjoint-line partition is exactly a line spread."
+  },
+  "opposite_primary": {
+    "source": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS2",
+    "position": "Section3.4.2",
+    "local_file": "arxiv_2608_27253v2.html",
+    "formula": "order=(1+s)(1+t)(1+st)^2; degree=(1+s)(1+t); diameter3; self-loops removed",
+    "GQ_existence_condition": "Same section explicitly includes(s,t)=(q,q)for any prime power q",
+    "original_credit": "C.Delorme,Large bipartite graphs with given degree and diameter,J.GraphTheory9(1985),325-334; DOI10.1002/jgt.3190090304",
+    "original_article_full_text_read": false,
+    "no_original_GQ_polarity_needed": true,
+    "count_substitutions_not_graph_checks": {
+      "opposite_vertices": 7225,
+      "flags": 425,
+      "degree24_flags": 425,
+      "degree25_nonflags": 6800,
+      "old_edges_by_degree_sum": 90100,
+      "proposed_helpers": 17,
+      "proposed_pin_edges": 425,
+      "proposed_total_edges": 90525
+    }
+  },
+  "other_reused_primary_formulas": [
+    {
+      "family": "PolarStar_IQ",
+      "source": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "locations": "Theorem3,Table2,Proposition2/Corollary1,Section7.1",
+      "best_with_cap25": 4914,
+      "q": 16,
+      "super_degree": 8,
+      "formula": "273*18",
+      "conditions": "q prime power; d mod4 in{0,3}; count2d+2"
+    },
+    {
+      "family": "PolarStar_Paley",
+      "source": "https://spcl.inf.ethz.ch/Publications/.pdf/lakhotia-PolarStar.pdf",
+      "best_with_cap25": 4641,
+      "q": 16,
+      "super_degree": 8,
+      "super_order": 17,
+      "formula": "273*17",
+      "conditions": "superorder2d+1 prime power congruent1mod4; d even"
+    },
+    {
+      "family": "general_Delorme_one_degree_duplication_applied_to_public6144",
+      "source": "https://web.mat.upc.edu/francesc.comellas/old-files/delta-d/papers/81981341.pdf",
+      "location": "Section7",
+      "guarantee": 6155,
+      "formula": "6144+ceil(6144/(24^2+1))",
+      "scope": "direct existence inference, not separately located edge list; lower than7225"
+    },
+    {
+      "family": "single_GQ_D3_special_polarity",
+      "source": "https://arxiv.org/html/2608.27253v2#S3.SS4.SSS1",
+      "scope": "q=2^(2m+1); q4 orq16 may not be substituted into this different family. Itsq8 absolute-point copies to cap25 give1625, lower than7225."
+    }
+  ],
+  "augmentation_prior_art": {
+    "specific_spread_flag_star_7242_explicit_public_formula_located": false,
+    "reused_source_scope": "Existing6160 prior-art supplement plus full local Delorme EJC Section7/8 and arXiv2608.27253v2 Section3.4.2/7.7",
+    "distinction": "The located replication theorem uses N+k|S| and maximum degreeDelta+k. It does not by itself identify or attribute the proposed fixed-degree flag-star augmentation.",
+    "limitations": "Original Delorme JGT1985 body was unavailable in the preceding bounded retrieval, only publisher abstract/metadata obtained; it was not retried. Thus omission in the inspected sources is not proof of first invention."
+  },
+  "web_scope": {
+    "query_batches": 3,
+    "budget_batches": 3,
+    "queries": [
+      [
+        "\"7242\" \"diameter\" graph",
+        "\"7225\" \"degree\" \"diameter\"",
+        "\"W(3,4)\" \"spread\""
+      ],
+      [
+        "\"degree-diameter\" \"25\" \"3\" \"7225\"",
+        "\"diameter-three\" \"degree\" \"25\" largest graphs",
+        "\"symplectic quadrangle\" \"4\" \"spread\" seventeen",
+        "\"Delorme\" \"opposite\" \"augmentation\" graphs"
+      ],
+      [
+        "\"diameter 3\" \"degree 25\" graph",
+        "\"opposite\" \"quadrangle\" \"7225\"",
+        "\"7242\" graph Delorme degree diameter",
+        "\"generalized quadrangle\" \"degree\" \"augmentation\" graph diameter"
+      ]
+    ],
+    "numeric_queries_had_low_relevant_recall": true,
+    "snippets_not_used_as_mathematical_authority": true,
+    "no_exhaustive_global_catalogue_claim": true
+  },
+  "operations": {
+    "graph_generation": 0,
+    "graph_data_reads": 0,
+    "BFS": 0,
+    "solver": 0,
+    "Lean": 0,
+    "package_changes": 0,
+    "Goal_changes": 0,
+    "installs": 0,
+    "hashes_generated": 0
+  },
+  "decision": "No identified public>=7242 stop condition. Producer may test its exact candidate under its own authorized gate; success would initially support only improvement over the best-located7225 construction, with global novelty and priority unconfirmed."
+}

@@ -1,0 +1,13 @@
+# Fixed7884 voltage-base route capacity
+
+The actual source is a three-base-vertex lift over C73 semidirect_18 C36, not a Cayley graph on7884 group elements. Its group has order2628. The base has three0→1 links, one0→2 link, one1→2 link and a loop at2, with reverse darts distinguished by edge identity. A loop supplies two darts. Group multiplication is(i,j)(k,l)=(i+r^j k,j+l); this is confirmed in the downloaded author helper.
+
+The frozen coarse prediction of a phase slot with fewer than109 short words was refuted. Exact counting of every reduced named-edge word of length0 through9 gives39365 words per base root and at least323 words in every one of324(rootbase,targetbase,phase) slots. The minimum occurs at2→2 phases8 and28, with length counts0,0,0,0,0,1,10,30,76,206. CPU0.009690024 seconds; no graph or BFS.
+
+This is a necessary capacity bound only. Distinct words can produce the same translation. The canonical offsets selected by the producer are A(r)=−r²−r³, B(r)=−1−r², C=1 and loop translation0; they evaluate to49,40 at the publishedr18 modulo73 and satisfy A−B=−r6. In Z[r]/(r6−r3+1), direct endpoint deduplication still leaves at least248 distinct formal six-coefficient polynomials per slot, with minima at2→2 phases15/21. That second prediction was supported; CPU0.131766135 seconds. Passing this formal count is also insufficient.
+
+The precise gap appears on evaluating the canonical polynomial sets in a specific finite field. See galois109/REPORT.md for all six primitive18 embeddings at one fixed prime and its complete negative outcome. GenericA/B forms were then exported, without searching, for the separately authorized finite producer batch. The three quantities are kept distinct throughout: reduced-word counts, formal polynomial counts, and exact field endpoint-image sizes.
+
+Existing generation interface: ddgraph.author.py defines Metacyclic at line32, with mul/index/elements; sections(spec) at line384 dispatches lift links/loops, and write_edges at line574 writes them. The standard inverse formula is(−r^(−j)i,−j). The CLI edges command invokes construction generation. The check command dispatches compiled verification and is not needed to repeat the old source; three identity-group base roots suffice for a new lift because left multiplication preserves every right-voltage edge. This note did not execute either CLI path.
+
+All computations used the actual recipe, including its parallel edges and inverse loop darts. No source graph was reverified and no parameter grid or graph was produced by this agent. The source producer and parameter-search producer are separate agents. Evidence is PREDICTION.json, SLOTS.json, RESULT.json and the endpoint_polynomials/galois109/generic_ab109_forms subdirectories.

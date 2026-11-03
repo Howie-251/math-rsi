@@ -1,0 +1,9 @@
+# Controller213 necessary-capacity gate
+
+The single installed HiGHS call returned raw infeasible: scipy status2, HiGHS model_status8. It found no vector. This is a solver conclusion, not an independently checked exclusion proof.
+
+The literal model has364 binary source selectors,364 target rows, cardinality>=213, and cost<=1092. Each target row is the four ordinary incoming selectors plus its matching mate, bounded by3. The mate is also an ordinary provider, so its coefficient is2. Direct preparation checks found every row and column sum5, with one coefficient2 and three coefficients1. Costs are5 for203 sources with a local g4 witness and6 for the other161 sources, optimistically allowing unverified g3 cases. Self-loop corrections were inherited from the actual loop-locus gate. P point load, target hyperplane normals, affine constants, and all other point-level interactions were omitted as relaxations.
+
+The zero objective asks only feasibility in the213..215 window. One thread, one solver call, time limit55 seconds, whole-process CPU soft59/hard60 seconds. Actual PID3135540, preparation0.290632888 CPU seconds, solver0.019669694, whole process0.310565338. The raw log reports one node,621 LP iterations, and zero generated cuts. There was no candidate vector to recheck, and no source BFS, full graph, phase search, added constraints, or restart.
+
+MODEL.json contains the complete sparse rows, literal incoming lists, matching map, source costs, and bounds. RESULT.json and TERMINAL.json retain raw status and actual timings; SOLVER_HANDLE.json retains PID/start/finish. solver.stdout.log preserves the solver output. This batch is finished with no pending process or automatic continuation. No new graph, degree/diameter record, or independently certified general impossibility is claimed.

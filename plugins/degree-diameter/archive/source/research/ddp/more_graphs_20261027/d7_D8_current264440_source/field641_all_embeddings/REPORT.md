@@ -1,0 +1,15 @@
+# F641: all16 fixed source embeddings fail D8
+
+All16 embeddings completed: **6 strict thin-image rejections+10 actual implicit graphs failing identityR8**, with0hit/unknown/untested. The D≤8 prediction is refuted. Negative exact global diameters and ordinary unordered bad-pair totals remain null; no negative R8 check was called D9.
+
+The primary source264440 recipe and source arithmetic are owned by the parent directory. Its author LEFT law is(n,I)(m,J)=(n+193^I m,I+J) on normal modulus6611=11·601 and phase40. The fixed positives are(phase4,normal1),(9,4755),(6,2638), with involution(20,0). Mod11 these normals are1,3,9 and the action is6/order10; in F601 they are1,−53,234 and the action is193/order40. The producer preserved the440-state controller and these three integer field normals, replacing only F601 byF641 and enumerating all16 exactorder40 actions. No source graph, source BFS, different prime, normal, phase or seed was used.
+
+The independent controller DP fixed its lexicographically first minimum slot2=(phase0,normal11=2), with4,964 routes among2,351,462 NB≤8 prefixes. The producer reused that cache without rerunning the raw DP. Every target action received its complete residue image at this fixed slot;6 images miss a field residue and strictly reject their objects without graph generation. ROOTS.json, CASES.jsonl and THIN_IMAGES.u8.bin preserve the complete action list, exact missing-residue complements and image rows.
+
+The other10 objects were actual implicit282040-vertex,987140-edge,simple7regular Cayley graphs. Target inverses were recomputed. The implementation uses the actual LEFT recurrence n_new=n_old+β^currentphase·dartnormal, including the analogous mod11 update; it does not reuse the preceding RIGHT-law kernel. Each actual graph had a missing identityR8 target. CASES.jsonl records each witness and its truncated distance histogram. Paper connectivity follows from the involution's field inversion and a nonzero pure-field commutator, together with the onto440 projection; negative searches were not continued to exact diameter. A full R8 pass would instead have given exact global diameter from its histogram by Cayley transitivity; none occurred.
+
+An initial runner input-key error was caught before compilation or target evaluation: the capacity cache uses prefix_count rather than exact_prefix_count. PREPARE_SCHEMA_CORRIGENDUM.json records the routine schema correction. It changed no mathematical parameter and did not create a second candidate batch.
+
+Native CPU0.372677seconds; native process0.374164+driver0.002251=0.376415 within the20CPU production limit. Compilation was separate0.763346seconds. There was no solver, old-source BFS, failed edge export or new lower bound. This closes only the fixed F641/three-normal/phase/action-embedding family; no next prime or normal/phase tuning follows.
+
+Reproduce with `python research/ddp/more_graphs_20261027/d7_D8_current264440_source/field641_all_embeddings/run.py` from the project root. RESULT.json and terminal.json record the finished cursor16 and zero untested objects.

@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-11-01T05:38:41.765042+00:00",
+  "scope": "One independent literal acceptance of the new 7531-vertex graph, retaining the accepted 7242-vertex graph unchanged.",
+  "source_input": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/graph_d25_D3_n7242.edges",
+  "candidate_input": "research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/graph_d26_D3_n7531.edges",
+  "expected_source_n": 7242,
+  "expected_source_m": 90525,
+  "expected_candidate_n": 7531,
+  "expected_candidate_m": 97750,
+  "max_degree_bound": 26,
+  "new_vertex_labels": "7242..7530",
+  "new_vertex_count": 289,
+  "prediction": "The candidate is a simple undirected graph with 7531 vertices and 97750 edges, maximum degree at most 26, exactly the accepted source edges on old vertices, 289 new vertices each having 25 old neighbors, and no new-new edges. Every new root covers all 7531 vertices in radius 3.",
+  "checks": [
+    "Strict literal headers and actual edge counts; endpoint range; no loops or repeated unordered edges; undirected adjacency reciprocity.",
+    "Compare all old-old literal edges against the source edge set: no missing and no extra old-old edges.",
+    "Compute the full degree histogram, require maximum degree <=26, and require every new vertex to have exactly 25 neighbors all in 0..7241.",
+    "Fresh ordinary queue BFS through depth 3 from each of 289 new roots only; record all individual roots and return a concrete root/target for any failure.",
+    "Inherit old-old diameter <=3 from the previously independently accepted source, whose entire old-old edge set must be retained. No old root BFS is rerun.",
+    "Since 7531 > 1+26+26*25=677, the accepted full graph has exact diameter 3."
+  ],
+  "independence": "Read only the two literal edge inputs, local instructions and own acceptance artifacts; no producer pins, parameters, proof, results, generator or packing cache.",
+  "resources": "One checker worker, <=30 CPU seconds; existing system C++ only.",
+  "excluded": [
+    "No source-root BFS",
+    "No other graph",
+    "No graph repair",
+    "No solver or Lean",
+    "No install",
+    "No hashes, checksums or manifests",
+    "No public-record claim"
+  ]
+}

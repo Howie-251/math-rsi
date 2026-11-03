@@ -1,0 +1,150 @@
+{
+  "status": "FIXED_SOURCE_INDUCED16_COMPUTATIONALLY_EXCLUDED",
+  "updated_UTC": "2026-10-30T00:50:11.463382+00:00",
+  "same_Goal": true,
+  "previous_goal_turn_classification": "progress: expert delivery completed, not a mathematical result",
+  "this_goal_turn_classification": "progress: falsifiable route tests, H65 mechanism, exact fixed-source LRAT exclusion",
+  "source": "fixed F5 graph3750 in f5_full_d20_D3",
+  "excluded_scope": {
+    "n_min": 1921,
+    "max_degree": 16,
+    "diameter_max": 3,
+    "operation": "arbitrary vertex-induced subset of this fixed graph",
+    "whole_fibers_assumed": false,
+    "uniform_sizes_assumed": false,
+    "general_N16_D3_excluded": false
+  },
+  "shared_previous_batch": {
+    "status": "UNKNOWN",
+    "solver_CPU": 59.879698,
+    "whole_CPU": 60.46906406,
+    "calls": 1,
+    "candidates": 0
+  },
+  "new_model": {
+    "variables": 333551,
+    "clauses": 2316695,
+    "full_same_fiber_pairs": 232500,
+    "same_fiber_added_clauses": 930000,
+    "H65_added_clauses": 95792,
+    "allpair_D3_CNF": false
+  },
+  "discovery": {
+    "status": "RAW_UNSAT_UNCERTIFIED",
+    "calls": 1,
+    "solver_CPU": 54.406116999999995,
+    "whole_CPU": 57.894923520999996,
+    "candidates": 0
+  },
+  "certificate": {
+    "status": "LRAT_VERIFIED_UNSAT_EXACT_CNF",
+    "solver_returncode": 20,
+    "checker_returncode": 20,
+    "checker_VERIFIED": true,
+    "CPU": 62.00419991199999,
+    "combined_whole_CPU": 119.899128932,
+    "combined_solver_CPU": 115.80051699999999,
+    "automatic_retry": false
+  },
+  "mathematical_bridge": "f5_induced_same_fiber_model/EXCLUSION_SCOPE.md",
+  "source_cache_binding": "f5_induced_same_fiber_model/SOURCE_CACHE_BINDING.json",
+  "H65": {
+    "external_both_minimum": 65,
+    "conclusion": "same size, full p-lines and T_p transport",
+    "boundary_counterexample": [
+      64,
+      65
+    ],
+    "all30_high_excluded": true,
+    "general_nonuniform_excluded_by_H65_alone": false,
+    "finite_quotient_subsets": 33554432,
+    "finite_quotient_triangle_free_max": 12
+  },
+  "plane_preserving_uniform75_repair": {
+    "status": "EXCLUDED_LOCAL50_LT75",
+    "paths_0_to28": [
+      [
+        0,
+        20,
+        28
+      ],
+      [
+        0,
+        9,
+        22,
+        28
+      ]
+    ],
+    "new_LRAT_or_external_review_claimed_for_this_lemma": false
+  },
+  "external_reviews": {
+    "f5_induced_support_shared_20261030": {
+      "status": "SUCCESS",
+      "verdict": "SOUND AS STATED",
+      "model": "gemini-3.8-flash-high",
+      "effort": "high",
+      "threadId": "12c1d715-0369-4a25-9755-3fb41033c3bd",
+      "implementation_or_Lean_certificate": false
+    },
+    "f5_H65_route_classes_20261030": {
+      "status": "SUCCESS",
+      "verdict": "SOUND AS STATED",
+      "model": "gemini-3.8-flash-high",
+      "effort": "high",
+      "threadId": "12c1d715-0369-4a25-9755-3fb41033c3bd",
+      "implementation_or_Lean_certificate": false
+    }
+  },
+  "review_count_clarification": "22500 shared groups already include both directed orientations; raw reviewer double-count wording corrected only in disposition",
+  "stop_decision": "Do not search any further retained subsets/seeds/counts in this fixed G; future16 construction must change graph/edges. Do not automatically open matrix/controller ladders.",
+  "other_mechanism": "14度K2完整对称分数覆盖已有精确有理解：总量24.136823828<26、391正组，两侧各12.068411914，全部94186行用int64通过，合5.636402926CPU。该具体支撑的391组完整整数模型10948变量/209323子句已实际唯一调用120.016794 solver/124.059995631 whole CPU，返回UNKNOWN，0SAT/候选/图；本批停止。391pool是额外限制，不排一般K2，也不称该池无解；未重读源/BFS或续旧1188行模型。",
+  "new_complete_target_graphs": 0,
+  "legitimate_instances": 104,
+  "parameter_pairs": 4,
+  "confirmed_main_table_instances": 103,
+  "confirmed_parameter_pairs": 3,
+  "concrete_formula_Lean_instances": 1,
+  "latest_global_20_3_novelty": "PENDING",
+  "negative_16_Lean": "NOT_FORMALIZED",
+  "expert_delivery": "EXPERT_HANDOFF_20261029 remains frozen23:55 snapshot; no repackaging",
+  "Goal_status": "ACTIVE",
+  "pending": [],
+  "d14_fractional_capacity": {
+    "status": "EXACT_GLOBAL_FRACTIONAL_WITNESS_VERIFIED",
+    "denominator": 1000000000,
+    "sum_numerator": 24136823828,
+    "sum": 24.136823828,
+    "positive_groups": 391,
+    "complete_target_count": 94186,
+    "minimum_integer_coverage": 2000000030,
+    "required_integer_coverage": 2000000000,
+    "combined_whole_CPU_seconds": 5.636402926,
+    "additional_LP_calls": 0
+  },
+  "d14_integer_pool391": {
+    "status": "UNKNOWN",
+    "returncode": 0,
+    "solver_pid": 2092382,
+    "driver_pid": 2092379,
+    "solver_CPU_seconds": 120.01679399999999,
+    "whole_CPU_seconds": 124.05999563099999,
+    "actual_solver_calls": 1,
+    "observation_timeouts": 24,
+    "same_PID_waited_to_exit": true,
+    "source_graph_reads": 0,
+    "BFS_runs": 0,
+    "graphs_generated": 0,
+    "variables": 10948,
+    "clauses": 209323,
+    "groups": 391,
+    "complete_target_rows": 188372,
+    "unique_target_rows": 187858,
+    "extra_pool_restriction": true,
+    "candidates": 0,
+    "not_a_full_K2_exclusion": true
+  },
+  "all_started_numeric_batches_terminal": true,
+  "next_decision": "Fixed-source16 induced scope is closed; do not run more retention seeds/counts.14 K2 and391 pool remain open mathematically; preserve exact rational support/full model and do not resume this timer without a new concrete generation or structural question. Goal remains the full graph construction objective.",
+  "final_wiki_receipt": "research/ddp/refresh_20261029/INDUCED16_D14_FRACTIONAL391_FINAL_WIKI_RECEIPT.json",
+  "final_wiki_query_rebuilt": true
+}
