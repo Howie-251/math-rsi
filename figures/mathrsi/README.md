@@ -2,11 +2,11 @@
 
 Two coordinated English diagrams showing the current implementation and its research origins. The v2 redraw uses GPT Image with Gemini design discussion; the [review record](../../development/figures-v2-20261103/REVIEW_DISPOSITION.md) records the actual generation and review scope.
 
-## Figure 1: From ARIS research to the current MathRSI
+## Figure 1: From basic research tools to MathRSI and future evolution
 
-![ARIS standalone-skill research in Property B and ECC informs unified MathRSI v1; independent DD history informs incremental v2 with meta-evolve and a DD plugin](01-evolution.png)
+![v0 basic research tools inform unified MathRSI v1; independent DD history informs current v2, followed by future v3 and later evolution](01-evolution.png)
 
-The v0 stage denotes research with standalone ARIS skills in Property B and ECC. Those experiences informed unified MathRSI v1: five solving subworkflows, the Property B plugin, and an ECC draft. Current v2 incrementally extends that implementation with `mathrsi-meta-evolve`, workflow improvements, and the degree–diameter (DD) plugin. The DD historical archive independently feeds this evolution; its research was not performed using MathRSI v1.
+The v0 stage denotes basic research tools, including the standalone ARIS skills used in Property B and ECC research. Those experiences informed unified MathRSI v1: five solving subworkflows, the Property B plugin, and an ECC draft. Current v2 incrementally extends that implementation with `mathrsi-meta-evolve`, workflow improvements, and the degree–diameter (DD) plugin. The DD historical archive independently feeds this evolution; its research was not performed using MathRSI v1. The v3 → … continuation represents future evolution; v3 is not implemented.
 
 The separate [maintenance workflow](../../docs/EVOLUTION_WORKFLOW.md) consumes research evidence to improve the existing base and plugins. Ordinary solving runs keep their selected version. The fixed `v1` and `v2` tags preserve their snapshots; this figure refresh is documentation on `main`.
 
@@ -20,7 +20,8 @@ The outer `mathrsi-meta-evolve` workflow classifies research evidence as Base, P
 
 ## Prompts and review
 
-- Current Figure 1: [v2 redraw prompt](01-evolution-v2.prompt.txt).
+- Current Figure 1: [basic-tools and future-evolution edit prompt](01-evolution-basic-tools-v3.prompt.txt), [final refinement prompt](01-evolution-basic-tools-v3-final.prompt.txt).
+- Previous Figure 1: [v2 redraw prompt](01-evolution-v2.prompt.txt).
 - Current Figure 2: [v2 redraw prompt](02-workflows-v2.prompt.txt).
 - Current [design discussion and review record](../../development/figures-v2-20261103/REVIEW_DISPOSITION.md).
 - Historical Figure 1 prompts: [generation](01-evolution.prompt.txt), [branch correction](01-evolution-edit.prompt.txt), [plugin-group correction](01-evolution-group-edit.prompt.txt).

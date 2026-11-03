@@ -8,9 +8,9 @@ Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** (
 
 MathRSI organizes mathematical research from problem formulation and literature verification to route exploration, proof construction, independent auditing, optional Lean formalization, and reproducible handoff. MathRSI provides structured Markdown skills, domain plugins, cross-model review bridges, and verification contracts that coding agents (Claude Code and Codex) execute step by step while preserving exact quantifiers and original problem obligations.
 
-![ARIS research in Property B and ECC informs MathRSI v1; independent DD history informs incremental v2 with meta-evolve and a DD plugin](figures/mathrsi/01-evolution.png)
+![v0 basic research tools inform MathRSI v1; independent DD history informs current v2, followed by future v3 and later evolution](figures/mathrsi/01-evolution.png)
 
-Standalone ARIS research in Property B and ECC informed the unified v1 workflow. Independent DD research evidence then informed the current incremental v2: outer maintenance, workflow improvements, and a DD plugin. ECC remains a draft. [Figure sources and review](figures/mathrsi/README.md).
+The v0 stage represents basic research tools, including the standalone ARIS skills used in Property B and ECC research. Those experiences informed the unified v1 workflow. Independent DD research evidence then informed the current incremental v2: outer maintenance, workflow improvements, and a DD plugin. The v3 → … continuation indicates future evolution. ECC remains a draft. [Figure sources and review](figures/mathrsi/README.md).
 
 ---
 

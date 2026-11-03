@@ -1,6 +1,6 @@
 # MathRSI v2 figure refresh — 2026-11-03
 
-The two README figures were redrawn with the built-in GPT Image tool after a concrete layout discussion with Gemini 4 Argon (High). The final images are 1586 × 992 pixels. Original generated files remain in the tool output directory; the repository contains the final PNG copies.
+The two README figures were redrawn with the built-in GPT Image tool after a concrete layout discussion with Gemini 4 Argon (High). The initial redraws were 1586 × 992 pixels; Figure 1 was subsequently extended as recorded below. Original generated files remain in the tool output directory; the repository contains the final PNG copies.
 
 ## Adopted design
 
@@ -32,3 +32,9 @@ Gemini continued the original design session and reported directly reading both 
 
 Only current documentation and figures are refreshed. The fixed v1 and v2 Git tags retain their original snapshots.
 
+
+## Requested label and future-continuation edit
+
+The user subsequently requested “v0 · Basic research tools” and a continuation beyond v2. Figure 1 now adds a dashed “v3 / Next iteration” node and an ellipsis. Its subtitle is simply v0 → v1 → v2 → v3 → …; v3 is a future iteration, not an implemented release. Root inspected the final GPT Image edit; two intermediate subtitle spelling variants were discarded. Figure 2 remains unchanged. The earlier Gemini review covers the preceding design, not this later wording edit. Final source dimensions are recorded in IMAGE_OUTPUTS.json.
+
+Prompts: [requested edit](../../figures/mathrsi/01-evolution-basic-tools-v3.prompt.txt), [final subtitle edit](../../figures/mathrsi/01-evolution-basic-tools-v3-final.prompt.txt).
