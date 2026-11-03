@@ -1,0 +1,56 @@
+/* Figure and interaction styles for the ARIS academic template. */
+main img { display:block; width:100%; height:auto; margin:22px 0; }
+header.hero .subtitle { line-height:1.7; }
+.lead { font-size:17px; line-height:1.85; }
+.small, figcaption { font-size:13px; color:var(--ink-muted); }
+.snapshot { display:flex; flex-wrap:wrap; gap:12px 28px; margin:20px 0; padding:15px 0; border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
+.snapshot span { font-size:13px; color:var(--ink-soft); }
+.snapshot strong { font-size:27px; margin-right:7px; font-weight:600; }
+figure { margin:22px 0; }
+main figure img { width:100%; height:auto; margin:0; }
+figcaption { margin:9px 0 0; line-height:1.7; }
+.figure-links { font-size:12px; margin-top:7px; }
+.figure-links a { margin-right:12px; }
+.method-tabs, .step-controls { display:none; }
+.js .method-tabs, .js .step-controls { display:flex; flex-wrap:wrap; gap:8px; }
+.method-tabs { border-bottom:1px solid var(--border); padding-bottom:12px; margin:20px 0; }
+button { font:inherit; cursor:pointer; padding:8px 13px; border:1px solid var(--border); border-radius:4px; background:var(--bg-soft); color:var(--primary); font-size:14px; line-height:1.4; }
+button:hover { border-color:var(--primary); }
+button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+button[aria-pressed="true"] { background:var(--primary); border-color:var(--primary); color:#fff; }
+.step-controls button { font-size:12px; padding:6px 11px; }
+.method-panel { margin:18px 0; }
+.method-panel h3 { margin-top:18px; }
+.method-panel figure { margin:15px 0; }
+.demo-description { border-left:3px solid var(--accent); padding:8px 14px; background:var(--bg-soft); font-size:14px; }
+.equation { text-align:center; font-size:19px; padding:10px; color:var(--primary); }
+.outcome { padding-top:10px; border-top:1px solid var(--border-soft); font-size:14px; }
+.case-table { overflow-x:auto; margin:16px 0; }
+.case-table table { min-width:470px; font-variant-numeric:tabular-nums; margin:0; }
+.case-table th:not(:first-child), .case-table td:not(:first-child) { text-align:right; }
+.case-table td:first-child { color:var(--primary); }
+.gain { color:var(--good); font-weight:600; }
+.source-links { display:flex; flex-wrap:wrap; gap:9px 21px; margin-top:16px; }
+.source-links a { font-size:14px; }
+nav.toc .context { font-size:12px; line-height:1.7; padding-bottom:17px; margin-bottom:17px; border-bottom:1px solid var(--border-soft); }
+nav.toc .tools { border-top:1px solid var(--border-soft); margin-top:21px; padding-top:14px; font-size:12px; }
+nav.toc .tools a { display:block; margin:8px 0; }
+details .small { font-size:13px; }
+.return-link { font-size:12px; margin-top:24px; }
+[hidden] { display:none !important; }
+@media(max-width:900px) {
+  nav.toc .context,nav.toc .tools { display:none; }
+  nav.toc ol { display:flex; flex-wrap:wrap; gap:0 20px; }
+  nav.toc ol li { margin:4px 0; }
+  .snapshot { gap:10px 20px; }
+  .snapshot strong { font-size:23px; }
+  .method-tabs button { font-size:13px; }
+}
+@media print {
+  .method-tabs,.step-controls,.figure-links,.source-links { display:none !important; }
+  .method-panel[hidden] { display:block !important; }
+  .demo-state[hidden] { display:none !important; }
+  figure,.case-table,.callout { break-inside:avoid; }
+  h2,h3 { break-after:avoid; }
+  footer.aris-footer { margin-top:25px; }
+}

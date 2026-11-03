@@ -1,6 +1,6 @@
 # MathRSI
 
-[English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md)
+[English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md) · [Degree–Diameter 成果案例](case-studies/degree-diameter/README.zh-CN.md)
 
 固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版。v2 在 v1 上新增 meta-evolve、degree–diameter 插件及工作流改进。
 
@@ -78,6 +78,14 @@ ECC保留[首版草案](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，等待用户�
 这些研究先通过 **ARIS** 完成，再沉淀成 **MathRSI 的工作流和 Property B 插件**。它们是方法来源与成果案例；后续新题再检验所选 MathRSI 版本本身的效果。案例包括完整可读证明、Lean源码与审计入口，以及真实失败与有效修法。
 
 **[案例首页（English）](case-studies/property-b/README.md)** · [完整证明HTML](case-studies/property-b/readers/PROPERTY_B_GENERAL_BOUND.html) · [Lean阅读页](case-studies/property-b/readers/PROPERTY_B_GENERAL_LEAN.html)。克隆或下载后，在浏览器打开 `case-studies/property-b/index.html`；全文阅读页为中文，公式与图离线可读。
+
+## 研究案例：Degree–Diameter 度数—直径构造
+
+**153 张图，覆盖 43 组度数／直径参数，其中 47 张具体图有 Lean 证明。** 三组构造超过指定日期的 Comellas 表条目；直径为 3 的系列扩展到 **414,132 个顶点**，并逐项列出与公开构造方法的比较。
+
+这些通过 **ARIS** 完成的研究为 MathRSI v2 的度数—直径插件提供了经验。案例用交互图解释互补邻域补点、有限域分层与几何连接重分配，附比较来源和重建全部图所需的紧凑构造程序。
+
+**[中文案例](case-studies/degree-diameter/README.zh-CN.md)** · [English](case-studies/degree-diameter/README.md) · [构造程序](case-studies/degree-diameter/reproduce/README.md)。克隆或下载后，在浏览器打开 `case-studies/degree-diameter/index.zh-CN.html` 阅读图文版。
 
 ## 可直接使用
 
