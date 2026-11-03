@@ -8,7 +8,9 @@
 
 主流程按现有成果选择入口，并衔接五组可独立使用的子流程：**问题准备与文献 → 求解路线迭代 → 证明推进 → 装配验证 → 交付沉淀。** 每组实际执行、交付结果，由调用者读取后继续；新障碍带着具体问题回文献或路线，未变的成果直接复用。已有完整证明可直接进入验证，短证明可以直接完成，不必跑满五组。
 
-![MathRSI：领域特化与经验反馈](figures/mathrsi/01-evolution.png)
+![Property B与ECC的ARIS研究沉淀为MathRSI v1，独立DD历史证据推动含meta-evolve与DD插件的增量v2](figures/mathrsi/01-evolution.png)
+
+Property B与ECC先用独立ARIS技能开展研究，再沉淀为统一v1工作流；DD历史研究作为独立证据源，推动当前v2的外层维护、流程改进与DD插件。ECC仍为草案。[图源与审阅记录](figures/mathrsi/README.md)。
 
 本仓以详细 Markdown 为主，直接携带32项ARIS技能的Claude/Codex双端完整实现、共享资源、模板与helpers。MathRSI自己新增的代码只做明确的开发核查；数学研究由agent判断与执行，不另造调度平台或通用证明判分器。
 
@@ -27,7 +29,9 @@
 
 ### 五组数学子流程
 
-![MathRSI：五组子流程及插件接入](figures/mathrsi/02-workflows.png)
+![五组解题子流程内嵌ARIS、贯穿研究wiki、按需Lean，并与独立外层mathrsi-meta-evolve衔接](figures/mathrsi/02-workflows.png)
+
+研究wiki贯穿五组子流程，文献查漏、路线修订与局部证明修复按具体义务回流。独立外层 `mathrsi-meta-evolve` 将经验分为Base、Plugin、Task和Defer：前两类经实现、审阅、实际使用后决定采用；单题状态与暂缓建议分别留在wiki或backlog。
 
 |子流程|实际动作与交接|
 |---|---|
