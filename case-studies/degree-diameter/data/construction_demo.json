@@ -1,0 +1,211 @@
+{
+  "scope": "Exact small cube examples for explanation; not additional research results.",
+  "source_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "states": [
+    {
+      "id": "one",
+      "file": "filling_one_pin",
+      "pins": [
+        [
+          0
+        ]
+      ],
+      "title": "1. A single attachment misses the opposite corner",
+      "label": "只接一处",
+      "explanation": "只把 x 接到 0，点 7 仍需走 4 步。度数够用，但距离覆盖不够。",
+      "vertices": 9,
+      "covered": 7,
+      "source_vertices": 8,
+      "max_degree": 4,
+      "diameter": 4,
+      "root": 8,
+      "farthest": 7,
+      "highlighted_path": [
+        8,
+        0,
+        1,
+        3,
+        7
+      ],
+      "degrees": {
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "id": "cover",
+      "file": "construction_filling",
+      "pins": [
+        [
+          0,
+          7
+        ]
+      ],
+      "title": "2. Complementary attachments cover the whole source",
+      "label": "互补两处",
+      "explanation": "把 x 接到互为对角的 0 和 7：两个半径 2 邻域共同覆盖原来的 8 个点，新点到各点至多 3 步。",
+      "vertices": 9,
+      "covered": 8,
+      "source_vertices": 8,
+      "max_degree": 4,
+      "diameter": 3,
+      "root": 8,
+      "farthest": 1,
+      "highlighted_path": [
+        8,
+        0,
+        1
+      ],
+      "degrees": {
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 4,
+        "8": 2
+      }
+    },
+    {
+      "id": "capacity",
+      "file": "filling_capacity",
+      "pins": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "title": "3. Reusing the same pins exceeds the degree budget",
+      "label": "重复占用",
+      "explanation": "再让 y 使用相同的 0、7，覆盖仍然完整，但这两个旧点的度数升到 5，超过上限 4。",
+      "vertices": 10,
+      "covered": 9,
+      "source_vertices": 9,
+      "max_degree": 5,
+      "diameter": 3,
+      "root": 9,
+      "farthest": 1,
+      "highlighted_path": [
+        9,
+        0,
+        1
+      ],
+      "degrees": {
+        "0": 5,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 5,
+        "8": 2,
+        "9": 2
+      }
+    },
+    {
+      "id": "rebalance",
+      "file": "filling_rebalanced",
+      "pins": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "title": "4. Different pins preserve both coverage and capacity",
+      "label": "换组邻域",
+      "explanation": "让 y 改接 1、6，覆盖当前全部 9 个点（也包括先前加入的 x），同时让每个点的度数保持不超过 4。",
+      "vertices": 10,
+      "covered": 9,
+      "source_vertices": 9,
+      "max_degree": 4,
+      "diameter": 3,
+      "root": 9,
+      "farthest": 8,
+      "highlighted_path": [
+        9,
+        1,
+        0,
+        8
+      ],
+      "degrees": {
+        "0": 4,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 4,
+        "7": 4,
+        "8": 2,
+        "9": 2
+      }
+    }
+  ]
+}

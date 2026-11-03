@@ -2,6 +2,8 @@
 
 本插件研究有限简单无向图的最大度数和直径：在 `Δ(G)≤d`、`diam(G)≤D` 下构造更多顶点，或证明一个明确构造域不能达到目标。它通过现有五个 MathRSI workflow 工作；不启动归档中的旧 Goal，也不把历史结果算成 MathRSI v2 的解题实验。
 
+研究成果、公开比较和构造图解见 [Degree–Diameter 案例（English）](../../case-studies/degree-diameter/README.md)及[中文版](../../case-studies/degree-diameter/README.zh-CN.md)。案例附有离线交互页面和全部 153 张图的紧凑构造程序。
+
 从[领域入口](skills/mathrsi-degree-diameter/SKILL.md)开始。已有明确义务可以直接调用：
 
 - [构造推进](skills/dd-construction/SKILL.md)：当前覆盖增点、冻结完整邻域克隆、仿射共同路线与 GQ 填补。

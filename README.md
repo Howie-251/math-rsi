@@ -1,6 +1,6 @@
 # MathRSI
 
-[中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md) · [Property B case study](case-studies/property-b/README.md)
+[中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md) · [Property B case study](case-studies/property-b/README.md) · [Degree–Diameter case study](case-studies/degree-diameter/README.md)
 
 Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)) · **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)). Each tag preserves a complete repository snapshot and stays fixed; `main` follows the current recommended version. v2 adds meta-evolve, the degree–diameter plugin, and workflow improvements to v1.
 
@@ -139,6 +139,16 @@ Retains an initial draft ([`mathrsi-ecc`](plugins/ecc/skills/mathrsi-ecc/SKILL.m
 These studies were carried out with **ARIS**, then distilled into MathRSI's workflows and Property B plugin. The case includes full offline proof readers, formal source, direct evidence links, and the lessons that shaped the harness. New tasks can evaluate the selected MathRSI revision itself.
 
 **[Read the case](case-studies/property-b/README.md)** · [Full proof HTML](case-studies/property-b/readers/PROPERTY_B_GENERAL_BOUND.html) · [Lean reader](case-studies/property-b/readers/PROPERTY_B_GENERAL_LEAN.html). Clone or download the repository and open `case-studies/property-b/index.html` to read the HTML locally.
+
+---
+
+## Research Case: Degree–Diameter
+
+**153 graphs across 43 degree–diameter pairs, including 47 with concrete-graph Lean proofs.** Three constructions improve dated entries in the Comellas table; the diameter-three series includes graphs with up to **414,132 vertices** and comparisons with specified published construction methods.
+
+These **ARIS** research results informed MathRSI's degree–diameter plugin in v2. The case explains covering neighborhoods, finite-field lifts, and geometric connection reallocation through interactive illustrations, with comparison sources and compact programs for reconstructing every graph.
+
+**[Read the case](case-studies/degree-diameter/README.md)** · [中文版](case-studies/degree-diameter/README.zh-CN.md) · [Construction programs](case-studies/degree-diameter/reproduce/README.md). Clone or download the repository and open `case-studies/degree-diameter/index.html` for the illustrated reader.
 
 ---
 
