@@ -17,6 +17,10 @@ MathRSI evolves in **two complementary directions**:
 
 The version table separates these two kinds of progress. v1 established nine solving skills; v2 added the maintenance skill. **v3 strengthens the existing ten base skills and expands domain capability to six domains and fourteen domain skills.** Skill count measures organization; the changes below describe capability.
 
+![MathRSI evolution from v0 basic research tools through v1 and v2 to current v3 and future versions, with a stronger shared base and expanding, deepening domain plugins](figures/mathrsi/01-evolution-v3.png)
+
+Research experience strengthens the shared workflow and domain methods together; v3 upgrades the existing ECC plugin and adds three domains. [Figure sources and review](figures/mathrsi/README.md) · [v3 implementation details](docs/V3_CHANGES.md).
+
 | Version | Research experience | Stronger base workflow | Broader / deeper plugins |
 | --- | --- | --- | --- |
 | **v0 · Basic research tools** | Initial Property B and ECC investigations accumulated proofs, failures, checks and research wikis. | Standalone skills coordinated within individual workspaces, before a shared MathRSI orchestrator. This historical stage is not a Git release. | Source research workspaces and their mathematical tools. |
@@ -116,13 +120,17 @@ As defined in the [Plugin Contract](docs/PLUGIN_CONTRACT.md), plugins receive th
 
 The top-level orchestrator ([`mathrsi-research`](base/skills/mathrsi-research/SKILL.md)) owns stage transitions. It inspects existing workspace evidence, delegates one subworkflow scope at a time, reads the returned artifacts and remaining obligations, and dispatches the next step.
 
+![Current MathRSI workflow: problem recognition and plugin routing, Root and scoped parallel workers, five solving subworkflows, cross-model adversarial review, deterministic and optional Lean verification, continuous wiki reuse, and separate maintenance](figures/mathrsi/02-workflows-v3.png)
+
+Root consumes returned artifacts before dispatching the next obligation. Cross-model critique and deterministic or Lean checks provide distinct evidence; domain methods return to the calling stage. [Domain routing](docs/DOMAIN_ROUTING.md) · [Executable workflow details](docs/WORKFLOWS.md) · [Figure sources and review](figures/mathrsi/README.md).
+
 <details>
 <summary><strong>Historical v2 workflow diagram</strong> (the same 5 subworkflows remain in v3; see the tables above and <a href="docs/DOMAIN_ROUTING.md">DOMAIN_ROUTING.md</a> for v3 domain integration)</summary>
 
 ![Five solving subworkflows with embedded ARIS, continuous research wiki, optional Lean, and separate mathrsi-meta-evolve maintenance](figures/mathrsi/02-workflows.png)
 </details>
 
-The diagram’s **Research wiki & evidence** bar means the task’s `<W>/research-wiki/` is **read and updated in all five stages**. Agents locate relevant records through `index.md` / `query_pack.md`, read full entity pages and their evidence, then persist reusable results through the bundled ARIS wiki skill and helper. Decisive results are recorded during research, and the next caller reads them before acting. `wiki-enrich` fills paper pages when needed. [Exact read/write operations and ownership](docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回).
+The research wiki across the diagram means the task’s `<W>/research-wiki/` is **read and updated in all five stages**. Agents locate relevant records through `index.md` / `query_pack.md`, read full entity pages and their evidence, then persist reusable results through the bundled ARIS wiki skill and helper. Decisive results are recorded during research, and the next caller reads them before acting. `wiki-enrich` fills paper pages when needed. [Exact read/write operations and ownership](docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回).
 
 Research memory spans all five stages, with targeted returns for literature, route revision, and proof repair. The separate outer `mathrsi-meta-evolve` classifies evidence: Base and Plugin changes proceed through implementation, review, use, and adoption; Task and Defer remain in the wiki or backlog.
 

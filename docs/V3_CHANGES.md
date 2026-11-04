@@ -102,7 +102,7 @@ ECC's story is **v0 initial results → continued research using methods/workflo
 
 Happy Ending's newly reported 75/76 values await proof source material. The plugin uses the received archive, retains its structural drafts' unreviewed/unaccepted status, and separates the historical SAT acceptance from the fresh lower witness check.
 
-The two overview figures are intentionally preserved as **v2 historical snapshots**. Their ECC-draft and future-v3 labels describe that version; the current domain table and actual skill bodies describe v3. No new diagram is needed to make the existing implementation usable.
+The [current v3 overview figures](../figures/mathrsi/README.md) show both evolution tracks and the actual execution paths: problem recognition, domain routing, Root and workers, cross-model adversarial review, and wiki retrieval/write-back/reuse across all five stages. The earlier figures remain available as **v2 historical snapshots**; their ECC-draft and future-v3 labels describe that version. This documentation update leaves fixed release tags unchanged.
 
 The source ARIS snapshot, copyright, dual-host implementations and four MCP bridge contracts are retained. External reviewer CLIs/accounts, Lean and TeX remain task environment dependencies. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) records adopted changes, actual use and both cross-model review rounds. PR #7 is a small repair to the existing v2 workflow and is integrated into v3; it is not counted as a separate research-driven iteration. v3 is the current adopted version; fixed earlier releases remain available for tasks that need their original workflow.
 
