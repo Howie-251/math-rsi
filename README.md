@@ -10,9 +10,14 @@ MathRSI organizes mathematical research from problem formulation and literature 
 
 ### How Research Experience Evolves MathRSI (`v0` → `v3`)
 
-MathRSI evolves through an explicit feedback loop: **mathematical investigations expose concrete reasoning or verification bottlenecks $\rightarrow$ [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) distills reusable workflow rules into `base/` and domain reductions/checkers into `plugins/` $\rightarrow$ subsequent research inherits the strengthened harness.** v1 established **9 MathRSI solving skills**. v2 added the separate maintenance skill; v3 retains these **10 base skills** and expands domain capability to **6 domains and 14 domain skills**.
+MathRSI evolves in **two complementary directions**:
 
-| Version | Research experience | What changed in the harness | Domain capability |
+- **A stronger shared base workflow.** Research experience improves how existing skills choose routes, carry proof obligations, use counterexamples, verify results, and hand work forward. [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) turns transferable lessons into changes at the relevant workflow steps, so other domains can reuse them.
+- **Broader and deeper domain plugins.** New domains add specialized mathematical methods; existing plugins gain stronger reductions, reusable lemmas, failure knowledge, and callable checkers. v3 both upgrades ECC and adds three domains.
+
+The version table separates these two kinds of progress. v1 established nine solving skills; v2 added the maintenance skill. **v3 strengthens the existing ten base skills and expands domain capability to six domains and fourteen domain skills.** Skill count measures organization; the changes below describe capability.
+
+| Version | Research experience | Stronger base workflow | Broader / deeper plugins |
 | --- | --- | --- | --- |
 | **v0 · Basic research tools** | Initial Property B and ECC investigations accumulated proofs, failures, checks and research wikis. | Standalone skills coordinated within individual workspaces, before a shared MathRSI orchestrator. This historical stage is not a Git release. | Source research workspaces and their mathematical tools. |
 | **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** | [Property B and ECC's concrete research transitions](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md). | Established **five executable subworkflows**, the `base / plugin / task` separation, adversarial route iteration, proof acceptance, wiki return paths and optional Lean. Bundled the complete dual-host skills. | Full **Property B** plugin and an initial **ECC draft**. |
@@ -21,7 +26,7 @@ MathRSI evolves through an explicit feedback loop: **mathematical investigations
 
 Routine fixes also carry forward: [PR #7](https://github.com/lisresearchgroup/math-rsi/pull/7) repairs task dispatch, actual file delivery and recovery snapshots; it is included in v3 without being counted as another research-driven generation.
 
-### Four Shared Workflow Improvements in v3
+### How v3 Strengthens the Shared Base
 
 Each v3 base change turns a concrete research failure into an action in the existing subworkflows ([base diff report](development/evolution/v3-20261104/base/BASE_CHANGES.md) · [runnable examples](development/evolution/v3-20261104/base/USE.md)):
 
@@ -156,7 +161,7 @@ The [domain entry](plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.
 
 The [plugin guide](plugins/degree-diameter/README.md) includes the source research wiki, proofs, programs, failures, reviews, and formalization archive. New tasks write their own workspace wiki. Historical validity, comparison dates, and verification scopes stay separate; copying an archive neither resumes its Goal nor reruns its proofs.
 
-### v3 Domain Capabilities
+### How v3 Expands and Deepens Plugins
 
 | Domain entry | What the agent can do | Bounded use and evidence |
 | --- | --- | --- |

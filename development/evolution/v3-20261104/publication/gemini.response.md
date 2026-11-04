@@ -152,4 +152,3 @@ v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点�
    * 除上述两份 README 顶部已更新为发布态外，合入前只需同步三处单句即可保持全仓口径一致：
      * [README.md](file:///Users/rfy_naiveai/Desktop/MathRSI/README.md#L194) 第 194 行：`The local v3 implementation retains...` $\rightarrow$ `The v3 release retains...`
      * [V3_CHANGES.md](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/V3_CHANGES.md#L3) 第 3 行与第 98 行：删去 `The current work is on a local development branch; v3 has not been tagged or pushed.` 及末尾 `This branch is still a local implementation, not a published v3 tag.`（改为 `The fixed v1, v2, and v3 tags preserve complete snapshots; main tracks v3.`）。
-

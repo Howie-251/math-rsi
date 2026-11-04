@@ -10,9 +10,14 @@
 
 ### 研究经验如何驱动版本演进（`v0` → `v3`）
 
-MathRSI 的自演进遵循明确的反馈闭环：**真实数学攻关暴露推理或验证瓶颈 $\rightarrow$ 独立外层 [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) 将共性控制动作提炼进 `base/`、将领域归约与核验器沉淀进 `plugins/` $\rightarrow$ 下一轮研究直接复用升级后的工作流。** v1 建立 **9 项解题技能**，v2 增加独立维护技能；v3 沿用这 **10 项 base 技能**，将领域能力扩展到 **6 个数学方向、14 项领域技能**。
+MathRSI 沿 **两条相互促进的方向** 演进：
 
-| 版本 | 研究经验来源 | 主工作流改变了什么 | 领域能力 |
+- **共享 Base 工作流持续强化。** 从不同题目提炼共性经验，改进已有技能的选路、证明义务传递、反例利用、核验与交接动作。独立外层 [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) 将可迁移经验写入对应流程，让其它领域也能复用。
+- **领域 Plugins 持续扩展与深化。** 新领域带来专用数学方法；已有插件继续积累更强的归约、通用引理、失败经验和可调用核验器。v3 既升级 ECC，也增加三个新领域。
+
+下表分别展示这两类进步。v1 建立九项解题技能，v2 增加维护技能；**v3 强化现有十项 base 技能，领域能力扩展至六个方向、十四项领域技能。** 技能数量描述组织方式，具体能力变化见下表。
+
+| 版本 | 研究经验来源 | Base 工作流怎样强化 | Plugins 怎样扩展与深化 |
 | --- | --- | --- | --- |
 | **v0 · 基础研究工具** | 初始 Property B 与 ECC 研究，积累证明、失败、核验与 research wiki。 | 各单题工作区组合使用独立技能，尚无共享的 MathRSI 总控。v0 是历史阶段，不是 Git 发布标签。 | 原始研究目录及其中的数学工具。 |
 | **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** | [Property B 与 ECC 的真实研究转折](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。 | 建立 **五组可执行子工作流**、`base / plugin / task` 三层边界、对抗式路线迭代、证明验收、wiki 回流及按需 Lean；完整技能双端自包含。 | 完整 **Property B 插件**及初始 **ECC 草案**。 |
@@ -21,7 +26,7 @@ MathRSI 的自演进遵循明确的反馈闭环：**真实数学攻关暴露推�
 
 日常修补也随版本继承：[PR #7](https://github.com/lisresearchgroup/math-rsi/pull/7) 修正派活、真实文件交付和恢复快照，已纳入 v3，不单独计作一次研究驱动迭代。
 
-### v3 在现有工作流内增强的四类共性动作
+### v3 怎样强化共享 Base：四类共性改进
 
 v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点上，不另造第二套调度器（详见 [Base 修改报告](development/evolution/v3-20261104/base/BASE_CHANGES.md) · [真实调用用例](development/evolution/v3-20261104/base/USE.md)）：
 
@@ -98,7 +103,7 @@ v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点�
 
 [插件资料层](plugins/degree-diameter/README.md)保留源wiki、证明、程序、失败、审阅和形式化；handoff按已核范围取复现入口，新题wiki写自己的工作区。历史DD由原研究流程完成，是本轮v1→v2的经验来源，不能追认为MathRSI v1/v2的解题试验。
 
-### v3领域能力
+### v3 怎样扩展与深化 Plugins
 
 |领域入口|实际能力与本轮使用|
 |---|---|

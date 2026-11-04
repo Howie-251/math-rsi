@@ -8,7 +8,7 @@ Gemini4与Opus5.5各两轮具体维护审阅已有效完成，实质修法已落
 
 PR #7是派活/实际交付/恢复快照的现有流程修正，已用wanshuiyin合入main（8bbdb828），再无冲突merge进v3分支；不单独计一次研究驱动迭代。v1/v2标签保持固定。用户已明确授权将完整v3与中英文README演进说明一并PR合入main，并沿既有版本约定固定v3标签；发布入口为`main`及`v3`，v1/v2标签保持原提交。网页尚未启动，旧数学Goal继续不恢复。新Happy75/76仍待证明原件。此完成态覆盖下方“实施中/只读”的历史快照。
 
-README须持续解释v0→v1→v2→v3的具体变化：v0为基础研究工具历史阶段（无Git标签）；v1从Property B/ECC提炼九项解题技能；v2加meta-evolve及DD；v3在原五流程落实四类共性动作、升级ECC并加三个领域。每项写明经验来源、实际动作、所属阶段及证据入口。不能只放版本号或泛称自进化；旧图标为历史，历史数学来源保持原属。Gemini4已实质起草本轮双语正文，Root按实际标签与实现核对，处置见`development/evolution/v3-20261104/publication/DISPOSITION.md`。
+README必须分开说明两条演进线：共享base workflow持续强化；领域plugins持续扩展与深化。不能用技能数量不变暗示base未增强，也不能只把领域数量增加当作通用研究能力已提高。共性动作的实际修改、专用数学的新增与已有插件升级分别写清。README须持续解释v0→v1→v2→v3的具体变化：v0为基础研究工具历史阶段（无Git标签）；v1从Property B/ECC提炼九项解题技能；v2加meta-evolve及DD；v3在原五流程落实四类共性动作、升级ECC并加三个领域。每项写明经验来源、实际动作、所属阶段及证据入口。不能只放版本号或泛称自进化；旧图标为历史，历史数学来源保持原属。Gemini4已实质起草本轮双语正文，Root按实际标签与实现核对，处置见`development/evolution/v3-20261104/publication/DISPOSITION.md`。
 
 ## 2026-11-04：v3实施已授权
 

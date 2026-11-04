@@ -2,7 +2,7 @@
 
 MathRSI v3 develops the existing v2 implementation through [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md). It retains the five solving workflows, the separate maintenance workflow, and **10 MathRSI base skills**. **v3 is the current release**; `main` follows the recommended version, and the fixed v1/v2 snapshots remain unchanged. Record the actual checked-out revision when starting or handing off a task.
 
-The main contribution is executable domain capability backed by scientific source materials, together with four targeted improvements to how existing workflows consume evidence. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) owns integration and review status. Gemini 4 and Opus 5.5 each completed two rounds of source-based maintenance review. Their concrete fixes, reading scopes and corrections are preserved in the [review disposition](../development/evolution/v3-20261104/reviews/DISPOSITION.md). They did not rerun the mathematical programs.
+The release advances two complementary dimensions: **a stronger shared base workflow**, through four targeted changes to how existing skills consume evidence and choose their next action; and **broader, deeper domain plugins**, backed by executable mathematical tools and scientific source materials. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) owns integration and review status. Gemini 4 and Opus 5.5 each completed two rounds of source-based maintenance review. Their concrete fixes, reading scopes and corrections are preserved in the [review disposition](../development/evolution/v3-20261104/reviews/DISPOSITION.md). They did not rerun the mathematical programs.
 
 ## How v3 follows the earlier versions
 
