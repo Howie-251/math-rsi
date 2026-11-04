@@ -10,6 +10,8 @@
 
 以下转移有[两个项目的六条历史实证](../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)作具体依据：Property B的24点局部caller闭合后回剩余23点，而非提前交付；ECC补独立全域集合后回pair caller，无边必要条件足够时停止更贵扩张。数学细节与当时未闭范围见该记录，原ECC交接的仓内只读快照见[来源说明](../development/context/ecc-source/README.md)。这是历史经验的流程提炼；本轮没有重新求解这两题、重放全部计算或验证新流程提速。
 
+六个领域的逐阶段调用维护在[DOMAIN_ROUTING](DOMAIN_ROUTING.md)，并由每个实际SKILL的领域调用处读取执行。它给定ECC、极值超立方体、Hamilton超立方体和Happy Ending的真实输入、产物消费与回流；v3保留本页五阶段结构，见[V3_CHANGES](V3_CHANGES.md)。
+
 ## 五组流程与实际回流
 
 ```mermaid
@@ -39,7 +41,7 @@ flowchart TD
 
 随后 [mathrsi-survey](../base/skills/mathrsi-survey/SKILL.md)把本地PDF和wiki作为种子，真正调用research-lit及可用的外部来源，查异名、等价表述、前后引用、反例和勘误。发现阅读可先看前三页；关键数学进口继续读完整声明、证明及必要前置，记版本、条件、原文位置与本题映射。ingest创建骨架后，wiki-enrich补基础内容，重要数学条件仍从原文核对，不把骨架填满当作数学已审。
 
-specify初步模式只交回规格与调查委托，由prepare执行一次survey；不是specify先调查、prepare再重查。启用领域插件时共享一次research-lit和唯一LITERATURE writer：Property B实际接[propertyb-literature](../plugins/propertyb/skills/propertyb-literature/SKILL.md)的查询、archive种子、误读及来源核对；Degree–diameter实际接[mathrsi-degree-diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)和[dd-transfer-diagnosis](../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，将原wiki与公开比较目录作本地种子，核目标(d,D)的发表实例、已知族合法代入及正则/最大度条件，返回原进口与受影响队列。领域独占提取稿作为附件或返回正文合入，不各跑一轮发现；ECC草案保持未验收状态，不自动加载。
+specify初步模式只交回规格与调查委托，由prepare执行一次survey；不是specify先调查、prepare再重查。启用领域插件时共享一次research-lit和唯一LITERATURE writer：Property B实际接[propertyb-literature](../plugins/propertyb/skills/propertyb-literature/SKILL.md)的查询、archive种子、误读及来源核对；Degree–diameter实际接[mathrsi-degree-diameter](../plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)和[dd-transfer-diagnosis](../plugins/degree-diameter/skills/dd-transfer-diagnosis/SKILL.md)§4，将原wiki与公开比较目录作本地种子，核目标(d,D)的发表实例、已知族合法代入及正则/最大度条件，返回原进口与受影响队列。领域独占提取稿作为附件或返回正文合入，不各跑一轮发现；ECC与三个新增领域的定义、来源和返回按[领域调用](DOMAIN_ROUTING.md)对应准备分支执行。
 
 specify定稿再消费调查，固定精确原题、允许进口和验收边界。文献已有直接证明就组织其准确推论；发现反例就先核是不是原命题反例。查新不强不能成为agent自行改题的理由。用户固定的任务可能是复现、独立证明或指定目标，不由新颖性分数取消。
 

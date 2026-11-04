@@ -1,0 +1,928 @@
+                                                  Matchings of five directions in hypercube extends to
+                                                   Hamilton cycles and paths with prescribed ends ⋆
+
+                                                                               Jiřı́ Fink1 and Vojtěch Hotmar1
+
+                                                             Department of Theoretical Computer Science and Mathematical Logic
+                                                                            Faculty of Mathematics and Physics
+                                                                               Charles University in Prague
+arXiv:2501.19029v1 [math.CO] 31 Jan 2025
+
+
+
+
+                                                                                 fink@ktiml.mff.cuni.cz
+
+
+
+                                                   Abstract. The n-dimensional hypercube graph Qn has as vertices all subsets of {1, . . . , n},
+                                                   and an edge between any two sets that differ in a single element. The Ruskey-Savage con-
+                                                   jecture states that every matching of the n-dimensional hypercube Qn can be extended into
+                                                   a Hamilton cycle. We prove that matchings of Qn containing edges spanning at most d = 5
+                                                   directions can be extended into a Hamilton cycle. We also characterize when these match-
+                                                   ings of most d = 5 directions can be extended into a Hamilton path between two prescribed
+                                                   vertices. Our proofs work for arbitrary d and n where d ≤ n assuming some extension
+                                                   properties hold in Qd which we verified by a computer for d = 5.
+
+                                                   Keywords: Hypercube · Hamilton cycle · Hamilton path · Matchings spanning limited in
+                                                   number of directions
+
+
+                                           1     Introduction
+
+                                           The n-dimensional hypercube Qn is the graph whose vertices are all subsets of [n] := {1, . . . , n} and
+                                           whose edges connect sets that differ in a single element. There is a large literature on structural
+                                           properties of this class of graphs which comes from research on the topological structure and
+                                           analysis of hypercubic interconnection networks [24]. For example, Gros in 1872 [15] proved that Qn
+                                           contains a Hamilton cycle for every n ≥ 2. A Hamilton path in the hypercube Qn is in the literature
+                                           also called a Binary Gray Code which is a listing of all binary strings of length n such that every
+                                           two consecutive strings differ in exactly one positions. It is named after Frank Gray who in 1953
+                                           constructed a special Hamilton cycle in Qn , called Reflected Binary Gray Code, and use it in his
+                                           U.S. Patent 2632058 for signal processing. Then, Gray codes have found applications in such diverse
+                                           areas as information retrieval, image processing or data compression, and alternative constructions
+                                           of Gray codes satisfying certain additional properties have been widely studied [16,20].
+                                              1.1 Extending matching to Hamilton cycle. Ruskey and Savage [19] asked the following
+                                           question which is still open.
+
+                                           Conjecture 1 (Ruskey and Savage [19]). Every matching of the hypercube Qn can be extended
+                                           into a Hamilton cycle where n ≥ 2.
+
+                                               One natural step toward this problem is considering perfect matchings only, where each vertex
+                                           is incident to exactly one edge. Kreweras [17] conjectured that every perfect matching in the n-
+                                           dimensional hypercube with n ≥ 2 extends to a Hamilton cycle. This conjecture was popularized
+                                           by Knuth [16] and proven by Fink [10]. The proof of Kreweras’ conjecture actually provides the
+                                           following stronger statement where K(Qn ) denote the complete graph on vertices of Qn .
+
+                                           Theorem 1 (Fink [10]). For n ≥ 2 and every perfect matching M of K(Qn ), there exists a per-
+                                           fect matching N of Qn , such that M ∪ N is a Hamilton cycle of K(Qn ).
+                                           ⋆
+                                               Supported by the Czech Science Foundation grant GA 22-15272S.
+2
+
+   This result inspired several generalizations [1,13], e.g. the authors of [1] showed that Kreweras’
+conjecture also holds for sparse spanning regular subgraphs of hypercubes. Using the following
+theorem, Alahmadi et al. [2] proved that for every perfect matching M in Qn the set of edges e
+of Qn such that M ∪ {e} cannot be extended into a Hamilton cycle forms a matching of Qn .
+
+Theorem 2 (Alahmadi et al. [2], Theorem 4). Let n ≥ 2 be an integer and let M be a perfect
+matching on Qn . Let e1 , e2 ∈ E(Qn ) \ M incident with the same vertex. Then Qn has a perfect
+matching N such that N contains one of e1 , e2 and M ∪ N is a Hamilton cycle of Qn .
+
+    Shujia Wang and Fan Wang [23] presented another relaxation of the Ruskey and Savage con-
+jecture. For vertices u and v connected by an edge uv, we call the position i ∈ [n] where they differ
+the direction of that edge, with both endpoints u and v being incident to and covered by this
+edge. A matching M in Qn spans in direction i if it contains at least one edge in that direction,
+and it spans at most d directions if its edges lie in at most d distinct directions.
+
+Theorem 3 (Shujia Wang, Fan Wang [23]). For n ≥ 5, let M be a matching on the hyper-
+cube Qn , such that |M | < 10 · 2n−5 and M spans at most 5 directions. Then M can be extended
+to a Hamilton cycle.
+
+   We expand upon their idea, considering only matchings spanning at most 5 dimensions, and
+prove that the size restriction on M is unnecessary.
+
+Theorem 4. For n ≥ 2, let M be a matching on the hypercube Qn that spans at most 5 directions.
+Then M can be extended to a Hamilton cycle.
+
+   Our proof of Theorem 4 works for arbitrary many directions d assuming the following conjecture
+holds. Each vertex has a parity determined by the parity of number of ones in its binary string
+representation.
+
+Conjecture 2. Given a matching M on the hypercube Qn and two vertices u, v ∈ V (Qn ) of opposite
+parity, where u is not covered by M , there exists a Hamilton path extending M on Qn and
+connecting u and v where n ≥ 2.
+
+    Observation 14 proves that Conjecture 2 implies Conjecture 1. We verify this conjecture for
+2 ≤ d ≤ 5 in Observation 16 using a computer program1 which provides us Theorem 4. For general
+d, we have the following conditional statement.
+
+Theorem 5. For n ≥ d ≥ 2, let M be a matching on the hypercube Qn that spans at most d
+directions. If Conjecture 2 holds for dimension d, then M can be extended to a Hamilton cycle.
+
+    1.2 Extending matching to Hamilton path. It is well-known that the hypercube Qn
+contains a Hamilton path between any two prescribed end vertices of opposite parity [21]. Gregor,
+Novotný, and Škrekovski [14] considered the problem of extending a perfect matching of Qn to
+a Hamilton path between two prescribed end vertices with opposite parity. Their proof works in
+the more general setting of the complete bipartite graph B(Qn ) which contains an edge between
+all pairs of vertices of Qn with opposite parities. For a matching M of Qn and one of its vertices u,
+we write uM for the other end vertex of the edge of M incident with u. A layer in direction i ∈ [n]
+consists of all edges in direction i, and a half-layer is a subset of a layer containing only edges of
+specific parity.
+
+Theorem 6 (Gregor, Novotný, and Škrekovski [14], Theorem 2). Let n ≥ 5, and let u, v
+be two vertices of opposite parity in Qn . A perfect matching M of B(Qn ) with uv ∈
+                                                                                  / M can be
+extended to a Hamilton path, by edges from Qn , with end vertices u and v if and only if and
+(M \ {uuM , vv M }) ∪ {uM v M } contains no half-layers.
+1
+    https://gitlab.com/jirka.fink/matching_of_five_directions
+                                                                                                      3
+
+   Motivated by this result, we ask when a matching of Qn can be extended into a Hamilton path
+between prescribed vertices; and we conjecture the following statement. We call a set of edges
+an almost half-layer if it is missing one edge to become a half-layer. For a vertex u, we denote
+by ui its neighbor in direction i. An almost half-layer is u-avoiding if it lacks only one edge incident
+to u to form a complete half-layer.
+
+Conjecture 3. Let n ≥ 5 and u, v ∈ V (Qn ) be vertices of opposite parity. For a matching M on Qn ,
+there exists a Hamilton path between u and v extending M if and only if none of these conditions
+holds:
+
+C1. M contains a half-layer and u and v are covered by it,
+C2. M contains a u-avoiding almost half-layer in the direction i where v = ui , j ̸= i and
+    uuj , vv j ∈ M ,
+C3. uv ∈ M .
+
+   Observation 10 proves that all C-conditions are necessary for the existence of a Hamilton path,
+and our main conjecture is that they are also sufficient. Note that the requirement n ≥ 5 is
+necessary, since counterexamples for n = 4 presented in [14] applies here as well, with one extra
+counterexample shown √  in Figure 1. Furthermore, Dvořák and Fink [6] constructed a matching
+of B(Qn ) of size Θ(2n / n) which cannot be extended into a Hamilton path for n ≥ 9. Using a
+similar construction, Observation 15 presents a matching of B(Qn ) which cannot be extended to
+a Hamilton cycle between any two vertices for n ≥ 9, so we restrict Conjecture 3 to consider only
+matchings of Qn . Observation 13 proves that Conjecture 3 implies 2.
+
+
+
+
+                                        𝑣
+
+
+
+                            𝑢
+
+
+Fig. 1. The forbidden case for n = 4. Orange edges are the matching M and the orange vertices are
+the vertices u, v which cannot be together extended to a Hamilton path extending M between u and v.
+Black edges are the remaining usable edges in Q4 .
+
+
+    We consider the following simplification of Conjecture 3 for maximal matchings, where a match-
+ing is maximal if it cannot be extended by any edge.
+
+Conjecture 4. Let n ≥ 5, and let u, v be two vertices of opposite parity in Qn . A maximal match-
+ing M of Qn with uv ∈/ M can be extended to a Hamilton path with end vertices u and v if and
+only if and (M \ {uuM , vv M }) ∪ {uM v M } contains no half-layers.
+
+    Observation 12 proves that Conjecture 3 implies Conjecture 4. This shows the relation between
+Conjecture 3 and Theorem 6, and it implies that Conjecture 3 holds for perfect matchings and
+matchings extendable to a perfect one.
+    To further support the main Conjecture 3, we verify it for matching spanning at most d = 5
+directions in Observation 17. Similarly as in Theorem 5, we prove the following conditional version
+of Conjecture 3 for matching spanning at most d directions, and verify the condition for d = 5.
+4
+
+Theorem 7. Let n ≥ d ≥ 5, and u, v ∈ Qn be vertices of opposite parity and M be a matching
+on Qn spanning at most d directions. Assuming Conjecture 5 holds for dimension d, then M can
+be extended into a Hamilton path between u and v if and only if none of the C-conditions hold
+for M .
+
+      The extra condition in Theorem 7 is the following and Conjecture 3 is a direct consequence of
+it.
+
+Conjecture 5. Let n ≥ 5, and let u, v ∈ Qn be vertices of opposite parity and M be a matching
+on Qn . Then if and only if none of the C-conditions hold for M there exists two distinct Hamilton
+paths between u and v extending M .
+
+      Observation 17 verifies that Conjecture 5 holds for d = 5 which implies the following statement.
+
+Theorem 8. Let n ≥ 5, and u, v ∈ Qn be vertices of opposite parity and M be a matching on Qn
+spanning at most 5 directions. Then M can be extended into a Hamilton path between u and v if
+and only if none of the C-conditions hold for M .
+
+    1.3 Related results on extending edges to cycles. The research on Hamilton cycles
+in hypercubes satisfying certain additional properties has received considerable attention; see e.g.
+the survey by Savage [20]. They are motivated by applications in computer networks, where the hy-
+percube is frequently used as a network topology with a number of desirable properties, such as
+small degree and diameter.
+    Vandenbussche and West [22] who conjectured that every matching can be extended into
+a 2-factor, and the conjecture was proven by Fink [11]. Fink and Mütze [12] proved that every
+matching of Qn can be extended into a cycle that visits at least a 2/3-fraction of all vertices.
+    Dvořák [9] showed that any set of at most 2n − 3 edges of Qn , n ≥ 2, that induces vertex-
+disjoint paths is contained in a Hamilton cycle. Dvořák and Gregor [7] proved that for any set E
+of at most 2d − 4 edges in Qn , n ≥ 5, that form disjoint paths and two vertices x and y of opposite
+parity that are neither internal vertices of the paths nor end vertices of the same path, there is
+a Hamilton path with end vertices x and y that contains all of E.
+    Dimitrov et al. [5] proved that the hypercube Qn contains a Hamilton cycle avoiding a given
+matching except a forbidden configuration.
+    Other related results are nicely surveyed in the introduction of recently published paper [12].
+    1.4 Overview of our approach. In this paper, we consider matchings M in Qn spanning
+at most d ≤ n directions. So, it is natural to split Qn into 2n−d subcubes of dimension d so
+that every edge of M belongs into one of these subcubes. We find a Hamilton cycle extending M
+by finding cycles extending M in every subcube so that these cycles can be interconnected into
+a single Hamilton cycle. A similar approach was presented by Gregor [13] who proved that every
+perfect matching N of Qn can be extended into a Hamiltonian cycle by adding only edges I inside
+prescribed subcubes if and only if N ∪ I is connected. The connectivity condition is clearly neces-
+sary, so in our case where M ⊆ I, we have to use some edges between subcubes in the Hamilton
+cycle extending M , but our approach use only few of them.
+    Extending matchings into a cycle and a path is presented in Section 2 and 3, resp. In Appendix
+A we show some important relations between conjectures that were discussed in introduction.
+Programs verifying our statements for d = 5 is described in Appendix B.
+
+
+2      Extending to a Hamilton cycle
+
+In this section, we show how to extend a matching M on the hypercube Qn that spans at most d
+directions into a Hamilton cycle. First, we prove Theorem 5 giving the extension for n ≥ d ≥ 2,
+but it assumes that Conjecture 2 holds for dimension d. Then, using Observation 16 which verifies
+Conjecture 2 for d = 5, we prove Theorem 4.
+                                                                                                            5
+
+    First we introduce some notation. The Cartesian product G□H of graphs G and H has vertex
+set V (G) × V (H), with edges between vertices (u, v) and (u′ , v ′ ) if either u = u′ and vv ′ ∈ E(H),
+or v = v ′ and uu′ ∈ E(G). Note that Qn = Qn−d □Qd . We call the copies of H in G canonical
+copies. In this paper, we consider matchings on Qn that span at most d directions, and we can
+assume without loss of generality that these directions are the last d directions. Therefore, every
+edge uv of these matchings belongs to one canonical copy of Qd in Qn , and this canonical copy
+is uniquely identified by the first n − d directions u which are the same as in v. For a vertex
+u ∈ V (Qn ), we denote by uL and uR its first (Left) n−d and last (Right) d coordinates, respectively.
+Let Qn [uL ] be subgraph of Qn induced by vertices w such that wL = uL . In another works, Qn [uL ]
+is the canonical copy of Qn containing u. Similarly for a matching M spanning only the last d
+directions, M [uL ] are edges of M in Qn [uL ].
+
+
+
+                                                            𝑍2     𝑣2
+                                           𝑐2                           𝑄𝑛 [𝑐2 ]
+                                                              𝑢2
+                                                             𝑣1
+                             𝐶               𝑐1        𝑍1               𝑄𝑛 [𝑐1 ]
+                                                             𝑢1
+                                                              𝑣𝑘
+                                           𝑐𝑘                           𝑄𝑛 [𝑐𝑘 ]
+                                                            𝑍𝑘     𝑢𝑘
+
+
+Fig. 2. Illustration of proof of Theorem 5. On the left is a Hamilton cycle C = (c1 , . . . , ck ) on Qn−d and
+on the right the solid lines are edges between subcubes and the dashed lines are the Hamilton paths on
+the subcubes.
+
+
+
+Proof (Proof of Theorem 5). If n = d, the theorem is a direct consequence of Observation 14.
+Assuming n > d, we can without loss of generality consider only matchings that span the last d
+directions. If M is perfect, we invoke Theorem 1 for immediate proof. Otherwise, for a non-
+perfect matching, there is vertex v1 avoided by M . Let k = 2n−d , and consider a Hamilton cycle
+C = (c1 , c2 , . . . , ck ) on Qn−d , such that Qn [c1 ] is the subcube containing v1 .
+    The objective is for each i ∈ [k] to construct a Hamilton path Zi in Qn [ci ] extending M [ci ] and
+connecting some vertices ui and vi . Also ensuring ui and vi−1 are adjacent for i ∈ {2, 3, . . . k}, as
+well as vk to u1 . These paths, together with edges ui vi−1 for i ∈ {2, 3, . . . k} and vk u1 , complete
+a Hamilton cycle extending M which implies the statement. Figure 2 shows how the proof works.
+    Paths Zi are constructed inductively, starting from vertex v1 avoided by M in Qn [c1 ]. For each
+i ∈ {2, 3, . . . , k}, ui is chosen as vi−1 sole neighbor in Qn [ci ]. From Observation 14 each Qn [ci ]
+contains a Hamilton cycle Ci extending the matching M [ci ]. Selecting vi among ui ’s neighbors
+in Ci , such that ui vi ∈      / M , creates a Hamilton path Zi = E(Ci ) \ {ui vi } between ui and vi
+extending M [ci ].
+    Upon reaching vk , u1 is identified as the sole vk neighbor in Qn [c1 ]. Applying Conjecture 2
+to M [c1 ] and vertices u1 and v1 yields a Hamilton path Z1 from u1 to v1 , extending M [c1 ] and
+completing the proof.
+
+Proof (Proof of Theorem 4). The theorem directly follows from Observation 16 and Theorem 5.
+
+
+3    Extending to Hamilton path
+
+The extension of matchings to Hamilton paths presents additional challenges beyond the cycle case.
+Half-layers create rigid structures that constrain possible paths through the hypercube, making
+6
+
+them natural obstacles to path extension. This phenomenon was observed by Gregor, Novotný
+and Škrekovski [14] in their study of path extensions in bipartite graphs derived from hypercubes.
+   Their work, presented in Theorem 6, characterizes path extensions from perfect matchings in
+B(Qn ). They also showed an equivalent result. For a graph G, let G−X denote the graph obtained
+by removing vertices in set X and all incident edges.
+
+Theorem 9 (Gregor, Novotný, and Škrekovski [14], Theorem 3). Let u, v be vertices of
+opposite parity in Qn , n ≥ 5, and let M be a perfect matching of B(Qn − {u, v}). There exists
+a matching N ⊆ E(Qn ) such that N ∪ M forms a Hamilton cycle of B(Qn − {u, v}) if and only
+if M does not contain a half-layer.
+
+   The dimension requirement n ≥ 5 proves essential, providing sufficient flexibility for routing
+Hamilton cycles through the hypercube while accommodating matching constraints. Smaller di-
+mensions lack this flexibility, as demonstrated by n = 4 where certain matching configurations
+provably [14] prevent Hamilton path extensions.
+   This characterization builds on a fundamental structural property of half-layers:
+
+Lemma 1 (Gregor, Novotný, and Škrekovski [14], Lemma 4). Let Hi and Hj be half-layers
+of Qn of different directions i and j, respectively. Then, every edge of Hi is incident with some
+edge of Hj .
+
+   This intersection property has important implications: if a matching contains a half-layer in
+some direction i, it cannot contain even a single edge of a half-layer in any other direction j, as
+these edges would necessarily share endpoints. We can see that if a perfect matching contains
+two half-layers, they both must be of the same direction and of opposite parity. We also need
+the following lemma regarding almost half-layers:
+
+Lemma 2 (Gregor, Novotný, and Škrekovski [14], Lemma 6). Let M be a matching of
+K(Qn ), n ≥ 4. Then, M contains almost half-layer in at most one direction.
+
+    The pathological nature of half-layers is most evident when considering the C-conditions:
+
+
+                                          𝑖                  𝑖
+
+
+                                   𝐵                  𝐵
+
+
+                                                                      𝑗
+                                                       𝑢          𝑣
+
+                                   𝐴
+                                                      𝐴
+                                               𝑣
+                                    𝑢
+                                        a)                  b)
+
+
+Fig. 3. Necessary conditions for the existence of Hamilton paths in a hypercube, a) condition C1, u and v
+covered by a half-layer b) condition C2, M contains u and v avoiding almost half-layer in direction i and
+uuj , vv j ∈ M, j ̸= i.
+
+
+
+Observation 10. If any C-condition from Conjecture 3 holds, no Hamilton path between u and v
+extends a matching M .
+                                                                                                     7
+
+Proof. Negation of condition C3 is trivially necessary. We prove only the necessity of case C2,
+since the C1’s proof is similar. Both cases are illustrated in Figure 3.
+    For C2, let i, j be as defined as in the condition, with H denoting the u-avoiding almost half-
+layer in direction i. Without loss of generality, assume u is even, and v is odd. Let A be the set of
+even vertices, except u, covered by H and B the set of odd vertices not covered by H, except v.
+For path to exist between u and v extending M , each vertex in B must have an edge incident
+to it, that is not in the direction of i. That holds also for uj , since the edge uj v j would close
+the path prematurely. So each vertex in B needs its counterpart from A. However, |B| = 2n−2
+while |A| = 2n−2 − 1, making such a path construction impossible.
+
+    The conditions C1 and C2 have structural implications: when either holds, M must contain
+either a half-layer or an almost half-layer in some direction i and from Lemma 1 and Lemma 2
+only in that direction. Thus, only C1 or C2 may hold at once. Moreover, these conditions natu-
+rally suggest how M could be completed to a perfect matching: any extension must use edges in
+direction i to maintain the half-layer or the almost half-layer structure. We call this completion
+the unique extension of M , as it aligns with the conditions characterized in Theorem 6. Since any
+Hamilton path extending the unique extension must use all its edges, such a path also extends M .
+    The following lemma characterizes when there exists a Hamilton path between a vertex and
+one of its neighbors:
+Lemma 3. Let d ≥ 5, u ∈ V (Qd ), and M be a matching of Qd . Assuming Conjecture 3 holds
+for dimension d, then for at most two of the neighbors of u there does not exist a Hamilton path
+extending M connecting them to u.
+Proof. Consider which neighbors of u are forbidden by C-conditions. Under condition C1, u must
+be covered by a half-layer in direction i. This forbids only neighbor ui both by C1 and C3 be-
+cause uui ∈ M lies in the half-layer, while all other neighbors remain valid as they lie on the correct
+side of the half-layer.
+    Under condition C2 with neighbor v = ui , M contains a u-avoiding almost half-layer in direc-
+tion i and edges uuj , vv j ∈ M for some j ̸= i. This forbids exactly two neighbors: v = ui by C2
+and uj by C3, since uuj ∈ M .
+    As C1 and C2 cannot hold simultaneously, at most two neighbors are forbidden, implying any
+set of three neighbors contains at least one admitting a Hamilton path extending M .
+
+    Beyond examining paths to neighbors, we consider paths to all vertices of opposite parity from
+a given vertex u. Let TuM denote the set of vertices v where a Hamilton path exists between u
+and v extending M . This notation enables us to quantify exactly how many endpoints are available
+for Hamilton paths:
+
+Observation 11. Let n ≥ 5, M be a matching of Qn , and u ∈ V (Qn ). Assuming Conjecture 3
+holds for n, then |TuM | ≥ 2n−2 . Moreover, |TuM | = 2n−2 if and only if M contains a half-layer H
+covering u, in which case TuM consists exactly of vertices with parity opposite to u not covered by
+H. Otherwise |TuM | ≥ 2n−1 − 2.
+Proof. If u is not covered by M , none of the C-conditions can hold between u and any vertex of
+opposite parity. Thus |TuM | = 2n−1 . For the remainder of the proof, we assume u is covered by M
+and analyze three cases.
+    First, suppose M contains a half-layer H covering u. By condition C1, TuM consists exactly of
+vertices of opposite parity to u that are not covered by H, giving |TuM | = 2n−2 .
+    Next, suppose M contains a u-avoiding almost half-layer in direction i. Then TuM excludes
+exactly two vertices of opposite parity. uM , that is forbidden by C3 since uuM ∈ M and ui , that
+is forbidden by C2. Therefore |TuM | = 2n−1 − 2.
+    Finally, if neither C1 nor C2 holds, only uM is forbidden by C3, yielding |TuM | = 2n−1 − 1.
+    Therefore, |TuM | = 2n−2 occurs if and only if C1 holds. In this case, by Lemma 1, the direction
+and parity of H are uniquely determined by the complement of TuM . In all other cases, |TuM | ≥
+2n−1 − 2 for n ≥ 5.
+8
+
+    This observation gives us an important information about the Hamilton paths extending
+matching M and stemming from a specific vertex u. Either we have many available endpoints
+(|TuM | ≥ 2n−1 − 2) or M contains a specific half-layer covering u that determines the endpoint set
+as all of the vertices of opposite parity to u not covered by the said half-layer.
+    To analyze path constructions systematically, we introduce cube sequences as our primary
+structural tool. A sequence of m cubes of dimension d is the graph Pm □Qd , where Pm is the path
+on m vertices. For a path Y = (y1 , . . . , ym ) in Qn−d where m ≤ 2n−d , its induced sequence in Qn
+consists of subcubes Gi = Qn [yi ] and edges between them, with corresponding matchings Mi =
+M [yi ] for i ∈ [m]. We refer to this as the induced sequence of cubes and matchings of path Y .
+    Any cube sequence embeds as a subgraph into Qn for sufficiently large n, allowing us to
+extend our hypercube notation to these sequences. Vertices and edges in cube sequences exhibit
+a dual nature: they possess both local properties within their canonical copy of Qd and global
+properties from their embedding in Qn . For instance, in Qn = Qn−d □Qd , a vertex u ∈ V (Qn )
+with uL = 1 ∈ V (Qn−d ) and uR = 0 ∈ V (Qd ) is locally even in its Qd copy due to uR = 0, while
+its global parity in Qn is determined by uL = 1.
+    A sequence of half-layers in Pm □Qd consists of half-layers in each canonical copy of Qd , all
+sharing the same direction and global parity. These sequences exhibit an important alternation
+property: when traversing consecutive cubes in the sequence of cubes, half-layers of the same global
+parity must alternate between odd and even local parity within their respective Qd copies—a prop-
+erty inherent to the embedding structure.
+                                                                                                R
+ RFor a subset W ⊆ V (Q    R
+                               n ), we define its projection onto the last d coordinates as W      =
+  w | w ∈ W , where W ⊆ V (Qd ). We use this projection notation to distinguish between
+global vertices in Qn and their local representations in canonical copies of Qd .
+    We are ready to prove our first key structural result:
+
+Lemma 4. Let d ≥ 5 and G = P2 □Qd with canonical copies G1 , G2 of Qd containing match-
+ings M1 , M2 respectively. Let u ∈ G1 , v ∈ G2 have different global parities. Assuming Conjecture 3
+holds for dimension d, there exists a Hamilton path between u and v extending M = M1 ∪ M2 if
+and only if no sequence of half-layers in G contained in M covers both u and v. Moreover, when
+such a path exists, there are at least 2d−3 distinct Hamilton paths, determined by different edges
+between G1 and G2 satisfying these conditions.
+
+Proof. We begin by proving necessity. If G contains a sequence of half-layers in M covering both u
+and v, this sequence corresponds to a half-layer in Qd+1 covering u and v. By Observation 10, no
+Hamilton path can exist.
+    For sufficiency, assume no sequence of half-layers in M covers both u and v. Let TuM1 and TvM2
+be their respective sets of available endpoints in their respective copies G1 and G2 . Given w ∈
+(TuM1 )R ∩ (TvM2 )R , let w1 ∈ V (G1 ), w2 ∈ V (G2 ) such that w1R = w and w2R = w. By definition
+of TuM1 and TvM2 , there exist Hamilton paths Z1 from u to w1 extending M1 in G1 and Z2 from v
+to w2 extending M2 in G2 . The path Z1 ∪ {w1 w2 } ∪ Z2 forms a Hamilton path in G extending M .
+    To establish the bound on the number of distinct Hamilton paths, we consider several cases.
+When u or v is not covered by a half-layer in M , say u, then by Observation 11, |TuM1 | ≥ 2d−1 − 2.
+Therefore |(TuM1 )R ∩ (TvM2 )R | ≥ |TvM2 | − 2 ≥ 2d−2 − 2 ≥ 2d−3 for d ≥ 5.
+    When both vertices are covered by half-layers, these must differ either in direction or global
+parity. In the case of same direction but different global parity, (TuM1 )R = (TvM2 )R with |TuM1 | =
+2d−2 . When the directions differ, the overlap has size exactly 2d−3 , as this corresponds to fixing
+two coordinates for vertices of specific parity. Thus in all cases, we obtain at least 2d−3 distinct
+choices for w, each yielding a distinct Hamilton path.
+
+    We now generalize Lemma 4 for longer sequences of hypercubes:
+
+Lemma 5. Let d ≥ 5 and G = Pm □Qd with m ≥ 2. For i ∈ [m], let Mi be a matching of the i-th
+canonical copy Gi of Qd , and let M = ∪i∈[m] Mi . For vertices u ∈ G1 , v ∈ Gm of opposite global
+parity, there exists a Hamilton path between u and v extending M if and only if no sequence of
+half-layers in G contained in M covers both u and v, assuming Conjecture 3 holds for dimension d.
+                                                                                                       9
+
+Moreover, when connecting consecutive canonical copies of Qd , we can choose from 2d−3 different
+edges.
+
+Proof. We proceed by induction on m. The base case m = 2 follows from Lemma 4. For the in-
+ductive step, let m > 2 and assume the statement holds for m − 1. Let G′ = Pm−1 □Qd and M ′
+                                                     ′
+be the restriction of M to G′ . We denote by TuM the set of vertices in Gm−1 that are endpoints
+of Hamilton paths in G′ extending M ′ and starting at u. Similarly, let TvMm be the set of vertices
+in Gm that are endpoints of Hamilton paths extending Mm and starting at v.
+                                                                        ′
+    Notice if u is covered by a sequence of half-layers in M ′ , TuM consists of vertices of opposite
+global parity to u not covered by that sequence. Thus if there exists a sequence of half-layers in M
+                                    ′                                                     ′
+covering both u and v, then (TuM )R and (TvMm )R are disjoint since vertices in (TuM )R correspond
+to vertices covered by the half-layer covering v in Gm , thus no Hamilton path exists.
+                                                               ′
+    If no sequence of half-layers covers u in G′ , then TuM contains all vertices of opposite global
+                                                                            ′
+parity to u in Gm−1 . Since |TvMm | ≥ 2d−2 by Observation 11, |(TuM )R ∩ (TvMm )R | ≥ 2d−2 , and
+a Hamilton path exists by the construction in Lemma 4.
+    When a sequence of half-layers covers u in G′ but no sequence of half-layers in G covers both u
+                      ′
+and v, we have |TuM | = 2d−2 . For |TvMm | = 2d−2 , the half-layer in Mm covering v is not part of
+the sequence covering u. If it is part of a half-layer of the same direction as the sequence we get,
+      ′
+|(TuM )R ∩(TvMm )R | = 2d−2 . If the half-layer covering v is of different direction than of the sequence
+             ′
+we get |(TuM )R ∩ (TvMm )R | = 2d−3 , because the intersection consists of vertices of specific parity
+with two positions fixed. When |TvMm | > 2d−2 , then it must hold that |TvMm | ≥ 2d−1 − 2 and for
+                                      ′
+the intersection it holds that |(TuM )R ∩ (TvMm )R | ≥ 2d−2 − 2. In both cases, a Hamilton path exists
+and we have at least 2d−3 of connections to choose when connecting the G′ with Gm−1 .
+
+   Consider attaching an additional cube of dimension d to a sequence of cubes of the same
+dimension through which we have already threaded a Hamilton path extending a matching M .
+The following lemma establishes the conditions under which such an attachment is possible for
+a pair of cubes:
+
+Lemma 6. Let d ≥ 5 and G = P2 □Qd with canonical copies G1 , G2 of Qd containing match-
+ings M1 , M2 respectively. Let Z1 and Z2 be two distinct Hamilton paths extending M1 in G1 ,
+where Z1 is between u and v1 and Z2 is between u and v2 . Note that v1 and v2 are not neces-
+sarily distinct. Assuming Conjecture 3 holds for dimension d, there exists a Hamilton path in G
+extending M1 ∪ M2 from u to at least one of {v1 , v2 }.
+
+Proof. An edge of M1 is called fixed, and an edge of (Zv1 ∪ Zv2 ) \ M1 is said to be free. For
+a vertex a ∈ G1 let a′ ∈ G2 be its unique corresponding counterpart, such that aR = (a′ )R . For
+a free edge ab, we say it admits a Hamilton path if there exists a Hamilton path in G2 extending M2
+between the corresponding vertices a′ and b′ , which we denote by Za′ ′ b′ . Given such an admitting
+edge ab in some path Zv , we can construct a Hamilton path in G as Zv \ {ab} ∪ {aa′ , bb′ } ∪ Za′ ′ b′ .
+    We claim that there exists at least one free edge admitting a Hamilton path. Suppose toward
+contradiction that no such admitting free edge exists.
+    Let x be the first vertex where paths Zv1 and Zv2 diverge, with Zv1 following edge xy and Zv2
+following xz. Note that neither y nor z can be an end vertex v1 or v2 , as this would force the paths
+to be identical, since the only vertex left to visit is v1 = v2 .
+    It is clear that both of the vertices y and z must be incident to at least three edges from these
+paths, since they differ at these vertices. By Lemma 3 at most two of them can be free, since if
+there would be three, at least one of them would admit a Hamilton path. Since only one incident
+edge may be fixed we get two free edges and one fixed for both of these vertices.
+    This structure combined with the C-conditions, implies that for all of the vertices x, y and z
+the C2 and C3 conditions must hold and thus M2 contains two almost half-layers in some direc-
+tion i, avoiding the vertices x′ , y ′ and z ′ . Let w′ be the fourth vertex avoided by these almost
+half-layers, with w its corresponding vertex in G1 . The two other free edges coming from y and z
+are exactly yw ∈ Zv2 and zw ∈ Zv1 .
+10
+
+    All remaining free edges must lie in direction i, since they do not admit a Hamilton path,
+and thus alternate with fixed edges. This is forcing Zv1 and Zv2 to be identical except for their
+behavior at aforementioned vertices. The path up to x is the same for both of the paths, but
+the vertices y, z and w must be connected somehow. If there would be a path, common to both
+of Zv1 and Zv2 , connecting y and w directly, without using z, there would be a cycle together with
+the edge yw in Zv1 . The same applies to z and w. Thus there must be a path between y and z
+without using w. However, this creates a path between vertices of the same parity, using an even
+number of edges alternating between free and fixed - an impossibility since the path starts and
+ends with a fixed edge.
+    This contradiction establishes that some free edge must admit a Hamilton path, allowing us
+to construct the desired path in G.
+
+    Before proving Theorem 7, we must address the case where u and v lie in the same subcube
+and satisfy one of the C-conditions, specifically either the condition C1 or C2, since if they would
+satisfy the condition C3 no Hamilton path would exist even in the larger cube. We use the following
+result about perfect matchings in hypercubes:
+
+Lemma 7. Let n ≥ 5 and M be a matching of Qn . Let u, v ∈ V (Qn ) be vertices of different parity
+with uv ∈/ M . If condition C1 or C2 holds for u, v and M , then there exist vertices zu and zv of
+different parity such that zu is adjacent to u, zv is adjacent to v, but zu and zv are not adjacent to
+each other. Furthermore, there exist vertex-disjoint paths Zu and Zv where Zu connects u to zu ,
+Zv connects v to zv , and Zu ∪ Zv covers all vertices of Qn while extending the matching M .
+
+Proof (Proof of Lemma 7). In this proof consider M being its unique extension to a perfect
+matching. We proceed by analyzing each condition separately.
+    First suppose condition C1 holds, so M contains a layer in direction i. Since uv ∈        / M and
+they are covered by the same half-layer, their distance must exceed three. Therefore, there exists
+a k such that uk ̸= vk , thus u and v lie in opposite subcubes, induced by the k-th position.
+Let Qk0 denote the (n − 1)-dimensional subcube induced by vertices with 0 in position k, and Qk1
+the subcube with 1 in position k. Let M0k and M1k be the restrictions of M to these subcubes.
+    In Qk0 containing u, we apply Theorem 1 to obtain a cycle Cu = (u, . . . , zu ), which forms our
+path Zu . For Qk1 containing v, we must ensure our path ends at a vertex zv not adjacent to zu .
+Note that zu has exactly one neighbor zuk in Qk1 . When zuk is not adjacent to v, any cycle through v
+suffices. Otherwise, we observe that v has at least four neighbors in Qk1 , where one belongs to M
+and one may be zuk . For the remaining two neighbors, we apply Theorem 2 to obtain a matching M
+extending cycle Cv = (v, . . . , zv ) where zv is is one of the neighbors. By construction, zv ̸= zuk ,
+yielding the desired non-adjacent endpoints.
+    Now suppose condition C2 holds, meaning M contains a u-avoiding almost half-layer in direc-
+tion i where v = ui , along with edges uuj and vv j in M for some j ̸= i. The graph Qn − u, uj
+contains two almost
+                     half-layers but no complete half-layer. Applying Theorem 9 to this graph with
+matching M \ uuj , we obtain a cycle C = (v, v j , . . . , zv ) where zv = v k for some k distinct from
+both i and j. Setting zu = uj , we can verify these endpoints are not adjacent: zu = (v i )j while
+zv = v k , and these vertices differ in multiple coordinates.
+
+   The proof of Theorem 7 builds upon techniques used in proving Theorem 5, heavily utilizing
+the properties of cube sequences established in Lemma 5.
+
+Proof (Proof of Theorem 7). For n = d, the theorem follows directly from Conjecture 3, so we
+assume n > d and, without loss of generality, that M spans only the last d directions. Throughout
+the proof, we refer to cubes spanning the last d dimensions when discussing canonical copies of Qd
+in Qn . We also use k = |V (Qn−d )|.
+   The proof strategy follows a similar structure to Theorem 5. We locate appropriate paths
+in Qn−d , construct Hamilton paths within the subcubes Qd , and connect these paths along
+the structure in Qn−d . First, we introduce a key construction that will be used throughout
+the proof.
+                                                                                                       11
+
+    The proof proceeds by considering two main cases based on whether the vertices lie in the same
+canonical copy of Qd , with several subcases for each situation.
+    Case 1: uL ̸= v L (vertices in different canonical copies)
+    Case 1.1: uL and v L have different parity.
+    Let Y = (uL , ..., v L ) be a Hamilton path in Qn−d from uL to v L . Since no C-conditions hold,
+the induced sequence of matchings by Y cannot contain a sequence of half-layers covering both u
+and v. Lemma 5 then guarantees the existence of our desired Hamilton path.
+    Case 1.2: uL and v L have same parity.
+    A direct Hamilton path between uL and v L in Qn−d cannot exist due to their matching parity.
+We instead identify a vertex z, distinct from uL and v L and of opposite parity to them, that we
+can avoid in our path construction. By known result from [18], specifically Corollary 4, we get
+a Hamilton path Yz between uL and v L on Qn−d − {z}.
+    This vertex z must be chosen such that the induced sequence of cubes from the resulting
+Hamilton path Yz on Qn−d − {z} contains no sequence of half-layers covering both uR and v R .
+Such a choice must exist - otherwise, each canonical copy of Qd would contain a half-layer of
+the same global parity, implying M contains a half-layer covering both u and v, contradicting our
+assumptions.
+    Given this Hamilton path Yz and its induced sequence Gz with matching Mz , Lemma 5 provides
+a Hamilton path Yz′ . To incorporate Qn [z], we select any neighbor z ′ of z in Qn−d and examine
+the portion of Yz′ within Qn [z ′ ]. From Lemma 5, the path construction provides at least 2d−3 dis-
+tinct choices for endpoint selection in the cube Qn [z ′ ], while maintaining the existence of Hamilton
+path Yz′ on the induced sequence of cubes. Since 2d−3 ≥ 2 for d ≥ 5, we can apply Lemma 6 to
+complete this case by attaching the subcube Qn [z] to Yz′ while extending M [z].
+    Case 2: uL = v L (vertices in same canonical copy), let M ⋆ = M [uL ] and Q⋆ = Qn [uL ] denote
+the matching and cube containing both vertices.
+    Case 2.1: n > d + 1
+    Case 2.1.1: Hamilton path Y ⋆ extending M ⋆ between uR and v R exists in Q⋆ .
+    Consider a cycle C = (uL , c2 , . . . , ck ) on Qn−d and let Y = (c2 , . . . , ck ). For any edge wz ∈
+Y \ M ⋆ , examine its corresponding vertices w′ in Qn [c2 ] and z ′ in Qn [ck ]. If Lemma 5 provides
+  ⋆
+
+a Hamilton path Y ′ extending the induced matching M ′ between w′ and z ′ , we construct our
+desired path as Y ⋆ \ {wz} ∪ {ww′ , zz ′ } ∪ Y ′ .
+    If no such edge exists, every pair w′ and z ′ must be covered by a sequence of half-layers in
+direction i contained in M ′ . Since Y has odd length, w′ and z ′ are covered by half-layers of same
+local parity, forcing edge wz to share direction i. This implies all edges in Y ⋆ \M ⋆ share direction i.
+    Consequently, M ⋆ must be perfect or almost perfect, as any uncovered inner vertex of Y ⋆
+would yield two incident edges in different directions. Moreover, M ′ must contain a sequence of
+layers, not just half-layers, as Y ⋆ \ M ⋆ cannot be covered by a single half-layer.
+    Thus M is either perfect or almost perfect with only endpoints uncovered. In the almost perfect
+case, apply Theorem 1 to M ∪ {uv} to obtain matching N , yielding Hamilton path M ∪ N . In
+the perfect case, apply Theorem 6, noting no C-conditions hold.
+    Case 2.1.2: Hamilton path between u and v extending M ⋆ does not exist in Q⋆ .
+    Since uv ∈ / M , condition C3 doesn’t hold for M ⋆ , and either condition C1 or C2 must hold
+for M ⋆ . Applying Lemma 7 to u, v and M ⋆ yields two vertex-disjoint paths Zu and Zv terminating
+at vertices zu and zv respectively, together covering all vertices in Q⋆ and extending M ⋆ .
+    Following the approach from the previous case, we consider a cycle C = (uL , c2 , . . . , ck ) on Qn−d
+and examine the induced sequence of cubes by Y = (c2 , . . . , ck ). If there exists a Hamilton path Y ′
+extending the induced matching M ′ between corresponding zu′ ∈ Qn [c2 ] and zv′ ∈ Qn [ck ], then we
+are done since Zu ∪ Zv ∪ Y ′ ∪ {zu zu′ , zv zv′ } is the needed Hamilton path.
+    Suppose that there is no such path. Then the sequence of cubes induced by Y contains a se-
+quence of half-layers covering zu′ and zv′ in a direction i. Since for M ⋆ holds one of the conditions C1
+and C2 we know that M ⋆ contains a half-layer or an almost half-layer in a direction j and both zu′
+and zv′ are not covered by it. We say that i ̸= j, since otherwise the sequence of half-layers con-
+tained in M ′ has the same direction and global parity as the half-layer or an almost half-layer
+in M ⋆ , violating the C-conditions globally.
+12
+
+   So i ̸= j, and we can uniquely extend this sequence to layers and similarly extend M ⋆ to
+a perfect matching both containing obstructions in different directions. Therefore we can apply
+Theorem 6 to obtain our desired path.
+   Case 2.2: n = d + 1, let Q† denote the canonical copy of Qd adjacent to Q⋆ in Qn , and let M †
+be the restriction of M to Q† .
+   Case 2.2.1: Hamilton path Y ⋆ extending M ⋆ between uR and v R exists in Q⋆ .
+   From Conjecture 5 we get existence of two distinct Hamilton paths extending M ⋆ between uR
+and v R in Q⋆ and we are free to use Lemma 6 to obtain the final result.
+   Case 2.2.2: Hamilton path between uR and v R does not exist in Q⋆ . We follow the approach
+from Case 2.1.2. Lemma 7 provides two vertex-disjoint paths Zu starting from u and Zv starting
+from v in Q⋆ , terminating at non-adjacent vertices zu and zv , with corresponding vertices zu′ and zv′
+                                                   / M †.
+in Q† . Since zu and zv are not neighbors, zu′ zv′ ∈
+          †
+   If M contains no half-layer, Conjecture 3 guarantees a Hamilton path between zu′ and zv′
+extending M † , since they are not neighbors. Otherwise, both M ⋆ and M † can be uniquely extended
+to perfect matchings and no C-conditions hold globally for M , by the discussion from Case 2.1.2.
+Allowing us to apply Theorem 6 to obtain the desired path.
+
+Proof (Proof of Theorem 8). The theorem directly follows from Observation 17 and Theorem 7.
+
+
+References
+ 1. Alahmadi, A., Aldred, R., Alkenani, A., Hijazi, R., Solé, P., Thomassen, C.: Extending a perfect
+    matching to a Hamiltonian cycle. Discrete Mathematics & Theoretical Computer Science 17 (2015)
+ 2. Alahmadi, A., Aldred, R.E., Alkenani, A., Hijazi, R., Solé, P., Thomassen, C.: Extending a perfect
+    matching to a Hamiltonian cycle. Discrete Mathematics and Theoretical Computer Science (Online
+    Edition) 17(1), 241–254 (2015)
+ 3. Biere, A., Faller, T., Fazekas, K., Fleury, M., Froleyks, N., Pollitt, F.: CaDiCaL 2.0. In: Gurfinkel, A.,
+    Ganesh, V. (eds.) Computer Aided Verification - 36th International Conference, CAV 2024, Montreal,
+    QC, Canada, July 24-27, 2024, Proceedings, Part I. Lecture Notes in Computer Science, vol. 14681,
+    pp. 133–152. Springer (2024). https://doi.org/10.1007/978-3-031-65627-9_7
+ 4. Bright, C., Ganesh, V., Heinle, A., Kotsireas, I., Nejati, S., Czarnecki, K.: MathCheck2: A SAT+CAS
+    Verifier for Combinatorial Conjectures, p. 117–133. Springer International Publishing (2016). https:
+    //doi.org/10.1007/978-3-319-45641-6_9
+ 5. Dimitrov, D., Dvořák, T., Gregor, P., Š krekovski, R.: Gray codes avoiding matchings. Discrete Math-
+    ematics & Theoretical Computer Science 11, 123–147 (2009)
+ 6. Dvořák, T., Fink, J.: Gray codes extending quadratic matchings. J Graph Theory (2018). https:
+    //doi.org/10.1002/jgt.22371
+ 7. Dvořák, T., Gregor, P.: Hamiltonian paths with prescribed edges in hypercubes. Discrete Mathematics
+    307(16), 1982–1998 (2007)
+ 8. Dvořák, T., Gregor, P.: Partitions of faulty hypercubes into paths with prescribed endvertices. SIAM
+    Journal on Discrete Mathematics 22(4), 1448–1461 (2008)
+ 9. Dvořák, T.: Hamiltonian cycles with prescribed edges in hypercubes. SIAM J. Discret. Math. 19(1),
+    135–144 (2005)
+10. Fink, J.: Perfect matchings extend to Hamilton cycles in hypercubes. J. Comb. Theory, Ser. B 97(6),
+    1074–1076 (2007)
+11. Fink, J.: Matchings extend into 2-factors in hypercubes. Combinatorica 39, 77–84 (2019). https:
+    //doi.org/10.1007/s00493-017-3731-8
+12. Fink, J., Mütze, T.: Matchings in hypercubes extend to long cycles. In: International Workshop on
+    Combinatorial Algorithms. pp. 14–27. Springer (2024)
+13. Gregor, P.: Perfect matchings extending on subcubes to Hamiltonian cycles of hypercubes. Discrete
+    Mathematics 309(6), 1711–1713 (2009)
+14. Gregor, P., Novotný, T., Škrekovski, R.: Extending perfect matchings to gray codes with prescribed
+    ends. The Electronic Journal of Combinatorics 25(2), 2–56 (2018)
+15. Gros, L.: Théorie du Baguenodier. Aimé Vingtrinier, Lyon (1872)
+16. Knuth, D.E.: The Art of Computer Programming, Volume 4, Fascicle 2: Generating All Tuples and
+    Permutations. Addison-Wesley Professional (2005)
+                                                                                                      13
+
+17. Kreweras, G.: Matchings and Hamiltonian cycles on hypercubes. Bull. Inst. Combin. Appl. 16, 87–91
+    (1996)
+18. Lewinter, M., Widulski, W.: Hyper-hamilton laceable and caterpillar-spannable product graphs.
+    Computers & Mathematics with Applications 34(11), 99–104 (1997). https://doi.org/10.1016/
+    s0898-1221(97)00223-x
+19. Ruskey, F., Savage, C.: Hamilton Cycles that Extend Transposition Matchings in Cayley Graphs of
+    Sn . SIAM Journal on Discrete Mathematics 6(1), 152–166 (1993)
+20. Savage, C.: A survey of combinatorial Gray codes. SIAM Review 39(4), 605–629 (1997)
+21. Simmons, G.J.: Almost all n-dimensional rectangular lattices are hamilton-laceable. In: Presented at
+    the 9th Southeastern Conf. on Combinatoric Graph Theory and Computing (1977)
+22. Vandenbussche, J., West, D.B.: Extensions to 2-factors in bipartite graphs. The Electronic Journal of
+    Combinatorics 20(3), 1–10 (2013)
+23. Wang, S., Wang, F.: A kind of matchings extend to hamiltonian cycles in hypercubes. RAIRO-
+    Operations Research 58(6), 5237–5254 (2024)
+24. Xu, J.: Topological structure and analysis of interconnection networks, vol. 7. Springer Science &
+    Business Media (2013)
+14
+
+A    Relations between statements
+
+In this section, we prove that Conjecture 3 implies Conjecture 4 and Conjecture 2 and the last
+one implies Ruskey-Savage Conjecture 1. Then, we show that Conjecture 3 cannot be generalized
+for matchings of B(Qn ) using the construction of [6].
+
+Observation 12. Conjecture 3 implies Conjecture 4.
+
+Proof. Let M bea maximal matching. We prove the equivalence between a C-condition holding
+and M ′ = (M ∪ uM v M ) \ uuM , vv M containing a half-layer.
+    First, suppose one of the C-conditions holds. If C1 holds, then M contains a half-layer cover-
+ing u and v. Since M is maximal, it contains both half-layers in this direction, and the operation
+creating M ′ preserves one of them. When C2 holds, M contains a u-avoiding almost half-layer
+in direction i where v = ui , and adding the edge uM v M completes the another almost half-layer
+in M ′ .
+    For the converse, suppose M ′ contains a half-layer. If M already contains a half-layer, then
+by maximality of M , it contains both half-layers in this direction. Since M ′ still contains a half-
+layer after removing edges uuM and vv M , vertices u and v must be covered by the same half-
+layer, satisfying C1. Otherwise, the half-layer in M ′ must have been created by adding uM v M ,
+implying M contains an almost half-layer satisfying C2. Since uv ∈ / M by assumption, C3 cannot
+occur.
+
+Observation 13. Conjecture 3 implies Conjecture 2, for dimension d ≥ 5.
+
+Proof. Since one of the vertices u and v is not covered, none of the C-conditions may hold and
+thus there exists a Hamilton path extending matching M between u and v.
+
+Observation 14. Conjecture 2 implies Conjecture 1.
+
+Proof. For a perfect matching, the observation follows directly from Theorem 1. If the matching
+is not perfect, there exists a vertex u avoided by M . Let v be a neighbor of u. We immediately see
+that M , u and v fulfill Conjecture 2 criteria. Thus, a Hamilton path Z exists between u and v.
+This path Z, along with the edge uv, forms a Hamilton cycle extending M , and Conjecture 1
+follows.
+
+    For a vertex v ∈ V (Qn ) we denote χ(v) to be 1 for even vertices and −1 for odd vertices. We
+also need the following proposition:
+
+Proposition 1 (Dvořák and Gregor [8], Proposition 3.1). Let H be a subgraph of Qn . Let
+         m
+{Zui vi }i=1 be paths in H that are pairwise vertex-disjoint, between endpoints ui and vi , such that
+they together cover all the vertices of H, then
+                                  m
+                                1X                           X
+                                      (χ(ui ) + χ(vi )) =             χ(u).                      (1)
+                                2 i=1
+                                                            u∈V (H)
+
+   Note that in the proposition statement ui and vi may be the same vertex, which means we can
+have a paths consisting of single vertex.
+
+Observation 15. For every n ≥ 9, there exists a matching M of B(Qn ) that cannot be extended
+to a Hamilton path using only edges from Qn .
+
+Proof. This proof follows the approach of Theorem 1.2 in [6]. We begin with inequality that holds
+for all m ≥ 8:
+                                      ⌊m2 ⌋−1          m      
+                             m            X      m        X        m
+                            m + 3 ≤                 ≤               .                       (2)
+                             2            i=0
+                                                  i                i
+                                                             i=⌊m/2⌋+1
+                                                                                                    15
+
+    Let G1 and G2 be subgraphs of B(Qn ) induced by vertices with first coordinate   0 and 1 respec-
+tively. Note that for any vertex a ∈ V (G1 ), the vertex a1 ∈ V (G2 ). Let h := n−1  and k := n−1
+                                                                                                  
+                                                                                 2               h .
+We partition G1 and G2 into three layers:
+
+             Low0 := {v ∈ V (G1 ) | w(v) < h} ,               Low1 := v 1 | v ∈ Low0 ,
+                                                                         
+
+              Mid0 := {v ∈ V (G1 ) | w(v) = h} ,               Mid1 := v 1 | v ∈ Mid0 ,
+                                                                         
+
+               Up0 := {v ∈ V (G1 ) | w(v) > h} ,                Up1 := v 1 | v ∈ Up0 .
+                                                                         
+
+    Let {x1 , . . . , xk } enumerate the vertices in Mid0 and put p := χ(x1 ). From (2) with m = n − 1,
+we have |Up0 | ≥ |Low0 | ≥ |Mid0 | + 3. This allows us to select distinct vertices y1 , . . . , yk+3 ∈
+Low0 ∪ Low1 and z1 , . . . , zk+3 ∈ Up0 ∪ Up1 satisfying χ(zi ) = p = −χ(yi ) for all i ∈ [k + 3]. We
+                                                 k         k                 3
+construct matching M in B(Qn ) as {xi yi }i=1 ∪ x1i zi i=1 ∪ {yk+i zk+i }i=1 .
+    Suppose for contradiction that there exists a Hamilton path Z, that must be between vertices of
+opposite parity, that extends M using only edges from Qn . Let LMn be the subgraph of Qn induced
+by vertices Low0 ∪ Low1 ∪ Mid0 ∪ Mid1 . The edges (E(Z) \ M ) ∩ E(LMn ) form a collection P
+of vertex-disjoint paths covering LMn , with endpoints in (V (M ) ∪ {u, v}) ∩ V (LMn ). Also Low0
+contains the same number of even vertices as Low1 of odd vertices and vice-versa. That also
+applies to Mid0 and Mid1 and Proposition 1 yields
+                                                                   (⋆)
+                                X                    X z    }|   {
+                                          χ(u) = 0 =   χ(u) + χ(v) .                               (3)
+                                                   (1)
+                             u∈V (LMn )                  Zuv ∈P
+
+
+   Each path endpoint contributes either χ(u) or 2χ(u) to (⋆), the latter occurring for single-
+vertex paths. By construction of M , we have at least 2k + 3 vertices of parity −p and at most k + 1
+vertices of parity p among the endpoints, implying
+
+                                          X
+                                                χ(u) + χ(v) > 0,
+                                       Zuv ∈P
+
+contradicting (3).
+
+
+B    Computer verification
+We establish the validity of Conjecture 2 for dimensions 2 ≤ n ≤ 5, along with Conjecture 5 for n =
+5 through computer-assisted verification techniques inspired by the MathCheck methodology [4].
+The source code for this section is available at https://gitlab.com/jirka.fink/matching_of_
+five_directions.
+    Our verification strategy centers on systematically enumerating feasible matchings of Qn and
+verifying the existence of Hamilton paths between vertices of differing parity. To accomplish this,
+we develop a Sat representation of the matching constraints and employ the CaDiCaL solver [3]
+for matching generation. After each matching is generated and verified, we exclude both it and its
+isomorphic variants from subsequent iterations, ensuring comprehensive coverage of the solution
+space.
+    Given the vast number of possible matchings, we optimize our analysis by focusing primarily
+on maximal matchings. This approach is justified since any non-maximal matching extends to
+a maximal configuration and inherits its path extension properties, except of the matchings sub-
+ject to the C-conditions, that will be handled separately for Conjecture 5. For Conjecture 2, we
+further optimize by forcing vertex 0 to remain uncovered during maximal matching generation,
+as the conjecture requires at least one avoided vertex.
+    The Sat formulation for matching identification in dimension n introduces variables xe for
+each edge e ∈ E(Qn ), indicating membership in matching M . To enforce matching properties, we
+specify that no two incident edges can be selected:
+16
+
+                                              ^
+                                                          ¬xe ∨ ¬xf .
+                                          e,f ∈E(Qn )
+                                        e incident to f
+
+    We introduce vertex coverage variables xv for each v ∈ V (Qn ), linking them to incident edge
+selection:                                             
+                                    ^              _              
+                                                                    ∨ ¬xv .
+                                                                xe 
+                                             
+                                             
+                                 v∈V (Qn )       e∈E(Qn )
+                                              e incident to v
+
+    We also add there the opposite implication, that is, presence of an edge uv implies that the ver-
+tices u and v are covered:        ^
+                                        (¬xuv ∨ xu ) ∧ (¬xuv ∨ xv ) .
+                               uv∈E(Qn )
+
+     To ensure the maximality condition at least one vertex in each adjacent pair must be covered:
+                                            ^
+                                                    xu ∨ xv .
+                                           u,v∈V (Qn )
+                                         u adjacent to v
+
+  To exclude matchings already verified, we introduce a set F, representing all previously verified
+matchings.                                       _
+                                   ∀F ∈ F :             xe .
+                                                    e∈E(Qn )\F
+
+   This means that the newly generated matching has to contain at least one edge that is not
+present in F, ∀F ∈ F. Here as previously specified we also include in the set F all isomorphic
+matchings to the newly generated matching F .
+   For Conjecture 2, we explicitly avoid the vertex 0:
+
+                                                   ¬x0 .
+
+    The verification process systematically examines terminal vertex pairs for each maximal match-
+ing. For Conjecture 2, we pair vertex 0 with each odd vertex, while for Conjecture 5, we consider
+all opposite-parity vertex pairs not subject to C-conditions. This direct verification establishes
+the following observation:
+
+Observation 16. Conjecture 2 holds for 2 ≤ d ≤ 5.
+
+    For Conjecture 5, we must also verify matchings M and terminal pairs u, v where adding
+a single edge e would cause M ∪ {e} to violate C-conditions. We identify such matchings through
+a two-step process: First, we start with maximal matchings that violate C-conditions and iter-
+atively remove edges until reaching minimal violating configurations. Then, from each minimal
+configuration, we remove one edge at a time to obtain matchings that are exactly one edge away
+from violating C-conditions. For these matchings, we verify the existence of two distinct Hamil-
+ton paths between each valid terminal pair. This approach completes our proof for n = 5, as
+any matching not violating C-conditions either extends to a C-condition-free maximal matching
+or extends to a matching that is one edge away from violating C-conditions. These verifications
+establish:
+
+Observation 17. Conjecture 5 holds for d = 5.
+
+   Hamilton paths are found using the backtracking algorithm from [12]. For finding a second path,
+we iteratively force the usage of edges absent from the first path during backtracking initialization
+until a second valid path is discovered.
+                                                                                                17
+
+    Conjecture 5 fails for n = 4, as we encounter the obstructions previously identified by Gregor,
+Novotný and Škrekovski [14]. Additionally, we discovered a novel obstruction specific to maximal
+(but not perfect) matchings, illustrated in Figure 1.
+    Initial verification attempts on an Apple MacBook M3 Max proved intractable since the gen-
+eration of maximal matchings did not finish even after 3 days. We achieved significant speedup by
+partitioning the search space: since maximal matchings either cover all vertices or avoid specific
+non-adjacent vertex combinations, we generated these combinations up to isomorphism. There
+were 159 such combinations, and we verified them in parallel.
+    The optimized algorithm reduced maximal matching generation for n = 5 to 6 hours, produc-
+ing 16,459 non-isomorphic and 59,457,409 isomorphic matchings, with Hamilton path verification
+completing in 2 minutes. A specialized handcrafted algorithm, inspired by [12], further reduced
+matching generation time to 3 minutes. The subsequent verification of the cases one edge away
+from violating C-conditions takes 20 minutes. For n = 4, complete verification executes in under
+10 seconds.
+

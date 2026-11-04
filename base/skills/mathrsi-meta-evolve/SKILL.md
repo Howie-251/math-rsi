@@ -81,9 +81,9 @@ description: "Evolve an existing MathRSI version from real mathematical research
 
 取证细节与 DD 转折见 [evidence-and-transfer](references/evidence-and-transfer.md)。它是如何判断的实例，不是每个领域都要使用图构造、SAT 或 Lean。
 
-## 2. 对照现有 v1，决定每项经验放在哪一层
+## 2. 对照当前版本，决定每项经验放在哪一层
 
-先读实际受影响的 SKILL、引用资源、调用者和消费方，再决定增补什么。v1 已有成熟动作时，复用它、补具体案例或修真实衔接；不要复制同义技能另起主干。一次读到好经验，不等于现有 base 缺这一能力。
+先读实际受影响的 SKILL、引用资源、调用者和消费方，再决定增补什么。当前版本已有成熟动作时，复用它、补具体案例或修真实衔接；不要复制同义技能另起主干。一次读到好经验，不等于现有 base 缺这一能力。
 
 | 归属 | 判断依据 | 实际处理 |
 |---|---|---|
@@ -107,6 +107,8 @@ description: "Evolve an existing MathRSI version from real mathematical research
 ~~~
 
 这些信息放入同一维护记录即可，不强制一项一份 JSON 或评分。删除无效步骤也是改进；需要完整新领域能力时可以新增实质技能，但新技能应有独立任务和真实输入输出，不按动词拆空目录。
+
+多题吸收时可参考[v3的实际证据与返回](references/v3-evidence.md)：工作集与全域不同、标记在复合变换中丢失、有限秩机制与局部正证书的不同用途、Lean显式参数边界。这些实例帮助定位现行caller的具体缺口，不要求未来每轮都新增四条规则或复制本轮插件。
 
 ## 3. 形成可执行修改，再按已有分工实现
 

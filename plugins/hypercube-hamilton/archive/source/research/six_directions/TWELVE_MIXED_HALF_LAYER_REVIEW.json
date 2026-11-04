@@ -1,0 +1,177 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "ordinary_mixed_omission_iff_half_layer_obstruction_bad_column_rank64_kernel_dimension8128_and_complete_independent_forest_basis_verified",
+  "summary": "Exact ordinary-cycle classification PASS for H={0,1,3,31},U={0,31}: every arbitrary complete matching F extends iff R is not a subset of F. Analytic bad restriction rank64 and dimension8128 kernel/separator argument plus8128 legal independent forest rows verified. No opening-edge/Q6 decrement/full12/P6 conclusion.",
+  "reviewer_agent_id": "/root/higher_q5_nearbalanced_review",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_override_source": "Explicit user-selected model/effort route relayed by parent overrides ARIS defaults",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T16:22:03.654793+00:00",
+  "trace_path": "TWELVE_MIXED_HALF_LAYER_REVIEW.md",
+  "audited_input_hashes": {
+    "TWELVE_MIXED_HALF_LAYER_MANIFEST.json": "c580e993cf98f3a0bc4e7890a8ea6a6cd1eae5560e5ce246ffd2d50ab725dc1b",
+    "TWELVE_MIXED_HALF_LAYER_PROOF.md": "ab1efb5e28860e0407ed54c99e4a8d607b29b999cb3be4cb209264c55887aa34",
+    "TWELVE_MIXED_HALF_LAYER_freeze.py": "c07dbf3ec0daec6df53e6cee54570bc02ce2ca6415930709933c766fa5167c70",
+    "TWELVE_ROOT_STAR_MIXED_probe_prepare.py": "d9cefdc998760a6009b1235ae0714cc3d76adeb7574bb6a4ae1830190bbb9c92",
+    "TWELVE_ROOT_STAR_MIXED_probe_search.cpp": "67bd7c041a647ca9c13c41f2b7d8e8db8e3fcc55850cc8be995f0ad15e88757a",
+    "A10_ORBIT3_UNIVERSAL_PRIMARY_SOURCE.md": "f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112",
+    "TWELVE_ROOT_STAR_MIXED_probe_forests.bin": "83e3a25170c1442b4c46eda9636040e5e74a957d066c41f061d7d42c33f86676",
+    "TWELVE_ROOT_STAR_MIXED_probe_pairs.bin": "75e8bf9a8ae0d859ab524b17ebf9fd57781a57a1e60a9da2cfc96cf5fec77649",
+    "TWELVE_ROOT_STAR_MIXED_probe_columns.bin": "ab6213b7c611c503161da51dae4c16c6fd844090090777c1e12a07eb66e059ad",
+    "TWELVE_ROOT_STAR_MIXED_probe_matrix.bin": "d47b69bdf12ecdcfb3ed4c5736633eb8cdfe39c1af627a6ee75f388856f1afe0",
+    "TWELVE_ROOT_STAR_MIXED_probe_pivots.bin": "2f8354121983b2a46c07fe0a8297ba4f1b2c8262f0cf43cf26da2c705bb40e20",
+    "TWELVE_ROOT_STAR_MIXED_probe_combos.bin": "0f27a6e75988a267250807ff568e46d58b14a16e62bd43ed3a5022ae6f911ae3",
+    "TWELVE_ROOT_STAR_MIXED_probe_config.txt": "3dc17339c2dee2036ebf73c407e2ed9b0fed4f2740e26e9bb78cc6ddb4c26ea8",
+    "TWELVE_ROOT_STAR_MIXED_probe.json": "0e4d612d8d7167219ec792207e133c025f2df06a73caf6dabc51c83f2b2612f1"
+  },
+  "checker_artifact_hashes": {
+    "TWELVE_MIXED_HALF_LAYER_REVIEW_check.cpp": "4f556ea6c623f9099353b6bc858d1be5c1bdfe43ef205810ce87a77132ce1f23",
+    "TWELVE_MIXED_HALF_LAYER_REVIEW_check.json": "3885f691196f9072c79b4650cf9744e62db652de0b817841de0b50a0ab6862e6",
+    "TWELVE_MIXED_HALF_LAYER_REVIEW_math.py": "f267b31dc1239f393ebf1b2aad9c95d302924a2be76d46c8f6ce3f6cfae5e43d",
+    "TWELVE_MIXED_HALF_LAYER_REVIEW_math.json": "89d6162f6b78d35a9a4b6afeaa1c60f98e907106cc6bff5edbcbec2f15f37c8b"
+  },
+  "report_hash": "886d09ba0daaccd589bc3f7704e1fb2b1069369af62ddf22ab5a6f3a674c5ac0",
+  "primary_source": {
+    "url": "https://pure.tue.nl/ws/portalfiles/portal/99596886/1211.1506.pdf",
+    "location": "Abstract PDFpage1; Theorem3.4/Corollary3.5 PDFpage9",
+    "domain": "All perfect matchings of complete graph for every even t>=2",
+    "field": "GF(2)",
+    "substitutions": {
+      "rank_H28": 8192,
+      "rank_H14": 64
+    },
+    "direct_primary_inspection_this_audit_series": true,
+    "Gregor_Novotny_Skrekovski_half_layer_result_imported": false
+  },
+  "details": {
+    "issues": [],
+    "mathematical_obligations_closed": 12,
+    "exact_H": [
+      0,
+      1,
+      3,
+      31
+    ],
+    "exact_U": [
+      0,
+      31
+    ],
+    "exact_R": [
+      [
+        4,
+        6
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        21,
+        23
+      ],
+      [
+        25,
+        27
+      ],
+      [
+        28,
+        30
+      ]
+    ],
+    "ordinary_cycle_iff_classification_proved": true,
+    "exact_claim": "For every perfect matching F of the complete graph on K=Q5 minus H, a simple cycle on Q5 minus U containing F and adding only cube edges exists iff R is not a subset of F.",
+    "arbitrary_long_and_same_parity_required_edges_allowed": true,
+    "all_marked_data_common_automorphism_transport": true,
+    "necessity_half_layer_degree_difference": 2,
+    "retained_A_odd_short_degree": 9,
+    "retained_A_even_short_degree": 7,
+    "bad_columns_are_all_matchings_containing_entire_R": true,
+    "ambient_terminal_count": 28,
+    "ambient_row_space_rank": 8192,
+    "bad_residual_terminal_count": 14,
+    "bad_column_restriction_rank64_proved_analytically": true,
+    "restriction_compression_covers_all_rows_and_bad_columns": true,
+    "every_H14_row_lifts_to_actual_H28_row": true,
+    "kernel_inside_actual_row_space": true,
+    "kernel_dimension8128_proved": true,
+    "every_selected_complete_row_annihilates_all_bad_columns": true,
+    "selected_forest_rows_form_full_kernel_basis": true,
+    "explicit_separator_for_every_F_missing_an_R_edge": true,
+    "separator_matching_not_assumed_short": true,
+    "binary_basis_evaluation_implies_one_single_forest_solution": true,
+    "legal_forests_verified": 8128,
+    "derived_endpoint_pairings_verified": 8128,
+    "arbitrary_matching_columns_verified": 8192,
+    "matrix_dimensions": [
+      8128,
+      8192
+    ],
+    "connectivity_bits_recomputed": 66584576,
+    "independent_rectangular_rank_GF2": 8128,
+    "all_forest_half_layer_degree_identities_checked": true,
+    "selected_R_pair_counts_observed": [
+      1,
+      6
+    ],
+    "producer_pivots_or_combos_used_for_rank": false,
+    "producer_search_exhaustiveness_or_examined_counts_trusted": false,
+    "small_model_restriction_compression_entries": 2040,
+    "small_model_row_lifts": 22,
+    "small_model_separator_constructions": 552,
+    "small_model_cases": [
+      {
+        "terminals": 6,
+        "fixed_R_pairs": 1,
+        "bad_restriction_rank": 2,
+        "expected_rank": 2
+      },
+      {
+        "terminals": 8,
+        "fixed_R_pairs": 1,
+        "bad_restriction_rank": 4,
+        "expected_rank": 4
+      },
+      {
+        "terminals": 8,
+        "fixed_R_pairs": 2,
+        "bad_restriction_rank": 2,
+        "expected_rank": 2
+      },
+      {
+        "terminals": 8,
+        "fixed_R_pairs": 3,
+        "bad_restriction_rank": 1,
+        "expected_rank": 1
+      }
+    ],
+    "frozen_hashes_rechecked_before_and_after": 13,
+    "ordinary_cycle_only": true,
+    "required_opening_edge3_7_guaranteed": false,
+    "opening_edge_theorem_proved": false,
+    "force_edge_rank8031_probe_accepted_as_classification": false,
+    "actual_Q6_application_audited": false,
+    "new_Q6_covered_records_accepted": 0,
+    "existing235_covered_target_domain_unchanged": true,
+    "full_twelve_hole_proved": false,
+    "full_P6_proved": false,
+    "production_or_main_state_modified": false
+  },
+  "ordinary_cycle_iff_classification_proved": true,
+  "opening_edge_theorem_proved": false,
+  "full_twelve_hole_proved": false,
+  "full_P6_proved": false,
+  "scope": "Exact local ordinary30-cycle iff classification for the single specified mixed-omission H/U/R geometry and common cube images. No required3-7/opening edge result, actual Q6 application, decrement to235, full12 or P6 conclusion."
+}

@@ -1,0 +1,272 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "eight_orbit_claim_complete_relative_to_explicit_Q4_imports",
+  "summary": "All 25 obligations close for the specified eight singleton-avoided-face Q5 T15 orbits relative to exact Q4 table/A4/T15 imports. Independent exhaustive root accounting and every positive certificate, input, intersection and actual 30-cycle join pass. Full T15/P6 remain unproved.",
+  "proof_path": "T15_SINGLE_AVOIDED_FACE_CLOSURE.md",
+  "trace_path": "T15_SINGLE_AVOIDED_FACE_REVIEW.md",
+  "checker_path": "t15_single_avoided_face_independent_check.py",
+  "verification_path": "t15_single_avoided_face_independent_check.json",
+  "reviewer_task": "/root/t15_single_face_full_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "audited_input_hashes": {
+    "T15_SINGLE_AVOIDED_FACE_CLOSURE.md": "sha256:3c85fea859c2471bfbe756294ecadb7d74eb8bb3dc31a61c7adfbb871925eae4",
+    "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+    "q4_distance1_avoided_table_verification.json": "sha256:aca8f92bef382fcc030b6ba897f1d93da6bcf283e96cad12cd90a1082bf2b7e8",
+    "q4_distance3_avoided_table_verification.json": "sha256:a947459573bacb8560080942f941786ec16d79c1d18e42742e4fa431759223de",
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "Q4_T15_CLASSIFICATION.md": "sha256:bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc",
+    "t15_single_crossing_spectrum_inputs.json": "sha256:1e3dae08b1fa3a89186a02a6c9091668460a8e3a4939ccb6aa873a9d632c94b8",
+    "t15_single_crossing_spectra.json": "sha256:8e81780c87d836990da0322e6f46dd46138d6ec843e0ff68d04995d480a50f09",
+    "t15_single_avoided_face_independent_check.py": "sha256:4b624ee216912c9759c80ea61137e7a602da04fbc073d889e0626cdc2ddef59e"
+  },
+  "audit_artifact_hashes": {
+    "T15_SINGLE_AVOIDED_FACE_REVIEW.md": "sha256:1265631488f1ef7b8c6d3b6c95d218135ba388c4af168f38c4afba81897e7b2e",
+    "t15_single_avoided_face_independent_check.py": "sha256:4b624ee216912c9759c80ea61137e7a602da04fbc073d889e0626cdc2ddef59e",
+    "t15_single_avoided_face_independent_check.json": "sha256:432a5890e45dc8a099340b7a2b0b1d9e0666c12430ac0620235d3d74a06f2305"
+  },
+  "generated_at": "2026-11-01T09:34:47.588655+00:00",
+  "declared_imports": [
+    {
+      "name": "Exact previously audited Q4 opposite-hole negative sets and positive complements",
+      "files": [
+        "q4_distance1_avoided_table_verification.json",
+        "q4_distance3_avoided_table_verification.json"
+      ],
+      "newly_reproved": false,
+      "fresh_check": "All 2,027,025 rooted states forward-tested at all 15,135,120 applicable odd targets against source exception sets; inverse equivalence exact"
+    },
+    {
+      "name": "Q4 A4_4 arbitrary complete-graph matching extension",
+      "file": "Q4_CORE_AND_A4_SPLIT.md",
+      "newly_reproved": false,
+      "application_hypotheses": "Exactly 1 even and 3 odd holes, omitted x odd, matching allowed arbitrary edges"
+    },
+    {
+      "name": "Exact Q4 T15 classification",
+      "file": "Q4_T15_CLASSIFICATION.md",
+      "newly_reproved": false,
+      "application_hypotheses": "Exactly 1 even and 5 odd holes, omitted x,z distinct odd holes, at least one nonadjacent to minority"
+    }
+  ],
+  "details": {
+    "theorems_audited": 1,
+    "micro_obligations_closed": 25,
+    "issues": [],
+    "obligation_ids": [
+      "MC01",
+      "MC02",
+      "MC03",
+      "MC04",
+      "MC05",
+      "MC06",
+      "MC07",
+      "MC08",
+      "MC09",
+      "MC10",
+      "MC11",
+      "MC12",
+      "MC13",
+      "MC14",
+      "MC15",
+      "MC16",
+      "MC17",
+      "MC18",
+      "MC19",
+      "MC20",
+      "MC21",
+      "MC22",
+      "MC23",
+      "MC24",
+      "MC25"
+    ],
+    "finite_verification": "PASS",
+    "producer_modules_imported": false,
+    "producer_accounting_json_used": false,
+    "full_root_states": 2027025,
+    "forward_target_comparisons": 15135120,
+    "positive_witnesses_checked": 34514,
+    "complete_input_count": 4200,
+    "all_pair_intersections": 396900,
+    "actual_30cycle_joins_checked": 396900,
+    "pair_statistics": [
+      {
+        "orbit": 13,
+        "A": 105,
+        "B": 945,
+        "pairs": 99225,
+        "min_intersection": 7,
+        "histogram": {
+          "7": 18,
+          "8": 423,
+          "9": 1224,
+          "10": 4293,
+          "11": 10260,
+          "12": 20043,
+          "13": 25524,
+          "14": 24660,
+          "15": 12780
+        }
+      },
+      {
+        "orbit": 14,
+        "A": 105,
+        "B": 945,
+        "pairs": 99225,
+        "min_intersection": 5,
+        "histogram": {
+          "5": 12,
+          "6": 36,
+          "7": 126,
+          "8": 645,
+          "9": 1932,
+          "10": 4167,
+          "11": 8268,
+          "12": 15387,
+          "13": 18204,
+          "14": 21588,
+          "15": 19980,
+          "16": 8880
+        }
+      },
+      {
+        "orbit": 31,
+        "A": 105,
+        "B": 945,
+        "pairs": 99225,
+        "min_intersection": 9,
+        "histogram": {
+          "9": 8,
+          "10": 214,
+          "11": 612,
+          "12": 4508,
+          "13": 12629,
+          "14": 26964,
+          "15": 35990,
+          "16": 18300
+        }
+      },
+      {
+        "orbit": 35,
+        "A": 105,
+        "B": 945,
+        "pairs": 99225,
+        "min_intersection": 6,
+        "histogram": {
+          "6": 4,
+          "7": 8,
+          "8": 44,
+          "9": 396,
+          "10": 1188,
+          "11": 4174,
+          "12": 10773,
+          "13": 16640,
+          "14": 25642,
+          "15": 27996,
+          "16": 12360
+        }
+      }
+    ],
+    "covered_orbit_ids": [
+      13,
+      14,
+      19,
+      31,
+      32,
+      35,
+      37,
+      38
+    ],
+    "partial_stall_counts_by_c": {
+      "13": {
+        "1": 105,
+        "3": 105,
+        "5": 21,
+        "7": 1,
+        "9": 0,
+        "11": 0
+      },
+      "14": {
+        "1": 105,
+        "3": 105,
+        "5": 21,
+        "7": 1,
+        "9": 0,
+        "11": 0
+      },
+      "19": {
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "7": 0,
+        "9": 0,
+        "11": 0
+      },
+      "31": {
+        "1": 105,
+        "3": 105,
+        "5": 21,
+        "7": 1,
+        "9": 0,
+        "11": 0
+      },
+      "32": {
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "7": 0,
+        "9": 0,
+        "11": 0
+      },
+      "35": {
+        "1": 105,
+        "3": 105,
+        "5": 21,
+        "7": 1,
+        "9": 0,
+        "11": 0
+      },
+      "37": {
+        "1": 105,
+        "3": 105,
+        "5": 21,
+        "7": 1,
+        "9": 0,
+        "11": 0
+      },
+      "38": {
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "7": 0,
+        "9": 0,
+        "11": 0
+      }
+    },
+    "counterexample_pass_executed": true,
+    "counterexamples_found": [],
+    "boundary_checks": [
+      "d=z unavailable",
+      "temporary isolated A endpoint",
+      "occupied c=3",
+      "occupied c=1 excluded",
+      "internally covered safe B endpoint",
+      "arbitrary long/same-parity matching edges",
+      "compression endpoint disjointness",
+      "h_B cycle disjointness",
+      "common optional edge support",
+      "union-of-witness existential quantifiers",
+      "full matching coverage"
+    ],
+    "main_state_files_edited": false,
+    "full_T15_proved": false,
+    "full_P6_proved": false,
+    "Q6_parent_coverage_recomputed": false
+  },
+  "reviewer_reasoning": "high",
+  "reviewer_fork_turns": "none",
+  "reviewer_configuration_source": "explicit user selection, confirmed by parent spawn invocation; not inherited"
+}

@@ -1,0 +1,136 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "scoped_orbit_complete_relative_to_explicit_imports",
+  "summary": "Fourth A8 residual orbit proved: four-cut coverage necessity plus independently reconstructed exact 200475-matching remainder with all positive 31-cycle certificates. Full A8/P6/Q6 remain open.",
+  "reviewer_agent_id": "/root/a8_bridge_inputs_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T12:57:26.851824+00:00",
+  "audited_input_hashes": {
+    "A8_ORBIT4_FULL_CLOSURE.md": "8dfb5f3ccd45dadcc4cc3467369616bce05eab94b0c91a132c4ddc4442ed6387",
+    "A8_orbit4_joint_bad_enumerate.py": "da9b0240c6b54f088513d308a052b471fb4063bc55b307c2e282b584a647738c",
+    "A8_orbit4_joint_bad_enumeration.json": "6f406b6ba896d84db5b34b27634dead7a6a9ba6109cf0d9e0b34026edd00a19c",
+    "verify_A8_orbit4_joint_bad.py": "e4a3a7f3da130a15dc26ce25f3df787a9fd6fb9b4852324429000ee3130ff89c",
+    "A8_orbit4_joint_bad_verification.json": "2d1c995d132ab9ae12e6354c936617622071705925263b7865c1a49a482528be",
+    "A8_orbit4_joint_bad_inputs.bin": "ca55498bf1630df02620d1f468127c09d438372d8c45e13aed84f8a5547f18cc",
+    "A8_orbit4_joint_bad_certificates.bin": "76e11cbd5f1c2bc9961b140d8a72ee2fee1e6d0200f14fcc1d9249a37630e159",
+    "A8_DOUBLE_BRIDGE_SUFFICIENT.md": "a42004652fb586ec3971b02c7f932ce337f3bd8476cea0da5755a3b4d2b287f3",
+    "A8_THREE_BRIDGE_SUFFICIENT.md": "b369c9d167264b5a6478fe2277f9823e6c5a0124824fdc2130decbc9b9e46cf9",
+    "A8_BRIDGE_INPUTS_REVIEW.md": "cb40069fc1493c748a3f5789d11544165f86e436cc7c94e26344b24926831ae6",
+    "A8_BRIDGE_INPUTS_REVIEW.json": "6d42f7d3c7e722d8f512c32f046520826a7645fdffe3ca471ee0b20f7bcf4a86",
+    "A8_Q4_T63_CLASSIFICATION.md": "6d99eb27dd3a1c7396a6ae930959871f9124dd27c12d00ace8a999d0cf09c597",
+    "Q4_T15_CLASSIFICATION.md": "bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc",
+    "Q4_GENERAL_AUGMENTATION.md": "a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b"
+  },
+  "exact_scope": {
+    "cube": "Q5",
+    "holes": [
+      0,
+      1,
+      2,
+      4,
+      15,
+      23,
+      27,
+      29
+    ],
+    "omitted_vertex": 0,
+    "required_matching": "arbitrary 12-edge matching on the other 24 vertices, including long and same-parity edges",
+    "coordinate_permutation_orbit_size": 30
+  },
+  "scopes": [
+    {
+      "id": "four_actual_marked_Q4_templates",
+      "verdict": "PASS"
+    },
+    {
+      "id": "restricted_family_coverage_necessity",
+      "verdict": "PASS",
+      "typed_spectrum_assumed": false,
+      "restriction_failure_implies_bridge_success": true,
+      "converse_needed": false
+    },
+    {
+      "id": "16_disjoint_matching_domains",
+      "verdict": "PASS",
+      "fixed_conflict_masks": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "odd_component_empty_masks": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "nonempty_counts": {
+        "3": 2025,
+        "7": 99225,
+        "11": 99225
+      }
+    },
+    {
+      "id": "exact_matching_set_and_positive_certificates",
+      "verdict": "PASS",
+      "matching_count": 200475,
+      "positive_31cycles": 200475
+    },
+    {
+      "id": "full_fourth_residual_orbit",
+      "verdict": "PASS",
+      "relative_imports": [
+        "GQ4-avoid",
+        "Q4 T15 classification",
+        "Q4 T63 classification",
+        "audited two-bridge sufficient criterion",
+        "audited three-bridge sufficient criterion"
+      ]
+    },
+    {
+      "id": "remaining_A8_accounting",
+      "verdict": "PARTIAL",
+      "previous_geometries": 100,
+      "removed_geometries": 30,
+      "remaining_geometries": 70,
+      "remaining_orbits": 3
+    },
+    {
+      "id": "full_A8",
+      "verdict": "OPEN"
+    },
+    {
+      "id": "full_P6",
+      "verdict": "OPEN"
+    },
+    {
+      "id": "original_full_Q6",
+      "verdict": "OPEN"
+    }
+  ],
+  "evidence": {
+    "checker": "A8_ORBIT4_FULL_REVIEW_check.py",
+    "checker_sha256": "3a5a733ce030d9048892a3f53c559fb0d8fba3d107bcf64d6ebf845e97e6a8a0",
+    "output": "A8_ORBIT4_FULL_REVIEW_check.json",
+    "report": "A8_ORBIT4_FULL_REVIEW.md",
+    "report_sha256": "3b022924c7a320fa7314b3febb630220ccb7998a9bc28d630b7e7a29a09ef2a3",
+    "no_producer_or_existing_verifier_imported": true
+  },
+  "details": {
+    "issues": [],
+    "new_mathematical_gaps": 0,
+    "counterexamples_found": 0,
+    "production_files_modified": false,
+    "main_state_modified": false,
+    "transitive_imports_fully_reaudited": false
+  }
+}

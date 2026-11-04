@@ -1,0 +1,292 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "conditional_reduction_complete_modulo_explicit_imports",
+  "summary": "A6 implies all eight-hole free-target endpoints; nine-cut covered transfers and exact R8-covered residual verified. A6, R8-covered, full eight-hole P6 and full P6 are not proved.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T07:59:06.445931+00:00",
+  "audited_input_hashes": {
+    "EIGHT_HOLE_CONDITIONAL_REDUCTION_DRAFT.md": "sha256:39a5632be39ab0ac6a6ea5e1ee3125ad2cb049edf72f819972e21b31eee1d88b",
+    "eight_hole_free_cut_census.cpp": "sha256:a15d17463090e1551bb028a6241bec45a669fd54c5bb80df50be5c0edfd20228",
+    "eight_hole_conditional_reduction_check.json": "sha256:d97d5e5e50fbe8336c96bef91fcc97109128cbcc902e65f3941127285d84157e"
+  },
+  "imported_dependency_hashes": {
+    "SIX_HOLE_CLOSED.md": "sha256:8a7078847343067f21a43394537e184930e99e93692f854900f95f4ce74c09d6",
+    "CANONICAL_A4_CLOSURE.md": "sha256:1da0c3e81a36cae53e727fad20878096c32ae442ceaa7277aa986aef5e60e271",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "SIX_HOLE_MIXED_AND_GEOMETRY.md": "sha256:9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f"
+  },
+  "imported_dependency_scope": "Statements and applications checked; no recursive recertification of imported proofs, published theorems, or prior finite certificates.",
+  "new_assumption": "Q5 A6 for arbitrary complete-graph matchings, not only short or bipartite ones; four/two parity holes and prescribed majority-hole avoidance.",
+  "approved_claims": [
+    "A6 => full Q6 eight-hole free-target endpoint theorem",
+    "A6 => nine-good-cut covered endpoint cases",
+    "A6 => (full eight-hole P6 iff R8-covered)"
+  ],
+  "not_proved": [
+    "A6",
+    "R8-covered",
+    "A6 alone => full eight-hole P6",
+    "full P6"
+  ],
+  "trace_path": "EIGHT_HOLE_CONDITIONAL_REDUCTION_REVIEW.md",
+  "checker_artifact_hashes": {
+    "EIGHT_HOLE_CONDITIONAL_REDUCTION_REVIEW_check.cpp": "sha256:e9a2e4f1e827847f31eec6aef2305c1bc472b6a1cfadd336f6c5b53712ed9228",
+    "EIGHT_HOLE_CONDITIONAL_REDUCTION_REVIEW_check.py": "sha256:6ccbe7de839429bfea33a6aece873d38839feb0472e4c64a70644a91e9edc782",
+    "EIGHT_HOLE_CONDITIONAL_REDUCTION_REVIEW_check.json": "sha256:478a962c22cad25b7e839aea2cec09e425db8b077a43f270ba51b9215fc01407"
+  },
+  "details": {
+    "issues": [],
+    "local_fatal_or_critical_issues": 0,
+    "deterministic_check_status": "PASS",
+    "compiler": "D:\\mingw64\\bin\\g++.exe -O3 -std=c++17",
+    "python": "D:\\anaconda\\python.exe",
+    "free_geometries_checked": 2588364,
+    "free_census": [
+      {
+        "target": 7,
+        "total": 1300674,
+        "bad": 0,
+        "exception_only_geometries": 31,
+        "exception_cuts": 10368,
+        "number_of_good_cuts_histogram": [
+          0,
+          9723,
+          81351,
+          349560,
+          518103,
+          301656,
+          40281
+        ],
+        "cut_row_histogram": [
+          [
+            0,
+            25386,
+            278856,
+            765666,
+            540540
+          ],
+          [
+            0,
+            223950,
+            1129131,
+            1438380,
+            464904
+          ],
+          [
+            0,
+            472761,
+            1113675,
+            662832,
+            98148
+          ],
+          [
+            0,
+            244530,
+            267462,
+            73125,
+            4698
+          ]
+        ]
+      },
+      {
+        "target": 31,
+        "total": 1287690,
+        "bad": 0,
+        "exception_only_geometries": 30,
+        "exception_cuts": 16920,
+        "number_of_good_cuts_histogram": [
+          0,
+          9450,
+          79350,
+          342450,
+          511120,
+          302030,
+          43290
+        ],
+        "cut_row_histogram": [
+          [
+            0,
+            23020,
+            254520,
+            703890,
+            500500
+          ],
+          [
+            0,
+            217430,
+            1099120,
+            1402980,
+            454080
+          ],
+          [
+            0,
+            489990,
+            1150640,
+            682350,
+            100640
+          ],
+          [
+            0,
+            270270,
+            292500,
+            79170,
+            5040
+          ]
+        ]
+      }
+    ],
+    "good_rows": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "bad_rows": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "covered_residual_witness": {
+      "valid_short_matching": true,
+      "exact_holes": true,
+      "target_covered": true,
+      "nonroot_independent": true,
+      "all_cuts_bad": true,
+      "directions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cut_rows": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "covered_residual_nonempty_even_with_all_six_directions": true,
+    "root_bridge_boundary": "Section 6 passes; 61 enumerated geometries have no ordinary good cut, so the boundary construction is necessary for this census route.",
+    "semantic_checks": [
+      "local endpoint hole replacement and omission",
+      "balanced circle corollary",
+      "root-preserving six-hole augmentation",
+      "five-direction c=0 hypotheses",
+      "all nine cut rows and both root faces",
+      "covered-target isolated endpoint",
+      "terminal and nonterminal bridge mirrors",
+      "single-conflict matching repair and expansion",
+      "root bridge omission/restoration",
+      "exhaustive geometry normalization",
+      "exact residual complement and logical equivalence"
+    ],
+    "open_proof_obligations": [
+      "A6 assumed",
+      "R8-covered unproved",
+      "10--18-hole levels outside scope"
+    ],
+    "proof_or_main_state_modified": false
+  }
+}

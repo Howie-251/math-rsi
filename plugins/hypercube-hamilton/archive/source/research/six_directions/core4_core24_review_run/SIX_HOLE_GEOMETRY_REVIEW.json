@@ -1,0 +1,267 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "conditional_proofs_complete",
+  "summary": "K4/S8/S7 are sound modulo the explicitly unproved A4 and named imported results; G6 is a complete unconditional geometry classification. No claim that A4 or P6 is proved.",
+  "executor_model": "gpt-6.1-sol",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_override": "User-requested GPT-6.1-sol high overrides skill Astra ultra default.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_agent": "/root/six_hole_geometry_sol_high_audit",
+  "generated_at": "2026-11-01T05:58:42.814059+00:00",
+  "audited_input_hashes": {
+    "SIX_HOLE_MIXED_AND_GEOMETRY.md": "sha256:9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "AVOIDED_VERTEX_TRANSFER.md": "sha256:f44623960b51f85549ea15b6b7c8262222c097f56c37ae10c05b77b6dd8776a7",
+    "DISTANCE_TWO_ALL_TARGETS.md": "sha256:41b5514d63a43bd0e1e1fd47453532f8264dccf23f454b56623c74a82e5654a6",
+    "FOUR_HOLE_FULL.md": "sha256:a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+    "SIX_HOLE_FOUR_AUX_REDUCTION.md": "sha256:3b9e7f667c7661358f6668b2e0ae5c60e59fc156944e80dd0d53fe74c3672d49",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "six_hole_geometry_census.py": "sha256:72f925af18b8c519187e99ee80ffda9e54f333b51d07644387541e354c44a7ec",
+    "six_hole_geometry_census.json": "sha256:c24b32046c0be1b35bf768e832455ea7e12837e75d80b61156a11e47b68d4786",
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "input_scope": {
+    "main": "entire SIX_HOLE_MIXED_AND_GEOMETRY.md",
+    "dependencies": "Read listed local dependency documents; check N10/N11/N12/E2/Z18/A4/S4 application hypotheses. Existing imported theorem chains are not recursively certified anew. paper.txt read Theorem 8 and C1-C3 passages.",
+    "census": "Read script and saved JSON; independent in-memory enumeration without rewriting either."
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations": [
+      {
+        "id": "K4-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "F arbitrary complete-graph matching; a even by parity-changing translation; no bipartiteness assumption is used."
+      },
+      {
+        "id": "K4-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "Free y: adding ay leaves an opposite-parity two-hole matching; N10 root at one remaining hole and short-neighbor target has parity of the other. Closing and deleting ay preserves all F."
+      },
+      {
+        "id": "K4-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "Covered y: replace yk by ka. Hole set replaces a by y independently of parity(k), hence one even and three odd holes. A4 can omit y."
+      },
+      {
+        "id": "K4-4",
+        "status": "discharged_modulo_named_imports",
+        "note": "Opening ka and restoring ky recovers all original long edges; choosing a short-neighbor y closes a 32-vertex path to a cycle without duplicating its endpoint edge."
+      },
+      {
+        "id": "PRE-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "An adjacent non-root hole pair can be joined while keeping u free; Z18 applies to the resulting short four-hole matching for the same opposite-parity target."
+      },
+      {
+        "id": "PRE-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "For each candidate mirror of a B odd hole, the original cross-neighbor is free; absent original hole adjacency it is internally covered unless it is u. After replacement only at most one of three candidates can be a cross-port; at least two are internal."
+      },
+      {
+        "id": "S8-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "A has one hole v, so c is odd. F=M_A*-bk has no half-layer and within A minus v,b has Y=X_A plus k, with even size c+1>=4."
+      },
+      {
+        "id": "S8-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "N12 supplies W; k pairs with a in X_A. D=W-ak avoids a,b and N11 compression is precisely F+W, with v odd and b even."
+      },
+      {
+        "id": "S8-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "Removing matching D from a-b path yields nontrivial vertex-disjoint segments. Real cross-edges and bw yield R on X_B plus w, disjoint from M_B*. The remaining holes are z,q,s,t, balanced for K4."
+      },
+      {
+        "id": "S7-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "For c>=2, F has Y=X_A plus z,k of even size >=4. W(k) lies in X_A or is z. N11 applies also when a=z; endpoint set after deleting D is X_A plus z,b."
+      },
+      {
+        "id": "S7-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "y=z xor e_i is odd, is not a B original hole or u,h, and is internally covered; hence R and M_B* overlap exactly at y."
+      },
+      {
+        "id": "S7-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "r=M_B*(y) is outside R endpoints, d=R(y) is outside M_B* endpoints other than y; replacing yr,yd by rd is legal. Exactly q,s,t,y become holes, of type one even/three odd."
+      },
+      {
+        "id": "S7-4",
+        "status": "discharged_modulo_named_imports",
+        "note": "A4 omits y; rd expands as ry followed by y-d transfer segment. Every A-v vertex and B vertex is recovered once, including any real long cross-edge hu."
+      },
+      {
+        "id": "S7-5",
+        "status": "discharged_modulo_named_imports",
+        "note": "For c=0, a=z and D empty. Tb free of half-layers is exactly the N11 condition; no use of N12 with two free points is made."
+      },
+      {
+        "id": "S7-6",
+        "status": "discharged_modulo_named_imports",
+        "note": "At most one half-layer is possible in M_A*: a half-layer forces all short edges into its direction and both half-layers of that direction would cover free v."
+      },
+      {
+        "id": "S7-7",
+        "status": "discharged_modulo_named_imports",
+        "note": "For c>=2, no half-layer or a half-layer touching an internally covered candidate yields the first-stage deletion. A noninternal candidate cannot touch a matching half-layer, so the residual real half-layer avoids all three candidates."
+      },
+      {
+        "id": "S7-8",
+        "status": "discharged_modulo_named_imports",
+        "note": "For c=0 and hu in A, v,h,u all lie in A: otherwise original vh is a remaining true cross-edge. All original M edges avoid cut i. paper.txt Theorem 8 applies with n=6, at most five directions; C1-C3 all require u covered and thus fail."
+      },
+      {
+        "id": "S7-9",
+        "status": "discharged_modulo_named_imports",
+        "note": "For c=0 and hu in B, M_A*=M_A is short, with holes v,z; the three even candidates have distinct short matching edges and odd partners."
+      },
+      {
+        "id": "S7-10",
+        "status": "discharged_modulo_named_imports",
+        "note": "If each Tb has a half-layer, each contributes >=7 old short edges; Te retains >=6 of them. All its short edges must follow its half-layer direction, forcing common direction. Omission of v forces the same half-layer H."
+      },
+      {
+        "id": "S7-11",
+        "status": "discharged_modulo_named_imports",
+        "note": "The common H avoids every candidate b. In Te for e!=b, bk_b is retained, so k_b cannot be in H. Thus zk_b cannot be in H, which proves H is contained in original M_A and avoids z as well as v."
+      },
+      {
+        "id": "S7-12",
+        "status": "discharged_modulo_named_imports",
+        "note": "The complement of H gives equal j-bits for z and all candidates, opposite the j-bit of v. Since j!=i, these are exactly the j-bits of w,s,t."
+      },
+      {
+        "id": "S7-13",
+        "status": "discharged_modulo_named_imports",
+        "note": "E2 applies to the same complete-graph matching M* omitting v, n=6>=4. Recut target side A_j has no half-layer and at least eight real cross-edges; z,w,s,t are on its opposite side."
+      },
+      {
+        "id": "S7-14",
+        "status": "discharged_modulo_named_imports",
+        "note": "Only q may join v after recut. If q does, invoke already-proved first-stage c>=2 case; otherwise one-hole side has odd c>=9 and invokes already-proved S8. No recursive appeal to S7."
+      },
+      {
+        "id": "G6-1",
+        "status": "discharged",
+        "note": "For any differing coordinate of z,q, nonconstant W gives one/two W points on each target side, hence S4. Thus W is constant on every coordinate in D. Three distinct same-parity points require >=3 remaining coordinates; positive even |D| is therefore two."
+      },
+      {
+        "id": "G6-2",
+        "status": "discharged",
+        "note": "Translation by even z preserves parity and adjacency, permutation sends q to 3; low-bit r=3 is reduced by xor3 exchanging even holes, and r=2 by swapping low coordinates. All reductions act on v and u too."
+      },
+      {
+        "id": "G6-3",
+        "status": "discharged",
+        "note": "r=0 forces all high words to weight three. r=1 permits only weights two/four. Three edges on four vertices have precisely triangle, star, path types; with the weight-four word the remaining two edges are adjacent or disjoint. Six rows exhaust W."
+      },
+      {
+        "id": "G6-4",
+        "status": "discharged",
+        "note": "High columns give S4 iff v_j=1 and c_j=2; low columns add S7 exactly when v_i differs from r_i. Include v odd and outside W. Table yields 1+1+5+2+2+1=12 pairs, without claiming minimal target/root orbits."
+      },
+      {
+        "id": "G6-5",
+        "status": "discharged",
+        "note": "The chosen root is any even point outside the two non-root even holes, at most 30; it is not enumerated. No matching feasibility assertion or path-existence conclusion follows from the geometry enumeration."
+      }
+    ]
+  },
+  "dependency_dag": [
+    "A4+N10 -> K4",
+    "K4+N11+N12 -> S8",
+    "A4+N11+N12+E2+five-direction theorem+S8 -> S7",
+    "bit counts+four-vertex graph classification -> G6",
+    "Z18+S4+S7+G6 -> conditional residual geometry"
+  ],
+  "open_obligations": [
+    {
+      "id": "A4",
+      "status": "unproved",
+      "used_by": [
+        "K4",
+        "S8",
+        "S7",
+        "S4"
+      ]
+    },
+    {
+      "id": "E3_auxiliary_elimination",
+      "status": "unproved",
+      "note": "The similarly named E3 elsewhere is not used; only E2 is imported here."
+    },
+    {
+      "id": "P6",
+      "status": "unproved",
+      "note": "Twelve residual geometry representatives still allow arbitrary eligible root and short matching; free targets and larger hole counts remain open."
+    }
+  ],
+  "counterexample_pass": {
+    "verified_counterexamples": 0,
+    "cases_checked": [
+      "K4 original long/nonbipartite edges and either parity of F(y)",
+      "K4 free versus covered y",
+      "S7 a=z and zero D",
+      "real hu crossing either cut",
+      "candidate b=u or candidate becoming cross-port",
+      "zero-cross-edge hu in either half",
+      "all three Tb obstructed",
+      "q on either side after recut",
+      "G6 repeated/nearly adjacent/weight-four patterns"
+    ],
+    "note": "No numerical matching/path experiment is used to discharge universal existence."
+  },
+  "deterministic_verification": {
+    "independent_enumeration": "Fresh inline Python, direct target-side hole masks; original script not executed because it writes census JSON.",
+    "counts": {
+      "all_normalized_geometry_inputs": 1198860,
+      "has_S4_cut": 1188480,
+      "no_S4_cut": 10380,
+      "additional_S7": 8010,
+      "no_S4_or_S7_cut": 2370
+    },
+    "three_edge_graph_classes": 3,
+    "row_no_S4_counts": [
+      4,
+      4,
+      29,
+      8,
+      8,
+      2
+    ],
+    "row_remaining_targets": [
+      [
+        4
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        25,
+        41,
+        49,
+        61
+      ],
+      [
+        1,
+        37
+      ],
+      [
+        1,
+        37
+      ],
+      [
+        1
+      ]
+    ],
+    "matches_saved_census": true,
+    "scope": "31 nonzero even q; unordered triples of distinct odd W nonadjacent to 0,q; 29 odd targets outside W; z normalized to 0. No roots, matchings or paths enumerated."
+  }
+}

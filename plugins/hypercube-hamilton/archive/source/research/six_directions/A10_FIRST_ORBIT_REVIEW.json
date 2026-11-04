@@ -1,0 +1,172 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "first_marked_orbit_complete_relative_to_certified_Q4_imports",
+  "summary": "Every arbitrary K(Q5) matching with the stated ten holes extends to a short-added cycle omitting exactly 0; its coordinate orbit has 30 marked geometries. Full A10 and P6 remain open.",
+  "reviewer_agent_id": "/root/a10_first_orbit_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T13:25:09.321049+00:00",
+  "audited_input_hashes": {
+    "A10_FIRST_ORBIT_ANALYTIC_CLOSURE.md": "5dc4686960c6702d08d3b5801f5cae7f9120a4e5f78adcdab80f3a0c179ce23e",
+    "A10_first_orbit_geometry_check.py": "58ed5283d72f0326e64880ff084ef1c6ac9ac4010c2b71e9bf592b43031ac2cc",
+    "A10_first_orbit_geometry_check.json": "12051f0234320ea193cf9f6bd15757cf08c983f33d313564540c6fcfc5799629",
+    "Q4_GENERAL_AUGMENTATION.md": "a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b",
+    "Q4_T15_CLASSIFICATION.md": "bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc",
+    "A8_BRIDGE_INPUTS_REVIEW.md": "cb40069fc1493c748a3f5789d11544165f86e436cc7c94e26344b24926831ae6",
+    "A8_BRIDGE_INPUTS_REVIEW.json": "6d42f7d3c7e722d8f512c32f046520826a7645fdffe3ca471ee0b20f7bcf4a86",
+    "Q4_T15_CLASSIFICATION_REVIEW.md": "747399c9ea3a1ae04bb5ead5b8e8c3ea187641b84d989864469bf4f669dcdb8e",
+    "Q4_T15_CLASSIFICATION_REVIEW.json": "f738e07e9f1021c3ceb0429753c27244bab8ceb35de37bee19dfe613a8c43323"
+  },
+  "proof_path": "A10_FIRST_ORBIT_ANALYTIC_CLOSURE.md",
+  "trace_path": "A10_FIRST_ORBIT_REVIEW.md",
+  "relative_imports": [
+    "Q4 GQ4-avoid",
+    "Q4 T15 exact classification"
+  ],
+  "full_A8_required_as_input": false,
+  "scope": {
+    "forbidden_vertex": 0,
+    "majority_holes": [
+      0,
+      3,
+      5,
+      6,
+      15,
+      23
+    ],
+    "minority_holes": [
+      8,
+      16,
+      25,
+      26
+    ],
+    "arbitrary_long_required_edges": true,
+    "marked_coordinate_orbit_size": 30,
+    "first_A10_orbit_only": true,
+    "full_A10": "OPEN",
+    "full_P6": "OPEN"
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations_closed": 17,
+    "obligations": [
+      {
+        "id": "arbitrary_matching_exact_holes",
+        "verdict": "PASS"
+      },
+      {
+        "id": "short_bridge_legality",
+        "verdict": "PASS"
+      },
+      {
+        "id": "even_crossing_count_and_T",
+        "verdict": "PASS"
+      },
+      {
+        "id": "G_path_forest",
+        "verdict": "PASS"
+      },
+      {
+        "id": "unique_terminal_roots",
+        "verdict": "PASS"
+      },
+      {
+        "id": "J_matching",
+        "verdict": "PASS"
+      },
+      {
+        "id": "strict_J_subset_D",
+        "verdict": "PASS"
+      },
+      {
+        "id": "GQ4_avoid_hypotheses",
+        "verdict": "PASS"
+      },
+      {
+        "id": "K_minus_D_endpoint_matching",
+        "verdict": "PASS"
+      },
+      {
+        "id": "proper_subset_multigraph_acyclicity",
+        "verdict": "PASS"
+      },
+      {
+        "id": "compression_is_matching",
+        "verdict": "PASS"
+      },
+      {
+        "id": "compressed_T15_obstruction_excluded",
+        "verdict": "PASS"
+      },
+      {
+        "id": "T15_hypotheses",
+        "verdict": "PASS"
+      },
+      {
+        "id": "expansion_preserves_edges_and_support",
+        "verdict": "PASS"
+      },
+      {
+        "id": "six_choices_with_two_disjoint_fixed_OB",
+        "verdict": "PASS"
+      },
+      {
+        "id": "closed_eight_sets_and_odd_intersection",
+        "verdict": "PASS"
+      },
+      {
+        "id": "thirty_marked_geometries_only",
+        "verdict": "PASS"
+      }
+    ],
+    "counterexamples_found": 0,
+    "abstract_partial_matchings_checked": 10,
+    "proper_subset_multigraph_checks": [
+      {
+        "d": 1,
+        "alternating_cycles": 1,
+        "proper_subsets_checked": 1
+      },
+      {
+        "d": 2,
+        "alternating_cycles": 2,
+        "proper_subsets_checked": 6
+      },
+      {
+        "d": 3,
+        "alternating_cycles": 8,
+        "proper_subsets_checked": 56
+      },
+      {
+        "d": 4,
+        "alternating_cycles": 48,
+        "proper_subsets_checked": 720
+      },
+      {
+        "d": 5,
+        "alternating_cycles": 384,
+        "proper_subsets_checked": 11904
+      },
+      {
+        "d": 6,
+        "alternating_cycles": 3840,
+        "proper_subsets_checked": 241920
+      }
+    ],
+    "original_Q5_matching_instances_enumerated": 0,
+    "Hamilton_cycle_searches": 0,
+    "production_files_modified": false,
+    "main_ledger_modified": false,
+    "producer_checker_executed": false,
+    "producer_checker_not_executed_reason": "Frozen output would be overwritten; separate independent implementation used."
+  },
+  "evidence": {
+    "A10_FIRST_ORBIT_REVIEW.md": "42355a053202a2b23786db1eddcdd4adf3bb5298c8508d31cb2fb9c24daf1677",
+    "A10_FIRST_ORBIT_REVIEW_check.py": "3b91ac98d2441a227cf6854a17a0b6862695b6c92020c57930239cd79e2f6ed5",
+    "A10_FIRST_ORBIT_REVIEW_check.json": "58a6c4eb5b9caaa08f00a47bc57369899c35d96d3ae4bb395e669d8e8c272570"
+  }
+}

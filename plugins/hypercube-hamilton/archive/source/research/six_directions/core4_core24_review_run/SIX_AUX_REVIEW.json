@@ -1,0 +1,153 @@
+{
+  "audit_skill": [
+    "proof-writer",
+    "proof-checker"
+  ],
+  "verdict": "PASS",
+  "verdict_scope": "conditional S4; explicit sufficient conditions S5/S6",
+  "conditional_verdict": "conditional PASS",
+  "reason_code": "conditional_reduction_complete_modulo_A4_and_declared_imports",
+  "summary": "No logical gap found in S4 as a conditional reduction. S5/S6 pass within their explicit sufficient conditions. A4 remains open; full P6 is not proved.",
+  "proof_writer_status": "PROVABLE AS STATED (conditional S4)",
+  "unconditional_six_hole_status": "NOT CURRENTLY JUSTIFIED",
+  "A4_status": "open",
+  "A4_proved": false,
+  "full_p6": false,
+  "full_p6_proved": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "requested_reviewer_model": "gpt-6.1-sol",
+  "requested_reviewer_reasoning": "high",
+  "configuration_provenance": "parent spawn request only; no backend/model/effort self-test",
+  "reviewer_family": "openai",
+  "subagents_spawned": false,
+  "generated_at": "2026-11-01T05:09:47.915130+00:00",
+  "audited_input_hashes": {
+    "SIX_HOLE_FOUR_AUX_REDUCTION.md": "sha256:3b9e7f667c7661358f6668b2e0ae5c60e59fc156944e80dd0d53fe74c3672d49",
+    "SPARSE_CROSSING_EXTENSIONS.md": "sha256:ec3ec2ee4c1bec2690ca819c2465fc3b39ac41dd750fbc39482a6d4ef06c8c3c",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "FOUR_HOLE_FULL.md": "sha256:a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "verify_aux_four_probe.py": "sha256:27afc4ee985b11d629e150fb90f3c6e03dd8236df613f5b62c9fe663cf41a949",
+    "auxiliary_four_hole_probe.json": "sha256:eb7c68c91624d1315f58f5f80ae32bea66557f3d09be44c059ccabdd6465ae5c",
+    "half_layer_four_hole_probe.json": "sha256:d20add34bda40a74693f3a24c2a0492d7be0acc3563627a58c7f3cb0a064291a",
+    "remaining_samples_after_Z5.json": "sha256:ca37f498381a85d56cafa1e055a4fca0d1396713c2b85891186813da3cd59eda",
+    "verify_sparse_crossings.py": "sha256:370e361368eb71c7efdd786e9cb4c9ffc22744a7268559967f4348cb49375248",
+    "verify_recut.py": "sha256:2ce8565292fd3cb17649916ba81cea0884ae3b24887cf2e3d3e4cf8dceee83be",
+    "sparse_crossing_results.json": "sha256:c931cb21495df3cce089a397ba1dca42ed385b74004aaa44f7561358befa30d1",
+    "remaining_samples_after_S5_S6.json": "sha256:75da8e1c0ecc70b49ef1a55694ac96d6a2b6b09f4496bed256c8effd7d5f38c9",
+    "six_aux_review_fm_source_extract.json": "sha256:c9e9f5ab4fcd6601ff4a0fd197081a0ebd1add34fd5740c7563f644dfff9a06c",
+    "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-writer/SKILL.md": "sha256:9791fd55d8bedaedcca21b660cf6e4ce92da77f1acfe0d8678d535d150e217d4",
+    "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-checker/SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "input_hash_base": "research/six_directions; absolute paths for external skill files",
+  "source_reference": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "checked": [
+      "extension definition",
+      "Theorem 2",
+      "Theorem 8",
+      "half-layer definition"
+    ],
+    "hashed_representation": "six_aux_review_fm_source_extract.json (tool-parsed snapshot, not original PDF bytes)"
+  },
+  "assumptions_not_reproved": [
+    "A4 (open)",
+    "Z18 (only preprocessing applicability audited)",
+    "published five-direction free-root theorem",
+    "published FM theorems including computational base case"
+  ],
+  "details": {
+    "claims_audited": [
+      "S4",
+      "S5",
+      "S6"
+    ],
+    "issues": [],
+    "obligations_checked": [
+      "u/h candidate equality",
+      "true long crossing hu",
+      "unique conflict y or b",
+      "N14 exactly two same-parity holes",
+      "A4 exactly four holes and forbidden majority-parity vertex",
+      "N10 two opposite holes and short-neighbor endpoint",
+      "zero-crossing original short matching uses at most five directions",
+      "Z18 preprocessing keeps root free",
+      "nonempty D deletion produces disjoint nontrivial paths",
+      "shortcut expansion restores all original matching edges",
+      "S5 MB* short and b/y opposite parity",
+      "S6 endpoint v may be a port"
+    ],
+    "open_obligations": [
+      "Prove A4 31-vertex conclusion rather than FM8 29-or-31 conclusion",
+      "Establish additional geometric coverage for six-hole instances outside S4/S5/S6 sufficient conditions",
+      "General full P6"
+    ],
+    "counterexample_attempts": [
+      {
+        "strategy": "parity balance",
+        "result": "no contradiction; exactly 29 or 31 vertices remain possible"
+      },
+      {
+        "strategy": "half-layer obstruction",
+        "result": "FM8 condition H holds; does not force coverage of final odd-even hole pair"
+      },
+      {
+        "strategy": "arbitrary same-parity long edges",
+        "result": "difference ee-oo fixed; no valid counterexample obtained"
+      },
+      {
+        "strategy": "add short minority-majority hole edge",
+        "result": "A4 subclass proved by N14; auxiliary long edge fails to discharge remaining obligation"
+      },
+      {
+        "strategy": "degenerate cuts and candidate u/h",
+        "result": "conditional reduction survives"
+      }
+    ],
+    "counterexamples_found": 0,
+    "random_search_performed": false,
+    "aux_certificate_check": {
+      "status": "PASS",
+      "probe_checks": [
+        {
+          "input": "auxiliary_four_hole_probe.json",
+          "sha256": "eb7c68c91624d1315f58f5f80ae32bea66557f3d09be44c059ccabdd6465ae5c",
+          "counts": {
+            "balanced_cycle": 45,
+            "A4_avoid": 45
+          }
+        },
+        {
+          "input": "half_layer_four_hole_probe.json",
+          "sha256": "d20add34bda40a74693f3a24c2a0492d7be0acc3563627a58c7f3cb0a064291a",
+          "counts": {
+            "balanced_cycle": 60,
+            "A4_avoid": 60
+          }
+        }
+      ],
+      "old_S4_cases": 153,
+      "exhaustive": false
+    },
+    "sparse_certificate_check": {
+      "status": "PASS",
+      "verified": 40,
+      "input_sha256": "c931cb21495df3cce089a397ba1dca42ed385b74004aaa44f7561358befa30d1",
+      "branches_by_holes": {
+        "S6_8_holes": 32,
+        "S5_6_holes": 8
+      },
+      "remaining_old_samples": 341,
+      "remaining_by_holes": {
+        "6": 149,
+        "8": 192
+      },
+      "full_p6_proved": false,
+      "exhaustive_q6": false
+    },
+    "certificate_scope": "finite certificates and old sample census only; universal sufficient conditions rest on textual proofs",
+    "report": "SIX_AUX_REVIEW.md"
+  }
+}

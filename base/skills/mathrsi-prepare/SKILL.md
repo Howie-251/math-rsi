@@ -49,6 +49,8 @@ description: 数学研究的准备子工作流，实际串联原题初步澄清�
 
 读回实际规格，确认仍是用户的问题。复杂量词转换未证明就交调查核查，不能为推进流程先当等价。必须由用户决定的目标歧义及时询问，同时继续不依赖答案的来源定位；命名等非阻塞选择自行处理。
 
+启用ECC、两类hypercube或Happy Ending时，实际读取[领域调用与返回](../../../docs/DOMAIN_ROUTING.md)“准备与增量文献”并将相应领域入口、原参数与对象类别交survey。ECC返回分类/构造与码表状态；极值返回有限/渐近密度及共同Q4来源；Hamilton返回根/目标/方向量词；Happy Ending返回几何/signotope/weak/split与容量链。消费这些差异后再固定规格，不只把插件名称放进提示。
+
 ## 3. 初步问题交给 survey，实际消费原文结果
 
 完整读 [mathrsi-survey](../mathrsi-survey/SKILL.md)，传刚得到的规格、来源、wiki及领域文献入口。它内部实际执行ARIS research-lit、关键原文核读、按需wiki-enrich和wiki更新；一行“已查文献”不是调查产物。

@@ -1,0 +1,24 @@
+def ECC.ThreeClosedEntries : Prop :=
+ECC.OptimalDistance 43 10 16 ∧ ECC.OptimalDistance 44 10 17 ∧ ECC.OptimalDistance 44 11 16
+def ECC.OptimalDistance : ℕ → ℕ → ℕ → Prop :=
+fun n k d => ECC.CodeExists n k d ∧ ¬ECC.CodeExists n k (d + 1)
+ECC.codeExists_shorten_one {n k d : ℕ} (h : ECC.CodeExists (n + 1) (k + 1) d) : ECC.CodeExists n k d
+ECC.no_code441018_of_mainClaim (h : ECC.MainClaim) : ¬ECC.CodeExists 44 10 18
+ECC.no_code441117_of_mainClaim (h : ECC.MainClaim) : ¬ECC.CodeExists 44 11 17
+ECC.no_code451118_of_mainClaim (h : ECC.MainClaim) : ¬ECC.CodeExists 45 11 18
+ECC.code441017 : ECC.CodeExists 44 10 17
+ECC.code441116 : ECC.CodeExists 44 11 16
+ECC.code451116 : ECC.CodeExists 45 11 16
+ECC.four_table_consequences (h : ECC.MainClaim) :
+  ECC.ThreeClosedEntries ∧ ECC.CodeExists 45 11 16 ∧ ¬ECC.CodeExists 45 11 18
+ECC.four_table_consequences_of_external_results (hE1 : ECC.PublishedNonexistence41) (hE2 : ECC.PublishedClassBound)
+  (hDistinct : ECC.CatalogueInequivalent) (hComputed : ∀ (i : Fin 172), ECC.PairIncompatible (ECC.catalogueCode i)) :
+  ECC.ThreeClosedEntries ∧ ECC.CodeExists 45 11 16 ∧ ¬ECC.CodeExists 45 11 18
+'ECC.codeExists_shorten_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.no_code441018_of_mainClaim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.no_code441117_of_mainClaim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.no_code451118_of_mainClaim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.code441017' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.code441116' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.code451116' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.four_table_consequences_of_external_results' depends on axioms: [propext, Classical.choice, Quot.sound]

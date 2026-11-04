@@ -1,0 +1,100 @@
+# Ten-hole covered targets: next exact obligations
+
+2026-11-02 最新已接受：**完整 Q6 核心命题 P6 已通过 ARIS 独立总装审计。** 对任意 $M\subseteq E(Q_6)$、任意未被 $M$ 覆盖的顶点 $u$、任意与 $u$ 奇偶性相反的顶点 $v$（可以已被 $M$ 覆盖），存在包含 $M$ 全部边的 Hamilton $u$–$v$ 路径。完整2、4、6、8、10、12、14、16、18孔层均已接受；保持起点自由的极大补全归约覆盖任意原匹配。总证明见 `P6_FULL_CLOSURE.md`，独立审计见 `P6_FULL_REVIEW.md`，最终状态核验见 `P6_RELEASE_CHECK.json`。十四孔与十六/十八孔总装分别见 `FOURTEEN_HOLE_FULL_REVIEW.md`、`SIXTEEN_EIGHTEEN_FULL_REVIEW.md`。**当前 P6 证明义务为空。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 十四孔最新已接受余域：已覆盖目标 **25** 个几何，自由目标 **0** 个几何，见 `FOURTEEN_MID_SELECTED_REVIEW.md`。 **十四孔任意两个指定异奇偶自由端点分支已关闭**；已覆盖目标分支仍待完成。 已审条件递推：**完整十六孔推出完整十八孔**；以完整十四孔为前提，十六孔已审路线剩 **148** 个覆盖目标几何，自由目标余域为0。前层条件尚未解除，不能将十六/十八孔记为完整关闭。见 `HIGHER_POST12_T39_REVIEW.md`。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 十四孔最新已接受余域：已覆盖目标 **2527** 个几何，自由目标 **0** 个几何，见 `FOURTEEN_MAXIMAL_A_REVIEW.md`。 **十四孔任意两个指定异奇偶自由端点分支已关闭**；已覆盖目标分支仍待完成。 已审条件递推：**完整十六孔推出完整十八孔**；以完整十四孔为前提，十六孔已审路线剩 **148** 个覆盖目标几何，自由目标余域为0。前层条件尚未解除，不能将十六/十八孔记为完整关闭。见 `HIGHER_POST12_T39_REVIEW.md`。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 十四孔最新已接受余域：已覆盖目标 **2587** 个几何，自由目标 **0** 个几何，见 `FOURTEEN_FORCED_REVIEW.md`。 **十四孔任意两个指定异奇偶自由端点分支已关闭**；已覆盖目标分支仍待完成。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 十四孔最新已接受余域：已覆盖目标 **3923** 个几何，自由目标 **0** 个几何，见 `FOURTEEN_HALL_REVIEW.md`。 **十四孔任意两个指定异奇偶自由端点分支已关闭**；已覆盖目标分支仍待完成。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 十四孔最新已接受余域：已覆盖目标 **12528** 个几何，自由目标 **18** 个几何，见 `FOURTEEN_CACHED_REVIEW.md`。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-02 最新已接受：**完整 Q6 十二孔层已通过独立汇总审计**，对任意26条短边匹配、任意自由起点与任意异奇偶目标（包括已覆盖目标），均有包含原匹配的 Hamilton 路径。最后235个几何由完整3,620,052个局部极大匹配的正证书及已审拼接归约关闭。见 `TWELVE_HOLE_FULL_CLOSURE.md` / `TWELVE_HOLE_FULL_REVIEW.md`。**完整2/4/6/8/10/12孔层已关闭；完整 Q6/P6 仍 OPEN，剩余完整层为14、16、18孔。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：**完整 Q6 十二孔自由目标分支已通过独立汇总审计**，对任意26条短边匹配和任意两个指定异奇偶自由端点，均有包含匹配的 Hamilton 路径。见 `TWELVE_HOLE_FREE_CLOSURE.md` / `TWELVE_HOLE_FREE_REVIEW.md`。十二孔覆盖目标在已审路线下精确剩余 **235** 个几何，分目标 {'1': 0, '7': 0, '31': 235}，见 `TWELVE_EXTRA_FORCED_REVIEW.md`。完整2/4/6/8/10孔层及所有已接受五维输入保持关闭。**完整 Q6/P6 仍 OPEN，剩余完整层为12、14、16、18孔；自由分支不能代替完整十二孔前层。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：**完整 Q6 十二孔自由目标分支已通过独立汇总审计**，对任意26条短边匹配和任意两个指定异奇偶自由端点，均有包含匹配的 Hamilton 路径。见 `TWELVE_HOLE_FREE_CLOSURE.md` / `TWELVE_HOLE_FREE_REVIEW.md`。十二孔覆盖目标在已审路线下精确剩余 **29370** 个几何，分目标 {'1': 6315, '7': 9828, '31': 13227}，见 `TWELVE_NEW_FORCED_HALL_REVIEW.md`。完整2/4/6/8/10孔层及所有已接受五维输入保持关闭。**完整 Q6/P6 仍 OPEN，剩余完整层为12、14、16、18孔；自由分支不能代替完整十二孔前层。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：**完整 Q6 十二孔自由目标分支已通过独立汇总审计**，对任意26条短边匹配和任意两个指定异奇偶自由端点，均有包含匹配的 Hamilton 路径。见 `TWELVE_HOLE_FREE_CLOSURE.md` / `TWELVE_HOLE_FREE_REVIEW.md`。十二孔覆盖目标在已审路线下精确剩余 **215243** 个几何，分目标 {'1': 59684, '7': 68385, '31': 87174}，见 `HIGHER_Q5_FULL_T37_APPLICATION_REVIEW.md`。完整2/4/6/8/10孔层及所有已接受五维输入保持关闭。**完整 Q6/P6 仍 OPEN，剩余完整层为12、14、16、18孔；自由分支不能代替完整十二孔前层。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：**完整 Q6 十孔层已通过独立汇总审计**，涵盖任意27条短边匹配、任意自由起点与任意异奇偶目标（含已覆盖目标）。十孔自由与覆盖目标均无剩余。见 `TEN_HOLE_FULL_CLOSURE.md` / `TEN_HOLE_FULL_REVIEW.md`。完整五维 A8/A10 及所有平衡孔数端点/圈、可行奇偶孔差二避一孔输入保持已接受。**完整 Q6/P6 仍 OPEN，剩余完整层为12、14、16、18孔。** 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：完整五维 A8/A10 与全部平衡孔数端点/圈、可行奇偶孔差二避一孔输入已关闭。六维十孔覆盖目标当前精确剩余 **889** 个几何，分目标为 {'1': 280, '7': 279, '31': 330}。最新接受范围见 `Q5_T15_RANK_BATCH_REVIEW.md`。完整2/4/6/8孔及十孔自由目标已接受；完整十孔、12/14/16/18孔及完整P6仍OPEN。 保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：**完整五维 A10 已独立汇总审计 PASS，55/55 几何全部关闭**。最后轨道由 1024 个合法短补森林及 GF(2) 满秩矩阵覆盖全部任意匹配；独立重算全部 1048576 个矩阵项。结合已接受 A8 与高孔归约，所有可行五维奇偶孔数差二的指定避一孔定理、所有平衡孔数的指定端点路径及整圈延拓均已接受。新 T63 标记切分及完整五维端点应用分别新增 12916、70 个十孔覆盖目标几何，互不重叠；**当前剩余 41236 = 12910 + 12696 + 15630**。见 `Q5_A10_FULL_REVIEW.md`、`Q5_T63_COMPLETE_SPLIT_REVIEW.md`、`TEN_COVERED_Q5_ENDPOINT_REVIEW.md`。**完整十孔、12/14/16/18 孔及完整 Q6/P6 仍 OPEN**；下一步为实际多避孔输入的短森林秩证书。保证等级 same-family/provisional，相对于显式导入与确定性有限证书，非形式化验证。以下冲突状态为历史。
+
+2026-11-01 最新已接受：完整 A8 的平衡八孔端点后果及十孔应用已独立审计 PASS，十孔覆盖目标残余由 91225 减为 **54222**（v=1/7/31 分别 16920/17022/20280）；A10 前两个轨道已独立审计 PASS，55 个非邻接规范几何已关闭 50 个，剩 **5 个、1 个轨道**。第二轨道 2366577 条正圈及完整规范域均独立核验。见 `Q5_A8_CONSEQUENCES_REVIEW.md`、`A10_FIRST_ORBIT_REVIEW.md` 与 `A10_ORBIT2_REVIEW.md`。以上数量是几何数，已关闭几何覆盖其全部实现匹配。完整 A10、完整十孔及完整 P6 仍 OPEN；保证等级 same-family/provisional，相对于显式导入与有限证书，非形式化验证。以下冲突进度为历史。
+
+2026-11-01 最新已接受：完整 A8 的平衡八孔端点后果及十孔应用已独立审计 PASS，十孔覆盖目标残余由 91225 减为 **54222**（v=1/7/31 分别 16920/17022/20280）；A10 首轨道已独立审计 PASS，55 个非邻接规范几何已关闭 30 个，剩 **25 个、2 个轨道**。见 `Q5_A8_CONSEQUENCES_REVIEW.md` 与 `A10_FIRST_ORBIT_REVIEW.md`。以上数量是几何数，已关闭几何覆盖其全部实现匹配。完整 A10、完整十孔及完整 P6 仍 OPEN；保证等级 same-family/provisional，相对于显式导入与有限证书，非形式化验证。以下冲突进度为历史。
+
+2026-11-01. Planning and explicitly conditional algebra, not a new closure.
+Full ten-hole free-target P6 is now accepted. The root remains free here,
+but the odd target v is covered by the original short matching.
+
+The new audited uniform transfer is `HIGHER_HOLE_UNIFIED_TRANSFER.md`.
+Its geometry filter leaves 121690 covered-target configurations in the
+producer run: 37250 at v=1, 39150 at v=7, and 45290 at v=31. This census
+has not yet had an independent full covered-target review, so these are
+planning numbers rather than accepted complete-domain bookkeeping.
+
+## Shared avoid-one route
+
+Q5 A8 (3:5 holes, omit any specified majority hole, arbitrary required
+matching) remains OPEN. It would supply the balanced-eight-hole local
+endpoint and cycle lemmas using the endpoint swap and induction already
+recorded in `Q5_HIGHER_HOLE_REDUCTION.md`. The same transfer algebra would
+then allow six extra ten-hole rows:
+
+| (a,b) | new local ingredient |
+|---|---|
+|(0,1)| B balanced-eight-hole cycle |
+|(3,4)| A balanced-eight-hole endpoint |
+|(1,1)| B A8 with hole counts (3,5) |
+|(4,4)| A balanced-eight-hole endpoint |
+|(0,2)| B A8 with hole counts (5,3) |
+|(3,5)| A balanced-eight-hole endpoint |
+
+Diagnostic `ten_covered_conditional_A8_profile.json` finds one of these
+rows in 20330+22128+25010=67468 of the current producer residuals.
+The other 16920+17022+20280=54222 require further inputs or another route.
+None is deducted from the open set until A8 and the coverage application
+are proved and independently reviewed. The counts do not imply these
+are the only possible uses of A8.
+
+## Multiple omitted vertices
+
+The known marked T15 domain covers only some 1:5-hole/two-omission inputs.
+For further cuts the uniform transfer exposes these exact potential inputs:
+
+| ten-hole cut rows | B hole counts, up to parity reversal | omitted majority holes |
+|---|---|---:|
+|(2,1), (0,3)| (2,6) |2|
+|(3,1), (0,4)| (1,7) |3|
+|(4,2), (1,5)| (0,6) |3|
+|(4,1), (0,5)| (0,8) |4|
+
+These are **unproved auxiliary statements** for arbitrary K(Q5) matchings
+and the actual marked omission sets. They are not consequences of A8
+merely from matching the total number of holes. The surviving new edges
+must still be short, and the required cycles must omit exactly the marked
+vertices so that expansion restores each global vertex once.
+
+Cuts with b=0 require an exposed-port construction or a different transfer;
+the present balanced-A path construction does not directly apply there.
+Proving all these unrestricted auxiliary statements is a sufficient route,
+not asserted necessary: restrictions of the actual induced matching, a
+different cut, or a targeted marked theorem may give a shorter proof.
+
+## Current priority
+
+1. Finish and independently audit A8's reusable delta-1/2/3 branches and
+   the five residual geometric orbits; do not turn orbit counts into a
+   universal matching proof.
+2. Test shared Q5 inputs against the actual remaining Q6 geometries before
+   launching a large finite matching enumeration.
+3. Obtain complete covered-target coverage with the original endpoint and
+   edge-preservation quantifiers, then perform a separate full-ten assembly
+   audit. Only that may mark the full ten-hole level closed.

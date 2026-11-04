@@ -1,0 +1,83 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_stated_reduction_obligations_complete_modulo_imports",
+  "summary": "All38 obligations close for L15,L18,Z0,S2D,S3D,R1A. Independent verification passes540540 matching records and2448249 circles. Full Q5 A4 reduces to the single residual hole orbit with forbidden1 and holes0,1,14,22; that orbit and full P6 remain unproved.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_path": "A4_SINGLE_GEOMETRY_REVIEW.md",
+  "audited_input_hashes": {
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "verify_q4_extension_certificates.py": "sha256:75a66d7c6d61aec00b7c16dbf30bdf35270dfa1ad69651011d261645bf6bbdff",
+    "q4_two_hole_3.bin": "sha256:783b91ab1f2d55055d8875b42e8ad1f22e0207882d124bcbb8a4b8dc86b337e9",
+    "q4_two_hole_15.bin": "sha256:b0d1eb80ca2b75da7b05f12e25febc7ccb652dac644775e83e97ae7598d19d38",
+    "q4_four_hole_1.bin": "sha256:5ebf58015e69cdec577a0c57d2bdb2438c3ca95fb3079e5a4787bcc20bc6d02f",
+    "q4_four_hole_4.bin": "sha256:978ae6898146591c3bbbacc8ac32d8df392caa02737980b27fd56c8f33535b25",
+    "q4_four_hole_13.bin": "sha256:dabc1cdebf85645e61d6c34b7baddc13ee2e46eed395ab51374cbcf8c322c6e9",
+    "q4_core_independent_audit.py": "sha256:4a3f2122be8524d3c0fc2204f9170013414c73663b34f6c47b4cf762c264e167",
+    "q4_core_independent_audit.json": "sha256:c668692f676a96a5209f9a4866a17efe0f99baafe01026bb4dd961a0abaf7b3e",
+    "A4_SINGLE_GEOMETRY_REDUCTION.md": "sha256:16724d8346d307daff3246b68c165d81db485ef86f1090905797d66f659eaf92",
+    "verify_q4_spectrum_certificates.py": "sha256:42cfee6656e646fc8a5c14d8252200a509ad2c80bc93e7f2a270c8dd5616c4c2",
+    "a4_single_geometry_independent_audit.py": "sha256:a911ae7ebdd564ff49d72e2b2cc8e3a18e6f6a44713cd5b08185710428c145c3",
+    "a4_single_geometry_independent_audit.json": "sha256:528a8f709faebbcd70609aae0bc6c686decdab141942d78c1f2ce9c84cd27937",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "q4_spectrum_A_15.bin": "sha256:a943b0a8e7b182d76bc342419fcadfa23cadf7f5322e7f10b93a7a856e45050d",
+    "q4_spectrum_A_3.bin": "sha256:9649967f0166033955132243eb45851fbd61532dc109c65ef5a9418d95e9f9cc",
+    "q4_spectrum_B_1.bin": "sha256:3eceb29a41d51d59531a8fbb2cad9916593759099abd36af63dcf635f8954d78",
+    "q4_spectrum_B_7.bin": "sha256:c3549e2624abc198289fe50dc09e215f33975e7da5c27cc59229b8d7f38b0ed9"
+  },
+  "external_imports": [
+    {
+      "name": "Fink perfect-matching extension theorem",
+      "source": "https://tmuetze.de/papers/match.pdf",
+      "location": "page1 definition and Theorem2",
+      "directly_checked": true,
+      "reproved": false,
+      "use": "earlier NC_4 dependency"
+    },
+    {
+      "name": "Fink-Muetze avoided-vertex extension theorem",
+      "source": "https://tmuetze.de/papers/match.pdf",
+      "location": "pages3-4 Theorem8",
+      "directly_checked": true,
+      "reproved": false,
+      "use": "Q5 N14 adjacent-hole branch; d>=5 and condition(H) discharged"
+    }
+  ],
+  "details": {
+    "theorems_audited": 6,
+    "micro_obligations_closed": 38,
+    "issues": [],
+    "independent_checker": "a4_single_geometry_independent_audit.py",
+    "independent_verification": "a4_single_geometry_independent_audit.json",
+    "matching_records_verified": 540540,
+    "circles_verified": 2448249,
+    "geometry_counts": {
+      "S2D": 605,
+      "S3D": 510,
+      "intersection": 375,
+      "solved_union": 740,
+      "remaining": 30
+    },
+    "remaining_orbits": 1,
+    "remaining_family": {
+      "holes": [
+        0,
+        1,
+        14,
+        22
+      ],
+      "forbidden": 1,
+      "matching_domain": "all perfect matchings of the other28 vertices"
+    },
+    "full_q5_a4_proved": false,
+    "full_p6_proved": false,
+    "partial_import_file_scope": {
+      "TWO_ODD_HOLES_TRANSFER.md": "N14 statement/proof only; later Z14 not audited in this invocation"
+    }
+  },
+  "generated_at": "2026-11-01T06:59:59.482774+00:00"
+}

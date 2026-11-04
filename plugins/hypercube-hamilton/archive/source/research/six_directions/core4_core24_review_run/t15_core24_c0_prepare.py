@@ -1,0 +1,2 @@
+from pathlib import Path
+s=Path('verify_t15_core1_c0_B.py').read_text().replace('us=(3,5,9)','us=(6,10,15)').replace('len(exception)==105','len(exception)==255').replace('core1','core24').replace('range(105)','range(255)').replace('105*10395*26','255*10395*26');s+="\n(R/'t15_core24_c0_B_independent.txt').write_text('\\n'.join(' '.join(str(v) for e in sorted(F) for v in e) for F in sorted(exception,key=lambda f:sorted(f)))+'\\n')\n";Path('verify_t15_core24_c0_B.py').write_text(s)

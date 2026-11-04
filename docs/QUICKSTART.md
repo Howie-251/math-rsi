@@ -2,7 +2,7 @@
 
 MathRSI is a set of readable agent workflows, bundled ARIS skills, and domain knowledge. You give a working agent the repository's entry skill and your mathematical task. The agent reads the relevant instructions, performs the work, consumes the resulting proofs and checks, and continues from the actual remaining obligation. There is no MathRSI server or generic scheduler command to start.
 
-This guide works with Codex or Claude Code. The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
+This guide works with Codex or Claude Code. Fixed v1/v2 tags remain available; v3 is currently a local development branch, not a published tag. Use your checked-out revision and record it in the task handoff. See [v3 changes](V3_CHANGES.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
 
 ## Get the repository and choose a workspace
 
@@ -81,7 +81,17 @@ core or its acceptance conditions while solving the problem.
 
 For degree–diameter graphs, add: “Also read `plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md` in this clone. Preserve the original graph target and use the relevant construction, obstruction, or transfer skill within the current stage. Read the historical wiki and supporting sources as needed; write new results to my task workspace.” The [DD plugin guide](../plugins/degree-diameter/README.md) gives the actual theorem conditions, programs, and archived evidence. `$mathrsi-degree-diameter` / `/mathrsi-degree-diameter` and its three subordinate skills have project-relative discovery aliases.
 
-For Property B, add: “Also read `plugins/propertyb/skills/mathrsi-propertyb/SKILL.md` in this clone and use its methods where they address the current obligation.” The repository contains the corresponding knowledge and executable checks. The ECC plugin remains a draft; see its own status before using it as a validated domain workflow.
+For Property B, add: “Also read `plugins/propertyb/skills/mathrsi-propertyb/SKILL.md` in this clone and use its methods where they address the current obligation.” The repository contains the corresponding knowledge and executable checks. The upgraded ECC and three new domain capabilities use the same parent/return contract:
+
+
+| Your problem | Also read in this clone | Concrete use |
+| --- | --- | --- |
+| Binary linear codes | [mathrsi-ecc](../plugins/ecc/skills/mathrsi-ecc/SKILL.md), [ecc-certificate](../plugins/ecc/skills/ecc-certificate/SKILL.md) | Pass n/k/d, actual matrix or parent/coset/pair obligation; consume the exact witness or scoped exclusion result. |
+| Cube forbidden-subgraph density | [mathrsi-hypercube-extremal](../plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md) | Pass the original density target and common local object; consume the exact local certificate and averaging bridge separately. |
+| Cube matching extension | [mathrsi-hypercube-hamilton](../plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md) | Pass the matching, root/target and required edges; consume the marked reduction or finite universal certificate. |
+| Happy Ending / signotopes | [mathrsi-happy-ending](../plugins/happy-ending/skills/mathrsi-happy-ending/SKILL.md), [happy-ending-certificate](../plugins/happy-ending/skills/happy-ending-certificate/SKILL.md) | Pass geometric vs abstract object, path parameters and proof/witness scope; retain the weak/split distinction. |
+
+For a bounded verification request, say: “Use the domain skill within the current verify stage. Read the actual input, run its documented checker in my task scratch directory, and return what it proves and the remaining original-problem connection. Keep archived sources read-only.” You can then use the [real replay commands](V3_CHANGES.md#bounded-commands-from-the-current-clone) without starting an archived research Goal.
 
 The MathRSI entry skills are host-neutral. When they call an embedded ARIS skill, **Codex reads `base/skills/skills-codex/<name>/SKILL.md`; Claude reads `base/skills/<name>/SKILL.md`**. Relative aliases under `.agents/skills/` and `.claude/skills/` support project discovery. If loaded, `$mathrsi-research` in Codex or `/mathrsi-research` in Claude can invoke the entry; explicit file reading remains usable when discovery has not refreshed.
 
@@ -170,7 +180,7 @@ Keep the original research workspace read-only unless separately authorized.
 
 The skill owns the execution sequence; [evolution guidance](EVOLUTION_WORKFLOW.md) explains the inputs and adoption boundary. The current coordinator uses the candidate workflow, with bounded subagent help where useful. A fresh agent running the entire process is not a mandatory prerequisite; required independent mathematical checks still follow the task contract. Existing valid checks are reused.
 
-The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) describe the implemented v1 extensions and DD integration. Actual maintenance use, review, and adoption are tracked in the [current record](../development/evolution/dd-v2-20261102/EVOLUTION.md); archived DD outcomes do not establish new-version research performance.
+The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) preserve DD integration history. The [v3 changes](V3_CHANGES.md) describe the current increment and actual bounded use; its [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) tracks review and adoption. Archived outcomes supply mathematical methods, not new-version research performance benchmarks.
 
 ## Keep the result usable next time
 

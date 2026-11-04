@@ -1,0 +1,265 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Erdős 86 · Q4 上界成果与研究交接</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:25px}body{margin:0;background:#f5f3ee;color:#24332f;font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85;font-size:15px}a{color:#116558;text-underline-offset:3px}aside{position:fixed;left:0;top:0;bottom:0;width:246px;padding:36px 24px;background:#132f2b;color:#fff;overflow:auto}aside .brand{letter-spacing:3px;font-size:12px;color:#b0d2c4}aside h2{font-size:22px;line-height:1.6;margin:20px 0 38px}aside a{display:block;color:#dbe9e2;text-decoration:none;padding:10px 0;border-top:1px solid #ffffff20;font-size:13px}aside small{display:inline-block;width:30px;color:#8ebdad}aside p{font-size:12px;color:#b0c7bb;margin-top:35px}main{margin-left:246px;max-width:1400px;padding:48px 6% 90px}.eyebrow{font-size:11px;letter-spacing:2.8px;color:#54756a;font-weight:700}h1{font-size:clamp(30px,3.3vw,48px);line-height:1.3;margin:18px 0}h2{font-size:27px;line-height:1.5;margin:18px 0 26px}h3{font-size:20px;margin:34px 0 14px}h4{font-size:17px;margin:25px 0 12px}p{margin:13px 0}header{padding-bottom:38px;border-bottom:1px solid #cbd6cc}.lede{font-size:17px;max-width:790px;color:#51665d}.result{background:#153e35;color:white;border-radius:10px;padding:28px 32px;margin:28px 0}.result .number{font:500 clamp(25px,3vw,43px) "Consolas",monospace;letter-spacing:-1px;margin:12px 0;overflow-wrap:anywhere}.result .fraction{font-family:Consolas,monospace;font-size:13px;overflow-wrap:anywhere}.pill{display:inline-block;border:1px solid #6f9b85;padding:2px 10px;border-radius:20px;font-size:11px;letter-spacing:1px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:23px 0}.stat{background:white;border:1px solid #d8dfd7;padding:18px;border-radius:8px}.stat b{display:block;font:600 25px Consolas,monospace;color:#1b5547}.stat span{font-size:12px;color:#68776e}.notice{padding:16px 20px;border-left:4px solid #bd8a37;background:#fff8e9;color:#63512e;font-size:13px}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}.flow div{background:#e4eee7;padding:14px 12px;border-radius:7px;font-size:12px}.flow b{display:block;color:#175947}.flow small{color:#64766b}section{padding:38px 0 34px;border-bottom:1px solid #cbd6cc}.source{float:right;font-size:12px}.tablewrap{width:100%;overflow:auto;margin:20px 0;border:1px solid #d4dfd5;border-radius:7px;background:white}table{border-collapse:collapse;width:100%;font-size:13px;min-width:620px}th{background:#e2ece4;color:#234e40;text-align:left}td,th{padding:12px 14px;border-bottom:1px solid #e1e7df;vertical-align:top}tr:last-child td{border-bottom:0}td{overflow-wrap:anywhere}tr:nth-child(2n+1) td{background:#fbfcf9}code{font-family:Consolas,monospace;font-size:.9em;background:#e8ede5;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}pre{overflow:auto;padding:18px;background:#e8eee6;border-left:3px solid #79a18a;font:13px/1.8 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}strong{color:#1b5946}li{padding:4px 0}footer{font-size:12px;color:#6d7c70;padding-top:35px}.links{display:flex;gap:12px;flex-wrap:wrap}.links a{padding:6px 12px;border:1px solid #a8c0b0;border-radius:5px;text-decoration:none;font-size:12px}@media(max-width:980px){aside{position:static;width:auto;padding:22px}aside h2{margin:6px 0}aside nav{display:flex;gap:10px;flex-wrap:wrap}aside a{border:0;padding:5px;font-size:12px}aside p{display:none}main{margin:0;padding:30px 5%}.stats{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}}@media print{body{background:white;font-size:11px}aside{display:none}main{margin:0;max-width:none;padding:0}section{break-before:page;padding-top:10px}h2,h3,h4{break-after:avoid}.tablewrap{overflow:visible}table{min-width:0;font-size:10px}td,th{padding:6px}a{color:inherit}.source{display:none}.result{background:#edf4ef;color:#163e32;border:1px solid #779b86}.stats{grid-template-columns:repeat(3,1fr)}.flow{grid-template-columns:repeat(4,1fr)}@page{size:A4;margin:16mm}}</style></head><body><aside><div class="brand">RESEARCH HANDOFF</div><h2>Erdős 86<br>Q4 上界研究</h2><nav><a href="#result"><small>01</small>成果与边界</a><a href="#theory"><small>02</small>约束与完整证明</a><a href="#search"><small>03</small>搜索与全域认证</a><a href="#trajectory"><small>04</small>真实迭代与失败转折</a><a href="#rsi"><small>05</small>RSI可接续状态</a><a href="#replay"><small>06</small>复现与真实成本</a><a href="#audit"><small>07</small>证据审计</a></nav><p>2026-11-04 整理<br>离线展示 · 可复现证书<br>真实轨迹 · RSI 接续</p></aside><main><header><div class="eyebrow">ERDŐS PROBLEM 86 / CERTIFIED Q4 UPPER BOUND</div><h1>从局部共同来源<br>到全域整数证书</h1><p class="lede">完整保存共同 Q4 补全、同根两旗的相对朝向、活动集与全量分离，以及从失败反馈到精确认证的实际过程。</p><div class="result"><span class="pill">最佳已认证 Q4 渐近界</span><div class="number">0.591551531948944775</div><div class="fraction">π_Q(C₄) ≤ 23662061277957791 / 40000000000000000</div></div><div class="stats"><div class="stat"><b>3,312,331</b><span>逐图整数检查的全域覆盖代表</span></div><div class="stat"><b>6</b><span>有效 PSD Gram 块，保留共享根朝向</span></div><div class="stat"><b>0.011628468…</b><span>相对 Baber 0.60318 的绝对下降</span></div></div><div class="notice">本包最优指已找到的最好证书；未证明 SDP 全局最优、未突破 0.59。结论为渐近密度上界，不能直接当作小维数边数界。本次从源码重编并重放了有限全域验证，未宣称第三方审稿或形式化认证。</div><div class="flow"><div><b>01 共同补全</b><small>四种观察来自同一真实图</small></div><div><b>02 保留朝向</b><small>共享根变换同步作用</small></div><div><b>03 搜索与反馈</b><small>活动池优化、全域找违反行</small></div><div><b>04 精确接受</b><small>整数 Gram、全域覆盖与平均证明</small></div></div><div class="links"><a href="certificate_final_q4/README.md">最强证书与复核入口</a><a href="guide/trajectory.json">机器可读研究轨迹</a><a href="inventory.json">原件与哈希清单</a><a href="guide/06_REPRODUCTION_AND_COSTS.md">复现和成本</a></div></header><section id="result"><div class="eyebrow">CHAPTER 01</div><a class="source" href="guide/01_RESULT_AND_SCOPE.md">Markdown 原稿 ↗</a><h2>Q4 成果总览与结论边界</h2>
+<p>整理日期：2026-11-04。研究对象是超立方体宿主中的无四环子图，不是一般 N 点无四环图问题。</p>
+<p>令 Q_n 的边数为 n·2^(n−1)，定义 ρ(G)=e(G)/(n·2^(n−1))，π_Q(C4)=lim_n ex(Q_n,C4)/(n·2^(n−1))。本包保存的最强已认证结果为：</p>
+<p><strong>π_Q(C4) ≤ 23662061277957791/40000000000000000 = 0.591551531948944775 &lt; 0.59155154。</strong></p>
+<p>这是当前所查项目材料中最强的 Q4 可行上界证书。这里“最强”指已找到并认证的证书，不表示证明了这一 SDP 的全局最优值，也不表示已经核定最新全球文献纪录。</p>
+<h3>与文献基准和阶段成果比较</h3>
+<div class="tablewrap"><table>
+<tr><th>阶段</th><th>精确值或可靠显示值</th><th>变化性质</th></tr>
+<tr><td>Baber，arXiv:1201.3587v2，Theorem 4.1</td><td>0.60318</td><td>本项目采用的文献比较基准</td></tr>
+<tr><td>本地部分模型重建</td><td>向外显示 0.60410234</td><td>没有超过 Baber；不是对 Baber 最优值的精确复现</td></tr>
+<tr><td>完整 Q4 共同补全，旧六块</td><td>向外显示 0.60035060</td><td>改变局部允许分布，绑定不同隐藏观察</td></tr>
+<tr><td>完整空面 45 状态＋顶点 9 状态</td><td>119941059204403/200000000000000 = 0.599705296022015</td><td>新增可由完整图观察的根统计</td></tr>
+<tr><td>五类根面保留相对朝向＋顶点块</td><td>18933741304467/32000000000000 = 0.59167941576459375</td><td>结构信息加强、旧块可折入</td></tr>
+<tr><td>同六块联合优化</td><td>236634773493897/400000000000000 = 0.5915869337347425</td><td>同一模型内的求解改进</td></tr>
+<tr><td>本包最强 Q4 对照</td><td>23662061277957791/40000000000000000 = 0.591551531948944775</td><td>同一模型继续列生成，最终整数认证</td></tr>
+</table></div>
+<p>相对 Baber 的 0.60318，绝对下降 0.011628468051055225。相对第一份完整朝向证书，下降 0.000127883815648975。距 0.59 还差 0.001551531948944775。</p>
+<h3>六个有效矩阵块</h3>
+<p>最终证书的五种根面分别为空面、一边面、相邻二边面、对边二边面、三边面，对应阶数 240、212、190、187、170；另有顶点根 9 阶块。不是六个几何子立方体，而是六类根条件下的矩阵。</p>
+<p>最终证书来自名为 q5_empty_moment_20261028 的原目录，但 certificate_control.json 中新增切面为零，所有有效项均属 Q4 六块。本包只归档其 Q4 对照分支，目录名称不作为模型维数的判断依据。</p>
+<h3>全域认证说明</h3>
+<p>有限活动集只负责优化时提速；最终认证覆盖全部合法 Q4。实现检查 3,312,331 个覆盖代表，允许同构冗余。它既不是抽样池，也不能称为 3,312,331 个非同构图。</p>
+<p>最终局部得分包含密度和矩阵修正。得分最高的合法图不等于边最多的图；同一张图的修正项可以为负或正。不能用有限维精确边数取代最大得分验证。</p>
+<h3>未完成事项</h3>
+<p>尚未突破 0.59；尚未证明 Q4 松弛能力极限；没有精确可行对偶分布证明“不能继续降低”。原材料没有完成第三方研究者复现、同行审稿、Lean 形式化或全球文献优先权审计。本次交付增加的是本地从源重编与全域整数重放，不应改写为第三方认证。</p>
+<p>本常数是渐近界。它不能直接乘以某个小维数的宿主边数充当有限维边数上界。有限维修正见 02_THEORY_AND_CONSTRAINTS.md。</p></section><section id="theory"><div class="eyebrow">CHAPTER 02</div><a class="source" href="guide/02_THEORY_AND_CONSTRAINTS.md">Markdown 原稿 ↗</a><h2>从 Baber 到本项目：约束、共同来源与证明链</h2>
+<h3>1. 继承了什么</h3>
+<p>Baber 的部分指定超立方体方法保留部分边状态，其余边未指定，并已使用方向交换一致性。未指定不表示缺失；共同来源也不是本项目首创的一般原则。本项目的具体变化是更完整地实现共同补全，以及保留共享根下两旗的相对朝向。</p>
+<p>基础文献：Rahil Baber, Turán densities of hypercubes, arXiv:1201.3587v2；Balogh–Hu–Lidický–Liu, Upper bounds on the size of 4- and 6-cycle-free subgraphs of the hypercube, arXiv:1201.0209v2。原项目报告区分了文献框架与本地新增实现。本包不把文献 SDP 框架重新命名为新理论。</p>
+<h3>2. 同一个真实 Q4 的共同来源</h3>
+<p>完整图 K 可写成两张同坐标 Q3 层 A、B 与层间匹配位置 S。两层无四环时，有精确等价：</p>
+<p><strong>K=(A,B,S) 无四环 ⇔ S 在 A∩B 中是独立集。</strong></p>
+<p>证明：新出现的跨层四环恰好使用 A、B 都有的边 uv 与 u、v 两条层间边。S 不能同时选择该边两端，恰为独立集条件。</p>
+<p>对四个隐藏方向 g，令 H_g(K) 为部分观察。真实频率必须可写成：</p>
+<p>p_partial = Σ_K x_K · (1/4)Σ_g e_(H_g(K))，其中 x_K≥0，Σ_K x_K=1。</p>
+<p>这限制了四个观察必须能同时存在。不同观察单独合法，不足以说明它们能够拼成同一张图。实现并不需要一次创建所有 x_K：逐图行约束和全域分离承担同样的对偶检查职责。</p>
+<p>原模型 766 条交换等式在每个共同补全上逐项抵消，因此不应再把这些等式重复列为独立新增收益。</p>
+<h3>3. 为何相对朝向重要</h3>
+<p>一个空面向一个外方向延拓，记录 4 条连接边与平移面的 4 条内部边。空根有 16×15=240 种带根标号状态。若每个旗分别按 D4 取商，只剩 45 类，会丢失两个旗在根面上的相对位置。</p>
+<p>例如平移面全空、仅一条连接边的旗单独都是同类。但两个旗的连接边可以位于根面的同角、相邻角、对角；三种联合情况不能独立旋转为同一件事。</p>
+<p>正确处理是对两旗同步作用同一个根稳定子元素。令 P_g 为状态置换，使用 Q̄_r=(1/|G_r|)Σ_g P_g Q_r P_g^T。若 Q_r 半正定，群平均后仍半正定。</p>
+<div class="tablewrap"><table>
+<tr><th>根面</th><th>根掩码</th><th>带标号状态数</th><th>稳定子大小</th><th>单旗轨道数</th><th>无序旗对同步轨道数</th></tr>
+<tr><td>空面</td><td>0</td><td>240</td><td>8</td><td>45</td><td>3871</td></tr>
+<tr><td>一边</td><td>1</td><td>212</td><td>2</td><td>117</td><td>11463</td></tr>
+<tr><td>相邻二边</td><td>3</td><td>190</td><td>2</td><td>106</td><td>9241</td></tr>
+<tr><td>对边二边</td><td>6</td><td>187</td><td>4</td><td>60</td><td>4594</td></tr>
+<tr><td>三边</td><td>7</td><td>170</td><td>2</td><td>95</td><td>7410</td></tr>
+</table></div>
+<p>带标号 Q3 计数自检：240+4×212+4×190+2×187+4×170=2902。五种面块合计 36,579 个旗对条目轨道，顶点块再加 45 个独立上三角坐标。</p>
+<p>旧的根边 8/7、灰根 4、两层联合 64/56/49 阶块，可以通过线性映射 E Q E^T 和根群平均折入五类完整根面空间。旧六块与最终六块名称相同、定义不同；不能混用维数。折入的全域浮点自检最大差约 2.22×10^−16；最终证明直接核验最终矩阵，不依赖这个浮点等式。</p>
+<h3>4. 最终逐图不等式</h3>
+<p>完整 Q4 有 32 条边、24 张方格。对每个根面 F，两个外方向 k,l 的状态均由同一 K 读取：</p>
+<p>C_F(K) = (1/24)Σ_F Q̄_(r(F))[s(F,k),s(F,l)]。</p>
+<p>顶点处将四个方向分成两对，共 3 个无序划分。9 状态顶点矩阵贡献为：</p>
+<p>C_v(K) = (1/48)Σ_v Σ_{无序划分 A⊔B=[4]} Q_v[η(v,A),η(v,B)]。</p>
+<p>全域整数检查的对象为：</p>
+<p><strong>score(K)=e(K)/32+C_F(K)+C_v(K)≤C，所有合法 K⊆Q4。</strong></p>
+<p>PSD 约束作用于平均的有根联合统计。不能因单张真实图的联合矩阵有负特征值而删图；那会删掉证明必须覆盖的合法对象。</p>
+<h3>5. 为何这给出任意高维的渐近上界</h3>
+<p>随机取 G⊆Q_n 的坐标 Q4 限制 K，有 E[e(K)/32]=ρ(G)。固定根面 F，有 q=n−2 个外方向，u 为带标号状态频率，R 为两个不同外方向的有序联合分布，则：</p>
+<p>uu^T=((q−1)/q)R+diag(u)/q。</p>
+<p>因此 ⟨Q̄,R⟩ ≥ −M_F/(n−3)，其中 M_F 是五类面矩阵最大对角元的最大值。五类根型互斥，取最大值，无需把五个误差相加。</p>
+<p>顶点处独立抽两个方向对，其不相交概率 p_n=(n−2)(n−3)/(n(n−1))。PSD 给无条件平均非负，矩阵条目绝对值不超过最大对角元 M_v，故不相交条件平均 ≥−M_v(1−p_n)/p_n。</p>
+<p>最终得到 n≥4 时：</p>
+<p><strong>ρ(G)≤C+M_F/(n−3)+M_v(4n−6)/((n−2)(n−3))。</strong></p>
+<p>最终证书可取精确值 M_F=1288810336780277/1250000000000000，M_v=324664893404033/625000000000000。使用历史证书的对角常数代入新证书是不可靠的。</p>
+<p>令 n→∞ 即得 π_Q(C4)≤C。这只利用抽样独立性，没有假设边随机独立、度数规则、空面均匀。</p>
+<h3>6. 整数证书负责什么</h3>
+<p>六组整数 Gram 因子 L_b 定义 Q_b=L_b L_b^T/D²；同步群平均保持 PSD。最终证书的公共计分分母为 480000000000000000，全域最大分子为 283944735335493492，约分即最终 C。最坏图掩码 3602350111。</p>
+<p>核验器从几何重建系数，并先验证全部整数累加的绝对上界低于 2^63。搜索程序、预生成大系数表和浮点特征值都不负责最终数学认证。理论平均引理仍是上面的人类可读证明；程序认证有限部分，不能称为 Lean 核验。</p></section><section id="search"><div class="eyebrow">CHAPTER 03</div><a class="source" href="guide/03_SEARCH_AND_FULL_DOMAIN.md">Markdown 原稿 ↗</a><h2>Q4 最优已知证书的搜索、活动集与全域核验</h2>
+<h3>优化问题</h3>
+<p>在固定根旗空间内寻找半正定矩阵 Q_b 和尽量小的 C，要求每张合法局部图 K 满足 score_Q(K)≤C。这是一个半正定证书搜索问题。成功标准是可行矩阵和全域逐图不等式，不要求同时获得精确最优性证明。</p>
+<h3>一轮算法如何运行</h3>
+<ul><li>从已有证书或 Gram 快照热启动。保存输入哈希、模型结构、归一化和当前最佳全域分数。</li><li>选全域当前高分代表，加少量随机图，建立数千行活动集。</li><li>固定 PSD 秩一方向，解非负权重 LP；或直接优化 Gram 因子，用光滑极大值近似加速。</li><li>LP 的对偶行权重生成六类定价矩阵；负特征向量提供新的 PSD 秩一列。</li><li>对完整覆盖列表的 3,312,331 个代表重新计分，加入池外高分行。只有全域值下降才更新最佳候选。</li><li>在预算内重复；达到迭代上限只表示数值停止。</li><li>固定候选，导出整数 Gram 因子；用独立几何程序检查覆盖、溢出和全域最大值。</li><li>接受新的精确有理上界；保留较弱候选、失败过程和真实成本，便于后续分析。</li></ul>
+<p>最终 Q4 对照的初始化为全域最高 3000 行加随机 500 行（去重）；循环扫描全域，实际活动行数见轨迹 JSON。不同早期求解器的活动集大小并不相同，不能说每轮始终只有3500张图。</p>
+<h3>为什么有限活动集有效</h3>
+<p>活动集是求解器工作集，完整覆盖列表是分离域。小工作集可以漏掉约束，因为每轮都有完整分离；最终全域验证会发现遗漏。若只保留池内最优值而没有全域检查，就不再是已认证上界。</p>
+<p>refined 报告明确保留了一次失败：活动集约 0.59175，但全域最大得分约 0.83472。该候选被拒绝。失败说明小活动集会过拟合，并不说明局部图违法或理论被反例推翻。</p>
+<h3>完整域如何生成和证明覆盖</h3>
+<div class="tablewrap"><table>
+<tr><th>层次</th><th>数量</th><th>用途</th></tr>
+<tr><td>Q3 全部边集</td><td>4096</td><td>12 条潜在边</td></tr>
+<tr><td>无四环标号 Q3</td><td>2902</td><td>两层输入</td></tr>
+<tr><td>有序合法层对</td><td>8421604</td><td>2902²</td></tr>
+<tr><td>同步 Aut(Q3) 加层交换的层对轨道</td><td>90179</td><td>keys.bin</td></tr>
+<tr><td>合法带标记补全</td><td>13150453</td><td>每个层对枚举256种S并检查独立集</td></tr>
+<tr><td>实际全域计分覆盖代表</td><td>3312331</td><td>选最小隐藏投影编号，保留必要冗余</td></tr>
+</table></div>
+<p>任意合法 Q4 可选择使部分类型编号最小的隐藏方向，再将两层同步规范化为 keys 中的层对。该变换是 Q4 自同构，S 随之置换；因为所有 S 都检查，其等价像一定在验证域中。</p>
+<p>核验器重建 Q3 的48个自同构，检查90179轨道不重叠且覆盖8421604层对。它不只是相信预先给定“代表已全”的声明。</p>
+<h3>两种优化器的职责</h3>
+<p>秩一列生成将 Q_b 写成 Σ_t w_t v_t v_t^T，w_t≥0。有限列 LP 的最优不代表完整 SDP 已最优。moment_min_eig 是对偶定价矩阵的特征值；不是证书 Gram 矩阵的特征值，也不是原图违法指标。</p>
+<p>Gram 优化直接保持 PSD 表示，通过 L-BFGS 和平滑参数 τ 下降。tau变小、轮数变多、历史容量增大，是求解精度与预算变化，不应每次登记为新结构约束。</p>
+<h3>候选变化后的复用</h3>
+<p>完整覆盖列表、几何合法性、根旗索引、固定模型下的特征表可以复用。更换 Q 后，每张图的得分改变，必须全域重新计分。Q4 的优势是这个全量重计可执行；不需要每次重新证明图域存在性。</p>
+<p>整数化后也必须重验；浮点全域最高分仍不是最终有理数结论。最坏图可能变化，不能只复查旧最坏图。</p>
+<h3>搜索重放与证书重放分开</h3>
+<p>证书重放只需整数因子、keys、标准库和 C++17 编译器；不会重新跑优化。搜索重放需要 NumPy、SciPy、稀疏大表、热启动、参数及版本，浮点路径可能随 BLAS/求解器变化。必须以最终整数核验而不是逐位复制历史浮点轨迹验收。</p></section><section id="trajectory"><div class="eyebrow">CHAPTER 04</div><a class="source" href="guide/04_TRAJECTORY.md">Markdown 原稿 ↗</a><h2>Q4 上界搜索的真实轨迹与 RSI 接续账本</h2>
+<p>整理范围：Q4 的共同补全、根旗相对朝向、同模型求解精修，以及位于 <code>q5_empty_moment_20261028</code> 内的 <strong>纯 Q4 control</strong>。不整理 Q5/Q6 研究尝试。审计日期 2026-11-04；目录名保留交接约定的 20261103。本文件依据现存文件读取，未在本子任务重新运行历史大规模整数枚举。<code>trajectory.json</code> 保存各证书的精确比值、源 SHA256、历史逐条记录及复制关系；可由同目录 <code>build_trajectory.py</code> 再生成。</p>
+<h3>1. 应当先讲清楚的结论</h3>
+<p>在本次查验的 Q4 档案中，最佳已认证渐近密度上界为</p>
+<pre>\pi_Q(C_4)\le 23662061277957791/40000000000000000
+=0.591551531948944775.</pre>
+<p>安全向上八位小数是 <strong>0.59155154</strong>，不能把截断的 0.59155153 当作安全上界。它是五个面根 Gram 块加一个顶点块的 Q4 证书，不是对所选 SDP 的最优性证明，更不是所有可能 Q4 方法的能力极限；尚未突破 0.59。</p>
+<p>证据：<a href="certificate_final_q4/certificate_control.json">certificate_control.json</a>、<a href="certificate_final_q4/verification_control.log">verification_control.log</a>。证书虽有 <code>Q5_EMPTY_CUBIC_PARTITION_IDENTITY_V1</code> 格式标签，实际 <code>q5_cuts=[]</code>；日志明确 <code>six integer Gram blocks and 0 ... cuts</code>。模型归属必须依据实际非零项，而不能依据目录名或格式名。</p>
+<p>RSI 展示中可据此讲述“提出约束—实现—发现失败—修正—验证—固化下一步”的研究循环。现有材料<strong>不能</strong>支持“Q4 已经过 N 轮 ARIS 审稿、花了 M token、跨模型独立验收、自动修改 ARIS 技能带来提升”等额外叙述。</p>
+<h3>2. 数值主线：认证值与搜索值分开</h3>
+<div class="tablewrap"><table>
+<tr><th>阶段</th><th>真正改变了什么</th><th>可引用数值</th><th>证据与边界</th></tr>
+<tr><td>Baber 文献基准</td><td>部分指定 Q4、额外一致性</td><td>0.60318</td><td>本地两份研究报告引用 arXiv:1201.3587v2 Theorem 4.1；此任务未联网核验当前最优文献或优先权</td></tr>
+<tr><td>本项目前期重建</td><td>部分 Q4、旧六块、766 条交换等式</td><td>报告记载 0.60410234</td><td>本次指定包只见继承证书/摘要，不能称已精准复现 Baber 0.60318</td></tr>
+<tr><td>完整补全控制</td><td>四个隐藏方向来自同一合法完整 Q4，保留旧六块</td><td>120070118115469/200000000000000 = 0.600350590577345</td><td><code>certificate_six.json</code>、<code>six_verification.log</code></td></tr>
+<tr><td>完整补全+新增根旗</td><td>新增真实空面45阶块及顶点9阶块，总八块</td><td>119941059204403/200000000000000 = 0.599705296022015</td><td><code>certificate.json</code>、<code>standalone_verification.log</code>，安全显示0.59970530</td></tr>
+<tr><td>相对朝向结构升级</td><td>五种完整面根，保留同步根坐标；旧块可拉回折叠</td><td>18933741304467/32000000000000 = 0.59167941576459375</td><td>refined目录 <code>certificate.json</code>、<code>verification.log</code>，安全显示0.59167942</td></tr>
+<tr><td>同模型中间精修</td><td>同六块继续调 Gram/列与权重</td><td>44371786539739/75000000000000 = 0.591623820529853333…</td><td>optimization目录 <code>certificate28a.json</code>、同名<code>.log</code>，安全显示0.59162383</td></tr>
+<tr><td>同模型精修</td><td>继续全域分离与优化</td><td>236634773493897/400000000000000 = 0.5915869337347425</td><td><code>final_certificate.json</code>、同名<code>.log</code>、<code>run_manifest.json</code></td></tr>
+<tr><td>同模型最终 control</td><td>仍为六 PSD 块；新增切面数量为零</td><td>23662061277957791/40000000000000000 = 0.591551531948944775</td><td>control证书和日志；安全显示0.59155154</td></tr>
+</table></div>
+<p>前两次数学结构升级与后面的数值精修不能混为一谈。结构升级改变允许的证书空间或共同来源条件；精修改善同一空间内找到的可行证书。不同阶段预算不同，数值差不是对应松弛最优值差的严格消融。</p>
+<p><strong>0.5916766 的处理</strong>：在指定的 early/refined/optimization/control 证书、报告及相关日志中未定位到它。refined 正式证书确实是 <strong>0.59167941576459375</strong>，不可用一个相近的口头数字替换。交接 JSON 将 0.5916766 列为待定位数字，待提供其证书或原始日志后再入主线；不臆造该节点。</p>
+<p>完整源目录：</p>
+<ul><li><a href="certificates/Q4_059970530_certificate/研究报告.md">早期完整补全研究包</a>。</li><li><a href="certificates/Q4_refined_certificate_20261027/研究报告.md">相对朝向研究包</a>。</li><li><a href="research/optimization_20261028_q4/run_manifest.json">20261028精修运行清单</a>。</li><li><a href="certificate_final_q4/result_control.json">最终control结果</a>。</li></ul>
+<h3>3. 第一项有效结构加强：共同完整补全</h3>
+<p>灰边意为未观察，而不是缺失。Baber 已经考虑观察的一致性，因此不能宣称本项目首次发现“应当共同来源”的原则。这里可确认的具体实现是：对于完整合法 K⊆Q4，令 H_g(K) 为隐藏方向 g 的部分观察，将部分分布限制为</p>
+<pre>p=\sum_K x_K\frac14\sum_{g=1}^4e_{H_g(K)},\quad x_K\ge0,\ \sum_Kx_K=1.</pre>
+<p>完整 K 写成两层 A,B⊆Q3 与连接边位置 S⊆V(Q3)。A、B 已无 C4 时，K 合法等价于 S 在 A∩B 中为独立集。这给出可完备枚举的来源，避免把互不相容的隐藏方向观察任意混合。</p>
+<p>覆盖账本：Q3 无C4标号图 2,902；有序层对 8,421,604；同步 Aut(Q3)+交换层后的部分类型90,179；合法带标记补全13,150,453；取最小隐藏类型切片后的覆盖代表3,312,331。仅按四个隐藏类型的无序四元组去重得3,212,724，该数也<strong>不是</strong>完整Q4同构类数。报告引述Baber的完整Q4类数3,212,821，三者不可混用。</p>
+<p><code>joint_shadow_summary.json</code> 记录旧766条交换等式在这些共同补全上逐项抵消，<code>exchange_identity_nonzeros=0</code>。它们在此模型中冗余，移除优化乘子不等于丢失约束。旧矩阵直接换检查域时分数几乎不变（约0.60410231865）；降到0.60035059还需要重新优化，不能把改变数据结构本身当作已经完成下降。</p>
+<p>新增空面45阶块记录真实空面根一个外方向的240个带根状态按D4分别取商；顶点9阶块记录两方向方格的15种合法状态按方向交换取商。早期总块维数8,7,4,64,56,49,45,9。两类新增块均有高维根频率平方的非负性来源，局部使用不放回抽样，最后留 O(1/n) 误差。</p>
+<p>搜索原件 <code>joint_history.json</code> 有150条记录，最后保留最好全域浮点界0.6003505525129074；<code>full_flags_history.json</code> 有180条记录，最好0.5997052622754959。最后一条当前全域值0.5998952182400273，反而较坏；正式证书对应保存的最佳候选（证书iteration=178），不能盲取末行。</p>
+<h3>4. 第二项有效结构加强：两臂同步取商保留相对朝向</h3>
+<p>旧45态空面块让两个延拓各自旋转，抹掉了相对位置。例如两臂各一条连接边时，同顶点、相邻顶点、对顶点被单旗商混为同类。改进保留共同根顶点标号，只允许同一个根稳定子同时作用于两臂，并扩展到全部五种合法根面。</p>
+<div class="tablewrap"><table>
+<tr><th>根面掩码</th><th>含义</th><th>完整带标号延拓态</th><th>稳定子阶</th><th>同步无序旗对轨道</th></tr>
+<tr><td>0</td><td>空面</td><td>240</td><td>8</td><td>3,871</td></tr>
+<tr><td>1</td><td>一边</td><td>212</td><td>2</td><td>11,463</td></tr>
+<tr><td>3</td><td>相邻二边</td><td>190</td><td>2</td><td>9,241</td></tr>
+<tr><td>6</td><td>对边二边</td><td>187</td><td>4</td><td>4,594</td></tr>
+<tr><td>7</td><td>三边</td><td>170</td><td>2</td><td>7,410</td></tr>
+</table></div>
+<p>根面项归一化1/24，顶点项1/48；五根面共36,579个线性轨道坐标，加9阶顶点的45个坐标，共36,624。最终六块240,212,190,187,170,9，替代早期六块时靠正向拉回 E Q Eᵀ 与群平均保PSD。<code>folding_audit.json</code> 对3,312,331代表比较最大误差2.220446049250313e-16，说明折叠是重参数化；它本身不产生新数学信息。真正新增的是完整根态与同步相对朝向，折叠则清除冗余参数、方便联合求解。</p>
+<p>refined日志呈现多个阶段而非一次黑盒成功：<code>fullface_history.json</code> 66条，最好0.5948425109069094；<code>smooth_history.json</code> 7条，最好0.5934560950743827；<code>adaptive_history.json</code> 65条，最好0.5917027352328228；<code>refine_history.json</code> 24条，最好0.5916794118261364，再整数化为0.59167941576459375。它们是各自求解器日志的记录数量，不能加总成ARIS审稿轮数。</p>
+<h3>5. 活动池—列生成—全域分离的实际闭环</h3>
+<p>最终control的 <a href="research/q5_empty_moment_20261028/column_lift.py">column_lift.py</a> 可逐步对应算法：</p>
+<ul><li>从 <code>optimization_20261028_q4/q5control_best.npz</code> 继承六块候选。注意这个快照仍是Q4 control；名称不决定数学层级。</li><li>初始化池为全域评分最大的3,000行并加500个随机行去重。最终control历史20条均记录3,500活动行。</li><li>将 PSD 写成非负秩一列的组合；求有限LP，必须先确认HiGHS <code>kOptimal</code>。</li><li><code>scores=M.evaluate(x)</code> 对全部覆盖代表评分；<code>full_upper=max(scores)</code>，与有限LP的 <code>restricted_objective</code> 分开记录。只以全域值决定是否替换best快照。</li><li>由活动行LP对偶分布形成各块定价矩阵，负特征向量生成新PSD秩一列。每块每轮至多取4个负方向；清理早期权重近零旧列。</li><li>找所有池外 <code>scores&gt;obj+2e-8</code> 的行，每轮最多加入最超分的300行；重新优化，继续扫描。control这20轮未增加活动行，但代码完整保留分离过程。</li><li><code>--no-q5</code> 同时关闭初始额外切面与动态切面定价，保证纯Q4控制；最终历史20条 <code>active_cuts=0</code>、<code>cut_weight_sum=0</code>、<code>new_cuts=0</code>。</li><li>浮点最优快照再整数Gram化，独立整数验证才能作为最终界。</li></ul>
+<p>最终control记录：第0轮全域0.591552980866392，第19轮0.5915515273696977；列数36→170；活动行3,500；末轮对偶定价矩阵最小特征值约−0.00056927。负值不否定候选证书的PSD，因为它属于<strong>对偶定价矩阵</strong>，也表明尚不能宣称当前松弛已最优。history <code>seconds=29.6163</code> 为该进程累计时间，不能逐行相加，也不是整个研究项目耗时。</p>
+<p>最终量化D=50,000,000，六组整数L构造 LLᵀ/D²，再群平均；全域精确最大283944735335493492/480000000000000000，最坏图掩码3602350111。整数化的界比浮点值稍高，必须报告整数化后的数。</p>
+<p>最终独立核验重建几何、验证层对轨道无重叠且全覆盖、枚举全部合法补全，再直接计数局部式；它没有依赖优化系数大表来认证。日志尾部虽仍有通用Q5说明句，不能覆盖前面明确的0 cuts事实。</p>
+<h3>6. 同模型精修：没有增加数学约束的下降</h3>
+<p>optimization清单记录CPU搜索，Windows11、Python3.14.0、NumPy2.4.2、SciPy1.17.0；BLAS1线程、评估2线程。不是GPU训练，也不是本仓库下界CP-SAT递归搜索。Q4上界路线是PSD/LP/Gram优化，不能强套CP-SAT状态或GPU预算模板。</p>
+<p><code>run_manifest.json</code> 的三段实际配置为 joint28：12 cycles×500 iterations，tau=2e−6；column28：80列生成轮、每块4 rays；fine28：4 cycles×1000 iterations，tau=2e−7。对应历史都存在。joint28末全域0.5915990764852368；column28从另一受限ray起点得到0.5916398272445839，<strong>并未胜过joint28最佳</strong>，应保留为未赢的数值尝试；fine28末全域0.5915869304539451，认证0.5915869337347425。</p>
+<p>随后纯Q4 <code>q5control_history.json</code> 8个cycle进一步浮点改善至0.5915554428218575；最终20轮control列生成继承它。run_manifest记录同一起点的协议和输入SHA256。不要把优化目录复制进来的旧 <code>certificate.json</code> 当作最后证书：该文件仍为0.59167942；真实精修结果在 <code>final_certificate.json</code>。</p>
+<p>optimization中多个旧history与refined逐字一致。<code>trajectory.json</code> 按SHA256标记duplicate_of，禁止将复制的历史算成新执行次数。</p>
+<h3>7. 必须保留的失败、冗余与不充分方向</h3>
+<div class="tablewrap"><table>
+<tr><th>尝试</th><th>原始证据</th><th>可以得出的判断</th><th>不可扩大的判断</th></tr>
+<tr><td>80条粗补全投影约束</td><td>early <code>extension_history.json</code> 12条，active_completion_cuts全为0，max_mu=0；报告§8</td><td>这段短程求解没有给这些约束正权重</td><td>不能断言所有这类约束均无用；不能归因0.59970530下降于它们</td></tr>
+<tr><td>766交换等式</td><td><code>joint_shadow_summary.json</code> nonzeros=0</td><td>共同补全逐点抵消，当前模型冗余</td><td>不能说Baber未使用一致性</td></tr>
+<tr><td>单旗分别取商</td><td>refined报告、final_metrics</td><td>有效但丢相对朝向；固定证书投影全根旗后全域最大约1.042117861</td><td>不能把此差值说成重优化后的最优收益</td></tr>
+<tr><td>活动池过拟合</td><td>refined <code>deep_history.json</code> 1条；报告§7</td><td>池上约0.59175候选的全域值0.8347202840891347，被拒绝并补800行</td><td>有限池低值不是上界</td></tr>
+<tr><td>目标密度0.59的伪分布搜索</td><td><code>dual_target_history.json</code> 48条采样记录，最后iteration=9400</td><td>密度约0.59且质量约1，但各块仍有负特征值，最小约−4.165e−6</td><td>没有得到对偶可行证书；未证明Q4不能突破0.59</td></tr>
+<tr><td>PDHG投影鞍点</td><td><code>pdhg_history.json</code> 20条记录，末iteration=7999</td><td>末两种全域候选约0.59605/0.59580，未赢已有最好0.5917155</td><td>不是更强认证，dual_objective不能直接当上界</td></tr>
+<tr><td>共正Horn初步定价及PSD修复定价</td><td><code>horn_pricing.json</code>、<code>horn_psd_repair_pricing.json</code>、README</td><td>前者存在负定价值，修复后本次记录为正，未进入最终六PSD证书</td><td>未证明穷尽所有非PSD有效方向，也没有新认证界</td></tr>
+<tr><td>固定矩阵删块消融</td><td>early <code>variant_audit.json</code>；refined <code>final_metrics.json</code></td><td>证明该份证书使用对应信息</td><td>不等于删块后重新优化的最优值对照</td></tr>
+<tr><td>求解器迭代限额</td><td>多处success=false / optimizer_status=1</td><td>候选仍可由Gram与全域整数化有效认证</td><td>不能把迭代停止写为达到最优，也不应仅因优化未收敛废弃已精确认证证书</td></tr>
+</table></div>
+<h3>8. ARIS实际执行证据与叙述边界</h3>
+<p><span title="历史源路径">.aris/PROJECT_BRIEF.md</span> 定义证书为准、同族review为provisional、不得按文件名挑最新最优等项目规则；其主要描述仍是下界CPU CP-SAT路线。不能凭该文件的存在推导这批外部Q4上界全部由某个指定ARIS技能、某个模型或固定审稿协议完成。</p>
+<p><span title="历史源路径">.aris/ERDOS86_PROOF_GOAL.md</span> 的v6.xx是另一条一般证明推导历史；<code>.aris/traces/research-review/2026-10-12_*</code> 有真实请求响应，但内容主要是Q8等构造/研究审查，并非本次20261027—28 Q4六块证书的逐调用审稿档案。不能移植这些轮数、模型或token到Q4轨迹。</p>
+<p>在本次审计范围内，可确证的是代码、数值history、认证快照、精确证书、独立验证日志，以及汇总材料描述的机制。尚未定位本条Q4线对应的逐调用ARIS prompt/response、review角色、token统计、人员或模型操作分工。JSON因此将review_rounds/token/cross_model_review留空，不能补0，也不能猜数。搜索日志20/80/180条是优化器迭代记录；与ARIS审查次数概念不同。独立验证器表示实现路径独立，<strong>不是已经获得第三方复现</strong>。</p>
+<p>因此，展示可用的准确说法是：“项目采用可追踪的研究迭代与证书门控，现有档案展示了从结构建模、数值搜索、失败反例到整数认证的闭环；Q4的ARIS逐调用元数据尚不完整。” 不宜将其包装成已经测量的技能自修改或元级递归自我改进实验。</p>
+<h3>9. RSI可接续状态：下一轮要继承什么</h3>
+<p>基线应锁定control精确分数与六块整数证书；求解可继承 <code>final_control_best.npz</code>，验证须使用正式 <code>certificate_control.json</code>。保留 <code>keys.bin</code>、几何生成器、根面块表、model/evaluate、独立验证器及其依赖。输入SHA256以当前复制清单和源件现值为准，旧manifest仅说明当时绑定，不自动证明源文件后来未变。</p>
+<p>同模型接续可选择进一步秩一列定价、Gram平滑优化、活跃行管理、同步群作用下的对称压缩。每个方向先声明它只是求解/表示改进，还是改变数学证书锥。负定价特征值说明数值可继续探索，但不承诺存在严格下降；低于0.59仍为目标，不是结果。</p>
+<p>下一轮最小账本字段：run_id、真实开始/结束时间、父快照路径与SHA256、代码SHA、模型块/归一化/根群、CPU与线程预算、seed、优化停止条件、活动池来源及新增行数、restricted/full/best三种值、Gram整数尺度、认证后精确值与安全小数、独立验证退出状态、最坏Q4图、结论范围。若实际调用ARIS reviewer，另存完整请求响应、模型与usage；未取到usage记unknown。</p>
+<p>防止虚假改进的硬门：</p>
+<ul><li>所有候选的上界取全覆盖3,312,331代表的最大值；只优化最密/极大/近紧图都不够，计分含正负项，不具单调性。</li><li>对覆盖与同构类分开计数，验证90,179部分轨道覆盖全部有序层对。</li><li>保存历史最佳，保留失败；不得将restricted objective、最后一行或未认证快照替换正式基线。</li><li>所有PSD最终由整数Gram及同步群平均保证；舍入后必须重新全域整数计分和检查溢出。</li><li>新约束声称必须给真实高维来源、抽样归一化、共享根坐标与O(1/n)误差，不从数值有限测试直接跳到一般定理。</li><li>同预算、同起点对照才能支持收益归因；固定删块只说明某份证书用到了信息。</li><li>任何“Q4最优”表述改为“本次档案中最佳已认证Q4证书”，除非补全合法对偶最优性证书。</li><li>渐近密度不直接乘有限Q8边数；当前有限维修正为面根最大对角/(n−3)加顶点碰撞修正。</li><li>文件名、目录名、format标签不决定层级；检查六块与所有额外项实际权重。</li><li>报告新改进以精确有理数比较；浮点改善若整数化后未胜基线，登记为未改善。</li></ul>
+<p>主线数学尚未完成：没有证明π=1/2，也没有证明当前Q4松弛的最优界；本次交接完成的是可接续、可审计的历史状态。</p></section><section id="rsi"><div class="eyebrow">CHAPTER 05</div><a class="source" href="guide/05_RSI_REUSE_AND_STATE.md">Markdown 原稿 ↗</a><h2>RSI 后续迭代：可复用知识、状态接口与验收门槛</h2>
+<p>本文件给后续系统读取研究经验，不会恢复历史 Goal、启动求解器或预先生成新技能。RSI 在本包中指基于真实研究轨迹改进下一轮研究流程；本次未运行自我修改循环，也未证明该流程有普适性能优势。</p>
+<h3>已有证据支持的经验</h3>
+<div class="tablewrap"><table>
+<tr><th>观察</th><th>可复用规则</th><th>证据与适用边界</th></tr>
+<tr><td>单个观察合法，四观察未必共同可补全</td><td>用同一个完整局部对象生成所有观察</td><td>共同补全报告、独立集等价条件；不能把所有边际相容等同全局可实现</td></tr>
+<tr><td>单旗取商损失相对朝向</td><td>共享根的对称变换必须同步作用</td><td>refined 根旗表与相对连接位置实例</td></tr>
+<tr><td>只看活动池得到过低数值</td><td>每轮分离全域，固定候选再整数检查</td><td>约0.59175/0.83472失败对照</td></tr>
+<tr><td>存在有效新约束不等于改善最优界</td><td>同预算重新优化基线，记录实际证书是否使用新项</td><td>固定矩阵消融不能代替重新优化</td></tr>
+<tr><td>多轮优化也可能仍有负定价方向</td><td>保存全域可行上界与未闭对偶状态</td><td>min_eig的语义不能与最终PSD混同</td></tr>
+<tr><td>浮点值比有理证书略低</td><td>接受精确化后的全域最大值</td><td>最终certificate与validation日志</td></tr>
+<tr><td>目录名不能确定模型维数</td><td>读取有效项、矩阵维数和非零权重</td><td>最强成果来自外层实验的零附加项Q4对照</td></tr>
+</table></div>
+<h3>单次迭代的建议记录字段</h3>
+<p>run_id、parent_certificate_sha256、hypothesis、mathematical_change、solver_change、input_hashes、coverage_id、active_rows、psd_columns、restricted_objective、full_domain_float_max、exact_bound、status、counterexample、timing_raw、timing_semantics、decision、restart_condition、source_files。</p>
+<p>这些是后续建议字段，不表示历史每轮都有该字段。本包机器轨迹缺失值应保持 null；不能补造当时的思想、token、代理身份、评分、等待时间或人工反馈原文。</p>
+<h3>建议的验收状态</h3>
+<p>IDEA：明确对象和希望排除的统计；DERIVED：证明约束对所有高维真图有效；IMPLEMENTED：系数与共同标号测试通过；FLOAT_FULL_PASS：完整域浮点验证；EXACT_FULL_PASS：Gram和全域整数验证；ACCEPTED_BOUND：平均证明与证据范围均齐。</p>
+<p>任何新的模型宣称“包含旧模型”，都应给正向嵌入或旧证书可继续使用的证明。任何维数缩减、取商、重标号或归一化改变都应重新检查对称不变性及密度平均关系。</p>
+<h3>如何及时停止无效路线</h3>
+<p>先问新条件是否已经逐张Q4自动成立、是否只重写了当前矩阵锥、是否在近最优伪分布上有违反。若新增乘子始终为零，仅说明该次求解未找到收益；不能证明一般无效。若有反例推翻定理，应保存精确见证并停止使用其结论。</p>
+<p>同一模型的小幅下降记为求解改善。只有改变可行集合或证书锥且有推导，才记为结构增强；单次下降不能保证今后每轮都下降10^−4。用户曾提出阈值目标，是研究目标，不是历史每轮已完成的事实。</p>
+<h3>避免事后答案泄漏</h3>
+<p>用于知识沉淀可读取完整最终包；用于历史断点盲测时，应只提供该轮之前存在的材料。后续证书、最终最坏图、事后总结与本次导读不能倒灌为当时已知信息。trajectory中的顺序主要来自报告和日志，不代表恢复了全部聊天上下文。</p>
+<h3>继续前应读取</h3>
+<p>先读最强certificate、数学平均证明、实际全域日志，再看历史快照和轨迹。保持最佳已认证界不被较弱候选覆盖。原材料中的“下一步”“ACTIVE”“启动”只作历史，不构成本包的新执行指令。</p></section><section id="replay"><div class="eyebrow">CHAPTER 06</div><a class="source" href="guide/06_REPRODUCTION_AND_COSTS.md">Markdown 原稿 ↗</a><h2>复现层次、真实成本与资料边界</h2>
+<h3>层次一：结果核对</h3>
+<p>读取 certificate_final_q4/ 的整数证书、证书说明和 validation/ 的本次重放日志。精确分数应为23662061277957791/40000000000000000，最坏图3602350111，六个有效Gram块，无附加切面。</p>
+<h3>层次二：独立有限核验</h3>
+<p>依 certificate_final_q4/README.md 的相对路径命令运行验证器。需要 Python 标准库与支持C++17的编译器。不得使用-DNDEBUG，否则原始assert检查可能被关闭。重建几何和整数分数，不依赖NumPy/SciPy或搜索大表。</p>
+<p>应得到：8421604层对覆盖、90179层对轨道、13150453合法带标记补全、3312331代表检查，以及精确最大分子283944735335493492/480000000000000000。任何单项失败均不能登记为证书通过。</p>
+<h3>层次三：研究搜索重放</h3>
+<p>按research/中的源码、快照和数据索引重建或读取大系数表，运行活动集/列生成/Gram优化，再导出精确证书。历史环境记录为Windows11、Python3.14.0、NumPy2.4.2、SciPy1.17.0、MinGW g++15.2.0；这些是历史实际版本，不承诺其他环境浮点轨迹相同。</p>
+<p>研究脚本可能仍保留原工程布局和绝对路径；这是原件存档。可移植核验入口由本次工程整理提供。不要把未实际执行的搜索命令写为本次已经重放成功。缺少或未携带的大表必须明确由生成器重建，不得悄悄缩小全域。</p>
+<h3>成本解读</h3>
+<p>历史日志中的seconds大多是同一脚本自启动起的累计墙钟，不能逐行相加。不同脚本可能并行，不能把末行累计值相加冒充端到端研究总耗时。完整聊天推理时间、token消耗和部分等待没有原记录，故不估造。</p>
+<p>例如joint28_history末轮约409.36秒、fine28_history末轮约269.20秒，只能说明这两个脚本各自记录的累计时间。它们不包括此前研究、数据生成、其他求解分支、验证和人工时间。</p>
+<p>本次归档、哈希与重验的时间仅代表2026-11-04交付工作，不替代原始研究成本。机器可读轨迹保留原时间字段，详见history和guide轨迹表。</p>
+<h3>证据范围</h3>
+<p>整数核验是有限局部计算；随机限制平均的数学论证是另一个必要环节。随机自同构测试、抽样系数对照用于发现错误，不能替代穷尽覆盖。程序独立于求解系数表，不等于跨作者审阅或Lean形式化。</p>
+<h3>交接包实际命令与路径恢复</h3>
+<p>在包根目录先运行 <code>python tools/verify_handoff.py --require-manifest</code> 检查哈希，再运行 <code>python tools/verify_final_q4.py</code> 做从源编译的全域整数核验。具体编译器要求为 GCC/Clang C++17（使用 __int128），不是任意MSVC C++17均可。</p>
+<p>原件SHA去重后，逻辑路径与实际存储路径可能不同。若要重放历史研究，先运行 <code>python tools/materialize_research.py ../q4_research_work</code>，再按根目录REPRODUCE.md进入恢复的工作树。不要在冻结原件上运行会覆写结果的认证脚本。</p>
+<p>最终列生成实际种子为20261029，与历史manifest的20261028不一致。本包保留差异并以执行脚本为重放依据。历史certify_lift.py固定写certificate.json/result.json，须在scratch副本使用。最终独立核验不需要上述优化环境。</p>
+<p>本次可移植全域核验实际约11.234秒，仅指本机该次编译与核验，不是原研究全流程耗时或通用性能保证；见validation/portable_q4_recheck_20261104.log。</p></section><section id="audit"><div class="eyebrow">CHAPTER 07</div><a class="source" href="guide/07_EVIDENCE_AUDIT.md">Markdown 原稿 ↗</a><h2>Q4 证据审计与可复现性</h2>
+<p>审计日期：2026-11-04。源目录只读；以下结果由本轮原始文件审读和独立整数核验获得。</p>
+<h3>当前最强已找到的可认证上界</h3>
+<p><code>pi_Q(C4) &lt;= 23662061277957791/40000000000000000 = 0.591551531948944775</code>，向外小数 <code>0.59155154</code>。 这是渐近密度上界，未达到 0.59；不代表 Q4 层级理论最优、SDP 全局最优、有限 Q8 上界或 Erdős 1/2 猜想证明。 最终文件虽位于 <code>q5_empty_moment_20261028</code>，其 <code>q5_cuts=[]</code>，六块均为整数 Gram PSD，因此保留它不包含任何 Q5/Q6 尝试。</p>
+<h3>精确证书里程碑</h3>
+<div class="tablewrap"><table>
+<tr><th>阶段</th><th>精确分数</th><th>小数</th></tr>
+<tr><td>complete Q4 + real empty face</td><td>119941059204403/200000000000000</td><td>0.599705296022015</td></tr>
+<tr><td>full oriented face root refinement</td><td>18933741304467/32000000000000</td><td>0.59167941576459375</td></tr>
+<tr><td>joint six-block optimization</td><td>236634773493897/400000000000000</td><td>0.5915869337347425</td></tr>
+<tr><td>best found certified pure-Q4 control</td><td>23662061277957791/40000000000000000</td><td>0.591551531948944775</td></tr>
+</table></div>
+<p>所有源路径、SHA-256、大小和证明角色见 <code>audit/evidence_audit.json</code>；整数因子是权威数据，小数矩阵/浮点快照不替代证书。</p>
+<h3>六块的几何定义与归一化</h3>
+<p>Q2 根面四条边按 <code>(0,1),(0,2),(1,3),(2,3)</code> 编码。五种合法根型掩码 <code>0,1,3,6,7</code> 分别为空、单边、相邻双边、不相交双边、三边路径；全四边因 C4 禁止。 一个外部方向的旗状态为 <code>connector_mask + 16*translated_square_mask</code>。保留共同根标号、合法的连接边和翻译面边；五块阶数为 240、212、190、187、170。 矩阵的两个旗由同一个根稳定子元素同步作用；不能把两旗分别旋转后独立取商。根稳定子大小依次为 8、2、2、4、2。 第六块是顶点根：含根顶点的 Q2 四边状态按两个方向交换取商，合法状态 9 个，矩阵 9×9。Q4 上对 16 个顶点和每顶点三种互补方向对划分平均。 局部不等式为 <code>e(K)/32 + C_F(K) + C_v(K) &lt;= C</code>。<code>C_F</code> 对 24 个根面平均；<code>C_v</code> 对 48 项平均。原 C++ 统一分母 <code>192 D²</code>，<code>D=50000000</code>。</p>
+<h3>全域覆盖及本轮实际复核</h3>
+<p>Q3 合法图 2,902 个，所有有序层对 8,421,604 个，由 90,179 个互不重叠的自同构轨道覆盖。对每轨道层对枚举全部 256 个连接边掩码，经 C4 条件保留 13,150,453 个合法带标记补全，再按隐藏方向最小轨道序号筛选直接计数 3,312,331 个代表。 最后一个数字是核验器行域大小，不能写成全部非同构 Q4 图数量。覆盖结论来自核验器重建 48 个 Q3 自同构并检查每个合法有序层对。 本轮在 <code>audit/recheck/</code> 复制原始四个最小文件，运行 <code>python -B verify_q5.py certificate_control.json</code>；重新编译 C++17 后退出 0。 精确最大值 <code>283944735335493492/480000000000000000</code>；最坏局部图掩码 <code>3602350111</code>。这是局部不等式的最大值，不是渐近极值构造。 此处“独立”指不读取优化端系数表、从几何直接重建；仍是同族代理审计，不能声称跨研究者/跨模型独立验收或 Lean 形式化证明。</p>
+<h3>最终对角界与高维平均证明</h3>
+<p>本轮从最终整数 Gram 因子逐行平方求和，并与 <code>result_control.json</code> 精确分数逐项交叉核对。</p>
+<div class="tablewrap"><table>
+<tr><th>块</th><th>阶数</th><th>最大对角元（精确）</th></tr>
+<tr><td>0</td><td>240</td><td>1288810336780277/1250000000000000</td></tr>
+<tr><td>1</td><td>212</td><td>247334669209467/250000000000000</td></tr>
+<tr><td>2</td><td>190</td><td>298707993982323/312500000000000</td></tr>
+<tr><td>3</td><td>187</td><td>37933932961587/39062500000000</td></tr>
+<tr><td>4</td><td>170</td><td>2195329262306569/2500000000000000</td></tr>
+<tr><td>5</td><td>9</td><td>324664893404033/625000000000000</td></tr>
+</table></div>
+<p><code>M_F=1288810336780277/1250000000000000</code>；<code>M_v=324664893404033/625000000000000</code>。 固定根面且 q=n−2 时，方向频率 u 和不同方向联合分布 R 满足 <code>uu^T=((q-1)/q)R+diag(u)/q</code>。PSD 与最大对角界推出面根平均至少 <code>−M_F/(n−3)</code>。 顶点根下两个随机方向对不相交的概率 <code>p_n=(n−2)(n−3)/(n(n−1))</code>。无条件 PSD 平方型非负且矩阵条目绝对值不超过 <code>M_v</code>，条件平均至少 <code>−M_v(1−p_n)/p_n</code>。 故 n≥4 时 <code>rho(G) &lt;= C + M_F/(n−3) + M_v(4n−6)/((n−2)(n−3))</code>；令 n→∞ 得渐近结论。该解析平均步骤依据历史研究报告/README，不由有限整数扫描单独证明。 本轮按完整整数矩阵重算绝对算术安全界为 <code>3045579237691790784 &lt; 2^63</code>。</p>
+<h3>最小运行与搜索重现</h3>
+<p>最小核验仅需 <code>certificate_control.json, keys.bin, verify_q5.py, verify_local.cpp</code> 四文件及 Python 标准库、GNU/Clang C++17 编译器，无需 NumPy/SciPy/求解器/互联网。在可写副本运行：</p>
+<pre>python -B verify_q5.py certificate_control.json</pre>
+<p>如改成纯 Q4 包装器，保持证书字节不变，先断言 q5_cuts 为空；保留原核验器作为归档。不要关闭 Python/C++ assert。 可选搜索重现须保留模型目录与控制目录的相邻布局，依赖清单已列在 JSON；需额外 NumPy 2.4.2、SciPy 1.17.0、OpenMP。无需复制 Q5 的 cuts/partition/moments 文件。</p>
+<pre>cd optimization_20261028_q4
+g++ -O3 -shared -fopenmp -fPIC evaluate.cpp -o evaluate.so
+cd ../q4_control
+python column_lift.py --no-q5 --rounds 20 --prefix final_control
+python certify_lift.py --input final_control_best.npz
+python verify_q5.py certificate.json</pre>
+<p>上面的 <code>q4_control</code> 是推荐可移植目录名；原始脚本依赖其兄弟目录 <code>optimization_20261028_q4</code>，前提是已复制相应数据文件。浮点路径受 BLAS/平台影响，不承诺逐位重获同一界。证书验证才是决定性结果。 Windows 编译共享对象需使用相应 DLL 选项并保持 ctypes/C++ ABI 一致。原 <code>certify_lift.py</code> 无论输入名称都覆盖当前副本的 <code>certificate.json</code>，应在 scratch 中运行，再明确重命名输出。</p>
+<p>历史数据重建入口为 <code>prepare_data.py</code>, <code>build_face_orbits.py</code>, <code>generate_models.cpp</code>；旧 <code>full_C/full_meta</code> 来自 <code>build_full_flags.py/full_flags.cpp</code>，还需完整历史输入链，详见 JSON。直接证书核验不需要这条大数据重建链。</p>
+<h3>可移植修复清单</h3>
+<ul><li>Use explicit executable .exe suffix on Windows, and use UTF-8/ASCII text I/O.</li><li>Original wrapper writes matrices/executable in its source directory: run a writable copy.</li><li>Compiler needs C++17 plus GNU/Clang __int128 and __builtin_popcount extensions; plain MSVC is not supported.</li><li>Keep assertions enabled: do not use Python -O or C++ -DNDEBUG.</li><li>Binary geometry uses native int32/uint16 layout; supplied files were produced on little-endian x86-64.</li><li>model.py ctypes c_long / C++ long is 32-bit on Windows and 64-bit on Linux; maintain ABI agreement.</li><li>evaluate.so must be rebuilt on target OS (Windows DLL or Linux shared object), with OpenMP.</li><li>Search imports SciPy private scipy.optimize._highspy._core; pin NumPy 2.4.2 / SciPy 1.17.0 or adapt API.</li><li>column_lift.py uses RNG seed 20261029, while historical run_manifest.json says 20261028; use script value and record this metadata discrepancy.</li><li>column_lift.py and certify_lift.py expect sibling optimization_20261028_q4 directory; rewrite paths if reorganized.</li><li>Final control certificate is stored under Q5-named directory and proof_type, but q5_cuts is empty; remove misleading Q5 labels in portable Q4-only entry point.</li><li>certify_lift.py writes certificate.json/result.json regardless input; run in scratch copy and rename control outputs afterwards.</li><li>continue_joint.py reads refine_latest.npz active set even when --input is explicit; retain that dependency or replace with deterministic initialization.</li><li>Older README finite-dimension correction constants belong to older matrices; use final bounds recalculated here.</li></ul></section><footer>本页由包内 Markdown 确定性生成；原始文件与本次导读分别保存。历史指令不自动触发新的研究作业。数据缺失保持未知，复制的日志不重复计作新实验。</footer></main></body></html>

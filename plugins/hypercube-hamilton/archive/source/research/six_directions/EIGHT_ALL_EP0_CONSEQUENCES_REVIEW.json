@@ -1,0 +1,895 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_imports",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_task": "/root/ep0_neighbor_lifting_audit",
+  "model_override_source": "Explicit user preference relayed by parent overrides skill default",
+  "generated_at": "2026-11-01T11:47:44.308254+00:00",
+  "summary": "Q5 equal-parity-hole neighbor union>=3 and the stated EP0 conversion pass; every realizing short matching in the exact fifty normalized Q6 geometries has the required Hamilton path by marked core1/core4 and audited transfer.",
+  "trace_path": "EIGHT_ALL_EP0_CONSEQUENCES_REVIEW.md",
+  "audited_input_hashes": {
+    "eight_ep0_q4_neighbor_inverse.py": "sha256:f2b5c0b3a763b737a690ecb504055fac777304784b09ecc559d615338f73a786",
+    "eight_ep0_q4_neighbor_inverse.json": "sha256:913ec690b9fd0eba3f745335e3dc1050795baf127163fc0b2cbfce02b83e2b3c",
+    "verify_eight_ep0_q4_neighbor_spectrum.cpp": "sha256:20cf70fb01206f361d5df9d2095ef4f53e4a21a8c2c3e6dab7e02ea385756513",
+    "eight_ep0_q4_neighbor_spectrum_verification.json": "sha256:043fe125f2c4149683cd3b17b9f03f520cbf986a0a5751ba0a4ae14b2ea9019a",
+    "eight_ep0_q4_pair_spectrum.cpp": "sha256:d7089487880f0d6237901b7c1611a647f389d4a35bad5eeccdc93f3fb14ed2e4",
+    "eight_ep0_q4_pair_spectrum.json": "sha256:55404b3c7dd1fa44033269353babccc40e90063adf32b09951b073bdb10e00dc",
+    "q4_perfect_endpoint_abundance_check.py": "sha256:f52bfe2dc2a3b5d428fbfdbeb6d02c59c7bc9f5c1de0fd9ef95fbe8f71ad84ac",
+    "q4_perfect_endpoint_abundance_check.json": "sha256:279c23327ae0df44418f3511239307bd8a958916d0f0d188bdeb2c61c690558b",
+    "Q4_PERFECT_ENDPOINT_ABUNDANCE.md": "sha256:aea312b744c6c6902128007c8a08853b32980eeae5c7ecb83429b3b52feb57a8",
+    "q4_distance1_avoided_table.bin": "sha256:69b03389a16dc77b77ab1ded94d8d760728452759df2f035f8362a2f46294d86",
+    "q4_distance3_avoided_table.bin": "sha256:3d4026b7276ebc8bf94be7e184ddcfcfa8f98f3f3b9aeef39298abfb3900b150",
+    "CANONICAL_COMPLETION_REVIEW.json": "sha256:31dd2103b87c9c3c8b406274ea786ec081dacb2f19177fdc1a097c3924dae956",
+    "eight_ep0_q4_star_A_prepare.cpp": "sha256:3200a84810e62a1c3bb18968799b75a3b7e6b38feb13d312d5fd60dc21e0da6f",
+    "eight_ep0_q4_star_A.bin": "sha256:61b798180b2f6f55bc4b627e5b459927b740c9411df623d59353231b31200f4f",
+    "eight_ep0_q4_star_A.jsonl": "sha256:89c43f46e03e091e9d98d4b9d90388d59435d99e12b661b5ea1a2655727ccec2",
+    "eight_ep0_q4_PB_bad_optional.py": "sha256:16202ac73eb247479e90ee070c821c0a54a67fca8afb350f53926168e7a85c40",
+    "eight_ep0_q4_PB_bad_optional.txt": "sha256:fcc6d66bb11c3956817981b9448a296f42b7b7522833779cb1a321be799a0316",
+    "eight_ep0_q4_star_joint.cpp": "sha256:20215caf2090d502c74ec56a5901481fd83c09339a5c80888f0c6328cc4aeff2",
+    "eight_ep0_q4_star_joint.json": "sha256:1da657406db5698effc69d25e615016315c3dfe693e84511de8270c0af614189",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW_check.py": "sha256:6fba25e5b0ddf3edd875099eacec4f69b0750af20e8324ca9fc10f726b469d22",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW_check.json": "sha256:a53acaa9eac6154f9310e562c226d5da398e32304f57f0402145d1e70c323f6d",
+    "Q5_NEIGHBOR_ABUNDANCE_AND_EP0.md": "sha256:2ec2a322b8cc127d3cf90659ea2c6377cd2dc4510e4bb13be3df23c95f9006f1",
+    "eight_ep0_three_neighbor_geometry.py": "sha256:646a277b7b38f6d2d05065b951e2ec34767e8f26767942194a069526cb882b61",
+    "eight_ep0_three_neighbor_geometry.json": "sha256:eafbbc71957bcc8a20799644a618478dce5f4463c2bf589e067120bc2de0fb14",
+    "eight_ep0_three_neighbor_projection.py": "sha256:4905dacbd875ed538ea39265dbe42ec343ca1a2b746a65df3e6b707f03a96594",
+    "eight_ep0_three_neighbor_projection.json": "sha256:45bbfddd3c1fab881334d72425e4cb076780518ddf2afcb49bf7aa55ec1a3d9b",
+    "EIGHT_ALL_EP0_CONSEQUENCES_REVIEW_check.py": "sha256:851436c413a2de0d4fd732ebe3712413e4aa6ab02346cb1b2863d7b51f65a29b",
+    "EIGHT_ALL_EP0_CONSEQUENCES_REVIEW_check.json": "sha256:a53cf89376f59326185b5a6477c7b147096c4fe31f7bd5ad78f419515db12d1c",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW.md": "sha256:91c9ac260fe8d8d8507a66640874c05a2d636c5952835835245dcf7c29f38e91",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW.json": "sha256:97ba8704c0917a731f27d9be514effaa51b3b87c04c1b6abcc4eceea4b7dcc83",
+    "T15_CORE1_FULL_CLOSURE.md": "sha256:9d9fbda3fe6e217ac1931601f61b1c1488abaa81aea514b50e57e8016f9dfae6",
+    "T15_CORE1_FULL_REVIEW.json": "sha256:929b7a0e9735f5e0770ccb6404d357cb8175c8a540698919891973a81b86a30d",
+    "T15_CORE4_FULL_CLOSURE.md": "sha256:043d606af650adc0f48610ece275883879ce3f89d7e4a9a2e7d9360cfbe55de2",
+    "T15_CORE4_FULL_REVIEW.json": "sha256:28c5adea5c9a944247ebbcaf8ebaf8df58c832e9f613080a709576ab12f52cd9",
+    "EIGHT_HOLE_COVERED_NEXT_DRAFT.md": "sha256:c0842d977f047171456d1284c58468eab8437458c3864d8f922a131bd7934f1e",
+    "EIGHT_DOUBLE_BRIDGE_REVIEW.json": "sha256:f89c3626d4c8cde7b600e64f8dac607249fee75f7e6bc76b7ca25ab0dfd031dd",
+    "EIGHT_DOUBLE_BRIDGE_REVIEW.md": "sha256:0d6ad4cc49817045c2d95a2ce64b2643db359a8fac510354df95603ed3a37b57"
+  },
+  "imported_review_bindings": {
+    "T15_CORE1_FULL_REVIEW.json": {
+      "sha256": "sha256:929b7a0e9735f5e0770ccb6404d357cb8175c8a540698919891973a81b86a30d",
+      "bound_source": "T15_CORE1_FULL_CLOSURE.md",
+      "source_sha256": "sha256:9d9fbda3fe6e217ac1931601f61b1c1488abaa81aea514b50e57e8016f9dfae6"
+    },
+    "T15_CORE4_FULL_REVIEW.json": {
+      "sha256": "sha256:28c5adea5c9a944247ebbcaf8ebaf8df58c832e9f613080a709576ab12f52cd9",
+      "bound_source": "T15_CORE4_FULL_CLOSURE.md",
+      "source_sha256": "sha256:043d606af650adc0f48610ece275883879ce3f89d7e4a9a2e7d9360cfbe55de2"
+    },
+    "EIGHT_DOUBLE_BRIDGE_REVIEW.json": {
+      "sha256": "sha256:f89c3626d4c8cde7b600e64f8dac607249fee75f7e6bc76b7ca25ab0dfd031dd",
+      "bound_source": "EIGHT_HOLE_COVERED_NEXT_DRAFT.md",
+      "source_sha256": "sha256:c0842d977f047171456d1284c58468eab8437458c3864d8f922a131bd7934f1e"
+    }
+  },
+  "external_imports": [
+    "Fink arbitrary-complete-graph Q4 perfect-matching extension theorem with only short added edges, as imported in the earlier fixed Q4 audits",
+    "Previously audited exact Q4 opposite-hole tables, raw hashes rechecked",
+    "Complete marked arbitrary K(Q5) T15 core1 and core4 theorems, sources rebound to final review hashes",
+    "Previously audited (2,0)+EP0+T15 two-bridge transfer, source hash rebound",
+    "Existing classification of seven residual geometry representatives; only their precise fifty target-preserving images are concluded here"
+  ],
+  "theorems": {
+    "Q5_neighbor_union_at_least_3": true,
+    "EP0_under_three_S_neighbor_condition": true,
+    "exact_fifty_Q6_geometries": true,
+    "all_required_T15_cores_proved": true
+  },
+  "Q5_claim": "For every arbitrary K(V(Q5)) matching with distinct equal-parity holes q,v, at least three short q neighbors occur over valid31-cycles omitting v.",
+  "consequence_claim": "For every realizing short Q6 matching in each listed(root0,target,Z,W) geometry, a Hamilton0-to-target path preserves the matching.",
+  "closed_geometries": [
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        5,
+        9
+      ],
+      "W": [
+        14,
+        31,
+        47,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        5,
+        17
+      ],
+      "W": [
+        22,
+        31,
+        55,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        5,
+        33
+      ],
+      "W": [
+        38,
+        47,
+        55,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        9,
+        17
+      ],
+      "W": [
+        26,
+        31,
+        59,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        9,
+        33
+      ],
+      "W": [
+        42,
+        47,
+        59,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        3,
+        17,
+        33
+      ],
+      "W": [
+        50,
+        55,
+        59,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        5,
+        9,
+        17
+      ],
+      "W": [
+        28,
+        31,
+        61,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        5,
+        9,
+        33
+      ],
+      "W": [
+        44,
+        47,
+        61,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        5,
+        17,
+        33
+      ],
+      "W": [
+        52,
+        55,
+        61,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 1,
+      "Z": [
+        9,
+        17,
+        33
+      ],
+      "W": [
+        56,
+        59,
+        61,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        5,
+        6
+      ],
+      "W": [
+        8,
+        16,
+        32,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        5,
+        15
+      ],
+      "W": [
+        8,
+        25,
+        41,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        5,
+        23
+      ],
+      "W": [
+        16,
+        25,
+        49,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        5,
+        39
+      ],
+      "W": [
+        32,
+        41,
+        49,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        6,
+        15
+      ],
+      "W": [
+        8,
+        26,
+        42,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        6,
+        23
+      ],
+      "W": [
+        16,
+        26,
+        50,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        6,
+        39
+      ],
+      "W": [
+        32,
+        42,
+        50,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        15,
+        23
+      ],
+      "W": [
+        25,
+        26,
+        56,
+        59
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        15,
+        39
+      ],
+      "W": [
+        41,
+        42,
+        56,
+        59
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        3,
+        23,
+        39
+      ],
+      "W": [
+        49,
+        50,
+        56,
+        59
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        6,
+        15
+      ],
+      "W": [
+        8,
+        28,
+        44,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        6,
+        23
+      ],
+      "W": [
+        16,
+        28,
+        52,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        6,
+        39
+      ],
+      "W": [
+        32,
+        44,
+        52,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        15,
+        23
+      ],
+      "W": [
+        25,
+        28,
+        56,
+        61
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        15,
+        39
+      ],
+      "W": [
+        41,
+        44,
+        56,
+        61
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        5,
+        23,
+        39
+      ],
+      "W": [
+        49,
+        52,
+        56,
+        61
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        6,
+        15,
+        23
+      ],
+      "W": [
+        26,
+        28,
+        56,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        6,
+        15,
+        39
+      ],
+      "W": [
+        42,
+        44,
+        56,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        6,
+        23,
+        39
+      ],
+      "W": [
+        50,
+        52,
+        56,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 7,
+      "Z": [
+        15,
+        23,
+        39
+      ],
+      "W": [
+        56,
+        59,
+        61,
+        62
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        23,
+        27
+      ],
+      "W": [
+        1,
+        2,
+        32,
+        35
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        23,
+        29
+      ],
+      "W": [
+        1,
+        4,
+        32,
+        37
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        23,
+        30
+      ],
+      "W": [
+        2,
+        4,
+        32,
+        38
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        23,
+        63
+      ],
+      "W": [
+        32,
+        35,
+        37,
+        38
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        27,
+        29
+      ],
+      "W": [
+        1,
+        8,
+        32,
+        41
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        27,
+        30
+      ],
+      "W": [
+        2,
+        8,
+        32,
+        42
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        27,
+        63
+      ],
+      "W": [
+        32,
+        35,
+        41,
+        42
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        29,
+        30
+      ],
+      "W": [
+        4,
+        8,
+        32,
+        44
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        29,
+        63
+      ],
+      "W": [
+        32,
+        37,
+        41,
+        44
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        15,
+        30,
+        63
+      ],
+      "W": [
+        32,
+        38,
+        42,
+        44
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        27,
+        29
+      ],
+      "W": [
+        1,
+        16,
+        32,
+        49
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        27,
+        30
+      ],
+      "W": [
+        2,
+        16,
+        32,
+        50
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        27,
+        63
+      ],
+      "W": [
+        32,
+        35,
+        49,
+        50
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        29,
+        30
+      ],
+      "W": [
+        4,
+        16,
+        32,
+        52
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        29,
+        63
+      ],
+      "W": [
+        32,
+        37,
+        49,
+        52
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        23,
+        30,
+        63
+      ],
+      "W": [
+        32,
+        38,
+        50,
+        52
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        27,
+        29,
+        30
+      ],
+      "W": [
+        8,
+        16,
+        32,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        27,
+        29,
+        63
+      ],
+      "W": [
+        32,
+        41,
+        49,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        27,
+        30,
+        63
+      ],
+      "W": [
+        32,
+        42,
+        50,
+        56
+      ]
+    },
+    {
+      "root": 0,
+      "target": 31,
+      "Z": [
+        29,
+        30,
+        63
+      ],
+      "W": [
+        32,
+        44,
+        52,
+        56
+      ]
+    }
+  ],
+  "closed_geometry_count": 50,
+  "projection_cases": 234,
+  "core_histogram": {
+    "4": 174,
+    "1": 60
+  },
+  "orbit_sizes": [
+    10,
+    1,
+    9,
+    9,
+    1,
+    10,
+    10
+  ],
+  "details": {
+    "issues": [],
+    "proof_obligations": 24,
+    "fatal": 0,
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "deterministic_check_status": "PASS",
+    "fresh_Q4_checks": {
+      "status": "PASS",
+      "short_good_endpoint_histogram_on_4708_exceptions": {
+        "3": 2972,
+        "2": 612,
+        "4": 1124
+      },
+      "nonexceptional_short_good_lower_bound": 3,
+      "A_witness_records": 444,
+      "A_centers": {
+        "2": 111,
+        "8": 111,
+        "1": 111,
+        "4": 111
+      },
+      "PB_bad_keys": 16816,
+      "PB_bad_relations": 22848,
+      "extra_PB_per_center": {
+        "1": 714,
+        "2": 714,
+        "4": 714,
+        "8": 714
+      },
+      "joint_pairs": 60316956,
+      "residual_pairs": 0,
+      "table_hashes_match_prior_audit": true
+    },
+    "dynamic_main_ledgers_used_as_theorem_dependencies": false
+  },
+  "full_T15_proved": false,
+  "full_eight_hole_proved": false,
+  "full_P6_proved": false,
+  "scope_note": "Exact fifty consequences only; parent separately audits any complete eight-hole assembly. No main ledger edited."
+}

@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "scope": "Core15 complete finite input manifest; full semantic proof awaits fresh independent review",
+  "original_holes": [
+    0,
+    1,
+    2,
+    13,
+    22,
+    31
+  ],
+  "original_omitted": [
+    1,
+    2
+  ],
+  "coordinate_destination_map": [
+    0,
+    1,
+    2,
+    4,
+    3
+  ],
+  "normalized_holes": [
+    0,
+    1,
+    2,
+    14,
+    21,
+    31
+  ],
+  "normalized_omitted": [
+    1,
+    2
+  ],
+  "complete_positive_residual_inputs": 3243240,
+  "residual_reports": [
+    {
+      "c": 1,
+      "exception_B_inputs": 12,
+      "producer": {
+        "c": 1,
+        "total": 1621620,
+        "positive": 1621620,
+        "unknown": 0,
+        "negative": 0,
+        "nodes": 378705530,
+        "max_nodes": 16181,
+        "record_bytes": 56
+      },
+      "independent_positive_verifier": {
+        "status": "PASS",
+        "c": 1,
+        "records": 1621620,
+        "required_edges": 13,
+        "cycle_vertices": 30,
+        "record_bytes": 56,
+        "total_bytes": 90810720
+      },
+      "certificate_file": "t15_core15_c1_fast.bin",
+      "certificate_sha256": "ec2c31b708e1f3b4dd493e1f1bf903e82ab7fff7c69902b1d29022c6dd13fcff"
+    },
+    {
+      "c": 3,
+      "exception_B_inputs": 1,
+      "producer": {
+        "c": 3,
+        "total": 1621620,
+        "positive": 1621620,
+        "unknown": 0,
+        "negative": 0,
+        "nodes": 714572040,
+        "max_nodes": 10708,
+        "record_bytes": 56
+      },
+      "independent_positive_verifier": {
+        "status": "PASS",
+        "c": 3,
+        "records": 1621620,
+        "required_edges": 13,
+        "cycle_vertices": 30,
+        "record_bytes": 56,
+        "total_bytes": 90810720
+      },
+      "certificate_file": "t15_core15_c3_hybrid.bin",
+      "certificate_sha256": "8d90f33b8c8d3d187e15bff9445034b7e28061e74d49692679969e05ac5e01a2"
+    }
+  ],
+  "c3_independent_B_inputs": 1621620,
+  "c3_zero_B_partial_inputs": 1,
+  "bridge_table": {
+    "status": "PASS",
+    "bridge": 10,
+    "B_omitted": 1,
+    "negative_count": 1,
+    "negative_matching": [
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        12,
+        14
+      ]
+    ],
+    "source_tables": [
+      "q4_balanced_two_avoided_9_2.bin"
+    ]
+  },
+  "large_crossing_method": "At most one forbidden output; choose the artificial boundary matching equal to it",
+  "full_T15_proved": false,
+  "full_eight_hole_layer_proved": false
+}

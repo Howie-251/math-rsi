@@ -1,0 +1,40 @@
+fixed manifest hashes PASS 70
+strict c2 input validity A 62370
+strict c2 input validity B 945945
+18 five avoided full tables PASS
+N14 270270 PASS
+[{"omitted": [3, 5, 1], "positive": 10362, "negative": 33, "negative_completions": 84}, {"omitted": [3, 6, 1], "positive": 10325, "negative": 70, "negative_completions": 220}]
+verify_q4_three_avoided.py PASS
+3 5 1 4 distinct 14700 14670 PASS
+3 5 1 4 paired 453 432 PASS
+3 5 1 4 s_port 1812 1728 PASS
+3 5 1 4 t_port 1812 1728 PASS
+3 5 1 4 ports 198 0 PASS
+3 5 1 6 distinct 13496 13496 PASS
+3 5 1 6 paired 490 489 PASS
+3 5 1 6 s_port 2940 2934 PASS
+3 5 1 6 t_port 2940 2934 PASS
+3 5 1 6 ports 453 432 PASS
+3 5 1 8 distinct 3600 3600 PASS
+3 5 1 8 paired 241 241 PASS
+3 5 1 8 s_port 1928 1928 PASS
+3 5 1 8 t_port 1928 1928 PASS
+3 5 1 8 ports 490 489 PASS
+3 5 1 10 distinct 132 132 PASS
+3 5 1 10 paired 40 40 PASS
+3 5 1 10 s_port 400 400 PASS
+3 5 1 10 t_port 400 400 PASS
+3 5 1 10 ports 241 241 PASS
+3 5 1 12 distinct 0 0 PASS
+3 5 1 12 paired 1 1 PASS
+3 5 1 12 s_port 12 12 PASS
+3 5 1 12 t_port 12 12 PASS
+3 5 1 12 ports 40 40 PASS
+verify_r4_inverse_blockers.py PASS
+{'status': 'PASS', 'B_matchings': 135135, 'B_exceptions': 105, 'residual_full_input_list_rebuilt': 1091475, 'scope': 'Independent c0 suppression, exact B list, every A pairing and every original matching regenerated. A path exists uniformly by N14.'}
+verify_t15_core1_c0_B.py PASS
+[{'c': 4, 'joint_residual_B': 210, 'B_list_checked': True}, {'c': 6, 'joint_residual_B': 28, 'B_list_checked': True}, {'c': 8, 'joint_residual_B': 1, 'B_list_checked': True}, {'c': 10, 'joint_residual_B': 0, 'B_list_checked': True}, {'c': 12, 'joint_residual_B': 0, 'B_list_checked': True}]
+verify_t15_core1_joint_B.py PASS
+{'status': 'PASS', 'scope': 'All finite obligations for full core1; fresh semantic audit pending; no dynamic global ledger is a proof dependency', 'core': 1, 'original_holes': [0, 1, 2, 7, 11, 19], 'omitted': [1, 2], 'fourbridge_verified_full_inputs': 653637600, 'direct_positive_certificates': 1101870}
+verify_t15_core1_full_closure.py PASS
+B2 zero-spectrum exact list PASS

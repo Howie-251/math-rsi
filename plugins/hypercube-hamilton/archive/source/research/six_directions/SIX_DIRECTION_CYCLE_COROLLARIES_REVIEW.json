@@ -1,0 +1,283 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "new_cycle_corollaries_complete_modulo_explicit_accepted_imports",
+  "summary": "P6 implies Q6 arbitrary short-matching cycle extension and all n>=2 cycle extension for matchings using at most six directions; scope and boundary cases explicitly checked.",
+  "generated_at": "2026-11-02T04:06:44.349111+00:00",
+  "trace_path": "SIX_DIRECTION_CYCLE_COROLLARIES_REVIEW.md",
+  "executor_agent_id": "/root/p6_report_corollary_audit",
+  "executor_model": "gpt-6.1-sol",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "model_configuration_source": "Inherited parent user authorization; served backend not independently attested",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_role": "Independent corollary check relative to parent main-report writer; this same subtask wrote both new proof note and self-review; not independent review of its own written note.",
+  "audited_input_hashes": {
+    "SIX_DIRECTION_CYCLE_COROLLARIES.md": "7e322ca02fd135821cdd0567efd2cb1ca0585ba1d4fd6dc1e66b54299df06e5c",
+    "paper.txt": "e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "P6_FULL_REVIEW.md": "39a22f9016f616c6f931a2ebe485996bab78e09fdcd12c9d2299e1550af3f462",
+    "P6_RELEASE_CHECK.json": "6943559bd84b30d8098a525f4384196f877f39749fe9e19275fa4341be14a36f"
+  },
+  "review_report_hash": "718a7c5d3f117aea3b0a9413587151057fb15cab7d49d41cdf12b7d0d74ca8d2",
+  "source": {
+    "local": "paper.txt",
+    "arxiv": "2501.19029v1",
+    "date": "2025-01-31",
+    "authors": [
+      "Jiří Fink",
+      "Vojtěch Hotmar"
+    ],
+    "title": "Matchings of five directions in hypercube extends to Hamilton cycles and paths with prescribed ends",
+    "read_sections": [
+      "Theorem 1",
+      "Theorem 4",
+      "Conjecture 2",
+      "Theorem 5 statement and complete proof",
+      "Observation 14",
+      "Theorem 7",
+      "Conjecture 5"
+    ]
+  },
+  "dependency_direct_hash_comparisons": [
+    {
+      "source": "audited_input_hashes",
+      "path": "P6_FULL_CLOSURE.md",
+      "expected": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+      "actual": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "GENERAL_NEAR_PERFECT.md",
+      "expected": "bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+      "actual": "bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "FOUR_HOLE_FULL.md",
+      "expected": "a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+      "actual": "a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "SIX_HOLE_CLOSED.md",
+      "expected": "8a7078847343067f21a43394537e184930e99e93692f854900f95f4ce74c09d6",
+      "actual": "8a7078847343067f21a43394537e184930e99e93692f854900f95f4ce74c09d6",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "EIGHT_HOLE_FULL_CLOSURE.md",
+      "expected": "3ac671decf3be01d2bf89399f8b81013494b290379b6eaa3eba0dc7b46c7e663",
+      "actual": "3ac671decf3be01d2bf89399f8b81013494b290379b6eaa3eba0dc7b46c7e663",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "TEN_HOLE_FULL_CLOSURE.md",
+      "expected": "44e93f734b01aadf4a9a30d465243e1ddac533d8cca200bda5bc0405a028b308",
+      "actual": "44e93f734b01aadf4a9a30d465243e1ddac533d8cca200bda5bc0405a028b308",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "TWELVE_HOLE_FULL_CLOSURE.md",
+      "expected": "1bbddf8d19ac23f4bac705a330bb1bef74a9dca9c0983a5b6e3d3b6d3b0d9a8a",
+      "actual": "1bbddf8d19ac23f4bac705a330bb1bef74a9dca9c0983a5b6e3d3b6d3b0d9a8a",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "FOURTEEN_HOLE_FULL_CLOSURE.md",
+      "expected": "cb9aabaa99b1e20d9cce366f5723c9527d1e5d357af1b3efa3632f6dc079ed26",
+      "actual": "cb9aabaa99b1e20d9cce366f5723c9527d1e5d357af1b3efa3632f6dc079ed26",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "SIXTEEN_EIGHTEEN_FULL_CLOSURE.md",
+      "expected": "24e2d63b517540f20b30258521f742595e78442794057b6115379e5fec015c4c",
+      "actual": "24e2d63b517540f20b30258521f742595e78442794057b6115379e5fec015c4c",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "ROOTED_MAXIMAL_18_HOLES.md",
+      "expected": "66af796eeddde05f2f6de834745d63e0a12095d31d69959610da53c635694537",
+      "actual": "66af796eeddde05f2f6de834745d63e0a12095d31d69959610da53c635694537",
+      "matches": true
+    },
+    {
+      "source": "audited_input_hashes",
+      "path": "A10_ORBIT3_UNIVERSAL_PRIMARY_SOURCE.md",
+      "expected": "f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112",
+      "actual": "f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "GENERAL_NEAR_PERFECT_REVIEW.json",
+      "expected": "bf8fc7f8f622307c18a8c7ae1e50a49ec805cd09f4be191aba5ecce1bfaa9cec",
+      "actual": "bf8fc7f8f622307c18a8c7ae1e50a49ec805cd09f4be191aba5ecce1bfaa9cec",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "FOUR_HOLE_SOL_HIGH_REVIEW.json",
+      "expected": "28340d8a04b6a10099cd847457f07fdc641766e202037f2445d3432d7c3b0345",
+      "actual": "28340d8a04b6a10099cd847457f07fdc641766e202037f2445d3432d7c3b0345",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "SIX_HOLE_CLOSURE_CONSEQUENCES_REVIEW.json",
+      "expected": "78aa5446749335973a916e4570df48c01efeaace185a871aefb7b375c7825c6d",
+      "actual": "78aa5446749335973a916e4570df48c01efeaace185a871aefb7b375c7825c6d",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "EIGHT_HOLE_FULL_REVIEW.json",
+      "expected": "d4c49e873186d7d824aa0b1316ef631d5e6142922ee7891cc758be3d082e495f",
+      "actual": "d4c49e873186d7d824aa0b1316ef631d5e6142922ee7891cc758be3d082e495f",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "TEN_HOLE_FULL_REVIEW.json",
+      "expected": "72c6f693b4f8bee6376edcbd132235d7985436f6ebbad8a19dade0d5326f643d",
+      "actual": "72c6f693b4f8bee6376edcbd132235d7985436f6ebbad8a19dade0d5326f643d",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "TWELVE_HOLE_FULL_REVIEW.json",
+      "expected": "405b019235810d8df75d58354b10c6d8ed42c1129a942940311555277a9382ce",
+      "actual": "405b019235810d8df75d58354b10c6d8ed42c1129a942940311555277a9382ce",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "ROOTED_RANGE_REVIEW.json",
+      "expected": "3d8bb77ca05805c5cd2355ce30feab8962e255f0d423cd59c499c8efc4e9953d",
+      "actual": "3d8bb77ca05805c5cd2355ce30feab8962e255f0d423cd59c499c8efc4e9953d",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "FOURTEEN_HOLE_FULL_REVIEW.json",
+      "expected": "1a0cdb802f41bd7f8df31b47ce3980d092005ebe0c4e204e233c783aed17d634",
+      "actual": "1a0cdb802f41bd7f8df31b47ce3980d092005ebe0c4e204e233c783aed17d634",
+      "matches": true
+    },
+    {
+      "source": "imported_dependency_hashes",
+      "path": "SIXTEEN_EIGHTEEN_FULL_REVIEW.json",
+      "expected": "b584ba16376feba774145eba0fdc3c3c9d2152f60d2678cb1d0a28d5ff552ca7",
+      "actual": "b584ba16376feba774145eba0fdc3c3c9d2152f60d2678cb1d0a28d5ff552ca7",
+      "matches": true
+    },
+    {
+      "source": "checker_artifact_hashes",
+      "path": "P6_FULL_REVIEW_check.py",
+      "expected": "cdf416db8945e3f88c76ada0dda956de9086c5377a1add684018eb3069d79e3b",
+      "actual": "cdf416db8945e3f88c76ada0dda956de9086c5377a1add684018eb3069d79e3b",
+      "matches": true
+    },
+    {
+      "source": "checker_artifact_hashes",
+      "path": "P6_FULL_REVIEW_check.json",
+      "expected": "17c2dbcdd0a106c0d04cf06ee1963d2b881210a7f89bc565130f64bacafca515",
+      "actual": "17c2dbcdd0a106c0d04cf06ee1963d2b881210a7f89bc565130f64bacafca515",
+      "matches": true
+    },
+    {
+      "source": "checker_artifact_hashes",
+      "path": "P6_FULL_REVIEW_emit.py",
+      "expected": "967d9f726e3505c54fa4e7709790fe79db88f829a68697782125ad11e9c6d7cd",
+      "actual": "967d9f726e3505c54fa4e7709790fe79db88f829a68697782125ad11e9c6d7cd",
+      "matches": true
+    },
+    {
+      "source": "report_hash",
+      "path": "P6_FULL_REVIEW.md",
+      "expected": "39a22f9016f616c6f931a2ebe485996bab78e09fdcd12c9d2299e1550af3f462",
+      "actual": "39a22f9016f616c6f931a2ebe485996bab78e09fdcd12c9d2299e1550af3f462",
+      "matches": true
+    },
+    {
+      "source": "release_gate_hashes",
+      "path": "FOURTEEN_HOLE_FULL_REVIEW.json",
+      "expected": "1a0cdb802f41bd7f8df31b47ce3980d092005ebe0c4e204e233c783aed17d634",
+      "actual": "1a0cdb802f41bd7f8df31b47ce3980d092005ebe0c4e204e233c783aed17d634",
+      "matches": true
+    },
+    {
+      "source": "release_gate_hashes",
+      "path": "SIXTEEN_EIGHTEEN_FULL_REVIEW.json",
+      "expected": "b584ba16376feba774145eba0fdc3c3c9d2152f60d2678cb1d0a28d5ff552ca7",
+      "actual": "b584ba16376feba774145eba0fdc3c3c9d2152f60d2678cb1d0a28d5ff552ca7",
+      "matches": true
+    },
+    {
+      "source": "release_gate_hashes",
+      "path": "P6_FULL_REVIEW.json",
+      "expected": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+      "actual": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+      "matches": true
+    }
+  ],
+  "details": {
+    "issues": [],
+    "theorems_audited": 3,
+    "proof_obligations_discharged": 15,
+    "P6_import_verdict": "PASS",
+    "P6_import_acceptance_status": "provisional",
+    "direct_binding_comparison_count": 27,
+    "direct_binding_failures": [],
+    "P6_transitive_certificate_suite_rerun": false,
+    "full_P6_reproved": false,
+    "source_theorem5_d6_hypotheses_checked": true,
+    "theorem5_fiber_proof_expanded": true,
+    "n7_Q1_boundary_explicitly_handled": true,
+    "first_fiber_free_root_argument_order_checked": true,
+    "closing_parity_checked": true,
+    "all_original_matching_edges_preserved": true,
+    "statements": [
+      "For every matching M subset E(Q6), there exists a Hamilton cycle of Q6 containing M.",
+      "For every integer n>=6 and every matching M subset E(Qn) using at most six directions, there exists a Hamilton cycle of Qn containing M.",
+      "For every integer n>=2 and every matching M subset E(Qn) using at most six directions, there exists a Hamilton cycle of Qn containing M."
+    ],
+    "RS_all_matchings_dimension_range": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "explicit_imports": [
+      "Accepted P6 with short original matching, every free root, every opposite-parity target including covered",
+      "Fink perfect-matching Hamilton extension (Theorem 1 of supplied source)",
+      "Five-direction cycle theorem for n>=2 (Theorem 4 of supplied source)"
+    ],
+    "full_RS_arbitrary_dimension_claim": false,
+    "six_direction_arbitrary_endpoint_path_classification_claim": false,
+    "Conjecture5_dimension6_proved": false,
+    "arbitrary_complete_graph_matching_claim": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false,
+    "novelty_peer_review_publication_certified": false,
+    "independent_reviewer_of_own_new_note": false,
+    "frozen_files_ledgers_modified": false,
+    "counterexample_pass_count": 10,
+    "counterexamples_to_actual_scoped_claims_found": 0,
+    "counterexample_pass_role": "Diagnostic only; correctness is discharged by explicit proofs and imported hypotheses."
+  }
+}

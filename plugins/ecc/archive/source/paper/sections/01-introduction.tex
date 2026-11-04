@@ -1,0 +1,27 @@
+\section{Introduction}
+A binary linear code is a subspace of $\F^n$. Determining the largest possible minimum distance at fixed length and dimension is a finite problem, but a negative answer must cover every subspace, including those far from familiar constructions. A failed search for a generator matrix supplies no such coverage. This makes code nonexistence a useful setting for studying how AI-assisted mathematical work can produce independently checkable results.
+
+We study five parameter targets through two proof routes. The main route starts with a hypothetical $[43,10,\ge17]$ code. Parity extension, a low-weight dual-word argument, and shortening force a full-support $[40,7,18]$ subcode. A published classification then reduces the unrestricted existence question to 172 concrete mother codes. Each mother has $2^{32}$ even cosets to examine. The successful reduction is stronger than an unsuccessful extension search: every pair of distinct admissible cosets is incompatible, so the three cosets required for an extension cannot exist.
+
+The second route illustrates a different useful outcome of AI-assisted research. An apparent target, $[42,16,\ge13]$, is already excluded by a short consequence of a published theorem. Parity extension and two shortenings produce a $[41,14,\ge14]$ code; an exact-distance normalization connects it to the published exclusion of $[41,14,14]$. The contribution here is the explicit, checked connection to the requested target.
+
+\begin{table}[t]
+\caption{Five excluded targets and the resulting optimum information. Lower bounds use explicit matrices. The first three exact values and the fourth upper bound share one main proof; the last row is a consequence of published Proposition~2.}
+\label{tab:results}
+\centering\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Excluded target & Proof route &  $\dopt(n,k)$\\
+\midrule
+$[43,10,\ge17]$ & Main exclusion & $16$\\
+$[44,10,\ge18]$ & Puncturing & $17$\\
+$[44,11,\ge17]$ & Shortening & $16$\\
+$[45,11,\ge18]$ & Puncturing & $[16,17]$\\
+$[42,16,\ge13]$ & E3 reduction & $12$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:results} states the mathematical outcomes. The evidence accompanying them has three components: a structural proof covering arbitrary binary linear codes; concrete matrices, complete enumeration records, and rejection witnesses; and Lean proofs of the reductions with named external inputs. AI contributes to literature discovery, proof development, implementation, and review. Acceptance depends on these evidence components rather than on the model's confidence or the number of favorable reviews.
+
+For AI-assisted mathematics, the case study highlights a specific verification issue: checking that every saved candidate is valid does not show that a search saved every valid candidate. Here that distinction led to a second complete enumeration with different coordinates and traversal. The mathematical argument, computation, and recorded AI interventions are presented together so that each claimed contribution can be assessed at its actual scope.

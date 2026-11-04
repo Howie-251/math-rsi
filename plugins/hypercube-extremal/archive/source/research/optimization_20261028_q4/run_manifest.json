@@ -1,0 +1,59 @@
+{
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.4.2",
+  "scipy": "1.17.0",
+  "blas_threads": 1,
+  "evaluation_threads": 2,
+  "initial_upper": 0.5916794157645937,
+  "goal": "Improve certified asymptotic bound; aspirational <0.59",
+  "scope": "all C4-free Q4 local representatives",
+  "method": "six jointly optimized PSD Gram blocks with full separation",
+  "stop": "initial 12 cycles x 500 iterations, reassess progress; only exact verified candidate accepted",
+  "inputs_sha256": {
+    "certification_snapshot.npz": "77378318ed40ce05924d50cdc7f3e3647fdc9bab95cf75254d2dc9c8b5c30d83",
+    "keys.bin": "dcae76d76813708a3c625bd09d9782c651be45eb3a1ec2799e1831b3eb789ce1",
+    "continue_joint.py": "b8416448c99d76db025ca4053a1eb97361699cde4d06534706aed8bb5c8f638d",
+    "model.py": "9680d3d69e055f06b02c29308d8d473a16dee04345057812887d7f160091d650",
+    "verify_six.cpp": "a8aebf92cf78cbe8d1384697226f8e45eb78cb9c5d03d0921fb840de2da9d98d"
+  },
+  "compiler": "MinGW g++ 15.2.0 x86_64",
+  "runs": [
+    {
+      "script": "continue_joint.py",
+      "prefix": "joint28",
+      "cycles": 12,
+      "iterations_per_cycle": 500,
+      "tau": 2e-06
+    },
+    {
+      "script": "polish.py",
+      "prefix": "column28",
+      "rounds": 80,
+      "rays_per_block": 4
+    },
+    {
+      "script": "continue_joint.py",
+      "prefix": "fine28",
+      "cycles": 4,
+      "iterations_per_cycle": 1000,
+      "tau": 2e-07
+    }
+  ],
+  "result": {
+    "previous_bound": "18933741304467/32000000000000",
+    "certified_bound": "236634773493897/400000000000000",
+    "certified_decimal": 0.5915869337347425,
+    "outward_decimal": "0.59158694",
+    "absolute_improvement": 9.248202985125e-05,
+    "gap_to_059": 0.0015869337347425,
+    "below_059": false,
+    "source_snapshot": "fine28_best.npz",
+    "worst_q4_mask": 3889685421,
+    "max_face_diagonal_upper": "1031063/1000000",
+    "max_vertex_diagonal_upper": "4163/8000",
+    "verification_exit_code": 0,
+    "status": "EXACT_INTEGER_VERIFICATION_PASSED; NOT_SDP_OPTIMALITY_PROOF",
+    "level": "Q4; no Q5 constraints used"
+  }
+}

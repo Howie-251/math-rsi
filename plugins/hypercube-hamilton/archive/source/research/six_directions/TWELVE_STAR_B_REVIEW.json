@@ -1,0 +1,530 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "ten_exact_local_forced_T17_classifications_all_full_forests_reduced_connectivity_GF2_ranks_and_fifty_actual_marked_transports_verified",
+  "summary": "Ten explicit arbitrary-matching B local iff classifications and all50 actual marked transports pass. No A opening or root-star/Q6 closure accepted.",
+  "reviewer_agent_id": "/root/higher_forced_cherry_review",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_override_source": "Explicit user route relayed by parent overrides ARIS default",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T16:25:29.943215+00:00",
+  "trace_path": "TWELVE_STAR_B_REVIEW.md",
+  "audited_input_hashes": {
+    "TWELVE_STAR_B_MANIFEST.json": "c76b1da561bab3eb82c38804fa452e8a8f66646a3d8e15219e570edee4d99f93",
+    "TWELVE_STAR_B_PROOF.md": "866fbacd6d93360aec4d9faa1456f3641aa1acf90d0ae5856b8cf984e2844be7",
+    "TWELVE_STAR_B_profile.py": "07b6b7c69bd70615005230356c7bfe8d971dba1bbb1546789abf826df36c9709",
+    "TWELVE_STAR_B_profile.json": "eb28d829629872eb1b0b9871e36d3ad39974ec84be186f8501aa8cfc1cb6f458",
+    "TWELVE_STAR_B_run.py": "6260ebab453f8ed727092ddbbacfffd52eae6f806ca8c7443b205a6b1754d5fd",
+    "TWELVE_STAR_B_rank.cpp": "62b0958dc2012a3c4bfe0219358ae852ce49b7ca5fc4e8852dceb721948fe471",
+    "TWELVE_STAR_B_summary.json": "284f7e4a804a792fa7e0383d6950edf1863f074a60cd6778aaaf16c096cf927f",
+    "TWELVE_STAR_B_actual_choices_map.json": "802747f122276227e67e551b9f7eaf13a538da97c14ab583ac651d6b2d5c289b",
+    "TWELVE_STAR_B_OPTIONS.md": "5c29720fffe62b7cd8366e257bb22d1518b596a736e50cc4703835d4c5838fcb",
+    "TWELVE_STAR_B_fixed_pair_options.json": "a99443d89a265239d5dbc77fccf424424ede0a109da088ab790b1ac480cfaaf8",
+    "TWELVE_STAR_B_freeze.py": "77f5f0c594624ba7751dad1bd9409e6f3bf67a2c3b276d3b78214ff89da5b3ba",
+    "A10_ORBIT3_UNIVERSAL_PRIMARY_SOURCE.md": "f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112",
+    "FORCED_CHERRY_RANK_REDUCTION.md": "30bbdd91a3a02d3a5a7d821fe3b8cea9c4e6a970a180f035580e057900c4b1fe",
+    "HIGHER_FORCED_CHERRY_TRANSFER.md": "a5030f66772259eeb32402c25f92a77761acb454e70696b2d370c652037fbea4",
+    "HIGHER_FORCED_CHERRY_REVIEW.json": "14a097a78df2708f03edaf5284e78e7c1178b2332c800830b23bb16f14463231",
+    "TWELVE_STAR_B_orbit_00.json": "ea8f9777b84978f9ae303e3369c8b2b72c0e3301f6b1ec4ed7d7daac3b677845",
+    "TWELVE_STAR_B_orbit_00_config.txt": "d31c237b7fd459949ccc625c451abec9844f8b794a81acf45faab10565fb8c32",
+    "TWELVE_STAR_B_orbit_00_forests.bin": "a9bc962d3db923cc80d77b887c1f02b72533a44ed7821c014525d0b47897cbbb",
+    "TWELVE_STAR_B_orbit_00_full_pairs.bin": "66f13cecc66e772d491436d0df8ee62322b0a487f7ec3fef6c1e0a5acc888e8a",
+    "TWELVE_STAR_B_orbit_00_pairs.bin": "67857b81b4d27c81c3d64fd0f82914c38eb56725776fe0dda55a8ac3d16a1259",
+    "TWELVE_STAR_B_orbit_00_columns.bin": "408c3534c46186f35cd6b27784917e00f1fb050472fe10871559ab948cd52db2",
+    "TWELVE_STAR_B_orbit_00_matrix.bin": "802194e4c1e2d699c2963a06de8ca7f902610e0620653ee72cf5ea5b47090d71",
+    "TWELVE_STAR_B_orbit_00_pivots.bin": "1f82577926a317a170743345e47591b6b92998ad254b0e341541d157e33df53b",
+    "TWELVE_STAR_B_orbit_00_combos.bin": "b3d48a4704a09921c7d0ebe4bce77828d1607c64799c313c9ae6876fbe146b40",
+    "TWELVE_STAR_B_orbit_01.json": "796a2f69514d153d6a51afa9c4cf112dba51843bfc431b79cdc722b7b6c8ea75",
+    "TWELVE_STAR_B_orbit_01_config.txt": "05d3ed7350c325c53bc9bfc68dbe8127032cfc7cb38383be6bb710be5eaa6fb8",
+    "TWELVE_STAR_B_orbit_01_forests.bin": "54dc8a76218956cb1fa5f4cd3c738f5a2654f904cc562aa27d594fff233a84d7",
+    "TWELVE_STAR_B_orbit_01_full_pairs.bin": "e130dc9d6dfa2182bf5ed5afc7418f446b55efae8c73f89661a81b112ad0b12a",
+    "TWELVE_STAR_B_orbit_01_pairs.bin": "9adcf2d6b4a3da349fcf5773868bde576780c5f81920b9972a83ff6c223d6cf9",
+    "TWELVE_STAR_B_orbit_01_columns.bin": "f3bfc07b8393629f2ef069f8f211d0b9da164e46dd7e29ebff54eba893f8e376",
+    "TWELVE_STAR_B_orbit_01_matrix.bin": "51ebad86caf7c01edea941343bde51e39502e2fbbb267c84437467225af50e5c",
+    "TWELVE_STAR_B_orbit_01_pivots.bin": "345ef8dfe4e3939a472c05347673f872764805cae16530a23cf8bf4790b3a043",
+    "TWELVE_STAR_B_orbit_01_combos.bin": "f24a2bcd48a3d61d2f24b07c98f23498806ae8279b4428293b0835e8e2eb5c76",
+    "TWELVE_STAR_B_orbit_02.json": "d887901fe4ac358a88e566928c2f4debc15a279ae48ee57bf64dc0fa3d21e0c5",
+    "TWELVE_STAR_B_orbit_02_config.txt": "dcbdc5869a4c54b0cfb4602eec678f4074860d78b5830379b1f454a3076821a0",
+    "TWELVE_STAR_B_orbit_02_forests.bin": "9227bd0b55412edc2cbb77b49e6f6e24f5eed5598e45e50434526ce00e0b900a",
+    "TWELVE_STAR_B_orbit_02_full_pairs.bin": "dfdaae3e31f15c4141f400986fffddfb01be5c31cdea05620acd5d4ae97bc9c4",
+    "TWELVE_STAR_B_orbit_02_pairs.bin": "e64e6e96c9c3ef650f9dda06ad4607744e9adc8313f19165771e540220d55776",
+    "TWELVE_STAR_B_orbit_02_columns.bin": "3314ea51ff508f29fb2af6175fb010809d20a21a17d7269b9c6eb0d6a1130666",
+    "TWELVE_STAR_B_orbit_02_matrix.bin": "90dd61304320bd6ca40666f1ed63e8f3858428d363bec42bb2a9f5c805998e4f",
+    "TWELVE_STAR_B_orbit_02_pivots.bin": "1dcbbe8b6a416ce16bf2600e6cdfd0230c21706e27f9f8136d1c9e1040a9eee7",
+    "TWELVE_STAR_B_orbit_02_combos.bin": "956cfeef113406d684ad3e594e1e64717b747ba09c8209f8de67771802d4b0b8",
+    "TWELVE_STAR_B_orbit_03.json": "1f77350e8e1210895e57227690cb92f04ea5e2394fef64e364b566567b53a7e2",
+    "TWELVE_STAR_B_orbit_03_config.txt": "f9b5bdbede63e06518ba0f13dda6322335e9a406b9cdb29e5e60fd96ed81cafe",
+    "TWELVE_STAR_B_orbit_03_forests.bin": "dc7e2b50e7de64ad7ba5504f8d07cec4feee9d0b9694e67557fa00555305e5fe",
+    "TWELVE_STAR_B_orbit_03_full_pairs.bin": "09d6addcd88e8c735e5b10243334b737a47aa76ba91e80c9228be819b25ea99a",
+    "TWELVE_STAR_B_orbit_03_pairs.bin": "2b54e821e8994034da0d56aa5fcb071090d98b51214808fc23accacd8a397aab",
+    "TWELVE_STAR_B_orbit_03_columns.bin": "ade60d806f780021fc0a5f4ab1a6f6717ca05fd7957b049ebc72cb37ebb79b5a",
+    "TWELVE_STAR_B_orbit_03_matrix.bin": "2a5b487b4b68b84bca9cbea59fcfb5941d63d566c9d21c65454801e982548238",
+    "TWELVE_STAR_B_orbit_03_pivots.bin": "94d4444e84bd89cbe4fc1ad1df6f3c615ea85053c2b2fc4341eba42b4f29c6f2",
+    "TWELVE_STAR_B_orbit_03_combos.bin": "1bdca4ab423478e84b8b4c518af9ccaaf567d2789cc0b0f8b37a2c3f06dda5cf",
+    "TWELVE_STAR_B_orbit_04.json": "ce84dcd7d2b63a3b426990e72fbbe657c1681cac53da2945fe75c2cfac96132f",
+    "TWELVE_STAR_B_orbit_04_config.txt": "fc137fc2c21d80c9a1eeedf1008e617e947e848daeb96868f1553046e3897b08",
+    "TWELVE_STAR_B_orbit_04_forests.bin": "601086e8d41a4adaf9ae9e48aca43d5822b8db72b45bcbea644a6dcabfb1dda2",
+    "TWELVE_STAR_B_orbit_04_full_pairs.bin": "b8163e36a5ebd9b1860e2a870cf7194e1035b7082b2f3d601efcfa406a9086e1",
+    "TWELVE_STAR_B_orbit_04_pairs.bin": "430fb417412107ab399acb42acbe8c3a3d5ccdef8956efcaa808390816ab5c35",
+    "TWELVE_STAR_B_orbit_04_columns.bin": "d0a83368a5649b16cb195c7f1aca68de94216ccf332bfcbf9fee5fd2daa0033e",
+    "TWELVE_STAR_B_orbit_04_matrix.bin": "9557b997d2f836ebd523cdea7ba96a43f2d7b80e68f49074529437ae1c056826",
+    "TWELVE_STAR_B_orbit_04_pivots.bin": "7bb7fc1ea75060bc5ad68cce8efe6e2d173ef8c139d6f83dfb36b598156cbda2",
+    "TWELVE_STAR_B_orbit_04_combos.bin": "54d977f5f387df118d5b39e3c17abb80b83a0713bf3c6c46c585a6ec53bb3aab",
+    "TWELVE_STAR_B_orbit_05.json": "6275e479d5fe1013073bea668fa25736b9114a9fc1047098df0851db66a28425",
+    "TWELVE_STAR_B_orbit_05_config.txt": "c336790b8aa79e11c9138bd06625f27d90cda794564e6c5e3c4922e00e2f5130",
+    "TWELVE_STAR_B_orbit_05_forests.bin": "cfd426ebf6989ec58cec1b38670e26ac5f568e97f6fca647ee19c18aec09664b",
+    "TWELVE_STAR_B_orbit_05_full_pairs.bin": "d454eb162672ca4c2947abaa655c9629405d71f77ac942fd70db819fd73aa9f8",
+    "TWELVE_STAR_B_orbit_05_pairs.bin": "95e731cff348669fc4a91109e0f35aef45ed2f72d01bf45a2f851886e356da3d",
+    "TWELVE_STAR_B_orbit_05_columns.bin": "5b32e692ce8812334e15554857642efa43a6fe791d9f58b8ad4f3f0a7d75ef51",
+    "TWELVE_STAR_B_orbit_05_matrix.bin": "8eb1946e7b24e4e57b5ffa59f40dd87f813073fc723510a65f9a1aa5e632bfaa",
+    "TWELVE_STAR_B_orbit_05_pivots.bin": "ffe8a51b57d1ac0a94fc8c4b4b843fd297a4027d1b3089151549df4aa3863b3e",
+    "TWELVE_STAR_B_orbit_05_combos.bin": "3baa66df0c6c60df54dc0929c7b31dc56883dd322f171fdf98736443dd4318f3",
+    "TWELVE_STAR_B_orbit_06.json": "4c965b4e2a9160d4099f1cf4d8b4d65bb706951e9b7e118f08a85ffafab23cb5",
+    "TWELVE_STAR_B_orbit_06_config.txt": "d7b99eab62238d588a0b305b7036ef013aaa13c1568d2b7bd187ccb94037c95f",
+    "TWELVE_STAR_B_orbit_06_forests.bin": "1c15219144205c176d7a8e5757a5e53fa590f52c0b54b265bf9968024d20a560",
+    "TWELVE_STAR_B_orbit_06_full_pairs.bin": "b3f2de21ca9b8f8ed45827af26a9d87929293c22080504b42c2d84aeb48997f6",
+    "TWELVE_STAR_B_orbit_06_pairs.bin": "55a6eed6773a0ef837bb37439afd11a188fe27f738f780b3f9f2117be5c443fd",
+    "TWELVE_STAR_B_orbit_06_columns.bin": "4984d1d2918ed7f4551803793477be13612a6b6ac1d79ac87eafd421f56e43a3",
+    "TWELVE_STAR_B_orbit_06_matrix.bin": "27f01e1bcdd49e8d8fb6f8fb190772b8e626e335700212a0d20f4c226568f6e5",
+    "TWELVE_STAR_B_orbit_06_pivots.bin": "8cc8440b36bc282434295de4b54ec87692b76340ef64e586d189a95c010ab45f",
+    "TWELVE_STAR_B_orbit_06_combos.bin": "441ba510f65aad0b02f47a6240e0aad5355ca66ec37b80a4daf39fdad2007891",
+    "TWELVE_STAR_B_orbit_07.json": "73ad865e0a63303465148c7e76a4744df9b7d071782cb62ed4d878f35371e375",
+    "TWELVE_STAR_B_orbit_07_config.txt": "a0b561857b0ff6804154b6b5dfbc4b8acb88c13f90e1deaf9b5a3a8178cf7fce",
+    "TWELVE_STAR_B_orbit_07_forests.bin": "bd1964ee08fb6f603173eccb35bd71006f64f991ab41cc09e8d865b8c8acb771",
+    "TWELVE_STAR_B_orbit_07_full_pairs.bin": "56a2d30601b8164a46ec797940bf6f73346b11728fba1269099ff13ece5217ca",
+    "TWELVE_STAR_B_orbit_07_pairs.bin": "826a6b09ab19438087804ff0b60fa22f77e7e351073ae4c155f5f02c86562c17",
+    "TWELVE_STAR_B_orbit_07_columns.bin": "136bc9660f4d528f2bc47bfa3f88ca50e73834213452b5406015c020aa206775",
+    "TWELVE_STAR_B_orbit_07_matrix.bin": "4d7f5f46484afd7c3cf54d98813ed1c4693ccc419b50c9b0f1ef10068f5b94e6",
+    "TWELVE_STAR_B_orbit_07_pivots.bin": "a9915b53c2f291535194b119d78281e6f45581f1d45c8b99beb888db19eaff1b",
+    "TWELVE_STAR_B_orbit_07_combos.bin": "ff32ea0b31b1c59f61b5559d85b8974bf6b721e6cd0a277ad8cb2a6695022441",
+    "TWELVE_STAR_B_orbit_08.json": "d449a87383b10efd534812ef5d497586ba01b2e7975c7b85070d4f0eb98b63e1",
+    "TWELVE_STAR_B_orbit_08_config.txt": "06b7a0b043062c99c0fcbac17ffa7b1b6c51478a50dd176ddae98a38b0ce2b1c",
+    "TWELVE_STAR_B_orbit_08_forests.bin": "a96de9f648cb70bc2ed9b706f222b75c598e3502f1456b555a0e920bee5836f9",
+    "TWELVE_STAR_B_orbit_08_full_pairs.bin": "bcd57df761f4a3d7b3e67cda90e6742a103962e09cc0f6ebebcfc3284b816fc1",
+    "TWELVE_STAR_B_orbit_08_pairs.bin": "f4445112553b76549d5eb70eeced6254933f7ee6b98aed88301a2db18111caab",
+    "TWELVE_STAR_B_orbit_08_columns.bin": "c4449116df5cddc3048fc5900f97095bc99f7f3518199495596fe3bfc92c1b3a",
+    "TWELVE_STAR_B_orbit_08_matrix.bin": "35fdb42d9eea70eeea49759692287e9c9ebc71050d29ad6bfb673909896801f5",
+    "TWELVE_STAR_B_orbit_08_pivots.bin": "6177dc2d4c22d78a57a48e3af7e8516306f0b52f2253b2679cfa30493ce840b9",
+    "TWELVE_STAR_B_orbit_08_combos.bin": "4beaf5d572e91ae9db37e107d680028f09ab02878e19830ade18beb173e64902",
+    "TWELVE_STAR_B_orbit_09.json": "c6529f7e69ea7fed29ad0f442a7f4009b7d171873338ccab76969bd7d29a4c29",
+    "TWELVE_STAR_B_orbit_09_config.txt": "065c4447b84e23a9f8972b78e285d3308ee888610b938d090ee4750ca1aefbc9",
+    "TWELVE_STAR_B_orbit_09_forests.bin": "6190da1183fea90ad1786f9e2c49981b948de98faf76e30fc03893c1c3967ad3",
+    "TWELVE_STAR_B_orbit_09_full_pairs.bin": "325f8831295a01a04fe55a91716512b14bc5747c4a0aa8192affa6488745eca6",
+    "TWELVE_STAR_B_orbit_09_pairs.bin": "fc1d28e0b654f53bac2ce7a4432e8619837dfade1c094121eace4dbb285b62b7",
+    "TWELVE_STAR_B_orbit_09_columns.bin": "0307745335f6a2562874c2fd332654f19a4536efe694313ff3dc51a623858946",
+    "TWELVE_STAR_B_orbit_09_matrix.bin": "a5e75451bb8aef1dbe39c37a1f5df31d00eabeecb0fef71e273c4512a0520495",
+    "TWELVE_STAR_B_orbit_09_pivots.bin": "b160fd7ab54d955fd71d2d2aec79ad22b6661cc0ba77854625421867a56c7de6",
+    "TWELVE_STAR_B_orbit_09_combos.bin": "414457aafdcadab4d8fef43300965c56955b056e8888cc0e440024e5209a8774",
+    "TWELVE_STAR_B_producer_format_map_check.json": "0dbf83184ee1d59e0a9279122940ff669810af4494d63edb7f2a99a0873d09fb"
+  },
+  "checker_artifact_hashes": {
+    "TWELVE_STAR_B_REVIEW.md": "cf8411339af43750e4828d1c1d7c0fc02dfc988be1ea5e3b340947f718c179fe",
+    "TWELVE_STAR_B_REVIEW_check.cpp": "99e11ac5d76de10b91d20262eb109a9143ab6c799067efd40f41ee9232fbce1a",
+    "TWELVE_STAR_B_REVIEW_check.exe": "1140487628bbd29f6b1c363bf61bdf57ca72ee69f293dca7321b783535c52f5e",
+    "TWELVE_STAR_B_REVIEW_check.json": "f05f9be375ff124f92bf807ec499d5209d535b5841ef722d648024d5053ace16",
+    "TWELVE_STAR_B_REVIEW_geometries.txt": "7b509d915f1a01ff362c0d3216f580add1110fbaf19e9f049348ea60844ea836",
+    "TWELVE_STAR_B_REVIEW_precheck.json": "11c0682cf128d9622749be3027d01e8ba9f743d99643969eb773c66a1a6857f1"
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations_closed": 9,
+    "theorems_audited": 10,
+    "claimed_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "manifest_file_hashes_and_sizes_checked": 105,
+    "full_covered_terminals": 24,
+    "reduced_terminals": 22,
+    "rank_GF2_each": 1024,
+    "full_forests_checked": 10240,
+    "full_endpoint_pairings_checked": 10240,
+    "reduced_endpoint_pairings_checked": 10240,
+    "arbitrary_columns_checked": 10240,
+    "connectivity_bits_independently_rebuilt": 10485760,
+    "pivot_combination_equations_checked": 10240,
+    "physical_forced_cherries_checked": 10240,
+    "exact_classification": "cycle iff actual forced pair absent from arbitrary F",
+    "required_matching_edges_arbitrary_complete_graph": true,
+    "actual_choices_checked": 50,
+    "all_expected_raw_choices_present_once": true,
+    "all32_vertex_maps_verified": true,
+    "all_marked_sets_and_forced_pairs_transported_simultaneously": true,
+    "consumed_t_covered_before_and_after_transport": true,
+    "actual_choices_by_canonical_class": {
+      "0": 8,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 2,
+      "6": 8,
+      "7": 8,
+      "8": 4,
+      "9": 4
+    },
+    "common_automorphic_images_including_parity_reversal": true,
+    "A_mixed_opening_interface_proved": false,
+    "A_opening_audited": false,
+    "Q6_application_audited": false,
+    "rootstar_235_decrement": 0,
+    "star_Q6_closed": false,
+    "full_twelve_hole_proved": false,
+    "full_P6_proved": false,
+    "full_Q6_P6_proved": false,
+    "producer_or_state_modified": false
+  },
+  "accepted_marked_inputs": [
+    {
+      "index": 0,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        13,
+        19
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 1,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        13,
+        25
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 2,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        19,
+        25
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 3,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        21,
+        25
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 4,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        13,
+        14,
+        25
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 5,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        13,
+        19,
+        21
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 6,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        13,
+        19,
+        25
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 7,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        13,
+        25,
+        26
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 8,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        13,
+        26,
+        28
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    },
+    {
+      "index": 9,
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        4,
+        11,
+        25,
+        26,
+        28
+      ],
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "forced_pair": [
+        8,
+        16
+      ]
+    }
+  ],
+  "independent_result": {
+    "rows": [
+      {
+        "index": 0,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 1,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 2,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 3,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 4,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 5,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 6,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 7,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 8,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      },
+      {
+        "index": 9,
+        "rank": 1024,
+        "forests": 1024,
+        "connectivity_bits": 1048576
+      }
+    ],
+    "rows_checked": 10,
+    "forests_checked": 10240,
+    "connectivity_bits_checked": 10485760,
+    "combination_equations_checked": 10240,
+    "pass": true
+  },
+  "independent_mapping_result": {
+    "manifest_sha256": "c76b1da561bab3eb82c38804fa452e8a8f66646a3d8e15219e570edee4d99f93",
+    "manifest_hashes_and_sizes_checked": 105,
+    "all_match": true,
+    "actual_choices_checked": 50,
+    "all_expected_raw_choices_present_once": true,
+    "all_32_vertex_coordinate_maps_valid": true,
+    "all_marked_sets_and_forced_pairs_transported_together": true,
+    "consumed_t_is_covered_before_and_after_map": true,
+    "actual_choices_by_canonical_class": {
+      "0": 8,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 2,
+      "6": 8,
+      "7": 8,
+      "8": 4,
+      "9": 4
+    }
+  },
+  "primary_rank_import": {
+    "title": "Fast Hamiltonicity checking via bases of perfect matchings",
+    "authors": "Cygan, Kratsch, Nederlof",
+    "doi": "10.1145/3148227",
+    "location": "Corollary3.5",
+    "url": "https://pure.tue.nl/ws/portalfiles/portal/99596886/1211.1506.pdf",
+    "statement_used": "rank_GF2(H22)<=1024 for all complete-graph perfect matchings"
+  }
+}

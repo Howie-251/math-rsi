@@ -1,0 +1,63 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_stated_proof_obligations_complete_modulo_import",
+  "summary": "All 35 obligations close for N14_4,A4_4,N10_4,NC_4,K4_4,S4D,G4D. Independent full certificate and symmetry audit PASS; semantic acceptance same-family/provisional relative to Fink Theorem2. Full Q5 A4 and P6 remain unproved.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_path": "Q4_CORE_REVIEW.md",
+  "audited_input_hashes": {
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "verify_q4_extension_certificates.py": "sha256:75a66d7c6d61aec00b7c16dbf30bdf35270dfa1ad69651011d261645bf6bbdff",
+    "q4_two_hole_3.bin": "sha256:783b91ab1f2d55055d8875b42e8ad1f22e0207882d124bcbb8a4b8dc86b337e9",
+    "q4_two_hole_15.bin": "sha256:b0d1eb80ca2b75da7b05f12e25febc7ccb652dac644775e83e97ae7598d19d38",
+    "q4_four_hole_1.bin": "sha256:5ebf58015e69cdec577a0c57d2bdb2438c3ca95fb3079e5a4787bcc20bc6d02f",
+    "q4_four_hole_4.bin": "sha256:978ae6898146591c3bbbacc8ac32d8df392caa02737980b27fd56c8f33535b25",
+    "q4_four_hole_13.bin": "sha256:dabc1cdebf85645e61d6c34b7baddc13ee2e46eed395ab51374cbcf8c322c6e9",
+    "q4_core_independent_audit.py": "sha256:4a3f2122be8524d3c0fc2204f9170013414c73663b34f6c47b4cf762c264e167",
+    "q4_core_independent_audit.json": "sha256:c668692f676a96a5209f9a4866a17efe0f99baafe01026bb4dd961a0abaf7b3e"
+  },
+  "external_imports": [
+    {
+      "name": "Fink perfect-matching extension theorem",
+      "source": "https://tmuetze.de/papers/match.pdf",
+      "location": "page1 definition and Theorem2",
+      "hypotheses": "perfect matching of K(Qd), d>=2",
+      "conclusion": "Hamilton cycle containing the matching, every additional edge in Qd",
+      "directly_checked": true,
+      "reproved": false
+    }
+  ],
+  "details": {
+    "theorems_audited": 7,
+    "micro_obligations_closed": 35,
+    "issues": [],
+    "independent_certificate_check": "q4_core_independent_audit.json",
+    "independent_checker": "q4_core_independent_audit.py",
+    "records_verified": 301455,
+    "finite_verification": "PASS",
+    "two_hole_orbit_sizes": [
+      6,
+      1
+    ],
+    "four_hole_normalized_coverage": {
+      "adjacent": 132,
+      "residual_by_representative": [
+        12,
+        12,
+        12
+      ]
+    },
+    "q5_normalized_geometry_counts": {
+      "both_masks": 255,
+      "one_mask": 350,
+      "neither_mask": 165
+    },
+    "full_q5_a4_proved": false,
+    "full_p6_proved": false
+  },
+  "generated_at": "2026-11-01T06:45:02.560063+00:00"
+}

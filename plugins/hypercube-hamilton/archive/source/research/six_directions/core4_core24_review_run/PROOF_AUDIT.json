@@ -1,0 +1,59 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "WARN",
+  "reason_code": "same_family_provisional",
+  "summary": "Local proofs complete relative to imports; generalized near-perfect input closes new unbalanced four-hole classes; arbitrary four-hole covered endpoints and higher-hole obligations remain",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "N0-N10, F1-F6, Z0-Z8, E1 and R1/R2; no full P6 acceptance",
+  "audited_input_hashes": {
+    "NEAR_PERFECT_ADJACENT.md": "sha256:9a77b4c3530f8bdcf7392bcfe1cd4fd5722af46cc0fbe180171e066f8660c35f",
+    "NEAR_PERFECT_EXTENSION.md": "sha256:eefb31b2c708fdd2c2b9ebe9e86b43a83bfdecc91fd59f737782d6bdbed02257",
+    "CORE_DERIVATION.md": "sha256:37e56ee103e161d118e798ce66be02370c3153b0ddd485f98826d06d94cecb78",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "FOUR_HOLE_DERIVATION.md": "sha256:73b54d670b6c4b504755f34dc08a3be5954096544896856d2d3d89379b4bcc0e",
+    "FOUR_HOLE_SPLIT.md": "sha256:e9e265508dbdf8b01a9ca952a6517c9e79ad5435f106b43bd2d57f31467ce1d7",
+    "FAR_FOUR_HOLES.md": "sha256:ba7818b5881e411a58d63ae43617edbc8212372f65d1bb18b5b51e7afd2ccdae",
+    "RECTANGULAR_FOUR_HOLES.md": "sha256:7bcb2a8fc4c689d43da86369d5689de67b92e910e84423b4e3e670d5096a3184",
+    "FREE_ENDPOINTS_FOUR_HOLES.md": "sha256:5939a8355b718b693ea8f64bfcfe36380ce19cf79a9dfc4e2a7044146cda6029",
+    "AUXILIARY_ENDPOINT_REDUCTION.md": "sha256:fbabf6eb346bdfcbb6a5ffec8fed112c1bd87b638144b2c2c35977e7b0865a35",
+    "BIPARTITE_NEAR_PERFECT.md": "sha256:1cb47da03495d5c2dde0b21f536057a0455bab30f3dcd28ef7c1d4d482746afd",
+    "SAME_SIDE_TRANSFER.md": "sha256:3b63352af482ddd4998a9895d1bea167a26cadbd282a4bffc98d7aa6b150753a",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "UNBALANCED_TRANSFER.md": "sha256:81e0355e3dd647442ba38ea7e0aa48bb0eb36960c8cbd5ac9e0cbdf1c9c588e7",
+    "UNBALANCED_CORE_THEOREM.md": "sha256:8c6b4d6a99021b979d810f0f0dec2599f4c4c2fc06ceb2084348b469d4b4d5c7",
+    "DISTANCE_TWO_UNBALANCED.md": "sha256:655b63481f6539aa9303984aa2dfbe95bcca9912fc74a014794812d999611f94"
+  },
+  "review_agent_ids": [
+    "/root/near_perfect_audit",
+    "/root/four_hole_audit",
+    "/root/split_transfer_audit",
+    "/root/far_holes_review",
+    "/root/free_endpoints_audit",
+    "/root/auxiliary_reduction_audit",
+    "/root/nonadjacent_and_same_side_audit",
+    "/root/adjacent_near_perfect_audit",
+    "/root/general_near_perfect_audit"
+  ],
+  "fatal_open": 0,
+  "critical_open": 0,
+  "editorial_fixes": [
+    "D3 n>=2",
+    "N4 existential w",
+    "F2 explicit n>=5",
+    "Z4 final edge-source wording: exclude all original M, not only its long edges"
+  ],
+  "counterexample_suite": "small-dimensional exact rigidity enumeration and constructive witnesses",
+  "timestamp": "2026-11-01",
+  "render_html": false,
+  "latest_review_file": "GENERAL_NEAR_PERFECT_REVIEW.md",
+  "closed_substantive_issues": [
+    {
+      "id": "Z6_d_equals_u",
+      "original_severity": "CRITICAL",
+      "status": "CLOSED",
+      "resolution": "Z6 substantive boundary fix: d=u produces a singleton root after deleting D; adding ut forms J, q=t; no strengthened premise",
+      "review": "GENERAL_NEAR_PERFECT_REVIEW.md"
+    }
+  ]
+}

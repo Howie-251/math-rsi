@@ -1,0 +1,49 @@
+{
+  "scope": "relocated selected ordinary checks; no full quotient traversal or Lean build",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi ecc v3 236ows_o/ecc/archive/source/computation/check_data.py",
+        "--output",
+        "/Users/rfy_naiveai/Desktop/MathRSI/plugins/ecc/evidence/scratch/relocation-fixed/finite-data.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"scope\": \"lower spectra, mother parameters, polynomial, recorded coverage; no full coset scans or pair streams rerun\",\n  \"lower\": [\n    {\n      \"n\": 43,\n      \"k\": 10,\n      \"distance\": 16,\n      \"nonzero_messages\": 1023,\n      \"spectrum\": {\n        \"16\": 12,\n        \"17\": 101,\n        \"18\": 144,\n        \"19\": 70,\n        \"20\": 61,\n        \"21\": 147,\n        \"22\": 146,\n        \"23\": 36,\n        \"24\": 43,\n        \"25\": 123,\n        \"26\": 92,\n        \"27\": 22,\n        \"28\": 11,\n        \"29\": 13,\n        \"30\": 2\n      }\n    },\n    {\n      \"n\": 44,\n      \"k\": 10,\n      \"distance\": 17,\n      \"nonzero_messages\": 1023,\n      \"spectrum\": {\n        \"17\": 72,\n        \"18\": 113,\n        \"19\": 82,\n        \"20\": 101,\n        \"21\": 114,\n        \"22\": 111,\n        \"23\": 84,\n        \"24\": 71,\n        \"25\": 108,\n        \"26\": 87,\n        \"27\": 26,\n        \"28\": 19,\n        \"29\": 26,\n        \"30\": 9\n      }\n    },\n    {\n      \"n\": 44,\n      \"k\": 11,\n      \"distance\": 16,\n      \"nonzero_messages\": 2047,\n      \"spectrum\": {\n        \"16\": 371,\n        \"20\": 880,\n        \"24\": 706,\n        \"28\": 88,\n        \"32\": 2\n      }\n    },\n    {\n      \"n\": 45,\n      \"k\": 11,\n      \"distance\": 16,\n      \"nonzero_messages\": 2047,\n      \"spectrum\": {\n        \"16\": 371,\n        \"20\": 880,\n        \"24\": 706,\n        \"28\": 88,\n        \"32\": 2\n      }\n    },\n    {\n      \"n\": 42,\n      \"k\": 16,\n      \"distance\": 12,\n      \"nonzero_messages\": 65535,\n      \"spectrum\": {\n        \"12\": 675,\n        \"16\": 9898,\n        \"20\": 30659,\n        \"24\": 21056,\n        \"28\": 3161,\n        \"32\": 85,\n        \"36\": 1\n      }\n    }\n  ],\n  \"mothers\": {\n    \"count\": 172,\n    \"nonzero_messages_checked\": 21844,\n    \"rank_even_distance_full_support\": \"PASS\",\n    \"inequivalence\": \"requires separate canonicalization check\"\n  },\n  \"recorded_coverage\": {\n    \"cosets_per_implementation\": 738734374912,\n    \"accepted_cosets\": 429024,\n    \"pairs\": 619053789\n  },\n  \"status\": \"PASS\"\n}\n",
+      "stderr": "",
+      "wall_seconds": 0.04758949996903539
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi ecc v3 236ows_o/ecc/tools/check_saved_sets.py",
+        "--manifest",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi ecc v3 236ows_o/ecc/archive/source/evidence/manifest.json",
+        "--output",
+        "/Users/rfy_naiveai/Desktop/MathRSI/plugins/ecc/evidence/scratch/relocation-fixed/saved-sets.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"scope\": \"read saved complete-scan results, validate bases and all saved Gray indices/normalizations, compare exact sets; full domains not rerun\", \"cases\": 172, \"F_count\": 429024}\n",
+      "stderr": "",
+      "wall_seconds": 2.875489166995976
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/var/folders/qz/3h_f66zn67zbty04w0mjyysm0000gn/T/mathrsi ecc v3 236ows_o/ecc/tools/replay_one.py",
+        "--output-dir",
+        "/Users/rfy_naiveai/Desktop/MathRSI/plugins/ecc/evidence/scratch/relocation-fixed/one-mother"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"scope\": \"one complete saved mother-code certificate, not a full quotient scan\",\n  \"original_index\": 169,\n  \"case\": \"catalog_after163_169\",\n  \"result\": {\n    \"status\": \"PASS\",\n    \"cases_completed\": 1,\n    \"binary_cases\": 1,\n    \"TSV_cases\": 0,\n    \"F_count\": 546,\n    \"all_F_actual_distances_checked\": 69888,\n    \"pairs_replayed\": 148785,\n    \"witness_bytes_read\": 148785,\n    \"all_selected_literal_matrix_bindings_checked\": true,\n    \"all_streams_exact_EOF\": true,\n    \"sentinels_or_invalid_messages\": 0,\n    \"nonrejecting_witnesses\": 0,\n    \"F_domains_rerun\": 0,\n    \"CPU_seconds\": 0.005335,\n    \"weight_histogram\": {\n      \"2\": 24,\n      \"4\": 437,\n      \"6\": 1234,\n      \"8\": 4763,\n      \"10\": 16082,\n      \"12\": 41828,\n      \"14\": 84417\n    }\n  }\n}\n",
+      "stderr": "",
+      "wall_seconds": 1.4453466659761034
+    }
+  ],
+  "earlier_copy_setup_error": "A first temporary copy excluded all directories named evidence, including source/evidence/manifest.json; no checker was changed. Corrected copy excludes only plugin-root generated evidence.",
+  "status": "PASS",
+  "source_copy_removed": true
+}

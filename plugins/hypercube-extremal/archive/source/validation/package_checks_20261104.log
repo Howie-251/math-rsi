@@ -1,0 +1,24 @@
+Source inventory check:
+Command: python package/tools/verify_handoff.py
+Package manifest pending; checking source inventory only.
+Source logical paths: 283 unique stored files: 183
+PASS: SHA-256, file sizes, deduplicated source mapping.
+
+Materialization check (fresh scratch directory outside frozen package):
+Command: python package/tools/materialize_research.py materialized_check
+Restored 283 source paths under F:\c4free-hypercube-main\analysis\erdos86_q4_handoff_20261103\materialized_check
+No optimization was started; see REPRODUCE.md before running historical scripts.
+
+Syntax and dependency check:
+PASS: AST parsed 42 physically archived Python files; CSV inventory exported.
+PASS: all 19 model and regeneration dependencies exist after materialization.
+Dependencies checked: full_meta.npz, full_C.npz, face_orbit_meta.npz,
+face_block_0.npz, face_block_1.npz, face_block_3.npz, face_block_6.npz,
+face_block_7.npz, shadows.bin, face_indices.bin, vertex_indices.bin,
+keys.bin, edges.bin, pair_index.bin, face_pair_lookup.bin,
+vertex_flag_codes.bin, q5control_best.npz, evaluate.cpp, generate_models.cpp.
+
+Scope: archive hash/source-path restoration, syntax, dependency existence and full
+exact certificate enumeration (separate portable_q4_recheck_20261104.log).
+Historical optimization replay was not run, and matching floating trajectories
+across environments is not asserted. No compiler or numerical package installed.

@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "audit_skill": "proof-checker",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "fork_turns": "none",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T09:58:55.108915+00:00",
+  "source": "Three raw after_single_face binaries; no saved core-map used",
+  "numbers": {
+    "previous_remaining": 33638,
+    "newly_covered": 12288,
+    "newly_by_target": {
+      "1": 3180,
+      "7": 4428,
+      "31": 4680
+    },
+    "remaining": 21350,
+    "remaining_by_target": {
+      "1": 6205,
+      "7": 7235,
+      "31": 7910
+    },
+    "remaining_with_a2b1": 21300,
+    "remaining_without_a2b1": 50,
+    "coordinate_projections": 94779,
+    "proved_T15_core_orbits": [
+      2,
+      7,
+      10,
+      13,
+      14,
+      19,
+      31,
+      32,
+      35,
+      37,
+      38,
+      44
+    ],
+    "additional_sufficient_cores": [
+      0,
+      1,
+      4,
+      5,
+      8,
+      15,
+      23,
+      24,
+      26,
+      27
+    ],
+    "minimum_additional_whole_orbit_cover": 10,
+    "remaining_choice_patterns": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        8
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        15
+      ],
+      [
+        17,
+        23,
+        24
+      ],
+      [
+        18,
+        26
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        22,
+        23,
+        24
+      ],
+      [
+        23
+      ],
+      [
+        24
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        27
+      ]
+    ]
+  },
+  "forced_singleton_cores": [
+    0,
+    1,
+    4,
+    5,
+    8,
+    15,
+    23,
+    24,
+    27
+  ],
+  "remaining_constraint_groups": [
+    {
+      "vertices": [
+        18,
+        21,
+        25,
+        26
+      ],
+      "constraints": [
+        [
+          18,
+          26
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          25,
+          26
+        ]
+      ],
+      "common": [
+        26
+      ]
+    }
+  ],
+  "choice_pattern_multiplicities": {
+    "0": 1989,
+    "1": 150,
+    "4": 2163,
+    "5": 1326,
+    "8": 900,
+    "8,11": 1926,
+    "12,15": 1926,
+    "15": 1326,
+    "17,23,24": 1968,
+    "18,26": 984,
+    "21,26": 1968,
+    "22,23,24": 984,
+    "23": 984,
+    "24": 492,
+    "25,26": 1968,
+    "27": 246
+  },
+  "without_a2b1_by_target": {
+    "1": 10,
+    "7": 20,
+    "31": 20
+  },
+  "projected_core_histogram": {
+    "0": 3978,
+    "1": 300,
+    "2": 3600,
+    "3": 900,
+    "4": 3726,
+    "5": 3978,
+    "6": 900,
+    "7": 3600,
+    "8": 9504,
+    "9": 900,
+    "10": 9756,
+    "11": 3915,
+    "12": 1926,
+    "15": 7830,
+    "17": 1968,
+    "18": 1968,
+    "21": 3936,
+    "22": 984,
+    "23": 5904,
+    "24": 3936,
+    "25": 1968,
+    "26": 9840,
+    "27": 984,
+    "30": 942,
+    "34": 1884,
+    "41": 942,
+    "44": 3768,
+    "46": 942
+  },
+  "binary_comparison": "exact byte equality in all three output binaries",
+  "candidate_rows_compared": 21350,
+  "mathematical_scope": "Normalized marked hole geometries; conditional on previously imported eight-core theorem, plus separately audited four-core theorem. Not counts of arbitrary matchings or realizability.",
+  "full_T15_proved": false,
+  "full_eight_hole_proved": false,
+  "full_P6_proved": false,
+  "audited_input_hashes": {
+    "remaining_eight_after_single_face_1.bin": "sha256:d0c58032c0984c724580f061f683b802ac10ee09de437a14ba360334f4600404",
+    "remaining_eight_after_balanced_bridge_1.bin": "sha256:2f762beb611617b357513ba870175c4a37dfc363a062cd3ef4bdd5d5e5b61a31",
+    "remaining_eight_after_single_face_7.bin": "sha256:6936887bdc0cddbacc2e8cd6f79fa57a6938bfd875010d97b370ea7c034b6e0a",
+    "remaining_eight_after_balanced_bridge_7.bin": "sha256:544705041516f52be5a2f7cdd1a9f46efa9b48d1415a9f5bc052e7fe29ecd910",
+    "remaining_eight_after_single_face_31.bin": "sha256:2edbdf8371ef8ef89895e2d4cc7478f1804bb985d678eac5aeafd43b72a50c18",
+    "remaining_eight_after_balanced_bridge_31.bin": "sha256:c2f75a53b11aede5f54e9134c8decc42c88fb27735f5623760d37b0dca983c2a",
+    "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+    "eight_after_balanced_bridge_check.py": "sha256:f5599522cba51254f9d1beb7811e33960ba6e1479d8575c07e7e7b51f535d0ab",
+    "eight_after_balanced_bridge_check.json": "sha256:b88d4bb633e43dd76571e6b8921a7688a277552e7183f37549155cf2dee7cf5a",
+    "eight_after_balanced_bridge_candidates.json": "sha256:787d22bb2d427c385428580fa1aa237069e3654e4761209782754254872060eb",
+    "T15_BALANCED_BRIDGE_CONSEQUENCES_check.py": "sha256:431f874ca1a3524bf8db2944223cc03c39d6f789f3e7d65539432c2485830eb2"
+  },
+  "protected_core_hashes": {
+    "T15_BALANCED_BRIDGE_FOUR_CORES.md": "sha256:c165b97de2fb28f78da16d7bd8a02a85819405a0ac25a7eb4ab98111bc946e10",
+    "T15_BALANCED_BRIDGE_REVIEW.md": "sha256:f80ec78ad152eea25aca4dba08e5ebea6342e27c14ecac3d5508f91183daeee3",
+    "T15_BALANCED_BRIDGE_REVIEW.json": "sha256:799c2317f21f65a96c21ce21e859d6224e3cfddfa72c40e06771fc15281f90cb",
+    "T15_BALANCED_BRIDGE_independent_check.py": "sha256:a219b4c573c00f4a83b29b6d73f9079ca9b2caea9ab3a8c79a55d162b4297c9d",
+    "T15_BALANCED_BRIDGE_independent_check.json": "sha256:ba0f48881a8e079adfc6ebd33362ece13abada1a9ac4cca950286a23c4bbb7c4"
+  },
+  "author_checker_imported": false
+}

@@ -1,0 +1,257 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "Opposite-parity forbidden-vertex Q4 optional-edge intersection and the two explicitly stated Q5 split-condition consequences pass independent certificate and semantic audit. No full T15/T44_5/R8-covered/P6 closure.",
+  "audited_input_hashes": {
+    "Q4_RICH_GLUING.md": "sha256:69ac96bc618aeffdf4c3d1d1094d80d783a9ac6d5c7bd55a6120d377a5dd4b19",
+    "q4_n14_rich_3.bin": "sha256:ae1bed6a355a4f2c18ee76b2dea5fb993af16621b3565c9894ee9979cfc6f4c4",
+    "q4_n14_rich_15.bin": "sha256:51c1f70da1e10d7ec9042a8063d882b323e762305c32e1f91d695b3e3a3297eb",
+    "q4_a4_rich_1.bin": "sha256:6c5988d5346ade7556d51884bcabef735f14dc54a5dcf1724446a80e8fd2aab6",
+    "q4_a4_rich_4.bin": "sha256:9e8cd4d7346523d385f15a3cf3785a82eb62c4ac8f57bb61871d69027f0ff23a",
+    "q4_a4_rich_13.bin": "sha256:716b9e806150d7804799189b682014b2c59c546717c37207f4e597ee743ee5c7"
+  },
+  "supporting_input_hashes": {
+    "q4_n14_richer_spectrum.cpp": "sha256:cc81816295924efebfbf3abf76a2e9023d4a123d2e1d741ba69521af55721253",
+    "q4_a4_richer_spectrum.cpp": "sha256:c42b4d386d85d486983bb7548bb22604d740b4d6406a6f87f1c25374c8d84a89",
+    "verify_q4_rich_spectrum_gluing.py": "sha256:8a8effd3d2d8162dea38c1d0bd69169721792afb8d52ae8860efff7dfb3a243e"
+  },
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_selection_source": "User-authorized route relayed by parent",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "thread_id": "/root/eight_double_bridge_audit",
+  "generated_at": "2026-11-01T08:30:22.008378+00:00",
+  "trace_path": "Q4_RICH_GLUING_REVIEW.md",
+  "details": {
+    "theorems_audited": 2,
+    "theorem_ids": [
+      "Q4_opposite_forbidden_parity_optional_edge_intersection",
+      "Q5_separated_avoided_holes_two_stated_split_conditions_all_crossing_counts"
+    ],
+    "proof_obligations": [
+      {
+        "id": "RG01",
+        "location": "L8–20",
+        "note": "精确量词、任意完整图匹配、单边而非整谱同时处方",
+        "status": "PASS"
+      },
+      {
+        "id": "RG02",
+        "location": "L24–28",
+        "note": "两孔规范化与 forbidden 保留",
+        "status": "PASS"
+      },
+      {
+        "id": "RG03",
+        "location": "L30–34",
+        "note": "全部非邻四孔带避点孔型覆盖",
+        "status": "PASS，独立枚举"
+      },
+      {
+        "id": "RG04",
+        "location": "L38–45",
+        "note": "数据格式、完整匹配集合、正圈合法性",
+        "status": "PASS"
+      },
+      {
+        "id": "RG05",
+        "location": "L47–56",
+        "note": "总数、低记录分类与至少15下界",
+        "status": "PASS"
+      },
+      {
+        "id": "RG06",
+        "location": "L58–64",
+        "note": "无需精确谱上界；18+15>32",
+        "status": "PASS"
+      },
+      {
+        "id": "RG07",
+        "location": "L68–74",
+        "note": "固定 a=0、B 奇避点的对称展开及证书并集",
+        "status": "PASS"
+      },
+      {
+        "id": "RG08",
+        "location": "L76–83",
+        "note": "augmentation、high completion⇒high R、全低候选覆盖",
+        "status": "PASS"
+      },
+      {
+        "id": "RG09",
+        "location": "L85–94",
+        "note": "非邻型与邻接型合并后4128候选，不遗漏潜在低谱对象",
+        "status": "PASS"
+      },
+      {
+        "id": "RG10",
+        "location": "L98–102",
+        "note": "全部338688低对比较、均至少三条公共正边",
+        "status": "PASS"
+      },
+      {
+        "id": "RG11",
+        "location": "L106–116",
+        "note": "c 为偶数、c>0 片段压缩与原匹配保留",
+        "status": "PASS"
+      },
+      {
+        "id": "RG12",
+        "location": "L118–124",
+        "note": "c=0 投影奇偶、两桥拼接、共同边不属原匹配",
+        "status": "PASS"
+      },
+      {
+        "id": "RG13",
+        "location": "L126–128",
+        "note": "不把两个可用切分条件当作所有几何",
+        "status": "PASS"
+      }
+    ],
+    "issues": [],
+    "open_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "independent_check": {
+      "status": "PASS",
+      "files": [
+        {
+          "file": "q4_n14_rich_3.bin",
+          "records": 135135,
+          "cycles": 754933,
+          "below18": 6,
+          "low_size_histogram": {
+            "16": 6
+          },
+          "minimum": 16,
+          "sha256": "ae1bed6a355a4f2c18ee76b2dea5fb993af16621b3565c9894ee9979cfc6f4c4",
+          "complete_matching_set_equal": true
+        },
+        {
+          "file": "q4_n14_rich_15.bin",
+          "records": 135135,
+          "cycles": 718088,
+          "below18": 36,
+          "low_size_histogram": {
+            "15": 36
+          },
+          "minimum": 15,
+          "sha256": "51c1f70da1e10d7ec9042a8063d882b323e762305c32e1f91d695b3e3a3297eb",
+          "complete_matching_set_equal": true
+        },
+        {
+          "file": "q4_a4_rich_1.bin",
+          "records": 10395,
+          "cycles": 53256,
+          "below18": 0,
+          "low_size_histogram": {},
+          "minimum": 18,
+          "sha256": "6c5988d5346ade7556d51884bcabef735f14dc54a5dcf1724446a80e8fd2aab6",
+          "complete_matching_set_equal": true
+        },
+        {
+          "file": "q4_a4_rich_4.bin",
+          "records": 10395,
+          "cycles": 54096,
+          "below18": 20,
+          "low_size_histogram": {
+            "17": 12,
+            "16": 4,
+            "15": 4
+          },
+          "minimum": 15,
+          "sha256": "9e8cd4d7346523d385f15a3cf3785a82eb62c4ac8f57bb61871d69027f0ff23a",
+          "complete_matching_set_equal": true
+        },
+        {
+          "file": "q4_a4_rich_13.bin",
+          "records": 10395,
+          "cycles": 54435,
+          "below18": 0,
+          "low_size_histogram": {},
+          "minimum": 18,
+          "sha256": "716b9e806150d7804799189b682014b2c59c546717c37207f4e597ee743ee5c7",
+          "complete_matching_set_equal": true
+        }
+      ],
+      "records": 301455,
+      "cycles": 1634808,
+      "n14_low_A": 72,
+      "n14_low_B": 576,
+      "a4_low_B_candidates": 4128,
+      "pairs": [
+        {
+          "type": "n14_n14",
+          "pairs": 41472,
+          "minimum_intersection": 3,
+          "disjoint": 0
+        },
+        {
+          "type": "n14_a4",
+          "pairs": 297216,
+          "minimum_intersection": 3,
+          "disjoint": 0
+        }
+      ],
+      "hole_classification": {
+        "typed_a4_instances": 2688,
+        "adjacent_augmentable": 2112,
+        "nonadjacent": 576,
+        "nonadjacent_orbit_image_count": 576,
+        "typed_n14_instances": 112
+      },
+      "source_files_sha256": {
+        "q4_n14_richer_spectrum.cpp": "cc81816295924efebfbf3abf76a2e9023d4a123d2e1d741ba69521af55721253",
+        "q4_a4_richer_spectrum.cpp": "c42b4d386d85d486983bb7548bb22604d740b4d6406a6f87f1c25374c8d84a89",
+        "verify_q4_rich_spectrum_gluing.py": "8a8effd3d2d8162dea38c1d0bd69169721792afb8d52ae8860efff7dfb3a243e"
+      },
+      "full_p6_proved": false
+    },
+    "independent_checker": "Q4_RICH_GLUING_REVIEW_check.py",
+    "independent_checker_sha256": "sha256:abc36037d206ff5fbc98a5c799197402ea99a056649b942bf86633f99947c031",
+    "independent_checker_result": "Q4_RICH_GLUING_REVIEW_check.json",
+    "independent_checker_result_sha256": "sha256:d2e5d3a9cc4804ba484216fb8f02028dd34ac3136583925a0a905db1d38ff70f",
+    "verification_independence": [
+      "Independent byte parser and cycle verifier",
+      "Explicit recursive complete-matching-set enumeration instead of author matching-rank coverage",
+      "Different short-edge ordering",
+      "Independent full marked-hole-geometry classification",
+      "Independent symmetry/augmentation and all low-pair intersections"
+    ],
+    "key_semantic_checks": {
+      "stored_unions_only_lower_bounds": true,
+      "high_completion_implies_high_a4": true,
+      "adjacent_a4_low_candidate_coverage_complete": true,
+      "all_marked_hole_geometries_covered": true,
+      "merged_certificates_remain_positive": true,
+      "either_high_case_uses_18_plus_15_gt_32": true,
+      "common_edge_is_optional_for_both_matchings": true,
+      "q5_c0_opposite_projected_parity_justified": true,
+      "q5_cpositive_arbitrary_long_crossing_edges_allowed": true
+    },
+    "counterexample_pass": [
+      "Multiple augmentations of same A4 matching",
+      "Forbidden majority adjacent to minority while other majority holes nonadjacent",
+      "Merged symmetric certificates",
+      "True spectrum strictly larger than stored union",
+      "Crossing count zero or minimum positive two",
+      "Original long crossing edges and same-parity matching edges"
+    ],
+    "closure_claims": {
+      "Q4_optional_intersection_proved": true,
+      "Q5_two_stated_split_cases_proved": true,
+      "full_T15_proved": false,
+      "full_T44_5_proved": false,
+      "R8_covered_proved": false,
+      "full_P6_proved": false
+    },
+    "original_inputs_or_main_state_modified": false
+  }
+}

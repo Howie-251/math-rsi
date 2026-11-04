@@ -23,3 +23,12 @@ Property B 来源包括原题规格、实际证明连接、可复用引理、失
 同一上游提交的Grok、Antigravity、Codex和Claude-review四份Python桥接现位于[mcp-servers](../mcp-servers/README.md)，实际服务源码保持原字节，测试定位和本仓安装说明的改动列在[SOURCE](../mcp-servers/SOURCE.md)。该附加包独立记录来源，不更改原207文件base快照。模型CLI和登录是运行环境依赖，另一份ARIS checkout不是依赖。
 
 当前route-loop是原auto-review-loop的明确数学适配，执行其改进链并按数学任务替换原ML对象/停止判断；其余MathRSI流程实际调用固定的ARIS能力。原始设计意见、修复和复核见[本轮处置](../development/review-loop-integration/REVIEW_DISPOSITION.md)。跨模型讨论、静态消费审计和实际协议/模型调用分别记范围，不宣称全部数学研究能力已获新题长程验证。
+
+## v3补充科学原件（2026-11-04）
+
+本轮按mathrsi-meta-evolve吸收用户提供的ECC五案例发布包、Erdős86 Q4交接、Ruskey–Savage Q6研究包和Happy Ending原稿；原件在各插件`archive/source/`保留原相对路径，整理层为本轮新作。每个archive的README与INVENTORY记录具体来源、保留/省略材料、历史证明状态；不将包装或本次小范围重放追认为全部原数学重新验收。论文/PDF及其它第三方原件保留原著作权，顶层MIT不重授权这些材料。
+
+- [ECC原件与两波研究](../plugins/ecc/archive/README.md)
+- [Erdős86原件](../plugins/hypercube-extremal/archive/README.md)
+- [Q6原件](../plugins/hypercube-hamilton/archive/README.md)
+- [Happy Ending原件](../plugins/happy-ending/archive/README.md)

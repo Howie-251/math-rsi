@@ -2,15 +2,17 @@
 
 [English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md) · [Degree–Diameter 成果案例](case-studies/degree-diameter/README.zh-CN.md)
 
-固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版。v2 在 v1 上新增 meta-evolve、degree–diameter 插件及工作流改进。
+固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版。v2 在 v1 上新增 meta-evolve、degree–diameter 插件及工作流改进。**当前本地开发分支正在实现v3，尚未tag或push**；见[v3具体变化与可运行检查](docs/V3_CHANGES.md)。
 
 **面向严谨数学研究、可由 agent 执行并持续自进化的工作流与领域知识框架。** 从文献查漏到严密证明，把发现、推导、计算、审阅、形式化与可复现交接接成实际工作流。
 
 主流程按现有成果选择入口，并衔接五组可独立使用的子流程：**问题准备与文献 → 求解路线迭代 → 证明推进 → 装配验证 → 交付沉淀。** 每组实际执行、交付结果，由调用者读取后继续；新障碍带着具体问题回文献或路线，未变的成果直接复用。已有完整证明可直接进入验证，短证明可以直接完成，不必跑满五组。
 
-![v0基础研究工具沉淀为MathRSI v1，独立DD历史证据推动当前v2，之后以v3及后续版本表示未来演进](figures/mathrsi/01-evolution.png)
+![v2历史演进图，其中ECC草案及未来v3标签属于当时快照](figures/mathrsi/01-evolution.png)
 
-v0表示基础研究工具，包括Property B与ECC研究中使用的独立ARIS技能；这些经验再沉淀为统一v1工作流。DD历史研究作为独立证据源，推动当前v2的外层维护、流程改进与DD插件。v3 → …表示未来继续演进。ECC仍为草案。[图源与审阅记录](figures/mathrsi/README.md)。
+此图保留为**v2历史结构图**，其中ECC草案和未来v3标签属于当时快照；当前能力以本文及[v3变化](docs/V3_CHANGES.md)为准。Property B与ECC初始研究提供v1经验，DD证据推动v2；ECC从v0成果继续基于v1/v2继承的方法与workflow深化，新Lean归约、实际矩阵连接和便携证书再反馈v3。这种方法继承无需每步严格调用固定release。[图源与审阅记录](figures/mathrsi/README.md)。
+
+v3在现有流程内增强四类动作：工作集候选经全域违反对象回流并保留已接受best；变换同步运输根、目标、伙伴与必含边；用有限秩／覆盖机制承接全称义务；读取Lean全部显式参数并连接实际数据。原ECC插件完成第二轮升级，新增超立方体极值、Hamilton延拓和Happy Ending三个领域。**base仍为十项MathRSI技能**，没有为每个动作另建空壳。
 
 本仓以详细 Markdown 为主，直接携带32项ARIS技能的Claude/Codex双端完整实现、共享资源、模板与helpers。MathRSI自己新增的代码只做明确的开发核查；数学研究由agent判断与执行，不另造调度平台或通用证明判分器。
 
@@ -20,6 +22,7 @@ v0表示基础研究工具，包括Property B与ECC研究中使用的独立ARIS�
 - [完整工作流与调用序列](docs/WORKFLOWS.md)：五组子流程的输入、真实动作、阶段产物、回流图及恢复例子。
 - [ARIS实际调用说明](docs/ARIS_REUSE.md)：32技能双端位置、各阶段输入输出、helper命令与外部运行依赖。
 - [跨模型 MCP 调用与安装](docs/REVIEWER_MCP.md)：仓内 Python 桥接、双端配置、Grok／Gemini 首轮及续接、调用结果如何进入审阅循环。
+- [v3具体变化](docs/V3_CHANGES.md)：现有v2上的共性增量、三个新领域与ECC升级、真实命令及当前审阅状态。
 - [v2具体变化](docs/V2_CHANGES.md)：在现有v1上吸收DD历史证据的增量修改、领域接入及本轮实际范围。
 - [Degree–diameter领域入口](plugins/degree-diameter/skills/mathrsi-degree-diameter/SKILL.md)：构造、共同覆盖、有限排除、迁移诊断与原图核验；[完整资料](plugins/degree-diameter/README.md)随仓保留原wiki和支撑原件。
 - [Property B领域主技能](plugins/propertyb/skills/mathrsi-propertyb/SKILL.md)：结合完整知识库选择研究路线。
@@ -30,6 +33,8 @@ v0表示基础研究工具，包括Property B与ECC研究中使用的独立ARIS�
 ### 五组数学子流程
 
 ![五组解题子流程内嵌ARIS、贯穿研究wiki、按需Lean，并与独立外层mathrsi-meta-evolve衔接](figures/mathrsi/02-workflows.png)
+
+上图保留为**v2历史workflow视图**；v3沿用五阶段，当前领域和增量见下表及[v3变化](docs/V3_CHANGES.md)。
 
 研究wiki贯穿五组子流程，文献查漏、路线修订与局部证明修复按具体义务回流。独立外层 `mathrsi-meta-evolve` 将经验分为Base、Plugin、Task和Defer：前两类经实现、审阅、实际使用后决定采用；单题状态与暂缓建议分别留在wiki或backlog。
 
@@ -65,7 +70,16 @@ v0表示基础研究工具，包括Property B与ECC研究中使用的独立ARIS�
 
 [插件资料层](plugins/degree-diameter/README.md)保留源wiki、证明、程序、失败、审阅和形式化；handoff按已核范围取复现入口，新题wiki写自己的工作区。历史DD由原研究流程完成，是本轮v1→v2的经验来源，不能追认为MathRSI v1/v2的解题试验。
 
-ECC保留[首版草案](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，等待用户安排另一位领域agent重做；它未按本次Property B标准验收，未加入项目默认技能发现。已授权的ECC原交接只读快照见[经验来源](development/context/ecc-source/README.md)；没有写入或恢复ECC原研究。
+### v3领域能力
+
+|领域入口|实际能力与本轮使用|
+|---|---|
+|[ECC](plugins/ecc/skills/mathrsi-ecc/SKILL.md)／[ecc-certificate](plugins/ecc/skills/ecc-certificate/SKILL.md)|在同一插件上升级，接矩阵、归约、共同陪集／pair及Lean显式进口；[实际使用](plugins/ecc/evidence/IMPLEMENTATION.md)含172保存集读回、完整单母码重放与42/16矩阵验距，替代旧draft默认排除|
+|[超立方体极值](plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md)|共同Q4、同步根旗、全域分离、整数Gram及高维平均；[最终有限全域已完整重放](plugins/hypercube-extremal/evidence/IMPLEMENTATION.md)|
+|[超立方体Hamilton延拓](plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)|保根极大化、全称森林秩、局部正证书与标记运输；[1024森林／全部矩阵位／独立GF2秩已复算](plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md)|
+|[Happy Ending](plugins/happy-ending/skills/mathrsi-happy-ending/SKILL.md)／[happy-ending-certificate](plugins/happy-ending/skills/happy-ending-certificate/SKILL.md)|杯帽与signotope、weak/split、状态容量、共同匹配补偿及SAT／见证核验；各原稿与证书保持原保证，新报告75/76待证明原件|
+
+六领域共用现有五阶段，插件接收当前scope并回交原caller。ECC旧43/10及172双扫描保持历史归属；45/11距离17仍开放。单个证书重放与全题数学终审各按实际证据说明。
 
 工作流的具体衔接提炼自[Property B与ECC的六条历史转折](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)，包括局部核验返回原义务、完整覆盖与拒绝证据分工，以及较弱必要条件已足够时及时收束。本轮开发读取和整理这些经验，未重新解题或重放全部生产证据，也未据此宣称通用提速已经验证。
 
@@ -106,7 +120,7 @@ ECC保留[首版草案](plugins/ecc/skills/mathrsi-ecc/SKILL.md)，等待用户�
 
 读取 [mathrsi-meta-evolve](base/skills/mathrsi-meta-evolve/SKILL.md)，提供源研究、已有关键转折依据、本轮维护记录及可改范围。它对照当前实现，将经验分到 base、插件、单题或暂缓，形成实际修改，再由协调者使用受影响行为；执行链只由该技能维护。[使用说明](docs/EVOLUTION_WORKFLOW.md)有可复制请求。
 
-Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双端共用主体。原版 ARIS `meta-optimize`／`meta-apply` 也有各宿主别名，但保留自己的合同，不与数学适配混称。使用和验收按实际改动核查，不强制无历史 agent 重跑完整流程；数学独核仍遵循原题合同。本轮已用该技能组织现有v1的增量修改与DD插件接入；[具体变化](docs/V2_CHANGES.md)与[维护记录](development/evolution/dd-v2-20261102/EVOLUTION.md)区分实际实现、使用、审阅和采用。没有据历史DD成果宣称新版解题率或提速已测成。
+Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双端共用主体。原版 ARIS `meta-optimize`／`meta-apply` 也有各宿主别名，但保留自己的合同，不与数学适配混称。使用和验收按实际改动核查，不强制无历史 agent 重跑完整流程；数学独核仍遵循原题合同。v2已用该技能吸收DD，当前v3继续修改现有实现；[具体变化](docs/V3_CHANGES.md)与[维护记录](development/evolution/v3-20261104/EVOLUTION.md)区分实际实现、使用、审阅和采用。历史成果作为方法证据，未改写成新版重新解题或等预算提速实验。
 
 ## 三层边界
 
@@ -120,7 +134,7 @@ Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双
 
 ## 验证与开发
 
-[本轮验证记录](development/VALIDATION.md)分别报告技能资源完整性、搬迁副本执行、真实数学案例和模型审阅范围。它们不等于通用解题成功率或RSI增益评测。
+[v3变化与实际命令](docs/V3_CHANGES.md)汇集本轮base和领域核查，Gemini4／Opus5.5各完成两轮实际文件审阅，修法及阅读范围已留档。[既有验证记录](development/VALIDATION.md)分别报告技能资源完整性、搬迁副本执行、真实数学案例和模型审阅范围。它们不等于通用解题成功率或RSI增益评测。
 
 ```bash
 python3 tools/check_links.py

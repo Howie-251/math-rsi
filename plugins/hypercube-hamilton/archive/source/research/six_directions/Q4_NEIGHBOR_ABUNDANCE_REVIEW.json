@@ -1,0 +1,78 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_imports",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_task": "/root/ep0_neighbor_lifting_audit",
+  "model_override_source": "Explicit user preference relayed by parent overrides skill default",
+  "generated_at": "2026-11-01T11:47:44.308254+00:00",
+  "summary": "Q4 union>=3, perfect-matching optional short-root union>=2, complete444 A-star/16816 B bad-key inputs and60316956 nonempty joint intersections pass fresh semantic and deterministic checks.",
+  "trace_path": "Q4_NEIGHBOR_ABUNDANCE_REVIEW.md",
+  "audited_input_hashes": {
+    "eight_ep0_q4_neighbor_inverse.py": "sha256:f2b5c0b3a763b737a690ecb504055fac777304784b09ecc559d615338f73a786",
+    "eight_ep0_q4_neighbor_inverse.json": "sha256:913ec690b9fd0eba3f745335e3dc1050795baf127163fc0b2cbfce02b83e2b3c",
+    "verify_eight_ep0_q4_neighbor_spectrum.cpp": "sha256:20cf70fb01206f361d5df9d2095ef4f53e4a21a8c2c3e6dab7e02ea385756513",
+    "eight_ep0_q4_neighbor_spectrum_verification.json": "sha256:043fe125f2c4149683cd3b17b9f03f520cbf986a0a5751ba0a4ae14b2ea9019a",
+    "eight_ep0_q4_pair_spectrum.cpp": "sha256:d7089487880f0d6237901b7c1611a647f389d4a35bad5eeccdc93f3fb14ed2e4",
+    "eight_ep0_q4_pair_spectrum.json": "sha256:55404b3c7dd1fa44033269353babccc40e90063adf32b09951b073bdb10e00dc",
+    "q4_perfect_endpoint_abundance_check.py": "sha256:f52bfe2dc2a3b5d428fbfdbeb6d02c59c7bc9f5c1de0fd9ef95fbe8f71ad84ac",
+    "q4_perfect_endpoint_abundance_check.json": "sha256:279c23327ae0df44418f3511239307bd8a958916d0f0d188bdeb2c61c690558b",
+    "Q4_PERFECT_ENDPOINT_ABUNDANCE.md": "sha256:aea312b744c6c6902128007c8a08853b32980eeae5c7ecb83429b3b52feb57a8",
+    "q4_distance1_avoided_table.bin": "sha256:69b03389a16dc77b77ab1ded94d8d760728452759df2f035f8362a2f46294d86",
+    "q4_distance3_avoided_table.bin": "sha256:3d4026b7276ebc8bf94be7e184ddcfcfa8f98f3f3b9aeef39298abfb3900b150",
+    "CANONICAL_COMPLETION_REVIEW.json": "sha256:31dd2103b87c9c3c8b406274ea786ec081dacb2f19177fdc1a097c3924dae956",
+    "eight_ep0_q4_star_A_prepare.cpp": "sha256:3200a84810e62a1c3bb18968799b75a3b7e6b38feb13d312d5fd60dc21e0da6f",
+    "eight_ep0_q4_star_A.bin": "sha256:61b798180b2f6f55bc4b627e5b459927b740c9411df623d59353231b31200f4f",
+    "eight_ep0_q4_star_A.jsonl": "sha256:89c43f46e03e091e9d98d4b9d90388d59435d99e12b661b5ea1a2655727ccec2",
+    "eight_ep0_q4_PB_bad_optional.py": "sha256:16202ac73eb247479e90ee070c821c0a54a67fca8afb350f53926168e7a85c40",
+    "eight_ep0_q4_PB_bad_optional.txt": "sha256:fcc6d66bb11c3956817981b9448a296f42b7b7522833779cb1a321be799a0316",
+    "eight_ep0_q4_star_joint.cpp": "sha256:20215caf2090d502c74ec56a5901481fd83c09339a5c80888f0c6328cc4aeff2",
+    "eight_ep0_q4_star_joint.json": "sha256:1da657406db5698effc69d25e615016315c3dfe693e84511de8270c0af614189",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW_check.py": "sha256:6fba25e5b0ddf3edd875099eacec4f69b0750af20e8324ca9fc10f726b469d22",
+    "Q4_NEIGHBOR_ABUNDANCE_REVIEW_check.json": "sha256:a53acaa9eac6154f9310e562c226d5da398e32304f57f0402145d1e70c323f6d"
+  },
+  "imported_theorems": [
+    "Previously audited exact Q4 opposite-hole tables; their raw hashes were checked against CANONICAL_COMPLETION_REVIEW.json"
+  ],
+  "deterministic_checks": {
+    "status": "PASS",
+    "short_good_endpoint_histogram_on_4708_exceptions": {
+      "3": 2972,
+      "2": 612,
+      "4": 1124
+    },
+    "nonexceptional_short_good_lower_bound": 3,
+    "A_witness_records": 444,
+    "A_centers": {
+      "2": 111,
+      "8": 111,
+      "1": 111,
+      "4": 111
+    },
+    "PB_bad_keys": 16816,
+    "PB_bad_relations": 22848,
+    "extra_PB_per_center": {
+      "1": 714,
+      "2": 714,
+      "4": 714,
+      "8": 714
+    },
+    "joint_pairs": 60316956,
+    "residual_pairs": 0,
+    "table_hashes_match_prior_audit": true
+  },
+  "details": {
+    "issues": [],
+    "fatal": 0,
+    "critical": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "full_Q5_proof_scope": "See separate EIGHT_ALL_EP0_CONSEQUENCES_REVIEW.json",
+  "full_P6_proved": false
+}

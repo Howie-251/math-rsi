@@ -1,0 +1,431 @@
+{
+  "audit_skill": "proof-checker",
+  "writer_skill": "proof-writer",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_modulo_declared_imports",
+  "summary": "Z18 four-hole short-matching claim survives unchanged; no substantive gap found. Same-family provisional semantic review, not a formal proof or full P6.",
+  "proof_status": "PROVABLE AS STATED",
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "executor_model": "runtime-not-attested",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "high",
+  "reviewer_configuration_source": "Parent spawn_agent request; not reviewer self-attestation of served backend model.",
+  "reviewer_task": "/root/four_hole_sol_high_audit",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "independent_context": true,
+  "cross_family_review": false,
+  "formalized": false,
+  "user_configuration_overrides_skill_defaults": true,
+  "subagents_spawned": 0,
+  "review_rounds": 1,
+  "prior_audit_verdicts_used_as_evidence": false,
+  "main_proofs_modified": false,
+  "full_p6_proved": false,
+  "exhaustive_q6": false,
+  "audited_input_hashes": {
+    "FOUR_HOLE_FULL.md": "sha256:a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+    "SINGLE_ODD_HOLE_COMPLETION.md": "sha256:781cc8f3fe8cfd21cdf6b88ef8f65ca28225c0dab6c10eb44eb205f3df392d0f",
+    "MIXED_TWO_HOLE_TRANSFER.md": "sha256:08ac55101a589c331359611a4c3315322c3070d057cd17fd97e5c59e0dd1db49",
+    "THREE_ODD_HOLES_TRANSFER.md": "sha256:9e8208e1e71e18386158c4f43bed33d185b0d4c4acad3347235f130dfe403753",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "AVOIDED_VERTEX_TRANSFER.md": "sha256:f44623960b51f85549ea15b6b7c8262222c097f56c37ae10c05b77b6dd8776a7",
+    "DISTANCE_TWO_ALL_TARGETS.md": "sha256:41b5514d63a43bd0e1e1fd47453532f8264dccf23f454b56623c74a82e5654a6",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "BIPARTITE_NEAR_PERFECT.md": "sha256:1cb47da03495d5c2dde0b21f536057a0455bab30f3dcd28ef7c1d4d482746afd",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "verify_recut.py": "sha256:2ce8565292fd3cb17649916ba81cea0884ae3b24887cf2e3d3e4cf8dceee83be",
+    "verify_two_odd_holes.py": "sha256:22fd4cb27885fb3332dcad6f832fe2c2c32a44cbf598ac5f8c9ba1918089af74",
+    "verify_conflict_cycles.py": "sha256:821e18dd63f3bb76f7275e400bb8bb95a8cba92a156a93a9fdffe02641b101bd",
+    "recut_results.json": "sha256:55a3295172d9021ba83a29682387aea7aba241c84f38d474c2f4818a85c2fb89",
+    "two_odd_holes_results.json": "sha256:b0489dc69eb1cbfe29ad1d1b4e9a2f28bc8967e727949dd1921854ca16daecca",
+    "conflict_cycle_results.json": "sha256:7af7ac5e70f0c3ffecac5cacd529bf0606eeb2fb2f1f2f032ce142f2973bb11e",
+    "HOLE_RANGE_AND_COMPLETION.md": "sha256:398fc807faa62a79d10c687828644b2111a0929c232e85d793c7c0f576fc9b84",
+    "E:/新问题/2501.19029v1.pdf": "sha256:8c83fbcaf82888878a442002cb9e59b16efa59146260c34cce4659b477f80cb7",
+    "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-writer/SKILL.md": "sha256:9791fd55d8bedaedcca21b660cf6e4ce92da77f1acfe0d8678d535d150e217d4",
+    "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-checker/SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "report_sha256": "sha256:e6899b399a59837d154239741d6244e2486509f15c3e3cff9d9f3767d3852603",
+  "trace_path": "E:/新问题/research/six_directions/FOUR_HOLE_SOL_HIGH_REVIEW.md",
+  "generated_at": "2026-11-01T04:45:52.996250+00:00",
+  "external_sources": [
+    {
+      "url": "https://tmuetze.de/papers/match.pdf",
+      "inspected_pages": [
+        1,
+        3,
+        4
+      ],
+      "theorems": [
+        2,
+        8,
+        9,
+        12
+      ],
+      "access": "web PDF text",
+      "raw_pdf_sha256": null,
+      "hash_limitation": "Direct byte download blocked by local network sandbox; source text read successfully through web tool."
+    },
+    {
+      "local_input": "E:/新问题/research/six_directions/paper.txt",
+      "theorem": 8,
+      "prohibitions_checked": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    }
+  ],
+  "details": {
+    "theorems_audited": 14,
+    "obligations": [
+      {
+        "id": "G1",
+        "assumptions_and_goal": "短匹配四孔；任意自由根",
+        "derivation": "每条边覆盖一奇一偶，四孔两奇两偶；平移保持全称问题。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L48"
+      },
+      {
+        "id": "G2",
+        "assumptions_and_goal": "$v$ 被覆盖",
+        "derivation": "$u,h,v,z,w,t$ 中孔与被覆盖点不冲突；替换为 $hu$ 合法，四孔更新准确。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L49"
+      },
+      {
+        "id": "H1",
+        "assumptions_and_goal": "一个方向 $j$ 半层",
+        "derivation": "端点和补集各由去掉 $j$ 的坐标和固定；两集合内部短边都仅沿 $j$。含半层匹配的全部短边仅沿 $j$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L50"
+      },
+      {
+        "id": "H2",
+        "assumptions_and_goal": "含半层且避开 $v$",
+        "derivation": "任意第二半层方向必须相同；同方向两半层互补，故只有一个避开 $v$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L51"
+      },
+      {
+        "id": "N6.1",
+        "assumptions_and_goal": "二部近完美，非相邻异奇偶孔",
+        "derivation": "$P=L+rs$ 二部完美，$rs$ 为长边；$y=s$ 用 FM2。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L52"
+      },
+      {
+        "id": "N6.2",
+        "assumptions_and_goal": "$y\\ne s$",
+        "derivation": "差异坐标集 $I,J$ 不同且均奇，故其对称差至少两点；有至少两坐标不在 $I\\cap J$，至多一个候选等于 $P(y)$。所选 $x=s\\oplus e_l$ 不为 $r,s,y,P(y)$，且 $xy\\notin P$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L53"
+      },
+      {
+        "id": "N6.3",
+        "assumptions_and_goal": "压缩后假设半层",
+        "derivation": "原长边 $rs$ 未删除；$r,s,x,y$ 都在半层补集。$xs$ 短迫使 $j=l$，$r,s$ 和 $r,y$ 异奇偶分别迫使 $j\\in I,J$，矛盾。满足 FM9 所有条件。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L54"
+      },
+      {
+        "id": "N6.4",
+        "assumptions_and_goal": "FM9 路径含二部完美 $P$",
+        "derivation": "路径上 $P$ 必占奇数位；从同奇偶的 $x,r$ 出发，$rs$ 必按 $r\\to s$ 出现。删 $rs$，反走 $r$ 到 $x$ 段，加短 $xs$，再走 $s$ 到 $y$；无重复。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L55"
+      },
+      {
+        "id": "N7",
+        "assumptions_and_goal": "二部两孔",
+        "derivation": "相邻时 FM2 的辅助边本身短；非相邻时 N6 取根的短邻点，端点闭圈。长度至少 32，路径不能已含端点间边。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L56"
+      },
+      {
+        "id": "N8",
+        "assumptions_and_goal": "二部四孔，自由异奇偶两端",
+        "derivation": "加两端辅助边后恰两孔；N7 圈删辅助边。即使辅助边长也被删除。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L57"
+      },
+      {
+        "id": "N10.1",
+        "assumptions_and_goal": "完整图两孔，$y\\ne r,p(y)=p(s)$",
+        "derivation": "$y=s$ 由 FM2；否则压缩四点不同，孔变为同奇偶 $y,s$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L58"
+      },
+      {
+        "id": "N10.2",
+        "assumptions_and_goal": "同奇偶两孔且避 $y$",
+        "derivation": "对每个半层，两孔在补集且相同 $j$ 位，$s$ 是 (H) 的另一个自由证人；平移后 FM8 合法。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L59"
+      },
+      {
+        "id": "N10.3",
+        "assumptions_and_goal": "FM8 圈覆盖全部匹配端点",
+        "derivation": "奇偶计数强制额外自由点 $s$ 也被圈包含；替换辅助 $pr$ 为 $pyr$ 再删 $yr$，最终仅恢复原 $py$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L60"
+      },
+      {
+        "id": "N14",
+        "assumptions_and_goal": "完整图同奇偶两孔 $a,b$",
+        "derivation": "与 N10.2 同样逐半层验证 (H)；同样奇偶计数强制 $b$ 入圈，圈恰避 $a$。不要求输入二部。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L61"
+      },
+      {
+        "id": "N11",
+        "assumptions_and_goal": "两孔 $v,a$，被覆盖 $b$ 与 $v$ 异奇偶，压缩无半层",
+        "derivation": "四点 $v,a,b,k$ 不同；压缩恰漏异奇偶 $v,b$，是删二点完整图完美匹配。FM12 后删 $ak$ 接 $kb$，恰恢复全部 $L$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L62"
+      },
+      {
+        "id": "N12.1",
+        "assumptions_and_goal": "自由集偶数且至少四，原无半层",
+        "derivation": "原短边至少两方向时由 H1 排除任何新半层。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L63"
+      },
+      {
+        "id": "N12.2",
+        "assumptions_and_goal": "原短边只有方向 $j$",
+        "derivation": "以另一配对边拆禁用 $j$ 边，每次禁边数严格减；四点不同，新两边均不禁。保留原短边迫使未来半层仍沿 $j$，而新配对无 $j$ 边。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L64"
+      },
+      {
+        "id": "N12.3",
+        "assumptions_and_goal": "原无短边",
+        "derivation": "非短边极大匹配剩余为短边图团，超立方体无三角形，剩余至多两点；补全后至多一短边，远少于半层八边。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L65"
+      },
+      {
+        "id": "Z9.1",
+        "assumptions_and_goal": "单孔侧候选内部覆盖且压缩无半层",
+        "derivation": "$L_A$ 恰漏 $v,a$，N11 的 $b$ 已覆盖、与 $v$ 异奇偶，$D$ 不接触路径端点。切 $D$ 不生孤点，端点准确。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L66"
+      },
+      {
+        "id": "Z9.2",
+        "assumptions_and_goal": "实际跨边配对",
+        "derivation": "每个端口接回自己的真实跨边，另接 $bw$；$w$ 非端口。缩成 $R$ 是匹配，与 $M_B^*$ 不冲突，$L_B$ 恰漏异奇偶 $z,t$。N10 合法，允许 $R$ 任意长边。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L67"
+      },
+      {
+        "id": "Z9.3",
+        "assumptions_and_goal": "展开与原目标恢复",
+        "derivation": "展开各条 $R$ 的内部点不交且覆盖全 A；获得单圈，真实 $hu$ 一直保留，最后删除再接 $hv$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L68"
+      },
+      {
+        "id": "Z9.4",
+        "assumptions_and_goal": "至少三跨边且删候选后无半层",
+        "derivation": "$Y=X_A\\cup\\{k\\}$ 为至少四个互异自由点；N12 的 $W$ 中 $k$ 配到某 $a\\in X_A$，其余为 $D$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L69"
+      },
+      {
+        "id": "E2",
+        "assumptions_and_goal": "全局匹配避 $v$，旧面半层方向 $j$",
+        "derivation": "见下文几何推导；不要求全局匹配二部，故可用于含 $hu$ 的 $M^*$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L70"
+      },
+      {
+        "id": "Z14.1",
+        "assumptions_and_goal": "$v_i\\ne z_i,w_i\\ne t_i$；正跨边",
+        "derivation": "A 孔 $v,w$ 同奇；跨边偶数至少二，$D$ 非空。N14 产生避 $v$ 的圈，切 $D$ 无孤点；B 孔 $z,t$ 异奇，N10 闭圈合法。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L71"
+      },
+      {
+        "id": "Z14.2",
+        "assumptions_and_goal": "同条件；零跨边",
+        "derivation": "A 覆盖偶数比奇数多二，唯一非二部边 $hu$ 必在 A，故原 $vh$ 也在 A，原匹配确无该方向。只对原匹配用五方向自由根输入。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L72"
+      },
+      {
+        "id": "Z15.1",
+        "assumptions_and_goal": "$v,w,t$ 在 A、$z$ 在 B",
+        "derivation": "候选两偶点互异且不等于 $z$；收缩只可能让一个候选失去内部覆盖，包括候选等于 $u/h$ 的情况。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L73"
+      },
+      {
+        "id": "Z15.2",
+        "assumptions_and_goal": "A 跨边正奇数",
+        "derivation": "$X_A\\cup\\{t\\}$ 偶且至少二，$D$ 非空；$L_A$ 恰漏同奇 $v,w$，N14 合法。切圈后桥接产生匹配 $R$，覆盖集 $X_B\\cup\\{b\\}$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L74"
+      },
+      {
+        "id": "Z15.3",
+        "assumptions_and_goal": "B 原匹配与转移匹配",
+        "derivation": "唯一公共覆盖点 $b$；$b,r,z,s$ 互异。冲突压缩后恰漏同偶 $z,b$，N14 避 $b$；展开 $rs$ 恢复 $rb$ 和对应 A 路径。$rb=hu$ 时也真实恢复。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L75"
+      },
+      {
+        "id": "Z16.1",
+        "assumptions_and_goal": "A 孔 $v,z$、B 孔 $w,t$，至少二跨边，无半层",
+        "derivation": "两候选均非 $z$，至少一内部覆盖；删 $bk$ 得自由集 $Y=X_A\\cup\\{z,k\\}$，四点以上且互异，N12 合法。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L76"
+      },
+      {
+        "id": "Z16.2",
+        "assumptions_and_goal": "$a=W(k)$，$D=W-ak$",
+        "derivation": "$a\\in X_A\\cup\\{z\\}$；$L_A$ 恰漏 $v,a$，压缩恰为 $F\\cup W$。N11 合法；无论 $a=z$ 或不是，切后端点恰 $X_A\\cup\\{z,b\\}$，无孤点。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L77"
+      },
+      {
+        "id": "Z16.3",
+        "assumptions_and_goal": "另桥 $zy$",
+        "derivation": "$y=z\\oplus e_i$ 奇，非孔 $w,t$（非邻接假设），也非偶点 $u,h$；$y$ 原先内部覆盖且收缩不改变，故唯一覆盖冲突恰为 $y$。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L78"
+      },
+      {
+        "id": "Z16.4",
+        "assumptions_and_goal": "压缩冲突",
+        "derivation": "$y,r$ 内部覆盖而 $s,t$ 不内部覆盖，四点互异。$L_B$ 恰漏同奇 $y,t$，N14 避 $y$；展开时 $y$ 仅恢复一次，A 每点仅恢复一次。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L79"
+      },
+      {
+        "id": "Z17.0",
+        "assumptions_and_goal": "单孔侧 $v$，其他三孔对侧",
+        "derivation": "跨边数为正奇数，局部匹配最多一个半层；至少一个桥候选内部覆盖。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L80"
+      },
+      {
+        "id": "Z17.1",
+        "assumptions_and_goal": "至少三跨边",
+        "derivation": "无半层，或半层覆盖候选时删候选边，分别通过 Z9.4；否则得到避两候选的真实半层。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L81"
+      },
+      {
+        "id": "Z17.2",
+        "assumptions_and_goal": "一跨边，$u,h\\in A$",
+        "derivation": "原端口 $a$ 奇；普通候选伙伴奇，新 $ak$ 同奇，不能生成短半层。两候选恰 $u,h$ 时的双压缩交集论证见下文。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L82"
+      },
+      {
+        "id": "Z17.3",
+        "assumptions_and_goal": "一跨边，$u\\in A,h\\in B$",
+        "derivation": "原唯一跨边确为 $vh$，新端口为 $u$。候选等于 $u$ 恰是允许边界；其余两短候选边互异，双压缩论证见下文。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L83"
+      },
+      {
+        "id": "Z17.4",
+        "assumptions_and_goal": "一跨边，$u\\in B,h\\in A$",
+        "derivation": "删除原 A 内 $vh$ 后新增跨 $hu$，故原零跨边；原短匹配五方向输入合法。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L84"
+      },
+      {
+        "id": "Z17.5",
+        "assumptions_and_goal": "一跨边，$u,h\\in B$",
+        "derivation": "删除原跨 $vh$，另留端口 $a$ 偶；$M_A$ 恰漏异奇偶 $v,a$，候选短边不同，双压缩推导与 Z17.3 相同（见下文）。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L85"
+      },
+      {
+        "id": "Z17.6",
+        "assumptions_and_goal": "剩余真实半层避 $v,b,e$",
+        "derivation": "几何强制 $w_j=t_j\\ne v_j$，且 $j\\ne i$；原八半层边切为新跨边，E2 保证新目标面无半层。$z_j\\ne v_j$ 时正奇至少九，Z9.4；$z_j=v_j$ 时至少八且偶，Z16。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L86"
+      },
+      {
+        "id": "Z18.1",
+        "assumptions_and_goal": "前置自由目标／邻接孔分支",
+        "derivation": "自由目标 N8；若 $z$ 邻接一个奇孔，加该短边恰两孔且仍根自由，用 N10，剩余孔与奇目标同奇偶。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L87"
+      },
+      {
+        "id": "Z18.2",
+        "assumptions_and_goal": "任取 $v_i\\ne z_i$",
+        "derivation": "两个奇孔的该位要么不同（Z14）、要么均等于 $v_i$（Z15）、要么均等于 $z_i$（Z17）；没有第四情况。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L88"
+      },
+      {
+        "id": "Z18.3",
+        "assumptions_and_goal": "Z17 唯一允许边界",
+        "derivation": "见下文第二坐标证明；$z\\ne h$ 来自自由/被覆盖冲突，强制存在另一差异坐标。再次分类穷尽，Z17 边界被根与目标异面排除。闭合。",
+        "status": "closed_modulo_declared_imports",
+        "location": "FOUR_HOLE_SOL_HIGH_REVIEW.md:L89"
+      }
+    ],
+    "open_obligations": [],
+    "issues": [],
+    "fatal": 0,
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "supplements": [
+      "parity-count forcing of the second same-parity hole",
+      "no isolated vertices after deleting auxiliary matching",
+      "double compression half-layer identity, including candidates u/h",
+      "E2 applied to the same actual global matching with long hu",
+      "exhaustive second-coordinate elimination in Z18"
+    ],
+    "counterexample_pass": "Executed structural attacks listed in report; no verified counterexample. This is not exhaustive enumeration.",
+    "supplementary_hole_bound": {
+      "graph_edges": 186,
+      "max_degree": 6,
+      "max_edges_dominated_by_one_matching_edge": 11,
+      "minimum_maximal_matching_size": 17,
+      "maximum_holes_after_root_preserving_maximal_completion": 30,
+      "tightness_claimed": false
+    }
+  },
+  "certificate_checks": [
+    {
+      "script": "verify_recut.py",
+      "status": "PASS",
+      "verified": 9
+    },
+    {
+      "script": "verify_two_odd_holes.py",
+      "status": "PASS",
+      "verified": 81,
+      "root_sides": {
+        "A": 53,
+        "B": 28
+      },
+      "artificial_cross": 32
+    },
+    {
+      "script": "verify_conflict_cycles.py",
+      "status": "PASS",
+      "verified": 12,
+      "modes": {
+        "Z15": 3,
+        "Z16": 9
+      },
+      "conflict_edge_is_hu": 1
+    }
+  ],
+  "evidence_boundary": "Certificate checks cover only the saved witnesses. The universal claim rests on the analytic obligation ledger and declared external theorems."
+}

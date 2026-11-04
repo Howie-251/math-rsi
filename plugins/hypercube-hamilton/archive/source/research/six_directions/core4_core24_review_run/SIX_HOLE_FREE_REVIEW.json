@@ -1,0 +1,233 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "conditional_proofs_complete",
+  "summary": "C6-free and its combination with C6-covered are sound modulo the explicitly unproved A4 and imported local/external results. This establishes only conditional complete six-hole coverage, not A4 or full P6.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "executor_model": "gpt-6.1-sol",
+  "review_agent": "/root/six_hole_geometry_sol_high_audit",
+  "model_override": "User-requested GPT-6.1-sol high overrides proof-checker default Astra ultra.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T06:13:43.825701+00:00",
+  "audited_input_hashes": {
+    "SIX_HOLE_FREE_REDUCTION.md": "sha256:c04a1f090b51f19ea68db7f7a90d7ab1c7c9ed79feb1549898c4a3b4be88b8e4",
+    "SIX_HOLE_COVERED_REDUCTION.md": "sha256:c80fb9e0cdad9c146fe5bac594b321b41fe5f0646dae9b98e3d64e6463be9837",
+    "SIX_HOLE_MIXED_AND_GEOMETRY.md": "sha256:9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "FOUR_HOLE_FULL.md": "sha256:a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+    "SIX_HOLE_FOUR_AUX_REDUCTION.md": "sha256:3b9e7f667c7661358f6668b2e0ae5c60e59fc156944e80dd0d53fe74c3672d49",
+    "paper.txt": "sha256:e7036badbca184e006a075e569772520aadfb6514f1a42b68840838eba8f887f",
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "input_scope": {
+    "main": "Entire SIX_HOLE_FREE_REDUCTION.md",
+    "reused_dependencies": "K4, N10, N14, A4, Z18, five-direction theorem and C6-covered from this same independent reviewer preceding audits; application hypotheses checked anew. Existing external source chains not recursively certified. paper.txt usage is previously read Theorem8 and C1-C3; TWO_ODD_HOLES_TRANSFER.md usage is N14 statement/proof only.",
+    "excluded": "No geometry enumeration or matching/path search used. No old review, proof, census, or ledger edits."
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations": [
+      {
+        "id": "F01",
+        "status": "discharged_modulo_named_imports",
+        "note": "Short M with six holes has three even and three odd holes. Translation can normalize u even, and the other free opposite-parity endpoint v is one of the three odd holes."
+      },
+      {
+        "id": "F02",
+        "status": "discharged_modulo_named_imports",
+        "note": "Adding a short edge between non-root holes keeps u free, yields a four-hole supermatching for Z18, and may cover v legally because Z18 allows either free or covered targets."
+      },
+      {
+        "id": "F03",
+        "status": "discharged_modulo_named_imports",
+        "note": "Distinct even holes z,q have a differing coordinate. After relabeling there is exactly one non-root even hole z in A and q in B; A contains one, two, or three original odd holes including v."
+      },
+      {
+        "id": "F04",
+        "status": "discharged_modulo_named_imports",
+        "note": "If c=0, all M edges avoid coordinate i. The five-direction theorem applies to Q6 with free u and opposite-parity v; all C1-C3 obstacles require u covered and hence fail."
+      },
+      {
+        "id": "F05",
+        "status": "discharged_modulo_named_imports",
+        "note": "NC applies only to a complete-graph matching with two opposite-parity holes. A short-neighbor target of one hole has parity of the other; N10 gives a full 32-vertex path and the short endpoint edge closes it without duplicating a path edge."
+      },
+      {
+        "id": "F06",
+        "status": "discharged_modulo_named_imports",
+        "note": "Every D is supported on currently M_A-free ports and optional original hole z or w. It avoids chosen path endpoints u,v or a,v. Matching deletion cannot isolate an internal path vertex, so all resulting segments are nontrivial."
+      },
+      {
+        "id": "F07",
+        "status": "discharged_modulo_named_imports",
+        "note": "When u lies in A, each indicated D is nonempty and included in P_A. Deleting it separates u and v. Appending mutually different fresh B endpoints by real cross-edges and the chosen bridge neither joins old A components nor creates a cycle."
+      },
+      {
+        "id": "F08",
+        "status": "discharged_modulo_named_imports",
+        "note": "The resulting terminal components and R-partition cover A vertices exactly once. Distinct terminal B endpoints are omitted from R; all other ports and the bridge endpoint are in R. This proves connectivity after the local B path is attached, beyond mere degree counts."
+      },
+      {
+        "id": "F09",
+        "status": "discharged_modulo_named_imports",
+        "note": "If y is internally covered in B and also covered by R, it is the sole overlap. k=M_B(y) is outside ports, holes and terminal endpoints; d=R(y) is a nonterminal cross-port. Replacing yk,yd by kd gives a legal complete-graph matching."
+      },
+      {
+        "id": "F10",
+        "status": "discharged_modulo_named_imports",
+        "note": "The replacement kd is always distinct from and endpoint-disjoint from the temporary terminal-joining auxiliary edge. It survives deletion of that edge and expands to ky followed by the y-d transfer segment, restoring y once and all original matching edges."
+      },
+      {
+        "id": "F2a-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "A holes u,z even and v,w odd give even c. Removing the c=0 case yields c>=2. D pairs X_A, hence is nonempty and disjoint from u,v. M_A+D has balanced four holes for K4 u-v."
+      },
+      {
+        "id": "F2a-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "R covers X_B minus distinct r,s. M_B+R has holes q,t,r,s. Add rs, leaving exactly opposite-parity holes q,t, apply NC, delete rs, expand R and attach terminal paths. No parity assumption on r,s is used."
+      },
+      {
+        "id": "F2b-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "A holes z even and v,w odd force excess one even port, hence odd c>=1 and an even a. D pairs X_A minus a and may be empty; four holes z,a,v,w are balanced for K4 a-v."
+      },
+      {
+        "id": "F2b-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "With one terminal r-v, R covers X_B minus r. B matching M_B+R has holes u,q,t,r. Add ur, apply NC to remaining q,t, delete ur and attach terminal path at r."
+      },
+      {
+        "id": "F3-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "For y=z xor e_i, y is odd and differs from w,t by nonadjacency preprocessing and from u,q by parity. Its unique crossing neighbor z is free, so y is internally M_B-covered and is not a port."
+      },
+      {
+        "id": "F3a-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "A holes u,z even and v odd force odd c>=1. D pairs X_A plus z, is nonempty and avoids u,v. M_A+D has precisely holes u,v, and N10 root u, target v applies."
+      },
+      {
+        "id": "F3a-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "If y is terminal and other terminal b is a port, R covers X_B minus b and M_B+R has holes q,w,t,b. k=L_B(y)=M_B(y), since R omits y. b differs from k,y,q,w,t because b is a cross-port."
+      },
+      {
+        "id": "F3a-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "Replace yk by kb: the free hole b is filled and y is freed, irrespective of parity(b). The four holes become exactly even q and odd w,t,y. A4 omitting y gives a 31-cycle containing kb."
+      },
+      {
+        "id": "F3a-4",
+        "status": "discharged_modulo_named_imports",
+        "note": "Delete kb and append original edge ky at k, obtaining a full B b-y Hamilton path containing every L_B edge. No K4 is invoked in this possibly unbalanced four-hole case. Expansion and orientation attach the two terminal paths."
+      },
+      {
+        "id": "F3a-5",
+        "status": "discharged_modulo_named_imports",
+        "note": "If y is in R, unique-overlap repair has exactly six holes q,w,t,r,s,y. Add rs, leaving q even and w,t,y odd; A4 omits y. Delete rs, expand kd to restore y, then expand all other R and attach terminals."
+      },
+      {
+        "id": "F3b-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "A holes z even,v odd force equal port parity counts. After c=0 is excluded, c>=2 and an even a exists. D pairs (X_A minus a) plus z and avoids a,v. Its union with M_A has holes a,v; N10 yields a-v."
+      },
+      {
+        "id": "F3b-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "If r=y, R covers all X_B and M_B+R has balanced four holes u,q,w,t. K4 applies from free even u to internally covered odd y; expand and append terminal y-v."
+      },
+      {
+        "id": "F3b-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "If r is a port, unique-overlap repair has six holes u,q,w,t,r,y. Add ur to leave q even and w,t,y odd. A4 omits y; delete ur, expand kd restoring y, and append terminal path at r."
+      },
+      {
+        "id": "F4-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "Choose among mirrors of w,t an internally M_B-covered even y. Neither equals q by preprocessing; at most one can equal root u if u is in B. The selected nonhole candidate has a free cross-neighbor, hence cannot be a port."
+      },
+      {
+        "id": "F4B-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "With u in B, A holes z even and v,w,t odd force excess two even ports, hence c even>=2 and even a. D pairs (X_A minus a) plus w, yielding balanced holes a,z,v,t; K4 a-v applies and D avoids endpoints."
+      },
+      {
+        "id": "F4B-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "If r=y, M_B+R holes are same-even u,q. N10 root u to even covered y is valid because parity(y)=parity(q). No false opposite-parity-root requirement is imposed on N10."
+      },
+      {
+        "id": "F4B-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "If r is a port, repair holes are u,q,r,y. Add ur to leave same-even q,y. N14 omits y; delete ur and expand kd to restore y. Parity(r) need not be fixed."
+      },
+      {
+        "id": "F4A-1",
+        "status": "discharged_modulo_named_imports",
+        "note": "With u in A, A holes u,z even and v,w,t odd force odd c>=1. D on X_A plus w is nonempty and avoids u,v, giving balanced holes u,z,v,t for K4 u-v and distinct terminal endpoints r,s."
+      },
+      {
+        "id": "F4A-2",
+        "status": "discharged_modulo_named_imports",
+        "note": "If y is terminal, other terminal b is a port. M_B+R holes are q,b; N10 root b and target even y requires only parity(y)=parity(q), not any parity restriction on b. Expand R and attach terminals."
+      },
+      {
+        "id": "F4A-3",
+        "status": "discharged_modulo_named_imports",
+        "note": "If y is in R, repair holes are q,y,r,s. Add rs to leave same-even q,y; N14 omits y. Delete rs, expand kd restoring y, and attach terminal paths. All auxiliary edges are deleted or expanded."
+      },
+      {
+        "id": "F30",
+        "status": "discharged_modulo_named_imports",
+        "note": "All three possible counts of A odd holes and both possible root sides are covered, with every bridge endpoint either terminal or in R. D never contains free v, so the covered-target isolated-v boundary does not occur."
+      },
+      {
+        "id": "F31",
+        "status": "discharged_modulo_named_imports",
+        "note": "Free proof uses A4->K4, N10, N14, NC, Z18 and five-direction theorem, not C6-covered. Only after proving C6-free is it combined with previously checked C6-covered to obtain A4=>all six-hole endpoints; no circular use of this conclusion occurs."
+      }
+    ]
+  },
+  "dependency_dag": [
+    "N10 -> NC",
+    "A4+N10 -> K4",
+    "A4+K4+N10+N14+NC+Z18+five-direction theorem -> C6-free",
+    "C6-free+C6-covered -> A4-conditional complete six-hole endpoint conclusion"
+  ],
+  "counterexample_pass": {
+    "verified_counterexamples": 0,
+    "cases_checked": [
+      "Preprocessing edge can cover free target v: legal for Z18",
+      "c=0 and minimal positive c",
+      "D empty permitted only root-in-B constructions",
+      "u/v accidentally same component after D deletion: prevented by nonempty D",
+      "3a terminal y with arbitrary-parity other terminal b",
+      "All bridge-terminal and bridge-in-R subcases",
+      "k coincides with a port/hole/terminal: excluded by internal coverage",
+      "N10 target same parity as q while root b parity arbitrary",
+      "NC used only on q/t opposite-parity holes"
+    ],
+    "evidence": "Explicit hole-set, parity-balance, matching and forest arguments; no empirical path enumeration."
+  },
+  "open_obligations": [
+    {
+      "id": "A4",
+      "status": "unproved"
+    },
+    {
+      "id": "E3_auxiliary_elimination",
+      "status": "unproved",
+      "note": "Not used as a proved result here."
+    },
+    {
+      "id": "P6",
+      "status": "unproved",
+      "note": "Conditional six-hole endpoint coverage is complete, but A4 and general eight-or-more-hole cases remain open."
+    }
+  ],
+  "scope_update": "Six-hole free targets now also reduce to A4. The two prior reports retain their original submission scope and are unchanged; their then-open free-target note is superseded only by this new conditional reduction."
+}

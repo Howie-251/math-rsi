@@ -1,0 +1,81 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "N10, revised Z6, E1, Z7 and Z8 have no open proof gaps modulo explicit external theorem inputs. One CRITICAL d=u omission was repaired without strengthening assumptions and passed a new blind review. Full P6 remains open; novelty unverified.",
+  "audited_input_hashes": {
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "UNBALANCED_TRANSFER.md": "sha256:81e0355e3dd647442ba38ea7e0aa48bb0eb36960c8cbd5ac9e0cbdf1c9c588e7",
+    "UNBALANCED_CORE_THEOREM.md": "sha256:8c6b4d6a99021b979d810f0f0dec2599f4c4c2fc06ceb2084348b469d4b4d5c7",
+    "DISTANCE_TWO_UNBALANCED.md": "sha256:655b63481f6539aa9303984aa2dfbe95bcca9912fc74a014794812d999611f94"
+  },
+  "trace_path": "GENERAL_NEAR_PERFECT_REVIEW.md",
+  "thread_id": "/root/general_near_perfect_audit",
+  "executor_model": "codex",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_reasoning": "ultra",
+  "generated_at": "2026-10-31T20:02:19.005934+00:00",
+  "review_agent_ids": [
+    "/root/general_near_perfect_audit/fresh_n10_z6",
+    "/root/general_near_perfect_audit/blind_z6_fix",
+    "/root/general_near_perfect_audit/fresh_z8"
+  ],
+  "details": {
+    "theorems_audited": 5,
+    "theorem_ids": [
+      "N10",
+      "Z6",
+      "E1",
+      "Z7",
+      "Z8"
+    ],
+    "issues": [],
+    "resolved_issues": [
+      {
+        "id": "Z6-EDGE-01",
+        "severity": "CRITICAL",
+        "status": "UNJUSTIFIED",
+        "impact": "GLOBAL",
+        "category": "CASE_INCOMPLETE / HIDDEN_ASSUMPTION",
+        "location": "Original UNBALANCED_TRANSFER.md L13,L17-21",
+        "note": "Original hypotheses allow d=u; deleting D then isolates u. Counterexample to the intermediate no-isolate claim is verified in audit_N10_E1_checks.json.",
+        "fix_strategy": "ADD_DERIVATION",
+        "resolution": "Keep singleton u, attach ut as J=u-t, set q=t. No assumption strengthening.",
+        "independent_re_review": "/root/general_near_perfect_audit/blind_z6_fix"
+      }
+    ],
+    "open_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "metadata_only_changes_verified": true,
+    "counterexample_attempts_recorded": true,
+    "counterexamples_to_intermediate_assertions": 1,
+    "counterexamples_to_final_theorems": 0,
+    "deterministic_check_artifacts": [
+      "audit_N10_E1_checks.py",
+      "audit_N10_E1_checks.json"
+    ],
+    "own_check_counts": {
+      "half_layer_hole_pairs": 1680156,
+      "E1_anchored_matchings": 80640,
+      "E1_third_endpoint_applications": 636480,
+      "Z6_fragment_cases": 2304,
+      "Z6_d_equals_u_cases": 511
+    },
+    "author_path_certificate_counts": {
+      "Z7": 33,
+      "Z8": 56
+    },
+    "samples_are_proofs": false,
+    "full_p6_proved": false,
+    "novelty_certified": false,
+    "external_theorem_base_cases_rerun": false
+  }
+}

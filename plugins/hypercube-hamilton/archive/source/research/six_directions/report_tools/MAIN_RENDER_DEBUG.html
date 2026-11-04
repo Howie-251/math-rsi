@@ -1,0 +1,552 @@
+<h1 id="ruskeysavage-q6">Ruskey–Savage 猜想与 Q6 的计算辅助证明</h1>
+<p><strong>研究说明、已有成果、完整证明主线与可复核附录</strong><br />
+整理日期：2026 年 11 月 2 日</p>
+<p>本文把已保存的研究材料整理成一个可阅读的整体。正文说明数学对象、已发表进展、项目的准确结论和证明机制；附录收录证明依赖图中的数学说明及审计原文。有限二进制证书仍保存在原研究目录，通过文件名和散列记录定位，未把数百万条二进制记录打印进正文。</p>
+<p><strong>结论与保证等级。</strong> 本项目的完整六维命题 P6 已有计算辅助证明，并通过指定的 ARIS proof-writer／proof-checker 流程和 GPT‑6.1‑sol high 同族模型审计。它依赖明确列出的已发表定理以及确定性有限证书。这里的“通过”是项目审计结论，保证等级为 same-family/provisional；不是 Lean 形式化、外部专家同行评议或新颖性认证。本文没有把有限维结果写成所有维数完整猜想的解答。</p>
+<h2 id="1">1. 猜想、历史与已有成果</h2>
+<p>核查日期：2026-11-02。本文是文献说明，不替代本项目的证明审计，也不主张结果首次出现于本项目。正文以原论文、作者存档与出版商记录为依据；无法读取原文的新线索单列。</p>
+<h3 id="11">1.1 猜想说什么、何时提出、为什么值得研究</h3>
+<p>令超立方体图 <span class="math-inline" title="Q_n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow></math></span> 的顶点为所有 <span class="math-inline" title="n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi></mrow></math></span> 位二进制串，两点恰在一位不同才相邻。匹配 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span> 是两两不共端点的边集。Ruskey–Savage 猜想断言：对每个 <span class="math-inline" title="n\ge2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x02265;</mo><mn>2</mn></mrow></math></span>，每个 <span class="math-inline" title="M\subseteq E(Q_n)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi><mo>&#x02286;</mo><mi>E</mi><mo stretchy="false">&#x00028;</mo><msub><mi>Q</mi><mi>n</mi></msub><mo stretchy="false">&#x00029;</mo></mrow></math></span> 都包含在某个 Hamilton 圈中。这里“扩张”要求保留全部指定边，并由一个圈恰好遍历全部 <span class="math-inline" title="2^n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math></span> 个顶点。</p>
+<p>问题通常追溯到 Frank Ruskey、Carla Savage 于 <strong>1993 年</strong>发表的 <em>Hamilton Cycles that Extend Transposition Matchings in Cayley Graphs of <span class="math-inline" title="S_n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>S</mi><mi>n</mi></msub></mrow></math></span></em>，<em>SIAM Journal on Discrete Mathematics</em> <strong>6(1):152–166</strong>，DOI <strong>10.1137/0406012</strong>。出版商标示卷期为 February 1993；页面另列的 2012 年上线时间不是猜想提出年份。<a href="https://epubs.siam.org/doi/10.1137/0406012">出版商原始书目</a>；<a href="https://arxiv.org/pdf/2501.19029v1">后续论文中明确的猜想表述，Conjecture 1</a>。</p>
+<p>其意义在于研究“局部预先指定的边”能否组织成“全局的一次遍历”。超立方体上的 Hamilton 圈对应循环二进制 Gray 码，因此问题也可以看作带指定相邻关系的 Gray 码构造。普通 Hamilton 性不能自动保证保留任意匹配；完美匹配的结论也不能直接覆盖全部匹配，因为一般匹配未必可补成超立方体内的完美匹配。<a href="https://arxiv.org/pdf/2501.19029v1">Fink–Hotmar 引言</a>；<a href="https://arxiv.org/html/2401.01769v2">Fink–Mütze 原文</a>。</p>
+<h3 id="12">1.2 主要已核实进展</h3>
+<table>
+<thead>
+<tr>
+<th>年份与原始文献</th>
+<th>已证明范围</th>
+<th>不应扩大成什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2007</strong>，Jiří Fink，<em>Perfect matchings extend to Hamilton cycles in hypercubes</em>，JCTB <strong>97(6):1074–1076</strong></td>
+<td>每个完美匹配可扩张为 Hamilton 圈，解决 Kreweras 猜想</td>
+<td>不等于任意匹配情形</td>
+</tr>
+<tr>
+<td><strong>2013 预印本／2014 期刊</strong>，Fan Wang、Heping Zhang，<em>Prescribed matchings extend to Hamiltonian cycles in hypercubes with faulty edges</em>，Discrete Mathematics <strong>321:35–44</strong></td>
+<td>对 <span class="math-inline" title="n\ge2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x02265;</mo><mn>2</mn></mrow></math></span>，<span class="math-inline" title="&#124;M&#124;\le2n-1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>M</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>2</mn><mi>n</mi><mo>&#x02212;</mo><mn>1</mn></mrow></math></span> 足够</td>
+<td>该线性大小界不是目前全部进展的最终上界</td>
+</tr>
+<tr>
+<td><strong>2019 卷期</strong>，Jiří Fink，<em>Matchings Extend into 2-Factors in Hypercubes</em>，Combinatorica <strong>39:77–84</strong></td>
+<td>任意匹配可扩张为 2-factor，即若干互不相交的圈覆盖全部顶点</td>
+<td>不保证这些圈能合成一个圈</td>
+</tr>
+<tr>
+<td><strong>2024 预印本／2025 期刊</strong>，Jiří Fink、Torsten Mütze，<em>Matchings in Hypercubes Extend to Long Cycles</em>，SIAM JDM <strong>39(3):1826–1854</strong></td>
+<td>任意匹配可扩张为一个至少覆盖 <span class="math-inline" title="(2/3)2^n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn><mo stretchy="false">&#x00029;</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></math></span> 个顶点的圈</td>
+<td>不保证覆盖全部顶点</td>
+</tr>
+<tr>
+<td><strong>2025 预印本／2026 正式会议章</strong>，Jiří Fink、Vojtěch Hotmar，五方向论文</td>
+<td>任意维数中，使用至多五个坐标方向的匹配可扩张为 Hamilton 圈；另给出指定端点路径分类</td>
+<td>圈扩张和完整端点分类的提升前提不同</td>
+</tr>
+</tbody>
+</table>
+<p>对应一手来源：<a href="https://kam.mff.cuni.cz/~fink/publications/kreweras1.pdf">Fink 2007 作者 PDF</a>；<a href="https://arxiv.org/pdf/1301.2931">Wang–Zhang PDF，摘要及第 5 节</a>，<a href="https://www.sciencedirect.com/science/article/pii/S0012365X13005153">2014 出版记录</a>；<a href="https://ktiml.mff.cuni.cz/~fink/publication/west.pdf">Fink 2-factor 作者 PDF</a>，<a href="https://doi.org/10.1007/s00493-017-3731-8">DOI</a>；<a href="https://arxiv.org/abs/2401.01769">长环首次提交和修订记录</a>，<a href="https://epubs.siam.org/doi/abs/10.1137/24M1670093">期刊出版记录：2025-09-12 上线</a>。</p>
+<p>五方向论文必须区分版本。2025-01-31 的 PDF 标题为 <em>Matchings of five directions in hypercube extends to Hamilton cycles and paths with prescribed ends</em>，作者是 <strong>Fink–Hotmar</strong>。正式章节标题改为 <em>Matchings with Five Directions in Hypercubes Extend to Hamilton Cycles and Paths with Prescribed Ends</em>，收入 <strong>WG 2025</strong> 论文集，LNCS <strong>16124:258–269</strong>，但出版商明确标注 <strong>2026-01-02</strong> 首次上线，DOI <strong>10.1007/978-3-032-11835-6_19</strong>。当前部分摘要索引把 arXiv:2501.19029 的标题错列为长环论文，引用时应以 PDF 和正式出版页为准。本目录 <a href="research/six_directions/paper.txt">paper.txt</a> 对应 Fink–Hotmar，不能写作 Fink–Mütze。<a href="https://arxiv.org/pdf/2501.19029v1">预印本 PDF</a>；<a href="https://link.springer.com/chapter/10.1007/978-3-032-11835-6_19">正式章节</a>。</p>
+<h3 id="13-p6">1.3 六方向旧结果与本项目 P6 的正确位置</h3>
+<p>Abid Ali、Weihua Yang、Gohar Ali、Ioan-Lucian Popa、Dilara Akter Mitu 的 <em>Kinds of Matchings Extending to Hamiltonian Cycles in Hypercube Networks</em>，<strong>Symmetry 17(7),995</strong>，于 <strong>2025-06-24</strong> 发表，DOI <strong>10.3390/sym17070995</strong>。其 Theorem 12 是附带限制的 <span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 圈扩张；Theorem 13 是附带限制的至多六方向推广。原文明确写有 “does not cover every two vertices at a distance of 3”。因此它不是无条件的六方向定理。该英文条件在摘要、正文间表述不够一致；介绍时保留其存在即可，未经独立审计不要自行改写成“只要不是完美匹配”。本次核查了目录中的 <a href="research/six_directions/symmetry_995.txt">symmetry_995.txt</a> 第 9、16 页对应文本。<a href="https://www.mdpi.com/2073-8994/17/7/995">原文链接</a>；<a href="https://www.mdpi.com/2073-8994/17/7/995/notes">出版版本记录</a>。</p>
+<p>Fink–Hotmar v1 的 <strong>Conjecture 2</strong> 要求：给定匹配和两个异奇偶端点 <span class="math-inline" title="u,v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x0002C;</mo><mi>v</mi></mrow></math></span>，且 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 未被匹配覆盖，存在包含匹配的 Hamilton <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span>–<span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 路径。这正是本项目 <span class="math-inline" title="P_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mn>6</mn></msub></mrow></math></span> 对应的六维命题。其 <strong>Theorem 5</strong> 明确说明：若该命题在维数 <span class="math-inline" title="d"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>d</mi></mrow></math></span> 成立，则对所有 <span class="math-inline" title="n\ge d"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x02265;</mo><mi>d</mi></mrow></math></span>，至多使用 <span class="math-inline" title="d"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>d</mi></mrow></math></span> 个方向的匹配都可扩张为 Hamilton 圈。因此，若项目的 <span class="math-inline" title="P_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mn>6</mn></msub></mrow></math></span> 证明与证书全部成立，结合该已发表的提升框架，得到无额外覆盖限制的六方向圈结论。<a href="https://arxiv.org/pdf/2501.19029v1">原文第 2 页，Conjecture 2、Theorem 5</a>。</p>
+<p>这条推论既不能称为解决所有维数的完整 Ruskey–Savage 猜想，也不能称为解决六方向任意指定端点的完整分类。后者在原文 <strong>Theorem 7</strong> 使用更强的 <strong>Conjecture 5</strong>：排除 C1–C3 障碍后要有两条不同的指定端点 Hamilton 路径。仅有一个端点未覆盖的 <span class="math-inline" title="P_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mn>6</mn></msub></mrow></math></span> 不提供这一前提。</p>
+<h3 id="14">1.4 截至核查日的新文献线索与核查限制</h3>
+<p>已核实 <strong>2026-05-11</strong> 出版的 Ali–Ba–Yang，<em>Hamiltonian paths extending a set of matchings in hypercubes</em>，J. Combinatorial Optimization <strong>51,43</strong>，DOI <strong>10.1007/s10878-026-01418-3</strong>。其 2025 预印本 Theorem 1.3 为 <span class="math-inline" title="n\ge5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x02265;</mo><mn>5</mn></mrow></math></span>、<span class="math-inline" title="&#124;M&#124;\le3n-13"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>M</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>3</mn><mi>n</mi><mo>&#x02212;</mo><mn>13</mn></mrow></math></span>、异奇偶端点及 <strong><span class="math-inline" title="xy\notin M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>x</mi><mi>y</mi><mo>&#x02209;</mo><mi>M</mi></mrow></math></span></strong> 的路径结论。出版商摘要省略了最后这一必要限制，故不能直接照抄摘要为无条件端点结论。<a href="https://link.springer.com/article/10.1007/s10878-026-01418-3">期刊页</a>；<a href="https://arxiv.org/pdf/2506.21432">原始预印本 Theorem 1.3</a>。</p>
+<p>另有 <strong>Abid Ali、Gohar Ali、Weihua Yang</strong> 的 <em>On Extension of Matchings to Hamiltonian Cycles in 6-Cubes</em>，Journal of Interconnection Networks <strong>26(04),2550022</strong>，DOI <strong>10.1142/S0219265925500227</strong>。SIAM 引用列表与论文作者关联的 ResearchGate 页面显示其 <strong>2025 年 10 月已在线发表</strong>；SIAM 列出日期为 <strong>2025-10-04</strong>。公开论文摘要明确报告：<strong><span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 中每个至多 20 条边的匹配均可扩张为 Hamilton 圈</strong>。这是大小受限的圈结论，不是全部 <span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 匹配的圈结论，也不是带一个未覆盖指定端点的 <span class="math-inline" title="P_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mn>6</mn></msub></mrow></math></span>。出版商正文/PDF 返回 403、ResearchGate 显示全文未公开，故本次没有审计其证明方法。部分索引编排为 2026 年 12 月印刷卷期；核查日早于该时间，宜以“2025 年在线发表”叙述，不能说 2026 年 12 月已经出版。<a href="https://www.researchgate.net/publication/396201366_On_Extension_of_Matchings_to_Hamiltonian_Cycles_in_6-Cubes">公开论文摘要</a>；<a href="https://www.worldscientific.com/doi/10.1142/S0219265925500227">出版商入口</a>；<a href="https://epubs.siam.org/doi/10.1137/0406012">SIAM 引用列表</a>。
+本次没有取得完整猜想已被解决的一手证明，也不能以有限检索证明本项目具有首创性。适合主稿的定位是：详细陈述并核验本项目的六维强端点命题与其六方向推论，同时明确与上述已发表结果的前提差异。</p>
+<h2 id="2">2. 我们证明了什么</h2>
+<p>设 <span class="math-inline" title="Q_n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow></math></span> 的顶点为 <span class="math-inline" title="\{0,1\}^n"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>1</mn><msup><mo stretchy="false">&#x0007D;</mo><mi>n</mi></msup></mrow></math></span>，两个顶点恰在一个坐标不同才相邻。记</p>
+<div class="math-block" title="p(x)=\sum_{i=1}^{n}x_i\pmod 2."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>p</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><munderover><mo>&#x02211;</mo><mrow><mi>i</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>x</mi><mi>i</mi></msub><mspace width="1em" /><mo>&#x00028;</mo><mi>mod</mi><mspace width="0.333em" /><mn>2</mn><mo>&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>匹配 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span> 是两两不共端点的边集；<span class="math-inline" title="V(M)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>V</mi><mo stretchy="false">&#x00028;</mo><mi>M</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span> 表示被匹配覆盖的顶点。自由顶点也称为“孔”。Hamilton 路和 Hamilton 圈分别要求把全部顶点恰好遍历一次。文中的“保留匹配”始终表示保留其全部边。</p>
+<p><strong>定理 P6。</strong> 对任意匹配 <span class="math-inline" title="M\subseteq E(Q_6)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi><mo>&#x02286;</mo><mi>E</mi><mo stretchy="false">&#x00028;</mo><msub><mi>Q</mi><mn>6</mn></msub><mo stretchy="false">&#x00029;</mo></mrow></math></span>、任意 <span class="math-inline" title="u\notin V(M)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x02209;</mo><mi>V</mi><mo stretchy="false">&#x00028;</mo><mi>M</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span>、任意满足 <span class="math-inline" title="p(v)\ne p(u)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mo stretchy="false">&#x00028;</mo><mi>v</mi><mo stretchy="false">&#x00029;</mo><mo>&#x02260;</mo><mi>p</mi><mo stretchy="false">&#x00028;</mo><mi>u</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span> 的顶点 <span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span>，存在 <span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 的 Hamilton <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span>–<span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 路 <span class="math-inline" title="P"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi></mrow></math></span>，使</p>
+<div class="math-block" title="M\subseteq E(P)."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>M</mi><mo>&#x02286;</mo><mi>E</mi><mo stretchy="false">&#x00028;</mo><mi>P</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>目标 <span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 可以已被 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span> 覆盖。这个量词是整个证明和维数提升的关键：只证明两个端点均自由的版本，不足以替代 P6。原匹配只含立方体边；局部证明出现的完全图长边是编码路径的辅助对象，最后均被删除或展开。</p>
+<table>
+<thead>
+<tr>
+<th>结论</th>
+<th>本文的准确地位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 的完整自由根、任意异奇偶目标路径命题 P6</td>
+<td>本项目主定理；已有独立总装审计</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 任意匹配可扩张为 Hamilton 圈</td>
+<td>P6 与已发表完美匹配定理的推论</td>
+</tr>
+<tr>
+<td>任意 <span class="math-inline" title="n\ge2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x02265;</mo><mn>2</mn></mrow></math></span> 中，至多使用六个方向的匹配可扩张为 Hamilton 圈</td>
+<td>P6 与 Fink–Hotmar 提升框架的推论，下节展开证明</td>
+</tr>
+<tr>
+<td>所有维数、任意方向数的完整 Ruskey–Savage 猜想</td>
+<td>本文未证明</td>
+</tr>
+<tr>
+<td>六方向、两个指定端点都可能被覆盖时的完整路径分类</td>
+<td>本文未证明；文献对应更强的 Conjecture 5</td>
+</tr>
+</tbody>
+</table>
+<p>项目的实质工作是建立局部五维辅助命题，将六维情形分解成完整的孔数层，构造可复核的有限正证书，并证明这些证书对<strong>每一个</strong>实现相应几何的原匹配都适用。特别地，完整关闭了十四孔最后 25 个情形与十六孔最后 148 个情形。这里的 25、148 是带标记的孔几何数量，不是原匹配的数量。</p>
+<h2 id="3-p6">3. 从 P6 到六方向圈结论的详细推导</h2>
+<p>日期：2026-11-02。此文是独立于既有冻结证明的新推论说明；不修改 P6、证书或账本。</p>
+<p>本文从已经审查通过的 P6 出发，逐步证明两个结论：Q6 的任意匹配都可扩展为 Hamilton 圈；更一般地，对每个 n≥2，Qn 中使用至多六个方向的任意匹配都可扩展为 Hamilton 圈。这里的“通过”沿用 P6 的准确边界：相对于明确列出的文献定理与有限证书，same-family/provisional；并非形式化证明、跨模型家族终审或发表认证。</p>
+<h3 id="31">3.1 对象、量词与输入</h3>
+<p>Qn 的顶点为 {0,1}^n；两个顶点恰有一个坐标不同才相邻。边的“方向”是这个不同的坐标。匹配 M 是两两没有共同端点的立方体边集合；它覆盖的顶点集合记为 V(M)。不在 V(M) 中的顶点称为自由点。顶点 x 的奇偶性为其所有坐标之和模 2，记作 p(x)。立方体的每条边连接相反奇偶性的顶点。</p>
+<p>Hamilton 路是经过每个顶点恰好一次的简单路；Hamilton 圈是经过每个顶点恰好一次的简单圈。“扩展 M”准确地表示最终路或圈的边集合包含 M，允许增加其他立方体边。最终边不能是超立方体之外的长边。</p>
+<p><strong>输入 P6。</strong> 对每个 M⊆E(Q6) 的匹配、每个 u∉V(M)、每个满足 p(v)≠p(u) 的 v，都存在包含 M 的 Hamilton u–v 路。v 可以自由，也可以已经被 M 覆盖。对于完美匹配没有这样的 u，因此 P6 在该情形不提供结论。</p>
+<p>P6 的证明与审查输入分别为 <a href="#proof-p6-full-closure">P6_FULL_CLOSURE.md</a> 和 <code>P6_FULL_REVIEW.json/.md</code>。本新增推论没有重新执行其庞大的有限证书，而是导入已审查的准确命题；对顶层审查直接绑定文件重新计算了散列。</p>
+<p><strong>文献输入 F。</strong> Fink 的完美匹配扩展定理：n≥2 时，Qn 的每个完美匹配都可扩展为 Qn 的 Hamilton 圈。所读论文的 Theorem 1 甚至允许原匹配属于顶点集上的完全图，但本说明只使用原匹配本来就在 Qn 内的特例，因此所得圈也全部由立方体边构成。</p>
+<p><strong>来源版本。</strong> 本地 <a href="research/six_directions/paper.txt">paper.txt</a> 是 Jiří Fink 与 Vojtěch Hotmar 的 <em>Matchings of five directions in hypercube extends to Hamilton cycles and paths with prescribed ends</em>，arXiv:2501.19029v1，2025-01-31。文中的 Theorem 4 是无大小限制的五方向圈定理；Conjecture 2 是“一个端点自由”的路径猜想；Theorem 5 从维数 d 的 Conjecture 2 推出任意 n≥d 的 d 方向圈定理。</p>
+<p>必须使用该 v1 的编号。另一作者组合 Shujia Wang、Fan Wang 在该文 Theorem 3 中出现，那里还有 |M|&lt;10·2^(n−5) 的额外大小条件；不能将这个旧结论或其作者当成本地文献的标题、作者或最终六方向结果。</p>
+<h3 id="32-q6-hamilton">3.2 推论一：Q6 中任意匹配都扩展为 Hamilton 圈</h3>
+<p><strong>命题 C6。</strong> 对每个匹配 M⊆E(Q6)，存在 Hamilton 圈 C⊆Q6，使得 M⊆E(C)。</p>
+<p><strong>证明。</strong> 分两种互斥且穷尽的情况。</p>
+<p>第一种，M 是完美匹配。它是 Q6 中的完美匹配且 6≥2，直接满足文献输入 F 的全部假设，故得到所需 Hamilton 圈。</p>
+<p>第二种，M 不是完美匹配。取一个自由点 u，再取 u 的任意立方体邻点 v。这样的邻点存在，因为 Q6 中每个顶点有六个邻点。由于 uv 是立方体边，p(v)≠p(u)，且 u 自由，所以 P6 给出包含 M 的 Hamilton u–v 路 P。这里无需要求 v 自由；这正是 P6 目标端点量词的重要部分。</p>
+<p>这条路包含全部 64 个顶点，故有 63 条边，并且 uv 不可能已经是它的一条边：若 uv 是路边，则路的两个端点在路上相邻，从端点 u 沿这条边就到终点 v，简单 u–v 路便只能有这一条边，与 64 个顶点矛盾。于是将新边 uv 加入 P，恰好把路径的两个端点连接起来，得到经过 64 个顶点各一次的简单圈。所有边均为 Q6 边，并且没有删除 M 的边，所以该圈扩展 M。证毕。</p>
+<p>这个证明也覆盖空匹配与大小为 31 的近完美匹配。不能在完美情形“任选一个自由点”，也不能不加证明地假设任意非完美匹配能补成完美匹配；以上分支都没有用到这种假设。</p>
+<h3 id="33-p6-theorem-5">3.3 P6 与文献 Theorem 5 的准确接口</h3>
+<p>该文 Conjecture 2 在维数 d=6 时的量词正是：任意立方体匹配、任意自由根端点、任意相反奇偶性的目标端点。因此 P6 满足该接口，既不缺少被覆盖的目标端点，也没有多引入原匹配长边。</p>
+<p>Theorem 5 的原始形式为：n≥d≥2，M⊆E(Qn) 是使用至多 d 个方向的匹配，且维数 d 的 Conjecture 2 成立，则 M 可扩展为 Hamilton 圈。令 d=6，n≥6 和方向数≤6 都由目标命题给出，d≥2 也成立，最后的条件由 P6 给出。于是 Theorem 5 的结论正是任意 n≥6 的六方向圈结论。</p>
+<p>为让这一应用不只是引用，下面完整展开其纤维拼接论证，并显式补足商图 Q1 的退化表示和最后闭合时的奇偶性核对。</p>
+<h3 id="34-n6-hamilton">3.4 推论二：任意 n≥6 的六方向匹配都扩展为 Hamilton 圈</h3>
+<p><strong>命题 D6。</strong> 对每个整数 n≥6 和每个 M⊆E(Qn) 的匹配，若其边方向集合大小≤6，则存在 Qn 的 Hamilton 圈 C，满足 M⊆E(C)。</p>
+<p><strong>证明。</strong> n=6 时已经由 C6 证明。以下设 n&gt;6。</p>
+<p>若 M 完美，直接应用文献输入 F。因此以下只考虑非完美 M，并选择一个自由点 v1。</p>
+<p>设 M 使用的方向集合为 S。因为 |S|≤6≤n，可以把 S 扩充为一个恰有六个元素的坐标集合 T。对坐标作一个置换，将 T 移到最后六个坐标。坐标置换是 Qn 的图自同构：恰有一个不同坐标的性质、匹配性质、顶点覆盖关系、奇偶性和 Hamilton 性质都保持；构造结束后施以逆置换即可回到原坐标。因此这一坐标安排没有损失，也不要求 M 实际使用满六个方向。</p>
+<p>记 m=n−6≥1，把顶点写作 (c,x)，其中 c∈{0,1}^m、x∈{0,1}^6。对每个 c，定义纤维 F_c={ (c,x): x∈{0,1}^6 }。每个 F_c 的诱导图同构于 Q6。由于 M 的方向都在最后六个坐标中，每条匹配边完全位于唯一的纤维，故 M 是各 M_c=M∩E(F_c) 的不交并。</p>
+<p>令 k=2^m。选择全部商顶点的一个循环次序 c1,…,ck，使得相邻 c_i 与 c_(i+1) 不同一个坐标，最后 ck 与 c1 也不同一个坐标，并把含有 v1 的纤维排在首位。</p>
+<p>当 m≥2 时，可以取 Qm 的 Hamilton 圈的循环次序。这里所需的标准事实也可递归构造：Q2 本身是四圈；若 Qr 有 Hamilton 圈，在 Qr 的两个拷贝中各取对应圈，删去各自同一条对应边，再用两条跨拷贝边连接四个端点，就得到 Q_(r+1) 的 Hamilton 圈。当 m=1 时，直接取 c1,c2 这两个商顶点；它们相邻。此时不声称简单图 Q1 有 Hamilton 圈，而只使用长度为 2 的循环次序。下文给出的两条跨纤维边在完整立方体中是不同边。</p>
+<p>由 C6，各纤维 F_(c_i) 都有包含 M_(c_i) 的 Hamilton 圈 C_i；这既包括完美的局部匹配，也包括非完美或空的局部匹配。下面只先使用 i=2,…,k 的这些圈。</p>
+<p>从已经选定的 v1 出发，依次对 i=2,…,k 作以下操作。若 v_(i−1)=(c_(i−1),x)，则令 u_i=(c_i,x)。由于 c_(i−1) 与 c_i 相邻，u_i 是 v_(i−1) 在当前纤维中的唯一邻点，跨纤维边 v_(i−1)u_i 属于 Qn。</p>
+<p>顶点 u_i 在 C_i 上恰有两条不同的入射边。匹配 M_(c_i) 在 u_i 处至多有一条入射边，所以至少一条圈边 u_i v_i 不属于 M_(c_i)。选取这样一条边并从 C_i 中删除，得到包含 M_(c_i) 的 Hamilton u_i–v_i 路 Z_i。该操作只删除一条明确不属于匹配的边；若 u_i 已经被匹配覆盖，则选择另一条圈边即可。</p>
+<p>记右部奇偶性为 p_R(c,x)=p(x)。跨纤维边不改变右部坐标，故 p_R(u_i)=p_R(v_(i−1))。所选 u_i v_i 是纤维内部立方体边，故 p_R(v_i)=p_R(u_i)+1（模 2）。因此</p>
+<div class="math-block" title="p_R(v_k)=p_R(v_1)+(k-1)\pmod 2."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>p</mi><mi>R</mi></msub><mo stretchy="false">&#x00028;</mo><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>p</mi><mi>R</mi></msub><mo stretchy="false">&#x00028;</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mi>k</mi><mo>&#x02212;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mspace width="1em" /><mo>&#x00028;</mo><mi>mod</mi><mspace width="0.333em" /><mn>2</mn><mo>&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>因为 m≥1，所以 k=2^m 为偶数，k−1 为奇数。令 u1 为 v_k 在 F_(c1) 内的唯一邻点，则 p_R(u1)=p_R(v_k)≠p_R(v1)。u1 与 v1 位于同一个纤维，左部完全相同，因而它们的总奇偶性也相反；尤其 u1≠v1。</p>
+<p>现在在首纤维使用 P6。注意自由的是 v1，而不必是 u1，所以应以 v1 为 P6 中的自由根、u1 为目标来代入。M_(c1) 是 Q6 匹配；v1 不被全局 M 覆盖，当然也不被局部 M_(c1) 覆盖；两端点奇偶性相反；u1 可以已经被匹配覆盖。全部条件逐条成立，故存在包含 M_(c1) 的 Hamilton v1–u1 路 Z1。反向阅读这条无向路，就得到所需 u1–v1 次序。</p>
+<p>将各 Z_i 与以下跨纤维边并在一起：</p>
+<div class="math-block" title="v_1u_2,\ v_2u_3,\ldots,\ v_{k-1}u_k,\ v_ku_1."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>v</mi><mn>1</mn></msub><msub><mi>u</mi><mn>2</mn></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msub><mi>v</mi><mn>2</mn></msub><msub><mi>u</mi><mn>3</mn></msub><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msub><mi>v</mi><mrow><mi>k</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msub><msub><mi>u</mi><mi>k</mi></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msub><mi>v</mi><mi>k</mi></msub><msub><mi>u</mi><mn>1</mn></msub><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>沿此边集合行走，可以依次遍历 Z1、Z2、…、Zk，然后返回 u1。每条 Z_i 恰好遍历一个纤维的全部 64 个顶点；不同纤维的顶点互不相交；跨纤维连接只在连续两条路径端点之间发生；各路径两端点不同。因此得到一条连通的简单圈，遍历全部 k·64=2^n 个顶点，且每个顶点恰好一次。</p>
+<p>特别是 m=1、k=2 时，两条连接边是 v1u2 和 v2u1。若它们是同一条无向边，则首纤维端点必须有 v1=u1，这与上面的奇偶性相反矛盾。所以两条连接边确实不同，最终圈没有重边；Q1 本身没有通常意义的 Hamilton 圈不会影响这个构造。</p>
+<p>每个 M_(c_i) 都包含在相应 Z_i 中，而 M 没有跨纤维边，故最终圈包含整个 M。所有新增连接边也是 Qn 边。最后逆转最初的坐标置换即得原坐标中的结论。证毕。</p>
+<h3 id="35-n2-ruskeysavage">3.5 统一所有 n≥2，以及与 Ruskey–Savage 猜想的关系</h3>
+<p><strong>命题 U6。</strong> 对每个整数 n≥2，Qn 中使用至多六个方向的每个匹配都可扩展为 Hamilton 圈。</p>
+<p>证明：n≥6 用 D6；2≤n≤5 时任何匹配至多使用 n≤5 个方向，直接满足文献 Theorem 4 的 n≥2、匹配和方向数≤5 三项条件，故也能扩展为 Hamilton 圈。两段范围互不遗漏。证毕。</p>
+<p>Ruskey–Savage 猜想要求 Qn 的任意匹配都能扩展为 Hamilton 圈。因此 U6 特别给出全部 2≤n≤6 的猜想实例：这些维数的每个匹配自动至多使用六个方向。但 n&gt;6 时匹配可能使用七个或更多方向，U6 不覆盖它们。本文没有证明任意维数的完整 Ruskey–Savage 猜想，也不据此宣称此前公开文献未曾解决任何具体实例。</p>
+<h3 id="36">3.6 为什么不能直接声称六方向任意指定端点的完整分类</h3>
+<p>P6 的前提包含“至少一个指定端点自由”，只保证一条 Hamilton 路。它没有声称两个指定端点都被匹配覆盖时也存在路径，更没有保证两条不同路径。</p>
+<p>同一 v1 文献的 Theorem 7 使用的是更强的 Conjecture 5：在给定 C-conditions 未发生时，保证两条不同的 Hamilton 路，并允许两个指定端点都被覆盖。P6 不是 Conjecture 5。把 Theorem 7 中的 d 改成 6 时，缺少的仍是维数六的 Conjecture 5；本文没有补足这个前提。所以本文推出的是六方向 Hamilton 圈定理，以及原始 P6 的自由根路径定理，不是六方向任意端点的完整路径分类。</p>
+<p>依赖方向为：已接受 P6 → C6 → D6 → U6；文献 F 进入 C6/D6，文献 Theorem 4 只进入 U6 的低维分支。D6 的完整展开不依赖本报告结论去反证或补足 P6，因此不存在循环。</p>
+<h3 id="37">3.7 审核边界</h3>
+<p>本新增说明由 <code>/root/p6_report_corollary_audit</code> 在与总报告主写作者不同的子任务中核对并撰写。其新增推导是对父任务主写作者的独立核对，但本文件与配套自审说明由同一子任务完成；不能称作对本文件作者自身的再次独立审稿。它继续继承 P6 的 same-family/provisional 保证等级。语义审查并不等于 Lean 证明或跨家族复核。</p>
+<p>审查细节、反例尝试与具体 SHA-256 绑定见 <code>SIX_DIRECTION_CYCLE_COROLLARIES_REVIEW.md/.json</code>。只核验 P6 顶层直接散列绑定，不冒称再次执行其全部下游有限证书；下游证书的闭合性由导入的 P6 全审结果提供。</p>
+<h2 id="4">4. 证明地图与记号</h2>
+<p><span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 有 64 个顶点和 192 条边。若原匹配有 <span class="math-inline" title="m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>m</mi></mrow></math></span> 条边，则孔数为 <span class="math-inline" title="h=64-2m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mo>&#x0003D;</mo><mn>64</mn><mo>&#x02212;</mo><mn>2</mn><mi>m</mi></mrow></math></span>。每条立方体边连接一个偶点和一个奇点，所以原匹配的两类孔数相等。后文“短边”就是立方体边；“长边”是完全图中不属于立方体的边。</p>
+<table>
+<thead>
+<tr>
+<th>记号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math-inline" title="H"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>H</mi></mrow></math></span></td>
+<td>原匹配未覆盖的顶点集合</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="A,B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo>&#x0002C;</mo><mi>B</mi></mrow></math></span></td>
+<td>沿一个坐标切分所得的两个五维子立方体</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="M_A,M_B,C"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>M</mi><mi>A</mi></msub><mo>&#x0002C;</mo><msub><mi>M</mi><mi>B</mi></msub><mo>&#x0002C;</mo><mi>C</mi></mrow></math></span></td>
+<td>原匹配在两侧的内部边及跨边</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="X_A,X_B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>X</mi><mi>A</mi></msub><mo>&#x0002C;</mo><msub><mi>X</mi><mi>B</mi></msub></mrow></math></span></td>
+<td>原跨边在两侧的端点，称为端口</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="\bar x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mover><mi>x</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span></td>
+<td>顶点 <span class="math-inline" title="x"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>x</mi></mrow></math></span> 沿所选切分坐标的短边邻点</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span></td>
+<td>用于局部补全的辅助匹配，之后删除</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>S</mi></mrow></math></span>、<span class="math-inline" title="Y=\bar S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi><mo>&#x0003D;</mo><mover><mi>S</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span></td>
+<td>选用的原孔桥源及其另一侧镜像</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span></td>
+<td>压缩路径后得到的完全图匹配，可能含长边及同奇偶边</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="A_{2t}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>2</mn><mi>t</mi></mrow></msub></mrow></math></span></td>
+<td>五维孔数为 <span class="math-inline" title="(t-1,t+1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002C;</mo><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>、避开一个指定多数类孔的圈命题</td>
+</tr>
+</tbody>
+</table>
+<p>总体依赖顺序是：已发表输入与四维有限引理 → 五维辅助命题 → 六维各完整孔层 → 保持根自由的极大补全归约 → P6。十四孔依赖完整十二孔，十六孔依赖完整十四孔，十八孔依赖完整十六孔，方向不能倒置。</p>
+<p>本章之后采用“解析证明＋明确有限引理”的计算辅助证明形式。有限引理的具体输入、枚举域、证书验证算法和接受报告均有附录定位；数字表格自身不替代这些引理的证明。</p>
+<h2 id="5-2-18">5. 为什么只需证明 2 至 18 个孔</h2>
+<p><strong>文献输入。</strong> Havel–Křivánek，1982，<em>On maximal matchings in Q6 and a conjecture of R. Forcade</em>，Theorem 2：完整 <span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 的每个按包含关系极大的匹配至少含 24 条边。这里的“极大”指不能再添加匹配边，不是“最大基数”。<a href="https://dml.cz/bitstream/handle/10338.dmlcz/106137/CommentatMathUnivCarol_023-1982-1_10.pdf">原论文</a>。</p>
+<p><strong>引理 5.1（保持指定自由根的补全）。</strong> 固定 <span class="math-inline" title="u\notin V(M)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x02209;</mo><mi>V</mi><mo stretchy="false">&#x00028;</mo><mi>M</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span>。可以将 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span> 补为 <span class="math-inline" title="Q_6-\{u\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub><mo>&#x02212;</mo><mo stretchy="false">&#x0007B;</mo><mi>u</mi><mo stretchy="false">&#x0007D;</mo></mrow></math></span> 中的极大匹配 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span>，且</p>
+<div class="math-block" title="M\subseteq L,\qquad 23\le &#124;L&#124;\le31."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>M</mi><mo>&#x02286;</mo><mi>L</mi><mo>&#x0002C;</mo><mspace width="2em" /><mn>23</mn><mo>&#x02264;</mo><mo stretchy="false">&#x0007C;</mo><mi>L</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>31</mn><mo>&#x0002E;</mo></mrow></math></div>
+
+<p><strong>证明。</strong> 只要删根图中还有两个自由端点间的边，就将其加入。每次边数严格增加，图有限，所以过程终止；<span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 从未被覆盖。</p>
+<p>若 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 的每个邻点都被 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 覆盖，则完整 <span class="math-inline" title="Q_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow></math></span> 也没有可加入的边：不接触 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 的边被删根极大性排除，接触 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 的边被其另一端已覆盖排除。文献定理给出 <span class="math-inline" title="&#124;L&#124;\ge24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>L</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02265;</mo><mn>24</mn></mrow></math></span>。</p>
+<p>否则取自由邻点 <span class="math-inline" title="a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi></mrow></math></span>，临时考虑 <span class="math-inline" title="L\cup\{ua\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi><mo>&#x0222A;</mo><mo stretchy="false">&#x0007B;</mo><mi>u</mi><mi>a</mi><mo stretchy="false">&#x0007D;</mo></mrow></math></span>。若仍有可加入的边，它两端不可能是已经覆盖的 <span class="math-inline" title="u,a"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x0002C;</mo><mi>a</mi></mrow></math></span>，因而这条边原本就在删根图中且两端在 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 中自由，矛盾。所以临时匹配在完整立方体中极大，得到 <span class="math-inline" title="&#124;L&#124;+1\ge24"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>L</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0002B;</mo><mn>1</mn><mo>&#x02265;</mo><mn>24</mn></mrow></math></span>。这个临时的 <span class="math-inline" title="ua"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mi>a</mi></mrow></math></span> 只用于大小估计，不保留在最终规定匹配 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 中。又因 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span> 自由，<span class="math-inline" title="&#124;L&#124;\le31"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>L</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x02264;</mo><mn>31</mn></mrow></math></span>。证毕。</p>
+<p>由此，<span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 的孔数属于</p>
+<div class="math-block" title="\{2,4,6,8,10,12,14,16,18\}."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007B;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>4</mn><mo>&#x0002C;</mo><mn>6</mn><mo>&#x0002C;</mo><mn>8</mn><mo>&#x0002C;</mo><mn>10</mn><mo>&#x0002C;</mo><mn>12</mn><mo>&#x0002C;</mo><mn>14</mn><mo>&#x0002C;</mo><mn>16</mn><mo>&#x0002C;</mo><mn>18</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>如果这九个完整孔层都能处理同一个 <span class="math-inline" title="u,v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x0002C;</mo><mi>v</mi></mrow></math></span>，相应 Hamilton 路包含 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span>，自然也包含 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span>。补全过程可能覆盖原来自由的 <span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span>，所以九个孔层都必须允许已覆盖目标。原匹配可能有多达 64 个孔；18 是保持根自由的极大补全后的上界，不是对原输入的限制。</p>
+<h2 id="6">6. 五维辅助命题怎样建立</h2>
+<h3 id="61">6.1 避一个孔的命题</h3>
+<p><span class="math-inline" title="A_{2t}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>2</mn><mi>t</mi></mrow></msub></mrow></math></span> 的完整表述为：对 <span class="math-inline" title="K(V(Q_5))"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>K</mi><mo stretchy="false">&#x00028;</mo><mi>V</mi><mo stretchy="false">&#x00028;</mo><msub><mi>Q</mi><mn>5</mn></msub><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00029;</mo></mrow></math></span> 中任意匹配，若两类孔数为 <span class="math-inline" title="(t-1,t+1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002C;</mo><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>，则对任意指定的多数类孔 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span>，存在恰好覆盖 <span class="math-inline" title="Q_5-\{z\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>5</mn></msub><mo>&#x02212;</mo><mo stretchy="false">&#x0007B;</mo><mi>z</mi><mo stretchy="false">&#x0007D;</mo></mrow></math></span> 的圈，包含原匹配，且新增边都是短边。允许原规定边为长边或同奇偶边。</p>
+<p>基础 <span class="math-inline" title="A_2,A_4,A_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mn>4</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mn>6</mn></msub></mrow></math></span> 由已发表输入、四维引理与已审构造建立。<span class="math-inline" title="A_8"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>8</mn></msub></mrow></math></span> 的独立非邻接几何域有 2,700 个记录；解析切分后余下的五类轨道分别关闭，后两类分别使用 200,475 和 2,732,625 个有限正输入。<span class="math-inline" title="A_{10}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>10</mn></mrow></msub></mrow></math></span> 的非邻接域有 55 个记录，分成大小为 <span class="math-inline" title="30,20,5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>30</mn><mo>&#x0002C;</mo><mn>20</mn><mo>&#x0002C;</mo><mn>5</mn></mrow></math></span> 的三个轨道。最后一个轨道用 1,024 个短森林对应的满秩证书解决。具体代表、构造和覆盖证明分别见附录 <a href="#proof-q5-a8-full-closure">Q5_A8_FULL_CLOSURE.md</a>、<a href="#proof-q5-a10-full-closure">Q5_A10_FULL_CLOSURE.md</a> 及其依赖原文。</p>
+<p><strong>有限邻域引理。</strong> <span class="math-inline" title="Q_5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>5</mn></msub></mrow></math></span> 任一奇偶类中的五个顶点至少有 11 个邻点。它的全部域是 <span class="math-inline" title="\binom{16}{5}=4368"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo minsize="2.047em" maxsize="2.047em">&#x00028;</mo><mfrac linethickness="0"><mrow><mn>16</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo minsize="2.047em" maxsize="2.047em">&#x00029;</mo><mo>&#x0003D;</mo><mn>4368</mn></mrow></math></span> 个五元组，独立验证器逐个取五个坐标邻点并求并集，最小值为 11。平移给出另一奇偶类。因为另一类总共 16 个顶点，其任意六元组必与这至少 11 个邻点相交。</p>
+<p>若 <span class="math-inline" title="t\ge6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>t</mi><mo>&#x02265;</mo><mn>6</mn></mrow></math></span>，至少有五个少数类孔，以及除去指定避孔 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span> 后至少六个多数类孔。由邻域引理可添加它们之间的一条短匹配边，保持 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span> 自由并同时减少两类孔数。反复降到 <span class="math-inline" title="t\le5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>t</mi><mo>&#x02264;</mo><mn>5</mn></mrow></math></span>，即可使用 <span class="math-inline" title="A_2,A_4,A_6,A_8,A_{10}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mn>4</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mn>6</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mn>8</mn></msub><mo>&#x0002C;</mo><msub><mi>A</mi><mrow><mn>10</mn></mrow></msub></mrow></math></span>。所有新增规定边本来就是短边，因此遗忘补全要求不会引入非法长边。这样得到每个可行 <span class="math-inline" title="A_{2t}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>2</mn><mi>t</mi></mrow></msub></mrow></math></span>。</p>
+<h3 id="62">6.2 从避孔圈到完整平衡孔路径</h3>
+<p>令 <span class="math-inline" title="P_m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mi>m</mi></msub></mrow></math></span> 表示任意完全图匹配有 <span class="math-inline" title="m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>m</mi></mrow></math></span> 个偶孔、<span class="math-inline" title="m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>m</mi></mrow></math></span> 个奇孔时的自由根路径命题，<span class="math-inline" title="C_m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mi>m</mi></msub></mrow></math></span> 表示同样孔数的全顶点圈命题。新增边仍要求短。Fink 的完美匹配定理提供 <span class="math-inline" title="C_0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub></mrow></math></span>。</p>
+<p>假设已有 <span class="math-inline" title="C_{m-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mrow><mi>m</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msub></mrow></math></span>，固定自由根 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span> 和异奇偶目标 <span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span>。若 <span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span> 自由，加入辅助边 <span class="math-inline" title="ry"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi><mi>y</mi></mrow></math></span>，用 <span class="math-inline" title="C_{m-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mrow><mi>m</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msub></mrow></math></span> 得圈，再删除 <span class="math-inline" title="ry"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi><mi>y</mi></mrow></math></span>。这条边可以长，因为它最后被删除。</p>
+<p>若 <span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span> 已覆盖，记其匹配伙伴为 <span class="math-inline" title="h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi></mrow></math></span>，置</p>
+<div class="math-block" title="F&#x27;=(F\setminus\{yh\})\cup\{hr\}."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>F</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>F</mi><mi>&#x029F5;</mi><mo stretchy="false">&#x0007B;</mo><mi>y</mi><mi>h</mi><mo stretchy="false">&#x0007D;</mo><mo stretchy="false">&#x00029;</mo><mo>&#x0222A;</mo><mo stretchy="false">&#x0007B;</mo><mi>h</mi><mi>r</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>它的孔数变为 <span class="math-inline" title="(m-1,m+1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>m</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0002C;</mo><mi>m</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>，多数类为 <span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span> 的奇偶类。用 <span class="math-inline" title="A_{2m}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>2</mn><mi>m</mi></mrow></msub></mrow></math></span> 得到避开 <span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span> 的 31 顶点圈。删除辅助边 <span class="math-inline" title="hr"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mi>r</mi></mrow></math></span> 得到端点 <span class="math-inline" title="h,r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mo>&#x0002C;</mo><mi>r</mi></mrow></math></span> 的路径，再在 <span class="math-inline" title="h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi></mrow></math></span> 端接回原匹配边 <span class="math-inline" title="hy"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mi>y</mi></mrow></math></span>，得到所需 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span>–<span class="math-inline" title="y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi></mrow></math></span> Hamilton 路。原边 <span class="math-inline" title="yh"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>y</mi><mi>h</mi></mrow></math></span> 被恢复，辅助边 <span class="math-inline" title="hr"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mi>r</mi></mrow></math></span> 被去掉。</p>
+<p>这证明 <span class="math-inline" title="P_m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mi>m</mi></msub></mrow></math></span>。取一个自由根及其任意短邻点作为目标，用 <span class="math-inline" title="P_m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>P</mi><mi>m</mi></msub></mrow></math></span> 得路，再用短边闭合，即得 <span class="math-inline" title="C_m"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mi>m</mi></msub></mrow></math></span>，完成归纳。<span class="math-inline" title="m=16"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>m</mi><mo>&#x0003D;</mo><mn>16</mn></mrow></math></span> 时匹配为空，不存在已覆盖目标分支，因此不需要不可行的 <span class="math-inline" title="A_{32}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mrow><mn>32</mn></mrow></msub></mrow></math></span>。这一点排除了参数范围的隐含漏洞。</p>
+<h2 id="7">7. 从有限矩阵得到全称匹配结论</h2>
+<h3 id="71">7.1 短森林与端点匹配</h3>
+<p>给定一个局部五维问题，记孔集为 <span class="math-inline" title="H"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>H</mi></mrow></math></span>、指定省略孔为 <span class="math-inline" title="U\subseteq H"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>U</mi><mo>&#x02286;</mo><mi>H</mi></mrow></math></span>、规定匹配端点为 <span class="math-inline" title="K=V(Q_5)\setminus H"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>K</mi><mo>&#x0003D;</mo><mi>V</mi><mo stretchy="false">&#x00028;</mo><msub><mi>Q</mi><mn>5</mn></msub><mo stretchy="false">&#x00029;</mo><mi>&#x029F5;</mi><mi>H</mi></mrow></math></span>。选择只含短边的森林 <span class="math-inline" title="S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>S</mi></mrow></math></span>，要求：在 <span class="math-inline" title="U"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>U</mi></mrow></math></span> 上度数为零，在 <span class="math-inline" title="H\setminus U"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>H</mi><mi>&#x029F5;</mi><mi>U</mi></mrow></math></span> 上度数为二，在 <span class="math-inline" title="K"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>K</mi></mrow></math></span> 上度数为一，且没有圈。因此每个非平凡分量都是端点属于 <span class="math-inline" title="K"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>K</mi></mrow></math></span> 的路径。将每条路径压成一条边，得到 <span class="math-inline" title="K"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>K</mi></mrow></math></span> 上的完美匹配 <span class="math-inline" title="P(S)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>S</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span>。</p>
+<p>若原匹配 <span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span> 与 <span class="math-inline" title="P(S)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi><mo stretchy="false">&#x00028;</mo><mi>S</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span> 的带标号并是一个交替圈，将所有压缩边展开即可得到保留 <span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span> 的所需局部圈。共同边要作为两条不同标号边处理：它们形成一个二边分量，不能被去重后假装连通。成功的单圈证书自动排除这种重边。</p>
+<h3 id="72">7.2 满秩证书为什么够</h3>
+<p>在偶数个 <span class="math-inline" title="N\ge4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>N</mi><mo>&#x02265;</mo><mn>4</mn></mrow></math></span> 端点上，以完全图的所有完美匹配为行列，定义</p>
+<div class="math-block" title="\mathcal H_N(P,F)=\begin{cases}1,&amp;P\cup F\text{ 是一个交替圈},\\0,&amp;\text{否则}.\end{cases}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi mathvariant="script">H</mi><mi>N</mi></msub><mo stretchy="false">&#x00028;</mo><mi>P</mi><mo>&#x0002C;</mo><mi>F</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x0007B;</mo><mtable><mtr><mtd columnalign="left"><mn>1</mn><mo>&#x0002C;</mo></mtd><mtd columnalign="left"><mi>P</mi><mo>&#x0222A;</mo><mi>F</mi><mtext>&#x000A0;是一个交替圈</mtext><mo>&#x0002C;</mo></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn><mo>&#x0002C;</mo></mtd><mtd columnalign="left"><mtext>否则</mtext><mo>&#x0002E;</mo></mtd></mtr></mtable></mrow></mrow></math></div>
+
+<p>使用 Cygan–Kratsch–Nederlof 的完美匹配连通矩阵定理：在 <span class="math-inline" title="\mathbb F_2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi mathvariant="double-struck">F</mi><mn>2</mn></msub></mrow></math></span> 上，秩为 <span class="math-inline" title="2^{N/2-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mn>2</mn><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math></span>；这里实际只需要相应上界。该矩阵的域是所有完全图完美匹配，不限短边或二部边。<a href="https://doi.org/10.1145/3148227">原论文 DOI</a>。</p>
+<p>设选出了 <span class="math-inline" title="r=2^{N/2-1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi><mo>&#x0003D;</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math></span> 个合法短森林，以及 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span> 个合法匹配列；它们的连通性子矩阵满秩 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span>。则所选完整行线性独立，结合全矩阵秩上界，所选行张成整个行空间。</p>
+<p>对任意规定匹配 <span class="math-inline" title="F=\{a_i b_i:1\le i\le N/2\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><msub><mi>a</mi><mi>i</mi></msub><msub><mi>b</mi><mi>i</mi></msub><mi>:</mi><mn>1</mn><mo>&#x02264;</mo><mi>i</mi><mo>&#x02264;</mo><mi>N</mi><mo>&#x0002F;</mo><mn>2</mn><mo stretchy="false">&#x0007D;</mo></mrow></math></span>，将 <span class="math-inline" title="b_i"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>b</mi><mi>i</mi></msub></mrow></math></span> 与 <span class="math-inline" title="a_{i+1}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msub></mrow></math></span> 循环相配，可以构造一个与 <span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span> 并成单圈的匹配，故 <span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span> 对应的完整列非零。若所有已选行在该列都是零，所有行的线性组合也为零，与列非零矛盾。因此至少一个已选短森林适用于这个任意的 <span class="math-inline" title="F"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>F</mi></mrow></math></span>。</p>
+<p>这证明的是 <span class="math-inline" title="\forall F\,\exists S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02200;</mo><mi>F</mi><mspace width="0.167em" /><mo>&#x02203;</mo><mi>S</mi></mrow></math></span>，不是只验证了表中出现的列。验证器逐条检查森林的短边性、顶点度数、无环性、端点配对，重新计算全部矩阵位并在 <span class="math-inline" title="\mathbb F_2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi mathvariant="double-struck">F</mi><mn>2</mn></msub></mrow></math></span> 上消元。森林生成器不必穷尽所有森林；但实际使用的行必须合法、实际子矩阵必须满秩。反之，某次选取的矩阵缺秩不能证明存在反例。</p>
+<h3 id="73">7.3 强迫配对与避开障碍</h3>
+<p>如果一个必须保留的孔在局部仅剩两个可用短邻点 <span class="math-inline" title="p,q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mo>&#x0002C;</mo><mi>q</mi></mrow></math></span>，每个合法森林都包含通过该孔的 <span class="math-inline" title="p"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi></mrow></math></span>–<span class="math-inline" title="q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi></mrow></math></span> 路径，故端点匹配强迫配对 <span class="math-inline" title="pq"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mi>q</mi></mrow></math></span>。若规定匹配本身也含 <span class="math-inline" title="pq"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mi>q</mi></mrow></math></span>，就形成一个分离的二边分量。若不含，设它在 <span class="math-inline" title="p,q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mo>&#x0002C;</mo><mi>q</mi></mrow></math></span> 的伙伴为 <span class="math-inline" title="a,b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi><mo>&#x0002C;</mo><mi>b</mi></mrow></math></span>，删除 <span class="math-inline" title="pa,qb"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mi>a</mi><mo>&#x0002C;</mo><mi>q</mi><mi>b</mi></mrow></math></span> 并补上 <span class="math-inline" title="ab"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi><mi>b</mi></mrow></math></span>，便可把问题收缩到少两个端点的矩阵。</p>
+<p>应用这种局部命题时，必须证明<strong>实际压缩后匹配</strong>不含 <span class="math-inline" title="pq"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mi>q</mi></mrow></math></span>。仅检查原始内部匹配没有 <span class="math-inline" title="pq"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mi>q</mi></mrow></math></span> 不够，因为路径压缩可能新造出它。多个强迫配对时更须检查整个带标号联合图无圈，不能逐对排除后就声称完成。附录 <a href="#proof-higher-forced-cherry-transfer">HIGHER_FORCED_CHERRY_TRANSFER.md</a> 给出带精确桥源条件的转移证明；十六孔的双桥源情形另有专门证明，见第 12 节。</p>
+<h2 id="8">8. 六维切分、补全、压缩与还原</h2>
+<p>平移指定自由根为 <span class="math-inline" title="u=0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>，再置换坐标，把异奇偶目标规范为 <span class="math-inline" title="v\in\{1,7,31\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi><mo>&#x02208;</mo><mo stretchy="false">&#x0007B;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>7</mn><mo>&#x0002C;</mo><mn>31</mn><mo stretchy="false">&#x0007D;</mo></mrow></math></span>，分别对应距离 <span class="math-inline" title="1,3,5"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1</mn><mo>&#x0002C;</mo><mn>3</mn><mo>&#x0002C;</mo><mn>5</mn></mrow></math></span>。平移与坐标置换保存全部立方体边和路径；独立检查器核验了全部 <span class="math-inline" title="64\times32=2048"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>64</mn><mo>&#x000D7;</mo><mn>32</mn><mo>&#x0003D;</mo><mn>2048</mn></mrow></math></span> 个有序异奇偶端点对。</p>
+<p>以下前层增广只用于 <span class="math-inline" title="k\ge2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>k</mi><mo>&#x02265;</mo><mn>2</mn></mrow></math></span>，且以完整的 <span class="math-inline" title="2k-2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>2</mn><mi>k</mi><mo>&#x02212;</mo><mn>2</mn></mrow></math></span> 孔层已经建立为前提；双孔基础情形单独使用 N10。对 <span class="math-inline" title="2k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>2</mn><mi>k</mi></mrow></math></span> 孔原匹配，把其余偶孔记为 <span class="math-inline" title="Z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Z</mi></mrow></math></span>，奇孔记为 <span class="math-inline" title="W"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>W</mi></mrow></math></span>，于是 <span class="math-inline" title="&#124;Z&#124;=k-1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>Z</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mi>k</mi><mo>&#x02212;</mo><mn>1</mn></mrow></math></span>、<span class="math-inline" title="&#124;W&#124;=k"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>W</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mi>k</mi></mrow></math></span>。若目标已覆盖且有短边连接 <span class="math-inline" title="Z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Z</mi></mrow></math></span> 与 <span class="math-inline" title="W"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>W</mi></mrow></math></span>，加入它后根仍自由，用前一个完整孔层即可。</p>
+<p>若目标自由，有任意孔间短边 <span class="math-inline" title="xy\ne uv"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>x</mi><mi>y</mi><mo>&#x02260;</mo><mi>u</mi><mi>v</mi></mrow></math></span>，加入后至少一个指定端点仍自由，可以该端点为根调用前层，必要时反向读路。若所加边恰为 <span class="math-inline" title="uv"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mi>v</mi></mrow></math></span>，则在增广匹配中选另一个自由根 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span> 及短邻点 <span class="math-inline" title="s"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi></mrow></math></span>，用前层得到含 <span class="math-inline" title="uv"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mi>v</mi></mrow></math></span> 的 Hamilton <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span>–<span class="math-inline" title="s"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi></mrow></math></span> 路；加 <span class="math-inline" title="rs"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi><mi>s</mi></mrow></math></span> 闭成圈，再删 <span class="math-inline" title="uv"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi><mi>v</mi></mrow></math></span>，得所需 <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span>–<span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 路。因此不能略去相邻自由端点这个边界。</p>
+<p>以下目标已覆盖时可假设 <span class="math-inline" title="Z\cup W"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Z</mi><mo>&#x0222A;</mo><mi>W</mi></mrow></math></span> 独立，目标自由时可假设全部孔独立。选择含目标的切分侧 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span>，记 <span class="math-inline" title="a=&#124;Z\cap A&#124;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>Z</mi><mo>&#x02229;</mo><mi>A</mi><mo stretchy="false">&#x0007C;</mo></mrow></math></span>、<span class="math-inline" title="b=&#124;W\cap A&#124;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>b</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><mi>W</mi><mo>&#x02229;</mo><mi>A</mi><mo stretchy="false">&#x0007C;</mo></mrow></math></span>。近乎平衡的三类行可以用第 6 节输入解决：</p>
+<table>
+<thead>
+<tr>
+<th>切分条件</th>
+<th>操作要点</th>
+<th>另一侧局部输入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math-inline" title="b=a\ge1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>b</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x02265;</mo><mn>1</mn></mrow></math></span></td>
+<td>消耗一个偶孔作桥源</td>
+<td>两类孔差二，避一个多数孔</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="b=a+1"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>b</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></math></span></td>
+<td>不消耗孔作桥源</td>
+<td>平衡孔全圈</td>
+</tr>
+<tr>
+<td><span class="math-inline" title="b=a+2"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>b</mi><mo>&#x0003D;</mo><mi>a</mi><mo>&#x0002B;</mo><mn>2</mn></mrow></math></span></td>
+<td>消耗一个合法奇孔，避开自由目标与根镜像</td>
+<td>反向的孔差二避一孔</td>
+</tr>
+</tbody>
+</table>
+<p>若跨边数为零，原匹配避开整个切分方向，至多使用五个方向，直接调用已接受的五方向自由根路径定理。对正跨边数，补全 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span> 的原端口和所需桥源为辅助匹配 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span>，保留一个合适的自由根。第 6 节的五维路径定理给出含 <span class="math-inline" title="M_A\cup D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>M</mi><mi>A</mi></msub><mo>&#x0222A;</mo><mi>D</mi></mrow></math></span> 的生成路径。删除 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span>，附上每条原跨边以及选用的源镜像短桥；再用一条带标签的辅助边编码全局两个端点。</p>
+<p>每个桥源原本是孔，所以其镜像不可能原来是跨边端口。独立孔条件又排除它是原孔；于是其原匹配边位于 <span class="math-inline" title="B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>B</mi></mrow></math></span> 内部。冲突只发生在镜像集合 <span class="math-inline" title="Y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi></mrow></math></span>，而原短边伙伴位于另一奇偶类，是相应分量的悬挂端点。因此可以把这些冲突路径压缩为一个完全图匹配，保留路径记录及唯一标签，应用精确的五维圈命题。</p>
+<p>最后逐条展开所有压缩边，恢复被省略的镜像顶点和完整 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span> 侧路径，再删除唯一标签。每个原顶点出现一次，每条原匹配边被保留，所有辅助补全边已删除，剩余新增物理边都短。完整参数与根在两侧、目标为跨边端口的边界写在附录 <a href="#proof-higher-q5-full-nearbalanced">HIGHER_Q5_FULL_NEARBALANCED.md</a>，并由其后续接受报告解除旧版中的前层条件。</p>
+<h2 id="9-246810">9. 2、4、6、8、10 孔层如何关闭</h2>
+<p><strong>双孔。</strong> 使用完整近完美匹配自由根命题 N10。原短匹配的两孔异奇偶，因此 N10 的目标奇偶条件恰是 P6 所需条件。N10 在目标已覆盖时改接原目标边，通过避目标圈还原路径；其完整推导收入附录 <a href="#proof-general-near-perfect">GENERAL_NEAR_PERFECT.md</a>。</p>
+<p><strong>四孔。</strong> 记另一个偶孔为 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span>、两个奇孔为 <span class="math-inline" title="w,t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mo>&#x0002C;</mo><mi>t</mi></mrow></math></span>。先处理自由目标及可添加孔间短边的情形。其余选择把 <span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 与 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span> 分开的坐标，按 <span class="math-inline" title="w,t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mo>&#x0002C;</mo><mi>t</mi></mrow></math></span> 的侧别分成三个切分类型，分别调用已证局部转移。唯一切分边界要求根与目标同侧且有一个奇孔是根的坐标邻点。利用 <span class="math-inline" title="z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>z</mi></mrow></math></span> 与目标原匹配伙伴不同，再选另一个将 <span class="math-inline" title="v,z"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi><mo>&#x0002C;</mo><mi>z</mi></mrow></math></span> 分开的坐标，此时根与目标异侧，排除该边界。这是一个解析封闭论证，详见 <a href="#proof-four-hole-full">FOUR_HOLE_FULL.md</a>。</p>
+<p><strong>六孔。</strong> 已建立的五维 <span class="math-inline" title="A_4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>4</mn></msub></mrow></math></span> 分别解除自由目标归约和已覆盖目标归约的全部前提，二者穷尽目标状态。不能只把 <span class="math-inline" title="A_4"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>4</mn></msub></mrow></math></span> 当成猜想保留；其规范族补全证书及安全端点转移有独立审计，详见 <a href="#proof-six-hole-closed">SIX_HOLE_CLOSED.md</a> 及 <a href="#proof-canonical-a4-closure">CANONICAL_A4_CLOSURE.md</a>。</p>
+<p><strong>八孔。</strong> 五维 <span class="math-inline" title="A_6"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>6</mn></msub></mrow></math></span> 解决自由分支和若干良好切分。已覆盖目标剩余域包含 21,350 个规范几何，其中 50 个没有常规 <span class="math-inline" title="(2,1)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span> 投影。最后这 50 个通过七类代表处理：证明每个实际原匹配都必须使用至少一条满足三邻点条件的跨边，再用邻点丰度引理产生所需路径边。不能预先挑选一条路径未必拥有的边；所有可能产生的投影都落入已接受的标记核心。七类大小为 <span class="math-inline" title="10,1,9,9,1,10,10"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>10</mn><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>9</mn><mo>&#x0002C;</mo><mn>9</mn><mo>&#x0002C;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>10</mn><mo>&#x0002C;</mo><mn>10</mn></mrow></math></span>，和为 50。详见 <a href="#proof-eight-hole-full-closure">EIGHT_HOLE_FULL_CLOSURE.md</a>。</p>
+<p><strong>十孔。</strong> 完整自由分支加上已覆盖目标的精确过滤链，最终留下 4,096 个几何。它们的互斥覆盖分为：2,598 个无额外避障条件的 T17 投影、1,036 个已证明实际压缩匹配避开障碍且根不在障碍对内的强迫 T17 投影、462 个其余 T15 投影。三个目标的分配为 <span class="math-inline" title="(570,220,120)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>570</mn><mo>&#x0002C;</mo><mn>220</mn><mo>&#x0002C;</mo><mn>120</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>、<span class="math-inline" title="(918,396,162)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>918</mn><mo>&#x0002C;</mo><mn>396</mn><mo>&#x0002C;</mo><mn>162</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>、<span class="math-inline" title="(1110,420,180)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>1110</mn><mo>&#x0002C;</mo><mn>420</mn><mo>&#x0002C;</mo><mn>180</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>，合计 4,096。T15 的全部正集可能与 T17 重叠，因此总装检查的是集合并，而不是把重叠计数直接相加。详见 <a href="#proof-ten-hole-full-closure">TEN_HOLE_FULL_CLOSURE.md</a>。</p>
+<p>这些段落解释封闭机制；每个调用所需的精确引理和有限证书接受范围均在后附完整证明原文中，不以段落摘要替代局部证明。</p>
+<h2 id="10">10. 十二孔：完整极大域与单调还原</h2>
+<p>完整十孔提供前层。十二孔自由目标已有完整分支证明，已覆盖目标的实际几何余域按下表下降。</p>
+<table>
+<thead>
+<tr>
+<th>已接受阶段</th>
+<th style="text-align: right;">已覆盖目标剩余几何</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>近乎平衡切分后</td>
+<td style="text-align: right;">7,820,116</td>
+</tr>
+<tr>
+<td>既有局部定理复用</td>
+<td style="text-align: right;">348,236</td>
+</tr>
+<tr>
+<td>T37 实际应用</td>
+<td style="text-align: right;">215,243</td>
+</tr>
+<tr>
+<td>新标记输入</td>
+<td style="text-align: right;">37,405</td>
+</tr>
+<tr>
+<td>强迫输入及 Hall 排除</td>
+<td style="text-align: right;">29,370</td>
+</tr>
+<tr>
+<td>额外普通输入</td>
+<td style="text-align: right;">1,281</td>
+</tr>
+<tr>
+<td>额外强迫输入</td>
+<td style="text-align: right;">235</td>
+</tr>
+<tr>
+<td>六类根星形的完整证书</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Hall 排除的逻辑是：在原匹配覆盖顶点诱导的二部图中，若某偶点集合 <span class="math-inline" title="S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>S</mi></mrow></math></span> 的全部可用奇邻点集合 <span class="math-inline" title="N(S)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>N</mi><mo stretchy="false">&#x00028;</mo><mi>S</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span> 满足 <span class="math-inline" title="&#124;N(S)&#124;&lt;&#124;S&#124;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>N</mi><mo stretchy="false">&#x00028;</mo><mi>S</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x0007C;</mo><mo>&#x0003C;</mo><mo stretchy="false">&#x0007C;</mo><mi>S</mi><mo stretchy="false">&#x0007C;</mo></mrow></math></span>，则无法给 <span class="math-inline" title="S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>S</mi></mrow></math></span> 的每点分配不同的匹配伙伴。因此相应孔几何不能由原短匹配实现。这是带邻域见证的不可能性证明，不是搜索未找到匹配。</p>
+<p>最后 235 个几何分成六轨道，大小为 <span class="math-inline" title="30,60,60,10,15,60"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>30</mn><mo>&#x0002C;</mo><mn>60</mn><mo>&#x0002C;</mo><mn>60</mn><mo>&#x0002C;</mo><mn>10</mn><mo>&#x0002C;</mo><mn>15</mn><mo>&#x0002C;</mo><mn>60</mn></mrow></math></span>。对各自固定的局部覆盖图，将任意实际内部匹配 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 加边补成包含极大的 <span class="math-inline" title="L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span>。六个完整域大小为</p>
+<div class="math-block" title="629747,\ 598097,\ 598067,\ 598037,\ 598067,\ 598037,"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>629747</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mn>598097</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mn>598067</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mn>598037</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mn>598067</mn><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mn>598037</mn><mo>&#x0002C;</mo></mrow></math></div>
+
+<p>合计 3,620,052。每个 <span class="math-inline" title="L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 都有短开口森林证书，且证书对原 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 的适用性通过单调还原证明：把 <span class="math-inline" title="L^*\setminus L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup><mi>&#x029F5;</mi><mi>L</mi></mrow></math></span> 的新增边视为之后要删去的补全边，而非原匹配要求。实际目标跨边与极大补全后目标内部边的区别在还原中保持不变。</p>
+<p>完整性需要三件事：证书输入全部合法且极大，输入两两不同，输入数量等于与生产搜索不同方法得到的完整域计数。每条正证书还要逐条验证。这同时证明“无漏输入”和“每个输入确实有构造”。<a href="#proof-twelve-star-maximal-a-finite-proof">TWELVE_STAR_MAXIMAL_A_FINITE_PROOF.md</a> 与对应独立审计提供这一有限引理。</p>
+<h2 id="11-25">11. 十四孔：最后 25 个几何的详细证明</h2>
+<h3 id="111">11.1 上游精确覆盖</h3>
+<p>十四孔对应 25 条匹配边。完整十二孔先处理可短边增广的情况，余下通过已接受的局部转移、Hall 排除和森林秩证书依次覆盖。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th style="text-align: right;">已覆盖目标余域</th>
+<th style="text-align: right;">自由目标余域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始切分余域</td>
+<td style="text-align: right;">9,252,401</td>
+<td style="text-align: right;">232,042</td>
+</tr>
+<tr>
+<td>复用</td>
+<td style="text-align: right;">47,893</td>
+<td style="text-align: right;">318</td>
+</tr>
+<tr>
+<td>已缓存新输入</td>
+<td style="text-align: right;">12,528</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr>
+<td>Hall 排除</td>
+<td style="text-align: right;">3,923</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>强迫输入</td>
+<td style="text-align: right;">2,587</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>首个极大域</td>
+<td style="text-align: right;">2,527</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>扩展 B 侧输入</td>
+<td style="text-align: right;">2,407</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>第 35 类直接应用</td>
+<td style="text-align: right;">2,287</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>三个中间标记类</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>最后两轨道</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>最后 25 个全部为已覆盖目标 <span class="math-inline" title="v=31"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi><mo>&#x0003D;</mo><mn>31</mn></mrow></math></span>，分成大小 20 与 5 的两轨道。代表的孔集为 <span class="math-inline" title="\{0\}\cup Z\cup W_i"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0222A;</mo><mi>Z</mi><mo>&#x0222A;</mo><msub><mi>W</mi><mi>i</mi></msub></mrow></math></span>，其中</p>
+<div class="math-block" title="Z=\{39,43,45,51,53,57\},\qquad J=\{1,2,4,8,16\},"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>Z</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>39</mn><mo>&#x0002C;</mo><mn>43</mn><mo>&#x0002C;</mo><mn>45</mn><mo>&#x0002C;</mo><mn>51</mn><mo>&#x0002C;</mo><mn>53</mn><mo>&#x0002C;</mo><mn>57</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>J</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>4</mn><mo>&#x0002C;</mo><mn>8</mn><mo>&#x0002C;</mo><mn>16</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo></mrow></math></div>
+<div class="math-block" title="W_0=J\cup\{14,32\},\qquad W_1=J\cup\{32,62\}."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>W</mi><mn>0</mn></msub><mo>&#x0003D;</mo><mi>J</mi><mo>&#x0222A;</mo><mo stretchy="false">&#x0007B;</mo><mn>14</mn><mo>&#x0002C;</mo><mn>32</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>W</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mi>J</mi><mo>&#x0222A;</mo><mo stretchy="false">&#x0007B;</mo><mn>32</mn><mo>&#x0002C;</mo><mn>62</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>沿坐标 32 切开，<span class="math-inline" title="A=\{0,\ldots,31\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><mn>31</mn><mo stretchy="false">&#x0007D;</mo></mrow></math></span>、<span class="math-inline" title="B=A+32"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>B</mi><mo>&#x0003D;</mo><mi>A</mi><mo>&#x0002B;</mo><mn>32</mn></mrow></math></span>。设</p>
+<div class="math-block" title="T=\{7,11,13,19,21,25\}=\bar Z."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>T</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>7</mn><mo>&#x0002C;</mo><mn>11</mn><mo>&#x0002C;</mo><mn>13</mn><mo>&#x0002C;</mo><mn>19</mn><mo>&#x0002C;</mo><mn>21</mn><mo>&#x0002C;</mo><mn>25</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0003D;</mo><mover><mi>Z</mi><mo stretchy="true">&#x000AF;</mo></mover><mo>&#x0002E;</mo></mrow></math></div>
+
+<h3 id="112">11.2 完整局部域</h3>
+<p>实际内部 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span> 匹配 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 必须覆盖 <span class="math-inline" title="T"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>T</mi></mrow></math></span>：这些点的跨边镜像都是原孔，不能通过跨边匹配。在第二轨道还必须内部覆盖偶点 30，因为其镜像 62 是原孔。将 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 在原覆盖图中补到包含极大 <span class="math-inline" title="L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，上述覆盖要求保留。</p>
+<p>完整域的分大小计数如下。</p>
+<table>
+<thead>
+<tr>
+<th>轨道</th>
+<th style="text-align: right;">8 条边</th>
+<th style="text-align: right;">9 条边</th>
+<th style="text-align: right;">10 条边</th>
+<th style="text-align: right;">11 条边</th>
+<th style="text-align: right;">总数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 几何轨道</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">17,040</td>
+<td style="text-align: right;">274,691</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">291,743</td>
+</tr>
+<tr>
+<td>5 几何轨道</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">804</td>
+<td style="text-align: right;">100,020</td>
+<td style="text-align: right;">412,439</td>
+<td style="text-align: right;">513,263</td>
+</tr>
+</tbody>
+</table>
+<p>独立计数按未匹配奇点集合 <span class="math-inline" title="U"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>U</mi></mrow></math></span> 分类：要求 <span class="math-inline" title="U\cap T=\varnothing"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>U</mi><mo>&#x02229;</mo><mi>T</mi><mo>&#x0003D;</mo><mo>&#x02205;</mo></mrow></math></span>，其余奇点分别匹配到不同的短邻偶点；已使用偶点集必须包含 <span class="math-inline" title="N(U)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>N</mi><mo stretchy="false">&#x00028;</mo><mi>U</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span>，第二轨道还须包含 30。<span class="math-inline" title="N(U)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>N</mi><mo stretchy="false">&#x00028;</mo><mi>U</mi><mo stretchy="false">&#x00029;</mo></mrow></math></span> 的条件恰好排除自由奇点与自由偶点间的可添加边，因此等价于极大性。用 15 个偶点的位掩码动态规划计数，与合法、唯一的证书输入直方图逐项相等，得到全部 805,006 个输入。</p>
+<p>每条证书给出自由偶点 <span class="math-inline" title="q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi></mrow></math></span>、<span class="math-inline" title="t\in T"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>t</mi><mo>&#x02208;</mo><mi>T</mi></mrow></math></span>、两个不同单位点 <span class="math-inline" title="w,b\in J"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mo>&#x0002C;</mo><mi>b</mi><mo>&#x02208;</mo><mi>J</mi></mrow></math></span> 和 <span class="math-inline" title="A\setminus\{0,31\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>&#x029F5;</mi><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>31</mn><mo stretchy="false">&#x0007D;</mo></mrow></math></span> 上的短森林 <span class="math-inline" title="P"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi></mrow></math></span>。其在 <span class="math-inline" title="q,b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi><mo>&#x0002C;</mo><mi>b</mi></mrow></math></span> 度数二，在其他保留顶点度数一，含开口边 <span class="math-inline" title="qt"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi><mi>t</mi></mrow></math></span>；修改后的内部匹配与它的带标号并无圈。</p>
+<h3 id="113">11.3 必须分开的三个目标情形</h3>
+<p>记实际原目标边为 <span class="math-inline" title="31h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>31</mn><mi>h</mi></mrow></math></span>。它若在 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span> 内，则改为 <span class="math-inline" title="wh"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mi>h</mi></mrow></math></span>；若跨边，则 <span class="math-inline" title="h=63"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mo>&#x0003D;</mo><mn>63</mn></mrow></math></span>，改为虚拟跨边 <span class="math-inline" title="w63"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mn>63</mn></mrow></math></span>。令 <span class="math-inline" title="L&#x27;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mi>&#x02032;</mi></msup></mrow></math></span> 为修改后的实际内部匹配。对 <span class="math-inline" title="L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，若 31 已匹配到 <span class="math-inline" title="h^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，删 <span class="math-inline" title="31h^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>31</mn><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 加 <span class="math-inline" title="wh^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，否则保持不变，所得记为 <span class="math-inline" title="L^{*\prime}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup></mrow></math></span>。</p>
+<ol>
+<li>实际目标内部匹配时，原边属于 <span class="math-inline" title="L\subseteq L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi><mo>&#x02286;</mo><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，所以 <span class="math-inline" title="h^*=h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>h</mi><mo>&#x0002A;</mo></msup><mo>&#x0003D;</mo><mi>h</mi></mrow></math></span>，两次改接相同，<span class="math-inline" title="L&#x27;\subseteq L^{*\prime}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mi>&#x02032;</mi></msup><mo>&#x02286;</mo><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup></mrow></math></span>。</li>
+<li>实际目标跨边，且 <span class="math-inline" title="L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 中 31 仍自由时，<span class="math-inline" title="L&#x27;=L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mi>&#x02032;</mi></msup><mo>&#x0003D;</mo><mi>L</mi></mrow></math></span>、<span class="math-inline" title="L^{*\prime}=L^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup><mo>&#x0003D;</mo><msup><mi>L</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，包含关系成立。</li>
+<li>实际目标跨边，但极大补全新增了 <span class="math-inline" title="31h^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>31</mn><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 时，这条边不属于 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span>；删掉它并加入 <span class="math-inline" title="wh^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 不会删去任何实际 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span> 边，因此包含关系仍成立。此时 <span class="math-inline" title="wh^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 是补全边，实际的虚拟跨边仍然是 <span class="math-inline" title="w63"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mn>63</mn></mrow></math></span>。</li>
+</ol>
+<p>将第三种情况中的 <span class="math-inline" title="h^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>h</mi><mo>&#x0002A;</mo></msup></mrow></math></span> 当成实际伙伴 <span class="math-inline" title="h"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi></mrow></math></span> 会破坏证明；证书和还原明确保持二者的区别。</p>
+<h3 id="114-a-b">11.4 完成 A 侧并压缩到 B 侧</h3>
+<p>令 <span class="math-inline" title="S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>S</mi></mrow></math></span> 为除去 <span class="math-inline" title="w,b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mo>&#x0002C;</mo><mi>b</mi></mrow></math></span> 后的其他原 <span class="math-inline" title="A"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi></mrow></math></span> 奇孔。图 <span class="math-inline" title="P+L^{*\prime}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>P</mi><mo>&#x0002B;</mo><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup></mrow></math></span> 的路径端点在两奇偶类各有 <span class="math-inline" title="14-&#124;L^*&#124;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>14</mn><mo>&#x02212;</mo><mo stretchy="false">&#x0007C;</mo><msup><mi>L</mi><mo>&#x0002A;</mo></msup><mo stretchy="false">&#x0007C;</mo></mrow></math></span> 个，至少三个路径分量。同性端点路径的偶偶、奇奇数量相等，将这些路径交替成环，再插入异性端点路径；若全为异性端点路径则一致定向后循环连接。这样得到端点上的异奇偶匹配 <span class="math-inline" title="D^*"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>D</mi><mo>&#x0002A;</mo></msup></mrow></math></span>，使其并为一个 30 顶点圈。</p>
+<p>置</p>
+<div class="math-block" title="D=D^*\cup\bigl(L^{*\prime}\setminus L&#x27;\bigr)."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>D</mi><mo>&#x0003D;</mo><msup><mi>D</mi><mo>&#x0002A;</mo></msup><mo>&#x0222A;</mo><mo stretchy="true" fence="true" minsize="1.2em" maxsize="1.2em">(</mo><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup><mi>&#x029F5;</mi><msup><mi>L</mi><mi>&#x02032;</mi></msup><mo stretchy="true" fence="true" minsize="1.2em" maxsize="1.2em">)</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>两部分端点不交，故仍是匹配，并且</p>
+<div class="math-block" title="P+L&#x27;+D=P+L^{*\prime}+D^*."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>P</mi><mo>&#x0002B;</mo><msup><mi>L</mi><mi>&#x02032;</mi></msup><mo>&#x0002B;</mo><mi>D</mi><mo>&#x0003D;</mo><mi>P</mi><mo>&#x0002B;</mo><msup><mi>L</mi><mrow><mo>&#x0002A;</mo><mi>&#x02032;</mi></mrow></msup><mo>&#x0002B;</mo><msup><mi>D</mi><mo>&#x0002A;</mo></msup><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>所以实际 <span class="math-inline" title="L&#x27;"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>L</mi><mi>&#x02032;</mi></msup></mrow></math></span> 得到了同一个 30 顶点圈。<span class="math-inline" title="t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>t</mi></mrow></math></span> 原本内部覆盖，<span class="math-inline" title="q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi></mrow></math></span> 是自由偶点，<span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span> 不接触它们。删除 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span> 和开口边 <span class="math-inline" title="qt"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi><mi>t</mi></mrow></math></span>，附上所有实际或虚拟跨边、所有 <span class="math-inline" title="s\bar s"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi><mover><mi>s</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span>（<span class="math-inline" title="s\in S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>s</mi><mo>&#x02208;</mo><mi>S</mi></mrow></math></span>）以及 <span class="math-inline" title="t\bar t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>t</mi><mover><mi>t</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span>。这些附着点互不冲突，形成具有 B 侧端点的路径系统。虚拟端口 63 不等于单位点镜像，也不等于 <span class="math-inline" title="\bar t"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mover><mi>t</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span> 或任何源镜像。</p>
+<p>将该系统与原内部 <span class="math-inline" title="B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>B</mi></mrow></math></span> 匹配合并，只有 <span class="math-inline" title="Y=\bar S"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi><mo>&#x0003D;</mo><mover><mi>S</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span> 出现度二冲突。所有 <span class="math-inline" title="Y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi></mrow></math></span> 同奇偶，其原短边伙伴属于相反奇偶类，故冲突只能形成可压缩路径，不会形成内部圈。压缩后得到 22 个端点上的完全图完美匹配 <span class="math-inline" title="F_B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>F</mi><mi>B</mi></msub></mrow></math></span>。</p>
+<p>相应 B 侧只有两个保留单位邻点 <span class="math-inline" title="\bar w,\bar b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mover><mi>w</mi><mo stretchy="true">&#x000AF;</mo></mover><mo>&#x0002C;</mo><mover><mi>b</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span>，导致一个强迫配对。它们原本内部匹配，其原短匹配边的另一端也不在 <span class="math-inline" title="Y"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi></mrow></math></span>，因此压缩后这些边原样保留。<span class="math-inline" title="\bar w,\bar b"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mover><mi>w</mi><mo stretchy="true">&#x000AF;</mo></mover><mo>&#x0002C;</mo><mover><mi>b</mi><mo stretchy="true">&#x000AF;</mo></mover></mrow></math></span> 同奇偶，绝不可能成为同一条原短边，所以 <span class="math-inline" title="F_B"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>F</mi><mi>B</mi></msub></mrow></math></span> 避开该强迫配对。由五个精确标记 B 输入的各 512 阶满秩证书，得到局部单圈。</p>
+<p>展开所有压缩路径，得到 <span class="math-inline" title="Q_6\setminus\{0,31\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>Q</mi><mn>6</mn></msub><mi>&#x029F5;</mi><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>31</mn><mo stretchy="false">&#x0007D;</mo></mrow></math></span> 上的 62 顶点圈，包含修改后的全部原匹配及实际辅助边 <span class="math-inline" title="wh"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mi>h</mi></mrow></math></span>。删除 <span class="math-inline" title="wh"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>w</mi><mi>h</mi></mrow></math></span>，在两端分别接短边 <span class="math-inline" title="0w"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0</mn><mi>w</mi></mrow></math></span> 和原匹配边 <span class="math-inline" title="h31"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>h</mi><mn>31</mn></mrow></math></span>，得到 Hamilton <span class="math-inline" title="0"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0</mn></mrow></math></span>–<span class="math-inline" title="31"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>31</mn></mrow></math></span> 路。</p>
+<h3 id="115">11.5 证书审计承担哪些义务</h3>
+<p>五组 B 输入共 2,560 个森林、1,310,720 个连通性矩阵位，逐项重算且每组秩为 512。所有 805,006 个 A 输入逐项验证短边、匹配性、极大性、强制覆盖、森林、开口和共同坐标映射。全部 456 个同时选项以及 25 个实际几何映射也逐项核验，两轨道的并与原余域完全一致，三个目标的最终剩余流均为空。这些是 <code>FOURTEEN_FINAL25_REVIEW</code> 的有限引理；完整十四孔另由 <code>FOURTEEN_HOLE_FULL_REVIEW</code> 核对上游链与自由分支。</p>
+<h2 id="12_1">12. 十六孔与十八孔的最后封闭</h2>
+<p>完整十四孔作为前层。十六孔已覆盖目标余域依次为</p>
+<div class="math-block" title="2472168\longrightarrow18200\longrightarrow1211\longrightarrow1012\longrightarrow148."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>2472168</mn><mi>&#x027F6;</mi><mn>18200</mn><mi>&#x027F6;</mi><mn>1211</mn><mi>&#x027F6;</mi><mn>1012</mn><mi>&#x027F6;</mi><mn>148</mn><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>自由目标的初始 42,846 个余域在复用后降为零。最后 148 个中，根星形构造覆盖 30 个，双桥源小切分覆盖 118 个；它们按原记录和源索引恰好互补，分别在目标 <span class="math-inline" title="1,7,31"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1</mn><mo>&#x0002C;</mo><mn>7</mn><mo>&#x0002C;</mo><mn>31</mn></mrow></math></span> 上为 <span class="math-inline" title="(0,0,30)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>30</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span> 和 <span class="math-inline" title="(0,18,100)"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>18</mn><mo>&#x0002C;</mo><mn>100</mn><mo stretchy="false">&#x00029;</mo></mrow></math></span>。</p>
+<p>根星形部分使用 120,463 个完整极大 A 输入以及三个精确 B 输入。新增关键在另一部分：旧的多强迫对转移要求至少三个桥源，不能直接套到只有两个桥源、根在 B 侧的情况。</p>
+<p><strong>新的双源转移。</strong> A 侧有四个偶孔、三个奇孔，选两个偶孔作源，取其中一个为局部自由根 <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span>；对原端口与另一个源补匹配 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span>，得到三个偶孔、三个奇孔的 A 输入。用完整五维端点定理得 Hamilton <span class="math-inline" title="r"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi></mrow></math></span>–<span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 路。删 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span>，附原跨边、两个源桥和连接到 B 侧全局自由根的标签；这是给一条删边路径添加不同叶子，不会先把 A 路闭成圈。</p>
+<p>实际 B 输入须满足：含一条指定的原内部短边 <span class="math-inline" title="e"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>e</mi></mrow></math></span>，并避开同奇偶配对 <span class="math-inline" title="R=\{p,q\}"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mi>p</mi><mo>&#x0002C;</mo><mi>q</mi><mo stretchy="false">&#x0007D;</mo></mrow></math></span>，且全局根不属于 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>。如果 <span class="math-inline" title="p,q"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>p</mi><mo>&#x0002C;</mo><mi>q</mi></mrow></math></span> 中任一不是原端口，其原短边保持不变，不能形成 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>；压缩源镜像只会把端点移到相反奇偶类，也不能新造 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>。若二者都是原端口，设其 A 侧伙伴为 <span class="math-inline" title="\alpha,\beta"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>&#x003B1;</mi><mo>&#x0002C;</mo><mi>&#x003B2;</mi></mrow></math></span>，就在 <span class="math-inline" title="D"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>D</mi></mrow></math></span> 中指定 <span class="math-inline" title="\alpha\beta"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>&#x003B1;</mi><mi>&#x003B2;</mi></mrow></math></span>。从简单路径中删除这条边必分开它的两端，进一步删边及添加不同叶子不会重新连接它们，所以实际压缩匹配不含 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>。若目标恰为其中一个端口，其孤立片段连接的是不同的全局根，仍不形成 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>。</p>
+<p>精确局部标记为</p>
+<div class="math-block" title="H_E=\{0,3,5\},\quad H_O=\{1,2,14,22,25,26,28\},\quad U=\{1,2\},"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>H</mi><mi>E</mi></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>0</mn><mo>&#x0002C;</mo><mn>3</mn><mo>&#x0002C;</mo><mn>5</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><msub><mi>H</mi><mi>O</mi></msub><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>2</mn><mo>&#x0002C;</mo><mn>14</mn><mo>&#x0002C;</mo><mn>22</mn><mo>&#x0002C;</mo><mn>25</mn><mo>&#x0002C;</mo><mn>26</mn><mo>&#x0002C;</mo><mn>28</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mi>U</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>2</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo></mrow></math></div>
+<div class="math-block" title="e=\{30,31\},\qquad R=\{13,21\}."><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>e</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>30</mn><mo>&#x0002C;</mo><mn>31</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>R</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mn>13</mn><mo>&#x0002C;</mo><mn>21</mn><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>选出的 256 个短森林在加入 <span class="math-inline" title="e"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>e</mi></mrow></math></span> 并压缩端点后均含 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>；删去 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span>，得到 18 个端点上的 256 阶满秩连通矩阵。对任意含 <span class="math-inline" title="e"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>e</mi></mrow></math></span>、不含 <span class="math-inline" title="R"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>R</mi></mrow></math></span> 的实际匹配，收缩其在 13、21 处的伙伴路径可化到该矩阵，从而存在相容森林。原内部边 <span class="math-inline" title="e"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>e</mi></mrow></math></span> 的必然性由每个实际几何的度一叶链证书保证。256 个森林和 65,536 个矩阵位已独立检查。</p>
+<p>这关闭完整十六孔。随后使用已经单独证明的“完整十六孔 ⇒ 完整十八孔”：十八孔 80,805 个已覆盖目标初始记录，分成 73,605 个复用成功、7,050 个 Hall 不可能和 150 个精确局部输入成功，剩余为零；自由目标初始余域为零。递推只在完整十六孔已经成立后使用，未形成循环。</p>
+<h2 id="13-p6_1">13. P6 的总证明</h2>
+<p>九个完整孔层及对应匹配大小如下，每层的量词均包括任意自由根、任意异奇偶目标、任意实现原匹配。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">孔数</th>
+<th style="text-align: right;">匹配边数</th>
+<th>最终接受报告</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">31</td>
+<td>GENERAL_NEAR_PERFECT_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">30</td>
+<td>FOUR_HOLE_SOL_HIGH_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">29</td>
+<td>SIX_HOLE_CLOSURE_CONSEQUENCES_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">28</td>
+<td>EIGHT_HOLE_FULL_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">27</td>
+<td>TEN_HOLE_FULL_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">26</td>
+<td>TWELVE_HOLE_FULL_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">25</td>
+<td>FOURTEEN_HOLE_FULL_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">24</td>
+<td>SIXTEEN_EIGHTEEN_FULL_REVIEW</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">23</td>
+<td>SIXTEEN_EIGHTEEN_FULL_REVIEW</td>
+</tr>
+</tbody>
+</table>
+<p>现在固定原命题中的任意 <span class="math-inline" title="M,u,v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi><mo>&#x0002C;</mo><mi>u</mi><mo>&#x0002C;</mo><mi>v</mi></mrow></math></span>。按引理 5.1 补到保留自由根的极大匹配 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span>。其孔数在上表中，且原根仍自由、原目标仍与根异奇偶；即使目标在补全过程中被覆盖，完整孔层也允许该情况。选择对应层的 Hamilton <span class="math-inline" title="u"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>u</mi></mrow></math></span>–<span class="math-inline" title="v"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>v</mi></mrow></math></span> 路，它包含 <span class="math-inline" title="L"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>L</mi></mrow></math></span>，进而包含 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span>。这证明了 P6 的全部量词。若 <span class="math-inline" title="M"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>M</mi></mrow></math></span> 完美，没有可选自由根，P6 在该情形为真空命题；圈推论则单独用 Fink 定理处理。证毕。</p>
+<h2 id="14_1">14. 如何复核，以及计算究竟证明了什么</h2>
+<p>最终 <code>P6_FULL_REVIEW</code> 记录：5,155 个不同绑定文件、96 个审计节点、386 条声明依赖边、2,274 项辅助证据绑定；支持的声明格式中未发现过期散列、缺失输入或循环依赖。所有前层条件均已解除。</p>
+<p>复核分为三个层次：</p>
+<ol>
+<li><strong>数学语义。</strong> 检查局部命题的完整量词、孔与端口计数、自由根条件、实际原边保留，以及每条辅助长边最终删除或展开。满秩证明、极大补全的单调还原和特殊双源转移都属于这一层。</li>
+<li><strong>有限引理。</strong> 从物理森林重建端点匹配，重算连通性和秩；用独立计数证明完整极大域；逐个核对几何映射、强迫叶链和确切的余域集合。样本和生产器的“成功”日志均不足以替代此层。</li>
+<li><strong>总装与出处。</strong> 确认后一步的输入就是前一步的输出、没有遗漏目标状态、所有有限前提都已接受、文献定理适用，并固定相应散列。</li>
+</ol>
+<p>在原研究目录内可运行以下只读状态检查。它核对最终直接绑定，不宣称重新执行全部大规模计算：</p>
+<pre><code class="language-powershell">&amp; D:/anaconda/python.exe E:/新问题/research/six_directions/finalize_p6_state.py
+</code></pre>
+<p>最终审计的检查器和各局部检查器均保留在原目录；某些检查器执行时会写出结果 JSON，而这些 JSON 已被报告散列绑定。若要重跑计算，应复制依赖包到单独复核目录运行，比较输出，不要直接覆盖冻结证据再把散列变化误判为原证书失效。正文和 HTML 的生成器不修改冻结证明与审计原件。</p>
+<p>本报告的展开附录包含相应数学证明和审计原文。原文保留了研究当时的 <code>PENDING</code>、<code>OPEN</code> 等历史状态；<strong>现在采用的接受范围以最终审计以及本报告的依赖表为准</strong>。同样，一个被导入的局部报告并不因此变成它从未证明过的更强全局命题。附录中的策略或诊断性文件，只按关联审计实际使用的范围引用。</p>
+<p>中文正文另经独立子任务作范围与推导核对，两处转述条件补齐后通过；该编辑语义审读不替代原数学证明的有限证书审计，见 <a href="#review-ruskey-savage-report-semantic-review">RUSKEY_SAVAGE_REPORT_SEMANTIC_REVIEW.md</a>。</p>
+<h2 id="15">15. 展开原始证明与审计附录</h2>
+<p>本阅读版嵌入 <strong>132 份数学说明</strong>与 <strong>99 份审计原文</strong>。点击标题展开。附录原文保持历史措辞，部分仍写着当时的待审状态；应结合最终接受报告理解其当前地位。原始文件未被此阅读版修改。这里纳入的是依赖图绑定的数学说明，其中的诊断性或局部材料仍只按关联审计实际使用的范围引用。</p>

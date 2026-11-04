@@ -1,0 +1,353 @@
+{
+  "audit_skill": "proof-checker",
+  "skill_source": "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-checker/SKILL.md",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete",
+  "summary": "12 local claims pass relative to the declared external theorems; no open proof gaps found. Z15 added by incremental review. Same-family provisional review only. Complete P6 remains unproved.",
+  "audited_input_hashes": {
+    "AVOIDED_VERTEX_TRANSFER.md": "sha256:f44623960b51f85549ea15b6b7c8262222c097f56c37ae10c05b77b6dd8776a7",
+    "UNBALANCED_ALL_TARGETS.md": "sha256:577fcec61a3ac6891c1fb51e8d8c3c29ab5ace0824a6821ffb7bf380de1c6b40",
+    "DISTANCE_TWO_ALL_TARGETS.md": "sha256:41b5514d63a43bd0e1e1fd47453532f8264dccf23f454b56623c74a82e5654a6",
+    "UNBALANCED_ALL_ROOTS.md": "sha256:5ac0ba5404557f438aab1343e6c80398769f6db5f55f33dbb2e6176d6c59b834",
+    "TWO_ISOLATING_COORDINATES.md": "sha256:15f5745b44cf4290de17c7257c751fe0b543b287db7af6a11abe21624a9651d3",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "UNBALANCED_TRANSFER.md": "sha256:81e0355e3dd647442ba38ea7e0aa48bb0eb36960c8cbd5ac9e0cbdf1c9c588e7",
+    "UNBALANCED_CORE_THEOREM.md": "sha256:8c6b4d6a99021b979d810f0f0dec2599f4c4c2fc06ceb2084348b469d4b4d5c7",
+    "DISTANCE_TWO_UNBALANCED.md": "sha256:655b63481f6539aa9303984aa2dfbe95bcca9912fc74a014794812d999611f94",
+    "BIPARTITE_NEAR_PERFECT.md": "sha256:1cb47da03495d5c2dde0b21f536057a0455bab30f3dcd28ef7c1d4d482746afd",
+    "FOUR_HOLE_SPLIT.md": "sha256:e9e265508dbdf8b01a9ca952a6517c9e79ad5435f106b43bd2d57f31467ce1d7",
+    "E:\\新问题\\2501.19029v1.pdf": "sha256:8c83fbcaf82888878a442002cb9e59b16efa59146260c34cce4659b477f80cb7",
+    "THREE_ODD_HOLES_TRANSFER.md": "sha256:9e8208e1e71e18386158c4f43bed33d185b0d4c4acad3347235f130dfe403753"
+  },
+  "primary_inputs": {
+    "AVOIDED_VERTEX_TRANSFER.md": [
+      "N11",
+      "N12",
+      "Z9"
+    ],
+    "UNBALANCED_ALL_TARGETS.md": [
+      "Z10"
+    ],
+    "DISTANCE_TWO_ALL_TARGETS.md": [
+      "E2",
+      "E3",
+      "Z11"
+    ],
+    "UNBALANCED_ALL_ROOTS.md": [
+      "Z12"
+    ],
+    "TWO_ISOLATING_COORDINATES.md": [
+      "Z13"
+    ],
+    "TWO_ODD_HOLES_TRANSFER.md": [
+      "N14",
+      "Z14"
+    ],
+    "THREE_ODD_HOLES_TRANSFER.md": [
+      "Z15"
+    ]
+  },
+  "dependency_inputs": [
+    "GENERAL_NEAR_PERFECT.md",
+    "UNBALANCED_TRANSFER.md",
+    "UNBALANCED_CORE_THEOREM.md",
+    "DISTANCE_TWO_UNBALANCED.md",
+    "BIPARTITE_NEAR_PERFECT.md",
+    "FOUR_HOLE_SPLIT.md"
+  ],
+  "trace_path": "RECUT_PROOF_REVIEW.md",
+  "thread_id": "/root/recut_proof_audit",
+  "executor_model": "Codex runtime (exact identifier not exposed to this reviewer)",
+  "executor_family": "openai",
+  "reviewer_model": "Codex runtime (exact identifier not exposed to this reviewer)",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "runtime effort not self-attested",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T04:19:01.057937+00:00",
+  "details": {
+    "theorems_audited": 12,
+    "claims": [
+      {
+        "id": "N11",
+        "source": "AVOIDED_VERTEX_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "N12",
+        "source": "AVOIDED_VERTEX_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z9",
+        "source": "AVOIDED_VERTEX_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z10",
+        "source": "UNBALANCED_ALL_TARGETS.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "E2",
+        "source": "DISTANCE_TWO_ALL_TARGETS.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "E3",
+        "source": "DISTANCE_TWO_ALL_TARGETS.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z11",
+        "source": "DISTANCE_TWO_ALL_TARGETS.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z12",
+        "source": "UNBALANCED_ALL_ROOTS.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z13",
+        "source": "TWO_ISOLATING_COORDINATES.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "N14",
+        "source": "TWO_ODD_HOLES_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z14",
+        "source": "TWO_ODD_HOLES_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional"
+      },
+      {
+        "id": "Z15",
+        "source": "THREE_ODD_HOLES_TRANSFER.md",
+        "verdict": "PASS",
+        "proof_status": "sound-modulo-declared-imports",
+        "acceptance_status": "provisional",
+        "review_mode": "incremental addendum; previous proofs not rereviewed"
+      }
+    ],
+    "dependency_claims_rechecked": [
+      "N10",
+      "Z6",
+      "E1",
+      "Z7",
+      "Z8",
+      "N6",
+      "N7",
+      "N8",
+      "Z0"
+    ],
+    "issues": [],
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "acceptance_gate": "PASS relative to declared imports",
+    "full_P6_proved": false,
+    "full_four_hole_case_proved": false,
+    "old_audit_verdicts_used_as_evidence": false,
+    "main_proofs_modified": false,
+    "circular_dependencies_found": false,
+    "formal_verification_performed": false,
+    "cross_family_overlay_performed": false,
+    "counterexamples_to_stated_claims_found": 0,
+    "verified_counterexamples_to_excluded_strengthenings": [
+      {
+        "claim": "E2 with n=3",
+        "v": 0,
+        "matching": [
+          [
+            4,
+            6
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "classification": "outside stated hypotheses"
+      },
+      {
+        "claim": "N12 with |Y|=2",
+        "v": 0,
+        "b": 1,
+        "Y": [
+          2,
+          3
+        ],
+        "matching_description": "Q5 direction-0 perfect matching minus edges {0,1} and {2,3}",
+        "classification": "outside stated hypotheses"
+      }
+    ],
+    "optional_expository_suggestions": [
+      "Add the already-proved common-half-layer containment H subset P to the formal E1 statement.",
+      "Preserve explicit long-cross-edge and changed-partner bookkeeping in Z9 and Z11.",
+      "Z12 root 13 may be shortened using Z13 without introducing a reverse dependency."
+    ],
+    "key_obligations": [
+      {
+        "id": "N11-FM12",
+        "status": "discharged",
+        "note": "opposite parity omitted vertices; exactly all other vertices covered; restore bk"
+      },
+      {
+        "id": "N12-completion",
+        "status": "discharged",
+        "note": "three direction-count cases; forbidden pairing exchange decreases count; triangle-free remainder"
+      },
+      {
+        "id": "Z9-port-transfer",
+        "status": "discharged",
+        "note": "odd ports; arbitrary real crossing endpoints; all artificial edges removed"
+      },
+      {
+        "id": "Z10-E3-single-cross",
+        "status": "discharged",
+        "note": "h in A and h in B separated; no use of N12 with only two free points"
+      },
+      {
+        "id": "E2-intersection",
+        "status": "discharged",
+        "note": "common matched vertex forced in crossing faces; n>=4 supplies free parity coordinate"
+      },
+      {
+        "id": "Z11-bridge-candidates",
+        "status": "discharged",
+        "note": "at most candidate h loses internal coverage; at least nine ports after recut"
+      },
+      {
+        "id": "Z12-Z13-double-failure",
+        "status": "discharged",
+        "note": "short matching neighbor of e_j forced to be free root"
+      },
+      {
+        "id": "N14-cycle-span",
+        "status": "discharged",
+        "note": "Theorem 8 condition H plus signed degree identity forces second same-parity hole into cycle"
+      },
+      {
+        "id": "Z14-positive-ports",
+        "status": "discharged",
+        "note": "positive even ports imply nonempty D; cutting a cycle along a matching produces paths covering every nonforbidden A vertex"
+      },
+      {
+        "id": "Z14-zero-ports",
+        "status": "discharged",
+        "note": "same-parity deficit forces hu internal to A; original M has no split-direction edge; five-direction theorem applies"
+      },
+      {
+        "id": "Z15-bridge-candidates",
+        "status": "discharged",
+        "note": "B-side candidate coverage checked for all placements of u,h; the b=u boundary is allowed when hu is internal to B"
+      },
+      {
+        "id": "Z15-first-N14",
+        "status": "discharged",
+        "note": "positive odd ports plus t give nonempty D; first N14 leaves only v outside the A-side cycle"
+      },
+      {
+        "id": "Z15-single-conflict",
+        "status": "discharged",
+        "note": "M_B* and R share exactly b; b,r,z,s distinct; replacing br,bs by rs leaves exactly same-even holes z,b"
+      },
+      {
+        "id": "Z15-second-N14-expansion",
+        "status": "discharged",
+        "note": "second N14 avoids b; expanding rs as r-b plus the transferred b-s path inserts b once and restores br"
+      },
+      {
+        "id": "Z15-br-equals-hu",
+        "status": "discharged",
+        "note": "if the deleted B-side edge br is the long edge hu, expansion restores hu before the final deletion and restoration of original hv"
+      }
+    ],
+    "external_imports": [
+      {
+        "source": "https://tmuetze.de/papers/match.pdf",
+        "items": [
+          "extension definition",
+          "Theorem 2",
+          "Theorem 8",
+          "Theorem 9",
+          "Theorem 12"
+        ],
+        "checked": "source statements checked; external proofs imported"
+      },
+      {
+        "source": "E:/新问题/2501.19029v1.pdf",
+        "items": [
+          "Theorem 8",
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "checked": "source statements extracted with pdftotext; used only on original short matchings"
+      }
+    ],
+    "deterministic_check_artifact": "RECUT_ALGEBRA_CHECKS.json",
+    "deterministic_check_script": "audit_recut_algebra.py",
+    "deterministic_check_status": "PASS",
+    "deterministic_check_scope": "finite algebra only; not all matching inputs or Hamilton paths",
+    "deterministic_check_exit_code": 0,
+    "finite_checks_replace_universal_proof": false,
+    "external_algorithm_samples_used_as_proof": false,
+    "addenda": [
+      {
+        "claim": "Z15",
+        "source": "THREE_ODD_HOLES_TRANSFER.md",
+        "reviewed_at": "2026-11-01T04:23:57.519959+00:00",
+        "existing_claims_rereviewed": false,
+        "existing_input_hashes_preserved": true,
+        "verdict": "PASS",
+        "issues": [],
+        "dependency_claims": [
+          "N8",
+          "N10",
+          "N14"
+        ],
+        "theorem_proof_location": "RECUT_PROOF_REVIEW.md section 11",
+        "finite_check_script": "audit_z15_algebra.py",
+        "finite_check_artifact": "Z15_ALGEBRA_CHECKS.json",
+        "finite_check_exit_code": 0,
+        "finite_check_scope": "Three actual Q6 short-matching fixtures; 60 abstract D/R pairing bookkeeping checks; no Hamilton-path search and no claim every abstract R is realized by an A-side cycle.",
+        "actual_Q6_short_matching_fixtures": 3,
+        "abstract_pairing_bookkeeping_checks": 60,
+        "coordinate_truth_table_checks": 16,
+        "arbitrary_abstract_R_realizability_claimed": false,
+        "hamilton_path_existence_inferred_from_finite_checks": false,
+        "br_equals_hu_boundary_checked": true,
+        "full_P6_proved": false
+      }
+    ]
+  },
+  "updated_at": "2026-11-01T04:23:57.519993+00:00"
+}
