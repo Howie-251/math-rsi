@@ -83,7 +83,9 @@ bash "$ARIS_REPO/tools/save_trace.sh" \
 
 `review_gate.py`要求数值score与 `ready/almost/not ready`，实现原版ML停止策略；本适配不编造分数来调用它。身份家族计算已由save_trace复用。路线能交接的实质判断由主技能E执行，原始reviewer判断与Root判断分别保留，不新增route_gate或平台。
 
-## 终轮wiki与下一义务
+## 轮内及终轮wiki与下一义务
+
+下列操作用于每次有新增可复用知识的轮内同步，终轮只补剩余事项；不等整段路线研究结束才保存反例与失败域。各阶段共同的读取、单writer、原实体及回收使用见[WORKSPACE §7](../../../../docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)。
 
 先读任务现有wiki和 [research-wiki](../../skills-codex/research-wiki/SKILL.md)。已有方法/idea只补本轮新条件、结果、失败与重启条件，留证据到报告/原始产物；不要用helper覆盖已有丰富正文。确实缺少idea节点时，可用真实接口创建未判定路线节点：
 

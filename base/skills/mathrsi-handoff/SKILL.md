@@ -92,6 +92,8 @@ Lean按原技能验证实际模块和导出，不用默认lake build成功替代
 
 ## 5. 更新原wiki与下一会话入口
 
+先消费prepare、route-loop、prove、verify已经写回的实体与准确范围，只补本次新材料和未同步事项；handoff不是研究中第一次写wiki。按[WORKSPACE §7](../../../docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)读回更改的实体，将路径交给下一会话，不重复未变记录或将原始日志全部抄入wiki。
+
 读本仓 [research-wiki Codex](../skills-codex/research-wiki/SKILL.md)／[Claude 主线](../research-wiki/SKILL.md)，沿用原任务唯一wiki及canonical helper，不新建“交付wiki”。正文阅读到的真实论文、可复用引理条件、研究失败与重启理由接到适当原记录；graph和generated Connections用真实helper维护。自动query pack不保证列出每项关键结论，恢复页直接链接相关实体。
 
 proof-axis claim的出生与升级沿proof-checker真实audit与其wiki hook。handoff不能凭正文完成或zip成功自行add verified claim；缺audit时保留普通研究记录和准确状态，若任务需要canonical claim再返回verify走实际流程。已存在claim需同步新审计范围时，引用真实audit和声明，不能伪造模型认可或扩大进口状态。经验性搜索结果另作实验/idea证据，不改成全称定理。
