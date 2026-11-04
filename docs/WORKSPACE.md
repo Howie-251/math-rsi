@@ -103,3 +103,77 @@ Root 选择下一项行动时，用自然语言回答五件事即可：当前缺
 工作区可以位于仓库外，通常正是原研究目录。若临时放在仓库的 `workspaces/`，它默认不进入代码 Git；重要研究资料仍须按自己的数据保存方式保留。`.gitignore` 不是备份。
 
 需要给通用流程提改进时，记录触发问题、建议行为和可检查例子，再按[独立维护工作流](EVOLUTION_WORKFLOW.md)在MathRSI开发分支实施、试用和决定是否纳入。由维护owner消费真实结果，记录实际版本及原任务何时采用；单题使用过程中不自行改变核心完成标准。关于插件如何交流见 [协作约定](PLUGIN_CONTRACT.md)。
+
+## 7. 五阶段的 wiki 读取与写回
+
+Wiki 是下一项研究的输入，也是本轮新知识的落点。所有阶段沿用**当前任务工作区 `<W>/research-wiki/`**（旧项目使用其已有路径）；插件携带的历史 wiki 和 `archive/` 只读取方法、证明和失败经验，新的研究状态写回自己的任务。新题需要跨轮积累且尚无 wiki 时，由协调者用原 helper 初始化一次；已有知识库直接续用，短题无需造空库。
+
+实际使用前，读取本仓 [Codex research-wiki](../base/skills/skills-codex/research-wiki/SKILL.md) 或 [Claude research-wiki](../base/skills/research-wiki/SKILL.md)。**复用 ARIS 的实体、关系和 helper，不新增 MathRSI wiki schema。** 下表把已有结构接到五个阶段；`wiki-enrich` 用来补已读论文页，不是每次证明更新都必跑的工具。
+
+| 当前阶段 | 先读哪些已有知识 | 什么时候写、写到哪里 | 下一动作怎样消费 |
+|---|---|---|---|
+| prepare / survey | 导航定位相关论文、旧路线、勘误与失败；读实体中的精确条件及原来源 | 核读原文后经 `ingest_paper` 建 paper，补定理条件、版本、引用与项目用途；新关系用 `add_edge` | specify 将可用进口接入正式规格；route-loop 获得真实可用工具与边界 |
+| route-loop | 候选方法的 idea、已做探针、失败域和重试条件，不只看 query pack | 每轮产生实质新判断、反例或路线修订时更新 idea；已完成且判据明确的计算可记 experiment；终轮补齐待同步项 | 先判断失败是否仍适用于当前参数，再决定复用、换线或有理由重试；交 prove 首批义务 |
+| prove | 按正在解决的义务检索既有引理、条件、caller、失败及相关 claim 的准确状态 | 可复用引理、反例、固定域排除或接口修正一旦回收就写对应方法／idea 正文，链接完整证明和计算；不等整篇完成 | 将已有结果接进当前证明，跳过已闭同域；尚缺上游条件就派那条连接 |
+| verify | 核相关 paper、方法／idea、experiment、claim 所述进口、对象域及既有验证范围 | 实际核验／修复后写准确范围与 `VERIFICATION.md` 链接；proof-checker 自己的 hook 管 canonical claim；直接 Lean／计算检查写普通知识实体 | 局部结论回原 prove；指出准确仍开义务；完整已验结果交 handoff |
+| handoff | 读取本次采用结果对应的实体和原验证，确认读者所需范围 | 同步尚未落库的新结论、剩余义务和复现入口；刷新有变化的导航，将当前状态链接进 `NEXT_SESSION.md` | 下一会话沿实体与证据恢复，不重推、重搜已完成且条件未变的工作 |
+
+### 读取：按当前义务找事实，不按轮次重读整库
+
+新会话恢复、进入一个新义务、重选路线或参数／对象改变时，先看 `index.md`、`query_pack.md` 和任务恢复页。它们只用于定位：接着读相关 `papers/`、`ideas/`、`experiments/`、`claims/` 的完整实体，再打开实际要依赖的证明或原运行结果。已有单独的引理手册、失败地图也继续使用，不为了统一结构将它们搬成新目录。
+
+摘要未命中不表示库里没有。以当前问题的异名、引理名、参数或失败条件用 `rg` 搜索该 wiki，再读命中的正文。例如，在 `<W>` 中运行：
+
+```bash
+rg -n -i --glob '*.md' '共同选点|joint-majorant|反例' research-wiki/
+```
+
+读取必须改变下一动作：前提相同的已证结果直接调用；已完整排除的同一域不换种子再搜；候选仍缺共同选择就派这条义务；对象或条件已改变则重判旧失败的适用范围并说明重试理由。已有失败不是跨参数的永久禁令。没有相关记录或记录条件不适用，就正常继续研究，不要求先写一份“wiki 查询报告”。
+
+### 写入：原 helper 建结构，agent 增补数学内容
+
+当前阶段明确一名 wiki 写入者，通常为该阶段协调者。worker 交回准确命题、条件、证据路径和建议归属；写入者消费后串行更新实体、图及导航。需要让 survey 或 proof-checker 的既有 hook 写入时，将这一段写入交给它并消费其返回，不由多名作者同时重建同一图／索引。无需另造锁服务或写入调度器。
+
+实质结果回收后及时沉淀，包括仍未解决主题的条件引理和有准确范围的失败。若要先处理紧接的关键推导，可先保存在当前报告，随后同步；阶段返回、压缩或暂停前把待同步项写清。没有新增可复用事实时沿用已有路径即可，不机械重建导航。
+
+沿用原结构选择落点：
+
+- **paper**：真实核读的文献、准确版本／定理／条件，使用 `ingest_paper` 建页；原页空缺可由 `wiki-enrich` 补齐。
+- **idea／既有方法页**：路线、已证条件工具、候选、反例、失败范围及重试理由。用 `upsert_idea` 建新节点，再增补正文；条件引理的准确状态写在结论处，不能由整页的路线 outcome 推断。
+- **experiment**：实际运行及其明确判据、输入域、结果和证据。`add_experiment` 必须显式给 `--verdict`；`yes/partial/no` 相对于该运行声明的目标判断。证明“不存在”的成功排除也可能是 `yes`，不能把所有负实例或排除结果一律映为 `no`。未完成、超时或 UNKNOWN 留在原运行记录和 idea 的开放项，不使用 helper 默认 `no` 冒充数学失败。
+- **claim**：沿原 `proof-checker` 真实 audit 的 hook 创建／升级规范节点。直接 Lean 和局部计算检查照样把准确结果写入普通方法／idea 正文、适用的 experiment 和 `VERIFICATION.md`；不为写 wiki 额外启动 proof-checker。图节点状态属于既有登记合同，不决定数学证明本身是否成立。
+
+在 `<W>` 运行命令，**每次 shell 显式使用本克隆 helper**，不依赖作者另一份 ARIS。新路线节点的调用形如（将示例内容替换为实际结果）：
+
+```bash
+export ARIS_REPO="/path/to/MathRSI/base"
+python3 "$ARIS_REPO/tools/research_wiki.py" upsert_idea research-wiki/ \
+  --slug joint-majorant --title "共同对象的联合上界路线" \
+  --stage active --outcome pending \
+  --thesis "准确的条件结论及其用于原题的方式" \
+  --risks "尚缺共同选点；完整证明和反例见 work/joint/REPORT.md"
+```
+
+**已有页先读再增量编辑。** `upsert_idea` 默认遇到旧页会跳过，不等于内容已更新；`--update-on-exist` 会重写模板，不能拿它覆盖已经充实的证明／失败正文。`ingest_paper` 的模板重写也有同样影响。保留原字段和证据，直接编辑对应的普通 Markdown 段落及确有变化的合法字段；不要手改自动 `Connections` 或 `graph/edges.jsonl`。遵循原技能的 capture 规则，不把临时额度／环境错误写成数学上的“不可能”。
+
+有新关系时，先确认两端实体存在，再用 `add_edge` 写已核实的关系与准确证据。普通运行的 `supports/invalidates` 边只表示声明范围内的证据，不升级 proof-axis 状态；如旧关系的解释已不适用于新范围，在对应实体保留更正依据，不让下一调用者继续使用过时断言。
+
+正文增补完成后，按原接口刷新并记下本次实际变化：
+
+```bash
+export ARIS_REPO="/path/to/MathRSI/base"
+python3 "$ARIS_REPO/tools/research_wiki.py" rebuild_index research-wiki/
+python3 "$ARIS_REPO/tools/research_wiki.py" rebuild_query_pack research-wiki/
+python3 "$ARIS_REPO/tools/research_wiki.py" log research-wiki/ \
+  "joint-majorant：补入准确条件结论、反例范围与原证明入口；共同选点仍开"
+```
+
+创建节点的 helper 已自动刷新／记录的内容不用再做一遍；上面用于后续正文编辑或尚未刷新的变更。图写入也遵循同一 helper，真实参数见 [ARIS_REUSE](ARIS_REUSE.md) 与技能原文，不发明一个并不存在的 `query`／`update` CLI 子命令。
+
+### 读回并继续：知识需要有消费方
+
+写入者读回**实际实体正文**、新增关系及必要的导航，确认原证明没有被模板覆盖、范围和证据入口正确。query pack 有长度与字段筛选，没列出某条已存引理并不等于没写入；下一动作直接链接该实体，不能只链接摘要。
+
+阶段返回沿已有报告交一句能行动的说明，例如：“`ideas/joint-majorant.md` 已补条件引理 L 和失败域 D；证明见 `work/joint/REPORT.md`；仅缺原输入到共同选点的连接，下一步由 prove 补该连接。”父调用者读该实体及必要证据，采用结果或修剩余义务，不能仅看到“wiki 已更新”就结束。未改动时说明复用了哪份记录即可。
+
+helper 失败时保留已写的数学事实、实际失败原因和待同步路径，推进无依赖工作；不报写入成功，也不因 wiki 故障撤销已成立数学。原恢复页负责当前状态，wiki负责可复用知识，完整证明和运行结果保留在原证据目录；三者互相链接，不复制多套完整研究史。

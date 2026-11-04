@@ -1,5 +1,11 @@
 # MathRSI 开发约定
 
+## 2026-11-04：Wiki 必须贯穿读写并被后继使用
+
+用户强调复用原 ARIS 结构化 wiki，并通过实际读取避免重踩失败。全部五阶段沿用当前任务 `<W>/research-wiki/`；按当前义务读导航后查实体全文／原证据，实质引理、反例、失败范围及核验结果及时写回，后继沿实际路径消费。不能只在prepare/handoff提wiki或仅写“持续维护”。主入口新增明确读写段，统一操作在`docs/WORKSPACE.md`§7；README五阶段逐行展示读／写。不新建schema、wiki平台或强制定时器，不把每轮重复读全库当复用。
+
+现有ARIS副本／helper保持原样，MathRSI修实际调用时机；已充实实体增量编辑，防止模板重写丢正文。UNKNOWN不记默认失败，experiment verdict相对于准确判据；canonical claim沿proof-checker hook，直接Lean/计算检查仍可写普通实体和准确验证范围。插件历史wiki只读，新事实进当前任务；当前writer串行更新图及导航，worker交事实与路径。Gemini4讨论、原回复及核对见`development/wiki-flow-20261104/REPORT.md`。这属于v3主线衔接修补，固定v1/v2/v3标签不移动。
+
 ## 2026-11-04：v3发布与版本演进说明，PR #7已吸收
 
 按mathrsi-meta-evolve实际完成v2上的增量维护，入口`docs/V3_CHANGES.md`；完整恢复`development/evolution/v3-20261104/EVOLUTION.md`与`INTEGRATION.md`。base仍十技能，强化工作集/全域/接受best、带标记变换、有限全称机制与失败池复用、Lean显式参数。ECC原位升级；新增极值超立方体、Hamilton超立方体、Happy Ending，现六领域十四技能，两个宿主发现别名齐全；真正调用在`docs/DOMAIN_ROUTING.md`及各阶段SKILL，不能只读领域名称后略过。

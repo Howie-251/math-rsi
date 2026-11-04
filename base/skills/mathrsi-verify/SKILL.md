@@ -52,7 +52,7 @@ flowchart TD
 
 ## 进入、范围和恢复
 
-读原规格、候选正文、当前义务和已有验证。先确定本次入口是完整原定理验收，还是“引理 L 的实际 caller”“参数域 D 的精确重算”“归约 R 的覆盖”等局部验证。局部入口是正常用法，不用每次审整个项目；但报告标题和结论保持该范围，不能将其汇总成原题已经通过。
+读原规格、候选正文、当前义务和已有验证；按待核接口用任务原wiki的index/query_pack定位实体，再读其全文、条件、失败范围与原证据，不把导航摘要当验证依据。本次协调者负责wiki单一写入，子检查者交准确事实、差异与证据路径，不并写共享实体。先确定本次入口是完整原定理验收，还是“引理 L 的实际 caller”“参数域 D 的精确重算”“归约 R 的覆盖”等局部验证。局部入口是正常用法，不用每次审整个项目；但报告标题和结论保持该范围，不能将其汇总成原题已经通过。
 
 若由 prove 为高风险子引理提前调用，调用方就是本次返回点：只装配/核验该义务实际需要的局部材料，跳过全主定理 assemble 和 handoff。收回准确结论、counterexample或未闭条件后，直接返回原 prove run 继续其下游 caller；即使局部完整通过，也不自行推进到“原题最终交付”。全局验收完成也先返回主dispatcher，建议是否进入handoff。
 
@@ -84,7 +84,9 @@ flowchart TD
 
 执行独立计算时，给检查者实际输入、精确谓词、需要排除的错误和输出用途。例如要排除生成器漏删，就要求第二实现重新构造完整声明域，不以作者保存的合法列表决定接受；要核拒绝证书，则读绑定的实际对象逐个重放见证。主执行者收回后读命令、真实完成范围、准确差异和失败输入，再把这个有限命题代入正文所需步骤。一次只修所针对的缺口；不把“完整生成”与“全部拒绝”混成同一项，也不要求已经足够的必要门继续做更强计算。
 
-把结论写进原有报告或 `VERIFICATION.md`：本次检查的精确谓词、输入和完整范围、使用方法、实际结果、仍需数学连接。若只是源代码/索引的小缺陷，修复并重跑受影响范围；若某个归约或覆盖引理根本未证，将那个义务交回 [mathrsi-prove](../mathrsi-prove/SKILL.md)。
+每次实际检查或修复产生可复用的新事实，协调者即调用原 [research-wiki](../skills-codex/research-wiki/SKILL.md) 接回现有实体正文与关系：实际核验域、接受/失败条件、修正后的接口及原证据；读回实体后供原prove或下一检查使用。直接Lean、算术或固定证书核验也按准确范围写普通实体正文和VERIFICATION，不为写wiki强跑proof-checker，或把确定性局部通过改称canonical verified claim。真正proof-axis claim的创建/升级仍由proof-checker真实audit及其hook负责。共同用法见[五阶段wiki调用](../../../docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)；无新增事实就沿用已有入口，必要的关系/导航更新复用原helper，不机械重建。
+
+wiki操作失败时保留真实核验结果、原证据和准确pending，其它独立检查/研究继续；恢复补该操作，不重跑已完成核验。把结论写进原有报告或 `VERIFICATION.md`：本次检查的精确谓词、输入和完整范围、使用方法、实际结果、仍需数学连接。若只是源代码/索引的小缺陷，修复并重跑受影响范围；若某个归约或覆盖引理根本未证，将那个义务交回 [mathrsi-prove](../mathrsi-prove/SKILL.md)。
 
 适用新增领域时，实际执行[领域调用与返回](../../../docs/DOMAIN_ROUTING.md)“验证”中的输入→检查→消费合同。ECC调用ecc-certificate分核矩阵/目录/保存集/pair/Lean参数；两个hypercube入口分别核最终整数全域和高维平均、带标记森林与全称桥；Happy Ending调用happy-ending-certificate分核抽象见证、CNF绑定、lifting及结构接口。把返回的有限谓词和原题所需箭头写入本VERIFICATION，再决定剩余审计。局部通过回原prove，完整原题覆盖才进入最终交付；插件不另开proof-checker循环。
 
@@ -138,7 +140,7 @@ checker 未过其轮次上限时，消费它的 unrecoverable report：具体阻
 
 本节可以直接从形式目标入口进入；不以§3或TeX正文已完成为前提。用户要求 Lean、继续现有形式工程，或具体关键连接值得形式检查时，读 [lean-formalize Codex](../skills-codex/lean-formalize/SKILL.md)／[Claude 主线](../lean-formalize/SKILL.md)并执行。提供原命题、实际定义、固定工程、关键 proof route、当前待证接口与已有证据。它可以在证明推进中早已运行；本阶段复用当前有效结果，不要求把 Lean 永远拖到全文完成之后。
 
-直接进入时，先把用户原声明与实际导出类型、展开定义对齐，识别结论是否仍带未供给的证书或额外假设。随后按lean-formalize完成所需证明/构建/审计，或读取当前有效的已有结果；数学缺口返回原caller建议prove，库/API问题在形式化内部处理。收回结果后写§5的VERIFICATION并返回原caller；仅形式目标不制造canonical PROOF_AUDIT，也不自行转handoff。
+直接进入时，先把用户原声明与实际导出类型、展开定义对齐，识别结论是否仍带未供给的证书或额外假设。随后按lean-formalize完成所需证明/构建/审计，或读取当前有效的已有结果；数学缺口返回原caller建议prove，库/API问题在形式化内部处理。收回结果后，按§1的普通实体写回约定记录新增形式接口事实、准确范围与原证据，读回供原caller使用，再写§5的VERIFICATION并返回实际实体路径；仅形式目标不制造canonical PROOF_AUDIT，不为写wiki补跑checker，也不自行转handoff。
 
 若从 checker 内部调用 Lean，返回其 checked scope、exported declaration、语义对齐、build 与传递公理证据给原 audit；不由 Lean 再调用 checker。若是 verify 直接组织两项工作，也保持各自产物与 scope，不新造相互递归的验证栈。
 
@@ -152,7 +154,7 @@ Lean 完成需从任意原输入装配出主命题的证明项，实际构建目
 
 复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项（本次无自然语言正式审计时明确未调用）；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
 
-完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能只引用该记录；不会为了进入交付自行造一个 verified claim。
+完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能引用该claim记录；上述普通实体写回不替代或扩大这一claim边界。VERIFICATION及返回材料同时给本次实际改变的实体路径、所记事实、未闭义务与wiki操作pending，原caller读回后继续；不会为了进入交付自行造一个 verified claim。
 
 checker默认调用 [render-html Codex](../skills-codex/render-html/SKILL.md)／[Claude主线](../render-html/SKILL.md)生成audit阅读页时，消费其HTML和实际保真检查，保持原 `PROOF_AUDIT.{md,json}`为审计入口。渲染失败按原技能是非阻塞展示问题，保存失败即可；用户若要完整证明阅读页或转交包，由主dispatcher选择handoff后制作。这样audit的阅读视图、数学审计和最终交付各有实际产物，不在verify里重复生成整套包。
 

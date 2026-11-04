@@ -53,6 +53,8 @@ python3 "$ARIS_REPO/tools/research_wiki.py" --help
 
 ## 阶段二：把文献和结论接回任务 wiki
 
+这是贯穿全部五个数学子流程的共享能力，不只用于准备阶段。各阶段读哪些实体、何时写入及由谁消费见[WORKSPACE §7](WORKSPACE.md#7-五阶段的-wiki-读取与写回)；本节给原ARIS接口与保证边界。
+
 输入为实际读到的论文元数据、关键断言、证明义务及现有 wiki。已有 `research-wiki/` 时复用其实体和关系；不要初始化覆盖原库。新任务确实没有 wiki 时，可用真实 helper 创建。下面命令是经 `--help` 核实的本副本接口：
 
 ```bash
