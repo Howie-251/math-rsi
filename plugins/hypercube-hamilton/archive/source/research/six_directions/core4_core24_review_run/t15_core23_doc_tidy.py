@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('T15_CORE23_FULL_CLOSURE.md');s=p.read_text(encoding='utf-8-sig');s=s.replace(r'$$\{14,56,9\,14,10\,11\},\qquad\{24,56,9\,11,10\,13\},$$',r'$$\{(1,4),(5,6),(9,14),(10,11)\},\qquad\{(2,4),(5,6),(9,11),(10,13)\}.$$').replace('where a juxtaposition denotes the unordered edge between the displayed vertex labels. To avoid any ambiguity from multi-digit labels, their machine-readable edge lists are in','Each ordered-looking pair denotes its unordered edge. The same exact machine-readable edge lists are in');p.write_text(s,encoding='utf-8')

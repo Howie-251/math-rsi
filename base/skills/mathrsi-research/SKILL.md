@@ -70,6 +70,12 @@ prove ──局部提前验证──→ verify ──该义务结论──→ �
 
 ARIS双端实现及helper见 [ARIS_REUSE](../../../docs/ARIS_REUSE.md)。Codex读 `base/skills/skills-codex/`，Claude读 `base/skills/`；MathRSI新技能为宿主无关Markdown。命令显式指向本克隆 `base/tools`，不依赖作者其它ARIS目录。只采用当前真实技能支持的参数。
 
+## 加载领域能力并保持返回点
+
+按原题对象读取[领域调用与返回](../../../docs/DOMAIN_ROUTING.md)的选择表，加载一个适用的完整领域入口；现有Property B、DD、ECC、极值超立方体、Hamilton超立方体、Happy Ending六类。ECC为既有插件的证据升级，不再按旧draft排除。这里的选择基于数学对象和当前义务，不能仅按“图论”自动混用所有插件。
+
+将选择及对应阶段交给下级workflow：prepare/survey消费定义与来源；route-loop执行领域诊断/探针；prove执行数学或证书义务；verify核领域范围；handoff取复现入口。该参考逐领域给定真实输入、动作和返回消费者；每阶段执行其对应部分再回本主流程。收到结果先检查它究竟改变了原义务哪一条，尚缺覆盖/进口就留开，已有成熟局部证据立即接入，不等待其它插件。
+
 ## 1. 准备问题，得到可用规格和文献
 
 每个子阶段返回时给一段可直接接棒的短答复，例如：“产物`work/L/PROOF.md`，范围为所有满足A的输入；已证明L；原题还缺`PROOF_DRAFT.md`§3中`H⇒A`；建议回prove补该连接。”主调度先读这段，再读决定下一步的原产物，不从头重读未变的全部历史。阶段作者用现有报告返回即可，不必另建一份回执文件。

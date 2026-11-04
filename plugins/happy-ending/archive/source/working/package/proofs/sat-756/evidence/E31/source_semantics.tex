@@ -1,0 +1,202 @@
+\section{Necessary CNF semantics}\label{app:cnf}
+This appendix specifies the source contract for the three population
+lemmas and the balanced exclusion. The formal source decoders match each
+stored clause to a proved necessary schema. Catalogue order indexes
+variables; actual owner order is represented separately.
+
+For a fixed chronological selection, $C_{ijk}$ means that $(i,j,k)$
+is a cup. For named state owners, the catalogue-sorted key identifies
+one variable, but its truth value means the orientation in the
+\emph{actual chronological order}. Order guards specify that order
+whenever it matters. Literal negation gives the cap case.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.69\textwidth}}
+\toprule
+Family & Truthful interpretation and reason for necessity\\
+\midrule\endhead
+Owner activation & An owner exists exactly when its state is occupied.
+Prefix counters implement exact population or threshold counts;
+their catalogue order does not constrain geometric chronology.\\[5pt]
+Order & Comparable states have forced order by \cref{lem:difference}.
+Free pair variables and transitivity retain all orders of incomparable
+states. Inactive potential owners can be inserted into a linear extension.\\[5pt]
+Pair labels & If both owners exist in the indicated order, exactly one
+label in the destination-minus-source state difference is selected.
+Its value is the actual ambient incoming pair rank. Otherwise all
+those pair variables are false.\\[5pt]
+Rank growth & A cup triple increases the cup coordinate; a cap triple
+increases the cap coordinate. Disallowed label pairs therefore force
+the opposite color.\\[5pt]
+Selected paths & A flag records an actual path with the stated first
+vertex and final pair. Base and extension implications cover every
+actual selected path. Maximum clauses exclude six-chains, and endpoint
+summaries exclude opposite paths of total length nine.\\[5pt]
+Ambient outgoing ranks & Threshold flags represent actual outgoing
+pair maxima. Nesting, growth, and incoming/outgoing concatenation
+budgets follow from their actual paths. Selected attainment is not
+imposed on ranks whose witnesses may be outside the selection.\\[5pt]
+Exact core paths & A core path threshold is the disjunction of shared
+successor or predecessor witnesses, each conjoining a path threshold
+and its joining color. Both directions are encoded only when the
+whole core is retained.\\[5pt]
+Endpoint extensions & An actual ending five-cup extends every outgoing
+cap one step to the left, or a six-cup would occur. The dual rule
+holds for starters and for the other color.\\[5pt]
+Packets & For each chronological quadruple, the signs in lexicographic
+triple order have at most one change. Clauses forbid alternating
+three-term subsequences of that four-sign packet. All selected owner
+activations and necessary order comparisons guard these clauses.\\[5pt]
+First-pair restrictions & Pairs starting at the ambient first vertex
+have coordinates $(1,1)$. Pairs starting at the second have both
+coordinates at most two. Those vertices are retained explicitly.\\[5pt]
+Prefix attainment & For a retained initial ambient point $i$,
+$d_c(i,j)=\max(\set1\cup\set{d_c(h,i)+1:h<i,\ C(h,i,j)=c})$.
+Every such $h$ is present, so reverse attainment is valid there.
+All clauses are guarded by the chosen prefix alternative.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Outgoing and endpoint schemas}
+Use the guarded pair-label variables $G_{ij}$ and $L_{ij,z}$ defined
+in Appendix~\ref{app:restricted}. In particular,
+\[
+ G_{ij}\Rightarrow\bigvee_{z\in F_j\setminus F_i}L_{ij,z},\qquad
+ L_{ij,z}\land L_{ij,z'}\Rightarrow z=z'.
+\]
+For active chronological owners $i<j<t$, let $U^c_k(i,j)$ assert an
+actual ambient $c$-chain of at least $k$ vertices starting with
+$(i,j)$. With $c=1$ for cup and $c=0$ for cap, write $z_c$ for the
+corresponding coordinate. The schemas include
+\begin{align*}
+ U^c_{k+1}(i,j)&\Rightarrow U^c_k(i,j),\\
+ \chi^c_{ijt}\land U^c_k(j,t)&\Rightarrow U^c_{k+1}(i,j),\\
+ L_{ij,z}\land\chi^c_{ijt}\land U^c_k(j,t)&\Rightarrow z_c+k\le5.
+\end{align*}
+The last implication is the no-six-chain budget. Every encoding
+includes its activation and order guards. No converse recurrence is
+imposed when the next witness may lie outside the selected owners.
+
+If $E_i^1$ means that an actual five-cup ends at $i$, and
+$\operatorname{Path}^0(i,j,\ldots,t)$ is any ambient cap, then
+\[
+ E_i^1\land\operatorname{Path}^0(i,j,\ldots,t)
+ \Rightarrow\exists h<i:\operatorname{Path}^0(h,i,j,\ldots,t).
+\]
+Choose $h$ to be the penultimate point of the same attaining five-cup.
+The triple $(h,i,j)$ must be a cap, or appending $j$ to that cup
+would give six points. This extends the cap while preserving its last
+pair. Reversal gives the starter extension preserving the first pair;
+color exchange gives both dual rules. Witnesses remain in their
+specified ambient set, not necessarily in the selected core.
+
+For completeness, the two-color vertex budget follows from a shared
+incoming pair attaining a cell $(x,y)\in F(v)$. If an outgoing pair
+$(v,w)$ had cup and cap lengths at least $6-x$ and $6-y$, respectively,
+the joining triple would concatenate same-color paths into a six-chain.
+Thus those two outgoing thresholds cannot both hold. A single incoming
+pair dominates both coordinates of the cell; this step does not choose
+two unrelated predecessors.
+
+In the balanced equality model, low-width members of $K$ also start
+five-caps. Every cup ending at such a point therefore extends rightward
+by one while preserving its first pair, which supplies the low-endpoint
+extension clauses. Internal five-cup sources are defined from exact core
+outgoing paths, and the source counter requires at least six by
+\cref{cor:range}. The terminal witness consists of an actual five-cup
+from the last core point, so its four later points have a fixed relative
+position without restricting any other ambient witness.
+
+The initial four packet alternatives cover all geometric possibilities
+after reflection. The later five- and six-point lists are generated
+exhaustively, retaining all packet-valid alternatives with the stated
+prefix and chain limits. The mixed sectors are still represented in
+the primary formula. Their removal occurs only in the final checked
+derivation. Thus neither an assumed preferred order nor an unproved
+prefix exclusion enters the primary source.
+
+
+\section{Restricted-25 certificate interface}\label{app:restricted}
+The restricted source uses hole variables, actual owner-order variables,
+and pair-label variables. A label simultaneously records the existence
+and order of its owners and its two actual ranks. Each maximal corner
+of an incoming state has one incoming pair attaining it. Backward
+witnesses bind that predecessor pair and the joining triple together;
+their consequences do not select unrelated witnesses.
+
+The primitive layer proves label choice, uniqueness, rank growth,
+path extension, endpoint restrictions, four-point sign constraints,
+and common-endpoint polygon exclusions. All clauses are guarded by
+the existence and required order of their owners. A verified reverse
+unit-propagation layer derives the hole clauses. Finally, the LRAT refutation of the 93,169-clause coverage CNF rejects
+the nine-hole case. Its 91,720 hole clauses are selected from the
+proved primitive replay; the remaining clauses encode cardinality
+and padding. The two exhaustive enumerations of the eligible hole
+sets in \cref{lem:B25} are separate computational evidence. The geometric assignment, primitive soundness,
+logical replay, and coverage are separate formal obligations.
+The catalogue's literal and color conventions are decoded explicitly.
+
+\subsection{Witness equations}
+Here are the shared-witness relations underlying the compressed terms
+above. Write $A_i$ for occupation of state $i$, $O_{ij}$ for the order
+of its owner before that of $j$. Let $L_{ij,z}$ assert that the pair's
+actual incoming label is $z\in F_j\setminus F_i$. Put
+\[G_{ij}=A_i\land A_j\land O_{ij}.\]
+Then
+\[
+ L_{ij,z}\Rightarrow G_{ij},\qquad
+ G_{ij}\Rightarrow\bigvee_{z\in F_j\setminus F_i}L_{ij,z},\qquad
+ \neg L_{ij,z}\lor\neg L_{ij,z'}\quad(z\ne z').
+\]
+For a maximal corner $z$ of $F_j$, attainment says
+\[
+ \neg A_j\lor\bigvee_{i:\,z\notin F_i}L_{ij,z}.
+\]
+Let $\chi^c_{ijk}$ mean that the chronologically ordered triple has
+color $c$, with $c=1$ for cup. If $z_c\ge z'_c$, growth gives
+\[
+ \neg L_{ij,z}\lor\neg L_{jk,z'}\lor\neg\chi^c_{ijk}.
+\]
+To encode reverse attainment, let $W^c_{tij,r}$ mean that the
+\emph{same} three active owners satisfy $t<i<j$,
+$\chi^c_{tij}$, and $d_c(t,i)+1=r$. For $z_c\ge2$ the clauses are
+\begin{align*}
+ L_{ij,z}&\Rightarrow\bigvee_t W^c_{tij,z_c},\\
+ W^c_{tij,r}&\Rightarrow\chi^c_{tij},\\
+ W^c_{tij,r}&\Rightarrow
+   \bigvee_{y\in F_i\setminus F_t:\,y_c+1=r}L_{ti,y}.
+\end{align*}
+Candidate sums range only over distinct owners and permitted labels.
+The corner and backward-witness schemas are checked in
+\begin{center}\code{ES7ExactClauses.expected}.\end{center}
+
+For a retained induced core $K$, $T^c_k(i,j)$ means that a $c$-chain
+of at least $k$ vertices starts with the exact pair $(i,j)$ in $K$.
+Its base is $T^c_2(i,j)=G_{ij}$ for core owners, and for $k\ge3$,
+\[
+ T^c_k(i,j)\ \longleftrightarrow\
+ \bigvee_{t\in K}\bigl(A_i\land O_{ij}\land
+              \chi^c_{ijt}\land T^c_{k-1}(j,t)\bigr).
+\]
+Each conjunction has its own witness variable. Encoding both
+directions of this equivalence makes these \emph{exact core outgoing
+paths}, while ambient path thresholds may only have one-way
+implications after selection. The internal-source flag is
+$S_i\leftrightarrow\bigvee_{j\in K}T^1_5(i,j)$ and the balanced
+source imposes $\sum_{i\in K}S_i\ge6$.
+The recurrence is proved in \code{ES7ClosureCoreSemantics}.
+
+Finally, for the four chronological packet entries $e_1,e_2,e_3,e_4$,
+every $a<b<c$ imposes
+\[
+ (\neg e_a\lor e_b\lor\neg e_c)
+ \ \land\ (e_a\lor\neg e_b\lor e_c).
+\]
+It forbids $101$ and $010$ subsequences. Named-owner versions prepend
+the negations of the required activation and order guards. A
+disjunction $v\leftrightarrow\bigvee_i w_i$ is encoded by
+$(\neg v\lor\bigvee_iw_i)$ and $(\neg w_i\lor v)$; a conjunction
+is encoded dually. Empty disjunctions are false.
+These formulas specify the witness coupling. The archive remains
+the authoritative specification of literal numbering, omitted
+constant variables, and the exact compact clause list; Lean checks
+that list against these semantics before replay.

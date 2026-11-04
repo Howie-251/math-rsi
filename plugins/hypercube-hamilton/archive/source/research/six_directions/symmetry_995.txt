@@ -1,0 +1,907 @@
+Article
+
+Kinds of Matchings Extending to Hamiltonian Cycles in
+Hypercube Networks
+Abid Ali 1 , Weihua Yang 1, *, Gohar Ali 2 , Ioan-Lucian Popa 3,4, *                       and Dilara Akter Mitu 1
+
+                                         1   College of Mathematics, Taiyuan University of Technology, Wanbailin District, Taiyuan 030024, China;
+                                             lian0003@link.tyut.edu.cn (A.A.); dilaramitujnu2020@gmail.com (D.A.M.)
+                                         2   Department of Mathematics, Islamia College Peshawar, Peshawar 25120, Khyber Pakhtunkhwa, Pakistan;
+                                             gohar.ali@icp.edu.pk
+                                         3   Department of Computing, Mathematics, and Electronics, 1 Decembrie 1918 University of Alba Iulia,
+                                             510009 Alba Iulia, Romania
+                                         4   Faculty of Mathematics and Computer Science, Transilvania University of Brasov, Iuliu Maniu Street 50,
+                                             500091 Brasov, Romania
+                                         *   Correspondence: yangweihua@tyut.edu.cn (W.Y.); lucian.popa@uab.ro (I.-L.P.)
+
+
+                                         Abstract
+                                         The hypercube Qn is a well-known and efficient interconnection network. Ruskey and
+                                         Savage posed the following question: does every matching in a hypercube Qn for n ≥ 2
+                                         extend to a Hamiltonian cycle? Fink addressed this by proving that every perfect matching
+                                         extends to a Hamiltonian cycle in Qn , thereby resolving Kreweras’ conjecture. Ruskey and
+                                         Savage’s problem is still open and has been proven only for small matchings. An edge of
+                                         Qn is an i-edge when the binary representations of its endpoints differ at the ith coordinate.
+                                         In this paper, we consider Qn for n ≥ 3 and show that any matching consisting of edges of
+                                         at most six types, which does not cover every pair of vertices at a distance of 3, extends to a
+                                         Hamiltonian cycle.
+
+                                         Keywords: Ruskey and Savage’s problem; hypercube network; matching; Hamiltonian
+                                         cycle
+
+                                         MSC: 05C70; 05C45
+
+Academic Editor: Yuefang Sun
+
+Received: 13 May 2025
+Revised: 6 June 2025
+                                         1. Introduction
+Accepted: 10 June 2025                         Matchings and cycles are basic structures in graph theory. These structures in
+Published: 24 June 2025                  hypercubes are a class of graphs that have been extensively explored in computer science
+Citation: Ali, A.; Yang, W.; Ali, G.;    and mathematics. Let the set {1, 2, . . . , n} be denoted as [n]. The n-dimensional hypercube
+Popa, I.-L.; Mitu, D.A. Kinds of         Qn , where the vertex set consists of binary strings of length n, i.e., V ( Qn ) = {u : u =
+Matchings Extending to Hamiltonian       u1 , u2 · · · un and ui ∈ {0, 1} for all i ∈ [n]}. Two vertices are adjacent if and only if their
+Cycles in Hypercube Networks.
+                                         corresponding binary strings differ at exactly one position.
+Symmetry 2025, 17, 995. https://
+doi.org/10.3390/sym17070995
+                                               The hypercube Qn is a well-known and efficient interconnection network. For any
+                                         n ≥ 2, Qn is known to be Hamiltonian. This statement dates back to 1872 [1]. Since then,
+Copyright: © 2025 by the authors.
+                                         there has been considerable interest in studying Hamiltonian cycles in hypercubes, and this
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+                                         topic has received considerable attention [2–6]. A hypercube graph is bipartite. Alaeiyan [7]
+distributed under the terms and          presented the bipartite Ala graph, denoted as Ala(m, G, k ), where m and k are positive
+conditions of the Creative Commons       integers, and investigated various properties of this graph family, focused on Hamiltonian
+Attribution (CC BY) license              cycles and Eulerian properties.
+(https://creativecommons.org/
+licenses/by/4.0/).
+
+
+
+
+Symmetry 2025, 17, 995                                                                                         https://doi.org/10.3390/sym17070995
+Symmetry 2025, 17, 995                                                                                            2 of 17
+
+
+
+                              If no two edges in a graph (G) share a vertex, the set of edges is called a matching. If a
+                         matching contains every vertex of G, it is considered as a perfect matching. If every vertex
+                         in a graph G appears exactly once in a cycle, the cycle is called a Hamiltonian cycle.
+                              The following problem was asked by Ruskey and Savage [8]: for n ≥ 2, does any
+                         matching in Qn extend to a Hamiltonian cycle of Qn ? Kreweras [9] conjectured that for
+                         n ≥ 2, any perfect matching in Qn can be extended to a Hamiltonian cycle of Qn . This
+                         conjecture was proved by Fink [10,11] and strengthened for K ( Qn ). K ( Qn ) is a complete
+                         graph of the vertices of hypercube Qn .
+
+                         Theorem 1 ([10,11]). For n ≥ 2 and every perfect matching P of K ( Qn ), there exists a perfect
+                         matching R of Qn such that P ∪ R extends to a Hamiltonian cycle in K ( Qn ).
+
+                              Gregor [12] strengthens the Fink result [10] and finds that when we split the hypercube
+                         into subcubes of non-zero dimensions, every perfect matching of the hypercube extends to
+                         a Hamiltonian cycle if and only if the matching interconnects these subcubes. Regarding
+                         perfect matchings, Dimitrov et al. [13] showed that for a given perfect matching P in Qn ,
+                         a Hamiltonian cycle that does not contain any edge from P exists if and only if the graph
+                         Qn − P is connected.
+                              In the study of Hamiltonian cycles in hypercubes, both long edges and short edges
+                         play crucial roles. A long edge in a hypercube (Qn ) typically refers to an edge connecting
+                         two vertices that differ in more than one coordinate; in other words, their Hamming
+                         distance is greater than 1. In contrast, a short edge connects vertices that differ in exactly
+                         one coordinate, which corresponds to the standard edges of the hypercube. Moreover,
+                         Fink [10] established that the following result holds for n ∈ {2, 3, 4}. Later, Wang and
+                         Zhao [14] extended the proof to the 5-cube.
+
+                         Theorem 2 ([10,14]). For n ∈ {2, 3, 4, 5}, any matching in Qn extends to a Hamiltonian cycle
+                         of Qn .
+
+                              Since in Qn , not every matching is perfect or extendable to a perfect matching, Limaye
+                         and Sarvate, in [15], showed that matching in Qn is k-extendable for k < n; also, any
+                         matching is extendable to a perfect matching of size n if and only if it does not cover the
+                         neighborhood of an uncovered vertex. Moreover, Vandenbussche and West [16] proved
+                         that the extendability of matching M (with vertex set U) is k-suitable if the graph G − U
+                         contains no deficient set less than k. For f k (n) as the largest value of r, any k-suitable
+                         matching with at most f k (n) = k (n − k) + (k−2 1) for k ≤ n − 3 is extendable to a perfect
+                         matching. It is important to note that a positive solution for a matching that extends to a
+                         perfect matching is the induced matching [16]. However, this result does not completely
+                         solve the problem, as hypercubes of a matching extending to the maximal matching by
+                         inclusion (i.e., adding more edges of M) may still not be perfect. Thus, the kind of matching
+                         we are focusing on is not extendable to perfect matching.
+                              Dvořák [5] showed that for all n ≥ 2, any set of at most 2n − 3 edges in the hypercube
+                         Qn , where the edges form vertex-disjoint paths, can be extended to a Hamiltonian cycle
+                         of Qn . As a corollary, this implies that matching in Qn with no more than 2n − 3 edges
+                         can be extended to a Hamiltonian cycle. The authors in [17] proved that for n ≥ 4, every
+                         matching of at most 3n − 10 edges in Qn extended to a Hamiltonian cycle of Qn . Dvořák
+                         and Fink [18] showed that matchings of a size bounded by an O(n2 ) function in K ( Qn ) for
+                         n ≥ 5, extend to a Hamiltonian cycle, using the edges of Qn .
+                              Fink proved that every perfect matching in Qn extends to a Hamiltonian cycle. The
+                         broader question, posed by Ruskey and Savage, of whether every matching in Qn extends
+                         to a Hamiltonian cycle remains unresolved for general matchings. A solution is only known
+Symmetry 2025, 17, 995                                                                                               3 of 17
+
+
+
+                         for some particular cases, including perfect matchings, linear matchings, and matchings
+                         of a quadratic size. In this paper, we consider Qn for n ≥ 3 and show that any matching
+                         consisting of edges of at most six types, which does not cover every pair of vertices at
+                         a distance of 3, extends to a Hamiltonian cycle. Section 2 contains preliminaries and
+                         lemmas, while Section 3 presents the extension of the given conditional matching to a
+                         Hamiltonian cycle.
+
+                         2. Preliminaries and Lemmas
+                               Terminology and notation used in this paper are defined as follows: terms that remain
+                         undefined can be found in [19]. The vertex and edge sets of graph G are denoted by V ( G )
+                         and E( G ), respectively. Given a set S ⊆ E( G ), graph G − S is obtained by removing all
+                         edges of S from G. Let H and H ′ be two subgraphs of G. We use H + H ′ to denote the
+                         graph formed by combining vertex set V ( H ) ∪ V ( H ′ ) and edge set E( H ) ∪ E( H ′ ). For a set
+                         S ⊆ E( G ), H + S denotes the graph with the vertex set V ( H ) ∪ V (S) and edge set E( H ) ∪ S,
+                         where V (S) denotes the set of vertices incident to the edges in S.
+                               The distance between vertices u and v is the number of edges in the shortest path
+                         connecting u and v in G, denoted by dG (u, v), with the subscript omitted when the context
+                         is clear. For every i ∈ [n − 1], a path between two vertices, a and b, represented as Pab , is a
+                         set of unique vertices a = v1 , v2 , . . . , vn = b and edges vi vi+1 . A path Paa is composed of
+                         only a single vertex a if a = b, and n = 1. When two paths Pab and Pcd do not share any
+                         vertex and vertices b, c are adjacent, the combined path Pab + Pcd represents a new path
+                         from a to d, created by joining Pab and Pcd . A path P is considered a subpath of another
+                         path P′ if P is a subgraph of P′ .
+                               The n-dimensional hypercube Qn has a vertex set V and edge set E. The expression
+                         χ(u) = ∑in=1 ui (mod 2) provides the parity of the vertex u. There are equal numbers of
+                         vertices 2n−1 with parities of 1 and 0. These vertices are often labeled black and white,
+                         respectively. Because Qn is bipartite, the vertices of the hypercube Qn can be separated into
+                         two sets according to their parity. Hence, χ( x ) ̸= χ(y) if and only if d( x, y) is odd.
+                               An edge is a j-edge in the hypercube Qn for each j ∈ [n], implying that the endpoints
+                         of the edge differ only in the j-th coordinate. The set of all such j-edges in Qn is denoted
+                         as Ej . Consequently, the complete set of edges in Qn expressed as the union of all j-edges:
+                         E( Qn ) = nj=1 Ej . Based on the vertex sets {u ∈ V ( Qn ) : u j = 0} and {u ∈ V ( Qn ) :
+                                     S
+
+                         u j = 1}, respectively. We consider the subcubes Q0n− j and Q1n− j , which are isomorphic
+                         subcubes of Qn produced by deleting the j-edges. This relationship can be written as
+                         Qn − Ej = Q0n− j + Q1n− j . Additionally, let QϵL     ϵR
+                                                                        m and Qm represent the subgraphs of Qn− j ,
+                         where ϵ ∈ {0, 1}. Both QϵL           ϵR
+                                                    m and Qm are isomorphic, with L and R indicating the left and
+                         right orientations.
+                              Wang and Zhang obtained the following results [20]: matching M in Q3 − {u, v}
+                         extends to a spanning 2-path, and the matching in Qn − u extends to the Hamiltonian path.
+                         Similarly, in this section, the results show a matching extension to the Hamiltonian path
+                         and spanning 2 paths in small cubes.
+
+                         Lemma 3 ([20]). Let u, v, x, y be pairwise distinct vertices in Q3 such that χ(u) = χ(v) ̸=
+                         χ( x ) = χ(y), and let M be matching in Q3 − {u, v} with d(u, x ) = d(v, y) = 1. Then, there
+                         exists a spanning 2-path Pux + Pvy in Q3 passing through M.
+
+                         Lemma 4 ([20]). Let u, v ∈ V ( Qn ) for n ∈ {3, 4}, such that χ(u) ̸= χ(v) and M is a matching
+                         in Qn − u. Then, Qn contains a Hamiltonian path passing through M, connecting u and v.
+Symmetry 2025, 17, 995                                                                                                  4 of 17
+
+
+
+                         Theorem 5 ([5]). Let n ≥ 2, and let F ⊆ E( Qn ) such that | F | ≤ 2n − 3. If F is a linear forest,
+                         then there exists a Hamiltonian cycle in Qn that contains every edge in F.
+
+                         Lemma 6 ([20,21]). Let x and y be vertices in Qn for n ∈ {3, 4} such that χ( x ) = χ(y) and M
+                         matching in Q4 − x. Then there exists a spanning 2-path Pxy + Puv that passes through M, where
+                         u and v are two distinct vertices such that χ(u) = χ(v) ̸= χ( x ).
+
+                         Lemma 7 ([21]). Let u, x, y be three distinct vertices in Q3 such that χ(u) ̸= χ( x ) = χ(y).
+                         Suppose M is a matching in Q3 − u, then there exists a spanning ({u, v}, { x, y})-path Pu,∗ + Pv,∗ ,
+                         where v ∈ V ( Q3 ) is a vertex satisfying χ(v) = χ(u).
+
+                         Lemma 8 ([21]). Let u, v, x, y be four pairwise distinct vertices in the three-dimensional hypercube
+                         Q3 , such that χ(u) = χ(v) ̸= χ( x ) = χ(y). Suppose that M is a matching in the subgraph
+                         Q3 − {u, v}. Then, there exists a spanning ({u, v}, { x, y})-path Pu,∗ + Pv,∗ in Q3 that contains
+                         all edges of M.
+
+                         Lemma 9 ([21]). If M is a matching in Q3 , then there exist two distinct Hamiltonian paths in Q3
+                         starting at vertex u, each ending at a different vertex, such that both paths include all edges of M.
+
+                         Lemma 10. Let u, v, x, and y be pairwise distinct vertices in Q4 such that χ( x ) = χ(y) ̸=
+                         χ(u) = χ(v). If M ≤ 5 is a matching in Q4 − {u, v}, then there is a spanning 2-path Pux + Pvy
+                         in Q4 containing M such that d(u, x ) = d(v, y) = 1.
+
+                         Proof. Choose j ∈ [4] such that | M ∩ Ej | is as small as possible. As M is a given matching,
+                         and thus | M | ≤ 5, it follows that | M ∩ Ej | ≤ 1. If M contains no edge from Ej , we may
+                         assume without loss of generality that j = 4. In the case where | M ∩ Ej | = 1, M must
+                         include exactly one edge from each Ei for all i ∈ [4]. Thus, there are four possible choices
+                         for j, and we can select one such that the corresponding edge in M ∩ Ej is not incident with
+                         either x or y. Next, Q4 is decomposed into two subcubes Q03 and Q13 along the edge set E4 .
+                         Using the vertex-transitivity of Q4 , we may assume that vertex u ∈ V ( Q03 ).
+                                Case 1. M ∩ Ej = ∅.
+                                Subcase 1.1. v ∈ V ( Q13 ).
+                                Given that χ(u) = χ(v) ̸= χ( x ) = χ(y) and that both u and v are uncovered by M,
+                         the lemma’s statement is symmetric for pairs {u, v} and { x, y}. Therefore, we only need to
+                         consider the following two cases.
+                                Subcase 1.1.1. x ∈ V ( Q03 ), y ∈ V ( Q13 ) (or y ∈ V ( Q03 ), x ∈ V ( Q13 )).
+                                Because χ(u) = χ(v) ̸= χ( x ) = χ(y) and matching M is in Q4 − {u, v}, Lemma 4
+                         ensures that there exists a Hamiltonian path Pux      0 in Q0 and another path P1 in Q1 , such that
+                                                                                      3                        vy 3
+                           0          1
+                         Pux and Pvy pass through matchings M0 and M1 , respectively. Thus, the required spanning
+                         path is Pux 0 + P1 .
+                                           vy
+                                Subcase 1.1.2. { x, y} ⊆ V ( Q03 ) (or { x, y} ⊆ V ( Q13 )).
+                                Since u ∈/ V ( M ) and χ(u) ̸= χ( x ) = χ(y), by Lemma 7, there exists a spanning
+                         2-path Pus0 + Pxy in Q03 passing through M0 , where s0 ∈ V ( Q03 ) satisfies χ(s0 ) = χ(u).
+                         Furthermore, since v ∈   / V ( M ) and χ(v) ̸= χ(s1 ), by Lemma 4, there exists a Hamiltonian
+                         path Pvs 1 in Q1 that contains M . Consequently, the required spanning path is P0 + P0 +
+                                   1     3                    1                                                    ux  s0 y
+                           1 +s s .
+                         Pvs 1     0  1
+                                Subcase 1.2. v ∈ V ( Q03 )
+                                Subcase 1.2.1. x ∈ V ( Q03 ), y ∈ V ( Q13 ) (or y ∈ V ( Q03 ), x ∈ V ( Q13 ))
+                                By Lemma 9, there exists a Hamiltonian path Ps11 y in Q13 that includes the matching
+                         M1 for some i ∈ {1, 2}, where s11 and s21 are two distinct vertices in Q13 satisfying χ(s11 ) =
+                         χ(s21 ) ̸= χ(y). Choose an index i such that s0i ̸= x; without loss of generality, let i = 1.
+Symmetry 2025, 17, 995                                                                                                   5 of 17
+
+
+
+                         Because M is a matching in Q03 − {u, v} and χ(u) = χ(v) ̸= χ( x ) = χ(s10 ), by Lemma 3,
+                         there exists a spanning 2-path Pux + Pvs1 in Q03 containing M0 . Thus, the required spanning
+                                                                     0
+                                    0 + P0 + P1 + { s s }.
+                         2-path is Pux   vs1  s1 y   0 1
+                                             0      1
+                               Subcase 1.2.2: { x, y} ⊆ V ( Q13 )
+                               Because χ( x ) = χ(y), Lemma 6 implies the existence of a spanning 2-path Pxs          1 + P1
+                                                                                                                        1    yt1
+                         in Q13 containing M1 , where s1 and t1 are distinct vertices in Q13 satisfying χ(s1 ) = χ(t1 ) ̸=
+                         χ( x ). Because M is a matching in Q03 − {u, v} and χ(u) = χ(v) ̸= χ(s0 ) = χ(t0 ), Lemma 3
+                         provides a spanning 2-path Puv            0 + P0         0
+                                                                        s0 t0 in Q3 that contains M0 . Therefore, the resulting
+                                                   0         0       1       1
+                         spanning 2-path is Pux + Pvy + Pxs1 + Pyt1 + {s0 s1 , t0 t1 }.
+                               Subcase 1.2.3. { x, y} ⊆ V ( Q03 ).
+                               If | M1 | = 4, then | M0 | = 1. According to Theorem 2, there exists a Hamiltonian cycle
+                         C1 in Q13 that passes through M1 . Since M1 is a perfect matching and | E(C1 ) \ M1 | − 2 ≥
+                         1, we can choose an edge s1 t1 ∈ E(C1 ) \ M1 such that {s0 , t0 } ∩ {u, v} = ∅. Given
+                         χ(u) = χ(v) ̸= χ( x ) = χ(y), Lemma 3 ensures the existence of a spanning 2-path is
+                         Pux + Pvy in Q03 that includes the edge s0 t0 . Thus, the spanning path in Q4 is Pux        0 + P0 +
+                                                                                                                           vy
+                         C1 + {s0 s1 , t0 t1 } − {s0 t0 , s1 t1 }.
+                               If | M1 | ≤ 3, we claim that at most one edge e ∈ E( Q13 ) \ M1 exists such that M1 ∪ {e}
+                         is not part of any Hamiltonian cycle in Q13 . For | M1 | ≤ 2, any e ∈ E( Q13 ) \ M1 ensures
+                         M1 ∪ {e} is a linear forest with at most three edges. By Theorem 5, such a forest is always
+                         included in a Hamiltonian cycle. For | M1 | = 3, there are exactly three non-isomorphic
+                         size-3 matchings in Q3 , labeled P1 , P2 , and P3 (see Figure 1). Checking each possible pair
+                         ( M1 , e) confirms this claim (see Figure 1).
+
+
+
+
+                         Figure 1. Hamiltonian cycles containing M1 ∪ {e} for any edge e ∈ E( Q13 ) \ M1 , where M1 is
+                         isomorphic to P1 , P2 , or P3 .
+
+                               Using Lemma 3 again, since M0 ⊆ Q03 \ {u, v}, there exists a spanning 2-path Puv + Pxy
+                              0
+                         in Q3 that contains M0 . Because the path contains more than | M0 | + | M1 | + 1 edges, there
+                                                0 + P0 ) \ M such that s t ∈
+                         is an edge s0 t0 ∈ E( Pux    vy      0           1 1 / M1 and M1 + { s1 t1 } lies in some
+                         Hamiltonian cycle C1 of Q13 . Therefore, the required spanning path in Q4 is Pux   0 + P0 +
+                                                                                                                  vy
+                         C1 + {s0 s1 , t0 t1 } − {s0 t0 , s1 t1 }.
+                             Case 2. | M ∩ E4 | = 1. Let M ∩ E4 = {w0 w1 }. Note that {w0 , w1 } ∩ { x, y} = ∅.
+Symmetry 2025, 17, 995                                                                                                                     6 of 17
+
+
+
+                               Subcase 2.1. v ∈ V ( Q13 ).
+                               Subcase 2.1.1. x ∈ V ( Q03 ), y ∈ V ( Q13 ) (or x ∈ V ( Q13 ), y ∈ V ( Q03 )).
+                               Now χ(w0 ) = χ(u) or χ(w1 ) = χ(v). Without loss of generality, we assume
+                         χ(w0 ) = χ(u). Since v ∈     / V ( M1 ), by Lemma 4, there exists a Hamiltonian path Pvy                              1 of
+
+                         Q13 passing through M1 . Let s1 be a neighbor of w1 such that s0 ̸= x. If s1 ∈ V ( Pvy                         1 ), then
+                                                             0
+                         because M0 is a matching in Q3 − {u, w0 }, and χ(w0 ) = χ(u) ̸= χ( x ) = χ(s0 ), by Lemma 3
+                         there exists a spanning 2-path Pux + Pw0 s0 of Q03 passing through M0 . Hence the desired
+                                                                       0 + P0              1
+                         spanning 2-path Pux + Pvy of Q4 is Pux                 w0 s0 + Pvy + { s0 s1 , w0 w1 } − { s1 w1 }.
+                               Subcase 2.1.2. { x, y} ⊆ V ( Q13 ) (or { x, y} ⊆ V ( Q03 )).
+                               If χ(w0 ) ̸= χ(u), then χ(v) = χ(w1 ). Because M1 is a matching in Q13 − {v, w1 } and
+                         χ(v) = χ(w1 ) ̸= χ( x ) = χ(y), by Lemma 8 there exists a spanning 2-path Pvy + Pw1 x in
+                         Q13 through M1 . Since M0 is a matching in Q03 − u and χ(u) ̸= χ(w0 ), by Lemma 4, there
+                         exists a Hamiltonian path Puw      0    in Q03 through M0 . Hence the desired spanning path is
+                                                               0
+                           0
+                         Puw0 + Pvy + Pw1 x + {w0 w1 }.
+                               If χ(w0 ) = χ(u), then since v ∈      / V ( M1 ) and χ(v) ̸= χ( x ) = χ(y), by Lemma 7, there
+                         exists a spanning 2-path Pvy   1 + P1 in Q1 through M with p ( s ) = p ( v ). If w ∈ V ( P1 ), let
+                                                                xs1        3                  1             1                     1         vy
+                         t1 be the neighbor of w1 on Pvy  1 . Because χ(u) = χ(w ) ̸= χ(s ) = χ(t ) and M is a matching
+                                                                                           0          0            0              0
+                         in Q03 − {u, w0 }, by Lemma 8, there exists a spanning 2-path Pus                  0 + P0
+                                                                                                              0
+                                                                                                                                   0
+                                                                                                                     t0 w0 of Q3 through M0 .
+                                                                0 + P0               1        1
+                         The resulting spanning path is Pus       0      t0 w0 + Pvy + Ps1 x + {w0 w1 , t0 t1 , s0 s1 } − {t1 w1 }.
+                                                        0
+                               Subcase 2.2. v ∈ V ( Q3 ) and p(u) ̸= p(w0 ).
+                               Subcase 2.2.1. x ∈ V ( Q03 ), y ∈ V ( Q13 ) (or y ∈ V ( Q03 ), x ∈ V ( Q13 )).
+                               Because M1 is a matching in Q13 − w1 and χ(y) ̸= χ(w1 ), by Lemma 4, there exists a
+                         Hamiltonian path Pw1 1 y in Q13 passing through M1 . Because M0 is a matching in Q03 − {u, v}
+                         and χ(u) = χ(v) ̸= χ( x ) = χ(w0 ), by Lemma 8, there exists a spanning Pux + Pvw0 in Q03 .
+                         The desired path is Pux  0 + P0 + P1 + { w w }.
+                                                         vw0        w1 y        0 1
+                               Subcase 2.2.2. { x, y} ⊆ V ( Q03 ).
+                               Because M0 is a matching in Q03 − {u, v} and χ(u) = χ(v) ̸= χ( x ) = χ(y), by
+                         Lemma 8, there exists a spanning Pux       0 + P0 . Let s be a neighbor of w in this path. Because
+                                                                             vy          0                           0
+                         p(w1 ) ̸= p(s1 ) and M1 is a matching in Q13 − w1 , by Lemma 4, there exists a Hamiltonian
+                         path Pw1 1 s1 through M1 . The desired path is Pux         0 + P0 + P1
+                                                                                             vy     w1 s 1 + { w 0 w 1 , s 0 s 1 } − { w 0 s 0 } .
+                               Subcase 2.2.3. { x, y} ⊆ V ( Q13 ).
+                               Because χ(w1 ) ̸= χ( x ) = χ(y) and M1 is a matching in Q13 − w1 , by Lemma 7, there
+                         exists a spanning 2-path Pxw    1 + P1 in Q1 with χ ( s ) = χ ( w ). Since M is a matching in
+                                                           1       ys1        3              1            1                0
+                         Q03 − {u, v}, by Lemma 8, there exists a spanning Puw                0 + P0 in Q0 . The complete path is
+                                                                                                0     vs  0       3
+                           1 + P1 + P0 + P0 + { w w , s s }.
+                         Pxw 1      ys1    uw0     vs0        0 1 0 1
+                               Subcase 2.3. v ∈ V ( Q03 ) and χ(u) = χ(w0 ).
+                               We divide Q4 into subcubes Q03 and Q13 by E3 such that | M ∩ E3 | =              ̸ 2. Let M ∩ E3 = {w0′ w1′ },
+                         where w0′ ∈ V ( Q03 ). From the beginning of this Lemma, {w0′ , w1′ } ∩ { x, y} = ∅.
+                               Subcase 2.3.1: v ∈ V ( Q1,33 )
+                               In this case, the vertices u, v, x, y, w0′ , w1′ correspond to the roles played by u, v, x, y, w0 , w1
+                         in Subcase 2.1. Given that {w0′ , w1′ } ∩ { x, y} = ∅ and, similarly, {w0 , w1 } ∩ { x, y} = ∅,
+                         the configuration is equivalent to that considered in Subcase 2.1. Thus, the result directly
+                         follows from the conclusion established in the subcase.
+                               Subcase 2.3.2: v ∈ V ( Q0,33 ) and χ ( u ) = χ ( v ) ̸ = χ ( w0 )
+                                                                                                  ′
+                                                                                       ′   ′
+                               Here, we interpret the vertices u, v, x, y, w0 , w1 in the same manner as in Subcase 2.2.
+                         The conditions {w0′ , w1′ } ∩ { x, y} = ∅ and {w0 , w1 } ∩ { x, y} = ∅ ensure that the structure
+                         is consistent with that in Subcase 2.2. Hence, the corresponding conclusion applies to
+                         this case.
+                               Subcase 2.3.3: v ∈ V ( Q0,33 ) and χ ( u ) = χ ( v ) = χ ( w0 )
+                                                                                                  ′
+Symmetry 2025, 17, 995                                                                                              7 of 17
+
+
+
+                               Since u, v ∈ V ( Q0,4        0,3                                         ′              0,4
+                                                 3 ) ∩ V ( Q3 ) and given that χ ( u ) = χ ( v ) = χ ( w0 ), w0 ∈ V ( Q3 )
+                         and χ(w0 ) = χ(u). Now consider M \ {w0 w1 , w0′ w1′ }. The remaining edges must be in
+                         E1 ∪ E2 . Given that | M ∩ E1 | = 2, and | M ∩ E2 | = 1, there are two possible matchings
+                         for M.
+                               We proceed by analyzing two cases depending on the placement of the vertices x
+                         and y. If either the edge from M ∩ E1 or from M ∩ E2 is not adjacent to x or y, assume
+                         without loss of generality that the edge in M ∩ E1 is not incident to { x, y}. In this case, Q4
+                         is decomposed along E1 , resulting in u ∈ V ( Q0,1                   1,1
+                                                                         3 ) and v ∈ V ( Q3 ). The configuration of
+                         u, v, x, y are now the same as that of Subcase 2.1, and we may apply the same reasoning.
+                         In the alternative situation where both edges in M ∩ E1 and M ∩ E2 are incident to { x, y},
+                         note that χ(u) = χ(v) ̸= χ( x ) = χ(y). Consequently, a spanning 2-path Pux + Pvy exists in
+                         Q4 that containing M (see Figure 2).
+
+
+
+
+                         Figure 2. (a–f) Matchings up to isomorphism when M ∩ E2 are incident to { x, y}. Red line denotes
+                         matching, and blue is extension of M to spanning 2-path.
+
+                              The following lemma extends the given kind of matching M to a Hamiltonian path
+                         Puv in hypercube Q5 , ensuring that vertex u is not included as an endpoint of any edge
+                         of M.
+
+                         Lemma 11. If u, v ∈ Q5 and a matching M does not cover every two vertices at a distance of 3, in
+                         Q5 − u such that χ(u) ̸= χ(v). Then there exists a Hamiltonian path in which Puv contains M.
+
+                         Proof. Consider a matching M in Q5 − u such that M does not cover every pair of vertices
+                         at a distance of three. Let j ∈ [5] denote the edges with endpoints that differ in the
+                         j-th position, and choose a direction j such that | M ∩ Ej | is as small as possible. Since
+                         | M ∩ Ej | ≤ 1, we will discuss all cases. By removing the set of edges Ej , we split Q5
+                         into the subcubes Q04 and Q14 . By symmetry, we may assume that vertex u ∈ Q04 . Define
+Symmetry 2025, 17, 995                                                                                                  8 of 17
+
+
+
+                         Mϵ = M ∩ E( Q4ϵ ) for each ϵ ∈ {0, 1} and, by symmetry, assume | M0 | ≤ | M1 |. It is
+                         important to note that each vertex xϵ ∈ V ( Q4ϵ ) has a unique neighbor, denoted x1−ϵ , in
+                         Q14−ϵ , where ϵ ∈ {0, 1}.
+                               Case 1. M ∩ Ej = ∅.
+                               Subcase. 1.1. u ∈ V ( Q04 ) and v ∈ V ( Q14 ) or (v ∈ V ( Q04 ) and u ∈ V ( Q14 )).
+                               Because M1 is a matching in Q14 , by Theorem 2, a Hamiltonian cycle C1 exists in
+                         Q14 containing the edges of M1 . Given that v ∈ V ( Q14 ) and u ∈ V ( Q04 ), there exists
+                         a neighbor s1 of v such that χ(u) ̸= χ(s0 ) and vs1 ∈          / M. We have χ(u) ̸= χ(s0 ) and
+                         u∈/ V ( M0 ) with χ(v) ̸= χ(u) and χ(s1 ) ̸= χ(s0 ). By Lemma 4, there exists a Hamiltonian
+                         path Pus0 that includes the edges of M0 in Q04 . Thus, the required Hamiltonian path is
+                         Puv := Pus0 + C1 + {s0 s1 } − {vs1 } in Q5 containing M.
+                               Subcase. 1.2. u, v ∈ V ( Q04 )
+                               We observe that the matching M in Q5 − u satisfies M ∩ Ej = ∅, to investigate the
+                         case when v, u ∈ V ( Q04 ). Since u ∈    / V ( M0 ) and χ(u) ̸= χ(v). We have, M0 is a matching
+                               0
+                         in Q4 − u. By Lemma 4, there is a Hamiltonian path Puv in Q04 that contains the edges
+                         of M0 . Because M1 is not perfect, there exists an edge s0 t0 ∈ E( Puv ) \ M0 in Puv , and
+                         s1 ∈/ M1 . Similarly, by Lemma 4, the edges of M1 extend to a Hamiltonian path Ps1 t1 in
+                         Q14 − s1 . Consequently, Puv + Ps1 t1 + {s0 s1 , t0 t1 } − {s0 t0 } is the desired Hamiltonian path
+                         in Q5 containing M.
+                               Case 2. If | M ∩ Ej | = 1.
+                               Subcase. 2.1. u ∈ V ( Q04 ) and v ∈ V ( Q14 ) or (v ∈ V ( Q04 ) and u ∈ V ( Q14 )).
+                               Since u ∈ V ( Q04 ) and v ∈ V ( Q14 ), let M ∩ Ej = w0 w1 . If χ(w0 ) ̸= χ(u), this implies
+                         χ(w1 ) ̸= χ(v) such that χ(v) ̸= χ(u) and χ(w1 ) ̸= χ(w0 ). Given that u ∈              / V ( M0 ) and
+                         w1 ∈ / V ( M1 ), by Lemma 4, Hamiltonian paths Puw0 in Q04 and Pw1 v in Q14 pass through
+                         M0 and M1 , respectively. Thus, the edges of Puw0 + Pw1 v + {w0 w1 } construct the desired
+                         Hamiltonian path in Q5 passing through M.
+                               If χ(w0 ) = χ(u) and χ(w1 ) = χ(v), M1 is a matching in Q14 − w1 and | M0 | ≤ | M1 |.
+                         Choose s1 and t1 are chosen as distinct vertices in Q14 such that χ(s1 ) = χ(t1 ) ̸= χ(w1 ).
+                         According to Lemma 6, there exists a spanning 2-path Pw1 v + Ps1 t1 in Q14 that includes
+                         the edges of M1 , Therefore, we have χ(u) = χ(w0 ) and χ(s0 ) = χ(t0 ). Because
+                         s0 ̸= t0 , obtain d(u, s0 ) = d(w0 , t0 ) = 1 in the subcube Q04 . Now, M0 is matching in
+                         Q04 − {u, w0 }, by Lemma 10, and there exists a spanning 2-path Pus0 + Pw0 t0 in Q04 passing
+                         through M0 . Therefore, the desired Hamiltonian path in Q5 is Pus0 + Pw0 t0 + Ps1 t1 + Pw1 v +
+                         {s0 s1 , t0 t1 , w0 w1 } containing M.
+                               Subcase. 2.2. u, v ∈ V ( Q04 )
+                               Since M ∩ Ej = {w0 w1 } and w0 ∈ V ( Q04 ), according to Lemma 4, there exists a
+                         Hamiltonian path Puv in Q04 containing M0 . Let r0 be w0 neighbor of Puv . We have w0 r0 ∈        / M,
+                         and w0 w1 ∈ M. We have w1 ∈        / V ( M1 ) and χ(w1 ) ̸= χ(r1 ). Again by Lemma 4, there exists
+                         a Hamiltonian path Pw1 r1 in Q14 that contains the edges of M1 . Therefore, the required
+                         Hamiltonian path in Q5 is Puv + Pw1 r1 + {w0 w1 , r0 r1 } − {w0 r0 }.
+                               Case 3. | M ∩ Ej | = 2.
+                               Suppose M ∩ E5 = {w0 w1 , z0 z1 }, in this case, we can split Q5 into subcubes Q04 and Q14
+                         such that vertices u, v both are in same subcube; by symmetry, we can consider u, v ∈ V ( Q14 )
+                         such that | M ∩ Ej | = 2. In this study, we considered two cases.
+                               If χ(wϵ ) ̸= χ(zϵ ) for ϵ ∈ [0, 1], by Lemma 4, there exists a Hamiltonian path Pw0 z0 in
+                           0
+                         Q4 − w0 that passes through M0 . Let u and w1 be the vertices of the subgraph Q14 . Assume
+                         that M1 is matching in Q14 − u; Lemma 6 states that there is a spanning 2-path Puw1 + Pvz1
+                         that passes through M1 , satisfying χ(w1 ) = χ(u) ̸= χ(v). Therefore, the required path in
+                         Q5 is Pw0 z0 + Puw1 + Pvz1 + {w0 w1 , z0 z1 }.
+Symmetry 2025, 17, 995                                                                                                    9 of 17
+
+
+
+                                If χ(wϵ ) = χ(zϵ ), since u, v ∈ V ( Q14 ), then by Lemma 4, there exists a Hamiltonian
+                         path Puv in Q14 passing through M1 . As vertices w1 , z1 are on path Puv . Suppose s1 is a
+                         neighbor of z1 and t1 is a neighbor of w1 on Puv such that χ(w1 ) = χ(z1 ). Let z0 , w0 , t0 ,
+                         s0 be pairwise distinct vertices in Q04 . Suppose χ(w0 ) = χ(z0 ) and χ(s0 ) = χ(t0 ) such
+                         that d(w0 , t0 ) = d(z0 , s0 ) = 1. Then by Lemma 10, there exists a spanning 2-path Pw0 t0 +
+                         Pz0 s0 in Q04 passing through M0 . Therefore, Puv + Pw0 t0 + Pz0 s0 + {w0 w1 , t0 t1 , z0 z1 , s0 s1 } −
+                         {s1 z1 , t1 w1 } is the Hamiltonian path in Q5 passing through M.
+
+                         3. Matchings in at Most Six Directions
+                              In this section, we discuss matchings in the hypercube Qn that do not cover every
+                         pair of vertices at a distance of three and consist of edges in at most six directions. These
+                         matchings are not perfect due to the specified constraints, and their size is less than 2n−2
+                         edges in Qn . The following theorems demonstrate that any matching satisfying these
+                         conditions can be extended to a Hamiltonian cycle in Qn .
+
+                         Theorem 12. Every matching M in the hypercube Q6 such that M does not cover every two
+                         vertices at a distance of three extends to a Hamiltonian cycle.
+
+                         Proof. Suppose M is matching in the hypercube Q6 with M matchings that do not cover
+                         every two vertices at a distance of three. Choose a direction j ∈ [6], and split Q6 into
+                         subcubes Q05 and Q15 such that | M ∩ Ej | is as small as possible. For j = 6 such that
+                         | M ∩ E6 | ≤ 3, divide Q6 − E6 into subcubes Q5ϵ and their respective matchings Mϵ where
+                         ϵ ∈ {0, 1}, in these subcubes. Assume by symmetry | M0 | ≤ | M1 |. When | M ∩ Ej | = 1, we
+                         denote M ∩ Ej = {u0 u1 } and M ∩ Ej = 2, and also denote M ∩ Ej = {u0 u1 , v0 v1 } when
+                         M ∩ Ej = 3, then M ∩ Ej = {u0 u1 , v0 v1 , w0 w1 }. Note that every vertex xϵ ∈ V ( Q5ϵ ) has
+                         a distinct adjacent vertex, x1−ϵ , within Q15−ϵ , where ϵ ∈ {0, 1}. The following four main
+                         cases assist M into the Hamiltonian cycle:
+                              Case 1. M ∩ Ej = ∅.
+                              Because | M0 | ≤ | M1 |, assume | M1 | ≤ 15, it indicates that M1 is not a perfect matching.
+                         Assume the size of M0 ∪ M1 satisfies | M0 ∪ M1 | ≤ 20. Consequently, Theorem 2 extends
+                         M1 to a Hamiltonian cycle C1 in Q15 . For a vertex v1 on C1 , there is a neighboring vertex
+                         u1 on C1 such that u1 v1 ∈ / M1 and v0 ∈   / M0 . Given that χ(u0 ) ̸= χ(v0 ) such that M0 is
+                                          0
+                         matching in Q5 − v0 . According to Lemma 11, there exists a Hamiltonian path Pu0 v0 in
+                         Q05 passing through M0 . Thus, C1 + Pu0 v0 + {u0 u1 , v0 v1 } − u1 v1 constructs a Hamiltonian
+                         cycle in Q6 containing M, as depicted in Figure 3a.
+
+
+
+
+                         Figure 3. (a) Sketch map of construction of the Hamiltonian cycle: (a) Case 1; (b) Case 2.
+
+                             Case 2. | M ∩ E6 | = 1.
+                             We assume that M ∩ E6 = {u0 u1 }. Because M1 is matching in Q15 , by Theorem 2,
+                         we can extend M1 to a Hamiltonian cycle C1 . Let v1 be a neighbor of u1 in Q15 such that
+Symmetry 2025, 17, 995                                                                                                 10 of 17
+
+
+
+                         u1 v1 ∈                          / M0 in Q05 . Consequently, χ(u0 ) ̸= χ(v0 ) and χ(u1 ) ̸= χ(v1 ),
+                                / M1 , there exists u0 v0 ∈
+                         implying that M0 is matching in Q05 − u0 . By applying Lemma 11, there exists a Hamiltonian
+                         path Pu0 v0 containing M0 in Q05 . Therefore, Pu0 v0 + C1 + {u0 u1 , v0 v1 } − u1 v1 constitutes a
+                         Hamiltonian cycle containing M within hypercube Q6 , as illustrated in Figure 3b.
+                               Case 3. | M ∩ E6 | = 2.
+                               Since M ∩ E6 = {u1 u0 , v1 v0 }, where uϵ and vϵ belong to V (Q5ϵ ) for ϵ ∈ {0, 1}. If u1 , v1
+                         are adjacent on a cycle such that χ(u1 ) ̸= χ(v1 ), then the proof is similar to that of Case 2.
+                         Therefore, for further analysis, assume that u1 , v1 are non-adjacent and χ(u0 ) = χ(v0 ), which
+                         means χ(u1 ) = χ(v1 ), two vertices with the same color match. Given that | M50 | ≤ | M51 |,
+                         it follows that | M51 | ≤ 15. Thus, we conclude that | M| ≤ 20, because ∑i∈[5] | M ∩ Ei | =
+                         | M0 | + | M1 | ≤ 18.
+                               Select a position k ∈ [5] to minimize | M ∩ Ek |, such that | M ∩ Ek | ≤ 3. Without loss
+                         of generality, we choose k = 5. Split Q5ϵ into their subcubes Q4ϵL and Q4ϵR at k = 5 for
+                                                                                                              ϵµ
+                         ϵ ∈ {0, 1}. Therefore, Q5ϵ − Ek = Q4ϵL + Q4ϵR . Now, define Mϵµ = Mϵ ∩ E( Q4 ) for every
+                         µ ∈ { L, R}, as shown in Figure 4. In V ( Q4ϵL ), every vertex aϵL is uniquely connected to a
+                         neighboring vertex aϵR in Q4ϵR . Similarly, in V ( Q4ϵR ), every vertex bϵR is uniquely connected
+                         to a neighboring vertex bϵL in Q4ϵL .
+
+
+
+
+                         Figure 4. Splitting of hypercube Q6 into 4-cubes at Ej such that j = [6].
+
+                               By symmetry, we may assume that | M0 ∩ E5 | ≤ | M1 ∩ E5 |. Moreover, it is clear that
+                         | M0 ∩ E5 | ≤ 1, since the total number of edges satisfies | M ∩ E5 | = | M1 ∩ E5 | + | M0 ∩ E5 | ≤ 3.
+                         Assuming vertex u0 ∈ V ( Q05 ), without loss of generality, consider u0 ∈ V ( Q0L          4 ), thus
+                         u1 ∈ V ( Q1L 4  ) . We then consider two distinct subcases.
+                               Subcase 3.1. v1 ∈ V ( Q1R                    0R
+                                                         4 ) and v0 ∈ V ( Q4 ).
+                               Subcase 3.1.1. M0 ∩ E5 = ∅.
+                               According to Theorem 2, a Hamiltonian cycle C1 exists in Q15 passing through M1 .
+                         There exists a vertex x1 adjacent to u1 on C1 that belongs to V ( Q1L     4 ), and y1 is a neighbor
+                         of v1 on C1 in V ( Q4 ). Given {v0 v1 , u0 u1 } ⊆ M, we have {v1 y1 , u1 x1 } ∩ M = ∅. Since
+                                                  1R
+
+                         χ( x0 ) ̸= χ(u0 ) and M0L is matching in Q0L  4 − u0 , by Lemma 4, there exists a Hamiltonian
+                                             0L
+                         path Pu0 x0 in Q4 containing M0L . Similarly, there exists a Hamiltonian path Pv0 y0 in Q0R        4
+                         containing M0R . Consequently, combining Pv0 y0 + Pu0 x0 + C1 + { x0 x1 , u0 u1 , y0 y1 , v0 v1 } −
+                         {v1 y1 , u1 x1 } constructs a Hamiltonian cycle in Q6 containing M, as shown in Figure 5a.
+Symmetry 2025, 17, 995                                                                                                              11 of 17
+
+
+
+
+                         Figure 5. Depiction of Subcase 3.1. Sketch map of construction of the Hamiltonian cycle: (a) Subcase
+                         3.1.1; (b) Subcase 3.1.2.
+
+                              Subcase 3.1.2. | M0 ∩ E5 | = 1.
+                                                                                  0µ
+                              Let M0 ∩ E5 = {s0L s0R }, where s0µ ∈ V ( Q4 ) for µ ∈ { L, R}. Given that
+                         χ(u0 ) = χ(v0 ) and χ(s0L ) ̸= χ(s0R ), without loss of generality, assume χ(u0 ) = χ(v0 ) =
+                         χ(s0L ) ̸= χ(s0R ).
+                              First, we establish the existence of a Hamiltonian cycle C1 extending M1 , such that
+                         v1 on C1 has two consecutive vertices that both belong to V ( Q1R     4 ). If | M1 ∩ E5 | = 2
+                         such that M1 ∩ E5 = { a1L a1R , b1L b1R }. If χ( a1µ ) = χ(b1µ ), then by Theorem 2, there
+                         exists a Hamiltonian cycle C1 , similar to Subcase 3.1.1. Suppose χ( a1µ ) ̸= χ(b1µ ) where
+                                       1µ
+                         a1µ ∈ V ( Q4 ) given that | M1 ∩ E5 | = 1 such that M1 ∩ E5 = { a1L a1R }. Because a1R has
+                         four neighbors in Q1R      4 , we select b1R , a neighbor of a1R , such that v1 ̸ = b1R . Consequently,
+                         it follows that χ( a1µ ) ̸= χ(b1µ ) for every µ ∈ { L, R}.
+                                In the situation described above, there are matchings M1L and M1R in Q1L                        4 − a1L and
+                            1R
+                         Q4 − a1R , respectively. According to Lemma 4, there exist Hamiltonian paths Pb1L a1L and
+                         Pb1R a1R that are in Q1L           1R
+                                                  4 and Q4 passing through M1L and M1R , respectively. We assume that
+                         C1 = Pa1R b1R + Pa1L b1L + {b1L b1R , a1L a1R }. Since {v1 v0 , a1L a1R , b1L b1R } ⊆ M, this implies
+                         y1 ∈/ { a1R , b1R }. Thus, both neighboring vertices of y1 on C1 belong to V ( Q1R                 4 ), and there is
+                         a Hamiltonian cycle C1 in Q15 containing M1 .
+                                Choose a neighbor x1 of u1 on C1 such that x1 ∈ V ( Q1L                 4 ), and a neighbor y1 of v1 on
+                         C1 such that y0 ̸= s0R . By Lemma 4 there exists a Hamiltonian path Pv0 y0 in Q0R                        4 passing
+                                                                                     0R
+                         through M0R . Since M0R is a matching in Q4 − v0 . We choose a neighbor t0R of s0R on
+                         Pv0 y0 such that t0L ̸= x0 , since s0R ∈     / {v0 , y0 }. The vertices u0 , x0 , s0L , and t0L are all distinct
+                                         0L
+                         vertices in Q4 , such that χ(u0 ) = χ(s0L ), χ( x0 ) = χ(t0L ), and d(u0 , x0 ) = d(s0L , t0L ) = 1.
+                         Since M0L is a matching in Q0L         4 − { u0 , s0L }, and | M0L | ≤ | M0R |, by Lemma 10, there is a
+                         spanning 2-path Pu0 x0 + Ps0L t0L in Q0L        4 passing through M0L . Consequently, Pu0 x0 + C1 +
+                         Ps0L t0L + Pv0 y0 + { x0 x1 , u0 u1 , v0 v1 , y0 y1 , s0L s0R , t0L t0R } − {v1 y1 , u1 x1 , s0R t0R } constructs a
+                         Hamiltonian cycle in Q6 passing through M, as shown in Figure 5b.
+                                Subcase 3.2. v1 ∈ V ( Q1L  4 ) and v0 ∈ V ( Q4 ).
+                                                                                     0L
+
+                                According to Theorem 2, a Hamiltonian cycle C1 exists in Q15 passing through M1 .
+                         Let x1 be a neighbor of u1 on C1 such that x1 ∈ V ( Q1L                 4 ), and let y1 be a neighbor of v1 on
+                                                        1L
+                         C1 such that y1 ∈ V ( Q4 ). Thus, χ(v1 ) = χ(u1 ) and χ(y1 ) = χ( x1 ). Moreover, we have
+                         d(u1 , x1 ) = d(v1 , y1 ) = 1, and y1 ̸= x1 . These properties also apply to the corresponding
+                         vertices u0 , x0 , v0 , y0 . By symmetry, we may assume | M0L | ≤ | M0R |, and using Lemma 10,
+                         there exists a spanning 2-path Pu0 x0 + Pv0 y0 in Q0L                4 that passes through M0L . We now
+                         consider two subcases.
+                                Subcase 3.2.1. M0 ∩ E5 = ∅.
+                                                                                                                                 0µ
+                                Consider vertex s0L on the vertices of path Pu0 x0 or Pv0 y0 , where s0µ ∈ V ( Q4 ). Let s0L
+                         be in the vertices of path Pv0 y0 and have a neighbor on Pv0 y0 . We select a neighbor t0L of
+Symmetry 2025, 17, 995                                                                                                               12 of 17
+
+
+
+                         s0L ∈ V ( Q0L 4 ) for every µ ∈ { L, R } such that χ ( s0µ ) ̸ = χ ( t0µ ). Because M0R is a matching
+                         in Q0R4  −  s 0R , by Lemma 4, there exists a Hamiltonian path Ps0R t0R in Q4 containing M0R .
+                                                                                                                        0R
+
+                         Then, Pv0 y0 + Pu0 x0 + Ps0R t0R + C1 + {u0 u1 , v0 v1 , x0 x1 , y0 y1 , s0R s0L , t0R t0L } − {v1 y1 , u1 x1 , s0L t0L }
+                         is a Hamiltonian cycle in Q6 passing through M, as shown in Figure 6.
+                                Subcase 3.2.2. | M0 ∩ E5 | = 1.
+                                                                                                      0µ
+                                Let M0 ∩ E5 = {s0L s0R }, where s0µ ∈ V ( Q4 ). Given that the vertex s0L
+                         is either on Pu0 x0 or Pv0 y0 , we may assume s0L ∈ Pv0 y0 and has a neighbor on
+                         Pv0 y0 . Select a neighbor t0R of s0L ∈ V ( Q0L                4 ), for every µ ∈ { L, R } and holds that
+                         χ(s0µ ) ̸= χ(t0µ ). Because M0R is a matching in Q0R                        4 − s0R , by Lemma 4, there is a
+                         Hamiltonian path Ps0R t0R in Q0R             4   containing     M  0R  .  Thus,    C1 + Pv0 y0 + Pu0 x0 + Ps0R t0R +
+                         {u0 u1 , v0 v1 , x0 x1 , y0 y1 , s0R s0L , t0R t0L } − {v1 y1 , u1 x1 , s0L t0L } constructs a Hamiltonian cycle
+                         in Q6 containing M. (The presentation of subcase 3.2.1 and subcase 3.2.2 is similar to that
+                         depicted in Figure 6).
+
+
+
+
+                         Figure 6. Illustration of condition 3.2. Extension of matching M to Hamiltonian cycle.
+
+                               Case 4. | M ∩ E6 | = 3.
+                               Let M ∩ E6 = {u0 u1 , v0 v1 , w0 w1 }, where uϵ , vϵ , wϵ ∈ V ( Q5ϵ ). Given that | M ∩ Ei | = 3
+                         for i ∈ [6], divide Q6 at position i = 6 and assume that | M50 | ≤ | M51 |, and it follows
+                         that | M51 | ≤ 13. Thus, | M| ≤ 20, since ∑i∈[5] | M ∩ Ei | = | M0 | + | M1 | ≤ 17. Hence, we
+                         distinguish this case in two ways. If two vertices from {uϵ , vϵ , wϵ } are in one partite set
+                         while the remaining vertex is in the other partite set such that χ(uϵ ) = χ(vϵ ) ̸= χ(wϵ ). If
+                         all three vertices uϵ , vϵ , wϵ are in the same partite set then, χ(uϵ ) = χ(vϵ ) = χ(wϵ ).
+                               Subcase 4.1. If two vertices are in one partite set.
+                               Because χ(uϵ ) = χ(vϵ ) ̸= χ(wϵ ). Splitting Q5ϵ into 4-cube Q4ϵL and Q4ϵR at position k
+                         such that uϵ ∈ V ( Q4ϵL ) and vϵ ∈ V ( Q4ϵR ). Without loss of generality, let k = 5. Since
+                         χ(uϵ ) = χ(vϵ ) ̸= χ(wϵ ), by symmetry, we may suppose wϵ ∈ V ( Q4ϵL ). Given that
+                         | M0 ∩ E5 | + | M1 ∩ E5 | = | M ∩ E5 | = 3, similarly, assume | M0 ∩ E5 | ≤ 1. Let Mϵµ =
+                                      ϵµ
+                         Mϵ ∩ E( Q4 ) for every µ ∈ { R, L}.
+                               Subcase 4.1.1. M0 ∩ E5 = ∅.
+                               Given that χ(u1 ) ̸= χ(w1 ) and M1 is a matching in Q15 − u1 , by Lemma 11, there
+                         exists a Hamiltonian path Pu1 w1 in Q15 containing M1 . Since v1 has only one adjacent
+                         vertex in Q1L  4 , we choose a neighbor y1 of v1 on Pu1 w1 such that y1 ∈ V ( Q4 ). Given
+                                                                                                                    1R
+
+                         that y0 ∈ V ( Q0R 4 ) and χ ( u0 ) = χ ( v0 ) ̸ = χ ( w0 ) = χ ( y0 ), note that M0L is a matching in
+                           0L
+                         Q4 − u0 ; while M0R is matching in Q0R           4 − v0 , by Lemma 4, there exists a Hamiltonian
+                         paths Pu0 w0 in Q0L4  and    Pv0 y0 in Q 0R , containing M
+                                                                  4                   0L and M0R , respectively. Consequently,
+                         Pu1 w1 + Pu0 w0 + Pv0 y0 + {u0 u1 , w0 w1 , v0 v1 , y0 y1 } − {v1 y1 } constitutes a Hamiltonian cycle
+                         in Q6 that contains M, illustrated in Figure 7a.
+                               Subcase 3.1.2. | M0 ∩ E5 | = 1 and | M1 ∩ E5 | = 2.
+Symmetry 2025, 17, 995                                                                                                             13 of 17
+
+
+
+                                                                                                                                 0µ
+                               Let M0 ∩ E5 = {s0L s0R } and M1 ∩ E5 = {a1L a1R , b1L b1R }, where s0µ ∈ V (Q4 ) and
+                                           1µ
+                         a1µ , b1µ ∈ V (Q4 ). If χ(a1L ) ̸= χ(b1L ) and χ(u1 ) ̸= χ(w1 ), without loss of generality, we may
+                         assume χ(u1 ) = χ(b1L ) and χ(w1 ) = χ(a1L ). Consequently, χ(v1 ) = χ(a1R ) ̸= χ(b1R ).
+                                We claim that Q15 contains a Hamiltonian cycle C1 containing M1 , with both neighbors
+                         of v1 on C1 also belonging to V ( Q1R 4 ). Given that | M1 ∩ E5 | = 2, it follows that | M ∩ E5 | = 3.
+                         Consequently, | M ∩ Ei | = 3 for every i ∈ [5]. Let M1 ∩ E5 = { a1L a1R , b1L b1R }, where
+                                          1µ
+                         a1µ , b1µ ∈ V ( Q4 ). Therefore, χ( a1µ ) ̸= χ(b1µ ) for every µ ∈ { L, R}.
+                                                                                                                      1µ
+                              If | M1 ∩ E5 | = 1, then denote M1 ∩ E5 = { a1L a1R }, where a1µ ∈ V ( Q4 ). We choose a
+                         neighbor b1R of a1R in Q1R                                                           1R
+                                                    4 such that b1R ̸ = v1 , since a1R has four neighbors in Q4 . Thus,
+                         for every µ ∈ { L, R}, χ( a1µ ) ̸= χ(b1µ ).
+                                                                                                       1µ
+                               For the above two cases, since M1µ is matching in Q4 − a1µ , by Lemma 4, the
+                                                                1µ
+                         Hamiltonian paths Pa1µ b1µ in Q4 passing through M1µ and u1 w1 for each µ ∈ { L, R}. Let
+                         C1 = Pa1L b1L + Pa1R b1R + {a1L a1R , b1L b1R }. In the first case, since {u0 u1 , v0 v1 , a1L a1R , b1L b1R } ⊆
+                         M, we deduce that v1 ∈      / { a1R , b1R }. In the second case, because {u0 u1 , v0 v1 , a1L a1R } ⊆ M,
+                         we find v1 ̸= a1R ; consequently, v1 ∈     / { a1R , b1R }. Since u1 w1 is an edge in Q1L     4 , by Theorem
+                         2, construct a Hamiltonian cycle C1 in Q15 that includes M1 and u1 w1 , ensuring that the two
+                         neighbors of v1 on C1 are both vertices in V ( Q1R       4 ).
+                                Because u1 w1 is an edge in Q1L   4 , a Hamiltonian     cycle C1 passes through this edge. Select
+                         a neighbor y1 of v1 on C1 such that y0 ̸= s0R . Given that M0R is a matching in Q0R                       4 − v0 ,
+                         according to Lemma 4, there exists a Hamiltonian path Pv0 y0 in Q0R                4   containing    M 0R . Since
+                         s0R ∈ / {v0 , y0 }, we select a neighbor t0R of s0R on Pv0 y0 such that t0L ̸= w0 . Now, u0 , w0 , s0L ,
+                         t0L are pairwise distinct vertices in Q0L     4 , such that χ ( u0 ) = χ ( s0L ) and χ ( w0 ) = χ ( t0L ) with
+                         d(u0 , w0 ) = d(s0L , t0L ) = 1. Since M0L is a matching in Q0L        4 − { u0 , s0L } and | M0L | ≤ | M0R |,
+                         by Lemma 10, there exists a spanning 2-path Pu0 w0 + Ps0L t0L in Q0L              4 containing M0L . Hence,
+                         Pu0 w0 + C1 + Ps0L t0L + Pv0 y0 + {w0 w1 , u0 u1 , v0 v1 , y0 y1 , s0L s0R , t0L t0R } − {v1 y1 , u1 w1 , s0R t0R }
+                         constitutes a Hamiltonian cycle in Q6 containing M. (Note that the structure is analogous
+                         to subcase 3.1 in Subcase 3.1.2; readers can refer to the diagram (b) in Figure 5 by replacing
+                         xϵ by wϵ for more detail.)
+                                Now, if χ( a1L ) = χ(b1L ) and χ(u1 ) ̸= χ(w1 ), without loss of generality, we may
+                         assume χ(u1 ) = χ(b1L ) and χ(w1 ) = χ( a1L ). Consequently, χ(v1 ) = χ( a1R ) = χ(b1R ).
+                                We know that vertices w1 , u1 ∈ V ( Q1L          4 ), since χ ( u1 ) ̸ = χ ( w1 ). Consequently,
+                         d(w1 , u1 ) = 1. According to Lemma 11, there exists a Hamiltonian path Pu1 w1 in Q15
+                         containing M1 , since M1 is a matching in Q15 − u1 . We choose a neighbor y1 of v1 on Pu1 w1
+                         such that y1 ∈ V ( Q1R                                                    1R
+                                                 4 ) since v1 has just one neighbor in Q4 . By Lemma 4, there exists a
+                                                            0R
+                         Hamiltonian path Pv0 y0 in Q4 containing M0R , as M0R is a matching in Q0R                      4 − v0 . Since
+                         s0R ∈ / {v0 , y0 }, we choose a neighbor t0R of s0R on Pv0 y0 such that t0L ̸= w0 . Now, u0 , w0 ,
+                         s0L , t0L are pairwise distinct vertices in Q0L      4 , with χ ( u0 ) = χ ( s0L ), χ ( w0 ) = χ ( t0L ), and
+                         d(u0 , w0 ) = d(s0L , t0L ) = 1. Given that M0L is a matching in Q0L            4 − { u0 , s0L } and | M0L | ≤
+                         | M0R |, by Lemma 10, there exists a spanning 2-path Pu0 w0 + Ps0L t0L in Q0L                    4 containing
+                         M0L . Hence, Pu0 w0 + Pu1 w1 + Ps0L t0L + Pv0 y0 + {w0 w1 , u0 u1 , v0 v1 , y0 y1 , s0L s0R , t0L t0R } −
+                         {v1 y1 , s0R t0R } constitutes a Hamiltonian cycle in Q6 containing M, shown in Figure 7b.
+                                Subcase 4.2. If χ(uϵ ) = χ(vϵ ) = χ(wϵ ).
+                                The vertices uϵ , vϵ , wϵ are all in the same partite set. The 5-cube Q5ϵ can be divided into
+                         two 4-cubes, Q4ϵL and Q4ϵR , at position k where uϵ ∈ V ( Q4ϵL ) and vϵ ∈ V ( Q4ϵR ). Without loss
+                         of generality, suppose that k = 5, and given that χ(uϵ ) = χ(vϵ ) = χ(wϵ ), by symmetry, we
+                         may consider that wϵ ∈ V ( Q4ϵL ). Considering | M0 ∩ E5 | + | M1 ∩ E5 | = | M ∩ E5 | = 3, by
+                                                                                                               ϵµ
+                         symmetry, we may assume | M0 ∩ E5 | ≤ 1. Define Mϵµ = Mϵ ∩ E( Q4 ) for each µ ∈ { L, R}.
+Symmetry 2025, 17, 995                                                                                                               14 of 17
+
+
+
+
+                         Figure 7. Illustration of Case 4.1, matching M to Hamiltonian cycle. (a) Subcase 4.1.1; (b) Subcase 4.1.2.
+
+                               Subcase 4.2.1. M0 ∩ E5 = ∅, since χ(u1 ) = χ(w1 ).
+                               Let x1 be the unique vertex in Q1L         4 , such that d ( x1 , w1 ) = 4. It follows that d ( x1 , u1 ) = 1.
+                         Given that M1 is a matching in Q15 − u1 by Lemma 11, there is a Hamiltonian path Pu1 x1
+                         in Q15 passing through M1 . We choose a neighbor z1 of w1 on Pu1 x1 such that z1 ∈ V ( Q1L                       4 ),
+                         as w1 has only one neighbor in Q1L             4 . Since  d ( x 1 , w 1 ) = 4, it follows that z 1 ̸ = x 1 . Suppose
+                         M0L is matching in Q0L       4 − u0 , satisfying χ ( w0 ) = χ ( x0 ) ̸ = χ ( u0 ) such that | M0R | ≤ | M0L |.
+                         By Lemma 6, there exists a spanning 2-path Pu0 z0 + Px0 w0 in Q0L                    4 that containing M0L . We
+                         choose a neighbor y1 of v1 on Pu1 x1 such that y1 ∈ V ( Q1R                     4  ) and y0 ∈ V ( Q0R  4 ), since v1
+                                                               1R
+                         has only one neighbor in Q4 . By Lemma 4, there exists a Hamiltonian path Pv0 y0 in Q0R                           4
+                         containing M0R , since M0R is a matching in Q0R               4 − v0 . Thus, Pu1 x1 + Pu0 z0 + Px0 w0 + Pv0 y0 +
+                         {u0 u1 , x0 x1 , w0 w1 , v0 v1 , z0 z1 , y0 y1 } − {v1 y1 , w1 z1 } is a Hamiltonian cycle in Q6 passing
+                         through M, as depicted in Figure 8a.
+                               Subcase 4.2.2. | M0 ∩ E5 | = 1 and | M1 ∩ E5 | = 2.
+                                                                                                                                       0µ
+                               Let M0 ∩ E5 = {s0L s0R } and M1 ∩ E5 = { a1L a1R , b1L b1R }, where s0µ ∈ V ( Q4 ) and
+                                            1µ
+                         a1µ , b1µ ∈ V ( Q4 ). If χ( a1L ) ̸= χ(b1L ) and χ(u1 ) = χ(w1 ), without loss of generality, we
+                         may assume χ(u1 ) = χ(b1L ) and χ(w1 ) = χ( a1L ). Consequently, χ(v1 ) = χ( a1R ) ̸= χ(b1R ).
+                         We claim that M1 can be extended to a Hamiltonian cycle C1 in Q15 . Since | M1 ∩ E5 | = 2,
+                         we deduce that | M ∩ E5 | = 3. This implies | M ∩ Ei | = 3 for every i ∈ [5]. Therefore,
+                         χ( a1µ ) ̸= χ(b1µ ) for each µ ∈ { L, R}.
+                                                                                                                                         1µ
+                              | M1 ∩ E5 | = 1, as stated in subcase 4.1. Let M1 ∩ E5 = { a1L , a1R }, where a1µ ∈ V ( Q4 ).
+                         Since a1R has four neighbors in Q1R      4 . Therefore, we may choose a neighbor b1R of a1R in
+                         Q1R
+                           4 such  that  b1R ̸ = v 1 and χ ( a 1µ ̸ = χ ( b1µ ) for every µ ∈ { L, R }.
+                                                                 )
+                                                                                                          1µ
+                               By Lemma 4, there exist the Hamiltonian paths Pa1µ b1µ in Q4 passing through M1µ for
+                                                                                                                1µ
+                         every µ ∈ { L, R} for these two cases, since M1µ is a matching in Q4 − a1µ . Hence, C1 =
+                         Pa1L b1L + Pa1R b1R + { a1L a1R , b1L b1R }. In the first case, since {u0 u1 , v0 v1 , a1L a1R , b1L b1R } ⊆ M,
+                         we get v1 ∈ / { a1R , b1R }. In the second case, because {u0 u1 , v0 v1 , a1L a1R } ⊆ M, it follows
+                         that v1 ̸= a1R , and hence, v1 ∈       / { a1R , b1R }. Therefore, C1 is a Hamiltonian cycle in Q15
+                         passing through M1 such that both neighbors of v1 on C1 are in V ( Q1R                4 ).
+                                                                                                1L
+                               Let x1 be neighbor of u1 such that vertices u1 , x1 ∈ V (Q4 ) on C1 , and choose a neighbor
+                         z1 of w1 on C1 such that w0 ̸= s0L . Suppose vertices u0 and z0 are in the graph Q0L                  4 , where
+                                                                                 0L
+                         χ(u0 ) = χ(z0 ). Suppose M0L is matching in Q4 − u0 , satisfying χ(w0 ) = χ(x0 ) ̸= χ(u0 ); by
+                         Lemma 6, there is a spanning 2-path Pu0 z0 + Px0 w0 in Q0L        4 passing through M0L . Assume s0L
+                         is a vertex on Pw0 x0 such that χ(s0L ) ̸= χ(s0R ). Let vertices s0R and v0 be in the subgraph
+                         Q0R
+                           4 , where χ ( s0R ) = χ ( v0 ). Now, s0R , v0 , t0R , y0 are pairwise distinct vertices in Q4 , with
+                                                                                                                                 0R
+
+                         χ(s0R ) = χ(v0 ), χ(t0R ) = χ(y0 ), and d(s0R , t0R ) = d(v0 , y0 ) = 1. Since M0R is a matching
+Symmetry 2025, 17, 995                                                                                                                     15 of 17
+
+
+
+                         in Q0R
+                              4 − { s0R , v0 }, and we have | M0R | ≤ | M0L |, by Lemma 10, there exists a spanning
+                         2-path Ps0R t0R + Pv0 y0 in Q0R   4 passing through M0R . Hence, C1 + Ps0R t0R + Pu0 z0 + Pv0 y0 +
+                         Pw0 x0 + {s0L s0R , t0L t0R , x0 x1 , y0 y1 , u0 u1 , v0 v1 , s0R s0L , t0R t0L } − {v1 y1 , u1 x1 , w1 z1 , s0L t0L } is a
+                         Hamiltonian cycle containing M in Q6 , as shown in Figure 8b.
+
+
+
+
+                         Figure 8. Illustration of Case 4.2, matching M to Hamiltonian cycle. (a) Subcase 4.2.1; (b) Subcase
+                         4.2.2 when χ( a1L ) ̸= χ(b1L ).
+
+                                Now, if χ( a1L ) = χ(b1L ) and χ(u1 ) = χ(w1 ), without loss of generality that we may
+                         assume χ(u1 ) = χ(b1L ) and χ(w1 ) = χ( a1L ). Consequently, χ(v1 ) = χ( a1R ) = χ(b1R ).
+                                Because χ(u1 ) = χ(w1 ) such that w1 , u1 ∈ V ( Q1L                4 ), according to Lemma 11, there
+                         exists a Hamiltonian path Pu1 x1 in Q15 containing M1 , since M1 is a matching in Q15 − u1 .
+                         Let x1 be a neighbor of u1 such that vertices u1 , x1 ∈ V ( Q1L              4 ) on C1 , and choose a neighbor
+                         z1 of w1 on C1 . Suppose vertices u0 and z0 are in the graph Q0L                        4 , where χ ( u0 ) = χ ( z0 ).
+                                                               0L
+                         Suppose M0L is matching in Q4 − u0 , satisfying χ(w0 ) = χ( x0 ) ̸= χ(u0 ), then by Lemma 6,
+                         there exists a spanning 2-path Pu0 z0 + Px0 w0 in Q0L            4 passing through M0L . Suppose s0L is a
+                         vertex on Pw0 x0 such that χ(s0L ) ̸= χ(s0R ). Let vertices s0R and v0 be in the subgraph Q0R                          4 ,
+                         where χ(s0R ) = χ(v0 ). Now, s0R , v0 , t0R , y0 are pairwise distinct vertices in Q0R                  4  ,  such  that
+                         χ(s0R ) = χ(v0 ), χ(t0R ) = χ(y0 ) and d(s0R , t0R ) = d(v0 , y0 ) = 1. Because M0R is a matching
+                         in Q0R4 − { s0R , v0 } and we have | M0R | ≤ | M0L |, according to Lemma 10, there exists
+                         a spanning 2-path Ps0R t0R + Pv0 y0 in Q0R        4 containing M0R . Hence, Pu1 x1 + Ps0R t0R + Pu0 z0 +
+                         Pv0 y0 + Pw0 x0 + {s0L s0R , t0L t0R , x0 x1 , y0 y1 , u0 u1 , v0 v1 , s0R s0L , t0R t0L } − {v1 y1 , w1 z1 , s0L t0L } is
+                         a Hamiltonian cycle in Q6 containing M, as shown in Figure 9.
+
+
+
+
+                         Figure 9. Depiction of case when χ( a1L ) = χ(b1L ), extension of matching M to Hamiltonian cycle.
+
+                              Next, we aim to generalize this result to the n-dimensional hypercube, denoted by Qn ,
+                         specifying the matchings as described above. In particular, we will consider matchings
+                         that contain edges at most in six directions and that avoid covering all pairs of vertices at a
+                         distance of 3 and can extend to a Hamiltonian cycle in Qn .
+Symmetry 2025, 17, 995                                                                                               16 of 17
+
+
+
+                         Theorem 13. For n ≥ 3, let M be a matching in the hypercube Qn such that |{i ∈ [n] : M ∩ Ei ̸=
+                         ∅}| ≤ 6 and does not cover every two vertices at a distance of 3. Then, there exists a Hamiltonian
+                         cycle in Qn containing M.
+
+                         Proof. Given that in the hypercube Qn , for n ≥ 3, any matching consisting of edges at most
+                         in six directions and does not cover every pair of vertices at a distance of 3, we prove the
+                         theorem by induction on n.
+                               First, we address the base case. For n ∈ {2, 3, 4, 5}, where M is any matching in Qn ,
+                         the result directly follows Theorem 2. When n = 6, then Theorem 12 proves the result. Now
+                         assume n ≥ 7 and with the given restrictions on matching M; thus, M is not perfect. The
+                         matching M is at most in six directions and does not cover a pair of vertices at a distance of
+                         3. Without loss of generality, we may assume that these directions are among {1, 2, 3, 4, 5, 6}.
+                         Therefore, M ⊆ E1 ∪ E2 ∪ E3 ∪ E4 ∪ E5 ∪ E6 .
+                               Select a coordinate position j ∈ {1, . . . , n} such that one of the following holds:
+                         •    | M ∩ Ej | = 2 and the edges in M ∩ Ej are adjacent;
+                         •    | M ∩ Ej | = 1 with M ∩ Ej = {u0 u1 }, and there exists a neighbor vϵ ∈
+                                                                                                    / M;
+                         •    M ∩ Ej = ∅, and there exists an edge uϵ vϵ ∈ / M for each ϵ ∈ {0, 1}.
+                               Split Qn into its two (n − 1)-dimensional subcubes Q0n−1 and Q1n−1 along the j-th
+                         dimension. This is because the matching M is restricted and the size is at most 2n−2 . Without
+                         loss of generality, | M0 | ≤ 2(n−1)−2 and | M1 | ≤ 2(n−1)−2 according to the given restrictions
+                         on matching M. By the induction hypothesis, there exists a Hamiltonian cycle C0 in the
+                         subcube Q0n−1 which contains all the edges of M0 . Choose an edge u0 v0 ∈ C0 such that the
+                         corresponding vertices u1 , v1 ∈ V ( Q1n−1 ) satisfy u1 , v1 ∈ / V ( M1 ). Then, M1 ∪ {u1 v1 } is a
+                         matching in Q1n−1 ; by the induction hypothesis, there exists a Hamiltonian cycle C1 in Q1n−1
+                         that passes through all edges in M1 ∪ {u1 v1 }. Thus, the required Hamiltonian cycle in Qn
+                         is C := C0 + {u0 u1 , v0 v1 } + C1 − {u0 v0 , u1 v1 }, which passes through all edges of M in Qn .
+                         This is a required proof.
+
+                         4. Conclusions
+                              In this study, we examined the extension of matchings to Hamiltonian cycles in the
+                         hypercube Qn for n ≥ 3. Building on previous work that resolved the case for perfect
+                         matchings, we focused on matchings with structural constraints, specifically for those that
+                         avoid covering pairs of vertices at a distance of three and consist of edges at most in six
+                         distinct directions. We proved that such matchings are always extendable to a Hamiltonian
+                         cycles. This result contributes a new partial solution to the open problem posed by Ruskey
+                         and Savage, advancing our understanding of the Hamiltonian extensions in hypercubes.
+
+                         Author Contributions: Conceptualization, A.A. and W.Y.; Methodology, A.A. and W.Y.; Software,
+                         D.A.M.; Validation, G.A. and I.-L.P.; Investigation, G.A., I.-L.P. and D.A.M.; Resources, G.A.; Data
+                         curation, G.A. and D.A.M.; Writing—original draft, A.A.; Supervision, W.Y.; Project administration,
+                         I.-L.P.; Funding acquisition, I.-L.P. All authors have read and agreed to the published version of
+                         the manuscript.
+
+                         Funding: This research received no external funding.
+
+                         Data Availability Statement: The original contributions presented in this study are included in the
+                         article. Further inquiries can be directed to the corresponding author.
+
+                         Acknowledgments: The authors would like to thank the anonymous referee for their constructive
+                         comments.
+
+                         Conflicts of Interest: The authors have no conflicts of interest.
+Symmetry 2025, 17, 995                                                                                                           17 of 17
+
+
+
+References
+1.    Gros, L. Theorie du Baguenodier; Aimé Vingtrinier: Lyon, France, 1872.
+2.    Alahmadi, A.; Aldred, R.E.; Alkenani, A.; Hijazi, R.; Solé, P.; Thomassen, C. Extending a perfect matching to a Hamiltonian cycle.
+      Discret. Math. Theor. Comput. Sci. 2015, 17. [CrossRef]
+3.    Feder, T.; Carlos, S. Nearly tight bounds on the number of Hamiltonian circuits of the hypercube and generalizations. Inf. Process.
+      Lett. 2009, 109, 267–272. [CrossRef]
+4.    Caha, R.; Koubek, V. Spanning multi-paths in hypercubes. Discrete Math. 2007, 307, 2053–2066. [CrossRef]
+5.    Dvorák, T. Hamiltonian cycles with prescribed edges in hypercubes. SIAM J. Discrete Math. 2005, 19, 135–144. [CrossRef]
+6.    Fink, J. Connectivity of matching graph of hypercube. SIAM J. Discrete Math. 2009, 23, 1100–1109. [CrossRef]
+7.    Alaeiyan, M. Characteristics and eigenvalues of the newly defined Ala graph. Phys. Scr. 2025, 100, 055201. [CrossRef]
+8.    Ruskey, F.; Carla, S. Hamilton cycles that extend transposition matchings in Cayley graphs of Sn . Siam J. Discret. Math. 1993, 6,
+      152–166. [CrossRef]
+9.    Kreweras, G. Matchings and Hamiltonian cycles on hypercubes. Bull. Inst. Combin. Appl. 1996, 16, 87–91.
+10.   Fink, J. Perfect matchings extend to Hamilton cycles in hypercubes. J. Comb. Theory Ser. B 2007, 97, 1074–1076. [CrossRef]
+11.   Fink, J. Matching graphs of hypercubes and complete bipartite graphs. Eur. J. Comb. 2009, 30, 1624–1629. [CrossRef]
+12.   Gregor, P. Perfect matchings extending on subcubes to Hamiltonian cycles of hypercubes. Discret. Math. 2009, 309, 1711–1713.
+      [CrossRef]
+13.   Dimitrov, D.; Dvorak, T.; Gregor, P.; Skrekovski, R. Gray codes avoiding matchings. Discrete Math. Theoret. Comput. Sci. 2009, 11,
+      123–148. [CrossRef]
+14.   Wang, F.; Zhao, W. Matchings extend to Hamiltonian cycles in 5-cube. Discuss. Math. Graph Theory 2018, 38, 217–231. [CrossRef]
+15.   Limaye, N.B.; Sarvate, D.G. On r-extendability of the hypercube Qn . Math. Bohem. 1997, 122, 249–255. [CrossRef]
+16.   Jennifer, V.; West, D.B. Matching extendability in hypercubes. SIAM J. Discret. Math. 2009, 23, 1539–1547.
+17.   Fan, W.; Zhang, H. Small matchings extend to Hamiltonian cycles in hypercubes. Graphs Comb. 2016, 32, 363–376.
+18.   Dvořák, T.; Jiří, F. Gray codes extending quadratic matchings. J. Graph Theory 2019, 90, 123–136. [CrossRef]
+19.   Bondy, J.; Murty, U. Graph Theory with Applications; Macmillan Press: London, UK, 1976.
+20.   Wang, F.; Zhang, H.P.; Zhang, H.P. Two types of matchings extend to Hamiltonian cycles in hypercubes. ARS Combin. 2015, 118,
+      269–283.
+21.   Wang, S.; Fan, W. A kind of matchings extend to Hamiltonian cycles in hypercubes. Rairo-Oper. Res. 2024, 58, 5237–5254.
+      [CrossRef]
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
+

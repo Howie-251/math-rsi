@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,xcolor,hyperref}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Q}{Q_n}
+\title{Matching extensions: local proof audits}
+\author{ARIS-assisted local derivation}
+\date{November 1, 2026}
+\begin{document}
+\maketitle
+\noindent\fcolorbox{blue!60!black}{blue!5}{\parbox{.94\linewidth}{
+The result below is a restricted theorem, relative to the stated imported results.
+The full six-direction problem remains open in this work. Review is same-family
+and provisional; no novelty or formal-verification claim is made.}}
+
+\section*{Statement and imports}
+\begin{theorem}
+Let $n\ge5$, let $M\subseteq E(\Q)$ be a matching, and let $u$ be uncovered.
+Suppose a cube matching $L\supseteq M$ covers every vertex except $u,w$.
+For every vertex $v$ of parity opposite to $u$, there is a Hamilton $u$--$v$
+path in $\Q$ containing $M$.
+\end{theorem}
+The imported results are Fink's perfect-matching cycle theorem, the
+prescribed-endpoint theorem of Gregor, Novotny and Skrekovski for perfect matchings
+of $B(\Q)$, and the five-direction prescribed-endpoint theorem in the supplied
+Fink--Hotmar paper. Their computer-assisted bases were not rerun here.
+
+\section*{The key obstruction lemma}
+\begin{lemma}
+Let $P$ be a perfect matching of $B(\Q)$, let $x,y$ have opposite parity, and
+suppose $xy\notin P$. Write $a=P(x)$, $b=P(y)$. If
+$R=(P\setminus\{xa,yb\})\cup\{ab\}$ contains a half-layer, the cube edges of
+$P$ use at most three directions.
+\end{lemma}
+\begin{proof}
+For an $i$-half-layer with endpoint set $S$, put $T=V(\Q)\setminus S$.
+Both induced cube graphs on $S,T$ have only $i$-edges. Since $R$ avoids $x,y$,
+both vertices lie in $T$. If $ab$ is not in the half-layer, that entire
+half-layer belongs to $P$ and saturates $S$. All short edges of $P$ then have
+direction $i$. Otherwise the half-layer minus $ab$ belongs to $P$; only
+$xa,yb$ can cross between $S,T$. All other short edges have direction $i$,
+and the two exceptional edges introduce at most two additional directions.
+\end{proof}
+
+\section*{Main construction}
+If $v=w$, add the artificial edge $uw$, apply Fink's cycle theorem, and
+delete $uw$. If $uw$ is a cube edge, the known perfect-completion case
+applies. If $L$ uses at most three directions, the known five-direction
+endpoint theorem applies because $u$ is uncovered.
+
+In the remaining case $uw$ is long and $L$ uses at least four directions.
+Set $P=L\cup\{uw\}$. Choose a cube neighbor $x$ of $w$ other than $P(v)$;
+at most one of the $n$ neighbors is excluded. Here $x\ne u$, and $x,v$
+have opposite parity with $xv\notin P$.
+The lemma rules out a compressed half-layer. The prescribed-endpoint theorem
+gives a Hamilton $x$--$v$ path $K$ containing $P$, with all added edges short.
+
+A Hamilton path containing a perfect matching alternates matching and
+nonmatching edges: its matching edges occupy positions $(0,1),(2,3),\ldots$.
+Since $x$ has the parity of $u$, the artificial edge occurs in the direction
+$u\to w$. Deleting it leaves disjoint spanning components $K[x,u]$ and
+$K[w,v]$. Reverse the first and add the cube edge $xw$ to obtain
+\[
+u\leadsto x\;--\;w\leadsto v.
+\]
+All vertices are visited once, all edges are now cube edges, and no edge of
+$L$ was deleted. This proves the restricted theorem.
+
+\section*{Exact remaining completion obstruction}
+Let $F=V(\Q)\setminus V(M)$, and partition $F=E\cup O$, with $u\in E$ and
+$E$ the parity class of $u$. The two sides have equal size. A suitable $L$
+exists for some $w\in O$ exactly when
+\[
+|N_F(S)|\ge |S|\qquad\hbox{for every }S\subseteq E\setminus\{u\}.
+\]
+This is Hall's theorem on the residual graph with $u$ removed. In $Q_6$,
+every $31$-edge matching is therefore covered. For a $30$-edge matching with
+holes $u,z\in E$ and $w,t\in O$, the condition reduces to $z$ being adjacent
+to at least one of $w,t$. Failure is a completion obstruction, not a
+Hamilton-path counterexample.
+
+\section*{Audit and evidence}
+No substantive gap was found by the fresh reviewer. Two editorial items
+were repaired: the dimension $n\ge2$ in the earlier cycle-deletion lemma,
+and the existential quantifier on the second hole in Hall's criterion.
+The dependency graph is acyclic; experiments are not proof premises.
+
+The independent rigidity enumeration checked all $40\,320$ bipartite perfect
+matchings in $Q_4$ and $2\,257\,920$ admissible endpoint pairs. All $5\,376$
+half-layer cases satisfied the direction bound. Sixteen six-dimensional
+instances exercised the artificial-edge deletion and splice, with every
+final witness checked. Ninety-six single-bridge samples had three-bridge
+witnesses; this does not prove the corresponding universal assertion.
+
+\noindent\fcolorbox{orange!70!black}{orange!5}{\parbox{.94\linewidth}{
+Still open here: matchings failing the residual Hall condition and not
+covered by the other known sufficient conditions. The entire $P_6$
+obligation has not been discharged.}}
+\newpage
+\section*{Four-hole continuation: one displaced edge}
+\begin{theorem}
+Let $n\ge5$, let $M$ be a cube matching avoiding $u$, and let $u,v$ have
+opposite parity. Suppose a cube matching $L$ avoids exactly $u,v$ and
+$|M\setminus L|\le1$. Then a Hamilton $u$--$v$ path containing $M$ exists.
+\end{theorem}
+\begin{proof}
+If $M\subseteq L$, use the cycle-deletion argument. Otherwise write
+$M\setminus L=\{ab\}$. If $L$ uses at most three directions, $M$ uses at
+most four and the known five-direction endpoint theorem applies.
+Otherwise set $P=L\cup\{uv\}$. This is a perfect bipartite matching with
+at least four short directions. Since $u$ is uncovered by $M$, $ab\ne uv$
+and $ab\notin P$. The obstruction lemma rules out a compressed half-layer
+at $a,b$. The known endpoint theorem gives a Hamilton $a$--$b$ path through
+$P$. Add the short edge $ab$ to close the cycle, then delete $uv$.
+The result contains every edge of $M$ and has no artificial long edge.
+\end{proof}
+For four holes $u,z$ of one parity and $w,t$ of the other, a three-edge
+augmenting path $z$--$a$--$b$--$t$ with $ab\in M$ supplies
+$L=(M\setminus\{ab\})\cup\{za,bt\}$, proving the $u$--$w$ case.
+This does not give every prescribed endpoint. In fact, if $v$ is covered
+by $M$, the displaced edge must meet $v$ and this completion criterion
+already implies the earlier root-preserving near-perfect criterion.
+
+\section*{A necessary extra-cut bound}
+For the remaining covered-target case, start with a Hamilton $x$--$v$
+extension of $P=M\cup\{uw,zt\}$. Remove both artificial edges without
+adding them back, remove $k$ other nonmatching edges, and add only cube
+edges to obtain a $u$--$v$ path. Then
+\[
+k\ge\frac{\min\{d(z,w),d(z,t)\}-1}{2}.
+\]
+Indeed, let $D$ be the actually removed nonmatching edges and $A$ the
+actually added edges. $D$ is a matching. In $A\cup D$, the excess of added
+degree is one at $x,z,w,t$ and zero elsewhere. Alternating-trail
+decomposition pairs these four terminals. The trail starting at $z$ must
+end at $w$ or $t$, has length at most $2k+1$, and consists of cube edges.
+Hamming distance gives the bound. When both distances are five, at least
+two extra cuts are necessary.
+
+\section*{Audit status and evidence}
+A fresh reviewer found no substantive F1--F5 gap; the standalone dimension
+assumption was made explicit. The six possible orders of three cuts were
+checked independently: four reconnect to a spanning path, two leave a
+separate cycle. Four new displaced-edge examples and forty covered-target
+repairs passed independent witness checking. Sixteen of the latter have
+distance-five holes and attain the two-extra-cut lower bound.
+
+\noindent\fcolorbox{orange!70!black}{orange!5}{\parbox{.94\linewidth}{
+Still unproved: universal existence of compatible extra cuts for every
+remaining matching and covered target. The forty examples are not an
+exhaustive proof. Review remains same-family and provisional.}}
+\end{document}

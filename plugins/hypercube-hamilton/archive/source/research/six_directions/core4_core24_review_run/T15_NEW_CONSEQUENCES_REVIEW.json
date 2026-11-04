@@ -1,0 +1,337 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_imports",
+  "summary": "Same-face zero-crossing T15 proof sound modulo T44_5. Independent Q4 and raw-coordinate geometry checks pass; eight-core coverage conditional on separate core theorem audit. Prescription analysis sound modulo CF1 and T44_5. Full T15 and P6 remain open.",
+  "generated_at": "2026-11-01T09:34:56.473769+00:00",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_family": "openai",
+  "reviewer_agent_id": "/root/t15_new_consequences_audit",
+  "review_topology": "Fresh delegated scoped reviewer; no additional subreviewer or cross-family overlay.",
+  "trace_path": "T15_NEW_CONSEQUENCES_REVIEW.md",
+  "audited_input_hashes": {
+    "T15_SAMEFACE_ZERO_CROSSING.md": "sha256:1aec13d85973868163a2560945de84abf6a459f45382f8c8b53e35c020df0be5",
+    "T15_SAMEFACE_ZERO_CROSSING_check.py": "sha256:dba26b851acb6732ef6c2c977af9d6a29bb91bb799fbb4b1838ac76651be7946",
+    "T15_SAMEFACE_ZERO_CROSSING_check.json": "sha256:8bd9bb14e57cc1c964ebcdba69bb18a88586c70b2863f9beca88ed6b7ab051c4",
+    "T15_PRESCRIPTION_ANALYSIS.md": "sha256:44039b1a19d426f430455cb42011fc55849e09cfb0bb34fba7e719ad2ec47aaf",
+    "T15_EDGE_PRESCRIPTION_REDUCTION.md": "sha256:afd094ab2235517b1514bb9b8c439602cb74dcad572a0e7a8e0b1c4504314e8a",
+    "A4_SPANNING_FACTOR.md": "sha256:08b78af7f4388089c6e3329b2f95dc3d538551447af17aa97baf9fa85207edc9",
+    "A4_FACTOR_REVIEW.md": "sha256:4ccedd316c14d5249e659e17ae7953e6f30e4502b1d121edd05d6310bd8abbba",
+    "A4_FACTOR_REVIEW.json": "sha256:fc1b87e84e7d6804dd8f5dd899eba3a4304f68101c312303289dbbe50a6ef2c8",
+    "eight_after_single_face_cores.py": "sha256:9a7db4272bc8d265e5d9a492fc5a29c8ed9049d58a2e57893bdb1b5e898a83f0",
+    "eight_after_single_face_cores.json": "sha256:85bc41d16de013c87f87c1ac5d9aa95ef50fd05059f210ee12205d7b492c6c3a",
+    "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+    "remaining_eight_after_a1b4_1.bin": "sha256:513232065496c0a18d8147fef8f2b9484d8da450baf5ba82f2b1f6cdaa3e3d4b",
+    "remaining_eight_after_a1b4_7.bin": "sha256:d33b86a89e757879c313745c16021ba9d00fe9ae149b0e45b89bcf5b6426758c",
+    "remaining_eight_after_a1b4_31.bin": "sha256:a60e74136c5ed5cdd0d750caed514a39691152b9c0b0dbb2a59313263a7cb051",
+    "remaining_eight_after_single_face_1.bin": "sha256:d0c58032c0984c724580f061f683b802ac10ee09de437a14ba360334f4600404",
+    "remaining_eight_after_single_face_7.bin": "sha256:6936887bdc0cddbacc2e8cd6f79fa57a6938bfd875010d97b370ea7c034b6e0a",
+    "remaining_eight_after_single_face_31.bin": "sha256:2edbdf8371ef8ef89895e2d4cc7478f1804bb985d678eac5aeafd43b72a50c18",
+    "q4_t15_path_abundance.cpp": "sha256:c7bf6cf0f0e13b6f5054e2e403a8faff2f7c02b270682d8ef78a000fa5633ece",
+    "q4_t15_path_abundance_generation.json": "sha256:342bf4c1e0eb0612db11c991ab9ae4189696a27da94c28d9ab1d9cb0ebd61235",
+    "Q4_T15_CLASSIFICATION.md": "sha256:bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc",
+    "Q4_PERFECT_ENDPOINT_ABUNDANCE.md": "sha256:aea312b744c6c6902128007c8a08853b32980eeae5c7ecb83429b3b52feb57a8",
+    "q4_perfect_endpoint_abundance_check.py": "sha256:f52bfe2dc2a3b5d428fbfdbeb6d02c59c7bc9f5c1de0fd9ef95fbe8f71ad84ac",
+    "q4_perfect_endpoint_abundance_check.json": "sha256:279c23327ae0df44418f3511239307bd8a958916d0f0d188bdeb2c61c690558b",
+    "T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "q4_distance1_avoided_table.bin": "sha256:69b03389a16dc77b77ab1ded94d8d760728452759df2f035f8362a2f46294d86",
+    "q4_distance3_avoided_table.bin": "sha256:3d4026b7276ebc8bf94be7e184ddcfcfa8f98f3f3b9aeef39298abfb3900b150",
+    "q4_t15_path_abundance_1_2.bin": "sha256:186a832feb4f9c8fd010304440696e7d645abf4ecd619e6425708f0f66c4fb3e",
+    "q4_t15_path_abundance_2_4.bin": "sha256:d8bd56edeff6338af193833a3270b795fdda676ac48f497527cdec97975476ab",
+    "q4_t15_path_abundance_1_14.bin": "sha256:b1539d309cd624666fc7ab5f144364d34febd01c0674d4846c7a99a6505bb981",
+    "q4_t15_path_abundance_2_14.bin": "sha256:787c4d20408fcf741200ac9ad7fe35f9ec61c3c33e9fd2ccd6055741e57aeb7a"
+  },
+  "details": {
+    "issues": [],
+    "proof_obligations_closed": [
+      "SF1",
+      "SF2",
+      "SF3",
+      "SF4",
+      "SF5",
+      "SF6",
+      "SF7",
+      "SF8",
+      "SF9",
+      "SF10",
+      "SF11",
+      "SF12",
+      "SF13"
+    ],
+    "deterministic_check_status": "PASS",
+    "independent_checker": "T15_NEW_CONSEQUENCES_REVIEW_check.py",
+    "independent_checker_sha256": "195064d14f7f6110cebefe6992572561a4fc2f4450486769ca8452b958755bf9",
+    "check_result_sha256": "d1517e265ac4b81ab6880087ad329e57aaeeaed184d46699ca84f4f0c0b42218",
+    "source_proofs_modified": false,
+    "global_state_modified": false,
+    "q4_positive_circles": 270166,
+    "q4_negatives_exhaustively_checked": 104,
+    "q4_positive_paths": 22260,
+    "sameface_zero_crossing_sound_modulo_T44": true,
+    "prescription_analysis_sound_modulo_CF1_T44": true,
+    "geometry_consequences": {
+      "previous_remaining": 41458,
+      "newly_covered": 7820,
+      "remaining": 33638,
+      "remaining_with_a2b1": 33588,
+      "remaining_without_a2b1": 50,
+      "newly_by_target": {
+        "1": 2610,
+        "7": 2490,
+        "31": 2720
+      },
+      "remaining_by_target": {
+        "1": 9385,
+        "7": 11663,
+        "31": 12590
+      },
+      "remaining_choice_patterns": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          15
+        ],
+        [
+          17,
+          23,
+          24
+        ],
+        [
+          18,
+          26
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          22,
+          23,
+          24
+        ],
+        [
+          23
+        ],
+        [
+          24
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          27
+        ],
+        [
+          30,
+          41,
+          44
+        ],
+        [
+          34,
+          44,
+          46
+        ]
+      ],
+      "forced_remaining_cores": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        10,
+        15,
+        23,
+        24,
+        27
+      ],
+      "minimum_additional_core_cover": 14,
+      "selected_additional_cores": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        15,
+        23,
+        24,
+        26,
+        27,
+        44
+      ],
+      "a2b1_cuts_checked": 112199,
+      "disjoint_groups": [
+        {
+          "vertices": [
+            18,
+            21,
+            25,
+            26
+          ],
+          "constraints": [
+            [
+              18,
+              26
+            ],
+            [
+              21,
+              26
+            ],
+            [
+              25,
+              26
+            ]
+          ],
+          "common_choices": [
+            26
+          ],
+          "selected": 26
+        },
+        {
+          "vertices": [
+            6,
+            7,
+            9
+          ],
+          "constraints": [
+            [
+              6,
+              7
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "common_choices": [
+            7
+          ],
+          "selected": 7
+        },
+        {
+          "vertices": [
+            30,
+            34,
+            41,
+            44,
+            46
+          ],
+          "constraints": [
+            [
+              30,
+              41,
+              44
+            ],
+            [
+              34,
+              44,
+              46
+            ]
+          ],
+          "common_choices": [
+            44
+          ],
+          "selected": 44
+        }
+      ],
+      "candidate_cores": [
+        13,
+        14,
+        19,
+        31,
+        32,
+        35,
+        37,
+        38
+      ],
+      "raw_new_bin_sets_equal": true,
+      "without_a2b1_by_target": {
+        "1": 10,
+        "7": 20,
+        "31": 20
+      },
+      "core_map_used_to_generate_choices": false,
+      "matching_realizability_checked": false
+    },
+    "imports": [
+      "T44_5, current source and PASS review hash verified; not reaudited",
+      "CF1, current source and PASS review hash verified; full GF5/Hall proof not reaudited",
+      "Eight candidate T15 core theorems require separate fresh-agent audit; not reproved here",
+      "Previous a1b4 raw remaining bins accepted as declared input universe"
+    ],
+    "limitations": [
+      "Normalized hole geometry counts are not matching counts or realizability certificates",
+      "Minimum 14 applies only to additional whole-orbit core cover in this a2b1 scheme",
+      "50 no-a2b1 geometries remain beyond that cover",
+      "No universal connected prescription is proved"
+    ],
+    "full_T15_proved": false,
+    "full_eight_hole_proved": false,
+    "full_P6_proved": false,
+    "A4_authoritative_state": {
+      "status": "complete Q5 A4 established",
+      "proof": "CANONICAL_A4_CLOSURE.md",
+      "review": "CANONICAL_COMPLETION_REVIEW",
+      "independently_reaudited_here": false,
+      "remaining_open": "Additional prescribed-edge connected A4 extension, full T15, and P6"
+    },
+    "report_md_sha256": "e0fd58ce5f3828efd7f204352528d7ae5d7018b72f8c4db20f76d0faff45c24d"
+  },
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_fork_turns": "none",
+  "reviewer_route_authority": "Explicit user-specified model and reasoning effort, relayed by parent; overrides skill default."
+}

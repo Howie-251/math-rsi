@@ -1,0 +1,269 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "partial_augmentation_delta123_and_exact_geometry_reduction_complete_modulo_imports",
+  "summary": "A8 augmentation and every delta1/2/3 cut pass for arbitrary matchings; all writer geometry fields independently reconstruct to2700 total/2540 proved/160 residual in5 orbits. Full A8 remains open.",
+  "generated_at": "2026-11-01T12:31:01.927039+00:00",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_task": "/root/ten_hole_free_closure_audit",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "model_override_source": "Explicit user-selected model/effort relayed by parent",
+  "trace_path": "A8_PARTIAL_REVIEW.md",
+  "audited_input_hashes": {
+    "A8_PARTIAL_PROOF_PACKAGE.md": "sha256:3133642eb22daa30c48253dcd97a3a808e8f3169a4c3256af8240ae0f8bd2a5f",
+    "A8_geometry_census.py": "sha256:703eaca9809ffd60763efee4b02653e6b8ede52576c3b562295cc36455929165",
+    "A8_geometry_census.json": "sha256:6a14ee7e95d2d64acac314d1b2fe21211a2c788b039acf2ad1ba46b14e47855e"
+  },
+  "imported_dependency_hashes": {
+    "A6_CLOSURE_DRAFT.md": "sha256:914f70385c2808f2e3fbb16fde140a34c662b7fa4e4560706970ff7109f2240c",
+    "A6_CLOSURE_REVIEW.md": "sha256:305f6ff77fdb5bdae62ea3eb4f42d4473977dde8d0edef1cddadd205705e82b8",
+    "A6_CLOSURE_REVIEW.json": "sha256:9ae5ae2fa572fe6f5b74f6c126d13b105f621fbcbbee1ea3a588ea0722999123",
+    "Q4_GENERAL_AUGMENTATION.md": "sha256:a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b",
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "Q4_CORE_REVIEW.json": "sha256:faa04c0227106bde4a3d3eceb2997155d36acfcc7c92d572ccdcd4ae10c7c759",
+    "A6_FINITE_INPUTS_REVIEW.md": "sha256:223fe1eec3f659dd1c844d81c45f904cf5ea7e009b8b8acc2cd31d5bda48da18",
+    "A6_FINITE_INPUTS_REVIEW.json": "sha256:021d7e7b5080cf14c6c6dbe4c98039b924faae3a199b8ad975f66d48e4d330b9",
+    "Q5_HIGHER_HOLE_REDUCTION_REVIEW.md": "sha256:3677414211dbbcbc67ea3ebd323165148430d0296f5a257903006579446b75d9",
+    "Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "sha256:ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "Q5_HIGHER_HOLE_REDUCTION_REVIEW_check.py": "sha256:cb86156ce6d2fdabeed1ffa2be38c3b75768f61539b45d2ae840eaf99d36ec7b",
+    "Q5_HIGHER_HOLE_REDUCTION_REVIEW_check.json": "sha256:1acef839f4b455bd6d784773d741e076455ba80db13e8eb0ac33500641f2eb36",
+    "q5_higher_hole_reduction_geometry.py": "sha256:17886f3e9e1671603cce2e18370eb470cd7370be2dbe18153d528f8b3f66e3cc",
+    "q5_higher_hole_reduction_geometry.json": "sha256:6aba7b866c2a207489e2f8fe049a774e776058f3376b2995d0c27fd463ebf59d"
+  },
+  "checker_artifact_hashes": {
+    "A8_PARTIAL_REVIEW_check.py": "sha256:5605966b42a96a3cc927e1f0ea6669acda3d0acfebbc5487a6be3dabb95f06e3",
+    "A8_PARTIAL_REVIEW_check.json": "sha256:1f22ffcc370a2e547e21f1a7e805c294e99eb8f87f449918e81cb23d39c32615"
+  },
+  "report_hash": "sha256:689182f8e17f727996a63adf2441cb3aa222352fd46622f9ea42a0ee830bc7cc",
+  "details": {
+    "issues": [],
+    "open_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "proof_obligations_closed": 16,
+    "independent_check": {
+      "status": "PASS",
+      "audited_input_hashes": {
+        "A8_PARTIAL_PROOF_PACKAGE.md": "sha256:3133642eb22daa30c48253dcd97a3a808e8f3169a4c3256af8240ae0f8bd2a5f",
+        "A8_geometry_census.py": "sha256:703eaca9809ffd60763efee4b02653e6b8ede52576c3b562295cc36455929165",
+        "A8_geometry_census.json": "sha256:6a14ee7e95d2d64acac314d1b2fe21211a2c788b039acf2ad1ba46b14e47855e"
+      },
+      "imported_dependency_hashes": {
+        "A6_CLOSURE_DRAFT.md": "sha256:914f70385c2808f2e3fbb16fde140a34c662b7fa4e4560706970ff7109f2240c",
+        "A6_CLOSURE_REVIEW.md": "sha256:305f6ff77fdb5bdae62ea3eb4f42d4473977dde8d0edef1cddadd205705e82b8",
+        "A6_CLOSURE_REVIEW.json": "sha256:9ae5ae2fa572fe6f5b74f6c126d13b105f621fbcbbee1ea3a588ea0722999123",
+        "Q4_GENERAL_AUGMENTATION.md": "sha256:a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b",
+        "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+        "Q4_CORE_REVIEW.json": "sha256:faa04c0227106bde4a3d3eceb2997155d36acfcc7c92d572ccdcd4ae10c7c759",
+        "A6_FINITE_INPUTS_REVIEW.md": "sha256:223fe1eec3f659dd1c844d81c45f904cf5ea7e009b8b8acc2cd31d5bda48da18",
+        "A6_FINITE_INPUTS_REVIEW.json": "sha256:021d7e7b5080cf14c6c6dbe4c98039b924faae3a199b8ad975f66d48e4d330b9",
+        "Q5_HIGHER_HOLE_REDUCTION_REVIEW.md": "sha256:3677414211dbbcbc67ea3ebd323165148430d0296f5a257903006579446b75d9",
+        "Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "sha256:ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+        "Q5_HIGHER_HOLE_REDUCTION_REVIEW_check.py": "sha256:cb86156ce6d2fdabeed1ffa2be38c3b75768f61539b45d2ae840eaf99d36ec7b",
+        "Q5_HIGHER_HOLE_REDUCTION_REVIEW_check.json": "sha256:1acef839f4b455bd6d784773d741e076455ba80db13e8eb0ac33500641f2eb36",
+        "q5_higher_hole_reduction_geometry.py": "sha256:17886f3e9e1671603cce2e18370eb470cd7370be2dbe18153d528f8b3f66e3cc",
+        "q5_higher_hole_reduction_geometry.json": "sha256:6aba7b866c2a207489e2f8fe049a774e776058f3376b2995d0c27fd463ebf59d"
+      },
+      "checker_source_hash": "sha256:5605966b42a96a3cc927e1f0ea6669acda3d0acfebbc5487a6be3dabb95f06e3",
+      "geometry_count": 2700,
+      "proved_by_delta123": 2540,
+      "residual_count": 160,
+      "residual_orbits": [
+        {
+          "Z": [
+            3,
+            5,
+            6,
+            15
+          ],
+          "W": [
+            8,
+            25,
+            26
+          ],
+          "size": 60,
+          "deltas": [
+            0,
+            0,
+            -1,
+            4,
+            4
+          ]
+        },
+        {
+          "Z": [
+            3,
+            5,
+            6,
+            15
+          ],
+          "W": [
+            25,
+            26,
+            28
+          ],
+          "size": 20,
+          "deltas": [
+            0,
+            0,
+            0,
+            4,
+            5
+          ]
+        },
+        {
+          "Z": [
+            3,
+            5,
+            15,
+            23
+          ],
+          "W": [
+            25,
+            26,
+            28
+          ],
+          "size": 30,
+          "deltas": [
+            -1,
+            0,
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "Z": [
+            15,
+            23,
+            27,
+            29
+          ],
+          "W": [
+            1,
+            2,
+            4
+          ],
+          "size": 30,
+          "deltas": [
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "Z": [
+            15,
+            23,
+            27,
+            29
+          ],
+          "W": [
+            2,
+            4,
+            8
+          ],
+          "size": 20,
+          "deltas": [
+            -2,
+            0,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "all_writer_histogram_and_residual_member_fields_equal": true,
+      "agrees_with_prior_independent_geometry_review": true,
+      "q4_neighbor_pair_checks": 56,
+      "feasible_delta_k_populations": [
+        {
+          "delta": 1,
+          "k": 2,
+          "crossing_counts": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          "cuts": 2160
+        },
+        {
+          "delta": 2,
+          "k": 1,
+          "crossing_counts": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ],
+          "cuts": 2160
+        },
+        {
+          "delta": 3,
+          "k": 1,
+          "crossing_counts": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          "cuts": 1800
+        }
+      ],
+      "cycle_deleted_matching_sizes": {
+        "1": 15,
+        "2": 90,
+        "3": 275,
+        "4": 450,
+        "5": 378,
+        "6": 140,
+        "7": 15
+      },
+      "abstract_topology_checks": {
+        "delta2_positive": 1363,
+        "delta3_internal": 11310,
+        "delta1_internal": 11310,
+        "c1_port_mirror_circle_excluded": 30,
+        "delta3_port_prescribed_gap": 11280,
+        "delta1_port_root_partner": 11280
+      },
+      "imported_source_hash_comparisons": 14,
+      "producer_imported_or_executed": false,
+      "matching_extension_sampling_used": false,
+      "partial_A8_branches_proved": true,
+      "full_A8_proved": false,
+      "full_P6_proved": false
+    },
+    "augmentation_proved": true,
+    "delta123_branches_proved": true,
+    "arbitrary_required_matching_edges": true,
+    "all_crossing_counts_in_stated_branches": true,
+    "full_A8_proved": false,
+    "full_A10_proved": false,
+    "full_P6_proved": false,
+    "remaining_for_this_package": {
+      "marked_geometries": 160,
+      "orbits": 5,
+      "matching_instances": "Every arbitrary matching on24 covered vertices for each residual marked geometry remains open"
+    },
+    "later_double_bridge_or_first_orbit_work_imported": false,
+    "production_proof_census_or_main_state_modified": false
+  }
+}

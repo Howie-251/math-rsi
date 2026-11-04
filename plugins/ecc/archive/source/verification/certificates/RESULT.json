@@ -1,0 +1,85 @@
+{
+  "mode": "certificates",
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "finite-data",
+      "command": [
+        "<PYTHON_3_11>",
+        "<RELOCATED_PACKAGE>/computation/check_data.py",
+        "--output",
+        "<RELEASE_TEST_ROOT>/certificate-check/finite-data.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.04747529201267753,
+      "log": "finite-data.log"
+    },
+    {
+      "name": "catalogue",
+      "command": [
+        "<PYTHON_3_11>",
+        "<RELOCATED_PACKAGE>/computation/reproduce.py",
+        "catalogue",
+        "--output-dir",
+        "<RELEASE_TEST_ROOT>/certificate-check/catalogue"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5332485000108136,
+      "log": "catalogue.log"
+    },
+    {
+      "name": "saved-sets",
+      "command": [
+        "<PYTHON_3_11>",
+        "<RELOCATED_PACKAGE>/computation/check_saved_sets.py",
+        "--manifest",
+        "<RELOCATED_PACKAGE>/evidence/manifest.json",
+        "--output",
+        "<RELEASE_TEST_ROOT>/certificate-check/saved-sets.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.5198318339971593,
+      "log": "saved-sets.log"
+    },
+    {
+      "name": "full-scan-plan",
+      "command": [
+        "<PYTHON_3_11>",
+        "<RELOCATED_PACKAGE>/computation/reproduce.py",
+        "full-f",
+        "--all",
+        "--implementation",
+        "both",
+        "--cpu-seconds",
+        "600",
+        "--output-dir",
+        "<RELEASE_TEST_ROOT>/certificate-check/unused-scan-output"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.6520164579997072,
+      "log": "full-scan-plan.log"
+    },
+    {
+      "name": "pair-replay",
+      "command": [
+        "<PYTHON_3_11>",
+        "<RELOCATED_PACKAGE>/computation/replay_all.py",
+        "--manifest",
+        "<RELOCATED_PACKAGE>/evidence/manifest.json",
+        "--output-dir",
+        "<RELEASE_TEST_ROOT>/certificate-check/pair-replay",
+        "--cxx",
+        "c++",
+        "--cpu-seconds",
+        "600",
+        "--wall-seconds",
+        "900"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 69.75065687499591,
+      "log": "pair-replay.log"
+    }
+  ],
+  "full_coset_domains_rerun": false,
+  "scope": "No published classification is rerun."
+}

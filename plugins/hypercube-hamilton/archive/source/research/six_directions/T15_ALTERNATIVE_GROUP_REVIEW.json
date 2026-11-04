@@ -1,0 +1,378 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_modulo_declared_import",
+  "summary": "Full arbitrary-matching T15 cores18,21,25 pass relative to imported Q4 N14; no global eight-hole closure claimed.",
+  "audited_input_hashes": {
+    "T15_ALTERNATIVE_GROUP_PROGRESS.md": "sha256:78dd90d869c30179c6dffc228ed20425b695137fe122a327dad98981da097f84",
+    "t15_alternative_group_verification.json": "sha256:5ac48469790b67754949e85a09517090c30aba72a2edac48ae53063c49d4c8d3",
+    "verify_t15_alternative_group.py": "sha256:a97fd1a5a6044631c684bdd20014481f15f50f410b19a7a4dd75e08bca911673",
+    "verify_t15_alternative_small_results.py": "sha256:37f87120214d2c2e0bc8a906f620e3de90f48b91ac15625528862c44aa91913a",
+    "verify_t15_alternative_small_B.cpp": "sha256:b1bc30b727bb5bafdffb807957d689b6755671fc76b788d052f8435a551686ba",
+    "verify_t15_alternative_core25_blockers.py": "sha256:f49a0aeba48401cdf43456a85d923c06c2e8527e659e9d83fc346e347e4a89bc",
+    "r3_boundary_blocking_3_8.json": "sha256:f5b11827051943fb4fce9c8f5b6f19a2910b46937adbd732461c2660c5b28d22",
+    "t15_r3_small_negative_inputs.txt": "sha256:b046ba07e274fbf3f7c32da99d4ac6877f8128638199de78324897798efbea28",
+    "t15_r3_c5_negative_kernels.json": "sha256:f28ecff30db7a05328a027828be24fe43e009af44eda62b25ce52305ebec0f89",
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+    "t15_alternative_B_independent.json": "sha256:be3a269a1dfbdd6c91ba20d991adc03ea739081ae4d019ba704fbcb49cc1e4bb",
+    "t15_alternative_small_verification.json": "sha256:b72acf47e24856d55c1038868ba7abb8bf85abc9a560fa4c5edd5c299dacb3a8",
+    "t15_alternative_core25_blockers_verification.json": "sha256:ae34fc3b23c6214244f47835840c1821c9cdaeeef0986aafb36dc477c6cee67e",
+    "t15_alternative_core25_blockers_base_verification.json": "sha256:0bb7324e21be18443d47fcf8b77d00d012ee5ebeec1dd0a62aa8f0d7542ee309",
+    "verify_t15_alternative_core18_c1_residual.cpp": "sha256:a7e52091582edb9b25d60d20826d4b3ae7d8ac022d707892bf8863388e257244",
+    "t15_alternative_core18_c1_residual.bin": "sha256:bfa2f46e961e1bd151a08b8a77f52880f7fa2611698072bff68332d57466426d",
+    "t15_alternative_core18_c1_B_inputs.txt": "sha256:252f45a3e956565af7b169362592bacd8e00d42c30a5834831be7afc5ea9b90f",
+    "t15_alternative_core18_c1_B_exceptions.txt": "sha256:3b49e27ca293758b70228876c07541fa051c97110ef89be82d7c61d1ed2f5cbc",
+    "t15_alternative_core18_c1_residual.json": "sha256:6db956facb0b52250f9f615e5e865fbef40fe7a43bdeeb2643dd26b6f79a3df2",
+    "t15_alternative_core18_c1_residual_verification.json": "sha256:66f33666553c53f94d744954a6922d92f97f46b2fba3b072bb8283ff01dec390",
+    "t15_alternative_core18_c1.json": "sha256:9135efd474547e8ef3f04bd287c653ec3d764d56c43904e95cdaef8499ad7f59",
+    "t15_alternative_core18_c3.json": "sha256:e657ef39a72f9058a23281456b3d3e8b8b7461b2d10a7ec3a41bce9717d999fc",
+    "verify_t15_alternative_core21_c1_residual.cpp": "sha256:92c0dea3e284695868c3e98d86afd3dd34d1e530a6393263a8b7eb46999e2dac",
+    "t15_alternative_core21_c1_residual.bin": "sha256:3657eb0adba8ca874bc4738a2c90d6f85792442cf95c0ab0c93ff1970efae1f7",
+    "t15_alternative_core21_c1_B_inputs.txt": "sha256:35a6914eaa5f9ddf6257fadab40b00c83435731b40b61604373de9bd54ce1a48",
+    "t15_alternative_core21_c1_B_exceptions.txt": "sha256:a2ad1b194fb9926b4103e09ca59923a3add27ec5626bdf4d4a8b87967e64b662",
+    "t15_alternative_core21_c1_residual.json": "sha256:60607a2673bb1fb8e6469bd0e51754a6f582133490e71c91828e02dd5090db9a",
+    "t15_alternative_core21_c1_residual_verification.json": "sha256:81292402cd764395daeb732e95ce0ef0ae2770f316450369d5db784add62c98d",
+    "t15_alternative_core21_c1.json": "sha256:ed7a1c88bd06d1be91fa20978891513ac94fbd2a527837fea9fcb3bde6bdb6a9",
+    "t15_alternative_core21_c3.json": "sha256:f7c0eded08d7f8ac6a8bf9f56a62530041ef11b0354a435e482920045b3f9c1b",
+    "verify_t15_alternative_core25_c1_residual.cpp": "sha256:8d4a4caa9b5e0c9982b4da176fef485776bedf69024c22b0c8454f7beedede91",
+    "t15_alternative_core25_c1_residual.bin": "sha256:a1617a51ae866cac6fa703bb09768fa4e792be59b3077ea799b7c84d90307bfe",
+    "t15_alternative_core25_c1_B_inputs.txt": "sha256:e529faef855947e09af14b113da759fc4aa77199e3b47bef2026f11f62d3cc33",
+    "t15_alternative_core25_c1_B_exceptions.txt": "sha256:89a96a2954801702a0730f376b371853462aef203f7fcdbe29677f70507f069b",
+    "t15_alternative_core25_c1_residual.json": "sha256:788d43952d8398a6fa5dc8db49d1cf250152500017e3823e292f31892a9ca06e",
+    "t15_alternative_core25_c1_residual_verification.json": "sha256:0bd61ae10188889dc0ade988cf7245bbd8ba7db1b8e2088353974d749f9e1007",
+    "t15_alternative_core25_c1.json": "sha256:dd3c105a24161337c3dd45796a19c3d4cb3f1dc5c08257bec1368359c2db34b8",
+    "t15_alternative_core25_c3.json": "sha256:4490f83f4a9bfeb82760a88be0015f736441a93d91fbb7be7c8d764bee0b00fc",
+    "q4_balanced_two_avoided_15_1.bin": "sha256:543ceb1867cc7e02cb6e32ead9496077040471630862c7b8350d2d43bdbd3bdc",
+    "q4_balanced_two_avoided_15_11.bin": "sha256:424cc893defd713c68942ef7216218aacd6eeecddc16e3e5ae64bb486eb21a52",
+    "q4_balanced_two_avoided_15_8.bin": "sha256:cf63051d5638b0269ea51c29ec8898e4d8ad7985486c117ae7ca887605962895",
+    "q4_balanced_two_avoided_3_1.bin": "sha256:00b55a0b32882f4be7aca8d102b2387721230a6cb3efc0bfccf367a3f5d566d2",
+    "q4_balanced_two_avoided_3_11.bin": "sha256:5cef60fa7fb7c8c3800d1263b5af2adda52bd7cf6bbfc37071124d509251ae66",
+    "q4_balanced_two_avoided_3_13.bin": "sha256:78ecde838f1e1d080f36c52683e92a75ed2c124a4425d791e53d47f54309481d",
+    "q4_balanced_two_avoided_3_4.bin": "sha256:55b8268f65da86679306af8dc0ad5d0fc48c201b958829e425d62bb94b7b1134",
+    "q4_balanced_two_avoided_3_8.bin": "sha256:ca7090347017e999d3832b395ec8e1018c65545b44905290ad424f48a9f8cb2c",
+    "q4_balanced_two_avoided_9_1.bin": "sha256:3e16e95ce5bb24895f584ce2f32577b506d62668650154c268c92826b529858e",
+    "q4_balanced_two_avoided_9_11.bin": "sha256:3be1ceb6916931c8f011736e38e23cbad392979a6c0b30c58971cfeba667134d",
+    "q4_balanced_two_avoided_9_14.bin": "sha256:b0fbc9a0b71db9e46e48d39910ed52ec2d7c5d6bf5a0a4fdf491f0454334edef",
+    "q4_balanced_two_avoided_9_2.bin": "sha256:03b27b18e92618f519b8e4d604f53922214e820009cd90be2098a3357d51ef00",
+    "q4_balanced_two_avoided_9_8.bin": "sha256:dc45f00e2b83cd2424f5702a01c11f433f0334075c67b2875272d842c1abd5fb"
+  },
+  "trace_path": "T15_ALTERNATIVE_GROUP_REVIEW_work/",
+  "thread_id": "/root/t15_alternative_group_audit",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "reviewer_model": "current fresh Codex reviewer (no model override asserted)",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T10:41:06.867715+00:00",
+  "details": {
+    "theorems_audited": 3,
+    "cores": [
+      18,
+      21,
+      25
+    ],
+    "required_matching_scope": "arbitrary complete-graph matching, not short-only",
+    "issues": [],
+    "obligations": [
+      {
+        "id": "T01",
+        "subject": "Quantifiers",
+        "status": "CLOSED",
+        "evidence": "Every arbitrary K(Q5) matching on exactly the 26 covered vertices; no shortness/parity restriction on required edges."
+      },
+      {
+        "id": "T02",
+        "subject": "Geometry",
+        "status": "CLOSED",
+        "evidence": "Cuts and common coordinate maps recover the three marked global omissions; core25 uses [3,0,1,2]. Cube automorphisms preserve all new-edge adjacencies, including parity reversal."
+      },
+      {
+        "id": "T03",
+        "subject": "Crossing exhaustion",
+        "status": "CLOSED",
+        "evidence": "Each face has 13 covered vertices: 2|F_A|+c=2|F_B|+c=13, so c in {1,3,5,7,9,11,13}."
+      },
+      {
+        "id": "T04",
+        "subject": "N14 import",
+        "status": "CLOSED",
+        "evidence": "All actual A hole triples have even local parity. For either bridge z, F_A union D has exactly the equal-parity holes x,w. N14 permits arbitrary long D and prescribes omission of x."
+      },
+      {
+        "id": "T05",
+        "subject": "Path deletion",
+        "status": "CLOSED",
+        "evidence": "D is a nonempty matching of a simple 15-cycle. Its deletion gives disjoint paths with exactly the D endpoints; R union D is connected. No original F_A edge is deleted."
+      },
+      {
+        "id": "T06",
+        "subject": "Internal mirror",
+        "status": "CLOSED",
+        "evidence": "The extra B mirror z has unique internal mate k outside the ports. Suppressing kz and its unique path produces a valid matching on the other twelve vertices. Recovering k's compressed mate reconstructs R injectively."
+      },
+      {
+        "id": "T07",
+        "subject": "Occupied mirror",
+        "status": "CLOSED",
+        "evidence": "For c>=3 prescribe z_A d in D. At least one other D edge is deleted, so its two ends lie in different remaining paths. The bridge/crossing join creates no closed component. Suppression gives Q union D-prime connected."
+      },
+      {
+        "id": "T08",
+        "subject": "Expansion",
+        "status": "CLOSED",
+        "evidence": "All compressed edges represent vertex-disjoint paths. Expansion of the B 14-cycle inserts 15 A vertices and the omitted B mirror z, giving exactly 30 vertices. All required edges survive; surviving new edges are short."
+      },
+      {
+        "id": "T09",
+        "subject": "Single-negative blocking",
+        "status": "CLOSED",
+        "evidence": "For bridge12 the table has one negative. In the internal c>=3 case and occupied c>=5 case, D=R0 or D-prime=Q0 has at least two edges; its union with itself is disconnected, so cannot be the N14 output."
+      },
+      {
+        "id": "T10",
+        "subject": "Inverse completeness",
+        "status": "CLOSED",
+        "evidence": "For every negative L enumerate all possible internal F_B submatchings. Internal mode inversely splits the edge kq into kz and zq; occupied mode takes L minus F_B. These are exact inverses of compression, and families not occurring are entirely positive."
+      },
+      {
+        "id": "T11",
+        "subject": "All large c blockers",
+        "status": "CLOSED",
+        "evidence": "The nine feasible (c,mode) classes for c>=5 are covered. Each of 2644 saved artificial pairings has the exact boundary and is graph-disconnected from every bad output. Internal c13 is impossible."
+      },
+      {
+        "id": "T12",
+        "subject": "Core25 transport",
+        "status": "CLOSED",
+        "evidence": "Swapping bits1,2 maps bridge3 to5 with holes0,7,8 fixed; swapping bits0,1 maps source bridges3,5 to target3,6. Raw-table negative families equal transported text families. Connectivity is invariant. No A omitted-label hypothesis occurs in this B certificate."
+      },
+      {
+        "id": "T13",
+        "subject": "Occupied c5",
+        "status": "CLOSED",
+        "evidence": "The only null families have all three boundary pairings bad. Each bridge has precisely two null internal matchings; target bridge3 and6 null sets have empty intersection. If a mirror is internal its blocker already applies."
+      },
+      {
+        "id": "T14",
+        "subject": "c3 realizability",
+        "status": "CLOSED",
+        "evidence": "The A four-vertex boundary has three pairings. If at most one were realizable, choosing that pairing as D would contradict connectedness of R union D. Thus at least two are realizable."
+      },
+      {
+        "id": "T15",
+        "subject": "c3 exhaustive B spectrum",
+        "status": "CLOSED",
+        "evidence": "For each core exhaust C(13,3)*9!!*3! = 1621620 ordered B inputs. Graph traversal rejects loops/closed components and checks exact compressed matching. Every histogram mask has at least two admissible pairings for one bridge; hence intersection with its A set is nonempty."
+      },
+      {
+        "id": "T16",
+        "subject": "Arbitrary bijections",
+        "status": "CLOSED",
+        "evidence": "Fix any order of actual A ports. Enumeration of every order of their B mates includes every original crossing bijection, with no length/parity condition."
+      },
+      {
+        "id": "T17",
+        "subject": "c1 exhaustive B spectrum",
+        "status": "CLOSED",
+        "evidence": "For each core exhaust 13*11!!=135135 B inputs. The sole abstract A pairing is realizable. There are exactly 3,2,20 nonadmissible B cases, identical to residual input sets without duplicates."
+      },
+      {
+        "id": "T18",
+        "subject": "Positive residual completeness",
+        "status": "CLOSED",
+        "evidence": "For each exceptional B case, all 13 A port choices and all 11!! A internal matchings are checked; the crossing is uniquely determined. Counts 405405+270270+2702700=3378375, all positive."
+      },
+      {
+        "id": "T19",
+        "subject": "Positive residual integrity",
+        "status": "CLOSED",
+        "evidence": "Recompiled verifiers regenerate every required matching, compare all 26 endpoint bytes, check 30 distinct vertices, exact omitted pair, all 13 required edges and every other edge short including closing edge; exact counts and EOF hold."
+      },
+      {
+        "id": "T20",
+        "subject": "Finite tables and scope",
+        "status": "CLOSED",
+        "evidence": "Independently rechecked 13 raw tables: each has all 10395 distinct valid arbitrary matchings. Every nonnegative cycle has exact support, all required edges and short additions. Negative entries need only be a conservative excluded set. No global eight-hole coverage, full T15 or core26 replacement is inferred."
+      }
+    ],
+    "imports": [
+      {
+        "name": "Q4 N14",
+        "source": "Q4_CORE_AND_A4_SPLIT.md:9-51",
+        "status": "imported previously audited finite theorem; scope and application hypotheses rechecked; N14 certificates not rerun in this audit",
+        "scope": "Any K(Q4) matching with exactly two same-parity holes, omit either prescribed hole, short added edges"
+      }
+    ],
+    "deterministic_checks": {
+      "residual": [
+        {
+          "core": 18,
+          "status": "PASS",
+          "records": 405405,
+          "required_edges": 13,
+          "cycle_vertices": 30,
+          "record_bytes": 56,
+          "total_bytes": 22702680
+        },
+        {
+          "core": 21,
+          "status": "PASS",
+          "records": 270270,
+          "required_edges": 13,
+          "cycle_vertices": 30,
+          "record_bytes": 56,
+          "total_bytes": 15135120
+        },
+        {
+          "core": 25,
+          "status": "PASS",
+          "records": 2702700,
+          "required_edges": 13,
+          "cycle_vertices": 30,
+          "record_bytes": 56,
+          "total_bytes": 151351200
+        }
+      ],
+      "residual_total": 3378375,
+      "B_spectra": [
+        {
+          "core": 18,
+          "c": 1,
+          "total": 135135,
+          "B_types": {
+            "0": 3,
+            "1": 10404,
+            "2": 10416,
+            "3": 114312
+          }
+        },
+        {
+          "core": 18,
+          "c": 3,
+          "total": 1621620,
+          "B_types": {
+            "3": 2,
+            "5": 2,
+            "6": 2,
+            "7": 30,
+            "24": 4,
+            "27": 30,
+            "29": 10422,
+            "30": 10422,
+            "31": 103970,
+            "40": 4,
+            "43": 10422,
+            "45": 30,
+            "46": 10422,
+            "47": 103970,
+            "48": 4,
+            "51": 10422,
+            "53": 10422,
+            "54": 30,
+            "55": 103970,
+            "56": 60,
+            "59": 104080,
+            "61": 104080,
+            "62": 104080,
+            "63": 934740
+          }
+        },
+        {
+          "core": 21,
+          "c": 1,
+          "total": 135135,
+          "B_types": {
+            "0": 2,
+            "1": 10405,
+            "2": 10405,
+            "3": 114323
+          }
+        },
+        {
+          "core": 21,
+          "c": 3,
+          "total": 1621620,
+          "B_types": {
+            "3": 2,
+            "5": 2,
+            "6": 2,
+            "7": 30,
+            "24": 2,
+            "27": 20,
+            "29": 10413,
+            "30": 10413,
+            "31": 104000,
+            "40": 2,
+            "43": 10413,
+            "45": 20,
+            "46": 10413,
+            "47": 104000,
+            "48": 2,
+            "51": 10413,
+            "53": 10413,
+            "54": 20,
+            "55": 104000,
+            "56": 30,
+            "59": 104000,
+            "61": 104000,
+            "62": 104000,
+            "63": 935010
+          }
+        },
+        {
+          "core": 25,
+          "c": 1,
+          "total": 135135,
+          "B_types": {
+            "0": 20,
+            "1": 10495,
+            "2": 10495,
+            "3": 114125
+          }
+        },
+        {
+          "core": 25,
+          "c": 3,
+          "total": 1621620,
+          "B_types": {
+            "3": 20,
+            "5": 20,
+            "6": 20,
+            "7": 348,
+            "24": 20,
+            "27": 200,
+            "29": 10575,
+            "30": 10575,
+            "31": 104402,
+            "40": 20,
+            "43": 10575,
+            "45": 200,
+            "46": 10575,
+            "47": 104402,
+            "48": 20,
+            "51": 10575,
+            "53": 10575,
+            "54": 200,
+            "55": 104402,
+            "56": 348,
+            "59": 104402,
+            "61": 104402,
+            "62": 104402,
+            "63": 930342
+          }
+        }
+      ],
+      "blockers_checked": 2644,
+      "balanced_table_records": 135135,
+      "target_c5_null_intersection": 0
+    },
+    "not_claimed": [
+      "full T15",
+      "eight-hole P6",
+      "global geometry coverage",
+      "replacement of core26",
+      "formal or cross-family acceptance"
+    ]
+  }
+}

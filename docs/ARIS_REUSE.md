@@ -150,3 +150,7 @@ python3 -B /path/to/MathRSI/base/tests/smoke_bundle.py \
 | 按原版规则落地已批准的优化 | [meta-apply](../base/skills/meta-apply/SKILL.md) | [meta-apply](../base/skills/skills-codex/meta-apply/SKILL.md) |
 
 两宿主发现目录均有 meta-optimize、meta-apply 相对别名；Claude 为 `/meta-optimize`、`/meta-apply`，Codex 为 `$meta-optimize`、`$meta-apply`。MathRSI 的 `/mathrsi-meta-evolve` / `$mathrsi-meta-evolve` 指向另一份共享主技能，不能把它的维护执行记成原版 meta-apply 已运行。新增别名不安装 hooks、不修改用户全局技能或凭据。当前快照新增内容是否已实际运行，依本轮记录报告；旧 smoke 收据不自动扩张成新 meta 流程验收。
+
+## v3领域与现有ARIS的衔接
+
+ARIS双端源、32项技能和helper保持当前快照；本轮不为了吸收新领域改写原字节副本。六领域按[DOMAIN_ROUTING](DOMAIN_ROUTING.md)进入现有MathRSI阶段，再消费research-lit、formula-derivation、proof-writer、research-review、proof-checker、按需lean-formalize和render-html。新领域别名同时在`.agents/skills`与`.claude/skills`，指向仓内同一完整主体；具体主入口与certificate职责见[V3_CHANGES](V3_CHANGES.md)。

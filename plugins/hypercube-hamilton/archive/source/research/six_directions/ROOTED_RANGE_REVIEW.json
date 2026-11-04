@@ -1,0 +1,94 @@
+{
+  "audit_skill": [
+    "proof-writer",
+    "proof-checker"
+  ],
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_import",
+  "summary": "Exact maximum rooted-maximal hole count is 18; no Hamilton-path or full P6 claim.",
+  "proof_status": "PROVABLE AS STATED",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning_effort": "high",
+  "model_record_source": "Parent reported successful spawn_agent request: task_name=rooted_range_sol_high_audit, fork_turns=none, model=gpt-6.1-sol, reasoning_effort=high",
+  "actual_backend_model_independently_verified": false,
+  "parent_exact_model_independently_verified": false,
+  "reviewer_task": "/root/rooted_range_sol_high_audit",
+  "generated_at": "2026-11-01T04:55:05.393979+00:00",
+  "audited_input_hashes": {
+    "ROOTED_MAXIMAL_18_HOLES.md": "sha256:66af796eeddde05f2f6de834745d63e0a12095d31d69959610da53c635694537",
+    "rooted_23_matching.json": "sha256:b21c7d5387cf48906581f1f7290d35dd52024fb1f6ab8b00ee214006314d01e6",
+    "verify_rooted_23_matching.py": "sha256:1fca0c62224cb883f0bb42a2b6cda712904e3c4f39279319c4e5e9450b1fec08"
+  },
+  "source": {
+    "authors": [
+      "Ivan Havel",
+      "Mirko Krivanek"
+    ],
+    "year": 1982,
+    "title": "On maximal matchings in Q6 and a conjecture of R. Forcade",
+    "url": "https://dml.cz/bitstream/handle/10338.dmlcz/106137/CommentatMathUnivCarol_023-1982-1_10.pdf",
+    "theorem": "Theorem 2",
+    "printed_page": 125,
+    "pdf_page_index": 3,
+    "direct_statement_checked": true,
+    "definition_page": 124,
+    "imported_statement": "Every inclusion-maximal matching in the full Q6 has at least 24 edges.",
+    "full_original_proof_reaudited": false
+  },
+  "deterministic_checks": {
+    "provided_verifier_exit_code": 0,
+    "provided_verifier_status": "PASS",
+    "independent_in_memory_enumeration": "PASS",
+    "full_cube_edges": 192,
+    "root_deleted_edges": 186,
+    "matching_edges": 23,
+    "covered_vertices": 46,
+    "holes": 18,
+    "all_vertices_domain_checked": true,
+    "addable_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        32
+      ]
+    ],
+    "all_addable_edges_touch_root": true,
+    "all_one_edge_completions_globally_maximal": true
+  },
+  "details": {
+    "issues": [],
+    "obligations_closed": 6,
+    "source_imports": [
+      "Havel-Krivanek 1982 Theorem 2"
+    ],
+    "exact_maximum_holes": 18,
+    "for_every_fixed_root": true,
+    "root_transport": "x -> x xor u",
+    "complete_p6_proved": false,
+    "hamilton_path_claim": false,
+    "other_hole_counts_attainable_claim": false,
+    "prior_two_four_hole_proofs_reaudited": false
+  },
+  "report_sha256": "sha256:dd679a19a13b270d571208d639ae82c9da5eb4f847b720e312b299f8262c3824"
+}

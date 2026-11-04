@@ -1,0 +1,1059 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reviewer_agent_id": "/root/fourteen_reuse_review",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_override_source": "Explicit user route relayed by parent overrides skill default",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "formalization": "No Lean or cross-family formal acceptance",
+  "generated_at": "2026-11-01T16:59:14.141212+00:00",
+  "reason_code": "all_exact_marked_local_and_actual_application_obligations_closed_modulo_explicit_accepted_imports",
+  "summary": "Twenty new exact local universal inputs and complete actual cached application PASS;35665 positives leave12546 exact residuals. Full14/P6 remain open.",
+  "trace_path": "FOURTEEN_CACHED_REVIEW.md",
+  "audited_input_hashes": {
+    "A10_ORBIT3_UNIVERSAL_PRIMARY_SOURCE.md": "f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112",
+    "FOURTEEN_CACHED_MANIFEST.json": "4852582087a3b3c06eaf26a9b8eec5b1b63b26e192cdd3e901e23ba3d59902e6",
+    "FOURTEEN_CACHED_PROOF.md": "236ec40a547b1a0084d4351dfc7ba18d23e7df596ed715c1052d4ca861b84341",
+    "FOURTEEN_CACHED_REVIEW.md": "5ef70321b4e405d2ea6dcd601aefdbe423eda6acf03c5104cb87939fa78dbb46",
+    "FOURTEEN_CACHED_REVIEW_all_registry.txt": "8b27f5b19eaac35865c879eff517ac4ffd0eff61663063a406e01014a9667ef1",
+    "FOURTEEN_CACHED_REVIEW_application_result.json": "481593d92a48f09d84f23d8536dd696d3affdb7ff3f851fcc526c28aa7255d14",
+    "FOURTEEN_CACHED_REVIEW_geometries.txt": "3bb280e675e67865c270d3fb6768077a3e4ae53727499fdd8e5155e7793fa268",
+    "FOURTEEN_CACHED_REVIEW_local_check.cpp": "69f736411b0280fc8d949242f6924b48aef74f5a73907a0e76882068b2a403ae",
+    "FOURTEEN_CACHED_REVIEW_local_result.json": "944079449cd38e90c204e69b25d1b089cb1b02dc7f9f9162908e68d20638665a",
+    "FOURTEEN_CACHED_REVIEW_selected_registry.txt": "7a28761388f8f5542e13ad59b7948ef8efab342465a68bcf0c9ce1ed7bf8d32b",
+    "FOURTEEN_CACHED_all_hits_h14_v1_covered.bin": "615a85560ee063dc04ef4ffe56f44515de87fe724312ae3443f5c9d1f537be6f",
+    "FOURTEEN_CACHED_all_hits_h14_v1_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_CACHED_all_hits_h14_v31_covered.bin": "9d0faf5a13d7a6a5e00716fa7e96d2b7e35e1543231b0f5fb0c2fe37015d9271",
+    "FOURTEEN_CACHED_all_hits_h14_v31_free.bin": "b42bdeb3400fe6cca94b54e8ee1b8dc5ebd1b9b011c3ad743f3c16990c8d40bc",
+    "FOURTEEN_CACHED_all_hits_h14_v7_covered.bin": "2b248c4b793666278fae77e37cf0d09f4a262e4b6786fd13e7e0524d556f3aee",
+    "FOURTEEN_CACHED_all_hits_h14_v7_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_CACHED_catalog.json": "e72841e0cead820b01d86b5f6af69f3a4484bfac9356ef80f486799cff04429c",
+    "FOURTEEN_CACHED_freeze.py": "e738ae96f10d1b15e5055dddaa0179b051966b4f57d8ec0977e1162f3f895a60",
+    "FOURTEEN_CACHED_greedy.py": "75df9cbc58931c68b7533814b2549b2c7b47f415124bbd0d3790fb631eb5b1ec",
+    "FOURTEEN_CACHED_greedy_registry.json": "deb0ff58fadc674982f83cb16988d07e47f93bb1649d1a163990b5b3adc66baf",
+    "FOURTEEN_CACHED_prepare.py": "0f63baa655b8ec52b444c94f182e9db48b73fddb9ec2cc2ece468355e5883544",
+    "FOURTEEN_CACHED_registry.txt": "8b27f5b19eaac35865c879eff517ac4ffd0eff61663063a406e01014a9667ef1",
+    "FOURTEEN_CACHED_remaining_h14_v1_covered.bin": "c51cfb0de75fc5f5a4cbf653146d1698880156f849969ecf11ed0fbda414d954",
+    "FOURTEEN_CACHED_remaining_h14_v1_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_CACHED_remaining_h14_v31_covered.bin": "b4e32915c64fb73467dec62c04368658442665925660b2d87d4f416ee305a1e1",
+    "FOURTEEN_CACHED_remaining_h14_v31_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_CACHED_remaining_h14_v7_covered.bin": "5746991bba67f4d35d441eaae03c18f10999ee2105c6444a26bb8981bff889de",
+    "FOURTEEN_CACHED_remaining_h14_v7_free.bin": "ad3977cd986a68a26aa42d611f4f156ec0e5b2f4a568296fa30410ae5316eb85",
+    "FOURTEEN_CACHED_result.json": "961cd81b163ff84dd35b0a7670b1c1fe309372e28e801a91c0a63805337f35e7",
+    "FOURTEEN_CACHED_scan.cpp": "8ee163cab5c90dafc2c765b3018d3ec39b4780959af4d9c1894c99d398e095cf",
+    "FOURTEEN_CACHED_scan.exe": "64f422287ed33ce87e0c6a0eb052e4ef0a3157d9957798da4b5dcde96d8015b5",
+    "FOURTEEN_CACHED_selected_witness_h14_v1_covered.bin": "db37edaa79ae2c17c42b96d11f7d2a423c4fdd0f124ec656e06799e7b6d9c27c",
+    "FOURTEEN_CACHED_selected_witness_h14_v1_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_CACHED_selected_witness_h14_v31_covered.bin": "e6cf1adb774cda0f0d4765693aef39229ba1b36996bb038292d252ee79f0a81b",
+    "FOURTEEN_CACHED_selected_witness_h14_v31_free.bin": "28fa09ecda8fe14809e3d05837643a69c4842740c22185943f518a4a137a6e69",
+    "FOURTEEN_CACHED_selected_witness_h14_v7_covered.bin": "9c4012fedac95cf2f154e77e954b91472751ad85876898dd3cae06e4693528e3",
+    "FOURTEEN_CACHED_selected_witness_h14_v7_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_REUSE_MANIFEST.json": "534880444a9c3d81f10c4da6cfe05e315c3da0822402cfb0bd535ca5e23ea996",
+    "FOURTEEN_REUSE_REVIEW.json": "5ef0a4a66f55b37ef150dff76eabc4fa1d009224a66f27e0e927aa4636b44027",
+    "FOURTEEN_REUSE_remaining_h14_v1_covered.bin": "1f873b39deb5a113aa5cedae64cbe40cfdf63b4e26d3bc2aadb46e5ec218ab59",
+    "FOURTEEN_REUSE_remaining_h14_v1_free.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FOURTEEN_REUSE_remaining_h14_v31_covered.bin": "79efee3a5ddd472338026aa4e3128cb1ef6e9ba6841581e57b0f31bd19d2d085",
+    "FOURTEEN_REUSE_remaining_h14_v31_free.bin": "bd54a6c4180cad2d33947363790dbc356915597a624e4bbc3a98421ba4209d3f",
+    "FOURTEEN_REUSE_remaining_h14_v7_covered.bin": "5f120cb8f63c1d5e53535b1856892125fc34dffaccca109730c62cc612e33f74",
+    "FOURTEEN_REUSE_remaining_h14_v7_free.bin": "ad3977cd986a68a26aa42d611f4f156ec0e5b2f4a568296fa30410ae5316eb85",
+    "FOURTEEN_REVIEW_application_check.cpp": "4296931f24a1160b3d6f1a27eb4c31d44e1ced73ed480efe11910c4e770af336",
+    "FOURTEEN_REVIEW_import_check.py": "cb09e9196f1fe7e459287009a36b1610a6c17c98aa18f146eed91de0e00dbc25",
+    "FOURTEEN_REVIEW_prepare.py": "d65323c269bc713c861cea212c8ddc30b5ebcb6f898cc544eba31dc1abe0e0e4",
+    "HIGHER_FORCED_CHERRY_REVIEW.json": "14a097a78df2708f03edaf5284e78e7c1178b2332c800830b23bb16f14463231",
+    "HIGHER_HOLE_UNIFIED_TRANSFER_REVIEW.json": "58ecb9f6f0f50add1abaee2261a8a8282137ecf728f4b38beefdac0627885f55",
+    "HIGHER_Q5_FULL_REUSE_REVIEW.json": "5b032fa262eb9881ad0b7cfcf6e39ef0c3044445bd3fa9129ad4bf8c7eec7f89",
+    "HIGHER_Q5_FULL_REUSE_REVIEW_T15.txt": "649b759201e59f52e0c8d44651f7cc2acef5c1b2c65a89c8cdea9245257e863e",
+    "HIGHER_Q5_FULL_REUSE_REVIEW_T17.txt": "d55322a5e08e38cf7b237742d6066d742aa70ba525b61c4ef2135a1fad5921d2",
+    "HIGHER_Q5_FULL_REUSE_REVIEW_T26.txt": "7360dffd6f281d140db1476398f2eb2fe984f359dcc4f4373ed7a36ed93f1448",
+    "HIGHER_Q5_FULL_REUSE_REVIEW_T63.txt": "70c9bef2d9d67ed629fd3478bfc458f56b43b56957cdf30a91bf403f8e5e9785",
+    "HIGHER_Q5_FULL_REVIEW.json": "265c0d65b6fbbe28d2fe5123e7f901c317cd299230f354eeab3a16ad1e0ed0fd",
+    "Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "Q5_T15_RANK_BATCH_REVIEW.json": "e7ad0284121c8d29c558322a3bb09dfd6423825b40f7db249607594a5a0d39d2",
+    "Q5_T17_RANK_BATCH_PROOF.md": "8ec7a18fdf991af28e02c0d38a106c505c22d016efd04e5469f6fdc7072997d8",
+    "Q5_T17_RANK_BATCH_REVIEW.json": "aa965e154e031774ffdcfa3cd65af9a6955ea11cb906d028ebc2cc6ff6573796",
+    "Q5_T26_RANK_BATCH_REVIEW.json": "0dbff59677699a1d680f635a5602faac315d46a256884bef53965ca9929377da",
+    "Q5_T37_INDEPENDENT_REVIEW.json": "56fc5212a1e4d68e5eeb5f5a08bc603cb564d8b73d98036536433521f743fc75",
+    "Q5_T63_COMPLETE_SPLIT_REVIEW.json": "4ffd7ef4b900b6ba4fbafa124c617f416086209643c2eabfed5e8db1dc1270ad",
+    "Q5_T63_RANK_REVIEW.json": "6054bb44eb7c034f94c7aad4774adbe56e56de1e600b427be6ee1b1a9255c042",
+    "T44_Q5_CLOSURE_REVIEW.json": "f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "TEN_HOLE_COVERED_PARTIAL_REVIEW.json": "90a881aeaf07485fbe7552a91f29a93c8e4254763a3d6f59f290f7ec3c0b4024",
+    "TWELVE_EXTRA_FORCED_REVIEW.json": "80ab84a5d773d39cc212bd7a35c3028c909ecc8640ec2e5dd7af567ca54f2036",
+    "TWELVE_EXTRA_TYPES_REVIEW.json": "d3acfe0680d227a60c7fac1f3bcef8dc22ed22d94298a0e72852428888dfad43",
+    "TWELVE_EXTRA_TYPES_orbit_006.json": "4eae8554e3c7d4faaedc437ea8bf347f54d5b5a685f3669113b2637d01fc9f8b",
+    "TWELVE_EXTRA_TYPES_orbit_006_columns.bin": "8c74f1722bad4f82c5062b7c3f766d4ba70a3f29b97f5e35e77a13bcbe15282e",
+    "TWELVE_EXTRA_TYPES_orbit_006_combos.bin": "c58a0d8cc75dc3a4050269af2c7113f98895f199f1ce9db98f2312ca800a2257",
+    "TWELVE_EXTRA_TYPES_orbit_006_config.txt": "1dc084c638ea21d3e413937e1b414b1f2c628f3fda7b0a67521bab4904f36136",
+    "TWELVE_EXTRA_TYPES_orbit_006_forests.bin": "8f81801ea3d45444f84c10a387169585588fb4dbed60780b553950c647ddf1ec",
+    "TWELVE_EXTRA_TYPES_orbit_006_matrix.bin": "d1fda8c62a0a8607a7d26b607163a63d1558ffd1a7195c8fee646fccbf9166ee",
+    "TWELVE_EXTRA_TYPES_orbit_006_pairs.bin": "c11fd78d80d32b297d82778f331f63a21e9aba9adc33fd02445986231501efd6",
+    "TWELVE_EXTRA_TYPES_orbit_006_pivots.bin": "9446fb4f57d9a72bf38deedcf1f745d16443a0fe5e066507794c846756cdc27e",
+    "TWELVE_EXTRA_TYPES_orbit_007.json": "4bd894b03e3ff2bf59b6f25a0468cad3145a5bbf9d04548d537aaaef808fa0e7",
+    "TWELVE_EXTRA_TYPES_orbit_007_columns.bin": "bacb401d5611b594e2f3453b21f9bf2ca1f9b74c373e1acd8bd096166b32ef7f",
+    "TWELVE_EXTRA_TYPES_orbit_007_combos.bin": "3bb8b3ba7e5c4f94cdc5549d227b4b4e997841132ec0fc64f0ebc36610dd6a02",
+    "TWELVE_EXTRA_TYPES_orbit_007_config.txt": "cd6bc347b96f4c986f26caa29bbf6b1c658d44a020fb23c24e5d3acef3f03ec6",
+    "TWELVE_EXTRA_TYPES_orbit_007_forests.bin": "c0231a174eaa28cbb4324084d73a3e52b8f0a0aba2ed2495bc6cf0bdab89cbd3",
+    "TWELVE_EXTRA_TYPES_orbit_007_matrix.bin": "8c3aecffda0abe44e517d616c5e08bf46582556834ab0e10eca555ee44caf49a",
+    "TWELVE_EXTRA_TYPES_orbit_007_pairs.bin": "08aac66c54a710e9a24f673880286e0673522f70db0160097d9a01124abbae8e",
+    "TWELVE_EXTRA_TYPES_orbit_007_pivots.bin": "ab73639865a892802008dc46644c4a10c64101b9c2c5eeac2de758988ea90ad0",
+    "TWELVE_EXTRA_TYPES_orbit_016.json": "dd7e7f8b9436af348420057387297d3245e142326c816b3ed36a991972698d18",
+    "TWELVE_EXTRA_TYPES_orbit_016_columns.bin": "be0d496b11efd977b539fc6d7ab22165435031030644429cfc9e19518a6a7775",
+    "TWELVE_EXTRA_TYPES_orbit_016_combos.bin": "95e961e25be9a2e4fae34fa1a415a47894798f494104bc29cf7fea2f16dee480",
+    "TWELVE_EXTRA_TYPES_orbit_016_config.txt": "992dd3eee7acbc038db6ab1a8bcb80755943da17f8a6b63ac111e957290e5e44",
+    "TWELVE_EXTRA_TYPES_orbit_016_forests.bin": "de2cf6ad401d6272d78da78fd75172cd3bbce5f791c48dfe10c7b890861c02aa",
+    "TWELVE_EXTRA_TYPES_orbit_016_matrix.bin": "ddf4e823bfd05fb716f1502cf47ef5643557a8735600f2be2a91f0b7e23004f6",
+    "TWELVE_EXTRA_TYPES_orbit_016_pairs.bin": "07b4752f9c1ced965777374e21a69cbeae5a5ad16ab8265945350bd681c26015",
+    "TWELVE_EXTRA_TYPES_orbit_016_pivots.bin": "150dd86b9d3bced9ad4f933fd36848028c35e90459cc45e857c2687ad68f35b4",
+    "TWELVE_EXTRA_TYPES_orbit_040.json": "87a8319fc1f6d2735e5128282b9f49cda4defe4440c82442d77e623dcc4d8cdb",
+    "TWELVE_EXTRA_TYPES_orbit_040_columns.bin": "bacb401d5611b594e2f3453b21f9bf2ca1f9b74c373e1acd8bd096166b32ef7f",
+    "TWELVE_EXTRA_TYPES_orbit_040_combos.bin": "f4964b35174901d0b532e9a776054e4de6926fe40323e31a227bda90c455688b",
+    "TWELVE_EXTRA_TYPES_orbit_040_config.txt": "1811cce50dcc40543c99696ae0bc94530914791bffc31191f4f3de6211647231",
+    "TWELVE_EXTRA_TYPES_orbit_040_forests.bin": "0566e1bed1b9f4b64cbd0566f2aae6f9bcbdde764f0264c7dc3ce1448833ff73",
+    "TWELVE_EXTRA_TYPES_orbit_040_matrix.bin": "002ee7bb3d96820a55a53d14b3fab6ffb84efc129e006b3d2ebb79d43b6b9dc6",
+    "TWELVE_EXTRA_TYPES_orbit_040_pairs.bin": "1a77e2b4b66e93ce56820198ce7a259292c94463d757d6646a4227c8bba63505",
+    "TWELVE_EXTRA_TYPES_orbit_040_pivots.bin": "10b104c4e9d218998848329f4ce9a6c146d9ea31744f66e3dcd1a055ff3e5a7f",
+    "TWELVE_EXTRA_TYPES_orbit_041.json": "0f197df673b05c8a6e11df95ace92cdae55dcf2f83f8ecc26afd0de5cc937a05",
+    "TWELVE_EXTRA_TYPES_orbit_041_columns.bin": "40c44d5a1dd30b0f2aa1273e12003bb677d32ed39e3615051e2f0f9fc1a538fe",
+    "TWELVE_EXTRA_TYPES_orbit_041_combos.bin": "106bb5bc0b94e41efdee953a3da05297b6f5e818ccd45631cad8ff2b6d41bfb1",
+    "TWELVE_EXTRA_TYPES_orbit_041_config.txt": "af7864948ad87810d12a88801e643c4ca2af9d3311df053a05d22d4cc742d1ee",
+    "TWELVE_EXTRA_TYPES_orbit_041_forests.bin": "03444a2fba9e0d3d7ae660b4597540a4f36eb841143c09fb78a47b4285af3494",
+    "TWELVE_EXTRA_TYPES_orbit_041_matrix.bin": "fc7f5bc5958d8478e68e1708cb7afd14586d3f910308c1bc06f7ae4a1f7a3cde",
+    "TWELVE_EXTRA_TYPES_orbit_041_pairs.bin": "3f8a5298bfb1c7092e1dea43051c5b5995584dc1f68e1bc028efe5eb465d893e",
+    "TWELVE_EXTRA_TYPES_orbit_041_pivots.bin": "401800d25168af97516848f62f831a70333e2a911625e19aca15fb2290876573",
+    "TWELVE_EXTRA_TYPES_orbit_069.json": "b6d8bf8e4d8f424f7eb06ff241282ecf308810f434f32a4fe18e1be64dae3264",
+    "TWELVE_EXTRA_TYPES_orbit_069_columns.bin": "d298902402614baa5478bc763f677b60c147dfb5e3c1da09f7fe327cee764781",
+    "TWELVE_EXTRA_TYPES_orbit_069_combos.bin": "1ff021a6768e7f69a8386cc27c66007e015e305139aefb5f104518d912b94b4d",
+    "TWELVE_EXTRA_TYPES_orbit_069_config.txt": "5cb4f0d797751703e026f953d3b3e699d949fae60ffbb561f2a48686092404c1",
+    "TWELVE_EXTRA_TYPES_orbit_069_forests.bin": "58cedd536cc74ce696142c8916ab34b65cd7e37f1c5d433fb5368809ec4b6223",
+    "TWELVE_EXTRA_TYPES_orbit_069_matrix.bin": "429a4ec6b835ae221cf96d09722fd60aa1bbaab5bb44a1627fa5bb915b8ffde1",
+    "TWELVE_EXTRA_TYPES_orbit_069_pairs.bin": "4309289573f9835a9278d9a834debb0ee39dae702987afe586ad0f5b08e68bc0",
+    "TWELVE_EXTRA_TYPES_orbit_069_pivots.bin": "f57666b3d8dbab7f3f871fed79bc390386d83c55b9352b162c2b03d687af74ea",
+    "TWELVE_EXTRA_TYPES_orbit_118.json": "1781ec3f83cd3ce3f8e0113859e5a144996c1f5e010ae793b7322d0942c714c9",
+    "TWELVE_EXTRA_TYPES_orbit_118_columns.bin": "ef779d66ea958811bc875d9c23072068ad31f0bd22d4922e0e1ac255a0e14423",
+    "TWELVE_EXTRA_TYPES_orbit_118_combos.bin": "aafd85af4a04ed77b0ed36077df0c09a3f4cf955e1f8a0da925675a8878b9352",
+    "TWELVE_EXTRA_TYPES_orbit_118_config.txt": "d268da636df25313cd7b32bd9aa0f55e9217bf518dc986bbe2dddb7f1d8de40d",
+    "TWELVE_EXTRA_TYPES_orbit_118_forests.bin": "5c789f808c1c7f764006621fd354c184ad36e4930bf6f0615ed5145bee86523b",
+    "TWELVE_EXTRA_TYPES_orbit_118_matrix.bin": "8772ac93a5e0eb26084fb4594e70032f51074c95c97536a756e765f6e470ad22",
+    "TWELVE_EXTRA_TYPES_orbit_118_pairs.bin": "223639c96572ee306f4414e14e7c8579430d73507fdb9abf318912e596e15fcf",
+    "TWELVE_EXTRA_TYPES_orbit_118_pivots.bin": "604f6cee192cc02484628b25d2d4e1961c498d6d06e26d87bc7271fa61d9cd49",
+    "TWELVE_EXTRA_TYPES_orbit_132.json": "5b608873b22c80ef3b38ad3a8843b014bf7b5410d50c5bd0db355d155d98637f",
+    "TWELVE_EXTRA_TYPES_orbit_132_columns.bin": "8ff57b79c1fc7cdb6852a2b7153fd3caf209f8ca2d806a7cfa14c97b12349aed",
+    "TWELVE_EXTRA_TYPES_orbit_132_combos.bin": "aa6f1137fde367e986b3d25e7fe5ffa7a9d4901878f950de3be90f77b7a8b052",
+    "TWELVE_EXTRA_TYPES_orbit_132_config.txt": "7c273f51bcb2e66986933492414633849315dcd22ebbf7dbba64a44487928c24",
+    "TWELVE_EXTRA_TYPES_orbit_132_forests.bin": "e968aa26f5b9524b0f4c51b85e3cde652f7ca64b77562c77d18823d1766e5304",
+    "TWELVE_EXTRA_TYPES_orbit_132_matrix.bin": "395995d12e178bab6c350ab872f5ca7be9132431a0107eadac9d0b3aed31b73f",
+    "TWELVE_EXTRA_TYPES_orbit_132_pairs.bin": "28a22005f16f49ea97b03438bd48a1c845216d19cd147526b2c2efefc540c5dd",
+    "TWELVE_EXTRA_TYPES_orbit_132_pivots.bin": "ceb42aac486c2cba057248a5b79ebedfa5383fee2ad6236e667d25c9d5f6c7de",
+    "TWELVE_EXTRA_TYPES_orbit_148.json": "8b1ff128abde6082a575ca536a0839fbad5c1e4fe55139c52c10b9cb9fdddfb9",
+    "TWELVE_EXTRA_TYPES_orbit_148_columns.bin": "f1b15e03648820d767b89013112fc8773d2a9270e29e83338d4ba3fd11392249",
+    "TWELVE_EXTRA_TYPES_orbit_148_combos.bin": "36bd48abf88ae54036e407e4f40a9277e27e02b3032ce1ecf861300bed3666ea",
+    "TWELVE_EXTRA_TYPES_orbit_148_config.txt": "6d2b4aae739172d6c7b098b1b9c9c09995811fb238baa8d1b096fca3450619b7",
+    "TWELVE_EXTRA_TYPES_orbit_148_forests.bin": "fe56ed67f84fd8bd3e67bcf5f53990947f591e970f5148096bbee9676224627f",
+    "TWELVE_EXTRA_TYPES_orbit_148_matrix.bin": "9c817d80aabdc20d4f62b499a74ee3a64226537813815ffda7bd622f2b03a36f",
+    "TWELVE_EXTRA_TYPES_orbit_148_pairs.bin": "6c2d2d47c724ecfed4e763a07d1243453c71ea7ebbcc1a8aea219980927246ec",
+    "TWELVE_EXTRA_TYPES_orbit_148_pivots.bin": "6be1ae25305562d483996d172b2865c81929b8262abf5c2106c6c52c54d57a00",
+    "TWELVE_EXTRA_TYPES_orbit_156.json": "00647a0227215de98d05279fba3125c623c13adf2e1c144484cd7f14f54af892",
+    "TWELVE_EXTRA_TYPES_orbit_156_columns.bin": "6adfd65ec2d16c559d11acc36958d45bd844f0733a6584a5c918996921184695",
+    "TWELVE_EXTRA_TYPES_orbit_156_combos.bin": "65d414bbaf392b3b2e14decf22cc69f792873178c0bbd5a40d2613f848114cb3",
+    "TWELVE_EXTRA_TYPES_orbit_156_config.txt": "634f055069ab3a659ce07e68e63d683640c0d302bce1c1367af3cb3edab3dbaf",
+    "TWELVE_EXTRA_TYPES_orbit_156_forests.bin": "b8105f9afa81c327897c616f3ff10d02d4bd11cb298240150ba4e407d67f790b",
+    "TWELVE_EXTRA_TYPES_orbit_156_matrix.bin": "c853102593c1bb8d326a14b1611cefba9619effa93dbc961de05cb50cf4200ef",
+    "TWELVE_EXTRA_TYPES_orbit_156_pairs.bin": "80ceefd34e4cfb2fce6ab4b12020453be2a2b74c9e91039a96c1f31730ae0962",
+    "TWELVE_EXTRA_TYPES_orbit_156_pivots.bin": "7f753b6d77304c0e1938b09a1674f538a671ade74272e409c911443a4c9fd7ad",
+    "TWELVE_EXTRA_TYPES_orbit_186.json": "4ab014da6211860fa831e885c96de0097d8ba836be976299f74bb055db41f251",
+    "TWELVE_EXTRA_TYPES_orbit_186_columns.bin": "6d5e1da6531a205ef91e8651ec47acd8d718518a0649d5e4fe823f0dba1e5ef9",
+    "TWELVE_EXTRA_TYPES_orbit_186_combos.bin": "f3b4c62095ad64a80ee084381ceb52f34226933a511ac91606003ac736d04c37",
+    "TWELVE_EXTRA_TYPES_orbit_186_config.txt": "1010af2336291a05ed62de4663a54b31dcd178023f5628e372582faee02d9ad5",
+    "TWELVE_EXTRA_TYPES_orbit_186_forests.bin": "4418aba5059c8cd9b5177055f38013c67c7632170f67b1bd6f68795adf0f7f03",
+    "TWELVE_EXTRA_TYPES_orbit_186_matrix.bin": "c54b02141c69f85372f8098ae7beedcc8001a8aed56baa76be9c54cf0dc0a4a2",
+    "TWELVE_EXTRA_TYPES_orbit_186_pairs.bin": "6553ea3a139451e22d6b41ac9f4eed68164f20ed98908b4c759f957bb105d42a",
+    "TWELVE_EXTRA_TYPES_orbit_186_pivots.bin": "be3e7babcf400e3855d84db003907f99d7fcfdd7c8a55e20f2a7d35601928fe2",
+    "TWELVE_EXTRA_TYPES_orbit_205.json": "10890ac886438ba941a5dc425ddded588dade0207d72595ac18fdcd495e76789",
+    "TWELVE_EXTRA_TYPES_orbit_205_columns.bin": "6b1fdaaf4bef74061b2b8afae768a4295042455e6ee7faabf85ce1492157f434",
+    "TWELVE_EXTRA_TYPES_orbit_205_combos.bin": "bc82cdd826e42c4d347af790f9f560091145d9ef1a5ed463f3567d08932842ea",
+    "TWELVE_EXTRA_TYPES_orbit_205_config.txt": "c86b3e91d3da80cd1c375a984af356ffa151c1e9f2de246d9e706c5d08070967",
+    "TWELVE_EXTRA_TYPES_orbit_205_forests.bin": "df0a49af7d8cf2fa24b40c0bcbf4b913b9ada1bf247f8ba299d615de3408a6e4",
+    "TWELVE_EXTRA_TYPES_orbit_205_matrix.bin": "84642325d69afa057f30098f5ec13db35438ba1b465e2defd23986e28939a0af",
+    "TWELVE_EXTRA_TYPES_orbit_205_pairs.bin": "cfb5e4975b906c3e139a11dc1be1e2c5b0af50d18814afd58a40d77017a174e9",
+    "TWELVE_EXTRA_TYPES_orbit_205_pivots.bin": "bace1248e21a58c673a4401067fe3552ead41242637914ef954e71d38976306e",
+    "TWELVE_EXTRA_TYPES_orbit_246.json": "c02cd7758615164263866fb123208734bc68b89ac611bdfe968f90d9fb736c65",
+    "TWELVE_EXTRA_TYPES_orbit_246_columns.bin": "b4ee2dda9dcabf96f01deda217ad7ce07da0d515b02554b30763e9400dd34767",
+    "TWELVE_EXTRA_TYPES_orbit_246_combos.bin": "b842e0ef70900a137c573f23f61be582a364a04349e1abb778d9e20eb85b19a0",
+    "TWELVE_EXTRA_TYPES_orbit_246_config.txt": "e4eccb8b42e571c70a5da4d7b8bf4edd8cc045f0ef02324f214a659f21796f91",
+    "TWELVE_EXTRA_TYPES_orbit_246_forests.bin": "3d81ca76d9eb8107d6df702720d6aee806a9dbadc2ff4771b0bdc1833697d3c6",
+    "TWELVE_EXTRA_TYPES_orbit_246_matrix.bin": "1e491f72de648c6575c17849b0aa641771a8b2c90a8d78cb1f9a9439a18d9cfd",
+    "TWELVE_EXTRA_TYPES_orbit_246_pairs.bin": "a81defa55c6a5e6d623d5bf31e0e1f36876b5ee6fe888dff635d6ed298233aeb",
+    "TWELVE_EXTRA_TYPES_orbit_246_pivots.bin": "5c86e68caba8ec7976b6e96e2547557fcfbc6ae2ef604039cf20bd4351567e9f",
+    "TWELVE_EXTRA_TYPES_orbit_248.json": "2ff0702f33b7b5a5ef45c373b607b496612030043c2dd88771e6a4a0fb559541",
+    "TWELVE_EXTRA_TYPES_orbit_248_columns.bin": "5ed741e7e41af1937d68ce7745f090fb9c69aff3f64d0ff9c31aa2ca9eeb29e3",
+    "TWELVE_EXTRA_TYPES_orbit_248_combos.bin": "ef792436d855c9adbdcbbe134504c107b540a4b25986141faf3a6d164a874bef",
+    "TWELVE_EXTRA_TYPES_orbit_248_config.txt": "fad362375ce2244d11c56a7b966fb9bf413632de53e25c1eaee9113529258d98",
+    "TWELVE_EXTRA_TYPES_orbit_248_forests.bin": "2e9976e5a1af6fcc5a120e1925648bae3ccac7784ca8835f4b37fa0f4f54e571",
+    "TWELVE_EXTRA_TYPES_orbit_248_matrix.bin": "200810757c4191e303c5d697fd80276e084c160f4fe49dd806ce7e5ac61cef77",
+    "TWELVE_EXTRA_TYPES_orbit_248_pairs.bin": "f20c110132f7c79a5da4fcf410b82462de68efde0efc6a89a62038db8f94b265",
+    "TWELVE_EXTRA_TYPES_orbit_248_pivots.bin": "25391723c48e4bca1c64db648fed274b0e74fda359c8e0f22452232eb089e767",
+    "TWELVE_EXTRA_TYPES_orbit_251.json": "ba837587a0a08c492d12926a2db199c0c3954ed0134a763d277a8188656e0669",
+    "TWELVE_EXTRA_TYPES_orbit_251_columns.bin": "2539144983f4514876f83292bba5ff0072def2cf7566bfd671750ff534cce34d",
+    "TWELVE_EXTRA_TYPES_orbit_251_combos.bin": "a318823a88d5b9fe458fdb37e3333f3abb3167fc265a3bd451e3f1c87840f284",
+    "TWELVE_EXTRA_TYPES_orbit_251_config.txt": "12e31edcba257c083a62029a27c401151fcc5ff44514fbed3748a90eab35204e",
+    "TWELVE_EXTRA_TYPES_orbit_251_forests.bin": "dc075ce6878b918d94897fae81bea16c52431db69de552f2eb20d3f9d0f07e51",
+    "TWELVE_EXTRA_TYPES_orbit_251_matrix.bin": "6798a0d663a9637e1a964ea5df84c98b192c56644aa47f5a18c823c19d40ac0f",
+    "TWELVE_EXTRA_TYPES_orbit_251_pairs.bin": "8d31f9651f2c6185fe994ad514738d20ebb9ba26ba6b78c9b06025e355689798",
+    "TWELVE_EXTRA_TYPES_orbit_251_pivots.bin": "7d6edbaf2f8075c4a690fdcd270ad02ecba1ea253134651c84d5ede9d2e1b54c",
+    "TWELVE_EXTRA_TYPES_orbit_252.json": "f727b491fe89e1a129dd7fc095ab9b2df3c5e5e67c3c2a3ecc37becad46c1c78",
+    "TWELVE_EXTRA_TYPES_orbit_252_columns.bin": "4b29815db4c54c6c940ee0089092deb1c38582979277d2bc3186b94286f42917",
+    "TWELVE_EXTRA_TYPES_orbit_252_combos.bin": "e01a37522143798191e2cb4b3b55f81cfb6cd5ec0a1a71c6ea854c335055f060",
+    "TWELVE_EXTRA_TYPES_orbit_252_config.txt": "1ff698ba3975ea1034ab96df0c542c93b850b2e7596c15f4e20ceefffe7b045e",
+    "TWELVE_EXTRA_TYPES_orbit_252_forests.bin": "947fd363d5d9fc2de8aef5bc136e46e91beab8272b75e2b34582baa5c798aca1",
+    "TWELVE_EXTRA_TYPES_orbit_252_matrix.bin": "cf48519458ceafe3fac86056b7e2ec62cbddf9609c05d8e52e922b3a0db0029c",
+    "TWELVE_EXTRA_TYPES_orbit_252_pairs.bin": "2395f0e2e0509ab357f9e7da307020bc3a974f4442b8a3b839d59b22e610b755",
+    "TWELVE_EXTRA_TYPES_orbit_252_pivots.bin": "589b4e914840128a8d66a874cdc9cc03a64fc42bd08a709396e08ead9fa78288",
+    "TWELVE_EXTRA_TYPES_orbit_288.json": "d1e4a9a8f980738ed4817c5e43bc85dfa64b7e9e408f33c19ff7377da3093ca1",
+    "TWELVE_EXTRA_TYPES_orbit_288_columns.bin": "df0bf90ec0b24746dfe5e8bbf22499ee90e9a9ce9c92009162c1a65a2eacc378",
+    "TWELVE_EXTRA_TYPES_orbit_288_combos.bin": "f72a292d5453e3adb5c029418213f62bfb937f0613b30b3f5ef24b663926a81b",
+    "TWELVE_EXTRA_TYPES_orbit_288_config.txt": "d73d36e834ddcb16f5fc489ced3e36e6d58bb5e7ce386ded9f63f40e41f4aede",
+    "TWELVE_EXTRA_TYPES_orbit_288_forests.bin": "b4996bfcfad6640d9c53971983ac64df72b7b03187163fc828af3dafcf810e20",
+    "TWELVE_EXTRA_TYPES_orbit_288_matrix.bin": "4be32b1650556bc1f091c5ad1fe9568067413711db14144814278589b5c06262",
+    "TWELVE_EXTRA_TYPES_orbit_288_pairs.bin": "cb20af0253fc55af4aabed24c02a5f8b09ad36e407bcfcf158a6696991eae20b",
+    "TWELVE_EXTRA_TYPES_orbit_288_pivots.bin": "c93b125b425be06466a27a0b063feaa785e74528ffe485f9fc610b7aa622539f",
+    "TWELVE_EXTRA_TYPES_orbit_300.json": "140fc86298c6f892afe4a9b834a6317b2e46b73cf7a8852dc2de4df3791c952f",
+    "TWELVE_EXTRA_TYPES_orbit_300_columns.bin": "6adfd65ec2d16c559d11acc36958d45bd844f0733a6584a5c918996921184695",
+    "TWELVE_EXTRA_TYPES_orbit_300_combos.bin": "236c518534c09317b8e7d84979d943d353529c0d4f728f8b1c1fae3436c3d11e",
+    "TWELVE_EXTRA_TYPES_orbit_300_config.txt": "b5ac665e9bc5574ea973f79e4a102b829ee35da42eae942b3a051d5c6119b4ca",
+    "TWELVE_EXTRA_TYPES_orbit_300_forests.bin": "8ddef91e7a1706670e65460c556fbbea1eb07d4d2b3851d3194459da0a117dfd",
+    "TWELVE_EXTRA_TYPES_orbit_300_matrix.bin": "4e8977456456d12367e496d2777cd811f95e80f32278d7c699e955e7aed320e6",
+    "TWELVE_EXTRA_TYPES_orbit_300_pairs.bin": "95e4c1b4294f45e16d048818e18b223a6049f0a7a47eab6e642e44bc4a944241",
+    "TWELVE_EXTRA_TYPES_orbit_300_pivots.bin": "d031a57c36238b86afaf3a475a10b4b1c617d914b57b125c3bc46ac7074c43ca",
+    "TWELVE_EXTRA_TYPES_summary.json": "76545a2d0d26156ae2162bc604fee048a03d5d4b16b2401a24ee05b87aa638ad",
+    "TWELVE_HOLE_FULL_REVIEW.json": "405b019235810d8df75d58354b10c6d8ed42c1129a942940311555277a9382ce",
+    "TWELVE_NEW_FORCED_REVIEW.json": "60317e5e8c091ece3d16834c71b29fd196ebee11d93a0ed8dbbab2cc4dc895dd",
+    "TWELVE_NEW_TYPES_LOCAL_REVIEW.json": "660364dc26183230bc5421c6aaaf73df5000c2a42477a7eda03ee4ebae3ece88",
+    "TWELVE_NEW_TYPES_orbit_161.json": "a4f1748fa08c2ae38949cc9f572eb4f20ecbea52bf36c44420a48ecec3558c25",
+    "TWELVE_NEW_TYPES_orbit_161_columns.bin": "43d235059e66543ba093450f1cf7f2d99e4475181d01bdd658dbeddf12263852",
+    "TWELVE_NEW_TYPES_orbit_161_combos.bin": "dabf0b04a03b0d6c8d8dcfd3b67b0582e004211d4ffee1ea79bd53351ee1e45b",
+    "TWELVE_NEW_TYPES_orbit_161_config.txt": "9891d24b7a1b7d164dcb435f045dcfe4164195937371df6d94aa637eae99d6f9",
+    "TWELVE_NEW_TYPES_orbit_161_forests.bin": "e3232250821b010da1263c47d8c36bb43f4ce14bd074f73ab6d08f09e7c767bd",
+    "TWELVE_NEW_TYPES_orbit_161_matrix.bin": "260247a4a2c6161ab33d892e7207ccc152fd07ba71ecfc2a88aa10dd75bac1dd",
+    "TWELVE_NEW_TYPES_orbit_161_pairs.bin": "b926580f152b3e3c0f24687a07dd916208e648b82c9c4c947118c7906b5250a7",
+    "TWELVE_NEW_TYPES_orbit_161_pivots.bin": "37508b385f94350e964ba1aa78fcf047a11ba6b38e02983b71adf9fe99549175",
+    "TWELVE_NEW_TYPES_orbit_318.json": "58bf4699a5c2568f1f06b9b7952720c06f9db60c4884b503aec9e5334c85c1f3",
+    "TWELVE_NEW_TYPES_orbit_318_columns.bin": "8ffc2b433db0ddba74bcdce333f2ffc2997d99bbddb23b2f81cbfc2ea2a21032",
+    "TWELVE_NEW_TYPES_orbit_318_combos.bin": "b78c7c1147ee23de340b858ac520d564b7c07e2de83a16448916ed3d0a8a96af",
+    "TWELVE_NEW_TYPES_orbit_318_config.txt": "c0912ce904a6187a011372bb6d6600fb5fe4d19f8c937e8ccefa197e1da5e213",
+    "TWELVE_NEW_TYPES_orbit_318_forests.bin": "a9bb68f9e9b1e9cf7f9bcdc359850c4e871e13917b45369026a4ad13a38a4e02",
+    "TWELVE_NEW_TYPES_orbit_318_matrix.bin": "33b4aa43c6d047c4b2fcacb448de80b577ef4843b41d9bf8e805883ab5b3cebc",
+    "TWELVE_NEW_TYPES_orbit_318_pairs.bin": "39537e8b7dfd4369994a3c04ebb9d4da0987ab12ae67ca76eb7367a7d6c4da2d",
+    "TWELVE_NEW_TYPES_orbit_318_pivots.bin": "79e91a81a3a378b649676a3482e6dd82b6bf4c03c0e50303e53ee541d8ab76ac",
+    "TWELVE_NEW_TYPES_summary.json": "7e7086582f76e5f3ab4bd45921553343a2b8803e36c78d2817408941fe0dc4e4",
+    "TWELVE_STAR_B_REVIEW.json": "64d50fa06fa9a30a935f164e9503d7fa2be1c08e57884a01ea58eab894d285c9"
+  },
+  "formal_imports": [
+    {
+      "file": "HIGHER_Q5_FULL_REVIEW.json",
+      "sha256": "265c0d65b6fbbe28d2fe5123e7f901c317cd299230f354eeab3a16ad1e0ed0fd",
+      "actual_scope": "All three full-Q5 near-balanced row families, both predecessor reductions, and complete independent four-layer census/raw-set audits pass. Twelve-hole reduction uses final ten-hole PASS; higher predecessor reductions remain conditional. No complete12/14/16/18 layer or P6 closure."
+    },
+    {
+      "file": "HIGHER_Q5_FULL_REUSE_REVIEW.json",
+      "sha256": "5b032fa262eb9881ad0b7cfcf6e39ef0c3044445bd3fa9129ad4bf8c7eec7f89",
+      "actual_scope": "Accepted registry reuse proves7660439 sufficient geometries from the prior accepted8008722 twelve-hole residual, leaving exactly348283 (covered348236/free47). Every positive witness replayed and every remaining cut/source exhaustively checked. Full12/higher/P6 remain OPEN."
+    },
+    {
+      "file": "HIGHER_FORCED_CHERRY_REVIEW.json",
+      "sha256": "14a097a78df2708f03edaf5284e78e7c1178b2332c800830b23bb16f14463231",
+      "actual_scope": "Single/multiple forced-cherry conditional transfer, exact labeled-cycle local rank criterion, and automatic port gap pass; no whole higher Q6 layer is closed."
+    },
+    {
+      "file": "Q5_A10_FULL_REVIEW.json",
+      "sha256": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+      "actual_scope": "Full arbitrary-matching Q5 A10 and all feasible imbalance-two avoid-one plus all balanced-hole endpoints/cycles pass relative to final accepted imports. Full ten-hole Q6 covered targets and P6 remain OPEN."
+    },
+    {
+      "file": "Q5_T26_RANK_BATCH_REVIEW.json",
+      "sha256": "0dbff59677699a1d680f635a5602faac315d46a256884bef53965ca9929377da",
+      "actual_scope": "All 55 marked T26 universal matching theorems and actual latest-domain transfer PASS; net 37140, exact remaining 4096."
+    },
+    {
+      "file": "Q5_T15_RANK_BATCH_REVIEW.json",
+      "sha256": "e7ad0284121c8d29c558322a3bb09dfd6423825b40f7db249607594a5a0d39d2",
+      "actual_scope": "Fifteen marked T15 universal matching theorems PASS; rank4096 each, exact coverage2346 of accepted4096 and remainder1750. Separate exact union with accepted T63 covers3207, remainder889. Full T15/ten-hole/P6 OPEN."
+    },
+    {
+      "file": "Q5_T17_RANK_BATCH_REVIEW.json",
+      "sha256": "aa965e154e031774ffdcfa3cd65af9a6955ea11cb906d028ebc2cc6ff6573796",
+      "actual_scope": "17 local arbitrary-matching classifications and root-not-OB universal transfer PASS; accepted4096 has disjoint2598 unforced+1036 safe forced, exact residual462. No T15 import or whole-layer closure."
+    },
+    {
+      "file": "Q5_T63_RANK_REVIEW.json",
+      "sha256": "6054bb44eb7c034f94c7aad4774adbe56e56de1e600b427be6ee1b1a9255c042",
+      "actual_scope": "Seven exact marked T63 universal matching theorems PASS; independently checked rank4096 each and actual coverage1743 of accepted4096, exact remaining2353. Full T63/ten-hole/P6 remain OPEN."
+    },
+    {
+      "file": "Q5_T63_COMPLETE_SPLIT_REVIEW.json",
+      "sha256": "4ffd7ef4b900b6ba4fbafa124c617f416086209643c2eabfed5e8db1dc1270ad",
+      "actual_scope": "Every arbitrary K(Q5) matching with six same-parity holes and three prescribed omissions has the required 29-cycle whenever a coordinate gives marked (2,1)/(4,2), including zero original crossings. Full T63 remains OPEN."
+    },
+    {
+      "file": "TEN_HOLE_COVERED_PARTIAL_REVIEW.json",
+      "sha256": "90a881aeaf07485fbe7552a91f29a93c8e4254763a3d6f59f290f7ec3c0b4024",
+      "actual_scope": "Six covered-ten-hole sufficient rules pass relative to accepted K8/partial A8 imports. All145248180 eligible marked geometries independently reconstructed;30465 additional cases covered and91225 remain OPEN. No complete covered-ten-hole or P6 theorem."
+    },
+    {
+      "file": "T44_Q5_CLOSURE_REVIEW.json",
+      "sha256": "f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+      "actual_scope": "Full T44_5 closure passes semantic and independent exhaustive finite audit. Both canonical families, all root/completion quantifiers, occupied A-port boundary and all geometry branches close relative to explicit Q4/Fink imports. Full T15/R8/P6 remain open."
+    },
+    {
+      "file": "Q5_T37_INDEPENDENT_REVIEW.json",
+      "sha256": "56fc5212a1e4d68e5eeb5f5a08bc603cb564d8b73d98036536433521f743fc75",
+      "actual_scope": "55 marked T37 arbitrary-matching local cycle inputs pass modulo the primary GF(2) rank theorem; 9 other listed inputs OPEN; no full T37, twelve-hole Q6 or P6 closure."
+    },
+    {
+      "file": "TWELVE_NEW_TYPES_LOCAL_REVIEW.json",
+      "sha256": "660364dc26183230bc5421c6aaaf73df5000c2a42477a7eda03ee4ebae3ece88",
+      "actual_scope": "Exactly111 T28/T19/T84/T105 marked local arbitrary-matching cycle theorems pass modulo generic primary rank import; no coverage, negative classification, full12 or P6 acceptance."
+    },
+    {
+      "file": "TWELVE_EXTRA_TYPES_REVIEW.json",
+      "sha256": "d3acfe0680d227a60c7fac1f3bcef8dc22ed22d94298a0e72852428888dfad43",
+      "actual_scope": "Both gates PASS:11 exact universal local inputs,22528 forests and46137344 matrix bits with rank2048 each; selected11 actual union covers28089 of29370 and equals all293 listed geometric predicates record by record. Exact remaining1281=0/504/777. Full12/P6 OPEN."
+    },
+    {
+      "file": "TWELVE_NEW_FORCED_REVIEW.json",
+      "sha256": "60317e5e8c091ece3d16834c71b29fd196ebee11d93a0ed8dbbab2cc4dc895dd",
+      "actual_scope": "All27 stated T28/T19 local arbitrary-matching classifications pass: a short-added cycle exists iff the exact forced pair pq is absent.13824 forests,7077888 connectivity bits and27 independent rank512 eliminations verified. Local only; no Q6 coverage or full12/P6 closure."
+    },
+    {
+      "file": "TWELVE_EXTRA_FORCED_REVIEW.json",
+      "sha256": "80ab84a5d773d39cc212bd7a35c3028c909ecc8640ec2e5dd7af567ca54f2036",
+      "actual_scope": "Both gates PASS:15 new arbitrary-matching forced T17 iff classifications,15360 forests and15728640 bits with independently recomputed reduced rank1024 each. Actual safe subset1046 of1281 leaves exactly235 all v31; supplementary W=N0/six coordinate orbits verified geometrically only. Full12/P6 OPEN."
+    },
+    {
+      "file": "TWELVE_STAR_B_REVIEW.json",
+      "sha256": "64d50fa06fa9a30a935f164e9503d7fa2be1c08e57884a01ea58eab894d285c9",
+      "actual_scope": "Ten explicit arbitrary-matching B local iff classifications and all50 actual marked transports pass. No A opening or root-star/Q6 closure accepted."
+    },
+    {
+      "file": "HIGHER_HOLE_UNIFIED_TRANSFER_REVIEW.json",
+      "sha256": "58ecb9f6f0f50add1abaee2261a8a8282137ecf728f4b38beefdac0627885f55",
+      "actual_scope": "Uniform conditional transfer and eleven established cut rows pass for arbitrary realizing short matchings and covered/free targets; four marked T15 rows remain conditional. No full higher layer or P6 closure."
+    },
+    {
+      "file": "Q5_HIGHER_HOLE_REDUCTION_REVIEW.json",
+      "sha256": "ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+      "actual_scope": "A8+A10 plus established A2/A4/A6 and arbitrary perfect-matching cycle theorem imply all feasible imbalance-two avoid-one extensions and all balanced Q5 endpoints/cycles. Neighborhood bound and producer geometry independently verified. A8/A10 and full P6 remain open."
+    },
+    {
+      "file": "TWELVE_HOLE_FULL_REVIEW.json",
+      "sha256": "405b019235810d8df75d58354b10c6d8ed42c1129a942940311555277a9382ce",
+      "actual_scope": "Complete twelve-hole Q6 endpoint theorem PASS: every26-short-edge matching, every free u and every opposite-parity v including covered targets. Exact final235 are covered by six orbits using independently complete maximal-A positive witnesses and exact accepted B classes. Free/covered residual0; fullP6 and14/16/18 remain OPEN."
+    }
+  ],
+  "details": {
+    "issues": [],
+    "source_reduction_conditional_on_full_twelve_hole": false,
+    "full_twelve_hole_predecessor_gate": "TWELVE_HOLE_FULL_REVIEW.json",
+    "full_twelve_hole_predecessor_sha256": "405b019235810d8df75d58354b10c6d8ed42c1129a942940311555277a9382ce",
+    "full_twelve_hole_proved": true,
+    "full_fourteen_hole_proved": false,
+    "full_P6_proved": false,
+    "remaining_covered_target_geometries": 12528,
+    "remaining_free_target_geometries": 18,
+    "all_positive_witnesses_independently_replayed": true,
+    "exact_raw_residual_partition": true,
+    "every_realizing_original_short_matching_quantifier": true,
+    "formal_import_direct_source_hash_comparisons": 3150,
+    "producer_or_RUN_STATE_modified": false,
+    "finite_application": {
+      "reports": [
+        {
+          "v": 1,
+          "free": 0,
+          "input": 9285,
+          "positive": 6180,
+          "remaining": 3105,
+          "hits": 54810
+        },
+        {
+          "v": 1,
+          "free": 1,
+          "input": 0,
+          "positive": 0,
+          "remaining": 0,
+          "hits": 0
+        },
+        {
+          "v": 7,
+          "free": 0,
+          "input": 16108,
+          "positive": 12495,
+          "remaining": 3613,
+          "hits": 94944
+        },
+        {
+          "v": 7,
+          "free": 1,
+          "input": 18,
+          "positive": 0,
+          "remaining": 18,
+          "hits": 0
+        },
+        {
+          "v": 31,
+          "free": 0,
+          "input": 22500,
+          "positive": 16690,
+          "remaining": 5810,
+          "hits": 123970
+        },
+        {
+          "v": 31,
+          "free": 1,
+          "input": 300,
+          "positive": 300,
+          "remaining": 0,
+          "hits": 4800
+        }
+      ],
+      "input": 48211,
+      "positive": 35665,
+      "remaining": 12546,
+      "hits": 278524,
+      "pass": true
+    },
+    "selected_local_inputs": 20,
+    "local_certificate_checks": {
+      "rows": [
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_040",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_007",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_186",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_156",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_016",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_248",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_148",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_041",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_300",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_132",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_118",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_069",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_246",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_006",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_251",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_252",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_288",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_NEW_TYPES_orbit_161",
+          "rank": 1024,
+          "endpoints": 22,
+          "forests": 1024,
+          "connectivity_bits": 1048576
+        },
+        {
+          "index": "TWELVE_EXTRA_TYPES_orbit_205",
+          "rank": 2048,
+          "endpoints": 24,
+          "forests": 2048,
+          "connectivity_bits": 4194304
+        },
+        {
+          "index": "TWELVE_NEW_TYPES_orbit_318",
+          "rank": 1024,
+          "endpoints": 22,
+          "forests": 1024,
+          "connectivity_bits": 1048576
+        }
+      ],
+      "rows_checked": 20,
+      "forests_checked": 38912,
+      "connectivity_bits_checked": 77594624,
+      "combination_equations_checked": 38912,
+      "pass": true
+    },
+    "selected20_candidate403_geometry_predicate_unions_equal": true,
+    "nonselected383_local_rank_inputs_required": false,
+    "all_hit_witnesses_checked": 278524,
+    "chosen_witnesses_checked": 35665
+  },
+  "accepted_marked_inputs": [
+    {
+      "index": 40,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_040",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        14,
+        25,
+        26,
+        28
+      ],
+      "omitted": [
+        4,
+        13
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 7,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_007",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        14,
+        25,
+        26,
+        28
+      ],
+      "omitted": [
+        4,
+        25
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 186,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_186",
+      "type": "T26",
+      "minority": [
+        0,
+        15
+      ],
+      "majority": [
+        1,
+        2,
+        21,
+        22,
+        25,
+        26
+      ],
+      "omitted": [
+        1,
+        2
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 156,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_156",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        7,
+        11,
+        13,
+        14,
+        19,
+        22
+      ],
+      "omitted": [
+        1,
+        7,
+        11
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 16,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_016",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        1,
+        4,
+        13,
+        22,
+        26,
+        28
+      ],
+      "omitted": [
+        1,
+        4
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 248,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_248",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        22,
+        25,
+        26,
+        28
+      ],
+      "omitted": [
+        4,
+        28
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 148,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_148",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        1,
+        2,
+        13,
+        14,
+        21,
+        22
+      ],
+      "omitted": [
+        1,
+        2
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 41,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_041",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        13,
+        14,
+        21,
+        22,
+        25,
+        28
+      ],
+      "omitted": [
+        13,
+        21
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 300,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_300",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        7,
+        11,
+        13,
+        14,
+        19,
+        22
+      ],
+      "omitted": [
+        1,
+        7,
+        13
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 132,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_132",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        14,
+        21,
+        25,
+        26
+      ],
+      "omitted": [
+        4,
+        14
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 118,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_118",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        7,
+        13,
+        22,
+        25,
+        31
+      ],
+      "omitted": [
+        1,
+        2,
+        7
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 69,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_069",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        7,
+        11,
+        13,
+        14,
+        19,
+        28
+      ],
+      "omitted": [
+        1,
+        7,
+        13
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 246,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_246",
+      "type": "T26",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        21,
+        25,
+        26,
+        31
+      ],
+      "omitted": [
+        4,
+        13
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 6,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_006",
+      "type": "T26",
+      "minority": [
+        0,
+        15
+      ],
+      "majority": [
+        1,
+        19,
+        21,
+        22,
+        25,
+        26
+      ],
+      "omitted": [
+        1,
+        21
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 251,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_251",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        7,
+        13,
+        14,
+        21,
+        31
+      ],
+      "omitted": [
+        1,
+        2,
+        14
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 252,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_252",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        7,
+        13,
+        21,
+        26,
+        31
+      ],
+      "omitted": [
+        1,
+        2,
+        26
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 288,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_288",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        7,
+        11,
+        13,
+        21,
+        31
+      ],
+      "omitted": [
+        1,
+        2,
+        11
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 161,
+      "family": 30,
+      "prefix": "TWELVE_NEW_TYPES_orbit_161",
+      "type": "T28",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        4,
+        13,
+        14,
+        21,
+        25,
+        26,
+        28,
+        31
+      ],
+      "omitted": [
+        4,
+        14,
+        26
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 205,
+      "family": 31,
+      "prefix": "TWELVE_EXTRA_TYPES_orbit_205",
+      "type": "T17",
+      "minority": [
+        0
+      ],
+      "majority": [
+        1,
+        2,
+        7,
+        13,
+        25,
+        28,
+        31
+      ],
+      "omitted": [
+        1,
+        2,
+        7
+      ],
+      "local_independently_accepted": true
+    },
+    {
+      "index": 318,
+      "family": 30,
+      "prefix": "TWELVE_NEW_TYPES_orbit_318",
+      "type": "T28",
+      "minority": [
+        0,
+        3
+      ],
+      "majority": [
+        13,
+        14,
+        21,
+        22,
+        25,
+        26,
+        28,
+        31
+      ],
+      "omitted": [
+        13,
+        21,
+        25
+      ],
+      "local_independently_accepted": true
+    }
+  ]
+}

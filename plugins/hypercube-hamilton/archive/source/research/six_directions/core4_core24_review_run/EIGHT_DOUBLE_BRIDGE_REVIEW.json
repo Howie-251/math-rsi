@@ -1,0 +1,474 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "conditional_reductions_complete",
+  "summary": "The a2b1 + T15 and a2b0 + EP0 + T15 transfers pass the independent conditional audit. T15 and an EP0-satisfying cut remain unproved; no R8-covered or full P6 closure.",
+  "scope": "Conditional transfer proof and explicit exposure/Hall certificates only",
+  "audited_input_hashes": {
+    "EIGHT_HOLE_COVERED_NEXT_DRAFT.md": "sha256:c0842d977f047171456d1284c58468eab8437458c3864d8f922a131bd7934f1e"
+  },
+  "supporting_input_hashes": {
+    "EIGHT_HOLE_COVERED_NEXT_DRAFT.json": "sha256:da245e52314ff628bec1ab1d23f67828431e63447135bf74314c809b0b8af3e4",
+    "EIGHT_HOLE_CONDITIONAL_REDUCTION_DRAFT.md": "sha256:39a5632be39ab0ac6a6ea5e1ee3125ad2cb049edf72f819972e21b31eee1d88b",
+    "GENERAL_NEAR_PERFECT.md": "sha256:bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55",
+    "GENERAL_NEAR_PERFECT_REVIEW.json": "sha256:bf8fc7f8f622307c18a8c7ae1e50a49ec805cd09f4be191aba5ecce1bfaa9cec",
+    "A6_AND_EIGHT_FREE_CLOSED.md": "sha256:523f9bfe3454cde92bedc020666e7ea5eee6b42834f4cca36a9c3e918b7b298e",
+    "COVERED_EIGHT_GEOMETRY_CENSUS.md": "sha256:e31b0f7403432934c4ad609bb4828ac43abd812d86555148f2664075e978af83",
+    "eight_hole_covered_next_probe.py": "sha256:3b25d4412f910b22f9764b16f8edd4126f35cdf1af844e1f95f1f57c6f94d64f",
+    "eight_hole_covered_next_probe.json": "sha256:08f1de30ff87732cba1d08c8e655b1305541bebdf7bf3e2823a040be526384f0",
+    "verify_eight_exposure_obstructions.py": "sha256:1972e0cb593d4baacbd6917083467b342599c70376e4516e57605d99842bce16",
+    "q4_six_two_avoided_results.json": "sha256:4bac88c98075e092eea043a37c9335e7efb630a3a3c8bf2de1c4110759d1f50c"
+  },
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_selection_source": "User-authorized route relayed by parent agent",
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "thread_id": "/root/eight_double_bridge_audit",
+  "generated_at": "2026-11-01T08:20:26.542152+00:00",
+  "trace_path": "EIGHT_DOUBLE_BRIDGE_REVIEW.md",
+  "details": {
+    "conditional_theorems_audited": 2,
+    "conditional_theorem_ids": [
+      "a2b1_implies_path_assuming_T15",
+      "a2b0_implies_path_assuming_EP0_and_T15"
+    ],
+    "proof_obligations": [
+      {
+        "id": "DB01",
+        "location": "L33–40",
+        "status": "PASS",
+        "note": "自由孔、内部匹配、交叉端口互斥；交叉边为镜像短边。PASS。"
+      },
+      {
+        "id": "DB02",
+        "location": "L42–54",
+        "status": "PASS",
+        "note": "N10 可处理完整图匹配的长边、同奇偶边；T15 明确是新假设。PASS。"
+      },
+      {
+        "id": "DB03",
+        "location": "L56–60",
+        "status": "PASS",
+        "note": "S 为偶点，避开 z1,z2 和 X_A；其成员除可能的 u 外均被 M_A 内部覆盖。PASS。"
+      },
+      {
+        "id": "DB04",
+        "location": "L62–82",
+        "status": "PASS",
+        "note": "EP0 的补配集合精确，不把 δ=1 的根错误地从 Z 中删除；q 为奇端口。PASS。"
+      },
+      {
+        "id": "DB05",
+        "location": "L78–82",
+        "status": "PASS",
+        "note": "对每个可行 q,D，N10 只供给一条路径；额外 qs 要求没有被偷渡。PASS。"
+      },
+      {
+        "id": "DB06",
+        "location": "L93–108",
+        "status": "PASS",
+        "note": "删 D 后的 A 路径片段构成森林；不同片段接入的 B 端点不同。PASS。"
+      },
+      {
+        "id": "DB07",
+        "location": "L100–108",
+        "status": "PASS",
+        "note": "δ=1 时 D 非空保证 u,v 在不同片段；加 tagged uv 后为一条 B–B 路径。PASS。"
+      },
+      {
+        "id": "DB08",
+        "location": "L102–108",
+        "status": "PASS",
+        "note": "δ=0 时 u 是未用 B 孔，tag 只延长 v 片段至 u，不闭合成圈。PASS。"
+      },
+      {
+        "id": "DB09",
+        "location": "L106–108",
+        "status": "PASS",
+        "note": "压缩得到端点不交的匹配 T，非环；tag 恰出现一次。PASS。"
+      },
+      {
+        "id": "DB10",
+        "location": "L110–114",
+        "status": "PASS",
+        "note": "T 与 M_B 仅在两个奇镜像 Y 上冲突；原伴点 k1,k2 为不同偶点且不属 T 端点。PASS。"
+      },
+      {
+        "id": "DB11",
+        "location": "L116–124",
+        "status": "PASS",
+        "note": "两冲突同组件时为 k1–y1–y2–k2；否则为两条三点路径，无隐藏圈。PASS。"
+      },
+      {
+        "id": "DB12",
+        "location": "L121–124",
+        "status": "PASS",
+        "note": "同时压缩 Y 后得到完整图匹配 L；没有遗漏原 M_B 边，tag 保留于记录。PASS。"
+      },
+      {
+        "id": "DB13",
+        "location": "L126–130",
+        "status": "PASS",
+        "note": "T15 避开 Y；展开内部点与其他局部点互斥，因此只恢复一个 64 点圈。PASS。"
+      },
+      {
+        "id": "DB14",
+        "location": "L126–130",
+        "status": "PASS",
+        "note": "删除 tag 后原匹配边全部保留；其他新增边均短。PASS。"
+      },
+      {
+        "id": "DB15",
+        "location": "L137–140",
+        "status": "PASS",
+        "note": "yj 不为 W 孔或交叉端口，确被 M_B 内部覆盖。PASS。"
+      },
+      {
+        "id": "DB16",
+        "location": "L142–145",
+        "status": "PASS",
+        "note": "`(2,1),δ=1` 的 D 配对 X_A∪{z1,z2}，补后仅孔 u,w。PASS。"
+      },
+      {
+        "id": "DB17",
+        "location": "L147–150",
+        "status": "PASS",
+        "note": "`(2,1),δ=0` 的 D 配对 X_A∪{z2}，补后仅孔 z1,w；不需要偶端口。PASS。"
+      },
+      {
+        "id": "DB18",
+        "location": "L152–157",
+        "status": "PASS",
+        "note": "N10 根偶、目标奇且不同；δ=0 时 z1 接桥后度数变 2。PASS。"
+      },
+      {
+        "id": "DB19",
+        "location": "L159–165",
+        "status": "PASS",
+        "note": "`(2,1)` 两个 δ 分支最终孔均为一偶五奇，指定避点 Y 是其中两奇孔。PASS。"
+      },
+      {
+        "id": "DB20",
+        "location": "L169–173",
+        "status": "PASS",
+        "note": "`(2,0)` 奇端口盈余 2+δ，D 非空，补后恰孔 r,q。PASS。"
+      },
+      {
+        "id": "DB21",
+        "location": "L175–178",
+        "status": "PASS",
+        "note": "qs 不在 M_A∪D 内，因此是新增短边；s 不与其他删边、桥发生冲突。PASS。"
+      },
+      {
+        "id": "DB22",
+        "location": "L180–185",
+        "status": "PASS",
+        "note": "q≠v 时度数 2→1→2；q=v 时 1→0→1，未遗漏孤立目标。PASS。"
+      },
+      {
+        "id": "DB23",
+        "location": "L180–185",
+        "status": "PASS",
+        "note": "s≠u 时 2→1→2；s=u 时 1→0→1，保留自由根。PASS。"
+      },
+      {
+        "id": "DB24",
+        "location": "L187–190",
+        "status": "PASS",
+        "note": "新 B 端点 t 为 W 孔，避开交叉端口、Y，且 u 为偶点故不重合。PASS。"
+      },
+      {
+        "id": "DB25",
+        "location": "L192–197",
+        "status": "PASS",
+        "note": "`(2,0)` 消耗 t，δ=0 时另消耗 u；最终仍一偶五奇。PASS。"
+      },
+      {
+        "id": "DB26",
+        "location": "L207–215",
+        "status": "PASS",
+        "note": "独立复核 21 个精确 28 边短匹配，指定切分全部无 eligible 邻接。PASS。"
+      },
+      {
+        "id": "DB27",
+        "location": "L217–239",
+        "status": "PASS",
+        "note": "独立重构七个共同删边图及 Hall 邻集，全部为空。PASS。"
+      },
+      {
+        "id": "DB28",
+        "location": "L201–205,L247–262",
+        "status": "PASS",
+        "note": "census 与低维负例有明确外部/诊断范围，没有当作 T15、EP0 或 R8 证明。PASS。"
+      }
+    ],
+    "issues": [],
+    "open_error_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "remaining_research_obligations": [
+      {
+        "id": "T15",
+        "status": "OPEN",
+        "statement": "For every K(Q5) matching with 1 even and 5 odd holes and every prescribed distinct pair of odd holes, obtain a 30-cycle avoiding that pair with short new edges."
+      },
+      {
+        "id": "EP0_cut_selection",
+        "status": "OPEN",
+        "statement": "For each original matching requiring a2b0, select a cut and existential r,q,D,P,s with qs actually on the N10-type path."
+      },
+      {
+        "id": "EP0_arbitrary_fixed_cut",
+        "status": "FALSE",
+        "statement": "Every a2b0 cut of every original matching satisfies EP0.",
+        "counterexamples": 21
+      }
+    ],
+    "own_deterministic_checks": {
+      "method": "Separate one-shot Python reconstruction, no solver and no invocation of the existing verifier as a black box",
+      "individual_cut_witnesses_checked": 21,
+      "individual_checks": [
+        "exact eight holes",
+        "28 disjoint short edges",
+        "target covered",
+        "Z-W independence",
+        "a2b0 row",
+        "exact odd crossing ports and S",
+        "zero eligible q-s adjacency"
+      ],
+      "joint_hall_certificates_checked": 7,
+      "joint_edge_graph_recomputed": true,
+      "all_hall_neighbor_sets_empty": true,
+      "certificates": [
+        {
+          "target": 1,
+          "Z": [
+            3,
+            5,
+            9
+          ],
+          "W": [
+            14,
+            31,
+            47,
+            62
+          ],
+          "cuts": [
+            1,
+            2,
+            3
+          ],
+          "hall_even_subset": [
+            15,
+            30,
+            46,
+            63
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 4
+        },
+        {
+          "target": 7,
+          "Z": [
+            3,
+            5,
+            6
+          ],
+          "W": [
+            8,
+            16,
+            32,
+            56
+          ],
+          "cuts": [
+            0,
+            1,
+            2
+          ],
+          "hall_even_subset": [
+            24,
+            40,
+            48
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 3
+        },
+        {
+          "target": 7,
+          "Z": [
+            3,
+            5,
+            15
+          ],
+          "W": [
+            8,
+            25,
+            41,
+            56
+          ],
+          "cuts": [
+            1,
+            2,
+            3
+          ],
+          "hall_even_subset": [
+            9,
+            24,
+            40,
+            57
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 4
+        },
+        {
+          "target": 7,
+          "Z": [
+            3,
+            15,
+            23
+          ],
+          "W": [
+            25,
+            26,
+            56,
+            59
+          ],
+          "cuts": [
+            2,
+            3,
+            4
+          ],
+          "hall_even_subset": [
+            24,
+            27,
+            57,
+            58
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 4
+        },
+        {
+          "target": 7,
+          "Z": [
+            15,
+            23,
+            39
+          ],
+          "W": [
+            56,
+            59,
+            61,
+            62
+          ],
+          "cuts": [
+            3,
+            4,
+            5
+          ],
+          "hall_even_subset": [
+            57,
+            58,
+            60,
+            63
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 4
+        },
+        {
+          "target": 31,
+          "Z": [
+            15,
+            23,
+            27
+          ],
+          "W": [
+            1,
+            2,
+            32,
+            35
+          ],
+          "cuts": [
+            2,
+            3,
+            4
+          ],
+          "hall_even_subset": [
+            3,
+            33,
+            34
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 3
+        },
+        {
+          "target": 31,
+          "Z": [
+            15,
+            23,
+            63
+          ],
+          "W": [
+            32,
+            35,
+            37,
+            38
+          ],
+          "cuts": [
+            3,
+            4,
+            5
+          ],
+          "hall_even_subset": [
+            33,
+            34,
+            36,
+            39
+          ],
+          "hall_odd_neighbours": [],
+          "hall_deficiency": 4
+        }
+      ],
+      "input_sha256": "sha256:08f1de30ff87732cba1d08c8e655b1305541bebdf7bf3e2823a040be526384f0",
+      "exit_code": 0,
+      "existing_verifier_output_modified": false
+    },
+    "counterexample_pass": {
+      "semantic_cases": [
+        "target crossing port",
+        "q equals target",
+        "s equals root",
+        "both bridge mirrors on same T edge",
+        "tagged segment hits bridge mirror",
+        "no even crossing port",
+        "smallest crossing count",
+        "qs overlaps completion or original matching",
+        "all cuts have zero exposure"
+      ],
+      "new_counterexample_to_conditional_transfers": false,
+      "existing_counterexamples_reverified": 21,
+      "q4_negative_search_rerun": false
+    },
+    "imports": {
+      "N10": "imported theorem; no external-base re-audit",
+      "A6_K6_eight_free": "already closed and audited as provided; not used by this transfer",
+      "geometry_census": "read as external geometry classification; full census not rerun"
+    },
+    "closure_claims": {
+      "conditional_a2b1_transfer_passed": true,
+      "conditional_a2b0_transfer_passed": true,
+      "T15_proved": false,
+      "EP0_universal_proved": false,
+      "EP0_cut_selection_proved": false,
+      "R8_covered_proved": false,
+      "full_eight_hole_proved": false,
+      "full_P6_proved": false
+    },
+    "original_proof_or_main_state_modified": false
+  }
+}

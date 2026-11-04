@@ -1,0 +1,81 @@
+# Independent review: alternative T15 cores18,21,25
+
+Verdict: **PASS for the complete stated three-core claim**, relative to imported Q4 N14. Semantic assurance is **same-family / provisional**. Arbitrary complete-graph matchings are covered, including long and same-parity required edges. This is not a claim of full T15 or global eight-hole P6.
+
+This is a fresh read-only semantic review of the complete `T15_ALTERNATIVE_GROUP_PROGRESS.md` and its new finite proof inputs. Production proofs, earlier reports and global state were not edited. Recompilation and reruns were isolated in `T15_ALTERNATIVE_GROUP_REVIEW_work/`. Exact SHA256 bindings are in the companion JSON.
+
+## Dependency and assumption ledger
+
+N14 + A artificial pairing -> connected boundary pairing; balanced table witnesses + path compression -> valid expanded 30-cycle. For cores18/21, one negative gives large-c avoidance. For core25, complete inverse families + connectivity blockers + two coordinate transports give large-c avoidance. Exhaustive B spectra give c3 and ordinary c1; exhaustive positive residuals give exceptional c1. This DAG is acyclic and does not use unproved global eight-hole coverage.
+
+The sole imported theorem is Q4 N14 (`Q4_CORE_AND_A4_SPLIT.md`, lines9–51): an arbitrary K(Q4) matching with two equal-parity holes extends to a 15-cycle omitting either specified hole with short additions. Its finite certificate universes were previously audited and are not rerun here. Its actual statement and symmetry proof were inspected; every invocation here has disjoint F_A,D and exactly the required equal-parity holes. No external Fink theorem, short-only matching assumption, or core23 A-geometry identification is needed.
+
+The balanced raw tables are checked again in this review, including complete matching coverage and every positive witness. Their excluded entries can be treated conservatively: this proof needs no assertion that a negative entry is actually impossible.
+
+## Proof-obligation ledger
+
+All twenty obligations close. No FATAL, CRITICAL, MAJOR or MINOR mathematical issue was identified. There are no asymptotic or analytic interchange claims.
+
+**T01: Quantifiers.** Every arbitrary K(Q5) matching on exactly the 26 covered vertices; no shortness/parity restriction on required edges.
+
+**T02: Geometry.** Cuts and common coordinate maps recover the three marked global omissions; core25 uses [3,0,1,2]. Cube automorphisms preserve all new-edge adjacencies, including parity reversal.
+
+**T03: Crossing exhaustion.** Each face has 13 covered vertices: 2|F_A|+c=2|F_B|+c=13, so c in {1,3,5,7,9,11,13}.
+
+**T04: N14 import.** All actual A hole triples have even local parity. For either bridge z, F_A union D has exactly the equal-parity holes x,w. N14 permits arbitrary long D and prescribes omission of x.
+
+**T05: Path deletion.** D is a nonempty matching of a simple 15-cycle. Its deletion gives disjoint paths with exactly the D endpoints; R union D is connected. No original F_A edge is deleted.
+
+**T06: Internal mirror.** The extra B mirror z has unique internal mate k outside the ports. Suppressing kz and its unique path produces a valid matching on the other twelve vertices. Recovering k's compressed mate reconstructs R injectively.
+
+**T07: Occupied mirror.** For c>=3 prescribe z_A d in D. At least one other D edge is deleted, so its two ends lie in different remaining paths. The bridge/crossing join creates no closed component. Suppression gives Q union D-prime connected.
+
+**T08: Expansion.** All compressed edges represent vertex-disjoint paths. Expansion of the B 14-cycle inserts 15 A vertices and the omitted B mirror z, giving exactly 30 vertices. All required edges survive; surviving new edges are short.
+
+**T09: Single-negative blocking.** For bridge12 the table has one negative. In the internal c>=3 case and occupied c>=5 case, D=R0 or D-prime=Q0 has at least two edges; its union with itself is disconnected, so cannot be the N14 output.
+
+**T10: Inverse completeness.** For every negative L enumerate all possible internal F_B submatchings. Internal mode inversely splits the edge kq into kz and zq; occupied mode takes L minus F_B. These are exact inverses of compression, and families not occurring are entirely positive.
+
+**T11: All large c blockers.** The nine feasible (c,mode) classes for c>=5 are covered. Each of 2644 saved artificial pairings has the exact boundary and is graph-disconnected from every bad output. Internal c13 is impossible.
+
+**T12: Core25 transport.** Swapping bits1,2 maps bridge3 to5 with holes0,7,8 fixed; swapping bits0,1 maps source bridges3,5 to target3,6. Raw-table negative families equal transported text families. Connectivity is invariant. No A omitted-label hypothesis occurs in this B certificate.
+
+**T13: Occupied c5.** The only null families have all three boundary pairings bad. Each bridge has precisely two null internal matchings; target bridge3 and6 null sets have empty intersection. If a mirror is internal its blocker already applies.
+
+**T14: c3 realizability.** The A four-vertex boundary has three pairings. If at most one were realizable, choosing that pairing as D would contradict connectedness of R union D. Thus at least two are realizable.
+
+**T15: c3 exhaustive B spectrum.** For each core exhaust C(13,3)*9!!*3! = 1621620 ordered B inputs. Graph traversal rejects loops/closed components and checks exact compressed matching. Every histogram mask has at least two admissible pairings for one bridge; hence intersection with its A set is nonempty.
+
+**T16: Arbitrary bijections.** Fix any order of actual A ports. Enumeration of every order of their B mates includes every original crossing bijection, with no length/parity condition.
+
+**T17: c1 exhaustive B spectrum.** For each core exhaust 13*11!!=135135 B inputs. The sole abstract A pairing is realizable. There are exactly 3,2,20 nonadmissible B cases, identical to residual input sets without duplicates.
+
+**T18: Positive residual completeness.** For each exceptional B case, all 13 A port choices and all 11!! A internal matchings are checked; the crossing is uniquely determined. Counts 405405+270270+2702700=3378375, all positive.
+
+**T19: Positive residual integrity.** Recompiled verifiers regenerate every required matching, compare all 26 endpoint bytes, check 30 distinct vertices, exact omitted pair, all 13 required edges and every other edge short including closing edge; exact counts and EOF hold.
+
+**T20: Finite tables and scope.** Independently rechecked 13 raw tables: each has all 10395 distinct valid arbitrary matchings. Every nonnegative cycle has exact support, all required edges and short additions. Negative entries need only be a conservative excluded set. No global eight-hole coverage, full T15 or core26 replacement is inferred.
+
+## Observed deterministic checks
+
+| Check | Result |
+|---|---|
+| Residual core18 | PASS, 405405 certificates |
+| Residual core21 | PASS, 270270 certificates |
+| Residual core25 | PASS, 2702700 certificates |
+| Residual total | PASS, 3378375, no missing record or trailing data |
+| Ordered c3 B inputs | PASS, 1621620 per core, all three cores |
+| c1 B inputs | PASS, 135135 per core; exact exceptions 3,2,20 |
+| Complete inverse blockers | PASS, 2644 graph-connectivity checks |
+| Target occupied c5 null intersection | empty |
+| Balanced tables | PASS, 13 files / 135135 complete records |
+
+The C++ verifiers were recompiled with `g++ -O3 -std=c++17`, keeping assertions enabled. Their code was inspected rather than relying on old executables or old PASS reports. The B spectrum was regenerated by explicit graph path traversal; every histogram matches production. The Python comparison/geometry checker was rerun on regenerated spectra. The core25 inverse verifier was rerun against the complete source families, and the newly written `check_tables.py` independently checked raw table involutions, uniqueness, support, required-edge containment and shortness, and reconciled transport lists with the raw tables.
+
+Counterexample/degeneracy pass covered c1 occupied mirrors (possible closed path, therefore rejected and sent to residual witnesses), minimal occupied c3 deletion, internal c3 and occupied c5 boundary sizes, c13 with no B internal edge, duplicate artificial and output pairings as disconnected doubled edges, arbitrary long crossings and artificial pairs, both core25 bridges occupied, and parity-reversing cube symmetries. No candidate invalidates a used implication.
+
+The core25 transport moves the source A omitted label in general; this is harmless because only a B inverse-family statement is transported. Actual core25 N14 hypotheses are checked directly. This distinction is essential and is maintained in the submitted proof.
+
+## Acceptance boundary
+
+The three listed cores are proved modulo the explicit previously audited N14 import. Numerical certificate acceptance is deterministic; semantic proof acceptance remains same-family/provisional pending an independent cross-family overlay. This audit establishes no global eight-hole geometry cover, no full T15 result and no replacement of core26.

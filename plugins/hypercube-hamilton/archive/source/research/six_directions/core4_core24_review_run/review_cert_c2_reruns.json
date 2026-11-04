@@ -1,0 +1,94 @@
+[
+  {
+    "command": [
+      "review_direct.exe",
+      "t15_core4_r4_small_c0_residual_inputs.bin",
+      "t15_core4_r4_small_c0_residual.bin",
+      "1819125",
+      "1",
+      "2"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4292070865631104,
+    "stdout": "{\"status\":\"PASS\",\"records\":1819125,\"omitted\":[1,2]}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_direct.exe",
+      "r4_joint_fourbridge_core4_c4_residual_inputs.bin",
+      "r4_joint_fourbridge_core4_c4_residual.bin",
+      "3045",
+      "1",
+      "2"
+    ],
+    "exit_code": 0,
+    "seconds": 0.04764151573181152,
+    "stdout": "{\"status\":\"PASS\",\"records\":3045,\"omitted\":[1,2]}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_direct.exe",
+      "r4_joint_fourbridge_core4_c6_residual_inputs.bin",
+      "r4_joint_fourbridge_core4_c6_residual.bin",
+      "8820",
+      "1",
+      "2"
+    ],
+    "exit_code": 0,
+    "seconds": 0.04570364952087402,
+    "stdout": "{\"status\":\"PASS\",\"records\":8820,\"omitted\":[1,2]}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_direct.exe",
+      "r4_joint_fourbridge_core4_c8_residual_inputs.bin",
+      "r4_joint_fourbridge_core4_c8_residual.bin",
+      "2520",
+      "1",
+      "2"
+    ],
+    "exit_code": 0,
+    "seconds": 0.03981637954711914,
+    "stdout": "{\"status\":\"PASS\",\"records\":2520,\"omitted\":[1,2]}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_direct24.exe",
+      "t15_core24_route_c0_residual_inputs.bin",
+      "t15_core24_c0_residual.bin",
+      "2650725"
+    ],
+    "exit_code": 0,
+    "seconds": 2.0742347240448,
+    "stdout": "{\"status\":\"PASS\",\"verified\":2650725}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_c2_4.exe",
+      "t15_core4_r4_small_negative.txt",
+      "t15_core4_r4_c2_A_types.txt",
+      "t15_core4_r4_c2_B_types.txt"
+    ],
+    "exit_code": 0,
+    "seconds": 17.17633891105652,
+    "stdout": "{\"status\":\"PASS\",\"method\":\"independent DSU component verification\",\"A_inputs\":62370,\"B_inputs\":945945,\"exceptional_B_inputs\":616,\"residual_full_inputs\":76839840}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "review_c2_24.exe",
+      "t15_core24_c2_negative.txt",
+      "t15_core24_c2_A_types.txt",
+      "t15_core24_c2_B_types.txt"
+    ],
+    "exit_code": 3221226505,
+    "seconds": 10.79326057434082,
+    "stdout": "",
+    "stderr": "Assertion failed: signature==computed, file verify_t15_core24_c2_types.cpp, line 38\n"
+  }
+]

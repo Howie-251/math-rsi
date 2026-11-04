@@ -111,7 +111,7 @@ flowchart TD
 
 收到DD提取后，按本技能§3–5核原对象、参数存在性、最大度／正则条件和一般复制等组合规则；将明确发表值、合法代入推论与未核当前最优分开合入 `LITERATURE.md`。只比某家族已列实例不足以支撑竞争判断。把“旧比较→新保证→受影响候选／可用新源→剩余条件”返回prepare或原route-loop／prove义务，父caller据此调整实际队列；固定目标保持不变。原公式及证明留在DD，不在survey重抄；引用、wiki及后续深读仍按下文共享流程完成。
 
-未启用领域插件、或无对应已启用领域分支的数学题，走下面通用research-lit分支。ECC草案未按本轮标准验收，不因题目是码论就自动加载；只有用户明确授权使用时才作为指定领域输入，保持其draft状态，不读取或恢复原研究。
+其它四类已入库领域按[领域调用与返回](../../../docs/DOMAIN_ROUTING.md)“准备与增量文献”实际调用：ECC读取mathrsi-ecc并核当前参数的分类/文献进口；极值超立方体读取mathrsi-hypercube-extremal，分清有限密度与极限；Hamilton读取mathrsi-hypercube-hamilton，核匹配/根/目标与方向；Happy Ending读取mathrsi-happy-ending，核signotope与几何、weak与split。带原问题、已查来源与准确疑问，收回原文定位、可调用条件和待核范围，合入本次LITERATURE并返回原caller。领域提供种子和语义，不替代新题广搜/引用链；归档仍只读。无适用插件的数学题继续下面通用research-lit分支。
 
 ### 通用发现分支与共享结果消费
 

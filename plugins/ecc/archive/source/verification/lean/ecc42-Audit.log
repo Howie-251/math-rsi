@@ -1,0 +1,23 @@
+@[reducible] def ECC42.F2 : Type :=
+ZMod 2
+@[reducible] def ECC42.Word : ℕ → Type :=
+fun n => Fin n → ECC42.F2
+def ECC42.weight : {n : ℕ} → ECC42.Word n → ℕ :=
+fun {n} x => {i | x i ≠ 0}.card
+def ECC42.MinWeight : {n : ℕ} → Submodule ECC42.F2 (ECC42.Word n) → ℕ → Prop :=
+fun {n} C d => ∀ x ∈ C, x ≠ 0 → d ≤ ECC42.weight x
+def ECC42.CodeExists : ℕ → ℕ → ℕ → Prop :=
+fun n k d => ∃ C, Module.finrank ECC42.F2 ↥C = k ∧ ECC42.MinWeight C d
+def ECC42.ExactCodeExists : ℕ → ℕ → ℕ → Prop :=
+fun n k d => ∃ C, Module.finrank ECC42.F2 ↥C = k ∧ ECC42.MinWeight C d ∧ ∃ x ∈ C, x ≠ 0 ∧ ECC42.weight x = d
+def ECC42.Proposition2 : Prop :=
+¬ECC42.ExactCodeExists 41 14 14
+ECC42.reduction_42_16_to_41_14 : ECC42.CodeExists 42 16 13 → ECC42.ExactCodeExists 41 14 14
+ECC42.nonexistence_of_proposition2 : ECC42.Proposition2 → ¬ECC42.CodeExists 42 16 13
+ECC42.nonexistence_explicit : (¬∃ D,
+      Module.finrank ECC42.F2 ↥D = 14 ∧ (∀ y ∈ D, y ≠ 0 → 14 ≤ ECC42.weight y) ∧ ∃ y ∈ D, y ≠ 0 ∧ ECC42.weight y = 14) →
+  ∀ (C : Submodule ECC42.F2 (Fin 42 → ECC42.F2)),
+    Module.finrank ECC42.F2 ↥C = 16 → (∀ x ∈ C, x ≠ 0 → 13 ≤ ECC42.weight x) → False
+'ECC42.reduction_42_16_to_41_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC42.nonexistence_of_proposition2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC42.nonexistence_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]

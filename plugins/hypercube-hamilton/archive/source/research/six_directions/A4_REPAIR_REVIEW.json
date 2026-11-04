@@ -1,0 +1,305 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "scoped_local_obligations_discharged_modulo_cited_theorem",
+  "summary": "R29/D3/L6/W6 and oriented two-edge-swap sufficiency pass within declared scope; A4/E3/full P6 remain unproved.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "configuration_source": "explicit user override",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T05:34:04.530991+00:00",
+  "audited_input_hashes": {
+    "A4_AUGMENTATION_AND_EDGE_ELIMINATION.md": "sha256:1386798c266f02c716b59f27820e073f66f8780f0cf5cc813d748fcab1b33982",
+    "TWO_ODD_HOLES_TRANSFER.md": "sha256:d88d6f27357e776d8d9b4638812dd091f636d643cc9f4f42c98442348f0a577c",
+    "verify_a4_repair_obstruction.py": "sha256:2551d2a7c096c8772323a3581e2f953aea369773f28341472be4e3a3e11869b0",
+    "a4_structured_repair_probe.json": "sha256:b65c5d59f32e133866fb0e3cab78e34feb449b722965dc3545d907a1f7e28cea",
+    "probe_a4_local_repair.py": "sha256:bd2697584d08370d055ea5de5087925a06a7c73389462b679d75f3bcbcbff3a6"
+  },
+  "skill_source": {
+    "path": "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md",
+    "sha256": "b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "external_reference": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "verified": "Theorem 8, half-layer definition, and extension meaning on PDF pages 1 and 3",
+    "local_pdf_hash": null,
+    "assumed_import": "Theorem 8 including its computer-assisted d=5 base case"
+  },
+  "scope": {
+    "primary_file": "A4_AUGMENTATION_AND_EDGE_ELIMINATION.md",
+    "N14_only": true,
+    "other_Z14_claims_audited": false,
+    "search_negative_status_is_evidence": false,
+    "new_E3_search_audited": false,
+    "main_goal_pass": false
+  },
+  "dependency_dag": {
+    "N14": [
+      "Theorem8",
+      "half_layer_geometry",
+      "parity_identity"
+    ],
+    "R29": [
+      "Theorem8",
+      "half_layer_geometry",
+      "parity_identity"
+    ],
+    "D3": [
+      "N14",
+      "unique_antipode_Q5"
+    ],
+    "L6": [
+      "fixed_short_skeleton",
+      "final_set_difference",
+      "degree_balance",
+      "independent_deficit_set"
+    ],
+    "W6": [
+      "explicit_positive_witness",
+      "L6"
+    ],
+    "E3": [],
+    "A4": [
+      "open_E3",
+      "D3"
+    ],
+    "P6": [
+      "unresolved_global_obligations"
+    ]
+  },
+  "details": {
+    "theorems_audited": 5,
+    "micro_obligations": [
+      {
+        "id": "R01",
+        "sequent_and_hypothesis_discharge": "F 覆盖 15 偶、13 奇，故同偶匹配边减同奇边为一；异奇偶边对差值贡献零",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "R02",
+        "sequent_and_hypothesis_discharge": "对简单圈两类顶点分别求度数，得到顶点差等于同类边数差；新增短边不改变后者",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "R03",
+        "sequent_and_hypothesis_discharge": "必有全部 28 个匹配端点，禁用 v，仅剩 a,b,t 可选；指标方程仅有 29/31 两类解",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "R04",
+        "sequent_and_hypothesis_discharge": "若含某方向半层，孔在该半层端点补集中；补集中同奇偶的孔具有相同该方向坐标。b 与 v 同奇偶且不同，故是 v 同侧的另一自由点；d=5",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "R05",
+        "sequent_and_hypothesis_discharge": "29 圈剩余图只有 t 度二、其余 28 点度一；因此一个两边路径及十三个单边，无圈分量",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "N01",
+        "sequent_and_hypothesis_discharge": "N14 的两个同奇偶孔均自由；同一半层几何给出 (H)，m>=5；合法应用 Theorem 8",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "N02",
+        "sequent_and_hypothesis_discharge": "同奇偶双孔时仅匹配端点的顶点差为 -2ε，而圈恒等式要求 -ε；只能加入另一孔，遂为 2^m-1 圈",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "D01",
+        "sequent_and_hypothesis_discharge": "相邻孔分支加入 ab 或 at 为匹配，余两孔同奇偶；N14 所加及辅助边均短",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "D02",
+        "sequent_and_hypothesis_discharge": "非相邻分支两距离只能 3/5，b!=t 且 a 只有一个对跖点；交换名字可使 d(a,b)=3",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "D03",
+        "sequent_and_hypothesis_discharge": "L=F+ab 是匹配，孔 v,t 同奇偶，维数五；N14 保证遍历除 v 全点，C0\\L 全短，故相对 F 恰有一个非法长边 ab",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "D04",
+        "sequent_and_hypothesis_discharge": "E3+相邻分支推出 A4；A4 输出 C 与输入 C0 无关，故推出每个合法 C0 的 E3。正向需要 N14 保证 C0 非空存在",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "X01",
+        "sequent_and_hypothesis_discharge": "P=C0-ab 从 a 到 b；xy 不属于 F，顺序 a,...,x,y,...,b，a~y,b~x；删除两边后交叉接回得到单圈且保留 F",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "X02",
+        "sequent_and_hypothesis_discharge": "相反接法 ax,by 可能将两段分别闭合，也可能有相邻端点退化，不能省略方向条件；原正确接法的端点退化由 d(a,b)=3 排除",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L01",
+        "sequent_and_hypothesis_discharge": "H 恰覆盖除 0,1,31 的点，t=14 度二；F 与 H 不交且组成单圈，所以 F 孔恰为 0,1,14,31",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L02",
+        "sequent_and_hypothesis_discharge": "令 H'=E(C)\\F：旧顶点目标度数和 H 一致，0、31 各度二，1 禁用；取的是最终 H' 邻点，允许任意换邻",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L03",
+        "sequent_and_hypothesis_discharge": "0 的邻点从 A 取二，31 的邻点从 B 取二，四条旧伙伴边不同且必不在 H'，不能重新添加",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L04",
+        "sequent_and_hypothesis_discharge": "伙伴造成四单位缺口；同时选 15、30 时在 14 造成两单位，不能合并成一个",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L05",
+        "sequent_and_hypothesis_discharge": "A' 偶且最低位一，B' 奇且最低位零；组内无短边，组间翻最低位后重量为一不是三；S 独立",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L06",
+        "sequent_and_hypothesis_discharge": "S 与最终选中邻点、0、31、1 不交；S 外在四次强制删除及四次插入后已饱和",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "L07",
+        "sequent_and_hypothesis_discharge": "用最终删除集合及 S 的割度数计算，额外删除至多释放每边两个容量；换邻、重复 t、其他旧边重新添加均不绕过至少六条",
+        "judgment": "PASS",
+        "note": "通过；详见下文"
+      },
+      {
+        "id": "W01",
+        "sequent_and_hypothesis_discharge": "独立执行标准库断言：F 匹配、孔集合、简单圈、29/31 点集、包含 F、非 F 边全短、旧短边图恰为 H",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "W02",
+        "sequent_and_hypothesis_discharge": "最终边差明确为删除六条、增加八条；结合不依赖 F 的 L6，该实例最少删除恰为六",
+        "judgment": "PASS",
+        "note": "通过"
+      },
+      {
+        "id": "S01",
+        "sequent_and_hypothesis_discharge": "EXHAUSTED 和随机样本均未用于上述全称证明；仅将 FOUND 的具体序列当正证书",
+        "judgment": "PASS",
+        "note": "通过"
+      }
+    ],
+    "issues": [],
+    "counterexample_pass": [
+      "repeated deficit at t=14 when neighbors 15 and 30 both selected",
+      "additional deletions incident to deficit set",
+      "arbitrary final replacement neighbors",
+      "temporary deletions followed by re-addition",
+      "potential overlap of candidate new short edges with F",
+      "opposite-oriented swap and adjacent endpoint degeneracy"
+    ]
+  },
+  "rerun": {
+    "status": "PASS",
+    "script": "verify_a4_repair_obstruction.py",
+    "method": "Original assertions executed with only the final output-file write replaced by pass, to avoid changing non-review artifacts.",
+    "neighbor_choices": 60,
+    "independent_of_search": true,
+    "old_edges_deleted": 6,
+    "new_edges_added": 8,
+    "lower_bound_math_separately_audited": true,
+    "exhaustive_all_F_machine_check": false
+  },
+  "witness": {
+    "removed": [
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        26,
+        27
+      ]
+    ],
+    "added": [
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        15,
+        31
+      ],
+      [
+        17,
+        25
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        27,
+        31
+      ]
+    ],
+    "minimum_deletions": 6,
+    "proof_of_minimum": "L6 lower bound plus explicit W6 positive cycle"
+  },
+  "open_obligations": {
+    "E3": "NOT CURRENTLY JUSTIFIED",
+    "A4": "NOT CURRENTLY JUSTIFIED",
+    "full_P6": "NOT CURRENTLY JUSTIFIED"
+  },
+  "target_acceptance_gate": "NOT PASSED: full P6 remains unproved"
+}

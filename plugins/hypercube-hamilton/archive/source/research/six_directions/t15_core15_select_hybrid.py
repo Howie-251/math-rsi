@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('verify_t15_core15_full_closure.py');s=p.read_text().replace("(3,'ordered',1)","(3,'hybrid',1)");p.write_text(s,encoding='utf-8')
+p=Path('T15_CORE15_FULL_CLOSURE.md');s=p.read_text(encoding='utf-8-sig').replace('t15_core15_residual_ordered.cpp','t15_core15_residual_hybrid.cpp').replace('The ordered version adds a search-order heuristic; the independent checker does not depend on it.','The hybrid version first tries bounded alternative search orders and then falls back to the full search; the independent checker does not depend on this heuristic.').replace('t15_core15_c3_ordered','t15_core15_c3_hybrid');p.write_text(s,encoding='utf-8')

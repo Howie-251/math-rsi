@@ -1,0 +1,68 @@
+{
+  "mode": "lean",
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "ecc43-build",
+      "command": [
+        "<LAKE>",
+        "build",
+        "ECC.Main",
+        "ECC.Corollaries"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 76.25093562499387,
+      "log": "ecc43-build.log"
+    },
+    {
+      "name": "ecc43-Audit",
+      "command": [
+        "<LAKE>",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 7.57288675000018,
+      "log": "ecc43-Audit.log"
+    },
+    {
+      "name": "ecc43-CorollariesAudit",
+      "command": [
+        "<LAKE>",
+        "env",
+        "lean",
+        "CorollariesAudit.lean"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 7.190300125002977,
+      "log": "ecc43-CorollariesAudit.log"
+    },
+    {
+      "name": "ecc42-build",
+      "command": [
+        "<LAKE>",
+        "build",
+        "ECC42"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 28.584976582991658,
+      "log": "ecc42-build.log"
+    },
+    {
+      "name": "ecc42-Audit",
+      "command": [
+        "<LAKE>",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 6.359301625008811,
+      "log": "ecc42-Audit.log"
+    }
+  ],
+  "full_coset_domains_rerun": false,
+  "scope": "Fresh project builds and type/transitive-axiom audits; external theorem and computation arguments remain explicit.",
+  "dependency_cache_reused": true
+}

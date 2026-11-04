@@ -1,0 +1,441 @@
+{
+  "status": "PASS",
+  "audited_input_hashes": {
+    "A8_ORBITS2_3_ANALYTIC_CLOSURE.md": "sha256:c273b767a2ee10303c768b48d5d35a23da330cd4128af62b08547d51bc542764",
+    "A8_orbits2_3_geometry_check.py": "sha256:766baf576b87865d49458c24f4e1f60731b415c13eb979c5c591a377bd7ee241",
+    "A8_orbits2_3_geometry_check.json": "sha256:6be0beb1392c836934615d17735fa3ce97853e78845e9d661024ef5312f8fe9b"
+  },
+  "imported_dependency_hashes": {
+    "Q4_GENERAL_AUGMENTATION.md": "sha256:a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b",
+    "Q4_T15_CLASSIFICATION.md": "sha256:bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc",
+    "Q4_T15_CLASSIFICATION_REVIEW.json": "sha256:f738e07e9f1021c3ceb0429753c27244bab8ceb35de37bee19dfe613a8c43323",
+    "A8_Q4_T63_CLASSIFICATION.md": "sha256:6d99eb27dd3a1c7396a6ae930959871f9124dd27c12d00ace8a999d0cf09c597",
+    "A8_BRIDGE_INPUTS_REVIEW.md": "sha256:cb40069fc1493c748a3f5789d11544165f86e436cc7c94e26344b24926831ae6",
+    "A8_BRIDGE_INPUTS_REVIEW.json": "sha256:6d42f7d3c7e722d8f512c32f046520826a7645fdffe3ca471ee0b20f7bcf4a86",
+    "A8_geometry_census.json": "sha256:6a14ee7e95d2d64acac314d1b2fe21211a2c788b039acf2ad1ba46b14e47855e",
+    "A8_PARTIAL_REVIEW.json": "sha256:1b63584b3cf81c6dc3533cea0fedef60bd8d8d8ed1d7a847ca765326e0dda81f",
+    "A8_DELTA4_FIRST_ORBIT_REVIEW.json": "sha256:242070f3a0f1845b137689cd7b43dd773f63215e88577f4ab9710befa7abc63f"
+  },
+  "imported_source_hash_comparisons": 6,
+  "rows": [
+    {
+      "H": [
+        0,
+        3,
+        5,
+        6,
+        15,
+        25,
+        26,
+        28
+      ],
+      "cuts": [
+        {
+          "bit": 8,
+          "k": 2,
+          "candidate_mirrors": [
+            11,
+            13,
+            14
+          ],
+          "S": [
+            11,
+            13,
+            14,
+            31
+          ],
+          "choices": [
+            {
+              "Y": [
+                11,
+                13
+              ],
+              "obstruction": [
+                14,
+                31
+              ]
+            },
+            {
+              "Y": [
+                11,
+                14
+              ],
+              "obstruction": [
+                13,
+                31
+              ]
+            },
+            {
+              "Y": [
+                13,
+                14
+              ],
+              "obstruction": [
+                11,
+                31
+              ]
+            }
+          ],
+          "closed_set": [
+            8,
+            9,
+            10,
+            12,
+            24,
+            27,
+            29,
+            30
+          ]
+        },
+        {
+          "bit": 16,
+          "k": 3,
+          "candidate_mirrors": [
+            19,
+            21,
+            22,
+            31
+          ],
+          "S": [
+            19,
+            21,
+            22,
+            23,
+            31
+          ],
+          "choices": [
+            {
+              "Y": [
+                19,
+                21,
+                22
+              ],
+              "obstruction": [
+                23,
+                31
+              ]
+            },
+            {
+              "Y": [
+                19,
+                21,
+                31
+              ],
+              "obstruction": [
+                22,
+                23
+              ]
+            },
+            {
+              "Y": [
+                19,
+                22,
+                31
+              ],
+              "obstruction": [
+                21,
+                23
+              ]
+            },
+            {
+              "Y": [
+                21,
+                22,
+                31
+              ],
+              "obstruction": [
+                19,
+                23
+              ]
+            }
+          ],
+          "closed_set": [
+            16,
+            17,
+            18,
+            20,
+            24,
+            27,
+            29,
+            30
+          ]
+        }
+      ],
+      "zero_cuts": [
+        {
+          "bit": 1,
+          "Y": [
+            27,
+            29
+          ],
+          "singleton": 25,
+          "obstruction": [
+            9,
+            17
+          ],
+          "S": [
+            9,
+            17,
+            27,
+            29
+          ]
+        },
+        {
+          "bit": 2,
+          "Y": [
+            27,
+            30
+          ],
+          "singleton": 26,
+          "obstruction": [
+            10,
+            18
+          ],
+          "S": [
+            10,
+            18,
+            27,
+            30
+          ]
+        },
+        {
+          "bit": 4,
+          "Y": [
+            29,
+            30
+          ],
+          "singleton": 28,
+          "obstruction": [
+            12,
+            20
+          ],
+          "S": [
+            12,
+            20,
+            29,
+            30
+          ]
+        }
+      ],
+      "R": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        13,
+        14,
+        19,
+        21,
+        22,
+        23,
+        31
+      ],
+      "preserved_mask": 7,
+      "orbit_size": 20
+    },
+    {
+      "H": [
+        0,
+        3,
+        5,
+        15,
+        23,
+        25,
+        26,
+        28
+      ],
+      "cuts": [
+        {
+          "bit": 8,
+          "k": 2,
+          "candidate_mirrors": [
+            11,
+            13,
+            31
+          ],
+          "S": [
+            11,
+            13,
+            14,
+            31
+          ],
+          "choices": [
+            {
+              "Y": [
+                11,
+                13
+              ],
+              "obstruction": [
+                14,
+                31
+              ]
+            },
+            {
+              "Y": [
+                11,
+                31
+              ],
+              "obstruction": [
+                13,
+                14
+              ]
+            },
+            {
+              "Y": [
+                13,
+                31
+              ],
+              "obstruction": [
+                11,
+                14
+              ]
+            }
+          ],
+          "closed_set": [
+            8,
+            9,
+            10,
+            12,
+            24,
+            27,
+            29,
+            30
+          ]
+        },
+        {
+          "bit": 16,
+          "k": 2,
+          "candidate_mirrors": [
+            19,
+            21,
+            31
+          ],
+          "S": [
+            19,
+            21,
+            22,
+            31
+          ],
+          "choices": [
+            {
+              "Y": [
+                19,
+                21
+              ],
+              "obstruction": [
+                22,
+                31
+              ]
+            },
+            {
+              "Y": [
+                19,
+                31
+              ],
+              "obstruction": [
+                21,
+                22
+              ]
+            },
+            {
+              "Y": [
+                21,
+                31
+              ],
+              "obstruction": [
+                19,
+                22
+              ]
+            }
+          ],
+          "closed_set": [
+            16,
+            17,
+            18,
+            20,
+            24,
+            27,
+            29,
+            30
+          ]
+        }
+      ],
+      "zero_cuts": [
+        {
+          "bit": 2,
+          "Y": [
+            27,
+            30
+          ],
+          "singleton": 26,
+          "obstruction": [
+            10,
+            18
+          ],
+          "S": [
+            10,
+            18,
+            27,
+            30
+          ]
+        },
+        {
+          "bit": 4,
+          "Y": [
+            29,
+            30
+          ],
+          "singleton": 28,
+          "obstruction": [
+            12,
+            20
+          ],
+          "S": [
+            12,
+            20,
+            29,
+            30
+          ]
+        }
+      ],
+      "R": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        11,
+        13,
+        14,
+        19,
+        21,
+        22,
+        31
+      ],
+      "preserved_mask": 6,
+      "orbit_size": 30
+    }
+  ],
+  "bridge_choices_checked": 13,
+  "possible_fixed_choice_removal_checks": 17,
+  "covered_S_port_parity_cases": 40,
+  "terminal_excess_cases": 49,
+  "new_geometry_count": 50,
+  "new_orbit_sizes": [
+    20,
+    30
+  ],
+  "all_five_residual_orbits": [
+    60,
+    20,
+    30,
+    30,
+    20
+  ],
+  "no_overlap_with_first_fourth_fifth_orbits": true,
+  "matching_instances_enumerated": 0,
+  "full_A8_proved": false,
+  "full_P6_proved": false,
+  "producer_code_imported_or_executed": false
+}

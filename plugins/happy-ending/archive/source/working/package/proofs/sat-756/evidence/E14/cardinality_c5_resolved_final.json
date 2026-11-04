@@ -1,0 +1,297 @@
+{
+  "all_six_checker_qualified": true,
+  "c1_acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/campaign_acceptance_audit.json",
+    "sha256": "cd362ea5385aca6218c099bf6237a934d6b9beb48c98923be0cf09562f670fd3",
+    "size_bytes": 4213
+  },
+  "c2_acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260915_35_state_cardinality_c2_acceptance_v1/campaign_acceptance_audit.json",
+    "sha256": "7b16c5f84bfdc643dda27828130a6659075f26b42a41b229ae3175c920fbe7c2",
+    "size_bytes": 7018
+  },
+  "c4_acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c4_acceptance_v1/campaign_acceptance_audit.json",
+    "sha256": "84a1f4aafa6d03ffb3a4413a33f901bb2a16e1a658c6c49203cd78f49be95cb8",
+    "size_bytes": 6358
+  },
+  "c5_proved": false,
+  "campaign_status": "PENDING_INDEPENDENT_AUDIT",
+  "certified_upper_bound": null,
+  "conditional_theorem": "For X in the stated domain, e(X)>=5 implies m(X)>=5; together with accepted C4, N<=30.",
+  "counts": {
+    "COUNTEREXAMPLE": 0,
+    "UNKNOWN": 0,
+    "VERIFIED_UNSAT": 6
+  },
+  "execution": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/execution_terminal.json",
+    "sha256": "0e2f6a3624640e840dc11b90166f3581dc8ebfb644ad8bf008b8e2d8a1ff5876",
+    "size_bytes": 2415
+  },
+  "input_inventory": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c5_acceptance_v2/input_inventory.json",
+    "sha256": "dba930f4840fc8a792f6844f518189993a8d09e06169876e83d2e86ada0e30fb",
+    "size_bytes": 53561
+  },
+  "recovery_seal": null,
+  "schema": "c5_formal_acceptance_20260929_v2_final",
+  "scope": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c5_acceptance_v2/mathematical_scope.md",
+    "sha256": "c9e27616b328c29638809a7ba896cdae16f4eb950fa0df5e844786e289f6c56c",
+    "size_bytes": 1724
+  },
+  "source_seal": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/protocol_seal.json",
+    "sha256": "8e4d53797b63fa95a983c470358653f111a37eb22db36838650316dcbd1b4d5b",
+    "size_bytes": 1347935
+  },
+  "strict_cells": [
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e05_N26",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 5,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 26,
+        "order": 26,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e05/checker.exit.json",
+        "sha256": "15eb8ec95e7f0172dc98d9a6859933bb35f9c8fc918819e855de784e7548a738",
+        "size_bytes": 1015
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e05_N26.cnf",
+        "sha256": "5c4054aafe9e977e69c62152ece1875c4f24539de14143df3fd7f71b6b32a96d",
+        "size_bytes": 20270043
+      },
+      "e": 5,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e05/proof.drat",
+        "sha256": "64aaa72594dc6ba5e5812e799a6f49f5c28c47f3c84a08c701b0a3738aadf40c",
+        "size_bytes": 210628609013
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e05/proof_solver.exit.json",
+        "sha256": "a8ccc5c9e720e071f0a30b8d297bdfe205529649e8b6f16e5a0b98f99796b463",
+        "size_bytes": 975
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e05/status.json",
+        "sha256": "58c47d25f3b80f0a723ce39faaa82973422185eb78cbca974dded51d0fae8d6c",
+        "size_bytes": 3919
+      }
+    },
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e06_N27",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 6,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 27,
+        "order": 27,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e06/checker.exit.json",
+        "sha256": "e60f9b5ea467143588eb879752923986195ace8c78c451ac82482dfd790a7f7d",
+        "size_bytes": 1015
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e06_N27.cnf",
+        "sha256": "8dc3bd656f891c1fb101e71fdd79b6cb33ee02ee229b75c661071e39d7fac054",
+        "size_bytes": 23937349
+      },
+      "e": 6,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e06/proof.drat",
+        "sha256": "16175781a8d4e3dbfc3cdbac13dffbf5f1a34031a904256635811c073ba70b3d",
+        "size_bytes": 177182561350
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e06/proof_solver.exit.json",
+        "sha256": "feac9db8b2e7923cdd2b233caebc0dcd8249d8b67a8be257825bd9c0450ceda3",
+        "size_bytes": 976
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e06/status.json",
+        "sha256": "2d7be377b05e3d2176a1bf9c4fa389e8945174d22d61ac55c712ca5bb88b821e",
+        "size_bytes": 3919
+      }
+    },
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e07_N28",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 7,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 28,
+        "order": 28,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e07/checker.exit.json",
+        "sha256": "b478e167300fc980bdef6b40d869f247416d691d9030114d9264010ef00edc23",
+        "size_bytes": 1015
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e07_N28.cnf",
+        "sha256": "b3248d6cc84d997065234201c5bb9c6cc637b81a90a84d44d08a30176d33b9f7",
+        "size_bytes": 27902304
+      },
+      "e": 7,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e07/proof.drat",
+        "sha256": "b9c5c4269ae9fc497ec373999c4496c2720205518734117ec888700f8dd4534d",
+        "size_bytes": 139554818933
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e07/proof_solver.exit.json",
+        "sha256": "14495ff9878a5aa0f1a4983acc5d92ef778098cdf0bfb631654de940ac9bb57c",
+        "size_bytes": 977
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e07/status.json",
+        "sha256": "e17ff224206292202b570ef69773be9873c858a36cb3ee3d7e38e366e20c5afa",
+        "size_bytes": 3919
+      }
+    },
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e08_N29",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 8,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 29,
+        "order": 29,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e08/checker.exit.json",
+        "sha256": "3baeb03fc3004d18ceb54db086f0523c53856c567b47294e885707e7bb54dc7f",
+        "size_bytes": 1014
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e08_N29.cnf",
+        "sha256": "73f7f400509b8db141247c5065e6115b1bfbc2edef0f9ea782613638c7f71898",
+        "size_bytes": 32341722
+      },
+      "e": 8,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e08/proof.drat",
+        "sha256": "c8f9aecfe84ea76c6799643b7129c88718be4cc7e83bbaf81e92ecc3a16143d5",
+        "size_bytes": 114124665599
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e08/proof_solver.exit.json",
+        "sha256": "b1f16bf41ca127a02e23a38fa4f1c82ad31ad3847864c1600be75711d083b4ff",
+        "size_bytes": 976
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e08/status.json",
+        "sha256": "0874df8e6bf061490cc2e9ff2911f3912c5ac74bf75cff54d3410573e04109f3",
+        "size_bytes": 3918
+      }
+    },
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e09_N30",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 9,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 30,
+        "order": 30,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e09/checker.exit.json",
+        "sha256": "df51a48e10525b70251ba13046de10e70989fd09cc684f6d28c7724046a340bb",
+        "size_bytes": 1014
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e09_N30.cnf",
+        "sha256": "bc6e12f1d98a435b453adaf31d11a7b6d329472368e632035c246e09a4984d9b",
+        "size_bytes": 37289290
+      },
+      "e": 9,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e09/proof.drat",
+        "sha256": "d11da05f1cee7ea7048c2eff525d887d9e8377d6e3c20951fba97ed7276fbb80",
+        "size_bytes": 75883210672
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e09/proof_solver.exit.json",
+        "sha256": "c0890200c7ae6053981c201fd4b3f36e7678dc084c0b30be964910f09319efc6",
+        "size_bytes": 976
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e09/status.json",
+        "sha256": "1bb0cb7e55da4179131007443d403677b21fbac145f170c828833fee3cb9c121",
+        "size_bytes": 3918
+      }
+    },
+    {
+      "cell": {
+        "case_id": "cardinality_A_r05_e10_N31",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 10,
+        "missing_ordinary_count": 4,
+        "occupied_ordinary_count": 21,
+        "occupied_state_count": 31,
+        "order": 31,
+        "r": 5,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e10/checker.exit.json",
+        "sha256": "7147920af4e024dba0a1fe0681276f390db8c2f939c9c0ebe518d7e50356d8b5",
+        "size_bytes": 1014
+      },
+      "checker_qualified": true,
+      "classification": "VERIFIED_UNSAT",
+      "cnf": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/suite/cardinality_A_r05_e10_N31.cnf",
+        "sha256": "7e4fa767ff690b44d47f3086f4f72a6219229f29185d05732740be0c7ba3c0f1",
+        "size_bytes": 42783848
+      },
+      "e": 10,
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e10/proof.drat",
+        "sha256": "040c339d78d6380ea291526bde6791452a7d59685f679a0bff24ebb93c3151ce",
+        "size_bytes": 17690372275
+      },
+      "solver_exit": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e10/proof_solver.exit.json",
+        "sha256": "555829601899056c0bdb95e3c0f1707d1f68d24f73468fe251bcc20deed1b0b9",
+        "size_bytes": 975
+      },
+      "status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260922_35_state_cardinality_c5_parallel_v1/workers/e10/status.json",
+        "sha256": "4c3c49ca13b5774097bdfe2c21207828b812a6ce45befd72821c0dcc52152f48",
+        "size_bytes": 3917
+      }
+    }
+  ]
+}

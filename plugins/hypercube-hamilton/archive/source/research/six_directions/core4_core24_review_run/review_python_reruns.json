@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "python",
+      "verify_t15_core4_r4_c0_B.py"
+    ],
+    "exit_code": 0,
+    "seconds": 2.470458984375,
+    "stdout": "{'status': 'PASS', 'B_matchings': 135135, 'B_exceptions': 175, 'residual_full_input_list_rebuilt': 1819125, 'scope': 'Independent c0 suppression, exact B list, every A pairing and every original matching regenerated. A path exists uniformly by N14.'}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "verify_t15_core24_c0_B.py"
+    ],
+    "exit_code": 0,
+    "seconds": 2.6818439960479736,
+    "stdout": "{'status': 'PASS', 'B_matchings': 135135, 'B_exceptions': 255, 'residual_full_input_list_rebuilt': 2650725, 'scope': 'Independent c0 suppression, exact B list, every A pairing and every original matching regenerated. A path exists uniformly by N14.'}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "verify_t15_core4_full_closure.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.6821742057800293,
+    "stdout": "{\"status\": \"PASS\", \"scope\": \"Complete candidate core4 finite package; fresh semantic audit pending\", \"original_holes\": [0, 1, 2, 7, 11, 31], \"omitted\": [1, 2], \"total_fourbridge_inputs\": 795342240, \"total_direct_certificates\": 1833510, \"full_eight_hole_proved\": false}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "verify_t15_core24_full_closure.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.0076348781585693,
+    "stdout": "{\"status\": \"PASS\", \"scope\": \"Core24 complete finite manifest; fresh overall semantic review pending\", \"original_holes\": [0, 1, 7, 14, 22, 31], \"original_omitted\": [1, 7], \"coordinate_destination_map\": [1, 0, 2, 3, 4], \"normalized_holes\": [0, 2, 7, 13, 21, 31], \"normalized_omitted\": [2, 7], \"c0_positive_certificates\": 2650725, \"c0_certificate_size\": 148440600, \"c0_certificate_sha256\": \"748894a0e7c99198aee56edf80b238e57b78364c5c057c4c4f52869ee978fbbc\", \"c2_spectrum\": {\"status\": \"PASS\", \"method\": \"independent DSU component verification\", \"A_inputs\": 62370, \"B_inputs\": 945945, \"exceptional_B_inputs\": 786, \"residual_full_inputs\": 98045640}, \"four_bridge_checks\": [{\"status\": \"PASS\", \"c\": 2, \"A\": 62370, \"B\": 786, \"inputs\": 98045640, \"residual\": 0}, {\"status\": \"PASS\", \"c\": 4, \"A\": 51975, \"B\": 312, \"inputs\": 389188800, \"residual\": 0}, {\"status\": \"PASS\", \"c\": 6, \"A\": 13860, \"B\": 34, \"inputs\": 339292800, \"residual\": 0}, {\"status\": \"PASS\", \"c\": 8, \"A\": 1485, \"B\": 1, \"inputs\": 59875200, \"residual\": 0}], \"four_bridge_total_inputs\": 886402440, \"four_bridge_tables_checked\": 18, \"large_crossing_import\": \"R4_DOUBLE_BRIDGE_REVIEW.json\", \"large_crossing_import_acceptance\": \"provisional\", \"full_T15_proved\": false, \"full_eight_hole_layer_proved\": false}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "ep0_core4_projection_check.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.4452042579650879,
+    "stdout": "18 forced-edge options all induce T15 core4; 11 Q6 geometries remain conditional on core4\n",
+    "stderr": ""
+  }
+]

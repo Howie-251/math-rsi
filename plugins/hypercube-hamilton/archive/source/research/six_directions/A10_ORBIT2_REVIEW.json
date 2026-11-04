@@ -1,0 +1,200 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "orbit2_semantic_reduction_exact_canonical_domain_all_positive_witnesses_verified",
+  "summary": "All arbitrary K(Q5) matchings with the specified holes extend to a simple short-added 31-cycle omitting 0, relative to certified Q4 imports. The 20 marked geometries pass; full A10 and P6 remain OPEN.",
+  "reviewer_agent_id": "/root/a10_first_orbit_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T13:46:28.878441+00:00",
+  "proof_path": "A10_ORBIT2_REDUCTION.md",
+  "trace_path": "A10_ORBIT2_REVIEW.md",
+  "audited_input_hashes": {
+    "A10_ORBIT2_REDUCTION.md": "488fa6b3d134d6461412ab083cddfe4051ca8e98ee67ff07257b01b66b1ea37d",
+    "A10_ORBIT2_canonical_generator.cpp": "095b570d01b51a46fa8ca31e0cca4928d388a3e8369ac50559dad5c99de3cad5",
+    "A10_ORBIT2_canonical_counts.json": "8f0c1554eb5152bb0b72193abc65d7568ce31e0ac54db7ee8d6975ae2d3417c2",
+    "A10_ORBIT2_canonical_inputs.bin": "f75459b8203101f4001f34855c80cff46a53cb63ccaff6666b87fb90215129c9",
+    "A10_ORBIT2_geometry_counts_check.py": "7b37bc23b9416180ff877e4f3b51e0222eb379099e9b63a44ce9ed0e7a101f3d",
+    "A10_ORBIT2_geometry_counts_check.json": "62a22529e356c9728c525966a0b42aaf2b352d1d4bd1c49b12d1062e295a991b",
+    "A10_ORBIT2_chunk_0.bin": "a4e7176ff6c8ade450a95bc7436aea9f70e1a50bad9266f591ee7b4f803e8cf8",
+    "A10_ORBIT2_chunk_0.json": "a6e15027075abcbc047f5e2c8fc91d9814c6a9c1f5df6bbeae3b91769d00025b",
+    "A10_ORBIT2_chunk_800000.bin": "25615acbebcc467917d93a2d218c0c9b69e9c947d834f761bb92c2d42651046f",
+    "A10_ORBIT2_chunk_800000.json": "a1545c5730d5e594bec9758eab9175555c468eec8d1c4c150e6a05ccfae9f45f",
+    "A10_ORBIT2_chunk_1600000.bin": "3840141e03d91bb0306666fadbaadb23e54e18bb12e298c44f8b6517f36e0be1",
+    "A10_ORBIT2_chunk_1600000.json": "3a8cdae76edd135753b18f913219d61f3c8918c29a4358da07c831d43d10cfcb",
+    "A10_ORBIT2_MANIFEST.json": "bd963ae4e91cfd2f9ceddefdee1359335d477302aa8138d8b7b0625b074cd6bf",
+    "A10_FIRST_ORBIT_ANALYTIC_CLOSURE.md": "5dc4686960c6702d08d3b5801f5cae7f9120a4e5f78adcdab80f3a0c179ce23e",
+    "A10_FIRST_ORBIT_REVIEW.md": "42355a053202a2b23786db1eddcdd4adf3bb5298c8508d31cb2fb9c24daf1677",
+    "Q4_GENERAL_AUGMENTATION.md": "a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b",
+    "Q4_T15_CLASSIFICATION.md": "bab8d4cecffa46f3f8fb55046a381cfa0303878671f7b273f6ae011630c68adc"
+  },
+  "relative_imports": [
+    "Q4 GQ4-avoid",
+    "Q4 T15 exact classification"
+  ],
+  "full_A8_required_as_input": false,
+  "scope": {
+    "forbidden_vertex": 0,
+    "majority_holes": [
+      0,
+      3,
+      5,
+      6,
+      15,
+      23
+    ],
+    "minority_holes": [
+      8,
+      25,
+      26,
+      28
+    ],
+    "arbitrary_long_required_edges": true,
+    "marked_coordinate_orbit_size": 20,
+    "only_second_A10_orbit": true,
+    "remaining_A10_marked_geometries": 5,
+    "full_A10": "OPEN",
+    "full_P6": "OPEN"
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations_closed": 20,
+    "obligations": [
+      {
+        "id": "exact_arbitrary_matching_domain",
+        "verdict": "PASS"
+      },
+      {
+        "id": "cut16_geometry",
+        "verdict": "PASS"
+      },
+      {
+        "id": "all_four_candidate_neighbors",
+        "verdict": "PASS"
+      },
+      {
+        "id": "short_original_hole_bridges",
+        "verdict": "PASS"
+      },
+      {
+        "id": "G_forest_and_unique_roots",
+        "verdict": "PASS"
+      },
+      {
+        "id": "crossing_parity_and_strict_root_bound",
+        "verdict": "PASS"
+      },
+      {
+        "id": "legal_artificial_matching",
+        "verdict": "PASS"
+      },
+      {
+        "id": "GQ4_avoid_hypotheses",
+        "verdict": "PASS"
+      },
+      {
+        "id": "proper_subset_multigraph_acyclicity",
+        "verdict": "PASS"
+      },
+      {
+        "id": "compression_is_matching",
+        "verdict": "PASS"
+      },
+      {
+        "id": "T15_OB_absent",
+        "verdict": "PASS"
+      },
+      {
+        "id": "expansion_preserves_exact_support_and_edges",
+        "verdict": "PASS"
+      },
+      {
+        "id": "six_choices_with_two_fixed_edges",
+        "verdict": "PASS"
+      },
+      {
+        "id": "no_cycle_implies_C_closed",
+        "verdict": "PASS"
+      },
+      {
+        "id": "exact_exceptional_product_domain",
+        "verdict": "PASS"
+      },
+      {
+        "id": "full_coordinate_stabilizer_and_orbit",
+        "verdict": "PASS"
+      },
+      {
+        "id": "two_stage_canonical_coverage_and_uniqueness",
+        "verdict": "PASS"
+      },
+      {
+        "id": "exact_full_domain_byte_reconstruction",
+        "verdict": "PASS"
+      },
+      {
+        "id": "every_positive_cycle_and_input_alignment",
+        "verdict": "PASS"
+      },
+      {
+        "id": "symmetry_transport_statement_match",
+        "verdict": "PASS"
+      }
+    ],
+    "counterexamples_found": 0,
+    "analytic_no_cycle_implies_C_closed": true,
+    "closed_set": [
+      16,
+      17,
+      18,
+      20,
+      24,
+      27,
+      29,
+      30
+    ],
+    "unsymmetrized_domain": 14189175,
+    "C_representatives": 23,
+    "canonical_records": 2366577,
+    "canonical_domain_verification": "Independent exact canonical set reconstruction from all C and D matchings; full ordered byte stream equality",
+    "canonical_domain_bytes": 52064694,
+    "positive_cycles_independently_verified": 2366577,
+    "chunks": [
+      {
+        "file": "A10_ORBIT2_chunk_0.bin",
+        "start": 0,
+        "count": 800000,
+        "positive_cycles": 800000,
+        "long_required_edges_verified": 7446595
+      },
+      {
+        "file": "A10_ORBIT2_chunk_800000.bin",
+        "start": 800000,
+        "count": 800000,
+        "positive_cycles": 800000,
+        "long_required_edges_verified": 7685917
+      },
+      {
+        "file": "A10_ORBIT2_chunk_1600000.bin",
+        "start": 1600000,
+        "count": 766577,
+        "positive_cycles": 766577,
+        "long_required_edges_verified": 7908946
+      }
+    ],
+    "unknown_or_negative_records": 0,
+    "producer_or_root_verifier_imported_or_executed": false,
+    "Hamilton_cycle_searches": 0,
+    "all_input_hashes_unchanged": true,
+    "production_files_modified": false,
+    "main_ledger_modified": false
+  },
+  "evidence": {
+    "A10_ORBIT2_REVIEW.md": "21a342e7395060514e6e26f5fdb844b9e4392b0f9b77887087c08b865c9fdec6",
+    "A10_ORBIT2_REVIEW_check.py": "2aeaf51f6709cfe8864b55cd8b588539917ae77b0bd4dde2a28b114cdfaba960",
+    "A10_ORBIT2_REVIEW_check.json": "579b498cd8192fdbbeddd6786dce91f3d6c071c88b4563b15fb2f6cf4a380737"
+  }
+}

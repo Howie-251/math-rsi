@@ -1,0 +1,109 @@
+@[reducible] def ECC.Word : ℕ → Type :=
+fun n => Fin n → ECC.F2
+def ECC.weight : {n : ℕ} → ECC.Word n → ℕ :=
+fun {n} x => {i | x i ≠ 0}.card
+def ECC.MinWeight : {n : ℕ} → Submodule ECC.F2 (ECC.Word n) → ℕ → Prop :=
+fun {n} C d => ∀ x ∈ C, x ≠ 0 → d ≤ ECC.weight x
+def ECC.CodeExists : ℕ → ℕ → ℕ → Prop :=
+fun n k d => ∃ C, Module.finrank ECC.F2 ↥C = k ∧ ECC.MinWeight C d
+def ECC.MainClaim : Prop :=
+¬ECC.CodeExists 43 10 17
+def ECC.ExactMinWeight : {n : ℕ} → Submodule ECC.F2 (ECC.Word n) → ℕ → Prop :=
+fun {n} C d => ECC.MinWeight C d ∧ ∃ x ∈ C, x ≠ 0 ∧ ECC.weight x = d
+def ECC.FullSupport : {n : ℕ} → Submodule ECC.F2 (ECC.Word n) → Prop :=
+fun {n} C => ∀ (i : Fin n), ∃ x ∈ C, x i ≠ 0
+def ECC.CatalogueReduction : Prop :=
+∀ (T : Submodule ECC.F2 (ECC.Word 44)),
+  Module.finrank ECC.F2 ↥T = 10 →
+    ECC.MinWeight T 18 →
+      ECC.EvenCode T →
+        ∃ rows ∈ ECC.Packed.catalogueRows,
+          ∃ a b c,
+            ECC.EvenCode (ECC.StandardExtension (ECC.matrixCode 40 rows) a b c) ∧
+              ECC.MinWeight (ECC.StandardExtension (ECC.matrixCode 40 rows) a b c) 18
+def ECC.CatalogueExclusions : Prop :=
+∀ rows ∈ ECC.Packed.catalogueRows, ECC.PairIncompatible (ECC.matrixCode 40 rows)
+def ECC.PublishedNonexistence41 : Prop :=
+∀ (C : Submodule ECC.F2 (ECC.Word 41)), Module.finrank ECC.F2 ↥C = 8 → ¬ECC.ExactMinWeight C 18
+def ECC.PublishedClassBound : Prop :=
+∀ (f : Fin 173 → Submodule ECC.F2 (ECC.Word 40)),
+  (∀ (i : Fin 173), ECC.MotherParameters (f i)) → ∃ i j, i ≠ j ∧ ECC.CoordinateEquivalent (f i) (f j)
+def ECC.CatalogueInequivalent : Prop :=
+∀ (i j : Fin 172), i ≠ j → ¬ECC.CoordinateEquivalent (ECC.catalogueCode i) (ECC.catalogueCode j)
+def ECC.MotherParameters : Submodule ECC.F2 (ECC.Word 40) → Prop :=
+fun K => Module.finrank ECC.F2 ↥K = 7 ∧ ECC.ExactMinWeight K 18 ∧ ECC.EvenCode K ∧ ECC.FullSupport K
+def ECC.CoordinateEquivalent : {n : ℕ} → Submodule ECC.F2 (ECC.Word n) → Submodule ECC.F2 (ECC.Word n) → Prop :=
+fun {n} C D => ∃ e, ECC.permuteCode e C = D
+def ECC.PairIncompatible : Submodule ECC.F2 (ECC.Word 40) → Prop :=
+fun K =>
+  ∀ (a b : ECC.Word 40),
+    Even (ECC.weight a) → Even (ECC.weight b) → ECC.Far K 16 a → ECC.Far K 16 b → ¬ECC.Far K 16 (a + b)
+ECC.code431016 : ECC.CodeExists 43 10 16
+ECC.seed43_exact_distance : ECC.ExactMinWeight (ECC.matrixCode 43 ECC.Packed.seed43) 16
+ECC.Packed.catalogue_size : ECC.Packed.catalogueRows.length = 172
+ECC.catalogue_member_parameters {rows : List ℕ} (hr : rows ∈ ECC.Packed.catalogueRows) :
+  Module.finrank ECC.F2 ↥(ECC.matrixCode 40 rows) = 7 ∧
+    ECC.ExactMinWeight (ECC.matrixCode 40 rows) 18 ∧
+      ECC.EvenCode (ECC.matrixCode 40 rows) ∧ ECC.FullSupport (ECC.matrixCode 40 rows)
+ECC.code431017_iff_even441018 :
+  ECC.CodeExists 43 10 17 ↔ ∃ T, Module.finrank ECC.F2 ↥T = 10 ∧ ECC.MinWeight T 18 ∧ ECC.EvenCode T
+ECC.dualFour_lower_bound (A : Fin 45 → ℕ) (B2 B4 : ℕ) (hzero : A 0 = 1) (htotal : ∑ w, ↑(A w) = 1024)
+  (hsupport : ∀ (w : Fin 45), A w ≠ 0 → w = 0 ∨ Even ↑w ∧ 18 ≤ ↑w)
+  (hsecond : ∑ w, ↑(A w) * ECC.krawtchouk44 2 w = 1024 * ↑B2)
+  (hfourth : ∑ w, ↑(A w) * ECC.krawtchouk44 4 w = 1024 * ↑B4) (hB2 : B2 = 0) : 12 ≤ B4
+ECC.no_standardExtension_of_projection_certificates (K : Submodule ECC.F2 (ECC.Word 40)) (hEvenK : ECC.EvenCode K)
+  (F : Finset (ECC.Word 40)) (projection : ECC.Word 40 →ₗ[ECC.F2] ↥K) (hRetract : ∀ (k : ↥K), projection ↑k = k)
+  (hComplete : ∀ (a : ECC.Word 40), projection a = 0 → Even (ECC.weight a) → ECC.Far K 16 a → a ∈ F)
+  (hWitnesses : ECC.SavedPairWitnesses K F) (a b c : ECC.Word 40)
+  (hEvenC : ECC.EvenCode (ECC.StandardExtension K a b c)) : ¬ECC.MinWeight (ECC.StandardExtension K a b c) 18
+ECC.mainClaim_of_reduction_and_exclusions (hReduction : ECC.CatalogueReduction)
+  (hExclusions : ECC.CatalogueExclusions) : ECC.MainClaim
+ECC.exists_dual_weight_four (C : Submodule ECC.F2 (ECC.Word 44)) (hdim : Module.finrank ECC.F2 ↥C = 10)
+  (hmin : ECC.MinWeight C 18) (heven : ECC.EvenCode C) (hdualmin : ECC.MinWeight (ECC.dualCode C) 4) :
+  ∃ y ∈ ECC.dualCode C, ECC.weight y = 4
+ECC.codeExists_griesmer {n k d : ℕ} (h : ECC.CodeExists n k d) : ECC.Griesmer.bound k d ≤ n
+ECC.dual_minWeight_four_of_published (hE1 : ECC.PublishedNonexistence41) (T : Submodule ECC.F2 (ECC.Word 44))
+  (hdim : Module.finrank ECC.F2 ↥T = 10) (hmin : ECC.MinWeight T 18) : ECC.MinWeight (ECC.dualCode T) 4
+ECC.target_to_standard_mother (hE1 : ECC.PublishedNonexistence41) (T : Submodule ECC.F2 (ECC.Word 44))
+  (hdim : Module.finrank ECC.F2 ↥T = 10) (hmin : ECC.MinWeight T 18) (heven : ECC.EvenCode T) :
+  ∃ K a b c,
+    ECC.MotherParameters K ∧
+      ECC.EvenCode (ECC.StandardExtension K a b c) ∧ ECC.MinWeight (ECC.StandardExtension K a b c) 18
+ECC.catalogueReduction_of_published_results (hE1 : ECC.PublishedNonexistence41) (hE2 : ECC.PublishedClassBound)
+  (hDistinct : ECC.CatalogueInequivalent) : ECC.CatalogueReduction
+ECC.mainClaim_of_external_results (hE1 : ECC.PublishedNonexistence41) (hE2 : ECC.PublishedClassBound)
+  (hDistinct : ECC.CatalogueInequivalent) (hComputed : ∀ (i : Fin 172), ECC.PairIncompatible (ECC.catalogueCode i)) :
+  ECC.MainClaim
+ECC.mainClaim_of_scan_facts (hE1 : ECC.PublishedNonexistence41) (hE2 : ECC.PublishedClassBound)
+  (hDistinct : ECC.CatalogueInequivalent) (F : Fin 172 → Finset (ECC.Word 40))
+  (projection : (i : Fin 172) → ECC.Word 40 →ₗ[ECC.F2] ↥(ECC.catalogueCode i))
+  (hRetract : ∀ (i : Fin 172) (k : ↥(ECC.catalogueCode i)), (projection i) ↑k = k)
+  (hCoverage :
+    ∀ (i : Fin 172) (a : ECC.Word 40),
+      (projection i) a = 0 → Even (ECC.weight a) → a ∈ F i ∨ ∃ k ∈ ECC.catalogueCode i, ECC.weight (a + k) < 16)
+  (hPairs : ∀ (i : Fin 172), ECC.SavedPairWitnesses (ECC.catalogueCode i) (F i)) : ECC.MainClaim
+ECC.optimal431016_of_external_results (hE1 : ECC.PublishedNonexistence41) (hE2 : ECC.PublishedClassBound)
+  (hDistinct : ECC.CatalogueInequivalent) (hComputed : ∀ (i : Fin 172), ECC.PairIncompatible (ECC.catalogueCode i)) :
+  ECC.OptimalDistance 43 10 16
+'ECC.Packed.seed43_verified' depends on axioms: [propext]
+'ECC.Packed.catalogue_all_distance' depends on axioms: [propext]
+'ECC.Packed.catalogue_all_shape_even_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.Packed.catalogue_all_attains_distance' depends on axioms: [propext]
+'ECC.decodeWord_surjective' depends on axioms: [propext, Quot.sound]
+'ECC.linearEncode_decodeWord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.code431016' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.seed43_exact_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.catalogue_member_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.code431017_iff_even441018' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.dualFour_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.no_standardExtension_of_projection_certificates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.mainClaim_of_reduction_and_exclusions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.exists_dual_weight_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.codeExists_griesmer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.dual_minWeight_four_of_published' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.target_to_standard_mother' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.catalogue_covers_of_class_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.catalogueReduction_of_published_results' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.mainClaim_of_external_results' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.mainClaim_of_scan_facts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ECC.optimal431016_of_external_results' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,967 @@
+{
+  "all_ten_checker_qualified": true,
+  "c1_proved": false,
+  "campaign_status": "PENDING_INDEPENDENT_AUDIT",
+  "certified_upper_bound": null,
+  "counts": {
+    "COUNTEREXAMPLE": 0,
+    "UNKNOWN": 0,
+    "VERIFIED_UNSAT": 10
+  },
+  "execution": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/execution_terminal.json",
+    "sha256": "f5ce2d07e561c7be7ffc35e120732240c42aeae8e43d989679384fe755441618",
+    "size_bytes": 9996
+  },
+  "migration": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/handoff_complete.json",
+    "sha256": "cf8c09f5369961458dc9366f061afe02e33d1fe953d2b1086c8b2a093ad7c800",
+    "size_bytes": 6944
+  },
+  "predecessor": {
+    "acceptance": {
+      "audit_sha256": "b57bbab3f9be1df52b75d44604e73407dd61aa5ce3b96a14fc85093e943c384a",
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/campaign_acceptance_audit.json",
+      "sha256": "e1f1702039e69582149b6261501c4c7018e3a2b96769813fdc72430e3a2a413f",
+      "size_bytes": 3622
+    },
+    "campaign_root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00",
+    "final": {
+      "final_sha256": "ba911b35260f8dacfd8ed1466c172a6d3e6cb43dc572a054bad9734ccdd14979",
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/cardinality_c1_resolved_final.json",
+      "sha256": "aeccd037f231d6d43b9af18523925aebc2d362bc4bc612846126e5768b6708e2",
+      "size_bytes": 46284
+    },
+    "manifest": {
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/manifest.json",
+      "sha256": "afd6d141fa9b5fa1832b34a4283a9f0ef66887879f133dd5ee31b74d0384e997",
+      "size_bytes": 1017370
+    },
+    "overlay_root": "/data/ktqiu_hdd/math_agent/tmp/cardinality_c1_timeout_resolution_overlay_20260903_v2",
+    "result_root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2",
+    "runtime_core": {
+      "path": "/data/ktqiu_hdd/math_agent/tmp/cardinality_c1_timeout_resolution_overlay_20260903_v2/cardinality_c1_timeout_resolution.py",
+      "sha256": "9b52aee9f34b9aaefdaca50008fdc2f942408b0beff4ca42114e916df9651850",
+      "size_bytes": 97773
+    },
+    "runtime_registry_sha256": "47aeb93a15bbfe11ed24eda424fb28705029ae5827a0322013f4725efc65ad9c",
+    "seal": {
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/campaign_seal.json",
+      "seal_sha256": "a9d9a2ee394625152946325cacb769a7d51bae1030464ed9d36d5e2e2856c7a7",
+      "sha256": "65f9af60744cda6c2765bb4bf2e44d0f9704352238d1b654522bcd5fe5528b86",
+      "size_bytes": 23037
+    },
+    "source_replay_sha256": "ca4ba1362e6b4838180b99c1230368f631bf3d4ce30fa360bb759e8d90870db0",
+    "suite_sha256": "cb72cc710df8a6ac8327a7f7df98924aeceb770ee2f2c8f0787e9902a01de3ae",
+    "transitive_protected_roots": [
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v1",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite",
+      "/data/ktqiu_hdd/math_agent/tmp/cardinality_c1_overlay_20260903_v1",
+      "/data/ktqiu_hdd/math_agent/tmp/cardinality_c1_timeout_resolution_overlay_20260903_v1",
+      "/data/ktqiu_hdd/math_agent/tmp/cardinality_c1_timeout_resolution_overlay_20260903_v2"
+    ]
+  },
+  "protocol": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/protocol_seal.json",
+    "sha256": "4dae075cb5f56febdddf2554ed83ee03dec556e8dc26d2f15555b6d05ce8467b",
+    "size_bytes": 8340
+  },
+  "publication_policy": "Only an accepted independent audit may publish C1 or N<=34.",
+  "schema": "c1_v3_parallel_taskset_20260912_v2_final",
+  "strict_cells": [
+    {
+      "case_name": "cardinality_A_r01_e01_N26_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e01_N26",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 1,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 26,
+        "order": 26,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e01_N26_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e01_N26_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 2417.8979249186814,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e01_N26_strict_no_target.checker.log",
+          "sha256": "ae451fd8702fe9980166fcfb65f1aee283088941310a9eb871a81f463408988c",
+          "size_bytes": 403
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e01_N26",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e01_N26_strict_no_target.proof",
+        "sha256": "302e20ab877bfc96a13c20c17a707bd0cd029441a2288aa8d15f66d84c921014",
+        "size_bytes": 2361121512
+      },
+      "proof_status": null,
+      "reason": "timeout_resolution_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "a62d488dd866a10d694e15e4b7cb50f7abb40e057a4b9ebf312a4f6313e71e59",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e01_N26_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e01_N26_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "e36846acd9bec3348948eee17417298342923eacf307f4501bec53b43ba99450",
+          "size_bytes": 2441,
+          "status_sha256": "fb32ccc5dcdbde979fcbc4baf716140108ecff8ff8967f5b8074a089f8028b88"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e01_N26_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e01_N26_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "e36846acd9bec3348948eee17417298342923eacf307f4501bec53b43ba99450",
+        "size_bytes": 2441,
+        "status_sha256": "fb32ccc5dcdbde979fcbc4baf716140108ecff8ff8967f5b8074a089f8028b88"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e01_N26_strict_no_target",
+        "classification": "VERIFIED_UNSAT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e01_N26_strict_no_target.status.json",
+        "sha256": "b1b3a9c914c5b175ac2536a6d3cc55c57dd8057be23c5de2ab53c5766ce4933d",
+        "size_bytes": 5407,
+        "status_sha256": "057b22a569393701083e8e1065cb52a8178650eb2cf9957225ca0a77bd4bdf9d"
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e02_N27_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e02_N27",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 2,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 27,
+        "order": 27,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e02_N27_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e02_N27_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 2576.3422329723835,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e02_N27_strict_no_target.checker.log",
+          "sha256": "6b225d94655d8467c1ab11ed69356373b1925d206a0ffc6389ff4d2932172fe7",
+          "size_bytes": 404
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e02_N27",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e02_N27_strict_no_target.proof",
+        "sha256": "ab4e06a2eaac511dc721031fe79c19d131c4334efc23b99a18fc423f9cb1c877",
+        "size_bytes": 2621126512
+      },
+      "proof_status": null,
+      "reason": "timeout_resolution_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "e1062f9b75e3415cfd2e7a13314a6b1b2b0a781eeaa52eb1fabee0efd69f7122",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e02_N27_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e02_N27_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "0b8dec48f3b5462f3701ce44daf15b2f301fbbf45451fb1939d8d0159c6c7b40",
+          "size_bytes": 2440,
+          "status_sha256": "6d4ce6917b91cb356e3725d6e7ecaefa6710588c877fff3f8247bd5b189d46fe"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e02_N27_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e02_N27_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "0b8dec48f3b5462f3701ce44daf15b2f301fbbf45451fb1939d8d0159c6c7b40",
+        "size_bytes": 2440,
+        "status_sha256": "6d4ce6917b91cb356e3725d6e7ecaefa6710588c877fff3f8247bd5b189d46fe"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e02_N27_strict_no_target",
+        "classification": "VERIFIED_UNSAT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e02_N27_strict_no_target.status.json",
+        "sha256": "38d63f7b131b4ee500389b2b713da6a068f5347863e3af0faf06247ab1884706",
+        "size_bytes": 5407,
+        "status_sha256": "8b58eb3dc600c5d00711b155d5a2b7d54ab8f4f3f6a2d0e28b33ad8eaf94b35f"
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e03_N28_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e03_N28",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 3,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 28,
+        "order": 28,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e03_N28_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e03_N28_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 3370.132687084377,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e03_N28_strict_no_target.checker.log",
+          "sha256": "5bbeb34d187516ada5854daf544e4df57d9601d4cc934ee1a593b23e5f09fba4",
+          "size_bytes": 404
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e03_N28",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e03_N28_strict_no_target.proof",
+        "sha256": "d664812454d0a01500a71d717809b0196d6ede06acac082f7102765987df4f04",
+        "size_bytes": 3457799115
+      },
+      "proof_status": null,
+      "reason": "timeout_resolution_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "3fafd4ae930ad2ad6a46cca485d012860f3be588fc82fe5df037f3c68c8a2fe0",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e03_N28_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e03_N28_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "2efda9a4a7829f3209b9f8f6d81a2618d715f074748571bd1e97c7492728c51d",
+          "size_bytes": 2439,
+          "status_sha256": "4f4fa62c12ac6412297494773df487172e512859c6f78b9d5f65940962271b49"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e03_N28_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e03_N28_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "2efda9a4a7829f3209b9f8f6d81a2618d715f074748571bd1e97c7492728c51d",
+        "size_bytes": 2439,
+        "status_sha256": "4f4fa62c12ac6412297494773df487172e512859c6f78b9d5f65940962271b49"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e03_N28_strict_no_target",
+        "classification": "VERIFIED_UNSAT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e03_N28_strict_no_target.status.json",
+        "sha256": "8fdf7bc1d7c46d808e86aecbdf59dff5904c27a38d722c0a68e5bea80a79aa67",
+        "size_bytes": 5407,
+        "status_sha256": "c815a7659848200e9c2438046273fb247b406219cc8d10603d0cbcaf7345365d"
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e04_N29_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e04_N29",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 4,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 29,
+        "order": 29,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e04_N29_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e04_N29_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 4501.762485131621,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e04_N29_strict_no_target.checker.log",
+          "sha256": "000d8e708337d19d331daddf2cd16ba88262e1e9e04a2a90c1f3ba5c2fa57886",
+          "size_bytes": 404
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e04_N29",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e04_N29_strict_no_target.proof",
+        "sha256": "5ac8168f8c5f07166476ab76167beb9272fa569d51274653bdcdd8da34981042",
+        "size_bytes": 4302458260
+      },
+      "proof_status": null,
+      "reason": "timeout_resolution_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "dbae9288434c2a677bbc51861d4ab8de1703909e126c5609a2c38cd3bac0d5c0",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e04_N29_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e04_N29_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "c467878e0b01a2c48c94eb987b1bc21f3052ed8e808f4c232a1b29c8a1f061a7",
+          "size_bytes": 2440,
+          "status_sha256": "0c7fb72204bca23f7a3adc48df56aa211031a657d8afa7469c00af4459b256f1"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e04_N29_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e04_N29_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "c467878e0b01a2c48c94eb987b1bc21f3052ed8e808f4c232a1b29c8a1f061a7",
+        "size_bytes": 2440,
+        "status_sha256": "0c7fb72204bca23f7a3adc48df56aa211031a657d8afa7469c00af4459b256f1"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e04_N29_strict_no_target",
+        "classification": "VERIFIED_UNSAT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e04_N29_strict_no_target.status.json",
+        "sha256": "ec5ca40b4e59333d683a49cb9e3386e9329f9b8370c9cab5cffbcaa8ebf51b5b",
+        "size_bytes": 5406,
+        "status_sha256": "c36a4aa543162e474137f4b4ac0d21e6cc9bc0b01ed5be345ceee7ad3a59d9e1"
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e05_N30_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e05_N30",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 5,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 30,
+        "order": 30,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e05_N30_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e05_N30_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 5453.864074021578,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e05_N30_strict_no_target.checker.log",
+          "sha256": "fb9babcd55a2ff6990e54ff9338c3d3d5609a36fd2e746c569ad4eae2db6d40e",
+          "size_bytes": 404
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e05_N30",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e05_N30_strict_no_target.proof",
+        "sha256": "e2466246c7351ad530709ac43b61bbf394fed33bd3322f6be98741ee62e100b4",
+        "size_bytes": 4944196686
+      },
+      "proof_status": null,
+      "reason": "timeout_resolution_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "d1acfe82b5b2d03e82912941b733a471d7903f870037ca096034e0fda84c8f43",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e05_N30_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e05_N30_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "9a7fcadb2743e272b2638b50703c02f00012017cdc1cf9c5e24cb95739903535",
+          "size_bytes": 2440,
+          "status_sha256": "05537bdce4767b81d63b27fd4fc7ed4f64f7122bd9a1b2ea21dfc5a92a2a1b74"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e05_N30_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e05_N30_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "9a7fcadb2743e272b2638b50703c02f00012017cdc1cf9c5e24cb95739903535",
+        "size_bytes": 2440,
+        "status_sha256": "05537bdce4767b81d63b27fd4fc7ed4f64f7122bd9a1b2ea21dfc5a92a2a1b74"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e05_N30_strict_no_target",
+        "classification": "VERIFIED_UNSAT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e05_N30_strict_no_target.status.json",
+        "sha256": "2ae6e559a85e21b1c5c8cfd112464114960d86a0b0305180653dc2dc913f1398",
+        "size_bytes": 5405,
+        "status_sha256": "cc43cc29ea1144da6d9b37482f6abbdd2114fd55618232666f3a2c91db1da239"
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e06_N31_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e06_N31",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 6,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 31,
+        "order": 31,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e06_N31_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 7691.433779423009,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.checker.log",
+          "sha256": "3a3a5b68a2f939fa619ec4a97e8089b7138e1a093784a968dc6e6000ba853efb",
+          "size_bytes": 405
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e06_N31",
+      "parallel_evidence_kind": "parallel_v3_worker",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.proof",
+        "sha256": "6e143456c184885471fb3a4aa12552f56163fa7381bd15fd980d45451abd2efb",
+        "size_bytes": 6480063344
+      },
+      "proof_status": null,
+      "reason": "unbounded_successor_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "4fe528b2586c962c7ad8c409b8396473f2222022366cf45ab8fbaf5e78882687",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e06_N31_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e06_N31_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "838978f61ec8d8afdd5fbace5ce44429c860c16a48bf7e297ff234f91cfcc448",
+          "size_bytes": 2440,
+          "status_sha256": "c9caaa43868dfd28ada97a5a5bfa1dea8d95ea51ef8f9ef2fe809a44b8c873b0"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e06_N31_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e06_N31_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "838978f61ec8d8afdd5fbace5ce44429c860c16a48bf7e297ff234f91cfcc448",
+        "size_bytes": 2440,
+        "status_sha256": "c9caaa43868dfd28ada97a5a5bfa1dea8d95ea51ef8f9ef2fe809a44b8c873b0"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e06_N31_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.status.json",
+        "sha256": "a3dba38e8c22a8fe2b38640321687c47cf626c5c890995bc14af0c56c65b05da",
+        "size_bytes": 3752,
+        "status_sha256": "e4f2a39659897ec44a243c9aefd70f728d8c24370cfdd40420ad6d823437f5e9"
+      },
+      "unbounded_successor_provenance": {
+        "predecessor_final_row_sha256": "ccb13e6b580ba1c849e2958ec4f9157687e7e1c031511eea30152458012bfef1",
+        "predecessor_resolution_status": {
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.status.json",
+          "sha256": "a3dba38e8c22a8fe2b38640321687c47cf626c5c890995bc14af0c56c65b05da",
+          "size_bytes": 3752,
+          "status_sha256": "e4f2a39659897ec44a243c9aefd70f728d8c24370cfdd40420ad6d823437f5e9"
+        }
+      },
+      "unbounded_successor_status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e06_N31_strict_no_target.status.json",
+        "sha256": "5f7661d38feb2c756dffc9ed8d426417a66d5e7d373ccc2e36aa6ef27d4c6492",
+        "size_bytes": 5645
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e07_N32_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e07_N32",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 7,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 32,
+        "order": 32,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e07_N32_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 8396.117606649,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.checker.log",
+          "sha256": "be14543fb94df6a7cf5a6e012672ad4016c2146f293c44fe11a08687cc01a1c1",
+          "size_bytes": 405
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e07_N32",
+      "parallel_evidence_kind": "parallel_v3_worker",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.proof",
+        "sha256": "ec440a9d8a1ee901848227f0f86e6dd5ce3f103c90b75ac32e98fb8ef5f0b7b1",
+        "size_bytes": 9311401245
+      },
+      "proof_status": null,
+      "reason": "unbounded_successor_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "d7bfe346b6e94227dea434cd35a0bbf52e3b7c40edcba052fd249aa5dd5108f2",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e07_N32_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e07_N32_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "d677db61b36d8f12044d7b1556c62d4cfb917aea1d2d68df831a96e4de6ef4f0",
+          "size_bytes": 2440,
+          "status_sha256": "c2b1eed0b071565c87b67aa8f118c9b1384d64c5657e0b096b621095a234cb37"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e07_N32_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e07_N32_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "d677db61b36d8f12044d7b1556c62d4cfb917aea1d2d68df831a96e4de6ef4f0",
+        "size_bytes": 2440,
+        "status_sha256": "c2b1eed0b071565c87b67aa8f118c9b1384d64c5657e0b096b621095a234cb37"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e07_N32_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.status.json",
+        "sha256": "54f1144d92a3ff7b78e4ab2c85f1031403eabeb9b46b78ae8ae6246fc8b14c47",
+        "size_bytes": 3751,
+        "status_sha256": "a79b4694184482d7ee0b953c0c224b4b5af58435bda3ecdd23c17038bc161422"
+      },
+      "unbounded_successor_provenance": {
+        "predecessor_final_row_sha256": "23f6f66a95d64a4132e6d8e0c69ebbf9fc560e3b831a22b3ca4ce3471467bb66",
+        "predecessor_resolution_status": {
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.status.json",
+          "sha256": "54f1144d92a3ff7b78e4ab2c85f1031403eabeb9b46b78ae8ae6246fc8b14c47",
+          "size_bytes": 3751,
+          "status_sha256": "a79b4694184482d7ee0b953c0c224b4b5af58435bda3ecdd23c17038bc161422"
+        }
+      },
+      "unbounded_successor_status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e07_N32_strict_no_target.status.json",
+        "sha256": "167a2daf3e71797495baabe283c8c2559acbbae110c3544dfa026e773737a568",
+        "size_bytes": 5642
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e08_N33_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e08_N33",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 8,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 33,
+        "order": 33,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e08_N33_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 10288.970380051003,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.checker.log",
+          "sha256": "1ae2e6fe5c568143a48c2a21a4d6b4393e18d225de53cc19cde68d469ecc5c5a",
+          "size_bytes": 406
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e08_N33",
+      "parallel_evidence_kind": "parallel_v3_worker",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.proof",
+        "sha256": "f7cd1bafb5262c259d250919c8ffb372d5c8f80667f47822571d5e8459155ba6",
+        "size_bytes": 10894796940
+      },
+      "proof_status": null,
+      "reason": "unbounded_successor_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "ba967bd307b99164b5eeff320bb4c03494db4ee740774745886bf60e99077c03",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e08_N33_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e08_N33_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "75176bf866666245eb7d62bb6bd80a5f57a76215a78535d6304e217c695da9a2",
+          "size_bytes": 2440,
+          "status_sha256": "9a8b9ae51e8f6a5072a76d7e008f7c5f96cc6989bfded9410ef6510889a7a4e6"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e08_N33_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e08_N33_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "75176bf866666245eb7d62bb6bd80a5f57a76215a78535d6304e217c695da9a2",
+        "size_bytes": 2440,
+        "status_sha256": "9a8b9ae51e8f6a5072a76d7e008f7c5f96cc6989bfded9410ef6510889a7a4e6"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e08_N33_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.status.json",
+        "sha256": "edd6d747e13cd70fcba4b4ccd130b0eb4f2317314972b8c9290efc0871a84d48",
+        "size_bytes": 3751,
+        "status_sha256": "3cbf3cc62c808c7d151a2909dd70a1110c17d5679c2be1ad6e914cbb36ffbdaf"
+      },
+      "unbounded_successor_provenance": {
+        "predecessor_final_row_sha256": "29987443ddd94917d5bd263d9d0e462ff80f9ce06fa07de9425c362faa124db4",
+        "predecessor_resolution_status": {
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.status.json",
+          "sha256": "edd6d747e13cd70fcba4b4ccd130b0eb4f2317314972b8c9290efc0871a84d48",
+          "size_bytes": 3751,
+          "status_sha256": "3cbf3cc62c808c7d151a2909dd70a1110c17d5679c2be1ad6e914cbb36ffbdaf"
+        }
+      },
+      "unbounded_successor_status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e08_N33_strict_no_target.status.json",
+        "sha256": "03d5b878fa4163501953437b4c98867418efa30ced72c59558d4a4bbfa2933f8",
+        "size_bytes": 5647
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e09_N34_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e09_N34",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 9,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 34,
+        "order": 34,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e09_N34_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 15967.347484472994,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.checker.log",
+          "sha256": "214ab89d827ace865e37a4f9ee11f7ec0eeb474a7614e178b6609397c04431f3",
+          "size_bytes": 407
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e09_N34",
+      "parallel_evidence_kind": "retained_v3_proof_rechecked",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.proof",
+        "sha256": "2ba0862972f1d6de214f82eead021a62de3dcabdf01c70752f1b1b889aa9b26c",
+        "size_bytes": 15750030233
+      },
+      "proof_status": null,
+      "reason": "unbounded_successor_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "bd7dcc6b59f0e69b85a4176fe6771b05568bd51131f52f05ebe579fd086834fe",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e09_N34_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e09_N34_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "da6fc726888a2865246ba0e2cb3934db7e9bc558c280c5162270d3053ebd9d45",
+          "size_bytes": 2440,
+          "status_sha256": "a9131713d3b720d6a27d43a8648efbc0b8dd0b0507ad0001def5c4bd07d5d827"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e09_N34_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e09_N34_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "da6fc726888a2865246ba0e2cb3934db7e9bc558c280c5162270d3053ebd9d45",
+        "size_bytes": 2440,
+        "status_sha256": "a9131713d3b720d6a27d43a8648efbc0b8dd0b0507ad0001def5c4bd07d5d827"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e09_N34_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.status.json",
+        "sha256": "75b29697cad045012bd354d0128f04d18d2235d7674197942ff96828c2bf1e68",
+        "size_bytes": 3751,
+        "status_sha256": "23dfe74a3a5dd9712df3b60cd31b6d0d146bd5dcfd4342823fc54caaa2c410f5"
+      },
+      "unbounded_successor_provenance": {
+        "predecessor_final_row_sha256": "96731c0c0d5cb08579662a39e2f5cb65f4f65727b45417016b77728a81160f24",
+        "predecessor_resolution_status": {
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.status.json",
+          "sha256": "75b29697cad045012bd354d0128f04d18d2235d7674197942ff96828c2bf1e68",
+          "size_bytes": 3751,
+          "status_sha256": "23dfe74a3a5dd9712df3b60cd31b6d0d146bd5dcfd4342823fc54caaa2c410f5"
+        }
+      },
+      "unbounded_successor_status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3_parallel_20260912_v2/attempt00/cases/cardinality_A_r01_e09_N34_strict_no_target.status.json",
+        "sha256": "10e85c76664d92b2cd487b52e728cd19f40ea81a261f3b9d75fefa3300838b93",
+        "size_bytes": 2489
+      },
+      "unrun_due_to_global_stop": false
+    },
+    {
+      "case_name": "cardinality_A_r01_e10_N35_strict_no_target",
+      "cell": {
+        "case_id": "cardinality_A_r01_e10_N35",
+        "count_identity": "N=(25-m)+e=26+e-r",
+        "e": 10,
+        "missing_ordinary_count": 0,
+        "occupied_ordinary_count": 25,
+        "occupied_state_count": 35,
+        "order": 35,
+        "r": 1,
+        "schema": "state_charging_cardinality_cell_v1"
+      },
+      "checker_qualified": true,
+      "checker_result": {
+        "checker": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+          "size_bytes": 50976
+        },
+        "checker_status_lines": [
+          "VERIFIED"
+        ],
+        "command": [
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260822_unknown_resolution/any/ae_c2e44161_3600/adapter/proof_checker.snapshot",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/suite/cnf/strict_no_target/cardinality_A_r01_e10_N35_strict_no_target.cnf",
+          "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.proof"
+        ],
+        "elapsed_seconds": 11076.927892139,
+        "log": {
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.checker.log",
+          "sha256": "1330c3d413c233108b219658f24a76276172dfea24f075932ac6adc36c53844e",
+          "size_bytes": 408
+        },
+        "not_verified_status_count": 0,
+        "outer_timed_out": false,
+        "returncode": 0,
+        "verified": true,
+        "verified_status_count": 1
+      },
+      "classification": "VERIFIED_UNSAT",
+      "counterexample_sat_audit": null,
+      "logical_case_id": "cardinality_A_r01_e10_N35",
+      "parallel_evidence_kind": "original_v3",
+      "proof": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.proof",
+        "sha256": "c109c9438dd7f84f0823710f296dcf97fe4e1054c6e117256c78e0dfd78208a0",
+        "size_bytes": 2599101854
+      },
+      "proof_status": null,
+      "reason": "unbounded_successor_checker_qualified_proof",
+      "source_timeout_provenance": {
+        "source_final_row_sha256": "b96225fad333f36fe4d41ab9188ac7ef2e7bd6ef4145492c9461cd843eae0d46",
+        "strict_sat_status": {
+          "case_name": "cardinality_A_r01_e10_N35_strict_no_target",
+          "classification": "TIMEOUT",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e10_N35_strict_no_target.status.json",
+          "phase": "strict-sat",
+          "sha256": "1fa3aa08e3568c567b2075638c4273a88d1be6fd8a2e3306c1b7f46e57aab5ee",
+          "size_bytes": 2440,
+          "status_sha256": "61c3f1e00f67ab65e526013c06024e0cba5f4d075b8dcd41da7e37f1607518f4"
+        }
+      },
+      "strict_sat_status": {
+        "case_name": "cardinality_A_r01_e10_N35_strict_no_target",
+        "classification": "TIMEOUT",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_v1/attempt00/strict_sat/cardinality_A_r01_e10_N35_strict_no_target.status.json",
+        "phase": "strict-sat",
+        "sha256": "1fa3aa08e3568c567b2075638c4273a88d1be6fd8a2e3306c1b7f46e57aab5ee",
+        "size_bytes": 2440,
+        "status_sha256": "61c3f1e00f67ab65e526013c06024e0cba5f4d075b8dcd41da7e37f1607518f4"
+      },
+      "timeout_resolution_status": {
+        "case_name": "cardinality_A_r01_e10_N35_strict_no_target",
+        "classification": "UNVERIFIED_RAW_RETURN_20",
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.status.json",
+        "sha256": "2040cfbd5e09532b609720a77e74350cb8e6792f8bcfcc5738fac6a6065fe9b0",
+        "size_bytes": 5376,
+        "status_sha256": "232e0e940ae0f99a8116ce79c2d5e926eeeff9e958583f8b1c2ca7a07db02b48"
+      },
+      "unbounded_successor_provenance": {
+        "predecessor_final_row_sha256": "f914bed75fda2be385567cef7ce5864a749aff4e73768d0c94ce7664986a13f7",
+        "predecessor_resolution_status": {
+          "classification": "UNVERIFIED_RAW_RETURN_20",
+          "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v2/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.status.json",
+          "sha256": "2040cfbd5e09532b609720a77e74350cb8e6792f8bcfcc5738fac6a6065fe9b0",
+          "size_bytes": 5376,
+          "status_sha256": "232e0e940ae0f99a8116ce79c2d5e926eeeff9e958583f8b1c2ca7a07db02b48"
+        }
+      },
+      "unbounded_successor_status": {
+        "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260903_35_state_cardinality_c1_timeout_resolution_v3/attempt00/cases/cardinality_A_r01_e10_N35_strict_no_target.status.json",
+        "sha256": "0ec91855c7c3d215309f2dd2bcec21ecbe2c6b5c581a294f232db8911c3760af",
+        "size_bytes": 4958
+      },
+      "unrun_due_to_global_stop": false
+    }
+  ]
+}

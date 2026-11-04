@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "scope": "six explicit Q6 paths and one exact endpoint-rotation stall with a valid A4 cycle",
+  "input_hashes": {
+    "six_hole_geometry_witnesses.json": "798425513dd5dfd0ebe990c48a503ef913edc119fd8b4ff0cbd132ac0d42896e",
+    "a4_endpoint_rotation_probe.json": "e92a58a862ba8e461c98cd43e5920047c9a8654fa343db22e0ac5fb4d8d15bdb",
+    "a4_edge_elimination_probe.json": "6ed7e2a4d36b4680f3fda60ba9f6690a1893acecb6036a75e08779ee16d66b32"
+  },
+  "six_exceptional_rows_realized": 6,
+  "six_paths_verified": 6,
+  "rotation_stall": [
+    {
+      "endpoint": 0,
+      "neighbors": [
+        {
+          "neighbor": 1,
+          "reason": "forbidden_vertex"
+        },
+        {
+          "neighbor": 2,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            2,
+            24
+          ]
+        },
+        {
+          "neighbor": 4,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            4,
+            22
+          ]
+        },
+        {
+          "neighbor": 8,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            8,
+            10
+          ]
+        },
+        {
+          "neighbor": 16,
+          "reason": "identity_move"
+        }
+      ]
+    },
+    {
+      "endpoint": 7,
+      "neighbors": [
+        {
+          "neighbor": 6,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            5,
+            6
+          ]
+        },
+        {
+          "neighbor": 5,
+          "reason": "identity_move"
+        },
+        {
+          "neighbor": 3,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            3,
+            17
+          ]
+        },
+        {
+          "neighbor": 15,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            9,
+            15
+          ]
+        },
+        {
+          "neighbor": 23,
+          "reason": "would_delete_required_edge",
+          "edge": [
+            23,
+            31
+          ]
+        }
+      ]
+    }
+  ],
+  "rotation_stall_is_a4_counterexample": false,
+  "a4_proved": false,
+  "full_p6_proved": false
+}

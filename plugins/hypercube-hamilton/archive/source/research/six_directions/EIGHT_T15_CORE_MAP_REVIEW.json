@@ -1,0 +1,255 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "complete_geometry_accounting_verified",
+  "summary": "All 66127 parent geometries and 165403 a2b1 projections verified. New split/cell coverage is zero; 65920 parents map to 41 of 54 residual T15 orbits, with a verified 23-core greedy cover. No core or R8 closure is established.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "thread_id": "/root/eight_double_bridge_audit",
+  "generated_at": "2026-11-01T08:45:05.663468+00:00",
+  "trace_path": "EIGHT_T15_CORE_MAP_REVIEW.md",
+  "audited_input_hashes": {
+    "eight_t15_geometric_coverage.py": "sha256:0f8e6d6a0ba959ac52a46a4bbf5d8a9bcce169d4a4f3a0e5d1e41aa2f2da9460",
+    "eight_t15_geometric_coverage.json": "sha256:88ab64aad5fe0de622ab70e009c65e12dbb07894658da367509b4b4cf6002384",
+    "eight_t15_core_map.py": "sha256:18d727a29d1884edafb61b2cbe49453cd96c068ff48307276bc4fc5a481a1bdc",
+    "eight_t15_core_map.json": "sha256:7608cd13fa0a8386c83e3b9a9fe87c60e82a0dbac9f9f375ef424aa424bb33fb",
+    "t15_analytic_geometry.py": "sha256:815f54987bf9c04c1f7c60bbd410e7f0b49c4b4c10c810ab2448a6c79a2867fc",
+    "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+    "covered_eight_residual_1.bin": "sha256:12dfb2b0f5a1f9a087646a433050aa489242682e08a0d7593b4793632166689b",
+    "covered_eight_residual_7.bin": "sha256:9c1e9e7b5f9740add6eb4459527a2679c1dd42feb12fc2705324eeba284cb3fc",
+    "covered_eight_residual_31.bin": "sha256:35326bf4fb6f49a2fef3e6a6677988084bf4a622497c70319e77c024277092bc"
+  },
+  "details": {
+    "proof_obligations": [
+      {
+        "id": "CM01",
+        "obligation": "已认证原始域读取、记录唯一、孔和目标条件",
+        "status": "PASS"
+      },
+      {
+        "id": "CM02",
+        "obligation": "每条 a2b1 切分穷尽、δ 两分支的孔集语义",
+        "status": "PASS"
+      },
+      {
+        "id": "CM03",
+        "obligation": "少数孔 q、五奇孔、指定 Y、不重合与面位置",
+        "status": "PASS"
+      },
+      {
+        "id": "CM04",
+        "obligation": "平移后删除坐标为 Q5 识别，奇偶和 included 非邻条件保留",
+        "status": "PASS"
+      },
+      {
+        "id": "CM05",
+        "obligation": "165403 个局部 direct-good-cut 与 cell 条件独立检查",
+        "status": "PASS，全部失败"
+      },
+      {
+        "id": "CM06",
+        "obligation": "12870 规范配置完整枚举，54 轨道及计数重新规范化",
+        "status": "PASS"
+      },
+      {
+        "id": "CM07",
+        "obligation": "所有父几何的所有切分/核心选择与频数逐项相等",
+        "status": "PASS"
+      },
+      {
+        "id": "CM08",
+        "obligation": "41 个实际使用核心与完整 used_cores 清单",
+        "status": "PASS"
+      },
+      {
+        "id": "CM09",
+        "obligation": "23 步 greedy 的最优新增选择及平局规则",
+        "status": "PASS，仅 greedy 算法"
+      },
+      {
+        "id": "CM10",
+        "obligation": "最终覆盖65920、无 a2b1 的207及目标分层一致",
+        "status": "PASS"
+      },
+      {
+        "id": "CM11",
+        "obligation": "不将核心选择当核心已证，不将孔几何计数当实现匹配计数",
+        "status": "PASS"
+      }
+    ],
+    "issues": [],
+    "open_counts": {
+      "FATAL": 0,
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    },
+    "independent_check": {
+      "status": "PASS",
+      "summaries": [
+        {
+          "target": 1,
+          "total": 19530,
+          "with_a2b1": 19480,
+          "without_a2b1": 50,
+          "closed_by_split_or_cell": 0
+        },
+        {
+          "target": 7,
+          "total": 22472,
+          "with_a2b1": 22395,
+          "without_a2b1": 77,
+          "closed_by_split_or_cell": 0
+        },
+        {
+          "target": 31,
+          "total": 24125,
+          "with_a2b1": 24045,
+          "without_a2b1": 80,
+          "closed_by_split_or_cell": 0
+        }
+      ],
+      "total": 66127,
+      "with_a2b1": 65920,
+      "without_a2b1": 207,
+      "a2b1_cuts_checked": 165403,
+      "projected_T15_criterion_checks": 165403,
+      "all_projected_geometries_without_any_direct_good_cut": true,
+      "closed_by_split_or_cell": 0,
+      "normalized_T15_domain_enumerated": 12870,
+      "residual_T15_orbits": 54,
+      "used_T15_orbits": 41,
+      "greedy_cover_size": 23,
+      "greedy_cover": [
+        {
+          "core": 10,
+          "newly_covered_geometries": 11724
+        },
+        {
+          "core": 23,
+          "newly_covered_geometries": 8772
+        },
+        {
+          "core": 26,
+          "newly_covered_geometries": 6846
+        },
+        {
+          "core": 4,
+          "newly_covered_geometries": 6057
+        },
+        {
+          "core": 0,
+          "newly_covered_geometries": 3936
+        },
+        {
+          "core": 8,
+          "newly_covered_geometries": 3810
+        },
+        {
+          "core": 13,
+          "newly_covered_geometries": 3580
+        },
+        {
+          "core": 15,
+          "newly_covered_geometries": 3252
+        },
+        {
+          "core": 31,
+          "newly_covered_geometries": 2010
+        },
+        {
+          "core": 32,
+          "newly_covered_geometries": 2010
+        },
+        {
+          "core": 14,
+          "newly_covered_geometries": 1947
+        },
+        {
+          "core": 24,
+          "newly_covered_geometries": 1926
+        },
+        {
+          "core": 44,
+          "newly_covered_geometries": 1884
+        },
+        {
+          "core": 2,
+          "newly_covered_geometries": 1800
+        },
+        {
+          "core": 7,
+          "newly_covered_geometries": 1800
+        },
+        {
+          "core": 5,
+          "newly_covered_geometries": 1326
+        },
+        {
+          "core": 19,
+          "newly_covered_geometries": 1026
+        },
+        {
+          "core": 49,
+          "newly_covered_geometries": 984
+        },
+        {
+          "core": 35,
+          "newly_covered_geometries": 513
+        },
+        {
+          "core": 27,
+          "newly_covered_geometries": 246
+        },
+        {
+          "core": 50,
+          "newly_covered_geometries": 246
+        },
+        {
+          "core": 1,
+          "newly_covered_geometries": 150
+        },
+        {
+          "core": 53,
+          "newly_covered_geometries": 75
+        }
+      ],
+      "optimality_claimed": false,
+      "source_hashes": {
+        "eight_t15_geometric_coverage.py": "sha256:0f8e6d6a0ba959ac52a46a4bbf5d8a9bcce169d4a4f3a0e5d1e41aa2f2da9460",
+        "eight_t15_geometric_coverage.json": "sha256:88ab64aad5fe0de622ab70e009c65e12dbb07894658da367509b4b4cf6002384",
+        "eight_t15_core_map.py": "sha256:18d727a29d1884edafb61b2cbe49453cd96c068ff48307276bc4fc5a481a1bdc",
+        "eight_t15_core_map.json": "sha256:7608cd13fa0a8386c83e3b9a9fe87c60e82a0dbac9f9f375ef424aa424bb33fb",
+        "t15_analytic_geometry.py": "sha256:815f54987bf9c04c1f7c60bbd410e7f0b49c4b4c10c810ab2448a6c79a2867fc",
+        "t15_analytic_geometry.json": "sha256:502b9d1b7f74c1356c60ed31b63550dddb9452d275f741727cee5044e6b20dbc",
+        "covered_eight_residual_1.bin": "sha256:12dfb2b0f5a1f9a087646a433050aa489242682e08a0d7593b4793632166689b",
+        "covered_eight_residual_7.bin": "sha256:9c1e9e7b5f9740add6eb4459527a2679c1dd42feb12fc2705324eeba284cb3fc",
+        "covered_eight_residual_31.bin": "sha256:35326bf4fb6f49a2fef3e6a6677988084bf4a622497c70319e77c024277092bc"
+      },
+      "matching_realizability_checked": false,
+      "any_new_T15_core_proved": false,
+      "R8_covered_proved": false,
+      "full_P6_proved": false
+    },
+    "independent_checker": "EIGHT_T15_CORE_MAP_REVIEW_check.py",
+    "independent_checker_sha256": "sha256:b2c4ac4ea4379966c8e6dc7702873314d97c709530915798ac9ea98507c597a4",
+    "independent_checker_result_sha256": "sha256:0ff40a58b05b08b9472d633876747f79d35b01d2d940515711e4b4745f5d7fd5",
+    "raw_domain_completeness": "Imported from prior independent census certification; basic records and all listed cut maps rechecked now",
+    "full_domain_census_rerun": false,
+    "matching_realizability_checked": false,
+    "greedy_cover_optimality_proved": false,
+    "new_R8_parent_geometries_solved": 0,
+    "conditional_parent_coverage_if_all_23_cores_proved": 65920,
+    "remaining_without_a2b1": 207,
+    "any_T15_core_proved_here": false,
+    "full_T15_proved": false,
+    "R8_covered_proved": false,
+    "full_eight_hole_proved": false,
+    "full_P6_proved": false,
+    "main_state_or_original_inputs_modified": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_stated_consequences_complete_modulo_imports",
+  "summary": "Full six-hole endpoint theorem and conditional root-preserving >=29-edge augmentation follow. All three general Q4 augmentation lemmas are valid. No eight-hole or full P6 closure follows.",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T07:29:04.577766+00:00",
+  "trace_path": "SIX_HOLE_CLOSURE_CONSEQUENCES_REVIEW.md",
+  "audited_input_hashes": {
+    "SIX_HOLE_CLOSED.md": "sha256:8a7078847343067f21a43394537e184930e99e93692f854900f95f4ce74c09d6",
+    "Q4_GENERAL_AUGMENTATION.md": "sha256:a95b033b81753c75e11007c62f111916f23ebeaa1777244ca49a1dd208b5474b"
+  },
+  "imported_dependency_hashes": {
+    "CANONICAL_A4_CLOSURE.md": "sha256:1da0c3e81a36cae53e727fad20878096c32ae442ceaa7277aa986aef5e60e271",
+    "CANONICAL_COMPLETION_REVIEW.md": "sha256:af7614bc4e2ce455129e7faab700360349c5e0b9540e4c9ef23568c5d6d5b49b",
+    "CANONICAL_COMPLETION_REVIEW.json": "sha256:31dd2103b87c9c3c8b406274ea786ec081dacb2f19177fdc1a097c3924dae956",
+    "SIX_HOLE_FREE_REDUCTION.md": "sha256:c04a1f090b51f19ea68db7f7a90d7ab1c7c9ed79feb1549898c4a3b4be88b8e4",
+    "SIX_HOLE_COVERED_REDUCTION.md": "sha256:c80fb9e0cdad9c146fe5bac594b321b41fe5f0646dae9b98e3d64e6463be9837",
+    "SIX_HOLE_MIXED_AND_GEOMETRY.md": "sha256:9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+    "Q4_CORE_AND_A4_SPLIT.md": "sha256:2925b389034346000a9bd38979e451b7fac9ff4cf700600b6ea868cfdf384389",
+    "Q4_CORE_REVIEW.json": "sha256:faa04c0227106bde4a3d3eceb2997155d36acfcc7c92d572ccdcd4ae10c7c759",
+    "NEAR_PERFECT_EXTENSION.md": "sha256:eefb31b2c708fdd2c2b9ebe9e86b43a83bfdecc91fd59f737782d6bdbed02257",
+    "FOUR_HOLE_FULL.md": "sha256:a3c7dbe56246d1853ddc601ac7c5f5d07d0bf2dcf12cf9e47553397a5d0b73da",
+    "ROOTED_MAXIMAL_18_HOLES.md": "sha256:66af796eeddde05f2f6de834745d63e0a12095d31d69959610da53c635694537"
+  },
+  "optional_certificate_hashes": {
+    "canonical_a4_construction_results.json": "sha256:a4123b9c065d46bdb2ee10f90dac66422f4697cc4f466f1d67200cbc84442141",
+    "verify_canonical_a4_constructions.py": "sha256:be70f6a37660d6ef88d2c223e3ea555bc14faf5ca0de2fab106d87f124a20276"
+  },
+  "details": {
+    "issues": [],
+    "six_hole_universal_endpoint_theorem": "PASS modulo prior imports",
+    "root_preserving_augmentation_corollary": "PASS; requires actual augmentation to >=29 edges",
+    "GQ4_avoid": "PASS",
+    "GQ4_path": "PASS",
+    "GQ4_cycle": "PASS modulo Fink perfect-matching theorem",
+    "geometry_same_parity_pairs_checked": 56,
+    "geometry_neighbor_union_histogram": {
+      "6": 48,
+      "8": 8
+    },
+    "geometry_free_2_by_3_sets_checked": 3136,
+    "optional_global_cycles_checked": 52,
+    "optional_occupied_target_prescribed_root_cases": 16,
+    "optional_isolated_A_endpoint_cases": 4,
+    "full_eight_hole_proved": false,
+    "full_p6_proved": false,
+    "remaining_hole_levels": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ]
+  }
+}

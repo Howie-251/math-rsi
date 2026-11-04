@@ -1,0 +1,61 @@
+I've completed the interrupted review's remaining analysis using only retained work plus the read-only tools. Below is the final assessment. No files were modified; no solver/checker/proof-content operations were run; A[7,7] was only observed (preserved).
+
+---
+
+# C6 whole-row acceptance — independent read-only review (continuation)
+
+**Task:** `c6_row_only_acceptance_20261016` · **Scope (user, verbatim):** “不要重新检查各case了，直接默认它们通过检验，只做C6 整行验收” — the five individual case checks are assumptions; this review covers coverage, binding, row inference, provenance, domain confinement.
+
+**Method:** read-only inspection of the primary artifacts (amendment, theorem, encoding contract, manifest, adapter, pending certificate, validation receipts) and the raw exports under `tmp/c6_row_raw_20261016/` rooted per `manifest.json`. The predecessor MCP review attempt failed (`REVIEW_UNAVAILABLE: absolute CLI missing/mismatch`); this continuation supplies the substantive review only, and adds no backend attestation.
+
+---
+
+## 1. Coverage and bindings — CONFIRMED
+
+Exactly the five intended cells `r=6, e=6..10, m=5, N=20+e` (=26..30) are covered, ordered e6→e10:
+
+- Adapter `coverage()` enforces exact ordered e6..10, integer coordinates, `r==6`, `missing_ordinary_count==5`, `order==20+e`, `case_id==cardinality_A_r06_e{e:02}_N{20+e:02}`, and profile `legacy_exact_with_state_path_bridges_v1` for e6 vs `compact_cardinality_756_v1` for e7..10 (`tmp/c6_row_acceptance_20261016.py` L65–71; tests `test_exact_mixed_cover`, receipt `tmp/c6_row_completed_20261016/tmp/c6_row_tests_20261016_v2.json`: 28/28 pass, 0 checker/solver invocations).
+- Certificate `inputs.cases` (5 entries, `row_certificate.pending.json` L19–304): cells `cardinality_A_r06_e06_N26 … e10_N30`, correct encodings, CNF/proof/status/replay/exits bound with sha+size.
+- Bridges seal: exactly one case, e06 bridges CNF sha `500c4ec7…` (`protocol_seal.json` L19–44, L5303), `bridges:true` (L2), `mode:strict_no_target` (L6170), `checker_options:[-t,0,-b]` (L5354), `c6_proved:false` (L8), `theorem_credit:false` (L6261), 13-file runtime namespace equal to the local tree.
+- Compact seal: 5 tasks/cells with CNFs `1c457a75/1ab3457e/995a2dd9/628f54eb` matching the certificate for e7..e10 (`protocol_seal.json` L19–144, L1496–1552); `bridges:false`, `compact_cardinality_756_v1`, `strict_no_target`, same checker options, `c6_proved:false`; 30-file runtime namespace equal to the local tree.
+- Original receipts reproduced locally for all five: statuses `VERIFIED_UNSAT` with `c6_proved:false`; `checker.exit` rc=0, `timed_out:false`; `formula_replay.json` exact expected shapes (e6 no metadata key; e7..10 with metadata — matching adapter L136–138); last-8KiB checker.out excerpts (offsets in manifest L1185–1223; each excerpt is exactly size−8192) contain a single `s VERIFIED` and in-core clause counts matching the sealed `num_clauses` (1207312/266944/307704/352965/403047). Proof sizes agree across status/certificate/`proof_current_stat`, and proof ctime_ns values fall inside each campaign's elapsed solver window — internally consistent. Both roots use the *same* checker binary sha `0e0b9f7e…`; no cross-formula proof reuse (each proof binds its own CNF; contract §3 “DRAT proofs cannot be reused…” honored).
+
+## 2. Discarded compact e6 vs retained successes — CONFIRMED
+
+- Compact aggregate failed: `run_exit.json` rc=2 (`completed_unix 1791505842`), `controller_process.exit.json` rc=2, terminal `tasks[0]` e6 `classification:ERROR` with `global_stop.json` (`cfc15ce7…`, pointer to e6 status `88ffbb08…`, 1038 B); e7..e10 terminal entries each `VERIFIED_UNSAT`, `worker_returncode:0` (`execution_terminal.json`).
+- The certificate isolates this as `inputs.excluded_compact_e6` with disposition “Excluded; selected bridges e6 replaces this failed compact cell only” (L306–318) and flags `pending_c5_resolved:true` (L319). Adapter comment L167–168 forbids reinterpreting the failed campaign; `collect()` requires the excluded disposition to stay ERROR (L169–170); adapter `selected_case` requires per-cell terminal `VERIFIED_UNSAT`/rc0 for e≥7 (L150). Bridges e6 is a separate single-case root (`concurrency:1`) with `prepare/controller/run` rc=0, solver rc=20, checker rc=0 `s VERIFIED` (L6256 source snapshot; controller exit elapsed 625021 s). Distinction is correct — retained cells are not laundered into an aggregate success, and the aggregate failure is not hidden.
+
+## 3. Row inference — SUPPORTED (under the amended assumptions)
+
+Given (a) the five case checks assumed passed, (b) accepted C1–C5 evidence reused:
+
+- Counting/definitions (`cardinality-layer-theorem.md`): endpoint injection (Lemma 2, L84–119) fixes `N=25+e−m` (Cor. 3, L121–131); cells `A[r,e]` with `N=26+e−r` (L133–172); Lemma 4 (L191–235) is the SAT↔semantics bridge; Theorem 5 (L237–263) row induction.
+- C6 inference: counterexample ⇒ `e≥6`, `m≤5`; C5 ⇒ `m≥5` ⇒ `m=5`; Cor. 3 ⇒ `N=20+e`; `e≤10` (10 exceptional types only) ⇒ one of the five cells ⇒ excluded. So `e≥6 ⇒ m≥6` — exactly `conditional_row_theorem` (certificate L4) and amendment L9.
+- Scoped bound: `e≤5` ⇒ `m≥e` via C1–C5 ⇒ `N≤25`; `e≥6` ⇒ `m≥6` ⇒ `N≤25+10−6=29`. Certificate’s `candidate_scoped_upper_bound:29` with `previous_accepted_upper_bound:30` is arithmetically correct (L2, L1830).
+- Mixed-encoding lifting is not actually required for the row: both profiles are strict-mode exact cells for the same semantic class; e6’s bridge layer is append-only entailed clauses (built-cell `pruning.bridge_clause_count 3600`, L5295–5299; contract “Bridges are entailed…”), so bridged UNSAT ⇒ base UNSAT; compact cells rely on the documented compact equivalence contract (`semantic-encoding-equivalence.md` §3) whose validation artifacts are hash-bound (`optimized` block, seal L1034–1214) but not exported locally (see §6-U1). Endpoint-state injection is used exactly where the theorem places it (external counting identity; cell exhaustion).
+- No **unstated** assumption is required beyond the two scoped assumptions and the documented lemma bridges; the `e≤10` bound comes from the in-domain 35/25/10 catalog (Lemma 1).
+
+## 4. Domain confinement — CONFIRMED
+
+Conclusion is restricted to the complete ordered rank-3 signotope domain with blue-path-5/red-path-6 bounds and no weak 7-gon: amendment L9; certificate `conditional_row_theorem` + `publication_gate` (L4, L1832); `c6_proved:false`, `theorem_credit:false`, `certified_upper_bound:null` (L1, L3, L1837); global accepted bound stays 30; explicit “not a global geometric Erdős–Szekeres bound” (amendment L9). Domain sentence is identical in C3/C4/C5 scopes (evidence of scope stability across the ancestor chain).
+
+## 5. Provenance / evidence fields — CONFIRMED
+
+- Reuse vs fresh correctly recorded: `fresh_checker_replay_count:0`, `reused_checked_cases:5`, `fresh_formula_replay_count:0`, `original_formula_replay_receipts_reused:5`, `proof_hashes_freshly_computed:0`, `proof_contents_read:false`, scope=waiver text (certificate L5–6, L320, L1829–1835; `row_validation.json` L13–16, L20). Adapter forbids `.drat` reads (L45) and subprocesses (docstring; AST test), only stats proofs (L39–41).
+- Zero new replays corroborated: validation receipt `proof_checker_invocations:0`, `solver_invocations:0`; independent collections byte-equal (`input_inventory.before/after.json`; `row_validation.input_collections_byte_equal:true`; sampled mid-chunk identical).
+- A77 preserved: certificate `protected_a77` (L321–334) equals `preserved_a77_observation.json` (argv to `cardinality_A_r07_e07_N26.cnf`, pid 2361306, same boot/ticks; state R, `fresh_checker_replay_count:0`, `proof_content_reads:0`).
+- No global-theorem claim; the predecessor review failure is recorded honestly (`independent_review_gate.json`: `REVIEW_UNAVAILABLE`, `cli_reported_model:null`, `backend_reported_model:null`, `backend_reported_effort:null`, `publication_allowed:false`).
+
+## 6. Confirmed issues, repairs, unresolved matters
+
+- **Confirmed blocking issues: none.** The record is internally consistent; every hash string cross-checked agrees across four presentations (certificate, manifest, sealed statuses, local files).
+- **Required repairs: none** for the row-under-review.
+- **Editorial:** amendment L7 “remains30” spacing; certificate `induction` (L12) says “For e≤4, N≤29” where the true C1–C4 slack is N≤25 — harmless; certificate top-level `status:BLOCKED_REVIEW_UNAVAILABLE` vs `row_validation:ROW_ENGINEERING_VALIDATED_PENDING_REVIEW` are both accurate at their respective stages (the former reflects the failed predecessor attempt; updating it after this review is the parent’s step).
+- **Unresolved / local-bundle limits (non-blocking under the amended scope):**
+  - U1: not exported locally (only hash-referenced): compact `workers/e06/status.json` (88ffbb08…), both roots’ `suite/*` CNFs/metadata, C4/C5 parallel source seals (`a03ef308…`, `8e4d5379…`) + executions, `20260927_compact_encoder_validation_v1/*`, `20261014/20261009` A77 roots, C3 parallel/C1 predecessor roots. Consequently the adapter’s r≥4 “pending c3/c4 source resolution” checks (adapter L112–114) could not be reproduced locally; the locally verifiable analog — compact `pending_c5` vs C5 final (`source_seal` and `execution_terminal` exact equality, seal L1216–1229 vs `cardinality_c5_resolved_final.json`) — did pass locally.
+  - U2: no proof/checker-log content review (by scope); “exactly one `s VERIFIED` line” was enforced only at run time; the local excerpts support presence, not uniqueness beyond what was read.
+  - U3: backend/effort provenance assurance is **unavailable** — requested settings are not evidence, and I do not manufacture attestation.
+
+## 7. Conclusion (amended scope)
+
+Substantively supported: exactly the intended five r=6 cells are covered with the intended original profiles (bridges e6; historical compact e7–10); the excluded compact-e6/aggregate failure is correctly separated from retained successes; the definitions, exact-count semantics, accepted C1–C5 and the five exclusions entail **C6: e(X)≥6 ⇒ m(X)≥6** and the scoped bound **N≤29** in the specified complete ordered rank-3 signotope / blue-path-5 / red-path-6 / weak-7-free domain. All provenance fields correctly separate reused checks from fresh row review (zero new replays); no new global geometric theorem is claimed. This favorable substantive review is **not** backend/effort assurance, does not itself enact acceptance or publication (publication gate and policy adjudication remain with the parent), and does not convert the earlier `REVIEW_UNAVAILABLE` attempt into anything other than what it was.
