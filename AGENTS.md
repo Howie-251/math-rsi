@@ -1,5 +1,13 @@
 # MathRSI 开发约定
 
+## 2026-11-04：v3本地完成，PR #7已吸收
+
+按mathrsi-meta-evolve实际完成v2上的增量维护，入口`docs/V3_CHANGES.md`；完整恢复`development/evolution/v3-20261104/EVOLUTION.md`与`INTEGRATION.md`。base仍十技能，强化工作集/全域/接受best、带标记变换、有限全称机制与失败池复用、Lean显式参数。ECC原位升级；新增极值超立方体、Hamilton超立方体、Happy Ending，现六领域十四技能，两个宿主发现别名齐全；真正调用在`docs/DOMAIN_ROUTING.md`及各阶段SKILL，不能只读领域名称后略过。
+
+Gemini4与Opus5.5各两轮具体维护审阅已有效完成，实质修法已落实，包括可接新候选Q4工具、参数化森林秩与实际别名物化。读`reviews/DISPOSITION.md`保留审阅复述笔误的Root纠正；模型静态审阅不是原数学全卷验收。8608项新科学原件随仓；大流省略/历史状态保留各插件库存。受影响命令有真实运行，未改的ARIS/PB/DD证据复用，不重复全题。
+
+PR #7是派活/实际交付/恢复快照的现有流程修正，已用wanshuiyin合入main（8bbdb828），再无冲突merge进v3分支；不单独计一次研究驱动迭代。v1/v2标签保持固定。v3仍为本地分支、未推送/未发布标签；网页尚未启动，旧数学Goal继续不恢复。新Happy75/76仍待证明原件。此完成态覆盖下方“实施中/只读”的历史快照。
+
 ## 2026-11-04：v3实施已授权
 
 用户已明确要求“快速高质量推进v3”，并允许提炼具有独立职责的通用新技能；这覆盖下方此前“只读、不启动v3”的阶段状态。按现有mathrsi-meta-evolve实际执行，在v2上原位修改，不另建主干。恢复入口development/evolution/v3-20261104/EVOLUTION.md。主动Sol并行作者，Root立即回收与集成，Gemini4及Opus5.5对实际改动讨论；保持详细可执行Markdown、薄Python和原件自包含。重复已有能力只补必要例子，不为版本号凑规则；不扩大为重跑旧题或网站工程。Happy Ending截图报告的75/76尚未收到证明包，继续保留旧已读成果范围。
