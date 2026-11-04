@@ -2,7 +2,7 @@
 
 MathRSI is a set of readable agent workflows, bundled ARIS skills, and domain knowledge. You give a working agent the repository's entry skill and your mathematical task. The agent reads the relevant instructions, performs the work, consumes the resulting proofs and checks, and continues from the actual remaining obligation. There is no MathRSI server or generic scheduler command to start.
 
-This guide works with Codex or Claude Code. Fixed v1/v2 tags remain available; v3 is currently a local development branch, not a published tag. Use your checked-out revision and record it in the task handoff. See [v3 changes](V3_CHANGES.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
+This guide works with Codex or Claude Code. v3 is the current release, with the fixed v1/v2 snapshots retained. Use `main` for the recommended version, or choose a fixed release tag for a reproducible starting point; record the checked-out revision in the task handoff. See [v3 changes](V3_CHANGES.md) and the [evolution record](../development/evolution/v3-20261104/EVOLUTION.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
 
 ## Get the repository and choose a workspace
 

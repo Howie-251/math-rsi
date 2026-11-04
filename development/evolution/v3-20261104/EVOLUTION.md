@@ -1,6 +1,6 @@
 # MathRSI v3：消费新研究并修改现有 v2
 
-状态：本地v3实现、实际使用和指定双模型审阅已完成，2026-11-04。用户已明确授权快速高质量推进v3与插件，允许有实质独立职责的新技能。Root已先读mathrsi-meta-evolve/SKILL.md及其ARIS适配，再开始本轮实现。此前intake与Gemini/Opus次序讨论是输入，不冒作已完成的实现。
+状态：v3实现、实际使用和指定双模型审阅已完成；用户2026-11-04新增授权发布完整v3及双语版本演进说明。用户已明确授权快速高质量推进v3与插件，允许有实质独立职责的新技能。Root已先读mathrsi-meta-evolve/SKILL.md及其ARIS适配，再开始本轮实现。此前intake与Gemini/Opus次序讨论是输入，不冒作已完成的实现。
 
 ## 基点、写域与证据
 
@@ -40,6 +40,6 @@ Base已有：完整量词、覆盖/合法性分开、共同对象、正负证据
 
 Gemini4与Opus5.5各两轮成稿维护审阅已有效SUCCESS；所有实质问题已修。两份新Q4候选、参数化A10与Q3、ECC169、Happy25及base例子均有真实使用；没有重跑所有历史研究。具体分工/调用返回/PR7同步/版本/检查由[INTEGRATION](INTEGRATION.md)记录，原回应与处理见[DISPOSITION](reviews/DISPOSITION.md)，人读入口[本轮变化](../../../docs/V3_CHANGES.md)。
 
-PR #7作为现有v2流程修正已先合入main，并无冲突吸收入本分支；不把它单独宣传为研究驱动迭代。v1/v2固定标签不变。v3目前只在feat/mathrsi-v3-evidence-evolution本地完成，未push、未发v3 PR、未创建v3发布标签。下次恢复先读本节与INTEGRATION，不重做已完成阅读/审阅或恢复旧题；后续发布/首页按对应用户安排进行。
+PR #7作为现有v2流程修正已先合入main，并无冲突吸收入本分支；不把它单独宣传为研究驱动迭代。v1/v2固定标签不变。完整v3与本轮README通过feat/mathrsi-v3-evidence-evolution发布，固定入口为[main](https://github.com/lisresearchgroup/math-rsi/tree/main)及[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)。本次发布讨论、文本核对与范围见[publication/DISPOSITION](publication/DISPOSITION.md)。下次恢复先读本节与INTEGRATION，不重做已完成阅读/审阅或恢复旧题；首页尚未启动。
 
 有意保留：原数学状态、未随仓大流及准确复算范围、优化环境未运行、Happy新75/76待原件、通用效率未作等预算评测。这些不阻止当前维护实现使用，也不能被文档补齐冒作数学完成。

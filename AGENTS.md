@@ -1,12 +1,14 @@
 # MathRSI 开发约定
 
-## 2026-11-04：v3本地完成，PR #7已吸收
+## 2026-11-04：v3发布与版本演进说明，PR #7已吸收
 
 按mathrsi-meta-evolve实际完成v2上的增量维护，入口`docs/V3_CHANGES.md`；完整恢复`development/evolution/v3-20261104/EVOLUTION.md`与`INTEGRATION.md`。base仍十技能，强化工作集/全域/接受best、带标记变换、有限全称机制与失败池复用、Lean显式参数。ECC原位升级；新增极值超立方体、Hamilton超立方体、Happy Ending，现六领域十四技能，两个宿主发现别名齐全；真正调用在`docs/DOMAIN_ROUTING.md`及各阶段SKILL，不能只读领域名称后略过。
 
 Gemini4与Opus5.5各两轮具体维护审阅已有效完成，实质修法已落实，包括可接新候选Q4工具、参数化森林秩与实际别名物化。读`reviews/DISPOSITION.md`保留审阅复述笔误的Root纠正；模型静态审阅不是原数学全卷验收。8608项新科学原件随仓；大流省略/历史状态保留各插件库存。受影响命令有真实运行，未改的ARIS/PB/DD证据复用，不重复全题。
 
-PR #7是派活/实际交付/恢复快照的现有流程修正，已用wanshuiyin合入main（8bbdb828），再无冲突merge进v3分支；不单独计一次研究驱动迭代。v1/v2标签保持固定。v3仍为本地分支、未推送/未发布标签；网页尚未启动，旧数学Goal继续不恢复。新Happy75/76仍待证明原件。此完成态覆盖下方“实施中/只读”的历史快照。
+PR #7是派活/实际交付/恢复快照的现有流程修正，已用wanshuiyin合入main（8bbdb828），再无冲突merge进v3分支；不单独计一次研究驱动迭代。v1/v2标签保持固定。用户已明确授权将完整v3与中英文README演进说明一并PR合入main，并沿既有版本约定固定v3标签；发布入口为`main`及`v3`，v1/v2标签保持原提交。网页尚未启动，旧数学Goal继续不恢复。新Happy75/76仍待证明原件。此完成态覆盖下方“实施中/只读”的历史快照。
+
+README须持续解释v0→v1→v2→v3的具体变化：v0为基础研究工具历史阶段（无Git标签）；v1从Property B/ECC提炼九项解题技能；v2加meta-evolve及DD；v3在原五流程落实四类共性动作、升级ECC并加三个领域。每项写明经验来源、实际动作、所属阶段及证据入口。不能只放版本号或泛称自进化；旧图标为历史，历史数学来源保持原属。Gemini4已实质起草本轮双语正文，Root按实际标签与实现核对，处置见`development/evolution/v3-20261104/publication/DISPOSITION.md`。
 
 ## 2026-11-04：v3实施已授权
 

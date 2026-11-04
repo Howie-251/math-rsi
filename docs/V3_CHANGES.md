@@ -1,8 +1,17 @@
 # v3: stronger evidence loops and three new research domains
 
-MathRSI v3 develops the existing v2 implementation through [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md). It retains the five solving workflows, the separate maintenance workflow, and **10 MathRSI base skills**. The current work is on a local development branch; **v3 has not been tagged or pushed**. The fixed v1/v2 tags remain unchanged.
+MathRSI v3 develops the existing v2 implementation through [mathrsi-meta-evolve](../base/skills/mathrsi-meta-evolve/SKILL.md). It retains the five solving workflows, the separate maintenance workflow, and **10 MathRSI base skills**. **v3 is the current release**; `main` follows the recommended version, and the fixed v1/v2 snapshots remain unchanged. Record the actual checked-out revision when starting or handing off a task.
 
 The main contribution is executable domain capability backed by scientific source materials, together with four targeted improvements to how existing workflows consume evidence. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) owns integration and review status. Gemini 4 and Opus 5.5 each completed two rounds of source-based maintenance review. Their concrete fixes, reading scopes and corrections are preserved in the [review disposition](../development/evolution/v3-20261104/reviews/DISPOSITION.md). They did not rerun the mathematical programs.
+
+## How v3 follows the earlier versions
+
+- **v0** names the original Property B and ECC research experience, before the MathRSI repository workflows were extracted; it is a history label, not a repository release tag.
+- **v1** established the five solving workflows and initial domain plugins from those projects.
+- **v2** added and actually used the separate evolution workflow, absorbed DD, and changed the existing base at its real call sites. Its [change record](V2_CHANGES.md) remains the historical account of that release.
+- **v3** retains those workflows, adds the evidence-consumption actions and domain capabilities below, and records their actual bounded use in the [v3 maintenance record](../development/evolution/v3-20261104/EVOLUTION.md).
+
+These versions describe implemented workflow changes and their sources. They do not relabel the archived mathematical results as new-version reruns or establish a measured speedup.
 
 ## Four changes inside the existing base
 
@@ -95,7 +104,7 @@ Happy Ending's newly reported 75/76 values await proof source material. The plug
 
 The two overview figures are intentionally preserved as **v2 historical snapshots**. Their ECC-draft and future-v3 labels describe that version; the current domain table and actual skill bodies describe v3. No new diagram is needed to make the existing implementation usable.
 
-The source ARIS snapshot, copyright, dual-host implementations and four MCP bridge contracts are retained. External reviewer CLIs/accounts, Lean and TeX remain task environment dependencies. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) records adopted changes, actual use and both cross-model review rounds. PR #7 is a small repair to the existing v2 workflow and is integrated into v3; it is not counted as a separate research-driven iteration. This branch is still a local implementation, not a published v3 tag.
+The source ARIS snapshot, copyright, dual-host implementations and four MCP bridge contracts are retained. External reviewer CLIs/accounts, Lean and TeX remain task environment dependencies. The [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) records adopted changes, actual use and both cross-model review rounds. PR #7 is a small repair to the existing v2 workflow and is integrated into v3; it is not counted as a separate research-driven iteration. v3 is the current adopted version; fixed earlier releases remain available for tasks that need their original workflow.
 
 ## New-candidate interfaces added during review
 

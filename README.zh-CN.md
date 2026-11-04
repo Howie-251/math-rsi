@@ -2,19 +2,45 @@
 
 [English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md) · [Degree–Diameter 成果案例](case-studies/degree-diameter/README.zh-CN.md)
 
-固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版。v2 在 v1 上新增 meta-evolve、degree–diameter 插件及工作流改进。**当前本地开发分支已完成v3实现与审阅，尚未tag或push**；见[v3具体变化与可运行检查](docs/V3_CHANGES.md)。
+固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）· **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版 **v3**。详见 [v3 具体变化与可运行检查](docs/V3_CHANGES.md) 与 [v2 具体变化](docs/V2_CHANGES.md)。
 
-**面向严谨数学研究、可由 agent 执行并持续自进化的工作流与领域知识框架。** 从文献查漏到严密证明，把发现、推导、计算、审阅、形式化与可复现交接接成实际工作流。
+**面向严谨数学研究、可由 agent 执行并持续自进化的工作流与领域知识框架。** 从文献查漏到严密证明，把问题形式化、路线对抗、推导构造、独立核验、按需形式化与可复现交接连成闭环。
 
-主流程按现有成果选择入口，并衔接五组可独立使用的子流程：**问题准备与文献 → 求解路线迭代 → 证明推进 → 装配验证 → 交付沉淀。** 每组实际执行、交付结果，由调用者读取后继续；新障碍带着具体问题回文献或路线，未变的成果直接复用。已有完整证明可直接进入验证，短证明可以直接完成，不必跑满五组。
+主流程按现有成果选择入口，衔接五组可独立调用的子流程：**问题准备与文献（`prepare`）→ 求解路线迭代（`route-loop`）→ 证明推进（`prove`）→ 装配验证（`verify`）→ 交付沉淀（`handoff`）。** 每阶段由调用者读取实际产物后推进，始终绑定原始量词与主定理义务。
+
+### 研究经验如何驱动版本演进（`v0` → `v3`）
+
+MathRSI 的自演进遵循明确的反馈闭环：**真实数学攻关暴露推理或验证瓶颈 $\rightarrow$ 独立外层 [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) 将共性控制动作提炼进 `base/`、将领域归约与核验器沉淀进 `plugins/` $\rightarrow$ 下一轮研究直接复用升级后的工作流。** v1 建立 **9 项解题技能**，v2 增加独立维护技能；v3 沿用这 **10 项 base 技能**，将领域能力扩展到 **6 个数学方向、14 项领域技能**。
+
+| 版本 | 研究经验来源 | 主工作流改变了什么 | 领域能力 |
+| --- | --- | --- | --- |
+| **v0 · 基础研究工具** | 初始 Property B 与 ECC 研究，积累证明、失败、核验与 research wiki。 | 各单题工作区组合使用独立技能，尚无共享的 MathRSI 总控。v0 是历史阶段，不是 Git 发布标签。 | 原始研究目录及其中的数学工具。 |
+| **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** | [Property B 与 ECC 的真实研究转折](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。 | 建立 **五组可执行子工作流**、`base / plugin / task` 三层边界、对抗式路线迭代、证明验收、wiki 回流及按需 Lean；完整技能双端自包含。 | 完整 **Property B 插件**及初始 **ECC 草案**。 |
+| **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** | **Degree–Diameter** 历史研究。 | 新增 **[`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md)**；新公开基线改变待研究队列；对象变更后分别判断正证明继承与旧否证范围；共同覆盖替代失败的充分门；纯形式目标直接检查实际 Lean 导出。[v2 细节](docs/V2_CHANGES.md)。 | 新增 **Degree–Diameter 插件**，携带原 wiki、构造、迁移方法及证书工具。 |
+| **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3) · 当前** | **Erdős 86**、**Ruskey–Savage Q6**、继承 v1/v2 方法继续深化的 **ECC**，以及 **Happy Ending**。 | 将下面 **四类证据处理动作接入原 workflow**，继续沿用五阶段架构及独立维护流程。 | **原位升级 ECC**；新增 **超立方体极值、超立方体 Hamilton、Happy Ending** 三个领域，携带数学原件、失败经验与薄核验工具。 |
+
+日常修补也随版本继承：[PR #7](https://github.com/lisresearchgroup/math-rsi/pull/7) 修正派活、真实文件交付和恢复快照，已纳入 v3，不单独计作一次研究驱动迭代。
+
+### v3 在现有工作流内增强的四类共性动作
+
+v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点上，不另造第二套调度器（详见 [Base 修改报告](development/evolution/v3-20261104/base/BASE_CHANGES.md) · [真实调用用例](development/evolution/v3-20261104/base/USE.md)）：
+
+| 真实研究中暴露的共性瓶颈 | v3 在 Base 工作流中的实际改动 | 所在子工作流 | 经验来源与插件工具衔接 |
+| :--- | :--- | :--- | :--- |
+| **1. 活动工作集过拟合与历史最优丢失**：候选在局部工作集（working set）表现良好但在全域违规，或后续迭代覆盖了已验证的更优界。 | 严格分列 `restricted`（工作集）、`full`（全域）、`exploration_best` 与 `accepted_best`；将全域违规的具体输入回流给候选生成，替换已接受最优前必须在完整全域重验最终精确对象。 | [`route-loop`](base/skills/mathrsi-route-loop/SKILL.md)、[`verify`](base/skills/mathrsi-verify/SKILL.md)、[`handoff`](base/skills/mathrsi-handoff/SKILL.md) | **Erdős 86** 活动行池全域分离与精确有理数 Gram 核验（[`check_q4_candidate.py`](plugins/hypercube-extremal/tools/check_q4_candidate.py)）。 |
+| **2. 归约变换遗失根、目标或必含边**：商对称、补全或缩边改变了局部标号，导致证明完成的局部结论接不回原调用点的指定根或必含匹配边。 | 变换时同步运输根、目标、配对映射与必含边，复合多层映射，并在返回原调用点时显式恢复原始伙伴与必含边。 | [`prove`](base/skills/mathrsi-prove/SKILL.md)、[`verify`](base/skills/mathrsi-verify/SKILL.md) | **Erdős 86** 同步有根 $Q_3$ 旗；**Ruskey–Savage $Q_6$** 保根极大化；**Happy Ending** 最左枢轴径向图转移。 |
+| **3. 全称输入族过大与充分门失败池浪费**：剩余全称域无法暴力枚举；子池未过统一充分门时，内部合法对象被整体丢弃。 | 向领域插件请求已证的有限基／秩／覆盖机制承接全称义务；充分门失败池中的合法对象保留并转入逐实例正证书接口。 | [`route-loop`](base/skills/mathrsi-route-loop/SKILL.md)、[`prove`](base/skills/mathrsi-prove/SKILL.md) | **Ruskey–Savage $Q_6$** 1024 短森林 $\mathbb{F}_2$ 满秩桥（[`check_forest_rank.py`](plugins/hypercube-hamilton/tools/check_forest_rank.py)）与缺秩池转局部正证书。*(Happy Ending 固定共同中间匹配与双向净容量补偿与既有共同覆盖/变换机制一致，直接沉淀为领域方法。)* |
+| **4. Lean 定理参数中的外部数学前提**：`#print axioms` 仅显示标准公理，但未形式化的扫描、分类或文献假设写在定理显式参数 `(h : ...)` 中。 | 除 `#print axioms` 外逐项读取定理全部显式参数并展开定义，严格区分内核已证归约／实际矩阵数据与外部文献、分类或扫描前提。 | [`verify`](base/skills/mathrsi-verify/SKILL.md)、[`handoff`](base/skills/mathrsi-handoff/SKILL.md) | **ECC** `ecc43`/`ecc42` Lean 显式前提审计（[`lean-boundary.md`](plugins/ecc/skills/ecc-certificate/references/lean-boundary.md)）与实际生成矩阵验距。 |
+
+<details>
+<summary><strong>查看 v2 历史演进结构图</strong>（保留作为 v2 版本快照，图中 ECC 草案与未来 v3 标注反映当时状态）</summary>
 
 ![v2历史演进图，其中ECC草案及未来v3标签属于当时快照](figures/mathrsi/01-evolution.png)
 
-此图保留为**v2历史结构图**，其中ECC草案和未来v3标签属于当时快照；当前能力以本文及[v3变化](docs/V3_CHANGES.md)为准。Property B与ECC初始研究提供v1经验，DD证据推动v2；ECC从v0成果继续基于v1/v2继承的方法与workflow深化，新Lean归约、实际矩阵连接和便携证书再反馈v3。这种方法继承无需每步严格调用固定release。[图源与审阅记录](figures/mathrsi/README.md)。
+详见 [图源与审阅记录](figures/mathrsi/README.md)。
+</details>
 
-v3在现有流程内增强四类动作：工作集候选经全域违反对象回流并保留已接受best；变换同步运输根、目标、伙伴与必含边；用有限秩／覆盖机制承接全称义务；读取Lean全部显式参数并连接实际数据。原ECC插件完成第二轮升级，新增超立方体极值、Hamilton延拓和Happy Ending三个领域。**base仍为十项MathRSI技能**，没有为每个动作另建空壳。
-
-本仓以详细 Markdown 为主，直接携带32项ARIS技能的Claude/Codex双端完整实现、共享资源、模板与helpers。MathRSI自己新增的代码只做明确的开发核查；数学研究由agent判断与执行，不另造调度平台或通用证明判分器。
+本仓以详细可执行 Markdown 为主，携带 32 项 ARIS 技能的 Claude/Codex 双端实现、共享资源、模板与 helpers；薄 Python 检验具体数学对象与新候选。数学判断和流程推进由 agent 执行。
 
 ## 从这里开始
 
@@ -32,9 +58,11 @@ v3在现有流程内增强四类动作：工作集候选经全域违反对象回
 
 ### 五组数学子流程
 
-![五组解题子流程内嵌ARIS、贯穿研究wiki、按需Lean，并与独立外层mathrsi-meta-evolve衔接](figures/mathrsi/02-workflows.png)
+<details>
+<summary><strong>查看 v2 历史五阶段工作流图</strong>（v3 沿用相同五阶段架构，当前六领域分派见 <a href="docs/DOMAIN_ROUTING.md">DOMAIN_ROUTING.md</a>）</summary>
 
-上图保留为**v2历史workflow视图**；v3沿用五阶段，当前领域和增量见下表及[v3变化](docs/V3_CHANGES.md)。
+![五组解题子流程内嵌ARIS、贯穿研究wiki、按需Lean，并与独立外层mathrsi-meta-evolve衔接](figures/mathrsi/02-workflows.png)
+</details>
 
 研究wiki贯穿五组子流程，文献查漏、路线修订与局部证明修复按具体义务回流。独立外层 `mathrsi-meta-evolve` 将经验分为Base、Plugin、Task和Defer：前两类经实现、审阅、实际使用后决定采用；单题状态与暂缓建议分别留在wiki或backlog。
 
@@ -75,8 +103,8 @@ v3在现有流程内增强四类动作：工作集候选经全域违反对象回
 |领域入口|实际能力与本轮使用|
 |---|---|
 |[ECC](plugins/ecc/skills/mathrsi-ecc/SKILL.md)／[ecc-certificate](plugins/ecc/skills/ecc-certificate/SKILL.md)|在同一插件上升级，接矩阵、归约、共同陪集／pair及Lean显式进口；[实际使用](plugins/ecc/evidence/IMPLEMENTATION.md)含172保存集读回、完整单母码重放与42/16矩阵验距，替代旧draft默认排除|
-|[超立方体极值](plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md)|共同Q4、同步根旗、全域分离、整数Gram及高维平均；[最终有限全域已完整重放](plugins/hypercube-extremal/evidence/IMPLEMENTATION.md)|
-|[超立方体Hamilton延拓](plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)|保根极大化、全称森林秩、局部正证书与标记运输；[1024森林／全部矩阵位／独立GF2秩已复算](plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md)|
+|[超立方体极值](plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md)|共同Q4、同步根旗、全域分离、整数Gram及高维平均；[最终有限全域完整重放](plugins/hypercube-extremal/evidence/IMPLEMENTATION.md)及[新候选核验器](plugins/hypercube-extremal/tools/check_q4_candidate.py)|
+|[超立方体Hamilton延拓](plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)|保根极大化、全称森林秩、局部正证书与标记运输；[1024森林完整复算](plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md)及[参数化秩核验器](plugins/hypercube-hamilton/tools/check_forest_rank.py)|
 |[Happy Ending](plugins/happy-ending/skills/mathrsi-happy-ending/SKILL.md)／[happy-ending-certificate](plugins/happy-ending/skills/happy-ending-certificate/SKILL.md)|杯帽与signotope、weak/split、状态容量、共同匹配补偿及SAT／见证核验；各原稿与证书保持原保证，新报告75/76待证明原件|
 
 六领域共用现有五阶段，插件接收当前scope并回交原caller。ECC旧43/10及172双扫描保持历史归属；45/11距离17仍开放。单个证书重放与全题数学终审各按实际证据说明。

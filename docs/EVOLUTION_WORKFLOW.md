@@ -2,7 +2,7 @@
 
 实际执行入口是 [`mathrsi-meta-evolve`](../base/skills/mathrsi-meta-evolve/SKILL.md)。本页提供使用说明与历史案例；取证、分类、实现、讨论、实际使用和采用的执行链只在该 SKILL 中维护，避免两套流程漂移。它是独立的外层维护能力，不是五个解题子流程的第六阶段，也不在每次 handoff 后自动启动。
 
-输入可以是完整项目交接、一次具体失败与修正、用户反馈或真实调用记录。技能在**现有版本上增量修改**，判断经验属于通用 base、领域插件、单题状态还是暂不采用，并让实际调用者消费修改。基础模型没有因此被训练；新目录、版本名或图上的 v2 不证明研究效率提高。
+输入可以是完整项目交接、一次具体失败与修正、用户反馈或真实调用记录。技能在**现有版本上增量修改**，判断经验属于通用 base、领域插件、单题状态还是暂不采用，并让实际调用者消费修改。基础模型没有因此被训练；新目录、版本名或版本图不证明研究效率提高。
 
 ## 怎样调用
 
@@ -28,7 +28,7 @@ Claude Code 与 Codex 共用同一份主技能及 references。项目发现别�
 
 完整项目吸收保留内容地图和实际阅读范围；某项改动已有充分证据时就进入实现，不等无关全库阅读结束。仅列目录、解析生成表或接收代理摘要不能标为全文读过。关键缺件和冲突如实保留，不以补写摘要冒充历史原件。具体取证和分层示例见 [evidence-and-transfer](../base/skills/mathrsi-meta-evolve/references/evidence-and-transfer.md)。
 
-作者还需读受影响的现行技能、caller 和消费方。现有 v1 已有正确动作时复用或补具体连接，不复制同义主干；领域公式、失败输入及专用检查器留给插件，单题参数和预算不变成通用默认。
+作者还需读受影响的现行技能、caller 和消费方。现行版本已有正确动作时复用或补具体连接，不复制同义主干；领域公式、失败输入及专用检查器留给插件，单题参数和预算不变成通用默认。
 
 ## 怎样判断实际使用支持了什么
 
@@ -44,7 +44,7 @@ Claude Code 与 Codex 共用同一份主技能及 references。项目发现别�
 
 **局部 verify 返回原 prove。** [真实行为试用](../development/workflow-redesign/behavioral-trial/REPORT.md)保存原问题、完整正文、精确计算、同家族意见和调用记录。局部核验后父 prove 继续原目标连接，没有提前全题 handoff；它支持这条具体转移，未运行正规 proof-checker、Lean 或完整联网研究链。未改此路径时可复用，不将历史运行追认为新 meta 技能的试用。
 
-Property B 和 ECC 的 [历史转折](../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)及 [ECC 仓内交接](../development/context/ecc-source/README.md)可作有界消费输入，不授权访问其原工作区或恢复旧研究。DD是本轮v1→v2的历史研究来源；已有调用修改与插件接入见[v2具体变化](V2_CHANGES.md)，实际使用和采用由[本轮记录](../development/evolution/dd-v2-20261102/EVOLUTION.md)追踪，不改写成MathRSI v1/v2的解题实验。
+Property B 和 ECC 的 [历史转折](../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)及 [ECC 仓内交接](../development/context/ecc-source/README.md)可作有界消费输入，不授权访问其原工作区或恢复旧研究。DD是历史v1→v2维护的研究来源；已有调用修改与插件接入见[v2具体变化](V2_CHANGES.md)，当次实际使用和采用由[v2维护记录](../development/evolution/dd-v2-20261102/EVOLUTION.md)追踪，不改写成MathRSI v1/v2的解题实验。当前v3的证据消费、ECC升级与三个新增领域见[v3变化](V3_CHANGES.md)和[v3维护记录](../development/evolution/v3-20261104/EVOLUTION.md)，其中的历史数学成果也不追认为v3重做。
 
 ## ARIS 原版与数学适配
 
@@ -52,6 +52,8 @@ Property B 和 ECC 的 [历史转折](../development/workflow-redesign/REAL_PROJ
 
 ## 版本采用与状态
 
-本轮维护记录说明实际改动、采用/暂缓决定、使用结果及未测范围。没有实际提交就记录工作树状态；没有新版重做研究就不声称新版解题率或 RSI 增益。新任务可选择已采用版本；在途研究由其协调者确认切换点，保留原规格、证明状态与已用预算，仅重核受影响结果。暂停研究不会随版本更新恢复。
+每轮维护记录说明实际改动、采用/暂缓决定、使用结果及未测范围。没有实际提交就记录工作树状态；没有新版重做研究就不声称新版解题率或 RSI 增益。新任务可选择已采用版本；在途研究由其协调者确认切换点，保留原规格、证明状态与已用预算，仅重核受影响结果。暂停研究不会随版本更新恢复。
 
-当前v2是在v1已有五workflow上增量修改并加入DD插件：仅形式目标直接Lean、新基线消费到真实队列、对象改变后的正负证据重判，以及共同覆盖与局部充分门的区分。不是重建一套base；具体文件和用法见[V2_CHANGES](V2_CHANGES.md)。最终讨论、采用及未测范围以[本轮维护记录](../development/evolution/dd-v2-20261102/EVOLUTION.md)和[VALIDATION](../development/VALIDATION.md)为准，没有将归档数学结果记为新版重做。
+当前推荐发布版为v3；固定v1/v2快照保留，新任务记录实际采用的revision。v3在原有五个解题workflow与独立meta-evolve上增量修改：工作集/全域/已接受最佳的消费，带标记对象的同步运输，巨型域的有限全称机制与失败合法资产复用，以及混合Lean显式参数审计。ECC原位升级，新增超立方体极值、超立方体匹配延拓和Happy Ending领域能力；具体动作、命令、材料与保证范围见[V3_CHANGES](V3_CHANGES.md)，讨论、修订和采用以[v3维护记录](../development/evolution/v3-20261104/EVOLUTION.md)为准。
+
+历史v2在v1已有五workflow上加入DD，并实现仅形式目标直接Lean、新基线消费到真实队列、对象改变后的正负证据重判，以及共同覆盖与局部充分门的区分；其具体文件和当次使用继续见[V2_CHANGES](V2_CHANGES.md)、[v2维护记录](../development/evolution/dd-v2-20261102/EVOLUTION.md)和[原验收记录](../development/VALIDATION.md)。v0指提炼MathRSI前的原始研究阶段，v1建立初版工作流，二者的历史与v2/v3的实际修改分开保存，不将归档数学结果记为新版重做。

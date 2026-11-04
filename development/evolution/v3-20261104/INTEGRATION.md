@@ -22,7 +22,7 @@ Root按这些规则消费实际输出：
 
 Root读完整四文件diff，核准确改动范围、frontmatter、恢复节链接与git diff --check；确认gh实际账号和Git身份为wanshuiyin。PR #7由该账号于2026-11-04合并到main，merge为8bbdb828a478a8a842189527b5a4216aecfaa548。它修现有派活、实际文件交付与恢复页，不单独计为研究驱动的v3变化。
 
-本地v3实现提交774d09da后，将origin/main正常merge进分支，提交26520538；三个共同文件自动合并，无冲突。原PR作者提交仍保留，v1/v2标签未移动。v3尚未推送或创建发布标签。
+本地v3实现提交774d09da后，将origin/main正常merge进分支，提交26520538；三个共同文件自动合并，无冲突。原PR作者提交仍保留，v1/v2标签未移动。当时的实现验收快照尚未推送或创建标签；后续发布授权及当前入口见[EVOLUTION](EVOLUTION.md)与[发布处置](publication/DISPOSITION.md)。
 
 ## 仓内可读与复现范围
 
