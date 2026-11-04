@@ -17,6 +17,10 @@ MathRSI 沿 **两条相互促进的方向** 演进：
 
 下表分别展示这两类进步。v1 建立九项解题技能，v2 增加维护技能；**v3 强化现有十项 base 技能，领域能力扩展至六个方向、十四项领域技能。** 技能数量描述组织方式，具体能力变化见下表。
 
+![MathRSI从v0基础研究工具经v1、v2演进至当前v3及未来版本，共享base持续强化，领域插件持续扩展与深化](figures/mathrsi/01-evolution-v3.png)
+
+研究经验同时强化通用流程与领域方法；v3 原位升级 ECC，并新增三个领域。[图源与审阅](figures/mathrsi/README.md) · [v3 实现细节](docs/V3_CHANGES.md)。
+
 | 版本 | 研究经验来源 | Base 工作流怎样强化 | Plugins 怎样扩展与深化 |
 | --- | --- | --- | --- |
 | **v0 · 基础研究工具** | 初始 Property B 与 ECC 研究，积累证明、失败、核验与 research wiki。 | 各单题工作区组合使用独立技能，尚无共享的 MathRSI 总控。v0 是历史阶段，不是 Git 发布标签。 | 原始研究目录及其中的数学工具。 |
@@ -63,13 +67,17 @@ v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点�
 
 ### 五组数学子流程
 
+![当前MathRSI流程：问题识别与插件选择、Root及独占并行worker、五组解题子流程、跨模型对抗审阅、确定性与按需Lean核验、贯穿wiki复用及独立维护](figures/mathrsi/02-workflows-v3.png)
+
+Root 读取返回产物后再安排下一义务。跨模型对抗意见与确定性／Lean 核验分别提供证据，领域方法完成当前任务后回交原调用阶段。[实际领域分派](docs/DOMAIN_ROUTING.md) · [可执行流程细节](docs/WORKFLOWS.md) · [图源与审阅](figures/mathrsi/README.md)。
+
 <details>
 <summary><strong>查看 v2 历史五阶段工作流图</strong>（v3 沿用相同五阶段架构，当前六领域分派见 <a href="docs/DOMAIN_ROUTING.md">DOMAIN_ROUTING.md</a>）</summary>
 
 ![五组解题子流程内嵌ARIS、贯穿研究wiki、按需Lean，并与独立外层mathrsi-meta-evolve衔接](figures/mathrsi/02-workflows.png)
 </details>
 
-图中 **Research wiki & evidence** 横条指任务的 `<W>/research-wiki/` 在**五个阶段都持续读写**：先用 `index.md`／`query_pack.md` 定位，再读相关实体全文与证据；通过随仓 ARIS `research-wiki` 技能及 helper 结构化保存新知识，下一调用者读回后决定行动。实质成果在研究中及时沉淀，`wiki-enrich` 按需补文献页。[具体读写、时机与负责人](docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)。
+图中贯穿流程的 research wiki 指任务的 `<W>/research-wiki/` 在**五个阶段都持续读写**：先用 `index.md`／`query_pack.md` 定位，再读相关实体全文与证据；通过随仓 ARIS `research-wiki` 技能及 helper 结构化保存新知识，下一调用者读回后决定行动。实质成果在研究中及时沉淀，`wiki-enrich` 按需补文献页。[具体读写、时机与负责人](docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)。
 
 研究wiki贯穿五组子流程，文献查漏、路线修订与局部证明修复按具体义务回流。独立外层 `mathrsi-meta-evolve` 将经验分为Base、Plugin、Task和Defer：前两类经实现、审阅、实际使用后决定采用；单题状态与暂缓建议分别留在wiki或backlog。
 

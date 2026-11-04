@@ -1,0 +1,208 @@
+threadId: a51c0181-806d-47c8-9565-7592b76a096d
+
+Here is the complete information design specification for the two updated **MathRSI v3** README diagrams, grounded in [`README.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/README.md), [`docs/DOMAIN_ROUTING.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/DOMAIN_ROUTING.md), [`docs/WORKSPACE.md` (§7)](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKSPACE.md#L108-L180), and [`base/skills/mathrsi-research/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md), and visually aligned with the existing palette in [`figures/mathrsi/01-evolution.png`](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/01-evolution.png) and [`figures/mathrsi/02-workflows.png`](file:///Users/rfy_naiveai/Desktop/MathRSI/figures/mathrsi/02-workflows.png).
+
+---
+
+## 1. Recommended Layout & Visual Architecture
+
+Both figures use a wide landscape canvas (`16:9` / `1536×1024`) on the warm off-white background (`#FAF8F4`) with crisp vector containers, rounded cards, and consistent semantic colors:
+- **Deep Teal / Navy (`#0E4D58` / `#133C49`, fill `#EAF4F6`)**: Shared base orchestration, solving stages, multi-agent workers, and active `research-wiki` operations.
+- **Warm Orange (`#D95F26`, fill `#FBF0E9`)**: Domain routing and the 6 domain plugins (with emerald `#2E6F40` and royal blue `#2854B8` sub-accents for visual differentiation).
+- **Violet (`#6E3BC2`, fill `#F3EEFC`)**: Cross-model adversarial review and the separate `mathrsi-meta-evolve` outer maintenance loop.
+
+---
+
+### Figure 1: Two-Track Evolution (`01-evolution.png`)
+
+```
++---------------------------------------------------------------------------------------------------+
+| MathRSI: From Basic Tools to an Evolving Research Harness                                         |
+| Two tracks: stronger shared base workflows + broader and deeper domain plugins                    |
++---------------------------------------------------------------------------------------------------+
+|           | [v0 · Basic Tools]  --Distill--> [MathRSI v1] --Evolve--> [MathRSI v2] --Evolve--> [MathRSI v3 · Current] --> [v4+ ...] |
+|           | (Pre-orchestrator)               (Fixed tag)              (Fixed tag)              (Highlighted border)                 |
+|-----------+---------------------------------------------------------------------------------------|
+| TRACK 1   | Standalone skills:               5 adaptive stages:       Base v2 + meta-evolve:   Strengthened Base v3 (10 skills):    |
+| Shared    | • research-lit                   Prepare · Route · Prove  • Baseline queue update  • Working-set vs. full & best        |
+| Base      | • proof-writer                   Verify · Handoff         • Proof/refutation xfer  • Marked root/target/edge transport  |
+| Workflow  | • proof-checker                  Base/plugin/task split   • Shared gate coverage   • Finite rank bridge & failure pools |
+| (Teal)    | • lean-formalize                 Review & wiki returns    • Direct Lean export     • Explicit Lean-premise audits       |
+|-----------+---------------------------------------------------------------------------------------|
+| TRACK 2   | Source workspaces:               • Property B plugin      • Property B + ECC init  6 Domains · 14 Plugin Skills:        |
+| Domain    | • Property B research            • ECC plugin (initial)   • NEW: Degree–Diameter   • Property B · Degree–Diameter       |
+| Plugins   | • ECC research                                              (construct, transfer,  • UPGRADED: ECC (172-class & Lean)   |
+| (Orange)  | Proofs · checks · wikis                                     obstruction checks)    • NEW: Hypercube Extremal (Q4 PSD)   |
+|           |                                                                                    • NEW: Hypercube Hamilton (Q6 rank)  |
+|           |                                                                                    • NEW: Happy Ending (signotopes)     |
++-----------+---------------------------------------------------------------------------------------+
+            |                                             |                        ^                                    ^
+            |                             Existing v1/v2  v                        | Base + plugin updates              |
+            |   [Historical DD Archive] --------> [ mathrsi-meta-evolve (Separate Outer Maintenance) ] <---- [v3 Evidence Inputs]
+            |   (Independent source archive)      (Classify -> Modify in place -> Review & replay)           (Erdős 86, Q6, Happy Ending
+            |                                                                                                 + ECC v1/v2 continuation)
++---------------------------------------------------------------------------------------------------+
+```
+
+#### Main Reading Order & Meaningful Arrows (Figure 1)
+1. **Left-to-Right Version Spine (`v0` $\rightarrow$ `v1` $\rightarrow$ `v2` $\rightarrow$ `v3 · Current` $\rightarrow$ `v4+ ...`)**:
+   - Replacing the v2 diagram’s stacked single-column cards with a **2-row × 4-column matrix** makes the two evolution tracks visually unmistakable: **Row 1 (Teal)** shows how the shared base workflow matures in place, while **Row 2 (Orange)** shows how domain plugins expand from 2 initial domains to 6 domains (14 skills) and deepen in place (upgrading ECC from `initial` to full v3 verification).
+   - `MathRSI v3 · Current` has the widest column and a bold teal highlight border; `v4+ ...` sits on the far right as a compact dashed continuation badge.
+2. **Bottom-to-Top Maintenance Loop (`mathrsi-meta-evolve`)**:
+   - The existing implementation (`v1`/`v2`) plus **two distinct evidence boxes** feed the violet `mathrsi-meta-evolve` bar at the bottom, which sends upward `Base + plugin updates` arrows into `MathRSI v2` and `MathRSI v3 · Current`.
+   - **Left evidence input (`Historical DD Archive`)** feeds the `v1` $\rightarrow$ `v2` transition as an independent historical archive (no arrow from `v1` into the DD archive).
+   - **Right evidence input (`v3 Evidence Inputs`)** feeds the `v2` $\rightarrow$ `v3` transition, explicitly distinguishing the new source packages (`Erdős 86`, `Ruskey–Savage Q6`, `Happy Ending`) from `ECC` (which continued with v1/v2 workflow methods).
+
+---
+
+### Figure 2: Adaptive Execution, Wiki Reuse & Domain Routing (`02-workflows.png`)
+
+```
++-------------------------------------------------------------------------------------------------------------+
+| Inside MathRSI v3: Problem Routing, Multi-Agent Solving & Wiki Memory                                       |
++-------------------------------------------------------------------------------------------------------------+
+| [Task Input / Workspace]  -->  [Object & Obligation Routing]                                                |
+| Raw problem or resumed         Identify math object & quantifiers; select 1 of 6 plugins (or Base alone);   |
+| FORMAL_SPEC · NEXT_SESSION     jump directly to active stage (Prepare, Route, Prove, or direct Verify/Lean) |
++------------------------------------------------------------------+------------------------------------------+
+                                                                   | Dispatch active stage scope
+                                                                   v
++-------------------------------------------------------------------------------------------------------------+
+| mathrsi-research (Root Orchestrator) — Single stage owner · Consumes returned artifacts & wiki entities     |
++--------------------------------------------------+----------------------------------------------------------+
+| Parallel Workers (Teal sub-band, Stages 02–04):  | Cross-Model Adversarial Reviewers via MCP (Violet):      |
+| Exclusive write scopes for derivations, probes & | Challenge routes (02) & audit proofs (04) -> revisions   |
+| domain checks -> Root consumes results at caller | Adversarial review != proof acceptance (checkers/Lean)   |
++--------------------------------------------------+----------------------------------------------------------+
+         |                         |                          |                         |
+         |        +-------- Targeted literature lookup -------+                         |
+         v        v                |                          |                         v
++--------------------+   +--------------------+   +--------------------+   +--------------------+   +--------------------+
+| 01 Prepare         |   | 02 Route Loop      |   | 03 Prove           |   | 04 Verify          |   | 05 Handoff         |
+| • Specify->Survey  |-->| • Propose & probe  |-->| • Derive & build   |-->| • Assemble proof   |-->| • Readable proof   |
+| • Aliases & errata |   | • Cross-model rev. |   | • Transport marked |   | • Domain checkers  |   | • Repro commands   |
+| • Fix FORMAL_SPEC  |   | • Working vs. full |   |   roots/targets    |   | • proof-checker    |   | • render-html      |
+|                    |   |   & accepted_best  |   | • Rank bridges &   |   | • Optional/direct  |   | • NEXT_SESSION.md  |
+|                    |   |                    |   |   failure pools    |   |   Lean + premises  |   |                    |
++--------------------+   +--------------------+   +--------------------+   +--------------------+   +--------------------+
+         ^  |                     ^  |   ^                    |   ^  |                  |  |                     ^  |
+         |  |                     |  |   +-- Rethink route ---+   |  +-- Local verify --+  |                     |  |
+         v  v                     v  v                            +-- Repair gaps ---------+                     v  v
++-------------------------------------------------------------------------------------------------------------+
+| Active Task research-wiki/ (Original ARIS Structure — Bidirectional Read / Write Across All 5 Stages)       |
+| [1. Locate: index / query_pack / rg] -> [2. Read Full Pages: papers · ideas · experiments · claims]         |
+| -> [3. Serial Write: proved lemmas, scoped failures, explicit verdicts] -> [4. Read Back & Reuse for Next]  |
++-------------------------------------------------------------------------------------------------------------+
+         ^  |                     ^  |                        ^  |                      ^  |                     ^  |
+         v  v                     v  v                        v  v                      v  v                     v  v
++-------------------------------------------------------------------------------------------------------------+
+| Domain Plugins (6 Domains · 14 Skills) — Obligation + marked object <--> Scoped lemma, failure or check     |
+| Task workspace: read/write  |  Plugin archive & source wiki: read-only                                      |
+| [Property B]  [Degree–Diameter]  [ECC (Upgraded)]  [Hypercube Extremal]  [Hypercube Hamilton]  [Happy Ending]|
++-------------------------------------------------------------------------------------------------------------+
+| mathrsi-meta-evolve · Separate Outer Maintenance (Authorized Between Tasks — Not a 6th Solving Stage)       |
+| Research evidence -> Classify (Base / Plugin vs. Task / Defer) -> Modify in place -> Review & replay -> Next|
++-------------------------------------------------------------------------------------------------------------+
+```
+
+#### Main Reading Order & Meaningful Arrows (Figure 2)
+1. **Top-Left Entry & Recognition Gate (`Task Input` $\rightarrow$ `Object & Obligation Routing` $\rightarrow$ `mathrsi-research`)**:
+   - Explicitly shows how MathRSI starts by inspecting the problem statement or existing workspace (`FORMAL_SPEC.md`, `NEXT_SESSION.md`), recognizing the mathematical object and active obligation, selecting the matching domain plugin from the 6 domains (or running Base alone), and entering at the right stage (including direct entry to `04 Verify` / `lean-formalize` for formal-only tasks).
+2. **Orchestrator, Multi-Agent Delegation & Cross-Model Review Callouts (Above the 5 Stages)**:
+   - **`mathrsi-research` (Root Orchestrator)** sits above the 5 stages as the single owner of stage transitions.
+   - Directly beneath Root and linked into Stages `02`, `03`, and `04` are two explicit operational strips:
+     - **Left strip (Teal) — Multi-Agent Collaboration**: `Root delegates bounded, exclusive-scope tasks to Parallel Workers` $\rightarrow$ `immediately consumes returned proofs, certificates, counterexamples, or gaps at the original caller`.
+     - **Right strip (Violet) — Cross-Model Adversarial Review (via MCP)**: `Fresh cross-model reviewers challenge routes (02) and audit proofs (04)` $\rightarrow$ `feed concrete revisions` (with explicit boundary: `Review ≠ deterministic check or Lean`).
+3. **Center 5-Stage Solving Spine (`01 Prepare` $\rightarrow$ `02 Route Loop` $\rightarrow$ `03 Prove` $\rightarrow$ `04 Verify` $\rightarrow$ `05 Handoff`) + Return Loops**:
+   - Embeds the 4 v3 base actions directly inside their owning stages (`02 Route Loop`, `03 Prove`, `04 Verify`).
+   - Preserves the three adaptive return paths: `Targeted literature lookup` (`02`/`03` $\rightarrow$ `01`), `Rethink route` (`03` $\rightarrow$ `02`), and `Local verify / Repair gaps` (`04` $\leftrightarrow$ `03`).
+4. **Active `research-wiki` Loop Bar (Spanning All 5 Stages)**:
+   - Positioned immediately below the 5 stages with **bidirectional vertical arrows (`Read / Write`) into every single stage (`01`–`05`)**, replacing the old passive bar with the concrete 4-step cycle (`Locate` $\rightarrow$ `Read full entities` $\rightarrow$ `Serial write` $\rightarrow$ `Read back & reuse`).
+5. **Domain Plugins Bar (Orange, 6 Cards) & Separate Outer Maintenance Bar (Violet)**:
+   - Below the wiki bar, the orange **Domain Plugins** band shows all 6 v3 domains connected via bidirectional dashed orange arrows to the stages (`Task workspace: read/write | Plugin archive: read-only`).
+   - At the bottom, the violet **`mathrsi-meta-evolve`** band remains visually separate from the solving spine, showing evidence classification and in-place maintenance between tasks.
+
+---
+
+## 2. Exact Displayed English Labels (150–200 Words per Figure)
+
+### Figure 1: Exact Displayed Text (`188 words` total)
+
+| Region / Box | Exact Displayed English Text | Words |
+| :--- | :--- | :---: |
+| **Title** | **MathRSI: From Basic Tools to an Evolving Research Harness** | 9 |
+| **Subtitle** | Two complementary tracks: stronger shared base workflows + broader and deeper domain plugins | 13 |
+| **Row Labels (Left)** | **Track 1: Shared Base Workflow** / **Track 2: Domain Plugins** | 9 |
+| **Col 1: `v0`** | **v0 · Basic Research Tools** *(Pre-orchestrator)*<br>• **Base:** Standalone skills (`research-lit`, `proof-writer`, `proof-checker`, `lean-formalize`)<br>• **Domains:** Initial Property B & ECC workspaces (proofs, checks, research wikis) | 26 |
+| **Arrow `v0 → v1`** | Distill | 1 |
+| **Col 2: `v1`** | **MathRSI v1**<br>• **Base (9 skills):** 5 adaptive subworkflows · Base / plugin / task split · Adversarial loop, wiki & optional Lean<br>• **Plugins:** Property B plugin · ECC plugin *(initial)* | 29 |
+| **Arrow `v1 → v2`** | Evolve in place | 3 |
+| **Col 3: `v2`** | **MathRSI v2**<br>• **Base (10 skills):** Adds `mathrsi-meta-evolve` · Baseline queue updates · Proof/refutation transfer · Shared gate coverage · Direct Lean export<br>• **Plugins:** Property B · ECC *(initial)* · **NEW:** Degree–Diameter (construct, transfer, certify) | 34 |
+| **Arrow `v2 → v3`** | Evolve in place | 3 |
+| **Col 4: `v3`** | **MathRSI v3 · Current**<br>• **Base (10 skills, 4 new actions):**<br>  1. Working-set vs. full-domain & `accepted_best`<br>  2. Marked root, target & edge transport<br>  3. Finite rank bridges & failure-pool reuse<br>  4. Explicit Lean-premise & axiom audits<br>• **Plugins (6 domains, 14 skills):**<br>  Property B · Degree–Diameter · **UPGRADED:** ECC (172-class, pair & Lean checks) · **NEW:** Hypercube Extremal ($Q_4$ PSD) · **NEW:** Hypercube Hamilton ($Q_6$ forest rank) · **NEW:** Happy Ending (signotope & matching) | 71 |
+| **Right Badge** | **Future v4+ ...** | 2 |
+| **Bottom Loop** | • **Left input:** Historical DD Archive *(independent source)*<br>• **Center (Violet):** **`mathrsi-meta-evolve` (Separate Outer Maintenance)** — Classify (`Base` / `Plugin` / `Task` / `Defer`) $\rightarrow$ Modify in place $\rightarrow$ Review & replay<br>• **Right input:** v3 Evidence (Erdős 86, $Q_6$, Happy Ending archives + ECC v1/v2 continuation)<br>• **Upward arrows:** Base + plugin updates | 46 |
+
+*(Note: Excluding bullets/numerals, Figure 1 displays **188 words**—compact enough for clean 16:9 rendering while explicitly naming all four v3 base upgrades and all six v3 domains.)*
+
+---
+
+### Figure 2: Exact Displayed Text (`194 words` total)
+
+| Region / Box | Exact Displayed English Text | Words |
+| :--- | :--- | :---: |
+| **Title** | **Inside MathRSI v3: Problem Routing, Multi-Agent Solving & Wiki Memory** | 10 |
+| **Entry & Routing Gate (Top-Left)** | **1. Task Input / Workspace:** Raw problem or resumed `FORMAL_SPEC.md` & `NEXT_SESSION.md`<br>$\rightarrow$ **2. Identify Object & Obligation:** Match math object & quantifiers · Select applicable plugin (or Base alone) · Enter active stage (or direct Lean Verify) | 35 |
+| **Root Orchestrator** | **`mathrsi-research` (Root Orchestrator):** Own single-stage dispatch · Consume returned proofs, certificates & wiki updates | 14 |
+| **Multi-Agent Strip (Teal)** | **Parallel Workers:** Root delegates bounded, exclusive-scope tasks (derivations, probes, checks) and immediately binds returned proofs, certificates, or gaps to the original caller | 22 |
+| **Cross-Model Strip (Violet)** | **Cross-Model Adversarial Reviewers (via MCP):** Challenge routes (`02`) & audit proofs (`04`) to drive revisions *(Review $\neq$ deterministic check or Lean)* | 21 |
+| **Stage 01** | **01 Prepare**<br>• Specify $\rightarrow$ Survey $\rightarrow$ Specify<br>• Aliases, citations & errata<br>• Fix `FORMAL_SPEC.md` | 12 |
+| **Stage 02** | **02 Route Loop**<br>• Propose $\rightarrow$ Challenge $\rightarrow$ Probe $\rightarrow$ Revise<br>• Working-set vs. full domain<br>• Preserve `accepted_best` | 15 |
+| **Stage 03** | **03 Prove**<br>• Derive lemmas & constructions<br>• Transport marked roots/targets/edges<br>• Finite rank bridges & failure pools | 15 |
+| **Stage 04** | **04 Verify**<br>• Assemble complete argument<br>• Domain checkers & `proof-checker`<br>• Optional/direct Lean + premise audit | 14 |
+| **Stage 05** | **05 Handoff**<br>• Readable proof & `render-html`<br>• Standalone reproduction commands<br>• Update wiki & `NEXT_SESSION.md` | 12 |
+| **Return Arrows** | `Targeted literature lookup` (`02/03 → 01`) · `Rethink route` (`03 → 02`) · `Local verify / Repair` (`04 ↔ 03`) | 8 |
+| **Active Wiki Band (Teal/Slate, All 5 Stages)** | **Task `research-wiki/` (Original ARIS Entities — Read & Written Across All 5 Stages)**<br>`1. Locate (index / query_pack / rg)` $\rightarrow$ `2. Read full pages (papers · ideas · experiments · claims)` $\rightarrow$ `3. Serial write (lemmas, scoped failures, verdicts)` $\rightarrow$ `4. Read back & reuse (skip closed domains)` | 40 |
+| **Domain Plugins Band (Orange)** | **Domain Plugins (6 Domains · 14 Skills)** — *Task workspace: read/write | Plugin archive: read-only*<br>**Property B** · **Degree–Diameter** · **ECC** *(Upgraded)* · **Hypercube Extremal** · **Hypercube Hamilton** · **Happy Ending** | 25 |
+| **Outer Maintenance Band (Violet)** | **`mathrsi-meta-evolve` (Separate Outer Maintenance — Authorized Between Tasks)**<br>Evidence $\rightarrow$ Classify (`Base` / `Plugin` vs. `Task` / `Defer`) $\rightarrow$ Modify in place $\rightarrow$ Review & replay $\rightarrow$ Next release | 23 |
+
+*(Note: Excluding numerals and punctuation symbols, Figure 2 displays **194 words**, keeping every box to 3 short lines or fewer.)*
+
+---
+
+## 3. Crucial Simplifications That Preserve Semantics
+
+To ensure GPT Image renders legible typography without hallucinating or garbling dense technical strings, four deliberate design simplifications are applied:
+
+1. **Matrix Alignment in Figure 1 Instead of Nested Sub-Boxes**:
+   - In the v2 evolution diagram (`01-evolution.png`), each version column stacked 4–5 full-width inner cards; adding a 4th column (`v3`) with 6 domain cards inside the same vertical stack would crush font sizes below readability.
+   - Splitting each version column into **two horizontal bands** (**Track 1: Shared Base Workflow** on top; **Track 2: Domain Plugins** on bottom) lets `v1` and `v2` summarize already-established plugins on one compact line (`Property B · Degree–Diameter`) while giving `v3 · Current` generous vertical room for the **4 base actions** and the **upgraded ECC + 3 new domains**.
+2. **Dropping Internal Python / Skill Sub-Filenames in Favor of Mathematical Roles**:
+   - Instead of crowding boxes with long script names (`check_q4_candidate.py`, `check_forest_rank.py`, `lean-boundary.md`, `dd-obstruction-certificate`), the labels name the **exact mathematical mechanism** (`Working-set vs. full-domain & accepted_best`, `172-class, pair & Lean checks`, `Q6 forest rank`, `Explicit Lean-premise & axiom audits`). The README tables immediately below the figures already provide clickable file-level links.
+3. **Operationalizing the Wiki Bar as a 4-Step Horizontal Flow with 5 Vertical Connectors**:
+   - Rather than writing a separate wiki paragraph inside each of the 5 stage boxes (which would double the text inside Stages `01`–`05`), Figure 2 places **bidirectional `Read / Write` arrows between all five stages and a single 4-step `research-wiki/` pipeline bar** (`Locate` $\rightarrow$ `Read full pages` $\rightarrow$ `Serial write` $\rightarrow$ `Read back & reuse`). This visually proves that every stage reads and writes the task wiki using original ARIS entities (`papers · ideas · experiments · claims`) without whole-archive dumping.
+4. **Dedicated Collaboration & Adversarial Review Strips Above Stages 02–04**:
+   - Putting **Parallel Workers** (teal) and **Cross-Model Adversarial Reviewers via MCP** (violet) as two coordinated callout strips between `mathrsi-research` and Stages `02`–`04` avoids tangling internal stage return arrows (`Rethink route`, `Local verify / Repair`) while making multi-agent delegation and vendor-neutral MCP adversarial review immediately visible at first glance.
+
+---
+
+## 4. Short Factual Risk Check (Root Verification Checklist)
+
+When generating and inspecting the two GPT Image renders, check these eight concrete factual boundaries:
+
+1. **`v3` Is Current and Implemented; `v1` and `v2` Are Fixed Snapshots**:
+   - `MathRSI v3` must be labelled **`Current`** (solid border, active column), while future evolution is shown as a small dashed continuation (`Future v4+ ...`) on the far right.
+2. **ECC Status Across Versions (`Initial` in `v1`/`v2` $\rightarrow$ `Upgraded` in `v3`)**:
+   - In `v3`, **ECC must never be labelled `draft`**. In Figure 1, `v1` and `v2` can label ECC as `initial`, while `v3` explicitly labels it **`UPGRADED: ECC`** (and Figure 2 shows `ECC (Upgraded)` alongside the other 5 plugins).
+3. **Provenance of Historical & New Research Evidence (No False Benchmark Claim)**:
+   - In Figure 1, the arrows from `Historical DD Archive` and `v3 Evidence (Erdős 86, Q6, Happy Ending archives + ECC v1/v2 continuation)` must point **into `mathrsi-meta-evolve`**, not out of `v1` or `v2` as if those historical packages were autonomous benchmark runs executed by an earlier release.
+4. **No Claim That Model Weights Change**:
+   - Evolution arrows from `mathrsi-meta-evolve` must state **`Base + plugin updates`** / **`Modify in place`**, never "model training" or "weight updates".
+5. **Adversarial Review $\neq$ Proof Acceptance or Deterministic / Lean Verification**:
+   - In Figure 2, the violet **Cross-Model Adversarial Reviewers (via MCP)** strip must stays vendor-neutral (no hard-coded model vendor lock-in) and explicitly note **`Review ≠ deterministic check or Lean`**.
+6. **Direct Lean Entry & Explicit Premise Audit in `04 Verify`**:
+   - Figure 2 must show that formal-only tasks can route directly into `04 Verify` (`Optional/direct Lean`), and that `04 Verify` audits **explicit theorem premises alongside `#print axioms`**.
+7. **Task Workspace vs. Read-Only Plugin Archive**:
+   - Figure 2’s wiki and plugin bands must preserve the boundary: **active task `research-wiki/` is read/written across all 5 stages** by a serial stage writer, whereas **plugin archives and historical wikis are read-only**.
+8. **`mathrsi-meta-evolve` Is Separate Outer Maintenance, Not Stage 06**:
+   - In Figure 2, `05 Handoff` must **not** have a direct sequential stage arrow into `mathrsi-meta-evolve`; outer maintenance remains in its own bottom container (`Authorized Between Tasks`).
