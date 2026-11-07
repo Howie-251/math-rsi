@@ -205,9 +205,9 @@ These studies were carried out with **ARIS**, then distilled into MathRSI's work
 
 ## Research Case: Degree–Diameter
 
-**153 graphs across 43 degree–diameter pairs, including 47 with concrete-graph Lean proofs.** Three constructions improve dated entries in the Comellas table; the diameter-three series includes graphs with up to **414,132 vertices** and comparisons with specified published construction methods.
+**MathRSI v2 produced a new 2,567-vertex (10,4) graph, exceeding the Comellas table's 2,566 vertices on 5 November 2026.** The combined catalogue contains **163 graphs across 44 degree–diameter pairs, including 49 with concrete-graph Lean proofs**. Four parameter pairs improve table entries; the diameter-three series extends to **414,132 vertices**.
 
-These **ARIS** research results informed MathRSI's degree–diameter plugin in v2. The case explains covering neighborhoods, finite-field lifts, and geometric connection reallocation through interactive illustrations, with comparison sources and compact programs for reconstructing every graph.
+Earlier **ARIS** research informed the degree–diameter plugin; the new continuation used the **v2 workflow and DD plugin**. The case explains covering neighborhoods, finite-field lifts and geometric connection reallocation, with comparison sources, compact reconstruction programs and an [execution-version record](case-studies/degree-diameter/evidence/execution_version.md).
 
 **[Read the case](case-studies/degree-diameter/README.md)** · [中文版](case-studies/degree-diameter/README.zh-CN.md) · [Construction programs](case-studies/degree-diameter/reproduce/README.md). Clone or download the repository and open `case-studies/degree-diameter/index.html` for the illustrated reader.
 

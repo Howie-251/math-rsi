@@ -26,11 +26,11 @@ spec.loader.exec_module(aris)
 
 LANGUAGES = [
     {"lang":"en", "source":"README.md", "output":"index.html",
-     "subtitle":"Larger graphs, reusable construction methods", "toc":"Contents",
+     "subtitle":"MathRSI v2 produces a new table improvement", "toc":"Contents",
      "tabs":["A · Covering neighborhoods", "B · Controller and fibers", "C · Geometric reallocation"],
      "method_label":"Construction methods", "step_label":"Cube extension examples"},
     {"lang":"zh-CN", "source":"README.zh-CN.md", "output":"index.zh-CN.html",
-     "subtitle":"更大的图，可复用的构造方法", "toc":"目录",
+     "subtitle":"MathRSI v2 取得新的主表改进", "toc":"目录",
      "tabs":["A · 保边补点", "B · 控制器与有限域", "C · 几何连接重分配"],
      "method_label":"构造方法", "step_label":"立方体补点示例"},
 ]

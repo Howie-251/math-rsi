@@ -1,0 +1,77 @@
+{
+  "status": "ORIGINAL_CONCRETE_GRAPH_CLAIM_KERNEL_PROVED_AND_AUDIT_IMPORTED",
+  "vertex_type": "Fin 2558",
+  "graph": "DegreeDiameter.Portfolio.D10Graph2558.graph",
+  "actual_literal_graph": "research/ddp/table_scope_20261104/d10_D4/graph_d10_D4_n2558.edges",
+  "original_goal_declaration": "DegreeDiameter.Portfolio.D10Graph2558.original_concrete_goal",
+  "final_declaration": "DegreeDiameter.Portfolio.D10Graph2558.final_claim",
+  "theorem_arguments": [],
+  "claims": [
+    "Fintype.card (Fin 2558)=2558",
+    "for every vertex u, graph.degree u<=10",
+    "for every u,v, exists w:graph.Walk u v with w.length<=4",
+    "not DiameterAtMost graph 3"
+  ],
+  "common_code": "DegreeDiameter.Portfolio.D10Graph2558.code : Vertex -> Vertex -> Nat",
+  "common_code_correctness": "all_routes : forall u v, fastRoute4Nat u.val (code u v)=v.val",
+  "transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Lean_version": "4.24.0",
+  "mathlib_version": "v4.24.0",
+  "finite_root_theorems": 2558,
+  "targets_each_root": 2558,
+  "ordered_pairs_including_diagonal": 6543364,
+  "code_blocks": 160,
+  "root0_proof_reused": true,
+  "exact_module_CPU_seconds": 78.88459300000001,
+  "audit_import_CPU_seconds": 4.540559,
+  "full_batch_accounted_CPU_seconds": 40915.01951796593,
+  "full_batch_CPU_budget": 45000,
+  "recovered_CPU_upper_bound_seconds": 2928,
+  "recovered_original_actual_CPU": "unknown for48originalnativeprocesses; charge61s each upperbound, explicitly not measured",
+  "rows_batch_wall_seconds": 1398.77468085289,
+  "row_workers_peak_RSS_KiB": 105072268,
+  "initial_implementation_accounted_CPU_seconds": 484.037016784,
+  "initial_implementation_CPU_budget": 600,
+  "initial_implementation_note": "Includes obsolete failed probes, initialAPI conservative60CPU allowance and the finalExact/Audit; overlaps finalmodule costs in fullbatch, so do not sum the two totals blindly.",
+  "exact_build_receipt": {
+    "module": "D10Graph2558Exact",
+    "attempt": 1,
+    "exit_code": 0,
+    "CPU_seconds": 78.88459300000001,
+    "wall_seconds": 79.55605242401361,
+    "CPU_limit": 90,
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+      "-j1",
+      "-s65536",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/DegreeDiameter/Portfolio/D10Graph2558Exact.olean",
+      "DegreeDiameter/Portfolio/D10Graph2558Exact.lean"
+    ],
+    "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/table_scope_20261104/d10_D4/lean/D10Graph2558Exact_attempt01.log",
+    "PASS": true
+  },
+  "audit_build_receipt": {
+    "module": "D10Graph2558Audit",
+    "attempt": 1,
+    "exit_code": 0,
+    "CPU_seconds": 4.540559,
+    "wall_seconds": 4.706108029931784,
+    "CPU_limit": 90,
+    "command": [
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/.tools/lean-4.24.0-linux/bin/lean",
+      "-j1",
+      "-s65536",
+      "-o",
+      "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal/.lake/build/lib/lean/D10Graph2558Audit.olean",
+      "D10Graph2558Audit.lean"
+    ],
+    "log": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/table_scope_20261104/d10_D4/lean/D10Graph2558Audit_attempt01.log",
+    "PASS": true
+  },
+  "parent_owned_remaining_scope": "Finalcross-familyC, parentindependentstatementaudit, publiccomparisonanddeliveryaremanagedbyRoot; thischilddoesnotmarkGoalcomplete."
+}
