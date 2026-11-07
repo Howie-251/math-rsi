@@ -2,13 +2,13 @@
 
 [English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md) · [Degree–Diameter 成果案例](case-studies/degree-diameter/README.zh-CN.md)
 
-固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）· **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版 **v3**。详见 [v3 具体变化与可运行检查](docs/V3_CHANGES.md) 与 [v2 具体变化](docs/V2_CHANGES.md)。
+固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）· **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)）· **[v4 · 当前版](https://github.com/lisresearchgroup/math-rsi/tree/v4)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版 **v4**。 详见 [v4 能力变化](docs/V4_CHANGES.md)、[v3 具体变化与可运行检查](docs/V3_CHANGES.md) 与 [v2 具体变化](docs/V2_CHANGES.md)。
 
 **面向严谨数学研究、可由 agent 执行并持续自进化的工作流与领域知识框架。** 从文献查漏到严密证明，把问题形式化、路线对抗、推导构造、独立核验、按需形式化与可复现交接连成闭环。
 
 主流程按现有成果选择入口，衔接五组可独立调用的子流程：**问题准备与文献（`prepare`）→ 求解路线迭代（`route-loop`）→ 证明推进（`prove`）→ 装配验证（`verify`）→ 交付沉淀（`handoff`）。** 每阶段由调用者读取实际产物后推进，始终绑定原始量词与主定理义务。
 
-### 研究经验如何驱动版本演进（`v0` → `v3`）
+### 研究经验如何驱动版本演进（`v0` → `v4`）
 
 MathRSI 沿 **两条相互促进的方向** 演进：
 
@@ -19,16 +19,24 @@ MathRSI 沿 **两条相互促进的方向** 演进：
 
 ![MathRSI从v0基础研究工具经v1、v2演进至当前v3及未来版本，共享base持续强化，领域插件持续扩展与深化](figures/mathrsi/01-evolution-v3.png)
 
-研究经验同时强化通用流程与领域方法；v3 原位升级 ECC，并新增三个领域。[图源与审阅](figures/mathrsi/README.md) · [v3 实现细节](docs/V3_CHANGES.md)。
+上图保留为 **v3 历史快照**；[交互首页](development/homepage-redesign-20261105/site/index.html)已延伸到v4，克隆或下载后打开HTML即可。v3 原位升级 ECC，并新增三个领域。[图源与审阅](figures/mathrsi/README.md) · [v3 实现细节](docs/V3_CHANGES.md)。
 
 | 版本 | 研究经验来源 | Base 工作流怎样强化 | Plugins 怎样扩展与深化 |
 | --- | --- | --- | --- |
 | **v0 · 基础研究工具** | 初始 Property B 与 ECC 研究，积累证明、失败、核验与 research wiki。 | 各单题工作区组合使用独立技能，尚无共享的 MathRSI 总控。v0 是历史阶段，不是 Git 发布标签。 | 原始研究目录及其中的数学工具。 |
 | **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** | [Property B 与 ECC 的真实研究转折](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。 | 建立 **五组可执行子工作流**、`base / plugin / task` 三层边界、对抗式路线迭代、证明验收、wiki 回流及按需 Lean；完整技能双端自包含。 | 完整 **Property B 插件**及初始 **ECC 草案**。 |
 | **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** | **Degree–Diameter** 历史研究。 | 新增 **[`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md)**；新公开基线改变待研究队列；对象变更后分别判断正证明继承与旧否证范围；共同覆盖替代失败的充分门；纯形式目标直接检查实际 Lean 导出。[v2 细节](docs/V2_CHANGES.md)。 | 新增 **Degree–Diameter 插件**，携带原 wiki、构造、迁移方法及证书工具。 |
-| **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3) · 当前** | **Erdős 86**、**Ruskey–Savage Q6**、继承 v1/v2 方法继续深化的 **ECC**，以及 **Happy Ending**。 | 将下面 **四类证据处理动作接入原 workflow**，继续沿用五阶段架构及独立维护流程。 | **原位升级 ECC**；新增 **超立方体极值、超立方体 Hamilton、Happy Ending** 三个领域，携带数学原件、失败经验与薄核验工具。 |
+| **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** | **Erdős 86**、**Ruskey–Savage Q6**、继承 v1/v2 方法继续深化的 **ECC**，以及 **Happy Ending**。 | 将下面 **四类证据处理动作接入原 workflow**，继续沿用五阶段架构及独立维护流程。 | **原位升级 ECC**；新增 **超立方体极值、超立方体 Hamilton、Happy Ending** 三个领域，携带数学原件、失败经验与薄核验工具。 |
+
+| **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) · 当前版** | **Happy Ending** 新75/76/77工作证明链，以及实际由 **v2 + DD + PR #7修补** 跑出的(10,4)图。 | 在原选路／证明／核验中接通：整数阈值的同链零松弛／取等结构 → 合法等数替换与容量迫见证 → 端点／标记相容接回原调用点。 | 原位深化 **Happy Ending** 与 **Degree–Diameter**；仍为六领域、十四项领域技能。 [v4详情](docs/V4_CHANGES.md)。 |
 
 日常修补也随版本继承：[PR #7](https://github.com/lisresearchgroup/math-rsi/pull/7) 修正派活、真实文件交付和恢复快照，已纳入 v3，不单独计作一次研究驱动迭代。
+
+### v4 怎样继续强化 Base 与 Plugins
+
+**Base 的增强是一个连贯的证明动作。** 当整数界差一单位时，沿同一条不等式链找出必须同时取等的条件；用这些实际结构作合法等数替换，再由容量迫出见证；最后核对见证的端点与标记，接回原调用点。动作写入现有 [route-loop](base/skills/mathrsi-route-loop/SKILL.md)、[prove](base/skills/mathrsi-prove/SKILL.md) 与 [verify](base/skills/mathrsi-verify/SKILL.md)，base 仍为十项技能。
+
+**Plugins 的深化提供具体数学方法。** Happy Ending 接入75/76/77证明链及反例，保留原稿 unreviewed/unaccepted 状态；DD 接入 matching 割边加点、old-only switches、全图距离诊断及便携编辑重放。2,567点图实际来自 v2 + DD + PR #7修补，不追认为v4产出。已有反例回流与证据继承继续沿用，不重复计作新能力。详见 [v4能力与验证范围](docs/V4_CHANGES.md)。
 
 ### v3 怎样强化共享 Base：四类共性改进
 
@@ -163,7 +171,7 @@ Root 读取返回产物后再安排下一义务。跨模型对抗意见与确定
 
 读取 [mathrsi-meta-evolve](base/skills/mathrsi-meta-evolve/SKILL.md)，提供源研究、已有关键转折依据、本轮维护记录及可改范围。它对照当前实现，将经验分到 base、插件、单题或暂缓，形成实际修改，再由协调者使用受影响行为；执行链只由该技能维护。[使用说明](docs/EVOLUTION_WORKFLOW.md)有可复制请求。
 
-Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双端共用主体。原版 ARIS `meta-optimize`／`meta-apply` 也有各宿主别名，但保留自己的合同，不与数学适配混称。使用和验收按实际改动核查，不强制无历史 agent 重跑完整流程；数学独核仍遵循原题合同。v2已用该技能吸收DD，当前v3继续修改现有实现；[具体变化](docs/V3_CHANGES.md)与[维护记录](development/evolution/v3-20261104/EVOLUTION.md)区分实际实现、使用、审阅和采用。历史成果作为方法证据，未改写成新版重新解题或等预算提速实验。
+Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双端共用主体。原版 ARIS `meta-optimize`／`meta-apply` 也有各宿主别名，但保留自己的合同，不与数学适配混称。使用和验收按实际改动核查，不强制无历史 agent 重跑完整流程；数学独核仍遵循原题合同。v2已用该技能吸收DD，v3继续修改现有实现；[具体变化](docs/V3_CHANGES.md)与[维护记录](development/evolution/v3-20261104/EVOLUTION.md)区分实际实现、使用、审阅和采用。当前[v4](docs/V4_CHANGES.md)进一步接入临界取等与相容见证，并深化Happy Ending/DD。历史成果作为方法证据，未改写成新版重新解题或等预算提速实验。
 
 ## 三层边界
 
@@ -177,7 +185,7 @@ Claude 可用 `/mathrsi-meta-evolve`，Codex 可用 `$mathrsi-meta-evolve`，双
 
 ## 验证与开发
 
-[v3变化与实际命令](docs/V3_CHANGES.md)汇集本轮base和领域核查，Gemini4／Opus5.5各完成两轮实际文件审阅，修法及阅读范围已留档。[既有验证记录](development/VALIDATION.md)分别报告技能资源完整性、搬迁副本执行、真实数学案例和模型审阅范围。它们不等于通用解题成功率或RSI增益评测。
+[v4变化与实际使用](docs/V4_CHANGES.md)汇集当前取等/交换增量、HE两个反例与lower25核验、DD十图重放及Gemini/Opus维护审阅。[v3变化与实际命令](docs/V3_CHANGES.md)保留上一版本base和领域核查，Gemini4／Opus5.5各完成两轮实际文件审阅，修法及阅读范围已留档。[既有验证记录](development/VALIDATION.md)分别报告技能资源完整性、搬迁副本执行、真实数学案例和模型审阅范围。它们不等于通用解题成功率或RSI增益评测。
 
 ```bash
 python3 tools/check_links.py

@@ -4,6 +4,7 @@
 
 | 实际问题 | 先读整理层 | 原件与返回消费者 |
 | --- | --- | --- |
+| 满cap源允许cut/switch、要重放十图 | [饱和增点与重放](saturated-insertion-and-replay.md) | 真实matching/delta、失败pairs与完整覆盖；回当前route/prove/verify，更新当前任务wiki |
 | 原题是最大度还是regular／record？ | construction-mathematics§1；失败地图公开状态 | 现有规格＋catalog比较；回prepare固定当前目标，不擅自换题 |
 | 逐点扩张缺pins／顺序锁死 | construction-mathematics§2；dd-construction§1 | earlyD5实际families／currentcover；回prove给真实S或未覆盖target |
 | 冻结N／plane／repeatedcenters | construction-mathematics§3–4；clone案例 | 原FullNeighborhoodClones与实际源邻域 N；回prove核load／labels |

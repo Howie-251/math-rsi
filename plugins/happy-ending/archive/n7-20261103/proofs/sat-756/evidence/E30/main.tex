@@ -1,0 +1,205 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,booktabs,array,enumitem}
+\usepackage{longtable,needspace}
+\usepackage{tikz,listings}
+\usetikzlibrary{arrows.meta,positioning}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,
+ keepspaces=true,showstringspaces=false,escapeinside={(*@}{@*)}}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\urlstyle{same}
+\hypersetup{pdftitle={Erd\H{o}s--Szekeres: Upper Bounds for Convex Heptagons and Octagons},pdfauthor={Michael Schroeder},pdfsubject={Erdos-Szekeres bounds with Lean formalization},pdfkeywords={Erd\H{o}s--Szekeres problem, convex polygons, cups and caps}}
+\allowdisplaybreaks[2]
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\ES}{ES}
+\DeclareMathOperator{\conv}{conv}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\down}{\mathord{\downarrow}}
+\newcommand{\cupS}{S_{\cup}}
+\newcommand{\capS}{S_{\cap}}
+\newcommand{\cupE}{E_{\cup}}
+\newcommand{\capE}{E_{\cap}}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\title[Convex heptagons and octagons]{Erd\H{o}s--Szekeres: Upper Bounds for Convex Heptagons and Octagons}
+\author{Michael Schroeder}
+\address{Independent Researcher}
+\thanks{ORCID: \href{https://orcid.org/0009-0004-3249-0195}{0009-0004-3249-0195}. Version 1, 19 September 2026.\newline\mbox{DOI: \href{https://doi.org/10.5281/zenodo.22842891}{10.5281/zenodo.22842891}}.}
+\subjclass[2020]{Primary 52C10; Secondary 05D10, 68V15}
+\keywords{Erd\H{o}s--Szekeres problem, convex polygons, cups and caps}
+\date{19 September 2026}
+\begin{document}
+\begin{abstract}
+The Erd\H{o}s--Szekeres number $\ES(n)$ is the least $N$ such that
+every set of $N$ points in the plane, with no three collinear, contains
+$n$ points in convex position. We prove $\ES(7)\le81$ and
+$\ES(8)\le319$. Both bounds follow from a common geometric partition
+and exact finite certificates for the resulting cup--cap configurations.
+The heptagon proof combines a five-point transversal with exclusions
+that preserve shared geometric witnesses. The octagon proof counts
+missing Ferrers states using hereditary convexity and four-cap compression.
+We also establish the $(7,5,6)$ case of the Erd\H{o}s--Tuza--Valtr
+conjecture: the largest planar set in general position with distinct
+abscissae avoiding a convex heptagon, a five-cap, and a six-cup has
+25 points. All three upper bounds are formalized in Lean,
+including the geometric reductions and the validity of the finite
+encodings. The accompanying archive provides sources, exact certificates,
+and independent checkers. Finite Lean checks use native evaluation
+with an explicitly documented trust boundary.
+\end{abstract}
+\maketitle
+\raggedbottom
+
+\section{Introduction}
+Let $\ES(n)$ denote the least integer $N$ such that every set of at least
+$N$ points in $\mathbb R^2$, with no three collinear, contains $n$ points
+in convex position. The polygon need not be empty. Erd\H{o}s and
+Szekeres~\cite{ES35,ES61} proved
+\[
+ 2^{n-2}+1\le\ES(n)\le\binom{2n-4}{n-2}+1
+\]
+and conjectured equality with the lower bound. Szekeres and
+Peters~\cite{SP} established $\ES(6)=17$ by a computer proof.
+The next two conjectured values are $33$ and $65$.
+
+\begin{theorem}\label{thm:main}
+Every set of $81$ points in the plane in general position contains a
+convex heptagon, and every such set of $319$ points contains a convex
+octagon. Consequently,
+\[
+ 33\le\ES(7)\le81,\qquad 65\le\ES(8)\le319.
+\]
+\end{theorem}
+
+Our contribution is a finite strengthening of the cup--cap method,
+with a complete formal connection to planar geometry. We use the
+classical projective reduction, a residual partition, and injective
+encodings by Ferrers down-sets. The heptagon proof rules out a balanced
+fifty-point equality case while keeping one shared system of actual
+witnesses. The octagon proof uses a different certificate: weighted
+omission inequalities on small families whose occupied states force
+convexity. Both arguments retain every chronological order allowed by
+their necessary constraints.
+
+Here is the numerical structure. Write $M_n(a,b)$ for the maximum size
+of a set avoiding a convex $n$-gon, an $a$-cap, and a $b$-cup, in that
+parameter order. Put $C_n=M_n(n-1,n-1)$, and let $D_n$ be the maximum
+size of a set containing no $(n-2)$-cap, no convex $n$-gon, and no point
+simultaneously ending an $(n-2)$-cup and starting an $(n-3)$-cap.
+Both witnesses in the last condition must lie in the same set.
+Sections~\ref{sec:geometry}--\ref{sec:partition} prove
+\begin{equation}\label{eq:bridge}
+ \ES(n)\le C_n+D_n+2\qquad(n\ge6).
+\end{equation}
+The savings in the two avoiding maxima are as follows.
+\begin{center}
+\begin{tabular}{crrrrr}
+\toprule
+$n$ & $C_n$: baseline & here & $D_n$: baseline & here & Total saving\\
+\midrule
+7 & 70 & 49 & 41 & 30 & $21+11=32$\\
+8 & 252 & 193 & 154 & 124 & $59+30=89$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All entries are upper bounds. Before imposing polygon-capacity rows,
+the cup--cap count gives $\binom{2n-6}{n-3}$ balanced states.
+The two-sided residual construction in Section~\ref{sec:319} gives
+$\binom{2n-6}{n-4}-\binom{2n-8}{n-5}$ states: in the
+$(n-4)\times(n-2)$ rectangle, the forbidden junction excludes the
+maximal cell $(1,n-2)$. At $n=7,8$ these give respectively
+$70+41+2=113$ and $252+154+2=408$.
+The two-point adjustment includes one deleted projective root and the
+conversion from an avoiding maximum to a forcing threshold.
+
+We also prove the sharp restricted equality $M_7(5,6)=25$
+(Theorem~\ref{lem:B25}), a case of the conjecture of
+Erd\H{o}s, Tuza, and Valtr~\cite{ETV}. The conjectured value is
+$\sum_{i=1}^{3}\binom5i$. Baek--Balko~\cite[Section~2.1]{BB}
+record the previously known cases as $n\ge a+b-3$ or $a=4$ or $b=4$;
+$(n,a,b)=(7,5,6)$ lies outside these ranges. The lower construction is
+classical~\cite{ES61,ETV}; the upper bound is the new certificate.
+Reflection gives the mirrored case $(7,6,5)$.
+
+\subsection{Previous work}
+T\'oth and Valtr's projective method~\cite{TV98,TV05} underlies the
+reduction used below. The explicit finite bound of Nassajian Mojarrad
+and Vlachos~\cite[Theorem~1.1]{MV} is
+\begin{equation}\label{eq:MV}
+ \ES(n)\le\binom{2n-5}{n-2}-\binom{2n-8}{n-3}+2\qquad(n\ge6),
+\end{equation}
+which gives $113$ and $408$. Our bounds improve these by $32$ and $89$,
+respectively. Norin and Yuditsky~\cite{NY} obtain the asymptotic factor
+$7/8$ by encoding incoming and outgoing chains. Their three-chain
+argument is used in our residual partition. Suk~\cite{Suk} proves
+$\ES(n)=2^{n+o(n)}$; Holmsen, Nassajian Mojarrad, Pach and
+Tardos~\cite{HMPT} refine the upper bound to
+$2^{n+O(\sqrt{n\log n})}$. These asymptotic expressions do not by
+themselves supply explicit improvements at $n=7,8$.
+
+The strong- and weak-polygon analogues of the Erd\H{o}s--Szekeres
+conjecture fail for arbitrary red--blue colorings of ordered triples
+already at $k=7$: Balko--Valtr~\cite{BV} prove $C_{\mathrm{strong}}(7)>33$,
+and Baek--Balko~\cite{BB} prove $C_{\mathrm{weak}}(7)>33$.
+Here $C_{\mathrm{strong}}$ and $C_{\mathrm{weak}}$ are the corresponding
+forcing thresholds. A weak $k$-gon consists of differently colored
+monotone paths with common endpoints and vertex counts summing to
+$k+2$; a strong $k$-gon additionally requires disjoint interiors.
+The signotope extension remains open: Baek--Balko
+\cite[Section~3]{BB} relate it to the Goodman--Pollack conjecture.
+Our results concern real planar sets; a signotope interpretation of
+the complete proof has not been audited.
+Down-set encodings of ordered paths are established machinery
+\cite{MS}. Baek~\cite{Baek} proves that
+$\binom{n-1}{2}+2$ points force a four-cap or a convex $n$-gon;
+its $n=8$ case is a numerical input to our block-compression argument.
+Baek and Balko~\cite{BB} obtain sharp split-polygon thresholds and
+results for decomposable configurations. A split polygon permits
+unmatched left endpoints, so its threshold cannot be substituted for
+the unrestricted convex-polygon threshold.
+
+Recent computational work also emphasizes the distinction between an
+encoding and a complete exclusion. Dumitru~\cite{Dumitru} reports
+refutations of anchored thirty-three-point subfamilies, without an
+exhaustive cover. Dam\'asdi, Dong, Scheucher and Zeng~\cite{DDSZ} construct
+small saturated sets, showing why failure to extend one example need
+not establish a maximum. Koshelev and Koshka~\cite{KK} develop SAT/ASP
+models and fixed-abscissa realization searches for related variants.
+Infeasibility with fixed abscissae does not exclude arbitrary coordinates.
+None of these restrictions is imposed in our final theorem.
+
+Our finite comparison uses \eqref{eq:MV}.\footnote{Table~1 of
+\cite{KK} lists $92$ and $324$ under Norin--Yuditsky's asymptotic
+result. We have not located their finite derivation in the cited proof,
+which discards a nonzero deletion term. Our bounds improve those
+entries by 11 and 5 as well. The literature supplement records the
+table's fitted formula and its exact relation to \eqref{eq:MV}.}
+
+Computer-assisted and formal geometric proofs have substantial precedent.
+Mari\'c~\cite{Maric} formalized the small convex-polygon cases, and
+Subercaseaux and coauthors~\cite{EmptyLean} formalized the empty-hexagon
+number in Lean. The latter concerns a different emptiness condition,
+but its separation of geometric encoding from propositional refutation
+is directly relevant. Our final Lean statements concern ordinary
+convex hulls and arbitrary real coordinates. Their precise computational
+trust is stated in Section~\ref{sec:formal}; external peer review is
+not claimed.
+
+\input{geometry}
+\input{heptagons}
+\input{octagons}
+\input{formalization}
+\appendix
+\input{source_semantics}
+\input{statement_audit}
+\clearpage
+\input{references}
+\end{document}

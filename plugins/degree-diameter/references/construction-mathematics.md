@@ -103,3 +103,7 @@ maxdegree = δ+k
 任意helper图K，helper i接旧pins S_i，旧诱导图不变，则helper-old准确条件是 `V=N_G[S_i] ∪ ⋃_{j∈N_K(i)}S_j`，度为`|S_i|+degK(i)≤d`，oldload≤b。还需helper-helper距离；K为clique时自动，K无边时需各自支配且pins两两相交。
 
 饱和旧目标 v只能借旧spare邻点给每个helper提供两步路，必要 `h≤Σ_{u∈N(v)∩T}b(u)`。若N[T]漏一饱和target，同cap保边任意非空helper增广均失败，即使允许额外old-old边；这不是一般D2无解。完整Brown57/91容量及奇偶证书见下页。
+
+## 9. 饱和源matching cut/new star
+
+[完整引理与caller](saturated-insertion-and-replay.md)证明：删matching M再以新点连全部端点保持旧度数，新度2|M|，边数增|M|；偶d正则源取d/2条边可保正则。距离非自动继承；old-only 2-switch同样只先保持度数。请用该页的真实图/失败/覆盖接口，不将此写成任意正则图都可保径增点。

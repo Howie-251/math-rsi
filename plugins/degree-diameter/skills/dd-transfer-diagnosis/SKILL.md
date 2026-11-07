@@ -84,3 +84,9 @@ GQ源需要真实incidence、projection、spread及partialovoid。上界43不等
 ## 当前任务保存什么
 
 在现用ROUTE_REPORT或run目录记录新旧对象、原失败witness、释放条件、新命题、原件与首项任务。稳定可迁移的定理／失败修法再进入任务wiki；单次服务状态留运行日志，别变成工具禁令。父调用者读这些材料后才派下一同级阶段，插件返回时不并行启动另一个全题workflow。
+
+## 正则源无余度之后的具体新操作
+
+不要把“同cap保边无法增点”扩成该源一切增点失败。当前任务允许删边时，使用[matching cut/new star接口](../../references/saturated-insertion-and-replay.md)：删d/2条互不相交边可为偶数d正则源释放d个端点槽，新点连这些端点保正则；全距离另验。先用失败点对分类决定换cut还是old-only switch，再在同一最终图合并new-old与old-old要求。旧小源cut-star失败仍说明新根不足，不会排除后来完整检查的2567图。
+
+父route收到应是实际source、cut、候选switch、被修pair及可能新坏pair、下一有界探针和未试域，不是“继续优化”一句话。PR11仅保存成功配方和compact receipts，没有完整发现搜索器；可复用薄重放，不宣称恢复原搜索或v4已重现发现。任务wiki更新准确候选身份/反例/重试条件。

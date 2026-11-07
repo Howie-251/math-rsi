@@ -1,6 +1,6 @@
 ---
 name: mathrsi-happy-ending
-description: 研究Erdős–Szekeres七边形及有序rank-3 signotope的受限路径容量，执行状态基数、实际覆盖增广、共同匹配补偿与合法chart运输；给base返回准确证明、反例或未闭义务，区分结构工作稿、历史SAT接受及几何实现。
+description: 研究Erdős–Szekeres七边形及有序rank-3 signotope的受限路径容量，执行状态基数、实际覆盖增广、共同匹配补偿、取等替锁、容量迫证与合法chart运输；给base返回准确证明、反例或未闭义务，区分结构工作稿、历史SAT接受及几何实现。
 ---
 
 # Happy Ending领域研究
@@ -9,7 +9,7 @@ description: 研究Erdős–Szekeres七边形及有序rank-3 signotope的受限�
 
 ## 进入与固定问题
 
-先读当前任务的原题、采用版本、允许进口、当前失败及返回点。恢复时沿原义务取回成熟产物，不按档案中的“active”重开发现。来源阅读从[完整报告](../../archive/source/source/report.md)、[原稿CURRENT](../../archive/source/working/package/proofs/CURRENT.md)开始，再按本次问题读[数学与方法](references/mathematics.md)和[失败与证据](references/failures-and-evidence.md)。原图和原稿随仓，历史Windows/Linux路径用[source-map](../../archive/source/working/package/proofs/source-map.tsv)找当前原件，不能要求读者访问作者机器。
+先读当前任务的原题、采用版本、允许进口、当前失败及返回点。恢复时沿原义务取回成熟产物，不按档案中的“active”重开发现。新75/76证明的直接执行入口为[临界取等、替锁与端点相容](references/equality-exchange.md)，其完整新原包见[当前主稿](../../archive/n7-20261103/proofs/CURRENT.md)。旧来源阅读从[完整报告](../../archive/source/source/report.md)、[原稿CURRENT](../../archive/source/working/package/proofs/CURRENT.md)开始，再按本次问题读[数学与方法](references/mathematics.md)和[失败与证据](references/failures-and-evidence.md)。原图和原稿随仓，历史Windows/Linux路径用[source-map](../../archive/source/working/package/proofs/source-map.tsv)找当前原件，不能要求读者访问作者机器。
 
 输入必须讲清原对象是哪一类：一般位置平面点集、可实现有序点序、任意完整rank-3 signotope，还是只在SAT schema中表示的一族。给实际颜色/坐标、顶点次序、路径参数和已有进口。已有任务固定ES或某个N时不得因抽象问题较容易而换题；抽象上界可经包含关系用于几何，抽象下界不自动给几何下界。
 
@@ -23,9 +23,9 @@ N(7,r,s)是避免蓝r、红s和weak7的**最大点数**。N_geo为对应平面�
 
 prepare/survey传来某个已有上界或新文献时，核对象、版本、定理编号和实际量词，返回它能供给哪一条当前进口。档案中的a=16来自Baek 2022 v1 Theorem2.8，旧稿Theorem2.7文字保留为历史；需要用该进口时由当前survey核原版本，不能按不同版本编号混接。共同点对偏序来自Bergold–Felsner–Scheucher的来源定位，使用它还须证明当前实际支持关系是该偏序的严格关系。
 
-已有原件足以回答则直接返回；新疑问给base survey准确命题和已查来源，补查后回本义务。原包的Schroeder比较摘录不是本项目完整Lean工程，别据其模块名声称55单元或76/77已有Lean。新报告75/76今日只有作者截图、无新证明文件，记录`reported pending source`，不更新正式采用界或几何阈值。
+已有原件足以回答则直接返回；新疑问给base survey准确命题和已查来源，补查后回本义务。原包的Schroeder比较摘录不是本项目完整Lean工程，别据其模块名声称55单元或76/77已有Lean。新75/76完整原证明已随插件保存，按[取等执行说明](references/equality-exchange.md)和原稿读取；不再作为仅截图或pending source。它仍是same-session/unreviewed/unaccepted工作证明，方法吸收不升级数学验收。
 
-本包可消费的状态分开：b25的上界有历史human acceptance，保留same-family/provisional及外部证书复用范围；下界25本次可独立重验一个抽象见证；40/50/76/77及ES≤78是结构工作稿链，原稿标unreviewed/unaccepted，不能因为整理成插件而升级。原报告的定理式口吻不覆盖原证明保证状态。
+本包可消费的状态分开：b25的上界有历史human acceptance，保留same-family/provisional及外部证书复用范围；下界25本次可独立重验一个抽象见证；旧40/50/76/77及ES≤78是历史结构工作稿链；新工作稿以b25给40/50/75/76及ES≤77，原稿仍标same-session/unreviewed/unaccepted，不能因为整理成插件而升级。原报告的定理式口吻不覆盖原证明保证状态。
 
 ## 2. 先用状态基数判断受限756
 
@@ -55,10 +55,18 @@ route-loop/prove进入共同饱和义务时，给真实母体X及其所有红6�
 
 返回给caller的是实际集合/图/路径见证、参数无关入口、计数和可用范围。若只证明一个人口窗口或一个条件核，不写全767闭合。局部节省要扣核扩大、删点及其它共同资源支出，以净收益判断下一行动；R14/R17/R27的零净收益记录可直接止损，不把长期细分数量当全局下降。
 
-## 5. 777的chart运输与交接
+## 5. 一单位临界层：取等、替锁、容量迫出的端点
+
+当已有n+w≤3b+1而目标n≤3b，读取[完整可执行推导](references/equality-exchange.md)§1–4。固定同一母体和全部实际端口，用m≤|C_phys|≤|C_roles|≤m回收每项非负松弛；角色像单射排双角色owner，迫每锁单例，并取得q点精确端点覆盖C_D和同一b点核K。实际owner匹配再给全锁序，旧根排除须在替锁前独立完成。
+
+将实际满核J_−的右owner B_H换成等人口右锁Ψ后加共根z，逐组核不交和无B5，得到b+1点实际域F。容量迫R6，其末点r≤z；末前驱在S则触已排旧根，在U\L则对K加该前驱迫同一条R5，精确端点覆盖和w=0定位其源及终点k∈R，接兑现同一个k的外首对，得到同端B4+R5矛盾。不能把“有私有R5”直接写成“端点兼容”。
+
+要追n=3b的新一层，先重算t=0的覆盖预算，原取等/共根分类不自动继承。[执行说明§5–6](references/equality-exchange.md)保存regular共根条件加权式n+Λ≤3b、剩余三支、11点供应不相容反例和10点canonical双插点反例。Λ不是w，≤74只供给指定子类；无条件≤74仍未得到。交回route-loop的是准确剩余义务，不因已知75而开更大枚举。
+
+## 6. 777的chart运输与交接
 
 要用`N777=N767+1`，先读R20实际操作：只取原最左pivot建立径向次序，按排列奇偶运输三元符号，核所有非pivot四点仍合法，并证明每个实际子集weak性质保留。仅保packet不够，首点移末翻符号曾将BBBR变RRRR并改变weak；任意内部pivot也没有此处的保证。删pivot并换色以后再检查所得实际767的短帽条件。
 
-反向添一个全蓝最左点，同样核新packet与经过新点的异色路径，得到精确+1。随后用几何包含和阈值定义再+1。25→76→77→78分别是受限容量、结构容量上界、一般避免规模上界和几何强迫阈值；展示不可画成一个数值的时间增长。
+反向添一个全蓝最左点，同样核新packet与经过新点的异色路径，得到精确+1。随后用几何包含和阈值定义再+1。旧25→76→77→78、新25→75→76→77分别是受限容量、结构容量上界、一般避免规模上界和几何强迫阈值；展示不可画成一个数值的时间增长。
 
 本次返回包括：准确结论/进口与保证状态；已写证明、真实见证或反例；改变的原义务；当前缺少的覆盖/编码/独审；下一动作和原caller。不自行升级wiki canonical claim或启动verify/handoff。暂停交接保留条件工具与真实未闭边；新研究结果写本任务wiki，archive只读。源码或证明错误在对应义务修，核心表示受反例击穿才回base路线重判。

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MathRSI — SII MathRSI Team</title>
+<meta name="description" content="MathRSI: agent workflows for research mathematics that improve from real proofs, failures and checks.">
+<link rel="stylesheet" href="assets/math/katex.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="result-visuals.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">MathRSI</a>
+    <nav aria-label="Sections">
+      <a href="#evolution"><span>1</span>Evolution</a>
+      <a href="#results"><span>2</span>Results</a>
+      <a href="#workflow"><span>3</span>Workflow</a>
+      <a href="#start"><span>4</span>Start</a>
+      <a class="gh" href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <h1 class="title rise"><button class="wordmark" type="button" aria-label="MathRSI — play animation"><span class="wordmark-plane"><span class="wordmark-ink">MathRSI</span><span class="wordmark-sheen" aria-hidden="true">MathRSI</span></span></button></h1>
+    <p class="team rise">SII MathRSI Team</p>
+    <p class="sub rise">Research advances. The workflow learns.</p>
+    <p class="links rise">
+      <a href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a><span class="sep">·</span>
+      <a href="#results">Results ↓</a><span class="sep">·</span>
+      <a href="#evolution">Evolution ↓</a><span class="sep">·</span>
+      <a href="#start">Quick start ↓</a>
+    </p>
+  </section>
+
+  <section id="evolution" class="evo wrap" aria-labelledby="evo-h">
+    <h2 id="evo-h" class="evo-title">MathRSI evolution: base workflow &amp; domain plugins</h2>
+    <p class="evo-deck">v0: standalone research tools. v1–v3: shared harness releases. v4: current release, strengthened by Happy Ending and Degree–Diameter research.</p>
+    <div class="fig-head">
+      <div class="ctls">
+        <button class="ctl primary" id="play" type="button"></button>
+        <button class="ctl" id="replay" type="button">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8a4.8 4.8 0 1 0 1.5-3.5M3 2.5v3h3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Replay</span>
+        </button>
+        <span class="readout" id="readout" aria-live="polite"></span>
+        <button class="ctl overview on" id="overview" type="button" aria-pressed="true" aria-label="Show all research results">Overview</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Research problems"></div>
+    </div>
+
+    <p class="trace-hint" id="traceHint">Select a problem to trace its progress.</p>
+    <p class="scroll-hint">Swipe to explore versions →</p>
+    <div class="scroller" id="scroller">
+      <div class="stage" id="stage">
+        <svg class="sky" id="sky" viewBox="0 0 1472 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. Proof tools are recorded separately."></svg>
+        <div class="lanes" id="lanes"></div>
+      </div>
+    </div>
+
+    <div class="fig-foot">
+      <div class="legend" aria-label="Legend">
+        <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/></svg>Mathematical result</span>
+        <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect x=".75" y=".75" width="12.5" height="14.5" rx="3" fill="#5B6474" fill-opacity=".16" stroke="#5B6474" stroke-width="1.5"/></svg>Theorem application / corollary</span>
+        <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect x=".75" y=".75" width="12.5" height="14.5" rx="3" fill="none" stroke="#5B6474" stroke-width="1.5" stroke-dasharray="3 2"/></svg>Working proof</span>
+        <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/><path d="M3.5 6.5 7 9.5l3.5-3" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Research incorporated</span>
+      </div>
+      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope.</p>
+    </div>
+
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </section>
+
+  <section id="results" class="sec wrap" aria-labelledby="res-h">
+    <div class="sec-head">
+      <h2 id="res-h">Results</h2>
+      <p>Six mathematical frontiers. Stronger bounds, exact answers, and proofs made reusable.</p>
+    </div>
+    <div class="cards">
+
+      <article class="card" style="--c:var(--pb)">
+        <div class="viz" data-viz="pb" role="img" aria-label="A 3 by 3 grid hypergraph colored with two colors so that no row or column is one color"></div>
+        <p class="vcap">Illustration · a 2-coloring with no single-color edge</p>
+        <p class="r-problem"><b>Property B</b><span>Hypergraph two-coloring</span></p>
+        <h3>Eight finite bounds and one uniform theorem</h3>
+        <div class="r-fig">
+          <p class="r-kicker">Lower bounds on <span class="math" data-tex="m(k)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></span></p>
+          <ol class="r-kgrid" aria-label="Lower bounds on m(k) for k = 5 to 12">
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 5</span><b class="r-n">35</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 6</span><b class="r-n">67</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 7</span><b class="r-n">131</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 8</span><b class="r-n">267</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 9</span><b class="r-n">543</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 10</span><b class="r-n">1112</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 11</span><b class="r-n">2275</b></li>
+            <li><span class="r-k"><span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> = 12</span><b class="r-n">4664</b></li>
+          </ol>
+          <p class="r-plus"><span class="r-tag">Uniform theorem</span><span>A uniform analytic improvement over the combined RS baseline for every <span class="math" data-tex="k \ge 12"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≥</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">k \ge 12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span></span>.</span></p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> Below each edge threshold, every <span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span>-uniform hypergraph has a coloring with both colors in every edge. The uniform theorem extends stronger guarantees to infinitely many <span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span>.</p>
+        <p class="r-how"><b>Method</b> Combine constraints that must hold in the same hypergraph.</p>
+        <div class="meta"><span class="status">Uniform theorem in Lean</span><a href="../../../case-studies/property-b/index.html">Read ↗</a><button class="trace" type="button" data-case="pb">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p><span class="math" data-tex="m(k)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></span> is the fewest edges of a finite simple <span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span>-uniform hypergraph that is not 2-colorable. End-to-end Lean: m(5) ≥ 33, 34 and the uniform k ≥ 12 theorem. m(5) ≥ 35 is a complete written candidate proof; its Lean is incomplete. Other small k carry parameter-specific checks.</p></details>
+      </article>
+
+      <article class="card" style="--c:var(--ecc)">
+        <div class="viz" data-viz="ecc" role="img" aria-label="Table of exact minimum distances for binary linear codes, with 45,11 hatched as open"></div>
+        <p class="vcap">Exact d₂(n,k) values · hatched: still open</p>
+        <p class="r-problem"><b>Error-correcting codes</b><span>Binary linear code distances</span></p>
+        <h3>Exact optimal distances for four code parameters</h3>
+        <div class="r-fig">
+          <p class="r-kicker"><span class="math" data-tex="d_2(n,k)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d_2(n,k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></span>: the largest minimum distance of a binary linear code of length <span class="math" data-tex="n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> and dimension <span class="math" data-tex="k"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+          <div class="r-eqs">
+            <p class="r-eq"><span class="math" data-tex="d_2(43,10)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mn>43</mn><mo separator="true">,</mo><mn>10</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d_2(43,10)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">43</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">10</span><span class="mclose">)</span></span></span></span></span><span class="r-op">=</span><b class="r-n">16</b></p>
+            <p class="r-eq"><span class="math" data-tex="d_2(44,10)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mn>44</mn><mo separator="true">,</mo><mn>10</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d_2(44,10)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">44</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">10</span><span class="mclose">)</span></span></span></span></span><span class="r-op">=</span><b class="r-n">17</b></p>
+            <p class="r-eq"><span class="math" data-tex="d_2(44,11)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mn>44</mn><mo separator="true">,</mo><mn>11</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d_2(44,11)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">44</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">11</span><span class="mclose">)</span></span></span></span></span><span class="r-op">=</span><b class="r-n">16</b></p>
+            <p class="r-eq"><span class="math" data-tex="d_2(42,16)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mn>42</mn><mo separator="true">,</mo><mn>16</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d_2(42,16)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">42</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">16</span><span class="mclose">)</span></span></span></span></span><span class="r-op">=</span><b class="r-n">12</b><sup class="r-mark">†</sup></p>
+          </div>
+          <p class="r-open"><span class="math" data-tex="16 \le d_2(45,11) \le 17"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mo>≤</mo><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mn>45</mn><mo separator="true">,</mo><mn>11</mn><mo stretchy="false">)</mo><mo>≤</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">16 \le d_2(45,11) \le 17</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">16</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">45</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">11</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">17</span></span></span></span></span><span class="r-tag r-tag-open">open</span></p>
+          <p class="r-note">† Applies a published 2020 theorem.</p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> Matching constructions and upper bounds settle the best possible distance at fixed length and dimension—the error-protection limit for these binary linear codes.</p>
+        <p class="r-how"><b>Method</b> Reduce every candidate to a complete parent-code domain.</p>
+        <div class="meta"><span class="status">Four exact distances</span><a href="../../../plugins/ecc/archive/source/paper/main.pdf">Read ↗</a><button class="trace" type="button" data-case="ecc">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>The first three follow from the original exclusion; 42/16 applies a published 2020 theorem. Lean reductions keep explicit literature, classification and computation premises. d₂(45,11) remains 16–17.</p></details>
+      </article>
+
+      <article class="card" style="--c:var(--dd)">
+        <div class="viz" data-viz="dd" role="img" aria-label="The Petersen graph"></div>
+        <p class="vcap">Illustration · Petersen graph, degree 3 and diameter 2</p>
+        <p class="r-problem"><b>Degree–diameter problem</b><span>Largest graphs</span></p>
+        <h3>2,567 vertices. Ten neighbors. Four hops.</h3>
+        <div class="r-fig">
+          <table class="r-table">
+            <thead><tr><th scope="col">Degree, diameter</th><th scope="col">Previous</th><th scope="col">New</th><th scope="col"><span class="sr">Gain</span></th></tr></thead>
+            <tbody>
+              <tr class="is-new" style="background:#fff3e8"><th scope="row">(10, 4) · New</th><td class="prev">2,566</td><td class="new">2,567</td><td class="gain">+1</td></tr>
+              <tr><th scope="row">(11, 5)</th><td class="prev">37,628</td><td class="new">37,631</td><td class="gain">+3</td></tr>
+              <tr><th scope="row">(12, 5)</th><td class="prev">42,342</td><td class="new">42,402</td><td class="gain">+60</td></tr>
+              <tr><th scope="row">(16, 4)</th><td class="prev">16,384</td><td class="new">16,416</td><td class="gain">+32</td></tr>
+            </tbody>
+          </table>
+          <p class="r-note">Vertices. Comellas entries: (10,4) checked 2026-11-05; others accessed 2026-11-03.</p>
+          <p class="r-sub">Catalogue totals · 163 graph instances · 44 parameter pairs · 49 completed concrete-graph Lean instances</p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> A stronger constructive lower bound: more vertices fit within the same degree and diameter.</p>
+        <p class="r-how"><b>Method</b> Free ten degree slots with five disjoint edge cuts, then check distances across the whole graph.</p>
+        <div class="meta"><span class="status">4 dated table improvements</span><a href="dd-10-4.html">Read (10,4) ↗</a><a href="../../../case-studies/degree-diameter/index.html">Earlier research ↗</a><button class="trace" type="button" data-case="dd">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Compared with dated Comellas entries; no global optimality is claimed. The MathRSI v2 + DD run, with the PR #7 handoff repair, preserved independent all-roots BFS and Final2567 Lean assembly receipts. External formal C review remains incomplete; the portable package contains receipts, not full rebuildable Lean sources. Catalogue totals include accepted intermediate graphs, not 163 records.</p></details>
+      </article>
+
+      <article class="card" style="--c:var(--e86)">
+        <div class="viz" data-viz="e86" role="img" aria-label="Four-dimensional cube with one square highlighted, above a number line showing one half, 0.59155 and 0.60318"></div>
+        <p class="vcap">Q₄ with one square (C₄) · density scale</p>
+        <p class="r-problem"><b>Erdős Problem 86</b><span>Square-free hypercube subgraphs</span></p>
+        <h3>A tighter ceiling on square-free cube density</h3>
+        <div class="r-fig">
+          <p class="r-kicker">Asymptotic edge density of <span class="math" data-tex="C_4"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">C_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>-free subgraphs of <span class="math" data-tex="Q_n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Q_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+          <p class="r-big"><b class="r-n">&lt; 0.59155154</b></p>
+          <p class="r-from"><span>Previous reference <b class="r-n">0.60318</b></span><span>Conjectured limit <b class="r-n">1/2</b> · open</span></p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> The bound limits how many cube edges can remain without a four-cycle, narrowing the gap toward the conjectured density of one half.</p>
+        <p class="r-how"><b>Method</b> Make local views agree on one common completion.</p>
+        <div class="meta"><span class="status">Exact certificate · no Lean</span><a href="../../../plugins/hypercube-extremal/archive/source/START_HERE.html">Read ↗</a><button class="trace" type="button" data-case="e86">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Exact bound 23662061277957791 / 40000000000000000. A local exact replay checks all 13,150,453 legal Q₄ completions; the high-dimensional step is analytic averaging.</p></details>
+      </article>
+
+      <article class="card" style="--c:var(--q6)">
+        <div class="viz" data-viz="q6" role="img" aria-label="Projection of the six-dimensional cube with a Hamilton cycle and red matching edges on it"></div>
+        <p class="vcap">Illustration · one matching (red) inside one Hamilton cycle of Q₆</p>
+        <p class="r-problem"><b>Ruskey–Savage conjecture</b><span>Hamilton cycles in hypercubes</span></p>
+        <h3>Every matching in Q₆ extends to a Hamilton cycle</h3>
+        <div class="r-fig">
+          <p class="r-thm"><span class="r-thm-h">Theorem</span>Every matching of <span class="math" data-tex="Q_6"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow><annotation encoding="application/x-tex">Q_6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> extends to a Hamilton cycle.</p>
+          <p class="r-thm"><span class="r-thm-h">Corollary</span>With imported results, for every <span class="math" data-tex="n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>, every matching of <span class="math" data-tex="Q_n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Q_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> using at most six directions extends to a Hamilton cycle.</p>
+          <p class="r-sub">Finite universal certificate · 1024 forests · rank 1024</p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> Any set of disjoint edges in the six-dimensional cube can be included in one cycle visiting all 64 vertices. This settles the six-dimensional case; the general conjecture remains open.</p>
+        <p class="r-how"><b>Method</b> A finite forest-rank certificate covers the universal matching family.</p>
+        <div class="meta"><span class="status">Computational proof · audit provisional</span><a href="../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html">Read ↗</a><button class="trace" type="button" data-case="q6">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Finite replay rebuilds 1,048,576 connectivity bits and proves rank 1024 for 1024 forests. The whole-proof audit is same-family and provisional; no Lean.</p></details>
+      </article>
+
+      <article class="card" style="--c:var(--he)">
+        <div class="viz" data-viz="he" role="img" aria-label="A cup, a cap and a convex heptagon"></div>
+        <p class="vcap">Cup, cap and a convex heptagon</p>
+        <p class="r-problem"><b>Happy Ending problem</b><span>Erdős–Szekeres for heptagons</span></p>
+        <h3>One fewer point to force a convex heptagon</h3>
+        <div class="r-fig">
+          <p class="r-kicker">Fewest points in general position that always contain a convex heptagon · working proof</p>
+          <p class="r-big"><span class="math" data-tex="\mathrm{ES}(7) \le"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">S</mi></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo><mo>≤</mo></mrow><annotation encoding="application/x-tex">\mathrm{ES}(7) \le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">ES</span></span><span class="mopen">(</span><span class="mord">7</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span></span></span></span></span><b class="r-n">77</b><span class="r-was">from 78</span></p>
+          <p class="r-from"><span>via <span class="math" data-tex="N(7,6,7) \le 75"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mn>7</mn><mo separator="true">,</mo><mn>6</mn><mo separator="true">,</mo><mn>7</mn><mo stretchy="false">)</mo><mo>≤</mo><mn>75</mn></mrow><annotation encoding="application/x-tex">N(7,6,7) \le 75</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord">7</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">7</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">75</span></span></span></span></span></span><span>and <span class="math" data-tex="N(7,7,7) \le 76"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mn>7</mn><mo separator="true">,</mo><mn>7</mn><mo separator="true">,</mo><mn>7</mn><mo stretchy="false">)</mo><mo>≤</mo><mn>76</mn></mrow><annotation encoding="application/x-tex">N(7,7,7) \le 76</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord">7</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">7</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">7</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">76</span></span></span></span></span></span></p>
+        </div>
+        <p class="r-why"><b>Why it matters</b> The working manuscript lowers our previous upper bound from 78 to 77: every 77-point planar set in general position would contain seven points in convex position.</p>
+        <p class="r-how"><b>Method</b> Trace the equality cases, exchange actual points, and force the two paths that rule out the last case.</p>
+        <div class="meta"><span class="status">Working proof · independent review pending</span><a href="../../../case-studies/happy-ending/n7-20261103/START_HERE.html">Read ↗</a><button class="trace" type="button" data-case="he">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>N measures the maximum size avoiding specified paths and weak heptagons; ES is the geometric forcing threshold. The 75/76 structural manuscripts are received and await independent mathematical review; they have no completed Lean verification. They use the restricted capacity 25 with its historical SAT acceptance. The independently checked 25-point abstract witness supports a separate lower-bound claim. Bounds of 74 apply only to specified subclasses.</p></details>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="workflow" class="sec wrap" aria-labelledby="wf-h">
+    <div class="sec-head">
+      <h2 id="wf-h">How a problem moves through MathRSI</h2>
+      <p>Parallel agents develop proofs. Cross-model reviewers challenge them. New evidence returns to the right stage and becomes reusable research memory.</p>
+    </div>
+    <ol class="route-in" aria-label="Entry">
+      <li>Problem</li><li>Recognize the domain</li><li>Load its plugin, or the shared base alone</li><li>Adaptive stages</li>
+    </ol>
+    <div class="flow-scroll"><div class="flow" id="flow"></div></div>
+    <p class="wiki"><span>Research wiki</span><b>read</b> before each obligation · <b>write</b> lemmas, counterexamples and failures · <b>reuse</b> in the next step</p>
+
+    <div class="replay" id="replay-box">
+      <div class="rp-head">
+        <p class="rp-label"><span class="dot" style="--c:var(--e86)"></span>Research replay · Erdős 86 · shown in the current workflow</p>
+        <div class="rp-ctl">
+          <button class="ctl" id="rpPrev" type="button" aria-label="Previous step">‹</button>
+          <button class="ctl primary" id="rpPlay" type="button">Play</button>
+          <button class="ctl" id="rpNext" type="button" aria-label="Next step">›</button>
+        </div>
+      </div>
+      <ol class="rp-steps" id="rpSteps"></ol>
+    </div>
+  </section>
+</main>
+
+<footer id="start" class="foot">
+  <div class="wrap foot-in">
+    <div class="qs">
+      <h2>Quick start</h2>
+      <p>Clone the repository, open it in a coding-agent host, and start from the main research workflow.</p>
+<pre><code>git clone https://github.com/lisresearchgroup/math-rsi.git
+cd math-rsi
+# in your agent host:
+Use mathrsi-research on &lt;your problem&gt;</code></pre>
+      <p class="fine">Host setup and skill discovery are described in the <a href="https://github.com/lisresearchgroup/math-rsi#readme">README ↗</a></p>
+    </div>
+    <div class="foot-links">
+      <div><h3>Project</h3>
+        <a href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi#readme">README ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V3_CHANGES.md">v3 changes ↗</a>
+      </div>
+      <div><h3>How it works</h3>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/DOMAIN_ROUTING.md">Domain routing ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/WORKSPACE.md">Workspace &amp; wiki ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-meta-evolve/SKILL.md">Meta-evolve ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-base"><span>MathRSI · SII MathRSI Team</span><span>Research advances. The workflow learns.</span></div>
+</footer>
+
+<script src="app.js"></script>
+<script src="result-visuals.js"></script>
+</body>
+</html>

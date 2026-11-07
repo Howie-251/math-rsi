@@ -35,3 +35,7 @@
 原构造器与所有历史算法原样保留，具体作者与框架归属仍见原注释／README。插件新增Python仅[replay_mizuno_dual.py](../tools/replay_mizuno_dual.py)：把原包缺失的LP_INPUT运输改为从现存MODEL透明重建，核同一个exactdual；未换数学模型、未重跑solver。可移植graphproduction直接复用原rebuild，不新建统一graph平台。
 
 新的理论／案例／失败修法进入当前任务wiki，达到可迁移内容后按meta维护插件。原archive不成为新任务的可写状态库。程序存在、文件copy、链接全或来源review均不提升原数学验收状态。
+
+## v4新增只读来源：PR11
+
+[archive/pr11-2567/SOURCE.md](../archive/pr11-2567/SOURCE.md)和[MANIFEST](../archive/pr11-2567/MANIFEST.json)固定head 7bd5a0cf34db9454cb0badf79c8622fb5fb7b833，包含原构造SVG、运行版本、有限编辑源/配方/程序、BFS和Lean compact receipts及LICENSE。它独立于网站开发目录。整理调用见[饱和增点参考](saturated-insertion-and-replay.md)，原程序原样保留，未新增search或统一checker。历史完整数学结果与当前运行范围分别消费。

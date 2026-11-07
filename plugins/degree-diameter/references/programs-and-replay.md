@@ -93,3 +93,7 @@ python3 -B "$DD_PLUGIN/tools/replay_mizuno_dual.py"
 复用现成rebuild时它已创建scratchsource；不需再写统一runner。直接用某原脚本时，先读依赖和写入，复制必要输入闭包到当前taskrun目录，改该副本路径／输出位置，记录改了什么。依赖缺失则准确缩小能力，或由已有presentdata作透明输入适配；不以相近旧源替代缺的实际源。
 
 命令退出0只支持其真实检查：生成、字面绑定、currentcover、exactdual、BFS、kernel分别记。保存实际cwd／argv／exit／结果和输入意义，不因copy或文件数提升历史数学状态。实际授权只核接口时，不恢复旧研究、solversearch或大图验距。
+
+## 5. 饱和源十图有限编辑（v4接入）
+
+标准库原reproduce.py、压缩2557源与edits已自包含在archive/pr11-2567。按[饱和增点参考§3](saturated-insertion-and-replay.md)从当前任务目录运行`--all --output-dir`或`--order 2567 --output`，不写archive；真实CLI及scope见该页。生成不验距、不build Lean、不重新与accepted originals比对。

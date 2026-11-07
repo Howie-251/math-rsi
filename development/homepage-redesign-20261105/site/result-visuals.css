@@ -1,0 +1,203 @@
+/* Results card visuals: interactive Results / Problem switcher & custom SVG styling.
+   Strictly scoped to #results and .rv-* classes. */
+
+#results .viz.rv-ready {
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color .22s var(--ease-out), box-shadow .22s var(--ease-out);
+}
+
+#results .card:hover .viz.rv-ready {
+  transform: none;
+  border-color: var(--hair-2);
+  box-shadow: 0 6px 20px -10px rgba(11, 18, 32, 0.08);
+}
+
+#results .rv-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.76);
+  border-bottom: 1px solid var(--hair);
+  min-height: 36px;
+}
+
+#results .rv-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: var(--band);
+  border: 1px solid var(--hair);
+  border-radius: 999px;
+}
+
+#results .rv-tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 560 12px/1 var(--sans);
+  padding: 5px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .16s var(--ease-out), color .16s var(--ease-out), box-shadow .16s var(--ease-out);
+}
+
+#results .rv-tab:hover {
+  color: var(--ink);
+}
+
+#results .rv-tab.is-on {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(11, 18, 32, 0.08);
+}
+
+#results .rv-tab.is-on::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c);
+  margin-right: 5px;
+  vertical-align: 1px;
+}
+
+#results .rv-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+#results .rv-link {
+  font: 520 12px/1.2 var(--sans);
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 4px;
+  border-radius: 6px;
+  transition: color .15s, background .15s;
+}
+
+#results .rv-link:hover {
+  color: var(--ink);
+  background: rgba(11, 18, 32, 0.04);
+}
+
+#results .rv-link-sub {
+  color: var(--muted);
+}
+
+#results .rv-stage {
+  position: relative;
+  aspect-ratio: 380 / 256;
+  width: 100%;
+}
+
+#results .rv-stage > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#results .rv-stage > svg[hidden] {
+  display: none !important;
+}
+
+/* SVG internal typography (380x256 viewBox across all six cards) */
+#results .rv-svg {
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums lining-nums;
+  user-select: none;
+}
+
+#results .rv-panel {
+  fill: #fff;
+  stroke: var(--hair);
+  stroke-width: 1;
+}
+
+#results .rv-panel-tint {
+  fill: color-mix(in srgb, var(--c) 5%, #fff);
+  stroke: color-mix(in srgb, var(--c) 26%, #fff);
+  stroke-width: 1;
+}
+
+#results .rv-panel-dash {
+  fill: color-mix(in srgb, var(--c) 4.5%, #fff);
+  stroke: color-mix(in srgb, var(--c) 42%, #fff);
+  stroke-width: 1.25;
+  stroke-dasharray: 4 3;
+}
+
+#results .rv-h {
+  font-size: 12px;
+  font-weight: 640;
+  fill: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+#results .rv-kicker {
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  fill: color-mix(in srgb, var(--c) 78%, #000);
+}
+
+#results .rv-meta {
+  font-size: 10.5px;
+  font-weight: 500;
+  fill: var(--muted);
+}
+
+#results .rv-sub {
+  font-size: 10px;
+  font-weight: 450;
+  fill: var(--muted);
+}
+
+#results .rv-val {
+  font-size: 13px;
+  font-weight: 650;
+  fill: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+#results .rv-accent {
+  fill: color-mix(in srgb, var(--c) 82%, #000);
+}
+
+#results .rv-axis {
+  stroke: var(--hair-2);
+  stroke-width: 1.15;
+}
+
+#results .rv-grid {
+  stroke: var(--hair);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+
+@media (max-width: 420px) {
+  #results .rv-bar {
+    padding: 5px 8px;
+  }
+  #results .rv-tab {
+    padding: 4px 8px;
+    font-size: 11.5px;
+  }
+  #results .rv-link {
+    font-size: 11.5px;
+  }
+}

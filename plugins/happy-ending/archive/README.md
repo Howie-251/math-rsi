@@ -9,3 +9,11 @@
 实际阅读：本次作者完整读source/report.md、CURRENT、sat-756 README、独立checker；消费已有READING_REPORT、STRUCTURAL_CHAIN、SAT_EVIDENCE和RESEARCH_LESSONS的详细取证并核关键原件路径，未声称逐字读完约14MB全部历史。已有intake的原阅读范围保存在[evidence/intake](../evidence/intake/)供核对，保持“当时未运行SAT/Lean”的原文，不把其静态阅读改写成本次执行。
 
 renderer作为原件保留，不是新任务默认命令。根renderer可能查作者上层helper；包内working/package/render_report.py可找相邻rendering/aris_render_html.py，仍需matplotlib等原依赖，本轮未运行渲染。当前可直接执行的复核入口是插件tools/check_lower25.py；没有为展示需要改数学源稿。
+
+## 2026-11-08 增量：完整75/76新原件
+
+`n7-20261103/`逐字复制用户原包`aris4math/mathrsi_new_results/n7-upper-bounds-20261103-proofs/`，303文件、16,258,090字节。保留原报告、四份新数学主稿及更新、全部包内依赖/历史/源码/SAT收据、图与renderer、来源清单和两份文献PDF；原相对结构不改，旧`source/`归档原样保留。与旧档案重复的依赖用于保持新包自包含，不按重复份数计新增知识。
+
+主导航[n7-20261103/proofs/CURRENT.md](n7-20261103/proofs/CURRENT.md)，本轮整理层为[取等与交换](../skills/mathrsi-happy-ending/references/equality-exchange.md)。复制不是重放：55份TB级证明、checker二进制等原缺件仍未补齐；两份Lean摘录仍不构成完整工程。新75/76/ES77工作证明及regular共同根条件定理保持same-session/unreviewed/unaccepted。历史稿的旧界和开放余类是当时状态，当前源稿结论从CURRENT顺读，不能覆盖新稿，也不能因新稿语气升级验证。
+
+本轮亲读新主稿：替锁75/76、依赖/单through、t=0、regular共根，及全供给原稿；核旧根§1–3等关键依赖，复用已有v3阅读与源状态，不声称本轮重读整个历史archive。固定小反例和25见证的执行范围另记于维护使用报告。新任务对本目录只读，输出写自己的任务目录。

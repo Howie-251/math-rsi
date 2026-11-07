@@ -89,3 +89,9 @@ NEXT_SESSION.md                下一具体义务及原件入口
 ```
 
 回收时先打开完整结果和承重正文，确认完成范围与当前对象一致。可用产物立即进入下游，不等待所有探索分支；失败／UNKNOWN照实保留。最终用户看到的是正确数学和可恢复断点，内部尝试史通过证据链接保留。
+
+## v4吸收的v2+DD饱和增点路线
+
+满degree源允许改旧边时，dd-construction现可消费matching cut/new star和old-only 2-switch；失败以实际old-old/new-old点对回dd-transfer-diagnosis，最终由dd-obstruction-certificate消费完整图覆盖。[执行参考](../../references/saturated-insertion-and-replay.md)含度数引理、实际输入/失败/返回点、任务wiki动作及自包含十图replay。插件内[只读PR11来源](../../archive/pr11-2567/SOURCE.md)保留2557 seed→2558…2567与原收据，无网站开发路径依赖。
+
+原153/43/47是早期历史目录；加入此v2+DD十图后累计163/44/49，其中新增completed concrete Lean仅2558和2567。此为v4方法吸收，不是本轮新图/BFS/Lean、v4发现或formal C终审完成。新任务仍从当前规格和wiki接入，不自动恢复旧Goal。

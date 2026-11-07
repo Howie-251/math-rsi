@@ -110,6 +110,8 @@ description: "Evolve an existing MathRSI version from real mathematical research
 
 多题吸收时可参考[v3的实际证据与返回](references/v3-evidence.md)：工作集与全域不同、标记在复合变换中丢失、有限秩机制与局部正证书的不同用途、Lean显式参数边界。这些实例帮助定位现行caller的具体缺口，不要求未来每轮都新增四条规则或复制本轮插件。
 
+v4 的 [临界取等与相容见证](../mathrsi-prove/references/critical-equality.md) 是另一种集中增量：Happy Ending 的新工作稿触发同一取等链、合法交换和见证定位；DD 的真实 v2 增点经验则深化已有插件。当前流程已覆盖的反例回流和证据继承只补领域实例，不重复算新 base 能力。实际采用与验证范围见 [v4维护](../../../development/evolution/v4-20261108/EVOLUTION.md)。
+
 ## 3. 形成可执行修改，再按已有分工实现
 
 协调者把成熟提案整理为本轮实际修改顺序。优先改变原错误或主要成本来源，不按文件数、模型分数或抽象重要性排序。存在相互依赖的改动就说明共同接口；独立任务交不同作者并行，明确文件所有权。
