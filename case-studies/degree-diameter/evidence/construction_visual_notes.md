@@ -1,6 +1,6 @@
 # What the construction figures show
 
-The figures explain three construction ideas using an exact small example and schematics of the larger constructions. All assets are available as SVG and PNG. ARIS renders the English and Chinese manuscripts with its academic template; the pages embed their figures and interaction for offline reading.
+The figures explain four construction ideas using an exact small example and schematics of the larger constructions. ARIS renders the English and Chinese manuscripts with its academic template; the pages embed their figures and interaction for offline reading.
 
 ## A. Preserved-edge filling: an exact small example
 
@@ -34,6 +34,18 @@ The figure draws three of the 17 role groups. The source H is retained; the chan
 - [Preserved construction/proof draft](records/d26_D3_n7532_PROOF_DRAFT.md), copied from the actual research directory. Its historical final paragraph describes the producer-stage status, before the later release.
 - [Frozen numerical parameters](../reproduce/late_graphs/materials/research/ddp/two_successful_methods_20261101/retained_edge_transfer/opposite_gq44_spread25/ovoid_product26/diagonal_fill_reallocation/PARAMETERS.json).
 - [Final release record](records/d26_D3_n7532_ROOT_GRAPH_RELEASE.json), including the subsequent verification and concrete Lean status.
+
+## D. Extend a full-degree source: 2,566 → 2,567
+
+The [new figure](../assets/construction_d10_d4.png) shows the final step of the (10,4) construction. The source is already 10-regular, so each attachment point first needs a free degree slot. Delete these five disjoint source edges:
+
+```text
+(193,2362), (192,2363), (417,2555), (2508,2565), (2511,2528)
+```
+
+Add vertex **2566** and join it to all ten endpoints. Every endpoint loses one edge and gains one; the new vertex has ten neighbors. The graph therefore remains 10-regular, with **2,567 vertices and 12,830 − 5 + 10 = 12,835 edges**. No further 2-switch is needed at this final step; earlier stages of the source chain used switches.
+
+This adapts route-preserving extension to a source with every degree slot already occupied. Degree bookkeeping alone does not establish the diameter: removing edges can change old-to-old routes, while the new vertex must also reach the entire graph within four steps. Independent all-root BFS on the final graph confirmed diameter exactly 4, and the complete original-statement Lean proof passed. The [portable construction package](../reproduce/d10_d4/) provides the actual edge cuts, deterministic replay and preserved verification records. The diagram is a schematic of those changes, not a drawing of all 2,567 vertices.
 
 ## Display reproduction
 

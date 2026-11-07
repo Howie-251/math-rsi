@@ -29,7 +29,7 @@ right.set_facecolor("#fdfcf7")
 fig.subplots_adjust(left=.08, right=.93, bottom=.22, top=.70, wspace=.50)
 fig.text(.045, .94, "Larger graphs under the same degree and diameter limits",
          fontsize=20, weight="bold")
-fig.text(.045, .885, "Three main-table improvements and a seven-parameter D3 series",
+fig.text(.045, .885, "Four main-table improvements and a seven-parameter D3 series",
          fontsize=12, color="#6b6b6b")
 
 table_rows = [r for r in rows if r["diameter"] != "3"]
@@ -40,8 +40,8 @@ for i, r in enumerate(table_rows):
               weight="bold", color="#b8390e")
     left.text(0, i - .32, f'{int(r["reference"]):,}  →  {int(r["ours"]):,}',
               fontsize=10, color="#6b6b6b")
-left.set_yticks(range(3), [f'({r["degree"]}, {r["diameter"]})' for r in table_rows])
-left.set_ylim(2.6, -.65)
+left.set_yticks(range(len(table_rows)), [f'({r["degree"]}, {r["diameter"]})' for r in table_rows])
+left.set_ylim(len(table_rows)-.4, -.65)
 left.set_xlim(0, 75)
 left.set_xticks([0, 20, 40, 60])
 left.set_xlabel("Additional vertices", labelpad=10)
@@ -80,7 +80,7 @@ right.legend(loc="upper left", bbox_to_anchor=(-.02, -.18), frameon=False,
              ncol=2, fontsize=9)
 
 fig.text(.045, .075,
-         "A: Comellas table, 3 November 2026.   B: published constructions and formula instances, 1 November 2026.",
+         "A: Comellas table, 5 November 2026.   B: published constructions and formula instances, 1 November 2026.",
          fontsize=9, color="#6b6b6b")
 fig.text(.045, .038,
          "Each comparison uses the same maximum degree and diameter. Reference formulas and sources accompany the case study.",
@@ -88,5 +88,7 @@ fig.text(.045, .038,
 (CASE / "assets").mkdir(exist_ok=True)
 fig.savefig(CASE / "assets/results.png", dpi=180, facecolor="#fdfcf7")
 fig.savefig(CASE / "assets/results.svg", facecolor="#fdfcf7")
+svg = CASE / "assets/results.svg"
+svg.write_text("\n".join(line.rstrip() for line in svg.read_text().splitlines()) + "\n")
 plt.close(fig)
 print("Wrote assets/results.png and assets/results.svg")

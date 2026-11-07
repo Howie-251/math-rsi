@@ -2,15 +2,19 @@
   "verdict": "PASS",
   "review_independence": "same-family",
   "acceptance_status": "provisional",
+  "reviewed_at_UTC": "2026-11-05 10:57 UTC",
+  "rendered_at_UTC": "2026-11-05 11:12 UTC",
+  "scope": "Targeted static publication consistency for README.md, README.zh-CN.md, index.html, index.zh-CN.html, catalogue/comparison CSVs and their local figure/link targets.",
   "checks": {
     "information_fidelity": "pass",
     "structure": "pass",
     "math_code_tables": "pass",
     "callouts": "not_applicable",
-    "escaping": "pass",
+    "escaping": "not_assessed",
     "placeholder_leak": "pass"
   },
   "blocking_issues": [],
   "warnings": [],
-  "summary": "Both English and Chinese HTML pages faithfully retain their canonical Markdown: all 15 prose paragraphs, seven non-title headings, two four-column tables, four list items, 11 source links, three inline-code spans, emphasis and original image alternatives per language. The generated hero preserves the source title through its title and subtitle. HTML nesting, table cells, TOC targets, unique IDs, method controls, cube-state controls and local link targets are valid. The seven embedded SVGs per page match the local assets; localized demo labels and captions match their embedded data, and the inline program matches assets/construction.js. Source-path and generation-time metadata agree with each footer. No unexpected source-derived executable markup or parser placeholders were found; no source callouts require routing. This is a static render-fidelity review, without browser execution or mathematical claim validation."
+  "summary": "The English and Chinese Markdown and HTML agree on all four Comellas comparison rows, including (10,4): 2,566 to 2,567 (+1), and the 5 November 2026 comparison date. The CSVs contain 163 graph rows across 44 parameter pairs and 44 comparison rows; the catalogue Lean field records 49 complete instances and 114 incomplete instances, matching both readers. Each HTML page has three matching method panels and controls, eight embedded SVG images matching local assets, and retained source image alternatives. The new d10_d4 SVG is embedded, its paired PNG exists, and the portable d10_d4 README and all HTML local/anchor links resolve. IDs are unique. Titles and subtitles contain no draft labels or claims of global priority. No parser placeholders were found. This targeted static copy/render consistency review did not execute a browser or repeat mathematical verification, BFS or Lean builds. New v2 attribution and execution-version links were checked after the publication branch was updated to current main; no graph search, BFS or Lean build was repeated.",
+  "version_attribution": "New (10,4) sequence: MathRSI v2 workflow and DD plugin with PR #7 repair; publication checkout updated to main/v3."
 }

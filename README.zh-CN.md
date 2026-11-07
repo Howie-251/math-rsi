@@ -138,9 +138,9 @@ Root 读取返回产物后再安排下一义务。跨模型对抗意见与确定
 
 ## 研究案例：Degree–Diameter 度数—直径构造
 
-**153 张图，覆盖 43 组度数／直径参数，其中 47 张具体图有 Lean 证明。** 三组构造超过指定日期的 Comellas 表条目；直径为 3 的系列扩展到 **414,132 个顶点**，并逐项列出与公开构造方法的比较。
+**MathRSI v2 得到 (10,4) 的 2,567 点图，超过 2026 年 11 月 5 日 Comellas 表中的 2,566 点。** 合并前期成果，目录现有 **163 张图、44 组参数、49 张具体图的 Lean 证明**。四组参数超过主表条目；直径为 3 的系列扩展到 **414,132 个顶点**。
 
-这些通过 **ARIS** 完成的研究为 MathRSI v2 的度数—直径插件提供了经验。案例用交互图解释互补邻域补点、有限域分层与几何连接重分配，附比较来源和重建全部图所需的紧凑构造程序。
+前期 **ARIS** 研究为度数—直径插件提供了经验；新一轮研究实际使用 **v2 工作流和 DD 插件**取得新增结果。案例附有交互构造图、比较来源、紧凑复现程序及[实际使用版本说明](case-studies/degree-diameter/evidence/execution_version.md)。
 
 **[中文案例](case-studies/degree-diameter/README.zh-CN.md)** · [English](case-studies/degree-diameter/README.md) · [构造程序](case-studies/degree-diameter/reproduce/README.md)。克隆或下载后，在浏览器打开 `case-studies/degree-diameter/index.zh-CN.html` 阅读图文版。
 
