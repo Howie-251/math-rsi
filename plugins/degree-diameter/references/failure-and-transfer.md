@@ -34,3 +34,7 @@
 公开baseline变化必须消费为动作：竞争候选低于已知保证就取消弱目标或换源；固定数学题继续原规格但修正record措辞。实际图合法／独立检查／Lean／模型review／publicpriority分开。原153 named／43pair／47kernel是历史目录，0certifiedglobalpriority，不作为本插件能力评分。
 
 只读整合时发现错漏，写当前任务维护记录；不要改归档旧PRED或旧UNKNOWN来配合新结论。新的外层插件维护由meta-evolve处理。
+
+## v2+DD正向对照：小源cut-star失败不排新图
+
+[2567实际配方](saturated-insertion-and-replay.md)在饱和10正则源上cut五matching边、新星连十端点，先前两步用old-only switches；历史完整全根核查通过。它没有推翻“新根PASS不够”的旧失败，而是补齐真实old-old义务。现有材料不含完整失败搜索日志；新题记录实际pair和共同最终图，不能编造原失败数或搜索效率。累计目录更新163/44/49，原153/43/47仍归早期ARIS；v4是吸收版本，不改原执行归属。

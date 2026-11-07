@@ -1,0 +1,91 @@
+{
+  "acceptance_authority": "human_user",
+  "accepted_unix": 1792134544.5174022,
+  "authorization": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/human_acceptance_20261016_v1/human_authorization.json",
+    "sha256": "2bc823deb8c1e5b825248ad009d3109d2765b478556af5a6da3c8ecee93759a7",
+    "size_bytes": 1035
+  },
+  "backend_verification": "unverifiable",
+  "c5_acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c5_acceptance_v2/campaign_acceptance_audit.json",
+    "sha256": "4101b158a1516d603148194e34ed44e67769d26b4c47d27b9933020fee137ea3",
+    "size_bytes": 5756
+  },
+  "c6_proved": true,
+  "campaign_status": "C6_VERIFIED_UNSAT",
+  "certificate": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/cardinality_c6_accepted_certificate.json",
+    "sha256": "fca38d559ef1b53658894392bce4a22ef3a1a42c14962566aefc79663d8e2384",
+    "size_bytes": 22660
+  },
+  "certified_upper_bound": 29,
+  "effort_verification": "unverifiable",
+  "fresh_checker_replay_count": 0,
+  "original_pending": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/row_certificate.pending.json",
+    "sha256": "f2273bad8fbb6c30d7010334c18daf5dda945782851931555380c8eb410d22af",
+    "size_bytes": 98392
+  },
+  "proof_content_reads": 0,
+  "proof_hashes_freshly_computed": 0,
+  "publisher": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/human_acceptance_20261016_v1/publisher.py",
+    "sha256": "df4490ed617dc0e2d7d6fe4333b225b5139367ecabbfd73b04409f043589a880",
+    "size_bytes": 13974
+  },
+  "publisher_validation": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/human_acceptance_20261016_v1/publisher_validation.json",
+    "sha256": "c92b6fc6b55972277bf733d8bfb59821f6214489925d653a433ccc1df51dfcbf",
+    "size_bytes": 368
+  },
+  "reused_checked_cases": 5,
+  "review": {
+    "assurance": "provisional",
+    "backend_model_attestation": "unverifiable",
+    "cli_reported_assistant_models": [
+      "anthropic/claude-fable-5.1"
+    ],
+    "cli_reported_init_models": [
+      "claude-fable-5-1-reversed[1m]"
+    ],
+    "human_accepts_disclosed_limitations": true,
+    "job_id": "b5f4eb9ee2344e9fb4f1b00e976322dd",
+    "provider_effort_attestation": "unverifiable",
+    "receipt_id": "03cdc69706ab4087ba1e8fbbfc81c3c2",
+    "report": {
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/human_acceptance_20261016_v1/001-c6-row-review.report.full.md",
+      "sha256": "1ac915821485666d79cb7d7ab2fdbdb9ffbfbe1a95ba6f7abf6fcdc4b347258f",
+      "size_bytes": 10912
+    },
+    "requested": {
+      "effort": "max",
+      "model": "claude-fable-5-1-reversed",
+      "semantic_model": "claude-fable-5-1",
+      "tools": "Read,Grep,Glob"
+    },
+    "status": "COMPLETED_SUBSTANTIVE_SUPPORTED",
+    "thread_id": "99f9a891-e169-498a-83c8-3f59e218b828",
+    "unresolved_limitations": [
+      "U1: some dependency originals not locally exported to reviewer",
+      "U2: reviewer saw checker-log excerpts; existing full-log verification reused; no proof-content review",
+      "U3: backend/model and effort attestation unverifiable; review provenance remains provisional"
+    ]
+  },
+  "review_assurance": "provisional",
+  "schema": "c6_human_acceptance_receipt_20261016_v1",
+  "scope": {
+    "assumptions": [
+      "Previously accepted C1..C5 and the documented endpoint injection/counting and exact-cell semantic contracts",
+      "Five previously VERIFIED_UNSAT case checks are reused as explicitly instructed by the user; no new case verification"
+    ],
+    "count_identity": "N=25+e(X)-m(X)",
+    "domain": "complete ordered rank-3 signotope; blue-path-5/red-path-6 bounds; no weak 7-gon",
+    "exceptional_state_count_bound": 10,
+    "not_a_global_geometric_erdos_szekeres_bound": true,
+    "quantification": "For every X in this model domain, at every order N",
+    "row_theorem": "e(X)>=6 implies m(X)>=6"
+  },
+  "status": "ACCEPTED_ROW_REUSING_FIVE_CHECKED_CASES_HUMAN_AUTHORIZED",
+  "theorem_credit": true
+}

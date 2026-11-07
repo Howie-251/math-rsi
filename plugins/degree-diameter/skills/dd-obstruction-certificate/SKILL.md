@@ -88,3 +88,9 @@ python3 -B "$DD_PLUGIN/tools/replay_mizuno_dual.py"
 ```
 
 若只做静态审计，执行栏写实际读取范围和未运行；若读旧Leanreceipt，写历史build而非本次。已有证据未变就引用，不重生成同一报告。父流程收到后能直接代入命题、修准确缺口或关闭该有限域。
+
+## cut-star候选的完整距离消费
+
+[饱和源参考](../../references/saturated-insertion-and-replay.md)给matching cut/new star与old-only switch的精确对象。先核literal source和最终delta；degree引理不承担D。检查必须覆盖old-old和new-old，部分roots/超时返回实际覆盖域；失败返回具体pair、原路径所用cut及最终邻接下缺失路径，供当前prove联合修复。新root全部过而旧pair坏只否定当前候选，不排整个matching域。
+
+静态复用PR11时按参考§4分别消费十图历史全根BFS、2558/2567 kernel/import和未完成formal C。当前最小replay只生成边表，不是本轮BFS/Lean或再次accepted-original比对；完整Lean工程不在插件中。实际运行结果及下一未闭义务写任务wiki，返回原verify/prove调用处。

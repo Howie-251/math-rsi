@@ -57,3 +57,7 @@ plane owner恢复另证load≤1，选定I31/I32的完整正等式供具体clone�
 5. 返回实际命令、exit、new／reused模块、完整域、输入绑定和未闭连接。静态阅读旧receipt就明确未build；模型review未执行Lean也照实写。
 
 归档compile.py读取原LinuxROOT和旧FORMAL_ENV_COMMAND，且generate_lean.py缺原ROUTE_CERTIFICATE输入；这些原件便于审计，不保证unmodifiedportablebuild。原包没有工具链／oleancache。新环境需要的依赖明确准备；用户只要求阅读／复用证据时无需安装／重编。
+
+## 5. PR11有限编辑实例的形式证据边界
+
+[2567收据](../archive/pr11-2567/case-studies/degree-diameter/reproduce/verification/d10_d4/n2567_ROOT_GRAPH_RELEASE.json)记录原Fin2567无条件目标、Final2567/Final2567Audit及标准三公理。2558另有具体目标/import记录；八个中间图没有单独completed Lean条目。外部formal C仍incomplete。这里只保存历史receipts，无完整Lean工程，静态消费与本轮replay均不冒称新kernel执行；需要新build时明确当前工程缺件，回父verify准备。

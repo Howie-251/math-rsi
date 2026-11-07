@@ -1,0 +1,268 @@
+\section{The heptagon residual has a five-point transversal}\label{sec:deletion}
+Write $B=M_7(5,6)$. Call a point a \emph{right root} if it starts no
+three-cap in the specified ambient set. Every triple starting at a
+right root is a cup, so it can be prepended to any cup to its right.
+
+\begin{lemma}[Endpoint shift]\label{lem:root}
+Every endpoint of a six-cup in a set counted by $D_7$ is a right root.
+\end{lemma}
+\begin{proof}
+Let a six-cup end with $u,s$ and suppose $(s,q,r)$ is a three-cap.
+If $(u,s,q)$ is a cup, append $q$ to obtain a seven-cup. Otherwise
+$u$ ends the five-point prefix of the six-cup and starts the four-cap
+$(u,s,q,r)$, a forbidden junction. Both possibilities are impossible.
+\end{proof}
+
+\begin{lemma}[Anchoring]\label{lem:anchor}
+In a heptagon-free set, suppose $(a,b,t_3,t_4,t_5,t_6)$ is a six-cup
+and $a$ is a right root. Every six-cup ending at $b$ starts at $a$.
+\end{lemma}
+\begin{proof}
+If a start $x<a$ existed, $(x,a,b)$ would have to be a cap, since
+otherwise $x$ could be prepended to the displayed cup. That cap and
+the six-cup from $x$ to $b$ would form a heptagon. If $x>a$, the
+right root $a$ could be prepended to the six-cup from $x$ to $b$.
+Only $x=a$ remains.
+\end{proof}
+
+\begin{theorem}[Five-point deletion]\label{thm:deletion}
+Every set counted by $D_7$ has a subset of at most five points meeting
+every six-cup. In particular $D_7\le B+5$.
+\end{theorem}
+\begin{proof}
+Let $E$ be all actual six-cup endpoints. By \cref{lem:root}, every
+triple in $E$ is a cup; thus $|E|\le6$. If $|E|\le5$, delete $E$.
+Otherwise write $E=(e_1,\ldots,e_6)$. This is a six-cup, and
+\cref{lem:anchor} says that every six-cup ending at $e_2$ starts at
+$e_1$. Delete $E\setminus\set{e_2}$. A surviving six-cup would have
+an original endpoint in $E$, hence endpoint $e_2$, but would have to
+start at the deleted point $e_1$. This is impossible.
+The remaining set has no five-cap, six-cup, or heptagon, and has size
+at most $B$.
+\end{proof}
+
+\section{Finite states and the balanced heptagon exclusion}\label{sec:balanced}
+Down-set encodings of monotone paths are classical~\cite{MS,BB}.
+
+The certificate conventions in this section use \emph{cup first, cap
+second}. This differs from the order of the arguments of $M_n(a,b)$.
+For reference, the two stored conventions are
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Certificate & Coordinates of a cell\\
+\midrule
+Section~\ref{sec:balanced}: heptagon & (cup, cap)\\
+Sections~\ref{sec:octagons}--\ref{sec:319}: octagon & (cap, cup)\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $u<v$, let $d(u,v)=(r(u,v),b(u,v))$, where $r+1$ and $b+1$ are
+the longest cup and cap lengths ending at the exact pair $(u,v)$.
+Define
+\begin{equation}\label{eq:states}
+ F(v)=\down\set{d(u,v):u<v}.
+\end{equation}
+All these ranks are actual maxima in the stated ambient set.
+
+\begin{lemma}[Difference and chronology]\label{lem:difference}
+For $u<v$, $d(u,v)\in F(v)\setminus F(u)$. Consequently states are
+injective, and strict inclusion of two occupied states forces the same
+order on their owners.
+\end{lemma}
+\begin{proof}
+If $d(u,v)\in F(u)$, some actual predecessor $t<u$ has
+$d(t,u)\ge d(u,v)$ coordinatewise. According to the orientation of
+$(t,u,v)$, extending an attaining cup or cap contradicts one of the
+two maxima at $(u,v)$. Thus the difference is nonempty. Equal states,
+or an earlier state containing a later one, would contradict this
+conclusion.
+\end{proof}
+
+With no $a$-cap or $b$-cup, the states lie in $[b-2]\times[a-2]$,
+whose number of down-sets is $\binom{a+b-4}{a-2}$, including the empty
+state. A Ferrers tuple denotes column heights, with trailing zeros
+where required by the data format. The finite models permit every
+chronological order compatible with inclusion; they do not sort
+incomparable states into a preferred order.
+
+\begin{theorem}[A sharp ETV case; computer-assisted]\label{lem:B25}
+Every set of 26 points in $\mathbb R^2$, in general position and with
+distinct $x$-coordinates, contains a five-cap, a six-cup, or seven
+points in convex position. There is a 25-point set avoiding all three.
+Thus $M_7(5,6)=25$; reflection also gives $M_7(6,5)=25$.
+\end{theorem}
+\begin{proof}[Certificate reduction]
+For the lower bound, the Erd\H{o}s--Szekeres construction~\cite{ES61},
+in the restricted form of Erd\H{o}s--Tuza--Valtr~\cite{ETV}, gives
+$\sum_{i=1}^{3}\binom5i=25$ points with none of the three configurations;
+see also Baek--Balko~\cite[Section~4]{BB}.
+The archive also contains an exact rational 25-point witness and a
+separate integer checker confirming maximum cup length five, maximum
+cap length four, and no convex heptagon among all
+$\binom{25}{7}=480\,700$ seven-point subsets.
+This lower-bound check is separate from the Lean upper-bound theorem.
+
+A hypothetical 26-point counterexample has 26 distinct actual states
+in $[4]\times[3]$, a universe of 35 states, and hence nine missing
+states. The empty state and the one-cell state occur at the first two
+points; the third has one of the two two-cell states. In the certificate's
+area-sorted dictionary, an eligible hole set therefore avoids indices
+0 and 1 and does not contain both 2 and 3. There are exactly
+\[
+ \binom{33}{9}-\binom{31}{7}=35\,937\,525
+\]
+eligible hole sets.
+
+The certificate derives necessary hole clauses from pair-label
+differences, exact corner attainment, shared predecessor witnesses, actual
+owner order, four-point sign constraints, and common-endpoint paths.
+A five-cup and four-cap with common endpoints give a heptagon, so
+excluding just this type is a necessary restriction. The Lean coverage stage refutes a CNF consisting of 91,720 derived
+hole clauses, a cardinality encoding, and one padding tautology:
+461 variables and 93,169 clauses in total. Its LRAT proof has
+381,647 additions. Separately, two enumerations, recursive and
+fixed-popcount, verify that none of the eligible hole sets survives.
+\Cref{app:restricted} describes the primitive semantics and proof format.
+\end{proof}
+
+Consider now a balanced avoiding set $S$ of size 50. Let $\cupS$ and
+$\capS$ be its actual five-cup and five-cap starters, and $\cupE$ and
+$\capE$ the corresponding endpoint sets.
+
+\begin{lemma}[Equality partition]\label{lem:equality}
+There is an integer $t$ such that
+\[
+ S=\cupS\sqcup\capE=\capS\sqcup\cupE,
+ \qquad |\cupS|=|\capS|=|\cupE|=|\capE|=25,
+\]
+and, with
+\[
+ L=\cupS\cap\capS,\quad X=\cupS\cap\cupE,
+ \quad Y=\capS\cap\capE,\quad R=\cupE\cap\capE,
+\]
+one has $|X|=|Y|=t$ and $|L|=|R|=25-t$.
+\end{lemma}
+\begin{proof}
+The set $\cupS$ contains no five-cap: joining the end of such a cap
+to an actual outgoing five-cup extends one of them to a six-chain.
+Its complement contains no five-cup. By \cref{lem:B25} and reflection,
+both parts have size at most 25, and hence exactly 25. Color exchange
+and order reversal give the same endpoint counts. A point ending a
+five-cap cannot start a five-cup, by the same junction argument, so
+the disjoint pairs each exhaust $S$. Taking their four intersections
+gives the stated cardinalities.
+\end{proof}
+
+\begin{lemma}[Population certificates]\label{lem:populations}
+In a planar set with no six-cup, six-cap, or heptagon:
+\begin{enumerate}[label=(\roman*)]
+\item at most thirteen points both end and start five-cups;
+\item any subset avoiding five-cups and five-caps, whose last point
+starts a five-cup in the ambient set, has at most nineteen points;
+\item if $N_0$ consists of points ending neither five-chain and $N_2$
+of points ending both, then
+\[\min(|N_0|,|N_2|)\le16.\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}[Necessary reductions and finite certificates]
+For (i), select fourteen supposed through-cup points, a five-cup ending
+at the first, and a five-cup starting at the last. Exactly 22 points
+are selected: fourteen core points and four on each side. Any core
+four-cap extends at both ends to a six-cap, so the core has cap length
+at most three. Its cap paths extend by one at each end, whereas its
+cup paths remain valid ambient paths. The source records exact core
+recurrences and these valid implications for ambient ranks, without
+requiring ambient attainment in the selection. Its refutation has
+3,009 additions.
+
+For (ii), select a supposed 20-point core and the four other vertices
+of an actual five-cup from its last point. Incoming ranks ending in
+the core are recomputed there; neither color reaches five. The resulting
+24-point source is refuted in 79,173 additions.
+
+For (iii), the incoming states of $N_0$ are the twenty ideals of
+$[3]^2$. Those of $N_2$ are the twenty ideals
+$(4,1+h_1,1+h_2,1+h_3)$ with $h$ an ideal of $[3]^2$. Select seventeen
+owners from each family, retaining the ambient first two points.
+A named-owner source permits all such selections and all their
+inclusion-compatible orders. Pair ranks are ambient and paths are
+selected. Its refutation has 102,563 additions.
+
+All three formulas include the necessary four-point packet constraints
+and common-endpoint polygon exclusions. The compact formulas and refutations are embedded in the Lean sources.
+Their geometric interpretations and logical soundness are proved there;
+\cref{sec:formal,app:cnf} describes the interface. Thus each
+supposed configuration supplies an assignment to a refuted formula.
+\end{proof}
+
+\begin{corollary}\label{cor:range}
+In \cref{lem:equality}, $9\le t\le13$. Every twenty ambient five-cup
+starters contain an internal five-cup, and a 25-point starter class
+has at least six actual internal five-cup sources.
+\end{corollary}
+\begin{proof}
+The through-cup bound gives $t\le13$. In the equality partition,
+$N_0=L$ and $N_2=R$, so $25-t\le16$ and $t\ge9$.
+Any set of twenty cup starters has no internal five-cap by the
+junction argument. If it had no five-cup either, part (ii) of
+\cref{lem:populations}, applied to its last point, would be contradicted.
+Finally, deleting at most five internal sources from a 25-point starter
+class would leave at least twenty ambient starters with no internal
+five-cup. Deletion cannot create a new path, so at least six sources
+must exist.
+\end{proof}
+
+\begin{proposition}[Balanced heptagon bound]\label{prop:balanced}
+$C_7\le49$.
+\end{proposition}
+\begin{proof}
+Assume $|S|=50$ and let $K=\cupS$. Retain the 25 points of $K$ and
+the four other points of an actual five-cup from $\max K$. For a point
+of $K$, no ambient five-cap can end there, so its actual incoming
+state lies in the 35-state universe $[4]\times[3]$. Fifteen of these
+states have width four; their active population is precisely $t$.
+The low-width owners are also cap starters by \cref{lem:equality}.
+All 25 states are actual ambient states, not states recomputed after
+selecting these 29 points.
+
+Reflect the whole configuration if necessary to make its first triple
+a cup, and select the corresponding starter class anew. The four
+possible initial packets, in order $012,013,023,123$, are
+$1000,1100,1110,1111$. A cup and cap share at most two vertices.
+The initial three-cup therefore forces the first five ambient points
+to have no ending five-cap, and hence to belong to $K$. In the $1111$
+sector the first six points similarly belong to $K$. Exhaustive
+literal enumeration retains all seven five-point extensions of $1000$
+and all 118 six-point extensions of $1111$ without a six-cup.
+The $1100$ and $1110$ sectors remain in the primary formula until
+their exclusions are derived.
+
+The primary formula has 151,801 variables and 4,017,399 clauses. It includes \cref{cor:range}, the six-source condition,
+free order for incomparable owners, shared ambient pair labels,
+selected paths, exact core outgoing paths, and the prefix alternatives.
+Exact incoming attainment is imposed only at retained ambient prefix
+points, where every predecessor is present. The variable meanings
+and necessary clause families are listed in Appendix~\ref{app:cnf}.
+
+A single proof over this unaugmented primary formula derives the empty
+clause. It contains 1,989,465 additions and 84,721,022 ordered hints.
+Its derivation includes the exclusions of $t=13,9,12$, the two mixed
+prefixes, and both final cases $t=10,11$. These case facts are derived
+within the proof; the final contradiction has no case assumption.
+The compact source uses 190,932 indexed clauses of the primary formula;
+the same number of proof additions suffices. Checked replay of
+this compact proof establishes unsatisfiability. The formal proof additionally checks each retained clause against a
+proved necessary schema under one common assignment.
+
+Every supposed planar $S$ supplies a truthful assignment to the
+retained source, so unsatisfiability is a contradiction. Any larger
+avoiding set would contain an avoiding fifty-point subset.
+\end{proof}
+
+Combining \cref{lem:B25,thm:deletion,prop:balanced,thm:transfer} gives
+\[
+ \ES(7)\le49+(25+5)+2=81.
+\]
+The classical construction~\cite{ES61} supplies the lower endpoint
+$\ES(7)\ge33$; it is separate from the formalized upper bound.

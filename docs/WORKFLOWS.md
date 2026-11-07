@@ -10,7 +10,7 @@
 
 以下转移有[两个项目的六条历史实证](../development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)作具体依据：Property B的24点局部caller闭合后回剩余23点，而非提前交付；ECC补独立全域集合后回pair caller，无边必要条件足够时停止更贵扩张。数学细节与当时未闭范围见该记录，原ECC交接的仓内只读快照见[来源说明](../development/context/ecc-source/README.md)。这是历史经验的流程提炼；本轮没有重新求解这两题、重放全部计算或验证新流程提速。
 
-六个领域的逐阶段调用维护在[DOMAIN_ROUTING](DOMAIN_ROUTING.md)，并由每个实际SKILL的领域调用处读取执行。它给定ECC、极值超立方体、Hamilton超立方体和Happy Ending的真实输入、产物消费与回流；v3保留本页五阶段结构，见[V3_CHANGES](V3_CHANGES.md)。
+六个领域的逐阶段调用维护在[DOMAIN_ROUTING](DOMAIN_ROUTING.md)，并由每个实际SKILL的领域调用处读取执行。它给定ECC、极值超立方体、Hamilton超立方体和Happy Ending的真实输入、产物消费与回流；v3保留本页五阶段结构，见[V3_CHANGES](V3_CHANGES.md)。v4在同一route-loop/prove/verify中加入[临界取等与相容见证](../base/skills/mathrsi-prove/references/critical-equality.md)，并原位深化Happy Ending与DD；具体范围见[V4_CHANGES](V4_CHANGES.md)，固定版本为`v4`。
 
 ## 五组流程与实际回流
 

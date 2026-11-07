@@ -100,3 +100,9 @@ Lemma：本次source与center函数满足完整N克隆定理。
 已保存参数产生实际graph后，先核当前对象而非继续优化。若原目标为存在性且simple／degree／全部pair／精确D都闭，交候选证明与适用验证，不为达到更好margin自动加k或换q。若只得到条件机制，明确缺的是GQ存在、controllerGOOD、plane横截还是负载可行；条件工具仍交回wiki供复用。
 
 碰到公共基线更强，只对竞争型下一动作重判；已经构造的合法图与Lean不删除。需要换连接时把实际变化交transfer-diagnosis，旧事实逐项继承，不机械重编原source或重跑全roots。
+
+## 饱和源的局部增点：cut matching、new star与可选旧点switch
+
+源已满cap而当前任务允许删旧边时，读[饱和增点与有限编辑](../../references/saturated-insertion-and-replay.md)。接实际G、matching M、d/D、允许修改和源距离证据；删除M并让新点连全部端点，先用逐点损益证明degree与simple，再在**同一最终图**接old-old/new-old全部距离。需要时合法old-only 2-switch保持度数但重新开启受影响距离义务。返回具体cut/switch、完整图、全pair证明或失败点对；不能只返回新根PASS。
+
+(10,4)2558…2567现有冻结配方可直接从插件archive重放，输出写当前任务，不重跑发现搜索。详细输入、合法性证明、错误返回、CLI和历史receipt范围均在该参考。失败交transfer-diagnosis；完整图交当前prove/verify，当前任务wiki记录实际delta及新旧证据，插件archive保持只读。

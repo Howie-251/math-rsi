@@ -2,13 +2,13 @@
 
 [中文说明](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Try a proof repair](examples/proof-repair/README.md) · [Property B case study](case-studies/property-b/README.md) · [Degree–Diameter case study](case-studies/degree-diameter/README.md)
 
-Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)) · **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)) · **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)). Each tag preserves a complete repository snapshot and stays fixed; `main` tracks the recommended **v3** release. See [v3 changes and runnable checks](docs/V3_CHANGES.md) and [v2 changes](docs/V2_CHANGES.md).
+Fixed versions: **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)) · **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)) · **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)) · **[v4 — current](https://github.com/lisresearchgroup/math-rsi/tree/v4)** ([ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip)). Each tag preserves a complete repository snapshot and stays fixed; `main` tracks the recommended **v4** release. See [v4 capability changes](docs/V4_CHANGES.md), [v3 changes and runnable checks](docs/V3_CHANGES.md) and [v2 changes](docs/V2_CHANGES.md).
 
 **An agent-executable, self-evolving workflow and domain knowledge harness for rigorous mathematical research.**
 
 MathRSI organizes mathematical research from problem formulation and literature verification to route exploration, proof construction, independent auditing, optional Lean formalization, and reproducible handoff. Structured Markdown skills, domain plugins, cross-model review bridges, and verification contracts let coding agents (Claude Code and Codex) execute research step by step while preserving exact quantifiers and original problem obligations.
 
-### How Research Experience Evolves MathRSI (`v0` → `v3`)
+### How Research Experience Evolves MathRSI (`v0` → `v4`)
 
 MathRSI evolves in **two complementary directions**:
 
@@ -19,16 +19,24 @@ The version table separates these two kinds of progress. v1 established nine sol
 
 ![MathRSI evolution from v0 basic research tools through v1 and v2 to current v3 and future versions, with a stronger shared base and expanding, deepening domain plugins](figures/mathrsi/01-evolution-v3.png)
 
-Research experience strengthens the shared workflow and domain methods together; v3 upgrades the existing ECC plugin and adds three domains. [Figure sources and review](figures/mathrsi/README.md) · [v3 implementation details](docs/V3_CHANGES.md).
+The figure is the preserved **v3 snapshot**; [the interactive homepage](development/homepage-redesign-20261105/site/index.html) now extends the evolution through v4. Open the HTML after cloning or downloading. v3 upgraded the existing ECC plugin and added three domains. [Figure sources and review](figures/mathrsi/README.md) · [v3 implementation details](docs/V3_CHANGES.md).
 
 | Version | Research experience | Stronger base workflow | Broader / deeper plugins |
 | --- | --- | --- | --- |
 | **v0 · Basic research tools** | Initial Property B and ECC investigations accumulated proofs, failures, checks and research wikis. | Standalone skills coordinated within individual workspaces, before a shared MathRSI orchestrator. This historical stage is not a Git release. | Source research workspaces and their mathematical tools. |
 | **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** | [Property B and ECC's concrete research transitions](development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md). | Established **five executable subworkflows**, the `base / plugin / task` separation, adversarial route iteration, proof acceptance, wiki return paths and optional Lean. Bundled the complete dual-host skills. | Full **Property B** plugin and an initial **ECC draft**. |
 | **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** | Historical **Degree–Diameter** research. | Added **[`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md)**. Public baseline changes update the research queue; object changes trigger separate checks of inherited proofs and old refutations; shared coverage can replace a failed sufficient gate; formal-only tasks go directly to their actual Lean exports. [v2 details](docs/V2_CHANGES.md). | Added the **Degree–Diameter** plugin, its source wiki, constructions, transfer methods and certificate tools. |
-| **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3) · Current** | **Erdős 86**, **Ruskey–Savage Q6**, further **ECC** work inheriting v1/v2 methods, and **Happy Ending**. | Strengthened **four evidence-handling actions inside the existing workflows**, detailed below. The five-stage architecture and separate maintenance workflow remain. | Upgraded the **same ECC plugin**; added **Hypercube Extremal**, **Hypercube Hamilton** and **Happy Ending**. Mathematical sources, failures and thin checkers ship with each plugin. |
+| **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** | **Erdős 86**, **Ruskey–Savage Q6**, further **ECC** work inheriting v1/v2 methods, and **Happy Ending**. | Strengthened **four evidence-handling actions inside the existing workflows**, detailed below. The five-stage architecture and separate maintenance workflow remain. | Upgraded the **same ECC plugin**; added **Hypercube Extremal**, **Hypercube Hamilton** and **Happy Ending**. Mathematical sources, failures and thin checkers ship with each plugin. |
+
+| **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) · Current** | New **Happy Ending** 75/76/77 working proofs, and the (10,4) graph actually constructed with **v2 + DD + the PR #7 repair**. | Connect integer-threshold equality structure → legal equal-size replacement and capacity-forced witnesses → endpoint/mark-compatible return to the original caller. | Deepens the **same Happy Ending and Degree–Diameter plugins**; still six domains and fourteen domain skills. [v4 details](docs/V4_CHANGES.md). |
 
 Routine fixes also carry forward: [PR #7](https://github.com/lisresearchgroup/math-rsi/pull/7) repairs task dispatch, actual file delivery and recovery snapshots; it is included in v3 without being counted as another research-driven generation.
+
+### How v4 Further Strengthens Base and Plugins
+
+**The base gains one connected proof action.** When an integer bound misses by one, trace the same inequality chain to recover simultaneous zero-slack conditions. Use that structure for a legal equal-size replacement, force an actual witness from capacity, then check its endpoints and marked data at the original caller. This extends the existing [route-loop](base/skills/mathrsi-route-loop/SKILL.md), [prove](base/skills/mathrsi-prove/SKILL.md) and [verify](base/skills/mathrsi-verify/SKILL.md); the base still has ten skills.
+
+**The plugins gain concrete mathematical methods.** Happy Ending absorbs the 75/76/77 proof chain and counterexamples while retaining the manuscripts' unreviewed/unaccepted status. DD adds matching-edge cuts and vertex insertion, old-only switches, whole-graph distance diagnosis and portable edit replay. Its 2,567-vertex graph came from v2 + DD + the PR #7 repair, not a v4 run. Existing counterexample feedback and evidence inheritance carry forward without being counted again. See [v4 capabilities and verification scope](docs/V4_CHANGES.md).
 
 ### How v3 Strengthens the Shared Base
 
@@ -100,7 +108,7 @@ Start Codex or Claude Code in the clone, with access to your task directory. The
 
 Read [`base/skills/mathrsi-meta-evolve/SKILL.md`](base/skills/mathrsi-meta-evolve/SKILL.md) with the research source, current maintenance record, and allowed change scope. It classifies evidence into base behavior, domain knowledge, task state, or deferred proposals, implements supported changes, and uses the affected behavior. Invoke `/mathrsi-meta-evolve` in Claude Code or `$mathrsi-meta-evolve` in Codex; both aliases share the same body. See the [evolution guide](docs/EVOLUTION_WORKFLOW.md) for a copyable request.
 
-The bundled ARIS `meta-optimize` and `meta-apply` have separate host-specific aliases and retain their original contracts; they are not alternate names for this mathematical adaptation. The [v2 changes](docs/V2_CHANGES.md) record DD-based revisions to v1. The current [v3 changes](docs/V3_CHANGES.md) and [maintenance record](development/evolution/v3-20261104/EVOLUTION.md) record the next increment on that implementation. Historical research results supply evidence for maintenance; they are not newly solved v3 benchmark tasks.
+The bundled ARIS `meta-optimize` and `meta-apply` have separate host-specific aliases and retain their original contracts; they are not alternate names for this mathematical adaptation. The [v2 changes](docs/V2_CHANGES.md) record DD-based revisions to v1. The [v3 changes](docs/V3_CHANGES.md) and [maintenance record](development/evolution/v3-20261104/EVOLUTION.md) record the next increment on that implementation. The current [v4 increment](docs/V4_CHANGES.md) further connects equality structure to compatible witnesses and deepens the Happy Ending/DD plugins. Historical research results supply evidence for maintenance; they are not newly solved benchmark tasks for the receiving version.
 
 ---
 
@@ -216,7 +224,8 @@ Earlier **ARIS** research informed the degree–diameter plugin; the new continu
 - **[Reviewer MCP Setup](docs/REVIEWER_MCP.md)** — Registering and invoking the bundled `grok-exec`, `antigravity-exec`, `codex-exec`, and `claude-review` MCP servers.
 - **[Plugin Contract](docs/PLUGIN_CONTRACT.md)** — How domain plugins interface with the five subworkflows without mutating the base core.
 - **[Workspace Conventions](docs/WORKSPACE.md)** — Artifact layout, `research-wiki` usage, and session recovery via `NEXT_SESSION.md`.
-- **[v3 Changes](docs/V3_CHANGES.md)** — Current implementation, new domain capabilities, actual commands, and review status.
+- **[v4 Changes](docs/V4_CHANGES.md)** — Current base improvements, Happy Ending/DD methods, actual use and review.
+- **[v3 Changes](docs/V3_CHANGES.md)** — Earlier base and domain improvements, actual commands, and review status.
 - **[v2 Changes](docs/V2_CHANGES.md)** — Concrete changes to v1, DD stage integration, and evidence boundaries.
 - **[Evolution Guide](docs/EVOLUTION_WORKFLOW.md)** — Human entry to [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md), which maintains the executable process for improving the existing base and plugins from research evidence.
 - **[Architecture Figures](figures/mathrsi/README.md)** — High-resolution diagrams, generation prompts, and visual alignment review records.
@@ -234,7 +243,7 @@ The v1 implementation has been exercised through isolated bundle tests, targeted
 | [Proof-repair trial](development/figure-workflow-check-20261101/REPORT.md) | A fresh agent found false independence of overlapping-edge events, repaired the proof using a union bound, preserved the theorem, and completed fresh source reviews and handoff. Review was same-family/provisional. PDF compilation remains pending because the test machine lacked TeX. |
 | Property B replays and local workflow trial | Selected exact certificate checks run from the bundled resources; early local verification returns to its original proof obligation. See the records for each parameter's coverage. |
 
-The v3 release retains these checks and adds real uses of the affected base behavior, ECC matrix/saved-set/one-parent checks, full Q4 certificate replay, and the complete A10 finite rank certificate. The [v3 changes](docs/V3_CHANGES.md) link the actual commands and readback ranges. Gemini 4 and Opus 5.5 each completed two source-based maintenance review rounds; concrete fixes and reading scopes are recorded in the current maintenance record. Long-task success rates and equal-budget efficiency remain separate future evaluations.
+The v3 release retains these checks and adds real uses of the affected base behavior, ECC matrix/saved-set/one-parent checks, full Q4 certificate replay, and the complete A10 finite rank certificate. The [v3 changes](docs/V3_CHANGES.md) link the actual commands and readback ranges. Gemini 4 and Opus 5.5 each completed two source-based maintenance review rounds; concrete fixes and reading scopes are recorded in the v3 maintenance record. The v4 increment adds two exact strategy-counterexample checks, a lower25 witness replay and ten DD finite-edit reconstructions; [v4 details](docs/V4_CHANGES.md) record their scopes and Gemini/Opus maintenance reviews. Long-task success rates and equal-budget efficiency remain separate future evaluations.
 
 Model CLIs and accounts, search access, and optional TeX/Lean environments are supplied by the user. The repository includes the workflow and bridge source, not these services or toolchains. Use the task's pinned Lean dependencies when formalizing an existing project.
 
