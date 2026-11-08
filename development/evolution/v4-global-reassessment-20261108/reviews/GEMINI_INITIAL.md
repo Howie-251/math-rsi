@@ -1,0 +1,106 @@
+### 阅读范围与核心维护设计
+
+- **已读原件范围**：完整读取 [`EVOLUTION.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/development/evolution/v4-global-reassessment-20261108/EVOLUTION.md)、[`mathrsi-research/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md)、[`references/efficiency.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/efficiency.md)、[`mathrsi-route-loop/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md)、[`mathrsi-prove/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md)、[`mathrsi-prepare/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md)、[`mathrsi-verify/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md)、[`mathrsi-handoff/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md)、[`docs/WORKSPACE.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/docs/WORKSPACE.md) 及 [`REAL_PROJECT_TRANSITIONS.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/development/workflow-redesign/REAL_PROJECT_TRANSITIONS.md)。未执行计算或修改文件。
+- **最有价值改法（4项核心机制）**：
+  1. **瓶颈签名绑定（防改名重置）**：轮次与停滞计数绑定在原题主链的**未闭瓶颈箭头（`bottleneck_id`：原对象域 $\to$ 待证接口）**上，换脚本名、拆分子表、换种子或改引理名均不重置计数。
+  2. **2+1 独立只读评估（防沉没成本与防评审膨胀）**：默认派 **2 位 fresh 只读评估者**（视角A查“反事实完备性：局部全成后离原题还差什么”；视角B查“表示/共同约束/更弱必要条件与端到端成本”）。仅当 2 位对“主瓶颈是否动摇”或“剩余成本是否可承接”判断冲突，或拟发起昂贵全域扩张时，加派第 3 位裁定。
+  3. **单次有界展期 vs 确定性穷尽豁免**：触发重评即冻结旧路线扩批；若裁定 `continue bounded`，同一 `bottleneck_id` **最多允许 1 次单轮可证伪展期**；唯有**归约与覆盖已证完、剩余有限域确定且实测稳态吞吐可承接**的必要穷尽计算，才凭吞吐估算豁免换线。
+  4. **单调度者落地**：由 `mathrsi-research` 拥有共享协议 [`references/global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md)，五阶段在各自派批/收件边界执行轻量回看与强制重评，不建第六阶段或 Python 编排器。
+
+---
+
+### 可直接采用的共享协议正文
+建议新建文件：`base/skills/mathrsi-research/references/global-reassessment.md`
+
+```markdown
+# 全局进展重评与反局部空转协议
+
+本参考由 `mathrsi-research` 拥有，供五阶段在派发批次、回收产物和路线受阻时共同执行，防止研究在局部表、辅助引理或无益松弛中持续消耗 token 而不推进原题。
+
+## 1. 每次派批与收件的低成本主链回看
+
+每次启动新批次或收回 worker/程序产物时，当前协调者先用三句话核对原题关键路径（Critical Path），不额外派 agent：
+1. **当前瓶颈签名（`bottleneck_id`）**：从 [`FORMAL_SPEC.md`](../../../docs/WORKSPACE.md) 的任意原输入到最终结论，当前最贵、未闭合的那条依赖箭头是什么。
+2. **局部进展 $\neq$ 全题进展**：新增局部表、小参数样例、未接原输入的条件引理、非活跃项收紧，或单分支内部优化，只要没有缩小原题未覆盖域、消除一条主链未证假设、给出严格反例或闭合端到端 caller，均记为**主链零进展（`global_delta = 0`）**。
+3. **实质轮次计数**：一轮指针对同一 `bottleneck_id` 完成一次“派工/推导/探针 $\to$ 回收消费”。更换子目录、脚本名、随机种子、参数分块或辅助引理名称，**沿用原 `bottleneck_id` 累计轮次，严禁清零**。短证明或单次即可闭合的引理直接完成，不进入多代理重评。
+
+## 2. 强制触发多 Agent 全局重评的条件
+
+满足以下任一条件时，**必须立即停止按原路线新增扩批**，触发多 Agent 全局重评（不能由已投入该路线的 Root 自查替代）：
+- **同瓶颈两轮无决策增量**：同一 `bottleneck_id` 连续 2 个实质轮次 `global_delta = 0`（未改变主链未闭条件、未缩小原题声明域、未改变活跃界）。
+- **局部产物膨胀而主链未动**：已连续产出 $\ge 3$ 份局部表/分支/条件引理，但连接任意原输入的共同选点、覆盖证明或联合相容性仍未动摇（如局部代表减少但后继共同空间未减，或新 DP 在活跃域与旧界恒等）。
+- **昂贵扩批门前**：准备将局部探针扩大为全量扫描、多维枚举、大规模证书生成或跨模块重型 Lean 构建之前。
+- **关键假设或基线击穿**：核心选点/归约引理被反例否定，多个局部规范化无法在同一原对象共存，或文献回流发现公开基线已支配当前目标。
+- **阶段预设 Checkpoint**：`route-loop` 满 2 轮仍未交出可接原输入的任务，或 `prove` 单分支耗尽本批预算仍停留于包装接口。
+
+## 3. 独立只读评估机制（默认 2 位，争议或重扩批加第 3 位）
+
+触发后，当前协调者派发 **2 位 fresh context 只读评估者**（优先选用不同模型或无历史包袱的原生只读会话，不继承当前局部修补对话）：
+- **评估者 A（原题全图与反事实完备性）**：审查从 `FORMAL_SPEC.md` 到当前产物的全称量词与覆盖缺口，必须回答反事实问题：“**即便当前局部任务 100% 成功，距离原题闭合还差哪几步？哪一步才是真死结？**”
+- **评估者 B（替代机制与端到端成本）**：审查是否丢失同一原对象的共同约束/守恒量，是否存在更弱的必要条件门（如用便宜 pair 门替代高阶枚举）、有限全称桥或直接构造/反例机会，并核算生成、运输、保存、读回与独核的端到端总成本。
+- **何时加入第 3 位**：仅当 A、B 对“当前路线是否应终止扩批”或“剩余端到端成本是否可承接”结论相反，或拟批准高成本全域计算时，加派第 3 位只读评估者仅就分歧点做证据裁定。评估者不跑证明 checker，不打共识平均分。
+
+### 可直接复制的只读评估派工 Prompt
+
+```text
+你是独立只读全局评估者（Fresh Context），不负责修补当前局部细节，不修改任何文件。
+请读取：
+1. 原题规格：<W>/FORMAL_SPEC.md；恢复与主链状态：<W>/NEXT_SESSION.md
+2. 当前路线与义务：<W>/ROUTE_REPORT.md 或 <W>/PROOF_DRAFT.md（重点看瓶颈 <bottleneck_id>）
+3. 最近两轮实际产物与失败记录：<具体路径列表>；相关 wiki 实体：<research-wiki/...>
+
+请直接基于文件证据回答以下 5 项（不要给礼貌性赞同或空泛建议）：
+1. [原题主链位置] 当前工作处于原输入→结论的哪一环？过去两轮是否真正缩小了原题未闭主链？
+2. [反事实完备性] 假设当前正在做的局部表/引理今天全部跑通，离原题最终成立还缺哪些未证连接（如共同对象相容、全称覆盖、真实 caller）？这些剩余连接是否比当前局部任务更难或根本不可行？
+3. [端到端真实成本] 继续当前路线的生成、共同运输、I/O、独核与下游联合总成本是否可承接？
+4. [跳出局部的具体替代] 能否通过恢复同一原对象的共同约束、改用更弱必要条件门、改变状态表示（如全体状态交换替代局部位置枚举）、或转找反例/直接构造来绕开当前死结？
+5. [明确裁定建议] 从以下五项中唯一选一并给出可执行下一步：
+   - continue bounded（仅限覆盖已证且剩余域确定可算，或只差单次可证伪验证）
+   - reframe（保留当前大方向，但恢复共同原对象/收紧松弛/换必要门）
+   - pivot（放弃当前路线，切向具体替代路线或新表示）
+   - assemble（当前较弱结果或分支已足够闭合原题/父义务，立即停止扩张并转装配验证）
+   - abandon branch（当前子分支/引理过强或无下游用途，封存并撤回依赖任务）
+```
+
+## 4. 冻结扩批、唯一 Dispatcher 决策与防死灰复燃
+
+触发重评期间：**立即停止向旧路线派发新分块或同类扩算**；已产出的合法引理/数据保留；正在运行且不占关键阻塞资源的只读/保存型在途任务按原标识安全收回，纯消耗型同域扩算立即终止。
+
+由当前阶段唯一协调者（或回交 `mathrsi-research` 主调度者）读取评估返回，按以下规则做出**唯一执行决定**并写入报告与 `NEXT_SESSION.md`：
+
+| Root 消费字段 | 必填内容 |
+|---|---|
+| `bottleneck_id` | 原题未闭主链箭头标识（跨轮固定，改文件/引理名不改此 ID） |
+| `evaluator_traces` | 2 位（及按需第 3 位）评估者的原始 trace 路径、模型身份与核心反事实结论 |
+| `verdict` | `continue bounded` / `reframe` / `pivot` / `assemble` / `abandon branch` 五选一 |
+| `kill_or_keep` | 明确撤掉哪些待派/在途任务、封存哪个无益松弛、保留哪些条件工具写入 wiki |
+| `next_action` | 紧接着实际执行的唯一具体动作、输入文件、独占写域与单批停止判据 |
+
+**防无限“继续一次”与保护必要穷尽的双重硬界：**
+- **保护合法穷尽计算**：若评估确认（a）原对象到有限域的归约与无遗漏覆盖**已经严格证完**，（b）当前只是跑完该有限域且实测单块吞吐、内存与读回核验成本稳定可承接（如 ECC 172 母码的 $2^{32}$ 全域扫描或已闭合分支的确定性复算），则裁定 `continue bounded`，写明剩余块数与预计完成边界，不强迫编造新理论。
+- **杜绝盲目展期**：除上述已证完覆盖的确定性穷尽外，任何针对未证实结构/松弛的 `continue bounded` 必须写明**单轮可证伪判据**（如“测试加入共同中心约束后 1 个代表块是否降界至 $<1$”），且同一 `bottleneck_id` **最多允许 1 次** `continue bounded`。展期后若 `global_delta` 仍为 0，无条件强制转为 `reframe`、`pivot` 或 `abandon branch`。
+
+## 5. Reviewer 不可用/超时的真实降级与预算边界
+
+- **真实降级不解禁盲扩**：若指定外部评估 backend 超时或不可用，先检查原在途状态，不重发付费请求；用宿主可用的独立 fresh 只读原生会话补足第 2 视角，并在报告如实记 `same-family fallback / external pending`。**绝不允许因 reviewer 超时而默认解禁旧路线扩批**——在未完成反事实完备性与端到端成本核查前，旧路线扩批保持冻结。
+- **局部耗尽不暂停 Goal**：单条路线或子阶段的探索预算耗尽，立即执行 `reframe` / `pivot` 或携带精确缺口返回父调度者推进其它独立义务，**不自动将整个数学 Goal 标为暂停**。
+```
+
+---
+
+### 跨五阶段的短执行 Hook（直接嵌入对应 SKILL.md）
+
+1. **[`mathrsi-research/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/SKILL.md)（主入口 §怎样实际调用和消费 / §3 末尾）**
+   > **全局进展重评与反局部空转。** 主调度者拥有 [`references/global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md)。每次阶段交接或回收子阶段产物时，先核对原题未闭 `bottleneck_id` 是否有实质推进；遇同瓶颈 2 轮无决策增量、局部结果增长但主链未变、昂贵扩批门前或核心假设失败，立即按该协议启动 2 位独立只读评估者并执行 `continue bounded / reframe / pivot / assemble / abandon branch` 决策，把淘汰域写回任务 wiki。
+
+2. **[`mathrsi-prepare/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prepare/SKILL.md)（§3 消费调查结果后）**
+   > **防局部文献空转。** 连续两轮检索未改变正式规格、基线比较或关键进口条件时，按 [`global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md) 核查反事实：“若该进口仍缺，哪条独立路线可直接启动？”若公开基线已提高并支配原候选，立即返回主调度撤换旧竞争队列，不继续堆积外围综述。
+
+3. **[`mathrsi-route-loop/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-route-loop/SKILL.md)（§Phase D 末尾，替换原两轮Root自查段）**
+   > **强制多 Agent 路线重评。** 同一 `bottleneck_id` 连续 2 轮未改变未证条件、新松弛在活跃域与旧界恒等，或拟发起大规模枚举前，必须执行 [`global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md)：冻结同模型扩探，派 2 位 fresh 只读评估者回答“局部探针即便成功还差什么”及“能否恢复共同约束/换更弱必要门”，据 `verdict` 执行 `reframe` 或 `pivot` 并写入 wiki，禁止靠改名或换种子重置轮次。
+
+4. **[`mathrsi-prove/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-prove/SKILL.md)（§4 每批回收后 & §5 重新判断段）**
+   > **派批/收件主链回看与全局重评。** 每批 worker 派发前与产物回收后，按 [`global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md) 核对是否真正缩短原输入到结论的未闭链。若局部表/条件引理满 $\ge 3$ 项而共同选点或覆盖 caller 未动，或同瓶颈 2 轮无主链增量，立即冻结同类扩批并触发 2 位独立只读评估；较弱必要门已足够结束父义务时直接裁定 `assemble`，仅覆盖已证且稳态吞吐明确的必要穷尽可获批 `continue bounded`。
+
+5. **[`mathrsi-verify/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-verify/SKILL.md) & [`mathrsi-handoff/SKILL.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-handoff/SKILL.md)（各自的缺口返回处）**
+   > **验证与交接回流防空转。** `verify` 发现同一实质缺口经 2 次局部修补仍卡在未证归约/覆盖，或仅通过保存成员而缺无遗漏证明时，不继续在验证内打补丁，按 [`global-reassessment.md`](file:///Users/rfy_naiveai/Desktop/MathRSI/base/skills/mathrsi-research/references/global-reassessment.md) 标记 `bottleneck_id` 返回 `prove` 重判。`handoff` 暂停交接时，必须在 `NEXT_SESSION.md` 与 wiki 中写明已封存的局部死胡同（`abandon branch`）及重启前提，防止下一会话重跑已证无益的局部扩张。

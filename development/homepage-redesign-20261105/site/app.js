@@ -117,7 +117,7 @@ const VERS = [
     sum:'v3 release. Four strengthened evidence-loop actions, explicit 5-stage wiki reuse, an in-place ECC upgrade and three newly incorporated domains.' },
   { tag:'v4', state:'Current', name:'Equality structure & deeper plugins',
     base:[["Recover the equality chain", "he", "At a tight integer threshold, recover simultaneous zero-slack conditions on the same object."], ["Make legal exchanges", "he", "Prove an equal-size replacement preserves the constraints, then use capacity to force a witness."], ["Connect the same endpoints", "he", "Locate the actual witness endpoints and marked data needed by the original caller."]],
-    fullBase:['Implemented in route-loop, prove and verify: same-object equality chain → legal equal-size exchange → capacity-forced, endpoint-compatible witness','v4 is the current release; the fixed v3 release remains available.'],
+    fullBase:['Implemented in route-loop, prove and verify: same-object equality chain → legal equal-size exchange → capacity-forced, endpoint-compatible witness','Subsequent maintenance on main: mandatory independent global progress checks ask whether reductions improve the original completion path; the fixed v4 snapshot is unchanged.'],
     plug:[['deep','Happy Ending','he'],['deep','DD','dd'],['note','Other 4 domains retained']],
     sum:'v4 is the current release. The existing base now connects equality-chain recovery, legal exchanges and endpoint-compatible witnesses. Happy Ending adds the 75/76/77 working-proof methods and counterexamples; DD incorporates local capacity-freeing edits and exact replay examples from the (10,4) result produced with v2 + DD.' },
   { tag:'v5+', state:'Future', name:'Next research, next evolution',

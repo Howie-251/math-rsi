@@ -92,6 +92,10 @@ Lean按原技能验证实际模块和导出，不用默认lake build成功替代
 
 ## 5. 更新原wiki与下一会话入口
 
+每批排版／打包／复现前和产物收回后，对照本次用户要求与真实数学状态：这批是否补齐尚缺交付、证据或可恢复入口。重复美化已满足的页面、重放未变历史结果、不断加包而同一数学缺口仍未回交，都不能算原题推进；交接完成也不能代替数学完成。
+
+同一瓶颈连续两个实质批次没有改变下一步决策，或局部产物持续增加而关键连接、全域覆盖或端到端成本没有改善，或到达约定检查点／扩批预算时，必须返回直接caller请求[全局进展重判](../mathrsi-research/references/global-reassessment.md)，再由它交唯一研究dispatcher消费；不能自行批准沿原路线继续扩批，也不能自行启动同级stage。批次按能产生可检验信息的实质工作计，不按消息或文件计。独立调用没有父流程时，由当前执行者承担本次授权scope内的唯一调度。具体评估者和决策流程沿共享协议，不在本技能另建循环；短证明不为形式完整强制多agent。保留已完成交付与有效证明；缺数学或核验时把准确义务建议给原caller，已经满足的交付范围直接收束，不以重判制造额外验收项或恢复暂停研究。
+
 先消费prepare、route-loop、prove、verify已经写回的实体与准确范围，只补本次新材料和未同步事项；handoff不是研究中第一次写wiki。按[WORKSPACE §7](../../../docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回)读回更改的实体，将路径交给下一会话，不重复未变记录或将原始日志全部抄入wiki。
 
 读本仓 [research-wiki Codex](../skills-codex/research-wiki/SKILL.md)／[Claude 主线](../research-wiki/SKILL.md)，沿用原任务唯一wiki及canonical helper，不新建“交付wiki”。正文阅读到的真实论文、可复用引理条件、研究失败与重启理由接到适当原记录；graph和generated Connections用真实helper维护。自动query pack不保证列出每项关键结论，恢复页直接链接相关实体。

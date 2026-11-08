@@ -2,7 +2,7 @@
 
 [English](README.md) · [快速开始（English）](docs/QUICKSTART.md) · [可运行证明修复示例](examples/proof-repair/README.md) · [Property B 成果案例](case-studies/property-b/README.md) · [Degree–Diameter 成果案例](case-studies/degree-diameter/README.zh-CN.md)
 
-固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）· **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)）· **[v4 · 当前版](https://github.com/lisresearchgroup/math-rsi/tree/v4)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 跟随当前推荐版 **v4**。 详见 [v4 能力变化](docs/V4_CHANGES.md)、[v3 具体变化与可运行检查](docs/V3_CHANGES.md) 与 [v2 具体变化](docs/V2_CHANGES.md)。
+固定版本：**[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v1.zip)）· **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v2.zip)）· **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v3.zip)）· **[v4 · 当前版](https://github.com/lisresearchgroup/math-rsi/tree/v4)**（[下载 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip)）。标签固定完整仓库快照，旧标签不移动；`main` 承载当前推荐版 **v4** 及后续维护；固定 `v4` 标签不包含之后的增量。 详见 [v4 能力变化](docs/V4_CHANGES.md)、[v3 具体变化与可运行检查](docs/V3_CHANGES.md) 与 [v2 具体变化](docs/V2_CHANGES.md)。
 
 **面向严谨数学研究、可由 agent 执行并持续自进化的工作流与领域知识框架。** 从文献查漏到严密证明，把问题形式化、路线对抗、推导构造、独立核验、按需形式化与可复现交接连成闭环。
 
@@ -37,6 +37,8 @@ MathRSI 沿 **两条相互促进的方向** 演进：
 **Base 的增强是一个连贯的证明动作。** 当整数界差一单位时，沿同一条不等式链找出必须同时取等的条件；用这些实际结构作合法等数替换，再由容量迫出见证；最后核对见证的端点与标记，接回原调用点。动作写入现有 [route-loop](base/skills/mathrsi-route-loop/SKILL.md)、[prove](base/skills/mathrsi-prove/SKILL.md) 与 [verify](base/skills/mathrsi-verify/SKILL.md)，base 仍为十项技能。
 
 **Plugins 的深化提供具体数学方法。** Happy Ending 接入75/76/77证明链及反例，保留原稿 unreviewed/unaccepted 状态；DD 接入 matching 割边加点、old-only switches、全图距离诊断及便携编辑重放。2,567点图实际来自 v2 + DD + PR #7修补，不追认为v4产出。已有反例回流与证据继承继续沿用，不重复计作新能力。详见 [v4能力与验证范围](docs/V4_CHANGES.md)。
+
+**`main` 上的 v4 后续维护加入强制全局重评。** 规约正确还要看是否有用：究竟减少了哪个数学障碍或完整执行成本？每批派工／收件回看原题；到约定检查点，或局部成果不断增加但完成路径没有改善时，由两位独立只读代理检查原题连接、剩余难点与替代路线，Root 随即调整队列或批准有界续行。详见[可执行协议](base/skills/mathrsi-research/references/global-reassessment.md)与[维护证据](docs/V4_CHANGES.md)。
 
 ### v3 怎样强化共享 Base：四类共性改进
 
@@ -99,7 +101,7 @@ Root 读取返回产物后再安排下一义务。跨模型对抗意见与确定
 
 八项子技能加一个总控组成九项解题技能，另有独立外层维护技能 mathrsi-meta-evolve，合计十项 MathRSI 技能；使用本仓ARIS作为内部动作并做数学输入、目标和执行顺序适配。路线审阅没有定理真值评分门；局部核验返回其原证明义务，完整验证才进入最终交付。具体动作及范围以实际入口为准。
 
-实际回流也由这些入口执行：[route-loop](base/skills/mathrsi-route-loop/SKILL.md)或[prove](base/skills/mathrsi-prove/SKILL.md)将准确新文献问题交给[survey](base/skills/mathrsi-survey/SKILL.md)，得到原文条件后回同一义务；[verify](base/skills/mathrsi-verify/SKILL.md)的局部结果返回原prove，实质缺口交prove修，核心方法失效才回route-loop。完整候选可直接verify，已核结果再交handoff。
+实际回流也由这些入口执行：[route-loop](base/skills/mathrsi-route-loop/SKILL.md)或[prove](base/skills/mathrsi-prove/SKILL.md)将准确新文献问题交给[survey](base/skills/mathrsi-survey/SKILL.md)，得到原文条件后回同一义务；[verify](base/skills/mathrsi-verify/SKILL.md)的局部结果返回原prove，实质缺口交prove修，核心方法失效或全局重评决定转路线时回route-loop。完整候选可直接verify，已核结果再交handoff。
 
 ### Property B的专用技能
 
