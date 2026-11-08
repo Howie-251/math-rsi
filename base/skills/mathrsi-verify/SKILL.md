@@ -154,13 +154,19 @@ Lean 完成需从任意原输入装配出主命题的证明项，实际构建目
 
 ## 5. 写出能驱动下一步的 VERIFICATION.md
 
+每批核验前及真实检查／审计结果返回后，将新增证据接到本次scope及原题所需箭头：多个局部PASS、重复审阅不变材料，或对已足够的必要门继续做更强计算，都不自动增加全局覆盖。相反，范围明确且确实在闭合剩余域的完整计算与必需核验应保留，不能仅因耗时或暂未收完而判为停滞。
+
+**已评估完整计划内的正常分块不触发下段重评，也不算新增扩批。** 覆盖依据、有限剩余域和端到端可承接成本已经核清时，按原计划完成必要扫描、见证重放或构建；不能因每块的下一步都是“处理下一块”就判无决策增量。只在出现遗漏、实际成本越界、下游接口等关键依据变化，或到达该计划自己的重评边界时再回报，不每两块重开两位评估者。
+
+同一瓶颈连续两个实质批次没有改变下一步决策，或局部产物持续增加而关键连接、全域覆盖或端到端成本没有改善，或到达约定检查点／扩批预算时，必须返回直接caller请求[全局进展重判](../mathrsi-research/references/global-reassessment.md)，再由它交唯一研究dispatcher消费；不能自行批准沿原路线继续扩批，也不能自行启动同级stage。批次按能产生可检验信息的实质工作计，不按消息或文件计。独立调用没有父流程时，由当前执行者承担本次授权scope内的唯一调度。具体评估者和决策流程沿共享协议，不在本技能另建循环；短证明不为形式完整强制多agent。对proof-checker的重判只在其合同允许的安全返回点进行，保留真实audit、修复状态和未决义务，不插入并行写者、不抢其内部修复／复审调度，也不借重判跳过应完成的审计。局部核验仍回原prove；重判请求先回本次caller，不直接发起route-loop。
+
 复用已有验证记录，没有时写 `VERIFICATION.md`。至少让读者能找到以下事实，按任务自然组织即可，不要求填一张统一评分表：原题及本次准确 scope；正文与源版本/具体改变；域覆盖和原输入连接；实际确定性检查与结果；真正上游 audit 的路径、raw verdict和未决项（本次无自然语言正式审计时明确未调用）；Lean 的实际 export/build/axioms（若适用）；reviewer 实际阅读/执行范围与 pending；当前原题状态和下一步。
 
 完整 `PROOF_AUDIT.json`在原 audit 目录，局部 audit 在它自己的 scope 目录。报告链接它们，不把多个局部 PASS 拼成一个假的全局 audit，也不把文字报告命名为上游 canonical JSON。checker 自己触发的 wiki hook 沿其真结果运行，本技能引用该claim记录；上述普通实体写回不替代或扩大这一claim边界。VERIFICATION及返回材料同时给本次实际改变的实体路径、所记事实、未闭义务与wiki操作pending，原caller读回后继续；不会为了进入交付自行造一个 verified claim。
 
 checker默认调用 [render-html Codex](../skills-codex/render-html/SKILL.md)／[Claude主线](../render-html/SKILL.md)生成audit阅读页时，消费其HTML和实际保真检查，保持原 `PROOF_AUDIT.{md,json}`为审计入口。渲染失败按原技能是非阻塞展示问题，保存失败即可；用户若要完整证明阅读页或转交包，由主dispatcher选择handoff后制作。这样audit的阅读视图、数学审计和最终交付各有实际产物，不在verify里重复生成整套包。
 
-组合调用最后返回原caller：局部scope交回原prove；全局scope交回主dispatcher。完成原目标所需数学与已约定核验均成立时，建议后继 [mathrsi-handoff](../mathrsi-handoff/SKILL.md)；关键数学缺失时建议返回prove，并附最小义务、actual caller、已有证据和可复用成果；只有prove判断需要重选方法才回route-loop。verify本次不另启动这些后继。已闭局部结果也可以作为局部交付，主目标仍open。文档或服务不可用则返回准确pending，交主调度继续无依赖工作。独立调用的持续授权按入口的单一调度规则处理。
+组合调用最后返回原caller：局部scope交回原prove；全局scope交回主dispatcher。完成原目标所需数学与已约定核验均成立时，建议后继 [mathrsi-handoff](../mathrsi-handoff/SKILL.md)；关键数学缺失时建议返回prove，并附最小义务、actual caller、已有证据和可复用成果；普通局部数学修复先回prove；达到上述全局重判触发条件时，则由直接caller交唯一研究dispatcher决定是否重选方法，不由verify自行回route-loop。verify本次不另启动这些后继。已闭局部结果也可以作为局部交付，主目标仍open。文档或服务不可用则返回准确pending，交主调度继续无依赖工作。独立调用的持续授权按入口的单一调度规则处理。
 
 ## 实际调用与返回例
 

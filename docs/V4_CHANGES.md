@@ -2,6 +2,18 @@
 
 **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) is the current harness release.** Fixed v1/v2/v3 snapshots are unchanged. This increment retains **10 base skills, six domains and 14 domain skills**; it strengthens existing workflows and plugins rather than increasing their count. The [maintenance record](../development/evolution/v4-20261108/EVOLUTION.md) owns implementation and acceptance status.
 
+## Subsequent v4 maintenance on `main`: global reassessment
+
+The fixed `v4` tag preserves the release described below. This subsequent increment belongs to v4 maintenance on `main`; it is not contained in that tag, does not move any tag and is not v5. The base remains ten skills across five solving stages, with six domains and fourteen domain skills.
+
+Every dispatch batch and result return checks progress against the original problem’s bottleneck. Global reassessment is mandatory after two consecutive batches at the same bottleneck without a decision-changing gain, when local results accumulate without improving the critical connection, full-domain coverage or end-to-end cost, or when a preset checkpoint or expansion budget is reached. By default two independent read-only agents examine (1) the original-target connection and route and (2) total cost and alternatives; a third resolves material disagreement when needed.
+
+A mathematically valid reduction is assessed separately for usefulness. Fewer parent objects can still leave a larger extension space; proving a new representation's own internal lemmas does not by itself reduce the original gap. Compare the outstanding obligations, callable tools and total completion cost before and after. Without a task-specific checkpoint, reassess after three substantive batches on the same route; an already assessed finite completion plan keeps its own boundaries.
+
+Root consumes their actual findings and executes a bounded continuation, missing connection, new representation, route transfer, assembly or scope closure. After triggering, do not expand the old route before that decision; preserve evidence and useful running computations. Record the next trigger in the existing report and `NEXT_SESSION`, without a parallel ledger or automatic Goal pause. Necessary full-domain computation that is feasible and closes an original obligation continues; short proofs do not acquire ceremonial reviews. The [shared execution contract](../base/skills/mathrsi-research/references/global-reassessment.md) owns the detailed caller/return behavior. This maintenance does not establish a measured speedup.
+
+The [maintenance record](../development/evolution/v4-global-reassessment-20261108/EVOLUTION.md) links Gemini's design and implementation review, two independent historical decision exercises, the actual caller integrations and documentation/browser checks.
+
 ## A stronger shared base
 
 When a proof misses an integer threshold by one, the existing [route-loop](../base/skills/mathrsi-route-loop/SKILL.md), [prove](../base/skills/mathrsi-prove/SKILL.md) and [verify](../base/skills/mathrsi-verify/SKILL.md) now connect three actions:

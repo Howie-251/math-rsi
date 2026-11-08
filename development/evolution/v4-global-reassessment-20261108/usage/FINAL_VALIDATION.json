@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-08",
+  "scope": "v4 global reassessment maintenance",
+  "checks": [
+    {
+      "command": "python3 tools/check_links.py",
+      "chunk_id": "d22a3a",
+      "wall_time_seconds": 0.062036542,
+      "exit_code": 0,
+      "original_token_count": 16,
+      "output": "Checked 125 documents and 1911 local link targets; 0 missing.\n"
+    },
+    {
+      "command": "git diff --check",
+      "chunk_id": "de2c53",
+      "wall_time_seconds": 0.00001425,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check development/homepage-redesign-20261105/site/app.js",
+      "chunk_id": "e75e10",
+      "wall_time_seconds": 0.086745334,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  ],
+  "other_evidence": [
+    "STRUCTURE_CHECK.json",
+    "HOMEPAGE_CHECK.json",
+    "ROOT_DECISION.md"
+  ],
+  "limits": "Instruction integration and bounded historical decision exercises, not a fresh theorem run or measured long-run efficiency."
+}

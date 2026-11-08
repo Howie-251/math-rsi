@@ -1,0 +1,32 @@
+Two substantive findings. The reduction-count rules themselves hold: a valid reduction that leaves the original bottleneck in place is defined as no decision increment, and two such batches must be reassessed. The checker boundary is consistent with the dispatcher. Two holes remain in the hooks.
+
+## 1. Verify treats a steady finite completion plan as a reassessment trigger
+
+`mathrsi-verify/SKILL.md` §5 says a return is mandatory when the same bottleneck has two substantive batches that do not change the next decision, or when local products keep growing while the key connection, full coverage, or end-to-end cost has not improved. The same paragraph forbids the verifier from approving further expansion on that route.
+
+A chunked finite scan has a stable next decision: take the next block of the already fixed domain. The protocol already exempts that case. `global-reassessment.md` §2.3 says normal blocks inside an already assessed complete computation plan do not re-trigger, and §4 says those blocks do not need two reviewers every two batches. `mathrsi-prove/SKILL.md` §5 keeps that plan once coverage, the remaining domain, and end-to-end cost are settled. `mathrsi-research/SKILL.md` says a finite plan is not mechanically interrupted.
+
+Verify §5’s preceding sentence says a computation that is actually closing a finite remaining domain should be kept, and should not be called a stall merely because it is unfinished. The next sentence still makes the return mandatory. Verify’s own batch rule counts any substantive work that yields checkable information, so two scan blocks are two batches. The verifier stops at the chunk boundary and sends the plan back up. That is the interruption the shared exemption exists to avoid. Verify’s full-domain recomputation path, including the `2^32` generation in the same skill, is this situation.
+
+Smallest fix: in that §5 paragraph, add the existing exemption in the protocol’s words. Blocks inside an already assessed finite plan, with coverage and remaining domain settled and end-to-end cost sustainable, do not trigger this return and are not expansion. Reassess only on an omission, a cost overrun, or a changed downstream interface.
+
+## 2. The reassessment owner is missing on two return paths
+
+Local verify is required to send a reassessment request to its direct caller, and that caller must hand it to the single research dispatcher and stop new expansion (`mathrsi-verify/SKILL.md` §5, including the return rule at the end of the section). For a local check, that caller is prove. Prove’s local-verify rule says that after a conclusion or a gap comes back, prove continues downstream derivation (`mathrsi-prove/SKILL.md` §4). A reassessment request is neither of those, and no prove sentence forwards it or stops dispatch. Followed as written, the trigger dies at prove and the same route keeps being dispatched. That is the evasion path: the reduction rules fire in verify, and prove never carries them to the dispatcher.
+
+Separately, prove’s own trigger always goes “through the direct caller to the unique research dispatcher,” and prove may not clear the route itself (`mathrsi-prove/SKILL.md` §5). The protocol says that with no parent, the current executor decides inside its authorized scope. Verify repeats that. Prove instead becomes the dispatcher only after the prove stage has ended (`mathrsi-prove/SKILL.md` opening). Mid-stage, a standalone prove call, including one later authorized to continue the whole research, has stopped expansion and has nobody assigned to run the two-reviewer step.
+
+Checker ownership does not have this split. Reassessment waits for the checker’s safe return, verify does not take over the checker’s repair and re-review loop, and the dispatcher does not rewrite the audit. That matches `global-reassessment.md` §4.
+
+Smallest fix, two clauses in prove:
+
+- In the local-verify return: a global-reassessment request stops new expansion on that route and is handed to the dispatcher. It is not consumed by continuing downstream.
+- In §5: with no parent, this executor is the dispatcher for the authorized scope and runs the shared protocol. With a parent, it only reports and does not start a second pair of evaluators.
+
+## Read scope
+
+Read in full: `base/skills/mathrsi-research/references/global-reassessment.md`.
+
+Read for the hooks and the ownership sentences they attach to: `base/skills/mathrsi-research/SKILL.md` (global-progress section, single-dispatcher rule, prove-stage consumption including the reduction trigger); `base/skills/mathrsi-prove/SKILL.md` (opening scheduler rule, §4 lookback and local-verify return, §5 continue and forced reassessment); `base/skills/mathrsi-verify/SKILL.md` (opening owner rule, §5 trigger and return, and the finite-check sentences immediately above the trigger).
+
+No other skills, theorem sources, or archives were reviewed. No files were modified and no programs were run.
