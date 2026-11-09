@@ -132,15 +132,28 @@ const LAST = VERS.length - 2, FUTURE = VERS.length - 1;
 const H = 326, GUT = 80, COL = 232, W = GUT + COL * VERS.length, SPINE = 296, BASE = 284;
 const BW = 26, BH = 28, STEP = 32, PITCH = 36, X0 = 92;
 const cx = i => GUT + COL * i + COL / 2;
-const slotX = (i, s) => cx(i) - 103 + PITCH * s;
 const R = [300, 1700, 3600, 5000, 6600], STOP = [1100, 2400, 4400, 6000, 7400], T = STOP[LAST];
 const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600]];
 const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[T,4]];
 const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600]];
 
+// Only a domain's first outcome opens a horizontal slot. Later outcomes grow upward.
+const domainDebuts = CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m)).sort((a, b) => a.t - b.t)[0]);
+function slotX(col, s, time = T) {
+  const widths = domainDebuts.map((m, i) => {
+    if (m.v > col) return 0;
+    if (m.v < col || i === 0) return 1;
+    return E.out(clamp((time - m.t) / 300));
+  });
+  const total = widths.reduce((a, b) => a + b, 0);
+  const before = widths.slice(0, s).reduce((a, b) => a + b, 0);
+  return cx(col) - BW / 2 + PITCH * (before - (total - 1) / 2);
+}
+
 const sky = $('#sky'), lanes = $('#lanes'), stage = $('#stage'), scroller = $('#scroller');
 const panel = $('#panel'), playBtn = $('#play'), readout = $('#readout');
 const anims = [], stacks = Array.from({ length: LAST + 1 }, () => ({})), deltaTags = [];
+const blockPositions = [];
 let bands = [], prog, fline, ph, halo, hit;
 
 function topRound(x, y, w, h, r) {
@@ -181,7 +194,9 @@ function buildSky() {
     const items = MS.map((m, idx) => [m, idx]).filter(([m]) => m.c === c.id && isOutcome(m) && m.v <= col);
     const st = [];
     items.forEach(([m, idx], i) => {
-      const g = el('g', { class: 'bk', 'data-c': c.id, 'data-m': idx, transform: `translate(${slotX(col, s)} ${BASE - (i + 1) * STEP + 5})` }, blocks);
+      const y = BASE - (i + 1) * STEP + 5;
+      const g = el('g', { class: 'bk', 'data-c': c.id, 'data-m': idx, 'data-v': col, transform: `translate(${slotX(col, s)} ${y})` }, blocks);
+      blockPositions.push({ el:g, col, s, y });
       const a = el('g', { class: 'anim' }, g);
       shape(a, m);
       st.push(m.v === col ? addAnim(a, m.e, m.t, m.e === 'drop' ? 440 : 300) : addAnim(a, 'slide', MOVE[col][0], MOVE[col][1]));
@@ -205,7 +220,6 @@ function buildSky() {
   halo = el('circle', { class: 'halo', cx: cx(FUTURE), cy: SPINE, r: 16 }, sky);
   el('circle', { class: 'node-fut', cx: cx(FUTURE), cy: SPINE, r: 7 }, sky);
   ph = el('g', { class: 'ph' }, sky);
-  el('line', { x1: 0, y1: 12, x2: 0, y2: SPINE - 14 }, ph);
   el('circle', { cx: 0, cy: SPINE, r: 12 }, ph);
   hit = el('rect', { class: 'axis-hit', x: GUT, y: SPINE - 12, width: W - GUT, height: 38, tabindex: '0', role: 'slider',
     'aria-label': 'MathRSI harness version (arrow keys to move, space to play)', 'aria-valuemin': '0', 'aria-valuemax': String(FUTURE) }, sky);
@@ -301,6 +315,7 @@ function scrollToCol(i) {
 }
 
 function apply() {
+  for (const b of blockPositions) b.el.setAttribute('transform', `translate(${slotX(b.col, b.s, t)} ${b.y})`);
   for (const a of anims) { const p = clamp((t - a.s) / a.d); if (p !== a.p) { a.p = p; paint(a, p); } }
   const activeCase = trajectoryCase();
   deltaTags.forEach(d => {
@@ -311,6 +326,9 @@ function apply() {
     d.el.setAttribute('tabindex', visible ? '0' : '-1');
     d.el.setAttribute('aria-hidden', String(!visible));
     d.leader.style.visibility = visible && activeCase === d.c ? 'visible' : 'hidden';
+    const leaderX = slotX(d.v, CI[d.c], t) + BW / 2 - (cx(d.v) - 100);
+    d.leader.setAttribute('x1', leaderX);
+    d.leader.setAttribute('x2', leaderX);
     if (!(d.kind === 'intro' && d.c === 'he')) {
       const n = (stacks[d.v][d.c] || []).filter(a => t >= a.s + a.d * .5).length;
       d.leader.setAttribute('y2', Math.min(d.endY, BASE - n * STEP) - d.y);
@@ -378,12 +396,12 @@ function drawFocusLine(id) {
   const pts = [];
   if (id === 'he') {
     // Compare only ES(7) upper bounds; the abstract witness has a different meaning.
-    if (t >= 6600) pts.push(`${slotX(3, CI.he) + BW / 2},160`, `${slotX(4, CI.he) + BW / 2},160`);
+    if (t >= 6600) pts.push(`${slotX(3, CI.he, t) + BW / 2},160`, `${slotX(4, CI.he, t) + BW / 2},160`);
   } else if (id) {
     for (let col = 0; col <= LAST; col++) {
       const st = stacks[col][id]; if (!st) continue;
       const n = st.filter(a => t >= a.s + a.d * .5).length; if (!n) continue;
-      pts.push(`${slotX(col, CI[id]) + BW / 2},${BASE - n * STEP - 1}`);
+      pts.push(`${slotX(col, CI[id], t) + BW / 2},${BASE - n * STEP - 1}`);
     }
   }
   fline.setAttribute('points', pts.length > 1 ? pts.join(' ') : '');
