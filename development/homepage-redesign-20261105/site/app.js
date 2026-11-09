@@ -220,7 +220,6 @@ function buildSky() {
   halo = el('circle', { class: 'halo', cx: cx(FUTURE), cy: SPINE, r: 16 }, sky);
   el('circle', { class: 'node-fut', cx: cx(FUTURE), cy: SPINE, r: 7 }, sky);
   ph = el('g', { class: 'ph' }, sky);
-  el('line', { x1: 0, y1: 12, x2: 0, y2: SPINE - 14 }, ph);
   el('circle', { cx: 0, cy: SPINE, r: 12 }, ph);
   hit = el('rect', { class: 'axis-hit', x: GUT, y: SPINE - 12, width: W - GUT, height: 38, tabindex: '0', role: 'slider',
     'aria-label': 'MathRSI harness version (arrow keys to move, space to play)', 'aria-valuemin': '0', 'aria-valuemax': String(FUTURE) }, sky);
@@ -340,7 +339,6 @@ function apply() {
   const dx = t < 300 ? X0 + (cx(0) - X0) * E.out(t / 300) : hx;
   prog.setAttribute('x2', f1(dx));
   ph.setAttribute('transform', `translate(${f1(hx)} 0)`);
-  ph.classList.toggle('moving', mode !== null);
   halo.style.opacity = t > T - 800 ? (Math.sin(Math.PI * clamp((t - T + 800) / 800)) * .3).toFixed(3) : 0;
   $$('.cell[data-v]', lanes).forEach(c => { const v = +c.dataset.v; if (v <= LAST) c.classList.toggle('on', t >= R[v]); });
   const sel = selAt();
