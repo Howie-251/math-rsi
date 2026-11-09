@@ -15,7 +15,7 @@
       resultCap:
         'Lower-bound gains over the stated references. Uniform samples: guaranteed gain over the combined RS baseline, on a separate log scale.',
       links: [
-        { label: 'Full figure ↗', href: 'assets/result-figures/property-b-delta.svg' }
+        { label: 'Full figure ↗', href: 'assets/result-figures/property-b-delta.svg', sourceLanguage: 'EN' }
       ],
       render() {
         // Panel A: True continuous linear scale for k = 5..12, gain in [0, 31]
@@ -94,8 +94,8 @@
       resultCap:
         'Results · five code parameters (prior range → settled optimal d₂ or narrowed interval)',
       links: [
-        { label: 'Full figure ↗', href: 'assets/result-figures/ecc-five-parameters.png' },
-        { label: 'Method ↗', href: 'assets/result-figures/ecc-method-results.png', sub: true }
+        { label: 'Full figure ↗', href: 'assets/result-figures/ecc-five-parameters.png', sourceLanguage: '中文' },
+        { label: 'Method ↗', href: 'assets/result-figures/ecc-method-results.png', sourceLanguage: '中文', sub: true }
       ],
       render() {
         const rows = [
@@ -151,8 +151,8 @@
       resultLabel: 'Vertex gains over dated Comellas entries on one linear scale: (10,4) 2,566 to 2,567 (+1); (11,5) 37,628 to 37,631 (+3); (12,5) 42,342 to 42,402 (+60); (16,4) 16,384 to 16,416 (+32).',
       resultCap: 'Results · vertex gains over dated Comellas entries · one linear scale',
       links: [
-        { label: '(10,4) details ↗', href: 'dd-10-4.html' },
-        { label: 'Earlier figure ↗', href: 'assets/result-figures/degree-diameter-results.svg', sub: true }
+        { label: '(10,4) details ↗', href: 'dd-10-4.html', sourceLanguage: 'EN' },
+        { label: 'Earlier figure ↗', href: 'assets/result-figures/degree-diameter-results.svg', sourceLanguage: 'EN', sub: true }
       ],
       render() {
         const items = [
@@ -185,7 +185,7 @@
       resultCap:
         'Results · asymptotic C₄-free density ceiling lowered from 0.60318 to ≤ 0.59155154',
       links: [
-        { label: 'Source report ↗', href: '../../../plugins/hypercube-extremal/archive/source/START_HERE.html' }
+        { label: 'Source report ↗', href: '../../../plugins/hypercube-extremal/archive/source/START_HERE.html', sourceLanguage: '中文' }
       ],
       render() {
         const e = [[15, 0], [0, 15], [7, -6], [34, 4]];
@@ -263,7 +263,7 @@
       resultCap:
         'Results · universal Q₆ theorem and six-direction extension in Qₙ (with example instance)',
       links: [
-        { label: 'Source report ↗', href: '../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html' }
+        { label: 'Source report ↗', href: '../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', sourceLanguage: '中文' }
       ],
       render(problemSvg) {
         const inset = problemSvg ? problemSvg.innerHTML : '';
@@ -310,7 +310,7 @@
       resultCap:
         'Results · ES(7) upper bound 78 → 77 and cross-parameter proof chain (working proof)',
       links: [
-        { label: 'Full figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg' }
+        { label: 'Full figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg', sourceLanguage: '中文' }
       ],
       render() {
         return svgWrap(this.resultLabel, `
@@ -388,7 +388,7 @@
     const linksHtml = cfg.links
       .map(
         l =>
-          `<a class="rv-link${l.sub ? ' rv-link-sub' : ''}" href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`
+          `<a class="rv-link${l.sub ? ' rv-link-sub' : ''}" href="${l.href}" target="_blank" rel="noopener">${l.label}<span class="source-language" data-no-i18n>${l.sourceLanguage}</span></a>`
       )
       .join('');
     bar.innerHTML = `
