@@ -454,7 +454,7 @@ function renderPanel(sel) {
   const items = list.slice().sort((a, b) => a[0].v - b[0].v || a[0].t - b[0].t);
   panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${c.title}</h3>${c.quant()}
       <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}
-      <p class="p-links"><a href="${c.read}">Read the proof ↗</a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
+      <p class="p-links"><a href="${c.read}">Read the proof ↗<span class="source-language" data-no-i18n>${["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
     <div style="--c:var(--${c.id})"><p class="p-eye">Mathematical results</p><ol class="p-ms">${items.filter(([m]) => isOutcome(m)).map(([m, i]) => {
       const on = t >= m.t;
       return `<li class="${on ? '' : 'later'}${hl === i ? ' hl' : ''}"><span class="p-v">${vlabel(m)}</span><span class="p-k k-${m.k}">${m.tag}</span><span class="p-t">${m.text}${on ? '' : `<em>appears at ${vlabel(m)}</em>`}</span></li>`;
