@@ -89,9 +89,9 @@ const CALLOUTS = [
   { c:'dd', v:2, t:3860, kind:'intro', value:'Larger graphs · 3 records' },
   { c:'e86', v:3, t:5050, kind:'intro', value:'C₄-free density ≤ 0.59155154' },
   { c:'q6', v:3, t:5200, kind:'intro', value:'Every Q₆ matching lies in', detail:'a Hamilton cycle' },
-  { c:'he', v:3, t:5450, kind:'intro', value:'ES(7) ≤ 78 · working proof' },
+  { c:'he', v:3, t:5450, kind:'intro', value:'ES(7) ≤ 78' },
   { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'2,566 → 2,567', detail:'(10,4) · Run: v2' },
-  { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound · draft' }
+  { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' }
 ];
 
 const VERS = [
@@ -150,12 +150,8 @@ function addAnim(node, type, s, d) { const a = { el: node, type, s, d, p: undefi
 
 function shape(g, m) {
   const c = `var(--${m.c})`;
-  if (m.k === 'draft') el('rect', { class:'b-draft', x:.75, y:.75, width:BW-1.5, height:BH-1.5, rx:4.5, style:`stroke:${c}` }, g);
-  else if (m.basis) el('rect', { class:'b-derived', x:.75, y:.75, width:BW-1.5, height:BH-1.5, rx:4.5, style:`fill:${c};stroke:${c}` }, g);
-  else if (m.k === 'result') el('rect', { class: 'b-res', width: BW, height: BH, rx: 5, style: `fill:${c}` }, g);
-  else if (m.k === 'evidence') el('rect', { class: 'b-evi', x: .75, y: .75, width: BW - 1.5, height: BH - 1.5, rx: 4.5, style: `fill:${c};stroke:${c}` }, g);
-  else el('rect', { class: 'b-open', x: .75, y: .75, width: BW - 1.5, height: BH - 1.5, rx: 4.5, style: `stroke:${c}` }, g);
-  if (m.e === 'drop') el('path', { class: 'chev', d: `M${BW/2-5} ${BH/2-2.5}L${BW/2} ${BH/2+2.5}L${BW/2+5} ${BH/2-2.5}`, style: `stroke:${m.k === 'result' && !m.basis ? '#fff' : c}` }, g);
+  // All outcome blocks share one visual meaning; provenance and checks stay in the details.
+  el('rect', { class:'b-res', width:BW, height:BH, rx:5, style:`fill:${c}` }, g);
   el('title', {}, g).textContent = `${CN[m.c]} · ${m.tag} — ${m.text}`;
 }
 
