@@ -10,7 +10,7 @@
 
 [English](README.md)
 
-[![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](docs/QUICKSTART.md)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![可视化导览 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](docs/HOMEPAGE.md)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
+[![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](docs/QUICKSTART.md)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![可视化导览 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
 
 </div>
 
@@ -51,7 +51,7 @@ ARIS_REPO=/abs/path/to/math-rsi/base。
 
 ## 2. 🧮 数学成果
 
-六个领域的研究同时积累数学结果和可复用方法。**[中英可视化导览](docs/HOMEPAGE.md)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
+六个领域的研究同时积累数学结果和可复用方法。[公开主页](https://lisresearchgroup.github.io/math-rsi/) · [本地运行方法](docs/HOMEPAGE.md)。**[中英可视化导览](https://lisresearchgroup.github.io/math-rsi/)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
 - **Property B · 超图二染色。** $k=5,\ldots,12$ 的逐参数报告下界为 $35,67,131,267,543,1112,2275,4664$，另有对每个 $k\ge12$ 严格改进指定 RS 预算的一般定理，将具体参数改进与统一结论连接起来。[成果与证明范围](case-studies/property-b/README.md)
 - **纠错码 · 二元最优距离。** $d_2(43,10)=16$、 $d_2(44,10)=17$、 $d_2(44,11)=16$、 $d_2(42,16)=12$ 闭合四个最优距离问题；最后一项应用已发表的 2020 年定理。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
