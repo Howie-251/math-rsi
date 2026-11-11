@@ -118,7 +118,8 @@ const VERS = [
   { tag:'v4', state:'Current', name:'Equality structure & deeper plugins',
     base:[["Recover the equality chain", "he", "At a tight integer threshold, recover simultaneous zero-slack conditions on the same object."], ["Make legal exchanges", "he", "Prove an equal-size replacement preserves the constraints, then use capacity to force a witness."], ["Connect the same endpoints", "he", "Locate the actual witness endpoints and marked data needed by the original caller."]],
     fullBase:['Implemented in route-loop, prove and verify: same-object equality chain → legal equal-size exchange → capacity-forced, endpoint-compatible witness','Subsequent maintenance on main: mandatory independent global progress checks ask whether reductions improve the original completion path; the fixed v4 snapshot is unchanged.'],
-    plug:[['deep','Happy Ending','he'],['deep','DD','dd'],['note','Other 4 domains retained']],
+    plug:[['deep','Happy Ending','he'],['deep','DD','dd'],['deep','ECC · main','ecc'],['note','Other 3 domains retained']],
+    pluginNote:'ECC on main: reuse exclusions and share computations.',
     sum:'v4 is the current release. The existing base now connects equality-chain recovery, legal exchanges and endpoint-compatible witnesses. Happy Ending adds the 75/76/77 working-proof methods and counterexamples; DD incorporates local capacity-freeing edits and exact replay examples from the (10,4) result produced with v2 + DD.' },
   { tag:'v5+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
@@ -268,7 +269,7 @@ function buildLanes() {
   VERS.forEach((V, i) => {
     h += `<div class="cell row-p${i === FUTURE ? ' fut' : i === LAST ? ' current' : ''}" data-v="${i}"><div class="chiprow">${V.plug.map((p, j) => p[0] === 'note'
       ? `<span class="chip note" style="--i:${j}">${p[1]}</span>`
-      : `<button class="chip" type="button" data-case="${p[2]}" aria-pressed="false" style="--i:${j};--c:var(--${p[2]})"><b>${p[0] === 'add' ? '+' : '↑'}</b>${p[1]}</button>`).join('')}</div></div>`;
+      : `<button class="chip" type="button" data-case="${p[2]}" aria-pressed="false" style="--i:${j};--c:var(--${p[2]})"><b>${p[0] === 'add' ? '+' : '↑'}</b>${p[1]}</button>`).join('')}</div>${V.pluginNote ? `<p class="plugin-note">${V.pluginNote}</p>` : ''}</div>`;
   });
   lanes.innerHTML = h;
   $('#chips').innerHTML = CASES.map(c => `<button class="case-chip" type="button" data-case="${c.id}" aria-pressed="false" style="--c:var(--${c.id})">${c.short}</button>`).join('');
@@ -437,6 +438,9 @@ function ddPath() {
     <li class="pre${later}"><b>v4 · feedback</b><span>Local edit and exact replay examples implemented in the existing DD plugin</span></li>
   </ol>`;
 }
+function eccMaintenance() {
+  return `<section class="p-plugin-update"><p class="p-eye">ECC · main maintenance</p><h4>Place each step in the research tree</h4><p>Identify the branch before searching, reuse existing exclusions, and share computations across branches. Close a parent problem only after checking full coverage.</p><a href="${GH}/blob/main/plugins/ecc/skills/mathrsi-ecc/references/node-research.md">Read the node protocol ↗</a></section>`;
+}
 function renderPanel(sel) {
   const list = focus ? MS.map((m, i) => [m, i]).filter(([m]) => m.c === focus) : [];
   const reached = list.filter(([m]) => t >= m.t).length;
@@ -444,7 +448,7 @@ function renderPanel(sel) {
   if (key === panelKey) return; panelKey = key;
   if (!focus) {
     const V = VERS[sel];
-    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p></div>
+    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === LAST ? eccMaintenance() : ''}</div>
       <div><p class="p-eye">Shared base &amp; workflow details in ${V.tag}</p>
       <ul class="p-vlist">${V.fullBase.map(item => `<li>${item}</li>`).join('')}</ul>
       <p class="p-foot">Choose a change label or colored result block to inspect its conclusions and proof evidence.</p></div>`;
@@ -453,7 +457,7 @@ function renderPanel(sel) {
   const c = CASES[CI[focus]];
   const items = list.slice().sort((a, b) => a[0].v - b[0].v || a[0].t - b[0].t);
   panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${c.title}</h3>${c.quant()}
-      <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}
+      <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}${c.id === 'ecc' ? eccMaintenance() : ''}
       <p class="p-links"><a href="${c.read}">Read the proof ↗<span class="source-language" data-no-i18n>${["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
     <div style="--c:var(--${c.id})"><p class="p-eye">Mathematical results</p><ol class="p-ms">${items.filter(([m]) => isOutcome(m)).map(([m, i]) => {
       const on = t >= m.t;
