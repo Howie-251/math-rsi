@@ -10,7 +10,7 @@ An agent-executable, self-evolving workflow and domain knowledge harness for rig
 
 [中文](README.zh-CN.md)
 
-[![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](docs/QUICKSTART.md)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Visual Tour / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](docs/HOMEPAGE.md)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
+[![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](docs/QUICKSTART.md)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Visual Tour / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
 
 </div>
 
@@ -51,7 +51,7 @@ The clone includes the skills and reviewer bridge source. Configure your chosen 
 
 ## 2. 🧮 Mathematical Results
 
-Research across six domains supplies results and reusable methods. The **[bilingual visual tour](docs/HOMEPAGE.md)** shows their problems, results and evolution; the **[six-case index](case-studies/README.md)** links proofs, verification scopes and runnable tools.
+Research across six domains supplies results and reusable methods. [Public homepage](https://lisresearchgroup.github.io/math-rsi/) · [Local viewing instructions](docs/HOMEPAGE.md). The **[bilingual visual tour](https://lisresearchgroup.github.io/math-rsi/)** shows their problems, results and evolution; the **[six-case index](case-studies/README.md)** links proofs, verification scopes and runnable tools.
 
 - **Property B · hypergraph two-coloring.** Reported lower bounds for $k=5,\ldots,12$ are $35,67,131,267,543,1112,2275,4664$, alongside a uniform improvement over the specified RS budget for every $k\ge12$. The work combines concrete improvements with a general theorem. [Results & proof scope](case-studies/property-b/README.md)
 - **Error-correcting codes · optimal binary distances.** The exact values $d_2(43,10)=16$, $d_2(44,10)=17$, $d_2(44,11)=16$ and $d_2(42,16)=12$ close four optimal-distance questions; the last applies a published 2020 theorem. [Results, methods & open case](case-studies/README.md#error-correcting-codes)

@@ -2,6 +2,10 @@
 
 The interactive **English / 中文 homepage** presents six mathematical research threads, their results, the evolution of the base and domain plugins, and a historical research-workflow replay.
 
+**[Public homepage / 公开主页](https://lisresearchgroup.github.io/math-rsi/)** — no repository permission is needed for the published site and selected readers. GitHub source/evidence links still require repository access. Publication runs after the Pages workflow reaches main.
+
+[Public build scope and workflow](PAGES.md)
+
 **[Homepage source and local entry](../development/homepage-redesign-20261105/site/index.html)**
 
 GitHub displays this HTML as source. To use the interactive page, clone or download the repository, then open the file in a browser. On macOS, from the clone root:
@@ -32,7 +36,7 @@ Keep the server rooted at the complete clone; no npm build or regeneration is ne
 
 中文：使用已有访问权限克隆完整仓库（或复用现有克隆），在仓库根启动上述本地服务器，打开对应网址，检查中英切换、演进动画与成果链接。端口占用时换空闲端口；无需重新生成网页或运行 npm 构建。
 
-The source stays at its existing location so its relative figure, case-reader and proof links keep working. This guide is a stable reading entry; it does not create public hosting.
+The source stays at its existing location so its relative figure, case-reader and proof links keep working. This guide links the public Pages entry and preserves local viewing of the original clone.
 
 中文：克隆或下载后，在浏览器中打开上述 HTML。右上角可切换中英文；页面包含六题成果、Base／Plugins 演进和历史研究回放。GitHub 上的 HTML 链接显示源码，交互阅读需打开本地文件。
 

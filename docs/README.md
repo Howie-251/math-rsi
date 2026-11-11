@@ -7,7 +7,7 @@ Choose the path that matches your task. The entry pages and quick start are bili
 | Your purpose | Read next |
 | --- | --- |
 | Try MathRSI and start a task | [Quick start](QUICKSTART.md) · [Runnable proof-repair example](../examples/proof-repair/README.md) |
-| Understand the mathematics and evidence | [Six-case index](../case-studies/README.md) · [Bilingual visual tour](HOMEPAGE.md) |
+| Understand the mathematics and evidence | [Six-case index](../case-studies/README.md) · [Public visual tour](https://lisresearchgroup.github.io/math-rsi/) · [Local viewing](HOMEPAGE.md) |
 | Continue a research workspace | [Five workflows and return paths](WORKFLOWS.md) · [Workspace, wiki and recovery](WORKSPACE.md) |
 | Choose domain methods | [Six-domain routing](DOMAIN_ROUTING.md) · [Plugin contract](PLUGIN_CONTRACT.md) |
 | Connect external reviewers or use bundled ARIS | [Reviewer MCP](REVIEWER_MCP.md) · [ARIS reuse and dual-host layout](ARIS_REUSE.md) |
@@ -34,3 +34,5 @@ Project discovery aliases under `.agents/skills/` and `.claude/skills/` point to
 ## Versions
 
 **v4 is the current release; `main` carries v4 plus subsequent maintenance.** The fixed [v1](https://github.com/lisresearchgroup/math-rsi/tree/v1), [v2](https://github.com/lisresearchgroup/math-rsi/tree/v2), [v3](https://github.com/lisresearchgroup/math-rsi/tree/v3) and [v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) tags retain complete snapshots. Each tag also has a GitHub ZIP download, for example [v4 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip). Record the selected commit in a research handoff.
+
+[Public Pages build and publication scope](PAGES.md) explains the allowlist, workflow and local preview.
