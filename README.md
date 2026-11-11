@@ -1,6 +1,6 @@
 <div align="center">
 
-# MathRSI
+# <picture><source media="(prefers-color-scheme: dark)" srcset="figures/mathrsi/branding/mark-c-dark.png"><img src="figures/mathrsi/branding/mark-c-light.png" width="76" height="38" align="middle" alt=""></picture> MathRSI
 
 *SII MathRSI Team*
 
@@ -20,7 +20,9 @@ MathRSI takes a mathematical question from literature and route exploration thro
 
 *Actual homepage evolution replay. Click for MP4; [execution provenance and manuscript status](case-studies/README.md).*
 
-## Quick start
+<a id="quick-start"></a>
+
+## 1. 🚀 Quick Start
 
 Clone with an account that has access to the repository. These local checks use Python 3.9+ and its standard library:
 
@@ -45,7 +47,9 @@ Depending on the stage reached, the task directory keeps a specification, proof 
 
 The clone includes the skills and reviewer bridge source. Configure your chosen agent/model access and the tools needed by your task. **[Full setup](docs/QUICKSTART.md)** · [Proof-repair walkthrough](examples/proof-repair/README.md) · [Reviewer MCP setup](docs/REVIEWER_MCP.md)
 
-## Six mathematical frontiers
+<a id="six-mathematical-frontiers"></a>
+
+## 2. 🧮 Mathematical Results
 
 Research across six domains supplies results and reusable methods. The **[bilingual visual tour](docs/HOMEPAGE.md)** shows their problems, results and evolution; the **[six-case index](case-studies/README.md)** links proofs, verification scopes and runnable tools.
 
@@ -56,13 +60,17 @@ Research across six domains supplies results and reusable methods. The **[biling
 - **Ruskey–Savage · Hamilton extension in $Q_6$.** Every matching of $Q_6$ extends to a Hamilton cycle, settling the six-dimensional case; imported results also cover matchings using at most six directions in any dimension. [Proof & certificate scope](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending · convex heptagons.** Working manuscripts claim $N(7,6,7)\le75$ and $N(7,7,7)\le76$, hence $\mathrm{ES}(7)\le77$, tightening the prior 78 threshold. **Working manuscripts; independent review pending.** [Manuscripts & status](case-studies/happy-ending/README.md)
 
-## Three layers
+<a id="three-layers"></a>
+
+## 3. 🧩 Three Layers
 
 ![MathRSI: the base workflow calls domain methods and reads, updates and reuses each task workspace; separate maintenance improves the base and plugins](figures/mathrsi/architecture-three-layers.svg)
 
 **Base** (`base/`) supplies general research logic. **Domain plugins** (`plugins/`) supply specialized mathematics and checkers. **Task workspaces** hold each problem's specification, wiki, proofs, certificates and recovery state. [Architecture & plugin contract](docs/PLUGIN_CONTRACT.md) · [Editable source & GPT Image variant](figures/mathrsi/README.md)
 
-## How research runs
+<a id="how-research-runs"></a>
+
+## 4. 🔬 How Research Runs
 
 The main [`mathrsi-research`](base/skills/mathrsi-research/SKILL.md) skill coordinates **Prepare → Route → Prove → Verify → Handoff**, entering from current evidence and reading each returned artifact. The task wiki is read, updated and reused throughout; scoped collaborators and cross-model reviewers support the work.
 
@@ -75,7 +83,9 @@ The main [`mathrsi-research`](base/skills/mathrsi-research/SKILL.md) skill coord
 
 [Detailed workflow & return paths](docs/WORKFLOWS.md) · [Six-domain routing](docs/DOMAIN_ROUTING.md) · [Workspace & memory](docs/WORKSPACE.md)
 
-## Research improves the workflow
+<a id="research-improves-the-workflow"></a>
+
+## 5. 🔄 Research Improves the Workflow
 
 ![Research evidence feeds separate maintenance, which improves shared base behavior and domain methods](figures/mathrsi/research-to-capabilities.svg)
 
@@ -100,7 +110,9 @@ Tags remain fixed complete snapshots. Choose one for a reproducible starting poi
 
 </details>
 
-## Documentation & provenance
+<a id="documentation--provenance"></a>
+
+## 6. 📚 Documentation
 
 **[Choose a reading path](docs/README.md)** · [Six research cases](case-studies/README.md) · [Repository map](docs/README.md#repository-map) · [Validation records](development/README.md#validation-and-implementation) · [Skill acceptance](docs/SKILL_ACCEPTANCE.md)
 

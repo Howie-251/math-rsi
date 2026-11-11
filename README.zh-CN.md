@@ -1,6 +1,6 @@
 <div align="center">
 
-# MathRSI
+# <picture><source media="(prefers-color-scheme: dark)" srcset="figures/mathrsi/branding/mark-c-dark.png"><img src="figures/mathrsi/branding/mark-c-light.png" width="76" height="38" align="middle" alt=""></picture> MathRSI
 
 *SII MathRSI Team*
 
@@ -20,7 +20,9 @@ MathRSI 将数学问题从文献检索、路线探索推进到证明、对抗审
 
 *真实主页演进回放；点击观看 MP4。[运行归属与工作稿状态](case-studies/README.md)。*
 
-## 开始使用
+<a id="开始使用"></a>
+
+## 1. 🚀 快速开始
 
 使用有仓库访问权限的账号克隆。以下本地检查仅需 Python 3.9+ 标准库：
 
@@ -45,7 +47,9 @@ ARIS_REPO=/abs/path/to/math-rsi/base。
 
 仓库包含技能和 reviewer 桥接源码。模型访问及本题需要的工具由所选宿主环境提供。**[完整配置](docs/QUICKSTART.md)** · [证明修复示例](examples/proof-repair/README.md) · [Reviewer MCP 配置](docs/REVIEWER_MCP.md)
 
-## 六个数学方向
+<a id="六个数学方向"></a>
+
+## 2. 🧮 数学成果
 
 六个领域的研究同时积累数学结果和可复用方法。**[中英可视化导览](docs/HOMEPAGE.md)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
@@ -56,13 +60,17 @@ ARIS_REPO=/abs/path/to/math-rsi/base。
 - **Ruskey–Savage · $Q_6$ Hamilton 延拓。** $Q_6$ 的每个匹配均能延拓为 Hamilton 圈，解决六维情形；结合文献进口，还覆盖任意维中使用至多六个方向的匹配。[证明与证书范围](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending · 凸七边形。** 已收到的工作稿声称 $N(7,6,7)\le75$、 $N(7,7,7)\le76$，从而 $\mathrm{ES}(7)\le77$，收紧原 78 阈值。**工作稿，待独立审阅。**[原稿与状态](case-studies/happy-ending/README.md)
 
-## 三层架构
+<a id="三层架构"></a>
+
+## 3. 🧩 三层架构
 
 ![MathRSI 三层架构：Base 调用领域方法，读取、更新并复用任务工作区；独立维护改进 Base 和 Plugins](figures/mathrsi/architecture-three-layers.svg)
 
 **Base**（`base/`）提供通用研究方法；**领域插件**（`plugins/`）提供专门数学和检查器；**任务工作区**保存单题规格、wiki、证明、证书与恢复状态。[架构与插件契约](docs/PLUGIN_CONTRACT.md) · [可编辑源文件与 GPT Image 版本](figures/mathrsi/README.md)
 
-## 研究如何推进
+<a id="研究如何推进"></a>
+
+## 4. 🔬 研究如何推进
 
 主入口 [`mathrsi-research`](base/skills/mathrsi-research/SKILL.md) 协调 **准备 → 路线 → 证明 → 验证 → 交付**，从当前证据进入并读取每阶段实际产物。任务 wiki 贯穿读取、更新和再次使用；职责明确的协作者与跨模型 reviewer 参与研究。
 
@@ -75,7 +83,9 @@ ARIS_REPO=/abs/path/to/math-rsi/base。
 
 [详细工作流与返回路径](docs/WORKFLOWS.md) · [六领域路由](docs/DOMAIN_ROUTING.md) · [工作区与记忆](docs/WORKSPACE.md)
 
-## 研究经验如何改进工作流
+<a id="研究经验如何改进工作流"></a>
+
+## 5. 🔄 研究经验如何改进工作流
 
 ![研究证据经单独维护转为更强 Base 和更深领域插件](figures/mathrsi/research-to-capabilities.svg)
 
@@ -100,7 +110,9 @@ ARIS_REPO=/abs/path/to/math-rsi/base。
 
 </details>
 
-## 文档与来源
+<a id="文档与来源"></a>
+
+## 6. 📚 文档与来源
 
 **[按目的选择阅读路径](docs/README.md)** · [六题研究案例](case-studies/README.md) · [仓库地图](docs/README.md#repository-map) · [验证记录](development/README.md#validation-and-implementation) · [技能验收](docs/SKILL_ACCEPTANCE.md)
 
