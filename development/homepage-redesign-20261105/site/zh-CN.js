@@ -528,6 +528,7 @@ window.MATHRSI_ZH = {
   "v2, Evidence-driven evolution": "v2，证据驱动的框架演进",
   "v3": "v3",
   "v3 changes ↗": "v3 更新说明 ↗",
+  "v4 changes ↗": "v4 更新说明 ↗",
   "v3 release. Four strengthened evidence-loop actions, explicit 5-stage wiki reuse, an in-place ECC upgrade and three newly incorporated domains.": "v3 正式版：强化四项证据闭环动作，落实五阶段研究知识库读写复用，原位升级 ECC 插件，并新增三个领域插件。",
   "v3, Stronger base, six domains": "v3，通用流程强化，拓展至六领域",
   "v4": "v4",

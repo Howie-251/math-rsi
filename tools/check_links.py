@@ -14,6 +14,12 @@ from urllib.parse import unquote, urlsplit
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     files = [root / "README.md", root / "README.zh-CN.md", root / "AGENTS.md"]
+    files.extend([
+        root / "case-studies/README.md",
+        root / "development/README.md",
+        root / "figures/mathrsi/README.md",
+        root / "figures/mathrsi/media/README.md",
+    ])
     files.extend(sorted((root / "examples").rglob("*.md")))
     # Case landing pages are maintained; copied historical proof sources retain
     # their original context and have a separate HTML portability check.

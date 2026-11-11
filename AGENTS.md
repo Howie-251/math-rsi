@@ -1,5 +1,11 @@
 # MathRSI 开发约定
 
+## 2026-11-11：GitHub 导航与仓库实现分工
+
+正式入口为中英文 README；[文档导航](docs/README.md)、[六题统一索引](case-studies/README.md)、[本地首页启动](docs/HOMEPAGE.md)与[演进记录](development/README.md)连接现有资料。[图集](figures/mathrsi/README.md)保存 FigureSpec/SVG、GPT 图及当前主页 GIF/MP4 的实际来源和复现说明；原 v2/v3 图保留历史。图稿由 Root 检视批准集成，不代表用户亲自逐图审定。
+
+用户指定常驻 `mathrsi_github` agent 负责独立工作树中的 README、导航、图稿集成与 PR；main 协调 Gemini、事实和最终验收。后续先核实真实会话、工作树和任务归属，再派工；名称是职责线索，不将 pane ID 固定为永久身份。不另造协作系统，合并仍依当前明确授权。
+
 ## 2026-11-11：Base 主要改进按不同能力组织
 
 用户要求 v4 的 Base 展示不要全是 Happy Ending。首页将原取等链／合法交换／见证回接合为一项，另列已实施的强制全局进展重评，标注“研究反馈 · 主线维护”。Base 行改称“主要改进”（Key improvements），每版最多三项，不为凑满拆分同一动作链。领域增量仍放 Plugins；详细三环节和固定 v4 与 main 后续维护边界保留。

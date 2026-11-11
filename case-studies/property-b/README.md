@@ -4,7 +4,7 @@
 
 Let m(k) be the minimum number of edges in a finite simple k-uniform hypergraph that admits no red/blue vertex coloring in which every edge contains both colors. This case studies lower bounds for this classical hypergraph two-coloring problem.
 
-These studies were carried out with **ARIS**. Their proofs, failed routes, verification practices, and accumulated wiki were then distilled into **MathRSI's workflows and Property B plugin**. New tasks will evaluate MathRSI v1 itself.
+These studies were carried out with **ARIS**. Their proofs, failed routes, verification practices, and accumulated wiki were then distilled into **MathRSI's workflows and Property B plugin**. New tasks can evaluate their selected MathRSI revision; record its exact commit.
 
 ![Property B: individual and uniform lower-bound improvements, with separate axes and verification scopes](assets/delta.png)
 

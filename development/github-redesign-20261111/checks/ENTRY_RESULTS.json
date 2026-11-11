@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "tools/check_links.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Checked 134 documents and 1952 local link targets; 0 missing.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "examples/proof-repair/replay.py"
+      ],
+      "exit_code": 0,
+      "stdout": "32 colorings: P(Be)=1/8, P(Bf)=1/8, P(both)=1/16; independence product=1/64\nCounterexample to the input's event-independence claim verified.\nUnion-bound arithmetic checked for m=0,...,7; minimum good-coloring bound=1/8.\nThe universal theorem is established by reference/PROOF.md, not by this finite replay.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    }
+  ],
+  "entry_files": [
+    "base/skills/mathrsi-research/SKILL.md",
+    "examples/proof-repair/replay.py",
+    "examples/proof-repair/starter/REQUEST.md",
+    "examples/proof-repair/starter/PROOF.tex",
+    "base/tools/research_wiki.py",
+    "development/homepage-redesign-20261105/site/index.html"
+  ],
+  "valid_project_aliases": 114,
+  "media": {
+    "gif": {
+      "size": [
+        1000,
+        363
+      ],
+      "frames": 226,
+      "duration_ms": 18830
+    },
+    "mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 580,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "18.850000",
+        "size": "342831"
+      }
+    }
+  },
+  "recording_source_paths": "relative resolver and source existence checked; original approved capture retained, recorder not rerun",
+  "scope": "presentation and deterministic proof-repair replay; no Lean or mathematical research rerun"
+}
