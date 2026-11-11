@@ -9,7 +9,7 @@
 - Owns: English/Chinese README, navigation indexes, approved figure integration, small confirmed presentation drift, checks and reviewable PR. Existing Chinese entry stays `README.zh-CN.md`.
 - Original checkout and Root's untracked source folder remain read-only. Base/plugin algorithms, research archives, release tags, repository visibility and hosting remain outside implementation scope.
 - Root approved both architecture variants, the research-to-capabilities diagram and current-homepage GIF/MP4/poster. README now uses the evolution GIF as hero, architecture SVG for the layers and feedback SVG for maintenance; GPT raster is directly displayed only in the gallery. No recording frame cache or duplicate uncropped video is distributed. Final reference-based Gemini disposition consumed; one six-case index only.
-- Status: implementation complete; Root has inspected actual README/navigation, figures, media and 1280/390 previews. Final factual/visual inspection is Root's, not a claim of personal user approval of every asset. Commit/PR coordinates follow below; merge is reserved for Root.
+- Status: implementation complete; Root has inspected actual README/navigation, figures, media and 1280/390 previews. Final factual/visual inspection is Root's, not a claim of personal user approval of every asset. Delivery coordinates are recorded below; merge is reserved for Root.
 
 ## Implemented
 
@@ -30,3 +30,10 @@
 - [Entry/check output](checks/ENTRY_RESULTS.json). No Lean or mathematical research rerun; no new paid model call by the implementation agent.
 
 Root's scope and editorial decisions are preserved in [AUTHORSHIP.md](AUTHORSHIP.md) and inputs. Ready for actual-head review and merge by Root; implementation does not merge.
+
+## Delivery
+
+- Reviewable PR: [#22](https://github.com/lisresearchgroup/math-rsi/pull/22), targeting main from `docs/github-redesign-20261111`.
+- Implementation commit: `c97ff5e2` (`Redesign bilingual GitHub entry and research navigation`). A subsequent status-only commit records these delivery coordinates; inspect the PR's actual head for final acceptance.
+- Final staged whitespace check passed. Branch pushed under wanshuiyin; no merge performed.
+- All requested implementation work is complete. Root owns actual-head acceptance and integration; no unresolved implementation question remains.
