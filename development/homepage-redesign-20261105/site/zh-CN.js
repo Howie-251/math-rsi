@@ -414,7 +414,7 @@ window.MATHRSI_ZH = {
   "Three dated table comparisons from earlier research": "早期研究中的三项按期记录表对比",
   "Three dated table records, developed with standalone ARIS tools": "使用独立 ARIS 工具完成的三项按期记录表改进",
   "Three exact parameters were already established at v0. The fourth applies a published 2020 theorem during the v1–v2 continuation; v3 improves the proof tools, without adding a fifth closure.": "v0 阶段已确定三组精确参数；v1–v2 延续期通过应用已发表的 2020 年定理闭合第四组参数；v3 进一步升级了证明与复核工具，未新增第五组闭合参数。",
-  "Top 3 improvements": "三项关键改进",
+  "Key improvements": "主要改进",
   "Trace in evolution ↑": "在演进图中追踪 ↑",
   "Trace the equality cases, exchange actual points, and force the two paths that rule out the last case.": "追踪整条取等情形，交换实际点位，并由容量迫出两条路径以排除最后一种情形。",
   "Transfer evidence across changes": "跨对象变更迁移证据",
@@ -611,5 +611,10 @@ window.MATHRSI_ZH = {
   "Pause explanation": "暂停说明",
   "Replay explanation": "重播说明",
   "Current explanation step": "当前说明步骤",
-  "Illustration only. No search or computation runs here.": "仅作方法示意，此处不运行搜索或计算。"
+  "Illustration only. No search or computation runs here.": "仅作方法示意，此处不运行搜索或计算。",
+  "Turn equality into a usable witness": "从取等条件推进到原题见证",
+  "Recover simultaneous equality conditions, make a legal exchange, and connect the resulting witness to the original problem.": "找出必须同时成立的取等条件，通过合法交换得到见证，再将见证接回原题。",
+  "Mandatory global progress checks": "强制全局进展重评",
+  "When local work stops reducing the original gap, two independent agents reassess the route and total cost; use their findings to choose the next action.": "当局部工作不再缩小原题缺口时，由两位独立代理重新评估路线与总成本，并据此决定下一步。",
+  "Research feedback · main maintenance": "研究反馈 · 主线维护"
 };
