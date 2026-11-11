@@ -8,7 +8,9 @@
 
 面向严谨数学研究、由 agent 实际执行并持续演进的工作流与领域知识 harness。
 
-[English](README.md) · [开始使用](#开始使用) · [数学成果](#六个数学方向) · [可视化导览](docs/HOMEPAGE.md) · [文档](docs/README.md)
+[English](README.md)
+
+[![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](docs/QUICKSTART.md)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![可视化导览 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](docs/HOMEPAGE.md)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
 
 </div>
 

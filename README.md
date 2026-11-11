@@ -8,7 +8,9 @@
 
 An agent-executable, self-evolving workflow and domain knowledge harness for rigorous mathematical research.
 
-[中文](README.zh-CN.md) · [Quick start](#quick-start) · [Results](#six-mathematical-frontiers) · [Visual tour](docs/HOMEPAGE.md) · [Documentation](docs/README.md)
+[中文](README.zh-CN.md)
+
+[![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](docs/QUICKSTART.md)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Visual Tour / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](docs/HOMEPAGE.md)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
 
 </div>
 
