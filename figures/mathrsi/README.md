@@ -1,8 +1,65 @@
-# MathRSI architecture figures
+# MathRSI figure gallery
 
-Two coordinated English diagrams explain current **v3**, its research origins, and its executable workflow. Versioned v3 assets keep the earlier v2 diagrams available as historical snapshots. See the [v3 generation and review record](../../development/figures-v3-20261104/REPORT.md) for the actual scope.
+[English entry](../../README.md) · [中文入口](../../README.zh-CN.md) · [Visual tour](../../docs/HOMEPAGE.md)
 
-## Current v3 · Figure 1: Research experience improves base and plugins
+## Three-layer architecture · editable vector
+
+![MathRSI base workflow, six domain plugins and per-problem workspace](architecture-three-layers.svg)
+
+The base calls domain methods and reads, updates and reuses the task's evidence. The research wiki belongs to the task workspace. Separate maintenance can learn from research evidence, including failures and partial work.
+
+- [FigureSpec JSON](specs/architecture-three-layers.json): editable layout and text source.
+- [SVG](architecture-three-layers.svg): 1200 × 810, editable text.
+- [2× PNG](architecture-three-layers.png): 2400 × 1620.
+- [900 CSS-pixel preview](architecture-three-layers-900px.png) · [Measured text bounds](text-bounds.json) · [Browser renderer](render_preview.py).
+
+### Regenerate the vector
+
+Root generated this version using ARIS FigureSpec. Edit the JSON and regenerate the SVG. The original renderer is at `skills/figure-spec/scripts/figure_renderer.py` in ARIS commit `8f493923f28c3f991dcca1287db97aa780d0969b`; it uses only Python's standard library.
+
+Use an ARIS checkout containing that renderer. From this MathRSI clone's root, with `ARIS_REPO` set to that **external renderer checkout**:
+
+```sh
+export ARIS_REPO=/path/to/Auto-claude-code-research-in-sleep
+python3 "$ARIS_REPO/skills/figure-spec/scripts/figure_renderer.py" validate \
+  figures/mathrsi/specs/architecture-three-layers.json
+python3 "$ARIS_REPO/skills/figure-spec/scripts/figure_renderer.py" render \
+  figures/mathrsi/specs/architecture-three-layers.json \
+  --output figures/mathrsi/architecture-three-layers.svg
+python3 figures/mathrsi/render_preview.py
+```
+
+The browser-preview step needs Playwright and its Chromium browser. The included MathRSI `base/tools/figure_renderer.py` is an upstream forwarding shim whose canonical figure-spec script was not bundled; it is not the regeneration entry above. This optional graphics dependency is separate from normal MathRSI task helpers, which use this clone's `base`.
+
+Root inspected the actual 900px vector render and approved integration. The original browser check placed all text bounds inside the canvas. Approval concerns presentation; it is not a new mathematical review.
+
+## Three-layer architecture · GPT Image alternative
+
+![GPT Image interpretation of the same three-layer MathRSI architecture](architecture-three-layers-gpt.png)
+
+[Full PNG](architecture-three-layers-gpt.png) · [Exact generation prompt](architecture-three-layers-gpt.prompt.txt)
+
+Root generated this bitmap using GPT Image from the supplied prompt and inspected the resulting image before approval. It is a separate visual interpretation, not an SVG conversion. Generate a new variant by sending the prompt to the image-generation tool; repeated generation is not deterministic. The README uses the editable SVG, while this alternative is shown here for comparison and reuse.
+
+## Research evidence → capabilities
+
+![Research evidence enters separate maintenance, strengthening base workflow and deepening domain plugins](research-to-capabilities.svg)
+
+This diagram explains feedback, rather than repeating the architecture. Research evidence includes failures and partial work; authorized maintenance adopts concrete Base and Plugin changes. The examples refer to actual existing changes, not measured speedups.
+
+[FigureSpec](specs/research-to-capabilities.json) · [SVG](research-to-capabilities.svg) · [2× PNG](research-to-capabilities.png) · [900px preview](research-to-capabilities-900px.png) · [Text bounds](research-to-capabilities-text-bounds.json) · [Browser renderer](render_research_to_capabilities.py)
+
+Use the same external ARIS renderer described above with `specs/research-to-capabilities.json` and output `research-to-capabilities.svg`; then run `python3 figures/mathrsi/render_research_to_capabilities.py` from the clone root. Root inspected and approved the actual vector rendering.
+
+## Actual homepage motion
+
+The README hero is a recording of the current homepage's v0 → v4 evolution animation. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
+
+## Historical diagrams
+
+The assets below are preserved **v3 and v2 snapshots**. Current release is v4; main also includes later maintenance. See [v4 changes](../../docs/V4_CHANGES.md), [the bilingual visual tour](../../docs/HOMEPAGE.md), and the [v3 generation record](../../development/figures-v3-20261104/REPORT.md). Historical labels describe their original versions.
+
+### v3 snapshot · Figure 1: Research experience improves base and plugins
 
 ![MathRSI evolves from v0 basic research tools through v1 and v2 to current v3 and future versions along stronger-base and broader, deeper-plugin tracks](01-evolution-v3.png)
 
@@ -10,7 +67,7 @@ The historical v0 stage comprises basic research tools and the initial Property 
 
 The two tracks show shared workflow improvement and domain expansion/deepening. Research histories supply evidence for maintenance; their mathematical results keep their original attribution. Fixed v1/v2/v3 tags preserve complete snapshots, while `main` follows the recommended version.
 
-## Current v3 · Figure 2: Problem routing, research and evidence
+### v3 snapshot · Figure 2: Problem routing, research and evidence
 
 ![Problem recognition and plugin routing lead into Root-coordinated solving with scoped workers, adversarial reviewers, deterministic or optional Lean checks, continuous wiki reuse and separate maintenance](02-workflows-v3.png)
 
@@ -20,7 +77,7 @@ Cross-model adversarial review critiques routes and arguments. Deterministic com
 
 The separate `mathrsi-meta-evolve` maintenance workflow classifies evidence as Base, Plugin, Task or Defer. Supported Base and Plugin changes proceed through implementation, review, actual use and adoption. Task state remains in the task wiki; deferred proposals stay in the backlog. Maintenance operates within its authorized scope rather than automatically following every handoff as a sixth solving stage.
 
-## Current v3 prompts and review
+### v3 prompts and review
 
 - Figure 1: [generation prompt](01-evolution-v3.prompt.txt), [v2 maintenance-label refinement](01-evolution-v3-edit.prompt.txt).
 - Figure 2: [generation prompt](02-workflows-v3.prompt.txt), [dispatch and plugin-connection refinement](02-workflows-v3-edit.prompt.txt).
@@ -28,14 +85,14 @@ The separate `mathrsi-meta-evolve` maintenance workflow classifies evidence as B
 
 Executable descriptions: [v3 changes](../../docs/V3_CHANGES.md), [domain routing](../../docs/DOMAIN_ROUTING.md), [workflow](../../docs/WORKFLOWS.md), [wiki operations](../../docs/WORKSPACE.md#7-五阶段的-wiki-读取与写回), [maintenance](../../docs/EVOLUTION_WORKFLOW.md), and [plugin contract](../../docs/PLUGIN_CONTRACT.md).
 
-## Historical v2 diagrams
+### v2 snapshots
 
 <details>
 <summary>Evolution diagram · v2 snapshot</summary>
 
 ![Historical v2 evolution diagram, whose ECC-draft and future-v3 labels describe that release](01-evolution.png)
 
-The ECC-draft and future-v3 labels belong to this historical snapshot. Its base-tool origins and independent DD research feed the v1/v2 evolution; it does not describe current v3 capability.
+The ECC-draft and future-v3 labels belong to this historical snapshot. Its base-tool origins and independent DD research feed the v1/v2 evolution; it does not describe current main capability.
 
 </details>
 
@@ -44,7 +101,7 @@ The ECC-draft and future-v3 labels belong to this historical snapshot. Its base-
 
 ![Historical v2 five-subworkflow diagram with embedded ARIS, research wiki, optional Lean and separate maintenance](02-workflows.png)
 
-The five solving subworkflows remain in v3; the current diagram adds the explicit routing, worker returns and evidence paths.
+The five solving subworkflows remain in v3; the v3 diagram adds the explicit routing, worker returns and evidence paths.
 
 </details>
 

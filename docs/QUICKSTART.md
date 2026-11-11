@@ -2,7 +2,7 @@
 
 MathRSI is a set of readable agent workflows, bundled ARIS skills, and domain knowledge. You give a working agent the repository's entry skill and your mathematical task. The agent reads the relevant instructions, performs the work, consumes the resulting proofs and checks, and continues from the actual remaining obligation. There is no MathRSI server or generic scheduler command to start.
 
-This guide works with Codex or Claude Code. v3 is the current release, with the fixed v1/v2 snapshots retained. Use `main` for the recommended version, or choose a fixed release tag for a reproducible starting point; record the checked-out revision in the task handoff. See [v3 changes](V3_CHANGES.md) and the [evolution record](../development/evolution/v3-20261104/EVOLUTION.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
+This guide works with Codex or Claude Code. v4 is the current release, with fixed v1/v2/v3/v4 snapshots retained. Use `main` for the recommended version, or choose a fixed release tag for a reproducible starting point; record the checked-out revision in the task handoff. See [v4 changes and subsequent main maintenance](V4_CHANGES.md) and the [evolution records](../development/README.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
 
 ## Get the repository and choose a workspace
 
@@ -180,7 +180,7 @@ Keep the original research workspace read-only unless separately authorized.
 
 The skill owns the execution sequence; [evolution guidance](EVOLUTION_WORKFLOW.md) explains the inputs and adoption boundary. The current coordinator uses the candidate workflow, with bounded subagent help where useful. A fresh agent running the entire process is not a mandatory prerequisite; required independent mathematical checks still follow the task contract. Existing valid checks are reused.
 
-The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) preserve DD integration history. The [v3 changes](V3_CHANGES.md) describe the current increment and actual bounded use; its [maintenance record](../development/evolution/v3-20261104/EVOLUTION.md) tracks review and adoption. Archived outcomes supply mathematical methods, not new-version research performance benchmarks.
+The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) preserve DD integration history. The [v3 changes](V3_CHANGES.md) preserve that earlier increment and its actual bounded use. The current [v4 changes](V4_CHANGES.md) and [maintenance records](../development/README.md) distinguish the release from subsequent main maintenance. Archived outcomes supply mathematical methods, not new-version research performance benchmarks.
 
 ## Keep the result usable next time
 
