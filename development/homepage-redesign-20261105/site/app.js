@@ -116,7 +116,7 @@ const VERS = [
     plug:[['deep','ECC','ecc'],['add','Extremal','e86'],['add','Hamilton','q6'],['add','Happy Ending','he']],
     sum:'v3 release. Four strengthened evidence-loop actions, explicit 5-stage wiki reuse, an in-place ECC upgrade and three newly incorporated domains.' },
   { tag:'v4', state:'Current', name:'Equality structure & deeper plugins',
-    base:[["Recover the equality chain", "he", "At a tight integer threshold, recover simultaneous zero-slack conditions on the same object."], ["Make legal exchanges", "he", "Prove an equal-size replacement preserves the constraints, then use capacity to force a witness."], ["Connect the same endpoints", "he", "Locate the actual witness endpoints and marked data needed by the original caller."]],
+    base:[["Turn equality into a usable witness", "he", "Recover simultaneous equality conditions, make a legal exchange, and connect the resulting witness to the original problem."], ["Mandatory global progress checks", "", "When local work stops reducing the original gap, two independent agents reassess the route and total cost; use their findings to choose the next action.", "Research feedback · main maintenance"]],
     fullBase:['Implemented in route-loop, prove and verify: same-object equality chain → legal equal-size exchange → capacity-forced, endpoint-compatible witness','Subsequent maintenance on main: mandatory independent global progress checks ask whether reductions improve the original completion path; the fixed v4 snapshot is unchanged.'],
     plug:[['deep','Happy Ending','he'],['deep','DD','dd'],['deep','ECC · main','ecc'],['note','Other 3 domains retained']],
     pluginNote:'ECC on main: reuse exclusions and share computations.',
@@ -261,9 +261,9 @@ function buildLanes() {
   VERS.forEach((V, i) => {
     h += `<div class="cell row-v${i === FUTURE ? ' fut' : i === LAST ? ' current' : ''}" data-v="${i}"><button class="vbtn" type="button" data-goto="${i}" aria-label="Show MathRSI harness ${V.tag}: ${V.name}"><span class="vtag">${V.tag}</span><span class="vstate s-${V.state.toLowerCase()}">${V.state}</span><span class="vname">${V.name}</span></button></div>`;
   });
-  h += '<div class="lane-lab row-b">Base<span class="lane-explain">Top 3 improvements</span></div>';
+  h += '<div class="lane-lab row-b">Base<span class="lane-explain">Key improvements</span></div>';
   VERS.forEach((V, i) => {
-    h += `<div class="cell row-b${i === FUTURE ? ' fut' : i === LAST ? ' current' : ''}" data-v="${i}"><ul>${V.base.slice(0, 3).map((b, j) => `<li style="--i:${j}"><strong>${b[0]}</strong><span class="base-action">${b[2] || ''}</span>${b[1] ? fromTag(b[1]) : ''}</li>`).join('')}</ul></div>`;
+    h += `<div class="cell row-b${i === FUTURE ? ' fut' : i === LAST ? ' current' : ''}" data-v="${i}"><ul>${V.base.slice(0, 3).map((b, j) => `<li style="--i:${j}"><strong>${b[0]}</strong><span class="base-action">${b[2] || ''}</span>${b[1] ? fromTag(b[1]) : b[3] ? `<span class="from" data-cases="">${b[3]}</span>` : ''}</li>`).join('')}</ul></div>`;
   });
   h += '<div class="lane-lab row-p">Plugins</div>';
   VERS.forEach((V, i) => {
