@@ -40,6 +40,8 @@ MathRSI 沿 **两条相互促进的方向** 演进：
 
 **`main` 上的 v4 后续维护加入强制全局重评。** 规约正确还要看是否有用：究竟减少了哪个数学障碍或完整执行成本？每批派工／收件回看原题；到约定检查点，或局部成果不断增加但完成路径没有改善时，由两位独立只读代理检查原题连接、剩余难点与替代路线，Root 随即调整队列或批准有界续行。详见[可执行协议](base/skills/mathrsi-research/references/global-reassessment.md)与[维护证据](docs/V4_CHANGES.md)。
 
+**`main` 上的 ECC 维护避免跨分枝重复搜索。** 新推进、恢复、换方法或派工前，按实际码与覆盖范围确定稳定的数学节点和执行任务；复用已有排除，共用计算只派一次，归属未知则先核对再启动依赖它的扫描。父结论须有完整覆盖，选路仍服从 Base 全局重评。详见[节点协议](plugins/ecc/skills/mathrsi-ecc/references/node-research.md)与[PR #19 维护说明](docs/V4_CHANGES.md#subsequent-v4-maintenance-on-main-ecc-node-research)。
+
 ### v3 怎样强化共享 Base：四类共性改进
 
 v3 的四项 Base 改动均直接写在原技能的输入、动作与返回点上，不另造第二套调度器（详见 [Base 修改报告](development/evolution/v3-20261104/base/BASE_CHANGES.md) · [真实调用用例](development/evolution/v3-20261104/base/USE.md)）：

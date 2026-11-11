@@ -40,6 +40,8 @@ Routine fixes also carry forward: [PR #7](https://github.com/lisresearchgroup/ma
 
 **Subsequent v4 maintenance on `main` makes global reassessment mandatory.** A valid reduction must also be assessed for usefulness: what mathematical obstacle or total completion cost does it actually reduce? Two independent read-only agents examine the original goal, remaining gaps and alternatives at defined checkpoints or when local work stops changing the completion path; Root then changes the work queue or authorizes a bounded continuation. See the [executable protocol](base/skills/mathrsi-research/references/global-reassessment.md) and [maintenance evidence](docs/V4_CHANGES.md).
 
+**ECC maintenance on `main` prevents repeated searches across branches.** Before advancing, resuming, changing methods or dispatching work, match the actual code and coverage to a stable mathematical node and execution task. Reuse existing exclusions, dispatch shared computations once, and verify uncertain membership before a dependent scan. Parent conclusions require full coverage; base global reassessment still governs route choice. See the [node protocol](plugins/ecc/skills/mathrsi-ecc/references/node-research.md) and [PR #19 details](docs/V4_CHANGES.md#subsequent-v4-maintenance-on-main-ecc-node-research).
+
 ### How v3 Strengthens the Shared Base
 
 Each v3 base change turns a concrete research failure into an action in the existing subworkflows ([base diff report](development/evolution/v3-20261104/base/BASE_CHANGES.md) · [runnable examples](development/evolution/v3-20261104/base/USE.md)):

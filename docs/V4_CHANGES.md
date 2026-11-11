@@ -14,6 +14,19 @@ Root consumes their actual findings and executes a bounded continuation, missing
 
 The [maintenance record](../development/evolution/v4-global-reassessment-20261108/EVOLUTION.md) links Gemini's design and implementation review, two independent historical decision exercises, the actual caller integrations and documentation/browser checks.
 
+## Subsequent v4 maintenance on `main`: ECC node research
+
+[PR #19](https://github.com/lisresearchgroup/math-rsi/pull/19) adds a Markdown execution protocol to the existing ECC plugin. It is subsequent v4 maintenance on `main`, outside the fixed `v4` tag. It adds no base skill or mathematical result.
+
+Before advancing, resuming, changing methods or dispatching work, `mathrsi-ecc` matches the actual object, target and coverage to a stable `node_id` and records a `task_id`. Existing exclusions prune covered work; unfinished tasks resume from real checkpoints. Changing basis or algorithm keeps the mathematical node. Shared computations have one task and multiple consumers; uncertain membership first becomes a scope-check task. Existing task records and the research wiki carry these decisions.
+
+`ecc-certificate` checks the precise local result and its connection to the caller. Closing a parent additionally requires coverage of its full domain, all necessary child evidence and valid dependencies; completed tasks alone do not close it. The base global-reassessment protocol retains priority when choosing the next route.
+
+- [Node protocol](../plugins/ecc/skills/mathrsi-ecc/references/node-research.md): object identity, coverage, dispatch and result return.
+- [Minimal work package](../plugins/ecc/skills/mathrsi-ecc/examples/node-work-package.md): reusable node/task fields and acceptance conditions.
+- [72/36 branch example](../plugins/ecc/skills/mathrsi-ecc/examples/node-research.md): algebraic branches, uncovered remainders and shared extension work; a teaching example, not a new solution.
+- [Validation record](../plugins/ecc/evidence/NODE_RESEARCH_VALIDATION.md): link and manual execution-path checks, plus a small algebraic replay; no original-problem scan or Goal was started.
+
 ## A stronger shared base
 
 When a proof misses an integer threshold by one, the existing [route-loop](../base/skills/mathrsi-route-loop/SKILL.md), [prove](../base/skills/mathrsi-prove/SKILL.md) and [verify](../base/skills/mathrsi-verify/SKILL.md) now connect three actions:
