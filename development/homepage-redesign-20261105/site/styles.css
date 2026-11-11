@@ -23,7 +23,8 @@ button{font:inherit;color:inherit}
 .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
 .nav.scrolled{border-color:var(--hair)}
 .nav-in{height:60px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:650;letter-spacing:-.02em;text-decoration:none;font-size:16px}
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:650;letter-spacing:-.02em;text-decoration:none;font-size:16px}
+.nav-symbol{display:block;flex:none;width:44px;height:22px;object-fit:contain}
 .nav nav{display:flex;gap:26px;font-size:14px}
 .nav nav a{text-decoration:none;color:var(--ink-2)}
 .nav nav a:hover{color:var(--ink)}
@@ -442,11 +443,13 @@ button{font:inherit;color:inherit}
   opacity:0; filter:blur(16px); transition:opacity .35s ease;
 }
 .wordmark-plane {
-  display:block; position:relative;
+  display:inline-flex; align-items:center; gap:.16em; position:relative;
   transform:perspective(800px) translate3d(var(--shift-x),var(--shift-y),0) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
   transition:transform .55s cubic-bezier(.22,1,.36,1);
 }
 .wordmark.is-active .wordmark-plane { transition-duration:.16s; }
+.hero-symbol { display:block; flex:none; width:1.64em; height:.82em; object-fit:contain; }
+.wordmark-text { display:block; position:relative; }
 .wordmark-ink { display:block; }
 .wordmark-sheen {
   position:absolute; inset:0; pointer-events:none; opacity:0;
