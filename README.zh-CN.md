@@ -56,12 +56,14 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 六个领域的研究同时积累数学结果和可复用方法。[公开主页](https://lisresearchgroup.github.io/math-rsi/) · [本地运行方法](docs/HOMEPAGE.md)。**[中英可视化导览](https://lisresearchgroup.github.io/math-rsi/)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
-- **Property B · 超图二染色。** $k=5,\ldots,12$ 的逐参数报告下界为 $35,67,131,267,543,1112,2275,4664$，另有对每个 $k\ge12$ 严格改进指定 RS 预算的一般定理，将具体参数改进与统一结论连接起来。[成果与证明范围](case-studies/property-b/README.md)
-- **纠错码 · 二元最优距离。** $d_2(43,10)=16$、 $d_2(44,10)=17$、 $d_2(44,11)=16$、 $d_2(42,16)=12$ 闭合四个最优距离问题；最后一项应用已发表的 2020 年定理。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
-- **Degree–Diameter · 大图构造。** 一个 2,567 点的 $(10,4)$ 图超过 2026-11-05 核对的 Comellas 表中 2,566 点条目，在相同度数和直径约束下得到更大的图。[构造与证据](case-studies/degree-diameter/README.md)
-- **Erdős 第 86 题 · 无四圈超立方体子图。** 精确证书将指定的渐近边密度上界从 $0.60318$ 改进至 $\lt0.59155154$，向猜想值 $1/2$ 推进。[结果与核验范围](case-studies/README.md#erdős-problem-86)
-- **Ruskey–Savage · $Q_6$ Hamilton 延拓。** $Q_6$ 的每个匹配均能延拓为 Hamilton 圈，解决六维情形；结合文献进口，还覆盖任意维中使用至多六个方向的匹配。[证明与证书范围](case-studies/README.md#ruskeysavage-q6)
-- **Happy Ending · 凸七边形。** 已收到的工作稿声称 $N(7,6,7)\le75$、 $N(7,7,7)\le76$，从而 $\mathrm{ES}(7)\le77$，收紧原 78 阈值。**工作稿，待独立审阅。**[原稿与状态](case-studies/happy-ending/README.md)
+[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg)](case-studies/README.md)
+
+- **Property B：** $k=5,\ldots,12$ 的具体下界，以及所有 $k\ge12$ 随参数指数增长的加性增益。[成果与证明范围](case-studies/property-b/README.md)
+- **纠错码：** 闭合三组 1985 年已有的缺口，得到四组精确距离（含一项文献推论）并收窄一组区间。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
+- **Degree–Diameter：** 刷新四组历史构造基准，包括一个 2,567 点的 $(10,4)$ 图。[构造与证据](case-studies/degree-diameter/README.md)
+- **Erdős 第 86 题：** 渐近密度上界从 $0.60318$ 改进至 $\lt0.59155154$。[结果与核验范围](case-studies/README.md#erdős-problem-86)
+- **Ruskey–Savage：** $Q_6$ 的每个匹配均可延拓为 Hamilton 圈。[证明与证书范围](case-studies/README.md#ruskeysavage-q6)
+- **Happy Ending：** 工作稿将 $\mathrm{ES}(7)$ 上界从 78 收紧至 77，待独立审阅。[原稿与状态](case-studies/happy-ending/README.md)
 
 <a id="三层架构"></a>
 

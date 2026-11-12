@@ -56,12 +56,14 @@ Reads the task's existing specification, wiki and resumption notes, then continu
 
 Research across six domains supplies results and reusable methods. [Public homepage](https://lisresearchgroup.github.io/math-rsi/) · [Local viewing instructions](docs/HOMEPAGE.md). The **[bilingual visual tour](https://lisresearchgroup.github.io/math-rsi/)** shows their problems, results and evolution; the **[six-case index](case-studies/README.md)** links proofs, verification scopes and runnable tools.
 
-- **Property B · hypergraph two-coloring.** Reported lower bounds for $k=5,\ldots,12$ are $35,67,131,267,543,1112,2275,4664$, alongside a uniform improvement over the specified RS budget for every $k\ge12$. The work combines concrete improvements with a general theorem. [Results & proof scope](case-studies/property-b/README.md)
-- **Error-correcting codes · optimal binary distances.** The exact values $d_2(43,10)=16$, $d_2(44,10)=17$, $d_2(44,11)=16$ and $d_2(42,16)=12$ close four optimal-distance questions; the last applies a published 2020 theorem. [Results, methods & open case](case-studies/README.md#error-correcting-codes)
-- **Degree–diameter · large graphs.** A 2,567-vertex $(10,4)$ graph improves the Comellas entry of 2,566 checked on 2026-11-05: a larger graph under the same degree and diameter constraints. [Construction & evidence](case-studies/degree-diameter/README.md)
-- **Erdős Problem 86 · square-free hypercubes.** An exact certificate improves the specified asymptotic edge-density upper bound from $0.60318$ to $\lt0.59155154$, toward the conjectured $1/2$. [Result & verification scope](case-studies/README.md#erdős-problem-86)
-- **Ruskey–Savage · Hamilton extension in $Q_6$.** Every matching of $Q_6$ extends to a Hamilton cycle, settling the six-dimensional case; imported results also cover matchings using at most six directions in any dimension. [Proof & certificate scope](case-studies/README.md#ruskeysavage-q6)
-- **Happy Ending · convex heptagons.** Working manuscripts claim $N(7,6,7)\le75$ and $N(7,7,7)\le76$, hence $\mathrm{ES}(7)\le77$, tightening the prior 78 threshold. **Working manuscripts; independent review pending.** [Manuscripts & status](case-studies/happy-ending/README.md)
+[![Six-domain mathematical results overview](figures/mathrsi/results-overview/results-overview.en.svg)](case-studies/README.md)
+
+- **Property B:** bounds for $k=5,\ldots,12$ and exponentially growing additive gains for every $k\ge12$. [Results & proof scope](case-studies/property-b/README.md)
+- **Error-correcting codes:** three gaps dating to 1985 closed; four exact values (one from literature) and one narrowed range. [Results, methods & open case](case-studies/README.md#error-correcting-codes)
+- **Degree–diameter:** four dated construction benchmarks improved, including a 2,567-vertex $(10,4)$ graph. [Construction & evidence](case-studies/degree-diameter/README.md)
+- **Erdős Problem 86:** asymptotic density upper bound improved from $0.60318$ to $\lt0.59155154$. [Result & verification scope](case-studies/README.md#erdős-problem-86)
+- **Ruskey–Savage:** every matching of $Q_6$ extends to a Hamilton cycle. [Proof & certificate scope](case-studies/README.md#ruskeysavage-q6)
+- **Happy Ending:** working manuscripts lower the $\mathrm{ES}(7)$ upper bound from 78 to 77; independent review pending. [Manuscripts & status](case-studies/happy-ending/README.md)
 
 <a id="three-layers"></a>
 
