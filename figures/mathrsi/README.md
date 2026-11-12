@@ -2,6 +2,14 @@
 
 [English entry](../../README.md) · [中文入口](../../README.zh-CN.md) · [Visual tour](../../docs/HOMEPAGE.md)
 
+## Six-domain results overview
+
+[![Six-domain mathematical results overview](results-overview/results-overview.en.svg)](../../case-studies/README.md)
+
+[中文 SVG](results-overview/results-overview.zh.svg) · [English PNG](results-overview/results-overview.en.png) · [中文 PNG](results-overview/results-overview.zh.png) · [Editable generator, data and sources](results-overview/README.md)
+
+The two READMEs use their corresponding language version and link to the six-case source/scope index. The compact figure preserves the original result values, the literature-derived ECC value and Happy Ending's working-manuscript status. `render.py` regenerates SVGs using Python's standard library; PNG export is optional.
+
 ## Three-layer architecture · editable vector
 
 ![MathRSI base workflow, six domain plugins and per-problem workspace](architecture-three-layers.svg)

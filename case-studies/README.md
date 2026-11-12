@@ -16,6 +16,8 @@ The uniform theorem and earlier $m(5)\ge33,34$ have end-to-end Lean proofs. The 
 
 **Four exact binary-code distances:** $d_2(43,10)=16$, $d_2(44,10)=17$, $d_2(44,11)=16$ and $d_2(42,16)=12$. The first three follow from the old 172-parent exclusion and constructions; 42/16 applies a published 2020 theorem. The remaining range is $16\le d_2(45,11)\le17$.
 
+**Historical source.** Verhoeff's *Updating a table of bounds on the minimum distance of binary linear codes* (1985), [Appendix I, block (1,0), PDF p.45](https://pure.tue.nl/ws/portalfiles/portal/2264214/253220.pdf#page=45), records $(43,10)$ at 16–17, $(44,10)$ at **16–18**, $(44,11)$ at 16–17 and $(45,11)$ at 16–18. The main proof closes the first three at 16, 17 and 16; the last narrows to 16–17. For public-table comparisons checked on 2026-11-12, see CodeTables [43/10](https://www.codetables.de/BKLC/BKLC.php?q=2&n=43&k=10), [44/10](https://www.codetables.de/BKLC/BKLC.php?q=2&n=44&k=10), [44/11](https://www.codetables.de/BKLC/BKLC.php?q=2&n=44&k=11) and [45/11](https://www.codetables.de/BKLC/BKLC.php?q=2&n=45&k=11). The fourth exact value, $d_2(42,16)=12$, remains the separate 2020-literature corollary.
+
 Lean reductions retain explicit literature, classification and computation premises. Actual-matrix checking, one-parent replay and the whole-domain exclusion have different scopes. The recent $[72,36,\ge16]$ A/B/C node example teaches research organization; it is not an additional solved parameter.
 
 [Plugin and methods](../plugins/ecc/README.md) · [Actual checks and import boundaries](../plugins/ecc/evidence/IMPLEMENTATION.md) · [Node organization example](../plugins/ecc/skills/mathrsi-ecc/examples/node-research.md)
