@@ -10,7 +10,7 @@
 
 [English](README.md)
 
-[![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](docs/QUICKSTART.md)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![可视化导览 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
+[![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](#开始使用)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![可视化导览 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
 
 </div>
 
@@ -24,28 +24,31 @@ MathRSI 将数学问题从文献检索、路线探索推进到证明、对抗审
 
 ## 1. 🚀 快速开始
 
-使用有仓库访问权限的账号克隆。以下本地检查仅需 Python 3.9+ 标准库：
+克隆仓库并完成[配置](docs/QUICKSTART.md)后，在 **Claude Code** 或 **Codex** 中打开本仓库，并允许访问任务目录。Codex 将 `/skill` 换成 `$skill`。下列示例路径请替换为自己的路径。
 
-```bash
-git clone https://github.com/lisresearchgroup/math-rsi.git
-cd math-rsi
-python3 tools/check_links.py              # 检查文档链接
-python3 examples/proof-repair/replay.py   # 确定性重放证明修复示例
-```
-
-将问题说明（如 `problem.md`）或候选证明（如 `proof.tex`）放入独立任务目录。在 **Claude Code** 或 **Codex** 中打开克隆目录，并让宿主能访问该任务目录。项目技能已发现时使用 `/mathrsi-research` 或 `$mathrsi-research`；也可替换实际路径后直接发送：
+**从数学问题开始**
 
 ```text
-请读取 /abs/path/to/math-rsi/base/skills/mathrsi-research/SKILL.md。
-在 /abs/path/to/my-task 研究 <我的数学问题或候选证明>。
-恢复已有规格和 research-wiki；新题则按需建立，从当前证据支持的阶段进入。
-调用 /abs/path/to/math-rsi/base/tools 下的工具时设置
-ARIS_REPO=/abs/path/to/math-rsi/base。
+/mathrsi-research 研究 k 元超图二染色的边数下界；工作目录 ../my-problem/
 ```
 
-按所到阶段，任务目录留下规格、证明或明确缺口、核验记录与恢复文件。
+自动串联文献调研、路线探索、证明推进、验证与交付，全程复用任务 wiki。已有题面时，也可直接给 `../my-problem/problem.md`。
 
-仓库包含技能和 reviewer 桥接源码。模型访问及本题需要的工具由所选宿主环境提供。**[完整配置](docs/QUICKSTART.md)** · [证明修复示例](examples/proof-repair/README.md) · [Reviewer MCP 配置](docs/REVIEWER_MCP.md)
+**检查候选证明或局部引理**
+
+```text
+/mathrsi-verify 检查 ../my-problem/proof.tex
+```
+
+核验稿件或具体义务，修复可补步骤，或定位需要继续证明的实质数学缺口。
+
+**接着已有研究继续**（Codex 示例）
+
+```text
+$mathrsi-research 继续 ../my-problem/ 中的研究
+```
+
+读取任务目录已有的规格、wiki 与断点记录，从当前证据接续推进。Claude Code 使用 `/mathrsi-research`。
 
 <a id="六个数学方向"></a>
 

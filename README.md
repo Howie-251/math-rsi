@@ -10,7 +10,7 @@ An agent-executable, self-evolving workflow and domain knowledge harness for rig
 
 [中文](README.zh-CN.md)
 
-[![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](docs/QUICKSTART.md)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Visual Tour / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
+[![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](#quick-start)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Visual Tour / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](https://lisresearchgroup.github.io/math-rsi/)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
 
 </div>
 
@@ -24,28 +24,31 @@ MathRSI takes a mathematical question from literature and route exploration thro
 
 ## 1. 🚀 Quick Start
 
-Clone with an account that has access to the repository. These local checks use Python 3.9+ and its standard library:
+After completing [setup](docs/QUICKSTART.md), open this repository in **Claude Code** or **Codex** with access to your task directory. In Codex, replace `/skill` with `$skill`. Replace the example paths below with your own.
 
-```bash
-git clone https://github.com/lisresearchgroup/math-rsi.git
-cd math-rsi
-python3 tools/check_links.py              # check documentation links
-python3 examples/proof-repair/replay.py   # deterministic proof-repair replay
-```
-
-Put a problem statement (for example, `problem.md`) or candidate proof (`proof.tex`) in a separate task directory. Open the clone in **Claude Code** or **Codex**, with access to that directory. Use `/mathrsi-research` or `$mathrsi-research` when project skills are discovered, or give the agent this request with your actual paths:
+**Start from a mathematical problem**
 
 ```text
-Read /abs/path/to/math-rsi/base/skills/mathrsi-research/SKILL.md.
-Study <my question or candidate proof> in /abs/path/to/my-task.
-Restore its specification and research-wiki, or create them as needed for a new task.
-Enter at the stage supported by current evidence; use helpers from
-/abs/path/to/math-rsi/base/tools with ARIS_REPO=/abs/path/to/math-rsi/base.
+/mathrsi-research Study edge-count lower bounds for k-uniform hypergraph two-coloring; work in ../my-problem/
 ```
 
-Depending on the stage reached, the task directory keeps a specification, proof or precise remaining gap, verification record and recovery notes.
+Connects literature research, route exploration, proof work, verification and handoff, reusing the task wiki throughout. If you already have a problem statement, you can pass `../my-problem/problem.md` instead.
 
-The clone includes the skills and reviewer bridge source. Configure your chosen agent/model access and the tools needed by your task. **[Full setup](docs/QUICKSTART.md)** · [Proof-repair walkthrough](examples/proof-repair/README.md) · [Reviewer MCP setup](docs/REVIEWER_MCP.md)
+**Check a candidate proof or local lemma**
+
+```text
+/mathrsi-verify Check ../my-problem/proof.tex
+```
+
+Checks the proof or a specific obligation, repairs local omissions and identifies substantive mathematical gaps that need further proof work.
+
+**Resume an existing study** (Codex example)
+
+```text
+$mathrsi-research Continue the study in ../my-problem/
+```
+
+Reads the task's existing specification, wiki and resumption notes, then continues from the current evidence. In Claude Code, use `/mathrsi-research`.
 
 <a id="six-mathematical-frontiers"></a>
 

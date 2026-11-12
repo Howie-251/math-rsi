@@ -1,10 +1,34 @@
 # Start a mathematical task with MathRSI
 
-MathRSI is a set of readable agent workflows, bundled ARIS skills, and domain knowledge. You give a working agent the repository's entry skill and your mathematical task. The agent reads the relevant instructions, performs the work, consumes the resulting proofs and checks, and continues from the actual remaining obligation. There is no MathRSI server or generic scheduler command to start.
+After completing [setup](#get-the-repository-and-choose-a-workspace), open this repository in **Claude Code** or **Codex** with access to your task directory. In Codex, replace `/skill` with `$skill`. Replace the example paths below with your own.
 
-This guide works with Codex or Claude Code. v4 is the current release, with fixed v1/v2/v3/v4 snapshots retained. Use `main` for the recommended version, or choose a fixed release tag for a reproducible starting point; record the checked-out revision in the task handoff. See [v4 changes and subsequent main maintenance](V4_CHANGES.md) and the [evolution records](../development/README.md). The [small proof-repair example](../examples/proof-repair/README.md) is the quickest executable introduction: it includes a faulty input proof, a completed reference repair, and a Python standard-library replay. It does not require access to the original research workspaces.
+**Start from a mathematical problem**
+
+```text
+/mathrsi-research Study edge-count lower bounds for k-uniform hypergraph two-coloring; work in ../my-problem/
+```
+
+Connects literature research, route exploration, proof work, verification and handoff, reusing the task wiki throughout. If you already have a problem statement, you can pass `../my-problem/problem.md` instead.
+
+**Check a candidate proof or local lemma**
+
+```text
+/mathrsi-verify Check ../my-problem/proof.tex
+```
+
+Checks the proof or a specific obligation, repairs local omissions and identifies substantive mathematical gaps that need further proof work.
+
+**Resume an existing study** (Codex example)
+
+```text
+$mathrsi-research Continue the study in ../my-problem/
+```
+
+Reads the task's existing specification, wiki and resumption notes, then continues from the current evidence. In Claude Code, use `/mathrsi-research`.
 
 ## Get the repository and choose a workspace
+
+Use `main` for the recommended v4 release plus subsequent maintenance, or choose a fixed v1/v2/v3/v4 snapshot and record the revision in your task handoff. See [v4 changes](V4_CHANGES.md) and [evolution records](../development/README.md).
 
 You need access to the private GitHub repository, Git, and an installed, authenticated agent host. Python 3.9+ runs the included replay and reviewer bridges. Additional tools are needed only for the actions you choose: reviewer CLIs and accounts for external reviews, network/search access for literature work, TeX for PDF compilation, or a task-specific Lean environment for formalization. None of these accounts or toolchains is supplied by cloning the repository.
 
@@ -55,7 +79,9 @@ claude --add-dir "$TASK_ROOT"
 
 These are agent-host commands, not MathRSI commands. Check your installed host's `--help` if it differs. With a desktop host, select the clone as the project and grant the task directory through that host's directory controls. You can also start in an existing task workspace and explicitly provide the skill's absolute path; project aliases may then be unavailable, but reading the actual skill works.
 
-In the chat, paste a request like the following, replacing paths and the problem with your actual values. Shell variables in chat text are not automatically expanded; supply their absolute values or explicitly ask the agent to resolve them from the terminal.
+### If project skills are not discovered
+
+The clone provides project-relative aliases in `.claude/skills/` and `.agents/skills/`; cloning does not install them globally or set `ARIS_REPO`. Use the short calls above once the host discovers these aliases. If discovery has not refreshed, the explicit-path fallback below remains available. Replace its paths with actual absolute paths; shell variables in chat text are not automatically expanded.
 
 ```text
 Read /absolute/path/to/math-rsi/base/skills/mathrsi-research/SKILL.md
