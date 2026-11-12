@@ -2,23 +2,19 @@
 
 # <picture><source media="(prefers-color-scheme: dark)" srcset="figures/mathrsi/branding/mark-c-dark.png"><img src="figures/mathrsi/branding/mark-c-light.png" width="76" height="38" align="middle" alt=""></picture> MathRSI
 
-*SII MathRSI Team*
+<sub><em>SII MathRSI Team</em></sub>
 
-**研究持续推进，工作流从中学习。**
+**研究持续推进，工作流从中学习。**<br>让 Claude Code 与 Codex 执行可读的 Markdown 技能，推进、验证并改进数学研究。
 
-面向严谨数学研究、由 agent 实际执行并持续演进的工作流与领域知识 harness。
-
-[English](README.md)
-
-[![项目主页 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/ "项目主页 / EN + 中文")&nbsp; [![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](#开始使用)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)
+[![项目主页 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/ "项目主页 / EN + 中文")&nbsp; [![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](#开始使用)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)&nbsp; [English](README.md)
 
 </div>
-
-MathRSI 将数学问题从文献检索、路线探索推进到证明、对抗审阅、验证与可复现交付。**Claude Code 或 Codex 读取并执行 Markdown skills**，结合领域方法和当前问题的研究 wiki 开展工作。包括失败与局部进展在内的研究证据，再用于改进共享工作流和领域插件。
 
 [![MathRSI 当前真实主页的 v0 → v4 演进回放](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
 
 *真实主页演进回放；点击观看 MP4。[运行归属与工作稿状态](case-studies/README.md)。*
+
+MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Claude Code 或 Codex 完成文献调研、路线探索、证明、审阅、验证与交付。研究成果和失败经验持续用于改进工作流与插件。
 
 <a id="开始使用"></a>
 

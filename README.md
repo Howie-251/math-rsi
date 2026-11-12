@@ -2,23 +2,19 @@
 
 # <picture><source media="(prefers-color-scheme: dark)" srcset="figures/mathrsi/branding/mark-c-dark.png"><img src="figures/mathrsi/branding/mark-c-light.png" width="76" height="38" align="middle" alt=""></picture> MathRSI
 
-*SII MathRSI Team*
+<sub><em>SII MathRSI Team</em></sub>
 
-**Research advances. The workflow learns.**
+**Research advances. The workflow learns.**<br>Readable Markdown skills for Claude Code and Codex to run, verify, and refine mathematical research.
 
-An agent-executable, self-evolving workflow and domain knowledge harness for rigorous mathematical research.
-
-[中文](README.zh-CN.md)
-
-[![Website / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](https://lisresearchgroup.github.io/math-rsi/ "Website / EN + 中文")&nbsp; [![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](#quick-start)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)
+[![Website / EN + 中文](figures/mathrsi/badges/visual-tour.svg)](https://lisresearchgroup.github.io/math-rsi/ "Website / EN + 中文")&nbsp; [![Quick Start / Start here](figures/mathrsi/badges/quick-start.svg)](#quick-start)&nbsp; [![Results / 6 domains](figures/mathrsi/badges/results.svg)](case-studies/README.md)&nbsp; [![Agent Guide / Workflow + wiki](figures/mathrsi/badges/agent-guide.svg)](docs/WORKFLOWS.md)&nbsp; [中文](README.zh-CN.md)
 
 </div>
-
-MathRSI takes a mathematical question from literature and route exploration through proof construction, adversarial review, verification and reproducible handoff. **Claude Code or Codex executes readable Markdown skills**, using domain methods and the current problem's research wiki. Research evidence, including failures and partial work, feeds improvements back into the shared workflow and domain plugins.
 
 [![Actual MathRSI homepage evolution replay from v0 through v4](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
 
 *Actual homepage evolution replay. Click for MP4; [execution provenance and manuscript status](case-studies/README.md).*
+
+MathRSI pairs a shared base workflow with domain plugins and a per-problem research wiki, guiding Claude Code and Codex from literature survey and route selection through proof development, review, verification, and handoff. Validated results and diagnosed failures feed back to refine both the workflow and plugins.
 
 <a id="quick-start"></a>
 
