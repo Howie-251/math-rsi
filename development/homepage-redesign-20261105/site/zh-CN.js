@@ -1,5 +1,9 @@
 /* Chinese homepage copy, drafted by Gemini 4 and checked against the English source. */
 window.MATHRSI_ZH = {
+  "Contributors": "贡献者",
+  "Contributors ↓": "贡献者 ↓",
+  "Equal contribution": "同等贡献",
+  "Corresponding author": "通讯作者",
   "(10, 4) · New": "(10, 4) · 新增",
   "(10,4) details ↗": "(10,4) 详情 ↗",
   "(10,4) · Run: v2": "(10,4) · 运行版本：v2",
