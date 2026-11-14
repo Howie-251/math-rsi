@@ -290,7 +290,7 @@ button{font:inherit;color:inherit}
 .contributor-notes{display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:14px;margin:18px 0 34px}
 
 /* responsive */
-@media (max-width:1364px){.scroll-hint{display:block}}
+@media (max-width:1567px){.scroll-hint{display:block}}
 @media (max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:860px){
   .panel{grid-template-columns:1fr;gap:28px}
@@ -352,7 +352,10 @@ button{font:inherit;color:inherit}
   position: sticky;
   left: 0;
   z-index: 2;
-  background: linear-gradient(90deg, var(--bg) 85%, transparent);
+  background: var(--bg);
+  min-width: 0;
+  padding-right: 4px;
+  overflow-wrap: anywhere;
 }
 .cell {
   padding: 8px 10px;
@@ -504,7 +507,7 @@ button{font:inherit;color:inherit}
 .evo-title { margin:18px 0 6px; font-size:23px; font-weight:630; line-height:1.2; letter-spacing:-.025em; }
 .evo-deck { margin:0 0 22px; font-size:14px; color:var(--muted); line-height:1.5; }
 .lane-axis { line-height:1.5; font-size:12px; padding-top:9px; letter-spacing:.025em; }
-.lane-explain { display:block; margin-top:7px; font-size:12px; font-weight:400; line-height:1.4; letter-spacing:0; text-transform:none; }
+.lane-explain { display:block; margin-top:7px; max-width:100%; overflow-wrap:anywhere; hyphens:auto; font-size:11px; font-weight:400; line-height:1.4; letter-spacing:0; text-transform:none; }
 .cell.row-b { text-align:left; padding:16px 14px 20px; }
 .cell.row-b ul { gap:19px; }
 .cell.row-b li,.cell.row-b.sel li { padding:0; border:0; border-radius:0; background:none; }
