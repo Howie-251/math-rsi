@@ -1,0 +1,134 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "Q7_WORKFLOW / ARIS proof-checker local adaptation",
+  "verdict": "PASS",
+  "reason_code": "all_submitted_proof_obligations_complete_modulo_frozen_imports",
+  "summary": "The same-parity projection lemma and the complete (5,8)/(3,0) E16 outer-cut fiber pass. The additional 2-regular diagonal family obstructs two controlled receiver templates.",
+  "proof_status": "sound-modulo-imports",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "caller": "/root",
+  "author_agent_id": "/root/e16_import_inventory",
+  "reviewer_agent_id": "/root/e16_initial_checker",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "reviewer_model_identity": "Requested task configuration; provider identity not independently attested",
+  "generated_at": "2026-11-09T03:58:30.1533465Z",
+  "trace_path": "R7_E16_THREE_MONOCHROMATIC_CLOSURE_REVIEW.md",
+  "audited_input_hashes": {
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE.md": "b5b11fcdcff0e71c433d3c867b5804a72a18089a23cf244b98723888fca1b41f",
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE_INPUTS.json": "7531afc9f95904ca8054ae24a8a86aa01966bc2d3446a3cd9c63d2cdf58dba2e"
+  },
+  "report_sha256": "31f0cf3d3e01898651e69874a2ae8f9efb632d9618122d04ea76518930ec8c45",
+  "manifest_hash_checks": {
+    "status": "PASS",
+    "total": 8,
+    "bound_artifacts": 1,
+    "direct_import_hashes": 4,
+    "workflow_hashes": 3,
+    "mismatches": []
+  },
+  "scope": {
+    "complete_fiber": "Every 56-edge short matching with outer original hole split (5,8)/(3,0)",
+    "parity_projection_lemma": "All nonnegative integral dimensions and all 0 <= m <= d",
+    "complete_E16": false,
+    "arbitrary_imbalance_three": false,
+    "net_new_relative_to_all_old_tools_quantified": false
+  },
+  "details": {
+    "obligations": [
+      {
+        "id": "M01",
+        "status": "PASS",
+        "obligation": "Original matching quantifier and acyclic import graph"
+      },
+      {
+        "id": "M02",
+        "status": "PASS",
+        "obligation": "Fixed coordinate flips and parity transport"
+      },
+      {
+        "id": "M03",
+        "status": "PASS",
+        "obligation": "Same-parity projection capacity including m=0 and m=d"
+      },
+      {
+        "id": "M04",
+        "status": "PASS",
+        "obligation": "Adjacent-hole augmentation and complete E14 back-substitution"
+      },
+      {
+        "id": "M05",
+        "status": "PASS",
+        "obligation": "Eight distinct monochromatic mirrors with original internal partners"
+      },
+      {
+        "id": "M06",
+        "status": "PASS",
+        "obligation": "Three through six active coordinates of the receiver hole triple"
+      },
+      {
+        "id": "M07",
+        "status": "PASS",
+        "obligation": "Exact source selection intervals and their complements"
+      },
+      {
+        "id": "M08",
+        "status": "PASS",
+        "obligation": "All four capacity bounds below eight and legal inverse mirror sources"
+      },
+      {
+        "id": "M09",
+        "status": "PASS",
+        "obligation": "Old monochromatic three-bridge donor at r=5 and its K(Q6) C5 interface"
+      },
+      {
+        "id": "M10",
+        "status": "PASS",
+        "obligation": "Controlled positive actual inner crossing and all-original-edge expansion"
+      }
+    ],
+    "issues": []
+  },
+  "additional_diagnostic": {
+    "source": "R7_E16_EVEN_HIGH_GAP_CHECK.md",
+    "source_sha256": "ed0476410e603d2fb4991ef42184c3beffee974fe3dc8c66fa52d762ec7da8af",
+    "analytic_template_obstruction": "PASS",
+    "scope": "Diagonal G=K 2-regular family, for both controlled-four-bridge and two-return receiver templates in every orientation. No new Hamilton closure or counterexample established.",
+    "checked_fixed_realization": {
+      "graph": "C3 disjoint union C4",
+      "edge_count": 56,
+      "distinct_endpoints": 112,
+      "all_short": true,
+      "uncovered_vertices": [
+        0,
+        12,
+        20,
+        24,
+        33,
+        34,
+        61,
+        62,
+        65,
+        66,
+        93,
+        94,
+        103,
+        107,
+        115,
+        127
+      ]
+    },
+    "scan_replayed": false
+  },
+  "resource_use": {
+    "fixed_matching_formula_checks": 1,
+    "matching_solver_calls": 0,
+    "hamilton_solver_calls": 0,
+    "matching_enumerations": 0,
+    "hole_family_enumerations": 0,
+    "old_certificate_replays": 0,
+    "diagnostic_scan_replays": 0
+  }
+}

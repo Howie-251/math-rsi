@@ -33,9 +33,9 @@ python3 "$run_dir/A10_ORBIT3_UNIVERSAL_REVIEW_check.py"
 
 ## 新同型几何：参数化有限森林门
 
-[check_forest_rank.py](../../../tools/check_forest_rank.py)由独立REVIEW_check的DSU/低列Gauss机制薄适配，不导入固定H、manifest或生产者消元。调用者显式提供dim、root、holes、forests与columns。顶点标为0…2^dim−1，root∈holes，K为补集，|K|须偶数且至少4；当前格式只用无符号字节，所以dim≤8。森林在全顶点减root上：K度1、holes−root度2，短边、无重边、无圈。列允许K完全图任意边，与CKN矩阵域相符。
+[check_forest_rank.py](../../../tools/check_forest_rank.py)由独立REVIEW_check的DSU/低列Gauss机制薄适配，不导入固定H、manifest或生产者消元。调用者显式提供dim、holes、forests与columns，省略集合用`--omitted`，旧单省点调用保留`--root`。二者择一，不能同时传。顶点标为0…2^dim−1，省略集合U非空且U⊆holes，K为补集，|K|须偶数且至少4；当前格式只用无符号字节，所以dim≤8。森林在U度0、K度1、holes−U度2，短边、无重边、无圈；root入口等于U={root}。列允许K完全图任意边，与CKN矩阵域相符。
 
-设t=|K|，一条森林边数为2^dim−1−t/2，故无header记录宽度为该数的两倍bytes；每条column宽t bytes。每边编码两个升序端点（森林/列的边顺序不影响数学）。工具从森林路径重建端点匹配，不相信外部pair表；重建所有行列连通位并独立算GF2秩。
+设t=|K|，一条森林边数为2^dim−|U|−t/2，故无header记录宽度为该数的两倍bytes；每条column宽t bytes。每边编码两个升序端点（森林/列的边顺序不影响数学）。工具从森林路径重建端点匹配，不相信外部pair表；重建所有行列连通位并独立算GF2秩。
 
 ```sh
 run_dir=$(mktemp -d)
@@ -46,7 +46,7 @@ python3 plugins/hypercube-hamilton/tools/check_forest_rank.py \
   --output "$run_dir/rank.json"
 ```
 
-`status=PASS`仅表示输入合法且计算完成；读取`universal_rank_gate_met`，只有rank=2^(t/2−1)才满足CKN全称充分门。缺秩输出保留合法池，不能判原命题假。CKN上界是外部文献进口，工具不证明它；行空间/非零列/森林展开仍按mathematics正文核对。这里限定A10同型度数；十六孔必含e、禁对R等额外约束没有被工具验证，不能由当前PASS声称满足。
+`status=PASS`仅表示输入合法且计算完成；读取`universal_rank_gate_met`，只有rank=2^(t/2−1)才满足CKN全称充分门。缺秩输出保留合法池，不能判原命题假。CKN上界是外部文献进口，工具不证明它；行空间/非零列/森林展开仍按mathematics正文核对。工具仅核显式(H,U)的森林/列与秩，不独立规范化或运输H/U；十六孔必含e、禁对R等额外约束没有被工具验证，不能由当前PASS声称满足。
 
 本轮参数化A10已实际执行，重建1048576位、1024合法森林/列、158674个1、独立秩1024，见[结果](../../../evidence/parameterized-a10-result.json)及[日志](../../../evidence/parameterized-a10.log)。它不读旧保存矩阵；先前冻结checker的逐位比对另有原证据。
 
@@ -55,3 +55,31 @@ python3 plugins/hypercube-hamilton/tools/check_forest_rank.py \
 候选发现由agent负责数学和短森林生成，不由checker冒充。原[A10_ORBIT3_UNIVERSAL_rank.cpp](../../../archive/source/research/six_directions/A10_ORBIT3_UNIVERSAL_rank.cpp)的CLI为`rank source_pairs.bin output_prefix.json`，从22-byte匹配流选择独立行，生成选中pair、columns、matrix、pivots、combos及source indices。对应短森林须用选中indices从原forest流提取并保持对齐；rank生产者本身不检查短森林合法。
 
 源码硬编码K的22个标签、`array<unsigned char,22>`、11次交替遍历、1024位bitset与128-byte输出，以及make_basis(22)。新几何同t可在**任务副本**更新K/标签映射，重新生成符合度数的合法短森林池并写其端点pair流；t改变须同步改这些常数、递归基维数和输出宽度，不能只换K。也可以独立实现发现程序，最终由参数化checker核实际森林/列。没有声称原rank.cpp是通用producer，亦不要求其它领域使用rank路线。
+
+
+## Q7固定计划与多省略核
+
+Q7精选资产的源与缺件说明见[归档入口](../../../archive/q7/README.md)。冻结S3与S2_STRONG计划复验从仓库根运行：
+
+```sh
+python3 -B plugins/hypercube-hamilton/archive/q7/source/archive_inventory/replay_key_checks.py
+```
+
+需要只核一族时传`--check S3`或`--check S2_STRONG`。此入口在临时工作副本消费随仓输入，原件保持只读。S3有18,049计划，S2_STRONG有19,718；读取真实exit、stderr与运行结果，比较数学字段而不要求CPU秒相等。它复核固定计划与其输入，不重新生成整个历史几何域、不求Hamilton圈、不重算底层rank。两族重叠，计划数不能相加当原Q7覆盖率。可移植命令已在本轮开发副本实际运行，记录见[证据维护](../../../../../development/evolution/v5-q7-20261114/evidence/)。
+
+随仓T63 target04是六核中的一个精确实例，H={0,3,5,10,15,20}、U={0,5,20}、K=Q5\H。运行参数化多省略消费者：
+
+```sh
+run_dir=$(mktemp -d)
+python3 -B plugins/hypercube-hamilton/tools/check_forest_rank.py \
+  --dim 5 --omitted 0 5 20 --holes 0 3 5 10 15 20 \
+  --forests plugins/hypercube-hamilton/archive/q7/source/research/seven_directions_continuation/R7_MU3_T63_TARGET04_RANK/target04_forests.bin \
+  --columns plugins/hypercube-hamilton/archive/q7/source/research/seven_directions_continuation/R7_MU3_T63_TARGET04_RANK/target04_columns.bin \
+  --output "$run_dir/t63-rank.json"
+```
+
+本轮已实际完整重算target04，结果见[单核结果](../../../../../development/evolution/v5-q7-20261114/evidence/t63-target04-full.json)；其余五套新核的二进制未随精选归档，不承诺在当前克隆重放六核。此核应有4096合法森林、4096完全匹配列、16,777,216个实际重建连通位和GF2秩4096。工具从真实森林重建26端点的13对配对，不相信独立保存的pair/matrix/rank。`universal_rank_gate_met=true`在完整CKN进口、非零列和展开论证共同供给后，支持该精确(H,U)上任意完全匹配F的29点圈；不能单凭CLI返回升级其它五核或完整T63。
+
+工具不计算某Q7标记集到target04的同构。使用原登记消费者中的共同映射时，核H完整六点与U指定三点一起送对，并运输局部规定边；只匹配H而省点组不同不得调用。原六核完整定理与首选回代见[原主证](../../../archive/q7/source/research/seven_directions_continuation/R7_MU3_T63_NEW_RANK.md)。原独审重算六核与本轮参数化重算单核是不同证据，准确运行范围由本轮[evidence](../../../../../development/evolution/v5-q7-20261114/evidence/)实收结果说明。
+
+本说明只给消费者入口，不自动授权新的生产者、完整Q7搜索或大矩阵批次。输入缺件先读归档清单；一条计划失败先返回其确切桥源/孔/标记字段或数学前提，不能把冻结消费者改成总是返回期望值。

@@ -1,0 +1,460 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "nine_cut_sufficient_conditions_complete_modulo_accepted_imports",
+  "summary": "All three preprocessing reductions and nine good cut rows pass for Q7 short eight-hole matchings, for free and covered targets. Full eight-hole/P7 remains open.",
+  "reviewer_agent_id": "/root/q7_eight_nine_cuts_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user override relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T08:50:55.796949+00:00",
+  "trace_path": "Q7_EIGHT_NINE_CUTS_REVIEW.md",
+  "audited_input_hashes": {
+    "Q7_EIGHT_NINE_CUTS.md": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b"
+  },
+  "imported_dependency_hashes": {
+    "A6_FULL_REVIEW.json": "sha256:52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+    "A6_FINAL_REDUCTION.md": "sha256:23478951d0089c9f3c3eb0227045e5725dc01376641952a95085ab0421796827",
+    "A4_FULL_REVIEW.json": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403",
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "Q7_SIX_HOLE_REVIEW.json": "sha256:0aa56b61e0ab68cde2cabd6979dd7000b5ff2d62134b68b4f4e6bd6b0f54b44a",
+    "Q7_SIX_HOLE_CLOSURE.md": "sha256:af9ca063a74561f67be615984d47204a0160f916a2f94ca5e629eb8d037be74b",
+    "ZERO_CROSSING_REVIEW.json": "sha256:94fa2b379e644d086c19b5df5bdb226276b41b3cde7afe50fa0f5094ff384db2",
+    "ZERO_CROSSING_PATHS.md": "sha256:35858010b280711e715a2406aa85ba567fc641dd260035d2fd3fea1936c2e169",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0"
+  },
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "checker_artifact_hashes": {
+    "Q7_EIGHT_NINE_CUTS_REVIEW_check.py": "sha256:f4dacb49459908501c9db90f3cf4cbe19d197dbb74d9010cafcf22880d6b3a9d",
+    "Q7_EIGHT_NINE_CUTS_REVIEW_check.json": "sha256:6709e9bb075e1eb1b752d847e46da53174b6dfa783704baf59e0c3a30bf25538",
+    "Q7_EIGHT_NINE_CUTS_REVIEW_emit.py": "sha256:f902df96233270f8fb6ec9782da02d2bd6dc4212a777ac6b87ddf218cecb2b3e"
+  },
+  "report_hash": "sha256:7e841562b50ca992e4cd5c37d90766630451ff9eeac4e21b160489ec45265167",
+  "scope": {
+    "dimension": 7,
+    "holes": 8,
+    "prescribed_matching": "every short matching M subset E(Q7)",
+    "root": "every free root u",
+    "target": "every opposite-parity target v, free or covered",
+    "preprocessing_conditions": [
+      "nonroot holes contain a short edge",
+      "free v adjacent to u",
+      "some direction unused by M"
+    ],
+    "good_rows": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "claim_is_sufficient_conditions_only": true,
+    "full_Q7_eight_free_proved": false,
+    "full_Q7_eight_covered_proved": false,
+    "full_P7_proved": false,
+    "Q6_free_geometric_exhaustion_imported": false,
+    "remaining_free_and_covered_residuals_explicit": true,
+    "all_new_physical_edges_short": true,
+    "arbitrary_long_edges_allowed_in_local_inputs": true
+  },
+  "obligations": [
+    {
+      "id": "O01",
+      "obligation_and_discharge": "Short eight-hole input has four even/four odd holes; translate root to 0, preserving cube geometry and both endpoint states.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O02",
+      "obligation_and_discharge": "Nonroot-hole adjacency adds a short edge, keeps u free, yields six holes; v may become covered, which the six-hole theorem allows.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O03",
+      "obligation_and_discharge": "Free adjacent target: add uv, retain six holes with a remaining free root, obtain and close a six-hole path, delete uv to get endpoints u,v.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O04",
+      "obligation_and_discharge": "Empty direction invokes Z7 on the original short matching, for either target state/root side.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O05",
+      "obligation_and_discharge": "Local endpoint lemma: free insertion balance and total counts verified above.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O06",
+      "obligation_and_discharge": "Covered-target replacement balance, matching legality, majority omission and restoration verified above.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O07",
+      "obligation_and_discharge": "Circle corollaries use free roots and short-neighbor targets; closures are new short edges.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O08",
+      "obligation_and_discharge": "Every artificial D uses free local ports/selected original hole; it avoids u,p and any free v. Covered crossport v is permitted.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O09",
+      "obligation_and_discharge": "Port difference is E(X_A)-O(X_A)=b-a-delta, using shortness of original internal edges.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O10",
+      "obligation_and_discharge": "Zero bridge, delta=1: c positive even, hence D nonempty; A holes (a+1,a+1), B closure holes (3-a,3-a).",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O11",
+      "obligation_and_discharge": "Zero bridge, delta=0: port difference 1 gives even p; c=1 and empty D are legal; B closure consumes free u and terminal r.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O12",
+      "obligation_and_discharge": "Zero-bridge a=0,1,2 keeps all circle/path inputs between two and six holes; rs or ur joins distinct free vertices.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O13",
+      "obligation_and_discharge": "Even source x in Z∩A exists for a>=1; its odd mirror y cannot be u or W and cannot be a crossport because x is free. Thus y is internally covered.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O14",
+      "obligation_and_discharge": "Even-source delta=1: c positive odd and D nonempty, including c=1. A holes (a,a).",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O15",
+      "obligation_and_discharge": "Even-source delta=0: equal port classes plus c>0 gives c>=2 and an even p; D still nonempty at c=2.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O16",
+      "obligation_and_discharge": "Even-source nonterminal y: conflict plus rs/ur gives (3-a,5-a), y majority; A6/A4/N14 applies at a=1/2/3.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O17",
+      "obligation_and_discharge": "Even-source terminal delta=1: holes (3-a,4-a)+q, total 8-2a; imbalance 0/-2 matches epsilon(q)+epsilon(y). q is free, y covered.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O18",
+      "obligation_and_discharge": "Even-source terminal delta=0: holes (4-a,4-a), root u free and y odd covered; at most six holes.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O19",
+      "obligation_and_discharge": "Odd source: exclude free v and mirror u. Covered target leaves >=2 candidates; free target with a>=1 leaves >=2. At most one mirrors u.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O20",
+      "obligation_and_discharge": "Odd-source mirror y is even, not Z or u and not a crossport; internally covered.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O21",
+      "obligation_and_discharge": "Odd-source delta=1: c positive odd, D nonempty even at c=1. A holes (a+1,a+1).",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O22",
+      "obligation_and_discharge": "Odd-source delta=0: port difference 2, c>=2, even p exists, D nonempty even at c=2.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O23",
+      "obligation_and_discharge": "Odd-source nonterminal y: holes (4-a,2-a), y majority; A6/A4/N14 applies at a=0/1/2.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O24",
+      "obligation_and_discharge": "Odd-source terminal delta=1: holes (3-a,2-a)+q, total 6-2a; imbalance 2/0 equals epsilon(q)+epsilon(y).",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O25",
+      "obligation_and_discharge": "Odd-source terminal delta=0: holes (4-a,2-a), imbalance 2 matches even u and even covered y; six/four/two holes.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O26",
+      "obligation_and_discharge": "Terminal positions exhaust y's possibilities because y is an exposed forest endpoint, never an interior forest vertex.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O27",
+      "obligation_and_discharge": "Exceptional free target requires a=0,b=2,delta=0 with the sole other odd candidate x mirroring u; no other bridge-choice failure exists.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O28",
+      "obligation_and_discharge": "Exception: all-port pairing leaves exactly odd holes x,v in A; N10 permits same-parity free endpoints. Port difference 2 ensures c>=2 and D nonempty.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O29",
+      "obligation_and_discharge": "Exception: deleting D separates x,v before attaching ux; r,s are distinct crossports. L_B=M_B+R+rs is a matching with four even/two odd holes, including free u.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O30",
+      "obligation_and_discharge": "Exception: A6 omits u, deleting rs gives a B-u path, terminal u-r segment restores u exactly once.",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O31",
+      "obligation_and_discharge": "All auxiliary endpoint edges are deleted, all R edges expanded, and kd expands through original ky plus transfer; no artificial long edge survives.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O32",
+      "obligation_and_discharge": "Connectedness comes from one local B path joined to the disjoint terminal forest and expansion of its edges; no hidden second circle survives.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O33",
+      "obligation_and_discharge": "Nine good rows and eleven bad rows are disjoint and cover the 4×5 possible (a,b) values.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O34",
+      "obligation_and_discharge": "Residual statement is a logical complement only; neither free nor covered residual is asserted empty/solved.",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O35",
+      "obligation_and_discharge": "DAG has no dependence on the eight-hole target; no Q6 bad=0 geometric conclusion is imported.",
+      "status": "CLOSED"
+    }
+  ],
+  "supplementary_endpoint_swap": {
+    "status": "VALID_MODULO_Q7_SIX_HOLE_IMPORT",
+    "part_of_audited_source": false,
+    "hypotheses": "u,v free and opposite parity; w != v an odd hole short-adjacent to u",
+    "derivation": "Apply full six-hole theorem to M+uw with free root v and covered target u; reverse its Hamilton v-u path.",
+    "also_resolves_section6_exception_if_incorporated": true,
+    "changes_main_input_hash": false
+  },
+  "details": {
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "micro_obligations_closed": 35,
+    "dependency_DAG_acyclic": true,
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "deterministic_checks": {
+      "verdict": "PASS",
+      "import_hash_checks": {
+        "A6_FULL_REVIEW.json": {
+          "sha256": "sha256:52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+          "declared_hashes_verified": 15
+        },
+        "A4_FULL_REVIEW.json": {
+          "sha256": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403",
+          "declared_hashes_verified": 12
+        },
+        "Q7_SIX_HOLE_REVIEW.json": {
+          "sha256": "sha256:0aa56b61e0ab68cde2cabd6979dd7000b5ff2d62134b68b4f4e6bd6b0f54b44a",
+          "declared_hashes_verified": 20
+        },
+        "ZERO_CROSSING_REVIEW.json": {
+          "sha256": "sha256:94fa2b379e644d086c19b5df5bdb226276b41b3cde7afe50fa0f5094ff384db2",
+          "declared_hashes_verified": 9
+        }
+      },
+      "local_endpoint_parity_cases": 12,
+      "cut_rows": [
+        {
+          "a": 0,
+          "b": 1,
+          "delta": 0,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 32
+        },
+        {
+          "a": 0,
+          "b": 1,
+          "delta": 1,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 1,
+          "b": 1,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "delta": 0,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 31
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "delta": 1,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 2,
+          "b": 2,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 2,
+          "b": 2,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "delta": 0,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 30
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "delta": 1,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 29
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 29
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 29
+        },
+        {
+          "a": 3,
+          "b": 3,
+          "delta": 0,
+          "minimum_positive_c": 2,
+          "feasible_c_counts": 29
+        },
+        {
+          "a": 3,
+          "b": 3,
+          "delta": 1,
+          "minimum_positive_c": 1,
+          "feasible_c_counts": 29
+        }
+      ],
+      "abstract_forest_cases": 6564,
+      "covered_target_isolation_cases": 2616,
+      "full_eight_hole_geometry_enumerated": false,
+      "arbitrary_matching_instances_enumerated": false,
+      "universal_forest_proof_required": true
+    },
+    "finite_checks_substitute_for_universal_proof": false,
+    "large_imported_certificates_rerun": false,
+    "literature_proofs_reproved": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false,
+    "full_eight_hole_geometry_enumerated": false,
+    "main_proof_modified": false,
+    "RUN_STATE_modified": false,
+    "frozen_six_directions_modified": false
+  }
+}

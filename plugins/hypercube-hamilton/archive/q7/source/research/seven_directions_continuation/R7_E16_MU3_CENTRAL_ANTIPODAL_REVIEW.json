@@ -1,0 +1,444 @@
+{
+  "audit_skill": "proof-checker local adaptation under Q7_WORKFLOW",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_selection_source": "explicit user choice relayed by root",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "soundness": "sound-modulo-imports",
+  "thread_id": "/root/antipodal_finish_audit",
+  "direct_caller": "/root",
+  "generated_at": "2026-11-10T09:08:17.889530+00:00",
+  "protected_files_modified": false,
+  "verdict": "PASS",
+  "reason_code": "all_in_scope_obligations_discharged_modulo_explicit_imports",
+  "open_fatal": 0,
+  "open_critical": 0,
+  "issues": [],
+  "scope": "E16 mu=3: exists central selected delta3 cut (3,6)/(5,2) whose receiver minority pair has Q6 distance 6; every original short matching has an all-short Hamilton cycle preserving all original edges",
+  "central_antipodal_all_m_proved": true,
+  "full_mu3_proved": false,
+  "full_E16_proved": false,
+  "full_R7_proved": false,
+  "full_P7_proved": false,
+  "obligations": [
+    {
+      "id": "A01",
+      "title": "A01 原输入和预处理",
+      "verdict": "PASS",
+      "evidence": "PASS。两色各八原孔。相邻原孔加其短边至 57 边，用完整 E14；差七/八使用已审的完整 μ=3 子族。余下原孔独立且七轴绝对差均为 3 至 6。"
+    },
+    {
+      "id": "A02",
+      "title": "A02 共同规范与原边",
+      "verdict": "PASS",
+      "evidence": "PASS。选定外轴送到位 6，供体置零侧，接收少数根投影平移到零。对跖根对为 S={0,63}。物理两色为 U∪(64 xor W)、Y∪(64 xor S)，同面独立性及跨面投影不交均随同一自同构运输。任意实际 M 及其原边标签一起搬运。"
+    },
+    {
+      "id": "A03",
+      "title": "A03 两列引理",
+      "verdict": "PASS",
+      "evidence": "PASS。若至多一列载荷 2/3，另五列翻成载荷至多一；非零投影支撑互斥，零纤维同色容量一。不取零点只容五单位支撑，等重量所得仅为 1、2、4、5。取零点时其余四点只容四单位或三单位加二元。单位点要求 r_i+r_6=1；四单位与重量三矛盾，三单位后二元点重量为 5 或 1。故五个重三点至少两条可用轴。"
+    },
+    {
+      "id": "A04",
+      "title": "A04 全接收域与合并",
+      "verdict": "PASS",
+      "evidence": "PASS。独立性排除 W 的重量 1/5，故全重三。旧 R32 审计 A06 已完整核 704 接收轨道，按其绑定导入。独立重算 h=6 恰 28 模板，m=2,3,4,5,6 数目为 3,4,10,5,6。25 个 m≥3 模板使用已审中央定理；m=2 恰正文三组 W。"
+    },
+    {
+      "id": "A05",
+      "title": "A05 标量必要域",
+      "verdict": "PASS",
+      "evidence": "PASS。由实际原切、换切的受控计数及转置单色门独立重算 504→212→204→166，删差七/八余 156 行。各次剥离均调用同一原输入的已审保边工具；未命中者六列落在本表。"
+    },
+    {
+      "id": "A06",
+      "title": "A06 全稀疏来源",
+      "verdict": "PASS",
+      "evidence": "PASS。独立从 156 行重建两可用轴的全部许可 b 模式。翻少数位后非零支撑互斥，活动列数 0/1/2 时恰为全零、一个单位、两个单位或一个二元四种形状。检查全部 27 模式，22 正模式有 8,512 纤维选择；5 个未存模式另有 11 个选择，全部无许可补足。"
+    },
+    {
+      "id": "A07",
+      "title": "A07 放宽与真实三级系数",
+      "verdict": "PASS",
+      "evidence": "PASS。真实 u 必须在零纤维留下至少 6−k 个非邻来源点。以此独立建放宽池，不用作者强制删列结果作前提。逐来源计算三次系数，核得 2,693 正权来源与 41,617 放宽配对；零权选择均无真实补足。实际池精确删 S 和 N(Y)，缩池为其子集且两者许可系数相等，故无合法 U 丢失。差六允许及排除两种系数均核对。"
+    },
+    {
+      "id": "A08",
+      "title": "A08 来源商和同步运输",
+      "verdict": "PASS",
+      "evidence": "PASS。完整 S 稳定子是六位置换及 xor 0/63，共 1,440 元；再固定 W。逐来源核 Y 最小像，保存映射同时搬运原池、缩池、载荷及许可集合；翻位时 a→3−a、b→6−b。共 877 来源轨道，539 有补足；商前实际补足系数 12,580，商后 4,769。"
+    },
+    {
+      "id": "A09",
+      "title": "A09 全 U 与固定基",
+      "verdict": "PASS",
+      "evidence": "PASS。4,769 项都是互异合法三点集，逐来源数量等于独立三级系数，包含且等基数证明完整。固定 S,W,Y 的完整稳定子逐项核 U 最小像及实际映射。3,856 代表均有前像且不重复，三 W 分为 1,010/2,249/597。逐项重算两色各八孔、独立性及七轴差；共同逆映射恢复给定原输入。"
+    },
+    {
+      "id": "A10",
+      "title": "A10 计划覆盖与新中央门",
+      "verdict": "PASS",
+      "evidence": "PASS。索引恰覆盖全部 3,856 项，无指定原边条件。2,769 高可用轴计划中仅 R41/仅中央/两者为 1,131/1,039/599。中央见证的 m=3/4/5 为 1,445/192/1，检查条件明确为 m≥3，并调用旧中央 m≥3 定理；没有沿用过时 m≥4 门。12 项单色容量的实际孔型及 2+2 内轴逐项成立。"
+    },
+    {
+      "id": "A11",
+      "title": "A11 受控单送",
+      "verdict": "PASS",
+      "evidence": "PASS。980 项从实际孔重建真实源、短镜像、改后全孔及标记；(r,k)=(3,3)/(3,4)/(4,3) 分别 541/282/157。供体平衡圈接受任意 K(Q6) 辅助规定匹配。接收完整差二避一/T15/T44 分别 698/699/563 次，全块孔差及标记逐项相符。"
+    },
+    {
+      "id": "A12",
+      "title": "A12 差三两返回",
+      "verdict": "PASS",
+      "evidence": "PASS。88 项一前送两返回，供体改后恰避两真实镜像，接收唯一前送标记在差二块，另一块平衡，整面 A6^(0,2) 接受零内跨。供体同侧多数根46、平衡补面16、分居双根17、二多数根6、D4一项、精确T15两项；逐项满足原工具的完整孔与标记前提。分居根在固定实际规定匹配后选取。"
+    },
+    {
+      "id": "A13",
+      "title": "A13 仅实际精确核1042",
+      "verdict": "PASS",
+      "evidence": "PASS。基编号3052/3053逐项以实际唯一少数根平移、删实际外轴，再以同一位置换运输三保留孔及两省略孔，均为 ([26,55,61],[7,11])。GOOD_ROOT与S2回执绑定同一ACTUAL_PROFILE，1042属于已审1017并集。调用接受相应完整孔和指定省略集下任意K(Q6)规定匹配，包括长边及同色边。没有重核其他十二个旧核或重放底层证书。"
+    },
+    {
+      "id": "A14",
+      "title": "A14 差四双返回",
+      "verdict": "PASS",
+      "evidence": "PASS。7 项实际两进两返，供体均同侧多数根，接收均同侧受控单根。完整改后孔、两标记、原少数根 a 与其真实短镜像 w 逐项重建；w 避原孔及前送标记，内块孔数和标记分布满足已审量词。"
+    },
+    {
+      "id": "A15",
+      "title": "A15 实际配对与路径",
+      "verdict": "PASS",
+      "evidence": "PASS。先固定任意实际M，再读原跨端口与标记伙伴；标记唯一外短邻是原自由源，原伙伴必在本面且彼此互异、避原跨端口。供体对任意合法辅助配对成立，删非空辅助匹配后得到点不交路径。接回真实原跨、短桥与标记伙伴并压缩，得到接收侧实际K(Q6)规定匹配。正内跨的块内预配对及受控单根选择用已审接口；连通性来自同一供体圈的带标签收缩。"
+    },
+    {
+      "id": "A16",
+      "title": "A16 单圈展开与完整声明",
+      "verdict": "PASS",
+      "evidence": "PASS。接收单圈逐标签替换压缩边，各路径内部点互不相交且未在接收圈。差三整面接收63点，插回A全部64点及标记一点，共128；单送和双返回由相同分割恢复128点。人工配对均删除，所有原边恢复，余新增边均短，故仍为一个简单圈。逆运输回原M；m=2与既有m≥3合并，覆盖完整所述对跖类。"
+    }
+  ],
+  "imports": [
+    "R32 A06 accepted complete 704 receiver templates; no receiver-generator replay",
+    "Accepted central m>=3 theorem and its bound review; current local gate explicitly >=3",
+    "Complete E14 and mu3 gap7/gap8 preprocessing",
+    "Accepted controlled-cycle donor, complete Q5 omit-one/T15/T44, mono-four capacity",
+    "Accepted whole-face A6^(0,2), balanced complement, same-side/separated/two-majority-root/D4 suppliers",
+    "Accepted controlled two-return/single-root and actual pairing/single-cycle expansion",
+    "Core1042 only, exact retained [26,55,61], omitted [7,11], in bound GOOD_ROOT/S2 union; arbitrary K(Q6) prescribed matching"
+  ],
+  "audited_input_hashes": {
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_CLOSURE_INPUTS.json": "sha256:717d01f0e3437d19c7e7207b72b9beacd36dc1c832793bd2ef911070518c081c",
+    "E16_MU3_CENTRAL_LOCAL_HIGH_M_BASE.py": "sha256:2b9c9472303b7d95e1406801712c5bbfb5c8a8af27765f28edcfa91968e58033",
+    "E16_MU3_CENTRAL_LOCAL_HIGH_M_POLYNOMIAL.py": "sha256:dd05ec84ba56820839266fea03d83422dde19a62343ba1f3168745dc625a9517",
+    "E16_MU3_CENTRAL_LOCAL_HIGH_M_SOURCE_QUOTIENT.py": "sha256:76a33d923572eab3b4f89e1bf15e8ae88a4e9031fc56b1c05b9762a66d0bd8af",
+    "E16_MU3_CENTRAL_LOCAL_NOTE.md": "sha256:7aab9e7161782613789be9940c9e3467a058cc9a8be90be473df3b1e449a75d3",
+    "E16_MU3_CENTRAL_LOCAL_RECEIVER.json": "sha256:076bb20f38a17688bed5c247950addaeb95b6a1aae86de4babbbc13c035e75b0",
+    "E16_MU3_CENTRAL_LOCAL_RECEIVER.py": "sha256:c2e1cd898fa5b0f95ab471b7305e2f33cbb6548a09c22d710bec110e5cff2fb3",
+    "E16_MU3_ROUTE_R41_M3_FIXED_PLANS.py": "sha256:63e96108e6546fcdc36df7deaab76788323afef492fda811e1c227919385d315",
+    "E16_MU3_ROUTE_SCALAR.py": "sha256:aca35aa67857d9139f306a17d44617b2285e80bcddc4f55937682e9689b38050",
+    "E16_MU3_ROUTE_SCALAR_TRANSPOSE.py": "sha256:503dd700a39d83f745a4dd94a3ac64edb147ea054b6fef89550d20eb33615d06",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_CLOSURE.md": "sha256:b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_REVIEW.json": "sha256:0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_CYCLES.md": "sha256:ae9afc79f868fc3469c64054eed69830220f97c94b5261776d06aa67377cbd62",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_REVIEW.json": "sha256:cd407ce6091a1b99eb26afadbfbe6ecf598b6dfac9574c0baf53ae42b9c31513",
+    "E:/新问题/research/seven_directions/Q6_T15_ACTUAL_PROFILE.json": "sha256:63fdf96c54e11e14255af358a62a54eda5d50707837f2cc5693695d860d38813",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_CLOSURE.md": "sha256:eedadf8c69313031dd4de0805506b019891068f6959f6b1b17fa7cb153aa85b3",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_REVIEW.json": "sha256:33a422864d9fe7a97b03f008916dd169dca9fc4935d62111ca089ee0e649ee93",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_REVIEW.md": "sha256:27abd39e350e4c11cc0272612982c451404680020994dad86024780929cbafcf",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_CLOSURE.md": "sha256:92bbb188eff33aefb4a1f77d147484c3e4de74b7fb8faaadf8e0af43dbd125c8",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_REVIEW.json": "sha256:6a054243e3cd108c0c6f4f04e4bda3b77771565c8731b5173639aff7f1d8cf3f",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_REVIEW.md": "sha256:d29a1ca74a01c1e6cbcb5782eebee0642e9db7bcaae68c57b633291a0c1f05f0",
+    "E:/新问题/research/seven_directions/Q6_T15_D45_D3_REVIEW.json": "sha256:515a9e879168a93d3f5394ad1c9df054d16c4ca68f968fdd2f53b4ebf4af4a20",
+    "E:/新问题/research/seven_directions/Q6_T15_D4_D5.md": "sha256:27e5ac27c95b0caffa8ef087ea9e66a2a29b8092f4980c12e30cab3914cc70b7",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_ALL_CLOSED.json": "sha256:168f80c019caf2c3652d9a456b609091fc5d023dd53f5ffb56c90aca2325e695",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "sha256:783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_FACES.md": "sha256:0b544c293b8dcc8da5f059ba4f9d3a074079585afcb1546576af16b4de14ad1f",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_REVIEW.json": "sha256:52cadafa0d514f08fcf37ce8685b2335a81378bc0cedd3367a1f6a5f6376178f",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_REVIEW.md": "sha256:089f7d3afa27da104179e559137bc41d74578475f7bdd926a52aa5296531a303",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_CLOSURE.md": "sha256:fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "R7_CONTROLLED_CYCLE_DONOR_EXTENDED_PROBE.py": "sha256:8d65d065a766f2db19a60093515838ad4e98491ec359e8385c3257f676e24266",
+    "R7_CONTROLLED_CYCLE_DONOR_FULL_T15_APPLICATION.md": "sha256:279643fefe3a6b1ee5f3069bbbb06d637b49038986aebb13c5ac13e261d0bdc0",
+    "R7_CONTROLLED_CYCLE_DONOR_PROBE.py": "sha256:64db944df3a9488f5437c627318d7ee993fbb91e3b0a3c7d299a272e14bbd717",
+    "R7_CONTROLLED_CYCLE_DONOR_TRANSFER.md": "sha256:32bd43c2ebe3454d9322aca8b4355d4e7b98f34823eb05beb98e0ff7c47640f6",
+    "R7_CONTROLLED_TWO_RETURN_BRIDGE.md": "sha256:ed60b24b0260c3cba3dba9ed2ff67f911f583af8ddfa1ec2f2d110a93d637c5e",
+    "R7_DELTA2_DISTANCE2_BROAD_CHECK.py": "sha256:d15827f53b2a66fdd97d355035947cb94c33844df99b855b0b86b453b77c56da",
+    "R7_DELTA2_DISTANCE2_BROAD_CONTROLLED_CHECK.py": "sha256:fa9dbcd98f8c2627b1fdff29973af75a53873da11c7cc0b9f4493077d9688554",
+    "R7_DELTA2_ODD_SAME_SIDE_RECEIVERS.md": "sha256:5faa2e782dacd745e55d4562d8ea91390218bc55fb41ddfe5df5f0d6474fe2e2",
+    "R7_DELTA2_ODD_SAME_SIDE_RECEIVERS_REVIEW.json": "sha256:f5a5b25ca177444927c988f771be558eea71c57eb143369da7d978d760d0a3a6",
+    "R7_DELTA2_ODD_SAME_SIDE_RECEIVERS_REVIEW.md": "sha256:d7d72f1e20587b893b5a224266bc6ad410e503bfef5c49e3adcbb23725f88771",
+    "R7_DOUBLE_RETURN_BRIDGE_GEOMETRY.py": "sha256:2421c648d15bc93b7b9f6baa96e5f9196251c0c6602d64d966526e635b41aea8",
+    "R7_E14_I005_SEPARATED_REVIEW.json": "sha256:d66d87b8220b819babe7403cbb11da26a6f21715ac70c79b0dc6d819687958dc",
+    "R7_E14_NEXT_REVIEW.json": "sha256:e4e9b5ddc9dc34e7b46affa89449ea773b3e257c42e66362a20d03f7022f55e9",
+    "R7_E14_NEXT_REVIEW.md": "sha256:395051e5f3a04ad5bf44f7ab915a2d53a3a490a99dbf48d841ed3795f100c12b",
+    "R7_E14_ODD_RECEIVER_CLOSURE_REVIEW.json": "sha256:687f17bdf3fe936191f1b6249d497f03a41ce8ed22fccb719027980ff099fa72",
+    "R7_E14_ODD_RECEIVER_CLOSURE_REVIEW.md": "sha256:7b438fb279774066ba7b66ce76e89850353275c29d8a5974612e4fe404666330",
+    "R7_E16_CENTRAL_FAR_TRIPLES_CLOSURE.py": "sha256:ad4c832e9c77ee23829ec30e802aa16f6357e876083582078e5eb767aea517de",
+    "R7_E16_CENTRAL_FIRST_SOURCE_FULL_COVERAGE.py": "sha256:d0561e229e3f864bcc6e4fa40f9aabad03354d73dda059b83b7aaf90f9c72742",
+    "R7_E16_CENTRAL_LOCAL_REDUCTION.py": "sha256:12af727f4f1a8780d6abec5d4a0d62be6eb128221812575b6b3c51eb5851c582",
+    "R7_E16_CENTRAL_SOURCE_COLUMN_COVERAGE.py": "sha256:14e5ea1a842a312c7bccb416e18e55b830f67f9d59487aa05d68625966bdeeb7",
+    "R7_E16_CENTRAL_SOURCE_CONSTRAINTS.py": "sha256:fb0a605b3f012d0d639ab72c422d21c36647891b3e6354ed2e496e25db2515ec",
+    "R7_E16_CONTROLLED_SINGLE_ROOT_FIXED_PROBE.py": "sha256:f73d9b612d3d813b577dae15ecc38ae9604679f7403cffe6be355545cfe802c3",
+    "R7_E16_D35_B14_ZERO_SOURCE_CHECK.py": "sha256:64c8eff360352d864263a4ffd7c899cad4bef176cb45b700d4c41dcd11e88627",
+    "R7_E16_DISTANCE2_TWO_RETURN_PLAN.py": "sha256:7f928d8869e7a5d5ff41e3c9585d886fe17f4fd8ec60a16e922d603f39a5db85",
+    "R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.json": "sha256:240acc65b4966cd5916e0b9424e7f160e6b5c21850a28208d5ee5657eb1fc41b",
+    "R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.md": "sha256:548b56ebba81c3ed6eddabf97b96f78a9e09563b8e860a47da74b75d04759e2d",
+    "R7_E16_EVEN_HIGH_GAP_CHECK.py": "sha256:1b628957d371678abf697ea7a9fc870375f4c2301b570e6af7bc68cd1be8e8e5",
+    "R7_E16_MU2_FULL_REVIEW.json": "sha256:8ee76a2b2077027a9d3994d1b235668ed3bac29815e2be40c453b589e6a041cf",
+    "R7_E16_MU2_FULL_REVIEW.md": "sha256:348e364d19876f00e986bde65573acd0ab3c6e429dda5a5a8d397477a27d5909",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_BASE.json": "sha256:875ac2ba3b89b2a62a56bf67f258f8d6ef822f0acd2d4ecb99e4897e83dd22d1",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_BASE.py": "sha256:e11604df39e33e367d3ab1e40f1c38923b2898fd038b44256908c65e19608f54",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_CLOSURE.md": "sha256:13823936e74dad770e8ee2074cffc16c3eb8f4e68ee64819ddfa7484d8332778",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_FIXED_PLANS.json": "sha256:903ebbd14580a2e5f4f1c55b530586e50431de759b40bad8d5f02d3a9d41d2c7",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_FIXED_PLANS.py": "sha256:da22b8116ebe91653808288d3c4153df1e5d2d3dc5a7170c9ff258873b32b9ca",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT.json": "sha256:94a8c6e06e6f09ea63980979e7eb73210cb5931feec20fd24519776c1fe5906a",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT.py": "sha256:1b00e4e6c99f29caf425572421f8e48bb5603e0a82c1486dd4ba521b2aeed2b0",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT_NOTE.md": "sha256:68253f223390b480f9d42a4ca8798cd4b052ad076aef4c4f7ae27035f11ab655",
+    "R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_COUNT.json": "sha256:59ae221dc88eb374927c390cee705165171a1e569a694ac9d88d8f27b2a0516f",
+    "R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_COUNT.py": "sha256:95ac56bd0be465834713159fa77f147097c84d1505b4e601e92ca1dc9592b4cb",
+    "R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_NOTE.md": "sha256:9f8c1a97d05e366232c826f782285ed4510bd7e4bb6352b12793fea107a26e95",
+    "R7_E16_MU3_CENTRAL_M3_BASE.json": "sha256:487328e408fc2bf590dea9e751e61e460189652fcd56d8f60f574830220c0d94",
+    "R7_E16_MU3_CENTRAL_M3_BASE.py": "sha256:497ea73e544be135832d244cf6825777f73fdf47562331236ee6e8e56654d194",
+    "R7_E16_MU3_CENTRAL_M3_CLOSURE.md": "sha256:181f307d7d4380ce133210b31e4386b28da6fa6b400f992659e034a01862ea77",
+    "R7_E16_MU3_CENTRAL_M3_CLOSURE_INPUTS.json": "sha256:0bdf9440c651dc2021cfb6b89a849951e1c3fc531159359058d793261aa40dbb",
+    "R7_E16_MU3_CENTRAL_M3_FIXED_PLANS.json": "sha256:3e42766112a496a334323240a12185957c71d69b0f2ac741ff4f6f404cc53103",
+    "R7_E16_MU3_CENTRAL_M3_FIXED_PLANS.py": "sha256:f8fbc517cca1c11ae81a072ebdfd611071b95fc55a062d44a28595d219065de7",
+    "R7_E16_MU3_CENTRAL_M3_REVIEW.json": "sha256:31d0009e8a40c65c2c2db6585c47f372d00a7f946950930459582550c247aeec",
+    "R7_E16_MU3_CENTRAL_M3_REVIEW.md": "sha256:695d77fcc05ed72bfc78f20da0ea916954b6dbbefbf5f9f5a5f8718a722910d8",
+    "R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.json": "sha256:97880313518613b54fc8a4ba698c967ea69025316687f1917a657c55f31bdd65",
+    "R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.py": "sha256:f9316c07b929227a3b58ebb403ee4cfcd08a803e3d5c6b71887afebda74666d0",
+    "R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT.json": "sha256:3f5087ad8276fcac2c4d906ba72a64fc295c43edce1d046112bd1e112649c2ac",
+    "R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT.py": "sha256:0ee03ca751a045dd02f91183f1513fd06971c6edbc1efb1322048b406f8ef112",
+    "R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT_NOTE.md": "sha256:0fe4786f58a67b251dc02347a555bacf151863c00a64c8eb8a8febadfc24994d",
+    "R7_E16_MU3_GAP7_EVEN_D30_FIXED_PLANS.py": "sha256:17be3ca335efbae0e18489a9737e43b195ef9f2c719ff48ffd3184d1ce08227d",
+    "R7_E16_MU3_GAP7_EVEN_MINIMAL_FIXED_PLANS.py": "sha256:4d13dabc7a7fe195d9e56d8aba2fdc7d247ac89ce6bd16547d2100a2321293d8",
+    "R7_E16_MU3_GAP7_ODD_CLOSURE.md": "sha256:9d4c3bcc12b7d4e6e1f204ba148a739f0a44e5b4f1f6df3c96edc63e02063b6e",
+    "R7_E16_MU3_GAP7_ODD_CLOSURE_INPUTS.json": "sha256:ed4b87853663df0e230648b80012f66841d1a920a2fcd58ab5113297a5c50458",
+    "R7_E16_MU3_GAP7_ODD_REVIEW.json": "sha256:a9b99e355e4929877f7196926c60ea9b6001e2a89aa6a1d5d00ba1f4ff6c0a68",
+    "R7_E16_MU3_GAP7_ODD_REVIEW.md": "sha256:89bb2c21afc78764c790a053bfa2d6583241b70f6a0e79caea08eaeb726cd29d",
+    "R7_E16_MU3_GAP8_FIXED_PLANS.py": "sha256:4cc12cbf80bc0fbee6851a9957b07fc01de1f931882064c540ebb816985f15e3",
+    "R7_E16_MU3_GAP8_FULL_CLOSURE.md": "sha256:efaa3f339e970148b0bb47459a24b1c53b3d51b771662e3a3e150401c420f3a9",
+    "R7_E16_MU3_GAP8_FULL_CLOSURE_INPUTS.json": "sha256:09c003029d16d2dfee7b0f34fe449ffd41617d2ca183a73bf83632f606d96c10",
+    "R7_E16_MU3_GAP8_ODD5_1_3_THREE_BRIDGE_CHECK.py": "sha256:d24250902a1a4d2a1ca7ce2f2321dd4c977ac29fddde13f5d8925e865166c484",
+    "R7_E16_MU3_R32_M_GE4_CLOSURE.md": "sha256:391242357346d01813b6b99c2710767e1573f866aef0665cb5499dd4d453adbe",
+    "R7_E16_MU3_R32_M_GE4_CLOSURE_INPUTS.json": "sha256:dc572ea5da503550be40cd4cfa380fed050850d4fffee696a619f0661ea396ff",
+    "R7_E16_MU3_R32_M_GE4_REVIEW.json": "sha256:e0e6abc17bba420ffb8a3d3939e7e6c86af71320898e753f9e58510b6dfd863c",
+    "R7_E16_MU3_R32_M_GE4_REVIEW.md": "sha256:1d840b0815af0cde1deed9de8fb2faa3ad76cbd8b0122ff2fc845741a1ba2a83",
+    "R7_E16_MU3_R41_M_GE3_CLOSURE.md": "sha256:d5325c586f8a9e282fb2327f4e183551c21b29c6cf3f0b36b17f3404866a1be7",
+    "R7_E16_MU3_R41_M_GE3_REVIEW.json": "sha256:0723e1191e127913a88b773028659cf90a6ec9aac1a518136a0420c86f53d63d",
+    "R7_E16_MU3_R41_M_GE3_REVIEW.md": "sha256:843a7cf77457390dd30e57b753c37f5dd25094438874d9c103b557d2e6ebf924",
+    "R7_E16_ODD_22_COMPLETE_COVERAGE.py": "sha256:552e4b486a8a5f9dc607acca7f8c40296b27cf9bd514aebcaa9aedb6666437b5",
+    "R7_E16_ODD_22_COMPLETE_COVERAGE_REVIEW.json": "sha256:aa40a02f8aa4f48f6da02ddb79b1f49ada141aeb8dc6b79331c68b0baf1b1426",
+    "R7_E16_ODD_22_COMPLETE_COVERAGE_REVIEW.md": "sha256:68f969c265d462a530ff42cb7908502df59125de8c4d222d0d5d048887dfa12b",
+    "R7_E16_ODD_22_JOINT_COVERAGE.py": "sha256:ad79f041c8cf3404163d0d915c1f7c816c4a787df4d2cb7aa23827861044f3e3",
+    "R7_E16_ODD_22_POSITIVE_SPLIT_FIXED_PROBE.py": "sha256:7fb999b45907d1b41c5be6a9546550aa73fb41ab21d944f25c6e3c9e951805d9",
+    "R7_E16_ODD_22_WHOLE_FACE_PROBE.py": "sha256:2beafe6ae9899a52b7b2e1b1dad149312cf5fa53539211d94e4b9d681f125512",
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE.md": "sha256:b5b11fcdcff0e71c433d3c867b5804a72a18089a23cf244b98723888fca1b41f",
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE_REVIEW.json": "sha256:08464b5c44575f29652d3c720f3cf2d03d14a87712da2f6db53873b749a35bab",
+    "R7_E16_TWO_HOLE_HIGH_FACE_COVERAGE.py": "sha256:12f904616dc1d25ee8808bddde05fe660ee9054f9675abd8a367dfaf154c6448",
+    "R7_E16_TWO_HOLE_HIGH_FACE_JOINT_COVERAGE.py": "sha256:f6428053aa0196b52571cde66191988955f3f56d688d0c0fd552ce8d37da4483",
+    "R7_FOUR_MONO_BALANCED_COORDINATES.md": "sha256:241e281d1467983a6716fabd8212696c3111ccadf18aeeca4e8ae5c0396f32ca",
+    "R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.json": "sha256:954f3800538ac37cea3b3f67efc7ce0a11e68e4f070449ffa603fec2da52e5ce",
+    "R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.md": "sha256:993b9584005db936ecc306743f9397ec2b7e9a5f0319c843b5fec9e19bd70454",
+    "R7_MU1_CENTRAL_T1_AND_E14_REVIEW.json": "sha256:bd43b169733232bc6002fa8105d07d03d447a77a922db876148329acf27c61ed",
+    "R7_MU1_CENTRAL_T1_AND_E14_REVIEW.md": "sha256:b01223a658664434ccee17345abcd6d57bb7753493c7919f6c62a323329d4dbc",
+    "R7_MU1_FULL_CLOSURE.md": "sha256:3f7f2c3c44557544149cfbce3f70ca5e92e104c33d3bc548c0dc809f0a01b616",
+    "R7_MU3_BROAD_T15_DONOR_PROBE.py": "sha256:3a12e35d9df1c9395f371ea3c9d9db3e46f0254272756d99f194a2b97dc4b8dd",
+    "R7_MU3_CONTROLLED_AND_T63_REVIEW.json": "sha256:7cc19a44b1f511a1c1b64b402c2431bd2ae64bcad94cb835884313f66b7eb504",
+    "R7_MU3_CONTROLLED_AND_T63_REVIEW.md": "sha256:c2249b54dea2f14f0d57a954d55941cd623f6704162c3228f2ec7e5cdcddcb5a",
+    "R7_MU3_COVERAGE_CIRCLE_T63_V3.py": "sha256:d3e63e29e2dc6881cbfcee36487d7f5529fc9b6b14eb31f73c3320ecb97b76b8",
+    "R7_MU3_FOUR_BRIDGE_SPLIT_DONOR_PROBE.py": "sha256:4098e8a3df755e55b0d3b798e38e1106e43dd519b09f19f4f09594d013dfe90e",
+    "R7_MU3_THREE_BRIDGE_FULL_REVIEW.json": "sha256:df038ad03bca5e3932c33481dfd1dd338cf21dfcb5431c9ff427f82d778375a9",
+    "R7_MU3_THREE_BRIDGE_FULL_REVIEW.md": "sha256:f6356a999559148771f8f0ec69cbf0c68bc26f2ba5faa1fff0286772815bdf75",
+    "R7_MU3_THREE_BRIDGE_REVIEW.json": "sha256:761dc76bb82e18a48fbd388b3686e889b9dac4e437ec506750908a8f24a0092e",
+    "R7_MU3_THREE_BRIDGE_REVIEW.md": "sha256:26ac6f55327808f0edc5a0bf1ee0dbf5312dd88062faf779ffd61cf6e28f5a95",
+    "R7_T26_ODD_SPLIT_TRANSFER.md": "sha256:e635d89853336a72d4668ce48d3c300019bb1d84a58f309be2d7b96e5088072b",
+    "R7_T26_SEPARATED_ODD_TRANSFER.md": "sha256:514efa1c28e544210075104734ccb19aa34dd9347210611d6ce54a896097b29d",
+    "R7_THREE_BRIDGE_TWO_RETURN_WHOLE_RECEIVER.md": "sha256:e4f27a93b736709cf6ca886528a170a09505da4cfe4547075d666fe858b5f2b7",
+    "R7_TWO_MAJORITY_ROOTS_AVOID_TWO.md": "sha256:8631acc7816d559ff3a51a05f9b72f51cb33d6867e828e0927e1c5c1c2b0a4a3",
+    "R7_TWO_MAJORITY_ROOTS_AVOID_TWO_REVIEW.json": "sha256:af1aa17fcd63419e8aeacb8f9fe4f1f9a1a5700f2aa988493ce77bedb221d2eb",
+    "R7_TWO_MAJORITY_ROOTS_AVOID_TWO_REVIEW.md": "sha256:1ced068428f35b1e51a89420cfac1bb749713514d8f964784e5dc020b64f4579",
+    "R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT.md": "sha256:d79d78abf9cf374465f3f7da0a3e6112905f1fc68e73d733c2ec589957a3cc45",
+    "R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT_REVIEW.json": "sha256:666b9eccd6014295d0eb38942fea6345d32ee3f1092cc71c891958e7dece6902",
+    "R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT_REVIEW.md": "sha256:67a4d3812e21785acb8bde0b73a3091d2faae917aa9c89ba83cd4436b87930a0"
+  },
+  "additional_checker_import_hashes": {
+    "R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.py": "sha256:f9316c07b929227a3b58ebb403ee4cfcd08a803e3d5c6b71887afebda74666d0",
+    "R7_E16_MU3_GAP7_EVEN_MINIMAL_REVIEW_CHECK.py": "sha256:f0879f1777c05761b481e91653df1ad0012f9191c988117ae9d76866c4da96c8",
+    "R7_E16_MU3_GAP7_EVEN_D30_REVIEW_CHECK.py": "sha256:8c74db37322af65673b34a15955d3f805c0b34bc99931ea4ac9d22585aa53c07",
+    "R7_E16_MU3_GAP7_ODD_REVIEW_CHECK.py": "sha256:bc284d7123d5156c453eff1034e1f9f9804bee6b40276d81e095111e2a322c3d",
+    "E:/新问题/research/seven_directions/Q6_T15_S2_COMBINED_EXTENSION_REVIEW.json": "sha256:298fcb8416dac224a774b85b78c10bc4978bb798e9328009377073b8dfbd84c9"
+  },
+  "evidence_hashes": {
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW.md": "sha256:7300a2aa58d974a877cf70a69df0feaa14d7c8c8dc520592413c545d461f0506",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW_CHECK.py": "sha256:6722855422c9775cddf6813231088ca415ba91374fb8207914bf271e61051861",
+    "R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW_CHECK.json": "sha256:789357dcb851bd4bc7e75d5b0217055a01eeec0165bbc314ac5e024109a2e465"
+  },
+  "verification": {
+    "status": "complete",
+    "proof_sha256": "13823936e74dad770e8ee2074cffc16c3eb8f4e68ee64819ddfa7484d8332778",
+    "manifest_sha256": "717d01f0e3437d19c7e7207b72b9beacd36dc1c832793bd2ef911070518c081c",
+    "bindings": 135,
+    "sources": {
+      "scalar_counts": {
+        "raw": 504,
+        "gap": 212,
+        "original": 204,
+        "residual": 166,
+        "limited": 156
+      },
+      "h6_by_m": {
+        "2": 3,
+        "3": 4,
+        "4": 10,
+        "5": 5,
+        "6": 6
+      },
+      "totals": {
+        "receiver_stabilizer_size": 14,
+        "pair_count_before_source_quotient": 12580,
+        "representative_sources": 877,
+        "representatives_with_U": 539,
+        "quotient_pair_count": 4769,
+        "quotient_pair_count_no_gap_six": 4536,
+        "admitted_sources": 2693,
+        "relaxed_pairs": 41617,
+        "raw_choices": 8512
+      },
+      "omitted": {
+        "zero_weight_choices": 5830,
+        "fiber_choices": 11,
+        "sparse_modes": 5
+      }
+    },
+    "basis": {
+      "by_W": [
+        {
+          "W": [
+            7,
+            11,
+            13,
+            14,
+            19
+          ],
+          "completions": 1534,
+          "representatives": 1010,
+          "representatives_no_gap_six": 896
+        },
+        {
+          "W": [
+            7,
+            11,
+            13,
+            19,
+            38
+          ],
+          "completions": 2464,
+          "representatives": 2249,
+          "representatives_no_gap_six": 2237
+        },
+        {
+          "W": [
+            7,
+            11,
+            13,
+            22,
+            38
+          ],
+          "completions": 771,
+          "representatives": 597,
+          "representatives_no_gap_six": 594
+        }
+      ],
+      "stabilizer_sizes": {
+        "1": 425,
+        "2": 104,
+        "4": 9,
+        "8": 1
+      }
+    },
+    "plans": {
+      "plan_counts": {
+        "accepted_high_m": 2769,
+        "four_mono_capacity": 12,
+        "controlled_cycle_count": 980,
+        "k3_whole_receiver": 88,
+        "k4_two_return": 7
+      },
+      "k3_donors": {
+        "Q6_balanced_complement_avoid_two": 16,
+        "T26_separated_two_root_choice": 17,
+        "Q6_same_side_majority_root": 46,
+        "T26_two_majority_roots": 6,
+        "Q6_T15_D4": 1,
+        "T15_exact_core": 2
+      },
+      "k3_cores": {
+        "1042": 2
+      },
+      "exact_indices": [
+        3052,
+        3053
+      ],
+      "controlled_local": {
+        "Q5_T15_FULL": 699,
+        "Q5_A_ALL": 698,
+        "Q5_T44": 563
+      },
+      "controlled_parameters": {
+        "3,3": 541,
+        "3,4": 282,
+        "4,3": 157
+      },
+      "high_m": {
+        "R32+R41": 599,
+        "R32": 1039,
+        "R41": 1131
+      },
+      "high_m_witnesses": {
+        "R32_m4": 192,
+        "R41_m3": 1376,
+        "R32_m3": 1445,
+        "R41_m4": 354,
+        "R32_m5": 1
+      },
+      "k4_receivers": {
+        "controlled_single_root:same_side": 7
+      }
+    },
+    "cpu_seconds": 3.296875,
+    "cpu_budget": 35,
+    "cumulative_budget": 45,
+    "prior_format_early_exits": 2,
+    "prior_early_exit_cpu_seconds": null,
+    "producer_runs": 0,
+    "plan_searches": 0,
+    "matching_enumerations": 0,
+    "solver_calls": 0,
+    "rank_runs": 0,
+    "old_certificate_replays": 0
+  },
+  "prior_debug_runs": {
+    "count": 2,
+    "reasons": [
+      "legacy hash prefix representation",
+      "list versus tuple representation of b projection"
+    ],
+    "cpu_seconds": null,
+    "mathematical_conditions_changed": false
+  },
+  "outside_scope": [
+    "complete mu=3",
+    "complete E16",
+    "R7",
+    "P7"
+  ],
+  "net_additional_original_matching_count": null
+}

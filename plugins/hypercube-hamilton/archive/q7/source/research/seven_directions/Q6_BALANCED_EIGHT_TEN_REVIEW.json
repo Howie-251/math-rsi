@@ -1,0 +1,250 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "Q7 local adaptation, native independent reviewer slot, version-bound direct-import review",
+  "verdict": "PASS",
+  "reason_code": "full_balanced_Q6_C4_and_C5_complete_modulo_bound_direct_imports",
+  "caller": "/root",
+  "writer_agent_id": "/root/twelve_cut_writer",
+  "reviewer_agent_id": "/root/balanced_cycles_audit_recovery",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "reviewer_backend_identity_independently_attested": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "date": "2026-11-06",
+  "trace_path": "Q6_BALANCED_EIGHT_TEN_REVIEW.md",
+  "report_hash": "sha256:a70d86b535ca44189653ab0d8c5dc27409412d02c83fc844f9a9b41273134667",
+  "audited_input_hashes": {
+    "Q6_BALANCED_EIGHT_TEN_CYCLES.md": "sha256:ae9afc79f868fc3469c64054eed69830220f97c94b5261776d06aa67377cbd62",
+    "Q6_BALANCED_EIGHT_TEN_CYCLES_INPUTS.json": "sha256:ecbb97279bf164c08454f8ba8a1ef06d5ec0a85fac6b39e889d30e782807468a"
+  },
+  "direct_local_import_hashes": {
+    "Q7_EIGHT_NINE_CUTS.md": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "sha256:be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "R7_NEAR_BALANCED_BLOCKS.md": "sha256:f14078566876269bfd0c4f6d64a016b720872129e612307037c07571f8ab0e89",
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW.json": "sha256:e79c9e2c5bc1cf65af80bc5da56f89ae877797d8159b15052741b739e62ce44a",
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "sha256:fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "../six_directions/T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "../six_directions/T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "Q5_T15_FULL_CLOSURE.md": "sha256:b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "Q5_T15_FULL_REVIEW.json": "sha256:0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80"
+  },
+  "skill_hashes": {
+    "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-checker/SKILL.md": "sha256:716a86370b1768b616943d449ab106b901fa55e239ab76ef9f5eebb9779ba39e"
+  },
+  "input_bindings_verified": true,
+  "coverage_receipt": {
+    "assigned_source_units": [
+      "§1",
+      "§2",
+      "§3",
+      "§4",
+      "§5",
+      "§6",
+      "INPUTS"
+    ],
+    "reviewed_source_units": [
+      "§1",
+      "§2",
+      "§3",
+      "§4",
+      "§5",
+      "§6",
+      "INPUTS"
+    ],
+    "declared_source_unit_coverage_percent": 100
+  },
+  "scope": {
+    "dimension": 6,
+    "prescribed_matching": "arbitrary edges of K(Q6)",
+    "C4": {
+      "even_holes": 4,
+      "odd_holes": 4
+    },
+    "C5": {
+      "even_holes": 5,
+      "odd_holes": 5
+    },
+    "output": "One simple 64-vertex cycle containing all of F, with every edge outside F short.",
+    "q7_twelve_hole_lift_audited": false,
+    "full_twelve_hole_layer_proved": false
+  },
+  "dependency_order": [
+    "accepted direct imports and the small-imbalance lemma",
+    "common independent-hole proof for r in {4,5}",
+    "C4 via that proof or short augmentation to C3",
+    "C5 via that proof or short augmentation to established C4"
+  ],
+  "obligation_count": 19,
+  "obligations": [
+    {
+      "id": "C01",
+      "source": "§1，7–17",
+      "title": "全称域与输出",
+      "status": "PASS",
+      "check": "任取完全图 K(Q6) 中的匹配，按 Hamming 奇偶各有 r 个孔。要求一个 64 点简单圈，且仅圈中不属于原匹配的边必须短。没有原匹配全短或异色的假设。"
+    },
+    {
+      "id": "C02",
+      "source": "§1，13；§3，31；§6，73",
+      "title": "六维直接导入",
+      "status": "PASS",
+      "check": "九行稿 §1 的六孔平衡圈推论接受任意 K(Q6) 匹配。C6+ 接受任意 K(Q6) 匹配，总孔平衡且某个五维面孔差绝对值至多一足够。两处应用都保持所需孔型和边域。"
+    },
+    {
+      "id": "C03",
+      "source": "§1，14–15；§4，51；§5，67",
+      "title": "五维直接导入",
+      "status": "PASS",
+      "check": "全孔稿的平衡圈范围 m=0,…,16，供体使用 m=b−2∈{1,2,3}。T44 与完整 T15 的接受范围是任意 K(Q5) 匹配，分别对四同色孔、1:5 孔指定任意两个多数孔，得到恰避两点且仅新增短边的 30 圈。完整 T15 回执覆盖全部 165 个标记轨道。面内局部颜色与全局颜色至多交换，平衡与多数角色保持。"
+    },
+    {
+      "id": "C04",
+      "source": "§2，21–25",
+      "title": "翻转与上界",
+      "status": "PASS",
+      "check": "若每个坐标都差至少三，翻转恰使固定运输组在每个 1 面差至少三。用一次坐标异或实现全部翻转。总距离是逐坐标数运输偶组在 0 面的点与运输奇组在 1 面的点，上界 6(r−3)。"
+    },
+    {
+      "id": "C05",
+      "source": "§2，23–27",
+      "title": "奇偶距离下界",
+      "status": "PASS",
+      "check": "0 与全一向量在六维同色。两运输组各自同色、彼此异色，故一组各项距离至少一，另一组至多一项为零且其余至少二。得 3r−2；r=4 时 10>6，r=5 时 13>12。互补面差相反。"
+    },
+    {
+      "id": "C06",
+      "source": "§3，31–35",
+      "title": "差二标准型",
+      "status": "PASS",
+      "check": "两面孔差相反，若某面差绝对值至多一即可用 C6+。差二时取多数孔数较大的面为 A，命名其多数色为奇。于是 H_A=(b−2,b)、H_B=(r−b+2,r−b)，且 b≥⌈(r+2)/2⌉。r=4 时 b=3 或 4，r=5 时 b=4 或 5，故 t=r−b 只有 0 或 1。"
+    },
+    {
+      "id": "C07",
+      "source": "§3，37–39",
+      "title": "跨数与镜像候选",
+      "status": "PASS",
+      "check": "32=2|F_A|+c+(2b−2)，故 c 偶，无边色假设。镜像短且映射单射，孔独立使 b 个镜像均非孔。匹配对这些点的覆盖分为原跨端口与 B 面内部两类。"
+    },
+    {
+      "id": "C08",
+      "source": "§3，41–45",
+      "title": "安全选择与删边余量",
+      "status": "PASS",
+      "check": "混合时取各一，s=1 且 c≥2。全跨时 s=2，c≥b≥3 且偶，故 c≥4。全内部时 b≥3，任取一个后排去它唯一的配偶，仍可选另一个。于是同时选择的内部点不会是 F_B 配偶，且 c+2−2s≥2。c=0 给 s=0；c=2 只可能 s=0 或 1。"
+    },
+    {
+      "id": "C09",
+      "source": "§4，49–51",
+      "title": "辅助匹配与供体调用",
+      "status": "PASS",
+      "check": "原跨 A 端两两不同且与原孔、F_A 端点不交。两个 x_i 是不同原孔，故指定的 x_i z_i 边互不交。余端数为偶且至少二，可在完全图任意配对。F_A∪D 剩下的孔恰为 H_A 去掉两个奇孔，故五维平衡圈接口适用。"
+    },
+    {
+      "id": "C10",
+      "source": "§4，51",
+      "title": "同时插入跨镜像并切圈",
+      "status": "PASS",
+      "check": "指定 D 边逐条改成 x_i–y_i–z_i，只插入各不相同且原供体圈上没有的 B 点，仍为一个简单圈。未指定 D 边都还在，删去至少一条得到无圈路径森林。这个余量在 s=2 时也成立，消除了整圈残留。"
+    },
+    {
+      "id": "C11",
+      "source": "§4，53–57",
+      "title": "叶接入与实际路径",
+      "status": "PASS",
+      "check": "未接回跨边的 B 端在 X_B 去掉 Ycross，内部所选桥的 B 端在 Yint，两类不交且各自无重复，均未在森林中。每次只添叶。删去的 D 边每个 A 端恰补一度，指定插入点保持二度。所有 A 点与 Ycross 都是内部点，端点恰为 U。有限无圈图无零度点且最大度二，故每分量是有两个不同端点的路径。"
+    },
+    {
+      "id": "C12",
+      "source": "§4，55–57",
+      "title": "标签和零、小跨数",
+      "status": "PASS",
+      "check": "各真实路径两两点不交，端点压缩成 U 上的匹配 R。c=0 时只删 x₁x₂，补两条短桥得到一个分量。c=2 时至少删一条未指定边。一般真实分量内部点严格局限于 A∪Ycross，按路径保存边的来源。"
+    },
+    {
+      "id": "C13",
+      "source": "§5，61",
+      "title": "冲突形状与重边排除",
+      "status": "PASS",
+      "check": "V(F_B)∩U=Yint。每个 F_B 配偶 k_i∉U，且不同 y_i 的 k_i 互异。任何 R 边至多在两端各接一条 F_B 边，并立即终止。若同时选中的内部点是 R 配偶，冲突分量是 k₁–y₁–y₂–k₂。R 与 F_B 若同一底边，两端必同时在 Yint 且互为 F_B 配偶，已被排除。"
+    },
+    {
+      "id": "C14",
+      "source": "§5，63–67",
+      "title": "同时抑制与接收接口",
+      "status": "PASS",
+      "check": "每个冲突路径换成两外端之间的标签。不同分量无共同点，故 L 为匹配且恰漏原 B 孔与 y₁,y₂。镜像翻色，故新孔均为 B 多数色，孔型 (t+4,t)；t=0 合 T44，t=1 合完整 T15，避点正是这两孔。"
+    },
+    {
+      "id": "C15",
+      "source": "§5，69",
+      "title": "两层展开及单圈",
+      "status": "PASS",
+      "check": "先替换抑制标签，仅插入互异的 Yint 点。R 的每条标签均由此出现或本就属于 L。再替换 R，只插入 A∪Ycross 的点，所有真实路径内部互不交且与第一层内部点不交。每次用内部新点路径替换一条圈边，保留一条简单圈。点数 30+|Yint|+32+|Ycross|=64。"
+    },
+    {
+      "id": "C16",
+      "source": "§4，51–57；§5，69",
+      "title": "原边恢复与短边账",
+      "status": "PASS",
+      "check": "F_A 留在供体真实路径，原跨边或随镜像插入、或作为叶接回，F_B 原边或独立保留、或由第一层展开恢复。每条 D 边已经删去或替换，两层标签按身份展开，包括恰为短边者。其余留下的边来自两次局部圈的新增短边和两条镜像短桥。"
+    },
+    {
+      "id": "C17",
+      "source": "§6，73",
+      "title": "C4 的相邻孔增广",
+      "status": "PASS",
+      "check": "若有相邻孔，所加短边无原匹配端点并恰消耗一偶一奇，得 (3,3) 孔，调用已接受 C3。相对原 F，多出的规定边本身也是短边。独立孔由 C04–C16 覆盖，故先闭 C4。"
+    },
+    {
+      "id": "C18",
+      "source": "§6，75",
+      "title": "C5 的相邻孔增广",
+      "status": "PASS",
+      "check": "相邻孔时同法得到 (4,4) 孔，调用已证 C4。C5 的独立孔论证只用既有五维/六维直接接口，无 C4 与 C5 的循环依赖。两分支穷尽。"
+    },
+    {
+      "id": "C19",
+      "source": "INPUTS；§§1–6",
+      "title": "输入绑定与依赖范围",
+      "status": "PASS",
+      "check": "主稿、清单及十个清单直接导入哈希均相符。导入仅核对固定版本、准确接口与已接受回执，未重放底层证书。审计覆盖两条六维全称结论及其共同引理，未含后续七维回代。"
+    }
+  ],
+  "adversarial_checks": [
+    {
+      "candidate": "极端翻转",
+      "disposition": "允许奇数次坐标翻转，使运输组色名全局交换。奇距离组和偶距离组随之交换，距离下界依然成立。"
+    },
+    {
+      "candidate": "跨端口余量",
+      "disposition": "尝试 c=0 无圈切口、c=2 两镜像都跨、s=2 无边可删。第一种仍有唯一未指定 D 边；第二种由 b≥3 和选择规则排除；第三种有 c≥4。"
+    },
+    {
+      "candidate": "抑制冲突",
+      "disposition": "若选中的两内部镜像恰是 F_B 配偶，可能出现重边或抑制后失去外端。安全选择排除该情形。若是 R 配偶，则得到四点路径，两个不同外端均未抑制。"
+    },
+    {
+      "candidate": "展开重用内部点",
+      "disposition": "先展开只引回 Yint，后展开引回 A∪Ycross。两层内部点集不交，每层路径间内部点亦互不相交。"
+    },
+    {
+      "candidate": "长边与同色原边",
+      "disposition": "原跨边只用端口身份，无需是短镜像或异色。其长度保持为原规定边属性。两次局部工具均允许完全图匹配。"
+    },
+    {
+      "candidate": "增广循环",
+      "disposition": "先用 C3 闭 C4，再用已证 C4 闭 C5。独立孔论证不调用二者。"
+    }
+  ],
+  "open_issues": [],
+  "matching_enumeration_calls": 0,
+  "high_hole_enumeration_calls": 0,
+  "hamilton_solver_calls": 0,
+  "prior_certificate_replays": 0,
+  "shared_mathematical_closure_changed": false
+}

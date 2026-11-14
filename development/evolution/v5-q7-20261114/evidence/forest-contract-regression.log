@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "scope": "contract regressions, not a new cube theorem",
+  "checks": {
+    "legacy_root": {
+      "status": "PASS",
+      "dim": 3,
+      "root": 7,
+      "holes": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "omitted": [
+        7
+      ],
+      "endpoints": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "forest_record_bytes": 10,
+      "column_record_bytes": 4,
+      "legal_forests": 4,
+      "valid_matching_columns": 3,
+      "matrix_bits_recomputed_DSU": 12,
+      "matrix_ones": 8,
+      "GF2_rank_low_column_gauss": 2,
+      "imported_CKN_rank_upper_bound": 2,
+      "universal_rank_gate_met": true,
+      "complete_forest_pool_exhaustiveness_required": false,
+      "covered_vertices": 7,
+      "scope": "Simple cube forests on V minus U; degree0 on U, degree1 on K=V minus H, degree2 on H minus U; all complete-graph matchings on K",
+      "seconds": 0.0004594999991240911
+    },
+    "multi_omitted_full_gate": {
+      "status": "PASS",
+      "dim": 3,
+      "root": null,
+      "holes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "omitted": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "endpoints": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "forest_record_bytes": 4,
+      "column_record_bytes": 4,
+      "legal_forests": 2,
+      "valid_matching_columns": 3,
+      "matrix_bits_recomputed_DSU": 6,
+      "matrix_ones": 4,
+      "GF2_rank_low_column_gauss": 2,
+      "imported_CKN_rank_upper_bound": 2,
+      "universal_rank_gate_met": true,
+      "complete_forest_pool_exhaustiveness_required": false,
+      "covered_vertices": 4,
+      "scope": "Simple cube forests on V minus U; degree0 on U, degree1 on K=V minus H, degree2 on H minus U; all complete-graph matchings on K",
+      "seconds": 0.00016412499826401472
+    },
+    "legal_rank_deficient": {
+      "status": "PASS",
+      "dim": 3,
+      "root": null,
+      "holes": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "omitted": [
+        0,
+        1,
+        7
+      ],
+      "endpoints": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "forest_record_bytes": 6,
+      "column_record_bytes": 4,
+      "legal_forests": 1,
+      "valid_matching_columns": 3,
+      "matrix_bits_recomputed_DSU": 3,
+      "matrix_ones": 2,
+      "GF2_rank_low_column_gauss": 1,
+      "imported_CKN_rank_upper_bound": 2,
+      "universal_rank_gate_met": false,
+      "complete_forest_pool_exhaustiveness_required": false,
+      "covered_vertices": 5,
+      "scope": "Simple cube forests on V minus U; degree0 on U, degree1 on K=V minus H, degree2 on H minus U; all complete-graph matchings on K",
+      "seconds": 0.00016062500071711838
+    },
+    "omitted_outside_holes": "REJECTED",
+    "both_root_and_omitted": "REJECTED",
+    "forest_touches_omitted": "REJECTED",
+    "repeated_forest_edge": "REJECTED",
+    "long_forest_edge": "REJECTED",
+    "incomplete_component_degrees": "REJECTED",
+    "hidden_all_hole_cycle": "REJECTED",
+    "column_reuses_endpoint": "REJECTED",
+    "column_wrong_endpoint_domain": "REJECTED",
+    "truncated_forest_record": "REJECTED"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "Q7_WORKFLOW / local ARIS adaptation",
+  "verdict": "PASS",
+  "proof_status": "sound-modulo-imports",
+  "reviewer_agent_id": "/root/e14_next_checker",
+  "caller": "/root",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-08T15:53:49.195Z",
+  "report_path": "R7_E14_NEXT_REVIEW.md",
+  "audited_input_hashes": {
+    "R7_SPLIT_SOURCE_DONOR.md": "648ebaed1e214fdb538ecfb91930f2767623bc5da17dce3f9e4aa2f8ca983468",
+    "R7_SPLIT_SOURCE_DONOR_INPUTS.json": "4e3d52bc11f6f5346d84a3c979d1e3065d963389efc37a36388b524185dae34e",
+    "R7_E14_LOW_GAP_DIRECT_TRANSFERS.md": "f6bb26b7013f208bb37629032e1aa587da7e3e99231a4ca630b55051fb1ae97e",
+    "R7_E14_LOW_GAP_DIRECT_TRANSFERS_INPUTS.json": "07ce2a57aec9117e3eaff39bde00e5e33fdd62643059712f1e37dd0ebdb11173"
+  },
+  "evidence_hashes": {
+    "R7_E14_NEXT_REVIEW.md": "395051e5f3a04ad5bf44f7ab915a2d53a3a490a99dbf48d841ed3795f100c12b",
+    "R7_E14_NEXT_REVIEW_CHECK.cjs": "133f14a7cbcc5c5473a17d214bb20384a758fd7598b135b8752890e8f2ba26e1",
+    "R7_E14_NEXT_REVIEW_CHECK.json": "202405dc389a0614db2462d255309d365a26e8dfb88092fd70ad009298d533eb"
+  },
+  "bound_hash_comparisons": {
+    "split_and_handoffs": 50,
+    "low_gap": 39
+  },
+  "coverage_receipt": {
+    "assigned_source_units": 20,
+    "covered_source_units": 20,
+    "declared_source_unit_coverage_percent": 100
+  },
+  "results": {
+    "full_mu3_E14": true,
+    "prior_fixed_35_union": 21,
+    "verified_new_plans": 23,
+    "newly_closed_fixed_representatives": 14,
+    "split_four_representatives": 10,
+    "audited_exact_core_representatives": 4,
+    "remaining_mu3_representatives": 0,
+    "full_delta2_edge_outer_cut_types": [
+      "(5,7)/(2,0)",
+      "(4,6)/(3,1)"
+    ],
+    "central_delta2_acceptance": "conditional (split one-mark-per-side; or nonempty balanced half + two omissions on the imbalance-two half with at most one minority hole)",
+    "exactly_one_original_cross_edge": "unrestricted Q7 short matchings",
+    "exactly_two_original_cross_edges_F14": "Q7 short matchings with at least 57 edges",
+    "original_matching_enumerations": 0,
+    "ordinary_matching_solver_calls": 0,
+    "hamilton_solver_calls": 0,
+    "old_full_scans_replayed": 0,
+    "full_E14": false,
+    "full_R7": false,
+    "full_P7": false,
+    "remaining_scope": "mu in {0,1,2}, subject to the imported and new exact sufficient conditions; only the central outer cut remains in the delta-two layer"
+  },
+  "open_issues": []
+}
