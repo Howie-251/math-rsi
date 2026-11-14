@@ -1,0 +1,395 @@
+{
+  "audit_skill": "ARIS proof-checker local adaptation in Q7_WORKFLOW.md",
+  "verdict": "PASS",
+  "reason_code": "ALL_OBLIGATIONS_PASS_MODULO_IMPORTED_RESULTS",
+  "proof_status": "sound-modulo-imports",
+  "soundness": "sound-modulo-imports",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_agent_id": "/root/r41_full_audit",
+  "direct_caller": "/root",
+  "reviewer_model": "GPT-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "user-requested configuration relayed by direct caller",
+  "backend_identity_independently_certified": false,
+  "date": "2026-11-11",
+  "scope": "Every 56-edge short matching in Q7 with min_i |delta_i| = 3 and an oriented original (4,7)/(4,1) hole cut admits an all-short Hamilton cycle containing every original edge, for all receiver m.",
+  "new_branch": "m=0",
+  "imported_branch": "R41 m>=1, independent of m=0",
+  "R41_m0_open": false,
+  "full_R41_proved": true,
+  "full_mu3_proved": false,
+  "full_E16_proved": false,
+  "full_R7_proved": false,
+  "net_new_original_input_count_known": false,
+  "obligations": {
+    "A01": "PASS",
+    "A02": "PASS",
+    "A03": "PASS",
+    "A04": "PASS",
+    "A05": "PASS",
+    "A06": "PASS",
+    "A07": "PASS",
+    "A08": "PASS",
+    "A09": "PASS",
+    "A10": "PASS",
+    "A11": "PASS",
+    "A12": "PASS",
+    "A13": "PASS",
+    "A14": "PASS"
+  },
+  "author_proof_sha256": "81e003cb54127d59b93191788656059bd780b124317eceb1929f424d008c207f",
+  "author_manifest_sha256": "c4521f8146f54ac7c169d1c839e14182f011fd8d85cdb6d2e81153c6d4968f9a",
+  "audited_input_hashes": {
+    "R7_E16_MU3_R41_M0_CLOSURE.md": "sha256:81e003cb54127d59b93191788656059bd780b124317eceb1929f424d008c207f",
+    "R7_E16_MU3_R41_M0_CLOSURE_INPUTS.json": "sha256:c4521f8146f54ac7c169d1c839e14182f011fd8d85cdb6d2e81153c6d4968f9a"
+  },
+  "frozen_manifest_entries_verified": 216,
+  "imported_R41_m_ge1_review_sha256": "sha256:cd0e23622c95723416eb32033c3cb9811248950b5a0e9bf8a63888b95c0f8d79",
+  "imported_R41_m_ge1_obligations_verified": 12,
+  "imported_R41_m_ge1_bindings_verified": 24,
+  "independent_artifact_hashes": {
+    "R41_FULL_REVIEW.md": "sha256:985925955753f39558875d8f892608317b4ea2920aa11bce8c067295ba8126d3",
+    "R41_FULL_REVIEW_CHECK.py": "sha256:631070db906065cbebd77bea90c9f12f37017fb21b90f59135cb13ad40cd9cce",
+    "R41_FULL_REVIEW_CHECK.json": "sha256:755625e6eb8482962e1b8209dc205116361dccfb6d802f36ea5429443ac2fa38"
+  },
+  "checker_import_and_rank_target_hashes": {
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M1_REVIEW_CHECK.py": "sha256:1eea59fbc9fea8b82020147381cc65a1ba4ef4c0f35540f9dd1a167f4fce7178",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_REVIEW_CHECK.py": "sha256:78888cb44ce984e1f0c9874ac6dd02ee28151d79de5d472b12cbe54330b7c4f2",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW_CHECK.py": "sha256:6722855422c9775cddf6813231088ca415ba91374fb8207914bf271e61051861",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.py": "sha256:f9316c07b929227a3b58ebb403ee4cfcd08a803e3d5c6b71887afebda74666d0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_MINIMAL_REVIEW_CHECK.py": "sha256:f0879f1777c05761b481e91653df1ad0012f9191c988117ae9d76866c4da96c8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_D30_REVIEW_CHECK.py": "sha256:8c74db37322af65673b34a15955d3f805c0b34bc99931ea4ac9d22585aa53c07",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_REVIEW_CHECK.py": "sha256:bc284d7123d5156c453eff1034e1f9f9804bee6b40276d81e095111e2a322c3d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP6_EVEN_02_REVIEW_CHECK.py": "sha256:82d4d8f52608c254f6674740c8e3aa6999d25526acf28f41b299fe4314021f48",
+    "E:/新问题/research/six_directions/Q5_T63_RANK_PROOF.md": "sha256:438450b4c29ffd87663b8f9f1216aee8d3c4c7035533401a9329483ffa0b1ac7",
+    "E:/新问题/research/seven_directions/Q6_T15_ACTUAL_PROFILE.json": "sha256:63fdf96c54e11e14255af358a62a54eda5d50707837f2cc5693695d860d38813",
+    "E:/新问题/research/seven_directions/Q6_T15_S2_COMBINED_EXTENSION_REVIEW.json": "sha256:298fcb8416dac224a774b85b78c10bc4978bb798e9328009377073b8dfbd84c9",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_REVIEW.json": "sha256:6a054243e3cd108c0c6f4f04e4bda3b77771565c8731b5173639aff7f1d8cf3f",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_REVIEW.json": "sha256:33a422864d9fe7a97b03f008916dd169dca9fc4935d62111ca089ee0e649ee93",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_CLOSURE.md": "sha256:92bbb188eff33aefb4a1f77d147484c3e4de74b7fb8faaadf8e0af43dbd125c8",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_CLOSURE.md": "sha256:eedadf8c69313031dd4de0805506b019891068f6959f6b1b17fa7cb153aa85b3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW.json": "sha256:93f2cab6e97679b41f5ac403d060421a113711c8b346240e56073cbe4febb665",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW.json": "sha256:31d0009e8a40c65c2c2db6585c47f372d00a7f946950930459582550c247aeec",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU1_CENTRAL_T1_AND_E14_REVIEW.json": "sha256:bd43b169733232bc6002fa8105d07d03d447a77a922db876148329acf27c61ed",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_REVIEW.json": "sha256:a9b99e355e4929877f7196926c60ea9b6001e2a89aa6a1d5d00ba1f4ff6c0a68",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_FULL_REVIEW.json": "sha256:df038ad03bca5e3932c33481dfd1dd338cf21dfcb5431c9ff427f82d778375a9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_THREE_MONOCHROMATIC_CLOSURE_REVIEW.json": "sha256:08464b5c44575f29652d3c720f3cf2d03d14a87712da2f6db53873b749a35bab",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_CONTROLLED_AND_T63_REVIEW.json": "sha256:7cc19a44b1f511a1c1b64b402c2431bd2ae64bcad94cb835884313f66b7eb504",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_REVIEW.json": "sha256:761dc76bb82e18a48fbd388b3686e889b9dac4e437ec506750908a8f24a0092e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CYCLE_DONOR_THREE_BRIDGE_UNIVERSAL_REVIEW.json": "sha256:8cab776b3c739b681877890621069197969ace2cecc2fba3308ffe7ee313bf3b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.json": "sha256:954f3800538ac37cea3b3f67efc7ce0a11e68e4f070449ffa603fec2da52e5ce",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_COMPLETE_COVERAGE_REVIEW.json": "sha256:aa40a02f8aa4f48f6da02ddb79b1f49ada141aeb8dc6b79331c68b0baf1b1426",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT_REVIEW.json": "sha256:666b9eccd6014295d0eb38942fea6345d32ee3f1092cc71c891958e7dece6902",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_DISTANCE2_REVIEW.json": "sha256:41d5a619d3275fa85120d45f294569361d48ec5765fd8c77981b562eef337eef",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.json": "sha256:240acc65b4966cd5916e0b9424e7f160e6b5c21850a28208d5ee5657eb1fc41b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU2_FULL_REVIEW.json": "sha256:8ee76a2b2077027a9d3994d1b235668ed3bac29815e2be40c453b589e6a041cf",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "E:/新问题/research/six_directions/Q5_T63_RANK_REVIEW.json": "sha256:6054bb44eb7c034f94c7aad4774adbe56e56de1e600b427be6ee1b1a9255c042",
+    "E:/新问题/research/six_directions/Q5_T63_COMPLETE_SPLIT_REVIEW.json": "sha256:4ffd7ef4b900b6ba4fbafa124c617f416086209643c2eabfed5e8db1dc1270ad",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_REVIEW.json": "sha256:0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "sha256:783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25"
+  },
+  "counts": {
+    "scalar_rows": 65,
+    "U_orbits": 3534,
+    "labeled_U": 94395,
+    "U_eliminated_pool_size": 11,
+    "U_eliminated_column": 1221,
+    "U_orbits_surviving": 2302,
+    "U_orbits_with_Y": 602,
+    "labeled_U_with_Y": 14099,
+    "single_column_source_upper": 364277,
+    "exact_Y_before_isolation": 57590,
+    "six_unit_sources_excluded": 832,
+    "exact_Y_on_U_reps": 56758,
+    "exact_labeled_U_Y": 900676,
+    "fixed_representatives": 22684,
+    "Y_transports": 56758,
+    "positive_plans": 22684,
+    "plan_counts": {
+      "controlled_cycle_count": 9069,
+      "accepted_R41_m_ge1": 4665,
+      "k3_whole_receiver": 7151,
+      "accepted_central_m_ge3": 1255,
+      "accepted_central_antipodal_h6": 76,
+      "four_mono_capacity": 67,
+      "k4_two_return": 388,
+      "registry_two_return": 1,
+      "controlled_cycle_registered_split": 12
+    },
+    "templates": [
+      {
+        "W": [
+          28,
+          44,
+          52,
+          56
+        ],
+        "generated_Y": 17071,
+        "representatives": 6076,
+        "U_with_Y": 157,
+        "labeled_U_Y": 256244
+      },
+      {
+        "W": [
+          31,
+          47,
+          55,
+          56
+        ],
+        "generated_Y": 16075,
+        "representatives": 6689,
+        "U_with_Y": 215,
+        "labeled_U_Y": 215112
+      },
+      {
+        "W": [
+          55,
+          59,
+          61,
+          62
+        ],
+        "generated_Y": 23612,
+        "representatives": 9919,
+        "U_with_Y": 230,
+        "labeled_U_Y": 429320
+      }
+    ],
+    "plan_details": {
+      "plan_counts": {
+        "controlled_cycle_count": 9069,
+        "accepted_R41_m_ge1": 4665,
+        "k3_whole_receiver": 7151,
+        "accepted_central_m_ge3": 1255,
+        "accepted_central_antipodal_h6": 76,
+        "four_mono_capacity": 67,
+        "k4_two_return": 388,
+        "registry_two_return": 1,
+        "controlled_cycle_registered_split": 12
+      },
+      "high_m": {
+        "accepted_R41_m_ge1": {
+          "1": 1482,
+          "3": 1207,
+          "4": 206,
+          "2": 1760,
+          "5": 10
+        },
+        "accepted_central_m_ge3": {
+          "3": 1178,
+          "4": 77
+        }
+      },
+      "controlled_interfaces": {
+        "Q5_T15_FULL": 7350,
+        "Q5_A_ALL": 7166,
+        "Q5_T44": 3622
+      },
+      "controlled_rk": {
+        "3,3": 7166,
+        "3,4": 1753,
+        "4,4": 150
+      },
+      "exact_marked_targets": {
+        "T63_old": {
+          "3": 5,
+          "6": 4
+        },
+        "T15_exact_core": {
+          "85": 30,
+          "113": 3,
+          "114": 19,
+          "117": 107,
+          "300": 8,
+          "348": 6,
+          "405": 1,
+          "950": 24,
+          "965": 2
+        }
+      },
+      "interface_kinds": {
+        "k3_whole_receiver": {
+          "Q6_same_side_majority_root": 3780,
+          "T15_isolated_mark": 124,
+          "Q6_balanced_complement_avoid_two": 1636,
+          "Q6_same_side_two_minority_roots": 263,
+          "T15_exact_core": 199,
+          "T26_two_majority_roots": 457,
+          "Q6_T26_paired_S1": 49,
+          "T26_separated_two_root_choice": 639,
+          "T15_same_face": 2,
+          "Q6_T15_D4": 2
+        },
+        "k4_two_return": {
+          "majority_root": 322,
+          "two_minority_roots": 75,
+          "separated": 228,
+          "same_side": 66,
+          "core117": 4
+        },
+        "registry_two_return": {
+          "T15_exact_core": 1,
+          "positive_split_Q5": 1,
+          "T15": 1,
+          "avoid_one": 1
+        },
+        "controlled_cycle_registered_split": {
+          "Q5_A_ALL": 12,
+          "T63_old": 9,
+          "T63_split": 3
+        }
+      },
+      "k4_details": {
+        "majority_root:positive_split": 29,
+        "two_minority_roots:controlled_single_root": 25,
+        "two_minority_roots:positive_split": 48,
+        "majority_root:controlled_single_root": 269,
+        "majority_root:whole_face": 11,
+        "two_minority_roots:whole_face": 2,
+        "core117:positive_split": 4
+      },
+      "k4_exact_core117": 4,
+      "k5_indices": [
+        6022
+      ],
+      "k5_witnesses": [
+        {
+          "index": 6022,
+          "plan": {
+            "gate": "registry_two_return",
+            "required_forced_edge": null,
+            "k": 5,
+            "outer": 2,
+            "donor_side": 0,
+            "donor_majority_parity": 0,
+            "X": [
+              0,
+              65,
+              66
+            ],
+            "U": [
+              28,
+              44
+            ],
+            "donor_minority": [
+              56
+            ],
+            "donor_retained": [
+              75,
+              83,
+              99
+            ],
+            "donor_marks": [
+              24,
+              40
+            ],
+            "receiver_minority": [
+              68,
+              71
+            ],
+            "receiver_retained": [
+              52,
+              93,
+              110,
+              124,
+              127
+            ],
+            "receiver_marks": [
+              4,
+              69,
+              70
+            ],
+            "donor": {
+              "kind": "T15_exact_core",
+              "index": 117,
+              "normalized_groups": [
+                [
+                  47,
+                  55,
+                  59
+                ],
+                [
+                  8,
+                  16
+                ]
+              ],
+              "coordinate_transport": [
+                2,
+                3,
+                5,
+                0,
+                1,
+                4
+              ],
+              "normalization_root": 56
+            },
+            "receiver": {
+              "kind": "positive_split_Q5",
+              "inner": 0,
+              "projected_axes": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ],
+              "faces": [
+                {
+                  "minority": [
+                    16
+                  ],
+                  "majority": [
+                    0,
+                    12,
+                    17,
+                    27,
+                    30
+                  ],
+                  "marks": [
+                    0,
+                    17
+                  ],
+                  "interface": {
+                    "kind": "T15"
+                  }
+                },
+                {
+                  "minority": [
+                    17
+                  ],
+                  "majority": [
+                    16,
+                    22,
+                    31
+                  ],
+                  "marks": [
+                    16
+                  ],
+                  "interface": {
+                    "kind": "avoid_one"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "execution": {
+    "exec_session": 45694,
+    "exit_code": 0,
+    "recorded_complete_runs": 1,
+    "before_write_cpu_seconds": 8.90625,
+    "recorded_cpu_seconds_including_output": 8.9375,
+    "authorized_total_cpu_seconds": 60,
+    "pre_restore_verification_status": "unknown; no saved checker run ID or artifact was available on resumption",
+    "producer_runs": 0,
+    "plan_searches": 0,
+    "matching_enumerations": 0,
+    "solver_calls": 0,
+    "rank_runs": 0,
+    "old_certificate_replays": 0
+  }
+}

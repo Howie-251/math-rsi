@@ -1,0 +1,7 @@
+MathRSI v5 turns lessons from the Q7 research into actions in the existing workflow: control auxiliary choices before consuming their outputs, apply new theorems across known legal representations before assigning residual work, and connect fixed or conditional finite plans to every original input. The Hamilton plugin gains controlled donor/return constructions, exact source-pool counting, and multi-omission forest checking while retaining the Q6 interface.
+
+The bilingual README and homepage present v5 as current and add the Q7 dense-matching result. The research used a local adaptation of v3; its methods feed v5. The result covers every Q7 matching with at least 57 edges, with complete structure families at 56 edges; the full Q7 conjecture remains open. Selected original sources and runnable consumers stay in the private repository; only the curated Q7 reader is added to the Pages allowlist.
+
+Validation includes actual Base caller consumption; one complete T63 target04 4096×4096 connectivity/rank recomputation (rank 4096); legacy A10 1024×1024 regression; invalid and rank-deficient cases; and both unchanged S3/S2_STRONG consumers replayed from the new repository layout. Gemini Carbon reviews the implementation. Final link, public-build and bilingual browser checks are recorded in the evolution directory. The other five T63 families and the full historical dependency chain were not rerun.
+
+See `docs/V5_CHANGES.md` and `development/evolution/v5-q7-20261114/EVOLUTION.md` for implementation, evidence and review scope.

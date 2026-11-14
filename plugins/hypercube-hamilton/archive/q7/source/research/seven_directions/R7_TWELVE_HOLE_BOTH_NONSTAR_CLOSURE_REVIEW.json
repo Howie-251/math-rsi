@@ -1,0 +1,555 @@
+{
+  "audit_skill": "proof-checker",
+  "adaptation": "Q7 local adaptation, author-independent continuation, joint frozen two-manuscript audit",
+  "verdict": "PASS",
+  "reason_code": "all_joint_scoped_proofs_complete_modulo_accepted_imports",
+  "summary": "Both-nonstar two-hole-face theorem and its necessary residual reduction pass; combined with final (1,3)/(5,3) universal transfer and E10 preprocessing, every 58-edge Q7 short matching with both color hole classes nonstar has an all-short Hamilton extension. General star-color cases and full E12/R7/P7 remain open.",
+  "caller": "/root",
+  "reviewer_agent_id": "/root/nonstar_fresh_audit",
+  "authors": [
+    "/root/coverage_catalog",
+    "/root/delta3_nonstar_writer"
+  ],
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user/workspace instruction relayed by caller",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "new_context_claimed": false,
+  "author_independent_for_new_manuscripts": true,
+  "prior_A_B_32_obligation_audit_reused_as_import_only": true,
+  "generated_at": "2026-11-08T04:16:32.577611+00:00",
+  "audited_input_hashes": {
+    "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR.md": "sha256:41e64b71c4192359c6c03c2d0de13be06892171bcd4f90c8e63f3c557132c62c",
+    "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json": "sha256:3e5d8dac64ac34c569f3f0567a88dff9a365771cd4dd2c43ccf190581982378d",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE.md": "sha256:7f9fa25e062cc8defac4cd7a451aa4d50c95e766a00ea0f551177a277a428180",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json": "sha256:45a93b385e96d0242cb4dfc4004192b0125396748d53309cb063b03be4a428f7"
+  },
+  "verified_import_and_protected_hashes": {
+    "R7_TWELVE_HOLE_NEAR_BALANCED_CUTS.md": "sha256:b5400cdce7c4d3a593364bc9aaafa1a76853c62cc4c49429b389e05abee30886",
+    "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.json": "sha256:4938e184c8606dd1e3bcf0f1324e88d8aacfa4e0f8d8b8f931a1339874d0ec42",
+    "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.md": "sha256:0642c56ed088b70f3d2ebafad906a78b48af6e4b60f10ecf53c140127a884967",
+    "R7_TWELVE_HOLE_CUT_REDUCTION.md": "sha256:c56a89fe4f3a4997f25bd7afe5b307cdf50da57f37d5c23606ce3eb78583abae",
+    "R7_TWELVE_HOLE_CUT_REVIEW.json": "sha256:bd35fcf31c3e9f1d780dbab95a50420828e66db40dddecb920e1b4f293b98c71",
+    "R7_TWELVE_HOLE_CUT_REVIEW.md": "sha256:2692662187936ad4467edbce1a2e308673c48d2aeccfb2f197cb2284d9994a76",
+    "R7_TWELVE_HOLE_TWO_HOLE_FACE.md": "sha256:28c844c8b7890f328cf906d9d1c10263a5fa6e88c9f6dd2ec41dbb01b6143894",
+    "R7_TWELVE_HOLE_TWO_HOLE_FACE_REVIEW.json": "sha256:972e2892bce7d18bdaf1f6bcb2060eb6657493e16f3575d64c40d7b61e34f88d",
+    "R7_TWELVE_HOLE_TWO_HOLE_FACE_REVIEW.md": "sha256:00b469469dae2e7718d7cdfa97c9499402752e374b8d1fd69083bea06c6ee3d5",
+    "Q7_EIGHT_NINE_CUTS.md": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "sha256:be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.md": "sha256:7e841562b50ca992e4cd5c37d90766630451ff9eeac4e21b160489ec45265167",
+    "Q6_T15_D4_D5.md": "sha256:27e5ac27c95b0caffa8ef087ea9e66a2a29b8092f4980c12e30cab3914cc70b7",
+    "Q6_T15_D45_D3_REVIEW.json": "sha256:515a9e879168a93d3f5394ad1c9df054d16c4ca68f968fdd2f53b4ebf4af4a20",
+    "Q6_T15_D45_D3_REVIEW.md": "sha256:e097b0dfce7724bddbcdafa762824ded1900cf86e260e30c4e8ea7a52448ee6d",
+    "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES.md": "sha256:c5ec154938913a5de64bc1802b2402dff0a803133d5b68814ee4198a34bb2f1d",
+    "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.json": "sha256:c85c231dfd10a270ab46b3e957db5e8bc0886cca6956abafd9fe3179471ffa5e",
+    "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.md": "sha256:82422b19aeab7e3ca4597f7cdbadf8e4e92fbaecccb2356e0f486fab00e93b78",
+    "R7_TWELVE_HOLE_DELTA3_NONSTAR.md": "sha256:7e56c98a7ad5228d17c5607e403d9037ea377f03c7796efa05a18f42ff713e5d",
+    "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.json": "sha256:a4c12e2f42aa68afc3ff6ec2a273e7619a4387fca7c1ae62b5362eb6da25bcd2",
+    "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.md": "sha256:753d1d1cf6d6593aae4f93d4049453a3978ebeb00292f5a7e52d5c8923022749",
+    "R7_TEN_HOLE_CYCLE_CLOSURE.md": "sha256:7d0e9b84e0c89ec1f34a81989f9e86ce902fd58c36d1f12613b2a6949bc3181e",
+    "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.json": "sha256:1d3c9dac8553ce17f41317f6bb3b9e10331bb53badc3cc44d782d7260fc0b25e",
+    "R7_TEN_HOLE_FULL_REVIEW.md": "sha256:d25e8a767b3ad57a606085c945669ba6bb640d4201882c3fc875a28c23038a89",
+    "Q6_TWO_AVOIDED_EASY_FACES.md": "sha256:0b544c293b8dcc8da5f059ba4f9d3a074079585afcb1546576af16b4de14ad1f",
+    "Q6_TWO_AVOIDED_EASY_REVIEW.json": "sha256:52cadafa0d514f08fcf37ce8685b2335a81378bc0cedd3367a1f6a5f6376178f",
+    "Q6_TWO_AVOIDED_EASY_REVIEW.md": "sha256:089f7d3afa27da104179e559137bc41d74578475f7bdd926a52aa5296531a303",
+    "R7_TWELVE_HOLE_DELTA3_NONSTAR_INPUTS.json": "sha256:907188bee352d854c9a7c9cf8428d6095abf0f21ec65ef941cda5ad79415af18",
+    "R7_TWELVE_HOLE_DELTA3_NONSTAR_WITNESS.json": "sha256:66ba45356af009e43e75b16ad3cea4c2ac9e5df2f09562b723277c8f15d10101"
+  },
+  "binding_checks": {
+    "manifest_hash_assertions": 44,
+    "import_receipt_entries": [
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_NEAR_BALANCED_CUTS.md",
+        "review": "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_CUT_REDUCTION.md",
+        "review": "R7_TWELVE_HOLE_CUT_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_CUT_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_TWO_HOLE_FACE.md",
+        "review": "R7_TWELVE_HOLE_TWO_HOLE_FACE_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_TWO_HOLE_FACE_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "Q7_EIGHT_NINE_CUTS.md",
+        "review": "Q7_EIGHT_NINE_CUTS_REVIEW.json",
+        "report": "Q7_EIGHT_NINE_CUTS_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "Q6_T15_D4_D5.md",
+        "review": "Q6_T15_D45_D3_REVIEW.json",
+        "report": "Q6_T15_D45_D3_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES.md",
+        "review": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_TWO_HOLE_NONSTAR_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_DELTA3_NONSTAR.md",
+        "review": "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "R7_TEN_HOLE_CYCLE_CLOSURE.md",
+        "review": "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.json",
+        "report": "R7_TEN_HOLE_FULL_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_NEAR_BALANCED_CUTS.md",
+        "review": "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_CUT_REDUCTION.md",
+        "review": "R7_TWELVE_HOLE_CUT_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_CUT_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "Q7_EIGHT_NINE_CUTS.md",
+        "review": "Q7_EIGHT_NINE_CUTS_REVIEW.json",
+        "report": "Q7_EIGHT_NINE_CUTS_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "Q6_TWO_AVOIDED_EASY_FACES.md",
+        "review": "Q6_TWO_AVOIDED_EASY_REVIEW.json",
+        "report": "Q6_TWO_AVOIDED_EASY_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "Q6_T15_D4_D5.md",
+        "review": "Q6_T15_D45_D3_REVIEW.json",
+        "report": "Q6_T15_D45_D3_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES.md",
+        "review": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_NONSTAR_TWO_BRIDGES_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "manifest": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json",
+        "source": "R7_TWELVE_HOLE_DELTA3_NONSTAR.md",
+        "review": "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.json",
+        "report": "R7_TWELVE_HOLE_DELTA3_NONSTAR_REVIEW.md",
+        "status": "PASS"
+      }
+    ],
+    "all_pass": true
+  },
+  "trace_path": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.md",
+  "report_hash": "sha256:8b6fc6d3ad11d5df9297bda54ad6c05d7b5ba47c0316ee903c8372b0d8db68a8",
+  "scope": {
+    "two_hole_main": "Every independent twelve-hole 58-edge short Q7 matching, both color six-sets nonstar, and some coordinate face containing exactly two holes has an all-short Hamilton extension.",
+    "two_hole_residual": "Any independent both-nonstar input outside previous A/B, G19 and the two-hole theorem admits a (1,3)/(5,3) cut up to face/color swaps.",
+    "final_new_core": "Every independent both-nonstar input with a cut (1,3)/(5,3), up to faces/colors, has the all-short Hamilton extension.",
+    "final_main": "Every 58-edge short Q7 matching for which neither color class of six original holes consists of six neighbors of a single center extends to an all-short Hamilton cycle; no independence assumption.",
+    "remaining_normal_form": "Conditional only: any remaining twelve-hole counterexample has an automorphic/color-swapped form with odd holes {1,2,4,8,16,32}, six even holes among 42 weight-4/6 vertices, and prescribed edge 0--64.",
+    "full_both_nonstar_original_input_family_proved_modulo_imports": true,
+    "all_star_color_inputs_proved": false,
+    "full_E12_proved": false,
+    "full_R7_proved": false,
+    "full_P7_proved": false,
+    "seven_directions_proved": false,
+    "net_gain_over_all_historical_tools": "unknown",
+    "remaining_counterexample_exists": "not established"
+  },
+  "dependency_DAG": {
+    "nodes": [
+      "accepted_older_tools",
+      "accepted_A_B",
+      "two_hole_main",
+      "two_hole_residual",
+      "final_remaining_cut",
+      "final_both_nonstar",
+      "remaining_star_necessary_form"
+    ],
+    "edges": [
+      [
+        "accepted_older_tools",
+        "two_hole_main"
+      ],
+      [
+        "accepted_A_B",
+        "two_hole_main"
+      ],
+      [
+        "accepted_older_tools",
+        "two_hole_residual"
+      ],
+      [
+        "accepted_A_B",
+        "two_hole_residual"
+      ],
+      [
+        "two_hole_main",
+        "two_hole_residual"
+      ],
+      [
+        "accepted_older_tools",
+        "final_remaining_cut"
+      ],
+      [
+        "accepted_A_B",
+        "final_remaining_cut"
+      ],
+      [
+        "two_hole_main",
+        "final_remaining_cut"
+      ],
+      [
+        "two_hole_residual",
+        "final_both_nonstar"
+      ],
+      [
+        "final_remaining_cut",
+        "final_both_nonstar"
+      ],
+      [
+        "accepted_older_tools",
+        "final_both_nonstar"
+      ],
+      [
+        "final_both_nonstar",
+        "remaining_star_necessary_form"
+      ]
+    ],
+    "acyclic": true
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations_closed": 45,
+    "two_hole_obligations_closed": 20,
+    "final_obligations_closed": 22,
+    "joint_dependency_scope_obligations_closed": 3,
+    "obligations": [
+      {
+        "id": "T01",
+        "location": "Claim / §1",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "范围为独立十二孔、两色各六且均非六叶星、某面恰两孔的每个58边原短匹配。异色两孔由旧(1,1)门，同色距2/4由旧两孔面定理，距6为唯一余下距离。"
+      },
+      {
+        "id": "T02",
+        "location": "§1 规范化",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "同色对跖两孔可经可逆自同构/换色归一B位6=0、W={0,63}为偶；T四点与U六点位于另一面A。删除位6后T局部奇、U局部偶。"
+      },
+      {
+        "id": "T03",
+        "location": "§1 非星运输",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "W距6排除原偶六孔成星；若U的Q6投影是六邻星，中心放回A即全图六邻星，故U投影非星。孔独立同时排除U局部标签0/63。"
+      },
+      {
+        "id": "T04",
+        "location": "§2 非星切分引理",
+        "status": "CLOSED",
+        "evidence": "反设无2:4或3:3，翻转各列多数值后列次数≤1，六支撑两两不交，总大小≤6且同奇偶；至多一个空偶支撑，偶分支总≥10。"
+      },
+      {
+        "id": "T05",
+        "location": "§2 奇分支",
+        "status": "CLOSED",
+        "evidence": "奇支撑均非空，总≤6迫六个不同单点，恰Q6六邻星；翻转保持成星性，矛盾。该引理不假设匹配或额外来源。"
+      },
+      {
+        "id": "T06",
+        "location": "§3 计数",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "可选择一侧U数y=2或3，W对跖在两侧各1。新外切一面的原孔型精确为(1+t,y)，0≤t≤4；所有原孔组均运输。"
+      },
+      {
+        "id": "T07",
+        "location": "§4 y=2",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "e=1,2,3,4分别由差一、平衡、差一、G12额外(4,2)门；e=5时(5,2)/(1,4)换色给A，所需非星色为原偶六孔，W距6保证。"
+      },
+      {
+        "id": "T08",
+        "location": "§5 y=3",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "e=2,3,4属旧门；e=1或5使四T全在一侧，可命名该面C、另一面D而保持原位6切分，计数C:(5,3)、D:(1,3)。内部翻转的整体颜色交换有显式运输。"
+      },
+      {
+        "id": "T09",
+        "location": "§5 桥来源",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "D唯一偶孔a来自W，位6为0；D三个奇孔来自U，位6为1。从T选四个中任二源x_i，镜像y_i仍位6为1且为奇；孔独立排原孔、唯一短跨邻点自由排原跨端口，故内部覆盖。"
+      },
+      {
+        "id": "T10",
+        "location": "§5 端口与供体",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "|X_C∩O|−|X_C∩E|=2，c≥2正偶。P配全部X_C及两源，精确剩(3,3)孔，允许完全图辅助长边。C3输入假设逐项满足。"
+      },
+      {
+        "id": "T11",
+        "location": "§5 真森林",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "|P|=(c+2)/2≥2，删P切圈为路径；附全部真实L与两桥，各新D点仅附接一次且互异，内部恰覆盖全部C，端点S=X_D∪{y1,y2}，无闭分量。"
+      },
+      {
+        "id": "T12",
+        "location": "§6 联合抑制",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "k_i=M_D(y_i)为不同偶点，内覆且不在S。R配两标记时联合抑制k1y1—R—y2k2；否则r_i在X_D、互异且不等于k_j。F_D无自环、端点重复或闭分量。"
+      },
+      {
+        "id": "T13",
+        "location": "§6 精确孔及D5",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "F_D孔恰H_D∪{y1,y2}。五奇多数孔全在位6为1原A，少数a在原B；三未省略多数孔均原U孔，独立性逐项给不邻a，故D5全部条件成立。"
+      },
+      {
+        "id": "T14",
+        "location": "§6 展开",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "D5为任意K(Q6)匹配，给恰避两标记62单圈。先恢复标记及两原M_D边，再展开R插全部C，逐层内部点不交且先前未出现；62+2+64=128，全部M_C,L,M_D保留，全部辅助边删除/展开，仅新增短边。"
+      },
+      {
+        "id": "T15",
+        "location": "§7 小孔差排除",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "未被列明前置工具覆盖且反设无(1,3)/(5,3)时：差1及正平衡旧门排，差0仅0/12常数列；差2在换面换色下归(0,2)、(1,3)、(2,4)，分别由本两孔定理、反设、旧门排。故每个变化坐标绝对孔差≥3。"
+      },
+      {
+        "id": "T16",
+        "location": "§7 最小子cube",
+        "status": "CLOSED",
+        "evidence": "删常数列取最小坐标Q_d，两色仍相反同色组，容量2^(d−1)≥6迫4≤d≤7；d=7由已接受B排除。d<7时仅在变化坐标翻转使e_i−o_i≥3。"
+      },
+      {
+        "id": "T17",
+        "location": "§7 支撑预算",
+        "status": "CLOSED",
+        "evidence": "S为第一组局部补支撑，T为第二组支撑，六项各异，a_i+b_i=6−e_i+o_i≤3，D≤3d。偶组总≥10；奇组总≥8，因总6为六单点（d<6不存在，d=6违反全图非星）。"
+      },
+      {
+        "id": "T18",
+        "location": "§7 d=4/6",
+        "status": "CLOSED",
+        "evidence": "偶d不翻转局部颜色，支撑两组奇偶相反，D≥10+8=18。d4与≤12矛盾；d6迫D=18且每列总3，奇组总8即五单点加三元集，正列次数1/2，故有混合(1,2)/(2,1)列。"
+      },
+      {
+        "id": "T19",
+        "location": "§7 d=5 / 混合列",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "d5补集翻转颜色，两组支撑同奇偶，均偶总≥20、均奇总≥16，均>15。d6混合列变回全图(4,1)/(2,5)或(5,2)/(1,4)，双非星供给A对应颜色假设，不需最终双非星定理。"
+      },
+      {
+        "id": "T20",
+        "location": "§7 结论及范围",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "因此未被列明工具覆盖者必存在(1,3)/(5,3)切分。此为存在性必要特征，允许另有常数列及多个切分，不断言该型全未闭；完整依赖不包含final。"
+      },
+      {
+        "id": "F01",
+        "location": "Claim / §1 E10",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "主定理取消独立孔假设。若有相邻孔，加其短边得到59边短匹配，用已接受完整E10；增广孔集不需仍非星。否则合法获得独立性并保留原双非星条件。"
+      },
+      {
+        "id": "F02",
+        "location": "§1 残域调用",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "独立输入若在A/B、G19、T主定理域内直接得圈，否则用T必要残域得(1,3)/(5,3)。换面/色使A:(3,5)、B:(3,1)，T=A偶孔3、W=B偶孔3、a=B奇孔1、Y为A五奇孔镜像。"
+      },
+      {
+        "id": "F03",
+        "location": "§2 任意标记",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "任意不同y1,y2∈Y均非原孔、非原跨端口而在M_B内部覆盖；两源x_i为原孔，两桥互不相交且避原cross端口。这是逐原输入构造，不假设R配对。"
+      },
+      {
+        "id": "F04",
+        "location": "§2 供体输入",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "|X_A∩E|−|X_A∩O|=2，c≥2正偶。P配全部X_A及两源；M_A∪P精确孔型(3,3)，C3允许任意完全图长边/同色规定边。"
+      },
+      {
+        "id": "F05",
+        "location": "§2 森林与R",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "删|P|≥2条辅助边后附全部C和两桥，互异B新叶各附接一次，A点度2、S点度1；真实森林内部恰A，端点S=X_B∪{y1,y2}。R取实际端点配对，包含全部M_A,C来源。"
+      },
+      {
+        "id": "F06",
+        "location": "§2 两标记抑制",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "k_i为不同奇点、内覆且不在S；若R(y1)=y2必须联合抑制，否则r_i∈X_B互异且不为k_j。两分支合法匹配F_B的孔精确为W∪{a,y1,y2}。"
+      },
+      {
+        "id": "F07",
+        "location": "§2 接收与展开",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "五偶多数/一奇少数，三未省略多数孔恰原W，原独立性给a不邻W。局部工具62圈先恢复标记及两原边，再展开R，62+2+64=128且单圈；M全保，P全删，标签全展，仅新增短边。"
+      },
+      {
+        "id": "F08",
+        "location": "§3 Y支撑",
+        "status": "CLOSED",
+        "evidence": "相对a归一内部标签，Y五点为不同奇支撑。若列次数仅0/1/5，将全1列L移除后五支撑两两不交、互异，大小总≤6−ℓ且每项奇偶1−ℓ。"
+      },
+      {
+        "id": "F09",
+        "location": "§3 极端列反证",
+        "status": "CLOSED",
+        "evidence": "ℓ奇时≥4非空偶项使总≥8；ℓ≥2偶时五非空奇项使总≥5，均矛盾。ℓ0迫五项全不同单点，镜回五奇孔加a构成以a*为中心六叶星，违反原奇孔非星。因此有y∈{2,3,4}。"
+      },
+      {
+        "id": "F10",
+        "location": "§3 e计数",
+        "status": "CLOSED",
+        "evidence": "共同内部坐标使镜像位值不变，a_i=0。w,t∈0..3，y∈2..4，原全图i位1面的孔型确为(e,y)=(w+t,y)，e∈0..6。"
+      },
+      {
+        "id": "F11",
+        "location": "§4 y=2",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "七个e=0..6依次由两孔定理、G19四项、换色A、D5完成。e6迫w=t=3且y≥2，两个外Y标记及W全三点满足D5。"
+      },
+      {
+        "id": "F12",
+        "location": "§4 y=4",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "七个e=0..6依次由孤立标记easy、换面换色A、G19四项、对面两孔定理完成。e0迫w=t=0；唯一内Y加一个外Y作标记，外面唯一接收孔是该标记。"
+      },
+      {
+        "id": "F13",
+        "location": "§4 y=3",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "e0由同侧easy；e1分w0/t1与w1/t0；e2/3/4属G19；e5/6使w≥2，分别由D4或D5。数值表覆盖3×7=21对，无漏边界。"
+      },
+      {
+        "id": "F14",
+        "location": "§4 各接收门",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "w0,y3时a及全部W与两个内Y同侧；w0,y4取唯一内Y及任意外Y为孤立省略孔；w2,y≥2取两外Y恰四多数含两标记，a对侧；w3取两外Y五多数且原W不邻a。每项作用于精确F_B孔集。"
+      },
+      {
+        "id": "F15",
+        "location": "§4 外部工具假设",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "两个A调用要求换色前原偶六孔非星，由主假设供给；两个两孔调用仍作用同一原匹配与双非星独立原孔。未将A条件误施原奇孔或假设新受体孔非星。"
+      },
+      {
+        "id": "F16",
+        "location": "§5 特殊分支计数",
+        "status": "CLOSED",
+        "evidence": "唯一余下y3,w1,t0，重外切i得C0:(5,3)、D0:(1,3)。T三点全在C0∩原A；W两点在C0∩原B，唯一a′在D0∩原B；D0三奇孔均原A。"
+      },
+      {
+        "id": "F17",
+        "location": "§5 新桥来源",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "从T三原孔任二作源，跨i镜像仍原A且在D0。孔独立排原孔，唯一短跨i邻点自由排原跨端口，故两新标记内部覆盖、彼此不同。整体换色使供体(3,5)/受体(3,1)，源色正确。"
+      },
+      {
+        "id": "F18",
+        "location": "§5 重建与D5",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "沿新外切重新使用全部原跨i边，配全部端口及两新源，供体剩(3,3)，建真森林和合法联合抑制F_D0。受体三多数原孔加两标记全原A，少数a′原B，沿原j内部切面满足D5；三不邻接点均原孔。"
+      },
+      {
+        "id": "F19",
+        "location": "§5 单圈保边",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "新切分不继承第一次R，不需兼容旧R。每条原M按新面内/跨边身份进入完整重建，抑制两标记互配/不互配均覆盖；同§2展开保证全部128点一次和全部原边。"
+      },
+      {
+        "id": "F20",
+        "location": "§6 全称回代",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "相邻孔由E10；独立双非星若前置域失败则必有余下切面，已用§2–5全部分支闭合。因此结论覆盖任意58边双非星原短匹配，不是仅条件接口或样本。"
+      },
+      {
+        "id": "F21",
+        "location": "§7 规范形",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "假设十二孔反例存在，E10迫独立而本定理迫至少一色星。可将星中心及六叶方向通过换色、自同构归为0及单位点1..32（遗漏方向6），仍是原完整孔与短匹配。"
+      },
+      {
+        "id": "F22",
+        "location": "§7 42点及强制原边",
+        "status": "CLOSED",
+        "evidence": "独立性排偶孔0及全部重量2（任二元支撑至少含0..5中的一位，其单位点为奇孔邻点）；偶孔仅重量4/6，候选数35+7=42。0非孔且其前六短邻点为孔，原匹配在0唯一可用邻点为64，故0--64属于原M。此是必要形，不断言存在反例或该形全未闭。"
+      },
+      {
+        "id": "D01",
+        "location": "联合DAG",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "旧局部工具/E10/G19→已接受A/B→本次两孔主定理→其最小子cube残域→final数值及换切构造。final分支调用两孔定理时仅调用前置节点，没有两孔证明调用final的反向箭头。"
+      },
+      {
+        "id": "D02",
+        "location": "导入与范围",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "已接受A/B仅复用冻结绑定和准确接口，未重审其32项；旧双桥仅复用无easy依赖的真实森林构造，新增D5独立供给，未越域调用旧easy主命题。E10、C3、easy、D4/D5、G19及距2/4两孔接口均检查准确量词、规定匹配长边允许性和省略标记。"
+      },
+      {
+        "id": "D03",
+        "location": "全稿边界",
+        "status": "CLOSED_MODULO_IMPORTS",
+        "evidence": "两孔定理、必要残域、final双非星整族和星必要规范形分别认证；一般一色星、双星、完整E12/R7/P7/七方向均不因本稿关闭。未认证相对全部历史工具联合的净新增范围，无覆盖比例。"
+      }
+    ],
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "integer_case_table_checked_by_hand": 21,
+    "integer_case_table_is_matching_or_hole_enumeration": false,
+    "literature_proofs_reproved": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false
+  },
+  "resources_this_joint_audit": {
+    "Hamilton_solver_calls": 0,
+    "ordinary_matching_constructions": 0,
+    "matching_family_enumeration": 0,
+    "hole_family_enumeration": 0,
+    "new_fixed_matching_samples": 0,
+    "old_certificate_replays": 0,
+    "subagents_spawned": 0,
+    "prior_witness_data_replayed": false
+  },
+  "unchanged_RUN_STATE_sha256": "15422c74a464b25cfe6f46736406dfed501a9b7955f87b78dfd1d7ee741b832d",
+  "modified_scope": [
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.md",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.json"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "audit_skill": "proof-checker local adaptation",
+  "caller": "/root",
+  "reviewer": "/root/mu3_three_bridge_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "PASS",
+  "acceptance_basis": "sound-modulo-imports",
+  "scope": "Generic conditional k=3 two-return whole receiver, complete E16 mu=3 gap-eight D<=28, and fixed D=30 basis rows 1398 and 4246",
+  "author_manifest": "R7_E16_MU3_GAP8_D28_CLOSURE_INPUTS.json",
+  "author_manifest_sha256": "8c0ca19ef3951b7a498646a471b354330ea3658dc7df81a86dd897c1a7722ad6",
+  "author_manifest_file_count_verified": 24,
+  "obligations_passed": [
+    "T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09", "T10",
+    "G01", "G02", "G03", "G04", "G05", "G06",
+    "W01", "W02", "W03", "W04"
+  ],
+  "open_fatal": 0,
+  "open_critical": 0,
+  "open_issues": [],
+  "early_draft_note": "Possible ambiguity about a partial port pairing was resolved before the reviewed freeze. D is a perfect pairing of the entire port set.",
+  "complete_low_D_representatives": 3039,
+  "previously_accepted_low_D_representatives": 3025,
+  "new_odd5_1_3_representatives": 14,
+  "fixed_D30_representatives": [1398, 4246],
+  "finite_checks": {
+    "fixed_plan_cpu_seconds": 0.09375,
+    "odd5_1_3_support_basis_cpu_seconds": 0.109375,
+    "odd5_1_3_support_choices": 2280,
+    "odd5_1_3_admissible_support_choices": 97,
+    "producer_runs": 0,
+    "plan_searches": 0,
+    "original_matchings_enumerated": 0,
+    "solver_calls": 0,
+    "rank_runs": 0,
+    "old_certificate_replays": 0
+  },
+  "report_sha256": "26ac6f55327808f0edc5a0bf1ee0dbf5312dd88062faf779ffd61cf6e28f5a95",
+  "verification_sha256": {
+    "R7_MU3_THREE_BRIDGE_REVIEW_CHECK.py": "80dbe07f9c0100e76f0a0debf6ebaef08afb75f37f0b406a295409e11017f1d0",
+    "R7_MU3_THREE_BRIDGE_REVIEW_CHECK.json": "d074309e29f68d2214e2e4ac7312c01fdf1c7de7593633b939dba76db7c9c97b",
+    "R7_MU3_THREE_BRIDGE_REVIEW_ODD5_BASIS.py": "fba5c4906a1fde0d28fa1a1d4bb67828801bb52e7756a5c2b84e52f92db7c23a",
+    "R7_MU3_THREE_BRIDGE_REVIEW_ODD5_BASIS.json": "6257ea71c3c5125a3d388a50b2a469909be80f7c1612bdc8566aebc67f3cc719"
+  },
+  "supplementary_import_sha256": {
+    "Q6_T15_S2_COMBINED_EXTENSION.json": "497bbdbd27e1ff945fcf9c284cbf24f7fe43431a476e3c2ac2b598c374015cd2",
+    "Q6_T15_ANCHOR_FIBERS_REVIEW.md": "39f05ddbda43f6a7041c33dd44ffd9240dfb6bfa659f558193f84f1e99a1f057",
+    "Q6_T15_S2_TRANSFER_REVIEW.md": "75b214ce4c14508679586daca93c93079a1534715f551750738a338b2cb34f58"
+  },
+  "net_gain_over_all_previous_gates": "unknown",
+  "complete_gap_eight_accepted_in_this_audit": false,
+  "complete_mu3_accepted_in_this_audit": false
+}

@@ -1,0 +1,232 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "Q7 ARIS local proof audit and independent fixed-certificate verification",
+  "verdict": "PASS",
+  "reason_code": "full_fixed_basis_and_all_realizations_of_the_stated_subfamily",
+  "proof_status": "sound-modulo-imports",
+  "reviewer_agent_id": "/root/e16_mu3_r32_audit",
+  "direct_caller": "/root",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-09T16:15:34.078509+00:00",
+  "scope": "E16 short matching, mu=3, oriented outer holes (3,6)/(5,2), at least four useful receiver axes. Every realization has a full-short Hamilton cycle containing the original matching.",
+  "obligations": {
+    "A01": "PASS",
+    "A02": "PASS",
+    "A03": "PASS",
+    "A04": "PASS",
+    "A05": "PASS",
+    "A06": "PASS",
+    "A07": "PASS",
+    "A08": "PASS",
+    "A09": "PASS",
+    "A10": "PASS",
+    "A11": "PASS",
+    "A12": "PASS",
+    "A13": "PASS",
+    "A14": "PASS",
+    "A15": "PASS",
+    "A16": "PASS"
+  },
+  "open_fatal": 0,
+  "open_critical": 0,
+  "open_major": 0,
+  "open_minor": 0,
+  "audited_input_hashes": {
+    "R7_E16_MU3_R32_M_GE4_CLOSURE.md": "sha256:391242357346d01813b6b99c2710767e1573f866aef0665cb5499dd4d453adbe",
+    "R7_E16_MU3_R32_M_GE4_CLOSURE_INPUTS.json": "sha256:dc572ea5da503550be40cd4cfa380fed050850d4fffee696a619f0661ea396ff"
+  },
+  "evidence_hashes": {
+    "R7_E16_MU3_R32_M_GE4_REVIEW.md": "sha256:1d840b0815af0cde1deed9de8fb2faa3ad76cbd8b0122ff2fc845741a1ba2a83",
+    "R7_E16_MU3_R32_M_GE4_REVIEW_CHECK.py": "sha256:550feac4d2e5162f217d02d8fd4ce0fceee9f34f04cece91641740eb57a400c7",
+    "R7_E16_MU3_R32_M_GE4_REVIEW_CHECK.json": "sha256:bdfd49d6ebaf4fe4e21bd7741309d22ca08cfc079aa1c9c3f9b7ec8a634a7199"
+  },
+  "report_hash": "sha256:1d840b0815af0cde1deed9de8fb2faa3ad76cbd8b0122ff2fc845741a1ba2a83",
+  "trace_path": "R7_E16_MU3_R32_M_GE4_REVIEW.md",
+  "verification": {
+    "basis": {
+      "scalar": {
+        "raw": 504,
+        "gap": 212,
+        "original": 204,
+        "residual": 166
+      },
+      "receiver_labelled": 57342,
+      "receiver_orbits": 704,
+      "candidates": 900,
+      "disjoint": 467,
+      "source_rows": 234,
+      "source_orbits": 185,
+      "positive_source_orbits": 133,
+      "prequotient_coefficients": 7166,
+      "completion_transports": 6128,
+      "representatives": 5017
+    },
+    "plans": {
+      "gates": {
+        "controlled_cycle_count": 3828,
+        "k4_two_return": 1125,
+        "registry_two_return": 14,
+        "impossible_geometry": 47,
+        "controlled_cycle_registered_split": 3
+      },
+      "controlled_parameters_including_registered": {
+        "3,3": 3351,
+        "4,3": 228,
+        "3,4": 249,
+        "4,4": 3
+      },
+      "count": {
+        "avoid_one": 3579,
+        "T15": 2817,
+        "T44": 1260
+      },
+      "registered": {
+        "T63_old_6": 1,
+        "avoid_one": 3,
+        "T63_old_5": 1,
+        "T63_new_1": 1
+      },
+      "supplier": {
+        "majority_root": 1104,
+        "two_minority_roots": 21
+      },
+      "receiver": {
+        "separated": 289,
+        "majority_root": 170,
+        "positive_split": 319,
+        "same_side": 327,
+        "two_minority_roots": 20
+      },
+      "broad_gap": {
+        "6": 9,
+        "5": 3,
+        "7": 2
+      },
+      "broad": {
+        "Q6_T15_D4": 5,
+        "T15_exact_core": 7,
+        "Q6_balanced_complement_avoid_two": 2
+      },
+      "broad_q5": {
+        "T44": 11,
+        "T15": 12,
+        "avoid_one": 3,
+        "T63_new_3": 2
+      },
+      "exact_T15": [
+        {
+          "row": 228,
+          "core": 256,
+          "target_included": [
+            26,
+            31,
+            47
+          ],
+          "target_omitted": [
+            1,
+            7
+          ]
+        },
+        {
+          "row": 3526,
+          "core": 1276,
+          "target_included": [
+            38,
+            44,
+            50
+          ],
+          "target_omitted": [
+            13,
+            19
+          ]
+        },
+        {
+          "row": 3542,
+          "core": 71,
+          "target_included": [
+            28,
+            31,
+            44
+          ],
+          "target_omitted": [
+            1,
+            2
+          ]
+        },
+        {
+          "row": 3837,
+          "core": 546,
+          "target_included": [
+            19,
+            25,
+            55
+          ],
+          "target_omitted": [
+            7,
+            8
+          ]
+        },
+        {
+          "row": 3872,
+          "core": 851,
+          "target_included": [
+            21,
+            25,
+            52
+          ],
+          "target_omitted": [
+            7,
+            11
+          ]
+        },
+        {
+          "row": 3896,
+          "core": 89,
+          "target_included": [
+            13,
+            14,
+            61
+          ],
+          "target_omitted": [
+            1,
+            2
+          ]
+        },
+        {
+          "row": 4766,
+          "core": 358,
+          "target_included": [
+            14,
+            59,
+            61
+          ],
+          "target_omitted": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "manifest_entries": 69,
+    "cpu_seconds": 3.171875,
+    "cpu_cap": 30,
+    "plan_searches": 0,
+    "matching_enumerations": 0,
+    "solver_calls": 0,
+    "rank_runs": 0
+  },
+  "net_new_coverage": "unknown",
+  "limitations": [
+    "Other central mu=3 inputs with fewer usable axes",
+    "Remaining mu=3, E16, R7 and P7 obligations",
+    "Explicit frozen proof and certificate imports"
+  ],
+  "checker_partial_debug_replays": 3,
+  "protected_files_modified": false
+}

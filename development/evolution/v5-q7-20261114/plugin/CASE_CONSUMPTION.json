@@ -1,0 +1,98 @@
+{
+  "scope": "Current plugin author follows candidate q7-methods on two frozen source records; independent exact set/count inspection only. No original-M enumeration, Hamilton solver or rank replay.",
+  "cases": [
+    {
+      "index": 0,
+      "gate": "controlled_cycle_count",
+      "physical_holes": [
+        [
+          17,
+          24,
+          29,
+          77,
+          78,
+          85,
+          89,
+          101
+        ],
+        [
+          2,
+          32,
+          35,
+          38,
+          41,
+          42,
+          64,
+          67
+        ]
+      ],
+      "gaps": [
+        3,
+        -4,
+        4,
+        3,
+        5,
+        -4,
+        3
+      ],
+      "outer": 3,
+      "donor_side": 0,
+      "r": 3,
+      "k": 3,
+      "source_X": [
+        2,
+        35,
+        67
+      ],
+      "mirror_Y": [
+        10,
+        43,
+        75
+      ],
+      "receiver": [
+        {
+          "inner_side": 0,
+          "original_alpha_beta": [
+            2,
+            1
+          ],
+          "marks": [
+            10
+          ],
+          "modified_alpha_beta": [
+            3,
+            1
+          ]
+        },
+        {
+          "inner_side": 1,
+          "original_alpha_beta": [
+            3,
+            1
+          ],
+          "marks": [
+            43,
+            75
+          ],
+          "modified_alpha_beta": [
+            5,
+            1
+          ]
+        }
+      ],
+      "decision": "Use C3 for arbitrary real-M auxiliary pairing; q=1 A_ALL and q=2 complete T15 give local circles; select D_eff by actual ports to force positive inner cross; expand to original M. No new rank search."
+    },
+    {
+      "index": 7,
+      "gate": "accepted_central_s_ge3",
+      "outer": 3,
+      "receiver_side": 1,
+      "sparse_axes": [
+        0,
+        1,
+        2
+      ],
+      "decision": "Same original holes satisfy accepted S3 on outer3; return actual cut witness, remove new local-plan task."
+    }
+  ]
+}

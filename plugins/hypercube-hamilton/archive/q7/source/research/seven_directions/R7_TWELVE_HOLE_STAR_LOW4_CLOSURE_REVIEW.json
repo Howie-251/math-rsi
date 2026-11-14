@@ -1,0 +1,199 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "ARIS local Markdown/JSON adaptation",
+  "verdict": "PASS",
+  "reason_code": "star_active_low_columns_and_k_le_4_complete_modulo_bound_imports",
+  "summary": "The active n_i=3 or 4 theorem, the n_i<=4 gate and the entire k<=4 normalized independent twelve-hole star family extend modulo five bound direct imports. k=5 and k=6 residual geometries are classified relative to this gate.",
+  "gap_id": "R7-TWELVE-CUT",
+  "caller": "/root",
+  "writer_agent_id": "/root/star_low4_writer",
+  "reviewer_agent_id": "/root/star_low4_check",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Caller selected the user-requested fresh reviewer configuration.",
+  "reviewer_backend_identity_independently_attested": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T06:32:44.3672979Z",
+  "report_hash": {
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.md": "sha256:45c1c4ca751c5643decf727b7caa507e8b2497b5d8434a489358f4050cf1c240"
+  },
+  "audited_input_hashes": {
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE.md": "sha256:044f342d8c23c133538fd8757f953efd2a2cabbc75cad533e36bc4d229d11d03",
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_INPUTS.json": "sha256:e8f424c98a3f9fca2bc22b3e77dd27bbb69e0b1e7049fa9afae17ab4e9169eb1"
+  },
+  "skill_hashes": {
+    "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-checker/SKILL.md": "sha256:716a86370b1768b616943d449ab106b901fa55e239ab76ef9f5eebb9779ba39e"
+  },
+  "direct_local_import_hashes": {
+    "R7_TWELVE_HOLE_STAR_INTERNAL_D3.md": "sha256:bfe25369f5114de42ef75a2ddd9967f1a935b3a9c4f1d3278587158a6a4e004b",
+    "R7_TWELVE_HOLE_STAR_INTERNAL_D3_REVIEW.md": "sha256:7813473034e516bf33acc0af73b241148d24d1b38d9292fc99afca2ca525995b",
+    "R7_TWELVE_HOLE_STAR_INTERNAL_D3_REVIEW.json": "sha256:5c605ff3b974c45f150f5565ed44c23febb15df965123a25c4096f1186f609ba",
+    "Q7_EIGHT_NINE_CUTS.md": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "sha256:be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "Q6_T15_TWO_TARGET_TRANSFER.md": "sha256:407d85615bf8c0f434421ba39f9555ebfee794908ee2897fa006acea04f9f25b",
+    "Q6_T15_TWO_TARGET_REVIEW.md": "sha256:a517827321be0be05d52c092a4e342fdcb9adc575e0b78bec945487cd2ed2071",
+    "Q6_T15_TWO_TARGET_REVIEW.json": "sha256:23d79315fd5bf985059d64795ed5e359c1e2087b9170f35ec89fd0c17da71279",
+    "Q6_T15_GOOD_ROOT_COMPONENTS.md": "sha256:4a1f2a0a555178b7fcc25c0ab43a280ec623af8aa77543b7d2eb744f996b9ff0",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.md": "sha256:66257e0d5b0d0cb98c926d23baaae9d96543e5d19c2128543cc49872709688b6",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "sha256:783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "R7_TWELVE_HOLE_NEAR_BALANCED_CUTS.md": "sha256:b5400cdce7c4d3a593364bc9aaafa1a76853c62cc4c49429b389e05abee30886",
+    "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.json": "sha256:4938e184c8606dd1e3bcf0f1324e88d8aacfa4e0f8d8b8f931a1339874d0ec42"
+  },
+  "direct_import_receipt_bindings": {
+    "R7_TWELVE_HOLE_STAR_INTERNAL_D3_REVIEW.json": {
+      "verdict": "PASS",
+      "source": "R7_TWELVE_HOLE_STAR_INTERNAL_D3.md",
+      "audited_source_hash": "sha256:bfe25369f5114de42ef75a2ddd9967f1a935b3a9c4f1d3278587158a6a4e004b",
+      "used_scope": "The two sufficient conditions n_i=3 and c_ij<=1, or n_i=4 and c_ij<=2. The double and triple bridge topology is rederived here with arbitrary permitted choice of marked directions."
+    },
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": {
+      "verdict": "PASS",
+      "source": "Q7_EIGHT_NINE_CUTS.md",
+      "audited_source_hash": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+      "used_scope": "Section 1, only C3 and the balanced six-hole spanning path from any specified free root to a specified opposite-color target, including covered targets, for arbitrary K(Q6) matchings."
+    },
+    "Q6_T15_TWO_TARGET_REVIEW.json": {
+      "verdict": "WARN",
+      "source": "Q6_T15_TWO_TARGET_TRANSFER.md",
+      "audited_source_hash": "sha256:407d85615bf8c0f434421ba39f9555ebfee794908ee2897fa006acea04f9f25b",
+      "used_scope": "Accepted conditional two-target transfer and 76 verified full-rank local types only. All 29 roots of core 81 are covered. Core 81: minority 0, retained majority {31,47,49}, omit {1,2}. Local types 37 and 67 are OPEN and not imported as universal path results."
+    },
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": {
+      "verdict": "PASS",
+      "source": "Q6_T15_GOOD_ROOT_COMPONENTS.md",
+      "audited_source_hash": "sha256:4a1f2a0a555178b7fcc25c0ab43a280ec623af8aa77543b7d2eb744f996b9ff0",
+      "used_scope": "Only cores 114 and 117, minority 0, omit {1,2}, retained majority {7,61,62} and {31,61,62} respectively. The two cuts and odd 15-vertex covered fiber force an accepted root, using only the previously verified 76 local types. No import of the parent-domain filtering result."
+    },
+    "R7_TWELVE_HOLE_NEAR_BALANCED_REVIEW.json": {
+      "verdict": "PASS",
+      "source": "R7_TWELVE_HOLE_NEAR_BALANCED_CUTS.md",
+      "audited_source_hash": "sha256:b5400cdce7c4d3a593364bc9aaafa1a76853c62cc4c49429b389e05abee30886",
+      "used_scope": "Corollary only: the original Q7 twelve-hole matching has a face with ordered (even, odd) hole counts (0,1), (1,1) or (2,1)."
+    }
+  },
+  "checked_direct_pass_receipt_count": 4,
+  "checked_direct_warn_receipt_count": 1,
+  "checked_import_file_count": 13,
+  "coverage_receipt": {
+    "assigned_unit_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09"
+    ],
+    "covered_unit_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09"
+    ],
+    "uncovered_unit_ids": [],
+    "complete": true,
+    "status": "PASS"
+  },
+  "scope": {
+    "original_matching": "Every 58-edge short matching M in Q7 with independent twelve-hole set and odd holes normalized to six unit points.",
+    "theorem": "An active coordinate i with n_i in {3,4}; no restriction on total k.",
+    "corollary": "An active n_i<=4 or total k<=4.",
+    "conclusion": "One simple 128-vertex Hamilton cycle of short edges containing every original edge of M.",
+    "residual": "Relative to this gate, k=5 has one and k=6 has two geometries under active permutations, all active n_i>=5.",
+    "full_k5_or_k6_proved": false,
+    "full_E12_proved": false,
+    "full_R7_proved": false
+  },
+  "core_imports": {
+    "matching_domain": "Any matching of K(Q6), including long and same-color prescribed edges.",
+    "minority_hole": 0,
+    "omitted_majority_holes": [
+      1,
+      2
+    ],
+    "retained_majority_holes": {
+      "81": [
+        31,
+        47,
+        49
+      ],
+      "114": [
+        7,
+        61,
+        62
+      ],
+      "117": [
+        31,
+        61,
+        62
+      ]
+    },
+    "output": "A 62-vertex single cycle containing the prescribed matching and omitting precisely the two marked holes, with only short new edges.",
+    "core_81_certified_root_count": 29,
+    "cores_114_117_method": "Odd 15-vertex covered low-bit 00 fiber forces a cross edge with a certified root in at least one cut.",
+    "used_certified_local_type_count": 76,
+    "excluded_open_local_types": [
+      37,
+      67
+    ],
+    "finite_certificate_dependency": true,
+    "parent_domain_filtering_imported": false
+  },
+  "obligations": {
+    "M01": "normalization_and_weight_layers",
+    "M02": "D3_low_local_weight_count",
+    "M03": "arbitrary_admissible_bridge_selection",
+    "M04": "cross_port_parity_and_lower_bound",
+    "M05": "double_bridge_balanced_cycle",
+    "M06": "triple_bridge_free_to_covered_balanced_path",
+    "M07": "forest_leaf_attachment_and_pairing",
+    "M08": "receiver_conflicts_and_suppression",
+    "M09": "receiver_interface_and_color_transport",
+    "M10": "core_81_or_114_transport",
+    "M11": "core_117_transport",
+    "M12": "simple_cycle_expansion_and_edge_recovery",
+    "M13": "near_balanced_gate_and_global_count",
+    "M14": "residual_classification"
+  },
+  "details": {
+    "theorems_audited": 2,
+    "micro_obligations_closed": 14,
+    "dependency_DAG_acyclic": true,
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0
+  },
+  "counterexample_pass": [
+    "minimum cross counts c=2 and c=3",
+    "original partner cannot be a cross port",
+    "the two markers paired by R",
+    "R(y_s)=u",
+    "arbitrary long and same-color donor D",
+    "inactive g in transported support or missing positions",
+    "long edge crossing both low bits out of the 00 fiber",
+    "largest active sum at k=4",
+    "k=5 and k=6 classification boundaries"
+  ],
+  "hamilton_solver_runs": 0,
+  "matching_or_hole_family_enumerations": 0,
+  "new_matching_samples": 0,
+  "old_certificate_replays": 0,
+  "changed_shared_state": false,
+  "protected_files_modified": false
+}

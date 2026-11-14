@@ -1,13 +1,13 @@
 ---
 name: mathrsi-hypercube-hamilton
-description: "Prove and verify Hamilton path/cycle extension of prescribed hypercube matchings using root-preserving reductions, universal connectivity-rank forests, maximal-domain positive certificates and marked gluing. Use for Ruskey–Savage-type research and scoped consumption of the Q6 proof assets."
+description: "Prove and verify Hamilton path/cycle extension of prescribed hypercube matchings using root-preserving reductions, universal connectivity-rank forests, maximal-domain positive certificates and marked gluing. Use for Ruskey–Savage-type research, controlled auxiliary pairings, finite universal plans and scoped Q6/Q7 proof assets."
 ---
 
 # Hypercube Hamilton extension
 
 处理Q_n短边匹配的Hamilton路或圈延拓，以及证明中实际需要的辅助完全图匹配命题。输入为原对象/量词、父阶段与返回点、指定义务、允许操作、已知进口和工作目录。输出为可接回原输入的数学或有限核验证据，不因程序PASS自动跳到完整结论。
 
-先读 [数学接口](references/mathematics.md)。路线卡点读 [失败图谱](references/failures.md)；接收证书或搬迁运行读 [复现](references/reproduction.md)。原[主报告](../../archive/source/Ruskey-Savage_Q6_研究报告.md)、[累积账本](../../archive/source/PROOF_PACKAGE.md)、[完整证明汇编](../../archive/source/Ruskey-Savage_Q6_证明资料汇编.md)保留实质研究，不能用本入口几段话代替。
+先读 [数学接口](references/mathematics.md)。Q7切面拼接、完整几何计划或来源容量义务，接着读[受控配对与Q7方法](references/q7-methods.md)；它给精确定理、因果选择、公式与实际回代，不只是来源索引。路线卡点读 [失败图谱](references/failures.md)；接收证书或搬迁运行读 [复现](references/reproduction.md)。原[主报告](../../archive/source/Ruskey-Savage_Q6_研究报告.md)、[累积账本](../../archive/source/PROOF_PACKAGE.md)、[完整证明汇编](../../archive/source/Ruskey-Savage_Q6_证明资料汇编.md)保留实质研究，不能用本入口几段话代替。
 
 ## 与父工作流的实际合同
 
@@ -25,7 +25,7 @@ description: "Prove and verify Hamilton path/cycle extension of prescribed hyper
 
 原Ruskey–Savage猜想是任意n≥2、任意匹配`M⊆E(Q_n)`都含于Q_n Hamilton圈。P6是对每个Q6短匹配M、每个未覆盖根u、每个异奇偶目标v（可被M覆盖）的Hamilton u–v路。局部森林引理可能对完全图任意长边匹配量化；强量词只在该辅助域成立，不能移植到整个Q6。
 
-固定任务需要自由根提升时，先确认目标文献定理实际接收P_d还是普通圈延拓；Q6圈结果不自动触发任意维六方向结论。当前文献定位和准确端点见[数学接口](references/mathematics.md)，原文在archive/literature与`six_directions/paper.txt`。
+固定任务需要自由根提升时，先确认目标文献定理实际接收P_d还是普通圈延拓；Q6圈结果不自动触发任意维六方向结论。当前文献定位和准确端点见[数学接口](references/mathematics.md)及[Q7方法§1](references/q7-methods.md)，原文在archive/literature与`six_directions/paper.txt`。Q7最新完整阈值为至少57边；56边的μ2/μ4完整层和部分μ3整族不等于完整R7或P7。研究实际归属v3本地适配，新版v5吸收方法而不追认解题归属。
 
 若用户问当前先后优先权或发表状态，交survey查新。历史≤20边基线只读公开摘要，不能写全文已核；P6与两个端点都覆盖的路径定理也不互相包含。
 
@@ -45,7 +45,7 @@ A10示例可直接执行：固定H={0,1,2,4,8,15,23,27,29,30}，K=V(Q5)−H。�
 
 导入完全图匹配连通矩阵H22的GF2秩上界1024。1024合法森林行对1024合法列的连通矩阵若满秩，则这些完整行张成全部行空间；每个F列非零，所以至少一森林行在该列为1。这一步全称化全部F，无需枚举它们。具体证明与进口在数学reference及原A10正文。
 
-冻结A10运行原独立checker；新A10同型几何使用[参数化森林门](../../tools/check_forest_rank.py)，显式传dim/root/holes及实际forests/columns，推导K与记录宽度，重建全部连通位并低列Gauss求秩。只有`universal_rank_gate_met=true`且进口/展开满足时才闭合全称；`status=PASS`本身只表示输入与计算合法。具体命令及原生产者硬编码改法见[复现](references/reproduction.md)。只读保存rank数字不够。输入合法性、森林到端点匹配、导入矩阵域和非零列论证四者齐全才关闭该轨道。缺秩只表示这批行不满足充分门，不是反例；可用合法森林转下一节正证书。
+冻结A10运行原独立checker；新A10同型几何使用[参数化森林门](../../tools/check_forest_rank.py)，显式传dim/holes、root或omitted集合及实际forests/columns，推导K与记录宽度，重建全部连通位并低列Gauss求秩。只有`universal_rank_gate_met=true`且进口/展开满足时才闭合全称；`status=PASS`本身只表示输入与计算合法。具体命令及原生产者硬编码改法见[复现](references/reproduction.md)。只读保存rank数字不够。输入合法性、森林到端点匹配、导入矩阵域和非零列论证四者齐全才关闭该轨道。缺秩只表示这批行不满足充分门，不是反例；可用合法森林转下一节正证书。
 
 ## 4. 复用失败池做局部极大域正证书
 
@@ -73,7 +73,18 @@ P6成立后非完美M取自由u与短邻点v，Hamilton路加uv闭圈；完美32
 
 现有总装checker核scope绑定及DAG，未执行大型生产者；原包5155文件/96节点/386边发布重放也明确不重算大证书。当前经过过滤的archive不能直接执行那套完整重放。父verify应分别报告局部算术、覆盖/运输、文献进口和整题保证，不能把本次A10成功迁移给九层全部重算。
 
-## 7. 返回与恢复
+## 7. Q7原输入：控制、有限计划与来源计数
+
+使用[Q7方法](references/q7-methods.md)执行相应段，不把所有请求改成原匹配枚举：
+
+- 给实际M和切分，先算完整原孔与真实伙伴，再检查供体/接收精确标记条件。对受控单送或两返回，先按有效端口双射选D，再收供体圈及实际R；用两者带标签并图连通迫后继跨内切，最后恢复全部原M。缺局部接口返回当前prove，不能把伙伴选择写成附加原题假设。
+- 给完整几何域，先建立解析模板/稳定子覆盖，再给每几何一份全称计划或有限条件计划集。固定计划内部仍可依实际M选根/配对；条件计划需在同一M上证明失败合取不相容。对已有门先消费当前已知、有回推的其它轴/朝向/单调补全，再交真实余域。
+- 给中央来源生成任务，先从稀少列许可分纤维，固定来源后在真实邻域池计精确补足系数，再决定生成和取商。三次base4仅因每列指数≤3；更多补足须换基数或向量状态。粗上界、精确补足、商代表和实现数分别返回。
+- 给多省略森林核，使用[复现接口](references/reproduction.md)的omitted输入，核每个省点度0、端点度1、其余内部点度2与无圈。工具不替代完整(H,U)同构运输、通用秩进口或最终原匹配展开。
+
+原E12/E14全域、E16结构层与子族只在原定理准确域内复用。下一层的新原M必须重新核前提；固定切剩余255接收模板不是完整Q7余量。新几何有一个Hamilton圈证书不代表其所有实现均可延拓。新调用的实际输入、计划、结果和后续动作写当前任务wiki；冻结archive和历史账本只读。
+
+## 8. 返回与恢复
 
 交付包含准确命题、输入域与标记、允许长边的位置、归约方向、实际证据、尚缺前提及下一动作。合法森林池即使缺秩也保存，注明失败只对该充分门；正证书域必须独立证明穷尽。
 

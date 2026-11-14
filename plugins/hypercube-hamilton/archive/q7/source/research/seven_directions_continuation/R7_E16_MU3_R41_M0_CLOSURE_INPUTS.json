@@ -1,0 +1,481 @@
+{
+  "status": "proof_complete_awaiting_fresh_independent_audit",
+  "caller": "/root",
+  "author_worker": "/root/mu3_lowm_preflight",
+  "fixed_plan_exec_session": 83736,
+  "receipt_precheck_note": "The initial standalone receipt check used an older receipt field and exited before any plan computation. The actual M1 receipt obligations and author hashes were then verified before the sole fixed-plan run.",
+  "scope": "Every 56-edge Q7 short matching with mu=3 and an oriented (4,7)/(4,1) cut, all receiver m; new m=0 branch",
+  "full_R41_proved_modulo_audit": true,
+  "full_mu3_proved": false,
+  "full_E16_proved": false,
+  "full_R7_proved": false,
+  "U_orbits": 3534,
+  "U_orbits_with_Y": 602,
+  "exact_Y_on_U_reps": 56758,
+  "exact_labeled_U_Y": 900676,
+  "representatives": 22684,
+  "Y_transports": 56758,
+  "positive_plans": 22684,
+  "nonrealizable": 0,
+  "physical_colors": "even={0} union (64 xor Y); odd=W union (64 xor U)",
+  "plan_counts": {
+    "controlled_cycle_count": 9069,
+    "accepted_R41_m_ge1": 4665,
+    "k3_whole_receiver": 7151,
+    "accepted_central_m_ge3": 1255,
+    "accepted_central_antipodal_h6": 76,
+    "four_mono_capacity": 67,
+    "k4_two_return": 388,
+    "registry_two_return": 1,
+    "controlled_cycle_registered_split": 12
+  },
+  "high_m_actual": {
+    "accepted_R41_m_ge1": {
+      "1": 1482,
+      "3": 1207,
+      "4": 206,
+      "2": 1760,
+      "5": 10
+    },
+    "accepted_central_m_ge3": {
+      "3": 1178,
+      "4": 77
+    }
+  },
+  "actual_interface_kinds_by_gate": {
+    "k3_whole_receiver": {
+      "Q6_same_side_majority_root": 3780,
+      "T15_isolated_mark": 124,
+      "Q6_balanced_complement_avoid_two": 1636,
+      "Q6_same_side_two_minority_roots": 263,
+      "T15_exact_core": 199,
+      "T26_two_majority_roots": 457,
+      "Q6_T26_paired_S1": 49,
+      "T26_separated_two_root_choice": 639,
+      "T15_same_face": 2,
+      "Q6_T15_D4": 2
+    },
+    "k4_two_return": {
+      "majority_root": 322,
+      "two_minority_roots": 75,
+      "separated": 228,
+      "same_side": 66,
+      "core117": 4
+    },
+    "registry_two_return": {
+      "T15_exact_core": 1,
+      "positive_split_Q5": 1,
+      "T15": 1,
+      "avoid_one": 1
+    },
+    "controlled_cycle_registered_split": {
+      "Q5_A_ALL": 12,
+      "T63_old": 9,
+      "T63_split": 3
+    }
+  },
+  "exact_marked_target_counts": {
+    "T15_exact_core": {
+      "85": 30,
+      "950": 24,
+      "117": 107,
+      "114": 19,
+      "965": 2,
+      "300": 8,
+      "348": 6,
+      "405": 1,
+      "113": 3
+    },
+    "T63_old": {
+      "3": 5,
+      "6": 4
+    }
+  },
+  "controlled_rk_counts": {
+    "3,3": 7166,
+    "3,4": 1753,
+    "4,4": 150
+  },
+  "count_receiver_interfaces": {
+    "Q5_T15_FULL": 7350,
+    "Q5_A_ALL": 7166,
+    "Q5_T44": 3622
+  },
+  "exact_T15_imports": "Individually audited marked core 85; the remaining exact T15 targets use the GOOD_ROOT audited union.",
+  "registry_two_return_witnesses": [
+    {
+      "index": 6022,
+      "plan": {
+        "gate": "registry_two_return",
+        "required_forced_edge": null,
+        "k": 5,
+        "outer": 2,
+        "donor_side": 0,
+        "donor_majority_parity": 0,
+        "X": [
+          0,
+          65,
+          66
+        ],
+        "U": [
+          28,
+          44
+        ],
+        "donor_minority": [
+          56
+        ],
+        "donor_retained": [
+          75,
+          83,
+          99
+        ],
+        "donor_marks": [
+          24,
+          40
+        ],
+        "receiver_minority": [
+          68,
+          71
+        ],
+        "receiver_retained": [
+          52,
+          93,
+          110,
+          124,
+          127
+        ],
+        "receiver_marks": [
+          4,
+          69,
+          70
+        ],
+        "donor": {
+          "kind": "T15_exact_core",
+          "index": 117,
+          "normalized_groups": [
+            [
+              47,
+              55,
+              59
+            ],
+            [
+              8,
+              16
+            ]
+          ],
+          "coordinate_transport": [
+            2,
+            3,
+            5,
+            0,
+            1,
+            4
+          ],
+          "normalization_root": 56
+        },
+        "receiver": {
+          "kind": "positive_split_Q5",
+          "inner": 0,
+          "projected_axes": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "faces": [
+            {
+              "minority": [
+                16
+              ],
+              "majority": [
+                0,
+                12,
+                17,
+                27,
+                30
+              ],
+              "marks": [
+                0,
+                17
+              ],
+              "interface": {
+                "kind": "T15"
+              }
+            },
+            {
+              "minority": [
+                17
+              ],
+              "majority": [
+                16,
+                22,
+                31
+              ],
+              "marks": [
+                16
+              ],
+              "interface": {
+                "kind": "avoid_one"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "registry_two_return_imports": [
+    "R7_CONTROLLED_TWO_RETURN_BRIDGE.md",
+    "R7_DELTA2_DISTANCE2_REVIEW.md D11-D12",
+    "R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.md",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json core 117",
+    "Q5_T15_FULL_REVIEW.json",
+    "Q5_A10_FULL_REVIEW.json"
+  ],
+  "independent_high_level_imports": [
+    "R41 m>=1",
+    "central m>=3",
+    "central minority distance 6, all m"
+  ],
+  "forbidden_self_import": "No R41 m=0 imported by plans",
+  "cpu_seconds": {
+    "preflight_before_write": 3.9375,
+    "base": 2.125,
+    "plans": 76.296875
+  },
+  "original_matchings_enumerated": 0,
+  "solver_calls": 0,
+  "rank_runs": 0,
+  "old_producers_rerun": 0,
+  "inherited_dependency_manifests": [
+    "R7_E16_MU3_R41_M1_CLOSURE_INPUTS.json"
+  ],
+  "author_files": [
+    "R7_E16_MU3_R41_M0_CLOSURE.md",
+    "R7_E16_MU3_R41_M0_FIXED_PLANS.json",
+    "R7_E16_MU3_R41_M0_FIXED_PLANS.py",
+    "R7_E16_MU3_R41_M0_UFIRST_BASE.json",
+    "R7_E16_MU3_R41_M0_UFIRST_BASE.py",
+    "R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT.json",
+    "R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT.py",
+    "R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT_NOTE.md"
+  ],
+  "sha256": {
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_CLOSURE.md": "d5325c586f8a9e282fb2327f4e183551c21b29c6cf3f0b36b17f3404866a1be7",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_INVENTORY.md": "309afaded3a53eaa5e5403f05a50dcdd5d6aea4b84122357e0bfa0266bd3171b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_SCALAR.py": "aca35aa67857d9139f306a17d44617b2285e80bcddc4f55937682e9689b38050",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_SCALAR_TRANSPOSE.py": "503dd700a39d83f745a4dd94a3ac64edb147ea054b6fef89550d20eb33615d06",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_LOCAL_RECEIVER.py": "c9e8438e064726dc2d67dec53538d8d58950c7928928d03f7c055f2e1bc9c770",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_SPARSE_PROOF.md": "a890455a49da520634fdca56d8b6d5a4e437302bde335c95464ebef82c9a3c5e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_SPARSE_CAPACITY_EXTENSION.md": "adc2e519677496795c9b35aebf551f1f2efa52d16721498baec88ed9038edc15",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_SOURCE_BASE.py": "837ee3b89c5f658813f8b8cfff3c41134bd683e580dda35982a2117effac60c4",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_SOURCE_BASE.json": "8596f85e8f4e95837614079b73072384f73d4ccc9bbc69f9a37d6d0d0abb6703",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_COMPLETION_BASE.py": "e8c096ec853d7e789bf6bb096bc71aae3a605ffcbcc924846d304b0f9ccb11cd",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_COMPLETION_BASE.json": "b25f5f6895cfb0ce161a4d1151fff674390e00f2148abd5f1d3b0eac9bcb197e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_COMPLETION_BASE_NOTE.md": "a0c735bf80c1c51f021a538f041641f3c8434aed36873c06bbc22c36f0ec2f5e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_FIXED_PLANS.py": "63e96108e6546fcdc36df7deaab76788323afef492fda811e1c227919385d315",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_M3_FIXED_PLANS.json": "21b6e11795faf88c47f743e83c2ca34d2cf3af8b31c5aff0ffb91128342092b8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU1_FULL_CLOSURE.md": "3f7f2c3c44557544149cfbce3f70ca5e92e104c33d3bc548c0dc809f0a01b616",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU1_CENTRAL_T1_AND_E14_REVIEW.json": "bd43b169733232bc6002fa8105d07d03d447a77a922db876148329acf27c61ed",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_THREE_MONOCHROMATIC_CLOSURE.md": "b5b11fcdcff0e71c433d3c867b5804a72a18089a23cf244b98723888fca1b41f",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_THREE_MONOCHROMATIC_CLOSURE_REVIEW.json": "08464b5c44575f29652d3c720f3cf2d03d14a87712da2f6db53873b749a35bab",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CONTROLLED_CYCLE_DONOR_TRANSFER.md": "32bd43c2ebe3454d9322aca8b4355d4e7b98f34823eb05beb98e0ff7c47640f6",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CONTROLLED_CYCLE_DONOR_FULL_T15_APPLICATION.md": "279643fefe3a6b1ee5f3069bbbb06d637b49038986aebb13c5ac13e261d0bdc0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CONTROLLED_CYCLE_DONOR_PROBE.py": "64db944df3a9488f5437c627318d7ee993fbb91e3b0a3c7d299a272e14bbd717",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_CONTROLLED_AND_T63_REVIEW.md": "c2249b54dea2f14f0d57a954d55941cd623f6704162c3228f2ec7e5cdcddcb5a",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_CONTROLLED_AND_T63_REVIEW.json": "7cc19a44b1f511a1c1b64b402c2431bd2ae64bcad94cb835884313f66b7eb504",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_T63_NEW_RANK.md": "f85c0400a70616634fcee8c12466018cd6e85b9adaaddf739cba2df4d311a218",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CYCLE_DONOR_THREE_BRIDGE_UNIVERSAL.md": "718ecf8ac4e9497c1a47b364f233dc03c92de4046a161ffe7214126e5e275364",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CYCLE_DONOR_THREE_BRIDGE_UNIVERSAL_REVIEW.json": "8cab776b3c739b681877890621069197969ace2cecc2fba3308ffe7ee313bf3b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU2_FULL_CLOSURE_CHECK.py": "0daa7604e34a7fae0f0dbf42797f1b12e9a68d322f17c791961bc9fb293227c5",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU2_FULL_REVIEW.json": "8ee76a2b2077027a9d3994d1b235668ed3bac29815e2be40c453b589e6a041cf",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_D35_B14_ZERO_SOURCE_CHECK.py": "64c8eff360352d864263a4ffd7c899cad4bef176cb45b700d4c41dcd11e88627",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_TWO_HOLE_HIGH_FACE_COVERAGE.py": "12f904616dc1d25ee8808bddde05fe660ee9054f9675abd8a367dfaf154c6448",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_TWO_HOLE_HIGH_FACE_JOINT_COVERAGE.py": "f6428053aa0196b52571cde66191988955f3f56d688d0c0fd552ce8d37da4483",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_EVEN_HIGH_GAP_CHECK.py": "1b628957d371678abf697ea7a9fc870375f4c2301b570e6af7bc68cd1be8e8e5",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_DISTANCE2_BROAD_CONTROLLED_CHECK.py": "fa9dbcd98f8c2627b1fdff29973af75a53873da11c7cc0b9f4493077d9688554",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_COVERAGE_CIRCLE_T63_V3.py": "d3e63e29e2dc6881cbfcee36487d7f5529fc9b6b14eb31f73c3320ecb97b76b8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_COMPLETE_COVERAGE.py": "552e4b486a8a5f9dc607acca7f8c40296b27cf9bd514aebcaa9aedb6666437b5",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_COMPLETE_COVERAGE_REVIEW.json": "aa40a02f8aa4f48f6da02ddb79b1f49ada141aeb8dc6b79331c68b0baf1b1426",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_JOINT_COVERAGE.py": "ad79f041c8cf3404163d0d915c1f7c816c4a787df4d2cb7aa23827861044f3e3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_WHOLE_FACE_PROBE.py": "2beafe6ae9899a52b7b2e1b1dad149312cf5fa53539211d94e4b9d681f125512",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_POSITIVE_SPLIT_FIXED_PROBE.py": "7fb999b45907d1b41c5be6a9546550aa73fb41ab21d944f25c6e3c9e951805d9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CONTROLLED_SINGLE_ROOT_FIXED_PROBE.py": "f73d9b612d3d813b577dae15ecc38ae9604679f7403cffe6be355545cfe802c3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CONTROLLED_TWO_RETURN_BRIDGE.md": "ed60b24b0260c3cba3dba9ed2ff67f911f583af8ddfa1ec2f2d110a93d637c5e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_DISTANCE2_TWO_RETURN_PLAN.py": "7f928d8869e7a5d5ff41e3c9585d886fe17f4fd8ec60a16e922d603f39a5db85",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.json": "240acc65b4966cd5916e0b9424e7f160e6b5c21850a28208d5ee5657eb1fc41b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_ODD_SAME_SIDE_RECEIVERS.md": "5faa2e782dacd745e55d4562d8ea91390218bc55fb41ddfe5df5f0d6474fe2e2",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_ODD_SAME_SIDE_RECEIVERS_REVIEW.json": "f5a5b25ca177444927c988f771be558eea71c57eb143369da7d978d760d0a3a6",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT.md": "d79d78abf9cf374465f3f7da0a3e6112905f1fc68e73d733c2ec589957a3cc45",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT_REVIEW.json": "666b9eccd6014295d0eb38942fea6345d32ee3f1092cc71c891958e7dece6902",
+    "E:/新问题/research/six_directions/Q5_HIGHER_HOLE_REDUCTION.md": "24841edb1206c8fe22adc0c465a68c3b17ae7afe0555f4d8d969dc9b4f6e098f",
+    "E:/新问题/research/six_directions/Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_DRAFT.md": "96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_REVIEW.json": "f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "E:/新问题/research/six_directions/Q5_T26_RANK_BATCH_PROOF.md": "3908f60e884dda47570e652b6448b5ca2c519d8dadb8ba878879201be819cfc4",
+    "E:/新问题/research/six_directions/Q5_T26_RANK_BATCH_REVIEW.json": "0dbff59677699a1d680f635a5602faac315d46a256884bef53965ca9929377da",
+    "E:/新问题/research/six_directions/Q5_T63_COMPLETE_SPLIT.md": "3a042ac9ead4c61d32f694eb3b9e0e4fa4b2dc0784db87072af646d07abc9a1d",
+    "E:/新问题/research/six_directions/Q5_T63_COMPLETE_SPLIT_REVIEW.json": "4ffd7ef4b900b6ba4fbafa124c617f416086209643c2eabfed5e8db1dc1270ad",
+    "E:/新问题/research/six_directions/Q5_T63_RANK_PROOF.md": "438450b4c29ffd87663b8f9f1216aee8d3c4c7035533401a9329483ffa0b1ac7",
+    "E:/新问题/research/six_directions/Q5_T63_RANK_REVIEW.json": "6054bb44eb7c034f94c7aad4774adbe56e56de1e600b427be6ee1b1a9255c042",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_CLOSURE.md": "b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_REVIEW.json": "0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_CYCLES.md": "ae9afc79f868fc3469c64054eed69830220f97c94b5261776d06aa67377cbd62",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_REVIEW.json": "cd407ce6091a1b99eb26afadbfbe6ecf598b6dfac9574c0baf53ae42b9c31513",
+    "E:/新问题/research/seven_directions/A6_FINAL_REDUCTION.md": "23478951d0089c9f3c3eb0227045e5725dc01376641952a95085ab0421796827",
+    "E:/新问题/research/seven_directions/A6_FULL_REVIEW.json": "52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_HIGH_M_BASE.py": "2b9c9472303b7d95e1406801712c5bbfb5c8a8af27765f28edcfa91968e58033",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_HIGH_M_POLYNOMIAL.py": "dd05ec84ba56820839266fea03d83422dde19a62343ba1f3168745dc625a9517",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_HIGH_M_SOURCE_QUOTIENT.py": "76a33d923572eab3b4f89e1bf15e8ae88a4e9031fc56b1c05b9762a66d0bd8af",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_NOTE.md": "7aab9e7161782613789be9940c9e3467a058cc9a8be90be473df3b1e449a75d3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_RECEIVER.json": "076bb20f38a17688bed5c247950addaeb95b6a1aae86de4babbbc13c035e75b0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_CENTRAL_LOCAL_RECEIVER.py": "c2e1cd898fa5b0f95ab471b7305e2f33cbb6548a09c22d710bec110e5cff2fb3",
+    "E:/新问题/research/seven_directions/Q6_T15_ACTUAL_PROFILE.json": "63fdf96c54e11e14255af358a62a54eda5d50707837f2cc5693695d860d38813",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_CLOSURE.md": "eedadf8c69313031dd4de0805506b019891068f6959f6b1b17fa7cb153aa85b3",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_REVIEW.json": "33a422864d9fe7a97b03f008916dd169dca9fc4935d62111ca089ee0e649ee93",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE1054_MARKED_REVIEW.md": "27abd39e350e4c11cc0272612982c451404680020994dad86024780929cbafcf",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_CLOSURE.md": "92bbb188eff33aefb4a1f77d147484c3e4de74b7fb8faaadf8e0af43dbd125c8",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_REVIEW.json": "6a054243e3cd108c0c6f4f04e4bda3b77771565c8731b5173639aff7f1d8cf3f",
+    "E:/新问题/research/seven_directions/Q6_T15_CORE85_MARKED_REVIEW.md": "d29a1ca74a01c1e6cbcb5782eebee0642e9db7bcaae68c57b633291a0c1f05f0",
+    "E:/新问题/research/seven_directions/Q6_T15_D45_D3_REVIEW.json": "515a9e879168a93d3f5394ad1c9df054d16c4ca68f968fdd2f53b4ebf4af4a20",
+    "E:/新问题/research/seven_directions/Q6_T15_D4_D5.md": "27e5ac27c95b0caffa8ef087ea9e66a2a29b8092f4980c12e30cab3914cc70b7",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_ALL_CLOSED.json": "168f80c019caf2c3652d9a456b609091fc5d023dd53f5ffb56c90aca2325e695",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_FACES.md": "0b544c293b8dcc8da5f059ba4f9d3a074079585afcb1546576af16b4de14ad1f",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_REVIEW.json": "52cadafa0d514f08fcf37ce8685b2335a81378bc0cedd3367a1f6a5f6376178f",
+    "E:/新问题/research/seven_directions/Q6_TWO_AVOIDED_EASY_REVIEW.md": "089f7d3afa27da104179e559137bc41d74578475f7bdd926a52aa5296531a303",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_DISTANCE2_BROAD_CHECK.py": "d15827f53b2a66fdd97d355035947cb94c33844df99b855b0b86b453b77c56da",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_ODD_SAME_SIDE_RECEIVERS_REVIEW.md": "d7d72f1e20587b893b5a224266bc6ad410e503bfef5c49e3adcbb23725f88771",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DOUBLE_RETURN_BRIDGE_GEOMETRY.py": "2421c648d15bc93b7b9f6baa96e5f9196251c0c6602d64d966526e635b41aea8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E14_I005_SEPARATED_REVIEW.json": "d66d87b8220b819babe7403cbb11da26a6f21715ac70c79b0dc6d819687958dc",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E14_NEXT_REVIEW.json": "e4e9b5ddc9dc34e7b46affa89449ea773b3e257c42e66362a20d03f7022f55e9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E14_NEXT_REVIEW.md": "395051e5f3a04ad5bf44f7ab915a2d53a3a490a99dbf48d841ed3795f100c12b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E14_ODD_RECEIVER_CLOSURE_REVIEW.json": "687f17bdf3fe936191f1b6249d497f03a41ce8ed22fccb719027980ff099fa72",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E14_ODD_RECEIVER_CLOSURE_REVIEW.md": "7b438fb279774066ba7b66ce76e89850353275c29d8a5974612e4fe404666330",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_DISTANCE2_TWO_RETURN_PLAN_REVIEW.md": "548b56ebba81c3ed6eddabf97b96f78a9e09563b8e860a47da74b75d04759e2d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU2_FULL_REVIEW.md": "348e364d19876f00e986bde65573acd0ab3c6e429dda5a5a8d397477a27d5909",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_COUNT.json": "59ae221dc88eb374927c390cee705165171a1e569a694ac9d88d8f27b2a0516f",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_COUNT.py": "95ac56bd0be465834713159fa77f147097c84d1505b4e601e92ca1dc9592b4cb",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_LOWM_PREFLIGHT_NOTE.md": "9f8c1a97d05e366232c826f782285ed4510bd7e4bb6352b12793fea107a26e95",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_BASE.json": "487328e408fc2bf590dea9e751e61e460189652fcd56d8f60f574830220c0d94",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_BASE.py": "497ea73e544be135832d244cf6825777f73fdf47562331236ee6e8e56654d194",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_CLOSURE.md": "181f307d7d4380ce133210b31e4386b28da6fa6b400f992659e034a01862ea77",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_FIXED_PLANS.json": "3e42766112a496a334323240a12185957c71d69b0f2ac741ff4f6f404cc53103",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_FIXED_PLANS.py": "f8fbc517cca1c11ae81a072ebdfd611071b95fc55a062d44a28595d219065de7",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT.json": "3f5087ad8276fcac2c4d906ba72a64fc295c43edce1d046112bd1e112649c2ac",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT.py": "0ee03ca751a045dd02f91183f1513fd06971c6edbc1efb1322048b406f8ef112",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_SOURCE_PREFLIGHT_NOTE.md": "0fe4786f58a67b251dc02347a555bacf151863c00a64c8eb8a8febadfc24994d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_D30_FIXED_PLANS.py": "17be3ca335efbae0e18489a9737e43b195ef9f2c719ff48ffd3184d1ce08227d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_MINIMAL_FIXED_PLANS.py": "4d13dabc7a7fe195d9e56d8aba2fdc7d247ac89ce6bd16547d2100a2321293d8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_CLOSURE.md": "9d4c3bcc12b7d4e6e1f204ba148a739f0a44e5b4f1f6df3c96edc63e02063b6e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_CLOSURE_INPUTS.json": "ed4b87853663df0e230648b80012f66841d1a920a2fcd58ab5113297a5c50458",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_REVIEW.json": "a9b99e355e4929877f7196926c60ea9b6001e2a89aa6a1d5d00ba1f4ff6c0a68",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_REVIEW.md": "89bb2c21afc78764c790a053bfa2d6583241b70f6a0e79caea08eaeb726cd29d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_FIXED_PLANS.py": "4cc12cbf80bc0fbee6851a9957b07fc01de1f931882064c540ebb816985f15e3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_FULL_CLOSURE.md": "efaa3f339e970148b0bb47459a24b1c53b3d51b771662e3a3e150401c420f3a9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_FULL_CLOSURE_INPUTS.json": "09c003029d16d2dfee7b0f34fe449ffd41617d2ca183a73bf83632f606d96c10",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_ODD5_1_3_THREE_BRIDGE_CHECK.py": "d24250902a1a4d2a1ca7ce2f2321dd4c977ac29fddde13f5d8925e865166c484",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R32_M_GE4_CLOSURE.md": "391242357346d01813b6b99c2710767e1573f866aef0665cb5499dd4d453adbe",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R32_M_GE4_CLOSURE_INPUTS.json": "dc572ea5da503550be40cd4cfa380fed050850d4fffee696a619f0661ea396ff",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R32_M_GE4_REVIEW.json": "e0e6abc17bba420ffb8a3d3939e7e6c86af71320898e753f9e58510b6dfd863c",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R32_M_GE4_REVIEW.md": "1d840b0815af0cde1deed9de8fb2faa3ad76cbd8b0122ff2fc845741a1ba2a83",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_REVIEW.json": "0723e1191e127913a88b773028659cf90a6ec9aac1a518136a0420c86f53d63d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_REVIEW.md": "843a7cf77457390dd30e57b753c37f5dd25094438874d9c103b557d2e6ebf924",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_ODD_22_COMPLETE_COVERAGE_REVIEW.md": "68f969c265d462a530ff42cb7908502df59125de8c4d222d0d5d048887dfa12b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_FOUR_MONO_BALANCED_COORDINATES.md": "241e281d1467983a6716fabd8212696c3111ccadf18aeeca4e8ae5c0396f32ca",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.json": "954f3800538ac37cea3b3f67efc7ce0a11e68e4f070449ffa603fec2da52e5ce",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.md": "993b9584005db936ecc306743f9397ec2b7e9a5f0319c843b5fec9e19bd70454",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU1_CENTRAL_T1_AND_E14_REVIEW.md": "b01223a658664434ccee17345abcd6d57bb7753493c7919f6c62a323329d4dbc",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_BROAD_T15_DONOR_PROBE.py": "3a12e35d9df1c9395f371ea3c9d9db3e46f0254272756d99f194a2b97dc4b8dd",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_FOUR_BRIDGE_SPLIT_DONOR_PROBE.py": "4098e8a3df755e55b0d3b798e38e1106e43dd519b09f19f4f09594d013dfe90e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_FULL_REVIEW.json": "df038ad03bca5e3932c33481dfd1dd338cf21dfcb5431c9ff427f82d778375a9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_FULL_REVIEW.md": "f6356a999559148771f8f0ec69cbf0c68bc26f2ba5faa1fff0286772815bdf75",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_REVIEW.json": "761dc76bb82e18a48fbd388b3686e889b9dac4e437ec506750908a8f24a0092e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_MU3_THREE_BRIDGE_REVIEW.md": "26ac6f55327808f0edc5a0bf1ee0dbf5312dd88062faf779ffd61cf6e28f5a95",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_T26_ODD_SPLIT_TRANSFER.md": "e635d89853336a72d4668ce48d3c300019bb1d84a58f309be2d7b96e5088072b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_T26_SEPARATED_ODD_TRANSFER.md": "514efa1c28e544210075104734ccb19aa34dd9347210611d6ce54a896097b29d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_THREE_BRIDGE_TWO_RETURN_WHOLE_RECEIVER.md": "e4f27a93b736709cf6ca886528a170a09505da4cfe4547075d666fe858b5f2b7",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_MAJORITY_ROOTS_AVOID_TWO.md": "8631acc7816d559ff3a51a05f9b72f51cb33d6867e828e0927e1c5c1c2b0a4a3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_MAJORITY_ROOTS_AVOID_TWO_REVIEW.json": "af1aa17fcd63419e8aeacb8f9fe4f1f9a1a5700f2aa988493ce77bedb221d2eb",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_MAJORITY_ROOTS_AVOID_TWO_REVIEW.md": "1ced068428f35b1e51a89420cfac1bb749713514d8f964784e5dc020b64f4579",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_TWO_RETURN_CONTROLLED_SINGLE_ROOT_REVIEW.md": "67a4d3812e21785acb8bde0b73a3091d2faae917aa9c89ba83cd4436b87930a0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_CONTROLLED_CYCLE_DONOR_EXTENDED_PROBE.py": "8d65d065a766f2db19a60093515838ad4e98491ec359e8385c3257f676e24266",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CENTRAL_FAR_TRIPLES_CLOSURE.py": "ad4c832e9c77ee23829ec30e802aa16f6357e876083582078e5eb767aea517de",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CENTRAL_FIRST_SOURCE_FULL_COVERAGE.py": "d0561e229e3f864bcc6e4fa40f9aabad03354d73dda059b83b7aaf90f9c72742",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CENTRAL_LOCAL_REDUCTION.py": "12af727f4f1a8780d6abec5d4a0d62be6eb128221812575b6b3c51eb5851c582",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CENTRAL_SOURCE_COLUMN_COVERAGE.py": "14e5ea1a842a312c7bccb416e18e55b830f67f9d59487aa05d68625966bdeeb7",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_CENTRAL_SOURCE_CONSTRAINTS.py": "fb0a605b3f012d0d639ab72c422d21c36647891b3e6354ed2e496e25db2515ec",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_BASE.json": "875ac2ba3b89b2a62a56bf67f258f8d6ef822f0acd2d4ecb99e4897e83dd22d1",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_BASE.py": "e11604df39e33e367d3ab1e40f1c38923b2898fd038b44256908c65e19608f54",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_CLOSURE.md": "13823936e74dad770e8ee2074cffc16c3eb8f4e68ee64819ddfa7484d8332778",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_FIXED_PLANS.json": "903ebbd14580a2e5f4f1c55b530586e50431de759b40bad8d5f02d3a9d41d2c7",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_FIXED_PLANS.py": "da22b8116ebe91653808288d3c4153df1e5d2d3dc5a7170c9ff258873b32b9ca",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT.json": "94a8c6e06e6f09ea63980979e7eb73210cb5931feec20fd24519776c1fe5906a",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT.py": "1b00e4e6c99f29caf425572421f8e48bb5603e0a82c1486dd4ba521b2aeed2b0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_SOURCE_PREFLIGHT_NOTE.md": "68253f223390b480f9d42a4ca8798cd4b052ad076aef4c4f7ae27035f11ab655",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_CLOSURE_INPUTS.json": "0bdf9440c651dc2021cfb6b89a849951e1c3fc531159359058d793261aa40dbb",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW.json": "31d0009e8a40c65c2c2db6585c47f372d00a7f946950930459582550c247aeec",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW.md": "695d77fcc05ed72bfc78f20da0ea916954b6dbbefbf5f9f5a5f8718a722910d8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.json": "97880313518613b54fc8a4ba698c967ea69025316687f1917a657c55f31bdd65",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_M3_REVIEW_CHECK.py": "f9316c07b929227a3b58ebb403ee4cfcd08a803e3d5c6b71887afebda74666d0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW.md": "7300a2aa58d974a877cf70a69df0feaa14d7c8c8dc520592413c545d461f0506",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW.json": "93f2cab6e97679b41f5ac403d060421a113711c8b346240e56073cbe4febb665",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_LOWM_RESIDUAL_SOURCE_PREFLIGHT.py": "c8af13a92871150d17849832f6035062cd158f69c8ac8c63797a938ffdeb8130",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_LOWM_RESIDUAL_SOURCE_PREFLIGHT.json": "3a14fefd2d4991c577136c64274cdf19c15bedeaf8f432b2a06bf84eaacc38a8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/E16_MU3_ROUTE_R41_LOWM_DONOR_SEPARATION_NOTE.md": "ba2a77e9f3cadd4367a74dec5cd4943e914ebf7c887d28adb050d8456f466479",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_CLOSURE_INPUTS.json": "c8e308626e237d0e446b03079dd1895cbcf60b7cd43c72a355c8f310e5170590",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_CLOSURE_INPUTS.json": "717d01f0e3437d19c7e7207b72b9beacd36dc1c832793bd2ef911070518c081c",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_BASE.json": "56bff7e98934f073944092de3af1a80f78325e8085d95fcb890571547f7afba4",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_BASE.py": "63b7ca7012791dba5eb7f6dfd47f0c2bc91a009776981abb24543c553583060b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_CLOSURE.md": "e27661e0f2f8401949244452a2dba98fef50e69db7772b34362d1e21a23aed7a",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_FIXED_PLANS.json": "78b8741e8762f08e4919431319342e7696de2e1fb70b6ab3e743edca11a59361",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_FIXED_PLANS.py": "eea80e2448b0f64801761c01685544b43de8f703b8dcc9d56028f37222b16132",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_FREEZE.py": "3cb02fa0a24edab7fca2c5be787e8b6105ab6c8d1d8b1bfee70b2f15185ace4e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_PREFLIGHT.json": "60e07a9893b17e92bf01143ecd4ff8e2c6415b01038d94f1b8f6f2a585f842d0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_PREFLIGHT.py": "c1c738a65daf81623bfb4e90b914522b90c1b64528fb068d3861e098087c8b58",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_TRANSPORT_CHECK.json": "10bb22f414b9167779629f913e417462792a88669b99bddba024f0aeb8ac4277",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_TRANSPORT_CHECK.py": "de0e5a55fb2cdc392addc77fef7435ea2fc9478252216c5203f91f1df611fef6",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M2_CLOSURE_INPUTS.json": "c83448983edee3440bd1d6d6a0cc37bfb2a031035c0816a1c8d090d521c561e3",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M2_REVIEW.md": "b1de11f1362e9c4a2cf7698f99afc89a8873d3cf214a14b0a6f1b9435b883f7b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M2_REVIEW.json": "502569f4f67f7c104616f153002e839661778ad1da1c3ff7ec4b4df0d92083a6",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M2_REVIEW_CHECK.py": "683c93fdb5f4ff44c35218e3e49f6dc7b201793551d935b6ece20061edf07d88",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M2_REVIEW_CHECK.json": "2c7219fa6988bc85d28225ebb9cbca7ebc442f35cb3289d395701b24d0592d5b",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_DISTANCE2_REVIEW.md": "f195ace534e750cce1189ec04d07cdc43ed3a30e545cb9b91668f278d69eeb69",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_DELTA2_DISTANCE2_REVIEW.json": "41d5a619d3275fa85120d45f294569361d48ec5765fd8c77981b562eef337eef",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_SIX_FAMILY_CLOSURE.md": "b29f4659fa6b1b2116f6ff45d4908ab107fd14ff7e0c769f24f11824fddc8b54",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_SIX_FAMILY_REVIEW.md": "12e3327b3c2e1681742fabeed2837b23d038390fd64b78767674c07cea5d54f6",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP8_SIX_FAMILY_REVIEW.json": "572b53652e2d8a9aeb0c670977564d4d668243c76a20a3687a905f74beac110e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_ODD_REVIEW_CHECK.py": "bc284d7123d5156c453eff1034e1f9f9804bee6b40276d81e095111e2a322c3d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_BASE.json": "0d6a44c0c9a4b72c7d18afc884a9e610b74ae6626d5a369bddc4bac02bc4ef71",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_BASE.py": "1d378feb36ba752c62b2cfbb3f4402406e813992578e3cd69da8e4538c1c586d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_CLOSURE.md": "a94b638bd3fb09e21628dc83602ff8e78d53739bb4286f1472abc473d5ff4f29",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_FIXED_PLANS.json": "65937f5ed81121d989026ca8d864c2a924750966e135c45218f843c3ef229c3e",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_FIXED_PLANS.py": "0da96a1d073a3aabcc6a66b5dcc7cbd38542ea11f63e183c03528466ae89bb40",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_PREFLIGHT.json": "4b8b81ec98de62ba078931d72b60ac013518750baccb3700082ede26da6843e0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_PREFLIGHT.py": "b9a569b0453c9cfa7bd0c6d3c6428616fe13926f2ced979cb5d353d40ba1b5b4",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_PREFLIGHT_NOTE.md": "036f4d56588b2aa68a15ea1266db594d299a8f359530a6b86343f9c25250a50a",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M_GE3_REVIEW_CHECK.py": "78888cb44ce984e1f0c9874ac6dd02ee28151d79de5d472b12cbe54330b7c4f2",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_CENTRAL_ANTIPODAL_REVIEW_CHECK.py": "6722855422c9775cddf6813231088ca415ba91374fb8207914bf271e61051861",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_MINIMAL_REVIEW_CHECK.py": "f0879f1777c05761b481e91653df1ad0012f9191c988117ae9d76866c4da96c8",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP7_EVEN_D30_REVIEW_CHECK.py": "8c74db37322af65673b34a15955d3f805c0b34bc99931ea4ac9d22585aa53c07",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_GAP6_EVEN_02_REVIEW_CHECK.py": "82d4d8f52608c254f6674740c8e3aa6999d25526acf28f41b299fe4314021f48",
+    "E:/新问题/research/seven_directions/Q6_T15_S2_COMBINED_EXTENSION_REVIEW.json": "298fcb8416dac224a774b85b78c10bc4978bb798e9328009377073b8dfbd84c9",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M1_CLOSURE_INPUTS.json": "f5ce8cfce2d01e0b613346c95a8c99f3aa1536266c452fa18d084ff3c73eceec",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M1_REVIEW.json": "cd0e23622c95723416eb32033c3cb9811248950b5a0e9bf8a63888b95c0f8d79",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M1_REVIEW.md": "359b0c62659ee79b9348a7e41684bf043d4ac0e1b9a97899cb42cf88c182c74d",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M1_REVIEW_CHECK.py": "1eea59fbc9fea8b82020147381cc65a1ba4ef4c0f35540f9dd1a167f4fce7178",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R41_M1_REVIEW_CHECK.json": "2167203e7407d8e505cae700250b8381ccbbc3c11e1edfbb3ed10dbabdffe128",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_LOWM_RESIDUAL_U_FIRST_PREFLIGHT.py": "509af180d59b5cadaef55d54039ca045ae3e9d171a9193ca17048050345c2fa1",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_LOWM_RESIDUAL_U_FIRST_PREFLIGHT.json": "465b827467790b09ffefc2c19f68f0088708783c90820f3d159af6c95e44cebc",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_CLOSURE.md": "81e003cb54127d59b93191788656059bd780b124317eceb1929f424d008c207f",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_FIXED_PLANS.json": "7732d7502f1a7c1929b582f2a407cb62ce19c19bacf5ab6db6d3808bf7eaa895",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_FIXED_PLANS.py": "c5c1911a42bd24c31ab7a006093f671d602e01f53741104feeca66c3f5c8528a",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_UFIRST_BASE.json": "b0795e469db4a6f12456bf51df292a0d8e97b77ccfffb9715a36700c00117bf0",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_UFIRST_BASE.py": "67735fb1010bef9ffa9c57a7e06cce6542a83dfdc7829a896d48d7040131c9ed",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT.json": "34ed1b6a574f9d38f0cd962b6b3af25c62ab12655a55a0607efa3b9717ea6653",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT.py": "c4bebfb996f65bc82043f761cc7bde115f6172679a0c66f0ff6a8ace7bab24de",
+    "C:/Users/18606/Documents/Codex/2026-11-08/new-chat/R7_E16_MU3_R41_M0_UFIRST_EXACT_PREFLIGHT_NOTE.md": "e625b1413cc666009019d660c69e602cd4b63c5c1fdf74cc2be139fbbffd67af"
+  }
+}

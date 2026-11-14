@@ -8,9 +8,9 @@
 
 </div>
 
-[![Actual MathRSI homepage evolution replay from v0 through v4](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
+[![Recorded MathRSI v0 through v4 homepage evolution](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
 
-*Actual homepage evolution replay. Click for MP4; [execution provenance and manuscript status](case-studies/README.md).*
+*Recorded v0 → v4 homepage replay; [explore the current v5 site](https://lisresearchgroup.github.io/math-rsi/). Click for MP4; [execution provenance and manuscript status](case-studies/README.md).*
 
 MathRSI pairs a shared base workflow with domain plugins and a per-problem research wiki, guiding Claude Code and Codex from literature survey and route selection through proof development, review, verification, and handoff. Validated results and diagnosed failures feed back to refine both the workflow and plugins.
 
@@ -56,7 +56,7 @@ Research across six domains supplies results and reusable methods. [Public homep
 - **Error-correcting codes:** three gaps dating to 1985 closed; four exact values (one from literature) and one narrowed range. [Results, methods & open case](case-studies/README.md#error-correcting-codes)
 - **Degree–diameter:** four dated construction benchmarks improved, including a 2,567-vertex $(10,4)$ graph. [Construction & evidence](case-studies/degree-diameter/README.md)
 - **Erdős Problem 86:** asymptotic density upper bound improved from $0.60318$ to $\lt0.59155154$. [Result & verification scope](case-studies/README.md#erdős-problem-86)
-- **Ruskey–Savage:** every matching of $Q_6$ extends to a Hamilton cycle. [Proof & certificate scope](case-studies/README.md#ruskeysavage-q6)
+- **Ruskey–Savage:** every $Q_6$ matching and every $Q_7$ matching with at least 57 edges extends to a Hamilton cycle. [Results, methods & open scope](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending:** working manuscripts lower the $\mathrm{ES}(7)$ upper bound from 78 to 77; independent review pending. [Manuscripts & status](case-studies/happy-ending/README.md)
 
 <a id="three-layers"></a>
@@ -90,11 +90,11 @@ The main [`mathrsi-research`](base/skills/mathrsi-research/SKILL.md) skill coord
 
 Two tracks evolve together: **shared base behavior** becomes stronger, while **domain plugins** expand and deepen. Separate [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) maintenance turns research evidence into implemented changes.
 
-- **v4 base:** recover simultaneous equality conditions in a tight integer bound, make a legal exchange, and connect the capacity-forced witness to the original problem.
-- **Later base maintenance on `main`:** mandatory global reassessment uses two independent read-only agents when local work stops reducing the original gap or total completion cost.
-- **Domain methods:** v4 deepens Happy Ending equality/exchange and DD insertion/replay; later ECC maintenance reuses exclusions and shared computations across precisely identified nodes.
+- **v5 base:** control auxiliary choices so the next proof step is possible; reuse new theorems across known legal representations; cover every input with fixed or conditional finite plans.
+- **Deeper Hamilton methods:** controlled donors and return bridges, exact compatible-pool counting, and forest certificates with several omitted vertices. Q7 research ran with **v3 (local adaptation)** and feeds these v5 changes.
+- **Inherited behavior:** v4's equality-to-witness actions, global reassessment and subsequent ECC node/computation reuse remain in place.
 
-**[v4 is the current release](docs/V4_CHANGES.md); `main` includes subsequent maintenance.** Research results retain their original execution provenance. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
+**[v5 is the current workflow on `main`](docs/V5_CHANGES.md).** Use the [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) or clone and record the exact commit. Fixed v1–v4 tags stay unchanged. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
 <summary>Fixed releases and earlier improvements</summary>

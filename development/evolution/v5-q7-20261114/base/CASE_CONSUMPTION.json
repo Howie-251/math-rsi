@@ -1,0 +1,910 @@
+{
+  "scope": "Bounded consumption of two frozen geometries and one exact original-edge dichotomy; no original-M enumeration, Hamilton solver or rank execution.",
+  "source_scope": "Q7 frozen source; historical mathematical receipts remain their original scope.",
+  "s3_cases": [
+    {
+      "index": 7,
+      "geometry": {
+        "h": 2,
+        "m": 1,
+        "s": 2,
+        "strong_columns": 1,
+        "S": [
+          0,
+          3
+        ],
+        "W": [
+          13,
+          14,
+          21,
+          25,
+          37
+        ],
+        "Y": [
+          2,
+          32,
+          35,
+          38,
+          41,
+          42
+        ],
+        "U": [
+          24,
+          27,
+          53
+        ],
+        "template_index": 0,
+        "source_index": 0,
+        "common_stabilizer_size": 2,
+        "signed_gaps": [
+          3,
+          -3,
+          4,
+          3,
+          5,
+          -3,
+          3
+        ]
+      },
+      "physical_holes": [
+        [
+          24,
+          27,
+          53,
+          77,
+          78,
+          85,
+          89,
+          101
+        ],
+        [
+          2,
+          32,
+          35,
+          38,
+          41,
+          42,
+          64,
+          67
+        ]
+      ],
+      "signed_gaps": [
+        3,
+        -3,
+        4,
+        3,
+        5,
+        -3,
+        3
+      ],
+      "all_known_axis_s3_witnesses": [
+        {
+          "outer": 3,
+          "receiver_side": 1,
+          "majority_parity": 0,
+          "sparse_axes": [
+            0,
+            1,
+            2
+          ],
+          "loads": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              4,
+              3,
+              0
+            ],
+            [
+              5,
+              0,
+              2
+            ],
+            [
+              6,
+              3,
+              0
+            ]
+          ]
+        }
+      ],
+      "saved_plan": {
+        "gate": "accepted_central_s_ge3",
+        "witness": {
+          "outer": 3,
+          "donor_side": 0,
+          "alpha_parity": 0,
+          "original_A_by_alpha_beta": [
+            [
+              53,
+              85,
+              101
+            ],
+            [
+              2,
+              32,
+              35,
+              38,
+              64,
+              67
+            ]
+          ],
+          "original_B_by_alpha_beta": [
+            [
+              24,
+              27,
+              77,
+              78,
+              89
+            ],
+            [
+              41,
+              42
+            ]
+          ],
+          "shape": [
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "inner_loads": [
+            [
+              0,
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              1,
+              [
+                2,
+                1
+              ]
+            ],
+            [
+              2,
+              [
+                2,
+                0
+              ]
+            ],
+            [
+              4,
+              [
+                3,
+                0
+              ]
+            ],
+            [
+              5,
+              [
+                0,
+                2
+              ]
+            ],
+            [
+              6,
+              [
+                3,
+                0
+              ]
+            ]
+          ],
+          "sparse_axes": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "decision": "Recognize by accepted S3 on the same physical holes; remove new-plan search from this maintenance caller.",
+      "successor": "Return marked actual-cut witness to original expansion; no new Hamilton/rank search."
+    },
+    {
+      "index": 0,
+      "geometry": {
+        "h": 2,
+        "m": 1,
+        "s": 2,
+        "strong_columns": 1,
+        "S": [
+          0,
+          3
+        ],
+        "W": [
+          13,
+          14,
+          21,
+          25,
+          37
+        ],
+        "Y": [
+          2,
+          32,
+          35,
+          38,
+          41,
+          42
+        ],
+        "U": [
+          17,
+          24,
+          29
+        ],
+        "template_index": 0,
+        "source_index": 0,
+        "common_stabilizer_size": 2,
+        "signed_gaps": [
+          3,
+          -4,
+          4,
+          3,
+          5,
+          -4,
+          3
+        ]
+      },
+      "physical_holes": [
+        [
+          17,
+          24,
+          29,
+          77,
+          78,
+          85,
+          89,
+          101
+        ],
+        [
+          2,
+          32,
+          35,
+          38,
+          41,
+          42,
+          64,
+          67
+        ]
+      ],
+      "signed_gaps": [
+        3,
+        -4,
+        4,
+        3,
+        5,
+        -4,
+        3
+      ],
+      "all_known_axis_s3_witnesses": [],
+      "saved_plan": {
+        "gate": "controlled_cycle_count",
+        "outer": 3,
+        "A_side": 0,
+        "alpha_parity": 0,
+        "r": 3,
+        "k": 3,
+        "inner": 0,
+        "X": [
+          2,
+          35,
+          67
+        ],
+        "Y": [
+          10,
+          43,
+          75
+        ],
+        "donor_original_minority": [
+          17,
+          85,
+          101
+        ],
+        "donor_original_majority": [
+          2,
+          32,
+          35,
+          38,
+          64,
+          67
+        ],
+        "receiver_sides": [
+          {
+            "side": 0,
+            "original_minority": [
+              42
+            ],
+            "original_majority": [
+              24,
+              78
+            ],
+            "marks": [
+              10
+            ],
+            "interface": "Q5_A_ALL"
+          },
+          {
+            "side": 1,
+            "original_minority": [
+              41
+            ],
+            "original_majority": [
+              29,
+              77,
+              89
+            ],
+            "marks": [
+              43,
+              75
+            ],
+            "interface": "Q5_T15_FULL"
+          }
+        ]
+      },
+      "decision": "S3 does not cover this geometry through the known seven-axis family; do not close it or call it a counterexample.",
+      "successor": "Retain original controlled_cycle_count plan (outer3,k3,inner0) and its arbitrary-realization expansion obligation."
+    }
+  ],
+  "e14": {
+    "f": [
+      40,
+      56
+    ],
+    "edge_short": true,
+    "endpoints_not_holes": true,
+    "plan_geometry_checks": true,
+    "dichotomy": [
+      {
+        "f_in_same_M": false,
+        "applicable": "f_absent",
+        "both_plans_fail": false
+      },
+      {
+        "f_in_same_M": true,
+        "applicable": "f_present",
+        "both_plans_fail": false
+      }
+    ],
+    "decision": "Accept finite conditional-plan contract; remove stronger request for one M-independent plan, retain actual branch expansion."
+  },
+  "commands_scope": "Inline independent arithmetic/Boolean inspection, not the original production or full-table verifier.",
+  "original_matchings_enumerated": 0,
+  "solver_calls": 0,
+  "rank_runs": 0,
+  "monotone_completion": {
+    "source_original_file": "R7_E14_TWO_GRAPH_FIXED_WITNESS.json",
+    "source_declared_scope": "One fixed non-antipodal input. Geometry and short-matching realizability only.",
+    "source_payload": "The complete 57 source edges are preserved below; no matching generation was run.",
+    "M_plus_edges": [
+      [
+        1,
+        33
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        8,
+        72
+      ],
+      [
+        9,
+        73
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        13,
+        45
+      ],
+      [
+        14,
+        46
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        19,
+        23
+      ],
+      [
+        20,
+        22
+      ],
+      [
+        21,
+        85
+      ],
+      [
+        25,
+        29
+      ],
+      [
+        28,
+        92
+      ],
+      [
+        30,
+        94
+      ],
+      [
+        32,
+        40
+      ],
+      [
+        34,
+        50
+      ],
+      [
+        35,
+        99
+      ],
+      [
+        36,
+        38
+      ],
+      [
+        37,
+        53
+      ],
+      [
+        39,
+        55
+      ],
+      [
+        41,
+        57
+      ],
+      [
+        42,
+        58
+      ],
+      [
+        43,
+        107
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        47,
+        63
+      ],
+      [
+        49,
+        51
+      ],
+      [
+        52,
+        54
+      ],
+      [
+        56,
+        120
+      ],
+      [
+        59,
+        123
+      ],
+      [
+        61,
+        125
+      ],
+      [
+        62,
+        126
+      ],
+      [
+        64,
+        66
+      ],
+      [
+        67,
+        75
+      ],
+      [
+        68,
+        76
+      ],
+      [
+        69,
+        71
+      ],
+      [
+        70,
+        102
+      ],
+      [
+        74,
+        78
+      ],
+      [
+        77,
+        93
+      ],
+      [
+        80,
+        112
+      ],
+      [
+        81,
+        113
+      ],
+      [
+        82,
+        86
+      ],
+      [
+        83,
+        91
+      ],
+      [
+        84,
+        116
+      ],
+      [
+        87,
+        95
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        90,
+        122
+      ],
+      [
+        96,
+        100
+      ],
+      [
+        97,
+        105
+      ],
+      [
+        98,
+        114
+      ],
+      [
+        101,
+        117
+      ],
+      [
+        104,
+        106
+      ],
+      [
+        108,
+        109
+      ],
+      [
+        110,
+        111
+      ],
+      [
+        118,
+        119
+      ]
+    ],
+    "M_edges": [
+      [
+        1,
+        33
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        8,
+        72
+      ],
+      [
+        9,
+        73
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        13,
+        45
+      ],
+      [
+        14,
+        46
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        19,
+        23
+      ],
+      [
+        20,
+        22
+      ],
+      [
+        21,
+        85
+      ],
+      [
+        25,
+        29
+      ],
+      [
+        28,
+        92
+      ],
+      [
+        30,
+        94
+      ],
+      [
+        32,
+        40
+      ],
+      [
+        34,
+        50
+      ],
+      [
+        35,
+        99
+      ],
+      [
+        36,
+        38
+      ],
+      [
+        37,
+        53
+      ],
+      [
+        39,
+        55
+      ],
+      [
+        41,
+        57
+      ],
+      [
+        42,
+        58
+      ],
+      [
+        43,
+        107
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        47,
+        63
+      ],
+      [
+        49,
+        51
+      ],
+      [
+        52,
+        54
+      ],
+      [
+        56,
+        120
+      ],
+      [
+        59,
+        123
+      ],
+      [
+        61,
+        125
+      ],
+      [
+        62,
+        126
+      ],
+      [
+        64,
+        66
+      ],
+      [
+        67,
+        75
+      ],
+      [
+        68,
+        76
+      ],
+      [
+        69,
+        71
+      ],
+      [
+        70,
+        102
+      ],
+      [
+        74,
+        78
+      ],
+      [
+        77,
+        93
+      ],
+      [
+        80,
+        112
+      ],
+      [
+        81,
+        113
+      ],
+      [
+        82,
+        86
+      ],
+      [
+        83,
+        91
+      ],
+      [
+        84,
+        116
+      ],
+      [
+        87,
+        95
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        90,
+        122
+      ],
+      [
+        96,
+        100
+      ],
+      [
+        97,
+        105
+      ],
+      [
+        98,
+        114
+      ],
+      [
+        101,
+        117
+      ],
+      [
+        104,
+        106
+      ],
+      [
+        108,
+        109
+      ],
+      [
+        110,
+        111
+      ],
+      [
+        118,
+        119
+      ]
+    ],
+    "M_holes": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      12,
+      24,
+      31,
+      48,
+      65,
+      79,
+      103,
+      115,
+      121,
+      124,
+      127
+    ],
+    "added_free_short_edge": [
+      4,
+      5
+    ],
+    "M_plus_holes": [
+      0,
+      3,
+      6,
+      12,
+      24,
+      31,
+      48,
+      65,
+      79,
+      103,
+      115,
+      121,
+      124,
+      127
+    ],
+    "cardinalities": {
+      "M": 56,
+      "M_plus": 57
+    },
+    "checks": {
+      "original_short_matching": true,
+      "not_inclusion_maximal": true,
+      "added_endpoints_both_free": true,
+      "superset_short_matching": true,
+      "all_original_edges_retained": true
+    },
+    "caller": "plugins/hypercube-hamilton/archive/q7/source/research/seven_directions_continuation/R7_E16_MU3_CENTRAL_S2_STRONG_CLOSURE.md:9 (adjacent original holes → add short edge → E14)",
+    "theorem_import": "plugins/hypercube-hamilton/archive/q7/source/research/seven_directions_continuation/R7_MU1_FULL_CLOSURE.md:19-23 (all 57-edge short matchings extend)",
+    "logical_consumption": "E14 gives a Hamilton cycle containing M_plus; M subset M_plus therefore the same cycle contains every original edge of M. No cycle witness is computed in this maintenance check.",
+    "decision": "Recognize this non-maximal 56-edge input by the established augmentation caller; do not send it to independent-hole geometry or new Hamilton search.",
+    "successor": "Return E14 import plus inclusion bridge to verify; independent-hole branches retain only inputs without this applicable completion.",
+    "original_matchings_enumerated": 0,
+    "solver_calls": 0,
+    "rank_runs": 0
+  }
+}

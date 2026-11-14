@@ -1,0 +1,112 @@
+{
+  "workflow": "Analytic proof audit and frozen import checks",
+  "verdict": "PASS",
+  "reason_code": "projection_capacity_produces_legal_four_bridges_and_xor_zero_has_three_balanced_columns",
+  "proof_status": "sound-modulo-imports",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "external_certification": false,
+  "caller": "/root",
+  "author_agent_id": "/root/source_columns_resume",
+  "reviewer_agent_id": "/root/two_roots_audit_resume",
+  "reviewer_backend": "codex-native",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Requested native dispatch configuration; served model identity not independently attested.",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "generated_at": "2026-11-09T10:15:57.6744403Z",
+  "report_path": "R7_FOUR_MONO_BALANCED_COORDINATES_REVIEW.md",
+  "report_sha256": "993b9584005db936ecc306743f9397ec2b7e9a5f0319c843b5fec9e19bd70454",
+  "audited_input_sha256": {
+    "R7_FOUR_MONO_BALANCED_COORDINATES.md": "241e281d1467983a6716fabd8212696c3111ccadf18aeeca4e8ae5c0396f32ca",
+    "R7_FOUR_MONO_BALANCED_COORDINATES_INPUTS.json": "dd9a6956937e7fd8c5cb7266ac09427a07d99598c4a8e7f844989f7dd19ab144",
+    "R7_FOUR_MONO_XOR_ZERO_COROLLARY.md": "b9414db958f15db7ef9e579f0285475833785b97eb134b151826178fc1047264"
+  },
+  "direct_import_sha256": {
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE.md": "b5b11fcdcff0e71c433d3c867b5804a72a18089a23cf244b98723888fca1b41f",
+    "R7_E16_THREE_MONOCHROMATIC_CLOSURE_REVIEW.md": "31f0cf3d3e01898651e69874a2ae8f9efb632d9618122d04ea76518930ec8c45",
+    "R7_CONTROLLED_CYCLE_DONOR_TRANSFER.md": "32bd43c2ebe3454d9322aca8b4355d4e7b98f34823eb05beb98e0ff7c47640f6",
+    "R7_MU3_CONTROLLED_AND_T63_REVIEW.md": "c2249b54dea2f14f0d57a954d55941cd623f6704162c3228f2ec7e5cdcddcb5a",
+    "R7_HIGHER_HOLE_CUTS.md": "47fc35c9cea78731a52ab5b9deb383e025185422dca08053e823ecaff511359b",
+    "R7_HIGHER_HOLE_CUTS_REVIEW.md": "5c12e007585b1c576952e0d69b32cebe7c74ae025a13f8beb4cf1f3f23efdca9",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_CYCLES.md": "ae9afc79f868fc3469c64054eed69830220f97c94b5261776d06aa67377cbd62",
+    "E:/新问题/research/seven_directions/Q6_BALANCED_EIGHT_TEN_REVIEW.json": "cd407ce6091a1b99eb26afadbfbe6ecf598b6dfac9574c0baf53ae42b9c31513",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_DRAFT.md": "96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_REVIEW.json": "f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "R7_MU1_FULL_CLOSURE.md": "3f7f2c3c44557544149cfbce3f70ca5e92e104c33d3bc548c0dc809f0a01b616",
+    "R7_MU1_CENTRAL_T1_AND_E14_REVIEW.md": "b01223a658664434ccee17345abcd6d57bb7753493c7919f6c62a323329d4dbc"
+  },
+  "results": {
+    "main_theorem": "For independent original holes, oriented outer type (r,r+4)/(4,0), 0<=r<=5, and r+4>f(m), every realizing short matching extends to an all-short Hamilton cycle.",
+    "capacity_f_0_through_6": [
+      32,
+      17,
+      10,
+      7,
+      6,
+      6,
+      7
+    ],
+    "E16_subfamily": "(4,8)/(4,0) with at least three balanced coordinates, including adjacent-hole inputs by E14 augmentation.",
+    "E18_subfamily": "(5,9)/(4,0) with independent original holes and at least three balanced coordinates.",
+    "supplementary_xor_zero": "The entire XOR-zero W class is covered in the stated E16 and independent E18 outer types. Equivalently W is an affine two-plane with two independent even-weight directions.",
+    "total_historical_net_new_coverage": "undetermined"
+  },
+  "obligations": [
+    {
+      "result": "PASS",
+      "subject": "Same-parity sparse-side projection capacity and both end cases",
+      "id": "M01"
+    },
+    {
+      "result": "PASS",
+      "subject": "Strict inequality yields a common balanced cut and four distinct true source marks",
+      "id": "M02"
+    },
+    {
+      "result": "PASS",
+      "subject": "Arbitrary auxiliary matching C0 through C5 and two complete arbitrary K(Q5) T44 calls",
+      "id": "M03"
+    },
+    {
+      "result": "PASS",
+      "subject": "Actual marked partners, effective ports, forced positive even inner crossing",
+      "id": "M04"
+    },
+    {
+      "result": "PASS",
+      "subject": "Label expansion to a simple 128-cycle and preservation of every original edge",
+      "id": "M05"
+    },
+    {
+      "result": "PASS",
+      "subject": "E16 and E18 scope, E14 augmentation only used for the E16 subfamily",
+      "id": "M06"
+    },
+    {
+      "result": "PASS",
+      "subject": "XOR zero forces at least three 2+2 columns for four distinct same-parity points",
+      "id": "X01"
+    },
+    {
+      "result": "PASS",
+      "subject": "Affine two-plane equivalence and exact support-union interpretation",
+      "id": "X02"
+    },
+    {
+      "result": "PASS",
+      "subject": "Main submission, separate supplement and all direct import bindings",
+      "id": "D01"
+    }
+  ],
+  "resources": {
+    "hole_geometry_enumerations": 0,
+    "original_matching_enumerations": 0,
+    "matching_solver_calls": 0,
+    "hamilton_solver_calls": 0,
+    "rank_runs": 0,
+    "old_certificate_replays": 0
+  },
+  "open_issues": []
+}

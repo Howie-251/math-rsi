@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check an A10-type cube forest rank gate; no producer or fixed manifest required."""
+"""Check a marked cube-forest rank gate; --root preserves the A10 interface."""
 import argparse
 import json
 from pathlib import Path
@@ -35,15 +35,22 @@ def records(path, width):
             for i in range(0, len(raw), width)]
 
 
-def check(dim, root, holes, forests, columns):
+def check(dim, root, holes, forests, columns, *, omitted=None):
     start = time.perf_counter()
     n = 1 << dim
-    # This tool checks precisely the unsigned-byte A10-type encoding.
-    assert 2 <= dim <= 8 and root in holes and holes <= set(range(n))
+    # Edges are unsigned bytes. H and its omitted subset U have distinct roles.
+    assert 2 <= dim <= 8 and holes <= set(range(n))
+    if omitted is None:
+        assert root is not None and root in holes
+        omitted = {root}
+    else:
+        assert root is None, 'Supply root or omitted, not both'
+        omitted = set(omitted)
+    assert omitted and omitted <= holes, 'Omitted vertices must be a nonempty subset of holes'
     k = set(range(n)) - holes
     t = len(k)
     assert t >= 4 and t % 2 == 0, 'Requires an even endpoint set of at least four vertices'
-    forest_width = 2 * (n - 1 - t // 2)
+    forest_width = 2 * (n - len(omitted) - t // 2)
     ss = records(forests, forest_width)
     xs = records(columns, t)
     ps = []
@@ -51,18 +58,19 @@ def check(dim, root, holes, forests, columns):
         assert len(set(s)) == len(s), 'Repeated forest edge'
         d, deg = DSU(n), [0] * n
         for a, b in s:
-            assert 0 <= a < b < n and root not in (a, b)
+            assert 0 <= a < b < n and not omitted.intersection((a, b))
             assert (a ^ b).bit_count() == 1, 'Forest edge is not short'
             assert d.join(a, b), 'Cycle in forest'
             deg[a] += 1
             deg[b] += 1
-        assert deg[root] == 0
-        assert all(deg[v] == (1 if v in k else 2) for v in range(n) if v != root)
+        assert all(deg[v] == (0 if v in omitted else 1 if v in k else 2) for v in range(n))
         groups = {}
-        for v in k:
+        for v in set(range(n)) - omitted:
             groups.setdefault(d.root(v), []).append(v)
-        assert len(groups) == t // 2 and all(len(v) == 2 for v in groups.values())
-        ps.append([tuple(sorted(v)) for v in groups.values()])
+        # Check complete components, not only the components noticed from K.
+        endpoint_pairs = [tuple(sorted(set(v) & k)) for v in groups.values()]
+        assert len(groups) == t // 2 and all(len(v) == 2 for v in endpoint_pairs)
+        ps.append(endpoint_pairs)
     for x in xs:
         assert all(0 <= a < b < n for a, b in x)
         assert len({v for e in x for v in e}) == t
@@ -93,27 +101,34 @@ def check(dim, root, holes, forests, columns):
         rank += 1
     required = 1 << (t // 2 - 1)
     assert rank <= required, 'Computed rank conflicts with imported CKN bound'
-    return dict(status='PASS', dim=dim, root=root, holes=sorted(holes), endpoints=sorted(k),
+    return dict(status='PASS', dim=dim, root=root, holes=sorted(holes), omitted=sorted(omitted), endpoints=sorted(k),
                 forest_record_bytes=forest_width, column_record_bytes=t,
                 legal_forests=len(ss), valid_matching_columns=len(xs),
                 matrix_bits_recomputed_DSU=len(ss) * len(xs), matrix_ones=ones,
                 GF2_rank_low_column_gauss=rank, imported_CKN_rank_upper_bound=required,
                 universal_rank_gate_met=rank == required,
                 complete_forest_pool_exhaustiveness_required=False,
-                scope='A10-type simple cube forests on V minus root, degree1 at K and degree2 at holes minus root; all complete-graph matchings on K',
+                covered_vertices=n - len(omitted),
+                scope='Simple cube forests on V minus U; degree0 on U, degree1 on K=V minus H, degree2 on H minus U; all complete-graph matchings on K',
                 seconds=time.perf_counter() - start)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--dim', type=int, required=True)
-    ap.add_argument('--root', type=int, required=True)
+    omit = ap.add_mutually_exclusive_group(required=True)
+    omit.add_argument('--root', type=int, help='Legacy single omitted hole')
+    omit.add_argument('--omitted', type=int, nargs='+', help='Explicit omitted subset U of H')
     ap.add_argument('--holes', type=int, nargs='+', required=True)
     ap.add_argument('--forests', type=Path, required=True)
     ap.add_argument('--columns', type=Path, required=True)
     ap.add_argument('--output', type=Path, required=True)
     a = ap.parse_args()
-    result = check(a.dim, a.root, set(a.holes), a.forests, a.columns)
+    if a.omitted is not None and len(a.omitted) != len(set(a.omitted)):
+        ap.error('--omitted vertices must be distinct')
+    if len(a.holes) != len(set(a.holes)):
+        ap.error('--holes vertices must be distinct')
+    result = check(a.dim, a.root, set(a.holes), a.forests, a.columns, omitted=a.omitted)
     a.output.parent.mkdir(parents=True, exist_ok=True)
     a.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result, indent=2))
