@@ -25,7 +25,7 @@ The Q₇ work used a local adaptation of MathRSI v3, documented November 5. New 
 
 Pre-implementation reading and two completed Gemini Carbon discussions are in the intake at `aris4math/mathrsi_new_results/_intake/ruskey-savage-q7-20261114/`. Relevant portable source evidence and final review decisions will be retained here and in the plugin; the development machine's absolute path is not a runtime dependency.
 
-## Implementation accepted; release integration in progress
+## Implementation and integration acceptance
 
 Use the changed Base on the controlled-donor caller, an accepted S3 cross-axis call and a remaining case, and the E14 f={40,56} conditional plan split. Run changed commands with real bounded inputs, including relocated S3/S2_STRONG consumers and the affected forest interface. Read the actual diff with Gemini. Reuse unchanged accepted proofs; do not restart Q₇ or recompute all historical ranks.
 
@@ -33,4 +33,8 @@ The Base and plugin authors have handed back completed files. Root read the actu
 
 Technical maintained-link check: 137 documents / 2,025 targets, zero missing; diff whitespace check passed. One complete T63 target04 has rank4096 after rebuilding 16,777,216 connectivity bits; old A10 rank1024, ten rejected illegal-input cases and two relocated frozen consumers also passed. Other historical rank families were not rerun.
 
-Status: technical implementation accepted; presentation integration, v5 tag and public deployment are not yet reported complete. Final operation receipts will be recorded in RELEASE.md.
+The presentation owner handed back `b0201075` and `e3b2f494`; Root integrated them as `f68b7982` and `2224fdd1`, preserving ownership and the existing six domains. [Presentation checks](presentation/HANDOFF.md) cover eight bilingual desktop/mobile views, play/replay to v5 and the new reader. Root inspected the actual screenshots and requested the sticky-label fix shown in the final image. Integrated maintained links: 139 documents / 2,057 targets, zero missing. The selected public build contains 78 files, no broken local references and only one added curated reader; raw archives remain private.
+
+Frozen Q7 source bytes are preserved by `.gitattributes`; the `.bin` rank inputs are explicitly binary, including the no-zero-byte prefix that Git otherwise misidentified as text. This changes Git handling, not certificate contents. Whitespace checks exclude immutable original source text and original model response text.
+
+Implementation, actual use and integration checks are complete. Publication uses the fixed [v5 release](https://github.com/lisresearchgroup/math-rsi/releases/tag/v5) and the existing [public homepage](https://lisresearchgroup.github.io/math-rsi/); operation receipts are recorded at release time. Old tags are not moved.

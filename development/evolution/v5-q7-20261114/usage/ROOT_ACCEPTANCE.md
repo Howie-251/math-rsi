@@ -18,6 +18,6 @@ Root read the actual result JSONs and modified implementation, including legalit
 
 The two unmodified frozen source consumers execute from the selected repository layout. Their direct dependencies and target04 files are bundled; the other five new T63 binary sets and the entire historical proof dependency closure are not. The CKN import, nonzero-column argument and final original-matching expansion remain explicit mathematical premises of the computation-to-theorem connection. None of this upgrades all Q7 mathematics to Lean or independently reproduced full closure.
 
-## Pending release-stage acceptance
+## Presentation and release-stage acceptance
 
-Carbon's actual implementation review and the GitHub maintainer's bilingual presentation are integrated next. Final maintained-link, selected-public-build and browser results, commit/PR/tag/deployment receipts are recorded by `../EVOLUTION.md` and the final release record. No success is inferred from a worker status indicator.
+Carbon returned Ready for integration after actual file review. The presentation owner's two commits are integrated. Root inspected the desktop evolution and mobile Chinese reader and requested the specific sticky-label fix, now shown in the final screenshot. Integrated links and the explicit public build pass; eight browser views, real play/replay to v5 and focused final CSS checks are saved under `../presentation/`. Publication is then verified through the actual GitHub PR, fixed tag, release and Pages run; no success is inferred from a worker status indicator.
