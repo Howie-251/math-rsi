@@ -8,9 +8,9 @@
 
 </div>
 
-[![MathRSI 当前真实主页的 v0 → v4 演进回放](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
+[![MathRSI v0 → v4 历史主页演进回放](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
 
-*真实主页演进回放；点击观看 MP4。[运行归属与工作稿状态](case-studies/README.md)。*
+*已录制的 v0 → v4 主页演进回放；[当前 v5 交互主页](https://lisresearchgroup.github.io/math-rsi/)。点击观看 MP4。[运行归属与工作稿状态](case-studies/README.md)。*
 
 MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Claude Code 或 Codex 完成文献调研、路线探索、证明、审阅、验证与交付。研究成果和失败经验持续用于改进工作流与插件。
 
@@ -56,7 +56,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **纠错码：** 闭合三组 1985 年已有的缺口，得到四组精确距离（含一项文献推论）并收窄一组区间。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
 - **Degree–Diameter：** 刷新四组历史构造基准，包括一个 2,567 点的 $(10,4)$ 图。[构造与证据](case-studies/degree-diameter/README.md)
 - **Erdős 第 86 题：** 渐近密度上界从 $0.60318$ 改进至 $\lt0.59155154$。[结果与核验范围](case-studies/README.md#erdős-problem-86)
-- **Ruskey–Savage：** $Q_6$ 的每个匹配均可延拓为 Hamilton 圈。[证明与证书范围](case-studies/README.md#ruskeysavage-q6)
+- **Ruskey–Savage：** $Q_6$ 的每个匹配、$Q_7$ 中至少 57 条边的每个匹配均可延拓为 Hamilton 圈。[成果、方法与开放范围](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending：** 工作稿将 $\mathrm{ES}(7)$ 上界从 78 收紧至 77，待独立审阅。[原稿与状态](case-studies/happy-ending/README.md)
 
 <a id="三层架构"></a>
@@ -90,11 +90,11 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 两条线共同演进：**共享 Base 的行为持续强化**，**领域 Plugins 持续扩展与深化**。独立的 [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) 维护流程把研究证据转成实际改动。
 
-- **v4 Base：** 从紧整数界找出必须同时成立的取等条件，通过合法交换，将容量迫出的见证接回原题。
-- **`main` 后续 Base 维护：** 当局部工作不再缩小原题缺口或完成总成本时，由两位独立只读 agent 强制重评全局进展。
-- **领域方法：** v4 深化 Happy Ending 取等／替换与 DD 插点／重放；后续 ECC 维护在精确标识的节点间复用排除结论和共同计算。
+- **v5 通用能力：** 控制辅助量，让下一步证明可行；新定理先用于已知合法表示；用固定或依输入选择的有限计划覆盖每个输入。
+- **深化 Hamilton 方法：** 受控供体与返回桥、精确兼容池计数、多省略点森林证书。Q7 研究实际采用 **v3（本地适配）**，其方法反馈 v5。
+- **继承已有能力：** v4 的取等—见证链、全局重评，以及后续 ECC 节点与共同计算复用继续保留。
 
-**[v4 是当前 release](docs/V4_CHANGES.md)，`main` 包含后续维护。** 数学成果保留实际运行归属。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
+**[v5 是 `main` 当前工作流](docs/V5_CHANGES.md)。** 可[下载 main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)或克隆，并记录精确提交。固定 v1–v4 标签不变。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
 <summary>固定版本与早期改进</summary>

@@ -1,6 +1,6 @@
 # v4: recover equality structure and deepen two existing plugins
 
-**[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) is the current harness release.** Fixed v1/v2/v3 snapshots are unchanged. This increment retains **10 base skills, six domains and 14 domain skills**; it strengthens existing workflows and plugins rather than increasing their count. The [maintenance record](../development/evolution/v4-20261108/EVOLUTION.md) owns implementation and acceptance status.
+**[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) is the preserved v4 harness release; [v5](V5_CHANGES.md) is the current workflow on `main`.** Fixed v1/v2/v3 snapshots are unchanged. This increment retains **10 base skills, six domains and 14 domain skills**; it strengthens existing workflows and plugins rather than increasing their count. The [maintenance record](../development/evolution/v4-20261108/EVOLUTION.md) owns implementation and acceptance status.
 
 ## Subsequent v4 maintenance on `main`: global reassessment
 

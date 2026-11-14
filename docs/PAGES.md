@@ -6,9 +6,9 @@ The public site serves the interactive bilingual homepage and selected six-topic
 
 ## What is published
 
-[`site/public-files.json`](../site/public-files.json) is the complete source-to-public-path allowlist. The build copies only these 76 named files: homepage HTML/CSS/JS, local fonts/KaTeX and licenses, presentation images/logo, and the selected Property B, ECC, Degree–Diameter, Erdős 86, Ruskey–Savage and Happy Ending readers. Individual rendered reports/PDFs stored under source archives are promoted into `readers/`; archive trees, evidence directories, raw reviews, research logs, source trees and build caches are not copied.
+[`site/public-files.json`](../site/public-files.json) is the complete source-to-public-path allowlist. The build copies only these 77 named files: homepage HTML/CSS/JS, local fonts/KaTeX and licenses, presentation images/logo, and the selected Property B, ECC, Degree–Diameter, Erdős 86, Ruskey–Savage and Happy Ending readers. Individual rendered reports/PDFs stored under source archives are promoted into `readers/`; archive trees, evidence directories, raw reviews, research logs, source trees and build caches are not copied.
 
-Mathematical text and its stated assurance remain those of the selected readers.
+The curated bilingual Q7 page presents the ≥57-edge theorem, the exact open scope and v3-local-adaptation → v5 provenance. It adds no raw Q7 research logs or certificate archive. Mathematical text and its stated assurance remain those of the selected readers.
 
 The old offline packager is broader and recursively follows small linked files. It is not used for public publication. [`tools/build_public_site.py`](../tools/build_public_site.py) reuses its URL-adaptation approach with this explicit list. It rewrites local HTML/CSS/JS references, including the dynamic six-topic Read links. Selected materials resolve locally; other available sources link to GitHub with an access notice. Unavailable references retain their labels with disabled links. No linked file is automatically added.
 

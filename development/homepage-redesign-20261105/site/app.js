@@ -3,6 +3,7 @@
 const NS = 'http://www.w3.org/2000/svg';
 const GH = 'https://github.com/lisresearchgroup/math-rsi';
 const REPO = '../../../';
+const Q7_TIME = 8100;
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -38,16 +39,16 @@ const CASES = [
     status: 'Exact certificate · no Lean',
     read: REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
     quant: () => `<div class="qbig"><span class="prev">0.60318</span><span>→</span><b>≤ 0.59155154</b></div><p class="qnote">Asymptotic edge density of C₄-free subgraphs of Qₙ; the conjectured 1/2 remains open.</p>` },
-  { id: 'q6', short: 'Ruskey–Savage Q₆', title: 'Every matching in Q₆ extends to a Hamilton cycle',
-    status: 'Computational proof · original audit provisional',
-    read: REPO + 'plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', plugin: GH + '/tree/main/plugins/hypercube-hamilton',
-    quant: () => `<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Also ≤ 6 directions in any dimension, with imported results.</p>` },
+  { id: 'q6', short: 'Ruskey–Savage', title: () => t >= Q7_TIME ? 'From Q₆ to dense Q₇ matchings' : 'Every matching in Q₆ extends to a Hamilton cycle',
+    status: () => t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · original audit provisional',
+    read: () => t >= Q7_TIME ? 'q7.html' : REPO + 'plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', plugin: GH + '/tree/main/plugins/hypercube-hamilton',
+    quant: () => `${t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → v5 feedback. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Also ≤ 6 directions in any dimension, with imported results.</p>` },
   { id: 'he', short: 'Happy Ending', title: 'A tighter upper bound for convex heptagons',
     status: '75/76/77 working proofs · independent review pending',
     read: REPO + 'case-studies/happy-ending/n7-20261103/START_HERE.html', plugin: GH + '/tree/main/plugins/happy-ending',
     quant: () => `<div class="qrow"><span><b>≤ 75</b><i>N(7,6,7)</i></span><span><b>≤ 76</b><i>N(7,7,7)</i></span><span><b>≤ 77</b><i>ES(7)</i></span></div><p class="qnote">Received working proofs, pending independent review. The archived draft gave 76 / 77 / 78 for these same three quantities.</p><div class="qrow he-witness"><span><b>25</b><i>abstract point witness, checked separately</i></span></div>` }
 ];
-const CN = { pb: 'Property B', ecc: 'ECC', dd: 'Degree–Diameter', e86: 'Erdős 86', q6: 'Ruskey–Savage Q₆', he: 'Happy Ending' };
+const CN = { pb: 'Property B', ecc: 'ECC', dd: 'Degree–Diameter', e86: 'Erdős 86', q6: 'Ruskey–Savage', he: 'Happy Ending' };
 const CI = {}; CASES.forEach((c, i) => { CI[c.id] = i; });
 
 // k: result | draft (working result family) | evidence | open | progress   e: grow (built in workflow) | drop (research incorporated) | fade
@@ -78,7 +79,9 @@ const MS = [
   { c:'he', v:4, k:'draft', e:'drop', t:6600, tag:'Structural upper-bound family · working proofs', text:'Received manuscripts give N(7,6,7) ≤ 75 and N(7,7,7) ≤ 76, hence ES(7) ≤ 77. These tighten the archived 76 / 77 / 78 draft; independent review is pending. v4 incorporates this research and its reusable methods.' },
   { c:'dd', v:4, intake:true, k:'result', e:'drop', t:6750, tag:'New (10,4) result · run with v2', text:'2,566 → 2,567 vertices: a 10-regular graph of diameter 4, exceeding the Comellas entry checked 2026-11-05. Produced with MathRSI v2 + DD (including the PR #7 handoff repair). This result feeds v4; it was not produced by v4.' },
   { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7000, tag:'Original run verification', text:'Independent all-roots BFS covers 2,567 roots. The original Fin 2567 Lean theorem and independent import passed, using only the standard three axioms. External formal C review remains incomplete; the portable materials include receipts, not a full Lean rebuild.' },
-  { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7050, tag:'Updated catalogue', text:'163 graph instances / 44 parameter pairs / 49 completed concrete-graph Lean instances. The ten new orders 2,558–2,567 add one parameter pair and two completed Lean instances; these are catalogue totals, not 163 records.' }
+  { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7050, tag:'Updated catalogue', text:'163 graph instances / 44 parameter pairs / 49 completed concrete-graph Lean instances. The ten new orders 2,558–2,567 add one parameter pair and two completed Lean instances; these are catalogue totals, not 163 records.' },
+  {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8100, "tag": "Q₇ dense-matching theorem", "text": "Every Q₇ matching with at least 57 edges extends to a Hamilton cycle containing every prescribed edge. Run: v3 (local adaptation); methods feed v5."},
+  {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8300, "tag": "56-edge structure families", "text": "At 56 edges, μ=2 and μ=4 classes and several μ=3 families are complete. Full Q₇, P7 and seven-direction extension remain open."}
 ];
 const isOutcome = m => m.k === 'result' || m.k === 'draft';
 const CALLOUTS = [
@@ -91,7 +94,8 @@ const CALLOUTS = [
   { c:'q6', v:3, t:5200, kind:'intro', value:'Every Q₆ matching lies in', detail:'a Hamilton cycle' },
   { c:'he', v:3, t:5450, kind:'intro', value:'ES(7) ≤ 78' },
   { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'2,566 → 2,567', detail:'(10,4) · Run: v2' },
-  { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' }
+  { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' },
+  {"c": "q6", "v": 5, "t": 8100, "row": 0, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"}
 ];
 
 const VERS = [
@@ -115,13 +119,53 @@ const VERS = [
     fullBase:['Full-domain counterexamples & accepted best (from Erdős 86)','Marked root/target/edge preservation across reductions','Finite rank bridges & legal failed-pool reuse','Explicit Lean premise audit & 5-stage wiki read/write/reuse'],
     plug:[['deep','ECC','ecc'],['add','Extremal','e86'],['add','Hamilton','q6'],['add','Happy Ending','he']],
     sum:'v3 release. Four strengthened evidence-loop actions, explicit 5-stage wiki reuse, an in-place ECC upgrade and three newly incorporated domains.' },
-  { tag:'v4', state:'Current', name:'Equality structure & deeper plugins',
+  { tag:'v4', state:'Release', name:'Equality structure & deeper plugins',
     base:[["Turn equality into a usable witness", "he", "Recover simultaneous equality conditions, make a legal exchange, and connect the resulting witness to the original problem."], ["Mandatory global progress checks", "", "When local work stops reducing the original gap, two independent agents reassess the route and total cost; use their findings to choose the next action.", "Research feedback · main maintenance"]],
     fullBase:['Implemented in route-loop, prove and verify: same-object equality chain → legal equal-size exchange → capacity-forced, endpoint-compatible witness','Subsequent maintenance on main: mandatory independent global progress checks ask whether reductions improve the original completion path; the fixed v4 snapshot is unchanged.'],
     plug:[['deep','Happy Ending','he'],['deep','DD','dd'],['deep','ECC · main','ecc'],['note','Other 3 domains retained']],
     pluginNote:'ECC on main: reuse exclusions and share computations.',
-    sum:'v4 is the current release. The existing base now connects equality-chain recovery, legal exchanges and endpoint-compatible witnesses. Happy Ending adds the 75/76/77 working-proof methods and counterexamples; DD incorporates local capacity-freeing edits and exact replay examples from the (10,4) result produced with v2 + DD.' },
-  { tag:'v5+', state:'Future', name:'Next research, next evolution',
+    sum:'v4 connected equality-chain recovery, legal exchanges and endpoint-compatible witnesses. Happy Ending and DD methods deepened; later main maintenance added global reassessment and ECC node reuse. v5 inherits these capabilities.' },
+  {
+  "tag": "v5",
+  "state": "Current",
+  "name": "Controlled choices & theorem reuse",
+  "base": [
+    [
+      "Control auxiliary choices",
+      "q6",
+      "Choose legal auxiliary objects so the actual successor meets the next proof step."
+    ],
+    [
+      "Reuse theorems before more work",
+      "q6",
+      "Apply new results across known legal representations; work on what all gates leave open."
+    ],
+    [
+      "Cover inputs with conditional plans",
+      "q6",
+      "Use a fixed universal plan or a finite set whose applicable branch follows from the actual input."
+    ]
+  ],
+  "fullBase": [
+    "Separate the original input, legal auxiliary choices and the actual successor; construct the interface the next theorem needs.",
+    "Consume new theorems across known legal splits, transports and monotone completions before dispatching the residual domain.",
+    "Check fixed or conditional finite plans for complete input coverage and original-edge-preserving expansion."
+  ],
+  "plug": [
+    [
+      "deep",
+      "Hamilton",
+      "q6"
+    ],
+    [
+      "note",
+      "Other 5 domains retained"
+    ]
+  ],
+  "pluginNote": "Q7 research: v3 local adaptation → v5 methods.",
+  "sum": "v5 turns Q7 research into controlled auxiliary choices, cross-representation theorem reuse and fixed or conditional finite-plan coverage. The research ran with v3 (local adaptation); the full Q7 conjecture remains open."
+},
+  { tag:'v6+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
     fullBase:['Open continuation — next research cycle feeds the next workflow evolution'],
     plug:[['note','New research → new tools']],
@@ -133,10 +177,10 @@ const LAST = VERS.length - 2, FUTURE = VERS.length - 1;
 const H = 326, GUT = 80, COL = 232, W = GUT + COL * VERS.length, SPINE = 296, BASE = 284;
 const BW = 26, BH = 28, STEP = 32, PITCH = 36, X0 = 92;
 const cx = i => GUT + COL * i + COL / 2;
-const R = [300, 1700, 3600, 5000, 6600], STOP = [1100, 2400, 4400, 6000, 7400], T = STOP[LAST];
-const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600]];
-const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[T,4]];
-const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600]];
+const R = [300, 1700, 3600, 5000, 6600, 8000], STOP = [1100, 2400, 4400, 6000, 7400, 9000], T = STOP[LAST];
+const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600]];
+const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[7400,4],[8000,5],[T,5]];
+const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600],[7400,8000]];
 
 // Only a domain's first outcome opens a horizontal slot. Later outcomes grow upward.
 const domainDebuts = CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m)).sort((a, b) => a.t - b.t)[0]);
@@ -416,6 +460,7 @@ function paintTraceHint(id) {
   if (!hint) return;
   if (!id) hint.textContent = 'Choose a case to follow its results across versions.';
   else if (id === 'he') hint.textContent = 'Happy Ending · ES(7) upper bound 78 → 77; the 25-point witness is separate.';
+  else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ theorem → dense Q₇ matchings. Run: v3 (local adaptation); feedback for v5.';
   else if (id === 'dd') hint.textContent = 'Degree–Diameter · earlier research → v2 plugin → new (10,4) result with v2 → feedback for v4.';
   else hint.textContent = `${CN[id]} · follow this case; repeated blocks carry earlier results forward.`;
 }
@@ -428,7 +473,7 @@ function focusCase(id, mi = null, force = false) {
   if (!focus) fline.setAttribute('points', '');
   panelKey = ''; apply();
 }
-function vlabel(m) { return m.intake ? 'v4 intake' : m.span ? 'v1–v2' : VERS[m.v].tag; }
+function vlabel(m) { return m.intake ? `${VERS[m.v].tag} intake` : m.span ? 'v1–v2' : VERS[m.v].tag; }
 function ddPath() {
   const later = t < 6750 ? ' later' : '';
   return `<ol class="p-path" aria-label="Degree–diameter research and harness feedback">
@@ -448,7 +493,7 @@ function renderPanel(sel) {
   if (key === panelKey) return; panelKey = key;
   if (!focus) {
     const V = VERS[sel];
-    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === LAST ? eccMaintenance() : ''}</div>
+    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === LAST ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a></p>' : ''}</div>
       <div><p class="p-eye">Shared base &amp; workflow details in ${V.tag}</p>
       <ul class="p-vlist">${V.fullBase.map(item => `<li>${item}</li>`).join('')}</ul>
       <p class="p-foot">Choose a change label or colored result block to inspect its conclusions and proof evidence.</p></div>`;
@@ -456,9 +501,9 @@ function renderPanel(sel) {
   }
   const c = CASES[CI[focus]];
   const items = list.slice().sort((a, b) => a[0].v - b[0].v || a[0].t - b[0].t);
-  panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${c.title}</h3>${c.quant()}
+  panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${typeof c.title === 'function' ? c.title() : c.title}</h3>${c.quant()}
       <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}${c.id === 'ecc' ? eccMaintenance() : ''}
-      <p class="p-links"><a href="${c.read}">Read the proof ↗<span class="source-language" data-no-i18n>${["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
+      <p class="p-links"><a href="${typeof c.read === 'function' ? c.read() : c.read}">${c.id === "q6" && t >= Q7_TIME ? "Result & methods ↗" : "Read the proof ↗"}<span class="source-language" data-no-i18n>${c.id === "q6" && t >= Q7_TIME ? "EN + 中文" : ["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
     <div style="--c:var(--${c.id})"><p class="p-eye">Mathematical results</p><ol class="p-ms">${items.filter(([m]) => isOutcome(m)).map(([m, i]) => {
       const on = t >= m.t;
       return `<li class="${on ? '' : 'later'}${hl === i ? ' hl' : ''}"><span class="p-v">${vlabel(m)}</span><span class="p-k k-${m.k}">${m.tag}</span><span class="p-t">${m.text}${on ? '' : `<em>appears at ${vlabel(m)}</em>`}</span></li>`;
@@ -694,7 +739,7 @@ bindWordmark();
 
 const r = stage.getBoundingClientRect();
 if (!reduce && r.top < innerHeight * .8 && r.bottom > 0) {
-  t = 0; apply();                                   // one intentional entry: v0 → v4, then rest on the current release
+  t = 0; apply();                                   // one intentional entry: v0 → v5, then rest on the current release
   setTimeout(() => { if (!touched) play(); else if (!mode && t === 0) { t = T; apply(); } }, 250);
 } else {
   t = T; apply();                                   // final state by default

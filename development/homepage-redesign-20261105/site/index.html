@@ -48,7 +48,7 @@
 
   <section id="evolution" class="evo wrap" aria-labelledby="evo-h">
     <h2 id="evo-h" class="evo-title">MathRSI evolution: base workflow &amp; domain plugins</h2>
-    <p class="evo-deck">v0: standalone research tools. v1–v3: shared harness releases. v4: current release, strengthened by Happy Ending and Degree–Diameter research.</p>
+    <p class="evo-deck">v0: standalone tools. v1–v4: shared harness releases. v5: controlled choices and theorem reuse, informed by Q7 research run with v3.</p>
     <div class="fig-head">
       <div class="ctls">
         <button class="ctl primary" id="play" type="button"></button>
@@ -66,7 +66,7 @@
     <p class="scroll-hint">Swipe to explore versions →</p>
     <div class="scroller" id="scroller">
       <div class="stage" id="stage">
-        <svg class="sky" id="sky" viewBox="0 0 1472 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. Proof tools are recorded separately."></svg>
+        <svg class="sky" id="sky" viewBox="0 0 1704 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. v5 incorporates the Q₇ ≥57-edge theorem and 56-edge structure families from a v3 local-adaptation run; full Q₇ remains open. Proof tools are recorded separately."></svg>
         <div class="lanes" id="lanes"></div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/></svg>One block = one result or result family</span>
         <span>Color identifies the research problem</span>
       </div>
-      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope.</p>
+      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope. <a href="q7.html">Q₇: ≥57-edge matchings extend; Run: v3 (local adaptation) → v5 feedback.</a></p>
     </div>
 
     <div class="panel" id="panel" aria-live="polite"></div>
@@ -181,7 +181,7 @@
         <div class="viz" data-viz="q6" role="img" aria-label="Projection of the six-dimensional cube with a Hamilton cycle and red matching edges on it"></div>
         <p class="vcap">Illustration · one matching (red) inside one Hamilton cycle of Q₆</p>
         <p class="r-problem"><b>Ruskey–Savage conjecture</b><span>Hamilton cycles in hypercubes</span></p>
-        <h3>Settling the six-dimensional Ruskey–Savage case</h3>
+        <h3>From Q₆ to dense Q₇ matchings</h3>
         <div class="r-fig">
           <p class="r-thm"><span class="r-thm-h">Theorem</span>In <span class="math" data-tex="Q_6"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mn>6</mn></msub></mrow><annotation encoding="application/x-tex">Q_6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>, every matching extends to a Hamilton cycle.</p>
           <p class="r-thm"><span class="r-thm-h">Corollary</span>With imported results, for every <span class="math" data-tex="n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>, any matching in <span class="math" data-tex="Q_n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Q_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> that uses at most six directions extends to a Hamilton cycle.</p>
@@ -189,6 +189,7 @@
         </div>
         <p class="r-why"><b>Why it matters</b> Any set of disjoint edges in the six-dimensional cube can be included in one cycle visiting all 64 vertices. This settles the six-dimensional case; the general conjecture remains open.</p>
         <p class="r-how"><b>Method</b> A finite forest-rank certificate covers the universal matching family.</p>
+        <aside class="q7-update"><strong>Q₇ · every matching with ≥57 edges</strong><p>A Hamilton cycle on all 128 vertices retains every prescribed edge. At 56 edges, complete structure families are available; full Q₇ remains open.</p><p>Run: v3 (local adaptation) → methods feed v5.</p><a href="q7.html">Q7 result & methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a></aside>
         <div class="meta"><span class="status">Computational proof · audit provisional</span><a href="../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html">Read ↗<span class="source-language" data-no-i18n>中文</span></a><button class="trace" type="button" data-case="q6">Trace in evolution ↑</button></div>
         <details><summary>Scope &amp; verification</summary><p>Finite replay rebuilds 1,048,576 connectivity bits and proves rank 1024 for 1024 forests. The whole-proof audit is same-family and provisional; no Lean.</p></details>
       </article>
@@ -261,7 +262,7 @@ Use mathrsi-research on &lt;your problem&gt;</code></pre>
       <div><h3>Project</h3>
         <a href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a>
         <a href="https://github.com/lisresearchgroup/math-rsi#readme">README ↗</a>
-        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V4_CHANGES.md">v4 changes ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V5_CHANGES.md">v5 changes ↗</a>
       </div>
       <div><h3>How it works</h3>
         <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/DOMAIN_ROUTING.md">Domain routing ↗</a>

@@ -66,7 +66,7 @@ button{font:inherit;color:inherit}
 .scroll-hint{display:none;font-size:13px;color:var(--muted);margin:0 0 6px}
 .scroller{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
 .evo.wrap{max-width:1600px}
-.stage{min-width:1300px;width:100%}
+.stage{min-width:1504px;width:100%}
 .sky{display:block;width:100%;height:auto;overflow:visible;user-select:none}
 .band{fill:var(--band);opacity:0;transition:opacity .35s var(--ease-out)}
 .band.on{opacity:1}
@@ -93,7 +93,7 @@ button{font:inherit;color:inherit}
 .axis-hit:focus-visible{stroke:var(--accent);stroke-width:2;stroke-dasharray:4 4}
 
 /* lanes */
-.lanes{display:grid;grid-template-columns:5.4348% repeat(6,minmax(0,1fr))}
+.lanes{display:grid;grid-template-columns:4.6948% repeat(7,minmax(0,1fr))}
 .lane-lab{padding:16px 0 0 4px;font:600 13px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .cell{position:relative;isolation:isolate;text-align:center;font-size:14px;line-height:1.45;padding:14px 14px 16px}
 .cell::before{content:"";position:absolute;inset:0 2.6%;background:var(--band);z-index:-1;opacity:0;transition:opacity .35s var(--ease-out)}
@@ -628,3 +628,20 @@ html:lang(zh-CN) #results :is(.card h3,.r-thm-h,.r-why b,.r-how b){letter-spacin
 html:lang(zh-CN) :is(.sub,.sec-head h2,.card h3,.panel h3,.evo-title){line-height:1.45}
 @media(max-width:860px){.nav-actions{gap:18px}}
 @media(max-width:640px){.nav-actions{gap:12px}.language-switch{gap:1px}.language-switch button{padding-inline:4px}}
+
+/* Q7 uses the existing Hamilton domain and a compact reader, not a new animation. */
+.q7-update{margin:18px 0;padding:14px 16px;border-left:3px solid var(--q6);background:color-mix(in srgb,var(--q6) 5%,white);font-size:14px;line-height:1.55}
+.q7-update strong{display:block;margin-bottom:4px;color:var(--ink)}
+.q7-update p{margin:4px 0}
+.q7-reader{max-width:964px;padding-top:48px;padding-bottom:60px}
+.q7-reader h1{font-size:clamp(30px,5vw,46px);letter-spacing:-.03em;line-height:1.15;margin:12px 0 22px}
+.q7-reader h2{font-size:25px;letter-spacing:-.02em;margin:38px 0 12px}
+.q7-reader p,.q7-reader li{max-width:76ch;color:var(--ink-2)}
+.q7-reader .q7-lead{font-size:21px;line-height:1.5;color:var(--ink);font-weight:550}
+.q7-provenance{font-size:14px;color:var(--q6)!important;font-weight:600}
+.q7-schematic{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:24px 18px;background:var(--surface);border:1px solid var(--hair);border-radius:12px;margin-top:26px}
+.q7-schematic div{flex:1;text-align:center}
+.q7-schematic b{display:block;font-size:32px;color:var(--q6)}
+.q7-schematic div span{display:block;font-size:13px;line-height:1.45}
+.q7-open{border-left:3px solid var(--q6);padding:14px 18px;background:var(--surface)}
+@media(max-width:640px){.q7-reader{padding-top:32px}.q7-schematic{gap:8px;padding:18px 10px}.q7-schematic b{font-size:26px}.q7-schematic div span{font-size:12px}}

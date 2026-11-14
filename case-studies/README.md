@@ -46,6 +46,14 @@ The whole-proof audit remains **same-family/provisional**, with no Lean. The bou
 
 [Plugin and mathematics](../plugins/hypercube-hamilton/README.md) · [Finite replay and whole-proof boundary](../plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md) · [Domain skill](../plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)
 
+### Q7: dense matchings and reusable construction methods
+
+**Every matching with at least 57 edges in the 128-vertex Q7 extends to a Hamilton cycle containing all prescribed edges.** At 56 edges, the μ=2 and μ=4 structure classes and several μ=3 families are complete. Full Q7, the stronger P7 path statement and seven-direction extension remain open; structure classes are not progress percentages.
+
+The research ran with **MathRSI v3 (local adaptation)**. Its controlled donor/return-bridge methods, exact compatible-pool counting and finite-plan coverage feed v5; v5 is the receiving workflow version, not the version that solved these cases.
+
+[Q7 results, methods and evidence scope](ruskey-savage-q7/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/q7.html) · [v5 changes](../docs/V5_CHANGES.md)
+
 ## Happy Ending
 
 **Working manuscripts; independent review pending.** Received structural manuscripts claim $N(7,6,7)\le75$ and $N(7,7,7)\le76$, hence the geometric threshold $\mathrm{ES}(7)\le77$, improving the prior 76/77/78 chain. The stronger 74-point statement holds only for specified subclasses.
@@ -56,6 +64,6 @@ These manuscripts remain **same-session / unreviewed / unaccepted**, without com
 
 ## Research provenance and workflow feedback
 
-Property B was researched with ARIS and distilled into MathRSI. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix connections and portable evidence. Earlier DD work informed v2; the later 2,567 graph actually used that version. Erdős 86, Q6 and older Happy Ending evidence informed v3; the later Happy Ending manuscripts and DD methods informed v4. Incorporation retains those histories; it does not attribute every result to a run of the receiving release.
+Property B was researched with ARIS and distilled into MathRSI. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix connections and portable evidence. Earlier DD work informed v2; the later 2,567 graph actually used that version. Erdős 86, Q6 and older Happy Ending evidence informed v3; the later Happy Ending manuscripts and DD methods informed v4. Q7 dense-matching research used v3 with local adaptations and feeds v5. Incorporation retains those histories; it does not attribute every result to a run of the receiving release.
 
 [Version and maintenance records](../development/README.md) preserve the actual changes and bounded uses. No equal-budget speedup or long-task success-rate claim is established by these presentation pages. New research uses its own [task workspace](../docs/WORKSPACE.md); archived Goals stay historical.
