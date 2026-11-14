@@ -37,4 +37,4 @@ The presentation owner handed back `b0201075` and `e3b2f494`; Root integrated th
 
 Frozen Q7 source bytes are preserved by `.gitattributes`; the `.bin` rank inputs are explicitly binary, including the no-zero-byte prefix that Git otherwise misidentified as text. This changes Git handling, not certificate contents. Whitespace checks exclude immutable original source text and original model response text.
 
-Implementation, actual use and integration checks are complete. Publication uses the fixed [v5 release](https://github.com/lisresearchgroup/math-rsi/releases/tag/v5) and the existing [public homepage](https://lisresearchgroup.github.io/math-rsi/); operation receipts are recorded at release time. Old tags are not moved.
+Implementation, actual use and integration checks are complete. Publication uses the fixed [v5 release](https://github.com/lisresearchgroup/math-rsi/releases/tag/v5) and the existing [public homepage](https://lisresearchgroup.github.io/math-rsi/); the [release record](RELEASE.md) links PR #32 and its operation receipts. Old tags are not moved.
