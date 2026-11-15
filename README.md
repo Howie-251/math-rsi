@@ -123,6 +123,12 @@ Workflow and scripts are **[MIT licensed](LICENSE)**. Archived papers and third-
 
 ## 7. 👥 Contributors
 
+### Core Contributors
+
 Ruofeng&nbsp;Yang<sup>&#42;</sup>, Haitong&nbsp;Ma<sup>&#42;</sup>, Kaitao&nbsp;Qiu, Zuhao&nbsp;Zhang, Jiaxuan&nbsp;Sun, Tianzhi&nbsp;Ren, Shuai&nbsp;Li<sup>#</sup>
 
 <sup>&#42;</sup> Equal contribution. <sup>#</sup> Corresponding author.
+
+### Contributors
+
+Haitham&nbsp;Bou&nbsp;Ammar, Dimitris&nbsp;Tsaras, Rasul&nbsp;Tutunov, Jun&nbsp;Wang, Kuan&nbsp;Yang, Qiaosheng&nbsp;Zhang, Zhinuo&nbsp;Zhou
