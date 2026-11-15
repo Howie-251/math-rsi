@@ -86,6 +86,7 @@ window.MATHRSI_ZH = {
   "Show MathRSI harness v5: Controlled choices & theorem reuse": "显示 MathRSI v5：控制选择与定理复用",
   "Show MathRSI harness v6+: Next research, next evolution": "显示 MathRSI v6+：下一轮研究，下一轮演进",
   "Ruskey–Savage: Q₇ · ≥57 edges, 128 vertices · Run: v3. Inspect this result.": "Ruskey–Savage：Q₇ · ≥57 条边，128 个顶点 · 运行：v3。查看此结果。",
+  "Listed alphabetically by surname.": "按姓氏字母顺序排列。",
   "Core Contributors": "核心贡献者",
   "Contributors": "贡献者",
   "Contributors ↓": "贡献者 ↓",
