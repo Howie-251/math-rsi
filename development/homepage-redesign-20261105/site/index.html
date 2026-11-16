@@ -141,22 +141,15 @@
         <div class="viz" data-viz="dd" role="img" aria-label="The Petersen graph"></div>
         <p class="vcap">Illustration · Petersen graph, degree 3 and diameter 2</p>
         <p class="r-problem"><b>Degree–diameter problem</b><span>Largest graphs</span></p>
-        <h3>More vertices at diameter five</h3>
+        <h3>Our best constructions by setting</h3>
         <div class="r-fig">
-          <table class="r-table">
-            <thead><tr><th scope="col">Degree, diameter</th><th scope="col">Previous local</th><th scope="col">Latest</th><th scope="col"><span class="sr">Local gain</span></th></tr></thead>
-            <tbody>
-              <tr class="is-new"><th scope="row">(11, 5)</th><td class="prev">37,631</td><td class="new">37,632</td><td class="gain">+1</td></tr>
-              <tr class="is-new"><th scope="row">(12, 5)</th><td class="prev">42,402</td><td class="new">42,433</td><td class="gain">+31</td></tr>
-            </tbody>
-          </table>
-          <p class="r-note">Local gains above. Against Comellas 2026-11-16 (37,631 / 42,352), gains are +1 / +81.</p>
-          <p class="r-sub">Run: v4 + local updates → v5 main maintenance.</p>
+          <p class="r-note">Latest project construction in each showcased setting.</p>
+          <p class="r-sub">D5 follow-up run: v4 + local updates → v5 main maintenance.</p>
         </div>
-        <p class="r-why"><b>Why it matters</b> More vertices fit at maximum degree 11 or 12 and diameter exactly five.</p>
-        <p class="r-how"><b>Method</b> Preserve the source for D12; bind the geometric core and check the boundary for D11.</p>
-        <div class="meta"><span class="status">Two D5 endpoint improvements</span><a href="dd-latest.html">Read latest results ↗<span class="source-language" data-no-i18n>EN + 中文</span></a><a href="dd-10-4.html">Historical (10,4) ↗<span class="source-language" data-no-i18n>EN</span></a><button class="trace" type="button" data-case="dd">Trace in evolution ↑</button></div>
-        <details><summary>Scope &amp; verification</summary><p>Both finals regenerate exactly. D12 inherits old–old distances from the preserved source and checks all 31 new roots. D11 core–core distances depend on H9 geometry and literal binding; all 161 peripheral/new roots were checked. Concrete end-to-end Lean instances and source final-review obligations remain open. Earlier (10,4) and (16,4) results retain their dated comparisons and have been overtaken in the current table.</p></details>
+        <p class="r-why"><b>Why it matters</b> More vertices under the same degree and diameter limits, with each setting retaining its own best construction.</p>
+        <p class="r-how"><b>D5 method</b> Preserve the source for D12; bind the geometric core and check the boundary for D11.</p>
+        <div class="meta"><span class="status">Four showcased settings</span><a href="dd-latest.html">Results & methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a><a href="dd-10-4.html">Historical (10,4) ↗<span class="source-language" data-no-i18n>EN</span></a><button class="trace" type="button" data-case="dd">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Latest D5 finals regenerate exactly. D12 inherits old–old distances from the preserved source and checks all 31 new roots. D11 core–core distances depend on H9 geometry and literal binding; all 161 peripheral/new roots were checked. Concrete end-to-end Lean instances for the new D5 endpoints and source final-review obligations remain open. Earlier (10,4) and (16,4) results retain their dated comparisons and have been overtaken in the current table.</p></details>
       </article>
 
       <article class="card" style="--c:var(--e86)">

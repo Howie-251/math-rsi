@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-v5-dd-layout-20261116'
+CACHE = ROOT / '.local/evolution-media-dd-settings-20261116'
 FPS = 20
 CLOCK_RATE = 0.25  # Browser-clock milliseconds per encoded-video millisecond.
 OPENING_SECONDS = 1
@@ -41,6 +41,7 @@ body {background:white; overflow:hidden;}
 #evolution .vstate {font-size:18px;}
 #evolution .vname {font-size:18px; line-height:1.25;}
 #evolution .delta-tag[data-v="5"] .delta-value {font-size:20px;}
+#evolution .delta-tag[data-c="dd"] .delta-value {font-size:16px;}
 '''
 
 
@@ -190,6 +191,7 @@ def capture(preview=False):
             assert current in status and 'Current' in status, status
             assert [x['state'].split('Origins')[0].split('Release')[0].split('Current')[0] for x in states] == expected, states
             assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7','dd']), final
+            assert all(line in final['dd']['text'] for line in ['(11,5) 37,631 → 37,632','(12,5) 42,402 → 42,433']), final['dd']
             assert len(final['ddBlocks']) == 6 and all(b['opacity'] == 1 for b in final['ddBlocks']), final
             assert max(final[k]['box']['bottom'] for k in ['q7','dd']) < min(b['box']['top'] for b in final['ddBlocks']), final
             for rect in [final['q7']['box'], final['dd']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['ddBlocks']]]:

@@ -8,7 +8,7 @@
 
 </div>
 
-[![MathRSI 当前主页 v0 → v5 演进回放](figures/mathrsi/media/evolution.gif?v=5-dd-20261116)](figures/mathrsi/media/evolution.mp4?v=5-dd-20261116)
+[![MathRSI 当前主页 v0 → v5 演进回放](figures/mathrsi/media/evolution.gif?v=5-dd-settings-20261116)](figures/mathrsi/media/evolution.mp4?v=5-dd-settings-20261116)
 
 *真实主页 v0 → v5 演进回放，末尾停留 v5 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/)。[运行归属与工作稿状态](case-studies/README.md)。*
 
@@ -50,11 +50,11 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 六个领域的研究同时积累数学结果和可复用方法。[公开主页](https://lisresearchgroup.github.io/math-rsi/) · [本地运行方法](docs/HOMEPAGE.md)。**[中英可视化导览](https://lisresearchgroup.github.io/math-rsi/)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
-[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg?v=5-dd-20261116)](case-studies/README.md)
+[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg?v=5-dd-settings-20261116)](case-studies/README.md)
 
 - **Property B：** $k=5,\ldots,12$ 的具体下界，以及所有 $k\ge12$ 随参数指数增长的加性增益。[成果与证明范围](case-studies/property-b/README.md)
 - **纠错码：** 闭合三组 1985 年已有的缺口，得到四组精确距离（含一项文献推论）并收窄一组区间。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
-- **Degree–Diameter：** $(11,5)$ 达 37,632 点、 $(12,5)$ 达 42,433 点，相对 2026-11-16 核对的 Comellas 表分别增 1 与 81 点。[成果与核验范围](case-studies/degree-diameter/README.zh-CN.md)
+- **Degree–Diameter：** 四组展示参数的构造： $(10,4)$ 为 2,567 点； $(11,5)$ 为 37,632 点； $(12,5)$ 为 42,433 点； $(16,4)$ 为 16,416 点。[构造、日期比较与核验范围](case-studies/degree-diameter/README.zh-CN.md)
 - **Erdős 第 86 题：** 渐近密度上界从 $0.60318$ 改进至 $\lt0.59155154$。[结果与核验范围](case-studies/README.md#erdős-problem-86)
 - **Ruskey–Savage：** $Q_6$ 的每个匹配、$Q_7$ 中至少 57 条边的每个匹配均可延拓为 Hamilton 圈。[成果、方法与开放范围](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending：** 工作稿将 $\mathrm{ES}(7)$ 上界从 78 收紧至 77，待独立审阅。[原稿与状态](case-studies/happy-ending/README.md)

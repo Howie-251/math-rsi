@@ -1,8 +1,19 @@
-# Degree–diameter: 37,632 and 42,433 vertices at diameter five
+# Degree–diameter: our best constructions by setting
 
-**New endpoints: 37,632 vertices for (11,5) and 42,433 for (12,5).** These improve the Comellas entries checked on 16 November 2026 by **+1 and +81**. The increases over our previous local constructions are separately **+1 and +31**.
+**Our constructions across four showcased settings:** **2,567** vertices at (10,4), **37,632** at (11,5), **42,433** at (12,5) and **16,416** at (16,4). New results update their own setting; earlier achievements in other settings remain.
 
 [Latest bilingual result and methods](../../development/homepage-redesign-20261105/site/dd-latest.html) · [中文版](README.zh-CN.md) · [Historical illustrated case](index.html)
+
+## Results by setting
+
+| (Δ,D) | Vertices in our construction |
+| --- | ---: |
+| (10,4) | **2,567** |
+| (11,5) | **37,632** |
+| (12,5) | **42,433** |
+| (16,4) | **16,416** |
+
+These are four highlighted settings, rather than the full historical 44-pair catalogue or claims of current global optimality. Dated public comparisons remain separate below; the new D5 results do not replace (10,4) or (16,4).
 
 ## Latest results · 16 November 2026
 

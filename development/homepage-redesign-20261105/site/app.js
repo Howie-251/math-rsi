@@ -32,10 +32,10 @@ const CASES = [
     status: 'Exact distances · 45/11 remains open',
     read: REPO + 'plugins/ecc/archive/source/paper/main.pdf', plugin: GH + '/tree/main/plugins/ecc',
     quant: () => `<p class="q-closed">${t >= 3400 ? '4' : '3'} exact optimal distances</p><div class="qrow">${[['43,10','16'],['44,10','17'],['44,11','16'],...(t >= 3400 ? [['42,16','12']] : [])].map(([p,v])=>`<span><b>${v}</b><i>d₂(${p})</i></span>`).join('')}<span class="open"><b>16–17</b><i>d₂(45,11) · open</i></span></div><p class="qnote">For each code length n and dimension k, d₂(n,k) is the largest achievable minimum distance. “Exact” means a construction meets the upper bound. ${t >= 3400 ? 'The fourth value, d₂(42,16)=12, applies a published 2020 theorem.' : 'The original exclusion fixes the three values shown.'}</p>` },
-  { id: 'dd', short: 'Degree–Diameter', title: () => t >= DD_TIME ? 'More vertices at diameter five' : 'Larger graphs within the same degree and diameter',
-    status: () => t >= DD_TIME ? 'Two D5 endpoints · end-to-end Lean open' : t >= 6750 ? 'New (10,4) result produced with MathRSI v2 + DD' : 'Three dated table comparisons from earlier research',
+  { id: 'dd', short: 'Degree–Diameter', title: 'Our best constructions by setting',
+    status: () => t >= DD_TIME ? 'Four showcased settings · D5 end-to-end Lean open' : t >= 6750 ? 'New (10,4) result produced with MathRSI v2 + DD' : 'Three dated table comparisons from earlier research',
     read: () => t >= DD_TIME ? 'dd-latest.html' : 'dd-10-4.html', plugin: GH + '/tree/main/plugins/degree-diameter',
-    quant: () => t >= DD_TIME ? `<div class="qlist"><div class="is-new"><i>(11,5)</i><span class="prev">37,631</span><span>→</span><b>37,632</b></div><div class="is-new"><i>(12,5)</i><span class="prev">42,402</span><span>→</span><b>42,433</b></div></div><p class="qnote">Local increases: +1 / +31.</p><p class="qnote">Against Comellas 2026-11-16 (37,631 / 42,352): +1 / +81.</p><p class="qnote">Run: v4 + local updates → v5 main maintenance.</p>` : `<div class="qlist">${[...(t >= 6750 ? [['(10,4)','2,566','2,567',true]] : []),['(11,5)','37,628','37,631'],['(12,5)','42,342','42,402'],['(16,4)','16,384','16,416']].map(([p,a,b,n])=>`<div${n ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>→</span><b>${b}</b></div>`).join('')}</div><p class="qnote">${t >= 6750 ? 'Comellas: (10,4) checked 2026-11-05; earlier entries accessed 2026-11-03. Historical catalogue: 163 graphs / 44 parameter pairs / 49 concrete-graph Lean instances.' : 'Comellas entries accessed 2026-11-03. Earlier catalogue: 153 graphs / 43 parameter pairs / 47 concrete-graph Lean instances.'}</p>` },
+    quant: () => t >= DD_TIME ? `<div class="qlist">${[['(10,4)','','2,567'],['(11,5)','37,631','37,632'],['(12,5)','42,402','42,433'],['(16,4)','','16,416']].map(([p,a,b])=>`<div${a ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>${a ? '→' : ''}</span><b>${b}</b></div>`).join('')}</div><p class="qnote">D5 local increases: (11,5) +1; (12,5) +31.</p><p class="qnote">D5 Comellas comparison, 2026-11-16: (11,5) 37,631 → 37,632 (+1); (12,5) 42,352 → 42,433 (+81).</p><p class="qnote">Latest D5 run: v4 + local updates → v5 main maintenance.</p>` : `<div class="qlist">${[...(t >= 6750 ? [['(10,4)','2,566','2,567',true]] : []),['(11,5)','37,628','37,631'],['(12,5)','42,342','42,402'],['(16,4)','16,384','16,416']].map(([p,a,b,n])=>`<div${n ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>→</span><b>${b}</b></div>`).join('')}</div><p class="qnote">${t >= 6750 ? 'Comellas comparisons rechecked 2026-11-05. Historical catalogue: 163 graphs / 44 parameter pairs / 49 concrete-graph Lean instances.' : 'Comellas comparisons rechecked 2026-11-05. Earlier catalogue: 153 graphs / 43 parameter pairs / 47 concrete-graph Lean instances.'}</p>` },
   { id: 'e86', short: 'Erdős 86', title: 'A tighter ceiling for square-free hypercube graphs',
     status: 'Exact certificate · no Lean',
     read: REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
@@ -64,7 +64,7 @@ const MS = [
   { c:'ecc', v:2, span:1, k:'evidence', e:'grow', t:2900, tag:'Proof connected', text:'Original matrices, parent data and reductions connected to Lean, with explicit external premises.' },
   { c:'ecc', v:2, span:1, k:'evidence', e:'grow', t:3150, tag:'Evidence replayed', text:'Portable proof and certificate package with fresh-copy build, audit and replay.' },
   { c:'ecc', v:2, span:1, k:'result', basis:'application', e:'grow', t:3400, tag:'Exact parameter · 4', text:'d₂(42,16)=12: a published 2020 theorem excludes distance 13, and an actual distance-12 matrix meets the bound. This is a literature-derived closure.' },
-  { c:'dd', v:2, k:'result', e:'drop', t:3700, tag:'Record parameter · (11,5)', text:'37,628 → 37,631 vertices, compared with the Comellas entry accessed 2026-11-03; not a global optimum.' },
+  { c:'dd', v:2, k:'result', e:'drop', t:3700, tag:'Record parameter · (11,5)', text:'37,628 → 37,631 vertices, compared with the Comellas entry rechecked 2026-11-05; not a global optimum.' },
   { c:'dd', v:2, k:'result', e:'drop', t:3780, tag:'Record parameter · (12,5)', text:'42,342 → 42,402 vertices under the same degree and diameter constraints; dated table comparison.' },
   { c:'dd', v:2, k:'result', e:'drop', t:3860, tag:'Record parameter · (16,4)', text:'16,384 → 16,416 vertices under the same degree and diameter constraints; dated table comparison.' },
   { c:'dd', v:2, k:'evidence', e:'drop', t:4000, tag:'Proof connected', text:'The broader portfolio contains 153 graphs over 43 parameter pairs; 47 have concrete-graph Lean proofs.' },
@@ -97,10 +97,10 @@ const CALLOUTS = [
   { c:'e86', v:3, t:5050, kind:'intro', value:'C₄-free density ≤ 0.59155154' },
   { c:'q6', v:3, t:5200, kind:'intro', value:'Every Q₆ matching lies in', detail:'a Hamilton cycle' },
   { c:'he', v:3, t:5450, kind:'intro', value:'ES(7) ≤ 78' },
-  { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'2,566 → 2,567', detail:'(10,4) · Run: v2' },
+  { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'(10,4) 2,566 → 2,567', detail:'Run: v2' },
   { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' },
   {"c": "q6", "v": 5, "t": 8100, "row": 1, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"},
-  {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "37,632 / 42,433", "detail": "Run: v4 + local updates"}
+  {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "(11,5) 37,631 → 37,632", "value2": "(12,5) 42,402 → 42,433", "detail": "Run: v4 + local updates"}
 ];
 
 const VERS = [
@@ -179,7 +179,7 @@ const VERS = [
 /* -------------------------------------------------------------- geometry */
 const LAST = VERS.length - 2, FUTURE = VERS.length - 1;
 const BW = 26, BH = 28, STEP = 32, PITCH = 36, X0 = 92;
-const calloutHeight = d => d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
+const calloutHeight = d => d.value2 ? 80 : d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
 const columnCards = v => CALLOUTS.filter(d => d.v === v).sort((a, b) => (a.row ?? 0) - (b.row ?? 0) || a.t - b.t);
 const cardStackHeight = cards => cards.reduce((sum, d) => sum + calloutHeight(d), 0) + Math.max(0, cards.length - 1) * 4;
 const columnDepth = v => Math.max(...CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m) && m.v <= v).length));
@@ -286,29 +286,31 @@ function buildSky() {
 
 function buildDeltaTag(d) {
   const mi = MS.findIndex(m => m.c === d.c && m.v === d.v && m.t === d.t);
-  const tagX = cx(d.v) - 100, ownX = slotX(d.v, CI[d.c]) + BW / 2;
+  const width = d.value2 || (d.c === 'dd' && d.v === 4) ? 220 : 200;
+  const tagX = cx(d.v) - width / 2, ownX = slotX(d.v, CI[d.c]) + BW / 2;
   const items = MS.filter(m => m.c === d.c && isOutcome(m) && m.v <= d.v);
   const blockIndex = items.indexOf(MS[mi]);
   // The archived upper bound is separate from the abstract 25-point witness.
   const endY = d.kind === 'intro' && d.c === 'he' ? 160 + HEADROOM : BASE - (blockIndex + 1) * STEP;
   const intro = d.kind === 'intro', badge = intro ? (d.v === 0 ? 'Origins' : 'New') : 'Improved';
-  const g = el('g', { class:`delta-tag bk ${intro ? 'intro-tag' : 'change-tag'}`, 'data-c':d.c, 'data-m':mi,
+  const g = el('g', { class:`delta-tag bk ${intro ? 'intro-tag' : 'change-tag'}${d.value2 ? ' multiline-tag' : ''}`, 'data-c':d.c, 'data-m':mi,
     'data-kind':d.kind, 'data-v':d.v, 'data-t':d.t,
     transform:`translate(${tagX} ${d.y})`, style:`--c:var(--${d.c});opacity:0;visibility:hidden;pointer-events:none`,
-    role:'button', tabindex:'-1', 'aria-hidden':'true', 'aria-label':`${CN[d.c]}: ${d.value}${d.detail ? ', ' + d.detail : ''}. Inspect this result.` }, sky);
+    role:'button', tabindex:'-1', 'aria-hidden':'true', 'aria-label':`${CN[d.c]}: ${d.value}${d.value2 ? '; ' + d.value2 : ''}${d.detail ? ', ' + d.detail : ''}. Inspect this result.` }, sky);
   const leader = el('line', { class:'delta-leader', x1:ownX-tagX, x2:ownX-tagX, y1:d.height, y2:endY-d.y, style:'visibility:hidden' }, g);
-  el('rect', { class:'delta-surface', width:200, height:d.height, rx:10 }, g);
+  el('rect', { class:'delta-surface', width, height:d.height, rx:10 }, g);
   el('rect', { class:'callout-color', x:6, y:7, width:3, height:d.height-14, rx:1.5, fill:`var(--${d.c})` }, g);
   el('text', { class:'delta-kicker', x:15, y:intro ? 15 : 16 }, g).textContent = CN[d.c];
-  el('text', { class:'callout-badge', x:190, y:intro ? 15 : 16, 'text-anchor':'end' }, g).textContent = badge;
+  el('text', { class:'callout-badge', x:width-10, y:intro ? 15 : 16, 'text-anchor':'end' }, g).textContent = badge;
   if (intro) {
     el('text', { class:'intro-value', x:15, y:30 }, g).textContent = d.value;
     if (d.detail) el('text', { class:'intro-detail', x:15, y:45 }, g).textContent = d.detail;
   } else {
     el('text', { class:`delta-value${d.c === 'pb' ? ' delta-word-value' : ''}`, x:15, y:35 }, g).textContent = d.value;
-    el('text', { class:'delta-detail', x:15, y:50 }, g).textContent = d.detail;
+    if (d.value2) el('text', { class:'delta-value', x:15, y:54 }, g).textContent = d.value2;
+    el('text', { class:'delta-detail', x:15, y:d.value2 ? 72 : 50 }, g).textContent = d.detail;
   }
-  deltaTags.push({ ...d, el:g, leader, endY });
+  deltaTags.push({ ...d, tagX, el:g, leader, endY });
 }
 
 function fromTag(ids) {
@@ -385,7 +387,7 @@ function apply() {
     d.el.setAttribute('tabindex', visible ? '0' : '-1');
     d.el.setAttribute('aria-hidden', String(!visible));
     d.leader.style.visibility = visible && activeCase === d.c ? 'visible' : 'hidden';
-    const leaderX = slotX(d.v, CI[d.c], t) + BW / 2 - (cx(d.v) - 100);
+    const leaderX = slotX(d.v, CI[d.c], t) + BW / 2 - d.tagX;
     d.leader.setAttribute('x1', leaderX);
     d.leader.setAttribute('x2', leaderX);
     if (!(d.kind === 'intro' && d.c === 'he')) {
@@ -495,7 +497,7 @@ function ddPath() {
     <li><b>v2 · DD plugin</b><span>Methods, failures and checks become reusable research tools</span></li>
     <li class="hot${later}"><b>v2 + DD run</b><span>(10,4): 2,566 → 2,567 vertices</span></li>
     <li class="pre${later}"><b>v4 · feedback</b><span>Local edit and exact replay examples implemented in the existing DD plugin</span></li>
-    <li class="hot${t < DD_TIME ? ' later' : ''}"><b>v4 + local DD updates</b><span>D5 endpoints 37,632 / 42,433 → v5 maintenance</span></li>
+    <li class="hot${t < DD_TIME ? ' later' : ''}"><b>v4 + local DD updates</b><span>(11,5) 37,632 · (12,5) 42,433 → v5 maintenance</span></li>
   </ol>`;
 }
 function eccMaintenance() {

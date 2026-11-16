@@ -1,9 +1,14 @@
 {
-  "recorded_at_utc": "2026-11-16T09:43:25.725994+00:00",
+  "recorded_at_utc": "2026-11-16T10:28:46.073064+00:00",
   "source": "development/homepage-redesign-20261105/site/index.html",
-  "source_commit": "4326fd943cb4efcc2c74b232a728a36f54679b5d",
+  "source_commit": "35f7dd0a924405c18a8cff3a767ca2612219a865",
   "source_working_tree_changes": [
-    "development/homepage-redesign-20261105/site/app.js"
+    "development/homepage-redesign-20261105/site/app.js",
+    "development/homepage-redesign-20261105/site/dd-latest.html",
+    "development/homepage-redesign-20261105/site/index.html",
+    "development/homepage-redesign-20261105/site/result-visuals.js",
+    "development/homepage-redesign-20261105/site/styles.css",
+    "development/homepage-redesign-20261105/site/zh-CN.js"
   ],
   "source_revision_note": "Recorded the named HEAD with the listed presentation edits; the handoff commit contains the exact source used.",
   "current_version": "v5",
@@ -17,10 +22,10 @@
   ],
   "capture": "Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264",
   "recording_only_changes": "Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7/DD headlines; preserve all seven columns. Product JS/CSS/data unchanged.",
-  "capture_css": "html {scroll-behavior:auto!important; overflow:hidden;}\nbody {background:white; overflow:hidden;}\n#evolution {max-width:none; width:100%; padding:20px 24px;}\n#evolution .evo-title {margin-top:0;}\n#evolution .scroller {overflow:clip!important;}\n#evolution .fig-foot, #evolution #panel, #evolution .row-b,\n#evolution .row-p, .scroll-hint {display:none!important;}\n#evolution button:focus {outline:none!important;}\n#evolution .row-v {padding:12px 8px 14px;}\n#evolution .vtag {font-size:24px;}\n#evolution .vstate {font-size:18px;}\n#evolution .vname {font-size:18px; line-height:1.25;}\n#evolution .delta-tag[data-v=\"5\"] .delta-value {font-size:20px;}",
+  "capture_css": "html {scroll-behavior:auto!important; overflow:hidden;}\nbody {background:white; overflow:hidden;}\n#evolution {max-width:none; width:100%; padding:20px 24px;}\n#evolution .evo-title {margin-top:0;}\n#evolution .scroller {overflow:clip!important;}\n#evolution .fig-foot, #evolution #panel, #evolution .row-b,\n#evolution .row-p, .scroll-hint {display:none!important;}\n#evolution button:focus {outline:none!important;}\n#evolution .row-v {padding:12px 8px 14px;}\n#evolution .vtag {font-size:24px;}\n#evolution .vstate {font-size:18px;}\n#evolution .vname {font-size:18px; line-height:1.25;}\n#evolution .delta-tag[data-v=\"5\"] .delta-value {font-size:20px;}\n#evolution .delta-tag[data-c=\"dd\"] .delta-value {font-size:16px;}",
   "resolution": [
     1900,
-    742
+    766
   ],
   "fps": 20,
   "browser_clock_rate": 0.25,
@@ -72,62 +77,62 @@
     "clientWidth": 1852,
     "stageWidth": 1852,
     "viewport": 1900,
-    "versionRowBottom": 720.796875
+    "versionRowBottom": 744.71875
   },
   "final_geometry": {
     "scrollLeft": 0,
     "ddBlocks": [
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 540.806396484375,
-          "right": 1492.322265625,
-          "bottom": 571.2373046875
+          "left": 1464.0777587890625,
+          "top": 564.7264404296875,
+          "right": 1492.335693359375,
+          "bottom": 595.1580810546875
         },
         "opacity": 1
       },
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 506.02825927734375,
-          "right": 1492.322265625,
-          "bottom": 536.4591674804688
+          "left": 1464.0777587890625,
+          "top": 529.9473876953125,
+          "right": 1492.335693359375,
+          "bottom": 560.3790283203125
         },
         "opacity": 1
       },
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 471.25006103515625,
-          "right": 1492.322265625,
-          "bottom": 501.68096923828125
+          "left": 1464.0777587890625,
+          "top": 495.1683654785156,
+          "right": 1492.335693359375,
+          "bottom": 525.5999755859375
         },
         "opacity": 1
       },
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 436.4718933105469,
-          "right": 1492.322265625,
-          "bottom": 466.9028015136719
+          "left": 1464.0777587890625,
+          "top": 460.3893127441406,
+          "right": 1492.335693359375,
+          "bottom": 490.82098388671875
         },
         "opacity": 1
       },
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 401.6937255859375,
-          "right": 1492.322265625,
-          "bottom": 432.1246337890625
+          "left": 1464.0777587890625,
+          "top": 425.6102600097656,
+          "right": 1492.335693359375,
+          "bottom": 456.04193115234375
         },
         "opacity": 1
       },
       {
         "box": {
-          "left": 1464.06494140625,
-          "top": 366.91552734375,
-          "right": 1492.322265625,
-          "bottom": 397.346435546875
+          "left": 1464.0777587890625,
+          "top": 390.83123779296875,
+          "right": 1492.335693359375,
+          "bottom": 421.26287841796875
         },
         "opacity": 1
       }
@@ -135,25 +140,25 @@
     "currentVersion": "v5Current\nControlled choices & theorem reuse",
     "currentRow": {
       "left": 1371.6875,
-      "top": 616.796875,
+      "top": 640.71875,
       "right": 1623.84375,
-      "bottom": 720.796875
+      "bottom": 744.71875
     },
     "futureRow": {
       "left": 1623.84375,
-      "top": 616.796875,
+      "top": 640.71875,
       "right": 1875.984375,
-      "bottom": 720.796875
+      "bottom": 744.71875
     },
     "dd": {
-      "text": "Degree–DiameterImproved37,632 / 42,433Run: v4 + local updates",
+      "text": "Degree–DiameterImproved(11,5) 37,631 → 37,632(12,5) 42,402 → 42,433Run: v4 + local updates",
       "visible": true,
       "opacity": "1",
       "box": {
-        "left": 1389.074462890625,
-        "top": 177.8092041015625,
-        "right": 1606.4381103515625,
-        "bottom": 240.8446502685547
+        "left": 1378.2169189453125,
+        "top": 177.80958557128906,
+        "right": 1617.3228759765625,
+        "bottom": 264.7572021484375
       }
     },
     "q7": {
@@ -161,10 +166,10 @@
       "visible": true,
       "opacity": "1",
       "box": {
-        "left": 1389.074462890625,
-        "top": 245.19192504882812,
-        "right": 1606.4381103515625,
-        "bottom": 308.22735595703125
+        "left": 1389.08544921875,
+        "top": 269.10455322265625,
+        "right": 1606.4544677734375,
+        "bottom": 332.1416015625
       }
     }
   },
@@ -174,26 +179,26 @@
     "mp4": {
       "codec_name": "h264",
       "width": 1900,
-      "height": 742,
+      "height": 766,
       "r_frame_rate": "20/1",
       "nb_read_frames": "498",
       "duration_seconds": 24.9,
-      "bytes": 488096
+      "bytes": 493449
     },
     "gif": {
       "codec_name": "gif",
       "width": 1400,
-      "height": 546,
+      "height": 564,
       "r_frame_rate": "12/1",
       "nb_read_frames": "299",
       "duration_seconds": 24.91,
-      "bytes": 1394587
+      "bytes": 1336045
     }
   },
   "poster_resolution": [
     1900,
-    742
+    766
   ],
-  "intermediates": ".local/evolution-media-v5-dd-layout-20261116",
+  "intermediates": ".local/evolution-media-dd-settings-20261116",
   "verification": "MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All six DD blocks are opaque, inside the crop and below both v5 bubble surfaces. Visual inspection is a separate human/agent step."
 }
