@@ -28,7 +28,7 @@ v4's equality-chain recovery, legal exchange and compatible-witness connection r
 
 ## Evidence and bounded validation
 
-The [implementation record](../development/evolution/v5-q7-20261114/EVOLUTION.md) and [Hamilton evidence report](../plugins/hypercube-hamilton/evidence/Q7_V5_IMPLEMENTATION.md) own the commands, inputs and exact acceptance scopes. The shared [actual-input reference](https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-prove/references/actual-input-coverage.md) connects the three base actions to real callers.
+The [implementation record](../development/evolution/v5-q7-20261114/EVOLUTION.md) and [Hamilton evidence report](../plugins/hypercube-hamilton/evidence/Q7_V5_IMPLEMENTATION.md) own the commands, inputs and exact acceptance scopes. The shared [actual-input reference](../base/skills/mathrsi-prove/references/actual-input-coverage.md) connects the three base actions to real callers.
 
 | Actual v5 maintenance check | Verified scope |
 | --- | --- |
@@ -48,14 +48,14 @@ This is later **v5 maintenance on main**, outside the fixed v5 release tag. Two 
 
 The source research ran with local 2026-11-11 main/v4-maintenance plus DD feedback updates. Its results and methods return to v5 main maintenance; they were not produced by the published v5 release. No tag moves or v6 release are involved.
 
-**Base — Consume results before dispatch.** Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback. This Degree–Diameter feedback extends the existing v5 workflow. Q7 controlled-choice and theorem-reuse actions remain; fixed and conditional plans stay in the detailed capability set. [Current-context reference](https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-research/references/current-context.md).
+**Base — Consume results before dispatch.** Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback. This Degree–Diameter feedback extends the existing v5 workflow. Q7 controlled-choice and theorem-reuse actions remain; fixed and conditional plans stay in the detailed capability set. [Current-context reference](../base/skills/mathrsi-research/references/current-context.md).
 
-**DD plugin — Joint completion and verified prefixes.** Use an inclusion-minimal core-blocking set and jointly complete attachments from the full pool of remaining degree ports. Actual bad vertex pairs guide revisions to earlier construction choices; subsequent work consumes only independently verified prefixes. [Joint completion](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-joint-completion.md) · [Verified blocking batches](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-blocking-batches.md).
+**DD plugin — Joint completion and verified prefixes.** Use an inclusion-minimal core-blocking set and jointly complete attachments from the full pool of remaining degree ports. Actual bad vertex pairs guide revisions to earlier construction choices; subsequent work consumes only independently verified prefixes. [Joint completion](../plugins/degree-diameter/references/d5-joint-completion.md) · [Verified blocking batches](../plugins/degree-diameter/references/d5-blocking-batches.md).
 
-[DD evolution and implementation record](https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md).
+[DD evolution and implementation record](../development/evolution/v5-dd-20261116/EVOLUTION.md).
 
 Both final graphs were regenerated exactly. D12 preserves the source's edges and checks all 31 new roots; old–old distances inherit the accepted source premise. D11 changes the core and combines the H9 theorem plus literal binding for core–core pairs with complete BFS from all 161 peripheral/new roots. Concrete end-to-end Lean instances and required source final-review obligations remain open.
 
 Earlier (10,4)=2,567 and (16,4)=16,416 remain historical dated comparisons; the live table checked on 2026-11-16 now lists 2,612 and 16,848. This follow-up does not create a new global graph catalogue or Lean-certified count.
 
-[Latest result and methods](../case-studies/degree-diameter/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/dd-latest.html) · [Private source package](https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/).
+[Latest result and methods](../case-studies/degree-diameter/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/dd-latest.html) · [Private source package](../plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/).
