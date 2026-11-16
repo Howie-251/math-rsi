@@ -14,10 +14,9 @@ Two tracks evolve together: shared **Base behavior** and broader/deeper **domain
 | v3 | Working-set/full-domain/best separation, marked-object transport, finite universal certificates and explicit Lean-premise audits. | Upgraded ECC; added hypercube extremal, hypercube Hamilton and Happy Ending. [Changes](../docs/V3_CHANGES.md) · [Implementation](evolution/v3-20261104/EVOLUTION.md) |
 | v4 · historical release | Equality-chain structure, legal exchange and compatible witnesses at the original caller. | Happy Ending and DD deepening. [Changes](../docs/V4_CHANGES.md) · [Implementation](evolution/v4-20261108/EVOLUTION.md) · [Release](evolution/v4-20261108/RELEASE.md) |
 | v4 · later main maintenance | Mandatory global progress reassessment compares the original gap and total cost. | ECC node ownership, exclusion reuse, shared computations and parent coverage. [Base maintenance](evolution/v4-global-reassessment-20261108/EVOLUTION.md) · [ECC maintenance](evolution/ecc-node-v4-20261111/EVOLUTION.md) |
-
 | v5 · current on main | Controlled auxiliary choices, theorem reuse across known legal representations, and fixed/conditional finite-plan coverage. | Deeper hypercube Hamilton methods from Q7 research run with v3 (local adaptation). [Changes](../docs/V5_CHANGES.md) · [Q7 result and methods](../case-studies/ruskey-savage-q7/README.md) |
 
-Fixed v1/v2/v3/v4 tags preserve complete snapshots; later `main` maintenance is outside the fixed v4 tag. The [evolution workflow](../docs/EVOLUTION_WORKFLOW.md) explains how to make a scoped maintenance request.
+Fixed v1–v5 tags preserve complete snapshots; current `main` may include maintenance after the fixed v5 release. The [evolution workflow](../docs/EVOLUTION_WORKFLOW.md) explains how to make a scoped maintenance request.
 
 ## Validation and implementation
 

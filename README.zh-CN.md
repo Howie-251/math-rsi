@@ -8,9 +8,9 @@
 
 </div>
 
-[![MathRSI v0 → v4 历史主页演进回放](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
+[![MathRSI 当前主页 v0 → v5 演进回放](figures/mathrsi/media/evolution.gif?v=5)](figures/mathrsi/media/evolution.mp4?v=5)
 
-*已录制的 v0 → v4 主页演进回放；[当前 v5 交互主页](https://lisresearchgroup.github.io/math-rsi/)。点击观看 MP4。[运行归属与工作稿状态](case-studies/README.md)。*
+*真实主页 v0 → v5 演进回放，末尾停留 v5 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/)。[运行归属与工作稿状态](case-studies/README.md)。*
 
 MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Claude Code 或 Codex 完成文献调研、路线探索、证明、审阅、验证与交付。研究成果和失败经验持续用于改进工作流与插件。
 
@@ -94,7 +94,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **深化 Hamilton 方法：** 受控供体与返回桥、精确兼容池计数、多省略点森林证书。Q7 研究实际采用 **v3（本地适配）**，其方法反馈 v5。
 - **继承已有能力：** v4 的取等—见证链、全局重评，以及后续 ECC 节点与共同计算复用继续保留。
 
-**[v5 是 `main` 当前工作流](docs/V5_CHANGES.md)。** 可[下载 main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)或克隆，并记录精确提交。固定 v1–v4 标签不变。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
+**[v5 是 `main` 当前工作流](docs/V5_CHANGES.md)。** 可下载[固定 v5 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v5.zip)或[main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆并记录精确提交。固定 v1–v5 标签不变。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
 <summary>固定版本与早期改进</summary>
@@ -104,6 +104,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)：** 独立维护流程、DD、证据继承和共同覆盖检查。[变更](docs/V2_CHANGES.md)
 - **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)：** 工作集／全域区分、标记对象运输、有限全称证书、Lean 显式前提审计；升级 ECC 并新增三个领域。[变更](docs/V3_CHANGES.md)
 - **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4)：** 取等到见证的证明动作，Happy Ending／DD 专用方法。[变更](docs/V4_CHANGES.md)
+- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5)：** 控制辅助选择、跨已知合法表示复用定理、固定／条件计划覆盖；深化 Hamilton 方法。[变更](docs/V5_CHANGES.md)
 
 各 tag 保留固定完整快照。需要可复现起点时选择相应版本，并记录实际 commit。[历史 v2／v3 配图](figures/mathrsi/README.md#historical-diagrams)
 
