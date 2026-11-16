@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-v5-dd-20261116'
+CACHE = ROOT / '.local/evolution-media-v5-dd-layout-20261116'
 FPS = 20
 CLOCK_RATE = 0.25  # Browser-clock milliseconds per encoded-video millisecond.
 OPENING_SECONDS = 1
@@ -121,12 +121,14 @@ def capture(preview=False):
                     const rect=e=>{const r=e.getBoundingClientRect();return {left:r.left,top:r.top,right:r.right,bottom:r.bottom}};
                     const q=document.querySelector('.delta-tag[data-c="q6"][data-v="5"]');
                     const d=document.querySelector('.delta-tag[data-c="dd"][data-v="5"]');
+                    const ddBlocks=[...document.querySelectorAll('g[data-c="dd"][data-v="5"]:not(.delta-tag) > .anim > .b-res')].map(e=>({box:rect(e),opacity:+getComputedStyle(e.parentElement).opacity}));
                     return {scrollLeft:document.querySelector('#scroller').scrollLeft,
+                        ddBlocks,
                         currentVersion:document.querySelector('.row-v.current').innerText,
                         currentRow:rect(document.querySelector('.row-v.current')),
                         futureRow:rect(document.querySelector('.row-v.fut')),
-                        dd:{text:d.textContent,visible:d.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d).opacity,box:rect(d)},
-                        q7:{text:q.textContent,visible:q.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q).opacity,box:rect(q)}};
+                        dd:{text:d.textContent,visible:d.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d).opacity,box:rect(d.querySelector('.delta-surface'))},
+                        q7:{text:q.textContent,visible:q.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q).opacity,box:rect(q.querySelector('.delta-surface'))}};
                 }''')
 
             if preview:
@@ -188,7 +190,9 @@ def capture(preview=False):
             assert current in status and 'Current' in status, status
             assert [x['state'].split('Origins')[0].split('Release')[0].split('Current')[0] for x in states] == expected, states
             assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7','dd']), final
-            for rect in [final['q7']['box'], final['dd']['box'], final['currentRow'], final['futureRow']]:
+            assert len(final['ddBlocks']) == 6 and all(b['opacity'] == 1 for b in final['ddBlocks']), final
+            assert max(final[k]['box']['bottom'] for k in ['q7','dd']) < min(b['box']['top'] for b in final['ddBlocks']), final
+            for rect in [final['q7']['box'], final['dd']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['ddBlocks']]]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
             assert final['scrollLeft'] == 0 and not errors and not failed_requests, (final, errors, failed_requests)
             final_frame = shot('settled-current.png')
@@ -230,7 +234,7 @@ def capture(preview=False):
             'page_errors': errors, 'failed_requests': failed_requests,
             'exports': metadata, 'poster_resolution': [VIEWPORT_WIDTH, height],
             'intermediates': str(CACHE.relative_to(ROOT)),
-            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. Visual inspection is a separate human/agent step.'
+            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All six DD blocks are opaque, inside the crop and below both v5 bubble surfaces. Visual inspection is a separate human/agent step.'
         }
         (OUT/'RECORDING.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n')
         log('complete', duration_seconds=receipt['duration_seconds'], exports=metadata)

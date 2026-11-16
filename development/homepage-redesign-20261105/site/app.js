@@ -178,8 +178,17 @@ const VERS = [
 
 /* -------------------------------------------------------------- geometry */
 const LAST = VERS.length - 2, FUTURE = VERS.length - 1;
-const H = 326, GUT = 80, COL = 232, W = GUT + COL * VERS.length, SPINE = 296, BASE = 284;
 const BW = 26, BH = 28, STEP = 32, PITCH = 36, X0 = 92;
+const calloutHeight = d => d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
+const columnCards = v => CALLOUTS.filter(d => d.v === v).sort((a, b) => (a.row ?? 0) - (b.row ?? 0) || a.t - b.t);
+const cardStackHeight = cards => cards.reduce((sum, d) => sum + calloutHeight(d), 0) + Math.max(0, cards.length - 1) * 4;
+const columnDepth = v => Math.max(...CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m) && m.v <= v).length));
+// Reserve the final tallest column and the 40px drop entrance before placing cards.
+const CALLOUT_CLEARANCE = 14 + 40, SKY_TOP = 14;
+const HEADROOM = Math.max(0, ...Array.from({ length: LAST + 1 }, (_, v) =>
+  SKY_TOP + cardStackHeight(columnCards(v)) + CALLOUT_CLEARANCE - (284 - columnDepth(v) * STEP + 5)));
+const H = 326 + HEADROOM, GUT = 80, COL = 232, W = GUT + COL * VERS.length;
+const SPINE = 296 + HEADROOM, BASE = 284 + HEADROOM;
 const cx = i => GUT + COL * i + COL / 2;
 const R = [300, 1700, 3600, 5000, 6600, 8000], STOP = [1100, 2400, 4400, 6000, 7400, 9600], T = STOP[LAST];
 const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600]];
@@ -223,8 +232,8 @@ function buildSky() {
   const mk = el('marker', { id: 'sky-arrow', viewBox: '0 0 10 10', refX: '8', refY: '5', markerWidth: '8', markerHeight: '8', orient: 'auto' }, defs);
   el('path', { d: 'M0 1L9 5L0 9Z', fill: '#AEB6C2' }, mk);
   bands = VERS.map((V, i) => el('path', { class: 'band', d: topRound(cx(i) - 110, 8, 220, H - 8, 14) }, sky));
-  el('text', { class: 'gut', x: 4, y: 172 }, sky).textContent = 'Mathematical';
-  el('text', { class: 'gut', x: 4, y: 190 }, sky).textContent = 'results';
+  el('text', { class: 'gut', x: 4, y: 172 + HEADROOM }, sky).textContent = 'Mathematical';
+  el('text', { class: 'gut', x: 4, y: 190 + HEADROOM }, sky).textContent = 'results';
   for (let i = 0; i < VERS.length; i++) for (let s = 0; s < CASES.length; s++)
     el('rect', { class: i === FUTURE ? 'ghost fut' : 'ghost', x: slotX(i, s), y: BASE + 3, width: BW, height: 3, rx: 1.5 }, sky);
   el('line', { class: 'spine-base', x1: X0, y1: SPINE, x2: cx(LAST), y2: SPINE }, sky);
@@ -256,10 +265,11 @@ function buildSky() {
 
   // Reserve every card's final position from the start, so arrivals never shift earlier results.
   for (let v = 0; v <= LAST; v++) {
-    const cards = CALLOUTS.filter(d => d.v === v).sort((a, b) => (a.row ?? 0) - (b.row ?? 0) || a.t - b.t);
-    const height = d => d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
-    let y = 154 - cards.reduce((sum, d) => sum + height(d), 0) - Math.max(0, cards.length - 1) * 4;
-    cards.forEach(d => { buildDeltaTag({ ...d, y, height:height(d) }); y += height(d) + 4; });
+    const cards = columnCards(v);
+    const stackTop = BASE - columnDepth(v) * STEP + 5;
+    const bottom = Math.min(154 + HEADROOM, stackTop - CALLOUT_CLEARANCE);
+    let y = bottom - cardStackHeight(cards);
+    cards.forEach(d => { buildDeltaTag({ ...d, y, height:calloutHeight(d) }); y += calloutHeight(d) + 4; });
   }
 
   for (let i = 0; i <= LAST; i++) {
@@ -280,7 +290,7 @@ function buildDeltaTag(d) {
   const items = MS.filter(m => m.c === d.c && isOutcome(m) && m.v <= d.v);
   const blockIndex = items.indexOf(MS[mi]);
   // The archived upper bound is separate from the abstract 25-point witness.
-  const endY = d.kind === 'intro' && d.c === 'he' ? 160 : BASE - (blockIndex + 1) * STEP;
+  const endY = d.kind === 'intro' && d.c === 'he' ? 160 + HEADROOM : BASE - (blockIndex + 1) * STEP;
   const intro = d.kind === 'intro', badge = intro ? (d.v === 0 ? 'Origins' : 'New') : 'Improved';
   const g = el('g', { class:`delta-tag bk ${intro ? 'intro-tag' : 'change-tag'}`, 'data-c':d.c, 'data-m':mi,
     'data-kind':d.kind, 'data-v':d.v, 'data-t':d.t,
