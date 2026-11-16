@@ -41,6 +41,8 @@ Moore上界对 d≥2 为 `1+d Σ_{i=0}^{D−1}(d−1)^i`。它给不可能超过
 
 ## 研究与验证的实际衔接
 
+D5 的新来源先区分保边扩张和改核心重建，按[联合补全参考](../../references/d5-joint-completion.md)接实际原图与覆盖义务。固定前部严格不可补时回到前部，既有前缀成功则立即独验并消费；单批限额、UNKNOWN 和充分证书域查尽分开。原父调度更新当前事实后再派下一任务，[批次/收件工具](../../references/d5-blocking-batches.md)仅服务其明确格式和输入域。共享源 Lean 缺口只保留一个准确义务，不为每个新增前缀重编相同条件 wrapper。
+
 短证明可以直接闭合；需要计算时先固定真实谓词、输入域及结果用途，选最便宜足够的检查。已有完整反例否定候选引理时，不再扩算相同受限模型。UNKNOWN仍是未决，可因新数学或已授权资源继续，但不自动新开相同种子／timer。
 
 完整候选交 base verify时，附当前正文、实际图定义／数据、所有进口、有限覆盖域、运行结果和剩余。Lean按用户需求或接口收益接入；读[原图到Lean](../../references/lean-and-representation.md)，不把局部decoder编译或标准公理当原题已证。局部核验回原prove，完整交付由父 workflow组织。
@@ -95,3 +97,7 @@ NEXT_SESSION.md                下一具体义务及原件入口
 满degree源允许改旧边时，dd-construction现可消费matching cut/new star和old-only 2-switch；失败以实际old-old/new-old点对回dd-transfer-diagnosis，最终由dd-obstruction-certificate消费完整图覆盖。[执行参考](../../references/saturated-insertion-and-replay.md)含度数引理、实际输入/失败/返回点、任务wiki动作及自包含十图replay。插件内[只读PR11来源](../../archive/pr11-2567/SOURCE.md)保留2557 seed→2558…2567与原收据，无网站开发路径依赖。
 
 原153/43/47是早期历史目录；加入此v2+DD十图后累计163/44/49，其中新增completed concrete Lean仅2558和2567。此为v4方法吸收，不是本轮新图/BFS/Lean、v4发现或formal C终审完成。新任务仍从当前规格和wiki接入，不自动恢复旧Goal。
+
+## v5 main 后续维护：两条 D5 深化路线
+
+2026-11-16 收录 `(11,5)` 的 37,631→37,632 与 `(12,5)` 的 42,402→42,433。前者修改核心、后者保边连续增点，属于两个既有参数。原研究运行于 2026-11-11 main/v4 维护底盘加本地 DD 更新；本次吸收进 v5，不改其历史运行版本。完整 455 文件原包在[只读归档](../../archive/dd-latest-two-parameters-20261116/README.txt)，实际复生/指定根核验、方法与 Base 增量见[演进记录](../../../../development/evolution/v5-dd-20261116/EVOLUTION.md)。本次没有新增具体整图 Lean 认证。

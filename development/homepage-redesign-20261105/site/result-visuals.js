@@ -148,33 +148,30 @@
     },
 
     dd: {
-      resultLabel: 'Vertex gains over dated Comellas entries on one linear scale: (10,4) 2,566 to 2,567 (+1); (11,5) 37,628 to 37,631 (+3); (12,5) 42,342 to 42,402 (+60); (16,4) 16,384 to 16,416 (+32).',
-      resultCap: 'Results · vertex gains over dated Comellas entries · one linear scale',
+      resultLabel: 'Latest DD endpoints: (11,5) 37,632 and (12,5) 42,433. Gains +1 and +81 over Comellas checked 2026-11-16; local increases are separately +1 and +31.',
+      resultCap: 'Results · latest D5 endpoints · Comellas 2026-11-16',
       links: [
-        { label: '(10,4) details ↗', href: 'dd-10-4.html', sourceLanguage: 'EN' },
-        { label: 'Earlier figure ↗', href: 'assets/result-figures/degree-diameter-results.svg', sourceLanguage: 'EN', sub: true }
+        { label: 'DD latest results ↗', href: 'dd-latest.html', sourceLanguage: 'EN + 中文' },
+        { label: 'Historical (10,4) ↗', href: 'dd-10-4.html', sourceLanguage: 'EN', sub: true }
       ],
       render() {
         const items = [
-          { p:'(10, 4)', sub:'deg 10 · diam 4', prev:'2,566', cur:'2,567', gain:1, isNew:true },
-          { p:'(11, 5)', sub:'deg 11 · diam 5', prev:'37,628', cur:'37,631', gain:3 },
-          { p:'(12, 5)', sub:'deg 12 · diam 5', prev:'42,342', cur:'42,402', gain:60 },
-          { p:'(16, 4)', sub:'deg 16 · diam 4', prev:'16,384', cur:'16,416', gain:32 }
+          { p:'(11, 5)', sub:'max degree 11 · diameter 5', prev:'37,631', cur:'37,632', gain:1 },
+          { p:'(12, 5)', sub:'max degree 12 · diameter 5', prev:'42,352', cur:'42,433', gain:81 }
         ];
         const barX = 122, maxW = 178;
-        let body = `<text class="rv-h" x="18" y="22">Vertex gains at fixed (d, D)</text>
-          <text class="rv-meta" x="362" y="22" text-anchor="end">previous → new order</text>`;
+        let body = `<text class="rv-h" x="18" y="22">Comellas 2026-11-16 → latest</text>`;
         items.forEach((it, i) => {
-          const y = 32 + i * 53, w = f2((it.gain / 60) * maxW);
-          body += `<rect class="rv-panel" x="14" y="${y}" width="352" height="47" rx="9" ${it.isNew ? 'style="fill:#fff3e8"' : ''}/>
-            <text x="26" y="${y + 20}" font-size="13.5" font-weight="650" fill="var(--ink)">${it.p}</text>
-            ${it.isNew ? `<text x="81" y="${y + 20}" font-size="8" fill="var(--dd)">NEW</text>` : ''}
-            <text x="26" y="${y + 36}" class="rv-sub">${it.sub}</text>
-            <text x="${barX}" y="${y + 19}" font-size="12.5" fill="var(--muted)">${it.prev} <tspan fill="var(--ink-2)">→</tspan> <tspan font-weight="650" fill="var(--ink)">${it.cur}</tspan></text>
-            <rect x="${barX}" y="${y + 28}" width="${maxW}" height="10" rx="3.5" fill="#EEF1F6"/>
-            <rect x="${barX}" y="${y + 28}" width="${w}" height="10" rx="${f2(Math.min(3.5, w / 2))}" fill="var(--dd)"/>
-            <text x="352" y="${y + 27}" text-anchor="end" font-size="16" font-weight="680" class="rv-accent">+${it.gain}</text>`;
+          const y = 34 + i * 80, w = f2((it.gain / 81) * maxW);
+          body += `<rect class="rv-panel" x="14" y="${y}" width="352" height="69" rx="9"/>
+            <text x="26" y="${y + 22}" font-size="13.5" font-weight="650" fill="var(--ink)">${it.p}</text>
+            <text x="26" y="${y + 53}" class="rv-sub">${it.sub}</text>
+            <text x="${barX}" y="${y + 22}" font-size="12.5" fill="var(--muted)">${it.prev} <tspan fill="var(--ink-2)">→</tspan> <tspan font-weight="650" fill="var(--ink)">${it.cur}</tspan></text>
+            <rect x="${barX}" y="${y + 33}" width="${maxW}" height="10" rx="3.5" fill="#EEF1F6"/>
+            <rect x="${barX}" y="${y + 33}" width="${w}" height="10" rx="${f2(Math.min(3.5, w / 2))}" fill="var(--dd)"/>
+            <text x="352" y="${y + 39}" text-anchor="end" font-size="16" font-weight="680" class="rv-accent">+${it.gain}</text>`;
         });
+        body += `<text class="rv-sub" x="18" y="220">Local increases: +1 / +31</text><text class="rv-sub" x="18" y="242">Earlier (10,4) and (16,4): historical comparisons</text>`;
         return svgWrap(this.resultLabel, body);
       }
     },

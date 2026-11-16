@@ -1,0 +1,102 @@
+H9固定split集合联合改色：实际输入、共同端口条件与下一步
+2026-11-15；父调度已核宿主Goal ACTIVE。本报告只做获派源码/已有数据分析，不改共享状态，不构图、不跑BFS/SAT/颜色搜索。
+
+结论与建议
+
+值得先做一个有界的共同组合门，而非立即重建全H9。旧固定度数下1120平面均有空行，但允许颜色真正能释放的端口后，202平面仍通过最便宜的必要检查。共同颜色问题有一个准确的小图表示：同色split边集合必须是matching，并满足所有cycle的奇偶条件。命中点P还要求其所在fiber无同色邻边。这把“找更多free点”改成“同一颜色/同一P能否共同付清所有端口”。
+
+这个门若未决不等于新机制无望；若完成No，也仅关闭固定S、固定160外围负载、给定1120平面证书域。只有真正的共同命中值得投入raw incidence构建和160外围根核验。不能把202个存活平面当202张图。
+
+一、实际输入和源码已读
+
+1. 现用DD transfer/construction技能；STATE/current_context及CURRENT_CONTEXT。读取时项目文件仍PAUSED，父Root随后已通知其实际核宿主ACTIVE并正在同步；本worker不改状态。
+2. H9_COLOR_SWITCH_INTERFACE.txt全文。
+3. 原作者verify_witness.py中build_hexagon、load_tau、partial_fold。build_hexagon返回66430点＋66430线的10正则incidence；partial_fold准确按tau/tau^-1构造sigma，无newH3twins/pad时核心37471。
+4. h9_other_degrees/recover11.py与mapping11_result.json；S与当前标签已绑定，而匹配方向尚未绑定为真实sigma。
+5. d11_weighted_plane_transfer/geometry_fit.py和LINE_PROVIDER_TABLES.json、PG2_9_INCIDENCE.json，使用正确degree11映射，没有偷用degree12标签。
+6. 更早author_search_interface/hexagon_incidence.c及INTERFACE/README；global_coverage/h9_quadric_line_signature/identify.py和geometry.py。
+
+主要文件均位于原研究目录：
+research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/{verify_witness.py,tau.txt.xz}
+research/ddp/more_graphs_20261027/h9_other_degrees/{fold11_classes.json,point_to_core11.u16.bin,recover11.py,mapping11_result.json}
+research/ddp/more_graphs_20261027/h9_d11_followups/graph_d11_D5_n37631.edges
+research/ddp/expert15_20261114/d5_resume_20261115/d11_weighted_plane_transfer/{geometry_fit.py,LINE_PROVIDER_TABLES.json}
+
+二、共同改色的准确小图条件
+
+令H=Q[S]是4074个split fibers的诱导图，c_f为每fiber一个bit，e_p是现有160外围对实际split端点p的固定负载。真实sigma构造给
+  deg_final(p)=10+sum_{g∈N_H(f)}[c_f=c_g]+e_p+z_p，
+其中z_p为本次新增点是否连p。
+因此对fiber f要求
+  sum_same(f) <= b_f = min_{p∈fiber(f)}(1-e_p-z_p)。
+在没有新pin时实际b_f只为0/1。若某个split端点p要给新点留一个端口，必须e_p=0且sum_same(f)=0；颜色不能给merged/H3改变度数。
+
+令M是同色边集合。度数条件等价于：M是H的matching，不能接触b_f=0顶点，若有新增pin，也不能接触该pin的fiber。并非任意matching都能实现同一颜色：还必须对任意cycle C满足
+  |M∩C| ≡ |C| (mod 2)。
+证明：沿cycle，颜色变化边有偶数条；变化边就是C\M，故|C|-|M∩C|为偶数。反过来满足这些cycle条件后，从每个component选一个根色，沿树边按“同色当且仅当边在M”传播；每条非树边的cycle条件保证无矛盾。只需独立cycle基，不必枚举全部cycle。
+
+这给可检验的共同选择准则：联合选择实际P与M，P命中91行，|P|≤11，并让P使用的split fibers都避开M；M满足度数和cycle奇偶。所选P还须有足够位置补全外围，不能把11个位置全用于核心后就叫完整候选。未受颜色影响的merged/H3 pins只在原度<11时可选。
+
+相对当前颜色翻一个集合U，cut边上的同/异关系反转。原单色cut边释放端口，原异色cut边新增负载；只有同一U的全部边界都满足容量才合法。翻整颜色component不会改变同异关系，不会释放端口。不能只删K2,2的一半而不补该补的matching。
+
+三、实际轻量检查（不生成候选图）
+
+A. 读取原边表、固定classes及Q边，计数耗0.251609736 CPU秒：
+- H顶点4074，边6006。
+- degree分布：0:14，1:336，2:3192，9:28，10:504。
+- 当前同色边1281；2562个fiber有1个同色邻点，1512个有0。
+- 无新增pin时b_f=1有3483个，b_f=0有591个。
+- split实际端点外围负载：e=0有7041点，e=1有1107点。
+- 当前双端均无外围负载且无同色邻边的free fibers有921个。
+- 对单fiber翻色仅代入局部度数公式（不真正修改图），244个fiber通过全邻居局部度数条件；这只是动作可行性诊断，不是完整图或释放端口保证。
+
+B. 按父Root追加的区分性问题，检查1120现有平面的“潜在free行”。对每个实际pin p：若是split端点，则只有e_p=0才暂时允许；若merged/H3则要求当前度<11。忽略共同颜色相容是有意的宽松必要门，不能据通过宣称可完成。计数耗0.283822455 CPU秒：
+- 901平面仍有不可被颜色修复的空行。
+- 其余中17平面因唯一provider迫出的不同pins超过11而排除。
+- 202平面必要门未排，flat76，nonflat126。
+- plane19：旧2条emptyline，宽松后19个潜在不同pins、10个forced。
+- plane23：旧4条emptyline，宽松后21个潜在不同pins、7个forced。
+- plane31：旧2条emptyline，宽松后21个潜在pins、7个forced。
+- plane39：旧6条emptyline，宽松后21个潜在pins、7个forced。
+- plane48：旧6条emptyline，宽松后20个潜在pins、7个forced。
+
+总实测轻量解析CPU约0.535433秒，未超过3CPU派发上限；源码只读定位/报告编写不冒作运行测量。没有raw incidence构建、颜色assignment、候选生成、BFS或solver调用。
+
+四、raw incidence成本与最短实际路径
+
+在所查H9/hexagon目录与现有文件导航中未找到完整132860点的incidence缓存。Q_data是quotient，不能补matching方向。已有point_coords.u8.bin只有66430×7=465010字节，可复用其作者编号坐标；identify.py已对所有点核tau²就是坐标Frobenius，适合避免重枚举坐标。
+
+另有C构建器：
+research/ddp/table_scope_20261107/alternative_source_decision/author_search_interface/hexagon_incidence.c。
+但它不能直接替换当前作者接口：
+- q9主循环枚举66430点的所有无序对，约22.06亿对；“几秒”注释不是本机q9实测，不能据此给预算保证。
+- C按base9坐标编码递增筛点，先出现lead靠后的点；原Python按lead从0到6、tail词典序，先出现lead0。即使都取同一F9，点号也不同；line按点号排序也跟着不同。tau.txt采用原Python顺序，不能直接套C输出。
+- 它自身默认做20根BFS，不符合本worker只读范围，也没执行。
+
+推荐若组合门命中：基于原Python build_hexagon逐点六线性Tits约束的nullspace方法，使用已有作者顺序point_coords，保持原line按“排序点号tuple”全局排序，从而对齐tau。原Python每3维kernel枚举所有9³-1=728非零coefs再projective去重；可改为先枚举PG(2,9)的91个规范系数，减少约8倍重复。每个点的91点平面对应过该点的10条H9线，这一优化需保持span_line及排序结果一致。移植到已有C表运算后，大约66430×91个投影选择而非22亿点对；这是算法工作量估计，未测本机耗时。
+
+完成后先核line总数/每点10线、tau实际对偶关系及S/labels绑定；只用程序的相关函数，不跑其main内默认hash、300sample-BFS或全文allroots。作者代码有默认hash功能，但本任务禁止主动生成hash，故不得直接运行其main。
+
+五、建议的下一项有界任务与预期返回
+
+先做小图共同门（建议总20CPU、墙钟2分钟，包括输入/编码/核assignment；最终由Root按现有预算决定）。输入为上述4074/6006 H、e_p、202平面行及实际pins；选共同c或matching/cycle表示，并实际校验91行和度数条件。优先plane19/23等有已知迫出部分、而非按free总数随机排名。可以先核forced端点对same=0的相容性，若冲突返回具体cycle或共享负载，不机械开下一任意子族。
+
+返回应是至少一份共同(c,P)，P真实端口成本、需要的尾部余量及全部约束真值；或准确限定域No/UNKNOWN和命中的关键障碍。没有共同assignment就不启动几何重建。如果只完成核心11pin而无外围补全，必须如实记仍缺外围；它可以作为下一cost估计输入，不能当完整图。
+
+共同门成功后再给单独的geometry/binding预算（例如30CPU硬上限起步，明确UNKNOWN不自动续），构造真实sigma核心，保留当前160外围邻接；按最终图核全度数、全部160外围根、新根，以及source/实例认证边界。未绑定旧sigma时可以构造一个新的c'，但不得称只在旧边表局部翻色；最好先对现有c的15个component方向做raw匹配绑定，保留实际外围距离作为保护证据。
+
+六、回父流程的决定依据
+
+本次新增信息是：旧全1120空行结论并不在颜色可变域中原样成立，202个证书域通过最便宜的不可变端口检查；共同颜色域又能准确压到带cycle奇偶的matching选择，3192个degree2点可按路径DP压缩而非新加搜索限制。这支持一次具体、有限的共同门检验，尚不支持大规模颜色/BFS搜索或新参数纪录声称。
+
+固定S不变，merged/H3负载不变，所以901＋17排除范围可直接复用。若共同门No，只收束此固定S/160外围/1120证书域，不回退至旧88452packing/F23或自动开启下一个S/field。所有未执行事项由Root结合Gemini和实际预算决定。
+
+
+补充：交付父流程的确切可运行输入（仍未启动模型）
+
+同目录prepare_joint.py已经执行，JOINT_INPUT.json已经写出，PREP_RESULT.json保存真实统计。准备耗0.454147390CPU秒，与上述两次解析累计约0.989579581CPU秒；3CPU上限未突破。文件不含hash。
+JOINT_INPUT.json包含4074个split_fibers，每项给全quotient fold ID、两个actual pin IDs、两个e_p、same_edge_cap与旧parity；含全部6006条split_edges、202个plane_candidates各自的91行potential providers、forced pins以及raw/actual91映射；其余immutable潜在端口附当前度数和外围负载。
+所有fiber ID沿原33397 quotient，不是33033generic数组下标；所有pin ID沿当前37471核心。raw matching方向尚未绑定，old_parity_color不能冒充真实sigma身份。以颜色变量生成实际sigma时，可任选各component根色并再核外围；不等于原图局部改色已经成功。
+
+推荐SAT定义直接使用c_f与y_fg<=>[c_f=c_g]，可避免手工cycle方程漏项。仅对cap1纤维使用atmost1，cap0直接置所有incident y false；pin选择x_p=>所有incident y=false；每条原平面行OR其潜在x_p；全distinct实际pins atmost11。合并重复actual pin变量。没有原题要求每一个split颜色变化、每一角色必须非空、新点必须11度等额外限制。若要省位置给外围，可以当搜索偏好/逐目标而非未声明必要条件。
+目前新图0，完整核心/外围/度数核验未启动。此joint门即使有SAT也只提供“核心充分证书＋端口可实现”的候选，不解决160外围路线和新点外围覆盖。

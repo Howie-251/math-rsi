@@ -1,0 +1,34 @@
+H9 joint颜色/核心端口：唯一有界诊断结果
+2026-11-16。执行依据为父Root的H9_DIAGNOSTIC_TASK.txt；宿主恢复已由父Root核对，项目STATE为ACTIVE。按服务失败时保守有界诊断执行，不代表Gemini路线审阅已完成或采纳整条新路线。
+
+结论：SAT_JOINT_DEGREE_AND_CORE_GATE_DIRECT_CHECK_PASS_NOT_GRAPH。
+202平面在同一个模型中实际求解一次，得到一份共同颜色及10pin核心命中集，独立直接代入原输入检查通过。
+
+plane_id=605
+pins=[48,4182,8315,13413,20704,27995,31375,32268,33171,33663]
+pin_count=10，Delta预算11，因此还有1个位置可用于外围补全。
+完整4074个fiber颜色保存在batch202/CANDIDATE.json；SAT全部变量赋值在ASSIGNMENT.txt。
+
+实际执行
+- solver_calls=1，SAT_models=1，fully_checked_assignments=1。
+- solver_CPU=0.253844，native_CPU=0.308003。
+- 整批whole_CPU=1.151272270，包含此前prepare的0.564311060；active_wall=1.615321111，含准备、求解与直接检查，待授权的隔夜等待不算主动运行。
+- 原总上限20CPU/120activewall，未超限；没有续批或重试。
+
+直接检查范围
+check_assignment.py重新读取原37631点图、4074split classes、原quotient边和原plane原点→当前pin映射，检查共同颜色、全部旧点的度数公式、加入本次10pins后的maxdegree11、全部91行命中和真实distinctpin成本10。
+全37631旧点的度数公式已检查；新增点degree10，现有点加新pin负载后均不超过11。
+91条核心行的实际命中见CHECK_RESULT.json/actual_line_witnesses。
+相对旧parity颜色有3969个bit不同。旧15component根色未绑定为旧raw sigma，因此这个数不表示在原字面图上已经执行3969次翻色。
+
+尚未完成的原图义务
+1. 当前raw incidence及tau方向绑定；据此构造真sigma的新37471核心，而非拿抽象same/different关系直接改旧matching。
+2. 把原160外围邻域接回后，验证真实简单性与所有度数；核心—核心距离由真sigma相关定理承担，不能由本次布尔assignment冒认。
+3. 全部160外围根到全图的距离，以及拟新增点的全图根覆盖；当前10pin只命中核心证书，余1位置未选择，外围共同覆盖没有检查。
+4. 原Goal中的独验、具体源Lean及最终审阅继续保留，Gemini实质路线意见仍缺。
+
+因此当前新增图0，BFS调用0，160外围根检查0；没有声明37632图已经存在。
+本次结果真正改变的判断是：旧fixed-degree的空行屏障能被一个共同合法颜色与pin选择同时解除，不只是在逐行分别想象可释放端口。下一瓶颈已经明确转为真实sigma输入绑定与外围共同路线。
+
+原件：batch202/{RESULT.json,NATIVE_RESULT.json,CHECK_RESULT.json,CANDIDATE.json,ASSIGNMENT.txt,SOLVE.log,CHECK.log,RUN_HANDLE.json}。
+本worker未修改共享STATE或Wiki，也未启动geometry或任何后继。

@@ -1,0 +1,70 @@
+H9整状态路线与总成本的独立只读判断B
+2026-11-16；同家族判断，不是Gemini路线/最终审阅替代。没有新计算、source BFS、solver、geometry生成或共享STATE/Wiki改动。
+
+结论
+“δ1任意S/颜色/H3复制，抛掉普通line/tail helpers”是一个数学完成路径闭合、与已关闭旧范围不同的对象。
+但目前没有足够正证据支持直接启动33033三态全局大IP或再次单点退火；当前4074合法seed比旧无合法seed好，仍不保证能跨越共同度数能垒。
+我建议先核对一个能决定模型规模和方向的实际缺失事实：固定当前4074个split位置、允许任意重染、删除全部普通helpers后，颜色无关的“可能H3复制资格”上界是否至少162。
+这是现有Q/S数据上的静态界，不是另一轮局部优化或球区域LNS。它没有执行，本报告不填猜测数。
+
+一、完整图目标与度数条件
+当前最高11D5=37632、195版本/44参数/49具体Lean；本路线若成功仍在同一参数，只能增加阶数或提炼统一构造，不能计新参数。
+bare partial-fold core阶33397+|S|。H3点h额外copy数z_h按真正blow-up规则连接原型邻点的所有copies，不能误作互不相邻的普通twins。
+在δ1/max11下，每个h有generic邻点且任何generic基础度≥10，因此z_h≤1。任意颜色都不能使其复制超过1。
+不保任何line/pad/tail helper时，合法图阶为
+  n=33397+|S|+sum_h z_h。
+要超过37632必须|S|+sum z≥4236。固定当前|S|=4074则需至少162份H3 copies。
+
+采用原作者第3–5节的实际partial-fold/blow-up定理，D≤5对任意合法S/c/z成立；此处不用逐个外围根修复，因为普通外围全部删去。
+exact generic度：
+ merged f：10+sum_{g∈NQ(f)}s_g+z_{h(f)}；
+ split f：10+same_color_split_neighbors(f)+z_{h(f)}。
+H3及每份copy度：
+ 7−absolute(h)+s(h)+sum_{h'∈NH3(h)}z_h'。
+所以δ1的H3约束是
+ sum_{h'∈NH3(h)}z_h'≤4+absolute(h)−s(h)。
+这些是同一个共同状态的约束，不是先分别最大S和copies再相加。
+
+二、现有真正可用的seed与warmstart边界
+现有真实4074S和最终接受颜色已用H9 line_points/tau/pi绑定。先去掉全部外部helpers、设所有z=0，得到37471点、max≤11、D≤5的合法bare seed，完全不需要重新构造几何或跑全source BFS。
+旧原37631结构的29个“copy-like”点未在本次原件中全部证明是Theorem5.2的H3 blowup实例；不要仅凭名字给z加29。安全可读seed是z=0；以后若逐prototype绑定合法copies可以消费，但不作为当前探针前置。
+
+若固定S保留真实颜色，z的任何新增都不能破坏已计度的generic和H3预算；若重染，则某些copy位置可被释放，也可能压满另一位置。因此当前H9成功中“共同选颜色+端口”的资产能原样接入，不需要又从全merged软状态开工。
+
+实际旧局部模型用SciPy milp，原报告明确说其接口没有warmstart。不能把“写了一个当前解”称为solver已接纳的MIP incumbent。
+SAT固定target4236时，seed的4074并不满足目标约束，最多提供已核的base consistency和phase提示；phase不是达到target的warmstart证书。若用优化模型保留4074 incumbent，也必须由真实支持MIPstart/模型增量的接口接入并回报，不空口说warmstart解决成本。
+
+三、与旧δ2已跑范围真正的区别
+1. greedy/monotone closure：旧固定作者S7959、280H3 copies，只加split，15022满载merged连通并经252个满载H3反向强迫，关闭全部25074 merged的S真超集，即使重染也不行。
+本次δ1当前4074S与旧7959集合不同，已恢复真sigma；旧闭包不排本次改变S/z的全域，但它仍警示“仅找能加的点”可能根本没有路。
+
+2. 四个Q半径3 LNS：旧δ2、四预定根702/2/36/48，区域820..901个generic、1..28copy变量，外围固定，四区精确最优增益0，总约2.187CPU。
+它们只排指定边界区域；不是全域No。但没有新结构依据，换一个大球或多开几个球也不能算新生成机制。
+
+3. 全局δ2三态：全部33033个fiber自由，copies固定0；三起点各50CPU共150.044workerCPU，单点平方惩罚/退火，约9.7亿提案。最好合法S4986低于当时42342纪录；另外两轨迹最终仍约千个超度点。原报告明确停止，未证明三态域不存在。
+本次有δ1高密度合法4074seed且允许H3copies，确实改变起点/目标；但不自动修复“单点局部变更跨不过共同容量能垒”的旧缺陷。因此不建议把旧退火只改δ和起点后再跑150秒。
+
+四、一个最有区分度的静态探针
+先固定当前S，只把颜色看作自由；不给任何helpers负载。
+对每个H3点h，读其三个generic邻点。若某个邻点f当前是merged，且
+ sum_{g∈NQ(f)}s_g≥1，
+则f基础度至少11，加z_h=1必达12。这个阻断与颜色无关，h在“固定S、任意颜色”下永远不可复制。
+其余h先列为potential set E_H，暂时放松split点的颜色相容与H3之间的copy负载。因此
+  max_{任意颜色/合法copies}sum z_h ≤ |E_H|。
+这条便宜上界只需Q、HQ、当前4074S；不需要solver、所有raw incidence或BFS。
+
+若|E_H|<162：固定S＋任意重染＋任意H3copies的整个source-only超37632方案严格失败。这个结果会改变下一研究动作：必须真改变S，不能再通过同S颜色/末端copy微调追目标。此时不要自动接下一Q球/另一个S；需要新的共同交换结构依据才投入。
+若|E_H|≥162：它只是必要门，但提供一个有限、与whole目标直接相连的共同子问题。现有4074颜色变量/6006split边，加≤364个copy变量即可准确写全部generic/H3约束和sum z≥162；不需动33033三态大模型。成功直接返回完整source-only新图，无外围修复。必须说明它仍仅固定当前S，不能把UNKNOWN写成整个任意S机制失败。
+
+推荐先做这个唯一静态probe，预算可≤3CPU一次；若门通过，是否再给一个20CPU左右的共同颜色/copy有限批应由Root按实际数据和要求的Gemini意见决定，不在本报告自动授权。不能因为“364变量不大”就不看共同S/degree约束或声称一定好解。
+
+五、什么才算这里的进展
+成功要求实际完整S/c/z达到≥4236并逐点计度；按新state生成真实core/blowup，独立核sigma/合并/copy邻接及度数，明确继承H9直径定理和现有Lean/审阅缺口。
+仅得更多potential copies、较好的LP值或违规少一些，都不等于接近完整图。
+如果静态门说明必须变S，而没有可解释的共同交换，不应再给一轮未指定结构的全局IP；保留准确未知，比制造另一串小No更符合本Goal。
+若成功仍只给同参数多个阶数，也应控制该机制收获批次，保留新参数目标的研究空间。
+
+六、已读原件与成本边界
+读取当前父任务/STATE相关块；THEOREM_SCOPE_REVIEW.md原完整度公式与H3copy/普通twin区别；verify_witness.py已实际使用的partial_fold接口；当前h9_binding/REPORT与已接受37632 Wiki节点；h9_other_degrees/REPORT有关当前4074与29copy-like边界。
+并全文读旧hexagon_partial_fold_greedy/REPORT.md、hexagon_partial_fold_joint/REPORT.md、wave4/global_partial_fold/REPORT.md，继承各自真实scope/费用，不重跑。
+未读完全部旧历史，也没有把旧δ2范围改写为当前δ1已经尝试。Gemini额度不可用仍是缺失的外部意见，本只读B判断不提供跨模型放行。

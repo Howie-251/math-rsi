@@ -8,7 +8,7 @@
 
 </div>
 
-[![MathRSI 当前主页 v0 → v5 演进回放](figures/mathrsi/media/evolution.gif?v=5)](figures/mathrsi/media/evolution.mp4?v=5)
+[![MathRSI 当前主页 v0 → v5 演进回放](figures/mathrsi/media/evolution.gif?v=5-dd-20261116)](figures/mathrsi/media/evolution.mp4?v=5-dd-20261116)
 
 *真实主页 v0 → v5 演进回放，末尾停留 v5 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/)。[运行归属与工作稿状态](case-studies/README.md)。*
 
@@ -50,11 +50,11 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 六个领域的研究同时积累数学结果和可复用方法。[公开主页](https://lisresearchgroup.github.io/math-rsi/) · [本地运行方法](docs/HOMEPAGE.md)。**[中英可视化导览](https://lisresearchgroup.github.io/math-rsi/)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
-[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg)](case-studies/README.md)
+[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg?v=5-dd-20261116)](case-studies/README.md)
 
 - **Property B：** $k=5,\ldots,12$ 的具体下界，以及所有 $k\ge12$ 随参数指数增长的加性增益。[成果与证明范围](case-studies/property-b/README.md)
 - **纠错码：** 闭合三组 1985 年已有的缺口，得到四组精确距离（含一项文献推论）并收窄一组区间。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
-- **Degree–Diameter：** 刷新四组历史构造基准，包括一个 2,567 点的 $(10,4)$ 图。[构造与证据](case-studies/degree-diameter/README.md)
+- **Degree–Diameter：** $(11,5)$ 达 37,632 点、 $(12,5)$ 达 42,433 点，相对 2026-11-16 核对的 Comellas 表分别增 1 与 81 点。[成果与核验范围](case-studies/degree-diameter/README.zh-CN.md)
 - **Erdős 第 86 题：** 渐近密度上界从 $0.60318$ 改进至 $\lt0.59155154$。[结果与核验范围](case-studies/README.md#erdős-problem-86)
 - **Ruskey–Savage：** $Q_6$ 的每个匹配、$Q_7$ 中至少 57 条边的每个匹配均可延拓为 Hamilton 圈。[成果、方法与开放范围](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending：** 工作稿将 $\mathrm{ES}(7)$ 上界从 78 收紧至 77，待独立审阅。[原稿与状态](case-studies/happy-ending/README.md)
@@ -92,6 +92,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 - **v5 通用能力：** 控制辅助量，让下一步证明可行；新定理先用于已知合法表示；用固定或依输入选择的有限计划覆盖每个输入。
 - **深化 Hamilton 方法：** 受控供体与返回桥、精确兼容池计数、多省略点森林证书。Q7 研究实际采用 **v3（本地适配）**，其方法反馈 v5。
+- **2026-11-16 · v5 后续维护：** DD 反馈“先收件，再派发”：依据已返回的原始结果更新当前事实，再派发任务或审阅；避免重复运行与旧状态回退。 DD 插件深化“联合选择与增量核验”。实际研究采用 v4 + 本地更新。[维护记录](https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md)
 - **继承已有能力：** v4 的取等—见证链、全局重评，以及后续 ECC 节点与共同计算复用继续保留。
 
 **[v5 是 `main` 当前工作流](docs/V5_CHANGES.md)。** 可下载[固定 v5 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v5.zip)或[main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆并记录精确提交。固定 v1–v5 标签不变。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)

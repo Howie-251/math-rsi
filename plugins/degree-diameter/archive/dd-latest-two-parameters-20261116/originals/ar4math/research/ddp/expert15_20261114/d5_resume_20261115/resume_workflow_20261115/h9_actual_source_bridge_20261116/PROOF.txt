@@ -1,0 +1,348 @@
+实际 H9 的 91-star / 729-kernel 到最终 37,632 图核心的统一证明
+2026-11-16；本任务是数学接线，不运行几何生成、BFS、SAT或Lean。
+
+结论与边界
+
+以下证明将所有有限几何量词绑定到已核验的实际 66,430 点、66,430 线，
+将所有图边绑定到 h9_n37632/graph_d11_D5_n37632.edges。
+它不以“广义六边形的直径”为前提，也不以 cross 核的秩为前提。
+实际 91-star 给出的 729 个核向量，以及已证明的三坐标注入，足够闭合。
+特别地，cross 非零产生的中间点确有实际 PointID；cross 为零的两个
+不同实际点确在同一条实际缓存线中。这两个 caller 都在第 5、6 节证明。
+
+数学结论：实际核心 37,471 个顶点的任意点对在最终图中有长度至多 5
+的 walk。和已存在的最终图全部 161 个外围根证据合用，得到最终图
+37,632 顶点、205,366 边、最大度 11、直径恰 5 的既有数学结论。
+此处没有把“37,632 图”误写成“37,632 个核心点”：核心为 0..37470，
+其余 161 个顶点为 37471..37631。
+
+这是一份完整的有限数据数学证明，不是完整 Lean 实例。有限检查的外部
+结果尚须由 Lean 接受的实际数据定义与证明承接，第 10 节逐项列明。
+本报告不提升具体 Lean 计数，不代替原要求的最终审阅，不新增图或参数。
+
+1. 固定对象、编号和已有有限输入
+
+以下 N 表示本文件父目录 resume_workflow_20261115。
+
+P = {0,...,66429}，L = {0,...,66429}，V = {0,...,37631}，
+Vcore = {0,...,37470}。全局关联线标签为 66430 + l，l 属于 L。
+
+点坐标 X : P -> K^7 来自
+  N/h9_exact_binding/point_coords.u8.bin
+每点依次 7 字节，坐标顺序为 (u0,u1,u2,s,v0,v1,v2)。
+线行 T(l) 是下面文件依次每 10 个 int32 给出的 PointID 集合：
+  N/h9_exact_binding/line_points.i32.bin
+关联 I(p,l) 的定义就是 p 属于 T(l)，没有另一个抽象 incidence。
+
+实际折叠映射 pi : P -> Vcore 来自
+  N/h9_exact_binding/pi.u16.bin。
+本次实际点线双射 sigma : P -> L 是
+  N/h9_other_orientation/sigma.i32.bin
+中的 int32 值减去 66430。注意：这里明确使用 other_orientation 的
+sigma，不是 h9_exact_binding/sigma.i32.bin 中的旧方向。
+最终图 G 的边就是
+  N/h9_n37632/graph_d11_D5_n37632.edges
+中的 205,366 条无向边；Gcore 是其在 Vcore 上的诱导子图。
+
+已实际执行并被当前任务复用的有限事实如下。
+
+F1. 对每个 p 属于 P，X(p) 非零，首个非零坐标为 1，Q(X(p))=0；
+    X 在 P 上单射。
+F2. 每个 T(l) 是恰 10 个不同 PointID；各线行互异。
+    令 r,w 为该行前两个 PointID，则 X(r),X(w) 不同且规范化，
+    C(X(r),X(w))=0，并且该行恰为
+      { normalize(X(r)+c X(w)) : c 属于 K } 并 { X(w) }
+    对应的 PointID 集合。这里不是只检查了两个 basis 点。
+F3. 每个 p 恰在 10 个不同实际线行中；这些行的 PointID 并集 S_p
+    恰有 91 个元素，而且包含 p。
+F4. 实际 sigma 是 P 到 L 的双射；pi 满射到 Vcore。
+F5. 对全部 664,300 个实际关联 (p,l)，
+      pi(sigma^{-1}(l)) = pi(p)
+    或
+      { pi(sigma^{-1}(l)), pi(p) } 是最终图 G 的实际核心边。
+
+F1--F3 已由 h9_cross_finite_binding_20261116/check.cpp 完整检查，
+其 RESULT.json 为 ALL_FINITE_CROSS_ROUTING_INPUTS_PASS：
+66430 点、66430 完整 projective spans、全部 incidence 度 10、
+全部 local stars 91；不是几何样本或 BFS。
+该程序的规范化先固定首坐标的逆元，再统一乘所有坐标；已修复的先前
+in-place 因子问题没有沿用进当前 PASS。
+
+F4--F5 已由 h9_core_route_certificate_20261116/route_core.py 完整检查，
+其 RESULT.json 为 UNIVERSAL_TRANSPORT_AND_FIXED_ROUTE_DIAGNOSTICS_PASS。
+真正普遍有限断言是 664300 个运输步中的 664272 条边和 28 次停留，
+以及 sigma 双射、pi 满射；同文件的 289 个固定 pair 只是编码诊断，
+本证明的全点对量词不从这 289 个 pair 推断。
+
+这些有限性质分别指向上述固定字面文件，不是让未来 caller 任意选择
+一个满足假设的几何。还存在独立的逐边相等证据：
+  h9_independent_completion/other37632/BINDING.json
+  h9_n37632/independent/RESULT.json
+前者从实际 sigma/pi/T 重建全部 203747 核心边；后者将其接到最终图，
+唯一新增边为 (31,37631)，实际核心全部保留。
+对于下文距离结论，F5 的“边或停留”包含关系已经足够，无需额外依赖
+核心逐边相等，也无需把 tau 四阶或颜色常值留作隐藏数学前提。
+
+2. 实际 F9、规范化和普遍代数
+
+K = F3[t]/(t^2+1)。t^2+1 在 F3 上没有根，因为平方只有 0、1，
+而 -1=2；故 K 是有 9 个元素的域，特征 3。
+字节码 a+3b（a,b 属于 {0,1,2}）代表 a+b t。因此实际运算为
+  (a+3b)+(c+3d) = (a+c mod 3)+3(b+d mod 3)，
+  (a+3b)(c+3d) = (ac-bd mod 3)+3(ad+bc mod 3)。
+这与 check.cpp、route_core.py 的 A/M 表完全相同；这里不把模 9
+整数乘法误认成域乘法。非零域元字节码恰为 1..8。
+
+对非零 z 属于 K^7，设 j 是首个非零坐标，定义
+  normalize(z) = z_j^{-1} z。
+于是 normalize(z) 非零且首个非零坐标为 1。
+若 a 不为零，则 normalize(a z)=normalize(z)。
+若 x,y 都已规范化，且 a x=b y，a,b 不为零，则 a=b 且 x=y：
+两向量的非零支撑相同，故其首个非零位置 j 相同；该坐标的 x_j、y_j
+都等于 1，比较第 j 坐标先得 a=b，再逐坐标约去 a。
+因此规范化非零向量的不同 scalar multiples 不会混淆不同 PointID。
+
+对 p=(u,s,v)、q=(U,t,V) 定义
+  Q(p) = u dot v - s^2，
+  beta(p,q) = u dot V + U dot v - 2 s t，
+  C(p,q) = (sU-tu+v cross V,
+            u dot V-v dot U,
+            tv-sV+u cross U)。
+特征 3 下 -2=1，所以 route_core.py 的中央 polar 项使用 +s*t 正确。
+C 对每项线性且 alternating；C(q,p)=-C(p,q)。使用的准确恒等式为
+  C(p,C(p,q)) = -beta(p,q) p - Q(p) q，
+  Q(C(p,q)) = Q(p) Q(q) - beta(p,q)^2。
+这些及 null/polar 的共同邻点、projective 非退化已分别在
+  formal/DegreeDiameter/Portfolio/H9CrossRouting.lean
+  formal/DegreeDiameter/Portfolio/H9CrossGeometry.lean
+中完成 kernel 检查，记录的 axioms 只有标准 propext/choice/Quot.sound。
+具体 K 的 Field、card=9、char=3 及字节解释仍须在实际实例里绑定。
+
+3. 对每个实际点 p，显式构造 729 个不同的真实核向量
+
+以下 p 任取于 P；记 K_p={z 属于 K^7 : C(X(p),z)=0}。
+令
+  S_p = { q 属于 P : 存在 l 属于 L，p,q 都在 T(l) }。
+F3 给 |S_p|=91。
+
+先证明对每个 q 属于 S_p，有 C(X(p),X(q))=0。
+取实际共同线 l，令 R=X(r)、W=X(w) 为该行前两点坐标。不同的规范化
+非零向量 R,W 线性独立：否则它们为非零标量倍，规范化唯一性迫相等，
+再由 F1 单射迫 r=w，与 F2 矛盾。
+由 F2，X(p) 和 X(q) 都属于 span(R,W)，而 C(R,W)=0。
+双线性、alternating 给
+  C(aR+bW,cR+dW)=(ad-bc) C(R,W)=0。
+这对 line 行中的所有点成立，不仅对选定 basis 点成立。
+
+把 S_p 按真实 PointID 递增列为 t_p(0),...,t_p(90)。定义实际输入
+  s_p : {0,...,728} -> K_p
+为
+  s_p(0)=0；
+  对 n=1,...,728，令 k=floor((n-1)/8)、j=(n-1) mod 8，
+  s_p(n)=(j+1) X(t_p(k))。
+这里 j+1 指 F9 的字节码 1..8，不是把该自然数当域中的整数强制转换。
+例如字节 3 代表 t，而域中的整数 3 等于 0；这个区别必须保留。
+所有 729 项在 K_p 中，因为每个 X(t_p(k)) 在核中且 C 的右项线性。
+
+s_p 单射的完整证明：
+- 非零标量乘非零点坐标仍非零，所以 0 项不等于任何其他项。
+- 若两非零项 a X(q)=b X(r)，则第 2 节唯一性给 a=b、X(q)=X(r)。
+  F1 给 q=r，排序枚举给对应 k 相同，字节码 1..8 的单射给 j 相同。
+  因此两原始索引 n 相同。
+这没有将 s_p 的存在或 injective 作为一个尚未提供的额外假设。
+
+4. 核上界与满射：不使用 rank 黑箱
+
+Q(X(p))=0 且 X(p) 非零，故其 0,1,2,4,5,6 坐标中至少一个非零。
+否则 Q=-p_3^2=0 迫 p_3=0，矛盾。
+选择下表任一可用 pivot，并把 K_p 投影到所列三个坐标：
+
+  非零 pivot     保留坐标          余坐标为零的推出顺序
+      0          (0,5,6)                 3,2,1,4
+      1          (1,4,6)                 3,2,0,5
+      2          (2,4,5)                 3,1,0,6
+      4          (4,1,2)                 3,6,5,0
+      5          (5,0,2)                 3,6,4,1
+      6          (6,0,1)                 3,5,4,2
+
+每行表示：若 z 属于 K_p 且三个保留坐标为零，依次读 C(X(p),z)=0
+的对应分量，并除以非零 pivot，就按表迫所有余坐标为零。
+例如 pivot 0 时，cross 分量 0、5、6、3 依次迫 z3,z2,z1,z4=0。
+完整六行已经由 H9CrossKernel.lean 的 kernel_zero_0/1/2/4/5/6 证明。
+两个核向量有相同投影时，其差仍在核中，故差为零。因此这是一个已证明
+的 K_p -> K^3 单射，即 null_kernel_injects_three，不是假设核 rank=3。
+
+于是 |K_p| <= 9^3 = 729；第 3 节的 s_p 是 729 点到 K_p 的单射，
+故它满射。这里正是 H9CrossStar.star729_surjective 的实际 caller：
+K 用上述 F9，p 用 X(p)，s 用排序实际 S_p 和字节码 scalar 构造的 s_p，
+hp、hn、hs 分别由 F1、第 3 节单射证明提供。
+
+得到对所有实际 p 和所有向量 z 的准确结论：
+  若 z 非零且 C(X(p),z)=0，则存在唯一 q 属于 S_p 及 a 属于 K\{0}，
+  使 z=a X(q)；从而 normalize(z)=X(q)。
+这是“有实际 PointID”的强结论，不只是“z 是 null”或“核至多 91 rays”。
+也不需要额外证明整个 projective Q 都被点表枚举。
+
+5. cross=0 如何推出实际共同线
+
+任取不同实际点 p,q，假设 C(X(p),X(q))=0。
+用第 4 节于 z=X(q)，得到 r 属于 S_p、a 非零，使 X(q)=a X(r)。
+双方规范化，故 a=1、X(q)=X(r)，F1 给 q=r。因此 q 属于 S_p。
+按 S_p 的定义，确有实际线 l，使 p,q 都在 T(l)。
+
+这证明具体 crossZero_to_actualLine，量词是
+  对所有 p,q 属于 Fin 66430，p!=q 且 C(X(p),X(q))=0
+  蕴含存在 l 属于 Fin 66430，I(p,l) 且 I(q,l)。
+它没有直接把 span(p,q) 的抽象 Tits 条件当作缓存中存在一行的理由。
+
+共同线还唯一，足以满足 route_core.py 的 common_line 断言：
+不同规范化实际点线性独立，任何包含它们的完整 projective 线的线性
+span 都等于 span(X(p),X(q))；两条这种线有相同全部 10 个规范化点。
+由 F1 的 PointID 唯一性及 F2 的不同线行条件，两条 line ID 必相同。
+距离证明只需存在性，唯一性不是额外承重前提。
+
+6. 极化正交点对的实际 incidence walk 至多 4
+
+任取实际点 p,q，假设 beta(X(p),X(q))=0。
+若 p=q，长度 0 即可。以下 p!=q，记 y=C(X(p),X(q))。
+
+若 y=0，第 5 节给实际共同线 l，walk p--l--q 长度 2。
+
+若 y!=0，第 2 节恒等式及两个端点 null 给
+  Q(y)=0，C(X(p),y)=0，C(X(q),y)=0。
+用第 4 节的满射于实际 p，得到实际点 r 和非零 a，y=a X(r)。
+因此构造点在完整实际点表中；不是仅在某个抽象 quadric 上。
+
+r 与 p,q 都不同。若 y=b X(p)，因 y!=0 有 b!=0，而
+  0=C(X(q),y)=b C(X(q),X(p))=-b y，
+矛盾。若 y=b X(q)，则
+  0=C(X(p),y)=b C(X(p),X(q))=b y，
+同样矛盾。这也可直接调用已编译的 nonzero_cross_not_left_multiple 和
+nonzero_cross_not_right_multiple。
+再由 y=a X(r)、a!=0，分别约去 scalar 得
+  C(X(p),X(r))=C(X(q),X(r))=0。
+第 5 节遂给两条实际缓存线 l1,l2，产生
+  p -- l1 -- r -- l2 -- q，长度 4。
+至此 cross 的零与非零两分支都给出了实际 line ID 与 PointID。
+
+7. 任一实际点到任一实际线的实际 walk 至多 5
+
+任取 p 属于 P、l 属于 L。取 T(l) 前两个不同点 r,w，令
+  R=X(r)，W=X(w)，a=beta(X(p),R)，b=beta(X(p),W)。
+R,W 线性独立且 T(l) 为其完整 projective span（第 3 节、F2）。
+
+显式按 route_core.py 的分支选 q：
+- 若 a=0，取 q=r。
+- 若 a!=0 且 b=0，取 q=w。
+- 若 a,b 均非零，令 z=bR-aW。独立性给 z!=0；完整 span 给唯一实际
+  q 属于 T(l)，使 X(q)=normalize(z)。线性给 beta(X(p),z)=ba-ab=0，
+  乘规范化 scalar 后 beta(X(p),X(q)) 仍为 0。
+前两分支也直接有 beta(X(p),X(q))=0。
+q 的 null 性直接来自 F1，因为 q 已是实际 PointID，不需另加 null
+点枚举或不明的“构造点落表”假设。
+
+若 q=p，则 p 属于 T(l)，直接 walk p--l，长度 1。
+否则第 6 节给 p 到 q 长度 2 或 4 的实际 walk，再接 q--l，长度 3 或 5。
+所以对于所有 66430*66430 个实际 point-line 对，都有实际 incidence
+walk，长度属于 {1,3,5}。这由统一公式证明，没有执行该规模的逐对枚举。
+
+8. 沿本次 sigma 和 pi 运输到字面核心
+
+任取 u,v 属于 Vcore。F4 的 pi 满射给实际 p,q，pi(p)=u、pi(q)=v。
+第 7 节用于 p 和实际线 sigma(q)，得到长度 1、3 或 5 的关联 walk。
+最大情形可写为
+  p -- l1 -- p1 -- l2 -- p2 -- sigma(q)。
+逐项把实际点 a 替换为 pi(a)，把实际线 l 替换为 pi(sigma^{-1}(l))，
+得到
+  u, pi(sigma^{-1}(l1)), pi(p1), pi(sigma^{-1}(l2)), pi(p2), v。
+每个相邻项都是某个实际 incidence 的两种映像。F5 对全部 incidence
+而非样本已经检查：它们相等，或确是最终图的一条核心边。
+删去连续相等项即得 Gcore 中长度至多 5 的 walk。删除一个停留不会
+创造新边：邻项的值没有改变。非连续重复允许留作 walk，不影响距离上界。
+
+因此，具体的全称结论为
+  对所有 u,v 属于 Fin 37471，存在 G 中从 u 到 v 的 walk W，
+  W 的所有顶点都属于 Fin 37471，且 W.length <= 5。
+其中 G 是固定的最终 37632 图，sigma、pi、T 均是第 1 节的实际文件。
+本结论已消除了原核心证明中“经典 H9 的点线距离≤5”的进口。
+它不需要 pi 是图同态的另一个假设；F5 已按实际边逐步给出所需运输。
+
+9. 和最终 161 个外围根的既有数学证据合用
+
+R={37471,...,37631}，恰 161 个顶点。已存在最终图上的全部 R 根核验：
+  h9_n37632/independent/ROOT_RESULTS.jsonl
+  h9_n37632/independent/RAW_CHECK_RESULT.json
+  h9_n37632/independent/RESULT.json。
+每根覆盖全部 37632 顶点，ecc<=5、unreachable=0、beyond5=0。
+本任务只复用这些已执行证据，没有重新运行任何 BFS。
+任一全图点对，若两端都在核心，用第 8 节；否则至少一端属于 R，
+该实际 root 已覆盖它。因此最终图全部点对的数学距离上界为 5。
+已有实际边表检查同时给简单性和最大度 11，阶数为 37632。
+最大度 11 且直径至多 4 的 Moore 上界为
+  1+11(1+10+100+1000)=12222 < 37632，
+故最终图直径恰 5。
+
+10. 到具体整图 Lean 仍须哪些实际定义和证书
+
+以下是当前还没有交付的具体工作，不是用“装配即可”概括的步骤。
+命题名称是建议接口，不声称这些命题已经存在。
+
+(A) ActualF9：可以直接复用已存在的
+    formal/DegreeDiameter/Portfolio/F9Graph56862Field.lean 中九构造子的 F，
+    该文件已有实际加法/乘法表、CommRing、F.code/F.ofCode 互逆；乘法表
+    正是 ac-bd/ad+bc。仍要补/调用 Field、Nat.card=9、(3:K)=0 和非零
+    字节枚举的 kernel 证明，并把实际坐标字节通过 F.ofCode 解释。
+    若改用另一个域，必须给该域与字节表的同构，不能只选一个“有9元”
+    的无关域。特别须区分 byte 3 和 integer cast 3。
+    归一化并行 worker 负责此部分的新增证明；本清单按本 worker 阅读
+    到的源码状态列出，不覆盖其之后的真实编译结果。
+(B) ActualCoords：实际 Fin66430 -> Fin7 -> K 坐标表，及逐点 nonzero、
+    normalized、Q=0、单射的具体有限证明。外部 check.cpp 的 PASS
+    不是 Lean 的证明项；不能以 sorry/axiom 导入。
+(C) ActualLines：实际 Fin66430 的 10 个 PointID；每行 distinct、不同
+    行 distinct、basis cross=0、完整 normalize(R+cW)/W span、每点
+    incidence 10、每点 star union 91 的实际有限证书和 kernel 接受证明。
+    这些都已外部核验，无新的数学搜索；但尚没有 Lean 数据层和证书。
+    只为距离证明可减去不承重的行唯一性/精确 incidence 度，但必须保留
+    每个实际 S_p 有 91 个不同点且都有实际共同线，以及所用线 full span。
+(D) ActualStar729：对每个 p，定义第 3 节真实排序 S_p 枚举及字节 scalar
+    枚举，给实际 s_p : Fin729 -> Kernel(X(p))。用已核验规范化唯一性
+    证明 hs，调用现成 star729_surjective；再证明本文第 4--7 节的
+    actualKernelRepresentative、crossZero_to_actualLine、
+    actualPolarPointWalk_le_four、actualPointLineWalk_le_five。
+    本文已给完整 caller 数学证明，但这些实际量词的 Lean 定理尚未编译。
+(E) ActualSigmaPi：从 other_orientation 的实际 sigma 及实际 pi 建立
+    有限类型映射，sigma 的逆与双射、pi 的覆盖/每核心点代表的具体证书。
+    可直接检查这两个表，距离证明不要求另行形式化 tau 或颜色生成史。
+(F) ActualFinalGraph：将同一固定最终 205366 条无向边定义成
+    SimpleGraph (Fin37632)，并给实际无环/无重复、每点度<=11 的有限证明；
+    核心嵌入为 Fin37471 的自然编号。必须绑定同一边表，不能以抽象
+    从几何生成的另一张图替代字面最终图而没有相等/包含证明。
+(G) ActualTransport：对 664300 个实际 incidence 的 edge-or-stay
+    断言给 kernel 可接受的证书；可检查全部步，也可证明逐边相等后推出。
+    接上实际 sigma 逆、pi，定义去连续停留的 walk 运输，证明长度不增，
+    得到所有 Fin37471 点对的核心 D5，而非只导入“源 D5”假设。
+(H) ActualExterior：对 R 中 161 个具体根及全部 Fin37632 目标给长度
+    <=5 的可检验证书。现有 ROOT_RESULTS.jsonl 每根只有 eccentricity
+    和空 missing 摘要，不包含逐目标 parent/层标签，不能作为已经存在
+    的完整 Lean 路径证书。需要在 Lean 内核里对同一邻接表证明五层覆盖，
+    或提供实际 161*37632 个目标的深度/父指针等可检查见证，并证明其
+    深度<=5、parent 边存在且深度下降。生成哪种见证及费用须由父任务
+    另行决定；本任务没有重跑旧 BFS 来悄悄补这一输入。
+(I) ActualFinalClaim：按“核心/至少一端在 R”合并 (G)(H)，加 (F) 的
+    阶数/最大度，得到该固定图的实例；如需直径恰 5，还要接 Moore 下界。
+    原指定的最终独立审阅仍另待完成。无理由声称具体 Lean 49->50。
+
+已有 H9CrossRouting/Geometry/Kernel/Star 是 A--I 中的通用代数组件，
+本任务补的是实际 s_p 与实际有限输入到它们的完整数学 caller。
+这说明数学几何链闭合，也准确暴露了有限数据进 Lean 和外围证书仍是
+实质未完成工作；不能把它们改写成无成本的最后一个 wrapper。
+
+11. 本任务执行范围
+
+读取指定任务输入、whole-cost review、既有数学证明、有限 checker 源码、
+实际 route_core 源码、四个 H9 Lean 组件源码及原绑定/外围摘要。
+只新增本目录的证明和静态收据检查；没有几何重建、旧 BFS、SAT、
+图生成、Lean 编译、hash、STATE/Wiki/框架修改或另一阶段。
+静态检查只核现有收据的固定路径、有限断言和 161 个 summary 根集合；
+它不冒充再做了原几何或距离计算。真实费用与终态另见 RESULT.json。

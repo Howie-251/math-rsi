@@ -1,0 +1,73 @@
+两张图的构造与全部点对覆盖证据
+
+一、(12,5)，42,433点
+
+取包内G0=inputs/d12_source42402.edges，n0=42402、m0=245937。
+按inputs/d12_additions.json的顺序，对i=0,…,30增加顶点zi=42402+i，连到该行的互异pins Si；
+除此之外不改变任何旧边。reproduce.py中的construct_d12实现这一定义。
+每个Si至多12点、所选旧点当时度数均小于12。因此每步最大度仍至多12；简单性同理保持。
+31个Si各有12点，最终边数245937+31·12=246309。
+
+距离证明：接受的实际G0直径至多5是历史数学验证进口，并非已经闭合的具体Lean前提。
+对每一步，旧边全部保留，所以旧点对路径不增长；原独立checker在该步的真实前缀中对新根运行完整BFS，
+到全部前缀顶点均不超过5。数学归纳给所有31个前缀的直径至多5。
+原件依次为：
+  originals/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/d12_n42403/independent/RESULT.json
+  .../d12_blocking_family_continuation/independent/RESULT.json（8步）
+  .../resume_workflow_20261115/d12_batch01/independent/RESULT.json（8步）
+  .../resume_workflow_20261115/d12_batch02/independent/RESULT.json（14步）
+每份记录都有实际pins、保边、全部度数、新根完整距离层及逐边一致性；不是抽样。
+
+包根verify.py使用另一个充分覆盖：核源边为最终边子集，再对最终图的全部31个新增根运行完整BFS。
+G0旧旧点对继承；所有至少含一个新点的点对都被这些根覆盖。此证明不需要把31个旧前缀边表全部带上。
+42,433>最大度12、直径4的Moore界17,569，因此结合D<=5可得D恰5。
+注意这是12度D4的Moore值1+12(1+11+121+1331)=17569，不与其他参数Moore值混用。
+
+新增邻域如何得到：真实H9折叠核心中的全奇异PG(2,9)平面有91条线。
+核心端口集合P命中全部91线，可由极化零点和偶关联路径转换保证核心B4覆盖。
+剩余12−|P|端口在当前全部余度点中共同覆盖外围，包括此前新增点；完整S另外做实际B4检查。
+这个证书是有依据的候选生成方式，不宣称所有可能图都必须有该平面证书。
+折叠后不同raw点可映到一个实际pin，度数成本必须按实际pin计算。
+完整推导见原GEOMETRIC_MECHANISM.txt、JOINT_MODEL_PROOF_MEMO.txt及历史theory/PROOF.md。
+
+二、(11,5)，37,632点
+
+取真实分裂Cayley六边形H(9)的关联结构，点线各66430、每条线10点，关联直径6。
+有限输入为inputs/h9_tau.i32.bin、h9_line_points.i32.bin等。原几何构造与绑定程序/结果同时保留。
+phi=tau²；固定4074个split fibers，其他非固定fiber合并，固定点保持，实际映射pi给37471核心点。
+每个split fiber共同颜色决定sigma(p)=tau(p)或tau^(-1)(p)，未split处颜色0。
+原独验核了sigma双射、fiber颜色相容、实际tau/pi/incidence与核心边表逐边相符。
+核心边由pi(p)~pi(q)（q在sigma(p)上且p≠q）定义，去重后203747条。
+保留原160个外围点及1608条外围相关边，加新点37631并连固定11pins，得到205366条边。
+
+核心全部点对为什么至多5步：
+任意raw点p,q，从p到线sigma(q)的关联距离至多5，取奇路径
+ p—L1—a—L2—b—sigma(q)。
+点图中转换为
+ p—sigma^(-1)(L1)—a—sigma^(-1)(L2)—b—q。
+每步都由“某点在sigma(另一点)上”给出，相邻项相等时删去停留，长度不增加。
+更短奇路径同理。因此任意raw点对至多5步，投影pi不增长路径长度，核心所有点对均至多5步。
+这要求固定真实关联结构和双射sigma，不依赖原旧核心路径全部保留。
+
+核心外恰有160个旧外围点及新z，共161点。
+原独验从最终205366边表重读，对全部161根完整BFS，全部37632点距离均<=5，无未达点。
+任意非核心—核心点对或外围—外围点对至少含一个这161根，因此全部覆盖。
+核心定理+这161根组成全体点对证明，不是随机采样。
+37632>最大度11、直径4的Moore界12222，故直径恰5。
+
+关键原件：
+  originals/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/
+    h9_n37632/PROOF_AND_TRAJECTORY.txt
+    h9_n37632/independent/RESULT.json、ROOT_RESULTS.jsonl、RAW_CHECK_RESULT.json
+    h9_independent_completion/other37632/BINDING.json
+    h9_exact_binding/build.cpp、check_binding.py、RESULT.json
+    h9_cross_finite_binding_20261116/RESULT.json
+    h9_core_certificate_review.txt、H9_PLANE605_BINDING.json
+
+三、不能混淆的认证状态
+
+数学/计算证据已覆盖全部要求的点对；不等于具体Lean已经闭合。
+D12 SingleExtension证明带实际source D5、parent/depth等前提，不能消去本包具体源的未闭前提。
+H9通用投影/路径Lean模块与有限几何检查各自有价值，但实际Fin37632实例尚未全部装配。
+包内formal及原编译日志如实保留成功、SIGSEGV、预算终态；无新具体Lean计数。
+有关Gemini原文与Root处置分别保留，路线意见不替代指定最终图终审。

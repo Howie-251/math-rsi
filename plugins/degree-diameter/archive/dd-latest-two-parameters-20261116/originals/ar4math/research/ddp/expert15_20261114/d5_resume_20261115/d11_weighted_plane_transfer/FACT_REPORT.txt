@@ -1,0 +1,27 @@
+degree11的任意平面阻塞规则配适结论（2026-11-15）
+
+结果：当前37631源上，使用已恢复的degree11原点映射，在同一1120个既有F3定义全奇异平面中，每一个平面都至少有一条线没有任何实际余度pin provider。故该具体mapped line-hitset候选族的合法域为空；无需求覆盖球、设guard配额或启动solver。它不是“旧Baer13/Rédei15失败”的转述，而是允许任意阻塞形状后的逐线完整度数障碍。
+
+实际输入
+源：research/ddp/more_graphs_20261027/h9_d11_followups/graph_d11_D5_n37631.edges，
+37631点、205329边，实际free点2471、空槽3283。
+核心编号0..37470，共37471点；外围37471..37630，共160点。未使用degree12的41356核心或其raw映射。
+degree11专用映射：
+research/ddp/more_graphs_20261027/h9_other_degrees/point_to_core11.u16.bin。
+实际66430个条目全部有效，像覆盖0..37470；反向纤维为28959个二点、8512个单点。当前free核心2434点，其中1917是split端点；剩37个free点在外围。
+真实度数来源为accepted_d11_d12_full_neighborhood_clones/source_degrees_d11.u8.bin，
+与PROFILE_D11.json的完整histogram及源header准确绑定。
+
+数学证书是否可直接继承
+beta=0⇒H9-incidence点距离≤4本身属于同一原始H9几何，可继承；原partial-fold理论也允许各fiber不同颜色，只须同fiber颜色一致。泛blocking⇒R4核心覆盖要求实际G_sigma到本核心的点步行投影不增距。
+现成recover11.py/mapping11_result.json准确核过同33397 quotient、全pair同时交换自同构、split-pair之间2或4条边的数量/颜色模型、canonical原点排序。但原文件明确未重建H9 incidence-voltage方向；在本次读到的证据中没有找到逐raw边的sigma方向与当前split匹配完全绑定证明。
+因此本次没有把“同quotient/同标签”升级为已验证的任意raw walk投影定理，也没有声称该投影错误。精确缺口是当前split—split匹配相对raw原点的方向绑定；1917个free split端点使其不能简单靠只选unsplit点回避。
+这不阻止本次廉价试验：现成单值映射仍定义了明确的邻集生成域，且逐线是否存在free provider完全可判。即使未来补上方向证明，本次1120平面的空线障碍仍然存在；若今后在其它明确域产生候选，实际完整源R4可以直接验证，不应依赖未证投影接受。
+
+实际执行范围与输出
+geometry_fit.py逐个处理364 flat＋756 nonflat，共1120个既有平面，使用已绑定的91点/91线顺序和degree11实际pi；全部1120在空线门排除，retained=0。故没有进入强制pins>11/更强资源门，更没有跑外围覆盖或共同求解。
+LINE_PROVIDER_TABLES.json完整保存每平面全部91行的实际余度provider、空行编号、原点及实际pin轴；SOURCE_BINDING.json保存输入与投影条件；RESULT.json保存准确终态。
+实际脚本CPU0.198201202秒；BFS0、solver0、随机候选0、新图0。未重建映射、未重认证源D5、未改STATE。
+
+准确停止范围
+只关闭“该37631固定源＋该已恢复pi＋这1120个既有平面＋平面各线由实际余度邻点命中”的生成族。没有排所有Q9平面、其它源、改边、其它覆盖证书或一般(11,5)37632点构造；也不自动启动其中任何扩展。

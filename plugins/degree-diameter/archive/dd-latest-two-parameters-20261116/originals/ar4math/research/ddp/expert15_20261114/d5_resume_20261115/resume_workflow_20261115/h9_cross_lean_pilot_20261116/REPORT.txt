@@ -1,0 +1,30 @@
+H9 char3 cross代数的实际Lean kernel试跑
+2026-11-16；原30CPU/180秒activewall单pilot。未取得Lean编译成功，不增加第50个具体图Lean。
+
+输入与源模块
+读取h9_explicit_cross_route_20261116/check_symbolic.py、PROOF.txt和RESULT.json。原23个普遍多项式恒等式已由精确F3符号计算通过；此次不是重跑那个数学检查。
+formal/DegreeDiameter/Portfolio/H9CrossRouting.lean定义CommRing K、Vec7=Fin7→K、精确七坐标norm/polar/cross。
+生成器把每个多项式差在整系数环展开，逐项确认系数可被3整除，写出商多项式；Lean目标用ring证明difference=(3:K)*quotient，再用显式h3:(3:K)=0消去。
+原23个identity含7复合式、norm、7skew、2polar正交和6Tits匹配，不假设图直径、finitefield事实或sample成立。
+null_polar_cross_witness包装norm与p侧cross为0。唯一编译超时后，补入不再编译的cross_inner_skew/null_polar_common_neighbor，将q侧cross也接成0；该最后包装明确未经过compiler。
+没有sorry、native_decide或新增axiom声明。类型类CommRing和h3是数学假设，不是源图D5进口。
+
+实际命令与终态
+一次--version成功：Lean4.24.0 x86_64 Release，CPU0.07889秒。
+一次目标模块直接编译，cwd为已有formal工程，使用旧BUILD_ATTEMPT_2.json保存的cached LEAN_PATH；没有lake env、git fetch、工具链安装或环境重建。
+命令和环境位于BUILD_RESULT.json/compile.py。原task在代码准备后剩约45.157秒activewall，wrapper按此余量运行唯一Lean进程。
+实际180秒总墙钟到点，subprocess Timeout，compile_wall45.180727858秒、compile_CPU0.476572724秒；BUILD.log0字节，无#axioms输出、无已证模块PASS。不是SIGSEGV，也没有足够信息诊断I/O或parser原因。
+编译后没有再试，没有重置180秒，没有用空日志声称证明错误或成功。RUN_HANDLE已终态。
+
+原件
+PREFLIGHT.json；generate.py；INTEGER_CERTIFICATES.json；GENERATION_RESULT.json；compile.py；BUILD.log；BUILD_RESULT.json；FINAL_STATUS.json。
+COMMON_NEIGHBOR_PACKAGING.lean.txt保存编译后新增且未验的最后包装，避免误认为唯一编译已覆盖这一修改。生成器原23identity版本仍可按原程序重现；最后包装追加在正式源模块中。
+
+费用
+版本预检+生成+编译已测合计0.653807155CPU秒，原taskwall180.023359秒终态。
+整pilot保守记费1CPU，包含未仪表短读取/保存/启动，不与已含测量再相加。墙钟到点而没有耗尽30CPU不构成重开或延长授权。
+
+剩余与实际意义
+此pilot交出实际通用代数Lean源码与确定性整系数证书，并尝试真实kernel编译，但当前没有任何新的已编译定理或#axioms结论。
+源几何F9编码、line/span、tau/sigma/pi绑定、loop删除后walk运输、外围根证书以及具体图Lean仍开。不得把通用代数稿当完整37632认证，也不得因这是认证任务就无限维护环境。
+共享STATE/Wiki未改，无新图/BFS/SAT/geometry重建或hash。父Root负责下一决定与实际有限数据绑定。

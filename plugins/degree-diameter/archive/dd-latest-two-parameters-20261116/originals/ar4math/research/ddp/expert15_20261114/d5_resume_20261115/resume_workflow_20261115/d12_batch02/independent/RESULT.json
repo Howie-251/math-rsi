@@ -1,0 +1,1717 @@
+{
+  "status": "PASS",
+  "author_batch_stop_reason": "UNKNOWN_WHOLE_CPU_LIMIT_AFTER_ACCEPTED_GRAPH",
+  "uncompleted_search_status": "UNKNOWN; not a nonexistence proof; only the flushed completed prefixes are checked",
+  "completed_utc": "2026-11-15T15:22:32.750490+00:00",
+  "program": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/d12_batch02/independent/verify_prefixes.py",
+  "python": "3.11.9",
+  "construction_inputs": {
+    "source_raw_edge_file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/d12_batch01/graph_d12_D5_n42419.edges",
+    "additions_file": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/d12_batch02/ADDITIONS.jsonl",
+    "additions_fields_used": [
+      "new_vertex",
+      "pins"
+    ]
+  },
+  "input_policy": "No author code, CSR, provider tables, ball/distance cache, or reported cover/sphere statistics were used. The final author edge list is read only for final edge-set comparison.",
+  "source": {
+    "n": 42419,
+    "m": 246141,
+    "simple": true,
+    "degree_histogram": {
+      "7": 2,
+      "8": 4,
+      "9": 43,
+      "10": 2935,
+      "11": 10721,
+      "12": 28714
+    },
+    "maximum_degree": 12,
+    "previously_independently_accepted_diameter_upper_bound": 5,
+    "source_old_roots_recomputed": 0,
+    "complete_concrete_source_Lean": false,
+    "formal_boundary": "Inherited accepted sourceD5; concrete 42342/42402 source Lean remains open; this checker does not discharge it."
+  },
+  "prefixes": [
+    {
+      "step": 0,
+      "status": "PASS",
+      "n": 42420,
+      "m": 246153,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42420,
+      "new_vertex": 42419,
+      "new_neighborhood": [
+        49,
+        9050,
+        9051,
+        14809,
+        14810,
+        14815,
+        22184,
+        22186,
+        29311,
+        37967,
+        38305,
+        41348
+      ],
+      "added_edges": [
+        [
+          49,
+          42419
+        ],
+        [
+          9050,
+          42419
+        ],
+        [
+          9051,
+          42419
+        ],
+        [
+          14809,
+          42419
+        ],
+        [
+          14810,
+          42419
+        ],
+        [
+          14815,
+          42419
+        ],
+        [
+          22184,
+          42419
+        ],
+        [
+          22186,
+          42419
+        ],
+        [
+          29311,
+          42419
+        ],
+        [
+          37967,
+          42419
+        ],
+        [
+          38305,
+          42419
+        ],
+        [
+          41348,
+          42419
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246141,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42419,
+        "graph_order_at_bfs": 42420,
+        "visited_count": 42420,
+        "visited_prior_vertex_count": 42419,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          130,
+          1225,
+          10701,
+          30351
+        ],
+        "farthest_vertex_count": 30351,
+        "farthest_witness": {
+          "endpoint": 2,
+          "distance": 5,
+          "path": [
+            42419,
+            14809,
+            42410,
+            4084,
+            36681,
+            2
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.05598767899999996
+    },
+    {
+      "step": 1,
+      "status": "PASS",
+      "n": 42421,
+      "m": 246165,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42421,
+      "new_vertex": 42420,
+      "new_neighborhood": [
+        3006,
+        5032,
+        5596,
+        8710,
+        12464,
+        17630,
+        19023,
+        26549,
+        29251,
+        30012,
+        39538,
+        41631
+      ],
+      "added_edges": [
+        [
+          3006,
+          42420
+        ],
+        [
+          5032,
+          42420
+        ],
+        [
+          5596,
+          42420
+        ],
+        [
+          8710,
+          42420
+        ],
+        [
+          12464,
+          42420
+        ],
+        [
+          17630,
+          42420
+        ],
+        [
+          19023,
+          42420
+        ],
+        [
+          26549,
+          42420
+        ],
+        [
+          29251,
+          42420
+        ],
+        [
+          30012,
+          42420
+        ],
+        [
+          39538,
+          42420
+        ],
+        [
+          41631,
+          42420
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246153,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42420,
+        "graph_order_at_bfs": 42421,
+        "visited_count": 42421,
+        "visited_prior_vertex_count": 42420,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          129,
+          1211,
+          10596,
+          30472
+        ],
+        "farthest_vertex_count": 30472,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42420,
+            5032,
+            4602,
+            9,
+            8645,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.055995520000000076
+    },
+    {
+      "step": 2,
+      "status": "PASS",
+      "n": 42422,
+      "m": 246177,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42422,
+      "new_vertex": 42421,
+      "new_neighborhood": [
+        488,
+        4077,
+        9039,
+        10385,
+        17436,
+        17461,
+        23261,
+        23302,
+        26764,
+        31311,
+        31322,
+        37585
+      ],
+      "added_edges": [
+        [
+          488,
+          42421
+        ],
+        [
+          4077,
+          42421
+        ],
+        [
+          9039,
+          42421
+        ],
+        [
+          10385,
+          42421
+        ],
+        [
+          17436,
+          42421
+        ],
+        [
+          17461,
+          42421
+        ],
+        [
+          23261,
+          42421
+        ],
+        [
+          23302,
+          42421
+        ],
+        [
+          26764,
+          42421
+        ],
+        [
+          31311,
+          42421
+        ],
+        [
+          31322,
+          42421
+        ],
+        [
+          37585,
+          42421
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246165,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42421,
+        "graph_order_at_bfs": 42422,
+        "visited_count": 42422,
+        "visited_prior_vertex_count": 42421,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          127,
+          1176,
+          10353,
+          30753
+        ],
+        "farthest_vertex_count": 30753,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42421,
+            17436,
+            14404,
+            36746,
+            34245,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.055999719999999975
+    },
+    {
+      "step": 3,
+      "status": "PASS",
+      "n": 42423,
+      "m": 246189,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42423,
+      "new_vertex": 42422,
+      "new_neighborhood": [
+        2965,
+        4601,
+        12869,
+        16416,
+        16780,
+        17420,
+        19347,
+        20896,
+        21355,
+        22897,
+        24808,
+        40959
+      ],
+      "added_edges": [
+        [
+          2965,
+          42422
+        ],
+        [
+          4601,
+          42422
+        ],
+        [
+          12869,
+          42422
+        ],
+        [
+          16416,
+          42422
+        ],
+        [
+          16780,
+          42422
+        ],
+        [
+          17420,
+          42422
+        ],
+        [
+          19347,
+          42422
+        ],
+        [
+          20896,
+          42422
+        ],
+        [
+          21355,
+          42422
+        ],
+        [
+          22897,
+          42422
+        ],
+        [
+          24808,
+          42422
+        ],
+        [
+          40959,
+          42422
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246177,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42422,
+        "graph_order_at_bfs": 42423,
+        "visited_count": 42423,
+        "visited_prior_vertex_count": 42422,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          113,
+          1124,
+          9939,
+          31234
+        ],
+        "farthest_vertex_count": 31234,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42422,
+            40959,
+            37230,
+            36742,
+            37700,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.056001085000000006
+    },
+    {
+      "step": 4,
+      "status": "PASS",
+      "n": 42424,
+      "m": 246201,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42424,
+      "new_vertex": 42423,
+      "new_neighborhood": [
+        2124,
+        4521,
+        6173,
+        8115,
+        13791,
+        14537,
+        18279,
+        21107,
+        21844,
+        28907,
+        29124,
+        37585
+      ],
+      "added_edges": [
+        [
+          2124,
+          42423
+        ],
+        [
+          4521,
+          42423
+        ],
+        [
+          6173,
+          42423
+        ],
+        [
+          8115,
+          42423
+        ],
+        [
+          13791,
+          42423
+        ],
+        [
+          14537,
+          42423
+        ],
+        [
+          18279,
+          42423
+        ],
+        [
+          21107,
+          42423
+        ],
+        [
+          21844,
+          42423
+        ],
+        [
+          28907,
+          42423
+        ],
+        [
+          29124,
+          42423
+        ],
+        [
+          37585,
+          42423
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246189,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42423,
+        "graph_order_at_bfs": 42424,
+        "visited_count": 42424,
+        "visited_prior_vertex_count": 42423,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          128,
+          1189,
+          10279,
+          30815
+        ],
+        "farthest_vertex_count": 30815,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42423,
+            4521,
+            4936,
+            4146,
+            37700,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.051998639999999985
+    },
+    {
+      "step": 5,
+      "status": "PASS",
+      "n": 42425,
+      "m": 246213,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42425,
+      "new_vertex": 42424,
+      "new_neighborhood": [
+        5532,
+        6007,
+        8115,
+        15274,
+        16166,
+        19961,
+        20607,
+        21908,
+        22554,
+        23926,
+        25221,
+        40946
+      ],
+      "added_edges": [
+        [
+          5532,
+          42424
+        ],
+        [
+          6007,
+          42424
+        ],
+        [
+          8115,
+          42424
+        ],
+        [
+          15274,
+          42424
+        ],
+        [
+          16166,
+          42424
+        ],
+        [
+          19961,
+          42424
+        ],
+        [
+          20607,
+          42424
+        ],
+        [
+          21908,
+          42424
+        ],
+        [
+          22554,
+          42424
+        ],
+        [
+          23926,
+          42424
+        ],
+        [
+          25221,
+          42424
+        ],
+        [
+          40946,
+          42424
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246201,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42424,
+        "graph_order_at_bfs": 42425,
+        "visited_count": 42425,
+        "visited_prior_vertex_count": 42424,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          131,
+          1229,
+          10639,
+          30413
+        ],
+        "farthest_vertex_count": 30413,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42424,
+            5532,
+            39400,
+            4147,
+            34245,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.060000289999999956
+    },
+    {
+      "step": 6,
+      "status": "PASS",
+      "n": 42426,
+      "m": 246225,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42426,
+      "new_vertex": 42425,
+      "new_neighborhood": [
+        542,
+        2145,
+        5048,
+        8110,
+        13226,
+        15548,
+        22899,
+        22909,
+        22939,
+        27900,
+        35798,
+        37187
+      ],
+      "added_edges": [
+        [
+          542,
+          42425
+        ],
+        [
+          2145,
+          42425
+        ],
+        [
+          5048,
+          42425
+        ],
+        [
+          8110,
+          42425
+        ],
+        [
+          13226,
+          42425
+        ],
+        [
+          15548,
+          42425
+        ],
+        [
+          22899,
+          42425
+        ],
+        [
+          22909,
+          42425
+        ],
+        [
+          22939,
+          42425
+        ],
+        [
+          27900,
+          42425
+        ],
+        [
+          35798,
+          42425
+        ],
+        [
+          37187,
+          42425
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246213,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42425,
+        "graph_order_at_bfs": 42426,
+        "visited_count": 42426,
+        "visited_prior_vertex_count": 42425,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          117,
+          1135,
+          9594,
+          31567
+        ],
+        "farthest_vertex_count": 31567,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42425,
+            13226,
+            19530,
+            41786,
+            41874,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.07199950100000008
+    },
+    {
+      "step": 7,
+      "status": "PASS",
+      "n": 42427,
+      "m": 246237,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42427,
+      "new_vertex": 42426,
+      "new_neighborhood": [
+        60,
+        2542,
+        3127,
+        4505,
+        7041,
+        9178,
+        10628,
+        16784,
+        22308,
+        30625,
+        37242,
+        41540
+      ],
+      "added_edges": [
+        [
+          60,
+          42426
+        ],
+        [
+          2542,
+          42426
+        ],
+        [
+          3127,
+          42426
+        ],
+        [
+          4505,
+          42426
+        ],
+        [
+          7041,
+          42426
+        ],
+        [
+          9178,
+          42426
+        ],
+        [
+          10628,
+          42426
+        ],
+        [
+          16784,
+          42426
+        ],
+        [
+          22308,
+          42426
+        ],
+        [
+          30625,
+          42426
+        ],
+        [
+          37242,
+          42426
+        ],
+        [
+          41540,
+          42426
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246225,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42426,
+        "graph_order_at_bfs": 42427,
+        "visited_count": 42427,
+        "visited_prior_vertex_count": 42426,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          127,
+          1153,
+          9961,
+          31173
+        ],
+        "farthest_vertex_count": 31173,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42426,
+            4505,
+            9048,
+            41348,
+            9055,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.05199958900000001
+    },
+    {
+      "step": 8,
+      "status": "PASS",
+      "n": 42428,
+      "m": 246249,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42428,
+      "new_vertex": 42427,
+      "new_neighborhood": [
+        2578,
+        3469,
+        3824,
+        4522,
+        9398,
+        10089,
+        15728,
+        21650,
+        25519,
+        27059,
+        28193,
+        37644
+      ],
+      "added_edges": [
+        [
+          2578,
+          42427
+        ],
+        [
+          3469,
+          42427
+        ],
+        [
+          3824,
+          42427
+        ],
+        [
+          4522,
+          42427
+        ],
+        [
+          9398,
+          42427
+        ],
+        [
+          10089,
+          42427
+        ],
+        [
+          15728,
+          42427
+        ],
+        [
+          21650,
+          42427
+        ],
+        [
+          25519,
+          42427
+        ],
+        [
+          27059,
+          42427
+        ],
+        [
+          28193,
+          42427
+        ],
+        [
+          37644,
+          42427
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246237,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42427,
+        "graph_order_at_bfs": 42428,
+        "visited_count": 42428,
+        "visited_prior_vertex_count": 42427,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          113,
+          1122,
+          10039,
+          31141
+        ],
+        "farthest_vertex_count": 31141,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42427,
+            9398,
+            24364,
+            42326,
+            9055,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.05199954799999995
+    },
+    {
+      "step": 9,
+      "status": "PASS",
+      "n": 42429,
+      "m": 246261,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42429,
+      "new_vertex": 42428,
+      "new_neighborhood": [
+        8576,
+        9112,
+        19249,
+        20058,
+        23059,
+        24754,
+        25883,
+        26449,
+        30009,
+        30452,
+        30577,
+        40888
+      ],
+      "added_edges": [
+        [
+          8576,
+          42428
+        ],
+        [
+          9112,
+          42428
+        ],
+        [
+          19249,
+          42428
+        ],
+        [
+          20058,
+          42428
+        ],
+        [
+          23059,
+          42428
+        ],
+        [
+          24754,
+          42428
+        ],
+        [
+          25883,
+          42428
+        ],
+        [
+          26449,
+          42428
+        ],
+        [
+          30009,
+          42428
+        ],
+        [
+          30452,
+          42428
+        ],
+        [
+          30577,
+          42428
+        ],
+        [
+          40888,
+          42428
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246249,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42428,
+        "graph_order_at_bfs": 42429,
+        "visited_count": 42429,
+        "visited_prior_vertex_count": 42428,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          112,
+          1057,
+          9524,
+          31723
+        ],
+        "farthest_vertex_count": 31723,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42428,
+            19249,
+            12391,
+            14721,
+            41875,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.051999715
+    },
+    {
+      "step": 10,
+      "status": "PASS",
+      "n": 42430,
+      "m": 246273,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42430,
+      "new_vertex": 42429,
+      "new_neighborhood": [
+        908,
+        4935,
+        9038,
+        12195,
+        15816,
+        19021,
+        19677,
+        22130,
+        23007,
+        24978,
+        28281,
+        40098
+      ],
+      "added_edges": [
+        [
+          908,
+          42429
+        ],
+        [
+          4935,
+          42429
+        ],
+        [
+          9038,
+          42429
+        ],
+        [
+          12195,
+          42429
+        ],
+        [
+          15816,
+          42429
+        ],
+        [
+          19021,
+          42429
+        ],
+        [
+          19677,
+          42429
+        ],
+        [
+          22130,
+          42429
+        ],
+        [
+          23007,
+          42429
+        ],
+        [
+          24978,
+          42429
+        ],
+        [
+          28281,
+          42429
+        ],
+        [
+          40098,
+          42429
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246261,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42429,
+        "graph_order_at_bfs": 42430,
+        "visited_count": 42430,
+        "visited_prior_vertex_count": 42429,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          128,
+          1186,
+          10381,
+          30722
+        ],
+        "farthest_vertex_count": 30722,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42429,
+            19021,
+            21004,
+            41461,
+            42403,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.0600000650000001
+    },
+    {
+      "step": 11,
+      "status": "PASS",
+      "n": 42431,
+      "m": 246285,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42431,
+      "new_vertex": 42430,
+      "new_neighborhood": [
+        968,
+        4991,
+        9110,
+        9410,
+        15456,
+        17319,
+        22827,
+        23403,
+        25257,
+        28011,
+        31008,
+        36630
+      ],
+      "added_edges": [
+        [
+          968,
+          42430
+        ],
+        [
+          4991,
+          42430
+        ],
+        [
+          9110,
+          42430
+        ],
+        [
+          9410,
+          42430
+        ],
+        [
+          15456,
+          42430
+        ],
+        [
+          17319,
+          42430
+        ],
+        [
+          22827,
+          42430
+        ],
+        [
+          23403,
+          42430
+        ],
+        [
+          25257,
+          42430
+        ],
+        [
+          28011,
+          42430
+        ],
+        [
+          31008,
+          42430
+        ],
+        [
+          36630,
+          42430
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246273,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42430,
+        "graph_order_at_bfs": 42431,
+        "visited_count": 42431,
+        "visited_prior_vertex_count": 42430,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          123,
+          1132,
+          9846,
+          31317
+        ],
+        "farthest_vertex_count": 31317,
+        "farthest_witness": {
+          "endpoint": 2,
+          "distance": 5,
+          "path": [
+            42430,
+            25257,
+            29899,
+            42198,
+            33637,
+            2
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.05999975999999996
+    },
+    {
+      "step": 12,
+      "status": "PASS",
+      "n": 42432,
+      "m": 246297,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42432,
+      "new_vertex": 42431,
+      "new_neighborhood": [
+        49,
+        4092,
+        9643,
+        11093,
+        15338,
+        18259,
+        19679,
+        20389,
+        24110,
+        26240,
+        30090,
+        38061
+      ],
+      "added_edges": [
+        [
+          49,
+          42431
+        ],
+        [
+          4092,
+          42431
+        ],
+        [
+          9643,
+          42431
+        ],
+        [
+          11093,
+          42431
+        ],
+        [
+          15338,
+          42431
+        ],
+        [
+          18259,
+          42431
+        ],
+        [
+          19679,
+          42431
+        ],
+        [
+          20389,
+          42431
+        ],
+        [
+          24110,
+          42431
+        ],
+        [
+          26240,
+          42431
+        ],
+        [
+          30090,
+          42431
+        ],
+        [
+          38061,
+          42431
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246285,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42431,
+        "graph_order_at_bfs": 42432,
+        "visited_count": 42432,
+        "visited_prior_vertex_count": 42431,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          112,
+          1104,
+          10015,
+          31188
+        ],
+        "farthest_vertex_count": 31188,
+        "farthest_witness": {
+          "endpoint": 0,
+          "distance": 5,
+          "path": [
+            42431,
+            49,
+            42419,
+            41348,
+            9055,
+            0
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.056000523999999885
+    },
+    {
+      "step": 13,
+      "status": "PASS",
+      "n": 42433,
+      "m": 246309,
+      "simple": true,
+      "minimum_degree": 7,
+      "maximum_degree": 12,
+      "all_vertex_degrees_checked": 42433,
+      "new_vertex": 42432,
+      "new_neighborhood": [
+        10,
+        1623,
+        4943,
+        7131,
+        8581,
+        15293,
+        17512,
+        19252,
+        25884,
+        29985,
+        32666,
+        39766
+      ],
+      "added_edges": [
+        [
+          10,
+          42432
+        ],
+        [
+          1623,
+          42432
+        ],
+        [
+          4943,
+          42432
+        ],
+        [
+          7131,
+          42432
+        ],
+        [
+          8581,
+          42432
+        ],
+        [
+          15293,
+          42432
+        ],
+        [
+          17512,
+          42432
+        ],
+        [
+          19252,
+          42432
+        ],
+        [
+          25884,
+          42432
+        ],
+        [
+          29985,
+          42432
+        ],
+        [
+          32666,
+          42432
+        ],
+        [
+          39766,
+          42432
+        ]
+      ],
+      "added_edge_count": 12,
+      "retained_previous_edge_count": 246297,
+      "removed_edge_count": 0,
+      "other_added_edge_count": 0,
+      "prior_prefix_diameter_upper_bound": 5,
+      "bfs_in_this_prefix": {
+        "root": 42432,
+        "graph_order_at_bfs": 42433,
+        "visited_count": 42433,
+        "visited_prior_vertex_count": 42432,
+        "unreachable_count": 0,
+        "maximum_distance": 5,
+        "sphere_sizes": [
+          1,
+          12,
+          130,
+          1215,
+          10494,
+          30581
+        ],
+        "farthest_vertex_count": 30581,
+        "farthest_witness": {
+          "endpoint": 1,
+          "distance": 5,
+          "path": [
+            42432,
+            10,
+            9055,
+            0,
+            8214,
+            1
+          ],
+          "every_path_edge_checked": true,
+          "shortestness": "This prefix's complete BFS assigns the endpoint this distance."
+        }
+      },
+      "diameter_upper_bound": 5,
+      "diameter_exact": 5,
+      "acceptance_argument": "All previous edges are retained, so previous-previous pairs inherit distance <= 5. The BFS performed in this prefix reaches every previous vertex from its new vertex within 5.",
+      "cpu_seconds": 0.06400166400000007
+    }
+  ],
+  "independently_accepted_prefix_count": 14,
+  "bfs_scope": {
+    "new_roots_run": [
+      42419,
+      42420,
+      42421,
+      42422,
+      42423,
+      42424,
+      42425,
+      42426,
+      42427,
+      42428,
+      42429,
+      42430,
+      42431,
+      42432
+    ],
+    "root_count": 14,
+    "source_old_roots_run": 0,
+    "each_bfs_uses_its_own_prefix": true,
+    "is_all_root_bfs": false
+  },
+  "final_graph": {
+    "n": 42433,
+    "m": 246309,
+    "simple": true,
+    "maximum_degree": 12,
+    "degree_histogram": {
+      "7": 2,
+      "8": 4,
+      "9": 42,
+      "10": 2899,
+      "11": 10628,
+      "12": 28858
+    },
+    "retained_source_edge_count": 246141,
+    "added_edge_count": 168,
+    "removed_edge_count": 0,
+    "diameter_upper_bound": 5,
+    "diameter_exact": 5
+  },
+  "author_final_graph_comparison": {
+    "status": "MATCH",
+    "path": "/inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/d12_batch02/graph_d12_D5_n42433.edges",
+    "author_n": 42433,
+    "author_m": 246309,
+    "missing_edge_count": 0,
+    "extra_edge_count": 0,
+    "missing_examples": [],
+    "extra_examples": [],
+    "method": "Exact undirected edge-set comparison against reconstruction from raw 42419 source and the actual explicit pin lists."
+  },
+  "all_pairs_proof": "Start with the independently accepted source D <= 5. At each completed step, retaining all previous edges preserves old-old paths and the BFS in that exact prefix proves all new-old distances <= 5. Induction proves every prefix D <= 5. A new-root BFS distance-5 witness in every prefix proves diameter exactly 5.",
+  "reproduction": {
+    "command": "python3 /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/resume_workflow_20261115/d12_batch02/independent/verify_prefixes.py --expected-steps 14",
+    "threads": 1,
+    "randomness": "none",
+    "deterministic_choices": "ascending neighbor order; smallest farthest vertex"
+  },
+  "resources": {
+    "cpu_seconds": 1.6218228049999999,
+    "wall_seconds": 1.6239498257637024,
+    "cpu_cap_seconds": 8,
+    "address_space_cap_bytes": 536870912,
+    "maximum_resident_set_kib": 1061268,
+    "ru_maxrss_at_entry_kib": 1061268,
+    "proc_VmHWM_kib": 127012,
+    "rss_note": "ru_maxrss is reported with its entry value; proc_VmHWM is the process-visible memory high-water. RLIMIT_AS is512MiB."
+  }
+}

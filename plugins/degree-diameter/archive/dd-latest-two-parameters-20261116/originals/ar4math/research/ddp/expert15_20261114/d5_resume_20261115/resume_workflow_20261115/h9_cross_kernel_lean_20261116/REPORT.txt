@@ -1,0 +1,30 @@
+H9 cross kernel 到 K^3 的实际 Lean 注入桥
+2026-11-16。同一数学 Goal，共享源组件；没有新图，也没有完整具体图 Lean 升级。
+
+实际结果
+新增 formal/DegreeDiameter/Portfolio/H9CrossKernel.lean，复用缓存的 H9CrossGeometry/CrossRouting，最终实际编译 exit0，.olean 已在本目录。主定理 null_kernel_injects_three：对任意 Field K，p 非零且 norm p=0，存在从 {q : Vec7 K // cross p q=0} 到 (Fin3→K) 的单射。未假设 rank>=4、核维数、邻点数或图直径。证明比要求更强，不需要 char3；它仅使用实际叉积公式、域消去和 null 条件。
+
+证明内容
+cross_sub_right 实际证明叉积第二变量差的线性。
+六个 kernel_zero_i 引理逐坐标消元：
+p0!=0 时以 (q0,q5,q6) 为自由投影，投影为0即 q=0；
+p1!=0 时投影 (q1,q4,q6)；p2!=0 时投影 (q2,q4,q5)；
+p4!=0 时投影 (q4,q1,q2)；p5!=0 时投影 (q5,q0,q2)；p6!=0 时投影 (q6,q0,q1)。
+每种情形依次由实际叉积坐标消去 q3、另外两个坐标、对偶坐标，没有“rank 下界”黑箱。
+两份 kernel 元素投影相等，其差仍在 kernel，三个投影坐标为0，于是六个引理之一使差为0。
+最后，若六个 u/v 坐标全部为0，norm p=0 变为 −p3^2=0；Field 无零因子给 p3=0，违背 p!=0。因此某个实际 pivot 必可用，得到 K^3 注入。
+
+有限基数边界
+该已编译注入在数学上直接给有限 K 时 |kernel|<=|K|^3。本任务没有额外编译 Fintype.card/Nat.card corollary，不能把它称为现成的 kernel_card Lean 定理。也没有在此模块闭合 91 个射影邻点归一化、实际 F9 表枚举或具体源图 D5；这些仍需下一层有限绑定。
+
+真实运行与错误
+首次编译9.054877 child CPU /28.262095墙钟：六个消元均通过，但 cross_sub 后用 rfl 处理零函数相等失败。
+第二次9.294801 CPU /11.285075墙钟：改成 simp 后剩 (fun i=>0)=0，需要函数外延。
+第三次9.247167 CPU /10.484771墙钟：改为 funext i; simp，最终全模块 PASS。移除了实际报告为未执行的24处多余 ring；没有数学条件改变。
+三次总 measured child CPU27.596845，保守 whole-task 计费29.0<30。全过程同一180秒墙钟预算；未清零、未重编上游、未复制/重建 Lean 环境。实际命令和失败/成功日志全部保留。
+
+公理
+最终 null_kernel_injects_three 与 projection_injective_of_kernel_zero 的 #print axioms 都只有 propext、Classical.choice、Quot.sound，无 sorryAx、native_decide 或新增 axiom。第一次/第二次日志中出现的 sorryAx 属于失败编译的占位传播，不能误读为最终结果；最终成功日志明确不含它。
+
+边界
+这是通向 91 点 star 完备性的真实 kernel 注入组件，不是 generic rank 假设 wrapper；仍不构成完整具体图认证。未修改共享 STATE/Wiki，未计算 hash。

@@ -1,18 +1,41 @@
-# Degree–Diameter: four improvements over the Comellas table
+# Degree–diameter: 37,632 and 42,433 vertices at diameter five
 
-**MathRSI v2 constructs a 2,567-vertex graph for (10,4), exceeding the Comellas table's 2,566 vertices. Four parameter pairs now improve table entries; the combined catalogue contains 163 graphs across 44 parameter pairs, with 49 concrete graphs proved in Lean.**
+**New endpoints: 37,632 vertices for (11,5) and 42,433 for (12,5).** These improve the Comellas entries checked on 16 November 2026 by **+1 and +81**. The increases over our previous local constructions are separately **+1 and +31**.
 
-The degree–diameter problem asks how many vertices a simple undirected graph can have when each vertex has at most Δ neighbors and every pair of vertices is connected by a path of length at most D. Earlier ARIS research developed neighborhood extensions, finite-field layers and geometric connection reallocation. The new (10,4) result was obtained using **MathRSI v2 and its degree–diameter plugin**, continuing that research with its saved constructions and failure trajectories. [Execution version](evidence/execution_version.md).
+[Latest bilingual result and methods](../../development/homepage-redesign-20261105/site/dd-latest.html) · [中文版](README.zh-CN.md) · [Historical illustrated case](index.html)
+
+## Latest results · 16 November 2026
+
+| (Δ,D) | Previous local graph | Latest graph | Local increase | Comellas 2026-11-16 | Gain over that table |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| (11,5) | 37,631 | **37,632** | **+1** | 37,631 | **+1** |
+| (12,5) | 42,402 | **42,433** | **+31** | 42,352 | **+81** |
+
+The final graphs have 205,366 and 246,309 edges, maximum degree 11 and 12, and diameter exactly five, respectively. The 31 D12 insertions improve an existing parameter pair. These are two improved existing pairs, with no new global catalogue or Lean-certified count.
+
+**Run provenance:** local 2026-11-11 main/v4-maintenance plus DD feedback. The research predates the published v5 workflow and feeds **v5 main maintenance**, while the fixed v5 tag remains unchanged. On the timeline this is shortened to “Run: v4 + local updates”.
+
+**Method and actual checks.** D12 preserves the full source as an induced subgraph and adds 31 vertices through legal available-degree attachments. All 31 new vertices were BFS roots in the final graph; old–old distances inherit the accepted source premise. D11 changes the core, so source-edge retention is insufficient: its core distances use the H9 geometric theorem and literal binding, while all 160 old peripheral vertices and the new vertex supply 161 complete BFS roots. Both finals were regenerated exactly; independent finite-array/degree checks passed. Concrete end-to-end Lean instances and required source final-review obligations remain open.
+
+The [live Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), checked 2026-11-16, now has (10,4)=2,612 and (16,4)=16,848. Our earlier 2,567 and 16,416 endpoints remain dated historical improvements. The comparison does not claim global optimality or adoption by the table maintainer.
+
+**Joint completion and verified prefixes.** Use an inclusion-minimal core-blocking set and jointly complete attachments from the full pool of remaining degree ports. Actual bad vertex pairs guide revisions to earlier construction choices; subsequent work consumes only independently verified prefixes. This research also feeds the Base action **Consume results before dispatch**: Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback. [v5 follow-up record](https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md).
+
+[Private source package and replay](https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/) · [v5 maintenance notes](../../docs/V5_CHANGES.md)
+
+## Historical research and illustrated methods
+
+The degree–diameter problem asks how many vertices a simple undirected graph can have when each vertex has at most Δ neighbors and every pair of vertices is connected by a path of length at most D. Earlier ARIS research developed neighborhood extensions, finite-field layers and geometric connection reallocation. The earlier (10,4) result was obtained using **MathRSI v2 and its degree–diameter plugin**, continuing that research with its saved constructions and failure trajectories. [Execution version](evidence/execution_version.md).
 
 [Read the illustrated case](index.html) · [中文版](index.zh-CN.html) · [Construction programs](reproduce/README.md)
 
 Clone or download the repository and open `index.html` locally for the interactive figures. GitHub displays the HTML source; this README is the overview to read on GitHub.
 
-![Improvements over four Comellas table entries and published-method comparisons for diameter three](assets/results.png)
+![Historical November 2026 table comparisons and published-method comparisons for diameter three](assets/results.png)
 
-## Results
+## Historical results
 
-Our constructions improve four entries in the [Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), checked on **5 November 2026**. The latest result is a **10-regular graph of diameter 4 on 2,567 vertices**, exceeding the table's 2,566 vertices.
+The following constructions improved four entries in the [Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), checked on **5 November 2026**. That snapshot includes a **10-regular graph of diameter 4 on 2,567 vertices**, exceeding the table's 2,566 vertices.
 
 | (Δ,D) | Comellas table | Our construction | Additional vertices |
 | --- | ---: | ---: | ---: |
@@ -45,7 +68,7 @@ Keep the original edges and connect a new vertex x to a set S of existing vertic
 
 The interactive illustration compares four choices on a cube: one attachment misses a vertex; complementary attachments cover it; reusing the same attachment points exceeds their degree limit; choosing different points allows another extension.
 
-The new **(10,4) construction** extends this idea to a graph with no unused degree capacity. Starting from 2,566 vertices, we remove five disjoint edges and connect a new vertex to all ten endpoints. Every affected old vertex returns to degree 10, and the new vertex has degree 10. Failed point pairs guided the subsequent choices of edges; the final 2,567-vertex graph passes the complete distance check.
+The earlier **(10,4) construction** extends this idea to a graph with no unused degree capacity. Starting from 2,566 vertices, we remove five disjoint edges and connect a new vertex to all ten endpoints. Every affected old vertex returns to degree 10, and the new vertex has degree 10. Failed point pairs guided the subsequent choices of edges; the final 2,567-vertex graph passes the complete distance check.
 
 ![Five disjoint edges are replaced by ten connections to a new vertex, increasing the order from 2,566 to 2,567 while keeping degree 10](assets/construction_d10_d4.png)
 
@@ -69,9 +92,9 @@ The construction builds on source graphs and controllers by Mizuno, Rajiv, Yuges
 
 The successful steps changed how connections were chosen: combine neighborhoods that cover different regions, allocate degree capacity across all additions, and replace a connection only when the affected routes can be recovered. These lessons turn an individual construction into a starting point for a family of parameters. The proofs, counterexamples and construction programs informed MathRSI's [degree–diameter plugin](../../plugins/degree-diameter/README.md), which connects these methods to the research workflows in v2.
 
-## Verification and reproduction
+## Historical verification and reproduction
 
-All 163 graphs have mathematical or computational verification; **49 have proofs of their concrete graph constructions in Lean**, including the new 2,567-vertex graph and all seven degree-20–26 representatives. The catalogue includes intermediate extensions, with each parameter comparison using its largest construction.
+The November 2026 catalogue snapshot contains 163 graphs with mathematical or computational verification; **49 have proofs of their concrete graph constructions in Lean**, including the 2,567-vertex graph and all seven degree-20–26 representatives. The catalogue includes intermediate extensions, with each parameter comparison using its largest construction.
 
 - [Graph catalogue](data/catalog.csv): orders, degrees, diameters and verification details for all 163 graphs.
 - [Parameter comparisons](data/public_comparisons.csv): the 44 parameter pairs and their reference constructions.

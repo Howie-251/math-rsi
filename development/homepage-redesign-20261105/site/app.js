@@ -4,6 +4,7 @@ const NS = 'http://www.w3.org/2000/svg';
 const GH = 'https://github.com/lisresearchgroup/math-rsi';
 const REPO = '../../../';
 const Q7_TIME = 8100;
+const DD_TIME = 8500;
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -31,10 +32,10 @@ const CASES = [
     status: 'Exact distances · 45/11 remains open',
     read: REPO + 'plugins/ecc/archive/source/paper/main.pdf', plugin: GH + '/tree/main/plugins/ecc',
     quant: () => `<p class="q-closed">${t >= 3400 ? '4' : '3'} exact optimal distances</p><div class="qrow">${[['43,10','16'],['44,10','17'],['44,11','16'],...(t >= 3400 ? [['42,16','12']] : [])].map(([p,v])=>`<span><b>${v}</b><i>d₂(${p})</i></span>`).join('')}<span class="open"><b>16–17</b><i>d₂(45,11) · open</i></span></div><p class="qnote">For each code length n and dimension k, d₂(n,k) is the largest achievable minimum distance. “Exact” means a construction meets the upper bound. ${t >= 3400 ? 'The fourth value, d₂(42,16)=12, applies a published 2020 theorem.' : 'The original exclusion fixes the three values shown.'}</p>` },
-  { id: 'dd', short: 'Degree–Diameter', title: 'Larger graphs within the same degree and diameter',
-    status: () => t >= 6750 ? 'New (10,4) result produced with MathRSI v2 + DD' : 'Three dated table comparisons from earlier research',
-    read: 'dd-10-4.html', plugin: GH + '/tree/main/plugins/degree-diameter',
-    quant: () => `<div class="qlist">${[...(t >= 6750 ? [['(10,4)','2,566','2,567',true]] : []),['(11,5)','37,628','37,631'],['(12,5)','42,342','42,402'],['(16,4)','16,384','16,416']].map(([p,a,b,n])=>`<div${n ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>→</span><b>${b}</b></div>`).join('')}</div><p class="qnote">${t >= 6750 ? 'Comellas: (10,4) checked 2026-11-05; earlier entries accessed 2026-11-03. Catalogue: 163 graphs / 44 parameter pairs / 49 concrete-graph Lean instances.' : 'Comellas entries accessed 2026-11-03. Earlier catalogue: 153 graphs / 43 parameter pairs / 47 concrete-graph Lean instances.'}</p>` },
+  { id: 'dd', short: 'Degree–Diameter', title: () => t >= DD_TIME ? 'More vertices at diameter five' : 'Larger graphs within the same degree and diameter',
+    status: () => t >= DD_TIME ? 'Two D5 endpoints · end-to-end Lean open' : t >= 6750 ? 'New (10,4) result produced with MathRSI v2 + DD' : 'Three dated table comparisons from earlier research',
+    read: () => t >= DD_TIME ? 'dd-latest.html' : 'dd-10-4.html', plugin: GH + '/tree/main/plugins/degree-diameter',
+    quant: () => t >= DD_TIME ? `<div class="qlist"><div class="is-new"><i>(11,5)</i><span class="prev">37,631</span><span>→</span><b>37,632</b></div><div class="is-new"><i>(12,5)</i><span class="prev">42,402</span><span>→</span><b>42,433</b></div></div><p class="qnote">Local increases: +1 / +31.</p><p class="qnote">Against Comellas 2026-11-16 (37,631 / 42,352): +1 / +81.</p><p class="qnote">Run: v4 + local updates → v5 main maintenance.</p>` : `<div class="qlist">${[...(t >= 6750 ? [['(10,4)','2,566','2,567',true]] : []),['(11,5)','37,628','37,631'],['(12,5)','42,342','42,402'],['(16,4)','16,384','16,416']].map(([p,a,b,n])=>`<div${n ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>→</span><b>${b}</b></div>`).join('')}</div><p class="qnote">${t >= 6750 ? 'Comellas: (10,4) checked 2026-11-05; earlier entries accessed 2026-11-03. Historical catalogue: 163 graphs / 44 parameter pairs / 49 concrete-graph Lean instances.' : 'Comellas entries accessed 2026-11-03. Earlier catalogue: 153 graphs / 43 parameter pairs / 47 concrete-graph Lean instances.'}</p>` },
   { id: 'e86', short: 'Erdős 86', title: 'A tighter ceiling for square-free hypercube graphs',
     status: 'Exact certificate · no Lean',
     read: REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
@@ -79,9 +80,12 @@ const MS = [
   { c:'he', v:4, k:'draft', e:'drop', t:6600, tag:'Structural upper-bound family · working proofs', text:'Received manuscripts give N(7,6,7) ≤ 75 and N(7,7,7) ≤ 76, hence ES(7) ≤ 77. These tighten the archived 76 / 77 / 78 draft; independent review is pending. v4 incorporates this research and its reusable methods.' },
   { c:'dd', v:4, intake:true, k:'result', e:'drop', t:6750, tag:'New (10,4) result · run with v2', text:'2,566 → 2,567 vertices: a 10-regular graph of diameter 4, exceeding the Comellas entry checked 2026-11-05. Produced with MathRSI v2 + DD (including the PR #7 handoff repair). This result feeds v4; it was not produced by v4.' },
   { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7000, tag:'Original run verification', text:'Independent all-roots BFS covers 2,567 roots. The original Fin 2567 Lean theorem and independent import passed, using only the standard three axioms. External formal C review remains incomplete; the portable materials include receipts, not a full Lean rebuild.' },
-  { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7050, tag:'Updated catalogue', text:'163 graph instances / 44 parameter pairs / 49 completed concrete-graph Lean instances. The ten new orders 2,558–2,567 add one parameter pair and two completed Lean instances; these are catalogue totals, not 163 records.' },
+  { c:'dd', v:4, intake:true, k:'evidence', e:'drop', t:7050, tag:'Historical catalogue snapshot', text:'Historical catalogue: 163 graph instances / 44 parameter pairs / 49 completed concrete-graph Lean instances. The ten new orders 2,558–2,567 add one parameter pair and two completed Lean instances; these are catalogue totals, not 163 records.' },
   {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8100, "tag": "Q₇ dense-matching theorem", "text": "Every Q₇ matching with at least 57 edges extends to a Hamilton cycle containing every prescribed edge. Run: v3 (local adaptation); methods feed v5."},
-  {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8300, "tag": "56-edge structure families", "text": "At 56 edges, μ=2 and μ=4 classes and several μ=3 families are complete. Full Q₇, P7 and seven-direction extension remain open."}
+  {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8300, "tag": "56-edge structure families", "text": "At 56 edges, μ=2 and μ=4 classes and several μ=3 families are complete. Full Q₇, P7 and seven-direction extension remain open."},
+  {"c": "dd", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8500, "tag": "(11,5) · 37,632 vertices", "text": "37,631 → 37,632 vertices, 205,366 edges, maximum degree 11 and diameter exactly 5. Gain +1 over Comellas checked 2026-11-16. Run: v4 + local updates; feeds v5 main maintenance."},
+  {"c": "dd", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8700, "tag": "(12,5) · 42,433 vertices", "text": "42,402 → 42,433 vertices through 31 valid increments; 246,309 edges, maximum degree 12 and diameter exactly 5. The gain over the dated Comellas value 42,352 is separately +81. Run: v4 + local updates."},
+  {"c": "dd", "v": 5, "intake": true, "k": "evidence", "e": "drop", "t": 9250, "tag": "Reconstruction and bounded checks", "text": "Both finals regenerate exactly. D12 retains source edges and checks all 31 new roots; D11 combines the H9 theorem and literal binding with all 161 peripheral/new roots. Concrete Lean and source final-review obligations remain open."}
 ];
 const isOutcome = m => m.k === 'result' || m.k === 'draft';
 const CALLOUTS = [
@@ -95,7 +99,8 @@ const CALLOUTS = [
   { c:'he', v:3, t:5450, kind:'intro', value:'ES(7) ≤ 78' },
   { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'2,566 → 2,567', detail:'(10,4) · Run: v2' },
   { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' },
-  {"c": "q6", "v": 5, "t": 8100, "row": 0, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"}
+  {"c": "q6", "v": 5, "t": 8100, "row": 1, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"},
+  {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "37,632 / 42,433", "detail": "Run: v4 + local updates"}
 ];
 
 const VERS = [
@@ -141,15 +146,16 @@ const VERS = [
       "Apply new results across known legal representations; work on what all gates leave open."
     ],
     [
-      "Cover inputs with conditional plans",
-      "q6",
-      "Use a fixed universal plan or a finite set whose applicable branch follows from the actual input."
+      "Consume results before dispatch",
+      "dd",
+      "Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback."
     ]
   ],
   "fullBase": [
     "Separate the original input, legal auxiliary choices and the actual successor; construct the interface the next theorem needs.",
     "Consume new theorems across known legal splits, transports and monotone completions before dispatching the residual domain.",
-    "Check fixed or conditional finite plans for complete input coverage and original-edge-preserving expansion."
+    "Check fixed or conditional finite plans for complete input coverage and original-edge-preserving expansion.",
+    "Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback."
   ],
   "plug": [
     [
@@ -157,13 +163,11 @@ const VERS = [
       "Hamilton",
       "q6"
     ],
-    [
-      "note",
-      "Other 5 domains retained"
-    ]
+    ["deep", "DD", "dd"],
+    ["note", "Other 4 domains retained"]
   ],
-  "pluginNote": "Q7 research: v3 local adaptation → v5 methods.",
-  "sum": "v5 turns Q7 research into controlled auxiliary choices, cross-representation theorem reuse and fixed or conditional finite-plan coverage. The research ran with v3 (local adaptation); the full Q7 conjecture remains open."
+  "pluginNote": "Q7: v3 local adaptation; DD: v4 + local updates. Methods feed v5.",
+  "sum": "v5 absorbs Q7 controlled choices, theorem reuse and finite-plan coverage. The 2026-11-16 DD follow-up adds result consumption before dispatch; its plugin deepens joint completion and verified prefixes. Run provenance: Q7 used v3 local adaptation; DD used v4 + local updates."
 },
   { tag:'v6+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
@@ -174,10 +178,19 @@ const VERS = [
 
 /* -------------------------------------------------------------- geometry */
 const LAST = VERS.length - 2, FUTURE = VERS.length - 1;
-const H = 326, GUT = 80, COL = 232, W = GUT + COL * VERS.length, SPINE = 296, BASE = 284;
 const BW = 26, BH = 28, STEP = 32, PITCH = 36, X0 = 92;
+const calloutHeight = d => d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
+const columnCards = v => CALLOUTS.filter(d => d.v === v).sort((a, b) => (a.row ?? 0) - (b.row ?? 0) || a.t - b.t);
+const cardStackHeight = cards => cards.reduce((sum, d) => sum + calloutHeight(d), 0) + Math.max(0, cards.length - 1) * 4;
+const columnDepth = v => Math.max(...CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m) && m.v <= v).length));
+// Reserve the final tallest column and the 40px drop entrance before placing cards.
+const CALLOUT_CLEARANCE = 14 + 40, SKY_TOP = 14;
+const HEADROOM = Math.max(0, ...Array.from({ length: LAST + 1 }, (_, v) =>
+  SKY_TOP + cardStackHeight(columnCards(v)) + CALLOUT_CLEARANCE - (284 - columnDepth(v) * STEP + 5)));
+const H = 326 + HEADROOM, GUT = 80, COL = 232, W = GUT + COL * VERS.length;
+const SPINE = 296 + HEADROOM, BASE = 284 + HEADROOM;
 const cx = i => GUT + COL * i + COL / 2;
-const R = [300, 1700, 3600, 5000, 6600, 8000], STOP = [1100, 2400, 4400, 6000, 7400, 9000], T = STOP[LAST];
+const R = [300, 1700, 3600, 5000, 6600, 8000], STOP = [1100, 2400, 4400, 6000, 7400, 9600], T = STOP[LAST];
 const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600]];
 const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[7400,4],[8000,5],[T,5]];
 const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600],[7400,8000]];
@@ -219,8 +232,8 @@ function buildSky() {
   const mk = el('marker', { id: 'sky-arrow', viewBox: '0 0 10 10', refX: '8', refY: '5', markerWidth: '8', markerHeight: '8', orient: 'auto' }, defs);
   el('path', { d: 'M0 1L9 5L0 9Z', fill: '#AEB6C2' }, mk);
   bands = VERS.map((V, i) => el('path', { class: 'band', d: topRound(cx(i) - 110, 8, 220, H - 8, 14) }, sky));
-  el('text', { class: 'gut', x: 4, y: 172 }, sky).textContent = 'Mathematical';
-  el('text', { class: 'gut', x: 4, y: 190 }, sky).textContent = 'results';
+  el('text', { class: 'gut', x: 4, y: 172 + HEADROOM }, sky).textContent = 'Mathematical';
+  el('text', { class: 'gut', x: 4, y: 190 + HEADROOM }, sky).textContent = 'results';
   for (let i = 0; i < VERS.length; i++) for (let s = 0; s < CASES.length; s++)
     el('rect', { class: i === FUTURE ? 'ghost fut' : 'ghost', x: slotX(i, s), y: BASE + 3, width: BW, height: 3, rx: 1.5 }, sky);
   el('line', { class: 'spine-base', x1: X0, y1: SPINE, x2: cx(LAST), y2: SPINE }, sky);
@@ -252,10 +265,11 @@ function buildSky() {
 
   // Reserve every card's final position from the start, so arrivals never shift earlier results.
   for (let v = 0; v <= LAST; v++) {
-    const cards = CALLOUTS.filter(d => d.v === v).sort((a, b) => (a.row ?? 0) - (b.row ?? 0) || a.t - b.t);
-    const height = d => d.kind === 'delta' ? 58 : d.c === 'q6' ? 54 : 40;
-    let y = 154 - cards.reduce((sum, d) => sum + height(d), 0) - Math.max(0, cards.length - 1) * 4;
-    cards.forEach(d => { buildDeltaTag({ ...d, y, height:height(d) }); y += height(d) + 4; });
+    const cards = columnCards(v);
+    const stackTop = BASE - columnDepth(v) * STEP + 5;
+    const bottom = Math.min(154 + HEADROOM, stackTop - CALLOUT_CLEARANCE);
+    let y = bottom - cardStackHeight(cards);
+    cards.forEach(d => { buildDeltaTag({ ...d, y, height:calloutHeight(d) }); y += calloutHeight(d) + 4; });
   }
 
   for (let i = 0; i <= LAST; i++) {
@@ -276,7 +290,7 @@ function buildDeltaTag(d) {
   const items = MS.filter(m => m.c === d.c && isOutcome(m) && m.v <= d.v);
   const blockIndex = items.indexOf(MS[mi]);
   // The archived upper bound is separate from the abstract 25-point witness.
-  const endY = d.kind === 'intro' && d.c === 'he' ? 160 : BASE - (blockIndex + 1) * STEP;
+  const endY = d.kind === 'intro' && d.c === 'he' ? 160 + HEADROOM : BASE - (blockIndex + 1) * STEP;
   const intro = d.kind === 'intro', badge = intro ? (d.v === 0 ? 'Origins' : 'New') : 'Improved';
   const g = el('g', { class:`delta-tag bk ${intro ? 'intro-tag' : 'change-tag'}`, 'data-c':d.c, 'data-m':mi,
     'data-kind':d.kind, 'data-v':d.v, 'data-t':d.t,
@@ -461,7 +475,7 @@ function paintTraceHint(id) {
   if (!id) hint.textContent = 'Choose a case to follow its results across versions.';
   else if (id === 'he') hint.textContent = 'Happy Ending · ES(7) upper bound 78 → 77; the 25-point witness is separate.';
   else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ theorem → dense Q₇ matchings. Run: v3 (local adaptation); feedback for v5.';
-  else if (id === 'dd') hint.textContent = 'Degree–Diameter · earlier research → v2 plugin → new (10,4) result with v2 → feedback for v4.';
+  else if (id === 'dd') hint.textContent = 'Degree–Diameter · v2 historical results → v4 + local DD updates → two D5 improvements feeding v5 maintenance.';
   else hint.textContent = `${CN[id]} · follow this case; repeated blocks carry earlier results forward.`;
 }
 function focusCase(id, mi = null, force = false) {
@@ -481,6 +495,7 @@ function ddPath() {
     <li><b>v2 · DD plugin</b><span>Methods, failures and checks become reusable research tools</span></li>
     <li class="hot${later}"><b>v2 + DD run</b><span>(10,4): 2,566 → 2,567 vertices</span></li>
     <li class="pre${later}"><b>v4 · feedback</b><span>Local edit and exact replay examples implemented in the existing DD plugin</span></li>
+    <li class="hot${t < DD_TIME ? ' later' : ''}"><b>v4 + local DD updates</b><span>D5 endpoints 37,632 / 42,433 → v5 maintenance</span></li>
   </ol>`;
 }
 function eccMaintenance() {
@@ -493,7 +508,7 @@ function renderPanel(sel) {
   if (key === panelKey) return; panelKey = key;
   if (!focus) {
     const V = VERS[sel];
-    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === LAST ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a></p>' : ''}</div>
+    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === LAST ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a> · <a href="dd-latest.html">DD latest results ↗</a></p>' : ''}</div>
       <div><p class="p-eye">Shared base &amp; workflow details in ${V.tag}</p>
       <ul class="p-vlist">${V.fullBase.map(item => `<li>${item}</li>`).join('')}</ul>
       <p class="p-foot">Choose a change label or colored result block to inspect its conclusions and proof evidence.</p></div>`;
@@ -503,7 +518,7 @@ function renderPanel(sel) {
   const items = list.slice().sort((a, b) => a[0].v - b[0].v || a[0].t - b[0].t);
   panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${typeof c.title === 'function' ? c.title() : c.title}</h3>${c.quant()}
       <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}${c.id === 'ecc' ? eccMaintenance() : ''}
-      <p class="p-links"><a href="${typeof c.read === 'function' ? c.read() : c.read}">${c.id === "q6" && t >= Q7_TIME ? "Result & methods ↗" : "Read the proof ↗"}<span class="source-language" data-no-i18n>${c.id === "q6" && t >= Q7_TIME ? "EN + 中文" : ["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
+      <p class="p-links"><a href="${typeof c.read === 'function' ? c.read() : c.read}">${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME)) ? "Result & methods ↗" : "Read the proof ↗"}<span class="source-language" data-no-i18n>${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME)) ? "EN + 中文" : ["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
     <div style="--c:var(--${c.id})"><p class="p-eye">Mathematical results</p><ol class="p-ms">${items.filter(([m]) => isOutcome(m)).map(([m, i]) => {
       const on = t >= m.t;
       return `<li class="${on ? '' : 'later'}${hl === i ? ' hl' : ''}"><span class="p-v">${vlabel(m)}</span><span class="p-k k-${m.k}">${m.tag}</span><span class="p-t">${m.text}${on ? '' : `<em>appears at ${vlabel(m)}</em>`}</span></li>`;

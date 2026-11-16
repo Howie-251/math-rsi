@@ -1,0 +1,42 @@
+# Narrow workflow-helper adoption audit
+
+Read-only sources: DD package `framework_snapshot/base/tools/current_context.py`, `plugins/degree-diameter/tools/{extension_receipts.py,d5_blocking_batch.py,d5_blocking_batch.cpp}`, and `references/d5-blocking-batches.md`; compared against current `/Users/rfy_naiveai/Desktop/MathRSI/base/tools` and DD plugin. The current repository has neither helper nor its project-specific current-context schema. No integration was modified.
+
+**Recommendation:** adopt the small current-facts/request renderer and DD receipt adapter with the concrete path/source-binding fixes below. Keep batch driver as an explicitly limited DD tool only when the original plane input and source binding are available. Do not introduce a scheduler or copy historical project counts into base.
+
+## Actual dependency/caller requirements
+
+- All Python imports are standard library. Both plugin tools compute `ROOT = Path(__file__).resolve().parents[3]` and import `ROOT/base/tools/current_context.py`. This works in the snapshot's real `plugins/degree-diameter/tools/` layout; mock imports in an identical copied layout passed. Copying only either plugin script into current MathRSI fails because current base lacks `current_context.py`. Copy the base helper together, retaining layout.
+- No original `/home/...` or `/Users/...` path is embedded in these four code files. Runtime graph, plane, state and output paths come from the state/CLI. Historical paths still need rebinding in project state, not rewriting into generic helper defaults.
+- `current_context` expects an existing JSON object with top-level `status` and nested `current_context`; the DD adapter additionally expects `families`, accepted orders, phase-start order, latest graph and explicit degree/diameter. This is not the schema of every existing MathRSI project. Opt in on the project's EXISTING state and keep recovery documents authoritative; do not initialize a second generic state store or require migration of unrelated tasks.
+- Python batch execution requires POSIX `resource`, `preexec_fn`, a C++17 compiler named `g++`, and runtime support for CPU/address-space limits. It is not Windows portable. Current native C++ is self-contained standard-library code with compiler builtins for bit operations; no solver, raw geometry cache, external include or original-machine executable is required. It DOES require the actual 754-plane actual-ID text input in addition to the accepted graph. The portable graph-reproduction inputs do not by themselves replace that plane file.
+
+## Confirmed issues and small fixes
+
+1. **Relative graph paths use process cwd.** `build_plan()` opens `Path(latest_graph['edge_file'])`; `execute()` resolves the same way. A state stored beside `source.edges` fails from another cwd. Mock `WORKFLOW_SMOKE_RESULT.json` reproduces FileNotFoundError. Resolve relative edge_file against `state_path.parent` consistently at planning and execution. Absolute paths continue to work.
+2. **Relative prior-review paths also use process cwd.** `request_text(..., state_dir=...)` applies state_dir to terminal_result but not `prior_reviews[].path`. A review beside STATE is rejected when invoked elsewhere. Use one documented base for these paths (prefer state_dir, or an explicit request-file base); fix the CLI and examples together.
+3. **Accepted source identity is only checked by order in receipt ingestion.** `consume()` checks that `source.n` is in accepted_orders, but never compares `source.m` or a source evidence identity to the accepted source entry. A controlled zero-prefix mock with n42402/m1 was consumed although latest_graph was n42402/m245937. Thus this helper is not a complete source-binding checker. Before adopting it as a compatibility gate, require source n/m and an exact accepted evidence/graph reference for the chosen source. For older receipts use their known accepted checkpoint record, rather than forcing all historical sources to equal latest_graph. No graph hashing is necessary: reuse the original independently checked source binding. Existing `acceptance_basis` is valuable parent testimony but should not be presented as a mechanically enforced identity check.
+
+The receipt helper intentionally trusts the original independent PASS receipt and a parent's prior acceptance; it does not read or revalidate the final edge list. Its basename equality plus missing/extra counts do not establish file identity on their own. Keep this limitation explicit, rather than converting it into another verifier.
+
+## Guards and output semantics checked
+
+Software mocks imported the copied scripts and called only planning/guard functions; no compile, search, BFS or Lean was run in this audit. `workflow_smoke.py`, `WORKFLOW_SMOKE_RESULT.json`, and `workflow_smoke.stdout.json` preserve the actual cases.
+
+- PAUSED state can render a plan but execution fails before creating the output directory.
+- Execution rereads the real state; an existing explicitly registered terminal_result blocks it before output creation. That result is required to be consumed, not accepted as mathematics. Rendering remains unrestricted.
+- A changed latest source invalidates an old plan before output creation. Existing output paths are not overwritten (`exist_ok=False`).
+- Planning verifies source n/m header and that its order is the largest accepted order; it deliberately does not parse the full graph or certify D5. Native parsing later verifies source counts/simple/degree. accepted_orders must already contain the seed to plan a first continuation; document this initialization requirement.
+- Native candidates get actual current full-graph B4 coverage checks and preserve old edges, but remain author output. `accepted_new_graphs` and native `ACCEPTED_ACTUAL_R4_PASS` are historical field names, not independent acceptance. Python adds `independent_validation: PENDING`; retain that distinction in any renderer and never add these counts to accepted totals before independent receipts.
+- `execution_progress` distinguishes native attempted/search started and incomplete JSON lines. Compilation/preparation failure records PROCESS_LIMIT_OR_ERROR with flushed logs; it does not turn an interruption into No.
+- CPU accounting includes compiler/control/native child use; RLIMIT_CPU is per process and address-space caps are platform dependent, so the reported `cpu_budget_exceeded` remains meaningful. Do not advertise these controls as a strict distributed/aggregate scheduler limit.
+- `write_current` atomically replaces STATE and then refreshes the optional reading view. If the view write fails, STATE has already committed; recovery should regenerate the view from STATE, not replay mathematical acceptance. This does not require a transaction framework.
+- Receipt replay handling preserves newer stops when a consumed receipt is reread; route stops, shared formal gaps and Goal status are deliberately untouched. Receipt CLI may consume evidence while a Goal is paused, which is appropriate bookkeeping and does not resume work.
+
+## Small adoption sequence
+
+1. Add current-facts helper, fix relative path semantics, and document opt-in fields in existing recovery/current-state guidance. Keep result-count derivation in DD or explicitly mark it optional; base should not require DD families/Lean counters.
+2. Add DD receipt consumer and reference prose; fix accepted-source binding. Add only the demonstrated software cases: imports, relative paths, paused/stale/terminal-result guards, source mismatch, replay preservation. Existing current state remains the source of truth; no watcher or new run loop.
+3. If needed for a later authorized DD batch, add native C++ plus Python wrapper TOGETHER, retain `--plan-only`, limits and independent-validation boundary, and supply/rebind the exact 754-plane input and accepted source. Keep degree12/core41356/754-plane domain explicit. A separate project acceptance step is still required before running it.
+
+Not worth adopting: project-specific baseline163/44/49 or current accepted orders, global batch policy, automatic continuation, another state database, geometric validity inferred merely from `generator_domain`, graph construction/search in base, or a generic arbitrary-D5 generator label. Core minimal-blocker plus all-current-free-tail logic belongs in the DD plugin; its completeness/geometry argument remains the original bounded mathematical domain, not new general certification.

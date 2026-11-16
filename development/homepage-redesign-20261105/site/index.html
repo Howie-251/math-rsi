@@ -66,7 +66,7 @@
     <p class="scroll-hint">Swipe to explore versions →</p>
     <div class="scroller" id="scroller">
       <div class="stage" id="stage">
-        <svg class="sky" id="sky" viewBox="0 0 1704 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. v5 incorporates the Q₇ ≥57-edge theorem and 56-edge structure families from a v3 local-adaptation run; full Q₇ remains open. Proof tools are recorded separately."></svg>
+        <svg class="sky" id="sky" viewBox="0 0 1704 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. v5 incorporates the Q₇ ≥57-edge theorem and 56-edge structure families from a v3 local-adaptation run; full Q₇ remains open. v5 main maintenance receives two newer DD endpoints from v4 plus local updates: (11,5) 37,632 and (12,5) 42,433. Proof tools are recorded separately."></svg>
         <div class="lanes" id="lanes"></div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/></svg>One block = one result or result family</span>
         <span>Color identifies the research problem</span>
       </div>
-      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope. <a href="q7.html">Q₇: ≥57-edge matchings extend; Run: v3 (local adaptation) → v5 feedback.</a></p>
+      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope. <a href="q7.html">Q₇: ≥57-edge matchings extend; Run: v3 (local adaptation) → v5 feedback.</a> <a href="dd-latest.html">DD follow-up: local +1 / +31; dated-table +1 / +81. Run: v4 + local updates.</a></p>
     </div>
 
     <div class="panel" id="panel" aria-live="polite"></div>
@@ -141,24 +141,22 @@
         <div class="viz" data-viz="dd" role="img" aria-label="The Petersen graph"></div>
         <p class="vcap">Illustration · Petersen graph, degree 3 and diameter 2</p>
         <p class="r-problem"><b>Degree–diameter problem</b><span>Largest graphs</span></p>
-        <h3>Advancing four degree–diameter construction benchmarks</h3>
+        <h3>More vertices at diameter five</h3>
         <div class="r-fig">
           <table class="r-table">
-            <thead><tr><th scope="col">Degree, diameter</th><th scope="col">Previous</th><th scope="col">New</th><th scope="col"><span class="sr">Gain</span></th></tr></thead>
+            <thead><tr><th scope="col">Degree, diameter</th><th scope="col">Previous local</th><th scope="col">Latest</th><th scope="col"><span class="sr">Local gain</span></th></tr></thead>
             <tbody>
-              <tr class="is-new" style="background:#fff3e8"><th scope="row">(10, 4) · New</th><td class="prev">2,566</td><td class="new">2,567</td><td class="gain">+1</td></tr>
-              <tr><th scope="row">(11, 5)</th><td class="prev">37,628</td><td class="new">37,631</td><td class="gain">+3</td></tr>
-              <tr><th scope="row">(12, 5)</th><td class="prev">42,342</td><td class="new">42,402</td><td class="gain">+60</td></tr>
-              <tr><th scope="row">(16, 4)</th><td class="prev">16,384</td><td class="new">16,416</td><td class="gain">+32</td></tr>
+              <tr class="is-new"><th scope="row">(11, 5)</th><td class="prev">37,631</td><td class="new">37,632</td><td class="gain">+1</td></tr>
+              <tr class="is-new"><th scope="row">(12, 5)</th><td class="prev">42,402</td><td class="new">42,433</td><td class="gain">+31</td></tr>
             </tbody>
           </table>
-          <p class="r-note">Vertices. Comellas entries: (10,4) checked 2026-11-05; others accessed 2026-11-03.</p>
-          <p class="r-sub">Catalogue totals · 163 graph instances · 44 parameter pairs · 49 completed concrete-graph Lean instances</p>
+          <p class="r-note">Local gains above. Against Comellas 2026-11-16 (37,631 / 42,352), gains are +1 / +81.</p>
+          <p class="r-sub">Run: v4 + local updates → v5 main maintenance.</p>
         </div>
-        <p class="r-why"><b>Why it matters</b> A stronger constructive lower bound: more vertices fit within the same degree and diameter.</p>
-        <p class="r-how"><b>Method</b> Free ten degree slots with five disjoint edge cuts, then check distances across the whole graph.</p>
-        <div class="meta"><span class="status">4 dated table improvements</span><a href="dd-10-4.html">Read (10,4) ↗<span class="source-language" data-no-i18n>EN</span></a><a href="../../../case-studies/degree-diameter/index.html">Earlier research ↗<span class="source-language" data-no-i18n>EN</span></a><button class="trace" type="button" data-case="dd">Trace in evolution ↑</button></div>
-        <details><summary>Scope &amp; verification</summary><p>Compared with dated Comellas entries; no global optimality is claimed. The MathRSI v2 + DD run, with the PR #7 handoff repair, preserved independent all-roots BFS and Final2567 Lean assembly receipts. External formal C review remains incomplete; the portable package contains receipts, not full rebuildable Lean sources. Catalogue totals include accepted intermediate graphs, not 163 records.</p></details>
+        <p class="r-why"><b>Why it matters</b> More vertices fit at maximum degree 11 or 12 and diameter exactly five.</p>
+        <p class="r-how"><b>Method</b> Preserve the source for D12; bind the geometric core and check the boundary for D11.</p>
+        <div class="meta"><span class="status">Two D5 endpoint improvements</span><a href="dd-latest.html">Read latest results ↗<span class="source-language" data-no-i18n>EN + 中文</span></a><a href="dd-10-4.html">Historical (10,4) ↗<span class="source-language" data-no-i18n>EN</span></a><button class="trace" type="button" data-case="dd">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Both finals regenerate exactly. D12 inherits old–old distances from the preserved source and checks all 31 new roots. D11 core–core distances depend on H9 geometry and literal binding; all 161 peripheral/new roots were checked. Concrete end-to-end Lean instances and source final-review obligations remain open. Earlier (10,4) and (16,4) results retain their dated comparisons and have been overtaken in the current table.</p></details>
       </article>
 
       <article class="card" style="--c:var(--e86)">

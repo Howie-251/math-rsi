@@ -1,0 +1,101 @@
+H9整状态构造：必须新增split位置；删除/重染/加copies的整个域已被静态容量挡住
+2026-11-16。按父任务完成一轮纯数学判断，并在追加授权的总≤1CPU内静态读取旧Q/H3/S数据。未做数值搜索、优化、BFS、SAT、几何重建、Lean或新图；没有修改共享STATE/Wiki。只写本文件。
+
+结论先说
+
+这轮没有找到足以直接生成更大完整图的新S规则。发现的确切障碍比固定S的133-copy上界更强：即使允许从当前4074个split位置任意删除、任意重染、任意选择全部364个H3-copy，仍有
+  |Snew|+copies≤4207，整图阶≤37604<37633。
+所以该整个删除交换域不值得再建SAT。后续必须真正增加原S之外的split位置，且一起改变它们造成的merged边界负担；不能只把copy选择或颜色变量放宽。
+
+一、当前输入和旧范围
+
+当前真S、sigma和新37632图已经绑定；本轮目录195/44/49的数学计数不因本报告增加。source-only基点为33397+4074+29=37500，其他132个line/tail/helper不在该定理图中。要得到37633，需要|Snew|+copies≥4236。
+
+已读GEMINI_FLASH_DELTA_DISPOSITION_20261116.txt：Flash实质回件成功，但整轨道选择不是数学必要条件，也不能将偏移直方图相等写成覆盖等价。此处没有套用泛轨道建议。
+旧delta2/7959-S＋280copy的monotone闭包No、四个固定Q球局部最优及150CPU全局退火结果均按原scope保留；它们不是当前delta1/4074-S的定理。下面的新界从当前真实Q/H3/S静态关系直接推得。
+
+二、追加静态计数及对all364copies想法的纠正
+
+数据：
+ research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/Q_data.json
+ research/ddp/more_graphs_20261027/h9_other_degrees/fold11_classes.json
+S从split_fold_ids经generic_fold_ids映到Q局部编号，不把全33397 fold ID和33033 Q下标混用。
+
+令B为1092个有H3邻点的generic fibers。实际静态结果：
+- B内部没有Q边。
+- Q中9828个点恰有1个B邻点，其余23205个有0个；没有点有2个B邻点。
+- 当前S中B点84个，但不是分布在28个absolute H3点：28个absolute h的s(h)分布为27个0、1个3；336个nonabsolute h则309个0、27个3。
+- 所以“每个absolute删一个，共删28就满足H3”的前提不符当前S。非absolute中的81个已split B点首先要取消；它们的generic邻接费用仍须一起支付。
+
+若强制all364 copies，非absolute h需要s(h)=0；故以下集合必删：
+ R_nonabs=(S∩B_nonabs) ∪ (S∩N_Q(B_nonabs))。
+这是一个具体实际边界修复集合，不是模糊的“再删一些点”：每个nonabsolute B点都必须merged；copy使其剩余S邻居必须为0。
+第一段直接计数给|R_nonabs|=996。即使忽略所有absolute与二次删除闭包，保留S至多3078，配364份copy也至多36839点，已经不能到37633。没有据此转去all363之类小类。
+
+两次静态进程实测CPU分别0.101510533和0.116776452，合0.218286985，含导入/输入解析/短输出；低于追加1CPU总限额。没有把这些计数称为图验证。
+
+三、任意删除子集＋任意copies的整体上界
+
+对每个H3点h，令B_h是其三个generic邻fiber。定义实际旧阻塞owner集合
+ R_h={u∈S：存在f∈B_h\S且u∈N_Q(f)}。
+因为旧S合法，每个旧merged f至多有一个S邻点。新增h-copy时，若Snew⊆S，该f仍为merged；degree=10+Snew邻数+1≤11迫其所有旧owner被删除。故z_h=1必有R_h⊆S\Snew。
+
+上述实际“每个Q点至多一个B邻点”使不同h的R_h互不相交。第二次静态计数完整核得
+  |R_h|=0：133个h；
+  |R_h|=3：231个h；
+  owner并集693个S点；每个owner在这些h集合中恰出现1次。
+
+令C为所选copy位置，r=|S\Snew|，b为C中原阻塞位置的个数。则r≥3b，且copy数≤133+b。于是
+ |Snew|+|C|≤4074-r+133+b≤4207-2b≤4207。
+忽略split着色、删除点变merged后的二次闭包、H3-copy之间的相邻容量，只会放宽问题，因此这个上界适用于任意重染和任意全部copy布尔选择。那些被忽略条件不能把上界变大。
+这关闭整个Snew⊆old4074的删除/copy域，不是仅关闭固定S、all364或某个删除seed。
+
+实际结果（供恢复入口消费）
+{
+ "status":"ALL_DELETION_SUBSETS_RECOLOR_AND_H3COPIES_UPPER37604",
+ "current_split_count":4074,
+ "old_merged_boundary_owner_cost_histogram":{"0":133,"3":231},
+ "distinct_forced_owners":693,
+ "maximum_owner_reuse_across_H3":1,
+ "Snew_plus_copies_upper":4207,
+ "order_upper":37604,
+ "target_order":37633,
+ "BFS":0,"optimizer_calls":0,"new_graphs":0,
+ "scope":"Only Snew subset of actual4074S, arbitrary recolors and364H3copies; no new split fibers or ordinary/line/tail helpers",
+ "second_static_process_CPU":0.116776452,
+ "total_new_static_process_CPU":0.218286985
+}
+
+四、下一次真正改变S，需要支付什么
+
+设A=Snew\S为新增split位置，R=S\Snew为删除位置。旧阻塞h的三个owner义务，只能由删除对应旧owner或把对应旧merged B点加入A来解除。不同旧owner不可共享，因而
+ 3b≤|R|+|A∩B|。
+同样宽松地允许133个旧免删copy全部使用，可得
+ |Snew|+copies≤4207+|A|+|A∩B|/3-2|R|/3。
+因此若要达到4236，一个必要的整组交换净收益条件是
+ 3|A|+|A∩B|-2|R|≥87。
+这是下次生成规则该实际使用的条件，不是“先有很多free再说”。它仍只是必要条件，完整度数/二色/merged闭包不能省。
+
+特别地，只删旧S不会有正净收益。给原blocked h的三个B点同时split，再加h-copy，看上去一次+4，但各新B还会给其他Q邻点增加负载；原owner共享消失而边界冲突可能产生，不能只看H3方程就称整图接近完成。
+
+一个直接可被推翻、通向完整图的具体结构问题是：能否找到一份同时满足上述净收益及所有边界条件的A/R，使新增B点的全部邻接费用由同一批删除/新split共同支付，且最后Snew诱导图具有每点同色邻居≤1的共同二色？若存在并使|Snew|+copies≥4236，已有真sigma/partial-fold/blowup规则直接给完整图，无132个helper路径债。
+当前没有这样的A/R witness，也没有证明某个几何seed的闭包会有此性质。所以本报告不建议直接上33033变量IP或单点退火。
+
+五、关于几何平面/子空间的一个容量提醒
+
+仅把所有split原像放进一个F9真线性projective子空间，不足够：它包含于一个hyperplane；Q(6,9)的hyperplane section最多7462个projective null点。简证：限制的二次型秩至少5；rank6双曲型的零点最多，projective数为(9²+1)(9²+9+1)=7462；tangent rank5带1维radical为7381，另一rank6型为7300。
+每个generic split fiber需要两个不同原点，所以这类S最多3731；即使额外364copies全部给足，也只有4095<4236。当前4074-S本身就不能全部藏在一个此类proper子空间。
+因此不能把“找一个新的几何平面/超平面”当解决整项点数的规则。需要跨子空间的联合结构，承重性质依然是外部merged点至多一个S邻居及同一二色，而非只计算几何点数。
+
+六、deep fibers问题准确留开
+
+B共1092点，N_Q(B)\B共9828点，deep区域D=Q\(B∪N_Q(B))有22113点。这些点没有H3邻点，也不邻B，可以避免直接增加H3-copy的generic外负担。
+但删除原S的浅层后，原选中点变merged的负载、外部至多1的限制及二色条件仍可能失败。当前S∩D为3003点；all364copies若希望独靠deep S超过37632，需要至少3872个合法deep splits，尚需真实新增/替换，而不是声称原S少删几个就足够。
+这里没有提出3872点合法deep结构，也没有执行deep域IP、计度、闭包或搜索。更弱的一般结论仅是：即使当前删除/copy域的乐观上界也离目标少29，必须加入新split位置。
+
+七、下一项最小区分工作与停止规则
+
+最小有用工作是先提供一个明确A/R结构并检查完整边界费用，或证明一个几何seed的闭包具有可着色且正净收益的形状。若只有“deep有很多点”“某轨道未试过”或局部删少几个的分数，没有此结构依据，应先停在准确缺件，不默认派优化器。
+已有静态No现在可被后继直接消费：所有任意删除oldS＋recolor＋H3copies都不重跑。未来允许A≠空会使这个No不再直接覆盖，但不能因此自动获得新数值授权或值得长期研究的判断。
+
+本轮没有得到新的完整合法图，也没有以闭掉整体交换域冒称出图能力提高。它实质改变的判断是：删除旧S释放copies这条路连最宽松净收益都不够，下一次必须展示怎样共同承担新增split的边界，而不是再调copy选择。

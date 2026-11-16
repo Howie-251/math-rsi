@@ -650,3 +650,12 @@ html:lang(zh-CN) :is(.sub,.sec-head h2,.card h3,.panel h3,.evo-title){line-heigh
 .q7-schematic div span{display:block;font-size:13px;line-height:1.45}
 .q7-open{border-left:3px solid var(--q6);padding:14px 18px;background:var(--surface)}
 @media(max-width:640px){.q7-reader{padding-top:32px}.q7-schematic{gap:8px;padding:18px 10px}.q7-schematic b{font-size:26px}.q7-schematic div span{font-size:12px}}
+
+/* The DD follow-up reuses the existing compact reader and domain color. */
+.dd-followup-reader{--q6:var(--dd)}
+.dd-latest-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:28px 0}
+.dd-latest-results article{padding:20px;border:1px solid var(--hair);border-radius:12px;background:var(--surface)}
+.dd-latest-results h2{margin:0 0 8px}
+.dd-latest-results .dd-latest-order{font-size:38px;font-weight:650;color:var(--dd);line-height:1.2;margin:8px 0 18px}
+.dd-latest-results p{font-size:14px}
+@media(max-width:640px){.dd-latest-results{grid-template-columns:1fr}}

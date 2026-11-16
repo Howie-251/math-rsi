@@ -10,11 +10,12 @@
 <header class="dd-nav wrap"><a class="brand" href="index.html">MathRSI</a><a href="index.html#results">← All results</a></header>
 <main class="dd-page wrap">
 <section class="dd-hero">
+<p class="dd-note"><a href="dd-latest.html">Latest D5 endpoints: 37,632 / 42,433 ↗</a></p>
 <p class="dd-eyebrow">Degree–diameter · (10,4)</p>
 <h1>2,567 vertices.<br>Ten neighbors. Four hops.</h1>
 <p class="dd-lede">A 10-regular graph of exact diameter 4 raises the constructive lower bound by one vertex above the Comellas table entry of 2,566, checked 2026-11-05.</p>
 <div class="dd-stats"><div><strong>2,567</strong><span>vertices</span></div><div><strong>12,835</strong><span>edges</span></div><div><strong>10</strong><span>degree · regular</span></div><div><strong>4</strong><span>diameter · exact</span></div></div>
-<p class="dd-run">Constructed in a <b>MathRSI v2 + DD plugin run</b>, with the PR #7 handoff repair. Its local-edit and exact-replay methods are incorporated into the existing DD plugin in v4, the current release.</p>
+<p class="dd-run">Constructed in a <b>MathRSI v2 + DD plugin run</b>, with the PR #7 handoff repair. Its local-edit and exact-replay methods are incorporated into the existing DD plugin in v4. The current v5 maintenance receives later DD improvements.</p>
 </section>
 <section class="dd-method">
 <div><p class="dd-eyebrow">Construction</p><h2>How the last vertex fits</h2><p>The local 2,566-vertex predecessor is already 10-regular. Delete five disjoint edges, then join a new vertex to all ten endpoints. Every vertex keeps degree 10.</p><p>Degree bookkeeping is only the first step: distances between old vertices and from the new vertex must all stay within four. The final extension needs no additional switch; the two preceding extensions use old-only 2-switches.</p><p class="dd-cuts">(193,2362) · (192,2363) · (417,2555)<br>(2508,2565) · (2511,2528)</p></div>

@@ -1,5 +1,11 @@
 # 历史原件与阅读证据
 
+## 2026-11-16：两个 D=5 参数的完整新交接
+
+[`dd-latest-two-parameters-20261116/`](dd-latest-two-parameters-20261116/README.txt) 原样保存用户提供的 455 个文件，包括两张最终边表、直接输入、便携构造/核验程序、研究转折和原工作流快照。结果为 `(11,5)` 37,632 点与 `(12,5)` 42,433 点；本轮核验和版本归属见[演进记录](../../../development/evolution/v5-dd-20261116/EVOLUTION.md)。此处不运行续接搜索或改写历史 STATE；带修复的可用工具在插件 `tools/`，使用条件见[批次说明](../references/d5-blocking-batches.md)。
+
+## 初始 DD 交接
+
 `source/` 是用户提供 `dd_research_full_handoff` 的原样副本，31,034文件、269,400,126字节。完整原 `research-wiki/`、证明、生产与搜索程序、原结果／审阅、Lean源码、构造器与交接均随仓；没有符号链接或依赖作者另一目录才能读取的stub。本次copy未修改原研究。逐相对路径与字节大小集合一致，未为包装新增hash；[copy记录](../evidence/ARCHIVE_COPY.json)只说明运输，不认证数学。
 
 原件版权、作者归属与文献说明保持原样。一般框架／公开源／有限几何／复制定理不因收录变为MathRSI原创。历史结果来自原研究，未使用MathRSI v1完成；插件新增不是这些图的重新发表或世界纪录认证。

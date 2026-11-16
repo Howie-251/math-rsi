@@ -1,0 +1,24 @@
+H9 有限 kernel / 729-vector star 桥：实际 Lean PASS
+2026-11-16。同一数学 Goal。唯一新源码 formal/DegreeDiameter/Portfolio/H9CrossStar.lean。
+
+完成
+先将实际 PASS 的 H9CrossKernel.olean 安装到已有 formal/.lake/build/lib/lean/DegreeDiameter/Portfolio/ 路径，使后继直接 import；没有重编上游或复制环境。
+
+kernel_card_le：对任意有限 Field K 和非零 null p，
+    Nat.card (Kernel p) <= Nat.card K ^ 3。
+证明调用已经核验的实际三坐标注入，使用有限函数空间基数；没有把 rank>=4 或 kernel 基数当作输入。
+
+star729_surjective：若 Nat.card K=9，p 非零 null，且给定
+    s : Fin729 -> Kernel p
+和 s 的注入性，则 s 满射。
+证明若不满射，有限集合注入给 729 < card Kernel；而第一条给 card Kernel<=9^3=729，矛盾。没有新增秩、核大小或图直径假设。
+
+实际执行
+只编一次新模块，exit0 PASS；measured child CPU2.025643，compile wall28.872765秒；保守whole-task CPU3.1，150秒墙钟范围内完成。准确命令、LEAN_PATH、stdout与kernel输出见 BUILD_RESULT.json / BUILD.log。无编译错误、无重试。
+两条 #print axioms 均仅 propext、Classical.choice、Quot.sound；没有 sorryAx、native_decide 或新 axiom。
+
+尚待绑定的实际输入
+star729_surjective 的 s 及其注入性是明确的有限输入假设，尚未用实际 91 个 F9 射影点×8个非零标量+zero 在 Lean 中构造/证明。不能把此假设误读为已经验证具体 729 向量、91 点 star 完备性或源图直径。具体 F9 表、实际点/线枚举、归一化不重合和整图 D5 认证仍开放。此模块只是把真实 kernel 上界与有限输入完备性连接起来，不计新增图或完整具体图 Lean。
+
+产物
+H9CrossStar.olean 已保存于本任务目录，父调度可直接安装复用；不需要重编上游。没有修改共享 STATE/Wiki，没有 hash。

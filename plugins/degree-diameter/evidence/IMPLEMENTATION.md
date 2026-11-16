@@ -1,5 +1,7 @@
 # 本次插件实现的实际核查
 
+2026-11-16 的后续更新另见 [v5 DD 演进记录](../../../development/evolution/v5-dd-20261116/EVOLUTION.md)：两张终图确定性复生与 161/31 指定根 BFS、独立有限数组/边集核查，及可选当前事实工具、限定 D12 驱动与前缀收件的七项软件回归。下文保留最初插件实现的历史核查范围，不把新图计入旧批次或新增具体 Lean。
+
 本轮由Root先读取并运行mathrsi-meta-evolve，P1交作者开发plugins/degree-diameter；不是事后追认DD历史为MathRSI运行。作者只写该插件，源研究只读。主流程／版本集成由Root处理。
 
 - 完整providedhandoff copy到archive/source：31,034files/269,400,126bytes，0symlink；relativepath与size集合一致。[ARCHIVE_COPY.json](ARCHIVE_COPY.json)。没有新增hash，也没有声称原包省略内容已经补齐。

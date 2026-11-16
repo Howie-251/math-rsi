@@ -6,6 +6,8 @@
 
 从[领域入口](skills/mathrsi-degree-diameter/SKILL.md)开始。已有明确义务可以直接调用：
 
+2026-11-16 的 v5 main 维护收录两项 D5 深化：`(11,5)` 达到 **37,632** 点，`(12,5)` 达到 **42,433** 点。[方法与覆盖](references/d5-joint-completion.md)连接极小核心阻塞集/全部余度共同补全、改色后的坏点对反馈，以及两类不同的全点对核验；[有界批次与收件](references/d5-blocking-batches.md)提供限定家族的可调用工具。完整[原包](archive/dd-latest-two-parameters-20261116/README.txt)含两张终图、直接输入和便携复验器；[本轮演进证据](../../development/evolution/v5-dd-20261116/EVOLUTION.md)记录实际使用与范围。源研究使用 v4 维护底盘加本地更新，本次不新增具体整图 Lean。
+
 - [构造推进](skills/dd-construction/SKILL.md)：当前覆盖增点、冻结完整邻域克隆、仿射共同路线与 GQ 填补。
 - [排除与证书](skills/dd-obstruction-certificate/SKILL.md)：必要门、精确有限域、旧路径损伤、共享参数和整数 dual，或固定图原命题核验。
 - [迁移诊断](skills/dd-transfer-diagnosis/SKILL.md)：换参数／源图／连接规则后重判可继承证据、失败边界与公开比较。

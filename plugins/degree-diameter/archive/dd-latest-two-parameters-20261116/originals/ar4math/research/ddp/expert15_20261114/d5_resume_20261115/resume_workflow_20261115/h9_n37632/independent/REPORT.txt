@@ -1,0 +1,8 @@
+H9最终37632图独立核验PASS
+实际最终图37632顶点、205366边，简单、最大度11、直径恰5。
+逐边比对先前独立绑定的另一方向图，所有core和旧外围边完全保留，唯一新增边为(31,37631)；颜色和全部11pins与PARAMETERS准确一致。
+固定core与独立缓存真H9/sigma/pi重建结果全等，其core-core距离由任意sigma/partialfold定理保证。本次又在最终实际图运行完整160旧外围根+新根，共161次BFS，全部到全图<=5，未达点和坏对均0；没有重复37471个核心根。
+最大度11的直径4 Moore界为12222，小于本图37632，因此D不能<=4，结合上界得到D恰5。
+ROOT_RESULTS.jsonl保存每个根的完整ecc和未达目标列表（全部为空）；RAW_CHECK_RESULT保存实际独立原边checker结果。
+本次仅固定最终图验证，未新搜颜色/plane/anchor，未重编checker。具体Lean及指定Gemini最终review仍pending，不因数学独验而升格。未改STATE/Wiki/catalog。
+Resources: {"whole_CPU": 0.8560325899999999, "whole_wall": 0.8814883753657341, "whole_CPU_cap": 3, "compiler_runs": 0}

@@ -1,0 +1,20 @@
+/- This final common-neighbor packaging was added after the bounded compile
+timed out; neither it nor the earlier identities are claimed kernel-checked. -/
+theorem cross_inner_skew (p q : Vec7 K) :
+    cross q (cross p q) = -(cross q (cross q p)) := by
+  funext i
+  fin_cases i <;> simp [cross] <;> ring
+
+theorem null_polar_common_neighbor (h3 : (3 : K) = 0) (p q : Vec7 K)
+    (hp : norm p = 0) (hq : norm q = 0) (hb : polar p q = 0) :
+    norm (cross p q) = 0 ∧ cross p (cross p q) = 0 ∧ cross q (cross p q) = 0 := by
+  obtain ⟨hc, hpc⟩ := null_polar_cross_witness h3 p q hp hq hb
+  refine ⟨hc, hpc, ?_⟩
+  have hbq : polar q p = 0 := by
+    calc
+      polar q p = polar p q := by simp [polar] <;> ring
+      _ = 0 := hb
+  have hqc : cross q (cross q p) = 0 :=
+    (null_polar_cross_witness h3 q p hq hp hbq).2
+  rw [cross_inner_skew, hqc, neg_zero]
+
