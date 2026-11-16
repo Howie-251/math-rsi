@@ -126,7 +126,7 @@ Workflow and scripts are **[MIT licensed](LICENSE)**. Archived papers and third-
 
 ### Core Contributors
 
-Ruofeng&nbsp;Yang<sup>&#42;</sup>, Haitong&nbsp;Ma<sup>&#42;</sup>, Kaitao&nbsp;Qiu, Zuhao&nbsp;Zhang, Jiaxuan&nbsp;Sun, Tianzhi&nbsp;Ren, Shuai&nbsp;Li<sup>#</sup>
+Ruofeng&nbsp;Yang<sup>&#42;</sup>, Haitong&nbsp;Ma<sup>&#42;</sup>, Kaitao&nbsp;Qiu, Zuhao&nbsp;Zhang, Jiaxuan&nbsp;Sun, Tianzhi&nbsp;Ren, Zheli&nbsp;Zhou, Shuai&nbsp;Li<sup>#</sup>
 
 <sup>&#42;</sup> Equal contribution. <sup>#</sup> Corresponding author.
 
