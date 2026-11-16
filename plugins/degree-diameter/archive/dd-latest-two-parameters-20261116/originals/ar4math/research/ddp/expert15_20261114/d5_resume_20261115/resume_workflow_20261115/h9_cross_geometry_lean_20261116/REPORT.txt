@@ -1,0 +1,23 @@
+H9 cross 几何非退化与点到线投影：实际 Lean kernel 通过
+2026-11-16。当前 Goal 的共享源形式化桥；不计新增图或完整具体图 Lean。
+
+唯一新增正式模块
+formal/DegreeDiameter/Portfolio/H9CrossGeometry.lean
+import 已编译的 H9CrossRouting；没有重编其代数源、没有复制环境或升级工具链。
+
+已证明并实际编译的结论
+1. cross_right_scalar：叉积第二变量对任意域标量线性。
+2. nonzero_cross_not_left_multiple / right_multiple：若 y=p×q 非零且 p×y=q×y=0，则 y 不可能为 p 或 q 的任何标量倍数。左端证明用 skew：y=a p 推出 0=q×y=−a y；域的无零因子性质与 y≠0 给出矛盾。右端同理。没有新增几何公理。
+3. null_polar_projective_common_neighbor：Field K、3=0、norm p=norm q=polar(p,q)=0 且 p×q≠0，推出 y=p×q 为 null、同时 cross-adjacent 于 p/q、并与二者射影不同。该结论实际上不需要另加 p/q 非零假设；它们已由 p×q≠0 排除零向量。
+4. line_orthogonal_projection：对独立的 null r,w，cross(r,w)=0，任意 p，都存在同 span 的非零 null q 使 polar(p,q)=0。构造明确：若 polar(p,r)=0，取 q=r；否则取 q=polar(p,w)r−polar(p,r)w。独立性保证后者非零；双线性保证与 p 正交；从 norm_cross 和 Field 推出 polar(r,w)=0，再用二次型展开证明 q null。独立性以“a r+b w=0 则 a=b=0”的标准向量条件表达，没有假设新的直径或有限图性质。
+
+真实执行
+第一次只编非退化模块：PASS，child CPU 4.379658，compile wall 31.680446 秒。
+余量内加入明确投影式，再编同一新模块：PASS，child CPU 5.079631，compile wall 17.147367 秒。
+合计 measured child CPU 9.459289；whole-task 保守计费 10.5 CPU 秒（含准备与 IO）；180 秒总墙钟范围内结束。第一/第二命令、LEAN_PATH、结果与输出均保存。没有真实编译错误或修复重试。
+
+公理
+全部五项 #print axioms 输出均为 propext、Classical.choice、Quot.sound；没有 sorryAx、native_decide 或新增 axiom。精确输出见 BUILD.log；中间三项标准公理跨行打印。
+
+边界
+这关闭了 cross 非零支路里“邻点是否与端点射影相同”的漏洞，并提供点到线投影。尚未在此模块证明整个 incidence 结构的点线距离、cross=0 的所有路由分支、具体 F9 归一化/行列绑定或全部 66430 点源的 Lean 直径。因此不能将它计成具体图认证已全部完成。新 .olean 在本任务目录，供父调度按需安装；本任务没有改共享 STATE/Wiki。

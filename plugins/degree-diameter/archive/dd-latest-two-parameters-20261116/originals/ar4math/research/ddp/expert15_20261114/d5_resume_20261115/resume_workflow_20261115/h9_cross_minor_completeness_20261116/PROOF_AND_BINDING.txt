@@ -1,0 +1,80 @@
+六个cross minor与实际H9缓存线的完备桥
+2026-11-16。本次一个固定公式检验；未运行新cache扫描、BFS、SAT、Lean或构图。
+
+实际结果
+check_minors.py准确构造A_p:q↦C(p,q)的7×7矩阵，按父任务指定索引取六个4×4 minor，用24项行列式展开在Z系数多项式环化简。全部det严格等于相应坐标的四次方，非抽样且不只mod3。
+RESULT.json记录六个实际矩阵、索引、det与零多项式检查。wholeCPU=0.280530142，wall=0.032728191秒；2CPU上限内。没有扫其他minor或换公式。
+
+一、minor的简短可手验形式
+
+p=(u0,u1,u2,s,v0,v1,v2)。对循环索引i,j=i+1,k=i+2(mod3)，取
+ u_i: rows[i,3,4+j,4+k], cols[3,4+i,k,j]，得到
+ [-u_i, 0,   0,    0  ]
+ [  0, u_i, -v_k, -v_j]
+ [ v_j, 0, -u_i,   0  ]
+ [ v_k, 0,   0,   u_i ]。
+按首行及其余稀疏列展开，det=u_i⁴。
+
+ v_i: rows[4+i,3,j,k], cols[3,i,4+k,4+j]，得到
+ [ v_i,  0,   0,    0  ]
+ [  0, -v_i, u_k,  u_j ]
+ [-u_j,  0, -v_i,   0  ]
+ [-u_k,  0,   0,   v_i ]。
+同样det=v_i⁴。这六式在任意域上成立，供特征3 cross路由使用。
+
+二、任一非零null点的projective cross核最多91点
+
+若p≠0、Q(p)=u·v-s²=0，则u与v不可能同时为0，否则s²=0迫s=0。故至少一个u_i或v_i非零。对应minor非零，rank A_p≥4。
+于是ker A_p的线性维数≤3。F9上一个k维线性子空间的projective点数为(9^k-1)/(9-1)，因此projective ker A_p至多91点。
+
+另由先前准确cross恒等式，若p非零null且C(p,q)=0，则β(p,q)=0，且Q(q)=0：
+ C(p,C(p,q))=-β(p,q)p-Q(p)q给β=0；
+ C(q,C(q,p))=-β(p,q)q-Q(q)p再给Q(q)=0。
+因此此kernel本身也完全由null向量组成，但下面的有限star计数不依赖先证明整个null点枚举完备。
+
+三、把“cross0”变成“同一条实际缓存线”
+
+对每个实际缓存点p，假定已经准确绑定十条不同的缓存线经过p，而且每条确为一个二维线性子空间的完整projective线（F9上恰十点）。这些线各自都有独立basis a,b且C(a,b)=0。
+双线性/alternating给：对该线任意两个向量x=αa+βb、y=γa+δb，C(x,y)=(αδ-βγ)C(a,b)=0。特别是它们经过的p与每个行内点q满足C(p,q)=0，所以整条线的十个projective点全在ker A_p中。
+
+两条不同projective直线通过p时只在p相交。因此十条线的并恰有
+  1+10×(10-1)=91
+个不同projective点。它们都在至多91点的projective kernel中，所以并=整个kernel，且rank A_p实际恰4。
+
+结论：对任意实际p，以及任意非零向量q，若C(p,q)=0，则[q]属于十条实际缓存线之一，因而有实际PointID；若[q]≠[p]，该缓存线同时包含p、q。
+这消除了原显式路由证明中“构造出来的cross中间点虽然在Q上，但是否出现在字面缓存，以及它与端点的span是否是缓存线”的缺口。
+
+四、所需有限绑定清单（本次没有冒称重新执行）
+
+先前Root已报告的事实：23个普遍cross恒等式通过；全部66430条实际线的basis-C0通过；240个实际点到线的路由样例通过。后者是编码诊断，不能代替上面的普遍/完备证明。
+
+要把第三节用于字面line_points.i32.bin，仍须准确取得以下有限事实或复用已满足的原收据：
+
+1. PointID→七坐标映射非零、规范化、null，且单射。不同ID不能偷偷编码同一projective点。
+2. 每个缓存行恰十个不同的合法PointID；取两个不同点a,b，确认它们线性独立，并且该行恰为span(a,b)的全部十个projective点。仅检查basis-C0不足以说明剩余八点确实在同一span。
+3. 不同缓存行是不同projective线。若第2项已真，核十点排序集合无重复就足够，不需另比巨大符号空间。
+4. 每个实际PointID恰在十个缓存行中；事实上“至少十个不同真projective线”就足够完成91点下界，现有10正则incidence计数是方便的精确证据。不能把每行10点误当每点10线。
+5. 上述坐标F9运算、line顺序和实际tau/sigma/pi与生成字面源图使用的输入相同。数学证明的坐标约定已由Tits六式符号匹配；具体整数编号仍由原binding收据承担。
+
+所需字面文件：同级h9_exact_binding/{point_coords.u8.bin,line_points.i32.bin,tau.i32.bin,sigma.i32.bin,pi.u16.bin}及原binding程序/结果。本次未读取并重扫这些大表，不把“文件存在”记为有限性质已核，更未计算hash。
+
+五、全null点枚举完备的独立计数（可作更强输入校验）
+
+F9³的projective点有9²+9+1=91个。
+若u≠0，把u的首个非零坐标规范化成1，有91种u；s任取9种；u·v=s²是一条非零线性方程，v有9²=81解。共91×9×81=66339个规范化null点。
+若u=0，null迫s=0；v非零规范化有91种。总计
+  66339+91=66430。
+因此，若现存66430条点坐标均为不同的规范化非零null点，则它们恰枚举整个projective Q。
+
+但这项强结论并非当前路由的必需进口：第三节已经从每个实际p的91点star强迫整个ker都由实际缓存点表示。给定实际p和实际线L，在L的span中取β(p,-)的非零kernel点q，因为该行完整span，q已有PointID。再取y=C(p,q)，它属于ker A_p，第三节立即给实际y及缓存p-y线；同理C(q,y)=0给缓存q-y线。于是原先≤5点—线路线全部落到原缓存，而非抽象未知几何。
+这可使形式化只承接小型线性代数/行列式证明与实际star有限证据，不必再将全Q枚举基数作为新的承重前提。
+
+六、建议的下游精确声明
+
+先闭两个贴合字面数据的lemma：
+- crossZero_to_cachedLine：不同实际点p,q且C(coords p,coords q)=0，则存在缓存line同时包含p、q。
+- crossKernel_has_literal_representative：实际p非零null，任意非零q∈ker A_p，其规范化向量出现在实际点表。
+
+两者由同一91点star完备证明给出。接着用既有显式cross公式得到所有实际point-line对的长度≤5walk，再沿实际sigma逆和pi运输至点图/fold核心。这是具体source认证压缩，不是只加一个以“源D5成立”为假设的Diameter wrapper。
+
+仍未完成：上述有限性质在Lean中的kernel认证、实际sigma/pi运输lemma的Lean装配、外围及新点证据的形式化。没有声明具体source Lean已经闭合，也没有新增数学图或绕过Gemini审阅。

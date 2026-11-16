@@ -1,0 +1,90 @@
+H9 fixed-S改色：91线命中是否仍给完整核心R4
+2026-11-15；独立只读数学核对，返回父route/prove。
+
+结论
+----
+对由真实H9 incidence、真实点线双射sigma_c、固定split集合S重新生成的G(S,c)，该证书确实对任意合法颜色c成立：命中一个真实全奇异平面的全部91条射影线，足以使所选实际pin集合P在四步内覆盖全部37471个核心点。
+
+这不是仅由“核心直径≤5”推出的。承重的是一个单独的、对任意点线双射成立的偶路径转换，其长度是4而非5。没有发现需要固定旧颜色、Frobenius稳定阻塞集、旧11+0/10+1配额或matching方向额外假设。
+
+适用边界：定理可以用于未来按真实sigma_c重建的新核心，不能据此自动断言现有37631字面边表已经与某个sigma_c逐边绑定。当前源绑定原件已明确保留这个缺口。全160外围根、新增点根、度数和实际生成绑定仍必须检查；核心定理没有解决它们。
+
+实际读取原件
+------------
+1. resume_workflow_20261115/h9_binding/REPORT.txt全文。
+2. H9_COLOR_SWITCH_INTERFACE.txt全文。
+3. 原作者23056128_partial-folds-split-cayley-hexagon-H9-large-graphs-diameter-five.txt，第3–5节，尤其Lemma3.1、Lemma4.1及Theorem5.1；路径research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/。
+4. 同目录partial_fold_source/verify_witness.py中load_tau与partial_fold的实际邻接、eps、label、合并代码。
+5. research/ddp/global_coverage_20261027/h9_quadric_line_rule/REPORT.md全文，包含beta零点的四步判据、经典坐标flatness与shell/tangent计数，以及任意sigma的四步转换。
+6. research/ddp/more_graphs_20261027/h9_redei15/theory/PROOF.md及h9_baer_plane_pool/THEOREM.md。
+7. 本阶段d12_weighted_plane_cover/JOINT_MODEL_PROOF_MEMO.txt与d11_weighted_plane_transfer/{geometry_fit.py,SOURCE_BINDING.json}。
+
+以下为独立展开的承重推导，而非仅引用接口结论。
+
+一、四步来自偶关联路径；与Lemma3.1的五步证明是不同应用
+-----------------------------------------------------
+令H为真实H9关联结构，原点集合为X、线集合为L；sigma:X→L为任意双射。
+G_sigma在不同原点a,b间连边，当且仅当b属于sigma(a)，或a属于sigma(b)。
+
+若H中有偶关联路径
+    p — L1 — y — L2 — x，
+令a=sigma^{-1}(L1)、b=sigma^{-1}(L2)。于是G_sigma中的序列
+    p — a — y — b — x
+每一步都由定义直接成立：p,y属于sigma(a)=L1；y,x属于sigma(b)=L2。
+若相邻序列项恰相同，删去该停留即可，所得walk长度至多4。
+关联距离0或2的情况分别给0或至多2图步，处理完全相同。
+所以对任意sigma都有
+    dist_H(p,x)≤4  =>  dist_G_sigma(p,x)≤4。                 (1)
+
+此证明不需要sigma保持关联、自同构、对偶或颜色不变。
+作者Lemma3.1用的是从p到线sigma(x)的奇路径，从而普遍给G_sigma直径≤5；不能只凭那条直径结论声称(1)。这里直接检查偶路径每条边补上了正确的四步依据。
+
+二、beta判据本身与sigma无关
+---------------------------
+旧quadric-line原件固定实际经典H9坐标Q(u,s,v)=u·v−s²与其极化形式beta。
+其证明先由六条Tits/Pluecker关系加极化行，证明每点的H-collinear平面是全奇异的；因此H点距离0/2/4的点均位于该点的极超平面。
+再用H9 girth12得到这三个点shell共有1+90+7290=7381点，与Q∩p-perp的切超平面截面计数相等，推出
+    beta(p,x)=0  =>  dist_H(p,x)≤4。                        (2)
+
+这些声明只涉及固定H9坐标和关联结构，不涉及sigma或split颜色。
+旧原件还明确指出极化行不可从六方程中省略，处理了s=0的pure-u/pure-v特殊核；本核对没有把旧代码跳过四维核的行为当作几何证明。
+本次继承该原件中的经典H9及极化判据，不声称重新构建并核验了H9 incidence。
+
+三、91线命中怎样给每个核心目标提供同一个P中的pin
+-------------------------------------------------
+固定真实全奇异射影平面Pi=PG(W)，其中W是F9三维向量空间。Pi有91条射影线。
+固定split集合S决定原点到核心的合并映射pi_S；其定义是未split的{p,phi(p)}合并，split点保留。因此pi_S及least-raw标签顺序只依S，不依c。
+
+设实际pin集合P满足：对Pi的每一条射影线ell，至少存在原点x∈ell使pi_S(x)∈P。这里允许不同raw点映到同一个pin；pin只支付一次度数。
+对任意核心点u，取一个raw前像p，pi_S(p)=u。线性形式
+    W → F9，x ↦ beta(p,x)
+的核维数至少2：若形式非零，其射影核是Pi中的一条线；若为零，整个Pi都是零点。
+由于P命中所有线，在这个零集中可取到raw点x，满足beta(p,x)=0且pi_S(x)∈P。
+由(2)、(1)得到G_sigma_c中p到x有至多4步walk。再按pi_S投影并删除重复点，长度不增加，故
+    dist_G(S,c)(u,pi_S(x))≤4。
+u任意，所以
+    union_{v∈P} B4_G(S,c)(v)=V(G(S,c))。                   (3)
+
+这个推导对所有合法c同时成立。它不要求P的raw前像集Frobenius稳定；也不要求一个pin的全部前像都在Pi里，只需每条line所声明的那个前像确实映到该pin。
+
+四、合法改色需要保留什么
+-----------------------
+合法c是固定S中每个phi二点fiber共用一个bit；未split处eps=0。原作者Lemma4.1证明这样的sigma_c为双射，partial_fold实际代码同样实现这个定义。
+若允许同一fiber两点独立赋色，则sigma可能不再是双射，原接口不能自动适用。
+真正生成时必须用同一套raw标签、tau、S和pi_S。不能拿旧2/4条边数量或parity抽象图，声称已经绑定不同色matching的raw方向。
+
+五、下游怎样正确使用这份结论
+---------------------------
+允许继续：用共同颜色/91行模型寻找(c,P)的必要度数相容和核心充分证书。该模型SAT只提供候选，仍不能记为37632合法图。
+
+真正接原图前的剩余义务：
+  1. 按真实H9 incidence和sigma_c生成新核心，并按固定S及实际标签映射；核代码返回的实际核心正是G(S,c)。
+  2. 保留外围邻域时重新核全部最终度数，因为核心换边会改变负载。
+  3. 新核心定理只给core-core≤5；160个旧外围点的路线可能因core改边而改变，必须在实际最终图核160外围根。
+  4. 新增点的全图根检查仍须覆盖核心及所有外围；只看P的核心四步证书不够。若用(3)省部分作者检查，独验仍需执行实际新根覆盖；不能将理论充分门冒充实际图已验。
+
+原SOURCE_BINDING.json的CONDITIONAL_NOT_FULLY_BOUND_TO_RAW_SIGMA_ORIENTATION_IN_READ_EVIDENCE标记是对旧37631字面core的绑定缺口，不是对数学命题(3)的反例。新生成真sigma核心可避开对旧sigma身份的需求，但必须如实称重新生成核心，而非已证明只做局部翻色。
+
+范围与执行
+----------
+本次只读数学原件和代码，写此报告。没有构建H9、生成/改色图、运行BFS、solver、模型或Lean；没有修改共享STATE/Wiki、作者JOINT_INPUT或Goal。结论支持颜色不变的核心证书，不支持完整新图、全域可行性或新增纪录声明。

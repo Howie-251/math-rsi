@@ -1,0 +1,63 @@
+H9真实sigma绑定路径及单候选执行结果
+2026-11-16；同一Goal的明确有界候选核验任务，不是新路线或扩大颜色搜索。
+
+结论
+作者坐标/Tits线性约束＋缓存point_coords＋tau足以可靠重建真实H9 incidence，不需要原作者main，也不需要重新搜索几何。
+已实际构造当前plane605、4074颜色、10pins的精确候选37632点/205365边/maxdegree11；真实37471核心有203747边，原160外围的1608条incident边全部保留，仅增加指定10条新边。
+本作者任务没有运行任何图距离BFS，未接受新合法图。全部核心D5从已绑定真实H9/sigma数学接口继承，剩余160外围根和新根必须由父流程实际检验。
+
+一、实际源码和标签依据
+原件：research/ddp/breadth_20261027_wave3/hexagon_partial_fold_scout/partial_fold_source/verify_witness.py。
+实际读取build_hexagon、load_tau、partial_fold。其构造字段为F9=F3[t]/(t²+1)，条目0..8表示a+3b；点是Q(6,9)规范坐标，原line编号按各10个raw point IDs的排序tuple作全局词典序。
+缓存point_coords.u8.bin保存66430×7作者顺序坐标；既有identify.py曾全点验证tau²为坐标Frobenius。现有point_to_core11.u16.bin和fold11_classes.json已绑定固定4074 split和least-rawpoint排序，不能用旧degree12映射。
+新程序按这些固定输入使用相同六个Tits线性约束，逐点求kernel；仅kernel维3时按原作者规则生成过点10条线。
+将原728个非零系数换为PG(2,9)规范91项：(1,a,b)、(0,1,b)、(0,0,1)，得到完全同一projective plane；每条线仍生成全部10个规范raw points。
+必须收集所有生成线后sort+unique，不能只留最小point为当前点的线，因为某条线的最小point可能属于作者跳过的非3维kernel。
+最终66430条真实线按作者tuple顺序排序，使tau.txt中的line ID准确绑定。没有点对22亿枚举，没有字段/基线/颜色更换。
+
+二、实际生成及绑定证据
+目录：h9_exact_binding/。
+输入保留point_coords.u8.bin、tau.i32.bin、pi.u16.bin、eps.u8.bin、pins.txt、source.edges。原points/pi/source为硬链接，未改原件。
+build.cpp、run.py是实际生成器/有界driver。原作者main中的默认hash、sample-BFS、full-BFS均未调用。
+实际native检查：
+- 恰66430个不同10点line tuple；全部raw points实际incident degree10。
+- tau为132860点置换、互换点/线两部，tau^4=id，tau²恰固定728点。
+- 每个point全部10条incident lines在tau下恰映成tau(point)这条线的10个真实points，绑定全部incidence边为tau自同构。
+- sigma_c(p)=tau(p)或tau^-1(p)，按同一完整颜色/固定pi折叠；无merged loop；核心标签0..37470。
+- 完整候选所有边无重无环、全部度数≤11。未假装它保留旧核心边。
+输出：line_points.i32.bin（66430×10原point IDs）、sigma.i32.bin、candidate37632.edges、degrees.u8.bin、NATIVE_RESULT.json。
+Root已另行逐边重建新核心和完整外部边绑定，见同级H9_ROOT_LITERAL_BINDING.json；这是父Root实际核验，不混称为本作者独验。
+
+三、原图sigma方向已经能直接恢复
+仅看2/4 multiplicity只能得到同/异颜色，不能恢复matching方向。真实line_points绑定后，可以用每条旧异色split-edge的两条字面边对照两个component根色选择。
+实际H=Q[S]有15个component：一个4060点component，14个孤立点。因此没有2^15真搜索问题；孤立fiber改色不改变核心边，唯一大component只需判一个bit。
+check_binding.py对全部4725条旧异色split-edge同时检查真实sigma(c_old XOR bit)的2边matching。它们共同且一致逼出大component的根bit=0。示例f18/g16732旧matching为(18,17902)、(45,31655)。
+随后用恢复的整份旧sigma重建完整旧37471核心，203721条边与现有旧图严格集合相等，missing0/extra0。old_sigma.i32.bin及FORMULA_ORIENTATION.json保留。
+这把“旧parity仅抽象恢复”提升成了实际旧sigma与全部旧core边的字面绑定；没有用新sigma冒充旧sigma。
+
+四、当前候选的一个有依据的等价表示（未执行）
+精确统计：当前SAT候选与旧真实颜色相比，大component4060点中3955个改变、105个未变；14个孤立点也改变，所以总颜色差3969。
+把整个4060点component补色，可把其差异降到105；14孤立颜色可直接保持旧色而不改核心边。
+整个component补色保留每条边同/异关系，所以度数公式、所有91行命中和10pins不变；它可以改变异色边matching方向，因而外围路径必须重新验，不能从canonical候选通过/失败外推另一表示。
+本任务没有生成该补色候选，没有2^15枚举，也没有自行申请后继。它是一个明确的、能尽量保留旧路径的单次归一化选择，是否实检由父流程依据当前canonical候选的实际外围诊断决定。
+
+五、全部度数公式实际核对
+check_binding.py使用原完整source205329边、JOINT_INPUT的固定外围负载e_p与同一候选色：
+- 全8148个split端点满足degree_new=10+same_neighbors+e_p+new_pin_indicator。
+- 其他29483个旧点（包括merged/H3和全部160外围）度数都等于旧度＋实际新pin负载。
+- 新点恰10度。
+这里只是字面属性与公式绑定，不是直径证明。
+
+六、运行成本与实现修正
+单任务原上限30CPU/300秒墙钟，未重置；共有三次编译/原生尝试，均同一精确候选。
+第一次2.316574262CPU因将kernel维非3误判失败退出；实际作者代码应跳过，已按原件纠正。
+第二次累计5.482597969CPU因按minpoint只存一次漏掉“最小点被跳过”的线退出；改成作者collect-all/sort+unique。
+第三次累计8.951768064CPU成功，第三native1.14904CPU，其中geometry0.988983CPU。失败是实现修正，不是H9几何No；ATTEMPT1_RESULT、ATTEMPT_HISTORY保留累计原件。
+度数/方向第一次检查0.424498123CPU；加入旧core逐边identity的第二次检查0.959198846CPU。
+总仪表测得10.335465033CPU，整任务保守记费12CPU（包含短读取/保存/解释器未仪表开销；不能再把12与10.335相加）。原task墙钟完成277.296949148秒，未越300秒；最终准确值见RESULT.json。
+无自动续算、无source/new-color/plane更改、无hash或共享STATE/Wiki修改。
+
+七、完整图还差什么
+此处为37632候选、max11及真实core数学绑定，未取得完整新图。
+所有core-core点对由真sigma/partial-fold引理覆盖；其余点对必须在实际最终图中由160个外围根及新根覆盖到整个37632点。若加tail还须支付当前真实余度并重核受影响义务。
+不能只看新点R4核心覆盖或全部degree通过就报新纪录；父流程独立根诊断将决定本候选是否成立。

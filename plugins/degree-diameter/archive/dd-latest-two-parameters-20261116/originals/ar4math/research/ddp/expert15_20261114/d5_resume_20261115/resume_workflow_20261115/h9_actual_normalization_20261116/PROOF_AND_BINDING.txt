@@ -1,0 +1,88 @@
+TERMINAL OUTCOME — NOT A MODULE PASS
+The final new-module build hit the remaining CPU limit (SIGXCPU, exit -24).
+It produced no usable H9CrossNormalize.olean. No further build or edit of the
+formal source was started. Final source remains a proof draft, not compiled
+concrete-graph evidence. BUILD_03.log had already elaborated and printed
+normalized_scalar_unique and star729_complete with only propext,
+Classical.choice, Quot.sound; its sole reported error was failure to unfold
+Normalized in the actualStar0 finite decidability proof. That correction and
+the equivalent three-piece actualStar0 coordinate formula are in the final
+source, but the final whole source was not kernel-checked to completion.
+The new encoded_add/encoded_mul lemmas were added after BUILD_03 and are
+also unverified at termination. The actual p0 729 bijection is NOT claimed
+Lean PASS. All66430 actual finite-data import and complete37632 Lean remain
+open. Stop; no further representation change, bridge task or numeric search.
+
+H9 actual normalization and the 729-vector input — 2026-11-16
+
+This task does not generate a new graph. The target remains the accepted
+37632-vertex graph and its unresolved concrete source/core formal proof.
+Only H9CrossNormalize.lean and this task directory are changed.
+
+Actual scalar object
+The already compiled F9Graph56862Field.F has nine constructors c0,...,c8,
+with the exact addition/multiplication tables used in check.cpp. Byte a+3b
+means a+bt, coefficients in F3, t^2=-1. The new module supplies inverse
+(0,1,2,6,5,4,3,8,7), verifies all eight cancellation equations in Lean,
+and installs a Field instance reusing the existing CommRing. It proves
+card(F9)=9, 3=0 and c3^2+1=0. Thus Field is a concrete object with the
+actual encoding; it is not an unspecified order-nine field.
+
+Normalization and scalar uniqueness
+Normalized(v) says that some coordinate i is 1 and every earlier coordinate
+is zero. It implies v!=0. If a*p=b*q with a,b!=0 and normalized p,q, let i,j
+be their first nonzero indices. i<j makes coordinate i read a=0; j<i makes
+coordinate j read b=0. Hence i=j and coordinate i gives a=b. Cancellation
+coordinate by coordinate gives p=q. Scalar multiples with a!=0 cannot be
+zero. The quadratic norm scales by a^2 and cross(p,a*q)=a*cross(p,q), so
+nullity and kernel membership survive scaling.
+
+Actual 729 construction
+For a sorted 91-point actual star, the domain is
+  Option (Fin 91 x {a:F9 | a!=0}).
+None maps to zero; Some(i,a) maps to a*point[i]. Its cardinal is
+1+91*8=729. A nonzero multiple cannot collide with zero. Two nonzero
+multiples collide only when their normalized rays agree and scalars agree;
+the checked distinct coordinate representatives then give equal indices.
+The map is therefore injective, with no injection hypothesis. It is a map
+into Kernel(p) by scalar closure. After reindexing by Fin729, the existing
+H9CrossStar.star729_surjective is actually called with this Field, its
+proved cardinal, and the proved injection. All kernel vectors are thus
+zero or a unique nonzero multiple of a star point once the finite star
+input is present.
+
+Where the actual 91-point facts come from
+The saved check.cpp/RESULT.json at ../h9_cross_finite_binding_20261116
+checked all 66430 actual point coordinates from
+../h9_exact_binding/point_coords.u8.bin and every actual line in
+../h9_exact_binding/line_points.i32.bin. It checked each point is nonzero,
+normalized and null, and that all coordinate tuples differ. Every sorted
+10-point line equals the complete projective span of its first two
+coordinates and its basis cross product vanishes. Every point has ten
+incident lines; sorting and uniquing their union gives 91 points and
+contains the center. These are preserved external finite checks, not
+rerun here. Nullity/normalization of the star and its distinctness follow
+immediately by restriction of the globally checked point injection.
+Cross(p,q)=0 for each star point q follows because p and q lie in one
+checked full span: cross is bilinear alternating and the basis cross is
+zero. A separate check of all star-pair crosses is unnecessary.
+
+The concrete source bridge still needs more than this module
+The binary coordinate/line lists have not been imported as Lean constants
+with Lean proofs of the finite checks. Consequently StarInput is an
+explicit remaining finite-data boundary for all 66430 stars, not proof
+that the whole actual source is formally bound. The module does not claim
+complete concrete37632 Lean. The actual p=0 star is extracted unchanged
+from the binary files and included as a fully explicit Lean instance;
+this demonstrates a genuine 729 call with no finite-input hypotheses.
+The other 66429 stars remain external certified inputs until their finite
+proof/data import is closed. Their mathematical use is uniform by the
+normalization proof above. This task stops at this exact boundary and
+does not launch another generic bridge task.
+
+For the full37632 endpoint, the parent-owned task must additionally bind
+the source incidence routing result, actual sigma/pi projection and the
+already checked core-edge-or-stay transport, then the actual exterior-root
+certificates, simplicity/degree, and final review. None is hidden as an
+extra assertion in this task's status. No old source BFS, solver, geometry
+generation, upstream Lean rebuild, or environment copy is run.

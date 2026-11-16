@@ -1,0 +1,19 @@
+Independent sequential prefix verification: PASS
+Inputs: raw accepted 42403-vertex edge list; new_vertex and pins from ADDITIONS.jsonl only.
+No author CSR/provider/ball/distance cache or reported distance statistics used.
+Eight BFS runs: each new root in its own prefix before the next insertion; zero old-source roots rerun.
+Every previous edge retained; exactly 12 distinct incident edges added per step; every vertex degree checked <= 12.
+n m new_root spheres maxdist deterministic_shortest_farthest_path
+42404 245961 42403 [1, 12, 118, 1037, 9054, 32182] 5 [42403, 1, 8214, 0, 8645, 9]
+42405 245973 42404 [1, 12, 122, 1059, 9161, 32050] 5 [42404, 4153, 41466, 42323, 41496, 0]
+42406 245985 42405 [1, 12, 124, 1132, 9858, 31279] 5 [42405, 451, 515, 41346, 40951, 0]
+42407 245997 42406 [1, 12, 113, 1108, 9862, 31311] 5 [42406, 1706, 26894, 12535, 19176, 2]
+42408 246009 42407 [1, 12, 129, 1215, 10551, 30500] 5 [42407, 1653, 26687, 19505, 18762, 1]
+42409 246021 42408 [1, 12, 123, 1082, 9475, 31716] 5 [42408, 4085, 4083, 2, 8214, 1]
+42410 246033 42409 [1, 12, 123, 1064, 9197, 32013] 5 [42409, 501, 37241, 8, 40951, 0]
+42411 246045 42410 [1, 12, 123, 1077, 9311, 31887] 5 [42410, 4084, 36681, 2, 8214, 3]
+Final degree histogram: {"10": 2949, "11": 10786, "12": 28626, "7": 2, "8": 4, "9": 44}
+Final author edge-set comparison: MATCH; missing 0, extra 0.
+Start with the independently accepted source D <= 5. At each of eight steps, retaining all previous edges preserves old-old paths and the BFS in that exact prefix proves all new-old distances <= 5. Induction proves every prefix D <= 5. A new-root BFS distance-5 witness in every prefix proves diameter exactly 5.
+Resources: {"cpu_seconds": 1.150664047, "maximum_resident_set_kib": 1061268, "wall_seconds": 1.1507326997816563}
+Reproduce: python3 /inspire/hdd/global_user/mahaitong-240108120090/ar4math/research/ddp/expert15_20261114/d5_resume_20261115/d12_blocking_family_continuation/independent/verify_prefixes.py

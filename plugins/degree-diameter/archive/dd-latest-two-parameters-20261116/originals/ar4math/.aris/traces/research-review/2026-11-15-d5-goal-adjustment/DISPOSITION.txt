@@ -1,0 +1,103 @@
+D5 Goal调整：Gemini路线意见及Root处置
+2026-11-15；仅暂停期间的计划分析，0新数学实验。
+会话955d65ee-af4b-4102-8ae3-479533fc865c，两次返回SUCCESS，均报告gemini-4-argon-high/high。
+完整请求/返回：001-request.txt、001-response.json、002-request.txt、002-response.json。
+
+采纳：
+保边增点可直接继承旧旧距离，适合用成功机制重新筛源。上一轮15项没有D5，不是其失败测试。
+已有F/R4必要门通过和UNKNOWN不能自动为下一大模型背书。
+新阶段优先复用660源试5D5单点完整覆盖，14/15D5只在有具体决策问题的计划下深入；新点网络、直接生成保留独立空间。
+
+以原件纠正并获Gemini承认：
+1. 33397本来就是裸商源，五分支更晚结果为4个严格对偶NO加1个raw infeasible。不能仍当只有早期UNKNOWN，也不再去找同一个“更早裸源”。
+2. 660早已本地绑定；旧55右匹配NO是6D4目标，未排5D5纯单点增阶。Gemini第二轮“改边压缩”的措辞不准确：原U6只加右匹配边、保留旧边，意图压低直径；不是删边修复。
+3. 拒绝“必须先有核心覆盖引理或N1完整分工证书才准实验”的人为门槛。Gemini已撤回。允许真实互补关系、局部联合证据或可改变决策的有限实验；有限计划不等于只写一个时间上限，更不因模型完整就自动开算。
+4. N1原充分式已包括共享端口二步桥，无需所谓必要补充。令a=i,b=j且Si交Sj非空，原式为0+2+0+0=2。Gemini已承认。
+5. 不把“降优先、不补证工程”永久化为禁止方法；只是这次成图目标下的调度选择。一般14/15D5单点问题仍开放，raw UNSAT不作为已证剪枝。
+
+修正Memory（Gemini原文）：
+1. **接受更正1（10D5_33397）：**33397即加边前H9几何商（364个H3余位），单点覆盖5个对称分支已有4个严格整数对偶NO、Case 0为HiGHS raw Infeasible。不再找所谓更早H9裸源，也不做Case 0补证或重跑，该固定源单点域直接降优先级。
+2. **接受更正2（5D5_660）：**`fold660`（度4:30/度5:630）已在`u6_D4_fold660_shortcut`本地绑定；此前55个右匹配NO属6D4改边压缩，与5D5用30个度4余位保边增点不同。首轮直接复用本地源测5D5覆盖，不写首次下载。
+3. **接受异议3（放宽准入）：**撤回“必先具核心覆盖引理”的过强门禁。允许凭**可检验的实际覆盖互补关系、局部联合证据或有限实验计划**利用精确覆盖反馈探索新规则（不封死15D5单点）；仅禁凭UNKNOWN、低bad或纯换编码/加时的机械续算。
+4. **接受异议4（N1充分式）：**新新距离式令$a=i,b=j$且$S_i\cap S_j\neq\emptyset$即得距离2，已含共享端口2步桥；新旧交替穿行属专家已注可选扩展，原充分式无误、不需修改。
+
+**修正Memory：**保持PAUSED。首轮直接复用本地`fold660`测5D5保边增点；10D5_33397单点（4对偶NO+1 raw Infeasible）降级不补证；14/15D5与N1凭实际互补证据或有限计划准入，禁无新依据机械重跑。
+
+
+Root最终判断：
+采用D5优先与源适配，但起点须更新为本机最新真实终态。优先能直接返回完整合法对象的具体任务，并维持机制探索；数学进展分层记录，原Goal的新图验收标准不下降。
+调整稿：DD_D5_GOAL_ADJUSTMENT_20261115.txt。尚未激活，不重置暂停与四小时余量。
+
+
+2026-11-15 用户实际恢复后的第3/4轮增量（同线程，均SUCCESS）
+003核660的K2精确路径接口；004在Root反驳后撤回K2 rawUNSAT对任意H及非相邻双点的外推，明确停止660为调度收束。
+004支持15D5删除无认证inversion剪枝、任意810选≤15的真实域。提醒CEG轮/时间上限均只能UNKNOWN，Root已按此编码。其建议加入全controller支持型代表行、去重均为真实必要约束，可用于下一真实修改；当前native已执行，不据此重启/再给300秒。
+其建议检验‘单针单薄纤维最多≤121’已经被互补代理的真实189覆盖推翻；实际可用关系是：每薄纤维≥2针，无A provider则≥3针；A角色在30纤维上一一对应30free控制器，每针影响6纤维，推出至少13针。故不采用‘所有30纤维必须恰3针’或对称/one-controller等人为限制。189集合不包含旧135集合（丢27增81）说明坐标必须共同选择。
+Root已读C++完整cover与driver：实际无lex/inversion/成线限制，7290薄行先入，SAT之后全102060 OR并加全部真实漏点，810选择全freeze保持增量。300solver为累计CPU非每次时限；cardinality实际3个小控制、轴4860真值检查通过。当前未取得新图，不能把以上review当数学Goal完成。原文003/004-response.json。
+
+005实际返回SUCCESS并认可13针/薄层距离/H度≤2、接受先前≤121假设被反驳。其12合并继续合同已被Root按新源逐边实际比较消费：同标号核心仅63边相同，不能直接合并；新源fullN中心0，任务终态，不重启同构/proxy梯。
+660共同层诊断补充：B3(F)全660，15薄距4不能套用；但510个V\B1(F)点不能被任意≤5针R4覆盖（完整174437子集）。容量1使一个H-孤点到另一helper至少3步，所以这些目标不能由对方B1补齐；排该固定源所有H有孤点的网络，包括非相邻两点。一般H仍未排。新事实写WHOLE_LAYER660.json及可复算whole_layer660.py，不把前一轮未经证的推测追认成已知。
+当前提前整体A/B评估正在真实执行，原四小时钟不重置。以上review不自动代表新图或新框架版本。
+
+
+2026-11-15 实际恢复后的006—008处置
+006支持AA/AO共同操作与15针单调规范；实际5000候选未全覆盖，已停102060本轮数值，不续SAT。
+007支持一般a排列/b含fixed以及94路由真实零层反馈。后继实际完成，仍无完整候选，C33数值已停；不采用其对作者历史失败原因的无证推测。
+008真实SUCCESS，线程46bccae3-a844-4371-a65e-2d1a1f596546，原文008-response.json。Root拒绝两处数学误读：5562是上界，不是已找到的可行packing；旧3507合法不能与不存在的5562 witness比较。Reynolds+9团的LP仍有uniform z=1/13满足全部12636负载/1404九团/83列3/7上界，因此达到原体积972orbits=6804中心，不可能得<5735的一般新上界。未运行建议LP，也未自动跑MIP/SOS1，因为并未形成新共同构造依据。不能把这个拒绝反写成Gemini已经同意，009正在实质讨论纠正及PGL13新有限域。
+
+009实际SUCCESS：承认5562误当witness以及uniform分数解使建议LP无效，明确支持不跑该LP/MIP。独立核认PGL13归约、odd类、三profile完整计数，Root采用其identity必要性/全域充分性和去loop论证。Root不采用‘2965028必能预算内跑穿、不会UNKNOWN’的性能断言；是否查尽由实际计数/handle决定。也不采用最后表格把任意x的xS4∪hxS5恒等hxS5：h∈S只直接保证identity这个合并，任意x须x^-1hx∈S才可如此；本归约必要性只用identity，充分性由S5=odd使hxS5=L，无漏洞。无需为该末表扩写重建数学证明。
+Root据此授权一项完整PGL13枚举，180whole/150native/20prep上限，保留UNKNOWN出口和无自动field梯；agent实现准备不是已执行枚举。原文009-response.json。
+
+010实际SUCCESS，支持matching-paired ordinary-clone完整距离定理。Root与独立agent完整proof一致，特别短MOM旧3步变新5步的例外已处理，无M自同构/独立centres。继承旧h9_paired_full_neighborhood_clone_rule在11/12源的local配方，不冒首次发明；新的是13regular源跨全部选择的共同M-closed负载问题。
+采纳target AG(2,3) full3-line不同方向必交、同向三线可填9点的soft协同构造与冗余mode。实际packet尚须从source逐字验证；P单点和删selfloop的2点不加owner。其‘彻底解释旧greedy停滞原因’没有全轨迹因果证据，Root仅取几何碰撞机制，不采信唯一归因。更不能由局部满线直接声称全pattern高密度可行。Root只授权同一90CPU批次，真实合法生成+一次共同MIP；API不支持的warmstart/branchpriority如实不声称实现，solver未知不升NO。
+
+011真实SUCCESS，独立确认Root anchor n<=5292整个fixedM pairedclone界；与本机全源有限假设核对一致，采用。支持J18推导/全部内部边component-copy及闭包分离的D5证明，所补isometric lemma正确但Root first-exit/last-entry证明本已足够，不需为此重复BFS。实际J有18/54/162组件，不能把异常对都按27个18模块猜计数；真实已逐项核，441个γ整包合法。Root不采用‘节点小即可几秒精确MIS、绝无UNKNOWN’性能保证，也不自动执行其放大到所有physical原子建议。Root实际一次colour-bound exact clique在441域完整查尽max36/.493CPU，无46；完整性来自实际树完成与正确color bound，不是靠性能许诺。现在用full-cohort数学接口缩为raw controller匹配对≤182节点问题，独立proof已核，不加γ限制、不同cohort兼容与phase无关；实际prep待完成，无新纪录。
+
+
+012/013实际SUCCESS与终态消费：共同Aut-offset的对角左作用及精确一次/三次匹配条件获支持，h=e在非identity phi时保留，不能强制involution。013确认5334源Aut/Inn为6以及共同inner可吸收。Root实际读结果32004全No、oneM最小117>64，已停止此整个源/Aut-offset数值，没有再接外类或timer。不会将Gemini意见当性能保证或一般9D5否证。014已对新的2810双type共同覆盖发起实质讨论，尚在途。
+
+014实际SUCCESS：确认2810共同Aut吸收、两类root、4个跨层桶、oneM/MOMOM公式与29/20预算，支持新双offset的有限尝试。Root全文读实际cpp/driver/3控例，授权一次native180/whole200CPU统一全221090800域；准备1.24843计入whole，不加二窗。采纳资源门与完整共同选择；50指数bucket可进一步加速但不是正确性必需，本批不为换布局重新准备。Gemini说‘独立BFS必须4根或另证layer1对称’过强：两layer0根完整forward加无向性及已证对角作用已足全部cross，不需要layer交换aut；完整候选仍按原要求作独立图检验。相对偏移的定性说法接受，不照抄它未经对齐的非交换因子次序。暂不采用layer-swap外类减半，因为当前56完整域更直接且已有明确预算；不强制h invol、不冻结h0。
+
+015实际SUCCESS：独立认可任意C诱导克隆的exactdegree/newnew等源距离/newold outside-lens距离，且真正需查的是G[C]同连通分量内clone-oldpairs。Root采纳directadjacency与sharedoutside的物理区别，放宽的是预设J18不能合并，不是宣称最终真实C组件可有outside冲突。拒绝‘5CPU必查尽百万closure’性能承诺；拒绝|C|>360作为数学No或部分pilot失败就称退回全部旧clique域。只有B2(c)⊂C等单调精确lens障碍才能提前排该seed，CPU限只UNKNOWN。拒绝它自动转1773：真实sourcefit已回，它就是昨晚约1798nativeCPU仍UNKNOWN的源，须新数学依据才重开。现仅授权25CPU统一结构pilot：全球pureadjacency cheapgate+最多24真实edgepairs closure+有候选才有限距离；没有packing授权，不接逐小类续时。
+
+016实际SUCCESS：认可全88452自由C的精确Horn资源、balancedcard、selfB2与全L5负guard，以及原成功/负界均不排该广域。Root全文读实际cpp/driver与4608card真值、2304decoded sums、72可替代guardscontrols；正式授权一批native300/whole330含prep（已1.576179CPU，不清零），1thread/4GiB，不加J/M/gamma/affine限制。采纳已有72-lens必须实际预载，并在现成sourceγ映射可快速绑定时加入7像（这只生成有效约束，不限制C对称）。不因未知瓶颈重写多cut回调，不使用不确定API原变量branch强制，不采信sorting必超内存/<1ms性能主张。其80,000阈值无数学证明，不加maxC人为限制；实际仍只min5735与原度数/D5。无自动二窗；modelbuild/solver/candidatecheck/lensCPU分开报，UNKNOWN不升No。
+
+017实际SUCCESS：支持17精确局部状态用于一次直接构造/共同升降，停止旧SAT续时。Root采纳6/12子块可能提高选择灵活性及touchedcomponent真lens检，但这些都不证明5735存在。拒绝其无solver决策/冲突stats断言‘298秒全因binaryadder/Horn fatal冲突’因果诊断；0model只说明本批未得到候选。拒绝‘4698 atomic ceiling’：它仅bestknown，原allphysical UNKNOWN。拒绝‘66footprint使体积停4800..5300’：即使每K33闭包66，整体体积允许88452/11=8041>5735，不能据此推阈值不够或失败原因；真实某些块还可有额外内部边。维数2/3的几何解释只作受控动机，不当所有方向/异常块精确No。Root结合独立A/B仅授权一次native75/whole90CPU构造性批（其25秒是性能建议而非数学必要），所有state/externaldegree/lens实际核，不强制diam3，只缓存未变化真component有效证书。低于5735的best、单个新小块或更多No不自动续窗；Goal仍ACTIVE、仍0新record。原09:15:53节点不重置，不因在途合适工作机械终止。
+
+018实际SUCCESS回件已保存。接受其对09:15整体克隆退出和13:15原钟的确认，以及split441全3+3/全图检查方向；拒绝它声称roleP整族已No：evenodd cut、source5 BB/CC无贡献只排路类，不给所有路总上界。真实farA每root有32*3=96四步路，96+12*3=132已大于128，且还漏了ABABABA六步，无法得deficit。原376/378近端义务也被遗漏的same-mark ABCBA实证修正，不加为错误约束。019正在实质澄清。
+
+实际受控校准两882图均4regular/D8、bad71388/68255，均非bipartite（真3/5圈），不能套728 bipartite bound。roleP近A全通过、377far point对四copy全通过，证实长路补偿而非geodesic-onlyNo；balanced虽far变好，却新增139near坏对、AC变坏，不能仅优化AA。两图不是族No。
+
+Root据此只选择全441点各10个无标号3+3状态的一次联合搜索，balanced只是软初始，所有A/B/C分组可变，不锁quota/roleP/一线一mark。source-geodesic联合repair有证明：选badpair对应旧geodesic<=4，把<=3内部点入出分同half，端点最多2switch，总<=6；目标坏对必修但其它pair可坏，必须每proposal全882-root BFS。三个实际控例及fresh独立seedscore全过。准备两代理实际2.183050091CPU。正式唯一native120/whole135CPU、1thread/1GiB已启动PID360386/session50098，无自动二窗；降bad数量不当新图，只有完整D6进独验。目标原题>=761，不强制必须882，当前固定图若有122不交badpairs则删<=121也无出口，仍可改port。
+
+019实际SUCCESS：明确撤回018的roleP完整No；接受farA96+36>128且遗漏AB6、单路类零覆盖不排所有路径。确认nearA正面互补定理及balanced牺牲AB转向、可能损near；collinear-copy计数1512混入有向/无向，Root只用实际CSV而不沿用该数。对far的4/6/P5完整路线条件已由独立agent实际核，fixed calibration A的U满4仅F117，其891缺pair超任意P最多378 far五步路线。至少513pair无法补；仅该A+roleP的条件No，一般A/roleP/all10port不排。A变了须重算，F>=630只必要且不能套到非roleP B/C分组。
+
+全all10port唯一120CPU批已exit0，actual11477 full882-BFS、9068 targeted都修选对、0violation，但best仍D8/42992bad；122不交badpair排该固定graph删<=121到n>=761出口。whole122.140970CPU，Root已读actualRESULT/BEST/receipt并psmissing。停止当前数值，不因减少25263bad再续seed/计时。下一仅研究共同短路覆盖的资源/参数选择，未开另一个优化核。新record仍0，原13:15:53整体钟保持。
+
+2026-11-15 Gemini020 disposition: actual SUCCESS read. Root accepts complete far-role inventory, Z=756-8r+E11<=756-6r and necessaryr<=21, plus the stated scope of one global-A gate. The independently implemented gate actually ran and returned UNKNOWN/0model (65.31669943wholeCPU); no proof/candidate exists and no rawNo claimed. Gemini parity observations are correct under their split-endpoint assumptions but not a new all-A theorem: the random1/4 parity-lock fraction is an expectation, not a deterministic global count; Z-F waste is an accounting identity, not an independently proved waste lower bound. Clauses/performance suggestions were not assumed to guarantee faster solving. No timer/encoding successor. The new N3 shared budget is preserved. Root numerical spectral probes do not exclude anything (bounds687.887/519.75 versus504) and are not strict spectral certificates. Next constructive D5 proposal is separately submitted as021; it is not yet a run or a result.
+
+2026-11-15 Gemini021 actualSUCCESS and Root decision: reviewed actual source2810 two-typeF281⋊C5, not assumedC10/Cayley or bipartite. Accept explicit nonlinear matching inverse, preserved freeC5 action/562root complete cross check, full1M∨3M formula and unchanged-source same-layer inheritance. Accept universal20/29 raw3M capacity for a matching that swaps oldtypes. Predicted additive-alignment loss is tested, not presumed. Authorize only one k11 graph after controlled implementation; native20/whole25 inclprepconservative5, no exponent/seed/localopt successor. Actual complete cross test must run, with per-root oneM/full comparison and literal49word union, rather than only preparing it. No record until actualD5 and remaining original acceptance.
+
+2026-11-15 Gemini022 actualSUCCESS disposition: Root accepts exactgeneralC5-equivariant orbit permutation/phase parameterization, inverse, all562rootcrosscheck, targetB2×B2 bundle-repair algebra and sourceoldold inheritance. Accept regular freephase operations to avoid conservation artifacts; the compensatingphase formula is a valid proposal, not a state constraint. Correct shorthand: baseline50 is twoidentityroot deficit sum(22+28), not50perroot; actual14050/562=25mean. 561/562 is not the probability for B2-biased targeted endpoint choices and is not used. Ball-loss estimates are qualitative risk, not measuredexactloss; actualcontrols119/243/222net representativebad increases substantiate damage. Root allows one120native/145whole batch after readycontrols/code, with no automaticcontinuation and no No claim from finite failure.
+
+2026-11-15 Gemini023 disposition: actualSUCCESS read. Root accepts F3fourwordquadratic equivalence, homogeneouscoordinatebinding, necessarylinearization and proof/consistency scope. Rejects unmeasured runtime<5CPU/guaranteed noUNKNOWN, blanketclaimno lostdegree2conditions, and any categorical inabilityclaimaboutCDCL. The probe tests onlyconstantlinearspan ofthese1200necessaryrows. Actualeliminationcompleted.29618CPU/rank1200/consistent; no x/graphfollows. Queueis terminal, notautomaticallyhigherdegree.
+
+2026-11-15 Root dispositions024-028 (actual SUCCESS originals saved):
+024: fixed PGL13 oddS5 plus one even involution is a well-defined 91-case domain; actual completed results support the predicted even deficit, no D5. The word upper counts already remove immediate backtracking; Gemini's suggestion that they omitted EE/inverse cancellation is not adopted. Only this fixed branch excluded.
+025: accepts earlier-prefix joint independent-star sufficient family. Correct distance assertion is an upper bound 2+d_G(Si,Sj), not a necessary equality in a graph with several new centres. Exact85pool scan subsequently proved max4 in this declared family.
+026: accepts four-bottleneck capacity argument and last-new-vertex lemma, but private counts in raw reply are wrong. Use saved actual deletion results: centre76 loss673/private196, centre77 loss616/private138. Do not adopt unverified duplicate-overload>=10; exhaustive462 five-multiset data determines the three one-overload configurations.
+027: accepts G42402 owner54 edge transfer + newstar test and original42342-oldold inheritance; all61 added roots were actually checked. 887 unordered bad pairs all incident owner42395. The later exhaustive guard No and common192 private-target proof were Root deltas, not already covered by027. Its folded-point-at-infinity description is not adopted without a raw-coordinate check.
+028: substantive common-model discussion supports general plane blocking proof and single shared free-set coupling. Root read actual core proof and independent JOINT_MODEL_PROOF_MEMO. Accept one all754-plane/1046-periphery joint model, no10/2 quota or frozen P. 754 is necessary-gate-open; arithmetic capacity bounds further exclude69 but full domain can remain in the solver. Complete raw peripheral data now actually generated (1046 roots,1.166069944 total CPU). A SAT neighbour set must pass actual all42402 R4, then independent reconstruction and original certification. Gemini's suggested independent ALL-source rerun is not made an extra arbitrary pre-discovery requirement: inherited legal source + independent full new-root/degree/edge-preservation proof also proves whole graph D<=5; final original contract still applies. Its illustrative blocking shapes/7..12 sizes are possibilities, not observed feasible sets. UNSAT without a checked certificate remains raw result, not a certified theorem. UNKNOWN causes no automatic timer/encoding/plane-family ladder. Code preparation is running; formal solve not yet reported started.
+
+029 actualSUCCESS consumed with independent1153A/B. See research/ddp/expert15_20261114/d5_resume_20261115/WHOLE_REVIEW_20261115_1153_DISPOSITION.txt. One20CPUtotal end-to-end lossless minimal-blocker/allfree completion probe, all754 original planes retained, no automatic timers. Do not adopt unmeasured>=90% encoding-artifact cause, unneeded external-theorem min7 as a code restriction, or proposed60CPU. Same mechanism/representation, not a new mathematical route. Final original acceptance unchanged.
+
+030 actualSUCCESS: read candidate generator, actual author provider/R4 result, fresh raw-edge independent checker and result, oldSingleExtension theorem. Root accepts degree/edge-binding/newroot coverage and inherited oldold mathematical correctness. It approves mathematical graph42403, not a closedLean instance. Root corrections: actualfrontier domain754(not662), actualsort available-pin count thenplaneID(not lowerbound tie-break); firstplane340 does have coreLB11/externalLB1. No profiling establishes globalcounter as the cause of priorUNKNOWN, so causal claim not adopted. Its further-extension suggestion is not an automatically started queue. Actual17raw/11pin geometry analysis is separate saved evidence. New graph accepted mathematically; fullformal/source premise and final original acceptance remain open.
+
+2026-11-15 Root dispositions031-036 and pause receipt (existing completed reviews only):
+031 accepts bounded8-prefix continuation subject to currentgraph checks; Root rejects reusing only a newR4row as complete update and unverified inverse-B17 claims. All current periphery providers were actually recomputed.
+032 accepts quartic model under realinverse/rootorbits; no uniqueness-gauge theorem was required or claimed.
+033 accepts exact two-word uniform r-only collision proof and independently accepted8prefixes, not a completedLean instance.
+034 accepts scalar normalization but corrects arithmetic:9^7-1=3 mod23 (not14);14 is the inverse g2 coefficient.553 denotes projective kernel directions, not nonisomorphic graphs. Actualpow code was correct.
+035 accepts diag(9,12), zero-coordinate projective domain, both exceptional tuples and trueinverse. It reviewed the proposed probe, not its subsequently returned No. Outputs remain coupled through the same a tuple; no literal nonlinear parameter decoupling is adopted.
+036 actualSUCCESS received/read; whole-checkpoint Root disposition is research/ddp/expert15_20261114/d5_resume_20261115/WHOLE_REVIEW_20261115_1315_DISPOSITION.txt. FullN clone lemma accepted for D>=3. Reject automatic reopening of already withdrawn88452 packing and unsupported exclusivity/greedy-history conjectures. The actual94186 min-degree obstruction was obtained after036 and consumed as Root delta, not retroactively claimed reviewed in036.
+037 no response received;exec478 terminated after explicituserpause. Request saved, no mathematical approval or completed review claimed. SameGoal PAUSED; no newconstruction or numericalrun.

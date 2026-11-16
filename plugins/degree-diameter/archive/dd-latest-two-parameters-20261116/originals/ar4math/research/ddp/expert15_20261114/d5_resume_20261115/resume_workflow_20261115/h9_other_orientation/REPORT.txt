@@ -1,0 +1,22 @@
+同一共同颜色模式的另一个有效核心方向（单候选）
+2026-11-16；父Root已消费canonical候选的161根失败和one-tail No后授权。本任务没有改变plane605/10pins、没有新SAT或几何重建。
+
+生成动作
+从已实际绑定line_points.i32.bin、pi.u16.bin、tau.i32.bin读取真实数据。
+只将4074 split中唯一4060点连通component整体补色，14个孤立fiber设为实际旧色；未变更任何其他条件。
+完整新colors/eps/sigma重新生成实际core，再保留原37631图全部1608外围incident边，加同一10pins新点。
+
+实际结果
+37632点，205365边；37471核心203747边；最大度11、新点度10。
+全37632点度数向量与canonical候选逐点完全相等。
+相对已经真sigma绑定的old核心203721边，此候选仅删186条旧核心边、加212条核心边；原外围边全部保留。
+相对真实旧色仅105个split fiber改变。这是整体补色不改变same/different的确定性归一化，不是另开15bit sweep。
+
+预测及验收边界
+本候选尽量保留旧路径，预测canonical的4个旧外围坏点对可被修复；新点到外围距离仍未知。
+这里没有运行BFS，所以该预测尚未在本作者任务检验，也没有接受37632为新合法图。父Root必须独立核真实sigma/边集和全部160旧外围根＋新根，才能决定D≤5。
+
+原件
+生成器 ../h9_exact_binding/other_orientation.py；本目录CANDIDATE.json、eps.u8.bin、sigma.i32.bin、degrees.u8.bin、candidate37632.edges、RESULT.json。
+实际唯一生成调用CPU0.988800632秒，墙钟1.056370206秒，上限4CPU；没有自动重跑。本任务独立费用与上一geometry/source绑定实测10.335465033CPU（保守整费12）分开，不清零、不重复相加其保守数与测量数。
+未改共享STATE/Wiki，没有新geometry/BFS/SAT/Lean或hash。

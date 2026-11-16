@@ -1,0 +1,25 @@
+D12 finite blocking-family continuation — terminal result
+
+From accepted source G42403, accepted 8 new complete neighborhoods and stopped at the authorized maximum8. Final graph: n=42411, m=246045, maximum degree12.
+
+Construction: preserve every old edge; add one new vertex adjacent to the recorded <=12 actual old vertices. Each step recomputed actual degree<12 free vertices and radius4 providers from every peripheral vertex41356..n-1 in the complete current graph. Core: all754 original retained geometric planes, with providers filtered only by current actual degree. Tail: every current free vertex except the chosen core, without fixed core/guard quotas or inherited core forbidden choices. A complete current-graph multi-source depth4 BFS passed before every insertion.
+
+Observed prefixes (n; plane; core+tail; complete current R4 coverage):
+42404; plane363; 11+1; 42403/42403
+42405; plane19; 11+1; 42404/42404
+42406; plane31; 10+2; 42405/42405
+42407; plane75; 10+2; 42406/42406
+42408; plane505; 10+2; 42407/42407
+42409; plane252; 11+1; 42408/42408
+42410; plane335; 12+0; 42409/42409
+42411; plane336; 12+0; 42410/42410
+
+The varied 10+2,11+1,12+0 combinations are actual successful simultaneous core/periphery completions, not proposals or coverage-only scores. No subsequent extension was attempted. Unreached planes remain unreached; this batch makes no maximality or impossibility claim.
+
+Total prepare/compile/control/native CPU: 4.670554374s /20s; native CPU 2.16687s; wall 4.803186s. Deterministic small oracle:4 inclusion-minimal blockers,4 tail checks,2 feasible and2 infeasible. Total actual P/tail checks1084. Single thread,2GiB.
+
+Evidence: ADDITIONS.jsonl records exact original vertex IDs, core/tail, n/m, R4 sphere layers and provider recomputation counts. STEP_RESULTS.jsonl and PER_PLANE.jsonl record reached/exhausted/not-reached scope. generate.py deterministically regenerates any accepted prefix from the bound G42403 edgefile. Only the final edgefile was emitted.
+
+Validation status: author self-checks passed; parent is assigning independent checks of new roots42403..42410 from the actual final edgefile. Source D5 is inherited from accepted G42403; old-old distances are preserved by retaining old edges. Complete concrete Lean remains unavailable for the original42402 source; this batch does not add or claim complete Lean certification.
+
+Terminal: MAX8_ACCEPTED. No worker, solver, formal retry, seed change, extra plane window, or further continuation is running.

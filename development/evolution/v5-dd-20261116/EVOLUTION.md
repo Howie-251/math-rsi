@@ -1,0 +1,49 @@
+# v5 follow-up: DD constructions and research feedback
+
+## Scope and current status
+
+User authorized updating the homepage and existing Base/DD workflows from `DD_latest_two_parameters_20261116.zip`, and prefers including this work in v5 while reserving a later v6 for further results. Baseline: `80fd0ffcf291d39383dd7cec2e73f75dc2d875e0`. Work on branch `feat/v5-dd-followup-20261116`; the fixed v5 tag stays unchanged. This is main's v5 maintenance, not a retrospective change to the source research's execution version.
+
+Root read `mathrsi-meta-evolve` before implementation and uses its composed maintenance flow. Gemini 4 Carbon / medium in the user-created Herdr agy session leads primary reading, discussion and substantive writing; Root checks key source evidence and final integration. The established GitHub maintainer owns later assigned documentation/homepage edits. Original research stays read-only and paused; no new search or Lean campaign is authorized here.
+
+## Evidence intake
+
+The [455-file archive](../../../plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/README.txt) includes two final graphs, deterministic constructors, specified-root verification, original proof/search/independent-check records and the source's local framework snapshot. All supplied files are preserved unchanged, including the original `.aris` review traces. Current intake is in the coordinator's `aris4math/context/dd-latest-20261116/`; portable checks and the primary author's discussion drafts are preserved here. The source version is an integrated local 2026-11-11 main/v4-maintenance baseline plus DD feedback, not the published v5.
+
+New endpoints: `(11,5)` 37,631→37,632 and `(12,5)` 42,402→42,433. Root opened the live Comellas table on 2026-11-16: 37,631 and 42,352 respectively, giving dated table gains +1 and +81; +31 is the distinct D12 gain over our previous graph. These are two existing parameter pairs, not two newly covered pairs. Public priority beyond this table has not been surveyed.
+
+Bounded mechanical replay passed: exact reconstructed edge sets, simple graphs, all degrees, all 161 D11 exterior/new BFS roots and all 31 D12 new roots. Independent finite-array consistency and source-retention checks also passed (about 5.05 CPU seconds total). D11 changes the core (186 removed / 212 added edges); its core–core distance uses true H9 incidence and sigma/pi binding. D12 retains old edges and inherits the accepted 42,402-vertex source distance. This maintenance does not create new concrete Lean certifications or replace the source's remaining final-review obligations.
+
+## Adopted changes
+
+| Evidence in the DD run | Adopted action and real caller | Validation |
+|---|---|---|
+| A stale route summary hid returned results; later review proposed reopening a retired route, and a returned UNKNOWN still appeared READY. | The main research skill and route-loop now require consuming returned evidence and refreshing current facts before the next dispatch. [Current-context guidance](../../../base/skills/mathrsi-research/references/current-context.md) and optional `base/tools/current_context.py` operate on an existing task's STATE, including `task / reuse / delta / new` review requests. | Relative review/result paths resolve against STATE; a registered terminal receipt blocks a fresh request until parent consumption. This applies to callers using the helper, not every external process. |
+| Fixed plane templates and rigid core/guard quotas missed viable D12 extensions. | [Joint-completion methods](../../../plugins/degree-diameter/references/d5-joint-completion.md) teach inclusion-minimal plane blockers, folded pin cost, and completion over all current free vertices. `dd-construction` and the DD root skill call the reference. | The original source records the first hit and 31 accepted prefixes. The two final graphs were reconstructed and checked; the historical search was not rerun. |
+| One D11 candidate's tail could not repair the bad pair without using a saturated vertex. | The same method reference connects the strict one-anchor obstruction to revisiting component orientation, followed by an exact common-anchor intersection. Hybrid pair coverage uses the explicit geometric core bridge and all 161 exterior/new BFS roots. | [D11 bridge audit](checks/D11_BRIDGE_AUDIT.md), source-code reading, final edge-set equality and the 161-root replay. Fewer color changes are a useful search preference, not a theorem maximizing edge retention. |
+| Valid graph prefixes survived a bounded batch's later UNKNOWN; a batch cap did not exhaust the generator. | [Bounded batch guidance](../../../plugins/degree-diameter/references/d5-blocking-batches.md) connects `d5_blocking_batch.py/.cpp` and `extension_receipts.py` to the existing DD STATE. The batch tool is expressly restricted to degree 12, core size 41,356 and the supplied 754 actual-ID planes. | Seven [software regressions](checks/WORKFLOW_HELPERS_REPORT.md) passed, including source `(n,m)`/edge/evidence binding, replay preserving newer stops, relative source paths, actual archived receipt consumption, and a tiny C++ control test. No production search was launched. |
+
+The Base helper contains no DD family counts. DD-specific count derivation remains in the receipt adapter. Both helpers reuse existing state and evidence; no extra global database, scheduler or watcher was added. The immutable archive retains the original code, while maintained tools contain the verified path and source-binding fixes.
+
+Existing v5 Q7 controlled-choice, theorem-reuse and conditional-plan capabilities remain intact. They are not counted again as DD inventions. No old local framework snapshot was copied over current skills, and missing historical `search-feedback.md`, `candidate_selection.py` or `search_operations.py` references were not installed as active dependencies. There are still 10 Base skills, 6 domains and 14 domain skills.
+
+## What the evidence establishes
+
+- [Computational report](checks/REPORT.md), [run receipts](checks/RUNS.json) and [independent result](checks/INDEPENDENT_RESULT.json): both final simple graphs agree exactly with deterministic reconstruction; maximum degrees are 11 and 12. Complete BFS from 161 and 31 roots respectively covers the newly checked pair classes. D12 inherits old–old distance from its accepted 42,402-vertex source.
+- The computational report was written before the subsequent [explicit D11 bridge audit](checks/D11_BRIDGE_AUDIT.md). That audit connects the characteristic-three cross-product identities, kernel dimension bound and actual 91-point stars to point–line routing, then the literal sigma/pi construction to the changed core. It supplies the mathematical core-distance argument; the finite-array check alone does not. `reproduce.py` constructs sigma, and its reconstructed edges were independently compared. The absent historical `route_core.py` receipt and its step counts were not rerun.
+- [Software report](checks/WORKFLOW_HELPERS_REPORT.md), [seven regression results](checks/WORKFLOW_HELPERS_RESULT.json) and [scoped adoption review](checks/ADOPTION_REVIEW.md): maintained tools match their documented callers. The review is same-family implementation/documentation review, not mathematical certification.
+- The supplied generic `SingleExtension` and characteristic-three Lean receipts retain their original scope. No Lean build was run here; concrete source/whole-graph Lean assembly remains open. The source's 195 versions / 44 pairs / 49 concrete Lean catalogue counts were not independently re-audited and are not promoted to new public totals.
+
+Reproduction commands and original-versus-portable path handling are in the [packaging note](checks/EVIDENCE_PACKAGING_NOTE.md). Generated graph copies and compiler products are excluded; the archive provides their direct inputs.
+
+## Collaboration and presentation
+
+Gemini 4 Carbon / medium, native conversation `079b4655-dff8-400e-ba4a-2eea35fe76da`, performed the primary source reading, three substantive discussion turns and reference drafting. Its [reading notes](discussion/READING.md) and [proposal](discussion/UPDATE_PROPOSAL.md) preserve that work; the [disposition](discussion/DISPOSITION.md) distinguishes adopted text from suggestions and corrects provenance. This is collaborative authorship, not a fresh independent mathematical review. Root checked key arguments and executable contracts; Sol separately handled deterministic reproduction, the explicit core bridge and software adoption checks.
+
+The established `mathrsi_github` maintainer owns the bilingual README, case study, public `dd-latest.html`, result figures and native animation in a separate worktree. The v5 column keeps both Q7 and the new DD outcomes; v6+ remains Future. Base's third displayed improvement is **Consume results before dispatch / 先收件，再派发**; the DD plugin displays **Joint completion and verified prefixes / 联合选择与增量核验**. The public allowlist adds only the concise DD reader page; raw research records remain in the repository.
+
+Source-run chronology matters: the first D12 gains preceded the local context/batch helpers, and this maintenance's terminal/path/source-binding fixes came later still. No causal speedup, controlled model comparison or published-v5 research run is claimed.
+
+## Integration and release
+
+Implementation and evidence are on `feat/v5-dd-followup-20261116`. The presentation worktree is `docs/dd-followup-v5-20261116`; its final recording and commit are being collected before integration. Final checks, merge and Pages deployment will be recorded in `RELEASE.md` when complete. The immutable v5 release tag and earlier tags stay fixed.

@@ -1,0 +1,190 @@
+{
+  "plane": 635,
+  "old_pool_template": 77,
+  "old_mandatory_pins": [
+    4999,
+    16783,
+    16785,
+    30624,
+    30628,
+    37593,
+    37594,
+    37595,
+    37596,
+    41347
+  ],
+  "saturated_pin": 41347,
+  "forced_current_pin": 8639,
+  "replacement_P": [
+    4999,
+    8639,
+    16783,
+    16785,
+    30624,
+    30628,
+    37593,
+    37594,
+    37595,
+    37596
+  ],
+  "uncovered_line_indices": [
+    4,
+    7,
+    81
+  ],
+  "line_count": 91,
+  "covered_lines": 88,
+  "new_BFS": 0,
+  "CPU": 0.07814213,
+  "meaning": "A single old mandatory-pin replacement is not the same as enumerating arbitrary weighted blocking sets. Coverage here is exact plane-line incidence only, not the full graph.",
+  "uncovered_line_providers": [
+    [
+      24808,
+      24812,
+      24814
+    ],
+    [
+      24808,
+      24812,
+      24814
+    ],
+    [
+      56,
+      60
+    ]
+  ],
+  "single_pin_can_cover_all_remaining_lines": false,
+  "pairwise_disjoint_remaining_provider_sets": false,
+  "scope_note": "This is a controlled comparison only. It does not fix this10-pin set for the next search or rule out different joint blockers.",
+  "six_budget12_core_repairs_periphery_check": [
+    {
+      "additional_core_pins": [
+        24808,
+        56
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 10,
+      "first_missing": [
+        41568,
+        41591,
+        41624,
+        41663,
+        41765,
+        41965,
+        41985,
+        42039,
+        42150,
+        42203
+      ]
+    },
+    {
+      "additional_core_pins": [
+        24808,
+        60
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 10,
+      "first_missing": [
+        41568,
+        41591,
+        41624,
+        41663,
+        41865,
+        41965,
+        41985,
+        42039,
+        42150,
+        42203
+      ]
+    },
+    {
+      "additional_core_pins": [
+        24812,
+        56
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 11,
+      "first_missing": [
+        41543,
+        41568,
+        41591,
+        41623,
+        41663,
+        41765,
+        41963,
+        41965,
+        41985,
+        42146,
+        42150
+      ]
+    },
+    {
+      "additional_core_pins": [
+        24812,
+        60
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 13,
+      "first_missing": [
+        41543,
+        41568,
+        41591,
+        41623,
+        41663,
+        41865,
+        41963,
+        41965,
+        41985,
+        42048,
+        42115,
+        42146
+      ]
+    },
+    {
+      "additional_core_pins": [
+        24814,
+        56
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 12,
+      "first_missing": [
+        41521,
+        41613,
+        41623,
+        41765,
+        41930,
+        41963,
+        41965,
+        41985,
+        41994,
+        42146,
+        42150,
+        42200
+      ]
+    },
+    {
+      "additional_core_pins": [
+        24814,
+        60
+      ],
+      "total_pins": 12,
+      "uncovered_periphery": 13,
+      "first_missing": [
+        41521,
+        41613,
+        41623,
+        41865,
+        41939,
+        41963,
+        41965,
+        41985,
+        41994,
+        42115,
+        42146,
+        42150
+      ]
+    }
+  ],
+  "controlled_comparison_CPU": 0.086768906,
+  "joint_change_consequence": "With the fixed old nine mandatory pins plus forced8639, remaining two slots must choose one of24808/24812/24814 and one of56/60. All six options leave peripheral targets, so preserving those nine pins is impossible inside this plane certificate. At least one more old mandatory choice must change; this explains why the actual frontier search frees all P rather than freezing the old shape."
+}

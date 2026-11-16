@@ -1,0 +1,20 @@
+MathRSI运行归属与本包整理身份
+
+这两组新结果使用本地math-rsi-integrated工作树：
+用户提供math-rsi-main (2).zip中的2026-11-11 main作为基线（固定v4及其后的主循环维护），
+并接入此前本地DD反馈及2026-11-15收件/当前事实/有界批次修订。
+整合分支名integrate/main-dd-feedback-20261114；此日期不是声称已经同步2026-11-14远端main。
+不把本轮成果追认成MathRSI v2，也不凭未发布的本地改动造一个“v5”发行版。
+
+D12的42403…42411先在当时本地整合流程中发现；42412…42433为后续已授权恢复与有界批次续接。
+D11的37632为同一Goal恢复后的真实H9联合改色、方向选择与共同anchor结果。
+原MathRSI v2的(10,4)2567不是本包新结果；早期D11/D12图仅是本轮继承资产。
+
+framework_snapshot中的文件是打包时的有关源码快照；有些调用侧可靠性修订晚于最早命中。
+这不意味着先前成功自动归因于后来补丁。详细阶段见：
+framework_snapshot/development/evolution/main-dd-feedback-20261114/EVOLUTION.md
+framework_snapshot/development/evolution/dd-workflow-20261115/EVOLUTION.md
+
+包根reproduce.py、verify.py、check_roots.cpp是2026-11-16整理时的可移植复生/核查适配器。
+它们保留已接受的数学选择，改成相对输入路径，不参与原找解，不作为一次新的MathRSI发布或数学发现。
+原找解程序、实际独验程序与原始返回同时保存在originals/ar4math中，便于区别构造、发现和认证代码。

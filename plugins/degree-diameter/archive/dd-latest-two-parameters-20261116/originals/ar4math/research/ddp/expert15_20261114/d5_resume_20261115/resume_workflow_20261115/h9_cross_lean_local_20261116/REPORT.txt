@@ -1,0 +1,80 @@
+H9 cross-routing algebra: actual Lean certification batch
+2026-11-16 UTC
+
+RESULT: COMPILED_KERNEL_MODULE; exit code 0. The existing
+formal/DegreeDiameter/Portfolio/H9CrossRouting.lean was compiled once with
+the separately tested local Lean 4.24.0 runtime. The source required no
+mathematical or syntactic repairs. The .olean is present in this directory.
+BUILD.log contains linter warnings and all five requested #print axioms
+outputs; there are no Lean errors.
+
+What is now kernel-checked
+--------------------------
+For a commutative ring K with (3 : K) = 0, the source proves the coordinate
+and vector cross-square identities, norm-of-cross identity, skew symmetry,
+polar orthogonality identities, and the null-polar cross witness/common-
+neighbor equations. The actual #print axioms commands report exactly:
+
+  square: propext, Classical.choice, Quot.sound
+  norm_cross: propext, Classical.choice, Quot.sound
+  skew: propext, Classical.choice, Quot.sound
+  null_polar_cross_witness: propext, Classical.choice, Quot.sound
+  null_polar_common_neighbor: propext, Classical.choice, Quot.sound
+
+The multiline output was parsed into AXIOM_RESULT.json. No theorem depends
+on sorryAx or an additional user axiom. This check read the actual output
+from the successful compile; it did not run a second compilation.
+
+Scope that remains open
+-----------------------
+This closes the universal characteristic-three algebra ingredient, not
+the concrete H9 graph's entire Lean certification. In particular, the
+common-neighbor theorem gives the norm/cross equations for cross p q; it
+does not alone establish a nonzero projective witness, all routing cases,
+the actual finite incidence/label binding, or graph order/degree/diameter.
+Those concrete geometry and graph facts must not be inferred merely from
+this module compiling. concrete_graph_Lean_closed and
+full_geometry_Lean_closed remain false in the result.
+
+The source contains an older historical comment saying the final package
+was added after a timeout and had not then been kernel-checked. This batch
+supersedes that old status for the actual algebra module; the comment was
+left unchanged to keep the successful source untouched.
+
+Invocation and change from the failed environment
+------------------------------------------------
+Binary:
+  /tmp/mathrsi-lean-runtime-20261116-9_yv1yqz/lean-4.24.0-linux/bin/lean
+Arguments:
+  -j1 -M2048 DegreeDiameter/Portfolio/H9CrossRouting.lean
+  -o [this directory]/H9CrossRouting.olean
+Working directory:
+  /inspire/hdd/global_user/mahaitong-240108120090/ar4math/formal
+
+LEAN_SYSROOT was explicitly the local runtime. Its lib/lean standard
+library was placed first in LEAN_PATH, followed by the original project
+and mathlib cache entries from d12_n42403/formal/BUILD_ATTEMPT_2.json. That
+old path contained no explicit old standard-library entry. Thus this batch
+changed the runtime and standard-library file location, rather than merely
+extending the earlier GPFS-runtime timeout. Project/mathlib caches stayed
+on GPFS; no cache or full library tree was copied or rebuilt.
+
+Actual cost and stop
+--------------------
+One compile only, single Lean worker (-j1).
+Measured driver + children CPU: 18.111029 seconds.
+Conservative prior-inspection allowance: 0.5 seconds.
+Conservative whole-task CPU charge: 18.611033 seconds (limit 20).
+Compile wall: 53.766437 seconds.
+Whole-task wall from first preflight: 75.900594 seconds (limit 120).
+The earlier local-runtime diagnostic is a separate completed batch and is
+not concealed in these figures. This task incurred no failed compile or
+repair attempts. No additional Lean run was started after success.
+
+TASK.json and compile_local.py preserve the exact command, import paths,
+resource limits and one-shot execution. BUILD_RESULT.json is the native
+batch receipt; RESULT.json adds the full multiline axiom interpretation
+and output size. RUN_HANDLE.json records the terminal non-running state.
+
+No graph generation/BFS/SAT, old Diameter wrapper, mathematical search,
+network, upgrade, hashes, shared STATE, or Wiki changes were performed.
