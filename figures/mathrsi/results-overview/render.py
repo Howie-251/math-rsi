@@ -40,13 +40,12 @@ def render(lang):
    t(X(.5),y+193,'0.5',16,anchor='middle');t(X(.59155154),y+146,'新 / new' if z else 'new',16,c,600,'end');t(X(.60318)+4,y+193,'参考' if z else 'prior',16,anchor='middle')
    t(x,y+246,'猜想值：1/2' if z else 'Conjecture: 1/2',18)
   elif key=='q6':
-   t(x,y+54,'Q₆ 中每一个匹配' if z else 'Every matching in Q₆',24,'#0B1220',600)
-   t(x,y+92,'均可扩展为 Hamilton 圈' if z else 'extends to a Hamilton cycle',23,c,650)
-   # theorem motif: matching inclusion, without a graph claiming universal evidence
-   rect(x+10,y+130,94,8,c);rect(x+10,y+157,94,8,c)
-   t(x+135,y+164,'⊆',42,c,500)
-   a.append(f'<ellipse cx="{x+280}" cy="{y+149}" rx="68" ry="38" fill="none" stroke="{c}" stroke-width="4"/>')
-   t(x+10,y+219,'定理示意' if z else 'Theorem schematic',16)
+   t(x,y+56,'Q₆ 中每一个匹配' if z else 'Every matching in Q₆',21,'#0B1220',600)
+   t(x,y+82,'均可扩展为 Hamilton 圈' if z else 'extends to a Hamilton cycle',19,c,600)
+   t(x,y+126,'Q₇ 中每个至少 57 边的匹配' if z else 'Every Q₇ matching with ≥57 edges',20,'#0B1220',600)
+   t(x,y+152,'均可扩展为 Hamilton 圈，' if z else 'extends to a Hamilton cycle containing',18,c,600)
+   t(x,y+178,'且保留匹配的每一条指定边。' if z else 'every prescribed matching edge.',18,c,600)
+   t(x,y+218,'完整 Q₇ 猜想仍开放' if z else 'Full Q₇ conjecture remains open',17)
    t(x,y+256,'亦含任意维 ≤6 方向推论（引用结果）' if z else 'Also ≤6 directions in Qₙ (imported results)',15)
   else:
    t(x,y+50,'凸七边形的强制阈值上界' if z else 'Upper bound for the convex 7-gon threshold',17,'#0B1220',550)
