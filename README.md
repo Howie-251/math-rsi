@@ -8,9 +8,9 @@
 
 </div>
 
-[![Recorded MathRSI v0 through v4 homepage evolution](figures/mathrsi/media/evolution.gif)](figures/mathrsi/media/evolution.mp4)
+[![Actual MathRSI v0 through v5 homepage evolution](figures/mathrsi/media/evolution.gif?v=5)](figures/mathrsi/media/evolution.mp4?v=5)
 
-*Recorded v0 → v4 homepage replay; [explore the current v5 site](https://lisresearchgroup.github.io/math-rsi/). Click for MP4; [execution provenance and manuscript status](case-studies/README.md).*
+*Actual v0 → v5 homepage replay, ending at v5 Current. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [execution provenance and manuscript status](case-studies/README.md).*
 
 MathRSI pairs a shared base workflow with domain plugins and a per-problem research wiki, guiding Claude Code and Codex from literature survey and route selection through proof development, review, verification, and handoff. Validated results and diagnosed failures feed back to refine both the workflow and plugins.
 
@@ -94,7 +94,7 @@ Two tracks evolve together: **shared base behavior** becomes stronger, while **d
 - **Deeper Hamilton methods:** controlled donors and return bridges, exact compatible-pool counting, and forest certificates with several omitted vertices. Q7 research ran with **v3 (local adaptation)** and feeds these v5 changes.
 - **Inherited behavior:** v4's equality-to-witness actions, global reassessment and subsequent ECC node/computation reuse remain in place.
 
-**[v5 is the current workflow on `main`](docs/V5_CHANGES.md).** Use the [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) or clone and record the exact commit. Fixed v1–v4 tags stay unchanged. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
+**[v5 is the current workflow on `main`](docs/V5_CHANGES.md).** Use the [fixed v5 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v5.zip) or [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip), or clone and record the exact commit. Fixed v1–v5 tags stay unchanged. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
 <summary>Fixed releases and earlier improvements</summary>
@@ -104,6 +104,7 @@ Two tracks evolve together: **shared base behavior** becomes stronger, while **d
 - **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2):** separate maintenance workflow, DD integration, evidence inheritance and common-coverage checks. [Changes](docs/V2_CHANGES.md)
 - **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3):** full-domain versus working-set checks, marked-object transport, finite universal certificates and explicit Lean-premise audits; upgraded ECC and three new domains. [Changes](docs/V3_CHANGES.md)
 - **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4):** equality-to-witness proof actions and Happy Ending/DD methods. [Changes](docs/V4_CHANGES.md)
+- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5):** controlled choices, theorem reuse across known legal representations and fixed/conditional plan coverage; deeper Hamilton methods. [Changes](docs/V5_CHANGES.md)
 
 Tags remain fixed complete snapshots. Choose one for a reproducible starting point and record the exact commit. [Historical v2/v3 figures](figures/mathrsi/README.md#historical-diagrams)
 

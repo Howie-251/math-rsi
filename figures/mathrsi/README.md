@@ -61,11 +61,11 @@ Use the same external ARIS renderer described above with `specs/research-to-capa
 
 ## Actual homepage motion
 
-The README hero is a recording of the current homepage's v0 → v4 evolution animation. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
+The README hero is a recording of the current homepage's v0 → v5 evolution animation, including the Q7 ≥57-edge bubble and v5 Current. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
 
 ## Historical diagrams
 
-The assets below are preserved **v3 and v2 snapshots**. Current release is v4; main also includes later maintenance. See [v4 changes](../../docs/V4_CHANGES.md), [the bilingual visual tour](../../docs/HOMEPAGE.md), and the [v3 generation record](../../development/figures-v3-20261104/REPORT.md). Historical labels describe their original versions.
+The assets below are preserved **v3 and v2 snapshots**. Current release is [v5](https://github.com/lisresearchgroup/math-rsi/tree/v5); main also includes later maintenance. See [v5 changes](../../docs/V5_CHANGES.md), [the bilingual visual tour](../../docs/HOMEPAGE.md), and the [v3 generation record](../../development/figures-v3-20261104/REPORT.md). Historical labels describe their original versions.
 
 ### v3 snapshot · Figure 1: Research experience improves base and plugins
 
