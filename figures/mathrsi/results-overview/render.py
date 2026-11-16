@@ -26,15 +26,10 @@ def render(lang):
     yy=y+84+j*31;t(x,yy,r[0],17);t(x+120,yy,r[1],17,'#667085');t(x+215,yy,'→',18);t(x+250,yy,r[2],19,c,650);t(x+340,yy,('开放' if z else 'open') if j==4 else ('文献*' if z else 'lit.*') if j==3 else '',15)
    t(x,y+256,'* 文献定理推论' if z else '* Literature corollary',15)
   elif key=='dd':
-   t(x,y+50,'直径五：最新两组端点' if z else 'Latest endpoints · diameter five',18,'#0B1220',550)
-   t(x+100,y+77,'顶点数' if z else 'Vertices',14)
-   t(x+280,y+77,'相对该表' if z else 'vs table',14)
-   for j,r in enumerate(D[key]['latest']):
-    yy=y+110+j*45;t(x,yy,r['parameter'],17);t(x+100,yy,f"{r['vertices']:,}",24,c,650);t(x+285,yy,'+'+str(r['table_gain']),22,c,650)
-   t(x,y+185,'Comellas · 2026-11-16',16)
-   t(x,y+213,'本地增量分别为 +1 / +31' if z else 'Local increases: +1 / +31',17)
-   t(x,y+243,'历史 (10,4) / (16,4)：2,567 / 16,416' if z else 'Earlier (10,4) / (16,4): 2,567 / 16,416',15)
-   t(x,y+264,'以上两项历史端点已被公开表超越' if z else 'Those two historical endpoints are now surpassed',14)
+   t(x,y+50,'各组参数下的最佳构造' if z else 'Our best constructions by setting',18,'#0B1220',550)
+   for j,r in enumerate(D[key]['settings']):
+    yy=y+92+j*40;t(x,yy,r['parameter'],18);t(x+370,yy,f"{r['vertices']:,}",25,c,650,'end')
+   t(x,y+256,'顶点数 · 四组展示参数' if z else 'Vertices · four showcased settings',16)
   elif key=='e86':
    t(x,y+50,'无四圈超立方体的渐近边密度' if z else 'Asymptotic C₄-free cube edge density',17,'#0B1220',550)
    t(x,y+96,'0.60318 → < 0.59155154',25,c,650)

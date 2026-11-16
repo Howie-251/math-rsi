@@ -24,9 +24,9 @@ Lean reductions retain explicit literature, classification and computation premi
 
 ## Degree–Diameter
 
-**Latest diameter-five endpoints:** (11,5) reaches **37,632 vertices**, 205,366 edges and maximum degree 11; (12,5) reaches **42,433 vertices**, 246,309 edges and maximum degree 12. Both have diameter exactly five. Their local increases are **+1/+31** from 37,631/42,402. Against Comellas checked 2026-11-16 (37,631/42,352), gains are separately **+1/+81**.
+Our constructions retain four highlighted settings: **(10,4)=2,567**, **(11,5)=37,632**, **(12,5)=42,433** and **(16,4)=16,416** vertices. The latest D5 follow-up improves only the (11,5) and (12,5) rows, by +1/+31 over previous local constructions and +1/+81 over the Comellas entries checked 2026-11-16. The four values are our constructions, not a claim of current global records.
 
-The research ran with local 2026-11-11 main/v4-maintenance plus DD feedback updates and feeds **v5 main maintenance**. Both finals regenerate exactly. D12 retains the source and checks all 31 new roots; D11 uses the H9 theorem plus literal core binding and checks all 161 peripheral/new roots. Concrete end-to-end Lean instances and required source final-review obligations remain open.
+The D5 follow-up ran with local 2026-11-11 main/v4-maintenance plus DD feedback updates and feeds **v5 main maintenance**. Both D5 finals regenerate exactly. D12 retains the source and checks all 31 new roots; D11 uses the H9 theorem plus literal core binding and checks all 161 peripheral/new roots. Concrete end-to-end Lean instances and required source final-review obligations remain open.
 
 Earlier (10,4)=2,567 and (16,4)=16,416 remain dated historical highlights; the current table checked 2026-11-16 lists 2,612 and 16,848. The earlier catalogue's 163 graphs / 44 parameter pairs / 49 concrete Lean instances are historical counts, not updated totals or additional certifications for the new endpoints.
 

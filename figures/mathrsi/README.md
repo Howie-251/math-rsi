@@ -4,11 +4,11 @@
 
 ## Six-domain results overview
 
-[![Six-domain mathematical results overview](results-overview/results-overview.en.svg?v=5-dd-20261116)](../../case-studies/README.md)
+[![Six-domain mathematical results overview](results-overview/results-overview.en.svg?v=5-dd-settings-20261116)](../../case-studies/README.md)
 
 [中文 SVG](results-overview/results-overview.zh.svg) · [English PNG](results-overview/results-overview.en.png) · [中文 PNG](results-overview/results-overview.zh.png) · [Editable generator, data and sources](results-overview/README.md)
 
-The DD panel includes the 2026-11-16 endpoints and dated Comellas comparisons, with older endpoints kept historical. The two READMEs use their corresponding language version and link to the six-case source/scope index. The compact figure preserves the original result values, the literature-derived ECC value and Happy Ending's working-manuscript status. `render.py` regenerates SVGs using Python's standard library; PNG export is optional.
+The DD panel retains our constructions across four showcased settings, updating only (11,5)/(12,5) in the 2026-11-16 follow-up. Dated comparisons remain in the linked case. The two READMEs use their corresponding language version and link to the six-case source/scope index. The compact figure preserves the original result values, the literature-derived ECC value and Happy Ending's working-manuscript status. `render.py` regenerates SVGs using Python's standard library; PNG export is optional.
 
 ## Three-layer architecture · editable vector
 
@@ -61,7 +61,7 @@ Use the same external ARIS renderer described above with `specs/research-to-capa
 
 ## Actual homepage motion
 
-The README hero is a recording of the current homepage's v0 → v5 evolution animation, including both the Q7 ≥57-edge bubble and the DD 37,632 / 42,433 follow-up bubble at v5 Current. The dated 2026-11-16 maintenance keeps their actual run versions visible. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
+The README hero is a recording of the current homepage's v0 → v5 evolution animation, including both the Q7 ≥57-edge bubble and the DD per-setting follow-up bubble at v5 Current. The dated 2026-11-16 maintenance keeps their actual run versions visible. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
 
 ## Historical diagrams
 
