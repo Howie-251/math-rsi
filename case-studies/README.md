@@ -24,11 +24,13 @@ Lean reductions retain explicit literature, classification and computation premi
 
 ## Degree–Diameter
 
-**A 2,567-vertex, 10-regular graph of exact diameter four** exceeds the Comellas 2,566 entry checked on 2026-11-05. Earlier dated table improvements cover $(11,5)$, $(12,5)$ and $(16,4)$; the combined catalogue has 163 graph instances, 44 parameter pairs and 49 concrete Lean instances, including intermediate graphs.
+**Latest diameter-five endpoints:** (11,5) reaches **37,632 vertices**, 205,366 edges and maximum degree 11; (12,5) reaches **42,433 vertices**, 246,309 edges and maximum degree 12. Both have diameter exactly five. Their local increases are **+1/+31** from 37,631/42,402. Against Comellas checked 2026-11-16 (37,631/42,352), gains are separately **+1/+81**.
 
-The new graph ran with **MathRSI v2 + DD + the PR #7 repair**. Independent all-roots BFS and `Fin 2567` Lean assembly/import receipts are preserved. External formal C review is incomplete, and the portable package does not contain the full rebuildable Lean project. The v4 edit replay reconstructs ten graphs and checks literal structure; it does not rerun BFS or Lean.
+The research ran with local 2026-11-11 main/v4-maintenance plus DD feedback updates and feeds **v5 main maintenance**. Both finals regenerate exactly. D12 retains the source and checks all 31 new roots; D11 uses the H9 theorem plus literal core binding and checks all 161 peripheral/new roots. Concrete end-to-end Lean instances and required source final-review obligations remain open.
 
-[Case study](degree-diameter/README.md) · [中文](degree-diameter/README.zh-CN.md) · [Illustrated reader](degree-diameter/index.html) · [Execution provenance](degree-diameter/evidence/execution_version.md) · [Reconstruction](degree-diameter/reproduce/README.md) · [Plugin](../plugins/degree-diameter/README.md)
+Earlier (10,4)=2,567 and (16,4)=16,416 remain dated historical highlights; the current table checked 2026-11-16 lists 2,612 and 16,848. The earlier catalogue's 163 graphs / 44 parameter pairs / 49 concrete Lean instances are historical counts, not updated totals or additional certifications for the new endpoints.
+
+[Latest case and scope](degree-diameter/README.md) · [中文](degree-diameter/README.zh-CN.md) · [Bilingual latest reader](../development/homepage-redesign-20261105/site/dd-latest.html) · [Historical illustrated case](degree-diameter/index.html) · [Earlier v2 execution provenance](degree-diameter/evidence/execution_version.md) · [Plugin](../plugins/degree-diameter/README.md)
 
 ## Erdős Problem 86
 

@@ -8,7 +8,7 @@
 
 </div>
 
-[![Actual MathRSI v0 through v5 homepage evolution](figures/mathrsi/media/evolution.gif?v=5)](figures/mathrsi/media/evolution.mp4?v=5)
+[![Actual MathRSI v0 through v5 homepage evolution](figures/mathrsi/media/evolution.gif?v=5-dd-20261116)](figures/mathrsi/media/evolution.mp4?v=5-dd-20261116)
 
 *Actual v0 → v5 homepage replay, ending at v5 Current. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [execution provenance and manuscript status](case-studies/README.md).*
 
@@ -50,11 +50,11 @@ Reads the task's existing specification, wiki and resumption notes, then continu
 
 Research across six domains supplies results and reusable methods. [Public homepage](https://lisresearchgroup.github.io/math-rsi/) · [Local viewing instructions](docs/HOMEPAGE.md). The **[bilingual visual tour](https://lisresearchgroup.github.io/math-rsi/)** shows their problems, results and evolution; the **[six-case index](case-studies/README.md)** links proofs, verification scopes and runnable tools.
 
-[![Six-domain mathematical results overview](figures/mathrsi/results-overview/results-overview.en.svg)](case-studies/README.md)
+[![Six-domain mathematical results overview](figures/mathrsi/results-overview/results-overview.en.svg?v=5-dd-20261116)](case-studies/README.md)
 
 - **Property B:** bounds for $k=5,\ldots,12$ and exponentially growing additive gains for every $k\ge12$. [Results & proof scope](case-studies/property-b/README.md)
 - **Error-correcting codes:** three gaps dating to 1985 closed; four exact values (one from literature) and one narrowed range. [Results, methods & open case](case-studies/README.md#error-correcting-codes)
-- **Degree–diameter:** four dated construction benchmarks improved, including a 2,567-vertex $(10,4)$ graph. [Construction & evidence](case-studies/degree-diameter/README.md)
+- **Degree–diameter:** 37,632 vertices at $(11,5)$ and 42,433 at $(12,5)$, exceeding the Comellas entries checked 2026-11-16 by +1 and +81. [Results & verification scope](case-studies/degree-diameter/README.md)
 - **Erdős Problem 86:** asymptotic density upper bound improved from $0.60318$ to $\lt0.59155154$. [Result & verification scope](case-studies/README.md#erdős-problem-86)
 - **Ruskey–Savage:** every $Q_6$ matching and every $Q_7$ matching with at least 57 edges extends to a Hamilton cycle. [Results, methods & open scope](case-studies/README.md#ruskeysavage-q6)
 - **Happy Ending:** working manuscripts lower the $\mathrm{ES}(7)$ upper bound from 78 to 77; independent review pending. [Manuscripts & status](case-studies/happy-ending/README.md)
@@ -92,6 +92,7 @@ Two tracks evolve together: **shared base behavior** becomes stronger, while **d
 
 - **v5 base:** control auxiliary choices so the next proof step is possible; reuse new theorems across known legal representations; cover every input with fixed or conditional finite plans.
 - **Deeper Hamilton methods:** controlled donors and return bridges, exact compatible-pool counting, and forest certificates with several omitted vertices. Q7 research ran with **v3 (local adaptation)** and feeds these v5 changes.
+- **2026-11-16 · v5 follow-up:** DD adds **Consume results before dispatch**: Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback. Its plugin deepens **Joint completion and verified prefixes**. The research ran with v4 + local updates. [Maintenance record](https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md)
 - **Inherited behavior:** v4's equality-to-witness actions, global reassessment and subsequent ECC node/computation reuse remain in place.
 
 **[v5 is the current workflow on `main`](docs/V5_CHANGES.md).** Use the [fixed v5 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v5.zip) or [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip), or clone and record the exact commit. Fixed v1–v5 tags stay unchanged. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)

@@ -1,7 +1,16 @@
 {
-  "recorded_at_utc": "2026-11-16T03:34:40.076947+00:00",
+  "recorded_at_utc": "2026-11-16T09:18:39.224625+00:00",
   "source": "development/homepage-redesign-20261105/site/index.html",
-  "source_commit": "e260c4c0680cbae5fbb804fd4ed7fa7b0a282a9c",
+  "source_commit": "80fd0ffcf291d39383dd7cec2e73f75dc2d875e0",
+  "source_working_tree_changes": [
+    "development/homepage-redesign-20261105/site/app.js",
+    "development/homepage-redesign-20261105/site/dd-10-4.html",
+    "development/homepage-redesign-20261105/site/index.html",
+    "development/homepage-redesign-20261105/site/result-visuals.js",
+    "development/homepage-redesign-20261105/site/styles.css",
+    "development/homepage-redesign-20261105/site/zh-CN.js"
+  ],
+  "source_revision_note": "Recorded the named HEAD with the listed presentation edits; the handoff commit contains the exact source used.",
   "current_version": "v5",
   "expected_versions": [
     "v0",
@@ -12,7 +21,7 @@
     "v5"
   ],
   "capture": "Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264",
-  "recording_only_changes": "Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7 headline; preserve all seven columns. Product JS/CSS/data unchanged.",
+  "recording_only_changes": "Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7/DD headlines; preserve all seven columns. Product JS/CSS/data unchanged.",
   "capture_css": "html {scroll-behavior:auto!important; overflow:hidden;}\nbody {background:white; overflow:hidden;}\n#evolution {max-width:none; width:100%; padding:20px 24px;}\n#evolution .evo-title {margin-top:0;}\n#evolution .scroller {overflow:clip!important;}\n#evolution .fig-foot, #evolution #panel, #evolution .row-b,\n#evolution .row-p, .scroll-hint {display:none!important;}\n#evolution button:focus {outline:none!important;}\n#evolution .row-v {padding:12px 8px 14px;}\n#evolution .vtag {font-size:24px;}\n#evolution .vstate {font-size:18px;}\n#evolution .vname {font-size:18px; line-height:1.25;}\n#evolution .delta-tag[data-v=\"5\"] .delta-value {font-size:20px;}",
   "resolution": [
     1900,
@@ -22,8 +31,8 @@
   "browser_clock_rate": 0.25,
   "opening_hold_seconds": 1,
   "final_hold_seconds": 6,
-  "animation_frames": 335,
-  "duration_seconds": 23.75,
+  "animation_frames": 358,
+  "duration_seconds": 24.9,
   "completion": "Wait for native play control to stop at Current; no hard-coded timeline end",
   "states": [
     {
@@ -85,6 +94,17 @@
       "right": 1875.984375,
       "bottom": 621.90625
     },
+    "dd": {
+      "text": "Degree–DiameterImproved37,632 / 42,433Run: v4 + local updates",
+      "visible": true,
+      "opacity": "1",
+      "box": {
+        "left": 1389.086669921875,
+        "top": 199.5465850830078,
+        "right": 1606.456298828125,
+        "bottom": 262.5837707519531
+      }
+    },
     "q7": {
       "text": "Ruskey–SavageImprovedQ₇ · ≥57 edges128 vertices · Run: v3",
       "visible": true,
@@ -105,24 +125,24 @@
       "width": 1900,
       "height": 642,
       "r_frame_rate": "20/1",
-      "nb_read_frames": "475",
-      "duration_seconds": 23.75,
-      "bytes": 471146
+      "nb_read_frames": "498",
+      "duration_seconds": 24.9,
+      "bytes": 483344
     },
     "gif": {
       "codec_name": "gif",
       "width": 1400,
       "height": 474,
       "r_frame_rate": "12/1",
-      "nb_read_frames": "285",
-      "duration_seconds": 23.75,
-      "bytes": 1299554
+      "nb_read_frames": "299",
+      "duration_seconds": 24.91,
+      "bytes": 1352939
     }
   },
   "poster_resolution": [
     1900,
     642
   ],
-  "intermediates": ".local/evolution-media-v5-20261116",
+  "intermediates": ".local/evolution-media-v5-dd-20261116",
   "verification": "MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. Visual inspection is a separate human/agent step."
 }

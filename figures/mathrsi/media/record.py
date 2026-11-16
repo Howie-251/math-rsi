@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-v5-20261116'
+CACHE = ROOT / '.local/evolution-media-v5-dd-20261116'
 FPS = 20
 CLOCK_RATE = 0.25  # Browser-clock milliseconds per encoded-video millisecond.
 OPENING_SECONDS = 1
@@ -120,10 +120,12 @@ def capture(preview=False):
                 return page.evaluate('''() => {
                     const rect=e=>{const r=e.getBoundingClientRect();return {left:r.left,top:r.top,right:r.right,bottom:r.bottom}};
                     const q=document.querySelector('.delta-tag[data-c="q6"][data-v="5"]');
+                    const d=document.querySelector('.delta-tag[data-c="dd"][data-v="5"]');
                     return {scrollLeft:document.querySelector('#scroller').scrollLeft,
                         currentVersion:document.querySelector('.row-v.current').innerText,
                         currentRow:rect(document.querySelector('.row-v.current')),
                         futureRow:rect(document.querySelector('.row-v.fut')),
+                        dd:{text:d.textContent,visible:d.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d).opacity,box:rect(d)},
                         q7:{text:q.textContent,visible:q.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q).opacity,box:rect(q)}};
                 }''')
 
@@ -185,8 +187,8 @@ def capture(preview=False):
             final = final_geometry()
             assert current in status and 'Current' in status, status
             assert [x['state'].split('Origins')[0].split('Release')[0].split('Current')[0] for x in states] == expected, states
-            assert final['q7']['visible'] and float(final['q7']['opacity']) == 1, final
-            for rect in [final['q7']['box'], final['currentRow'], final['futureRow']]:
+            assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7','dd']), final
+            for rect in [final['q7']['box'], final['dd']['box'], final['currentRow'], final['futureRow']]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
             assert final['scrollLeft'] == 0 and not errors and not failed_requests, (final, errors, failed_requests)
             final_frame = shot('settled-current.png')
@@ -213,9 +215,11 @@ def capture(preview=False):
             'recorded_at_utc': datetime.now(timezone.utc).isoformat(),
             'source': str((SITE/'index.html').relative_to(ROOT)),
             'source_commit': subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'], text=True).strip(),
+            'source_working_tree_changes': subprocess.check_output(['git','-C',str(ROOT),'diff','--name-only','HEAD','--',str(SITE)], text=True).splitlines(),
+            'source_revision_note': 'Recorded the named HEAD with the listed presentation edits; the handoff commit contains the exact source used.',
             'current_version': current, 'expected_versions': expected,
             'capture': 'Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264',
-            'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7 headline; preserve all seven columns. Product JS/CSS/data unchanged.',
+            'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7/DD headlines; preserve all seven columns. Product JS/CSS/data unchanged.',
             'capture_css': CAPTURE_CSS.strip(),
             'resolution': [VIEWPORT_WIDTH, height], 'fps': FPS, 'browser_clock_rate': CLOCK_RATE,
             'opening_hold_seconds': OPENING_SECONDS, 'final_hold_seconds': FINAL_SECONDS,
