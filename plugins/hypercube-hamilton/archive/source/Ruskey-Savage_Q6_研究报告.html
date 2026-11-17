@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>超立方体匹配的 Hamilton 延拓 · 组会讲稿</title><style>
+<title>超立方体匹配的 Hamilton 延拓 · Q₆ 研究报告</title><style>
 :root{color-scheme:light;--ink:#1b2834;--accent:#185c65;--line:#d7e0e3}
 *{box-sizing:border-box}html{scroll-padding-top:28px}
 body{margin:0;background:#f3f5f6;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;font-size:17px;line-height:1.95}
@@ -31,7 +31,7 @@ ol{padding-left:1.6em}li{margin:9px 0}h2,h3,.statement{break-after:avoid}
 @media(max-width:760px){aside{position:static;width:auto;margin:20px 18px 12px}.brand{margin-bottom:8px}nav{display:flex;gap:4px 12px;flex-wrap:wrap}nav a{padding:3px 0;border:0;font-size:12px}.actions{margin-top:10px;padding:0}main{margin:14px 12px 30px;padding:26px 20px;border:0}h1{font-size:27px;margin-bottom:28px}h2{font-size:21px;margin-top:34px}p{text-align:left}.math-block{font-size:1em}.statement{padding:10px 12px}}
 @media print{@page{size:A4;margin:19mm 18mm}body{background:white;font-family:"SimSun",serif;font-size:11pt;line-height:1.7}aside{display:none}main{margin:0;padding:0;max-width:none;border:0}h1{font-size:22pt}h2{font-size:15pt;margin-top:24pt}h3{font-size:12pt}table{font-size:9pt;min-width:0}td,th{padding:6px}a{color:inherit;text-decoration:none}.statement{background:none}.math-block{overflow:visible;font-size:1em}.table-scroll{overflow:visible}tr{break-inside:avoid}}
 </style></head>
-<body><aside><div class="brand">Q₆ · 组会讲稿</div><nav><a href="#1-ruskeysavage">1. Ruskey–Savage 猜想</a>
+<body><aside><div class="brand">Q₆ · 研究报告</div><nav><a href="#1-ruskeysavage">1. Ruskey–Savage 猜想</a>
 <a href="#2">2. 文献进展</a>
 <a href="#3">3. 我们的成果</a>
 <a href="#4">4. 五维局部引理</a>
@@ -375,7 +375,7 @@ U&amp;=\{1,2\},\quad e=\{30,31\},\quad R=\{13,21\}.
 \ \cup\ \{v_k u_1\}"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mo>⋃</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>k</mi></mrow></msubsup><msub><mi>P</mi><mi>i</mi></msub><mtext> </mtext><mo>∪</mo><mtext> </mtext><mo stretchy="false">{</mo><msub><mi>v</mi><mi>i</mi></msub><msub><mi>u</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>:</mi><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>k</mi><mo stretchy="false">}</mo><mtext> </mtext><mo>∪</mo><mtext> </mtext><mo stretchy="false">{</mo><msub><mi>v</mi><mi>k</mi></msub><msub><mi>u</mi><mn>1</mn></msub><mo stretchy="false">}</mo></mrow></math></div>
 <p>为包含 <span class="math-inline" title="M"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>M</mi></mrow></math></span> 的 Hamilton 圈。<span class="math-inline" title="n\le5"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>5</mn></mrow></math></span> 的情形由已有五方向定理得到。<span class="math-inline" title="\square"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>◻</mi></mrow></math></span></p>
 <h2 id="_1">补充资料</h2>
-<p>本文是组会用证明正文。有限构造、完整枚举域与验证记录集中于 <a href="Ruskey-Savage_Q6_证明资料汇编.html">证明资料汇编（HTML）</a>／<a href="Ruskey-Savage_Q6_证明资料汇编.md">Markdown</a>；总证明入口为 <a href="research/six_directions/P6_FULL_CLOSURE.md">P6 总装证明</a>。计算辅助证明目前通过项目内 ARIS 同族模型审计，尚未经外部同行评议或证明助手形式化验证。</p></main>
+<p>本文为研究报告与证明正文。有限构造、完整枚举域与验证记录集中于 <a href="Ruskey-Savage_Q6_证明资料汇编.html">证明资料汇编（HTML）</a>／<a href="Ruskey-Savage_Q6_证明资料汇编.md">Markdown</a>；总证明入口为 <a href="research/six_directions/P6_FULL_CLOSURE.md">P6 总装证明</a>。计算辅助证明目前通过项目内 ARIS 同族模型审计，尚未经外部同行评议或证明助手形式化验证。</p></main>
 <script>
 const links=[...document.querySelectorAll('nav a')];
 const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){for(const a of links)a.classList.toggle('active',a.hash==='#'+e.target.id)}},{rootMargin:'0px 0px -65% 0px'});

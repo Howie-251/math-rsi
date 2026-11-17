@@ -397,4 +397,4 @@ $$
 
 ## 补充资料
 
-本文是组会用证明正文。有限构造、完整枚举域与验证记录集中于 [证明资料汇编（HTML）](Ruskey-Savage_Q6_证明资料汇编.html)／[Markdown](Ruskey-Savage_Q6_证明资料汇编.md)；总证明入口为 [P6 总装证明](research/six_directions/P6_FULL_CLOSURE.md)。计算辅助证明目前通过项目内 ARIS 同族模型审计，尚未经外部同行评议或证明助手形式化验证。
+本文为研究报告与证明正文。有限构造、完整枚举域与验证记录集中于 [证明资料汇编（HTML）](Ruskey-Savage_Q6_证明资料汇编.html)／[Markdown](Ruskey-Savage_Q6_证明资料汇编.md)；总证明入口为 [P6 总装证明](research/six_directions/P6_FULL_CLOSURE.md)。计算辅助证明目前通过项目内 ARIS 同族模型审计，尚未经外部同行评议或证明助手形式化验证。
