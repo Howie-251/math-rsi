@@ -1,0 +1,384 @@
+{
+  "solver": "9.15.6755",
+  "hashes": {
+    "EVEN_GLOBAL_AUDIT.py": "8c2113d398a0b9d08b7d30fa21551869a632e8250763aa2a92bbc636d40b5cde",
+    "FINAL_JOINT_PROBE.py": "b6277483d8ee5b81568f9321cc959d214aa9b0da874bc8ab921393351da6b6d1",
+    "FINAL_JOINT_PROBE.json": "e003d3cfada8f020b4f14e28c345845351d431248840eb2c43afe7f278e25df8",
+    "GLOBAL_PROBE.py": "d29fe3467723ef5e08fb1bb64b260b438e5d798aa076ddc531a2ee55c5848133",
+    "FREE_A6_SUPPLY.py": "1105466276fa10987cf9183c7401601e541922c0b7da6a209f68344cf4f850b9",
+    "FREE_A6_JOINT_PROBE.py": "8f72dadd54b0808fb44473ec6f0ccbe532134139ff854edc21a6a70210c89382",
+    "SPLIT_SMALL_GLOBAL_PROBE.py": "f9ad7021c850fca4c7d9f44eac1162f3d923b1eb4f44845dd9582d3553ad2fde",
+    "SCALAR_NEW_GATES.json": "54f1c92ddfb99efaad9692b7af5876c591b248ee6704ef7d285b10059a0af249",
+    "FREE_A6_TRANSFER.md": "6a3a64b647e3b1c36ea428abf0353fd5d1ad62e9d700173caa8acad0733d3b53",
+    "SPLIT_DONOR_SMALL_RECEIVER.md": "425cef97802d2bc2371526b7dca6d874e47e7f6d0cfef30299807e6d3da36e81",
+    "PROBE.py": "2073a3bfee5f35c81279af06c3f99e67146c83cb8322df395320de0ae2fd6c2d",
+    "NEW_SPLIT_CHECK.py": "099af40f53f9e798d6b1448531ad13f8d2b397c10a5b8dbe1ca88ef20b87ded4"
+  },
+  "status": "INFEASIBLE",
+  "build_seconds": 0.5022479000035673,
+  "budget_solver_seconds": 112,
+  "seed": 20261116,
+  "workers": 8,
+  "solver_wall_seconds": 75.23502380000001,
+  "model_stats": "satisfaction model '': (model_fingerprint: 0x596337ffe4985241)\n#Variables: 5'091 (4'995 primary variables)\n  - 4'335 Booleans in [0,1]\n  - 672 in [0,8]\n  - 84 in [3,6]\n#kBoolOr: 3'360 (#literals: 26'880)\n#kLinear1: 1'024 (#enforced: 1'022)\n#kLinear2: 980 (#enforced: 518) (#complex_domain: 7)\n#kLinear3: 5'964 (#enforced: 5'880)\n#kLinearN: 778 (#enforced: 98 #multi: 98) (#terms: 8'468)\n#kTable: 588 (#enforced: 504 #multi: 504)",
+  "response_stats": "CpSolverResponse summary:\nstatus: INFEASIBLE\nobjective: NA\nbest_bound: NA\nintegers: 964\nbooleans: 19348\nconflicts: 32222\nbranches: 244748\npropagations: 112003937\ninteger_propagations: 14424802\nrestarts: 2848\nlp_iterations: 0\nwalltime: 75.235\nusertime: 75.235\ndeterministic_time: 164.836\ngap_integral: 0\n",
+  "model_text_sha256": "0f7ef0e3beca78ca8db634ca9eecba00231d139854044fc70ccc4ec939cfaddf",
+  "scalar_removed": {
+    "(0, 0, 3, 0)": [
+      "mono3"
+    ],
+    "(0, 0, 4, 1)": [
+      "R41"
+    ],
+    "(0, 1, 0, 2)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(0, 1, 4, 0)": [
+      "R41",
+      "split_small_receiver"
+    ],
+    "(0, 2, 0, 1)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(0, 2, 0, 2)": [
+      "old_controlled_count"
+    ],
+    "(0, 2, 1, 2)": [
+      "R41",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(0, 2, 5, 0)": [
+      "free_A6_same_side"
+    ],
+    "(0, 3, 0, 0)": [
+      "mono3"
+    ],
+    "(0, 3, 1, 1)": [
+      "R41"
+    ],
+    "(0, 3, 2, 2)": [
+      "free_A6_same_side"
+    ],
+    "(0, 4, 1, 0)": [
+      "R41"
+    ],
+    "(0, 4, 2, 1)": [
+      "free_A6_same_side",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(0, 4, 2, 2)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(0, 4, 3, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(0, 5, 2, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(0, 5, 2, 1)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(0, 5, 2, 2)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(0, 5, 3, 1)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(0, 5, 3, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(0, 5, 4, 2)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(0, 6, 4, 1)": [
+      "R41"
+    ],
+    "(0, 6, 5, 2)": [
+      "mono3"
+    ],
+    "(1, 0, 2, 0)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(1, 0, 3, 1)": [
+      "R41"
+    ],
+    "(1, 1, 3, 0)": [
+      "R41"
+    ],
+    "(1, 2, 0, 2)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 2, 4, 0)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(1, 2, 5, 0)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(1, 2, 5, 1)": [
+      "free_A6_same_side"
+    ],
+    "(1, 3, 0, 1)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 3, 0, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 3, 1, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(1, 3, 5, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 4, 0, 0)": [
+      "R41"
+    ],
+    "(1, 4, 0, 2)": [
+      "split_small_receiver"
+    ],
+    "(1, 4, 1, 2)": [
+      "split_small_receiver"
+    ],
+    "(1, 4, 2, 2)": [
+      "free_A6_same_side"
+    ],
+    "(1, 5, 1, 0)": [
+      "free_A6_same_side"
+    ],
+    "(1, 5, 2, 1)": [
+      "free_A6_same_side"
+    ],
+    "(1, 5, 2, 2)": [
+      "free_A6_same_side"
+    ],
+    "(1, 5, 3, 2)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 6, 2, 0)": [
+      "free_A6_same_side"
+    ],
+    "(1, 6, 2, 1)": [
+      "free_A6_same_side"
+    ],
+    "(1, 6, 2, 2)": [
+      "free_A6_same_side"
+    ],
+    "(1, 6, 3, 1)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 6, 3, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(1, 6, 4, 2)": [
+      "free_A6_same_side",
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(2, 0, 1, 0)": [
+      "free_A6_same_side",
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(2, 0, 2, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 0, 2, 1)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 0, 3, 0)": [
+      "free_A6_same_side"
+    ],
+    "(2, 0, 3, 1)": [
+      "free_A6_same_side"
+    ],
+    "(2, 0, 3, 2)": [
+      "free_A6_same_side"
+    ],
+    "(2, 1, 2, 0)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 1, 3, 0)": [
+      "free_A6_same_side"
+    ],
+    "(2, 1, 3, 1)": [
+      "free_A6_same_side"
+    ],
+    "(2, 1, 4, 2)": [
+      "free_A6_same_side"
+    ],
+    "(2, 2, 3, 0)": [
+      "free_A6_same_side"
+    ],
+    "(2, 2, 4, 0)": [
+      "split_small_receiver"
+    ],
+    "(2, 2, 5, 0)": [
+      "split_small_receiver"
+    ],
+    "(2, 2, 5, 2)": [
+      "R41"
+    ],
+    "(2, 3, 0, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 3, 4, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(2, 3, 5, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 3, 5, 1)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 4, 0, 1)": [
+      "free_A6_same_side"
+    ],
+    "(2, 4, 0, 2)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(2, 4, 1, 2)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(2, 4, 5, 0)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(2, 5, 2, 2)": [
+      "R41"
+    ],
+    "(2, 6, 2, 1)": [
+      "R41"
+    ],
+    "(2, 6, 3, 2)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(3, 0, 0, 0)": [
+      "mono3"
+    ],
+    "(3, 0, 1, 1)": [
+      "R41"
+    ],
+    "(3, 1, 1, 0)": [
+      "R41",
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(3, 1, 2, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(3, 1, 2, 1)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(3, 1, 3, 0)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(3, 1, 3, 1)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(3, 1, 3, 2)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(3, 2, 2, 0)": [
+      "free_A6_same_side",
+      "old_controlled_count"
+    ],
+    "(3, 2, 3, 0)": [
+      "free_A6_same_side",
+      "split_small_receiver"
+    ],
+    "(3, 2, 3, 1)": [
+      "free_A6_same_side",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(3, 2, 4, 2)": [
+      "R41"
+    ],
+    "(3, 3, 3, 0)": [
+      "free_A6_same_side"
+    ],
+    "(3, 3, 4, 1)": [
+      "R41"
+    ],
+    "(3, 3, 5, 2)": [
+      "mono3"
+    ],
+    "(3, 4, 0, 2)": [
+      "free_A6_same_side"
+    ],
+    "(3, 4, 4, 0)": [
+      "R41",
+      "old_controlled_count",
+      "split_small_receiver"
+    ],
+    "(3, 4, 5, 0)": [
+      "old_controlled_count"
+    ],
+    "(3, 4, 5, 1)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(3, 5, 1, 2)": [
+      "R41",
+      "split_small_receiver"
+    ],
+    "(3, 5, 5, 0)": [
+      "mono3",
+      "old_controlled_count"
+    ],
+    "(3, 6, 1, 1)": [
+      "R41"
+    ],
+    "(3, 6, 2, 2)": [
+      "mono3"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q7 十六孔闭合与工作流改进</title>
+<style>
+  :root{color-scheme:light;--ink:#142524;--muted:#405551;--teal:#005e54;--paper:#f3f8f6;--line:#b7cec6}
+  *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+  main{max-width:1060px;margin:auto;padding:26px 26px 48px} h1,h2,h3,p{margin:0 0 .55em} h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.18;letter-spacing:-.035em} h2{font-size:1.35rem;line-height:1.3} h3{font-size:1rem;margin-bottom:.22em} section{margin-top:24px} p:last-child{margin-bottom:0}
+  a{color:var(--teal);text-underline-offset:.2em} .lead{font-size:1.07rem} .flow{background:var(--paper);border:1px solid var(--line);padding:20px;border-radius:14px}.step{padding:9px 12px;border:1px solid var(--line);background:white;border-radius:8px;overflow-wrap:anywhere}.connector{text-align:center;color:var(--teal);font-size:.9rem;font-weight:700;line-height:1.4;padding:4px}.flow p{font-size:.92rem}.compact{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.meta{color:var(--muted);font-size:.88rem}.case{padding:12px 15px;border-left:3px solid var(--teal);background:#edf6f2;margin-top:12px}.th-wrap{overflow:auto} table{width:100%;border-collapse:collapse;font-size:.94rem} th,td{text-align:left;vertical-align:top;padding:7px 9px;border-bottom:1px solid var(--line)} th{color:var(--teal);background:var(--paper)}
+  .flow-comparison{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.25fr);gap:14px;align-items:start;margin-top:14px}
+  .flow-panel{margin:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;min-width:0}
+  .flow-panel figcaption{font-size:1.04rem;font-weight:750;line-height:1.3;margin-bottom:10px}
+  .before{--loop:#825319;background:#fff9f0;border-color:#e6cda9}.before figcaption,.before .connector{color:#704510}
+  .after{--loop:#825319;background:#f8fcfa}.after figcaption{color:var(--teal)}
+  .loop-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 20px}
+  .loop-grid>.step,.loop-grid>.connector,.loop-grid>.decision,.fork{grid-column:1/3}
+  .loop-target{grid-row:1}.loop-head,.loop-side,.loop-tail{grid-column:3;position:relative;color:var(--loop)}
+  .loop-head{grid-row:1;border-right:2px solid currentColor;align-self:end;height:50%}
+  .loop-head::before,.loop-head::after,.loop-tail::after{position:absolute;content:""}
+  .loop-head::before{top:0;left:2px;right:-2px;border-top:2px solid currentColor}
+  .loop-head::after{width:7px;height:7px;left:2px;top:-3px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+  .loop-side{border-right:2px solid currentColor}.loop-tail{border-right:2px solid currentColor;align-self:start;height:50%}
+  .loop-tail::after{bottom:0;left:2px;right:-2px;border-top:2px solid currentColor}
+  .old-loop .loop-side{grid-row:2/5}.old-loop .loop-tail{grid-row:5}.old-loop .loop-action{grid-row:5}
+  .new-loop .loop-side{grid-row:2/7}.new-loop .loop-tail{grid-row:7}
+  .loop-action{border-color:#dfbd8e;background:#fff8eb}.loop-action a{color:#704510;font-weight:700}
+  .outcome{margin-top:10px;padding:9px 10px;background:#f8ead4;border-radius:6px}
+  .after .changed{border-left:4px solid var(--teal)}.residual{background:#e9f5ef;border-radius:7px}
+  .decision{grid-row:5;justify-self:center;text-align:center;color:#003f37;background:#d8eee5;border:1px solid #7eaca0;padding:6px 12px;border-radius:6px;font-size:.94rem}
+  .fork{grid-row:6;height:26px;position:relative;color:var(--teal)}
+  .fork::before,.fork::after{position:absolute;content:""}.fork::before{left:25%;right:25%;top:7px;border-top:2px solid currentColor}.fork::after{left:50%;top:0;height:7px;border-left:2px solid currentColor}
+  .fork span{position:absolute;left:25%;top:7px;height:15px;border-left:2px solid currentColor}.fork span+span{left:75%;color:var(--loop)}
+  .fork span::after{content:"";position:absolute;bottom:0;left:-5px;width:6px;height:6px;border-bottom:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg)}
+  .new-loop>.positive,.new-loop>.negative{grid-row:7}.new-loop>.positive{grid-column:1;margin-right:5px;border-color:#7eaca0}.new-loop>.negative{grid-column:2;margin-left:5px}
+  .new-loop>.continue{grid-column:1;grid-row:8}.budget{margin-top:9px;color:var(--muted)}
+  @media(max-width:780px){main{padding:18px 13px 36px}.flow{padding:12px}.flow-comparison{grid-template-columns:minmax(0,1fr)}.before{max-width:none}} @media print{main{padding:0}.flow-panel{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<header>
+  <p class="meta">Ruskey–Savage · 七维超立方体 · 2026-11-16</p>
+  <h1>十六孔闭合与工作流改进</h1>
+  <p class="lead"><strong>完整 E16。</strong> 七维超立方体 Q<sub>7</sub> 中任意至少 56 边的短匹配，都包含在一条遍历全部 128 点的全短 Hamilton 圈中。短边连接 Hamming 距离为 1 的点。恰 56 边时有 16 个原孔，即未被原匹配覆盖的点。</p>
+</header>
+
+<section class="flow" aria-labelledby="flow-title">
+  <h2 id="flow-title">工作流改进前后对比</h2>
+  <p>以完整 μ 层为一块拼图，按原输入整体验收覆盖。</p>
+  <div class="flow-comparison">
+    <figure class="flow-panel before" aria-labelledby="before-title">
+      <figcaption id="before-title">改进前 · 易证子族的正反馈循环</figcaption>
+      <div class="loop-grid old-loop">
+        <div class="step loop-target" id="find-easy-family"><h3>寻找容易证明的子族</h3><p>余域未知，先从能下手的一块开始。</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="step"><h3>本轮证明一个子族</h3><p>证明在各自的适用范围内成立，每轮都有局部收获。</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="step loop-action"><h3>局部正反馈</h3><p><a href="#find-easy-family">再找一个易证子族</a>，重复此循环。</p></div>
+        <span class="loop-head" aria-hidden="true"></span><span class="loop-side" aria-hidden="true"></span><span class="loop-tail" aria-hidden="true"></span>
+      </div>
+      <p class="outcome"><strong>完整 μ 层的闭合指标多轮没有推进。</strong> 已证子族持续累积，余域仍未知。</p>
+    </figure>
+    <figure class="flow-panel after" aria-labelledby="after-title">
+      <figcaption id="after-title">改进后 · 整个 μ 层的覆盖与回代</figcaption>
+      <div class="step"><h3>锁定完整 μ 层及验收条件</h3><p>固定原输入整域、保留对象、依赖、同一缺口与预算。</p></div>
+      <div class="connector" aria-hidden="true">↓</div>
+      <div class="step"><h3>剥离已证覆盖</h3><p>在同一实际原匹配上核对已审定理与合法短超匹配补全，按并集记覆盖。</p></div>
+      <div class="connector residual">余域进入分类 <span aria-hidden="true">↓</span></div>
+      <div class="loop-grid new-loop">
+        <div class="step changed loop-target" id="classify-remainder"><h3>分类余域</h3><p>按候选保边构造划分子族，明确该分类下的最难余域。</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="step changed"><h3>先分析最难余域</h3><p>做一次有界实质推导，核真实来源、端口配对和保边回代的关键接口。</p></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="decision"><strong>关键检验后，最难余域有可执行的解决路线吗？</strong></div>
+        <div class="fork" aria-hidden="true"><span></span><span></span></div>
+        <div class="step positive"><h3>能解决</h3><p>关键检验通过并有可执行路线，采用此分类进入逐族证明。</p></div>
+        <div class="step loop-action negative"><h3>不能解决</h3><p>关键检验失败或预算内未找到路线，<a href="#classify-remainder">更换分类，回到同一余域</a>。沿用同一缺口的停滞累计。</p></div>
+        <span class="loop-head" aria-hidden="true"></span><span class="loop-side" aria-hidden="true"></span><span class="loop-tail" aria-hidden="true"></span>
+        <div class="connector continue" aria-hidden="true">↓</div>
+      </div>
+      <div class="step"><h3>逐族证明</h3><p>给出保边构造或严格降阶到已证终端。有限核经证明完备且可控后，方可用证书兜底。</p></div>
+      <div class="connector" aria-hidden="true">↓</div>
+      <div class="step"><h3>独审、整域验收与回代</h3><p>证明作者与独审分离。主代理核覆盖并集穷尽原域，或核保边严格归约到已证终端，再逐支回代全部原输入。</p></div>
+      <p class="budget">限时 SAT/CP 返回 UNKNOWN 时回到结构推导。连续两个有界回合无整域增量，暂停当前机制。</p>
+    </figure>
+  </div>
+  <p class="case"><strong>E16 的实际应用。</strong> 双桥等结构先剥离直接可证输入。唯一平衡轴余域的大面按小面参数收敛为 19、98、72 个必要代表，小面孔位保留为符号变量。共同运输同一原匹配，经必要公式及编译将假想反例送入冻结 CNF。DRAT-trim 验真 RUP 证书，构造分支逐一回代并保全部原边。</p>
+  <p class="compact"><a href="guide/Q7_WORKFLOW_CHANGES.md">MathRSI 本地执行规则</a><a href="trajectories/SESSION_INDEX_E16.md">E16 研究轨迹</a><a href="research-wiki/README.md">MathRSI 研究 Wiki</a><a href="guide/ARCHIVE_STRUCTURE.md">原档结构</a><a href="README.md">归档用法</a></p>
+</section>
+
+<section aria-labelledby="proof-title">
+  <h2 id="proof-title">证明与核验入口</h2>
+  <p>至少 57 边直接调用 E14。恰 56 边且有一对相邻原孔时，加入该短边再调用 E14。独立原孔时，记 δ<sub>j</sub> 为第 j 个位一半面的偶孔数减奇孔数，μ 为七个 |δ<sub>j</sub>| 的最小值。七轴计数给出 μ ≤ 4，五个已证整族穷尽输入。</p>
+  <div class="th-wrap"><table><thead><tr><th scope="col">分支</th><th scope="col">证明入口</th><th scope="col">关键对象</th></tr></thead><tbody>
+    <tr><td>E16 合并、μ = 0</td><td><a href="research/seven_directions/mu0_global_2026_11_15/MU0_FULL_CLOSURE.md">完整证明</a> · <a href="research/seven_directions/mu0_global_2026_11_15/MU0_FULL_CLOSURE_REVIEW.md">终审</a></td><td>共同运输、189 行必要大面表、符号小面及 RUP</td></tr>
+    <tr><td>μ = 1</td><td><a href="research/seven_directions/mu1_global_2026_11_15/delta2_extension/MU1_STRUCTURED_CLOSURE.md">完整证明</a></td><td>中央切直接构造、边缘型两份 RUP</td></tr>
+    <tr><td>μ = 2</td><td><a href="#baseline-mu2">基线证明与审计</a></td><td>精确穷尽与固定正计划</td></tr>
+    <tr><td>μ = 3</td><td><a href="research/seven_directions/mu3_hard_first_2026_11_15/MU3_FULL_CLOSURE.md">完整证明</a></td><td>直接剥离、奇支撑固定计划、偶奇两份 RUP</td></tr>
+    <tr><td>μ = 4</td><td><a href="#baseline-mu4">基线证明与审计</a></td><td>完整偶组与四类奇组</td></tr>
+  </tbody></table></div>
+  <p class="meta">基线条目按归档用法解析。μ = 0 的联合 CNF 有 132,945 个变量与 1,506,761 条子句，验真状态为 s VERIFIED。整装终审等级为 PASS · same-family · provisional · sound-modulo-imports。</p>
+</section>
+<section aria-labelledby="baseline-title">
+  <h2 id="baseline-title">基线证明的归档位置</h2>
+  <p>以下文件位于原档 <code>D:\Ruskey–Savage conjecture n=7.rar</code> 的 <code>research/seven_directions_continuation/</code>。按<a href="README.md">归档用法</a>组装后，所需基线文件会恢复到证明引用的相对位置。</p>
+  <dl>
+    <dt><strong>E14</strong></dt><dd><code>R7_MU1_FULL_CLOSURE.md</code> 与 <code>R7_MU1_CENTRAL_T1_AND_E14_REVIEW.md</code></dd>
+    <dt id="baseline-mu2"><strong>E16 μ = 2</strong></dt><dd><code>R7_E16_MU2_FULL_CLOSURE.md</code> 与 <code>R7_E16_MU2_FULL_REVIEW.md</code></dd>
+    <dt id="baseline-mu4"><strong>E16 μ = 4</strong></dt><dd><code>R7_E16_MU4_FULL_CLOSURE.md</code> 与 <code>R7_E16_MU4_FULL_CLOSURE_REVIEW.md</code></dd>
+  </dl>
+</section>
+</main></body>
+</html>

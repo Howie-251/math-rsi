@@ -1,0 +1,408 @@
+{
+  "audit_skill": "ARIS proof-checker local adaptation under Q7_WORKFLOW",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_imports",
+  "summary": "C6+, Q+, residual necessary structure and one strictly new fixed input pass modulo explicit accepted imports; full m2/R7/P7 remain open.",
+  "caller": "/root",
+  "reviewer_agent": "/root/r7_nearbalanced_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit workspace instruction and caller request; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-05T14:07:45.619156+00:00",
+  "audited_input_hashes": {
+    "R7_NEAR_BALANCED_BLOCKS.md": "f14078566876269bfd0c4f6d64a016b720872129e612307037c07571f8ab0e89",
+    "R7_NEAR_BALANCED_BLOCKS_INPUTS.json": "3a94390fb6a2db67659d18faa08ea00c57dfcc9361222739dded3ebed382e510",
+    "R7_NEAR_BALANCED_FIXED_WITNESS.md": "c383c3104970465a2a01e8b278b7df6c4dbc662dc68d76ed0ff43e02627ced50",
+    "R7_NEAR_BALANCED_FIXED_WITNESS.json": "0a2b530b66bc3cafd81b8c639752aec858bc8b43c9762b1368884b49a61cae6c"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.md": "ceed5d7b5f58db58f7dd97a207f02a95efdc880b531ff65488118095b4f4bd19",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "../six_directions/P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "../six_directions/P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "R7_BALANCED_Q5_BLOCKS.md": "857531f04a85c80f8582eb2249b41b3c2f6622a92b01cc9c1a1b464fd5834d55",
+    "R7_BALANCED_Q5_BLOCKS_REVIEW.md": "d024ea545a67e6e06ee0a650dfa3ff8757187f9f44296adc75ae2d9bb6fbdab8",
+    "R7_BALANCED_Q5_BLOCKS_REVIEW.json": "f545d7df6a6eac2bca34df3a603a9a8e4ffcc3c937c663d735b4d2eb6d5b7dfc",
+    "PROOF_PACKAGE.md": "192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "Q7_EIGHT_NINE_CUTS.md": "d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.md": "7e841562b50ca992e4cd5c37d90766630451ff9eeac4e21b160489ec45265167",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "A6_DELTA1_REDUCTION.md": "efda01b6a9794334c145b4cd38ad9ff13ff6ed728e020da8600b7800867c9028",
+    "A6_DELTA1_REFINEMENT.md": "b5ec50e3d66d38d9bededdb04afaa7d89cdc2602c9907c00daa7a2053db71a58",
+    "A6_DELTA1_REVIEW.json": "672dc03dabfae36c851ab23355e05890b1d40b76ef2859cbf105448ed87b5917",
+    "A6_DELTA1_REFINED_REVIEW.json": "8fa983009219c86d379b18141dea1635d07e9d5dcc60279caf1bead13f3ac0ec",
+    "R7_ODD_BRIDGE_MARGIN.md": "0708043bf9d11a6a38d1ac48f62e1391ee4b1af2ec49b34cafa195c001c08ce6",
+    "R7_ODD_BRIDGE_MARGIN_REVIEW.json": "944dcaeabda9f9663c4f898a5978a9f9475f5f56b749f4c9ecad54b3d19f6cb5",
+    "R7_SIGNED_HOLE_MARGIN.md": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.json": "d609b9cc5c641f972999339a80702fa7c32712095d7604ebfc1a760356a1b09a",
+    "R7_THREE_FREE_PAIRINGS.md": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+    "R7_THREE_FREE_PAIRINGS_REVIEW.json": "d40e08727ea165d393b9a359aac91b719bd29e5e6325a6f48566472ea6eb7980",
+    "R7_BALANCED_FACE_SPLICE.md": "81cecfb9699e47625a5febe3efbbcb369f01d3deb0e59b76acc570e5fe9c40ca",
+    "R7_BALANCED_FACE_SPLICE_REVIEW.json": "94b6c1bc91cfe7fe46e3edd40528fb577b66916a884b4431279e8d34c967f05c",
+    "R7_EIGHT_HOLE_CYCLE_PROJECTION.md": "9691d5f0d49cc300dec444f93ca852ec68f38107e8bf2e4d0bd6a1db70a64aa2",
+    "R7_EIGHT_HOLE_CYCLE_REVIEW.json": "136c4f0790189b8583b6e607ac5e591a472762a4af5932f4d63a2fa637b0956f"
+  },
+  "additional_comparison_hashes": {
+    "R7_TWO_CROSS_SEPARATING_FACE.md": "27d613dbfb67011fc2ded540854fc1ac5f3699f63a714b66dde74618599d522d",
+    "R7_TWO_CROSS_SINGLE_INTERNAL.md": "54c4c994dc4d62432bde706bf8d8d4843dfab94468dc26005b890be3f5d26a0c",
+    "R7_SINGLE_I_FLEXIBLE_EAR.md": "1495d28e25713423f2d538b89dbfee08c78131a67b90687e664c8a6023b4c9c8",
+    "R7_SINGLE_I_SOURCE_CUT.md": "ed402cda79923363fcadb67246b58c923353407b016b72985e955f08dbc07a67"
+  },
+  "author_checker_artifact_hashes": {
+    "r7_near_balanced_fixed_probe.py": "3aef138ae39cdb308af236b58d75621cb1570b8c3ab0895d057dc4464fdfb98e"
+  },
+  "author_manifest_bindings_checked": 30,
+  "direct_accepted_source_bindings_checked": [
+    {
+      "report": "../six_directions/Q5_A10_FULL_REVIEW.json",
+      "source": "Q5_A10_FULL_CLOSURE.md",
+      "expected": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+      "status": "PASS"
+    },
+    {
+      "report": "../six_directions/P6_FULL_REVIEW.json",
+      "source": "P6_FULL_CLOSURE.md",
+      "expected": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+      "status": "PASS"
+    },
+    {
+      "report": "R7_BALANCED_Q5_BLOCKS_REVIEW.json",
+      "source": "R7_BALANCED_Q5_BLOCKS.md",
+      "expected": "857531f04a85c80f8582eb2249b41b3c2f6622a92b01cc9c1a1b464fd5834d55",
+      "status": "PASS"
+    },
+    {
+      "report": "Q7_EIGHT_NINE_CUTS_REVIEW.json",
+      "source": "Q7_EIGHT_NINE_CUTS.md",
+      "expected": "d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+      "status": "PASS"
+    },
+    {
+      "report": "Q7_EIGHT_NINE_CUTS_REVIEW.json",
+      "source": "PROOF_PACKAGE.md",
+      "expected": "192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+      "status": "PASS"
+    }
+  ],
+  "checker_artifact_hashes": {
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW_check.py": "60e206fafbd8d91f48b81fa022c44e30567c8f02e4347fcefe609dbc9b9b3a86",
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW_check.json": "2af050ee7190887dc0d19d4b4e21a5d57181ff85a705f0a2eb858e6d70bc8205",
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW_emit.py": "bf63ec21393c893accb6f124f5ea530c72a16a3216ccc2be7d1d370978c81f01"
+  },
+  "trace_path": "R7_NEAR_BALANCED_BLOCKS_REVIEW.md",
+  "audit_report_sha256": "a84d6221ee54222d2f438e699e20daef5cf577d8656d2055d235fb4133d6ea65",
+  "skill_sha256": "b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a",
+  "external_imports": [
+    {
+      "name": "Fink complete-graph perfect matching extension C0",
+      "scope": "dimensions 6 and 7; adds only short edges",
+      "reproved_here": false
+    },
+    {
+      "name": "N10 balanced two-hole circle C1 literature corollary",
+      "scope": "arbitrary K(Q6) matching; one free hole of each color; adds only short edges",
+      "source": "PROOF_PACKAGE.md section 3, proposition 3 and following paragraph",
+      "reproved_here": false
+    }
+  ],
+  "details": {
+    "obligations": [
+      {
+        "id": "C01",
+        "status": "PASS",
+        "location": "§3 差0",
+        "discharge": "原孔两面平衡恰是旧C6假设；无密度或短匹配限制。PASS。"
+      },
+      {
+        "id": "C02",
+        "status": "PASS",
+        "location": "§3 WLOG",
+        "discharge": "交换面名、颜色名保持匹配、孔及短边定义；可逆地使差为(1,−1)。PASS。"
+      },
+      {
+        "id": "C03",
+        "status": "PASS",
+        "location": "§3 奇跨数",
+        "discharge": "32=2内部边数+q+(2a−1)，故q正奇；不依赖规定边是否异色。PASS。"
+      },
+      {
+        "id": "C04",
+        "status": "PASS",
+        "location": "§3.1 r=1",
+        "discharge": "每色总孔a+b−1=1，正是C1的异色双孔域。PASS。"
+      },
+      {
+        "id": "C05",
+        "status": "PASS",
+        "location": "§3.1 q=1",
+        "discharge": "r≥2⇒a+b≥3；同时换面换色可令供体多数孔b≥2，镜像至多一个落在唯一跨端口。PASS。"
+      },
+      {
+        "id": "C06",
+        "status": "PASS",
+        "location": "§3.1 q≥3",
+        "discharge": "b≥1保证存在多数孔ℓ；u=ℓ*颜色相反，新增ℓu短。PASS。"
+      },
+      {
+        "id": "C07",
+        "status": "PASS",
+        "location": "§3.2 自由u",
+        "discharge": "加ℓu仍匹配，X删多数O、Y删多数E后各平衡，q+1正偶；C6合法。PASS。"
+      },
+      {
+        "id": "C08",
+        "status": "PASS",
+        "location": "§3.3 Y输入",
+        "discharge": "TY∪{ℓ}互异、对FY自由且偶数；FY+D的孔恰为HY−ℓ，(b−1):(b−1)。PASS。"
+      },
+      {
+        "id": "C09",
+        "status": "PASS",
+        "location": "§3.3 删D",
+        "discharge": "非空不交D从单圈删除给覆盖Y的路径族，无圈分量，端点恰为D端点。PASS。"
+      },
+      {
+        "id": "C10",
+        "status": "PASS",
+        "location": "§3.3 转移",
+        "discharge": "原跨边按真实双射附接，ℓ附短桥至u；u非跨端口，所得R端点TX∪{u}互异。PASS。"
+      },
+      {
+        "id": "C11",
+        "status": "PASS",
+        "location": "§3.3 内部冲突",
+        "discharge": "p原内部覆盖，不在TX∪{u}；s∈TX。删up与us并加ps后仍匹配，孔恰HX∪{u}。PASS。"
+      },
+      {
+        "id": "C12",
+        "status": "PASS",
+        "location": "§3.3 差二调用",
+        "discharge": "孔O:E=(a+1):(a−1)，u多数；u原covered⇒a≤15，且a≥1。Q5恰避u合法。PASS。"
+      },
+      {
+        "id": "C13",
+        "status": "PASS",
+        "location": "§3.3 展开",
+        "discharge": "ps替换为pu接真实u–s路径；u原缺席，Y路径内部互不交，故恢复up及全部原边且保持单圈。PASS。"
+      },
+      {
+        "id": "C14",
+        "status": "PASS",
+        "location": "§3.4 特选D",
+        "discharge": "u跨端口只可能q≥3；强制D含ℓx且至少还有一条不交边。可配完其余端口。PASS。"
+      },
+      {
+        "id": "C15",
+        "status": "PASS",
+        "location": "§3.4 不提前闭圈",
+        "discharge": "单圈删ℓx及另一不交D边后ℓ,x在不同路径；经u合并两路，不能变闭圈。PASS。"
+      },
+      {
+        "id": "C16",
+        "status": "PASS",
+        "location": "§3.4 实际R",
+        "discharge": "其余跨边接上后端点恰TX−u，q−1≥2；u仅在一路内部。FX+R匹配、孔HX∪u。PASS。"
+      },
+      {
+        "id": "C17",
+        "status": "PASS",
+        "location": "§3.4 展开",
+        "discharge": "Q5避多数u圈合法；展开全部R插入u与Y且恢复xu、FY和所有其他跨边，仍单圈。PASS。"
+      },
+      {
+        "id": "C18",
+        "status": "PASS",
+        "location": "§3.5 范围/完备",
+        "discharge": "covered u限制a≤15；b≤16保证平衡b−1可行。自由/内部覆盖/跨端口穷尽u；零总孔归差0。PASS。"
+      },
+      {
+        "id": "C19",
+        "status": "PASS",
+        "location": "§3 标签与边型",
+        "discharge": "D全删，R及ps全展开；长边只能来自原F，唯一附加物理跨桥ℓu为短边。PASS。"
+      },
+      {
+        "id": "Q01",
+        "status": "PASS",
+        "location": "§4 外跨数",
+        "discharge": "原内部短匹配等色覆盖+各面孔平衡⇒每面原端口两色等数，c偶。PASS。"
+      },
+      {
+        "id": "Q02",
+        "status": "PASS",
+        "location": "§4.1 首次C6+",
+        "discharge": "MA+DA孔恰H∩A，原总平衡与内部近平衡逐点保留；允许辅助长边。PASS。"
+      },
+      {
+        "id": "Q03",
+        "status": "PASS",
+        "location": "§4.1 实际转移",
+        "discharge": "删非空DA，附接唯一原跨边，得全短且互不交的真实转移路，端点为B原端口。PASS。"
+      },
+      {
+        "id": "Q04",
+        "status": "PASS",
+        "location": "§4.1 第二次C6+",
+        "discharge": "MB+RB为匹配且孔恰H∩B，内部近平衡仍原条件；所有RB按实际路径展开。PASS。"
+      },
+      {
+        "id": "Q05",
+        "status": "PASS",
+        "location": "§4.1 全局单圈",
+        "discharge": "插入每个A顶点一次，原M全保留，最终全短；内部新桥不改变外向c条原桥。PASS。"
+      },
+      {
+        "id": "Q06",
+        "status": "PASS",
+        "location": "§4.2 c=0有孔",
+        "discharge": "选有孔面自由z；对侧R6圈在z*有非匹配短边z*y，镜像目标y*异色。原MA全短，P6合法。PASS。"
+      },
+      {
+        "id": "Q07",
+        "status": "PASS",
+        "location": "§4.2–4.3 边界",
+        "discharge": "两路两互异镜像桥组成单圈；无孔时原匹配完美、C0合法。PASS。"
+      },
+      {
+        "id": "S01",
+        "status": "PASS",
+        "location": "§5 旧Q及逆否",
+        "discharge": "0差包含于≤1；未满足Q+时每个平衡外切分至少一面所有内部差绝对值≥2。整数性及量词正确。PASS。"
+      },
+      {
+        "id": "W01",
+        "status": "PASS",
+        "location": "§6 真原输入",
+        "discharge": "独立从56条原边重算112互异端点、每边短、16孔8:8且孔独立。PASS。"
+      },
+      {
+        "id": "W02",
+        "status": "PASS",
+        "location": "§6 几何门",
+        "discharge": "唯一平衡外向i6；252个旧Q门全失败；Q+门(6,0,0)，四块1:0、3:4、4:3、0:1。PASS。"
+      },
+      {
+        "id": "W03",
+        "status": "PASS",
+        "location": "§6 旧规则排除",
+        "discharge": "各方向≥4排除列明两桥型；16孔排除B；极大56边排除≥60边补全；Q失败亦排除其T推论。PASS。"
+      },
+      {
+        "id": "G01",
+        "status": "PASS",
+        "location": "全局依赖/范围",
+        "discharge": "无隐藏共同选择量词；实际路径先取后压缩。固定见证不证明全称，不提升完整R7/P7或m2状态。PASS。"
+      }
+    ],
+    "issues": [],
+    "revisions_required": 0,
+    "no_open_scoped_obligations": true
+  },
+  "scope": {
+    "C6plus": true,
+    "Qplus": true,
+    "old_Q_included": true,
+    "residual_necessary_condition": true,
+    "all_short_realizations_of_fixed_hole_set": true,
+    "strict_new_coverage_over_listed_old_rules": true,
+    "full_two_cross_edge_family": false,
+    "full_m2": false,
+    "full_R7": false,
+    "full_P7": false,
+    "seven_direction_lift": false,
+    "historical4228_reduced": false
+  },
+  "independent_fixed_arithmetic": {
+    "status": "PASS",
+    "matching_count": 1,
+    "solver_calls": 0,
+    "producer_script_executed": false,
+    "source_sha256": "0a2b530b66bc3cafd81b8c639752aec858bc8b43c9762b1368884b49a61cae6c",
+    "edge_count": 56,
+    "direction_counts": [
+      4,
+      6,
+      4,
+      4,
+      18,
+      16,
+      4
+    ],
+    "holes": [
+      0,
+      3,
+      5,
+      9,
+      47,
+      55,
+      59,
+      61,
+      66,
+      68,
+      72,
+      80,
+      118,
+      122,
+      124,
+      127
+    ],
+    "color_counts": [
+      8,
+      8
+    ],
+    "inclusion_maximal": true,
+    "balanced_outer_coordinates": [
+      6
+    ],
+    "old_Q_gates_checked": 252,
+    "old_Q_passing": [],
+    "Qplus_passing": [
+      [
+        6,
+        0,
+        0
+      ]
+    ],
+    "fixed_gate": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "exact_outer_bridge_count": 4,
+    "exclusions": {
+      "two_edge_direction_rules": true,
+      "B_max12_holes": true,
+      "E8_completion": true,
+      "old_Q": true
+    },
+    "hamilton_certificate_produced": false
+  },
+  "solver_calls": 0,
+  "producer_script_executed": false,
+  "matching_family_enumeration": false,
+  "high_hole_family_enumeration": false,
+  "large_certificates_replayed": false,
+  "all_transitive_reports_rehashed": false,
+  "transitive_imports_reproved": false,
+  "run_state_reference_sha256": "fda9b0bbd60ad6208782716f70a7057ee1be25de6ef194e348ee143059d492ec",
+  "mathematical_closure_state_updated": false
+}

@@ -1,0 +1,191 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reviewer_agent_id": "/root/q6_a6_easy_cuts_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user configuration relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T08:03:34.803839+00:00",
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "external_primary_source": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "read_directly": true,
+    "locations": [
+      "page 1 extension definition and Theorem 2",
+      "page 4 Theorems 11 and 12"
+    ],
+    "original_proofs_reproved": false
+  },
+  "reason_code": "all_forest_splice_obligations_complete_modulo_explicit_imports",
+  "summary": "Universal arbitrary-complete-graph perfect matching / short forest forcing lemma and zero-crossing corollary pass modulo Theorem 11 and the independently reread short-matching square-switch lemma.",
+  "trace_path": "PERFECT_MATCHING_SPLICE_REVIEW.md",
+  "audited_input_hashes": {
+    "PERFECT_MATCHING_SPLICE.md": "sha256:78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4"
+  },
+  "imported_dependency_hashes": {
+    "ZERO_CROSSING_PATHS.md": "sha256:35858010b280711e715a2406aa85ba567fc641dd260035d2fd3fea1936c2e169",
+    "ZERO_CROSSING_REVIEW.json": "sha256:94fa2b379e644d086c19b5df5bdb226276b41b3cde7afe50fa0f5094ff384db2"
+  },
+  "checker_artifact_hashes": {
+    "A6_EASY_CUTS_REVIEW_check.py": "sha256:8206c17e690b01c5d6ad2483986846248dcdf89ed7221169b798e47d73576c5d"
+  },
+  "report_hash": "sha256:2db20cb99e3b0f9a6eaa7d445ba9957234bc506c7a8ae64b7443da913b9e0f48",
+  "details": {
+    "theorems_audited": 2,
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "micro_obligations_closed": 16,
+    "micro_obligations": [
+      {
+        "id": "P01",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P02",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P03",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P04",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P05",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P06",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P07",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P08",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P09",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P10",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P11",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P12",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P13",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P14",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P15",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "P16",
+        "status": "DISCHARGED",
+        "location": "PERFECT_MATCHING_SPLICE_REVIEW.md proof-obligation ledger"
+      }
+    ],
+    "arbitrary_complete_graph_prescribed_edges_allowed": true,
+    "all_added_physical_edges_short": true,
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "full_q6_A6_proved": false,
+    "q7_eight_hole_layer_closed": false,
+    "full_P7_proved": false,
+    "deterministic_checks": {
+      "status": "PASS",
+      "normalized_geometries": 110780,
+      "counts": {
+        "delta2_candidate": 96440,
+        "isolated_z_candidate": 280,
+        "delta3_candidate": 11048,
+        "residual_geometry": 3012
+      },
+      "closed_geometries": 107768,
+      "residual_count": 3012,
+      "per_minority": [
+        {
+          "q": 3,
+          "allowed": 22,
+          "total": 44660,
+          "counts": {
+            "delta2_candidate": 35988,
+            "isolated_z_candidate": 240,
+            "delta3_candidate": 6960,
+            "residual_geometry": 1472
+          }
+        },
+        {
+          "q": 15,
+          "allowed": 20,
+          "total": 33060,
+          "counts": {
+            "delta2_candidate": 29252,
+            "delta3_candidate": 2888,
+            "isolated_z_candidate": 40,
+            "residual_geometry": 880
+          }
+        },
+        {
+          "q": 63,
+          "allowed": 20,
+          "total": 33060,
+          "counts": {
+            "delta3_candidate": 1200,
+            "delta2_candidate": 31200,
+            "residual_geometry": 660
+          }
+        }
+      ],
+      "residual_records_and_cut_profiles_compared": true,
+      "half_layer_intersection_checks": 296,
+      "square_switch_checks": 160,
+      "prescribed_matchings_enumerated": false,
+      "full_affine_orbits": false
+    }
+  },
+  "scope": "Only the named lemma/corollary or three sufficient cut classes and exact normalized geometry census; neither complete Q6 A6 nor Q7 eight-hole paths."
+}

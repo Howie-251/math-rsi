@@ -1,0 +1,205 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "D1_transfer_and_exact_allowed_graph_reduction_complete_modulo_explicit_imports",
+  "summary": "D1 universal cut lemma and exact G-perfect-matching residual characterization pass. Exhaustive 64-orbit evidence closes 1726 more normalized configurations; 1286 configurations remain method residual. Full Q6 A6 and P7 remain open.",
+  "reviewer_agent_id": "/root/q6_a6_delta1_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user override relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T08:07:48.276938+00:00",
+  "audited_input_hashes": {
+    "A6_DELTA1_REDUCTION.md": "sha256:efda01b6a9794334c145b4cd38ad9ff13ff6ed728e020da8600b7800867c9028",
+    "probe_a6_delta1.py": "sha256:7ab36a37570c160379f68e54692ce1255d62894d63e2255f0da3f5781b5d4db5",
+    "A6_DELTA1_PROBE.json": "sha256:5ce2fcecd02d5c8897f41573e2153577b9e814cdb02f440b20417f1f5e8e307f",
+    "verify_a6_delta1.py": "sha256:df424ba03637d75bddb45f4f9785b652b145060d34eb1eeba0ba75c5c37ea51d",
+    "A6_DELTA1_VERIFICATION.json": "sha256:dffcd39d55051623850d7316e16fc21cbf0a15eeaaecc89acc2783039442a646"
+  },
+  "imported_dependency_hashes": {
+    "A6_EASY_CUTS.md": "sha256:b61b9b1effeb12eedd9ead5d45e0c54e570b6c83fd68fbd721404aacdcce45e3",
+    "A6_EASY_CUTS_REVIEW.json": "sha256:0ac3bbfdd53dfc0643dea1a8ff274e296bf95fd7e2583ba71777c30761f13c28",
+    "PERFECT_MATCHING_SPLICE.md": "sha256:78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+    "PERFECT_MATCHING_SPLICE_REVIEW.json": "sha256:a4f94b4cc2b438280e6e67a804ad6ea9672c7c3facc944d7edb1c5c7e3940f27",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "A4_DIMENSIONAL_INDUCTION.md": "sha256:bf7d6da5fc5c5d779cc858f5f095a6ca9fc0685ef6c94fd9f34c72c552da89fc",
+    "A4_DIMENSIONAL_REVIEW.json": "sha256:95d557933a15bb9f51fd813711ad6a30f1614f095c281c81215d1c97c151c647",
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "A4_FULL_REVIEW.json": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403"
+  },
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "trace_path": "A6_DELTA1_REVIEW.md",
+  "report_hash": "sha256:138395be16bcfd60b1c7e683287595fa32678c63257b2c9a00147cc776968dda",
+  "checker_artifact_hashes": {
+    "A6_DELTA1_REVIEW_check.py": "sha256:f61314d4cc438586177cf978a6df260dc43eaeba0be4856538a37c0c74ded845",
+    "A6_DELTA1_REVIEW_check.json": "sha256:8fe9834324a5f81ab8319c69280b4ae08ebf7fc9ab5b7e14ca7538ee81e4d601",
+    "A6_DELTA1_REVIEW_rerun.json": "sha256:dffcd39d55051623850d7316e16fc21cbf0a15eeaaecc89acc2783039442a646",
+    "A6_DELTA1_REVIEW_emit.py": "sha256:7b87e3b838a476f5ebebe9952a70c3e73d6bb30e5ce24e62e8e06c51aa833c64"
+  },
+  "imported_dependency_checks": {
+    "A6_EASY_CUTS_REVIEW.json": {
+      "verdict": "PASS",
+      "all_source_import_hashes_current": true
+    },
+    "PERFECT_MATCHING_SPLICE_REVIEW.json": {
+      "verdict": "PASS",
+      "all_source_import_hashes_current": true
+    }
+  },
+  "details": {
+    "theorems_audited": 4,
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "micro_obligations_closed": 17,
+    "micro_obligations": [
+      {
+        "id": "D01",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D02",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D03",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D04",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D05",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D06",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D07",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D08",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D09",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D10",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D11",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D12",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D13",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D14",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D15",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D16",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      },
+      {
+        "id": "D17",
+        "status": "DISCHARGED",
+        "location": "A6_DELTA1_REVIEW.md proof-obligation ledger"
+      }
+    ],
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "prescribed_matching_enumeration": false,
+    "producer_imported": false,
+    "solver_used": false,
+    "original_verifier_run": true,
+    "original_verifier_output_redirected_only": true,
+    "original_verification_evidence_unchanged": true,
+    "independent_geometry_and_certificate_reimplementation": true,
+    "deterministic_checks": {
+      "status": "PASS",
+      "full_domain": 110780,
+      "residual": 3012,
+      "orbit_count": 64,
+      "transported_certificate_configurations": 3012,
+      "no_D1_configurations": 70,
+      "provided_verifier_matches_saved_evidence": true,
+      "producer_imported": false,
+      "solver_used": false,
+      "source_sha256": "df424ba03637d75bddb45f4f9785b652b145060d34eb1eeba0ba75c5c37ea51d"
+    },
+    "provided_verifier_result": {
+      "status": "PASS",
+      "regenerated_normalized_domain": 110780,
+      "regenerated_residual": 3012,
+      "explicit_group_orbits": 64,
+      "status_orbits": {
+        "TUTTE_CERTIFICATE": 32,
+        "METHOD_RESIDUAL": 32
+      },
+      "status_geometries": {
+        "TUTTE_CERTIFICATE": 1726,
+        "METHOD_RESIDUAL": 1286
+      },
+      "solver_used": false,
+      "full_A6_6_proved": false,
+      "full_P7_proved": false
+    },
+    "dependency_DAG_acyclic": true,
+    "D1_universal": true,
+    "G_perfect_matching_iff_all_D1_excluded_cases": true,
+    "Tutte_necessary_condition_only": true,
+    "full_affine_orbit_enumeration": false,
+    "newly_universally_closed_configurations": 1726,
+    "total_universally_closed_configurations": 109494,
+    "method_residual_configurations": 1286,
+    "method_residual_orbits": 32,
+    "full_q6_A6_proved": false,
+    "q7_eight_hole_layer_closed": false,
+    "full_P7_proved": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false
+  },
+  "scope": "Only D1 sufficient cut theorem, exact restricted-family graph characterization, and finite geometry/certificate reduction. No complete Q6 A6 or P7 claim."
+}

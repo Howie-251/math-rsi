@@ -48,7 +48,7 @@
 
   <section id="evolution" class="evo wrap" aria-labelledby="evo-h">
     <h2 id="evo-h" class="evo-title">MathRSI evolution: base workflow &amp; domain plugins</h2>
-    <p class="evo-deck">v0: standalone tools. v1–v4: shared harness releases. v5: controlled choices and theorem reuse, informed by Q7 research run with v3.</p>
+    <p class="evo-deck">v0: standalone tools. v1–v5: shared harness releases. v6: hardest-remainder gates and primal–dual coevolution, informed by Q7 E16 and C₄-free Q₇ / Q₈ / Q∞ runs.</p>
     <div class="fig-head">
       <div class="ctls">
         <button class="ctl primary" id="play" type="button"></button>
@@ -66,7 +66,7 @@
     <p class="scroll-hint">Swipe to explore versions →</p>
     <div class="scroller" id="scroller">
       <div class="stage" id="stage">
-        <svg class="sky" id="sky" viewBox="0 0 1704 326" role="group" aria-label="Mathematical results by research thread. Persistent bubbles introduce each problem and show improvements with arrows. Property B shows pointwise bounds at v0 and incorporation of the uniform theorem at v1. ECC determines the exact optimal minimum distance for four code parameters, up from three. v4 incorporates a Happy Ending working proof lowering the ES(7) upper bound from 78 to 77. The new degree–diameter (10,4) result increases 2,566 to 2,567 vertices, produced with v2 and feeding v4. v5 incorporates the Q₇ ≥57-edge theorem and 56-edge structure families from a v3 local-adaptation run; full Q₇ remains open. v5 main maintenance receives two newer DD endpoints from v4 plus local updates: (11,5) 37,632 and (12,5) 42,433. Proof tools are recorded separately."></svg>
+        <svg class="sky" id="sky" viewBox="0 0 1936 326" role="group" aria-label="Mathematical results by research thread across v0 to v6. Persistent bubbles introduce each problem and show improvements. Property B shows pointwise bounds at v0 and the uniform k ≥ 12 theorem at v1. ECC determines four exact optimal minimum distances. v4 incorporates Happy Ending working proofs (ES(7) ≤ 77) and the DD (10,4) 2,567-vertex graph. v5 incorporates Q₇ ≥57-edge matchings and DD D5 endpoints (11,5) 37,632 and (12,5) 42,433. v6 incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, and complete Q₇ E16 (≥56 edges). Proof tools and run provenance are recorded separately."></svg>
         <div class="lanes" id="lanes"></div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/></svg>One block = one result or result family</span>
         <span>Color identifies the research problem</span>
       </div>
-      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope. <a href="q7.html">Q₇: ≥57-edge matchings extend; Run: v3 (local adaptation) → v5 feedback.</a> <a href="dd-latest.html">DD follow-up: local +1 / +31; dated-table +1 / +81. Run: v4 + local updates.</a></p>
+      <p class="caption">Property B: <strong>pointwise bounds for k = 5–12 → a uniform theorem for all k ≥ 12</strong>, incorporated at v1. ECC: <strong>3 → 4 code parameters with exact optimal distances d₂(n,k)</strong>—constructions match the upper bounds. Happy Ending: v4 incorporates a working proof lowering the <strong>ES(7) upper bound from 78 to 77</strong>; fewer points suffice to force a convex heptagon. Degree–Diameter: <strong>(10,4), 2,566 → 2,567 vertices</strong>, produced with v2 + DD and feeding v4. Columns show harness evolution and research intake; run versions are stated separately. Click a block for its source and verification scope. <a href="erdos-86-latest.html">Erdős 86: Q₇ 304 (construction verified; ≤304 source-reported) · Q₈ 682–683 · Q∞ ≤ 0.5912405943.</a> <a href="q7.html">Q₇: ≥56-edge matchings extend (complete E16); Run: v3 → v5/v6 feedback.</a> <a href="dd-latest.html">DD follow-up: local +1 / +31; dated-table +1 / +81.</a></p>
     </div>
 
     <div class="panel" id="panel" aria-live="polite"></div>
@@ -153,19 +153,22 @@
       </article>
 
       <article class="card" style="--c:var(--e86)">
-        <div class="viz" data-viz="e86" role="img" aria-label="Four-dimensional cube with one square highlighted, above a number line showing one half, 0.59155 and 0.60318"></div>
+        <div class="viz" data-viz="e86" role="img" aria-label="Four-dimensional cube with one square highlighted, above a number line showing one half, 0.59124 and 0.60318"></div>
         <p class="vcap">Q₄ with one square (C₄) · density scale</p>
         <p class="r-problem"><b>Erdős Problem 86</b><span>Square-free hypercube subgraphs</span></p>
-        <h3>A sharper bound for Erdős Problem 86</h3>
+        <h3>Finite and asymptotic bounds for C₄-free cubes</h3>
         <div class="r-fig">
-          <p class="r-kicker">Subgraphs of <span class="math" data-tex="Q_n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Q_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> without <span class="math" data-tex="C_4"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">C_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>: asymptotic edge density</p>
-          <p class="r-big"><b class="r-n">&lt; 0.59155154</b></p>
-          <p class="r-from"><span>Previous reference <b class="r-n">0.60318</b></span><span>Conjectured limit <b class="r-n">1/2</b> · open</span></p>
+          <p class="r-kicker">Subgraphs of <span class="math" data-tex="Q_n"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Q_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> without <span class="math" data-tex="C_4"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">C_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>: per-setting results</p>
+          <ul class="e86-slist">
+            <li><span>Q₇ (n = 7)</span><b class="r-n">304</b><span class="e86-scope">304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass.</span></li>
+            <li><span>Q₈ (n = 8)</span><b class="r-n">682–683</b><span class="e86-scope">Four 682-edge seeds + Theorem B (provisional audit); ≤682 open.</span></li>
+            <li><span>Q∞ (density)</span><b class="r-n">≤ 0.5912405943</b><span class="e86-scope">T3 proved · T4 ≤ 0.5912405942 · limit 1/2 open.</span></li>
+          </ul>
         </div>
-        <p class="r-why"><b>Why it matters</b> The bound limits how many cube edges can remain without a four-cycle, narrowing the gap toward the conjectured density of one half.</p>
-        <p class="r-how"><b>Method</b> Make local views agree on one common completion.</p>
-        <div class="meta"><span class="status">Exact certificate · no Lean</span><a href="../../../plugins/hypercube-extremal/archive/source/START_HERE.html">Read ↗<span class="source-language" data-no-i18n>中文</span></a><button class="trace" type="button" data-case="e86">Trace in evolution ↑</button></div>
-        <details><summary>Scope &amp; verification</summary><p>Exact bound 23662061277957791 / 40000000000000000. A local exact replay checks all 13,150,453 legal Q₄ completions; the high-dimensional step is analytic averaging.</p></details>
+        <p class="r-why"><b>Why it matters</b> Tighter ceilings in Q₇, Q₈ and arbitrary dimension Qₙ narrow how many cube edges can avoid a four-cycle.</p>
+        <p class="r-how"><b>Method</b> Couple local flags, degree potentials and primal–dual coevolution on the same graph.</p>
+        <div class="meta"><span class="status">Exact &amp; provisional bounds · no Lean</span><a href="erdos-86-latest.html">Results &amp; methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a><a href="../../../plugins/hypercube-extremal/archive/source/START_HERE.html">Historical Q₄ ↗<span class="source-language" data-no-i18n>中文</span></a><button class="trace" type="button" data-case="e86">Trace in evolution ↑</button></div>
+        <details><summary>Scope &amp; verification</summary><p>Q₇: two explicit 304-edge C₄-free constructions verified; 304 upper bound as reported in the source package, not re-verified in this pass (21 raw .cnf/.drup traces omitted upstream). Q₈: four 682-edge seeds and C++17 13,150,453-completion replay verified; Theorem B whole-proof audit is same-family/provisional and imports 25 Q₆ DRAT certificates; ex(Q₈, C₄) ≤ 682 remains open. Q∞: T3 = 681653995482306581 / 1152921504606846976 ≤ 0.5912405943 and T4 = 9701859764505653085708308080340303 / 16409326186106551516455239680000000 ≤ 0.5912405942 (via a 5-line hypergeometric tower for all n ≥ 1024), both rechecked in 128-bit C++20; 0.5907 and retracted 0.5899 are non-theorems.</p></details>
       </article>
 
       <article class="card" style="--c:var(--q6)">
@@ -180,7 +183,7 @@
         </div>
         <p class="r-why"><b>Why it matters</b> Any set of disjoint edges in the six-dimensional cube can be included in one cycle visiting all 64 vertices. This settles the six-dimensional case; the general conjecture remains open.</p>
         <p class="r-how"><b>Method</b> A finite forest-rank certificate covers the universal matching family.</p>
-        <aside class="q7-update"><strong>Q₇ · every matching with ≥57 edges</strong><p>A Hamilton cycle on all 128 vertices retains every prescribed edge. At 56 edges, complete structure families are available; full Q₇ remains open.</p><p>Run: v3 (local adaptation) → methods feed v5.</p><a href="q7.html">Q7 result & methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a></aside>
+        <aside class="q7-update"><strong>Q₇ · every matching with ≥56 edges</strong><p>Complete E16 closure across all 16-hole classes μ ∈ {0,1,2,3,4}: a Hamilton cycle on all 128 vertices retains every prescribed edge. Layers ≤55 edges and full Q₇ remain open.</p><p>Run: v3 (local adaptation) → methods feed v5 &amp; v6.</p><a href="q7.html">Q7 result &amp; methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a></aside>
         <div class="meta"><span class="status">Computational proof · audit provisional</span><a href="../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html">Read ↗<span class="source-language" data-no-i18n>中文</span></a><button class="trace" type="button" data-case="q6">Trace in evolution ↑</button></div>
         <details><summary>Scope &amp; verification</summary><p>Finite replay rebuilds 1,048,576 connectivity bits and proves rank 1024 for 1024 forests. The whole-proof audit is same-family and provisional; no Lean.</p></details>
       </article>
@@ -253,7 +256,7 @@ Use mathrsi-research on &lt;your problem&gt;</code></pre>
       <div><h3>Project</h3>
         <a href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a>
         <a href="https://github.com/lisresearchgroup/math-rsi#readme">README ↗</a>
-        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V5_CHANGES.md">v5 changes ↗</a>
+        <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V6_CHANGES.md">v6 changes ↗</a>
       </div>
       <div><h3>How it works</h3>
         <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/DOMAIN_ROUTING.md">Domain routing ↗</a>

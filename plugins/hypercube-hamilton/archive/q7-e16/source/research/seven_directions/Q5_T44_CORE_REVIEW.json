@@ -1,0 +1,127 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user configuration relayed by parent; actual served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T08:41:16.982911+00:00",
+  "thread_id": "/root/q6_a6_final_independent_audit",
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "reason_code": "single_marked_T44_orbit_all_certificate_obligations_complete",
+  "summary": "The marked orbit H={0,3,5,27}, U={0,5} passes all 8192 forest and column checks, 67108864 connectivity bits, and independent GF(2) elimination rank8192; universal extension follows modulo the explicit general rank theorem.",
+  "trace_path": "Q5_T44_CORE_REVIEW.md",
+  "audited_input_hashes": {
+    "Q5_T44_CORE_METHOD.md": "sha256:9db7945938bc664a0bc55e2ccba0e369f9882c5207b3406d226fb9e2582937d3",
+    "Q5_T44_CORE_config.txt": "sha256:255b6507750ea88b334cc1f0b1a163b343dedebd1c1c0c6bd8338f7994573040",
+    "Q5_T44_CORE_forests.bin": "sha256:ba4a8f17cfbf8762b3b75a98468c23ceefc2c067b9342cb8b61b742ccc89a9db",
+    "Q5_T44_CORE_pairs.bin": "sha256:a804926aa54fa620e5b18bbdbfc7180333c3f0340a37aa1b4076bf3571d34c85",
+    "Q5_T44_CORE_columns.bin": "sha256:565e340eead9cf3ac12ce1a1ef94b533736144c2fcb768f70f7f52d6476fe38a",
+    "Q5_T44_CORE_matrix.bin": "sha256:72ad466124d3ce3ed0fb91e92d34e934bc183b019e14b2ea9fc91acd56bed001"
+  },
+  "imported_dependency_hashes": {
+    "Q5_B4_FOREST_METHOD.md": "sha256:b8a348a5f8be6199cca28ddf550ada47593228d020347406c16364437e7042b2",
+    "../six_directions/A10_ORBIT3_UNIVERSAL_PRIMARY_SOURCE.md": "sha256:f4599601fa6491d50136095f068833db8d4078f80ca7ea9010194f7b2024e112"
+  },
+  "external_primary_source": {
+    "url": "https://pure.tue.nl/ws/portalfiles/portal/99596886/1211.1506.pdf",
+    "read_directly": true,
+    "locations": [
+      "page1 all-complete-graph matching definition",
+      "page9 Theorem3.4 and Corollary3.5"
+    ],
+    "import": "rank_GF2(H_28) <= 2^(28/2-1) = 8192",
+    "original_theorem_reproved": false
+  },
+  "checker_artifact_hashes": {
+    "Q5_T44_CORE_REVIEW_check.cpp": "sha256:79b9ff6f51823279b8a591019fe82d520565c6e9d4ebc2dd11b031d4f0886bac",
+    "Q5_T44_CORE_REVIEW_check.exe": "sha256:4d9faaf2ebc35acc79ab38bf074131a0a09192677816cdb777c70ee31f93deb7",
+    "Q5_T44_CORE_REVIEW_check.json": "sha256:f8e721627a92a7733392389e93acd04cbb534b6f2ce56e37eb1c86207b066325"
+  },
+  "report_hash": "sha256:79057ba574bb1ea36ddb5deed91047ed01b6692604e5907dfcb39eb09e02e425",
+  "details": {
+    "theorems_audited": 1,
+    "issues": [],
+    "micro_obligations_closed": 10,
+    "micro_obligations": [
+      {
+        "id": "T01",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T02",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T03",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T04",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T05",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T06",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T07",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T08",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T09",
+        "status": "DISCHARGED"
+      },
+      {
+        "id": "T10",
+        "status": "DISCHARGED"
+      }
+    ],
+    "deterministic_checks": {
+      "verdict": "PASS",
+      "forests": 8192,
+      "columns": 8192,
+      "matrix_bits": 67108864,
+      "rank": 8192
+    },
+    "all_short_edges": true,
+    "forest_edge_count": 16,
+    "forest_record_bytes": 32,
+    "dummy_vertex_used": false,
+    "included_holes": [
+      3,
+      27
+    ],
+    "omitted_holes": [
+      0,
+      5
+    ],
+    "producer_pivots_used": false,
+    "producer_combos_used": false,
+    "producer_search_source_used": false,
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "single_marked_orbit_universal": true,
+    "all_T44_proved": false
+  },
+  "scope": "Exactly one jointly marked hole/omission orbit and all complete-graph prescribed matchings on its 28 covered vertices; not all T44, Q7 eight-hole paths or P7."
+}

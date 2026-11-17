@@ -1,0 +1,14 @@
+{
+  "n": 3,
+  "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []},
+  "provider": {"backend": "codex", "model": "gpt-6.1-sol", "effort": "medium", "timeout_seconds": 240},
+  "seed": 31,
+  "search_steps": 12,
+  "max_graphs": 4,
+  "program_timeout_seconds": 15,
+  "bootstrap_random": 3,
+  "metrics": [],
+  "initial_inequalities": [{"name": "q3_target", "coefficients": {"edges": 1}, "rhs": 9, "conditions": []}],
+  "exhaustive_oracle": true,
+  "research_context": "Small integration test of program evolution, exact indicators, conjectures and feedback. No Q8 breakthrough is being claimed. Use a short bounded algorithm that calls api.reward during search."
+}

@@ -1,0 +1,331 @@
+{
+  "n": 8,
+  "goal": {
+    "metric": "edges",
+    "sense": "max",
+    "target": 683,
+    "conditions": []
+  },
+  "provider": {
+    "backend": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "timeout_seconds": 240
+  },
+  "seed": 23,
+  "search_steps": 80,
+  "max_graphs": 4,
+  "program_timeout_seconds": 60,
+  "bootstrap_random": 2,
+  "seed_files": [
+    "../../../archive/q8-683/research/ex_qn_c4/proofs/q8_seed_isometries_cycle011/seed1.edges",
+    "../../../archive/q8-683/research/ex_qn_c4/proofs/q8_seed_isometries_cycle011/seed2.edges",
+    "../../../archive/q8-683/research/ex_qn_c4/proofs/q8_seed_isometries_cycle011/seed3.edges",
+    "../../../archive/q8-683/research/ex_qn_c4/proofs/q8_seed_isometries_cycle011/seed4.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete1_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete1_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete1_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete2_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete2_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed1_delete2_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete1_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete1_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete1_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete2_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete2_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed2_delete2_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete1_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete1_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete1_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete2_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete2_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed3_delete2_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete1_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete1_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete1_2.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete2_0.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete2_1.edges",
+    "../launches/near-extremal-20261115/seeds/seed4_delete2_2.edges",
+    "../launches/near-extremal-20261115/star_frontier/ce728e504d5aa7b96599.edges",
+    "../launches/near-extremal-20261115/star_frontier/fe7a02583dcbe4478c6d.edges",
+    "../launches/near-extremal-20261115/star_frontier/685ceecd50d035ac51aa.edges",
+    "../launches/near-extremal-20261115/star_frontier/03fbd1df843efb292812.edges",
+    "../launches/near-extremal-20261115/star_frontier/walk_e681.edges",
+    "../launches/near-extremal-20261115/star_frontier/walk_e680.edges"
+  ],
+  "metrics": [
+    {
+      "name": "q7_edges_min",
+      "kind": "face_aggregate",
+      "dimension": 7,
+      "metric": "edges",
+      "aggregate": "min"
+    },
+    {
+      "name": "q7_edges_max",
+      "kind": "face_aggregate",
+      "dimension": 7,
+      "metric": "edges",
+      "aggregate": "max"
+    },
+    {
+      "name": "q7_J_min",
+      "kind": "face_aggregate",
+      "dimension": 7,
+      "metric": "q7_J",
+      "aggregate": "min"
+    },
+    {
+      "name": "q7_J_sum",
+      "kind": "face_aggregate",
+      "dimension": 7,
+      "metric": "q7_J",
+      "aggregate": "sum"
+    }
+  ],
+  "initial_inequalities": [
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 1
+      },
+      "rhs": 682,
+      "conditions": [],
+      "id": "481aa2232ddff20c",
+      "name": "unrestricted_682_conjecture",
+      "rationale": "Research target, not an established unrestricted upper bound.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 38,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 7,
+        "even_squares": -1
+      },
+      "rhs": 4774,
+      "conditions": [],
+      "id": "60ed19ed0bd97eec",
+      "name": "edge_gain_requires_even_square_defects",
+      "rationale": "Conjectured for every C4-free Q8 subgraph: 7(edges-682)<=even_squares. Thus a 683-edge construction must have at least seven even squares, providing a quantitative nonodd construction direction without imposing the previous 682-edge ceiling. The displayed 682-edge examples attain equality; the 681- and 680-edge samples have slack 14 and 28. By square incidence counting, this is equivalent to 2*squares_0+squares_1+squares_2>=301. The missing proof obligation is this universal square-pattern obstruction, including configurations unrelated to deletions of the supplied odd examples; sample support does not establish it.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 38,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 10,
+        "holes_max_side": 1
+      },
+      "rhs": 6908,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        }
+      ],
+      "id": "627e86b81a4d7335",
+      "name": "dense_parity_star_defect",
+      "rationale": "Conjectured for every C4-free Q8 subgraph with at least 680 edges. For either parity p, define D_p=sum over its vertices of [binomial(d(v),3)-10*d(v)+40]. The registry gives p_holes=6912-10*edges-D_p, so the conjecture asserts D_p>=4 on both parities. It strengthens the elementary nonnegative-defect bound by four and requires holes_max_side<=78 at the 683-edge target. Equality occurs in the displayed 682-edge examples and several 680/681-edge examples. The missing proof obligation is to exclude a parity consisting entirely of degree-5/6 vertices in every graph meeting the explicit density condition. The deletion-derived calibration samples do not prove that structural exclusion.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 76,
+        "q7_J_min": 1
+      },
+      "rhs": 52052,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        }
+      ],
+      "id": "6f64467dfe9bb024",
+      "name": "dense_facet_J_envelope",
+      "rationale": "Conjectured for every C4-free Q8 subgraph with at least 680 edges: some Q7 facet has J<=220+76(682-edges). The displayed 682-edge graphs attain equality, as does the 680-edge graph bc4664668155445cdd61, whose minimum facet J is 372. At 683 edges this requires a facet with J<=144, giving construction a concrete residual to reduce. The missing proof obligation is a simultaneous-facet compatibility argument establishing this envelope for all dense graphs, including graphs outside the deletion-derived samples. Neither sample support nor the open Q7 J>=73 assertion proves it.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "degree_4": 1,
+        "edges": 2
+      },
+      "rhs": 1366,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        },
+        {
+          "metric": "max_degree",
+          "op": "<=",
+          "value": 6
+        },
+        {
+          "metric": "min_degree",
+          "op": ">=",
+          "value": 4
+        }
+      ],
+      "id": "52399575605bc48c",
+      "name": "dense_degree_four_cost",
+      "rationale": "Conjectured for every C4-free Q8 subgraph satisfying these explicit density and degree conditions. The degree-sum identity makes this equivalent to degree_6<=86. Equality occurs in the displayed 682-edge graphs and in 681/680-edge examples with respectively four/six degree-4 vertices. A 683-edge graph in this branch must therefore have no degree-4 vertices and exactly 86 degree-6 vertices, providing a precise construction target. The missing proof obligation is to exclude 87 or more degree-6 vertices throughout this branch using C4-free cube geometry. Calibration samples do not establish that exclusion, and this conjecture supplies no coverage of graphs outside its degree conditions.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 29,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 1,
+        "q7_edges_max": -1
+      },
+      "rhs": 380,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        }
+      ],
+      "id": "884bb8c899b5b07e",
+      "name": "dense_graph_requires_a_heavy_facet",
+      "rationale": "Conjectured for every C4-free Q8 subgraph with at least 680 edges: some Q7 facet contains at least edges-380 retained edges. Thus a 683-edge construction must contain a facet with at least 303 edges, giving a concrete concentration gradient without itself imposing the 682-edge ceiling. Equality holds in all displayed 682-edge samples, several 681-edge samples with maximum facet size 301, and the 680-edge sample 8eb25395250603ab76af with maximum facet size 300. The missing proof obligation is a universal facet-concentration argument using C4-free geometry and compatibility across coordinate cuts; ordinary facet averaging is insufficient. The adaptive, largely deletion-derived samples supply calibration, not proof.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 2,
+        "q7_edges_max": -1,
+        "q7_edges_min": 1
+      },
+      "rhs": 1359,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        }
+      ],
+      "id": "626e438595762928",
+      "name": "dense_graph_requires_facet_spread",
+      "rationale": "Conjectured for every C4-free Q8 subgraph with at least 680 edges: the range of retained edge counts among its 16 Q7 facets is at least 2*edges-1359. At 683 edges this requires a facet range of at least seven, directing construction toward greater facet imbalance. The displayed 682-edge graph 985274116ed52fc980f9 attains equality with range five; all other displayed applicable samples satisfy the bound. Since facet edge counts sum to 7*edges, this asks for dispersion beyond their fixed average rather than another edge maximum. The missing proof obligation is to exclude sufficiently balanced simultaneous facet configurations in every dense C4-free Q8 subgraph, including graphs unrelated to the supplied seeds. Sample support does not establish that exclusion.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "degree_4": 1,
+        "edges": 2
+      },
+      "rhs": 1366,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        },
+        {
+          "metric": "min_degree",
+          "op": ">=",
+          "value": 4
+        }
+      ],
+      "id": "4b6b88e0b0079b58",
+      "name": "dense_degree_four_cost_without_degree_ceiling",
+      "rationale": "Conjectured for every C4-free Q8 subgraph satisfying these explicit conditions, including graphs with degree-7 or degree-8 vertices. By the degree-sum identity, this asserts degree_6+2*degree_7+3*degree_8<=86. It extends the previous degree-four conjecture beyond its maximum-degree-six condition. The displayed 682-edge examples attain equality; the displayed degree-seven examples have slack one or two. At 683 edges it forces degree_4=0, directing this branch toward minimum degree at least five. The missing proof obligation is a geometric obstruction to weighted high-degree mass exceeding 86 throughout this branch, particularly when degrees seven and eight occur. The displayed samples provide calibration, not proof; graphs with minimum degree below four require separate coverage.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 7,
+        "even_squares": -1,
+        "holes_max_side": 1,
+        "holes_min_side": -1
+      },
+      "rhs": 4774,
+      "conditions": [
+        {
+          "metric": "edges",
+          "op": ">=",
+          "value": 680
+        }
+      ],
+      "id": "26ccdad3c09b1b22",
+      "name": "dense_even_square_budget_for_parity_imbalance",
+      "rationale": "Conjectured for every C4-free Q8 subgraph with at least 680 edges: even_squares>=7*(edges-682)+abs(p0_holes-p1_holes). This strengthens the previous even-square tradeoff within the explicitly dense regime by charging for parity imbalance in retained three-star counts. Every displayed sample satisfies it, and the 682-edge examples attain equality. At 683 edges, construction must produce at least seven even squares, with one additional even square per unit of parity-hole imbalance; this supplies a residual favoring balanced parity star counts while allowing the target. The missing proof obligation is a universal coupling between square parity defects, edge density, and parity three-star imbalance. Neither square-incidence identities alone nor deletion-derived sample support establishes that coupling.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 33,
+      "counterexample_ids": [],
+      "max_residual": 0
+    },
+    {
+      "n": 8,
+      "coefficients": {
+        "edges": 8,
+        "even_squares": 1
+      },
+      "rhs": 5456,
+      "conditions": [],
+      "id": "f9d78c6a7993f5a7",
+      "name": "Q8_edge_density_with_square_parity_penalty",
+      "rationale": "Conjecture for every C4-free subgraph of Q8: even_squares <= 8*(682-edges). This strengthens the proposed edge maximum by charging one edge of density deficit per eight even squares. All three displayed 682-edge graphs attain equality. The 648-edge graph has slack 4; the 647- and 646-edge graphs have slack 15 and 12, respectively. Thus support includes close examples outside the odd-square cluster. The residual 8*edges+even_squares-5456 supplies a mixed density-and-parity search objective. This is a new conjecture, distinct from the previous inequality with a negative even_squares coefficient. The missing proof obligation is a global packing or compatibility argument establishing this density penalty for arbitrary nonodd C4-free graphs, including graphs with isolated or low-degree vertices; the adaptive samples do not prove it.",
+      "status": "empirical",
+      "origin": "model",
+      "support_count": 11,
+      "counterexample_ids": [],
+      "max_residual": 0
+    }
+  ],
+  "exhaustive_oracle": false,
+  "research_context": "Current reviewed unrestricted Q8 interval 682..687. Odd-square maximum is 682. A 683+ C4-free graph needs at least 3 deletions and 4 additions from EVERY odd682 graph, and at least 5 toggles from EVERY odd graph. No improvement in known seed's <=3 coordinate-direction domain; do not represent a bounded search in closed families as new research. Q7 J>=73 is open and only a sufficient gate for the min4 branch at 687. Four low-degree Q8 rows remain. Local statistics alone do not ensure simultaneous face realizability. Seek different programs, genuinely mixed moves or nonodd construction mechanisms. Generated conjectures must preserve their actual conditions. q7_J_sum is a sum over all 16 facets, not the historical S8 normalization. Near-extremal campaign: focus on 680..682 edges and target 683. 680 is a heuristic QUALITY threshold, not a theorem premise. Derived 680/681 samples obtained by deleting one/two edges are calibration data, not novel constructions. Do not restrict future searches to that deletion family or restart its proved-small repair exclusions. Intermediate states may lose more edges before repairing. Upper discovery prioritizes dense samples, but every archived graph still checks every applicable inequality. Conditional conjectures edges>=680 are relevant to every 683+ graph; unrelated conditions require their own coverage proof. Show actual mathematics connecting learned correlations to the Q8 goal.\n\nPRIMARY OBJECTIVE CORRECTION: Prove unrestricted upper682; target683 is adversarial only. No finite search failure is a proof.\n# 面向完整683边域的上界义务\n\n主任务：证明全部简单 C4-free `G⊆Q8` 有 `e(G)≤682`。这等价于完整排除恰有683边的域：任何更多边反例都可删边到683。原四轮的683目标是对抗反例搜索，未找到不是证明。\n\n| ID | 命题与精确域 | 当前状态、已知反例和验证办法 | 对完整683域的真实作用 |\n|---|---|---|---|\n| U0 | `e=683` 即足够排除一般反例 | 删边保C4-free，简单归约已证 | 不限制度数、奇方形、种子或局部形状 |\n| U1 | odd-square Q8 有 `e≤682` | 已有全称签名二次矩与实际682见证；读Cycle015完整证明 | 只排除 `even_squares=0` |\n| U2 | 恰683边C4-free Q8有 `even_squares≥19` | 本轮完整分类/修复在 `q8_small_defect_gate/main.tex`；新上下文非作者审阅PASS，same-family/provisional，见PROOF_AUDIT.json。使用真实closed面集、同一投影及Cycle015通用四切换障碍 | 在该明确局部范围排除 `even_squares≤17`，仍留下全部≥19分支；不作min-degree假设 |\n| U3 | `8e+even_squares≤5456`，全部C4-free Q8 | **已被反驳**。681边min4图有15偶方形，残差+7，原检查器独立通过 | 不得再用于排除683，也不能藏掉反例 |\n| U4 | `e≥680 ⇒ 10e+holes_max≤6908` | **已被反驳**。本轮680边图一侧全为5/6度，holes112，左端6912，原检查器独立通过 | 密度条件确实涵盖683，但命题本身为假。不得移用；改变条件是新义务 |\n| U5 | `12e+holes_max≤8272`，全部C4-free Q8 | 旧经验候选，当前诊断图未反驳，无全称证书 | 若真，在683迫使两侧holes≤76，即每侧三次度缺陷≥6；只缩域，不自动矛盾 |\n| U5a | `2e+N4≤1366`，`e≥680,min_degree≥4,max_degree≤6`，以及不带max_degree条件的版本 | **两个版本均已被反驳**。681边、min4/max6、N4=5，左端1367；原检查器独立通过。见 `star_frontier/685ceecd50d035ac51aa.edges` | 原条件即便涵盖某些683分支，也不能调用假命题 |\n| U5b | `e-max_(Q7 facets) edges≤380`，`e≥680` | **已被反驳**。真实odd680图全部16面至多299边，差381；原图与逐面独立计数通过。见 `star_frontier/03fbd1df843efb292812.edges` | 不能据此声称每个683候选含303边Q7面 |\n| U5c | `76e+q7_J_min≤52052`，`e≥680` | 扩展样本仍未反驳，仅empirical。683处要求某面多项式 `Jtilde≤144` | 是可能缩域的未证义务；一般面含0/1/2度时Jtilde不是旧实际slack J，不能直接套210配置 |\n| U6 | 无度数条件的历史Q6加权进口及真实面平均 | 旧完整证明 `q7_slack_cycle005/Q8_WEIGHTED_GATE.md` §§1–2。新代入683，须保留历史计算进口的验收范围 | 每侧精确必要式 `581n0+380n1+239n2+138n3+57n4+105n7+345n8≤1149`。它允许0/1/2/3度，不能宣称min4 |\n| U7 | 所有16个Q7面来自同一组1024个全局边变量；每个无C4，公共Q6/Q5边一致 | 必要的共同实现接口；尚无排除全域的全称证书 | 所有面边数之和为 `7·683=4781`。独立选择16个合法面或必要配置不足 |\n| U8 | 恰683域的完整矛盾/精确不可满足性证书 | **开放**。尚未提供全域证明；旧687低度门、J73与210配置不能代替 | 最终所需。只要存在合法683图，须核验并报告目标被反驳 |\n\n## 不能照搬J73：在683处的定量诊断\n\n即使额外限制到全图min4，旧真实面恒等式也变为\n\n`S8=2597+10N4-130N7-380N8`，且 `sum_(16 actual Q7 facets) J = 2S8`。\n\n由旧一侧core的原维数局部进口重新平均，在683的min4域只得到\n`34n4+50n7+160n8≤596`，所以 `N4≤34`，`S8≤2937`。\n若仍仅靠统一常数 `J≥c` 配这个粗上界，需要 `8c>2937`，即 `c≥368`。\n然而旧实际304边Q7见证本就有J=144，且全图min4。故这个统一常数加强方式不可能成立。\n这并不排除共享原图条件下的非均匀联合不等式，而是解释为何不能把旧687的J73路线改个目标数字就闭合682。\n\n对任意Q7（允许低度），注册表的 `Jtilde=38448-126m+27N3-44N6-128N7` 与旧实际面slack之和满足\n`Jraw=Jtilde-450N0-270N1-15N2`。\n这是把 `24(5N2+3N3)-45(672-6m+sum binom(d,2))+6(1848-6m)+N6+7N7` 展开得到；不是新稳定性进口。只有min3时Jraw=Jtilde。任何面向完整683域的联合模型必须保留这些低度项或先证明它们不存在。\n\n## 下一次模型调用的输入契约\n\n上界侧先读此表、实际反例边表与本轮四轮原响应，提出能作用于剩余完整683域的具体数学义务。下界侧按该义务定向挑战，而非机械增轮。允许 `e≥680/681/683` 条件，因为对原683输入确实成立；任何min4、选定根、选定面构型等条件都要补完全覆盖或单独处理其补集。\n\n后续报告区分 `primary_proof_goal`（未证/部分归约/全域完成/被反驳）与 `adversarial_search_target`（683图是否找到且独立核验）。初始四轮冻结配置和旧报告不改写历史。\n\nCONSUMED WIKI ENTITIES:\n---\ntype: experiment\nnode_id: exp:q8-near-extremal-star-parity-counterexample\ntitle: \"Near-extremal681 graph refutes the empirical square-parity penalty\"\nidea_id: \"idea:q8-layer-structure\"\nverdict: no\nconfidence: high\ndate: \"2026-11-15\"\nhardware: \"\"\nduration: \"\"\nprovenance: \"coevolve/launches/near-extremal-20261115/PROGRESS.md; star_frontier/RESULT.json and ce728e504d5aa7b96599.legacy_verified.json\"\nadded: 2026-11-15T13:01:06Z\ntags: []\n---\n\n# Near-extremal681 graph refutes the empirical square-parity penalty\n\n**verdict:** `no`  ·  **confidence:** `high`  ·  tests `idea:q8-layer-structure`\n\n## Metrics\ne=681; even_squares=15; min_degree=4; 8e+even=5463>5456; nine counterexamples among1282 fixed-seed star outputs.\n\n## Reasoning\n新协同研究的字面681边无四环Q8图反驳旧8e+even_squares<=5456猜想。seed2删(68,70),(68,100)，加(68,69)，最小度4，even15，残差+7；宿主及原项目独立核验通过。其余候选仅样本支持，未改上下界。 Verdict no is relative to the explicit square-parity penalty conjecture, not the co-evolution framework or unrestricted682 upper target.\n\n## Connections\n_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._\n\n\n---\ntype: experiment\nnode_id: exp:q8-near-extremal-coevolve-four-rounds\ntitle: \"Four near-extremal co-evolution rounds and expanded conjecture refutation\"\nidea_id: \"idea:q8-layer-structure\"\nverdict: partial\nconfidence: high\ndate: \"2026-11-15\"\nhardware: \"\"\nduration: \"\"\nprovenance: \"coevolve/launches/near-extremal-20261115/PROGRESS.md; BATCH_VERIFICATION.json; EXPANDED_EVIDENCE.json; UPPER_OBLIGATIONS.md\"\nadded: 2026-11-15T13:18:46Z\ntags: []\n---\n\n# Four near-extremal co-evolution rounds and expanded conjecture refutation\n\n**verdict:** `partial`  ·  **confidence:** `high`  ·  tests `idea:q8-layer-structure`\n\n## Metrics\n4 rounds;8 actual Sol calls;38 archived graphs;7 new labelled outputs (five680,two679); expanded1318 valid graphs;4/9 current candidates refuted; no683 witness.\n\n## Reasoning\n新协同任务的首四轮八次Sol调用完成，38图逐一重算，最佳仍682。加入全部固定种子单星诊断与有界工作带walk，扩展1318图后，新9候选中4条被真实反例否定；5条存活仍只是empirical。该partial判定相对于取得可用上界信息，绝非原上界682已证。精确683的小缺陷分支由单独局部proof-checker记录，剩余完整>=19域开放。\n\n## Connections\n_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._\n\n\n---\ntype: claim\nnode_id: claim:q8-exact683-even-squares-atleast19\nname: \"Exactly683-edge C4-free Q8 graphs need at least19 even squares\"\ndescription: \"\"\nnode_type: claim\nstatus: sound-modulo-imports\nprovenance: \"coevolve/launches/near-extremal-20261115/q8_small_defect_gate/PROOF_AUDIT.json\"\ntags: []\ndate: 2026-11-15\nadded: 2026-11-15T13:18:45Z\n---\n\n# Exactly683-edge C4-free Q8 graphs need at least19 even squares\n\n**status:** `sound-modulo-imports`\n\n## Statement\nFor every finite simple C4-free G contained in Q8 with exactly683 edges, the set of coordinate squares with an even number of retained edges has size at least19.\n\n## Honest scope\nLocal reduction only, conditional on the explicitly named gap/cut and Cycle015 universal repair imports; fresh nonauthor same-family/provisional audit. Does not prove unrestricted ex(Q8,C4)<=682; the full19-or-more domain remains open. No Lean, cross-family or PDF-compile acceptance.\n\n## Evidence chain\nmain.tex U01-U05; actual named import proofs; fresh reviewer review/REVIEW.md and RECEIPT.json; complete source-unit execution coverage; independent122880 parameterized repair checks are supplemental, not whole-domain enumeration.\n\n## Connections\n_Edges are recorded in `graph/edges.jsonl`; summarize here for human readers._\n\n\nACTUAL PRIOR PROGRAM REFERENCES:\n[{\"id\": \"r0000p0_a6524a297f\", \"source\": \"import random\\n\\ndef generate(context):\\n    rng = random.Random(context['seed'])\\n    n = context['n']\\n    limit = max(1, context['max_graphs'])\\n    steps = max(0, context['search_steps'])\\n    edges = sorted(set((min(u, v), max(u, v)) for u, v in api.cube_edges()))\\n    index = {e: i for i, e in enumerate(edges)}\\n    m = len(edges)\\n    squares = []\\n    incident = [[] for e in edges]\\n    for a in range(n):\\n        for b in range(a + 1, n):\\n            x = 1 << a\\n            y = 1 << b\\n            for v in range(1 << n):\\n                if v & (x | y):\\n                    continue\\n                q = (index[(v, v ^ x)], index[(v, v ^ y)],\\n                     index[(v ^ x, v ^ x ^ y)], index[(v ^ y, v ^ x ^ y)])\\n                sid = len(squares)\\n                squares.append(q)\\n                for e in q:\\n                    incident[e].append(sid)\\n\\n    def unpack(state):\\n        return [[edges[e][0], edges[e][1]] for e in sorted(state)]\\n\\n    archive = []\\n    seen = set()\\n    def record(state):\\n        signature = tuple(sorted(state))\\n        data = unpack(state)\\n        value = api.reward(data)\\n        if signature not in seen:\\n            seen.add(signature)\\n            archive.append((value, rng.random(), set(state)))\\n            archive.sort(key=lambda item: (item[0], item[1]), reverse=True)\\n            del archive[limit:]\\n        return value\\n\\n    parents = []\\n    for parent in context.get('parents', []):\\n        raw = parent['edges'] if isinstance(parent, dict) else parent\\n        state = set(index[(min(u, v), max(u, v))] for u, v in raw)\\n        if api.valid(unpack(state)):\\n            value = record(state)\\n            parents.append((value, state))\\n    if not parents:\\n        state = set(index[(min(u, v), max(u, v))] for u, v in api.greedy(seed=context['seed']))\\n        parents.append((record(state), state))\\n    parents.sort(key=lambda item: item[0], reverse=True)\\n    current_value, initial = parents[0]\\n    current = set(initial)\\n    failures = 0\\n\\n    for turn in range(steps):\\n        if failures >= 9:\\n            current = set(archive[rng.randrange(len(archive))][2])\\n            current_value = api.reward(unpack(current))\\n            failures = 0\\n        if turn % 13 == 12 and len(parents) > 1:\\n            current_value, base = parents[rng.randrange(min(4, len(parents)))]\\n            current = set(base)\\n        dimension = min(n, 5 if turn % 4 == 3 else 4)\\n        axes = rng.sample(list(range(n)), dimension)\\n        free = sum(1 << a for a in axes)\\n        anchor = rng.randrange(1 << n)\\n        fixed = ((1 << n) - 1) ^ free\\n        vertices = set(v for v in range(1 << n) if (v & fixed) == (anchor & fixed))\\n        region = [e for e, (u, v) in enumerate(edges) if u in vertices or v in vertices]\\n        local = {e: j for j, e in enumerate(region)}\\n        absent = [e for e in region if e not in current]\\n        if not absent:\\n            continue\\n        rng.shuffle(absent)\\n        forced = set(absent[:1 + (turn % 5 == 4)])\\n        relevant = set()\\n        for e in region:\\n            relevant.update(incident[e])\\n        clauses = set()\\n        impossible = False\\n        for sid in sorted(relevant):\\n            mask = 0\\n            active = True\\n            for e in squares[sid]:\\n                if e in local:\\n                    if e not in forced:\\n                        mask |= 1 << local[e]\\n                elif e not in current:\\n                    active = False\\n                    break\\n            if active:\\n                if not mask:\\n                    impossible = True\\n                    break\\n                clauses.add(mask)\\n        if impossible:\\n            failures += 1\\n            continue\\n        ordered = sorted(clauses, key=lambda c: (c.bit_count(), c))\\n        reduced = []\\n        for clause in ordered:\\n            if not any((small & clause) == small for small in reduced):\\n                reduced.append(clause)\\n        clauses = reduced\\n        coverage = [0] * len(region)\\n        for k, clause in enumerate(clauses):\\n            bits = clause\\n            while bits:\\n                bit = bits & -bits\\n                coverage[bit.bit_length() - 1] |= 1 << k\\n                bits ^= bit\\n        universe = (1 << len(clauses)) - 1\\n        mandatory = 0\\n        for clause in clauses:\\n            if clause.bit_count() == 1:\\n                mandatory |= clause\\n        uncovered = universe\\n        bits = mandatory\\n        while bits:\\n            bit = bits & -bits\\n            uncovered &= ~coverage[bit.bit_length() - 1]\\n            bits ^= bit\\n\\n        # Obtain a feasible incumbent, preferring the parent's missing edges.\\n        deleted = mandatory\\n        pending = uncovered\\n        while pending:\\n            choices = []\\n            for j, e in enumerate(region):\\n                gain = (coverage[j] & pending).bit_count()\\n                if gain:\\n                    preference = 1.3 if e not in current else 1.0\\n                    choices.append((gain * preference + rng.random() * 0.3, j))\\n            j = max(choices)[1]\\n            deleted |= 1 << j\\n            pending &= ~coverage[j]\\n        best = [deleted.bit_count(), deleted]\\n        memo = {}\\n        budget = [220 if dimension == 5 else 500]\\n\\n        def search(pending, chosen, count):\\n            if budget[0] <= 0 or count > best[0]:\\n                return\\n            budget[0] -= 1\\n            if not pending:\\n                if count < best[0] or (count == best[0] and rng.random() < 0.35):\\n                    best[0] = count\\n                    best[1] = chosen\\n                return\\n            if count >= best[0]:\\n                return\\n            previous = memo.get(pending)\\n            if previous is not None and previous < count:\\n                return\\n            memo[pending] = count\\n            # Pairwise disjoint deletion clauses give an admissible lower bound.\\n            occupied = 0\\n            bound = 0\\n            selected = 0\\n            scan = pending\\n            while scan:\\n                bit = scan & -scan\\n                clause = clauses[bit.bit_length() - 1]\\n                if not selected:\\n                    selected = clause\\n                if not (occupied & clause):\\n                    occupied |= clause\\n                    bound += 1\\n                    if count + bound > best[0]:\\n                        return\\n                scan ^= bit\\n            branches = []\\n            bits = selected\\n            while bits:\\n                bit = bits & -bits\\n                j = bit.bit_length() - 1\\n                gain = (coverage[j] & pending).bit_count()\\n                branches.append((gain, region[j] not in current, rng.random(), j))\\n                bits ^= bit\\n            branches.sort(reverse=True)\\n            for gain, old_missing, noise, j in branches:\\n                search(pending & ~coverage[j], chosen | (1 << j), count + 1)\\n\\n        search(uncovered, mandatory, mandatory.bit_count())\\n        candidate = current.difference(region)\\n        for j, e in enumerate(region):\\n            if not (best[1] & (1 << j)):\\n                candidate.add(e)\\n        if not api.valid(unpack(candidate)):\\n            failures += 1\\n            continue\\n        value = record(candidate)\\n        # Reward controls the trajectory; edge loss only bounds excursions.\\n        if value > current_value or (value == current_value and candidate != current):\\n            current = candidate\\n            current_value = value\\n            failures = 0\\n        elif len(candidate) >= len(current) - 3 and rng.random() < 0.22:\\n            current = candidate\\n            current_value = value\\n            failures += 1\\n        else:\\n            failures += 1\\n    return [{'edges': unpack(item[2]), 'label': 'forced mixed patch hitting-set ' + str(k)}\\n            for k, item in enumerate(archive[:limit])]\\n\", \"evaluation\": {\"status\": \"ok\", \"execution\": {\"status\": \"ok\", \"returncode\": 0, \"elapsed_seconds\": 1.5769992449995698, \"stderr_tail\": \"\"}, \"outputs\": [{\"status\": \"accepted\", \"graph_id\": \"6e36e31134d53dd86450\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"7bfc30ce0b2fc84fa625\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"08f8f18d67d535d9108a\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"985274116ed52fc980f9\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}]}, \"meaning\": \"actual prior program reference; not a parent-program ID in this new run\"}, {\"id\": \"r0001p0_c7d66bc780\", \"source\": \"import random\\n\\ndef generate(context):\\n    rng = random.Random(context['seed'])\\n    n = context['n']\\n    limit = max(1, context['max_graphs'])\\n    steps = max(0, context['search_steps'])\\n    edges = sorted(set((min(u, v), max(u, v)) for u, v in api.cube_edges()))\\n    ix = {e: k for k, e in enumerate(edges)}\\n    m = len(edges)\\n    incident = [[] for e in edges]\\n    squares = []\\n    directions = [[] for d in range(n)]\\n    parity = [0] * (1 << n)\\n    for v in range(1, 1 << n):\\n        parity[v] = parity[v >> 1] ^ (v & 1)\\n    for k, (u, v) in enumerate(edges):\\n        directions[(u ^ v).bit_length() - 1].append(k)\\n    for a in range(n):\\n        x = 1 << a\\n        for b in range(a + 1, n):\\n            y = 1 << b\\n            for v in range(1 << n):\\n                if v & (x | y):\\n                    continue\\n                q = (ix[(v, v ^ x)], ix[(v, v ^ y)], ix[(v ^ x, v ^ x ^ y)], ix[(v ^ y, v ^ x ^ y)])\\n                s = len(squares)\\n                squares.append(q)\\n                for e in q:\\n                    incident[e].append(s)\\n\\n    def unpack(state):\\n        return [[edges[e][0], edges[e][1]] for e in sorted(state)]\\n\\n    archive = []\\n    seen = set()\\n    parent_signatures = set()\\n    def record(state):\\n        sig = tuple(sorted(state))\\n        value = api.reward(unpack(state))\\n        if sig not in seen:\\n            seen.add(sig)\\n            archive.append((value, len(state), rng.random(), sig))\\n            archive.sort(reverse=True)\\n            if len(archive) > 24:\\n                del archive[24:]\\n        return value\\n\\n    parents = []\\n    for p in context.get('parents', []):\\n        raw = p['edges'] if isinstance(p, dict) else p\\n        state = set(ix[(min(u, v), max(u, v))] for u, v in raw)\\n        if api.valid(unpack(state)):\\n            parent_signatures.add(tuple(sorted(state)))\\n            parents.append((record(state), state))\\n    if not parents:\\n        state = set(ix[(min(u, v), max(u, v))] for u, v in api.greedy(seed=context['seed']))\\n        parents.append((record(state), state))\\n    parents.sort(key=lambda t: t[0], reverse=True)\\n    current_value, initial = parents[0]\\n    current = set(initial)\\n    ceiling = max(len(s) for v, s in parents)\\n    stale = 0\\n\\n    for turn in range(steps):\\n        if turn % 10 == 0 or stale >= 7:\\n            if turn % 20 == 0:\\n                current_value, base = parents[rng.randrange(min(4, len(parents)))]\\n                current = set(base)\\n            else:\\n                item = archive[rng.randrange(min(6, len(archive)))]\\n                current_value = item[0]\\n                current = set(item[3])\\n            stale = 0\\n        state = set(current)\\n        counts = [sum(e in state for e in q) for q in squares]\\n        pinned = set()\\n        tabu = set()\\n\\n        def remove(e):\\n            state.remove(e)\\n            for s in incident[e]:\\n                counts[s] -= 1\\n\\n        def insert(e):\\n            state.add(e)\\n            for s in incident[e]:\\n                counts[s] += 1\\n\\n        # Build a coherent bundle spanning four or more coordinate directions.\\n        axes = list(range(n))\\n        rng.shuffle(axes)\\n        anchor = rng.randrange(1 << n)\\n        for j in range(min(n, 4 + turn % 4)):\\n            d = axes[j]\\n            candidates = [e for e in directions[d] if e not in state]\\n            rng.shuffle(candidates)\\n            candidates.sort(key=lambda e: (edges[e][0] ^ anchor).bit_count())\\n            chosen = None\\n            best_cost = None\\n            for e in candidates[:12]:\\n                conflicts = [s for s in incident[e] if counts[s] == 3]\\n                if any(all(f in pinned for f in squares[s] if f != e) for s in conflicts):\\n                    continue\\n                cost = len(conflicts) + rng.random() * 2\\n                if best_cost is None or cost < best_cost:\\n                    chosen = e\\n                    best_cost = cost\\n            if chosen is None:\\n                continue\\n            for s in incident[chosen]:\\n                if counts[s] == 3:\\n                    options = [f for f in squares[s] if f != chosen and f not in pinned]\\n                    def loss(f):\\n                        return 7 + sum(1 if counts[t] & 1 else -1 for t in incident[f]) + rng.random() * 5\\n                    victim = min(options, key=loss)\\n                    remove(victim)\\n                    tabu.add(victim)\\n            insert(chosen)\\n            pinned.add(chosen)\\n\\n        order = [e for e in range(m) if e not in state and e not in tabu]\\n        rng.shuffle(order)\\n        order.sort(key=lambda e: sum(counts[s] == 3 for s in incident[e]))\\n        for e in order:\\n            if all(counts[s] < 3 for s in incident[e]):\\n                insert(e)\\n\\n        # With other directions fixed, retained d-edges form an independent\\n        # set in a bipartite conflict graph. Solve that block exactly.\\n        sweep = list(range(n))\\n        rng.shuffle(sweep)\\n        for d in sweep:\\n            block = directions[d]\\n            old = [e for e in block if e in state]\\n            for e in old:\\n                remove(e)\\n            fixed = pinned.intersection(block)\\n            for e in fixed:\\n                insert(e)\\n            available = [e for e in block if e not in fixed and all(counts[s] < 3 for s in incident[e])]\\n            aset = set(available)\\n            adj = {e: [] for e in available}\\n            for e in available:\\n                for s in incident[e]:\\n                    if counts[s] != 2:\\n                        continue\\n                    for f in squares[s]:\\n                        if f != e and f in aset:\\n                            adj[e].append(f)\\n            side = rng.randrange(2)\\n            left = [e for e in available if parity[edges[e][0]] == side]\\n            rng.shuffle(left)\\n            for e in left:\\n                rng.shuffle(adj[e])\\n            mate = {}\\n            def augment(e, visited):\\n                for f in adj[e]:\\n                    if f in visited:\\n                        continue\\n                    visited.add(f)\\n                    if f not in mate or augment(mate[f], visited):\\n                        mate[f] = e\\n                        return True\\n                return False\\n            for e in left:\\n                augment(e, set())\\n            matched_left = set(mate.values())\\n            zl = set(e for e in left if e not in matched_left)\\n            zr = set()\\n            queue = list(zl)\\n            pos = 0\\n            while pos < len(queue):\\n                e = queue[pos]\\n                pos += 1\\n                for f in adj[e]:\\n                    if f in zr:\\n                        continue\\n                    zr.add(f)\\n                    if f in mate and mate[f] not in zl:\\n                        zl.add(mate[f])\\n                        queue.append(mate[f])\\n            chosen = zl.union(e for e in available if parity[edges[e][0]] != side and e not in zr)\\n            for e in chosen:\\n                insert(e)\\n\\n        # Release the ejection tabu only after the global matching repair.\\n        order = [e for e in range(m) if e not in state]\\n        rng.shuffle(order)\\n        for e in order:\\n            if all(counts[s] < 3 for s in incident[e]):\\n                insert(e)\\n        value = record(state)\\n        if value > current_value or (value == current_value and state != current):\\n            current, current_value = state, value\\n            stale = 0\\n        elif len(state) >= ceiling - 18 and rng.random() < 0.35:\\n            current, current_value = state, value\\n            stale += 1\\n        else:\\n            stale += 1\\n\\n    selected = [archive[0]]\\n    for item in archive:\\n        if len(selected) >= limit:\\n            break\\n        if item[3] not in parent_signatures and item[3] != selected[0][3]:\\n            selected.append(item)\\n    return [{'edges': unpack(set(item[3])), 'label': 'pinned ejection matching sweep ' + str(k)} for k, item in enumerate(selected)]\\n\", \"evaluation\": {\"status\": \"ok\", \"execution\": {\"status\": \"ok\", \"returncode\": 0, \"elapsed_seconds\": 1.3253315649999422, \"stderr_tail\": \"\"}, \"outputs\": [{\"status\": \"accepted\", \"graph_id\": \"6e36e31134d53dd86450\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0, \"60ed19ed0bd97eec\": 0.0, \"627e86b81a4d7335\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"882ec470c629748ca9c6\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 680, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 680, \"goal_gap\": 3, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -2.5714285714285716, \"margins\": {\"481aa2232ddff20c\": -2.0, \"60ed19ed0bd97eec\": -2.5714285714285716, \"627e86b81a4d7335\": 0.0}, \"max_violation\": 0.0, \"tightness\": 0.27999999999999997, \"novelty\": 0.005319179007257545}}, {\"status\": \"accepted\", \"graph_id\": \"01aac68ef6b40bd49eff\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 679, \"in_quality_band\": false, \"quality_deficit\": 1, \"objective_utility\": 679, \"goal_gap\": 4, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -3.0, \"margins\": {\"481aa2232ddff20c\": -3.0, \"60ed19ed0bd97eec\": -3.0}, \"max_violation\": -3.0, \"tightness\": 0.25, \"novelty\": 0.004681423905216729}}, {\"status\": \"accepted\", \"graph_id\": \"30cf8cffd54f259e0835\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 679, \"in_quality_band\": false, \"quality_deficit\": 1, \"objective_utility\": 679, \"goal_gap\": 4, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -2.7142857142857144, \"margins\": {\"481aa2232ddff20c\": -3.0, \"60ed19ed0bd97eec\": -2.7142857142857144}, \"max_violation\": -2.7142857142857144, \"tightness\": 0.2692307692307692, \"novelty\": 0.006821705244053144}}]}, \"meaning\": \"actual prior program reference; not a parent-program ID in this new run\"}, {\"id\": \"r0002p0_4d07dce730\", \"source\": \"import random\\nimport math\\n\\ndef generate(context):\\n    rng = random.Random(context['seed'])\\n    n = context['n']\\n    limit = max(1, context['max_graphs'])\\n    steps = max(0, context['search_steps'])\\n    edges = sorted(set((min(u, v), max(u, v)) for u, v in api.cube_edges()))\\n    ix = {e: i for i, e in enumerate(edges)}\\n    m = len(edges)\\n    squares = []\\n    incident = [[] for e in edges]\\n    for a in range(n):\\n        x = 1 << a\\n        for b in range(a + 1, n):\\n            y = 1 << b\\n            for v in range(1 << n):\\n                if v & (x | y):\\n                    continue\\n                q = (ix[(v, v ^ x)], ix[(v, v ^ y)], ix[(v ^ x, v ^ x ^ y)], ix[(v ^ y, v ^ x ^ y)])\\n                sid = len(squares)\\n                squares.append(q)\\n                for e in q:\\n                    incident[e].append(sid)\\n\\n    def unpack(state):\\n        return [[edges[e][0], edges[e][1]] for e in sorted(state)]\\n\\n    archive = []\\n    novel = []\\n    seen = set()\\n    parent_sigs = set()\\n    bases = []\\n    for parent in context.get('parents', []):\\n        raw = parent['edges'] if isinstance(parent, dict) else parent\\n        state = set(ix[(min(u, v), max(u, v))] for u, v in raw)\\n        sig = tuple(sorted(state))\\n        if sig not in parent_sigs and api.valid(unpack(state)):\\n            parent_sigs.add(sig)\\n            bases.append(state)\\n    if not bases:\\n        bases.append(set(ix[(min(u, v), max(u, v))] for u, v in api.greedy(seed=context['seed'])))\\n\\n    def record(state):\\n        sig = tuple(sorted(state))\\n        value = api.reward(unpack(state))\\n        if sig not in seen:\\n            seen.add(sig)\\n            item = (value, rng.random(), sig)\\n            archive.append(item)\\n            archive.sort(reverse=True)\\n            del archive[24:]\\n            if sig not in parent_sigs:\\n                novel.append(item)\\n                novel.sort(reverse=True)\\n                del novel[16:]\\n        return value\\n\\n    ranked = [(record(s), tuple(sorted(s))) for s in bases]\\n    ranked.sort(reverse=True)\\n    target = min(m, max(len(s) for s in bases) + 1)\\n    weights = [1.0] * len(squares)\\n    active = [False] * m\\n    counts = [0] * len(squares)\\n    missing = []\\n    position = [0] * m\\n    bad = set()\\n    tabu = [0] * m\\n    tick = 0\\n\\n    def rebuild(state):\\n        for e in range(m):\\n            active[e] = e in state\\n        for sid, q in enumerate(squares):\\n            counts[sid] = sum(active[e] for e in q)\\n        bad.clear()\\n        bad.update(s for s in range(len(squares)) if counts[s] == 4)\\n        missing.clear()\\n        for e in range(m):\\n            if not active[e]:\\n                position[e] = len(missing)\\n                missing.append(e)\\n\\n    def remove(e):\\n        active[e] = False\\n        position[e] = len(missing)\\n        missing.append(e)\\n        for sid in incident[e]:\\n            if counts[sid] == 4:\\n                bad.discard(sid)\\n            counts[sid] -= 1\\n\\n    def insert(e):\\n        j = position[e]\\n        last = missing[-1]\\n        missing[j] = last\\n        position[last] = j\\n        missing.pop()\\n        active[e] = True\\n        for sid in incident[e]:\\n            counts[sid] += 1\\n            if counts[sid] == 4:\\n                bad.add(sid)\\n\\n    def projection():\\n        state = set(e for e in range(m) if active[e])\\n        local_counts = list(counts)\\n        conflicts = set(bad)\\n        while conflicts:\\n            pool = set()\\n            for sid in list(conflicts)[:12]:\\n                pool.update(squares[sid])\\n            victim = max(pool, key=lambda e: (sum(local_counts[s] == 4 for s in incident[e]), rng.random()))\\n            state.remove(victim)\\n            for sid in incident[victim]:\\n                conflicts.discard(sid)\\n                local_counts[sid] -= 1\\n        order = [e for e in range(m) if e not in state]\\n        rng.shuffle(order)\\n        for e in order:\\n            if all(local_counts[s] < 3 for s in incident[e]):\\n                state.add(e)\\n                for sid in incident[e]:\\n                    local_counts[sid] += 1\\n        return state\\n\\n    stale = 0\\n    best_bad = len(squares)\\n    for epoch in range(steps):\\n        if epoch % 8 == 0 or stale >= 5:\\n            if epoch % 3 == 0 and novel:\\n                base = novel[rng.randrange(min(5, len(novel)))][2]\\n            elif epoch % 3 == 1:\\n                base = ranked[rng.randrange(len(ranked))][1]\\n            else:\\n                base = archive[rng.randrange(min(6, len(archive)))][2]\\n            rebuild(set(base))\\n            weights = [1.0] * len(squares)\\n            tabu = [0] * m\\n            while m - len(missing) < target:\\n                candidates = rng.sample(missing, min(64, len(missing)))\\n                e = min(candidates, key=lambda f: sum(counts[s] == 3 for s in incident[f]) + rng.random() * 0.8)\\n                insert(e)\\n            while m - len(missing) > target:\\n                remove(rng.choice([e for e in range(m) if active[e]]))\\n            best_bad = len(bad)\\n            stale = 0\\n\\n        temperature = (0.12, 0.25, 0.5, 0.9)[epoch % 4]\\n        improved = False\\n        for inner in range(96):\\n            tick += 1\\n            if not bad:\\n                state = set(e for e in range(m) if active[e])\\n                record(state)\\n                target = min(m, target + 1)\\n                if not missing:\\n                    break\\n                insert(rng.choice(missing))\\n            pool = set()\\n            bad_list = sorted(bad)\\n            for sid in rng.sample(bad_list, min(4, len(bad_list))):\\n                pool.update(squares[sid])\\n            victim = max(pool, key=lambda e: sum(weights[s] for s in incident[e] if counts[s] == 4) + rng.random() * temperature)\\n            remove(victim)\\n            tabu[victim] = tick + rng.randrange(5, 15)\\n            if inner % 12 == 0:\\n                candidates = list(missing)\\n            else:\\n                candidates = rng.sample(missing, min(36, len(missing)))\\n            available = [e for e in candidates if tabu[e] <= tick]\\n            if not available:\\n                available = [e for e in missing if tabu[e] <= tick]\\n            if not available:\\n                available = list(missing)\\n            chosen = min(available, key=lambda e: sum(weights[s] for s in incident[e] if counts[s] == 3) + temperature * math.log(max(1e-12, rng.random())))\\n            insert(chosen)\\n            if len(bad) < best_bad:\\n                best_bad = len(bad)\\n                improved = True\\n            if inner % 16 == 15:\\n                for sid in bad:\\n                    weights[sid] += 0.4\\n        candidate = projection()\\n        if api.valid(unpack(candidate)):\\n            value = record(candidate)\\n            # Reward selects which valid basin supplies the next restart.\\n            if value > archive[0][0]:\\n                ranked.insert(0, (value, tuple(sorted(candidate))))\\n        stale = 0 if improved else stale + 1\\n\\n    selected = [archive[0]]\\n    for item in novel + archive:\\n        if len(selected) >= limit:\\n            break\\n        if all(item[2] != other[2] for other in selected):\\n            selected.append(item)\\n    return [{'edges': unpack(set(item[2])), 'label': 'fixed cardinality breakout square walk ' + str(k)} for k, item in enumerate(selected)]\\n\", \"evaluation\": {\"status\": \"ok\", \"execution\": {\"status\": \"ok\", \"returncode\": 0, \"elapsed_seconds\": 1.478616033000435, \"stderr_tail\": \"\"}, \"outputs\": [{\"status\": \"accepted\", \"graph_id\": \"7bfc30ce0b2fc84fa625\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0, \"60ed19ed0bd97eec\": 0.0, \"627e86b81a4d7335\": 0.0, \"6f64467dfe9bb024\": 0.0, \"52399575605bc48c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"985274116ed52fc980f9\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0, \"60ed19ed0bd97eec\": 0.0, \"627e86b81a4d7335\": 0.0, \"6f64467dfe9bb024\": 0.0, \"52399575605bc48c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"6e36e31134d53dd86450\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0, \"60ed19ed0bd97eec\": 0.0, \"627e86b81a4d7335\": 0.0, \"6f64467dfe9bb024\": 0.0, \"52399575605bc48c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}, {\"status\": \"accepted\", \"graph_id\": \"08f8f18d67d535d9108a\", \"new\": false, \"reward\": {\"eligible\": true, \"objective\": 682, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 682, \"goal_gap\": 1, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": 0.0, \"margins\": {\"481aa2232ddff20c\": 0.0, \"60ed19ed0bd97eec\": 0.0, \"627e86b81a4d7335\": 0.0, \"6f64467dfe9bb024\": 0.0, \"52399575605bc48c\": 0.0}, \"max_violation\": 0.0, \"tightness\": 1.0, \"novelty\": 0.0}}]}, \"meaning\": \"actual prior program reference; not a parent-program ID in this new run\"}, {\"id\": \"r0003p0_f449bf020e\", \"source\": \"import random\\nimport math\\n\\ndef generate(context):\\n    rng = random.Random(context['seed'])\\n    n = context['n']\\n    size = 1 << n\\n    limit = max(1, context['max_graphs'])\\n    steps = max(0, context['search_steps'])\\n    bits = [1 << a for a in range(n)]\\n    parity = [0] * size\\n    for v in range(1, size):\\n        parity[v] = parity[v >> 1] ^ (v & 1)\\n    sides = [[v for v in range(size) if parity[v] == p] for p in range(2)]\\n    pairs = [(bits[a], bits[b]) for a in range(n) for b in range(a + 1, n)]\\n    pair_masks = []\\n    degrees = []\\n    for mask in range(size):\\n        code = 0\\n        for j, (a, b) in enumerate(pairs):\\n            if mask & a and mask & b:\\n                code |= 1 << j\\n        pair_masks.append(code)\\n        degrees.append(mask.bit_count())\\n    by_degree = [[] for d in range(n + 1)]\\n    for mask in range(size):\\n        by_degree[degrees[mask]].append(mask)\\n\\n    def unpack(state):\\n        return [[v, v ^ bit] for v in range(size) for bit in bits\\n                if not (v & bit) and state[v] & bit]\\n\\n    def load(raw):\\n        state = [0] * size\\n        for u, v in raw:\\n            bit = u ^ v\\n            state[u] |= bit\\n            state[v] |= bit\\n        return state\\n\\n    def blocked(state, v):\\n        code = 0\\n        for j, (a, b) in enumerate(pairs):\\n            opposite = state[v ^ a ^ b]\\n            if opposite & a and opposite & b:\\n                code |= 1 << j\\n        return code\\n\\n    def replace(state, v, mask):\\n        changed = state[v] ^ mask\\n        for bit in bits:\\n            if changed & bit:\\n                state[v ^ bit] ^= bit\\n        state[v] = mask\\n\\n    def options(state, v, slack):\\n        forbidden = blocked(state, v)\\n        feasible = []\\n        top = -1\\n        for d in range(n, -1, -1):\\n            if top >= 0 and d < top - slack:\\n                break\\n            row = [mask for mask in by_degree[d] if not (pair_masks[mask] & forbidden)]\\n            if row and top < 0:\\n                top = d\\n            feasible.extend(row)\\n        return feasible\\n\\n    def tie_value(state, v, mask, mode):\\n        old = state[v]\\n        value = rng.random() * 0.35\\n        for bit in bits:\\n            before = degrees[state[v ^ bit]]\\n            after = before + (1 if mask & bit else 0) - (1 if old & bit else 0)\\n            if mode == 0:\\n                value -= 0.12 * (after - 5.4) ** 2\\n            elif mode == 1:\\n                value += 0.045 * (after * (after - 1) * (after - 2) - before * (before - 1) * (before - 2))\\n            else:\\n                value += 0.08 * (after - before) * (1 if parity[v ^ bit] else -1)\\n        value += 0.025 * (mask ^ old).bit_count()\\n        return value\\n\\n    archive = []\\n    seen = {}\\n    bases = []\\n    capacity = max(16, limit * 5)\\n\\n    def record(state):\\n        signature = tuple(state)\\n        if signature in seen:\\n            return seen[signature]\\n        value = api.reward(unpack(state))\\n        seen[signature] = value\\n        count = sum(degrees[mask] for mask in state) // 2\\n        archive.append((value, count, rng.random(), signature))\\n        archive.sort(reverse=True)\\n        del archive[capacity:]\\n        return value\\n\\n    for parent in context.get('parents', []):\\n        raw = parent['edges'] if isinstance(parent, dict) else parent\\n        state = load(raw)\\n        if api.valid(unpack(state)):\\n            value = record(state)\\n            bases.append((value, tuple(state)))\\n    if not bases:\\n        state = load(api.greedy(seed=context['seed']))\\n        bases.append((record(state), tuple(state)))\\n    bases.sort(reverse=True)\\n    ceiling = max(sum(degrees[m] for m in state) // 2 for value, state in bases)\\n    floor = context.get('reward_snapshot', {}).get('quality_band', {}).get('min_edges', ceiling - 2)\\n    current = list(bases[0][1])\\n    current_value = bases[0][0]\\n    stale = 0\\n\\n    for turn in range(steps):\\n        if turn % 7 == 0 or stale >= 5:\\n            if turn % 3 == 0:\\n                source = bases[rng.randrange(len(bases))]\\n                current_value, signature = source\\n            else:\\n                item = archive[rng.randrange(min(8, len(archive)))]\\n                current_value, signature = item[0], item[3]\\n            current = list(signature)\\n            stale = 0\\n        candidate = list(current)\\n        side = turn % 2\\n        anchor = rng.choice(sides[side])\\n        neighborhood = [anchor] + [anchor ^ a ^ b for a, b in pairs]\\n        rng.shuffle(neighborhood)\\n        cluster = neighborhood[:min(len(neighborhood), 3 + turn % 6)]\\n        pinned = set()\\n        mode = turn % 3\\n        for v in cluster:\\n            old = candidate[v]\\n            choices = options(candidate, v, 2 if turn % 5 == 4 else 1)\\n            alternatives = [mask for mask in choices if mask != old]\\n            if not alternatives:\\n                continue\\n            top = max(degrees[mask] for mask in choices)\\n            temperature = 0.45 if turn % 4 else 0.9\\n            chosen = max(alternatives, key=lambda mask:\\n                         1.4 * (degrees[mask] - top)\\n                         + 0.16 * (mask ^ old).bit_count()\\n                         + tie_value(candidate, v, mask, mode)\\n                         - temperature * math.log(max(1e-12, rng.random())))\\n            replace(candidate, v, chosen)\\n            pinned.add(v)\\n\\n        # Exact conditional star maximization repairs the surrounding graph.\\n        for sweep in range(3):\\n            order = list(range(size))\\n            rng.shuffle(order)\\n            changed = False\\n            for v in order:\\n                if v in pinned:\\n                    continue\\n                choices = options(candidate, v, 0)\\n                old = candidate[v]\\n                chosen = max(choices, key=lambda mask: tie_value(candidate, v, mask, mode))\\n                if chosen != old:\\n                    replace(candidate, v, chosen)\\n                    changed = True\\n            count = sum(degrees[mask] for mask in candidate) // 2\\n            if count >= floor:\\n                record(candidate)\\n            if not changed:\\n                break\\n\\n        value = record(candidate)\\n        count = sum(degrees[mask] for mask in candidate) // 2\\n        if value > current_value or (value == current_value and candidate != current):\\n            current, current_value = candidate, value\\n            stale = 0\\n        elif count >= ceiling - 10 and rng.random() < 0.3:\\n            current, current_value = candidate, value\\n            stale += 1\\n        else:\\n            stale += 1\\n\\n        # Occasionally release the pins, retaining dense nonodd intermediates\\n        # in the reward-ranked archive before this final relaxation.\\n        if turn % 4 == 3:\\n            relaxed = list(candidate)\\n            order = list(range(size))\\n            rng.shuffle(order)\\n            for v in order:\\n                choices = options(relaxed, v, 0)\\n                chosen = max(choices, key=lambda mask: tie_value(relaxed, v, mask, mode))\\n                replace(relaxed, v, chosen)\\n            relaxed_value = record(relaxed)\\n            if relaxed_value > current_value:\\n                current, current_value = relaxed, relaxed_value\\n\\n    return [{'edges': unpack(list(item[3])),\\n             'label': 'exact parity-star pinned cluster ' + str(k)}\\n            for k, item in enumerate(archive[:limit])]\\n\", \"evaluation\": {\"status\": \"ok\", \"execution\": {\"status\": \"ok\", \"returncode\": 0, \"elapsed_seconds\": 1.8780943750007282, \"stderr_tail\": \"\"}, \"outputs\": [{\"status\": \"accepted\", \"graph_id\": \"fa2712fcef0bec39b7ca\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 680, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 680, \"goal_gap\": 3, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -1.2727272727272727, \"margins\": {\"481aa2232ddff20c\": -2.0, \"60ed19ed0bd97eec\": -1.0, \"627e86b81a4d7335\": -1.2727272727272727, \"6f64467dfe9bb024\": -1.4805194805194806, \"884bb8c899b5b07e\": -0.5, \"626e438595762928\": -1.0}, \"max_violation\": -0.5, \"tightness\": 0.44000000000000006, \"novelty\": 0.015085412071399924}}, {\"status\": \"accepted\", \"graph_id\": \"2e8878374799658bbf0b\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 680, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 680, \"goal_gap\": 3, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -1.2727272727272727, \"margins\": {\"481aa2232ddff20c\": -2.0, \"60ed19ed0bd97eec\": -1.0, \"627e86b81a4d7335\": -1.2727272727272727, \"6f64467dfe9bb024\": -1.4805194805194806, \"884bb8c899b5b07e\": -0.5, \"626e438595762928\": -1.25}, \"max_violation\": -0.5, \"tightness\": 0.44000000000000006, \"novelty\": 0.015085412071399924}}, {\"status\": \"accepted\", \"graph_id\": \"e002d907acd6e4752e4c\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 680, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 680, \"goal_gap\": 3, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -1.1818181818181819, \"margins\": {\"481aa2232ddff20c\": -2.0, \"60ed19ed0bd97eec\": -1.0, \"627e86b81a4d7335\": -1.1818181818181819, \"6f64467dfe9bb024\": -1.4805194805194806, \"884bb8c899b5b07e\": -0.5, \"626e438595762928\": -1.5}, \"max_violation\": -0.5, \"tightness\": 0.45833333333333337, \"novelty\": 0.012421238373135428}}, {\"status\": \"accepted\", \"graph_id\": \"a0bbcce8ed0203ef4f6a\", \"new\": true, \"reward\": {\"eligible\": true, \"objective\": 680, \"in_quality_band\": true, \"quality_deficit\": 0, \"objective_utility\": 680, \"goal_gap\": 3, \"goal_reached\": false, \"condition_distance\": 0, \"challenge\": -1.1818181818181819, \"margins\": {\"481aa2232ddff20c\": -2.0, \"60ed19ed0bd97eec\": -1.0, \"627e86b81a4d7335\": -1.1818181818181819, \"6f64467dfe9bb024\": -1.4805194805194806, \"884bb8c899b5b07e\": -0.5, \"626e438595762928\": -1.25}, \"max_violation\": -0.5, \"tightness\": 0.45833333333333337, \"novelty\": 0.012421238373135428}}]}, \"meaning\": \"actual prior program reference; not a parent-program ID in this new run\"}]",
+  "quality_band": {
+    "min_edges": 680
+  },
+  "focus_schedule": [
+    "challenge",
+    "novelty",
+    "objective"
+  ],
+  "primary_proof_goal": {
+    "statement": "For every finite simple C4-free graph G contained in Q8, |E(G)|<=682. The primary proof remains open.",
+    "upper_bound": 682
+  }
+}

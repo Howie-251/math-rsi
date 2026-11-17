@@ -1,0 +1,217 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_S1D_structural_obligations_complete_modulo_Q5_imports",
+  "summary": "S1D passes modulo explicitly imported Q5 A4 and C1. Half-layer uniform endpoint and transfer arguments are sound; independent exact geometry enumeration confirms six newly closed orbits/750 geometries and eight residual orbits/1050 geometries. Same-family provisional only.",
+  "reviewer_agent_id": "/root/q7_s1d_independent_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_reasoning_source": "explicit user request relayed by parent",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T07:32:45.812096+00:00",
+  "trace_path": "A4_S1D_REVIEW.md",
+  "audited_input_hashes": {
+    "A4_S1D_REDUCTION.md": "sha256:c07f1e72bb604452315c5651827fb61a618350263ffb1bacf644a694fc6ed770",
+    "check_a4_s1d_structure.py": "sha256:e0d357567a895ec4be1540dbfd9ac6654b5ad3a96271b15604209c4a7a41c98e",
+    "A4_S1D_CHECKS.json": "sha256:08dc43fe567cfc820536318f4dcb4704363827329a838d83bf77c49791034084",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "A4_S3D_COUNTS.json": "sha256:5772a0f00c56155e461112f13ce159ae6333cf91dd35ffdae93191e6573f584e",
+    "A4_S3D_REDUCTION.md": "sha256:f7bce1889507f7aba058b9f0fe716897775eafc4a8c07b3bbc3bbe9fd3067236",
+    "verify_a4_s3d.py": "sha256:34702692faaf203918b3757d16694caf942eec79d1722067d275fc78d0a3f4bb",
+    "Q6_A4_GEOMETRY.json": "sha256:176186c41d4263a732a03e21c748ff8a102fee59d19a287a27d23d94626e6704",
+    "../six_directions/CANONICAL_A4_CLOSURE.md": "sha256:1da0c3e81a36cae53e727fad20878096c32ae442ceaa7277aa986aef5e60e271",
+    "../six_directions/CANONICAL_COMPLETION_REVIEW.json": "sha256:31dd2103b87c9c3c8b406274ea786ec081dacb2f19177fdc1a097c3924dae956",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027"
+  },
+  "external_primary_source": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "location": "page 4, Theorem 12",
+    "read": true,
+    "hypotheses_checked": [
+      "dimension 5 >= 5",
+      "opposite parity holes 0 and y",
+      "arbitrary complete-graph perfect matching on remaining vertices",
+      "no half-layer"
+    ],
+    "new_edges_short": true
+  },
+  "details": {
+    "issues": [],
+    "micro_obligations_closed": 19,
+    "micro_obligations": [
+      {
+        "id": "O01",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O02",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O03",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O04",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O05",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O06",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O07",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O08",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O09",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O10",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O11",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O12",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O13",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O14",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O15",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O16",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O17",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O18",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      },
+      {
+        "id": "O19",
+        "status": "DISCHARGED",
+        "location": "A4_S1D_REVIEW.md obligation ledger"
+      }
+    ],
+    "Q5_A4_explicit_import": true,
+    "Q5_A4_final_review_verdict": "PASS",
+    "Q5_import_hash_matches": 2,
+    "old_large_certificates_rerun": false,
+    "C1_source": "PROOF_PACKAGE.md Proposition 3 and closing adjacent endpoints",
+    "S1D_arbitrary_matching_proved_modulo_imports": true,
+    "full_A6_4_proved": false,
+    "full_P7_proved": false,
+    "production_or_run_state_modified": false
+  },
+  "deterministic_checks": {
+    "script": "check_a4_s1d_structure.py",
+    "execution_mode": "runpy with Path.write_text intercepted; original file not overwritten",
+    "generated_json_equal_to_original": true,
+    "matching_samples": 6775,
+    "available_target_histogram": {
+      "8": 595,
+      "14": 95,
+      "15": 3203,
+      "16": 2882
+    },
+    "matching_exhaustiveness_claimed": false,
+    "exact_double_near_half_layer_conflicts": 640
+  },
+  "independent_geometry": {
+    "method": "explicit expansion under all 720 coordinate permutations, disjoint orbit coverage; direct enumeration of all marked configurations and block parities; direct per-coordinate S1D test",
+    "normalized_domain": 14880,
+    "augmentation_closed": 5130,
+    "post_augmentation_domain": 9750,
+    "post_augmentation_orbits": 52,
+    "before_S1D_orbits": 14,
+    "before_S1D_geometries": 1800,
+    "newly_closed_orbits": 6,
+    "newly_closed_geometries": 750,
+    "new_orbit_sizes": {
+      "8": 180,
+      "10": 90,
+      "12": 60,
+      "24": 180,
+      "32": 180,
+      "38": 60
+    },
+    "remaining_orbits": 8,
+    "remaining_geometries": 1050,
+    "remaining_orbit_sizes": {
+      "1": 180,
+      "3": 360,
+      "5": 60,
+      "7": 60,
+      "9": 120,
+      "11": 180,
+      "14": 30,
+      "36": 60
+    },
+    "every_residual_configuration_has_good_direction": true,
+    "total_closed_geometries_modulo_prior_inputs": 13830
+  },
+  "counterexample_pass": {
+    "verified_counterexamples": 0,
+    "candidates_remaining": 0,
+    "cases_checked": [
+      "root even/odd",
+      "full and seven-edge half-layers",
+      "all 640 double seven-edge conflicts",
+      "new dk short/long",
+      "fixed targets in X_A",
+      "c=1,3,29",
+      "safe y in X_A minus root",
+      "port repeated B endpoint",
+      "nonzero minority hole h",
+      "compressed kq short/long"
+    ]
+  },
+  "evidence": {
+    "A4_S1D_REVIEW.md": "sha256:4ff1bd39da9649603591310287dc70e8649d088afcd5f86f8c4cf3ab53041fe2"
+  }
+}

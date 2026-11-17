@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "caller": "/root",
+  "writer": "/root/twelve_cut_writer",
+  "writer_model": "GPT-6.1-sol/high",
+  "caller_obligation_id": "R7-TWELVE-CUT",
+  "status": "author_proof_modulo_imports_pending_independent_review",
+  "original_input": "Any matching in the complete graph on Q6 with four holes of each parity (C4) or five holes of each parity (C5).",
+  "conclusion": "A 64-vertex simple cycle containing every prescribed edge, with all edges outside the prescribed matching short.",
+  "proof_order": [
+    "Independent-hole branch for both counts",
+    "C4 by the independent branch or augmentation to accepted C3",
+    "C5 by the independent branch or augmentation to the proved C4"
+  ],
+  "proof_sha256": {
+    "Q6_BALANCED_EIGHT_TEN_CYCLES.md": "ae9afc79f868fc3469c64054eed69830220f97c94b5261776d06aa67377cbd62"
+  },
+  "direct_q6_import_sha256": {
+    "Q7_EIGHT_NINE_CUTS.md": "d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "R7_NEAR_BALANCED_BLOCKS.md": "f14078566876269bfd0c4f6d64a016b720872129e612307037c07571f8ab0e89",
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW.json": "e79c9e2c5bc1cf65af80bc5da56f89ae877797d8159b15052741b739e62ce44a"
+  },
+  "direct_q5_import_sha256": {
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "../six_directions/T44_Q5_CLOSURE_DRAFT.md": "96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "../six_directions/T44_Q5_CLOSURE_REVIEW.json": "f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "Q5_T15_FULL_CLOSURE.md": "b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "Q5_T15_FULL_REVIEW.json": "0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80"
+  },
+  "matching_enumeration_calls": 0,
+  "high_hole_enumeration_calls": 0,
+  "hamilton_solver_calls": 0,
+  "prior_certificate_replays": 0,
+  "changed_shared_state": false
+}

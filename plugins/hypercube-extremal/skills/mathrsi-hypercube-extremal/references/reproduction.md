@@ -62,3 +62,31 @@ python3 column_lift.py --no-q5 --rounds 20 --prefix replay_control
 模型从相邻optimization目录读q5control_best.npz，--no-q5同时禁止初始额外cuts和动态Q5切面；目录名不扩大模型范围。历史certify_lift.py会覆写certificate.json/result.json，只能在此新副本按源码导出同型整数Gram候选，随后用上节check_q4_candidate完整重验，保留已接受best。
 
 本轮实际仅运行物化：278逻辑路径恢复，恰好跳过五表，脚本自身检查19项准备/生成/evaluator/model/全部face块/初始化及column_lift必需别名，missing_required_aliases为空，[脚本原生结果](../../../evidence/materialize-search-v2-result.json)。**没有执行上述表重建、共享库编译或优化**，不声称搜索运行时已就绪；运行前按当前任务预算与真实依赖决定，不自动重启旧研究。
+
+## v6 新增随仓复现入口（渐近 0.59124、Q7 304、Q8 682–683 与 cube_coevolve）
+
+以下命令均仅需 Python 3 标准库与支持 C++17/C++20 的 `g++`/`clang++`，全部输出写入临时目录，不修改只读 `archive/`：
+
+```sh
+# 1. 渐近 0.59124：从源码重编译两套 C++20 128 位核验器，穷举全部 3,212,821 个 Q4 轨道（T3 与 m=1024 T4）
+run_dir=$(mktemp -d)
+python3 -B plugins/hypercube-extremal/archive/asymptotic-05912/run_exact_cpp_checks.py --work-dir "$run_dir/asym"
+
+# 2. 有限 Q7 (304)：独立验证两份 304 边无 C4 构造（A.edges、B.edges）与两孔轨道枚举脚本
+#    （304 边构造已验证；304 上界按原包报告，本次未复验——21 份原始 .cnf/.drup 在原汇编中未随包）
+python3 -B plugins/hypercube-extremal/archive/q7-304/check_q7_304.py
+
+# 3. 有限 Q8 (682 ≤ ex(Q8, C4) ≤ 683)：验证四份 682 边构造 + 精确有理余量 + C++17 全域 13,150,453 补全枚举
+python3 -B plugins/hypercube-extremal/archive/q8-683/check_q8_682_seeds.py
+python3 -B plugins/hypercube-extremal/archive/q8-683/replay.py quick --out "$run_dir/q8-quick"
+python3 -B plugins/hypercube-extremal/archive/q8-683/replay.py q4 --out "$run_dir/q8-q4"
+
+# 4. cube_coevolve 协同搜索引擎：18 项单元测试 + 离线闭环冒烟（不触发外部模型计费）
+(cd plugins/hypercube-extremal/tools/cube_coevolve && \
+  python3 -B -m unittest discover -s tests -v && \
+  python3 -B -m cube_coevolve run --config configs/smoke.json --output "$run_dir/coev-smoke" --rounds 2 && \
+  python3 -B -m cube_coevolve run --config configs/q8_offline_smoke.json --output "$run_dir/coev-q8" --rounds 1)
+rm -rf "$run_dir"
+```
+
+**外部归档依赖边界：** `q8-683/replay.py` 的 `reconstruct` 模式依赖省略的搜索特征池 `.npz` 及 `scipy`，`q6` 模式依赖约 555 MiB 的 25 份 `q6_sources/*.drat` 原轨迹；未挂载外部原包 `C4-Free进展.zip :: Q8_C4_upper683_20261116/` 时，两个模式均明确报错退出并指向 [q8-683/INVENTORY.json](../../../archive/q8-683/INVENTORY.json)。各目录 `INVENTORY.json` 中的 SHA-256 仅记录外部文件身份，不能代替证书或 DRAT/DRUP 轨迹重放。本轮实际核验回执保存在 `development/evolution/v6-c4free-rs7-20261117/checks/`。

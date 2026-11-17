@@ -1,0 +1,355 @@
+{
+  "review": "SILENT_ASSUMPTION_SWEEP_1",
+  "saved_at_utc": "2026-11-15T12:30:01.973509+00:00",
+  "scope_root": "/mnt/c/Users/Anony/Desktop/project/research/ex_qn_c4/coevolve",
+  "base_commit": "none (not a git repo)",
+  "files_read_in_full": [
+    "implement-stage/SPEC.md",
+    "implement-stage/ASSUMPTIONS.md",
+    "implement-stage/BUILD_NOTE.md",
+    "configs/live_smoke.json",
+    "configs/q8.json",
+    "configs/q8_conditional.json",
+    "configs/q8_offline_smoke.json",
+    "configs/smoke.json",
+    "cube_coevolve/__init__.py",
+    "cube_coevolve/__main__.py",
+    "cube_coevolve/graphs.py",
+    "cube_coevolve/inequalities.py",
+    "cube_coevolve/loop.py",
+    "cube_coevolve/metrics.py",
+    "cube_coevolve/providers.py",
+    "cube_coevolve/reward.py",
+    "cube_coevolve/runtime.py",
+    "cube_coevolve/worker.py",
+    "tests/test_core.py",
+    "tests/test_loop.py"
+  ],
+  "review_model": {
+    "backend": "codex",
+    "execution": "native child reviewer",
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "xhigh",
+    "actual_model": null,
+    "actual_model_status": "The current reviewer session exposes no independently reported provider identity. Requested route is not substituted for observed identity.",
+    "family_comparison": "same Codex/OpenAI family as implementation author"
+  },
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "assurance": "draft; deterministic tests retain their own Type-A evidence; this same-family review cannot independently acquit mathematical or methodological correctness",
+  "process_note": "All listed files were read directly. Findings were sent to Root during review; Root changed implementation and ledger. This file preserves every substantive original finding and the follow-up checks. Reviewer changed no implementation files and made no paid model calls.",
+  "undeclared": [],
+  "stale_rows": [
+    {
+      "id": "S03",
+      "row": "A19",
+      "class": "semantic",
+      "severity": "low",
+      "site": [
+        "implement-stage/ASSUMPTIONS.md:A19",
+        "cube_coevolve/reward.py:score",
+        "cube_coevolve/runtime.py:SearchAPI.reward"
+      ],
+      "stated_choice": "The condition channel approaches the applicability domain of the selected challenge.",
+      "actual_choice": "condition_distance is computed exclusively from goal.conditions. It never measures distance to the selected inequality.conditions; outside that domain challenge reward uses -1e6.",
+      "why_it_matters": "Task eligibility and inequality applicability are deliberately different domains. The current sentence conflates them and promises a gradient that is not implemented.",
+      "minimal_fix": "Say explicitly that the condition channel approaches task conditions only; do not imply it approaches arbitrary selected-inequality conditions. No new mechanism is required for this sweep."
+    }
+  ],
+  "functional_defects": [],
+  "semantic_undeclared": 0,
+  "verdict": "gaps",
+  "verdict_scope": "Current unresolved findings only are in the top-level arrays. The complete original findings are retained below. Clean, if reached, remains provisional and does not establish a Q8 result or a theorem from sample support.",
+  "original_findings": {
+    "undeclared": [
+      {
+        "id": "U01",
+        "class": "semantic",
+        "site": "cube_coevolve/reward.py:freeze, score, select_parents",
+        "decision": "Novelty is nearest normalized L1 distance in a fixed projection: edges, even_squares, degree_3..6 when present, holes_max_side. New registry metrics do not automatically enter this projection; labelled edge sets are not isomorphism classes. Archive-parent scoring may use leave-one-out, candidate scoring must not.",
+        "why_it_matters": "Defines what structural diversity means and which constructions are retained or rewarded.",
+        "resolution": "Declared in A12; candidate/archive distinction also fixed under F01.",
+        "status": "resolved"
+      },
+      {
+        "id": "U02",
+        "class": "semantic",
+        "site": "cube_coevolve/loop.py:training_view",
+        "decision": "Discovery/challenge assignment uses graph-ID suffix modulo 4, with fallback to the first graph. Clusters use odd-square status, edges//4 and minimum degree; only the 48 densest individual discovery rows are shown.",
+        "why_it_matters": "Defines the empirical sample and correlations the upper model can see. It is not independent statistical validation.",
+        "resolution": "Declared in A13 and existing A08; all applicable archived graphs remain checked.",
+        "status": "resolved"
+      },
+      {
+        "id": "U03",
+        "class": "semantic",
+        "site": "cube_coevolve/runtime.py:SearchAPI.reward",
+        "decision": "Each focus uses specific scalar coefficients and a target-dependent penalty: objective - (abs(target)+1)*condition_distance + .01*novelty; challenge + .01*normalized objective + .01*novelty; novelty + .05*normalized objective; negative condition distance + .001*normalized objective.",
+        "why_it_matters": "Defines how temporary edge losses, constraint progress and structural diversity trade off inside generated searches.",
+        "resolution": "Declared in A14; full components remain separately recorded.",
+        "status": "resolved"
+      },
+      {
+        "id": "U04",
+        "class": "semantic",
+        "site": "cube_coevolve/reward.py:freeze; cube_coevolve/runtime.py:SearchAPI.reward",
+        "decision": "Residual scale=max(sum absolute coefficients, residual interquartile spread over applicable archive graphs); objective normalization divides by abs(target)+1; a nonapplicable selected challenge uses -1e6.",
+        "why_it_matters": "Changes the numerical meaning and comparisons of the shared feedback reward.",
+        "resolution": "Declared in A19. Its last sentence has a separate remaining wording mismatch S03 if still present.",
+        "status": "resolved"
+      },
+      {
+        "id": "U05",
+        "class": "semantic",
+        "site": "cube_coevolve/loop.py:run_round source_programs and parent_program_ids",
+        "decision": "Program selection is graph-guided: collect programs that generated chosen parent graphs, then show the latest four by creation order. This is not a separate program-fitness ranking. Originally parent_program_ids included all originating programs, even sources not shown.",
+        "why_it_matters": "Determines what program evolution and its recorded lineage mean.",
+        "resolution": "A18 declares the policy. parent_program_ids now records only source_programs actually shown; parent_graph_ids records graph provenance separately.",
+        "status": "resolved"
+      },
+      {
+        "id": "U06",
+        "class": "interface",
+        "site": "cube_coevolve/loop.py:recent_program_failures; cube_coevolve/runtime.py:execute",
+        "decision": "The next lower call receives at most four prior failed-program records. Originally the record omitted program identity/source and stderr.",
+        "why_it_matters": "Without the actual failed source and diagnostic the model cannot repair a concrete failed program.",
+        "resolution": "A15 declares the bounded interface; F02 verifies ID, source, evaluation and stderr_tail are now passed.",
+        "status": "resolved"
+      },
+      {
+        "id": "U07",
+        "class": "semantic",
+        "site": "cube_coevolve/loop.py:upper_context and counterexample_view",
+        "decision": "A refuting held-out witness is disclosed after challenge, even though it is not in the discovery sample; at most four actual witness graphs are exposed per upper call.",
+        "why_it_matters": "Makes counterexample-driven refinement possible and changes the later meaning of holdout independence.",
+        "resolution": "A17 explicitly declares post-refutation disclosure and loss of independent holdout interpretation; F04 verifies the actual interface.",
+        "status": "resolved"
+      }
+    ],
+    "stale_rows": [
+      {
+        "id": "S01",
+        "row": "A07",
+        "site": "cube_coevolve/loop.py:run_round metric update",
+        "stated_choice_before": "New definitions enter a config version.",
+        "actual_choice": "Frozen startup config remains unchanged; effective definitions update state.metric_definitions and are used to recompute old graph metrics.",
+        "resolution": "A07 now describes effective state plus per-round registry snapshots. run_round saves registry.json. No versioning framework was needed.",
+        "status": "resolved"
+      },
+      {
+        "id": "S02",
+        "row": "A16",
+        "site": "cube_coevolve/inequalities.py:exhaustive_oracle",
+        "stated_choice_before": "An empty domain is explicitly marked vacuous.",
+        "actual_choice_before": "Only applicable=0 was present. No theorem promotion occurred, but no vacuous field existed.",
+        "resolution": "Each oracle inequality row now has vacuous=(applicable==0); zero-applicability candidates are still not promoted.",
+        "status": "resolved"
+      }
+    ],
+    "functional_defects": [
+      {
+        "id": "F01",
+        "severity": "high",
+        "site": [
+          "cube_coevolve/runtime.py:SearchAPI.score",
+          "cube_coevolve/reward.py:score"
+        ],
+        "defect": "Exact archived candidates received artificial positive novelty because their own reference graph was removed.",
+        "reproduction": {
+          "dimension": 2,
+          "archive": [
+            [],
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ],
+          "novel_candidate": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "before": {
+            "duplicate_novelty": 0.6666666666666666,
+            "duplicate_novelty_focus_reward": 0.6966666666666667,
+            "novel_candidate_novelty": 0.2222222222222222,
+            "novel_candidate_reward": 0.24222222222222223
+          },
+          "after": {
+            "duplicate_novelty": 0.0,
+            "novel_candidate_novelty": 0.2222222222222222
+          }
+        },
+        "impact": "A novelty-focused generated search could prefer exact repeats over unseen nearby constructions.",
+        "resolution": "score defaults to including every frozen reference. Only select_parents requests exclude_self=True. Independently reran the same SearchAPI reproduction after the change.",
+        "status": "resolved"
+      },
+      {
+        "id": "F02",
+        "severity": "high",
+        "site": [
+          "cube_coevolve/runtime.py:execute",
+          "cube_coevolve/loop.py:prompt_context.recent_program_failures"
+        ],
+        "defect": "The next lower model call could not see a failed generated program or its actual runtime diagnostic.",
+        "reproduction": {
+          "source": "def generate(context):\n    return 1 / 0\n",
+          "method": "Two tiny Q2 rounds with a deterministic mocked lower provider and the actual offline upper provider. No paid calls.",
+          "before": {
+            "parent_programs": [],
+            "recent_program_failures": [
+              {
+                "status": "failed",
+                "execution": {
+                  "status": "failed",
+                  "returncode": 1
+                },
+                "outputs": []
+              }
+            ],
+            "ZeroDivisionError_in_stderr_file": true
+          },
+          "after": {
+            "id_present": true,
+            "source_present": true,
+            "ZeroDivisionError_in_forwarded_stderr_tail": true
+          }
+        },
+        "impact": "The advertised failure-repair feedback path was severed for runtime failures.",
+        "resolution": "execute retains bounded stderr_tail; lower feedback carries ID, source and full evaluation. Independently reran the two-round reproduction.",
+        "status": "resolved"
+      },
+      {
+        "id": "F03",
+        "severity": "medium",
+        "site": [
+          "cube_coevolve/reward.py:freeze",
+          "cube_coevolve/loop.py:challenge_turn_index"
+        ],
+        "defect": "Rotating challenge targets by absolute round number aliases with the four-focus schedule.",
+        "reproduction": {
+          "active_candidates": "Four non-edge integer inequalities, each empirically supported on Q2 archive.",
+          "actual_challenge_rounds": [
+            1,
+            5,
+            9,
+            13
+          ],
+          "before_selected_ids": [
+            "0f51f6098c8a3447",
+            "0f51f6098c8a3447",
+            "0f51f6098c8a3447",
+            "0f51f6098c8a3447"
+          ],
+          "after_distinct_targets": 4
+        },
+        "impact": "With a stable four-candidate set, only one candidate ever drives a challenge-focused search.",
+        "resolution": "Rotation now counts actual preceding challenge turns, including custom schedules. Read the helper and ran test_challenge_schedule_covers_four_candidates.",
+        "status": "resolved"
+      },
+      {
+        "id": "F04",
+        "severity": "high",
+        "site": [
+          "cube_coevolve/loop.py:training_view",
+          "cube_coevolve/loop.py:upper_context",
+          "cube_coevolve/providers.py:UPPER_INSTRUCTIONS"
+        ],
+        "defect": "Counterexample IDs were supplied without guaranteed witness metrics or edges; held-out refuting graphs remained invisible to the no-tools upper model.",
+        "reproduction": {
+          "dimension": 2,
+          "archive_ids": [
+            "effc2e59da94fea1a758",
+            "20bf2ce05943c1e15150"
+          ],
+          "archive_edge_counts": [
+            0,
+            3
+          ],
+          "inequality": "edges <= 0",
+          "before": "Status refuted and max_residual=3, but displayed discovery samples/clusters contained only the empty graph. The actual three-edge counterexample was identified only by ID.",
+          "after": "actual_counterexamples carries ID, dimension, edges, metrics, and refuted inequality IDs independently of discovery membership."
+        },
+        "impact": "Upper-side structural conjecture repair could not consume its own refutations.",
+        "resolution": "Added bounded counterexample_view and actual_counterexamples to the actual upper prompt. Read the call site and ran test_heldout_refutation_is_visible_to_upper.",
+        "status": "resolved"
+      },
+      {
+        "id": "F05",
+        "severity": "medium",
+        "site": [
+          "cube_coevolve/metrics.py:Registry.describe",
+          "configs/q8.json",
+          "cube_coevolve/loop.py:upper_context"
+        ],
+        "defect": "The advertised exact registry sent to the model exposed base metric names but omitted specialized formulas, notably q7_J.",
+        "reproduction": {
+          "before": "Q8 configuration supplied q7_J_min and q7_J_sum over Q7 faces, but model input did not contain J=38448-126*edges+27*degree_3-44*degree_6-128*degree_7. Tool use was forbidden, so the formula could not be inspected.",
+          "after": "Registry.describe has base_definitions and dimension-specific face_base_definitions, including the exact Q7 polynomial and local-parity contract."
+        },
+        "impact": "The model could fit numbers but could not reliably interpret or reason about the shared indicator it was asked to use.",
+        "resolution": "Read all new descriptions against the implemented formulas; test_face_metric_and_exact_counts checks exposure of the Q7 formula. No universal Q7 inequality is inferred.",
+        "status": "resolved"
+      }
+    ]
+  },
+  "counts": {
+    "original_undeclared": 7,
+    "original_semantic_undeclared": 6,
+    "functional_defects_resolved": 5,
+    "stale_rows_resolved": 2,
+    "open_undeclared": 0,
+    "open_stale_rows": 1,
+    "open_functional_defects": 0
+  },
+  "verification": [
+    {
+      "command": "TMPDIR=<coevolve>/implement-stage/reviews PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests_run": 11,
+      "result": "OK",
+      "scope": "Literal graph validation, actual existing Q8 seed acceptance, exact face identities, scoped exhaustive Q2 oracle, reward/duplicate behavior, challenge rotation, runtime rejection/timeout/failure diagnostic, held-out counterexample exposure, two-round offline feedback and resume."
+    },
+    {
+      "command": "Independent in-memory Q2 SearchAPI novelty reproduction, before and after fixes",
+      "result": "Duplicate novelty changed from 2/3 to 0; new graph remained 2/9."
+    },
+    {
+      "command": "Independent two-round Q2 runtime-failure feedback probe, with deterministic lower response and offline upper provider",
+      "result": "Before: no failed source or error text. After: correct ID/source/ZeroDivisionError available in next lower context."
+    },
+    {
+      "command": "Independent Q2 held-out counterexample construction and four-candidate rotation reproduction",
+      "result": "Confirmed original invisible witness and repeated challenge target before fixes; corresponding revised regression tests pass."
+    }
+  ],
+  "correct_as_implemented": [
+    "Accepted graph outputs are normalized and checked as simple ambient cube subgraphs. C4 validation cross-checks face counts with an independent common-neighbor counter.",
+    "Task conditions and each inequality's conditions are checked separately; an ineligible graph cannot satisfy the task goal or refute a conditional inequality outside its own scope.",
+    "Every applicable archived graph participates in refutation. Sample-supported candidates remain empirical. Only complete n<=3 enumeration can assign exhaustive_verified within its recorded finite domain.",
+    "Refuted candidates are excluded from later reward snapshots. New metric definitions trigger recomputation of archived metrics.",
+    "Offline and Codex providers are explicit; model failure is not silently replaced by an offline result. Requested model identity is not reported as independently observed identity.",
+    "Completed-round state is atomically saved; recorded successful provider calls and completed program evaluations are reused on resume."
+  ],
+  "limitations": [
+    "Live Codex integration is Root's separate evidence; reviewer made no paid call and does not claim to have verified the returned live model identity.",
+    "No new Q8 search campaign, upper-bound proof, universal conjecture verification, or performance improvement was assessed. The existing seed unit test is a bounded witness check, not resumption of old research.",
+    "BUILD_NOTE was still being populated by Root during review. Its pending rung statuses are a work-in-progress record, not a positive acceptance claim; final publication should use Root's actual run record.",
+    "This review reports concrete current interfaces and observed defects. It proposes no hash scheme, security platform, or malicious-local-user threat model."
+  ]
+}

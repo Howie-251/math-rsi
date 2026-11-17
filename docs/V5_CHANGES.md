@@ -1,6 +1,6 @@
 # v5: control proof interfaces and reuse theorems across representations
 
-**v5 is the current workflow on `main`.** It deepens the existing five solving stages and hypercube-Hamilton plugin, retaining ten base skills, six domains and fourteen domain skills. Clone `main` or [download its ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip), then record the exact commit. Fixed v1–v4 snapshots remain unchanged.
+**v5 is a fixed historical release (`v5` tag), superseded on `main` by [v6](V6_CHANGES.md).** It deepened the five solving stages and hypercube-Hamilton plugin while retaining ten base skills, six domains and fourteen domain skills. Fixed v1–v5 snapshots remain unchanged.
 
 The source is Q7 research run with **MathRSI v3 (local adaptation)**. v5 absorbs its methods and diagnosed failures; it did not produce the historical Q7 results. [Result, methods and open scope](../case-studies/ruskey-savage-q7/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/q7.html).
 

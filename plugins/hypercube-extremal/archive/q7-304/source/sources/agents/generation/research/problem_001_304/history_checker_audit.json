@@ -1,0 +1,161 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "name": "unit_conflict",
+      "expected": true,
+      "accepted": true,
+      "passed": true,
+      "valid": true,
+      "method": "C# watched-literal RUP; retain original axioms; any addition may use strictly earlier validated clauses",
+      "history_fallback_count": 0,
+      "history_fallback_lines": [],
+      "checked_additions": 1,
+      "deletions": 0,
+      "seconds": 0.0009443,
+      "cnf_sha256": "914bd88ead203d595bff9c2e47ecd20150bea7fd0e1aafccba29abab8d03b488",
+      "proof_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "name": "sat_false_empty",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 1\"\n"
+    },
+    {
+      "name": "fallback_restores_validated",
+      "expected": true,
+      "accepted": true,
+      "passed": true,
+      "valid": true,
+      "method": "C# watched-literal RUP; retain original axioms; any addition may use strictly earlier validated clauses",
+      "history_fallback_count": 1,
+      "history_fallback_lines": [
+        3
+      ],
+      "checked_additions": 2,
+      "deletions": 1,
+      "seconds": 0.0116716,
+      "cnf_sha256": "fcd0258b989f04b14820f83b474e024f2bb24404c6cb4bd411d02e5ced21e9cc",
+      "proof_sha256": "c676f5a592bbba68d463a151f8d7361a7e9f0f1b4305c58589092af4be7c3191"
+    },
+    {
+      "name": "retain_original_axioms",
+      "expected": true,
+      "accepted": true,
+      "passed": true,
+      "valid": true,
+      "method": "C# watched-literal RUP; retain original axioms; any addition may use strictly earlier validated clauses",
+      "history_fallback_count": 0,
+      "history_fallback_lines": [],
+      "checked_additions": 1,
+      "deletions": 1,
+      "seconds": 0.0086471,
+      "cnf_sha256": "914bd88ead203d595bff9c2e47ecd20150bea7fd0e1aafccba29abab8d03b488",
+      "proof_sha256": "643f1345196d5a2844ecf456631b0c93801010f25e6e281eceb0d4713e86e8ba"
+    },
+    {
+      "name": "missing_terminator",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Malformed or truncated clause\"\n"
+    },
+    {
+      "name": "embedded_zero",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Malformed or truncated clause\"\n"
+    },
+    {
+      "name": "out_of_range",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Proof variable out of range\"\n"
+    },
+    {
+      "name": "no_empty",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"No validated empty clause\"\n"
+    },
+    {
+      "name": "tautology_not_contradiction",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 2\"\n"
+    },
+    {
+      "name": "sat_nonrup_unit",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 1\"\n"
+    },
+    {
+      "name": "nonempty_history_fallback",
+      "expected": true,
+      "accepted": true,
+      "passed": true,
+      "valid": true,
+      "method": "C# watched-literal RUP; retain original axioms; any addition may use strictly earlier validated clauses",
+      "history_fallback_count": 2,
+      "history_fallback_lines": [
+        3,
+        4
+      ],
+      "checked_additions": 3,
+      "deletions": 1,
+      "seconds": 0.0152087,
+      "cnf_sha256": "1533d49d1113d5ee071da50c32383b250c0fc678259f23320abcc6b52488bc00",
+      "proof_sha256": "47b2741737b8a23b53fd38d3731b3c0b37441ea963224f4bfc454aa7a795e1f7"
+    },
+    {
+      "name": "multiple_nonempty_history_fallback",
+      "expected": true,
+      "accepted": true,
+      "passed": true,
+      "valid": true,
+      "method": "C# watched-literal RUP; retain original axioms; any addition may use strictly earlier validated clauses",
+      "history_fallback_count": 3,
+      "history_fallback_lines": [
+        3,
+        5,
+        6
+      ],
+      "checked_additions": 4,
+      "deletions": 2,
+      "seconds": 0.0101629,
+      "cnf_sha256": "6ffaf7f0c7c8b99b0f5332ded4ab3af5c9f6ca9af4e4edd2b358324105c7e9ae",
+      "proof_sha256": "0a4f052d16eac90df4baec4215abbbf28c2a8be2cfe07bc0b4b22486c1c091e8"
+    },
+    {
+      "name": "future_clause_must_not_help",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 1\"\n"
+    },
+    {
+      "name": "current_clause_must_not_help",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 1\"\n"
+    },
+    {
+      "name": "invalid_deleted_clause_must_not_help",
+      "expected": false,
+      "accepted": false,
+      "passed": true,
+      "rejection": "check_drup_history.ps1: Exception calling \"Run\" with \"1\" argument(s): \"Non-RUP addition at line 1\"\n"
+    }
+  ],
+  "checker_sha256": "043957df7826adb5f6821e913a27e4790024c6b9f525c88c37b612ffef3fa604",
+  "soundness": "Inductively every accepted clause follows from the original CNF; original axioms and every retained historical addition are previously validated. Recovering deletions only restores consequences. No current/future/failed addition enters the history engine."
+}

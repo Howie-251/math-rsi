@@ -1,0 +1,199 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_proof_obligations_complete_modulo_explicit_imports",
+  "reviewer_agent_id": "/root/q7_a4_full_independent_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "explicit user override relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T07:36:33.618564+00:00",
+  "external_primary_source": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "read_directly": true,
+    "locations": [
+      "page1 extension definition and Theorem2",
+      "page3 Theorem8",
+      "page4 Theorem12"
+    ],
+    "original_proofs_reproved": false
+  },
+  "imports": [
+    {
+      "claim": "A2, B1, C1 for all integer dimensions >=5",
+      "source": "PROOF_PACKAGE.md propositions2-3",
+      "status": "explicit literature import; local applications rechecked"
+    },
+    {
+      "claim": "A4 in Q5 for arbitrary prescribed complete-graph matchings",
+      "source": "../six_directions/CANONICAL_A4_CLOSURE.md and final Q5_A10_FULL_REVIEW.json",
+      "status": "explicit project import; old large certificate suite not rerun"
+    },
+    {
+      "claim": "S1D in Q6",
+      "source": "A4_S1D_REDUCTION.md",
+      "review": "A4_S1D_REVIEW.json",
+      "review_verdict": "PASS",
+      "current_source_hash_matches": true
+    },
+    {
+      "claim": "S3D for all integer dimensions >=6",
+      "source": "A4_S3D_REDUCTION.md",
+      "review": "A4_S3D_REVIEW.json",
+      "review_verdict": "PASS",
+      "current_source_hash_matches": true
+    }
+  ],
+  "details": {
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "dependency_DAG_acyclic": true,
+    "old_large_certificates_rerun": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false,
+    "theorems_audited": 4,
+    "micro_obligations_closed": 19
+  },
+  "scope_limitations": [
+    "full P7 not proved",
+    "Q7 layers6 through40 not proved",
+    "higher-hole arbitrary long-edge auxiliaries not proved",
+    "untransplanted Q7 transition templates remain separate obligations"
+  ],
+  "modifications": "Only A4_FULL_REVIEW.md/.json and A4_DIMENSIONAL_REVIEW.md/.json written; source proofs, prior reports, evidence and RUN_STATE unchanged.",
+  "summary": "Full Q6 A4 and its B2/C2 corollaries pass modulo explicit Q5 and literature imports. Zero-crossing mirror splice, three-type case cover and endpoint restoration have no open obligations. S1D formal PASS received and hash checked.",
+  "trace_path": "A4_FULL_REVIEW.md",
+  "audited_input_hashes": {
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "A4_S1D_REDUCTION.md": "sha256:c07f1e72bb604452315c5651827fb61a618350263ffb1bacf644a694fc6ed770",
+    "A4_S3D_REDUCTION.md": "sha256:f7bce1889507f7aba058b9f0fe716897775eafc4a8c07b3bbc3bbe9fd3067236",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "INDEPENDENT_REVIEW.md": "sha256:419f7e0d60e8a2a716bd9aa42328887bee71cc0b6531a5871304e26fdf5d2b8a",
+    "INDEPENDENT_REVIEW.json": "sha256:c912d25c6d3e1bf99d1ac8762cb7fba30c005361a2a8df7daf9884e14a3d7f1d",
+    "A4_S1D_REVIEW.md": "sha256:4ff1bd39da9649603591310287dc70e8649d088afcd5f86f8c4cf3ab53041fe2",
+    "A4_S1D_REVIEW.json": "sha256:8b0924bf4929594cec5e465fbf59609faa7b2a4de21f7cee3c3345044c0203a4",
+    "A4_S3D_REVIEW.json": "sha256:2e7286e4c47ab6a6b8c089c5d7c2a5822c122a2abce8a40eabdd735dc93f39cc",
+    "../six_directions/CANONICAL_A4_CLOSURE.md": "sha256:1da0c3e81a36cae53e727fad20878096c32ae442ceaa7277aa986aef5e60e271",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "scope": {
+    "dimensions": [
+      6
+    ],
+    "theorems": [
+      "A4",
+      "B2",
+      "C2"
+    ],
+    "arbitrary_long_prescribed_edges": true,
+    "only_short_added_edges": true,
+    "Q7_four_hole_layer_registered_by_this_report": false,
+    "full_P7_proved": false
+  },
+  "obligations": [
+    {
+      "id": "Z01",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z02",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "Z03",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z04",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z05",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z06",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "Z07",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z08",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z09",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z10",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z11",
+      "status": "CLOSED"
+    },
+    {
+      "id": "M01",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "M02",
+      "status": "CLOSED"
+    },
+    {
+      "id": "M03",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "M04",
+      "status": "CLOSED"
+    },
+    {
+      "id": "B01",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "B02",
+      "status": "CLOSED"
+    },
+    {
+      "id": "B03",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "C01",
+      "status": "CLOSED_MODULO_IMPORTS"
+    }
+  ],
+  "counterexample_attempts": [
+    "mirror(b) is a hole: parity excludes",
+    "x=a or mirror(x)=0: B1 remains applicable",
+    "selected deleted edge lies in F: degree and free-root conditions exclude",
+    "by already belongs to spanning b-y path: impossible for more than2 vertices",
+    "bridges repeat or produce two components: four distinct facet endpoints and two-path join exclude",
+    "covered-target auxiliary edge collides: free root and distinct matching mate exclude",
+    "original required edge long or same-parity: always preserved/restored"
+  ],
+  "deterministic_checks": {
+    "imported_review_verdicts": "PASS",
+    "current_input_hash_alignment": "PASS",
+    "matching_samples_used_as_universal_proof": false
+  },
+  "evidence": {
+    "A4_FULL_REVIEW.md": "sha256:2f610b53b6cf564897fd0bae0df448826a6ee5cf398d4855cf01bbc33522f8fb"
+  }
+}

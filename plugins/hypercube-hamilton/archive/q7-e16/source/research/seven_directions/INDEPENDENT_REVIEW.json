@@ -1,0 +1,115 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "scoped_initial_obligations_complete_modulo_explicit_imports",
+  "summary": "Q7 initial three tasks accepted at their explicitly limited scopes; complete P7 and complete Q6 A4 remain open.",
+  "reviewer_agent_id": "/root/q7_initial_independent_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "user override; actual served backend not independently attested",
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-02T06:44:10.339712+00:00",
+  "audited_input_hashes": {
+    "PROOF_PACKAGE.md": "192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "Q7_ROOTED_WITNESS.json": "1645d1b07c776b340df994f724cc33c1c00f938952ba111dd0e0e98c96a76c5e",
+    "Q6_A4_GEOMETRY.json": "176186c41d4263a732a03e21c748ff8a102fee59d19a287a27d23d94626e6704",
+    "Q6_A4_PILOT.json": "081b7e7b2112bed94a071c5ae8fe673f6075540bec8151ac3b54cab6450ab755",
+    "q7_initial_probe.py": "9c500247c92c96e622c5238b032f20d14168747b5f1951ded6bce9f2a7431b50",
+    "Q6_A4_REMAINING.json": "34184fa4d65bd6c9d5d38bf28140a20f267027dc884b05fb3d9f2662b48007c2"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "../six_directions/P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "../six_directions/GENERAL_NEAR_PERFECT.md": "bafaea9040f4a677687aa21abee661bb9fa44db9d9ce33879e288a6a9d90ea55"
+  },
+  "checker_artifact_hashes": {
+    "verify_q7_initial.py": "0e01fe8d0d67634f3251c5e66150a57d3d2a1ee4aa4e82fda72424fd9e2a1db0",
+    "verify_q7_initial_summary.json": "f1fc06ce713db2b73628994823b125b5b3769ed54bcbc2e7ff73ab3af40879ec"
+  },
+  "report_hash": "419f7e0d60e8a2a716bd9aa42328887bee71cc0b6531a5871304e26fdf5d2b8a",
+  "trace_path": "INDEPENDENT_REVIEW.md",
+  "details": {
+    "issues": [],
+    "closed_obligations": [
+      "Q7 maximal matching >=45 via self-contained square double counting",
+      "root-preserving completion >=44 and <=40 holes",
+      "47-edge 34-hole rooted-maximal witness",
+      "general A2 for d>=5 modulo Theorem8",
+      "N10 and B1/C1 modulo Theorems2/8",
+      "Q7 full two-hole layer",
+      "zero-crossing opposite-side endpoints modulo accepted full P6",
+      "A4 neighbor augmentation",
+      "A4 positive-good-cut construction for arbitrary long-edge matchings",
+      "52 geometry orbits with exact sizes",
+      "18 universally closed orbits and3540 geometries",
+      "157 individual positive cycle certificates",
+      "remaining34 exact census complement"
+    ],
+    "open_obligations": [
+      "complete Q6 A4 on remaining34 orbits /6210 geometries",
+      "full six-dimensional higher long-edge avoidance and balanced-hole auxiliaries",
+      "complete Q7 layers4 through40",
+      "zero-crossing same-side prescribed endpoints",
+      "section4 candidate split table and complete transfer conditions",
+      "sharpness of rooted40-hole upper bound"
+    ],
+    "full_P7_proved": false,
+    "full_Q6_A4_proved": false,
+    "external_imports": [
+      {
+        "source": "https://tmuetze.de/papers/match.pdf",
+        "theorems": [
+          2,
+          8
+        ],
+        "source_read_directly": true,
+        "original_proofs_reproved": false
+      },
+      "accepted full short-matching P6, used only by Proposition4"
+    ],
+    "dependency_DAG_acyclic": true,
+    "Q5_A10_import_for_positive_cut": false,
+    "universal_matching_enumeration": false,
+    "cross_family_review": false,
+    "proof_assistant_verified": false,
+    "producer_imported_or_executed": false,
+    "old_six_dimensional_evidence_modified": false,
+    "producer_files_modified": false,
+    "deterministic_checks": {
+      "status": "PASS",
+      "checker": "independent standard-library implementation",
+      "producer_imported_or_executed": false,
+      "coordinate_permutations_enumerated": false,
+      "rooted_witness": {
+        "edges": 47,
+        "holes": 34,
+        "maximal_after_root_deletion": true
+      },
+      "geometry": {
+        "normalized": 14880,
+        "augmentation_closed": 5130,
+        "remaining": 9750,
+        "orbits": 52,
+        "forced_orbits": 18,
+        "forced_geometries": 3540,
+        "all_closed_geometries": 8670,
+        "remaining_orbits": 34,
+        "remaining_geometries": 6210,
+        "no_good_orbits": 12,
+        "zero_good_crossings_possible_orbits": 22
+      },
+      "families": {
+        "uniform": 52,
+        "parity_mixed": 52,
+        "half_layer": 31,
+        "zero_good_crossings": 22
+      },
+      "all_157_cycles_valid": true,
+      "remaining_file_exact_complement_checked": true,
+      "universal_matching_enumeration": false
+    }
+  }
+}

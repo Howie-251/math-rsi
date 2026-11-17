@@ -1,0 +1,344 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_selection_source": "explicit user override relayed by parent",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "thread_id": "/root/q5_three_target_counter_audit",
+  "generated_at": "2026-11-02T11:47:23.437553+00:00",
+  "protected_files_modified": false,
+  "open_fatal": 0,
+  "open_critical": 0,
+  "issues": [],
+  "full_Q6_T15_proved": false,
+  "full_P7_proved": false,
+  "audited_input_hashes": {
+    "Q6_T15_ACTUAL_PROFILE.json": "sha256:63fdf96c54e11e14255af358a62a54eda5d50707837f2cc5693695d860d38813",
+    "Q6_T15_AFTER_GOOD_ROOT_FRONTIER.json": "sha256:c98087fee78c221cca099cca42061224e22d7fb4228a7d3284e7b25cf820f5c5",
+    "Q6_T15_GOOD_ROOT_ALL_CLOSED.json": "sha256:168f80c019caf2c3652d9a456b609091fc5d023dd53f5ffb56c90aca2325e695",
+    "Q6_T15_S2_COMBINED_ALL_CLOSED.json": "sha256:ea63356de11cc88d7e2891d9d34c9b6b467fccae51a7d6028d0e8751f413bbfd",
+    "Q6_T15_GOOD_ROOT_COMPONENTS.json": "sha256:bf94c07ba3df47c6e00191263de4217915773e40de87b2c1390ba5aee437ba05",
+    "Q6_T15_S2_COMBINED_EXTENSION_REVIEW.json": "sha256:298fcb8416dac224a774b85b78c10bc4978bb798e9328009377073b8dfbd84c9",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "sha256:783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "Q7_EIGHT_COVERED_AFTER_GOOD_ROOTS.bin": "sha256:e2a7ef426ba97a7da0e2a57a6d7e60c528bbfc52a31b5662c385ad558283d4ce",
+    "Q5_Q6_FRONTIER_REVIEW_check.py": "sha256:f8205154a93cc3c48282ae5935cc79449c37c9e1d0c6693e2dd83526803a7807"
+  },
+  "reason_code": "exact_frontier_accounting_verified_modulo_accepted_imports",
+  "summary": "Accepted union has1017 cores; exactly five singleton obligations remain, accounting for98366 with21 parents plus19236 no21 parents.",
+  "imports": [
+    "Q6_T15_S2_COMBINED_EXTENSION_REVIEW.json: accepted1009-core union",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json: accepted24 good-root cores,8 new; authoritative residual provenance"
+  ],
+  "closed_core_count": 1017,
+  "new_core_indices": [
+    81,
+    103,
+    113,
+    114,
+    117,
+    560,
+    929,
+    1328
+  ],
+  "remaining_choices": [
+    {
+      "choices": [
+        85
+      ],
+      "count": 84068
+    },
+    {
+      "choices": [
+        386
+      ],
+      "count": 4788
+    },
+    {
+      "choices": [
+        1007
+      ],
+      "count": 4776
+    },
+    {
+      "choices": [
+        1054
+      ],
+      "count": 4064
+    },
+    {
+      "choices": [
+        2189
+      ],
+      "count": 670
+    }
+  ],
+  "selected_cores_proved": false,
+  "remaining_actual_cores": 5,
+  "minimum_count": 5,
+  "minimum_proof": "Each of five distinct singleton constraints forces its unique core; their union meets all constraints.",
+  "remaining_with21": 98366,
+  "remaining_no21": 19236,
+  "residual_rows": 117602,
+  "authority_directly_reclassified": true,
+  "authority_sha256": "sha256:e2a7ef426ba97a7da0e2a57a6d7e60c528bbfc52a31b5662c385ad558283d4ce",
+  "cut_histogram": [
+    {
+      "majority_in_minority_face": 1,
+      "omissions_in_minority_face": 1,
+      "count": 10
+    },
+    {
+      "majority_in_minority_face": 2,
+      "omissions_in_minority_face": 0,
+      "count": 7
+    },
+    {
+      "majority_in_minority_face": 2,
+      "omissions_in_minority_face": 2,
+      "count": 2
+    },
+    {
+      "majority_in_minority_face": 3,
+      "omissions_in_minority_face": 0,
+      "count": 2
+    },
+    {
+      "majority_in_minority_face": 3,
+      "omissions_in_minority_face": 2,
+      "count": 9
+    }
+  ],
+  "selected_details": [
+    {
+      "core_index": 85,
+      "included": [
+        31,
+        47,
+        55
+      ],
+      "omitted": [
+        1,
+        2
+      ],
+      "cuts": [
+        {
+          "coordinate": 0,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 1,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 2,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 3,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 4,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 5,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        }
+      ],
+      "remaining_parent_count": 84068
+    },
+    {
+      "core_index": 386,
+      "included": [
+        31,
+        38,
+        62
+      ],
+      "omitted": [
+        1,
+        7
+      ],
+      "cuts": [
+        {
+          "coordinate": 0,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 1,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 2,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 3,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 4,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 5,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        }
+      ],
+      "remaining_parent_count": 4788
+    },
+    {
+      "core_index": 1007,
+      "included": [
+        28,
+        44,
+        61
+      ],
+      "omitted": [
+        7,
+        11
+      ],
+      "cuts": [
+        {
+          "coordinate": 0,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 1,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 2,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 3,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 4,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 5,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        }
+      ],
+      "remaining_parent_count": 4776
+    },
+    {
+      "core_index": 1054,
+      "included": [
+        28,
+        61,
+        62
+      ],
+      "omitted": [
+        7,
+        11
+      ],
+      "cuts": [
+        {
+          "coordinate": 0,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 1,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 2,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 3,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 4,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 2
+        },
+        {
+          "coordinate": 5,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 2
+        }
+      ],
+      "remaining_parent_count": 4064
+    },
+    {
+      "core_index": 2189,
+      "included": [
+        49,
+        50,
+        52
+      ],
+      "omitted": [
+        31,
+        47
+      ],
+      "cuts": [
+        {
+          "coordinate": 0,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 1,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 2,
+          "majority_in_minority_face": 2,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 3,
+          "majority_in_minority_face": 3,
+          "omissions_in_minority_face": 0
+        },
+        {
+          "coordinate": 4,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        },
+        {
+          "coordinate": 5,
+          "majority_in_minority_face": 1,
+          "omissions_in_minority_face": 1
+        }
+      ],
+      "remaining_parent_count": 670
+    }
+  ],
+  "trace_path": "Q5_Q6_FRONTIER_REVIEW_check.py"
+}

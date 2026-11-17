@@ -1,0 +1,44 @@
+{
+  "checker_sha256": "4c37fb793037739ab5ef9019fa7bc579368a6db23a6076c4bd77952149c7391f",
+  "options": [
+    "-I",
+    "-U",
+    "-t",
+    "590"
+  ],
+  "results": [
+    {
+      "name": "valid_rup",
+      "expected_verified": true,
+      "exit_status": 0,
+      "verifier_status": [
+        "s VERIFIED"
+      ],
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "ed124fbf8ffd811c88b3cc955212778eacce7a20b83ad9c8e79a9729cfb9b0b9",
+      "log_sha256": "df27a417cd9d84682aa48931a3708dd596e6434a0f69b87da710e325b2e1b181"
+    },
+    {
+      "name": "sat_with_empty",
+      "expected_verified": false,
+      "exit_status": 1,
+      "verifier_status": [
+        "s NOT VERIFIED"
+      ],
+      "cnf_sha256": "0800169e860f9787c06f93fda5b53358492aa00f2ee2ce2e6931e4c6335ded7e",
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "log_sha256": "82ccecf7e0545cbbe6c11a19d87f12e7123fe74910b6b831803061df2e74e9c1"
+    },
+    {
+      "name": "nonunit_unsat_with_empty",
+      "expected_verified": false,
+      "exit_status": 1,
+      "verifier_status": [
+        "s NOT VERIFIED"
+      ],
+      "cnf_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "log_sha256": "c413da404a5d3b89c8971a7ad12b38e6e1e7545fcdf9d993e0af951cc7503b4a"
+    }
+  ]
+}

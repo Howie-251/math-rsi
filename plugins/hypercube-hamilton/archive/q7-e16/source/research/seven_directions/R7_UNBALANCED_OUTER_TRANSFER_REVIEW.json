@@ -1,0 +1,402 @@
+{
+  "audit_skill": "proof-checker",
+  "workflow": "ARIS proof-checker local adaptation; Q7_WORKFLOW",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_proof_obligations_complete_modulo_explicit_imports",
+  "summary": "A6^(0,2), UO with exact q+1 outer bridges including q=1, and corrected fixed witness strict coverage relative to listed old add-only rules pass.",
+  "caller": "/root",
+  "reviewer_agent_id": "/root/r7_unbalanced_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user configuration relayed by parent; backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-05T14:31:09.144327+00:00",
+  "audited_input_hashes": {
+    "R7_UNBALANCED_OUTER_TRANSFER.md": "sha256:74652ceb66f519f660d3d0c66586791cbadcceb37d5dd50fe721fc899ef5815f",
+    "R7_UNBALANCED_OUTER_WITNESS.md": "sha256:208bf1d398d63c23602f5cf5d56ae70bb94712a1b5255fbea53135307096793c",
+    "R7_UNBALANCED_OUTER_WITNESS.json": "sha256:c72e9b3b2e47c27561a73d34ad4a6742aafd3a55d2b873cfeaa61d839bbf8268",
+    "r7_unbalanced_outer_probe.py": "sha256:0e48babe8eb0c5832870fcd002b29eb4d3b9839e27766f279d4bba1708b79649",
+    "R7_UNBALANCED_OUTER_TRANSFER_INPUTS.json": "sha256:aa04ee697dd22d30c02b9ffb96c92204c5bd7ee3a363711a769cab790ca2cee7"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "sha256:fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.md": "sha256:ceed5d7b5f58db58f7dd97a207f02a95efdc880b531ff65488118095b4f4bd19",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "A4_FULL_REVIEW.json": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403",
+    "A6_FINAL_REDUCTION.md": "sha256:23478951d0089c9f3c3eb0227045e5725dc01376641952a95085ab0421796827",
+    "A6_FULL_REVIEW.md": "sha256:b0838e1e07a97fec5f4c52e827ab9f7d85ab2acac536bbc92f05f9c90bba0d34",
+    "A6_FULL_REVIEW.json": "sha256:52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+    "PERFECT_MATCHING_SPLICE.md": "sha256:78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+    "PERFECT_MATCHING_SPLICE_REVIEW.json": "sha256:a4f94b4cc2b438280e6e67a804ad6ea9672c7c3facc944d7edb1c5c7e3940f27",
+    "R7_BALANCED_Q5_BLOCKS.md": "sha256:857531f04a85c80f8582eb2249b41b3c2f6622a92b01cc9c1a1b464fd5834d55",
+    "R7_BALANCED_Q5_BLOCKS_REVIEW.md": "sha256:d024ea545a67e6e06ee0a650dfa3ff8757187f9f44296adc75ae2d9bb6fbdab8",
+    "R7_BALANCED_Q5_BLOCKS_REVIEW.json": "sha256:f545d7df6a6eac2bca34df3a603a9a8e4ffcc3c937c663d735b4d2eb6d5b7dfc",
+    "R7_SIGNED_HOLE_MARGIN.md": "sha256:a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.json": "sha256:d609b9cc5c641f972999339a80702fa7c32712095d7604ebfc1a760356a1b09a",
+    "R7_NEAR_BALANCED_BLOCKS.md": "sha256:f14078566876269bfd0c4f6d64a016b720872129e612307037c07571f8ab0e89",
+    "R7_NEAR_BALANCED_BLOCKS_REVIEW.json": "sha256:e79c9e2c5bc1cf65af80bc5da56f89ae877797d8159b15052741b739e62ce44a",
+    "R7_BALANCED_FACE_SPLICE.md": "sha256:81cecfb9699e47625a5febe3efbbcb369f01d3deb0e59b76acc570e5fe9c40ca",
+    "R7_BALANCED_FACE_SPLICE_REVIEW.json": "sha256:94b6c1bc91cfe7fe46e3edd40528fb577b66916a884b4431279e8d34c967f05c",
+    "R7_EIGHT_HOLE_CYCLE_PROJECTION.md": "sha256:9691d5f0d49cc300dec444f93ca852ec68f38107e8bf2e4d0bd6a1db70a64aa2",
+    "R7_EIGHT_HOLE_CYCLE_REVIEW.json": "sha256:136c4f0790189b8583b6e607ac5e591a472762a4af5932f4d63a2fa637b0956f",
+    "R7_THREE_FREE_PAIRINGS.md": "sha256:7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+    "R7_THREE_FREE_PAIRINGS_REVIEW.json": "sha256:d40e08727ea165d393b9a359aac91b719bd29e5e6325a6f48566472ea6eb7980",
+    "R7_ODD_BRIDGE_MARGIN.md": "sha256:0708043bf9d11a6a38d1ac48f62e1391ee4b1af2ec49b34cafa195c001c08ce6",
+    "R7_ODD_BRIDGE_MARGIN_REVIEW.json": "sha256:944dcaeabda9f9663c4f898a5978a9f9475f5f56b749f4c9ecad54b3d19f6cb5",
+    "R7_SINGLE_I_SOURCE_CUT.md": "sha256:ed402cda79923363fcadb67246b58c923353407b016b72985e955f08dbc07a67"
+  },
+  "reference_state_hashes": {
+    "RUN_STATE.json": "sha256:fda9b0bbd60ad6208782716f70a7057ee1be25de6ef194e348ee143059d492ec"
+  },
+  "skill_hashes": {
+    "F:/c4free-hypercube-main/ARIS/skills/skills-codex/proof-checker/SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "trace_path": "R7_UNBALANCED_OUTER_TRANSFER_REVIEW.md",
+  "report_hash": "sha256:0f55fe48fcf9914a6252e88e0dba7e7031a9b910db79ec56e99183d666a38f31",
+  "details": {
+    "theorems_audited": 2,
+    "fixed_original_witnesses_audited": 1,
+    "micro_obligations_closed": 40,
+    "micro_obligations": [
+      {
+        "id": "A01",
+        "status": "DISCHARGED",
+        "claim": "任意K(Q6)匹配域",
+        "justification": "跨切向原规定边可长、可同色；只以真实端口双射运输，不调用短匹配P6。"
+      },
+      {
+        "id": "A02",
+        "status": "DISCHARGED",
+        "claim": "跨数s偶",
+        "justification": "32=2|F_Z0|+s+|H_Z0|，平衡孔数偶，故s偶；s>0至少2。"
+      },
+      {
+        "id": "A03",
+        "status": "DISCHARGED",
+        "claim": "标记运输",
+        "justification": "u为Z1多数原孔，既不在F中也不在跨端口；整个构造始终避同一u。"
+      },
+      {
+        "id": "A04",
+        "status": "DISCHARGED",
+        "claim": "正跨配对D合法",
+        "justification": "T1正偶基数，端口对F_Z1自由；D完全配对后孔恰原H_Z1。"
+      },
+      {
+        "id": "A05",
+        "status": "DISCHARGED",
+        "claim": "Q5差二可行参数",
+        "justification": "两色各16点，孔差2强制孔型(t-1,t+1)，1<=t<=15；任意多数标记工具适用。"
+      },
+      {
+        "id": "A06",
+        "status": "DISCHARGED",
+        "claim": "删D真路径",
+        "justification": "非空匹配D由一个简单31圈删除，恰产生覆盖Z1-u的不交路径；无残圈、无孤立点。"
+      },
+      {
+        "id": "A07",
+        "status": "DISCHARGED",
+        "claim": "真实R匹配",
+        "justification": "每个T1端接唯一原跨边后，T0端点各用一次，内部都在Z1-u。R不是预定配对。"
+      },
+      {
+        "id": "A08",
+        "status": "DISCHARGED",
+        "claim": "Z0平衡孔保真",
+        "justification": "F_Z0与R端点不交，补端口后孔恰原H_Z0；含零孔的Q5圈工具适用。"
+      },
+      {
+        "id": "A09",
+        "status": "DISCHARGED",
+        "claim": "正跨展开",
+        "justification": "沿Z0圈逐条替换R，插入内部点两两不交且此前在圈外；恢复全F，新增仅短边。"
+      },
+      {
+        "id": "A10",
+        "status": "DISCHARGED",
+        "claim": "零跨有孔选x",
+        "justification": "Z0平衡非空孔至少2个，镜像双射至多一个等u，故存在合法自由x。"
+      },
+      {
+        "id": "A11",
+        "status": "DISCHARGED",
+        "claim": "镜像处非规定边",
+        "justification": "x镜像非u，故在避u圈上；圈度2而匹配度至多1，存在非F短边。"
+      },
+      {
+        "id": "A12",
+        "status": "DISCHARGED",
+        "claim": "Q5路径目标合法",
+        "justification": "删边的另端y镜像与x异色且不同，根x自由，目标可已覆盖，平衡路径工具适用。"
+      },
+      {
+        "id": "A13",
+        "status": "DISCHARGED",
+        "claim": "零跨有孔合圈",
+        "justification": "两路顶点处于不同面，所加两条镜像桥端点互异；不丢F，恰遍历63点。"
+      },
+      {
+        "id": "A14",
+        "status": "DISCHARGED",
+        "claim": "零跨完美侧少孔",
+        "justification": "Z0无孔时其F完美；h为至少2偶数。h=2/4/6分别准确调用已接受任意K(Q6) A2/A4/A6。"
+      },
+      {
+        "id": "A15",
+        "status": "DISCHARGED",
+        "claim": "非规定短边计数",
+        "justification": "h>=8时F_Z1=(32-h)/2条，31圈非F边为15+h/2>=19；只取18条。"
+      },
+      {
+        "id": "A16",
+        "status": "DISCHARGED",
+        "claim": "18边森林合法",
+        "justification": "18<31，选取的是简单31圈真子集，无论F_Z1是否为空都不含圈；每条均短。"
+      },
+      {
+        "id": "A17",
+        "status": "DISCHARGED",
+        "claim": "森林镜像及阈值",
+        "justification": "镜像保存森林与短边，Z0匹配完美，d=5且18=2^4+2，森林引理全部假设满足。"
+      },
+      {
+        "id": "A18",
+        "status": "DISCHARGED",
+        "claim": "使用引理而非推论",
+        "justification": "引理保证e0不属F_Z0且可强迫；不使用要求对侧F非空的推论，故h=30等边界无漏项。"
+      },
+      {
+        "id": "A19",
+        "status": "DISCHARGED",
+        "claim": "双圈删边合并",
+        "justification": "e1来自非F短边；两圈删边各成一路、两镜像短桥连接为单圈；u未在Z1圈中不会回插。"
+      },
+      {
+        "id": "A20",
+        "status": "DISCHARGED",
+        "claim": "A工具全域穷尽",
+        "justification": "s>0；s=0且Z0有孔；s=0且Z0完美且h<=6或h>=8，穷尽所有已声明输入。"
+      },
+      {
+        "id": "U21",
+        "status": "DISCHARGED",
+        "claim": "外q正奇",
+        "justification": "HX差1故|HX|奇，64=2|MX|+q+|HX|推出q奇且非零；包括q=1。"
+      },
+      {
+        "id": "U22",
+        "status": "DISCHARGED",
+        "claim": "u不为原跨端口",
+        "justification": "原j边短，其u端唯一可能配偶为原孔ell，矛盾；仅剩自由和内部覆盖两支。"
+      },
+      {
+        "id": "U23",
+        "status": "DISCHARGED",
+        "claim": "同时半面条件",
+        "justification": "ell为Y-偶原孔且其镜像在X+是明文假设；不由分别存在kX/kY偷推同时选择，二坐标可不同。"
+      },
+      {
+        "id": "U24",
+        "status": "DISCHARGED",
+        "claim": "自由u回代Q",
+        "justification": "加短ell-u合法，两个差一半面各移除其多数孔，其余不变；四块孔差0，Q给恰q+1外桥。"
+      },
+      {
+        "id": "U25",
+        "status": "DISCHARGED",
+        "claim": "Y配对含q=1",
+        "justification": "TY并ell有q+1>=2个不同内部自由点，任取配对D为合法完全图匹配且非空。"
+      },
+      {
+        "id": "U26",
+        "status": "DISCHARGED",
+        "claim": "GY孔精确",
+        "justification": "MY加D覆盖恰原TY与ell，孔为HY去ell；两kY块各平衡，C6域允许长和同色D。"
+      },
+      {
+        "id": "U27",
+        "status": "DISCHARGED",
+        "claim": "Y单圈删D",
+        "justification": "C6给64点圈，删非空D得真实不交路径，所余全短且保留MY，没有遗留闭分量。"
+      },
+      {
+        "id": "U28",
+        "status": "DISCHARGED",
+        "claim": "转移R的来源",
+        "justification": "每个TY端附原C、ell端附ell-u，端点TX并u互异，内部全在Y；R为此真实森林实际配对。"
+      },
+      {
+        "id": "U29",
+        "status": "DISCHARGED",
+        "claim": "r与p端点互异",
+        "justification": "ur属于R且r在TX；up内部短规定边保证p不在TX并u，故pr非自环且不冲突。"
+      },
+      {
+        "id": "U30",
+        "status": "DISCHARGED",
+        "claim": "FX为匹配且孔正确",
+        "justification": "删除up释放u,p；以pr代ur重盖p,r，其他TX由R配对；原HX不触及，孔恰HX并u。"
+      },
+      {
+        "id": "U31",
+        "status": "DISCHARGED",
+        "claim": "A工具所有条件",
+        "justification": "u在X+为奇色新增孔，X+孔差2、互补0、总差2；调用任意K(X)工具而非P6。"
+      },
+      {
+        "id": "U32",
+        "status": "DISCHARGED",
+        "claim": "伙伴展开单圈",
+        "justification": "避u圈含pr，改为p-u接真实u-r路，其他R逐条展开；u此前缺失，内部Y点彼此不交，故128点简单单圈。"
+      },
+      {
+        "id": "U33",
+        "status": "DISCHARGED",
+        "claim": "原规定边及标签",
+        "justification": "up恢复，其余MX始终保留，MY/C在真实路径保留；D删净，pr与R标签全展开，最终全短。"
+      },
+      {
+        "id": "U34",
+        "status": "DISCHARGED",
+        "claim": "精确桥数及闭合范围",
+        "justification": "辅助局部桥始终留各Q6面；最终外桥恰C并ell-u，共q+1，无q>=3前提；未推出完整R7/P7。"
+      },
+      {
+        "id": "W35",
+        "status": "DISCHARGED",
+        "claim": "固定原匹配独立重建",
+        "justification": "从56条原边重算112互异端点、单bit差和孔补集16点，方向数(4,4,3,3,3,36,3)。不运行作者脚本。"
+      },
+      {
+        "id": "W36",
+        "status": "DISCHARGED",
+        "claim": "UO实际输入",
+        "justification": "j6，kX0/kY1，两面E:O为3:4/5:4，孔全在指定bit1半面；ell95/u31/伙伴29全符，原3桥变4桥。"
+      },
+      {
+        "id": "W37",
+        "status": "DISCHARGED",
+        "claim": "Q及Q+排除",
+        "justification": "独立重算各bit1 E-O=(-4,-2,1,1,1,-6,1)，全非零；进一步直接核252组外内坐标，Q/Q+均无通过项。"
+      },
+      {
+        "id": "W38",
+        "status": "DISCHARGED",
+        "claim": "单调闭包和旧门",
+        "justification": "所有16孔对无短边，故无真短超匹配；不存在仅加边进入Q/Q+或60边E8。无二重方向排列明两桥规则，16孔排旧B。"
+      },
+      {
+        "id": "W39",
+        "status": "DISCHARGED",
+        "claim": "原几何纠错",
+        "justification": "旧几何孔边恰(47,111)/(55,119)/(59,123)，逐一加边后外6内0/1四块平衡；xor33确给修正Y孔且保持颜色/bit1。"
+      },
+      {
+        "id": "W40",
+        "status": "DISCHARGED",
+        "claim": "证据与全称分离",
+        "justification": "全称证明不依赖样本；同孔集所有短实现满足UO，方向旧门排除仅限当前实现；未声称外部新颖、全R7、全部旧未知规则排除。"
+      }
+    ],
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "author_manifest_hash_comparisons": 32,
+    "direct_accepted_source_bindings_checked": 5,
+    "all_hashes_match": true,
+    "independent_arithmetic_exit_code": 0,
+    "independent_arithmetic_mode": "Inline Python from saved edges; author script not executed",
+    "reviewer_solver_calls": 0,
+    "large_enumeration": false,
+    "old_large_certificates_rerun": false,
+    "proof_assistant_verified": false,
+    "dependency_DAG_acyclic": true,
+    "frozen_area_modified": false,
+    "author_artifacts_modified": false,
+    "RUN_STATE_modified": false,
+    "counterexamples_found_to_submitted_theorems": 0,
+    "counterexample_candidates_open": 0
+  },
+  "independent_fixed_results": {
+    "edges": 56,
+    "holes": [
+      5,
+      9,
+      17,
+      47,
+      55,
+      59,
+      61,
+      67,
+      78,
+      86,
+      90,
+      95,
+      103,
+      107,
+      115,
+      126
+    ],
+    "direction_counts": [
+      4,
+      4,
+      3,
+      3,
+      3,
+      36,
+      3
+    ],
+    "outer_bit1_E_minus_O": [
+      -4,
+      -2,
+      1,
+      1,
+      1,
+      -6,
+      1
+    ],
+    "hole_short_edges": [],
+    "coordinate_triples_checked": 252,
+    "Q_passes": [],
+    "Qplus_passes": [],
+    "donor": 95,
+    "mirror": 31,
+    "partner": 29,
+    "original_outer_bridges": 3,
+    "UO_outer_bridges": 4,
+    "old_geometry_hole_edges": [
+      [
+        47,
+        111
+      ],
+      [
+        55,
+        119
+      ],
+      [
+        59,
+        123
+      ]
+    ],
+    "old_geometry_all_three_single_augmentations_satisfy_Q": true,
+    "corrected_geometry_is_xor33_translation": true
+  },
+  "scope_limitations": [
+    "Six-dimensional avoid-one tool requires zero/two cut and marked majority hole on the margin-two side.",
+    "UO requires simultaneous donor location explicitly; no automatic donor selection theorem.",
+    "Strict coverage only relative to listed old rules and their add-only short-supermatching use.",
+    "Direction-count old-rule exclusion is for the saved realization, not every matching with the same holes.",
+    "Full R7, P7, m=2, two-bridge class, seven-direction theorem, historical 4228 remain open.",
+    "Existing explicit literature and audited project inputs imported; old large certificates not replayed."
+  ]
+}

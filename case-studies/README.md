@@ -34,11 +34,12 @@ Earlier (10,4)=2,567 and (16,4)=16,416 remain dated historical highlights; the c
 
 ## Erdős Problem 86
 
-**Square-free hypercube density:** $\pi_Q(C_4)\le23662061277957791/40000000000000000\lt0.59155154$, improving the specified 0.60318 reference toward the conjectured $1/2$.
+**Finite and asymptotic $C_4$-free hypercube bounds:**
+- **$Q_7$ ($n = 7$):** **`304`** — **304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass** (two explicit 304-edge $C_4$-free constructions verified in-repo; 21 raw `.cnf`/`.drup` traces were already omitted in the upstream 2026-10-31 compilation).
+- **$Q_8$ ($n = 8$):** **`682 ≤ ex(Q₈, C₄) ≤ 683`** — four explicit 682-edge seeds verified in-repo; Theorem B rules out 684 edges via a same-subgraph 3-measure pullback over 83 active inequalities and 25 $Q_6$ subcube imports (`PASS · same-family · provisional`; $\mathrm{ex}(Q_8, C_4) \le 682$ remains open).
+- **$Q_\infty$ (asymptotic):** unconditional **T3** $\le 681653995482306581 / 1152921504606846976 \le 0.5912405943$ and **T4** $\le 9701859764505653085708308080340303 / 16409326186106551516455239680000000 \le 0.5912405942$ ($m=1024$ generalized degree potential via a 5-line hypergeometric tower), improving the `v3` $Q_4$ certificate ($< 0.59155154$) and the `0.60318` reference; `0.5907` and retracted `0.5899` are non-theorems, and $\pi_\square(C_4) = 1/2$ remains open.
 
-This is an asymptotic edge-density bound. Full exact local replay covers 13,150,453 legal $Q_4$ completions; analytic high-dimensional averaging supplies the global bridge. There is no Lean formalization or claim of SDP optimality. Shared completions, synchronized rooted flags and exact rational Gram certificates are the reusable methods.
-
-[Plugin and source map](../plugins/hypercube-extremal/README.md) · [Full finite replay and scope](../plugins/hypercube-extremal/evidence/IMPLEMENTATION.md) · [Domain skill](../plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md)
+[Per-setting case study & verification table](erdos-86/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/erdos-86-latest.html) · [Plugin and source map](../plugins/hypercube-extremal/README.md) · [Domain skill](../plugins/hypercube-extremal/skills/mathrsi-hypercube-extremal/SKILL.md)
 
 ## Ruskey–Savage Q6
 
@@ -48,13 +49,13 @@ The whole-proof audit remains **same-family/provisional**, with no Lean. The bou
 
 [Plugin and mathematics](../plugins/hypercube-hamilton/README.md) · [Finite replay and whole-proof boundary](../plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md) · [Domain skill](../plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)
 
-### Q7: dense matchings and reusable construction methods
+### Q7: dense matchings and complete E16 closure
 
-**Every matching with at least 57 edges in the 128-vertex Q7 extends to a Hamilton cycle containing all prescribed edges.** At 56 edges, the μ=2 and μ=4 structure classes and several μ=3 families are complete. Full Q7, the stronger P7 path statement and seven-direction extension remain open; structure classes are not progress percentages.
+**Every matching with at least 56 edges (at most 16 holes) in the 128-vertex Q7 extends to a Hamilton cycle containing all prescribed edges.** Complete E16 closes adjacent-hole augmentation plus all five independent 16-hole parity-gap classes $\mu \in \{0,1,2,3,4\}$ (`PASS · same-family · provisional · sound-modulo-imports`). Even hole layers 18–38 ($\le 55$ edges), full Q7, free-root paths $P_7$ and seven-direction lifting remain open.
 
-The research ran with **MathRSI v3 (local adaptation)**. Its controlled donor/return-bridge methods, exact compatible-pool counting and finite-plan coverage feed v5; v5 is the receiving workflow version, not the version that solved these cases.
+The research ran with **MathRSI v3 (local adaptation)** plus hardest-remainder E16 gating; its methods feed `v5` and `v6`.
 
-[Q7 results, methods and evidence scope](ruskey-savage-q7/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/q7.html) · [v5 changes](../docs/V5_CHANGES.md)
+[Q7 results, methods and evidence scope](ruskey-savage-q7/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/q7.html) · [v6 changes](../docs/V6_CHANGES.md)
 
 ## Happy Ending
 
@@ -66,6 +67,6 @@ These manuscripts remain **same-session / unreviewed / unaccepted**, without com
 
 ## Research provenance and workflow feedback
 
-Property B was researched with ARIS and distilled into MathRSI. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix connections and portable evidence. Earlier DD work informed v2; the later 2,567 graph actually used that version. Erdős 86, Q6 and older Happy Ending evidence informed v3; the later Happy Ending manuscripts and DD methods informed v4. Q7 dense-matching research used v3 with local adaptations and feeds v5. Incorporation retains those histories; it does not attribute every result to a run of the receiving release.
+Property B was researched with ARIS and distilled into MathRSI. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix connections and portable evidence. Earlier DD work informed v2; the later 2,567 graph actually used that version. Erdős 86, Q6 and older Happy Ending evidence informed v3; the later Happy Ending manuscripts and DD methods informed v4. Q7 dense-matching research used v3 with local adaptations and fed v5, while subsequent $C_4$-free $Q_7/Q_8/Q_\infty$ coevolution and complete $Q_7$ E16 closure feed v6. Incorporation retains those histories; it does not attribute every result to a run of the receiving release.
 
 [Version and maintenance records](../development/README.md) preserve the actual changes and bounded uses. No equal-budget speedup or long-task success-rate claim is established by these presentation pages. New research uses its own [task workspace](../docs/WORKSPACE.md); archived Goals stay historical.

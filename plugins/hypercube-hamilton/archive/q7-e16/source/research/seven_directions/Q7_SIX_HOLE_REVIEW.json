@@ -1,0 +1,711 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_Q7_six_hole_proof_obligations_complete_modulo_explicit_imports",
+  "summary": "Q7 six-hole short-matching layer passes for every free root and every opposite-parity target, covered or free; full P7 remains open.",
+  "reviewer_agent_id": "/root/q7_six_hole_independent_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user override relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T08:01:09.983464+00:00",
+  "trace_path": "Q7_SIX_HOLE_REVIEW.md",
+  "audited_input_hashes": {
+    "Q7_SIX_HOLE_CLOSURE.md": "sha256:af9ca063a74561f67be615984d47204a0160f916a2f94ca5e629eb8d037be74b",
+    "Q7_SIX_HOLE_TRANSFERS.md": "sha256:adb67adb4a400315124c620d0f50fbbb53b38949fe3d364fe7cd1130a66a873c"
+  },
+  "reviewed_source_and_dependency_hashes": {
+    "Q7_SIX_HOLE_SOURCE_MAP.json": "sha256:483d71e2c14d4e3be4e2d621586edb50f4dd5cfd6409acd24d7b1e75bcc05e9a",
+    "build_q7_six_hole_proof.py": "sha256:b0cd2bb5621cc91bb246eb9f1cbe2fe573879b402e54a0cb447e9a2f00415108",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "A4_FULL_REVIEW.json": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403",
+    "A4_FULL_REVIEW.md": "sha256:2f610b53b6cf564897fd0bae0df448826a6ee5cf398d4855cf01bbc33522f8fb",
+    "A4_DIMENSIONAL_INDUCTION.md": "sha256:bf7d6da5fc5c5d779cc858f5f095a6ca9fc0685ef6c94fd9f34c72c552da89fc",
+    "A4_DIMENSIONAL_REVIEW.json": "sha256:95d557933a15bb9f51fd813711ad6a30f1614f095c281c81215d1c97c151c647",
+    "A4_DIMENSIONAL_REVIEW.md": "sha256:7b4527b757b23342fa7f02c85e6a06423a1f2bb25c8643c164e9e200f44dae15",
+    "ZERO_CROSSING_PATHS.md": "sha256:35858010b280711e715a2406aa85ba567fc641dd260035d2fd3fea1936c2e169",
+    "ZERO_CROSSING_REVIEW.json": "sha256:94fa2b379e644d086c19b5df5bdb226276b41b3cde7afe50fa0f5094ff384db2",
+    "ZERO_CROSSING_REVIEW.md": "sha256:1ca4dd5a4219bf2d4d36cc9e5461283d8aff41dbaa9667c2e00395b9e75aa808",
+    "../six_directions/AVOIDED_VERTEX_TRANSFER.md": "sha256:f44623960b51f85549ea15b6b7c8262222c097f56c37ae10c05b77b6dd8776a7",
+    "../six_directions/DISTANCE_TWO_ALL_TARGETS.md": "sha256:41b5514d63a43bd0e1e1fd47453532f8264dccf23f454b56623c74a82e5654a6",
+    "../six_directions/SIX_HOLE_FOUR_AUX_REDUCTION.md": "sha256:3b9e7f667c7661358f6668b2e0ae5c60e59fc156944e80dd0d53fe74c3672d49",
+    "../six_directions/SIX_HOLE_MIXED_AND_GEOMETRY.md": "sha256:9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+    "../six_directions/SIX_HOLE_COVERED_REDUCTION.md": "sha256:c80fb9e0cdad9c146fe5bac594b321b41fe5f0646dae9b98e3d64e6463be9837",
+    "../six_directions/SIX_HOLE_FREE_REDUCTION.md": "sha256:c04a1f090b51f19ea68db7f7a90d7ab1c7c9ed79feb1549898c4a3b4be88b8e4"
+  },
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "checker_artifact_hashes": {
+    "Q7_SIX_HOLE_REVIEW_check.py": "sha256:def4ef9ea73d6a06062524422daaaa5b3c2ae4451bcf2635d919734b8a3567d4",
+    "Q7_SIX_HOLE_REVIEW_check.json": "sha256:03117f68a25d47d0a662ff8ec499093c8d479d9cc09b18d02c90db67bbacfbe8"
+  },
+  "report_hash": "sha256:56b8093e7e418ba517c52f87233aaf0e48c63059c17fe390b39db8bb3974f7b0",
+  "scope": {
+    "dimension": 7,
+    "holes": 6,
+    "prescribed_matching": "every M subset E(Q7), 61 edges",
+    "root": "every u outside V(M)",
+    "target": "every v of opposite parity to u, free or covered",
+    "added_edges_short": true,
+    "full_Q7_six_hole_layer_closed_modulo_imports": true,
+    "full_P7_proved": false,
+    "Q7_higher_hole_layers_closed_by_this_audit": false,
+    "arbitrary_complete_graph_Q7_six_hole_claim": false,
+    "old_G6_finite_geometry_import_used": false
+  },
+  "imports": [
+    {
+      "claim": "Q6 arbitrary-long-edge A4/B2/C2",
+      "review": "A4_FULL_REVIEW.json",
+      "current_verdict": "PASS",
+      "large_certificates_rerun": false
+    },
+    {
+      "claim": "Q7 four-hole complete layer Z18",
+      "review": "A4_DIMENSIONAL_REVIEW.json",
+      "current_verdict": "PASS"
+    },
+    {
+      "claim": "Original Q7 short M with empty direction, all free-root opposite-parity targets Z7",
+      "review": "ZERO_CROSSING_REVIEW.json",
+      "current_verdict": "PASS"
+    },
+    {
+      "claim": "N10/N14 for dimensions >=5 and NC",
+      "source": "PROOF_PACKAGE.md propositions2-3",
+      "applications_rechecked": true
+    },
+    {
+      "claim": "N11/N12 for local m>=5",
+      "source": "../six_directions/AVOIDED_VERTEX_TRANSFER.md",
+      "proof_rechecked_at_m6": true
+    },
+    {
+      "claim": "E2 for ambient n>=4",
+      "source": "../six_directions/DISTANCE_TWO_ALL_TARGETS.md",
+      "proof_rechecked_at_n7": true
+    }
+  ],
+  "external_primary_source": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "read_directly": true,
+    "locations": [
+      "page1 extension definition and Theorem2",
+      "page3 Theorem8",
+      "page4 Theorem12"
+    ],
+    "original_literature_proofs_reproved": false
+  },
+  "details": {
+    "issues": [],
+    "resolved_minor_notes": [
+      {
+        "id": "NC-definition",
+        "category": "UNCLEAR",
+        "note": "Two uses of NC initially lacked a definition. Producer added exact N10 cycle corollary to current main text and appendix introduction. Final definition and closure step rechecked.",
+        "status": "RESOLVED"
+      }
+    ],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "micro_obligations_closed": 46,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "dependency_DAG_acyclic": true,
+    "old_large_certificates_rerun": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false,
+    "matching_samples_used_as_universal_proof": false,
+    "source_proofs_or_RUN_STATE_modified_by_reviewer": false
+  },
+  "obligations": [
+    {
+      "id": "O01",
+      "obligation": "主定理全称域",
+      "discharge": "任意61条短边匹配、每个自由根和每个异奇偶目标；无代表限制",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O02",
+      "obligation": "原六孔奇偶",
+      "discharge": "每条短边覆盖一奇一偶，六孔必为3:3",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O03",
+      "obligation": "平移规范",
+      "discharge": "立方体自同构保持短边、自由和目标状态",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O04",
+      "obligation": "非根孔邻接预处理",
+      "discharge": "加边保持根自由，得到四孔；目标可变覆盖仍在Z18域内",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O05",
+      "obligation": "覆盖目标收缩",
+      "discharge": "$h\\ne u,v$，$M-vh+hu$ 合法，孔为2偶4奇，仅 $hu$ 可长",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O06",
+      "obligation": "N10/N14/NC",
+      "discharge": "文献维数下界5，当前局部6；所有路径根自由，目标奇偶与另一孔相同",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O07",
+      "obligation": "N11/N12",
+      "discharge": "重读一般维数证明；N11压缩是补全匹配，N12三种短边方向情形完整",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O08",
+      "obligation": "E2",
+      "discharge": "同一匹配、同一自由 $v$；改切方向不同且环境7满足下界",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O09",
+      "obligation": "A4/Z18/Z7接口",
+      "discharge": "当前PASS和输入哈希一致；任意长边局部输入与原短匹配Z7严格区分",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O10",
+      "obligation": "删圈/删路/终端森林",
+      "discharge": "非空删圈匹配、删路匹配和新端点互异给无圈与恰好终端数",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O11",
+      "obligation": "桥候选内部覆盖",
+      "discharge": "使用原短边，排除非根孔相邻，逐项处理 $u,h$ 同侧/异侧",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O12",
+      "obligation": "唯一冲突消除",
+      "discharge": "$k$ 内部覆盖而 $d$ 非终端端口，修复边端点自由；展开恢复一次",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O13",
+      "obligation": "S4(1,2)",
+      "discharge": "奇数正跨边；$X_A+z$ 非空偶配对；N14后冲突孔 $q,s,t,y$ 为1:3，A4避y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O14",
+      "obligation": "S4(1,3)，正跨边",
+      "discharge": "偶数至少2；A4避v；B仅异奇偶孔q,s，用N10闭圈",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O15",
+      "obligation": "S4(1,3)，零跨边",
+      "discharge": "A覆盖奇偶差2强迫同偶hu内部在A；原vh也在A，原M无跨边才调用Z7",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O16",
+      "obligation": "S4(0,3)",
+      "discharge": "两候选不能同时失效；B冲突后孔q,z,s,b为3:1，用A4互换奇偶版本避b",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O17",
+      "obligation": "覆盖目标最终恢复",
+      "discharge": "所得圈恰避v且含hu；删hu接hv，覆盖128点并恢复全部原边",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O18",
+      "obligation": "K4目标自由",
+      "discharge": "加根目标边后异奇偶双孔，NC闭圈再删辅助边",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O19",
+      "obligation": "K4目标覆盖及圈",
+      "discharge": "收缩产生1:3孔，A4避目标后恢复；短邻目标闭圈合法",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O20",
+      "obligation": "S8",
+      "discharge": "c奇且至少3；Y大小c+1至少4，N12/N11有效；桥至自由w无冲突，B平衡四孔用K4圈",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O21",
+      "obligation": "S7正跨边无半层",
+      "discharge": "c偶且至少2，Y大小c+2至少4；a=z也可；B唯一冲突y，A4避y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O22",
+      "obligation": "S7零跨边可用压缩",
+      "discharge": "不调用N12；直接N11取a=z、D空，两个短桥给一转移段",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O23",
+      "obligation": "S7未解分支半层唯一",
+      "discharge": "含半层匹配的全部短边同方向；同方向两半层覆盖全面，与v自由冲突",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O24",
+      "obligation": "S7零跨边且hu在A",
+      "discharge": "u,h,v同在A，换回vh不增加跨边，Z7用于原M",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O25",
+      "obligation": "S7零跨边且hu在B",
+      "discharge": "A仍是原短匹配；三候选边不同；半层至少15边来自原A，另一压缩保留至少14边强迫方向相同",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O26",
+      "obligation": "S7半层确为原边",
+      "discharge": "所有候选b是各自压缩的孔，半层避b；在另一压缩保留b-kb，故kb亦避半层，新z-kb不能属半层",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O27",
+      "obligation": "S7换切分",
+      "discharge": "补集奇偶给z,w,s,t同j位且异于v；16条旧半层全跨新切；E2无半层；q在A用首阶段，否则奇跨边至少17用S8",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O28",
+      "obligation": "S9桥及已覆盖目标孤立",
+      "discharge": "原M直接处理；三候选至多一等u；v若在D中必是真实端口，接回vh无丢失",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O29",
+      "obligation": "S9根在B，r=y",
+      "discharge": "B仅同偶孔u,q，N10到偶y；R不含y，接目标终端",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O30",
+      "obligation": "S9根在B，r跨端口",
+      "discharge": "修复孔u,q,r,y；加ur留同偶q,y，N14避y后删ur、展开、接终端",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O31",
+      "obligation": "S9根在A，y终端",
+      "discharge": "两终端不同；B孔q,b，N10从b到偶y；两种终端方向均可反向连接",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O32",
+      "obligation": "S9根在A，y非终端",
+      "discharge": "修复孔q,y,r,s'；加rs'留同偶q,y，N14避y后删rs'并恢复",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O33",
+      "obligation": "覆盖目标穷尽",
+      "discharge": "任取分开z,q的坐标，目标面1偶、奇孔数1/2/3/4，S7/S4/S4/S9全覆盖",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O34",
+      "obligation": "自由目标零跨边",
+      "discharge": "未收缩，c=0直接就是原M空方向，用Z7",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "O35",
+      "obligation": "free2a，根A",
+      "discharge": "c偶且至少2，D非空；B孔q,t,r,s；加rs留异奇偶q,t用NC",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O36",
+      "obligation": "free2b，根B",
+      "discharge": "偶端口比奇多1，选偶a；D可空；B孔u,q,t,r，加ur后NC",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O37",
+      "obligation": "free3a，y终端",
+      "discharge": "y奇内部覆盖且异于全部原孔；B孔q,w,t,b；收缩y边至b后A4避y，再接ky",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O38",
+      "obligation": "free3a，y在R",
+      "discharge": "冲突修复孔q,w,t,r,s,y；加rs留q,w,t,y为1:3，A4避y后恢复",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O39",
+      "obligation": "free3b，r=y",
+      "discharge": "c偶正，端口奇偶平衡可选偶a；B平衡四孔u,q,w,t，K4从u到覆盖奇y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O40",
+      "obligation": "free3b，r跨端口",
+      "discharge": "修复孔u,q,w,t,r,y；加ur留q,w,t,y为1:3，用A4避y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O41",
+      "obligation": "free4根B，r=y",
+      "discharge": "两桥候选至少一个内部覆盖；偶端口余量2；B同偶孔u,q，N10到偶y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O42",
+      "obligation": "free4根B，r跨端口",
+      "discharge": "修复孔u,q,r,y；加ur后同偶q,y，用N14避y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O43",
+      "obligation": "free4根A，y终端",
+      "discharge": "c正奇、D非空；B孔q,b，N10从b到偶y，接两终端",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O44",
+      "obligation": "free4根A，y在R",
+      "discharge": "修复孔q,y,r,s；加rs后同偶q,y，用N14避y",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O45",
+      "obligation": "自由目标穷尽",
+      "discharge": "另两奇孔在目标面数量0/1/2；每种根两侧、桥终端/非终端完整",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O46",
+      "obligation": "最终边与生成性",
+      "discharge": "D/W删去，R和冲突边展开，hu删去；唯一保留人工物理连接均为短镜像桥，顶点全部恰一次",
+      "status": "CLOSED"
+    }
+  ],
+  "dependency_DAG": {
+    "status": "PASS",
+    "acyclic": true,
+    "dependencies": {
+      "literature": [],
+      "Q5_A4_import": [],
+      "P6_import": [],
+      "E2": [],
+      "N14": [
+        "literature"
+      ],
+      "N10": [
+        "N14",
+        "literature"
+      ],
+      "N11": [
+        "literature"
+      ],
+      "N12": [],
+      "NC": [
+        "N10"
+      ],
+      "A4_Q6_import": [
+        "Q5_A4_import",
+        "literature"
+      ],
+      "Z18_Q7_import": [
+        "A4_Q6_import",
+        "literature"
+      ],
+      "Z7_import": [
+        "P6_import",
+        "Z18_Q7_import",
+        "literature"
+      ],
+      "K4": [
+        "A4_Q6_import",
+        "N10"
+      ],
+      "S4": [
+        "N14",
+        "N10",
+        "A4_Q6_import",
+        "Z18_Q7_import",
+        "Z7_import"
+      ],
+      "S8": [
+        "K4",
+        "N11",
+        "N12"
+      ],
+      "S7_first": [
+        "N11",
+        "N12",
+        "A4_Q6_import"
+      ],
+      "S7": [
+        "S7_first",
+        "S8",
+        "E2",
+        "Z7_import"
+      ],
+      "S9": [
+        "K4",
+        "N10",
+        "N14",
+        "Z18_Q7_import"
+      ],
+      "covered": [
+        "S4",
+        "S7",
+        "S9",
+        "Z18_Q7_import"
+      ],
+      "free": [
+        "K4",
+        "N10",
+        "N14",
+        "NC",
+        "A4_Q6_import",
+        "Z7_import",
+        "Z18_Q7_import"
+      ],
+      "Q7_six_holes": [
+        "covered",
+        "free"
+      ]
+    },
+    "topological_order": [
+      "literature",
+      "Q5_A4_import",
+      "P6_import",
+      "E2",
+      "N14",
+      "N10",
+      "N11",
+      "N12",
+      "NC",
+      "A4_Q6_import",
+      "Z18_Q7_import",
+      "Z7_import",
+      "K4",
+      "S4",
+      "S8",
+      "S7_first",
+      "S7",
+      "S9",
+      "covered",
+      "free",
+      "Q7_six_holes"
+    ],
+    "scope": "Declared local graph with explicitly frozen imports as leaves; no G6 or P7 node."
+  },
+  "deterministic_checks": {
+    "generated_at": "2026-11-02T07:57:34.556692+00:00",
+    "source_map": {
+      "status": "PASS",
+      "sources": [
+        {
+          "source": "../six_directions/SIX_HOLE_FOUR_AUX_REDUCTION.md",
+          "sha256": "3b9e7f667c7661358f6668b2e0ae5c60e59fc156944e80dd0d53fe74c3672d49",
+          "body_hash_aligned": true
+        },
+        {
+          "source": "../six_directions/SIX_HOLE_MIXED_AND_GEOMETRY.md",
+          "sha256": "9c4450060f472b54397a337c9d2128a26d31077b677c35b0a0669fb1d3022e68",
+          "body_hash_aligned": true
+        },
+        {
+          "source": "../six_directions/SIX_HOLE_COVERED_REDUCTION.md",
+          "sha256": "c80fb9e0cdad9c146fe5bac594b321b41fe5f0646dae9b98e3d64e6463be9837",
+          "body_hash_aligned": true
+        },
+        {
+          "source": "../six_directions/SIX_HOLE_FREE_REDUCTION.md",
+          "sha256": "c04a1f090b51f19ea68db7f7a90d7ab1c7c9ed79feb1549898c4a3b4be88b8e4",
+          "body_hash_aligned": true
+        }
+      ],
+      "appendix_sha256": "adb67adb4a400315124c620d0f50fbbb53b38949fe3d364fe7cd1130a66a873c"
+    },
+    "import_bindings": {
+      "A4_FULL_REVIEW.json": {
+        "status": "PASS",
+        "checked_hashes": 13
+      },
+      "A4_DIMENSIONAL_REVIEW.json": {
+        "status": "PASS",
+        "checked_hashes": 16
+      },
+      "ZERO_CROSSING_REVIEW.json": {
+        "status": "PASS",
+        "checked_hashes": 13
+      }
+    },
+    "Q6_half_layer_geometry": {
+      "status": "PASS",
+      "layers": 12,
+      "edges_each": 16,
+      "near_counts": [
+        15,
+        14
+      ]
+    },
+    "Q7_E2_geometry": {
+      "status": "PASS",
+      "normalized_vertex": 0,
+      "cases": 252,
+      "minimum_overlap": 8,
+      "all_vertices_by_translation": true
+    },
+    "dependency_DAG": {
+      "status": "PASS",
+      "acyclic": true,
+      "dependencies": {
+        "literature": [],
+        "Q5_A4_import": [],
+        "P6_import": [],
+        "E2": [],
+        "N14": [
+          "literature"
+        ],
+        "N10": [
+          "N14",
+          "literature"
+        ],
+        "N11": [
+          "literature"
+        ],
+        "N12": [],
+        "NC": [
+          "N10"
+        ],
+        "A4_Q6_import": [
+          "Q5_A4_import",
+          "literature"
+        ],
+        "Z18_Q7_import": [
+          "A4_Q6_import",
+          "literature"
+        ],
+        "Z7_import": [
+          "P6_import",
+          "Z18_Q7_import",
+          "literature"
+        ],
+        "K4": [
+          "A4_Q6_import",
+          "N10"
+        ],
+        "S4": [
+          "N14",
+          "N10",
+          "A4_Q6_import",
+          "Z18_Q7_import",
+          "Z7_import"
+        ],
+        "S8": [
+          "K4",
+          "N11",
+          "N12"
+        ],
+        "S7_first": [
+          "N11",
+          "N12",
+          "A4_Q6_import"
+        ],
+        "S7": [
+          "S7_first",
+          "S8",
+          "E2",
+          "Z7_import"
+        ],
+        "S9": [
+          "K4",
+          "N10",
+          "N14",
+          "Z18_Q7_import"
+        ],
+        "covered": [
+          "S4",
+          "S7",
+          "S9",
+          "Z18_Q7_import"
+        ],
+        "free": [
+          "K4",
+          "N10",
+          "N14",
+          "NC",
+          "A4_Q6_import",
+          "Z7_import",
+          "Z18_Q7_import"
+        ],
+        "Q7_six_holes": [
+          "covered",
+          "free"
+        ]
+      },
+      "topological_order": [
+        "literature",
+        "Q5_A4_import",
+        "P6_import",
+        "E2",
+        "N14",
+        "N10",
+        "N11",
+        "N12",
+        "NC",
+        "A4_Q6_import",
+        "Z18_Q7_import",
+        "Z7_import",
+        "K4",
+        "S4",
+        "S8",
+        "S7_first",
+        "S7",
+        "S9",
+        "covered",
+        "free",
+        "Q7_six_holes"
+      ],
+      "scope": "Declared local graph with explicitly frozen imports as leaves; no G6 or P7 node."
+    },
+    "scope": "Exact finite half-layer geometry and hash checks only; no finite matching samples imply a universal matching theorem.",
+    "status": "PASS"
+  },
+  "counterexample_attempts": [
+    "minimum crossing counts c=0,1,2,3",
+    "N12 free set of size2 excluded",
+    "candidate equal root u or original mate h",
+    "hu internal, crossing, or temporarily removed by conflict repair",
+    "S7 a=z and D empty",
+    "S9 target in D and isolated target repaired by original crossing edge",
+    "target terminal consists only of original crossing edge",
+    "bridge endpoint at either terminal or in R",
+    "terminal endpoints of arbitrary parity",
+    "collision mate equals port excluded by internal coverage",
+    "multiple half-layers and S7 near counts15/14",
+    "new split q in either facet"
+  ],
+  "finite_checks_are_universal_matching_proof": false,
+  "modifications": "Only Q7_SIX_HOLE_REVIEW.md/.json and Q7_SIX_HOLE_REVIEW_check.py/.json written by this reviewer."
+}

@@ -1,6 +1,6 @@
 ---
 name: mathrsi-hypercube-extremal
-description: "Develop and verify hypercube extremal bounds using common local completions, synchronised rooted flags, working-set separation and exact Gram certificates. Use for cube forbidden-subgraph density research or consuming the Erdős 86 Q4 proof assets; returns scoped mathematics and checks to the calling MathRSI workflow."
+description: "Develop and verify hypercube extremal bounds (finite ex(Q_n, C_4) and asymptotic density) using common local completions, synchronised rooted flags, COP/degree-potential certificates, same-graph multi-measure finite pullbacks, and primal–dual coevolution (cube_coevolve). Use for cube forbidden-subgraph research or consuming Erdős 86 Q7/Q8/asymptotic assets; returns scoped mathematics and checks to the calling MathRSI workflow."
 ---
 
 # Hypercube extremal bounds
@@ -80,3 +80,11 @@ score含正负修正，不能只扫描最密或极大图。原最坏mask只有17
 失败按对象定位：合法域生成错则修覆盖；新矩阵超分则回搜索；PSD精确化失败则保留浮点候选重构因子；原平均不适用则回理论路线，不通过调容差掩盖。未知当前文献进口交定点survey后回原义务，不重新调查整个领域。
 
 断点保存共同对象编码、群作用、冻结模型、已接受best、失败K及完整命令。新研究写自己的wiki，原archive不写。历史证书能支撑本插件工具使用，不能证明MathRSI通用效率或一次新任务已经解决。
+
+## 8. 有限维极值与上下界协同循环（v6 扩展）
+
+除基础六块 `Q4` Gram 证书外，`v6` 新增三类经过实战检验的领域机制（均从各自研究运行提炼，不改动历史 `v3` 归档）：
+
+1. **渐近 COP + 三次型 + 广义超几何度数势（[asymptotic-05912](../../archive/asymptotic-05912/README.md)）：** 在四维旗代数上叠加基于 `Q4` 交集图必无三角形的 35 项完全正（COP）割、29 项三次型（定理 `T3 ≤ 0.5912405943`）及 `m = 1024` 广义顶点度数势（定理 `T4 ≤ 0.5912405942`）。高维传递必须附带 `(v, S, T)` 超几何条件期望五行塔式论证（见 [mathematics](references/mathematics.md)），不可默认固定 `m` 的势对 `n > m` 自动逐点单调。当浮点修补残差已超过单轮增益（如 `0.5907` 拟合的可行性残差 `3.9×10⁻⁴`）时立即停止外层迭代，严禁将未认证 CP 拟合写成已证屏障；任何在采样池上成立的高阶证书（如早期被撤回的 `Q5` `0.5899`）必须通过完整合法域核验与独立重算，谨防二次项系数漏乘组合重数。
+2. **有限维多测度同图拉回与解析度下界（[q8-683](../../archive/q8-683/README.md)）：** 对固定维数 `Q_n`（如 `ex(Q8, C4) ≤ 683`，`same-family/provisional`），在同一张候选图 `H ⊆ Q8`（`|E(H)| ≥ 684`）上耦合均匀 `Q4` 补全测度、三度边入射测度与全局顶点度测度，将 83 条活跃不等式精确有理组装后在全部 `13,150,453` 个带标记 `Q4` 补全上逐一整数穷举，并用解析凸包下界与前置 `Q6` 子面导入闭合有限维差值。对于部分轨迹未随包重放的有限维结果（如 [q7-304](../../archive/q7-304/README.md)），严格分开已验证的显式构造（下界 `≥ 304`）与原包报告但本轮未复验轨迹的上界（`≤ 304`）。
+3. **上下界协同搜索（[cube_coevolve](../../tools/cube_coevolve/README.md)）：** 对接 Base [primal-dual-coevolution](../../../../base/skills/mathrsi-route-loop/references/primal-dual-coevolution.md)。配置中显式分离 `primary_proof_goal`（如证明 `ex(Q8, C4) ≤ 682`，仍开放）与对抗反例搜索目标 `goal.target`（如寻找 `683` 边合法图）；`quality_band` 只用于聚焦亲本与统计采样，反驳必须在**全部归档图**上执行。未反驳的不等式仅标 `empirical`，经 `proof_obligations.json` 导出后回 `prove` 做全域枚举、SAT/DRAT 或解析证明。

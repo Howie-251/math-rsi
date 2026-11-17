@@ -28,7 +28,7 @@ Reads the task's existing specification, wiki and resumption notes, then continu
 
 ## Get the repository and choose a workspace
 
-Use `main` for the current v5 workflow, or choose a fixed v1/v2/v3/v4 historical snapshot and record the revision in your task handoff. See [v5 changes](V5_CHANGES.md) and [evolution records](../development/README.md).
+Use `main` for the current v6 workflow, or choose a fixed v1/v2/v3/v4/v5/v6 snapshot and record the revision in your task handoff. See [v6 changes](V6_CHANGES.md), [v5 history](V5_CHANGES.md) and [evolution records](../development/README.md).
 
 You need access to the private GitHub repository, Git, and an installed, authenticated agent host. Python 3.9+ runs the included replay and reviewer bridges. Additional tools are needed only for the actions you choose: reviewer CLIs and accounts for external reviews, network/search access for literature work, TeX for PDF compilation, or a task-specific Lean environment for formalization. None of these accounts or toolchains is supplied by cloning the repository.
 
@@ -208,7 +208,7 @@ Keep the original research workspace read-only unless separately authorized.
 
 The skill owns the execution sequence; [evolution guidance](EVOLUTION_WORKFLOW.md) explains the inputs and adoption boundary. The current coordinator uses the candidate workflow, with bounded subagent help where useful. A fresh agent running the entire process is not a mandatory prerequisite; required independent mathematical checks still follow the task contract. Existing valid checks are reused.
 
-The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) preserve DD integration history. The [v3 changes](V3_CHANGES.md) preserve that earlier increment and its actual bounded use. The current [v5 changes](V5_CHANGES.md), [v4 history](V4_CHANGES.md) and [maintenance records](../development/README.md) distinguish the release from subsequent main maintenance. Archived outcomes supply mathematical methods, not new-version research performance benchmarks.
+The bundled original ARIS `meta-optimize` and `meta-apply` also have host-specific aliases. They retain their own contracts and are distinct from the mathematical adaptation; see [ARIS reuse](ARIS_REUSE.md). The [v2 changes](V2_CHANGES.md) preserve DD integration history. The [v3 changes](V3_CHANGES.md) preserve that earlier increment and its actual bounded use. The current [v6 changes](V6_CHANGES.md), [v5 history](V5_CHANGES.md), [v4 history](V4_CHANGES.md) and [maintenance records](../development/README.md) distinguish each release from subsequent main maintenance. Archived outcomes supply mathematical methods, not new-version research performance benchmarks.
 
 ## Keep the result usable next time
 
