@@ -1,0 +1,299 @@
+{
+  "audit_skill": "ARIS proof-checker local adaptation under Q7_WORKFLOW",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_complete_modulo_explicit_imports",
+  "summary": "C6, Q, T, one prior56-edge residual witness and bridge-preserving22-edge completion reduction pass modulo explicit imports; full m2/R7/P7 remain open.",
+  "caller": "/root",
+  "reviewer_agent": "/root/r7_blocks_independent_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-05T13:45:34.598527+00:00",
+  "audited_input_hashes": {
+    "R7_BALANCED_Q5_BLOCKS.md": "857531f04a85c80f8582eb2249b41b3c2f6622a92b01cc9c1a1b464fd5834d55",
+    "R7_TWO_BRIDGE_MAXIMAL_REDUCTION.md": "9a13a22b914d5c6d2956a870cccbe23af5e26b4d53b2a28ebfd5d85e5908c827",
+    "R7_BALANCED_Q5_BLOCKS_INPUTS.json": "291c310217670ed649cea2e38b2a6fd1f66e902989248140aea10c56a5cc0110"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.md": "ceed5d7b5f58db58f7dd97a207f02a95efdc880b531ff65488118095b4f4bd19",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "../six_directions/Q5_HIGHER_HOLE_REDUCTION.md": "24841edb1206c8fe22adc0c465a68c3b17ae7afe0555f4d8d969dc9b4f6e098f",
+    "../six_directions/Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "../six_directions/P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "../six_directions/P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "../six_directions/ROOTED_RANGE_REVIEW.json": "3d8bb77ca05805c5cd2355ce30feab8962e255f0d423cd59c499c8efc4e9953d",
+    "R7_BALANCED_FACE_SPLICE.md": "81cecfb9699e47625a5febe3efbbcb369f01d3deb0e59b76acc570e5fe9c40ca",
+    "R7_BALANCED_FACE_SPLICE_REVIEW.json": "94b6c1bc91cfe7fe46e3edd40528fb577b66916a884b4431279e8d34c967f05c",
+    "R7_SIGNED_HOLE_MARGIN.md": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.json": "d609b9cc5c641f972999339a80702fa7c32712095d7604ebfc1a760356a1b09a",
+    "R7_THREE_FREE_PAIRINGS.md": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+    "R7_THREE_FREE_PAIRINGS_REVIEW.json": "d40e08727ea165d393b9a359aac91b719bd29e5e6325a6f48566472ea6eb7980",
+    "Q7_SUBCUBE_PARTITION_RESEARCH.md": "f1fed83591d34b2131143a823878ad65a6716aa74d768f5b83e7bf0c85d9d325",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.md": "b7c6db06db01027d861125291a8161a3a7a7f91e643a24843eb8ee9af3d99c75",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.json": "2b420cd3269800f84db703ee1319bbcca7ff1255c7cb1903d6b10b4be7af1b6f",
+    "R7_ODD_BRIDGE_MARGIN_REVIEW.md": "a48390056368867db87443897f53e00bea912938d067784165c4f80bb7c8a48c",
+    "R7_ODD_BRIDGE_MARGIN_REVIEW.json": "944dcaeabda9f9663c4f898a5978a9f9475f5f56b749f4c9ecad54b3d19f6cb5"
+  },
+  "author_checker_artifact_hashes": {
+    "r7_balanced_q5_blocks_fixed_check.py": "94bbf54a4db9024c7b853743652310408c44b9cdfa5bb85ea43ada3769a5163d",
+    "r7_balanced_q5_blocks_fixed_check.json": "ebd264ee287e058765d6e95cd3bc50a79d1d374b8b00c4cc2be44b10a7c1e14e"
+  },
+  "author_manifest_bindings_checked": 24,
+  "direct_accepted_source_bindings_checked": 4,
+  "external_imports": [
+    {
+      "name": "Fink C0",
+      "scope": "Arbitrary K(Qd) perfect matching extends to Hamilton cycle with cube edges added; d=6,7",
+      "reproved": false
+    },
+    {
+      "name": "HK82 Theorem2",
+      "scope": "Every inclusion-maximal Q6 matching has at least24 edges",
+      "url": "https://dml.cz/bitstream/handle/10338.dmlcz/106137/CommentatMathUnivCarol_023-1982-1_10.pdf",
+      "primary_statement_checked": true,
+      "reproved": false
+    }
+  ],
+  "scope": {
+    "C6": true,
+    "Q_four_original_Q5_hole_blocks_balanced": true,
+    "T_odd_xor_symmetry_weight1_3_5": true,
+    "all_short_realizations_of_fixed_hole_set": true,
+    "strict_new_coverage_over_listed_old_rules": true,
+    "bridge_preserving_maximal_completion_reduction": true,
+    "full_two_cross_edge_family": false,
+    "full_m2": false,
+    "full_R7": false,
+    "full_P7": false,
+    "seven_direction_lift": false,
+    "historical4228_reduced": false
+  },
+  "details": {
+    "obligations": [
+      {
+        "id": "C01",
+        "status": "PASS",
+        "subject": "C6 domain",
+        "discharge": "F is an arbitrary K(Q6) matching; cross-edge endpoint map phi is a genuine bijection, without a mirror or color assumption."
+      },
+      {
+        "id": "C02",
+        "status": "PASS",
+        "subject": "C6 even crossing count",
+        "discharge": "32=2m_U+q+h_U and balanced holes imply q even, including long or same-color prescribed edges."
+      },
+      {
+        "id": "C03",
+        "status": "PASS",
+        "subject": "C6 first local input",
+        "discharge": "D pairs all and only X_U; F_U union D is a matching with exactly the original holes in U. Q5 all-hole cycle applies."
+      },
+      {
+        "id": "C04",
+        "status": "PASS",
+        "subject": "C6 actual paths",
+        "discharge": "Deleting the nonempty disjoint marked D edges from a single cycle yields q/2 vertex-disjoint spanning paths with precisely X_U as endpoints and no cycle component."
+      },
+      {
+        "id": "C05",
+        "status": "PASS",
+        "subject": "C6 cross transport",
+        "discharge": "Attach the unique original cross edge at every endpoint using phi. Interiors are in U and endpoints in X_V; all are pairwise disjoint."
+      },
+      {
+        "id": "C06",
+        "status": "PASS",
+        "subject": "C6 second local input",
+        "discharge": "The actual endpoint pairing R is a matching on X_V, disjoint from F_V; F_V union R has exactly original holes in V. Q5 cycle applies again."
+      },
+      {
+        "id": "C07",
+        "status": "PASS",
+        "subject": "C6 expansion",
+        "discharge": "Replacing marked R edges by disjoint actual paths preserves one cycle and inserts every U vertex exactly once. F_U,F_V and all original cross edges survive; only F edges may be long."
+      },
+      {
+        "id": "C08",
+        "status": "PASS",
+        "subject": "C6 zero-cross with holes",
+        "discharge": "Rename a face with holes U. An incident non-F_V edge at x* exists since F_V is a matching; it is short. Mirror target y* is opposite to free x; Q5 path allows covered targets."
+      },
+      {
+        "id": "C09",
+        "status": "PASS",
+        "subject": "C6 zero-cross gluing and perfect case",
+        "discharge": "Two disjoint spanning paths plus the two distinct mirror bridges form one spanning cycle. With no holes and q=0, F is perfect and C0 applies. Cases exhaust all q."
+      },
+      {
+        "id": "Q01",
+        "status": "PASS",
+        "subject": "R6 import discharge",
+        "discharge": "For a short matching with a free root, P6 applies to a short neighbor target. The endpoint edge cannot lie in a 64-vertex simple path; adding it closes one cycle. Perfect input uses C0."
+      },
+      {
+        "id": "Q02",
+        "status": "PASS",
+        "subject": "Q outer parity",
+        "discharge": "Four balanced Q5 hole blocks imply each Q6 face has balanced original holes. Internal short matching covers colors equally, so the outer ports have equal color counts and c is even."
+      },
+      {
+        "id": "Q03",
+        "status": "PASS",
+        "subject": "Q first C6 input",
+        "discharge": "M_A union D has exactly H intersect A, because ports are covered by D and were not original holes. Its chosen two Q5 hole sets remain unchanged."
+      },
+      {
+        "id": "Q04",
+        "status": "PASS",
+        "subject": "Q actual outer pairing",
+        "discharge": "After removing D every retained A edge is short; attaching original short cross edges creates disjoint actual short paths with distinct B endpoints."
+      },
+      {
+        "id": "Q05",
+        "status": "PASS",
+        "subject": "Q second C6 input",
+        "discharge": "M_B union R has exactly H intersect B; its two Q5 hole sets remain balanced even if R is long or crosses the internal cut. C6 explicitly permits such R."
+      },
+      {
+        "id": "Q06",
+        "status": "PASS",
+        "subject": "Q final cycle and bridge count",
+        "discharge": "Expansion produces a single 128-vertex short cycle containing all M. Only original C crosses the outer coordinate, hence exactly c outer bridges for c>0."
+      },
+      {
+        "id": "Q07",
+        "status": "PASS",
+        "subject": "Q zero-cross branches",
+        "discharge": "With holes choose the face containing a free root, use R6 on the other face and P6 on the chosen face with a possibly covered opposite target; two bridges close. Without holes use d=7 C0."
+      },
+      {
+        "id": "T01",
+        "status": "PASS",
+        "subject": "T all-input implication",
+        "discharge": "Odd weight 1,3,5 leaves at least two fixed coordinates; translation by t fixes all four blocks and flips color. It pairs their holes bijectively, independently of matching symmetry."
+      },
+      {
+        "id": "W01",
+        "status": "PASS",
+        "subject": "Single fixed input arithmetic",
+        "discharge": "Independently reconstructed the 56 short disjoint edges, their 16 holes, direction counts, xor67 invariance, and fixed split (i,k)=(5,2). Four color counts are 2:2,2:2,1:1,3:3; c=20."
+      },
+      {
+        "id": "W02",
+        "status": "PASS",
+        "subject": "Strict new coverage scope",
+        "discharge": "The directly bound prior N audit explicitly certifies this witness is outside its listed rules including M and N. This imported exclusion plus Q/T witnesses strict new coverage relative to those rules only."
+      },
+      {
+        "id": "R01",
+        "status": "PASS",
+        "subject": "Bridge-preserving completion",
+        "discharge": "Greedy extension in each Q6 minus its two original bridge endpoints is finite, preserves M, keeps both endpoints free internally and produces an independent remaining hole set in that face."
+      },
+      {
+        "id": "R02",
+        "status": "PASS",
+        "subject": "At most two further edges",
+        "discharge": "When extending L_S in full Q6, every newly added edge touches the two retained endpoints because H_S was independent. Free sets only shrink, and disjoint new edges use at most two endpoints."
+      },
+      {
+        "id": "R03",
+        "status": "PASS",
+        "subject": "HK82 input and bound",
+        "discharge": "HK82 Theorem 2 states every inclusion-maximal Q6 matching has at least24 edges. Thus |L_S|>=24-2=22. Temporary endpoint-occupying edges are not put into L."
+      },
+      {
+        "id": "R04",
+        "status": "PASS",
+        "subject": "Dense and opposite-color branches",
+        "discharge": "Opposite-color ports allow P6 in each face with two free opposite endpoints. Same-color ports and any face internal size>=28 meet exactly imported F7, without a density condition on the other face."
+      },
+      {
+        "id": "R05",
+        "status": "PASS",
+        "subject": "Residual counts",
+        "discharge": "With both internal sizes22..27, |L|=|L_A|+|L_B|+2 is46..56, global holes16..36 and each face global holes62-2|L_S| is8..18. These are L holes, not numerical restrictions on the original M."
+      },
+      {
+        "id": "R06",
+        "status": "PASS",
+        "subject": "Rich direction and independent scope",
+        "discharge": "At least44 internal edges across six directions imply some direction has at least8 in total. Only facewise hole independence follows; neither global maximality nor a stitching condition follows."
+      },
+      {
+        "id": "R07",
+        "status": "PASS",
+        "subject": "Back substitution and m2",
+        "discharge": "Any cycle containing L contains M. Original bridge count remains exactly2 and all other direction counts do not decrease. Under the stated all-seven-directions-at-least2 hypothesis m stays2. Residual universal extension remains unproved."
+      },
+      {
+        "id": "G01",
+        "status": "PASS",
+        "subject": "Dependencies and quantifiers",
+        "discharge": "Q5+C0=>C6; P6+C0=>R6; C6+P6+R6+C0=>Q=>T. HK82=>completion bound; F7/P6=>closed branches. No R7/P7 reverse use; each choice is sequential after actual paths exist."
+      },
+      {
+        "id": "G02",
+        "status": "PASS",
+        "subject": "Bindings and assurance",
+        "discharge": "All24 author-manifest bindings pass; four direct accepted source bindings pass. Full R7/P7, full m2, seven-direction lifting and historical4228 remain open; no solver, family enumeration or large-certificate replay occurred."
+      }
+    ],
+    "issues": [],
+    "revisions_required": 0,
+    "no_open_scoped_obligations": true
+  },
+  "independent_fixed_arithmetic": {
+    "status": "PASS",
+    "matching_count": 1,
+    "producer_script_executed": false,
+    "edge_count": 56,
+    "direction_counts": [
+      4,
+      4,
+      6,
+      10,
+      10,
+      20,
+      2
+    ],
+    "xor_symmetry": 67,
+    "outer_i": 5,
+    "inner_k_A": 2,
+    "inner_k_B": 2,
+    "four_global_parity_counts": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "outer_bridge_count": 20
+  },
+  "solver_calls": 0,
+  "matching_family_enumeration": false,
+  "high_hole_family_enumeration": false,
+  "large_certificates_replayed": false,
+  "all_transitive_reports_rehashed": false,
+  "transitive_imports_reproved": false,
+  "run_state_reference_sha256": "fda9b0bbd60ad6208782716f70a7057ee1be25de6ef194e348ee143059d492ec",
+  "mathematical_closure_state_updated": false,
+  "trace_path": "R7_BALANCED_Q5_BLOCKS_REVIEW.md",
+  "audit_report_sha256": "d024ea545a67e6e06ee0a650dfa3ff8757187f9f44296adc75ae2d9bb6fbdab8",
+  "skill_sha256": "b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+}

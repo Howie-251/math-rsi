@@ -4,7 +4,7 @@
 
 ## Six-domain results overview
 
-[![Six-domain mathematical results overview](results-overview/results-overview.en.svg?v=5-dd-settings-20261116)](../../case-studies/README.md)
+[![Six-domain mathematical results overview](results-overview/results-overview.en.svg?v=6-c4free-rs7-20261117)](../../case-studies/README.md)
 
 [中文 SVG](results-overview/results-overview.zh.svg) · [English PNG](results-overview/results-overview.en.png) · [中文 PNG](results-overview/results-overview.zh.png) · [Editable generator, data and sources](results-overview/README.md)
 
@@ -61,11 +61,11 @@ Use the same external ARIS renderer described above with `specs/research-to-capa
 
 ## Actual homepage motion
 
-The README hero is a recording of the current homepage's v0 → v5 evolution animation, including both the Q7 ≥57-edge bubble and the DD per-setting follow-up bubble at v5 Current. The dated 2026-11-16 maintenance keeps their actual run versions visible. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
+The README hero is a recording of the current homepage's v0 → v6 evolution animation, including both the Erdős 86 (`Q₇` / `Q₈` / `Q∞`) bubble and the complete `Q₇` E16 (`≥56` edges) bubble at v6 Current. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
 
 ## Historical diagrams
 
-The assets below are preserved **v3 and v2 snapshots**. Current release is [v5](https://github.com/lisresearchgroup/math-rsi/tree/v5); main also includes later maintenance. See [v5 changes](../../docs/V5_CHANGES.md), [the bilingual visual tour](../../docs/HOMEPAGE.md), and the [v3 generation record](../../development/figures-v3-20261104/REPORT.md). Historical labels describe their original versions.
+The assets below are preserved **v3 and v2 snapshots**. Current release is [v6](https://github.com/lisresearchgroup/math-rsi/tree/v6) (fixed [v5](https://github.com/lisresearchgroup/math-rsi/tree/v5) and earlier tags remain unchanged). See [v6 changes](../../docs/V6_CHANGES.md), [the bilingual visual tour](../../docs/HOMEPAGE.md), and the [v3 generation record](../../development/figures-v3-20261104/REPORT.md). Historical labels describe their original versions.
 
 ### v3 snapshot · Figure 1: Research experience improves base and plugins
 

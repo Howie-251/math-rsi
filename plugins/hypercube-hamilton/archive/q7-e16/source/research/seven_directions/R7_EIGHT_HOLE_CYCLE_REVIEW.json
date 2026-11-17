@@ -1,0 +1,161 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_modulo_explicit_imports",
+  "summary": "全八孔R7圈、三个直接推论及固定极大m=2排除T/U/V/W见证通过；完整R7/P7仍未关闭。",
+  "reviewer_agent_id": "/root/r7_eight_root_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user instruction relayed by parent; backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "executor_family": "openai",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-04T09:18:21.622753+00:00",
+  "audited_input_hashes": {
+    "R7_EIGHT_HOLE_CYCLE_PROJECTION.md": "sha256:9691d5f0d49cc300dec444f93ca852ec68f38107e8bf2e4d0bd6a1db70a64aa2",
+    "R7_EIGHT_HOLE_M2_WITNESS.json": "sha256:ce83009f795938e274763c9f4b5a6fbf1081179642c87f5b53f5492761b8b2ac"
+  },
+  "imported_dependency_hashes": {
+    "A4_DIMENSIONAL_INDUCTION.md": "sha256:bf7d6da5fc5c5d779cc858f5f095a6ca9fc0685ef6c94fd9f34c72c552da89fc",
+    "A4_DIMENSIONAL_REVIEW.json": "sha256:95d557933a15bb9f51fd813711ad6a30f1614f095c281c81215d1c97c151c647",
+    "A4_FULL_CLOSURE.md": "sha256:e4101f910099b04ca39594bcfeea1ad3d879bbb93eef119c1697dc951611cd86",
+    "A4_FULL_REVIEW.json": "sha256:f9930563d13bc6e76a6c30f2ed7c40b3b2b847050562159299f6fd44f6f94403",
+    "A6_FINAL_REDUCTION.md": "sha256:23478951d0089c9f3c3eb0227045e5725dc01376641952a95085ab0421796827",
+    "A6_FULL_REVIEW.json": "sha256:52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "Q7_EIGHT_FREE_CLOSURE.md": "sha256:72d6443581fb84c7dcd177169894f3302b05321f3793163bb0ef932407105031",
+    "Q7_EIGHT_NINE_CUTS.md": "sha256:d900efea94be1971a8c825b9fde8d9cb532304f7d6f197e1124a92f196cc256b",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.json": "sha256:be566b440bdb418f13ddb1bf2ccadf33c88ae7aaa7ea4f49fc3b0bec7fca64c5",
+    "Q7_EIGHT_NINE_CUTS_REVIEW.md": "sha256:7e841562b50ca992e4cd5c37d90766630451ff9eeac4e21b160489ec45265167",
+    "Q7_EIGHT_SEPARATED_HOLE_SUPPORTS.md": "sha256:64a5f63dec77ec5007c8a572eafb550bcb6ec7377d2f48c70234bda091814fae",
+    "Q7_FIFTEEN_PRODUCT_TEMPLATES.md": "sha256:90fd9eb5d66f44c40c36de18af6945926cdb75e6e140e909cdab0477c9b8090b",
+    "Q7_SIX_HOLE_CLOSURE.md": "sha256:af9ca063a74561f67be615984d47204a0160f916a2f94ca5e629eb8d037be74b",
+    "Q7_SIX_HOLE_REVIEW.json": "sha256:0aa56b61e0ab68cde2cabd6979dd7000b5ff2d62134b68b4f4e6bd6b0f54b44a",
+    "R7_EIGHT_HOLE_CYCLE_INPUTS.json": "sha256:783723e022fa4c5cab2c3949af0ed6f1354e93b6ec8d3134073d524b33d6c8cd",
+    "R7_SINGLE_I_FLEXIBLE_EAR.md": "sha256:1495d28e25713423f2d538b89dbfee08c78131a67b90687e664c8a6023b4c9c8",
+    "R7_SINGLE_I_SOURCE_CUT.md": "sha256:ed402cda79923363fcadb67246b58c923353407b016b72985e955f08dbc07a67",
+    "R7_TWO_CROSS_SEPARATING_FACE.md": "sha256:27d613dbfb67011fc2ded540854fc1ac5f3699f63a714b66dde74618599d522d",
+    "R7_TWO_CROSS_SINGLE_INTERNAL.md": "sha256:54c4c994dc4d62432bde706bf8d8d4843dfab94468dc26005b890be3f5d26a0c",
+    "ZERO_CROSSING_PATHS.md": "sha256:35858010b280711e715a2406aa85ba567fc641dd260035d2fd3fea1936c2e169",
+    "ZERO_CROSSING_REVIEW.json": "sha256:94fa2b379e644d086c19b5df5bdb226276b41b3cde7afe50fa0f5094ff384db2",
+    "check_r7_eight_hole_cycle.py": "sha256:6d622761836341ba3fee3acbdebbc3c8d0c4393b41882e50cd32b5d6a218ccde"
+  },
+  "report_hash": "sha256:3b8b43a46b4dc2a267d76375f2523d1b5abf70ad7606506fe6c2d91871ae5852",
+  "trace_path": "R7_EIGHT_HOLE_CYCLE_REVIEW.md",
+  "scope": {
+    "E8_every_short_Q7_matching_of_60_edges": true,
+    "at_least_60_supermatching_condition": true,
+    "ten_holes_with_adjacent_free_pair_cycle": true,
+    "ten_holes_adjacent_free_roots_path": true,
+    "single_fixed_maximal_eight_hole_m2_witness": true,
+    "full_R7": false,
+    "full_P7": false,
+    "all_eight_hole_covered_targets": false,
+    "4228_geometry_count_reduced": false
+  },
+  "obligations": [
+    {
+      "id": "O01",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O02",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O03",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O04",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O05",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O06",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O07",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O08",
+      "status": "CLOSED_MODULO_EXPLICIT_IMPORTS"
+    },
+    {
+      "id": "O09",
+      "status": "CLOSED_MODULO_EXPLICIT_IMPORTS"
+    },
+    {
+      "id": "O10",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O11",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O12",
+      "status": "CLOSED_MODULO_EXPLICIT_IMPORTS"
+    },
+    {
+      "id": "O13",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O14",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O15",
+      "status": "CLOSED"
+    },
+    {
+      "id": "O16",
+      "status": "CLOSED"
+    }
+  ],
+  "details": {
+    "issues": [],
+    "open_fatal": 0,
+    "open_critical": 0,
+    "open_major": 0,
+    "open_minor": 0,
+    "dependency_DAG_acyclic": true,
+    "counterexample_pass_executed": true,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "independent_fixed_witness_reconstruction": "PASS",
+    "manifest_hashes_verified": true,
+    "additional_audit_input_hash_counts": {
+      "Q7_SIX_HOLE_REVIEW.json": 2,
+      "A4_DIMENSIONAL_REVIEW.json": 15
+    },
+    "fixed_witness_direction_counts": [
+      5,
+      6,
+      4,
+      5,
+      19,
+      19,
+      2
+    ],
+    "matching_family_enumeration": false,
+    "high_hole_enumeration": false,
+    "formal_proof_assistant_verified": false,
+    "cross_family_review": false,
+    "all_imported_certificates_replayed": false,
+    "author_script_used_for_independent_reconstruction": false,
+    "source_modified": false,
+    "RUN_STATE_modified": false,
+    "ledger_modified": false,
+    "frozen_six_directions_modified": false
+  }
+}

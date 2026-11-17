@@ -1,0 +1,148 @@
+{
+  "review": "SILENT_ASSUMPTION_SWEEP_2",
+  "saved_at_utc": "2026-11-15T12:33:45.038171+00:00",
+  "scope_root": "/mnt/c/Users/Anony/Desktop/project/research/ex_qn_c4/coevolve",
+  "prior_review": "implement-stage/reviews/SILENT_ASSUMPTION_SWEEP_1.json",
+  "scope": "Second/final follow-up restricted to unresolved A19 and documented interfaces in revised README.md, AGENTS.md, assumptions and corresponding implementation. Not a fresh full-system review or a new mathematics audit.",
+  "review_model": {
+    "backend": "codex",
+    "execution": "native child reviewer",
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "xhigh",
+    "actual_model": null,
+    "actual_model_status": "The current reviewer session exposes no independently reported provider identity. Requested route is not substituted for observed identity.",
+    "family_comparison": "same Codex/OpenAI family as implementation author"
+  },
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "assurance": "draft; same-family positive follow-up cannot independently acquit implementation correctness or mathematical effectiveness",
+  "undeclared": [],
+  "stale_rows": [],
+  "functional_defects": [],
+  "semantic_undeclared": 0,
+  "verdict": "clean",
+  "counts": {
+    "undeclared": 0,
+    "semantic_undeclared": 0,
+    "stale_rows": 0,
+    "functional_defects": 0
+  },
+  "resolved_from_first_review": [
+    {
+      "id": "S03",
+      "row": "A19",
+      "status": "resolved",
+      "observed_text": "| A19 | 奖励归一化 | 不等式尺度为 max(系数绝对值之和, 当前适用图残差 IQR)，整轮固定；目标代理除以 abs(target)+1；所选挑战不适用时该通道取 −1e6，条件通道针对任务条件，不能混称它会优化每条候选自身的条件距离 | semantic | sweep |",
+      "implementation_sites": [
+        "cube_coevolve/reward.py:score",
+        "cube_coevolve/runtime.py:SearchAPI.reward"
+      ],
+      "verification": "score.condition_distance uses goal.conditions exclusively. SearchAPI.reward(condition) consumes that task-specific distance. Selected-inequality applicability separately determines its challenge margin; outside the inequality domain the scalar challenge fallback is -1e6."
+    }
+  ],
+  "documentation_findings_resolved_during_followup": [
+    {
+      "id": "D01",
+      "site": "README.md:111",
+      "before": "重复图奖励为零",
+      "after": "重复图的新颖性分量为零",
+      "reason": "Only the novelty component is zero. The novelty scalar proxy additionally contains 0.05*normalized objective. This is a documentation correction, not a required novelty-performance guarantee.",
+      "status": "resolved"
+    },
+    {
+      "id": "D02",
+      "site": "AGENTS.md:5",
+      "before": "所有修改仍只在 ../research",
+      "after": "research 工作区从本文件目录向上两层，即 ../..",
+      "reason": "The old relative path resolved to ex_qn_c4/research from this nested directory. The new scope resolves to the intended project/research workspace.",
+      "status": "resolved"
+    }
+  ],
+  "files_read_in_full_this_followup": [
+    "README.md",
+    "AGENTS.md",
+    "implement-stage/ASSUMPTIONS.md",
+    "implement-stage/BUILD_NOTE.md",
+    "implement-stage/reviews/SILENT_ASSUMPTION_SWEEP_1.json",
+    "cube_coevolve/reward.py",
+    "cube_coevolve/runtime.py",
+    "cube_coevolve/__main__.py",
+    "configs/q8_offline_smoke.json"
+  ],
+  "targeted_source_sections_rechecked": [
+    "cube_coevolve/loop.py: load_config, run/resume checks, challenge_turn_index, counterexample_view, lower/upper prompt construction, program lineage, effective metric updates and registry artifacts",
+    "cube_coevolve/providers.py: propose, explicit offline/Codex selection, receipts and interrupted-call recovery, requested-versus-reported identity",
+    "cube_coevolve/metrics.py: Registry.describe, exact base/face definitions and parity contract",
+    "cube_coevolve/inequalities.py: exhaustive domain and vacuous handling"
+  ],
+  "deterministic_checks_this_followup": [
+    {
+      "name": "task conditions and inequality conditions are distinct",
+      "setup": "Q2 path with three edges supports conditional edges<=3 under min_degree>=1. Score the empty graph under the same inequality and two different task-condition lists.",
+      "observed": {
+        "unconditional_task": {
+          "condition_distance": 0,
+          "challenge": null,
+          "condition_reward": 0.0
+        },
+        "task_min_degree_at_least_one": {
+          "condition_distance": 1,
+          "challenge": null,
+          "condition_reward": -1.0
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "name": "novelty component versus scalar proxy",
+      "setup": "Repeat an archived Q2 three-edge graph, target=4, focus=novelty.",
+      "observed": {
+        "novelty_component": 0.0,
+        "scalar_reward": 0.03
+      },
+      "exit_code": 0
+    },
+    {
+      "name": "all documented configurations load",
+      "observed": {
+        "configs/live_smoke.json": "codex",
+        "configs/q8.json": "codex",
+        "configs/q8_conditional.json": "codex",
+        "configs/q8_offline_smoke.json": "offline",
+        "configs/smoke.json": "offline"
+      },
+      "exit_code": 0
+    }
+  ],
+  "reused_test_evidence": {
+    "source": "SILENT_ASSUMPTION_SWEEP_1.json: verification",
+    "suite": "python3 -m unittest discover -s tests -v",
+    "tests": 11,
+    "exit_code": 0,
+    "note": "The reviewer personally ran the 11-test suite in the first sweep after the substantive fixes. This follow-up changed no implementation; the narrow additional probes above verify the remaining documentation question without repeating the whole suite."
+  },
+  "documented_interfaces_confirmed": [
+    "CLI examples match run/config/output/rounds/resume arguments; resume rounds are additional rounds and changed frozen configs are rejected.",
+    "A completed provider response or program execution can be reused on resume. A failed/ambiguous provider call is not silently retried or replaced by offline output; the documented explicit directory-archive procedure permits intentional reissue.",
+    "Both sides consume the exact registry; source-program and failure feedback, bounded actual counterexamples, and post-update reward snapshots are connected at their actual call sites.",
+    "Task conditions and candidate inequality conditions remain distinct. Sample-supported inequalities are empirical, not theorems. Exhaustive_verified is restricted to complete n<=3 enumeration with a recorded domain.",
+    "Generated programs submit graph outputs and host computation determines validity and scores. Existing 682-edge outputs are admissible engineering artifacts and are not a new lower-bound result.",
+    "New README and AGENTS preserve the distinction between finite framework validation and later scientific research."
+  ],
+  "live_run_scope": {
+    "source": "Root-provided status; not independently rerun or audited in this narrow follow-up",
+    "reported": "A live Q8 run has two valid generated programs returning existing 682-edge seeds; upper feedback was consumed.",
+    "interpretation": "Engineering loop evidence only. No new mathematical result is inferred. Novel graph discovery or a 683-edge improvement is not an engineering acceptance requirement."
+  },
+  "preservation": {
+    "first_review_modified": false,
+    "second_review_write_mode": "exclusive creation; no replacement of existing report",
+    "implementation_modified_by_reviewer": false
+  },
+  "limits": [
+    "No paid model calls, external theorem lookup, old research restart, new search campaign or proof attempt was performed.",
+    "Actual reviewer model identity is not independently surfaced; the requested gpt-6-astra/xhigh route is kept separate from actual observed identity.",
+    "Clean refers to the restricted follow-up scope. Same-family acceptance remains provisional; it does not certify universal Q8 bounds, search effectiveness, novelty success or provider model identity.",
+    "Root is responsible for completing BUILD_NOTE with the actual live run record; this follow-up does not promote its pending rung statuses to a completed acceptance claim."
+  ]
+}

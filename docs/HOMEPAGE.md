@@ -42,6 +42,6 @@ The source stays at its existing location so its relative figure, case-reader an
 
 - [Six results, methods and evidence scopes](../case-studies/README.md)
 - [Start your own task](QUICKSTART.md)
-- [Current v5 workflow](V5_CHANGES.md) · [v4 history](V4_CHANGES.md)
+- [Current v6 workflow](V6_CHANGES.md) · [v5 history](V5_CHANGES.md) · [v4 history](V4_CHANGES.md)
 - [Architecture figure gallery](../figures/mathrsi/README.md)
 - [Documentation](README.md)

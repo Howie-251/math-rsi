@@ -1,0 +1,961 @@
+{
+  "status": "PASS",
+  "no_producer_imports": true,
+  "no_solver_calls": true,
+  "no_matching_family_or_high_hole_enumeration": true,
+  "bindings": {
+    "../six_directions/P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "../six_directions/P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.md": "ceed5d7b5f58db58f7dd97a207f02a95efdc880b531ff65488118095b4f4bd19",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "R7_SIGNED_HOLE_MARGIN.md": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.md": "24c1346aff0139a2c364c4015ee6b54da5ab7fe2780cb73ae002e8506b9a223b",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.json": "d609b9cc5c641f972999339a80702fa7c32712095d7604ebfc1a760356a1b09a",
+    "PERFECT_MATCHING_SPLICE.md": "78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+    "PERFECT_MATCHING_SPLICE_REVIEW.json": "a4f94b4cc2b438280e6e67a804ad6ea9672c7c3facc944d7edb1c5c7e3940f27",
+    "R7_THREE_FREE_PAIRINGS.md": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+    "R7_THREE_FREE_PAIRINGS_REVIEW.json": "d40e08727ea165d393b9a359aac91b719bd29e5e6325a6f48566472ea6eb7980",
+    "A6_DELTA1_REDUCTION.md": "efda01b6a9794334c145b4cd38ad9ff13ff6ed728e020da8600b7800867c9028",
+    "A6_DELTA1_REVIEW.json": "672dc03dabfae36c851ab23355e05890b1d40b76ef2859cbf105448ed87b5917",
+    "A6_DELTA1_REFINEMENT.md": "b5ec50e3d66d38d9bededdb04afaa7d89cdc2602c9907c00daa7a2053db71a58",
+    "A6_DELTA1_REFINED_REVIEW.json": "8fa983009219c86d379b18141dea1635d07e9d5dcc60279caf1bead13f3ac0ec",
+    "R7_MARGIN_GATE_RESIDUAL_WITNESS.md": "6857cfbd409ddeb56c4961cd7c6cb89474a65aeb118e91b6b907a30dda14953d",
+    "R7_MARGIN_GATE_RESIDUAL_WITNESS.json": "3ec4d9086b5d8bc65dc935f8544a2ce3ad1929306924e702407e3ab3f816fa4b",
+    "R7_ODD_BRIDGE_MARGIN.md": "0708043bf9d11a6a38d1ac48f62e1391ee4b1af2ec49b34cafa195c001c08ce6",
+    "R7_ODD_BRIDGE_MARGIN_INPUTS.json": "d6f942963e533c048875391229a295b8a1d2e4c4b15d572e45cacfa0fada3e8d",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.md": "b7c6db06db01027d861125291a8161a3a7a7f91e643a24843eb8ee9af3d99c75",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.json": "2b420cd3269800f84db703ee1319bbcca7ff1255c7cb1903d6b10b4be7af1b6f"
+  },
+  "immediate_accepted_bindings": [
+    {
+      "report": "../six_directions/P6_FULL_REVIEW.json",
+      "source": "../six_directions/P6_FULL_CLOSURE.md",
+      "sha256": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+      "match": true
+    },
+    {
+      "report": "../six_directions/Q5_A10_FULL_REVIEW.json",
+      "source": "../six_directions/Q5_A10_FULL_CLOSURE.md",
+      "sha256": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+      "match": true
+    },
+    {
+      "report": "R7_SIGNED_HOLE_MARGIN_REVIEW.json",
+      "source": "R7_SIGNED_HOLE_MARGIN.md",
+      "sha256": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+      "match": true
+    },
+    {
+      "report": "PERFECT_MATCHING_SPLICE_REVIEW.json",
+      "source": "PERFECT_MATCHING_SPLICE.md",
+      "sha256": "78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+      "match": true
+    },
+    {
+      "report": "R7_THREE_FREE_PAIRINGS_REVIEW.json",
+      "source": "R7_THREE_FREE_PAIRINGS.md",
+      "sha256": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+      "match": true
+    }
+  ],
+  "old56": {
+    "faces": {
+      "A": {
+        "O": [
+          28,
+          44,
+          52,
+          56,
+          62
+        ],
+        "E": [
+          15,
+          23,
+          43
+        ],
+        "internal_free": [
+          0,
+          3,
+          15,
+          23,
+          28,
+          43,
+          44,
+          52,
+          56,
+          62
+        ],
+        "directions": [
+          4,
+          7,
+          8,
+          2,
+          3,
+          3
+        ],
+        "0": [
+          -3,
+          -2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "3": [
+          5,
+          4,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "B": {
+        "O": [
+          31,
+          47,
+          55,
+          59,
+          61
+        ],
+        "E": [
+          12,
+          20,
+          40
+        ],
+        "internal_free": [
+          0,
+          3,
+          12,
+          20,
+          31,
+          40,
+          47,
+          55,
+          59,
+          61
+        ],
+        "directions": [
+          4,
+          7,
+          8,
+          2,
+          3,
+          3
+        ],
+        "0": [
+          5,
+          4,
+          2,
+          2,
+          3,
+          3
+        ],
+        "3": [
+          -3,
+          -2,
+          2,
+          2,
+          3,
+          3
+        ]
+      }
+    },
+    "direction_counts": [
+      8,
+      14,
+      16,
+      4,
+      6,
+      6,
+      2
+    ],
+    "gates": [
+      {
+        "response": "A",
+        "d": 0,
+        "k": 0,
+        "delta": -3,
+        "EY": [],
+        "original_cross_edges": 4,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 1,
+        "delta": -2,
+        "EY": [],
+        "original_cross_edges": 7,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 2,
+        "delta": 2,
+        "EY": [
+          43
+        ],
+        "original_cross_edges": 8,
+        "M_pass": false,
+        "N_pass": true
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 3,
+        "delta": 2,
+        "EY": [
+          23
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          15,
+          43
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 5,
+        "delta": 3,
+        "EY": [
+          15,
+          23
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 0,
+        "delta": 5,
+        "EY": [
+          15,
+          23,
+          43
+        ],
+        "original_cross_edges": 4,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 1,
+        "delta": 4,
+        "EY": [
+          15,
+          23,
+          43
+        ],
+        "original_cross_edges": 7,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 2,
+        "delta": 2,
+        "EY": [
+          43
+        ],
+        "original_cross_edges": 8,
+        "M_pass": false,
+        "N_pass": true
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 3,
+        "delta": 2,
+        "EY": [
+          23
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          15,
+          43
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 5,
+        "delta": 3,
+        "EY": [
+          15,
+          23
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 0,
+        "delta": 5,
+        "EY": [
+          12,
+          20,
+          40
+        ],
+        "original_cross_edges": 4,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 1,
+        "delta": 4,
+        "EY": [
+          12,
+          20,
+          40
+        ],
+        "original_cross_edges": 7,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 2,
+        "delta": 2,
+        "EY": [
+          40
+        ],
+        "original_cross_edges": 8,
+        "M_pass": false,
+        "N_pass": true
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 3,
+        "delta": 2,
+        "EY": [
+          20
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          12,
+          40
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 5,
+        "delta": 3,
+        "EY": [
+          12,
+          20
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 0,
+        "delta": -3,
+        "EY": [],
+        "original_cross_edges": 4,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 1,
+        "delta": -2,
+        "EY": [],
+        "original_cross_edges": 7,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 2,
+        "delta": 2,
+        "EY": [
+          40
+        ],
+        "original_cross_edges": 8,
+        "M_pass": false,
+        "N_pass": true
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 3,
+        "delta": 2,
+        "EY": [
+          20
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          12,
+          40
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 5,
+        "delta": 3,
+        "EY": [
+          12,
+          20
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      }
+    ],
+    "maximal": true,
+    "size": 56,
+    "holes": [
+      15,
+      23,
+      28,
+      43,
+      44,
+      52,
+      56,
+      62,
+      76,
+      84,
+      95,
+      104,
+      111,
+      119,
+      123,
+      125
+    ],
+    "global_parity_holes": [
+      8,
+      8
+    ]
+  },
+  "new56": {
+    "faces": {
+      "A": {
+        "O": [
+          28,
+          44,
+          52,
+          56,
+          62
+        ],
+        "E": [
+          6,
+          10,
+          17
+        ],
+        "internal_free": [
+          0,
+          3,
+          6,
+          10,
+          17,
+          28,
+          44,
+          52,
+          56,
+          62
+        ],
+        "directions": [
+          2,
+          2,
+          3,
+          5,
+          5,
+          10
+        ],
+        "0": [
+          -1,
+          -1,
+          3,
+          3,
+          3,
+          4
+        ],
+        "3": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ]
+      },
+      "B": {
+        "O": [
+          31,
+          47,
+          55,
+          59,
+          61
+        ],
+        "E": [
+          5,
+          9,
+          18
+        ],
+        "internal_free": [
+          0,
+          3,
+          5,
+          9,
+          18,
+          31,
+          47,
+          55,
+          59,
+          61
+        ],
+        "directions": [
+          2,
+          2,
+          3,
+          5,
+          5,
+          10
+        ],
+        "0": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "3": [
+          -1,
+          -1,
+          3,
+          3,
+          3,
+          4
+        ]
+      }
+    },
+    "direction_counts": [
+      4,
+      4,
+      6,
+      10,
+      10,
+      20,
+      2
+    ],
+    "gates": [
+      {
+        "response": "A",
+        "d": 0,
+        "k": 0,
+        "delta": -1,
+        "EY": [
+          6,
+          10
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 1,
+        "delta": -1,
+        "EY": [
+          17
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 2,
+        "delta": 3,
+        "EY": [
+          10,
+          17
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 3,
+        "delta": 3,
+        "EY": [
+          6,
+          17
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          6,
+          10
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 0,
+        "k": 5,
+        "delta": 4,
+        "EY": [
+          6,
+          10,
+          17
+        ],
+        "original_cross_edges": 10,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 0,
+        "delta": 3,
+        "EY": [
+          17
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 1,
+        "delta": 3,
+        "EY": [
+          6,
+          10
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 2,
+        "delta": 3,
+        "EY": [
+          10,
+          17
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 3,
+        "delta": 3,
+        "EY": [
+          6,
+          17
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          6,
+          10
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "A",
+        "d": 3,
+        "k": 5,
+        "delta": 4,
+        "EY": [
+          6,
+          10,
+          17
+        ],
+        "original_cross_edges": 10,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 0,
+        "delta": 3,
+        "EY": [
+          18
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 1,
+        "delta": 3,
+        "EY": [
+          5,
+          9
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 2,
+        "delta": 3,
+        "EY": [
+          9,
+          18
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 3,
+        "delta": 3,
+        "EY": [
+          5,
+          18
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          5,
+          9
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 0,
+        "k": 5,
+        "delta": 4,
+        "EY": [
+          5,
+          9,
+          18
+        ],
+        "original_cross_edges": 10,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 0,
+        "delta": -1,
+        "EY": [
+          5,
+          9
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 1,
+        "delta": -1,
+        "EY": [
+          18
+        ],
+        "original_cross_edges": 2,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 2,
+        "delta": 3,
+        "EY": [
+          9,
+          18
+        ],
+        "original_cross_edges": 3,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 3,
+        "delta": 3,
+        "EY": [
+          5,
+          18
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 4,
+        "delta": 3,
+        "EY": [
+          5,
+          9
+        ],
+        "original_cross_edges": 5,
+        "M_pass": false,
+        "N_pass": false
+      },
+      {
+        "response": "B",
+        "d": 3,
+        "k": 5,
+        "delta": 4,
+        "EY": [
+          5,
+          9,
+          18
+        ],
+        "original_cross_edges": 10,
+        "M_pass": false,
+        "N_pass": false
+      }
+    ],
+    "maximal": true,
+    "size": 56,
+    "holes": [
+      6,
+      10,
+      17,
+      28,
+      44,
+      52,
+      56,
+      62,
+      69,
+      73,
+      82,
+      95,
+      111,
+      119,
+      123,
+      125
+    ],
+    "global_parity_holes": [
+      8,
+      8
+    ]
+  },
+  "old56_N_gate": {
+    "response": "B",
+    "d": 0,
+    "k": 2,
+    "delta": 2,
+    "EY": [
+      40
+    ],
+    "original_cross_edges": 8,
+    "M_pass": false,
+    "N_pass": true
+  },
+  "old_large_certificates_rerun": false
+}

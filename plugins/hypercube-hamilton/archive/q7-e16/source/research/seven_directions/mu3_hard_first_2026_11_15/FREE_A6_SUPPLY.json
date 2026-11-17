@@ -1,0 +1,1182 @@
+{
+  "seconds_per_parity": 30,
+  "workers": 8,
+  "prior_witness": {
+    "axis": 0,
+    "receiver_bit": 1,
+    "donor_axis": 1,
+    "donor_bit": 0,
+    "a": 0,
+    "b": 5,
+    "c": 2,
+    "epsilon": 1,
+    "ell": 6,
+    "x": 8,
+    "U": [
+      105,
+      125
+    ],
+    "y": 9,
+    "V": [
+      104,
+      124
+    ],
+    "after_donor": [
+      [
+        58,
+        106,
+        126
+      ],
+      [
+        2,
+        16,
+        32,
+        64,
+        104,
+        112,
+        124
+      ]
+    ],
+    "after_receiver": [
+      [
+        9,
+        63,
+        95,
+        123
+      ],
+      [
+        1,
+        25
+      ]
+    ]
+  },
+  "solves": [
+    {
+      "parity": 0,
+      "status": "OPTIMAL",
+      "solver_wall_seconds": 1.8935350000000002,
+      "build_seconds": 0.047735300002386793,
+      "model_stats": "satisfaction model '': (model_fingerprint: 0x6e517d2189baf166)\n#Variables: 499 (453 primary variables)\n  - 317 Booleans in [0,1]\n  - 182 in [0,8]\n#kBoolOr: 448 (#literals: 896)\n#kLinear1: 44 (#enforced: 42)\n#kLinear2: 21 (#enforced: 14) (#complex_domain: 7)\n#kLinearN: 288 (#enforced: 98 #multi: 98) (#terms: 4'058)\n#kTable: 252 (#enforced: 252 #multi: 252)",
+      "response_stats": "CpSolverResponse summary:\nstatus: OPTIMAL\nobjective: 0\nbest_bound: 0\nintegers: 386\nbooleans: 3452\nconflicts: 1428\nbranches: 54123\npropagations: 3547008\ninteger_propagations: 564695\nrestarts: 15\nlp_iterations: 0\nwalltime: 1.89354\nusertime: 1.89354\ndeterministic_time: 3.87333\ngap_integral: 0\nsolution_fingerprint: 0x86a806410552aa57\n",
+      "candidate": {
+        "P": [
+          0,
+          5,
+          9,
+          17,
+          34,
+          36,
+          40,
+          48
+        ],
+        "Q": [
+          0,
+          3,
+          6,
+          10,
+          24,
+          65,
+          68,
+          80
+        ],
+        "even_holes": [
+          0,
+          5,
+          9,
+          17,
+          34,
+          36,
+          40,
+          48
+        ],
+        "odd_holes": [
+          47,
+          59,
+          62,
+          103,
+          117,
+          121,
+          124,
+          127
+        ],
+        "lambda_by_axis": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "delta_even_minus_odd": [
+          -3,
+          -4,
+          -4,
+          -4,
+          -4,
+          -4,
+          -5
+        ],
+        "axes": [
+          {
+            "axis": 0,
+            "receiver_bit": 0,
+            "counts": [
+              3,
+              6,
+              5,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                2,
+                1,
+                2
+              ],
+              [
+                3,
+                1,
+                2
+              ],
+              [
+                4,
+                1,
+                2
+              ],
+              [
+                5,
+                4,
+                2
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 1,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "old_five_gates": {
+              "counts": {
+                "xST": 432,
+                "no_donor_gate": 252,
+                "receiver_gap": 140,
+                "receiver_only_xS": 8,
+                "outside_capacity": 24,
+                "both_capacities": 6,
+                "inside_capacity": 10
+              },
+              "gates": {
+                "balanced_complement": {
+                  "receiver_gap": 56,
+                  "outside_capacity": 12,
+                  "inside_capacity": 4
+                },
+                "majority_root": {
+                  "receiver_gap": 66,
+                  "outside_capacity": 10,
+                  "both_capacities": 4,
+                  "inside_capacity": 4
+                },
+                "two_majority_roots": {
+                  "receiver_gap": 18,
+                  "both_capacities": 2,
+                  "inside_capacity": 2,
+                  "outside_capacity": 2
+                },
+                "two_minority_roots": {},
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 47,
+                "S": [
+                  5,
+                  1
+                ],
+                "returns": [
+                  34,
+                  0
+                ]
+              },
+              "joint_witness": null
+            }
+          },
+          {
+            "axis": 0,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              5,
+              6,
+              3
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                1,
+                4,
+                0
+              ],
+              [
+                2,
+                4,
+                1
+              ],
+              [
+                3,
+                4,
+                1
+              ],
+              [
+                4,
+                4,
+                1
+              ],
+              [
+                5,
+                6,
+                0
+              ],
+              [
+                6,
+                4,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "old_five_gates": {
+              "counts": {
+                "xST": 360,
+                "receiver_gap": 156,
+                "no_donor_gate": 186,
+                "receiver_only_xS": 3,
+                "inside_capacity": 9,
+                "joint_pass": 9
+              },
+              "gates": {
+                "balanced_complement": {
+                  "receiver_gap": 21,
+                  "inside_capacity": 2,
+                  "joint_pass": 1
+                },
+                "majority_root": {
+                  "receiver_gap": 99,
+                  "joint_pass": 5,
+                  "inside_capacity": 4
+                },
+                "two_majority_roots": {
+                  "receiver_gap": 15,
+                  "inside_capacity": 3
+                },
+                "two_minority_roots": {
+                  "receiver_gap": 21,
+                  "joint_pass": 3
+                },
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 36,
+                "S": [
+                  2,
+                  1
+                ],
+                "returns": [
+                  47,
+                  103
+                ]
+              },
+              "joint_witness": {
+                "x": 36,
+                "S": [
+                  2,
+                  1
+                ],
+                "T": [
+                  3,
+                  0
+                ],
+                "returns": [
+                  103,
+                  117
+                ],
+                "gate": "majority_root"
+              }
+            }
+          },
+          {
+            "axis": 1,
+            "receiver_bit": 0,
+            "counts": [
+              1,
+              5,
+              7,
+              3
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                3,
+                2
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                4,
+                2,
+                3
+              ],
+              [
+                5,
+                3,
+                3
+              ],
+              [
+                6,
+                0,
+                3
+              ]
+            ],
+            "scarcity_s": 1,
+            "strong_axes": [
+              0
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 1,
+            "receiver_bit": 1,
+            "counts": [
+              3,
+              7,
+              5,
+              1
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                4,
+                0
+              ],
+              [
+                4,
+                3,
+                0
+              ],
+              [
+                5,
+                5,
+                1
+              ],
+              [
+                6,
+                2,
+                0
+              ]
+            ],
+            "scarcity_s": 1,
+            "strong_axes": [
+              6
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 2,
+            "receiver_bit": 0,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                2,
+                2
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                4,
+                2,
+                2
+              ],
+              [
+                5,
+                3,
+                2
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 1,
+            "strong_axes": [
+              5
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 2,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                4,
+                1
+              ],
+              [
+                1,
+                4,
+                0
+              ],
+              [
+                3,
+                4,
+                0
+              ],
+              [
+                4,
+                4,
+                0
+              ],
+              [
+                5,
+                6,
+                1
+              ],
+              [
+                6,
+                4,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 3,
+            "receiver_bit": 0,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                2,
+                2
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2,
+                1
+              ],
+              [
+                5,
+                3,
+                2
+              ],
+              [
+                6,
+                0,
+                2
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [
+              5
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 3,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                4,
+                1
+              ],
+              [
+                1,
+                4,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                5,
+                6,
+                1
+              ],
+              [
+                6,
+                3,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 4,
+            "receiver_bit": 0,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                2,
+                2
+              ],
+              [
+                1,
+                1,
+                2
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                3,
+                2,
+                1
+              ],
+              [
+                5,
+                3,
+                2
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [
+              5
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 4,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                4,
+                1
+              ],
+              [
+                1,
+                3,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                5,
+                0
+              ],
+              [
+                5,
+                6,
+                1
+              ],
+              [
+                6,
+                4,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 5,
+            "receiver_bit": 0,
+            "counts": [
+              4,
+              8,
+              4,
+              0
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                0
+              ],
+              [
+                3,
+                1,
+                0
+              ],
+              [
+                4,
+                1,
+                0
+              ],
+              [
+                6,
+                0,
+                0
+              ]
+            ],
+            "scarcity_s": 3,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": 0,
+            "accepted_macros": []
+          },
+          {
+            "axis": 5,
+            "receiver_bit": 1,
+            "counts": [
+              0,
+              4,
+              8,
+              4
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                1,
+                5,
+                1
+              ],
+              [
+                2,
+                6,
+                1
+              ],
+              [
+                3,
+                6,
+                1
+              ],
+              [
+                4,
+                6,
+                1
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 6,
+            "receiver_bit": 0,
+            "counts": [
+              0,
+              5,
+              8,
+              3
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                3,
+                2
+              ],
+              [
+                1,
+                1,
+                3
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                3,
+                2,
+                3
+              ],
+              [
+                4,
+                2,
+                2
+              ],
+              [
+                5,
+                4,
+                3
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [
+              0
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 6,
+            "receiver_bit": 1,
+            "counts": [
+              3,
+              8,
+              5,
+              0
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                1,
+                2,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                3,
+                0
+              ],
+              [
+                4,
+                4,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 1,
+            "strong_axes": [
+              1
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          }
+        ],
+        "omitted_macro_hits": [],
+        "matching": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            12,
+            13
+          ],
+          [
+            15,
+            14
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            20,
+            21
+          ],
+          [
+            23,
+            19
+          ],
+          [
+            24,
+            16
+          ],
+          [
+            27,
+            25
+          ],
+          [
+            29,
+            28
+          ],
+          [
+            30,
+            22
+          ],
+          [
+            33,
+            32
+          ],
+          [
+            39,
+            7
+          ],
+          [
+            43,
+            35
+          ],
+          [
+            45,
+            41
+          ],
+          [
+            46,
+            42
+          ],
+          [
+            51,
+            49
+          ],
+          [
+            53,
+            37
+          ],
+          [
+            54,
+            50
+          ],
+          [
+            57,
+            61
+          ],
+          [
+            58,
+            56
+          ],
+          [
+            60,
+            52
+          ],
+          [
+            63,
+            31
+          ],
+          [
+            65,
+            69
+          ],
+          [
+            66,
+            64
+          ],
+          [
+            68,
+            70
+          ],
+          [
+            71,
+            79
+          ],
+          [
+            72,
+            74
+          ],
+          [
+            75,
+            11
+          ],
+          [
+            77,
+            73
+          ],
+          [
+            78,
+            76
+          ],
+          [
+            80,
+            82
+          ],
+          [
+            83,
+            67
+          ],
+          [
+            85,
+            81
+          ],
+          [
+            86,
+            84
+          ],
+          [
+            89,
+            88
+          ],
+          [
+            90,
+            26
+          ],
+          [
+            92,
+            94
+          ],
+          [
+            95,
+            87
+          ],
+          [
+            96,
+            98
+          ],
+          [
+            99,
+            107
+          ],
+          [
+            101,
+            97
+          ],
+          [
+            102,
+            38
+          ],
+          [
+            105,
+            109
+          ],
+          [
+            106,
+            104
+          ],
+          [
+            108,
+            44
+          ],
+          [
+            111,
+            110
+          ],
+          [
+            113,
+            115
+          ],
+          [
+            114,
+            118
+          ],
+          [
+            116,
+            100
+          ],
+          [
+            119,
+            55
+          ],
+          [
+            120,
+            112
+          ],
+          [
+            123,
+            91
+          ],
+          [
+            125,
+            93
+          ],
+          [
+            126,
+            122
+          ]
+        ],
+        "verified_old_plan": {
+          "axis": 0,
+          "Bside": 1,
+          "alpha_parity": 1,
+          "x": 36,
+          "U": [
+            103,
+            117
+          ],
+          "y": 37,
+          "V": [
+            102,
+            116
+          ],
+          "A_inner": 3,
+          "A_mark_side": 0,
+          "B_inner": 2,
+          "B_mark_side": 1,
+          "A_faces_mark_side_first": [
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "B_faces_mark_side_first": [
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "donor": "majority_root",
+          "receiver": "whole_receiver_split",
+          "required_original_edge": null
+        }
+      }
+    }
+  ]
+}

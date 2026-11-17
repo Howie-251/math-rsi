@@ -1,0 +1,16 @@
+{
+  "n": 8,
+  "goal": {"metric": "edges", "sense": "max", "target": 683, "conditions": [{"metric": "min_degree", "op": ">=", "value": 4}, {"metric": "even_squares", "op": ">=", "value": 2}]},
+  "provider": {"backend": "codex", "model": "gpt-6.1-sol", "effort": "medium", "timeout_seconds": 240},
+  "seed": 29,
+  "search_steps": 24,
+  "max_graphs": 4,
+  "program_timeout_seconds": 30,
+  "bootstrap_random": 2,
+  "seed_files": ["../../../archive/q8-683/research/ex_qn_c4/proofs/q8_seed_isometries_cycle011/seed1.edges"],
+  "metrics": [],
+  "initial_inequalities": [{"name": "conditional_682_conjecture", "coefficients": {"edges": 1}, "rhs": 682, "conditions": [{"metric": "min_degree", "op": ">=", "value": 4}, {"metric": "even_squares", "op": ">=", "value": 2}]}],
+  "exhaustive_oracle": false,
+  "focus_schedule": ["condition", "challenge", "objective", "novelty"],
+  "research_context": "Explicit conditional example only. The imported odd682 seed does not satisfy even_squares>=2; it is exploration material, not a feasible witness for this goal. Condition feasibility and nonodd constructions must be found. Never infer that all unrestricted 683+ graphs have min degree 4."
+}

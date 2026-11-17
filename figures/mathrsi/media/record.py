@@ -19,12 +19,12 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-dd-settings-20261116'
+CACHE = ROOT / '.local/evolution-media-v6-c4free-rs7-20261117'
 FPS = 20
 CLOCK_RATE = 0.25  # Browser-clock milliseconds per encoded-video millisecond.
 OPENING_SECONDS = 1
 FINAL_SECONDS = 6
-VIEWPORT_WIDTH = 1900
+VIEWPORT_WIDTH = 2000
 GIF_WIDTH = 1400
 GIF_FPS = 12
 CAPTURE_CSS = '''
@@ -39,9 +39,11 @@ body {background:white; overflow:hidden;}
 #evolution .row-v {padding:12px 8px 14px;}
 #evolution .vtag {font-size:24px;}
 #evolution .vstate {font-size:18px;}
-#evolution .vname {font-size:18px; line-height:1.25;}
+#evolution .vname {font-size:17px; line-height:1.25;}
 #evolution .delta-tag[data-v="5"] .delta-value {font-size:20px;}
 #evolution .delta-tag[data-c="dd"] .delta-value {font-size:16px;}
+#evolution .delta-tag[data-v="6"][data-c="e86"] .delta-value {font-size:15.5px;}
+#evolution .delta-tag[data-v="6"][data-c="q6"] .delta-value {font-size:19px;}
 '''
 
 
@@ -120,16 +122,25 @@ def capture(preview=False):
             def final_geometry():
                 return page.evaluate('''() => {
                     const rect=e=>{const r=e.getBoundingClientRect();return {left:r.left,top:r.top,right:r.right,bottom:r.bottom}};
-                    const q=document.querySelector('.delta-tag[data-c="q6"][data-v="5"]');
-                    const d=document.querySelector('.delta-tag[data-c="dd"][data-v="5"]');
-                    const ddBlocks=[...document.querySelectorAll('g[data-c="dd"][data-v="5"]:not(.delta-tag) > .anim > .b-res')].map(e=>({box:rect(e),opacity:+getComputedStyle(e.parentElement).opacity}));
+                    const q5=document.querySelector('.delta-tag[data-c="q6"][data-v="5"]');
+                    const d5=document.querySelector('.delta-tag[data-c="dd"][data-v="5"]');
+                    const e6=document.querySelector('.delta-tag[data-c="e86"][data-v="6"]');
+                    const q6=document.querySelector('.delta-tag[data-c="q6"][data-v="6"]');
+                    const v6Blocks=[...document.querySelectorAll('g[data-v="6"]:not(.delta-tag) > .anim > .b-res')].map(e=>({box:rect(e),opacity:+getComputedStyle(e.parentElement).opacity}));
+                    const textOverflows=[...document.querySelectorAll('.delta-tag')].filter(g=>{
+                        const surf=g.querySelector('.delta-surface').getBoundingClientRect();
+                        return [...g.querySelectorAll('text')].some(tx=>tx.getBoundingClientRect().right > surf.right - 4 || tx.getBoundingClientRect().left < surf.left + 4);
+                    }).map(g=>g.textContent);
                     return {scrollLeft:document.querySelector('#scroller').scrollLeft,
-                        ddBlocks,
+                        v6Blocks,
+                        textOverflows,
                         currentVersion:document.querySelector('.row-v.current').innerText,
                         currentRow:rect(document.querySelector('.row-v.current')),
                         futureRow:rect(document.querySelector('.row-v.fut')),
-                        dd:{text:d.textContent,visible:d.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d).opacity,box:rect(d.querySelector('.delta-surface'))},
-                        q7:{text:q.textContent,visible:q.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q).opacity,box:rect(q.querySelector('.delta-surface'))}};
+                        dd:{text:d5.textContent,visible:d5.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d5).opacity,box:rect(d5.querySelector('.delta-surface'))},
+                        q7_v5:{text:q5.textContent,visible:q5.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q5).opacity,box:rect(q5.querySelector('.delta-surface'))},
+                        e86_v6:{text:e6.textContent,visible:e6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(e6).opacity,box:rect(e6.querySelector('.delta-surface'))},
+                        q7_v6:{text:q6.textContent,visible:q6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q6).opacity,box:rect(q6.querySelector('.delta-surface'))}};
                 }''')
 
             if preview:
@@ -188,13 +199,15 @@ def capture(preview=False):
             page.wait_for_timeout(350)  # Let compositor-only opacity transitions settle too.
             status = page.locator('#readout').inner_text()
             final = final_geometry()
-            assert current in status and 'Current' in status, status
+            assert current == 'v6' and current in status and 'Current' in status, status
             assert [x['state'].split('Origins')[0].split('Release')[0].split('Current')[0] for x in states] == expected, states
-            assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7','dd']), final
-            assert all(line in final['dd']['text'] for line in ['(11,5) 37,631 → 37,632','(12,5) 42,402 → 42,433']), final['dd']
-            assert len(final['ddBlocks']) == 6 and all(b['opacity'] == 1 for b in final['ddBlocks']), final
-            assert max(final[k]['box']['bottom'] for k in ['q7','dd']) < min(b['box']['top'] for b in final['ddBlocks']), final
-            for rect in [final['q7']['box'], final['dd']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['ddBlocks']]]:
+            assert not final['textOverflows'], final['textOverflows']
+            assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7_v5','dd','e86_v6','q7_v6']), final
+            assert all(line in final['e86_v6']['text'] for line in ['Q₇ 304 · Q₈ 682–683','Q∞ ≤ 0.5912405943']), final['e86_v6']
+            assert 'Q₇ · ≥56 edges' in final['q7_v6']['text'], final['q7_v6']
+            assert len(final['v6Blocks']) == 23 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
+            assert max(final[k]['box']['bottom'] for k in ['e86_v6','q7_v6']) < min(b['box']['top'] for b in final['v6Blocks']), final
+            for rect in [final['q7_v5']['box'], final['dd']['box'], final['e86_v6']['box'], final['q7_v6']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['v6Blocks']]]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
             assert final['scrollLeft'] == 0 and not errors and not failed_requests, (final, errors, failed_requests)
             final_frame = shot('settled-current.png')
@@ -225,7 +238,7 @@ def capture(preview=False):
             'source_revision_note': 'Recorded the named HEAD with the listed presentation edits; the handoff commit contains the exact source used.',
             'current_version': current, 'expected_versions': expected,
             'capture': 'Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264',
-            'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and Q7/DD headlines; preserve all seven columns. Product JS/CSS/data unchanged.',
+            'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and v5/v6 headlines; preserve all eight columns (v0..v6 and v7+). Product JS/CSS/data unchanged.',
             'capture_css': CAPTURE_CSS.strip(),
             'resolution': [VIEWPORT_WIDTH, height], 'fps': FPS, 'browser_clock_rate': CLOCK_RATE,
             'opening_hold_seconds': OPENING_SECONDS, 'final_hold_seconds': FINAL_SECONDS,
@@ -236,7 +249,7 @@ def capture(preview=False):
             'page_errors': errors, 'failed_requests': failed_requests,
             'exports': metadata, 'poster_resolution': [VIEWPORT_WIDTH, height],
             'intermediates': str(CACHE.relative_to(ROOT)),
-            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All six DD blocks are opaque, inside the crop and below both v5 bubble surfaces. Visual inspection is a separate human/agent step.'
+            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All 23 v6 outcome blocks are opaque, inside the crop and below both v6 bubble surfaces with zero text overflow.'
         }
         (OUT/'RECORDING.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n')
         log('complete', duration_seconds=receipt['duration_seconds'], exports=metadata)

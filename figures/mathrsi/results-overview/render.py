@@ -31,21 +31,23 @@ def render(lang):
     yy=y+92+j*40;t(x,yy,r['parameter'],18);t(x+370,yy,f"{r['vertices']:,}",25,c,650,'end')
    t(x,y+256,'顶点数 · 四组展示参数' if z else 'Vertices · four showcased settings',16)
   elif key=='e86':
-   t(x,y+50,'无四圈超立方体的渐近边密度' if z else 'Asymptotic C₄-free cube edge density',17,'#0B1220',550)
-   t(x,y+96,'0.60318 → < 0.59155154',25,c,650)
+   t(x,y+50,'无四圈超立方体的有限维与渐近界' if z else 'Finite & asymptotic C₄-free cube bounds',17,'#0B1220',550)
+   t(x,y+84,'Q₇: 304',18,'#0B1220',600);t(x+112,y+84,'304构造已验；上界按原包报告' if z else '≥304 verified; ≤304 source report',14,'#667085')
+   t(x,y+114,'Q₈: 682–683',18,'#0B1220',600);t(x+138,y+114,'682 仍开放 · 暂定审查' if z else '≤682 open · audit provisional',14,'#667085')
+   t(x,y+148,'Q∞: 0.60318 → ≤ 0.5912405943',20,c,650)
    X=lambda v:x+20+(v-.5)/.11*360
-   line(X(.5),y+162,X(.61),y+162,'#667085',2)
-   for v in [.5,.59155154,.60318]:
-    xx=X(v);line(xx,y+154,xx,y+170,c,2)
-   t(X(.5),y+193,'0.5',16,anchor='middle');t(X(.59155154),y+146,'新 / new' if z else 'new',16,c,600,'end');t(X(.60318)+4,y+193,'参考' if z else 'prior',16,anchor='middle')
-   t(x,y+246,'猜想值：1/2' if z else 'Conjecture: 1/2',18)
+   line(X(.5),y+194,X(.61),y+194,'#667085',2)
+   for v in [.5,.5912405943,.60318]:
+    xx=X(v);line(xx,y+186,xx,y+202,c,2)
+   t(X(.5),y+222,'0.5',15,anchor='middle');t(X(.5912405943),y+179,'T3/T4',14,c,600,'end');t(X(.60318)+4,y+222,'参考' if z else 'prior',15,anchor='middle')
+   t(x,y+254,'T4 ≤ 0.5912405942 · 猜想值 1/2 开放' if z else 'T4 ≤ 0.5912405942 · Conjecture 1/2 open',15)
   elif key=='q6':
    t(x,y+56,'Q₆ 中每一个匹配' if z else 'Every matching in Q₆',21,'#0B1220',600)
    t(x,y+82,'均可扩展为 Hamilton 圈' if z else 'extends to a Hamilton cycle',19,c,600)
-   t(x,y+126,'Q₇ 中每个至少 57 边的匹配' if z else 'Every Q₇ matching with ≥57 edges',20,'#0B1220',600)
+   t(x,y+126,'Q₇ 中每个至少 56 边的匹配（完整 E16）' if z else 'Every Q₇ matching with ≥56 edges (E16)',19,'#0B1220',600)
    t(x,y+152,'均可扩展为 Hamilton 圈，' if z else 'extends to a Hamilton cycle containing',18,c,600)
    t(x,y+178,'且保留匹配的每一条指定边。' if z else 'every prescribed matching edge.',18,c,600)
-   t(x,y+218,'完整 Q₇ 猜想仍开放' if z else 'Full Q₇ conjecture remains open',17)
+   t(x,y+218,'≤55 边与完整 Q₇ 猜想仍开放' if z else '≤55 edges & full Q₇ conjecture open',16)
    t(x,y+256,'亦含任意维 ≤6 方向推论（引用结果）' if z else 'Also ≤6 directions in Qₙ (imported results)',15)
   else:
    t(x,y+50,'凸七边形的强制阈值上界' if z else 'Upper bound for the convex 7-gon threshold',17,'#0B1220',550)

@@ -1,0 +1,138 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reviewer_task": "/root/q7_covered_domain_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_selection_source": "Explicit user-authorized route relayed by parent; backend identity not independently attested",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-02T09:38:17.747200+00:00",
+  "issues": [],
+  "protected_files_modified": false,
+  "full_Q6_T15_proved": false,
+  "full_Q7_eight_covered_proved": false,
+  "P7_proved": false,
+  "reason_code": "all_scoped_D4_D5_D3_proof_obligations_complete_modulo_explicit_frozen_imports",
+  "summary": "D4, D5, the D3 single-cut conditional transfer, and two D3 cuts sharing their unique outside hole are sound for arbitrary K(Q6) prescribed matchings, modulo frozen Q5 T44 and general two-hole inputs.",
+  "audited_input_hashes": {
+    "Q6_T15_D4_D5.md": "sha256:27e5ac27c95b0caffa8ef087ea9e66a2a29b8092f4980c12e30cab3914cc70b7",
+    "Q6_T15_D3_OBSTRUCTION.md": "sha256:038a417bf137ba07e757224d33385100685ec0a3710c35ea7e087e6f5e7e649b"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "../six_directions/T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0"
+  },
+  "import_acceptance_checks": {
+    "../six_directions/T44_Q5_CLOSURE_REVIEW.json": {
+      "verdict": "PASS",
+      "hash": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+      "declared_audited_inputs_current": true,
+      "inputs_rehashed": 11
+    },
+    "PROOF_PACKAGE.md": {
+      "precise_imports": "A2 same-parity two-hole omission, general two-hole free-root path, balanced two-hole spanning circle for dimension five",
+      "current_hash_matches_prior_accepted_transfer_context": true,
+      "external_literature_not_reproved": true
+    }
+  },
+  "exactscope": {
+    "matching": "arbitrary K(Q6) matching with one minority hole a, five majority holes, and two specified distinct majority omissions x,y",
+    "D4": "A coordinate face contains exactly four majority holes including x,y, and excludes a",
+    "D5": "A coordinate face contains all five majority holes, excludes a, and a is nonadjacent to all three included majority holes",
+    "D3_single": "A coordinate face contains a and four majority holes including x,y; a nonadjacent to all three included majority holes; completion unless the sole crossing has B endpoint mirror(a)",
+    "D3_universal": "Two distinct D3 cuts share the same unique opposite-side original hole; then every matching realizing this marked geometry completes",
+    "conclusion": "A simple 62-cycle exactly omitting x,y and containing all prescribed edges; only added edges short"
+  },
+  "obligations": [
+    {
+      "id": "D4-1",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Both original face hole sets and even crossing parity; auxiliary D fills exactly A ports and leaves precisely four majority holes."
+    },
+    {
+      "id": "D4-2",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Positive crossing T44 cycle minus nonempty D gives a path forest; opposite-face matching has exactly balanced holes a,b; circle extension and expansion."
+    },
+    {
+      "id": "D4-3",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Zero crossing mirror of b is covered; incident nonprescribed cycle edge is short; opposite face root path closes by optional short edge; both removed edges are unprescribed; two-bridge join has 62 vertices."
+    },
+    {
+      "id": "D5-1",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Odd positive crossing; three mirror candidates covered and distinct; at c=1 at least two avoid the sole B port."
+    },
+    {
+      "id": "D5-2",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Auxiliary pairing contains td when the chosen mirror is occupied; valid because t is a hole and d a distinct port; remaining port count is even; T44 hypotheses hold."
+    },
+    {
+      "id": "D5-3",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Internal mirror forest; original partner k is internal and outside R endpoints; suppression has no loop or repeated endpoint and leaves exactly same-parity holes a,w."
+    },
+    {
+      "id": "D5-4",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Occupied mirror requires c>=3 and at least two D edges; the forced td edge and another removed cycle edge separate t,d; added bridge joins components; compressed endpoint set is X_B minus {w}."
+    },
+    {
+      "id": "D5-5",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "A2 omits w; expansion restores w and all 30 included A vertices, preserves F, deletes auxiliary edges, and yields exactly 62 vertices with only new short edges."
+    },
+    {
+      "id": "D3-1",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Unique B hole b differs from mirror w by nonadjacency; c is positive odd; safe and occupied branches have the exact D5 topological structure with special a replacing t and omitted B hole b replacing a."
+    },
+    {
+      "id": "D3-2",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "c=1 with w as sole B port is the unique untreated single-cut branch; its deletion/attachment closes a separate A-side component, so it is properly excluded."
+    },
+    {
+      "id": "D3-3",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Two distinct D3 coordinates sharing b give a 16-vertex intersection S with exactly one original hole b, hence 15 covered vertices."
+    },
+    {
+      "id": "D3-4",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Every edge leaving S crosses at least one cut; its S endpoint would have to equal the exceptional mirror for that cut, but that mirror is outside the other B face. This applies to long edges crossing both coordinates too."
+    },
+    {
+      "id": "D3-5",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "No edge leaves S, so a matching would have to pair all 15 covered vertices internally, impossible; at least one cut is nonexceptional for every F."
+    },
+    {
+      "id": "ALL-1",
+      "status": "CLOSED_MODULO_NAMED_IMPORTS",
+      "obligation": "Arbitrary prescribed matching edges, including long and same-parity edges, preserved; no full Q5/Q6 T15 or Q6 T44 assumption and no dependency cycle."
+    }
+  ],
+  "verification_artifact_hashes": {
+    "independent_q6_d45_d3_topology.py": "sha256:9dd644374983a9e59c44890826909ad4f5e96c78255747c43e15adb084ebf88a",
+    "independent_q6_d45_d3_topology_results.json": "sha256:69b5cb5f9e5a9e265f0a65aa7941efcaa6546e8fbf1acb3b1b3523effe410711"
+  },
+  "topology_regression": {
+    "verdict": "PASS",
+    "counts": {
+      "D4_positive_forest": 1767,
+      "safe_mirror_and_suppression": 10896,
+      "excluded_c1_occupied_closed_component": 180,
+      "forced_pair_occupied_forest_c_ge_3": 10716,
+      "intersection_exit_edges_including_long": 737280
+    },
+    "scope": "Finite topology regression and all Q6 coordinate-intersection exit edges; not a replacement for the universal symbolic matching argument."
+  },
+  "trace_path": "Q6_T15_D45_D3_REVIEW.md",
+  "report_hash": "sha256:e097b0dfce7724bddbcdafa762824ded1900cf86e260e30c4e8ea7a52448ee6d"
+}

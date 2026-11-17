@@ -1,0 +1,30 @@
+test_actual_q8_seed (test_core.CoreTests.test_actual_q8_seed) ... ok
+test_challenge_schedule_covers_four_candidates (test_core.CoreTests.test_challenge_schedule_covers_four_candidates) ... ok
+test_conditions_counterexample_and_exhaustive_domain (test_core.CoreTests.test_conditions_counterexample_and_exhaustive_domain) ... ok
+test_duplicate_candidate_gets_zero_novelty (test_core.CoreTests.test_duplicate_candidate_gets_zero_novelty) ... ok
+test_edge_bound_cannot_mask_correlation_reward (test_core.CoreTests.test_edge_bound_cannot_mask_correlation_reward) ... ok
+test_face_metric_and_exact_counts (test_core.CoreTests.test_face_metric_and_exact_counts) ... ok
+test_literal_validation (test_core.CoreTests.test_literal_validation) ... ok
+test_reward_scope_and_scale_invariance (test_core.CoreTests.test_reward_scope_and_scale_invariance) ... ok
+test_failed_model_is_not_retried_or_replaced (test_loop.LoopTests.test_failed_model_is_not_retried_or_replaced) ... ok
+test_heldout_refutation_is_visible_to_upper (test_loop.LoopTests.test_heldout_refutation_is_visible_to_upper) ... ok
+test_new_metric_is_recomputed_and_fed_back (test_loop.LoopTests.test_new_metric_is_recomputed_and_fed_back) ... round 0: lower/offline focus=objective
+round 0: upper/offline archive=7
+{"n": 3, "completed_rounds": 1, "backend": "offline", "requested_model": null, "graphs": 7, "programs": 1, "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []}, "best_eligible_graph": "9c4d6107227d61c5c283", "best_objective": 9, "goal_reached": false, "inequality_statuses": {"untested": 0, "empirical": 0, "refuted": 0, "exhaustive_verified": 2}, "assurance": "host-validated witnesses; empirical conjectures are not theorems; small exhaustive claims only in recorded domain"}
+round 1: lower/offline focus=challenge
+round 1: upper/offline archive=9
+{"n": 3, "completed_rounds": 2, "backend": "offline", "requested_model": null, "graphs": 9, "programs": 2, "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []}, "best_eligible_graph": "9c4d6107227d61c5c283", "best_objective": 9, "goal_reached": false, "inequality_statuses": {"untested": 0, "empirical": 0, "refuted": 0, "exhaustive_verified": 2}, "assurance": "host-validated witnesses; empirical conjectures are not theorems; small exhaustive claims only in recorded domain"}
+ok
+test_program_failure_is_not_a_graph (test_loop.LoopTests.test_program_failure_is_not_a_graph) ... ok
+test_round_feedback_and_resume (test_loop.LoopTests.test_round_feedback_and_resume) ... round 0: lower/offline focus=objective
+round 0: upper/offline archive=7
+{"n": 3, "completed_rounds": 1, "backend": "offline", "requested_model": null, "graphs": 7, "programs": 1, "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []}, "best_eligible_graph": "9c4d6107227d61c5c283", "best_objective": 9, "goal_reached": false, "inequality_statuses": {"untested": 0, "empirical": 0, "refuted": 0, "exhaustive_verified": 4}, "assurance": "host-validated witnesses; empirical conjectures are not theorems; small exhaustive claims only in recorded domain"}
+round 1: lower/offline focus=challenge
+round 1: upper/offline archive=9
+{"n": 3, "completed_rounds": 2, "backend": "offline", "requested_model": null, "graphs": 9, "programs": 2, "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []}, "best_eligible_graph": "9c4d6107227d61c5c283", "best_objective": 9, "goal_reached": false, "inequality_statuses": {"untested": 0, "empirical": 0, "refuted": 0, "exhaustive_verified": 4}, "assurance": "host-validated witnesses; empirical conjectures are not theorems; small exhaustive claims only in recorded domain"}
+ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 6.202s
+
+OK

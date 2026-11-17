@@ -5,6 +5,8 @@ const GH = 'https://github.com/lisresearchgroup/math-rsi';
 const REPO = '../../../';
 const Q7_TIME = 8100;
 const DD_TIME = 8500;
+const E86_V6_TIME = 10300;
+const Q7_E16_TIME = 10950;
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -36,14 +38,14 @@ const CASES = [
     status: () => t >= DD_TIME ? 'Four showcased settings · D5 end-to-end Lean open' : t >= 6750 ? 'New (10,4) result produced with MathRSI v2 + DD' : 'Three dated table comparisons from earlier research',
     read: () => t >= DD_TIME ? 'dd-latest.html' : 'dd-10-4.html', plugin: GH + '/tree/main/plugins/degree-diameter',
     quant: () => t >= DD_TIME ? `<div class="qlist">${[['(10,4)','','2,567'],['(11,5)','37,631','37,632'],['(12,5)','42,402','42,433'],['(16,4)','','16,416']].map(([p,a,b])=>`<div${a ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>${a ? '→' : ''}</span><b>${b}</b></div>`).join('')}</div><p class="qnote">D5 local increases: (11,5) +1; (12,5) +31.</p><p class="qnote">D5 Comellas comparison, 2026-11-16: (11,5) 37,631 → 37,632 (+1); (12,5) 42,352 → 42,433 (+81).</p><p class="qnote">Latest D5 run: v4 + local updates → v5 main maintenance.</p>` : `<div class="qlist">${[...(t >= 6750 ? [['(10,4)','2,566','2,567',true]] : []),['(11,5)','37,628','37,631'],['(12,5)','42,342','42,402'],['(16,4)','16,384','16,416']].map(([p,a,b,n])=>`<div${n ? ' class="is-new"' : ''}><i>${p}</i><span class="prev">${a}</span><span>→</span><b>${b}</b></div>`).join('')}</div><p class="qnote">${t >= 6750 ? 'Comellas comparisons rechecked 2026-11-05. Historical catalogue: 163 graphs / 44 parameter pairs / 49 concrete-graph Lean instances.' : 'Comellas comparisons rechecked 2026-11-05. Earlier catalogue: 153 graphs / 43 parameter pairs / 47 concrete-graph Lean instances.'}</p>` },
-  { id: 'e86', short: 'Erdős 86', title: 'A tighter ceiling for square-free hypercube graphs',
-    status: 'Exact certificate · no Lean',
-    read: REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
-    quant: () => `<div class="qbig"><span class="prev">0.60318</span><span>→</span><b>≤ 0.59155154</b></div><p class="qnote">Asymptotic edge density of C₄-free subgraphs of Qₙ; the conjectured 1/2 remains open.</p>` },
+  { id: 'e86', short: 'Erdős 86', title: () => t >= E86_V6_TIME ? 'Finite and asymptotic bounds for C₄-free cubes' : 'A tighter ceiling for square-free hypercube graphs',
+    status: () => t >= E86_V6_TIME ? 'Exact & provisional bounds · no Lean' : 'Exact certificate · no Lean',
+    read: () => t >= E86_V6_TIME ? 'erdos-86-latest.html' : REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
+    quant: () => t >= E86_V6_TIME ? `<div class="qrow"><span><b>304</b><i>Q₇ · ≤304 source</i></span><span><b>682–683</b><i>Q₈ · 682 open</i></span><span><b>≤ 0.5912405943</b><i>Q∞ (T3)</i></span></div><p class="qnote">Q₇: 304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass. Q₈: four 682-edge seeds + Theorem B (provisional audit). Q∞: T3 proved; T4 ≤ 0.5912405942 (m = 1024 potential). Limit 1/2 remains open.</p>` : `<div class="qbig"><span class="prev">0.60318</span><span>→</span><b>≤ 0.59155154</b></div><p class="qnote">Asymptotic edge density of C₄-free subgraphs of Qₙ; the conjectured 1/2 remains open.</p>` },
   { id: 'q6', short: 'Ruskey–Savage', title: () => t >= Q7_TIME ? 'From Q₆ to dense Q₇ matchings' : 'Every matching in Q₆ extends to a Hamilton cycle',
-    status: () => t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · original audit provisional',
+    status: () => t >= Q7_E16_TIME ? 'Q₇ ≥56-edge theorem (E16) · full Q₇ open' : t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · original audit provisional',
     read: () => t >= Q7_TIME ? 'q7.html' : REPO + 'plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', plugin: GH + '/tree/main/plugins/hypercube-hamilton',
-    quant: () => `${t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → v5 feedback. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Also ≤ 6 directions in any dimension, with imported results.</p>` },
+    quant: () => `${t >= Q7_E16_TIME ? '<div class="qbig"><b>Q₇ · ≥56 edges</b></div><p class="qnote">128 vertices; complete E16 across all 16-hole classes μ ∈ {0,1,2,3,4}. Run: v3 (local adaptation) → v5 & v6 feedback. Layers ≤55 edges and full Q₇ remain open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → v5 feedback. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Also ≤ 6 directions in any dimension, with imported results.</p>` },
   { id: 'he', short: 'Happy Ending', title: 'A tighter upper bound for convex heptagons',
     status: '75/76/77 working proofs · independent review pending',
     read: REPO + 'case-studies/happy-ending/n7-20261103/START_HERE.html', plugin: GH + '/tree/main/plugins/happy-ending',
@@ -85,7 +87,13 @@ const MS = [
   {"c": "q6", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8300, "tag": "56-edge structure families", "text": "At 56 edges, μ=2 and μ=4 classes and several μ=3 families are complete. Full Q₇, P7 and seven-direction extension remain open."},
   {"c": "dd", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8500, "tag": "(11,5) · 37,632 vertices", "text": "37,631 → 37,632 vertices, 205,366 edges, maximum degree 11 and diameter exactly 5. Gain +1 over Comellas checked 2026-11-16. Run: v4 + local updates; feeds v5 main maintenance."},
   {"c": "dd", "v": 5, "intake": true, "k": "result", "e": "drop", "t": 8700, "tag": "(12,5) · 42,433 vertices", "text": "42,402 → 42,433 vertices through 31 valid increments; 246,309 edges, maximum degree 12 and diameter exactly 5. The gain over the dated Comellas value 42,352 is separately +81. Run: v4 + local updates."},
-  {"c": "dd", "v": 5, "intake": true, "k": "evidence", "e": "drop", "t": 9250, "tag": "Reconstruction and bounded checks", "text": "Both finals regenerate exactly. D12 retains source edges and checks all 31 new roots; D11 combines the H9 theorem and literal binding with all 161 peripheral/new roots. Concrete Lean and source final-review obligations remain open."}
+  {"c": "dd", "v": 5, "intake": true, "k": "evidence", "e": "drop", "t": 9250, "tag": "Reconstruction and bounded checks", "text": "Both finals regenerate exactly. D12 retains source edges and checks all 31 new roots; D11 combines the H9 theorem and literal binding with all 161 peripheral/new roots. Concrete Lean and source final-review obligations remain open."},
+  {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10300, "tag": "Q₇ · 304 (construction + source report)", "text": "304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass (two explicit 304-edge C₄-free subgraphs checked directly; 21 raw RUP traces omitted upstream)."},
+  {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10500, "tag": "Q₈ · 682 ≤ ex(Q₈, C₄) ≤ 683", "text": "Four 682-edge C₄-free constructions plus Theorem B ruling out 684 edges via 83 active inequalities and 25 Q₆ imports (same-family/provisional audit). Primary goal ex(Q₈, C₄) ≤ 682 remains open."},
+  {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10700, "tag": "Q∞ · π_□(C₄) ≤ 0.5912405943", "text": "Unconditional T3 ≤ 0.5912405943 (COP + cubic) and T4 ≤ 0.5912405942 (m = 1024 degree potential via a 5-line hypergeometric tower). 0.5907 and retracted 0.5899 are non-theorems; limit 1/2 remains open."},
+  {"c": "q6", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10950, "tag": "Q₇ complete E16 · ≥56 edges", "text": "Every Q₇ matching with at least 56 edges (at most 16 holes, all μ ∈ {0,1,2,3,4}) extends to a Hamilton cycle retaining every prescribed edge. Layers ≤55 edges, full Q₇, P₇ and seven-direction lifting remain open."},
+  {"c": "e86", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11350, "tag": "C++17/20 replays & coevolution engine", "text": "Recompiled 128-bit C++20 verifiers on all 3,212,821 Q₄ orbits (T3/T4), C++17 13,150,453-completion replay for Q₈, explicit seed checks and 18 cube_coevolve tests."},
+  {"c": "q6", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11450, "tag": "290 baseline imports & basis checks", "text": "Bundled all 290 baseline imports and verified the 189-row μ=0 large-face table plus zero-dependency MU0 and Q₆ A₈ geometry/plan checkers; 10 large .cnf/.drup files remain in the external archive."}
 ];
 const isOutcome = m => m.k === 'result' || m.k === 'draft';
 const CALLOUTS = [
@@ -100,7 +108,9 @@ const CALLOUTS = [
   { c:'dd', v:4, t:6750, row:0, kind:'delta', value:'(10,4) 2,566 → 2,567', detail:'Run: v2' },
   { c:'he', v:4, t:6600, row:1, kind:'delta', value:'78 → 77', detail:'ES(7) upper bound' },
   {"c": "q6", "v": 5, "t": 8100, "row": 1, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"},
-  {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "(11,5) 37,631 → 37,632", "value2": "(12,5) 42,402 → 42,433", "detail": "Run: v4 + local updates"}
+  {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "(11,5) 37,631 → 37,632", "value2": "(12,5) 42,402 → 42,433", "detail": "Run: v4 + local updates"},
+  {"c": "e86", "v": 6, "t": 10300, "row": 0, "kind": "delta", "value": "Q₇ 304 · Q₈ 682–683", "value2": "Q∞ ≤ 0.5912405943", "detail": "≤304 source · 682 open · Run: v3"},
+  {"c": "q6", "v": 6, "t": 10950, "row": 1, "kind": "delta", "value": "Q₇ · ≥56 edges", "detail": "all 16-hole classes · Run: v3"}
 ];
 
 const VERS = [
@@ -132,7 +142,7 @@ const VERS = [
     sum:'v4 connected equality-chain recovery, legal exchanges and endpoint-compatible witnesses. Happy Ending and DD methods deepened; later main maintenance added global reassessment and ECC node reuse. v5 inherits these capabilities.' },
   {
   "tag": "v5",
-  "state": "Current",
+  "state": "Release",
   "name": "Controlled choices & theorem reuse",
   "base": [
     [
@@ -169,7 +179,41 @@ const VERS = [
   "pluginNote": "Q7: v3 local adaptation; DD: v4 + local updates. Methods feed v5.",
   "sum": "v5 absorbs Q7 controlled choices, theorem reuse and finite-plan coverage. The 2026-11-16 DD follow-up adds result consumption before dispatch; its plugin deepens joint completion and verified prefixes. Run provenance: Q7 used v3 local adaptation; DD used v4 + local updates."
 },
-  { tag:'v6+', state:'Future', name:'Next research, next evolution',
+  {
+  "tag": "v6",
+  "state": "Current",
+  "name": "Hardest-remainder gates & coevolution",
+  "base": [
+    [
+      "Probe the hardest remainder first",
+      "q6",
+      "Test candidate splits on the hardest open branch before adoption; measure net-new union coverage on the same actual input."
+    ],
+    [
+      "Primal–dual coevolution",
+      "e86",
+      "Separate proof goal from search target, rotate signed residuals, and refute candidate cuts against the full archive."
+    ],
+    [
+      "Stop at repair-residual floor",
+      "e86",
+      "Halt float SDP/CP loops when gains fall below repair residuals; never treat an approximate fit as a proved barrier."
+    ]
+  ],
+  "fullBase": [
+    "Gate new classifications by bounded probes on the hardest residual branch; easy sibling passes do not reset stall counters.",
+    "Run primal–dual coevolution with goal/target separation, 4-channel normalized signed residuals and full-archive refutation.",
+    "Stop outer float SDP/CP iterations when apparent improvement falls below repair residuals; record nonzero residuals beside any approximate fit."
+  ],
+  "plug": [
+    ["deep", "Extremal", "e86"],
+    ["deep", "Hamilton", "q6"],
+    ["note", "Other 4 domains retained"]
+  ],
+  "pluginNote": "C₄-free & Q7 E16: v3 + coevolve → v6 methods.",
+  "sum": "v6 release. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, and complete Q₇ E16 (≥56 edges). Distills hardest-remainder split gating, primal–dual coevolution and repair-residual stopping into the shared base."
+},
+  { tag:'v7+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
     fullBase:['Open continuation — next research cycle feeds the next workflow evolution'],
     plug:[['note','New research → new tools']],
@@ -190,10 +234,10 @@ const HEADROOM = Math.max(0, ...Array.from({ length: LAST + 1 }, (_, v) =>
 const H = 326 + HEADROOM, GUT = 80, COL = 232, W = GUT + COL * VERS.length;
 const SPINE = 296 + HEADROOM, BASE = 284 + HEADROOM;
 const cx = i => GUT + COL * i + COL / 2;
-const R = [300, 1700, 3600, 5000, 6600, 8000], STOP = [1100, 2400, 4400, 6000, 7400, 9600], T = STOP[LAST];
-const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600]];
-const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[7400,4],[8000,5],[T,5]];
-const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600],[7400,8000]];
+const R = [300, 1700, 3600, 5000, 6600, 8000, 10200], STOP = [1100, 2400, 4400, 6000, 7400, 9600, 11800], T = STOP[LAST];
+const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600], [9600, 600]];
+const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[7400,4],[8000,5],[9600,5],[10200,6],[T,6]];
+const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600],[7400,8000],[9600,10200]];
 
 // Only a domain's first outcome opens a horizontal slot. Later outcomes grow upward.
 const domainDebuts = CASES.map(c => MS.filter(m => m.c === c.id && isOutcome(m)).sort((a, b) => a.t - b.t)[0]);
@@ -476,7 +520,8 @@ function paintTraceHint(id) {
   if (!hint) return;
   if (!id) hint.textContent = 'Choose a case to follow its results across versions.';
   else if (id === 'he') hint.textContent = 'Happy Ending · ES(7) upper bound 78 → 77; the 25-point witness is separate.';
-  else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ theorem → dense Q₇ matchings. Run: v3 (local adaptation); feedback for v5.';
+  else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ theorem → Q₇ ≥57 edges (v5) → complete E16 ≥56 edges (v6). Run: v3 (local adaptation).';
+  else if (id === 'e86') hint.textContent = 'Erdős 86 · v3 asymptotic Q₄ bound → v6 Q₇ 304 (≤ source), Q₈ 682–683 & Q∞ ≤ 0.5912405943. Run: v3 + coevolution.';
   else if (id === 'dd') hint.textContent = 'Degree–Diameter · v2 historical results → v4 + local DD updates → two D5 improvements feeding v5 maintenance.';
   else hint.textContent = `${CN[id]} · follow this case; repeated blocks carry earlier results forward.`;
 }
@@ -510,7 +555,7 @@ function renderPanel(sel) {
   if (key === panelKey) return; panelKey = key;
   if (!focus) {
     const V = VERS[sel];
-    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === LAST ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a> · <a href="dd-latest.html">DD latest results ↗</a></p>' : ''}</div>
+    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === 5 ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a> · <a href="dd-latest.html">DD latest results ↗</a></p>' : sel === LAST ? '<p class="p-links"><a href="erdos-86-latest.html">Erdős 86 results & methods ↗</a> · <a href="q7.html">Q7 E16 result & methods ↗</a></p>' : ''}</div>
       <div><p class="p-eye">Shared base &amp; workflow details in ${V.tag}</p>
       <ul class="p-vlist">${V.fullBase.map(item => `<li>${item}</li>`).join('')}</ul>
       <p class="p-foot">Choose a change label or colored result block to inspect its conclusions and proof evidence.</p></div>`;
@@ -520,7 +565,7 @@ function renderPanel(sel) {
   const items = list.slice().sort((a, b) => a[0].v - b[0].v || a[0].t - b[0].t);
   panel.innerHTML = `<div style="--c:var(--${c.id})"><p class="p-eye"><span class="dot"></span>${CN[c.id]}</p><h3>${typeof c.title === 'function' ? c.title() : c.title}</h3>${c.quant()}
       <p class="p-status">${typeof c.status === 'function' ? c.status() : c.status}</p>${c.id === 'dd' ? ddPath() : ''}${c.id === 'ecc' ? eccMaintenance() : ''}
-      <p class="p-links"><a href="${typeof c.read === 'function' ? c.read() : c.read}">${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME)) ? "Result & methods ↗" : "Read the proof ↗"}<span class="source-language" data-no-i18n>${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME)) ? "EN + 中文" : ["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
+      <p class="p-links"><a href="${typeof c.read === 'function' ? c.read() : c.read}">${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME) || (c.id === "e86" && t >= E86_V6_TIME)) ? "Result & methods ↗" : "Read the proof ↗"}<span class="source-language" data-no-i18n>${((c.id === "q6" && t >= Q7_TIME) || (c.id === "dd" && t >= DD_TIME) || (c.id === "e86" && t >= E86_V6_TIME)) ? "EN + 中文" : ["pb", "ecc", "dd"].includes(c.id) ? "EN" : "中文"}</span></a><a href="${c.plugin}">Plugin source ↗</a><button class="p-close" type="button" data-close>Close ✕</button></p></div>
     <div style="--c:var(--${c.id})"><p class="p-eye">Mathematical results</p><ol class="p-ms">${items.filter(([m]) => isOutcome(m)).map(([m, i]) => {
       const on = t >= m.t;
       return `<li class="${on ? '' : 'later'}${hl === i ? ' hl' : ''}"><span class="p-v">${vlabel(m)}</span><span class="p-k k-${m.k}">${m.tag}</span><span class="p-t">${m.text}${on ? '' : `<em>appears at ${vlabel(m)}</em>`}</span></li>`;
@@ -568,10 +613,10 @@ const VIZ = {
     for (let v = 0; v < 16; v++) for (let j = 0; j < 4; j++) if (!(v >> j & 1)) { const w = v | 1 << j; s += `<line class="q4" x1="${P[v][0]}" y1="${P[v][1]}" x2="${P[w][0]}" y2="${P[w][1]}"/>`; }
     s += `<polygon class="c4" points="${[0, 1, 3, 2].map(i => P[i].join(',')).join(' ')}"/>`;
     P.forEach(p => { s += `<circle class="q4v" cx="${p[0]}" cy="${p[1]}" r="2.6"/>`; });
-    const X = v => 30 + (v - .48) * 260 / .14, a = X(.5), b = X(.59155154), c = X(.60318);
+    const X = v => 30 + (v - .48) * 260 / .14, a = X(.5), b = X(.5912405943), c = X(.60318);
     s += `<rect class="gap" x="${f1(a)}" y="146" width="${f1(b - a)}" height="8" rx="4"/><line class="axis" x1="30" y1="150" x2="290" y2="150"/>`;
     s += `<circle class="m-half" cx="${f1(a)}" cy="150" r="5"/><circle class="m-prev" cx="${f1(c)}" cy="150" r="5"/><circle class="m-new" cx="${f1(b)}" cy="150" r="6"/>`;
-    s += `<text class="vt" x="${f1(a)}" y="178" text-anchor="middle">1/2</text><text class="vt new" x="${f1(b)}" y="178" text-anchor="middle">0.59155</text><text class="vt" x="${f1(c + 6)}" y="132" text-anchor="middle">0.60318</text>`;
+    s += `<text class="vt" x="${f1(a)}" y="178" text-anchor="middle">1/2</text><text class="vt new" x="${f1(b)}" y="178" text-anchor="middle">0.59124</text><text class="vt" x="${f1(c + 6)}" y="132" text-anchor="middle">0.60318</text>`;
     return wrap(s);
   },
   q6() {

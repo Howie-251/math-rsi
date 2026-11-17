@@ -1,0 +1,245 @@
+{
+  "schema": "r7-proof-review/v1",
+  "audit_skill": "proof-checker",
+  "workflow": "Joint local Markdown/JSON adaptation",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_discharged_modulo_frozen_imports",
+  "proof_status": "sound-modulo-imports",
+  "claim_status": "sound-modulo-imports",
+  "summary": "T26 odd-split transfers and the E14 uniform four-bridge transfer hold in their exact scopes. Finite geometry closes all realizations of 18 specified catalogue orbits via the uniform transfer.",
+  "caller": "/root",
+  "writer_agent_id": "/root/e14_global_reduction_writer",
+  "review_agent_id": "/root/odd_receiver_joint_audit",
+  "review_rounds": 1,
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_configuration_source": "User override relayed by caller, fresh native slot",
+  "reviewer_backend_identity_independently_attested": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "formalized_in_lean": false,
+  "externally_certified": false,
+  "generated_at": "2026-11-08T09:37:51.0880380Z",
+  "trace_path": "R7_E14_ODD_RECEIVER_CLOSURE_REVIEW.md",
+  "report_sha256": "sha256:7b438fb279774066ba7b66ce76e89850353275c29d8a5974612e4fe404666330",
+  "audited_input_hashes": {
+    "R7_T26_ODD_SPLIT_TRANSFER_INPUTS.json": "sha256:b9090abaac54212e2ac945ca7551f251c5b9c37c68840b4168c95aa32d5c113f",
+    "R7_T26_ODD_SPLIT_TRANSFER.md": "sha256:e635d89853336a72d4668ce48d3c300019bb1d84a58f309be2d7b96e5088072b",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "E:/新问题/research/six_directions/T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_CLOSURE.md": "sha256:b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "E:/新问题/research/seven_directions/Q5_T15_FULL_REVIEW.json": "sha256:0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80",
+    "E:/新问题/research/six_directions/Q5_HIGHER_HOLE_REDUCTION.md": "sha256:24841edb1206c8fe22adc0c465a68c3b17ae7afe0555f4d8d969dc9b4f6e098f",
+    "E:/新问题/research/six_directions/Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "sha256:ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_CLOSURE.md": "sha256:fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "E:/新问题/research/six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-writer/SKILL.md": "sha256:9791fd55d8bedaedcca21b660cf6e4ce92da77f1acfe0d8678d535d150e217d4",
+    "R7_E14_ODD_RECEIVER_CLOSURE_INPUTS.json": "sha256:f981197e141e48f4eec4ef4ccac728100ce03007986552f48d77cf6820a5567f",
+    "R7_E14_ODD_RECEIVER_CLOSURE.md": "sha256:a21df039069896623595fe4fc4831ad97eef4ee52f172f376b4009aa808f19ca",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_COMPONENTS.md": "sha256:4a1f2a0a555178b7fcc25c0ab43a280ec623af8aa77543b7d2eb744f996b9ff0",
+    "E:/新问题/research/seven_directions/Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "sha256:783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "R7_E14_GLOBAL_GAP_REDUCTION.md": "sha256:b8857167107c129e5bcddb14b15c244ec7480486e1b7d9f74052c5f92821133c",
+    "R7_E14_GLOBAL_GAP_REDUCTION_REVIEW.json": "sha256:b738a7e442bf2f722841c2349e89f9d67f3e3ca159dbdadac5b8e4f5258cfaea",
+    "R7_E14_GLOBAL_GAP_REDUCTION_INPUTS.json": "sha256:8a222e5047baa43962784f870d448b06264b6fe7f96c3f8a646be607203d43a4",
+    "R7_E14_HIGH_GAP_INVENTORY.json": "sha256:ba9614a2510adbdf54d2902e251593f4aed5f5db21e4ba77f4ce674116a267c1",
+    "R7_E14_ODD_RECEIVER_CERTIFICATES.json": "sha256:27b232c1fd9f4c12de4f3e51a9d25b1cccfc5dca7f6148b5d7aa9b010d7c8349",
+    "R7_E14_ODD_RECEIVER_CERTIFICATES.md": "sha256:9518dd48e1e368ac2ef89757b326c60dcbc4b9933ff3b5d863094ead1521e792",
+    "R7_E14_ODD_RECEIVER_CERTIFICATES_VERIFY.py": "sha256:9392211e1bba8f314001106c7cd91fa24fc15c4527367e4c2b0610b760e8f7da",
+    "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-checker/SKILL.md": "sha256:716a86370b1768b616943d449ab106b901fa55e239ab76ef9f5eebb9779ba39e",
+    "E:/新问题/research/RESEARCH_MISTAKES.md": "sha256:658fd1c523e3bd8426e47a1d53c9f0af302deb9ba8abf80c1e83c34ca067a86f",
+    "E:/新问题/research/seven_directions/Q6_T15_TWO_TARGET_REVIEW.json": "sha256:23d79315fd5bf985059d64795ed5e359c1e2087b9170f35ec89fd0c17da71279"
+  },
+  "coverage_receipt": {
+    "status": "PASS",
+    "source_unit_count": 12,
+    "covered_unit_count": 12,
+    "coverage_fraction": 1,
+    "assigned_unit_ids": [
+      "T00",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "E00",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06"
+    ],
+    "covered_unit_ids": [
+      "T00",
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "E00",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06"
+    ],
+    "units": [
+      {
+        "id": "T00",
+        "source": "R7_T26_ODD_SPLIT_TRANSFER.md",
+        "start": 1,
+        "end": 37,
+        "topic": "Statement and direct Q5 imports",
+        "status": "PASS"
+      },
+      {
+        "id": "T01",
+        "source": "R7_T26_ODD_SPLIT_TRANSFER.md",
+        "start": 38,
+        "end": 43,
+        "topic": "Donor and parity",
+        "status": "PASS"
+      },
+      {
+        "id": "T02",
+        "source": "R7_T26_ODD_SPLIT_TRANSFER.md",
+        "start": 44,
+        "end": 53,
+        "topic": "Receiver cases and expansion",
+        "status": "PASS"
+      },
+      {
+        "id": "T03",
+        "source": "R7_T26_ODD_SPLIT_TRANSFER.md",
+        "start": 54,
+        "end": 61,
+        "topic": "Universal s2 and paired s1",
+        "status": "PASS"
+      },
+      {
+        "id": "T04",
+        "source": "R7_T26_ODD_SPLIT_TRANSFER.md",
+        "start": 62,
+        "end": 64,
+        "topic": "T26 scope",
+        "status": "PASS"
+      },
+      {
+        "id": "E00",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 1,
+        "end": 41,
+        "topic": "Statement and direct imports",
+        "status": "PASS"
+      },
+      {
+        "id": "E01",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 42,
+        "end": 61,
+        "topic": "Donor ports and marked core117",
+        "status": "PASS"
+      },
+      {
+        "id": "E02",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 62,
+        "end": 75,
+        "topic": "Four bridges, real compression and joint suppression",
+        "status": "PASS"
+      },
+      {
+        "id": "E03",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 76,
+        "end": 83,
+        "topic": "Necessary original edge and expansion",
+        "status": "PASS"
+      },
+      {
+        "id": "E04",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 84,
+        "end": 87,
+        "topic": "Quantified obstruction",
+        "status": "PASS"
+      },
+      {
+        "id": "E05",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 88,
+        "end": 100,
+        "topic": "Finite geometry and cube transport",
+        "status": "PASS"
+      },
+      {
+        "id": "E06",
+        "source": "R7_E14_ODD_RECEIVER_CLOSURE.md",
+        "start": 101,
+        "end": 103,
+        "topic": "E14 scope",
+        "status": "PASS"
+      }
+    ]
+  },
+  "scoped_claims": {
+    "T26_single_cut": "s=1 or 2, arbitrary K(Q6) prescribed matching, all specified holes and marks; conclusion except when the chosen minority mirror is the unique receiver cross endpoint.",
+    "T26_universal_s2": "One s=2 geometry suffices for all F, choosing among the two donor minority holes.",
+    "T26_universal_paired_s1": "Two distinct s=1 directions with a common donor minority and even intersection of receiver majority-hole pairs suffice for all F.",
+    "E14_transfer": "Independent realizable balanced fourteen-hole set. An s2 plan or a nonempty finite set of s1 plans with incompatible necessary original edges covers every realizing original short matching.",
+    "E14_orbits": "I-001 through I-004 and III-001 through III-014, all realizing original short matchings and all cube-automorphism images."
+  },
+  "import_scope": {
+    "Q5_T44_T15": "Arbitrary K(Q5) prescribed matching, 30-cycle exactly omitting two specified majority holes; all added edges short.",
+    "Q5_balanced": "Arbitrary K(Q5) prescribed matching at (0,0),(1,1), spanning cycle; all added edges short.",
+    "Q5_avoid_one": "Arbitrary K(Q5) prescribed matching at (0,2),(1,3), cycle exactly omitting specified majority hole; all added edges short.",
+    "core117": "Arbitrary K(Q6) prescribed matching at minority 0, retained majority {31,61,62}, omitted marks {1,2}, up to joint cube isomorphism. Conditional transfer and accepted 76 local inputs only.",
+    "global_gap": "Use only frozen orbit identification and transport. No minimum-gap hypothesis in the uniform theorem.",
+    "excluded_open_local_types": [
+      37,
+      67
+    ],
+    "imported_theorems_independently_reproved": false
+  },
+  "independent_finite_check": {
+    "script": "R7_E14_ODD_RECEIVER_REVIEW_CHECK.py",
+    "script_sha256": "sha256:66f9c083101d8785958cdb8777a37c09b665def35ab79616237ff53995b36a26",
+    "result": "R7_E14_ODD_RECEIVER_REVIEW_FINITE.json",
+    "result_sha256": "sha256:6ee4a44ab5dcc104845b39a52b7c129aaef800a0e1b68b82624942393ed58120",
+    "verified_orbits": 18,
+    "full_marked_core117_isomorphisms": 24,
+    "per_map_vertices_checked": 64,
+    "per_map_short_edges_checked": 192,
+    "isolated_0": 11,
+    "isolated_127": 1,
+    "shared_endpoint": 5,
+    "unconditional_s2": 1,
+    "producer_imported": false,
+    "producer_verifier_imported": false,
+    "scans_used": false,
+    "short_matching_family_enumerations": 0,
+    "hamilton_solver_calls": 0,
+    "old_rank_or_large_enumeration_replays": 0
+  },
+  "counterexample_attempts": [
+    "c=1 with occupied sole cross mirror closes the donor path prematurely, so excluded by the single-cut theorem.",
+    "c>=3 with occupied cross mirror has an additional removed donor pairing edge, ensuring the two components being joined are distinct.",
+    "Paired s1 simultaneous exceptions contradict odd covered count in the intersection fiber.",
+    "R pairs both markers: suppress the full four-point path jointly; distinct R partners give disjoint suppressions.",
+    "Possible w-edge modification by a bridge, compression, or suppression is excluded by original coverage, endpoint disjointness and colors.",
+    "Shared-endpoint and survivor-with-no-neighbor obstruction verified directly on the original short graph."
+  ],
+  "scope_limits": {
+    "full_T26": false,
+    "full_high_gap": false,
+    "excluded_high_gap_orbit": "I-005",
+    "full_E14": false,
+    "full_R7": false,
+    "highest_complete_layer": "E12",
+    "net_novelty_against_all_historical_tools_quantified": false
+  },
+  "open_issues": [],
+  "open_fatal": 0,
+  "open_critical": 0
+}

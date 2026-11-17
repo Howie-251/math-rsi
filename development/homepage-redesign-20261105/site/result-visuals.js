@@ -170,34 +170,17 @@
 
     e86: {
       resultLabel:
-        'Erdős Problem 86 asymptotic C4-free edge density upper bound in Qn lowered from the 0.60318 reference to at most 0.59155154, narrowing the gap toward the open 1/2 conjecture.',
+        'Erdős Problem 86 results by setting: Q7 construction 304 verified (304 upper bound source-reported), Q8 narrowed to 682–683, and asymptotic C4-free density lowered from 0.60318 to at most 0.5912405943 (T3) and 0.5912405942 (T4).',
       resultCap:
-        'Results · asymptotic C₄-free density ceiling lowered from 0.60318 to ≤ 0.59155154',
+        'Results · Q₇ 304 (≤ source), Q₈ 682–683 and asymptotic Q∞ ≤ 0.5912405943',
       links: [
-        { label: 'Source report ↗', href: '../../../plugins/hypercube-extremal/archive/source/START_HERE.html', sourceLanguage: '中文' }
+        { label: 'Results by setting ↗', href: 'erdos-86-latest.html', sourceLanguage: 'EN + 中文' },
+        { label: 'Historical Q₄ ↗', href: '../../../plugins/hypercube-extremal/archive/source/START_HERE.html', sourceLanguage: '中文', sub: true }
       ],
       render() {
-        const e = [[15, 0], [0, 15], [7, -6], [34, 4]];
-        const o = [288, 39];
-        const P = Array.from({ length: 16 }, (_, v) => {
-          let x = o[0], y = o[1];
-          for (let j = 0; j < 4; j++) if ((v >> j) & 1) { x += e[j][0]; y += e[j][1]; }
-          return [x, y];
-        });
-        let q4 = '';
-        for (let v = 0; v < 16; v++) {
-          for (let j = 0; j < 4; j++) {
-            if (!((v >> j) & 1)) {
-              const w = v | (1 << j);
-              q4 += `<line x1="${P[v][0]}" y1="${P[v][1]}" x2="${P[w][0]}" y2="${P[w][1]}" stroke="#C5CCD6" stroke-width="0.9"/>`;
-            }
-          }
-        }
-        q4 += `<polygon points="${[0, 1, 3, 2].map(i => P[i].join(',')).join(' ')}" fill="var(--e86)" fill-opacity="0.16" stroke="var(--e86)" stroke-width="1.6"/>`;
-
         const X = v => 44 + ((v - 0.49) / 0.125) * 292;
         const xHalf = f2(X(0.5));
-        const xNew = f2(X(0.59155154));
+        const xNew = f2(X(0.5912405943));
         const xRef = f2(X(0.60318));
 
         return svgWrap(this.resultLabel, `
@@ -207,52 +190,61 @@
             </marker>
           </defs>
 
-          <!-- Top summary card with separated mini Q4 inset -->
-          <rect class="rv-panel" x="14" y="12" width="352" height="84" rx="10"/>
-          <text class="rv-kicker" x="26" y="32">Asymptotic C₄-free density</text>
-          <text x="26" y="60" font-size="14" font-weight="540" fill="var(--muted)">0.60318 <tspan fill="var(--ink-2)">→</tspan> <tspan font-size="20" font-weight="680" class="rv-accent">≤ 0.59155154</tspan></text>
-          <text class="rv-sub" x="26" y="80">Lower ceiling is tighter</text>
-          <line x1="266" y1="20" x2="266" y2="88" stroke="var(--hair)"/>
-          ${q4}
-          <text class="rv-sub" x="316" y="82" text-anchor="middle">C₄ in Q₄</text>
+          <!-- Top summary: three settings side-by-side -->
+          <rect class="rv-panel" x="14" y="10" width="352" height="104" rx="10"/>
+          <text class="rv-h" x="24" y="28">Three C₄-free cube settings</text>
+          <text class="rv-meta" x="356" y="28" text-anchor="end">finite &amp; limit</text>
 
-          <!-- Bottom density scale -->
-          <rect class="rv-panel" x="14" y="106" width="352" height="138" rx="10"/>
-          <text class="rv-h" x="26" y="127">Upper-bound scale</text>
+          <rect x="22" y="36" width="102" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="73" y="52" text-anchor="middle">Q₇ (n = 7)</text>
+          <text x="73" y="75" text-anchor="middle" font-size="18" font-weight="680" class="rv-accent">304</text>
+          <text class="rv-sub" x="73" y="94" text-anchor="middle">≥304 ok · ≤ src</text>
 
-          <!-- Open gap vs closed reduction on axis y=180 -->
-          <rect x="${xHalf}" y="176" width="${f2(xNew - xHalf)}" height="8" rx="4" fill="#EEF1F6"/>
-          <rect x="${xNew}" y="175" width="${f2(xRef - xNew)}" height="10" rx="4" fill="var(--e86)" fill-opacity="0.26"/>
-          <line class="rv-axis" x1="36" y1="180" x2="344" y2="180"/>
+          <rect x="130" y="36" width="108" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="184" y="52" text-anchor="middle">Q₈ (n = 8)</text>
+          <text x="184" y="75" text-anchor="middle" font-size="17" font-weight="680" class="rv-accent">682–683</text>
+          <text class="rv-sub" x="184" y="94" text-anchor="middle">≤682 open</text>
 
-          <!-- Arrow showing reduction from 0.60318 down to 0.59155154 -->
-          <path d="M${xRef} 158H${f2(xNew + 4)}" fill="none" stroke="var(--e86)" stroke-width="1.8" marker-end="url(#rv-e86-arr)"/>
+          <rect x="244" y="36" width="114" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="301" y="52" text-anchor="middle">Q∞ density</text>
+          <text x="301" y="74" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">≤ 0.59124</text>
+          <text class="rv-sub" x="301" y="94" text-anchor="middle">T3/T4 proved</text>
 
-          <!-- Markers -->
-          <circle cx="${xHalf}" cy="180" r="5.5" fill="#fff" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="2 2"/>
-          <circle cx="${xRef}" cy="180" r="5" fill="#fff" stroke="#98A2B3" stroke-width="1.8"/>
-          <circle cx="${xNew}" cy="180" r="6.5" fill="var(--e86)" stroke="#fff" stroke-width="1.8"/>
+          <!-- Bottom density scale (Q_infty only) -->
+          <rect class="rv-panel" x="14" y="122" width="352" height="122" rx="10"/>
+          <text class="rv-h" x="24" y="141">Asymptotic Q∞ scale</text>
+          <text class="rv-meta" x="356" y="141" text-anchor="end">T4 ≤ 0.5912405942</text>
 
-          <!-- Labels with wide horizontal clearance -->
-          <text x="${xHalf}" y="154" text-anchor="middle" font-size="12.5" font-weight="620" fill="var(--ink-2)">1/2 (0.5)</text>
-          <text x="${xHalf}" y="206" text-anchor="middle" class="rv-sub">Conjecture (open)</text>
+          <rect x="${xHalf}" y="186" width="${f2(xNew - xHalf)}" height="8" rx="4" fill="#EEF1F6"/>
+          <rect x="${xNew}" y="185" width="${f2(xRef - xNew)}" height="10" rx="4" fill="var(--e86)" fill-opacity="0.26"/>
+          <line class="rv-axis" x1="36" y1="190" x2="344" y2="190"/>
 
-          <text x="${f2(xNew - 8)}" y="152" text-anchor="end" font-size="13.5" font-weight="680" class="rv-accent">≤ 0.59155154</text>
-          <text x="${f2(xNew - 6)}" y="206" text-anchor="end" font-size="11" font-weight="640" class="rv-accent">New bound</text>
+          <path d="M${xRef} 168H${f2(xNew + 4)}" fill="none" stroke="var(--e86)" stroke-width="1.8" marker-end="url(#rv-e86-arr)"/>
 
-          <text x="${f2(xRef + 8)}" y="152" text-anchor="start" font-size="12" font-weight="540" fill="var(--muted)">0.60318</text>
-          <text x="${f2(xRef + 6)}" y="206" text-anchor="start" class="rv-sub">Reference</text>
+          <circle cx="${xHalf}" cy="190" r="5.5" fill="#fff" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="2 2"/>
+          <circle cx="${xRef}" cy="190" r="5" fill="#fff" stroke="#98A2B3" stroke-width="1.8"/>
+          <circle cx="${xNew}" cy="190" r="6.5" fill="var(--e86)" stroke="#fff" stroke-width="1.8"/>
+
+          <text x="${xHalf}" y="166" text-anchor="middle" font-size="12" font-weight="620" fill="var(--ink-2)">1/2 (0.5)</text>
+          <text x="${xHalf}" y="216" text-anchor="middle" class="rv-sub">Conjecture (open)</text>
+
+          <text x="${f2(xNew - 8)}" y="164" text-anchor="end" font-size="12.5" font-weight="680" class="rv-accent">≤ 0.5912405943</text>
+          <text x="${f2(xNew - 6)}" y="216" text-anchor="end" font-size="11" font-weight="640" class="rv-accent">T3 bound</text>
+
+          <text x="${f2(xRef + 8)}" y="164" text-anchor="start" font-size="12" font-weight="540" fill="var(--muted)">0.60318</text>
+          <text x="${f2(xRef + 6)}" y="216" text-anchor="start" class="rv-sub">Reference</text>
         `);
       }
     },
 
     q6: {
       resultLabel:
-        'Ruskey–Savage Q6 theorem diagram: every matching in Q6 is contained in a Hamilton cycle visiting all 64 vertices; with imported results, every matching in Qn using at most six directions also extends to a Hamilton cycle.',
+        'Ruskey–Savage Q6 and Q7 theorem diagram: every matching in Q6 extends to a Hamilton cycle (and <=6 directions in Qn); in Q7, every matching with at least 56 edges (complete E16) extends to a Hamilton cycle.',
       resultCap:
-        'Results · universal Q₆ theorem and six-direction extension in Qₙ (with example instance)',
+        'Results · universal Q₆ theorem, ≤6 directions in Qₙ, and Q₇ ≥56-edge matchings (E16)',
       links: [
-        { label: 'Source report ↗', href: '../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', sourceLanguage: '中文' }
+        { label: 'Q7 E16 ↗', href: 'q7.html', sourceLanguage: 'EN + 中文' },
+        { label: 'Q6 report ↗', href: '../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', sourceLanguage: '中文', sub: true }
       ],
       render(problemSvg) {
         const inset = problemSvg ? problemSvg.innerHTML : '';
@@ -264,31 +256,31 @@
           </defs>
 
           <!-- Primary Q6 universal theorem flow -->
-          <rect class="rv-panel" x="14" y="12" width="226" height="138" rx="10"/>
-          <text class="rv-kicker" x="26" y="30">Q₆ theorem</text>
+          <rect class="rv-panel" x="14" y="12" width="226" height="132" rx="10"/>
+          <text class="rv-kicker" x="26" y="29">Q₆ theorem</text>
 
-          <rect x="24" y="38" width="206" height="34" rx="7" fill="#F3F5F8" stroke="var(--hair)"/>
-          <text x="127" y="59" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Every matching in Q₆</text>
+          <rect x="24" y="36" width="206" height="32" rx="7" fill="#F3F5F8" stroke="var(--hair)"/>
+          <text x="127" y="56" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Every matching in Q₆</text>
 
-          <line x1="127" y1="73" x2="127" y2="95" stroke="var(--q6)" stroke-width="1.7" marker-end="url(#rv-q6-arr)"/>
-          <text x="135" y="87" font-size="10.5" font-weight="600" class="rv-accent">extends to</text>
+          <line x1="127" y1="69" x2="127" y2="90" stroke="var(--q6)" stroke-width="1.7" marker-end="url(#rv-q6-arr)"/>
+          <text x="135" y="83" font-size="10.5" font-weight="600" class="rv-accent">extends to</text>
 
-          <rect class="rv-panel-tint" x="24" y="98" width="206" height="40" rx="7"/>
-          <text x="127" y="115" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Hamilton cycle in Q₆</text>
-          <text class="rv-sub" x="127" y="130" text-anchor="middle" fill="var(--ink-2)">all 64 vertices</text>
+          <rect class="rv-panel-tint" x="24" y="93" width="206" height="39" rx="7"/>
+          <text x="127" y="110" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Hamilton cycle in Q₆</text>
+          <text class="rv-sub" x="127" y="125" text-anchor="middle" fill="var(--ink-2)">all 64 vertices (≤6 dir. in Qₙ)</text>
 
           <!-- Right inset: single example instance reused from original SVG -->
-          <rect class="rv-panel" x="248" y="12" width="118" height="138" rx="10"/>
+          <rect class="rv-panel" x="248" y="12" width="118" height="132" rx="10"/>
           <text class="rv-meta" x="307" y="29" text-anchor="middle">1 example</text>
-          <g transform="translate(247 26) scale(0.375)">${inset}</g>
-          <text class="rv-sub" x="307" y="137" text-anchor="middle">matching ⊂ cycle</text>
+          <g transform="translate(247 24) scale(0.375)">${inset}</g>
+          <text class="rv-sub" x="307" y="133" text-anchor="middle">matching ⊂ cycle</text>
 
-          <!-- Secondary node: arbitrary dimension Qn corollary -->
-          <rect class="rv-panel" x="14" y="160" width="352" height="84" rx="10" stroke-dasharray="4 3"/>
-          <text class="rv-kicker" x="26" y="180">Qₙ extension</text>
-          <text class="rv-meta" x="354" y="180" text-anchor="end">with imported results</text>
-          <text x="26" y="204" font-size="12.5" font-weight="620" fill="var(--ink)">Every matching in Qₙ using ≤ 6 directions</text>
-          <text x="26" y="225" font-size="12.5" font-weight="650" class="rv-accent">→ contained in a Hamilton cycle</text>
+          <!-- Secondary node: Q7 complete E16 (>=56 edges) -->
+          <rect class="rv-panel" x="14" y="154" width="352" height="90" rx="10" stroke-dasharray="4 3"/>
+          <text class="rv-kicker" x="26" y="174">Q₇ complete E16</text>
+          <text class="rv-meta" x="354" y="174" text-anchor="end">≤55 edges &amp; full Q₇ open</text>
+          <text x="26" y="198" font-size="12.5" font-weight="620" fill="var(--ink)">Every matching in Q₇ with ≥56 edges</text>
+          <text x="26" y="219" font-size="12.5" font-weight="650" class="rv-accent">→ 128-vertex Hamilton cycle (all μ = 0..4)</text>
         `);
       }
     },

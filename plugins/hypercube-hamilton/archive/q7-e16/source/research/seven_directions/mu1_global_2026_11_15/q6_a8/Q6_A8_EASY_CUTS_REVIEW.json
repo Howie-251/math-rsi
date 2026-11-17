@@ -1,0 +1,183 @@
+{
+  "audit_skill": "proof-checker",
+  "local_adaptation": "direct sibling review on fixed markdown proof plus independently constructed finite geometry checker",
+  "verdict": "PASS",
+  "reason_code": "all_proofs_complete_modulo_explicit_imports",
+  "proof_status": "sound-modulo-imports",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_agent_id": "/root/q6_a8_easy_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "generated_at": "2026-11-15T10:33:32.7501868Z",
+  "scope": "For every arbitrary K(Q6) matching whose holes split 3:5 between the two parities, and every specified majority hole z, a simple 63-cycle on Q6−z contains the matching and has only short edges outside it.",
+  "applications": [
+    "Q6 B4 for every balanced 4:4 K(Q6) matching, free root, and opposite-parity free or covered target.",
+    "Q7 difference-one cuts 0≤a≤3, 0≤b≤5, including E16 (3,4)/(5,4) and E18 (3,4)/(6,5).",
+    "FREE_A6_TRANSFER with original B=(s+3,s), 0≤s≤3, for an actual chosen triple and valid donor.",
+    "SPLIT_DONOR_SMALL_RECEIVER with k∈{3,4,5}, 0≤s≤3, retaining all split donor and supply conditions."
+  ],
+  "trace_path": "Q6_A8_EASY_CUTS_REVIEW.md",
+  "application_trace_path": "Q6_A8_APPLICATIONS_REVIEW.md",
+  "audited_input_hashes": {
+    "Q6_A8_FULL_CLOSURE.md": "sha256:d11163cc2270b3873ec725238aba59368706ca47e9be3d6a969086872fe8596a",
+    "enumerate_a8_geometry.py": "sha256:295f0bbc2a6ba9b6298585b088ac77ccfaee8f1b66c930324bc44fc87be9859a",
+    "geometry.json": "sha256:4b2e02fccbae17b4a8b345b76158eadcba201e6ad3b965e59f86d32f88596398",
+    "verify_zero_delta_obstructions.py": "sha256:307124556f6faaffe01e931dae4db74e3aeea885a723a0d56a982222d4256cda",
+    "zero_delta_obstructions.json": "sha256:88a00321632f957d464a59482362a68cc62d3dbd909d5175aadf592cd4d383d8",
+    "Q6_A8_EASY_CUTS_REVIEW.md": "sha256:17583d6e4d0dad7759b4a9bfca1cb793731d1f6c088f82af858b6c7387030599",
+    "Q6_A8_FULL_REVIEW_check.py": "sha256:d96b4b3f889710a1e0beca645054b611cc47314d0c2b7de7980e3891efe7f392",
+    "Q6_A8_FULL_REVIEW_check.json": "sha256:e579546a6515f59dc3ddec72c98fcc09a6fc1917f5c4473bd2b4a91a6700fba9",
+    "Q6_A8_APPLICATIONS_REVIEW.md": "sha256:d466612ada98014666fc1dc2b1087a12dfe458be239214daabf816cc544fe8d2"
+  },
+  "import_hashes": {
+    "../../A6_FULL_REVIEW.json": "sha256:52c0765abc134ed0e9a9f3b0625563773967e57ee3976530506fc84d53c93705",
+    "../../A6_FINAL_REDUCTION.md": "sha256:23478951d0089c9f3c3eb0227045e5725dc01376641952a95085ab0421796827",
+    "../../A4_S1D_REVIEW.json": "sha256:8b0924bf4929594cec5e465fbf59609faa7b2a4de21f7cee3c3345044c0203a4",
+    "../../A4_S1D_REDUCTION.md": "sha256:c07f1e72bb604452315c5651827fb61a618350263ffb1bacf644a694fc6ed770",
+    "../../PERFECT_MATCHING_SPLICE_REVIEW.json": "sha256:a4f94b4cc2b438280e6e67a804ad6ea9672c7c3facc944d7edb1c5c7e3940f27",
+    "../../PERFECT_MATCHING_SPLICE.md": "sha256:78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+    "../../Q5_B4_FULL_REVIEW.json": "sha256:2c0cf0200b8fd3e73bae2fd3e678edd3e25d88438aff89e69046a30193fde779",
+    "../../Q5_B4_FOREST_METHOD.md": "sha256:b8a348a5f8be6199cca28ddf550ada47593228d020347406c16364437e7042b2",
+    "../../Q5_T15_FULL_REVIEW.json": "sha256:0afc9ca982a2b85a3e37055c12575f0e7ee9db1c3cea4fc71d532a1a57075b80",
+    "../../Q5_T15_FULL_CLOSURE.md": "sha256:b1c7747c4dd596a81915e5af46570ba27015984fd8e684803233bd8fff6fe627",
+    "../../../six_directions/Q5_A10_FULL_REVIEW.json": "sha256:8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "../../../six_directions/Q5_A10_FULL_CLOSURE.md": "sha256:fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../../../six_directions/Q5_HIGHER_HOLE_REDUCTION_REVIEW.json": "sha256:ebd3143e7a506538970785d2cc123a1fbef9192e51ed520e736d083cf579ca26",
+    "../../../six_directions/Q5_HIGHER_HOLE_REDUCTION.md": "sha256:24841edb1206c8fe22adc0c465a68c3b17ae7afe0555f4d8d969dc9b4f6e098f",
+    "../../../six_directions/T44_Q5_CLOSURE_REVIEW.json": "sha256:f58e20d06e43878b72fbda6b638df8bbfbaccf08e9f720ba72e95e3b3df85d21",
+    "../../../six_directions/T44_Q5_CLOSURE_DRAFT.md": "sha256:96f8273168ddf1fbc4e9cc7cdd9c733ced8ab8cdfe868c593b10dba900b7a7d0",
+    "../../R7_HIGHER_HOLE_CUTS_REVIEW.json": "sha256:445ce6560f17424cd8f2d35f1d48cce04b2ddbbbdd5e299ce320d5f3518d74d4",
+    "../../R7_HIGHER_HOLE_CUTS.md": "sha256:47fc35c9cea78731a52ab5b9deb383e025185422dca08053e823ecaff511359b"
+  },
+  "additional_application_source_hashes": {
+    "../../mu3_hard_first_2026_11_15/FREE_A6_TRANSFER.md": "sha256:6a3a64b647e3b1c36ea428abf0353fd5d1ad62e9d700173caa8acad0733d3b53",
+    "../../mu3_hard_first_2026_11_15/FREE_A6_TRANSFER_REVIEW.md": "sha256:d8b2980d64ffae2e21b7ca845f94e0a484210a6e3a5578a942da5c0e30518b57",
+    "../../mu3_hard_first_2026_11_15/SPLIT_DONOR_SMALL_RECEIVER.md": "sha256:425cef97802d2bc2371526b7dca6d874e47e7f6d0cfef30299807e6d3da36e81"
+  },
+  "details": {
+    "issues": [],
+    "obligations": [
+      {
+        "id": "A01",
+        "status": "PASS"
+      },
+      {
+        "id": "A02",
+        "status": "PASS"
+      },
+      {
+        "id": "A03",
+        "status": "PASS"
+      },
+      {
+        "id": "A04",
+        "status": "PASS"
+      },
+      {
+        "id": "A05",
+        "status": "PASS"
+      },
+      {
+        "id": "A06",
+        "status": "PASS"
+      },
+      {
+        "id": "A07",
+        "status": "PASS"
+      },
+      {
+        "id": "A08",
+        "status": "PASS"
+      },
+      {
+        "id": "A09",
+        "status": "PASS"
+      },
+      {
+        "id": "A10",
+        "status": "PASS"
+      },
+      {
+        "id": "A11",
+        "status": "PASS"
+      },
+      {
+        "id": "A12",
+        "status": "PASS"
+      },
+      {
+        "id": "A13",
+        "status": "PASS"
+      },
+      {
+        "id": "A14",
+        "status": "PASS"
+      },
+      {
+        "id": "A15",
+        "status": "PASS"
+      },
+      {
+        "id": "A16",
+        "status": "PASS"
+      },
+      {
+        "id": "A17",
+        "status": "PASS"
+      },
+      {
+        "id": "A18",
+        "status": "PASS"
+      },
+      {
+        "id": "A19",
+        "status": "PASS"
+      },
+      {
+        "id": "A20",
+        "status": "PASS"
+      },
+      {
+        "id": "A21",
+        "status": "PASS"
+      },
+      {
+        "id": "A22",
+        "status": "PASS"
+      },
+      {
+        "id": "A23",
+        "status": "PASS"
+      },
+      {
+        "id": "A24",
+        "status": "PASS"
+      },
+      {
+        "id": "A25",
+        "status": "PASS"
+      },
+      {
+        "id": "A26",
+        "status": "PASS"
+      }
+    ],
+    "census": {
+      "minority_triples": 4960,
+      "minority_orbits": 39,
+      "representative_inputs": 83515,
+      "normalized_inputs": 10268580,
+      "residual_representative_inputs": 28,
+      "residual_normalized_inputs": 1470,
+      "residual_joint_orbits": 7,
+      "author_odd_fibers_independently_validated": 7
+    },
+    "prescribed_matching_enumeration": 0,
+    "new_matching_samples": 0,
+    "solver_invocations": 0,
+    "prior_large_certificate_replays": 0,
+    "remaining_scope": "No full E16 or R7 closure is asserted; application hypotheses are retained."
+  }
+}

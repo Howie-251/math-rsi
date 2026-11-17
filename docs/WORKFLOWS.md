@@ -20,6 +20,13 @@ v5 在现有 route/prove/verify 中落实三项动作。先区分任意原输入
 
 有限计划可以是“每个几何先固定一个计划，覆盖该几何的每个实现”，也可以是“先给有限计划集，每个实际输入至少有一个分支可用”；verify 核完整分支覆盖、适用前提及展开后保留原边。已有 v4 全局重评照常执行。具体变化见 [V5_CHANGES](V5_CHANGES.md)，来源与数学边界见 [Q7 案例](../case-studies/ruskey-savage-q7/README.md)。五阶段与六领域不变。
 
+## v6：难余域准入、上下界协同循环与修补残差停机
+
+v6 在现有五阶段结构中新增三项共性纪律（详见 [V6_CHANGES](V6_CHANGES.md)）：
+1. **难余域优先把关：** 提出新分类切分前先在最难未闭分支做有界探针，按同一原输入相对已有定理并集度量净新增覆盖；简单旁支通过不重置难核停滞计数（[实际输入覆盖](../base/skills/mathrsi-prove/references/actual-input-coverage.md)）。
+2. **上下界协同进化：** 对接 [primal-dual-coevolution](../base/skills/mathrsi-route-loop/references/primal-dual-coevolution.md)，分离开放的主证明目标与对抗反例目标，用四通道有符号归一化残差轮换引导下界程序搜索，并在**全部已归档图**上反驳候选不等式后再导出 `empirical` 义务进入 `prove`。
+3. **修补残差阈值停机：** 当浮点 SDP/CP/LP 外层迭代增益低于修补残差阈值时立即停机，并在任何未认证近似拟合旁并列记录非零可行性残差，不将其写成已证屏障。
+
 ## 五组流程与实际回流
 
 ```mermaid

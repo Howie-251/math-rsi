@@ -1,0 +1,439 @@
+{
+  "schema": "r7-proof-review/v1",
+  "date": "2026-11-08",
+  "gap_id": "R7-TWELVE-CUT",
+  "audit_skill": "proof-checker",
+  "workflow": "ARIS proof-checker, local Markdown/JSON adaptation",
+  "skill_path": "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-checker/SKILL.md",
+  "skill_sha256": "716a86370b1768b616943d449ab106b901fa55e239ab76ef9f5eebb9779ba39e",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_obligations_discharged_modulo_frozen_imports",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "claim_status": "sound-modulo-imports",
+  "caller": "/root",
+  "writer_agent_id": "/root/star_high_fourbridge_writer",
+  "review_agent_id": "/root/star_high_fourbridge_check",
+  "review_rounds": 1,
+  "reviewer_configuration": "GPT-6.1-sol / high, selected by caller under user policy",
+  "reviewer_backend_identity_independently_attested": false,
+  "scope": {
+    "main_theorem": "Every 58-edge Q7 short matching with independent twelve holes, normalized six active odd unit holes, and even holes in H* up to active permutation or either k=6 type, has an all-short Hamilton cycle containing all its original edges.",
+    "E12": "Every 58-edge short matching in Q7 lies in an all-short Hamilton cycle, via the exhaustive partition in §5.",
+    "at_least_58": "Every Q7 short matching with at least 58 edges lies in an all-short Hamilton cycle, using E12 and accepted denser layers.",
+    "complete_R7": false,
+    "complete_P7": false
+  },
+  "proof": "R7_TWELVE_HOLE_STAR_HIGH_FOUR_BRIDGES.md",
+  "proof_sha256": "d7e0631d7c3272dd0700538c7abf6a73b9efe29624b67f77769be9db78df5e72",
+  "inputs": "R7_TWELVE_HOLE_STAR_HIGH_FOUR_BRIDGES_INPUTS.json",
+  "inputs_sha256": "0cac762ed515d40dacd7bffafd432cece9c7a0ea86afdbe005fc059b688532ca",
+  "trace_path": "R7_TWELVE_HOLE_STAR_HIGH_FOUR_BRIDGES_REVIEW.md",
+  "coverage_receipt": {
+    "status": "PASS",
+    "source_unit_count": 8,
+    "covered_unit_count": 8,
+    "coverage_fraction": 1,
+    "assigned_unit_ids": [
+      "S00",
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07"
+    ],
+    "covered_unit_ids": [
+      "S00",
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07"
+    ],
+    "units": [
+      {
+        "id": "S00",
+        "lines": "1–19",
+        "topic": "命题、定义、规范型及作者状态",
+        "obligations": "MC01",
+        "status": "PASS"
+      },
+      {
+        "id": "S01",
+        "lines": "20–28",
+        "topic": "核心 117 和单切分 D3 的导入接口",
+        "obligations": "MC02–MC03",
+        "status": "PASS"
+      },
+      {
+        "id": "S02",
+        "lines": "29–40",
+        "topic": "§1 面内两色计数和四桥",
+        "obligations": "MC04–MC05",
+        "status": "PASS"
+      },
+      {
+        "id": "S03",
+        "lines": "41–56",
+        "topic": "§2 辅助匹配、核心运输、供体森林",
+        "obligations": "MC06–MC10",
+        "status": "PASS"
+      },
+      {
+        "id": "S04",
+        "lines": "57–66",
+        "topic": "§3 接收匹配、抑制和展开",
+        "obligations": "MC11–MC13",
+        "status": "PASS"
+      },
+      {
+        "id": "S05",
+        "lines": "67–76",
+        "topic": "§4 两种重六几何和规范 (H^*) 的接收圈",
+        "obligations": "MC14–MC16",
+        "status": "PASS"
+      },
+      {
+        "id": "S06",
+        "lines": "77–92",
+        "topic": "§5 任意 58 边与至少 58 边的合并",
+        "obligations": "MC17–MC19",
+        "status": "PASS"
+      },
+      {
+        "id": "S07",
+        "lines": "93–95",
+        "topic": "审计与声明边界",
+        "obligations": "MC20",
+        "status": "PASS"
+      }
+    ]
+  },
+  "obligation_ledger": [
+    {
+      "id": "MC01",
+      "source_unit": "S00",
+      "status": "PASS",
+      "evidence": "规范独立 58 边输入 ⇒ 两色各六孔，偶孔只能重四或重六。每条原边跨色。零点邻接六个活跃单位孔，任一重二支撑含至少一个活跃位。规范型的四支撑编码为 60，五个缺位为 2、3、4、5、6 的重六编码为 123、119、111、95、63。"
+    },
+    {
+      "id": "MC02",
+      "source_unit": "S01",
+      "status": "PASS",
+      "evidence": "核心 117 的任意规定匹配 ⇒ 选到已认证根。交换低两位保持两标记集与保留集，未认证根 30、29 均不在低两位 00 的纤维。纤维中 16 点只有 0 是孔，其余 15 点无法内部配完。任意离纤维的规定边至少跨一低位切分，其纤维端点就是该切分的已认证根。这也处理跨两个低位的长边。已认证根的条件转移给 62 点圈，新增边短。"
+    },
+    {
+      "id": "MC03",
+      "source_unit": "S01",
+      "status": "PASS",
+      "evidence": "D3 接口 ⇒ 只需单切分。任意完全图规定匹配允许长边、同色边。要求少数孔对全部三个保留孔非短邻接，少数孔所在面有四个多数孔且含两标记，唯一排除的情况是镜像点为对侧唯一跨端口。"
+    },
+    {
+      "id": "MC04",
+      "source_unit": "S02",
+      "status": "PASS",
+      "evidence": "切面假设 ⇒ A 的偶、奇原孔数为 1、5。A 两色各 32 点，面内短边各消耗一偶一奇。偶跨端口减奇跨端口等于 4，故 c 为偶数且至少 4，所选两个偶端口必存在。"
+    },
+    {
+      "id": "MC05",
+      "source_unit": "S02",
+      "status": "PASS",
+      "evidence": "所选自由孔 ⇒ 四条物理短桥及互异端点。每个自由孔的跨 i 镜像由独立性覆盖，其唯一跨 i 短邻点就是该自由孔，故原伙伴留在本面。A 侧重量 1、5 分离两类端点，B 侧重量 2、6 分离两类。两侧所有桥端均避原跨端口。"
+    },
+    {
+      "id": "MC06",
+      "source_unit": "S03",
+      "status": "PASS",
+      "evidence": "端口数 c 为偶且 D 与 M_A 端点不交 ⇒ F0 合法。D 配掉剩余端口和两标记对应的单位孔，F0 剩 z、p1、p2 及三个单位孔，按颜色为 3:3。加 p1p2 后 F1 剩 1:3。两条 v_lw_l 是不同原面内边，故 w1w2 与 p1p2、D 均端点分离，F2 精确剩 z、三个单位点和 v1、v2。"
+    },
+    {
+      "id": "MC07",
+      "source_unit": "S03",
+      "status": "PASS",
+      "evidence": "F2 的标记孔型 ⇒ 核心 117。删除固定位 i 后取六位补，再置换。z 去 0；v1、v2 去 1、2；三单位孔去 62、61、31。补与置换保持 Hamming 距离并给出完全图双射，运输所有规定边及标记，允许长边与同色边。"
+    },
+    {
+      "id": "MC08",
+      "source_unit": "S03",
+      "status": "PASS",
+      "evidence": "62 点圈包含两条不同辅助边且恰避 v1、v2 ⇒ 先删 w1w2，接回两条原边，得到 64 点 v1–v2 路，包含 p1p2 与 D。p1p2 为内部边，删后两条路各含一个 v 与一个 p。两个可能配对均合用。"
+    },
+    {
+      "id": "MC09",
+      "source_unit": "S03",
+      "status": "PASS",
+      "evidence": "继续删 D ⇒ A 的生成路径森林。D 和 p1p2 的端点互斥并避 v1、v2，每个触及点只减一次度。度一集恰为全部原 A 跨端口、x1、x2、v1、v2。原 M_A 全保留；核心 117 的新增边短，两类辅助边及 D 均已去除。"
+    },
+    {
+      "id": "MC10",
+      "source_unit": "S03",
+      "status": "PASS",
+      "evidence": "森林补上全部原跨边与四短桥 ⇒ 每条附边使用不同 B 叶点。无新圈且全部 A 点为路径内点。每个分量有两个不同 B 端点，按真实路径压缩得到端点集 S_B 上的完美匹配 R_B。"
+    },
+    {
+      "id": "MC11",
+      "source_unit": "S04",
+      "status": "PASS",
+      "evidence": "M_B 与 R_B 只在 y1、y2 冲突 ⇒ 联合抑制得合法匹配。b1、b2 互异且在 S_B 外。若标记互配，冲突分量为 b1–y1–y2–b2；否则为两条点不交的二边路径。R_B 的其他端点允许是消费孔 u1、u2。抑制端点均不同且未被其余边覆盖。"
+    },
+    {
+      "id": "MC12",
+      "source_unit": "S04",
+      "status": "PASS",
+      "evidence": "抑制 ⇒ F_B 的孔恰为 a、y1、y2 和 W 的三个未消费偶孔。a 与三个保留孔的短非邻接性继承原孔独立。删除 B 固定位翻转全局颜色标签，但仍为一少数孔加五多数孔，标记角色保持。"
+    },
+    {
+      "id": "MC13",
+      "source_unit": "S04",
+      "status": "PASS",
+      "evidence": "接收 62 圈 ⇒ 先恢复恰在圈外的两标记和其原 M_B 边，再展开所有带标签 R_B。其真实路径内点是互斥的 A 点并穷尽 A，消费孔始终为端点。逐边换成内部与当前圈不交的简单路径保持一个简单圈，共 62+2+64=128 点。全部原 M_A、M_B、C 恢复；物理新增边全短。"
+    },
+    {
+      "id": "MC14",
+      "source_unit": "S05",
+      "status": "PASS",
+      "evidence": "k=6 两型 ⇒ 可取活跃 i∈S，再从 S 除 i 后的至少四个活跃位选两消费位，余三位至少两活跃供标记。删除 B 固定位，a 为 0；标记单位位放到 0、1，第三保留孔缺位放到 5，保留集变为 62、61、31，故接收也用核心 117。"
+    },
+    {
+      "id": "MC15",
+      "source_unit": "S05",
+      "status": "PASS",
+      "evidence": "k=5 的 H* ⇒ 取 i∈T 使 z 为 A 唯一偶孔，从 S 除 i、g 后三活跃位选两消费位。三未消费偶孔为 T、缺 g 的重六孔、缺剩余活跃 t 的重六孔。B 的 g=0 面含 a、两标记、前两保留孔；g=1 只有缺 t 的保留孔。"
+    },
+    {
+      "id": "MC16",
+      "source_unit": "S05",
+      "status": "PASS",
+      "evidence": "H* 接收几何与原短匹配 ⇒ D3 镜像 w 在 F_B 内部覆盖。0 被覆盖且唯一可用短邻为 e_g，强制 0e_g。w 与自由孔 a 邻接故被覆盖，但其跨 i 邻点 e_g 已用；w 的跨 g 短邻是自由孔 a，故原伙伴 w′ 位于 B 的 g=1 内。w 的支撑含非活跃 g，区别于 y_s，也非 u_l；奇点 w′ 不等于任何这四个偶点。两端均非原端口，ww′ 作为原 M_B 边在抑制后仍在，排除 D3 的唯一例外。"
+    },
+    {
+      "id": "MC17",
+      "source_unit": "S06",
+      "status": "PASS",
+      "evidence": "任意 58 边短匹配 ⇒ 相邻孔时增一短边合法并交给 E10；独立且双非星时交给已接受双非星定理。若至少一色星，以该中心平移并置换六叶方向，星叶成为六活跃单位奇孔。两个变换可逆，保短、保独立、保全部原边，适用于两色都成星。"
+    },
+    {
+      "id": "MC18",
+      "source_unit": "S06",
+      "status": "PASS",
+      "evidence": "规范输入 ⇒ 任一活跃 n_i≤4 交给 LOW4。否则六活跃列之和≥30；总和 24+2k，n_g≥max(0,k−1)，故 k=0 时活跃和≤24，1≤k≤4 时≤25+k≤29。k=5 时强制 n_g=4、所有活跃 n_i=5，进而 g∈S 且 g∉T，逐活跃位的指示函数相等给 T=S 除 g；活跃置换归入 H*。k=6 由唯一未入选重六点的缺位在活跃集或为 g 划分两型。"
+    },
+    {
+      "id": "MC19",
+      "source_unit": "S06",
+      "status": "PASS",
+      "evidence": "穷尽各分支 ⇒ E12 覆盖每个 58 边原短匹配，选择可依赖该任意原 M，结论保留 M 全部边。既有 59 边 E10 与 60–64 边圈层补齐所有更密匹配，所以得到至少 58 边的全称圈延拓。"
+    },
+    {
+      "id": "MC20",
+      "source_unit": "S07",
+      "status": "PASS",
+      "evidence": "主定理只用 117 和单切分 D3，E12 另用三项合并导入，依赖无环。论证是有限图的确切计数与构造，极限交换、渐近一致性及概率模式义务不适用。"
+    }
+  ],
+  "boundary_checks": [
+    {
+      "id": "B01",
+      "test": "最小 c=4",
+      "evidence": "四个 A 偶端口、零奇端口；取两个 p 后，D 的四端点仍合法。D、p1p2 和 v1、v2 端点分离，所以删除后不存在孤立点。",
+      "status": "PASS"
+    },
+    {
+      "id": "B02",
+      "test": "两辅助边冲突或切割顺序",
+      "evidence": "p 是跨端口，w 是原内边端点，四端点互异；原 v 也与两组端点分离。先删 w1w2 并接回 v，才对单条生成路删 p1p2；任意 p–v 配对都不改变后续端点集。",
+      "status": "PASS"
+    },
+    {
+      "id": "B03",
+      "test": "标记互配、或分配到消费孔",
+      "evidence": "互配走四点路径，非互配走两条点不交路径，消费孔只作外端点；抑制逆转先于 R_B 逆转。",
+      "status": "PASS"
+    },
+    {
+      "id": "B04",
+      "test": "长边或同色边",
+      "evidence": "两处调用均以 K(Q6) 规定匹配为域。运输保距；压缩边允许同色；最终只留下原短边、短桥及局部工具补加的短边。",
+      "status": "PASS"
+    },
+    {
+      "id": "B05",
+      "test": "单切分只有一条跨边",
+      "evidence": "D3 检查落在接收匹配 F_B；原短边 ww′ 未被抑制，w 固定为内部点，故即使跨边只有一条也不以 w 为对侧端点。",
+      "status": "PASS"
+    },
+    {
+      "id": "B06",
+      "test": "边界分类",
+      "evidence": "检查了 k=0、k=4 的最大活跃和，k=5 的全等边界，k=6 缺 g/缺活跃位两型，以及相邻孔和双星。各分支均有全称接口。",
+      "status": "PASS"
+    }
+  ],
+  "dependency_dag": [
+    {
+      "from": "TWO_TARGET accepted conditional transfer and verified full-rank types",
+      "to": "GOOD_ROOT core 117 PASS"
+    },
+    {
+      "from": "core 117 PASS",
+      "to": "four-bridge theorem"
+    },
+    {
+      "from": "D3 single-cut conditional PASS",
+      "to": "four-bridge theorem"
+    },
+    {
+      "from": "four-bridge theorem",
+      "to": "E12"
+    },
+    {
+      "from": "LOW4",
+      "to": "E12"
+    },
+    {
+      "from": "BOTH_NONSTAR",
+      "to": "E12"
+    },
+    {
+      "from": "E10",
+      "to": "E12"
+    },
+    {
+      "from": "E12",
+      "to": "at-least-58 cycle extension"
+    },
+    {
+      "from": "accepted 59–64 edge cycle layers",
+      "to": "at-least-58 cycle extension"
+    }
+  ],
+  "excluded_open_imports": [
+    "TWO_TARGET local 37",
+    "TWO_TARGET local 67"
+  ],
+  "open_issues": [],
+  "open_in_scope_fatal": 0,
+  "open_in_scope_critical": 0,
+  "open_in_scope_major": 0,
+  "open_in_scope_minor": 0,
+  "new_matching_samples": 0,
+  "hamilton_solver_runs": 0,
+  "matching_or_hole_family_enumerations": 0,
+  "old_certificate_replays": 0,
+  "formal_closure_updated": false,
+  "full_E12_passed": true,
+  "at_least_58_passed": true,
+  "report_sha256": "2f97699304434611cc3aeec24aecda0d6c2986fec37433fde54a5324f6f42075",
+  "verified_imports": [
+    {
+      "used_in": "theorem",
+      "source": "Q6_T15_GOOD_ROOT_COMPONENTS.md",
+      "scope": "Only core 117: minority hole 0, retained majority holes {31,61,62}, and specified omitted holes {1,2}, for arbitrary K(Q6) prescribed matching. The 15-vertex covered fiber forces a certified root. No parent-domain filtering result is used.",
+      "receipt": "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json",
+      "receipt_verdict": "PASS",
+      "hashes_verified": true,
+      "sha256": {
+        "Q6_T15_GOOD_ROOT_COMPONENTS.md": "4a1f2a0a555178b7fcc25c0ab43a280ec623af8aa77543b7d2eb744f996b9ff0",
+        "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.md": "66257e0d5b0d0cb98c926d23baaae9d96543e5d19c2128543cc49872709688b6",
+        "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25"
+      }
+    },
+    {
+      "used_in": "theorem via core 117",
+      "source": "Q6_T15_TWO_TARGET_TRANSFER.md",
+      "scope": "Accepted conditional transfer and verified full-rank local types only, through the core 117 good-root argument. Local types 37 and 67 remain open and are not assumed.",
+      "receipt": "Q6_T15_TWO_TARGET_REVIEW.json",
+      "receipt_verdict": "WARN",
+      "hashes_verified": true,
+      "sha256": {
+        "Q6_T15_TWO_TARGET_TRANSFER.md": "407d85615bf8c0f434421ba39f9555ebfee794908ee2897fa006acea04f9f25b",
+        "Q6_T15_TWO_TARGET_REVIEW.md": "a517827321be0be05d52c092a4e342fdcb9adc575e0b78bec945487cd2ed2071",
+        "Q6_T15_TWO_TARGET_REVIEW.json": "23d79315fd5bf985059d64795ed5e359c1e2087b9170f35ec89fd0c17da71279"
+      }
+    },
+    {
+      "used_in": "theorem",
+      "source": "Q6_T15_D3_OBSTRUCTION.md",
+      "scope": "Single-cut D3 only, for arbitrary K(Q6) matching with one minority and five majority holes. Requires both omissions on the minority side, four majority holes on that side, and minority nonadjacent to all retained holes. The exceptional sole crossing with opposite endpoint equal to the minority mirror is excluded from the invocation.",
+      "receipt": "Q6_T15_D45_D3_REVIEW.json",
+      "receipt_verdict": "PASS",
+      "hashes_verified": true,
+      "sha256": {
+        "Q6_T15_D3_OBSTRUCTION.md": "038a417bf137ba07e757224d33385100685ec0a3710c35ea7e087e6f5e7e649b",
+        "Q6_T15_D45_D3_REVIEW.md": "e097b0dfce7724bddbcdafa762824ded1900cf86e260e30c4e8ea7a52448ee6d",
+        "Q6_T15_D45_D3_REVIEW.json": "515a9e879168a93d3f5394ad1c9df054d16c4ca68f968fdd2f53b4ebf4af4a20"
+      }
+    },
+    {
+      "used_in": "corollary only",
+      "source": "R7_TEN_HOLE_CYCLE_CLOSURE.md",
+      "scope": "Every 59-edge short matching in Q7 has an all-short Hamilton extension. Used after adding a short edge between adjacent holes. The accepted scope also records the combined already accepted at-least-59-edge result.",
+      "receipt": "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.json",
+      "receipt_verdict": "PASS",
+      "hashes_verified": true,
+      "sha256": {
+        "R7_TEN_HOLE_CYCLE_CLOSURE.md": "7d0e9b84e0c89ec1f34a81989f9e86ce902fd58c36d1f12613b2a6949bc3181e",
+        "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.md": "0726cd8b080193438b732b3876e4b549246535bc9dc7a2219bae2e002d5b71d2",
+        "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.json": "1d3c9dac8553ce17f41317f6bb3b9e10331bb53badc3cc44d782d7260fc0b25e"
+      }
+    },
+    {
+      "used_in": "corollary only",
+      "source": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE.md",
+      "scope": "Every 58-edge short matching whose six holes of each color do not form a six-leaf star extends to an all-short Hamilton cycle.",
+      "receipt": "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.json",
+      "receipt_verdict": "PASS",
+      "hashes_verified": true,
+      "sha256": {
+        "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE.md": "7f9fa25e062cc8defac4cd7a451aa4d50c95e766a00ea0f551177a277a428180",
+        "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.md": "8b6fc6d3ad11d5df9297bda54ad6c05d7b5ba47c0316ee903c8372b0d8db68a8",
+        "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.json": "a1ff5a50a86c0b621d02d3fb5b51a368e8ad56fe77d3d7dffec2b44c28c36887",
+        "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json": "45a93b385e96d0242cb4dfc4004192b0125396748d53309cb063b03be4a428f7"
+      }
+    },
+    {
+      "used_in": "corollary only",
+      "source": "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE.md",
+      "scope": "Every normalized independent twelve-hole star input with an active coordinate i having n_i<=4. The high residual classification is also independently derived in the present proof. The caller accepted the exact scope of the 14-obligation fresh audit before this package was frozen.",
+      "receipt": "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.json",
+      "receipt_verdict": "PASS",
+      "hashes_verified": true,
+      "sha256": {
+        "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE.md": "044f342d8c23c133538fd8757f953efd2a2cabbc75cad533e36bc4d229d11d03",
+        "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.md": "45c1c4ca751c5643decf727b7caa507e8b2497b5d8434a489358f4050cf1c240",
+        "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.json": "8dbe49db12fff70290a6be229b645285e2c3957c6a01d6a8014b14ae1e8551b5",
+        "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_INPUTS.json": "e8f424c98a3f9fca2bc22b3e77dd27bbb69e0b1e7049fa9afae17ab4e9169eb1"
+      }
+    }
+  ],
+  "audited_input_hashes": {
+    "R7_TWELVE_HOLE_STAR_HIGH_FOUR_BRIDGES.md": "d7e0631d7c3272dd0700538c7abf6a73b9efe29624b67f77769be9db78df5e72",
+    "R7_TWELVE_HOLE_STAR_HIGH_FOUR_BRIDGES_INPUTS.json": "0cac762ed515d40dacd7bffafd432cece9c7a0ea86afdbe005fc059b688532ca",
+    "D:/mathrsi/math-rsi-3/math-rsi-3/base/skills/skills-codex/proof-checker/SKILL.md": "716a86370b1768b616943d449ab106b901fa55e239ab76ef9f5eebb9779ba39e",
+    "Q6_T15_GOOD_ROOT_COMPONENTS.md": "4a1f2a0a555178b7fcc25c0ab43a280ec623af8aa77543b7d2eb744f996b9ff0",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.md": "66257e0d5b0d0cb98c926d23baaae9d96543e5d19c2128543cc49872709688b6",
+    "Q6_T15_GOOD_ROOT_COMPONENTS_REVIEW.json": "783be787be572b3654e74b7251aa4b42ef87c58c47c49a4d7f2f263e5034da25",
+    "Q6_T15_TWO_TARGET_TRANSFER.md": "407d85615bf8c0f434421ba39f9555ebfee794908ee2897fa006acea04f9f25b",
+    "Q6_T15_TWO_TARGET_REVIEW.md": "a517827321be0be05d52c092a4e342fdcb9adc575e0b78bec945487cd2ed2071",
+    "Q6_T15_TWO_TARGET_REVIEW.json": "23d79315fd5bf985059d64795ed5e359c1e2087b9170f35ec89fd0c17da71279",
+    "Q6_T15_D3_OBSTRUCTION.md": "038a417bf137ba07e757224d33385100685ec0a3710c35ea7e087e6f5e7e649b",
+    "Q6_T15_D45_D3_REVIEW.md": "e097b0dfce7724bddbcdafa762824ded1900cf86e260e30c4e8ea7a52448ee6d",
+    "Q6_T15_D45_D3_REVIEW.json": "515a9e879168a93d3f5394ad1c9df054d16c4ca68f968fdd2f53b4ebf4af4a20",
+    "R7_TEN_HOLE_CYCLE_CLOSURE.md": "7d0e9b84e0c89ec1f34a81989f9e86ce902fd58c36d1f12613b2a6949bc3181e",
+    "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.md": "0726cd8b080193438b732b3876e4b549246535bc9dc7a2219bae2e002d5b71d2",
+    "R7_TEN_HOLE_FULL_REVIEW_COMPLETION.json": "1d3c9dac8553ce17f41317f6bb3b9e10331bb53badc3cc44d782d7260fc0b25e",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE.md": "7f9fa25e062cc8defac4cd7a451aa4d50c95e766a00ea0f551177a277a428180",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.md": "8b6fc6d3ad11d5df9297bda54ad6c05d7b5ba47c0316ee903c8372b0d8db68a8",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_REVIEW.json": "a1ff5a50a86c0b621d02d3fb5b51a368e8ad56fe77d3d7dffec2b44c28c36887",
+    "R7_TWELVE_HOLE_BOTH_NONSTAR_CLOSURE_INPUTS.json": "45a93b385e96d0242cb4dfc4004192b0125396748d53309cb063b03be4a428f7",
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE.md": "044f342d8c23c133538fd8757f953efd2a2cabbc75cad533e36bc4d229d11d03",
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.md": "45c1c4ca751c5643decf727b7caa507e8b2497b5d8434a489358f4050cf1c240",
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_REVIEW.json": "8dbe49db12fff70290a6be229b645285e2c3957c6a01d6a8014b14ae1e8551b5",
+    "R7_TWELVE_HOLE_STAR_LOW4_CLOSURE_INPUTS.json": "e8f424c98a3f9fca2bc22b3e77dd27bbb69e0b1e7049fa9afae17ab4e9169eb1"
+  }
+}

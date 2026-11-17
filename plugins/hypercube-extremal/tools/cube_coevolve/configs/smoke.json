@@ -1,0 +1,13 @@
+{
+  "n": 3,
+  "goal": {"metric": "edges", "sense": "max", "target": 10, "conditions": []},
+  "provider": {"backend": "offline"},
+  "seed": 17,
+  "search_steps": 12,
+  "max_graphs": 4,
+  "program_timeout_seconds": 10,
+  "bootstrap_random": 3,
+  "metrics": [{"name": "q2_edges_max", "kind": "face_aggregate", "dimension": 2, "metric": "edges", "aggregate": "max"}],
+  "initial_inequalities": [{"name": "q3_edge_target_conjecture", "coefficients": {"edges": 1}, "rhs": 9, "conditions": []}],
+  "exhaustive_oracle": true
+}

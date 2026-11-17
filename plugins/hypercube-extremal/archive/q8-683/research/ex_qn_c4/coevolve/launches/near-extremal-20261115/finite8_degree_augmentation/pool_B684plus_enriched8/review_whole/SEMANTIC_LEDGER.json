@@ -1,0 +1,971 @@
+{
+  "status": "ALL_DECLARED_MATHEMATICAL_OBLIGATIONS_DISCHARGED",
+  "source_unit_coverage_receipt": "SOURCE_UNIT_COVERAGE.json",
+  "typed_symbols": [
+    {
+      "symbol": "Q_n",
+      "type_and_dependence": "fixed finite labelled n-dimensional cube;n=3,4,6,8 only"
+    },
+    {
+      "symbol": "G",
+      "type_and_dependence": "arbitrary C4-free spanning subgraph of Q8"
+    },
+    {
+      "symbol": "H",
+      "type_and_dependence": "ordinary inclusion-maximal C4-free supergraph of G"
+    },
+    {
+      "symbol": "m",
+      "type_and_dependence": "integer e(H) in684..688 under contradiction hypothesis"
+    },
+    {
+      "symbol": "n_d(P)",
+      "type_and_dependence": "nonnegative integer degree-d count on one actual parity, sum128,degree sum m,n0=0"
+    },
+    {
+      "symbol": "S_F,c_F,L_F",
+      "type_and_dependence": "integer specified-parity cubic star sum,full count,low<=2 count on actual Q6"
+    },
+    {
+      "symbol": "C_d,b_d",
+      "type_and_dependence": "fixed nonnegative integer coefficient lists of length9"
+    },
+    {
+      "symbol": "lambda",
+      "type_and_dependence": "probability measure on all1120 actual Q4 restrictions of one H"
+    },
+    {
+      "symbol": "alpha",
+      "type_and_dependence": "half each of two actual parity-profile point masses on645 cover"
+    },
+    {
+      "symbol": "beta",
+      "type_and_dependence": "probability measure on1024 ambient edge observations,aggregated into1751 endpoint orbits"
+    },
+    {
+      "symbol": "eta_d,N_d",
+      "type_and_dependence": "expected alpha parity count and global H degree count;N_d=2eta_d"
+    },
+    {
+      "symbol": "x",
+      "type_and_dependence": "in linear systems: concatenated nonnegative(lambda,alpha,beta);at one root: explicitly typed histogram with total6/7/28 according to context"
+    },
+    {
+      "symbol": "c_i(K)",
+      "type_and_dependence": "nonnegative integer folded upper coefficients;face and vertex group sums64512"
+    },
+    {
+      "symbol": "h_j(K)",
+      "type_and_dependence": "nonnegative integer local degree histogram,5 coordinates,sum16"
+    },
+    {
+      "symbol": "Q,Qbar",
+      "type_and_dependence": "symmetric kernel and its common-root stabilizer average;positivity only when specifically proved"
+    },
+    {
+      "symbol": "E,b,A,g",
+      "type_and_dependence": "356 equality matrix,RHS b0=b1=1,selected inequality matrix A=-g,g>=0"
+    },
+    {
+      "symbol": "y,z,Dy",
+      "type_and_dependence": "integer dual coefficients,356/8051 lengths,z<=0,Dy=10^9"
+    },
+    {
+      "symbol": "D,NW,NH",
+      "type_and_dependence": "positive common exact denominator551690954352885760000000000 and integer packed/hist numerators"
+    },
+    {
+      "symbol": "q,qh,T",
+      "type_and_dependence": "nearest-integer oracle query coefficients and positive scale10^9;distinct from row-specific q vectors"
+    },
+    {
+      "symbol": "delta,Amax,Bmax,eps,M",
+      "type_and_dependence": "fixed exact rational constants in CHECKS.json,not asymptotic or empirical estimates"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "D01",
+      "type": "definition",
+      "canonical_quantified_statement": "G ranges over all C4-free spanning edge subgraphs of the fixed labelled Q8.",
+      "uses": [],
+      "source": "B01",
+      "justification_rule": "original object",
+      "hypothesis_discharge": [
+        "Spanning does not impose positive original degree."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L01",
+      "type": "lemma",
+      "canonical_quantified_statement": "For every such G with e(G)>=684, there exists an ordinary inclusion-maximal C4-free H containing G, m=e(H)>=684.",
+      "uses": [
+        "D01"
+      ],
+      "source": "B01",
+      "justification_rule": "finite maximal extension",
+      "hypothesis_discharge": [
+        "Only ambient edge additions preserving C4-freeness; finiteness of1024 edges."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L02",
+      "type": "lemma",
+      "canonical_quantified_statement": "Every ordinary inclusion-maximal C4-free H in Q8 has no isolated vertex.",
+      "uses": [
+        "L01"
+      ],
+      "source": "B01",
+      "justification_rule": "safe edge addition",
+      "hypothesis_discharge": [
+        "Any added edge at an isolated vertex cannot complete a cycle."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "C01",
+      "type": "finite-certificate",
+      "canonical_quantified_statement": "All25 CNFs encode the reviewed finite Q6 counterexample cases and have strict RUP derivations of empty;4383882 additions. ",
+      "uses": [],
+      "source": "I03/I04;FRESH_REPLAYS.json",
+      "justification_rule": "complete geometric/Boolean reconstruction and previously completed real exact replay",
+      "hypothesis_discharge": [
+        "Both parity choices normalized by one whole isometry; arbitrary opposite degrees; actual input/trace/source/binary hashes rebound here; ordinary audited checker trust boundary explicit."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L03",
+      "type": "lemma",
+      "canonical_quantified_statement": "For every C4-free Q6 and either fixed parity P, 4 sum_P C(d,3)+2 #{d=6} <=632+5 #{d<=2}.",
+      "uses": [
+        "C01"
+      ],
+      "source": "I03",
+      "justification_rule": "finite cover, analytic low-root replacements and residue table",
+      "hypothesis_discharge": [
+        "All0/1/2 specified degrees; no opposite minimum degree; six min3 cases,17 one-low2 cases,two four-full inputs,analytic degree1/0 and three-full slots."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L04",
+      "type": "lemma",
+      "canonical_quantified_statement": "For every H and either actual parity P, sum C_d n_d(P)<=138432-201m; hence m<=688.",
+      "uses": [
+        "L01",
+        "L03"
+      ],
+      "source": "B01/I01",
+      "justification_rule": "sum112 actual Q6 face inequalities",
+      "hypothesis_discharge": [
+        "Same global parity inherited on each face; multiplicities10 and C(d,6); low l_d exact; all C_d>=0; two degree sums."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L05",
+      "type": "lemma",
+      "canonical_quantified_statement": "For every C4-free H and either actual parity P, sum b_d n_d(P)<=6912-10m.",
+      "uses": [
+        "D01"
+      ],
+      "source": "B01/I01",
+      "justification_rule": "Q3 full-star injection",
+      "hypothesis_discharge": [
+        "Any two distinct same-parity Q3 roots distance2; both full stars force their square;1792 Q3 faces."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L06",
+      "type": "finite-cover",
+      "canonical_quantified_statement": "Every parity profile of an H with m>=684 lies in the frozen645 row cover, at its same m in{684,...,688}.",
+      "uses": [
+        "L02",
+        "L04",
+        "L05"
+      ],
+      "source": "B01;CHECKS.json",
+      "justification_rule": "independent complete nonnegative integer enumeration",
+      "hypothesis_discharge": [
+        "Positive C budget bounds n1,n2,n3,n4,n7,n8; n5,n6 uniquely solved; no additional683 filters; exact row set and counts385/170/66/20/4."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "D02",
+      "type": "definition",
+      "canonical_quantified_statement": "For each fixed H, lambda is uniform on1120 actual Q4 restrictions, alpha is half each actual parity profile, eta_d=N_d/2, beta is empirical over1024 ambient edges.",
+      "uses": [
+        "L01",
+        "L06"
+      ],
+      "source": "B02",
+      "justification_rule": "three pushforwards of one H",
+      "hypothesis_discharge": [
+        "All three measures nonnegative and mass1; no root-type conditional normalization."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L07",
+      "type": "lemma",
+      "canonical_quantified_statement": "Every actual missing-root histogram has x7>=1; every retained-root histogram excludes state7.",
+      "uses": [
+        "L01"
+      ],
+      "source": "B02/I01",
+      "justification_rule": "ordinary maximality and coordinate-square characterization",
+      "hypothesis_discharge": [
+        "Any C4 through an added edge is its square with one other axis; seven external directions."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L08",
+      "type": "lemma",
+      "canonical_quantified_statement": "Every leaf is joined to a distinct degree8 vertex; its retained-root histogram is pure5 or pure6 under endpoint orientation.",
+      "uses": [
+        "L01"
+      ],
+      "source": "B02/B04/I12",
+      "justification_rule": "maximal leaf closure and injection",
+      "hypothesis_discharge": [
+        "Only retained direction at a leaf must be the direction of every completing square; two leaves sharing a neighbor contradict closure."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L09",
+      "type": "finite-cover",
+      "canonical_quantified_statement": "All actual beta observations map to the frozen1751 columns; these are exactly endpoint-flip orbits of3202 allowed raw histograms.",
+      "uses": [
+        "L07",
+        "L08"
+      ],
+      "source": "B02;CHECKS.json",
+      "justification_rule": "independent full lexicographic histogram and orbit enumeration",
+      "hypothesis_discharge": [
+        "1716 missing,1486 retained; each raw row once; common flip preserves every later observable, no class-size multiplier."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L10",
+      "type": "sampling-identity",
+      "canonical_quantified_statement": "For every actual H and every symmetric face kernel Q, E_lambda T_Q = average_actual_roots x^T Qbar x/36, with full-state x>=0 integer,total6.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B03/I06",
+      "justification_rule": "exact with-replacement collision identity",
+      "hypothesis_discharge": [
+        "Uniform two of six external directions;1120*24=1792*15; simultaneous root gauge; both face coefficients nonnegative and total64512."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L11",
+      "type": "sampling-identity",
+      "canonical_quantified_statement": "For every actual H and symmetric9x9 Q, E_lambda T_Q=E_vertex x^TQx/784, with actual square-state x,total28.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B03/I06",
+      "justification_rule": "overlap-category finite sampling",
+      "hypothesis_discharge": [
+        "Among28 pairs:15 disjoint,12 overlap,1 equal; completion multiplicities1,5,15; local weights720,144,24; vertex coefficient mass64512."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L12",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows0..6 hold on actual(lambda,alpha): both masses1 and five hypergeometric degree marginals.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B03",
+      "justification_rule": "uniform vertex/four-axis count",
+      "hypothesis_discharge": [
+        "128*C(8,4)=8960; local histogram/16; no fixed683 assumption."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L13",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows7..70 equate the64 true-upper edge moments U/129024 to Gnum beta/98.",
+      "uses": [
+        "D02",
+        "L10"
+      ],
+      "source": "B03/I07",
+      "justification_rule": "edge sampling and exact face pullback",
+      "hypothesis_discharge": [
+        "Unbiased local kernel(3zzT-2diag z)/21; global x/7; true-upper multiplier diagonal2y offdiag y; raw lift392 and extra1/2 give784."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L14",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows71..88 hold: EP beta=RHS alpha/512.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B03",
+      "justification_rule": "count all ambient endpoint incidences",
+      "hypothesis_discharge": [
+        "Endpoint degrees r+bit sums; N_d=2eta_d; retained degree d or missing degree8-d."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L15",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows89..124: all36 mixed-state retained-minus-missing balances vanish.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B03/I08",
+      "justification_rule": "one mixed square offers one retained and one missing root",
+      "hypothesis_discharge": [
+        "Same H and degree at marked endpoint; row scaling1/7 positive."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L16",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows125..151:2304 B beta=7 W F_vertex^T lambda.",
+      "uses": [
+        "D02",
+        "L11"
+      ],
+      "source": "B03/I08",
+      "justification_rule": "same-vertex group second-moment double count",
+      "hypothesis_discharge": [
+        "Group totals F0,F1,F2; C incidence first moment factor1/2;392; folded W diagonal2/off1; stored lambda7WF/129024,beta-B/56."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L17",
+      "type": "equality",
+      "canonical_quantified_statement": "Rows152..355: E_lambda L_z/64=E_beta H_z/70 for all204 triple histograms, and L_z/64=T_Kz/80.",
+      "uses": [
+        "D02",
+        "L10"
+      ],
+      "source": "B03/I09/I10",
+      "justification_rule": "actual occurrence bijection and collision cancellation",
+      "hypothesis_discharge": [
+        "Both orientations;32 local/1024 global ambient edges;35 external triples; A symmetric and common-root invariant; K=12A-diag A_i-diag A_j."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L18",
+      "type": "equality-system",
+      "canonical_quantified_statement": "Every actual x=(lambda,alpha,beta) satisfies Ex=b, with exactly b0=b1=1 nonzero.",
+      "uses": [
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17"
+      ],
+      "source": "B03",
+      "justification_rule": "combine all356 actual scientific equations",
+      "hypothesis_discharge": [
+        "All families refer to the same H and same root transport."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L19",
+      "type": "inequality",
+      "canonical_quantified_statement": "All19 active PSD-ray rows are nonnegative on every actual H.",
+      "uses": [
+        "L10"
+      ],
+      "source": "B04",
+      "justification_rule": "q qT quadratic square",
+      "hypothesis_discharge": [
+        "Actual q integer correct dimensions and blocks0..3; scales positive; common-root average preserves validity."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L20",
+      "type": "inequality",
+      "canonical_quantified_statement": "All49 active integer-six rows are nonnegative on every actual H.",
+      "uses": [
+        "L10"
+      ],
+      "source": "B04",
+      "justification_rule": "36(L-t)(L-t-1)>=0 for integer L",
+      "hypothesis_discharge": [
+        "All q,t integers;n=6;all nonnegative integer root counts total6; no n28 premise."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L21",
+      "type": "inequality",
+      "canonical_quantified_statement": "For t in{1,2,3,7,8}, the five actual neighbor-capacity slacks are nonnegative.",
+      "uses": [
+        "D02"
+      ],
+      "source": "B04",
+      "justification_rule": "distinct forced missing remote incidences",
+      "hypothesis_discharge": [
+        "Every retained-direction pair forces one of two distinct remote incidence omissions; summing degree-t vertices;beta normalization1024,alpha N_t/2;positive division16."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L22",
+      "type": "equality",
+      "canonical_quantified_statement": "The selected conditional195 row has expected value0 on every actual no-isolated H.",
+      "uses": [
+        "L02",
+        "L11",
+        "D02"
+      ],
+      "source": "B04;CONDITIONAL195_ANALYTIC_IDENTITY.json",
+      "justification_rule": "explicit81-entry matrix10^6(2ssT-J) and degree-group counts",
+      "hypothesis_discharge": [
+        "s=1 outside I0;S=28-C(8-d,2);actual B_d cancels xQx for d1..8;B0 unused because n0=0;alpha factor128*784."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "C02",
+      "type": "finite-certificate",
+      "canonical_quantified_statement": "Each of the eight actual connector matrices is nonnegative on all54264 integer16-count histograms of total6.",
+      "uses": [],
+      "source": "83 annex;independent_B8/INDEPENDENT_RESULT.json",
+      "justification_rule": "previously completed independently reconstructed exact integer full-domain check",
+      "hypothesis_discharge": [
+        "Source hashes rebound;actual minima240,240,112,176,56,104,66,128;exact same matrices/scales as combination."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L23",
+      "type": "inequality",
+      "canonical_quantified_statement": "All eight selected full-state connector rows hold for every actual C4-free H.",
+      "uses": [
+        "L10",
+        "C02"
+      ],
+      "source": "B04/I11",
+      "justification_rule": "all-full-state connector pullback",
+      "hypothesis_discharge": [
+        "Every legal flag uses connector code f&15;all six actual flags contribute;common root action preserves complete integer total6 domain;no PSD/copositivity/A-case premise."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L24",
+      "type": "inequality-system",
+      "canonical_quantified_statement": "Every actual x satisfies the83 selected inequalities g(x)>=0, equivalently Ax<=0 for A=-g.",
+      "uses": [
+        "L08",
+        "D02",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23"
+      ],
+      "source": "B04",
+      "justification_rule": "combine precisely nonzero-weight valid rows",
+      "hypothesis_discharge": [
+        "Global leaf eta8-eta1>=0;no inactive finite projection,vertex28,683-only or joint-projection premise."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "C03",
+      "type": "exact-coefficients",
+      "canonical_quantified_statement": "The actual integer arrays represent a=(yE+zA)/10^9 with101801 packed,5histogram,645alpha,1751beta coefficients over common D.",
+      "uses": [],
+      "source": "B05;exact combination;I15/I16/I17",
+      "justification_rule": "independent exact scientific reconstruction and parameter/array/hash agreement",
+      "hypothesis_discharge": [
+        "All356 maps rebuilt from geometry; every active parameter source and positive scale bound; native floating maps used only diagnostic."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L25",
+      "type": "lower-bound",
+      "canonical_quantified_statement": "Every actual x obeys a.x>=delta=92993/500000000.",
+      "uses": [
+        "L18",
+        "L24",
+        "C03"
+      ],
+      "source": "B05",
+      "justification_rule": "z<=0 and A x<=0 imply zA x>=0",
+      "hypothesis_discharge": [
+        "y unrestricted;b only0,1;all83 active z signs checked;no solver optimality or primal premise."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L26",
+      "type": "uniform-bound",
+      "canonical_quantified_statement": "For every legal labelled Q4 K, |l(K)-lhat(K)|<=eps=529874002317/601295421440000000000.",
+      "uses": [
+        "L10",
+        "L11",
+        "C03"
+      ],
+      "source": "B05",
+      "justification_rule": "groupwise triangle inequality on nonnegative coefficients",
+      "hypothesis_discharge": [
+        "Face and vertex masses each64512;histogram mass16;exact nearest-integer rounding scale10^9;complete coefficients checked."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L27",
+      "type": "invariance",
+      "canonical_quantified_statement": "For any symmetric query matrices and degree-histogram coefficients, the synchronized finite-eight functional is invariant under every Q4 isometry.",
+      "uses": [
+        "L10",
+        "L11"
+      ],
+      "source": "I06/I13/I14",
+      "justification_rule": "common root stabilizer averaging and marked-vertex axis quotient",
+      "hypothesis_discharge": [
+        "Both flags transported together;external swap symmetric;all faces/vertices and pair intersections permuted."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "C04",
+      "type": "finite-maximum",
+      "canonical_quantified_statement": "For this exact hash-bound final integer query, every legal Q4 has raw score<=-37440, and equality is attained.",
+      "uses": [
+        "L27"
+      ],
+      "source": "B05;I13/I14;actual final B8 stdout",
+      "justification_rule": "complete ordered-Q3-layer-pair orbit cover and all allowed crossing independent sets",
+      "hypothesis_discharge": [
+        "All2902 legal Q3;all8421604 ordered layer pairs;90179 common orbits;all crossing sets;13150453 marked completions;actual complete independent source-recompiled run;source/query hashes match;integer overflow bound checked."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "L28",
+      "type": "upper-bound",
+      "canonical_quantified_statement": "For every actual x, a.x <= M+eps+Amax+Bmax, M=-13/22400000000.",
+      "uses": [
+        "D02",
+        "L09",
+        "L06",
+        "L26",
+        "C04",
+        "C03"
+      ],
+      "source": "B05/B06",
+      "justification_rule": "three separate finite maxima and probability averaging",
+      "hypothesis_discharge": [
+        "Each measure mass1;full alpha/beta covers;exact positive Amax and Bmax allowed;no common maximizing graph required."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "T01",
+      "type": "theorem",
+      "canonical_quantified_statement": "For every C4-free spanning edge subgraph G of Q8, e(G)<=683.",
+      "uses": [
+        "L01",
+        "L04",
+        "L25",
+        "L28"
+      ],
+      "source": "B06",
+      "justification_rule": "positive exact margin contradiction",
+      "hypothesis_discharge": [
+        "delta-M-eps-Amax-Bmax=782808475930428709/4209067950080000000000>0;all m684..688 excluded;maximal extension may change edge count."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    },
+    {
+      "id": "S01",
+      "type": "scope",
+      "canonical_quantified_statement": "The separate theorem e(G)<=682 is not proved; m683 remains open.",
+      "uses": [
+        "T01"
+      ],
+      "source": "B06/B07",
+      "justification_rule": "exact statement-conclusion scope",
+      "hypothesis_discharge": [
+        "No claim beyond upper683 or graph realizability."
+      ],
+      "status": "DISCHARGED",
+      "open_issues": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "L01",
+      "uses": "D01"
+    },
+    {
+      "from": "L02",
+      "uses": "L01"
+    },
+    {
+      "from": "L03",
+      "uses": "C01"
+    },
+    {
+      "from": "L04",
+      "uses": "L01"
+    },
+    {
+      "from": "L04",
+      "uses": "L03"
+    },
+    {
+      "from": "L05",
+      "uses": "D01"
+    },
+    {
+      "from": "L06",
+      "uses": "L02"
+    },
+    {
+      "from": "L06",
+      "uses": "L04"
+    },
+    {
+      "from": "L06",
+      "uses": "L05"
+    },
+    {
+      "from": "D02",
+      "uses": "L01"
+    },
+    {
+      "from": "D02",
+      "uses": "L06"
+    },
+    {
+      "from": "L07",
+      "uses": "L01"
+    },
+    {
+      "from": "L08",
+      "uses": "L01"
+    },
+    {
+      "from": "L09",
+      "uses": "L07"
+    },
+    {
+      "from": "L09",
+      "uses": "L08"
+    },
+    {
+      "from": "L10",
+      "uses": "D02"
+    },
+    {
+      "from": "L11",
+      "uses": "D02"
+    },
+    {
+      "from": "L12",
+      "uses": "D02"
+    },
+    {
+      "from": "L13",
+      "uses": "D02"
+    },
+    {
+      "from": "L13",
+      "uses": "L10"
+    },
+    {
+      "from": "L14",
+      "uses": "D02"
+    },
+    {
+      "from": "L15",
+      "uses": "D02"
+    },
+    {
+      "from": "L16",
+      "uses": "D02"
+    },
+    {
+      "from": "L16",
+      "uses": "L11"
+    },
+    {
+      "from": "L17",
+      "uses": "D02"
+    },
+    {
+      "from": "L17",
+      "uses": "L10"
+    },
+    {
+      "from": "L18",
+      "uses": "L12"
+    },
+    {
+      "from": "L18",
+      "uses": "L13"
+    },
+    {
+      "from": "L18",
+      "uses": "L14"
+    },
+    {
+      "from": "L18",
+      "uses": "L15"
+    },
+    {
+      "from": "L18",
+      "uses": "L16"
+    },
+    {
+      "from": "L18",
+      "uses": "L17"
+    },
+    {
+      "from": "L19",
+      "uses": "L10"
+    },
+    {
+      "from": "L20",
+      "uses": "L10"
+    },
+    {
+      "from": "L21",
+      "uses": "D02"
+    },
+    {
+      "from": "L22",
+      "uses": "L02"
+    },
+    {
+      "from": "L22",
+      "uses": "L11"
+    },
+    {
+      "from": "L22",
+      "uses": "D02"
+    },
+    {
+      "from": "L23",
+      "uses": "L10"
+    },
+    {
+      "from": "L23",
+      "uses": "C02"
+    },
+    {
+      "from": "L24",
+      "uses": "L08"
+    },
+    {
+      "from": "L24",
+      "uses": "D02"
+    },
+    {
+      "from": "L24",
+      "uses": "L19"
+    },
+    {
+      "from": "L24",
+      "uses": "L20"
+    },
+    {
+      "from": "L24",
+      "uses": "L21"
+    },
+    {
+      "from": "L24",
+      "uses": "L22"
+    },
+    {
+      "from": "L24",
+      "uses": "L23"
+    },
+    {
+      "from": "L25",
+      "uses": "L18"
+    },
+    {
+      "from": "L25",
+      "uses": "L24"
+    },
+    {
+      "from": "L25",
+      "uses": "C03"
+    },
+    {
+      "from": "L26",
+      "uses": "L10"
+    },
+    {
+      "from": "L26",
+      "uses": "L11"
+    },
+    {
+      "from": "L26",
+      "uses": "C03"
+    },
+    {
+      "from": "L27",
+      "uses": "L10"
+    },
+    {
+      "from": "L27",
+      "uses": "L11"
+    },
+    {
+      "from": "C04",
+      "uses": "L27"
+    },
+    {
+      "from": "L28",
+      "uses": "D02"
+    },
+    {
+      "from": "L28",
+      "uses": "L09"
+    },
+    {
+      "from": "L28",
+      "uses": "L06"
+    },
+    {
+      "from": "L28",
+      "uses": "L26"
+    },
+    {
+      "from": "L28",
+      "uses": "C04"
+    },
+    {
+      "from": "L28",
+      "uses": "C03"
+    },
+    {
+      "from": "T01",
+      "uses": "L01"
+    },
+    {
+      "from": "T01",
+      "uses": "L04"
+    },
+    {
+      "from": "T01",
+      "uses": "L25"
+    },
+    {
+      "from": "T01",
+      "uses": "L28"
+    },
+    {
+      "from": "S01",
+      "uses": "T01"
+    }
+  ],
+  "acyclic": true,
+  "topological_order": [
+    "D01",
+    "C01",
+    "C02",
+    "C03",
+    "L01",
+    "L03",
+    "L05",
+    "L02",
+    "L04",
+    "L07",
+    "L08",
+    "L06",
+    "L09",
+    "D02",
+    "L10",
+    "L11",
+    "L12",
+    "L14",
+    "L15",
+    "L21",
+    "L13",
+    "L16",
+    "L17",
+    "L19",
+    "L20",
+    "L22",
+    "L23",
+    "L26",
+    "L27",
+    "L18",
+    "L24",
+    "C04",
+    "L25",
+    "L28",
+    "T01",
+    "S01"
+  ],
+  "semantic_circularity_check": "No Q8 exclusion is used in a local gate,profile cover,valid-row proof or complete local maximum. The exact coefficients are discovered numerically but their validity and checked extrema do not assume the theorem.",
+  "limit_order_map": [],
+  "limit_order_note": "All sums,averages,domains and inequalities are finite and exact; no big-O,limits or interchange hypotheses.",
+  "counterexample_pass": "REVIEW.md section6;no verified counterexample or unresolved candidate.",
+  "mathematical_imports_left_open": [],
+  "formal_kernel_claim": false,
+  "same_family_provisional": true
+}

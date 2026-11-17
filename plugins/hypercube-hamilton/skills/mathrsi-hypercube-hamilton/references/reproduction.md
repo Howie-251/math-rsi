@@ -83,3 +83,19 @@ python3 -B plugins/hypercube-hamilton/tools/check_forest_rank.py \
 工具不计算某Q7标记集到target04的同构。使用原登记消费者中的共同映射时，核H完整六点与U指定三点一起送对，并运输局部规定边；只匹配H而省点组不同不得调用。原六核完整定理与首选回代见[原主证](../../../archive/q7/source/research/seven_directions_continuation/R7_MU3_T63_NEW_RANK.md)。原独审重算六核与本轮参数化重算单核是不同证据，准确运行范围由本轮[evidence](../../../../../development/evolution/v5-q7-20261114/evidence/)实收结果说明。
 
 本说明只给消费者入口，不自动授权新的生产者、完整Q7搜索或大矩阵批次。输入缺件先读归档清单；一条计划失败先返回其确切桥源/孔/标记字段或数学前提，不能把冻结消费者改成总是返回期望值。
+
+## Q7 完整 E16（≥56 边）随仓核验与外部轨迹边界（v6）
+
+`v6` 新增的完整 E16 包与已合入的 290 份基线导入位于 [archive/q7-e16](../../../archive/q7-e16/README.md)（`v5` 的 `archive/q7/` 保持原样不变）。从仓库根运行（仅需 Python 3 标准库）：
+
+```sh
+python3 -B plugins/hypercube-hamilton/archive/q7-e16/check_e16_bundle.py
+```
+
+该入口在不修改只读 `archive/q7-e16/` 的前提下完成四项检查：
+1. 逐个核对随仓全部 261 份 E16 原件与全部 290 份已合入基线导入文件的字节长度和 SHA-256；
+2. 独立复算 `μ=0` 大面 `19 + 98 + 72 = 189` 行独立孔表的奇偶性、非短邻性与位串哈希 `0f6dce217ea…`，并核对 `MU0_STRUCTURED_JOINT.pb`（`100,051` 条约束）；
+3. 在临时副本实际执行 `MU0_A0_BASIS_REVIEW_check.py`（穷举 4,950 带标号对 → 19 个 `S6` 轨道）、`MU0_A0_PLANS_REVIEW_check.py`（19 条 `a=0` 计划）、`MU0_A12_BASIS_REVIEW_check.py`（`98 + 72` 个 `S6` 轨道）及 `Q6_A8_FULL_REVIEW_check.py`（41 个残余轨道与奇纤维）；
+4. 若当前 Python 环境装有 `ortools`，额外从 `MU0_JOINT_NECESSARY.pb` 运行 `MU0_STRUCTURED_JOINT.py` 校验逐字节重建。
+
+**省略的 10 份大 `.cnf`/`.drup` 证书说明：** `even.drup`（201.55 MB）、`odd.drup`（109.65 MB）等全部 10 份 E16 CNF/DRUP 文件（共 532.49 MB）与 Windows `drat-trim.exe` 按 `<50 MiB` 普通 Git 规则统一省略并逐项登记在 [q7-e16/INVENTORY.json](../../../archive/q7-e16/INVENTORY.json)（随仓保留官方 `drat-trim.c` 源码、全部 `.pb` 源模型、CNF 编译器与原验证回执）。哈希清单不代替 DRUP 轨迹重放；完整轨迹重放需从外部研究归档 `R-S-n=7(2).rar` 提取该 10 份文件并用编译后的 `drat-trim` 核验。本轮实际执行输出见 `development/evolution/v6-c4free-rs7-20261117/checks/q7-e16.json`。

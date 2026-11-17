@@ -11,7 +11,7 @@ Choose the path that matches your task. The entry pages and quick start are bili
 | Continue a research workspace | [Five workflows and return paths](WORKFLOWS.md) · [Workspace, wiki and recovery](WORKSPACE.md) |
 | Choose domain methods | [Six-domain routing](DOMAIN_ROUTING.md) · [Plugin contract](PLUGIN_CONTRACT.md) |
 | Connect external reviewers or use bundled ARIS | [Reviewer MCP](REVIEWER_MCP.md) · [ARIS reuse and dual-host layout](ARIS_REUSE.md) |
-| Understand or maintain a version | [v5 changes](V5_CHANGES.md) · [v4 history](V4_CHANGES.md) · [Evolution workflow](EVOLUTION_WORKFLOW.md) · [Implementation history](../development/README.md) |
+| Understand or maintain a version | [v6 changes](V6_CHANGES.md) · [v5 history](V5_CHANGES.md) · [v4 history](V4_CHANGES.md) · [Evolution workflow](EVOLUTION_WORKFLOW.md) · [Implementation history](../development/README.md) |
 | Inspect validation and attribution | [Validation records](../development/README.md#validation-and-implementation) · [Skill acceptance](SKILL_ACCEPTANCE.md) · [Provenance](PROVENANCE.md) |
 
 ## Repository map
@@ -33,6 +33,6 @@ Project discovery aliases under `.agents/skills/` and `.claude/skills/` point to
 
 ## Versions
 
-**v5 is the current workflow on `main`.** [Changes and provenance](V5_CHANGES.md) · [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip). Record the exact revision in a research handoff. The fixed [v1](https://github.com/lisresearchgroup/math-rsi/tree/v1), [v2](https://github.com/lisresearchgroup/math-rsi/tree/v2), [v3](https://github.com/lisresearchgroup/math-rsi/tree/v3) and [v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) snapshots remain unchanged; [v4 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v4.zip) is historical.
+**v6 is the current workflow on `main`.** [Changes and provenance](V6_CHANGES.md) · [v6 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) · [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip). Record the exact revision in a research handoff. The fixed [v1](https://github.com/lisresearchgroup/math-rsi/tree/v1), [v2](https://github.com/lisresearchgroup/math-rsi/tree/v2), [v3](https://github.com/lisresearchgroup/math-rsi/tree/v3), [v4](https://github.com/lisresearchgroup/math-rsi/tree/v4) and [v5](https://github.com/lisresearchgroup/math-rsi/tree/v5) snapshots remain unchanged.
 
 [Public Pages build and publication scope](PAGES.md) explains the allowlist, workflow and local preview.

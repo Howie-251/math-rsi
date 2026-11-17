@@ -1,0 +1,296 @@
+{
+  "audit_skill": "ARIS proof-checker local adaptation under Q7_WORKFLOW",
+  "verdict": "PASS",
+  "reason_code": "all_scoped_N_obligations_complete_modulo_explicit_imports",
+  "summary": "Theorem N passes as stated; old56 enters N; new56 is outside the explicitly listed rules including M and N. Not full m2/R7/P7.",
+  "caller": "/root",
+  "reviewer_agent": "/root/m2_odd_bridge_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "backend_identity_independently_certified": false,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-05T11:59:04.399936+00:00",
+  "audited_input_hashes": {
+    "R7_ODD_BRIDGE_MARGIN.md": "0708043bf9d11a6a38d1ac48f62e1391ee4b1af2ec49b34cafa195c001c08ce6",
+    "R7_ODD_BRIDGE_MARGIN_INPUTS.json": "d6f942963e533c048875391229a295b8a1d2e4c4b15d572e45cacfa0fada3e8d",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.md": "b7c6db06db01027d861125291a8161a3a7a7f91e643a24843eb8ee9af3d99c75",
+    "R7_ODD_MARGIN_RESIDUAL_WITNESS.json": "2b420cd3269800f84db703ee1319bbcca7ff1255c7cb1903d6b10b4be7af1b6f",
+    "R7_MARGIN_GATE_RESIDUAL_WITNESS.md": "6857cfbd409ddeb56c4961cd7c6cb89474a65aeb118e91b6b907a30dda14953d",
+    "R7_MARGIN_GATE_RESIDUAL_WITNESS.json": "3ec4d9086b5d8bc65dc935f8544a2ce3ad1929306924e702407e3ab3f816fa4b"
+  },
+  "imported_dependency_hashes": {
+    "../six_directions/P6_FULL_CLOSURE.md": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "../six_directions/P6_FULL_REVIEW.json": "5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "../six_directions/Q5_A10_FULL_CLOSURE.md": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+    "../six_directions/Q5_A10_FULL_REVIEW.md": "ceed5d7b5f58db58f7dd97a207f02a95efdc880b531ff65488118095b4f4bd19",
+    "../six_directions/Q5_A10_FULL_REVIEW.json": "8edb5a103afff0928cd8331d6a0b6dad57992de0b29bfbf1c850f8c227b8b027",
+    "R7_SIGNED_HOLE_MARGIN.md": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.md": "24c1346aff0139a2c364c4015ee6b54da5ab7fe2780cb73ae002e8506b9a223b",
+    "R7_SIGNED_HOLE_MARGIN_REVIEW.json": "d609b9cc5c641f972999339a80702fa7c32712095d7604ebfc1a760356a1b09a",
+    "PERFECT_MATCHING_SPLICE.md": "78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+    "PERFECT_MATCHING_SPLICE_REVIEW.json": "a4f94b4cc2b438280e6e67a804ad6ea9672c7c3facc944d7edb1c5c7e3940f27",
+    "R7_THREE_FREE_PAIRINGS.md": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+    "R7_THREE_FREE_PAIRINGS_REVIEW.json": "d40e08727ea165d393b9a359aac91b719bd29e5e6325a6f48566472ea6eb7980",
+    "A6_DELTA1_REDUCTION.md": "efda01b6a9794334c145b4cd38ad9ff13ff6ed728e020da8600b7800867c9028",
+    "A6_DELTA1_REVIEW.json": "672dc03dabfae36c851ab23355e05890b1d40b76ef2859cbf105448ed87b5917",
+    "A6_DELTA1_REFINEMENT.md": "b5ec50e3d66d38d9bededdb04afaa7d89cdc2602c9907c00daa7a2053db71a58",
+    "A6_DELTA1_REFINED_REVIEW.json": "8fa983009219c86d379b18141dea1635d07e9d5dcc60279caf1bead13f3ac0ec"
+  },
+  "comparison_source_hashes": {
+    "R7_TWO_CROSS_SEPARATING_FACE.md": "27d613dbfb67011fc2ded540854fc1ac5f3699f63a714b66dde74618599d522d",
+    "R7_TWO_CROSS_SINGLE_INTERNAL.md": "54c4c994dc4d62432bde706bf8d8d4843dfab94468dc26005b890be3f5d26a0c",
+    "R7_SINGLE_I_FLEXIBLE_EAR.md": "1495d28e25713423f2d538b89dbfee08c78131a67b90687e664c8a6023b4c9c8",
+    "R7_SINGLE_I_SOURCE_CUT.md": "ed402cda79923363fcadb67246b58c923353407b016b72985e955f08dbc07a67",
+    "R7_EIGHT_HOLE_CYCLE_PROJECTION.md": "9691d5f0d49cc300dec444f93ca852ec68f38107e8bf2e4d0bd6a1db70a64aa2",
+    "R7_BALANCED_FACE_SPLICE.md": "81cecfb9699e47625a5febe3efbbcb369f01d3deb0e59b76acc570e5fe9c40ca"
+  },
+  "checker_artifact_hashes": {
+    "R7_ODD_BRIDGE_MARGIN_REVIEW_check.py": "689eec44c35d7995ecd2031a325a243e094fe04c82f47c8d683b421e342bf36d",
+    "R7_ODD_BRIDGE_MARGIN_REVIEW_check.json": "d173c2d6c65b11bef0a74476af9d872022b8695819987e3b0cd1c6181309c8fa"
+  },
+  "audit_report_sha256": "a48390056368867db87443897f53e00bea912938d067784165c4f80bb7c8a48c",
+  "scope": {
+    "theorem_N_original_Delta2_EY_nonempty_nk_at_least3": true,
+    "old56_strict_new_coverage": true,
+    "new56_listed_joint_residual_including_M_N": true,
+    "unlisted_methods_excluded": false,
+    "forced_source_edge_probe_audited": false,
+    "full_two_cross_edge_family": false,
+    "full_m2": false,
+    "full_R7": false,
+    "full_P7": false,
+    "seven_direction_lift": false,
+    "historical4228_reduced": false
+  },
+  "details": {
+    "theorems_audited": 1,
+    "obligations": [
+      {
+        "id": "N01",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N02",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N03",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N04",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N05",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N06",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N07",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N08",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N09",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N10",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N11",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N12",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N13",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N14",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N15",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N16",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N17",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N18",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N19",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N20",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N21",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N22",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N23",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N24",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N25",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N26",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N27",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N28",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N29",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      },
+      {
+        "id": "N30",
+        "status": "PASS",
+        "discharge": "See matching row in bound Markdown report"
+      }
+    ],
+    "issues": [],
+    "checker_status": "PASS",
+    "checker_exit_code": 0,
+    "initial_checker_schema_KeyError_corrected": true,
+    "immediate_accepted_bindings": [
+      {
+        "report": "../six_directions/P6_FULL_REVIEW.json",
+        "source": "../six_directions/P6_FULL_CLOSURE.md",
+        "sha256": "657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+        "match": true
+      },
+      {
+        "report": "../six_directions/Q5_A10_FULL_REVIEW.json",
+        "source": "../six_directions/Q5_A10_FULL_CLOSURE.md",
+        "sha256": "fa7ce44e329c32d07ab4915ab1565206e03f8eee430c5fbe6f6d7d3d1506a365",
+        "match": true
+      },
+      {
+        "report": "R7_SIGNED_HOLE_MARGIN_REVIEW.json",
+        "source": "R7_SIGNED_HOLE_MARGIN.md",
+        "sha256": "a7affe3f3c431771b9fab1dd93a3587a1a7fc50013905fcc675179dbc9618df2",
+        "match": true
+      },
+      {
+        "report": "PERFECT_MATCHING_SPLICE_REVIEW.json",
+        "source": "PERFECT_MATCHING_SPLICE.md",
+        "sha256": "78a4330977d2d61b51f6fb819cd089c80de0e8ab3c42625991d74a126dc1f9e4",
+        "match": true
+      },
+      {
+        "report": "R7_THREE_FREE_PAIRINGS_REVIEW.json",
+        "source": "R7_THREE_FREE_PAIRINGS.md",
+        "sha256": "7ede541bc034c41c903f31bb619c564c21afca93f5d6a02f82dfc039b26a49cf",
+        "match": true
+      }
+    ],
+    "old56_N_gate": {
+      "response": "B",
+      "d": 0,
+      "k": 2,
+      "delta": 2,
+      "EY": [
+        40
+      ],
+      "original_cross_edges": 8,
+      "M_pass": false,
+      "N_pass": true
+    },
+    "new56_direction_counts": [
+      4,
+      4,
+      6,
+      10,
+      10,
+      20,
+      2
+    ],
+    "new56_delta_values": [
+      -1,
+      3,
+      4
+    ],
+    "no_open_proof_obligations_in_submitted_scope": true
+  },
+  "old_large_certificates_rerun": false,
+  "transitive_imports_reproved": false,
+  "all_transitive_reports_rehashed": false,
+  "no_producer_script_executed": true,
+  "no_solver_called": true,
+  "no_original_Q6_Q7_matching_family_or_high_hole_enumeration": true,
+  "mathematical_closure_state_updated": false,
+  "run_state_reference_sha256": "fda9b0bbd60ad6208782716f70a7057ee1be25de6ef194e348ee143059d492ec",
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  }
+}

@@ -1,0 +1,2384 @@
+{
+  "seconds_per_parity": 60,
+  "workers": 8,
+  "scalar_rows": 106,
+  "known_input_gate_checks": [
+    {
+      "input": "GLOBAL_PROBE.json",
+      "hits": [
+        {
+          "axis": 0,
+          "B_side": 1,
+          "gate": "forward_A6",
+          "plan": {
+            "axis": 0,
+            "receiver_bit": 1,
+            "donor_axis": 1,
+            "donor_bit": 0,
+            "a": 0,
+            "b": 5,
+            "c": 2,
+            "epsilon": 1,
+            "ell": 6,
+            "x": 8,
+            "U": [
+              105,
+              125
+            ],
+            "y": 9,
+            "V": [
+              104,
+              124
+            ],
+            "after_donor": [
+              [
+                58,
+                106,
+                126
+              ],
+              [
+                2,
+                16,
+                32,
+                64,
+                104,
+                112,
+                124
+              ]
+            ],
+            "after_receiver": [
+              [
+                9,
+                63,
+                95,
+                123
+              ],
+              [
+                1,
+                25
+              ]
+            ]
+          }
+        },
+        {
+          "axis": 1,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 1,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 1,
+            "r": 1,
+            "s": 2,
+            "k": 5,
+            "x": 63,
+            "U": [
+              1,
+              8,
+              16,
+              25
+            ],
+            "y": 61,
+            "V": [
+              3,
+              10,
+              18,
+              27
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 0,
+            "b": 3,
+            "q_T": 2,
+            "q_E": 2,
+            "return_capacities": [
+              2,
+              5
+            ],
+            "original_donor_halves": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                5
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                32,
+                61,
+                64,
+                112
+              ],
+              [
+                105,
+                125
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 6,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 6,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 1,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 95,
+            "U": [
+              1,
+              16,
+              25
+            ],
+            "y": 31,
+            "V": [
+              65,
+              80,
+              89
+            ],
+            "inner": 4,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                2,
+                8,
+                31,
+                32
+              ],
+              [
+                58,
+                63
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 6,
+          "B_side": 1,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 6,
+            "donor_bit": 0,
+            "receiver_bit": 1,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 2,
+            "U": [
+              95,
+              106,
+              126
+            ],
+            "y": 66,
+            "V": [
+              31,
+              42,
+              62
+            ],
+            "inner": 0,
+            "T_bit": 0,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                66,
+                105,
+                123,
+                125
+              ],
+              [
+                64,
+                112
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input": "FREE_A6_SUPPLY.json",
+      "hits": [
+        {
+          "axis": 0,
+          "B_side": 1,
+          "gate": "old_central",
+          "plan": {
+            "x": 36,
+            "S": [
+              2,
+              1
+            ],
+            "T": [
+              3,
+              0
+            ],
+            "returns": [
+              103,
+              117
+            ],
+            "gate": "majority_root"
+          }
+        },
+        {
+          "axis": 2,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 2,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 47,
+            "U": [
+              0,
+              9,
+              17
+            ],
+            "y": 43,
+            "V": [
+              4,
+              13,
+              21
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                34,
+                40,
+                43,
+                48
+              ],
+              [
+                59,
+                121
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 3,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 3,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 47,
+            "U": [
+              0,
+              5,
+              17
+            ],
+            "y": 39,
+            "V": [
+              8,
+              13,
+              25
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                34,
+                36,
+                39,
+                48
+              ],
+              [
+                103,
+                117
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 4,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 4,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 59,
+            "U": [
+              0,
+              5,
+              9
+            ],
+            "y": 43,
+            "V": [
+              16,
+              21,
+              25
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                34,
+                36,
+                40,
+                43
+              ],
+              [
+                47,
+                103
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input": "FREE_A6_COUNT_PROBE.json",
+      "hits": [
+        {
+          "axis": 0,
+          "B_side": 1,
+          "gate": "old_central",
+          "plan": {
+            "x": 6,
+            "S": [
+              1,
+              1
+            ],
+            "T": [
+              2,
+              0
+            ],
+            "returns": [
+              59,
+              91
+            ],
+            "gate": "two_majority_roots"
+          }
+        },
+        {
+          "axis": 1,
+          "B_side": 0,
+          "gate": "old_central",
+          "plan": {
+            "x": 91,
+            "S": [
+              5,
+              0
+            ],
+            "T": [
+              2,
+              0
+            ],
+            "returns": [
+              0,
+              9
+            ],
+            "gate": "single_root"
+          }
+        },
+        {
+          "axis": 3,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 3,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 59,
+            "U": [
+              0,
+              3,
+              33
+            ],
+            "y": 51,
+            "V": [
+              8,
+              11,
+              41
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                6,
+                48,
+                51,
+                80
+              ],
+              [
+                115,
+                117
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 3,
+          "B_side": 1,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 3,
+            "donor_bit": 0,
+            "receiver_bit": 1,
+            "alpha_parity": 1,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 0,
+            "U": [
+              59,
+              93,
+              124
+            ],
+            "y": 8,
+            "V": [
+              51,
+              85,
+              116
+            ],
+            "inner": 1,
+            "T_bit": 0,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                8,
+                91,
+                110,
+                127
+              ],
+              [
+                9,
+                24
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 5,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 5,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 0,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 59,
+            "U": [
+              0,
+              3,
+              9
+            ],
+            "y": 27,
+            "V": [
+              32,
+              35,
+              41
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                6,
+                24,
+                27,
+                80
+              ],
+              [
+                91,
+                93
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 5,
+          "B_side": 1,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 5,
+            "donor_bit": 0,
+            "receiver_bit": 1,
+            "alpha_parity": 1,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 0,
+            "U": [
+              59,
+              117,
+              124
+            ],
+            "y": 32,
+            "V": [
+              27,
+              85,
+              92
+            ],
+            "inner": 1,
+            "T_bit": 0,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                32,
+                110,
+                115,
+                127
+              ],
+              [
+                33,
+                48
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input": "FREE_A6_JOINT_PROBE.json",
+      "hits": [
+        {
+          "axis": 2,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 2,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 1,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 63,
+            "U": [
+              1,
+              2,
+              11
+            ],
+            "y": 59,
+            "V": [
+              5,
+              6,
+              15
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                8,
+                32,
+                59,
+                64
+              ],
+              [
+                113,
+                123
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        },
+        {
+          "axis": 3,
+          "B_side": 0,
+          "gate": "split_supply",
+          "plan": {
+            "outer": 3,
+            "donor_bit": 1,
+            "receiver_bit": 0,
+            "alpha_parity": 1,
+            "r": 2,
+            "s": 2,
+            "k": 4,
+            "x": 63,
+            "U": [
+              1,
+              2,
+              7
+            ],
+            "y": 55,
+            "V": [
+              9,
+              10,
+              15
+            ],
+            "inner": 0,
+            "T_bit": 1,
+            "epsilon": 1,
+            "a": 1,
+            "b": 4,
+            "q_T": 2,
+            "q_E": 1,
+            "return_capacities": [
+              2,
+              4
+            ],
+            "original_donor_halves": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "modified_donor_halves": [
+              [
+                1,
+                5
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "modified_receiver_holes": [
+              [
+                4,
+                32,
+                55,
+                64
+              ],
+              [
+                113,
+                119
+              ]
+            ],
+            "modified_receiver_counts": [
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input": "SPLIT_SMALL_GLOBAL_PROBE.json",
+      "hits": [
+        {
+          "axis": 0,
+          "B_side": 1,
+          "gate": "old_central",
+          "plan": {
+            "x": 24,
+            "S": [
+              3,
+              1
+            ],
+            "T": [
+              4,
+              1
+            ],
+            "returns": [
+              91,
+              93
+            ],
+            "gate": "two_minority_roots"
+          }
+        }
+      ]
+    }
+  ],
+  "solves": [
+    {
+      "parity": 0,
+      "status": "INFEASIBLE",
+      "build_seconds": 0.7308357000001706,
+      "solver_wall_seconds": 57.148117000000006,
+      "model_stats": "satisfaction model '': (model_fingerprint: 0xe8fae028a492003a)\n#Variables: 8'409 (8'331 primary variables)\n  - 7'737 Booleans in [0,1]\n  - 672 in [0,8]\n#kBoolOr: 3'809 (#literals: 24'423)\n#kLinear1: 6'792 (#enforced: 6'790)\n#kLinear2: 728 (#enforced: 714) (#complex_domain: 21)\n#kLinear3: 6'720 (#enforced: 6'720)\n#kLinearN: 778 (#enforced: 98 #multi: 98) (#terms: 8'468)\n#kTable: 756 (#enforced: 756 #multi: 336)",
+      "response_stats": "CpSolverResponse summary:\nstatus: INFEASIBLE\nobjective: NA\nbest_bound: NA\nintegers: 954\nbooleans: 20496\nconflicts: 31343\nbranches: 131253\npropagations: 127784943\ninteger_propagations: 16364511\nrestarts: 143\nlp_iterations: 0\nwalltime: 57.1481\nusertime: 57.1481\ndeterministic_time: 186.539\ngap_integral: 0\n",
+      "old_central_plans": 3360,
+      "free_A6_plans": 168,
+      "split_plans": {
+        "tables": 252,
+        "profile_counts": {
+          "3": 86,
+          "4": 69,
+          "5": 22
+        }
+      }
+    },
+    {
+      "parity": 1,
+      "status": "OPTIMAL",
+      "build_seconds": 0.7431179999839514,
+      "solver_wall_seconds": 14.6795235,
+      "model_stats": "satisfaction model '': (model_fingerprint: 0xe6032eb99a73fd9c)\n#Variables: 8'409 (8'347 primary variables)\n  - 7'737 Booleans in [0,1]\n  - 672 in [0,8]\n#kBoolOr: 3'809 (#literals: 24'423)\n#kLinear1: 6'792 (#enforced: 6'790)\n#kLinear2: 728 (#enforced: 714) (#complex_domain: 21)\n#kLinear3: 6'720 (#enforced: 6'720)\n#kLinearN: 780 (#enforced: 98 #multi: 98) (#terms: 8'482)\n#kTable: 756 (#enforced: 756 #multi: 336)",
+      "response_stats": "CpSolverResponse summary:\nstatus: OPTIMAL\nobjective: 0\nbest_bound: 0\nintegers: 954\nbooleans: 20496\nconflicts: 660\nbranches: 74823\npropagations: 26087414\ninteger_propagations: 1798810\nrestarts: 52\nlp_iterations: 0\nwalltime: 14.6795\nusertime: 14.6795\ndeterministic_time: 44.1627\ngap_integral: 0\nsolution_fingerprint: 0x3e0107c1a7791568\n",
+      "old_central_plans": 3360,
+      "free_A6_plans": 168,
+      "split_plans": {
+        "tables": 252,
+        "profile_counts": {
+          "3": 86,
+          "4": 69,
+          "5": 22
+        }
+      },
+      "candidate": {
+        "support_parity": 1,
+        "P": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          16,
+          32
+        ],
+        "Q": [
+          1,
+          4,
+          7,
+          8,
+          16,
+          32,
+          64,
+          82
+        ],
+        "even_holes": [
+          45,
+          63,
+          95,
+          111,
+          119,
+          120,
+          123,
+          126
+        ],
+        "odd_holes": [
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          16,
+          32
+        ],
+        "lambda_by_axis": [
+          5,
+          5,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "delta_even_minus_odd": [
+          3,
+          3,
+          4,
+          5,
+          5,
+          6,
+          6
+        ],
+        "axis_metrics": [
+          {
+            "axis": 0,
+            "receiver_bit": 0,
+            "counts": [
+              3,
+              6,
+              5,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                2,
+                1,
+                1
+              ],
+              [
+                3,
+                1,
+                2
+              ],
+              [
+                4,
+                1,
+                2
+              ],
+              [
+                5,
+                1,
+                2
+              ],
+              [
+                6,
+                0,
+                2
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "five_gates": {
+              "counts": {
+                "receiver_only_xS": 2,
+                "xST": 432,
+                "no_donor_gate": 258,
+                "inside_capacity": 10,
+                "receiver_gap": 164
+              },
+              "gates": {
+                "balanced_complement": {},
+                "majority_root": {
+                  "inside_capacity": 5,
+                  "receiver_gap": 103
+                },
+                "two_majority_roots": {
+                  "inside_capacity": 5,
+                  "receiver_gap": 61
+                },
+                "two_minority_roots": {},
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 45,
+                "S": [
+                  1,
+                  0
+                ],
+                "returns": [
+                  4,
+                  8
+                ]
+              },
+              "joint_witness": null
+            }
+          },
+          {
+            "axis": 0,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              5,
+              6,
+              3
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                1,
+                5,
+                2
+              ],
+              [
+                2,
+                5,
+                1
+              ],
+              [
+                3,
+                5,
+                1
+              ],
+              [
+                4,
+                4,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ],
+              [
+                6,
+                4,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "five_gates": {
+              "counts": {
+                "receiver_only_xS": 1,
+                "xST": 360,
+                "inside_capacity": 6,
+                "no_donor_gate": 180,
+                "receiver_gap": 174
+              },
+              "gates": {
+                "balanced_complement": {
+                  "inside_capacity": 1,
+                  "receiver_gap": 47
+                },
+                "majority_root": {
+                  "inside_capacity": 4,
+                  "receiver_gap": 80
+                },
+                "two_majority_roots": {
+                  "inside_capacity": 1,
+                  "receiver_gap": 47
+                },
+                "two_minority_roots": {},
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 2,
+                "S": [
+                  1,
+                  1
+                ],
+                "returns": [
+                  63,
+                  95
+                ]
+              },
+              "joint_witness": null
+            }
+          },
+          {
+            "axis": 1,
+            "receiver_bit": 0,
+            "counts": [
+              3,
+              6,
+              5,
+              2
+            ],
+            "receiver_root_distance": 4,
+            "columns": [
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                2,
+                1,
+                1
+              ],
+              [
+                3,
+                1,
+                2
+              ],
+              [
+                4,
+                1,
+                1
+              ],
+              [
+                5,
+                1,
+                2
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "five_gates": {
+              "counts": {
+                "xST": 432,
+                "no_donor_gate": 270,
+                "receiver_gap": 148,
+                "receiver_only_xS": 3,
+                "inside_capacity": 14
+              },
+              "gates": {
+                "balanced_complement": {},
+                "majority_root": {
+                  "receiver_gap": 55,
+                  "inside_capacity": 5
+                },
+                "two_majority_roots": {
+                  "receiver_gap": 93,
+                  "inside_capacity": 9
+                },
+                "two_minority_roots": {},
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 111,
+                "S": [
+                  4,
+                  0
+                ],
+                "returns": [
+                  1,
+                  4
+                ]
+              },
+              "joint_witness": null
+            }
+          },
+          {
+            "axis": 1,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              5,
+              6,
+              3
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                5,
+                2
+              ],
+              [
+                2,
+                5,
+                1
+              ],
+              [
+                3,
+                5,
+                1
+              ],
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": [],
+            "five_gates": {
+              "counts": {
+                "receiver_only_xS": 1,
+                "xST": 360,
+                "inside_capacity": 6,
+                "no_donor_gate": 180,
+                "receiver_gap": 174
+              },
+              "gates": {
+                "balanced_complement": {
+                  "inside_capacity": 2,
+                  "receiver_gap": 70
+                },
+                "majority_root": {
+                  "inside_capacity": 4,
+                  "receiver_gap": 92
+                },
+                "two_majority_roots": {
+                  "receiver_gap": 12
+                },
+                "two_minority_roots": {},
+                "single_root": {}
+              },
+              "receiver_witness": {
+                "x": 1,
+                "S": [
+                  0,
+                  1
+                ],
+                "returns": [
+                  63,
+                  95
+                ]
+              },
+              "joint_witness": null
+            }
+          },
+          {
+            "axis": 2,
+            "receiver_bit": 0,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                1,
+                2,
+                1
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                4,
+                1,
+                2
+              ],
+              [
+                5,
+                1,
+                2
+              ],
+              [
+                6,
+                0,
+                2
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 2,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              6,
+              6,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                5,
+                1
+              ],
+              [
+                1,
+                5,
+                1
+              ],
+              [
+                3,
+                5,
+                0
+              ],
+              [
+                4,
+                4,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ],
+              [
+                6,
+                4,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 3,
+            "receiver_bit": 0,
+            "counts": [
+              2,
+              7,
+              6,
+              1
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                2,
+                1
+              ],
+              [
+                1,
+                2,
+                1
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                4,
+                1,
+                1
+              ],
+              [
+                5,
+                1,
+                1
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 3,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 3,
+            "receiver_bit": 1,
+            "counts": [
+              1,
+              6,
+              7,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                5,
+                1
+              ],
+              [
+                1,
+                5,
+                1
+              ],
+              [
+                2,
+                5,
+                0
+              ],
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                5,
+                6,
+                0
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 4,
+            "receiver_bit": 0,
+            "counts": [
+              1,
+              6,
+              7,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                3,
+                2
+              ],
+              [
+                1,
+                3,
+                1
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                5,
+                1,
+                2
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [
+              0
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 4,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              7,
+              6,
+              1
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                1,
+                5,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                5,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 5,
+            "receiver_bit": 0,
+            "counts": [
+              1,
+              7,
+              7,
+              1
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                3,
+                1
+              ],
+              [
+                1,
+                3,
+                1
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                2,
+                1
+              ],
+              [
+                4,
+                1,
+                1
+              ],
+              [
+                6,
+                0,
+                1
+              ]
+            ],
+            "scarcity_s": 4,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 5,
+            "receiver_bit": 1,
+            "counts": [
+              1,
+              7,
+              7,
+              1
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                5,
+                0
+              ],
+              [
+                1,
+                5,
+                0
+              ],
+              [
+                2,
+                5,
+                0
+              ],
+              [
+                3,
+                6,
+                0
+              ],
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                6,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 6,
+            "receiver_bit": 0,
+            "counts": [
+              0,
+              6,
+              8,
+              2
+            ],
+            "receiver_root_distance": 2,
+            "columns": [
+              [
+                0,
+                3,
+                2
+              ],
+              [
+                1,
+                3,
+                1
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                3,
+                2,
+                2
+              ],
+              [
+                4,
+                1,
+                1
+              ],
+              [
+                5,
+                1,
+                2
+              ]
+            ],
+            "scarcity_s": 2,
+            "strong_axes": [
+              0
+            ],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          },
+          {
+            "axis": 6,
+            "receiver_bit": 1,
+            "counts": [
+              2,
+              8,
+              6,
+              0
+            ],
+            "receiver_root_distance": null,
+            "columns": [
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                1,
+                5,
+                0
+              ],
+              [
+                2,
+                4,
+                0
+              ],
+              [
+                3,
+                5,
+                0
+              ],
+              [
+                4,
+                5,
+                0
+              ],
+              [
+                5,
+                5,
+                0
+              ]
+            ],
+            "scarcity_s": 0,
+            "strong_axes": [],
+            "controlled_count_axes": [],
+            "four_mono_balanced": null,
+            "accepted_macros": []
+          }
+        ],
+        "omitted_macro_hits": [],
+        "matching": [
+          [
+            0,
+            64
+          ],
+          [
+            3,
+            35
+          ],
+          [
+            5,
+            69
+          ],
+          [
+            6,
+            22
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            26
+          ],
+          [
+            12,
+            76
+          ],
+          [
+            15,
+            14
+          ],
+          [
+            17,
+            25
+          ],
+          [
+            18,
+            19
+          ],
+          [
+            20,
+            21
+          ],
+          [
+            23,
+            87
+          ],
+          [
+            24,
+            56
+          ],
+          [
+            27,
+            31
+          ],
+          [
+            29,
+            61
+          ],
+          [
+            30,
+            28
+          ],
+          [
+            33,
+            37
+          ],
+          [
+            34,
+            42
+          ],
+          [
+            36,
+            52
+          ],
+          [
+            39,
+            38
+          ],
+          [
+            40,
+            44
+          ],
+          [
+            43,
+            41
+          ],
+          [
+            46,
+            47
+          ],
+          [
+            48,
+            49
+          ],
+          [
+            51,
+            50
+          ],
+          [
+            53,
+            55
+          ],
+          [
+            54,
+            118
+          ],
+          [
+            57,
+            121
+          ],
+          [
+            58,
+            59
+          ],
+          [
+            60,
+            62
+          ],
+          [
+            65,
+            73
+          ],
+          [
+            66,
+            74
+          ],
+          [
+            68,
+            70
+          ],
+          [
+            71,
+            67
+          ],
+          [
+            72,
+            88
+          ],
+          [
+            75,
+            107
+          ],
+          [
+            77,
+            79
+          ],
+          [
+            78,
+            110
+          ],
+          [
+            80,
+            81
+          ],
+          [
+            83,
+            82
+          ],
+          [
+            85,
+            84
+          ],
+          [
+            86,
+            94
+          ],
+          [
+            89,
+            93
+          ],
+          [
+            90,
+            91
+          ],
+          [
+            92,
+            124
+          ],
+          [
+            96,
+            97
+          ],
+          [
+            99,
+            98
+          ],
+          [
+            101,
+            100
+          ],
+          [
+            102,
+            103
+          ],
+          [
+            105,
+            104
+          ],
+          [
+            106,
+            122
+          ],
+          [
+            108,
+            109
+          ],
+          [
+            113,
+            112
+          ],
+          [
+            114,
+            115
+          ],
+          [
+            116,
+            117
+          ],
+          [
+            125,
+            127
+          ]
+        ],
+        "direct_split_cuts_checked": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "fixed_input_old_checks": {
+          "high_gap_positive_split": {
+            "status": "PASS_PLAN",
+            "first_plan": {
+              "axis": 3,
+              "receiver_bit": 1,
+              "gap": 5,
+              "counts": {
+                "source_return_pairs": 420,
+                "actual_receiver_xui": 80,
+                "same_side_donor_halves": 300
+              },
+              "four_donor_gates": {
+                "X": [
+                  1,
+                  7,
+                  32
+                ],
+                "U": [
+                  45,
+                  111
+                ],
+                "i": 0,
+                "h": 4,
+                "Tside": 0,
+                "a": 0,
+                "ell": 4
+              }
+            }
+          },
+          "legacy": {
+            "status": "PASS_PLAN",
+            "plan": {
+              "gate": "k4_two_return",
+              "outer": 2,
+              "A_side": 0,
+              "B_side": 1,
+              "alpha_parity": 0,
+              "beta_parity": 1,
+              "X": [
+                2,
+                11
+              ],
+              "U": [
+                45,
+                111
+              ],
+              "Y": [
+                6,
+                15
+              ],
+              "V": [
+                41,
+                107
+              ],
+              "H_prime_A": [
+                1,
+                8,
+                16,
+                32,
+                41,
+                107,
+                120,
+                123
+              ],
+              "H_prime_B": [
+                4,
+                6,
+                7,
+                15,
+                63,
+                95,
+                119,
+                126
+              ],
+              "H_prime_A_by_alpha_beta": [
+                [
+                  120,
+                  123
+                ],
+                [
+                  1,
+                  8,
+                  16,
+                  32,
+                  41,
+                  107
+                ]
+              ],
+              "H_prime_B_by_alpha_beta": [
+                [
+                  6,
+                  15,
+                  63,
+                  95,
+                  119,
+                  126
+                ],
+                [
+                  4,
+                  7
+                ]
+              ],
+              "supplier": {
+                "kind": "majority_root",
+                "inner": 4,
+                "mark_side": 0,
+                "hole_counts": [
+                  [
+                    0,
+                    5
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "receiver": {
+                "mode": "whole_face",
+                "kind": "majority_root",
+                "inner": 1,
+                "mark_side": 1,
+                "hole_counts": [
+                  [
+                    1,
+                    6
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              }
+            },
+            "counters": {
+              "k3_directed_cuts": 4,
+              "k3_source_choices": 270,
+              "k3_whole_receiver_choices": 50,
+              "directed_cuts_tested": 1,
+              "source_pairs_tested": 93,
+              "supplier_majority_root": 6,
+              "receiver_whole_face": 1
+            },
+            "cpu_limit": 30,
+            "cpu_seconds": 0.359375,
+            "requires_edge": false
+          }
+        }
+      }
+    }
+  ]
+}

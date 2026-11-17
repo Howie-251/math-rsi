@@ -1,0 +1,218 @@
+{
+  "audit_skill": "proof-checker",
+  "verdict": "PASS",
+  "reason_code": "all_Z7_empty_direction_path_obligations_complete_modulo_explicit_imports",
+  "summary": "Z7 passes for every Q7 short matching with at least one empty direction, every free root, and every opposite-parity target including covered targets. Full P7 and the full six-hole layer are not closed.",
+  "reviewer_agent_id": "/root/q7_zero_crossing_audit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "model_configuration_source": "Explicit user configuration relayed by parent; served backend not independently attested",
+  "backend_identity_independently_certified": false,
+  "reviewer_family": "openai",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "proof_status": "sound-modulo-imports",
+  "generated_at": "2026-11-02T07:45:03.768206+00:00",
+  "trace_path": "ZERO_CROSSING_REVIEW.md",
+  "audited_input_hashes": {
+    "ZERO_CROSSING_PATHS.md": "sha256:35858010b280711e715a2406aa85ba567fc641dd260035d2fd3fea1936c2e169"
+  },
+  "imported_dependency_hashes": {
+    "E:\\新问题\\research\\six_directions\\P6_FULL_CLOSURE.md": "sha256:657bdbfc07f14210cde5a8afe1090fc49deb240a88738bc7e0e0f811a81474df",
+    "E:\\新问题\\research\\six_directions\\P6_FULL_REVIEW.md": "sha256:39a22f9016f616c6f931a2ebe485996bab78e09fdcd12c9d2299e1550af3f462",
+    "E:\\新问题\\research\\six_directions\\P6_FULL_REVIEW.json": "sha256:5e2815cc2f03f0380719ef2797b0f9fbdc945dd4ff58a2e8e24f5c3c4726db1e",
+    "PROOF_PACKAGE.md": "sha256:192d74ac3247faddf02bf1d8a24b7fc22f1f9348f1c7e01c0ba77b78cba99fc0",
+    "INDEPENDENT_REVIEW.json": "sha256:c912d25c6d3e1bf99d1ac8762cb7fba30c005361a2a8df7daf9884e14a3d7f1d",
+    "A4_DIMENSIONAL_INDUCTION.md": "sha256:bf7d6da5fc5c5d779cc858f5f095a6ca9fc0685ef6c94fd9f34c72c552da89fc",
+    "A4_DIMENSIONAL_REVIEW.md": "sha256:7b4527b757b23342fa7f02c85e6a06423a1f2bb25c8643c164e9e200f44dae15",
+    "A4_DIMENSIONAL_REVIEW.json": "sha256:95d557933a15bb9f51fd813711ad6a30f1614f095c281c81215d1c97c151c647"
+  },
+  "skill_hashes": {
+    "F:\\c4free-hypercube-main\\ARIS\\skills\\skills-codex\\proof-checker\\SKILL.md": "sha256:b234e51e41c8d92b1ff79a0a11750bbcc34a01ebc123eaf2439715b1ac22915a"
+  },
+  "checker_artifact_hashes": {
+    "ZERO_CROSSING_REVIEW_check.py": "sha256:72255a77d53eee709e0d4437ffe5f767138057566d649bca85f01be22248924b",
+    "ZERO_CROSSING_REVIEW_check.json": "sha256:45ecb82e567bc5b1fc2b188305298244ca8e6a8250806cc877b2d06782cf2c97"
+  },
+  "report_hash": "sha256:1ca4dd5a4219bf2d4d36cc9e5461283d8aff41dbaa9667c2e00395b9e75aa808",
+  "external_primary_source": {
+    "url": "https://tmuetze.de/papers/match.pdf",
+    "read_directly": true,
+    "locations": [
+      "page1 extension definition and Theorem2",
+      "page4 Theorem11"
+    ],
+    "original_proofs_reproved": false
+  },
+  "details": {
+    "theorems_audited": 2,
+    "issues": [],
+    "open_in_scope_fatal": 0,
+    "open_in_scope_critical": 0,
+    "open_in_scope_major": 0,
+    "open_in_scope_minor": 0,
+    "micro_obligations_closed": 17,
+    "counterexamples_found": 0,
+    "counterexample_candidates_open": 0,
+    "dependency_DAG_acyclic": true,
+    "P6_import_review_verdict": "PASS",
+    "Q7_four_hole_import_review_verdict": "PASS",
+    "P6_source_hash_aligned": true,
+    "A4_all_declared_input_hashes_aligned": true,
+    "imported_report_body_hashes_aligned": true,
+    "old_large_certificates_rerun": false,
+    "proof_assistant_verified": false,
+    "cross_family_review": false,
+    "source_proofs_or_RUN_STATE_modified": false
+  },
+  "scope": {
+    "dimension": 7,
+    "matching_domain": "M subset E(Q7), with some direction containing no edge of M",
+    "root": "every vertex outside V(M)",
+    "target": "every opposite-parity vertex, including vertices covered by M",
+    "prescribed_matching_short": true,
+    "added_edges_short": true,
+    "empty_direction_subdomain_closed": true,
+    "all_original_hole_counts_in_this_subdomain": true,
+    "full_Q7_six_hole_layer_closed": false,
+    "full_P7_proved": false,
+    "arbitrary_complete_graph_Q7_matching_claim": false,
+    "two_covered_endpoint_classification_claim": false,
+    "arbitrary_higher_dimension_six_direction_claim": false
+  },
+  "obligations": [
+    {
+      "id": "Z01",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "Z02",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z03",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z04",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z05",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z06",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z07",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z08",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "Z09",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z10",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z11",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z12",
+      "status": "CLOSED_MODULO_IMPORTS"
+    },
+    {
+      "id": "Z13",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z14",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z15",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z16",
+      "status": "CLOSED"
+    },
+    {
+      "id": "Z17",
+      "status": "CLOSED"
+    }
+  ],
+  "counterexample_attempts": [
+    "minimum allowed q=5",
+    "half-layer already contained in N",
+    "new transformed edge long",
+    "four square vertices coincident",
+    "a second obstructing direction",
+    "one or two unforceable nonmatching edges",
+    "h=2 and h=4 boundary imports",
+    "h=6 equality with all 34 candidates",
+    "h>6 strict count excess",
+    "B has only two free vertices with one mirrored to target",
+    "mirrored free vertex equals root",
+    "target already covered",
+    "endpoints in either same or different faces"
+  ],
+  "finite_error_probes": {
+    "generated_at": "2026-11-02T07:41:21.715632+00:00",
+    "seed": 2026110207,
+    "scope": "finite error detection only; no universal proof inferred from samples",
+    "half_layer_complement_geometry_q": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "matching_probes": [
+      {
+        "q": 5,
+        "pure_direction_matchings": 5,
+        "all_single_square_switches": 160,
+        "random_flip_matching_samples": 150,
+        "bad_edges_observed": 320,
+        "status": "PASS"
+      },
+      {
+        "q": 6,
+        "pure_direction_matchings": 6,
+        "all_single_square_switches": 480,
+        "random_flip_matching_samples": 150,
+        "bad_edges_observed": 960,
+        "status": "PASS"
+      }
+    ],
+    "splice_probes": {
+      "splices": 63,
+      "isolated_root_splices": 1,
+      "status": "PASS"
+    },
+    "import_binding_checks": {
+      "P6_FULL_REVIEW.json": {
+        "verdict": "PASS",
+        "source_hash_aligned": true
+      },
+      "A4_DIMENSIONAL_REVIEW.json": {
+        "verdict": "PASS",
+        "source_hash_aligned": true
+      }
+    },
+    "status": "PASS",
+    "counterexamples_found": 0
+  },
+  "finite_checks_are_universal_proof": false,
+  "modifications": "Only ZERO_CROSSING_REVIEW.md/.json and dedicated ZERO_CROSSING_REVIEW_check.py/.json; primary proof, frozen Q6, A4 and RUN_STATE unchanged."
+}
