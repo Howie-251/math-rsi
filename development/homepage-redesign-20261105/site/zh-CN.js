@@ -1235,8 +1235,9 @@ window.MATHRSI_ZH = {
   "v6 maintenance notes ↗": "v6 维护说明 ↗",
   "v6 release + main maintenance. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, complete Q₇ E16 (≥56 edges), and the 2026-11-17 Happy Ending N(m,r,s) follow-up across m = 7, 8, 9 (replayed N(8,6,6) ≤ 61 and N(9,8,8) ≤ 688 / D₉ ≤ 458 duals, working ES(9) ≤ 1148; fixed v6 tag unchanged). Distills hardest-remainder split gating, primal–dual coevolution, repair-residual stopping and generative sparse dual checks into the shared base.": "v6 正式版及主线维护。纳入无 C₄ 超立方体 Q₇（304 边构造已验证；304 上界按原包报告）、Q₈（682–683）、渐近密度 Q∞ ≤ 0.5912405943、完整 Q₇ E16（≥56 边），以及 2026-11-17 涵盖 m = 7, 8, 9 的 Happy Ending N(m,r,s) 后续成果（已复核 N(8,6,6) ≤ 61 与 N(9,8,8) ≤ 688 / D₉ ≤ 458 整数对偶，工作推论 ES(9) ≤ 1148；固定 v6 标签不变），并将最难分支试探、上下界协同搜索、修补误差停机与稀疏对偶核验沉淀进共享通用流程。",
   "working · vs 1508": "工作稿 · 对比 1508",
-  "Self-improving agent workflows for mathematical discovery and proof.": "面向数学探索与证明的自进化智能体工作流。",
-  "Prove harder mathematics. Evolve the workflow.": "攻克数学问题，演进研究工作流。",
+  "MathRSI: a self-improving agent harness for mathematical discovery and proof.": "MathRSI：面向数学探索与证明的自进化智能体系统。",
+  "A self-improving agent harness for mathematical discovery and proof.": "面向数学探索与证明的自进化智能体系统。",
+  "Prove harder mathematics. Evolve the harness.": "攻克数学问题，演进研究框架。",
   "· ES(9) ≤ 1148": "· ES(9) ≤ 1148",
   "· N(8,8,8) ≤ 318": "· N(8,8,8) ≤ 318",
   "· n²/12 · n³/80": "· n²/12 · n³/80"

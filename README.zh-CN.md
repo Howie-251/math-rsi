@@ -2,7 +2,7 @@
 
 # <picture><source media="(prefers-color-scheme: dark)" srcset="figures/mathrsi/branding/mark-c-dark.png"><img src="figures/mathrsi/branding/mark-c-light.png" width="76" height="38" align="middle" alt=""></picture> MathRSI<br><sub><sup><em>SII MathRSI Team</em></sup></sub>
 
-**面向数学探索与证明的自进化智能体工作流。**<br>让 Claude Code 与 Codex 执行可读的 Markdown 技能与领域核验器。
+**面向数学探索与证明的自进化智能体系统。**<br>让 Claude Code 与 Codex 执行可读的 Markdown 技能与领域核验器。
 
 [![项目主页 / EN + 中文](figures/mathrsi/badges/visual-tour.zh-CN.svg)](https://lisresearchgroup.github.io/math-rsi/ "项目主页 / EN + 中文")&nbsp; [![快速开始 / 立即上手](figures/mathrsi/badges/quick-start.zh-CN.svg)](#开始使用)&nbsp; [![数学成果 / 6 大方向](figures/mathrsi/badges/results.zh-CN.svg)](case-studies/README.md)&nbsp; [![Agent 指南 / 工作流 + Wiki](figures/mathrsi/badges/agent-guide.zh-CN.svg)](docs/WORKFLOWS.md)&nbsp; [![贡献者 / 团队](figures/mathrsi/badges/contributors.zh-CN.svg)](#contributors)&nbsp; [![EN / English](figures/mathrsi/badges/lang-en.svg)](README.md)
 
