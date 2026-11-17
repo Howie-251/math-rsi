@@ -20,19 +20,20 @@ ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
 CACHE = ROOT / '.local/evolution-media-v6-c4free-rs7-20261117'
-FPS = 20
-CLOCK_RATE = 0.25  # Browser-clock milliseconds per encoded-video millisecond.
-OPENING_SECONDS = 1
-FINAL_SECONDS = 6
+FPS = 50
+CLOCK_RATE = 0.80  # Browser-clock milliseconds per encoded-video millisecond (exact 16ms rAF step per 50fps frame).
+OPENING_SECONDS = 0.5
+FINAL_SECONDS = 3.5
 VIEWPORT_WIDTH = 2000
 GIF_WIDTH = 1400
-GIF_FPS = 12
+GIF_FPS = 50
 CAPTURE_CSS = '''
 html {scroll-behavior:auto!important; overflow:hidden;}
 body {background:white; overflow:hidden;}
 #evolution {max-width:none; width:100%; padding:20px 24px;}
 #evolution .evo-title {margin-top:0;}
 #evolution .scroller {overflow:clip!important;}
+#evolution .band, #evolution .cell::before {transition:none!important;}
 #evolution .fig-foot, #evolution #panel, #evolution .row-b,
 #evolution .row-p, .scroll-hint {display:none!important;}
 #evolution button:focus {outline:none!important;}
@@ -88,7 +89,7 @@ def capture(preview=False):
             page.on('requestfailed', lambda r: failed_requests.append({'url': r.url, 'error': r.failure}))
             fixed = datetime(2026, 11, 16, tzinfo=timezone.utc)
             page.clock.install(time=fixed)
-            page.clock.pause_at(fixed + timedelta(seconds=1))
+            page.clock.pause_at(fixed + timedelta(milliseconds=1024))
             page.goto(f'http://127.0.0.1:{server.server_port}/development/homepage-redesign-20261105/site/index.html')
             page.evaluate('document.fonts.ready')
             expected = page.locator('.row-v:not(.fut) .vtag').all_text_contents()
@@ -157,10 +158,12 @@ def capture(preview=False):
                 log('preview_complete', resolution=[VIEWPORT_WIDTH, height])
                 return
 
-            # Consume the original entry timeout, then use the real Replay control.
+            # Consume the original entry timeout on an exact 16ms rAF boundary, then use the real Replay control.
             page.locator('#replay').evaluate('(e)=>e.click()')
-            page.clock.run_for(300)
+            page.clock.run_for(320)
             page.locator('#replay').evaluate('(e)=>e.click()')
+            opening_frames = round(FPS * OPENING_SECONDS)
+            final_frames = round(FPS * FINAL_SECONDS)
             source_video = CACHE / 'capture-source.mp4'
             proc = subprocess.Popen(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y',
                 '-f', 'image2pipe', '-framerate', str(FPS), '-vcodec', 'png', '-i', 'pipe:0',
@@ -172,7 +175,7 @@ def capture(preview=False):
 
             start_state = page.locator('#readout').inner_text()
             assert start_state.startswith('v0'), start_state
-            put(shot('start-v0.png'), FPS * OPENING_SECONDS)
+            put(shot('start-v0.png'), opening_frames)
             states = [{'frame': 0, 'video_seconds': 0, 'state': start_state}]
             last_state = start_state
             animation_frames = 0
@@ -185,8 +188,8 @@ def capture(preview=False):
                 animation_frames += 1
                 state = page.locator('#readout').inner_text()
                 if state != last_state:
-                    item = {'frame': FPS * OPENING_SECONDS + animation_frames - 1,
-                            'video_seconds': OPENING_SECONDS + animation_frames / FPS,
+                    item = {'frame': opening_frames + animation_frames - 1,
+                            'video_seconds': round((opening_frames + animation_frames) / FPS, 4),
                             'browser_clock_ms': after, 'state': state}
                     states.append(item)
                     (CACHE / f'state-{state.split()[0]}.png').write_bytes(frame)
@@ -211,7 +214,7 @@ def capture(preview=False):
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
             assert final['scrollLeft'] == 0 and not errors and not failed_requests, (final, errors, failed_requests)
             final_frame = shot('settled-current.png')
-            put(final_frame, FPS * FINAL_SECONDS)
+            put(final_frame, final_frames)
             proc.stdin.close()
             if proc.wait() != 0:
                 raise RuntimeError('ffmpeg encoding failed')
@@ -240,10 +243,10 @@ def capture(preview=False):
             'capture': 'Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264',
             'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and v5/v6 headlines; preserve all eight columns (v0..v6 and v7+). Product JS/CSS/data unchanged.',
             'capture_css': CAPTURE_CSS.strip(),
-            'resolution': [VIEWPORT_WIDTH, height], 'fps': FPS, 'browser_clock_rate': CLOCK_RATE,
+            'resolution': [VIEWPORT_WIDTH, height], 'fps': FPS, 'gif_fps': GIF_FPS, 'browser_clock_rate': CLOCK_RATE,
             'opening_hold_seconds': OPENING_SECONDS, 'final_hold_seconds': FINAL_SECONDS,
             'animation_frames': animation_frames,
-            'duration_seconds': OPENING_SECONDS + animation_frames / FPS + FINAL_SECONDS,
+            'duration_seconds': round((opening_frames + animation_frames + final_frames) / FPS, 4),
             'completion': 'Wait for native play control to stop at Current; no hard-coded timeline end',
             'states': states, 'final_state': status, 'geometry': geometry, 'final_geometry': final,
             'page_errors': errors, 'failed_requests': failed_requests,
