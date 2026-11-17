@@ -12,31 +12,30 @@
 <p class="p-eye">Ruskey–Savage · Q7 research</p>
 <h1>Hamilton cycles for dense matchings in Q₇</h1>
 <p class="q7-lead">Every matching with at least 56 edges in Q₇ extends to a Hamilton cycle containing every prescribed edge.</p>
-<p class="q7-provenance">Run: v3 (local adaptation) + hardest-remainder E16 closure → methods feed v5 &amp; v6.</p>
+<p class="q7-provenance">Run: v3 (local adaptation) + hardest-branch E16 probes → methods inform v5 &amp; v6.</p>
 <section class="q7-schematic" aria-label="Theorem schematic"><div><b>128</b><span>vertices of Q₇</span></div><span aria-hidden="true">→</span><div><b>≥56</b><span>prescribed disjoint edges</span></div><span aria-hidden="true">→</span><div><b>1</b><span>all-vertex cycle retaining those edges</span></div></section>
-<p class="fine">Theorem schematic.</p>
 <h2>What is established</h2>
 <ul>
 <li>All matchings with at least 58 edges: complete dense layers (E12) and algebraic construction tools.</li>
 <li>All matchings with at least 57 edges: the 14-hole assembly (E14) and denser layers form the v5 theorem.</li>
-<li>All matchings with at least 56 edges (complete E16): adjacent-hole augmentation plus all five independent 16-hole parity-gap classes μ ∈ {0, 1, 2, 3, 4} are closed (parity/weight bounds rule out μ ≥ 5). Whole-proof audit: PASS · same-family · provisional · sound-modulo-imports.</li>
+<li>All matchings with at least 56 edges (complete E16): closes adjacent-hole augmentation and all five independent 16-hole parity classes μ ∈ {0, 1, 2, 3, 4} (parity and weight bounds rule out μ ≥ 5), by a computational argument reviewed in the same model family and depending on the listed baseline imports; independent refereeing is pending and there is no Lean formalization.</li>
 </ul>
-<p>Here μ is the minimum absolute parity-hole difference across the seven coordinate splits. Structure classes are not equal fractions of progress.</p>
-<p class="q7-open"><b>Still open</b><br><span>Even hole layers 18–38 (matchings with ≤55 edges), the full Q₇ conjecture, free-root paths P₇ and seven-direction lifting in Qₙ remain open.</span></p>
-<h2>Why the method changed</h2>
-<p>A compressed auxiliary pairing can fall outside the old P6 theorem's input domain. Controlled donor pairings (v5) force the actual successor to meet the next proof step, and return bridges restore all prescribed edges.</p>
-<p>To finish the hardest 56-edge remainder (v6), candidate splits were probed on the hardest open branch before adoption rather than dispatching easy sub-slices first. New tools combine a parameterized Q₆ Δ=2 double bridge, the 41-orbit Q₆ A₈ theorem, joint even/odd CNF+DRUP pairs for μ=3, and S₆ large-face independent-hole tables (189 rows for μ=0, 23 rows for μ=1) paired with symbolic small-face holes after dropping five incompatible inner-axis ordering constraints (100,055 − 5 + 1 = 100,051 constraints).</p>
-<h2>What v5 and v6 learn</h2>
+<p>Here μ is the minimum absolute parity-hole difference across the seven coordinate splits; the five μ classes are separate structural cases.</p>
+<p class="q7-open"><b>Still open</b><br><span>Matchings with at most 55 edges (even hole layers 18–38), the full Q₇ conjecture, free-root paths P₇ and seven-direction lifting in Qₙ remain open.</span></p>
+<h2>How the argument works</h2>
+<p>A compressed auxiliary pairing can fall outside the old P6 theorem's input domain. Controlled donor pairings (v5) steer the auxiliary pairing into the valid interface for the next proof step, and return bridges restore all prescribed edges.</p>
+<p>To close the hardest 56-edge remainder (v6), candidate case splits were tested on the hardest open branch first rather than dispatching easy sub-slices. The final closure combines a parameterized Q₆ Δ=2 double bridge, the 41-orbit Q₆ A₈ theorem, joint even/odd CNF+DRUP pairs for μ=3, and S₆ large-face independent-hole tables (189 rows for μ=0, 23 rows for μ=1) paired with symbolic small-face holes after removing five incompatible inner-axis ordering constraints (100,055 − 5 + 1 = 100,051 constraints).</p>
+<h2>Methods distilled into v5 and v6</h2>
 <ol>
-<li>Control auxiliary choices and reuse theorems across legal splits before dispatching residual work (v5).</li>
-<li>Gate new classifications by bounded probes on the hardest residual branch, and measure net-new union coverage on the same actual input (v6).</li>
-<li>Remove incompatible symmetry-breaking constraints whenever one side of a joint model is anchored to an orbit basis while the other side stays symbolic (v6).</li>
+<li>Steer legal auxiliary choices to match the next theorem's interface, and apply new family theorems across all valid coordinate splits before assigning residual work (v5).</li>
+<li>Test candidate classifications with bounded probes on the hardest open branch, measuring net-new coverage on the same original input (v6).</li>
+<li>Drop incompatible symmetry-breaking constraints whenever one side of a joint model is anchored to an orbit table while the other side remains symbolic (v6).</li>
 </ol>
-<h2>Q₆ remains available</h2>
-<p>Every matching of Q₆ extends to a Hamilton cycle. With imported results, matchings using at most six directions in any dimension also extend.</p>
-<h2>Evidence and reading</h2>
-<p>During v6 maintenance, all 261 in-repo E16 files and all 290 bundled baseline imports passed byte and SHA-256 verification; the 189-row μ=0 large-face table and four zero-dependency geometry/plan checkers (MU0 a=0 census and plans, MU0 a=1,2 orbits and Q₆ A₈ 41-orbit census) ran cleanly alongside the v5 S3/S2_STRONG, T63 target04 and Q₆ A10 checks.</p>
-<p>Ten large E16 .cnf/.drup traces (532.49 MB, up to 201.55 MB even.drup) are omitted uniformly for normal-Git packaging and recorded in INVENTORY.json; hash manifests do not substitute for DRAT-trim replay from the external R-S-n=7(2).rar archive.</p>
+<h2>Q₆ theorem and six-direction corollary</h2>
+<p>Every matching of Q₆ extends to a Hamilton cycle; combined with published results, matchings using at most six coordinate directions in any dimension Qₙ also extend.</p>
+<h2>Checks and archive layout</h2>
+<p>All 261 in-repo E16 files and all 290 bundled baseline imports match their recorded byte counts and SHA-256 inventory entries. The 189-row μ=0 large-face table and four standalone geometry/plan checkers (MU0 a=0 census and plans, MU0 a=1,2 orbits and the Q₆ A₈ 41-orbit census) pass alongside the v5 S3/S2_STRONG, T63 target04 and Q₆ A10 checks.</p>
+<p>The ten large E16 .cnf/.drup traces (532.49 MB, up to 201.55 MB for even.drup) live in the external archive R-S-n=7(2).rar to stay within normal Git file limits; INVENTORY.json lists their filenames and hashes so those proofs can be replayed with drat-trim.</p>
 <p><a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v6-c4free-rs7-20261117/EVOLUTION.md">v6 implementation and checks ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-e16/README.md">E16 bundle &amp; baseline scope ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-q7-20261114/EVOLUTION.md">Earlier v5 record ↗</a></p>
 <p><a href="../../../case-studies/ruskey-savage-q7/README.md">Q7 results, methods and evidence scope ↗</a> · <a href="../../../plugins/hypercube-hamilton/README.md">Hamilton plugin source ↗</a> · <a href="../../../docs/V6_CHANGES.md">v6 workflow changes ↗</a></p>
 <p class="fine">GitHub source and evidence links require repository access.</p>

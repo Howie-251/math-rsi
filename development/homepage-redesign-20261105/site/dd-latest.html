@@ -14,28 +14,28 @@
 <p class="q7-lead">Our constructions: 2,567 vertices at (10,4), 37,632 at (11,5), 42,433 at (12,5) and 16,416 at (16,4).</p>
 <h2>Results by setting</h2>
 <table class="dd-setting-table"><thead><tr><th scope="col">Degree, diameter</th><th scope="col">Our construction</th></tr></thead><tbody><tr><th scope="row">(10,4)</th><td><b>2,567</b></td></tr><tr><th scope="row">(11,5)</th><td><b>37,632</b></td></tr><tr><th scope="row">(12,5)</th><td><b>42,433</b></td></tr><tr><th scope="row">(16,4)</th><td><b>16,416</b></td></tr></tbody></table>
-<p>Four highlighted settings, with the best value from our constructions retained for each. Dated comparisons and verification scopes are given below.</p>
+<p>Four highlighted settings, showing our largest constructed graph in each. Dated table comparisons and verification details follow below.</p>
 <p><a href="dd-10-4.html">(10,4) construction and verification ↗</a> · <a href="../../../case-studies/degree-diameter/index.html">Four-setting case overview ↗</a></p>
 <h2>D5 follow-up · 2026-11-16</h2>
-<p class="q7-provenance">Run: v4 + local updates → v5 main maintenance.</p>
+<p class="q7-provenance">Run: 2026-11-11 v4-maintenance workflow + local DD updates → informs v5 main maintenance.</p>
 <div class="dd-latest-results">
 <article><h2>(11,5)</h2><p class="dd-latest-order">37,632</p><p>205,366 edges · maximum degree 11 · diameter exactly 5</p><p>Local sequence: 37,631 → 37,632 (+1)</p><p>Comellas 2026-11-16: 37,631 → 37,632 (+1)</p></article>
 <article><h2>(12,5)</h2><p class="dd-latest-order">42,433</p><p>246,309 edges · maximum degree 12 · diameter exactly 5</p><p>Local sequence: 42,402 → 42,433 (+31)</p><p>Comellas 2026-11-16: 42,352 → 42,433 (+81)</p></article>
 </div>
-<p>The table comparison and the local increase use different baselines. The +31 construction sequence is not the +81 public-table gain.</p>
+<p>Our own (12,5) sequence advances from 42,402 to 42,433 (+31), whereas the Comellas entry checked on 2026-11-16 was 42,352 (+81).</p>
 <h2>How the constructions work</h2>
 <p><b>D12: preserve the source, add legal attachments.</b> The 42,402-vertex source stays as an exact induced subgraph. Thirty-one insertions each use 12 permitted attachment points, adding 372 edges in total. The source supplies old–old distances; new-point checks cover the remaining pairs.</p>
-<p><b>D11: connect the geometric core and its boundary.</b> The core changes, so its distances use the H9 geometric theorem and literal sigma/pi binding. The 160 old peripheral vertices and the added vertex are checked separately against the whole final graph.</p>
+<p><b>D11: connect the geometric core and its boundary.</b> Because the core changes, core–core distances use the H9 geometric theorem under its stated σ/π identification, while the 160 peripheral vertices and the newly added vertex are checked directly against the whole final graph.</p>
 <h2>Joint completion and verified prefixes</h2>
-<p>Use an inclusion-minimal core-blocking set and jointly complete attachments from the full pool of remaining degree ports. Actual bad vertex pairs guide revisions to earlier construction choices; subsequent work consumes only independently verified prefixes.</p>
+<p>Starting from an inclusion-minimal core-blocking set, attachments are completed jointly across all remaining degree ports. Actual bad vertex pairs guide edits to earlier choices, and each stage builds only on independently verified prefixes.</p>
 <h2>Verification scope</h2>
-<p>Both final edge lists were regenerated exactly and passed independent finite-array and degree checks. D12 retained all source edges and ran complete BFS from all 31 new roots. D11 used the H9 theorem plus literal binding for core–core pairs and complete BFS from all 161 peripheral/new roots. Concrete end-to-end Lean instances and required source final-review obligations remain open.</p>
+<p>Both final edge lists regenerate deterministically and pass independent degree and adjacency checks. D12 retains all source edges and runs complete breadth-first search from all 31 new vertices; D11 combines the H9 theorem (under the stated σ/π identification) for core–core pairs with complete breadth-first search from all 161 peripheral and new vertices. End-to-end Lean proofs and independent refereeing for these D5 graphs remain open.</p>
 <h2>Research run and workflow feedback</h2>
-<p>The research used the local 2026-11-11 main/v4-maintenance workflow with DD feedback updates. These results and methods feed later v5 main maintenance; they were not produced by the published v5 release. The fixed v5 tag remains unchanged.</p>
-<p><b>Consume results before dispatch.</b> Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback.</p>
+<p>Constructed on the 2026-11-11 v4-maintenance workflow with local degree–diameter updates; those methods later informed v5 main maintenance, while the published v5 tag stays an earlier snapshot.</p>
+<p><b>Update state before dispatching new work.</b> Fold returned results into the active task state before launching the next search or review, avoiding duplicate runs and stale-state rollbacks.</p>
 <p><a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md">DD evolution and implementation record ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-research/references/current-context.md">Base: current facts ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-joint-completion.md">DD: joint completion ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-blocking-batches.md">DD: verified prefixes ↗</a></p>
 <h2>Dated historical results</h2>
-<p>The earlier (10,4) 2,567 and (16,4) 16,416 constructions retain their dated comparisons. The Comellas table checked 2026-11-16 now lists 2,612 and 16,848, respectively, so these two endpoints are historical highlights.</p>
+<p>On the Comellas table checked 2026-11-16, (10,4) is 2,612 and (16,4) is 16,848, above our earlier constructions of 2,567 and 16,416, which remain documented with their original run dates.</p>
 <p><a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas table ↗</a> · <a href="dd-10-4.html">Historical (10,4) construction ↗</a></p>
 <p><a href="../../../case-studies/degree-diameter/README.md">Case overview and methods ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/">Source package and replay ↗</a> · <a href="../../../docs/V5_CHANGES.md">v5 maintenance notes ↗</a></p>
 <p class="fine">GitHub source and evidence links require repository access.</p>

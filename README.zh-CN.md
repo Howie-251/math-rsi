@@ -10,7 +10,7 @@
 
 [![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-50fps-20261117)](figures/mathrsi/media/evolution.mp4?v=6-50fps-20261117)
 
-*真实主页 v0 → v6 演进回放，末尾停留 v6 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/)。[运行归属与工作稿状态](case-studies/README.md)。*
+*真实主页 v0 → v6 演进回放，末尾停留 v6 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/) · [六个数学案例与核验范围](case-studies/README.md)。*
 
 MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Claude Code 或 Codex 完成文献调研、路线探索、证明、审阅、验证与交付。研究成果和失败经验持续用于改进工作流与插件。
 
@@ -34,7 +34,7 @@ MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Cl
 /mathrsi-verify 检查 ../my-problem/proof.tex
 ```
 
-核验稿件或具体义务，修复可补步骤，或定位需要继续证明的实质数学缺口。
+检查证明稿或其中一条引理，补全局部省略的步骤，或定位仍需继续攻关的数学缺口。
 
 **接着已有研究继续**（Codex 示例）
 
@@ -90,24 +90,24 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 两条线共同演进：**共享 Base 的行为持续强化**，**领域 Plugins 持续扩展与深化**。独立的 [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) 维护流程把研究证据转成实际改动。
 
-- **v6 通用能力：** 采纳新分类前先在最难未闭分支做有界探针并按同一原输入度量净新增并集覆盖；运行分离证明目标与搜索目标、四通道有符号归一化残差轮换与全归档反驳的上下界协同循环；当浮点 SDP/CP 单轮增益低于修补残差时及时停机。
-- **深化两套超立方体插件：** `hypercube-extremal` 新增渐近 COP + $m=1024$ 广义度数势（`T3` / `T4`）、同图三测度有限维拉回（$Q_8 \le 683$）、$Q_7$ 304 构造与原包报告归档及可复用 `cube_coevolve` 引擎；`hypercube-hamilton` 完成 $Q_7$ 完整 E16（$\ge 56$ 边，全部 $\mu=0..4$），加入参数化 $Q_6$ $\Delta=2$ 双桥、$Q_6$ $A_8$ 及大面 $S_6$ 独立孔表配小面符号原孔。两路研究实际采用 **v3 + 本地适配／协同循环**，方法反馈 v6。
-- **继承已有能力：** v5 的受控辅助选择、跨表示定理复用与“先收件，再派发”，以及 v4 的取等—见证链、全局重评和 ECC 节点复用继续保留。
+- **v6 通用流程：** 采纳新分类前，先在最难的未闭合分支上做小规模试探，并在同一输入上统计新增覆盖；上下界协同搜索中把证明目标与对抗搜索目标分开，轮换四路归一化带符号残差，并在全部历史构造上检验候选不等式；当浮点 SDP 或完全正规划的单轮增益不高于有理化修补误差时及时停机。
+- **深化两套超立方体插件：** `hypercube-extremal` 新增渐近 COP + $m=1024$ 广义度数势上界（`T3` / `T4`）、同一子图耦合三组测度的有限维拉回（$Q_8 \le 683$）、$Q_7$ 304 边构造与原包报告归档，以及可复用的 `cube_coevolve` 引擎；`hypercube-hamilton` 完成 $Q_7$ 完整 E16（$\ge 56$ 边，涵盖全部 $\mu=0..4$），加入参数化 $Q_6$ $\Delta=2$ 双桥、$Q_6$ $A_8$ 及大面 $S_6$ 独立孔表与小面符号原孔的组合建模（两项研究基于 **v3 + 本地适配／协同搜索** 推进，提炼的方法并入 v6）。
+- **延续既有能力：** 保留 v5 的受控辅助选择、跨等价表示复用定理、先消化返回结果再派发新任务，以及 v4 的把取等情形收成可用见证、全局进展重评和 ECC 分支计算共享。
 
-**[v6 是 `main` 当前工作流](docs/V6_CHANGES.md)。** 可下载[固定 v6 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip)或[main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆并记录精确提交。固定 v1–v5 标签不变。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
+**[v6 是 `main` 分支的当前工作流](docs/V6_CHANGES.md)。** 可直接下载 [v6 快照 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) 或 [`main` ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆仓库使用。`v1`–`v6` 各版本标签均作为固定快照保留；需要严格复现某次运行时请记录对应 commit。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
-<summary>固定版本与早期改进</summary>
+<summary>历史版本概览（v0–v6）</summary>
 
-- **v0：** 统一 harness 形成前的 Property B／ECC 研究工具阶段，无 Git tag。
-- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)：** 五阶段、三层分离、对抗路线迭代与初始插件。
-- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)：** 独立维护流程、DD、证据继承和共同覆盖检查。[变更](docs/V2_CHANGES.md)
-- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)：** 工作集／全域区分、标记对象运输、有限全称证书、Lean 显式前提审计；升级 ECC 并新增三个领域。[变更](docs/V3_CHANGES.md)
-- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4)：** 取等到见证的证明动作，Happy Ending／DD 专用方法。[变更](docs/V4_CHANGES.md)
-- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5)：** 控制辅助选择、跨已知合法表示复用定理、固定／条件计划覆盖与 DD D5 深化。[变更](docs/V5_CHANGES.md)
-- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6)：** 难余域准入、上下界协同与修补残差停机；深化超立方体极值与完整 $Q_7$ E16 Hamilton 方法。[变更](docs/V6_CHANGES.md)
+- **v0：** 统一框架形成前的 Property B 与 ECC 独立研究工具阶段（无 Git 标签）。
+- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)：** 五阶段流程、三层架构分离、对抗式路线迭代与首批领域插件。
+- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)：** 独立演进维护流程、接入 Degree–Diameter 插件、对象变更后的证据复核与共享覆盖检查。[更新说明](docs/V2_CHANGES.md)
+- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)：** 全域反例检查、带标记对象归约保持、有限普适证书与 Lean 外部前提核查；升级 ECC 并新增三个领域。[更新说明](docs/V3_CHANGES.md)
+- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4)：** 把取等情形收成可用的见证，深化 Happy Ending 与 Degree–Diameter 方法。[更新说明](docs/V4_CHANGES.md)
+- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5)：** 受控辅助选择、跨合法表示复用定理与有限计划覆盖；深化 Hamilton 与 DD D5 方法。[更新说明](docs/V5_CHANGES.md)
+- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6)：** 最难分支试探准入、上下界协同搜索与修补误差停机判据；深化超立方体极值与完整 $Q_7$ E16 Hamilton 方法。[更新说明](docs/V6_CHANGES.md)
 
-各 tag 保留固定完整快照。需要可复现起点时选择相应版本，并记录实际 commit。[历史 v2／v3 配图](figures/mathrsi/README.md#historical-diagrams)
+[历史 v2／v3 架构配图](figures/mathrsi/README.md#historical-diagrams)
 
 </details>
 

@@ -12,15 +12,14 @@
 <p class="p-eye">Erdős Problem 86 · C₄-free hypercube subgraphs</p>
 <h1>Finite and asymptotic bounds by setting</h1>
 <p class="q7-lead">Square-free subgraphs of Qₙ across finite dimensions Q₇ and Q₈ and the asymptotic edge-density limit Q∞.</p>
-<p class="q7-provenance">Run: MathRSI v3 + local primal–dual coevolution → methods feed v6.</p>
-
+<p class="q7-provenance">Run: MathRSI v3 + primal–dual coevolution → methods inform v6.</p>
 <h2>Results by setting</h2>
 <table class="dd-setting-table e86-setting-table">
 <thead><tr><th scope="col">Setting</th><th scope="col">Bound</th><th scope="col">Verification scope</th></tr></thead>
 <tbody>
 <tr><th scope="row">Q₇ (n = 7)</th><td><b>304</b></td><td>304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass.</td></tr>
-<tr><th scope="row">Q₈ (n = 8)</th><td><b>682 ≤ ex(Q₈, C₄) ≤ 683</b></td><td>Four 682-edge constructions &amp; C++17 Q₄ replay verified; whole-proof audit provisional; ex(Q₈, C₄) ≤ 682 open.</td></tr>
-<tr><th scope="row">Q∞ (asymptotic)</th><td><b>≤ 0.5912405943</b></td><td>T3 proved (≤ 0.5912405943); T4 with m = 1024 degree potential gives ≤ 0.5912405942. Conjecture 1/2 open.</td></tr>
+<tr><th scope="row">Q₈ (n = 8)</th><td><b>682 ≤ ex(Q₈, C₄) ≤ 683</b></td><td>Four 682-edge constructions &amp; C++17 Q₄ replay verified; Theorem B reviewed in the same model family (independent refereeing pending); ex(Q₈, C₄) ≤ 682 open.</td></tr>
+<tr><th scope="row">Q∞ (asymptotic)</th><td><b>≤ 0.5912405943</b></td><td>T3 (≤ 0.5912405943) and T4 with m = 1024 degree potential (≤ 0.5912405942) proved and rechecked in 128-bit C++20. Conjecture 1/2 open.</td></tr>
 </tbody>
 </table>
 
@@ -28,48 +27,47 @@
 <article>
 <h2>Q₇ · 128 vertices</h2>
 <p class="dd-latest-order">304</p>
-<p>Two explicit 304-edge C₄-free subgraphs (A.edges, B.edges) checked directly, proving ex(Q₇, C₄) ≥ 304; constructions alone do not prove an upper bound.</p>
-<p>304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass.</p>
+<p>Two explicit 304-edge C₄-free subgraphs (A.edges, B.edges) are checked directly in-repo (ex(Q₇, C₄) ≥ 304); 304 upper bound as reported in the source package, not re-verified in this pass.</p>
 </article>
 <article>
 <h2>Q₈ · 256 vertices</h2>
 <p class="dd-latest-order">682–683</p>
-<p>Four 682-edge seeds give ex(Q₈, C₄) ≥ 682. Theorem B rules out 684 edges via 83 active inequalities and 25 Q₆ subcube imports (audit: same-family / provisional).</p>
-<p>Primary proof goal ex(Q₈, C₄) ≤ 682 remains open (1-edge gap).</p>
+<p>Four 682-edge constructions establish ex(Q₈, C₄) ≥ 682. Theorem B rules out 684 edges using 83 active cuts and 25 imported Q₆ DRAT certificates (checked computationally and reviewed in the same model family; independent refereeing pending).</p>
+<p>Closing the remaining 1-edge gap to ex(Q₈, C₄) ≤ 682 is still open.</p>
 </article>
 </div>
 
 <h2>Asymptotic density Q∞: exact rationals T3 and T4</h2>
-<p>Both unconditional bounds improve the earlier v3 certificate (&lt; 0.59155154) and the 0.60318 reference; 8-digit 0.59124059 is a downward truncation and is never used as an upper bound.</p>
+<p>Both unconditional bounds improve the v3 certificate (&lt; 0.59155154) and the 0.60318 reference, and both were rechecked in 128-bit C++20:</p>
 <ul>
 <li><b>Theorem T3 (Q₄ flag algebra + 35 triangle-free COP cuts + 29 cubic terms):</b> exact rational 681653995482306581 / 1152921504606846976 ≈ 0.5912405942282728… ≤ 0.5912405943.</li>
 <li><b>Theorem T4 (adding the m = 1024 generalized hypergeometric vertex-degree potential):</b> exact rational 9701859764505653085708308080340303 / 16409326186106551516455239680000000 ≈ 0.5912405941884453… ≤ 0.5912405942.</li>
 </ul>
 <p><b>Five-line unconditional hypergeometric tower for T4 (all n ≥ 1024):</b> (1) Sampling a uniform Q₄ face F ⊆ Qₙ and uniform v ∈ V(F) has the exact same joint law as sampling uniform v ∈ V(Qₙ), uniform S ∈ C([n], 1024), and uniform T ∈ C(S, 4) spanning F through v. (2) The local degree deg<sub>G[F]</sub>(v) depends only on (v, T). (3) Conditioning on (v, S) with retained degree d<sub>S</sub>(v) ∈ {0,…,1024}, hypergeometric expectation gives E[∑<sub>k=0</sub><sup>4</sup> b<sub>k</sub> 1<sub>deg=k</sub> | v, S] = Φ<sub>1024</sub>(d<sub>S</sub>(v)) / C(1024, 4) ≥ μ<sub>1024</sub> / C(1024, 4). (4) Summing over the 16 vertices of F by linearity of expectation requires no independence and holds identically for every n ≥ 1024. (5) Standard O(1/n) flag sampling collision error on Qₙ yields T4 unconditionally.</p>
 
-<p class="q7-open"><b>Non-theorem boundaries &amp; open conjectures</b><br><span>The 0.5907 figure in exploratory notes is an uncertified approximate completely positive fit (feasibility residual ≈ 3.9 × 10⁻⁴), not a proved lower barrier. An early Q₅ 0.5899 claim was refuted by the legal C₄-free graph 0x69966996699616682994 (scoring 0.5922454) and retracted. Both ex(Q₈, C₄) ≤ 682 and Erdős’s asymptotic conjecture π<sub>□</sub>(C₄) = 1/2 remain open.</span></p>
+<p class="q7-open"><b>Exploratory notes &amp; open questions</b><br><span>The exploratory value 0.5907 is an approximate completely positive fit with residual about 3.9 × 10⁻⁴, and an earlier Q₅ 0.5899 claim was refuted by a valid C₄-free graph (0x69966996699616682994, scoring 0.5922454) and withdrawn. Both ex(Q₈, C₄) ≤ 682 and Erdős’s asymptotic conjecture π<sub>□</sub>(C₄) = 1/2 remain open.</span></p>
 
 <h2>Primal–dual coevolution &amp; same-graph finite pullback</h2>
 <section class="q7-schematic e86-loop" aria-label="Primal-dual coevolution schematic">
 <div><b>Lower search</b><span>mutates Python builders under 4-channel signed residuals</span></div>
 <span aria-hidden="true">⇄</span>
-<div><b>Full archive</b><span>host verifies C₄-freeness &amp; refutes false cuts on all graphs</span></div>
+<div><b>Archive filter</b><span>verifies C₄-freeness &amp; tests cuts across all archived graphs</span></div>
 <span aria-hidden="true">→</span>
-<div><b>Exact proof</b><span>exports surviving cuts to C++17 Q₄ &amp; Q₆ pullback</span></div>
+<div><b>Full-domain check</b><span>exports surviving cuts to C++17 Q₄ &amp; Q₆ pullback</span></div>
 </section>
-<p class="fine">Coevolution loop in cube_coevolve: empirical survival never substitutes for full-domain proof.</p>
-<p>In Q₈, the coevolution engine separates the open proof goal (≤ 682) from the adversarial search target (683) and focuses parent selection on a near-extremal band (≥ 680 edges) while testing candidate inequalities against every archived graph. Surviving obligations feed Theorem B, which couples three probability measures on the same candidate subgraph H ⊆ Q₈ (uniform marked Q₄ completions, 3-degree edge incidences and global vertex degrees), yielding exact rational margin 782808475930428709 / 4209067950080000000000 &gt; 0 and integer maximum −37440 across all 13,150,453 legal marked Q₄ completions.</p>
+<p class="fine">Cuts that survive the archive filter are exported to the C++17 full-domain verifier; only inequalities that pass that check are used in Theorem B.</p>
+<p>In Q₈, the coevolution engine separates the open proof goal (≤ 682) from the adversarial search target (683) and focuses parent selection on near-extremal graphs (≥ 680 edges) while testing candidate inequalities against every archived graph. Validated cuts feed Theorem B, which couples three probability measures on the same candidate subgraph H ⊆ Q₈ (uniform marked Q₄ completions, 3-degree edge incidences and global vertex degrees), yielding exact rational margin 782808475930428709 / 4209067950080000000000 &gt; 0 and integer maximum −37440 across all 13,150,453 legal marked Q₄ completions.</p>
 
-<h2>What v6 learns</h2>
+<h2>Methods distilled into v6</h2>
 <ol>
-<li>Run primal–dual coevolution with explicit goal/target separation, rotating signed residuals and full-archive refutation.</li>
-<li>Stop float SDP/CP outer loops when apparent gains fall below repair residuals; record nonzero residuals beside any approximate fit.</li>
+<li>Separate the open proof goal from the adversarial search target, rotate normalized signed residuals, and test candidate cuts against the full graph archive.</li>
+<li>Stop outer floating-point SDP/CP loops once gains drop to the rounding-repair residual, recording any nonzero residual beside approximate fits.</li>
 <li>Couple local and global observables on the same finite candidate graph before invoking subcube imports.</li>
 </ol>
 
-<h2>Repository checks and external archive scope</h2>
-<p>During v6 maintenance, both C++20 128-bit verifiers for T3 and m = 1024 T4 recompiled and verified all 3,212,821 Q₄ orbits; the two 304-edge Q₇ witnesses, four 682-edge Q₈ seeds, exact Q₈ rational combination, C++17 13,150,453-completion enumeration, v3 Q₄ baseline replay and all 18 cube_coevolve unit tests plus offline smoke runs passed from repository files.</p>
-<p>Large raw solver traces stay in external research archives and are recorded in per-archive INVENTORY.json manifests (hashes identify external files and do not substitute for certificate replay): the 21 Q₇ .cnf/.drup files were already omitted in the upstream 2026-10-31 compilation, and Q₈’s 25 Q₆ .drat traces (~555 MiB) plus .npz discovery pools remain in the external Q8_C4_upper683_20261116 archive.</p>
+<h2>Checks and archive layout</h2>
+<p>Both 128-bit C++20 verifiers for T3 and m = 1024 T4 recompile and check all 3,212,821 Q₄ orbits from repository files, alongside the two 304-edge Q₇ constructions, four 682-edge Q₈ constructions, exact Q₈ rational combination, C++17 13,150,453-completion enumeration, v3 Q₄ baseline replay and all 18 cube_coevolve unit tests.</p>
+<p>Large solver traces stay in external archives to fit normal Git limits: the 21 Q₇ .cnf/.drup files were omitted in the upstream 2026-10-31 compilation, while Q₈’s 25 Q₆ DRAT traces (about 555 MiB) and .npz discovery pools live in the Q8_C4_upper683_20261116 archive; each INVENTORY.json lists filenames and hashes so those certificates can be replayed with drat-trim.</p>
 <p><a href="../../../plugins/hypercube-extremal/archive/source/START_HERE.html">Historical v3 Q₄ report (&lt; 0.59155154) ↗<span class="source-language" data-no-i18n>中文</span></a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/case-studies/erdos-86/README.md">Case study &amp; verification table ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/hypercube-extremal">Hypercube extremal plugin ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V6_CHANGES.md">v6 workflow changes ↗</a></p>
 <p class="fine">GitHub source and evidence links require repository access.</p>
 <p><a href="index.html#evolution">Back to evolution ↑</a> · <a href="index.html#results">Back to results ↑</a></p>
