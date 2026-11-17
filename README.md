@@ -8,7 +8,7 @@
 
 </div>
 
-[![Actual MathRSI v0 through v6 homepage evolution](figures/mathrsi/media/evolution.gif?v=6-c4free-rs7-20261117)](figures/mathrsi/media/evolution.mp4?v=6-c4free-rs7-20261117)
+[![Actual MathRSI v0 through v6 homepage evolution](figures/mathrsi/media/evolution.gif?v=6-dd1block-20261117)](figures/mathrsi/media/evolution.mp4?v=6-dd1block-20261117)
 
 *Actual v0 → v6 homepage replay, ending at v6 Current. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [execution provenance and manuscript status](case-studies/README.md).*
 

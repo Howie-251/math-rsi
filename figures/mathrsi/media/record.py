@@ -205,7 +205,7 @@ def capture(preview=False):
             assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7_v5','dd','e86_v6','q7_v6']), final
             assert all(line in final['e86_v6']['text'] for line in ['Q₇ 304 · Q₈ 682–683','Q∞ ≤ 0.5912405943']), final['e86_v6']
             assert 'Q₇ · ≥56 edges' in final['q7_v6']['text'], final['q7_v6']
-            assert len(final['v6Blocks']) == 23 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
+            assert len(final['v6Blocks']) == 22 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
             assert max(final[k]['box']['bottom'] for k in ['e86_v6','q7_v6']) < min(b['box']['top'] for b in final['v6Blocks']), final
             for rect in [final['q7_v5']['box'], final['dd']['box'], final['e86_v6']['box'], final['q7_v6']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['v6Blocks']]]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
@@ -249,7 +249,7 @@ def capture(preview=False):
             'page_errors': errors, 'failed_requests': failed_requests,
             'exports': metadata, 'poster_resolution': [VIEWPORT_WIDTH, height],
             'intermediates': str(CACHE.relative_to(ROOT)),
-            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All 23 v6 outcome blocks are opaque, inside the crop and below both v6 bubble surfaces with zero text overflow.'
+            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All 22 v6 outcome blocks are opaque, inside the crop and below both v6 bubble surfaces with zero text overflow.'
         }
         (OUT/'RECORDING.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n')
         log('complete', duration_seconds=receipt['duration_seconds'], exports=metadata)
