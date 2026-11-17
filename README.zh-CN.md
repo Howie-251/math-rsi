@@ -8,7 +8,7 @@
 
 </div>
 
-[![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-c4free-rs7-20261117)](figures/mathrsi/media/evolution.mp4?v=6-c4free-rs7-20261117)
+[![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-dd1block-20261117)](figures/mathrsi/media/evolution.mp4?v=6-dd1block-20261117)
 
 *真实主页 v0 → v6 演进回放，末尾停留 v6 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/)。[运行归属与工作稿状态](case-studies/README.md)。*
 
