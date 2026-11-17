@@ -1,0 +1,83 @@
+{
+  "observed_at": "2026-10-07T22:23:24.616818+08:00",
+  "timezone": "Asia/Singapore",
+  "server_read_only": true,
+  "large_proofs_rehashed": false,
+  "c5": {
+    "accepted_at": "2026-10-03T19:38:33.564768+08:00",
+    "receipt_sha256": "4101b158a1516d603148194e34ed44e67769d26b4c47d27b9933020fee137ea3",
+    "certified_upper_bound": 30,
+    "six_fresh_receipts_logs_dependencies_and_zero_exits_revalidated": true
+  },
+  "c6": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c6_compact_parallel_v1",
+    "cases": [
+      {
+        "e": 6,
+        "N": 26,
+        "status": "SOLVING",
+        "pid": 1858257,
+        "identity_matches": true,
+        "wall_hours": 199.67134722222218,
+        "cpu_hours": 199.64169166666665,
+        "proof_GB": 525.86610688,
+        "stderr_bytes": 0
+      },
+      {
+        "e": 7,
+        "N": 27,
+        "status": "RAW_UNSAT_CHECKING",
+        "pid": 1931364,
+        "identity_matches": true,
+        "wall_hours": 70.41802777777775,
+        "cpu_hours": 70.35622777777778,
+        "proof_GB": 341.365474449,
+        "stderr_bytes": 0,
+        "proof_additions_traversed_percent": 93.92,
+        "displayed_linear_remaining_hours": 4.38515,
+        "solve_hours": 128.77964325851386
+      },
+      {
+        "e": 8,
+        "N": 28,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 69.58987764322859,
+        "check_hours": 29.819501368631933
+      },
+      {
+        "e": 9,
+        "N": 29,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 35.69653824666722,
+        "check_hours": 12.074174390901657
+      },
+      {
+        "e": 10,
+        "N": 30,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 75.92842392081162,
+        "check_hours": 14.090974256609204
+      }
+    ],
+    "global_stop": false,
+    "terminal_exists": false,
+    "completed_outputs_verdicts_cnf_metadata_and_proof_sizes_verified": true
+  },
+  "bridges_e10": {
+    "status": "VERIFIED_UNSAT",
+    "solve_hours": 2.4320363664475737,
+    "check_hours": 1.9363658987644077,
+    "theorem_credit": false,
+    "receipt": {
+      "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261006_c6_e10_bridges_comparison_v1/trials/e10_bridges_s0/status.json",
+      "size_bytes": 3220,
+      "sha256": "9d5bda90fbb1a954793e731c03dfe3973c0ed342f1db0937d354677d5bc20f13"
+    }
+  },
+  "disk_available_GiB": 641.4577331542969,
+  "running_jobs_modified": false,
+  "eta": {
+    "e7": "Roughly 2-6 more hours, low confidence and may extend. Displayed ETA assumes uniform proof-addition work.",
+    "whole_c6": "No reliable finish date while e6 is an open solve. Reserve further days, possibly over a week; e6 needs proof checking afterward. Independent C6 acceptance is separate."
+  }
+}

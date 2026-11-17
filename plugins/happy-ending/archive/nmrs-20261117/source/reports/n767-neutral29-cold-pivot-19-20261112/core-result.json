@@ -1,0 +1,72 @@
+{
+  "status": "TRIMMED_CORE_CHECKED",
+  "input_cnf_sha256": "8ea8d3f1a358e780d0f4356cab734f80ed7677f7b7ba26e698bbc21d9d271365",
+  "trim": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/proof.drat",
+      "-c",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/core.cnf",
+      "-l",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/core.drat",
+      "-t",
+      "60"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "passed": true,
+    "seconds": 0.9178183760959655
+  },
+  "recheck": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/core.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral29-cold-pivot-19-20261112/core.drat",
+      "-t",
+      "60"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "passed": true,
+    "seconds": 0.16587333800271153
+  },
+  "clauses": 68,
+  "groups": {
+    "weak_R6_B3": 8,
+    "weak_R5_B4": 2,
+    "packet": 9,
+    "no_R7": 14,
+    "R6_endpoint_implication": 8,
+    "late_R6_no_T_second": 2,
+    "R5_endpoint_implication": 2,
+    "early_R6_no_T_penultimate": 1,
+    "frozen_red_path_or_redundant_red_fan": 14,
+    "A_no_in_B4": 2,
+    "T_no_B5_endpoints": 1,
+    "no_T_to_T_B4": 2,
+    "B_no_out_B4": 3
+  },
+  "bindings": {
+    "core.cnf": {
+      "bytes": 1184,
+      "sha256": "bdc831221a425c938b0997aff36f70c64cd614c33d1736531780e89f7e6e2303"
+    },
+    "core.drat": {
+      "bytes": 2584,
+      "sha256": "78632f93ca7ff3424b2235aa2ff96d8eae21804d81c35f1210ee10e5b95c833f"
+    },
+    "core-translation.json": {
+      "bytes": 26269,
+      "sha256": "a16db531a026549fffddd0d0291d23edb6faf04c46097e773464a8b92fa13242"
+    },
+    "CORE.md": {
+      "bytes": 6796,
+      "sha256": "7af6099dc91e3698f8761cd69887e1c5d3e69418bfb50a4b4ad326a27224db36"
+    },
+    "extract_core.py": {
+      "bytes": 6142,
+      "sha256": "82d9b1c64dc7cec84d185d43df4483bd8173da1be60b3cd519392bef41bda548"
+    }
+  }
+}

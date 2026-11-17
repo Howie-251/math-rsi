@@ -1,6 +1,6 @@
 ---
 name: happy-ending-certificate
-description: 独立核验25点signotope染色、解释55层SAT历史证据及编码覆盖，或检查结构证明的实际路径/集合/匹配接口；返回精确局部证据，不将收据、固定CNF或抽象见证扩写为原ES上界或几何实现。
+description: 独立核验25点signotope染色、九洞共享标签证书（N(8,6,6)<=61）、原生边界迹稀疏整数对偶与松弛上限见证（N(9,8,8)<=688, D_9<=458）、公开遗漏树有限算术，或检查55层历史证据与结构证明接口；返回精确局部证据，不将矩阵见证、分数松弛或抽象见证扩写为几何实现或已审全证。
 ---
 
 # Happy Ending证据与实际对象核验
@@ -57,3 +57,31 @@ python3 plugins/happy-ending/tools/check_strategy_examples.py \
 caller先建输出父目录。脚本只检查新原稿中的两个固定抽象例：11点双红块的逐点R5供应不强迫跨侧R5，10点canonical A分别可加7/10但联合出现B4。枚举全部递增子集为路径，检查packet、帽长、同端长度和、实际角色和失败见证，不导入SAT辅助变量。通过仅确认这两个反例的陈述，不证明b容量、全称75/76、几何实现或regular共根定理。失败返回实际packet/路径/角色差异，先核数据定义。
 
 若收到regular共根加权候选，另核增强根族非空、共同极值在I\Γ、I内锁序及w=0；再核各e/h/d松弛和精确人口式。n=3b只余e_L/e_R/d_D单单位支是该条件接口的结论，不能宣布原全域已归到这三支。返回记录实际使用的原件段落、逐式核对、运行命令/退出码与未核进口，由base verify决定整体接受；不把固定反例PASS写为原证明PASS。
+
+## 5. 九洞共享标签证书、稀疏原生迹整数对偶与公开遗漏树重放
+
+仓库根跨平台（macOS / Linux）标准库核验入口如下，均只向 `--output` 写入回执而不改动 `archive/`：
+
+```bash
+# 1. 九参数稀疏原生迹整数对偶（N(9,8,8)<=688 与 D_9<=458）及深度<=3 全部 47,635 行松弛上限见证
+python3 plugins/happy-ending/tools/check_native_trace_cert.py \
+  --check plugins/happy-ending/archive/nmrs-20261117/source/reports/n79-overlap-20261116/direct-cycle-lp/run-988-d2/compact-certificate.json \
+  --output /absolute/task/output/native-988.json
+
+python3 plugins/happy-ending/tools/check_native_trace_cert.py \
+  --check plugins/happy-ending/archive/nmrs-20261117/source/reports/n79-overlap-20261116/direct-cycle-lp/run-d9-d3/compact-certificate.json \
+  --fractional-witness plugins/happy-ending/archive/nmrs-20261117/source/reports/n79-overlap-20261116/direct-cycle-lp/run-d9-d3/fractional-grid.json \
+  --output /absolute/task/output/native-d9.json
+
+# 2. 八参数 N(8,6,6)<=61 九洞封包（语义重建 + 9 洞紧性 + 传入 --checker 时执行完整 DRAT 复核）
+python3 plugins/happy-ending/tools/check_n866_milestone9.py \
+  --directory plugins/happy-ending/archive/nmrs-20261117/source/reports/n866-joint-label-order-20261117/milestone9 \
+  --checker /path/to/drat-trim \
+  --output /absolute/task/output/n866-milestone9.json
+
+# 3. 八参数公开 15 文件遗漏树有限算术重放（C_8<=193, D_8<=124）
+python3 plugins/happy-ending/tools/check_octagon_omission.py \
+  --output /absolute/task/output/octagon-omission.json
+```
+
+返回时严格写清每份证书的精确边界：`check_native_trace_cert.py` 从参数 `(q, p, inc, exc, weight)` 独立重建每条正权迹行与过载惩罚 $P$，零浮点认证 $C_9 \le 688, D_9 \le 458$（单行必要性与 R7/R20 几何装配仍属工作证明，`fractional-grid.json` 仅证深度 $\le 3$ LP 松弛上限为 124 而非整数点集）；`check_n866_milestone9.py` 认证 115 行共享标签编码与 budget-8 UNSAT（9 洞向量仅证该矩阵最小值为 9，不是 61 点 signotope）；`check_octagon_omission.py` 重放 Schroeder 公开有限遗漏树算术（不构建 Lean，也不自动认证 `EIGHT-CYCLE-TRANSFER.md` 的抽象循环符号 packet 桥）。

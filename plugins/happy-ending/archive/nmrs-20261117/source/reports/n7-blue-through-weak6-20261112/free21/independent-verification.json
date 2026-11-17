@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "checks": {
+    "literal_assignment": true,
+    "packets": true,
+    "no_R7": true,
+    "no_B6": true,
+    "no_weak7": true,
+    "actual_weak6_inside_actual_K": true,
+    "K_no_R6_endpoints": true,
+    "no_R5_between_K": true,
+    "K_flags_exact": true,
+    "B5_source_flags_exact": true,
+    "B5_terminal_flags_exact": true
+  },
+  "K": [
+    5,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17
+  ],
+  "K_size": 7,
+  "weak6_in_actual_H": [
+    {
+      "endpoints": [
+        10,
+        17
+      ],
+      "R_length": 3,
+      "B_length": 5,
+      "R_path": [
+        10,
+        11,
+        17
+      ],
+      "B_path": [
+        10,
+        12,
+        14,
+        16,
+        17
+      ]
+    }
+  ],
+  "DP_states": {
+    "false": 625,
+    "true": 1125
+  },
+  "max_R": 6,
+  "max_B": 5,
+  "endpoint_pairs": 210,
+  "seconds": 5.7800352540798485,
+  "bindings": {
+    "formula.cnf": "819f4ef987ae9900d7b7a233cf6605f83a4fa6cea20b38b29a4cdddc58375484",
+    "solve.stdout": "720052b0b41bdab27929d88b4f552dfbf3092e27aa49be8fb9370dd88af8c32e",
+    "colors.tsv": "5c2054ab4ed7f444696eae4f192eaa2b4bb591f205fda68c6b7eab83d6c71a00",
+    "physical-witness.json": "a387f3f23f5ef8c508fbb12bda3b06b71e8704e32e3704359c3f0c5336b4cce2",
+    "verify.py": "9df2faf5039b42d6f445548075ea557b1ab8caffa68e215211893b21bccf5b7c"
+  }
+}

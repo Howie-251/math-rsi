@@ -1,0 +1,108 @@
+{
+  "template": "U_gap_two_J_gap_empty",
+  "order": [
+    "a",
+    "u1",
+    "h1",
+    "h2",
+    "u2",
+    "x",
+    "v2",
+    "d",
+    "e",
+    "y",
+    "hr",
+    "k1",
+    "f",
+    "g",
+    "w",
+    "j1",
+    "j2",
+    "b"
+  ],
+  "roles": {
+    "v2": "v2",
+    "k1": "k1"
+  },
+  "n": 18,
+  "deleted_sets": {
+    "U_family": [
+      5,
+      6,
+      15,
+      16,
+      17
+    ],
+    "J_family": [
+      0,
+      1,
+      4,
+      11,
+      14
+    ]
+  },
+  "existence_clause_lengths": [
+    1716,
+    1716
+  ],
+  "binding": {
+    "variables": 20057,
+    "clauses": 210789,
+    "cnf_sha256": "7e9e4dbeddcfc35701530724354216ed0b1216f03312227c19ed1b167710826c",
+    "after_two_existence_clauses_sha256": "11e61ba61367169abca41af8955e92acbfed0e4841fe854cf6838a092fa13f2a"
+  },
+  "status": "FIXED_CNF_DRAT_CHECKED_UNSAT",
+  "cegar": [
+    {
+      "round": 0,
+      "actual_R6_count": 110,
+      "disjoint_pairs": 214
+    },
+    {
+      "round": 1,
+      "actual_R6_count": 467,
+      "disjoint_pairs": 5344
+    },
+    {
+      "round": 2,
+      "actual_R6_count": 183,
+      "disjoint_pairs": 388
+    },
+    {
+      "round": 3,
+      "actual_R6_count": 95,
+      "disjoint_pairs": 101
+    },
+    {
+      "round": 4,
+      "actual_R6_count": 91,
+      "disjoint_pairs": 142
+    }
+  ],
+  "separation_clauses_added": 6189,
+  "elapsed_seconds": 1.366,
+  "final_cnf_sha256": "f2b70c093b14c29a2710cf205aac3be892bf9ffd21fc7b3a6da946ba564c8a19",
+  "final_cnf_path": "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+  "proof_solver": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.drat"
+    ],
+    "exit_code": 20,
+    "timeout": false,
+    "elapsed_seconds": 0.219
+  },
+  "proof_sha256": "10f6c7665f9022fcfcf496671e97b184289597680a35d851fcb2cd2e748febb8",
+  "drat_checker": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.drat"
+    ],
+    "exit_code": 0,
+    "timeout": false,
+    "elapsed_seconds": 0.494,
+    "reported_verified": true
+  }
+}

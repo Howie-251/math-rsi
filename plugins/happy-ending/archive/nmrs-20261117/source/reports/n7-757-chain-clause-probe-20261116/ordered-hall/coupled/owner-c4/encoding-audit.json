@@ -1,0 +1,45 @@
+{
+  "cardinality_exhaustive_tests": [
+    {
+      "type": "equals",
+      "n": 5,
+      "k": 1,
+      "input_assignments": 32,
+      "all_auxiliary_extensions_exact": true
+    },
+    {
+      "type": "equals",
+      "n": 6,
+      "k": 4,
+      "input_assignments": 64,
+      "all_auxiliary_extensions_exact": true
+    },
+    {
+      "type": "atleast",
+      "n": 5,
+      "k": 4,
+      "input_assignments": 32,
+      "all_auxiliary_extensions_exact": true
+    },
+    {
+      "type": "atleast",
+      "n": 8,
+      "k": 4,
+      "input_assignments": 256,
+      "all_auxiliary_extensions_exact": true
+    }
+  ],
+  "inside_gate_truth_assignments": 16,
+  "closed_interval_disjoint_truth_cases": 24,
+  "original_to_owner_exact_prefix": true,
+  "owner_to_intervals_exact_prefix": true,
+  "reduced_to_bare_exact_removed_original_clauses": 462,
+  "redundant_double_owner_edge_units": 25,
+  "each_removed_owner_unit_implied_by_existing_interval_clause": true,
+  "checked_unsat_hash_bindings_verified": [
+    "intervals",
+    "cheap",
+    "reduced"
+  ],
+  "scope": "Finite encoding/source binding audit. Mathematical truth of caller imports remains a separate proof obligation."
+}

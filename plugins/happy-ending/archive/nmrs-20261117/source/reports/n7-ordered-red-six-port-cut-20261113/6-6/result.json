@@ -1,0 +1,103 @@
+{
+  "case": "6-6",
+  "status": "VERIFIED_SAT_NECESSARY_PROJECTION",
+  "cnf_sha256": "ef93c80f7c1b1fa09da07828d44576cda648cadb48f31ffc469d66f2010b44fd",
+  "schema": {
+    "command": [
+      "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+      "-B",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/verify.py",
+      "--root",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/6-6",
+      "--schema"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 0.9179941629990935,
+    "stdout_sha256": "aa7e94b939d5c509455ff8218f7801e6924885631010e64c9be72f2a0e425454",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "solve": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+      "--no-binary",
+      "--time=60",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/6-6/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/6-6/proof.drat"
+    ],
+    "exit_code": 10,
+    "timeout_killed": false,
+    "seconds": 8.592058788053691,
+    "stdout_sha256": "aad8e58fb1f948dc38a2d78fbd3231460bc458655b6ca1a45801c1d870c5bb02",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "sat_audit": {
+    "command": [
+      "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+      "-B",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/verify.py",
+      "--root",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/6-6",
+      "--sat"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 0.5667709449771792,
+    "stdout_sha256": "e5d9b853c1a58200a41bf9a115c8888fcf90dd1ee22fe765620f6e52370df1bb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bindings": {
+    "colors.tsv": {
+      "bytes": 1937,
+      "sha256": "3443ae1269ef86f6c964ea5ef3977861fc195e324da239543c582ff801d82503"
+    },
+    "formula.cnf": {
+      "bytes": 1195136,
+      "sha256": "ef93c80f7c1b1fa09da07828d44576cda648cadb48f31ffc469d66f2010b44fd"
+    },
+    "independent-verification.json": {
+      "bytes": 1181,
+      "sha256": "70bf47423cd88ff0247f91f873b0f694c9f20988a168fc96a2d104513fede8f5"
+    },
+    "physical-witness.json": {
+      "bytes": 57308,
+      "sha256": "907baff20cae2f9f47470a7c63ff89824d7ebb19f05219842cee294ed5a16900"
+    },
+    "proof.drat": {
+      "bytes": 321872,
+      "sha256": "f185a1f8d922e919b440432d3f7b0c75702b0655ec5cda7cc6e33e5df82d78a8"
+    },
+    "sat-audit.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sat-audit.stdout": {
+      "bytes": 1023,
+      "sha256": "e5d9b853c1a58200a41bf9a115c8888fcf90dd1ee22fe765620f6e52370df1bb"
+    },
+    "schema-audit.json": {
+      "bytes": 325,
+      "sha256": "dee25b4a0ee15e8c4b2f0a894359b82012e49e488d1de43d24523bba82c50d3d"
+    },
+    "schema.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "schema.stdout": {
+      "bytes": 307,
+      "sha256": "aa7e94b939d5c509455ff8218f7801e6924885631010e64c9be72f2a0e425454"
+    },
+    "solve.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "solve.stdout": {
+      "bytes": 4607,
+      "sha256": "aad8e58fb1f948dc38a2d78fbd3231460bc458655b6ca1a45801c1d870c5bb02"
+    },
+    "spec.json": {
+      "bytes": 481,
+      "sha256": "910e2cd105a1bdff9a66d983f012b5942532f9c427f0575ad7caab78ea73811d"
+    }
+  }
+}

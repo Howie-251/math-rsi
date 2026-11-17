@@ -1,0 +1,96 @@
+# N7 综合原件索引（2026-11-15）
+
+本索引仅转写已存在原件的对象、末端结论和开放接口，供主会话逐项核对；不新增数学归纳、路线评级或接受记录。11月14日表逐篇核到文件末端，不用11月13日综合代替后继原稿。工作上界、局部解析、有限模型、checker和外审各沿用原件状态；本文未运行科研程序、SAT、SSH、证书重放或外部审阅。
+
+## 一、阶段入口及75／76／77工作稿
+
+以下日期用于恢复历史顺序，不表示同日各件可互换。Q指767最大避免人口，F指777；其余符号以各原稿为准。
+
+| 阶段 | 原件入口 | 核对内容及边界 |
+| --- | --- | --- |
+| 10月重置前史 | [初始基线](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/INITIAL_BASELINE.md>)、[R27入口README](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/README.md>)、[R27完整正文](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/RESET_R27_GLOBAL_REALIZABILITY_AND_SATURATED_CORE_COUNTERTESTS.md>) | README积累各轮入口；R27的40／50／80／81是10/25截面，不是当前数值。 |
+| 10/27结构汇总 | [结构综合](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_SYNTHESIS_AND_ROADMAP_20261027.md>)、[全局缺额与联合定理](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_GLOBAL_DEFICIT_FRAME_AND_JOINT_THEOREM_20261027.md>)、[全类残余与R6反例](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_ALL_CLASS_RESIDUAL_AUDIT_AND_DISJOINT_R6_COUNTEREXAMPLE_20261027.md>) | 从独立容量进入同一母体共同实现；保留旧反例准确作用域。 |
+| 10/28—29 | [10/28路线](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261028/synthesis.md>)、[10/29综合](<D:/科研/math agent/erdos-szekeres-sat-main/RESEARCH_SYNTHESIS_N7_20261029.md>)、[三匹配共同饱和](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_COMMON_SATURATION_THREE_MATCHING_OBSTRUCTION_20261029.md>) | 旧80／81之后的共同匹配、锁和临界分支；不可把每份匹配费用分别相加。 |
+| 10/31的78／79层 | [前驱压缩](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_DEFECT_ONE_PREDECESSOR_COMPRESSION_AND_GLOBAL_BOUND_20261031.md>)、[78／79接口审计](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_7879_INTERFACE_AUDIT_AND_WEIGHTED_THROUGH_STABILITY_20261031.md>) | Q≤3b+3、F≤3b+4及加权through工作式；新增仍未独立接受。 |
+| 11/03的76／77层 | [完整低前驱补偿](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_COMPLETE_LOW_PREDECESSOR_COMPENSATION_AND_UPPER_BOUND_20261103.md>)、[76／77义务审计](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_7677_PROOF_OBLIGATION_AUDIT_20261103.md>)、[对应综合更新](<D:/科研/math agent/erdos-szekeres-sat-main/RESEARCH_SYNTHESIS_N7_20261103_UPPER_BOUND_UPDATE.md>) | Q≤3b+1、F≤3b+2；代b25为76／77，审计是同会话核对。 |
+| 11/03的75／76层 | [替锁与共根排除](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_LOCK_REPLACEMENT_COMMON_ROOT_EXCLUSION_AND_7576_BOUND_20261103.md>)、[75／76依赖审计](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_7576_DEPENDENCY_AUDIT_AND_SINGLE_THROUGH_EXCLUSION_20261103.md>)、[更新入口](<D:/科研/math agent/erdos-szekeres-sat-main/RESEARCH_SYNTHESIS_N7_20261103_7576_UPDATE.md>)、[审计加权更新](<D:/科研/math agent/erdos-szekeres-sat-main/RESEARCH_SYNTHESIS_N7_20261103_7576_AUDIT_WEIGHTED_UPDATE.md>) | Q≤3b、F≤3b+1；b25给75／76。不得把文档receipt视为独立数学证明。 |
+| 11/03—04临界后继 | [共同中间及加权](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_COMMON_MIDDLE_COMPATIBILITY_AND_WEIGHTED_BOUND_20261103.md>)、[t0临界层](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_T0_CRITICAL_LAYER_AND_SATURATION_BARRIERS_20261103.md>)、[t0共同根过量排除](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_T0_COMMON_ROOT_EXCESS_EXCLUSION_20261104.md>)、[11/04路线](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261104/synthesis.md>) | 对应截面40／50／75／76；11/04外审范围有限，未完成全链逐行认证。 |
+| 11/05一般严格容量 | [严格容量原证明](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n766-strict-capacity-20261105/PROOF.md>)、[该稿验证记录](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n766-strict-capacity-20261105/VERIFICATION.md>)、[同日757／766结构](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-757-766-structure-20261105/PROOF.md>)、[同日综合](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261105/synthesis.md>) | balanced≤2b−1，b25得C49；工作链40／49／75／76。该证明没有自动给混合桥或Q74。 |
+| 11/06 | [同日综合](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261106/synthesis.md>)、[唯一through整类](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-single-through-exclusion-20261106/PROOF.md>)、[三饱和域](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-single-through-exclusion-20261106/THREE_SATURATED_DOMAINS.md>)、[纯角色](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-single-through-exclusion-20261106/SATURATED_PURE_ROLES.md>) | 整类排除及余类接口，工作链仍40／49／75／76。 |
+| 11/07 | [同日综合](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261107/synthesis.md>)、[合法根重gap](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-root-gaps-and-common-cores-20261107/PROOF.md>)、[共同核](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-root-gaps-and-common-cores-20261107/COMMON_CORES.md>)、[共同穿越与联合chart](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-shared-crossing-and-joint-charts-20261107/PROOF.md>) | 合法根、耳域、端口总路长、同一物理覆盖；三／四／五根和一般混合桥仍有剩余。 |
+| 11/11 | [结构综合](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_SYNTHESIS_AND_DIRECTIONS_20261111.md>)、[中间对与边界节省](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-middle-pairs-and-boundary-savings-20261111/PROOF.md>)、[三角中点与耳序](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-triangle-midpoints-and-ear-orders-20261111/PROOF.md>) | chart路径和共同横截的中间接口；原稿后继章节亦须保留。 |
+| 11/12 | [结构审计](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_AUDIT_AND_DIRECTIONS_20261112.md>)、[热端锁与蓝贯穿人口](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_HOT_PORT_LOCKS_AND_BLUE_THROUGH_POPULATION_20261112.md>) | 一般删点、共同余量、最大balanced域；有限模型与解析推论分列。 |
+| 11/13 | [综合导航](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_SYNTHESIS_AND_ROADMAP_20261113.md>)、[联合人口原稿](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_JOINT_POPULATION_TRADE_20261113.md>)、[owner更正原稿](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_ROOT_DOMAINS_AT_29_20261113.md>)、[外跨端点原稿](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_OUTER_CROSSING_ENDPOINTS_20261113.md>) | 当前工作链40／49／75／76；d21已修复排除、75点d窗口22—28。该窗口不可直接用于74点。 |
+
+## 二、混合分划及传播原件
+
+| 原件 | 原文保留的适用范围／开放接口 |
+| --- | --- |
+| [共同极端端点混合分划](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-common-endpoint-mixed-partition-20261106/PROOF.md>) | 唯一交叠极端点条件类有显式混合分划；普适单向删组不成立，不能推广到全部母体。 |
+| [混合分划桥工作稿](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-mixed-partition-bridge-20261106/PROOF.md>) | 普适Q≤C+b尚未闭；最大独立集／五匹配等图优化有完整反例，但不否定一般物理混合分划。 |
+| [临界外跨与联合根](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-critical-crossing-and-joint-roots-20261106/PROOF.md>)、[共享D](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-critical-crossing-and-joint-roots-20261106/SHARED_D_COMPATIBILITY.md>)、[ROOT/M0接口](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-critical-crossing-and-joint-roots-20261106/ROOT_AND_M0_INTERFACES.md>) | 无外跨类闭合；全路径闭包还缺短帽安全及相应次序，不能将同一D的双蓝与异端双红偷同步。 |
+| [共同private族与覆盖障碍](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-common-private-family-and-cover-obstructions-20261105/PROOF.md>)、[附录](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-common-private-family-and-cover-obstructions-20261105/APPENDIX.md>) | 共同物理横截、全部替代长路及单向策略障碍的原件。 |
+| [全局图结构验证入口](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-global-path-structure-20261105/VERIFICATION.md>)、[共同净增广](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-net-augmentation-20261105/PROOF.md>) | 验证范围以原记录为准；局部增广必须支付全部新暴露路径。 |
+| [R20合法chart与删添根](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/RESET_R20_GLOBAL_PROOF_ARCHITECTURE_AND_JOINT_REALIZABILITY.md>)、[11/13综合§§1—2、7](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_SYNTHESIS_AND_ROADMAP_20261113.md>) | 当前传播A≤a+b−1=40、C≤2b−1=49、Q≤3b=75、F=Q+1≤76。若另证普适Q≤C+b，才传Q74／F75；一般参数共同物理混合分划仍未证。 |
+
+## 三、11/13的74点真实臂前件（逐件入口）
+
+以下全部属于同会话解析稿；标题中的74不表示已经完成74点排除。
+
+| 原件 | 供11/14后继核对的接口 |
+| --- | --- |
+| [实际臂矩形与共享端口](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_ACTUAL_ARM_RECTANGLE_AND_SHARED_PORTS_20261113.md>) | 实际双核臂、热零矩形及近满理想。 |
+| [共同臂支持与中层](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_COMMON_ARM_SUPPORT_AND_MIDDLE_LAYERS_20261113.md>) | 固定物理支持与中层，不能只数端口。 |
+| [整批cut交换](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_CUT_EXCHANGE_20261113.md>)、[双行交换](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_DUAL_ROW_EXCHANGE_20261113.md>) | 同一删后域及残余二部图，净增行仍需完整臂。 |
+| [H17联合三角扩张](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_H17_JOINT_TRIANGLE_EXTENSION_20261113.md>) | H17必要投影与ambient扩张分离。 |
+| [hull胞与同时cut](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_HULL_CELLS_AND_SIMULTANEOUS_CUTS_20261113.md>)、[联合行覆盖与临界shuffle](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_JOINT_ROW_COVER_AND_CRITICAL_SHUFFLES_20261113.md>) | 同一中央胞的共同选行与安全性接口。 |
+| [有序胞装箱](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_ORDERED_CELL_PACKING_20261113.md>)、[共享端点扇](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SHARED_ENDPOINT_FANS_20261113.md>) | 有序服务与共享物理端，未付费部分不得独立相加。 |
+| [三hull根短帽](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_THREE_HULL_ROOTS_SHORT_CAP_20261113.md>)、[双分支cut运输](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_TWO_BRANCH_CUT_TRANSFER_20261113.md>) | 74点分支及全域方向库；后继数值需重代74点人口。 |
+
+## 四、11/14全部18篇实际稿件：核到最后新增章节
+
+每篇一行。表中“得到”只复述工作稿，全部未独立审阅；原74点全局排除仍开。
+
+| #／原件 | 最后核心适用对象与原文增量 | 仍开的接口 |
+| --- | --- | --- |
+| 1 [中央两扇](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_CENTRAL_TWO_FANS_20261114.md>) | 同一中央胞§§7—13：错误端删边界的全部外损行≤10、双侧有损≤7；外红五端点的ambient唯一活端(C19)—(C21)。 | 四种星覆盖能否净增、非真实外红五端点坏行能否换核恢复；未供足14行。 |
+| 2 [共同翼链接](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_COMMON_WING_LINKS_20261114.md>) | 固定目标T、旧臂G及全部候选物理并Ω；§12将真实外红四与两翼裁为同一纯角色端图K#，共享矩形物理去重。 | K#全局链性、费用、保G后的完整安全帽选择及净增；覆盖设计仅充分，不能将其失败当全部物理换帽失败。 |
+| 3 [跨尾闭包](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_CROSSING_TAIL_CLOSURE_20261114.md>) | 同一失供行的尾池与规范最右阻断；§13热翼经中性中点必须支付全局缺向点或所选T的真实端点邻域，(CT34)—(CT39)。 | 受保护旧臂可能占待删池；跨窗、共同单尾及同时替代完整臂尚未闭。 |
+| 4 [五根双计数](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_FIVE_ROOT_DOUBLE_COUNT_20261114.md>) | 原74四hull对应75点五合法根母体；§6最终共同非根深核≥25（20、23、24为中途值），每实际三角的三视图蓝四联合物理横截≥10。 | 共同域的多视图相容性；未证其在某chart balanced，不把五个chart费用相加。 |
+| 5 [H17工作稿](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_H17_WORK_20261114.md>) | 四槽H17内部模型向全体17点ambient双锚扩张；末端迫有序热零矩形，至少两个不同K外、H外端口。 | 允许多行共享端口；未迫超出原八外锚的新人口，也未排H17。 |
+| 6 [递增块运输](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_INCREASING_BLOCK_TRANSPORT_20261114.md>) | 固定红三与尾行供给；§§14—15冷点热邻20／10界、整并二部覆盖精确费用(IB27)—(IB28)。 | 未证正Hall缺额；删热邻可能损新帽，覆盖固定证书不等于消去全部红六。 |
+| 7 [多端口臂](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_MULTI_PORT_ARMS_20261114.md>) | §17当前74点四根chart得到大域各≥55、共同非根交≥39；四相关chart在同一交域的各自红六横截≥7；完整小耳双色静默≤5。 | 原四根类仍开；旧更高人口58／44不自动运输；不同chart的7不能相加。 |
+| 8 [非分隔帽交换](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_NONSEPARATED_CAP_EXCHANGE_20261114.md>) | 不预分隔原核真实蓝臂；最后实际递归深度b−+b+≤5、同端红高加端深≤6及(N35)共同次序。 | 足额选行、供应池端扇与整池安全；首末新点未在C0时不可将6降5。 |
+| 9 [非分隔行选择](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_NONSEPARATED_ROW_SELECTION_20261114.md>) | §11两切口人口式及12／13／14行物理秩；14行至少4个双浅行，并有整条单向浅红三。 | 必要秩不产生14行；4个双浅不足以迫双浅红三，仍需共同安全供臂。 |
+| 10 [非分隔服务区间](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_NONSEPARATED_SERVICE_INTERVALS_20261114.md>) | 全输入服务库存及临界前沿；末端全Y阈值阻隔、端口纯化、owner分账、(NS38)—(NS39)必要次序／蓝路秩。 | 未证任意74点输入违背这些必要式；没有实际运行递推。 |
+| 11 [递归共同池](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_RECURSIVE_COMMON_POOL_20261114.md>) | 七层递归固定同一旧Ft，无须旧cut在深核；一份星覆盖保护全部旧行及原臂，危险红六推入深核。 | 强制星叶并的大小／失行及新两核同时14行；钳位最终参数不能抹掉星叶费用。 |
+| 12 [合法根循环端口](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_ROOT_CYCLE_PORTS_20261114.md>) | 原767四hull与添根777全部五合法根逐点对应；75点五耳≤16、隔一根硬域交≥23，各视图红六横截≥7。 | 三角耳域需在同一母体相容，未证五根不存在；共同全交25来自后继双计数稿。 |
+| 13 [浅行失败见证](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SHALLOW_FAILURE_WITNESS_20261114.md>) | 同一固定模板族、最早未供临界行：最小可供端／同端最大配额帽满足(F13)—(F14)，内部无活动桥边，可整段复生。 | 各返回帽间的跨帽冷热支付、跨窗与最后一翼；单行修复不可各用不同域后相加。 |
+| 14 [浅端口扇](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SHALLOW_PORT_FANS_20261114.md>) | §19接完整删后双核人口(SF43)；各方向整个累计阻断并各有至少5共同热尾时总删费≤6，d20给两向可供行≥14。 | “各块五尾”不足；完整核供给未保证最终并域无红六和全部所选臂存活。 |
+| 15 [浅行共同支持](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SHALLOW_ROWS_COMMON_SUPPORT_20261114.md>) | 固定共同可供库、强制旧邻删除后同一二部图，(Q16)精确受保护最优行数，(Q17)按真正失行并一次扣费。 | M0≥14仍须证明同一物理并安全；跨目标依赖必须把实际内点全并入，不能按行标签删点。 |
+| 16 [小d临界内域](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SMALL_D_CRITICAL_INTERIORS_20261114.md>) | §12两向各≤2欠向帽选主帽的共同安全；§§14—15十四点单格补偿、双例外反序、完整混合蓝五三型及角槽定位。 | 原十四行端扇须迫至少一阻断式失败并补足双向；链外中间行不可重计，角槽尚未排。 |
+| 17 [小d私叶纤维](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SMALL_D_PRIVATE_LEAF_FIBERS_20261114.md>) | §13.1在明确严格左右外帽供应下15个无红四中心整支排除；14行两界不跨子支已闭；§§14—15双漏反序、实际中间行和端口闭区间。 | 14行端点等号仍允许，未证删双漏能保中间行内臂；一般小d候选未证共同外扇。 |
+| 18 [小d同时静默](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_74_SMALL_D_SIMULTANEOUS_SILENCE_20261114.md>) | 全输入私有行区间；纯端口连续分块；§14内部供给或单整帽补偿的安全定理，§15共享相邻端对修复；必要两／三帽支撑池至少6／8点。 | 真正不可比模板端对物理不交，未统一成单帽；多块帽并安全和14行供足仍待证。 |
+
+## 五、有限证据、撤回与未执行记录
+
+本节只记录源报告声称的实际结果，不重放或重新认证。
+
+| 入口 | 保留的证据范围 |
+| --- | --- |
+| [C8原接受范围](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/09-03-35-state-cardinality-charging/research/c8-formal-acceptance-20261026.md>)、[E21颜色](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n756-professor-review-20261027/evidence/E21/color.tsv>)、[便携核验](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n756-professor-review-20261027/evidence/E21/portable-verification.json>) | b25输入与完整25点抽象见证分列；几何坐标／可伸直性不由颜色表提供。 |
+| [11/05历史证据台账](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261105/evidence-ledger.md>)、[11/07综合§10](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-structural-roadmap-20261107/synthesis.md>)、[11/12审计§8](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_STRUCTURAL_AUDIT_AND_DIRECTIONS_20261112.md>) | E21、Joint17、Closure、outer-short、physical31及外审失败各自记账；schema成功不自动等于绑定checked UNSAT，TERM不等于solver最终状态，零意见外审不等于PASS。 |
+| [21点真实蓝贯穿B5](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-blue-through-local-20261112/full-k21/REPORT.md>)、[25点互补反例](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-h-minus-i-complement-20261112/REPORT.md>) | 分别否定无条件“贯穿集内部无B5”和h−i≤10；不是75点反例，也不否定带临界条件版本。 |
+| [17点唯一蓝四有限证据](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n767-t15-unique-blue-four-20261112/REPORT.md>)、[局部private-gap](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n767-neutral28-private-gap-20261112/REPORT.md>) | 前者42个反序代表均DRAT核验及独立DIMACS审计；后者23点固定谓词checked UNSAT、删角色后的15／20点verified SAT；ambient提取另核。 |
+| [共同pivot19点](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n767-neutral29-common-pivot-inner19-20261112/REPORT.md>)、[T14静默域](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n767-t14-silent-domains-20261112/REPORT.md>) | 必要投影verified SAT；T14的17／18点模型不把标签冒作完整ambient角色。 |
+| [端口cut12点](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-ordered-red-six-port-cut-20261113/REPORT.md>)、[14点corrected](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-ordered-red-six-port-cut-20261113/14-point-outer-rows/corrected/REPORT.md>)、[22点真实外臂](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/REPORT.md>) | 三个必要投影均verified SAT；未改善中心费用11。corrected前件构造失败不是SAT；22点已到指定停止点。 |
+| [端口cut续接](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-ordered-red-six-port-cut-20261113/CONTINUATION.md>)、[双冷pivot解析](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-ordered-red-six-port-cut-20261113/N7_DOUBLE_COLD_PIVOT_CROSSING_EXCEPTIONS_20261113.md>) | 解析后继与有限SAT独立；不将其自核升格为外审。 |
+| [owner更正原稿§1](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/N7_ROOT_DOMAINS_AT_29_20261113.md>) | 正确只有ω(a)≤t；原“满核迫根序”“除最高根外全是锁”及依赖它们的d22整层排除全部撤回。d21另行修复，d22仍开放。 |
+| [H17规格](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-blue-through-seventeen-20261113/SPEC.md>)、[控制面阻塞](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-blue-through-seventeen-20261113/CONTROL_PLANE_BLOCKED.md>)、[分离恢复尝试回执](<D:/科研/math agent/erdos-szekeres-sat-main/reports/n7-blue-through-seventeen-20261113/execution-20261113-134111/EXECUTION_REPORT.md>) | 有准备文件，SSH退出255；远程目录／进程未观测，无本次launch、solver、schema、checker或数学结果。不能预先按SAT／UNSAT判线。 |
+| [11/14浅支持25尝试原回执](<D:/科研/math agent/erdos-szekeres-sat-main/.trellis/tasks/10-19-nr7-structure-capacity/research/evidence/shallow-support25-20261114/run-receipt.json>) | 仅见SSH关闭、退出255及空stdout，不能算25点模型计算结果。 |
+
+## 六、11/15更新查找与文本QA
+
+本次检查了任务research目录含隐藏路径的文件名清单，并在仓库可检索文件中按20261115日期名搜索；写入本索引之前，未找到该任务11/15新增数学原稿。此结论仅限当前本地可读文件名，不证明并行会话、未同步Linux或无日期命名的原件没有更新。文件修改时间不作为数学版本证据。
+
+文档QA：105处本地源链接全部存在；11/14日期名实际稿件18篇全部出现在逐篇表，无漏项；核对末端章节并采用含空格绝对路径的Markdown链接格式。检查仅及文本范围；没有数学独立核验、历史代码执行或证书接受升级。正文引用均指现存主位置，未将交付包source-tree副本混作新原件。

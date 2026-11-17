@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "stage": "complete",
+  "solver_calls": 0,
+  "checker_calls": 0,
+  "proof_replay_calls": 0,
+  "acceptance_changed": false,
+  "lean_compiled": false,
+  "scope": "exact Through14 dictionary/rule/Valid/ordered-CNF binding and historical receipt identity",
+  "controls": [
+    {
+      "label": "polarity_actual_row_0",
+      "rejected": true,
+      "gate": "{\"gate\": \"ordered_literal_equality\", \"detail\": {\"wire\": [0, 0, 1, 3, 0, 1, 2, 3], \"actual\": [[[0, 0, 0, 1, 2], true], [[0, 0, 1, 2, 3], false], [[0, 1, 1, 4, 0, 2, 3], true]], \"expected\": [[[0, 0, 0, 1, 2], false], [[0, 0, 1, 2, 3], false], [[0, 1, 1, 4, 0, 2, 3], true]]}}"
+    },
+    {
+      "label": "dictionary_index",
+      "rejected": true,
+      "gate": "{\"gate\": \"decoded_index\", \"detail\": [12159]}"
+    },
+    {
+      "label": "unsupported_rule_tag",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_rule_codec\", \"detail\": [99, 0, 1, 3, 0, 1, 2, 3]}"
+    },
+    {
+      "label": "literal_order_actual_row_0",
+      "rejected": true,
+      "gate": "{\"gate\": \"ordered_literal_equality\", \"detail\": {\"wire\": [0, 0, 1, 3, 0, 1, 2, 3], \"actual\": [[[0, 0, 1, 2, 3], false], [[0, 0, 0, 1, 2], false], [[0, 1, 1, 4, 0, 2, 3], true]], \"expected\": [[[0, 0, 0, 1, 2], false], [[0, 0, 1, 2, 3], false], [[0, 1, 1, 4, 0, 2, 3], true]]}}"
+    },
+    {
+      "label": "base_boolean_actual_row_0",
+      "rejected": true,
+      "gate": "{\"gate\": \"boolean_codec\", \"detail\": 2}"
+    },
+    {
+      "label": "core_bound_tag_3_row_4508",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [3, 0, 1, 3, 3, 12, 8]}"
+    },
+    {
+      "label": "core_bound_tag_2_row_4509",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [2, 0, 1, 4, 3, 14, 10]}"
+    },
+    {
+      "label": "pair_bound_actual_row_4513",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [7, 0, 3, 6]}"
+    },
+    {
+      "label": "rank_bound_tag_6_row_4614",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [6, 1, 1, 6, 4, 5]}"
+    },
+    {
+      "label": "core_bound_tag_1_row_4615",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [1, 1, 1, 1, 4, 3, 6, 7]}"
+    },
+    {
+      "label": "rank_bound_tag_4_row_4686",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [4, 1, 1, 6, 7, 9]}"
+    },
+    {
+      "label": "maximum_bound_actual_row_4929",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [8, 1, 1, 3, 5, 6]}"
+    },
+    {
+      "label": "actualCup_bound_actual_row_5065",
+      "rejected": true,
+      "gate": "{\"gate\": \"through_Schema.Valid\", \"detail\": [9, 0, 1, 22]}"
+    },
+    {
+      "label": "trailing_token",
+      "rejected": true,
+      "gate": "unsupported_name_codec: (0, 0, 0, 1, 2, 99)"
+    }
+  ],
+  "limits": {
+    "cpu_seconds": 120,
+    "wall_seconds": 120,
+    "address_space_bytes": 3221225472
+  },
+  "metadata": {
+    "scope": "full fixed Through14 schema/CNF binding and historical strict-RUP receipt identity only",
+    "literal_sha256": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250",
+    "cnf_sha256": "8a59bfc9ee2a64987b41fb9fc7251fb25c20a70388508afcd5478b1d51a4812b",
+    "remote_cnf": "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/through14.cnf",
+    "invocation_limit": 1,
+    "cpu_seconds": 120,
+    "wall_seconds": 120,
+    "address_space_bytes": 3221225472,
+    "transport_wall_seconds": 180,
+    "parser_sha256": "e35e9bd7e28a16a742046b6e2bb6a53b398277ce4da8aad4a9805be53b1798bb",
+    "inputs": [
+      {
+        "name": "ES7ThroughCodec.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughCodec.lean",
+        "bytes": 3624,
+        "sha256": "fcb8f479ae92f3d4df742a7e92dbcbce53ef883774d12ae8644c5ff058b7525b"
+      },
+      {
+        "name": "ES7ThroughRules.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughRules.lean",
+        "bytes": 5310,
+        "sha256": "7ce5f2f9d36027713dee494be1f98a0e722f24d7e8b81e38d5494327437a7f06"
+      },
+      {
+        "name": "ES7ThroughMeaning.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughMeaning.lean",
+        "bytes": 10263,
+        "sha256": "c3ff6ff656966b3fb12a0bdec859382686ee887bd5d9ce51e2353cff0f099864"
+      },
+      {
+        "name": "ES7ThroughSelection.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughSelection.lean",
+        "bytes": 5773,
+        "sha256": "e20d5737c426911b9287a5891242f1ed609815366f4080980bcfdf8d8f0aaccf"
+      },
+      {
+        "name": "ES7AmbientRules.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7AmbientRules.lean",
+        "bytes": 5215,
+        "sha256": "1591ad1c0f2a6e230bc3ec470680ffdb582b0ea3b28142eb1cce6faa8d258e63"
+      },
+      {
+        "name": "ES7AmbientRemap.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7AmbientRemap.lean",
+        "bytes": 5880,
+        "sha256": "cf9e202ea56525d9155cd794fe07446f8be4f35b868d0cdb0a755072a3c67a29"
+      },
+      {
+        "name": "ES7OrderedContract.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedContract.lean",
+        "bytes": 12415,
+        "sha256": "133bb1c3cbd370d17db481cc7dc2b3ae74ac24a676c5bd1cfee0115ea4b9365f"
+      },
+      {
+        "name": "ES7OrderedSourceCodec.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedSourceCodec.lean",
+        "bytes": 4178,
+        "sha256": "063294400283397f3f477d22503a283261bafd1954bbc1dc72696e2807754d5d"
+      },
+      {
+        "name": "ES7CorePaths.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7CorePaths.lean",
+        "bytes": 7865,
+        "sha256": "b68dd8b6b1875e32fff61592a7eac0f9ccb5536d66526c335e60f1f9a88ea85e"
+      },
+      {
+        "name": "ES7OrderedPaths.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedPaths.lean",
+        "bytes": 4591,
+        "sha256": "03eef1510eac9292c8b1663bc39738964957b76fda5710fa4c5a392774af55da"
+      },
+      {
+        "name": "ES7LRAT.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7LRAT.lean",
+        "bytes": 1622,
+        "sha256": "62baba86f13c69dbd4333a41b5a46e846776e94bedec4afb6d340f0040e4263e"
+      },
+      {
+        "name": "ES7Through14Data.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_transfer_20261026\\sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7Through14Data.lean",
+        "bytes": 277096,
+        "sha256": "93ca803936adbb231a2b2dd7f6d071c5a4e35a52d996d364aba79febb45eeed6"
+      },
+      {
+        "name": "ES7Through14Literal.lean",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_transfer_20261026\\sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7Through14Literal.lean",
+        "bytes": 583333,
+        "sha256": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250"
+      },
+      {
+        "name": "through14_replay_result.json",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_abstract_port_20261026\\through14_replay_result.json",
+        "bytes": 5671,
+        "sha256": "c4a0e1ed8bc9d42102651915c80caaaa6a8cb400dea84c17d1af5070906468de"
+      },
+      {
+        "name": "FINITE_BINDING_SPEC.md",
+        "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_remaining_hr_20261027\\FINITE_BINDING_SPEC.md",
+        "bytes": 10420,
+        "sha256": "a07633f692cb110c111ff34da2201760f7278713d5828cbdb3361989484da8c3"
+      }
+    ],
+    "source_index_mapping": "dictionary public base0 index = abs(source_signed_literal)-1"
+  },
+  "inputs": [
+    {
+      "name": "ES7ThroughCodec.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughCodec.lean",
+      "bytes": 3624,
+      "sha256": "fcb8f479ae92f3d4df742a7e92dbcbce53ef883774d12ae8644c5ff058b7525b"
+    },
+    {
+      "name": "ES7ThroughRules.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughRules.lean",
+      "bytes": 5310,
+      "sha256": "7ce5f2f9d36027713dee494be1f98a0e722f24d7e8b81e38d5494327437a7f06"
+    },
+    {
+      "name": "ES7ThroughMeaning.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughMeaning.lean",
+      "bytes": 10263,
+      "sha256": "c3ff6ff656966b3fb12a0bdec859382686ee887bd5d9ce51e2353cff0f099864"
+    },
+    {
+      "name": "ES7ThroughSelection.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ThroughSelection.lean",
+      "bytes": 5773,
+      "sha256": "e20d5737c426911b9287a5891242f1ed609815366f4080980bcfdf8d8f0aaccf"
+    },
+    {
+      "name": "ES7AmbientRules.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7AmbientRules.lean",
+      "bytes": 5215,
+      "sha256": "1591ad1c0f2a6e230bc3ec470680ffdb582b0ea3b28142eb1cce6faa8d258e63"
+    },
+    {
+      "name": "ES7AmbientRemap.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7AmbientRemap.lean",
+      "bytes": 5880,
+      "sha256": "cf9e202ea56525d9155cd794fe07446f8be4f35b868d0cdb0a755072a3c67a29"
+    },
+    {
+      "name": "ES7OrderedContract.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedContract.lean",
+      "bytes": 12415,
+      "sha256": "133bb1c3cbd370d17db481cc7dc2b3ae74ac24a676c5bd1cfee0115ea4b9365f"
+    },
+    {
+      "name": "ES7OrderedSourceCodec.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedSourceCodec.lean",
+      "bytes": 4178,
+      "sha256": "063294400283397f3f477d22503a283261bafd1954bbc1dc72696e2807754d5d"
+    },
+    {
+      "name": "ES7CorePaths.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7CorePaths.lean",
+      "bytes": 7865,
+      "sha256": "b68dd8b6b1875e32fff61592a7eac0f9ccb5536d66526c335e60f1f9a88ea85e"
+    },
+    {
+      "name": "ES7OrderedPaths.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedPaths.lean",
+      "bytes": 4591,
+      "sha256": "03eef1510eac9292c8b1663bc39738964957b76fda5710fa4c5a392774af55da"
+    },
+    {
+      "name": "ES7LRAT.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7LRAT.lean",
+      "bytes": 1622,
+      "sha256": "62baba86f13c69dbd4333a41b5a46e846776e94bedec4afb6d340f0040e4263e"
+    },
+    {
+      "name": "ES7Through14Data.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_transfer_20261026\\sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7Through14Data.lean",
+      "bytes": 277096,
+      "sha256": "93ca803936adbb231a2b2dd7f6d071c5a4e35a52d996d364aba79febb45eeed6"
+    },
+    {
+      "name": "ES7Through14Literal.lean",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_transfer_20261026\\sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7Through14Literal.lean",
+      "bytes": 583333,
+      "sha256": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250"
+    },
+    {
+      "name": "through14_replay_result.json",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_abstract_port_20261026\\through14_replay_result.json",
+      "bytes": 5671,
+      "sha256": "c4a0e1ed8bc9d42102651915c80caaaa6a8cb400dea84c17d1af5070906468de"
+    },
+    {
+      "name": "FINITE_BINDING_SPEC.md",
+      "source_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_remaining_hr_20261027\\FINITE_BINDING_SPEC.md",
+      "bytes": 10420,
+      "sha256": "a07633f692cb110c111ff34da2201760f7278713d5828cbdb3361989484da8c3"
+    }
+  ],
+  "historical_binding": {
+    "receipt_sha256": "c4a0e1ed8bc9d42102651915c80caaaa6a8cb400dea84c17d1af5070906468de",
+    "cnf_sha256": "8a59bfc9ee2a64987b41fb9fc7251fb25c20a70388508afcd5478b1d51a4812b",
+    "literal_sha256": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250",
+    "proof_sha256_historical_only": "1c98ef23e6584ea17badddf79555e3d634dc40ecd82a56fb17f038d63ee033ac",
+    "historical_checker_output": {
+      "status": "PASS",
+      "variables": 12156,
+      "source_clauses": 5077,
+      "additions": 3009,
+      "strict_hints": 81736,
+      "seconds": 0.0136598
+    },
+    "new_proof_check": false
+  },
+  "names": 12158,
+  "total_rule_rows": 5077,
+  "checked_rows": 5077,
+  "current_row": 5076,
+  "counts_by_rule": {
+    "(0, 0)": 1905,
+    "(0, 1)": 649,
+    "(0, 10)": 120,
+    "(0, 11)": 157,
+    "(0, 2)": 210,
+    "(0, 3)": 40,
+    "(0, 4)": 339,
+    "(0, 5)": 184,
+    "(0, 6)": 703,
+    "(0, 7)": 16,
+    "(0, 8)": 185,
+    "(1,)": 18,
+    "(2,)": 72,
+    "(3,)": 195,
+    "(4,)": 4,
+    "(6,)": 18,
+    "(7,)": 114,
+    "(8,)": 136,
+    "(9,)": 12
+  },
+  "name_groups": {
+    "0": 9974,
+    "1": 728,
+    "2": 1456
+  },
+  "mapped_rule_rows_sha256": "f328e252268b7c7025dc2276448ead5c2ee8f4d4fcb09d93e4e85444c4cd627a",
+  "domains": {
+    "ambient_selected_indices": "0<=i<22, variableMap f into original Z",
+    "core_indices": "4<=i<18",
+    "ambient_rank_domain": "original configuration, not the selected22",
+    "core_rank_domain": "selected14 coreSet f"
+  },
+  "unexercised_top_rule_tags": [
+    5
+  ],
+  "all_Valid": true,
+  "ordered_literal_equality_all_rows": true,
+  "historical_UNSAT_receipt_linked": true,
+  "independent_review": false,
+  "wall_seconds": 0.15615499002160504,
+  "resource_usage": {
+    "user_seconds": 0.19730299999999998,
+    "system_seconds": 0.015784,
+    "max_rss_kib": 21504
+  }
+}

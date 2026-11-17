@@ -50,10 +50,12 @@ def render(lang):
    t(x,y+218,'≤55 边与完整 Q₇ 猜想仍开放' if z else '≤55 edges & full Q₇ conjecture open',16)
    t(x,y+256,'亦含任意维 ≤6 方向推论（引用结果）' if z else 'Also ≤6 directions in Qₙ (imported results)',15)
   else:
-   t(x,y+50,'凸七边形的强制阈值上界' if z else 'Upper bound for the convex 7-gon threshold',17,'#0B1220',550)
-   t(x,y+110,'ES(7) ≤ 77',32,c,650)
-   t(x,y+151,'上界：78 → 77' if z else 'Upper bound: 78 → 77',20)
-   t(x,y+213,'工作稿 · 待独立审阅' if z else 'Working manuscript · review pending',19,c,650)
+   t(x,y+50,'Signotope 容量与平面阈值 (m = 7, 8, 9)' if z else 'Signotope capacities & thresholds (m = 7–9)',17,'#0B1220',550)
+   t(x,y+90,'m = 7: ES(7) ≤ 77',19,'#0B1220',600);t(x+198,y+90,'78 → 77 · 工作稿' if z else '78 → 77 · working',15,'#667085')
+   t(x,y+130,'m = 8: N(8,6,6) ≤ 61',19,c,650);t(x+206,y+130,'signotope · N(8,8,8) ≤ 318',13.5,'#667085')
+   t(x,y+172,'m = 9: ES(9) ≤ 1148',21,c,650);t(x+224,y+172,'对比 1508 / 1501*' if z else 'vs. 1508 / 1501*',15,'#667085')
+   t(x,y+214,'已复核整数对偶 C₉ ≤ 688 · D₉ ≤ 458' if z else 'Replayed duals C₉ ≤ 688 · D₉ ≤ 458',16,'#0B1220',550)
+   t(x,y+254,'五套有限证书已复核 · 装配手稿待独立审阅' if z else '5 finite suites replayed · assembly review pending',15)
   if i<4:line(x,y+280,x+398,y+280,'#E4E7EC')
  return '<svg xmlns="http://www.w3.org/2000/svg" width="900" height="934" viewBox="0 0 900 934" role="img"><title>'+('MathRSI 六领域成果' if z else 'MathRSI results across six domains')+'</title><rect width="900" height="934" fill="white"/><g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">'+''.join(a)+'</g></svg>'
 if __name__=='__main__':

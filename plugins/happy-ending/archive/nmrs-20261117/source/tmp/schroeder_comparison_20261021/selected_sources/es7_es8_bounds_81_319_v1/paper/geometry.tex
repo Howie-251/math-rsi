@@ -1,0 +1,161 @@
+\section{Geometric conventions and the two-point shift}\label{sec:geometry}
+First apply an invertible shear $(x,y)\mapsto(x+ty,y)$ separating all
+abscissae; only finitely many parameters $t$ fail. Convexity and general
+position are preserved. Write $p<q$ when $x(p)<x(q)$, and
+$m(p,q)=(y(q)-y(p))/(x(q)-x(p))$. A $k$-cup is an increasing sequence of
+$k$ points whose consecutive slopes strictly increase; a cap has strictly
+decreasing slopes. Length always counts vertices.
+
+Every subsequence of a cup is a cup, and likewise for caps: a chord slope
+is a positive weighted average of the slopes of the edges it spans.
+A cup and cap sharing both endpoints have disjoint interiors, on opposite
+sides of the common chord. Their union is in convex position and has the
+sum of their lengths minus two vertices. These statements are used in
+the planar category.
+
+\begin{proposition}[Projective reduction]\label{prop:shift}
+Let $Q_n$ be the maximum size of a set avoiding an $(n-1)$-cap and a convex $n$-gon. Then $\ES(n)\le Q_n+2$.
+\end{proposition}
+\begin{proof}
+Take an $n$-gon-free set $S$ and a hull vertex $o$. After a translation
+and rotation, $o=(0,0)$ and every other point has positive second
+coordinate. For sufficiently small $t>0$, apply
+\[
+ T_t(x,y)=\left(\frac{x-t}{y+t^2},\frac1{y+t^2}\right).
+\]
+This projective map is invertible and has positive denominator on
+$\conv(S)$, so it preserves convex position. The nonroot images stay
+bounded, with distinct limiting first coordinates $x/y$: an equality
+would make two original points collinear with $o$. The root becomes
+$(-1/t,1/t^2)$. For nonroot images $(X_i,Y_i)<(X_j,Y_j)$,
+\[
+ \operatorname{orient}(T_t(o),T_t(p_i),T_t(p_j))
+ =\frac{X_j-X_i}{t^2}+\frac{Y_j-Y_i}{t}+X_iY_j-Y_iX_j>0
+\]
+for small enough $t$. Thus the root is leftmost and all its triples
+are cups. Deleting it leaves no $(n-1)$-cup; reflection in a horizontal
+line gives a set counted by $Q_n$. Hence $|S|\le Q_n+1$ and
+$\ES(n)\le Q_n+2$.
+\end{proof}
+
+\section{A common residual partition}\label{sec:partition}
+We use the three-chain argument of Norin and Yuditsky~\cite[Claim~3.3]{NY}.
+
+\begin{lemma}[Three-chain bridge]\label{lem:threechain}
+Let $n\ge6$. Suppose an $(n-2)$-cup $F$ ends at $s$, an $(n-1)$-cup
+$P$ starts at $s$ and ends at $t$, and an $(n-2)$-cap $J$ starts with
+$(s,q)$. If $q\ne t$, their union contains an $(n-1)$-cap or a convex
+$n$-gon. Other overlaps between these chains are permitted.
+\end{lemma}
+\begin{proof}
+Let $f$ be the penultimate point of $F$, and let $v,u,t$ be the final
+three points of $P$. If $(f,s,q)$ is a cap, prepend $f$ to $J$.
+Otherwise $F,q$ is an $(n-1)$-cup and $m(f,s)<m(s,q)$.
+
+Suppose first that $q<t$. If $t$ is above the line $sq$, then $F,q,t$
+is an $n$-cup. If it is below that line, then $q$ is above the chord
+$st$, so $P$ and $(s,q,t)$ are opposite chains with common endpoints
+and yield an $n$-gon. In the latter case $q$ is not internal to $P$,
+whose internal points lie below $st$.
+
+Now let $q>t$. If $q$ is above $ut$, append $q$ to $P$. Otherwise
+$q$ is below $ut$. If $t$ is below $sq$, then $(u,t,q)$ is a cap and
+$m(t,q)>m(s,q)>m(q,J_3)$; following $(u,t)$ by $J$ without $s$
+gives an $(n-1)$-cap.
+
+It remains that $t$ is above $sq$ and $q$ below $ut$. If $u$ is above
+$sq$, then $F,u,t$ is an $n$-cup, using
+$m(f,s)<m(s,q)<m(s,u)$ and the cup triple $(s,u,t)$. Otherwise
+$u$ is below $sq$. If $q$ is above $vu$, replace the last point $t$
+of $P$ by $q$; the resulting $(n-1)$-cup and the cap $(s,t,q)$
+give an $n$-gon. Finally, if $q$ is below $vu$, then $(v,u,q)$ is a
+cap and $m(u,q)>m(s,q)>m(q,J_3)$, giving an $(n-1)$-cap by following
+$(v,u)$ with $J$ without $s$.
+
+General position excludes every line equality in this partition of
+cases. When $q>t$, the cap suffix starting at $q$ lies after all of
+$P$, and the nonterminal points of $F$ lie before $s$. Thus the chains
+displayed in the argument have distinct vertices where required.
+\end{proof}
+
+\Needspace{14\baselineskip}
+The decision map below lists the eight terminal cases of
+\cref{lem:threechain}. Use the first test that holds;
+$J'=J\setminus\{s\}$ retains its order.
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+First applicable test & Forced configuration\\
+\midrule
+$(f,s,q)$ is a cap & $(f,J)$: $(n-1)$-cap\\
+$q<t$ and $t$ above $sq$ & $(F,q,t)$: $n$-cup\\
+$q<t$ & $P\cup(s,q,t)$: convex $n$-gon\\
+$q$ above $ut$ & $(P,q)$: $n$-cup\\
+$t$ below $sq$ & $(u,t,J')$: $(n-1)$-cap\\
+$u$ above $sq$ & $(F,u,t)$: $n$-cup\\
+$q$ above $vu$ & $(P\setminus\{t\},q)\cup(s,t,q)$: $n$-gon\\
+Otherwise & $(v,u,J')$: $(n-1)$-cap\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small},
+ box/.style={draw,rounded corners=2pt,inner sep=5pt,align=center}]
+ \node[box] (S) at (0,2.2) {$S$};
+ \node[box] (U) at (-1.6,1.2) {$U$};
+ \node[box] (L) at (1.6,1.2) {$L$};
+ \node[box] (G) at (-2.7,0) {$G$\\junction owners};
+ \node[box] (R) at (0,0) {$R=U\setminus G$\\$|R|\le D_n$};
+ \node[box] (H) at (1.6,-1.3) {$H=L\cup G$\\$|H|\le C_n$};
+ \draw[->] (S)--(U); \draw[->] (S)--(L);
+ \draw[->] (U)--(G); \draw[->] (U)--(R);
+ \draw[->] (L)--(H); \draw[->] (G.south)|-(H.west);
+\end{tikzpicture}
+\caption{The residual partition. First $S=U\sqcup L$, then
+$U=G\sqcup R$. Transferring $G$ to the balanced part gives
+$S=H\sqcup R$. Membership in $G$ uses witnesses inside $U$.}
+\label{fig:partition}
+\end{figure}
+
+\begin{theorem}[Residual transfer]\label{thm:transfer}
+For $n\ge6$, $Q_n\le C_n+D_n$ and consequently
+$\ES(n)\le C_n+D_n+2$.
+\end{theorem}
+\begin{proof}
+Let $S$ avoid an $(n-1)$-cap and a convex $n$-gon. The case $|S|\le1$
+is immediate. At each point $x$, let $p(x)$ be the point minimizing
+the slope of the incident unoriented line. The minimizer is unique
+by general position. Partition $S$ into
+\[
+ U=\set{x:p(x)>x},\qquad L=\set{x:p(x)<x}.
+\]
+The map $p$ takes $U$ into $L$ and $L$ into $U$. For example, if
+$x<y=p(x)<z=p(y)$, then $m(y,z)<m(x,y)$, and the weighted-average
+identity gives $m(x,z)<m(x,y)$, a contradiction. The reversed argument
+handles the other direction. A cap ending in $U$ extends to its chosen
+right neighbor in $L$; a cup starting in $L$ extends to its chosen
+left neighbor in $U$. Thus $U$ has no $(n-2)$-cap and $L$ has no
+$(n-1)$-cup.
+
+Let $G\subseteq U$ be the points ending an $(n-2)$-cup and starting
+an $(n-3)$-cap, both in $U$. Put $H=L\cup G$ and $R=U\setminus G$.
+The set $R$ satisfies the definition of $D_n$, since any forbidden
+junction inside $R$ would also occur in $U$.
+
+Suppose that $H$ contains an $(n-1)$-cup with endpoints $s,t$. If
+$s\in L$, extend it left to an $n$-cup. If $t\in G$, extend its
+$(n-3)$-cap in $U$ once into $L$, giving an $(n-2)$-cap starting at
+$t$. At its junction with the supposed cup, one orientation yields
+an $n$-cup and the other an $(n-1)$-cap. Hence $s\in G$ and $t\in L$.
+Take the actual $(n-2)$-cup in $U$ ending at $s$ and extend its actual
+outgoing $(n-3)$-cap once into $L$. The second point $q$ of this cap
+lies in its original cap in $U$; extending that cap only appends its
+last point. Therefore $q\ne t$.
+\Cref{lem:threechain} applies and gives a contradiction. Hence $H$
+has no $(n-1)$-cup, and inherits the other avoidances, so $|H|\le C_n$.
+Now $S=H\sqcup R$ gives the result. The threshold statement follows
+from \cref{prop:shift}.
+\end{proof}

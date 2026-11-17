@@ -1,0 +1,102 @@
+{
+  "acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261022_c9_c10_row_acceptance_v1/campaign_acceptance_audit.json",
+    "sha256": "d826c19662823d50b90cf4641b022505e98329f2752a0e2044f3959bab0d1a9e",
+    "size_bytes": 10885
+  },
+  "acceptance_authority": "human_user",
+  "accepted_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10
+  ],
+  "authorization": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261022_c9_c10_row_acceptance_v1/human_acceptance_20261022_v1/human_authorization.json",
+    "sha256": "4bb366156c3a98f972ccdcb7b5236aac3f5fc205fa396fb2d12a95dc93579642",
+    "size_bytes": 1506
+  },
+  "backend_verification": "unknown/unverifiable",
+  "c10_proved": true,
+  "c8_proved": false,
+  "c9_proved": true,
+  "certificate": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261022_c9_c10_row_acceptance_v1/cardinality_c9_c10_accepted_certificate.json",
+    "sha256": "9cb4770411b7f131e9555a0752081f1d41c0aa4fde84fd7d1e5cadcee0b2a120",
+    "size_bytes": 30206
+  },
+  "certified_upper_bound": 26,
+  "dependency_graph": {
+    "accepted_nodes": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7"
+    ],
+    "c10_self_contained_alternative": [
+      "C7",
+      "A[8,10]",
+      "A[9,10]",
+      "A[10,10]"
+    ],
+    "candidate_nodes": {
+      "C10": [
+        "C9 (joint candidate derivation)",
+        "A[10,10]"
+      ],
+      "C9": [
+        "restricted_C8_e_ge_9",
+        "A[9,9]",
+        "A[9,10]"
+      ],
+      "restricted_C8_e_ge_9": [
+        "C7",
+        "A[8,9]",
+        "A[8,10]"
+      ]
+    },
+    "previously_accepted_c9_required": false,
+    "whole_c8_required": false
+  },
+  "effort_verification": "unknown/unverifiable",
+  "pending_rows": [
+    8
+  ],
+  "pending_work": "C8 whole-row/A[8,8] retained proof checking continues; no implicit bound25",
+  "prior_pending_preserved": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261022_c9_c10_row_acceptance_v1/row_certificate.pending.json",
+    "sha256": "132c34db0cce93fe4c36d1f9cb9880d4220adf86c3b944e79671ceb0650d56ca",
+    "size_bytes": 61538
+  },
+  "review_assurance": "same-family/provisional",
+  "schema": "c9c10_current_status_20261022_v1",
+  "scope": {
+    "assumptions": [
+      "Accepted C1..C7, endpoint-state injection/count identity and exact-cell semantic/F3 lifting contracts",
+      "Five previously VERIFIED_UNSAT cases reused under explicit human authorization; no new case checks",
+      "164 historical external Linux dependencies rely on original sealing and formula replay"
+    ],
+    "count_identity": "N=25+e-m",
+    "domain": "complete ordered rank-3 signotope; blue-path-5/red-path-6 bounds; no weak 7-gon",
+    "exceptional_state_count_bound": 10,
+    "not_a_global_geometric_erdos_szekeres_bound": true,
+    "ordinary_state_count": 25,
+    "quantification": "Every X in this domain at every finite order N",
+    "restricted_predecessor": "e>=9 implies m>=8",
+    "row_theorems": [
+      "e>=9 implies m>=9",
+      "e>=10 implies m>=10"
+    ]
+  },
+  "status": "ACCEPTED_C9_C10_REUSING_FIVE_CHECKED_CASES_HUMAN_AUTHORIZED",
+  "task_remains_in_progress": true,
+  "theorem_credit": true
+}

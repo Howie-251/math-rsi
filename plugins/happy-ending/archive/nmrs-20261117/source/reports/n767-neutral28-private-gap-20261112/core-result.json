@@ -1,0 +1,74 @@
+{
+  "status": "TRIMMED_CORE_CHECKED",
+  "input_cnf_sha256": "aabe598a18edbbc75106ebe3e352be149f22380c88ec49564c0ef8ab6143129f",
+  "trim": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/proof.drat",
+      "-c",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/core.cnf",
+      "-l",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/core.drat",
+      "-t",
+      "60"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "passed": true,
+    "seconds": 1.81898850412108
+  },
+  "recheck": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/core.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-neutral28-private-gap-20261112/core.drat",
+      "-t",
+      "60"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "passed": true,
+    "seconds": 0.11497463588602841
+  },
+  "clauses": 169,
+  "groups": {
+    "weak_R6_B3": 16,
+    "weak_R5_B4": 13,
+    "no_R7": 27,
+    "R6_endpoint_implication": 24,
+    "R5_endpoint_implication": 11,
+    "packet": 22,
+    "necessary_blue_fan": 9,
+    "a4_R6_terminal_cut": 3,
+    "frozen_red_path": 17,
+    "A_no_in_B4": 6,
+    "no_B6": 4,
+    "private_x2_no_in_B5": 2,
+    "T_no_B5_endpoints": 4,
+    "no_T_to_T_B4": 9,
+    "B_no_out_B4": 2
+  },
+  "bindings": {
+    "core.cnf": {
+      "bytes": 3262,
+      "sha256": "627306d4d548e83e8fff07e84a2444077410ac4b4b686baa84152f7440cad7d0"
+    },
+    "core.drat": {
+      "bytes": 7521,
+      "sha256": "5ec8b31f6e701baa57a3d1a72ecda7b65fe271528b03b97633bb6b16e8b7a60d"
+    },
+    "core-translation.json": {
+      "bytes": 65049,
+      "sha256": "3d90c0a1aebaca89a58fcad5fd522c1c5c187dfb2d403251da431423cd72b85c"
+    },
+    "CORE.md": {
+      "bytes": 16080,
+      "sha256": "00c2140b4601450ae5f3e829903a03e3531436e7afa84475e851e8abf8ee43d4"
+    },
+    "extract_core.py": {
+      "bytes": 6363,
+      "sha256": "99177e0d3fb33b2f8d4a7e52e5728ba12546c81fb6210bfc135abd8aa5779b6a"
+    }
+  }
+}

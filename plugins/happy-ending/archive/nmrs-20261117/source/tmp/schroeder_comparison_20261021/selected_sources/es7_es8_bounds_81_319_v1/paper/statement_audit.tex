@@ -1,0 +1,108 @@
+\Needspace{14\baselineskip}
+\section{Final statements and their trust boundary}\label{app:statements}
+The final types below are the output of Lean's \code{\#print}, with
+line wrapping only and proof terms omitted. The type of \code{Point}
+is $\mathbb R\times\mathbb R$.
+\begin{lstlisting}
+theorem ES7FinalVerified.es7_le_81 :
+  (*@$\forall$@*) (S : Finset ES8Geometry.Point),
+  ES7Final.GeneralPosition S (*@$\to$@*) 81 (*@$\le$@*) S.card (*@$\to$@*)
+  ES7Geometry.HasConvexHeptagon (*@$\uparrow$@*)S
+
+theorem ES8Final.es8_le_319 :
+  (*@$\forall$@*) (S : Finset ES8Geometry.Point),
+  ES8Final.GeneralPosition S (*@$\to$@*) 319 (*@$\le$@*) S.card (*@$\to$@*)
+  ES8Geometry.HasConvexOctagon (*@$\uparrow$@*)S
+\end{lstlisting}
+Both general-position definitions unfold to the following expression:
+\begin{lstlisting}
+fun S => (*@$\forall$@*) a (*@$\in$@*) S, (*@$\forall$@*) b (*@$\in$@*) S, (*@$\forall$@*) c (*@$\in$@*) S,
+  a (*@$\ne$@*) b (*@$\to$@*) b (*@$\ne$@*) c (*@$\to$@*) a (*@$\ne$@*) c (*@$\to$@*) ES8Geometry.orient a b c (*@$\ne$@*) 0
+\end{lstlisting}
+Here \code{orient p q r} is
+$(q_x-p_x)(r_y-p_y)-(q_y-p_y)(r_x-p_x)$. The two polygon predicates
+unfold respectively to
+\begin{lstlisting}
+fun S => (*@$\exists$@*) T, T.card = 7 (*@$\land$@*) (*@$\uparrow$@*)T (*@$\subseteq$@*) S (*@$\land$@*) ES8Geometry.ConvexPosition (*@$\uparrow$@*)T
+fun S => (*@$\exists$@*) T, T.card = 8 (*@$\land$@*) (*@$\uparrow$@*)T (*@$\subseteq$@*) S (*@$\land$@*) ES8Geometry.ConvexPosition (*@$\uparrow$@*)T
+\end{lstlisting}
+The underlying definition and the new bridge are
+\begin{lstlisting}
+def ConvexPosition (S : Set Point) : Prop :=
+  (*@$\forall$@*) p (*@$\in$@*) S, p (*@$\notin$@*) convexHull (*@$\mathbb R$@*) (S \ {p})
+
+theorem convexPosition_iff_convexIndependent (S : Set Point) :
+  ConvexPosition S (*@$\leftrightarrow$@*) ConvexIndependent (*@$\mathbb R$@*) (((*@$\uparrow$@*)) : S (*@$\to$@*) Point) := by
+  exact convexIndependent_set_iff_notMem_convexHull_sdiff.symm
+\end{lstlisting}
+The bridge uses only the three standard axioms listed below. The
+companion module applies it to both endpoints. Thus their convexity
+conclusions can be stated using mathlib's standard predicate without
+strengthening a hypothesis or trusting another finite evaluation.
+
+\Needspace{10\baselineskip}
+\begingroup
+\lstset{aboveskip=3pt,belowskip=3pt}
+\subsection{The restricted theorem and its chain predicates}
+The restricted upper bound uses the following declaration and definitions.
+The upper bound is formalized; the lower bound is supplied by the cited
+construction and the independently checked 25-point example.
+\begin{lstlisting}
+theorem ES7CapacityStage.restricted25 :
+  ES7Residual.RestrictedBound 25
+\end{lstlisting}
+\Needspace{8\baselineskip}
+\begin{lstlisting}
+def ES7Residual.RestrictedBound (K : (*@$\mathbb N$@*)) : Prop :=
+  (*@$\forall$@*) {n} (c : ES8BalancedGeometry.Configuration n),
+    ((*@$\neg$@*)(colorConfig c.cup true).HasNCap 5 (Finset.range n)) (*@$\to$@*)
+    ((*@$\neg$@*)(colorConfig c.cup true).HasNCup 6 (Finset.range n)) (*@$\to$@*)
+    ((*@$\neg$@*)HasConvexHeptagon (Set.range c.point)) (*@$\to$@*) n (*@$\le$@*) K
+\end{lstlisting}
+\Needspace{8\baselineskip}
+\begin{lstlisting}
+structure ES8BalancedGeometry.Configuration (n : (*@$\mathbb N$@*)) where
+  point : Fin n (*@$\to$@*) Point
+  xOrder : StrictMono (fun i => (point i).1)
+  generalPosition : (*@$\forall$@*) u v w : Fin n,
+    u < v (*@$\to$@*) v < w (*@$\to$@*) orient (point u) (point v) (point w) (*@$\ne$@*) 0
+\end{lstlisting}
+For valid indices, \code{c.cup u v w} is true exactly when the
+orientation determinant is positive; out-of-range indices return false.
+The notation \code{colorConfig} refers to \code{ES8ActualRanks.colorConfig}:
+\begin{lstlisting}
+def colorConfig (cup : (*@$\mathbb N$@*) (*@$\to$@*) (*@$\mathbb N$@*) (*@$\to$@*) (*@$\mathbb N$@*) (*@$\to$@*) Bool) (color : Bool) : Config (*@$\mathbb N$@*) :=
+  { Cup3 := fun a b c => cup a b c = color,
+    DecidableCup3 := inferInstance }
+\end{lstlisting}
+In the Baek port's \code{Config} namespace, with a linearly ordered
+vertex type $\alpha$ and \code{C : Config} $\alpha$, the predicates are
+\begin{lstlisting}
+def Cap3 (a b c : (*@$\alpha$@*)) : Prop := (*@$\neg$@*)C.Cup3 a b c
+def Cap (l : List (*@$\alpha$@*)) : Prop :=
+  l.IsChain ((*@$\cdot$@*) < (*@$\cdot$@*)) (*@$\land$@*) l.Chain3' C.Cap3
+def Cup (l : List (*@$\alpha$@*)) : Prop :=
+  l.IsChain ((*@$\cdot$@*) < (*@$\cdot$@*)) (*@$\land$@*) l.Chain3' C.Cup3
+def NCap (n : (*@$\mathbb N$@*)) (l : List (*@$\alpha$@*)) : Prop :=
+  C.Cap l (*@$\land$@*) l.length = n
+def NCup (n : (*@$\mathbb N$@*)) (l : List (*@$\alpha$@*)) : Prop :=
+  C.Cup l (*@$\land$@*) l.length = n
+def HasNCap (n : (*@$\mathbb N$@*)) (S : Finset (*@$\alpha$@*)) : Prop :=
+  (*@$\exists$@*) l : List (*@$\alpha$@*), C.NCap n l (*@$\land$@*) l.In S
+def HasNCup (n : (*@$\mathbb N$@*)) (S : Finset (*@$\alpha$@*)) : Prop :=
+  (*@$\exists$@*) l : List (*@$\alpha$@*), C.NCup n l (*@$\land$@*) l.In S
+\end{lstlisting}
+Here \code{IsChain} tests consecutive order comparisons,
+\code{Chain3'} tests consecutive triples, and \code{l.In S} means
+that every listed vertex lies in $S$. Strict order ensures distinct
+vertices. For actual points these are precisely the slope definitions
+of cups and caps in Section~\ref{sec:geometry}. The archived statement
+audit prints the fully qualified definitions directly from Lean.
+\endgroup
+
+\clearpage
+\subsection{Exact final axiom reports}
+The following is the complete \code{\#print axioms} output for the
+two original endpoints. The 19 and eight names ending in
+\code{native\_decide.ax\_1\_1} are the disclosed native checks.
+\lstinputlisting{axiom_output.txt}

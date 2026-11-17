@@ -1,0 +1,100 @@
+{
+  "template": "both_gaps_two",
+  "order": [
+    "a",
+    "u1",
+    "h1",
+    "h2",
+    "u2",
+    "x",
+    "v2",
+    "d",
+    "e",
+    "y",
+    "hr",
+    "k1",
+    "f",
+    "g",
+    "w",
+    "j1",
+    "l1",
+    "l2",
+    "j2",
+    "b"
+  ],
+  "roles": {
+    "v2": "v2",
+    "k1": "k1"
+  },
+  "n": 20,
+  "deleted_sets": {
+    "U_family": [
+      5,
+      6,
+      15,
+      18,
+      19
+    ],
+    "J_family": [
+      0,
+      1,
+      4,
+      11,
+      14
+    ]
+  },
+  "existence_clause_lengths": [
+    5005,
+    5005
+  ],
+  "binding": {
+    "variables": 40769,
+    "clauses": 429998,
+    "cnf_sha256": "9f02c16ec3c34a5d5875e8888d6aa247c3fdedc27ebb6b730b28cdc034b3d444",
+    "after_two_existence_clauses_sha256": "19c69c9453dfe62b99efe3b8efc4a1aa6ee64a87b5b29a2138a1293c2f73021d"
+  },
+  "status": "FIXED_CNF_DRAT_CHECKED_UNSAT",
+  "cegar": [
+    {
+      "round": 0,
+      "actual_R6_count": 1620,
+      "disjoint_pairs": 90975
+    },
+    {
+      "round": 1,
+      "actual_R6_count": 440,
+      "disjoint_pairs": 8299
+    },
+    {
+      "round": 2,
+      "actual_R6_count": 123,
+      "disjoint_pairs": 267
+    }
+  ],
+  "separation_clauses_added": 99541,
+  "elapsed_seconds": 1.919,
+  "final_cnf_sha256": "c3262a41af54ec9832250f21960d05d9414962d63aa12dd2cfbe867277d708c3",
+  "final_cnf_path": "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+  "proof_solver": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.drat"
+    ],
+    "exit_code": 20,
+    "timeout": false,
+    "elapsed_seconds": 0.396
+  },
+  "proof_sha256": "396089078b9876fc42d1009102db74722f04a8b0c7cc59d2bceb29a3d52f6898",
+  "drat_checker": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+      "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.drat"
+    ],
+    "exit_code": 0,
+    "timeout": false,
+    "elapsed_seconds": 1.285,
+    "reported_verified": true
+  }
+}

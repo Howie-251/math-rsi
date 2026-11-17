@@ -1,0 +1,55 @@
+{
+  "a77_continues": {
+    "argv": [
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20261014_c7_parallel4_checker_v1/tools/proof_checker",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20261009_c7_bridges_v1/suite/cardinality_A_r07_e07_N26.cnf",
+      "/data/ktqiu_hdd/math_agent/res/state_charging/20261009_c7_bridges_v1/workers/e07/proof.drat",
+      "-t",
+      "0",
+      "-b"
+    ],
+    "boot_id": "34c2d313-2938-4220-ad0b-8a0018d3c7e8",
+    "pid": 2361306,
+    "ppid": 2361299,
+    "start_ticks": 283573840
+  },
+  "acceptance": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/campaign_acceptance_audit.json",
+    "sha256": "9024a8f02078c1fae1037ced49bd545ae7f626e12ab5a8c67bd53d9e03ca30a1",
+    "size_bytes": 4155
+  },
+  "c6_proved": true,
+  "certificate": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/cardinality_c6_accepted_certificate.json",
+    "sha256": "fca38d559ef1b53658894392bce4a22ef3a1a42c14962566aefc79663d8e2384",
+    "size_bytes": 22660
+  },
+  "certified_upper_bound": 29,
+  "prior_failure_gate_preserved": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/independent_review_gate.json",
+    "sha256": "7a861f1f36fe3216e7d6077eda1d9139ff19e9546f39f44c48170b493219075c",
+    "size_bytes": 1156
+  },
+  "prior_pending_preserved": {
+    "path": "/data/ktqiu_hdd/math_agent/res/state_charging/20261016_c6_acceptance_v1/row_certificate.pending.json",
+    "sha256": "f2273bad8fbb6c30d7010334c18daf5dda945782851931555380c8eb410d22af",
+    "size_bytes": 98392
+  },
+  "review_assurance": "provisional",
+  "schema": "c6_current_status_20261016_v1",
+  "scope": {
+    "assumptions": [
+      "Previously accepted C1..C5 and the documented endpoint injection/counting and exact-cell semantic contracts",
+      "Five previously VERIFIED_UNSAT case checks are reused as explicitly instructed by the user; no new case verification"
+    ],
+    "count_identity": "N=25+e(X)-m(X)",
+    "domain": "complete ordered rank-3 signotope; blue-path-5/red-path-6 bounds; no weak 7-gon",
+    "exceptional_state_count_bound": 10,
+    "not_a_global_geometric_erdos_szekeres_bound": true,
+    "quantification": "For every X in this model domain, at every order N",
+    "row_theorem": "e(X)>=6 implies m(X)>=6"
+  },
+  "status": "ACCEPTED_ROW_REUSING_FIVE_CHECKED_CASES_HUMAN_AUTHORIZED",
+  "task_remains_in_progress_for_c7": true,
+  "theorem_credit": true
+}

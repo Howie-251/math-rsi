@@ -1,0 +1,15 @@
+# Weak left-extension proxies, four cold-right labels: checked UNSAT
+
+Date: 2026-11-12. This independently frozen weaker model is **checked UNSAT**. Labels6 and7 are not marked through or cold-in. The result is separate from the earlier pure-source and full-through formulas. No external review occurred.
+
+The fixed red paths are `(1..6)`, `(6,7,8,9,15)`, strict-early `(9..14)`, `(15,16,17,18)`, `(18..23)`. Cold-in labels are {8,9,15}; cold-out labels {15,16,17,18}; T is their union. Point6 has an actual incoming R6. For both6 and7, only no outgoing B5 and no B4 to a true R6 source are consumed. Known sources {1,8,9,15,16,17,18} are asserted, and every local actual R6 implies its source flag. These flags are one-way prohibition helpers, not exact counts or a claim that6/7 lie in S.
+
+All packets, no R7, no B6, all actual same-endpoint weak-seven splits, the stated A/B/T restrictions, two proved gap blue-fan families and out9 terminal<=15 are retained. There is no private-x2 silence, no cold-in rule on6 or7, and no full local anchor requirement for every marked T. See [SCOPE.md](SCOPE.md).
+
+Independent complete clause reconstruction passed: 2553 variables, 721981 clauses, zero missing or extra. CNF SHA-256 is `5ed82eac16f3c37e10f2f84bf74e1c38e4a1e9e0221f348363e50e7901e8571c`. External Kissat exited20 in3.322 seconds; bound drat-trim exited0 with `s VERIFIED` in1.618 seconds. Neither timed out.
+
+The extracted 176-input-clause core was separately rechecked, exit0 with `s VERIFIED` in0.116 seconds. [CORE.md](CORE.md) translates actual physical triples and the new `Src_R6(v)` variables; [core-translation.json](core-translation.json) is machine-readable. The core has four left-extension B4-to-S clauses, one left-extension no-out-B5 clause and two known-source units; no local-R6-to-source implication was needed by this particular core. Other groups are weak R6+B3 16, weak R5+B4 12, noR7 28, R6 endpoint implication21, R5 implication12, packet25, blue-fan units11, terminal cut3, frozen units17, A no-in-B4 9, noB6 4, T no-B5 endpoints4, noT-to-T B4 5, B no-out-B4 2. This is not a minimum-core claim.
+
+The full [formula.cnf](formula.cnf), [proof.drat](proof.drat), [core.cnf](core.cnf), [core.drat](core.drat), [result.json](result.json), [schema-audit.json](schema-audit.json), [runtime.json](runtime.json), [check.stdout](check.stdout) and [final-bindings.json](final-bindings.json) retain all bindings and commands. The completed manifest records final controller stdout after its trailing line. All scientific work was on the authoritative Linux server, with controlled external Kissat and the existing bound checker. No prior source, CNF or proof was edited.
+
+The exclusion transfers only through an actual extraction of all displayed red paths, true-through/cold labels and left-extension consequences. It can consume point7 from either E or a neutral-red-five-terminal role when the caller proves that both have the displayed consequences, without guessing either role in this formula. It is not an exclusion of the later three-right-cold variant, which has a [separately verified SAT witness](../right3-22/REPORT.md).

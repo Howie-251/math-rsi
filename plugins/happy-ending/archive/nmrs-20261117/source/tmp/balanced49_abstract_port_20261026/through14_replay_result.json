@@ -1,0 +1,145 @@
+{
+  "scope": "Through14 fixed-byte finite strict RUP replay only; no semantic transfer or mathematical acceptance",
+  "source_modified": false,
+  "controls": [
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_0.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_0.rup",
+        "0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"PASS\",\"variables\":1,\"source_clauses\":2,\"additions\":1,\"strict_hints\":2,\"seconds\":0.000123598}\n",
+      "stderr": "",
+      "seconds": 0.008313456986797974,
+      "label": "valid empty conclusion",
+      "expected_accept": true
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_1.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_1.rup",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED no conflict\n",
+      "seconds": 0.008284052979433909,
+      "label": "no conflict",
+      "expected_accept": false
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_2.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_2.rup",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED invalid prior hint\n",
+      "seconds": 0.007317204988794401,
+      "label": "missing prior hint",
+      "expected_accept": false
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_3.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_3.rup",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED nonunit hint at step 3\n",
+      "seconds": 0.0069765230000484735,
+      "label": "nonunit hint",
+      "expected_accept": false
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_4.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_4.rup",
+        "0"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "s REJECTED satisfied hint at step 2, hint 1\n",
+      "seconds": 0.0067789409949909896,
+      "label": "satisfied hint",
+      "expected_accept": false
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_5.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_5.rup",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED hints after conflict\n",
+      "seconds": 0.0058596410090103745,
+      "label": "hints after conflict",
+      "expected_accept": false
+    },
+    {
+      "command": [
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_6.cnf",
+        "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/control_6.rup",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED empty source clause\n",
+      "seconds": 0.00714603898813948,
+      "label": "blank source row",
+      "expected_accept": false
+    }
+  ],
+  "per_process_cpu_seconds": 120,
+  "per_process_address_space_bytes": 2147483648,
+  "checker_retrieval": {
+    "path": "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup.cpp",
+    "sha256": "20afbb807b477f6c839d24c5de505431fd8648dee8b9bb952a73b72fa67efe5b",
+    "download_bytes": 1688,
+    "crc32_verified": true
+  },
+  "compile": {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-O2",
+      "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup.cpp",
+      "-o",
+      "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "seconds": 1.1980359370063525
+  },
+  "checker_executable_sha256": "e6635afdf4a9d2447a0d8c1d1a5eb820b4980f0c86871eba1685d0bcfb6f98b2",
+  "extracted_cnf_sha256": "8a59bfc9ee2a64987b41fb9fc7251fb25c20a70388508afcd5478b1d51a4812b",
+  "extracted_proof_sha256": "1c98ef23e6584ea17badddf79555e3d634dc40ecd82a56fb17f038d63ee033ac",
+  "replay": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/strict_rup",
+      "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/through14.cnf",
+      "/data/ktqiu_hdd/math_agent/tmp/balanced49_abstract_port_20261026/through14.rup",
+      "0"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\":\"PASS\",\"variables\":12156,\"source_clauses\":5077,\"additions\":3009,\"strict_hints\":81736,\"seconds\":0.0136598}\n",
+    "stderr": "",
+    "seconds": 0.020901620999211445
+  },
+  "status": "PASS",
+  "literal_sha256_before": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250",
+  "literal_sha256_after": "640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250",
+  "seconds": 77.64821928201127
+}
