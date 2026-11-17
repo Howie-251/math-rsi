@@ -66,7 +66,7 @@
               <div class="ecd-layer-heading"><span class="ecd-dot" aria-hidden="true"></span><b>Return to the original question</b></div>
               <div class="ecd-endpoint"><b>Existence</b><span>One rank-36 generator matrix, verified against the original specification, is enough.</span></div>
               <div class="ecd-endpoint"><b>Nonexistence</b><span>Every necessary domain and its remaining cases must be covered.</span></div>
-              <p class="ecd-caption">A fixed parent leaves other parents and uncovered cases. This example does not solve [72,36,≥16].</p>
+              <p class="ecd-caption">One fixed parent covers only the extensions of that parent; [72,36,≥16] is still open.</p>
             </section>
           </div>
 
@@ -75,7 +75,6 @@
             <button class="ecd-control ecd-replay" type="button" aria-label="Replay explanation">Replay</button>
             <span class="ecd-position" aria-label="Current explanation step">1 / 3</span>
           </div>
-          <p class="ecd-footnote">Illustration only. No search or computation runs here.</p>
         </div>
       </details>`;
 
@@ -195,7 +194,7 @@
   "One rank-36 generator matrix, verified against the original specification, is enough.": "一份秩为36、按原规格核验通过的生成矩阵，即已足够。",
   "Nonexistence": "不存在性",
   "Every necessary domain and its remaining cases must be covered.": "必须覆盖全部必要子域及其余类。",
-  "A fixed parent leaves other parents and uncovered cases. This example does not solve [72,36,≥16].": "固定母码之外还有其他母码和未覆盖余类。本示例未解答[72,36,≥16]。",
+  "One fixed parent covers only the extensions of that parent; [72,36,≥16] is still open.": "单个固定母码仅覆盖该母码的扩张子域；[72,36,≥16] 本身仍未解决。",
   "Play the research explanation": "播放研究组织说明",
   "Play explanation": "播放说明",
   "Pause explanation": "暂停说明",
@@ -203,7 +202,6 @@
   "Current explanation step": "当前说明步骤",
   "Play": "播放",
   "Pause": "暂停",
-  "Replay": "重播",
-  "Illustration only. No search or computation runs here.": "仅作方法示意，此处不运行搜索或计算。"
+  "Replay": "重播"
 }
 ECC_DEMO_ZH_END */

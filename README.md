@@ -10,7 +10,7 @@
 
 [![Actual MathRSI v0 through v6 homepage evolution](figures/mathrsi/media/evolution.gif?v=6-50fps-20261117)](figures/mathrsi/media/evolution.mp4?v=6-50fps-20261117)
 
-*Actual v0 → v6 homepage replay, ending at v6 Current. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [execution provenance and manuscript status](case-studies/README.md).*
+*Actual v0 → v6 homepage replay, ending at v6 Current. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [six case studies and verification status](case-studies/README.md).*
 
 MathRSI pairs a shared base workflow with domain plugins and a per-problem research wiki, guiding Claude Code and Codex from literature survey and route selection through proof development, review, verification, and handoff. Validated results and diagnosed failures feed back to refine both the workflow and plugins.
 
@@ -57,7 +57,7 @@ Research across six domains supplies results and reusable methods. [Public homep
 - **Degree–diameter:** our constructions reach 2,567 vertices at $(10,4)$, 37,632 at $(11,5)$, 42,433 at $(12,5)$ and 16,416 at $(16,4)$. [Constructions, dated comparisons & scope](case-studies/degree-diameter/README.md)
 - **Erdős Problem 86:** $Q_7$ at $304$ (304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass), $682\le\mathrm{ex}(Q_8,C_4)\le683$, and asymptotic density improved from $0.60318$ to $\le0.5912405943$ (`T3`) / $\le0.5912405942$ (`T4`). [Results & verification scope](case-studies/erdos-86/README.md)
 - **Ruskey–Savage:** every $Q_6$ matching and every $Q_7$ matching with at least 56 edges (complete E16 across all $\mu\in\{0,1,2,3,4\}$) extends to a Hamilton cycle. [Results, methods & open scope](case-studies/README.md#ruskeysavage-q6)
-- **Happy Ending:** working manuscripts lower the $\mathrm{ES}(7)$ upper bound from 78 to 77; independent review pending. [Manuscripts & status](case-studies/happy-ending/README.md)
+- **Happy Ending:** working manuscripts lower the $\mathrm{ES}(7)$ upper bound from 78 to 77; independent mathematical review pending. [Manuscripts & status](case-studies/happy-ending/README.md)
 
 <a id="three-layers"></a>
 
@@ -90,24 +90,24 @@ The main [`mathrsi-research`](base/skills/mathrsi-research/SKILL.md) skill coord
 
 Two tracks evolve together: **shared base behavior** becomes stronger, while **domain plugins** expand and deepen. Separate [`mathrsi-meta-evolve`](base/skills/mathrsi-meta-evolve/SKILL.md) maintenance turns research evidence into implemented changes.
 
-- **v6 base:** gate candidate case splits by bounded probes on the hardest open remainder and measure net-new union coverage on the same actual input; run primal–dual coevolution with goal/target separation, rotating 4-channel signed residuals and full-archive refutation; stop float SDP/CP loops when gains fall at or below repair residuals.
-- **Deeper hypercube plugins:** `hypercube-extremal` adds asymptotic COP + $m=1024$ generalized degree-potential bounds (`T3` / `T4`), same-subgraph 3-measure finite pullbacks ($Q_8 \le 683$), $Q_7$ 304 constructions + source report, and the reusable `cube_coevolve` engine; `hypercube-hamilton` completes $Q_7$ E16 ($\ge 56$ edges across all $\mu=0..4$) with parameterized $Q_6$ $\Delta=2$ double bridges, $Q_6$ $A_8$, and $S_6$ large-face tables paired with symbolic small-face holes. Both source streams ran with **v3 + local adaptations/coevolution** and feed v6.
-- **Inherited behavior:** v5's controlled auxiliary choices, cross-representation theorem reuse and result-consumption-before-dispatch, plus v4's equality-to-witness actions, global reassessment and ECC node reuse remain in place.
+- **v6 base:** test candidate case splits on the hardest open branch before adopting them, and measure net-new coverage on the same input; run primal–dual coevolution that keeps the proof goal separate from the search target, rotates four normalized signed residual channels, and tests candidate cuts against the full graph archive; stop floating-point SDP/CP loops once gains fall to the rounding-repair residual.
+- **Deeper hypercube plugins:** `hypercube-extremal` adds asymptotic COP + $m=1024$ degree-potential bounds (`T3` / `T4`), same-subgraph 3-measure pullbacks ($Q_8 \le 683$), $Q_7$ 304 constructions + source report, and the reusable `cube_coevolve` engine; `hypercube-hamilton` completes $Q_7$ E16 ($\ge 56$ edges across all $\mu=0..4$) with parameterized $Q_6$ $\Delta=2$ double bridges, $Q_6$ $A_8$, and $S_6$ large-face tables paired with symbolic small-face holes (developed on **v3 + local adaptations/coevolution**, with methods distilled into v6).
+- **Inherited behavior:** v5's controlled auxiliary choices, cross-representation theorem reuse and consuming returned results before dispatching new work, together with v4's equality-to-witness steps, global progress checks and ECC branch reuse.
 
-**[v6 is the current workflow on `main`](docs/V6_CHANGES.md).** Use the [fixed v6 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) or [main ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip), or clone and record the exact commit. Fixed v1–v5 tags stay unchanged. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
+**[v6 is the current workflow on `main`](docs/V6_CHANGES.md).** Download the [v6 snapshot ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) or [`main` ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip), or clone the repository. Release tags `v1`–`v6` remain fixed snapshots; record the commit hash when handing off a reproducible run. [Evolution & implementation records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
-<summary>Fixed releases and earlier improvements</summary>
+<summary>Release history (v0–v6)</summary>
 
-- **v0:** pre-harness Property B/ECC research tools; no Git tag.
-- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1):** five solving stages, three-layer separation, adversarial route iteration and the initial plugins.
-- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2):** separate maintenance workflow, DD integration, evidence inheritance and common-coverage checks. [Changes](docs/V2_CHANGES.md)
-- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3):** full-domain versus working-set checks, marked-object transport, finite universal certificates and explicit Lean-premise audits; upgraded ECC and three new domains. [Changes](docs/V3_CHANGES.md)
-- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4):** equality-to-witness proof actions and Happy Ending/DD methods. [Changes](docs/V4_CHANGES.md)
-- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5):** controlled choices, theorem reuse across known legal representations and fixed/conditional plan coverage; deeper Hamilton and DD D5 methods. [Changes](docs/V5_CHANGES.md)
-- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6):** hardest-remainder split gating, primal–dual coevolution and repair-residual stopping; deeper hypercube extremal and complete $Q_7$ E16 Hamilton methods. [Changes](docs/V6_CHANGES.md)
+- **v0:** standalone Property B and ECC research tools prior to the shared harness (no Git tag).
+- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1):** five solving stages, three-layer separation, adversarial route iteration and initial plugins.
+- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2):** separate maintenance workflow, Degree–Diameter plugin, evidence transfer and shared coverage checks. [Changes](docs/V2_CHANGES.md)
+- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3):** full-domain counterexample checks, marked-object transport, finite universal certificates and explicit Lean-premise checks; upgraded ECC and three new domains. [Changes](docs/V3_CHANGES.md)
+- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4):** turning tight equalities into usable witnesses, plus Happy Ending and Degree–Diameter methods. [Changes](docs/V4_CHANGES.md)
+- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5):** controlled auxiliary choices, theorem reuse across legal representations and finite-plan coverage; deeper Hamilton and DD D5 methods. [Changes](docs/V5_CHANGES.md)
+- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6):** hardest-branch split probes, primal–dual coevolution and repair-residual stopping; deeper hypercube extremal and complete $Q_7$ E16 Hamilton methods. [Changes](docs/V6_CHANGES.md)
 
-Tags remain fixed complete snapshots. Choose one for a reproducible starting point and record the exact commit. [Historical v2/v3 figures](figures/mathrsi/README.md#historical-diagrams)
+[Historical v2/v3 architecture diagrams](figures/mathrsi/README.md#historical-diagrams)
 
 </details>
 

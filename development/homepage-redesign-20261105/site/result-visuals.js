@@ -197,8 +197,8 @@
 
           <rect x="22" y="36" width="102" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="73" y="52" text-anchor="middle">Q₇ (n = 7)</text>
-          <text x="73" y="75" text-anchor="middle" font-size="18" font-weight="680" class="rv-accent">304</text>
-          <text class="rv-sub" x="73" y="94" text-anchor="middle">≥304 ok · ≤ src</text>
+          <text x="73" y="75" text-anchor="middle" font-size="17.5" font-weight="680" class="rv-accent">≥ 304</text>
+          <text class="rv-sub" x="73" y="94" text-anchor="middle">≤304 in source</text>
 
           <rect x="130" y="36" width="108" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="184" y="52" text-anchor="middle">Q₈ (n = 8)</text>
@@ -207,7 +207,7 @@
 
           <rect x="244" y="36" width="114" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="301" y="52" text-anchor="middle">Q∞ density</text>
-          <text x="301" y="74" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">≤ 0.59124</text>
+          <text x="301" y="74" text-anchor="middle" font-size="11.2" font-weight="680" class="rv-accent">≤ 0.5912405943</text>
           <text class="rv-sub" x="301" y="94" text-anchor="middle">T3/T4 proved</text>
 
           <!-- Bottom density scale (Q_infty only) -->
@@ -267,7 +267,7 @@
 
           <rect class="rv-panel-tint" x="24" y="93" width="206" height="39" rx="7"/>
           <text x="127" y="110" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Hamilton cycle in Q₆</text>
-          <text class="rv-sub" x="127" y="125" text-anchor="middle" fill="var(--ink-2)">all 64 vertices (≤6 dir. in Qₙ)</text>
+          <text class="rv-sub" x="127" y="125" text-anchor="middle" fill="var(--ink-2)">all 64 vertices</text>
 
           <!-- Right inset: single example instance reused from original SVG -->
           <rect class="rv-panel" x="248" y="12" width="118" height="132" rx="10"/>
@@ -287,9 +287,9 @@
 
     he: {
       resultLabel:
-        'Happy Ending working proof results: ES(7) geometric upper bound lowered from 78 to 77, derived via the cross-parameter proof chain N(7,6,7) <= 75 to N(7,7,7) <= 76 to ES(7) <= 77.',
+        'Happy Ending working manuscript results: ES(7) geometric upper bound lowered from 78 to 77, derived via the cross-parameter chain N(7,6,7) <= 75 to N(7,7,7) <= 76 to ES(7) <= 77.',
       resultCap:
-        'Results · ES(7) upper bound 78 → 77 and cross-parameter proof chain (working proof)',
+        'Results · ES(7) upper bound 78 → 77 and cross-parameter chain (working manuscript)',
       links: [
         { label: 'Full figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg', sourceLanguage: '中文' }
       ],
@@ -307,7 +307,7 @@
           <!-- Top banner: same-metric upper bound improvement 78 -> 77 -->
           <rect class="rv-panel-dash" x="14" y="12" width="352" height="80" rx="10"/>
           <text class="rv-h" x="26" y="32">ES(7) upper bound</text>
-          <text x="354" y="32" text-anchor="end" font-size="11" font-weight="650" class="rv-accent">Working proof</text>
+          <text x="354" y="32" text-anchor="end" font-size="11" font-weight="650" class="rv-accent">Working manuscript</text>
           <text x="26" y="68" font-size="21" font-weight="600" fill="var(--muted)">78</text>
           <line x1="60" y1="60" x2="90" y2="60" stroke="var(--he)" stroke-width="2" marker-end="url(#rv-he-arr)"/>
           <text x="100" y="69" font-size="25" font-weight="700" class="rv-accent">≤ 77</text>
