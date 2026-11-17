@@ -1,0 +1,9 @@
+# Newly extracted twenty-two-point common-terminal model
+
+This question starts from a separately proved nonempty single-terminal family: a4 has actual outgoing red sixes, all ending at the cold common point c. It is not obtained by identifying two vertices of a twenty-three-point coloring. The original checked twenty-three-point models and their manifests are unchanged.
+
+The new fixed order is 1..5, a1..a4=6..9, h2..h5=10..13, c=14, b2..b4=15..17, and r2..r6=18..22. Freeze red paths (1..6), (6,7,8,9,14), (9..14), (14,15,16,17), and (17..22). A={6,7,8,9,14}, B={14,15,16,17}, T=A union B. The four internal h points are not marked through.
+
+Full packets, no R7, no B6 and actual same-endpoint weak-seven restrictions hold. A cannot end B4, B cannot start B4, T cannot start/end B5, and no T-to-T B4 is allowed. No red six ends before 6 or starts after 17; these extrema are vacuous in this selected order. Every red six starting at a4=9 must end at c=14 (a terminal before c is also physically impossible in this projection). Add blue triples (y,14,z) for 9<=y<14<z<=22 and (8,9,y) for 9<y<14. There is no x2 no-in-B5 condition and no locally asserted full dual-through anchors.
+
+Each physical triple has one variable, true meaning red. The three weak-seven endpoint flag families are only prohibition helpers. All clauses are independently reconstructed before solving. SAT is accepted only after a full literal audit and exact physical path DP at every endpoint/color length, independently cross-checked by all subsets through seven. UNSAT requires a successfully checked DRAT bound to the original CNF; any trimmed core is checked again and physically translated. All scientific execution is on Linux with controlled external processes. This finite model's mathematical transfer requires the caller's single-terminal extraction; a SAT result would establish only the local necessary compatibility and stop this question.

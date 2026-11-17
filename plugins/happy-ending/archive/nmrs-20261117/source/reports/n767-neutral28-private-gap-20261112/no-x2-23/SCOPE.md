@@ -1,0 +1,5 @@
+# Exact twenty-three-point comparison: remove only x2's no-in-blue-five condition
+
+This is a separate fresh formula with the identity physical map to the original twenty-three-point model. Every vertex, frozen red path, packet, cap, weak-seven condition, A/B/T restriction, extremum, terminal cut and red/blue fan is unchanged. The sole removed predicate is: no blue five ends at x2=10. Clauses independently implied by another retained predicate remain present after normalizing the clause set.
+
+The source builder and independent full-clause verifier were separately snapshotted. SAT is accepted only after a literal audit and exact physical DP of every actual endpoint/color length, independently cross-checked against all subsets through seven. Scientific execution is Linux-only and controlled. The original checked CNF/proof and its 169-clause core are not edited. This test diagnoses the necessity of the private-second-point condition; compatibility does not extend the local labels to an actual seventy-five-point ambient input.

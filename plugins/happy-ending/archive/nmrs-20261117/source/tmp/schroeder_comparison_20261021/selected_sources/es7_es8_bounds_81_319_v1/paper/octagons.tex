@@ -1,0 +1,319 @@
+\section{A common interface for octagon capacities}\label{sec:octagons}
+For the octagon arguments, coordinates are \emph{cap first, cup second}.
+This is the transpose of the heptagon certificate convention, not a
+change in the parameter order of $M_n(a,b)$.
+
+\begin{definition}[Admissible labels and states]\label{def:admissible}
+Let $P$ be a planar point set in general position. Assign a label
+$d(u,v)=(p(u,v),q(u,v))\in\mathbb Z_{>0}^2$ to every ordered pair
+$u<v$, and a finite down-set $I_v\subset\mathbb Z_{>0}^2$ to every
+point. The assignment is admissible if
+\begin{align}
+ p(u,v)&<p(v,w)&&\text{for each cap triple }u<v<w,\label{eq:growthcap}\\
+ q(u,v)&<q(v,w)&&\text{for each cup triple }u<v<w,\label{eq:growthcup}\\
+ d(u,v)&\in I_v\setminus I_u&&\text{for each }u<v.\label{eq:admissible}
+\end{align}
+A family of states has \emph{admissible capacity} $b$ if every
+octagon-free set with any such assignment occupies at most $b$ of
+its states.
+\end{definition}
+
+The states are distinct, and strict inclusion forces the same owner
+order: the opposite order would make \eqref{eq:admissible} an empty
+directed difference.
+
+Ordinary actual incoming ranks, with their incoming down-sets, provide
+an admissible assignment by \cref{lem:difference}. More generally,
+labels satisfying \eqref{eq:growthcap}--\eqref{eq:growthcup} provide one
+by taking $I_v=\down\{d(u,v):u<v\}$. The same domination proof applies.
+The states in an admissible assignment need not equal these generated
+down-sets. Restricting to a subset of points and \emph{retaining} its
+labels and assigned states preserves admissibility. This is the
+interface needed for transport; a bound using actual attainment cannot
+automatically be transported in this way.
+
+\begin{lemma}[Forced signs]\label{lem:forced}
+Suppose the chronological owners of states $A,B,C$ exist, and put
+$\Delta_1=B\setminus A$, $\Delta_2=C\setminus B$. If
+\[
+ \max_{z\in\Delta_2}z_2\le\min_{z\in\Delta_1}z_2,
+\]
+their triple is a cap. Interchanging coordinates forces a cup.
+Both directed differences must be nonempty.
+\end{lemma}
+\begin{proof}
+The two consecutive pair labels belong to $\Delta_1$ and $\Delta_2$.
+A cup would strictly increase the second coordinate, contradicting the
+displayed inequality. The other assertion is dual.
+\end{proof}
+
+\subsection{Hereditary convex families}
+A cyclic state list is certified by checking every triple in its cyclic
+order under all six chronological permutations. Empty directed pair
+differences exclude an order. Simultaneous forcing of both signs also
+excludes an order. Every other order must have the sign required by the
+cyclic orientation, with permutation parity accounted for.
+
+\Needspace{7\baselineskip}
+\begin{lemma}[Hereditary convexity]\label{lem:cycle}
+Every occupied subset of a certified cyclic family is in convex
+position. Consequently such a family $K$ has admissible capacity seven.
+\end{lemma}
+\begin{proof}
+For at least three occupied states, every triple of their owners is
+counterclockwise in the inherited cyclic order. For each directed edge
+between consecutive selected vertices, every other selected vertex is
+strictly on its left. Each edge is supporting, so all selected vertices
+are hull vertices. Eight occupied states would give an octagon.
+\end{proof}
+
+This test is hereditary because a triple's test uses only those three
+states. A proof for a whole path with fixed endpoints would not, by
+itself, justify a capacity after some endpoints are omitted.
+
+\section{The two octagon omission certificates}\label{sec:319}
+Write $h_A=1$ when state $A$ is absent. A valid occupied capacity $b_K$
+on a family $K$ gives the omission inequality
+\[
+ \sum_{A\in K}h_A\ge |K|-b_K.
+\]
+We first give the arithmetic rule used in both finite proofs.
+
+\Needspace{13\baselineskip}
+\begin{lemma}[Exact weighted contradiction]\label{lem:weighted}
+Suppose omission rows are $\sum_{v\in K}h_v\ge a_K$. At a branch node,
+let $O$ be the states fixed missing, $Z$ the states fixed occupied,
+$V$ the unassigned states, and $k$ the remaining hole budget. For
+nonnegative integer weights $w_K$ and an integer $\Lambda>0$, put
+\begin{align*}
+ r_K&=a_K-|K\cap O|,& W&=\sum_Kw_Kr_K,\\
+ \ell(v)&=\sum_{K\ni v}w_K,&
+ P&=\sum_{v\in V}\max(0,\ell(v)-\Lambda).
+\end{align*}
+Every completion using at most $k$ further holes satisfies $W\le \Lambda k+P$.
+Thus $W>\Lambda k+P$ certifies the node as impossible.
+\end{lemma}
+\begin{proof}
+Adding the weighted residual inequalities and using binary values gives
+\[
+ W\le\sum_{v\in V}\ell(v)h_v
+ \le\Lambda\sum_{v\in V}h_v+\sum_{v\in V}\max(0,\ell(v)-\Lambda)
+ \le \Lambda k+P.
+\]
+All operations are exact integer arithmetic; $P$ accounts for excess load.
+\end{proof}
+
+\subsection{The balanced bound}
+Ordinary cap/cup incoming states inject a balanced avoiding set into
+the 252 down-sets of $[5]^2$. The supplied catalogue contains 2,685
+families: 1,584 of size eight, 780 of size nine, and 321 of size ten.
+Every family has a certified cyclic order and hence capacity seven by
+\cref{lem:cycle}. 
+
+For example, the following ten-state cyclic list requires at least
+three omissions:
+\begin{align*}
+ &(3,2,1,0,0),\ (3,2,1,1,1),\ (3,2,2,1,1),\ (3,3,2,1,1),\\
+ &(4,3,2,1,1),\ (5,3,2,1,1),\ (5,3,2,1,0),\ (5,3,2,0,0),\\
+ &(5,3,1,0,0),\ (5,2,1,0,0).
+\end{align*}
+The check covers all 120 triples and their chronological permutations,
+as illustrated in Figure~\ref{fig:states}. The independent checker
+rejects 472 of the 720 orders and forces the required sign in all
+248 others.
+
+\begin{figure}[ht]
+\centering
+\newcommand{\ferrerspic}[1]{\begin{tikzpicture}[x=.16cm,y=.16cm,baseline=0cm]
+ \path[use as bounding box] (0,0) rectangle (5,5);
+ \foreach \h [count=\i from 0] in {#1}{
+  \ifnum\h>0\foreach \j in {1,...,\h}{
+   \draw[fill=black!15,line width=.25pt] (\i,\j-1) rectangle +(1,1);}\fi}
+ \end{tikzpicture}}
+\begin{tikzpicture}[>=Stealth, every node/.style={inner sep=3pt}]
+ \node (a1) at (0,1.9) {\ferrerspic{3,2,1,0,0}};
+ \node (a2) at (1.65,1.9) {\ferrerspic{3,2,1,1,1}};
+ \node (a3) at (3.3,1.9) {\ferrerspic{3,2,2,1,1}};
+ \node (a4) at (4.95,1.9) {\ferrerspic{3,3,2,1,1}};
+ \node (a5) at (6.6,1.9) {\ferrerspic{4,3,2,1,1}};
+ \node (a6) at (6.6,0) {\ferrerspic{5,3,2,1,1}};
+ \node (a7) at (4.95,0) {\ferrerspic{5,3,2,1,0}};
+ \node (a8) at (3.3,0) {\ferrerspic{5,3,2,0,0}};
+ \node (a9) at (1.65,0) {\ferrerspic{5,3,1,0,0}};
+ \node (a10) at (0,0) {\ferrerspic{5,2,1,0,0}};
+ \foreach \i/\j in {1/2,2/3,3/4,4/5,5/6,6/7,7/8,8/9,9/10,10/1}
+   \draw[->] (a\i)--(a\j);
+ \foreach \i in {1,...,5}\node[font=\scriptsize,above=1pt of a\i] {\i};
+ \foreach \i in {6,...,10}\node[font=\scriptsize,below=1pt of a\i] {\i};
+\end{tikzpicture}
+\caption{The ten Ferrers states in their certified cyclic order.
+The arrows specify the order of the certificate, not the chronological
+order of points. At most seven states can be occupied.}
+\label{fig:states}
+\end{figure}
+
+\begin{proposition}[Balanced octagon bound]\label{prop:193}
+$C_8=M_8(7,7)\le193$.
+\end{proposition}
+\begin{proof}
+The complete binary certificate assumes at most 58 missing states.
+It has 1,590 branches and 1,591 weighted leaves, with maximum depth
+14. Each split assigns one previously unassigned Boolean variable
+and includes both children. Every node is reached exactly once, and
+all leaves satisfy \cref{lem:weighted} in their actual branch context.
+There are 306,922 positive weight terms and 119 leaves with $P>0$.
+The minimum strict margin is 21.
+
+For the smallest-margin leaf, the remaining budget is $k=52$,
+$\Lambda=10^6$, $W=52{,}000{,}021$, and $P=0$. Thus a completion would
+require $52{,}000{,}021\le52{,}000{,}000$. The other 1,590 leaves
+are checked in the same exact fashion. Every hypothetical hole set
+with size at most 58 follows a path to a contradiction. At least 59
+states are absent, leaving at most $252-59=193$ points.
+\end{proof}
+
+\subsection{A two-sided residual state space}
+For a set $R$ counted by $D_8$, let $C^+(u,v)+1$ be the longest cap
+starting at the exact pair $(u,v)$ and $Q^-(u,v)+1$ the longest cup
+ending there, both in the entire fixed $R$. Define
+\begin{equation}\label{eq:twosided}
+ d(u,v)=(5-C^+(u,v),Q^-(u,v)),\qquad
+ \Psi(v)=\down\{d(u,v):u<v\}.
+\end{equation}
+These coordinates lie in $[4]\times[6]$. A cap triple $u<v<w$ gives
+$C^+(u,v)\ge C^+(v,w)+1$, so the first coordinate strictly increases;
+a cup triple strictly increases the second. Thus these labels and
+states are admissible and injective. Future-cap statistics have
+precedent in Baek's work~\cite[Theorem~3.2 and Definition~3.4]{Baek};
+the useful specialization here is to the residual forbidden junction.
+
+\begin{proposition}[Residual state restriction]\label{prop:154}
+Every residual state belongs to the 154-element universe
+\[
+ \mathcal U=\left\{h\in\mathbb Z^4:\begin{array}{l}
+ 6\ge h_1\ge h_2\ge h_3\ge h_4\ge0,\\
+ h_1<6\text{ or }h_1=h_2=6
+ \end{array}\right\}.
+\]
+\end{proposition}
+\begin{proof}
+No actual pair label is $(1,6)$. Such a label would exhibit a five-cap
+starting at $(u,v)$ and a seven-cup ending at $(u,v)$. Removing $v$
+from the latter gives a six-cup ending at $u$, where the five-cap starts.
+This is the forbidden residual junction.
+
+Every maximal cell of an actual incoming down-set is attained by
+some incoming pair. Hence $(1,6)$ cannot be maximal. Among the
+$\binom{10}{4}=210$ down-sets of $[4]\times[6]$, exactly those with
+$h_1=6$ and $h_2\le5$ have that maximal cell. There are
+$\binom83=56$ such shapes, leaving $210-56=154$.
+\end{proof}
+
+A state containing $(1,6)$ remains allowed when a larger cell
+dominates it. An exact
+154-point control realizes all the allowed states while satisfying
+the chain and junction restrictions; it contains a checked octagon.
+Thus further omissions genuinely require polygon avoidance.
+
+\begin{proposition}[General residual baseline]\label{prop:baseline}
+For $n\ge6$,
+\[
+ D_n\le\binom{2n-6}{n-4}-\binom{2n-8}{n-5}.
+\]
+Consequently, the cup--cap estimate for $C_n$ and
+\cref{thm:transfer} recover the finite bound \eqref{eq:MV}.
+\end{proposition}
+\begin{proof}
+Use the labels $(n-3-C^+(u,v),Q^-(u,v))$ in
+$[n-4]\times[n-2]$, with both ranks computed in the residual set.
+The growth and injection argument is unchanged. A label $(1,n-2)$
+would give an $(n-3)$-cap starting at $u$ and an $(n-1)$-cup ending
+at the pair $(u,v)$, hence the forbidden junction at $u$.
+So $(1,n-2)$ cannot be a maximal cell. The excluded down-sets have
+first column $n-2$ and remaining $n-5$ columns of height at most
+$n-3$, giving $\binom{2n-8}{n-5}$ exclusions.
+Finally, Pascal's identity and binomial symmetry give
+\begin{align*}
+ &\binom{2n-6}{n-3}+\binom{2n-6}{n-4}-\binom{2n-8}{n-5}+2\\
+ &\hspace{25mm}=\binom{2n-5}{n-2}-\binom{2n-8}{n-3}+2.
+\end{align*}
+This is a derivation of the known baseline, not a new bound for general $n$.
+\end{proof}
+
+\subsection{Transporting four-cap capacities}\label{sec:compression}
+The following lemma supplies numerical information from Baek's theorem
+without assuming that transported labels are actual longest ranks.
+
+\begin{lemma}[Horizontal block compression]\label{lem:compression}
+For $\rho=1,\ldots,s$, let nonnegative integer thresholds
+$f_\rho(0)<\cdots<f_\rho(r)$ lie in a larger rank rectangle and satisfy
+\[
+ f_{\rho+1}(i)\le f_\rho(i),\qquad
+ f_{\rho+1}(i)\le f_\rho(i-1)+1\quad(1\le i\le r),
+\]
+where the first inequality also includes $i=0$. Map a source ideal
+with row widths $w_\rho$ to the ideal with row widths $f_\rho(w_\rho)$.
+In any admissible assignment, the owners of states in this image
+admit labels in $[r]\times[s]$ satisfying strict growth. Consequently
+they contain neither an $(r+2)$-cap nor an $(s+2)$-cup.
+\end{lemma}
+\begin{proof}
+Threshold monotonicity makes every image a down-set, and strictness
+makes the state map injective. Directed differences are precisely the
+unions of intervals belonging to the corresponding source difference.
+Compress a pair label $(R,\rho)$ to $(i,\rho)$ when
+$f_\rho(i-1)<R\le f_\rho(i)$. Such an interval exists uniquely because
+the label is in a directed image difference.
+
+Cup growth is unchanged. At a cap triple, suppose the outgoing
+compressed cell $(j,\sigma)$ had $j\le i$, where $(i,\rho)$ is incoming.
+The middle source ideal contains the incoming cell and excludes the
+outgoing one, so its down-set property forces $\sigma>\rho$. Therefore
+\[
+ R_{\rm out}\le f_\sigma(j)\le f_{\rho+1}(i)
+ \le f_\rho(i-1)+1\le R_{\rm in},
+\]
+contrary to cap growth. Thus the compressed first coordinate increases
+on every cap triple. Bounded strictly increasing ranks exclude the
+stated chains.
+\end{proof}
+
+With $r=2$ and $s=6$, the source has 28 states. The image owners have
+no four-cap and inherit octagon avoidance. Baek's
+theorem~\cite[Theorem~1.6]{Baek} says that 23 points force a four-cap
+or an octagon. Each image therefore has occupied capacity 22, and
+requires six omissions. The residual catalogue contains 23 explicit
+maps into $\mathcal U$. The finite validation checks the threshold conditions, images,
+and directed differences for all 23 maps.
+
+\subsection{The residual omission theorem}
+The final formal catalogue has 1,187 omission inequalities:
+1,164 hereditary convex families, each with demand $|K|-7$, and
+23 four-cap block images, each with demand six. The original discovery
+archive split the first group into 973 transported families and 191
+cycles. In the formalization, every one of the 973 transported supports
+also receives an explicit cyclic certificate. Thus all 1,164 rows use
+\cref{lem:cycle}; their historical transport provenance is no longer
+an additional proof dependency. The remaining 23 rows use
+\cref{lem:compression} and the port of Baek's theorem.
+
+\begin{proposition}[Residual octagon bound]\label{prop:124}
+$D_8\le124$.
+\end{proposition}
+\begin{proof}
+Assume at most 29 of the 154 states are missing. The complete tree has
+7,314 binary branches and 7,315 weighted leaves, maximum depth 21.
+Every split includes both values of one previously unassigned state,
+and every node is reached exactly once. Each leaf satisfies
+\cref{lem:weighted} with its recorded context. There are 662,561
+positive weight terms; the minimum strict integer margin is one.
+Thus no Boolean vector with at most 29 holes satisfies all the valid
+inequalities. At least 30 states are absent and $|R|\le154-30=124$.
+\end{proof}
+
+Finally, \cref{thm:transfer,prop:193,prop:124} give
+\[
+ Q_8\le193+124=317,\qquad
+ \boxed{\ES(8)\le193+124+2=319}.
+\]
+The classical lower construction gives $\ES(8)\ge65$~\cite{ES61}.

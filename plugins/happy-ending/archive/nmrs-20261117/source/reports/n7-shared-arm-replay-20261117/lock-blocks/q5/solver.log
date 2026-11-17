@@ -1,0 +1,75 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.2 da40eb952502cc1b5e0a262a8a400d492584c4d8
+c gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 -W -Wall -O3 -DNDEBUG
+c Tue Apr 14 12:58:08 CST 2026 Linux ubun 6.2.0-34-generic x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c
+c   q5/solver-proof.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   q5/formula.cnf
+c
+c parsed 'p cnf 2300 331475' header
+c closing input after reading 6914910 bytes (7 MB)
+c finished parsing after 0.08 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c seconds switched rate     size/glue tier1  binary          remaining
+c        MB reductions conflicts size  tier2     irredundant
+c         level restarts redundant glue  trail          variables
+c
+c *  0.08 15 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 17564 216270 1474 64%
+c (  0.08 18 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 17564 216270 1474 64%
+c .  0.10 18 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 16294 80678 1474 64%
+c )  0.13 14 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 6475 80678 1310 57%
+c 0  0.13 14 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 6475 80678 1310 57%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.08   61.43 %  parse
+c           0.04   34.22 %  preprocess
+c           0.03   24.06 %  probe
+c           0.03   24.04 %  congruence
+c           0.00    3.56 %  lucky
+c           0.00    0.00 %  search
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.13  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                                0                0.00 per second
+c decisions:                                0                0.00 per conflict
+c propagations:                          2400            18502    per second
+c switched:                                 0                0    interval
+c MAB stats : 1 0 
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c no clauses used at all
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:         22020096 bytes         21 MB
+c process-time:                                              0.13 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20

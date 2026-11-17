@@ -1,0 +1,301 @@
+Source-text excerpts only; long literal-data lines omitted. Lean not compiled; certificate not replayed.
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES8BalancedGeometry.lean
+SHA256 2a08b70381a0c8a6935dc9d13778522c5124d0382f7f6f690ce57c3fe64b79a2
+1: import ES8CycleValidation
+2: 
+3: namespace ES8BalancedGeometry
+4: open ES8 ES8Domains ES8ActualRanks ES8BalancedCatalog ES8Geometry ES8CycleRows ES8CycleData
+5: 
+6: /-- Actual real points in increasing x order and in general position. -/
+7: structure Configuration (n : Nat) where
+8:   point : Fin n → Point
+9:   xOrder : StrictMono (fun i => (point i).1)
+10:   generalPosition : ∀ u v w : Fin n, u < v → v < w → orient (point u) (point v) (point w) ≠ 0
+11: 
+12: noncomputable def Configuration.cup {n} (c : Configuration n) (u v w : Nat) : Bool := by
+13:   classical
+14:   exact if h : u < n ∧ v < n ∧ w < n then
+15:     decide (0 < orient (c.point ⟨u,h.1⟩) (c.point ⟨v,h.2.1⟩) (c.point ⟨w,h.2.2⟩)) else false
+16: 
+17: theorem Configuration.cup_sign {n} (c : Configuration n) (u v w : Fin n) :
+18:     c.cup u v w=true ↔ 0 < orient (c.point u) (c.point v) (c.point w) := by
+19:   classical
+20:   simp [Configuration.cup,u.isLt,v.isLt,w.isLt]
+21: 
+22: noncomputable def model {n} (c : Configuration n) (caps : Avoids n c.cup false 7)
+23:     (cups : Avoids n c.cup true 7) : Model n table where
+24:   index := fun v => (ownerIndex n c.cup caps cups v).val
+25:   injective := fun _ _ h => ownerIndex_injective n c.cup caps cups (Fin.ext h)
+26:   bounded := fun v => (ownerIndex n c.cup caps cups v).isLt
+27:   point := c.point
+28:   cup := c.cup
+29:   label := labels c.cup
+30:   growth := labels_increasing n c.cup
+31:   pairs := fun u v huv => actual_pair_fits n c.cup caps cups u v huv _
+32:     (ES8CycleValidation.domain_checked _ _ (ownerIndex n c.cup caps cups u).isLt (ownerIndex n c.cup caps cups v).isLt)
+33:   signs := fun u v w _ _ => c.cup_sign u v w
+34:   nonzero := c.generalPosition
+35: 
+36: /-- The complete balanced geometric population bound. No capacity-row hypothesis
+37: is assumed: every literal row is discharged by the checked geometric validator. -/
+38: theorem balanced_bound (n : Nat) (c : Configuration n)
+39:     (noCap : ¬ (colorConfig c.cup true).HasNCap 7 (Finset.range n))
+40:     (noCup : ¬ (colorConfig c.cup true).HasNCup 7 (Finset.range n))
+41:     (noOctagon : ¬ HasConvexOctagon (Set.range c.point)) : n ≤ 193 := by
+42:   let caps := avoids_of_no_cap n 7 c.cup noCap
+43:   let cups := avoids_of_no_cup n 7 c.cup noCup
+44:   let m := model c caps cups
+45:   apply size_when_rows_hold n c.cup caps cups
+46:   intro j hj
+47:   have geometric := checked_row_sound m (Complete.row Certificates.Balanced.rows j)
+48:     (cycles.getD j []) (ES8CycleValidation.cycle_checked j hj) noOctagon
+49:   exact geometric
+50: 
+51: #print axioms balanced_bound
+52: end ES8BalancedGeometry
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7Geometry.lean
+SHA256 a9b8bd85c688f1f2ea106cb404f25a1aaeda694301131577252375ba040ce19b
+1: import ES8Final
+2: 
+3: namespace ES7Geometry
+4: open ES8Geometry ES8BalancedGeometry ES8ActualRanks ES8BaekGeometry ES8BoundaryGeometry
+5: 
+6: def HasConvexHeptagon (S : Set Point) : Prop :=
+7:   ∃ T : Finset Point, T.card=7 ∧ (↑T : Set Point)⊆S ∧ ConvexPosition (↑T : Set Point)
+8: 
+9: theorem heptagon_of_cyclic (p : Nat → Point) (positive : CyclicPositive 7 p)
+10:     (S : Set Point) (inside : ∀ i, i < 7 → p i ∈ S) : HasConvexHeptagon S := by
+11:   classical
+12:   let T := (Finset.range 7).image p
+13:   have inj : Set.InjOn p (↑(Finset.range 7) : Set Nat) := by
+14:     intro i hi j hj equal
+15:     have hi' : i < 7 := by simpa using hi
+16:     have hj' : j < 7 := by simpa using hj
+17:     by_cases h : i=j
+18:     · exact h
+19:     · by_cases hij : i < j
+20:       · exact False.elim (cyclic_points_distinct 7 (by omega) p positive i j hi' hj' hij equal)
+21:       · exact False.elim (cyclic_points_distinct 7 (by omega) p positive j i hj' hi' (by omega) equal.symm)
+22:   have card : T.card=7 := by
+23:     dsimp [T]
+24:     rw [Finset.card_image_of_injOn inj]
+25:     simp
+26:   have seteq : (↑T : Set Point) = {v | ∃ i, i < 7 ∧ p i=v} := by
+27:     ext v
+28:     simp [T]
+29:   refine ⟨T,card,?_,?_⟩
+30:   · intro v hv
+31:     rw [seteq] at hv
+32:     obtain ⟨i,hi,rfl⟩ := hv
+33:     exact inside i hi
+34:   · rw [seteq]
+35:     exact cyclic_positive_convex_position 7 (by omega) p positive
+36: 
+37: 
+38: theorem boundary_heptagon {k l} (b : Boundary k l) (seven : k+l+2=7)
+39:     (S : Set Point) (inside : b.points⊆S) : HasConvexHeptagon S := by
+40:   refine ⟨b.finite,?_,?_,?_⟩
+41:   · rw [b.card,seven]
+42:   · rw [b.finite_coe]; exact inside
+43:   · rw [b.finite_coe]; exact boundary_convex_position b
+44: 
+45: theorem hasNGon_heptagon {n} (c : Configuration n)
+46:     (gon : (colorConfig c.cup true).HasNGon 7 (Finset.range n)) :
+47:     HasConvexHeptagon (Set.range c.point) := by
+48:   obtain ⟨xs,ys,hgon,xi,yi⟩ := gon
+49:   let k := xs.length-2
+50:   let l := ys.length-2
+51:   have hx : xs.length=k+2 := by have := hgon.1.1; dsimp [k]; omega
+52:   have hy : ys.length=l+2 := by have := hgon.1.2.2.1; dsimp [l]; omega
+53:   apply boundary_heptagon (boundaryOfGon c xs ys k l hx hy xi yi hgon.1)
+54:   · have := hgon.2; omega
+55:   · exact boundaryOfGon_inside c xs ys k l hx hy xi yi hgon.1
+56: 
+57: theorem hasNCup_heptagon {n} (c : Configuration n)
+58:     (cup : (colorConfig c.cup true).HasNCup 7 (Finset.range n)) :
+59:     HasConvexHeptagon (Set.range c.point) := by
+60:   obtain ⟨xs,⟨chain,len⟩,inside⟩ := cup
+61:   let arc := cupArc c xs 5 len inside chain
+62:   let p : Nat→Point := fun i=>if hi : i<7 then arc.point ⟨i,hi⟩ else (0,0)
+63:   apply heptagon_of_cyclic p
+64:   · intro i j k hij hjk hk
+65:     have hi : i<7 := by omega
+66:     have hj : j<7 := by omega
+67:     simp only [p,dif_pos hi,dif_pos hj,dif_pos hk]
+68:     exact arc.positive _ _ _ hij hjk
+69:   · intro i hi
+70:     simp only [p,dif_pos hi]
+71:     change pointAt c (xs.get ⟨i,by omega⟩)∈Set.range c.point
+72:     have bound := Finset.mem_range.mp (inside _ (xs.get_mem ⟨i,by omega⟩))
+73:     exact ⟨⟨_,bound⟩,(pointAt_eq c _ bound).symm⟩
+74: 
+75: 
+76: #print axioms hasNGon_heptagon
+77: #print axioms hasNCup_heptagon
+78: end ES7Geometry
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7Terminal20Data.lean
+SHA256 f958ed34fe1b67bc61baaac0e33a06a253553b65b57498dc9be051363a2b804d
+1: import ES7OrderedSourceCodec
+2: import ES7Terminal20Literal
+3: 
+4: namespace ES7Terminal20Data
+5: open ES7OrderedContract ES7OrderedSourceCodec ES8BalancedGeometry
+6: 
+7: [literal-data line omitted: 170797 characters]
+8: [literal-data line omitted: 404368 characters]
+9: 
+10: def acceptedCheck : Bool :=
+11:   match names nameText, rules ruleText with
+12:   | some d, some rs => checked 24 20 d rs ES7Terminal20Literal.source
+13:   | _, _ => false
+14: 
+15: theorem accepted : acceptedCheck=true := by native_decide
+16: 
+17: /-- Every literal clause is justified by one common geometric interpretation.
+18: No SAT-variable labels or Python classifier results are assumed as theorems. -/
+19: theorem impossible (c : Configuration 24) (hyp : Hypotheses c 20) : False := by
+20:   have pass := accepted
+21:   unfold acceptedCheck at pass
+22:   cases hd : names nameText with
+23:   | none => simp [hd] at pass
+24:   | some d =>
+25:     cases hr : rules ruleText with
+26:     | none => simp [hd,hr] at pass
+27:     | some rs =>
+28:       have ok : checked 24 20 d rs ES7Terminal20Literal.source=true := by simpa [hd,hr] using pass
+29:       have sat := checked_sound 24 20 d rs ES7Terminal20Literal.source ok c hyp
+30:       have unsat := ES7Terminal20Literal.unsat (assignment d c)
+31:       rw [sat] at unsat
+32:       contradiction
+33: 
+34: #print axioms impossible
+35: end ES7Terminal20Data
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7Through14Data.lean
+SHA256 93ca803936adbb231a2b2dd7f6d071c5a4e35a52d996d364aba79febb45eeed6
+1: import ES7ThroughCodec
+2: import ES7Through14Literal
+3: 
+4: namespace ES7Through14Data
+5: open ES7ThroughMeaning ES7ThroughCodec ES8BalancedGeometry
+6: 
+7: [literal-data line omitted: 185803 characters]
+8: [literal-data line omitted: 90154 characters]
+9: 
+10: def acceptedCheck : Bool :=
+11:   match names nameText, schemas ruleText with
+12:   | some d, some rs => checked d rs ES7Through14Literal.source
+13:   | _, _ => false
+14: 
+15: theorem accepted : acceptedCheck=true := by native_decide
+16: 
+17: /-- Every ambient flag and every exact core flag is interpreted in one actual
+18: configuration. Ambient path witnesses are not confined to the selection. -/
+19: theorem impossible (c : Configuration n) (f : Nat→Nat) (m : Model c f) : False := by
+20:   have pass := accepted
+21:   unfold acceptedCheck at pass
+22:   cases hd : names nameText with
+23:   | none => simp [hd] at pass
+24:   | some d =>
+25:     cases hr : schemas ruleText with
+26:     | none => simp [hd,hr] at pass
+27:     | some rs =>
+28:       have ok : checked d rs ES7Through14Literal.source=true := by simpa [hd,hr] using pass
+29:       have sat := checked_sound d rs ES7Through14Literal.source ok c f m
+30:       have unsat := ES7Through14Literal.unsat (assignment d c f)
+31:       rw [sat] at unsat
+32:       contradiction
+33: 
+34: #print axioms impossible
+35: end ES7Through14Data
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7Through14Literal.lean
+SHA256 640acebb5128073f1731f88893fe4178fb73d9259577fc562f4579c66650e250
+1: import ES7LRAT
+2: 
+3: namespace ES7Through14Literal
+4: open Std.Sat Std.Tactic.BVDecide.LRAT ES7LRAT
+5: 
+6: [literal-data line omitted: 78693 characters]
+7: 
+8: [literal-data line omitted: 504200 characters]
+9: 
+10: theorem accepted : check proof source=true := by native_decide
+11: 
+12: /-- Unsatisfiability of the exact exported compact CNF. This does not by itself
+13: prove a geometric population bound; its source-necessity theorem remains separate. -/
+14: theorem unsat : source.Unsat := checked_unsat source proof accepted
+15: 
+16: #print axioms unsat
+17: end ES7Through14Literal
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7Joint17Data.lean
+SHA256 c75b618ea10681fed5b3caa622b3873603b2364d1f8de9f2ee822dec29229523
+1: import ES7JointCatalog
+2: import ES7Joint17Literal
+3: set_option maxRecDepth 100000
+4: namespace ES7Joint17Data
+5: open ES7NamedGeometry ES7NamedVariables ES7JointRules ES7JointCodec ES7ClauseLogic ES8BalancedGeometry
+6: 
+7: [literal-data line omitted: 1374415 characters]
+8: [literal-data line omitted: 1261731 characters]
+9: def acceptedCheck : Bool :=
+10:   match names nameText, schemas ruleText with
+11:   | some d,some rs => checked ES7JointCatalog.states d rs ES7Joint17Literal.source
+12:   | _,_ => false
+13: 
+14: theorem accepted : acceptedCheck=true := by native_decide
+15: 
+16: theorem impossible (m : Model c 40 ES7JointCatalog.states) (hyp : Hypotheses m) : False := by
+17:   have pass := accepted
+18:   unfold acceptedCheck at pass
+19:   cases hd : names nameText with
+20:   | none => simp [hd] at pass
+21:   | some d =>
+22:     cases hr : schemas ruleText with
+23:     | none => simp [hd,hr] at pass
+24:     | some rs =>
+25:       have ok : checked ES7JointCatalog.states d rs ES7Joint17Literal.source=true := by simpa [hd,hr] using pass
+26:       have sat := checked_sound d rs ES7Joint17Literal.source ok m hyp
+27:       have unsat := ES7Joint17Literal.unsat (assignment d (meaning m))
+28:       rw [sat] at unsat
+29:       contradiction
+30: #print axioms impossible
+31: end ES7Joint17Data
+
+D:\科研\math agent\erdos-szekeres-sat-main\tmp\balanced49_transfer_20261026\sources\es7_es8_bounds_81_319_v1\formal\sources\ES7ClosureData.lean
+SHA256 f4b0fad14e8dbe75562ee0f715a185333b368713edb97a5df119adc7af66459a
+1: import ES7ClosureCodec
+2: import ES7ClosureLiteral
+3: set_option maxRecDepth 100000
+4: namespace ES7ClosureData
+5: open ES7ClosureFrame ES7ClosureMeaning ES7ClosureRules ES7ClosureCodec ES7ClauseLogic ES8BalancedGeometry
+6: 
+7: [literal-data line omitted: 2429722 characters]
+8: [literal-data line omitted: 3907840 characters]
+9: def acceptedCheck : Bool :=
+10:   match names nameText, schemas ruleText with
+11:   | some d,some rs => checked d rs ES7ClosureLiteral.source
+12:   | _,_ => false
+13: 
+14: theorem accepted : acceptedCheck=true := by native_decide
+15: 
+16: theorem impossible (m : Model c realStates) : False := by
+17:   have pass := accepted
+18:   unfold acceptedCheck at pass
+19:   cases hd : names nameText with
+20:   | none => simp [hd] at pass
+21:   | some d =>
+22:     cases hr : schemas ruleText with
+23:     | none => simp [hd,hr] at pass
+24:     | some rs =>
+25:       have ok : checked d rs ES7ClosureLiteral.source=true := by simpa [hd,hr] using pass
+26:       have sat := checked_sound d rs ES7ClosureLiteral.source ok m
+27:       have unsat := ES7ClosureLiteral.unsat (assignment d (meaning m))
+28:       rw [sat] at unsat
+29:       contradiction
+30: #print axioms impossible
+31: end ES7ClosureData

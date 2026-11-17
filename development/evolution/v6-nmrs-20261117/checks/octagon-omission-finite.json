@@ -1,0 +1,121 @@
+{
+  "finite_check": {
+    "balanced": {
+      "directed_boxes": 63504,
+      "empty_difference_orders": 774276,
+      "families": 2685,
+      "forced_orders": 382188,
+      "omission_tree": {
+        "bound": 193,
+        "branches": 1590,
+        "hole_budget": 58,
+        "leaves": 1591,
+        "leaves_with_excess": 119,
+        "max_depth": 14,
+        "minimum_margin": 21,
+        "positive_weight_terms": 306922,
+        "row_sizes": {
+          "10": 321,
+          "8": 1584,
+          "9": 780
+        },
+        "rows": 2685,
+        "sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "smallest_margin_leaf": {
+          "L": 1000000,
+          "P": 0,
+          "W": 52000021,
+          "k": 52,
+          "margin": 21,
+          "node": 1736
+        },
+        "states": 252
+      },
+      "rejection_controls": [
+        "reversed cycle",
+        "duplicate state",
+        "incomplete branch"
+      ],
+      "triple_orders": 1156464
+    },
+    "lean_or_native_evaluation_used": false,
+    "residual": {
+      "blocks": {
+        "blocks": 23,
+        "checked_growth_implications": 8581,
+        "occupied_capacity": 22,
+        "row_ids": [
+          973,
+          1165,
+          1166,
+          1167,
+          1168,
+          1169,
+          1170,
+          1171,
+          1172,
+          1173,
+          1174,
+          1175,
+          1176,
+          1177,
+          1178,
+          1179,
+          1180,
+          1181,
+          1182,
+          1183,
+          1184,
+          1185,
+          1186
+        ],
+        "source_states": 28
+      },
+      "directed_boxes": 23716,
+      "empty_difference_orders": 288730,
+      "families": 1164,
+      "forced_orders": 134294,
+      "omission_tree": {
+        "bound": 124,
+        "branches": 7314,
+        "hole_budget": 29,
+        "leaves": 7315,
+        "leaves_with_excess": 1532,
+        "max_depth": 21,
+        "minimum_margin": 1,
+        "positive_weight_terms": 662561,
+        "row_sizes": {
+          "28": 23,
+          "8": 974,
+          "9": 190
+        },
+        "rows": 1187,
+        "sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "smallest_margin_leaf": {
+          "L": 1000000,
+          "P": 0,
+          "W": 21000001,
+          "k": 21,
+          "margin": 1,
+          "node": 10542
+        },
+        "states": 154
+      },
+      "rejection_controls": [
+        "reversed cycle",
+        "duplicate state",
+        "incomplete branch",
+        "invalid block threshold"
+      ],
+      "triple_orders": 423024
+    },
+    "scope": "All ES8 finite capacity conditions and both complete omission trees; geometric transfer uses the proved lemmas.",
+    "seconds": 3.171,
+    "status": "PASS"
+  },
+  "input_zip_sha256": "a1ea809858958d59e457b0bdf77952b9f6913aef31d1f67e61a08943291cc8b9",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "scope_note": "Replays Schroeder's 15-file public finite omission-tree arithmetic (balanced <= 193, residual <= 124). Does not build Lean or certify the signotope cyclic-sign packet bridge.",
+  "seconds": 3.3524,
+  "status": "PASS"
+}

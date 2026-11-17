@@ -1,0 +1,54 @@
+{
+  "observed_from": "2026-10-06T23:18:54+08:00",
+  "observed_until": "2026-10-06T23:20:20+08:00",
+  "timezone": "Asia/Singapore",
+  "server_read_only": true,
+  "large_proofs_rehashed": false,
+  "c5": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c5_acceptance_v2",
+    "receipt_sha256": "4101b158a1516d603148194e34ed44e67769d26b4c47d27b9933020fee137ea3",
+    "accepted_at": "2026-10-03T19:38:33.564768+08:00",
+    "status": "ACCEPTED_SIX_FRESH_CHECKERS_BYTE_EQUAL",
+    "certified_upper_bound": 30,
+    "receipt_dependencies_six_fresh_result_log_bindings_and_zero_exits_revalidated": true
+  },
+  "c6_original_compact_campaign": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c6_compact_parallel_v1",
+    "encoding": "compact_cardinality_756_v1",
+    "completed_output_hashes_verdicts_cnf_bindings_and_proof_sizes_checked": true,
+    "global_stop": false,
+    "cases": [
+      {"e": 6, "N": 26, "status": "SOLVING", "pid": 1858257, "identity_matches": true, "wall_hours": 176.59624444444438, "cpu_hours": 176.57100277777778, "partial_proof_GB": 473.137414144, "stderr_bytes": 0},
+      {"e": 7, "N": 27, "status": "RAW_UNSAT_CHECKING", "solve_hours": 128.77964325851386, "checker_pid": 1931364, "identity_matches": true, "check_wall_hours": 47.342924999999944, "check_cpu_hours": 47.28723333333333, "latest_checker_progress_percent": 34.95, "displayed_linear_remaining_seconds": 299548.19, "proof_GB": 341.365474449, "stderr_bytes": 0},
+      {"e": 8, "N": 28, "status": "VERIFIED_UNSAT", "solve_hours": 69.58987764322859, "check_hours": 29.819501368631933},
+      {"e": 9, "N": 29, "status": "VERIFIED_UNSAT", "solve_hours": 35.69653824666722, "check_hours": 12.074174390901657},
+      {"e": 10, "N": 30, "status": "VERIFIED_UNSAT", "solve_hours": 75.92842392081162, "check_hours": 14.090974256609204}
+    ]
+  },
+  "eta": {
+    "e7": "Roughly 1-4 more days as a low-confidence planning range, not an upper bound. The latest displayed linear estimate is 83.2 hours; linear extrapolation from this morning's progress is approximately 69 hours. Checking speed can change substantially.",
+    "whole_c6": "No reliable finish date while e6 is still solving; reserve further days, possibly over a week. The e6 proof still needs checking after solving. Later independent C6 acceptance is separate."
+  },
+  "legacy_comparison": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20261004_c6_legacy_e09_e10_comparison_v1",
+    "both_cases_verified": true,
+    "run_exit_zero": true,
+    "e9": {"solve_hours": 33.09963573227333, "check_hours": 14.463775972504454, "completed_at": "2026-10-06T14:20:23.120982+08:00"},
+    "e10": {"solve_hours": 10.778465653388864, "check_hours": 4.9929560341505566}
+  },
+  "bridges_e10": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20261006_c6_e10_bridges_comparison_v1",
+    "status": "VERIFIED_UNSAT",
+    "status_sha256": "9d5bda90fbb1a954793e731c03dfe3973c0ed342f1db0937d354677d5bc20f13",
+    "completed_at": "2026-10-06T19:57:25.898608+08:00",
+    "solve_hours": 2.4320363664475737,
+    "check_hours": 1.9363658987644077,
+    "proof_bytes": 6221186587,
+    "run_exit_zero": true,
+    "final_comparison_exists": true,
+    "theorem_credit": false,
+    "limitation": "Same A[6,10], seed 0, historical original control; does not establish general speedup or complete C6."
+  },
+  "disk_available_GiB": 690.8337478637695,
+  "running_campaigns_modified_or_restarted": false
+}

@@ -1,0 +1,145 @@
+{
+  "schema": "n7_four_r5_raw_validation_v1",
+  "pass": true,
+  "execution_platform": "Linux-6.2.0-34-generic-x86_64-with-glibc2.35",
+  "order": 12,
+  "triple_count": 220,
+  "packet_count": 495,
+  "packet_violations": [],
+  "enumerated_vertex_subsets": 4083,
+  "monochromatic_path_counts": {
+    "0": {
+      "2": 66,
+      "3": 87,
+      "4": 22,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0
+    },
+    "1": {
+      "2": 66,
+      "3": 133,
+      "4": 120,
+      "5": 47,
+      "6": 8,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0
+    }
+  },
+  "path_inheritance_violations": [],
+  "endpoint_pair_count": 66,
+  "maximum_red_path_vertices": 6,
+  "maximum_blue_path_vertices": 4,
+  "maximum_same_endpoint_length_sum": 8,
+  "weak7_endpoint_violations": [],
+  "forced_chains": [
+    {
+      "path": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+      ],
+      "all_triples_red": true
+    }
+  ],
+  "actual_R6_source_end_partition": {
+    "S": [
+      1,
+      6
+    ],
+    "T": [
+      6,
+      9,
+      10,
+      11,
+      12
+    ],
+    "I": [
+      6
+    ],
+    "D": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ]
+  },
+  "expected_role_checks": {
+    "expected_red6_sources": true,
+    "expected_red6_ends": true,
+    "expected_I": true,
+    "expected_D": true
+  },
+  "source_end_roles": {
+    "R5": {
+      "sources": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "ends": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "R6": {
+      "sources": [
+        1,
+        6
+      ],
+      "ends": [
+        6,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "B5": {
+      "sources": [],
+      "ends": []
+    },
+    "B6": {
+      "sources": [],
+      "ends": []
+    }
+  },
+  "solver_calls": 0,
+  "proof_checker_calls": 0,
+  "external_review_calls": 0,
+  "validator_imports_cnf_or_fixture": false,
+  "validation_invocations": 1,
+  "independent_of_cnf": true,
+  "independent_external_review": false,
+  "acceptance_status": "same-session mechanically-validated candidate; not formal acceptance",
+  "new_global_bound": false,
+  "verifier_sha256": "2a70c57ce9d8e49bdf13abc1861e4fc34fb3bfabcc9eebd31e215cd84784bfe2",
+  "input_manifest_sha256": "e930efd205bb97a6397103f803d949b346689ae767c57c9116bd90f1a8e7df92",
+  "artifact_sha256": {
+    "coloring-r2.tsv": "9255d33854b9246026221983268ea77fd3b4f21e0379e049da3c0d32eae65c11",
+    "r2-packets.tsv": "dd3927f67d5676ff6160b2b1aa7eb898cf39d0a89a286720295db45855d1ac0e",
+    "r2-endpoint-maxima.tsv": "644f6907b7d96594ce03d68578afb9d15f8b9b61e0c1982380406923aacbcb3f",
+    "r2-all-monochromatic-paths.jsonl": "6db848e8008dca1b74fea391c230745e674d93568d1ee5d764e4f3e12e96525f"
+  }
+}

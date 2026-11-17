@@ -1,0 +1,156 @@
+{
+  "scope": "Joint17 complete fixed-byte strict-RUP replay with seven original checker controls; existing schema CNF identity linked; no independent semantic review or acceptance",
+  "metadata": {
+    "scope": "Joint17 complete fixed-byte strict-RUP replay with seven original checker controls; existing schema CNF identity linked; no independent semantic review or acceptance",
+    "source_sha256": "22950a14595f72b93a769261738d029b2aa27d04aa27e1f44fa2dce77775da2a",
+    "source_bytes": 38734663,
+    "checker_sha256": "e6635afdf4a9d2447a0d8c1d1a5eb820b4980f0c86871eba1685d0bcfb6f98b2",
+    "parser_sha256": "c690f5169db2b12dae1a253c02ceeb7b0121292baf7b0bdd03128b3ceebe0d05",
+    "checker_source_sha256": "20afbb807b477f6c839d24c5de505431fd8648dee8b9bb952a73b72fa67efe5b",
+    "finite_spec_sha256": "6be68473f2cc3af341fe293f1f6381c2217f5d83830c4494da8a457f9f03acd7",
+    "checker_cpu_seconds": 180,
+    "checker_wall_seconds": 180,
+    "checker_address_space_bytes": 4294967296,
+    "total_parse_check_wall_seconds": 240,
+    "source_upload_wall_seconds": 600,
+    "checker_invocation_limit": 1,
+    "original_index_base": 0,
+    "bound_cnf_sha256": "9a70c9ce1aa47c1a7127a3393a8159c7276c371fb523161b38e838feb6e0b467"
+  },
+  "stage": "complete",
+  "status": "PASS",
+  "checker_invocations": 1,
+  "control_checker_invocations": 7,
+  "controls": [
+    {
+      "label": "valid empty conclusion",
+      "expected_accept": true,
+      "exit_code": 0,
+      "stdout": "{\"status\":\"PASS\",\"variables\":1,\"source_clauses\":2,\"additions\":1,\"strict_hints\":2,\"seconds\":0.000117957}\n",
+      "stderr": "",
+      "result_matches_expected": true
+    },
+    {
+      "label": "no conflict",
+      "expected_accept": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED no conflict\n",
+      "result_matches_expected": true
+    },
+    {
+      "label": "missing prior hint",
+      "expected_accept": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED invalid prior hint\n",
+      "result_matches_expected": true
+    },
+    {
+      "label": "nonunit hint",
+      "expected_accept": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED nonunit hint at step 3\n",
+      "result_matches_expected": true
+    },
+    {
+      "label": "satisfied hint",
+      "expected_accept": false,
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "s REJECTED satisfied hint at step 2, hint 1\n",
+      "result_matches_expected": true
+    },
+    {
+      "label": "hints after conflict",
+      "expected_accept": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED hints after conflict\n",
+      "result_matches_expected": true
+    },
+    {
+      "label": "blank source row",
+      "expected_accept": false,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "s REJECTED empty source clause\n",
+      "result_matches_expected": true
+    }
+  ],
+  "solver_invocations": 0,
+  "acceptance_changed": false,
+  "formal_compilation": false,
+  "seconds": 1.2700265309540555,
+  "identities": [
+    {
+      "label": "source",
+      "path": "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/ES7Joint17Literal.lean",
+      "bytes": 38734663,
+      "expected_sha256": "22950a14595f72b93a769261738d029b2aa27d04aa27e1f44fa2dce77775da2a",
+      "sha256": "22950a14595f72b93a769261738d029b2aa27d04aa27e1f44fa2dce77775da2a",
+      "match": true
+    },
+    {
+      "label": "checker",
+      "path": "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/strict_rup",
+      "bytes": 32448,
+      "expected_sha256": "e6635afdf4a9d2447a0d8c1d1a5eb820b4980f0c86871eba1685d0bcfb6f98b2",
+      "sha256": "e6635afdf4a9d2447a0d8c1d1a5eb820b4980f0c86871eba1685d0bcfb6f98b2",
+      "match": true
+    },
+    {
+      "label": "parser",
+      "path": "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/replay_through14.py",
+      "bytes": 6140,
+      "expected_sha256": "c690f5169db2b12dae1a253c02ceeb7b0121292baf7b0bdd03128b3ceebe0d05",
+      "sha256": "c690f5169db2b12dae1a253c02ceeb7b0121292baf7b0bdd03128b3ceebe0d05",
+      "match": true
+    },
+    {
+      "label": "checker_source",
+      "path": "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/strict_rup.cpp",
+      "bytes": 4076,
+      "expected_sha256": "20afbb807b477f6c839d24c5de505431fd8648dee8b9bb952a73b72fa67efe5b",
+      "sha256": "20afbb807b477f6c839d24c5de505431fd8648dee8b9bb952a73b72fa67efe5b",
+      "match": true
+    }
+  ],
+  "source_sha256_before": "22950a14595f72b93a769261738d029b2aa27d04aa27e1f44fa2dce77775da2a",
+  "cnf_sha256": "9a70c9ce1aa47c1a7127a3393a8159c7276c371fb523161b38e838feb6e0b467",
+  "proof_sha256": "967f022d44e230bddff7b1234e93d7bde718230841d03100f0d6fed1b2506e0b",
+  "cnf_bytes": 1430689,
+  "proof_bytes": 37141401,
+  "cnf_source_rows": 59479,
+  "proof_rows": 102563,
+  "last_proof_id": 162041,
+  "last_proof_clause_empty": true,
+  "last_proof_hint_count": 12,
+  "controls_seconds": 0.05466907098889351,
+  "command": [
+    "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/strict_rup",
+    "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/joint17.cnf",
+    "/data/ktqiu_hdd/math_agent/tmp/n7_global_proof_completion_20261027/joint17/joint17.rup",
+    "0"
+  ],
+  "checker_pid": 385868,
+  "checker_exit_code": 0,
+  "checker_timed_out": false,
+  "checker_seconds": 0.46951476600952446,
+  "stdout": "{\"status\":\"PASS\",\"variables\":91738,\"source_clauses\":59479,\"additions\":102563,\"strict_hints\":5166479,\"seconds\":0.420317}\n",
+  "stderr": "",
+  "source_sha256_after": "22950a14595f72b93a769261738d029b2aa27d04aa27e1f44fa2dce77775da2a",
+  "checker_sha256_after": "e6635afdf4a9d2447a0d8c1d1a5eb820b4980f0c86871eba1685d0bcfb6f98b2",
+  "source_unchanged": true,
+  "checker_unchanged": true,
+  "checker_result": {
+    "status": "PASS",
+    "variables": 91738,
+    "source_clauses": 59479,
+    "additions": 102563,
+    "strict_hints": 5166479,
+    "seconds": 0.420317
+  },
+  "strict_rup_accepted_final_empty_clause": true
+}

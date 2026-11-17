@@ -1,0 +1,219 @@
+{
+  "scope": "Only two specified finite templates; no general nonexistence claim",
+  "hostname": "ubun",
+  "python": "3.12.12",
+  "driver_sha256": "0b7b19f42c5a4762d09c54536ccd22b08ce54888e67ad360d78508d4d691da17",
+  "imported_core_sha256": "731b2d3fb9d88f5adc9edc1e3a97b9cd40a06bde58024a0eb05fd706126f5036",
+  "solver_sha256": "c2e44161cd142694f2b612e0be2dcc59cb656df6d42f8713adc4d05b9a22f5fa",
+  "checker_sha256": "2f01df83916c158d7da43deefde1ea3ea60b19f5d636ae03f31042e88ef179e9",
+  "results": [
+    {
+      "template": "U_gap_two_J_gap_empty",
+      "order": [
+        "a",
+        "u1",
+        "h1",
+        "h2",
+        "u2",
+        "x",
+        "v2",
+        "d",
+        "e",
+        "y",
+        "hr",
+        "k1",
+        "f",
+        "g",
+        "w",
+        "j1",
+        "j2",
+        "b"
+      ],
+      "roles": {
+        "v2": "v2",
+        "k1": "k1"
+      },
+      "n": 18,
+      "deleted_sets": {
+        "U_family": [
+          5,
+          6,
+          15,
+          16,
+          17
+        ],
+        "J_family": [
+          0,
+          1,
+          4,
+          11,
+          14
+        ]
+      },
+      "existence_clause_lengths": [
+        1716,
+        1716
+      ],
+      "binding": {
+        "variables": 20057,
+        "clauses": 210789,
+        "cnf_sha256": "7e9e4dbeddcfc35701530724354216ed0b1216f03312227c19ed1b167710826c",
+        "after_two_existence_clauses_sha256": "11e61ba61367169abca41af8955e92acbfed0e4841fe854cf6838a092fa13f2a"
+      },
+      "status": "FIXED_CNF_DRAT_CHECKED_UNSAT",
+      "cegar": [
+        {
+          "round": 0,
+          "actual_R6_count": 110,
+          "disjoint_pairs": 214
+        },
+        {
+          "round": 1,
+          "actual_R6_count": 467,
+          "disjoint_pairs": 5344
+        },
+        {
+          "round": 2,
+          "actual_R6_count": 183,
+          "disjoint_pairs": 388
+        },
+        {
+          "round": 3,
+          "actual_R6_count": 95,
+          "disjoint_pairs": 101
+        },
+        {
+          "round": 4,
+          "actual_R6_count": 91,
+          "disjoint_pairs": 142
+        }
+      ],
+      "separation_clauses_added": 6189,
+      "elapsed_seconds": 1.366,
+      "final_cnf_sha256": "f2b70c093b14c29a2710cf205aac3be892bf9ffd21fc7b3a6da946ba564c8a19",
+      "final_cnf_path": "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+      "proof_solver": {
+        "command": [
+          "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.drat"
+        ],
+        "exit_code": 20,
+        "timeout": false,
+        "elapsed_seconds": 0.219
+      },
+      "proof_sha256": "10f6c7665f9022fcfcf496671e97b184289597680a35d851fcb2cd2e748febb8",
+      "drat_checker": {
+        "command": [
+          "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.cnf",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/U_gap_two_J_gap_empty/fixed.drat"
+        ],
+        "exit_code": 0,
+        "timeout": false,
+        "elapsed_seconds": 0.494,
+        "reported_verified": true
+      }
+    },
+    {
+      "template": "both_gaps_two",
+      "order": [
+        "a",
+        "u1",
+        "h1",
+        "h2",
+        "u2",
+        "x",
+        "v2",
+        "d",
+        "e",
+        "y",
+        "hr",
+        "k1",
+        "f",
+        "g",
+        "w",
+        "j1",
+        "l1",
+        "l2",
+        "j2",
+        "b"
+      ],
+      "roles": {
+        "v2": "v2",
+        "k1": "k1"
+      },
+      "n": 20,
+      "deleted_sets": {
+        "U_family": [
+          5,
+          6,
+          15,
+          18,
+          19
+        ],
+        "J_family": [
+          0,
+          1,
+          4,
+          11,
+          14
+        ]
+      },
+      "existence_clause_lengths": [
+        5005,
+        5005
+      ],
+      "binding": {
+        "variables": 40769,
+        "clauses": 429998,
+        "cnf_sha256": "9f02c16ec3c34a5d5875e8888d6aa247c3fdedc27ebb6b730b28cdc034b3d444",
+        "after_two_existence_clauses_sha256": "19c69c9453dfe62b99efe3b8efc4a1aa6ee64a87b5b29a2138a1293c2f73021d"
+      },
+      "status": "FIXED_CNF_DRAT_CHECKED_UNSAT",
+      "cegar": [
+        {
+          "round": 0,
+          "actual_R6_count": 1620,
+          "disjoint_pairs": 90975
+        },
+        {
+          "round": 1,
+          "actual_R6_count": 440,
+          "disjoint_pairs": 8299
+        },
+        {
+          "round": 2,
+          "actual_R6_count": 123,
+          "disjoint_pairs": 267
+        }
+      ],
+      "separation_clauses_added": 99541,
+      "elapsed_seconds": 1.919,
+      "final_cnf_sha256": "c3262a41af54ec9832250f21960d05d9414962d63aa12dd2cfbe867277d708c3",
+      "final_cnf_path": "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+      "proof_solver": {
+        "command": [
+          "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.drat"
+        ],
+        "exit_code": 20,
+        "timeout": false,
+        "elapsed_seconds": 0.396
+      },
+      "proof_sha256": "396089078b9876fc42d1009102db74722f04a8b0c7cc59d2bceb29a3d52f6898",
+      "drat_checker": {
+        "command": [
+          "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.cnf",
+          "/data/ktqiu_hdd/math_agent/tmp/single_source_two_families_probe_20261116/both_gaps_two/fixed.drat"
+        ],
+        "exit_code": 0,
+        "timeout": false,
+        "elapsed_seconds": 1.285,
+        "reported_verified": true
+      }
+    }
+  ]
+}

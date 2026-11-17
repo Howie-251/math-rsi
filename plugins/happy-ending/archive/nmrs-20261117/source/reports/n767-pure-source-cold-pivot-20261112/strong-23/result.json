@@ -1,0 +1,118 @@
+{
+  "status": "CHECKED_UNSAT_NECESSARY_SUBDOMAIN",
+  "cnf_sha256": "acac6b101e4eddef23a36b5e205deb938de807f6f05858fb4fe152c28ce9d2f9",
+  "source_sha256": "04f519fa4d30c5831b3fa11b46a3f433c71b316beaf5a0fad94af54f28527b95",
+  "verifier_sha256": "ebc6f9339ef593c7fb011764fa2205e9b0c95e34d1d5d6492ea1e7b23e3a2e43",
+  "schema_audit": {
+    "command": [
+      "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+      "-B",
+      "/data/ktqiu_hdd/math_agent/reports/n767-pure-source-cold-pivot-20261112/strong-23/verify.py",
+      "--schema"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 3.5229422540869564,
+    "stdout_sha256": "003a6562232f7adf896617dbf14712e86da324b99417e153ec2726d077ae1fe7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "solve": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+      "--no-binary",
+      "--time=60",
+      "/data/ktqiu_hdd/math_agent/reports/n767-pure-source-cold-pivot-20261112/strong-23/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-pure-source-cold-pivot-20261112/strong-23/proof.drat"
+    ],
+    "exit_code": 20,
+    "timeout_killed": false,
+    "seconds": 3.9235513107851148,
+    "stdout_sha256": "472cf183a7c215f33fe58ec6788d225129e2dea7ae8d3bcb09273d1e3e8de30f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "check": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/cadical-sc2025/build/drat-trim",
+      "/data/ktqiu_hdd/math_agent/reports/n767-pure-source-cold-pivot-20261112/strong-23/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n767-pure-source-cold-pivot-20261112/strong-23/proof.drat",
+      "-t",
+      "180"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 1.467830262845382,
+    "stdout_sha256": "bca0ce56e4542705b12b94fc6425b9966a8ba9feae4b0a2ca5e25a0a6cb468d9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "elapsed_seconds": 12.549862149870023,
+  "bindings": {
+    "SCOPE.md": {
+      "bytes": 1396,
+      "sha256": "a068784c7d8ce4fce5db0d43951fad87aad57902d61e57321d52e887373fc354"
+    },
+    "check.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "check.stdout": {
+      "bytes": 375,
+      "sha256": "bca0ce56e4542705b12b94fc6425b9966a8ba9feae4b0a2ca5e25a0a6cb468d9"
+    },
+    "formula.cnf": {
+      "bytes": 15913449,
+      "sha256": "acac6b101e4eddef23a36b5e205deb938de807f6f05858fb4fe152c28ce9d2f9"
+    },
+    "launch.json": {
+      "bytes": 414,
+      "sha256": "78b506279de7187ca560dd718b191b811dffe6334c5d2a22f69fc4672808c8dc"
+    },
+    "probe.py": {
+      "bytes": 8759,
+      "sha256": "04f519fa4d30c5831b3fa11b46a3f433c71b316beaf5a0fad94af54f28527b95"
+    },
+    "proof.drat": {
+      "bytes": 24396002,
+      "sha256": "25818e3392e12f209f1b48ff8efc97dfe4e117e25fbbfb8bf0bb3fa25ab94443"
+    },
+    "run.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime.json": {
+      "bytes": 762,
+      "sha256": "52541bb2a2d34c72149f7b4e94ba64b3500d631af090c86274697f523f1eccd1"
+    },
+    "schema-audit.json": {
+      "bytes": 327,
+      "sha256": "3d12e48d72981dabca7a36819553f8f34a80b9dcb95db309b6df2346abdfe767"
+    },
+    "schema-audit.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "schema-audit.stdout": {
+      "bytes": 309,
+      "sha256": "003a6562232f7adf896617dbf14712e86da324b99417e153ec2726d077ae1fe7"
+    },
+    "solve.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "solve.stdout": {
+      "bytes": 5041,
+      "sha256": "472cf183a7c215f33fe58ec6788d225129e2dea7ae8d3bcb09273d1e3e8de30f"
+    },
+    "spec.json": {
+      "bytes": 1850,
+      "sha256": "6a98c696f2c4614754ab5f44d890381aa308535d5265e02dbd0b56a878055388"
+    },
+    "verify.py": {
+      "bytes": 10032,
+      "sha256": "ebc6f9339ef593c7fb011764fa2205e9b0c95e34d1d5d6492ea1e7b23e3a2e43"
+    }
+  }
+}

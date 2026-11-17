@@ -1,0 +1,103 @@
+{
+  "case": "6-6",
+  "status": "VERIFIED_SAT_NECESSARY_PROJECTION",
+  "cnf_sha256": "11c68ba81ec430cd90663c69ef0055270c78e14c17802c22f567cb071edfc8e2",
+  "schema": {
+    "command": [
+      "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+      "-B",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/verify.py",
+      "--root",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/6-6",
+      "--schema"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 6.903816506033763,
+    "stdout_sha256": "576cf1ee4b305013776f2b64ac21666604dafc8a5fc5a0a3eefa7b114b0309ab",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "solve": {
+    "command": [
+      "/data/ktqiu_hdd/math_agent/AE_kissat2025_MAB/build/kissat",
+      "--no-binary",
+      "--time=60",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/6-6/formula.cnf",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/6-6/proof.drat"
+    ],
+    "exit_code": 10,
+    "timeout_killed": false,
+    "seconds": 9.646171763073653,
+    "stdout_sha256": "4db2603b6ac36cf1db607683dd98cecd2c99084afe12221ff32dc545f16efc12",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "sat_audit": {
+    "command": [
+      "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+      "-B",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/verify.py",
+      "--root",
+      "/data/ktqiu_hdd/math_agent/reports/n7-ordered-red-six-port-cut-20261113/22-point-outer-arms/6-6",
+      "--sat"
+    ],
+    "exit_code": 0,
+    "timeout_killed": false,
+    "seconds": 24.594062977004796,
+    "stdout_sha256": "336a180a706e5ac5675727846554be2ba19f0321f1f2a90f537d457d581ca179",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bindings": {
+    "colors.tsv": {
+      "bytes": 15062,
+      "sha256": "085e21845efe55fb5175e6320ab9d66c0c9b7acfac4f7dc6a2c70a4abe25cf41"
+    },
+    "formula.cnf": {
+      "bytes": 11522340,
+      "sha256": "11c68ba81ec430cd90663c69ef0055270c78e14c17802c22f567cb071edfc8e2"
+    },
+    "independent-verification.json": {
+      "bytes": 1559,
+      "sha256": "c1c224455a3369042ecbe5f24726084ef9674932f768494b10e0c264683f0ee0"
+    },
+    "physical-witness.json": {
+      "bytes": 525825,
+      "sha256": "cc66bd3c9305d38e8979b8a0924c2114b83589cd4ac16f4b69765dcab1de9387"
+    },
+    "proof.drat": {
+      "bytes": 11059760,
+      "sha256": "8a36ba11a3abd8644462cd17f62e227666d77680ec711be2d990f15ca8d30e30"
+    },
+    "sat-audit.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sat-audit.stdout": {
+      "bytes": 1343,
+      "sha256": "336a180a706e5ac5675727846554be2ba19f0321f1f2a90f537d457d581ca179"
+    },
+    "schema-audit.json": {
+      "bytes": 327,
+      "sha256": "ef19db5c107e0db0a05b2a2701edaac03d3ed0a5d8a1d206f858d813821f3c0c"
+    },
+    "schema.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "schema.stdout": {
+      "bytes": 309,
+      "sha256": "576cf1ee4b305013776f2b64ac21666604dafc8a5fc5a0a3eefa7b114b0309ab"
+    },
+    "solve.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "solve.stdout": {
+      "bytes": 15495,
+      "sha256": "4db2603b6ac36cf1db607683dd98cecd2c99084afe12221ff32dc545f16efc12"
+    },
+    "spec.json": {
+      "bytes": 1119,
+      "sha256": "15ea69f033c4723cec444b032c4e027343fbd942fad50cdd29880e3f3682597d"
+    }
+  }
+}

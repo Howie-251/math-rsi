@@ -1,0 +1,7 @@
+# A real weak six entirely inside the actual blue-five-through set
+
+Use21 freely ordered physical vertices and the complete767 predicate: packets, noR7, noB6 and all actual same-endpoint weak-seven splits. Each physical triple has one true-red variable. Exact B5 path/source/end selectors define H as the actual finite intersection of B5 sources and terminals; no ambient anchor is virtualized.
+
+Require either a real same-outer-endpoint R3+B5 or a real R4+B4, with EVERY vertex of both arms in this same exact H. H-path selectors imply all their real colors and H memberships; selected endpoint flags require an actual selected path; a target choice requires both color endpoints. Auxiliaries used only as witnesses need not count every path. This existential projection is exact. Keep the proved necessary conditions noR5 betweenH and noR6 endpoint inH.
+
+No fixed marked-point positions, disjointness assumption, geometry or seventy-five-point extension is imposed. The checker independently reconstructs all clauses, then derives every real endpoint/color length by physical DP from the complete coloring. It re-extracts H and enumerates both target path families within it, saving actual same-endpoint paths and incoming/outgoing B5 anchors for everyH point. SAT refutes universal H-no-weak6; fixed-N UNSAT alone does not prove it universally. All scientific work is on Linux with controlled external Kissat, independent SAT audit or bound DRAT on UNSAT, and no external review.

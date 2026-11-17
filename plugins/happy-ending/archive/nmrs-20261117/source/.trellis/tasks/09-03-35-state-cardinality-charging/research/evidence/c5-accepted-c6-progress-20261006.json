@@ -1,0 +1,115 @@
+{
+  "observed_at": "2026-10-06T11:51:06.082670+08:00",
+  "timezone": "Asia/Singapore",
+  "server_read_only": true,
+  "large_proofs_rehashed": false,
+  "c5": {
+    "root": "/data/ktqiu_hdd/math_agent/res/state_charging/20260929_35_state_cardinality_c5_acceptance_v2",
+    "receipt_sha256": "4101b158a1516d603148194e34ed44e67769d26b4c47d27b9933020fee137ea3",
+    "accepted_at": "2026-10-03T19:38:33.564768+08:00",
+    "status": "ACCEPTED_SIX_FRESH_CHECKERS_BYTE_EQUAL",
+    "certified_upper_bound": 30,
+    "receipt_dependencies_and_six_fresh_result_log_bindings_revalidated": true,
+    "audit_exits_zero": true
+  },
+  "c6": {
+    "seal_sha256": "70212068b0ffd6c93e683629692bf7e512cfa3ee2dcde898e6db5612e2ba0ecc",
+    "cnf_and_metadata_bindings_checked": true,
+    "completed_output_hashes_and_verdicts_checked": true,
+    "global_stop": false,
+    "terminal_exists": false,
+    "cases": [
+      {
+        "e": 6,
+        "N": 26,
+        "status": "SOLVING",
+        "pid": 1858257,
+        "process_identity_matches": true,
+        "wall_hours": 165.13325833333326,
+        "cpu_hours": 165.10941666666668,
+        "partial_proof_GB": 448.556695552,
+        "log_age_seconds": 19.702645778656006,
+        "stderr_bytes": 0
+      },
+      {
+        "e": 7,
+        "N": 27,
+        "status": "RAW_UNSAT_CHECKING",
+        "solve_hours": 128.77964325851386,
+        "solve_exit": 20,
+        "solve_completed_at": "2026-10-04T23:29:54.534762+08:00",
+        "checker_pid": 1931364,
+        "process_identity_matches": true,
+        "check_wall_hours": 35.88000277777772,
+        "check_cpu_hours": 35.82575555555555,
+        "checker_addition_progress_percent": 24.14,
+        "proof_GB": 341.365474449,
+        "stderr_bytes": 0
+      },
+      {
+        "e": 8,
+        "N": 28,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 69.58987764322859,
+        "check_hours": 29.819501368631933,
+        "proof_GB": 182.805100758
+      },
+      {
+        "e": 9,
+        "N": 29,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 35.69653824666722,
+        "check_hours": 12.074174390901657,
+        "proof_GB": 97.511996469
+      },
+      {
+        "e": 10,
+        "N": 30,
+        "status": "VERIFIED_UNSAT",
+        "solve_hours": 75.92842392081162,
+        "check_hours": 14.090974256609204,
+        "proof_GB": 175.461297738
+      }
+    ]
+  },
+  "eta_analysis": {
+    "later_checker_progress_percent": 24.15,
+    "backward_hours": 33.23966077235773,
+    "raw_linear_remaining_hours": 104.39868611111112,
+    "analogy_remaining_hours": [
+      {
+        "e": 8,
+        "hours": 39.74890373809292
+      },
+      {
+        "e": 9,
+        "hours": 35.328459631763025
+      },
+      {
+        "e": 10,
+        "hours": 7.110007579782017
+      }
+    ],
+    "method": "Scale completed C6 proof backward times at the same addition traversal percentage; estimate final traversal time from 99%. Cross-proof analogy, not a calibrated prediction.",
+    "planning_e7": "Roughly 1-4 further days; low confidence and not an upper bound.",
+    "overall": "No reliable completion date: e6 still solving without meaningful completion percentage, then needs proof checking. Reserve further days, potentially over a week. Subsequent independent C6 acceptance is separate."
+  },
+  "legacy_comparison": {
+    "e9": {
+      "status": "RAW_UNSAT_CHECKING",
+      "solve_hours": 33.09963573227333,
+      "checker_pid": 1943526,
+      "checker_live_identity_matches": true,
+      "checker_wall_hours": 12.024952561722861
+    },
+    "e10": {
+      "status": "VERIFIED_UNSAT",
+      "solve_hours": 10.778465653388864,
+      "check_hours": 4.9929560341505566
+    }
+  },
+  "resources": {
+    "disk_available_GiB": 754.2373466491699,
+    "memory_available_kB": 348226388
+  }
+}

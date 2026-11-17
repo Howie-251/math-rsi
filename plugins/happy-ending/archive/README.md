@@ -17,3 +17,7 @@ renderer作为原件保留，不是新任务默认命令。根renderer可能查�
 主导航[n7-20261103/proofs/CURRENT.md](n7-20261103/proofs/CURRENT.md)，本轮整理层为[取等与交换](../skills/mathrsi-happy-ending/references/equality-exchange.md)。复制不是重放：55份TB级证明、checker二进制等原缺件仍未补齐；两份Lean摘录仍不构成完整工程。新75/76/ES77工作证明及regular共同根条件定理保持same-session/unreviewed/unaccepted。历史稿的旧界和开放余类是当时状态，当前源稿结论从CURRENT顺读，不能覆盖新稿，也不能因新稿语气升级验证。
 
 本轮亲读新主稿：替锁75/76、依赖/单through、t=0、regular共根，及全供给原稿；核旧根§1–3等关键依赖，复用已有v3阅读与源状态，不声称本轮重读整个历史archive。固定小反例和25见证的执行范围另记于维护使用报告。新任务对本目录只读，输出写自己的任务目录。
+
+## 2026-11-17 增量：N(m,r,s) 七、八、九参数与一般 m 综合交接包
+
+`nmrs-20261117/` 从完整交付包 `NMRS-results-20261117(1).zip`（1,608 文件，269.89 MiB）中逐字节原样收录 **955 份文件（48.18 MiB，单文件最大 9.56 MiB）**，详见 [nmrs-20261117/README.md](nmrs-20261117/README.md) 与 [nmrs-20261117/INVENTORY.json](nmrs-20261117/INVENTORY.json)。主交接文档 [nmrs-20261117/HANDOFF.md](nmrs-20261117/HANDOFF.md) 的全部 125 处本地相对链接均在本目录内完整可达；全部五套有限证书（`run-988-d2`、`run-d9-d3` 含 `fractional-grid.json`、`milestone9`、`octagon-source-replay/finite-inputs.zip`、`lock-blocks/q5` 与 `E21/color.tsv`）均随仓保留并经跨平台核验通过。仅省略预渲染 `reading/*.md.html`、`milestone9.tgz` 重复包及 $\ge 2\text{ MiB}$ 的中间探索 `.cnf/.drat/tmp` 文件（SHA-256 完整登记于 `INVENTORY.json`）。源包中 22 次外部 `claude-review-deep` CLI 调用均因宿主机返回 `exit_code=1, tool_calls=0` 未完成，所有新增结构与装配稿如实保持 `unreviewed / unaccepted` 工作证明状态。

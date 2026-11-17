@@ -1,0 +1,252 @@
+\section{Formalization and reproducibility}\label{sec:formal}\label{sec:certificates}
+The two final declarations are
+\begin{center}
+\code{ES7FinalVerified.es7\_le\_81},\qquad
+\code{ES8Final.es8\_le\_319}.
+\end{center}
+Appendix~\ref{app:statements} prints their types and the definitions
+of general and convex position, together with the exact axiom output.
+The companion module \code{StatementAudit.lean} proves that
+\code{ConvexPosition} is equivalent to mathlib's
+\code{ConvexIndependent} for the inclusion of the point set, and
+restates both bounds with that standard predicate. It adds no
+native-evaluation dependency.
+
+Each theorem quantifies over a finite subset of $\mathbb R^2$. General position
+requires nonzero oriented area for every distinct triple; the conclusion
+is a subset of cardinality seven or eight, each of whose points lies
+outside the convex hull of the others. The statements have no additional
+numerical or geometric hypotheses. The geometric reductions are formalized for $n=7$ and $n=8$.
+The classical lower constructions in \cref{thm:main} are cited
+separately, not claimed as formalized here.
+
+\subsection{The proof boundary}
+There are three distinct obligations. First, geometric necessity sends
+every hypothetical planar counterexample to one assignment satisfying
+the finite source. Second, a general checker-soundness theorem turns
+acceptance of a certificate into a contradiction for that source.
+Third, the concrete checker accepts the supplied finite data.
+The first two are ordinary Lean proofs. The third uses
+\code{native\_decide} for the large certificates and finite catalogues.
+The five final heptagon refutations use Lean's standard-library
+\code{Std.Tactic.BVDecide.LRAT} checker and its \code{check\_sound}
+theorem. The earlier restricted primitive-replay stage has its own
+proved RUP layer. No SAT solver or numerical optimizer is trusted to
+assert unsatisfiability.
+
+The standard axioms in both final dependency lists are
+\begin{center}
+\code{propext}, \code{Classical.choice}, \code{Quot.sound}.
+\end{center}
+The heptagon theorem additionally uses 19 native-evaluation checks,
+and the octagon theorem uses eight. There is no \code{sorryAx} and no
+additional mathematical axiom. Native evaluation additionally trusts
+Lean's compilation and execution infrastructure; this is not a
+kernel-only evaluation of every finite computation. Exact axiom names,
+source hashes, and the toolchain are recorded in the archive.
+The 208 bundled project modules contain no occurrence of
+\code{implemented\_by}, \code{extern}, \code{csimp}, or \code{unsafe}.
+This is a scoped source check, not an absence claim for the transitive
+runtime: Lean's standard array operations, for example, have external
+implementations. The compiler, its rewrites, and runtime remain
+within the stated native-evaluation trust boundary.
+
+For the heptagon closure, the source decoder checks all 190,932 retained
+clauses against proved schemas. One normalized configuration supplies
+the state owners, the common chronological order, all actual ambient
+ranks, the induced-core ranks, and one shared terminal five-cup.
+A source classifier proposes schema identifications but is untrusted:
+Lean checks literal decoding, clause equality, schema validity, and
+complete coverage before applying the refutation.
+
+For octagons, both omission trees and all their capacity rows are
+connected to the same geometric occupancy assignment. In particular,
+the 973 historically transported residual supports now have direct
+cyclic proofs. The block rows use an audited port of Baek's own Lean
+formalization, with its Apache-2.0 attribution retained. The port's
+combinatorial boundary predicate is connected to the real-plane
+convex-hull predicate by an explicit theorem.
+
+\subsection{Lessons from formalization}
+The completed proofs make three distinctions especially useful for
+further computations.
+
+\emph{Actual and inherited ranks.} A longest-path value has an attaining
+witness in a specified set. Restriction can destroy that witness.
+The heptagon proof therefore recomputes core recurrences, while keeping
+ambient ranks separately. The octagon proof deliberately uses the
+weaker admissible-label interface, which is hereditary and requires no
+new attainment after transport.
+
+\emph{Local validity and shared existence.} Individually feasible
+witnesses need not coexist. The heptagon source uses one interpretation
+of every owner, sign, order, and path flag. Prefix coverage is proved
+before exclusions are applied; no preferred order of incomparable
+states is imposed. In the octagon proof, triplewise cyclic certification
+survives missing endpoints and therefore justifies multi-omission rows.
+
+\emph{Projective geometry and cardinality.} The formal projective map
+is applied only on a positive-denominator chart. Convex combinations
+are transported with renormalized positive weights, not unchanged
+affine coefficients. A finite-exception shear first separates
+abscissae, sorting is bijective, and the deleted root is treated
+separately. The three-chain exception $q\ne t$ is discharged by actual
+membership in the two parts of the partition. These steps establish
+both the ordinary planar meaning and the two-point adjustment.
+
+\subsection{Finite data and reconstruction}
+The heptagon refutations use reverse unit propagation: assuming the
+negation of a proposed clause, the listed earlier clauses must force a
+conflict. Soundness and the final empty clause are checked in Lean.
+The main proof sizes are shown below; the restricted-25 certificate
+has its own primitive, replay, and coverage stages.
+\begin{center}
+\small
+\begin{tabular}{lrr}
+\toprule
+Obligation & Retained source clauses & Proof additions\\
+\midrule
+Restricted hole coverage & 93,169 & 381,647\\
+Through-cup population $\le13$ & 5,077 & 3,009\\
+Terminal core $\le19$ & 25,074 & 79,173\\
+Joint endpoint population & 59,479 & 102,563\\
+Balanced fifty-point exclusion & 190,932 & 1,989,465\\
+\bottomrule
+\end{tabular}
+\end{center}
+The coverage formula has 461 variables.
+The octagon certificates have the following sizes. Each branch covers
+both Boolean values, and every weighted leaf has a strict integer
+contradiction in its own context.
+\begin{center}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Obligation & States & Rows & Branches & Leaves\\
+\midrule
+Balanced bound $193$ & 252 & 2,685 & 1,590 & 1,591\\
+Residual bound $124$ & 154 & 1,187 & 7,314 & 7,315\\
+\bottomrule
+\end{tabular}
+\end{center}
+The archive contains 208 project modules, including embedded certificates
+and the Baek port. It pins Lean 4.32.0-rc1 and a specific mathlib commit.
+The complete library was rebuilt from source without precompiled
+project modules in 1,290 seconds on an ARM64 macOS host; peak memory
+was not recorded. This release preserves those proof sources byte for
+byte and includes a separately compiled statement-equivalence and
+parser-guard module. The latter proves that a nonempty numeric source row cannot
+parse as an empty clause; all five literal sources pass the independent
+check of that premise.
+The accompanying audit distinguishes the full build from later
+source-identical extraction checks. From the archive root, with the pinned
+mathlib checkout and its dependencies already built, run
+\begin{verbatim}
+python3 tools/verify_release.py --mathlib /path/to/mathlib
+\end{verbatim}
+This verifies file identities, rebuilds the project in a fresh directory,
+and checks both final declarations and their exact allowed axiom lists.
+The archive README gives the dependency setup and PDF build commands.
+Certificate discovery is not needed for replay. Independent checks are
+\begin{verbatim}
+python3 tools/check_octagon_finite.py
+python3 tools/check_heptagon_replays.py
+python3 tools/check_examples_and_counts.py
+python3 tools/check_residual_lower.py
+\end{verbatim}
+The first command reconstructs both octagon state universes and all
+directed differences, certifies all 3,849 cyclic families and 23 block
+maps, compares the JSON and Lean data, and replays all 8,906 leaves
+with complete branch coverage. This finite audit runs without Lean or
+native evaluation; it uses the geometric lemmas proved above. It is
+an independent executable check, not a change to the Lean theorem's
+dependency list.
+
+The second command compiles a separate C++ RUP checker. All four
+population/closure proofs pass unchanged. The coverage proof contains
+one satisfied, redundant hint (473786 in step 473998); the command
+reproduces its strict rejection and then replays with exactly that
+hint omitted. All clauses and other hints remain unchanged, as do the
+sealed Lean files. The final coverage replay has 381,647 additions;
+the closure replay has 1,989,465. This checker is not itself formally
+verified. A replay through an external verified LRAT implementation
+and a second-platform full build remain further audits.
+The third command checks the ten-state example, exact 25-point control,
+and comparison arithmetic. The fourth checks the full residual predicate
+and every seven-point subset of the 26-point lower example in Section~9.
+The capacity, strict-replay, and residual-control checkers include rejection controls.
+
+\Needspace{12\baselineskip}
+\subsection{Archive identification}
+The companion bundle is
+\begin{center}\code{es7\_es8\_bounds\_81\_319\_v1.zip}.\end{center}
+The SHA-256 below identifies the unchanged formal manifest.
+Its path in the bundle is
+\begin{center}\code{formal/MANIFEST.json}.\end{center}
+\begin{center}\small\ttfamily
+\input{formal_manifest_hash}
+\end{center}
+The bundle includes the complete paper sources, proof sources,
+certificates, checker commands, and hash manifest. The paper and companion archive share the DOI
+\href{https://doi.org/10.5281/zenodo.22842891}{10.5281/zenodo.22842891}.
+
+\section{Further directions}
+Either $D_7\le29$ or $C_7\le48$ would give $\ES(7)\le80$.
+There are, however, unconditional limits to improving the two capacities
+separately. The classical restricted constructions~\cite{ES61,ETV} give
+$C_7\ge30$, $C_8\ge62$, and $M_8(6,6)\ge50$. A set counted by
+$M_8(6,6)$ has no six-cup, hence no residual junction, so $D_8\ge50$.
+The archive also supplies an exact 26-point residual set. Its five-cup
+endpoints and four-cap starting points are disjoint; the checker verifies
+this condition and excludes a heptagon in all
+$\binom{26}{7}=657\,800$ seven-point subsets. Thus $D_7\ge26$.
+Consequently,
+\[
+ C_7+D_7+2\ge58,\qquad C_8+D_8+2\ge114.
+\]
+These are floors of the independently optimized additive bound
+\eqref{eq:bridge}, not lower bounds on $\ES(7)$ or $\ES(8)$.
+Of the 48-point gap from 81 to the conjectural 33, at most
+$81-58=23$ points can be recovered by improving the separate capacities;
+at least $58-33=25$ require their joint compatibility or another argument.
+
+The conjecture of Erd\H{o}s, Tuza, and Valtr would give:
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Quantity & Known lower bound & Proved upper bound & Under ETV\\
+\midrule
+$C_7$ & $\ge30$ & $\le49$ & $=30$\\
+$D_7$ & $\ge26$ & $\le30$ & $=26$\\
+$C_8$ & $\ge62$ & $\le193$ & $=62$\\
+$D_8$ & $\ge50$ & $\le124$ & $\le57$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Its proposed value for $M_n(a,b)$ is
+$\sum_{i=n-b}^{a-2}\binom{n-2}{i}$~\cite{ETV,Baek}.
+For residual upper bounds we use $D_n\le M_n(n-2,n)$;
+the equality for $D_7$ additionally uses the checked lower example.
+Thus ETV would make $C_7+D_7+2=58$ and place
+$C_8+D_8+2$ in $[114,121]$. The latter interval is conditional;
+only its lower endpoint is established unconditionally here.
+
+The additive bound discards compatibility between the two parts. Retaining
+their shared witnesses, or bounding the asymmetric class $Q_n$ directly,
+may overcome these limits. For octagons, admissible state differences
+also offer a way to certify further hereditary capacities. These are
+open tasks; no incomplete search enters the results above.
+
+\subsection*{Acknowledgments}
+{\raggedright
+This work benefited from research assistance by \mbox{OpenAI's} AI systems, including proof exploration, exact computational checks, and manuscript preparation. All responsibility for the content and conclusions of this work rests with the author.\par}
+
+\subsection*{Licence}
+The manuscript, original exposition, and original accompanying certificate
+data are licensed under the Creative Commons Attribution 4.0 International
+licence (CC BY 4.0). Original program code, including the original Lean
+formalization and verification scripts, is licensed under the MIT licence.
+The attributed port of Jineon Baek's \emph{ErdosTuzaValtr} formalization
+retains its Apache-2.0 licence. Other third-party material and external
+dependencies retain their respective licences. The accompanying archive
+contains the applicable licence information and attribution notices.

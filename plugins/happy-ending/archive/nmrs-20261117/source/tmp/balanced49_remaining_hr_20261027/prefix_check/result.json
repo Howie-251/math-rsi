@@ -1,0 +1,434 @@
+{
+  "actual_closure_cnf_match_checked": false,
+  "base_checked": true,
+  "controls": {
+    "alter_bit": {
+      "diagnostic": [
+        {
+          "labels": {
+            "expected": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "recorded": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "expected_state": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "owner": 2,
+          "owner_position": 2,
+          "recorded_state": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "expected_state": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "owner": 3,
+          "owner_position": 3,
+          "recorded_state": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "pattern_index": 0,
+      "rejected": true
+    },
+    "alter_label": {
+      "diagnostic": [
+        {
+          "labels": {
+            "expected": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "recorded": [
+              [
+                2,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "pattern_index": 0,
+      "rejected": true
+    },
+    "alter_owner": {
+      "diagnostic": [
+        {
+          "expected_state": [],
+          "owner": 1,
+          "owner_position": 0,
+          "recorded_state": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "pattern_index": 0,
+      "rejected": true
+    },
+    "omit_required_attainment_predecessor": {
+      "mutated_args": [
+        0,
+        1,
+        9,
+        2,
+        2,
+        1
+      ],
+      "original_wire": [
+        7,
+        4,
+        0,
+        1,
+        9,
+        2,
+        2,
+        1,
+        0
+      ],
+      "rejected": true,
+      "removed_predecessor": 0,
+      "required_predecessors": [
+        0
+      ],
+      "rule_row_index": 187746
+    },
+    "remove_sector_row": {
+      "coverage_missing": true,
+      "missing_color": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "rejected": true,
+      "removed_pattern_index": 4,
+      "sectorCover_Valid": false
+    }
+  },
+  "coverage": [
+    {
+      "cut": 1,
+      "duplicate_colors": [],
+      "examined": 64,
+      "extra_colors": [],
+      "good_completions": 7,
+      "missing_colors": [],
+      "n": 5,
+      "table_rows": 7,
+      "unique_table_colors": 7
+    },
+    {
+      "cut": 4,
+      "duplicate_colors": [],
+      "examined": 65536,
+      "extra_colors": [],
+      "good_completions": 118,
+      "missing_colors": [],
+      "n": 6,
+      "table_rows": 118,
+      "unique_table_colors": 118
+    }
+  ],
+  "failures": [],
+  "input_manifest_sha256": "f1d9d21feb8fb87771678956c22e198fd3c4e9f0195753e8e3088a0f93ce59bf",
+  "inputs": [
+    {
+      "bytes": 2649,
+      "name": "ES7PrefixCoverage.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7PrefixCoverage.lean",
+      "sha256": "643e966d3ac74dc820f3b0f0a1d255c8364e98fa4bc5a935de7ce0561912c30c"
+    },
+    {
+      "bytes": 6517,
+      "name": "ES7PrefixRules.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7PrefixRules.lean",
+      "sha256": "16c7a39653768806057ff26cf15baae6b62f697d1c16be367ae5220633d79188"
+    },
+    {
+      "bytes": 4984,
+      "name": "ES7PrefixSchema.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7PrefixSchema.lean",
+      "sha256": "4a6a03e0c9aac5e4090325540922d101f6c6a9de93c3d0cc5fa464fac2296e79"
+    },
+    {
+      "bytes": 3582,
+      "name": "ES7FiniteRanks.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7FiniteRanks.lean",
+      "sha256": "a4bd6e64a9642c70bc45c13630f288993dc62b2529d30668121585d3a8bd7071"
+    },
+    {
+      "bytes": 7297,
+      "name": "ES7BalancedNamed.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7BalancedNamed.lean",
+      "sha256": "95a1dfe61512de2e7e10afce8f21302c59863b10a92a79f848985c16d4317a82"
+    },
+    {
+      "bytes": 5295,
+      "name": "ES7ClosureMeaning.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ClosureMeaning.lean",
+      "sha256": "0a548da77371ce618f7dccdab7e3919ae3e078da8eb67217a6bcc6ffc74803f2"
+    },
+    {
+      "bytes": 4399,
+      "name": "ES7ClosureFrame.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ClosureFrame.lean",
+      "sha256": "850f56383809651e513d6fab876477b4fac08e32d25638b36c01bf1d48c3891b"
+    },
+    {
+      "bytes": 6318,
+      "name": "ES7ClosureCodec.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ClosureCodec.lean",
+      "sha256": "c6b7fad743fff70f01ab80dca177ff69cce1a5c2904c79d18c862b4a61cda074"
+    },
+    {
+      "bytes": 3612,
+      "name": "ES7JointCodec.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7JointCodec.lean",
+      "sha256": "3311842363e04b719dbaf529f7d7865c1e0da1cb5bd2399e18db535f0c771ccf"
+    },
+    {
+      "bytes": 4178,
+      "name": "ES7OrderedSourceCodec.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7OrderedSourceCodec.lean",
+      "sha256": "063294400283397f3f477d22503a283261bafd1954bbc1dc72696e2807754d5d"
+    },
+    {
+      "bytes": 3298,
+      "name": "ES7NamedVariables.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7NamedVariables.lean",
+      "sha256": "c983b0ca708bfe35df51679b09975394eec6bcf51436eac0ea166c21ed2bdbab"
+    },
+    {
+      "bytes": 3513,
+      "name": "ES7UnorderedColor.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7UnorderedColor.lean",
+      "sha256": "f056395e74ecb129051585742269dd3a269cfd8ce699ea020a6f26c20abc1fe0"
+    },
+    {
+      "bytes": 4294,
+      "name": "ES7ClauseLogic.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ClauseLogic.lean",
+      "sha256": "e4925cc43590af848dee2d2b3194348b04953d34ef2775d6ecdae34c9323b30f"
+    },
+    {
+      "bytes": 4838,
+      "name": "ES7StateUniverse.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\schroeder_comparison_20261021\\selected_sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7StateUniverse.lean",
+      "sha256": "f994caf1e1264de9a00bed726b80edeac793ae509630df2f237e18a3f04fbaf5"
+    },
+    {
+      "bytes": 29724,
+      "name": "ES7PrefixData.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_remaining_hr_20261027\\binding\\ES7PrefixData.lean",
+      "sha256": "3aba553125c23cc817d8d1ba7e98fc62f9517b2ac7a8466890c000224af72777"
+    },
+    {
+      "bytes": 6338580,
+      "name": "ES7ClosureData.lean",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_transfer_20261026\\sources\\es7_es8_bounds_81_319_v1\\formal\\sources\\ES7ClosureData.lean",
+      "sha256": "f4b0fad14e8dbe75562ee0f715a185333b368713edb97a5df119adc7af66459a"
+    },
+    {
+      "bytes": 5337,
+      "name": "FINITE_BINDING_SPEC.md",
+      "original_path": "D:\\\u79d1\u7814\\math agent\\erdos-szekeres-sat-main\\tmp\\balanced49_remaining_hr_20261027\\FINITE_BINDING_SPEC.md",
+      "sha256": "cda97be5bfb84b298cd55c98173664275c9972393267fd8fd29e3b568054e9f3"
+    }
+  ],
+  "lean_compiled": false,
+  "limits": {
+    "address_space_bytes": 2147483648,
+    "cpu_seconds": 60,
+    "wall_seconds": 60
+  },
+  "parser_sha256": "19bb1cd473db6b2fd15bf4f06d74658d1d93e4d433f1230a3a395acf11317081",
+  "patterns": {
+    "Checked": true,
+    "PairComplete": true,
+    "count": 129,
+    "direct_subset_comparison": true,
+    "issues": [],
+    "labels_checked": 1864,
+    "lengths": {
+      "4": 4,
+      "5": 7,
+      "6": 118
+    },
+    "owners_checked": 759,
+    "pattern_records": true,
+    "rank_entries_checked": 3728,
+    "recorded_bits_checked": 2446
+  },
+  "python_executable": "/opt/anaconda3/envs/forktqiu3/bin/python3.12",
+  "python_version": "3.12.12 | packaged by Anaconda, Inc. | (main, Oct 14 2025, 16:16:33) [GCC 11.2.0]",
+  "resource_usage": {
+    "max_rss_kib": 108876,
+    "system_seconds": 0.10797699999999999,
+    "user_seconds": 1.519682
+  },
+  "schema": {
+    "actual_cnf_match": false,
+    "all_Valid": true,
+    "counts": {
+      "activation": 360,
+      "attainment": 746,
+      "baseCover": 1,
+      "exhaustion": 1185,
+      "implies": 29,
+      "order": 106,
+      "sectorCover": 2,
+      "sign": 602,
+      "unique": 167
+    },
+    "dictionary_index_base": 0,
+    "duplicate_name_keys": 0,
+    "name_rows": 151801,
+    "name_text_sha256": "b0236dfe3b352592888ebd03aa1b87e23d343f44c429435425cd356c70f0a24e",
+    "prefix_rows": 3198,
+    "reconstructed_symbolic_rows_sha256": "bba0f718d956a95167d31b7979b5aca5427af04a84bcc530598a725c9ab0a5f5",
+    "rule_text_sha256": "28d2dcb9d1f6ac5cef49881133bb6f55a243eef7160b59f35df5100a3f2a9623",
+    "total_rule_rows": 190932
+  },
+  "scientific_scope": "fixed literal table coverage and fixed prefix row Valid only",
+  "sector_checked": true,
+  "solver_calls": 0,
+  "stage": "complete",
+  "status": "PASS",
+  "wall_seconds": 1.5677028379868716
+}

@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-v6-c4free-rs7-20261117'
+CACHE = ROOT / '.local/evolution-media-v6-nmrs-20261117'
 FPS = 50
 CLOCK_RATE = 0.80  # Browser-clock milliseconds per encoded-video millisecond (exact 16ms rAF step per 50fps frame).
 OPENING_SECONDS = 0.5
@@ -45,6 +45,7 @@ body {background:white; overflow:hidden;}
 #evolution .delta-tag[data-c="dd"] .delta-value {font-size:16px;}
 #evolution .delta-tag[data-v="6"][data-c="e86"] .delta-value {font-size:15.5px;}
 #evolution .delta-tag[data-v="6"][data-c="q6"] .delta-value {font-size:19px;}
+#evolution .delta-tag[data-v="6"][data-c="he"] .delta-value {font-size:14.8px;}
 '''
 
 
@@ -127,6 +128,7 @@ def capture(preview=False):
                     const d5=document.querySelector('.delta-tag[data-c="dd"][data-v="5"]');
                     const e6=document.querySelector('.delta-tag[data-c="e86"][data-v="6"]');
                     const q6=document.querySelector('.delta-tag[data-c="q6"][data-v="6"]');
+                    const h6=document.querySelector('.delta-tag[data-c="he"][data-v="6"]');
                     const v6Blocks=[...document.querySelectorAll('g[data-v="6"]:not(.delta-tag) > .anim > .b-res')].map(e=>({box:rect(e),opacity:+getComputedStyle(e.parentElement).opacity}));
                     const textOverflows=[...document.querySelectorAll('.delta-tag')].filter(g=>{
                         const surf=g.querySelector('.delta-surface').getBoundingClientRect();
@@ -141,7 +143,8 @@ def capture(preview=False):
                         dd:{text:d5.textContent,visible:d5.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(d5).opacity,box:rect(d5.querySelector('.delta-surface'))},
                         q7_v5:{text:q5.textContent,visible:q5.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q5).opacity,box:rect(q5.querySelector('.delta-surface'))},
                         e86_v6:{text:e6.textContent,visible:e6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(e6).opacity,box:rect(e6.querySelector('.delta-surface'))},
-                        q7_v6:{text:q6.textContent,visible:q6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q6).opacity,box:rect(q6.querySelector('.delta-surface'))}};
+                        q7_v6:{text:q6.textContent,visible:q6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(q6).opacity,box:rect(q6.querySelector('.delta-surface'))},
+                        he_v6:{text:h6.textContent,visible:h6.getAttribute('aria-hidden')==='false',opacity:getComputedStyle(h6).opacity,box:rect(h6.querySelector('.delta-surface'))}};
                 }''')
 
             if preview:
@@ -205,12 +208,13 @@ def capture(preview=False):
             assert current == 'v6' and current in status and 'Current' in status, status
             assert [x['state'].split('Origins')[0].split('Release')[0].split('Current')[0] for x in states] == expected, states
             assert not final['textOverflows'], final['textOverflows']
-            assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7_v5','dd','e86_v6','q7_v6']), final
+            assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7_v5','dd','e86_v6','q7_v6','he_v6']), final
             assert all(line in final['e86_v6']['text'] for line in ['Q₇ 304 · Q₈ 682–683','Q∞ ≤ 0.5912405943']), final['e86_v6']
             assert 'Q₇ · ≥56 edges' in final['q7_v6']['text'], final['q7_v6']
-            assert len(final['v6Blocks']) == 22 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
-            assert max(final[k]['box']['bottom'] for k in ['e86_v6','q7_v6']) < min(b['box']['top'] for b in final['v6Blocks']), final
-            for rect in [final['q7_v5']['box'], final['dd']['box'], final['e86_v6']['box'], final['q7_v6']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['v6Blocks']]]:
+            assert 'N(8,6,6) ≤ 61 · ES(9) ≤ 1148' in final['he_v6']['text'], final['he_v6']
+            assert len(final['v6Blocks']) == 23 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
+            assert max(final[k]['box']['bottom'] for k in ['e86_v6','q7_v6','he_v6']) < min(b['box']['top'] for b in final['v6Blocks']), final
+            for rect in [final['q7_v5']['box'], final['dd']['box'], final['e86_v6']['box'], final['q7_v6']['box'], final['he_v6']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['v6Blocks']]]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
             assert final['scrollLeft'] == 0 and not errors and not failed_requests, (final, errors, failed_requests)
             final_frame = shot('settled-current.png')

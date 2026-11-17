@@ -287,11 +287,12 @@
 
     he: {
       resultLabel:
-        'Happy Ending working manuscript results: ES(7) geometric upper bound lowered from 78 to 77, derived via the cross-parameter chain N(7,6,7) <= 75 to N(7,7,7) <= 76 to ES(7) <= 77.',
+        'Happy Ending and ordered rank-3 signotope capacities across m = 7, 8, 9: working ES(7) <= 77, replayed N(8,6,6) <= 61 CNF+DRAT and signotope N(8,8,8) <= 318, and replayed native-trace duals C9 <= 688, D9 <= 458 assembling to working ES(9) <= 1148.',
       resultCap:
-        'Results · ES(7) upper bound 78 → 77 and cross-parameter chain (working manuscript)',
+        'Results · m = 7, 8, 9 capacities & planar thresholds (replayed duals/DRAT + working assembly)',
       links: [
-        { label: 'Full figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg', sourceLanguage: '中文' }
+        { label: 'm = 7–9 overview ↗', href: 'happy-ending-latest.html', sourceLanguage: 'EN + 中文' },
+        { label: 'm = 7 figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg', sourceLanguage: '中文', sub: true }
       ],
       render() {
         return svgWrap(this.resultLabel, `
@@ -304,43 +305,51 @@
             </marker>
           </defs>
 
-          <!-- Top banner: same-metric upper bound improvement 78 -> 77 -->
-          <rect class="rv-panel-dash" x="14" y="12" width="352" height="80" rx="10"/>
-          <text class="rv-h" x="26" y="32">ES(7) upper bound</text>
-          <text x="354" y="32" text-anchor="end" font-size="11" font-weight="650" class="rv-accent">Working manuscript</text>
-          <text x="26" y="68" font-size="21" font-weight="600" fill="var(--muted)">78</text>
-          <line x1="60" y1="60" x2="90" y2="60" stroke="var(--he)" stroke-width="2" marker-end="url(#rv-he-arr)"/>
-          <text x="100" y="69" font-size="25" font-weight="700" class="rv-accent">≤ 77</text>
-          <text class="rv-meta" x="176" y="65">planar points for a convex 7-gon</text>
+          <!-- Top panel: three m = 7, 8, 9 settings side-by-side -->
+          <rect class="rv-panel" x="14" y="10" width="352" height="104" rx="10"/>
+          <text class="rv-h" x="24" y="28">Signotope &amp; planar bounds</text>
+          <text class="rv-meta" x="356" y="28" text-anchor="end">m = 7, 8, 9</text>
 
-          <!-- Bottom panel: cross-parameter proof chain (75 -> 76 -> 77) -->
-          <rect class="rv-panel" x="14" y="102" width="352" height="142" rx="10"/>
-          <text class="rv-h" x="26" y="122">Proof chain</text>
-          <text class="rv-meta" x="354" y="122" text-anchor="end">from N(7,4,7) = 16, N(7,5,6) = 25</text>
+          <rect x="22" y="36" width="102" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="73" y="52" text-anchor="middle">m = 7 (7-gons)</text>
+          <text x="73" y="75" text-anchor="middle" font-size="14.5" font-weight="680" class="rv-accent">ES(7) ≤ 77</text>
+          <text class="rv-sub" x="73" y="94" text-anchor="middle">78 → 77 working</text>
 
-          <!-- Node 1: N(7,6,7) <= 75 -->
-          <rect x="24" y="136" width="94" height="92" rx="8" fill="#FAF6EE" stroke="#E5D5B5"/>
-          <text class="rv-sub" x="71" y="156" text-anchor="middle">Restricted bound</text>
-          <text x="71" y="184" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">N(7,6,7) ≤ 75</text>
-          <text class="rv-sub" x="71" y="210" text-anchor="middle" fill="#8C581C">3 · N(7,5,6)</text>
+          <rect x="130" y="36" width="112" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="186" y="52" text-anchor="middle">m = 8 (8-gons)</text>
+          <text x="186" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">N(8,6,6) ≤ 61</text>
+          <text x="186" y="94" text-anchor="middle" font-size="8.8" fill="var(--muted)">signotope · N(8,8,8) ≤ 318</text>
 
-          <line x1="121" y1="180" x2="140" y2="180" stroke="#667085" stroke-width="1.5" marker-end="url(#rv-he-chain)"/>
-          <text x="130" y="170" text-anchor="middle" font-size="10.5" font-weight="650" fill="var(--ink-2)">+1</text>
+          <rect x="248" y="36" width="110" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
+          <text class="rv-sub" x="303" y="52" text-anchor="middle">m = 9 (9-gons)</text>
+          <text x="303" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">ES(9) ≤ 1148</text>
+          <text class="rv-sub" x="303" y="94" text-anchor="middle">working · vs 1508</text>
 
-          <!-- Node 2: N(7,7,7) <= 76 -->
-          <rect x="143" y="136" width="94" height="92" rx="8" fill="#FAF6EE" stroke="#E5D5B5"/>
-          <text class="rv-sub" x="190" y="156" text-anchor="middle">Avoiding capacity</text>
-          <text x="190" y="184" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">N(7,7,7) ≤ 76</text>
-          <text class="rv-sub" x="190" y="210" text-anchor="middle" fill="#8C581C">N(7,6,7) + 1</text>
+          <!-- Bottom panel: m = 9 native-trace dual assembly -->
+          <rect class="rv-panel" x="14" y="122" width="352" height="122" rx="10"/>
+          <text class="rv-h" x="24" y="141">m = 9 native-trace assembly</text>
+          <text class="rv-meta" x="356" y="141" text-anchor="end">replayed duals · Λ = 10⁶</text>
 
-          <line x1="240" y1="180" x2="259" y2="180" stroke="#667085" stroke-width="1.5" marker-end="url(#rv-he-chain)"/>
-          <text x="249" y="170" text-anchor="middle" font-size="10.5" font-weight="650" fill="var(--ink-2)">+1</text>
+          <rect x="22" y="152" width="116" height="80" rx="8" fill="#FAF6EE" stroke="#E5D5B5"/>
+          <text class="rv-sub" x="80" y="170" text-anchor="middle">Replayed duals</text>
+          <text x="80" y="191" text-anchor="middle" font-size="11.5" font-weight="650" fill="var(--ink)">C₉ ≤ 688 · D₉ ≤ 458</text>
+          <text class="rv-sub" x="80" y="213" text-anchor="middle" fill="#8C581C">236 &amp; 124 holes</text>
 
-          <!-- Node 3: ES(7) <= 77 -->
-          <rect class="rv-panel-dash" x="262" y="136" width="94" height="92" rx="8"/>
-          <text x="309" y="156" text-anchor="middle" font-size="10" font-weight="640" class="rv-accent">Convex 7-gon</text>
-          <text x="309" y="184" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">ES(7) ≤ 77</text>
-          <text class="rv-sub" x="309" y="210" text-anchor="middle">N(7,7,7) + 1</text>
+          <line x1="141" y1="192" x2="167" y2="192" stroke="#667085" stroke-width="1.5" marker-end="url(#rv-he-chain)"/>
+          <text x="154" y="182" text-anchor="middle" font-size="8.8" font-weight="650" fill="var(--ink-2)">R7+R20</text>
+
+          <rect x="170" y="152" width="82" height="80" rx="8" fill="#FAF6EE" stroke="#E5D5B5"/>
+          <text class="rv-sub" x="211" y="170" text-anchor="middle">Signotope</text>
+          <text x="211" y="192" text-anchor="middle" font-size="10.2" font-weight="650" fill="var(--ink)">N(9,9,9) ≤ 1147</text>
+          <text class="rv-sub" x="211" y="213" text-anchor="middle" fill="#8C581C">Q₉ ≤ 1146</text>
+
+          <line x1="255" y1="192" x2="273" y2="192" stroke="var(--he)" stroke-width="1.6" marker-end="url(#rv-he-arr)"/>
+          <text x="264" y="182" text-anchor="middle" font-size="10" font-weight="650" fill="var(--ink-2)">+1</text>
+
+          <rect class="rv-panel-dash" x="276" y="152" width="82" height="80" rx="8"/>
+          <text x="317" y="170" text-anchor="middle" font-size="10" font-weight="640" class="rv-accent">Convex 9-gon</text>
+          <text x="317" y="192" text-anchor="middle" font-size="12" font-weight="700" class="rv-accent">ES(9) ≤ 1148</text>
+          <text class="rv-sub" x="317" y="213" text-anchor="middle">1508 / 1501*</text>
         `);
       }
     }

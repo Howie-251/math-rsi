@@ -7,6 +7,7 @@ const Q7_TIME = 8100;
 const DD_TIME = 8500;
 const E86_V6_TIME = 10300;
 const Q7_E16_TIME = 10950;
+const HE_V6_TIME = 11180;
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -46,10 +47,10 @@ const CASES = [
     status: () => t >= Q7_E16_TIME ? 'Q₇ ≥56-edge theorem (E16) · full Q₇ open' : t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · refereeing pending',
     read: () => t >= Q7_TIME ? 'q7.html' : REPO + 'plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', plugin: GH + '/tree/main/plugins/hypercube-hamilton',
     quant: () => `${t >= Q7_E16_TIME ? '<div class="qbig"><b>Q₇ · ≥56 edges</b></div><p class="qnote">128 vertices; complete E16 across all 16-hole classes μ ∈ {0,1,2,3,4}. Run: v3 (local adaptation) → informs v5 & v6. Matchings with ≤55 edges and full Q₇ remain open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → informs v5. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Combined with published results, matchings using ≤ 6 directions in any dimension also extend.</p>` },
-  { id: 'he', short: 'Happy Ending', title: 'A tighter upper bound for convex heptagons',
-    status: '75/76/77 working manuscripts · independent review pending',
-    read: REPO + 'case-studies/happy-ending/n7-20261103/START_HERE.html', plugin: GH + '/tree/main/plugins/happy-ending',
-    quant: () => `<div class="qrow"><span><b>≤ 75</b><i>N(7,6,7)</i></span><span><b>≤ 76</b><i>N(7,7,7)</i></span><span><b>≤ 77</b><i>ES(7)</i></span></div><p class="qnote">Working manuscripts (independent mathematical review pending; no Lean), tightening our earlier 76 / 77 / 78 draft.</p><div class="qrow he-witness"><span><b>25</b><i>abstract cup–cap witness, checked separately</i></span></div>` }
+  { id: 'he', short: 'Happy Ending', title: () => t >= HE_V6_TIME ? 'Signotope capacities and m = 7–9 thresholds' : 'A tighter upper bound for convex heptagons',
+    status: () => t >= HE_V6_TIME ? 'Replayed duals/DRAT · assembly review pending' : '75/76/77 working manuscripts · independent review pending',
+    read: () => t >= HE_V6_TIME ? 'happy-ending-latest.html' : REPO + 'case-studies/happy-ending/n7-20261103/START_HERE.html', plugin: GH + '/tree/main/plugins/happy-ending',
+    quant: () => t >= HE_V6_TIME ? `<div class="qrow"><span><b>≤ 77</b><i>ES(7) · working</i></span><span><b>≤ 61</b><i>N(8,6,6) · DRAT</i></span><span><b>≤ 1148</b><i>ES(9) · working</i></span></div><p class="qnote">Replayed certificates prove N(8,6,6) ≤ 61, N(9,8,8) ≤ 688 and restricted D₉ ≤ 458. Signotope N(8,8,8) ≤ 318 (planar ES(8) ≤ 319 is Schroeder’s bound) and working corollaries ES(7) ≤ 77, ES(9) ≤ 1148 (vs. 1508 / 1501*) await independent review. Run: Trellis + ARIS + v3 → v6 main.</p><div class="qrow he-witness"><span><b>25</b><i>abstract cup–cap witness, checked separately</i></span></div>` : `<div class="qrow"><span><b>≤ 75</b><i>N(7,6,7)</i></span><span><b>≤ 76</b><i>N(7,7,7)</i></span><span><b>≤ 77</b><i>ES(7)</i></span></div><p class="qnote">Working manuscripts (independent mathematical review pending; no Lean), tightening our earlier 76 / 77 / 78 draft.</p><div class="qrow he-witness"><span><b>25</b><i>abstract cup–cap witness, checked separately</i></span></div>` }
 ];
 const CN = { pb: 'Property B', ecc: 'ECC', dd: 'Degree–Diameter', e86: 'Erdős 86', q6: 'Ruskey–Savage', he: 'Happy Ending' };
 const CI = {}; CASES.forEach((c, i) => { CI[c.id] = i; });
@@ -92,7 +93,9 @@ const MS = [
   {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10700, "tag": "Q∞ · π_□(C₄) ≤ 0.5912405943", "text": "T3 ≤ 0.5912405943 (COP + cubic) and T4 ≤ 0.5912405942 (m = 1024 degree potential via a 5-line hypergeometric tower), both proved and rechecked in 128-bit C++20. Exploratory 0.5907 is an approximate fit (residual ≈ 3.9 × 10⁻⁴), an earlier 0.5899 claim was refuted and withdrawn, and limit 1/2 remains open."},
   {"c": "q6", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10950, "tag": "Q₇ complete E16 · ≥56 edges", "text": "Every Q₇ matching with at least 56 edges (at most 16 holes, all μ ∈ {0,1,2,3,4}) extends to a Hamilton cycle retaining every prescribed edge, by a computational argument reviewed in the same model family modulo the listed baseline imports (independent refereeing pending, no Lean). Matchings with ≤55 edges, full Q₇, P₇ and seven-direction lifting remain open."},
   {"c": "e86", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11350, "tag": "C++17/20 replays & coevolution engine", "text": "Recompiled 128-bit C++20 verifiers on all 3,212,821 Q₄ orbits (T3/T4), C++17 13,150,453-completion replay for Q₈, explicit construction checks and 18 cube_coevolve tests."},
-  {"c": "q6", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11450, "tag": "290 baseline imports & geometry checks", "text": "Bundled all 290 baseline imports and ran the 189-row μ=0 large-face table plus standalone MU0 and Q₆ A₈ geometry/plan checkers; 10 large .cnf/.drup traces are indexed in INVENTORY.json and stored in the external archive."}
+  {"c": "he", "v": 6, "intake": true, "k": "draft", "e": "drop", "t": 11180, "tag": "m = 7–9 capacities & ES(9) ≤ 1148", "text": "Replayed certificates prove N(8,6,6) ≤ 61 (milestone9 CNF+DRAT) and native-trace integer duals N(9,8,8) ≤ 688, restricted D₉ ≤ 458. Combined with R7/R20 and analytic m = 7–9 manuscripts, they give signotope N(8,8,8) ≤ 318 (planar ES(8) ≤ 319 is Schroeder’s bound) and working planar corollaries ES(7) ≤ 77, ES(9) ≤ 1148 (vs. 1508 / 1501*); independent review pending, no Lean. Run: Trellis + ARIS + v3 → v6 main maintenance."},
+  {"c": "q6", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11420, "tag": "290 baseline imports & geometry checks", "text": "Bundled all 290 baseline imports and ran the 189-row μ=0 large-face table plus standalone MU0 and Q₆ A₈ geometry/plan checkers; 10 large .cnf/.drup traces are indexed in INVENTORY.json and stored in the external archive."},
+  {"c": "he", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11480, "tag": "Native-trace dual & DRAT replays", "text": "Cross-platform stdlib & drat-trim checks verify N(9,8,8) ≤ 688, D₉ ≤ 458 (plus the 47,635-row depth-≤3 LP ceiling), N(8,6,6) ≤ 61 (115 rows + 9-hole matrix witness), Schroeder’s 15-file octagon trees (193 / 124) and m = 7 lock-block ≤4."}
 ];
 const isOutcome = m => m.k === 'result' || m.k === 'draft';
 const CALLOUTS = [
@@ -109,7 +112,8 @@ const CALLOUTS = [
   {"c": "q6", "v": 5, "t": 8100, "row": 1, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"},
   {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "(11,5) 37,631 → 37,632", "value2": "(12,5) 42,402 → 42,433", "detail": "Run: v4 + local updates"},
   {"c": "e86", "v": 6, "t": 10300, "row": 0, "kind": "delta", "value": "Q₇ 304 · Q₈ 682–683", "value2": "Q∞ ≤ 0.5912405943", "detail": "≤304 source · 682 open · Run: v3"},
-  {"c": "q6", "v": 6, "t": 10950, "row": 1, "kind": "delta", "value": "Q₇ · ≥56 edges", "detail": "all 16-hole classes · Run: v3"}
+  {"c": "q6", "v": 6, "t": 10950, "row": 1, "kind": "delta", "value": "Q₇ · ≥56 edges", "detail": "all 16-hole classes · Run: v3"},
+  {"c": "he", "v": 6, "t": 11180, "row": 2, "kind": "delta", "value": "N(8,6,6) ≤ 61 · ES(9) ≤ 1148", "detail": "m = 7–9 working · Run: v3"}
 ];
 
 const VERS = [
@@ -202,15 +206,17 @@ const VERS = [
   "fullBase": [
     "Test candidate case splits with bounded probes on the hardest open branch, measuring net-new coverage on the same input.",
     "Run primal–dual coevolution with goal/target separation, 4-channel normalized signed residuals and full-archive refutation.",
-    "Stop outer floating-point SDP/CP loops once apparent improvement drops to the rounding-repair residual, recording any nonzero residual beside approximate fits."
+    "Stop outer floating-point SDP/CP loops once apparent improvement drops to the rounding-repair residual, recording any nonzero residual beside approximate fits.",
+    "v6 main maintenance: stop inside a fixed relaxation when dual and exact relaxation-feasible primal meet, and verify sparse integer duals from row parameters without giant LP matrices (fixed v6 tag unchanged)."
   ],
   "plug": [
     ["deep", "Extremal", "e86"],
     ["deep", "Hamilton", "q6"],
-    ["note", "Other 4 domains retained"]
+    ["deep", "Happy Ending", "he"],
+    ["note", "Other 3 domains retained"]
   ],
-  "pluginNote": "C₄-free & Q7 E16: v3 + coevolve → v6 methods.",
-  "sum": "v6 release. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, and complete Q₇ E16 (≥56 edges). Distills hardest-remainder split gating, primal–dual coevolution and repair-residual stopping into the shared base."
+  "pluginNote": "C₄-free, Q7 E16 & N(m,r,s): v3 runs → v6 & main.",
+  "sum": "v6 release + main maintenance. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, complete Q₇ E16 (≥56 edges), and the 2026-11-17 Happy Ending N(m,r,s) follow-up across m = 7, 8, 9 (replayed N(8,6,6) ≤ 61 and N(9,8,8) ≤ 688 / D₉ ≤ 458 duals, working ES(9) ≤ 1148; fixed v6 tag unchanged). Distills hardest-remainder split gating, primal–dual coevolution, repair-residual stopping and generative sparse dual checks into the shared base."
 },
   { tag:'v7+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
@@ -329,7 +335,7 @@ function buildSky() {
 
 function buildDeltaTag(d) {
   const mi = MS.findIndex(m => m.c === d.c && m.v === d.v && m.t === d.t);
-  const width = d.value2 || (d.c === 'dd' && d.v === 4) ? 220 : 200;
+  const width = d.value2 || (d.c === 'dd' && d.v === 4) || (d.c === 'he' && d.v === 6) ? 220 : 200;
   const tagX = cx(d.v) - width / 2, ownX = slotX(d.v, CI[d.c]) + BW / 2;
   const items = MS.filter(m => m.c === d.c && isOutcome(m) && m.v <= d.v);
   const blockIndex = items.indexOf(MS[mi]);
