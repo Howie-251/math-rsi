@@ -13,6 +13,7 @@ Choose the path that matches your task. The entry pages and quick start are bili
 | Connect external reviewers or use bundled ARIS | [Reviewer MCP](REVIEWER_MCP.md) · [ARIS reuse and dual-host layout](ARIS_REUSE.md) |
 | Understand or maintain a version | [v6 changes](V6_CHANGES.md) · [v5 history](V5_CHANGES.md) · [v4 history](V4_CHANGES.md) · [Evolution workflow](EVOLUTION_WORKFLOW.md) · [Implementation history](../development/README.md) |
 | Inspect validation and attribution | [Validation records](../development/README.md#validation-and-implementation) · [Skill acceptance](SKILL_ACCEPTANCE.md) · [Provenance](PROVENANCE.md) |
+| Contribute skills, plugins or verifiers | [Contributing guide](../CONTRIBUTING.md) · [中文贡献指南](../CONTRIBUTING.zh-CN.md) · [Plugin contract](PLUGIN_CONTRACT.md) · [Skill acceptance](SKILL_ACCEPTANCE.md) |
 
 ## Repository map
 

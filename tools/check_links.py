@@ -13,7 +13,13 @@ from urllib.parse import unquote, urlsplit
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
-    files = [root / "README.md", root / "README.zh-CN.md", root / "AGENTS.md"]
+    files = [
+        root / "README.md",
+        root / "README.zh-CN.md",
+        root / "CONTRIBUTING.md",
+        root / "CONTRIBUTING.zh-CN.md",
+        root / "AGENTS.md",
+    ]
     files.extend([
         root / "case-studies/README.md",
         root / "development/README.md",
