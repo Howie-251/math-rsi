@@ -1242,3 +1242,23 @@ window.MATHRSI_ZH = {
   "· N(8,8,8) ≤ 318": "· N(8,8,8) ≤ 318",
   "· n²/12 · n³/80": "· n²/12 · n³/80"
 };
+
+/* Dated degree–diameter record comparisons, updated 2026-11-18. */
+Object.assign(window.MATHRSI_ZH, {
+  "Degree–diameter record improvements · MathRSI": "度数—直径公开纪录改进 · MathRSI",
+  "Degree–diameter · reported 2026-11-16 · rechecked 2026-11-18": "度数—直径 · 成果记录 2026-11-16 · 复查 2026-11-18",
+  "Improvements to published records": "超过公开纪录的构造",
+  "Reported on 16 November 2026, our graphs reach 37,632 vertices at (11,5) and 42,433 at (12,5), exceeding the Comellas table by 1 and 81 vertices. Both gains still hold in the 18 November recheck.": "2026 年 11 月 16 日记录的成果为 (11,5) 的 37,632 点图和 (12,5) 的 42,433 点图，分别超过 Comellas 表值 1 点和 81 点；11 月 18 日复查，两项增益仍成立。",
+  "Record timeline": "纪录改进时间线",
+  "Dated table improvement": "增益与比较日期",
+  "+1 over 2,566 · 2026-11-05": "较 2,566 多 1 点 · 2026-11-05",
+  "+1 over 37,631 · 2026-11-16; rechecked 2026-11-18": "较 37,631 多 1 点 · 2026-11-16；11-18 复查",
+  "+81 over 42,352 · 2026-11-16; rechecked 2026-11-18": "较 42,352 多 81 点 · 2026-11-16；11-18 复查",
+  "+32 over 16,384 · 2026-11-05": "较 16,384 多 32 点 · 2026-11-05",
+  "Each result is tied to the public record checked when it was reported. Later advances extend the timeline while preserving the earlier achievement.": "每项成果都对应报告时核对的公开纪录。后续更大的图会推进时间线，也会与此前成果一起保留。",
+  "Latest D5 record improvements · reported 2026-11-16": "最新 D5 纪录改进 · 成果记录于 2026-11-16",
+  "Comellas rechecked 2026-11-18: 37,631 → 37,632 (+1)": "Comellas 2026-11-18 复查：37,631 → 37,632（+1）",
+  "Comellas rechecked 2026-11-18: 42,352 → 42,433 (+81)": "Comellas 2026-11-18 复查：42,352 → 42,433（+81）",
+  "Earlier record improvements": "此前的纪录改进",
+  "On 18 November 2026, the Comellas table lists 2,614 for (10,4) and 16,848 for (16,4). Our 2,567- and 16,416-vertex constructions remain documented as improvements over the entries checked on 5 November 2026.": "2026 年 11 月 18 日，Comellas 表中 (10,4) 为 2,614 点，(16,4) 为 16,848 点。我们的 2,567 与 16,416 点构造，按超过 2026 年 11 月 5 日所核对纪录的成果保留。"
+});

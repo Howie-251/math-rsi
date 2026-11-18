@@ -1,34 +1,36 @@
-# Degree–diameter: our best constructions by setting
+# Degree–diameter: improvements to published records
 
-**Our constructions across four showcased settings:** **2,567** vertices at (10,4), **37,632** at (11,5), **42,433** at (12,5) and **16,416** at (16,4). New results update their own setting; earlier achievements in other settings remain.
+**Two new improvements to the Comellas record table.** Our results reported on **16 November 2026** reach **37,632 vertices at (11,5)** and **42,433 at (12,5)**, exceeding the listed records by **1** and **81** vertices. A fresh check on **18 November 2026** confirms the same gains. Earlier record improvements, including **2,567 vertices at (10,4)** and **16,416 at (16,4)**, retain their original comparison dates.
 
-[Latest bilingual result and methods](../../development/homepage-redesign-20261105/site/dd-latest.html) · [中文版](README.zh-CN.md) · [Historical illustrated case](index.html)
+[Latest bilingual result and methods](../../development/homepage-redesign-20261105/site/dd-latest.html) · [中文版](README.zh-CN.md) · [Illustrated case and record timeline](index.html)
 
-## Results by setting
+## Record timeline
 
-| (Δ,D) | Vertices in our construction |
-| --- | ---: |
-| (10,4) | **2,567** |
-| (11,5) | **37,632** |
-| (12,5) | **42,433** |
-| (16,4) | **16,416** |
+| (Δ,D) | Our construction | Public-table baseline | Gain and comparison date |
+| --- | ---: | ---: | --- |
+| (10,4) | **2,567** | 2,566 | **+1** · 5 November 2026 |
+| (11,5) | **37,632** | 37,631 | **+1** · 16 November 2026; rechecked 18 November |
+| (12,5) | **42,433** | 42,352 | **+81** · 16 November 2026; rechecked 18 November |
+| (16,4) | **16,416** | 16,384 | **+32** · 5 November 2026 |
 
-These are four highlighted settings, rather than the full historical 44-pair catalogue or claims of current global optimality. Dated public comparisons remain separate below; the new D5 results do not replace (10,4) or (16,4).
+Each row records an improvement over the public table at the stated time. Later advances extend this record history; they do not change what an earlier construction achieved when reported. [Comparison dates and sources](evidence/record_timeline.md).
 
-## Latest results · 16 November 2026
+## Latest D5 improvements · reported 16 November 2026
 
-| (Δ,D) | Previous local graph | Latest graph | Local increase | Comellas 2026-11-16 | Gain over that table |
+**Public table last checked: 18 November 2026.**
+
+| (Δ,D) | Previous local graph | Latest graph | Local increase | Comellas 2026-11-18 | Gain over that table |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | (11,5) | 37,631 | **37,632** | **+1** | 37,631 | **+1** |
 | (12,5) | 42,402 | **42,433** | **+31** | 42,352 | **+81** |
 
-The final graphs have 205,366 and 246,309 edges, maximum degree 11 and 12, and diameter exactly five, respectively. The 31 D12 insertions improve an existing parameter pair. These are two improved existing pairs, with no new global catalogue or Lean-certified count.
+The final graphs have 205,366 and 246,309 edges, maximum degree 11 and 12, and diameter exactly five, respectively. The 31 D12 insertions improve our previous 42,402-vertex construction by 31 vertices; the gain over the dated public-table entry is 81.
 
 **Run provenance:** local 2026-11-11 main/v4-maintenance plus DD feedback. The research predates the published v5 workflow and feeds **v5 main maintenance**, while the fixed v5 tag remains unchanged. On the timeline this is shortened to “Run: v4 + local updates”.
 
 **Method and actual checks.** D12 preserves the full source as an induced subgraph and adds 31 vertices through legal available-degree attachments. All 31 new vertices were BFS roots in the final graph; old–old distances inherit the accepted source premise. D11 changes the core, so source-edge retention is insufficient: its core distances use the H9 geometric theorem and literal binding, while all 160 old peripheral vertices and the new vertex supply 161 complete BFS roots. Both finals were regenerated exactly; independent finite-array/degree checks passed. Concrete end-to-end Lean instances and required source final-review obligations remain open.
 
-The [live Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), checked 2026-11-16, now has (10,4)=2,612 and (16,4)=16,848. Our earlier 2,567 and 16,416 endpoints remain dated historical improvements. The comparison does not claim global optimality or adoption by the table maintainer.
+The [Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html) advances as new constructions arrive. On **18 November 2026**, it lists **2,614** for (10,4) and **16,848** for (16,4). Our 2,567- and 16,416-vertex graphs remain documented as improvements over the records checked on **5 November 2026**. The two D5 graphs above still exceed the table in this latest check.
 
 **Joint completion and verified prefixes.** Use an inclusion-minimal core-blocking set and jointly complete attachments from the full pool of remaining degree ports. Actual bad vertex pairs guide revisions to earlier construction choices; subsequent work consumes only independently verified prefixes. This research also feeds the Base action **Consume results before dispatch**: Update current facts from returned evidence before issuing the next task or review, preventing duplicate work and stale-state rollback. [v5 follow-up record](https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md).
 
@@ -44,7 +46,7 @@ Clone or download the repository and open `index.html` locally for the interacti
 
 ![Historical November 2026 table comparisons and published-method comparisons for diameter three](assets/results.png)
 
-## Historical results
+## Earlier record improvements · 5 November 2026
 
 The following constructions improved four entries in the [Comellas table](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html), checked on **5 November 2026**. That snapshot includes a **10-regular graph of diameter 4 on 2,567 vertices**, exceeding the table's 2,566 vertices.
 
@@ -55,7 +57,7 @@ The following constructions improved four entries in the [Comellas table](https:
 | (12,5) | 42,342 | **42,402** | +60 |
 | (16,4) | 16,384 | **16,416** | +32 |
 
-The diameter-three constructions cover seven consecutive degrees, from 20 to 26. Their reference values come from published constructions and applications of published formulas, including Rajiv, PolarStar, and Delorme's methods.
+The diameter-three constructions cover seven consecutive degrees, from 20 to 26. Their comparisons use the specified published constructions and formulas, including Rajiv, PolarStar, and Delorme's methods. These method-based benchmarks are identified separately from the dated Comellas table records above.
 
 | Δ, with D = 3 | Published-method reference | Our construction | Additional vertices |
 | --- | ---: | ---: | ---: |
@@ -105,7 +107,7 @@ The successful steps changed how connections were chosen: combine neighborhoods 
 
 ## Historical verification and reproduction
 
-The November 2026 catalogue snapshot contains 163 graphs with mathematical or computational verification; **49 have proofs of their concrete graph constructions in Lean**, including the 2,567-vertex graph and all seven degree-20–26 representatives. The catalogue includes intermediate extensions, with each parameter comparison using its largest construction.
+The **5 November 2026** catalogue snapshot contains 163 graphs with mathematical or computational verification; **49 have proofs of their concrete graph constructions in Lean**, including the 2,567-vertex graph and all seven degree-20–26 representatives. The catalogue includes intermediate extensions, with each parameter comparison using its largest construction.
 
 - [Graph catalogue](data/catalog.csv): orders, degrees, diameters and verification details for all 163 graphs.
 - [Parameter comparisons](data/public_comparisons.csv): the 44 parameter pairs and their reference constructions.

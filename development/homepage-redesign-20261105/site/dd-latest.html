@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Degree–diameter results by setting · MathRSI</title>
+<title>Degree–diameter record improvements · MathRSI</title>
 <link rel="stylesheet" href="styles.css">
 <script defer src="zh-CN.js"></script><script defer src="i18n.js"></script>
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in"><a class="brand" href="index.html#top"><img class="nav-symbol" src="../../../figures/mathrsi/branding/mark-c-light.png" width="1774" height="887" alt="" aria-hidden="true"><span>MathRSI</span></a><div class="language-switch" role="group" aria-label="Language / 语言" data-no-i18n><button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="zh-CN">中文</button></div></div></header>
 <main class="wrap q7-reader dd-followup-reader">
-<p class="p-eye">Degree–diameter · 2026-11-16 follow-up</p>
-<h1>Our best constructions by setting</h1>
-<p class="q7-lead">Our constructions: 2,567 vertices at (10,4), 37,632 at (11,5), 42,433 at (12,5) and 16,416 at (16,4).</p>
-<h2>Results by setting</h2>
-<table class="dd-setting-table"><thead><tr><th scope="col">Degree, diameter</th><th scope="col">Our construction</th></tr></thead><tbody><tr><th scope="row">(10,4)</th><td><b>2,567</b></td></tr><tr><th scope="row">(11,5)</th><td><b>37,632</b></td></tr><tr><th scope="row">(12,5)</th><td><b>42,433</b></td></tr><tr><th scope="row">(16,4)</th><td><b>16,416</b></td></tr></tbody></table>
-<p>Four highlighted settings, showing our largest constructed graph in each. Dated table comparisons and verification details follow below.</p>
+<p class="p-eye">Degree–diameter · reported 2026-11-16 · rechecked 2026-11-18</p>
+<h1>Improvements to published records</h1>
+<p class="q7-lead">Reported on 16 November 2026, our graphs reach 37,632 vertices at (11,5) and 42,433 at (12,5), exceeding the Comellas table by 1 and 81 vertices. Both gains still hold in the 18 November recheck.</p>
+<h2>Record timeline</h2>
+<table class="dd-setting-table"><thead><tr><th scope="col">Degree, diameter</th><th scope="col">Our construction</th><th scope="col">Dated table improvement</th></tr></thead><tbody><tr><th scope="row">(10,4)</th><td><b>2,567</b></td><td>+1 over 2,566 · 2026-11-05</td></tr><tr><th scope="row">(11,5)</th><td><b>37,632</b></td><td>+1 over 37,631 · 2026-11-16; rechecked 2026-11-18</td></tr><tr><th scope="row">(12,5)</th><td><b>42,433</b></td><td>+81 over 42,352 · 2026-11-16; rechecked 2026-11-18</td></tr><tr><th scope="row">(16,4)</th><td><b>16,416</b></td><td>+32 over 16,384 · 2026-11-05</td></tr></tbody></table>
+<p>Each result is tied to the public record checked when it was reported. Later advances extend the timeline while preserving the earlier achievement.</p>
 <p><a href="dd-10-4.html">(10,4) construction and verification ↗</a> · <a href="../../../case-studies/degree-diameter/index.html">Four-setting case overview ↗</a></p>
-<h2>D5 follow-up · 2026-11-16</h2>
+<h2>Latest D5 record improvements · reported 2026-11-16</h2>
 <p class="q7-provenance">Run: 2026-11-11 v4-maintenance workflow + local DD updates → informs v5 main maintenance.</p>
 <div class="dd-latest-results">
-<article><h2>(11,5)</h2><p class="dd-latest-order">37,632</p><p>205,366 edges · maximum degree 11 · diameter exactly 5</p><p>Local sequence: 37,631 → 37,632 (+1)</p><p>Comellas 2026-11-16: 37,631 → 37,632 (+1)</p></article>
-<article><h2>(12,5)</h2><p class="dd-latest-order">42,433</p><p>246,309 edges · maximum degree 12 · diameter exactly 5</p><p>Local sequence: 42,402 → 42,433 (+31)</p><p>Comellas 2026-11-16: 42,352 → 42,433 (+81)</p></article>
+<article><h2>(11,5)</h2><p class="dd-latest-order">37,632</p><p>205,366 edges · maximum degree 11 · diameter exactly 5</p><p>Local sequence: 37,631 → 37,632 (+1)</p><p>Comellas rechecked 2026-11-18: 37,631 → 37,632 (+1)</p></article>
+<article><h2>(12,5)</h2><p class="dd-latest-order">42,433</p><p>246,309 edges · maximum degree 12 · diameter exactly 5</p><p>Local sequence: 42,402 → 42,433 (+31)</p><p>Comellas rechecked 2026-11-18: 42,352 → 42,433 (+81)</p></article>
 </div>
 <p>Our own (12,5) sequence advances from 42,402 to 42,433 (+31), whereas the Comellas entry checked on 2026-11-16 was 42,352 (+81).</p>
 <h2>How the constructions work</h2>
@@ -34,8 +34,8 @@
 <p>Constructed on the 2026-11-11 v4-maintenance workflow with local degree–diameter updates; those methods later informed v5 main maintenance, while the published v5 tag stays an earlier snapshot.</p>
 <p><b>Update state before dispatching new work.</b> Fold returned results into the active task state before launching the next search or review, avoiding duplicate runs and stale-state rollbacks.</p>
 <p><a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-dd-20261116/EVOLUTION.md">DD evolution and implementation record ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/base/skills/mathrsi-research/references/current-context.md">Base: current facts ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-joint-completion.md">DD: joint completion ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/degree-diameter/references/d5-blocking-batches.md">DD: verified prefixes ↗</a></p>
-<h2>Dated historical results</h2>
-<p>On the Comellas table checked 2026-11-16, (10,4) is 2,612 and (16,4) is 16,848, above our earlier constructions of 2,567 and 16,416, which remain documented with their original run dates.</p>
+<h2>Earlier record improvements</h2>
+<p>On 18 November 2026, the Comellas table lists 2,614 for (10,4) and 16,848 for (16,4). Our 2,567- and 16,416-vertex constructions remain documented as improvements over the entries checked on 5 November 2026.</p>
 <p><a href="https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html">Comellas table ↗</a> · <a href="dd-10-4.html">Historical (10,4) construction ↗</a></p>
 <p><a href="../../../case-studies/degree-diameter/README.md">Case overview and methods ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/degree-diameter/archive/dd-latest-two-parameters-20261116/">Source package and replay ↗</a> · <a href="../../../docs/V5_CHANGES.md">v5 maintenance notes ↗</a></p>
 <p class="fine">GitHub source and evidence links require repository access.</p>
