@@ -30,7 +30,7 @@ Reads the task's existing specification, wiki and resumption notes, then continu
 
 Use `main` for the current v6 workflow, or choose a fixed v1/v2/v3/v4/v5/v6 snapshot and record the revision in your task handoff. See [v6 changes](V6_CHANGES.md), [v5 history](V5_CHANGES.md) and [evolution records](../development/README.md).
 
-You need access to the private GitHub repository, Git, and an installed, authenticated agent host. Python 3.9+ runs the included replay and reviewer bridges. Additional tools are needed only for the actions you choose: reviewer CLIs and accounts for external reviews, network/search access for literature work, TeX for PDF compilation, or a task-specific Lean environment for formalization. None of these accounts or toolchains is supplied by cloning the repository.
+You need Git and an installed, authenticated agent host (Claude Code or Codex). Python 3.9+ runs the included replay and reviewer bridges. Additional tools are needed only for the actions you choose: reviewer CLIs and accounts for external reviews, network/search access for literature work, TeX for PDF compilation, or a task-specific Lean environment for formalization. None of these accounts or toolchains is supplied by cloning the repository.
 
 The selected Q7 replay requires **Python 3.11+**; see the [Q7 replay package](../plugins/hypercube-hamilton/archive/q7/README.md) for its additional requirements.
 

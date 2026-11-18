@@ -2,7 +2,7 @@
 
 The interactive **English / 中文 homepage** presents six mathematical research threads, their results, the evolution of the base and domain plugins, and a historical research-workflow replay.
 
-**[Public homepage / 公开主页](https://lisresearchgroup.github.io/math-rsi/)** — no repository permission is needed for the published site and selected readers. GitHub source/evidence links still require repository access. Publication runs after the Pages workflow reaches main.
+**[Public homepage / 公开主页](https://lisresearchgroup.github.io/math-rsi/)** — interactive bilingual homepage and selected six-topic readers, linked directly to the public GitHub repository. Publication runs automatically when changes merge into main.
 
 [Public build scope and workflow](PAGES.md)
 
@@ -25,7 +25,7 @@ Then open [http://127.0.0.1:8000/development/homepage-redesign-20261105/site/ind
 Copyable agent request / 可直接发给 Agent：
 
 ```text
-Clone the complete lisresearchgroup/math-rsi repository using my existing access,
+Clone the complete lisresearchgroup/math-rsi repository,
 or reuse my existing clone. From its root, start a loopback HTTP server:
 python3 -m http.server 8000 --bind 127.0.0.1
 Use a free port if needed. Open the browser at
@@ -34,7 +34,7 @@ http://127.0.0.1:8000/development/homepage-redesign-20261105/site/index.html
 Keep the server rooted at the complete clone; no npm build or regeneration is needed.
 ```
 
-中文：使用已有访问权限克隆完整仓库（或复用现有克隆），在仓库根启动上述本地服务器，打开对应网址，检查中英切换、演进动画与成果链接。端口占用时换空闲端口；无需重新生成网页或运行 npm 构建。
+中文：克隆完整仓库（或复用现有克隆），在仓库根启动上述本地服务器，打开对应网址，检查中英切换、演进动画与成果链接。端口占用时换空闲端口；无需重新生成网页或运行 npm 构建。
 
 The source stays at its existing location so its relative figure, case-reader and proof links keep working. This guide links the public Pages entry and preserves local viewing of the original clone.
 
