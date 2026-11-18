@@ -2,19 +2,17 @@
   "verdict": "PASS",
   "review_independence": "same-family",
   "acceptance_status": "provisional",
-  "reviewed_at_UTC": "2026-11-05 10:57 UTC",
-  "rendered_at_UTC": "2026-11-05 11:12 UTC",
-  "scope": "Targeted static publication consistency for README.md, README.zh-CN.md, index.html, index.zh-CN.html, catalogue/comparison CSVs and their local figure/link targets.",
+  "reviewed_at_UTC": "2026-11-18",
+  "scope": "Read-only Markdown/HTML and bilingual DD-reader fidelity for the dated record wording update; no mathematical certification or browser execution.",
   "checks": {
     "information_fidelity": "pass",
     "structure": "pass",
-    "math_code_tables": "pass",
-    "callouts": "not_applicable",
-    "escaping": "not_assessed",
-    "placeholder_leak": "pass"
+    "tables": "pass",
+    "translations": "pass",
+    "links": "pass",
+    "placeholders": "pass"
   },
   "blocking_issues": [],
   "warnings": [],
-  "summary": "The English and Chinese Markdown and HTML agree on all four Comellas comparison rows, including (10,4): 2,566 to 2,567 (+1), and the 5 November 2026 comparison date. The CSVs contain 163 graph rows across 44 parameter pairs and 44 comparison rows; the catalogue Lean field records 49 complete instances and 114 incomplete instances, matching both readers. Each HTML page has three matching method panels and controls, eight embedded SVG images matching local assets, and retained source image alternatives. The new d10_d4 SVG is embedded, its paired PNG exists, and the portable d10_d4 README and all HTML local/anchor links resolve. IDs are unique. Titles and subtitles contain no draft labels or claims of global priority. No parser placeholders were found. This targeted static copy/render consistency review did not execute a browser or repeat mathematical verification, BFS or Lean builds. New v2 attribution and execution-version links were checked after the publication branch was updated to current main; no graph search, BFS or Lean build was repeated.",
-  "version_attribution": "New (10,4) sequence: MathRSI v2 workflow and DD plugin with PR #7 repair; publication checkout updated to main/v3."
+  "note": "Both HTML readers preserve their Markdown sections, substantive text, links and all four tables. Reporting/recheck dates, historical comparisons, D12 local +31 versus public-table +81, provenance, methods and verification limitations remain consistent. All 16 appended DD translation keys match page text and preserve English meaning. Local destinations resolve using the staged or original repository; fragment targets are intact. Expected hero, method-panel, four-state cube, embedded-image and footer transformations are preserved. No template leakage found. This was a read-only source/DOM fidelity review, not mathematical certification or browser execution."
 }

@@ -26,11 +26,11 @@ spec.loader.exec_module(aris)
 
 LANGUAGES = [
     {"lang":"en", "source":"README.md", "output":"index.html",
-     "subtitle":"Best constructions by setting and dated comparisons", "toc":"Contents",
+     "subtitle":"Record improvements with dated public benchmarks", "toc":"Contents",
      "tabs":["A · Covering neighborhoods", "B · Controller and fibers", "C · Geometric reallocation"],
      "method_label":"Construction methods", "step_label":"Cube extension examples"},
     {"lang":"zh-CN", "source":"README.zh-CN.md", "output":"index.zh-CN.html",
-     "subtitle":"各组参数下的最佳构造与日期比较", "toc":"目录",
+     "subtitle":"按日期记录的公开纪录改进", "toc":"目录",
      "tabs":["A · 保边补点", "B · 控制器与有限域", "C · 几何连接重分配"],
      "method_label":"构造方法", "step_label":"立方体补点示例"},
 ]
