@@ -99,10 +99,7 @@ def main():
                 changed = url(source, destination, value, is_navigation)
                 if changed is None:
                     return 'aria-disabled="true" title="Material not included in this public reader / 此公开阅读页未附该材料"'
-                extra = ''
-                if changed.startswith(GITHUB):
-                    extra = ' title="Repository access required / 需要仓库访问权限"'
-                return match['key'] + '=' + match['q'] + escape(changed, quote=True) + match['q'] + extra
+                return match['key'] + '=' + match['q'] + escape(changed, quote=True) + match['q']
             text = ATTR.sub(attr, text)
         if extension == '.css':
             text = CSS_URL.sub(lambda m: 'url(' + m['q'] + url(source, destination, m['value']) + m['q'] + ')', text)
@@ -113,11 +110,10 @@ def main():
             text = JS_URL.sub(lambda m: m.group(0) if m['value'].endswith('/') else m['q'] + (url(source, destination, m['value'], True) or '#') + m['q'], text)
             text = REPO_URL.sub(lambda m: json.dumps(url(source, destination, '../../../' + m['value'], True), ensure_ascii=False), text)
             text = text.replace("const REPO = '../../../';", "const REPO = '';")
-        if extension == '.html':
+        if extension == '.html' and destination != 'index.html':
             home = posixpath.relpath('index.html', posixpath.dirname(destination) or '.')
             note = ('<p data-no-i18n style="max-width:1100px;margin:24px auto;padding:0 20px;font:13px/1.6 system-ui;overflow-wrap:anywhere">'
-                    '<a href="' + home + '">MathRSI</a> · Public readers / 公开阅读页. '
-                    'GitHub source and evidence links require repository access / GitHub 源码与证据链接需要仓库权限。</p>')
+                    '<a href="' + home + '">MathRSI</a> · <a href="https://github.com/lisresearchgroup/math-rsi">GitHub ↗</a></p>')
             text = text.replace('</body>', note + '</body>')
         dst.write_text(text)
     (output / '.nojekyll').touch()
