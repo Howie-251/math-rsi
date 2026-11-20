@@ -207,6 +207,7 @@ const VERS = [
     ]
   ],
   "fullBase": [
+    "After proving a dense range, extend the original input without dropping any requirements. Check which maximal extensions still fall outside that range.",
     "Test candidate case splits with bounded probes on the hardest open branch, measuring net-new coverage on the same input.",
     "Run primal–dual coevolution with goal/target separation, 4-channel normalized signed residuals and full-archive refutation.",
     "Stop outer floating-point SDP/CP loops once apparent improvement drops to the rounding-repair residual, recording any nonzero residual beside approximate fits.",

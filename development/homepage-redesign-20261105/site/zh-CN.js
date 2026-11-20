@@ -1263,6 +1263,7 @@ Object.assign(window.MATHRSI_ZH, {
 
 /* Q7 full author working proof · main follow-up, 2026-11-20. */
 Object.assign(window.MATHRSI_ZH, {
+  "After proving a dense range, extend the original input without dropping any requirements. Check which maximal extensions still fall outside that range.": "得到稠密范围的定理后，先保留原题的全部要求，把输入补到不能再补。只研究仍落在定理范围之外的极大情形。",
   "Every matching in Q₇ extends": "Q₇ 中每一个匹配均可延拓",
   "Full author working proof · external review pending": "完整作者工作证明 · 待外部同行评议",
   "128 vertices; every matching size, including empty and perfect matchings. Full R7 author working proof accepted in the source project on 2026-11-19; external peer review pending, no Lean. Run: v3 (local adaptation) → v6 main follow-up.": "128 个顶点；覆盖所有匹配大小，包括空匹配与完美匹配。完整 R7 作者工作证明于原项目 2026-11-19 接受；待外部同行评议，无 Lean。运行：v3 本地适配 → v6 主线后续维护。",
