@@ -1,4 +1,50 @@
-# N(m,r,s) 高阶受限容量、共享标签核与原生迹对偶
+# N(m,r,s): same-input sector deficits and higher working bounds
+
+This reference extends the seven-parameter methods to the ordinary restricted capacities N(m,r,s). Read the [2026-11-20 handoff](../../../archive/nmrs-20261120/HANDOFF.md), [verification scope](../../../archive/nmrs-20261120/VERIFICATION.md) and [replay instructions](../../../archive/nmrs-20261120/REPLAY.md) before importing a result. The archive preserves primary manuscripts and evidence; new work belongs in the caller's task directory.
+
+## Object, current results and their guarantees
+
+N(m,r,s) is the maximum population of a complete ordered rank-3 signotope avoiding a blue r-vertex path, a red s-vertex path and weak m: two opposite-colour paths with the same actual endpoints and total length at least m+2. Path length counts vertices. Do not add an internal-disjointness hypothesis. Write Q_m=N(m,m-1,m), F_m=N(m,m,m); the R20 chart and reverse-extension manuscript gives F_m=Q_m+1, and geometric inclusion gives ES(m)≤F_m+1. These transports remain part of the proof obligation.
+
+The current analytical working chains are Q_7/F_7/ES(7)≤75/76/77, Q_8/F_8/ES(8)≤292/293/294, Q_9/F_9/ES(9)≤1098/1099/1100 and Q_10/F_10/ES(10)≤3978/3979/3980. They are same-session, unreviewed and unaccepted manuscripts, with no literature-optimality or priority claim. The separately replayed finite certificates in the nine-parameter route retain their 1146/1147/1148 working assembly and its own proof-import scope. It is not overwritten by the stronger analytical chain.
+
+Historical human acceptance of the restricted b25 upper bound, the checked 25-point abstract lower witness, fixed-CNF DRAT checks for ordinary 866≤56 and 858≤64, finite integer certificates, and the new analytical manuscripts have different guarantees. A successful fixed-CNF check does not by itself certify the reduction from every signotope. The unavailable independent review supplied no mathematical verdict. Ordinary 858≤63 remains pending; use the sealed 64 evidence. A checked abstract lower witness supplies no geometric realization.
+
+The new sector-deficit mathematics and its numerical corollaries were proposed in the project's main research session; Sol/high transcribed them and checked text and links. Earlier seven-parameter manuscripts, historical SAT evidence, and attributed literature imports retain their own provenance. Packaging and lightweight replay do not upgrade these guarantees.
+
+## Execute the same-input argument
+
+For a fixed original Q_m input X, with 6≤m≤10, define ambient source sets S=Src_R(m-1)(X), B=Src_B(m-2)(X), O=X\(S∪B). Put a=|S\B|, z=|B\S|, b=|S∩B|, p=|O|. Choose proved ordinary bounds u≥N(m,m-2,m-2), t≥N(m,m-2,m-1) for this same m.
+
+1. Prove the seam exclusions End_R(m-1)∩B=∅ and S∩End_B(m-2)=∅ on X. For K=S∩B∩End_R(m-2), the three-chain lemma gives each s∈K a unique actual lock q_s: every long red path ends at q_s and every long blue path has q_s as its second vertex. Owners may share a lock.
+2. For each distinct q in L={q_s:s∈K}, select its last owner s_q. Keep V_q, the set of **all** penultimate vertices of long red paths from s_q to q. The seam argument gives V_q⊆B\S; distinct locks have disjoint V_q. Do not replace the family by one representative path.
+3. Form Y=(O∪K∪⋃V_q)\L and I=(S∩B)\K inside the same X. Prove Y is an ordinary t-domain and I an ordinary u-domain, including induced weak avoidance. Then
+
+   δ=u+t-b-p=[u-|I|]+[t-|Y|]+Σ_q(|V_q|-1)+|L\O|≥0.
+
+4. Let R_m=binom(2m-7,m-4). The same output-state row catalogue gives point multiplicities m-2, m-3, 1, 1 in the four sectors above, each ordinary row having at most m-1 occupied states. Set ε=t-z and ρ=(m-1)R_m-|X|-(m-3)a-(m-4)z. Establish ε,ρ≥0 using the legal compressed slice and row theorem. The exact budget is
+
+   (m-2)|X|+ρ+ε+(m-3)δ=(m-1)R_m+(m-3)u+(m-2)t.
+
+The complete derivation and imports are in the [sector-deficit manuscript, §§1–3](../../../archive/nmrs-20261120/research/NMRS_SECTOR_DEFICIT_COROLLARIES_20261120.md); use the [macro portfolio](../../../archive/nmrs-20261120/research/NMRS_MACRO_PORTFOLIO_20261120.md) to compare the active bounds and the [eight-parameter common-budget proof](../../../archive/nmrs-20261120/research/N8_F298_ES299_20261120.md) for the extra step from Q8≤293 to Q8≤292. No step combines independently extremal realizations into one hypothetical input. After restricting X, recompute all source roles, locks, V_q and deficits; δ is not assumed monotone under deletion.
+
+## Consume equality and return the remaining obligation
+
+At m=9, u=222,t=380 give 7|X|+ρ+ε+6δ=7688 and Q_9≤1098 as a working corollary. A hypothetical 1098-point X has δ=0, z≥378 and at most two unsaturated rows. On this same X, |I|=222, |Y|=380, every lock lies in O, and each V_q is a singleton.
+
+At m=8, u=56,t=100 give 6|X|+ρ+ε+5δ=1762. The surviving 292-point scalar types force δ=0, |I|=56 and |Y|=100. The nine compressed faces of Y have total deficit 4: at least five faces reach 56 and at least 68 point ideals have equal upper/lower envelopes. This does not equate all pairwise path ranks. Different lock intervals supply 5|L|≤z, so the 19-lock scalar types disappear; the remaining types are not excluded.
+
+At m=10, ordinary-row propagation plus an integer obstruction to equality gives N(10,7,8)≤419, N(10,8,8)≤773 and N(10,8,9)≤1372, hence the working Q_10≤3978. This is a new analytical derivation, not a SAT-checker result.
+
+To improve the active bounds, return an actual-input inequality for ρ+ε+(m-3)δ. For example δ_8≥6 on every 289-point Q_8 input would imply Q_8≤288; δ_9≥11 on every 1089-point Q_9 input would imply Q_9≤1088. Both positive-deficit statements are open. Scalar feasible tables are not signotope constructions, and more equivalent scalar constraints do not close this gap.
+
+For fixed-width families, retain common height labels and holes before transporting a local inequality over all height subsets. Compare coefficients or integer envelopes against the same old seed with the same rounding. Such improvements need a separate connection to the active small-m diagonal bound.
+
+Return to the original prepare/route/prove/verify/handoff caller with the exact input domain, primary manuscript, import status, same-input construction, net change to the active bound, and remaining universal or computational obligation. Use happy-ending-certificate for a specified witness, certificate or encoding bridge; do not start old searches or independent review loops from this reference.
+
+---
+
+# Historical methods and certificates — 2026-11-17
 
 本参考整理 [2026-11-17 综合交接包](../../../archive/nmrs-20261117/HANDOFF.md) 从 $m=7$ 扩展到 $m=8,9$ 及一般受限容量族 $N(m,r,s)$ 的可执行方法、证据状态与调用边界。
 
@@ -45,4 +91,4 @@ $$C_m = N(m,m-1,m-1),\qquad Q_m = N(m,m-1,m),\qquad F_m = N(m,m,m),$$
 - **三列二次缺额：** $N(m,5,m-1)$ 相对二项式目录具有 $\sim n^2 / 12$ 量级的二次缺洞下界（[THREE-COLUMN-STRICT.md](../../../archive/nmrs-20261117/source/reports/n79-overlap-20261116/THREE-COLUMN-STRICT.md)）；
 - **四列三次缺额：** $N(m,6,m-2)$ 具有 $\sim n^3 / 80$ 量级的三次缺洞下界（[STRICT-FAMILY4.md](../../../archive/nmrs-20261117/source/reports/n79-overlap-20261116/STRICT-FAMILY4.md)、[LARGER-PARAMETER-BOUNDS.md](../../../archive/nmrs-20261117/source/reports/n79-overlap-20261116/LARGER-PARAMETER-BOUNDS.md)）。
 
-以上一般 $m$ 结论均为待独立审阅的工作证明，不认领 $m \ge 10$ 的统一显式 $\mathrm{ES}(m)$ 闭合上界。
+以上为11-17工作稿范围；11-20新增十参数实例与五列整族入口见本文前半部分及新HANDOFF，不把单个十参数实例写成全体m的统一公式。

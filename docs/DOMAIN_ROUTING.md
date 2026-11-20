@@ -13,6 +13,11 @@
 
 这里两个hypercube插件分别研究子图密度与匹配延拓；“都是超立方体”不构成互换证明的理由。多个插件共同参与时，由当前caller先固定对象之间的映射和要保持的性质，再组合返回结果。
 
+## Happy Ending / N(m,r,s) 的11-20同输入接口
+
+对m=8–10或固定宽度容量族，当前caller先读[同输入扇区缺额方法](../plugins/happy-ending/skills/mathrsi-happy-ending/references/nmrs-higher-bounds.md)，再取[原件交接](../plugins/happy-ending/archive/nmrs-20261120/HANDOFF.md)、[核验范围](../plugins/happy-ending/archive/nmrs-20261120/VERIFICATION.md)与[重放入口](../plugins/happy-ending/archive/nmrs-20261120/REPLAY.md)。这仍属于既有Happy Ending插件。
+
+route/prove交同一个实际Q_m输入及同参数普通进口u,t；领域返回最后业主的全部倒二点集合、合法Y/I子域、δ的四项非负分解、普通行ρ和切片ε，以及(m−2)n+ρ+ε+(m−3)δ的总预算。删点后重算源与锁，不假定δ单调。临界层饱和约束是同一输入的必要条件；标量可行表不充当signotope构造。当前Q8≤292、Q9≤1098、Q10≤3978是未独审/未接受的工作推论，独立整数证书的旧Q9≤1146路线仍单独保留。verify核全域桥、实际有限证据与解析稿各自范围；handoff按REPLAY区分新轻量复算和历史大证明checker回执。正缺额δ8≥6、δ9≥11仍是开放义务，不能按条件推论记为已证。
 ## v5 与 v6 的超立方体双插件深化
 
 Q7 Hamilton 延拓与无四环极值子图仍由现有两套超立方体插件承担，不增加第七个领域：

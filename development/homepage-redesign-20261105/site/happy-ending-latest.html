@@ -11,62 +11,48 @@
 <main class="wrap q7-reader he-latest-reader">
 <p class="p-eye">Happy Ending · Erdős–Szekeres &amp; ordered rank-3 signotopes</p>
 <h1>Restricted capacities N(m,r,s) and planar thresholds</h1>
-<p class="q7-lead">Path-avoiding signotope capacities across m = 7, 8, 9 and general m, combining replayed CNF+DRAT and native-trace integer dual certificates with structural working proofs.</p>
-<p class="q7-provenance">Run: pre-MathRSI Trellis + ARIS (through Nov 3) and Trellis + ARIS + MathRSI v3 (Nov 5–17) → integrated in v6 main maintenance.</p>
+<p class="q7-lead">November 20 update: same-input sector deficits give working ES(8) ≤ 294, ES(9) ≤ 1100 and ES(10) ≤ 3980. Independent mathematical review remains incomplete.</p>
+<p class="q7-provenance">Earlier runs: Trellis + ARIS through Nov 3; Trellis + ARIS + MathRSI v3 on Nov 5–17, subsequently integrated into v6 main maintenance. The new sector-deficit mathematics was proposed in the main research session; Sol/high transcribed it and checked text and links.</p>
+<p><a href="../../../plugins/happy-ending/archive/nmrs-20261120/HANDOFF.md">Current handoff ↗</a> · <a href="../../../plugins/happy-ending/archive/nmrs-20261120/VERIFICATION.md">Verification scope ↗</a> · <a href="../../../plugins/happy-ending/archive/nmrs-20261120/REPLAY.md">Replay instructions ↗</a> · <a href="../../../plugins/happy-ending/skills/mathrsi-happy-ending/references/nmrs-higher-bounds.md">Executable domain methods ↗</a></p>
 
-<h2>Objects and three-step assembly</h2>
-<p>On a complete ordered rank-3 signotope (every 4-tuple packet changes sign at most once), N(m,r,s) is the maximum number of elements avoiding blue r-vertex paths, red s-vertex paths and same-endpoint weak m-gons, while ES(m) is the planar general-position threshold forcing a convex m-gon. Write Cₘ = N(m,m−1,m−1), Qₘ = N(m,m−1,m), Fₘ = N(m,m,m), and let Dₘ denote the R7 residual capacity with junction exclusion (no element simultaneously ends a red (m−2)-path and starts a blue (m−3)-path; Dₘ cannot substitute for unconstrained N(m,m−2,m)). For m ≥ 6, disjoint H–R splitting (R7) gives Qₘ ≤ Cₘ + Dₘ, leftmost-pivot chart transport (R20) gives Fₘ = Qₘ + 1, and planar inclusion adds 1: ES(m) ≤ Fₘ + 1 ≤ Cₘ + Dₘ + 2.</p>
+<h2>Objects and the two additions</h2>
+<p>N(m,r,s) is the maximum population of a complete ordered rank-3 signotope avoiding blue r-vertex paths, red s-vertex paths and weak m: opposite-colour paths with the same actual endpoints and total length at least m+2. Path length counts vertices. Write Qₘ = N(m,m−1,m) and Fₘ = N(m,m,m). The R20 chart and reverse-extension manuscript gives Fₘ = Qₘ + 1; geometric inclusion then gives ES(m) ≤ Fₘ + 1. The junction-restricted residual Dₘ is a different capacity from ordinary N(m,m−2,m).</p>
 
-<h2>Results by setting</h2>
+<h2>Current analytical working bounds</h2>
 <table class="dd-setting-table e86-setting-table he-setting-table">
-<thead><tr><th scope="col">Setting</th><th scope="col">Key bounds</th><th scope="col">Verification &amp; manuscript scope</th></tr></thead>
+<thead><tr><th scope="col">Setting</th><th scope="col">Qₘ / Fₘ / ES(m)</th><th scope="col">Manuscript and import scope</th></tr></thead>
 <tbody>
-<tr><th scope="row">m = 7 (heptagons)</th><td><b>ES(7) ≤ 77</b> (working)</td><td>N(7,5,6) = 25 accepted (same-family/provisional) + 25-point E21 abstract witness &amp; DRAT ≤4 lock blocks replayed; analytic N(7,5,7) ≤ 39, N(7,6,6) ≤ 49 and 75/76 → 77 working proofs (vs. Schroeder v1 planar ≤ 81; review pending).</td></tr>
-<tr><th scope="row">m = 8 (octagons)</th><td><b>N(8,6,6) ≤ 61</b> · N(8,8,8) ≤ 318</td><td>milestone9 115-row CNF+DRAT replayed for N(8,6,6) ≤ 61 (exact matrix minimum 9). Schroeder’s 15-file omission trees replayed (193 / 124) + signotope packet bridge give working N(8,8,8) ≤ 318; planar ES(8) ≤ 319 is Schroeder’s published bound (autonomous fallback: 322 / 323).</td></tr>
-<tr><th scope="row">m = 9 (nonagons)</th><td><b>N(9,8,8) ≤ 688</b> · ES(9) ≤ 1148</td><td>Native-trace integer duals replayed in stdlib Python (zero float) for C₉ ≤ 688 (≥236 holes) and D₉ ≤ 458 (≥124 holes, matching the 47,635-row depth-≤3 LP ceiling). R7/R20 assembly gives working N(9,9,9) ≤ 1147 and ES(9) ≤ 1148 (vs. 1508 printed / 1501* planar reference; review pending).</td></tr>
-<tr><th scope="row">General m</th><td><b>2b − 1</b> · n²/12 · n³/80</td><td>Working coordinate-slice double-counting proofs for N(2p−3,p,p) ≤ 2b − 1 (p ≥ 4), quadratic 3-column deficits for N(m,5,m−1), and cubic 4-column deficits for N(m,6,m−2); no closed-form ES(m) claimed for m ≥ 10.</td></tr>
-</tbody>
-</table>
+<tr><th scope="row" data-no-i18n>m = 7</th><td data-no-i18n><b>≤75 / ≤76 / ≤77</b></td><td>Earlier joint replacement and common-root work, using the historical restricted b25 import.</td></tr>
+<tr><th scope="row" data-no-i18n>m = 8</th><td data-no-i18n><b>≤292 / ≤293 / ≤294</b></td><td>Global same-lock compensation and near-saturation exchange; ordinary 866 ≤ 56 has historical fixed-CNF DRAT evidence.</td></tr>
+<tr><th scope="row" data-no-i18n>m = 9</th><td data-no-i18n><b>≤1098 / ≤1099 / ≤1100</b></td><td>Same-input sector budget with ordinary u = 222, t = 380. Each bound is 48 below the previous 1146 / 1147 / 1148 working chain.</td></tr>
+<tr><th scope="row" data-no-i18n>m = 10</th><td data-no-i18n><b>≤3978 / ≤3979 / ≤3980</b></td><td>Ordinary-row propagation, an integer obstruction to equality, and the sector budget with u = 773, t = 1372.</td></tr>
+</tbody></table>
+<p class="q7-open"><b>Same-session / unreviewed / unaccepted</b><br><span>These analytical manuscripts make no optimality or priority claim. The independent review request returned no substantive mathematical opinion. There is no Lean formalization. Fixed-CNF checking, exact finite certificates and global mathematical reductions retain separate guarantees.</span></p>
+
+<h2>One input, four sources of deficit</h2>
+<p>On one actual Qₘ input X, let S and B be the long red and blue source sets, O their common complement, and b = |S ∩ B|, p = |O|. For ordinary capacity bounds u and t at the same m, keep every possible penultimate vertex Vq of the last owner of each distinct lock q. The proof constructs actual ordinary subdomains I and Y on this same X.</p>
+<p class="dd-latest-order" data-no-i18n>δ = u + t − b − p = (u − |I|) + (t − |Y|) + Σq(|Vq| − 1) + |L ∖ O| ≥ 0</p>
+<p>The four terms charge two actual short-cap deficits, extra penultimate choices, and locks outside O. Owners may share locks; distinct locks have disjoint penultimate sets. Keeping all paths is essential. Deleting vertices requires recomputing sources, locks and deficits.</p>
+<p class="dd-latest-order" data-no-i18n>(m − 2)|X| + ρ + ε + (m − 3)δ = (m − 1) binom(2m − 7, m − 4) + (m − 3)u + (m − 2)t</p>
+<p>Here ρ is total ordinary-row slack and ε is the one-blue-source slice deficit. Both are nonnegative. The same-input budget turns compatible path structure into population loss without combining unrelated extremal realizations.</p>
 
 <div class="dd-latest-results e86-cards he-cards">
-<article>
-<h2>m = 8 · shared-label CEGAR</h2>
-<p class="dd-latest-order">N(8,6,6) ≤ 61</p>
-<p>In the 4 × 4 box of 70 states, 63 six-order box chains and 30 shared-pivot rows give 93 baseline rows (≤ 62). Adding 11 DRAT-verified shared-label CEGAR kernels (plus transposes = 115 rows) makes budget 8 UNSAT, forcing at least 9 holes.</p>
-<p>A 9-hole hitting vector intersects all 115 rows, proving this matrix relaxation peaks at 9 (a matrix witness, not a 61-point signotope).</p>
-</article>
-<article>
-<h2>m = 9 · native boundary traces</h2>
-<p class="dd-latest-order">ES(9) ≤ 1148</p>
-<p>Self-contained integer duals (Λ = 10⁶) prove ≥ 236 holes in 924 states (C₉ = N(9,8,8) ≤ 688) and ≥ 124 holes in 582 restricted states (D₉ ≤ 458, where a rational vector of sum 123,539,833 / 10⁶ ≤ 124 satisfies all 47,635 depth-≤3 rows).</p>
-<p>R7 and R20 assembly gives working bounds Q₉ ≤ 1146, F₉ ≤ 1147 and ES(9) ≤ 1148, below Mojarrad–Vlachos (2016) 1508 and the 1501* (= 924 + 575 + 2) planar reference.</p>
-</article>
+<article><h2>Equality constrains the same points</h2><p>At m = 9 and 1098 points, δ = 0 and at most two rows are unsaturated; two actual subdomains simultaneously reach 222 and 380. At the surviving m = 8, 292-point scalar types, they reach 56 and 100; at least five compressed faces of the latter reach 56 and at least 68 point ideals have equal envelopes.</p></article>
+<article><h2>Positive deficits are still open</h2><p>Proving δ8 ≥ 6 for every 289-point Q8 input would give Q8 ≤ 288; proving δ9 ≥ 11 for every 1089-point Q9 input would give Q9 ≤ 1088. Neither statement is proved. The ordered-interval inequality 5|L| ≤ z excludes the 19-lock m = 8 scalar types, while other scalar types remain unresolved.</p></article>
 </div>
 
-<h2>Heptagon and octagon structure notes</h2>
+<h2>Certificates and earlier contributions retain their scope</h2>
 <ul>
-<li><b>Heptagons (m = 7):</b> Owner-interval summation rules out 40 points to give N(7,5,7) ≤ 39 without CNF, and alternating endpoint-cycle exclusion gives N(7,6,6) ≤ 49. Because known global interfaces still take min{3b, C + b + 5, A + C − 1, ⌊9A/4⌋, ⌊9C/5⌋} = 75 at b = 25, pushing past N(7,6,7) ≤ 75 turns to joint transversal cost: DRAT verification rules out 5 ordered common lock blocks (at most 4 blocks), and any 74-point candidate must carry at least 5 clean roots in one global port flow.</li>
-<li><b>Octagons (m = 8):</b> Coordinate-slice propagation from N(8,4,8) = 22 (Baek) and N(8,6,6) ≤ 61 yields working bounds N(8,5,7) ≤ 51, N(8,5,8) ≤ 66, N(8,6,7) ≤ 109 and N(8,6,8) ≤ 165. Replaying Schroeder’s 15-file public finite omission trees confirms C₈ ≤ 193 and D₈ ≤ 124; paired with our cyclic-sign packet bridge (pending independent review), this lifts to signotope N(8,8,8) ≤ 318, while planar ES(8) ≤ 319 remains Schroeder’s published preprint bound.</li>
+<li>Historical b25 acceptance and the checked E21 25-point abstract lower witness are separate evidence. TB-scale historical proof bodies are external; the abstract witness supplies no geometric realization.</li>
+<li>Ordinary 866 ≤ 56 has historical complete DRAT and same-byte CNF rebuilding evidence; ordinary 858 uses the sealed ≤64 result. The ≤63 attempt remains pending. Lightweight replay does not rerun these large proof bodies.</li>
+<li>Earlier native-trace integer duals retain C9 ≤ 688, D9 ≤ 458 and the 47,635-row depth-≤3 LP ceiling. Their 1146 / 1147 / 1148 working assembly remains an independent route with its own mathematical imports.</li>
+<li>The earlier 115-row milestone9 certificate proves ordinary 866 ≤ 61. Its nine-hole vector is a matrix witness, not a 61-point signotope. Schroeder's 15-file octagon omission trees and planar ES(8) ≤ 319 keep their original attribution; the project's abstract transfer bridge is a separate working manuscript.</li>
 </ul>
-
-<p class="q7-open"><b>Assurance boundaries &amp; open targets</b><br><span>Five finite suites (native-trace 688 &amp; 458 + 47,635-row ceiling, milestone9 N(8,6,6) ≤ 61 CNF+DRAT, Schroeder’s 15-file omission trees, m = 7 five-lock-block DRAT, and the 25-point E21 abstract witness) are replayed directly in-repo. All structural, cyclic-sign transfer, and R7/R20 assembly manuscripts remain working proofs pending independent mathematical review, and there is no Lean formalization. Unconditional N(7,6,7) ≤ 74, whether N(8,6,6) drops below 61, and depth-≥4 or shared-label improvements beyond D₉ ≤ 458 remain open.</span></p>
-
-<h2>Certificate architecture &amp; workflow refinements</h2>
-<section class="q7-schematic e86-loop" aria-label="Generative sparse dual and relaxation ceiling schematic">
-<div><b>Parameterized traces</b><span>reconstruct rows from (q, p, inc, exc, weight)</span></div>
-<span aria-hidden="true">→</span>
-<div><b>Integer {0,1} dual</b><span>check D − P &gt; (H − 1)Λ with zero floating point</span></div>
-<span aria-hidden="true">⇄</span>
-<div><b>Ceiling check</b><span>halt matrix tightening when dual meets feasible primal</span></div>
-</section>
-<ol>
-<li><b>Stop when a relaxation hits its exact ceiling:</b> When an integer/DRAT dual lower bound meets an exact relaxation-feasible witness at the same integer (the 9-hole hitting vector for the 115-row N(8,6,6) matrix, or the 47,635-row rational vector for depth-≤3 D₉), stop searching inside that relaxation and add shared-label or geometric constraints instead.</li>
-<li><b>Ship generative sparse integer duals:</b> Store only nonzero-weight row parameters (q, p, inc, exc, weight) so a compact standard-library checker rebuilds every used trace row and integer overload penalty P = ∑ max(0, ℓ − Λ) without bundling multi-hundred-megabyte LP matrices.</li>
-</ol>
-
-<h2>Runnable checks &amp; archive layout</h2>
-<p>The curated in-repo archive (plugins/happy-ending/archive/nmrs-20261117/, 955 files, 48.18 MiB, max single file 9.56 MiB, zero Git LFS) preserves all manuscripts, small helper libraries, acceptance receipts and all five replayable certificate suites byte-for-byte; duplicate pre-rendered HTMLs and exploratory ≥2 MiB CNF/DRAT artifacts stay in the external NMRS-results-20261117(1).zip and are listed with SHA-256 digests in INVENTORY.json.</p>
-<p><a href="../../../case-studies/happy-ending/n7-20261103/START_HERE.html">Earlier m = 7 reader (ES(7) ≤ 77) ↗<span class="source-language" data-no-i18n>中文</span></a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/case-studies/happy-ending/README.md">Case summary &amp; verification table ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/tree/main/plugins/happy-ending">Happy Ending plugin &amp; checkers ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/docs/V6_CHANGES.md#happy-ending-nmrs-follow-up--2026-11-17">v6 maintenance notes ↗</a></p>
+<h2>General families and replay</h2>
+<p>The new portable checker, its negative control and final repository/site checks are prepared but unexecuted on Linux because the authoritative server was unreachable. Historical successful receipts remain separate.</p>
+<p>Three-, four- and five-column methods transport common height labels and holes over all height subsets. Compare a new coefficient or integer envelope with the same old seed and rounding. A large-height fixed-width gain does not automatically improve a small-m diagonal bound.</p>
+<p>Use the current replay instructions for the exact commands, dependencies, actual receipts and omitted large evidence. Text checks, finite replay and repository packaging do not upgrade the analytical manuscripts to independently accepted theorems.</p>
+<p><a href="../../../plugins/happy-ending/archive/nmrs-20261117/HANDOFF.md">November 17 archive and certificate suites ↗</a> · <a href="../../../case-studies/happy-ending/n7-20261103/START_HERE.html">Earlier m = 7 reader ↗<span class="source-language" data-no-i18n>中文</span></a> · <a href="../../../case-studies/happy-ending/README.md">Case guide ↗</a></p>
 <p><a href="index.html#evolution">Back to evolution ↑</a> · <a href="index.html#results">Back to results ↑</a></p>
 </main>
 </body></html>

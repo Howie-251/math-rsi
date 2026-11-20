@@ -7,6 +7,9 @@ description: 独立核验25点signotope染色、九洞共享标签证书（N(8,6
 
 本技能接base verify或领域prove的一条准确义务，返回原caller，不另启动全证审计。输入为原规格、完整颜色/坐标或CNF与证书绑定、待核命题、允许进口、输出目录和返回点。先读[领域定义](../mathrsi-happy-ending/SKILL.md)及[证据边界](../mathrsi-happy-ending/references/failures-and-evidence.md)。恢复只查上次未完成的输入/检查，不重跑历史SAT或将模型UNKNOWN作不存在。
 
+## 2026-11-20 扇区缺额与新证据入口
+
+处理更强的Q8≤292、Q9≤1098、Q10≤3978工作链时，先读[当前VERIFICATION](../../archive/nmrs-20261120/VERIFICATION.md)和[REPLAY](../../archive/nmrs-20261120/REPLAY.md)，按[领域方法](../mathrsi-happy-ending/references/nmrs-higher-bounds.md)逐箭头核同一输入的Y/I、全部V_q、δ四项分解与ρ/ε预算。解析推论未独审/未接受。新轻量复算只核实际执行的谓词；866≤56、858≤64的历史DRAT与同字节重建回执单独列示，未随包的大证明不记为本次重放，858≤63仍待成功checker。旧9洞、原生迹对偶与55单元证据保留原范围，不将固定公式UNSAT升级为任意原输入的覆盖。
 ## 1. 验证一个显式25点抽象下界
 
 当前仓库有实际2300行TSV，0蓝1红，顶点1…25。薄checker只读TSV，以标准库独立重建全部路径长度及状态，不导入旧SAT辅助变量。仓库根可直接运行：

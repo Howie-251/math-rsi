@@ -57,7 +57,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **Degree–Diameter：** 四组展示参数的构造： $(10,4)$ 为 2,567 点； $(11,5)$ 为 37,632 点； $(12,5)$ 为 42,433 点； $(16,4)$ 为 16,416 点。[构造、日期比较与核验范围](case-studies/degree-diameter/README.zh-CN.md)
 - **Erdős 第 86 题：** $Q_7$ 为 $304$（304 边构造已验证；304 上界按原包报告，本次未复验），$682\le\mathrm{ex}(Q_8,C_4)\le683$，渐近密度上界从 $0.60318$ 推进至 $\le0.5912405943$（`T3`）／$\le0.5912405942$（`T4`）。[结果与核验范围](case-studies/erdos-86/README.md)
 - **Ruskey–Savage：** $Q_6$ 的每个匹配、$Q_7$ 中至少 56 条边的每个匹配（完整 E16，涵盖全部 $\mu\in\{0,1,2,3,4\}$）均可延拓为 Hamilton 圈。[成果、方法与开放范围](case-studies/README.md#ruskeysavage-q6)
-- **Happy Ending 与 $N(m,r,s)$：** 已复核 CNF+DRAT 与原生边界迹整数对偶给出 $N(8,6,6)\le 61$ 及 $N(9,8,8)\le 688, D_9\le 458$；结合待独立审阅的结构工作手稿，给出 signotope $N(8,8,8)\le 318$（平面 $\mathrm{ES}(8)\le 319$ 为 Schroeder 上界）与平面工作推论 $\mathrm{ES}(7)\le 77$、$\mathrm{ES}(9)\le 1148$（对比 $1508$ / $1501^*$）。[成果与状态](case-studies/happy-ending/README.md)
+- **Happy Ending 与 $N(m,r,s)$：** 新同输入扇区缺额工作稿给出平面工作推论 $\mathrm{ES}(7)\le77$、$\mathrm{ES}(8)\le294$、$\mathrm{ES}(9)\le1100$、$\mathrm{ES}(10)\le3980$；独立数学审阅尚未完成。先前可重放的有限证书保留各自范围与来源。[现值、证据与复现](plugins/happy-ending/archive/nmrs-20261120/HANDOFF.md) · [案例导读](case-studies/happy-ending/README.md)
 
 <a id="三层架构"></a>
 

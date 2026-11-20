@@ -21,3 +21,6 @@ renderer作为原件保留，不是新任务默认命令。根renderer可能查�
 ## 2026-11-17 增量：N(m,r,s) 七、八、九参数与一般 m 综合交接包
 
 `nmrs-20261117/` 从完整交付包 `NMRS-results-20261117(1).zip`（1,608 文件，269.89 MiB）中逐字节原样收录 **955 份文件（48.18 MiB，单文件最大 9.56 MiB）**，详见 [nmrs-20261117/README.md](nmrs-20261117/README.md) 与 [nmrs-20261117/INVENTORY.json](nmrs-20261117/INVENTORY.json)。主交接文档 [nmrs-20261117/HANDOFF.md](nmrs-20261117/HANDOFF.md) 的全部 125 处本地相对链接均在本目录内完整可达；全部五套有限证书（`run-988-d2`、`run-d9-d3` 含 `fractional-grid.json`、`milestone9`、`octagon-source-replay/finite-inputs.zip`、`lock-blocks/q5` 与 `E21/color.tsv`）均随仓保留并经跨平台核验通过。仅省略预渲染 `reading/*.md.html`、`milestone9.tgz` 重复包及 $\ge 2\text{ MiB}$ 的中间探索 `.cnf/.drat/tmp` 文件（SHA-256 完整登记于 `INVENTORY.json`）。源包中 22 次外部 `claude-review-deep` CLI 调用均因宿主机返回 `exit_code=1, tool_calls=0` 未完成，所有新增结构与装配稿如实保持 `unreviewed / unaccepted` 工作证明状态。
+## 2026-11-20 增量：同输入扇区缺额与八至十参数工作推论
+
+当前入口：[nmrs-20261120/HANDOFF.md](nmrs-20261120/HANDOFF.md) · [VERIFICATION](nmrs-20261120/VERIFICATION.md) · [REPLAY](nmrs-20261120/REPLAY.md)。本增量保存11月18–20日解析工作稿、必要进口与精选有限证据，当前工作链为Q8/F8/ES8≤292/293/294、Q9/F9/ES9≤1098/1099/1100、Q10/F10/ES10≤3978/3979/3980；新解析稿仍未独审、未接受，原11-17证书与1146/1147/1148独立路线保留各自范围。原件与公开摘录的转换、遗漏大证据及路径绑定以新目录的INVENTORY与SOURCE_MAP为准；不把摘录、轻量复算或历史大证明checker回执混写为本次完整重放。
