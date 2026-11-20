@@ -27,3 +27,12 @@ The portable E38 replay compiles both original C++ enumerators. One uses cube sy
 The upstream audit classifies the full theorem as a working proof with imported results. The lite package omits some earlier rank and enumeration payloads. Access to the final replay alone therefore establishes only the finite E38 exclusion. Independent external refereeing and a full Lean formalization remain outstanding. The seven-dimensional prescribed-endpoint path theorem and dimension-independent extension with seven active directions remain separate questions.
 
 [Replay and recorded results](../../../plugins/hypercube-hamilton/archive/q7-closure/README.md) · [Earlier dependency inventory](../../../plugins/hypercube-hamilton/archive/q7-closure/verification/DEPENDENCIES.json)
+
+## Review of the integration
+
+Gemini 4 Carbon read the proof guide, layer acceptances and verification instructions, then discussed whether the proposed conclusion supplies specified endpoints. Its reading highlighted two distinctions that affect reuse.
+
+- The dense proof combines literature imports (including the matching-connectivity rank bound) with project-local results (the six-dimensional endpoint theorem, local five-dimensional rank checks and the E-series). Some older layers use CNF/RUP certificates. The E26 middle-branch review reports independent recomputation of 818 of 1,198 kernel sources and source/author records for the rest. The portable E38 replay covers the new geometric exclusion in full. [Proof appendices A15–A23](../../../plugins/hypercube-hamilton/knowledge/q7-closure-proof.md#appendix-15)
+- A cycle can be opened at one of its own edges. For prescribed endpoints three cube steps apart there is no such edge. Even adjacent endpoints need care when the target already belongs to the matching: adding the root–target edge can break the matching condition. This explains why the higher-dimensional lifting argument still requires the seven-dimensional prescribed-endpoint path theorem. [Domain routing](../../../docs/DOMAIN_ROUTING.md)
+
+Carbon also questioned which inventory the upstream lite helper reads. The copy used by that helper and the retained manifest in the supplied archive are byte-for-byte identical (47,772,732 bytes each). Their filenames cause no coverage difference in this snapshot. The independent checks run for this integration were the two C++ enumerations and the geometric consumer described above. The model discussion was a static reading.
