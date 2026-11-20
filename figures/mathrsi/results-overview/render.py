@@ -42,12 +42,12 @@ def render(lang):
    t(X(.5),y+222,'0.5',15,anchor='middle');t(X(.5912405943),y+179,'T3/T4',14,c,600,'end');t(X(.60318)+4,y+222,'参考' if z else 'prior',15,anchor='middle')
    t(x,y+254,'T4 ≤ 0.5912405942 · 猜想值 1/2 开放' if z else 'T4 ≤ 0.5912405942 · Conjecture 1/2 open',15)
   elif key=='q6':
-   t(x,y+56,'Q₆ 中每一个匹配' if z else 'Every matching in Q₆',21,'#0B1220',600)
-   t(x,y+82,'均可扩展为 Hamilton 圈' if z else 'extends to a Hamilton cycle',19,c,600)
-   t(x,y+126,'Q₇ 中每个至少 56 边的匹配（完整 E16）' if z else 'Every Q₇ matching with ≥56 edges (E16)',19,'#0B1220',600)
-   t(x,y+152,'均可扩展为 Hamilton 圈，' if z else 'extends to a Hamilton cycle containing',18,c,600)
-   t(x,y+178,'且保留匹配的每一条指定边。' if z else 'every prescribed matching edge.',18,c,600)
-   t(x,y+218,'≤55 边与完整 Q₇ 猜想仍开放' if z else '≤55 edges & full Q₇ conjecture open',16)
+   t(x,y+52,'Q₇ · 任意匹配' if z else 'Q₇ · every matching',23,'#0B1220',600)
+   t(x,y+82,'均可扩展为保留原边的 Hamilton 圈' if z else 'extends to a Hamilton cycle, keeping every edge',17,c,600)
+   t(x,y+117,'128 个顶点 · 空匹配至完美匹配' if z else '128 vertices · empty to perfect matchings',17)
+   t(x,y+153,'完整作者工作证明 · 2026-11-19' if z else 'Full author working proof · 2026-11-19',17,'#0B1220',550)
+   t(x,y+183,'待外部同行评议 · 无 Lean' if z else 'External peer review pending · no Lean',16)
+   t(x,y+221,'保留 Q₆ 全称定理' if z else 'Universal Q₆ theorem retained',18,c,550)
    t(x,y+256,'亦含任意维 ≤6 方向推论（引用结果）' if z else 'Also ≤6 directions in Qₙ (imported results)',15)
   else:
    t(x,y+50,'Signotope 容量与平面阈值 (m = 7, 8, 9)' if z else 'Signotope capacities & thresholds (m = 7–9)',17,'#0B1220',550)

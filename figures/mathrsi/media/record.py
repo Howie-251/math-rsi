@@ -19,11 +19,11 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 SITE = ROOT / 'development/homepage-redesign-20261105/site'
-CACHE = ROOT / '.local/evolution-media-v6-nmrs-20261117'
+CACHE = ROOT / '.local/evolution-media-v6-q7-20261120'
 FPS = 50
 CLOCK_RATE = 0.80  # Browser-clock milliseconds per encoded-video millisecond (exact 16ms rAF step per 50fps frame).
 OPENING_SECONDS = 0.5
-FINAL_SECONDS = 3.5
+FINAL_SECONDS = 5.5
 VIEWPORT_WIDTH = 2000
 GIF_WIDTH = 1400
 GIF_FPS = 50
@@ -88,7 +88,7 @@ def capture(preview=False):
                                     device_scale_factor=1, reduced_motion='no-preference')
             page.on('pageerror', lambda e: errors.append(str(e)))
             page.on('requestfailed', lambda r: failed_requests.append({'url': r.url, 'error': r.failure}))
-            fixed = datetime(2026, 11, 16, tzinfo=timezone.utc)
+            fixed = datetime(2026, 11, 20, tzinfo=timezone.utc)
             page.clock.install(time=fixed)
             page.clock.pause_at(fixed + timedelta(milliseconds=1024))
             page.goto(f'http://127.0.0.1:{server.server_port}/development/homepage-redesign-20261105/site/index.html')
@@ -210,9 +210,9 @@ def capture(preview=False):
             assert not final['textOverflows'], final['textOverflows']
             assert all(final[k]['visible'] and float(final[k]['opacity']) == 1 for k in ['q7_v5','dd','e86_v6','q7_v6','he_v6']), final
             assert all(line in final['e86_v6']['text'] for line in ['Q₇ 304 · Q₈ 682–683','Q∞ ≤ 0.5912405943']), final['e86_v6']
-            assert 'Q₇ · ≥56 edges' in final['q7_v6']['text'], final['q7_v6']
+            assert 'Q₇ · every matching' in final['q7_v6']['text'], final['q7_v6']
             assert 'N(8,6,6) ≤ 61 · ES(9) ≤ 1148' in final['he_v6']['text'], final['he_v6']
-            assert len(final['v6Blocks']) == 23 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
+            assert len(final['v6Blocks']) == 24 and all(b['opacity'] == 1 for b in final['v6Blocks']), final
             assert max(final[k]['box']['bottom'] for k in ['e86_v6','q7_v6','he_v6']) < min(b['box']['top'] for b in final['v6Blocks']), final
             for rect in [final['q7_v5']['box'], final['dd']['box'], final['e86_v6']['box'], final['q7_v6']['box'], final['he_v6']['box'], final['currentRow'], final['futureRow'], *[b['box'] for b in final['v6Blocks']]]:
                 assert 0 <= rect['left'] < rect['right'] <= VIEWPORT_WIDTH and 0 <= rect['top'] < rect['bottom'] <= height, rect
@@ -242,7 +242,7 @@ def capture(preview=False):
             'source': str((SITE/'index.html').relative_to(ROOT)),
             'source_commit': subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'], text=True).strip(),
             'source_working_tree_changes': subprocess.check_output(['git','-C',str(ROOT),'diff','--name-only','HEAD','--',str(SITE)], text=True).splitlines(),
-            'source_revision_note': 'Recorded the named HEAD with the listed presentation edits; the handoff commit contains the exact source used.',
+            'source_revision_note': 'Recorded the named HEAD with the listed presentation edits; the handoff commit contains the native app.js animation source used.',
             'current_version': current, 'expected_versions': expected,
             'capture': 'Actual Chromium Replay animation; deterministic browser clock; PNG frames to H.264',
             'recording_only_changes': 'Isolate evolution; hide detailed Base/Plugins rows and panel; enlarge version labels and v5/v6 headlines; preserve all eight columns (v0..v6 and v7+). Product JS/CSS/data unchanged.',
@@ -256,7 +256,7 @@ def capture(preview=False):
             'page_errors': errors, 'failed_requests': failed_requests,
             'exports': metadata, 'poster_resolution': [VIEWPORT_WIDTH, height],
             'intermediates': str(CACHE.relative_to(ROOT)),
-            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All 22 v6 outcome blocks are opaque, inside the crop and below both v6 bubble surfaces with zero text overflow.'
+            'verification': 'MP4 final frame decoded as poster; last GIF frame decoded separately; 900px README preview rendered. All 24 v6 outcome blocks are opaque, inside the crop and below all three v6 bubble surfaces with zero text overflow. Q7 full author working proof is shown, preserving E16 and earlier results as timeline milestones.'
         }
         (OUT/'RECORDING.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n')
         log('complete', duration_seconds=receipt['duration_seconds'], exports=metadata)

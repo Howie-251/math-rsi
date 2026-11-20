@@ -8,7 +8,7 @@
 
 </div>
 
-[![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-nmrs-20261117)](figures/mathrsi/media/evolution.mp4?v=6-nmrs-20261117)
+[![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-q7-20261120)](figures/mathrsi/media/evolution.mp4?v=6-q7-20261120)
 
 *真实主页 v0 → v6 演进回放，末尾停留 v6 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/) · [六个数学案例与核验范围](case-studies/README.md)。*
 
@@ -50,13 +50,13 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 六个领域的研究同时积累数学结果和可复用方法。[公开主页](https://lisresearchgroup.github.io/math-rsi/) · [本地运行方法](docs/HOMEPAGE.md)。**[中英可视化导览](https://lisresearchgroup.github.io/math-rsi/)**展示问题、成果与演进；**[六题统一索引](case-studies/README.md)**连接证明、核验范围和可运行工具。
 
-[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg?v=6-nmrs-20261117)](case-studies/README.md)
+[![六题数学成果速览](figures/mathrsi/results-overview/results-overview.zh.svg?v=6-q7-20261120)](case-studies/README.md)
 
 - **Property B：** $k=5,\ldots,12$ 的具体下界，以及所有 $k\ge12$ 随参数指数增长的加性增益。[成果与证明范围](case-studies/property-b/README.md)
 - **纠错码：** 闭合三组 1985 年已有的缺口，得到四组精确距离（含一项文献推论）并收窄一组区间。[结果、方法与开放参数](case-studies/README.md#error-correcting-codes)
 - **Degree–Diameter：** 四组展示参数的构造： $(10,4)$ 为 2,567 点； $(11,5)$ 为 37,632 点； $(12,5)$ 为 42,433 点； $(16,4)$ 为 16,416 点。[构造、日期比较与核验范围](case-studies/degree-diameter/README.zh-CN.md)
 - **Erdős 第 86 题：** $Q_7$ 为 $304$（304 边构造已验证；304 上界按原包报告，本次未复验），$682\le\mathrm{ex}(Q_8,C_4)\le683$，渐近密度上界从 $0.60318$ 推进至 $\le0.5912405943$（`T3`）／$\le0.5912405942$（`T4`）。[结果与核验范围](case-studies/erdos-86/README.md)
-- **Ruskey–Savage：** $Q_6$ 的每个匹配、$Q_7$ 中至少 56 条边的每个匹配（完整 E16，涵盖全部 $\mu\in\{0,1,2,3,4\}$）均可延拓为 Hamilton 圈。[成果、方法与开放范围](case-studies/README.md#ruskeysavage-q6)
+- **Ruskey–Savage：** 完整作者工作证明覆盖 $Q_7$ 的任意匹配（包括空匹配与完美匹配），保留 $Q_6$ 全称结果；待外部同行评议，无 Lean。[证明、局部复算与版本历史](case-studies/ruskey-savage-q7/README.md)
 - **Happy Ending 与 $N(m,r,s)$：** 已复核 CNF+DRAT 与原生边界迹整数对偶给出 $N(8,6,6)\le 61$ 及 $N(9,8,8)\le 688, D_9\le 458$；结合待独立审阅的结构工作手稿，给出 signotope $N(8,8,8)\le 318$（平面 $\mathrm{ES}(8)\le 319$ 为 Schroeder 上界）与平面工作推论 $\mathrm{ES}(7)\le 77$、$\mathrm{ES}(9)\le 1148$（对比 $1508$ / $1501^*$）。[成果与状态](case-studies/happy-ending/README.md)
 
 <a id="三层架构"></a>
@@ -92,6 +92,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 - **v6 通用流程：** 采纳新分类前，先在最难的未闭合分支上做小规模试探，并在同一输入上统计新增覆盖；上下界协同搜索中把证明目标与对抗搜索目标分开，轮换四路归一化带符号残差，并在全部历史构造上检验候选不等式；当浮点 SDP 或完全正规划的单轮增益不高于有理化修补误差时及时停机。
 - **深化领域插件：** `hypercube-extremal` 新增渐近 COP + $m=1024$ 广义度数势上界（`T3` / `T4`）、同一子图耦合三组测度的有限维拉回（$Q_8 \le 683$）、$Q_7$ 304 边构造与原包报告归档，以及可复用的 `cube_coevolve` 引擎；`hypercube-hamilton` 完成 $Q_7$ 完整 E16（$\ge 56$ 边，涵盖全部 $\mu=0..4$），加入参数化 $Q_6$ $\Delta=2$ 双桥、$Q_6$ $A_8$ 及大面 $S_6$ 独立孔表与小面符号原孔的组合建模；`happy-ending` 新增 $m=7,8,9$ signotope 受限容量的跨平台核验器与精选归档（$N(8,6,6)\le 61$ 共享标签 CEGAR、$N(9,8,8)\le 688$ 与 $D_9\le 458$ 参数化稀疏整数对偶及松弛封顶停机判据；由 **Trellis + ARIS + v3** 做出，并入主线维护，固定 `v6` 标签不变）。
+- **Q₇ 后续维护 · 2026-11-20：** `main` 吸收原项目 11 月 19 日接受的完整 R7 作者工作证明。研究使用 v3 本地适配；固定 v5（≥57 边）与 v6（≥56 边）快照不变。[证明导读](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/knowledge/q7-closure-proof.md) · [复算范围](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-closure/README.md)
 - **延续既有能力：** 保留 v5 的受控辅助选择、跨等价表示复用定理、先消化返回结果再派发新任务，以及 v4 的把取等情形收成可用见证、全局进展重评和 ECC 分支计算共享。
 
 **[v6 是 `main` 分支的当前工作流](docs/V6_CHANGES.md)。** 可直接下载 [v6 快照 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) 或 [`main` ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆仓库使用。`v1`–`v6` 各版本标签均作为固定快照保留；需要严格复现某次运行时请记录对应 commit。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)

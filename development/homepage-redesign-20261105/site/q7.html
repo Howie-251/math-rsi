@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Q7 dense matchings · MathRSI</title>
+<title>Q7 every matching · MathRSI</title>
 <link rel="stylesheet" href="styles.css">
 <script defer src="zh-CN.js"></script><script defer src="i18n.js"></script>
 </head>
@@ -10,33 +10,33 @@
 <header class="nav"><div class="wrap nav-in"><a class="brand" href="index.html#top"><img class="nav-symbol" src="../../../figures/mathrsi/branding/mark-c-light.png" width="1774" height="887" alt="" aria-hidden="true"><span>MathRSI</span></a><div class="language-switch" role="group" aria-label="Language / 语言" data-no-i18n><button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="zh-CN">中文</button></div></div></header>
 <main class="wrap q7-reader">
 <p class="p-eye">Ruskey–Savage · Q7 research</p>
-<h1>Hamilton cycles for dense matchings in Q₇</h1>
-<p class="q7-lead">Every matching with at least 56 edges in Q₇ extends to a Hamilton cycle containing every prescribed edge.</p>
-<p class="q7-provenance">Run: v3 (local adaptation) + hardest-branch E16 probes → methods inform v5 &amp; v6.</p>
-<section class="q7-schematic" aria-label="Theorem schematic"><div><b>128</b><span>vertices of Q₇</span></div><span aria-hidden="true">→</span><div><b>≥56</b><span>prescribed disjoint edges</span></div><span aria-hidden="true">→</span><div><b>1</b><span>all-vertex cycle retaining those edges</span></div></section>
-<h2>What is established</h2>
-<ul>
-<li>All matchings with at least 58 edges: complete dense layers (E12) and algebraic construction tools.</li>
-<li>All matchings with at least 57 edges: the 14-hole assembly (E14) and denser layers form the v5 theorem.</li>
-<li>All matchings with at least 56 edges (complete E16): closes adjacent-hole augmentation and all five independent 16-hole parity classes μ ∈ {0, 1, 2, 3, 4} (parity and weight bounds rule out μ ≥ 5), by a computational argument reviewed in the same model family and depending on the listed baseline imports; independent refereeing is pending and there is no Lean formalization.</li>
-</ul>
-<p>Here μ is the minimum absolute parity-hole difference across the seven coordinate splits; the five μ classes are separate structural cases.</p>
-<p class="q7-open"><b>Still open</b><br><span>Matchings with at most 55 edges (even hole layers 18–38), the full Q₇ conjecture, free-root paths P₇ and seven-direction lifting in Qₙ remain open.</span></p>
-<h2>How the argument works</h2>
-<p>A compressed auxiliary pairing can fall outside the old P6 theorem's input domain. Controlled donor pairings (v5) steer the auxiliary pairing into the valid interface for the next proof step, and return bridges restore all prescribed edges.</p>
-<p>To close the hardest 56-edge remainder (v6), candidate case splits were tested on the hardest open branch first rather than dispatching easy sub-slices. The final closure combines a parameterized Q₆ Δ=2 double bridge, the 41-orbit Q₆ A₈ theorem, joint even/odd CNF+DRUP pairs for μ=3, and S₆ large-face independent-hole tables (189 rows for μ=0, 23 rows for μ=1) paired with symbolic small-face holes after removing five incompatible inner-axis ordering constraints (100,055 − 5 + 1 = 100,051 constraints).</p>
-<h2>Methods distilled into v5 and v6</h2>
+<h1>Every matching in Q₇ extends</h1>
+<p class="q7-lead">The complete author working proof covers every ordinary short-edge matching in Q₇, including empty and perfect matchings. One Hamilton cycle visits all 128 vertices and contains every prescribed edge.</p>
+<p class="q7-provenance">Source proof accepted 2026-11-19 · MathRSI v3 local adaptation → v6 main follow-up, 2026-11-20.</p>
+<section class="q7-schematic" aria-label="Theorem schematic"><div><b>128</b><span>vertices of Q₇</span></div><span aria-hidden="true">→</span><div><b>0–64</b><span>prescribed disjoint edges</span></div><span aria-hidden="true">→</span><div><b>1</b><span>all-vertex cycle retaining those edges</span></div></section>
+<h2>How every matching is covered</h2>
 <ol>
-<li>Steer legal auxiliary choices to match the next theorem's interface, and apply new family theorems across all valid coordinate splits before assigning residual work (v5).</li>
-<li>Test candidate classifications with bounded probes on the hardest open branch, measuring net-new coverage on the same original input (v6).</li>
-<li>Drop incompatible symmetry-breaking constraints whenever one side of a joint model is anchored to an orbit table while the other side remains symbolic (v6).</li>
+<li>E36 covers the dense range: every matching with at least 46 edges extends to a Hamilton cycle retaining all its edges.</li>
+<li>E38 rules out a maximal 45-edge matching. Together with the preceding layers, it establishes that every inclusion-maximal matching has at least 46 edges.</li>
+<li>Add free cube edges to the original matching M until it is inclusion-maximal, obtaining N ⊇ M. E36 supplies a Hamilton cycle containing every edge of N, so it also contains every edge of M.</li>
 </ol>
+<p>The key bridge is monotone completion: preserve the actual matching throughout, then use a global obstruction to small maximal matchings to enter the proven dense range.</p>
+<h2>Evidence and review status</h2>
+<p>The source project accepted the complete R7 working proof as sound-modulo-imports, same-family and provisional. External peer review is pending; there is no Lean formalization.</p>
+<p>Two original C++ programs were compiled and run on Mac. E38 counts 35,360 legal single faces and reconstructs 18,237,120 ordered face pairs; zero pairs satisfy the directional necessary conditions for a maximal 45-edge matching. These are face/pair counts, not matching counts or coverage percentages.</p>
+<p>This is a local E38 recomputation. Some large certificates from older layers are absent from the supplied package, and the complete imported proof chain was not replayed end to end.</p>
+<p><a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/knowledge/q7-closure-proof.md">Detailed proof guide & 26 appendices ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-closure/README.md">Archive & recomputation commands ↗</a></p>
+<h2>Fixed snapshots and the current result</h2>
+<ul>
+<li>Q₆ / v3: every matching in the 64-vertex cube; the Q₆ evidence remains separate from Q₇.</li>
+<li>Fixed v5: every Q₇ matching with at least 57 edges.</li>
+<li>Fixed v6: every Q₇ matching with at least 56 edges (complete E16, all five 16-hole parity-gap classes).</li>
+<li>v6 main follow-up, 2026-11-20: the full R7 author working proof covers all matching sizes. Earlier tags remain unchanged.</li>
+</ul>
+<p>The original study adopted MathRSI v3 with local adaptations; v5 and v6 incorporate its methods and results. The older English manuscript still proves only the ≥57-edge result and is not the full R7 proof.</p>
 <h2>Q₆ theorem and six-direction corollary</h2>
 <p>Every matching of Q₆ extends to a Hamilton cycle; combined with published results, matchings using at most six coordinate directions in any dimension Qₙ also extend.</p>
-<h2>Checks and archive layout</h2>
-<p>All 261 in-repo E16 files and all 290 bundled baseline imports match their recorded byte counts and SHA-256 inventory entries. The 189-row μ=0 large-face table and four standalone geometry/plan checkers (MU0 a=0 census and plans, MU0 a=1,2 orbits and the Q₆ A₈ 41-orbit census) pass alongside the v5 S3/S2_STRONG, T63 target04 and Q₆ A10 checks.</p>
-<p>The ten large E16 .cnf/.drup traces (532.49 MB, up to 201.55 MB for even.drup) live in the external archive R-S-n=7(2).rar to stay within normal Git file limits; INVENTORY.json lists their filenames and hashes so those proofs can be replayed with drat-trim.</p>
-<p><a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v6-c4free-rs7-20261117/EVOLUTION.md">v6 implementation and checks ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-e16/README.md">E16 bundle &amp; baseline scope ↗</a> · <a href="https://github.com/lisresearchgroup/math-rsi/blob/main/development/evolution/v5-q7-20261114/EVOLUTION.md">Earlier v5 record ↗</a></p>
+<p class="q7-open"><b>Still open</b><br><span>Free-root paths P₇, seven-direction lifting in higher dimensions and the general dimension-n conjecture remain open.</span></p>
 <p><a href="../../../case-studies/ruskey-savage-q7/README.md">Q7 results, methods and evidence scope ↗</a> · <a href="../../../plugins/hypercube-hamilton/README.md">Hamilton plugin source ↗</a> · <a href="../../../docs/V6_CHANGES.md">v6 workflow changes ↗</a></p>
 <p><a href="index.html#evolution">Back to evolution ↑</a> · <a href="index.html#results">Back to results ↑</a></p>
 </main>

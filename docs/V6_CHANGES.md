@@ -2,7 +2,7 @@
 
 **v6 is the current workflow on `main`.** It deepens the shared five-stage research workflow and both hypercube plugins (`hypercube-extremal` and `hypercube-hamilton`), retaining ten base skills, six domains and fourteen domain skills. Clone `main`, [download its ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) or use the fixed [v6 tag](https://github.com/lisresearchgroup/math-rsi/tree/v6), and record the exact commit in any research handoff. Fixed `v1`–`v5` tags remain unchanged.
 
-The sources are two research streams run with **MathRSI v3** plus local adaptations and coevolution loops:
+The fixed v6 release incorporated two research streams run with **MathRSI v3** plus local adaptations and coevolution loops:
 - **Erdős Problem 86 ($C_4$-free hypercube subgraphs):** finite $Q_7$ (`304`), finite $Q_8$ (`682 ≤ ex(Q₈, C₄) ≤ 683`) and asymptotic edge density $Q_\infty$ (`T3 ≤ 0.5912405943`, `T4 ≤ 0.5912405942`). [Case study](../case-studies/erdos-86/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/erdos-86-latest.html).
 - **At the fixed v6 tag, Ruskey–Savage $Q_7$ Hamilton extension (complete E16):** every matching in $Q_7$ with **at least 56 edges** ($\le 16$ holes, across all $\mu \in \{0,1,2,3,4\}$) extends to a Hamilton cycle retaining every prescribed edge. [Case study](../case-studies/ruskey-savage-q7/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/q7.html).
 

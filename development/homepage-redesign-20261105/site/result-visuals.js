@@ -238,49 +238,34 @@
     },
 
     q6: {
-      resultLabel:
-        'Ruskey–Savage Q6 and Q7 theorem diagram: every matching in Q6 extends to a Hamilton cycle (and <=6 directions in Qn); in Q7, every matching with at least 56 edges (complete E16) extends to a Hamilton cycle.',
-      resultCap:
-        'Results · universal Q₆ theorem, ≤6 directions in Qₙ, and Q₇ ≥56-edge matchings (E16)',
+      resultLabel: "Ruskey–Savage: full Q7 author working proof for every matching, all 128 vertices, preserving every edge; Q6 universal theorem and at-most-six-direction corollary retained.",
+      resultCap: "Results · Q₇ full author working proof; Q₆ theorem retained",
       links: [
-        { label: 'Q7 E16 ↗', href: 'q7.html', sourceLanguage: 'EN + 中文' },
+        { label: 'Q7 result & methods ↗', href: 'q7.html', sourceLanguage: 'EN + 中文' },
         { label: 'Q6 report ↗', href: '../../../plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', sourceLanguage: '中文', sub: true }
       ],
       render(problemSvg) {
         const inset = problemSvg ? problemSvg.innerHTML : '';
         return svgWrap(this.resultLabel, `
-          <defs>
-            <marker id="rv-q6-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M1 1L7 4L1 7" fill="none" stroke="var(--q6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </marker>
-          </defs>
-
-          <!-- Primary Q6 universal theorem flow -->
+          <defs><marker id="rv-q6-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="var(--q6)" stroke-width="1.6"/></marker></defs>
           <rect class="rv-panel" x="14" y="12" width="226" height="132" rx="10"/>
-          <text class="rv-kicker" x="26" y="29">Q₆ theorem</text>
-
+          <text class="rv-kicker" x="26" y="29">Q₇ · author working proof</text>
           <rect x="24" y="36" width="206" height="32" rx="7" fill="#F3F5F8" stroke="var(--hair)"/>
-          <text x="127" y="56" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Every matching in Q₆</text>
-
+          <text x="127" y="56" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Every matching in Q₇</text>
           <line x1="127" y1="69" x2="127" y2="90" stroke="var(--q6)" stroke-width="1.7" marker-end="url(#rv-q6-arr)"/>
-          <text x="135" y="83" font-size="10.5" font-weight="600" class="rv-accent">extends to</text>
-
+          <text x="135" y="83" font-size="10.5" class="rv-accent">all edges kept</text>
           <rect class="rv-panel-tint" x="24" y="93" width="206" height="39" rx="7"/>
-          <text x="127" y="110" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Hamilton cycle in Q₆</text>
-          <text class="rv-sub" x="127" y="125" text-anchor="middle" fill="var(--ink-2)">all 64 vertices</text>
-
-          <!-- Right inset: single example instance reused from original SVG -->
+          <text x="127" y="110" text-anchor="middle" font-size="12.5" font-weight="650" fill="var(--ink)">Hamilton cycle in Q₇</text>
+          <text class="rv-sub" x="127" y="125" text-anchor="middle">all 128 vertices</text>
           <rect class="rv-panel" x="248" y="12" width="118" height="132" rx="10"/>
-          <text class="rv-meta" x="307" y="29" text-anchor="middle">1 example</text>
+          <text class="rv-meta" x="307" y="29" text-anchor="middle">Q₆ example</text>
           <g transform="translate(247 24) scale(0.375)">${inset}</g>
           <text class="rv-sub" x="307" y="133" text-anchor="middle">matching ⊂ cycle</text>
-
-          <!-- Secondary node: Q7 complete E16 (>=56 edges) -->
-          <rect class="rv-panel" x="14" y="154" width="352" height="90" rx="10" stroke-dasharray="4 3"/>
-          <text class="rv-kicker" x="26" y="174">Q₇ complete E16</text>
-          <text class="rv-meta" x="354" y="174" text-anchor="end">≤55 edges &amp; full Q₇ open</text>
-          <text x="26" y="198" font-size="12.5" font-weight="620" fill="var(--ink)">Every matching in Q₇ with ≥56 edges</text>
-          <text x="26" y="219" font-size="12.5" font-weight="650" class="rv-accent">→ 128-vertex Hamilton cycle (all μ = 0..4)</text>
+          <rect class="rv-panel" x="14" y="154" width="352" height="90" rx="10"/>
+          <text class="rv-kicker" x="26" y="174">Q₆ theorem retained</text>
+          <text x="26" y="196" font-size="12.5" font-weight="620" fill="var(--ink)">Every Q₆ matching → all-64-vertex cycle</text>
+          <text class="rv-sub" x="26" y="216">Also ≤6 directions in Qₙ (published imports)</text>
+          <text class="rv-meta" x="26" y="234">Q₇ external peer review pending · no Lean</text>
         `);
       }
     },

@@ -8,6 +8,7 @@ const DD_TIME = 8500;
 const E86_V6_TIME = 10300;
 const Q7_E16_TIME = 10950;
 const HE_V6_TIME = 11180;
+const Q7_FULL_TIME = 11600;
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -43,10 +44,10 @@ const CASES = [
     status: () => t >= E86_V6_TIME ? 'Computer-assisted bounds · no Lean' : 'Exact certificate · no Lean',
     read: () => t >= E86_V6_TIME ? 'erdos-86-latest.html' : REPO + 'plugins/hypercube-extremal/archive/source/START_HERE.html', plugin: GH + '/tree/main/plugins/hypercube-extremal',
     quant: () => t >= E86_V6_TIME ? `<div class="qrow"><span><b>304</b><i>Q₇ · ≤304 source</i></span><span><b>682–683</b><i>Q₈ · 682 open</i></span><span><b>≤ 0.5912405943</b><i>Q∞ (T3)</i></span></div><p class="qnote">Q₇: 304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass. Q₈: four 682-edge constructions + Theorem B (refereeing pending). Q∞: T3 and T4 ≤ 0.5912405942 proved. Limit 1/2 remains open.</p>` : `<div class="qbig"><span class="prev">0.60318</span><span>→</span><b>≤ 0.59155154</b></div><p class="qnote">Asymptotic edge density of C₄-free subgraphs of Qₙ; the conjectured 1/2 remains open.</p>` },
-  { id: 'q6', short: 'Ruskey–Savage', title: () => t >= Q7_TIME ? 'From Q₆ to dense Q₇ matchings' : 'Every matching in Q₆ extends to a Hamilton cycle',
-    status: () => t >= Q7_E16_TIME ? 'Q₇ ≥56-edge theorem (E16) · full Q₇ open' : t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · refereeing pending',
+  { id: 'q6', short: 'Ruskey–Savage', title: () => t >= Q7_FULL_TIME ? 'Every matching in Q₇ extends' : t >= Q7_TIME ? 'From Q₆ to dense Q₇ matchings' : 'Every matching in Q₆ extends to a Hamilton cycle',
+    status: () => t >= Q7_FULL_TIME ? 'Full author working proof · external review pending' : t >= Q7_E16_TIME ? 'Q₇ ≥56-edge theorem (E16) · full Q₇ open' : t >= Q7_TIME ? 'Q₇ ≥57-edge theorem · full Q₇ open' : 'Computational proof · refereeing pending',
     read: () => t >= Q7_TIME ? 'q7.html' : REPO + 'plugins/hypercube-hamilton/archive/source/Ruskey-Savage_Q6_研究报告.html', plugin: GH + '/tree/main/plugins/hypercube-hamilton',
-    quant: () => `${t >= Q7_E16_TIME ? '<div class="qbig"><b>Q₇ · ≥56 edges</b></div><p class="qnote">128 vertices; complete E16 across all 16-hole classes μ ∈ {0,1,2,3,4}. Run: v3 (local adaptation) → informs v5 & v6. Matchings with ≤55 edges and full Q₇ remain open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → informs v5. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Combined with published results, matchings using ≤ 6 directions in any dimension also extend.</p>` },
+    quant: () => `${t >= Q7_FULL_TIME ? '<div class="qbig"><b>Q₇ · every matching</b></div><p class="qnote">128 vertices; every matching size, including empty and perfect matchings. Full R7 author working proof accepted in the source project on 2026-11-19; external peer review pending, no Lean. Run: v3 (local adaptation) → v6 main follow-up.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : t >= Q7_E16_TIME ? '<div class="qbig"><b>Q₇ · ≥56 edges</b></div><p class="qnote">128 vertices; complete E16 across all 16-hole classes μ ∈ {0,1,2,3,4}. Run: v3 (local adaptation) → informs v5 & v6. Matchings with ≤55 edges and full Q₇ remain open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : t >= Q7_TIME ? '<div class="qbig"><b>Q₇ · ≥57 edges</b></div><p class="qnote">128 vertices; every prescribed edge retained. Run: v3 (local adaptation) → informs v5. Full Q₇ remains open.</p><a href="q7.html">Q7 result & methods ↗</a><p class="p-eye">Q₆ evidence</p>' : ''}<div class="qrow"><span><b>64</b><i>vertices</i></span><span><b>1024</b><i>forests</i></span><span><b>1024</b><i>rank</i></span></div><p class="qnote">Combined with published results, matchings using ≤ 6 directions in any dimension also extend.</p>` },
   { id: 'he', short: 'Happy Ending', title: () => t >= HE_V6_TIME ? 'Signotope capacities and m = 7–9 thresholds' : 'A tighter upper bound for convex heptagons',
     status: () => t >= HE_V6_TIME ? 'Replayed duals/DRAT · assembly review pending' : '75/76/77 working manuscripts · independent review pending',
     read: () => t >= HE_V6_TIME ? 'happy-ending-latest.html' : REPO + 'case-studies/happy-ending/n7-20261103/START_HERE.html', plugin: GH + '/tree/main/plugins/happy-ending',
@@ -91,11 +92,13 @@ const MS = [
   {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10300, "tag": "Q₇ · 304 (construction + source report)", "text": "304-edge construction verified; 304 upper bound as reported in the source package, not re-verified in this pass (two explicit 304-edge C₄-free subgraphs checked in-repo; 21 raw RUP traces omitted upstream)."},
   {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10500, "tag": "Q₈ · 682 ≤ ex(Q₈, C₄) ≤ 683", "text": "Four 682-edge C₄-free constructions plus Theorem B ruling out 684 edges via 83 active cuts and 25 imported Q₆ DRAT certificates (checked computationally and reviewed in the same model family; independent refereeing pending). Closing ex(Q₈, C₄) ≤ 682 remains open."},
   {"c": "e86", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10700, "tag": "Q∞ · π_□(C₄) ≤ 0.5912405943", "text": "T3 ≤ 0.5912405943 (COP + cubic) and T4 ≤ 0.5912405942 (m = 1024 degree potential via a 5-line hypergeometric tower), both proved and rechecked in 128-bit C++20. Exploratory 0.5907 is an approximate fit (residual ≈ 3.9 × 10⁻⁴), an earlier 0.5899 claim was refuted and withdrawn, and limit 1/2 remains open."},
-  {"c": "q6", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10950, "tag": "Q₇ complete E16 · ≥56 edges", "text": "Every Q₇ matching with at least 56 edges (at most 16 holes, all μ ∈ {0,1,2,3,4}) extends to a Hamilton cycle retaining every prescribed edge, by a computational argument reviewed in the same model family modulo the listed baseline imports (independent refereeing pending, no Lean). Matchings with ≤55 edges, full Q₇, P₇ and seven-direction lifting remain open."},
+  {"c": "q6", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 10950, "tag": "Q₇ complete E16 · ≥56 edges", "text": "Every Q₇ matching with at least 56 edges (at most 16 holes, all μ ∈ {0,1,2,3,4}) extends to a Hamilton cycle retaining every prescribed edge, by a computational argument reviewed in the same model family modulo the listed baseline imports (independent refereeing pending, no Lean). At the fixed v6 snapshot, ≤55 edges and full Q₇ were open; see the later v6 main R7 follow-up."},
   {"c": "e86", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11350, "tag": "C++17/20 replays & coevolution engine", "text": "Recompiled 128-bit C++20 verifiers on all 3,212,821 Q₄ orbits (T3/T4), C++17 13,150,453-completion replay for Q₈, explicit construction checks and 18 cube_coevolve tests."},
   {"c": "he", "v": 6, "intake": true, "k": "draft", "e": "drop", "t": 11180, "tag": "m = 7–9 capacities & ES(9) ≤ 1148", "text": "Replayed certificates prove N(8,6,6) ≤ 61 (milestone9 CNF+DRAT) and native-trace integer duals N(9,8,8) ≤ 688, restricted D₉ ≤ 458. Combined with R7/R20 and analytic m = 7–9 manuscripts, they give signotope N(8,8,8) ≤ 318 (planar ES(8) ≤ 319 is Schroeder’s bound) and working planar corollaries ES(7) ≤ 77, ES(9) ≤ 1148 (vs. 1508 / 1501*); independent review pending, no Lean. Run: Trellis + ARIS + v3 → v6 main maintenance."},
   {"c": "q6", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11420, "tag": "290 baseline imports & geometry checks", "text": "Bundled all 290 baseline imports and ran the 189-row μ=0 large-face table plus standalone MU0 and Q₆ A₈ geometry/plan checkers; 10 large .cnf/.drup traces are indexed in INVENTORY.json and stored in the external archive."},
-  {"c": "he", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11480, "tag": "Native-trace dual & DRAT replays", "text": "Cross-platform stdlib & drat-trim checks verify N(9,8,8) ≤ 688, D₉ ≤ 458 (plus the 47,635-row depth-≤3 LP ceiling), N(8,6,6) ≤ 61 (115 rows + 9-hole matrix witness), Schroeder’s 15-file octagon trees (193 / 124) and m = 7 lock-block ≤4."}
+  {"c": "he", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11480, "tag": "Native-trace dual & DRAT replays", "text": "Cross-platform stdlib & drat-trim checks verify N(9,8,8) ≤ 688, D₉ ≤ 458 (plus the 47,635-row depth-≤3 LP ceiling), N(8,6,6) ≤ 61 (115 rows + 9-hole matrix witness), Schroeder’s 15-file octagon trees (193 / 124) and m = 7 lock-block ≤4."},
+  {"c": "q6", "v": 6, "intake": true, "k": "result", "e": "drop", "t": 11600, "tag": "Q₇ · full R7 author working proof", "text": "Every ordinary short-edge matching in Q₇, including empty and perfect matchings, extends to a 128-vertex Hamilton cycle retaining all its edges. E36 covers ≥46 edges; E38 forces every maximal matching to have ≥46 edges; add free edges to reach a maximal matching. Source acceptance: 2026-11-19, sound-modulo-imports / same-family / provisional; external review pending, no Lean. Run: v3 local adaptation → v6 main follow-up, 2026-11-20."},
+  {"c": "q6", "v": 6, "intake": true, "k": "evidence", "e": "grow", "t": 11800, "tag": "E38 local C++ recomputation", "text": "Two original C++ programs run on Mac: 35,360 legal single faces and 18,237,120 ordered face pairs; zero pairs satisfy the directional necessary conditions for a maximal 45-edge matching. Some large older-layer certificates are omitted; the full imported proof chain was not replayed end to end."}
 ];
 const isOutcome = m => m.k === 'result' || m.k === 'draft';
 const CALLOUTS = [
@@ -112,7 +115,7 @@ const CALLOUTS = [
   {"c": "q6", "v": 5, "t": 8100, "row": 1, "kind": "delta", "value": "Q₇ · ≥57 edges", "detail": "128 vertices · Run: v3"},
   {"c": "dd", "v": 5, "t": 8500, "row": 0, "kind": "delta", "value": "(11,5) 37,631 → 37,632", "value2": "(12,5) 42,402 → 42,433", "detail": "Run: v4 + local updates"},
   {"c": "e86", "v": 6, "t": 10300, "row": 0, "kind": "delta", "value": "Q₇ 304 · Q₈ 682–683", "value2": "Q∞ ≤ 0.5912405943", "detail": "≤304 source · 682 open · Run: v3"},
-  {"c": "q6", "v": 6, "t": 10950, "row": 1, "kind": "delta", "value": "Q₇ · ≥56 edges", "detail": "all 16-hole classes · Run: v3"},
+  {"c": "q6", "v": 6, "t": 11600, "row": 1, "kind": "delta", "value": "Q₇ · every matching", "detail": "Author working proof · v3"},
   {"c": "he", "v": 6, "t": 11180, "row": 2, "kind": "delta", "value": "N(8,6,6) ≤ 61 · ES(9) ≤ 1148", "detail": "m = 7–9 working · Run: v3"}
 ];
 
@@ -215,8 +218,8 @@ const VERS = [
     ["deep", "Happy Ending", "he"],
     ["note", "Other 3 domains retained"]
   ],
-  "pluginNote": "C₄-free, Q7 E16 & N(m,r,s): v3 runs → v6 & main.",
-  "sum": "v6 release + main maintenance. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, complete Q₇ E16 (≥56 edges), and the 2026-11-17 Happy Ending N(m,r,s) follow-up across m = 7, 8, 9 (replayed N(8,6,6) ≤ 61 and N(9,8,8) ≤ 688 / D₉ ≤ 458 duals, working ES(9) ≤ 1148; fixed v6 tag unchanged). Distills hardest-remainder split gating, primal–dual coevolution, repair-residual stopping and generative sparse dual checks into the shared base."
+  "pluginNote": "C₄-free, Q7 R7 & N(m,r,s): v3 research → v6 & main.",
+  "sum": "v6 release + main maintenance. Incorporates C₄-free Q₇ (304 construction verified; 304 upper bound source-reported), Q₈ (682–683), asymptotic density Q∞ ≤ 0.5912405943, complete Q₇ E16 (≥56 edges), and the 2026-11-17 Happy Ending N(m,r,s) follow-up across m = 7, 8, 9 (replayed N(8,6,6) ≤ 61 and N(9,8,8) ≤ 688 / D₉ ≤ 458 duals, working ES(9) ≤ 1148; fixed v6 tag unchanged). Distills hardest-remainder split gating, primal–dual coevolution, repair-residual stopping and generative sparse dual checks into the shared base. The 2026-11-20 main follow-up adds the full Q₇ R7 author working proof (all matching sizes; source acceptance on 19 November, v3 local adaptation; external peer review pending, no Lean)."
 },
   { tag:'v7+', state:'Future', name:'Next research, next evolution',
     base:[["Learn from the next problem", "", "Use new research successes and failures to identify the next concrete workflow improvement."]],
@@ -239,7 +242,7 @@ const HEADROOM = Math.max(0, ...Array.from({ length: LAST + 1 }, (_, v) =>
 const H = 326 + HEADROOM, GUT = 80, COL = 232, W = GUT + COL * VERS.length;
 const SPINE = 296 + HEADROOM, BASE = 284 + HEADROOM;
 const cx = i => GUT + COL * i + COL / 2;
-const R = [300, 1700, 3600, 5000, 6600, 8000, 10200], STOP = [1100, 2400, 4400, 6000, 7400, 9600, 11800], T = STOP[LAST];
+const R = [300, 1700, 3600, 5000, 6600, 8000, 10200], STOP = [1100, 2400, 4400, 6000, 7400, 9600, 12200], T = STOP[LAST];
 const MOVE = [null, [1100, 600], [2400, 600], [4400, 600], [6000, 600], [7400, 600], [9600, 600]];
 const KEYS = [[0,0],[1100,0],[1700,1],[2400,1],[3600,2],[4400,2],[5000,3],[6000,3],[6600,4],[7400,4],[8000,5],[9600,5],[10200,6],[T,6]];
 const SEGS = [[1100,1700],[2400,3600],[4400,5000],[6000,6600],[7400,8000],[9600,10200]];
@@ -525,7 +528,7 @@ function paintTraceHint(id) {
   if (!hint) return;
   if (!id) hint.textContent = 'Choose a case to follow its results across versions.';
   else if (id === 'he') hint.textContent = 'Happy Ending · ES(7) upper bound 78 → 77; the 25-point witness is separate.';
-  else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ theorem → Q₇ ≥57 edges (v5) → complete E16 ≥56 edges (v6). Run: v3 (local adaptation).';
+  else if (id === 'q6') hint.textContent = 'Ruskey–Savage · Q₆ → Q₇ ≥57 (v5) → ≥56 (fixed v6) → every matching (v6 main author working proof). Run: v3 local adaptation.';
   else if (id === 'e86') hint.textContent = 'Erdős 86 · v3 asymptotic Q₄ bound → v6 Q₇ 304 (≤ source), Q₈ 682–683 & Q∞ ≤ 0.5912405943. Run: v3 + coevolution.';
   else if (id === 'dd') hint.textContent = 'Degree–Diameter · v2 historical results → v4 + local DD updates → two D5 improvements feeding v5 maintenance.';
   else hint.textContent = `${CN[id]} · follow this case; repeated blocks carry earlier results forward.`;
@@ -560,7 +563,7 @@ function renderPanel(sel) {
   if (key === panelKey) return; panelKey = key;
   if (!focus) {
     const V = VERS[sel];
-    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === 5 ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a> · <a href="dd-latest.html">DD latest results ↗</a></p>' : sel === LAST ? '<p class="p-links"><a href="erdos-86-latest.html">Erdős 86 results & methods ↗</a> · <a href="q7.html">Q7 E16 result & methods ↗</a></p>' : ''}</div>
+    panel.innerHTML = `<div><p class="p-eye">MathRSI harness · ${V.tag} · ${V.state}</p><h3>${V.name}</h3><p class="p-sum">${V.sum}</p>${sel === 4 ? eccMaintenance() : sel === 5 ? '<p class="p-links"><a href="q7.html">Q7 result & methods ↗</a> · <a href="dd-latest.html">DD latest results ↗</a></p>' : sel === LAST ? '<p class="p-links"><a href="erdos-86-latest.html">Erdős 86 results & methods ↗</a> · <a href="q7.html">Q7 result & methods ↗</a></p>' : ''}</div>
       <div><p class="p-eye">Shared base &amp; workflow details in ${V.tag}</p>
       <ul class="p-vlist">${V.fullBase.map(item => `<li>${item}</li>`).join('')}</ul>
       <p class="p-foot">Choose a change label or colored result block to inspect its conclusions and proof evidence.</p></div>`;
