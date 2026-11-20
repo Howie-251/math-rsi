@@ -1,5 +1,9 @@
 # MathRSI 开发约定
 
+## 2026-11-20 · 七维匹配延拓
+
+当前 `main` 将 11 月 19 日的完整 R7 工作证明并入 v6 后续维护。七维任意匹配有保留全部原边的 Hamilton 圈。固定 v5/v6 分别保留 ≥57/≥56 的历史结果。最后的极大 45 边排空已通过两份原实现本机复算，旧稠密层保留其证书进口与审阅范围。P7、一般维数七方向提升及全维猜想仍开放。方法、来源和实际核查见[维护记录](development/evolution/q7-closure-20261120/EVOLUTION.md)。
+
 ## 2026-11-17：Happy Ending / N(m,r,s)（m = 7, 8, 9 及一般 m）纳入 v6 主线维护
 
 用户提供完整 `NMRS-results-20261117(1).zip`（1,608 文件，269.89 MiB），经与 `grok-4.7-build`（`xhigh`）讨论并获用户授权，在独立 worktree 作为 **`v6` 主线维护**合入 `main`（固定 `v6` 标签保持不动，同 `v5` DD D5 维护惯例），同时礼貌关闭仅含压缩包字节的协作者 `PR #43`。维护入口为 [本轮演进](development/evolution/v6-nmrs-20261117/EVOLUTION.md) 与 [V6_CHANGES](docs/V6_CHANGES.md#happy-ending-nmrs-follow-up--2026-11-17)。运行归属如实记录为：前期 `b=25` 与初版 `75/76→ES(7)≤77` 属 pre-MathRSI（Trellis + ARIS），11 月 5–17 日 `m=7,8,9` 与一般 `m` 进展运行于 **Trellis + ARIS + MathRSI `v3`（`mathrsi-prove`、`mathrsi-happy-ending`、`proof-writer`）** 混合工作流。随仓精选 `plugins/happy-ending/archive/nmrs-20261117/` 共 955 份原件（48.18 MiB，最大单文件 9.56 MiB，零 Git LFS，补齐 `PR #43` `compact.zip` 漏掉的 `source/lib/*`、C6/C8/C9–C10 接受证书与 R8–R27 清单），省略的预渲染 HTML 与探索大文件登记在 `INVENTORY.json`。新增跨平台标准库核验器 `check_native_trace_cert.py`、`check_n866_milestone9.py`、`check_octagon_omission.py`，全部 7 组有限检查（`N(9,8,8)≤688`、`D_9≤458` 含 47,635 行深度 `≤3` LP 上限见证、`N(8,6,6)≤61` 含 DRAT 与 9 洞矩阵紧性、Schroeder 15 文件遗漏树 `193/124`、五锁块排除 `≤4`、E21 25 点染色与两策略反例）均在本机实际通过。口径严格保持自然准确：平面 `ES(8)≤319` 归属 Schroeder 公开预印本（本项目主张抽象 signotope 迁移 `N(8,8,8)≤318`），`ES(7)≤77` 与 `ES(9)≤1148`（对比 1508 / 1501*）标为待独立审阅工作推论，9 洞向量标为矩阵见证而非 61 点 signotope，主页演进轴不混用超立方体 `Q₈` 与 signotope `Q_8`。

@@ -99,3 +99,13 @@ python3 -B plugins/hypercube-hamilton/archive/q7-e16/check_e16_bundle.py
 4. 若当前 Python 环境装有 `ortools`，额外从 `MU0_JOINT_NECESSARY.pb` 运行 `MU0_STRUCTURED_JOINT.py` 校验逐字节重建。
 
 **省略的 10 份大 `.cnf`/`.drup` 证书说明：** `even.drup`（201.55 MB）、`odd.drup`（109.65 MB）等全部 10 份 E16 CNF/DRUP 文件（共 532.49 MB）与 Windows `drat-trim.exe` 按 `<50 MiB` 普通 Git 规则统一省略并逐项登记在 [q7-e16/INVENTORY.json](../../../archive/q7-e16/INVENTORY.json)（随仓保留官方 `drat-trim.c` 源码、全部 `.pb` 源模型、CNF 编译器与原验证回执）。哈希清单不代替 DRUP 轨迹重放；完整轨迹重放需从外部研究归档 `R-S-n=7(2).rar` 提取该 10 份文件并用编译后的 `drat-trim` 核验。本轮实际执行输出见 `development/evolution/v6-c4free-rs7-20261117/checks/q7-e16.json`。
+
+## 完整 R7 的新核心与旧传递责任（2026-11-20 纳入）
+
+当前结论与命令入口读 [q7-closure/README](../../../archive/q7-closure/README.md)；数学链读[完整证明阅读](../../../knowledge/q7-closure-proof.md)与[完整方法](q7-closure-methods.md)。上述E16、S3/S2和T63命令保留为准确历史消费者，不是完整R7的复验入口。
+
+新E38结构需分别重建全部35360实际单面、7608共同群商相容对，以及不取群商的18237120有序相容对；逐r核分母、物理颜色/邻接、七个带符号δ及max直方图。作者32位颜色索引mask与独审两uint64物理点mask不同，转换后比集合。`INDEPENDENT_CONSUMER.py`后半还核E36绑定，不能只完成前半就称整脚本PASS；使用归档的分层入口并保留准确未运行责任。
+
+编译C++17时不加`-DNDEBUG`，断言承担附加检查；运行写独立临时副本，原件不改。源绝对路径E:/新问题/research须由消费者映到归档research，保留冻结绑定原字节。不同编译器可执行文件散列不同不否定数学输出，应比较准确JSON/实体/整数直方图。
+
+原包是lite：E38核心保留，部分E36传递实体及旧大证书省略。完整旧重放需补齐并按准确checker核森林、实际矩阵位、GF2秩、条件缩端点、密层同一输入回代与R6/P6进口。保留项字节一致、E38结构复算与完整传递重算分列；不从前两项推第三项，也不把此次本机运行说成外部独立复现。

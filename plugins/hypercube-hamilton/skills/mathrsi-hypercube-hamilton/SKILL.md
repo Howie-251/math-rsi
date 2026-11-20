@@ -1,13 +1,13 @@
 ---
 name: mathrsi-hypercube-hamilton
-description: "Prove and verify Hamilton path/cycle extension of prescribed hypercube matchings using root-preserving reductions, universal connectivity-rank forests, maximal-domain positive certificates and marked gluing. Use for Ruskey–Savage-type research, controlled auxiliary pairings, finite universal plans and scoped Q6/Q7 proof assets."
+description: "Prove and verify Hamilton path/cycle extension of prescribed hypercube matchings using root-preserving reductions, universal connectivity-rank forests, maximal-domain positive certificates and marked gluing. Use for Ruskey–Savage-type research, controlled auxiliary pairings, finite universal plans, same-input coverage costs, maximal-matching closure and scoped Q6/Q7 proof assets."
 ---
 
 # Hypercube Hamilton extension
 
 处理Q_n短边匹配的Hamilton路或圈延拓，以及证明中实际需要的辅助完全图匹配命题。输入为原对象/量词、父阶段与返回点、指定义务、允许操作、已知进口和工作目录。输出为可接回原输入的数学或有限核验证据，不因程序PASS自动跳到完整结论。
 
-先读 [数学接口](references/mathematics.md)。Q7切面拼接、完整几何计划或来源容量义务，接着读[受控配对与Q7方法](references/q7-methods.md)；它给精确定理、因果选择、公式与实际回代，不只是来源索引。路线卡点读 [失败图谱](references/failures.md)；接收证书或搬迁运行读 [复现](references/reproduction.md)。原[主报告](../../archive/source/Ruskey-Savage_Q6_研究报告.md)、[累积账本](../../archive/source/PROOF_PACKAGE.md)、[完整证明汇编](../../archive/source/Ruskey-Savage_Q6_证明资料汇编.md)保留实质研究，不能用本入口几段话代替。
+先读 [数学接口](references/mathematics.md)。完整 Q7 结论或 E18–E38 后续接口读[完整闭合方法](references/q7-closure-methods.md)，证明主体见[完整证明阅读](../../knowledge/q7-closure-proof.md)，原件/实际重放见[闭合归档](../../archive/q7-closure/README.md)与[来源地图](../../SOURCE_MAP.md)。Q7切面拼接、完整几何计划或来源容量义务，接着读[受控配对与Q7方法](references/q7-methods.md)；它给精确定理、因果选择、公式与实际回代，不只是来源索引。路线卡点读 [失败图谱](references/failures.md)；接收证书或搬迁运行读 [复现](references/reproduction.md)。原[主报告](../../archive/source/Ruskey-Savage_Q6_研究报告.md)、[累积账本](../../archive/source/PROOF_PACKAGE.md)、[完整证明汇编](../../archive/source/Ruskey-Savage_Q6_证明资料汇编.md)保留实质研究，不能用本入口几段话代替。
 
 ## 与父工作流的实际合同
 
@@ -25,7 +25,7 @@ description: "Prove and verify Hamilton path/cycle extension of prescribed hyper
 
 原Ruskey–Savage猜想是任意n≥2、任意匹配`M⊆E(Q_n)`都含于Q_n Hamilton圈。P6是对每个Q6短匹配M、每个未覆盖根u、每个异奇偶目标v（可被M覆盖）的Hamilton u–v路。局部森林引理可能对完全图任意长边匹配量化；强量词只在该辅助域成立，不能移植到整个Q6。
 
-固定任务需要自由根提升时，先确认目标文献定理实际接收P_d还是普通圈延拓；Q6圈结果不自动触发任意维六方向结论。当前文献定位和准确端点见[数学接口](references/mathematics.md)及[Q7方法§1](references/q7-methods.md)，原文在archive/literature与`six_directions/paper.txt`。Q7最新完整阈值为**至少56边（完整E16，覆盖独立孔全部μ∈{0,1,2,3,4}）**；偶数孔层18–38（≤55边）、完整R7、自由根路径P7及任意维七方向提升仍开放。研究实际归属v3本地适配，v5与v6吸收方法而不追认解题归属。
+固定任务需要自由根提升时，先确认目标文献定理实际接收P_d还是普通圈延拓；Q6圈结果不自动触发任意维六方向结论。当前文献定位和准确端点见[数学接口](references/mathematics.md)及[Q7方法§1](references/q7-methods.md)，原文在archive/literature与`six_directions/paper.txt`。Q7 当前原项目已接受**完整 R7：任意大小的实际短匹配保全部原边延拓为128点简单全短Hamilton单圈**。E36及较密层给≥46边阈值，原图结构排空极大45边，任意M只添自由短边到极大N⊇M后回代。E16的≥56边为历史里程碑。自由根路径P7、任意维七方向提升、任意长边匹配及所有维数猜想仍未由此证明。研究实际归属v3本地适配，后续主线吸收方法而不追认运行归属；原项目等级仍sound-modulo-imports/same-family/provisional，无Lean或外部同行认证。
 
 若用户问当前先后优先权或发表状态，交survey查新。历史≤20边基线只读公开摘要，不能写全文已核；P6与两个端点都覆盖的路径定理也不互相包含。
 
@@ -83,9 +83,21 @@ P6成立后非完美M取自由u与短邻点v，Hamilton路加uv闭圈；完美32
 - 给多省略森林核，使用[复现接口](references/reproduction.md)的omitted输入，核每个省点度0、端点度1、其余内部点度2与无圈。工具不替代完整(H,U)同构运输、通用秩进口或最终原匹配展开。
 - 给难余域联合编码（如E16 `μ=3` 奇偶对与 `μ=1/0` 大面规范表），先遵循Base[实际输入覆盖](../../../../base/skills/mathrsi-prove/references/actual-input-coverage.md)对最难残余分支做有界预检，确认新增切分能真正削减难核；若采用大面 `S6` 代表表规避小面枚举，必须证明去掉的对称破缺约束仅重排自由内轴，且小面原孔 `h_0..h_{63}` 全程保持符号变量。
 
-原E12/E14/E16全域只在各自原定理准确域内复用（E16已完整闭合≥56边层，审计等级为`same-family/provisional/sound-modulo-imports`）。下一层（≤55边 / 18–38孔）的新原M必须重新核前提；不能将局部单点探针（如某固定18孔实例UNSAT）外推为整层开放结论。新几何有一个Hamilton圈证书不代表其所有实现均可延拓。新调用的实际输入、计划、结果和后续动作写当前任务wiki；冻结archive和历史账本只读。
+当前完整R7可直接消费Q7任意实际短匹配；原E12/E14/E16局部工具仍只在各自准确域复用，不因完整圈结论而升级辅助接口。早期18孔单点探针不能追认为整层证明；后续完整层已由新的全称机制闭合。新几何有一个Hamilton圈证书不代表其所有实现均可延拓。新调用的实际输入、计划、结果和后续动作写当前任务wiki；冻结archive和历史账本只读。
 
-## 8. 返回与恢复
+## 8. 完整 Q7 闭合方法用于当前义务
+
+按[完整闭合方法](references/q7-closure-methods.md)执行，不另造新的五阶段：
+
+- 拼接义务先核ordinary/full/受控量词；以同一个D先供体后接实际R。批准偶块分划可通过共同端口二部图的欧拉回路造两侧配对，双受控时必须证明该图连通。
+- 有限计划有unknown时，保守地给最坏代价，比较“同一输入全部格失败”的总成本下界和每侧真实选列的上界。E36 μ2用184<200找充分格，不把unknown变成不存在性。
+- 用增广路改变匹配时，只把结果用于孔型/结构认证；保边回代用真正的M⊆N。密层定理须保N全部原边，不能截取46条后声称保N。
+- 新极大结构域先证原图方向界与饱和轴，再从完整单面子集产生域。只规范第一面、遍历第二面全物理域，或独立重建全部有序配对；两面分别取代表会丢相对位置。
+- 接收最终证据时，将E38新结构的完整分母/双实现复算，与E36旧局部秩、条件证件、R6/P6及密层进口分别核报。lite档案省略项不得跳过后报传递全PASS。
+
+E20 O1/O1净差误算的撤回/修复历史转成实际四块账目：原少/多数、删真源、添物理标记、改后少/多数及省略数。父阶段以这份原M和准确接口验收，模型同意或列数充足不能代替它。
+
+## 9. 返回与恢复
 
 交付包含准确命题、输入域与标记、允许长边的位置、归约方向、实际证据、尚缺前提及下一动作。合法森林池即使缺秩也保存，注明失败只对该充分门；正证书域必须独立证明穷尽。
 
