@@ -27,6 +27,8 @@ v6 在现有五阶段结构中新增三项共性纪律（详见 [V6_CHANGES](V6_
 2. **上下界协同进化：** 对接 [primal-dual-coevolution](../base/skills/mathrsi-route-loop/references/primal-dual-coevolution.md)，分离开放的主证明目标与对抗反例目标，用四通道有符号归一化残差轮换引导下界程序搜索，并在**全部已归档图**上反驳候选不等式后再导出 `empirical` 义务进入 `prove`。
 3. **修补残差阈值停机：** 当浮点 SDP/CP/LP 外层迭代增益低于修补残差阈值时立即停机，并在任何未认证近似拟合旁并列记录非零可行性残差，不将其写成已证屏障。
 
+`main` 的 v6 后续维护在原 route/prove/verify 中补入[终端域比较](../base/skills/mathrsi-prove/references/actual-input-coverage.md#密层结论返回后先比较保留原要求的终端域)：收回密层/终端定理后，先证明从任意原输入保留原要求的有限补全，将终端界与准确已证域衔接，只派尚未覆盖的终端域；结构排空也能关闭该责任。用于结构反证的删改/翻转不自动运输目标见证，固定规模结论也不通过删原标记升级为阈值结论。它深化已有工具消费，不增加阶段或移动固定 `v6` 标签。
+
 ## 五组流程与实际回流
 
 ```mermaid

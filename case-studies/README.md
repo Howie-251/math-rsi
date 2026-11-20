@@ -43,19 +43,21 @@ On the Comellas table checked 2026-11-16, (10,4) is 2,612 and (16,4) is 16,848, 
 
 ## Ruskey–Savage Q6
 
-**Every matching in $Q_6$ extends to a Hamilton cycle.** Combined with published results, this also extends every matching in $Q_n$ that uses at most six coordinate directions. The stronger stored $P_6$ statement covers a Hamilton path from every free root to every opposite-parity target.
+**Every matching in $Q_6$ extends to a Hamilton cycle.** The stronger stored $P_6$ statement covers a Hamilton path from every free root to every opposite-parity target. This prescribed-endpoint $P_6$ theorem, combined with published lifting results, extends every matching in $Q_n$ using at most six coordinate directions.
 
 The checked A10 replay rebuilds 1,024 forests, all 1,048,576 connectivity bits and rank 1,024, while the larger $P_6$ certificate streams are listed in inventory manifests rather than replayed here. The proof was reviewed in the same model family; independent refereeing is pending, there is no Lean formalization, and the general dimension-$n$ conjecture remains open.
 
 [Plugin and mathematics](../plugins/hypercube-hamilton/README.md) · [Finite replay and whole-proof boundary](../plugins/hypercube-hamilton/evidence/IMPLEMENTATION.md) · [Domain skill](../plugins/hypercube-hamilton/skills/mathrsi-hypercube-hamilton/SKILL.md)
 
-### Q7: dense matchings and complete E16 closure
+### Q7: every matching in the seven-dimensional cube
 
-**Every matching with at least 56 edges (at most 16 holes) in the 128-vertex $Q_7$ extends to a Hamilton cycle containing all prescribed edges.** Complete E16 closes adjacent-hole augmentation and all five 16-hole parity classes $\mu \in \{0,1,2,3,4\}$ by a computational argument reviewed in the same model family and depending on the listed baseline imports (independent refereeing pending, no Lean). Matchings with at most 55 edges (even hole layers 18–38), full $Q_7$, free-root paths $P_7$ and seven-direction lifting remain open.
+**The complete R7 author working proof covers every ordinary short-edge matching in the 128-vertex $Q_7$, including the empty matching and perfect matchings.** Each extends to a Hamilton cycle retaining every prescribed edge. The source project accepted the working proof on 2026-11-19 (`sound-modulo-imports · same-family · provisional`); external peer review is pending and there is no Lean formalization.
 
-This research ran on **MathRSI v3 (with local adaptations)** and hardest-branch split probes, with its methods feeding `v5` and `v6`.
+The proof joins E36 (every matching of at least 46 edges extends) with a maximality bound: double counting alone gives at least 45 edges in every inclusion-maximal matching, and E38 excludes exactly 45, yielding at least 46 without the older dense-layer theorems. Extend the original matching only by adding free cube edges to a maximal matching; a Hamilton cycle containing that larger matching also contains the original one. Two original C++ programs were run on Mac: **35,360 legal single faces and 18,237,120 ordered face pairs; zero pairs satisfy the directional necessary conditions for a maximal 45-edge matching**. This is a local E38 recomputation; some large older-layer certificates are omitted and the full imported proof chain was not replayed end to end.
 
-[Q7 results, methods and evidence scope](ruskey-savage-q7/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/q7.html) · [v6 changes](../docs/V6_CHANGES.md)
+**Run: v3 (local adaptation) → v6 `main` follow-up, 2026-11-20.** Fixed v5 (≥57 edges) and v6 (complete E16, ≥56 edges) snapshots are retained. Free-root paths $P_7$, seven-direction lifting and the general dimension-$n$ conjecture remain open.
+
+[Q7 results, methods and evidence scope](ruskey-savage-q7/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/q7.html) · [Detailed proof guide & 26 appendices](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/knowledge/q7-closure-proof.md) · [Local recomputation entry](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-closure/README.md)
 
 ## Happy Ending
 
@@ -68,6 +70,6 @@ This research ran on **MathRSI v3 (with local adaptations)** and hardest-branch 
 
 ## Research lineage and workflow feedback
 
-Property B was researched with standalone ARIS tools and distilled into MathRSI v1. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix checks and portable certificates. Earlier Degree–Diameter work informed v2, which was then used to construct the 2,567-vertex $(10,4)$ graph. Erdős 86 ($Q_4$), $Q_6$ and earlier Happy Ending work informed v3; the later Happy Ending `m = 7` manuscripts and DD local-edit methods informed v4. Dense-matching $Q_7$ work ($\ge 57$ edges) on v3 fed v5, while subsequent $C_4$-free $Q_7/Q_8/Q_\infty$ coevolution, complete $Q_7$ E16 ($\ge 56$ edges), and the `m = 7, 8, 9` $N(m,r,s)$ runs (Trellis + ARIS + v3) fed v6 and its `main` maintenance.
+Property B was researched with standalone ARIS tools and distilled into MathRSI v1. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix checks and portable certificates. Earlier Degree–Diameter work informed v2, which was then used to construct the 2,567-vertex $(10,4)$ graph. Erdős 86 ($Q_4$), $Q_6$ and earlier Happy Ending work informed v3; the later Happy Ending `m = 7` manuscripts and DD local-edit methods informed v4. Dense-matching $Q_7$ work ($\ge 57$ edges) on v3 fed v5, while subsequent $C_4$-free $Q_7/Q_8/Q_\infty$ coevolution, complete $Q_7$ E16 ($\ge 56$ edges), and the `m = 7, 8, 9` $N(m,r,s)$ runs (Trellis + ARIS + v3) fed v6 and its `main` maintenance. The full Q7 R7 author working proof, accepted in its source project on 2026-11-19 after v3 local adaptation, joins `v6` main maintenance on 2026-11-20; earlier release snapshots remain fixed.
 
 [Version and maintenance records](../development/README.md) document each release's changes and verification checks. New studies run in their own [task workspace](../docs/WORKSPACE.md).

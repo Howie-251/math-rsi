@@ -2,9 +2,9 @@
 
 **v6 is the current workflow on `main`.** It deepens the shared five-stage research workflow and both hypercube plugins (`hypercube-extremal` and `hypercube-hamilton`), retaining ten base skills, six domains and fourteen domain skills. Clone `main`, [download its ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) or use the fixed [v6 tag](https://github.com/lisresearchgroup/math-rsi/tree/v6), and record the exact commit in any research handoff. Fixed `v1`–`v5` tags remain unchanged.
 
-The sources are two research streams run with **MathRSI v3** plus local adaptations and coevolution loops:
+The fixed v6 release incorporated two research streams run with **MathRSI v3** plus local adaptations and coevolution loops:
 - **Erdős Problem 86 ($C_4$-free hypercube subgraphs):** finite $Q_7$ (`304`), finite $Q_8$ (`682 ≤ ex(Q₈, C₄) ≤ 683`) and asymptotic edge density $Q_\infty$ (`T3 ≤ 0.5912405943`, `T4 ≤ 0.5912405942`). [Case study](../case-studies/erdos-86/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/erdos-86-latest.html).
-- **Ruskey–Savage $Q_7$ Hamilton extension (complete E16):** every matching in $Q_7$ with **at least 56 edges** ($\le 16$ holes, across all $\mu \in \{0,1,2,3,4\}$) extends to a Hamilton cycle retaining every prescribed edge. [Case study](../case-studies/ruskey-savage-q7/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/q7.html).
+- **At the fixed v6 tag, Ruskey–Savage $Q_7$ Hamilton extension (complete E16):** every matching in $Q_7$ with **at least 56 edges** ($\le 16$ holes, across all $\mu \in \{0,1,2,3,4\}$) extends to a Hamilton cycle retaining every prescribed edge. [Case study](../case-studies/ruskey-savage-q7/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/q7.html).
 
 v6 absorbs their reusable workflow actions, domain mathematics and tools; it does not retroactively claim that the published `v6` release produced those source proofs.
 
@@ -26,7 +26,7 @@ v6 absorbs their reusable workflow actions, domain mathematics and tools; it doe
 
 ### 2. [`hypercube-hamilton`](../plugins/hypercube-hamilton/README.md)
 
-- **Complete $Q_7$ E16 (`≥56` edges, `archive/q7-e16/`):** Upgrades the $Q_7$ threshold from $\ge 57$ edges (`v5`) to **all matchings with at least 56 edges** ($\le 16$ holes), closing adjacent-hole augmentation plus all five independent 16-hole classes $\mu \in \{0,1,2,3,4\}$ (with $\mu \ge 5$ ruled out by parity/weight bounds; whole-proof audit `PASS · same-family · provisional · sound-modulo-imports`). Even hole layers 18–38 ($\le 55$ edges), full $Q_7$, free-root paths $P_7$ and seven-direction lifting in $Q_n$ remain **OPEN**.
+- **Complete $Q_7$ E16 (`≥56` edges, `archive/q7-e16/`):** Upgrades the $Q_7$ threshold from $\ge 57$ edges (`v5`) to **all matchings with at least 56 edges** ($\le 16$ holes), closing adjacent-hole augmentation plus all five independent 16-hole classes $\mu \in \{0,1,2,3,4\}$ (with $\mu \ge 5$ ruled out by parity/weight bounds; whole-proof audit `PASS · same-family · provisional · sound-modulo-imports`). The [November 20 follow-up](../plugins/hypercube-hamilton/knowledge/q7-closure-proof.md) covers the remaining matching sizes in $Q_7$. The prescribed-endpoint path problem $P_7$ and general seven-direction lifting in higher dimensions remain open.
 - **Reusable E16 tools:** Parameterized $Q_6$ $\Delta=2$ double bridge, the 41-orbit $Q_6$ $A_8$ theorem, joint even/odd CNF+DRUP pairs for $\mu=3$, and $S_6$ large-face independent-hole tables (`189` rows for $\mu=0$, `23` rows for $\mu=1$) paired with symbolic small-face holes after removing five inner-axis ordering constraints (`100,055 - 5 + 1 = 100,051` constraints). All 290 baseline imports (`7.98 MB`) from the 2026-11-14 $Q_7$ archive are bundled into `archive/q7-e16/source/`.
 
 ## Executed verification scope vs. external archives
@@ -58,3 +58,12 @@ This is later **`v6` maintenance on `main`**, keeping the fixed `v6` tag unchang
   - **General $m$:** Coordinate-deletion slice double counting for $N(2p-3,p,p) \le 2b - 1$, 3-column quadratic deficits ($\sim n^2 / 12$), and 4-column cubic deficits ($\sim n^3 / 80$). All structural, transfer, and R7/R20 assembly manuscripts remain working proofs pending independent mathematical review (no Lean).
 
 [Case study](../case-studies/happy-ending/README.md) · [Bilingual reader](../development/homepage-redesign-20261105/site/happy-ending-latest.html) · [NMRS evolution & verification receipts](../development/evolution/v6-nmrs-20261117/EVOLUTION.md).
+
+
+## Full seven-dimensional matching extension · 2026-11-20
+
+The November 19 working proof covers every matching in the seven-dimensional cube. The dense layers cover all matchings with at least 46 edges. A separate argument shows that every inclusion-maximal matching has at least 46 edges. Extending any input by adding disjoint cube edges therefore puts it in the dense range with all its original edges intact. The fixed v6 tag records the earlier 56-edge threshold.
+
+On `main`, the route, proof and verification skills now compare the possible sizes of terminal extensions with the exact domain of an available theorem. The Hamilton plugin shows how to exclude the one remaining maximal size and how to check that a cut preserves the same matching on both faces. The new finite exclusion can be replayed locally. The full proof imports earlier results, with some older certificates omitted from the source distribution. External refereeing and Lean formalization remain open.
+
+[Detailed proof and source appendices](../plugins/hypercube-hamilton/knowledge/q7-closure-proof.md) · [Replay the final finite exclusion](../plugins/hypercube-hamilton/archive/q7-closure/README.md) · [Maintenance record](../development/evolution/q7-closure-20261120/EVOLUTION.md)

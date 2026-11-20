@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "scope": "E38_STRUCTURAL_CORE_ONLY",
+  "full_R7_historical_dependency_replay": false,
+  "old_E36_and_earlier_payloads": "not_replayed; some intentionally omitted in the supplied lite package",
+  "system": {
+    "os": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64",
+    "python": "3.14.6",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+  },
+  "commands": [
+    {
+      "command": "$CXX -O3 -std=c++17 source/high/FACE19_EXHAUSTIVE.cpp -o $OUTPUT/high/FACE19_EXHAUSTIVE",
+      "exit_code": 0,
+      "wall_seconds": 0.667072
+    },
+    {
+      "command": "$CXX -O3 -std=c++17 source/mid/INDEPENDENT_RAW_FACES.cpp -o $OUTPUT/mid/INDEPENDENT_RAW_FACES",
+      "exit_code": 0,
+      "wall_seconds": 0.434103
+    },
+    {
+      "command": "cd $OUTPUT/high && ./FACE19_EXHAUSTIVE",
+      "exit_code": 0,
+      "wall_seconds": 0.9577
+    },
+    {
+      "command": "cd $OUTPUT/mid && ./INDEPENDENT_RAW_FACES R6 6",
+      "exit_code": 0,
+      "wall_seconds": 0.358811
+    },
+    {
+      "command": "cd $OUTPUT/mid && ./INDEPENDENT_RAW_FACES R7 7",
+      "exit_code": 0,
+      "wall_seconds": 0.024242
+    },
+    {
+      "command": "cd $OUTPUT/mid && ./INDEPENDENT_RAW_FACES R8 8",
+      "exit_code": 0,
+      "wall_seconds": 0.010609
+    },
+    {
+      "command": "cd $OUTPUT/mid && ./INDEPENDENT_RAW_FACES R9 9",
+      "exit_code": 0,
+      "wall_seconds": 0.008995
+    }
+  ],
+  "consumer": "original INDEPENDENT_CONSUMER.py, prefix before bindings= only",
+  "geometry": {
+    "status": "PASS",
+    "raw_complete_set_checks": [
+      {
+        "r": 6,
+        "raw_faces": 21760,
+        "exact_author_set": true,
+        "raw_sha256": "6d0b7c720993aa6079c5015f2a8d1ca27ce9921285e66c813421f147f41c4547"
+      },
+      {
+        "r": 7,
+        "raw_faces": 8320,
+        "exact_author_set": true,
+        "raw_sha256": "29f0ad9725f0f5f30b41c73391f262e52d520b57f6140bd16a9210a67f69e3f9"
+      },
+      {
+        "r": 8,
+        "raw_faces": 2880,
+        "exact_author_set": true,
+        "raw_sha256": "c98e1f488b014896befccc56e47c3dfb748bbedf5e2f5ee11b8cbfed52b8c054"
+      },
+      {
+        "r": 9,
+        "raw_faces": 2400,
+        "exact_author_set": true,
+        "raw_sha256": "094699b9c926053bd723ed7d626807158d481a8bb0fd2075c95ebb3621ecee7d"
+      }
+    ],
+    "author_actual_pairs_consumed": 7608,
+    "weighted_all_raw_pairs": 18237120,
+    "weighted_histograms": {
+      "6": {
+        "11": 5885440,
+        "12": 1271040,
+        "13": 84480,
+        "10": 7015680,
+        "9": 618880
+      },
+      "7": {
+        "11": 899200,
+        "12": 1255680,
+        "13": 282240
+      },
+      "8": {
+        "13": 360000,
+        "11": 54720
+      },
+      "9": {
+        "11": 77760,
+        "12": 364800,
+        "13": 67200
+      }
+    }
+  },
+  "archived_output_comparisons": [
+    {
+      "path": "high/FACE19_ALL.jsonl",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "high/FACE19_COMPATIBLE.jsonl",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "high/FACE19_RESULT.json",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "mid/R6_RAW.bin",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R6_RESULT.json",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "mid/R6_BAD.jsonl",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R7_RAW.bin",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R7_RESULT.json",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "mid/R7_BAD.jsonl",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R8_RAW.bin",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R8_RESULT.json",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "mid/R8_BAD.jsonl",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R9_RAW.bin",
+      "equal_entities": true,
+      "equal_bytes": true
+    },
+    {
+      "path": "mid/R9_RESULT.json",
+      "equal_entities": true,
+      "equal_bytes": false
+    },
+    {
+      "path": "mid/R9_BAD.jsonl",
+      "equal_entities": true,
+      "equal_bytes": true
+    }
+  ],
+  "wall_seconds": 3.783758
+}

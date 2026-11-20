@@ -61,7 +61,7 @@ Use the same external ARIS renderer described above with `specs/research-to-capa
 
 ## Actual homepage motion
 
-The README hero is a recording of the current homepage's v0 → v6 evolution animation, including both the Erdős 86 (`Q₇` / `Q₈` / `Q∞`) bubble and the complete `Q₇` E16 (`≥56` edges) bubble at v6 Current. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
+The README hero is a recording of the current homepage's v0 → v6 evolution animation, including both the Erdős 86 (`Q₇` / `Q₈` / `Q∞`) bubble and the full `Q₇` R7 author-working-proof bubble (every matching; source accepted 2026-11-19, external peer review pending, no Lean) at v6 Current. [GIF, MP4, poster and reproducible recording instructions](media/README.md). The original source remains in place; a local browser runs the real Replay button. Research-result attribution and manuscript status remain in the [six-case index](../../case-studies/README.md).
 
 ## Historical diagrams
 
