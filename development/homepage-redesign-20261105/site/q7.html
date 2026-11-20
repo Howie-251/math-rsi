@@ -17,7 +17,7 @@
 <h2>How every matching is covered</h2>
 <ol>
 <li>E36 covers the dense range: every matching with at least 46 edges extends to a Hamilton cycle retaining all its edges.</li>
-<li>E38 rules out a maximal 45-edge matching. Together with the preceding layers, it establishes that every inclusion-maximal matching has at least 46 edges.</li>
+<li>Double counting alone gives at least 45 edges in every inclusion-maximal matching. E38 excludes exactly 45, giving at least 46 edges; this maximality bound does not use the older dense-layer theorems.</li>
 <li>Add free cube edges to the original matching M until it is inclusion-maximal, obtaining N ⊇ M. E36 supplies a Hamilton cycle containing every edge of N, so it also contains every edge of M.</li>
 </ol>
 <p>The key bridge is monotone completion: preserve the actual matching throughout, then use a global obstruction to small maximal matchings to enter the proven dense range.</p>
@@ -35,7 +35,7 @@
 </ul>
 <p>The original study adopted MathRSI v3 with local adaptations; v5 and v6 incorporate its methods and results. The older English manuscript still proves only the ≥57-edge result and is not the full R7 proof.</p>
 <h2>Q₆ theorem and six-direction corollary</h2>
-<p>Every matching of Q₆ extends to a Hamilton cycle; combined with published results, matchings using at most six coordinate directions in any dimension Qₙ also extend.</p>
+<p>Every matching of Q₆ extends to a Hamilton cycle. For the at-most-six-direction consequence in arbitrary dimension Qₙ, the lifting input is the prescribed-endpoint P₆ path theorem, combined with published lifting results.</p>
 <p class="q7-open"><b>Still open</b><br><span>Free-root paths P₇, seven-direction lifting in higher dimensions and the general dimension-n conjecture remain open.</span></p>
 <p><a href="../../../case-studies/ruskey-savage-q7/README.md">Q7 results, methods and evidence scope ↗</a> · <a href="../../../plugins/hypercube-hamilton/README.md">Hamilton plugin source ↗</a> · <a href="../../../docs/V6_CHANGES.md">v6 workflow changes ↗</a></p>
 <p><a href="index.html#evolution">Back to evolution ↑</a> · <a href="index.html#results">Back to results ↑</a></p>

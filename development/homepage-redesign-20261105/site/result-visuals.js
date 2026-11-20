@@ -238,7 +238,7 @@
     },
 
     q6: {
-      resultLabel: "Ruskey–Savage: full Q7 author working proof for every matching, all 128 vertices, preserving every edge; Q6 universal theorem and at-most-six-direction corollary retained.",
+      resultLabel: "Ruskey–Savage: full Q7 author working proof for every matching, all 128 vertices, preserving every edge; Q6 universal theorem retained; the at-most-six-direction corollary uses prescribed-endpoint P6 and published lifting results.",
       resultCap: "Results · Q₇ full author working proof; Q₆ theorem retained",
       links: [
         { label: 'Q7 result & methods ↗', href: 'q7.html', sourceLanguage: 'EN + 中文' },
@@ -264,7 +264,7 @@
           <rect class="rv-panel" x="14" y="154" width="352" height="90" rx="10"/>
           <text class="rv-kicker" x="26" y="174">Q₆ theorem retained</text>
           <text x="26" y="196" font-size="12.5" font-weight="620" fill="var(--ink)">Every Q₆ matching → all-64-vertex cycle</text>
-          <text class="rv-sub" x="26" y="216">Also ≤6 directions in Qₙ (published imports)</text>
+          <text class="rv-sub" x="26" y="216">≤6 directions via prescribed-endpoint P₆</text>
           <text class="rv-meta" x="26" y="234">Q₇ external peer review pending · no Lean</text>
         `);
       }

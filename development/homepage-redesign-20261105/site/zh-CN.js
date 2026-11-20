@@ -1299,7 +1299,6 @@ Object.assign(window.MATHRSI_ZH, {
   "all-vertex cycle retaining those edges": "保留全部原边的全顶点圈",
   "How every matching is covered": "如何覆盖任意匹配",
   "E36 covers the dense range: every matching with at least 46 edges extends to a Hamilton cycle retaining all its edges.": "E36 覆盖稠密层：每个至少 46 边的匹配均可延拓为保留全部原边的 Hamilton 圈。",
-  "E38 rules out a maximal 45-edge matching. Together with the preceding layers, it establishes that every inclusion-maximal matching has at least 46 edges.": "E38 排除极大 45 边匹配；结合前序层，得到每个按包含关系极大的匹配都至少有 46 条边。",
   "Add free cube edges to the original matching M until it is inclusion-maximal, obtaining N ⊇ M. E36 supplies a Hamilton cycle containing every edge of N, so it also contains every edge of M.": "从原匹配 M 出发，仅添加自由超立方体边直至极大，得到 N ⊇ M。由 E36 得到保留 N 全部边的 Hamilton 圈，因而也保留 M 的全部原边。",
   "The key bridge is monotone completion: preserve the actual matching throughout, then use a global obstruction to small maximal matchings to enter the proven dense range.": "关键桥梁是单调补全：全程保留实际匹配，再用对小极大匹配的全局排除进入已证明的稠密范围。",
   "Evidence and review status": "证据与审阅状态",
@@ -1327,4 +1326,16 @@ Object.assign(window.MATHRSI_ZH, {
   "v0: standalone tools. v1–v5: shared harness releases. v6 & main: Q₇ full author working proof, C₄-free Q₇ / Q₈ / Q∞ and N(m,r,s), with hardest-remainder gates, coevolution and sparse dual checks.": "v0：独立工具。v1–v5：共享流程版本。v6 及主线：Q₇ 完整作者工作证明、C₄-free Q₇ / Q₈ / Q∞ 与 N(m,r,s)，以及最难余域预检、协同演化与稀疏对偶核验。",
   "The working proof covers every size of matching in the seven-dimensional cube, preserving every requested edge in a cycle through all 128 vertices.": "工作证明覆盖七维超立方体的所有匹配大小，在遍历全部 128 点的圈中保留每条指定边。",
   "Add edges to a maximal matching, then apply the dense-layer theorem and the directional obstruction to small maximal matchings.": "添边到极大匹配，再结合稠密层定理与小极大匹配的方向排除。"
+});
+
+/* Q7 maximality and P6 lifting premises. */
+Object.assign(window.MATHRSI_ZH, {
+  "Double counting alone gives at least 45 edges in every inclusion-maximal matching. E38 excludes exactly 45, giving at least 46 edges; this maximality bound does not use the older dense-layer theorems.": "仅由双计数，任意按包含关系极大的匹配至少有 45 条边。E38 再排除恰 45 条边，得到至少 46 条边；这一极大性下界不依赖旧稠密层定理。",
+  "Every matching of Q₆ extends to a Hamilton cycle. For the at-most-six-direction consequence in arbitrary dimension Qₙ, the lifting input is the prescribed-endpoint P₆ path theorem, combined with published lifting results.": "Q₆ 中每个匹配均可延拓为 Hamilton 圈。任意维 Qₙ 中至多六方向推论的提升输入是指定端点 P₆ 路径定理，并结合已发表的提升结果。",
+  "Every ordinary short-edge matching in Q₇, including empty and perfect matchings, extends to a 128-vertex Hamilton cycle retaining all its edges. E36 covers ≥46 edges; double counting gives ≥45 for maximal matchings, and E38 excludes exactly 45; add free edges to reach a maximal matching. Source acceptance: 2026-11-19, sound-modulo-imports / same-family / provisional; external review pending, no Lean. Run: v3 local adaptation → v6 main follow-up, 2026-11-20.": "Q₇ 中每个普通短边匹配（包括空匹配与完美匹配）均可延拓为保留原边的 128 点 Hamilton 圈。E36 覆盖 ≥46 边；双计数先得极大匹配 ≥45 边，E38 再排除恰 45 边；向原匹配添加自由边直至极大即可。原项目于 2026-11-19 接受，状态 sound-modulo-imports / same-family / provisional；待外部同行评议，无 Lean。运行：v3 本地适配 → v6 主线 2026-11-20 后续维护。",
+  "The prescribed-endpoint P₆ path theorem and published lifting results cover matchings using ≤ 6 directions in any dimension.": "指定端点 P₆ 路径定理与已发表的提升结果，覆盖任意维中至多使用六个方向的匹配。",
+  "The prescribed-endpoint P₆ path theorem, with published lifting results, covers matchings using at most six directions in any dimension.": "指定端点 P₆ 路径定理结合已发表的提升结果，覆盖任意维中至多使用六个方向的匹配。",
+  "Using the prescribed-endpoint P₆ path theorem and published lifting results, for every": "由指定端点 P₆ 路径定理及已发表的提升结果，对每个",
+  "≤6 directions via prescribed-endpoint P₆": "至多六方向提升：使用指定端点 P₆",
+  "Ruskey–Savage: full Q7 author working proof for every matching, all 128 vertices, preserving every edge; Q6 universal theorem retained; the at-most-six-direction corollary uses prescribed-endpoint P6 and published lifting results.": "Ruskey–Savage：完整 Q7 作者工作证明覆盖任意匹配，128 点全覆盖并保留全部原边；保留 Q6 全称定理；至多六方向推论使用指定端点 P6 与已发表的提升结果。"
 });

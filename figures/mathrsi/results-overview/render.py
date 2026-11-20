@@ -48,7 +48,7 @@ def render(lang):
    t(x,y+153,'完整作者工作证明 · 2026-11-19' if z else 'Full author working proof · 2026-11-19',17,'#0B1220',550)
    t(x,y+183,'待外部同行评议 · 无 Lean' if z else 'External peer review pending · no Lean',16)
    t(x,y+221,'保留 Q₆ 全称定理' if z else 'Universal Q₆ theorem retained',18,c,550)
-   t(x,y+256,'亦含任意维 ≤6 方向推论（引用结果）' if z else 'Also ≤6 directions in Qₙ (imported results)',15)
+   t(x,y+256,'至多六方向提升：指定端点 P₆ + 引用结果' if z else '≤6 directions via endpoint P₆ + imports',15)
   else:
    t(x,y+50,'Signotope 容量与平面阈值 (m = 7, 8, 9)' if z else 'Signotope capacities & thresholds (m = 7–9)',17,'#0B1220',550)
    t(x,y+90,'m = 7: ES(7) ≤ 77',19,'#0B1220',600);t(x+198,y+90,'78 → 77 · 工作稿' if z else '78 → 77 · working',15,'#667085')

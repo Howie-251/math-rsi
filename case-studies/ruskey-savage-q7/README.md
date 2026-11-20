@@ -7,7 +7,7 @@
 ## From dense layers to every matching
 
 1. **E36:** every $Q_7$ matching with at least 46 edges extends to a Hamilton cycle retaining all its edges.
-2. **E38:** every inclusion-maximal $Q_7$ matching has at least 46 edges. A directional counting argument reduces a hypothetical maximal 45-edge matching to legal pairs of 19-hole faces; none satisfy the necessary directional conditions.
+2. **Maximality bound:** double counting alone gives at least 45 edges in every inclusion-maximal $Q_7$ matching. **E38** excludes exactly 45, yielding at least 46; this lower bound does not depend on the older dense-layer theorems. The E38 directional argument reduces a hypothetical maximal 45-edge matching to legal pairs of 19-hole faces; none satisfy the necessary directional conditions.
 3. Add free cube edges to any original matching $M$ until it is inclusion-maximal, obtaining $N\supseteq M$. Apply E36 to $N$. Its Hamilton cycle retains every edge of $N$, hence every edge of $M$.
 
 The reduction preserves all original edges: it does not flip or discard them, nor take an arbitrary 46-edge subset of a larger matching.
@@ -24,7 +24,7 @@ The reduction preserves all original edges: it does not flip or discard them, no
 
 | Entry | Scope at that snapshot |
 | --- | --- |
-| Q6 / v3 | Every matching in $Q_6$; the checked A10 replay rebuilds 1,024 forests and 1,048,576 connectivity bits with rank 1,024. Imported results also give the at-most-six-direction consequence in arbitrary dimension. |
+| Q6 / v3 | Every matching in $Q_6$; the checked A10 replay rebuilds 1,024 forests and 1,048,576 connectivity bits with rank 1,024. The prescribed-endpoint $P_6$ path theorem, with published lifting results, gives the at-most-six-direction consequence in arbitrary dimension. |
 | [v5](../../docs/V5_CHANGES.md) | Every $Q_7$ matching with at least 57 edges; additional 56-edge structural families. |
 | [Fixed v6](https://github.com/lisresearchgroup/math-rsi/tree/v6) | Complete E16: every $Q_7$ matching with at least 56 edges, across all five 16-hole parity-gap classes $\mu\in\{0,1,2,3,4\}$. |
 | v6 `main` follow-up · 2026-11-20 | Full R7 author working proof covering all matching sizes, accepted in the source project on 19 November; bounded Mac E38 recomputation as above. |
@@ -35,6 +35,6 @@ The reduction preserves all original edges: it does not flip or discard them, no
 
 The earlier layers retain controlled auxiliary pairings, cross-split theorem reuse, hard-remainder probes and joint orbit/symbolic-face models. The final closure couples the dense-layer theorem with a global obstruction to small maximal matchings, then returns to arbitrary inputs through monotone edge addition.
 
-Free-root Hamilton paths $P_7$, seven-direction lifting in higher-dimensional cubes and the general dimension-$n$ Ruskey–Savage conjecture remain open. The established $Q_6$ theorem and imported at-most-six-direction consequence are unchanged.
+Free-root Hamilton paths $P_7$, seven-direction lifting in higher-dimensional cubes and the general dimension-$n$ Ruskey–Savage conjecture remain open. The established $Q_6$ theorem is unchanged; the at-most-six-direction consequence uses the prescribed-endpoint $P_6$ path theorem and published lifting results.
 
 [Historical E16 archive](../../plugins/hypercube-hamilton/archive/q7-e16/README.md) · [v6 release implementation](../../development/evolution/v6-c4free-rs7-20261117/EVOLUTION.md) · [v5 implementation](../../development/evolution/v5-q7-20261114/EVOLUTION.md)

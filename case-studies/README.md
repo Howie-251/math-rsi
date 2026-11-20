@@ -43,7 +43,7 @@ On the Comellas table checked 2026-11-16, (10,4) is 2,612 and (16,4) is 16,848, 
 
 ## Ruskey–Savage Q6
 
-**Every matching in $Q_6$ extends to a Hamilton cycle.** Combined with published results, this also extends every matching in $Q_n$ that uses at most six coordinate directions. The stronger stored $P_6$ statement covers a Hamilton path from every free root to every opposite-parity target.
+**Every matching in $Q_6$ extends to a Hamilton cycle.** The stronger stored $P_6$ statement covers a Hamilton path from every free root to every opposite-parity target. This prescribed-endpoint $P_6$ theorem, combined with published lifting results, extends every matching in $Q_n$ using at most six coordinate directions.
 
 The checked A10 replay rebuilds 1,024 forests, all 1,048,576 connectivity bits and rank 1,024, while the larger $P_6$ certificate streams are listed in inventory manifests rather than replayed here. The proof was reviewed in the same model family; independent refereeing is pending, there is no Lean formalization, and the general dimension-$n$ conjecture remains open.
 
@@ -53,7 +53,7 @@ The checked A10 replay rebuilds 1,024 forests, all 1,048,576 connectivity bits a
 
 **The complete R7 author working proof covers every ordinary short-edge matching in the 128-vertex $Q_7$, including the empty matching and perfect matchings.** Each extends to a Hamilton cycle retaining every prescribed edge. The source project accepted the working proof on 2026-11-19 (`sound-modulo-imports · same-family · provisional`); external peer review is pending and there is no Lean formalization.
 
-The proof joins E36 (every matching of at least 46 edges extends) with E38 (every inclusion-maximal matching has at least 46 edges). Extend the original matching only by adding free cube edges to a maximal matching; a Hamilton cycle containing that larger matching also contains the original one. Two original C++ programs were run on Mac: **35,360 legal single faces and 18,237,120 ordered face pairs; zero pairs satisfy the directional necessary conditions for a maximal 45-edge matching**. This is a local E38 recomputation; some large older-layer certificates are omitted and the full imported proof chain was not replayed end to end.
+The proof joins E36 (every matching of at least 46 edges extends) with a maximality bound: double counting alone gives at least 45 edges in every inclusion-maximal matching, and E38 excludes exactly 45, yielding at least 46 without the older dense-layer theorems. Extend the original matching only by adding free cube edges to a maximal matching; a Hamilton cycle containing that larger matching also contains the original one. Two original C++ programs were run on Mac: **35,360 legal single faces and 18,237,120 ordered face pairs; zero pairs satisfy the directional necessary conditions for a maximal 45-edge matching**. This is a local E38 recomputation; some large older-layer certificates are omitted and the full imported proof chain was not replayed end to end.
 
 **Run: v3 (local adaptation) → v6 `main` follow-up, 2026-11-20.** Fixed v5 (≥57 edges) and v6 (complete E16, ≥56 edges) snapshots are retained. Free-root paths $P_7$, seven-direction lifting and the general dimension-$n$ conjecture remain open.
 
