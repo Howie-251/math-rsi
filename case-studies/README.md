@@ -61,10 +61,16 @@ The proof joins E36 (every matching of at least 46 edges extends) with a maximal
 
 ## Happy Ending
 
-**Ordered rank-3 signotope capacities $N(m,r,s)$ and planar forcing corollaries ($m = 7, 8, 9$ & general $m$):**
-- **$m = 7$ (heptagons):** Working manuscripts tighten $N(7,5,7)\le 39$ (owner intervals) and $N(7,6,6)\le 49$ (strict balanced capacity $2b-1$), and give $N(7,6,7)\le 75, N(7,7,7)\le 76 \implies$ working planar corollary **$\mathrm{ES}(7)\le 77$** (vs. Schroeder 2026 v1 planar $\le 81$), built on the accepted restricted capacity $N(7,5,6)=25$ (with a checked 25-point E21 abstract witness and DRAT-verified $\le 4$ common lock blocks).
-- **$m = 8$ (octagons):** Replayed shared-label CNF+DRAT certificate (`milestone9`, 115 rows) proves **$N(8,6,6)\le 61$** (9-hole hitting vector proves exact matrix minimum 9, not a 61-point signotope). Replaying Schroeder's 15-file omission trees (`193` / `124`) together with our signotope cyclic-sign packet bridge gives working signotope bounds $C_8\le 193, D_8\le 124 \implies N(8,8,8)\le 318$ (planar $\mathrm{ES}(8)\le 319$ is Schroeder's published preprint bound; autonomous fallback without public trees gives $N(8,8,8)\le 322, \mathrm{ES}(8)\le 323$).
-- **$m = 9$ (nonagons) & general $m$:** Replayed native boundary-trace integer dual certificates (`check_native_trace_cert.py`, $\Lambda=10^6$, zero float) establish **$N(9,8,8)\le 688$** ($\ge 236$ holes) and junction-restricted **$D_9\le 458$** ($\ge 124$ holes, matching the `47,635`-row depth-$\le 3$ LP ceiling). Assembled via R7 and R20, these give working bounds **$N(9,8,9)\le 1146, N(9,9,9)\le 1147 \implies \mathrm{ES}(9)\le 1148$** (vs. Mojarrad–Vlachos 2016 printed **$1508$** and combined planar reference **$1501^*$**). General-$m$ slice double counting gives $2b-1$ balanced capacity and quadratic/cubic deficits. Independent mathematical review of the structural, transfer, and R7/R20 assembly manuscripts is pending, and there is no Lean formalization.
+**Ordered rank-3 signotope capacities $N(m,r,s)$ and planar forcing corollaries ($m=7,8,9,10$ and general $m$):**
+
+| Parameter | Current analytical working chain $Q_m/F_m/ES(m)$ | Earlier chain and evidence |
+| --- | --- | --- |
+| 7 | ≤75/76/77 | Historical b25 acceptance and checked E21 abstract witness retain their own scope. |
+| 8 | ≤292/293/294 | Earlier ≤317/318/319 chain remains archived; planar ES(8)≤319 is Schroeder's preprint result. New ordinary 866≤56 and 858≤64 use historical fixed-CNF DRAT evidence and separate semantic bridges. |
+| 9 | ≤1098/1099/1100 | Each is 48 below the earlier 1146/1147/1148 working chain, whose native-trace integer certificates remain available. |
+| 10 | ≤3978/3979/3980 | New ordinary-row propagation and an integer obstruction to equality; no optimality claim. |
+
+The new chains are same-session, unreviewed and unaccepted analytical manuscripts, with no Lean formalization. The corrected portable checker and its negative control were run on macOS, together with repository links and public staging checks; Linux execution remains pending. Finite arithmetic, color-table and receipt checks do not establish the structural and R7/R20 mathematical bridges or rerun historical DRAT proofs. [Verification scope](../plugins/happy-ending/archive/nmrs-20261120/VERIFICATION.md).
 
 [Case summary & verification table](happy-ending/README.md) · [Bilingual public reader](../development/homepage-redesign-20261105/site/happy-ending-latest.html) · [Earlier `m = 7` reader](happy-ending/n7-20261103/START_HERE.html) · [Plugin & runnable checkers](../plugins/happy-ending/README.md)
 
@@ -73,3 +79,5 @@ The proof joins E36 (every matching of at least 46 edges extends) with a maximal
 Property B was researched with standalone ARIS tools and distilled into MathRSI v1. ECC continued using methods inherited through v1/v2 and deepened its formal reductions, matrix checks and portable certificates. Earlier Degree–Diameter work informed v2, which was then used to construct the 2,567-vertex $(10,4)$ graph. Erdős 86 ($Q_4$), $Q_6$ and earlier Happy Ending work informed v3; the later Happy Ending `m = 7` manuscripts and DD local-edit methods informed v4. Dense-matching $Q_7$ work ($\ge 57$ edges) on v3 fed v5, while subsequent $C_4$-free $Q_7/Q_8/Q_\infty$ coevolution, complete $Q_7$ E16 ($\ge 56$ edges), and the `m = 7, 8, 9` $N(m,r,s)$ runs (Trellis + ARIS + v3) fed v6 and its `main` maintenance. The full Q7 R7 author working proof, accepted in its source project on 2026-11-19 after v3 local adaptation, joins `v6` main maintenance on 2026-11-20; earlier release snapshots remain fixed.
 
 [Version and maintenance records](../development/README.md) document each release's changes and verification checks. New studies run in their own [task workspace](../docs/WORKSPACE.md).
+
+The [v7 release candidate](../docs/V7_CHANGES.md) draws workflow lessons from the latest Q7 and Happy Ending follow-ups; v6 remains the latest published release.

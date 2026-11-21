@@ -1339,3 +1339,80 @@ Object.assign(window.MATHRSI_ZH, {
   "≤6 directions via prescribed-endpoint P₆": "至多六方向提升：使用指定端点 P₆",
   "Ruskey–Savage: full Q7 author working proof for every matching, all 128 vertices, preserving every edge; Q6 universal theorem retained; the at-most-six-direction corollary uses prescribed-endpoint P6 and published lifting results.": "Ruskey–Savage：完整 Q7 作者工作证明覆盖任意匹配，128 点全覆盖并保留全部原边；保留 Q6 全称定理；至多六方向推论使用指定端点 P6 与已发表的提升结果。"
 });
+/* N(m,r,s) sector-deficit reader update, 2026-11-20. */
+Object.assign(window.MATHRSI_ZH, {
+  "November 20 update: same-input sector deficits give working ES(8) ≤ 294, ES(9) ≤ 1100 and ES(10) ≤ 3980. Independent mathematical review remains incomplete.": "11月20日更新：同一输入的扇区缺额给出工作推论ES(8) ≤ 294、ES(9) ≤ 1100、ES(10) ≤ 3980。独立数学审阅尚未完成。",
+  "Earlier runs: Trellis + ARIS through Nov 3; Trellis + ARIS + MathRSI v3 on Nov 5–17, subsequently integrated into v6 main maintenance. The new sector-deficit mathematics was proposed in the main research session; Sol/high transcribed it and checked text and links.": "历史运行归属：11月3日前为Trellis + ARIS，11月5–17日为Trellis + ARIS + MathRSI v3，之后纳入v6主线维护。新扇区缺额数学由主研究会话提出，Sol/high转写并检查文本与链接。",
+  "Current handoff ↗": "当前交接 ↗",
+  "Verification scope ↗": "核验范围 ↗",
+  "Replay instructions ↗": "复现说明 ↗",
+  "Executable domain methods ↗": "可执行领域方法 ↗",
+  "Objects and the two additions": "研究对象与两次加一",
+  "N(m,r,s) is the maximum population of a complete ordered rank-3 signotope avoiding blue r-vertex paths, red s-vertex paths and weak m: opposite-colour paths with the same actual endpoints and total length at least m+2. Path length counts vertices. Write Qₘ = N(m,m−1,m) and Fₘ = N(m,m,m). The R20 chart and reverse-extension manuscript gives Fₘ = Qₘ + 1; geometric inclusion then gives ES(m) ≤ Fₘ + 1. The junction-restricted residual Dₘ is a different capacity from ordinary N(m,m−2,m).": "N(m,r,s)计完整有序rank-3 signotope的最大避免人口：禁蓝r点路、红s点路和weak m，即同一对实际首末点的异色双路，长度和至少m+2。路径长度计顶点数。记Qₘ = N(m,m−1,m)、Fₘ = N(m,m,m)。R20合法chart与反向添点稿给出Fₘ = Qₘ + 1，几何包含再给ES(m) ≤ Fₘ + 1。带额外交接排斥的残余Dₘ不同于普通N(m,m−2,m)。",
+  "Current analytical working bounds": "当前解析工作上界",
+  "Manuscript and import scope": "工作稿与进口范围",
+  "Earlier joint replacement and common-root work, using the historical restricted b25 import.": "此前的共同替锁与共根工作稿，使用历史限定域b25进口。",
+  "Global same-lock compensation and near-saturation exchange; ordinary 866 ≤ 56 has historical fixed-CNF DRAT evidence.": "全域同锁补偿与近饱和交换；普通866 ≤ 56有历史固定CNF的DRAT证据。",
+  "Same-input sector budget with ordinary u = 222, t = 380. Each bound is 48 below the previous 1146 / 1147 / 1148 working chain.": "同一输入的扇区预算，普通进口u = 222、t = 380；相对旧1146 / 1147 / 1148工作链各降低48。",
+  "Ordinary-row propagation, an integer obstruction to equality, and the sector budget with u = 773, t = 1372.": "普通行传播、取等时的整数矛盾，以及u = 773、t = 1372的扇区预算。",
+  "Same-session / unreviewed / unaccepted": "同会话 / 未独立审阅 / 未接受",
+  "These analytical manuscripts make no optimality or priority claim. The independent review request returned no substantive mathematical opinion. There is no Lean formalization. Fixed-CNF checking, exact finite certificates and global mathematical reductions retain separate guarantees.": "这些解析工作稿不作最优性或优先权主张。独立审阅请求未返回实质数学意见。尚无Lean形式化。固定CNF核验、精确有限证书与全域数学归约保留各自保证。",
+  "One input, four sources of deficit": "同一输入上的四项缺额",
+  "On one actual Qₘ input X, let S and B be the long red and blue source sets, O their common complement, and b = |S ∩ B|, p = |O|. For ordinary capacity bounds u and t at the same m, keep every possible penultimate vertex Vq of the last owner of each distinct lock q. The proof constructs actual ordinary subdomains I and Y on this same X.": "在同一实际Qₘ输入X中，令S、B为长红路与长蓝路起点集，O为两者并集的补集，b = |S ∩ B|、p = |O|。使用同一m下的普通容量上界u、t，对每个不同锁q保留其最后业主的全部可能倒二点Vq。证明在同一X中构造实际普通子域I、Y。",
+  "The four terms charge two actual short-cap deficits, extra penultimate choices, and locks outside O. Owners may share locks; distinct locks have disjoint penultimate sets. Keeping all paths is essential. Deleting vertices requires recomputing sources, locks and deficits.": "四项分别计两个实际短帽子域的缺额、额外倒二点选择，以及O之外的锁。多个业主可以共锁，不同锁的倒二点集不交。须保留全部实际路径，删点后须重算起点、锁与缺额。",
+  "Here ρ is total ordinary-row slack and ε is the one-blue-source slice deficit. Both are nonnegative. The same-input budget turns compatible path structure into population loss without combining unrelated extremal realizations.": "ρ是普通行总余量，ε是单蓝源切片缺额，两者均非负。同一输入的预算将相容路径结构转成人口损失，不拼接不同极值实现。",
+  "Equality constrains the same points": "取等约束同一批实际点",
+  "At m = 9 and 1098 points, δ = 0 and at most two rows are unsaturated; two actual subdomains simultaneously reach 222 and 380. At the surviving m = 8, 292-point scalar types, they reach 56 and 100; at least five compressed faces of the latter reach 56 and at least 68 point ideals have equal envelopes.": "九参数1098点反设迫δ = 0、至多两行不饱和，两个实际子域同时达到222与380。八参数292点剩余标量类型中，两子域达到56与100；后者至少五张压缩面达到56，且至少68个点理想上下包络相等。",
+  "Positive deficits are still open": "正缺额仍待证明",
+  "Proving δ8 ≥ 6 for every 289-point Q8 input would give Q8 ≤ 288; proving δ9 ≥ 11 for every 1089-point Q9 input would give Q9 ≤ 1088. Neither statement is proved. The ordered-interval inequality 5|L| ≤ z excludes the 19-lock m = 8 scalar types, while other scalar types remain unresolved.": "若证明所有289点Q8输入均有δ8 ≥ 6，即得Q8 ≤ 288；若证明所有1089点Q9输入均有δ9 ≥ 11，即得Q9 ≤ 1088。两条均未证明。有序区间不等式5|L| ≤ z已排除八参数19锁标量类型，其余类型仍未解决。",
+  "Certificates and earlier contributions retain their scope": "证书与既有贡献保留原范围",
+  "Historical b25 acceptance and the checked E21 25-point abstract lower witness are separate evidence. TB-scale historical proof bodies are external; the abstract witness supplies no geometric realization.": "历史b25接受与已核验E21的25点抽象下界见证是两项证据。TB级历史证明主体未随仓；抽象见证不提供几何实现。",
+  "Ordinary 866 ≤ 56 has historical complete DRAT and same-byte CNF rebuilding evidence; ordinary 858 uses the sealed ≤64 result. The ≤63 attempt remains pending. Lightweight replay does not rerun these large proof bodies.": "普通866 ≤ 56有历史完整DRAT与同字节CNF重建证据；普通858采用已封存≤64，≤63仍待成功核验。轻量重放不重新运行这些大证明主体。",
+  "Earlier native-trace integer duals retain C9 ≤ 688, D9 ≤ 458 and the 47,635-row depth-≤3 LP ceiling. Their 1146 / 1147 / 1148 working assembly remains an independent route with its own mathematical imports.": "既有原生迹整数对偶保留C9 ≤ 688、D9 ≤ 458及47,635行深度≤3的LP上限。原1146 / 1147 / 1148工作装配仍作为独立路线保留自己的数学进口。",
+  "The earlier 115-row milestone9 certificate proves ordinary 866 ≤ 61. Its nine-hole vector is a matrix witness, not a 61-point signotope. Schroeder's 15-file octagon omission trees and planar ES(8) ≤ 319 keep their original attribution; the project's abstract transfer bridge is a separate working manuscript.": "此前115行milestone9证书给出普通866 ≤ 61，九洞向量是矩阵见证，不是61点signotope。Schroeder的15文件八边形遗漏树与平面ES(8) ≤ 319保留原归属，本项目的抽象迁移桥另为工作稿。",
+  "General families and replay": "一般参数族与复现",
+  "Three-, four- and five-column methods transport common height labels and holes over all height subsets. Compare a new coefficient or integer envelope with the same old seed and rounding. A large-height fixed-width gain does not automatically improve a small-m diagonal bound.": "三列、四列与五列方法在所有高度子集间运输共同高度标签与缺态。新系数或整数包络须与相同旧种子、相同取整比较。固定宽度在大高度的收益不自动降低小m对角界。",
+  "Use the current replay instructions for the exact commands, dependencies, actual receipts and omitted large evidence. Text checks, finite replay and repository packaging do not upgrade the analytical manuscripts to independently accepted theorems.": "准确命令、依赖、实测回执与未附大证据见当前复现说明。文本检查、有限重放与仓库打包不把解析稿升级为独立接受的定理。",
+  "November 17 archive and certificate suites ↗": "11月17日归档与证书组 ↗",
+  "Earlier m = 7 reader ↗": "此前七参数阅读页 ↗",
+  "Case guide ↗": "案例导读 ↗"
+});
+Object.assign(window.MATHRSI_ZH, {
+  "The new portable checker, its negative control and final repository/site checks are prepared but unexecuted on Linux because the authoritative server was unreachable. Historical successful receipts remain separate.": "新便携核验器、负对照与最终仓库／站点检查已准备，但因权威Linux服务器连接失败尚未执行。历史成功回执另行保留。"
+});
+
+Object.assign(window.MATHRSI_ZH, {
+  "Published": "已发布",
+  "Candidate": "候选预览",
+  "Same-input deficits & terminal completion": "同一输入缺额与终态补全",
+  "Keep the same actual input": "保持同一实际输入",
+  "Charge every deficit on the same input; retain shared endpoints, all penultimate choices and joint compatibility.": "所有缺额均计于同一输入；保留共同端点、全部倒数第二点选择和联合相容性。",
+  "Complete to the terminal case": "补全至终态",
+  "Preserve all original requirements while extending to a maximal object, then close every terminal obstruction.": "保留原题全部要求，扩充至极大对象，再排除每个终态障碍。",
+  "Keep deficits and equality constraints attached to the same actual input, rather than adding bounds attained on different objects.": "缺额与等号约束始终对应同一实际输入，不能叠加在不同对象上达到的界。",
+  "After a dense theorem, preserve the original input during monotone completion and exclude every remaining terminal obstruction.": "得到稠密范围定理后，单调补全时保留原输入，并排除全部剩余终态障碍。",
+  "Q7 maximal completion; Happy Ending same-input sector budgets.": "Q7 极大补全；Happy Ending 同一输入扇区预算。",
+  "Candidate preview, not a published release. Full Q7 R7 was already received in v6 main maintenance; v7 distills its terminal-completion method. Happy Ending retains ES(7) ≤ 77 and adds working ES(8) ≤ 294 (Schroeder comparator 319), ES(9) ≤ 1100 (previous working 1148), and ES(10) ≤ 3980. Bounded macOS finite replay passed; independent mathematical review pending, no Lean.": "候选预览，尚未发布。完整 Q7 R7 已在 v6 主线维护接收；v7 提炼其终态补全方法。Happy Ending 保留 ES(7) ≤ 77，新增工作推论 ES(8) ≤ 294（Schroeder 比较界319）、ES(9) ≤ 1100（此前工作界1148）与 ES(10) ≤ 3980。有界 macOS 有限核验已通过；独立数学审阅待完成，无 Lean。",
+  "Same-input sector deficits": "同一输入的扇区缺额",
+  "Working ES(7) ≤ 77 unchanged; ES(8) ≤ 294 versus Schroeder 319, ES(9) ≤ 1100 versus previous working 1148, ES(10) ≤ 3980. Bounded macOS finite replay passed; independent mathematical review pending, no Lean.": "工作界 ES(7) ≤ 77 不变；ES(8) ≤ 294 对比 Schroeder 的319，ES(9) ≤ 1100 对比此前工作界1148，ES(10) ≤ 3980。有界 macOS 有限核验通过；独立数学审阅待完成，无 Lean。",
+  "v6 main result → v7 method intake": "v6 主线成果 → v7 方法纳入",
+  "Working manuscripts · review pending": "工作手稿 · 待独立审阅",
+  "The bounded portable finite checker and negative control passed on macOS. This does not replay the omitted large DRAT bodies or complete the independent mathematical review; Linux replay remains unexecuted.": "有界便携有限核验器与负对照已在 macOS 通过。未重放省略的大型 DRAT 主体，独立数学审阅仍未完成；Linux 重放尚未执行。",
+  "Signotope capacities and planar bounds across m = 7–10": "m = 7–10 的 signotope 容量与平面界",
+  "Same-input sector manuscript; Schroeder’s planar comparator is 319.": "同一输入扇区工作手稿；Schroeder 的平面比较界为319。",
+  "Same-input sector manuscript, improving the previous working 1148. ES(10) ≤ 3980 is a further working corollary.": "同一输入扇区工作稿，改进此前工作界1148；进一步工作推论为 ES(10) ≤ 3980。",
+  "Q₇: every matching extends (v7 candidate intake; v6 main result).": "Q₇：任意匹配均可延拓（v7候选纳入；v6主线成果）。",
+  "Happy Ending: ES(7) ≤ 77 · ES(8) ≤ 294 · ES(9) ≤ 1100 · ES(10) ≤ 3980 working.": "Happy Ending：工作推论 ES(7) ≤ 77 · ES(8) ≤ 294 · ES(9) ≤ 1100 · ES(10) ≤ 3980。"
+});
+
+Object.assign(window.MATHRSI_ZH, {"Same-input sector budgets give working ES(8) ≤ 294, ES(9) ≤ 1100 and ES(10) ≤ 3980, while ES(7) ≤ 77 is unchanged.": "同一输入的扇区预算给出工作推论 ES(8) ≤ 294、ES(9) ≤ 1100 与 ES(10) ≤ 3980；ES(7) ≤ 77 保持不变。", "Keep actual source sets, shared locks and all penultimate choices on the same input; charge row slack and sector deficits together.": "保留同一输入上的实际源集、共享锁与全部倒数第二点选择；共同计算行松弛和扇区缺额。", "v6 published. v7 candidate: full Q₇ method intake and Happy Ending same-input deficits. v8+ remains future.": "v6 已发布。v7 候选：完整 Q₇ 方法纳入与 Happy Ending 同一输入缺额。v8+ 留作未来演进。", "m = 7–10 overview ↗": "m = 7–10 总览 ↗", "working · comparator 319": "工作稿 · 比较界319", "Earlier m = 9 native-trace route": "此前 m = 9 原生迹路线"});
+
+Object.assign(window.MATHRSI_ZH, {"The v7 candidate distills terminal completion from the full Q7 result already integrated into v6 main maintenance; fixed v5 ≥57 and v6 ≥56 snapshots remain unchanged.": "v7 候选从已纳入 v6 主线维护的完整 Q7 成果提炼终态补全；固定 v5 ≥57 与 v6 ≥56 快照保持不变。", "Happy Ending results & methods ↗": "Happy Ending 成果与方法 ↗"});
+
+Object.assign(window.MATHRSI_ZH, {
+  "Bounded macOS replay passed · mathematical review pending": "有界 macOS 重放通过 · 独立数学审阅待完成",
+  "Happy Ending · ES(7) ≤ 77 unchanged; working ES(8) ≤ 294, ES(9) ≤ 1100, ES(10) ≤ 3980. Same-input deficits → v7 candidate.": "Happy Ending · ES(7) ≤ 77 不变；工作推论 ES(8) ≤ 294、ES(9) ≤ 1100、ES(10) ≤ 3980。同一输入缺额 → v7 候选。",
+  "Happy Ending · fixed v6: m = 7–9 capacities, working ES(9) ≤ 1148; later sector deficits appear in the v7 candidate.": "Happy Ending · 固定 v6：m = 7–9 容量，工作界 ES(9) ≤ 1148；后续扇区缺额见 v7 候选。",
+  "Results · m = 7–10 working planar bounds; earlier certificate route retained": "成果 · m = 7–10 平面工作界；保留此前证书路线",
+  "working · previous 1148": "工作稿 · 此前1148"
+});

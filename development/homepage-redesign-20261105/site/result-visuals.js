@@ -272,11 +272,11 @@
 
     he: {
       resultLabel:
-        'Happy Ending and ordered rank-3 signotope capacities across m = 7, 8, 9: working ES(7) <= 77, replayed N(8,6,6) <= 61 CNF+DRAT and signotope N(8,8,8) <= 318, and replayed native-trace duals C9 <= 688, D9 <= 458 assembling to working ES(9) <= 1148.',
+        'Happy Ending working planar bounds: ES(7) <= 77 unchanged, ES(8) <= 294 versus Schroeder 319, ES(9) <= 1100 versus previous working 1148, ES(10) <= 3980. Earlier native-trace route shown separately; independent mathematical review pending.',
       resultCap:
-        'Results · m = 7, 8, 9 capacities & planar thresholds (replayed duals/DRAT + working assembly)',
+        'Results · m = 7–10 working planar bounds; earlier certificate route retained',
       links: [
-        { label: 'm = 7–9 overview ↗', href: 'happy-ending-latest.html', sourceLanguage: 'EN + 中文' },
+        { label: 'm = 7–10 overview ↗', href: 'happy-ending-latest.html', sourceLanguage: 'EN + 中文' },
         { label: 'm = 7 figure ↗', href: 'assets/result-figures/happy-ending-bounds.svg', sourceLanguage: '中文', sub: true }
       ],
       render() {
@@ -293,7 +293,7 @@
           <!-- Top panel: three m = 7, 8, 9 settings side-by-side -->
           <rect class="rv-panel" x="14" y="10" width="352" height="104" rx="10"/>
           <text class="rv-h" x="24" y="28">Signotope &amp; planar bounds</text>
-          <text class="rv-meta" x="356" y="28" text-anchor="end">m = 7, 8, 9</text>
+          <text class="rv-meta" x="356" y="28" text-anchor="end">m = 7–10</text>
 
           <rect x="22" y="36" width="102" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="73" y="52" text-anchor="middle">m = 7 (7-gons)</text>
@@ -302,17 +302,17 @@
 
           <rect x="130" y="36" width="112" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="186" y="52" text-anchor="middle">m = 8 (8-gons)</text>
-          <text x="186" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">N(8,6,6) ≤ 61</text>
-          <text x="186" y="94" text-anchor="middle" font-size="8.8" fill="var(--muted)">signotope · N(8,8,8) ≤ 318</text>
+          <text x="186" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">ES(8) ≤ 294</text>
+          <text x="186" y="94" text-anchor="middle" font-size="8.8" fill="var(--muted)">working · comparator 319</text>
 
           <rect x="248" y="36" width="110" height="68" rx="7" fill="#F8F9FB" stroke="var(--hair)"/>
           <text class="rv-sub" x="303" y="52" text-anchor="middle">m = 9 (9-gons)</text>
-          <text x="303" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">ES(9) ≤ 1148</text>
-          <text class="rv-sub" x="303" y="94" text-anchor="middle">working · vs 1508</text>
+          <text x="303" y="75" text-anchor="middle" font-size="13.5" font-weight="680" class="rv-accent">ES(9) ≤ 1100</text>
+          <text class="rv-sub" x="303" y="94" text-anchor="middle">working · previous 1148</text>
 
           <!-- Bottom panel: m = 9 native-trace dual assembly -->
           <rect class="rv-panel" x="14" y="122" width="352" height="122" rx="10"/>
-          <text class="rv-h" x="24" y="141">m = 9 native-trace assembly</text>
+          <text class="rv-h" x="24" y="141">Earlier m = 9 native-trace route</text>
           <text class="rv-meta" x="356" y="141" text-anchor="end">replayed duals · Λ = 10⁶</text>
 
           <rect x="22" y="152" width="116" height="80" rx="8" fill="#FAF6EE" stroke="#E5D5B5"/>
