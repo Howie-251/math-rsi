@@ -8,6 +8,24 @@
 
 </div>
 
+<a id="news"></a>
+
+## 📢 News
+
+- **[v7](https://github.com/lisresearchgroup/math-rsi/releases/tag/v7)** · 2026-11-22 — The working proof now extends every matching in the seven-dimensional cube to a Hamilton cycle. The Happy Ending manuscripts give ES(8) ≤ 294, ES(9) ≤ 1,100 and ES(10) ≤ 3,980.
+- **[v6](https://github.com/lisresearchgroup/math-rsi/releases/tag/v6)** · 2026-11-20 — The Q₇ matching threshold fell from 57 edges to 56. For square-free subgraphs of Q₈, the maximum number of edges was narrowed to 682 or 683.
+- **[v5](https://github.com/lisresearchgroup/math-rsi/releases/tag/v5)** · 2026-11-14 — In Q₇, every matching with at least 57 edges was shown to extend to a Hamilton cycle. The proof showed how to reuse a theorem by choosing a different representation of the same matching.
+
+<details>
+<summary>Earlier versions (v1–v4)</summary>
+
+- **[v4](https://github.com/lisresearchgroup/math-rsi/releases/tag/v4)** · 2026-11-08 — Convex polygon proofs taught the workflow to trace which inequalities must be tight together. The degree–diameter plugin gained methods for constructing larger graphs.
+- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** · 2026-11-04 — Three new plugins brought MathRSI to six domains, adding square-free subgraphs of cubes, matching extension in cubes, and convex polygons.
+- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** · 2026-11-03 — The degree–diameter plugin joined MathRSI. It was the first plugin used to test a new maintenance workflow for turning research findings into changes to the shared base.
+- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** · 2026-11-03 — Property B and coding theory supplied the first shared workflow, from defining a problem and exploring proof routes to checking and handing off a proof.
+
+</details>
+
 [![Historical MathRSI v0 through v6 homepage evolution](figures/mathrsi/media/evolution.gif?v=6-q7-20261120)](figures/mathrsi/media/evolution.mp4?v=6-q7-20261120)
 
 *Historical v0 → v6 homepage replay; “Current” in the recording refers to v6 at that time. Click for MP4; [interactive homepage](https://lisresearchgroup.github.io/math-rsi/) · [six case studies and verification status](case-studies/README.md).*
@@ -97,21 +115,7 @@ Two tracks evolve together: **shared base behavior** becomes stronger, while **d
 
 **[MathRSI v7 is the latest release](https://github.com/lisresearchgroup/math-rsi/releases/tag/v7).** [Release notes](docs/V7_CHANGES.md) · [Download v7](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v7.zip) · [Download main](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) · [Evolution records](development/README.md) · [Maintenance guide](docs/EVOLUTION_WORKFLOW.md)
 
-<details>
-<summary>Release history (v0–v7)</summary>
-
-- **v0:** standalone Property B and ECC research tools prior to the shared harness (no Git tag).
-- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1):** five solving stages, three-layer separation, adversarial route iteration and initial plugins.
-- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2):** separate maintenance workflow, Degree–Diameter plugin, evidence transfer and shared coverage checks. [Changes](docs/V2_CHANGES.md)
-- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3):** full-domain counterexample checks, marked-object transport, finite universal certificates and explicit Lean-premise checks; upgraded ECC and three new domains. [Changes](docs/V3_CHANGES.md)
-- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4):** turning tight equalities into usable witnesses, plus Happy Ending and Degree–Diameter methods. [Changes](docs/V4_CHANGES.md)
-- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5):** controlled auxiliary choices, theorem reuse across legal representations and finite-plan coverage; deeper Hamilton and DD D5 methods. [Changes](docs/V5_CHANGES.md)
-- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6):** hardest-branch split probes, primal–dual coevolution and repair-residual stopping; deeper hypercube extremal and complete $Q_7$ E16 Hamilton methods. [Changes](docs/V6_CHANGES.md)
-- **[v7](https://github.com/lisresearchgroup/math-rsi/tree/v7):** terminal matching extension and shared deficit estimates from the Hamilton and Happy Ending plugins. [Changes](docs/V7_CHANGES.md)
-
-[Historical v2/v3 architecture diagrams](figures/mathrsi/README.md#historical-diagrams)
-
-</details>
+v0 records the Property B and coding research that preceded the shared workflow. Version tags begin at v1. [Version news](#news) · [Historical architecture diagrams](figures/mathrsi/README.md#historical-diagrams)
 
 <a id="documentation--provenance"></a>
 

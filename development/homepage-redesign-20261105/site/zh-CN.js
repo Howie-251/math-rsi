@@ -1,5 +1,15 @@
 /* Chinese homepage copy, drafted by Gemini 4 and checked against the English source. */
 window.MATHRSI_ZH = {
+  "News": "版本动态",
+  "News ↓": "版本动态 ↓",
+  "Earlier versions (v1–v4)": "早期版本（v1–v4）",
+  "The working proof now extends every matching in the seven-dimensional cube to a Hamilton cycle. The Happy Ending manuscripts give ES(8) ≤ 294, ES(9) ≤ 1,100 and ES(10) ≤ 3,980.": "七维超立方体的工作证明已覆盖所有匹配，每个匹配都能延拓为哈密顿圈。凸多边形研究的新稿给出了 ES(8) ≤ 294、ES(9) ≤ 1,100、ES(10) ≤ 3,980 三个上界。",
+  "The Q₇ matching threshold fell from 57 edges to 56. For square-free subgraphs of Q₈, the maximum number of edges was narrowed to 682 or 683.": "七维超立方体中，保证匹配能延拓为哈密顿圈的门槛从至少 57 条边降至至少 56 条。八维超立方体中，无四边形子图的最大边数被限定在 682 与 683 之间。",
+  "In Q₇, every matching with at least 57 edges was shown to extend to a Hamilton cycle. The proof showed how to reuse a theorem by choosing a different representation of the same matching.": "在七维超立方体中，至少含 57 条边的匹配都能延拓为哈密顿圈。证明通过改变同一个匹配的表示来复用已有定理，这个技巧也进入了通用工作流。",
+  "Convex polygon proofs taught the workflow to trace which inequalities must be tight together. The degree–diameter plugin gained methods for constructing larger graphs.": "从凸多边形的证明中，团队提炼出一种方法，沿不等式逐步回溯，找出必须同时取等的条件。度–直径插件也加入了构造更大图的方法。",
+  "Three new plugins brought MathRSI to six domains, adding square-free subgraphs of cubes, matching extension in cubes, and convex polygons.": "新增三个插件，分别研究超立方体中的无四边形子图、超立方体匹配延拓和凸多边形。MathRSI 由此覆盖六个数学领域。",
+  "The degree–diameter plugin joined MathRSI. It was the first plugin used to test a new maintenance workflow for turning research findings into changes to the shared base.": "度–直径插件加入 MathRSI。团队用这个插件首次试行版本维护流程，把图构造中积累的经验写回通用工作流。",
+  "Property B and coding theory supplied the first shared workflow, from defining a problem and exploring proof routes to checking and handing off a proof.": "从超图二染色（Property B）和编码理论两项研究中，团队提炼出第一套通用工作流，涵盖问题界定、路线探索、证明、核验和交接。",
   "D5 method": "D5 方法",
   "Latest D5 finals regenerate exactly. D12 inherits old–old distances from the preserved source and checks all 31 new roots. D11 core–core distances depend on H9 geometry and literal binding; all 161 peripheral/new roots were checked. Concrete end-to-end Lean instances for the new D5 endpoints and source final-review obligations remain open. Earlier (10,4) and (16,4) results retain their dated comparisons and have been overtaken in the current table.": "最新 D5 最终图均精确重建。D12 从保留的源图继承旧—旧距离，核查全部 31 个新根。D11 核心—核心距离依赖 H9 几何与字面绑定；全部 161 个外围／新根已核验。新 D5 端点的具体端到端 Lean 实例及原件最终审阅义务仍开放。较早 (10,4)、(16,4) 成果保留原日期比较，目前已被公开表超越。",
   "Our best constructions by setting": "各组参数下的最佳构造",
