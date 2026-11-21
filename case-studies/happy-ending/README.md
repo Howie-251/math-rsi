@@ -1,20 +1,46 @@
-# Happy Ending / Erdős–Szekeres & Ordered Signotope Capacities N(m,r,s)
+# Happy Ending / Erdős–Szekeres & N(m,r,s)
 
-[Bilingual public reader (`m = 7, 8, 9` & general `m`)](../../development/homepage-redesign-20261105/site/happy-ending-latest.html) · [Earlier `m = 7` reader](n7-20261103/START_HERE.html) · [2026-11-17 comprehensive handoff](../../plugins/happy-ending/archive/nmrs-20261117/HANDOFF.md) · [Plugin & runnable checkers](../../plugins/happy-ending/README.md)
+[Current bilingual reader](../../development/homepage-redesign-20261105/site/happy-ending-latest.html) · [2026-11-20 handoff](../../plugins/happy-ending/archive/nmrs-20261120/HANDOFF.md) · [Verification scope](../../plugins/happy-ending/archive/nmrs-20261120/VERIFICATION.md) · [Replay](../../plugins/happy-ending/archive/nmrs-20261120/REPLAY.md) · [Domain methods](../../plugins/happy-ending/skills/mathrsi-happy-ending/references/nmrs-higher-bounds.md)
 
-We study the restricted path-avoiding capacity $N(m,r,s)$ on complete ordered rank-3 signotopes — the maximum number of elements avoiding blue $r$-vertex paths, red $s$-vertex paths, and same-endpoint weak $m$-gons — together with its planar general-position forcing corollaries $\mathrm{ES}(m) \le N(m,m,m) + 1$. Write $C_m = N(m,m-1,m-1)$, $Q_m = N(m,m-1,m)$, $F_m = N(m,m,m)$, and let $D_m$ denote the R7 residual capacity with junction exclusion (no vertex simultaneously ends a red $(m-2)$-path and starts a blue $(m-3)$-path; $D_m$ is not interchangeable with unconstrained $N(m,m-2,m)$). For $m \ge 6$, disjoint H–R splitting (R7) gives $Q_m \le C_m + D_m$ and leftmost-pivot chart transport (R20) gives $F_m = Q_m + 1$, hence $\mathrm{ES}(m) \le F_m + 1 \le C_m + D_m + 2$.
+N(m,r,s) is the maximum population of a complete ordered rank-3 signotope avoiding a blue r-vertex path, a red s-vertex path and weak m: opposite-colour paths on the same actual endpoints with total length at least m+2. Paths count vertices. Write Q_m=N(m,m−1,m) and F_m=N(m,m,m). The R20 chart and reverse-extension manuscript gives F_m=Q_m+1; geometric inclusion adds another one to obtain the planar forcing threshold ES(m)≤F_m+1. The junction-restricted R7 residual D_m is a different capacity from ordinary N(m,m−2,m).
 
-## Summary across m = 7, 8, 9 and general m
+## Current analytical working bounds — 2026-11-20
 
-| Setting | Key capacities & planar corollary | Replayable certificates vs. working manuscripts |
+| m | Q_m | F_m | Planar ES(m) | Source and guarantee |
+| --- | ---: | ---: | ---: | --- |
+| 7 | ≤75 | ≤76 | ≤77 | Earlier joint replacement and common-root manuscript; historical b25 import retains its recorded scope. |
+| 8 | ≤292 | ≤293 | ≤294 | Global same-lock compensation and near-saturation exchange; ordinary 866≤56 is supported by historical fixed-CNF DRAT evidence. |
+| 9 | ≤1098 | ≤1099 | ≤1100 | Same-input sector budget with ordinary u=222,t=380. Each bound is 48 below the previous 1146/1147/1148 working chain. |
+| 10 | ≤3978 | ≤3979 | ≤3980 | Ordinary-row propagation, an integer obstruction to equality, and the same-input sector budget with u=773,t=1372. |
+
+The corrected portable checker completed on macOS with `PASS_BOUNDED_EXACT_REPLAY`; its rejected-seed negative control failed as expected. Repository link and public staging checks also passed locally. Linux execution remains pending. See VERIFICATION and REPLAY above for the actual scope and evaluator correction; this finite replay does not accept the mathematical bridges or replay the large DRAT proofs.
+
+These are **same-session / unreviewed / unaccepted analytical manuscripts**, with no optimality or priority claim. The independent review attempt returned no substantive mathematical opinion. There is no Lean formalization. The new sector-deficit mathematics and corollaries were proposed in the main research session; Sol/high transcribed them and checked text and links. Earlier manuscripts, historical SAT evidence and literature imports keep their own provenance, recorded in the handoff.
+
+## Reusable mathematics and the remaining gap
+
+On one original Q_m input X, define red and blue source sets S,B and their four sectors. For ordinary bounds u,t at the same m, the manuscript constructs two actual induced subdomains I,Y and all penultimate-vertex sets V_q of the last owner of each distinct lock. It proves
+
+$$\delta=u+t-b-p=[u-|I|]+[t-|Y|]+\sum_q(|V_q|-1)+|L\setminus O|\ge0,$$
+
+and combines their shared deficit with ordinary-row slack ρ and slice deficit ε:
+
+$$(m-2)|X|+\rho+\epsilon+(m-3)\delta=(m-1)\binom{2m-7}{m-4}+(m-3)u+(m-2)t.$$
+
+This is a budget on the same actual input. Restricting X requires recomputing all sources, locks and deficits. At 1098 points for m=9, the budget forces δ=0 and at most two unsaturated rows; at the surviving 292-point m=8 types, it forces two actual subdomains to reach 56 and 100 simultaneously. The full all-path family is retained; one representative path does not suffice.
+
+The positive-deficit targets δ8≥6 for every 289-point Q8 input and δ9≥11 for every 1089-point Q9 input remain **open**. They would imply Q8≤288 and Q9≤1088 respectively. The 19-lock m=8 scalar types are excluded by the ordered-interval inequality 5|L|≤z, while remaining scalar types are still unresolved. Fixed-width three-, four- and five-column deficit transport is a separate general-family direction; it does not automatically improve a small-m diagonal bound.
+
+## Evidence layers and earlier contributions
+
+| Material | What it supports | Scope retained |
 | --- | --- | --- |
-| **$m = 7$ (heptagons)** | $N(7,4,7)=16$ (Baek), $N(7,5,6)=25$; analytic $N(7,5,7)\le 39$, $N(7,6,6)\le 49$; $N(7,6,7)\le 75$, $N(7,7,7)\le 76 \implies$ working **$\mathrm{ES}(7)\le 77$** (vs. Schroeder 2026 v1 planar $\le 81$). | $N(7,5,6)\le 25$ has historical C1–C10 human acceptance (`same-family / provisional`, 55 raw TB-scale SAT proofs external); 25-point E21 abstract witness and DRAT exclusion of 5 common lock blocks ($\le 4$ blocks) are replayed in-repo. Structural manuscripts ($39, 49, 75, 76 \to 77$) are working proofs pending independent review; $\le 74$ holds only on specified subclasses. |
-| **$m = 8$ (octagons)** | **$N(8,6,6)\le 61$** (`milestone9`); analytic $N(8,5,7)\le 51$, $N(8,5,8)\le 66$, $N(8,6,7)\le 109$, $N(8,6,8)\le 165$; signotope transfer $C_8\le 193, D_8\le 124 \implies Q_8\le 317, N(8,8,8)\le 318$ (autonomous fallback without public trees: $N(8,8,8)\le 322, \mathrm{ES}(8)\le 323$). | `check_n866_milestone9.py` replays all 115 shared-label rows + `drat-trim` UNSAT for $N(8,6,6)\le 61$ (its 9-hole hitting vector proves exact matrix minimum 9, not a 61-point signotope). `check_octagon_omission.py` replays Schroeder's 15-file omission trees (`193` / `124`); the signotope cyclic-sign packet bridge is a working paper proof. **Planar $\mathrm{ES}(8)\le 319$ is Schroeder's published preprint bound, not claimed as a new planar reduction here.** |
-| **$m = 9$ (nonagons)** | **$C_9 = N(9,8,8)\le 688$**, junction-restricted **$D_9\le 458$** $\implies$ working **$N(9,8,9)\le 1146$, $N(9,9,9)\le 1147$, $\mathrm{ES}(9)\le 1148$** (vs. Mojarrad–Vlachos 2016 printed **$1508$** and combined planar reference **$1501^*$** $= 924+575+2$). Analytic sub-table covers $N(9,5,8)\le 78$ through $N(9,7,9)\le 633$. | `check_native_trace_cert.py` independently regenerates all `883` / `532` positive native boundary-trace rows and integer overload penalties ($\Lambda=10^6$, zero floating-point arithmetic) for `688` ($\ge 236$ holes) and `458` ($\ge 124$ holes), plus verifies the `47,635`-row rational grid certifying the depth-$\le 3$ LP ceiling at 124. Single-row trace necessity and R7/R20 assembly for $\mathrm{ES}(9)\le 1148$ remain working proofs pending independent review. |
-| **General $m$** | Strict balanced capacity $N(2p-3,p,p)\le 2b-1$ ($p\ge 4$), 3-column quadratic deficit ($\sim n^2/12$) for $N(m,5,m-1)$, and 4-column cubic deficit ($\sim n^3/80$) for $N(m,6,m-2)$. | Coordinate-deletion slice double-counting manuscripts in [`nmrs-20261117`](../../plugins/happy-ending/archive/nmrs-20261117/HANDOFF.md), pending independent review; no closed-form $\mathrm{ES}(m)$ formula for $m\ge 10$ is claimed. |
+| Historical b25 acceptance and checked E21 25-point colour table | Restricted upper-bound import and a separate abstract lower witness | Same-family/provisional upper acceptance; no geometric realization from the witness; TB-scale proof bodies external. |
+| Ordinary 866≤56 and 858≤64 | Historical fixed-CNF UNSAT checks and source/CNF rebuilding evidence | Mathematical reduction to the fixed CNF remains a separate bridge. Ordinary 858≤63 is pending. Large proof bodies are not replayed by the new lightweight checks. |
+| Native-trace integer duals C9≤688,D9≤458 and 47,635-row rational witness | Exact finite inequalities and the depth-≤3 LP ceiling | The existing 1146/1147/1148 working assembly and its imports remain available independently of the stronger new analytical chain. |
+| Milestone9 115-row certificate and nine-hole vector | Earlier ordinary 866≤61 and exact minimum nine for that row matrix | The vector is a matrix witness, not a 61-point signotope. |
+| Schroeder's public octagon omission trees | Attributed 15-file finite arithmetic, used with the project's signotope transfer bridge | Planar ES(8)≤319 is Schroeder's published preprint result; the project's earlier abstract transfer is a separate working argument. |
 
-## Execution provenance & runnable checks
+[2026-11-17 evidence and commands](../../plugins/happy-ending/archive/nmrs-20261117/HANDOFF.md) · [Earlier seven-parameter reader](n7-20261103/START_HERE.html) · [Plugin and checkers](../../plugins/happy-ending/README.md)
 
-The `b = 25` base and initial `75/76 → ES(7) ≤ 77` chain were developed with Trellis and standalone ARIS tools through November 3, 2026; the November 5–17 $m = 7, 8, 9$ and general-$m$ results were produced in a hybrid **Trellis + ARIS + MathRSI `v3` (`mathrsi-prove`, `mathrsi-happy-ending`, `proof-writer`)** workflow and integrated into **`v6` maintenance on `main`** (with the fixed `v6` tag unchanged). There is no Lean formalization in this thread.
-
-All five portable finite checks run directly from the repository root on macOS and Linux — see [`plugins/happy-ending/README.md`](../../plugins/happy-ending/README.md) and [`development/evolution/v6-nmrs-20261117/EVOLUTION.md`](../../development/evolution/v6-nmrs-20261117/EVOLUTION.md) for exact commands and verification receipts.
+The initial b25 and 75/76→77 work used Trellis + standalone ARIS through November 3; the November 5–17 work used Trellis + ARIS + MathRSI v3 and was subsequently integrated into v6 main maintenance. This November 20 incremental handoff preserves those execution attributions and fixed release tags. Packaging, text checks and finite replay do not constitute independent mathematical acceptance.

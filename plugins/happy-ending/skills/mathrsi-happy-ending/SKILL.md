@@ -1,12 +1,13 @@
 ---
 name: mathrsi-happy-ending
-description: 研究Erdős–Szekeres多边形与一般有序rank-3 signotope受限容量N(m,r,s)（m=7,8,9及一般m），执行状态基数、坐标切片双计数、共享标签核、原生边界迹对偶、共同匹配替锁与合法chart运输；给base返回准确证明、反例或未闭义务，区分已复验有限证书、结构工作稿与平面几何实现。
+description: 研究Erdős–Szekeres多边形与一般有序rank-3 signotope受限容量N(m,r,s)（m=7–10及一般m），执行同输入扇区缺额、全倒二点补偿、状态基数、坐标切片双计数、共享标签核、原生边界迹对偶、共同匹配替锁与合法chart运输；给base返回准确证明、反例或未闭义务，区分已复验有限证书、结构工作稿与平面几何实现。
 ---
 
 # Happy Ending领域研究
 
 本技能在prepare/survey、route-loop或prove的当前义务内工作，不重启整条研究。它处理杯帽、weak/split多边形、受限容量 $N(m,r,s)$、signotope状态、切片双计数与共同路径结构。具体见证、CNF/DRAT或稀疏整数对偶核验交[happy-ending-certificate](../happy-ending-certificate/SKILL.md)；插件返回原caller，由base唯一调度下一阶段。独立调用只做用户所请求范围。历史Goal、作者指令和原路径不构成新计算授权。
 
+2026-11-20 当前工作结果与原件入口为[新HANDOFF](../../archive/nmrs-20261120/HANDOFF.md)、[核验范围](../../archive/nmrs-20261120/VERIFICATION.md)、[复现入口](../../archive/nmrs-20261120/REPLAY.md)及[同输入扇区缺额执行参考](references/nmrs-higher-bounds.md)。处理m=8–10时，先恢复同一母体的S/B/O、全部锁和全部倒二点集合，以ρ+ε+(m−3)δ计总费用，再比较当前活跃界；不能继续只针对已被更强工作链替换的旧标量目标。当前Q8≤292、Q9≤1098、Q10≤3978均为未独审/未接受的解析工作稿；历史有限证书保持单独范围。
 ## 进入与固定问题
 
 先读当前任务的原题、采用版本、允许进口、当前失败及返回点。恢复时沿原义务取回成熟产物，不按档案中的“active”重开发现。2026-11-17 新增 $m=7,8,9$ 与一般 $m$ 受限容量入口见[高阶受限容量与原生迹对偶](references/nmrs-higher-bounds.md)及[综合交接包](../../archive/nmrs-20261117/HANDOFF.md)；75/76 替锁证明入口为[临界取等、替锁与端点相容](references/equality-exchange.md)与[75/76原稿](../../archive/n7-20261103/proofs/CURRENT.md)。旧来源阅读从[完整报告](../../archive/source/source/report.md)、[原稿CURRENT](../../archive/source/working/package/proofs/CURRENT.md)开始，再按本次问题读[数学与方法](references/mathematics.md)和[失败与证据](references/failures-and-evidence.md)。原图和原稿随仓，历史Windows/Linux路径用[source-map](../../archive/source/working/package/proofs/source-map.tsv)或[2026-11-17清单](../../archive/nmrs-20261117/INVENTORY.json)定位，不能要求读者访问作者机器。
@@ -69,8 +70,8 @@ route-loop/prove进入共同饱和义务时，给真实母体X及其所有红6�
 
 反向添一个全蓝最左点，同样核新packet与经过新点的异色路径，得到精确+1。随后用几何包含和阈值定义再+1。旧25→76→77→78、新25→75→76→77分别是受限容量、结构容量上界、一般避免规模上界和几何强迫阈值；展示不可画成一个数值的时间增长。
 
-## 7. 八、九参数与一般受限容量 N(m,r,s)
+## 7. 八至十参数与一般受限容量 N(m,r,s)
 
-处理 $m \ge 8$ 或新增七参数子界（owner 区间 $N(7,5,7)\le 39$、严格平衡容量 $N(7,6,6)\le 49$、五锁块排除 $\le 4$）时，先读[高阶受限容量参考](references/nmrs-higher-bounds.md)。严格区分普通避免容量与带交接排斥的 R7 残余 $D_m$（不可拿 $D_m$ 代替普通 $N(m,m-2,m)$）。当纯状态占有矩阵达理论上限（如 9 洞 hitting 向量封顶 115 行矩阵，或 47,635 行有理可行网格封顶深度 $\le 3$ 原生迹 LP），停止在同一矩阵内盲目扩行，转入共享末对标签 CEGAR 核（如 $N(8,6,6)\le 61$）或更高阶结构耦合。八参数公开平面 $\mathrm{ES}(8)\le 319$ 归属 Schroeder 预印本，本项目仅主张抽象 signotope 迁移 $F_8\le 318$（其循环符号 packet 桥仍待独立审阅）；九参数稀疏整数对偶已独立复算 $C_9\le 688, D_9\le 458$，装配后的 $\mathrm{ES}(9)\le 1148$ 作为待独立审阅工作推论返回。
+处理 $m \ge 8$ 或新增七参数子界（owner 区间 $N(7,5,7)\le 39$、严格平衡容量 $N(7,6,6)\le 49$、五锁块排除 $\le 4$）时，先读[高阶受限容量参考](references/nmrs-higher-bounds.md)。严格区分普通避免容量与带交接排斥的 R7 残余 $D_m$（不可拿 $D_m$ 代替普通 $N(m,m-2,m)$）。当纯状态占有矩阵达理论上限（如 9 洞 hitting 向量封顶 115 行矩阵，或 47,635 行有理可行网格封顶深度 $\le 3$ 原生迹 LP），停止在同一矩阵内盲目扩行，转入共享末对标签 CEGAR 核（如 $N(8,6,6)\le 61$）或更高阶结构耦合。八参数公开平面 $\mathrm{ES}(8)\le 319$ 归属 Schroeder 预印本，11-17阶段本项目主张抽象 signotope 迁移 $F_8\le 318$（其循环符号 packet 桥仍待独立审阅）；九参数稀疏整数对偶已独立复算 $C_9\le 688, D_9\le 458$，原装配 $\mathrm{ES}(9)\le1148$ 保留为独立有限证书路线；当前更强同锁解析链见本文入口，仍待独立数学审阅。
 
 本次返回包括：准确结论/进口与保证状态；已写证明、真实见证或反例；改变的原义务；当前缺少的覆盖/编码/独审；下一动作和原caller。不自行升级wiki canonical claim或启动verify/handoff。暂停交接保留条件工具与真实未闭边；新研究结果写本任务wiki，archive只读。源码或证明错误在对应义务修，核心表示受反例击穿才回base路线重判。

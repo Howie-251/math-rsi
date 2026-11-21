@@ -48,7 +48,7 @@
 
   <section id="evolution" class="evo wrap" aria-labelledby="evo-h">
     <h2 id="evo-h" class="evo-title">MathRSI evolution: base workflow &amp; domain plugins</h2>
-    <p class="evo-deck">v0: standalone tools. v1–v5: shared harness releases. v6 & main: Q₇ full author working proof, C₄-free Q₇ / Q₈ / Q∞ and N(m,r,s), with hardest-remainder gates, coevolution and sparse dual checks.</p>
+    <p class="evo-deck">v0: standalone tools. v1–v5: shared harness releases. v6 published. v7 candidate: full Q₇ method intake and Happy Ending same-input deficits. v8+ remains future.</p>
     <div class="fig-head">
       <div class="ctls">
         <button class="ctl primary" id="play" type="button"></button>
@@ -76,7 +76,7 @@
         <span><svg viewBox="0 0 14 16" aria-hidden="true"><rect width="14" height="16" rx="3" fill="#5B6474"/></svg>One block = one result or result family</span>
         <span>Color identifies the research problem</span>
       </div>
-      <p class="caption">Columns trace how the shared workflow and domain plugins evolve alongside the mathematical results incorporated at each stage; click any block or callout for its proof, run context and verification status. <a href="erdos-86-latest.html">Erdős 86: Q₇ 304 (construction verified; ≤304 source-reported) · Q₈ 682–683 · Q∞ ≤ 0.5912405943.</a> <a href="q7.html">Q₇: ≥56-edge matchings extend (complete E16).</a> <a href="happy-ending-latest.html">Happy Ending: N(8,6,6) ≤ 61 · ES(9) ≤ 1148 working (m = 7–9).</a> <a href="dd-latest.html">DD D5: +1 / +31 local (+1 / +81 vs dated Comellas table).</a></p>
+      <p class="caption">Columns trace how the shared workflow and domain plugins evolve alongside the mathematical results incorporated at each stage; click any block or callout for its proof, run context and verification status. <a href="erdos-86-latest.html">Erdős 86: Q₇ 304 (construction verified; ≤304 source-reported) · Q₈ 682–683 · Q∞ ≤ 0.5912405943.</a> <a href="q7.html">Q₇: every matching extends (v7 candidate intake; v6 main result).</a> <a href="happy-ending-latest.html">Happy Ending: ES(7) ≤ 77 · ES(8) ≤ 294 · ES(9) ≤ 1100 · ES(10) ≤ 3980 working.</a> <a href="dd-latest.html">DD D5: +1 / +31 local (+1 / +81 vs dated Comellas table).</a></p>
     </div>
 
     <div class="panel" id="panel" aria-live="polite"></div>
@@ -192,17 +192,17 @@
         <div class="viz" data-viz="he" role="img" aria-label="A cup, a cap and a convex heptagon"></div>
         <p class="vcap">Cup, cap and a convex heptagon</p>
         <p class="r-problem"><b>Happy Ending problem</b><span>Erdős–Szekeres &amp; signotope N(m,r,s)</span></p>
-        <h3>Signotope capacities and planar bounds across m = 7, 8, 9</h3>
+        <h3>Signotope capacities and planar bounds across m = 7–10</h3>
         <div class="r-fig">
           <p class="r-kicker">Ordered rank-3 signotope capacities <span class="math" data-tex="N(m,r,s)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>m</mi><mo separator="true">,</mo><mi>r</mi><mo separator="true">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(m,r,s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span></span> &amp; planar <span class="math" data-tex="\mathrm{ES}(m)"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">S</mi></mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{ES}(m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">ES</span></span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span></span></p>
           <ul class="e86-slist">
             <li><span>m = 7 (7-gons)</span><b class="r-n">ES(7) ≤ 77</b><span class="e86-scope">Analytic N(7,5,7) ≤ 39, N(7,6,6) ≤ 49 &amp; 75/76 → 77 working chain; DRAT ≤4 lock blocks.</span></li>
-            <li><span>m = 8 (8-gons)</span><b class="r-n">N(8,6,6) ≤ 61</b><span class="e86-scope">115-row CNF+DRAT replayed; signotope N(8,8,8) ≤ 318 (planar ES(8) ≤ 319 is Schroeder’s bound).</span></li>
-            <li><span>m = 9 (9-gons)</span><b class="r-n">ES(9) ≤ 1148</b><span class="e86-scope">Native-trace duals C₉ ≤ 688, D₉ ≤ 458 replayed → working 1148 (vs. 1508 / 1501*).</span></li>
+            <li><span>m = 8 (8-gons)</span><b class="r-n">ES(8) ≤ 294</b><span class="e86-scope">Same-input sector manuscript; Schroeder’s planar comparator is 319.</span></li>
+            <li><span>m = 9 (9-gons)</span><b class="r-n">ES(9) ≤ 1100</b><span class="e86-scope">Same-input sector manuscript, improving the previous working 1148. ES(10) ≤ 3980 is a further working corollary.</span></li>
           </ul>
         </div>
-        <p class="r-why"><b>Why it matters</b> Replayed CNF+DRAT and native-trace integer dual certificates tighten key signotope capacities and, via R7/R20 assembly, lower the working planar nonagon ceiling from 1508 (1501*) to 1148 alongside ES(7) ≤ 77.</p>
-        <p class="r-how"><b>Method</b> Combine coordinate-slice double counting, shared-label CEGAR kernels and generative sparse integer duals.</p>
+        <p class="r-why"><b>Why it matters</b> Same-input sector budgets give working ES(8) ≤ 294, ES(9) ≤ 1100 and ES(10) ≤ 3980, while ES(7) ≤ 77 is unchanged.</p>
+        <p class="r-how"><b>Method</b> Keep actual source sets, shared locks and all penultimate choices on the same input; charge row slack and sector deficits together.</p>
         <div class="meta"><span class="status">Replayed duals/DRAT · assembly review pending</span><a href="happy-ending-latest.html">Results &amp; methods ↗<span class="source-language" data-no-i18n>EN + 中文</span></a><a href="../../../case-studies/happy-ending/n7-20261103/START_HERE.html">Earlier m = 7 ↗<span class="source-language" data-no-i18n>中文</span></a><button class="trace" type="button" data-case="he">Trace in evolution ↑</button></div>
         <details><summary>Scope &amp; verification</summary><p>Five finite suites are replayed directly in-repo: milestone9 N(8,6,6) ≤ 61 (115 shared-label rows + DRAT; the 9-hole hitting vector is a matrix witness, not a 61-point signotope), zero-float native-trace integer duals N(9,8,8) ≤ 688 and junction-restricted D₉ ≤ 458 (matching the 47,635-row depth-≤3 LP ceiling), Schroeder’s 15-file octagon omission trees (193 / 124), DRAT exclusion of 5 common m = 7 lock blocks, and the 25-point E21 abstract witness (with historical same-family/provisional acceptance of N(7,5,6) ≤ 25). Planar ES(8) ≤ 319 is Schroeder’s published preprint bound; all structural, cyclic-sign transfer (N(8,8,8) ≤ 318) and R7/R20 assembly manuscripts (ES(7) ≤ 77, ES(9) ≤ 1148) remain working proofs pending independent mathematical review, with no Lean formalization.</p></details>
       </article>

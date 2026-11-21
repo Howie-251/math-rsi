@@ -8,9 +8,9 @@
 
 </div>
 
-[![MathRSI 当前主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-q7-20261120)](figures/mathrsi/media/evolution.mp4?v=6-q7-20261120)
+[![MathRSI 历史主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-q7-20261120)](figures/mathrsi/media/evolution.mp4?v=6-q7-20261120)
 
-*真实主页 v0 → v6 演进回放，末尾停留 v6 当前版。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/) · [六个数学案例与核验范围](case-studies/README.md)。*
+*历史主页 v0 → v6 演进回放；画面中的“Current”指当时的 v6。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/) · [六个数学案例与核验范围](case-studies/README.md)。*
 
 MathRSI 结合通用工作流、领域插件与单题研究知识库，引导 Claude Code 或 Codex 完成文献调研、路线探索、证明、审阅、验证与交付。研究成果和失败经验持续用于改进工作流与插件。
 
@@ -57,7 +57,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **Degree–Diameter：** 四组展示参数的构造： $(10,4)$ 为 2,567 点； $(11,5)$ 为 37,632 点； $(12,5)$ 为 42,433 点； $(16,4)$ 为 16,416 点。[构造、日期比较与核验范围](case-studies/degree-diameter/README.zh-CN.md)
 - **Erdős 第 86 题：** $Q_7$ 为 $304$（304 边构造已验证；304 上界按原包报告，本次未复验），$682\le\mathrm{ex}(Q_8,C_4)\le683$，渐近密度上界从 $0.60318$ 推进至 $\le0.5912405943$（`T3`）／$\le0.5912405942$（`T4`）。[结果与核验范围](case-studies/erdos-86/README.md)
 - **Ruskey–Savage：** 完整作者工作证明覆盖 $Q_7$ 的任意匹配（包括空匹配与完美匹配），保留 $Q_6$ 全称结果；待外部同行评议，无 Lean。[证明、局部复算与版本历史](case-studies/ruskey-savage-q7/README.md)
-- **Happy Ending 与 $N(m,r,s)$：** 已复核 CNF+DRAT 与原生边界迹整数对偶给出 $N(8,6,6)\le 61$ 及 $N(9,8,8)\le 688, D_9\le 458$；结合待独立审阅的结构工作手稿，给出 signotope $N(8,8,8)\le 318$（平面 $\mathrm{ES}(8)\le 319$ 为 Schroeder 上界）与平面工作推论 $\mathrm{ES}(7)\le 77$、$\mathrm{ES}(9)\le 1148$（对比 $1508$ / $1501^*$）。[成果与状态](case-studies/happy-ending/README.md)
+- **Happy Ending 与 $N(m,r,s)$：** 新同输入扇区缺额工作稿给出平面工作推论 $\mathrm{ES}(7)\le77$、$\mathrm{ES}(8)\le294$、$\mathrm{ES}(9)\le1100$、$\mathrm{ES}(10)\le3980$；独立数学审阅尚未完成。先前可重放的有限证书保留各自范围与来源。[现值、证据与复现](plugins/happy-ending/archive/nmrs-20261120/HANDOFF.md) · [案例导读](case-studies/happy-ending/README.md)
 
 <a id="三层架构"></a>
 
@@ -95,7 +95,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 - **Q₇ 后续维护 · 2026-11-20：** `main` 吸收原项目 11 月 19 日接受的完整 R7 作者工作证明。研究使用 v3 本地适配；固定 v5（≥57 边）与 v6（≥56 边）快照不变。[证明导读](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/knowledge/q7-closure-proof.md) · [复算范围](https://github.com/lisresearchgroup/math-rsi/blob/main/plugins/hypercube-hamilton/archive/q7-closure/README.md)
 - **延续既有能力：** 保留 v5 的受控辅助选择、跨等价表示复用定理、先消化返回结果再派发新任务，以及 v4 的把取等情形收成可用见证、全局进展重评和 ECC 分支计算共享。
 
-**[v6 是 `main` 分支的当前工作流](docs/V6_CHANGES.md)。** 可直接下载 [v6 快照 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) 或 [`main` ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆仓库使用。`v1`–`v6` 各版本标签均作为固定快照保留；需要严格复现某次运行时请记录对应 commit。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
+**[v6 是最新已发布版本](docs/V6_CHANGES.md)；[v7 为候选版](docs/V7_CHANGES.md)，尚未发布。** 可直接下载 [v6 快照 ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v6.zip) 或 [`main` ZIP](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip)，也可克隆仓库使用。`v1`–`v6` 各版本标签均作为固定快照保留；需要严格复现某次运行时请记录对应 commit。[演进与实现记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
 
 <details>
 <summary>历史版本概览（v0–v6）</summary>
