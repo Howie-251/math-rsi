@@ -6,6 +6,8 @@ The interactive **English / 中文 homepage** presents six mathematical research
 
 [Public build scope and workflow](PAGES.md)
 
+For each tagged version, add one bilingual News entry to the two root READMEs and the homepage (`index.html` and `zh-CN.js`). Use the GitHub publication date in UTC+8, or the tag date for a tag-only snapshot. Link the version to that release or snapshot and keep the three newest entries expanded.
+
 **[Homepage source and local entry](../development/homepage-redesign-20261105/site/index.html)**
 
 GitHub displays this HTML as source. To use the interactive page, clone or download the repository, then open the file in a browser. On macOS, from the clone root:

@@ -8,6 +8,24 @@
 
 </div>
 
+<a id="news"></a>
+
+## 📢 版本动态
+
+- **[v7](https://github.com/lisresearchgroup/math-rsi/releases/tag/v7)** · 2026-11-22 — 七维超立方体的工作证明已覆盖所有匹配，每个匹配都能延拓为哈密顿圈。凸多边形研究的新稿给出了 ES(8) ≤ 294、ES(9) ≤ 1,100、ES(10) ≤ 3,980 三个上界。
+- **[v6](https://github.com/lisresearchgroup/math-rsi/releases/tag/v6)** · 2026-11-20 — 七维超立方体中，保证匹配能延拓为哈密顿圈的门槛从至少 57 条边降至至少 56 条。八维超立方体中，无四边形子图的最大边数被限定在 682 与 683 之间。
+- **[v5](https://github.com/lisresearchgroup/math-rsi/releases/tag/v5)** · 2026-11-14 — 在七维超立方体中，至少含 57 条边的匹配都能延拓为哈密顿圈。证明通过改变同一个匹配的表示来复用已有定理，这个技巧也进入了通用工作流。
+
+<details>
+<summary>早期版本（v1–v4）</summary>
+
+- **[v4](https://github.com/lisresearchgroup/math-rsi/releases/tag/v4)** · 2026-11-08 — 从凸多边形的证明中，团队提炼出一种方法，沿不等式逐步回溯，找出必须同时取等的条件。度–直径插件也加入了构造更大图的方法。
+- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)** · 2026-11-04 — 新增三个插件，分别研究超立方体中的无四边形子图、超立方体匹配延拓和凸多边形。MathRSI 由此覆盖六个数学领域。
+- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)** · 2026-11-03 — 度–直径插件加入 MathRSI。团队用这个插件首次试行版本维护流程，把图构造中积累的经验写回通用工作流。
+- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)** · 2026-11-03 — 从超图二染色（Property B）和编码理论两项研究中，团队提炼出第一套通用工作流，涵盖问题界定、路线探索、证明、核验和交接。
+
+</details>
+
 [![MathRSI 历史主页 v0 → v6 演进回放](figures/mathrsi/media/evolution.gif?v=6-q7-20261120)](figures/mathrsi/media/evolution.mp4?v=6-q7-20261120)
 
 *历史主页 v0 → v6 演进回放；画面中的“Current”指当时的 v6。点击观看 MP4；[完整交互主页](https://lisresearchgroup.github.io/math-rsi/) · [六个数学案例与核验范围](case-studies/README.md)。*
@@ -97,21 +115,7 @@ $mathrsi-research 继续 ../my-problem/ 中的研究
 
 **[MathRSI v7 是最新正式版](https://github.com/lisresearchgroup/math-rsi/releases/tag/v7)。** [更新说明](docs/V7_CHANGES.md) · [下载 v7](https://github.com/lisresearchgroup/math-rsi/archive/refs/tags/v7.zip) · [下载 main](https://github.com/lisresearchgroup/math-rsi/archive/refs/heads/main.zip) · [演进记录](development/README.md) · [维护指南](docs/EVOLUTION_WORKFLOW.md)
 
-<details>
-<summary>历史版本概览（v0–v7）</summary>
-
-- **v0：** 统一框架形成前的 Property B 与 ECC 独立研究工具阶段（无 Git 标签）。
-- **[v1](https://github.com/lisresearchgroup/math-rsi/tree/v1)：** 五阶段流程、三层架构分离、对抗式路线迭代与首批领域插件。
-- **[v2](https://github.com/lisresearchgroup/math-rsi/tree/v2)：** 独立演进维护流程、接入 Degree–Diameter 插件、对象变更后的证据复核与共享覆盖检查。[更新说明](docs/V2_CHANGES.md)
-- **[v3](https://github.com/lisresearchgroup/math-rsi/tree/v3)：** 全域反例检查、带标记对象归约保持、有限普适证书与 Lean 外部前提核查；升级 ECC 并新增三个领域。[更新说明](docs/V3_CHANGES.md)
-- **[v4](https://github.com/lisresearchgroup/math-rsi/tree/v4)：** 把取等情形收成可用的见证，深化 Happy Ending 与 Degree–Diameter 方法。[更新说明](docs/V4_CHANGES.md)
-- **[v5](https://github.com/lisresearchgroup/math-rsi/tree/v5)：** 受控辅助选择、跨合法表示复用定理与有限计划覆盖；深化 Hamilton 与 DD D5 方法。[更新说明](docs/V5_CHANGES.md)
-- **[v6](https://github.com/lisresearchgroup/math-rsi/tree/v6)：** 最难分支试探准入、上下界协同搜索与修补误差停机判据；深化超立方体极值与完整 $Q_7$ E16 Hamilton 方法。[更新说明](docs/V6_CHANGES.md)
-- **[v7](https://github.com/lisresearchgroup/math-rsi/tree/v7)：** 从超立方体匹配与凸多边形研究中提炼极大补全和同一输入上的缺额计数。[更新说明](docs/V7_CHANGES.md)
-
-[历史 v2／v3 架构配图](figures/mathrsi/README.md#historical-diagrams)
-
-</details>
+v0 记录通用框架形成前的 Property B 和编码研究。首个版本标签是 v1。 [历版动态](#news) · [早期架构图](figures/mathrsi/README.md#historical-diagrams)
 
 <a id="文档与来源"></a>
 
